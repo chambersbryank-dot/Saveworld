@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy static content to Pages
 
 on:
   push:
@@ -23,10 +23,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Add your appropriate site build command here.
+      # Example: for Jekyll. Change or remove if not using Jekyll.
+      - name: Build site
+        run: |
+          bundle install
+          bundle exec jekyll build -d _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
