@@ -23,8 +23,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Add your appropriate site build command here.
-      # Example: for Jekyll. Change or remove if not using Jekyll.
+        - name: Prepare site
+  run: |
+    mkdir -p _site
+    cp -r * _site
+
       - name: Build site
         run: |
           bundle install
