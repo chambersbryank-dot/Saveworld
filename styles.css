@@ -13,7 +13,6 @@ nav {
     position: sticky; 
     top: 0; 
     background: rgba(255,255,255,0.98); 
-    backdrop-filter: blur(10px); 
     z-index: 1000; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -49,7 +48,7 @@ nav {
 }
 
 .hero { 
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('assets/OceanBeach.jpg') center/cover no-repeat; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/OceanBeach.jpg') center/cover no-repeat; 
     height: 100vh; 
     display: flex; 
     align-items: center; 
@@ -58,10 +57,7 @@ nav {
     color: white;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 2rem;
-}
+.hero-content { max-width: 800px; padding: 2rem; }
 
 footer { 
     text-align: center; 
