@@ -62,8 +62,6 @@ nav {
 
 .hero-content { max-width: 900px; padding: 2rem; }
 
-h1 { font-size: 3.1rem; margin-bottom: 1.2rem; }
-
 h2 { 
     text-align: center; 
     margin: 5rem 0 3rem; 
@@ -85,14 +83,29 @@ h2 {
     padding: 2rem; 
     border-radius: 18px; 
     box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
-.card img { 
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.4rem;
+}
+
+.image-container img { 
     width: 100%; 
     height: 245px; 
     object-fit: cover; 
-    border-radius: 12px; 
-    margin-bottom: 1.4rem;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.12);   /* Hover zoom / pop-up effect */
 }
 
 footer { 
@@ -105,6 +118,5 @@ footer {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     h1 { font-size: 2.4rem; }
-    .nav-links { gap: 1.2rem; font-size: 0.95rem; }
-    .hero-content { padding: 1rem; }
+    .nav-links { gap: 1.2rem; }
 }
