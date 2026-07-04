@@ -1,58 +1,69 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveWorld</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            background: #333;
-            color: white;
-            padding: 10px;
-            z-index: 1000;
-        }
-        .sticky-nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-        .sticky-nav li {
-            margin: 10px 15px;
-        }
-        .sticky-nav a {
-            color: white;
-            text-decoration: none;
-        }
-        @media (max-width: 600px) {
-            .sticky-nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        main { padding: 20px; }
-    </style>
+    <meta name="description" content="Positive, practical solutions to save our planet. Clean oceans, reforestation, and real community action.">
+    <meta name="keywords" content="save the planet, ocean conservation, pacific ocean cleanup, plastic free oceans, reforestation, sustainable living, positive climate action">
+    <title>Save The Planet • Positive Action</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ocean-cleanup.html">Ocean Cleanup</a></li>
-        </ul>
+    <!-- Sticky Nav -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/SavePlanetLogo.jpg" alt="Save The Planet Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#actions">Actions</a></li>
+                <li><a href="#facts">Amazing Facts</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+            <a href="#join" class="btn">Join Movement</a>
+        </div>
     </nav>
-    <main>
-        <h1>Welcome to SaveWorld</h1>
-        <p>Index page content here.</p>
-    </main>
-</body>
-</html>
-<h3>Reforestation Projects</h3>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to a Cleaner, Brighter Future</h1>
+            <p>We focus on hope and practical action. Clean oceans, lakes, and rivers. Plant three trees for every one cut. Remove plastic from beaches and highways — together.</p>
+            
+            <div style="margin-top: 60px;">
+                <a href="#solutions" class="btn">See Real Solutions</a>
+                
+                <!-- Under Construction pulsating text -->
+                <p class="under-construction">Under Construction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section id="solutions">
+        <h2>Real Solutions in Action</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/OceanBeach.JPG" alt="Ocean Beach Cleanup" loading="lazy">
+                </div>
+                <h3>Clean Beaches & Oceans</h3>
+                <p>Communities actively removing plastic from our shores and waters.</p>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/theoceancleanup.jpg" alt="The Ocean Cleanup" loading="lazy">
+                </div>
+                <h3>The Ocean Cleanup</h3>
+                <p>The Ocean Cleanup technologies are deployed around the world as they conduct the largest cleanup in history. For over ten years, they have been researching, extracting, and moni[...]
+                <p><a href="https://theoceancleanup.com" target="_blank" rel="noopener noreferrer">For further information click here →</a></p>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/LightthrForest.JPG" alt="Reforestation Project" loading="lazy">
+                </div>
+                <h3>Reforestation Projects</h3>
                 <p>Planting three trees for every one removed.</p>
             </div>
         </div>
