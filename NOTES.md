@@ -6,6 +6,15 @@
 
 ---
 
+## 📌 STANDING RULE (read this first, every session)
+
+1. **At session start:** Read this NOTES.md file before doing anything else. Use the Session Log to see exactly what was done last (HTML changes, CSS changes, open items, decisions) so you can pick up right where things left off.
+2. **During the session:** Execute whatever the user asks next, informed by that history.
+3. **After every change:** Go back into NOTES.md and log what you did — specifically what changed in the HTML and what changed in the CSS — plus any new decisions or open items. Keep it concise: what you did, not a rewrite of prior entries.
+4. This rule applies to every future session without being re-asked.
+
+---
+
 ## Session Log — 2026-10-07 (dropdown update)
 
 - Updated index.html: converted the Solutions nav link from a plain anchor into a dropdown. On hover or click it reveals a menu; the first clickable item is "Oceans," which scrolls to the #solutions section further down the page.
