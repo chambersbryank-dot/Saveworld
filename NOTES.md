@@ -2,7 +2,7 @@
 
 **Repo:** chambersbryank-dot/Saveworld
 **Live site:** https://www.saveplanetminusthedoom.com (GitHub Pages via CNAME)
-**Last updated:** 2026-10-06
+**Last updated:** 2026-10-07
 
 ---
 
@@ -93,6 +93,7 @@ This is the user's core worldview and should inform all content, tone, and messa
 4. Site still shows "Under Construction" — intentional until sections are built.
 5. Cloudflare not accessible from this session — DNS/custom domain managed separately.
 6. Space-based AI infrastructure content not yet incorporated — user wants this sooner than later. Research now logged above; ready to draft when resuming.
+7. **NEW (2026-10-07):** Plan to create a dropdown on the first navbar hyperlink (Solutions). On hover or click, users see "Ocean," which scrolls down to the card further down the webpage.
 
 ## Decisions Made
 
@@ -100,6 +101,7 @@ This is the user's core worldview and should inform all content, tone, and messa
 - Design: blue/teal palette, card-based layout, photo-driven.
 - Deployment: GitHub Pages (not Cloudflare Pages) with custom domain.
 - Mission check: every page's narrative must stay on track with the vision — educate, don't guilt.
+- **NEW (2026-10-07):** Navbar Solutions link will become a dropdown; first item is "Ocean," linking to the corresponding card further down the page.
 
 ## Session Log
 
@@ -116,6 +118,9 @@ This is the user's core worldview and should inform all content, tone, and messa
 - User added space topic: moving AI petabyte data centers into space to save land, energy, and water on Earth (e.g., avoid destroying 50 acres for a data center by building capacity in orbit). Wants this incorporated sooner than later — could be its own section or page. Fits the "technology as bridge" philosophy.
 - Researched data center water consumption and space-based data center developments; logged key figures and messaging guidance in NOTES.md for the upcoming space section/page.
 
+### 2026-10-07
+- User dictated a new UI plan: create a dropdown using the first navbar hyperlink (Solutions). On hover or click, users see "Ocean," which scrolls down to the card further down the webpage. Logged in Known Issues and Decisions Made.
+
 ## Next Steps (when resuming)
 
 1. Read this NOTES.md at session start.
@@ -124,3 +129,4 @@ This is the user's core worldview and should inform all content, tone, and messa
 4. Update nav links accordingly.
 5. Remove or keep "Under Construction" text as appropriate.
 6. **Draft the space section/page** using the research logged above — water numbers as the hook, Google's Suncatcher as the "it's happening now" proof, SpaceX's million-satellite filing as the headline scale number.
+7. **Implement the Solutions dropdown** — hover/click reveals "Ocean," scrolling to the matching card further down the page.
