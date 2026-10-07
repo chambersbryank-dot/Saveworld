@@ -12,6 +12,20 @@
 
 ---
 
+## User's Vision & Philosophy (the "why")
+
+> **The site URL says it all: an honest approach to saving the world without the doom.**
+
+- Taking care of the planet is absolutely important — but it starts with **streams, rivers, lakes, oceans, our seas, the forests**, and everything in between.
+- At the same time, you cannot negate **population growth, energy, infrastructure, and people working** — those are real and necessary.
+- There has to be a **meet in the middle** where we can literally save the world.
+- Saving the world has to be **both**: you can't save the world by killing people, and you can't kill people and call it saving the world.
+- The tone must stay **positive and practical** — hope and action, never doom or guilt.
+
+This is the user's core worldview and should inform all content, tone, and messaging decisions going forward.
+
+---
+
 ## Current State
 
 - **index.html** — live homepage: sticky nav (logo, Solutions / Actions / Facts / Community links, Join Movement button), hero section with ocean photo background, three solution cards (Clean Beaches & Oceans, The Ocean Cleanup, Reforestation), footer. Meta description and keywords present.
@@ -44,6 +58,7 @@
 - User plans to resume work in 2–3 weeks depending on work/home schedule.
 - Next session: read this file first, then pick up open items.
 - User requested a standing reminder in NOTES.md: when proprietary or sensitive material enters the project, flag the user and recommend locking the repo down (making it private).
+- User shared his core vision: honest approach to saving the world without the doom; planet care starts with water (streams, rivers, lakes, oceans) and forests, but population growth, energy, and infrastructure can't be negated; the answer is a meet-in-the-middle where saving the world means both — not saving the world by killing people, and not killing people to save the world.
 
 ## Next Steps (when resuming)
 
