@@ -6,6 +6,12 @@
 
 ---
 
+## ⚠️ PRIVACY / PROPRIETY REMINDER
+
+> **When the project starts getting serious — real content, real photos, real branding, or anything proprietary — flag it to the user and recommend locking the repo down (make it private) before going further.** This is a standing instruction from the user: don't wait to be asked. If proprietary material, personal info, or anything sensitive enters the repo or site, tell the user it's a good time to get locked down.
+
+---
+
 ## Current State
 
 - **index.html** — live homepage: sticky nav (logo, Solutions / Actions / Facts / Community links, Join Movement button), hero section with ocean photo background, three solution cards (Clean Beaches & Oceans, The Ocean Cleanup, Reforestation), footer. Meta description and keywords present.
@@ -37,6 +43,7 @@
 - Discussed NOTES.md as persistent memory between sessions; created this file.
 - User plans to resume work in 2–3 weeks depending on work/home schedule.
 - Next session: read this file first, then pick up open items.
+- User requested a standing reminder in NOTES.md: when proprietary or sensitive material enters the project, flag the user and recommend locking the repo down (making it private).
 
 ## Next Steps (when resuming)
 
