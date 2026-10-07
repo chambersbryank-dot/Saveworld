@@ -15,10 +15,15 @@
 
 ---
 
-## Session Log — 2026-10-07 (dropdown update)
+## Template Rule
 
-- Updated index.html: converted the Solutions nav link from a plain anchor into a dropdown. On hover or click it reveals a menu; the first clickable item is "Oceans," which scrolls to the #solutions section further down the page.
-- Updated styles.css: added dropdown menu styles (positioning, show/hide on hover and click, link styling) so the new nav behavior matches the existing blue/teal design.
-- Pushed both files to main; GitHub Pages auto-deploys, so the live site updates on its own.
-- Prior to this change, NOTES.md was emptied per user request.
-- Added this Standing Rules section per user request: read notes at start, log HTML and CSS changes separately after every update.
+- **Oceans.html is the template page for all future solution pages.** Reuse its structure and styling (page hero, five W's grid, impact statement section, cleanup link card, nav, footer) when creating new solution pages. Do not reinvent the wheel.
+
+---
+
+## Session Log — 2026-10-07 (Oceans page)
+
+- Created Oceans.html: new solution page using main page look and feel. Includes page hero, five W's section (Who: nonprofit founded by Boyan Slat; What: removes plastic from oceans and rivers via Interceptor and System 002 tech; When: 10+ years, 15M kg milestone July 2024; Where: Great Pacific Garbage Patch, 1000 rivers globally; Why: 90% of floating ocean plastic by 2040), impact statement with removal stats, and a card linking to theoceancleanup.com. Drafted from theoceancleanup.com.
+- Updated index.html: Oceans dropdown item and The Ocean Cleanup card now link to Oceans.html instead of #solutions or external URL.
+- Updated styles.css: added page-hero, five-ws grid, w-card, impact statement, and cleanup-link card styles for subpage template (done earlier in session).
+- Pushed all files to main; GitHub Pages auto-deploys.
