@@ -32,13 +32,58 @@ nav {
 .nav-links { 
     display: flex; 
     gap: 2rem; 
-    list-style: none; 
+    list-style: none;
+    align-items: center;
 }
 
 .nav-links a { 
     text-decoration: none; 
     color: #222; 
-    font-weight: 500; 
+    font-weight: 500;
+}
+
+/* Solutions dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    list-style: none;
+    min-width: 140px;
+    padding: 0.5rem 0;
+    z-index: 1001;
+}
+
+.nav-dropdown.open .dropdown-menu,
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: #222;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f0f7ff;
+    color: var(--primary);
 }
 
 .btn { 
