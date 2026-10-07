@@ -21,3 +21,4 @@
 - Updated styles.css: added dropdown menu styles (positioning, show/hide on hover and click, link styling) so the new nav behavior matches the existing blue/teal design.
 - Pushed both files to main; GitHub Pages auto-deploys, so the live site updates on its own.
 - Prior to this change, NOTES.md was emptied per user request.
+- Added this Standing Rules section per user request: read notes at start, log HTML and CSS changes separately after every update.
