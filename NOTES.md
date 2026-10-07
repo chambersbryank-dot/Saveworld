@@ -19,6 +19,7 @@
 ## Template Rule
 
 - **Oceans.html is the template page for all future solution pages.** Reuse its structure and styling (page hero, five W's grid, impact statement section, cleanup link card, nav, footer) when creating new solution pages. Do not reinvent the wheel.
+- **Ocean_Cleanup.html is the Ocean Cleanup splash page** (five W's, impact statement, donate link). It is the destination for the Oceans card on the homepage and the Oceans dropdown item.
 
 ---
 
@@ -37,10 +38,10 @@
 
 ## File Map
 
-- **index.html** — Homepage: sticky nav with Solutions dropdown, hero, solutions grid (Clean Beaches & Oceans, The Ocean Cleanup → Oceans.html, Reforestation), footer, dropdown script.
-- **Oceans.html** — Solution template page: page hero, five W's grid, impact statement, Ocean Cleanup link card, nav, footer, dropdown script.
-- **styles.css** — Shared design system: nav, dropdown, hero, page-hero, grids, cards, impact, cleanup-link, footer, mobile breakpoint, under-construction animation.
-- **Ocean_Cleanup** — Legacy second page, no .html extension yet (open item: rename to Ocean_Cleanup.html).
+- **index.html** — Homepage (splash): sticky nav with Solutions dropdown, hero, solutions grid. Oceans card (id oceans-card) scrolls from dropdown; Ocean Cleanup card links to Ocean_Cleanup.html splash page. Reforestation card. Footer, dropdown script.
+- **Ocean_Cleanup.html** — Ocean Cleanup splash page: page hero, five W's grid, impact statement, donate card linking to theoceancleanup.com/donate. Nav, footer, dropdown script.
+- **Oceans.html** — Older Oceans template page (five W's + impact + link to Ocean_Cleanup.html). Kept as alternate template; may be consolidated later.
+- **styles.css** — Shared design system: nav, dropdown, hero, page-hero, grids, cards, impact, cleanup-link, footer, mobile breakpoint, under-construction animation. No CSS changes this round.
 - **assets/** — SavePlanetLogo.jpg, OceanBeach.JPG, theoceancleanup.jpg, LightthrForest.JPG, CutTreePlantThree.JPG, BargCleaning.JPG, StreamLog.JPG, streamlog2.JPG.
 - **.github/workflows/static.yml** — GitHub Pages deploy on push to main.
 - **CNAME** — www.saveplanetminusthedoom.com.
@@ -50,29 +51,27 @@
 
 ## Open Items (prioritized)
 
-1. Rename Ocean_Cleanup → Ocean_Cleanup.html and add to nav/dropdown.
-2. Build missing homepage sections: Actions, Amazing Facts, Community, Join. Nav links currently point to sections that don't exist.
-3. Remove or keep "Under Construction" text as appropriate once sections are built.
-4. Draft the space section/page using research logged 2026-10-06 (data center water numbers, Google Suncatcher, SpaceX million-satellite filing).
-5. iPhone/Safari pass: verify nav dropdown, cards, heroes, and links render correctly on iPhone.
-6. Cloudflare DNS/custom domain managed separately — not accessible from this session.
+1. Build missing homepage sections: Actions, Amazing Facts, Community, Join. Nav links currently point to sections that don't exist.
+2. Remove or keep "Under Construction" text as appropriate once sections are built.
+3. Draft the space section/page using research logged 2026-10-06.
+4. iPhone/Safari pass: verify nav dropdown, cards, heroes, and links render correctly on iPhone.
+5. Cloudflare DNS/custom domain managed separately — not accessible from this session.
+6. Decide whether to consolidate Oceans.html into Ocean_Cleanup.html or keep both.
 7. Implement Solutions dropdown items for future solution pages as they are created.
 
 ---
 
 ## Content Queue (drafted, awaiting user review)
 
-- Five W's + impact statement for Oceans.html (sourced from theoceancleanup.com, 2026-10-07). Published.
+- Five W's + impact statement for Ocean_Cleanup.html (sourced from theoceancleanup.com, 2026-10-07). Published.
+- Donate link: https://theoceancleanup.com/donate (sourced 2026-10-07).
 - Space section research: data center water use figures and space-based data center developments (sourced 2026-10-06). Ready to draft when resuming.
 
 ---
 
-## Session Log — 2026-10-07 (Oceans page)
+## Session Log — 2026-10-07 (Ocean Cleanup splash page)
 
-- Created Oceans.html: new solution page using main page look and feel. Includes page hero, five W's section (Who: nonprofit founded by Boyan Slat; What: removes plastic from oceans and rivers via Interceptor and System 002 tech; When: 10+ years, 15M kg milestone July 2024; Where: Great Pacific Garbage Patch, 1000 rivers globally; Why: 90% of floating ocean plastic by 2040), impact statement with removal stats, and a card linking to theoceancleanup.com. Drafted from theoceancleanup.com.
-- Updated index.html: Oceans dropdown item and The Ocean Cleanup card now link to Oceans.html instead of #solutions or external URL.
-- Updated styles.css: added page-hero, five-ws grid, w-card, impact statement, and cleanup-link card styles for subpage template (done earlier in session).
-- Pushed all files to main; GitHub Pages auto-deploys.
-- Added Standing Rules section per user request: read notes at start, log HTML and CSS changes separately after every update.
-- Added Template Rule: Oceans.html is the template for future solution pages.
-- Added Design System, File Map, Open Items, and Content Queue sections per user request. These are now the shared working agreement between user and Grok for synchronous buildout.
+- Created Ocean_Cleanup.html: Ocean Cleanup splash page using Oceans.html template. Page hero, five W's grid, impact statement, donate card linking to theoceancleanup.com/donate. Dropdown Oceans item points to index.html#oceans-card.
+- Updated index.html: Oceans card renamed from "Clean Beaches & Oceans" to "Oceans" with id oceans-card; dropdown Oceans link now scrolls to #oceans-card; Ocean Cleanup card links to Ocean_Cleanup.html.
+- Updated styles.css: no changes this round (resaved to confirm).
+- Updated NOTES.md: template rule extended, file map and open items refreshed, session log added.
