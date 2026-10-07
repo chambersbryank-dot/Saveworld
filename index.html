@@ -16,7 +16,12 @@
                 <img src="assets/SavePlanetLogo.jpg" alt="Save The Planet Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#solutions">Solutions</a></li>
+                <li class="nav-dropdown">
+                    <a href="#solutions" class="dropdown-toggle">Solutions ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#solutions">Oceans</a></li>
+                    </ul>
+                </li>
                 <li><a href="#actions">Actions</a></li>
                 <li><a href="#facts">Amazing Facts</a></li>
                 <li><a href="#community">Community</a></li>
@@ -72,5 +77,19 @@
     <footer>
         <p>&copy; 2026 Save The Planet • Positive Action for a Thriving Earth</p>
     </footer>
+
+    <script>
+        const dropdown = document.querySelector('.nav-dropdown');
+        const toggle = document.querySelector('.dropdown-toggle);
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            dropdown.classList.toggle('open);
+        });
+        document.addEventListener('click', function (e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open);
+            }
+        });
+    </script>
 </body>
 </html>
