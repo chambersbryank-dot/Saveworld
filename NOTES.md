@@ -12,6 +12,7 @@
 2. **During the session:** Execute whatever the user asks next, informed by that history.
 3. **After every change:** Go back into NOTES.md and log what you did — specifically what changed in the HTML and what changed in the CSS — plus any new decisions or open items. Keep it concise: what you did, not a rewrite of prior entries.
 4. This rule applies to every future session without being re-asked.
+5. **NEW (2026-10-07):** This notes file is the shared working agreement between the user and Grok. Both parties use it to communicate, track decisions, and keep the buildout synchronous. Update it whenever the plan, priorities, or structure change.
 
 ---
 
@@ -21,9 +22,57 @@
 
 ---
 
+## Design System (locked)
+
+- **Palette:** Primary blue #0066cc, accent teal #00b894, dark navy #003366 (footer/impact), page background #f0f7ff, card white.
+- **Fonts:** 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif. Body line-height 1.7, color #222.
+- **Cards:** Border-radius 18px, box-shadow 0 10px 35px rgba(0,0,0,0.08), hover translateY(-8px). Image containers: radius 12px, image height 245px, object-fit cover, hover scale 1.12.
+- **Buttons:** Primary fill, white text, padding 13px 30px, border-radius 50px, font-weight 600.
+- **Spacing:** Max content width 1250px, section padding 1.5rem sides, generous vertical rhythm (h2 margin 5rem 0 3rem).
+- **Nav:** Sticky, translucent white background, z-index 1000, 85px height. Dropdown: absolute, white, radius 10px, shadow, z-index 1001; open on hover or click toggle.
+- **Mobile:** Breakpoint 768px. Reduce h1 to 2.4rem, nav gap to 1.2rem, page-hero to 40vh. Keep grids auto-fit so cards stack.
+- **iPhone readiness:** Viewport meta tag on every page (width=device-width, initial-scale=1.0). Test key flows on iPhone Safari before calling a page done.
+
+---
+
+## File Map
+
+- **index.html** — Homepage: sticky nav with Solutions dropdown, hero, solutions grid (Clean Beaches & Oceans, The Ocean Cleanup → Oceans.html, Reforestation), footer, dropdown script.
+- **Oceans.html** — Solution template page: page hero, five W's grid, impact statement, Ocean Cleanup link card, nav, footer, dropdown script.
+- **styles.css** — Shared design system: nav, dropdown, hero, page-hero, grids, cards, impact, cleanup-link, footer, mobile breakpoint, under-construction animation.
+- **Ocean_Cleanup** — Legacy second page, no .html extension yet (open item: rename to Ocean_Cleanup.html).
+- **assets/** — SavePlanetLogo.jpg, OceanBeach.JPG, theoceancleanup.jpg, LightthrForest.JPG, CutTreePlantThree.JPG, BargCleaning.JPG, StreamLog.JPG, streamlog2.JPG.
+- **.github/workflows/static.yml** — GitHub Pages deploy on push to main.
+- **CNAME** — www.saveplanetminusthedoom.com.
+- **NOTES.md** — This file: standing rules, template rule, design system, file map, open items, content queue, session log.
+
+---
+
+## Open Items (prioritized)
+
+1. Rename Ocean_Cleanup → Ocean_Cleanup.html and add to nav/dropdown.
+2. Build missing homepage sections: Actions, Amazing Facts, Community, Join. Nav links currently point to sections that don't exist.
+3. Remove or keep "Under Construction" text as appropriate once sections are built.
+4. Draft the space section/page using research logged 2026-10-06 (data center water numbers, Google Suncatcher, SpaceX million-satellite filing).
+5. iPhone/Safari pass: verify nav dropdown, cards, heroes, and links render correctly on iPhone.
+6. Cloudflare DNS/custom domain managed separately — not accessible from this session.
+7. Implement Solutions dropdown items for future solution pages as they are created.
+
+---
+
+## Content Queue (drafted, awaiting user review)
+
+- Five W's + impact statement for Oceans.html (sourced from theoceancleanup.com, 2026-10-07). Published.
+- Space section research: data center water use figures and space-based data center developments (sourced 2026-10-06). Ready to draft when resuming.
+
+---
+
 ## Session Log — 2026-10-07 (Oceans page)
 
 - Created Oceans.html: new solution page using main page look and feel. Includes page hero, five W's section (Who: nonprofit founded by Boyan Slat; What: removes plastic from oceans and rivers via Interceptor and System 002 tech; When: 10+ years, 15M kg milestone July 2024; Where: Great Pacific Garbage Patch, 1000 rivers globally; Why: 90% of floating ocean plastic by 2040), impact statement with removal stats, and a card linking to theoceancleanup.com. Drafted from theoceancleanup.com.
 - Updated index.html: Oceans dropdown item and The Ocean Cleanup card now link to Oceans.html instead of #solutions or external URL.
 - Updated styles.css: added page-hero, five-ws grid, w-card, impact statement, and cleanup-link card styles for subpage template (done earlier in session).
 - Pushed all files to main; GitHub Pages auto-deploys.
+- Added Standing Rules section per user request: read notes at start, log HTML and CSS changes separately after every update.
+- Added Template Rule: Oceans.html is the template for future solution pages.
+- Added Design System, File Map, Open Items, and Content Queue sections per user request. These are now the shared working agreement between user and Grok for synchronous buildout.
