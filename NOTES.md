@@ -22,6 +22,12 @@
 - Saving the world has to be **both**: you can't save the world by killing people, and you can't kill people and call it saving the world.
 - The tone must stay **positive and practical** — hope and action, never doom or guilt.
 
+### Technology & AI as the bridge
+
+- If we have the technology to build colossal ships, oil rigs, and petroleum/lubrication infrastructure, we have the intellect to do the opposite: increase forestation (redwoods, pines), beautify landscapes, and deploy barges across the Pacific, Atlantic, and beyond — including the Antarctic — to remove plastic and crud from the seas.
+- **AI can help bridge this gap** — the same engineering capability that built the industrial world can be redirected toward restoration.
+- This is a core belief of the user's and should inform messaging: the tools already exist; the will and coordination are what's missing.
+
 This is the user's core worldview and should inform all content, tone, and messaging decisions going forward.
 
 ---
@@ -59,6 +65,7 @@ This is the user's core worldview and should inform all content, tone, and messa
 - Next session: read this file first, then pick up open items.
 - User requested a standing reminder in NOTES.md: when proprietary or sensitive material enters the project, flag the user and recommend locking the repo down (making it private).
 - User shared his core vision: honest approach to saving the world without the doom; planet care starts with water (streams, rivers, lakes, oceans) and forests, but population growth, energy, and infrastructure can't be negated; the answer is a meet-in-the-middle where saving the world means both — not saving the world by killing people, and not killing people to save the world.
+- User added technology philosophy: if we can build colossal ships and oil rigs, we have the intellect to scale forestation, beautification, and ocean cleanup barges worldwide including Antarctica; AI can help bridge this.
 
 ## Next Steps (when resuming)
 
