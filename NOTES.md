@@ -37,6 +37,41 @@
 - This is a strong example of the user's core philosophy — using advanced technology (space infrastructure) to make a positive change on Earth, without guilt or anti-progress messaging. It fits the "meet in the middle" vision perfectly.
 - **Action item:** incorporate this into the site sooner than later — could become its own section or page (e.g., "Space & Earth" or under Solutions/Facts).
 
+### Research: Data Center Water Use (for the space page)
+
+Sourced 2026-10-06. Key figures to use — pick the strongest, most defensible ones:
+
+- **A single large AI data center can use 1–5 million gallons of water per day** for cooling (Michigan/Great Lakes reporting, 2026). Some planned facilities projected up to **8 million gallons/day**.
+- **Google consumed 10.9 billion gallons of water in 2025** — up 34% year-over-year, more than double its 2021 level (Google 2026 Environmental Report).
+- **Amazon disclosed 2.5 billion gallons in 2025**; Microsoft's fleet-wide water use intensity is 0.30 L/kWh.
+- **Global AI data center direct water consumption reached ~148 billion gallons in 2025** (Axis Intelligence estimate).
+- **U.S. data centers tripled direct water use to 17.4 billion gallons by 2023**, projected to reach 38–73 billion gallons by 2028.
+- **Texas data centers alone** may consume 49 billion gallons in 2025 and 399 billion by 2030 — enough to lower Lake Mead by more than 16 feet in a single year.
+- **A 200 MW data center** pulls ~2.3 million gallons/day directly; add power-generation water and the total is ~4.3 million gallons/day.
+- **~40% of the world's data centers** are clustered in areas of high or extremely high water stress.
+- **By 2050**, the AI economy's water demand is predicted to more than double to over 54 cubic kilometers (~14 trillion US gallons) per year.
+- **AWS CEO Matt Garman (Oct 2026)** pushed back: a typical data center uses ~170,000 gallons/day, Amazon's average less than 13,000 gallons/day (equivalent to ~42 US households); direct data center water is ~0.5% of total US industrial water use; US golf courses use ~200x more than all Amazon data centers combined. *Use this as the counterpoint — the honest version of the story acknowledges the debate.*
+- **Pacific Institute (Sept 2026):** water withdrawals range from 270 gallons to 3.9 million gallons per day across facilities; median ~121,000 gallons/day, average ~436,000 gallons/day.
+
+**Messaging guidance:** Lead with the big, concrete numbers (millions of gallons per day per facility, Google's 10.9 billion) because they're visual and memorable — same as the "crystal clear water" goal. Include the AWS counterpoint briefly for credibility; it actually strengthens the "honest approach" brand. The strongest single hook: one data center can drink more water in a day than a small town uses.
+
+### Research: Space-Based Data Centers (for the space page)
+
+Sourced 2026-10-06. This is happening NOW — very current:
+
+- **Google Project Suncatcher:** launched Oct 1, 2026 — a refrigerator-sized test satellite carrying four TPUs (tensor processing units) into low Earth orbit aboard a SpaceX Falcon 9 (Transporter-18 rideshare from Vandenberg). The chips ran Google's Gemini AI for 15-minute stretches. Google plans two more satellites in 2027 and designs for fleets of 80+ satellites flying in formation, communicating via lasers. Solar panels in dawn-dusk sun-synchronous orbit generate up to **8x the power** of the same panel on the ground.
+- **SpaceX:** filed with the FCC in Jan 2026 for a constellation of up to **one million satellites** for orbital AI compute, targeting deployment as early as 2028, working toward 100 gigawatts of orbital compute capacity per year. Listed as a principal risk factor in its S-1 (may not achieve commercial viability).
+- **Blue Origin (Project Sunrise):** filed with the FCC in April 2026 for up to 51,600 satellites in sun-synchronous orbit (500–1,800 km).
+- **Starcloud:** launched a spacecraft with an Nvidia H100 in Nov 2025; trained the first LLM in orbit in Dec 2025.
+- **China's Three-Body Computing Constellation:** 12 operational satellites, ran Alibaba's Qwen3 model in orbit.
+- **Penn Engineering (2026):** passive-orientation orbital data center design — tethered system stretching several to tens of kilometers, hosting thousands of computing nodes, up to 20 MW (equivalent to a medium-sized terrestrial data center).
+- **JPL physicist Slava Turyshev (2026 paper):** modeled a 1 MW orbital data center; estimated spacecraft + launch costs need to fall to roughly **$250–$1,000 per kg** before it's viable.
+- **Google's own math (June 2026 Joule paper):** at today's prices, orbital power costs ~$14,700 per kilowatt per year vs. $570–$3,000 for a US data center. If launch costs fall to $200/kg (plausible by mid-2030s), orbital power drops to ~$810/kW/year — within terrestrial range.
+- **ABI Research forecast:** effective orbital compute power to reach 1.5 GW by 2035.
+- **Data centers projected to use ~3% of the world's electricity by 2030** (IEA) — roughly double today's share.
+
+**Messaging guidance:** The story isn't "space is cheap today" — it's "this is being tested right now, and the physics is on its side." Google's 8x solar figure and the 15-minute Gemini run are the most concrete, verifiable hooks. The cost caveat (launch costs must fall) is worth one honest sentence — it fits the "honest approach" brand and preempts skeptics. SpaceX's million-satellite filing is the headline number.
+
 This is the user's core worldview and should inform all content, tone, and messaging decisions going forward.
 
 ---
@@ -57,7 +92,7 @@ This is the user's core worldview and should inform all content, tone, and messa
 3. Ocean_Cleanup file has no extension; rename to .html and add to nav.
 4. Site still shows "Under Construction" — intentional until sections are built.
 5. Cloudflare not accessible from this session — DNS/custom domain managed separately.
-6. **NEW:** Space-based AI infrastructure content not yet incorporated — user wants this sooner than later.
+6. Space-based AI infrastructure content not yet incorporated — user wants this sooner than later. Research now logged above; ready to draft when resuming.
 
 ## Decisions Made
 
@@ -79,6 +114,7 @@ This is the user's core worldview and should inform all content, tone, and messa
 - User added technology philosophy: if we can build colossal ships and oil rigs, we have the intellect to scale forestation, beautification, and ocean cleanup barges worldwide including Antarctica; AI can help bridge this.
 - User added tone rule: no guilt, no politics — educate people on how they can make a difference; the goal is crystal clear water. Every page's narrative must stay on mission.
 - User added space topic: moving AI petabyte data centers into space to save land, energy, and water on Earth (e.g., avoid destroying 50 acres for a data center by building capacity in orbit). Wants this incorporated sooner than later — could be its own section or page. Fits the "technology as bridge" philosophy.
+- Researched data center water consumption and space-based data center developments; logged key figures and messaging guidance in NOTES.md for the upcoming space section/page.
 
 ## Next Steps (when resuming)
 
@@ -87,4 +123,4 @@ This is the user's core worldview and should inform all content, tone, and messa
 3. Build missing sections: Actions, Amazing Facts, Community, Join.
 4. Update nav links accordingly.
 5. Remove or keep "Under Construction" text as appropriate.
-6. **Incorporate space-based AI infrastructure content** (data centers in orbit, land/energy/water savings) — sooner than later, per user.
+6. **Draft the space section/page** using the research logged above — water numbers as the hook, Google's Suncatcher as the "it's happening now" proof, SpaceX's million-satellite filing as the headline scale number.
