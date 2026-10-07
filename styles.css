@@ -95,17 +95,104 @@ nav {
     font-weight: 600;
 }
 
-.hero { 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/OceanBeach.JPG') center/cover no-repeat; 
-    height: 100vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+/* Page hero for subpages */
+.page-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/OceanBeach.JPG') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
 }
 
-.hero-content { max-width: 900px; padding: 2rem; }
+.page-hero-content { max-width: 900px; padding: 2rem; }
+
+.page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Five W's grid */
+.five-ws {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.ws-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.w-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.w-card:hover {
+    transform: translateY(-8px);
+}
+
+.w-card h3 {
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Impact statement */
+.impact {
+    background: #003366;
+    color: white;
+    padding: 4rem 1.5rem;
+}
+
+.impact h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.impact-box {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+}
+
+.impact-box p {
+    margin-bottom: 1.5rem;
+}
+
+/* Cleanup link card section */
+.cleanup-link {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+
+.cleanup-card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cleanup-card a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cleanup-card a:hover {
+    text-decoration: underline;
+}
 
 h2 { 
     text-align: center; 
@@ -150,7 +237,7 @@ h2 {
 }
 
 .image-container:hover img {
-    transform: scale(1.12);   /* Hover zoom / pop-up effect */
+    transform: scale(1.12);
 }
 
 footer { 
@@ -164,7 +251,8 @@ footer {
 @media (max-width: 768px) {
     h1 { font-size: 2.4rem; }
     .nav-links { gap: 1.2rem; }
-    
+    .page-hero h1 { font-size: 2.4rem; }
+    .page-hero { height: 40vh; }
 }
 .under-construction {
     margin-top: 25px;
