@@ -120,6 +120,15 @@
   - Note: the exact capture date of IMG_0060.jpeg is unknown from file metadata; the overlay uses the mission-level description rather than a specific date. If Brian identifies the photo, the date can be added.
   - NASA images are public domain; attribution (NASA/JPL-Caltech/Space Science Institute) is provided via the overlay and the linked NASA page.
 
+## Session Log — 2026-10-08 (Cassini overlay widened + space-to-Saturn gradient)
+
+- Updated index.html (commit b092924be5f8104239222e245232cbc0a0bd4027) and toc-home.css (commit 677a363d85122dc58a41f1684976c7a3b90e42bd):
+  - Overlay now spans the full card width (left: 0; right: 0; width: 100%) instead of the previous max-width cap, giving room for more text.
+  - Overlay text now opens with "The following image was taken from the Cassini spacecraft during its 13-year mission at the ringed planet. Click to read the full story of Cassini's final dive into Saturn's atmosphere."
+  - Background changed from flat rgba(0,20,40,0.88) to a vertical gradient: deep space navy (rgba(0,20,40,0.92)) fading into Saturn's golden ring-glow (rgba(180,120,40,0.55)) at the bottom — echoing the planet's own colors.
+  - Arrow pointer color updated to match the darker navy end of the gradient.
+  - This gradient treatment is the template for the other four cards (Ocean, Lakes, Rivers, Forests) when their goal-message overlays are added.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
