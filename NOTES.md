@@ -186,6 +186,12 @@
 - Jupiter.jpg remains the donate-button image and og:image on Astroscale.html — unchanged.
 - Saturn.jpg is now used only on the homepage hero and the Space card; ClearSpace uses Uranus.jpg; Astroscale uses Nebula.jpg + Jupiter.jpg.
 
+## Session Log — 2026-10-08 (ClearSpace page-hero background: Saturn to Nebula)
+
+- Applied the same Nebula.jpg page-hero treatment to ClearSpace.html that Astroscale.html received: page-scoped style override with the navy gradient overlay on top of assets/Nebula.jpg.
+- Uranus.jpg remains the donate-button image and og:image on ClearSpace.html — unchanged.
+- Saturn.jpg is now used only on the homepage hero and the Space card.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
