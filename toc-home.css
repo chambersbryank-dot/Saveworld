@@ -151,6 +151,27 @@ html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions {
   border-color: transparent transparent rgba(0, 20, 40, 0.92) transparent;
 }
 
+/* Ken Burns: slow zoom-and-drift on all homepage card images (4s loop, seamless) */
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  25%  { transform: scale(1.06) translate(-1.5%, -1%); }
+  50%  { transform: scale(1.09) translate(1%, 1.5%); }
+  75%  { transform: scale(1.05) translate(-1%, 0.5%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+.card-band .image-container img {
+  animation: kenburns 4s ease-in-out infinite;
+  will-change: transform;
+}
+.card-band .card:hover .image-container img {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-band .image-container img {
+    animation: none;
+  }
+}
+
 @media (max-width: 900px) {
   body.toc-home .card-band .grid { grid-template-columns: 1fr 1fr; }
   body.toc-home .hero-content { width: min(46rem, 88vw); padding-top: calc(18vh + 3.4rem); }
