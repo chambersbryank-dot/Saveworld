@@ -31,3 +31,10 @@
 - Updated Amazing_Facts.html: full SEO head; removed keywords meta.
 - Updated styles.css: appended SEO/accessibility polish block (heading weights, color hierarchy, link hovers, sr-only, img max-width). No visual design changes — palette, cards, nav, heroes unchanged.
 - Updated NOTES.md: logged SEO implementation, closed open item 2, added session log.
+
+## Session Log — 2026-10-08 (SEO completion: Amazing_Facts + Oceans)
+
+- Updated Amazing_Facts.html: full SEO head (title 50-60 chars front-loading keyword, description 150-160 chars ending in CTA, OG, Twitter Card summary_large_image, canonical, robots index,follow, JSON-LD Organization/WebPage/BreadcrumbList); removed legacy keywords meta; og:image set to StreamLog.JPG (page's featured image).
+- Updated Oceans.html: full SEO head; removed legacy keywords meta; og:image set to OceanBeach.JPG.
+- All five pages now carry the complete SEO standard. styles.css unchanged this round (polish block already in place).
+- Updated NOTES.md: logged completion.
