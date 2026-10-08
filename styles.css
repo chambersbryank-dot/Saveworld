@@ -103,6 +103,7 @@ body.toc-sub .page-hero-content { padding: 0 1.25rem; }
 body.toc-sub .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 0.5rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
 body.toc-sub .page-hero p { font-size: 1.1rem; margin: 0; color: rgba(255,255,255,0.92); text-shadow: 0 1px 8px rgba(0,0,0,0.45); }
 body.toc-sub h2 { color: #003755; margin: 1.4rem 0 1rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+body.toc-sub .impact h2 { color: #fff; }
 body.toc-sub h3 { color: #009cde; margin: 0 0 0.4rem; font-size: 1.25rem; }
 body.toc-sub .five-ws { max-width: 1200px; margin: 0 auto; padding: 0.4rem 1.5rem 1.2rem; }
 body.toc-sub .ws-grid, body.toc-sub .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; padding-bottom: 1.2rem; }
