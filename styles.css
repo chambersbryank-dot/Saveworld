@@ -23,7 +23,7 @@ nav.scrolled .nav-links a { color: #003755; }
 nav.scrolled .theme-toggle { color: #003755; border-color: #003755; }
 
 /* Hero section */
-.hero { position: relative; height: 100vh; min-height: 640px; display: flex; justify-content: center; align-items: flex-start; background: linear-gradient(180deg, rgba(0,20,40,0.28) 0%, rgba(0,20,40,0.12) 42%, rgba(0,20,40,0.45) 100%), url('assets/IMG_0060.jpeg') center 35%/cover no-repeat; }
+.hero { position: relative; height: 100vh; min-height: 640px; display: flex; justify-content: center; align-items: flex-start; background: linear-gradient(180deg, rgba(0,20,40,0.28) 0%, rgba(0,20,40,0.12) 42%, rgba(0,20,40,0.45) 100%), url('assets/Saturn.jpg') center 35%/cover no-repeat; }
 .hero-content { width: min(46rem, 62vw); max-width: 46rem; margin: 0 auto; text-align: center; padding: calc(22vh + 3.4rem) 1.25rem 2rem; }
 .hero-kicker { color: #fff; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; font-size: 1.7rem; line-height: 1.15; margin-bottom: 2.8rem; text-shadow: 0 2px 16px rgba(0,0,0,0.55); }
 .hero-welcome { font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.05; margin-bottom: 1rem; color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.55); }
@@ -52,6 +52,27 @@ nav.scrolled .theme-toggle { color: #003755; border-color: #003755; }
 .solution-list a { color: #00b894; font-size: 0.95rem; font-weight: 700; text-decoration: none; }
 .solution-list a:hover { text-decoration: underline; }
 
+/* Photo overlay (reusable across all solution cards) */
+.photo-link { position: relative; display: block; }
+.photo-tip {
+    position: absolute; left: 0; right: 0; bottom: 0; width: 100%;
+    padding: 0.85rem 1rem 0.95rem;
+    background: linear-gradient(180deg, rgba(0,20,40,0.92) 0%, rgba(180,120,40,0.55) 100%);
+    color: #fff; font-size: 0.82rem; font-weight: 600; line-height: 1.45;
+    text-align: center; text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+    opacity: 0; transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+.photo-link:hover .photo-tip,
+.photo-link:focus-within .photo-tip { opacity: 1; transform: translateY(0); }
+.photo-tip::after {
+    content: ""; position: absolute; top: -7px; left: 50%; transform: translateX(-50%);
+    border-left: 7px solid transparent; border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(0,20,40,0.92);
+}
+.photo-link:focus { outline: 2px solid #009cde; outline-offset: 2px; }
+
 /* Impact bar (homepage stats) */
 .impact-bar { display: flex; flex-direction: column; align-items: center; margin-top: 2.6rem; padding: 2rem 1.5rem; background: #003755; color: #fff; }
 .stats-title { width: 100%; text-align: center; color: #fff; font-size: 1.45rem; font-weight: 700; margin: 0 0 1.1rem; line-height: 1.2; }
@@ -77,7 +98,7 @@ footer a:hover { color: #009cde; }
 
 /* Subpage shared styles */
 body.toc-sub .page-hero { height: 34vh; min-height: 220px; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/OceanBeach.JPG') center/cover no-repeat; text-align: center; color: #fff; }
-body.toc-sub .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/IMG_0060.jpeg') center/cover no-repeat; }
+body.toc-sub .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Saturn.jpg') center/cover no-repeat; }
 body.toc-sub .page-hero-content { padding: 0 1.25rem; }
 body.toc-sub .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 0.5rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
 body.toc-sub .page-hero p { font-size: 1.1rem; margin: 0; color: rgba(255,255,255,0.92); text-shadow: 0 1px 8px rgba(0,0,0,0.45); }
