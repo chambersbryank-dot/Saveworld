@@ -27,7 +27,25 @@ nav {
     height: 85px;
 }
 
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.9rem; 
+}
+
 .logo img { height: 58px; width: auto; }
+
+.nav-home {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.nav-home:hover {
+    color: var(--accent);
+}
 
 .nav-links { 
     display: flex; 
