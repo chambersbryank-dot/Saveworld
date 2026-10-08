@@ -5,15 +5,16 @@
 ### Saturn Image Upload — TEMPORARY FILENAME
 - **Current file on repo:** `assets/IMG_0060.jpeg` (uploaded from iPad photo library)
 - **index.html space card** now points to `assets/IMG_0060.jpeg` (updated Oct 8)
+- **Homepage hero background** also uses `assets/IMG_0060.jpeg` (space-led hero, updated Oct 8)
 - **Planned rename:** `IMG_0060.jpeg` → `Saturn.jpg` (blocked on iPad GitHub app upload flow)
-- **When renamed:** revert index.html src back to `assets/Saturn.jpg`
+- **When renamed:** revert index.html src back to `assets/Saturn.jpg` (both space card and hero background)
 - **Source:** Cassini Saturn photo, public domain (Wikimedia Commons) — no attribution required
 
 ### Open Items
-1. Rename `assets/IMG_0060.jpeg` to `assets/Saturn.jpg` and update index.html reference
+1. Rename `assets/IMG_0060.jpeg` to `assets/Saturn.jpg` and update index.html references (space card + hero background)
 2. SEO meta-tagging standard across all pages — DONE 2026-10-08 (see session log)
 3. Weekly copyright scan of all assets
-4. Build missing homepage sections: Actions, Community, Join (nav links point to sections that don't exist yet)
+4. Build missing homepage sections: Actions, Community, Join — DONE 2026-10-08
 
 ### Completed Today
 - Uploaded Saturn photo to assets folder (as IMG_0060.jpeg)
@@ -23,6 +24,13 @@
 - **styles.css updated:** SEO/accessibility polish — heading font-weight 700, letter-spacing, color hierarchy (h1 navy #003366, h2/h3 primary blue, impact/page-hero headings white), link hover states (primary -> accent teal), strong/bold navy, em italic #444, .sr-only utility, img max-width 100%. Visual design system unchanged.
 - **Space.html JSON-LD headline alignment:** WebPage name and BreadcrumbList item now match visible H1 "Computing Above the Clouds" (was "Space Data Centers").
 - **Sticky nav Home link:** All 5 pages (index, Space, Ocean_Cleanup, Oceans, Amazing_Facts) now show logo + bold "Home" link in primary blue (#0066cc) immediately right of the logo, linking to index.html. styles.css: .logo is flex with gap, .nav-home bold 700, 1.15rem, hover accent teal.
+- **Homepage overhaul (2026-10-08):** Space-led hero with Saturn image background and "Computing Above the Clouds" headline; impact stat bar (15M kg plastic removed, 3:1 tree ratio, 0 gallons water in orbit); removed under-construction text; added Actions, Community, and Join sections with email signup form (placeholder alert until backend wired). styles.css: .hero.space-hero, .impact-bar, .stat-number/-label, .btn-secondary, .actions-section, .community-section, .join-section, .join-form.
+
+## Session Log — 2026-10-08 (Homepage overhaul)
+
+- Updated index.html: hero changed from generic welcome to space-led "Computing Above the Clouds" with Saturn background (IMG_0060.jpeg); added impact stat bar above solutions; removed under-construction pulsating text; added Actions (#actions), Community (#community), Join (#join) sections so all nav links resolve.
+- Updated styles.css: .hero.space-hero background, .impact-bar with accent-colored stat numbers, .btn-secondary outline style, .actions-section/.community-section/.join-section layouts, .join-form email input styling. Mobile breakpoints added for hero height and stat bar.
+- Updated NOTES.md: logged overhaul, closed open item 4.
 
 ## Session Log — 2026-10-08 (Sticky nav Home link)
 
