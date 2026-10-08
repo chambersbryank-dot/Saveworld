@@ -1,13 +1,13 @@
-/* Ocean Cleanup-inspired homepage. Proxima Nova is licensed; Montserrat is the free stand-in. Navy #003755, accent #009cde. */
+/* Ocean Cleanup-inspired site layer. Proxima Nova is licensed; Montserrat is the free stand-in. Navy #003755, accent #009cde. */
 :root { --toc-navy: #003755; --toc-blue: #009cde; }
 
-body.toc-home {
+body.toc-home, body.toc-sub {
     font-family: "Montserrat", "Segoe UI", sans-serif;
     background: #fff;
     color: var(--toc-navy);
 }
 
-body.toc-home nav {
+body.toc-home nav, body.toc-sub nav {
     position: absolute;
     top: 0; left: 0; right: 0;
     background: transparent;
@@ -15,15 +15,15 @@ body.toc-home nav {
     z-index: 1000;
 }
 
-body.toc-home nav.scrolled {
+body.toc-home nav.scrolled, body.toc-sub nav.scrolled {
     position: fixed;
     background: #fff;
     box-shadow: 0 1px 0 rgba(0,55,85,0.08);
 }
 
-body.toc-home .nav-container { height: 88px; max-width: 1280px; }
+body.toc-home .nav-container, body.toc-sub .nav-container { height: 88px; max-width: 1280px; }
 
-body.toc-home .brand-word {
+body.toc-home .brand-word, body.toc-sub .brand-word {
     color: #fff;
     font-weight: 700;
     font-size: 1.15rem;
@@ -32,17 +32,20 @@ body.toc-home .brand-word {
 }
 
 body.toc-home nav.scrolled .brand-word,
-body.toc-home nav.scrolled .nav-links a { color: var(--toc-navy); }
+body.toc-home nav.scrolled .nav-links a,
+body.toc-sub nav.scrolled .brand-word,
+body.toc-sub nav.scrolled .nav-links a { color: var(--toc-navy); }
 
-body.toc-home .nav-links a {
+body.toc-home .nav-links a, body.toc-sub .nav-links a {
     color: #fff;
     font-weight: 600;
     font-size: 0.95rem;
+    text-decoration: none;
 }
 
-body.toc-home .nav-links a:hover { color: var(--toc-blue); }
+body.toc-home .nav-links a:hover, body.toc-sub .nav-links a:hover { color: var(--toc-blue); }
 
-body.toc-home .btn-nav {
+body.toc-home .btn-nav, body.toc-sub .btn-nav {
     background: var(--toc-blue);
     color: #fff;
     border-radius: 4px;
@@ -50,6 +53,15 @@ body.toc-home .btn-nav {
     font-weight: 700;
     text-decoration: none;
 }
+
+body.toc-sub .page-hero, body.toc-sub .page-hero.space-hero { height: 52vh; }
+body.toc-sub .page-hero h1, body.toc-sub .page-hero p { font-family: "Montserrat", "Segoe UI", sans-serif; }
+body.toc-sub h2, body.toc-sub h3 { color: var(--toc-navy); font-family: "Montserrat", "Segoe UI", sans-serif; }
+body.toc-sub .impact h2 { color: #fff; }
+body.toc-sub .w-card { border-radius: 6px; }
+body.toc-sub .w-card h3 { color: var(--toc-navy); }
+body.toc-sub .card p a, body.toc-sub .cleanup-card a { color: var(--toc-blue); }
+body.toc-sub footer { background: var(--toc-navy); }
 
 body.toc-home .hero.space-hero {
     height: 100vh;
@@ -60,93 +72,25 @@ body.toc-home .hero.space-hero {
         url('assets/IMG_0060.jpeg') center/cover no-repeat;
 }
 
-body.toc-home .hero-content {
-    max-width: 1100px;
-    text-align: left;
-    padding: 0 2rem 7rem;
-}
-
-body.toc-home .hero-kicker {
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
-}
-
-body.toc-home .hero-welcome {
-    font-size: clamp(2.4rem, 5vw, 4.4rem);
-    line-height: 1.05;
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-body.toc-home .hero-example {
-    text-align: left;
-    max-width: 640px;
-    font-size: 1.15rem;
-}
-
-body.toc-home .mission-block {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 6rem 1.5rem 2rem;
-    text-align: center;
-}
-
-body.toc-home .mission-block h2 {
-    color: var(--toc-navy);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    margin: 0 0 1.2rem;
-    line-height: 1.15;
-}
-
+body.toc-home .hero-content { max-width: 1100px; text-align: left; padding: 0 2rem 7rem; }
+body.toc-home .hero-kicker { color: #fff; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.8rem; }
+body.toc-home .hero-welcome { font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.05; text-align: left; margin-bottom: 1rem; }
+body.toc-home .hero-example { text-align: left; max-width: 640px; font-size: 1.15rem; }
+body.toc-home .mission-block { max-width: 920px; margin: 0 auto; padding: 6rem 1.5rem 2rem; text-align: center; }
+body.toc-home .mission-block h2 { color: var(--toc-navy); font-size: clamp(2rem, 4vw, 3.2rem); margin: 0 0 1.2rem; line-height: 1.15; }
 body.toc-home .mission-block p { font-size: 1.15rem; color: #245066; }
-
-body.toc-home .solution-tiles {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 1.2rem;
-    max-width: 1200px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.5rem;
-}
-
-body.toc-home .tile {
-    position: relative;
-    min-height: 420px;
-    border-radius: 6px;
-    overflow: hidden;
-    color: #fff;
-    display: flex;
-    align-items: flex-end;
-    text-decoration: none;
-    background-size: cover;
-    background-position: center;
-}
-
+body.toc-home .solution-tiles { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; max-width: 1200px; margin: 2rem auto 4rem; padding: 0 1.5rem; }
+body.toc-home .tile { position: relative; min-height: 420px; border-radius: 6px; overflow: hidden; color: #fff; display: flex; align-items: flex-end; text-decoration: none; background-size: cover; background-position: center; }
 body.toc-home .tile-space { background-image: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,20,40,0.72)), url('assets/IMG_0060.jpeg'); }
 body.toc-home .tile-ocean { background-image: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,20,40,0.72)), url('assets/OceanBeach.JPG'); }
-
 body.toc-home .tile-copy { padding: 2rem; }
 body.toc-home .tile h3 { color: #fff; font-size: 2rem; margin-bottom: 0.4rem; }
 body.toc-home .tile p { color: rgba(255,255,255,0.92); margin: 0; }
-
-body.toc-home .join-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto 5rem;
-    padding: 0 1.5rem;
-}
-
+body.toc-home .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.5rem; }
 body.toc-home .join-card { border-top: 3px solid var(--toc-blue); padding-top: 1.2rem; }
 body.toc-home .join-card h3 { color: var(--toc-navy); font-size: 1.4rem; }
 
 @media (max-width: 800px) {
-    body.toc-home .solution-tiles,
-    body.toc-home .join-grid { grid-template-columns: 1fr; }
-    body.toc-home .nav-links { display: none; }
+    body.toc-home .solution-tiles, body.toc-home .join-grid { grid-template-columns: 1fr; }
+    body.toc-home .nav-links, body.toc-sub .nav-links { display: none; }
 }
