@@ -21,6 +21,7 @@
 - Confirmed assets folder structure and file listing
 - **SEO meta tagging implemented across all 5 pages** (index, Space, Ocean_Cleanup, Oceans, Amazing_Facts): title tags 50-60 chars front-loading keyword, meta descriptions 150-160 chars ending in CTA, Open Graph (og:title/description/image/url/type/site_name), Twitter Card summary_large_image, canonical absolute URLs, meta robots index,follow, JSON-LD structured data (Organization, WebPage, BreadcrumbList). Keywords meta removed per 2026 research (legacy noise). FAQPage skipped (rich results removed May 2026).
 - **styles.css updated:** SEO/accessibility polish — heading font-weight 700, letter-spacing, color hierarchy (h1 navy #003366, h2/h3 primary blue, impact/page-hero headings white), link hover states (primary -> accent teal), strong/bold navy, em italic #444, .sr-only utility, img max-width 100%. Visual design system unchanged.
+- **Space.html JSON-LD headline alignment:** WebPage name and BreadcrumbList item now match visible H1 "Computing Above the Clouds" (was "Space Data Centers").
 
 ## Session Log — 2026-10-08 (SEO meta tagging + CSS polish)
 
@@ -38,3 +39,9 @@
 - Updated Oceans.html: full SEO head; removed legacy keywords meta; og:image set to OceanBeach.JPG.
 - All five pages now carry the complete SEO standard. styles.css unchanged this round (polish block already in place).
 - Updated NOTES.md: logged completion.
+
+## Session Log — 2026-10-08 (Space.html JSON-LD headline alignment)
+
+- Updated Space.html: JSON-LD WebPage name changed from "Space Data Centers" to "Computing Above the Clouds" to match visible H1; BreadcrumbList position-2 item updated to match.
+- Title tag, OG, and Twitter titles left as "Space Data Centers in Orbit | Save The Planet" — those are search-optimized and don't need to match the H1.
+- Updated NOTES.md: logged fix.
