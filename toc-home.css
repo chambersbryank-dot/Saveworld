@@ -80,6 +80,12 @@ html.dark body.toc-home .card-band h3, html.dark .brand-blue { color: #4da3ff; }
 html.dark body.toc-home .solution-list a { color: #3dDC97; }
 html.dark body.toc-home #actions .join-lead { color: #fff; }
 html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions { background: #071018; }
+
+/* Organization brand block (Ocean Cleanup template) */
+.org-brand { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.org-logo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.85); box-shadow: 0 4px 18px rgba(0,0,0,0.35); }
+.org-brand h1 { margin: 0; }
+
 @media (max-width: 900px) {
   body.toc-home .card-band .grid { grid-template-columns: 1fr 1fr; }
   body.toc-home .hero-content { width: min(46rem, 88vw); padding-top: calc(18vh + 3.4rem); }

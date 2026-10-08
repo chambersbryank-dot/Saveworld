@@ -46,4 +46,7 @@
       }
     });
   }
+  if ('scrollBehavior' in document.documentElement.style) {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }
 })();
