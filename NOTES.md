@@ -110,6 +110,16 @@
 - Follow-up commit 8130274fb5: removed the remaining donate mailto from the lead line and replaced it with the solutions-page pointer.
 - Rationale: the site's donate path is per-solution (each page has its own donate button with a category-matched background image), so the homepage should route donors there rather than to email.
 
+## Session Log — 2026-10-08 (Space card photo overlay: Cassini story + clickable NASA link)
+
+- Updated index.html space-card image (commit 0a6eeb4b4f5f8cdadf201c1b48d92c3bde1f8f61) and toc-home.css (commit 4ad2d1e512f70cce409550d58d045b81c7b7aef1):
+  - Wrapped the Saturn image (assets/IMG_0060.jpeg) in an anchor (class "photo-link") pointing to NASA's "Impact Site: Cassini's Final Image" article: https://www.nasa.gov/image-article/impact-site-cassinis-final-image/ (opens in a new tab, rel="noreferrer").
+  - Added a hover overlay (class "cassini-tip") with the message: "This is a real photograph of Saturn, taken by NASA's Cassini spacecraft during its 13-year mission at the ringed planet. Click to read the full story of Cassini's final dive into Saturn's atmosphere."
+  - Overlay fades in on hover/focus-within, positioned at the bottom of the image container with a small arrow pointer; pointer-events: none so it does not block the click.
+  - CSS is reusable: the same .photo-link / .cassini-tip pattern can be applied to the Ocean, Lakes, Rivers, and Forests card images with simple goal messages (e.g., "Depicted is the goal we are striving for" / "our goal for the lakes to look like in the future") — pending Brian's review of the Space card.
+  - Note: the exact capture date of IMG_0060.jpeg is unknown from file metadata; the overlay uses the mission-level description rather than a specific date. If Brian identifies the photo, the date can be added.
+  - NASA images are public domain; attribution (NASA/JPL-Caltech/Space Science Institute) is provided via the overlay and the linked NASA page.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
@@ -117,3 +127,4 @@
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
 16. Add additional space pictures (Brian's next item after CTA update)
+17. If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages
