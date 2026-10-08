@@ -32,6 +32,14 @@
 - **Hero centering fix (2026-10-08):** .hero-content width 100%, h1 forced white with text-shadow, CTA padding-top 0.5rem so buttons don't overlap text.
 - **Under-construction banner restored (2026-10-08):** .under-construction back in hero below CTA buttons, orange pulse animation.
 - **Hero ideas email line (2026-10-08):** Below under-construction, added "Please email ideas@saveplanetminusthedoom.com with your ideas for the page" as a clickable mailto link. styles.css: .hero-email, .hero-email a (white, bold, underline, hover accent teal).
+- **Cassini photo credit (2026-10-08):** Added .hero-credit below the email line — "Photo: NASA's Cassini spacecraft" with clickable link to NASA's Saturn photojournal gallery (https://science.nasa.gov/photojournal/galleries/pj-saturn/). styles.css: .hero-credit 0.7rem, muted white, no absolute positioning (flows below email line, no overflow).
+- **Cassini "Where is Cassini spacecraft now?" link (2026-10-08):** Added parenthetical clickable link beside Cassini spacecraft credit — "(Where is Cassini spacecraft now?)" pointing to NASA's official end-of-mission release (https://www.nasa.gov/news-release/nasas-cassini-spacecraft-ends-its-historic-exploration-of-saturn/). Tells the story of the intentional Sept 15, 2017 plunge into Saturn's atmosphere to protect Enceladus's subsurface ocean from contamination — environmental stewardship at a billion miles, reinforcing the site's positive-solutions angle.
+
+## Session Log — 2026-10-08 (Cassini credit + "Where is Cassini now?" link)
+
+- Updated index.html: .hero-credit paragraph moved below .hero-email; contains "Photo: NASA's Cassini spacecraft" linked to NASA Saturn photojournal gallery, plus parenthetical "(Where is Cassini spacecraft now?)" linked to NASA end-of-mission news release.
+- Updated styles.css: .hero-credit font-size 0.7rem, color rgba(255,255,255,0.65), removed absolute bottom positioning so it flows in document order below the email line; .hero-credit a muted white underline, hover accent teal.
+- Updated NOTES.md: logged both credit items, session log added.
 
 ## Session Log — 2026-10-08 (Under-construction + ideas email)
 
