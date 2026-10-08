@@ -21,6 +21,8 @@
 8. Cloudflare Email Routing — create `ideas@savingplanets.com` mailbox so the hero email link works (domain registered via GoDaddy, transferred to Cloudflare; DNS verified)
 9. "Take Action" hero CTA button removed 2026-10-08 — revisit later once direction is decided
 10. "Computing Above the Clouds" h1 removed from homepage hero 2026-10-08 — welcome line is now the hero headline; h1 may return on subpages or later
+11. Hero overlay brightness — reduced from 0.7 to 0.35 opacity so Saturn reads as vibrant as the space card image (2026-10-08)
+12. Hero credit watermark — shrunk to 10px, rgba(255,255,255,0.18), bottom-right, single line "Taken from NASA's Cassini spacecraft" (2026-10-08)
 
 ### Completed Today
 - Uploaded Saturn photo to assets folder (as IMG_0060.jpeg)
@@ -45,6 +47,15 @@
 - **Hero example line (2026-10-08):** Paragraph below welcome opens "A great example is the following:" with "Solar-Powered Data Centers" bolded and capitalized as requested, then "in orbit — unlimited energy, zero water cooling..."
 - **Under-construction color (2026-10-08):** Changed from orange #ff9800 to purplish-red #9b59b6 with matching glow text-shadow.
 - **Cassini watermark size (2026-10-08):** .hero-credit shrunk to 0.5rem, rgba(255,255,255,0.22) — smaller than previous 0.65rem/0.35 — so it reads as a faint watermark pressed into the planet.
+- **Hero overlay lightened (2026-10-08):** .hero.space-hero gradient opacity reduced from 0.7 to 0.35 so Saturn's colors and rings read as vibrant as the space card image.
+- **Welcome line enlarged + reworded (2026-10-08):** .hero-welcome bumped to 3.6rem (1.5x); text changed from "Saving Planets" to "Saving Our Planet" (singular).
+- **Hero credit reworded + shrunk (2026-10-08):** Changed from "Photo: NASA's Cassini spacecraft" to "Taken from NASA's Cassini spacecraft"; font-size 10px, rgba(255,255,255,0.18), bottom-right, white-space nowrap so the full line fits as one watermark on the planet.
+
+## Session Log — 2026-10-08 (Overlay lighten + welcome enlarge + credit shrink)
+
+- Updated styles.css: .hero.space-hero overlay 0.7 -> 0.35; .hero-welcome 2.4rem -> 3.6rem; .hero-credit 0.5rem/0.22 -> 10px/0.18, nowrap.
+- Updated index.html: welcome brand "Saving Our Planet" (singular); hero-credit "Taken from NASA's Cassini spacecraft" with both links intact.
+- Updated NOTES.md: logged overlay, welcome, credit changes; added open items 11 and 12.
 
 ## Session Log — 2026-10-08 (Hero headline swap + Doom restyle + watermark shrink)
 

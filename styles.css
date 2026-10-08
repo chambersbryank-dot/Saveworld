@@ -138,9 +138,9 @@ nav {
     color: white;
 }
 
-/* Space-led hero variant (homepage) */
+/* Space-led hero variant (homepage) — lighter overlay so Saturn reads vibrant like the space card */
 .hero.space-hero {
-    background: linear-gradient(rgba(10,10,30,0.7), rgba(10,10,30,0.7)), url('assets/IMG_0060.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(10,10,30,0.35), rgba(10,10,30,0.35)), url('assets/IMG_0060.jpeg') center/cover no-repeat;
     position: relative;
 }
 
@@ -169,7 +169,7 @@ nav {
 }
 
 .hero-welcome {
-    font-size: 2.4rem;
+    font-size: 3.6rem;
     font-weight: 700;
     letter-spacing: 0.03em;
     margin-bottom: 1.4rem;
@@ -260,20 +260,22 @@ nav {
     color: var(--accent);
 }
 
+/* Watermark: tiny, bottom-right, pressed into the planet */
 .hero-credit {
     position: absolute;
     bottom: 1.2rem;
     right: 1.5rem;
-    color: rgba(255,255,255,0.22);
-    font-size: 0.5rem;
+    color: rgba(255,255,255,0.18);
+    font-size: 10px;
     margin: 0;
     text-shadow: 0 1px 2px rgba(0,0,0,0.7);
     pointer-events: auto;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .hero-credit a {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.26);
     text-decoration: underline;
 }
 
@@ -481,10 +483,10 @@ footer {
     .page-hero { height: 40vh; }
     .hero { height: 70vh; }
     .hero h1 { font-size: 2.4rem; }
-    .hero-welcome { font-size: 1.7rem; }
+    .hero-welcome { font-size: 2.2rem; }
     .impact-bar { gap: 2rem; }
     .stat-number { font-size: 2.2rem; }
-    .hero-credit { bottom: 0.8rem; right: 1rem; font-size: 0.45rem; }
+    .hero-credit { bottom: 0.8rem; right: 1rem; font-size: 9px; }
 }
 
 /* ===== SEO / Accessibility polish (2026-10-08) ===== */
