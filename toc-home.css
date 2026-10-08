@@ -24,10 +24,12 @@ body.toc-home .mission-block h2 { color: var(--toc-navy); font-size: clamp(2rem,
 body.toc-home .mission-block p { font-size: 1.15rem; color: #245066; }
 body.toc-home .card-band { max-width: 1200px; margin: 0 auto 3rem; padding: 0 1.5rem 2rem; }
 body.toc-home .card-band h2 { text-align: center; color: var(--toc-navy); margin-bottom: 1.5rem; }
-body.toc-home .card-band .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-body.toc-home a.card { text-decoration: none; color: inherit; display: block; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,55,85,0.12); }
-body.toc-home a.card h3 { color: var(--toc-navy); padding: 1rem 1rem 0.3rem; }
-body.toc-home a.card p { padding: 0 1rem 1.2rem; color: #245066; }
+body.toc-home .card-band .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+body.toc-home .card-band .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,55,85,0.12); }
+body.toc-home .card-band h3 { color: var(--toc-navy); text-decoration: none; padding: 1rem 1rem 0.2rem; margin: 0; }
+body.toc-home .solution-list { list-style: none; margin: 0; padding: 0.4rem 1rem 1.2rem; }
+body.toc-home .solution-list a { color: var(--toc-blue); font-weight: 700; text-decoration: none; }
+body.toc-home .solution-list a:hover { text-decoration: underline; }
 body.toc-home .impact-bar { flex-wrap: wrap; }
 body.toc-home .stats-title { flex: 1 0 100%; text-align: center; color: #fff; font-size: 2.8rem; font-weight: 700; margin: 0 0 1.2rem; line-height: 1.15; }
 body.toc-home .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.5rem; }
@@ -40,10 +42,10 @@ body.toc-sub footer { background: var(--toc-navy); }
 html.dark body.toc-home, html.dark body.toc-sub { background: #0b1220; color: #e8eef5; }
 html.dark nav.scrolled { background: #0b1220; }
 html.dark nav.scrolled .brand-word, html.dark nav.scrolled .nav-links a, html.dark nav.scrolled .theme-toggle { color: #fff; border-color: #fff; }
-html.dark .w-card, html.dark .card, html.dark .dropdown-menu, html.dark body.toc-home a.card { background: #152033; color: #e8eef5; }
+html.dark .w-card, html.dark .card, html.dark .dropdown-menu { background: #152033; color: #e8eef5; }
 html.dark .dropdown-menu a { color: #e8eef5 !important; }
-html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-home a.card h3, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
-html.dark body.toc-home .mission-block p, html.dark body.toc-home .join-card p, html.dark body.toc-home a.card p { color: #c5d2e0; }
+html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-home .card-band h3, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
+html.dark body.toc-home .mission-block p, html.dark body.toc-home .join-card p { color: #c5d2e0; }
 html.dark footer, html.dark .impact, html.dark .impact-bar { background: #071018; }
 @media (max-width: 900px) {
   body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr 1fr; }
