@@ -45,6 +45,14 @@ body.toc-sub .page-hero, body.toc-sub .page-hero.space-hero { height: 52vh; }
 body.toc-sub h2, body.toc-sub h3, body.toc-sub .page-hero h1 { font-family: "Montserrat", "Segoe UI", sans-serif; }
 body.toc-sub .impact h2, body.toc-sub .page-hero h1 { color: #fff; }
 body.toc-sub footer { background: var(--toc-navy); }
+body.space-page .page-hero { height: 34vh; min-height: 220px; }
+body.space-page h2 { margin: 1.4rem 0 1rem; }
+body.space-page .five-ws { padding-top: 0.5rem; }
+body.space-page .ws-grid { gap: 1rem; padding-bottom: 1.4rem; }
+body.space-page .w-card { padding: 1.2rem; }
+body.space-page .impact { padding: 1.6rem 1.5rem; }
+body.space-page .impact-box p { margin-bottom: 0; }
+body.space-page footer { padding: 1.6rem 1.5rem; }
 html.dark body.toc-home, html.dark body.toc-sub { background: #0b1220; color: #e8eef5; }
 html.dark nav.scrolled { background: #0b1220; }
 html.dark nav.scrolled .brand-word, html.dark nav.scrolled .nav-links a, html.dark nav.scrolled .theme-toggle { color: #fff; border-color: #fff; }
