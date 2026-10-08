@@ -20,6 +20,7 @@
 7. Join Movement / subscription system — ON HOLD (brainstorming; Formspree or Buttondown options discussed)
 8. Cloudflare Email Routing — create `ideas@savingplanets.com` mailbox so the hero email link works (domain registered via GoDaddy, transferred to Cloudflare; DNS verified)
 9. "Take Action" hero CTA button removed 2026-10-08 — revisit later once direction is decided
+10. "Computing Above the Clouds" h1 removed from homepage hero 2026-10-08 — welcome line is now the hero headline; h1 may return on subpages or later
 
 ### Completed Today
 - Uploaded Saturn photo to assets folder (as IMG_0060.jpeg)
@@ -40,6 +41,16 @@
 - **Removed "Take Action" hero CTA (2026-10-08):** Only "See Real Solutions" remains; Take Action button removed pending direction.
 - **Hero email updated (2026-10-08):** ideas@savingplanets.com (new domain registered at GoDaddy, transferred to Cloudflare; DNS verified).
 - **Cassini credit watermark (2026-10-08):** .hero-credit moved to absolute bottom-right of hero, 0.65rem, rgba(255,255,255,0.35) so it reads as a watermark sinking into the Saturn image; both Cassini spacecraft and "Where is Cassini spacecraft now?" links remain clickable with hover accent teal.
+- **Hero headline swap (2026-10-08):** Removed "Computing Above the Clouds" h1 from homepage hero. Welcome line is now the hero headline at 2.4rem. "Doom" restyled: uppercase, letter-spacing 0.14em, dark blood-red #8b0000, heavier glow stack, uppercase flicker animation. "Minus" capitalized per request.
+- **Hero example line (2026-10-08):** Paragraph below welcome opens "A great example is the following:" with "Solar-Powered Data Centers" bolded and capitalized as requested, then "in orbit — unlimited energy, zero water cooling..."
+- **Under-construction color (2026-10-08):** Changed from orange #ff9800 to purplish-red #9b59b6 with matching glow text-shadow.
+- **Cassini watermark size (2026-10-08):** .hero-credit shrunk to 0.5rem, rgba(255,255,255,0.22) — smaller than previous 0.65rem/0.35 — so it reads as a faint watermark pressed into the planet.
+
+## Session Log — 2026-10-08 (Hero headline swap + Doom restyle + watermark shrink)
+
+- Updated index.html: removed <h1>Computing Above the Clouds</h1>; welcome line now hero headline with capitalized "Minus"; hero paragraph reworded with "A great example is the following:" and bolded "Solar-Powered Data Centers"; email unchanged at ideas@savingplanets.com; hero-credit content unchanged.
+- Updated styles.css: .hero-welcome 2.4rem; .welcome-doom uppercase/blood-red/heavier glow/flicker; .hero-example + .hero-example-lead; .under-construction #9b59b6; .hero-credit 0.5rem/0.22 opacity.
+- Updated NOTES.md: logged headline swap, Doom restyle, example line, under-construction color, watermark shrink; added open item 10.
 
 ## Session Log — 2026-10-08 (Hero welcome + watermark + email update)
 
