@@ -160,13 +160,25 @@
 - Kept intact: hero, nav, mission block, impact bar, stats, footer, site.js, and all other pages (Space.html, Astroscale.html, ClearSpace.html, etc.).
 - The overlay CSS pattern and goal-message copy are preserved in the session logs above, so re-applying to any card is straightforward once Brian decides the per-card treatment.
 
+## Session Log — 2026-10-08 (planet image uploads + homepage overlay re-apply + hero fix)
+
+- Brian uploaded four new planet photos to assets/ via the GitHub web UI: Earth.jpg (84 KB), Jupiter.jpg (171 KB), Saturn.jpg (1.60 MB), Uranus.jpg (224 KB). Mars.jpg was mentioned but not present in the repo at time of check — held in reserve.
+- Re-applied the Cassini photo overlay to all five homepage solution cards (index.html), using the Saturn navy-to-gold gradient template from the earlier session:
+  - **Space card:** Saturn.jpg, click-through to NASA's "Impact Site: Cassini's Final Image" (https://www.nasa.gov/image-article/impact-site-cassinis-final-image/), overlay text: "The following image was taken from the Cassini spacecraft during its 13-year mission at the ringed planet. Click to read the full story of Cassini's final dive into Saturn's atmosphere."
+  - **Ocean card:** OceanBeach.JPG, overlay: "The picture depicted is the goal of the solutions we are bringing to you — clean, thriving oceans."
+  - **Lakes card:** Pexels mountain lake, overlay: "This is our goal for the lakes to look like in the future — clear, healthy, and thriving."
+  - **Rivers card:** Pexels forest river, overlay: "This is our goal for the rivers to look like in the future — clean, flowing, and alive."
+  - **Forests card:** CutTreePlantThree.JPG, overlay: "This is our goal for the forests to look like in the future — restored, green, and thriving."
+- Fixed broken hero image references: styles.css .hero and toc-home.css body.toc-home .hero.space-hero and body.toc-sub .page-hero.space-hero all pointed at assets/IMG_0060.jpeg, which no longer exists after the Saturn.jpg rename. All three now point at assets/Saturn.jpg.
+- Open items updated: #1 (IMG_0060 rename) closed — Saturn.jpg is live and referenced. #16 (additional space pictures) updated — Earth/Jupiter/Saturn/Uranus uploaded; Mars still pending. #17 (overlay on other cards) closed — applied to all five cards.
+- All four planet images are NASA public domain.
+
 ### Still open
-1. Rename assets/IMG_0060.jpeg to Saturn.jpg
+1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
-16. Add additional space pictures — IN PROGRESS: four NASA planet photos selected (Jupiter/Mars/Earth/Neptune), blocked on binary upload from this environment; see session log above
-17. If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages
-18. Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html
-19. Homepage revert done 2026-10-08 — discuss per-card solution treatments with Brian before re-applying overlays
+16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
+17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
+18. Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html — Jupiter/Earth confirmed in use; Neptune.jpg referenced by ClearSpace.html but NOT in repo (needs upload or swap to Uranus.jpg); Mars.jpg not uploaded
