@@ -43,9 +43,26 @@
 - Retitled the section header to "Our solutions are based on the following criteria" per Brian's direction.
 - Criteria section logged here as the authoritative checklist for all future solution additions.
 
+## Session Log — 2026-10-08 (criteria verification against live sources)
+
+- Spot-checked all ten solutions against current web sources. Results:
+  - **4ocean:** CONFIRMED — 50M+ lbs removed (Feb 2026 milestone, GreenCircle-verified), 29,311 cleanups, 2,456 jobs. Donate path confirmed at 4oceanfoundation.org/donate.
+  - **Plastic Bank:** CONFIRMED — 10.5 billion bottles exchanged, 77,331 collectors, 196M+ kg recovered (as of mid-2026). Donate path confirmed at plasticbank.com/individuals.
+  - **Clean Up the Lake:** CONFIRMED — 78,194 lbs total collected, 130.13 underwater miles, 460 dives (cleanupthelake.org stats). Donate path confirmed. Also completed a Sept 2026 Upper Twin Lakes cleanup removing 2,433 lbs.
+  - **Great Lakes Plastic Cleanup:** CONFIRMED — 277,000+ pieces removed since 2020 (up from 244,000 at time of page creation), 32,500+ pieces sorted in 2025. Donate path confirmed at get-involved page.
+  - **Sungai Watch:** CONFIRMED — 3.5M+ kg collected (July 2025), 368 barriers installed (June 2025), 185 barriers + 745 tons in 2025 alone. Donate path confirmed at sungai.watch/products/donate.
+  - **Great Bubble Barrier:** CONFIRMED — 1M+ pieces captured in Amsterdam since 2019 (Aug 2025 milestone), ~15,536 pieces/month. Donate path confirmed.
+  - **Astroscale:** CONFIRMED — ADRAS-J completed operations and began deorbit March 2026; ADRAS-J2 launch booked with Isar Aerospace for 2027-2028. Donate path remains partial (get-involved only).
+  - **ClearSpace:** CONFIRMED — ClearSpace-1 now targeting PROBA-1 satellite (target changed from VESPA adapter in April 2024), launch 2028; PRELUDE launch June 2027; Phoenix GEO life-extension contract signed Sept 2026. Donate path remains partial.
+  - **Terraformation:** CONFIRMED — 5.4M native trees planted in 2025 (up from 2.3M in 2024), 447 species, 2,155 hectares restored; 4.7M+ trees all-time, 68 projects in 18 countries. Donate path confirmed at terraformation.org.
+  - **Life Terra:** CONFIRMED — 36M+ trees planted 2020-2025 across 32 countries, 563,000 tonnes CO2, 76% average survival rate on monitored plots. Donate path confirmed at lifeterra.eu/en/support-us.
+- All ten still pass all four criteria. No removals needed.
+- Two number updates worth making on the pages: Great Lakes Plastic Cleanup is now 277,000+ pieces (was 244,000); Life Terra is 36M+ trees (was 35M). Minor — can batch with next edit.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
+16. Batch-update GLPC piece count (277K) and Life Terra tree count (36M) on their pages
