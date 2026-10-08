@@ -4,7 +4,7 @@
 
 ### Saturn Image Upload — TEMPORARY FILENAME
 - **Current file on repo:** `assets/IMG_0060.jpeg` (uploaded from iPad photo library)
-- **index.html space card** now points to `assets/IMG_0060.jpeg` (updated Oct 8)
+- **index.html space card** points to `assets/IMG_0060.jpeg` (updated Oct 8)
 - **Homepage hero background** also uses `assets/IMG_0060.jpeg` (space-led hero, updated Oct 8)
 - **Planned rename:** `IMG_0060.jpeg` → `Saturn.jpg` (blocked on iPad GitHub app upload flow)
 - **When renamed:** revert index.html src back to `assets/Saturn.jpg` (both space card and hero background)
@@ -15,6 +15,10 @@
 2. SEO meta-tagging standard across all pages — DONE 2026-10-08 (see session log)
 3. Weekly copyright scan of all assets
 4. Build missing homepage sections: Actions, Community, Join — DONE 2026-10-08
+5. Homepage hero overhaul — DONE 2026-10-08 (space-led hero, impact stat bar, under-construction banner, ideas email line)
+6. Hero centering fix — DONE 2026-10-08 (hero-content width 100%, h1 white with text-shadow, CTA padding)
+7. Join Movement / subscription system — ON HOLD (brainstorming; Formspree or Buttondown options discussed)
+8. Cloudflare Email Routing — create `ideas@saveplanetminusthedoom.com` mailbox so the hero email link works
 
 ### Completed Today
 - Uploaded Saturn photo to assets folder (as IMG_0060.jpeg)
@@ -25,6 +29,20 @@
 - **Space.html JSON-LD headline alignment:** WebPage name and BreadcrumbList item now match visible H1 "Computing Above the Clouds" (was "Space Data Centers").
 - **Sticky nav Home link:** All 5 pages (index, Space, Ocean_Cleanup, Oceans, Amazing_Facts) now show logo + bold "Home" link in primary blue (#0066cc) immediately right of the logo, linking to index.html. styles.css: .logo is flex with gap, .nav-home bold 700, 1.15rem, hover accent teal.
 - **Homepage overhaul (2026-10-08):** Space-led hero with Saturn image background and "Computing Above the Clouds" headline; impact stat bar (15M kg plastic removed, 3:1 tree ratio, 0 gallons water in orbit); removed under-construction text; added Actions, Community, and Join sections with email signup form (placeholder alert until backend wired). styles.css: .hero.space-hero, .impact-bar, .stat-number/-label, .btn-secondary, .actions-section, .community-section, .join-section, .join-form.
+- **Hero centering fix (2026-10-08):** .hero-content width 100%, h1 forced white with text-shadow, CTA padding-top 0.5rem so buttons don't overlap text.
+- **Under-construction banner restored (2026-10-08):** .under-construction back in hero below CTA buttons, orange pulse animation.
+- **Hero ideas email line (2026-10-08):** Below under-construction, added "Please email ideas@saveplanetminusthedoom.com with your ideas for the page" as a clickable mailto link. styles.css: .hero-email, .hero-email a (white, bold, underline, hover accent teal).
+
+## Session Log — 2026-10-08 (Under-construction + ideas email)
+
+- Updated index.html: restored .under-construction paragraph in hero below .hero-cta; added .hero-email paragraph with mailto:ideas@saveplanetminusthedoom.com link inviting visitor ideas.
+- Updated styles.css: added .hero-email and .hero-email a styles (white, bold, underline, hover accent).
+- Updated NOTES.md: logged changes, added open items 7 and 8.
+
+## Session Log — 2026-10-08 (Hero centering fix)
+
+- Updated styles.css: .hero-content { width: 100%; }, .hero h1 { text-align: center; }, .hero-cta { padding-top: 0.5rem; }.
+- Updated NOTES.md: logged fix.
 
 ## Session Log — 2026-10-08 (Homepage overhaul)
 
