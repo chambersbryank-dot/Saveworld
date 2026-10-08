@@ -1,6 +1,6 @@
 # Save The Planet — Project Notes
 
-## Solutions Criteria (authoritative — check every new solution against these before adding)
+## Solutions Criteria (authoritative — check every new solution before adding)
 
 1. **Hands-on work** — The organization must do the work itself: cleanup crews, planting teams, barrier installations, or operating hardware. We feature doers, not just funders or promoters.
 2. **Published, verifiable numbers** — Impact must be backed by specific, checkable figures (kilograms removed, trees planted, devices deployed, debris captured) with a source we can cite.
@@ -28,7 +28,7 @@
 - **Re-check trigger:** Run this check again if we add more than ~5 large images (over ~500 KB each) or if the repo API size approaches 100 MB. At current growth rate, we are years from any limit.
 - **Bottom line:** No paid tier needed. GitHub Pages is free for public repos, and we are nowhere near any limit. The only real cost risk would be if the site became primarily commercial/e-commerce, which it is not.
 
-## Solutions Criteria (authoritative — check every new solution against these before adding)
+## Solutions Criteria (authoritative — check every new solution before adding)
 
 1. **Hands-on work** — The organization must do the work itself: cleanup crews, planting teams, barrier installations, or operating hardware. We feature doers, not just funders or promoters.
 2. **Published, verifiable numbers** — Impact must be backed by specific, checkable figures (kilograms removed, trees planted, devices deployed, debris captured) with a source we can cite.
@@ -95,7 +95,7 @@
 
 ## Session Log — 2026-10-08 (page verification dates in footers)
 
-- Added "Page verified October 2026" to the footers of seven solution pages: Plastic_Bank.html, Clean_Up_the_Lake.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html.
+- Added "Page verified October 2026" to the footers of seven solution pages: Plastic_Bank.html, Clean_Up_the_Lake.html, Clean_Up_the_Lake.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html.
 - Life_Terra.html and Great_Lakes_Plastic_Cleanup.html already carried the same footer text from the earlier number-update push, so all ten new solution pages now show a verification date.
 - Also re-pushed Oceans.html in this batch to correct the 4ocean card link to Ocean_Cleanup.html (the previous push had pointed it at the nonexistent 4ocean.html).
 - Going forward, when a solution's numbers are re-verified, update the footer date on that page and log it here.
@@ -151,6 +151,15 @@
 - Applied site-wide via the shared .card-band .image-container img rule — no per-card HTML changes needed.
 - Brian approved rolling it out to all cards without a single-card preview.
 
+## Session Log — 2026-10-08 (homepage revert: pre-overlay baseline)
+
+- Brian asked to revert the homepage to the state before the Cassini overlay work so we can discuss what to do with each solution card.
+- Reverted index.html (commit c7d01316) and toc-home.css (commit 82df705d) to the pre-overlay state:
+  - index.html: plain card images (no photo-link wrapper, no cassini-tip), Space card points at assets/IMG_0060.jpeg, bottom CTA restored to "Join the Work" with Donate / show up / send an idea links.
+  - toc-home.css: removed the .photo-link / .cassini-tip overlay block and the Ken Burns keyframes + animation rules.
+- Kept intact: hero, nav, mission block, impact bar, stats, footer, site.js, and all other pages (Space.html, Astroscale.html, ClearSpace.html, etc.).
+- The overlay CSS pattern and goal-message copy are preserved in the session logs above, so re-applying to any card is straightforward once Brian decides the per-card treatment.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
@@ -160,3 +169,4 @@
 16. Add additional space pictures — IN PROGRESS: four NASA planet photos selected (Jupiter/Mars/Earth/Neptune), blocked on binary upload from this environment; see session log above
 17. If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages
 18. Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html
+19. Homepage revert done 2026-10-08 — discuss per-card solution treatments with Brian before re-applying overlays
