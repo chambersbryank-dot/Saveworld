@@ -173,6 +173,12 @@
 - Open items updated: #1 (IMG_0060 rename) closed — Saturn.jpg is live and referenced. #16 (additional space pictures) updated — Earth/Jupiter/Saturn/Uranus uploaded; Mars still pending. #17 (overlay on other cards) closed — applied to all five cards.
 - All four planet images are NASA public domain.
 
+## Session Log — 2026-10-08 (ClearSpace Neptune-to-Uranus swap + Saturn.jpg refresh)
+
+- Swapped ClearSpace.html donate-button image from assets/Neptune.jpg (never uploaded) to assets/Uranus.jpg, which Brian had uploaded. og:image meta tag already pointed at Uranus.jpg, so only the donate-btn img src needed changing.
+- Brian also refreshed assets/Saturn.jpg with an updated version he preferred; the file is already referenced by index.html hero, Space.html card, Astroscale.html donate button, and the subpage space-hero CSS, so no code changes were needed — the new image serves automatically.
+- Open item #18 updated: Neptune.jpg no longer needed; Uranus.jpg now covers ClearSpace. Mars.jpg still not uploaded.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
@@ -181,4 +187,4 @@
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
 16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
 17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
-18. Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html — Jupiter/Earth confirmed in use; Neptune.jpg referenced by ClearSpace.html but NOT in repo (needs upload or swap to Uranus.jpg); Mars.jpg not uploaded
+18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
