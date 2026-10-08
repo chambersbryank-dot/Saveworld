@@ -37,13 +37,10 @@ body.toc-home .impact-bar { display: flex; flex-direction: column; align-items: 
 body.toc-home .stats-title { width: 100%; text-align: center; color: #fff; font-size: 1.45rem; font-weight: 700; margin: 0 0 1.4rem; line-height: 1.2; }
 body.toc-home .stats-title .brand-blue { color: var(--brand-blue); text-shadow: 0 1px 0 rgba(0,0,0,0.25); }
 body.toc-home .stat-row { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; width: 100%; }
-body.toc-home #actions { padding-bottom: var(--section-gap); color: var(--brand-blue); font-size: 1.2rem; }
-body.toc-home #actions .mission-block h2, body.toc-home #actions .join-lead, body.toc-home #actions .join-card h3, body.toc-home #actions .join-card p, body.toc-home #actions .join-card a { color: var(--brand-blue); }
-body.toc-home #actions .join-lead { font-size: 1.35rem; margin-top: 1rem; }
-body.toc-home #actions .join-card h3 { font-size: 1.55rem; }
-body.toc-home #actions .join-card p, body.toc-home #actions .join-card a { font-size: 1.2rem; }
-body.toc-home .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-body.toc-home .join-card { border-top: 3px solid var(--brand-blue); padding-top: 1.2rem; }
+body.toc-home #actions { padding-bottom: var(--section-gap); }
+body.toc-home #actions .join-lead { color: #fff; font-size: 1.35rem; margin-top: 1rem; }
+body.toc-home #actions { background: #003755; margin-top: var(--section-gap); padding: 3rem 1.5rem var(--section-gap); }
+body.toc-home #actions .mission-block { padding-top: 0; }
 body.toc-sub .page-hero, body.toc-sub .page-hero.space-hero { height: 52vh; }
 body.toc-sub h2, body.toc-sub h3, body.toc-sub .page-hero h1 { font-family: "Montserrat", "Segoe UI", sans-serif; }
 body.toc-sub .impact h2, body.toc-sub .page-hero h1 { color: #fff; }
@@ -54,14 +51,15 @@ html.dark nav.scrolled .brand-word, html.dark nav.scrolled .nav-links a, html.da
 html.dark .w-card, html.dark .card, html.dark .dropdown-menu { background: #152033; color: #e8eef5; }
 html.dark .dropdown-menu a { color: #e8eef5 !important; }
 html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-home .card-band h3, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
-html.dark .brand-blue, html.dark body.toc-home #actions, html.dark body.toc-home #actions .mission-block h2, html.dark body.toc-home #actions .join-lead, html.dark body.toc-home #actions .join-card h3, html.dark body.toc-home #actions .join-card p, html.dark body.toc-home #actions .join-card a { color: #4da3ff; }
-html.dark footer, html.dark .impact, html.dark .impact-bar { background: #071018; }
+html.dark .brand-blue { color: #4da3ff; }
+html.dark body.toc-home #actions .join-lead { color: #fff; }
+html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions { background: #071018; }
 @media (max-width: 900px) {
-  body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr 1fr; }
+  body.toc-home .card-band .grid { grid-template-columns: 1fr 1fr; }
   body.toc-home .hero-content { width: min(46rem, 88vw); padding-top: 18vh; }
   body.toc-home .stats-title { font-size: 1.2rem; }
   body.toc-home .hero-kicker { font-size: 1.25rem; }
 }
 @media (max-width: 600px) {
-  body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr; }
+  body.toc-home .card-band .grid { grid-template-columns: 1fr; }
 }
