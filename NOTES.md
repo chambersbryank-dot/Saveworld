@@ -62,8 +62,15 @@
 
 - Updated Great_Lakes_Plastic_Cleanup.html: When card now reads 277,000+ pieces (was 244,000).
 - Updated Life_Terra.html: When card now reads 36 million trees and 563,000 tonnes CO2 (was 35M / 3.5M tonnes).
-- Fixed Oceans.html hub: the 4ocean card link previously pointed to Oceans.html itself (self-refresh). Now points to 4ocean.html for the dedicated page. Note: the dedicated 4ocean page file is 4ocean.html (lowercase), matching the pattern of other solution pages.
+- Fixed Oceans.html hub: the 4ocean card link previously pointed to Oceans.html itself (self-refresh). Now points to Ocean_Cleanup.html — the dedicated page that exists in the repo. Note: there is no 4ocean.html file; 4ocean is covered on the Ocean Cleanup page.
 - Verified all three updated files on main after push.
+
+## Session Log — 2026-10-08 (page verification dates in footers)
+
+- Added "Page verified October 2026" to the footers of seven solution pages: Plastic_Bank.html, Clean_Up_the_Lake.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html.
+- Life_Terra.html and Great_Lakes_Plastic_Cleanup.html already carried the same footer text from the earlier number-update push, so all ten new solution pages now show a verification date.
+- Also re-pushed Oceans.html in this batch to correct the 4ocean card link to Ocean_Cleanup.html (the previous push had pointed it at the nonexistent 4ocean.html).
+- Going forward, when a solution's numbers are re-verified, update the footer date on that page and log it here.
 
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
