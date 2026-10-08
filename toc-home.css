@@ -28,8 +28,8 @@ body.toc-home .card-band { max-width: 1200px; margin: 0 auto; padding: var(--sec
 body.toc-home .card-band h2 { text-align: center; color: var(--toc-navy); margin-bottom: 1.5rem; }
 body.toc-home .card-band .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 0; margin: 0; }
 body.toc-home .card-band .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,55,85,0.12); height: 100%; }
-body.toc-home .card-band h3 { color: var(--toc-navy); text-decoration: none; padding: 1rem 1rem 0.2rem; margin: 0; }
-body.toc-home .solution-list { list-style: none; margin: 0; padding: 0.4rem 1rem 1.2rem; }
+body.toc-home .card-band h3 { color: var(--brand-blue); text-align: center; font-size: 1.85rem; font-weight: 800; text-decoration: none; padding: 1rem 0.6rem 0.35rem; margin: 0; }
+body.toc-home .solution-list { list-style: none; margin: 0; padding: 0.4rem 1rem 1.2rem; text-align: center; }
 body.toc-home .solution-list li + li { margin-top: 0.45rem; }
 body.toc-home .solution-list a { color: var(--toc-blue); font-weight: 700; text-decoration: none; }
 body.toc-home .solution-list a:hover { text-decoration: underline; }
@@ -50,8 +50,8 @@ html.dark nav.scrolled { background: #0b1220; }
 html.dark nav.scrolled .brand-word, html.dark nav.scrolled .nav-links a, html.dark nav.scrolled .theme-toggle { color: #fff; border-color: #fff; }
 html.dark .w-card, html.dark .card, html.dark .dropdown-menu { background: #152033; color: #e8eef5; }
 html.dark .dropdown-menu a { color: #e8eef5 !important; }
-html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-home .card-band h3, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
-html.dark .brand-blue { color: #4da3ff; }
+html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
+html.dark body.toc-home .card-band h3, html.dark .brand-blue { color: #4da3ff; }
 html.dark body.toc-home #actions .join-lead { color: #fff; }
 html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions { background: #071018; }
 @media (max-width: 900px) {
@@ -59,6 +59,7 @@ html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions {
   body.toc-home .hero-content { width: min(46rem, 88vw); padding-top: calc(18vh + 3.4rem); }
   body.toc-home .stats-title { font-size: 1.2rem; }
   body.toc-home .hero-kicker { font-size: 1.25rem; }
+  body.toc-home .card-band h3 { font-size: 1.55rem; }
 }
 @media (max-width: 600px) {
   body.toc-home .card-band .grid { grid-template-columns: 1fr; }
