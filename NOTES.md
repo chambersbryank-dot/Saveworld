@@ -65,6 +65,17 @@
 7. Implement Solutions dropdown items for future solution pages as they are created. (Oceans ✓, Space ✓)
 8. ~~Source a dedicated space-themed image for the Space card.~~ IN PROGRESS 2026-10-08 — Cassini Saturn photo selected (public domain, Wikimedia Commons); user downloading and will upload as assets/Saturn.jpg when home. index.html already references it.
 9. Upload Saturn.jpg to assets/ folder (user action pending).
+10. **NEW (2026-10-08):** SEO meta tagging standard — apply to every page as built. Research sourced 2026-10-08:
+    - **Title tags:** 50–60 characters, front-load keyword, unique per page, brand suffix short. Google truncates ~600px.
+    - **Meta descriptions:** 150–160 characters, keyword early, end with call-to-action ("learn more", "read now"). Not a ranking factor but drives click-through.
+    - **Open Graph:** og:title, og:description, og:image (1200×630, ≤8MB, 1.91:1), og:url, og:type=website. Controls Facebook, LinkedIn, Slack, Discord, iMessage cards.
+    - **Twitter Card:** twitter:card (use summary_large_image, not default small summary).
+    - **Canonical:** link rel=canonical with absolute URL per page to de-dupe.
+    - **Meta robots:** index,follow (default) — set explicitly.
+    - **Structured data:** JSON-LD (Google's recommended format over Microdata/RDFa). Use Organization, WebPage, BreadcrumbList types. FAQPage markup no longer earns rich results (removed May 2026) — skip. Headline in schema must match visible H1. Absolute HTTPS URLs for image/url/logo. No trailing commas in JSON.
+    - **Keywords meta:** legacy noise per 2026 research — not required.
+    - Apply incrementally as each page is built rather than retrofitting all at once.
+11. **NEW (2026-10-08):** Copyright/legal due diligence scan — recurring task, weekly cadence (user's choice; default weekly). Scan all HTML and CSS for proprietary content, unlicensed images, trademarks (e.g., SpaceX/Starship branding), and third-party assets. Not legal advice — just due diligence flagging. Log findings in session log.
 
 ---
 
@@ -100,3 +111,11 @@
 - Updated styles.css: added --space accent variable and .page-hero.space-hero variant (dark navy radial gradients) for Space.html.
 - Updated NOTES.md: extended template rule for Amazing_Facts.html, refreshed file map and open items, added session log.
 - Space card image: selected Cassini Saturn photo (public domain via Wikimedia Commons); direct image download blocked by 401/403/503 errors from Unsplash, Pexels, and Wikimedia CDNs. Opened Wikimedia Commons file page on car browser for user to download manually. index.html updated to reference assets/Saturn.jpg pending upload.
+
+## Session Log — 2026-10-08 (SEO + copyright diligence standards)
+
+- Researched 2026 SEO meta tag best practices via web search: title/description lengths, Open Graph, Twitter Card, canonical, meta robots, JSON-LD structured data (Organization, WebPage, BreadcrumbList), FAQPage rich results removed May 2026.
+- Added open item 10: SEO meta tagging standard to apply incrementally as pages are built.
+- Added open item 11: weekly copyright/legal due diligence scan of HTML and CSS.
+- Completed items 3 and 7 removed from open list per user request.
+- No HTML/CSS changes this round — standards logged for future application.
