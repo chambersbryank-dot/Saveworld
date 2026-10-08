@@ -16,7 +16,7 @@ nav.scrolled .theme-toggle { color: var(--toc-navy); border-color: var(--toc-nav
 .dropdown-menu a { color: var(--toc-navy) !important; display: block; padding: 0.55rem 1rem; }
 body.toc-home .hero.space-hero { height: 100vh; min-height: 640px; align-items: flex-start; background: linear-gradient(180deg, rgba(0,20,40,0.28) 0%, rgba(0,20,40,0.12) 42%, rgba(0,20,40,0.45) 100%), url('assets/IMG_0060.jpeg') center 35%/cover no-repeat; }
 body.toc-home .hero-content { max-width: 1100px; text-align: left; padding: 22vh 2rem 2rem; }
-body.toc-home .hero-kicker { color: #fff; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.8rem; }
+body.toc-home .hero-kicker { color: #fff; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; font-size: 1.7rem; line-height: 1.15; margin-bottom: 1rem; text-shadow: 0 2px 16px rgba(0,0,0,0.55); }
 body.toc-home .hero-welcome { font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 1.05; text-align: left; margin-bottom: 1rem; }
 body.toc-home .hero-example { text-align: left; max-width: 640px; font-size: 1.15rem; }
 body.toc-home .mission-block { max-width: 920px; margin: 0 auto; padding: 6rem 1.5rem 2rem; text-align: center; }
@@ -49,6 +49,7 @@ html.dark footer, html.dark .impact, html.dark .impact-bar { background: #071018
   body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr 1fr; }
   body.toc-home .hero-content { padding-top: 18vh; }
   body.toc-home .stats-title { font-size: 2.2rem; }
+  body.toc-home .hero-kicker { font-size: 1.25rem; }
 }
 @media (max-width: 600px) {
   body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr; }
