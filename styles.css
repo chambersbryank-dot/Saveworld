@@ -1,4 +1,4 @@
-:root { --primary: #0066cc; --accent: #00b894; }
+:root { --primary: #0066cc; --accent: #00b894; --space: #1a1a2e; }
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -104,6 +104,11 @@ nav {
     justify-content: center;
     text-align: center;
     color: white;
+}
+
+/* Space page hero variant */
+.page-hero.space-hero {
+    background: linear-gradient(rgba(10,10,30,0.65), rgba(10,10,30,0.65)), radial-gradient(ellipse at 30% 20%, rgba(0,102,204,0.25), transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(0,184,148,0.15), transparent 60%), #0a0a1e;
 }
 
 .page-hero-content { max-width: 900px; padding: 2rem; }
