@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazing facts about saving the planet: space data centers, ocean cleanup milestones, and reforestation impact.">
+    <meta name="keywords" content="amazing facts, space data centers, petabytes in orbit, ocean cleanup, reforestation, save the planet">
+    <title>Save The Planet • Amazing Facts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Nav -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/SavePlanetLogo.jpg" alt="Save The Planet Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-dropdown">
+                    <a href="index.html#solutions" class="dropdown-toggle">Solutions ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#oceans-card">Oceans</a></li>
+                        <li><a href="index.html#space-card">Space</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#actions">Actions</a></li>
+                <li><a href="index.html#facts">Amazing Facts</a></li>
+                <li><a href="index.html#community">Community</a></li>
+            </ul>
+            <a href="index.html#join" class="btn">Join Movement</a>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Amazing Facts</h1>
+            <p>Mind-blowing numbers behind the movement to save our planet.</p>
+        </div>
+    </section>
+
+    <!-- Facts Grid -->
+    <section class="five-ws">
+        <h2>Facts That Matter</h2>
+        <div class="ws-grid">
+            <div class="w-card">
+                <h3>Fact 1: Petabytes in Orbit</h3>
+                <p>Starcloud's roadmap scales from a single sixty-kilogram satellite carrying one NVIDIA H100 GPU to Starcloud-3, a three-ton spacecraft generating about two hundred kilowatts — enough to store and process petabytes of data in space, powered entirely by the sun with zero water cooling. Google's Project Suncatcher launched October first, twenty twenty-six with four AI chips aboard, proving orbital compute is real and growing fast.</p>
+            </div>
+            <div class="w-card">
+                <h3>Fact 2: Twelve Times the Water</h3>
+                <p>U.S. data centers directly consume about seventeen point four billion gallons of water a year, but the power plants generating their electricity consume roughly two hundred eleven billion gallons — more than twelve times the on-site amount. Every gigabyte streamed has a hidden water footprint most people never see.</p>
+            </div>
+            <div class="w-card">
+                <h3>Fact 3: Fifteen Million Kilograms</h3>
+                <p>The Ocean Cleanup removed fifteen million kilograms of plastic from the world's oceans by July twenty twenty-four, breaking ten million kilograms just three months earlier. Their offshore systems have offloaded up to fifty-five metric tons in a single extraction from the Great Pacific Garbage Patch.</p>
+            </div>
+            <div class="w-card">
+                <h3>Fact 4: One Thousand Rivers</h3>
+                <p>Around one thousand rivers worldwide contribute eighty percent of riverine plastic pollution reaching the ocean. The Ocean Cleanup's River Interceptors have caught over two million kilograms in Guatemala alone and more than one and a half million in Thailand.</p>
+            </div>
+            <div class="w-card">
+                <h3>Fact 5: Three Trees for One</h3>
+                <p>For every tree cut down, planting three replaces it and then some — restoring habitat, pulling carbon from the air, and rebuilding soil. Reforestation projects on this site follow exactly that ratio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statement -->
+    <section class="impact">
+        <h2>Why Facts Matter</h2>
+        <div class="impact-box">
+            <p>Numbers turn hope into action. When you can see that fifteen million kilograms of plastic is already out of the water, or that a single orbital satellite can out-compute anything previously flown in space, the future stops feeling abstract. These facts are the receipts behind every solution on this site.</p>
+        </div>
+    </section>
+
+    <!-- Link Card -->
+    <section class="cleanup-link">
+        <div class="cleanup-card">
+            <h2>Keep Exploring</h2>
+            <p>Dive deeper into orbital computing on our <a href="Space.html">Space page →</a></p>
+            <p>See how ocean cleanup works on our <a href="Ocean_Cleanup.html">Ocean Cleanup page →</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Save The Planet • Positive Action for a Thriving Earth</p>
+    </footer>
+
+    <script>
+        const dropdown = document.querySelector('.nav-dropdown);
+        const toggle = document.querySelector('.dropdown-toggle);
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            dropdown.classList.toggle('open);
+        });
+        document.addEventListener('click', function (e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open);
+            }
+        });
+    </script>
+</body>
+</html>
