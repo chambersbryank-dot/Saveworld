@@ -5,7 +5,7 @@
 1. **Hands-on work** — The organization must do the work itself: cleanup crews, planting teams, barrier installations, or operating hardware. We feature doers, not just funders or promoters.
 2. **Published, verifiable numbers** — Impact must be backed by specific, checkable figures (kilograms removed, trees planted, devices deployed, debris captured) with a source we can cite.
 3. **A clear donate path** — Visitors should be able to support the work directly. A donation page, a product-funded model, or a transparent get-involved route all count.
-4. **Solutions, not advocacy** — The focus is on organizations that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
+4. **Solutions, not advocacy** — The focus is on solutions that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
 
 ## Site Size & Maintenance Log
 
@@ -33,7 +33,7 @@
 1. **Hands-on work** — The organization must do the work itself: cleanup crews, planting teams, barrier installations, or operating hardware. We feature doers, not just funders or promoters.
 2. **Published, verifiable numbers** — Impact must be backed by specific, checkable figures (kilograms removed, trees planted, devices deployed, debris captured) with a source we can cite.
 3. **A clear donate path** — Visitors should be able to support the work directly. A donation page, a product-funded model, or a transparent get-involved route all count.
-4. **Solutions, not advocacy** — The focus is on organizations that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
+4. **Solutions, not advocacy** — The focus is on solutions that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
 
 ## Session Log — 2026-10-08 (ten new solution pages)
 
@@ -141,6 +141,15 @@
 - **Plan for next session:** Download the four ~orig.jpg files (browser or curl), then upload each to assets/ via the GitHub web UI (drag-and-drop into the assets folder) or via git push from a local clone. Then update Space.html, Astroscale.html, and ClearSpace.html to use the new unique images instead of IMG_0060.jpeg, and update og:image meta tags accordingly.
 - Suggested mapping (to be confirmed with Brian): Space.html hero -> Earth.jpg (the "pale blue dot" perspective); Astroscale.html -> Jupiter.jpg; ClearSpace.html -> Neptune.jpg. Mars.jpg held in reserve or used on a future fourth space page.
 - All four images are NASA public domain; attribution NASA/JPL-Caltech/SwRI/MSSS (Juno), NASA/ESA (Hubble), NASA (Apollo 17), NASA/JPL (Voyager 2).
+
+## Session Log — 2026-10-08 (Ken Burns animation on all homepage cards)
+
+- Added a slow zoom-and-drift (Ken Burns) animation to every homepage solution card image — Ocean, Lakes, Rivers, Forests, and Space — in toc-home.css (commit 2b9c9e38f436447994c14b8520440bfb83c41dfd).
+- Keyframes: 4-second ease-in-out loop, scale 1.0 to 1.09 with gentle translate drift; seamless return to start.
+- Animation pauses on card hover so the image freezes while the user reads the overlay.
+- Respects prefers-reduced-motion: animation disabled for users who opt out.
+- Applied site-wide via the shared .card-band .image-container img rule — no per-card HTML changes needed.
+- Brian approved rolling it out to all cards without a single-card preview.
 
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
