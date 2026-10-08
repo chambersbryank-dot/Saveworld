@@ -15,6 +15,7 @@
 
 - Added a Solutions Criteria section to About.html, below the existing What we cover block, using the same five-ws card grid layout.
 - Four criteria: hands-on work, published verifiable numbers, a clear donate path, and solutions not advocacy.
+- Retitled the section header to "Our solutions are based on the following criteria" per Brian's direction.
 - To be reviewed with Brian before finalizing.
 
 ### Still open
