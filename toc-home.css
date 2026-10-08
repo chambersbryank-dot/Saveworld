@@ -45,8 +45,13 @@ body.toc-sub h2, body.toc-sub h3, body.toc-sub .page-hero h1 { font-family: "Mon
 body.toc-sub .impact h2, body.toc-sub .page-hero h1 { color: #fff; }
 body.toc-sub .five-ws { padding-top: 0.4rem; }
 body.toc-sub .ws-grid, body.toc-sub .grid { gap: 1rem; padding-bottom: 1.2rem; }
-body.toc-sub .w-card, body.toc-sub .card { padding: 1.2rem; }
-body.toc-sub .impact, body.toc-sub .cleanup-link { padding: 1.6rem 1.5rem; }
+body.toc-sub .w-card { padding: 1.2rem; }
+body.toc-sub .card { padding: 1.2rem 1.2rem 1.6rem; overflow: visible; }
+body.toc-sub .impact, body.toc-sub .cleanup-link { padding: 1.6rem 1.5rem 2.2rem; }
+body.toc-sub .cleanup-link { margin-top: 0.5rem; }
+body.toc-sub .cleanup-card h3 { margin: 0 0 0.4rem; }
+body.toc-sub .cleanup-card p { margin: 0; }
+body.toc-sub .btn, body.toc-home .btn { position: static; display: inline-block; margin-top: 1.1rem; }
 body.toc-sub .impact-box p { margin-bottom: 0.6rem; }
 body.toc-sub footer, body.toc-home footer { background: var(--toc-navy); padding: 1.4rem 1.5rem; }
 html.dark body.toc-home, html.dark body.toc-sub { background: #0b1220; color: #e8eef5; }
