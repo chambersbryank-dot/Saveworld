@@ -143,13 +143,20 @@ nav {
     background: linear-gradient(rgba(10,10,30,0.7), rgba(10,10,30,0.7)), url('assets/IMG_0060.jpeg') center/cover no-repeat;
 }
 
-.hero-content { max-width: 900px; padding: 2rem; }
+.hero-content { 
+    max-width: 900px; 
+    width: 100%;
+    padding: 2rem; 
+    text-align: center;
+    margin: 0 auto;
+}
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: #ffffff;
     text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 .hero p {
@@ -157,6 +164,7 @@ nav {
     opacity: 0.95;
     color: rgba(255,255,255,0.95);
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .hero-cta {
@@ -164,6 +172,7 @@ nav {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 0.5rem;
 }
 
 /* Impact stat bar */
