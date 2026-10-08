@@ -111,6 +111,89 @@ nav {
     border-radius: 50px; 
     text-decoration: none; 
     font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: white;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/OceanBeach.JPG') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Space-led hero variant (homepage) */
+.hero.space-hero {
+    background: linear-gradient(rgba(10,10,30,0.7), rgba(10,10,30,0.7)), url('assets/IMG_0060.jpeg') center/cover no-repeat;
+}
+
+.hero-content { max-width: 900px; padding: 2rem; }
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.35rem;
+    opacity: 0.95;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Impact stat bar */
+.impact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+    background: #003366;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 0.3rem;
 }
 
 /* Page hero for subpages */
@@ -276,6 +359,10 @@ footer {
     .nav-links { gap: 1.2rem; }
     .page-hero h1 { font-size: 2.4rem; }
     .page-hero { height: 40vh; }
+    .hero { height: 70vh; }
+    .hero h1 { font-size: 2.4rem; }
+    .impact-bar { gap: 2rem; }
+    .stat-number { font-size: 2.2rem; }
 }
 .under-construction {
     margin-top: 25px;
@@ -316,3 +403,36 @@ em, i { font-style: italic; color: #444444; }
     border: 0;
 }
 img { max-width: 100%; height: auto; }
+
+/* ===== Homepage sections (2026-10-08) ===== */
+.actions-section { background: #f0f7ff; }
+.community-section { background: white; }
+.community-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+    font-size: 1.15rem;
+    text-align: center;
+}
+.join-section { background: #003366; color: white; }
+.join-section h2 { color: white; }
+.join-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+    text-align: center;
+}
+.join-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.join-form input[type="email"] {
+    padding: 13px 24px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    min-width: 280px;
+}
