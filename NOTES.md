@@ -192,6 +192,17 @@
 - Uranus.jpg remains the donate-button image and og:image on ClearSpace.html — unchanged.
 - Saturn.jpg is now used only on the homepage hero and the Space card.
 
+## Session Log — 2026-10-08 (donate-button spacing + impact section audit)
+
+- Brian reported two issues on solution pages: (1) the Impact Statement section appeared missing, and (2) the blue donate button sat too far below the Five W's.
+- **Audit result:** All eleven individual solution pages have the Impact Statement section (Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra — all confirmed via fetch). The four category hub pages (Lakes, Rivers, Deforestation, Space) intentionally have no impact section — they are index pages listing solutions under each card, not solution pages.
+- If Brian was viewing a hub page (e.g., Lakes.html or Rivers.html), that explains the missing label. If he was on an individual page, the label was present but the large spacing (donate-btn margin-top was 2.5rem on top of impact padding) may have made it feel disconnected.
+- **CSS fix applied to toc-home.css:**
+  - .donate-btn margin-top reduced from 2.5rem to 0.8rem — pulls the donate button up closer to the Five W's / impact section.
+  - body.toc-sub .impact padding tightened from 1.6rem 1.5rem 2.2rem to 0.6rem 1.5rem 1rem — reduces the gap between the impact box and the donate button.
+  - Combined effect: roughly 3.9rem of vertical space removed between the Five W's grid and the donate button.
+- No HTML changes needed — the impact sections were already in the markup on every solution page.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
@@ -201,3 +212,4 @@
 16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg, Nebula.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
 17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
 18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus/Nebula in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
+19. Apply Nebula.jpg page-hero treatment to Space.html (category hub) — pending Brian's direction on whether hub pages get the same treatment
