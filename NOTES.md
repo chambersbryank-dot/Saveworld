@@ -11,8 +11,14 @@
 - Updated index.html solution cards and sitemap.xml with all new pages.
 - Donate buttons use category-appropriate background images (ocean, lake, river, space, forest) with centered Donate text, per the established pattern.
 
+## Session Log — 2026-10-08 (Solutions Criteria on About page)
+
+- Added a Solutions Criteria section to About.html, below the existing What we cover block, using the same five-ws card grid layout.
+- Four criteria: hands-on work, published verifiable numbers, a clear donate path, and solutions not advocacy.
+- To be reviewed with Brian before finalizing.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
-14. Decide on formal criteria for adding new solutions (see conversation 2026-10-08)
+14. Review and finalize Solutions Criteria on About.html
