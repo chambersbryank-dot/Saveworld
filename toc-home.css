@@ -110,21 +110,23 @@ html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions {
 .card-band .card .image-container img.cassini-photo { cursor: pointer; }
 .card-band .card .image-container .cassini-tip {
   position: absolute;
-  left: 50%;
-  bottom: 0.6rem;
-  transform: translateX(-50%) translateY(6px);
-  background: rgba(0, 20, 40, 0.88);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(6px);
+  background: linear-gradient(180deg, rgba(0,20,40,0.55) 0%, rgba(0,20,40,0.92) 45%, rgba(180,120,40,0.55) 100%);
   color: #fff;
   font-family: "Montserrat", "Segoe UI", sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: 0.01em;
-  padding: 0.55rem 0.85rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  padding: 0.7rem 0.9rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -6px 18px rgba(0,0,0,0.35);
   white-space: normal;
-  max-width: calc(100% - 1.2rem);
+  max-width: none;
+  width: 100%;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -136,7 +138,7 @@ html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions {
 .card-band .card .image-container:focus-within .cassini-tip {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 .card-band .card .image-container .cassini-tip::after {
   content: "";
@@ -146,7 +148,7 @@ html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions {
   transform: translateX(-50%);
   border-width: 0 6px 6px 6px;
   border-style: solid;
-  border-color: transparent transparent rgba(0, 20, 40,0.88) transparent;
+  border-color: transparent transparent rgba(0, 20, 40, 0.92) transparent;
 }
 
 @media (max-width: 900px) {
