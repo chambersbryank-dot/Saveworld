@@ -7,6 +7,34 @@
 3. **A clear donate path** — Visitors should be able to support the work directly. A donation page, a product-funded model, or a transparent get-involved route all count.
 4. **Solutions, not advocacy** — The focus is on organizations that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
 
+## Site Size & Maintenance Log
+
+### 2026-10-08 — Size check (Brian's request)
+
+- **Repo size (GitHub API):** 4,321 KB (~4.2 MB) — GitHub's reported figure, which includes git history.
+- **Working-tree size (all blobs on main):** 10,614,614 bytes = **10.13 MB** across 44 files.
+- **GitHub Pages limits (free tier, public repo):**
+  - Published site size: 1 GB (hard cap)
+  - Source repository: 1 GB recommended
+  - Bandwidth: 100 GB/month soft limit
+  - Builds: 10/hour soft limit (does not apply to custom Actions workflows — ours uses one)
+  - Deployment timeout: 10 minutes hard
+- **Headroom:** We are at roughly 1% of the 1 GB site limit. No risk of hitting any threshold or triggering a paid tier.
+- **Biggest files:** assets/IMG_0060.jpeg (1.60 MB), assets/StreamLog.JPG (581 KB), assets/LightthrForest.JPG (552 KB), assets/CutTreePlantThree.JPG (552 KB), assets/streamlog2.JPG (538 KB), assets/OceanBeach.JPG (265 KB), assets/theoceancleanup.jpg (262 KB), assets/BargCleaning.JPG (246 KB), assets/SavePlanetLogo.jpg (175 KB). All HTML/CSS/JS combined is under 100 KB.
+- **Maintenance actions taken:**
+  1. Logged this size check here so future sessions can compare.
+  2. Noted that IMG_0060.jpeg (Saturn image, used by Astroscale and ClearSpace pages) is still pending rename to Saturn.jpg (open item #1) — renaming does not change size, just clarity.
+  3. No files deleted; nothing oversized.
+- **Re-check trigger:** Run this check again if we add more than ~5 large images (over ~500 KB each) or if the repo API size approaches 100 MB. At current growth rate, we are years from any limit.
+- **Bottom line:** No paid tier needed. GitHub Pages is free for public repos, and we are nowhere near any limit. The only real cost risk would be if the site became primarily commercial/e-commerce, which it is not.
+
+## Solutions Criteria (authoritative — check every new solution against these before adding)
+
+1. **Hands-on work** — The organization must do the work itself: cleanup crews, planting teams, barrier installations, or operating hardware. We feature doers, not just funders or promoters.
+2. **Published, verifiable numbers** — Impact must be backed by specific, checkable figures (kilograms removed, trees planted, devices deployed, debris captured) with a source we can cite.
+3. **A clear donate path** — Visitors should be able to support the work directly. A donation page, a product-funded model, or a transparent get-involved route all count.
+4. **Solutions, not advocacy** — The focus is on organizations that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
+
 ## Session Log — 2026-10-08 (ten new solution pages)
 
 - Added two new solutions per category, each as its own page matching the Ocean_Cleanup.html template (nav, page-hero, Five W's, impact statement, donate-btn with category background image, footer, site.js).
