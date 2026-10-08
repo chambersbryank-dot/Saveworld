@@ -18,7 +18,8 @@
 5. Homepage hero overhaul — DONE 2026-10-08 (space-led hero, impact stat bar, under-construction banner, ideas email line)
 6. Hero centering fix — DONE 2026-10-08 (hero-content width 100%, h1 white with text-shadow, CTA padding)
 7. Join Movement / subscription system — ON HOLD (brainstorming; Formspree or Buttondown options discussed)
-8. Cloudflare Email Routing — create `ideas@saveplanetminusthedoom.com` mailbox so the hero email link works
+8. Cloudflare Email Routing — create `ideas@savingplanets.com` mailbox so the hero email link works (domain registered via GoDaddy, transferred to Cloudflare; DNS verified)
+9. "Take Action" hero CTA button removed 2026-10-08 — revisit later once direction is decided
 
 ### Completed Today
 - Uploaded Saturn photo to assets folder (as IMG_0060.jpeg)
@@ -34,6 +35,17 @@
 - **Hero ideas email line (2026-10-08):** Below under-construction, added "Please email ideas@saveplanetminusthedoom.com with your ideas for the page" as a clickable mailto link. styles.css: .hero-email, .hero-email a (white, bold, underline, hover accent teal).
 - **Cassini photo credit (2026-10-08):** Added .hero-credit below the email line — "Photo: NASA's Cassini spacecraft" with clickable link to NASA's Saturn photojournal gallery (https://science.nasa.gov/photojournal/galleries/pj-saturn/). styles.css: .hero-credit 0.7rem, muted white, no absolute positioning (flows below email line, no overflow).
 - **Cassini "Where is Cassini spacecraft now?" link (2026-10-08):** Added parenthetical clickable link beside Cassini spacecraft credit — "(Where is Cassini spacecraft now?)" pointing to NASA's official end-of-mission release (https://www.nasa.gov/news-release/nasas-cassini-spacecraft-ends-its-historic-exploration-of-saturn/). Tells the story of the intentional Sept 15, 2017 plunge into Saturn's atmosphere to protect Enceladus's subsurface ocean from contamination — environmental stewardship at a billion miles, reinforcing the site's positive-solutions angle.
+- **Hero welcome line (2026-10-08):** Added "Welcome to Saving Planets minus the Doom" above the h1. "Saving Planets" in primary blue (#0066cc) matching the "Real Solutions in Action" h2 color; "minus the" plain white; "Doom" in eerie red serif italic with glow and subtle flicker animation for Halloween. styles.css: .hero-welcome, .welcome-brand, .welcome-minus, .welcome-doom, @keyframes doom-flicker.
+- **Hero intro reword (2026-10-08):** Hero paragraph now opens "A great example is the following:" before the solar-powered data centers line.
+- **Removed "Take Action" hero CTA (2026-10-08):** Only "See Real Solutions" remains; Take Action button removed pending direction.
+- **Hero email updated (2026-10-08):** ideas@savingplanets.com (new domain registered at GoDaddy, transferred to Cloudflare; DNS verified).
+- **Cassini credit watermark (2026-10-08):** .hero-credit moved to absolute bottom-right of hero, 0.65rem, rgba(255,255,255,0.35) so it reads as a watermark sinking into the Saturn image; both Cassini spacecraft and "Where is Cassini spacecraft now?" links remain clickable with hover accent teal.
+
+## Session Log — 2026-10-08 (Hero welcome + watermark + email update)
+
+- Updated index.html: added .hero-welcome line above h1 ("Welcome to Saving Planets minus the Doom"); reworded hero paragraph with "A great example is the following:"; removed Take Action button; updated hero email to ideas@savingplanets.com; hero-credit unchanged in content but repositioned via CSS.
+- Updated styles.css: added .hero-welcome/.welcome-brand/.welcome-minus/.welcome-doom with eerie Doom styling and flicker animation; repositioned .hero-credit as absolute bottom-right watermark at 0.65rem / 35% opacity.
+- Updated NOTES.md: logged welcome line, intro reword, CTA removal, email change, watermark, closed/updated open items 8 and 9.
 
 ## Session Log — 2026-10-08 (Cassini credit + "Where is Cassini now?" link)
 
