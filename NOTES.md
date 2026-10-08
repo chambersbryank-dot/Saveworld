@@ -100,9 +100,20 @@
 - Also re-pushed Oceans.html in this batch to correct the 4ocean card link to Ocean_Cleanup.html (the previous push had pointed it at the nonexistent 4ocean.html).
 - Going forward, when a solution's numbers are re-verified, update the footer date on that page and log it here.
 
+## Session Log — 2026-10-08 (homepage CTA update: Be Part of the Fix)
+
+- Updated index.html bottom CTA section (id="actions"), commit aa2c52e:
+  - Headline changed from "Join the Work" to "Be Part of the Fix" (brand-blue spans on Be and Fix).
+  - Lead line: "Plastic, forests, and energy are problems we can tackle together."
+  - Links: "Send an idea" (mailto:ideas@savingplanets.com?subject=Idea) and "share a solution you know" (same mailbox).
+  - Removed the donate mailto link — a donation email would just bounce back and forth asking where to donate. Instead: "If you'd like to donate, visit our Solutions page and pick the one that matches your interest," linking to index.html#solutions so donors land directly on the solution cards with their donate buttons.
+- Follow-up commit 8130274fb5: removed the remaining donate mailto from the lead line and replaced it with the solutions-page pointer.
+- Rationale: the site's donate path is per-solution (each page has its own donate button with a category-matched background image), so the homepage should route donors there rather than to email.
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
+16. Add additional space pictures (Brian's next item after CTA update)
