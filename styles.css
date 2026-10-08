@@ -175,6 +175,35 @@ nav {
     padding-top: 0.5rem;
 }
 
+.under-construction {
+    margin-top: 25px;
+    color: #ff9800;
+    font-weight: 600;
+    font-size: 1.1rem;
+    animation: pulse 2s infinite;
+}
+
+.hero-email {
+    margin-top: 12px;
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+}
+
+.hero-email a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.hero-email a:hover {
+    color: var(--accent);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
 /* Impact stat bar */
 .impact-bar {
     display: flex;
@@ -372,18 +401,6 @@ footer {
     .hero h1 { font-size: 2.4rem; }
     .impact-bar { gap: 2rem; }
     .stat-number { font-size: 2.2rem; }
-}
-.under-construction {
-    margin-top: 25px;
-    color: #ff9800;
-    font-weight: 600;
-    font-size: 1.1rem;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
 }
 
 /* ===== SEO / Accessibility polish (2026-10-08) ===== */
