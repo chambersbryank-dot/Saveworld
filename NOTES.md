@@ -179,12 +179,19 @@
 - Brian also refreshed assets/Saturn.jpg with an updated version he preferred; the file is already referenced by index.html hero, Space.html card, Astroscale.html donate button, and the subpage space-hero CSS, so no code changes were needed — the new image serves automatically.
 - Open item #18 updated: Neptune.jpg no longer needed; Uranus.jpg now covers ClearSpace. Mars.jpg still not uploaded.
 
+## Session Log — 2026-10-08 (Astroscale page-hero background: Saturn to Nebula)
+
+- Brian asked to stop using Saturn so much on the space pages. Updated Astroscale.html with a page-scoped style override so its page-hero.space-hero uses assets/Nebula.jpg (439 KB, uploaded by Brian) instead of the shared Saturn.jpg background from toc-home.css.
+- Kept the same navy gradient overlay on top so the title text stays readable.
+- Jupiter.jpg remains the donate-button image and og:image on Astroscale.html — unchanged.
+- Saturn.jpg is now used only on the homepage hero and the Space card; ClearSpace uses Uranus.jpg; Astroscale uses Nebula.jpg + Jupiter.jpg.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
-16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
+16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg, Nebula.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
 17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
-18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
+18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus/Nebula in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
