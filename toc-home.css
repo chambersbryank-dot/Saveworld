@@ -28,6 +28,8 @@ body.toc-home .card-band .grid { display: grid; grid-template-columns: repeat(4,
 body.toc-home a.card { text-decoration: none; color: inherit; display: block; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,55,85,0.12); }
 body.toc-home a.card h3 { color: var(--toc-navy); padding: 1rem 1rem 0.3rem; }
 body.toc-home a.card p { padding: 0 1rem 1.2rem; color: #245066; }
+body.toc-home .impact-bar { flex-wrap: wrap; }
+body.toc-home .stats-title { flex: 1 0 100%; text-align: center; color: #fff; font-size: 2.8rem; font-weight: 700; margin: 0 0 1.2rem; line-height: 1.15; }
 body.toc-home .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.5rem; }
 body.toc-home .join-card { border-top: 3px solid var(--toc-blue); padding-top: 1.2rem; }
 body.toc-home .join-card h3 { color: var(--toc-navy); font-size: 1.4rem; }
@@ -46,6 +48,7 @@ html.dark footer, html.dark .impact, html.dark .impact-bar { background: #071018
 @media (max-width: 900px) {
   body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr 1fr; }
   body.toc-home .hero-content { padding-top: 18vh; }
+  body.toc-home .stats-title { font-size: 2.2rem; }
 }
 @media (max-width: 600px) {
   body.toc-home .card-band .grid, body.toc-home .join-grid { grid-template-columns: 1fr; }
