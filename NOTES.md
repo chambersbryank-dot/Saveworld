@@ -129,11 +129,25 @@
   - Arrow pointer color updated to match the darker navy end of the gradient.
   - This gradient treatment is the template for the other four cards (Ocean, Lakes, Rivers, Forests) when their goal-message overlays are added.
 
+## Session Log — 2026-10-08 (space solution pages: unique planet photos instead of repeated Saturn)
+
+- Brian requested that the three space solution pages (Space.html, Astroscale.html, ClearSpace.html) stop using the same Saturn image (assets/IMG_0060.jpeg) on every card/page. Each page should have its own real, high-resolution NASA photo of a different planet.
+- Selected four NASA public-domain images (all from the NASA Images API, direct ~orig.jpg URLs):
+  1. **Jupiter.jpg** — PIA21395, "Jupiter's Great Red Spot Revealed," JunoCam, July 10, 2017, ~6,130 miles from cloud tops. Citizen-science enhanced color by Kevin Gill. URL: https://images-assets.nasa.gov/image/PIA21395/PIA21395~orig.jpg
+  2. **Mars.jpg** — PIA01250, "Hubble Captures A Full Rotation Of Mars," Hubble Space Telescope. URL: https://images-assets.nasa.gov/image/PIA01250/PIA01250~orig.jpg
+  3. **Earth.jpg** — AS17-148-22742, Apollo 17 view of Earth (Australia/Antarctica), Dec 1972, 70mm Hasselblad. URL: https://images-assets.nasa.gov/image/as17-148-22742/as17-148-22742~orig.jpg
+  4. **Neptune.jpg** — PIA01493, "Neptune Rings," Voyager 2, August 1989. URL: https://images-assets.nasa.gov/image/PIA01493/PIA01493~orig.jpg
+- **BLOCKER:** The code-execution environment has no outbound internet access (requests to images-assets.nasa.gov failed with ConnectionRefusedError), so the images could not be downloaded and uploaded to the repo from this session. The GitHub MCP create_or_update_file tool only accepts text content, not binary image uploads.
+- **Plan for next session:** Download the four ~orig.jpg files (browser or curl), then upload each to assets/ via the GitHub web UI (drag-and-drop into the assets folder) or via git push from a local clone. Then update Space.html, Astroscale.html, and ClearSpace.html to use the new unique images instead of IMG_0060.jpeg, and update og:image meta tags accordingly.
+- Suggested mapping (to be confirmed with Brian): Space.html hero -> Earth.jpg (the "pale blue dot" perspective); Astroscale.html -> Jupiter.jpg; ClearSpace.html -> Neptune.jpg. Mars.jpg held in reserve or used on a future fourth space page.
+- All four images are NASA public domain; attribution NASA/JPL-Caltech/SwRI/MSSS (Juno), NASA/ESA (Hubble), NASA (Apollo 17), NASA/JPL (Voyager 2).
+
 ### Still open
 1. Rename assets/IMG_0060.jpeg to Saturn.jpg
 8. Confirm ideas@savingplanets.com mailbox receives mail
 13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
 14. Review and finalize Solutions Criteria on About.html
 15. Decide whether Astroscale and ClearSpace stay given partial donate paths
-16. Add additional space pictures (Brian's next item after CTA update)
+16. Add additional space pictures — IN PROGRESS: four NASA planet photos selected (Jupiter/Mars/Earth/Neptune), blocked on binary upload from this environment; see session log above
 17. If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages
+18. Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html
