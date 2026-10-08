@@ -1,4 +1,4 @@
-:root { --toc-navy: #003755; --toc-blue: #009cde; --brand-blue: #0066cc; --solution-green: #00b894; --section-gap: 2.6rem; }
+:root { --toc-navy: #003755; --toc-blue: #009cde; --brand-blue: #009cde; --solution-green: #00b894; --section-gap: 2.6rem; }
 
 body.toc-home, body.toc-sub { font-family: "Montserrat", "Segoe UI", sans-serif; background: #fff; color: var(--toc-navy); }
 
