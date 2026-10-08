@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.saveplanetminusthedoom.com/Search.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Search | Saving Planets</title>
+<meta name="description" content="Find pages on Saving Planets: oceans, lakes, rivers, forests, and orbital computing.">
+<meta property="og:title" content="Search | Saving Planets">
+<meta property="og:description" content="Find pages on Saving Planets: oceans, lakes, rivers, forests, and orbital computing.">
+<meta property="og:image" content="https://www.saveplanetminusthedoom.com/assets/SavePlanetLogo.jpg">
+<meta property="og:url" content="https://www.saveplanetminusthedoom.com/Search.html">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="toc-home.css">
+</head>
+<body class="toc-sub">
+<nav id="topnav"><div class="nav-container"><a class="brand-word" href="index.html">Saving Planets</a><ul class="nav-links"><li class="nav-dropdown"><a href="index.html#solutions" class="dropdown-toggle">Solution</a><ul class="dropdown-menu"><li><a href="Ocean_Cleanup.html">Ocean</a></li><li><a href="Lakes.html">Lakes</a></li><li><a href="Rivers.html">Rivers</a></li><li><a href="Space.html">Space</a></li><li><a href="Deforestation.html">Forests</a></li></ul></li><li><a href="index.html#actions">Actions</a></li><li><a href="Amazing_Facts.html">Amazing Facts</a></li><li><a href="About.html">About</a></li><li><a href="Search.html">Search</a></li></ul><button id="theme-toggle" class="theme-toggle" type="button">Dark</button><a href="index.html#solutions" class="btn-nav">See a solution</a></div></nav>
+<section class="page-hero"><div class="page-hero-content"><h1>Search</h1><p>Type a word. Ocean, lake, river, forest, space.</p></div></section>
+<section class="five-ws"><label for="q">Find a page</label><input id="q" type="search" placeholder="Search pages" style="width:100%;max-width:28rem;padding:.6rem;margin:1rem 0;font:inherit"><ul id="results" class="solution-list"></ul></section>
+<footer><p>&copy; 2026 Saving Planets</p></footer>
+<script src="site.js"></script>
+<script>
+const pages=[{n:"Home",u:"index.html",k:"home solutions planet"},{n:"Ocean cleanup",u:"Ocean_Cleanup.html",k:"ocean plastic"},{n:"Shore cleanups",u:"Oceans.html",k:"ocean shore"},{n:"Lakes",u:"Lakes.html",k:"lake plastic"},{n:"Rivers",u:"Rivers.html",k:"river interceptor"},{n:"Forests",u:"Deforestation.html",k:"trees forest"},{n:"Space",u:"Space.html",k:"orbit data center"},{n:"Amazing Facts",u:"Amazing_Facts.html",k:"facts numbers"},{n:"About",u:"About.html",k:"about contact ideas"}];
+const q=document.getElementById("q"), list=document.getElementById("results");
+function draw(){const s=q.value.toLowerCase(); list.innerHTML=pages.filter(p=>(p.n+" "+p.k).toLowerCase().includes(s)).map(p=>`<li><a href="${p.u}">${p.n}</a></li>`).join("")||"<li>No match.</li>";}
+q.addEventListener("input",draw); draw();
+</script>
+</body></html>
