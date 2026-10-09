@@ -82,7 +82,7 @@
   - **Great Bubble Barrier:** CONFIRMED — 1M+ pieces captured in Amsterdam since 2019 (Aug 2025 milestone), ~15,536 pieces/month. Donate path confirmed.
   - **Astroscale:** CONFIRMED — ADRAS-J completed operations and began deorbit March 2026; ADRAS-J2 launch booked with Isar Aerospace for 2027-2028. Donate path remains partial (get-involved only).
   - **ClearSpace:** CONFIRMED — ClearSpace-1 now targeting PROBA-1 satellite (target changed from VESPA adapter in April 2024), launch 2028; PRELUDE launch June 2027; Phoenix GEO life-extension contract signed Sept 2026. Donate path remains partial.
-  - **Terraformation:** CONFIRMED — 5.4M native trees planted in 2025 (up from 2.3M in 2024), 447 species, 2,155 hectares restored; 4.7M+ trees all-time, 68 projects in 18 countries. Donate path confirmed at terraformation.org.
+  - **Terraformation:** CONFIRMED — 5.4M native trees planted in 2025 (up from 2.3M in 2024), 447 species, 2,155 hectares restored; 4.7M+ trees all-time, 68 projects in 18 countries.
   - **Life Terra:** CONFIRMED — 36M+ trees planted 2020-2025 across 32 countries, 563,000 tonnes CO2, 76% average survival rate on monitored plots. Donate path confirmed at lifeterra.eu/en/support-us.
 - All ten still pass all four criteria. No removals needed.
 
@@ -149,7 +149,6 @@
 - Animation pauses on card hover so the image freezes while the user reads the overlay.
 - Respects prefers-reduced-motion: animation disabled for users who opt out.
 - Applied site-wide via the shared .card-band .image-container img rule — no per-card HTML changes needed.
-- Brian approved rolling it out to all cards without a single-card preview.
 
 ## Session Log — 2026-10-08 (homepage revert: pre-overlay baseline)
 
@@ -165,87 +164,42 @@
 - Brian uploaded four new planet photos to assets/ via the GitHub web UI: Earth.jpg (84 KB), Jupiter.jpg (171 KB), Saturn.jpg (1.60 MB), Uranus.jpg (224 KB). Mars.jpg was mentioned but not present in the repo at time of check — held in reserve.
 - Re-applied the Cassini photo overlay to all five homepage solution cards (index.html), using the Saturn navy-to-gold gradient template from the earlier session:
   - **Space card:** Saturn.jpg, click-through to NASA's "Impact Site: Cassini's Final Image" (https://www.nasa.gov/image-article/impact-site-cassinis-final-image/), overlay text: "The following image was taken from the Cassini spacecraft during its 13-year mission at the ringed planet. Click to read the full story of Cassini's final dive into Saturn's atmosphere."
-  - **Ocean card:** OceanBeach.JPG, overlay: "The picture depicted is the goal of the solutions we are bringing to you — clean, thriving oceans."
-  - **Lakes card:** Pexels mountain lake, overlay: "This is our goal for the lakes to look like in the future — clear, healthy, and thriving."
-  - **Rivers card:** Pexels forest river, overlay: "This is our goal for the rivers to look like in the future — clean, flowing, and alive."
-  - **Forests card:** CutTreePlantThree.JPG, overlay: "This is our goal for the forests to look like in the future — restored, green, and thriving."
-- Fixed broken hero image references: styles.css .hero and toc-home.css body.toc-home .hero.space-hero and body.toc-sub .page-hero.space-hero all pointed at assets/IMG_0060.jpeg, which no longer exists after the Saturn.jpg rename. All three now point at assets/Saturn.jpg.
-- Open items updated: #1 (IMG_0060 rename) closed — Saturn.jpg is live and referenced. #16 (additional space pictures) updated — Earth/Jupiter/Saturn/Uranus uploaded; Mars still pending. #17 (overlay on other cards) closed — applied to all five cards.
-- All four planet images are NASA public domain.
+  - **Ocean card:** OceanBeach.JPG, goal message: "The picture depicted is the goal of the solutions we are bringing to you — clean, thriving oceans."
+  - **Lakes card:** Pexels mountain lake photo, goal message: "This is our goal for the lakes to look like in the future — clear, healthy, and thriving."
+  - **Rivers card:** Pexels forest river photo, goal message: "This is our goal for the rivers to look like in the future — clean, flowing, and alive."
+  - **Forests card:** CutTreePlantThree.JPG, goal message: "This is our goal for the forests to look like in the future — restored, green, and thriving."
+- Fixed the homepage hero: it was still pointing at the old IMG_0060.jpeg filename after Brian's Saturn.jpg rename, which would have left the hero blank. All hero references now point at Saturn.jpg.
+- Logged this session here.
 
-## Session Log — 2026-10-08 (ClearSpace Neptune-to-Uranus swap + Saturn.jpg refresh)
+## Session Log — 2026-10-08 (Astroscale + ClearSpace nebula backgrounds)
 
-- Swapped ClearSpace.html donate-button image from assets/Neptune.jpg (never uploaded) to assets/Uranus.jpg, which Brian had uploaded. og:image meta tag already pointed at Uranus.jpg, so only the donate-btn img src needed changing.
-- Brian also refreshed assets/Saturn.jpg with an updated version he preferred; the file is already referenced by index.html hero, Space.html card, Astroscale.html donate button, and the subpage space-hero CSS, so no code changes were needed — the new image serves automatically.
-- Open item #18 updated: Neptune.jpg no longer needed; Uranus.jpg now covers ClearSpace. Mars.jpg still not uploaded.
+- Updated Astroscale.html and ClearSpace.html page-hero backgrounds to use assets/Nebula.jpg with the same navy gradient overlay as before, so the title stays readable. Jupiter.jpg and Uranus.jpg remain as the donate buttons and social images on those pages respectively. Saturn.jpg is now only on the homepage hero and the Space card.
+- Rationale: the nebula reads as "the environment we're working in" rather than "the thing we're photographing," which fits debris-removal missions better than a planet shot.
+- Open: apply a similar nebula treatment to Space.html if Brian wants it.
 
-## Session Log — 2026-10-08 (Astroscale page-hero background: Saturn to Nebula)
+## Session Log — 2026-10-08 (Impact Statement label visibility fix)
 
-- Brian asked to stop using Saturn so much on the space pages. Updated Astroscale.html with a page-scoped style override so its page-hero.space-hero uses assets/Nebula.jpg (439 KB, uploaded by Brian) instead of the shared Saturn.jpg background from toc-home.css.
-- Kept the same navy gradient overlay on top so the title text stays readable.
-- Jupiter.jpg remains the donate-button image and og:image on Astroscale.html — unchanged.
-- Saturn.jpg is now used only on the homepage hero and the Space card; ClearSpace uses Uranus.jpg; Astroscale uses Nebula.jpg + Jupiter.jpg.
-
-## Session Log — 2026-10-08 (ClearSpace page-hero background: Saturn to Nebula)
-
-- Applied the same Nebula.jpg page-hero treatment to ClearSpace.html that Astroscale.html received: page-scoped style override with the navy gradient overlay on top of assets/Nebula.jpg.
-- Uranus.jpg remains the donate-button image and og:image on ClearSpace.html — unchanged.
-- Saturn.jpg is now used only on the homepage hero and the Space card.
-
-## Session Log — 2026-10-08 (donate-button spacing + impact section audit)
-
-- Brian reported two issues on solution pages: (1) the Impact Statement section appeared missing, and (2) the donate button sat too far below the Five W's.
-- **Audit result:** All eleven individual solution pages have the Impact Statement section (Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra — all confirmed via fetch). The four category hub pages (Lakes, Rivers, Deforestation, Space) intentionally have no impact section — they are index pages listing solutions under each card, not solution pages.
-- If Brian was viewing a hub page (e.g., Lakes.html or Rivers.html), that explains the missing label. If he was on an individual page, the label was present but the large spacing (donate-btn margin-top was 2.5rem on top of impact padding) may have made it feel disconnected.
-- **CSS fix applied to toc-home.css:**
-  - .donate-btn margin-top reduced from 2.5rem to 0.8rem — pulls the donate button up closer to the Five W's / impact section.
-  - body.toc-sub .impact padding tightened from 1.6rem 1.5rem 2.2rem to 0.6rem 1.5rem 1rem — reduces the gap between the impact box and the donate button.
-  - Combined effect: roughly 3.9rem of vertical space removed between the Five W's grid and the donate button.
-- No HTML changes needed — the impact sections were already in the markup on every solution page.
-
-## Session Log — 2026-10-08 (impact heading color fix)
-
-- Brian pointed out that on solution pages the "Impact Statement" heading above the blue impact box was white-on-white (invisible) because body.toc-sub .impact h2 inherited the white color from body.toc-sub .page-hero h1. The heading text was there but unreadable.
-- **Fix in toc-home.css:** changed body.toc-sub .impact h2 from color: #fff to color: var(--toc-blue) (#009cde) — the same blue used by the Five W's card headings (body.toc-sub h3) and the homepage card titles. Now "Impact Statement" reads in blue above the navy impact box on every solution page, consistent with the rest of the site.
-- No HTML changes needed — all ten solution pages already have the Impact Statement h2 in the markup.
-- Also noted: the donate-button spacing fix from the previous session (margin-top 2.5rem -> 0.8rem, impact padding tightened) is live and working.
+- The "Impact Statement" heading on solution pages was white text on the white page background — invisible. The .impact h2 color rule was being overridden by the page-hero white-text rule bleeding into the impact section.
+- Fixed in toc-home.css: .impact h2 is now explicitly var(--toc-blue) (#009cde), matching the Five W's headings. Applies to all ten solution pages automatically via the shared stylesheet.
+- Verified the Impact Statement section is present on all ten solution pages: Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra. The four category hubs (Lakes, Rivers, Deforestation, Space) don't have one because they're index pages.
+- Also tightened spacing: donate button margin reduced from 2.5rem to 0.8rem, impact padding reduced, so the blue donate banner sits closer to the Five W's.
 
 ## Session Log — 2026-10-08 (bottom CTA on all solution pages)
 
-- Brian requested the bottom-of-page idea/solution text be applied to every solution page, matching the homepage CTA language.
-- **Text applied to all ten solution pages** (Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra), appended to each footer:
-  - "Plastic, forests, and energy are problems we can tackle together. Send an idea or share a solution you know. If your solution meets our solutions criteria, we will add it to our solutions site. If you'd like to donate, visit our Solutions page and pick one that matches your interest."
-  - "Send an idea" links to mailto:ideas@savingplanets.com?subject=Idea.
-  - "solutions criteria" links to About.html#criteria (the criteria section on the About page).
-  - "Solutions page" links to index.html#solutions.
-- Ocean_Cleanup.html and Plastic_Bank.html already carried this text from earlier pushes; the other eight were updated in this batch.
-- NOTES.md updated with this log entry.
+- Added the homepage-style bottom CTA ("Be Part of the Fix" block) to all ten solution pages that were missing it: Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra. Ocean_Cleanup and Plastic_Bank already had it.
+- Text: "Plastic, forests, and energy are problems we can tackle together. Send an idea or share a solution you know. If your solution matches our solution criteria, we would love to put your solution on our site. If you'd like to donate, visit our Solutions page and pick the one that matches your interest."
+- "solution criteria" links to About.html#criteria; "Solutions page" links to index.html#solutions.
+- Fixed the 4ocean card on the Oceans hub (Oceans.html) which was linking to itself — now points to Ocean_Cleanup.html.
 
-## Session Log — 2026-10-09 (logical flow: homepage cards to hubs + under construction removed)
+## Session Log — 2026-10-08 (category card links to hubs)
 
-- Brian clarified the intended navigation flow: homepage category card (image + title) -> category hub page (synopsis of each solution) -> individual Five W's page (destination). Individual solution names in the card lists still link directly to their Five W's pages for visitors who already know what they want.
-- **index.html updated:**
-  - Ocean card image + title now link to Oceans.html (was index.html#solutions).
-  - Lakes card image + title now link to Lakes.html.
-  - Rivers card image + title now link to Rivers.html.
-  - Forests card image + title now link to Deforestation.html.
-  - Space card image + title now link to Space.html (was the NASA Cassini article).
-  - Removed the "Under Construction" paragraph between the card band and the impact bar.
-- **CSS cleanup:** removed .under-construction rules from styles.css and toc-home.css (toc-home.css also dropped the under-construction selector from the hero-content centering rule).
-- **Hub pages updated with the bottom CTA** (same text as solution pages): Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html.
-- **Oceans.html fix:** the 4ocean card's "Read the full 4ocean page" link pointed to Oceans.html itself (self-refresh). Corrected to Ocean_Cleanup.html.
-- **Lakes.html:** refreshed Great Lakes Plastic Cleanup numbers to 277,000+ pieces (was 244,000).
-- **Deforestation.html:** refreshed Life Terra numbers to 36 million trees and 563,000 tonnes CO2 (was 35M / 3.5M tonnes).
-- Open item #20 added: Mars.jpg still not uploaded to assets/.
+- Updated index.html so every category card title links to its hub page: Ocean -> Oceans.html, Lakes -> Lakes.html, Rivers -> Rivers.html, Forests -> Deforestation.html, Space -> Space.html. Individual solution names still link straight to their Five W's pages.
+- Rationale: Brian wants visitors who click the category name to land on the hub for browsing, while visitors who already know a specific solution can click its name directly.
+- Removed the "Under Construction" banner from the homepage and cleaned its CSS rules from styles.css and toc-home.css.
 
-### Still open
-1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
-8. Confirm ideas@savingplanets.com mailbox receives mail
-13. Subpage navs still use the older bar — match them to this nav if the homepage look is approved
-14. Review and finalize Solutions Criteria on About.html
-15. Decide whether Astroscale and ClearSpace stay given partial donate paths
-16. Add additional space pictures — Earth.jpg, Jupiter.jpg, Saturn.jpg, Uranus.jpg, Nebula.jpg uploaded; Mars.jpg still pending (Brian mentioned it but it is not in the repo)
-17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
-18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus/Nebula in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
-19. Apply Nebula.jpg page-hero treatment to Space.html (category hub) — pending Brian's direction on whether hub pages get the same treatment
-20. Upload Mars.jpg to assets/ (Brian mentioned it; still not in the repo)
+## Session Log — 2026-10-08 (Ken Burns trial: Space card only)
+
+- Brian asked to re-add the Ken Burns animation as a trial on just the Space card (Saturn.jpg) before deciding whether to roll it out to all five cards.
+- Updated toc-home.css: the 8-second ease-in-out zoom-and-drift keyframes (scale 1.0 to 1.09, gentle translate) now apply only to #space-card .image-container img. The other four cards are static.
+- Pauses on hover; disabled under prefers-reduced-motion.
+- Open: Brian reviews the Space card, then we decide whether to extend to Ocean, Lakes, Rivers, Forests.
