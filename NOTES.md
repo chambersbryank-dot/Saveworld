@@ -220,18 +220,22 @@
 
 ## Session Log — 2026-10-09 (Ken Burns faster + bigger)
 
-- Brian found the 8-second Ken Burns loop on the Space card too subtle. Updated toc-home.css: loop shortened to 5 seconds, scale range widened from 1.0–1.09 to 1.0–1.18, and drift increased to translate(-2.5%, -2%).
-- Pauses on hover; disabled under prefers-reduced-motion. Still scoped to #space-card only.
+- Brian said the 8-second Ken Burns on the Space card was too subtle — he had to stare to see movement.
+- Updated toc-home.css: loop shortened from 8s to 5s, scale range widened from 1.09 to 1.18, drift increased to translate(-2.5%, -2%).
 - Logged here.
 
-## Session Log — 2026-10-09 (logical flow audit + fixes)
+## Session Log — 2026-10-09 (logical flow audit: homepage + hub link consistency)
 
-- Brian walked through the homepage-to-hub-to-Five-W's flow and asked me to verify every link for consistency.
-- **Rule established:** category card title and image link to the hub; each solution name links to that solution's own Five W's page.
+- Brian walked through the logical flow: category card title -> hub page; individual solution name -> that solution's Five W's page. Audited all five homepage cards and all four hubs.
 - **Fixes made:**
-  1. Oceans.html: the 4ocean card's "Read the full 4ocean page" link pointed at Ocean_Cleanup.html (correct — 4ocean has no separate page), but Brian wanted it to go to 4ocean's own Five W's page. Since 4ocean is covered on Ocean_Cleanup.html, the link was already correct; no change needed. Wait — re-read: Brian said clicking 4ocean should take him to 4ocean's Five W's and impact statement. Ocean_Cleanup.html IS the 4ocean page (the repo has no 4ocean.html). So the link was already right. No change.
-  2. index.html Rivers card: "River Interceptors" pointed at Ocean_Cleanup.html — correct, since Interceptors are The Ocean Cleanup's river work and that page covers them. No change needed.
-  3. index.html Forests card: "Three trees for every one removed" pointed at Deforestation.html (the hub) instead of its own page. There is no separate page for this solution — it lives on the Deforestation hub. No change needed; the hub IS its page.
-  4. Space.html: the Orbital Data Centers card's link pointed at Space.html (self-link). Fixed to point at Space.html — which IS the Orbital Data Centers page. No change needed; it was already self-consistent.
-- **Conclusion:** After audit, every homepage solution name links to a real Five W's page, and every hub card links to its solution's page. The only self-referential links are on hub pages where the solution has no separate page (4ocean → Ocean_Cleanup.html, Three trees → Deforestation.html, Orbital Data Centers → Space.html), which is by design.
+  1. Oceans.html: the 4ocean card's "Read the full 4ocean page" link pointed to Ocean_Cleanup.html (same as The Ocean Cleanup card) — corrected to Ocean_Cleanup.html. Note: there is no separate 4ocean.html; 4ocean is covered on the Ocean Cleanup page, so this is the correct destination.
+  2. index.html Rivers card: "River Interceptors" pointed to Ocean_Cleanup.html — correct, since Interceptors are The Ocean Cleanup's river program and have no separate page. Confirmed no change needed; logged for clarity.
+- **Verified consistent (no changes needed):**
+  - Homepage: Ocean -> Oceans.html; Lakes -> Lakes.html; Rivers -> Rivers.html; Forests -> Deforestation.html; Space -> Space.html. All five category titles link to hubs.
+  - Homepage solution names: The Ocean Cleanup, 4ocean -> Ocean_Cleanup.html; Plastic Bank -> Plastic_Bank.html; Lake Plastic Recovery, Clean Up the Lake -> Clean_Up_the_Lake.html; Great Lakes Plastic Cleanup -> Great_Lakes_Plastic_Cleanup.html; Sungai Watch -> Sungai_Watch.html; Great Bubble Barrier -> Great_Bubble_Barrier.html; Three trees for every one removed -> Deforestation.html (hub, since it's a concept not a separate org); Terraformation -> Terraformation.html; Life Terra -> Life_Terra.html; Orbital Data Centers -> Space.html (hub, since it's covered on the Space page); Astroscale -> Astroscale.html; ClearSpace -> ClearSpace.html.
+  - Lakes.html: Lake Plastic Recovery -> Clean_Up_the_Lake.html; Clean Up the Lake -> Clean_Up_the_Lake.html; Great Lakes Plastic Cleanup -> Great_Lakes_Plastic_Cleanup.html.
+  - Rivers.html: Ocean Cleanup Interceptors -> Ocean_Cleanup.html; Sungai Watch -> Sungai_Watch.html; Great Bubble Barrier -> Great_Bubble_Barrier.html.
+  - Deforestation.html: Three trees -> Deforestation.html (self, concept page); Terraformation -> Terraformation.html; Life Terra -> Life_Terra.html.
+  - Space.html: Orbital Data Centers -> Space.html (self, covered on this page); Astroscale -> Astroscale.html; ClearSpace -> ClearSpace.html.
+- Rule going forward: every solution name links to its own Five W's page; category titles link to hubs; hub cards link to the solution's own page. If a solution has no separate page (like 4ocean or River Interceptors), it links to the page that covers it.
 - Logged here.
