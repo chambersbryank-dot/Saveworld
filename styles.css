@@ -7,6 +7,20 @@ body { margin: 0; font-family: "Montserrat", "Segoe UI", sans-serif; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid #009cde;
+  outline-offset: 2px;
+}
+.theme-toggle:focus-visible,
+.nav-toggle:focus-visible {
+  outline-color: #fff;
+}
+nav.scrolled .theme-toggle:focus-visible,
+nav.scrolled .nav-toggle:focus-visible {
+  outline-color: #003755;
+}
+
 /* Navigation bar (homepage) */
 nav { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; transition: background 0.25s ease, box-shadow 0.25s ease; }
 nav.scrolled { position: fixed; background: #fff; box-shadow: 0 1px 0 rgba(0,55,85,0.08); }
