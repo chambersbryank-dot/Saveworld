@@ -11,10 +11,10 @@ a { color: inherit; }
 nav { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; transition: background 0.25s ease, box-shadow 0.25s ease; }
 nav.scrolled { position: fixed; background: #fff; box-shadow: 0 1px 0 rgba(0,55,85,0.08); }
 .nav-container { max-width: 1280px; margin: 0 auto; height: 88px; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; }
-.brand-word { color: #fff; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; text-decoration: none; }
+.brand-word { color: #fff; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; text-decoration: none; }
 nav.scrolled .brand-word { color: #003755; }
 .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: #fff; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+.nav-links a { color: #fff; font-weight: 600; font-size: 1.15rem; text-decoration: none; }
 nav.scrolled .nav-links a { color: #003755; }
 .nav-links a:hover { color: #009cde; }
 .btn-nav { background: #009cde; color: #fff; border-radius: 4px; padding: 12px 22px; font-weight: 700; text-decoration: none; }

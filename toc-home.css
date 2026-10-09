@@ -15,9 +15,9 @@ nav.scrolled .nav-toggle { border-color: var(--toc-navy); }
 body.toc-home nav, body.toc-sub nav { position: absolute; top: 0; left: 0; right: 0; background: transparent; box-shadow: none; z-index: 1000; }
 body.toc-home nav.scrolled, body.toc-sub nav.scrolled { position: fixed; background: #fff; box-shadow: 0 1px 0 rgba(0,55,85,0.08); }
 body.toc-home .nav-container, body.toc-sub .nav-container { height: 88px; max-width: 1280px; }
-body.toc-home .brand-word, body.toc-sub .brand-word { color: #fff; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; text-decoration: none; }
+body.toc-home .brand-word, body.toc-sub .brand-word { color: #fff; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; text-decoration: none; }
 body.toc-home nav.scrolled .brand-word, body.toc-home nav.scrolled .nav-links a, body.toc-sub nav.scrolled .brand-word, body.toc-sub nav.scrolled .nav-links a { color: var(--toc-navy); }
-body.toc-home .nav-links a, body.toc-sub .nav-links a { color: #fff; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+body.toc-home .nav-links a, body.toc-sub .nav-links a { color: #fff; font-weight: 600; font-size: 1.15rem; text-decoration: none; }
 body.toc-home .nav-links a:hover, body.toc-sub .nav-links a:hover { color: var(--toc-blue); }
 body.toc-home .btn-nav, body.toc-sub .btn-nav { background: var(--toc-blue); color: #fff; border-radius: 4px; padding: 12px 22px; font-weight: 700; text-decoration: none; }
 .theme-toggle { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.7); border-radius: 4px; padding: 8px 12px; font-weight: 700; cursor: pointer; font-family: inherit; }
