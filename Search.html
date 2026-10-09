@@ -11,13 +11,91 @@
 <meta property="og:image" content="https://www.saveplanetminusthedoom.com/assets/SavePlanetLogo.jpg">
 <meta property="og:url" content="https://www.saveplanetminusthedoom.com/Search.html">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.saveplanetminusthedoom.com/assets/SavePlanetLogo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="toc-home.css">
+<style>
+.search-wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
+#q { width: 100%; padding: 0.8rem 1rem; font: inherit; font-size: 1.1rem; border: 2px solid #009cde; border-radius: 8px; color: #003755; }
+#q:focus { outline: 3px solid rgba(0,156,222,0.35); }
+#results { list-style: none; margin: 1.2rem 0 0; padding: 0; }
+#results li { margin: 0.6rem 0; }
+#results a { color: #00b894; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+#results a:hover { text-decoration: underline; }
+#results .match { display: block; color: #003755; font-weight: 400; font-size: 0.9rem; margin-top: 0.15rem; }
+#status { color: #003755; opacity: 0.7; margin-top: 0.8rem; }
+html.dark #q { background: #152033; color: #e8eef5; border-color: #4da3ff; }
+html.dark #results .match, html.dark #status { color: #e8eef5; }
+</style>
 </head>
 <body class="toc-sub"><a class="skip-link" href="#solution">Skip to content</a><nav id="topnav"><div class="nav-container"><a class="brand-word" href="index.html">Home - Saving Planets</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li class="nav-dropdown"><a href="index.html#solutions" class="dropdown-toggle">Solutions</a><ul class="dropdown-menu"><li><a href="index.html#ocean-card">Ocean</a></li><li><a href="index.html#lakes-card">Lakes</a></li><li><a href="index.html#rivers-card">Rivers</a></li><li><a href="index.html#space-card">Space</a></li><li><a href="index.html#forests-card">Forests</a></li></ul></li><li><a href="Project-R.html">Project R</a></li><li><a href="Amazing_Facts.html">Amazing Facts</a></li><li><a href="About.html">About</a></li><li><a href="Search.html">Search</a></li></ul><button id="theme-toggle" class="theme-toggle" type="button">Dark</button></div></nav>
 <section class="page-hero"><div class="page-hero-content"><h1>Search</h1><p>Type a word. Ocean, lake, river, forest, space.</p></div></section>
-<section class="five-ws" id="solution"><label for="q">Find a page</label><input id="q" type="search" placeholder="Search pages" style="width:100%;max-width:28rem;padding:.6rem;margin:1rem 0;font:inherit"><ul id="results" class="solution-list"></ul></section>
-<footer><p>&copy; 2026 Saving Planets</p></footer>
+<section class="five-ws" id="solution"><div class="search-wrap"><label for="q">Find a page</label><input id="q" type="search" placeholder="Search pages" autocomplete="off" aria-describedby="status"><p id="status" aria-live="polite"></p><ul id="results" class="solution-list"></ul></div></section>
+<footer><p>&copy; 2026 Saving Planets • Positive action for a thriving Earth</p><p>Plastic, forests, and energy are problems we can tackle together. <a href="mailto:ideas@savingplanets.com?subject=Idea">Send an idea</a> or share a solution you know. If your solution meets our <a href="About.html#criteria">solutions criteria</a>, we will add it to our solutions site. If you'd like to donate, visit our <a href="index.html#solutions">Solutions page</a> and pick one that matches your interest.</p></footer>
 <script src="site.js"></script>
+<script>
+(function () {
+  var pages = [
+    { title: 'Home', url: 'index.html', text: 'Saving Planets solutions minus the doom positive action oceans lakes rivers forests space computing' },
+    { title: 'Oceans', url: 'Oceans.html', text: 'ocean plastic cleanup The Ocean Cleanup 4ocean Plastic Bank rivers interceptors' },
+    { title: 'The Ocean Cleanup', url: 'Ocean_Cleanup.html', text: 'The Ocean Cleanup Boyan Slat floating systems Interceptors rivers garbage patch 60 million kilograms' },
+    { title: '4ocean', url: 'Ocean_Cleanup.html', text: '4ocean bracelets recycled plastic ocean cleanup' },
+    { title: 'Plastic Bank', url: 'Plastic_Bank.html', text: 'Plastic Bank social plastic poverty recycling ocean' },
+    { title: 'Lakes', url: 'Lakes.html', text: 'lakes plastic recovery Clean Up the Lake Great Lakes Plastic Cleanup Seabins freshwater' },
+    { title: 'Lake Plastic Recovery', url: 'Lake_Plastic_Recovery.html', text: 'lake plastic recovery pulling submerged litter freshwater' },
+    { title: 'Clean Up the Lake', url: 'Clean_Up_the_Lake.html', text: 'Clean Up the Lake Nevada scuba divers Lake Tahoe 72 Mile Cleanup Sierra Nevada' },
+    { title: 'Great Lakes Plastic Cleanup', url: 'Great_Lakes_Plastic_Cleanup.html', text: 'Great Lakes Plastic Cleanup Pollution Probe Seabins PixieDrones beach robots 277000 pieces' },
+    { title: 'Rivers', url: 'Rivers.html', text: 'rivers interceptors Sungai Watch Great Bubble Barrier river plastic 1000 rivers' },
+    { title: 'Interceptors', url: 'Interceptors.html', text: 'Interceptors The Ocean Cleanup solar-powered river systems 30 Cities Program' },
+    { title: 'Sungai Watch', url: 'Sungai_Watch.html', text: 'Sungai Watch Bali trash barriers Indonesia River Warriors 4 million kilograms' },
+    { title: 'The Great Bubble Barrier', url: 'Great_Bubble_Barrier.html', text: 'Great Bubble Barrier Amsterdam bubble curtain canals North Sea' },
+    { title: 'Forests', url: 'Deforestation.html', text: 'forests three trees for every one removed Terraformation Life Terra reforestation' },
+    { title: 'Three Trees for Every One Removed', url: 'Three_Trees.html', text: 'three trees for every one removed forest ratio habitat soil shade' },
+    { title: 'Terraformation', url: 'Terraformation.html', text: 'Terraformation Hawaii native biodiverse forests seed canopy Africa Latin America' },
+    { title: 'Life Terra', url: 'Life_Terra.html', text: 'Life Terra Europe 36 million trees 30 countries monitoring 40 years' },
+    { title: 'Space', url: 'Space.html', text: 'space orbital data centers Astroscale ClearSpace debris removal orbit' },
+    { title: 'Orbital Data Centers', url: 'Orbital_Data_Centers.html', text: 'orbital data centers Starcloud NVIDIA H100 Google Project Suncatcher solar power radiative cooling no water' },
+    { title: 'Astroscale', url: 'Astroscale.html', text: 'Astroscale on-orbit servicing ELSA-d ADRAS-J debris removal JAXA' },
+    { title: 'ClearSpace', url: 'ClearSpace.html', text: 'ClearSpace ESA active debris removal ClearSpace-1 PRELUDE Vega-C' },
+    { title: 'Project R', url: 'Project-R.html', text: 'Project R coming soon' },
+    { title: 'Amazing Facts', url: 'Amazing_Facts.html', text: 'amazing facts 15 million kilograms 1000 rivers three trees zero gallons orbit' },
+    { title: 'About', url: 'About.html', text: 'about Saving Planets solutions criteria mission' }
+  ];
+
+  var input = document.getElementById('q');;
+  var results = document.getElementById('results');;
+  var status = document.getElementById('status');;
+  if (!input || !results || !status) return;
+
+  function render(query) {
+    var q = (query || '').trim().toLowerCase();;
+    results.innerHTML = '';;
+    if (!q) { status.textContent = ''; return; }
+    var matches = pages.filter(function (p) {
+      return p.text.indexOf(q) !== -1 || p.title.toLowerCase().indexOf(q) !== -1;
+    });;
+    status.textContent = matches.length ? matches.length + ' result' + (matches.length === 1 ? '' : 's') : 'No matches for "' + query.trim() + '"';;
+    matches.forEach(function (p) {
+      var li = document.createElement('li');;
+      var a = document.createElement('a');;
+      a.href = p.url;
+      a.textContent = p.title;
+      li.appendChild(a);
+      results.appendChild(li);
+    });;
+  }
+
+  input.addEventListener('input', function () { render(input.value); });;
+  if (window.location.search.indexOf('q=') !== -1) {
+    try {
+      var params = new URLSearchParams(window.location.search);;
+      var initial = params.get('q') || '';;
+      input.value = initial;
+      render(initial);
+    } catch (e) { /* ignore */ }
+  }
+})();
+</script>
 </body>
 </html>
