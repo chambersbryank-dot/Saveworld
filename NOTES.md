@@ -231,6 +231,12 @@
 - Noted: Threetrees4.jpeg is the biggest tree shot at nearly 2 MB — worth watching for page-load speed if more large images are added.
 - Plant3Trees1.jpg remains a 2-byte empty placeholder in the repo; if Brian intended to upload a real image under that name, it needs to be re-uploaded.
 
+## Session Log — 2026-10-09 (Terraformation card image swap on Forests hub)
+
+- Brian requested the Terraformation card on Deforestation.html swap from CutTreePlantThree.JPG to Yishan_Tree.jpg.
+- CutTreePlantThree.JPG is now unused on Deforestation.html — still referenced by Terraformation.html donate button and LightthrForest.JPG (duplicate).
+- Logged here.
+
 ## Open Items
 
 1. ~~Rename IMG_0060.jpeg to Saturn.jpg~~ DONE (Brian renamed; all references updated).
