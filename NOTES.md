@@ -210,6 +210,17 @@
 - No HTML changes needed — all ten solution pages already have the Impact Statement h2 in the markup.
 - Also noted: the donate-button spacing fix from the previous session (margin-top 2.5rem -> 0.8rem, impact padding tightened) is live and working.
 
+## Session Log — 2026-10-08 (bottom CTA on all solution pages)
+
+- Brian requested the bottom-of-page idea/solution text be applied to every solution page, matching the homepage CTA language.
+- **Text applied to all ten solution pages** (Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra), appended to each footer:
+  - "Plastic, forests, and energy are problems we can tackle together. Send an idea or share a solution you know. If your solution meets our solutions criteria, we will add it to our solutions site. If you'd like to donate, visit our Solutions page and pick one that matches your interest."
+  - "Send an idea" links to mailto:ideas@savingplanets.com?subject=Idea.
+  - "solutions criteria" links to About.html#criteria (the criteria section on the About page).
+  - "Solutions page" links to index.html#solutions.
+- Ocean_Cleanup.html and Plastic_Bank.html already carried this text from earlier pushes; the other eight were updated in this batch.
+- NOTES.md updated with this log entry.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
