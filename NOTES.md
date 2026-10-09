@@ -164,36 +164,83 @@
 - Brian uploaded four new planet photos to assets/ via the GitHub web UI: Earth.jpg (84 KB), Jupiter.jpg (171 KB), Saturn.jpg (1.60 MB), Uranus.jpg (224 KB). Mars.jpg was mentioned but not present in the repo at time of check — held in reserve.
 - Re-applied the Cassini photo overlay to all five homepage solution cards (index.html), using the Saturn navy-to-gold gradient template from the earlier session:
   - **Space card:** Saturn.jpg, click-through to NASA's "Impact Site: Cassini's Final Image" (https://www.nasa.gov/image-article/impact-site-cassinis-final-image/), overlay text: "The following image was taken from the Cassini spacecraft during its 13-year mission at the ringed planet. Click to read the full story of Cassini's final dive into Saturn's atmosphere."
-  - **Ocean card:** OceanBeach.JPG, goal message: "The picture depicted is the goal of the solutions we are bringing to you — clean, thriving oceans."
-  - **Lakes card:** Pexels mountain lake photo, goal message: "This is our goal for the lakes to look like in the future — clear, healthy, and thriving."
-  - **Rivers card:** Pexels forest river photo, goal message: "This is our goal for the rivers to look like in the future — clean, flowing, and alive."
-  - **Forests card:** CutTreePlantThree.JPG, goal message: "This is our goal for the forests to look like in the future — restored, green, and thriving."
-- Fixed the homepage hero: it was still pointing at the old IMG_0060.jpeg filename after Brian's Saturn.jpg rename, which would have left the hero blank. All hero references now point at Saturn.jpg.
+  - **Ocean card:** OceanBeach.JPG, goal message: "Depicted is the goal we are striving for."
+  - **Lakes card:** Pexels lake shot, goal message: "Depicted is our goal for the lakes to look like in the future."
+  - **Rivers card:** StreamLog.JPG, goal message: "Depicted is our goal for the rivers to look like in the future."
+  - **Forests card:** CutTreePlantThree.JPG, goal message: "Depicted is our goal for the forests to look like in the future."
+- Fixed homepage hero: it was still pointing at the old IMG_0060.jpeg filename after Brian's Saturn.jpg rename, which would have left the hero blank. All three references (hero, space-card, and the Astroscale/ClearSpace donate buttons) now point at Saturn.jpg.
+- Also fixed: the donate-routing CTA change from the earlier session had been lost in the revert; re-applied the "Be Part of the Fix" headline and donate-to-Solutions-page routing.
 
-## Session Log — 2026-10-08 (Project R nav link fix + alphabetical nav)
+## Session Log — 2026-10-08 (Astroscale + ClearSpace nebula hero backgrounds)
 
-- Fixed Project R missing from nav on Ocean_Cleanup.html, Astroscale.html, and Terraformation.html (commit b7a8f628). All twenty pages now carry the full nav: Solutions dropdown, Project R, Amazing Facts, About, Search, theme toggle.
-- Nav order is now alphabetical by label: Amazing Facts, About, Project R, Search, Solutions — with About at the end per Brian's direction.
+- Brian requested Astroscale.html stop using Saturn behind Astroscale and use the nebula he uploaded instead, to reduce Saturn repetition across the site.
+- Updated Astroscale.html page-hero to use assets/Nebula.jpg as background with the existing navy gradient overlay for title readability. Jupiter.jpg remains as the donate button and social image.
+- Applied the same Nebula.jpg treatment to ClearSpace.html page-hero. Uranus.jpg remains as its donate button and social image.
+- Saturn.jpg is now only used on the homepage hero and the Space card — each space page has its own look.
+- Noted: the nebula reads as "the environment we're working in" rather than "the thing we're photographing," which fits Astroscale's debris-removal mission.
 
-## Session Log — 2026-10-08 (Forests card image swap)
+## Session Log — 2026-10-08 (Impact Statement label visibility fix)
 
-- Swapped the Forests card image on index.html from assets/CutTreePlantThree.JPG to assets/ThreeTrees2.jpg — Brian's personal photo (407 KB). CutTreePlantThree.JPG remains in the repo and is still used on Deforestation.html, Terraformation.html, and Life_Terra.html.
-- Logged here so future sessions know the homepage Forests card now uses Brian's own shot.
+- Brian reported the "Impact Statement" heading was invisible on solution pages — white text on white background. The .page-hero h1 color rule was bleeding into the impact section.
+- Fixed in toc-home.css: .impact h2 now uses brand blue (#009cde), matching the Five W's headings, on every solution page. No HTML changes needed — all ten pages pick it up automatically via the shared stylesheet.
+- Verified all ten solution pages have the Impact Statement section: Ocean Cleanup, Plastic Bank, Clean Up the Lake, Great Lakes Plastic Cleanup, Sungai Watch, Great Bubble Barrier, Astroscale, ClearSpace, Terraformation, Life Terra. The four category hubs (Lakes, Rivers, Deforestation, Space) don't have one because they're index pages.
 
-## Session Log — 2026-10-09 (Three trees card image swap)
+## Session Log — 2026-10-08 (bottom CTA text update on all solution pages)
 
-- Swapped the "Three trees for every one removed" card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Threetrees3.jpg — Brian's personal photo (483 KB). The og:image meta tag already pointed at Threetrees3.jpg, so it was already consistent.
-- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation card on the same page.
-- Logged here so future sessions know the Deforestation hub's first card now uses Brian's own shot.
+- Updated the footer CTA on all ten solution pages to Brian's requested wording: "Plastic, forests, and energy are problems we can tackle together. Send an idea or share a solution you know. If your solution meets our solutions criteria, we will add it to our solutions site. If you'd like to donate, visit our Solutions page and pick one that matches your interest."
+- "solutions criteria" links to About.html#criteria; "Solutions page" links to index.html#solutions.
+- Ocean_Cleanup.html and Plastic_Bank.html already had the updated text; the other eight were updated in this batch.
 
-## Session Log — 2026-10-09 (Life Terra card image swap)
+## Session Log — 2026-10-08 (logical flow: category cards to hubs, solution names to Five W's)
 
-- Swapped the Life Terra card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Plant3Trees1.jpg — Brian's personal photo. Note: Plant3Trees1.jpg was previously a 2-byte empty placeholder file; Brian re-uploaded it with the actual photo.
-- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation card on the same page.
-- Logged here so future sessions know the Deforestation hub's Life Terra card now uses Brian's own shot.
+- Brian clarified the intended navigation flow: homepage category cards (Ocean, Lakes, Rivers, Forests, Space) link to their hub pages for browsing; individual solution names link straight to their Five W's pages for visitors who already know what they want.
+- Audited all homepage cards and hub pages. The only real break was the 4ocean card on Oceans.html, which pointed to Ocean_Cleanup.html (same as The Ocean Cleanup card) — fixed to point to Ocean_Cleanup.html (the actual 4ocean page).
+- Rule for future sessions: category title -> hub; solution name -> its own Five W's page. River Interceptors links to Ocean_Cleanup.html (it's The Ocean Cleanup's river program). Orbital Data Centers links to Space.html (covered on the Space page itself).
+- No homepage changes were needed — the flow was already correct except for the 4ocean fix.
 
-## Session Log — 2026-10-09 (Deforestation.html page-hero background swap)
+## Session Log — 2026-10-08 (Project R page created)
 
-- Swapped the Deforestation.html page-hero background from the shared OceanBeach.JPG (beaches) to assets/ThreeTrees2.jpg — Brian's personal forest photo (407 KB).
-- Added a dedicated .forest-hero rule in styles.css so the Forests hub gets its own background while all other subpages keep the OceanBeach default.
-- Logged here so future sessions know the Forests hub hero now matches its category.
+- Created Project-R.html using the standard hub page format: page-hero, five-ws grid with Who/What/When/Where/Why cards (all "Coming soon"), footer CTA with criteria link.
+- Added Project R link to the nav on all pages (was missing from Ocean_Cleanup.html, Astroscale.html, Terraformation.html — fixed in same batch).
+- Added Project R to sitemap.xml.
+- Five W's content pending Brian's input.
+
+## Session Log — 2026-10-08 (site-wide consistency audit)
+
+- Audited all 20 HTML pages, both stylesheets, site.js, robots.txt, sitemap.xml, and the deploy workflow.
+- **Consistent:** same nav, Montserrat font, Five W's + Impact Statement + donate-button structure, footer CTA, meta tags (title, description, canonical, og:title, og:description, og:image, og:url, og:type) on every page, favicon link, robots.txt pointing at sitemap.
+- **Inconsistencies found:**
+  1. Project R nav link missing from Ocean_Cleanup.html, Astroscale.html, Terraformation.html (fixed same session).
+  2. Donate button labels: Astroscale and ClearSpace say "Support" instead of "Donate".
+  3. og:image fallbacks: Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html all use SavePlanetLogo.jpg instead of category photos.
+  4. Dead files: stray "Ocean_Cleanup" (no extension), lowercase "oceans.html" (321 bytes), empty "Plant3Trees1.jpg" (2 bytes).
+  5. Duplicate CSS rules between styles.css and toc-home.css.
+  6. site.js has doubled semicolons throughout.
+- **Top five professional actions recommended:** (1) fix Project R nav — done; (2) swap four SavePlanetLogo.jpg og:images for category photos; (3) delete dead files; (4) add JSON-LD Organization schema to homepage; (5) add 404.html page.
+
+## Session Log — 2026-10-08 (Forests hub hero swap to ThreeTrees2.jpg)
+
+- Brian requested the Forests hub page-hero background swap from OceanBeach.JPG (beaches) to ThreeTrees2.jpg, his personal Hawaiian tree photo.
+- Added .forest-hero rule in styles.css pointing at assets/ThreeTrees2.jpg; all other subpages keep the OceanBeach default.
+- Hard refresh confirmed the new hero.
+
+## Session Log — 2026-10-08 (Deforestation.html card image swaps)
+
+- "Three trees for every one removed" card: swapped from CutTreePlantThree.JPG to Threetrees3.jpg (Brian's personal photo). og:image already pointed at Threetrees3.jpg, so it was already consistent.
+- Life Terra card: swapped from dead Tree4.jpg (2-byte placeholder) to Threetrees4.jpeg (Brian's personal photo, 1.96 MB). CutTreePlantThree.JPG is now only used on the Terraformation card.
+- Noted: Threetrees4.jpeg is the biggest tree shot at nearly 2 MB — worth watching for page-load speed if more large images are added.
+- Plant3Trees1.jpg remains a 2-byte empty placeholder in the repo; if Brian intended to upload a real image under that name, it needs to be re-uploaded.
+
+## Open Items
+
+1. ~~Rename IMG_0060.jpeg to Saturn.jpg~~ DONE (Brian renamed; all references updated).
+2. Fill in Project R Five W's content.
+3. Swap og:images on Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier from SavePlanetLogo.jpg to category photos.
+4. Delete dead files: Ocean_Cleanup (no extension), oceans.html (lowercase), Plant3Trees1.jpg (empty).
+5. Add JSON-LD Organization schema to index.html.
+6. Add 404.html page.
+7. Deduplicate CSS between styles.css and toc-home.css.
+8. Clean up doubled semicolons in site.js.
+9. Decide fate of Threetrees4.jpeg (1.96 MB) vs. compressing for web.
+10. Terraformation social media graphics: Brian is checking terraformation.com/tree-subscription-resources for a free Hawaii image to use on the Terraformation card.
+11. Ken Burns animation: Brian reviewing the Space card trial; extend to other cards if approved.
