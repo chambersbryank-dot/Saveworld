@@ -135,7 +135,7 @@
 - Selected four NASA public-domain images (all from the NASA Images API, direct ~orig.jpg URLs):
   1. **Jupiter.jpg** — PIA21395, "Jupiter's Great Red Spot Revealed," JunoCam, July 10, 2017, ~6,130 miles from cloud tops. Citizen-science enhanced color by Kevin Gill. URL: https://images-assets.nasa.gov/image/PIA21395/PIA21395~orig.jpg
   2. **Mars.jpg** — PIA01250, "Hubble Captures A Full Rotation Of Mars," Hubble Space Telescope. URL: https://images-assets.nasa.gov/image/PIA01250/PIA01250~orig.jpg
-  3. **Earth.jpg** — AS17-148-22742, Apollo 17 view of Earth (Australia/Antarctica), Dec 1972, 70mm Hasselblad. URL: https://images-assets.nasa.gov/image/as17-148-22742/as17-148-22742~orig.jpg
+  3. **Earth.jpg** — AS17-148-22742, Apollo 17 view of Earth (Australia/Antarctica), Dec 1972, 70mm Hasselblad. URL: https://images-assets.nasa.gov/image/as17-148-22742~orig.jpg
   4. **Neptune.jpg** — PIA01493, "Neptune Rings," Voyager 2, August 1989. URL: https://images-assets.nasa.gov/image/PIA01493/PIA01493~orig.jpg
 - **BLOCKER:** The code-execution environment has no outbound internet access (requests to images-assets.nasa.gov failed with ConnectionRefusedError), so the images could not be downloaded and uploaded to the repo from this session. The GitHub MCP create_or_update_file tool only accepts text content, not binary image uploads.
 - **Plan for next session:** Download the four ~orig.jpg files (browser or curl), then upload each to assets/ via the GitHub web UI (drag-and-drop into the assets folder) or via git push from a local clone. Then update Space.html, Astroscale.html, and ClearSpace.html to use the new unique images instead of IMG_0060.jpeg, and update og:image meta tags accordingly.
@@ -202,6 +202,13 @@
   - body.toc-sub .impact padding tightened from 1.6rem 1.5rem 2.2rem to 0.6rem 1.5rem 1rem — reduces the gap between the impact box and the donate button.
   - Combined effect: roughly 3.9rem of vertical space removed between the Five W's grid and the donate button.
 - No HTML changes needed — the impact sections were already in the markup on every solution page.
+
+## Session Log — 2026-10-08 (impact heading color fix)
+
+- Brian pointed out that on solution pages the "Impact Statement" heading above the blue impact box was white-on-white (invisible) because body.toc-sub .impact h2 inherited the white color from body.toc-sub .page-hero h1. The heading text was there but unreadable.
+- **Fix in toc-home.css:** changed body.toc-sub .impact h2 from color: #fff to color: var(--toc-blue) (#009cde) — the same blue used by the Five W's card headings (body.toc-sub h3) and the homepage card titles. Now "Impact Statement" reads in blue above the navy impact box on every solution page, consistent with the rest of the site.
+- No HTML changes needed — all ten solution pages already have the Impact Statement h2 in the markup.
+- Also noted: the donate-button spacing fix from the previous session (margin-top 2.5rem -> 0.8rem, impact padding tightened) is live and working.
 
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
