@@ -152,7 +152,7 @@
 
 ## Session Log — 2026-10-08 (homepage revert: pre-overlay baseline)
 
-- Brian asked to revert the homepage to the state before the Cassini overlay work so we can discuss what to do with each solution card.
+- Brian asked to revert the homepage to the state before the Cassini overlay work so we can discuss what we do with each solution card.
 - Reverted index.html (commit c7d01316) and toc-home.css (commit 82df705d) to the pre-overlay state:
   - index.html: plain card images (no photo-link wrapper, no cassini-tip), Space card points at assets/IMG_0060.jpeg, bottom CTA restored to "Join the Work" with Donate / show up / send an idea links.
   - toc-home.css: removed the .photo-link / .cassini-tip overlay block and the Ken Burns keyframes + animation rules.
@@ -179,3 +179,9 @@
 
 - Swapped the Forests card image on index.html from assets/CutTreePlantThree.JPG to assets/ThreeTrees2.jpg — Brian's personal photo (407 KB). CutTreePlantThree.JPG remains in the repo and is still used on Deforestation.html, Terraformation.html, and Life_Terra.html.
 - Logged here so future sessions know the homepage Forests card now uses Brian's own shot.
+
+## Session Log — 2026-10-09 (Three trees card image swap)
+
+- Swapped the "Three trees for every one removed" card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Threetrees3.jpg — Brian's personal photo (483 KB). The og:image meta tag already pointed at Threetrees3.jpg, so it was already consistent.
+- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation and Life Terra cards on the same page.
+- Logged here so future sessions know the Deforestation hub's first card now uses Brian's own shot.
