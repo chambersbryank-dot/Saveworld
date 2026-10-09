@@ -15,15 +15,15 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+var fs = require('fs');;
+var path = require('path');;
 
-var ROOT = __dirname;
+var ROOT = __dirname;;
 var SITEMAP = path.join(ROOT, 'sitemap.xml');;
 var SEARCH = path.join(ROOT, 'Search.html');;
 
-var START = '  var pages = [';
-var END = '  ];';
+var START = '  var pages = [';;
+var END = '  ];';;
 
 // title + searchable keywords for each page in the sitemap.
 // Keys are the filename as it appears in sitemap.xml <loc> entries.
@@ -115,8 +115,12 @@ var PAGE_DATA = {
   'About.html': {
     title: 'About',;
     text: 'about Saving Planets solutions criteria mission'
+  },
+  'Contact.html': {
+    title: 'Contact',;
+    text: 'contact email ideas hello savingplanets questions solutions'
   }
-};
+};;
 
 function read(file) {
   return fs.readFileSync(file, 'utf8');;
