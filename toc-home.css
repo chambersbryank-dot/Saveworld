@@ -44,9 +44,9 @@ body.toc-home .card-band .image-container { overflow: hidden; }
 body.toc-home .card-band .image-container img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.35s ease; }
 body.toc-home .card-band .card:hover .image-container img { transform: scale(1.05); }
 /* Ken Burns trial — Space card only (Saturn.jpg) */
-body.toc-home .card-band #space-card .image-container img { animation: kenburns 8s ease-in-out infinite alternate; }
+body.toc-home .card-band #space-card .image-container img { animation: kenburns 5s ease-in-out infinite alternate; }
 body.toc-home .card-band #space-card .card:hover .image-container img { animation-play-state: paused; }
-@keyframes kenburns { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.09) translate(-1.5%, -1%); } }
+@keyframes kenburns { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.18) translate(-2.5%, -2%); } }
 @media (prefers-reduced-motion: reduce) { body.toc-home .card-band #space-card .image-container img { animation: none; } }
 body.toc-home .card-band h3 { color: var(--brand-blue); text-align: center; font-size: 1.85rem; font-weight: 800; padding: 1rem 0.6rem 0.35rem; margin: 0; }
 body.toc-home .card-band h3 a { color: inherit; text-decoration: none; }
