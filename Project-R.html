@@ -15,12 +15,117 @@
 <meta name="twitter:image" content="https://www.saveplanetminusthedoom.com/assets/SavePlanetLogo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="toc-home.css">
+<style>
+/* Upcoming-launches widget + category cards (Project R only) */
+.launch-widget { max-width: 1200px; margin: 0 auto; padding: 1.6rem 1.5rem 0.4rem; }
+.launch-widget .lw-box { background: linear-gradient(135deg, #003755 0%, #00253a 100%); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: 0 8px 22px rgba(0,55,85,0.15); }
+.launch-widget .lw-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; }
+body.toc-sub .launch-widget h2 { margin: 0; color: #fff; font-family: "Montserrat", "Segoe UI", sans-serif; font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
+.launch-widget .lw-live { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+.launch-widget .lw-dot { width: 8px; height: 8px; border-radius: 50%; background: #00b894; box-shadow: 0 0 0 0 rgba(0,184,148,0.6); animation: lw-pulse 1.8s infinite; }
+@keyframes lw-pulse { 0% { box-shadow: 0 0 0 0 rgba(0,184,148,0.6); } 70% { box-shadow: 0 0 0 8px rgba(0,184,148,0); } 100% { box-shadow: 0 0 0 0 rgba(0,184,148,0); } }
+@media (prefers-reduced-motion: reduce) { .launch-widget .lw-dot { animation: none; } }
+.launch-widget .lw-next { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1rem 1.2rem; }
+.launch-widget .lw-kicker { margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8fd3ff; }
+.launch-widget .lw-mission { margin: 0 0 0.3rem; color: #fff; font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 800; }
+.launch-widget .lw-meta { margin: 0 0 0.2rem; color: rgba(255,255,255,0.9); font-size: 1rem; }
+.launch-widget .lw-when { margin: 0; color: rgba(255,255,255,0.75); font-size: 0.92rem; }
+.launch-widget .lw-countdown { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.launch-widget .lw-unit { min-width: 64px; text-align: center; background: rgba(0,156,222,0.18); border: 1px solid rgba(0,156,222,0.45); border-radius: 8px; padding: 0.4rem 0.5rem; }
+.launch-widget .lw-unit b { display: block; font-family: "Montserrat", "Segoe UI", sans-serif; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; color: #fff; }
+.launch-widget .lw-unit small { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+.launch-widget .lw-list { list-style: none; margin: 0.9rem 0 0; padding: 0; }
+.launch-widget .lw-list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.2rem 1rem; padding: 0.55rem 0; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.95rem; }
+.launch-widget .lw-list .lw-l-name { font-weight: 700; color: #fff; }
+.launch-widget .lw-list .lw-l-sub { color: rgba(255,255,255,0.72); font-size: 0.85rem; display: block; font-weight: 500; }
+.launch-widget .lw-list .lw-l-date { color: #8fd3ff; font-weight: 600; white-space: nowrap; }
+.launch-widget .lw-note { margin: 0.9rem 0 0.2rem; font-size: 0.8rem; font-style: italic; color: rgba(255,255,255,0.7); }
+.launch-widget .lw-more { margin: 0.4rem 0 0; }
+.launch-widget .lw-more a { color: #8fd3ff; font-weight: 700; text-decoration: none; }
+.launch-widget .lw-more a:hover, .launch-widget .lw-more a:focus { text-decoration: underline; }
+.launch-widget .lw-credit { margin: 0.4rem 0 0; font-size: 0.72rem; color: rgba(255,255,255,0.5); }
+.launch-widget .lw-loading, .launch-widget .lw-error { margin: 0; color: rgba(255,255,255,0.85); }
+html.dark .launch-widget .lw-box { background: linear-gradient(135deg, #152033 0%, #0b1220 100%); }
+#categories .cat-intro { text-align: center; max-width: 720px; margin: -0.4rem auto 1.2rem; font-size: 1.05rem; line-height: 1.6; }
+#categories .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 320px)); justify-content: center; }
+#categories .card { padding: 0; overflow: hidden; }
+html.dark #categories h2 { color: #e8eef5; }
+html.dark #categories h3, html.dark #categories h3 a { color: #4da3ff; }
+@media (max-width: 600px) { .launch-widget .lw-box { padding: 1.1rem; } .launch-widget .lw-unit { min-width: 56px; } }
+</style>
 </head>
 <body class="toc-sub"><a class="skip-link" href="#solution">Skip to content</a><nav id="topnav"><div class="nav-container"><a class="brand-word" href="index.html">Home - Saving Planets</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li class="nav-dropdown"><a href="index.html#solutions" class="dropdown-toggle">Solutions</a><ul class="dropdown-menu"><li><a href="index.html#ocean-card">Ocean</a></li><li><a href="index.html#lakes-card">Lakes</a></li><li><a href="index.html#rivers-card">Rivers</a></li><li><a href="index.html#space-card">Space</a></li><li><a href="index.html#forests-card">Forests</a></li></ul></li><li><a href="Project-R.html">Project R</a></li><li><a href="Amazing_Facts.html">Amazing Facts</a></li><li><a href="About.html">About</a></li><li><a href="Search.html">Search</a></li></ul><button id="theme-toggle" class="theme-toggle" type="button">Dark</button></div></nav>
 <section class="page-hero"><div class="page-hero-content"><h1>Project R</h1><p>The two-way relationship between Earth and space.</p></div></section>
+<section class="launch-widget" id="launches" aria-labelledby="launches-title"><div class="lw-box"><div class="lw-head"><h2 id="launches-title">Upcoming Launches</h2><span class="lw-live" aria-hidden="true"><span class="lw-dot"></span>Live</span></div><div class="lw-next" id="lw-next" aria-live="polite"><p class="lw-loading">Loading the next launch&hellip;</p></div><ul class="lw-list" id="lw-list"></ul><p class="lw-note">Note: Launches shift left and right all the time - stay updated.</p><p class="lw-more"><a href="https://www.nextspaceflight.com/" target="_blank" rel="noreferrer">Full launch schedule at Next Spaceflight &rarr;</a></p><p class="lw-credit">Data: The Space Devs Launch Library 2</p></div></section>
 <section class="five-ws" id="solution"><h2>The Five W's of Project R</h2><div class="ws-grid"><div class="w-card"><h3>Who</h3><p>Saving Planets, highlighting Project Rawane as a space-and-planet initiative.</p></div><div class="w-card"><h3>What</h3><p>Project Rawane is the two-way relationship between Earth and space — space work like debris removal, space-based solar power, and Earth observation that protects life on the ground, and planetary work like cleanup and conservation that keeps orbits usable.</p></div><div class="w-card"><h3>When</h3><p>Ongoing, with the flagship mission ADRAS-J2 targeted for fiscal twenty twenty-seven.</p></div><div class="w-card"><h3>Where</h3><p>Low Earth orbit, Norway's launch site, and everywhere the debris and its effects reach.</p></div><div class="w-card"><h3>Why</h3><p>Space and Earth are one system. Debris threatens the satellites we rely on, and what we do on the ground shapes what happens above us. Protecting one protects the other.</p></div></div></section>
 <section class="impact"><h2>Impact Statement</h2><div class="impact-box"><p>Project Rawane is named for Rawane — because the best projects start with someone you love. It follows Astroscale's ADRAS-J mission, which photographed an eleven-meter, three-ton Japanese H-two-A rocket upper stage in twenty twenty-four — an object never designed to be captured. ADRAS-J2, Phase Two of JAXA's CRD2 program worth about thirteen point two billion yen, will use a robotic arm to capture that same non-cooperative debris and lower its orbit so it burns up in the atmosphere. Launch is targeted for fiscal twenty twenty-seven on Isar Aerospace's Spectrum rocket from Norway. It is the mission that turns an inspection demo into the world's first removal of legacy debris — proof that the relationship between Earth and space runs both ways.</p></div></section>
+<section id="categories" class="card-band"><h2><span class="brand-blue">Project R</span> Categories</h2><p class="cat-intro">Project R is organized by category. Each card below is a category; click it to drill into that category's hub, where individual missions and solutions are covered in depth.</p><div class="grid">
+<article id="space-disposal-card" class="card"><div class="image-container"><a class="photo-link" href="Space_Disposal.html"><img src="assets/Saturn.jpg" alt="Saturn, photographed by NASA's Cassini spacecraft" loading="lazy"><span class="photo-tip">Space Disposal: the missions that capture dead rockets and satellites and bring them down to burn up — starting with ADRAS-J2.</span></a></div><h3><a href="Space_Disposal.html">Space Disposal</a></h3><ul class="solution-list"><li><a href="Space_Disposal.html">Removing debris from orbit</a></li></ul></article>
+</div></section>
 <footer><p>&copy; 2026 Saving Planets • Positive action for a thriving Earth • Page verified October 2026</p><p>Plastic, forests, and energy are problems we can tackle together. <a href="mailto:ideas@savingplanets.com?subject=Idea">Send an idea</a> or share a solution you know. If your solution meets our <a href="About.html#criteria">solutions criteria</a>, we will add it to our solutions site. If you'd like to donate, visit our <a href="index.html#solutions">Solutions page</a> and pick one that matches your interest.</p></footer>
 <script src="site.js"></script>
+<script>
+(function () {
+  var API = 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=5';
+  var CACHE_KEY = 'sp-ll2-upcoming';
+  var CACHE_MS = 10 * 60 * 1000;
+  var nextEl = document.getElementById('lw-next');
+  var listEl = document.getElementById('lw-list');
+  if (!nextEl || !listEl) return;
+  var timer = null;
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function missionName(l) { if (l.mission && l.mission.name) return l.mission.name; var p = String(l.name || '').split('|'); return (p[1] || p[0] || 'Unnamed mission').trim(); }
+  function provider(l) { return (l.launch_service_provider && l.launch_service_provider.name) || 'Unknown provider'; }
+  function rocket(l) { return (l.rocket && l.rocket.configuration && l.rocket.configuration.name) || 'Unknown rocket'; }
+  function fmt(iso, opts) { var d = new Date(iso); return isNaN(d) ? 'Date TBD' : d.toLocaleString(undefined, opts); }
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function readCache() {
+    try { var c = JSON.parse(sessionStorage.getItem(CACHE_KEY)); if (c && Date.now() - c.t < CACHE_MS && c.d && c.d.results) return c.d; } catch (e) {}
+    return null;
+  }
+  function writeCache(d) { try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {} }
+
+  function showError() {
+    if (timer) clearInterval(timer);
+    nextEl.innerHTML = '<p class="lw-error">Live launch data is unavailable right now. Check the <a href="https://www.nextspaceflight.com/" target="_blank" rel="noreferrer" style="color:#8fd3ff;font-weight:700">full launch schedule at Next Spaceflight</a>.</p>';
+    listEl.innerHTML = '';
+  }
+
+  function tick(netMs, el) {
+    var diff = netMs - Date.now();
+    if (diff <= 0) { el.innerHTML = '<div class="lw-unit"><b>T-0</b><small>Launch window</small></div>'; return; }
+    var s = Math.floor(diff / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    el.innerHTML = '<div class="lw-unit"><b>' + d + '</b><small>Days</small></div><div class="lw-unit"><b>' + pad(h) + '</b><small>Hrs</small></div><div class="lw-unit"><b>' + pad(m) + '</b><small>Min</small></div><div class="lw-unit"><b>' + pad(sec) + '</b><small>Sec</small></div>';
+  }
+
+  function render(data) {
+    var r = (data && data.results) || [];
+    if (!r.length) { showError(); return; }
+    var n = r[0];
+    var status = n.status && n.status.abbrev ? ' &middot; Status: ' + esc(n.status.abbrev) : '';
+    var where = n.pad && n.pad.location && n.pad.location.name ? '<br>' + esc(n.pad.location.name) : '';
+    nextEl.innerHTML = '<p class="lw-kicker">Next launch</p><h3 class="lw-mission">' + esc(missionName(n)) + '</h3>' +
+      '<p class="lw-meta">' + esc(provider(n)) + ' &middot; ' + esc(rocket(n)) + '</p>' +
+      '<p class="lw-when">' + esc(fmt(n.net, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })) + status + where + '</p>' +
+      '<div class="lw-countdown" role="timer" aria-label="Countdown to launch"></div>';
+    var cd = nextEl.querySelector('.lw-countdown');
+    var netMs = new Date(n.net).getTime();
+    if (timer) clearInterval(timer);
+    if (isNaN(netMs)) { cd.innerHTML = ''; } else { tick(netMs, cd); timer = setInterval(function () { tick(netMs, cd); }, 1000); }
+    listEl.innerHTML = r.slice(1, 5).map(function (l) {
+      return '<li><span class="lw-l-name">' + esc(missionName(l)) + '<span class="lw-l-sub">' + esc(provider(l)) + ' &middot; ' + esc(rocket(l)) + '</span></span><span class="lw-l-date">' + esc(fmt(l.net, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })) + '</span></li>';
+    }).join('');
+  }
+
+  var cached = readCache();
+  if (cached) { render(cached); return; }
+  fetch(API, { headers: { Accept: 'application/json' } })
+    .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    .then(function (d) { writeCache(d); render(d); })
+    .catch(showError);
+})();
+</script>
 </body>
 </html>

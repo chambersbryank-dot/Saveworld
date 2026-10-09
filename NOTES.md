@@ -220,3 +220,17 @@
 - **OPEN ITEM:** Compress Saturn.jpg (1.60 MB) and Threetrees4.jpeg (1.96 MB) — Brian's side, binary upload not possible via connector.
 - **OPEN ITEM:** README-old.md (1 byte) still in repo — harmless but could be deleted.
 - **OPEN ITEM:** Double semicolons remain in Search.html inline script (harmless).
+
+## Session Log — 2026-10-09 (Space Disposal hub + Project R launches widget)
+
+- GitHub sign-in on the agent's computer completed (chambersbryank-dot); all work below was promoted from drafts to the repo root and pushed to main in one commit.
+- **Space_Disposal.html** — new Space Disposal hub, modeled on Ocean_Cleanup.html (same nav, page-hero with space-hero image, Five W's with id="solution", impact section, donate-banner pattern, footer with "Page verified October 2026", styles.css + toc-home.css + site.js, canonical https://www.saveplanetminusthedoom.com/Space_Disposal.html, og/twitter tags). Five W's cover space debris removal as a category (Astroscale, JAXA, ClearSpace, ESA; robotic capture and deorbit; missions targeted 2027–2028; low Earth orbit; protecting climate and navigation satellites protects Earth).
+  - Featured deep dive: **ADRAS-J2** — Astroscale's Phase II of JAXA's CRD2 program (~¥13.2B), capturing the same 11 m, 3 t H-IIA upper stage ADRAS-J photographed in 2024 with a robotic arm and lowering it to burn up; launch targeted for Japan's fiscal 2027 on Isar Aerospace's Spectrum from Andøya, Norway. Also mentions ClearSpace PRELUDE (June 2027) and ClearSpace-1 targeting PROBA-1 (2028). Links internally to Astroscale.html and ClearSpace.html.
+  - Subtle source link at the bottom of the impact synopsis: "For further information, visit JAXA" → https://global.jaxa.jp/ (new tab, rel="noreferrer"). Donate-style banner uses assets/Saturn.jpg with "Learn More" → astroscale.com.
+- **Project-R.html** — copy of Project-R.html with:
+  - An upcoming-launches widget right under the page-hero, before the Five W's, powered by The Space Devs Launch Library 2. Shows the next launch prominently (mission, provider, rocket, local date/time, live countdown ticking every second) plus the next 4 launches. Includes the note "Launches shift left and right all the time - stay updated." and a link to the full schedule at nextspaceflight.com. Response is cached in sessionStorage for 10 minutes to respect API rate limits; fetch errors show a fallback message with the schedule link. Uses API v2.3.0 because the v2.2.0 endpoint now returns 404.
+  - A Project R category card grid (index.html card-band / image-container / photo-tip pattern) with a Space Disposal card (assets/Saturn.jpg) linking to Space_Disposal.html, and an intro line explaining that category cards drill into hubs.
+  - All new CSS is in an inline <style> block scoped to the widget and cards; styles.css and toc-home.css are unchanged.
+- **sitemap.xml** — adds Space_Disposal.html (lastmod 2026-10-09) and bumps Project-R.html lastmod to 2026-10-09.
+- **OPEN ITEM:** ClearSpace.html is out of date — it still describes the old Vega adapter target and says PRELUDE "launched in 2026". ESA now targets PROBA-1, and PRELUDE is targeting June 2027.
+- **OPEN ITEM:** Search.html index does not yet include Space_Disposal.html; run build-search-index.js to add the new page to search.
