@@ -239,3 +239,12 @@
   - Space.html: Orbital Data Centers -> Space.html (self, covered on this page); Astroscale -> Astroscale.html; ClearSpace -> ClearSpace.html.
 - Rule going forward: every solution name links to its own Five W's page; category titles link to hubs; hub cards link to the solution's own page. If a solution has no separate page (like 4ocean or River Interceptors), it links to the page that covers it.
 - Logged here.
+
+## Session Log — 2026-10-09 (Project R created)
+
+- Brian asked to create Project R as a new nav item, using the hub page format as the template.
+- Created Project-R.html: page-hero with "Project R" title and "A new initiative. The Five W's are coming." subtitle; five-ws section with Who, What, When, Where, Why cards, each with "Coming soon." placeholder text; standard nav (with Project R link), footer with the bottom CTA, and site.js.
+- Added "Project R" nav link to all 19 pages: index.html, About.html, Amazing_Facts.html, Search.html, Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html, Ocean_Cleanup.html, Plastic_Bank.html, Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html, Life_Terra.html. Placed after the Solutions dropdown, before Amazing Facts.
+- Added Project-R.html to sitemap.xml.
+- Open: fill in the Five W's content for Project R — Brian will provide the details.
+- Logged here.
