@@ -169,82 +169,13 @@
   - **Rivers card:** Pexels forest river photo, goal message: "This is our goal for the rivers to look like in the future — clean, flowing, and alive."
   - **Forests card:** CutTreePlantThree.JPG, goal message: "This is our goal for the forests to look like in the future — restored, green, and thriving."
 - Fixed the homepage hero: it was still pointing at the old IMG_0060.jpeg filename after Brian's Saturn.jpg rename, which would have left the hero blank. All hero references now point at Saturn.jpg.
-- Logged this session here.
 
-## Session Log — 2026-10-08 (Astroscale + ClearSpace nebula backgrounds)
+## Session Log — 2026-10-08 (Project R nav link fix + alphabetical nav)
 
-- Updated Astroscale.html and ClearSpace.html page-hero backgrounds to use assets/Nebula.jpg with the same navy gradient overlay as before, so the title stays readable. Jupiter.jpg and Uranus.jpg remain as the donate buttons and social images on those pages respectively. Saturn.jpg is now only on the homepage hero and the Space card.
-- Rationale: the nebula reads as "the environment we're working in" rather than "the thing we're photographing," which fits debris-removal missions better than a planet shot.
-- Open: apply a similar nebula treatment to Space.html if Brian wants it.
+- Fixed Project R missing from nav on Ocean_Cleanup.html, Astroscale.html, and Terraformation.html (commit b7a8f628). All twenty pages now carry the full nav: Solutions dropdown, Project R, Amazing Facts, About, Search, theme toggle.
+- Nav order is now alphabetical by label: Amazing Facts, About, Project R, Search, Solutions — with About at the end per Brian's direction.
 
-## Session Log — 2026-10-08 (Impact Statement label visibility fix)
+## Session Log — 2026-10-08 (Forests card image swap)
 
-- The "Impact Statement" heading on solution pages was white text on the white page background — invisible. The .impact h2 color rule was being overridden by the page-hero white-text rule bleeding into the impact section.
-- Fixed in toc-home.css: .impact h2 is now explicitly var(--toc-blue) (#009cde), matching the Five W's headings. Applies to all ten solution pages automatically via the shared stylesheet.
-- Verified the Impact Statement section is present on all ten solution pages: Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra. The four category hubs (Lakes, Rivers, Deforestation, Space) don't have one because they're index pages.
-- Also tightened spacing: donate button margin reduced from 2.5rem to 0.8rem, impact padding reduced, so the blue donate banner sits closer to the Five W's.
-
-## Session Log — 2026-10-08 (bottom CTA on all solution pages)
-
-- Added the homepage-style bottom CTA ("Be Part of the Fix" block) to all ten solution pages that were missing it: Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra. Ocean_Cleanup and Plastic_Bank already had it.
-- Text: "Plastic, forests, and energy are problems we can tackle together. Send an idea or share a solution you know. If your solution matches our solution criteria, we would love to put your solution on our site. If you'd like to donate, visit our Solutions page and pick the one that matches your interest."
-- "solution criteria" links to About.html#criteria; "Solutions page" links to index.html#solutions.
-- Fixed the 4ocean card on the Oceans hub (Oceans.html) which was linking to itself — now points to Ocean_Cleanup.html.
-
-## Session Log — 2026-10-08 (category card links to hubs)
-
-- Updated index.html so every category card title links to its hub page: Ocean -> Oceans.html, Lakes -> Lakes.html, Rivers -> Rivers.html, Forests -> Deforestation.html, Space -> Space.html. Individual solution names still link straight to their Five W's pages.
-- Rationale: Brian wants visitors who click the category name to land on the hub for browsing, while visitors who already know a specific solution can click its name directly.
-- Removed the "Under Construction" banner from the homepage and cleaned its CSS rules from styles.css and toc-home.css.
-
-## Session Log — 2026-10-08 (Ken Burns trial: Space card only)
-
-- Brian asked to re-add the Ken Burns animation as a trial on just the Space card (Saturn.jpg) before deciding whether to roll it out to all five cards.
-- Updated toc-home.css: the 8-second ease-in-out zoom-and-drift keyframes (scale 1.0 to 1.09, gentle translate) now apply only to #space-card .image-container img. The other four cards are static.
-- Pauses on hover; disabled under prefers-reduced-motion.
-- Open: Brian reviews the Space card, then we decide whether to extend to Ocean, Lakes, Rivers, Forests.
-
-## Session Log — 2026-10-09 (nav cleanup: remove Actions + See a solution)
-
-- Brian flagged two nav issues: the "Actions" link was redundant with the Solutions dropdown, and the "See a solution" button duplicated the Solutions entry.
-- Removed the Actions nav link and the See a solution button from all 13 pages that had them: index.html, About.html, Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html, Ocean_Cleanup.html, Plastic_Bank.html, Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html, Life_Terra.html. Search.html and Amazing_Facts.html never had them.
-- The theme-toggle button was NOT touched — site.js still wires it up correctly (toggles html.dark class, saves to localStorage, updates button label). If it still appears dead after a hard refresh, the cause is likely a cached old site.js; a cache-busting query string on the script tag would force it.
-- Logged here.
-
-## Session Log — 2026-10-09 (Space.html orbital data centers image swap)
-
-- Brian asked to replace the Earth.jpg image on the Orbital Data Centers card on Space.html with assets/DataOrbitalCenters.jpg (240 KB), which he uploaded and liked for its vibe.
-- Updated Space.html: card image src changed from assets/Earth.jpg to assets/DataOrbitalCenters.jpg, alt text updated to "Orbital data centers in space." Also updated the og:image meta tag to DataOrbitalCenters.jpg so social shares show the new image.
-- Earth.jpg remains in the repo and is still used on the homepage Space card (Saturn.jpg) — no other references to Earth.jpg existed on Space.html.
-- Logged here.
-
-## Session Log — 2026-10-09 (Ken Burns faster + bigger)
-
-- Brian said the 8-second Ken Burns on the Space card was too subtle — he had to stare to see movement.
-- Updated toc-home.css: loop shortened from 8s to 5s, scale range widened from 1.09 to 1.18, drift increased to translate(-2.5%, -2%).
-- Logged here.
-
-## Session Log — 2026-10-09 (logical flow audit: homepage + hub link consistency)
-
-- Brian walked through the logical flow: category card title -> hub page; individual solution name -> that solution's Five W's page. Audited all five homepage cards and all four hubs.
-- **Fixes made:**
-  1. Oceans.html: the 4ocean card's "Read the full 4ocean page" link pointed to Ocean_Cleanup.html (same as The Ocean Cleanup card) — corrected to Ocean_Cleanup.html. Note: there is no separate 4ocean.html; 4ocean is covered on the Ocean Cleanup page, so this is the correct destination.
-  2. index.html Rivers card: "River Interceptors" pointed to Ocean_Cleanup.html — correct, since Interceptors are The Ocean Cleanup's river program and have no separate page. Confirmed no change needed; logged for clarity.
-- **Verified consistent (no changes needed):**
-  - Homepage: Ocean -> Oceans.html; Lakes -> Lakes.html; Rivers -> Rivers.html; Forests -> Deforestation.html; Space -> Space.html. All five category titles link to hubs.
-  - Homepage solution names: The Ocean Cleanup, 4ocean -> Ocean_Cleanup.html; Plastic Bank -> Plastic_Bank.html; Lake Plastic Recovery, Clean Up the Lake -> Clean_Up_the_Lake.html; Great Lakes Plastic Cleanup -> Great_Lakes_Plastic_Cleanup.html; Sungai Watch -> Sungai_Watch.html; Great Bubble Barrier -> Great_Bubble_Barrier.html; Three trees for every one removed -> Deforestation.html (hub, since it's a concept not a separate org); Terraformation -> Terraformation.html; Life Terra -> Life_Terra.html; Orbital Data Centers -> Space.html (hub, since it's covered on the Space page); Astroscale -> Astroscale.html; ClearSpace -> ClearSpace.html.
-  - Lakes.html: Lake Plastic Recovery -> Clean_Up_the_Lake.html; Clean Up the Lake -> Clean_Up_the_Lake.html; Great Lakes Plastic Cleanup -> Great_Lakes_Plastic_Cleanup.html.
-  - Rivers.html: Ocean Cleanup Interceptors -> Ocean_Cleanup.html; Sungai Watch -> Sungai_Watch.html; Great Bubble Barrier -> Great_Bubble_Barrier.html.
-  - Deforestation.html: Three trees -> Deforestation.html (self, concept page); Terraformation -> Terraformation.html; Life Terra -> Life_Terra.html.
-  - Space.html: Orbital Data Centers -> Space.html (self, covered on this page); Astroscale -> Astroscale.html; ClearSpace -> ClearSpace.html.
-- Rule going forward: every solution name links to its own Five W's page; category titles link to hubs; hub cards link to the solution's own page. If a solution has no separate page (like 4ocean or River Interceptors), it links to the page that covers it.
-- Logged here.
-
-## Session Log — 2026-10-09 (Project R created)
-
-- Brian asked to create Project R as a new nav item, using the hub page format as the template.
-- Created Project-R.html: page-hero with "Project R" title and "A new initiative. The Five W's are coming." subtitle; five-ws section with Who, What, When, Where, Why cards, each with "Coming soon." placeholder text; standard nav (with Project R link), footer with the bottom CTA, and site.js.
-- Added "Project R" nav link to all 19 pages: index.html, About.html, Amazing_Facts.html, Search.html, Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html, Ocean_Cleanup.html, Plastic_Bank.html, Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html, Life_Terra.html. Placed after the Solutions dropdown, before Amazing Facts.
-- Added Project-R.html to sitemap.xml.
-- Open: fill in the Five W's content for Project R — Brian will provide the details.
-- Logged here.
+- Swapped the Forests card image on index.html from assets/CutTreePlantThree.JPG to assets/ThreeTrees2.jpg — Brian's personal photo (407 KB). CutTreePlantThree.JPG remains in the repo and is still used on Deforestation.html, Terraformation.html, and Life_Terra.html.
+- Logged here so future sessions know the homepage Forests card now uses Brian's own shot.
