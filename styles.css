@@ -95,7 +95,7 @@ footer a:hover { color: #009cde; }
 
 /* Subpage shared styles */
 body.toc-sub .page-hero { height: 34vh; min-height: 220px; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/OceanBeach.JPG') center/cover no-repeat; text-align: center; color: #fff; }
-body.toc-sub .page-hero.forest-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/ThreeTrees2.jpg') center/cover no-repeat; }
+body.toc-sub .page-hero.forest-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Threetrees3.jpg') center/cover no-repeat; }
 body.toc-sub .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Saturn.jpg') center/cover no-repeat; }
 body.toc-sub .page-hero-content { padding: 0 1.25rem; }
 body.toc-sub .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 0.5rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
