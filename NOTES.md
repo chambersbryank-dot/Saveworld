@@ -183,5 +183,11 @@
 ## Session Log — 2026-10-09 (Three trees card image swap)
 
 - Swapped the "Three trees for every one removed" card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Threetrees3.jpg — Brian's personal photo (483 KB). The og:image meta tag already pointed at Threetrees3.jpg, so it was already consistent.
-- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation and Life Terra cards on the same page.
+- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation card on the same page.
 - Logged here so future sessions know the Deforestation hub's first card now uses Brian's own shot.
+
+## Session Log — 2026-10-09 (Life Terra card image swap)
+
+- Swapped the Life Terra card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Plant3Trees1.jpg — Brian's personal photo. Note: Plant3Trees1.jpg was previously a 2-byte empty placeholder file; Brian re-uploaded it with the actual photo.
+- CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation card on the same page.
+- Logged here so future sessions know the Deforestation hub's Life Terra card now uses Brian's own shot.
