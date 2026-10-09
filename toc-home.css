@@ -64,7 +64,8 @@ body.toc-home #actions .mission-block { padding-top: 0; }
 body.toc-home #actions .mission-block h2 { color: var(--brand-blue); }
 body.toc-sub .page-hero, body.toc-sub .page-hero.space-hero { height: 34vh; min-height: 220px; }
 body.toc-sub h2, body.toc-sub h3, body.toc-sub .page-hero h1 { font-family: "Montserrat", "Segoe UI", sans-serif; }
-body.toc-sub .impact h2, body.toc-sub .page-hero h1 { color: #fff; }
+body.toc-sub .page-hero h1 { color: #fff; }
+body.toc-sub .impact h2 { color: var(--toc-blue); }
 body.toc-sub .five-ws { padding-top: 0.4rem; }
 body.toc-sub .ws-grid, body.toc-sub .grid { gap: 1rem; padding-bottom: 1.2rem; }
 body.toc-sub .w-card { padding: 1.2rem; }
