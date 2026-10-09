@@ -210,3 +210,10 @@
 - Removed the Actions nav link and the See a solution button from all 13 pages that had them: index.html, About.html, Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html, Ocean_Cleanup.html, Plastic_Bank.html, Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html, Life_Terra.html. Search.html and Amazing_Facts.html never had them.
 - The theme-toggle button was NOT touched — site.js still wires it up correctly (toggles html.dark class, saves to localStorage, updates button label). If it still appears dead after a hard refresh, the cause is likely a cached old site.js; a cache-busting query string on the script tag would force it.
 - Logged here.
+
+## Session Log — 2026-10-09 (Space.html orbital data centers image swap)
+
+- Brian asked to replace the Earth.jpg image on the Orbital Data Centers card on Space.html with assets/DataOrbitalCenters.jpg (240 KB), which he uploaded and liked for its vibe.
+- Updated Space.html: card image src changed from assets/Earth.jpg to assets/DataOrbitalCenters.jpg, alt text updated to "Orbital data centers in space." Also updated the og:image meta tag to DataOrbitalCenters.jpg so social shares show the new image.
+- Earth.jpg remains in the repo and is still used on the homepage Space card (Saturn.jpg) — no other references to Earth.jpg existed on Space.html.
+- Logged here.
