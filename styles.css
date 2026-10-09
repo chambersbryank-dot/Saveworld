@@ -60,7 +60,7 @@ nav.scrolled .theme-toggle { color: #003755; border-color: #003755; }
 .card-band h3 { color: #009cde; text-align: center; font-size: 1.85rem; font-weight: 800; text-decoration: none; padding: 1rem 0.6rem 0.35rem; margin: 0; }
 .solution-list { list-style: none; margin: 0; padding: 0.2rem 1rem 1.2rem; text-align: center; }
 .solution-list li + li { margin-top: 0.4rem; }
-.solution-list a { color: #00b894; font-size: 0.95rem; font-weight: 700; text-decoration: none; }
+.solution-list a { color: #009cde; font-size: 1.05rem; font-weight: 700; text-decoration: none; }
 .solution-list a:hover { text-decoration: underline; }
 
 /* Photo overlay (reusable across all solution cards) */
@@ -140,9 +140,8 @@ html.dark nav.scrolled { background: #0b1220; }
 html.dark nav.scrolled .brand-word, html.dark nav.scrolled .nav-links a, html.dark nav.scrolled .theme-toggle { color: #fff; border-color: #fff; }
 html.dark .w-card, html.dark .card, html.dark .dropdown-menu { background: #152033; color: #e8eef5; }
 html.dark .dropdown-menu a { color: #e8eef5 !important; }
-html.dark body.toc-home .mission-block h2, html.dark body.toc-home .card-band h2, html.dark body.toc-sub h2, html.dark body.toc-sub h3 { color: #e8eef5; }
 html.dark .brand-blue { color: #4da3ff; }
-html.dark .solution-list a { color: #3dDC97; }
+html.dark .solution-list a { color: #4da3ff; }
 html.dark footer, html.dark .impact, html.dark .impact-bar, html.dark #actions { background: #071018; }
 
 /* Responsive */
