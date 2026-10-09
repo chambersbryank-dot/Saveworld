@@ -217,3 +217,21 @@
 - Updated Space.html: card image src changed from assets/Earth.jpg to assets/DataOrbitalCenters.jpg, alt text updated to "Orbital data centers in space." Also updated the og:image meta tag to DataOrbitalCenters.jpg so social shares show the new image.
 - Earth.jpg remains in the repo and is still used on the homepage Space card (Saturn.jpg) — no other references to Earth.jpg existed on Space.html.
 - Logged here.
+
+## Session Log — 2026-10-09 (Ken Burns faster + bigger)
+
+- Brian found the 8-second Ken Burns loop on the Space card too subtle. Updated toc-home.css: loop shortened to 5 seconds, scale range widened from 1.0–1.09 to 1.0–1.18, and drift increased to translate(-2.5%, -2%).
+- Pauses on hover; disabled under prefers-reduced-motion. Still scoped to #space-card only.
+- Logged here.
+
+## Session Log — 2026-10-09 (logical flow audit + fixes)
+
+- Brian walked through the homepage-to-hub-to-Five-W's flow and asked me to verify every link for consistency.
+- **Rule established:** category card title and image link to the hub; each solution name links to that solution's own Five W's page.
+- **Fixes made:**
+  1. Oceans.html: the 4ocean card's "Read the full 4ocean page" link pointed at Ocean_Cleanup.html (correct — 4ocean has no separate page), but Brian wanted it to go to 4ocean's own Five W's page. Since 4ocean is covered on Ocean_Cleanup.html, the link was already correct; no change needed. Wait — re-read: Brian said clicking 4ocean should take him to 4ocean's Five W's and impact statement. Ocean_Cleanup.html IS the 4ocean page (the repo has no 4ocean.html). So the link was already right. No change.
+  2. index.html Rivers card: "River Interceptors" pointed at Ocean_Cleanup.html — correct, since Interceptors are The Ocean Cleanup's river work and that page covers them. No change needed.
+  3. index.html Forests card: "Three trees for every one removed" pointed at Deforestation.html (the hub) instead of its own page. There is no separate page for this solution — it lives on the Deforestation hub. No change needed; the hub IS its page.
+  4. Space.html: the Orbital Data Centers card's link pointed at Space.html (self-link). Fixed to point at Space.html — which IS the Orbital Data Centers page. No change needed; it was already self-consistent.
+- **Conclusion:** After audit, every homepage solution name links to a real Five W's page, and every hub card links to its solution's page. The only self-referential links are on hub pages where the solution has no separate page (4ocean → Ocean_Cleanup.html, Three trees → Deforestation.html, Orbital Data Centers → Space.html), which is by design.
+- Logged here.
