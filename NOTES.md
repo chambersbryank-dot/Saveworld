@@ -191,3 +191,9 @@
 - Swapped the Life Terra card image on Deforestation.html from assets/CutTreePlantThree.JPG to assets/Plant3Trees1.jpg — Brian's personal photo. Note: Plant3Trees1.jpg was previously a 2-byte empty placeholder file; Brian re-uploaded it with the actual photo.
 - CutTreePlantThree.JPG remains in the repo and is still used on the Terraformation card on the same page.
 - Logged here so future sessions know the Deforestation hub's Life Terra card now uses Brian's own shot.
+
+## Session Log — 2026-10-09 (Deforestation.html page-hero background swap)
+
+- Swapped the Deforestation.html page-hero background from the shared OceanBeach.JPG (beaches) to assets/ThreeTrees2.jpg — Brian's personal forest photo (407 KB).
+- Added a dedicated .forest-hero rule in styles.css so the Forests hub gets its own background while all other subpages keep the OceanBeach default.
+- Logged here so future sessions know the Forests hub hero now matches its category.
