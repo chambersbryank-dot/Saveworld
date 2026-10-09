@@ -35,9 +35,6 @@ nav.scrolled .theme-toggle { color: #003755; border-color: #003755; }
 .hero-email a { color: #fff; text-decoration: underline; }
 .hero-email a:hover { color: #009cde; }
 
-/* Under construction banner */
-.under-construction { text-align: center; color: #003755; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; margin: 1.5rem 0 0; }
-
 /* Card band (homepage solutions grid) */
 .card-band { max-width: 1200px; margin: 0 auto; padding: 2.6rem 1.5rem 0; }
 .card-band h2 { text-align: center; color: #003755; margin-bottom: 1.2rem; font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
