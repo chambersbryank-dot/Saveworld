@@ -194,7 +194,7 @@
 
 ## Session Log — 2026-10-08 (donate-button spacing + impact section audit)
 
-- Brian reported two issues on solution pages: (1) the Impact Statement section appeared missing, and (2) the blue donate button sat too far below the Five W's.
+- Brian reported two issues on solution pages: (1) the Impact Statement section appeared missing, and (2) the donate button sat too far below the Five W's.
 - **Audit result:** All eleven individual solution pages have the Impact Statement section (Ocean_Cleanup, Plastic_Bank, Clean_Up_the_Lake, Great_Lakes_Plastic_Cleanup, Sungai_Watch, Great_Bubble_Barrier, Astroscale, ClearSpace, Terraformation, Life_Terra — all confirmed via fetch). The four category hub pages (Lakes, Rivers, Deforestation, Space) intentionally have no impact section — they are index pages listing solutions under each card, not solution pages.
 - If Brian was viewing a hub page (e.g., Lakes.html or Rivers.html), that explains the missing label. If he was on an individual page, the label was present but the large spacing (donate-btn margin-top was 2.5rem on top of impact padding) may have made it feel disconnected.
 - **CSS fix applied to toc-home.css:**
@@ -221,6 +221,23 @@
 - Ocean_Cleanup.html and Plastic_Bank.html already carried this text from earlier pushes; the other eight were updated in this batch.
 - NOTES.md updated with this log entry.
 
+## Session Log — 2026-10-09 (logical flow: homepage cards to hubs + under construction removed)
+
+- Brian clarified the intended navigation flow: homepage category card (image + title) -> category hub page (synopsis of each solution) -> individual Five W's page (destination). Individual solution names in the card lists still link directly to their Five W's pages for visitors who already know what they want.
+- **index.html updated:**
+  - Ocean card image + title now link to Oceans.html (was index.html#solutions).
+  - Lakes card image + title now link to Lakes.html.
+  - Rivers card image + title now link to Rivers.html.
+  - Forests card image + title now link to Deforestation.html.
+  - Space card image + title now link to Space.html (was the NASA Cassini article).
+  - Removed the "Under Construction" paragraph between the card band and the impact bar.
+- **CSS cleanup:** removed .under-construction rules from styles.css and toc-home.css (toc-home.css also dropped the under-construction selector from the hero-content centering rule).
+- **Hub pages updated with the bottom CTA** (same text as solution pages): Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html.
+- **Oceans.html fix:** the 4ocean card's "Read the full 4ocean page" link pointed to Oceans.html itself (self-refresh). Corrected to Ocean_Cleanup.html.
+- **Lakes.html:** refreshed Great Lakes Plastic Cleanup numbers to 277,000+ pieces (was 244,000).
+- **Deforestation.html:** refreshed Life Terra numbers to 36 million trees and 563,000 tonnes CO2 (was 35M / 3.5M tonnes).
+- Open item #20 added: Mars.jpg still not uploaded to assets/.
+
 ### Still open
 1. ~~Rename assets/IMG_0060.jpeg to Saturn.jpg~~ DONE (Saturn.jpg uploaded 2026-10-08)
 8. Confirm ideas@savingplanets.com mailbox receives mail
@@ -231,3 +248,4 @@
 17. ~~If Space card overlay is approved, apply the same photo-link pattern to Ocean, Lakes, Rivers, and Forests cards with goal messages~~ DONE (all five cards)
 18. ~~Upload Jupiter.jpg, Mars.jpg, Earth.jpg, Neptune.jpg to assets/ and swap unique images into Space.html, Astroscale.html, ClearSpace.html~~ MOSTLY DONE — Jupiter/Earth/Uranus/Nebula in use; Neptune.jpg never needed (swapped to Uranus); Mars.jpg still not uploaded
 19. Apply Nebula.jpg page-hero treatment to Space.html (category hub) — pending Brian's direction on whether hub pages get the same treatment
+20. Upload Mars.jpg to assets/ (Brian mentioned it; still not in the repo)
