@@ -203,3 +203,10 @@
 - Updated toc-home.css: the 8-second ease-in-out zoom-and-drift keyframes (scale 1.0 to 1.09, gentle translate) now apply only to #space-card .image-container img. The other four cards are static.
 - Pauses on hover; disabled under prefers-reduced-motion.
 - Open: Brian reviews the Space card, then we decide whether to extend to Ocean, Lakes, Rivers, Forests.
+
+## Session Log — 2026-10-09 (nav cleanup: remove Actions + See a solution)
+
+- Brian flagged two nav issues: the "Actions" link was redundant with the Solutions dropdown, and the "See a solution" button duplicated the Solutions entry.
+- Removed the Actions nav link and the See a solution button from all 13 pages that had them: index.html, About.html, Oceans.html, Lakes.html, Rivers.html, Deforestation.html, Space.html, Ocean_Cleanup.html, Plastic_Bank.html, Clean_Up_the_Lake.html, Great_Lakes_Plastic_Cleanup.html, Sungai_Watch.html, Great_Bubble_Barrier.html, Astroscale.html, ClearSpace.html, Terraformation.html, Life_Terra.html. Search.html and Amazing_Facts.html never had them.
+- The theme-toggle button was NOT touched — site.js still wires it up correctly (toggles html.dark class, saves to localStorage, updates button label). If it still appears dead after a hard refresh, the cause is likely a cached old site.js; a cache-busting query string on the script tag would force it.
+- Logged here.
