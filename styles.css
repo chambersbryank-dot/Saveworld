@@ -638,3 +638,5 @@ body.pr-page .page-stats h2,
 body.pr-page .launch-widget .lw-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
 body.pr-page .card-band h3.sd-subhead.sd-subhead-lg { font-weight: 700; color: #e8eef5; }
 .w-card[data-fact-origin] > h3 { text-align: center; text-transform: capitalize; }
+/* Move Space Disposal hub group up: halve gap above it (after Five W's) */
+body.pr-page #group-space-disposal { padding-top: 0; }
