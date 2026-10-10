@@ -425,3 +425,9 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 | 2026-10-09 | Local port 8765 was already serving a stale copy of the site, so the first headless test read old HTML | Served /workspace/sw2 on 127.0.0.1:8799 | Yes |
 | 2026-10-09 | Headless Chrome `networkidle0` waits up to minutes on pages with the mission news widget | Use `load` for UI checks | Yes |
 | 2026-10-09 | Mobile screenshots show page text faintly behind the open menu although .nav-links computes to white 0.98 (likely headless rendering of the parent nav's backdrop-filter) | Not fixed; needs a check on a real phone | No |
+
+## Session Log — 2026-10-09 (Project R reorder by Brian)
+
+- Brian reordered Project-R.html in 194b72a: Impact Statement, Five W's, Project R Categories, By the Numbers (page-stats), Upcoming Launches last.
+- FOLLOW-UP (open): the phone-only rule in styles.css (`@media (max-width: 600px)` .pr-flow order rules) still forces the old order on phones and lifts page-stats to the top; recommended fix is deleting that rule. Skip link still targets #solution (Five W's) instead of the Impact Statement now first.
+- FOLLOW-UP (open): faint text visible behind the open mobile menu at 390px in headless screenshots; verify on a real phone.
