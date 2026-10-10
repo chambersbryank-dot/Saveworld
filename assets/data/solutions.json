@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T03:17:04.795Z",
+ "generated": "2026-10-10T03:18:05.953Z",
  "site": {
   "categories": 9,
   "solutions": 32,
@@ -12,7 +12,25 @@
    "agency": 11
   },
   "upcomingMissions": 4,
-  "impactTotals": []
+  "impactTotals": [
+   {
+    "unit": "kg",
+    "total": 283866029,
+    "pages": [
+     "Ocean_Cleanup.html",
+     "4ocean.html",
+     "Plastic_Bank.html",
+     "Clean_Up_the_Lake.html"
+    ]
+   },
+   {
+    "unit": "trees",
+    "total": 36000000,
+    "pages": [
+     "Life_Terra.html"
+    ]
+   }
+  ]
  },
  "categories": {
   "ocean": {
@@ -25,7 +43,17 @@
     "corporate": 2
    },
    "upcomingMissions": 0,
-   "impactTotals": []
+   "impactTotals": [
+    {
+     "unit": "kg",
+     "total": 283849619,
+     "pages": [
+      "Ocean_Cleanup.html",
+      "4ocean.html",
+      "Plastic_Bank.html"
+     ]
+    }
+   ]
   },
   "lakes": {
    "name": "Lakes",
@@ -36,7 +64,15 @@
     "nonprofit": 4
    },
    "upcomingMissions": 0,
-   "impactTotals": []
+   "impactTotals": [
+    {
+     "unit": "kg",
+     "total": 16410,
+     "pages": [
+      "Clean_Up_the_Lake.html"
+     ]
+    }
+   ]
   },
   "rivers": {
    "name": "Rivers",
@@ -60,7 +96,15 @@
     "corporate": 1
    },
    "upcomingMissions": 0,
-   "impactTotals": []
+   "impactTotals": [
+    {
+     "unit": "trees",
+     "total": 36000000,
+     "pages": [
+      "Life_Terra.html"
+     ]
+    }
+   ]
   },
   "space": {
    "name": "Space",
@@ -140,7 +184,15 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Trash removed from rivers and ocean",
+     "value": 65000000,
+     "unit": "kg",
+     "kind": "impact",
+     "sourceUrl": "https://theoceancleanup.com/"
+    }
+   ],
    "missions": []
   },
   {
@@ -150,7 +202,15 @@
    "type": "solution",
    "classification": "corporate",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Plastic and trash removed (50M lb)",
+     "value": 22679619,
+     "unit": "kg",
+     "kind": "impact",
+     "sourceUrl": "https://www.4ocean.com/blogs/notebook/50-million-pounds-removed"
+    }
+   ],
    "missions": []
   },
   {
@@ -160,7 +220,15 @@
    "type": "solution",
    "classification": "corporate",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Plastic recovered",
+     "value": 196170000,
+     "unit": "kg",
+     "kind": "impact",
+     "sourceUrl": "https://plasticbank.com/newsletter/2026-06"
+    }
+   ],
    "missions": []
   },
   {
@@ -189,7 +257,15 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Litter removed (36,177 lb)",
+     "value": 16410,
+     "unit": "kg",
+     "kind": "impact",
+     "sourceUrl": "https://cleanupthelake.org/stats/"
+    }
+   ],
    "missions": []
   },
   {
@@ -199,7 +275,15 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Pieces of debris removed and reported",
+     "value": 277000,
+     "unit": "pieces",
+     "kind": "fact",
+     "sourceUrl": "https://www.greatlakesplasticcleanup.org/post/new-great-lakes-cleanup-data-reveals-shifting-patterns-of-plastic-pollution"
+    }
+   ],
    "missions": []
   },
   {
@@ -209,7 +293,15 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Debris removed, summer 2024",
+     "value": 13,
+     "unit": "tons",
+     "kind": "fact",
+     "sourceUrl": "https://www.restoremylake.org/home"
+    }
+   ],
    "missions": []
   },
   {
@@ -371,7 +463,15 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Trees planted (with partners)",
+     "value": 36000000,
+     "unit": "trees",
+     "kind": "impact",
+     "sourceUrl": "https://pr.euractiv.com/?q=node%2F276414"
+    }
+   ],
    "missions": []
   },
   {
