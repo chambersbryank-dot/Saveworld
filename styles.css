@@ -493,7 +493,7 @@ html.dark #q { background: #152033; color: #e8eef5; border-color: #4da3ff; }
 html.dark #results .match, html.dark #status { color: #e8eef5; }
 
 /* ===== Page-specific: Space_Disposal (was inline <style>) ===== */
-.impact-box h3.mission-title { color: #fff; font-size: 1.25rem; margin: 1.2rem 0 0.5rem; }
+.impact-box h3.mission-title { color: #fff; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.25; margin: 1.2rem 0 0.5rem; }
 .impact-box a.inline-link { color: #8fd3ff; font-weight: 700; }
 .impact-box p.source-link { margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.18); font-size: 0.9rem; text-align: right; }
 .impact-box p.source-link a { color: rgba(255,255,255,0.82); font-family: "Montserrat", "Segoe UI", sans-serif; font-weight: 600; letter-spacing: 0.02em; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5); }
