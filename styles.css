@@ -619,3 +619,8 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 @media (max-width: 600px) { body.toc-sub .page-hero.pr-hero p.pr-dedication { font-size: 0.95rem; } }
 /* Project Rawane Space Disposal subsections */
 .card-band h3.sd-subhead { text-align: center; font-size: 1.35rem; color: #e8eef5; margin: 1.6rem 0 1rem; padding: 0; }
+/* Project Rawane: man-made grid as centered flex rows (lone 5th card centered) */
+.card-band .grid.sd-mankind { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+.card-band .grid.sd-mankind > .card { flex: 0 0 calc((100% - 4.5rem) / 4); min-width: 0; height: auto; }
+@media (max-width: 900px) { .card-band .grid.sd-mankind > .card { flex-basis: calc((100% - 1.5rem) / 2); } }
+@media (max-width: 600px) { .card-band .grid.sd-mankind > .card { flex-basis: 100%; } }
