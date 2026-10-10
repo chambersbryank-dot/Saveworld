@@ -603,3 +603,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane dedication gap)
 
 - styles.css (pr-page scoped): .pr-flow > .impact padding-top 0.3rem and its h2 margin-top 0.7rem. Gap from dedication line to "Impact Statement" heading 32px → 16px at 1280px and 390px (measured in headless Chrome). No text changes.
+
+## Session Log — 2026-10-10 (Project Rawane dedication in hero)
+
+- p.pr-dedication moved inside .pr-hero under the h1 (text unchanged); centered italic light text with shadow. pr-hero now height:auto, min-height 340px, padding-top nav+2.2rem so title + line clear the nav and wrap on phones. Removed the old standalone .pr-dedication rule and the earlier impact gap tweak (cdf2bbb), so the Impact Statement uses default spacing.
