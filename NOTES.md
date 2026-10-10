@@ -217,3 +217,9 @@
 
 - Renamed: "Back to Project Rawane" (Space_Disposal), "Part of Project Rawane" (Space.html), Dragonfly paragraph (Titan), categories intro (Project-Rawane), JSON-LD + visible breadcrumb names on Atmospheric_Drag, LeoLabs, MMX, Space_Disposal, Titan. build-stats.js display name 'project-r': 'Project Rawane' (key unchanged); solutions.json rebuilt.
 - Still "Project R": meta/og/twitter descriptions on Project-Rawane.html and Search.html, Search.html index title entry (build-search-index.js doesn't refresh existing titles).
+
+## Session Log — 2026-10-10 (Project Rawane mission list + plain nav link)
+
+- Project-Rawane.html breadcrumb (was Home › Project Rawane) replaced by alphabetical middot-separated mission list (nav.breadcrumb.mission-list; CSS in styles.css; inherits dark-mode breadcrumb colors). 16 items incl. Space Disposal hub; PRELUDE keeps horizon tag.
+- No dedicated page (hub anchors): Aditya-L1, PRELUDE, SOLAR-1, Three invisible shields, Vigil.
+- Top nav: Project Rawane is now a plain link on all pages; build-stats.js menuHtml emits the plain link (markers kept, menu data still in solutions.json).
