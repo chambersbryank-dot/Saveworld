@@ -259,3 +259,20 @@
 | 2026-10-09 | GitHub device sign-in code expired before approval on first attempt | Generated a fresh code; signed in as chambersbryank-dot via gh CLI | Yes |
 | 2026-10-09 | Gmail connector inactivity check reported it could not create drafts; the summary email had in fact already been sent at 7:57 AM HST | Verified via Gmail search; no action needed | Yes |
 | 2026-10-09 | npx lighthouse failed within ~1.5s with no report during the site assessment | Assessment used scripted checks instead; no performance scores yet | No |
+
+## Session Log — 2026-10-09 (evening): enhancement execution
+
+1. **Broken links + date conflicts** — e3af02b. ClearSpace and Rivers donate links now use https://; Space.html links ClearSpace.html (was Clear_Space.html). ADRAS-J2 is fiscal 2027 on Astroscale, Space, Project R and Space Disposal. ClearSpace.html: PRELUDE planned June 2027 (no longer "launched"); ClearSpace-1 target is PROBA-1 (old Vega adapter noted as original target), targeted 2028 (ESA lists 2029). Project R impact text switched to numerals (fiscal 2027, 2024, H-IIA, 11-meter, 3-ton, 13.2 billion yen) in this commit. Search keywords: Vega-C -> PROBA-1.
+2. **JSON-LD** — b396d24. Organization + WebSite/SearchAction (Search.html?q=) on index; BreadcrumbList on hubs, About, Contact, Search, Amazing Facts; BreadcrumbList + Article (dateModified 2026-10-09) on 16 solution pages. 44 blocks, all parse. 404 excluded. First deploy collided with the previous in-progress deploy; rerun succeeded.
+3. **Images** — d6810cd. assets/ 9.26 MB -> 3.19 MB (max 1600px, progressive JPEG, EXIF orientation applied). Saturn.jpg 1.60 MB -> 53 KB. Threetrees4.jpeg 1.96 MB -> 280 KB (resized to 900px wide; the only file still over 250 KB). Tree4.jpg is a 2-byte placeholder, untouched. width/height on every img, loading="lazy" on all but the first img per page, decoding="async" everywhere.
+   - **Duplicate photo note for Brian:** CutTreePlantThree.JPG and LightthrForest.JPG are byte-identical (same sha256 f2e4af37…). Nothing deleted; pick one and repoint references when convenient.
+4. **Space / Project R / Space Disposal flow** — 00e1302. Space Disposal card on Space.html; Space Disposal hub trimmed with links to Astroscale/ClearSpace pages; visible breadcrumbs on 22 hub/solution pages (match JSON-LD); "Next: explore another solution" block above the footer on every solution page.
+5. **CSS merge** — 7238b4d. toc-home.css merged into styles.css (18 shared selectors deduped, 42 overridden declarations removed, cascade order kept); 7 inline style blocks moved into styles.css (404 scoped via body.nf-page, Project R via body.pr-page); toc-home.css deleted; stray ;; removed from site.js and Search.html. Before/after screenshots at 1280/390: index, Oceans, Astroscale, Search and Project R identical (apart from the live countdown). 404 changed for the better because it never loaded toc-home.css and its nav was broken. Dark mode verified.
+6. **Extras** — 05f95c9. Twitter card/title/description/image on all pages (404 excluded); 120–155 char meta + og descriptions on Search, About, Astroscale, Oceans; "Page verified October 2026" footers (index, About, Contact, Search, Space, Ocean_Cleanup, Sungai_Watch, Great_Bubble_Barrier); Google Fonts preconnects; apple-touch-icon.png (180x180, rendered from favicon.svg) linked on every page.
+7. **Wrap-up** — this commit: build-search-index.js run (26 pages, 0 added, Search.html unchanged); sitemap lastmod set to 2026-10-09 for all 27 URLs (every page changed today).
+
+Open/observed: the launches widget can show a launch that already happened (status "Success") as "Next launch" until its 10-minute cache refreshes. Worth filtering out past launches. Lighthouse scores are still not available.
+
+| Date | What failed | Workaround | Resolved? |
+|---|---|---|---|
+| 2026-10-09 | GitHub Pages deploy for b396d24 failed: "in progress deployment" (two pushes too close together) | Re-ran the workflow (gh run rerun), succeeded | Yes |
