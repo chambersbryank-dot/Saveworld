@@ -607,3 +607,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane dedication in hero)
 
 - p.pr-dedication moved inside .pr-hero under the h1 (text unchanged); centered italic light text with shadow. pr-hero now height:auto, min-height 340px, padding-top nav+2.2rem so title + line clear the nav and wrap on phones. Removed the old standalone .pr-dedication rule and the earlier impact gap tweak (cdf2bbb), so the Impact Statement uses default spacing.
+
+## Session Log — 2026-10-10 (dedication wording)
+
+- Dedication line now reads: "A two-way relationship between Earth and Space. Project R is named for Rawane — because the best projects start with someone you love." (Project-Rawane.html hero). Earlier log entries keep the old wording as history. Meta/og/twitter descriptions and the Five W's "What" card use a different phrase ("the two-way relationship between Earth and space — …") and were not changed.
