@@ -1,0 +1,472 @@
+{
+ "generated": "2026-10-10T03:02:50.665Z",
+ "site": {
+  "categories": 7,
+  "solutions": 21,
+  "horizon": 0,
+  "hubs": 8,
+  "byClassification": {
+   "nonprofit": 8,
+   "corporate": 7,
+   "natural": 1,
+   "agency": 5
+  },
+  "upcomingMissions": 4,
+  "impactTotals": []
+ },
+ "categories": {
+  "ocean": {
+   "name": "Ocean",
+   "solutions": 3,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "nonprofit": 1,
+    "corporate": 2
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "lakes": {
+   "name": "Lakes",
+   "solutions": 4,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "nonprofit": 4
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "rivers": {
+   "name": "Rivers",
+   "solutions": 2,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "nonprofit": 1,
+    "corporate": 1
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "forests": {
+   "name": "Forests",
+   "solutions": 3,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "nonprofit": 2,
+    "corporate": 1
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "space": {
+   "name": "Space",
+   "solutions": 4,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "corporate": 3,
+    "natural": 1
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "planetary-defense": {
+   "name": "Planetary Defense",
+   "solutions": 3,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "agency": 3
+   },
+   "upcomingMissions": 2,
+   "impactTotals": []
+  },
+  "project-r": {
+   "name": "Project R",
+   "solutions": 2,
+   "horizon": 0,
+   "hubs": 2,
+   "byClassification": {
+    "agency": 2
+   },
+   "upcomingMissions": 2,
+   "impactTotals": []
+  }
+ },
+ "pages": [
+  {
+   "url": "Oceans.html",
+   "title": "Oceans",
+   "category": "ocean",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Ocean_Cleanup.html",
+   "title": "The Ocean Cleanup",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "4ocean.html",
+   "title": "4ocean",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Plastic_Bank.html",
+   "title": "Plastic Bank",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Lakes.html",
+   "title": "Lakes",
+   "category": "lakes",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Lake_Plastic_Recovery.html",
+   "title": "Lake Plastic Recovery",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Clean_Up_the_Lake.html",
+   "title": "Clean Up the Lake",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Great_Lakes_Plastic_Cleanup.html",
+   "title": "Great Lakes Plastic Cleanup",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Restoring_the_Lake_Depths.html",
+   "title": "Restoring the Lake Depths Foundation",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Rivers.html",
+   "title": "Rivers",
+   "category": "rivers",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Sungai_Watch.html",
+   "title": "Sungai Watch",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Great_Bubble_Barrier.html",
+   "title": "The Great Bubble Barrier",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space.html",
+   "title": "Space",
+   "category": "space",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Orbital_Data_Centers.html",
+   "title": "Orbital Data Centers",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Astroscale.html",
+   "title": "Astroscale",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "ClearSpace.html",
+   "title": "ClearSpace",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Deforestation.html",
+   "title": "Forests",
+   "category": "forests",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Three_Trees.html",
+   "title": "Three Trees for Every One Removed",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Terraformation.html",
+   "title": "Terraformation",
+   "category": "forests",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Life_Terra.html",
+   "title": "Life Terra",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Disposal.html",
+   "title": "Space Disposal",
+   "category": "project-r",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Jupiter.html",
+   "title": "Jupiter",
+   "category": "space",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Comet impact rate vs Earth",
+     "value": 2000,
+     "unit": "times (over)",
+     "kind": "fact",
+     "sourceUrl": "https://www.planetary.org/articles/does-jupiter-protect-earth-from-asteroids-and-comets"
+    },
+    {
+     "label": "Moons recognized by the IAU",
+     "value": 115,
+     "unit": "moons",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/jupiter/jupiter-moons/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Titan.html",
+   "title": "Titan",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Dragonfly",
+     "upcoming": true,
+     "next": {
+      "event": "launch",
+      "date": "2028-07-05T00:00:00Z"
+     }
+    }
+   ]
+  },
+  {
+   "url": "Planetary_Defense.html",
+   "title": "Planetary Defense",
+   "category": "planetary-defense",
+   "type": "hub",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Hera.html",
+   "title": "Hera",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Change in Dimorphos orbit after DART",
+     "value": 33.25,
+     "unit": "minutes",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/"
+    },
+    {
+     "label": "Boulders Hubble saw leaving Dimorphos",
+     "value": 37,
+     "unit": "boulders",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/missions/hubble/hubble-sees-boulders-escaping-from-asteroid-dimorphos/"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Hera",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2026-11-01T00:00:00Z"
+     }
+    }
+   ]
+  },
+  {
+   "url": "NEO_Surveyor.html",
+   "title": "NEO Surveyor",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Unknown NEOs over 140 m to find in 5 years",
+     "value": "2/3",
+     "unit": "share",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/news-release/nasa-awards-planetary-defense-space-telescope-launch-services-contract/"
+    }
+   ],
+   "missions": [
+    {
+     "name": "NEO Surveyor",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Webb_2024_YR4.html",
+   "title": "Webb and 2024 YR4",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "2024 YR4 miss distance from the Moon's surface",
+     "value": 21200,
+     "unit": "km",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/blogs/planetary-defense/2026/03/05/new-nasa-asteroid-observations-eliminate-chance-of-2032-lunar-impact/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "MMX.html",
+   "title": "MMX",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Phobos sample to return",
+     "value": 10,
+     "unit": "g (at least)",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/MMX_factsheet"
+    }
+   ],
+   "missions": [
+    {
+     "name": "MMX",
+     "upcoming": true,
+     "next": {
+      "event": "launch",
+      "date": "2026-10-19T19:41:03Z"
+     }
+    }
+   ]
+  },
+  {
+   "url": "Project-R.html",
+   "title": "Project R",
+   "category": "project-r",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  }
+ ]
+}

@@ -34,3 +34,21 @@ Email ideas@savingplanets.com with a solution or idea. If it meets the criteria,
 ## License
 
 Content and code: all rights reserved unless otherwise noted. Images credited on each page.
+
+## Stats engine (solutions.json)
+
+The homepage overview and the "By the numbers" block on every hub and solution page are generated from one file, `assets/data/solutions.json`. Do not edit it by hand.
+
+To add a new solution:
+
+1. Add these tags to the page `<head>`:
+   - `<meta name="sp:category" content="ocean|lakes|rivers|forests|space|planetary-defense|space-weather|earth-observation|project-r">`
+   - `<meta name="sp:type" content="hub|solution">`
+   - `<meta name="sp:classification" content="natural|corporate|agency|nonprofit">` (solutions)
+   - `<meta name="sp:status" content="active|horizon">` (horizon = no confirmed contract or funding yet; counted separately, never summed)
+   - optional, repeatable: `<meta name="sp:stat" content="label|value|unit|kind|sourceUrl">` (kind `impact` = summable, `fact` = descriptive). Only numbers already on the page with a source.
+2. Add `<section class="page-stats" data-stats-category="..." data-stats-page="Page.html" aria-label="Solution stats" hidden></section>` just before the next-solutions block (before the footer on hubs).
+3. Add the page to `sitemap.xml`.
+4. Run `node build-search-index.js` (updates Search.html and solutions.json; warns about pages missing sp: metadata). Commit both.
+
+Upcoming missions are counted from `[data-mission]` widgets with a future `data-launch` / `data-arrival`.

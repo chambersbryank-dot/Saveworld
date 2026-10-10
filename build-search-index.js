@@ -65,3 +65,6 @@ fs.writeFileSync('Search.html', search);
 console.log(`Search.html: ${existing.length} pages (${added.length} added${added.length ? ': ' + added.join(', ') : ''}).`);
 const stale = existing.filter(e => !files.includes(e.url)).map(e => e.url);
 if (stale.length) console.log('Note: in Search.html but not in sitemap.xml (kept):', stale.join(', '));
+
+// Also regenerate assets/data/solutions.json (stats engine).
+require("./build-stats.js")();
