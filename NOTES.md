@@ -654,3 +654,8 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - 8838d23 AF banner pause/play button (.af-motion-toggle, aria-pressed; hidden under prefers-reduced-motion).
 - 47bddcf AF footer trimmed to copyright line.
 - f098448 phone check via CDP device emulation (390x844, 360): no horizontal overflow on PR/AF; AF hero got room for the pause button. Screenshots /workspace/phone_*.png. Tip: node --experimental-websocket + Chrome --remote-debugging-port gives real mobile emulation without puppeteer.
+
+## 2026-10-10 — Heading hierarchy, PRELUDE badge a11y, site-wide Title Case
+- 73ffd72 `.impact-box h3.mission-title` (11 pages: Three_Shields, Space_Weather, Hera, MMX, Titan, Jupiter, Astroscale, Atmospheric_Drag, Earth_Observation, Planetary_Defense, Space_Disposal) now clamp(1.3rem, 2.4vw, 1.7rem) = 27.2px @1280 / 20.8px @390 (was 20px), between h2 (35.2/25.6) and body. styles.css ?v=20261010n on all pages.
+- 37d10e3 PRELUDE "horizon" badge: aria-hidden on Space, Space_Disposal, Project-Rawane cards (heading name = "PRELUDE (ClearSpace)"); build-stats.js menu template adds visually-hidden ", on the horizon".
+- 18584a3 Title Case on 38 pages (headings, <title>, og/twitter titles, JSON-LD headline/name) via script; site.js generated headings ("Mission Status", "Latest News", "This Page"); site.js ?v=20261010c. Preserved: brand "4ocean", "horizon" badge, "Our Stats are Already Amazing Facts.", Space Disposal (Made by …). Rule: lowercase a/an/the/and/or/but/nor/of/to/in/on/for/by/at/vs/as unless first, last or after a colon; words with any capital left untouched. New headings should follow Title Case.
