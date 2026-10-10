@@ -648,3 +648,5 @@ body.pr-page #group-planetary-defense, body.pr-page #group-space-weather { paddi
 body.pr-page .page-stats { margin-top: 42px; margin-bottom: 0; }
 body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 19.6px; }
 @media (max-width: 600px) { body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 24.4px; } }
+/* Man-made/Natural split cards: same 1.5rem gap as mankind grid, centered equal pair */
+body.pr-page .card-band .grid.sd-split { column-gap: 1.5rem; row-gap: 1.5rem; }
