@@ -650,7 +650,7 @@ body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-to
 @media (max-width: 600px) { body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 24.4px; } }
 /* Man-made/Natural split cards: same 1.5rem gap as mankind grid, centered equal pair */
 body.pr-page .card-band .grid.sd-split { column-gap: 1.5rem; row-gap: 1.5rem; }
-.w-card .fact-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 0.4rem 0 0.3rem; } .w-card .fact-credit, body.toc-sub .w-card p.fact-credit { font-size: clamp(0.5rem, 1.6vw, 0.62rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0.65; margin: 0 0 0.6rem; text-align: center; }
+.w-card .fact-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 0.4rem 0 0.3rem; } .w-card .fact-credit, body.toc-sub .w-card p.fact-credit { font-size: clamp(0.55rem, 1.6vw, 0.62rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0.85; margin: 0 0 0.6rem; text-align: center; }
 
 /* Amazing Facts hero: composite Earth/space/Neptune banner with pr-hero overlay + subtle Ken Burns */
 body.toc-sub .page-hero.pr-hero.af-hero { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%); }
@@ -667,3 +667,5 @@ body.toc-sub .page-hero.af-hero p.af-hero-credit { margin-top: 0.8rem; font-size
 body.toc-sub #actions .mission-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 /* Project Rawane: one size per heading level (h3 = 20px card titles) */
 body.pr-page .five-ws h3, body.toc-sub.pr-page .page-stats .ps-card h3, body.pr-page .launch-widget h3 { font-size: 1.25rem; }
+/* Amazing Facts captions: never clip on very narrow phones; wrap instead of ellipsis */
+@media (max-width: 380px) { .w-card .fact-credit, body.toc-sub .w-card p.fact-credit { white-space: normal; overflow: visible; } }
