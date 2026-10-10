@@ -114,7 +114,7 @@ body.toc-sub .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,
 body.toc-sub .page-hero.clearspace-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/RocketLaunch.jpg') center/cover no-repeat; }
 body.toc-sub .page-hero.lakes-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1400') center/cover no-repeat; }
 body.toc-sub .page-hero.rivers-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/StreamLog.JPG') center/cover no-repeat; }
-body.toc-sub .page-hero.pr-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Nebula.jpg') center/cover no-repeat; }
+body.toc-sub .page-hero.pr-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Nebula2.jpg') center/cover no-repeat; }
 body.toc-sub .page-hero-content { padding: 0 1.25rem; }
 body.toc-sub .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 0.5rem; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
 body.toc-sub .page-hero p { font-size: 1.1rem; margin: 0; color: rgba(255,255,255,0.92); text-shadow: 0 1px 8px rgba(0,0,0,0.45); }

@@ -42,8 +42,8 @@ function buildProjectRMenu(warnings) {
 function menuHtml(menu) {
   const groups = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
     g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag">horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
-  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-R.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project R</a>' +
-    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-R.html">Project R overview</a></li>' + groups + '</ul></li>';
+  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-Rawane.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project R</a>' +
+    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-Rawane.html">Project R overview</a></li>' + groups + '</ul></li>';
 }
 function writeProjectRMenu(menu) {
   const html = menuHtml(menu); let n = 0;
