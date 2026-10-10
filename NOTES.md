@@ -276,3 +276,17 @@ Open/observed: the launches widget can show a launch that already happened (stat
 | Date | What failed | Workaround | Resolved? |
 |---|---|---|---|
 | 2026-10-09 | GitHub Pages deploy for b396d24 failed: "in progress deployment" (two pushes too close together) | Re-ran the workflow (gh run rerun), succeeded | Yes |
+
+## Session Log — 2026-10-09 (late): Jupiter natural debris page
+
+- **Jupiter.html created** (commit 29771e7) as a fun-but-educational natural space-debris "solution", built on the Ocean_Cleanup.html template: breadcrumb Home > Space > Jupiter, Five W's, Impact Statement with honest trade-off, "Jupiter by the numbers" card grid, Learn More banner to NASA (no donate button), next-solutions block, JSON-LD BreadcrumbList + Article. New styles.css rules: body.jupiter-page hero, .fact-source, .photo-credit, banner lead text. Image: assets/Jupiter.jpg (NASA / JPL-Caltech / SwRI / MSSS, enhanced color by Kevin Gill, JunoCam, July 10 2017, PIA21395).
+- **Sources used (each fetched and checked):**
+  - https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html (diameter 142,984 km, 1,321 Earth volumes, 317.83 Earth masses, gravity 2.36x equatorial, 11.86-yr orbit, 5.2 AU, 89.8% H2 / 10.2% He)
+  - https://science.nasa.gov/jupiter/jupiter-facts/ (11x wider, 9.9-hr day, 4.6 billion years, dilute/fuzzy core, Great Red Spot bigger than Earth, observed 300+ years)
+  - https://science.nasa.gov/jupiter/jupiter-moons/ (115 IAU-recognized moons, Galilean moons 1610, Ganymede > Mercury, Io most volcanic, Europa ocean)
+  - https://www.planetary.org/articles/does-jupiter-protect-earth-from-asteroids-and-comets (2,000x comet impacts, 12-45/yr vs once per 6-15 yr for ~10 m objects, Oort vs asteroid trade-off)
+  - https://arxiv.org/abs/0806.2795 (Horner & Jones 2008, Jupiter: friend or foe? I: the asteroids)
+  - https://arxiv.org/abs/2512.03961 (Knierim et al. 2025, metal-rich dilute core; a modeling paper, not a Juno/EGU release)
+  - https://science.nasa.gov/jupiter/ (Learn More target; solarsystem.nasa.gov/planets/jupiter/overview/ redirects here)
+- **Corrections vs brief:** gravity 2.4x (NASA, equatorial) instead of ESA 2.5x; formation 4.6 billion years per NASA (hero keeps "four and a half billion"); Great Red Spot 680 km/h dropped (not on NASA page; used "observed 300+ years"); "70% of Earth-crossing asteroids" dropped (not in Horner & Jones abstract or Planetary Society article); Hammel/MIT credit is for the Shoemaker-Levy 9 image, not the 2,000x stat, so the stat is credited to the Planetary Society. 115 moons confirmed by NASA citing the IAU.
+- **Hub/sitemap/search:** Space_Disposal.html gets a "Natural debris solution" Jupiter card and a next-solutions link; index.html Space list gets a Jupiter link; sitemap.xml adds Jupiter.html (lastmod 2026-10-09); build-search-index.js added Jupiter to Search.html (27 entries) and the keywords were enriched by hand. Space.html not edited (could get a Jupiter card later).
