@@ -22,17 +22,24 @@
       nav.classList.toggle('scrolled', window.scrollY > 40);
     });
   }
-  var dropdown = document.querySelector('.nav-dropdown');
-  var dropToggle = document.querySelector('.dropdown-toggle');
-  if (dropdown && dropToggle) {
-    dropToggle.addEventListener('click', function (e) {
+  var dropdowns = Array.prototype.slice.call(document.querySelectorAll('.nav-dropdown'));
+  function closeDrop(d) { d.classList.remove('open'); var t = d.querySelector('.dropdown-toggle'); if (t) t.setAttribute('aria-expanded', 'false'); }
+  dropdowns.forEach(function (dd) {
+    var t = dd.querySelector('.dropdown-toggle');
+    if (!t) return;
+    t.setAttribute('aria-haspopup', 'true');
+    t.setAttribute('aria-expanded', 'false');
+    t.addEventListener('click', function (e) {
       e.preventDefault();
-      dropdown.classList.toggle('open');
+      var open = !dd.classList.contains('open');
+      dropdowns.forEach(closeDrop);
+      if (open) { dd.classList.add('open'); t.setAttribute('aria-expanded', 'true'); }
     });
-    document.addEventListener('click', function (e) {
-      if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
-    });
-  }
+    dd.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeDrop(dd); t.focus(); } });
+  });
+  document.addEventListener('click', function (e) {
+    dropdowns.forEach(function (dd) { if (!dd.contains(e.target)) closeDrop(dd); });
+  });
   var navToggle = document.querySelector('.nav-toggle');
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
@@ -113,7 +120,7 @@
   var site = document.querySelector('[data-site-stats]');
   var blocks = document.querySelectorAll('.page-stats[data-stats-category]');
   if (!site && !blocks.length) return;
-  var KEY = 'sp-solutions-v1';
+  var KEY = 'sp-solutions-v2';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function num(n) { return typeof n === 'number' ? n.toLocaleString('en-US') : esc(n); }
   function plural(n, a, b) { return num(n) + ' ' + (n === 1 ? a : b); }
@@ -131,7 +138,8 @@
         '<div class="stat"><span class="stat-number">' + num(s.hubs) + '</span><span class="stat-label">hubs across ' + num(s.categories) + ' categories</span></div>' +
         '<div class="stat"><span class="stat-number">' + num(s.upcomingMissions) + '</span><span class="stat-label">upcoming space missions we track live</span></div>' +
         '<div class="stat"><span class="stat-number">' + num((s.byClassification.natural || 0)) + '</span><span class="stat-label">natural solutions, alongside ' + cls(Object.keys(s.byClassification).reduce(function (o, k) { if (k !== 'natural') o[k] = s.byClassification[k]; return o; }, {})) + '</span></div>' +
-        '</div><p class="stat-source">Last updated ' + esc(updated(d)) + '. Counts are generated from every solution page on this site.</p>';
+        '</div>' + ((s.impactTotals || []).length ? '<div class="stat-row impact-totals">' + s.impactTotals.map(function (t) { return '<div class="stat"><span class="stat-number">' + num(t.total) + ' ' + esc(t.unit) + '</span><span class="stat-label">combined across ' + plural(t.pages.length, 'solution', 'solutions') + ', each figure sourced on its page</span></div>'; }).join('') + '</div>' : '') +
+        '<p class="stat-source">Last updated ' + esc(updated(d)) + '. Counts are generated from every solution page on this site.</p>';
       site.hidden = false;
     }
     Array.prototype.forEach.call(blocks, function (el) {

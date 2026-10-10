@@ -1,5 +1,121 @@
 {
- "generated": "2026-10-10T03:18:05.953Z",
+ "generated": "2026-10-10T03:24:16.889Z",
+ "projectRMenu": [
+  {
+   "hub": "Space Disposal",
+   "href": "Space_Disposal.html",
+   "items": [
+    {
+     "name": "Astroscale",
+     "anchor": "astroscale",
+     "href": "Space_Disposal.html#astroscale",
+     "status": "active"
+    },
+    {
+     "name": "Atmospheric Drag",
+     "anchor": "atmospheric-drag",
+     "href": "Space_Disposal.html#atmospheric-drag",
+     "status": "active"
+    },
+    {
+     "name": "ClearSpace",
+     "anchor": "clearspace",
+     "href": "Space_Disposal.html#clearspace",
+     "status": "active"
+    },
+    {
+     "name": "Jupiter",
+     "anchor": "jupiter",
+     "href": "Space_Disposal.html#jupiter",
+     "status": "active"
+    },
+    {
+     "name": "LeoLabs",
+     "anchor": "leolabs",
+     "href": "Space_Disposal.html#leolabs",
+     "status": "active"
+    },
+    {
+     "name": "MMX",
+     "anchor": "mmx",
+     "href": "Space_Disposal.html#mmx",
+     "status": "active"
+    },
+    {
+     "name": "PRELUDE (ClearSpace)",
+     "anchor": "prelude",
+     "href": "Space_Disposal.html#prelude",
+     "status": "horizon"
+    },
+    {
+     "name": "Titan",
+     "anchor": "titan",
+     "href": "Space_Disposal.html#titan",
+     "status": "active"
+    }
+   ]
+  },
+  {
+   "hub": "Planetary Defense",
+   "href": "Planetary_Defense.html",
+   "items": [
+    {
+     "name": "Hera",
+     "anchor": "hera",
+     "href": "Planetary_Defense.html#hera",
+     "status": "active"
+    },
+    {
+     "name": "Jupiter",
+     "anchor": "jupiter",
+     "href": "Planetary_Defense.html#jupiter",
+     "status": "active"
+    },
+    {
+     "name": "NEO Surveyor",
+     "anchor": "neo-surveyor",
+     "href": "Planetary_Defense.html#neo-surveyor",
+     "status": "active"
+    },
+    {
+     "name": "Webb and asteroid 2024 YR4",
+     "anchor": "webb-2024-yr4",
+     "href": "Planetary_Defense.html#webb-2024-yr4",
+     "status": "active"
+    }
+   ]
+  },
+  {
+   "hub": "Space Weather & Shields",
+   "href": "Space_Weather.html",
+   "items": [
+    {
+     "name": "Aditya-L1",
+     "anchor": "aditya-l1",
+     "href": "Space_Weather.html#aditya-l1",
+     "status": "active"
+    },
+    {
+     "name": "SOLAR-1",
+     "anchor": "solar-1",
+     "href": "Space_Weather.html#solar-1",
+     "status": "active"
+    },
+    {
+     "name": "Three invisible shields",
+     "anchor": "shields",
+     "href": "Space_Weather.html#shields",
+     "status": "active"
+    },
+    {
+     "name": "Vigil",
+     "anchor": "vigil",
+     "href": "Space_Weather.html#vigil",
+     "status": "active"
+    }
+   ]
+  }
+ ],
  "site": {
   "categories": 9,
   "solutions": 32,

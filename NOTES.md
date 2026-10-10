@@ -398,3 +398,30 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 - **O LeoLabs.html** — corporate page on Space Disposal; 2 cm tracking claim labeled as a 2021 company figure, and the current company page lists Tracker radars at >10 cm with Ranger (<10 cm) in development.
 - Space_Disposal.html: Atmospheric Drag and LeoLabs cards. Sitemap +2, search 37 entries, solutions.json: 32 active, 4 on the horizon, 10 hubs, 4 upcoming missions.
 - Images: Progress_Reentry.jpg — NASA iss029e034092; LEO_View.jpg — NASA iss023e057948 (caption strip cropped). Public domain.
+
+## Session Log — 2026-10-09 (late night): Titan catch-up, impact-figure sources, Project R dropdown
+
+- **Titan.html** (e343da7): current Solutions nav, sp: tags (project-r / solution / agency / active, stat: Dragonfly flight >175 km, NASA), page-stats block before next-solutions. FALLBACK entry removed from build-stats.js; build runs with no warnings.
+- **Impact figures re-verified (checked 2026-10-09)** and given inline `.fact-source` links:
+  - Ocean Cleanup: total 60M kg (July 2026) → >65M kg (theoceancleanup.com homepage); 2025 "over 25M kg" → 27,385,000 kg (Ocean Cleanup 2025 in review).
+  - 4ocean: 50M lb (Feb 20, 2026) verified on 4ocean blog. Other 4ocean counts (29,311 cleanups, 2,456 jobs, 346 artisans, 5,672 sq ft kelp, 5,000 mangroves) NOT verified, left as-is.
+  - Plastic Bank: 209M kg / 10B bottles / 77,000 collectors → 196,170,000+ kg / ~9.8B bottles / 64,920 collectors (Plastic Bank newsletter, all-time data as of June 10, 2026).
+  - Life Terra: 36M trees and 563,000 t CO2 verified; participants 125,000 → 120,000+; classrooms 14,000 → 35,000 (Life Terra release via EURACTIV PR, May 13, 2026). Deforestation.html participant count matched.
+  - Clean Up The Lake: 72 Mile Cleanup 25,281 lb verified; "78,000 lb across 130 miles" → 36,177 lb total since 2018 (cleanupthelake.org/stats). Lakes.html matched.
+  - Great Lakes Plastic Cleanup: 277,000 pieces verified (GLPC May 26, 2026); "17.5 billion liters filtered" and "nearly 29,000 people" could not be verified and were removed (page + Lakes.html).
+  - Restoring the Lake Depths: 13 tons summer 2024 verified (restoremylake.org). Not summed: unit (short vs metric tons) not stated.
+  - Sungai Watch: "4.5M kg / 368 barriers (July 2026)" NOT verified on an official source (only third-party: 4M+ kg, March 2026). Left as-is, no link, not summed.
+  - Homepage static stats: linked sources; 60M→65M kg, 25M→27M kg, "1,000 rivers carrying most plastic" → "1,000+ rivers carry 80%" (Meijer et al. 2021), 17B gal source corrected from USGS to LBNL 2024 report (17.4B gal, 2023).
+- **Summable impact stats** (`sp:stat ...|impact|`): Ocean Cleanup 65,000,000 kg; 4ocean 22,679,619 kg (50M lb converted); Plastic Bank 196,170,000 kg; Clean Up The Lake 16,410 kg (36,177 lb); Life Terra 36,000,000 trees. Homepage overview now renders impactTotals: **283,866,029 kg** across 4 solutions and **36,000,000 trees** (site.js cache key bumped to sp-solutions-v2). Caveat: these organisations count different things (river + ocean trash, hand-gathered plastic, lake litter), so the combined figure is labeled "combined across N solutions".
+- **Project R dropdown**: the nav "Project R" link is now a dropdown (Project R overview, then Space Disposal, Planetary Defense, Space Weather & Shields; solutions alphabetical; horizon tag). 
+  - **How it auto-updates:** on a hub page, give the solution's card/section `id="anchor" data-menu-item="Name|active"` (or `|horizon`), id first. `node build-search-index.js` → build-stats.js reads PROJECT_R_HUBS (ordered list in build-stats.js), writes `projectRMenu` into solutions.json, and rewrites the static menu HTML between `<!-- PROJECT-R-MENU:START -->` and `<!-- PROJECT-R-MENU:END -->` in every page. New hubs: add to PROJECT_R_HUBS. New pages: copy the nav including the markers.
+  - Hub membership is by explicit hub file (not sp:category) because Project-R.html and Space_Disposal.html share category project-r.
+  - Astroscale → Space_Disposal Who card (#astroscale), ClearSpace → Impact box (#clearspace); PRELUDE horizon note (#prelude). CLEAR and Astroscale horizon items live only on their own pages, so they are not in the menu.
+  - ClearSpace.html and Plastic_Bank.html had no Project R nav link before; they now have the dropdown.
+  - site.js: all .nav-dropdown menus toggle with aria-expanded, Escape closes, opening one closes others. styles.css: scroll-margin-top on menu targets, max-height + scroll on menu and mobile nav.
+
+| Date | What failed | Workaround | Resolved? |
+|---|---|---|---|
+| 2026-10-09 | Local port 8765 was already serving a stale copy of the site, so the first headless test read old HTML | Served /workspace/sw2 on 127.0.0.1:8799 | Yes |
+| 2026-10-09 | Headless Chrome `networkidle0` waits up to minutes on pages with the mission news widget | Use `load` for UI checks | Yes |
+| 2026-10-09 | Mobile screenshots show page text faintly behind the open menu although .nav-links computes to white 0.98 (likely headless rendering of the parent nav's backdrop-filter) | Not fixed; needs a check on a real phone | No |

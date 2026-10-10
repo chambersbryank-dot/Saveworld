@@ -21,6 +21,41 @@ const SKIP = ['Search.html', '404.html', 'index.html', 'About.html', 'Contact.ht
 const FALLBACK = {
 };
 
+
+// ---- Project R nav dropdown (single source: solutions.json "projectRMenu") ----
+// Hubs shown, in order. Items come from elements on each hub page carrying
+//   id="anchor" data-menu-item="Name|active|horizon"   (attribute order: id first)
+// and are listed alphabetically. The HTML is written into every page between
+// <!-- PROJECT-R-MENU:START --> and <!-- PROJECT-R-MENU:END -->.
+const PROJECT_R_HUBS = [['Space_Disposal.html', 'Space Disposal'], ['Planetary_Defense.html', 'Planetary Defense'], ['Space_Weather.html', 'Space Weather & Shields']];
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+function buildProjectRMenu(warnings) {
+  return PROJECT_R_HUBS.filter(([f]) => fs.existsSync(f)).map(([file, name]) => {
+    const html = fs.readFileSync(file, 'utf8');
+    const items = [...html.matchAll(/id="([^"]+)" data-menu-item="([^"|]+)\|(active|horizon)"/g)]
+      .map(m => ({ name: m[2].replace(/&amp;/g, '&'), anchor: m[1], href: `${file}#${m[1]}`, status: m[3] }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+    if (!items.length) warnings.push(`${file}: no data-menu-item entries for the Project R menu`);
+    return { hub: name, href: file, items };
+  });
+}
+function menuHtml(menu) {
+  const groups = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
+    g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag">horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
+  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-R.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project R</a>' +
+    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-R.html">Project R overview</a></li>' + groups + '</ul></li>';
+}
+function writeProjectRMenu(menu) {
+  const html = menuHtml(menu); let n = 0;
+  const re = /<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/;
+  fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
+    const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
+    const next = src.replace(re, `<!-- PROJECT-R-MENU:START -->${html}<!-- PROJECT-R-MENU:END -->`);
+    if (next !== src) { fs.writeFileSync(f, next); n++; }
+  });
+  return n;
+}
+
 function build() {
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
   const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => path.basename(m[1].trim()))
@@ -69,10 +104,13 @@ function build() {
   }
   const categories = {};
   Object.keys(CATEGORIES).forEach(c => { const l = pages.filter(p => p.category === c); if (l.length) categories[c] = Object.assign({ name: CATEGORIES[c] }, agg(l)); });
-  const out = { generated: new Date().toISOString(), site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
+  const projectRMenu = buildProjectRMenu(warnings);
+  const out = { generated: new Date().toISOString(), projectRMenu, site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
   fs.mkdirSync('assets/data', { recursive: true });
   fs.writeFileSync('assets/data/solutions.json', JSON.stringify(out, null, 1) + '\n');
   console.log(`solutions.json: ${out.site.solutions} active solutions, ${out.site.horizon} on the horizon, ${out.site.hubs} hubs, ${out.site.upcomingMissions} upcoming missions, ${pages.length} pages.`);
+  const menuPages = writeProjectRMenu(projectRMenu);
+  console.log(`Project R menu: ${projectRMenu.reduce((n, g) => n + g.items.length, 0)} items in ${projectRMenu.length} hubs; ${menuPages} pages updated.`);
   warnings.forEach(w => console.warn('WARN ' + w));
   return out;
 }
