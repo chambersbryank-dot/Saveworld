@@ -669,3 +669,9 @@ body.toc-sub #actions .mission-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem);
 body.pr-page .five-ws h3, body.toc-sub.pr-page .page-stats .ps-card h3, body.pr-page .launch-widget h3 { font-size: 1.25rem; }
 /* Amazing Facts captions: never clip on very narrow phones; wrap instead of ellipsis */
 @media (max-width: 380px) { .w-card .fact-credit, body.toc-sub .w-card p.fact-credit { white-space: normal; overflow: visible; } }
+/* Amazing Facts banner: pause/play for the Ken Burns motion */
+body.toc-sub .page-hero.af-hero.af-paused::before { animation-play-state: paused; }
+.af-motion-toggle { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 2; width: 2rem; height: 2rem; padding: 0; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; background: rgba(0,20,40,0.55); color: #fff; font-size: 0.7rem; line-height: 1; cursor: pointer; opacity: 0.75; }
+.af-motion-toggle:hover, .af-motion-toggle:focus-visible { opacity: 1; }
+.af-motion-toggle:focus-visible { outline: 2px solid #8fd3ff; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .af-motion-toggle { display: none; } }
