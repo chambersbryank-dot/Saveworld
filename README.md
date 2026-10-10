@@ -4,7 +4,7 @@ A static website showcasing practical, verifiable solutions for oceans, lakes, r
 
 ## Live site
 
-https://www.saveplanetminusthedoom.com
+https://www.savingplanets.com
 
 ## Structure
 
