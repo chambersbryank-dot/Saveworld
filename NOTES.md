@@ -554,3 +554,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Theme toggle removed from all pages (build-stats.js never emitted it). site.js: localStorage/prefers-color-scheme toggle logic removed; just adds 'dark' as a safety net.
 - Approach: static `<html lang="en" class="dark">` + `<meta name="color-scheme" content="dark">` on every page (no flash; existing html.dark rules apply). Light-mode base rules remain in styles.css but are always overridden; promoting html.dark to defaults was judged higher risk.
 - All .theme-toggle CSS deleted. New pages must use `<html lang="en" class="dark">`.
+
+## Session Log — 2026-10-10 (Space Disposal: no hero)
+
+- Space_Disposal.html: removed hero (h1 + "Removing dead rockets and debris from orbit — before it removes our satellites.") and visible breadcrumb (Home › Project Rawane › Space Disposal). Added visually hidden h1 + body class `no-hero`; CSS `body.no-hero h1.visually-hidden + section` pads below the fixed nav (reusable for other hero-less pages). JSON-LD breadcrumb kept.
