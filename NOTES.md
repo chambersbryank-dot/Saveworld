@@ -642,3 +642,15 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - 2026-10-10: d87db2a Project Rawane: Space Disposal hub group moved up — `body.pr-page #group-space-disposal { padding-top: 0 }`; gap Five W's→h2 82px→41px (1280 & 390). styles.css cache-bust ?v=20261010b on 44 pages.
 - 2026-10-10: c709c79 Project Rawane: even 41px gaps between all major blocks (Five W's, Space Disposal, Mankind, Nature, Planetary Defense, Space Weather, By the Numbers, Upcoming Launches) at 1280 & 390; Mankind treated as a block. Cache-bust ?v=20261010c.
 - 2026-10-10: 73b1536 Project Rawane: Natural solutions card image (Earth.jpg), Astroscale card image (RocketLaunch.jpg), sd-split gap 16px->24px (1.5rem), 360px cards centered. Cache-bust ?v=20261010d.
+
+## 2026-10-10 — Review fixes (10 items)
+- b1edf3a alt text on 60 card images (15 pages) that had alt="".
+- 83f8985 unique NASA images for in-page duplicate cards: Earth_Observation (NISAR PIA26285, Biomass PIA11420, Tanager-1 PIA26416), Space_Weather (Aditya PIA22661, SOLAR-1 KSC-20250924-PH-SPX01_0007, shields GSFC_20171208_Archive_e002115, Vigil PIA21836), Space + Space_Disposal (Astroscale S66-62755, PRELUDE iss042e013730), Oceans Plastic Bank (sts066-154-157), Rivers Sungai Watch (iss074e0492148). All <=1200px, <250KB. Bottom "Next" banner images intentionally reuse the page hero.
+- 7972212 Amazing Facts: removed duplicate data-site-stats counter (one stats block); Be Part of the Fix h2 = section size (body.toc-sub #actions only exists on AF).
+- 49b772e Project Rawane Jupiter blurbs differentiated (Nature = debris capture; Planetary Defense = 2,000x comet impact rate, per Jupiter.html sources); Nature Jupiter image -> Jupiter.html.
+- c1a6c42 Project Rawane headings: Made by Mankind/Nature subheads now h2.sd-subhead (CSS h3.sd-subhead -> .sd-subhead), all h3 20px, Title Case (site.js "By the Numbers", "Site-Wide"); site.js ?v=20261010b on all pages. Gaps unchanged.
+- 8539791 AF captions opacity 0.85, min 0.55rem, wrap (not clip) <380px.
+- 96ba6f1 Lena 520->226KB (900px), Bahamas 205->112KB (1000px); banner already 143KB, left as is.
+- 8838d23 AF banner pause/play button (.af-motion-toggle, aria-pressed; hidden under prefers-reduced-motion).
+- 47bddcf AF footer trimmed to copyright line.
+- f098448 phone check via CDP device emulation (390x844, 360): no horizontal overflow on PR/AF; AF hero got room for the pause button. Screenshots /workspace/phone_*.png. Tip: node --experimental-websocket + Chrome --remote-debugging-port gives real mobile emulation without puppeteer.
