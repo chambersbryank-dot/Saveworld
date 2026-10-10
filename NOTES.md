@@ -244,3 +244,18 @@
 - Execution kicked off: one commit per item in order — (1) broken links + date conflicts, (2) JSON-LD structured data on all 28 pages, (3) image compression + width/height/lazy-loading, (4) Space/Project R/Space Disposal path unification + breadcrumbs + next-solution blocks, (5) CSS merge of styles.css and toc-home.css plus removal of 7 inline style blocks. Quicker extras included: Project-R spelling fixes, Twitter card tags, meta description lengthening, Page verified footers, Apple touch icon, font preconnect.
 - STANDING RULE from Brian: NOTES.md is the single source of truth for continuity between the voice assistant and the Chief of Staff. Before starting any task or reminding Brian of anything, read NOTES.md first. After finishing any task, append a session log here. Goal: Brian should never have to re-explain context or re-list dropped items.
 - Open item carried forward: IMG_0060.jpeg still pending rename to Saturn.jpg (from 2026-10-08 size check).
+
+## Standing Rules (added 2026-10-09)
+
+- AUTOMATIC SESSION START: At the beginning of every Saveworld session (whether Brian asks or a task arrives), automatically pull the latest NOTES.md (git pull on the Chief of Staff's machine, or the raw GitHub URL, to avoid connector truncation) and review the commits from the last 24 hours (git log --since=24.hours or GitHub commit search for repo:chambersbryank-dot/Saveworld). Use that to reconstruct context so Brian never has to re-explain what was done or what was dropped.
+- GLITCH LOGGING: Whenever a connector glitch or limitation is hit (e.g., file truncation, failed tool calls, timeouts), log it under "## Known Glitches & Workarounds" below with the date, what failed, the workaround used, and whether it is resolved. Goal: surface recurring patterns so root causes get fixed instead of rediscovered.
+
+## Known Glitches & Workarounds
+
+| Date | What failed | Workaround | Resolved? |
+|---|---|---|---|
+| 2026-10-09 | build-search-index.js had a syntax typo and expected an outdated Search.html format (would have overwritten the search list) | Added the entry by hand, then rewrote the script to preserve curated entries (19abb6a) | Yes |
+| 2026-10-09 | Launch Library 2 endpoint /2.2.0/launches/upcoming/ returned 404 | Switched widget to /2.3.0/ (same fields) | Yes |
+| 2026-10-09 | GitHub device sign-in code expired before approval on first attempt | Generated a fresh code; signed in as chambersbryank-dot via gh CLI | Yes |
+| 2026-10-09 | Gmail connector inactivity check reported it could not create drafts; the summary email had in fact already been sent at 7:57 AM HST | Verified via Gmail search; no action needed | Yes |
+| 2026-10-09 | npx lighthouse failed within ~1.5s with no report during the site assessment | Assessment used scripted checks instead; no performance scores yet | No |
