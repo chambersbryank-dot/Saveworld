@@ -597,3 +597,14 @@ html.dark .menu-tag { background: #4a3b00; color: #ffe08a; }
 html.dark .jump-nav a { color: #8fd3ff; border-color: #8fd3ff; }
 html.dark .jump-nav a:hover { background: #8fd3ff; color: #071018; }
 #five-ws, #by-the-numbers { scroll-margin-top: calc(var(--nav-height, 88px) + 16px); }
+/* Bottom link (one per page): donate / join / subtle "For further information" */
+.bottom-link { text-align: center; padding-bottom: 3rem; }
+.donate-btn.donate-btn-subtle { width: min(140px, 40vw); box-shadow: 0 6px 18px rgba(0,55,85,0.2); opacity: 0.9; }
+.donate-btn.donate-btn-subtle span { background: rgba(0,55,85,0.6); font-size: 0.85rem; text-align: center; padding: 0 0.6rem; }
+html.dark .donate-btn.donate-btn-subtle { box-shadow: 0 6px 18px rgba(0,0,0,0.5); }
+/* Hub mission cards (card-band on hub pages) */
+.card-band.hub-cards .grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.card-band.hub-cards h3, #categories .card h3 { font-size: 1.25rem; }
+.card-band h3 a { color: inherit; text-decoration: none; }
+.card-band .card-blurb { font-size: 0.9rem; padding: 0 1rem 1.2rem; margin: 0; text-align: center; }
+html.dark .card-band .card-blurb { color: #c9d6e2; }
