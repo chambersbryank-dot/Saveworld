@@ -494,3 +494,10 @@ html.dark .page-stats .ps-card { background: #0d1b26; }
 body.toc-sub.sw-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/SDO_Sun.jpg') center/cover no-repeat; }
 body.toc-sub.eo-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/EPIC_Earth.jpg') center/cover no-repeat; }
 .impact-box p.hub-label { display: inline-block; margin: 0 0 0.6rem; padding: 0.15rem 0.6rem; border-radius: 999px; background: rgba(143,211,255,0.18); font-size: 0.8rem; letter-spacing: 0.02em; }
+
+/* ===== Horizon callout: potential solutions without confirmed contract/funding ===== */
+.horizon-note { margin: 1rem 0; padding: 0.9rem 1.1rem; border-left: 4px solid #f5b942; border-radius: 10px; background: rgba(245,185,66,0.12); }
+.horizon-note p { margin: 0.4rem 0 0; }
+.horizon-badge { display: inline-block; padding: 0.15rem 0.65rem; border-radius: 999px; background: #f5b942; color: #1d1400; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em; }
+body.toc-sub.drag-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.25) 0%, rgba(0,20,40,0.55) 100%), url('assets/Progress_Reentry.jpg') center/cover no-repeat; }
+body.toc-sub.leolabs-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.25) 0%, rgba(0,20,40,0.55) 100%), url('assets/LEO_View.jpg') center/cover no-repeat; }
