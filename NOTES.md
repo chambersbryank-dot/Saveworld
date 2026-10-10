@@ -566,3 +566,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Space Disposal centered headings)
 
 - Added `h2.h2-center` (styles.css) to Impact Statement, The Five W's of Space Disposal, and Natural debris and saving moons on Space_Disposal.html. Missions and solutions / Next headings were already centered.
+
+## Session Log — 2026-10-10 (Space Disposal: Atmospheric Drag only under natural)
+
+- Atmospheric Drag already had an entry (id="atmospheric-drag", data-menu-item) in "Natural debris and saving moons"; removed its duplicate card from "Missions and solutions". Totals unchanged (32/4/10/6). Still duplicated across both sections: Titan, MMX, LeoLabs (awaiting a decision).
