@@ -330,3 +330,11 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 |---|---|---|---|
 | 2026-10-09 | WebFetch timed out on science.nasa.gov/mission/dragonfly/; nasa.gov press-release body not in curl HTML on first URL guess | curl + text extraction, web search to find the correct press-release URL | Yes |
 | 2026-10-09 | Headless Chrome reused cached styles.css during widget screenshots (stale render) | Fresh --user-data-dir and cache-busting query string | Yes |
+
+- **Decisions update (2026-10-09, 4:51 PM HST):** H (Atmospheric drag), I (ClearSpace CLEAR/PRELUDE update), J (Astroscale next missions), O (LeoLabs) → APPROVED. Build order: after Phase 2 (Space Weather, Earth Observation), applying the horizon rule below.
+
+## Standing Rule — Potential solutions on the horizon (added 2026-10-09)
+
+- Any candidate without a solidly confirmed contract or funding must NOT be presented as an active solution. Label it "Potential solution on the horizon" with the note: "We'll keep you updated here if this becomes a reality."
+- Site implementation: reusable .horizon-badge / .horizon-note styles in styles.css; every page carries an sp:status meta of "active" or "horizon"; the stats engine counts horizon items separately ("X active solutions, Y on the horizon") and never sums their impact numbers into totals.
+- Known horizon item: ClearSpace CLEAR (reported £61.3M UK Phase 3 contract is only reported by a third-party tender tracker, unconfirmed by the UK Space Agency).
