@@ -548,3 +548,9 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Hub audit: Oceans, Lakes, Rivers, Deforestation, Space got new Impact Statement + Five W's (replacing the old duplicate solution grid; hub cards remain). Figures only from site-cited sources: Ocean Cleanup 65M kg, 4ocean 50M lb, Plastic Bank 196M kg, Clean Up The Lake 36,177 lb, GLPC 277,000 pieces, Restore My Lake 13 t, Life Terra 36M trees. Org/company figures labeled. Rivers and Space impact statements are qualitative (river figures on old grid had no source link on the hub).
 - Planetary Defense, Space Weather, Earth Observation: impact heading → "Impact Statement" (old heading kept as h3), "On this hub"/solutions grid replaced by Five W's, hub cards moved right after Five W's; detailed sections (Roman note, SW/EO mission sections) kept below.
 - All solution pages have an Impact Statement and Five W's. Earth Observation missions (NISAR, Biomass, Tanager-1, DSCOVR/EPIC) still have no pages.
+
+## Session Log — 2026-10-10 (permanent dark mode)
+
+- Theme toggle removed from all pages (build-stats.js never emitted it). site.js: localStorage/prefers-color-scheme toggle logic removed; just adds 'dark' as a safety net.
+- Approach: static `<html lang="en" class="dark">` + `<meta name="color-scheme" content="dark">` on every page (no flash; existing html.dark rules apply). Light-mode base rules remain in styles.css but are always overridden; promoting html.dark to defaults was judged higher risk.
+- All .theme-toggle CSS deleted. New pages must use `<html lang="en" class="dark">`.
