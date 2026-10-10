@@ -290,3 +290,28 @@ Open/observed: the launches widget can show a launch that already happened (stat
   - https://science.nasa.gov/jupiter/ (Learn More target; solarsystem.nasa.gov/planets/jupiter/overview/ redirects here)
 - **Corrections vs brief:** gravity 2.4x (NASA, equatorial) instead of ESA 2.5x; formation 4.6 billion years per NASA (hero keeps "four and a half billion"); Great Red Spot 680 km/h dropped (not on NASA page; used "observed 300+ years"); "70% of Earth-crossing asteroids" dropped (not in Horner & Jones abstract or Planetary Society article); Hammel/MIT credit is for the Shoemaker-Levy 9 image, not the 2,000x stat, so the stat is credited to the Planetary Society. 115 moons confirmed by NASA citing the IAU.
 - **Hub/sitemap/search:** Space_Disposal.html gets a "Natural debris solution" Jupiter card and a next-solutions link; index.html Space list gets a Jupiter link; sitemap.xml adds Jupiter.html (lastmod 2026-10-09); build-search-index.js added Jupiter to Search.html (27 entries) and the keywords were enriched by hand. Space.html not edited (could get a Jupiter card later).
+
+## Candidate Queue — batch 2026-10-09
+
+First daily candidate batch (16). Status reflects Brian's decisions as of 2026-10-09 evening. Phase 1 = build now; Phase 2 = queued behind Phase 1.
+
+| ID | Candidate | Classification | Suggested hub | Status |
+|---|---|---|---|---|
+| A | Hera (ESA, Didymos/Dimorphos; DART follow-up, arrival Nov 2026) | Agency mission (ESA) | Planetary Defense | APPROVED (build now, Phase 1) |
+| B | NEO Surveyor (NASA, Sun-Earth L1 infrared asteroid hunter, NET Sept 2027) | Agency mission (NASA) | Planetary Defense | APPROVED (build now, Phase 1) |
+| C | Webb and asteroid 2024 YR4 (NASA/ESA/CSA, L2; 2032 lunar impact ruled out) | Agency mission (NASA/ESA/CSA) | Planetary Defense | APPROVED (build now, Phase 1) |
+| D | Three invisible shields: heliosphere, magnetosphere, atmosphere | Natural | Space Weather & Shields | APPROVED (queued, Phase 2) |
+| E | SOLAR-1 (NOAA, L1 space weather monitor) | Agency mission (NOAA) | Space Weather & Shields | APPROVED (queued, Phase 2) |
+| F | Vigil (ESA, L5 side view of the Sun, 2031) | Agency mission (ESA) | Space Weather & Shields | APPROVED (queued, Phase 2) |
+| G | Aditya-L1 (ISRO, L1 solar observatory) | Agency mission (ISRO) | Space Weather & Shields | APPROVED (queued, Phase 2) |
+| H | Atmospheric drag as Earth's own debris vacuum | Natural | Space Disposal | PENDING (no decision yet) |
+| I | ClearSpace CLEAR (UK) and PRELUDE update | Corporate | Space Disposal (update ClearSpace.html) | PENDING (no decision yet) |
+| J | Astroscale next missions (ISSA-J1, LEXI-P, APS-R) | Corporate | Space Disposal (update Astroscale.html) | PENDING (no decision yet) |
+| K | NISAR (NASA/ISRO radar) | Agency mission (NASA/ISRO) | Earth Observation | APPROVED (queued, Phase 2) |
+| L | ESA Biomass (P-band forest carbon radar) | Agency mission (ESA) | Earth Observation (cross-link Deforestation) | APPROVED (queued, Phase 2) |
+| M | Tanager-1 (Planet / Carbon Mapper methane) | Corporate / nonprofit | Earth Observation | APPROVED (queued, Phase 2) |
+| N | DSCOVR / EPIC (NASA/NOAA, L1 full-Earth imaging, ozone product) | Agency mission (NASA/NOAA) | Earth Observation | APPROVED (queued, Phase 2) |
+| O | LeoLabs (ground radar debris tracking) | Corporate | Space Disposal | PENDING (no decision yet) |
+| P | MMX (JAXA with NASA, Phobos sample return; launch Oct 2026) | Agency mission (JAXA) | Space Disposal ("saving moons", next to Titan) | APPROVED (build now, Phase 1) |
+
+New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weather & Shields (D–G), Earth Observation (K–N). Every figure is re-verified on its source page before publishing; company figures are labeled as company figures.
