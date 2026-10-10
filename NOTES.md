@@ -260,6 +260,7 @@
 | 2026-10-09 | Gmail connector inactivity check reported it could not create drafts; the summary email had in fact already been sent at 7:57 AM HST | Verified via Gmail search; no action needed | Yes |
 | 2026-10-09 | npx lighthouse failed within ~1.5s with no report during the site assessment | Assessment used scripted checks instead; no performance scores yet | No |
 | 2026-10-10 | NOTES.md was truncated in cfad49d (domain-reset log, 62 KB to 23 KB): about 275 lines were replaced by a literal "[+43216 bytes at .content[1].resource.text]" marker, dropping Standing Rules, this table, Candidate Queue, and most 2026-10-09 logs. Five later log commits built on the truncated copy. | Restored the full pre-truncation text from 6cafb7a and re-appended every later session log (morning candidate run). Edit NOTES.md via git clone, never the connector's create_or_update_file. | Yes |
+| 2026-10-10 | HTTPS on www.savingplanets.com failed (GitHub Pages served its *.github.io certificate, so browsers showed a security warning) even though DNS was correct: www grey-cloud CNAME to chambersbryank-dot.github.io, apex A records on 185.199.108-111.153, Pages health check all valid. No certificate had ever been requested. | Cleared and re-set the Pages custom domain via `gh api -X PUT repos/chambersbryank-dot/Saveworld/pages`, which triggered issuance; certificate approved within a minute (covers savingplanets.com and www.savingplanets.com, expires 2027-01-08), then enabled Enforce HTTPS. | Yes |
 
 ## Session Log — 2026-10-09 (evening): enhancement execution
 
@@ -513,3 +514,11 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - Session start: git pull, NOTES.md read, last 24h of commits reviewed. Found NOTES.md truncated since cfad49d; restored in 4452700 and logged under Known Glitches.
 - Prepared batch 2026-10-10 (A–P above) for Brian's yes/no. No pages built or pushed.
+
+
+## Session Log — 2026-10-10 (HTTPS certificate for www.savingplanets.com)
+
+- Live check ~7:35 AM HST: DNS fixes are in (www CNAME DNS-only, A-record typo gone). Site loaded over http, but https failed with a certificate mismatch.
+- Re-entered the custom domain www.savingplanets.com in GitHub Pages via the API to trigger the certificate request. State went new to approved; certificate covers apex and www.
+- Enabled Enforce HTTPS. Verified https://www.savingplanets.com and /Titan.html return 200, and https://savingplanets.com 301s to https://www.savingplanets.com/.
+- Still open: www.saveplanetminusthedoom.com returns a 404 (no Worker anymore, but no redirect either). Per the domain-reset decision it is retired; a redirect to the new domain is optional and needs Brian's call in Cloudflare.
