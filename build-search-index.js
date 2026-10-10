@@ -15,7 +15,7 @@ const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
 const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
   .map(m => path.basename(m[1].trim()))
   .filter(f => f.endsWith('.html'))
-  .filter(f => !['Search.html', '404.html'].includes(f)); // never index these
+  .filter(f => !['Search.html', '404.html', 'Project-R.html'].includes(f)); // never index these
 
 let search = fs.readFileSync('Search.html', 'utf8');
 const startMarker = 'var pages = [';

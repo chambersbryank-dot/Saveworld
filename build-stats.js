@@ -16,7 +16,7 @@ const path = require('path');
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
   'planetary-defense': 'Planetary Defense', 'space-weather': 'Space Weather & Shields',
   'earth-observation': 'Earth Observation', 'project-r': 'Project R' };
-const SKIP = ['Search.html', '404.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html'];
+const SKIP = ['Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
 };
@@ -42,8 +42,8 @@ function buildProjectRMenu(warnings) {
 function menuHtml(menu) {
   const groups = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
     g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag">horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
-  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-Rawane.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project R</a>' +
-    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-Rawane.html">Project R overview</a></li>' + groups + '</ul></li>';
+  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-Rawane.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project Rawane</a>' +
+    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-Rawane.html">Project Rawane overview</a></li>' + groups + '</ul></li>';
 }
 function writeProjectRMenu(menu) {
   const html = menuHtml(menu); let n = 0;
