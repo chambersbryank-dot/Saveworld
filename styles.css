@@ -650,3 +650,4 @@ body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-to
 @media (max-width: 600px) { body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 24.4px; } }
 /* Man-made/Natural split cards: same 1.5rem gap as mankind grid, centered equal pair */
 body.pr-page .card-band .grid.sd-split { column-gap: 1.5rem; row-gap: 1.5rem; }
+.w-card .fact-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 0.4rem 0 0.3rem; } .w-card .fact-credit { font-size: 0.75rem; opacity: 0.75; margin: 0 0 0.6rem; text-align: center; }
