@@ -469,3 +469,9 @@ body.toc-sub .mission-widget h2 { margin: 0 0 0.4rem; font-size: 1.35rem; }
 .mission-widget .mw-date { font-size: 0.8rem; opacity: 0.75; }
 .mission-widget a { color: #8fd3ff; }
 .mission-widget .mw-note { margin: 0.9rem 0 0; font-size: 0.78rem; opacity: 0.8; }
+
+/* ===== Page-specific: Planetary Defense hub and pages, MMX ===== */
+body.toc-sub.pd-page .page-hero.space-hero, body.toc-sub.hera-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Hera.jpg') center/cover no-repeat; }
+body.toc-sub.neos-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/NEO_Surveyor.jpg') center/cover no-repeat; }
+body.toc-sub.webb-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Webb_Infrared.jpg') center/cover no-repeat; }
+body.toc-sub.mmx-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Phobos.jpg') center 40%/cover no-repeat; }
