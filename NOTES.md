@@ -578,3 +578,8 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane title hero restored)
 
 - Project-Rawane.html: visible hero restored with only `<h1>Project Rawane</h1>` on .pr-hero (Nebula2.jpg + dark gradient); no subtitle/Rawane line, breadcrumb or links. Visually hidden h1 removed (one h1). The .pr-flow top-padding rule was removed from styles.css. The mobile order rules sit inside .pr-flow, and the hero is outside it, so they are unaffected.
+
+## Session Log — 2026-10-10 (all hubs: Nebula2 title hero)
+
+- New shared `.page-hero.hub-hero` (styles.css): Nebula2.jpg + pr-hero dark gradient. Applied to Oceans, Lakes, Rivers, Deforestation (Forests), Space, Planetary Defense, Space Weather, Earth Observation, Space Disposal: hero contains only the h1 (subtitles removed; old hero classes space-hero/lakes-hero/rivers-hero/forest-hero dropped on hubs; photo credits for the old hero images on Earth Observation, Planetary Defense and Space Weather removed). Breadcrumbs left in place (between hero and Impact Statement where present).
+- Space Disposal: hidden h1 replaced by visible hero; `no-hero` body class and its CSS removed. Project Rawane keeps its pr-hero (same look). Mission pages untouched.
