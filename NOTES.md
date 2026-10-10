@@ -541,3 +541,10 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - Project-Rawane.html: hero → Impact Statement → Five W's → three hub card groups (section.card-band.hub-cards.hub-group: Space Disposal 8, Planetary Defense 4, Space Weather & Shields 4; headings link to hubs; Jupiter appears under both SD and PD) → page-stats → launches → one bottom link (NASA ODPO) → next-solutions. A–Z mission-list nav and old categories band removed.
 - Mobile order rules (≤600px) now impact 1, five-ws 2, hub-group 3, page-stats 4, launch-widget 5 (old rule put Five W's first and launches before cards).
+
+## Session Log — 2026-10-10 (hub audit to Space_Disposal template; Project Rawane top removed)
+
+- 0c15c1e: Project-Rawane.html hero (h1 + Rawane line) removed; visually hidden h1 "Project Rawane" added; .pr-flow gets top padding to clear the nav. (A–Z row was already gone.) The Rawane hero line no longer appears anywhere on the page.
+- Hub audit: Oceans, Lakes, Rivers, Deforestation, Space got new Impact Statement + Five W's (replacing the old duplicate solution grid; hub cards remain). Figures only from site-cited sources: Ocean Cleanup 65M kg, 4ocean 50M lb, Plastic Bank 196M kg, Clean Up The Lake 36,177 lb, GLPC 277,000 pieces, Restore My Lake 13 t, Life Terra 36M trees. Org/company figures labeled. Rivers and Space impact statements are qualitative (river figures on old grid had no source link on the hub).
+- Planetary Defense, Space Weather, Earth Observation: impact heading → "Impact Statement" (old heading kept as h3), "On this hub"/solutions grid replaced by Five W's, hub cards moved right after Five W's; detailed sections (Roman note, SW/EO mission sections) kept below.
+- All solution pages have an Impact Statement and Five W's. Earth Observation missions (NISAR, Biomass, Tanager-1, DSCOVR/EPIC) still have no pages.
