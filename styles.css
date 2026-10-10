@@ -607,14 +607,13 @@ html.dark .card-band .card-blurb { color: #c9d6e2; }
 body.toc-sub h2.h2-center { text-align: center; }
 /* Shared hub title hero: Nebula2 with the pr-hero dark overlay */
 body.toc-sub .page-hero.hub-hero, body.toc-sub[class] .page-hero.hub-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Nebula2.jpg') center/cover no-repeat; }
-/* Project Rawane dedication line (below the title hero) */
-.pr-dedication { max-width: 820px; margin: 1.2rem auto 0; padding: 0 1.5rem; text-align: center; font-size: 1.1rem; font-style: italic; line-height: 1.55; color: #e8eef5; }
 /* Project Rawane: Space Disposal man-made / natural split cards */
 .card-band .grid.sd-split { grid-template-columns: repeat(2, minmax(0, 360px)); justify-content: center; margin-bottom: 1.8rem; }
 @media (max-width: 600px) { .card-band .grid.sd-split { grid-template-columns: 1fr; } }
 .anchor-target { display: block; scroll-margin-top: calc(var(--nav-height, 88px) + 16px); }
 .card-band .grid.sd-natural { grid-template-columns: repeat(3, minmax(0, 300px)); justify-content: center; margin-bottom: 1.8rem; }
 @media (max-width: 600px) { .card-band .grid.sd-natural { grid-template-columns: 1fr; } }
-/* Project Rawane: tighter gap between dedication line and Impact Statement (~32px -> ~16px) */
-body.pr-page .pr-flow > .impact { padding-top: 0.3rem; }
-body.pr-page .pr-flow > .impact > h2 { margin-top: 0.7rem; }
+/* Project Rawane dedication line inside the title hero */
+body.toc-sub .page-hero.pr-hero p.pr-dedication { max-width: 760px; margin: 0.6rem auto 0; text-align: center; font-size: 1.05rem; font-style: italic; line-height: 1.5; color: rgba(255,255,255,0.94); text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc(var(--nav-height, 88px) + 2.2rem) 0 2.4rem; box-sizing: border-box; }
+@media (max-width: 600px) { body.toc-sub .page-hero.pr-hero p.pr-dedication { font-size: 0.95rem; } }
