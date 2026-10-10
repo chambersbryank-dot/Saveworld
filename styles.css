@@ -624,3 +624,6 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 .card-band .grid.sd-mankind > .card { flex: 0 0 calc((100% - 4.5rem) / 4); min-width: 0; height: auto; }
 @media (max-width: 900px) { .card-band .grid.sd-mankind > .card { flex-basis: calc((100% - 1.5rem) / 2); } }
 @media (max-width: 600px) { .card-band .grid.sd-mankind > .card { flex-basis: 100%; } }
+/* Project Rawane: move mankind block up (halve gap above it) */
+.card-band .grid.sd-split { margin-bottom: 0.9rem; }
+.card-band .grid.sd-split + h3.sd-subhead { margin-top: 0.9rem; }
