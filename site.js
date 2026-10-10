@@ -68,14 +68,14 @@
   Array.prototype.forEach.call(els, function (el) {
     var ds = el.dataset, key = 'mw-news-' + (ds.news || ds.mission);
     var ms = (ds.milestones || '').split(';').filter(Boolean).map(function (m) { var p = m.split('|'); return { d: p[0], l: p[1] || '' }; });
-    el.innerHTML = '<h2>' + esc(ds.mission) + ': mission status</h2>' +
+    el.innerHTML = '<h2>' + esc(ds.mission) + ': Mission Status</h2>' +
       (ds.status ? '<p class="mw-status">' + esc(ds.status) + '</p>' : '') +
       '<div class="mw-grid">' +
       (ds.launch ? '<div class="mw-count"><small>Launch (' + esc(fmt(ds.launch)) + ')</small><b data-t="' + esc(ds.launch) + '"></b></div>' : '') +
       (ds.arrival ? '<div class="mw-count"><small>Arrival (' + esc(ds.arrivalLabel || fmt(ds.arrival)) + ')</small><b data-t="' + esc(ds.arrival) + '"></b></div>' : '') +
       '</div>' +
       (ms.length ? '<h3>Milestones</h3><ul class="mw-milestones">' + ms.map(function (m) { var past = new Date(m.d).getTime() < Date.now(); return '<li class="' + (past ? 'done' : '') + '"><span class="mw-date">' + esc(fmt(m.d)) + '</span> ' + esc(m.l) + '</li>'; }).join('') + '</ul>' : '') +
-      (ds.news ? '<h3>Latest news</h3><ul class="mw-news"><li>Loading…</li></ul>' : '') +
+      (ds.news ? '<h3>Latest News</h3><ul class="mw-news"><li>Loading…</li></ul>' : '') +
       '<p class="mw-note">Dates per ' + esc(ds.agency || 'NASA') + '; missions shift.' + (ds.source ? ' <a href="' + esc(ds.source) + '" target="_blank" rel="noreferrer">Source: ' + esc(ds.sourceLabel || 'NASA') + '</a>' : '') + '</p>';
     var counters = el.querySelectorAll('[data-t]');
     function tick() { Array.prototype.forEach.call(counters, function (c) { c.textContent = count(c.getAttribute('data-t')); }); }
@@ -138,7 +138,7 @@
         c.impactTotals.map(function (t) { return '<p>' + num(t.total) + ' ' + esc(t.unit) + ' <small>combined, from sourced page figures</small></p>'; }).join('') + '</div>' +
         '<div class="ps-card"><h3>Site-Wide</h3><p>' + solLine(d.site) + '</p><p>' + plural(d.site.hubs, 'hub', 'hubs') + ' · ' + plural(d.site.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p></div>';
       if (page && page.stats.length) {
-        html += '<div class="ps-card"><h3>This page</h3>' + page.stats.map(function (s) {
+        html += '<div class="ps-card"><h3>This Page</h3>' + page.stats.map(function (s) {
           var u = /^https?:\/\//.test(s.sourceUrl) ? s.sourceUrl : '';
           return '<p><b>' + num(s.value) + '</b> ' + esc(s.unit) + '<br><small>' + esc(s.label) + (u ? ' · <a href="' + esc(u) + '" target="_blank" rel="noreferrer">source</a>' : '') + '</small></p>';
         }).join('') + '</div>';
