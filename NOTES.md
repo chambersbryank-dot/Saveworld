@@ -522,3 +522,9 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Re-entered the custom domain www.savingplanets.com in GitHub Pages via the API to trigger the certificate request. State went new to approved; certificate covers apex and www.
 - Enabled Enforce HTTPS. Verified https://www.savingplanets.com and /Titan.html return 200, and https://savingplanets.com 301s to https://www.savingplanets.com/.
 - Still open: www.saveplanetminusthedoom.com returns a 404 (no Worker anymore, but no redirect either). Per the domain-reset decision it is retired; a redirect to the new domain is optional and needs Brian's call in Cloudflare.
+
+## Session Log — 2026-10-10 (dedicated pages: Aditya-L1, SOLAR-1, Three Shields, Vigil, PRELUDE)
+
+- New pages Aditya_L1.html, SOLAR_1.html, Three_Shields.html, Vigil.html (sp:category space-weather) and PRELUDE.html (sp:category space, status horizon, horizon-note pattern). Seeded only from existing hub text + its sources; no new figures. PRELUDE launch date labeled company target.
+- Counting: removed the matching sp:item metas from Space_Weather.html (4) and ClearSpace.html (PRELUDE) so totals unchanged (32 active, 4 horizon). Upcoming missions 4 → 6 (Vigil 2031, PRELUDE June 2027 widgets, status-text detection; no exact dates invented). Aditya-L1 and SOLAR-1 widgets have milestones only.
+- Hub sections got "Read more" links; Project-Rawane A–Z list now links to the new pages; sitemap +5; search index rebuilt. projectRMenu data in solutions.json still points to hub anchors (menu not rendered).
