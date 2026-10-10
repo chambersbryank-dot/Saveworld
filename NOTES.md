@@ -536,3 +536,8 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Impact-first order applied to 17 solution pages (line move only, no text changes).
 - Bottom-link rule: exactly one `section.donate-banner.bottom-link#bottom-link` per content page, before next-solutions. Priority donate → "Join the work" → subtle "For further information" (.donate-btn-subtle). All old donate/learn-more banners and .source-link paragraphs removed. Donate URLs verified by HTTP 200 on 2026-10-10. Plastic Bank /individuals now redirects to /pricing (business plans) and Astroscale get-involved is careers/events, so both get "For further information". Terraformation's donate URL couldn't be verified, so it also gets "For further information".
 - Not touched: index, About, Contact, Amazing_Facts, Search, 404, Project-R redirect.
+
+## Session Log — 2026-10-10 (Project Rawane as hub)
+
+- Project-Rawane.html: hero → Impact Statement → Five W's → three hub card groups (section.card-band.hub-cards.hub-group: Space Disposal 8, Planetary Defense 4, Space Weather & Shields 4; headings link to hubs; Jupiter appears under both SD and PD) → page-stats → launches → one bottom link (NASA ODPO) → next-solutions. A–Z mission-list nav and old categories band removed.
+- Mobile order rules (≤600px) now impact 1, five-ws 2, hub-group 3, page-stats 4, launch-widget 5 (old rule put Five W's first and launches before cards).
