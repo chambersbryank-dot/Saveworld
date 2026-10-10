@@ -483,3 +483,33 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 - Titan.html order after breadcrumb: Impact Statement → Five W's (id five-ws, was #solution; skip-link updated) → .jump-nav (Five W's / Titan by the numbers / Learn more) → Dragonfly mission widget → Titan by the numbers (id by-the-numbers, was #numbers) → page-stats → Learn More banner (unchanged) → next-solutions.
 - Learn more: original donate-banner kept; jump-nav has a matching external link (science.nasa.gov/mission/dragonfly, new tab).
 - styles.css: .jump-nav pill styles (dark mode, wraps), added to the nav.breadcrumb position reset (generic nav rule otherwise fixes it to top), scroll-margin for new ids. Smooth scroll already global.
+
+## Candidate Queue — batch 2026-10-10
+
+Second daily batch (16), prepared by the 6:17 AM HST routine. Nothing built; awaiting Brian's yes/no on each. Checked against every page, solutions.json, and the 2026-10-09 queue (A–P) so nothing repeats. Every figure below was read on the cited page this morning; company/nonprofit figures are labeled as such at build time.
+
+| ID | Candidate | Classification | Suggested hub | Mission widget | Status |
+|---|---|---|---|---|---|
+| A | IMAP (NASA, Sun-Earth L1; launched Sept 24 2025; ~half-hour radiation warning) | Agency mission (NASA) | Space Weather & Shields (own page; hub mentions it in one line today) | Yes, active (I-ALiRT real-time feed) | PENDING |
+| B | GOES-19 + CCOR-1 (NOAA, GEO 22,236 mi; first operational space coronagraph) | Agency mission (NOAA) | Space Weather & Shields | Yes, active | PENDING |
+| C | U.S. Deorbit Vehicle for the ISS (NASA contract to SpaceX, up to $843M; station ops end 2030) | Agency contract (NASA) / corporate | Space Disposal | Yes, countdown to 2030 end of ops | PENDING |
+| D | ESA Aeolus assisted reentry (July 28 2023, first of its kind) + Zero Debris by 2030 | Agency mission (ESA) | Space Disposal | No (complete); Aeolus-2 = horizon | PENDING |
+| E | LignoSat wooden satellite (Kyoto Univ + Sumitomo Forestry, deployed by JAXA Dec 9 2024; no signal, reentered Apr 4 2025) | University / corporate | Space Disposal + Forests cross-link | No; any follow-on = horizon | PENDING (horizon if approved) |
+| F | SWOT (NASA/CNES; 95%+ of lakes >15 acres, rivers >330 ft) | Agency mission (NASA/CNES) | Earth Observation + Lakes and Rivers cross-links | Yes, active | PENDING |
+| G | PACE (NASA ocean color, 676 km, launched Feb 2024) | Agency mission (NASA) | Earth Observation + Oceans | Yes, active | PENDING |
+| H | Phytoplankton, the ocean's oxygen engine (NOAA: about half of Earth's oxygen) | Natural | Oceans (pairs with G) | No | PENDING |
+| I | Copernicus Sentinel-6B (ESA/NASA/EUMETSAT/NOAA, launched Nov 17 2025; sea-level record since early 1990s) | Agency mission (ESA/NASA) | Earth Observation + Oceans | Yes, active | PENDING |
+| J | GOSAT-GW "IBUKI GW" (JAXA, launched June 29 2025; CO2/CH4/NO2 + water cycle) | Agency mission (JAXA) | Earth Observation | Yes, data-release milestone | PENDING |
+| K | EarthCARE (ESA/JAXA, launched May 28 2024; JAXA cloud radar measures up/down flow) | Agency mission (ESA/JAXA) | Earth Observation | Yes, active | PENDING |
+| L | ALOS-4 "DAICHI-4" (JAXA, launched July 1 2024; 200 km radar swath, deforestation alerts in 77 countries) | Agency mission (JAXA) | Earth Observation + Deforestation cross-link | Yes, active | PENDING |
+| M | Artemis II (NASA/CSA, Apr 1–10 2026; record 252,756 mi from Earth) | Agency mission (NASA/CSA) | Project Rawane (voyages outward) | Yes, Artemis III (NASA: "next year", 2027) | PENDING |
+| N | Mr. Trash Wheel family (Waterfront Partnership of Baltimore; 4 wheels, 500 tons/yr for Mr. Trash Wheel) | Nonprofit | Rivers | No | PENDING |
+| O | Coral Restoration Foundation (Florida Keys; 253,833 corals returned through 2024, 22,404 in 2025) | Nonprofit | Oceans | No | PENDING |
+| P | Mangrove forests (natural, NOAA; ~80 species, coastline storm buffer) | Natural | Forests + Oceans cross-link | No | PENDING |
+
+Dropped this morning (could not verify or status unclear): NASA TEMPO (extension beyond Sept 2026 not confirmed), ESA Proba-3 (coronagraph spacecraft contact being restored), Eden: People+Planet (headline figures are carbon-credit projections), Mr. Trash Wheel all-time tonnage (only in press, not on the official site; per-year figure used instead).
+
+## Session Log — 2026-10-10 (morning candidate run)
+
+- Session start: git pull, NOTES.md read, last 24h of commits reviewed. Found NOTES.md truncated since cfad49d; restored in 4452700 and logged under Known Glitches.
+- Prepared batch 2026-10-10 (A–P above) for Brian's yes/no. No pages built or pushed.
