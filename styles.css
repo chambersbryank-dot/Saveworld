@@ -627,7 +627,13 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 /* Project Rawane: move mankind block up (halve gap above it) */
 .card-band .grid.sd-split { margin-bottom: 0.9rem; }
 .card-band .grid.sd-split + h3.sd-subhead { margin-top: 0.9rem; }
-.card-band h3.sd-subhead.sd-subhead-lg { font-size: 1.6rem; }
-.card-band h3.sd-subhead.sd-subhead-lg { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: #e8eef5; line-height: 1.2; }
 footer p { text-wrap: balance; margin: 0.35rem auto; }
-body.pr-page .impact > h2, body.pr-page .five-ws > h2, body.pr-page .hub-group > h2, body.pr-page .card-band h3.sd-subhead.sd-subhead-lg { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+
+/* Project Rawane: every section heading matches the Impact Statement h2 size (body.toc-sub h2: clamp(1.6rem, 3vw, 2.2rem)). One scoped block; replaces earlier stacked overrides. */
+body.pr-page .impact > h2,
+body.pr-page .five-ws > h2,
+body.pr-page .hub-group > h2,
+body.pr-page .card-band h3.sd-subhead.sd-subhead-lg,
+body.pr-page .page-stats h2,
+body.pr-page .launch-widget .lw-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+body.pr-page .card-band h3.sd-subhead.sd-subhead-lg { font-weight: 700; color: #e8eef5; }
