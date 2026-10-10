@@ -223,3 +223,9 @@
 - Project-Rawane.html breadcrumb (was Home › Project Rawane) replaced by alphabetical middot-separated mission list (nav.breadcrumb.mission-list; CSS in styles.css; inherits dark-mode breadcrumb colors). 16 items incl. Space Disposal hub; PRELUDE keeps horizon tag.
 - No dedicated page (hub anchors): Aditya-L1, PRELUDE, SOLAR-1, Three invisible shields, Vigil.
 - Top nav: Project Rawane is now a plain link on all pages; build-stats.js menuHtml emits the plain link (markers kept, menu data still in solutions.json).
+
+## Session Log — 2026-10-10 (Titan restructure + jump-nav)
+
+- Titan.html order after breadcrumb: Impact Statement → Five W's (id five-ws, was #solution; skip-link updated) → .jump-nav (Five W's / Titan by the numbers / Learn more) → Dragonfly mission widget → Titan by the numbers (id by-the-numbers, was #numbers) → page-stats → Learn More banner (unchanged) → next-solutions.
+- Learn more: original donate-banner kept; jump-nav has a matching external link (science.nasa.gov/mission/dragonfly, new tab).
+- styles.css: .jump-nav pill styles (dark mode, wraps), added to the nav.breadcrumb position reset (generic nav rule otherwise fixes it to top), scroll-margin for new ids. Smooth scroll already global.
