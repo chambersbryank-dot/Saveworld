@@ -338,3 +338,21 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 - Any candidate without a solidly confirmed contract or funding must NOT be presented as an active solution. Label it "Potential solution on the horizon" with the note: "We'll keep you updated here if this becomes a reality."
 - Site implementation: reusable .horizon-badge / .horizon-note styles in styles.css; every page carries an sp:status meta of "active" or "horizon"; the stats engine counts horizon items separately ("X active solutions, Y on the horizon") and never sums their impact numbers into totals.
 - Known horizon item: ClearSpace CLEAR (reported £61.3M UK Phase 3 contract is only reported by a third-party tender tracker, unconfirmed by the UK Space Agency).
+
+## Session Log — 2026-10-09 (night): Phase 1 — Planetary Defense hub, Hera, NEO Surveyor, Webb/2024 YR4, MMX
+
+- Worked in a separate clone (/workspace/sw2) because the shared clone /workspace/Saveworld had the parallel Titan worker's uncommitted edits.
+- **Planetary_Defense.html** (09209ce) — new hub: DART intro, cards for Hera, NEO Surveyor, Webb & 2024 YR4, Jupiter; honest note that Roman (launched Aug 30, 2026) is a dark-energy/exoplanet mission, not an NEO mission, and NEO Surveyor is.
+- **NEO_Surveyor.html** (b0d9b5d), **Webb_2024_YR4.html** (af48975), **Hera.html** (30c7885, + site.js data-agency so the widget note says "Dates per ESA/JAXA"), **MMX.html** (f4c30f5, + MMX card next to Titan on Space_Disposal.html). All five commits went out in one push / one deploy because the per-commit pull step failed on the dirty working tree; content unaffected.
+- Mission widgets: Hera counts down to "window opens, November 2026" (ESA gives only the month); MMX counts down to 2026-10-19T19:41:03Z (= Oct 20 4:41:03 JST, H3 F10, JAXA); NEO Surveyor shows status + news only (NET Sept 2027, no fake-precise countdown).
+- **Links** (2fb835e): "Planetary Defense" added to the Solutions dropdown on every page except Titan.html (left to the Titan worker — add it there next time Titan is touched); homepage Space card links Planetary Defense + MMX; Space.html gets a Planetary Defense card.
+- **Corrections vs research brief:** 2024 YR4 miss distance is 21,200 km from the lunar surface per NASA (22,900 ± 800 km is from the Moon's center per the RNAAS paper; both stated). DART period change shown as the refined 33 min 15 s (NASA), with the original 32 min announcement noted. MMX sample is "at least 10 g" (ESA) / "more than 10 g" (JAXA); return is Japan fiscal year 2031.
+- **Sources:** ESA Hera overview / early-arrival / deep-space-manoeuvre articles; NASA Hubble boulders (37 boulders, 1–6.7 m); NASA DART orbit study; NASA NEO Surveyor page + launch services release (2/3 of unknown NEOs >140 m in 5 years, ~50 cm telescope, Falcon 9); NASA PD and Webb blogs, ESA, RNAAS 10.3847/2515-5172/ae4fb4 (YR4); NASA Roman launch release; JAXA MMX launch press release + mission page; ESA MMX factsheet.
+- **Image credits:** Hera.jpg — ESA–Science Office, CC BY-SA 3.0 IGO (via Wikimedia Commons "Hera in orbit"); NEO_Surveyor.jpg — NASA/JPL-Caltech/University of Arizona PIA25253; Webb_Infrared.jpg — NASA/JPL-Caltech PIA25790; Phobos.jpg — NASA/JPL-Caltech/University of Arizona PIA10368 (HiRISE; used instead of a JAXA image to avoid JAXA reuse-term ambiguity); DART_Didymos.jpg — NASA/Johns Hopkins APL/Steve Gribben PIA25329. All ≤1600 px, <250 KB.
+- Sitemap: 5 URLs added (lastmod 2026-10-09). Search: build-search-index.js added 5 entries (33 total), keywords enriched by hand.
+
+| Date | What failed | Workaround | Resolved? |
+|---|---|---|---|
+| 2026-10-09 | Shared clone had another worker's uncommitted edits, so `git pull --rebase` refused | Used a separate clone /workspace/sw2 | Yes |
+| 2026-10-09 | JPL NEO Surveyor page returns 403 (CloudFront) to fetch and curl; MMX ISAS site returned 500 | Used NASA science.nasa.gov + NASA launch release, and mmx.jaxa.jp + ESA factsheet | Yes |
+| 2026-10-09 | images-api.nasa.gov asset lookup hung | Fetched images-assets.nasa.gov/image/<id>/<id>~large.jpg directly with a timeout | Yes |
