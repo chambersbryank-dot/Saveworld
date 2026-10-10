@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T10:24:27.509Z",
+ "generated": "2026-10-10T18:44:50.175Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -127,7 +127,7 @@
    "natural": 3,
    "agency": 11
   },
-  "upcomingMissions": 4,
+  "upcomingMissions": 6,
   "impactTotals": [
    {
     "unit": "kg",
@@ -231,7 +231,7 @@
     "corporate": 4,
     "natural": 1
    },
-   "upcomingMissions": 0,
+   "upcomingMissions": 1,
    "impactTotals": []
   },
   "planetary-defense": {
@@ -251,10 +251,10 @@
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "natural": 1,
-    "agency": 3
+    "agency": 3,
+    "natural": 1
    },
-   "upcomingMissions": 0,
+   "upcomingMissions": 1,
    "impactTotals": []
   },
   "earth-observation": {
@@ -523,17 +523,6 @@
   },
   {
    "url": "ClearSpace.html",
-   "title": "PRELUDE",
-   "category": "space",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "horizon",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "ClearSpace.html",
    "title": "CLEAR (UK)",
    "category": "space",
    "type": "solution",
@@ -789,50 +778,6 @@
    "missions": []
   },
   {
-   "url": "Space_Weather.html",
-   "title": "Three invisible shields",
-   "category": "space-weather",
-   "type": "solution",
-   "classification": "natural",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Space_Weather.html",
-   "title": "SOLAR-1",
-   "category": "space-weather",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Space_Weather.html",
-   "title": "Vigil",
-   "category": "space-weather",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Space_Weather.html",
-   "title": "Aditya-L1",
-   "category": "space-weather",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
    "url": "Earth_Observation.html",
    "title": "Earth Observation",
    "category": "earth-observation",
@@ -951,6 +896,126 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Aditya_L1.html",
+   "title": "Aditya-L1 (ISRO)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Distance from Earth at L1",
+     "value": "1.5 million",
+     "unit": "km",
+     "kind": "fact",
+     "sourceUrl": "https://www.isro.gov.in/halo-orbit-insertion-adtya-l1.html"
+    },
+    {
+     "label": "Science payloads",
+     "value": 7,
+     "unit": "payloads",
+     "kind": "fact",
+     "sourceUrl": "https://www.isro.gov.in/Aditya_L1.html"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Aditya-L1",
+     "upcoming": false,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "SOLAR_1.html",
+   "title": "SOLAR-1 (NOAA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Distance from Earth at L1",
+     "value": "1 million",
+     "unit": "miles (about)",
+     "kind": "fact",
+     "sourceUrl": "https://www.nesdis.noaa.gov/news/swfo-l1-renamed-solar-1-reaches-final-destination-one-million-miles-earth"
+    }
+   ],
+   "missions": [
+    {
+     "name": "SOLAR-1",
+     "upcoming": false,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Three_Shields.html",
+   "title": "Three invisible shields",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Voyager 1 heliopause crossing",
+     "value": 122,
+     "unit": "AU",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Vigil.html",
+   "title": "Vigil (ESA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Advance warning",
+     "value": "4-5",
+     "unit": "days (up to)",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Space_Safety/Vigil/Vigil_mission_overview"
+    },
+    {
+     "label": "ESA build contract",
+     "value": 340,
+     "unit": "million euros",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Space_Safety/Vigil/Airbus_to_build_ESA_s_Vigil_space_weather_forecasting_mission"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Vigil",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "PRELUDE.html",
+   "title": "PRELUDE (ClearSpace)",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "horizon",
+   "stats": [],
+   "missions": [
+    {
+     "name": "PRELUDE",
+     "upcoming": true,
+     "next": null
+    }
+   ]
   }
  ]
 }
