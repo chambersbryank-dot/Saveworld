@@ -1,6 +1,36 @@
 {
- "generated": "2026-10-10T03:24:16.889Z",
+ "generated": "2026-10-10T03:31:46.913Z",
  "projectRMenu": [
+  {
+   "hub": "Planetary Defense",
+   "href": "Planetary_Defense.html",
+   "items": [
+    {
+     "name": "Hera (ESA)",
+     "anchor": "hera",
+     "href": "Planetary_Defense.html#hera",
+     "status": "active"
+    },
+    {
+     "name": "Jupiter (natural)",
+     "anchor": "jupiter",
+     "href": "Planetary_Defense.html#jupiter",
+     "status": "active"
+    },
+    {
+     "name": "NEO Surveyor (NASA)",
+     "anchor": "neo-surveyor",
+     "href": "Planetary_Defense.html#neo-surveyor",
+     "status": "active"
+    },
+    {
+     "name": "Webb and asteroid 2024 YR4",
+     "anchor": "webb-2024-yr4",
+     "href": "Planetary_Defense.html#webb-2024-yr4",
+     "status": "active"
+    }
+   ]
+  },
   {
    "hub": "Space Disposal",
    "href": "Space_Disposal.html",
@@ -24,7 +54,7 @@
      "status": "active"
     },
     {
-     "name": "Jupiter",
+     "name": "Jupiter (natural)",
      "anchor": "jupiter",
      "href": "Space_Disposal.html#jupiter",
      "status": "active"
@@ -56,47 +86,17 @@
    ]
   },
   {
-   "hub": "Planetary Defense",
-   "href": "Planetary_Defense.html",
-   "items": [
-    {
-     "name": "Hera",
-     "anchor": "hera",
-     "href": "Planetary_Defense.html#hera",
-     "status": "active"
-    },
-    {
-     "name": "Jupiter",
-     "anchor": "jupiter",
-     "href": "Planetary_Defense.html#jupiter",
-     "status": "active"
-    },
-    {
-     "name": "NEO Surveyor",
-     "anchor": "neo-surveyor",
-     "href": "Planetary_Defense.html#neo-surveyor",
-     "status": "active"
-    },
-    {
-     "name": "Webb and asteroid 2024 YR4",
-     "anchor": "webb-2024-yr4",
-     "href": "Planetary_Defense.html#webb-2024-yr4",
-     "status": "active"
-    }
-   ]
-  },
-  {
    "hub": "Space Weather & Shields",
    "href": "Space_Weather.html",
    "items": [
     {
-     "name": "Aditya-L1",
+     "name": "Aditya-L1 (ISRO)",
      "anchor": "aditya-l1",
      "href": "Space_Weather.html#aditya-l1",
      "status": "active"
     },
     {
-     "name": "SOLAR-1",
+     "name": "SOLAR-1 (NOAA)",
      "anchor": "solar-1",
      "href": "Space_Weather.html#solar-1",
      "status": "active"
@@ -108,7 +108,7 @@
      "status": "active"
     },
     {
-     "name": "Vigil",
+     "name": "Vigil (ESA)",
      "anchor": "vigil",
      "href": "Space_Weather.html#vigil",
      "status": "active"

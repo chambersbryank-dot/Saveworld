@@ -27,7 +27,7 @@ const FALLBACK = {
 //   id="anchor" data-menu-item="Name|active|horizon"   (attribute order: id first)
 // and are listed alphabetically. The HTML is written into every page between
 // <!-- PROJECT-R-MENU:START --> and <!-- PROJECT-R-MENU:END -->.
-const PROJECT_R_HUBS = [['Space_Disposal.html', 'Space Disposal'], ['Planetary_Defense.html', 'Planetary Defense'], ['Space_Weather.html', 'Space Weather & Shields']];
+const PROJECT_R_HUBS = [['Planetary_Defense.html', 'Planetary Defense'], ['Space_Disposal.html', 'Space Disposal'], ['Space_Weather.html', 'Space Weather & Shields']]; // alphabetical by hub name
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 function buildProjectRMenu(warnings) {
   return PROJECT_R_HUBS.filter(([f]) => fs.existsSync(f)).map(([file, name]) => {
