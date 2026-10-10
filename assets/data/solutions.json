@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-10T03:02:50.665Z",
+ "generated": "2026-10-10T03:04:32.355Z",
  "site": {
-  "categories": 7,
-  "solutions": 21,
+  "categories": 9,
+  "solutions": 29,
   "horizon": 0,
-  "hubs": 8,
+  "hubs": 10,
   "byClassification": {
    "nonprofit": 8,
-   "corporate": 7,
-   "natural": 1,
-   "agency": 5
+   "corporate": 8,
+   "natural": 2,
+   "agency": 11
   },
   "upcomingMissions": 4,
   "impactTotals": []
@@ -83,6 +83,30 @@
     "agency": 3
    },
    "upcomingMissions": 2,
+   "impactTotals": []
+  },
+  "space-weather": {
+   "name": "Space Weather & Shields",
+   "solutions": 4,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "natural": 1,
+    "agency": 3
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "earth-observation": {
+   "name": "Earth Observation",
+   "solutions": 4,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "agency": 3,
+    "corporate": 1
+   },
+   "upcomingMissions": 0,
    "impactTotals": []
   },
   "project-r": {
@@ -458,6 +482,142 @@
      }
     }
    ]
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Space Weather &amp; Shields",
+   "category": "space-weather",
+   "type": "hub",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Vigil advance warning",
+     "value": "4-5",
+     "unit": "days",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Space_Safety/Vigil/Vigil_mission_overview"
+    },
+    {
+     "label": "Voyager 1 heliopause crossing",
+     "value": 122,
+     "unit": "AU",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Three invisible shields",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "SOLAR-1",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Vigil",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Aditya-L1",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "Earth Observation",
+   "category": "earth-observation",
+   "type": "hub",
+   "status": "active",
+   "stats": [
+    {
+     "label": "NISAR revisit of land and ice",
+     "value": 12,
+     "unit": "days",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/nisar/mission-overview/"
+    },
+    {
+     "label": "Tanager-1 first methane plume (Carbon Mapper estimate)",
+     "value": 1200,
+     "unit": "kg/hour",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/earth/first-greenhouse-gas-plumes-detected-with-nasa-designed-instrument/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "NISAR",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "Biomass",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "Tanager-1",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "DSCOVR/EPIC",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
   },
   {
    "url": "Project-R.html",

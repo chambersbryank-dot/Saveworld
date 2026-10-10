@@ -138,7 +138,7 @@
       var c = d.categories[el.getAttribute('data-stats-category')];
       if (!c) return;
       var page = null, url = el.getAttribute('data-stats-page');
-      d.pages.forEach(function (p) { if (p.url === url) page = p; });
+      d.pages.forEach(function (p) { if (p.url === url && !p.section) page = p; });
       var html = '<h2>By the numbers</h2><div class="ps-grid">' +
         '<div class="ps-card"><h3>' + esc(c.name) + '</h3><p>' + solLine(c) + (cls(c.byClassification) ? '<br><small>' + esc(cls(c.byClassification)) + '</small>' : '') + '</p>' +
         (c.upcomingMissions ? '<p>' + plural(c.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p>' : '') +

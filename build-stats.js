@@ -6,6 +6,7 @@
 //   <meta name="sp:type" content="hub|solution">
 //   <meta name="sp:classification" content="natural|corporate|agency|nonprofit">   (solutions)
 //   <meta name="sp:status" content="active|horizon">   horizon = no confirmed contract/funding yet
+//   <meta name="sp:item" content="name|classification|status">   a solution presented as a section of a hub; repeatable
 //   <meta name="sp:stat" content="label|value|unit|kind|sourceUrl">   kind = impact (summable) or fact; repeatable
 // Upcoming missions are read from [data-mission] elements (data-launch / data-arrival in the future).
 // Horizon pages are counted separately and their impact numbers are never summed.
@@ -50,6 +51,9 @@ function build() {
       missions.push({ name: m[1], upcoming: !!next || !dates.length && /no earlier|NET|launch/i.test(get('data-status') || ''), next: next ? { event: next[0], date: next[1] } : null });
     }
     pages.push(Object.assign({ url: file, title }, meta, { stats, missions }));
+    // Hub sections that each present a solution: <meta name="sp:item" content="name|classification|status">
+    (metas.item || []).forEach(it => { const [name, classification, status] = it.split('|');
+      pages.push({ url: file, title: name, category: meta.category, type: 'solution', classification, status: status || 'active', section: true, stats: [], missions: [] }); });
   }
   function agg(list) {
     const sol = list.filter(p => p.type === 'solution');
