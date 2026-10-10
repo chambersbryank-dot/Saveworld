@@ -479,13 +479,14 @@ body.pr-page #categories .card { padding: 0; overflow: hidden; }
 html.dark body.pr-page #categories h2 { color: #e8eef5; }
 html.dark body.pr-page #categories h3, html.dark body.pr-page #categories h3 a { color: #4da3ff; }
 @media (max-width: 600px) { .launch-widget .lw-box { padding: 1.1rem; } .launch-widget .lw-unit { min-width: 56px; } }
-/* Phones only: show the launches widget after the Impact Statement. Desktop/tablet order is unchanged. */
+/* Phones only: keep Project Rawane hub order (impact, Five W's, hub card groups, stats, launches). */
 @media (max-width: 600px) {
   body.pr-page .pr-flow { display: flex; flex-direction: column; }
-  body.pr-page .pr-flow > .five-ws { order: 1; }
-  body.pr-page .pr-flow > .impact { order: 2; }
-  body.pr-page .pr-flow > .launch-widget { order: 3; padding-bottom: 1.6rem; }
-  body.pr-page .pr-flow > #categories { order: 4; }
+  body.pr-page .pr-flow > .impact { order: 1; }
+  body.pr-page .pr-flow > .five-ws { order: 2; }
+  body.pr-page .pr-flow > .hub-group { order: 3; }
+  body.pr-page .pr-flow > .page-stats { order: 4; }
+  body.pr-page .pr-flow > .launch-widget { order: 5; padding-bottom: 1.6rem; }
 }
 
 /* ===== Page-specific: Search (was inline <style>) ===== */
@@ -608,3 +609,6 @@ html.dark .donate-btn.donate-btn-subtle { box-shadow: 0 6px 18px rgba(0,0,0,0.5)
 .card-band h3 a { color: inherit; text-decoration: none; }
 .card-band .card-blurb { font-size: 0.9rem; padding: 0 1rem 1.2rem; margin: 0; text-align: center; }
 html.dark .card-band .card-blurb { color: #c9d6e2; }
+/* Project Rawane hub-group headings link to their hub */
+.hub-group h2 a { color: inherit; text-decoration: none; }
+.hub-group h2 a:hover { text-decoration: underline; }
