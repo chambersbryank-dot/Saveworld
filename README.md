@@ -52,3 +52,11 @@ To add a new solution:
 4. Run `node build-search-index.js` (updates Search.html and solutions.json; warns about pages missing sp: metadata). Commit both.
 
 Upcoming missions are counted from `[data-mission]` widgets with a future `data-launch` / `data-arrival`.
+
+## Amazing Facts (auto-collected)
+
+`Amazing_Facts.html` lists facts between `<!-- FACTS:START -->` and `<!-- FACTS:END -->`. Do not edit page-sourced cards there by hand. To add a fact from any page in `sitemap.xml`, mark it on that page:
+
+`<p class="amazing-fact" hidden data-title="Short heading" data-source="https://source.url" data-source-name="NASA">Fact text.</p>`
+
+(`hidden` is optional; `data-title` defaults to the first words.) Then run `node build-search-index.js` (calls `build-facts.js`). It de-duplicates, sorts all cards alphabetically by heading, and links each fact to its page and its source. Facts without `data-source` are skipped with a warning. Hand-written cards inside the markers carry `data-fact-origin="hand"` and are kept as written.

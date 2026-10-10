@@ -630,3 +630,6 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 ### Known Glitches
 - Upcoming Launches (Project-Rawane.html): was stuck on "Loading…" due to a JS syntax error from a bulk rename. Fixed 2026-10-10. After bulk find/replace edits, run `node --check` on inline scripts.
+
+## Amazing Facts convention
+- Mark facts on any sitemap page with `<p class="amazing-fact" [hidden] data-title="..." data-source="URL" data-source-name="...">text</p>`. `node build-search-index.js` → `build-facts.js` regenerates Amazing_Facts.html between FACTS:START/END (dedupe by text, sort by heading, From-page + Source links; no data-source = skipped + warning). Hand cards in the block use `data-fact-origin="hand"` and are preserved. Only add facts supported by a cited source.

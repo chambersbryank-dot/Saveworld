@@ -68,3 +68,6 @@ if (stale.length) console.log('Note: in Search.html but not in sitemap.xml (kept
 
 // Also regenerate assets/data/solutions.json (stats engine).
 require("./build-stats.js")();
+
+// Also regenerate the Amazing Facts list from <p class="amazing-fact"> markers.
+require("./build-facts.js")();
