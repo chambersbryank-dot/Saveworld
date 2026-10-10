@@ -641,3 +641,4 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - 2026-10-10: d87db2a Project Rawane: Space Disposal hub group moved up — `body.pr-page #group-space-disposal { padding-top: 0 }`; gap Five W's→h2 82px→41px (1280 & 390). styles.css cache-bust ?v=20261010b on 44 pages.
 - 2026-10-10: c709c79 Project Rawane: even 41px gaps between all major blocks (Five W's, Space Disposal, Mankind, Nature, Planetary Defense, Space Weather, By the Numbers, Upcoming Launches) at 1280 & 390; Mankind treated as a block. Cache-bust ?v=20261010c.
+- 2026-10-10: 73b1536 Project Rawane: Natural solutions card image (Earth.jpg), Astroscale card image (RocketLaunch.jpg), sd-split gap 16px->24px (1.5rem), 360px cards centered. Cache-bust ?v=20261010d.
