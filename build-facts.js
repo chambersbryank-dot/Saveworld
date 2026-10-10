@@ -3,6 +3,7 @@
 //
 // Convention: any page in sitemap.xml can mark a fact with
 //   <p class="amazing-fact" data-source="URL" data-source-name="NASA" data-title="Short heading">Fact text.</p>
+// Optional: data-image, data-image-alt, data-image-credit add a card image.
 // (add `hidden` to keep it off the page itself). data-title is optional (defaults to the first words).
 // Facts without data-source are skipped with a warning. Duplicates (same text) are dropped.
 // Hand-written cards inside the markers carry data-fact-origin="hand" and are kept as written.
@@ -44,7 +45,9 @@ function buildFacts() {
       const title = attr(tag, 'data-title') || text.split(' ').slice(0, 5).join(' ');
       const sourceName = attr(tag, 'data-source-name') || source.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
       cards.push({ title, html:
-        `<div class="w-card" data-fact-origin="page" data-fact-page="${page}"><h3>${esc(title)}</h3><p>${esc(text)}</p>` +
+        `<div class="w-card" data-fact-origin="page" data-fact-page="${page}"><h3>${esc(title)}</h3>` +
+        (attr(tag, 'data-image') ? `<img class="fact-img" src="${esc(attr(tag, 'data-image'))}" alt="${esc(attr(tag, 'data-image-alt') || '')}" loading="lazy" decoding="async">` + (attr(tag, 'data-image-credit') ? `<p class="fact-credit">Image: ${esc(attr(tag, 'data-image-credit'))}</p>` : '') : '') +
+        `<p>${esc(text)}</p>` +
         `<p class="fact-source">From: <a href="${page}">${esc(pageTitle)}</a></p>` +
         `<p class="fact-source">Source: <a href="${esc(source)}" target="_blank" rel="noreferrer">${esc(sourceName)}</a></p></div>` });
     }
