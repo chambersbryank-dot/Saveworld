@@ -633,3 +633,6 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 ## Amazing Facts convention
 - Mark facts on any sitemap page with `<p class="amazing-fact" [hidden] data-title="..." data-source="URL" data-source-name="...">text</p>`. `node build-search-index.js` → `build-facts.js` regenerates Amazing_Facts.html between FACTS:START/END (dedupe by text, sort by heading, From-page + Source links; no data-source = skipped + warning). Hand cards in the block use `data-fact-origin="hand"` and are preserved. Only add facts supported by a cited source.
+
+## 2026-10-10 — Amazing Facts: Jupiter fact + auto-collect (4d3b198)
+- Added build-facts.js (called from build-search-index.js). Amazing_Facts.html now has FACTS markers; 4 existing hand facts kept (data-fact-origin="hand"), plus "Room for 1,300 Earths" sourced from a hidden amazing-fact on Jupiter.html (NASA Jupiter Fact Sheet, 1,321 by volume). 5 facts total. Proposed "Jupiter deflected/captured 2,000+ objects" NOT added: unsupported (real stat: comet impacts ~2,000x Earth's rate). Verified in headless Chrome at 1280px; build is idempotent.
