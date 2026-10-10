@@ -356,3 +356,12 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 | 2026-10-09 | Shared clone had another worker's uncommitted edits, so `git pull --rebase` refused | Used a separate clone /workspace/sw2 | Yes |
 | 2026-10-09 | JPL NEO Surveyor page returns 403 (CloudFront) to fetch and curl; MMX ISAS site returned 500 | Used NASA science.nasa.gov + NASA launch release, and mmx.jaxa.jp + ESA factsheet | Yes |
 | 2026-10-09 | images-api.nasa.gov asset lookup hung | Fetched images-assets.nasa.gov/image/<id>/<id>~large.jpg directly with a timeout | Yes |
+
+## Session Log — 2026-10-09 (night): shared stats engine
+
+- **What:** build-stats.js (called at the end of build-search-index.js) reads every sitemap page's `sp:` meta tags and `[data-mission]` widgets and writes assets/data/solutions.json (site-wide + per-category aggregates + per-page list). site.js renders the homepage overview (above the existing static stats, which stay as the no-JS/failure fallback) and a `.page-stats` "By the numbers" block on every hub/solution page (category counts, a site-wide line, and the page's own sourced stats). One fetch per session (sessionStorage); if the fetch fails the blocks stay hidden.
+- **First build:** 21 active solutions, 0 on the horizon, 8 hubs, 7 categories, 4 upcoming missions (Hera, MMX, NEO Surveyor, Dragonfly); 5 agency · 7 corporate · 8 nonprofit · 1 natural. No summable impact totals yet (see below).
+- **Seeded headline stats** only where the page already links a source: Hera (DART 33.25 min, 37 boulders), Webb/YR4 (21,200 km), NEO Surveyor (2/3 of NEOs >140 m), MMX (≥10 g), Jupiter (2,000×, 115 moons). Older pages (Ocean Cleanup 60M kg, 4ocean 50M lb, Plastic Bank 209M kg, Sungai Watch 4.5M kg, Life Terra 36M trees, etc.) state numbers but have no source link on the page, so no stats were seeded. **OPEN ITEM:** add source links to those pages, then add `sp:stat ... |impact|` tags so totals sum.
+- **Homepage static stats:** kept. They name sources in text (Ocean Cleanup press release / annual report, Science Advances, USGS) but without links. **OPEN ITEM:** link them.
+- **Titan.html** has no sp: tags (owned by the parallel Titan worker); build-stats.js uses a FALLBACK entry and warns. Add the tags + page-stats block to Titan.html next time it is touched, then delete the FALLBACK entry.
+- **How to add a solution:** sp: meta tags + page-stats section + sitemap entry, then `node build-search-index.js` (see README "Stats engine").
