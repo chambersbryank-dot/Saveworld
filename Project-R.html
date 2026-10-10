@@ -14,56 +14,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://www.saveplanetminusthedoom.com/assets/SavePlanetLogo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="toc-home.css">
-<style>
-/* Upcoming-launches widget + category cards (Project R only) */
-.launch-widget { max-width: 1200px; margin: 0 auto; padding: 1.6rem 1.5rem 0.4rem; }
-.launch-widget .lw-box { background: linear-gradient(135deg, #003755 0%, #00253a 100%); color: #fff; border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: 0 8px 22px rgba(0,55,85,0.15); }
-.launch-widget .lw-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; }
-body.toc-sub .launch-widget h2 { margin: 0; color: #fff; font-family: "Montserrat", "Segoe UI", sans-serif; font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
-.launch-widget .lw-live { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
-.launch-widget .lw-dot { width: 8px; height: 8px; border-radius: 50%; background: #00b894; box-shadow: 0 0 0 0 rgba(0,184,148,0.6); animation: lw-pulse 1.8s infinite; }
-@keyframes lw-pulse { 0% { box-shadow: 0 0 0 0 rgba(0,184,148,0.6); } 70% { box-shadow: 0 0 0 8px rgba(0,184,148,0); } 100% { box-shadow: 0 0 0 0 rgba(0,184,148,0); } }
-@media (prefers-reduced-motion: reduce) { .launch-widget .lw-dot { animation: none; } }
-.launch-widget .lw-next { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1rem 1.2rem; }
-.launch-widget .lw-kicker { margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8fd3ff; }
-.launch-widget .lw-mission { margin: 0 0 0.3rem; color: #fff; font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 800; }
-.launch-widget .lw-meta { margin: 0 0 0.2rem; color: rgba(255,255,255,0.9); font-size: 1rem; }
-.launch-widget .lw-when { margin: 0; color: rgba(255,255,255,0.75); font-size: 0.92rem; }
-.launch-widget .lw-countdown { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
-.launch-widget .lw-unit { min-width: 64px; text-align: center; background: rgba(0,156,222,0.18); border: 1px solid rgba(0,156,222,0.45); border-radius: 8px; padding: 0.4rem 0.5rem; }
-.launch-widget .lw-unit b { display: block; font-family: "Montserrat", "Segoe UI", sans-serif; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; color: #fff; }
-.launch-widget .lw-unit small { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
-.launch-widget .lw-list { list-style: none; margin: 0.9rem 0 0; padding: 0; }
-.launch-widget .lw-list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.2rem 1rem; padding: 0.55rem 0; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.95rem; }
-.launch-widget .lw-list .lw-l-name { font-weight: 700; color: #fff; }
-.launch-widget .lw-list .lw-l-sub { color: rgba(255,255,255,0.72); font-size: 0.85rem; display: block; font-weight: 500; }
-.launch-widget .lw-list .lw-l-date { color: #8fd3ff; font-weight: 600; white-space: nowrap; }
-.launch-widget .lw-note { margin: 0.9rem 0 0.2rem; font-size: 0.8rem; font-style: italic; color: rgba(255,255,255,0.7); }
-.launch-widget .lw-more { margin: 0.4rem 0 0; }
-.launch-widget .lw-more a { color: #8fd3ff; font-weight: 700; text-decoration: none; }
-.launch-widget .lw-more a:hover, .launch-widget .lw-more a:focus { text-decoration: underline; }
-.launch-widget .lw-credit { margin: 0.4rem 0 0; font-size: 0.72rem; color: rgba(255,255,255,0.5); }
-.launch-widget .lw-loading, .launch-widget .lw-error { margin: 0; color: rgba(255,255,255,0.85); }
-html.dark .launch-widget .lw-box { background: linear-gradient(135deg, #152033 0%, #0b1220 100%); }
-#categories .cat-intro { text-align: center; max-width: 720px; margin: -0.4rem auto 1.2rem; font-size: 1.05rem; line-height: 1.6; }
-#categories .grid { grid-template-columns: repeat(auto-fit, minmax(260px, 320px)); justify-content: center; }
-#categories .card { padding: 0; overflow: hidden; }
-html.dark #categories h2 { color: #e8eef5; }
-html.dark #categories h3, html.dark #categories h3 a { color: #4da3ff; }
-@media (max-width: 600px) { .launch-widget .lw-box { padding: 1.1rem; } .launch-widget .lw-unit { min-width: 56px; } }
-/* Phones only: show the launches widget after the Impact Statement. Desktop/tablet order is unchanged. */
-@media (max-width: 600px) {
-  .pr-flow { display: flex; flex-direction: column; }
-  .pr-flow > .five-ws { order: 1; }
-  .pr-flow > .impact { order: 2; }
-  .pr-flow > .launch-widget { order: 3; padding-bottom: 1.6rem; }
-  .pr-flow > #categories { order: 4; }
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.saveplanetminusthedoom.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Project R", "item": "https://www.saveplanetminusthedoom.com/Project-R.html"}]}</script>
 </head>
-<body class="toc-sub"><a class="skip-link" href="#solution">Skip to content</a><nav id="topnav"><div class="nav-container"><a class="brand-word" href="index.html">Home - Saving Planets</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li class="nav-dropdown"><a href="index.html#solutions" class="dropdown-toggle">Solutions</a><ul class="dropdown-menu"><li><a href="index.html#ocean-card">Ocean</a></li><li><a href="index.html#lakes-card">Lakes</a></li><li><a href="index.html#rivers-card">Rivers</a></li><li><a href="index.html#space-card">Space</a></li><li><a href="index.html#forests-card">Forests</a></li></ul></li><li><a href="Project-R.html">Project R</a></li><li><a href="Amazing_Facts.html">Amazing Facts</a></li><li><a href="About.html">About</a></li><li><a href="Search.html">Search</a></li></ul><button id="theme-toggle" class="theme-toggle" type="button">Dark</button></div></nav>
+<body class="toc-sub pr-page"><a class="skip-link" href="#solution">Skip to content</a><nav id="topnav"><div class="nav-container"><a class="brand-word" href="index.html">Home - Saving Planets</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li class="nav-dropdown"><a href="index.html#solutions" class="dropdown-toggle">Solutions</a><ul class="dropdown-menu"><li><a href="index.html#ocean-card">Ocean</a></li><li><a href="index.html#lakes-card">Lakes</a></li><li><a href="index.html#rivers-card">Rivers</a></li><li><a href="index.html#space-card">Space</a></li><li><a href="index.html#forests-card">Forests</a></li></ul></li><li><a href="Project-R.html">Project R</a></li><li><a href="Amazing_Facts.html">Amazing Facts</a></li><li><a href="About.html">About</a></li><li><a href="Search.html">Search</a></li></ul><button id="theme-toggle" class="theme-toggle" type="button">Dark</button></div></nav>
 <section class="page-hero"><div class="page-hero-content"><h1>Project R</h1><p>The two-way relationship between Earth and space.</p></div></section>
 <nav aria-label="Breadcrumb" class="breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Project R</span></li></ol></nav>
 <div class="pr-flow">
