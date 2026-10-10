@@ -606,3 +606,5 @@ html.dark .card-band .card-blurb { color: #c9d6e2; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 /* Project Rawane has no hero: clear the fixed top nav */
 body.pr-page .pr-flow { padding-top: calc(var(--nav-height, 88px) + 0.5rem); }
+/* Hub pages without a hero (e.g. Space Disposal): clear the fixed top nav */
+body.no-hero h1.visually-hidden + section { padding-top: calc(var(--nav-height, 88px) + 0.5rem); }
