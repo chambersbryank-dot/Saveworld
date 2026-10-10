@@ -1,21 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var saved = localStorage.getItem('sp-theme');
-  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    root.classList.add('dark');
-  }
-  var toggle = document.getElementById('theme-toggle');
-  function paint() {
-    if (toggle) toggle.textContent = root.classList.contains('dark') ? 'Light' : 'Dark';
-  }
-  paint();
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      root.classList.toggle('dark');
-      localStorage.setItem('sp-theme', root.classList.contains('dark') ? 'dark' : 'light');
-      paint();
-    });
-  }
+  root.classList.add('dark'); // site is permanently dark
   var nav = document.getElementById('topnav');
   if (nav) {
     window.addEventListener('scroll', function () {
