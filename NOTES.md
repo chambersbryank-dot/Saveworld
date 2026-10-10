@@ -619,3 +619,5 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane: PRELUDE centered)
 
 - Man-made grid on Project-Rawane.html gets class sd-mankind: flex-wrap with justify-content:center; cards fixed at 1/4 width (≤900px: 1/2, ≤600px: full), min-width:0 so images don't force width. At 1280px the first four stay in one row and PRELUDE is centered under ClearSpace/LeoLabs (same 270px width); at ~800px rows of two with PRELUDE centered; phones single column.
+
+- 2026-10-10: Project Rawane — halved gap above "Space disposal (made by mankind)" block (29px → 14px at 1280/390; subhead-to-cards 16px unchanged). Commit fa1763c.
