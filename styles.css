@@ -615,3 +615,6 @@ body.toc-sub .page-hero.hub-hero, body.toc-sub[class] .page-hero.hub-hero { back
 .anchor-target { display: block; scroll-margin-top: calc(var(--nav-height, 88px) + 16px); }
 .card-band .grid.sd-natural { grid-template-columns: repeat(3, minmax(0, 300px)); justify-content: center; margin-bottom: 1.8rem; }
 @media (max-width: 600px) { .card-band .grid.sd-natural { grid-template-columns: 1fr; } }
+/* Project Rawane: tighter gap between dedication line and Impact Statement (~32px -> ~16px) */
+body.pr-page .pr-flow > .impact { padding-top: 0.3rem; }
+body.pr-page .pr-flow > .impact > h2 { margin-top: 0.7rem; }
