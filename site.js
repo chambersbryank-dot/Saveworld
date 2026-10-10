@@ -84,7 +84,7 @@
       '</div>' +
       (ms.length ? '<h3>Milestones</h3><ul class="mw-milestones">' + ms.map(function (m) { var past = new Date(m.d).getTime() < Date.now(); return '<li class="' + (past ? 'done' : '') + '"><span class="mw-date">' + esc(fmt(m.d)) + '</span> ' + esc(m.l) + '</li>'; }).join('') + '</ul>' : '') +
       (ds.news ? '<h3>Latest news</h3><ul class="mw-news"><li>Loading…</li></ul>' : '') +
-      '<p class="mw-note">Dates per NASA; missions shift.' + (ds.source ? ' <a href="' + esc(ds.source) + '" target="_blank" rel="noreferrer">Source: ' + esc(ds.sourceLabel || 'NASA') + '</a>' : '') + '</p>';
+      '<p class="mw-note">Dates per ' + esc(ds.agency || 'NASA') + '; missions shift.' + (ds.source ? ' <a href="' + esc(ds.source) + '" target="_blank" rel="noreferrer">Source: ' + esc(ds.sourceLabel || 'NASA') + '</a>' : '') + '</p>';
     var counters = el.querySelectorAll('[data-t]');
     function tick() { Array.prototype.forEach.call(counters, function (c) { c.textContent = count(c.getAttribute('data-t')); }); }
     tick(); setInterval(tick, 1000);
