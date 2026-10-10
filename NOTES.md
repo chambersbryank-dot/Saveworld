@@ -615,3 +615,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane Space Disposal subsections)
 
 - After the two split cards (now titled "Man-made solutions" / "Natural solutions" per user commits 6ce41f3, 36711ed): h3.sd-subhead "Space disposal (made by mankind)" + Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE (horizon); then h3.sd-subhead "Space disposal made by nature" + Atmospheric Drag, Titan, Jupiter. Reorder only, no text changes.
+
+## Session Log — 2026-10-10 (Project Rawane: PRELUDE centered)
+
+- Man-made grid on Project-Rawane.html gets class sd-mankind: flex-wrap with justify-content:center; cards fixed at 1/4 width (≤900px: 1/2, ≤600px: full), min-width:0 so images don't force width. At 1280px the first four stay in one row and PRELUDE is centered under ClearSpace/LeoLabs (same 270px width); at ~800px rows of two with PRELUDE centered; phones single column.
