@@ -558,3 +558,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Space Disposal: no hero)
 
 - Space_Disposal.html: removed hero (h1 + "Removing dead rockets and debris from orbit — before it removes our satellites.") and visible breadcrumb (Home › Project Rawane › Space Disposal). Added visually hidden h1 + body class `no-hero`; CSS `body.no-hero h1.visually-hidden + section` pads below the fixed nav (reusable for other hero-less pages). JSON-LD breadcrumb kept.
+
+## Session Log — 2026-10-10 (Space Disposal duplicate Jupiter)
+
+- Removed the Jupiter card from the "Missions and solutions" card grid on Space_Disposal.html; kept the entry under "Natural debris and saving moons" (already carries id="jupiter" + data-menu-item). Jupiter's count comes from Jupiter.html's own sp: tags, so totals unchanged (32 active, 4 horizon, 10 hubs, 6 upcoming). If hub cards are ever regenerated, leave Jupiter out of the Space Disposal list.
