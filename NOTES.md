@@ -594,3 +594,8 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Restored `<p class="pr-dedication">` below the title hero, above the Impact Statement: "The two-way relationship between Earth and space. Project R is named for Rawane — because the best projects start with someone you love." (CSS .pr-dedication, centered italic).
 - Searched full history of Project-Rawane.html and Project-R.html (log --follow -p, -S/-G across all files) for a dedication mentioning a daughter: none found. The only dedication wording in history is the line above (hero subtitle) and "Project Rawane is named for Rawane — because the best projects start with someone you love." (impact sentence, introduced f2bd4c5, removed ddf48f6 at the user's request). Hero subtitle line: added ddf48f6, removed 0c15c1e, restored 06c58f4.
 - Errol Scales sentence was still present in the impact statement; not changed.
+
+## Session Log — 2026-10-10 (Project Rawane: Space Disposal split cards)
+
+- Project-Rawane.html Space Disposal group: (1) two cards side by side (.grid.sd-split): "Space Disposal (created by mankind)" → Space_Disposal.html#missions, "Space Disposal (natural space disposal solutions)" → Space_Disposal.html#natural-debris-and-saving-moons (synopses from existing Space Disposal text); (2) natural row (.grid.sd-natural): Atmospheric Drag, Titan, Jupiter → their pages; (3) mission grid now only Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE. Jupiter's Planetary Defense card unchanged.
+- Space_Disposal.html: added `<span id="natural-debris-and-saving-moons" class="anchor-target">` inside section#natural (kept #natural for existing links).
