@@ -599,3 +599,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - Project-Rawane.html Space Disposal group: (1) two cards side by side (.grid.sd-split): "Space Disposal (created by mankind)" → Space_Disposal.html#missions, "Space Disposal (natural space disposal solutions)" → Space_Disposal.html#natural-debris-and-saving-moons (synopses from existing Space Disposal text); (2) natural row (.grid.sd-natural): Atmospheric Drag, Titan, Jupiter → their pages; (3) mission grid now only Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE. Jupiter's Planetary Defense card unchanged.
 - Space_Disposal.html: added `<span id="natural-debris-and-saving-moons" class="anchor-target">` inside section#natural (kept #natural for existing links).
+
+## Session Log — 2026-10-10 (Project Rawane dedication gap)
+
+- styles.css (pr-page scoped): .pr-flow > .impact padding-top 0.3rem and its h2 margin-top 0.7rem. Gap from dedication line to "Impact Statement" heading 32px → 16px at 1280px and 390px (measured in headless Chrome). No text changes.
