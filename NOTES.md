@@ -592,5 +592,5 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Project Rawane dedication restored)
 
 - Restored `<p class="pr-dedication">` below the title hero, above the Impact Statement: "The two-way relationship between Earth and space. Project R is named for Rawane — because the best projects start with someone you love." (CSS .pr-dedication, centered italic).
-- Searched full history of Project-Rawane.html and Project-R.html (log --follow -p, -S/-G across all files) for a dedication mentioning a daughter: none found. The only dedication wording in history is the line above (hero subtitle) and "Project Rawane is named for Rawane — because the best projects start with someone you love." (impact sentence, introduced f2bd4c5, removed 0c15c1e... see report).
+- Searched full history of Project-Rawane.html and Project-R.html (log --follow -p, -S/-G across all files) for a dedication mentioning a daughter: none found. The only dedication wording in history is the line above (hero subtitle) and "Project Rawane is named for Rawane — because the best projects start with someone you love." (impact sentence, introduced f2bd4c5, removed ddf48f6 at the user's request). Hero subtitle line: added ddf48f6, removed 0c15c1e, restored 06c58f4.
 - Errol Scales sentence was still present in the impact statement; not changed.
