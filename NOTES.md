@@ -588,3 +588,9 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - Removed visible breadcrumb nav from Oceans, Lakes, Rivers, Deforestation, Space, Planetary Defense, Space Weather, Earth Observation (Space Disposal and Project Rawane had none). JSON-LD BreadcrumbList kept on all.
 - Order fix: Planetary Defense "A note on Roman" moved from between Five W's and cards to after the cards. Space Disposal keeps "Natural debris and saving moons" (itself a card group) before "Missions and solutions"; Space Weather and Earth Observation keep their detailed mission sections after the cards.
+
+## Session Log — 2026-10-10 (Project Rawane dedication restored)
+
+- Restored `<p class="pr-dedication">` below the title hero, above the Impact Statement: "The two-way relationship between Earth and space. Project R is named for Rawane — because the best projects start with someone you love." (CSS .pr-dedication, centered italic).
+- Searched full history of Project-Rawane.html and Project-R.html (log --follow -p, -S/-G across all files) for a dedication mentioning a daughter: none found. The only dedication wording in history is the line above (hero subtitle) and "Project Rawane is named for Rawane — because the best projects start with someone you love." (impact sentence, introduced f2bd4c5, removed 0c15c1e... see report).
+- Errol Scales sentence was still present in the impact statement; not changed.
