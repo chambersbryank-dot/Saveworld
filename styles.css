@@ -448,3 +448,8 @@ body.toc-sub .w-card p.fact-source a, .impact-box p.fact-source a { color: #8fd3
 .photo-credit { max-width: 1200px; margin: 0.4rem auto 0; padding: 0 1.5rem; font-size: 0.75rem; opacity: 0.7; text-align: right; }
 .donate-banner .photo-credit { text-align: center; padding: 0; }
 .donate-banner > p:first-child { text-align: center; font-size: 1.05rem; margin: 0 auto 0.4rem; max-width: 40rem; }
+
+/* ===== Page-specific: Titan ===== */
+body.toc-sub.titan-page .page-hero.space-hero {
+  background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Titan.jpg') center 45%/cover no-repeat;
+}
