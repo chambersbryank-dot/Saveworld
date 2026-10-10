@@ -627,3 +627,4 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 /* Project Rawane: move mankind block up (halve gap above it) */
 .card-band .grid.sd-split { margin-bottom: 0.9rem; }
 .card-band .grid.sd-split + h3.sd-subhead { margin-top: 0.9rem; }
+.card-band h3.sd-subhead.sd-subhead-lg { font-size: 1.6rem; }
