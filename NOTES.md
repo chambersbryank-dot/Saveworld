@@ -199,3 +199,9 @@
 - Brian uploaded four new planet photos to assets/ via the GitHub web UI: Earth.jpg (84 KB), Jupiter.jpg (171 KB), Saturn.jpg (1.60 MB), Uranus.jpg (224 KB). Mars.jpg was mentioned but not present in the repo at time of check — held in reserve.
 - Re-applied the Cassini photo overlay to all five homepage solution cards (index.html), using the Saturn navy-to-gold gradient template from the earlier session:
   [+43216 bytes at .content[1].resource.text]
+## Session Log — 2026-10-10 (Project R → Project Rawane rename)
+
+- Renamed Project-R.html → Project-Rawane.html; title, h1, breadcrumb, canonical, og/twitter, JSON-LD now "Project Rawane" at https://www.savingplanets.com/Project-Rawane.html. sp:category kept as project-r.
+- Hero subtitle: "The two-way relationship between Earth and space. Project R is named for Rawane — because the best projects start with someone you love." Removed duplicate "named for Rawane" sentence from impact statement (it now opens with "It follows Astroscale's ADRAS-J mission…"; there was no "Errol Scales" text).
+- .pr-hero background → assets/Nebula2.jpg (gradient kept). All Project-R.html links replaced site-wide incl. build-stats.js menu generator, sitemap, solutions.json, Search.html, README. Nav label still "Project R".
+- Old Project-R.html URL now 404s; consider a meta-refresh stub.
