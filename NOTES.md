@@ -570,3 +570,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Space Disposal: Atmospheric Drag only under natural)
 
 - Atmospheric Drag already had an entry (id="atmospheric-drag", data-menu-item) in "Natural debris and saving moons"; removed its duplicate card from "Missions and solutions". Totals unchanged (32/4/10/6). Still duplicated across both sections: Titan, MMX, LeoLabs (awaiting a decision).
+
+## Session Log — 2026-10-10 (Space Disposal: dedupe Titan, MMX, LeoLabs)
+
+- Titan kept only in "Natural debris and saving moons" (card removed from Missions grid). MMX and LeoLabs kept only in "Missions and solutions": their natural-section w-cards removed, and their id (#mmx, #leolabs) + data-menu-item moved onto the mission cards. Natural section now: Jupiter, Titan, Atmospheric Drag. Missions grid: Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE. Totals unchanged (32/4/10/6).
