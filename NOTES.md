@@ -234,3 +234,13 @@
 - **sitemap.xml** — adds Space_Disposal.html (lastmod 2026-10-09) and bumps Project-R.html lastmod to 2026-10-09.
 - **OPEN ITEM:** ClearSpace.html is out of date — it still describes the old Vega adapter target and says PRELUDE "launched in 2026". ESA now targets PROBA-1, and PRELUDE is targeting June 2027.
 - **OPEN ITEM:** Search.html index does not yet include Space_Disposal.html; run build-search-index.js to add the new page to search.
+
+## Session Log — 2026-10-09 (voice session with Brian, in car)
+
+- Reviewed Project-R.html source: Five W's section, Impact Statement, Upcoming Launches widget (live countdown via The Space Devs Launch Library 2 API, cached 10 min), Project R Categories card (Space Disposal), mobile reorder so widget appears after Impact Statement on phones <=600px.
+- Read NOTES.md (capitalized filename at repo root; notes.md lowercase does not exist).
+- Searched today's commits (2026-10-09): six pushes including Project-R.html rewrite to Ocean_Cleanup.html template for Project Rawane, Space_Disposal.html hub (ADRAS-J2 deep dive), Restoring_the_Lake_Depths.html, Three_Trees.html, Orbital_Data_Centers.html sitemap additions, build-search-index.js syntax fix, Space Disposal added to site search index, and mobile launches-widget reorder.
+- Produced a fresh site-wide enhancement assessment (polish, SEO, UX, logical flow) and ranked top five recommendations plus quicker extras; Brian approved all for execution.
+- Execution kicked off: one commit per item in order — (1) broken links + date conflicts, (2) JSON-LD structured data on all 28 pages, (3) image compression + width/height/lazy-loading, (4) Space/Project R/Space Disposal path unification + breadcrumbs + next-solution blocks, (5) CSS merge of styles.css and toc-home.css plus removal of 7 inline style blocks. Quicker extras included: Project-R spelling fixes, Twitter card tags, meta description lengthening, Page verified footers, Apple touch icon, font preconnect.
+- STANDING RULE from Brian: NOTES.md is the single source of truth for continuity between the voice assistant and the Chief of Staff. Before starting any task or reminding Brian of anything, read NOTES.md first. After finishing any task, append a session log here. Goal: Brian should never have to re-explain context or re-list dropped items.
+- Open item carried forward: IMG_0060.jpeg still pending rename to Saturn.jpg (from 2026-10-08 size check).
