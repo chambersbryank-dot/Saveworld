@@ -15,7 +15,7 @@ const path = require('path');
 
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
   'planetary-defense': 'Planetary Defense', 'space-weather': 'Space Weather & Shields',
-  'earth-observation': 'Earth Observation', 'project-r': 'Project R' };
+  'earth-observation': 'Earth Observation', 'project-r': 'Project Rawane' };
 const SKIP = ['Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
