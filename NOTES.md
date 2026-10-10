@@ -212,3 +212,8 @@
 - Nav dropdown label, "Project Rawane overview", Five W's heading, Categories heading and build-stats.js menu generator now say Project Rawane. URLs and sp:category=project-r unchanged; hero subtitle untouched.
 - Impact statement now opens: "It follows Errol Scales' work on orbital debris removal. It also follows Astroscale's ADRAS-J mission…"
 - Still "Project R" (not in scope): JSON-LD breadcrumb names on Space Disposal sub-pages, "Back to Project R" link, "Part of Project R", Dragonfly copy, categories intro paragraph, build-stats.js category label 'project-r': 'Project R'.
+
+## Session Log — 2026-10-10 (remaining Project R labels → Project Rawane)
+
+- Renamed: "Back to Project Rawane" (Space_Disposal), "Part of Project Rawane" (Space.html), Dragonfly paragraph (Titan), categories intro (Project-Rawane), JSON-LD + visible breadcrumb names on Atmospheric_Drag, LeoLabs, MMX, Space_Disposal, Titan. build-stats.js display name 'project-r': 'Project Rawane' (key unchanged); solutions.json rebuilt.
+- Still "Project R": meta/og/twitter descriptions on Project-Rawane.html and Search.html, Search.html index title entry (build-search-index.js doesn't refresh existing titles).
