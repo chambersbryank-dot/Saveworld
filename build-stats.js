@@ -19,7 +19,6 @@ const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 
 const SKIP = ['Search.html', '404.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
-  'Titan.html': { category: 'project-r', type: 'solution', classification: 'agency', status: 'active' },
 };
 
 function build() {

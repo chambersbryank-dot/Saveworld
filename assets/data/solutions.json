@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T03:07:44.308Z",
+ "generated": "2026-10-10T03:17:04.795Z",
  "site": {
   "categories": 9,
   "solutions": 32,
@@ -415,7 +415,15 @@
    "type": "solution",
    "classification": "agency",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Planned Dragonfly flight distance",
+     "value": 175,
+     "unit": "km (more than)",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/dragonfly/"
+    }
+   ],
    "missions": [
     {
      "name": "Dragonfly",
