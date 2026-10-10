@@ -660,3 +660,6 @@ body.toc-sub .page-hero.af-hero .page-hero-content { position: relative; z-index
 body.toc-sub .page-hero.af-hero p.af-hero-credit { margin-top: 0.8rem; font-size: 0.75rem; color: rgba(255,255,255,0.75); text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
 @keyframes af-kenburns { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.08) translate(-1.5%, -1%); } }
 @media (prefers-reduced-motion: reduce) { body.toc-sub .page-hero.af-hero::before { animation: none; } }
+
+.impact-bar .af-debris { color: #e8eef5; text-align: center; max-width: 920px; font-size: 1.1rem; line-height: 1.5; margin: 1.4rem auto 0; }
+.impact-bar .af-debris a { color: #8fd3ff; }
