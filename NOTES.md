@@ -621,3 +621,12 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - Man-made grid on Project-Rawane.html gets class sd-mankind: flex-wrap with justify-content:center; cards fixed at 1/4 width (≤900px: 1/2, ≤600px: full), min-width:0 so images don't force width. At 1280px the first four stay in one row and PRELUDE is centered under ClearSpace/LeoLabs (same 270px width); at ~800px rows of two with PRELUDE centered; phones single column.
 
 - 2026-10-10: Project Rawane — halved gap above "Space disposal (made by mankind)" block (29px → 14px at 1280/390; subhead-to-cards 16px unchanged). Commit fa1763c.
+
+## 2026-10-10 — Fix Upcoming Launches widget stuck on loading
+- Project-Rawane.html inline launch script had three unterminated string literals (`getElementById('lw-next);`, `'lw-list);`, `querySelector('.lw-countdown);`), introduced in ddf48f6 (Project R → Project Rawane rename). The SyntaxError stopped the whole script, so the "Loading the next launch" placeholder never changed. Not CORS, rate limit, cache or a removed element.
+- Also fixed: `&hellp;` typo in the placeholder, and the `esc()` HTML-escape map (entities had been decoded to raw characters).
+- Added fallback: 10 s timeout + AbortController; on any fetch/HTTP/render failure it shows "Launch data unavailable right now" with the Next Spaceflight link.
+- Verified in headless Chrome on a local server: mocked LL2 response renders next launch + countdown + list; mocked 429 shows the fallback; no page errors (site.js widgets unaffected).
+
+### Known Glitches
+- Upcoming Launches (Project-Rawane.html): was stuck on "Loading…" due to a JS syntax error from a bulk rename. Fixed 2026-10-10. After bulk find/replace edits, run `node --check` on inline scripts.
