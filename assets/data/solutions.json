@@ -1,35 +1,10 @@
 {
- "generated": "2026-10-10T18:51:06.993Z",
+ "generated": "2026-10-10T18:53:11.528Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
    "href": "Planetary_Defense.html",
-   "items": [
-    {
-     "name": "Hera (ESA)",
-     "anchor": "hera",
-     "href": "Planetary_Defense.html#hera",
-     "status": "active"
-    },
-    {
-     "name": "Jupiter (natural)",
-     "anchor": "jupiter",
-     "href": "Planetary_Defense.html#jupiter",
-     "status": "active"
-    },
-    {
-     "name": "NEO Surveyor (NASA)",
-     "anchor": "neo-surveyor",
-     "href": "Planetary_Defense.html#neo-surveyor",
-     "status": "active"
-    },
-    {
-     "name": "Webb and asteroid 2024 YR4",
-     "anchor": "webb-2024-yr4",
-     "href": "Planetary_Defense.html#webb-2024-yr4",
-     "status": "active"
-    }
-   ]
+   "items": []
   },
   {
    "hub": "Space Disposal",
