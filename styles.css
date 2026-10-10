@@ -453,3 +453,19 @@ body.toc-sub .w-card p.fact-source a, .impact-box p.fact-source a { color: #8fd3
 body.toc-sub.titan-page .page-hero.space-hero {
   background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Titan.jpg') center 45%/cover no-repeat;
 }
+
+/* ===== Reusable mission status widget ([data-mission]) ===== */
+.mission-widget { max-width: 1200px; margin: 1.5rem auto; padding: 1.25rem 1.5rem; border-radius: 14px; background: #0b2540; color: #e8f3ff; }
+body.toc-sub .mission-widget h2, body.toc-sub .mission-widget h3 { color: #e8f3ff; margin: 0.9rem 0 0.4rem; }
+body.toc-sub .mission-widget h2 { margin: 0 0 0.4rem; font-size: 1.35rem; }
+.mission-widget .mw-status { margin: 0 0 0.8rem; opacity: 0.9; }
+.mission-widget .mw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; }
+.mission-widget .mw-count { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 0.7rem 0.9rem; }
+.mission-widget .mw-count small { display: block; opacity: 0.8; font-size: 0.8rem; }
+.mission-widget .mw-count b { font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.mission-widget ul { margin: 0; padding-left: 1.1rem; }
+.mission-widget li { margin: 0.25rem 0; }
+.mission-widget li.done { opacity: 0.65; }
+.mission-widget .mw-date { font-size: 0.8rem; opacity: 0.75; }
+.mission-widget a { color: #8fd3ff; }
+.mission-widget .mw-note { margin: 0.9rem 0 0; font-size: 0.78rem; opacity: 0.8; }
