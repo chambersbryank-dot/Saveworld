@@ -608,3 +608,4 @@ html.dark .card-band .card-blurb { color: #c9d6e2; }
 body.pr-page .pr-flow { padding-top: calc(var(--nav-height, 88px) + 0.5rem); }
 /* Hub pages without a hero (e.g. Space Disposal): clear the fixed top nav */
 body.no-hero h1.visually-hidden + section { padding-top: calc(var(--nav-height, 88px) + 0.5rem); }
+body.toc-sub h2.h2-center { text-align: center; }
