@@ -618,7 +618,7 @@ body.toc-sub .page-hero.pr-hero p.pr-dedication { max-width: 760px; margin: 0.6r
 body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc(var(--nav-height, 88px) + 2.2rem) 0 2.4rem; box-sizing: border-box; }
 @media (max-width: 600px) { body.toc-sub .page-hero.pr-hero p.pr-dedication { font-size: 0.95rem; } }
 /* Project Rawane Space Disposal subsections */
-.card-band h3.sd-subhead { text-align: center; font-size: 1.35rem; color: #e8eef5; margin: 1.6rem 0 1rem; padding: 0; }
+.card-band .sd-subhead { text-align: center; font-size: 1.35rem; color: #e8eef5; margin: 1.6rem 0 1rem; padding: 0; }
 /* Project Rawane: man-made grid as centered flex rows (lone 5th card centered) */
 .card-band .grid.sd-mankind { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .card-band .grid.sd-mankind > .card { flex: 0 0 calc((100% - 4.5rem) / 4); min-width: 0; height: auto; }
@@ -626,23 +626,23 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 @media (max-width: 600px) { .card-band .grid.sd-mankind > .card { flex-basis: 100%; } }
 /* Project Rawane: move mankind block up (halve gap above it) */
 .card-band .grid.sd-split { margin-bottom: 0.9rem; }
-.card-band .grid.sd-split + h3.sd-subhead { margin-top: 0.9rem; }
+.card-band .grid.sd-split + .sd-subhead { margin-top: 0.9rem; }
 footer p { text-wrap: balance; margin: 0.35rem auto; }
 
 /* Project Rawane: every section heading matches the Impact Statement h2 size (body.toc-sub h2: clamp(1.6rem, 3vw, 2.2rem)). One scoped block; replaces earlier stacked overrides. */
 body.pr-page .impact > h2,
 body.pr-page .five-ws > h2,
 body.pr-page .hub-group > h2,
-body.pr-page .card-band h3.sd-subhead.sd-subhead-lg,
+body.pr-page .card-band .sd-subhead.sd-subhead-lg,
 body.pr-page .page-stats h2,
 body.pr-page .launch-widget .lw-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
-body.pr-page .card-band h3.sd-subhead.sd-subhead-lg { font-weight: 700; color: #e8eef5; }
+body.pr-page .card-band .sd-subhead.sd-subhead-lg { font-weight: 700; color: #e8eef5; }
 .w-card[data-fact-origin] > h3 { text-align: center; text-transform: capitalize; }
 /* Move Space Disposal hub group up: halve gap above it (after Five W's) */
 body.pr-page #group-space-disposal { padding-top: 0; }
 /* Even 41px gaps between Project Rawane blocks (content bottom -> next heading text) */
-body.pr-page .card-band .grid.sd-split + h3.sd-subhead { margin-top: 22.4px; }
-body.pr-page .card-band .grid.sd-mankind + h3.sd-subhead { margin-top: 22.4px; }
+body.pr-page .card-band .grid.sd-split + .sd-subhead { margin-top: 22.4px; }
+body.pr-page .card-band .grid.sd-mankind + .sd-subhead { margin-top: 22.4px; }
 body.pr-page #group-space-disposal .grid.sd-natural { margin-bottom: 0; }
 body.pr-page #group-planetary-defense, body.pr-page #group-space-weather { padding-top: 19.6px; }
 body.pr-page .page-stats { margin-top: 42px; margin-bottom: 0; }
@@ -665,3 +665,5 @@ body.toc-sub .page-hero.af-hero p.af-hero-credit { margin-top: 0.8rem; font-size
 .impact-bar .af-debris a { color: #8fd3ff; }
 /* Amazing Facts: Be Part of the Fix heading matches section h2 size (stats heading) */
 body.toc-sub #actions .mission-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+/* Project Rawane: one size per heading level (h3 = 20px card titles) */
+body.pr-page .five-ws h3, body.toc-sub.pr-page .page-stats .ps-card h3, body.pr-page .launch-widget h3 { font-size: 1.25rem; }

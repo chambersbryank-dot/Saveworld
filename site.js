@@ -132,11 +132,11 @@
       if (!c) return;
       var page = null, url = el.getAttribute('data-stats-page');
       d.pages.forEach(function (p) { if (p.url === url && !p.section) page = p; });
-      var html = '<h2>By the numbers</h2><div class="ps-grid">' +
+      var html = '<h2>By the Numbers</h2><div class="ps-grid">' +
         '<div class="ps-card"><h3>' + esc(c.name) + '</h3><p>' + solLine(c) + (cls(c.byClassification) ? '<br><small>' + esc(cls(c.byClassification)) + '</small>' : '') + '</p>' +
         (c.upcomingMissions ? '<p>' + plural(c.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p>' : '') +
         c.impactTotals.map(function (t) { return '<p>' + num(t.total) + ' ' + esc(t.unit) + ' <small>combined, from sourced page figures</small></p>'; }).join('') + '</div>' +
-        '<div class="ps-card"><h3>Site-wide</h3><p>' + solLine(d.site) + '</p><p>' + plural(d.site.hubs, 'hub', 'hubs') + ' · ' + plural(d.site.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p></div>';
+        '<div class="ps-card"><h3>Site-Wide</h3><p>' + solLine(d.site) + '</p><p>' + plural(d.site.hubs, 'hub', 'hubs') + ' · ' + plural(d.site.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p></div>';
       if (page && page.stats.length) {
         html += '<div class="ps-card"><h3>This page</h3>' + page.stats.map(function (s) {
           var u = /^https?:\/\//.test(s.sourceUrl) ? s.sourceUrl : '';
