@@ -72,7 +72,13 @@
   }
 
   function render(data) {
-    var r = (data && data.results) || [];
+    var now = Date.now();
+    var r = ((data && data.results) || []).filter(function (l) {
+      var ab = l.status && l.status.abbrev ? String(l.status.abbrev).toLowerCase() : '';
+      if (ab === 'success' || ab === 'failure' || ab === 'partial failure') return false;
+      var t = new Date(l.net).getTime();
+      return isNaN(t) || t > now;
+    });
     if (!r.length) { showError(); return; }
     var n = r[0];
     var status = n.status && n.status.abbrev ? ' &middot; Status: ' + esc(n.status.abbrev) : '';
