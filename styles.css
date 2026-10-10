@@ -629,3 +629,4 @@ body.toc-sub .page-hero.pr-hero { height: auto; min-height: 340px; padding: calc
 .card-band .grid.sd-split + h3.sd-subhead { margin-top: 0.9rem; }
 .card-band h3.sd-subhead.sd-subhead-lg { font-size: 1.6rem; }
 .card-band h3.sd-subhead.sd-subhead-lg { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: #e8eef5; line-height: 1.2; }
+footer p { text-wrap: balance; margin: 0.35rem auto; }
