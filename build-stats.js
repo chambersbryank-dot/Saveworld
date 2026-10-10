@@ -41,7 +41,7 @@ function buildProjectRMenu(warnings) {
 }
 function menuHtml(menu) {
   const groups = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
-    g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag">horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
+    g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag" aria-hidden="true">horizon</span><span class="visually-hidden">, on the horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
   // Project Rawane is a plain top-nav link (no dropdown); menu data still recorded in solutions.json.
   return '<li><a href="Project-Rawane.html">Project Rawane</a></li>';
 }
