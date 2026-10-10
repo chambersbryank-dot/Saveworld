@@ -437,3 +437,14 @@ html.dark #results .match, html.dark #status { color: #e8eef5; }
 .impact-box p.source-link { margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.18); font-size: 0.9rem; text-align: right; }
 .impact-box p.source-link a { color: rgba(255,255,255,0.82); font-family: "Montserrat", "Segoe UI", sans-serif; font-weight: 600; letter-spacing: 0.02em; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5); }
 .impact-box p.source-link a:hover, .impact-box p.source-link a:focus { color: #fff; border-bottom-style: solid; }
+
+/* ===== Page-specific: Jupiter ===== */
+body.toc-sub.jupiter-page .page-hero.space-hero {
+  background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Jupiter.jpg') center 40%/cover no-repeat;
+}
+body.toc-sub .w-card p.fact-source { margin-top: 0.7rem; font-size: 0.78rem; opacity: 0.8; }
+body.toc-sub .w-card p.fact-source a, .impact-box p.fact-source a { color: #8fd3ff; }
+.impact-box p.fact-source { font-size: 0.8rem; opacity: 0.85; }
+.photo-credit { max-width: 1200px; margin: 0.4rem auto 0; padding: 0 1.5rem; font-size: 0.75rem; opacity: 0.7; text-align: right; }
+.donate-banner .photo-credit { text-align: center; padding: 0; }
+.donate-banner > p:first-child { text-align: center; font-size: 1.05rem; margin: 0 auto 0.4rem; max-width: 40rem; }
