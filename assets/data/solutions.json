@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-10T03:04:32.355Z",
+ "generated": "2026-10-10T03:07:44.308Z",
  "site": {
   "categories": 9,
-  "solutions": 29,
-  "horizon": 0,
+  "solutions": 32,
+  "horizon": 4,
   "hubs": 10,
   "byClassification": {
    "nonprofit": 8,
-   "corporate": 8,
-   "natural": 2,
+   "corporate": 10,
+   "natural": 3,
    "agency": 11
   },
   "upcomingMissions": 4,
@@ -64,11 +64,11 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 4,
-   "horizon": 0,
+   "solutions": 5,
+   "horizon": 4,
    "hubs": 1,
    "byClassification": {
-    "corporate": 3,
+    "corporate": 4,
     "natural": 1
    },
    "upcomingMissions": 0,
@@ -111,11 +111,13 @@
   },
   "project-r": {
    "name": "Project R",
-   "solutions": 2,
+   "solutions": 4,
    "horizon": 0,
    "hubs": 2,
    "byClassification": {
-    "agency": 2
+    "agency": 2,
+    "natural": 1,
+    "corporate": 1
    },
    "upcomingMissions": 2,
    "impactTotals": []
@@ -269,12 +271,67 @@
    "missions": []
   },
   {
+   "url": "Astroscale.html",
+   "title": "APS-R",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Astroscale.html",
+   "title": "ISSA-J1 Phase 3",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Astroscale.html",
+   "title": "LEXI-P",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
    "url": "ClearSpace.html",
    "title": "ClearSpace",
    "category": "space",
    "type": "solution",
    "classification": "corporate",
    "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "ClearSpace.html",
+   "title": "PRELUDE",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "ClearSpace.html",
+   "title": "CLEAR (UK)",
+   "category": "space",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "horizon",
+   "section": true,
    "stats": [],
    "missions": []
   },
@@ -617,6 +674,49 @@
    "status": "active",
    "section": true,
    "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Atmospheric_Drag.html",
+   "title": "Atmospheric Drag",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Typical fall-back time below 600 km",
+     "value": "several",
+     "unit": "years",
+     "kind": "fact",
+     "sourceUrl": "https://orbitaldebris.jsc.nasa.gov/faq/"
+    },
+    {
+     "label": "Cataloged debris re-entering, 50-year average",
+     "value": 1,
+     "unit": "piece per day",
+     "kind": "fact",
+     "sourceUrl": "https://orbitaldebris.jsc.nasa.gov/faq/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "LeoLabs.html",
+   "title": "LeoLabs",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Smallest debris tracked by its Costa Rica radar (company figure, 2021)",
+     "value": 2,
+     "unit": "cm",
+     "kind": "fact",
+     "sourceUrl": "https://www.prnewswire.com/news-releases/leolabs-announces-costa-rica-space-radar-fully-operational-301275261.html"
+    }
+   ],
    "missions": []
   },
   {

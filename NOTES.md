@@ -375,3 +375,26 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 - **Images:** SDO_Sun.jpg — NASA/SDO (GSFC_20171208_Archive_e001210); EPIC_Earth.jpg — NASA/NOAA DSCOVR EPIC (GSFC_20171208_Archive_e000678). Both public domain, ≤1600 px, <250 KB.
 - Nav dropdown now lists Planetary Defense, Space Weather, Earth Observation on every page except Titan.html; homepage Space card links both hubs; sitemap + search updated (35 entries); solutions.json rebuilt: 29 active solutions, 0 horizon, 10 hubs, 4 upcoming missions.
 - **Earth Observation open item:** no earlier "Earth Observation" open item was found in NOTES.md; the hub now exists, so consider it resolved.
+
+## Horizon copy pattern (added 2026-10-09)
+
+- **Template (exact):** "This is a potential solution [ORG] is advancing. We expect to know more within [TIMEFRAME] and will keep you updated here."
+- **Component:** one callout, `<div class="horizon-note" data-org="[ORG]" data-timeframe="[TIMEFRAME]" data-next-milestone="[YYYY-MM or empty]">` containing `<span class="horizon-badge">Potential solution on the horizon</span>` plus the sentence (text is in the HTML, so it works without JS and is crawlable). Pages carrying horizon items add `<meta name="sp:item" content="Name|classification|horizon">` so the stats engine counts them separately and never sums their numbers.
+- **Timeframe rules:** measure from today to the item's sourced next milestone: ~3 months → "the next three months"; ~6 months → "the next six months"; ~9 months → "the next nine months"; ~12 months → "the coming year"; no reported milestone → "the coming months". Never invent a date; leave data-next-milestone empty when none is reported.
+
+| Item | ORG | Timeframe | Next milestone | Source |
+|---|---|---|---|---|
+| PRELUDE (with ESA) | ClearSpace | the next nine months | 2027-06 (launch target) | clearspace.today/missions/prelude; SpaceNews Jan 13 2026 |
+| CLEAR (with the UK Space Agency) | ClearSpace | the coming months | none officially reported | clearspace.today/missions/clear (the £61.3M Phase 3 award appears only on third-party tender trackers) |
+| ISSA-J1 Phase 3 (flight) | Astroscale Japan | the coming months | none reported | Astroscale notice Oct 6 2026 (Phase 2 increase, Phase 3 not awarded) |
+| LEXI-P | Astroscale | the next six months | 2027-04 (contract signing expected in FY2027, year ending Apr 2027) | Astroscale business update Apr 2026 |
+
+## Session Log — 2026-10-09 (night): H, I, J, O + horizon rule
+
+- **H Atmospheric_Drag.html** — natural page on Space Disposal (breadcrumb Home > Project R > Space Disposal), paired with Jupiter. Altitude figures only from NASA ODPO FAQ (below 600 km: falls back within several years; 800 km: often centuries; above 1,000 km: a thousand years or more; debris densest at 750–1,000 km; ~1 cataloged piece re-enters per day over 50 years) and NOAA SWPC satellite drag (boost ~4×/yr when quiet vs every 2–3 weeks at solar max).
+- **I ClearSpace.html** — new "On the horizon" section: PRELUDE and CLEAR as horizon callouts; the Where card no longer says the UK Space Agency "selected" ClearSpace. PRELUDE callouts also added next to PRELUDE mentions on Space.html and Space_Disposal.html. ClearSpace-1 (ESA contract) stays active.
+  - **PRELUDE decision: horizon.** ESA and ClearSpace jointly announced the collaboration (Jan 12 2026) and a June 2027 launch target, but no contract value or funding has been published by ESA, so it does not meet "solidly confirmed contract or funding."
+- **J Astroscale.html** — substantial "What's next" section instead of a new page: APS-R active (USSF Space Systems Command agreement; launch now planned in Astroscale FY2027), ISSA-J1 Phase 2 active (¥249M increase Oct 6 2026) with Phase 3 flight as horizon, LEXI-P horizon (contract not signed). Company figures labeled.
+- **O LeoLabs.html** — corporate page on Space Disposal; 2 cm tracking claim labeled as a 2021 company figure, and the current company page lists Tracker radars at >10 cm with Ranger (<10 cm) in development.
+- Space_Disposal.html: Atmospheric Drag and LeoLabs cards. Sitemap +2, search 37 entries, solutions.json: 32 active, 4 on the horizon, 10 hubs, 4 upcoming missions.
+- Images: Progress_Reentry.jpg — NASA iss029e034092; LEO_View.jpg — NASA iss023e057948 (caption strip cropped). Public domain.
