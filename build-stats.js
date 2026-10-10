@@ -42,8 +42,8 @@ function buildProjectRMenu(warnings) {
 function menuHtml(menu) {
   const groups = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
     g.items.map(i => `<li><a href="${i.href}">${esc(i.name)}${i.status === 'horizon' ? ' <span class="menu-tag">horizon</span>' : ''}</a></li>`).join('') + '</ul></li>').join('');
-  return '<li class="nav-dropdown nav-dropdown-wide"><a href="Project-Rawane.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Project Rawane</a>' +
-    '<ul class="dropdown-menu"><li><a class="menu-overview" href="Project-Rawane.html">Project Rawane overview</a></li>' + groups + '</ul></li>';
+  // Project Rawane is a plain top-nav link (no dropdown); menu data still recorded in solutions.json.
+  return '<li><a href="Project-Rawane.html">Project Rawane</a></li>';
 }
 function writeProjectRMenu(menu) {
   const html = menuHtml(menu); let n = 0;
