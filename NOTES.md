@@ -611,3 +611,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (dedication wording)
 
 - Dedication line now reads: "A two-way relationship between Earth and Space. Project R is named for Rawane — because the best projects start with someone you love." (Project-Rawane.html hero). Earlier log entries keep the old wording as history. Meta/og/twitter descriptions and the Five W's "What" card use a different phrase ("the two-way relationship between Earth and space — …") and were not changed.
+
+## Session Log — 2026-10-10 (Project Rawane Space Disposal subsections)
+
+- After the two split cards (now titled "Man-made solutions" / "Natural solutions" per user commits 6ce41f3, 36711ed): h3.sd-subhead "Space disposal (made by mankind)" + Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE (horizon); then h3.sd-subhead "Space disposal made by nature" + Atmospheric Drag, Titan, Jupiter. Reorder only, no text changes.
