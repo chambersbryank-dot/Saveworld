@@ -640,3 +640,11 @@ body.pr-page .card-band h3.sd-subhead.sd-subhead-lg { font-weight: 700; color: #
 .w-card[data-fact-origin] > h3 { text-align: center; text-transform: capitalize; }
 /* Move Space Disposal hub group up: halve gap above it (after Five W's) */
 body.pr-page #group-space-disposal { padding-top: 0; }
+/* Even 41px gaps between Project Rawane blocks (content bottom -> next heading text) */
+body.pr-page .card-band .grid.sd-split + h3.sd-subhead { margin-top: 22.4px; }
+body.pr-page .card-band .grid.sd-mankind + h3.sd-subhead { margin-top: 22.4px; }
+body.pr-page #group-space-disposal .grid.sd-natural { margin-bottom: 0; }
+body.pr-page #group-planetary-defense, body.pr-page #group-space-weather { padding-top: 19.6px; }
+body.pr-page .page-stats { margin-top: 42px; margin-bottom: 0; }
+body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 19.6px; }
+@media (max-width: 600px) { body.pr-page .pr-flow > .launch-widget, body.pr-page .launch-widget { padding-top: 24.4px; } }
