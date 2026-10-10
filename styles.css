@@ -248,7 +248,7 @@ html.dark .welcome-minus { color: #e8eef5; }
 .next-solutions a:hover { background: #009cde; color: #fff; }
 html.dark .breadcrumb a, html.dark .next-solutions a { color: #8fd3ff; border-color: #8fd3ff; }
 html.dark .next-solutions a:hover { background: #8fd3ff; color: #071018; }
-nav.breadcrumb, body.toc-sub nav.breadcrumb, body.toc-home nav.breadcrumb { position: static; background: none; box-shadow: none; z-index: auto; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none; }
+nav.breadcrumb, body.toc-sub nav.breadcrumb, body.toc-home nav.breadcrumb, nav.jump-nav, body.toc-sub nav.jump-nav { position: static; background: none; box-shadow: none; z-index: auto; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none; }
 
 /* ===== Merged from toc-home.css (loads after base rules; wins on conflicts) ===== */
 :root { --toc-navy: #003755; --toc-blue: #009cde; --brand-blue: #009cde; --solution-green: #00b894; --section-gap: 2.6rem; --nav-height: 88px; }
@@ -589,3 +589,11 @@ html.dark .menu-tag { background: #4a3b00; color: #ffe08a; }
 @media (max-width: 900px) { body.toc-home nav.open .nav-links, body.toc-sub nav.open .nav-links { background: rgba(255,255,255,0.98); backdrop-filter: none; -webkit-backdrop-filter: none; } html.dark body nav.open .nav-links { background: #0f1a2b; } }
 /* Project Rawane mission list (breadcrumb-styled, middot separators) */
 .breadcrumb.mission-list li + li::before { content: "·"; }
+/* On-page jump nav (Titan): pill links matching .next-solutions */
+.jump-nav { max-width: 1100px; margin: 0.5rem auto 1.5rem; padding: 0 1.5rem; }
+.jump-nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.jump-nav a { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #009cde; border-radius: 999px; color: #009cde; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+.jump-nav a:hover { background: #009cde; color: #fff; }
+html.dark .jump-nav a { color: #8fd3ff; border-color: #8fd3ff; }
+html.dark .jump-nav a:hover { background: #8fd3ff; color: #071018; }
+#five-ws, #by-the-numbers { scroll-margin-top: calc(var(--nav-height, 88px) + 16px); }
