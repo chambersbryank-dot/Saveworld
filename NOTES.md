@@ -205,3 +205,10 @@
 - Hero subtitle: "The two-way relationship between Earth and space. Project R is named for Rawane — because the best projects start with someone you love." Removed duplicate "named for Rawane" sentence from impact statement (it now opens with "It follows Astroscale's ADRAS-J mission…"; there was no "Errol Scales" text).
 - .pr-hero background → assets/Nebula2.jpg (gradient kept). All Project-R.html links replaced site-wide incl. build-stats.js menu generator, sitemap, solutions.json, Search.html, README. Nav label still "Project R".
 - Old Project-R.html URL now 404s; consider a meta-refresh stub.
+
+## Session Log — 2026-10-10 (Project-R.html redirect, Rawane labels, Errol Scales)
+
+- Added Project-R.html redirect stub (meta refresh 0 → Project-Rawane.html, canonical, noindex). Excluded from build-stats.js SKIP and build-search-index.js; not in sitemap.
+- Nav dropdown label, "Project Rawane overview", Five W's heading, Categories heading and build-stats.js menu generator now say Project Rawane. URLs and sp:category=project-r unchanged; hero subtitle untouched.
+- Impact statement now opens: "It follows Errol Scales' work on orbital debris removal. It also follows Astroscale's ADRAS-J mission…"
+- Still "Project R" (not in scope): JSON-LD breadcrumb names on Space Disposal sub-pages, "Back to Project R" link, "Part of Project R", Dragonfly copy, categories intro paragraph, build-stats.js category label 'project-r': 'Project R'.
