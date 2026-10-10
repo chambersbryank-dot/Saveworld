@@ -583,3 +583,8 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 
 - New shared `.page-hero.hub-hero` (styles.css): Nebula2.jpg + pr-hero dark gradient. Applied to Oceans, Lakes, Rivers, Deforestation (Forests), Space, Planetary Defense, Space Weather, Earth Observation, Space Disposal: hero contains only the h1 (subtitles removed; old hero classes space-hero/lakes-hero/rivers-hero/forest-hero dropped on hubs; photo credits for the old hero images on Earth Observation, Planetary Defense and Space Weather removed). Breadcrumbs left in place (between hero and Impact Statement where present).
 - Space Disposal: hidden h1 replaced by visible hero; `no-hero` body class and its CSS removed. Project Rawane keeps its pr-hero (same look). Mission pages untouched.
+
+## Session Log — 2026-10-10 (hubs: visible breadcrumbs removed)
+
+- Removed visible breadcrumb nav from Oceans, Lakes, Rivers, Deforestation, Space, Planetary Defense, Space Weather, Earth Observation (Space Disposal and Project Rawane had none). JSON-LD BreadcrumbList kept on all.
+- Order fix: Planetary Defense "A note on Roman" moved from between Five W's and cards to after the cards. Space Disposal keeps "Natural debris and saving moons" (itself a card group) before "Missions and solutions"; Space Weather and Earth Observation keep their detailed mission sections after the cards.
