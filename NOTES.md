@@ -431,3 +431,9 @@ New hubs approved: Planetary Defense (A, B, C + Jupiter cross-link), Space Weath
 - Brian reordered Project-R.html in 194b72a: Impact Statement, Five W's, Project R Categories, By the Numbers (page-stats), Upcoming Launches last.
 - FOLLOW-UP (open): the phone-only rule in styles.css (`@media (max-width: 600px)` .pr-flow order rules) still forces the old order on phones and lifts page-stats to the top; recommended fix is deleting that rule. Skip link still targets #solution (Five W's) instead of the Impact Statement now first.
 - FOLLOW-UP (open): faint text visible behind the open mobile menu at 390px in headless screenshots; verify on a real phone.
+
+## Session Log — 2026-10-09 (styles.css truncation fix)
+
+- GLITCH: commit f2f3357 (pr-hero class, pushed via GitHub connector) truncated styles.css from 519 to 261 lines, ending mid-rule at "body.toc-home .s". Lost launches widget, stats, mission widget, horizon, Project R menu, page-specific and responsive styles.
+- WORKAROUND: ab53f4b restored the full file from git history (54a064d), re-added the pr-hero rule, and replaced the Dark mode section with the expanded version (99 html.dark selectors). File now 589 lines, braces balanced, deploy succeeded. RESOLVED.
+- RULE OF THUMB: edit styles.css (and other large files) via git clone, not the connector's create_or_update_file, which truncates large files.
