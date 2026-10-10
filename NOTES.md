@@ -574,3 +574,7 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 ## Session Log — 2026-10-10 (Space Disposal: dedupe Titan, MMX, LeoLabs)
 
 - Titan kept only in "Natural debris and saving moons" (card removed from Missions grid). MMX and LeoLabs kept only in "Missions and solutions": their natural-section w-cards removed, and their id (#mmx, #leolabs) + data-menu-item moved onto the mission cards. Natural section now: Jupiter, Titan, Atmospheric Drag. Missions grid: Astroscale, ClearSpace, LeoLabs, MMX, PRELUDE. Totals unchanged (32/4/10/6).
+
+## Session Log — 2026-10-10 (Project Rawane title hero restored)
+
+- Project-Rawane.html: visible hero restored with only `<h1>Project Rawane</h1>` on .pr-hero (Nebula2.jpg + dark gradient); no subtitle/Rawane line, breadcrumb or links. Visually hidden h1 removed (one h1). The .pr-flow top-padding rule was removed from styles.css. The mobile order rules sit inside .pr-flow, and the hero is outside it, so they are unaffected.
