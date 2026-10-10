@@ -604,6 +604,6 @@ html.dark .card-band .card-blurb { color: #c9d6e2; }
 .hub-group h2 a:hover { text-decoration: underline; }
 /* Visually hidden (accessible) text */
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-/* Hub pages without a hero (e.g. Space Disposal): clear the fixed top nav */
-body.no-hero h1.visually-hidden + section { padding-top: calc(var(--nav-height, 88px) + 0.5rem); }
 body.toc-sub h2.h2-center { text-align: center; }
+/* Shared hub title hero: Nebula2 with the pr-hero dark overlay */
+body.toc-sub .page-hero.hub-hero, body.toc-sub[class] .page-hero.hub-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.55) 100%), url('assets/Nebula2.jpg') center/cover no-repeat; }
