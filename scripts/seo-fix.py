@@ -145,7 +145,7 @@ def fix(p):
 def run(langs):
     n = 0
     for l in langs:
-        files = sorted(glob.glob('*.html')) if l == 'en' else sorted(glob.glob(f'{l}/*.html'))
+        files = sorted(glob.glob('*.html')) if l == 'en' else sorted(glob.glob(f'{l}/*.html')) ; files = [f for f in files if not re.match(r'google[0-9a-f]+\.html$', os.path.basename(f))]
         n += sum(fix(f) for f in files)
     return n
 

@@ -57,7 +57,7 @@ function langSwitch(f) {
 function writeProjectRMenu(menu) {
   const html = menuHtml(menu); let n = 0;
   const re = /<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/;
-  fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
+  fs.readdirSync('.').filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f)).forEach(f => {
     const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
     const next = src.replace(re, `<!-- PROJECT-R-MENU:START -->${html}${langSwitch(f)}<!-- PROJECT-R-MENU:END -->`);
     if (next !== src) { fs.writeFileSync(f, next); n++; }
@@ -91,7 +91,7 @@ function writeSolutionsMenu(menu) {
   menu.forEach(g => { const w = g.items.length + 1.5; if (acc > 0 && acc + w / 2 > total / COLS * cols.length && cols.length < COLS) cols.push([]); cols[cols.length - 1].push(g); acc += w; });
   const html = cols.map(c => `<li class="menu-col"><ul>${c.map(group).join('')}</ul></li>`).join('');
   const re = /<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/; let n = 0;
-  fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
+  fs.readdirSync('.').filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f)).forEach(f => {
     const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
     const next = src.replace(re, `<!-- SOLUTIONS-MENU:START -->${html}<!-- SOLUTIONS-MENU:END -->`);
     if (next !== src) { fs.writeFileSync(f, next); n++; }
@@ -103,7 +103,7 @@ function build() {
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
   const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
    .map(m => path.basename(m[1].trim()))
-    .filter(f => f.endsWith('.html') && !SKIP.includes(f) && fs.existsSync(f));
+    .filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && !SKIP.includes(f) && fs.existsSync(f));
   const now = Date.now();
   const warnings = [];
   const pages = [];

@@ -6,6 +6,7 @@ SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar']
 NOINDEX = {'Project-R.html', '404.html'}
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR'}
 pages = sorted(glob.glob('*.html')) + sorted(p for l in LANGS for p in glob.glob(f'{l}/*.html'))
+pages = [p for p in pages if not re.match(r'google[0-9a-f]+\.html$', os.path.basename(p))]  # Search Console verification file
 issues = collections.defaultdict(list); titles = collections.defaultdict(list); descs = collections.defaultdict(list)
 sitemap = open('sitemap.xml', encoding='utf8').read() if os.path.exists('sitemap.xml') else ''
 locs = set(re.findall(r'<loc>([^<]+)</loc>', sitemap))

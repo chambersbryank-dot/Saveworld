@@ -29,7 +29,7 @@ function buildFacts() {
 
   const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
    
-    .map(m => path.basename(m[1].trim())).filter(f => f.endsWith('.html') && f !== FILE && fs.existsSync(f));
+    .map(m => path.basename(m[1].trim())).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && f !== FILE && fs.existsSync(f));
   const seen = new Set();
   let found = 0, skipped = 0, dupes = 0;
   for (const page of pages) {
