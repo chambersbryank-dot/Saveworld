@@ -134,9 +134,10 @@ function build(lang, sols, factKeys, launchList) {
 <body style="margin:0;background:#eef5fa"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef5fa"><tr><td align="center" style="padding:20px 10px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:10px;overflow:hidden">
 <tr><td dir="${dir}" style="background:#003755;padding:22px 24px;font-family:Montserrat,Segoe UI,Arial,sans-serif;text-align:${al}">
+<table role="presentation" cellpadding="0" cellspacing="0" dir="${dir}"><tr><td valign="middle" style="padding-${rtl ? 'left' : 'right'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td><td valign="middle" dir="${dir}" style="text-align:${al}">
 <p style="margin:0;font-size:12px;letter-spacing:2px;color:#7fd3f7;font-weight:700">SAVING PLANETS</p>
 <p style="margin:8px 0 0;font-size:28px;font-weight:800;color:#ffffff;line-height:1.2">${esc(fmtDate(today, lang))}</p>
-<p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td></tr>
+<p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td></tr></table></td></tr>
 <tr><td dir="${dir}" style="padding:24px 24px 28px;font-family:Montserrat,Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#003755;text-align:${al}">
 <p style="margin:0">${esc(t.intro)}</p>
 ${h2(t.newS)}${solsHtml}
