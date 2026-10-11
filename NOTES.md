@@ -755,3 +755,9 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Script-drawn UI: `site.js` has a strings table (`spT`, `spLang`) for mission widgets and stats blocks; inline launch-widget literals are swapped at build time from `i18n/ui.json`. On translated Artemis pages the artemis.json refresh script is dropped (data file is English); the translated static cards stay.
 - Every English page carries PROJECT-R-MENU markers so build-stats.js re-adds the language switcher (Project-Rawane.html was missing them).
 - Switcher + RTL CSS live at the end of styles.css (they had been lost in a merge; restored, styles v=20261011g, site.js v=20261011b).
+
+## 2026-10-11 — Artemis Program row on Project Rawane (auto-synced)
+- assets/data/artemis.json: added Artemis I (NASA mission page: uncrewed flight test Nov. 16 – Dec. 11, 2022) and Artemis V (NASA Mar 2026 plan PDF: additional landing, NASA target late 2028; no NASA mission page yet), plus a `synopsis` field for all five. Target text lives only in targetLabel so the update script keeps it current.
+- Project-Rawane.html Voyages Outward: "Artemis Program" subhead (h2.sd-subhead) + ws-grid of five w-cards (title → Artemis_II.html, status, synopsis, NASA source) + "Last updated" + "For Further Information: Artemis Program Tracker" → Artemis_II.html. Inline loader re-renders from artemis.json (static HTML fallback). Artemis_II.html tracker now shows I–V.
+- scripts/update-artemis.js: Artemis V watched at nasa.gov/mission/artemis-v/ with watchOptional — 404 is reported as a note (currently 404), never invents data.
+- Translator: fr/es/ar Project-Rawane (and Artemis_II tracker cards) need regeneration; the loader renders English text from artemis.json.

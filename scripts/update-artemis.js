@@ -3,6 +3,7 @@
    reliably (mission-page "LAUNCH" and "crew" fields, Artemis III crew names) with
    assets/data/artemis.json, prints a diff summary, and updates only those fields.
    Never invents data: if a page fails or a field can't be parsed, it is reported and left alone.
+   Artemis V: checked at nasa.gov/mission/artemis-v/ (watchOptional) - a 404 is a note, not an error.
    Usage: node scripts/update-artemis.js [--dry-run]   (exit 0 = no change, 2 = changed, 1 = fetch/parse errors) */
 'use strict';
 const fs = require('fs'), path = require('path');
@@ -32,7 +33,10 @@ async function get(url) {
   for (const m of data.missions) {
     if (m.state === 'flown' || !m.watch) continue;
     let lines;
-    try { lines = await get(m.watch); } catch (e) { errors.push(m.name + ': ' + e.message); continue; }
+    try { lines = await get(m.watch); } catch (e) {
+      if (m.watchOptional && /HTTP 404/.test(e.message)) { notes.push(m.name + ': no NASA mission page yet (' + m.watch + '); left unchanged'); continue; }
+      errors.push(m.name + ': ' + e.message); continue;
+    }
     const launch = after(lines, 'LAUNCH');
     if (!launch) notes.push(m.name + ': LAUNCH field not found on ' + m.watch + ' (left unchanged)');
     else if (launch !== m.target) {

@@ -8,6 +8,35 @@
   },
   "missions": [
     {
+      "id": "artemis-i",
+      "name": "Artemis I",
+      "state": "flown",
+      "target": "Nov. 16, 2022",
+      "missionType": "Uncrewed lunar flight test",
+      "synopsis": "NASA's first flight test of SLS, Orion and ground systems: an uncrewed 25-day trip beyond the Moon, launched Nov. 16 and splashed down Dec. 11, 2022.",
+      "status": "Flown. Uncrewed flight test, Nov. 16 to Dec. 11, 2022.",
+      "objective": "Test the rocket, spacecraft and ground systems without a crew.",
+      "crew": [],
+      "hardware": "SLS rocket and Orion spacecraft (uncrewed).",
+      "milestones": [
+        {
+          "date": "2022-11-16",
+          "label": "Launch from Kennedy Space Center"
+        },
+        {
+          "date": "2022-12-11",
+          "label": "Splashdown"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/mission/artemis-i/",
+          "label": "NASA, Artemis I"
+        }
+      ],
+      "watch": null
+    },
+    {
       "id": "artemis-ii",
       "name": "Artemis II",
       "state": "flown",
@@ -63,7 +92,8 @@
           "label": "NASA, Artemis II distance record"
         }
       ],
-      "watch": "https://www.nasa.gov/mission/artemis-ii/"
+      "watch": "https://www.nasa.gov/mission/artemis-ii/",
+      "synopsis": "Four astronauts flew around the Moon in April 2026 and reached 252,756 miles from Earth, farther than any humans before."
     },
     {
       "id": "artemis-iii",
@@ -121,7 +151,8 @@
           "label": "NASA, Artemis architecture update"
         }
       ],
-      "watch": "https://www.nasa.gov/mission/artemis-iii/"
+      "watch": "https://www.nasa.gov/mission/artemis-iii/",
+      "synopsis": "A crewed test in low Earth orbit: Orion practices docking with commercial lunar landers before any landing."
     },
     {
       "id": "artemis-iv",
@@ -150,7 +181,35 @@
           "label": "NASA, Return to the lunar surface plan (Mar 2026)"
         }
       ],
-      "watch": "https://www.nasa.gov/mission/artemis-iv/"
+      "watch": "https://www.nasa.gov/mission/artemis-iv/",
+      "synopsis": "Humanity's return to the lunar surface: two astronauts spend about a week near the Moon's South Pole."
+    },
+    {
+      "id": "artemis-v",
+      "name": "Artemis V",
+      "state": "upcoming",
+      "target": "Late 2028",
+      "targetLabel": "NASA target: late 2028",
+      "missionType": "Crewed landing",
+      "synopsis": "A second astronaut landing in NASA's February 2026 plan.",
+      "status": "NASA's February 2026 plan lists Artemis V as an additional astronaut landing, targeting late 2028. No mission page or crew yet.",
+      "objective": "An additional astronaut landing on the Moon.",
+      "crew": [],
+      "hardware": "SLS, Orion and a commercial human landing system (per NASA's plan).",
+      "milestones": [
+        {
+          "date": "2026-02-27",
+          "label": "Added to NASA's updated Artemis plan"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+          "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+        }
+      ],
+      "watch": "https://www.nasa.gov/mission/artemis-v/",
+      "watchOptional": true
     }
   ]
 }
