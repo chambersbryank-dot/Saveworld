@@ -28,16 +28,16 @@ const T = {
 
 // Fixed strings for the v2 template (2026-10-11).
 const T2 = {
-  en: { imgLbl: 'Image', siImg: 'SI-generated image by Saving Planets', joke: 'Project Rawane\u2019s Favorite Dad Joke', hubAlt: 'Banner image for', seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
+  en: { inIssue: 'In this issue', backTop: 'Back to top', imgLbl: 'Image', siImg: 'SI-generated image by Saving Planets', joke: 'Project Rawane\u2019s Favorite Dad Joke', hubAlt: 'Banner image for', seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
     noneAll: 'No new solutions this week.', launches: 'Launches This Week', noLaunch: 'No launches are on the books for this week yet.', vehicle: 'Vehicle', mission: 'Mission', shift: 'Launch dates shift often.', schedule: 'See our full launch schedule',
     suggest: 'Suggest a New Solution', suggestText: 'Know a group doing hands-on work with published numbers? Email your idea to', criteria: 'See our solutions criteria', facts: 'Amazing Facts', source: 'Source', allFacts: 'See all Amazing Facts', unsub: 'Unsubscribe', tz: 'UTC' },
-  fr: { imgLbl: 'Image', siImg: 'Image générée par SI par Saving Planets', joke: 'La blague de papa préférée de Projet Rawane', hubAlt: 'Image de bannière :', seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
+  fr: { inIssue: 'Dans ce numéro', backTop: 'Retour en haut', imgLbl: 'Image', siImg: 'Image générée par SI par Saving Planets', joke: 'La blague de papa préférée de Projet Rawane', hubAlt: 'Image de bannière :', seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
     noneAll: 'Pas de nouvelle solution cette semaine.', launches: 'Lancements de la semaine', noLaunch: "Aucun lancement n'est encore prévu cette semaine.", vehicle: 'Lanceur', mission: 'Mission', shift: 'Les dates de lancement changent souvent.', schedule: 'Voir notre calendrier complet des lancements',
     suggest: 'Proposez une nouvelle solution', suggestText: 'Vous connaissez un groupe qui agit sur le terrain avec des chiffres publiés ? Envoyez votre idée à', criteria: 'Voir nos critères de sélection', facts: 'Faits étonnants', source: 'Source', allFacts: 'Voir tous les faits étonnants', unsub: 'Se désabonner', tz: 'UTC' },
-  es: { imgLbl: 'Imagen', siImg: 'Imagen generada por SI por Saving Planets', joke: 'El chiste de papá favorito de Proyecto Rawane', hubAlt: 'Imagen de cabecera:', seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
+  es: { inIssue: 'En este número', backTop: 'Volver arriba', imgLbl: 'Imagen', siImg: 'Imagen generada por SI por Saving Planets', joke: 'El chiste de papá favorito de Proyecto Rawane', hubAlt: 'Imagen de cabecera:', seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
     noneAll: 'No hay soluciones nuevas esta semana.', launches: 'Lanzamientos de esta semana', noLaunch: 'Todavía no hay lanzamientos programados para esta semana.', vehicle: 'Vehículo', mission: 'Misión', shift: 'Las fechas de lanzamiento cambian a menudo.', schedule: 'Ver nuestro calendario completo de lanzamientos',
     suggest: 'Sugiere una nueva solución', suggestText: '¿Conoces un grupo que hace trabajo práctico con cifras publicadas? Envía tu idea a', criteria: 'Ver nuestros criterios de soluciones', facts: 'Datos asombrosos', source: 'Fuente', allFacts: 'Ver todos los datos asombrosos', unsub: 'Darse de baja', tz: 'UTC' },
-  ar: { imgLbl: 'الصورة', siImg: 'صورة مولّدة بتقنية SI من Saving Planets', joke: 'نكتة الأب المفضلة لدى مشروع Rawane', hubAlt: 'صورة لافتة لقسم', seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
+  ar: { inIssue: 'في هذا العدد', backTop: 'العودة إلى الأعلى', imgLbl: 'الصورة', siImg: 'صورة مولّدة بتقنية SI من Saving Planets', joke: 'نكتة الأب المفضلة لدى مشروع Rawane', hubAlt: 'صورة لافتة لقسم', seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
     noneAll: 'لا توجد حلول جديدة هذا الأسبوع.', launches: 'عمليات الإطلاق هذا الأسبوع', noLaunch: 'لا توجد عمليات إطلاق مجدولة لهذا الأسبوع حتى الآن.', vehicle: 'المركبة', mission: 'المهمة', shift: 'تتغير مواعيد الإطلاق كثيرًا.', schedule: 'اطّلع على جدول الإطلاق الكامل',
     suggest: 'اقترح حلًا جديدًا', suggestText: 'هل تعرف جهة تقوم بعمل ميداني وتنشر أرقامًا موثقة؟ أرسل فكرتك إلى', criteria: 'اطّلع على معايير اختيار الحلول', facts: 'حقائق مذهلة', source: 'المصدر', allFacts: 'اطّلع على جميع الحقائق المذهلة', unsub: 'إلغاء الاشتراك', tz: 'UTC' }
 };
@@ -108,7 +108,8 @@ function fmtDay(d, lang) { return new Date(d).toLocaleString(T[lang].dateLoc, { 
 function build(lang, sols, factKeys, launchList, joke) {
   const t = { ...T[lang], ...T2[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
   const a = (href, txt, bold) => `<a href="${href}" style="color:#009cde;${bold ? 'font-weight:700;' : ''}text-decoration:none">${esc(txt)}</a>`;
-  const h2 = s => `<h2 style="margin:30px 0 12px;font-size:20px;color:#003755;border-bottom:2px solid #009cde;padding-bottom:6px">${esc(s)}</h2>`;
+  const top = `<p style="margin:10px 0 0;font-size:12px;text-align:${rtl ? 'left' : 'right'}"><a href="#sp-top" style="color:#5b7486;text-decoration:none">${esc(t.backTop)} ↑</a></p>`;
+  const h2 = (s, id) => `<h2${id ? ` id="${id}"` : ''} style="margin:30px 0 12px;font-size:20px;color:#003755;border-bottom:2px solid #009cde;padding-bottom:6px">${esc(s)}</h2>`;
   // 2. New solutions by hub
   const { map, order } = hubMap(lang), byHub = {};
   for (const s of sols) (byHub[map[s.url] || '_other'] = byHub[map[s.url] || '_other'] || []).push(s);
@@ -139,17 +140,18 @@ function build(lang, sols, factKeys, launchList, joke) {
 <body style="margin:0;background:#eef5fa"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef5fa"><tr><td align="center" style="padding:20px 10px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:10px;overflow:hidden">
 <tr><td dir="${dir}" style="background:#003755;padding:22px 24px;font-family:Montserrat,Segoe UI,Arial,sans-serif;text-align:${al}">
-<table role="presentation" cellpadding="0" cellspacing="0" dir="${dir}"><tr><td valign="middle" style="padding-${rtl ? 'left' : 'right'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td><td valign="middle" dir="${dir}" style="text-align:${al}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" dir="${dir}"><tr><td valign="middle" width="100%" dir="${dir}" style="text-align:${al}">
 <p style="margin:0;font-size:12px;letter-spacing:2px;color:#7fd3f7;font-weight:700">SAVING PLANETS</p>
 <p style="margin:8px 0 0;font-size:28px;font-weight:800;color:#ffffff;line-height:1.2">${esc(fmtDate(today, lang))}</p>
-<p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td></tr></table></td></tr>
+<p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td><td valign="middle" style="padding-${rtl ? 'right' : 'left'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td></tr></table></td></tr>
 <tr><td dir="${dir}" style="padding:24px 24px 28px;font-family:Montserrat,Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#003755;text-align:${al}">
-<p style="margin:0">${esc(t.intro)}</p>
-${h2(t.newS)}${solsHtml}
-${h2(t.launches)}${lHtml}
-${h2(t.suggest)}${sugHtml}
-${h2(t.facts)}${fHtml}
-${joke ? h2(t.joke) + `<div style="background:#003755;color:#ffffff;border-radius:8px;padding:16px 18px;font-size:16px" dir="${dir}" lang="${lang}"><span style="font-size:22px">🚀</span> ${esc(joke)}</div>` : ''}
+<p id="sp-top" style="margin:0;text-align:center;font-weight:700;font-size:17px">${esc(t.intro)}</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts], ['sp-suggest', t.suggest]].concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
+${h2(t.newS, 'sp-new')}${solsHtml}${top}
+${h2(t.launches, 'sp-launches')}${lHtml}${top}
+${h2(t.suggest, 'sp-suggest')}${sugHtml}${top}
+${h2(t.facts, 'sp-facts')}${fHtml}${top}
+${joke ? h2(t.joke, 'sp-joke') + `<div style="background:#003755;color:#ffffff;border-radius:8px;padding:16px 18px;font-size:16px" dir="${dir}" lang="${lang}"><span style="font-size:22px">🚀</span> ${esc(joke)}</div>` + top : ''}
 <p style="margin:28px 0 0;text-align:center"><a href="${P}index.html" style="display:inline-block;background:#009cde;color:#fff;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none">${esc(t.visit)}</a></p>
 <p style="margin:26px 0 0;font-size:12px;color:#5b7486;text-align:center">${esc(t.foot)}<br>{$account_address}<br><a href="{$unsubscribe}" style="color:#5b7486">${esc(t.unsub)}</a></p>
 </td></tr></table></td></tr></table></body></html>`;
