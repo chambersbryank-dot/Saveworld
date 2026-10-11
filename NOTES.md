@@ -812,3 +812,10 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Added assets/SavePlanetLogo-email.png (192x225 PNG from SavePlanetLogo.jpg, shown at 72x84) to the newsletter masthead, linked to the homepage; absolute https://www.savingplanets.com URL.
 - Deleted drafts 201065768381580767/…770961077668/…773376996573/…775843247964 and recreated "Weekly Brief 2026-10-11": EN 201066038081619241, FR 201066040711448072, ES 201066043295139426, AR 201066045808576058 (same facts; not sent/scheduled). Preview 5,263px.
 - Confirmation emails: MailerLite's public API (connect.mailerlite.com) exposes forms read-only except the name; it cannot edit double opt-in emails. Translated FR/ES/AR texts saved in scripts/newsletter-confirmation-texts.md for Brian to paste in the dashboard.
+
+## Session Log — 2026-10-11 (newsletter language selector)
+
+- site.js newsletter module: every sign-up block (homepage, Amazing Facts, compact footer; all languages) now has a language select (English / Français / Español / العربية, each option with its own lang/dir), defaulting to the page language; the chosen value picks the MailerLite form (FORMS map) it posts to. Visually hidden translated label (Newsletter language / Langue de la newsletter / Idioma del boletín / لغة النشرة). No cookies or storage.
+- Cache bump site.js?v=20261011o on all 332 pages. i18n-build + i18n-sitemap + seo-audit (333 pages, TOTAL 0) + i18n-check (all current).
+- Verified via headless Chrome CDP at 1280 and 390: EN index/About, AR index/About/Amazing_Facts: no horizontal scroll, AR blocks dir=rtl with العربية preselected. No real sign-ups submitted. Screenshot /workspace/newsletter-footer-ar-390.png.
+- Tip: box node is v20; CDP scripts need `node --experimental-websocket`. Clip screenshots of the footer came out blank; scroll + viewport screenshot works.

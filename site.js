@@ -177,27 +177,29 @@
   var ACCT = '2704021';
   var FORMS = { en: '201062861124929242', fr: '201062865506927746', es: '201062865837229281', ar: '201062866183259490' };
   var T = {
-    en: ['Get the Weekly Saving Planets Brief', 'New sourced solutions, one amazing fact and upcoming launches, every Monday. Free; unsubscribe anytime.', 'Email address', 'you@example.com', 'Subscribe', 'Please enter a valid email address.', 'Almost done! Check your inbox and confirm your subscription.', 'Sorry, something went wrong. Please try again later.', 'Sending…', 'Privacy'],
-    fr: ['Recevez le Brief hebdomadaire Saving Planets', 'De nouvelles solutions sourcées, un fait étonnant et les prochains lancements, chaque lundi. Gratuit ; désabonnement à tout moment.', 'Adresse e-mail', 'vous@exemple.com', 'S\u2019abonner', 'Veuillez saisir une adresse e-mail valide.', 'Presque fini ! Vérifiez votre boîte de réception et confirmez votre abonnement.', 'Désolé, une erreur s\u2019est produite. Veuillez réessayer plus tard.', 'Envoi…', 'Confidentialité'],
-    es: ['Recibe el Resumen semanal de Saving Planets', 'Nuevas soluciones con fuentes, un dato asombroso y los próximos lanzamientos, cada lunes. Gratis; cancela cuando quieras.', 'Correo electrónico', 'tu@ejemplo.com', 'Suscribirme', 'Introduce un correo electrónico válido.', '¡Casi listo! Revisa tu bandeja de entrada y confirma tu suscripción.', 'Lo sentimos, algo salió mal. Inténtalo más tarde.', 'Enviando…', 'Privacidad'],
-    ar: ['احصل على النشرة الأسبوعية من Saving Planets', 'حلول جديدة موثقة المصادر، وحقيقة مذهلة، وعمليات الإطلاق القادمة، كل يوم اثنين. مجانية، ويمكنك إلغاء الاشتراك في أي وقت.', 'البريد الإلكتروني', 'you@example.com', 'اشترك', 'يرجى إدخال بريد إلكتروني صالح.', 'أوشكت على الانتهاء! تحقق من بريدك الوارد وأكّد اشتراكك.', 'عذرًا، حدث خطأ ما. يرجى المحاولة لاحقًا.', 'جارٍ الإرسال…', 'الخصوصية']
+    en: ['Get the Weekly Saving Planets Brief', 'New sourced solutions, one amazing fact and upcoming launches, every Monday. Free; unsubscribe anytime.', 'Email address', 'you@example.com', 'Subscribe', 'Please enter a valid email address.', 'Almost done! Check your inbox and confirm your subscription.', 'Sorry, something went wrong. Please try again later.', 'Sending…', 'Privacy', 'Newsletter language'],
+    fr: ['Recevez le Brief hebdomadaire Saving Planets', 'De nouvelles solutions sourcées, un fait étonnant et les prochains lancements, chaque lundi. Gratuit ; désabonnement à tout moment.', 'Adresse e-mail', 'vous@exemple.com', 'S\u2019abonner', 'Veuillez saisir une adresse e-mail valide.', 'Presque fini ! Vérifiez votre boîte de réception et confirmez votre abonnement.', 'Désolé, une erreur s\u2019est produite. Veuillez réessayer plus tard.', 'Envoi…', 'Confidentialité', 'Langue de la newsletter'],
+    es: ['Recibe el Resumen semanal de Saving Planets', 'Nuevas soluciones con fuentes, un dato asombroso y los próximos lanzamientos, cada lunes. Gratis; cancela cuando quieras.', 'Correo electrónico', 'tu@ejemplo.com', 'Suscribirme', 'Introduce un correo electrónico válido.', '¡Casi listo! Revisa tu bandeja de entrada y confirma tu suscripción.', 'Lo sentimos, algo salió mal. Inténtalo más tarde.', 'Enviando…', 'Privacidad', 'Idioma del boletín'],
+    ar: ['احصل على النشرة الأسبوعية من Saving Planets', 'حلول جديدة موثقة المصادر، وحقيقة مذهلة، وعمليات الإطلاق القادمة، كل يوم اثنين. مجانية، ويمكنك إلغاء الاشتراك في أي وقت.', 'البريد الإلكتروني', 'you@example.com', 'اشترك', 'يرجى إدخال بريد إلكتروني صالح.', 'أوشكت على الانتهاء! تحقق من بريدك الوارد وأكّد اشتراكك.', 'عذرًا، حدث خطأ ما. يرجى المحاولة لاحقًا.', 'جارٍ الإرسال…', 'الخصوصية', 'لغة النشرة']
   };
+  var NAMES = { en: 'English', fr: 'Fran\u00e7ais', es: 'Espa\u00f1ol', ar: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629' };
   var L = window.spLang || 'en'; if (!FORMS[L]) L = 'en';
   var t = T[L], about = (L === 'en' ? '' : '../') + 'About.html#privacy';
   var css = '.sp-nl{max-width:640px;margin:2.2rem auto 0;padding:1.4rem 1.5rem;border:1px solid rgba(0,156,222,.35);border-radius:12px;background:#f3f9fd;color:#003755;text-align:center;font-family:Montserrat,"Segoe UI",sans-serif;box-sizing:border-box}' +
     '.sp-nl h2,.sp-nl h3{margin:0 0 .35rem;font-size:1.35rem;color:#003755}.sp-nl p{margin:0 0 .8rem;font-size:.92rem;line-height:1.45}' +
     '.sp-nl form{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.sp-nl input[type=email]{flex:1 1 220px;min-width:0;padding:10px 12px;font:inherit;font-size:.95rem;border:1px solid #7aa7c2;border-radius:6px;color:#003755;background:#fff}' +
-    '.sp-nl button{padding:10px 20px;font:700 .95rem Montserrat,system-ui,sans-serif;background:#009cde;color:#fff;border:0;border-radius:6px;cursor:pointer}.sp-nl button[disabled]{opacity:.6;cursor:wait}' +
+    '.sp-nl select{flex:0 0 auto;max-width:100%;padding:10px 8px;font:inherit;font-size:.95rem;border:1px solid #7aa7c2;border-radius:6px;color:#003755;background:#fff}.sp-nl select:focus-visible{outline:2px solid #003755;outline-offset:2px}.sp-nl button{padding:10px 20px;font:700 .95rem Montserrat,system-ui,sans-serif;background:#009cde;color:#fff;border:0;border-radius:6px;cursor:pointer}.sp-nl button[disabled]{opacity:.6;cursor:wait}' +
     '.sp-nl input:focus-visible,.sp-nl button:focus-visible{outline:2px solid #003755;outline-offset:2px}.sp-nl .sp-nl-msg{min-height:1.3em;margin:.6rem 0 0;font-weight:600}.sp-nl .sp-nl-ok{color:#00805f}.sp-nl .sp-nl-err{color:#b3261e}' +
     '.sp-nl{position:relative}.sp-nl .sp-nl-hp{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}.sp-nl .sp-nl-hp input{width:1px}.newsletter-band{padding:0 1.25rem}.sp-nl small{display:block;margin-top:.5rem;font-size:.75rem}.sp-nl small a{color:#00699a}' +
     '.sp-nl.sp-nl-compact{margin:0 auto 1rem;padding:1rem;background:transparent;border-color:rgba(0,156,222,.3)}div.sp-nl:not(.sp-nl-compact) h2{color:#003755 !important;background:none !important;-webkit-text-fill-color:#003755}div.sp-nl:not(.sp-nl-compact) p:not(.sp-nl-msg){color:#003755}footer .sp-nl{color:inherit}footer .sp-nl .sp-nl-ok{color:#5fe0b5}footer .sp-nl .sp-nl-err{color:#ffb4ab}footer .sp-nl h3{color:inherit;font-size:1.1rem}footer .sp-nl small a{color:inherit}';
   function build(host, compact, n) {
-    var id = 'sp-nl-email-' + n, mid = 'sp-nl-msg-' + n, hTag = compact ? 'h3' : 'h2';
+    var id = 'sp-nl-email-' + n, sid = 'sp-nl-lang-' + n, mid = 'sp-nl-msg-' + n, hTag = compact ? 'h3' : 'h2';
     host.className = (host.className ? host.className + ' ' : '') + 'sp-nl' + (compact ? ' sp-nl-compact' : '');
     if (L === 'ar') host.setAttribute('dir', 'rtl');
     host.innerHTML = '<' + hTag + '>' + t[0] + '</' + hTag + '><p>' + t[1] + '</p>' +
       '<form novalidate><label class="sp-nl-hp" aria-hidden="true">Leave empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>' +
       '<label class="sp-nl-hp" for="' + id + '">' + t[2] + '</label><input id="' + id + '" type="email" name="email" required autocomplete="email" inputmode="email" dir="ltr" placeholder="' + t[3] + '" aria-describedby="' + mid + '">' +
+      '<label class="sp-nl-hp" for="' + sid + '">' + t[10] + '</label><select id="' + sid + '" name="lang" class="sp-nl-lang">' + ['en', 'fr', 'es', 'ar'].map(function (k) { return '<option value="' + k + '" lang="' + k + '" dir="' + (k === 'ar' ? 'rtl' : 'ltr') + '"' + (k === L ? ' selected' : '') + '>' + NAMES[k] + '</option>'; }).join('') + '</select>' +
       '<button type="submit">' + t[4] + '</button></form><p class="sp-nl-msg" id="' + mid + '" role="status" aria-live="polite"></p>' +
       '<small><a href="' + about + '">' + t[9] + '</a></small>';
     var f = host.querySelector('form'), inp = f.querySelector('input[type=email]'), btn = f.querySelector('button'), msg = host.querySelector('.sp-nl-msg');
@@ -209,7 +211,7 @@
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { inp.setAttribute('aria-invalid', 'true'); say(t[5], false); inp.focus(); return; }
       inp.removeAttribute('aria-invalid'); btn.disabled = true; msg.className = 'sp-nl-msg'; msg.textContent = t[8];
       var fd = new FormData(); fd.append('fields[email]', v); fd.append('ml-submit', '1'); fd.append('anticsrf', 'true');
-      fetch('https://assets.mailerlite.com/jsonp/' + ACCT + '/forms/' + FORMS[L] + '/subscribe', { method: 'POST', body: fd, credentials: 'omit', headers: { 'Accept': 'application/json' } })
+      fetch('https://assets.mailerlite.com/jsonp/' + ACCT + '/forms/' + FORMS[FORMS[f.lang.value] ? f.lang.value : L] + '/subscribe', { method: 'POST', body: fd, credentials: 'omit', headers: { 'Accept': 'application/json' } })
         .then(function (r) { return r.json(); })
         .then(function (d) { if (d && d.success) { say(t[6], true); f.reset(); } else say(t[7], false); })
         .catch(function () { say(t[7], false); })
