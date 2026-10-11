@@ -780,3 +780,13 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Home mission heading fragments ("We / Find / and / Share Solutions / to / Save / the / Planet / Minus the / Doom") are translated as fragments; "the" maps to empty so word order reads naturally.
 - seo-audit img-alt check now only flags alt text identical to the English page (org names are not false positives). Result: 333 pages, 0 issues; 0 broken links; i18n-check: all current.
 - IndexNow: added --all (submit every sitemap <loc>). One-off full submission on 2026-10-11 of 331 URLs returned 403 Forbidden (key not accepted for host; key file is served 200 at /aa19429b4f58f36d34c263abe996de09.txt). Not retried.
+
+## Newsletter: Weekly Saving Planets Brief (MailerLite), 2026-10-11
+
+- **Account:** MailerLite account 2704021, sender `newsletter@savingplanets.com`. API key lives only in `/home/box/.mailerlite_key` on the box (never in the repo or site files).
+- **Groups:** English 201062857381512972, French 201062857692939304, Spanish 201062857966617859, Arabic 201062858265462233.
+- **Embedded forms (double opt-in on), created via API:** EN 201062861124929242, FR 201062865506927746, ES 201062865837229281, AR 201062866183259490. Each adds to its own group.
+- **Site sign-up:** module at the end of `site.js` posts the email with `fetch` (credentials omitted, no cookies) to MailerLite's public endpoint `https://assets.mailerlite.com/jsonp/2704021/forms/<formId>/subscribe` (CORS `*`). Only public form IDs are client-side. Language comes from `<html lang>`. It fills `<div data-sp-newsletter>` placeholders (index.html after the stats, Amazing_Facts.html before the footer, copied to fr/es/ar by i18n-build), and on every other page adds a compact block at the top of the footer. Strings for EN/FR/ES/AR live in the module (same pattern as consent.js). It has a visually hidden label, a honeypot, email validation and success/error messages (aria-live). About.html has a new `#privacy` section (analytics + newsletter); its translations are in i18n/*.json.
+- **Weekly drafts:** `node scripts/newsletter-draft.js [--dry-run] [--days 7] [--lang en,fr]` builds the issue (new non-hub pages added in git in the last N days, from solutions.json + page meta; a rotating Amazing Fact card with image; next 3 LL2 launches + next mission milestones from solutions.json; Why It Matters) per language and creates a **draft** campaign per group named `Weekly Brief YYYY-MM-DD (XX)`. It never sends or schedules, and it skips names that already exist. A preview HTML copy goes to /tmp/newsletter-<date>-<lang>.html.
+- First sample drafts: Weekly Brief 2026-10-11 (EN/FR/ES/AR).
+- site.js cache tag bumped to v=20261011n on all pages.
