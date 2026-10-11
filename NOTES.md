@@ -833,3 +833,8 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Added `<p class="photo-credit">` after every visible use: card images (index, Oceans, Lakes, Rivers, Deforestation), donate/further-info buttons (4ocean, Plastic Bank, Great Bubble Barrier, Sungai Watch, Restoring the Lake Depths, Life Terra, Deforestation), Life Terra Five W's image, and below the CSS-background heroes (forest-hero: Life_Terra, Terraformation, Three_Trees; rivers-hero: Great_Bubble_Barrier, Sungai_Watch). New CSS `.card .photo-credit, .w-card .photo-credit`; styles.css?v=20261011i. FR/ES/AR strings in i18n/*.json. Builds/audits: TOTAL 0, all translations current.
 - Newsletter: small credit line under each hub banner (HUBCREDIT in the script, label translated).
 - Drafts recreated, same facts + same joke (#0), not sent/scheduled; previous 201066788540122334/…791102842840/…793554413454/…795972429219 deleted.
+
+## Session Log — 2026-10-11 (ThreeTrees2 credit)
+
+- ThreeTrees2.jpg is the owner's photo: "Photo: SI Partner." added under its only visible use (Three Trees card on Deforestation.html; translated via i18n on fr/es/ar). Not used in the newsletter, so drafts unchanged.
+- Verified at 390px (CDP): index, Life_Terra, Deforestation, ar/index, ar/Life_Terra all scrollWidth 390 = no horizontal scroll. Builds/audits TOTAL 0, translations current.
