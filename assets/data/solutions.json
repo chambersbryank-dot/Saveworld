@@ -1,10 +1,23 @@
 {
- "generated": "2026-10-11T17:51:15.003Z",
+ "generated": "2026-10-11T17:58:00.408Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
    "href": "Planetary_Defense.html",
-   "items": []
+   "items": [
+    {
+     "name": "OSIRIS-APEX and Apophis 2029 (NASA)",
+     "anchor": "osiris-apex",
+     "href": "Planetary_Defense.html#osiris-apex",
+     "status": "active"
+    },
+    {
+     "name": "Ramses (ESA / JAXA)",
+     "anchor": "ramses",
+     "href": "Planetary_Defense.html#ramses",
+     "status": "active"
+    }
+   ]
   },
   {
    "hub": "Space Disposal",
@@ -35,6 +48,18 @@
      "status": "active"
     },
     {
+     "name": "Europa Clipper (NASA)",
+     "anchor": "europa-clipper",
+     "href": "Space_Disposal.html#europa-clipper",
+     "status": "active"
+    },
+    {
+     "name": "Juice (ESA)",
+     "anchor": "juice",
+     "href": "Space_Disposal.html#juice",
+     "status": "active"
+    },
+    {
      "name": "Jupiter (natural)",
      "anchor": "jupiter",
      "href": "Space_Disposal.html#jupiter",
@@ -59,10 +84,22 @@
      "status": "active"
     },
     {
+     "name": "Northrop Grumman SpaceLogistics",
+     "anchor": "spacelogistics",
+     "href": "Space_Disposal.html#spacelogistics",
+     "status": "active"
+    },
+    {
      "name": "PRELUDE (ClearSpace)",
      "anchor": "prelude",
      "href": "Space_Disposal.html#prelude",
      "status": "horizon"
+    },
+    {
+     "name": "Starfish Space Otter",
+     "anchor": "starfish-otter",
+     "href": "Space_Disposal.html#starfish-otter",
+     "status": "active"
     },
     {
      "name": "Titan",
@@ -89,6 +126,12 @@
      "status": "active"
     },
     {
+     "name": "Carruthers Geocorona Observatory (NASA)",
+     "anchor": "carruthers",
+     "href": "Space_Weather.html#carruthers",
+     "status": "active"
+    },
+    {
      "name": "GOES-19 and CCOR-1 (NOAA)",
      "anchor": "goes-19",
      "href": "Space_Weather.html#goes-19",
@@ -98,6 +141,18 @@
      "name": "IMAP (NASA)",
      "anchor": "imap",
      "href": "Space_Weather.html#imap",
+     "status": "active"
+    },
+    {
+     "name": "PUNCH (NASA)",
+     "anchor": "punch",
+     "href": "Space_Weather.html#punch",
+     "status": "active"
+    },
+    {
+     "name": "Solar Orbiter (ESA / NASA)",
+     "anchor": "solar-orbiter",
+     "href": "Space_Weather.html#solar-orbiter",
      "status": "active"
     },
     {
@@ -113,6 +168,12 @@
      "status": "active"
     },
     {
+     "name": "TRACERS (NASA)",
+     "anchor": "tracers",
+     "href": "Space_Weather.html#tracers",
+     "status": "active"
+    },
+    {
      "name": "Vigil (ESA)",
      "anchor": "vigil",
      "href": "Space_Weather.html#vigil",
@@ -123,16 +184,16 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 47,
+  "solutions": 66,
   "horizon": 5,
   "hubs": 10,
   "byClassification": {
-   "natural": 5,
-   "nonprofit": 10,
-   "corporate": 10,
-   "agency": 22
+   "natural": 7,
+   "nonprofit": 11,
+   "corporate": 12,
+   "agency": 36
   },
-  "upcomingMissions": 6,
+  "upcomingMissions": 11,
   "impactTotals": [
    {
     "unit": "kg",
@@ -156,12 +217,12 @@
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 5,
+   "solutions": 8,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "natural": 1,
-    "nonprofit": 2,
+    "natural": 3,
+    "nonprofit": 3,
     "corporate": 2
    },
    "upcomingMissions": 0,
@@ -243,22 +304,22 @@
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 3,
+   "solutions": 5,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 3
+    "agency": 5
    },
-   "upcomingMissions": 2,
+   "upcomingMissions": 4,
    "impactTotals": []
   },
   "space-weather": {
    "name": "Space Weather & Shields",
-   "solutions": 6,
+   "solutions": 10,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 5,
+    "agency": 9,
     "natural": 1
    },
    "upcomingMissions": 1,
@@ -266,11 +327,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 10,
+   "solutions": 15,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 9,
+    "agency": 14,
     "corporate": 1
    },
    "upcomingMissions": 0,
@@ -278,15 +339,15 @@
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 7,
+   "solutions": 12,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 5,
-    "natural": 1,
-    "corporate": 1
+    "agency": 8,
+    "corporate": 3,
+    "natural": 1
    },
-   "upcomingMissions": 2,
+   "upcomingMissions": 5,
    "impactTotals": []
   }
  },
@@ -314,6 +375,39 @@
   {
    "url": "Oceans.html",
    "title": "Coral Restoration Foundation",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Oceans.html",
+   "title": "Kelp Forests",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Oceans.html",
+   "title": "Seagrass Meadows",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Oceans.html",
+   "title": "Billion Oyster Project",
    "category": "ocean",
    "type": "solution",
    "classification": "nonprofit",
@@ -637,7 +731,34 @@
    "type": "hub",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [
+    {
+     "name": "Europa Clipper",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2030-04-01T00:00:00Z"
+     }
+    },
+    {
+     "name": "Juice",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2031-07-01T00:00:00Z"
+     }
+    },
+    {
+     "name": "Mission Robotic Vehicle",
+     "upcoming": true,
+     "next": null
+    },
+    {
+     "name": "Otter (SSPICY)",
+     "upcoming": false,
+     "next": null
+    }
+   ]
   },
   {
    "url": "Space_Disposal.html",
@@ -668,6 +789,50 @@
    "type": "solution",
    "classification": "corporate",
    "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Disposal.html",
+   "title": "Europa Clipper (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Disposal.html",
+   "title": "Juice (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Disposal.html",
+   "title": "Northrop Grumman SpaceLogistics",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Disposal.html",
+   "title": "Starfish Space Otter",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
    "section": true,
    "stats": [],
    "missions": []
@@ -749,6 +914,42 @@
    "type": "hub",
    "classification": "agency",
    "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "OSIRIS-APEX",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2029-04-13T00:00:00Z"
+     }
+    },
+    {
+     "name": "Ramses",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Planetary_Defense.html",
+   "title": "OSIRIS-APEX and Apophis 2029 (NASA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Planetary_Defense.html",
+   "title": "Ramses (ESA / JAXA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
    "stats": [],
    "missions": []
   },
@@ -877,7 +1078,28 @@
      "sourceUrl": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
     }
    ],
-   "missions": []
+   "missions": [
+    {
+     "name": "PUNCH",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "TRACERS",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "Carruthers",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "Solar Orbiter",
+     "upcoming": false,
+     "next": null
+    }
+   ]
   },
   {
    "url": "Space_Weather.html",
@@ -893,6 +1115,50 @@
   {
    "url": "Space_Weather.html",
    "title": "GOES-19 and CCOR-1 (NOAA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "PUNCH (NASA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "TRACERS (NASA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Carruthers Geocorona Observatory (NASA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Space_Weather.html",
+   "title": "Solar Orbiter (ESA / NASA)",
    "category": "space-weather",
    "type": "solution",
    "classification": "agency",
@@ -923,7 +1189,33 @@
      "sourceUrl": "https://www.nasa.gov/earth/first-greenhouse-gas-plumes-detected-with-nasa-designed-instrument/"
     }
    ],
-   "missions": []
+   "missions": [
+    {
+     "name": "GRACE-FO",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "ICESat-2",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "Sentinel-1",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "FLEX and Sentinel-3C",
+     "upcoming": false,
+     "next": null
+    },
+    {
+     "name": "EOS-06",
+     "upcoming": false,
+     "next": null
+    }
+   ]
   },
   {
    "url": "Earth_Observation.html",
@@ -1036,6 +1328,61 @@
    "missions": []
   },
   {
+   "url": "Earth_Observation.html",
+   "title": "GRACE-FO (NASA / Germany)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "ICESat-2 (NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "Copernicus Sentinel-1 (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "FLEX and Sentinel-3C (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Earth_Observation.html",
+   "title": "EOS-06 / Oceansat-3 (ISRO)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
    "url": "Atmospheric_Drag.html",
    "title": "Atmospheric Drag",
    "category": "project-r",
@@ -1084,6 +1431,23 @@
    "category": "project-r",
    "type": "hub",
    "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "ESCAPADE",
+     "upcoming": false,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Project-Rawane.html",
+   "title": "ESCAPADE (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "section": true,
    "stats": [],
    "missions": []
   },
