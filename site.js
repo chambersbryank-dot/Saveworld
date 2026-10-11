@@ -47,7 +47,6 @@
    data-news (search term for Spaceflight News API v4), data-source / data-source-label. */
 (function () {
   var els = document.querySelectorAll('[data-mission]');
-  if (!els.length) return;
   var NEWS_MS = 3600000;
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function fmt(iso) { var d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }); }
@@ -65,7 +64,7 @@
       return '<li><a href="' + esc(u) + '" target="_blank" rel="noreferrer">' + esc(a.title) + '</a> <span class="mw-date">' + esc(fmt(a.published_at)) + '</span></li>';
     }).join('');
   }
-  Array.prototype.forEach.call(els, function (el) {
+  function render(el) {
     var ds = el.dataset, key = 'mw-news-' + (ds.news || ds.mission);
     var ms = (ds.milestones || '').split(';').filter(Boolean).map(function (m) { var p = m.split('|'); return { d: p[0], l: p[1] || '' }; });
     el.innerHTML = '<h2>' + esc(ds.mission) + ': Mission Status</h2>' +
@@ -94,7 +93,9 @@
         renderNews(box, items);
       })
       .catch(function () { if (!(cached && cached.items)) renderNews(box, []); });
-  });
+  }
+  window.spRenderMission = render;
+  Array.prototype.forEach.call(els, render);
 })();
 
 /* Stats engine: renders the homepage overview ([data-site-stats]) and contextual

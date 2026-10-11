@@ -712,3 +712,8 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Program tracker cards (goals, crew, hardware, Gateway status) sourced to NASA releases (architecture update Feb 27 2026, Artemis III crew Jun 9 2026, Artemis IV mission page, Mar 2026 plan PDF). Starship/Blue Moon named as landers per NASA.
 - "Why Voyages Outward Matter on Earth" framing section; Launch Library 2 widget copied from Project-Rawane (with launches-shift note).
 - styles.css: launch heading at section size on artemis-page; cache-bust v=20261011b on all pages.
+
+## 2026-10-11 — Artemis tracker: data-driven schedule + Artemis III spotlight
+- Data: assets/data/artemis.json (asOf, updated, missions[]: target/targetLabel, launch, status, objective, crew, hardware, milestones, sources, watch URL). Artemis_II.html inline script fetches it and renders the three mission widgets (via new window.spRenderMission in site.js) and tracker cards; static HTML is the no-JS fallback. "Last updated" line from JSON.
+- scripts/update-artemis.js: fetches NASA Artemis III/IV mission pages + Our Artemis III Crew page; updates only reliably parsed fields (LAUNCH target, Mission Type, Artemis III crew names/roles); prints diff; never invents data. Exit 0 no change / 2 changed / 1 errors. Run weekly, then commit the JSON if exit 2.
+- Added "Spotlight: Artemis III" (source nasa.gov/mission/artemis-iii); Impact Statement rewritten as program-page value; Five W's now cover the Artemis program (companies labeled). site.js cache tag v=20261011a on all pages.

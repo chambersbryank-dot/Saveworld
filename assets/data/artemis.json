@@ -1,0 +1,156 @@
+{
+  "asOf": "2026-10-11",
+  "updated": "2026-10-11",
+  "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
+  "program": {
+    "url": "https://www.nasa.gov/humans-in-space/artemis/",
+    "label": "NASA, Artemis program"
+  },
+  "missions": [
+    {
+      "id": "artemis-ii",
+      "name": "Artemis II",
+      "state": "flown",
+      "target": "April 1–10, 2026",
+      "launch": "2026-04-01T00:00:00Z",
+      "missionType": "Crewed lunar flyby",
+      "status": "Flown. Four astronauts flew around the Moon, reached 252,756 miles from Earth on April 6, 2026, and splashed down off San Diego after a nearly 10-day, 695,081-mile journey.",
+      "objective": "Prove Orion and SLS with a crew aboard.",
+      "crew": [
+        {
+          "name": "Reid Wiseman",
+          "role": "Commander",
+          "agency": "NASA"
+        },
+        {
+          "name": "Victor Glover",
+          "role": "Pilot",
+          "agency": "NASA"
+        },
+        {
+          "name": "Christina Koch",
+          "role": "Mission Specialist",
+          "agency": "NASA"
+        },
+        {
+          "name": "Jeremy Hansen",
+          "role": "Mission Specialist",
+          "agency": "CSA"
+        }
+      ],
+      "hardware": "SLS rocket and Orion spacecraft.",
+      "milestones": [
+        {
+          "date": "2026-04-01",
+          "label": "Launch on SLS and Orion from Kennedy Space Center"
+        },
+        {
+          "date": "2026-04-06",
+          "label": "New record: 252,756 miles from Earth"
+        },
+        {
+          "date": "2026-04-10",
+          "label": "Splashdown off San Diego"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/",
+          "label": "NASA, Artemis II crew back on Earth"
+        },
+        {
+          "url": "https://www.nasa.gov/news-release/nasas-artemis-ii-crew-eclipses-record-for-farthest-human-spaceflight/",
+          "label": "NASA, Artemis II distance record"
+        }
+      ],
+      "watch": "https://www.nasa.gov/mission/artemis-ii/"
+    },
+    {
+      "id": "artemis-iii",
+      "name": "Artemis III",
+      "state": "upcoming",
+      "target": "2027",
+      "targetLabel": "NASA target: 2027",
+      "missionType": "Crewed Demonstration",
+      "status": "A crewed test flight in low Earth orbit: Orion will practice rendezvous and docking with one or both commercial lunar landers and test critical systems before any landing. No launch date set yet, so no countdown.",
+      "objective": "Demonstrate Critical Systems for Lunar Landing",
+      "crew": [
+        {
+          "name": "Randy Bresnik",
+          "role": "Commander",
+          "agency": "NASA"
+        },
+        {
+          "name": "Luca Parmitano",
+          "role": "Pilot",
+          "agency": "ESA"
+        },
+        {
+          "name": "Andre Douglas",
+          "role": "Mission Specialist",
+          "agency": "NASA"
+        },
+        {
+          "name": "Frank Rubio",
+          "role": "Mission Specialist",
+          "agency": "NASA"
+        }
+      ],
+      "hardware": "SLS, Orion, and one or both human landing systems: SpaceX Starship and Blue Origin Blue Moon (company-built, NASA contracts).",
+      "milestones": [
+        {
+          "date": "2026-02-27",
+          "label": "NASA makes Artemis III an Earth-orbit test; first landing moves to Artemis IV"
+        },
+        {
+          "date": "2026-06-09",
+          "label": "Crew named: Bresnik, Parmitano (ESA), Douglas, Rubio"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/mission/artemis-iii/",
+          "label": "NASA, Artemis III mission"
+        },
+        {
+          "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
+          "label": "NASA, Artemis III crew"
+        },
+        {
+          "url": "https://www.nasa.gov/news-release/nasa-adds-mission-to-artemis-lunar-program-updates-architecture/",
+          "label": "NASA, Artemis architecture update"
+        }
+      ],
+      "watch": "https://www.nasa.gov/mission/artemis-iii/"
+    },
+    {
+      "id": "artemis-iv",
+      "name": "Artemis IV",
+      "state": "upcoming",
+      "target": "Early 2028",
+      "targetLabel": "NASA target: early 2028",
+      "missionType": "Crewed Surface Landing",
+      "status": "Humanity's return to the lunar surface: two of four crew will descend near the Moon's South Pole and spend about a week there. Crew not yet announced.",
+      "objective": "Land two astronauts near the lunar South Pole for about a week of science.",
+      "crew": [],
+      "hardware": "SLS (standardized configuration from Artemis IV), Orion docking with a commercial human landing system in lunar orbit. Gateway is not listed in NASA's February 2026 plan update.",
+      "milestones": [
+        {
+          "date": "2026-02-27",
+          "label": "NASA names Artemis IV the first crewed landing, targeted for 2028"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/mission/artemis-iv/",
+          "label": "NASA, Artemis IV"
+        },
+        {
+          "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+          "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+        }
+      ],
+      "watch": "https://www.nasa.gov/mission/artemis-iv/"
+    }
+  ]
+}
