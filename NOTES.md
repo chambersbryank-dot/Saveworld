@@ -706,3 +706,9 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - New Artemis_II.html (mission template from Hera: space-hero with ArtemisII_Launch_SLS.jpg via body.artemis-page, breadcrumb Home › Project Rawane › Artemis II, Five W's, Impact Statement, bottom-link "For Further Information" → NASA Artemis II, next-solutions, footer, consent.js, JSON-LD/og/twitter/canonical). Same content/sources as the former inline section; sp:category project-r, sp:type solution, sp:stat 252,756 miles. amazing-fact "Farthest Humans Have Gone" moved here (Amazing Facts From: → Artemis_II.html).
 - Project-Rawane.html: inline #artemis-ii Impact Statement + Five W's removed (and its sp:item); Voyages Outward card image + title → Artemis_II.html.
 - sitemap.xml + search index updated; styles.css ?v=20261011a on all 45 styled pages.
+
+## 2026-10-11 — Artemis_II.html expanded into a living Artemis program tracker
+- Added: Artemis II/III/IV mission-status widgets (site.js [data-mission] pattern: milestones done/upcoming, news, source); countdown only where NASA has a date (Artemis II launch Apr 1 2026). Artemis III = "NASA target: 2027", Artemis IV = "NASA target: early 2028", as of Oct 2026, no countdown until NASA sets a date.
+- Program tracker cards (goals, crew, hardware, Gateway status) sourced to NASA releases (architecture update Feb 27 2026, Artemis III crew Jun 9 2026, Artemis IV mission page, Mar 2026 plan PDF). Starship/Blue Moon named as landers per NASA.
+- "Why Voyages Outward Matter on Earth" framing section; Launch Library 2 widget copied from Project-Rawane (with launches-shift note).
+- styles.css: launch heading at section size on artemis-page; cache-bust v=20261011b on all pages.
