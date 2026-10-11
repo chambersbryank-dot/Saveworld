@@ -45,12 +45,21 @@ function menuHtml(menu) {
   // Project Rawane is a plain top-nav link (no dropdown); menu data still recorded in solutions.json.
   return '<li><a href="Project-Rawane.html">Project Rawane</a></li>';
 }
+// Language switcher (EN · FR · ES · العربية), appended inside the PROJECT-R-MENU block of every English page so it
+// survives regeneration. Links to the translated page when fr/<page> etc. exists, else that language's Project Rawane.
+// Translated pages get their own switcher from scripts/i18n-build.py.
+const I18N_LANGS = [['fr', 'FR', 'Français'], ['es', 'ES', 'Español'], ['ar', 'العربية', 'العربية']];
+function langSwitch(f) {
+  return '<li class="lang-switch" aria-label="Language"><a href="' + f + '" hreflang="en" lang="en" aria-current="true" title="English">EN</a>' +
+    I18N_LANGS.map(([l, label, name]) => '<span aria-hidden="true"> · </span><a href="' + l + '/' + (fs.existsSync(l + '/' + f) ? f : 'Project-Rawane.html') +
+      '" hreflang="' + l + '" lang="' + l + '" title="' + name + '">' + label + '</a>').join('') + '</li>';
+}
 function writeProjectRMenu(menu) {
   const html = menuHtml(menu); let n = 0;
   const re = /<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/;
   fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
     const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
-    const next = src.replace(re, `<!-- PROJECT-R-MENU:START -->${html}<!-- PROJECT-R-MENU:END -->`);
+    const next = src.replace(re, `<!-- PROJECT-R-MENU:START -->${html}${langSwitch(f)}<!-- PROJECT-R-MENU:END -->`);
     if (next !== src) { fs.writeFileSync(f, next); n++; }
   });
   return n;
@@ -86,7 +95,8 @@ function writeSolutionsMenu(menu) {
 
 function build() {
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => path.basename(m[1].trim()))
+  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
+   .map(m => path.basename(m[1].trim()))
     .filter(f => f.endsWith('.html') && !SKIP.includes(f) && fs.existsSync(f));
   const now = Date.now();
   const warnings = [];

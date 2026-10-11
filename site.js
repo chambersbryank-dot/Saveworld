@@ -151,7 +151,7 @@
   var cached = null;
   try { cached = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
   if (cached && cached.site) { render(cached); return; }
-  fetch('assets/data/solutions.json', { cache: 'no-cache' })
+  fetch((/\/(fr|es|ar)\//.test(location.pathname) ? '../' : '') + 'assets/data/solutions.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) { try { sessionStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} render(d); })
     .catch(function () { /* keep blocks hidden; homepage keeps its static numbers */ });

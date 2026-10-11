@@ -12,7 +12,8 @@ const fs = require('fs');
 const path = require('path');
 
 const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
+const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
+   
   .map(m => path.basename(m[1].trim()))
   .filter(f => f.endsWith('.html'))
   .filter(f => !['Search.html', '404.html', 'Project-R.html'].includes(f)); // never index these
