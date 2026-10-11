@@ -112,7 +112,7 @@ def fix(p):
                 j['dateModified'] = max(filter(None, [j.get('dateModified'), mod, j['datePublished']]))
             elif typ == 'WebSite':
                 j['inLanguage'] = lang; j['url'] = SITE
-                j['potentialAction'] = {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + 'Search.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}
+                j['potentialAction'] = {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + ('' if lang == 'en' else lang + '/') + 'Search.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}
             return '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>'
         head = re.sub(r'<script type="application/ld\+json">(.*?)</script>', ld, head, flags=re.S)
         if base != 'index.html' and not ({'Article', 'WebPage', 'CollectionPage'} & set(have)):

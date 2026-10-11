@@ -78,6 +78,22 @@ def fix_url(u):
     if page in PAGES: return u            # stay inside the language folder
     return '../' + u
 
+def localize_search(js, m):
+    """Search.html inline index: translated titles; translated h1/intro of each page appended to the searchable text."""
+    def ent(mt):
+        title, url, text = mt.group(1), mt.group(2), mt.group(3)
+        t_title = lookup(m, title.replace("\\'", "'")) or title
+        extra = []
+        if os.path.exists(url):
+            sp = BeautifulSoup(open(url, encoding='utf8').read(), 'html.parser')
+            for el in sp.select('h1, .page-hero-content p, .hub-hero p')[:3]:
+                t = lookup(m, el.get_text(' ', strip=True))
+                if t: extra.append(t)
+        add = ' '.join([t_title] + extra).lower().replace('\\', ' ').replace("'", "\\'")
+        return "{ title: '%s', url: '%s', text: '%s %s' }" % (t_title.replace("'", "\\'"), url, text, add)
+    js = re.sub(r"\{ title: '((?:[^'\\]|\\.)*)', url: '([^']*)', text: '((?:[^'\\]|\\.)*)' \}", ent, js)
+    return js.replace('return p.text.indexOf(q)', 'return p.text.toLowerCase().indexOf(q)')
+
 def build(page, lang, m):
     raw = open(page, encoding='utf8').read()
     soup = BeautifulSoup(raw, 'html.parser')
@@ -101,7 +117,8 @@ def build(page, lang, m):
     ui = json.load(open('i18n/ui.json', encoding='utf8')).get(lang, {})
     for s in soup.find_all('script'):
         if not s.get('src') and s.get('type') != 'application/ld+json' and s.string:
-            js = s.string.replace("'assets/data/artemis.json'", f"'../assets/data/artemis.{lang}.json'")  # per-language data (scripts/i18n-data.py); static translated cards are the fallback
+            js = s.string.replace("'assets/data/artemis.json'", f"'../assets/data/artemis.{lang}.json'")
+            if page == 'Search.html': js = localize_search(js, m)  # per-language data (scripts/i18n-data.py); static translated cards are the fallback
             for en, t in ui.items(): js = js.replace(en, t)
             s.string = js
             continue
@@ -117,7 +134,7 @@ def build(page, lang, m):
     can = head.find('link', rel='canonical')
     extra = BeautifulSoup(hreflang_links(page) + f'\n<meta name="i18n-source" content="{page} {src_hash(page)}">'
                           + f'\n<meta property="og:locale" content="{ {"fr":"fr_FR","es":"es_ES","ar":"ar_AR"}[lang] }">', 'html.parser')
-    can.insert_after(extra)
+    (can.insert_after(extra) if can else head.append(extra))
     ul = soup.select_one('nav#topnav ul.nav-links')
     if ul: ul.append(BeautifulSoup(switcher(page, lang, '../'), 'html.parser'))
     # amazing-fact tags in translations must not be collected again: drop the class marker

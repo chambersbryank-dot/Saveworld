@@ -29,7 +29,9 @@
   "<strong>Hardware:</strong>": "<strong>Matériel :</strong>",
   "'<p class=\"fact-source\">Source: <a": "'<p class=\"fact-source\">Source : <a",
   "toLocaleDateString(undefined,": "toLocaleDateString('fr',",
-  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')"
+  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')",
+  "matches.length + ' result' + (matches.length === 1 ? '' : 's') : 'No matches for \"'": "matches.length + ' résultat' + (matches.length === 1 ? '' : 's') : 'Aucun résultat pour « '",
+  "+ query.trim() + '\"'": "+ query.trim() + ' »'"
  },
  "es": {
   "'Unnamed mission'": "'Misión sin nombre'",
@@ -61,7 +63,9 @@
   "<strong>Hardware:</strong>": "<strong>Equipos:</strong>",
   "'<p class=\"fact-source\">Source: <a": "'<p class=\"fact-source\">Fuente: <a",
   "toLocaleDateString(undefined,": "toLocaleDateString('es',",
-  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')"
+  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')",
+  "matches.length + ' result' + (matches.length === 1 ? '' : 's') : 'No matches for \"'": "matches.length + ' resultado' + (matches.length === 1 ? '' : 's') : 'Sin resultados para «'",
+  "+ query.trim() + '\"'": "+ query.trim() + '»'"
  },
  "ar": {
   "'Unnamed mission'": "'مهمة بلا اسم'",
@@ -93,6 +97,8 @@
   "<strong>Hardware:</strong>": "<strong>العتاد:</strong>",
   "'<p class=\"fact-source\">Source: <a": "'<p class=\"fact-source\">المصدر: <a",
   "toLocaleDateString(undefined,": "toLocaleDateString('ar',",
-  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')"
+  "(m.targetLabel || '').replace(/\\b\\w/g, function (x) { return x.toUpperCase(); })": "(m.targetLabel || '')",
+  "matches.length + ' result' + (matches.length === 1 ? '' : 's') : 'No matches for \"'": "matches.length + ' نتيجة' : 'لا نتائج لـ «'",
+  "+ query.trim() + '\"'": "+ query.trim() + '»'"
  }
 }

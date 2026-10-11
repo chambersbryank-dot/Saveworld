@@ -75,10 +75,11 @@ for p in pages:
         if img.get('alt') is None: add('img-alt', p, img.get('src', ''))
         if not (img.get('width') and img.get('height')): add('img-size', p, img.get('src', ''))
         if img.get('loading') != 'lazy' and img.get('fetchpriority') != 'high': add('img-lazy', p, img.get('src', ''))
-    if lang != 'en':
+    if lang != 'en' and os.path.exists(base):  # alt text identical to the English page's alt = not localized
+        en_alts = {i.get('alt', '') for i in BeautifulSoup(open(base, encoding='utf8').read(), 'html.parser').find_all('img')}
         for img in soup.find_all('img'):
             a = img.get('alt', '')
-            if a and re.search(r'\b(the|of|and|with)\b', a): add('img-alt-english', p, a[:40])
+            if a and a in en_alts and re.search(r'\b(the|of|and|with)\b', a): add('img-alt-english', p, a[:40])
     if url not in locs: add('sitemap-missing', p)
 for t, ps in titles.items():
     if t and len(ps) > 1: add('title-duplicate', ' '.join(ps), t)
