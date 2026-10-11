@@ -6,8 +6,7 @@
 // Exit 0 = all translated pages current, 1 = something missing/stale in the translated set.
 const fs = require('fs'), crypto = require('crypto'), path = require('path');
 const LANGS = ['fr', 'es', 'ar'];
-const PAGES = ['Project-Rawane.html', 'Oceans.html', 'Lakes.html', 'Rivers.html', 'Deforestation.html', 'Space.html',
-  'Space_Disposal.html', 'Planetary_Defense.html', 'Space_Weather.html', 'Earth_Observation.html', 'Amazing_Facts.html'];
+const PAGES = fs.readFileSync('i18n/pages.txt', 'utf8').split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
 function normalize(src) {
   return src.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?/g, '')
     .replace(/<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/g, '')

@@ -748,3 +748,10 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - New pages NISAR, Biomass, Tanager-1 (corporate), DSCOVR_EPIC from the old Earth Observation sections; each got sourced Five W's (same NASA/ESA sources as the section) and a For Further Information link; hub cards link to pages; hub sp:items removed; menu now 72 items.
 - Project-Rawane.html: Space Disposal (mankind + natural), Planetary Defense and Space Weather groups now include every hub card (US Deorbit Vehicle, Aeolus, LignoSat, SpaceLogistics, Starfish Otter; Europa Clipper, Juice; OSIRIS-APEX, Ramses; IMAP, GOES-19, PUNCH, TRACERS, Carruthers, Solar Orbiter), linking to the pages.
 - styles.css ?v=20261011f on all pages (after i18n worker's e); sitemap +4; search index rebuilt.
+
+## i18n phase 2 (Oct 11, 2026)
+- Pages translated are listed in `i18n/pages.txt` (hubs, Project Rawane, Amazing Facts, Artemis_II, 34 solution pages, 4 EO pages). Add a line + run `python3 scripts/i18n-build.py --missing fr|es|ar`, fill `i18n/<lang>.json`, then `python3 scripts/i18n-build.py` and `python3 scripts/i18n-sitemap.py`.
+- Templates (PATTERNS in i18n-build.py) cover "Learn more about X", "Want to go deeper? X has…", "X | Saving Planets", "The Five W's of X", "X: Mission Status".
+- Script-drawn UI: `site.js` has a strings table (`spT`, `spLang`) for mission widgets and stats blocks; inline launch-widget literals are swapped at build time from `i18n/ui.json`. On translated Artemis pages the artemis.json refresh script is dropped (data file is English); the translated static cards stay.
+- Every English page carries PROJECT-R-MENU markers so build-stats.js re-adds the language switcher (Project-Rawane.html was missing them).
+- Switcher + RTL CSS live at the end of styles.css (they had been lost in a merge; restored, styles v=20261011g, site.js v=20261011b).

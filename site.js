@@ -1,3 +1,17 @@
+/* i18n strings for script-drawn UI (translated pages set <html lang="fr|es|ar">). Keys are the English text. */
+(function () {
+  var L = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
+  var S = {
+    fr: { 'Ocean': 'Océan', 'Lakes': 'Lacs', 'Rivers': 'Rivières', 'Forests': 'Forêts', 'Space': 'Espace', 'Planetary Defense': 'Défense planétaire', 'Space Weather & Shields': 'Météo spatiale et boucliers', 'Earth Observation': 'Observation de la Terre', 'Project Rawane': 'Projet Rawane', 'Mission Status': 'état de la mission', 'Reached': 'Atteint', 'News is unavailable right now.': 'Actualités indisponibles pour le moment.', 'Launch': 'Lancement', 'Arrival': 'Arrivée', 'Milestones': 'Étapes clés', 'Latest News': 'Dernières actualités', 'Loading…': 'Chargement…', 'Dates per': 'Dates selon', 'missions shift.': 'les missions évoluent.', 'Source:': 'Source :',
+      'active solution': 'solution active', 'active solutions': 'solutions actives', 'on the horizon': 'à l\u2019horizon', 'active solutions featured': 'solutions actives présentées', 'hubs across': 'hubs dans', 'categories': 'catégories', 'upcoming space missions we track live': 'missions spatiales à venir suivies en direct', 'natural solutions, alongside': 'solutions naturelles, ainsi que', 'combined across': 'cumulés sur', 'solution': 'solution', 'solutions': 'solutions', 'each figure sourced on its page': 'chaque chiffre sourcé sur sa page', 'Last updated': 'Dernière mise à jour :', 'Counts are generated from every solution page on this site.': 'Les totaux sont générés à partir de chaque page de solution du site.', 'By the Numbers': 'En chiffres', 'upcoming mission': 'mission à venir', 'upcoming missions': 'missions à venir', 'combined, from sourced page figures': 'cumulés, à partir des chiffres sourcés des pages', 'Site-Wide': 'Sur tout le site', 'hub': 'hub', 'hubs': 'hubs', 'This Page': 'Cette page', 'source': 'source', 'Updated': 'Mis à jour le', 'Generated from every solution page on Saving Planets.': 'Généré à partir de chaque page de solution de Saving Planets.', 'agency': 'agence', 'corporate': 'entreprise', 'nonprofit': 'association', 'natural': 'naturelle' },
+    es: { 'Ocean': 'Océano', 'Lakes': 'Lagos', 'Rivers': 'Ríos', 'Forests': 'Bosques', 'Space': 'Espacio', 'Planetary Defense': 'Defensa planetaria', 'Space Weather & Shields': 'Clima espacial y escudos', 'Earth Observation': 'Observación de la Tierra', 'Project Rawane': 'Proyecto Rawane', 'Mission Status': 'estado de la misión', 'Reached': 'Alcanzado', 'News is unavailable right now.': 'Noticias no disponibles por ahora.', 'Launch': 'Lanzamiento', 'Arrival': 'Llegada', 'Milestones': 'Hitos', 'Latest News': 'Últimas noticias', 'Loading…': 'Cargando…', 'Dates per': 'Fechas según', 'missions shift.': 'las misiones cambian.', 'Source:': 'Fuente:',
+      'active solution': 'solución activa', 'active solutions': 'soluciones activas', 'on the horizon': 'en el horizonte', 'active solutions featured': 'soluciones activas destacadas', 'hubs across': 'centros en', 'categories': 'categorías', 'upcoming space missions we track live': 'próximas misiones espaciales que seguimos en vivo', 'natural solutions, alongside': 'soluciones naturales, junto a', 'combined across': 'en conjunto entre', 'solution': 'solución', 'solutions': 'soluciones', 'each figure sourced on its page': 'cada cifra con fuente en su página', 'Last updated': 'Última actualización:', 'Counts are generated from every solution page on this site.': 'Los recuentos se generan a partir de cada página de solución del sitio.', 'By the Numbers': 'En cifras', 'upcoming mission': 'próxima misión', 'upcoming missions': 'próximas misiones', 'combined, from sourced page figures': 'en conjunto, a partir de cifras con fuente', 'Site-Wide': 'Todo el sitio', 'hub': 'centro', 'hubs': 'centros', 'This Page': 'Esta página', 'source': 'fuente', 'Updated': 'Actualizado el', 'Generated from every solution page on Saving Planets.': 'Generado a partir de cada página de solución de Saving Planets.', 'agency': 'agencia', 'corporate': 'empresa', 'nonprofit': 'sin ánimo de lucro', 'natural': 'natural' },
+    ar: { 'Ocean': 'المحيط', 'Lakes': 'البحيرات', 'Rivers': 'الأنهار', 'Forests': 'الغابات', 'Space': 'الفضاء', 'Planetary Defense': 'الدفاع الكوكبي', 'Space Weather & Shields': 'الطقس الفضائي والدروع', 'Earth Observation': 'رصد الأرض', 'Project Rawane': 'مشروع Rawane', 'Mission Status': 'حالة المهمة', 'Reached': 'تحقّق', 'News is unavailable right now.': 'الأخبار غير متاحة حاليًا.', 'Launch': 'الإطلاق', 'Arrival': 'الوصول', 'Milestones': 'المحطات الرئيسية', 'Latest News': 'آخر الأخبار', 'Loading…': 'جارٍ التحميل…', 'Dates per': 'التواريخ وفق', 'missions shift.': 'والمواعيد قابلة للتغيّر.', 'Source:': 'المصدر:',
+      'active solution': 'حل نشط', 'active solutions': 'حلول نشطة', 'on the horizon': 'في الأفق', 'active solutions featured': 'حلًا نشطًا معروضًا', 'hubs across': 'محاور ضمن', 'categories': 'فئات', 'upcoming space missions we track live': 'مهمة فضائية قادمة نتابعها مباشرة', 'natural solutions, alongside': 'حلول طبيعية، إلى جانب', 'combined across': 'مجموع عبر', 'solution': 'حل', 'solutions': 'حلول', 'each figure sourced on its page': 'كل رقم موثّق في صفحته', 'Last updated': 'آخر تحديث:', 'Counts are generated from every solution page on this site.': 'تُحسب الأعداد من كل صفحات الحلول في الموقع.', 'By the Numbers': 'بالأرقام', 'upcoming mission': 'مهمة قادمة', 'upcoming missions': 'مهام قادمة', 'combined, from sourced page figures': 'مجموع من الأرقام الموثّقة في الصفحات', 'Site-Wide': 'على مستوى الموقع', 'hub': 'محور', 'hubs': 'محاور', 'This Page': 'هذه الصفحة', 'source': 'المصدر', 'Updated': 'حُدّث في', 'Generated from every solution page on Saving Planets.': 'مُولَّد من كل صفحات الحلول في Saving Planets.', 'agency': 'وكالة', 'corporate': 'شركة', 'nonprofit': 'منظمة غير ربحية', 'natural': 'طبيعي' }
+  };
+  window.spLang = L;
+  window.spT = function (s) { var t = S[L]; return (t && t[s]) || s; };
+})();
 (function () {
   var root = document.documentElement;
   root.classList.add('dark'); // site is permanently dark
@@ -49,16 +63,16 @@
   var els = document.querySelectorAll('[data-mission]');
   var NEWS_MS = 3600000;
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function fmt(iso) { var d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }); }
+  function fmt(iso) { var d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString(spLang === 'en' ? undefined : spLang, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }); }
   function count(iso) {
     var diff = new Date(iso).getTime() - Date.now();
     if (isNaN(diff)) return '';
-    if (diff <= 0) return 'Reached';
+    if (diff <= 0) return spT('Reached');
     var s = Math.floor(diff / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
     return d + 'd ' + h + 'h ' + m + 'm ' + x + 's';
   }
   function renderNews(box, items) {
-    if (!items || !items.length) { box.innerHTML = '<li>News is unavailable right now.</li>'; return; }
+    if (!items || !items.length) { box.innerHTML = '<li>' + spT('News is unavailable right now.') + '</li>'; return; }
     box.innerHTML = items.map(function (a) {
       var u = /^https?:\/\//.test(a.url) ? a.url : '#';
       return '<li><a href="' + esc(u) + '" target="_blank" rel="noreferrer">' + esc(a.title) + '</a> <span class="mw-date">' + esc(fmt(a.published_at)) + '</span></li>';
@@ -67,15 +81,15 @@
   function render(el) {
     var ds = el.dataset, key = 'mw-news-' + (ds.news || ds.mission);
     var ms = (ds.milestones || '').split(';').filter(Boolean).map(function (m) { var p = m.split('|'); return { d: p[0], l: p[1] || '' }; });
-    el.innerHTML = '<h2>' + esc(ds.mission) + ': Mission Status</h2>' +
+    el.innerHTML = '<h2>' + esc(ds.mission) + (spLang === 'fr' ? ' : ' : ': ') + spT('Mission Status') + '</h2>' +
       (ds.status ? '<p class="mw-status">' + esc(ds.status) + '</p>' : '') +
       '<div class="mw-grid">' +
-      (ds.launch ? '<div class="mw-count"><small>Launch (' + esc(fmt(ds.launch)) + ')</small><b data-t="' + esc(ds.launch) + '"></b></div>' : '') +
-      (ds.arrival ? '<div class="mw-count"><small>Arrival (' + esc(ds.arrivalLabel || fmt(ds.arrival)) + ')</small><b data-t="' + esc(ds.arrival) + '"></b></div>' : '') +
+      (ds.launch ? '<div class="mw-count"><small>' + spT('Launch') + ' (' + esc(fmt(ds.launch)) + ')</small><b data-t="' + esc(ds.launch) + '"></b></div>' : '') +
+      (ds.arrival ? '<div class="mw-count"><small>' + spT('Arrival') + ' (' + esc(ds.arrivalLabel || fmt(ds.arrival)) + ')</small><b data-t="' + esc(ds.arrival) + '"></b></div>' : '') +
       '</div>' +
-      (ms.length ? '<h3>Milestones</h3><ul class="mw-milestones">' + ms.map(function (m) { var past = new Date(m.d).getTime() < Date.now(); return '<li class="' + (past ? 'done' : '') + '"><span class="mw-date">' + esc(fmt(m.d)) + '</span> ' + esc(m.l) + '</li>'; }).join('') + '</ul>' : '') +
-      (ds.news ? '<h3>Latest News</h3><ul class="mw-news"><li>Loading…</li></ul>' : '') +
-      '<p class="mw-note">Dates per ' + esc(ds.agency || 'NASA') + '; missions shift.' + (ds.source ? ' <a href="' + esc(ds.source) + '" target="_blank" rel="noreferrer">Source: ' + esc(ds.sourceLabel || 'NASA') + '</a>' : '') + '</p>';
+      (ms.length ? '<h3>' + spT('Milestones') + '</h3><ul class="mw-milestones">' + ms.map(function (m) { var past = new Date(m.d).getTime() < Date.now(); return '<li class="' + (past ? 'done' : '') + '"><span class="mw-date">' + esc(fmt(m.d)) + '</span> ' + esc(m.l) + '</li>'; }).join('') + '</ul>' : '') +
+      (ds.news ? '<h3>' + spT('Latest News') + '</h3><ul class="mw-news"><li>' + spT('Loading…') + '</li></ul>' : '') +
+      '<p class="mw-note">' + spT('Dates per') + ' ' + esc(ds.agency || 'NASA') + '; ' + spT('missions shift.') + (ds.source ? ' <a href="' + esc(ds.source) + '" target="_blank" rel="noreferrer">' + spT('Source:') + ' ' + esc(ds.sourceLabel || 'NASA') + '</a>' : '') + '</p>';
     var counters = el.querySelectorAll('[data-t]');
     function tick() { Array.prototype.forEach.call(counters, function (c) { c.textContent = count(c.getAttribute('data-t')); }); }
     tick(); setInterval(tick, 1000);
@@ -108,24 +122,24 @@
   if (!site && !blocks.length) return;
   var KEY = 'sp-solutions-v2';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function num(n) { return typeof n === 'number' ? n.toLocaleString('en-US') : esc(n); }
-  function plural(n, a, b) { return num(n) + ' ' + (n === 1 ? a : b); }
+  function num(n) { return typeof n === 'number' ? n.toLocaleString(spLang === 'en' ? 'en-US' : spLang) : esc(n); }
+  function plural(n, a, b) { return num(n) + ' ' + spT(n === 1 ? a : b); }
   function cls(by) {
     var names = { agency: 'agency', corporate: 'corporate', nonprofit: 'nonprofit', natural: 'natural' };
-    return Object.keys(names).filter(function (k) { return by[k]; }).map(function (k) { return by[k] + ' ' + names[k]; }).join(' · ');
+    return Object.keys(names).filter(function (k) { return by[k]; }).map(function (k) { return by[k] + ' ' + spT(names[k]); }).join(' · ');
   }
-  function solLine(a) { return plural(a.solutions, 'active solution', 'active solutions') + (a.horizon ? ', ' + a.horizon + ' on the horizon' : ''); }
-  function updated(d) { var t = new Date(d.generated); return isNaN(t) ? '' : t.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  function solLine(a) { return plural(a.solutions, 'active solution', 'active solutions') + (a.horizon ? ', ' + a.horizon + ' ' + spT('on the horizon') : ''); }
+  function updated(d) { var t = new Date(d.generated); return isNaN(t) ? '' : t.toLocaleDateString(spLang === 'en' ? 'en-US' : spLang, { year: 'numeric', month: 'long', day: 'numeric' }); }
   function render(d) {
     if (site) {
       var s = d.site;
       site.innerHTML = '<div class="stat-row">' +
-        '<div class="stat"><span class="stat-number">' + num(s.solutions) + '</span><span class="stat-label">active solutions featured' + (s.horizon ? ' (+' + s.horizon + ' on the horizon)' : '') + '</span></div>' +
-        '<div class="stat"><span class="stat-number">' + num(s.hubs) + '</span><span class="stat-label">hubs across ' + num(s.categories) + ' categories</span></div>' +
-        '<div class="stat"><span class="stat-number">' + num(s.upcomingMissions) + '</span><span class="stat-label">upcoming space missions we track live</span></div>' +
-        '<div class="stat"><span class="stat-number">' + num((s.byClassification.natural || 0)) + '</span><span class="stat-label">natural solutions, alongside ' + cls(Object.keys(s.byClassification).reduce(function (o, k) { if (k !== 'natural') o[k] = s.byClassification[k]; return o; }, {})) + '</span></div>' +
-        '</div>' + ((s.impactTotals || []).length ? '<div class="stat-row impact-totals">' + s.impactTotals.map(function (t) { return '<div class="stat"><span class="stat-number">' + num(t.total) + ' ' + esc(t.unit) + '</span><span class="stat-label">combined across ' + plural(t.pages.length, 'solution', 'solutions') + ', each figure sourced on its page</span></div>'; }).join('') + '</div>' : '') +
-        '<p class="stat-source">Last updated ' + esc(updated(d)) + '. Counts are generated from every solution page on this site.</p>';
+        '<div class="stat"><span class="stat-number">' + num(s.solutions) + '</span><span class="stat-label">' + spT('active solutions featured') + (s.horizon ? ' (+' + s.horizon + ' ' + spT('on the horizon') + ')' : '') + '</span></div>' +
+        '<div class="stat"><span class="stat-number">' + num(s.hubs) + '</span><span class="stat-label">' + spT('hubs across') + ' ' + num(s.categories) + ' ' + spT('categories') + '</span></div>' +
+        '<div class="stat"><span class="stat-number">' + num(s.upcomingMissions) + '</span><span class="stat-label">' + spT('upcoming space missions we track live') + '</span></div>' +
+        '<div class="stat"><span class="stat-number">' + num((s.byClassification.natural || 0)) + '</span><span class="stat-label">' + spT('natural solutions, alongside') + ' ' + cls(Object.keys(s.byClassification).reduce(function (o, k) { if (k !== 'natural') o[k] = s.byClassification[k]; return o; }, {})) + '</span></div>' +
+        '</div>' + ((s.impactTotals || []).length ? '<div class="stat-row impact-totals">' + s.impactTotals.map(function (t) { return '<div class="stat"><span class="stat-number">' + num(t.total) + ' ' + esc(t.unit) + '</span><span class="stat-label">' + spT('combined across') + ' ' + plural(t.pages.length, 'solution', 'solutions') + ', ' + spT('each figure sourced on its page') + '</span></div>'; }).join('') + '</div>' : '') +
+        '<p class="stat-source">' + spT('Last updated') + ' ' + esc(updated(d)) + '. ' + spT('Counts are generated from every solution page on this site.') + '</p>';
       site.hidden = false;
     }
     Array.prototype.forEach.call(blocks, function (el) {
@@ -133,18 +147,18 @@
       if (!c) return;
       var page = null, url = el.getAttribute('data-stats-page');
       d.pages.forEach(function (p) { if (p.url === url && !p.section) page = p; });
-      var html = '<h2>By the Numbers</h2><div class="ps-grid">' +
-        '<div class="ps-card"><h3>' + esc(c.name) + '</h3><p>' + solLine(c) + (cls(c.byClassification) ? '<br><small>' + esc(cls(c.byClassification)) + '</small>' : '') + '</p>' +
+      var html = '<h2>' + spT('By the Numbers') + '</h2><div class="ps-grid">' +
+        '<div class="ps-card"><h3>' + esc(spT(c.name)) + '</h3><p>' + solLine(c) + (cls(c.byClassification) ? '<br><small>' + esc(cls(c.byClassification)) + '</small>' : '') + '</p>' +
         (c.upcomingMissions ? '<p>' + plural(c.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p>' : '') +
-        c.impactTotals.map(function (t) { return '<p>' + num(t.total) + ' ' + esc(t.unit) + ' <small>combined, from sourced page figures</small></p>'; }).join('') + '</div>' +
-        '<div class="ps-card"><h3>Site-Wide</h3><p>' + solLine(d.site) + '</p><p>' + plural(d.site.hubs, 'hub', 'hubs') + ' · ' + plural(d.site.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p></div>';
+        c.impactTotals.map(function (t) { return '<p>' + num(t.total) + ' ' + esc(t.unit) + ' <small>' + spT('combined, from sourced page figures') + '</small></p>'; }).join('') + '</div>' +
+        '<div class="ps-card"><h3>' + spT('Site-Wide') + '</h3><p>' + solLine(d.site) + '</p><p>' + plural(d.site.hubs, 'hub', 'hubs') + ' · ' + plural(d.site.upcomingMissions, 'upcoming mission', 'upcoming missions') + '</p></div>';
       if (page && page.stats.length) {
-        html += '<div class="ps-card"><h3>This Page</h3>' + page.stats.map(function (s) {
+        html += '<div class="ps-card"><h3>' + spT('This Page') + '</h3>' + page.stats.map(function (s) {
           var u = /^https?:\/\//.test(s.sourceUrl) ? s.sourceUrl : '';
-          return '<p><b>' + num(s.value) + '</b> ' + esc(s.unit) + '<br><small>' + esc(s.label) + (u ? ' · <a href="' + esc(u) + '" target="_blank" rel="noreferrer">source</a>' : '') + '</small></p>';
+          return '<p><b>' + num(s.value) + '</b> ' + esc(s.unit) + '<br><small>' + esc(s.label) + (u ? ' · <a href="' + esc(u) + '" target="_blank" rel="noreferrer">' + spT('source') + '</a>' : '') + '</small></p>';
         }).join('') + '</div>';
       }
-      el.innerHTML = html + '</div><p class="ps-note">Updated ' + esc(updated(d)) + '. Generated from every solution page on Saving Planets.</p>';
+      el.innerHTML = html + '</div><p class="ps-note">' + spT('Updated') + ' ' + esc(updated(d)) + '. ' + spT('Generated from every solution page on Saving Planets.') + '</p>';
       el.hidden = false;
     });
   }

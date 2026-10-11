@@ -1,0 +1,14 @@
+{
+"fr": {"'Unnamed mission'": "'Mission sans nom'", "'Unknown provider'": "'Opérateur inconnu'", "'Unknown rocket'": "'Fusée inconnue'", "'Date TBD'": "'Date à confirmer'", "d.toLocaleString(undefined, opts)": "d.toLocaleString('fr', opts)",
+  "Launch data unavailable right now. See the <a": "Données de lancement indisponibles pour le moment. Consultez le <a", ">full launch schedule at Next Spaceflight</a>": ">calendrier complet des lancements sur Next Spaceflight</a>",
+  "<small>Launch window</small>": "<small>Fenêtre de tir</small>", "<small>Days</small>": "<small>Jours</small>", "<small>Hrs</small>": "<small>H</small>", "<small>Min</small>": "<small>Min</small>", "<small>Sec</small>": "<small>Sec</small>",
+  "' &middot; Status: '": "' &middot; Statut : '", ">Next launch</p>": ">Prochain lancement</p>", "aria-label=\"Countdown to launch\"": "aria-label=\"Compte à rebours avant le lancement\""},
+"es": {"'Unnamed mission'": "'Misión sin nombre'", "'Unknown provider'": "'Operador desconocido'", "'Unknown rocket'": "'Cohete desconocido'", "'Date TBD'": "'Fecha por confirmar'", "d.toLocaleString(undefined, opts)": "d.toLocaleString('es', opts)",
+  "Launch data unavailable right now. See the <a": "Datos de lanzamiento no disponibles por ahora. Consulta el <a", ">full launch schedule at Next Spaceflight</a>": ">calendario completo de lanzamientos en Next Spaceflight</a>",
+  "<small>Launch window</small>": "<small>Ventana de lanzamiento</small>", "<small>Days</small>": "<small>Días</small>", "<small>Hrs</small>": "<small>Horas</small>", "<small>Min</small>": "<small>Min</small>", "<small>Sec</small>": "<small>Seg</small>",
+  "' &middot; Status: '": "' &middot; Estado: '", ">Next launch</p>": ">Próximo lanzamiento</p>", "aria-label=\"Countdown to launch\"": "aria-label=\"Cuenta atrás para el lanzamiento\""},
+"ar": {"'Unnamed mission'": "'مهمة بلا اسم'", "'Unknown provider'": "'مشغّل غير معروف'", "'Unknown rocket'": "'صاروخ غير معروف'", "'Date TBD'": "'الموعد لم يُحدَّد'", "d.toLocaleString(undefined, opts)": "d.toLocaleString('ar', opts)",
+  "Launch data unavailable right now. See the <a": "بيانات الإطلاق غير متاحة حاليًا. راجع <a", ">full launch schedule at Next Spaceflight</a>": ">جدول الإطلاق الكامل على Next Spaceflight</a>",
+  "<small>Launch window</small>": "<small>نافذة الإطلاق</small>", "<small>Days</small>": "<small>أيام</small>", "<small>Hrs</small>": "<small>ساعات</small>", "<small>Min</small>": "<small>دقائق</small>", "<small>Sec</small>": "<small>ثوانٍ</small>",
+  "' &middot; Status: '": "' &middot; الحالة: '", ">Next launch</p>": ">الإطلاق التالي</p>", "aria-label=\"Countdown to launch\"": "aria-label=\"العد التنازلي للإطلاق\""}
+}

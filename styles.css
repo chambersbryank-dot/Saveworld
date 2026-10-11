@@ -724,3 +724,23 @@ body.toc-sub.nisar-page .page-hero.space-hero { background: linear-gradient(180d
 body.toc-sub.biomass-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Biomass_Forest_MatoGrosso.jpg') center/cover no-repeat; }
 body.toc-sub.tanager-1-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Tanager1_Methane_Plume.jpg') center/cover no-repeat; }
 body.toc-sub.dscovr-epic-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/EPIC_Earth.jpg') center/cover no-repeat; }
+
+/* ---- i18n: language switcher (EN · FR · ES · العربية) ---- */
+.nav-links li.lang-switch { display: flex; align-items: center; gap: 0.15rem; white-space: nowrap; font-size: 0.95rem; }
+.nav-links li.lang-switch a { font-size: 0.95rem; opacity: 0.8; padding: 0.15rem 0.2rem; }
+.nav-links li.lang-switch a[aria-current="true"] { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.nav-links li.lang-switch span { opacity: 0.6; }
+@media (max-width: 900px) { .nav-links li.lang-switch { padding-top: 0.6rem; } }
+
+/* ---- i18n: right-to-left (Arabic /ar/ pages), scoped to [dir=rtl] ---- */
+[dir="rtl"] body { text-align: right; font-family: Montserrat, "Noto Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif; line-height: 1.75; }
+[dir="rtl"] .nav-links .dropdown-menu { text-align: right; }
+@media (max-width: 900px) { [dir="rtl"] .nav-links .dropdown-menu { left: auto; right: 0; } }
+@media (min-width: 901px) { [dir="rtl"] .dropdown-menu.solutions-menu { right: auto; left: 0; } }
+[dir="rtl"] ul, [dir="rtl"] ol { padding-right: 1.25rem; padding-left: 0; }
+[dir="rtl"] .nav-links, [dir="rtl"] .dropdown-menu, [dir="rtl"] .dropdown-menu ul, [dir="rtl"] .next-solutions ul { padding-right: 0; }
+[dir="rtl"] .page-hero-content, [dir="rtl"] .hub-hero h1, [dir="rtl"] .pr-hero { text-align: center; }
+[dir="rtl"] .impact-box, [dir="rtl"] .w-card, [dir="rtl"] .card, [dir="rtl"] .card-blurb, [dir="rtl"] .fact-source, [dir="rtl"] footer p { text-align: right; }
+[dir="rtl"] .skip-link { left: auto; right: 0; top: -9999px; }
+[dir="rtl"] .skip-link:focus { left: auto; right: 1rem; top: 1rem; }
+[dir="rtl"] .brand-word, [dir="rtl"] .nav-links a { letter-spacing: 0; white-space: nowrap; }

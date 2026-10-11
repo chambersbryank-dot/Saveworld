@@ -8,12 +8,11 @@ from bs4 import BeautifulSoup, Comment
 
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar']
-PAGES = ['Project-Rawane.html', 'Oceans.html', 'Lakes.html', 'Rivers.html', 'Deforestation.html', 'Space.html',
-         'Space_Disposal.html', 'Planetary_Defense.html', 'Space_Weather.html', 'Earth_Observation.html', 'Amazing_Facts.html']
+PAGES = [l.strip() for l in open('i18n/pages.txt', encoding='utf8') if l.strip() and not l.startswith('#')]  # pages to translate
 LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'العربية'}
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية'}
 SWITCH_ARIA = {'en': 'Language', 'fr': 'Langue', 'es': 'Idioma', 'ar': 'اللغة'}
-ATTRS = ('alt', 'aria-label', 'title', 'data-title', 'data-image-alt', 'placeholder')
+ATTRS = ('alt', 'aria-label', 'title', 'data-title', 'data-image-alt', 'placeholder', 'data-status', 'data-arrival-label')
 META = {'description', 'twitter:description', 'twitter:title', 'og:description', 'og:title'}
 FFI = 'For Further Information: '
 
@@ -47,13 +46,28 @@ def hreflang_links(page):
     out.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{page}">')
     return '\n'.join(out)
 
+# Templates: (regex on English, key in i18n/<lang>.json whose value contains {x}); {x} is translated if known.
+PATTERNS = [(r'^(.+) \| Saving Planets$', '{x} | Saving Planets'),
+            (r'^Want to go deeper\? (.+) has the full story and the latest updates\.$', 'Want to go deeper? {x} has the full story and the latest updates.'),
+            (r'^Learn more about (.+)$', 'Learn more about {x}'),
+            (r'^Read more about (.+)$', 'Read more about {x}'),
+            (r'^(.+): Mission Status$', '{x}: Mission Status'),
+            (r"^The Five W's of (.+)$", "The Five W's of {x}")]
+
+def lookup(m, st):
+    if st in m: return m[st]
+    if st.startswith(FFI): return m.get(FFI, FFI) + st[len(FFI):]
+    for rx, key in PATTERNS:
+        g = re.match(rx, st)
+        if g and key in m:
+            x = g.group(1); return m[key].replace('{x}', m.get(x, x))
+    return None
+
 def tr(m, s):
     st = s.strip()
     if not st: return s
-    if st.startswith(FFI):
-        t = m.get(FFI, FFI) + st[len(FFI):]
-    else:
-        t = m.get(st)
+    if True:
+        t = lookup(m, st)
         if t is None: return s
     lead = s[:len(s) - len(s.lstrip())]; trail = s[len(s.rstrip()):]
     return lead + t + trail
@@ -79,10 +93,20 @@ def build(page, lang, m):
             if tag.get(a): tag[a] = tr(m, tag[a])
         if tag.name == 'meta' and (tag.get('name') in META or tag.get('property') in META) and tag.get('content'):
             tag['content'] = tr(m, tag['content'])
+        if tag.get('data-milestones'):  # "ISO|label;ISO|label"
+            tag['data-milestones'] = ';'.join((lambda p: p[0] + ('|' + tr(m, p[1]) if len(p) > 1 else ''))(x.split('|', 1)) for x in tag['data-milestones'].split(';'))
         for a in ('href', 'src', 'data-image', 'data-fact-page'):
             if tag.get(a) and not (tag.name == 'link' and tag.get('rel') in (['canonical'], ['alternate'])):
                 tag[a] = fix_url(tag[a])
+    ui = json.load(open('i18n/ui.json', encoding='utf8')).get(lang, {})
     for s in soup.find_all('script'):
+        if not s.get('src') and s.get('type') != 'application/ld+json' and s.string:
+            if 'assets/data/artemis.json' in s.string:  # keeps the translated static Artemis cards (data file is English)
+                s.decompose(); continue
+            js = s.string
+            for en, t in ui.items(): js = js.replace(en, t)
+            s.string = js
+            continue
         if s.get('type') == 'application/ld+json' and s.string:
             s.string = s.string.replace(SITE + page, SITE + lang + '/' + page)
     for l in soup.find_all('link', rel='canonical'): l['href'] = SITE + lang + '/' + page
@@ -121,9 +145,11 @@ def missing(lang):
         vals = [str(t).strip() for t in soup.find_all(string=True) if not isinstance(t, Comment) and t.parent.name not in ('script', 'style')
                 and not (t.find_parent('a') and t.find_parent('a').get('href', '').startswith('http') and not str(t).strip().startswith(FFI))]
         vals += [tag[a].strip() for tag in soup.find_all(True) for a in ATTRS if tag.get(a)]
+        vals += [x.split('|', 1)[1].strip() for tag in soup.find_all(attrs={'data-milestones': True}) for x in tag['data-milestones'].split(';') if '|' in x]
+        vals += [t['content'].strip() for t in soup.find_all('meta') if (t.get('name') in META or t.get('property') in META) and t.get('content')]
         for v in vals:
             if v.startswith(FFI): v = FFI
-            if v and re.search('[A-Za-z]{3}', v) and v not in m and v not in seen:
+            if v and re.search('[A-Za-z]{3}', v) and lookup(m, v) is None and v not in seen:
                 seen.add(v); print(f'{page}\t{v}')
 
 if __name__ == '__main__':
