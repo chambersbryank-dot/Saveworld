@@ -779,3 +779,4 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Home pages: per-language WebSite (SearchAction → /<lang>/Search.html) + Organization JSON-LD (seo-fix.py).
 - Home mission heading fragments ("We / Find / and / Share Solutions / to / Save / the / Planet / Minus the / Doom") are translated as fragments; "the" maps to empty so word order reads naturally.
 - seo-audit img-alt check now only flags alt text identical to the English page (org names are not false positives). Result: 333 pages, 0 issues; 0 broken links; i18n-check: all current.
+- IndexNow: added --all (submit every sitemap <loc>). One-off full submission on 2026-10-11 of 331 URLs returned 403 Forbidden (key not accepted for host; key file is served 200 at /aa19429b4f58f36d34c263abe996de09.txt). Not retried.
