@@ -68,7 +68,8 @@ function writeProjectRMenu(menu) {
 // ---- Solutions nav dropdown (every hub + every solution page, alphabetical within hub) ----
 // Items = <h3><a href="Page.html">Name</a> card titles on each hub page. Written into every page
 // between <!-- SOLUTIONS-MENU:START --> and <!-- SOLUTIONS-MENU:END -->.
-const SOLUTIONS_HUBS = [['Oceans.html', 'Ocean'], ['Lakes.html', 'Lakes'], ['Rivers.html', 'Rivers'], ['Space.html', 'Space'], ['Space_Disposal.html', 'Space Disposal'], ['Deforestation.html', 'Forests'], ['Planetary_Defense.html', 'Planetary Defense'], ['Space_Weather.html', 'Space Weather'], ['Earth_Observation.html', 'Earth Observation'], ['Project-Rawane.html', 'Project Rawane']];
+const SOLUTIONS_HUBS = [['Earth_Observation.html', 'Earth Observation'], ['Deforestation.html', 'Forests'], ['Lakes.html', 'Lakes'], ['Oceans.html', 'Ocean'], ['Planetary_Defense.html', 'Planetary Defense'], ['Rivers.html', 'Rivers'], ['Space.html', 'Space'], ['Space_Disposal.html', 'Space Disposal'], ['Space_Weather.html', 'Space Weather'], ['Project-Rawane.html', 'Project Rawane']];
+// Display order: Project Rawane first, then hubs alphabetically (Rawane is computed last so it only lists pages not under another hub).
 // Project Rawane lists only pages not already under another hub (e.g. Voyages Outward).
 function buildSolutionsMenu() {
   const listed = new Set();
@@ -79,7 +80,7 @@ function buildSolutionsMenu() {
       .map(m => ({ href: m[1], name: m[2].replace(/^(Saving Moons|Natural Debris Solution): /, '').replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'") }))
       .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
     return { hub: name, href: file, items };
-  });
+  }).sort((a, b) => (b.href === 'Project-Rawane.html') - (a.href === 'Project-Rawane.html'));
 }
 function writeSolutionsMenu(menu) {
   // Groups are packed in order into 4 balanced columns (li.menu-col) so the desktop panel can scroll vertically.
