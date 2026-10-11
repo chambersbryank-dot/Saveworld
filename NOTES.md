@@ -666,3 +666,38 @@ Dropped this morning (could not verify or status unclear): NASA TEMPO (extension
 - beaf352 Amazing Facts: 11 hidden amazing-fact entries (A, B, D, E, F, H, K, M, N, O, P) with data-image/alt/credit; build → 14 cards. solutions.json: 47 active, 5 horizon.
 - 66d68ed Mission Status widget h2 now section size (35.2/25.6px); styles.css ?v=20261010o on all 44 styled pages.
 - Review: no overflow at 390/360/1280 on all 45 pages; no broken links/anchors/images; all images have alt; Title Case clean (exceptions: 4ocean brand, horizon badge, "Our Stats are Already Amazing Facts."); consent.js on all 45, no inline gtag; LIVE fresh-profile test: no GA before Accept, gtag+collect after Accept, nothing after Decline. HTTPS cert www valid to 2027-01-08; https://savingplanets.com → 301 www. Port-80 (http://) redirect not testable from the box (outbound 80 blocked).
+
+## Candidate Queue — batch 2026-10-11
+
+Third daily batch (19), prepared by the 6:17 AM HST routine. Nothing built; awaiting Brian's yes/no on each. Checked against every page, solutions.json, and the 2026-10-09 (A–P) and 2026-10-10 (A–P, all approved and built) queues so nothing repeats. Every figure was read on the cited page this morning; company/nonprofit figures get labeled as such at build time.
+
+| ID | Candidate | Classification | Suggested hub | Mission widget | Status |
+|---|---|---|---|---|---|
+| A | Europa Clipper (NASA; launched Oct 14 2024; Earth gravity-assist flyby Dec 3 2026; Jupiter April 2030, 49 Europa flybys) | Agency mission (NASA) | Space Disposal "saving moons" (next to Titan) | Yes, Earth flyby Dec 3 2026 + arrival countdown | PENDING |
+| B | Juice (ESA; launched Apr 14 2023; Earth flyby Sept 2026 done, next Jan 2029; Jupiter July 2031, 35 moon flybys) | Agency mission (ESA) | Space Disposal "saving moons" | Yes, Jan 2029 Earth flyby + July 2031 arrival | PENDING |
+| C | OSIRIS-APEX and Apophis 2029 (NASA; Apophis passes ~20,000 mi from Earth Apr 13 2029; rendezvous June 2029) | Agency mission (NASA) | Planetary Defense | Yes, Apophis flyby countdown | PENDING |
+| D | Ramses (ESA with JAXA; EUR 81.2M build contract Feb 10 2026; H3 launch spring 2028; first switch-on Sept 2026) | Agency mission (ESA/JAXA) | Planetary Defense (pairs with C, Hera heritage) | Yes, spring 2028 launch | PENDING |
+| E | PUNCH (NASA; four smallsats, launched Mar 11 2025; 3D corona-to-solar-wind) | Agency mission (NASA) | Space Weather & Shields | Yes, active | PENDING |
+| F | TRACERS (NASA; twin satellites, launched July 23 2025; magnetic reconnection in polar cusps) | Agency mission (NASA) | Space Weather & Shields (cross-link Three Shields) | Yes, active | PENDING |
+| G | Carruthers Geocorona Observatory (NASA; L1, launched Sept 24 2025; first mission dedicated to the exosphere) | Agency mission (NASA) | Space Weather & Shields | Yes, active (2-year mission) | PENDING |
+| H | Solar Orbiter (ESA with NASA; launched Feb 2020; 42 million km from Sun; first close-up views of the Sun's poles) | Agency mission (ESA/NASA) | Space Weather & Shields | Yes, active | PENDING |
+| I | ESCAPADE (NASA/UC Berkeley; twin Mars orbiters, launched Nov 13 2025; Earth slingshot fall 2026) | Agency mission (NASA) | Project Rawane (Voyages Outward) | Yes, Earth slingshot + Mars arrival | PENDING |
+| J | GRACE-FO (NASA/Germany; launched May 22 2018; tracks groundwater, ice, sea level by gravity) | Agency mission (NASA/GFZ) | Earth Observation + Lakes/Rivers cross-links | Yes, active | PENDING |
+| K | ICESat-2 (NASA; launched Sept 15 2018; laser fires 10,000 pulses a second) | Agency mission (NASA) | Earth Observation | Yes, active | PENDING |
+| L | Copernicus Sentinel-1 radar (ESA; 1C Dec 5 2024, 1D Nov 4 2025; all-weather day-night imaging) | Agency mission (ESA) | Earth Observation (Titan.html already mentions Sentinel-1 emergency response in passing) | Yes, active | PENDING |
+| M | FLEX + Sentinel-3C (ESA; launched together Sept 15 2026 on Vega-C; FLEX maps plant fluorescence) | Agency mission (ESA) | Earth Observation + Deforestation cross-link | Yes, commissioning/first data | PENDING |
+| N | EOS-06 / Oceansat-3 (ISRO; PSLV-C54, Nov 2022; ocean color, sea-surface temperature, winds) | Agency mission (ISRO) | Earth Observation + Oceans | Yes, active | PENDING |
+| O | Northrop Grumman SpaceLogistics (MEV life extension in GEO; MRV + 3 MEPs launched July 21 2026) | Corporate | Space Disposal | Yes, MRV first servicing | PENDING |
+| P | Starfish Space Otter (life extension + disposal; first Otter NET Oct 2026 on Transporter-18 for NASA SSPICY) | Corporate | Space Disposal | Yes, launch NET Oct 2026 | PENDING |
+| Q | Kelp forests (natural, NOAA; up to 18 in/day; shelter for thousands of species) | Natural | Oceans | No | PENDING |
+| R | Seagrass meadows (natural, NOAA; 0.1% of seafloor, 11% of ocean's buried organic carbon) | Natural | Oceans (cross-link Mangroves) | No | PENDING |
+| S | Billion Oyster Project (NY Harbor; goal 1 billion oysters by 2030; 3.2M lbs shells recycled) | Nonprofit | Oceans (or Rivers, Hudson estuary) | No | PENDING |
+
+Dropped this morning: GRACE-C successor (no launch date on the NASA page read), Seagrass "7% lost per year" kept but flagged as a 215-study assessment summarized by NOAA. Starfish homepage still says "launching summer 2025"; used the Sept 24 2026 press release instead.
+
+Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/Space_Science/Juice; science.nasa.gov/mission/osiris-apex/; science.nasa.gov/solar-system/asteroids/apophis/; esa.int/Space_Safety/Planetary_Defence/ESA_awards_contracts_for_Ramses_mission_to_Apophis; esa.int/Space_Safety/Planetary_Defence/First_switch_on_for_ESA-JAXA_Ramses_asteroid_mission; science.nasa.gov/mission/punch/; science.nasa.gov/mission/tracers/; science.nasa.gov/mission/carruthers-geocorona-observatory/; esa.int/Science_Exploration/Space_Science/Solar_Orbiter; science.nasa.gov/mission/escapade/; gracefo.jpl.nasa.gov; science.nasa.gov/mission/grace-fo/; icesat-2.gsfc.nasa.gov; esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1; esa.int/Applications/Observing_the_Earth/FutureEO/FLEX; esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3; isro.gov.in/EOS_06.html; northropgrumman.com/space/space-logistics-services; starfishspace.com/press-release/starfish-spaces-first-otter-is-going-to-space/; oceanservice.noaa.gov/facts/kelp.html; coast.noaa.gov/states/fast-facts/blue-carbon.html; fisheries.noaa.gov/southeast/habitat-conservation/why-submerged-aquatic-vegetation-designated-essential-fish-habitat; sanctuaries.noaa.gov/visit/ecosystems/seagrass.html; billionoysterproject.org.
+
+## Session Log — 2026-10-11 (morning candidate run)
+
+- Session start: git pull (84b5b2c), NOTES.md read, last 24h of commits reviewed (batch 2026-10-10 fully built; homepage hero fix). No glitches.
+- Prepared batch 2026-10-11 (A–S above) for Brian's yes/no. No pages built or pushed.
