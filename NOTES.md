@@ -826,3 +826,10 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - "Project Rawane's Favorite Dad Joke" block above the footer: 30 jokes (JOKES in the script, FR/ES/AR adapted translations in JOKES_T, MSA), one per issue, rotation tracked in newsletter-state.json (usedJokes + issues[date].joke). Week 1: #0 sun/brighter.
 - Drafts recreated (not sent/scheduled), same facts: EN 201066788540122334, FR 201066791102842840, ES 201066793554413454, AR 201066795972429219. Old 201066038081619241/…040711448072/…043295139426/…045808576058 deleted, plus an interim set from an interrupted run (201066756756735816, …759385515059, …761812969164, …764367300047). Preview 7,030px.
 - Note: Project Rawane and Earth Observation banners are both whole-Earth photos; swap Project Rawane to a rocket image once one with a known credit is in assets/.
+
+## Session Log — 2026-10-11 (image credits for site-owned images)
+
+- Credits confirmed by the site owner (never use the owner's real name): Threetrees3.jpg = "Photo: SI Partner."; OceanBeach.JPG, StreamLog.JPG, streamlog2.JPG = "SI-generated image by Saving Planets." (the owner says "SI" instead of "AI"; keep that wording).
+- Added `<p class="photo-credit">` after every visible use: card images (index, Oceans, Lakes, Rivers, Deforestation), donate/further-info buttons (4ocean, Plastic Bank, Great Bubble Barrier, Sungai Watch, Restoring the Lake Depths, Life Terra, Deforestation), Life Terra Five W's image, and below the CSS-background heroes (forest-hero: Life_Terra, Terraformation, Three_Trees; rivers-hero: Great_Bubble_Barrier, Sungai_Watch). New CSS `.card .photo-credit, .w-card .photo-credit`; styles.css?v=20261011i. FR/ES/AR strings in i18n/*.json. Builds/audits: TOTAL 0, all translations current.
+- Newsletter: small credit line under each hub banner (HUBCREDIT in the script, label translated).
+- Drafts recreated, same facts + same joke (#0), not sent/scheduled; previous 201066788540122334/…791102842840/…793554413454/…795972429219 deleted.
