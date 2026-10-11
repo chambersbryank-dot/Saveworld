@@ -13,6 +13,8 @@ const DAYS = +(args[args.indexOf('--days') + 1] || 0) || 7;
 const LANGS = args.includes('--lang') ? args[args.indexOf('--lang') + 1].split(',') : ['en', 'fr', 'es', 'ar'];
 const today = new Date(), iso = new Date(today.getTime() - 10 * 36e5).toISOString().slice(0, 10); // HST date
 const CAP = 3; // max new solutions shown per hub
+const JOKES = ["Why did the sun go to school? To get a little brighter.","How do you throw a party in space? You planet.","Why did the cow go to outer space? To visit the Milky Way.","What did Mars say to Saturn? Give me a ring sometime.","Why is the moon so broke? It's down to its last quarter.","How does the solar system hold up its pants? With an asteroid belt.","Why don't astronauts get hungry after blasting off? They just had a big launch.","What kind of music do planets like? Neptunes.","Why did the astronaut break up with their partner? They needed space.","How do you know when the moon has had enough to eat? When it's full.","What do you call a tick on the moon? A luna-tick.","Why couldn't the astronaut book a room on the moon? It was full.","What's an astronaut's favorite part of a computer? The space bar.","What did the alien say to the garden? Take me to your weeder.","Why did Pluto break up with the Sun? It needed more space after being demoted.","How do you organize a space party? You planet ahead.","What's a light-year? Like a regular year, but with fewer calories.","Why did the star get in trouble at school? It was caught twinkling in class.","What do planets read in their spare time? Comet books.","Why is Saturn so good at keeping secrets? It has rings of trust.","What holds the moon up? Moonbeams.","Where do astronauts keep their sandwiches? In a launch box.","What did one asteroid say to the other? Nothing, asteroids can't talk. But they rock.","Why did the comet win the race? It had a great tail wind.","What do you call a loony spaceman? An astro-nut.","How do astronauts serve drinks? In sunglasses.","Why did the satellite stay calm? It knew how to orbit its problems.","What's the Earth's favorite type of music? Rock, but only the classic layers.","Why did the meteor go to therapy? It had a crushing impact on everyone.","What did the Big Dipper say to the Little Dipper? Stop following me around."]; // dad jokes stay in English in every language
+const HUBIMG = { 'Project-Rawane.html': 'project-rawane.jpg', 'Earth_Observation.html': 'earth-observation.gif', 'Deforestation.html': 'forests.jpg', 'Lakes.html': 'lakes.jpg', 'Oceans.html': 'ocean.gif', 'Planetary_Defense.html': 'planetary-defense.gif', 'Rivers.html': 'rivers.jpg', 'Space.html': 'space.gif', 'Space_Disposal.html': 'space-disposal.gif', 'Space_Weather.html': 'space-weather.gif' };
 const STATE = path.join(ROOT, 'scripts', 'newsletter-state.json');
 
 const T = {
@@ -24,16 +26,16 @@ const T = {
 
 // Fixed strings for the v2 template (2026-10-11).
 const T2 = {
-  en: { seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
+  en: { joke: 'Project Rawane\u2019s Favorite Dad Joke', hubAlt: 'Banner image for', seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
     noneAll: 'No new solutions this week.', launches: 'Launches This Week', noLaunch: 'No launches are on the books for this week yet.', vehicle: 'Vehicle', mission: 'Mission', shift: 'Launch dates shift often.', schedule: 'See our full launch schedule',
     suggest: 'Suggest a New Solution', suggestText: 'Know a group doing hands-on work with published numbers? Email your idea to', criteria: 'See our solutions criteria', facts: 'Amazing Facts', source: 'Source', allFacts: 'See all Amazing Facts', unsub: 'Unsubscribe', tz: 'UTC' },
-  fr: { seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
+  fr: { joke: 'La blague de papa préférée de Projet Rawane', hubAlt: 'Image de bannière :', seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
     noneAll: 'Pas de nouvelle solution cette semaine.', launches: 'Lancements de la semaine', noLaunch: "Aucun lancement n'est encore prévu cette semaine.", vehicle: 'Lanceur', mission: 'Mission', shift: 'Les dates de lancement changent souvent.', schedule: 'Voir notre calendrier complet des lancements',
     suggest: 'Proposez une nouvelle solution', suggestText: 'Vous connaissez un groupe qui agit sur le terrain avec des chiffres publiés ? Envoyez votre idée à', criteria: 'Voir nos critères de sélection', facts: 'Faits étonnants', source: 'Source', allFacts: 'Voir tous les faits étonnants', unsub: 'Se désabonner', tz: 'UTC' },
-  es: { seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
+  es: { joke: 'El chiste de papá favorito de Proyecto Rawane', hubAlt: 'Imagen de cabecera:', seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
     noneAll: 'No hay soluciones nuevas esta semana.', launches: 'Lanzamientos de esta semana', noLaunch: 'Todavía no hay lanzamientos programados para esta semana.', vehicle: 'Vehículo', mission: 'Misión', shift: 'Las fechas de lanzamiento cambian a menudo.', schedule: 'Ver nuestro calendario completo de lanzamientos',
     suggest: 'Sugiere una nueva solución', suggestText: '¿Conoces un grupo que hace trabajo práctico con cifras publicadas? Envía tu idea a', criteria: 'Ver nuestros criterios de soluciones', facts: 'Datos asombrosos', source: 'Fuente', allFacts: 'Ver todos los datos asombrosos', unsub: 'Darse de baja', tz: 'UTC' },
-  ar: { seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
+  ar: { joke: 'نكتة الأب المفضلة لدى مشروع رواني', hubAlt: 'صورة لافتة لقسم', seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
     noneAll: 'لا توجد حلول جديدة هذا الأسبوع.', launches: 'عمليات الإطلاق هذا الأسبوع', noLaunch: 'لا توجد عمليات إطلاق مجدولة لهذا الأسبوع حتى الآن.', vehicle: 'المركبة', mission: 'المهمة', shift: 'تتغير مواعيد الإطلاق كثيرًا.', schedule: 'اطّلع على جدول الإطلاق الكامل',
     suggest: 'اقترح حلًا جديدًا', suggestText: 'هل تعرف جهة تقوم بعمل ميداني وتنشر أرقامًا موثقة؟ أرسل فكرتك إلى', criteria: 'اطّلع على معايير اختيار الحلول', facts: 'حقائق مذهلة', source: 'المصدر', allFacts: 'اطّلع على جميع الحقائق المذهلة', unsub: 'إلغاء الاشتراك', tz: 'UTC' }
 };
@@ -101,7 +103,7 @@ async function launches() {
 }
 function fmtDate(d, lang) { return new Date(d).toLocaleDateString(T[lang].dateLoc, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Pacific/Honolulu' }); }
 function fmtDay(d, lang) { return new Date(d).toLocaleString(T[lang].dateLoc, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' }) + ' UTC'; }
-function build(lang, sols, factKeys, launchList) {
+function build(lang, sols, factKeys, launchList, joke) {
   const t = { ...T[lang], ...T2[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
   const a = (href, txt, bold) => `<a href="${href}" style="color:#009cde;${bold ? 'font-weight:700;' : ''}text-decoration:none">${esc(txt)}</a>`;
   const h2 = s => `<h2 style="margin:30px 0 12px;font-size:20px;color:#003755;border-bottom:2px solid #009cde;padding-bottom:6px">${esc(s)}</h2>`;
@@ -111,6 +113,7 @@ function build(lang, sols, factKeys, launchList) {
   let solsHtml = '';
   for (const hub of [...order, { url: '_other', name: '' }]) {
     const list = byHub[hub.url]; if (!list) continue;
+    if (HUBIMG[hub.url]) solsHtml += `<a href="${P + hub.url}"><img src="${SITE}assets/newsletter/${HUBIMG[hub.url]}" width="552" height="140" alt="${esc(t.hubAlt + ' ' + hub.name)}" style="display:block;width:100%;max-width:552px;height:auto;border:0;border-radius:8px;margin:22px 0 0"></a>`;
     solsHtml += `<h3 style="margin:18px 0 8px;font-size:16px;color:#003755;text-transform:uppercase;letter-spacing:.5px">${hub.url === '_other' ? '' : a(P + hub.url, hub.name, true)}</h3>`;
     const more = list.length > CAP && hub.url !== '_other' ? `<p style="margin:0 0 12px;font-size:14px">${a(P + hub.url, t.seeAll(list.length, hub.name) + ' →', true)}</p>` : '';
     solsHtml += list.slice(0, CAP).map(s => { const m = meta(rd(pageFile(lang, s.url)) || rd(s.url));
@@ -144,6 +147,7 @@ ${h2(t.newS)}${solsHtml}
 ${h2(t.launches)}${lHtml}
 ${h2(t.suggest)}${sugHtml}
 ${h2(t.facts)}${fHtml}
+${joke ? h2(t.joke) + `<div style="background:#003755;color:#ffffff;border-radius:8px;padding:16px 18px;font-size:16px" dir="ltr" lang="en"><span style="font-size:22px">🚀</span> ${esc(joke)}</div>` : ''}
 <p style="margin:28px 0 0;text-align:center"><a href="${P}index.html" style="display:inline-block;background:#009cde;color:#fff;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none">${esc(t.visit)}</a></p>
 <p style="margin:26px 0 0;font-size:12px;color:#5b7486;text-align:center">${esc(t.foot)}<br>{$account_address}<br><a href="{$unsubscribe}" style="color:#5b7486">${esc(t.unsub)}</a></p>
 </td></tr></table></td></tr></table></body></html>`;
@@ -157,11 +161,14 @@ async function api(method, p, body) {
 }
 (async () => {
   const sols = newSolutions(), state = loadState(), factKeys = pickFacts(state);
+  let jokeIdx = state.issues[iso] && state.issues[iso].joke != null ? state.issues[iso].joke : null;
+  if (jokeIdx == null) { const used = new Set(state.usedJokes || []); let free = JOKES.map((_, i) => i).filter(i => !used.has(i)); if (!free.length) { state.usedJokes = []; free = JOKES.map((_, i) => i); } jokeIdx = free[0]; }
+  const joke = JOKES[jokeIdx];
   let launchList = null; try { launchList = await launches(); } catch (e) { console.log('note: launches unavailable (' + e.message + ')'); }
   let existing = [];
   if (!DRY) existing = (await api('GET', '/campaigns?filter[status]=draft&limit=100')).data.map(c => c.name);
   for (const lang of LANGS) {
-    const html = build(lang, sols, factKeys, launchList), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
+    const html = build(lang, sols, factKeys, launchList, joke), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
     fs.writeFileSync(`/tmp/newsletter-${iso}-${lang}.html`, html);
     if (DRY) { console.log(`[dry-run] ${name}: ${html.length} bytes -> /tmp/newsletter-${iso}-${lang}.html`); continue; }
     if (existing.includes(name)) { console.log(`skip (draft exists): ${name}`); continue; }
@@ -177,7 +184,8 @@ async function api(method, p, body) {
     console.log(`draft created: ${name} id=${c.data.id} status=${c.data.status}`);
   }
   if (!DRY) {  // record facts so later issues never repeat them
-    state.issues[iso] = { facts: factKeys, solutions: sols.length, launches: launchList ? launchList.length : null };
+    state.usedJokes = [...new Set([...(state.usedJokes || []), jokeIdx])];
+    state.issues[iso] = { joke: jokeIdx, facts: factKeys, solutions: sols.length, launches: launchList ? launchList.length : null };
     state.usedFacts = [...new Set([...state.usedFacts, ...factKeys])];
     fs.writeFileSync(STATE, JSON.stringify(state, null, 2) + '\n');
   }
