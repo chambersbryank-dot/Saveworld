@@ -1,0 +1,16 @@
+{
+  "usedFacts": [
+    "Aeolus.html|assets/ATV1_Departure_ISS.jpg",
+    "Europa_Clipper.html|assets/Europa_Clipper_Jupiter.jpg"
+  ],
+  "issues": {
+    "2026-10-11": {
+      "facts": [
+        "Aeolus.html|assets/ATV1_Departure_ISS.jpg",
+        "Europa_Clipper.html|assets/Europa_Clipper_Jupiter.jpg"
+      ],
+      "solutions": 67,
+      "launches": 3
+    }
+  }
+}
