@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T18:08:53.034Z",
+ "generated": "2026-10-11T18:13:23.132Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -850,50 +850,6 @@
    "missions": []
   },
   {
-   "url": "Earth_Observation.html",
-   "title": "NISAR",
-   "category": "earth-observation",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Earth_Observation.html",
-   "title": "Biomass",
-   "category": "earth-observation",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Earth_Observation.html",
-   "title": "Tanager-1",
-   "category": "earth-observation",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Earth_Observation.html",
-   "title": "DSCOVR/EPIC",
-   "category": "earth-observation",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
    "url": "Atmospheric_Drag.html",
    "title": "Atmospheric Drag",
    "category": "project-r",
@@ -1509,6 +1465,46 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "NISAR.html",
+   "title": "NISAR (NASA–ISRO)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Biomass.html",
+   "title": "Biomass (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Tanager-1.html",
+   "title": "Tanager-1 (Carbon Mapper / Planet)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "DSCOVR_EPIC.html",
+   "title": "DSCOVR / EPIC (NASA–NOAA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
   }
  ]
 }

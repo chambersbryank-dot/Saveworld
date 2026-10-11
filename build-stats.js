@@ -82,8 +82,13 @@ function buildSolutionsMenu() {
   });
 }
 function writeSolutionsMenu(menu) {
-  const html = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
-    g.items.map(i => `<li><a href="${i.href}">${esc(i.name).replace(/'/g, '&#x27;')}</a></li>`).join('') + '</ul></li>').join('');
+  // Groups are packed in order into 4 balanced columns (li.menu-col) so the desktop panel can scroll vertically.
+  const group = g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
+    g.items.map(i => `<li><a href="${i.href}">${esc(i.name).replace(/'/g, '&#x27;')}</a></li>`).join('') + '</ul></li>';
+  const COLS = 4, total = menu.reduce((n, g) => n + g.items.length + 1.5, 0), cols = [[]];
+  let acc = 0;
+  menu.forEach(g => { const w = g.items.length + 1.5; if (acc > 0 && acc + w / 2 > total / COLS * cols.length && cols.length < COLS) cols.push([]); cols[cols.length - 1].push(g); acc += w; });
+  const html = cols.map(c => `<li class="menu-col"><ul>${c.map(group).join('')}</ul></li>`).join('');
   const re = /<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/; let n = 0;
   fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
     const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
