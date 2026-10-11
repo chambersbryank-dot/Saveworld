@@ -12,6 +12,7 @@ const args = process.argv.slice(2), DRY = args.includes('--dry-run');
 const DAYS = +(args[args.indexOf('--days') + 1] || 0) || 7;
 const LANGS = args.includes('--lang') ? args[args.indexOf('--lang') + 1].split(',') : ['en', 'fr', 'es', 'ar'];
 const today = new Date(), iso = new Date(today.getTime() - 10 * 36e5).toISOString().slice(0, 10); // HST date
+const CAP = 3; // max new solutions shown per hub
 const STATE = path.join(ROOT, 'scripts', 'newsletter-state.json');
 
 const T = {
@@ -23,16 +24,16 @@ const T = {
 
 // Fixed strings for the v2 template (2026-10-11).
 const T2 = {
-  en: { issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
+  en: { seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
     noneAll: 'No new solutions this week.', launches: 'Launches This Week', noLaunch: 'No launches are on the books for this week yet.', vehicle: 'Vehicle', mission: 'Mission', shift: 'Launch dates shift often.', schedule: 'See our full launch schedule',
     suggest: 'Suggest a New Solution', suggestText: 'Know a group doing hands-on work with published numbers? Email your idea to', criteria: 'See our solutions criteria', facts: 'Amazing Facts', source: 'Source', allFacts: 'See all Amazing Facts', unsub: 'Unsubscribe', tz: 'UTC' },
-  fr: { issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
+  fr: { seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
     noneAll: 'Pas de nouvelle solution cette semaine.', launches: 'Lancements de la semaine', noLaunch: "Aucun lancement n'est encore prévu cette semaine.", vehicle: 'Lanceur', mission: 'Mission', shift: 'Les dates de lancement changent souvent.', schedule: 'Voir notre calendrier complet des lancements',
     suggest: 'Proposez une nouvelle solution', suggestText: 'Vous connaissez un groupe qui agit sur le terrain avec des chiffres publiés ? Envoyez votre idée à', criteria: 'Voir nos critères de sélection', facts: 'Faits étonnants', source: 'Source', allFacts: 'Voir tous les faits étonnants', unsub: 'Se désabonner', tz: 'UTC' },
-  es: { issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
+  es: { seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
     noneAll: 'No hay soluciones nuevas esta semana.', launches: 'Lanzamientos de esta semana', noLaunch: 'Todavía no hay lanzamientos programados para esta semana.', vehicle: 'Vehículo', mission: 'Misión', shift: 'Las fechas de lanzamiento cambian a menudo.', schedule: 'Ver nuestro calendario completo de lanzamientos',
     suggest: 'Sugiere una nueva solución', suggestText: '¿Conoces un grupo que hace trabajo práctico con cifras publicadas? Envía tu idea a', criteria: 'Ver nuestros criterios de soluciones', facts: 'Datos asombrosos', source: 'Fuente', allFacts: 'Ver todos los datos asombrosos', unsub: 'Darse de baja', tz: 'UTC' },
-  ar: { issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
+  ar: { seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
     noneAll: 'لا توجد حلول جديدة هذا الأسبوع.', launches: 'عمليات الإطلاق هذا الأسبوع', noLaunch: 'لا توجد عمليات إطلاق مجدولة لهذا الأسبوع حتى الآن.', vehicle: 'المركبة', mission: 'المهمة', shift: 'تتغير مواعيد الإطلاق كثيرًا.', schedule: 'اطّلع على جدول الإطلاق الكامل',
     suggest: 'اقترح حلًا جديدًا', suggestText: 'هل تعرف جهة تقوم بعمل ميداني وتنشر أرقامًا موثقة؟ أرسل فكرتك إلى', criteria: 'اطّلع على معايير اختيار الحلول', facts: 'حقائق مذهلة', source: 'المصدر', allFacts: 'اطّلع على جميع الحقائق المذهلة', unsub: 'إلغاء الاشتراك', tz: 'UTC' }
 };
@@ -111,9 +112,10 @@ function build(lang, sols, factKeys, launchList) {
   for (const hub of [...order, { url: '_other', name: '' }]) {
     const list = byHub[hub.url]; if (!list) continue;
     solsHtml += `<h3 style="margin:18px 0 8px;font-size:16px;color:#003755;text-transform:uppercase;letter-spacing:.5px">${hub.url === '_other' ? '' : a(P + hub.url, hub.name, true)}</h3>`;
-    solsHtml += list.map(s => { const m = meta(rd(pageFile(lang, s.url)) || rd(s.url));
+    const more = list.length > CAP && hub.url !== '_other' ? `<p style="margin:0 0 12px;font-size:14px">${a(P + hub.url, t.seeAll(list.length, hub.name) + ' →', true)}</p>` : '';
+    solsHtml += list.slice(0, CAP).map(s => { const m = meta(rd(pageFile(lang, s.url)) || rd(s.url));
       const badge = s.horizon ? `<br><span style="display:inline-block;margin:4px 0;background:#fff4e0;color:#8a5a00;border:1px solid #f0c36d;border-radius:12px;padding:1px 9px;font-size:12px;font-weight:700">${esc(t.horizon)}</span> <span style="font-size:12px;color:#5b7486">${esc(t.horizonNote)}</span>` : '';
-      return `<p style="margin:0 0 12px">${a(P + s.url, m.title, true)}${badge}<br><span style="font-size:14px">${esc(m.desc)}</span></p>`; }).join('');
+      return `<p style="margin:0 0 12px">${a(P + s.url, m.title, true)}${badge}<br><span style="font-size:14px">${esc(m.desc)}</span></p>`; }).join('') + more;
   }
   if (!sols.length) solsHtml = `<p>${esc(t.noneAll)}</p>`;
   else solsHtml = `<p style="margin:0 0 4px;font-size:13px;color:#5b7486">${esc(t.hubsIntro)}</p>` + solsHtml;

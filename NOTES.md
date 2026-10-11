@@ -799,3 +799,9 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Drafts created (not sent/scheduled): Weekly Brief 2026-10-11 v2 EN 201065485151766039, FR 201065487765866070, ES 201065490374723027, AR 201065492891305016. Old 2026-10-11 drafts (201063058037015705, 201063060570376100, 201063063098492531, 201063065632900542) were NOT deleted, pending Brian's OK to delete.
 - This week: 67 new solution pages, 2 horizon (LignoSat, PRELUDE), 3 launches (Oct 12-15), facts Aeolus "150 Times Safer" + Europa Clipper "49 Flybys of an Ocean Moon".
 - Known glitch noted: with 67 new pages the issue is long (~8,400px). Consider capping per hub later if Brian wants it shorter.
+
+## Session Log — 2026-10-11 (newsletter: per-hub cap + draft cleanup)
+
+- Brian approved deleting the four v1 drafts (201063058037015705, 201063060570376100, 201063063098492531, 201063065632900542); they and the four v2 drafts (201065485151766039, 201065487765866070, 201065490374723027, 201065492891305016) were deleted (HTTP 204).
+- newsletter-draft.js: new solutions capped at 3 per hub (CAP constant); hubs with more get a translated "See all N new in <hub>" link to that hub's page in the reader's language.
+- Recreated drafts "Weekly Brief 2026-10-11" (not sent/scheduled): EN 201065768381580767, FR 201065770961077668, ES 201065773376996573, AR 201065775843247964. Same facts as before (Aeolus, Europa Clipper), reused from newsletter-state.json; no new facts consumed. EN preview 5,258px tall (was ~8,400).
