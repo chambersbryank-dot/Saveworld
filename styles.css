@@ -677,3 +677,4 @@ body.toc-sub .page-hero.af-hero.af-paused::before { animation-play-state: paused
 @media (prefers-reduced-motion: reduce) { .af-motion-toggle { display: none; } }
 /* Amazing Facts phone: room for the pause button below the banner credit */
 @media (max-width: 600px) { body.toc-sub .page-hero.af-hero .page-hero-content { padding-bottom: 2.6rem; } body.toc-sub .page-hero.af-hero p.af-hero-credit { font-size: 0.65rem; } }
+body.toc-sub.artemis-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ArtemisII_Launch_SLS.jpg') center/cover no-repeat; }

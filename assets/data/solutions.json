@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T21:23:03.448Z",
+ "generated": "2026-10-11T17:43:34.223Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -725,6 +725,24 @@
    ]
   },
   {
+   "url": "Artemis_II.html",
+   "title": "Artemis II",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Artemis II farthest distance from Earth",
+     "value": 252756,
+     "unit": "miles",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/"
+    }
+   ],
+   "missions": []
+  },
+  {
    "url": "Planetary_Defense.html",
    "title": "Planetary Defense",
    "category": "planetary-defense",
@@ -1066,17 +1084,6 @@
    "category": "project-r",
    "type": "hub",
    "status": "active",
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Project-Rawane.html",
-   "title": "Artemis II (NASA / CSA)",
-   "category": "project-r",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "section": true,
    "stats": [],
    "missions": []
   },

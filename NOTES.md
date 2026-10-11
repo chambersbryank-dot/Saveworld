@@ -701,3 +701,8 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 
 - Session start: git pull (84b5b2c), NOTES.md read, last 24h of commits reviewed (batch 2026-10-10 fully built; homepage hero fix). No glitches.
 - Prepared batch 2026-10-11 (A–S above) for Brian's yes/no. No pages built or pushed.
+
+## 2026-10-11 — Artemis II dedicated page
+- New Artemis_II.html (mission template from Hera: space-hero with ArtemisII_Launch_SLS.jpg via body.artemis-page, breadcrumb Home › Project Rawane › Artemis II, Five W's, Impact Statement, bottom-link "For Further Information" → NASA Artemis II, next-solutions, footer, consent.js, JSON-LD/og/twitter/canonical). Same content/sources as the former inline section; sp:category project-r, sp:type solution, sp:stat 252,756 miles. amazing-fact "Farthest Humans Have Gone" moved here (Amazing Facts From: → Artemis_II.html).
+- Project-Rawane.html: inline #artemis-ii Impact Statement + Five W's removed (and its sp:item); Voyages Outward card image + title → Artemis_II.html.
+- sitemap.xml + search index updated; styles.css ?v=20261011a on all 45 styled pages.
