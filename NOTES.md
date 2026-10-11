@@ -262,6 +262,7 @@
 | 2026-10-10 | NOTES.md was truncated in cfad49d (domain-reset log, 62 KB to 23 KB): about 275 lines were replaced by a literal "[+43216 bytes at .content[1].resource.text]" marker, dropping Standing Rules, this table, Candidate Queue, and most 2026-10-09 logs. Five later log commits built on the truncated copy. | Restored the full pre-truncation text from 6cafb7a and re-appended every later session log (morning candidate run). Edit NOTES.md via git clone, never the connector's create_or_update_file. | Yes |
 | 2026-10-10 | HTTPS on www.savingplanets.com failed (GitHub Pages served its *.github.io certificate, so browsers showed a security warning) even though DNS was correct: www grey-cloud CNAME to chambersbryank-dot.github.io, apex A records on 185.199.108-111.153, Pages health check all valid. No certificate had ever been requested. | Cleared and re-set the Pages custom domain via `gh api -X PUT repos/chambersbryank-dot/Saveworld/pages`, which triggered issuance; certificate approved within a minute (covers savingplanets.com and www.savingplanets.com, expires 2027-01-08), then enabled Enforce HTTPS. | Yes |
 | 2026-10-11 | Old newsletter script used Launch Library /2.2.0/ (404 per 2026-10-09 row), so drafts silently lost launches | Newsletter now uses /2.3.0/launches/ with week window; failures logged as a note | Yes |
+| 2026-10-11 | MailerLite API cannot edit form double opt-in (confirmation) emails | Texts prepared in scripts/newsletter-confirmation-texts.md; edited manually in dashboard | No (manual) |
 
 ## Session Log — 2026-10-09 (evening): enhancement execution
 
@@ -805,3 +806,9 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Brian approved deleting the four v1 drafts (201063058037015705, 201063060570376100, 201063063098492531, 201063065632900542); they and the four v2 drafts (201065485151766039, 201065487765866070, 201065490374723027, 201065492891305016) were deleted (HTTP 204).
 - newsletter-draft.js: new solutions capped at 3 per hub (CAP constant); hubs with more get a translated "See all N new in <hub>" link to that hub's page in the reader's language.
 - Recreated drafts "Weekly Brief 2026-10-11" (not sent/scheduled): EN 201065768381580767, FR 201065770961077668, ES 201065773376996573, AR 201065775843247964. Same facts as before (Aeolus, Europa Clipper), reused from newsletter-state.json; no new facts consumed. EN preview 5,258px tall (was ~8,400).
+
+## Session Log — 2026-10-11 (newsletter logo + confirmation emails)
+
+- Added assets/SavePlanetLogo-email.png (192x225 PNG from SavePlanetLogo.jpg, shown at 72x84) to the newsletter masthead, linked to the homepage; absolute https://www.savingplanets.com URL.
+- Deleted drafts 201065768381580767/…770961077668/…773376996573/…775843247964 and recreated "Weekly Brief 2026-10-11": EN 201066038081619241, FR 201066040711448072, ES 201066043295139426, AR 201066045808576058 (same facts; not sent/scheduled). Preview 5,263px.
+- Confirmation emails: MailerLite's public API (connect.mailerlite.com) exposes forms read-only except the name; it cannot edit double opt-in emails. Translated FR/ES/AR texts saved in scripts/newsletter-confirmation-texts.md for Brian to paste in the dashboard.
