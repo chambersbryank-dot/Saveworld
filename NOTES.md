@@ -838,3 +838,7 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 
 - ThreeTrees2.jpg is the owner's photo: "Photo: SI Partner." added under its only visible use (Three Trees card on Deforestation.html; translated via i18n on fr/es/ar). Not used in the newsletter, so drafts unchanged.
 - Verified at 390px (CDP): index, Life_Terra, Deforestation, ar/index, ar/Life_Terra all scrollWidth 390 = no horizontal scroll. Builds/audits TOTAL 0, translations current.
+
+## Session Log — 2026-10-11 (newsletter footer address)
+
+- Checked scripts/newsletter-draft.js: footer already uses only MailerLite merge tags `{$account_address}` and `{$unsubscribe}`; no hard-coded address anywhere. The address comes from MailerLite Account settings > Company profile (company name/website/physical address). To change it (e.g. to a PO box): edit it there; to push the change into existing drafts, Account settings > Default settings > "Company details and unsubscribe disclaimer" > check "Force-update company details..." and save. Template unchanged, so drafts were not recreated. Never record the address itself in the repo.
