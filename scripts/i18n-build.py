@@ -159,3 +159,6 @@ if __name__ == '__main__':
         m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
         for page in PAGES: build(page, lang, m)
         print(lang, 'built', len(PAGES), 'pages')
+    import importlib.util  # SEO pass on translations (titles/descriptions per language, og/hreflang/JSON-LD)
+    spec = importlib.util.spec_from_file_location('seo', 'scripts/seo-fix.py'); seo = importlib.util.module_from_spec(spec); spec.loader.exec_module(seo)
+    print('seo-fix:', seo.run(['en'] + langs), 'pages updated')
