@@ -1,0 +1,216 @@
+{
+ "asOf": "2026-10-11",
+ "updated": "2026-10-11",
+ "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
+ "program": {
+  "url": "https://www.nasa.gov/humans-in-space/artemis/",
+  "label": "NASA, Artemis program"
+ },
+ "missions": [
+  {
+   "id": "artemis-i",
+   "name": "Artemis I",
+   "state": "flown",
+   "target": "Nov. 16, 2022",
+   "missionType": "رحلة اختبار قمرية غير مأهولة",
+   "synopsis": "أول رحلة اختبار من NASA لـ SLS وOrion والأنظمة الأرضية: رحلة غير مأهولة لمدة 25 يومًا إلى ما بعد القمر، أُطلقت في 16 نوفمبر وهبطت في البحر في 11 ديسمبر 2022.",
+   "status": "نُفّذت. رحلة اختبار غير مأهولة، من 16 نوفمبر إلى 11 ديسمبر 2022.",
+   "objective": "اختبار الصاروخ والمركبة والأنظمة الأرضية دون طاقم.",
+   "crew": [],
+   "hardware": "صاروخ SLS ومركبة Orion (غير مأهولة).",
+   "milestones": [
+    {
+     "date": "2022-11-16",
+     "label": "الإطلاق من مركز كينيدي للفضاء"
+    },
+    {
+     "date": "2022-12-11",
+     "label": "الهبوط في البحر"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-i/",
+     "label": "NASA, Artemis I"
+    }
+   ],
+   "watch": null
+  },
+  {
+   "id": "artemis-ii",
+   "name": "Artemis II",
+   "state": "flown",
+   "target": "April 1–10, 2026",
+   "launch": "2026-04-01T00:00:00Z",
+   "missionType": "تحليق مأهول حول القمر",
+   "status": "نُفّذت. حلّق أربعة رواد حول القمر، ووصلوا إلى 252,756 ميلًا من الأرض في 6 أبريل 2026، وهبطوا في البحر قبالة سان دييغو بعد رحلة استغرقت نحو 10 أيام وبلغت 695,081 ميلًا.",
+   "objective": "إثبات جاهزية Orion وSLS بطاقم على متنهما.",
+   "crew": [
+    {
+     "name": "Reid Wiseman",
+     "role": "قائد",
+     "agency": "NASA"
+    },
+    {
+     "name": "Victor Glover",
+     "role": "طيار",
+     "agency": "NASA"
+    },
+    {
+     "name": "Christina Koch",
+     "role": "اختصاصي مهمة",
+     "agency": "NASA"
+    },
+    {
+     "name": "Jeremy Hansen",
+     "role": "اختصاصي مهمة",
+     "agency": "CSA"
+    }
+   ],
+   "hardware": "صاروخ SLS ومركبة Orion.",
+   "milestones": [
+    {
+     "date": "2026-04-01",
+     "label": "الإطلاق على SLS وOrion من مركز كينيدي للفضاء"
+    },
+    {
+     "date": "2026-04-06",
+     "label": "رقم قياسي جديد: 252,756 ميلًا من الأرض"
+    },
+    {
+     "date": "2026-04-10",
+     "label": "الهبوط في البحر قبالة سان دييغو"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/",
+     "label": "NASA, Artemis II crew back on Earth"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasas-artemis-ii-crew-eclipses-record-for-farthest-human-spaceflight/",
+     "label": "NASA, Artemis II distance record"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-ii/",
+   "synopsis": "حلّق أربعة رواد حول القمر في أبريل 2026 ووصلوا إلى 252,756 ميلًا من الأرض، أبعد مما وصل إليه أي إنسان من قبل."
+  },
+  {
+   "id": "artemis-iii",
+   "name": "Artemis III",
+   "state": "upcoming",
+   "target": "2027",
+   "targetLabel": "هدف NASA: 2027",
+   "missionType": "عرض مأهول",
+   "status": "رحلة اختبار مأهولة في المدار الأرضي المنخفض: ستتدرب Orion على الالتقاء والالتحام بمركبة هبوط قمرية تجارية أو بكلتيهما وتختبر الأنظمة الحرجة قبل أي هبوط. لم يُحدَّد موعد للإطلاق بعد، لذا لا يوجد عد تنازلي.",
+   "objective": "إثبات الأنظمة الحرجة للهبوط على القمر",
+   "crew": [
+    {
+     "name": "Randy Bresnik",
+     "role": "قائد",
+     "agency": "NASA"
+    },
+    {
+     "name": "Luca Parmitano",
+     "role": "طيار",
+     "agency": "ESA"
+    },
+    {
+     "name": "Andre Douglas",
+     "role": "اختصاصي مهمة",
+     "agency": "NASA"
+    },
+    {
+     "name": "Frank Rubio",
+     "role": "اختصاصي مهمة",
+     "agency": "NASA"
+    }
+   ],
+   "hardware": "SLS وOrion ونظام هبوط بشري واحد أو كلاهما: SpaceX Starship وBlue Origin Blue Moon (تبنيهما شركات بعقود مع NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "NASA تجعل Artemis III اختبارًا في مدار الأرض؛ وينتقل أول هبوط إلى Artemis IV"
+    },
+    {
+     "date": "2026-06-09",
+     "label": "تسمية الطاقم: Bresnik وParmitano (ESA) وDouglas وRubio"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iii/",
+     "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
+     "label": "NASA, Artemis III crew"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-adds-mission-to-artemis-lunar-program-updates-architecture/",
+     "label": "NASA, Artemis architecture update"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iii/",
+   "synopsis": "اختبار مأهول في المدار الأرضي المنخفض: تتدرب Orion على الالتحام بمركبات هبوط قمرية تجارية قبل أي هبوط."
+  },
+  {
+   "id": "artemis-iv",
+   "name": "Artemis IV",
+   "state": "upcoming",
+   "target": "مطلع 2028",
+   "targetLabel": "هدف NASA: مطلع 2028",
+   "missionType": "هبوط مأهول على السطح",
+   "status": "عودة البشرية إلى سطح القمر: سينزل اثنان من أفراد الطاقم الأربعة قرب القطب الجنوبي للقمر ويقضيان هناك نحو أسبوع. لم يُعلن الطاقم بعد.",
+   "objective": "إنزال رائدَين قرب القطب الجنوبي للقمر لنحو أسبوع من العمل العلمي.",
+   "crew": [],
+   "hardware": "SLS (بتكوين موحّد بدءًا من Artemis IV)، وOrion تلتحم بنظام هبوط بشري تجاري في مدار القمر. ولا يرد Gateway في تحديث خطة NASA لشهر فبراير 2026.",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "NASA تعلن Artemis IV أول هبوط مأهول، والمستهدف في 2028"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iv/",
+     "label": "NASA, Artemis IV"
+    },
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iv/",
+   "synopsis": "عودة البشرية إلى سطح القمر: يقضي رائدان نحو أسبوع قرب القطب الجنوبي للقمر."
+  },
+  {
+   "id": "artemis-v",
+   "name": "Artemis V",
+   "state": "upcoming",
+   "target": "أواخر 2028",
+   "targetLabel": "هدف NASA: أواخر 2028",
+   "missionType": "هبوط مأهول",
+   "synopsis": "هبوط ثانٍ لرواد الفضاء في خطة NASA لشهر فبراير 2026.",
+   "status": "تدرج خطة NASA لشهر فبراير 2026 مهمة Artemis V هبوطًا إضافيًا لرواد الفضاء، مستهدفًا أواخر 2028. لا توجد بعد صفحة للمهمة ولا طاقم.",
+   "objective": "هبوط إضافي لرواد الفضاء على القمر.",
+   "crew": [],
+   "hardware": "SLS وOrion ونظام هبوط بشري تجاري (وفق خطة NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "أُضيفت إلى خطة Artemis المحدّثة لدى NASA"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-v/",
+   "watchOptional": true
+  }
+ ],
+ "lang": "ar"
+}

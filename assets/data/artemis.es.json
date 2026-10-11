@@ -1,0 +1,216 @@
+{
+ "asOf": "2026-10-11",
+ "updated": "2026-10-11",
+ "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
+ "program": {
+  "url": "https://www.nasa.gov/humans-in-space/artemis/",
+  "label": "NASA, Artemis program"
+ },
+ "missions": [
+  {
+   "id": "artemis-i",
+   "name": "Artemis I",
+   "state": "flown",
+   "target": "Nov. 16, 2022",
+   "missionType": "Vuelo de prueba lunar sin tripulación",
+   "synopsis": "El primer vuelo de prueba de la NASA de SLS, Orion y los sistemas de tierra: un viaje sin tripulación de 25 días más allá de la Luna, lanzado el 16 de noviembre y amerizado el 11 de diciembre de 2022.",
+   "status": "Realizada. Vuelo de prueba sin tripulación, del 16 de noviembre al 11 de diciembre de 2022.",
+   "objective": "Probar el cohete, la nave y los sistemas de tierra sin tripulación.",
+   "crew": [],
+   "hardware": "Cohete SLS y nave Orion (sin tripulación).",
+   "milestones": [
+    {
+     "date": "2022-11-16",
+     "label": "Lanzamiento desde el Centro Espacial Kennedy"
+    },
+    {
+     "date": "2022-12-11",
+     "label": "Amerizaje"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-i/",
+     "label": "NASA, Artemis I"
+    }
+   ],
+   "watch": null
+  },
+  {
+   "id": "artemis-ii",
+   "name": "Artemis II",
+   "state": "flown",
+   "target": "April 1–10, 2026",
+   "launch": "2026-04-01T00:00:00Z",
+   "missionType": "Sobrevuelo lunar tripulado",
+   "status": "Realizada. Cuatro astronautas volaron alrededor de la Luna, alcanzaron 252.756 millas de la Tierra el 6 de abril de 2026 y amerizaron frente a San Diego tras un viaje de casi 10 días y 695.081 millas.",
+   "objective": "Probar Orion y SLS con tripulación a bordo.",
+   "crew": [
+    {
+     "name": "Reid Wiseman",
+     "role": "comandante",
+     "agency": "NASA"
+    },
+    {
+     "name": "Victor Glover",
+     "role": "piloto",
+     "agency": "NASA"
+    },
+    {
+     "name": "Christina Koch",
+     "role": "especialista de misión",
+     "agency": "NASA"
+    },
+    {
+     "name": "Jeremy Hansen",
+     "role": "especialista de misión",
+     "agency": "CSA"
+    }
+   ],
+   "hardware": "Cohete SLS y nave Orion.",
+   "milestones": [
+    {
+     "date": "2026-04-01",
+     "label": "Lanzamiento en SLS y Orion desde el Centro Espacial Kennedy"
+    },
+    {
+     "date": "2026-04-06",
+     "label": "Nuevo récord: 252.756 millas de la Tierra"
+    },
+    {
+     "date": "2026-04-10",
+     "label": "Amerizaje frente a San Diego"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/",
+     "label": "NASA, Artemis II crew back on Earth"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasas-artemis-ii-crew-eclipses-record-for-farthest-human-spaceflight/",
+     "label": "NASA, Artemis II distance record"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-ii/",
+   "synopsis": "Cuatro astronautas volaron alrededor de la Luna en abril de 2026 y alcanzaron 252.756 millas de la Tierra, más lejos que ningún ser humano antes."
+  },
+  {
+   "id": "artemis-iii",
+   "name": "Artemis III",
+   "state": "upcoming",
+   "target": "2027",
+   "targetLabel": "Objetivo de la NASA: 2027",
+   "missionType": "Demostración tripulada",
+   "status": "Un vuelo de prueba tripulado en órbita terrestre baja: Orion practicará el encuentro y acoplamiento con uno o ambos módulos lunares comerciales y probará sistemas críticos antes de cualquier alunizaje. Aún no hay fecha de lanzamiento, así que no hay cuenta atrás.",
+   "objective": "Demostrar sistemas críticos para el alunizaje",
+   "crew": [
+    {
+     "name": "Randy Bresnik",
+     "role": "comandante",
+     "agency": "NASA"
+    },
+    {
+     "name": "Luca Parmitano",
+     "role": "piloto",
+     "agency": "ESA"
+    },
+    {
+     "name": "Andre Douglas",
+     "role": "especialista de misión",
+     "agency": "NASA"
+    },
+    {
+     "name": "Frank Rubio",
+     "role": "especialista de misión",
+     "agency": "NASA"
+    }
+   ],
+   "hardware": "SLS, Orion y uno o ambos sistemas de aterrizaje tripulado: SpaceX Starship y Blue Origin Blue Moon (construidos por empresas, con contratos de la NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "La NASA convierte Artemis III en una prueba en órbita terrestre; el primer alunizaje pasa a Artemis IV"
+    },
+    {
+     "date": "2026-06-09",
+     "label": "Tripulación designada: Bresnik, Parmitano (ESA), Douglas, Rubio"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iii/",
+     "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
+     "label": "NASA, Artemis III crew"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-adds-mission-to-artemis-lunar-program-updates-architecture/",
+     "label": "NASA, Artemis architecture update"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iii/",
+   "synopsis": "Una prueba tripulada en órbita terrestre baja: Orion practica el acoplamiento con módulos lunares comerciales antes de cualquier alunizaje."
+  },
+  {
+   "id": "artemis-iv",
+   "name": "Artemis IV",
+   "state": "upcoming",
+   "target": "Principios de 2028",
+   "targetLabel": "Objetivo de la NASA: principios de 2028",
+   "missionType": "Alunizaje tripulado",
+   "status": "El regreso de la humanidad a la superficie lunar: dos de los cuatro tripulantes descenderán cerca del polo sur de la Luna y pasarán allí cerca de una semana. Tripulación aún no anunciada.",
+   "objective": "Llevar a dos astronautas cerca del polo sur lunar para cerca de una semana de ciencia.",
+   "crew": [],
+   "hardware": "SLS (configuración estandarizada desde Artemis IV), Orion acoplándose a un sistema comercial de aterrizaje tripulado en órbita lunar. Gateway no figura en la actualización del plan de la NASA de febrero de 2026.",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "La NASA designa Artemis IV como el primer alunizaje tripulado, previsto para 2028"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iv/",
+     "label": "NASA, Artemis IV"
+    },
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iv/",
+   "synopsis": "El regreso de la humanidad a la superficie lunar: dos astronautas pasan cerca de una semana junto al polo sur de la Luna."
+  },
+  {
+   "id": "artemis-v",
+   "name": "Artemis V",
+   "state": "upcoming",
+   "target": "Finales de 2028",
+   "targetLabel": "Objetivo de la NASA: finales de 2028",
+   "missionType": "Alunizaje tripulado",
+   "synopsis": "Un segundo alunizaje de astronautas en el plan de la NASA de febrero de 2026.",
+   "status": "El plan de la NASA de febrero de 2026 incluye Artemis V como alunizaje adicional de astronautas, previsto para finales de 2028. Aún sin página de misión ni tripulación.",
+   "objective": "Un alunizaje adicional de astronautas.",
+   "crew": [],
+   "hardware": "SLS, Orion y un sistema comercial de aterrizaje tripulado (según el plan de la NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "Añadida al plan Artemis actualizado de la NASA"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-v/",
+   "watchOptional": true
+  }
+ ],
+ "lang": "es"
+}

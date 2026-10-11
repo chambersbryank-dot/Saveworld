@@ -101,9 +101,7 @@ def build(page, lang, m):
     ui = json.load(open('i18n/ui.json', encoding='utf8')).get(lang, {})
     for s in soup.find_all('script'):
         if not s.get('src') and s.get('type') != 'application/ld+json' and s.string:
-            if 'assets/data/artemis.json' in s.string:  # keeps the translated static Artemis cards (data file is English)
-                s.decompose(); continue
-            js = s.string
+            js = s.string.replace("'assets/data/artemis.json'", f"'../assets/data/artemis.{lang}.json'")  # per-language data (scripts/i18n-data.py); static translated cards are the fallback
             for en, t in ui.items(): js = js.replace(en, t)
             s.string = js
             continue
