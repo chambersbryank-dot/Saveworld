@@ -56,6 +56,34 @@ function writeProjectRMenu(menu) {
   return n;
 }
 
+// ---- Solutions nav dropdown (every hub + every solution page, alphabetical within hub) ----
+// Items = <h3><a href="Page.html">Name</a> card titles on each hub page. Written into every page
+// between <!-- SOLUTIONS-MENU:START --> and <!-- SOLUTIONS-MENU:END -->.
+const SOLUTIONS_HUBS = [['Oceans.html', 'Ocean'], ['Lakes.html', 'Lakes'], ['Rivers.html', 'Rivers'], ['Space.html', 'Space'], ['Space_Disposal.html', 'Space Disposal'], ['Deforestation.html', 'Forests'], ['Planetary_Defense.html', 'Planetary Defense'], ['Space_Weather.html', 'Space Weather'], ['Earth_Observation.html', 'Earth Observation'], ['Project-Rawane.html', 'Project Rawane']];
+// Project Rawane lists only pages not already under another hub (e.g. Voyages Outward).
+function buildSolutionsMenu() {
+  const listed = new Set();
+  return SOLUTIONS_HUBS.filter(([f]) => fs.existsSync(f)).map(([file, name]) => {
+    const html = fs.readFileSync(file, 'utf8'), seen = new Set(file === 'Project-Rawane.html' ? listed : []);
+    const items = [...html.matchAll(/<h3><a href="([A-Za-z0-9_.-]+\.html)">([^<]+)<\/a>/g)]
+      .filter(m => m[1] !== file && !seen.has(m[1]) && seen.add(m[1]) && listed.add(m[1]))
+      .map(m => ({ href: m[1], name: m[2].replace(/^(Saving Moons|Natural Debris Solution): /, '').replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'") }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+    return { hub: name, href: file, items };
+  });
+}
+function writeSolutionsMenu(menu) {
+  const html = menu.map(g => `<li class="menu-group"><a class="menu-hub" href="${g.href}">${esc(g.hub)}</a><ul>` +
+    g.items.map(i => `<li><a href="${i.href}">${esc(i.name).replace(/'/g, '&#x27;')}</a></li>`).join('') + '</ul></li>').join('');
+  const re = /<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/; let n = 0;
+  fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => {
+    const src = fs.readFileSync(f, 'utf8'); if (!re.test(src)) return;
+    const next = src.replace(re, `<!-- SOLUTIONS-MENU:START -->${html}<!-- SOLUTIONS-MENU:END -->`);
+    if (next !== src) { fs.writeFileSync(f, next); n++; }
+  });
+  return n;
+}
+
 function build() {
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
   const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => path.basename(m[1].trim()))
@@ -104,13 +132,17 @@ function build() {
   }
   const categories = {};
   Object.keys(CATEGORIES).forEach(c => { const l = pages.filter(p => p.category === c); if (l.length) categories[c] = Object.assign({ name: CATEGORIES[c] }, agg(l)); });
-  const projectRMenu = buildProjectRMenu(warnings);
+  const solutionsMenu = buildSolutionsMenu();
+  const projectRMenu = PROJECT_R_HUBS.map(([f, name]) => { const g = solutionsMenu.find(x => x.href === f); return { hub: name, href: f, items: g ? g.items : [] }; });
+  if (!projectRMenu.length) buildProjectRMenu(warnings);
   const out = { generated: new Date().toISOString(), projectRMenu, site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
   fs.mkdirSync('assets/data', { recursive: true });
   fs.writeFileSync('assets/data/solutions.json', JSON.stringify(out, null, 1) + '\n');
   console.log(`solutions.json: ${out.site.solutions} active solutions, ${out.site.horizon} on the horizon, ${out.site.hubs} hubs, ${out.site.upcomingMissions} upcoming missions, ${pages.length} pages.`);
   const menuPages = writeProjectRMenu(projectRMenu);
   console.log(`Project R menu: ${projectRMenu.reduce((n, g) => n + g.items.length, 0)} items in ${projectRMenu.length} hubs; ${menuPages} pages updated.`);
+  const solPages = writeSolutionsMenu(solutionsMenu);
+  console.log(`Solutions menu: ${solutionsMenu.reduce((n, g) => n + g.items.length, 0)} items in ${solutionsMenu.length} hubs; ${solPages} pages updated.`);
   warnings.forEach(w => console.warn('WARN ' + w));
   return out;
 }

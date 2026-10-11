@@ -679,3 +679,40 @@ body.toc-sub .page-hero.af-hero.af-paused::before { animation-play-state: paused
 @media (max-width: 600px) { body.toc-sub .page-hero.af-hero .page-hero-content { padding-bottom: 2.6rem; } body.toc-sub .page-hero.af-hero p.af-hero-credit { font-size: 0.65rem; } }
 body.toc-sub.artemis-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ArtemisII_Launch_SLS.jpg') center/cover no-repeat; }
 body.artemis-page .launch-widget .lw-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+body.toc-sub.imap-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/IMAP_Spacecraft_KSC.jpg') center/cover no-repeat; }
+body.toc-sub.goes-19-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/GOES19_GOESU_KSC.jpg') center/cover no-repeat; }
+body.toc-sub.punch-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/PUNCH_Mission.jpg') center/cover no-repeat; }
+body.toc-sub.tracers-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/TRACERS_Launch.jpg') center/cover no-repeat; }
+body.toc-sub.carruthers-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Carruthers_SWFO_KSC.jpg') center/cover no-repeat; }
+body.toc-sub.solar-orbiter-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Solar_Orbiter_Astrotech.jpg') center/cover no-repeat; }
+body.toc-sub.us-deorbit-vehicle-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ISS_Flyaround_2021.jpg') center/cover no-repeat; }
+body.toc-sub.aeolus-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ATV1_Departure_ISS.jpg') center/cover no-repeat; }
+body.toc-sub.lignosat-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/LignoSat_Wood_Panels.jpg') center/cover no-repeat; }
+body.toc-sub.europa-clipper-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Europa_Clipper_Jupiter.jpg') center/cover no-repeat; }
+body.toc-sub.juice-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Juice_RIME_Radar.jpg') center/cover no-repeat; }
+body.toc-sub.spacelogistics-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Satellite_Servicing_Arm_GSFC.jpg') center/cover no-repeat; }
+body.toc-sub.starfish-otter-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Transporter18_Launch.jpg') center/cover no-repeat; }
+body.toc-sub.swot-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/SWOT_Orbit_Illustration.jpg') center/cover no-repeat; }
+body.toc-sub.pace-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/PACE_Spacecraft_KSC.jpg') center/cover no-repeat; }
+body.toc-sub.sentinel-6b-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Sentinel6B_Launch.jpg') center/cover no-repeat; }
+body.toc-sub.gosat-gw-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/EMIT_Methane_Fingerprint.jpg') center/cover no-repeat; }
+body.toc-sub.earthcare-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Clouds_Limb_ISS.jpg') center/cover no-repeat; }
+body.toc-sub.alos-4-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Rondonia_Deforestation_STS46.jpg') center/cover no-repeat; }
+body.toc-sub.grace-fo-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/GRACE_FO_Orbit.jpg') center/cover no-repeat; }
+body.toc-sub.icesat-2-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ICESat2_Launch.jpg') center/cover no-repeat; }
+body.toc-sub.sentinel-1-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Sentinel1_Ground_Motion.jpg') center/cover no-repeat; }
+body.toc-sub.flex-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Global_Plant_Fluorescence.jpg') center/cover no-repeat; }
+body.toc-sub.eos-06-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Oceansat_Winds_Irene.jpg') center/cover no-repeat; }
+body.toc-sub.phytoplankton-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Phytoplankton_Bloom_Iceland.jpg') center/cover no-repeat; }
+body.toc-sub.coral-restoration-foundation-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Florida_Keys_PIA03890.jpg') center/cover no-repeat; }
+body.toc-sub.kelp-forests-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Kerguelen_Kelp_ISS.jpg') center/cover no-repeat; }
+body.toc-sub.seagrass-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Seagrass_Planting_KSC.jpg') center/cover no-repeat; }
+body.toc-sub.billion-oyster-project-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/NYC_Hudson_Harbor.jpg') center/cover no-repeat; }
+body.toc-sub.mr-trash-wheel-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Baltimore_DC_Skylab.jpg') center/cover no-repeat; }
+body.toc-sub.mangroves-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Mangrove_Delta_ISS.jpg') center/cover no-repeat; }
+body.toc-sub.osiris-apex-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/OSIRIS_APEX.jpg') center/cover no-repeat; }
+body.toc-sub.ramses-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Ramses_Switch_On.jpg') center/cover no-repeat; }
+body.toc-sub.escapade-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/ESCAPADE_Launch_NG2.jpg') center/cover no-repeat; }
+/* Solutions dropdown: every hub + solution page (generated by build-stats.js) */
+@media (min-width: 901px) { .nav-container { position: relative; } .nav-links > .nav-dropdown { position: static; } .dropdown-menu.solutions-menu { left: auto; right: 0; width: min(96vw, 1040px); column-count: 4; column-gap: 0; } .dropdown-menu.solutions-menu .menu-group { break-inside: avoid; } }
+@media (max-width: 900px) { .dropdown-menu.solutions-menu { max-height: 60vh; overflow-y: auto; } }
