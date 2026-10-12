@@ -788,3 +788,4 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .sotw-blurb { margin: 0; color: #e8eef5; }
 .sotw-actions { margin: 1rem 0 0.4rem; }
 @media (max-width: 760px) { .sotw-card { grid-template-columns: 1fr; } .sotw-img img { min-height: 0; aspect-ratio: 16 / 9; } }
+.sb-num { direction: ltr; unicode-bidi: isolate; }
