@@ -875,3 +875,9 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .fc-list li { margin-bottom: 0.8rem; }
 .fc-list a { font-weight: 700; color: #00699a; }
 .fc-desc { display: block; font-size: 0.92rem; color: #33515f; }
+/* SOTW fix: button sat on the credit line (inline .btn padding overflowed its <p>); stack the card on tablets too */
+.sotw-actions { margin: 1.1rem 0 0.8rem; }
+.sotw-actions .btn { display: inline-block; line-height: 1.3; }
+.sotw-body .photo-credit { position: static; margin: 0.6rem 0 0; padding: 0; text-align: start; }
+.dot-link .btn { line-height: 1.3; }
+@media (max-width: 1024px) { .sotw-card { grid-template-columns: 1fr; } .sotw-img img { min-height: 0; aspect-ratio: 16 / 9; } }
