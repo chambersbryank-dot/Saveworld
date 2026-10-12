@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T08:23:00.388Z",
+ "generated": "2026-10-12T18:17:27.731Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -146,14 +146,14 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 66,
+  "solutions": 67,
   "horizon": 5,
   "hubs": 10,
   "byClassification": {
    "nonprofit": 11,
    "corporate": 12,
    "natural": 7,
-   "agency": 36
+   "agency": 37
   },
   "upcomingMissions": 11,
   "impactTotals": [
@@ -301,11 +301,11 @@
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 12,
+   "solutions": 13,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 8,
+    "agency": 9,
     "natural": 1,
     "corporate": 3
    },
@@ -1461,6 +1461,22 @@
    "missions": [
     {
      "name": "ESCAPADE",
+     "upcoming": false,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Nancy_Grace_Roman.html",
+   "title": "Nancy Grace Roman Space Telescope (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Roman",
      "upcoming": false,
      "next": null
     }

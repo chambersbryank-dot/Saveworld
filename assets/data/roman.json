@@ -1,0 +1,19 @@
+{
+ "distance": {
+  "date": "2026-10-12",
+  "km": 1484298,
+  "mi": 922300,
+  "source": "NASA/JPL Horizons (spacecraft -211)",
+  "url": "https://ssd.jpl.nasa.gov/horizons/app.html"
+ },
+ "webb_km": 1403399,
+ "image": {
+  "nasa_id": "NHQ202609010029",
+  "title": "Nancy Grace Roman Space Telescope Celebration",
+  "date": "2026-09-01",
+  "credit": "NASA/Aubrey Gemignani",
+  "thumb": "https://images-assets.nasa.gov/image/NHQ202609010029/NHQ202609010029~thumb.jpg",
+  "url": "https://images.nasa.gov/details/NHQ202609010029"
+ },
+ "updated": "2026-10-12"
+}

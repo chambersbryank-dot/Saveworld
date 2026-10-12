@@ -893,3 +893,37 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .fc-regions .fc-region h3 { color: #003755 !important; }
 .help-pagelinks { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; margin: 1rem auto 0; padding: 0 1rem; }
 .help-pagelinks .btn { margin: 0 !important; min-width: 120px; text-align: center; }
+/* Nancy Grace Roman showcase (2026-10-12) */
+body.toc-sub.roman-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Roman_Launch_FH.jpg') center 30%/cover no-repeat; }
+.roman-jump { max-width: 1200px; margin: 1rem auto 0; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+.roman-jump a { padding: .45rem .9rem; border: 1px solid rgba(120,170,220,.45); border-radius: 999px; color: #cfe3f5; text-decoration: none; font-size: .9rem; min-height: 44px; display: inline-flex; align-items: center; }
+.roman-jump a:hover, .roman-jump a:focus-visible { background: rgba(63,169,245,.18); }
+.roman-sec, .roman-facts { max-width: 1200px; margin: 2.5rem auto; padding: 0 1.5rem; }
+.roman-sec h2 { text-align: center; }
+.roman-table-wrap { overflow-x: auto; }
+.roman-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.roman-table th, .roman-table td { padding: .7rem .8rem; border-bottom: 1px solid rgba(120,170,220,.25); text-align: left; vertical-align: top; }
+.roman-table thead th { color: #ffc94d; font-size: 1.05rem; }
+.roman-table tbody th { color: #cfe3f5; white-space: nowrap; }
+.roman-table td:nth-child(2) { background: rgba(63,169,245,.08); }
+.roman-live, .roman-countdown { text-align: center; background: rgba(10,30,55,.6); border: 1px solid rgba(120,170,220,.3); border-radius: 14px; padding: 1.5rem; }
+.roman-big { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 800; color: #ffc94d; margin: .2rem 0; line-height: 1.1; }
+.roman-sub, .roman-note { opacity: .85; }
+.roman-note { font-size: .88rem; }
+.roman-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
+.roman-img-grid figure { margin: 0; }
+.roman-img-grid img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.roman-img-grid figcaption { font-size: .9rem; margin-top: .5rem; opacity: .9; }
+.lagrange-fig { margin: 1rem auto; max-width: 640px; }
+.lagrange-fig svg { width: 100%; height: auto; background: rgba(5,15,30,.7); border-radius: 14px; }
+.lagrange-fig figcaption { text-align: center; font-size: .9rem; opacity: .9; }
+.lg-l2 { animation: lgpulse 2.4s ease-in-out infinite; transform-origin: 565px 160px; transform-box: view-box; }
+@keyframes lgpulse { 50% { transform: scale(1.6); } }
+@media (prefers-reduced-motion: reduce) { .lg-l2 { animation: none; } }
+.roman-list li { margin: .5rem 0; }
+.roman-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; margin-bottom: .5rem; }
+.roman-facts > div { background: rgba(10,30,55,.6); border-radius: 14px; padding: 1rem; border: 1px solid rgba(255,201,77,.3); }
+.roman-facts + .fact-source { max-width: 1200px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+.roman-saves .w-card h3 { color: #7fd99a; }
+@media (max-width: 1024px) { .roman-facts { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .roman-img-grid { grid-template-columns: 1fr; } }

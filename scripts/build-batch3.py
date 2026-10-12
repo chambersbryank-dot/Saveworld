@@ -49,6 +49,7 @@ for e in C.LOG:  # newest first
     ents.append(f'<article class="log-entry" id="{e["id"]}"><p class="log-meta"><span>{E(e["num"])}</span> · <time datetime="{e["date"]}">{E(e["date_label"])}</time></p><h2>{E(e["title"])}</h2>{paras}'
                 f'<div class="log-facts"><h3>Fact Check</h3><ul>{facts}</ul></div><div class="myth-related"><p>On Saving Planets:</p><ul>{rel}</ul></div></article>')
 body = ('<section class="impact" id="intro"><h2>Who Is Rawane?</h2><div class="impact-box"><p>' + E(C.LOG_INTRO) + '</p><p>' + E(C.LOG_RULE) + '</p><p>Her home base: <a href="Project-Rawane.html">Project Rawane</a></p></div></section>\n'
+        '<aside class="new-callout" aria-label="New"><a href="Nancy_Grace_Roman.html"><span class="new-badge">New</span><span class="new-text">Rawane is tracking NASA\'s new Roman Space Telescope on its trip to L2.</span><span class="new-cta">See Roman <span aria-hidden="true">→</span></span></a></aside>\n'
         '<!-- LOG: entries are generated from scripts/batch3-content.py (LOG list, newest first) -->\n<section class="mission-log" aria-label="Log entries">' + ''.join(ents) + '</section>')
 page('Rawanes_Mission_Log', "Rawane's Mission Log | Saving Planets", "Rawane's Mission Log", 'Weekly field notes from our astronaut mascot. The story is made up; the facts are real.', C.LOG_DESC, body)
 
