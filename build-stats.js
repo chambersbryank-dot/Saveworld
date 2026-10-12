@@ -16,7 +16,7 @@ const path = require('path');
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
   'planetary-defense': 'Planetary Defense', 'space-weather': 'Space Weather & Shields',
   'earth-observation': 'Earth Observation', 'project-r': 'Project Rawane' };
-const SKIP = ['Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html'];
+const SKIP = ['Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
 };

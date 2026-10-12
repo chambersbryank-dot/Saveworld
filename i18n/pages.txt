@@ -85,3 +85,5 @@ Ways_to_Help.html
 Press.html
 Myth_vs_Fact.html
 Rawanes_Mission_Log.html
+Community.html
+Find_a_Cleanup.html

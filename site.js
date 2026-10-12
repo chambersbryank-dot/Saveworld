@@ -317,3 +317,32 @@
     });
   });
 })();
+
+/* Batch 4: Do One Thing Today (pick by local date from the rendered list) + Community Wall (approved items from JSON). */
+(function () {
+  function run() {
+    Array.prototype.forEach.call(document.querySelectorAll('.dot[data-start]'), function (box) {
+      var items = box.querySelectorAll('.dot-item'); if (!items.length) return;
+      var d = new Date(), today = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+      var p = box.getAttribute('data-start').split('-'), st = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+      var n = Math.floor((today - st) / 864e5), k = ((n % items.length) + items.length) % items.length;
+      Array.prototype.forEach.call(items, function (li, i) { li.hidden = i !== k; });
+    });
+    var g = document.querySelector('.comm-grid[data-community]'); if (!g) return;
+    var src = (/\/(fr|es|ar)\//.test(location.pathname) ? '../' : '') + g.getAttribute('data-community');
+    var pre = /\/(fr|es|ar)\//.test(location.pathname) ? '../' : '';
+    fetch(src, { cache: 'no-cache', credentials: 'omit' }).then(function (r) { return r.json(); }).then(function (d) {
+      var it = (d && d.items) || []; if (!it.length) return;
+      it.forEach(function (x) {
+        var f = document.createElement('figure'); f.className = 'comm-item';
+        var im = document.createElement('img'); im.src = pre + x.img; im.alt = x.alt || ''; im.loading = 'lazy'; f.appendChild(im);
+        var c = document.createElement('figcaption');
+        var b = document.createElement('strong'); b.textContent = x.name + (x.place ? ', ' + x.place : ''); c.appendChild(b);
+        if (x.caption) { var t = document.createElement('span'); t.textContent = x.caption; c.appendChild(t); }
+        f.appendChild(c); g.appendChild(f);
+      });
+      var e = document.querySelector('.comm-empty'); if (e) e.hidden = true;
+    }).catch(function () {});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();

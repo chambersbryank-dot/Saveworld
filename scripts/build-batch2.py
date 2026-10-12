@@ -76,7 +76,7 @@ for f in sorted(glob.glob('*.html')):
          'DESCRIPTION:' + esc(f'{note} Launch dates can slip. Source: {SRC[f]} · More: https://www.savingplanets.com/{f}') + '\r\n'
          f'URL:https://www.savingplanets.com/{f}\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n')
   p = f'assets/calendar/{slug}.ics'
-  old = open(p, encoding='utf8').read() if os.path.exists(p) else ''
+  old = open(p, encoding='utf8', newline='').read() if os.path.exists(p) else ''
   if re.sub(r'DTSTAMP:\S+', '', old) != re.sub(r'DTSTAMP:\S+', '', ics): open(p, 'w', encoding='utf8', newline='').write(ics)
   link = (f'<p class="cal-add"><a class="btn cal-btn" href="{p}" download><span aria-hidden="true">📅</span> Add to calendar</a> '
           f'<span class="cal-note">{note} Launch dates can slip; check the page before launch day.</span></p>')
