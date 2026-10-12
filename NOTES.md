@@ -852,3 +852,4 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 
 ## 2026-10-11 session
 - Added assets/videos/channel-intro.mp4 (15s channel rebrand intro, SI-generated visuals by Saving Planets, no on-screen text). Posted via Postiz to X, TikTok, YouTube.
+- Added assets/videos/great-bubble-barrier.mp4 (Great Bubble Barrier short, ~15s, 1920x810 horizontal, SI-generated visuals, no on-screen text). Posted 2026-10-11 ~8:42pm HST via Postiz: X cmv4vxxl8006gqw0y9f5t8kxt, TikTok cmv4vxxs8006lqw0y28h1qk27 (DIRECT_POST, AI label), YouTube cmv4vxxxv006oqw0yh354fpzb (public, not for kids) - all PUBLISHED. Note: Postiz strips even plain-text "savingplanets.com" from X posts; YouTube altered/synthetic flag not exposed by Postiz (set in YouTube Studio).
