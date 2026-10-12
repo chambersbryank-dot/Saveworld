@@ -849,3 +849,6 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Intro line centered, bold, 17px (was 15px).
 - "In this issue" quick-links box under the intro (New Solutions, Launches This Week, Amazing Facts, Suggest a New Solution, Dad Joke) with anchors #sp-new/#sp-launches/#sp-facts/#sp-suggest/#sp-joke; "Back to top ↑" (#sp-top) after each section. Strings in T2 (inIssue, backTop) for EN/FR/ES/AR. Anchor links work in Apple Mail/iOS/most webmail; Gmail app and some Outlook versions may ignore them (harmless).
 - Drafts recreated (same facts/joke, not sent): EN 201069299318653981, FR 201069301940094906, ES 201069304342382052, AR 201069306793952542. Preview 7,490px.
+
+## 2026-10-11 session
+- Added assets/videos/channel-intro.mp4 (15s channel rebrand intro, SI-generated visuals by Saving Planets, no on-screen text). Posted via Postiz to X, TikTok, YouTube.
