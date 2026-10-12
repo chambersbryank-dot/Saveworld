@@ -1,0 +1,38 @@
+{
+  "note": "Solution of the Week rotation. Entry = floor((today - start) / 7 days) mod length. Only active solutions. Rebuild index with: python3 scripts/build-home-extras.py",
+  "start": "2026-10-11",
+  "rotation": [
+    {
+      "page": "Great_Bubble_Barrier.html",
+      "title": "The Great Bubble Barrier",
+      "blurb": "A curtain of bubbles across a canal lifts plastic to the surface and guides it into a catch system, while boats and fish pass freely. Their FAQ cites an 86 percent catch rate for floating plastic (company figure).",
+      "image": "assets/videos/great-bubble-barrier.jpg",
+      "imageAlt": "Amsterdam canal at sunrise, a frame from the Saving Planets video",
+      "video": true
+    },
+    {
+      "page": "Life_Terra.html",
+      "title": "Life Terra",
+      "blurb": "Citizens plant and track trees across more than 30 European countries. Life Terra and its partners have planted more than 36 million trees as of May 2026 (company figure).",
+      "image": "assets/videos/life-terra-trees.jpg",
+      "imageAlt": "Sunlit forest with deer, a frame from the Saving Planets video",
+      "video": true
+    },
+    {
+      "page": "GRACE-FO.html",
+      "title": "GRACE-FO (NASA / Germany)",
+      "blurb": "Twin US-German satellites weigh Earth's water by measuring gravity, tracking groundwater, ice and sea level since 2018 (NASA).",
+      "image": "assets/videos/grace-fo-satellites.jpg",
+      "imageAlt": "Satellite flying above Earth, a frame from the Saving Planets video",
+      "video": true
+    },
+    {
+      "page": "Artemis_II.html",
+      "title": "Artemis II",
+      "blurb": "Four astronauts flew around the Moon in April 2026 and reached 252,756 miles from Earth, the farthest humans have ever traveled (NASA).",
+      "image": "assets/videos/artemis-ii-farthest.jpg",
+      "imageAlt": "Rocket lifting off at night, a frame from the Saving Planets video",
+      "video": true
+    }
+  ]
+}

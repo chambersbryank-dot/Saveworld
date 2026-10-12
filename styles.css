@@ -761,3 +761,30 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .help-table th, .help-table td { padding: 0.7rem 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.15); text-align: start; vertical-align: top; }
 .help-table td .btn { margin: 0.2rem 0.4rem 0.2rem 0 !important; padding: 8px 14px; font-size: 0.92rem; }
 @media (max-width: 640px) { .help-table thead { display: none; } .help-table tr, .help-table td { display: block; } .help-table td { border: 0; padding: 0.3rem 0; } .help-table tr { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 0.8rem 0; } }
+
+/* Videos, Planet Scoreboard, Solution of the Week (2026-10-11) */
+.sp-video { max-width: 960px; margin: 2.2rem auto 0; padding: 0 1.5rem; text-align: center; }
+.sp-video-fig { margin: 1rem 0 0; }
+.sp-video video { display: block; width: 100%; height: auto; border-radius: 10px; background: #000; box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
+.sp-video .photo-credit { margin-top: 0.5rem; }
+.scoreboard { max-width: 1100px; margin: var(--section-gap, 2.6rem) auto 0; padding: 0 1.5rem; text-align: center; }
+.sb-intro { margin: 0.4rem auto 1.4rem; max-width: 640px; opacity: 0.9; }
+.sb-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }
+.sb-item { background: #0f1b26; border-radius: 10px; padding: 1.4rem 1rem 1rem; box-shadow: 0 10px 28px rgba(0,0,0,0.45); display: flex; flex-direction: column; }
+.sb-link { color: inherit; text-decoration: none; flex: 1; }
+.sb-link:hover .sb-label, .sb-link:focus-visible .sb-label { text-decoration: underline; }
+.sb-num { display: block; font-size: 2rem; font-weight: 800; color: #009cde; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.sb-label { display: block; margin-top: 0.4rem; font-size: 0.95rem; color: #e8eef5; }
+.sb-src { margin: 0.8rem 0 0; font-size: 0.78rem; opacity: 0.8; }
+@media (max-width: 900px) { .sb-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .sb-grid { grid-template-columns: 1fr; } .sb-num { font-size: 1.8rem; } }
+.sotw { max-width: 1100px; margin: 2rem auto 0; padding: 0 1.5rem; }
+.sotw-card { display: grid; grid-template-columns: 1.2fr 1fr; background: #0f1b26; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
+.sotw-img img { display: block; width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+.sotw-body { padding: 1.6rem 1.6rem 1.2rem; text-align: start; }
+.sotw-kicker { margin: 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--solution-green, #00b894); }
+.sotw-body h2 { margin: 0.3rem 0 0.6rem; text-align: start; }
+.sotw-body h2 a { color: inherit; }
+.sotw-blurb { margin: 0; color: #e8eef5; }
+.sotw-actions { margin: 1rem 0 0.4rem; }
+@media (max-width: 760px) { .sotw-card { grid-template-columns: 1fr; } .sotw-img img { min-height: 0; aspect-ratio: 16 / 9; } }

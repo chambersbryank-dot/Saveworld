@@ -111,7 +111,7 @@ def build(page, lang, m):
             tag['content'] = tr(m, tag['content'])
         if tag.get('data-milestones'):  # "ISO|label;ISO|label"
             tag['data-milestones'] = ';'.join((lambda p: p[0] + ('|' + tr(m, p[1]) if len(p) > 1 else ''))(x.split('|', 1)) for x in tag['data-milestones'].split(';'))
-        for a in ('href', 'src', 'data-image', 'data-fact-page'):
+        for a in ('href', 'src', 'poster', 'data-image', 'data-fact-page'):
             if tag.get(a) and not (tag.name == 'link' and tag.get('rel') in (['canonical'], ['alternate'])):
                 tag[a] = fix_url(tag[a])
     ui = json.load(open('i18n/ui.json', encoding='utf8')).get(lang, {})

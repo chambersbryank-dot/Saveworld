@@ -228,3 +228,38 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Planet Scoreboard count-up + Solution of the Week rotation (2026-10-11) */
+(function () {
+  function run() {
+    var nums = document.querySelectorAll('.sb-num[data-count]');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var loc = (typeof spLang === 'string' && spLang !== 'en') ? spLang : 'en-US';
+    function show(el, v) { el.textContent = Math.round(v).toLocaleString(loc) + (el.getAttribute('data-suffix') || ''); }
+    function animate(el) {
+      var end = +el.getAttribute('data-count'), t0 = null, dur = 1800;
+      function step(t) { if (!t0) t0 = t; var p = Math.min(1, (t - t0) / dur); show(el, end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    }
+    if (nums.length && !reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); animate(e.target); } }); }, { threshold: 0.4 });
+      Array.prototype.forEach.call(nums, function (el) { show(el, 0); io.observe(el); });
+    }
+    // Solution of the Week: static card is built by scripts/build-home-extras.py; English home refreshes it from the JSON between rebuilds
+    var sw = document.querySelector('.sotw[data-sotw-page]');
+    if (!sw || document.documentElement.lang !== 'en') return;
+    fetch('assets/data/solution-of-week.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+      var now = new Date(Date.now() - 10 * 36e5), st = new Date(d.start + 'T00:00:00Z');
+      var e = d.rotation[Math.floor(Math.floor((now - st) / 864e5) / 7) % d.rotation.length];
+      if (!e || e.page === sw.getAttribute('data-sotw-page')) return;
+      var href = e.page + (e.video ? '#video' : '');
+      var img = sw.querySelector('.sotw-img img'); img.src = e.image; img.alt = e.imageAlt;
+      sw.querySelector('.sotw-img').href = href;
+      var h = sw.querySelector('h2 a'); h.href = e.page; h.textContent = e.title;
+      sw.querySelector('.sotw-blurb').textContent = e.blurb;
+      var b = sw.querySelector('.sotw-actions a'); b.href = href; b.textContent = e.video ? 'Watch and Learn More' : 'Learn More';
+      sw.setAttribute('data-sotw-page', e.page);
+    }).catch(function () {});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();

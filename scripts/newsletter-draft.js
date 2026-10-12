@@ -105,6 +105,16 @@ async function launches() {
 }
 function fmtDate(d, lang) { return new Date(d).toLocaleDateString(T[lang].dateLoc, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Pacific/Honolulu' }); }
 function fmtDay(d, lang) { return new Date(d).toLocaleString(T[lang].dateLoc, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' }) + ' UTC'; }
+// Solution of the Week (same rotation as the homepage: assets/data/solution-of-week.json; text translated via i18n/<lang>.json)
+const SOTW_T = { en: ['Solution of the Week', 'Watch and Learn More'], fr: ['Solution de la semaine', 'Regarder et en savoir plus'], es: ['Solución de la semana', 'Mira y aprende más'], ar: ['حل الأسبوع', 'شاهد واعرف المزيد'] };
+function sotw(lang) {
+  try {
+    const d = JSON.parse(rd('assets/data/solution-of-week.json')), st = new Date(d.start + 'T00:00:00Z');
+    const e = d.rotation[Math.floor(Math.floor((today.getTime() - 10 * 36e5 - st) / 864e5) / 7) % d.rotation.length];
+    const tm = lang === 'en' ? {} : JSON.parse(rd(`i18n/${lang}.json`) || '{}'), tr = x => tm[x] || x;
+    return { ...e, title: tr(e.title), blurb: tr(e.blurb), imageAlt: tr(e.imageAlt), label: SOTW_T[lang][0], cta: SOTW_T[lang][1] };
+  } catch (err) { return null; }
+}
 function build(lang, sols, factKeys, launchList, joke) {
   const t = { ...T[lang], ...T2[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
   const a = (href, txt, bold) => `<a href="${href}" style="color:#009cde;${bold ? 'font-weight:700;' : ''}text-decoration:none">${esc(txt)}</a>`;
@@ -125,6 +135,9 @@ function build(lang, sols, factKeys, launchList, joke) {
   }
   if (!sols.length) solsHtml = `<p>${esc(t.noneAll)}</p>`;
   else solsHtml = `<p style="margin:0 0 4px;font-size:13px;color:#5b7486">${esc(t.hubsIntro)}</p>` + solsHtml;
+  // 2b. Solution of the Week
+  const sw = sotw(lang), swHref = sw ? P + sw.page + (sw.video ? '#video' : '') : '';
+  const swHtml = sw ? `<a href="${swHref}"><img src="${SITE}${sw.image}" width="552" alt="${esc(sw.imageAlt)}" style="display:block;width:100%;max-width:552px;height:auto;border:0;border-radius:8px"></a><p style="margin:3px 0 0;font-size:11px;color:#7b8f9d;text-align:${rtl ? 'left' : 'right'}">${esc(t.siImg)}</p><h3 style="margin:12px 0 6px;font-size:18px;color:#003755">${a(P + sw.page, sw.title, true)}</h3><p style="margin:0 0 12px">${esc(sw.blurb)}</p><p style="margin:0"><a href="${swHref}" style="display:inline-block;background:#009cde;color:#fff;font-weight:700;padding:10px 18px;border-radius:6px;text-decoration:none">${esc(sw.cta)}</a></p>` : '';
   // 3. Launches
   const lHtml = (launchList && launchList.length ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse">` + launchList.map(l =>
     `<tr><td dir="${dir}" style="padding:8px 0;border-bottom:1px solid #e3edf4;text-align:${al}"><strong>${esc(fmtDay(l.date, lang))}</strong><br>${esc(t.vehicle)}: ${esc(l.vehicle)}${l.provider ? ' (' + esc(l.provider) + ')' : ''}<br>${esc(t.mission)}: ${esc(l.mission)}</td></tr>`).join('') + '</table>'
@@ -146,7 +159,8 @@ function build(lang, sols, factKeys, launchList, joke) {
 <p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td><td valign="middle" style="padding-${rtl ? 'right' : 'left'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td></tr></table></td></tr>
 <tr><td dir="${dir}" style="padding:24px 24px 28px;font-family:Montserrat,Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#003755;text-align:${al}">
 <p id="sp-top" style="margin:0;text-align:center;font-weight:700;font-size:17px">${esc(t.intro)}</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts], ['sp-suggest', t.suggest]].concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[...(sw ? [['sp-sotw', sw.label]] : []), ['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts], ['sp-suggest', t.suggest]].concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
+${sw ? h2(sw.label, 'sp-sotw') + swHtml + top : ''}
 ${h2(t.newS, 'sp-new')}${solsHtml}${top}
 ${h2(t.launches, 'sp-launches')}${lHtml}${top}
 ${h2(t.suggest, 'sp-suggest')}${sugHtml}${top}
