@@ -1063,3 +1063,12 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - Consent Mode v2: one added line before gtag('js') sets analytics_storage default from localStorage sp_consent (granted only if previously accepted), ad_storage/ad_user_data/ad_personalization denied. consent.js Accept now calls gtag('consent','update',{analytics_storage:'granted'}); Decline leaves denied. Note: gtag.js now loads before consent (cookieless pings), not "nothing loads" as before. consent.js cache-bust → v=20261012g.
 - scripts/add-gtag.py (idempotent) runs in weekly-sync.sh before and after i18n-build/seo-fix, so generated/translated/new pages get the tag. Newsletter emails intentionally have no JS tag.
 - About #privacy Analytics text updated (en + i18n fr/es/ar). No meta CSP exists, so nothing to allow.
+
+## 2026-10-12 — Ad v2 posted + featured on About
+- Posted savingplanets-ad-v2.mp4 (78 s, 1080x1920) via Postiz (media https://uploads.postiz.com/f5Ae5rfPeo.mp4), type "now", all PUBLISHED at 21:34 UTC (11:34 HST): X cmv5rsk6o0b87qw0y84uplrak, TikTok cmv5rskh90b88qw0yb4idpmgm (DIRECT_POST, video_made_with_ai), YouTube cmv5rskte0b89qw0y4ez71wcz (Shorts title, public, not made for kids, 14 tags). Postiz has no YouTube category setting.
+- About.html (+fr/es/ar): build-home-extras.py now writes a dedicated About block: VIDEO = 9:16 ad (`.sp-video-vertical`, max-width 380px, 16px radius), poster assets/videos/savingplanets-ad-v2.jpg (whale breach, 1.2 s, 720w), caption + "SI-generated visuals by Saving Planets"; old channel-intro moved lower to VIDEO2 (#channel-intro, "Our Channel Intro", preload=none) just above Our Sources. 3 new strings per language. About pages styles.css?v=20261012v.
+- weekly-sync x2: 425 pages TOTAL 0, all translations current; gtag G-ZCJ7CEKN94 once per page; linkcheck only the 2 known JS-template false positives. Verified live at 390/1280.
+
+## User To-Do (ad v2)
+- [ ] YouTube Studio: set "Altered or synthetic content" = Yes on the ad v2 upload (Postiz can't set it).
+- [ ] Pin a comment on the YouTube upload: "Every fact and source at savingplanets.com 🌍".
