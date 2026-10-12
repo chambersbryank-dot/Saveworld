@@ -13,7 +13,6 @@ VIDEOS = {  # page: (file, heading, anchor regex to insert AFTER)
   'Life_Terra.html': ('life-terra-trees', 'Watch: Millions of Trees, One Seedling at a Time'),
   'GRACE-FO.html': ('grace-fo-satellites', "Watch: Satellites That Weigh Earth's Water"),
   'Artemis_II.html': ('artemis-ii-farthest', 'Watch: The Farthest Humans Have Gone'),
-  'About.html': ('channel-intro', 'Watch: What Saving Planets Is About'),
 }
 
 def dims(f):
@@ -47,6 +46,25 @@ for page, (slug, heading) in VIDEOS.items():
   s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)  # re-place each run
   s = put(s, 'VIDEO', video_html(slug, heading), r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
   open(page, 'w', encoding='utf-8').write(s)
+
+# ---- About: featured 9:16 ad on top, older channel intro lower on the page ----
+AD_CAP = 'The full tour: every solution hub, Amazing Facts, the Live Launch Tracker, Roman and Ways to Help, in 78 seconds.'
+s = open('About.html', encoding='utf-8').read()
+s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
+s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
+w, h = dims('assets/videos/savingplanets-ad-v2.mp4')
+AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
+  f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-ad-v2.jpg" width="{w}" height="{h}">'
+  '<source src="assets/videos/savingplanets-ad-v2.mp4" type="video/mp4"><a href="assets/videos/savingplanets-ad-v2.mp4">Download the video</a></video>'
+  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">SI-generated visuals by Saving Planets</span></figcaption></figure></section>')
+s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
+w, h = dims('assets/videos/channel-intro.mp4')
+INTRO = ('<section class="sp-video" id="channel-intro" aria-labelledby="intro-title"><h2 id="intro-title">Our Channel Intro</h2>'
+  f'<figure class="sp-video-fig"><video controls playsinline preload="none" poster="assets/videos/channel-intro.jpg" width="{w}" height="{h}">'
+  '<source src="assets/videos/channel-intro.mp4" type="video/mp4"><a href="assets/videos/channel-intro.mp4">Download the video</a></video>'
+  f'<figcaption class="photo-credit">{CAP}</figcaption></figure></section>')
+s = s.replace('<!-- SOURCES:START -->', block('VIDEO2', INTRO) + '<!-- SOURCES:START -->', 1)
+open('About.html', 'w', encoding='utf-8').write(s)
 
 # ---- Planet Scoreboard (figures already on the site, each verified at its source) ----
 data = json.load(open('assets/data/solutions.json'))
