@@ -248,7 +248,9 @@
 ## Standing Rules (added 2026-10-09)
 
 - AUTOMATIC SESSION START: At the beginning of every Saveworld session (whether Brian asks or a task arrives), automatically pull the latest NOTES.md (git pull on the Chief of Staff's machine, or the raw GitHub URL, to avoid connector truncation) and review the commits from the last 24 hours (git log --since=24.hours or GitHub commit search for repo:chambersbryank-dot/Saveworld). Use that to reconstruct context so Brian never has to re-explain what was done or what was dropped.
-- GLITCH LOGGING: Whenever a connector glitch or limitation is hit (e.g., file truncation, failed tool calls, timeouts), log it under "## Known Glitches & Workarounds" below with the date, what failed, the workaround used, and whether it is resolved. Goal: surface recurring patterns so root causes get fixed instead of rediscovered.
+- GLITCH LOGGING: Whenever a connector glitch or limitation is hit (e.g., file truncation, failed tool calls, timeouts), log it under "- PEOPLE + NATURE RULE (added 2026-10-12, Brian's request): every solution page must explicitly tie the solution to saving planets, covering BOTH how it helps people (mankind) and how it helps nature. Use `<section class="impact saves-planets" id="saves">` titled "How This Saves People &amp; the Planet" right after the Impact Statement, with "For People" and "For Nature" h3s; sourced claims only, each followed by its fact-source line. Pages built before 2026-10-12 don't have it yet; add it whenever a page is touched.
+
+## Known Glitches & Workarounds" below with the date, what failed, the workaround used, and whether it is resolved. Goal: surface recurring patterns so root causes get fixed instead of rediscovered.
 
 ## Known Glitches & Workarounds
 
@@ -917,22 +919,22 @@ Fourth daily batch (17), prepared by the 6:17 AM HST routine. Nothing built; awa
 | ID | Candidate | Classification | Suggested hub | Mission widget | Status |
 |---|---|---|---|---|---|
 | A | Nancy Grace Roman Space Telescope (NASA; launched Aug 30 2026 on Falcon Heavy; L2 ~1M mi; 300-megapixel camera; first images by early 2027) | Agency mission (NASA) | Project Rawane (Voyages Outward) | Yes, L2 arrival + first images | APPROVED 2026-10-12, built: Nancy_Grace_Roman.html |
-| B | Plato (ESA; 26 cameras; launch planned March 2027 on Ariane 6 to L2; 4-yr mission) | Agency mission (ESA) | Project Rawane (Voyages Outward) | Yes, launch Mar 2027 | PENDING |
-| C | ExoMars Rosalind Franklin rover (ESA; launch target 2028; drill to 2 m) | Agency mission (ESA) | Project Rawane (Voyages Outward, next to ESCAPADE) | Yes, launch 2028 | PENDING |
-| D | Copernicus Sentinel-2C (ESA; launched Sept 5 2024 on final Vega; 290 km swath, 13 bands, 5-day revisit) | Agency mission (ESA) | Earth Observation + Deforestation cross-link | Yes, active | PENDING |
-| E | MetOp-SG-A1 + Sentinel-5A (ESA/EUMETSAT; launched Aug 13 2025 on Ariane 6; daily global air-pollutant data) | Agency mission (ESA/EUMETSAT) | Earth Observation | Yes, active | PENDING |
-| F | Landsat 9 and the 50-year Landsat record (NASA/USGS; launched Sept 27 2021; 740 scenes/day; 8-day revisit with Landsat 8) | Agency mission (NASA/USGS) | Earth Observation + Forests/Lakes cross-links | Yes, active | PENDING |
-| G | ISS water recovery reaches 98% (NASA, Brine Processor Assembly, June 2023) | Agency program (NASA) | Project Rawane (voyages outward benefit Earth) | No | PENDING |
-| H | Saharan dust feeds the Amazon (natural; NASA CALIPSO: 27.7M tons/yr, ~22,000 tons phosphorus) | Natural | Forests (Deforestation) | No | PENDING |
-| I | The Amazon makes its own rainy season (natural; NASA JPL 2017, transpiration starts rains 2-3 months early) | Natural | Forests (pairs with H) | No | PENDING |
-| J | The Moon steadies Earth's tilt (natural; NASA: 23.5-degree tilt kept in check, tides) | Natural | Space Disposal "saving moons" / Space | No | PENDING |
-| K | Beavers, river engineers (natural + NOAA Fisheries beaver dam analogs; Bridge Creek +52% steelhead survival, +175% production) | Natural / agency restoration | Rivers | No | PENDING |
-| L | Salt marshes (natural, NOAA; nursery for 75%+ of fisheries species, erosion buffer) | Natural | Oceans (cross-link Mangroves, Seagrass) | No | PENDING |
-| M | Ocean Voyages Institute (nonprofit; 850,000+ lb from Pacific Gyre in 10 voyages; 340,000 lb in 2020) | Nonprofit | Oceans | No | PENDING |
-| N | Healthy Seas (nonprofit; ghost nets; 1,309.1 tons marine litter removed since 2013) | Nonprofit | Oceans | No | PENDING |
-| O | Mote Marine Laboratory coral restoration (nonprofit; 216,000+ corals restored to Florida's Coral Reef) | Nonprofit | Oceans (cross-link Coral Restoration Foundation) | No | PENDING |
-| P | Trees for the Future (nonprofit; 450M+ trees grown, 99,000 acres restored, 63,700 farmers, East Africa) | Nonprofit | Forests | No | PENDING |
-| Q | Seabin (company; Sydney Harbour since 2020: 33.0M items captured, 18.9M microplastics, 21 active Seabins) | Corporate | Oceans (cross-link Great Lakes Plastic Cleanup, which uses Seabins) | No | PENDING |
+| B | Plato (ESA; 26 cameras; launch planned March 2027 on Ariane 6 to L2; 4-yr mission) | Agency mission (ESA) | Project Rawane (Voyages Outward) | Yes, launch Mar 2027 | BUILT 2026-10-12 |
+| C | ExoMars Rosalind Franklin rover (ESA; launch target 2028; drill to 2 m) | Agency mission (ESA) | Project Rawane (Voyages Outward, next to ESCAPADE) | Yes, launch 2028 | BUILT 2026-10-12 |
+| D | Copernicus Sentinel-2C (ESA; launched Sept 5 2024 on final Vega; 290 km swath, 13 bands, 5-day revisit) | Agency mission (ESA) | Earth Observation + Deforestation cross-link | Yes, active | BUILT 2026-10-12 |
+| E | MetOp-SG-A1 + Sentinel-5A (ESA/EUMETSAT; launched Aug 13 2025 on Ariane 6; daily global air-pollutant data) | Agency mission (ESA/EUMETSAT) | Earth Observation | Yes, active | BUILT 2026-10-12 |
+| F | Landsat 9 and the 50-year Landsat record (NASA/USGS; launched Sept 27 2021; 740 scenes/day; 8-day revisit with Landsat 8) | Agency mission (NASA/USGS) | Earth Observation + Forests/Lakes cross-links | Yes, active | BUILT 2026-10-12 |
+| G | ISS water recovery reaches 98% (NASA, Brine Processor Assembly, June 2023) | Agency program (NASA) | Project Rawane (voyages outward benefit Earth) | No | BUILT 2026-10-12 |
+| H | Saharan dust feeds the Amazon (natural; NASA CALIPSO: 27.7M tons/yr, ~22,000 tons phosphorus) | Natural | Forests (Deforestation) | No | BUILT 2026-10-12 |
+| I | The Amazon makes its own rainy season (natural; NASA JPL 2017, transpiration starts rains 2-3 months early) | Natural | Forests (pairs with H) | No | BUILT 2026-10-12 |
+| J | The Moon steadies Earth's tilt (natural; NASA: 23.5-degree tilt kept in check, tides) | Natural | Space Disposal "saving moons" / Space | No | BUILT 2026-10-12 |
+| K | Beavers, river engineers (natural + NOAA Fisheries beaver dam analogs; Bridge Creek +52% steelhead survival, +175% production) | Natural / agency restoration | Rivers | No | BUILT 2026-10-12 |
+| L | Salt marshes (natural, NOAA; nursery for 75%+ of fisheries species, erosion buffer) | Natural | Oceans (cross-link Mangroves, Seagrass) | No | BUILT 2026-10-12 |
+| M | Ocean Voyages Institute (nonprofit; 850,000+ lb from Pacific Gyre in 10 voyages; 340,000 lb in 2020) | Nonprofit | Oceans | No | BUILT 2026-10-12 |
+| N | Healthy Seas (nonprofit; ghost nets; 1,309.1 tons marine litter removed since 2013) | Nonprofit | Oceans | No | BUILT 2026-10-12 |
+| O | Mote Marine Laboratory coral restoration (nonprofit; 216,000+ corals restored to Florida's Coral Reef) | Nonprofit | Oceans (cross-link Coral Restoration Foundation) | No | BUILT 2026-10-12 |
+| P | Trees for the Future (nonprofit; 450M+ trees grown, 99,000 acres restored, 63,700 farmers, East Africa) | Nonprofit | Forests | No | BUILT 2026-10-12 |
+| Q | Seabin (company; Sydney Harbour since 2020: 33.0M items captured, 18.9M microplastics, 21 active Seabins) | Corporate | Oceans (cross-link Great Lakes Plastic Cleanup, which uses Seabins) | No | BUILT 2026-10-12 |
 
 Flags: N's 2026 press kit gives 1,309.1 tons in one section and an older "991 tons since 2013" in another; use 1,309.1 as the latest headline and label it as a Healthy Seas figure. Q's donate path is a corporate partnership model (no individual donate page). A's first-images timing per NASA ("by early 2027"); L2 arrival ~100 days after launch is from a non-NASA tracker, so the widget should say "NASA: L2 orbit early December" only after confirming on a NASA page.
 
@@ -994,3 +996,21 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - i18n: 93 new strings per language (machine-quality). The daily date string and the NASA image title/credit stay English in static HTML (JS localizes the date). weekly-sync run 3x: seo-audit 361 pages TOTAL 0, All translations current, stable tree. linkcheck: only the 2 known JS-template false positives.
 - Live check 200 for EN/FR/AR page, roman.json, roman.js; screenshots 1280/1024/390 in /workspace/shots_roman/. At 390 the comparison table scrolls sideways inside its box (by design).
 - Video: /workspace/grok-video-roman.txt (15 s, 9:16). X handles verified via X lookup: @NASA, @NASARoman, @NASAWebb, @NASAHubble, @NASAGoddard, @SISavingPlanets.
+
+## Session Log — 2026-10-12 (batch 2026-10-12 B–Q built)
+- All 16 approved candidates B–Q built as own pages (Sentinel-1 template: hero + credit, breadcrumb, mission widget for B–F, Five W's, Impact Statement with hub-label + sources + For Further Information, NEW "How This Saves People & the Planet" section, page-stats, bottom-link, next-solutions, help-actions). Commits c755e1f (pages, 13 NASA images, hero CSS) and e029acf (hub cards, cross-links, Ways to Help, sitemap, search, solutions.json, menus, fr/es/ar + 226 strings/lang). Built in a separate clone (/workspace/swbq); generator + content in /workspace/bqgen (data.py, build.py, hubs.py, tr1-4.py).
+- Pages: Plato, ExoMars_Rosalind_Franklin, ISS_Water_Recovery (Project Rawane, Voyages Outward grid); Sentinel-2C, MetOp-SG-A1_Sentinel-5A, Landsat_9 (Earth Observation); Saharan_Dust_Amazon, Amazon_Rainy_Season (paired, cross-linked), Trees_for_the_Future (Forests); Moon_Steadies_Earth (Space Disposal natural "Saving Moons" w-card); Beavers_River_Engineers (Rivers); Salt_Marshes, Ocean_Voyages_Institute, Healthy_Seas, Mote_Marine_Laboratory, Seabin (Oceans). Cross-links added to next-solutions on Mangroves, Seagrass (→Salt Marshes), Coral Restoration Foundation (→Mote), Great Lakes Plastic Cleanup (→Seabin), ESCAPADE (→ExoMars), Biomass (→Saharan dust), Sentinel-1 (→Sentinel-2C).
+- Upcoming launches: Plato and ExoMars follow the MMX/Dragonfly/NEO Surveyor pattern: sp:status active (funded, launch-scheduled agency missions), hub-label "launch planned March 2027" / "launch targeted for 2028", widget status only (no data-launch countdown, no .ics, no invented day; ESA gives month/year only). No horizon items in this batch (horizon count unchanged at 5).
+- Figures: all from the queue sources, re-fetched 2026-10-12 (all 200). Healthy Seas 1,309.1 tons (Healthy Seas figure, 2026 press kit; the kit's older "991 tons" line ignored). Org/company figures labeled (OVI, Healthy Seas, Mote, TREES nonprofit; Seabin company).
+- Help buttons + Ways to Help (Org/Solution format, +fr/es/ar via i18n): OVI Donate (oceanvoyagesinstitute.org/donate); Healthy Seas Donate (/donate/); Mote Donate (mote.org/support) + Join (mote.org/volunteer); TREES Donate (trees.org/support/personal-ways-to-give) + Join (trees.org/careers); Seabin Join only (seabin.io/get-involved: corporate volunteering + citizen science) in Join the Team; Landsat 9 + ISS water recovery in the NASA citizen-science table. No help section on ESA pages (B–E) or natural pages (H–L), per the 2026-10-11 rules. Ways to Help now 44 rows.
+- solutions.json: 83 active, 5 horizon, 98 pages. Amazing Facts +6 (26). weekly-sync run 3x: seo-audit 425 pages TOTAL 0, all translations current, third run no diff. linkcheck: only the 2 known JS-template false positives. Roman pages only touched by the auto-generated Solutions menu line.
+- Screenshots (live): /workspace/shots_bq/ (Plato, Healthy_Seas, fr/Landsat_9, ar/Seabin at 1280/390).
+- No existing content corrected, so no Corrections & Updates entry.
+
+| Date | What failed | Workaround | Resolved? |
+|---|---|---|---|
+| 2026-10-12 | Donate/Join link probes: trees.org/donate 404, seabin.io/careers 404, healthyseas.org/volunteer 404; oceanvoyagesinstitute.org/volunteer/ returns 200 but is a leftover WordPress theme demo page ("Namibia Wildlife Sanctuary"); OVI home also links a /donate-ways-to-give/ that 404s | Used trees.org/support/personal-ways-to-give + /careers, seabin.io/get-involved, Healthy Seas and OVI Donate only | Yes |
+| 2026-10-12 | Roman executor pushed 0365251/d5d7935 while this batch was committed locally; rebasing would have conflicted on every page's generated menu, solutions.json, sitemap and i18n json | Reset to origin/main and re-ran the generators (bqgen scripts) + build-search-index + weekly-sync, then pushed | Yes |
+| 2026-10-12 | ImageMagick `convert` not installed on the box | Resized images with Pillow | Yes |
+| 2026-10-12 | Mission widget fmt() turns year-only milestones ("2016") into a fake Jan 1 date | Left data-milestones empty on Plato/ExoMars | Yes |
+
