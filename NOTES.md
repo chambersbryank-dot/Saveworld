@@ -1020,3 +1020,8 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - Short .roman-lead lead-in sentences on each section (no new claims; science paragraph uses only facts already on the page). Removed: duplicate "100x" fun-fact tile (stated in hook + table), "about one million miles from Earth" from the Impact Statement (L2 distance stays in the table + L2 figure). Hook now mentions the launch date and ties the census to how rare Earth may be.
 - All IDs used by roman.js/build-roman.py kept (ROMAN-LIVE block, roman-km/mi/asof, webb-km, roman-cd, roman-latest*). CSS: .roman-lead, nested .roman-facts, .roman-facts-3; Roman page only bumped to styles.css?v=20261012s. 15 new strings/lang in i18n (machine-quality, appended, existing order kept).
 - weekly-sync x2: seo-audit 425 TOTAL 0, all translations current, stable. linkcheck: only the 2 known JS-template false positives.
+
+## Session Log — 2026-10-12: Ways to Help underline cleanup + Title Case
+- User rule: on Ways to Help, nothing that isn't a link may look underlined. No text-decoration underlines existed on non-links; the "underlines" were the 1px row borders under every th/td (and under each tr on mobile) in `.help-table` (styles.css). Removed them; rows now separated by zebra shading. Solution-column links keep their link underline. Shared CSS, so fr/es/ar inherit it; weekly-sync.sh run, no reintroduction.
+- EN Solution column converted to Title Case in Ways_to_Help.html itself (44 rows; minor words like "with/and/the/of" lowercase). FR/ES keep sentence case (language convention); AR has no case. New rows added to EN must be Title Case.
+- Still: never run /workspace/build_wth.py.
