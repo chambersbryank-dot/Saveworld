@@ -1025,3 +1025,15 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - User rule: on Ways to Help, nothing that isn't a link may look underlined. No text-decoration underlines existed on non-links; the "underlines" were the 1px row borders under every th/td (and under each tr on mobile) in `.help-table` (styles.css). Removed them; rows now separated by zebra shading. Solution-column links keep their link underline. Shared CSS, so fr/es/ar inherit it; weekly-sync.sh run, no reintroduction.
 - EN Solution column converted to Title Case in Ways_to_Help.html itself (44 rows; minor words like "with/and/the/of" lowercase). FR/ES keep sentence case (language convention); AR has no case. New rows added to EN must be Title Case.
 - Still: never run /workspace/build_wth.py.
+
+## User To-Do (added 2026-10-12)
+- [ ] Submit to CSS Design Awards ($50, needs 1 screenshot): https://www.cssdesignawards.com/submit
+- [ ] Submit to Awwwards ($65): https://www.awwwards.com/submit
+- [ ] List Saving Planets on Indie Hackers (free): https://www.indiehackers.com/products/new
+  (Kit with taglines/descriptions: /workspace/awards_kit.md)
+- [ ] YouTube: mark uploaded SI videos "Altered or synthetic content" = Yes
+- [ ] Pin savingplanets.com comments on TikTok and YouTube
+- [ ] Fix the Grok Plus 9:16 setting (videos still coming out wide)
+- [ ] Optional: remake the Artemis video (garbled "Artegs III" text)
+- [ ] Create the 4 Grok Plus ad clips from /workspace/grok-ad-savingplanets.txt and send them for stitching
+- [x] Cloudflare redirect saveplanetminusthedoom.com -> savingplanets.com (done 2026-10-12)
