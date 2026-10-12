@@ -1,0 +1,127 @@
+# Content for scripts/build-batch3.py. Every figure is copied from a sourced page on the site
+# or from the linked NASA / NOAA / ESA page (checked 2026-10-11). Company figures are labeled.
+
+MYTH_DESC = "Common doom myths about Earth and space, each checked against a NASA, NOAA or ESA source. Hopeful where the evidence is, honest where the work isn't done."
+MYTH_INTRO = ("Doom headlines spread faster than the data behind them. Each myth below is checked against a NASA, NOAA or ESA source, linked so you can read it yourself. "
+              "Where the news is good, we say so. Where the problem isn't solved, we say that too.")
+MYTH_MORE = "Want more sourced good news from Earth and space? Browse Amazing Facts, or follow Rawane's weekly Mission Log."
+
+MYTHS = [
+ dict(myth="The ozone hole can't be fixed.",
+      fact="It is healing. NOAA and NASA ranked the 2025 Antarctic ozone hole the fifth smallest since 1992, when the Montreal Protocol began to take effect, and the ozone layer remains on track to recover fully later this century.",
+      honest="It's slow: banned chemicals still leak from old products, so scientists expect the Antarctic hole to recover around the late 2060s.",
+      src="NOAA, 2025 ozone hole is 5th smallest since 1992", url="https://www.noaa.gov/news-release/noaa-nasa-2025-ozone-hole-is-5th-smallest-since-1992",
+      related=[("Three_Shields.html", "Three Invisible Shields")]),
+ dict(myth="If an asteroid were coming, there would be nothing we could do.",
+      fact="Humanity has already moved one. NASA's DART spacecraft hit the asteroid moonlet Dimorphos in 2022 and shortened its orbit by 33 minutes and 15 seconds.",
+      honest="DART was a test on a small asteroid that posed no threat. Finding asteroids early gives time to act, which is why NASA is building NEO Surveyor.",
+      src="NASA, Asteroid's orbit, shape changed after DART impact", url="https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/",
+      related=[("Planetary_Defense.html", "Planetary Defense"), ("Hera.html", "Hera")]),
+ dict(myth="Asteroid Apophis will hit Earth in 2029.",
+      fact="It won't. Apophis will safely pass close to Earth on April 13, 2029, and NASA is confident there is no risk of it impacting our planet for at least 100 years.",
+      honest="It really will pass close, about 20,000 miles away, which is why NASA's OSIRIS-APEX is going to study it.",
+      src="NASA, Asteroid Apophis", url="https://science.nasa.gov/solar-system/asteroids/apophis/",
+      related=[("OSIRIS-APEX.html", "OSIRIS-APEX and Apophis 2029")]),
+ dict(myth="Asteroid 2024 YR4 is going to hit us in 2032.",
+      fact="In early 2025 it briefly had a small chance of hitting Earth. More observations showed it poses no significant risk to Earth, and in 2026 NASA ruled out a Moon impact too.",
+      honest="Early impact odds often rise before they fall to zero. That is the tracking system working, not failing.",
+      src="NASA, observations eliminate chance of 2032 lunar impact", url="https://science.nasa.gov/blogs/planetary-defense/2026/03/05/new-nasa-asteroid-observations-eliminate-chance-of-2032-lunar-impact/",
+      related=[("Webb_2024_YR4.html", "Webb and 2024 YR4")]),
+ dict(myth="Bleached coral is dead coral.",
+      fact="NOAA says it plainly: when a coral bleaches, it is not dead. If the stress is not severe, corals have been known to recover.",
+      honest="If the heat stress lasts too long, bleached coral does die. That's why restoration groups replant reefs.",
+      src="NOAA, Is coral bleaching the same as coral death?", url="https://oceanservice.noaa.gov/facts/coral_bleach.html",
+      related=[("Coral_Restoration_Foundation.html", "Coral Restoration Foundation"), ("Oceans.html", "Oceans")]),
+ dict(myth="Solar storms hit without any warning.",
+      fact="NOAA's SOLAR-1 watches the Sun from about a million miles away and is a cornerstone of the U.S. space weather early warning system, delivering storm imagery to forecasters within 30 minutes of capture.",
+      honest="Forecasts aren't perfect, and warning time varies from storm to storm. ESA's Vigil, planned for 2031, aims to add up to four to five days' notice of some effects.",
+      src="NOAA, SOLAR-1 enters new era of space weather monitoring", url="https://www.noaa.gov/news-release/noaas-solar-1-enters-new-era-of-space-weather-monitoring",
+      related=[("SOLAR_1.html", "SOLAR-1"), ("Space_Weather.html", "Space Weather & Shields")]),
+ dict(myth="Nobody is doing anything about space junk.",
+      fact="Agencies are acting. ESA guided its Aeolus satellite down in 2023 in the first assisted reentry of its kind, and ESA's Zero Debris approach aims to sharply limit new debris from its missions by 2030.",
+      honest="The problem is still growing: ESA's 2025 report says better rule-following is not yet enough to stop debris from increasing. Removal missions are the next step.",
+      src="ESA, Space Environment Report 2025", url="https://www.esa.int/Space_Safety/Space_Debris/ESA_Space_Environment_Report_2025",
+      related=[("Aeolus.html", "Aeolus Assisted Reentry"), ("Space_Disposal.html", "Space Disposal")]),
+]
+
+LOG_DESC = "Rawane's Mission Log: short weekly story posts from the Saving Planets astronaut mascot, tied to real solutions with every fact sourced and linked."
+LOG_INTRO = ("Rawane (say Rah-wahn) is Saving Planets' original mascot: an astronaut who keeps an eye on the solutions this site tracks. "
+             "Each week she files a short log entry from her post above Earth.")
+LOG_RULE = "Rawane and her voice are made up. The facts in her log are not: each one links to its source in the Fact Check box."
+
+LOG = [
+ dict(id="log-002", num="Log 002", date="2026-10-11", date_label="Week of October 11, 2026", title="Bleached Is Not Dead",
+      paras=["From up here the Florida Keys look like spilled turquoise paint. Up close, some of that reef has turned ghost white. It looks like the end. It isn't, not yet.",
+             'NOAA says a bleached coral is not a dead coral. If the stress eases, coral can recover. If it lasts too long, it dies, and that is where people come in.',
+             'The Coral Restoration Foundation grows coral in nurseries and plants it back on the reef. By the end of 2024 they had returned 253,833 corals to Florida\'s reefs. That is their own count, and I like it.',
+             "Rawane out. Next week: whatever the planet tells me."],
+      facts=[("When a coral bleaches, it is not dead; if the stress isn't severe, it can recover.", "NOAA", "https://oceanservice.noaa.gov/facts/coral_bleach.html"),
+             ("253,833 corals returned to Florida's reefs by the end of 2024 (organization figure).", "Coral Restoration Foundation, 2024 Annual Report", "https://coralrestoration.org/wp-content/uploads/2025/05/CRF-2024-Annual-Report-1.pdf")],
+      related=[("Coral_Restoration_Foundation.html", "Coral Restoration Foundation"), ("Myth_vs_Fact.html#myth-5", "Myth vs Fact: bleached coral")]),
+ dict(id="log-001", num="Log 001", date="2026-10-11", date_label="Week of October 11, 2026", title="Waiting for Hera",
+      paras=["First log. I'm watching a small spacecraft close in on a crash scene.",
+             'In 2022, NASA\'s DART spacecraft flew into the asteroid moonlet Dimorphos on purpose. Its orbit got 33 minutes and 15 seconds shorter. The first time people ever moved a space rock.',
+             'Now ESA\'s Hera spacecraft is on its way to see exactly what that hit did. It launched in October 2024 and is on track to arrive at Didymos in November 2026, a month earlier than planned.',
+             "One test turns into a tool once you measure it. That's how you save a planet: try, check, learn. Rawane out."],
+      facts=[("DART shortened Dimorphos's orbit by 33 minutes and 15 seconds.", "NASA", "https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/"),
+             ("Hera is on track to arrive at Didymos in November 2026, a month earlier than planned.", "ESA", "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids")],
+      related=[("Hera.html", "Hera"), ("Planetary_Defense.html", "Planetary Defense")]),
+]
+
+def Q(q, opts, a, why, page): return dict(q=q, opts=opts, a=a, why=why, page=page)
+QUIZZES = {
+ 'Oceans': ("Oceans", [
+  Q("About how much plastic does The Ocean Cleanup report removing from rivers and the ocean?", ["6.5 million kg", "65 million kg", "650 million kg"], 1, "The Ocean Cleanup reports about 65 million kg removed (organization figure).", "Ocean_Cleanup.html"),
+  Q("How many corals had Coral Restoration Foundation returned to Florida's reefs by the end of 2024?", ["2,538", "25,383", "253,833"], 2, "253,833 corals by the end of 2024 (organization figure).", "Coral_Restoration_Foundation.html"),
+  Q("How fast can kelp grow?", ["Up to 18 inches a day", "About 1 inch a year", "Up to 6 feet an hour"], 0, "Kelp can grow up to 18 inches a day.", "Kelp_Forests.html"),
+  Q("Seagrass covers just 0.1% of the seafloor. What share of the ocean's buried organic carbon does it store?", ["1%", "11%", "50%"], 1, "Seagrass stores 11% of the ocean's buried organic carbon.", "Seagrass.html"),
+  Q("About how much of Earth's oxygen do phytoplankton produce?", ["About a tenth", "About half", "Almost all of it"], 1, "Tiny ocean plants produce about half of Earth's oxygen.", "Phytoplankton.html")]),
+ 'Lakes': ("Lakes", [
+  Q("How much litter has Clean Up The Lake logged as removed since 2018?", ["36,177 pounds", "3,617 pounds", "361,770 pounds"], 0, "36,177 pounds, about 16,400 kg (organization figure).", "Clean_Up_the_Lake.html"),
+  Q("How many pieces of debris does Great Lakes Plastic Cleanup report removed and reported through 2025?", ["About 2,770", "More than 277,000", "About 27 million"], 1, "More than 277,000 pieces (organization figure).", "Great_Lakes_Plastic_Cleanup.html"),
+  Q("Which tools does Great Lakes Plastic Cleanup use?", ["Seabins, drones and beach robots", "Dredging ships", "Chemical filters"], 0, "It captures plastic with Seabins, drones and beach robots.", "Great_Lakes_Plastic_Cleanup.html"),
+  Q("About how much debris did Restoring the Lake Depths remove from Lake Tahoe in summer 2024?", ["13 pounds", "13 tons", "1,300 tons"], 1, "About 13 tons (organization figure).", "Restoring_the_Lake_Depths.html"),
+  Q("How does Restoring the Lake Depths reach debris deep in Lake Tahoe?", ["By draining part of the lake", "With ROVs and volunteer divers", "With giant magnets"], 1, "It uses ROVs and volunteer divers.", "Restoring_the_Lake_Depths.html")]),
+ 'Rivers': ("Rivers", [
+  Q("How does The Great Bubble Barrier catch plastic?", ["With a floating net", "With a curtain of bubbles across the waterway", "With a dam"], 1, "A curtain of bubbles across the full width and depth of a waterway.", "Great_Bubble_Barrier.html"),
+  Q("In which country does Sungai Watch stop plastic in rivers?", ["Indonesia", "Brazil", "Kenya"], 0, "Sungai Watch runs trash barriers and daily cleanups in Indonesian rivers.", "Sungai_Watch.html"),
+  Q("Which city's harbor do the Trash Wheels protect?", ["Boston", "Baltimore", "Seattle"], 1, "Baltimore's Trash Wheels guard the harbor and the Chesapeake Bay.", "Mr_Trash_Wheel.html"),
+  Q("About how much trash do the Trash Wheels intercept a year?", ["About 5 tons", "About 500 tons", "About 50,000 tons"], 1, "About 500 tons a year (organization figure).", "Mr_Trash_Wheel.html"),
+  Q("Why catch plastic in rivers?", ["Rivers have more fish", "It's cheaper and easier than collecting it once it spreads across the ocean", "Ocean cleanup is banned"], 1, "Stopping plastic upstream is cheaper and easier than collecting it at sea.", "Rivers.html")]),
+ 'Deforestation': ("Forests", [
+  Q("How many trees does Life Terra report planting with partners?", ["More than 3.6 million", "More than 36 million", "More than 360 million"], 1, "More than 36 million trees (organization figure).", "Life_Terra.html"),
+  Q("What is Life Terra's goal?", ["500 million trees across Europe", "One tree per person on Earth", "50,000 trees in one park"], 0, "Life Terra is planting 500 million trees across Europe.", "Life_Terra.html"),
+  Q("How does Terraformation restore forests?", ["Single-species plantations", "Native, biodiverse forests from seed", "Artificial trees"], 1, "Terraformation restores native, biodiverse forests from seed to canopy.", "Terraformation.html"),
+  Q("Under the Three Trees rule, how many trees go back in for every one removed?", ["One", "Two", "Three"], 2, "For every tree removed, three go back in.", "Three_Trees.html"),
+  Q("About how many species of mangrove trees guard tropical coastlines?", ["About 8", "About 80", "About 800"], 1, "About 80 species of mangrove trees.", "Mangroves.html")]),
+ 'Space': ("Space", [
+  Q("What did Astroscale's ADRAS-J photograph close up in 2024?", ["The International Space Station", "An H-IIA rocket upper stage", "A comet"], 1, "ADRAS-J photographed an H-IIA upper stage in 2024.", "Astroscale.html"),
+  Q("When is Astroscale's ADRAS-J2 targeted?", ["It already flew in 2020", "Japan's fiscal 2027", "2040"], 1, "ADRAS-J2 is targeted for Japan's fiscal 2027.", "Astroscale.html"),
+  Q("What is ClearSpace leading?", ["Europe's first active debris removal mission", "A Moon landing", "A Mars rover"], 0, "ClearSpace leads Europe's first active debris removal mission.", "ClearSpace.html"),
+  Q("What is the status of PRELUDE (ClearSpace with ESA)?", ["Flying now", "A potential solution on the horizon, planned for June 2027", "Cancelled"], 1, "PRELUDE is planned for June 2027: a potential solution on the horizon, not active yet.", "PRELUDE.html"),
+  Q("What natural role does Jupiter play?", ["It blocks sunlight from Earth", "It swallows or flings away dangerous objects", "It makes Earth's oxygen"], 1, "Jupiter is a natural debris remover, swallowing or flinging away comets and asteroids.", "Jupiter.html")]),
+ 'Space_Disposal': ("Space Disposal", [
+  Q("How close did ADRAS-J get to a large piece of debris in 2024?", ["About 15 meters", "About 15 kilometers", "About 1,500 kilometers"], 0, "About 15 meters, close enough to photograph it.", "Space_Disposal.html"),
+  Q("How will ADRAS-J2 capture its target?", ["With a robotic arm", "With a harpoon", "With a magnet"], 0, "It will use a robotic arm, then lower the debris so it burns up.", "Space_Disposal.html"),
+  Q("How big is the rocket stage ADRAS-J2 is going after?", ["Shoebox-sized", "About 11 meters and 3 tons", "As big as a city block"], 1, "An 11-meter, 3-ton H-IIA upper stage.", "Space_Disposal.html"),
+  Q("What happens to debris after it is lowered?", ["It is stored on the Moon", "It burns up in the atmosphere", "It lands in a park"], 1, "Lowered debris burns up in the atmosphere.", "Space_Disposal.html"),
+  Q("About how much more often does Jupiter take comet impacts than Earth?", ["About twice as often", "About 2,000 times more often", "Never"], 1, "Roughly 2,000 times more often than Earth.", "Jupiter.html")]),
+ 'Planetary_Defense': ("Planetary Defense", [
+  Q("By how much did NASA's DART impact shorten Dimorphos's orbit?", ["3 seconds", "33 minutes and 15 seconds", "3 days"], 1, "33 minutes and 15 seconds (NASA).", "Planetary_Defense.html"),
+  Q("When does ESA's Hera arrive at Dimorphos?", ["November 2026", "2035", "It arrived in 2020"], 0, "Hera arrives in November 2026, a month early (ESA).", "Hera.html"),
+  Q("About how far from Earth will Apophis pass on April 13, 2029?", ["About 200 miles", "About 20,000 miles", "About 2 million miles"], 1, "About 20,000 miles, a safe but close pass (NASA).", "OSIRIS-APEX.html"),
+  Q("What does NEO Surveyor aim to do?", ["Find two-thirds of unknown near-Earth objects larger than 140 m within five years", "Land on Mars", "Mine asteroids"], 0, "That is NASA's goal for NEO Surveyor.", "NEO_Surveyor.html"),
+  Q("What did the James Webb Space Telescope help rule out for asteroid 2024 YR4?", ["A 2032 Moon impact", "Its existence", "A 2029 Mars impact"], 0, "Webb helped rule out a 2032 Moon impact.", "Webb_2024_YR4.html")]),
+ 'Space_Weather': ("Space Weather & Shields", [
+  Q("How much notice of some space weather effects will ESA's Vigil give?", ["Up to 4 to 5 days", "About 5 seconds", "About 5 months"], 0, "Up to four to five days' notice (ESA); launch is planned for 2031.", "Vigil.html"),
+  Q("Where does NOAA's SOLAR-1 watch the Sun from?", ["The ISS", "The L1 point, about one million miles from Earth", "The Moon"], 1, "From L1, about one million miles from Earth (NOAA).", "SOLAR_1.html"),
+  Q("How often does CCOR-1 on GOES-19 image the Sun's corona?", ["Every 15 minutes", "Once a year", "Once a month"], 0, "Every 15 minutes (NOAA).", "GOES-19.html"),
+  Q("In what year did Voyager 1 cross into interstellar space?", ["1977", "2012", "2025"], 1, "August 25, 2012, at the heliopause (NASA).", "Three_Shields.html"),
+  Q("How many satellites make up NASA's PUNCH mission?", ["One", "Four", "Forty"], 1, "Four suitcase-sized satellites (NASA).", "PUNCH.html")]),
+ 'Earth_Observation': ("Earth Observation", [
+  Q("SWOT measures more than 95% of Earth's lakes larger than what?", ["15 acres", "15 square miles", "1 acre"], 0, "Lakes larger than 15 acres and rivers wider than 330 feet.", "SWOT.html"),
+  Q("How many laser pulses a second does ICESat-2 fire?", ["10", "10,000", "10 million"], 1, "10,000 pulses a second (NASA).", "ICESat-2.html"),
+  Q("How does GRACE-FO weigh Earth's water?", ["By measuring tiny changes in gravity", "With rain gauges", "By photographing clouds"], 0, "It measures tiny changes in gravity.", "GRACE-FO.html"),
+  Q("What does NASA's EPIC camera on DSCOVR photograph?", ["Only the Moon", "The entire sunlit face of Earth, several times a day", "Distant galaxies"], 1, "The whole sunlit Earth several times a day, with an archive back to 2015.", "DSCOVR_EPIC.html"),
+  Q("What does NASA's PACE read to track phytoplankton?", ["Ocean color", "Ocean noise", "Ocean salt"], 0, "PACE reads the color of the ocean.", "PACE.html")]),
+}

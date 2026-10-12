@@ -271,3 +271,49 @@
   function apply() { if (mq && mq.matches) { v.pause(); v.removeAttribute('autoplay'); v.preload = 'none'; } else if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
   apply(); if (mq && mq.addEventListener) mq.addEventListener('change', apply);
 })();
+
+/* Batch 3: hub quizzes (no tracking). Text comes from the page so translations work. */
+(function () {
+  document.querySelectorAll('section.quiz').forEach(function (qz) {
+    var qs = qz.querySelectorAll('.quiz-q'), res = qz.querySelector('.quiz-result'), score = 0, done = 0;
+    function txt(cls, n) { var el = qz.querySelector(cls); return el ? el.textContent.replace('{n}', n) : ''; }
+    qs.forEach(function (f) {
+      var ans = +f.getAttribute('data-answer'), btns = f.querySelectorAll('.quiz-opt'), fb = f.querySelector('.quiz-fb');
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (f.classList.contains('answered')) return;
+          var ok = +b.getAttribute('data-i') === ans;
+          f.classList.add('answered');
+          btns.forEach(function (x) {
+            x.setAttribute('aria-disabled', 'true');
+            if (+x.getAttribute('data-i') === ans) x.classList.add('is-right');
+          });
+          b.classList.add(ok ? 'is-right' : 'is-wrong'); b.setAttribute('aria-pressed', 'true');
+          fb.querySelector('.quiz-ok').hidden = !ok; fb.querySelector('.quiz-no').hidden = ok; fb.hidden = false;
+          if (ok) score++; done++;
+          if (done === qs.length) {
+            res.querySelector('.quiz-score').textContent = txt('.quiz-tpl-score', score);
+            res.hidden = false;
+          }
+        });
+      });
+    });
+    qz.querySelector('.quiz-share').addEventListener('click', function () {
+      var url = 'https://www.savingplanets.com' + location.pathname.replace(/\/$/, '/index.html') + '#quiz';
+      var t = txt('.quiz-tpl', score), copied = qz.querySelector('.quiz-copied');
+      if (navigator.share) { navigator.share({ title: document.title, text: t, url: url }).catch(function () {}); return; }
+      var full = t + ' ' + url;
+      function show() { copied.hidden = false; setTimeout(function () { copied.hidden = true; }, 4000); }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(full).then(show, fallback); else fallback();
+      function fallback() { var ta = document.createElement('textarea'); ta.value = full; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); show(); } catch (e) {} document.body.removeChild(ta); }
+    });
+    qz.querySelector('.quiz-reset').addEventListener('click', function () {
+      score = 0; done = 0; res.hidden = true;
+      qs.forEach(function (f) {
+        f.classList.remove('answered'); f.querySelector('.quiz-fb').hidden = true;
+        f.querySelectorAll('.quiz-opt').forEach(function (x) { x.classList.remove('is-right', 'is-wrong'); x.removeAttribute('aria-disabled'); x.removeAttribute('aria-pressed'); });
+      });
+      var first = qz.querySelector('.quiz-opt'); if (first) first.focus();
+    });
+  });
+})();

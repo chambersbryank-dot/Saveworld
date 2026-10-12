@@ -6,6 +6,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 scripts/build-home-extras.py
 python3 scripts/build-batch2.py
+python3 scripts/build-batch3.py
 python3 scripts/i18n-build.py
 python3 scripts/i18n-sitemap.py
 python3 scripts/seo-audit.py | tail -3

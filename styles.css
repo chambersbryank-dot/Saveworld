@@ -806,6 +806,43 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .press-logo img { max-height: 160px; width: auto; background: #fff; padding: 0.6rem; border-radius: 10px; }
 .press-logo figcaption { margin-top: 0.4rem; font-size: 0.9rem; }
 .press-list li { margin: 0.4rem 0; }
-.cal-add { margin: 0.8rem auto 1.4rem; max-width: 60rem; padding: 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.cal-add { margin: -0.5rem auto 1.4rem; max-width: 1200px; box-sizing: border-box; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
 .cal-btn { padding: 8px 16px; font-size: 0.95rem; }
 .cal-note { font-size: 0.85rem; opacity: 0.85; }
+
+/* Batch 3: Myth vs Fact, Mission Log, hub quizzes */
+.myths, .mission-log { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 1rem; display: grid; gap: 1.2rem; }
+.myth-card, .log-entry { background: #0b2540; color: #e8f3ff; border-radius: 14px; padding: 1.25rem 1.5rem; }
+.myth-card h2, .log-entry h2 { margin: 0.2rem 0 0.8rem; font-size: 1.3rem; text-align: left; }
+.myth-tag { display: inline-block; margin: 0; padding: 2px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.myth-tag-myth { background: #5a2a2a; color: #ffd9d9; }
+.myth-tag-fact { background: #1f5a3a; color: #d6ffe6; }
+.myth-honest { opacity: 0.9; font-style: italic; }
+.myth-source, .log-meta { font-size: 0.9rem; }
+.myth-card a, .log-entry a { color: #8fd3ff; }
+.myth-related p { margin: 0.6rem 0 0.2rem; font-weight: 600; font-size: 0.9rem; }
+.myth-related ul, .log-facts ul { margin: 0; padding-left: 1.1rem; }
+.log-meta { opacity: 0.8; margin: 0; }
+.log-facts { background: rgba(255,255,255,0.06); border-radius: 10px; padding: 0.7rem 1rem; margin-top: 0.8rem; }
+.log-facts h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+.quiz { max-width: 60rem; margin: 1.5rem auto; padding: 1.25rem 1.5rem; border-radius: 14px; background: #0b2540; color: #e8f3ff; box-sizing: border-box; }
+@media (max-width: 62rem) { .quiz { margin-left: 1rem; margin-right: 1rem; } }
+.quiz h2 { margin-top: 0; }
+.quiz-q { border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; margin: 0 0 1rem; padding: 0.8rem 1rem; min-width: 0; }
+.quiz-q legend { font-weight: 600; padding: 0 0.3rem; }
+.quiz-opts { list-style: none; margin: 0.5rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
+.quiz-opt { width: 100%; text-align: start; font: inherit; color: #e8f3ff; background: rgba(255,255,255,0.08); border: 2px solid transparent; border-radius: 8px; padding: 0.6rem 0.8rem; cursor: pointer; min-height: 44px; }
+.quiz-opt:hover { background: rgba(255,255,255,0.14); }
+.quiz-opt:focus-visible { outline: 3px solid #8fd3ff; outline-offset: 2px; }
+.quiz-q.answered .quiz-opt { cursor: default; }
+.quiz-opt.is-right { border-color: #4fd18b; background: rgba(79,209,139,0.18); }
+.quiz-opt.is-right::after { content: " ✓"; }
+.quiz-opt.is-wrong { border-color: #ff8a8a; background: rgba(255,138,138,0.16); }
+.quiz-opt.is-wrong::after { content: " ✗"; }
+.quiz-fb { margin-top: 0.6rem; }
+.quiz-fb p { margin: 0.3rem 0; }
+.quiz a { color: #8fd3ff; }
+.quiz-score { font-size: 1.2rem; font-weight: 700; }
+.quiz-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.quiz .btn { cursor: pointer; border: 0; font: inherit; }
+[dir="rtl"] .myth-card h2, [dir="rtl"] .log-entry h2 { text-align: right; }
