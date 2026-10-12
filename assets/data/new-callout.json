@@ -1,0 +1,11 @@
+{
+  "note": "Project Rawane 'New' callout. Edit, then run scripts/weekly-sync.sh (renders into Project-Rawane.html + fr/es/ar; add new strings to i18n/<lang>.json). Set enabled false to hide. date/date_label optional.",
+  "enabled": true,
+  "page": "Project-Rawane.html",
+  "badge": "New",
+  "text": "New update on the Myth vs Fact page: 7 doom myths checked against NASA, NOAA and ESA.",
+  "link": "Myth_vs_Fact.html",
+  "link_text": "See Myth vs Fact",
+  "date": "2026-10-11",
+  "date_label": "October 11, 2026"
+}

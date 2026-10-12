@@ -131,3 +131,15 @@ bs = open('build-stats.js', encoding='utf8').read()
 if "'Community.html'" not in bs:
     bs = bs.replace("'Rawanes_Mission_Log.html'];", "'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];")
     open('build-stats.js', 'w', encoding='utf8').write(bs)
+
+# ---- 'New' callout (assets/data/new-callout.json), placed right under the page hero
+N = json.load(open('assets/data/new-callout.json', encoding='utf8'))
+f = N['page']; s = open(f, encoding='utf8').read()
+s = re.sub(r'<!-- NEW-CALLOUT:START -->.*?<!-- NEW-CALLOUT:END -->\n?', '', s, flags=re.S)
+if N.get('enabled'):
+    dt = f' <time class="new-date" datetime="{N["date"]}">{E(N["date_label"])}</time>' if N.get('date') and N.get('date_label') else ''
+    blk = (f'<!-- NEW-CALLOUT:START --><aside class="new-callout" aria-label="{E(N["badge"])}"><a href="{E(N["link"])}"><span class="new-badge">{E(N["badge"])}</span>'
+           f'<span class="new-text">{E(N["text"])}{dt}</span><span class="new-cta">{E(N["link_text"])} <span aria-hidden="true">→</span></span></a></aside><!-- NEW-CALLOUT:END -->')
+    i = s.index('</section>', s.index('<section class="page-hero')) + len('</section>\n')
+    s = s[:i] + blk + '\n' + s[i:]
+open(f, 'w', encoding='utf8').write(s); print('new-callout:', f, N.get('enabled'))
