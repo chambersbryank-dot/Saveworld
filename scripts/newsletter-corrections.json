@@ -1,0 +1,21 @@
+{
+  "_doc": "Corrections & Updates shown in the Weekly Brief. One entry per fix: date (HST, YYYY-MM-DD, the day the fix went live), page (site-relative, linked per language), what {en,fr,es,ar}, caught_by {en,fr,es,ar}: 'SI Partner' when caught by the site owner, otherwise a reader's first name/alias or 'a sharp-eyed reader'; never a real full name. An issue shows entries dated after the previous issue, up to the issue date; the section is hidden when there are none.",
+  "entries": [
+    {
+      "date": "2026-10-12",
+      "page": "Life_Terra.html",
+      "what": {
+        "en": "Life Terra: our page said Life Terra is \"planting 500 million trees.\" That is their goal. It now says Life Terra and its partners have planted more than 36 million trees across Europe (company figure), working toward 500 million.",
+        "fr": "Life Terra : notre page indiquait que Life Terra « plante 500 millions d'arbres ». C'est leur objectif. Elle précise désormais que Life Terra et ses partenaires ont planté plus de 36 millions d'arbres en Europe (chiffre de l'organisation), avec un objectif de 500 millions.",
+        "es": "Life Terra: nuestra página decía que Life Terra «planta 500 millones de árboles». Esa es su meta. Ahora dice que Life Terra y sus socios han plantado más de 36 millones de árboles en Europa (cifra de la organización), con la meta de llegar a 500 millones.",
+        "ar": "Life Terra: ذكرت صفحتنا أن Life Terra «تزرع 500 مليون شجرة»، وهذا هو هدفها. أصبحت الصفحة تذكر الآن أن Life Terra وشركاءها زرعوا أكثر من 36 مليون شجرة في أنحاء أوروبا (رقم المنظمة)، سعيًا إلى هدف 500 مليون شجرة."
+      },
+      "caught_by": {
+        "en": "SI Partner",
+        "fr": "SI Partner",
+        "es": "SI Partner",
+        "ar": "SI Partner"
+      }
+    }
+  ]
+}

@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 /* Weekly Saving Planets Brief: builds one issue per language (EN/FR/ES/AR) and saves it as a DRAFT campaign
    in MailerLite for the matching group. NEVER sends or schedules.
-   Usage: node scripts/newsletter-draft.js [--dry-run] [--days 7] [--lang en,fr]
+   Usage: node scripts/newsletter-draft.js [--dry-run] [--update] [--days 7] [--lang en,fr]
    API key: read at runtime from $MAILERLITE_KEY_FILE (default ~/.mailerlite_key). Never commit or print it.
    Output HTML is also written to /tmp/newsletter-<date>-<lang>.html for review. */
 const fs = require('fs'), path = require('path'), os = require('os'), { execSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..'), SITE = 'https://www.savingplanets.com/', API = 'https://connect.mailerlite.com/api';
 const GROUPS = { en: '201062857381512972', fr: '201062857692939304', es: '201062857966617859', ar: '201062858265462233' };
+const LANG_IDS = { en: 4, fr: 6, es: 8, ar: 23 };  // MailerLite language_id (GET /campaigns/languages): sets unsubscribe/footer template language
+const UPDATE = process.argv.includes('--update');  // --update: rewrite content of this issue's existing drafts in place (same facts/joke; rotation not advanced)
 const FROM = { name: 'Saving Planets', email: 'newsletter@savingplanets.com' };
 const args = process.argv.slice(2), DRY = args.includes('--dry-run');
 const DAYS = +(args[args.indexOf('--days') + 1] || 0) || 7;
@@ -28,16 +30,16 @@ const T = {
 
 // Fixed strings for the v2 template (2026-10-11).
 const T2 = {
-  en: { inIssue: 'In this issue', backTop: 'Back to top', imgLbl: 'Image', siImg: 'SI-generated image by Saving Planets', joke: 'Project Rawane\u2019s Favorite Dad Joke', hubAlt: 'Banner image for', seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
+  en: { corr: 'Corrections & Updates', corrIntro: 'We fix mistakes in the open. Changed since the last issue:', caught: 'Caught by', corrInvite: 'Spot an error? Tell us at', inIssue: 'In this issue', backTop: 'Back to top', imgLbl: 'Image', siImg: 'SI-generated image by Saving Planets', joke: 'Project Rawane\u2019s Favorite Dad Joke', hubAlt: 'Banner image for', seeAll: (n, h) => `See all ${n} new in ${h}`, issue: 'Issue date', hubsIntro: 'Grouped by hub. Tap a title to read the full page.', horizon: 'Potential solution on the horizon', horizonNote: "We'll keep you updated here if this becomes a reality.",
     noneAll: 'No new solutions this week.', launches: 'Launches This Week', noLaunch: 'No launches are on the books for this week yet.', vehicle: 'Vehicle', mission: 'Mission', shift: 'Launch dates shift often.', schedule: 'See our full launch schedule',
     suggest: 'Suggest a New Solution', suggestText: 'Know a group doing hands-on work with published numbers? Email your idea to', criteria: 'See our solutions criteria', facts: 'Amazing Facts', source: 'Source', allFacts: 'See all Amazing Facts', unsub: 'Unsubscribe', tz: 'UTC' },
-  fr: { inIssue: 'Dans ce numéro', backTop: 'Retour en haut', imgLbl: 'Image', siImg: 'Image générée par SI par Saving Planets', joke: 'La blague de papa préférée de Projet Rawane', hubAlt: 'Image de bannière :', seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
+  fr: { corr: 'Corrections et mises à jour', corrIntro: 'Nous corrigeons nos erreurs en toute transparence. Modifié depuis le dernier numéro :', caught: 'Signalé par', corrInvite: 'Vous avez repéré une erreur ? Écrivez-nous à', inIssue: 'Dans ce numéro', backTop: 'Retour en haut', imgLbl: 'Image', siImg: 'Image générée par SI par Saving Planets', joke: 'La blague de papa préférée de Projet Rawane', hubAlt: 'Image de bannière :', seeAll: (n, h) => `Voir les ${n} nouveautés : ${h}`, issue: 'Date du numéro', hubsIntro: 'Classées par thème. Touchez un titre pour lire la page complète.', horizon: "Solution potentielle à l'horizon", horizonNote: 'Nous vous tiendrons informés ici si cela se concrétise.',
     noneAll: 'Pas de nouvelle solution cette semaine.', launches: 'Lancements de la semaine', noLaunch: "Aucun lancement n'est encore prévu cette semaine.", vehicle: 'Lanceur', mission: 'Mission', shift: 'Les dates de lancement changent souvent.', schedule: 'Voir notre calendrier complet des lancements',
     suggest: 'Proposez une nouvelle solution', suggestText: 'Vous connaissez un groupe qui agit sur le terrain avec des chiffres publiés ? Envoyez votre idée à', criteria: 'Voir nos critères de sélection', facts: 'Faits étonnants', source: 'Source', allFacts: 'Voir tous les faits étonnants', unsub: 'Se désabonner', tz: 'UTC' },
-  es: { inIssue: 'En este número', backTop: 'Volver arriba', imgLbl: 'Imagen', siImg: 'Imagen generada por SI por Saving Planets', joke: 'El chiste de papá favorito de Proyecto Rawane', hubAlt: 'Imagen de cabecera:', seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
+  es: { corr: 'Correcciones y actualizaciones', corrIntro: 'Corregimos nuestros errores a la vista de todos. Cambios desde el último número:', caught: 'Detectado por', corrInvite: '¿Viste un error? Escríbenos a', inIssue: 'En este número', backTop: 'Volver arriba', imgLbl: 'Imagen', siImg: 'Imagen generada por SI por Saving Planets', joke: 'El chiste de papá favorito de Proyecto Rawane', hubAlt: 'Imagen de cabecera:', seeAll: (n, h) => `Ver las ${n} novedades en ${h}`, issue: 'Fecha del número', hubsIntro: 'Agrupadas por tema. Toca un título para leer la página completa.', horizon: 'Posible solución en el horizonte', horizonNote: 'Te mantendremos informado aquí si esto se hace realidad.',
     noneAll: 'No hay soluciones nuevas esta semana.', launches: 'Lanzamientos de esta semana', noLaunch: 'Todavía no hay lanzamientos programados para esta semana.', vehicle: 'Vehículo', mission: 'Misión', shift: 'Las fechas de lanzamiento cambian a menudo.', schedule: 'Ver nuestro calendario completo de lanzamientos',
     suggest: 'Sugiere una nueva solución', suggestText: '¿Conoces un grupo que hace trabajo práctico con cifras publicadas? Envía tu idea a', criteria: 'Ver nuestros criterios de soluciones', facts: 'Datos asombrosos', source: 'Fuente', allFacts: 'Ver todos los datos asombrosos', unsub: 'Darse de baja', tz: 'UTC' },
-  ar: { inIssue: 'في هذا العدد', backTop: 'العودة إلى الأعلى', imgLbl: 'الصورة', siImg: 'صورة مولّدة بتقنية SI من Saving Planets', joke: 'نكتة الأب المفضلة لدى مشروع Rawane', hubAlt: 'صورة لافتة لقسم', seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
+  ar: { corr: 'تصحيحات وتحديثات', corrIntro: 'نصحح أخطاءنا بشفافية. ما تغيّر منذ العدد الماضي:', caught: 'رصده', corrInvite: 'لاحظت خطأً؟ راسلنا على', inIssue: 'في هذا العدد', backTop: 'العودة إلى الأعلى', imgLbl: 'الصورة', siImg: 'صورة مولّدة بتقنية SI من Saving Planets', joke: 'نكتة الأب المفضلة لدى مشروع Rawane', hubAlt: 'صورة لافتة لقسم', seeAll: (n, h) => `عرض جميع الإضافات الجديدة (${n}) في ${h}`, issue: 'تاريخ العدد', hubsIntro: 'مصنفة حسب المحور. اضغط على العنوان لقراءة الصفحة كاملة.', horizon: 'حل محتمل في الأفق', horizonNote: 'سنبقيكم على اطلاع هنا إذا أصبح هذا واقعًا.',
     noneAll: 'لا توجد حلول جديدة هذا الأسبوع.', launches: 'عمليات الإطلاق هذا الأسبوع', noLaunch: 'لا توجد عمليات إطلاق مجدولة لهذا الأسبوع حتى الآن.', vehicle: 'المركبة', mission: 'المهمة', shift: 'تتغير مواعيد الإطلاق كثيرًا.', schedule: 'اطّلع على جدول الإطلاق الكامل',
     suggest: 'اقترح حلًا جديدًا', suggestText: 'هل تعرف جهة تقوم بعمل ميداني وتنشر أرقامًا موثقة؟ أرسل فكرتك إلى', criteria: 'اطّلع على معايير اختيار الحلول', facts: 'حقائق مذهلة', source: 'المصدر', allFacts: 'اطّلع على جميع الحقائق المذهلة', unsub: 'إلغاء الاشتراك', tz: 'UTC' }
 };
@@ -115,7 +117,13 @@ function sotw(lang) {
     return { ...e, title: tr(e.title), blurb: tr(e.blurb), imageAlt: tr(e.imageAlt), label: SOTW_T[lang][0], cta: SOTW_T[lang][1] };
   } catch (err) { return null; }
 }
-function build(lang, sols, factKeys, launchList, joke) {
+// Corrections & Updates: entries from scripts/newsletter-corrections.json dated after the previous issue (state) up to this issue.
+function corrections(state) {
+  let d; try { d = JSON.parse(rd('scripts/newsletter-corrections.json')); } catch (e) { return []; }
+  const prev = Object.keys(state.issues || {}).filter(k => k < iso).sort().pop() || '0000-00-00';
+  return (d.entries || []).filter(e => e.date > prev && e.date <= iso);
+}
+function build(lang, sols, factKeys, launchList, joke, corr = []) {
   const t = { ...T[lang], ...T2[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
   const a = (href, txt, bold) => `<a href="${href}" style="color:#009cde;${bold ? 'font-weight:700;' : ''}text-decoration:none">${esc(txt)}</a>`;
   const top = `<p style="margin:10px 0 0;font-size:12px;text-align:${rtl ? 'left' : 'right'}"><a href="#sp-top" style="color:#5b7486;text-decoration:none">${esc(t.backTop)} ↑</a></p>`;
@@ -142,6 +150,8 @@ function build(lang, sols, factKeys, launchList, joke) {
   const lHtml = (launchList && launchList.length ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse">` + launchList.map(l =>
     `<tr><td dir="${dir}" style="padding:8px 0;border-bottom:1px solid #e3edf4;text-align:${al}"><strong>${esc(fmtDay(l.date, lang))}</strong><br>${esc(t.vehicle)}: ${esc(l.vehicle)}${l.provider ? ' (' + esc(l.provider) + ')' : ''}<br>${esc(t.mission)}: ${esc(l.mission)}</td></tr>`).join('') + '</table>'
     : `<p style="margin:0">${esc(t.noLaunch)}</p>`) + `<p style="margin:12px 0 0;font-size:14px">${esc(t.shift)} ${a(P + 'Project-Rawane.html#launches', t.schedule + ' →', true)}</p>`;
+  // 3b. Corrections & Updates (hidden when empty)
+  const cHtml = corr.length ? `<p style="margin:0 0 10px;font-size:14px">${esc(t.corrIntro)}</p>` + corr.map(c => `<p style="margin:0 0 12px">${esc((c.what && (c.what[lang] || c.what.en)) || '')}${c.page ? ' ' + a(P + c.page, t.read + ' →', true) : ''}<br><span style="font-size:13px;color:#5b7486">${esc(fmtDate(c.date + 'T12:00:00-10:00', lang))} · ${esc(t.caught)}: ${esc((c.caught_by && (c.caught_by[lang] || c.caught_by.en)) || '')}</span></p>`).join('') + `<p style="margin:0;font-size:13px">${esc(t.corrInvite)} <a href="mailto:ideas@savingplanets.com?subject=Correction" style="color:#009cde;font-weight:700">ideas@savingplanets.com</a>.</p>` : '';
   // 4. Suggest
   const sugHtml = `<div style="background:#eef5fa;border-radius:8px;padding:16px 18px"><p style="margin:0 0 8px">${esc(t.suggestText)} <a href="mailto:ideas@savingplanets.com?subject=Solution%20idea" style="color:#009cde;font-weight:700">ideas@savingplanets.com</a>.</p><p style="margin:0">${a(P + 'About.html#criteria', t.criteria + ' →', true)}</p></div>`;
   // 5. Facts
@@ -159,10 +169,11 @@ function build(lang, sols, factKeys, launchList, joke) {
 <p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td><td valign="middle" style="padding-${rtl ? 'right' : 'left'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td></tr></table></td></tr>
 <tr><td dir="${dir}" style="padding:24px 24px 28px;font-family:Montserrat,Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#003755;text-align:${al}">
 <p id="sp-top" style="margin:0;text-align:center;font-weight:700;font-size:17px">${esc(t.intro)}</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[...(sw ? [['sp-sotw', sw.label]] : []), ['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts], ['sp-suggest', t.suggest]].concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[...(sw ? [['sp-sotw', sw.label]] : []), ['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts]].concat(cHtml ? [['sp-corr', t.corr]] : []).concat([['sp-suggest', t.suggest]]).concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
 ${sw ? h2(sw.label, 'sp-sotw') + swHtml + top : ''}
 ${h2(t.newS, 'sp-new')}${solsHtml}${top}
 ${h2(t.launches, 'sp-launches')}${lHtml}${top}
+${cHtml ? h2(t.corr, 'sp-corr') + cHtml + top : ''}
 ${h2(t.suggest, 'sp-suggest')}${sugHtml}${top}
 ${h2(t.facts, 'sp-facts')}${fHtml}${top}
 ${joke ? h2(t.joke, 'sp-joke') + `<div style="background:#003755;color:#ffffff;border-radius:8px;padding:16px 18px;font-size:16px" dir="${dir}" lang="${lang}"><span style="font-size:22px">🚀</span> ${esc(joke)}</div>` + top : ''}
@@ -178,25 +189,31 @@ async function api(method, p, body) {
   return j;
 }
 (async () => {
-  const sols = newSolutions(), state = loadState(), factKeys = pickFacts(state);
+  const sols = newSolutions(), state = loadState(), factKeys = pickFacts(state), corr = corrections(state);
   let jokeIdx = state.issues[iso] && state.issues[iso].joke != null ? state.issues[iso].joke : null;
   if (jokeIdx == null) { const used = new Set(state.usedJokes || []); let free = JOKES.map((_, i) => i).filter(i => !used.has(i)); if (!free.length) { state.usedJokes = []; free = JOKES.map((_, i) => i); } jokeIdx = free[0]; }
   const joke = JOKES[jokeIdx];
   let launchList = null; try { launchList = await launches(); } catch (e) { console.log('note: launches unavailable (' + e.message + ')'); }
   let existing = [];
-  if (!DRY) existing = (await api('GET', '/campaigns?filter[status]=draft&limit=100')).data.map(c => c.name);
+  let drafts = [];
+  if (!DRY) { drafts = (await api('GET', '/campaigns?filter[status]=draft&limit=100')).data; existing = drafts.map(c => c.name); }
   for (const lang of LANGS) {
-    const html = build(lang, sols, factKeys, launchList, lang === 'en' ? joke : JOKES_T[lang][jokeIdx]), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
+    const html = build(lang, sols, factKeys, launchList, lang === 'en' ? joke : JOKES_T[lang][jokeIdx], corr), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
     fs.writeFileSync(`/tmp/newsletter-${iso}-${lang}.html`, html);
     if (DRY) { console.log(`[dry-run] ${name}: ${html.length} bytes -> /tmp/newsletter-${iso}-${lang}.html`); continue; }
-    if (existing.includes(name)) { console.log(`skip (draft exists): ${name}`); continue; }
     const email = { subject: T[lang].subject(fmtDate(today, lang)), from_name: FROM.name, from: FROM.email, content: html };
+    if (existing.includes(name)) {
+      if (!UPDATE) { console.log(`skip (draft exists): ${name}`); continue; }
+      const d = drafts.find(x => x.name === name);
+      const u = await api('PUT', `/campaigns/${d.id}`, { name, language_id: LANG_IDS[lang], emails: [email], groups: [GROUPS[lang]] });
+      console.log(`draft updated: ${name} id=${d.id} status=${u.data.status} language=${u.data.language && u.data.language.shortcode}`); continue;
+    }
     let c;
-    try { c = await api('POST', '/campaigns', { name, type: 'regular', emails: [email], groups: [GROUPS[lang]] }); }
+    try { c = await api('POST', '/campaigns', { name, type: 'regular', language_id: LANG_IDS[lang], emails: [email], groups: [GROUPS[lang]] }); }
     catch (e) {
       if (!/content/i.test(e.message)) throw e;
       delete email.content;  // plan does not allow custom HTML via API: create the draft without content; paste /tmp HTML in the editor
-      c = await api('POST', '/campaigns', { name, type: 'regular', emails: [email], groups: [GROUPS[lang]] });
+      c = await api('POST', '/campaigns', { name, type: 'regular', language_id: LANG_IDS[lang], emails: [email], groups: [GROUPS[lang]] });
       console.log(`note: ${name} created WITHOUT HTML content (API refused content); use /tmp/newsletter-${iso}-${lang}.html`);
     }
     console.log(`draft created: ${name} id=${c.data.id} status=${c.data.status}`);

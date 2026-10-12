@@ -90,7 +90,7 @@ QUIZZES = {
   Q("Why catch plastic in rivers?", ["Rivers have more fish", "It's cheaper and easier than collecting it once it spreads across the ocean", "Ocean cleanup is banned"], 1, "Stopping plastic upstream is cheaper and easier than collecting it at sea.", "Rivers.html")]),
  'Deforestation': ("Forests", [
   Q("How many trees does Life Terra report planting with partners?", ["More than 3.6 million", "More than 36 million", "More than 360 million"], 1, "More than 36 million trees (organization figure).", "Life_Terra.html"),
-  Q("What is Life Terra's goal?", ["500 million trees across Europe", "One tree per person on Earth", "50,000 trees in one park"], 0, "Life Terra is planting 500 million trees across Europe.", "Life_Terra.html"),
+  Q("What is Life Terra's goal?", ["500 million trees across Europe", "One tree per person on Earth", "50,000 trees in one park"], 0, "Life Terra's goal is 500 million trees across Europe.", "Life_Terra.html"),
   Q("How does Terraformation restore forests?", ["Single-species plantations", "Native, biodiverse forests from seed", "Artificial trees"], 1, "Terraformation restores native, biodiverse forests from seed to canopy.", "Terraformation.html"),
   Q("Under the Three Trees rule, how many trees go back in for every one removed?", ["One", "Two", "Three"], 2, "For every tree removed, three go back in.", "Three_Trees.html"),
   Q("About how many species of mangrove trees guard tropical coastlines?", ["About 8", "About 80", "About 800"], 1, "About 80 species of mangrove trees.", "Mangroves.html")]),
