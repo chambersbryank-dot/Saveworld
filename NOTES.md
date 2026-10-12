@@ -943,3 +943,9 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 
 - Session start: git pull (85150bb, already up to date), NOTES.md read, last 24h of commits reviewed (Batches 1-4 site enhancements, videos, newsletter; no new solution pages). No glitches.
 - Prepared batch 2026-10-12 (A–Q above) for Brian's yes/no. No pages built or pushed.
+
+## Session Log — 2026-10-12 (daily translation sync)
+
+- Routine: pulled main (already up to date at b31b423), ran scripts/weekly-sync.sh.
+- SOTW still Great_Bubble_Barrier; EO active 15; fr/es/ar rebuilt 89 pages each (no content diff); seo-audit 357 pages TOTAL 0; i18n-check all current.
+- Only change: sitemap.xml lastmod refresh (267 URLs). Committed and pushed.
