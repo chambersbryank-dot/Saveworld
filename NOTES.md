@@ -1014,3 +1014,9 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 | 2026-10-12 | ImageMagick `convert` not installed on the box | Resized images with Pillow | Yes |
 | 2026-10-12 | Mission widget fmt() turns year-only milestones ("2016") into a fake Jan 1 date | Left data-milestones empty on Plato/ExoMars | Yes |
 
+
+## Session Log — 2026-10-12 (Roman page: logical-flow reorder)
+- Nancy_Grace_Roman.html (+fr/es/ar via i18n) reordered into one narrative: hook (#solution) → Who Was Nancy Grace Roman? (#nancy) → What Will Roman Do? (new #science: goals paragraph + fun-facts strip, now a div inside the section) → Roman vs Webb vs Hubble (#compare) → Where Is Roman Now? (#where, live distance) + mission widget + What Is a Lagrange Point? (#lagrange) → Newest Image and First Light (#newest) → How This Saves People & the Planet (#saves; card order For People, For Nature, For Life, For Future Missions) → Impact, stats, bottom-link, next, help, footer. Jump nav reordered to match (+ What will Roman do?).
+- Short .roman-lead lead-in sentences on each section (no new claims; science paragraph uses only facts already on the page). Removed: duplicate "100x" fun-fact tile (stated in hook + table), "about one million miles from Earth" from the Impact Statement (L2 distance stays in the table + L2 figure). Hook now mentions the launch date and ties the census to how rare Earth may be.
+- All IDs used by roman.js/build-roman.py kept (ROMAN-LIVE block, roman-km/mi/asof, webb-km, roman-cd, roman-latest*). CSS: .roman-lead, nested .roman-facts, .roman-facts-3; Roman page only bumped to styles.css?v=20261012s. 15 new strings/lang in i18n (machine-quality, appended, existing order kept).
+- weekly-sync x2: seo-audit 425 TOTAL 0, all translations current, stable. linkcheck: only the 2 known JS-template false positives.

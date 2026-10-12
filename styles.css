@@ -943,3 +943,8 @@ body.toc-sub.roman-page .page-hero.space-hero { background: linear-gradient(180d
 .roman-saves .w-card h3 { color: #7fd99a; }
 @media (max-width: 1024px) { .roman-facts { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px) { .roman-img-grid { grid-template-columns: 1fr; } }
+/* Roman page reorder 2026-10-12 */
+.roman-lead { font-size: 1.08rem; color: #cfe3f5; margin: -.25rem 0 1rem; }
+.roman-sec .roman-facts { max-width: none; margin: 1.25rem 0 .5rem; padding: 0; }
+.roman-facts.roman-facts-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 640px) { .roman-facts.roman-facts-3 { grid-template-columns: 1fr; } }
