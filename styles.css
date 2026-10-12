@@ -890,3 +890,4 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .new-text { flex: 1 1 260px; font-weight: 600; line-height: 1.4; }
 .new-date { display: block; font-weight: 400; font-size: 0.82rem; opacity: 0.75; margin-top: 0.15rem; }
 .new-cta { font-weight: 700; color: #7fd8ff; white-space: nowrap; }
+.fc-regions .fc-region h3 { color: #003755 !important; }
