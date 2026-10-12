@@ -1051,7 +1051,7 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
   - To use a real logo later: get written permission and record it here first.
 - Partner With Us (#partner): what Saving Planets is, sponsorship ideas (Solution of the Week, newsletter, video series, org partnerships), integrity rules (no sponsor influence on facts/sourcing/selection; "Sponsored" labels; no China/Russia-state-led sponsors), Contact Us button -> Contact.html (which lists hello@savingplanets.com and ideas@savingplanets.com). NO audience numbers.
 - Links: About footer-links + "Partner With Us" (About.html#partner); Press.html footer link + a one-line pointer section before the footer. Other pages' footers unchanged (generated footer-links not edited).
-- CSS: .src-* and .partner-* appended to styles.css; About only bumped to styles.css?v=20261012t.
+- CSS: .src-* and .partner-* appended to styles.css; About only bumped to styles.css?v=20261012u (intro text left-aligned to match headings after live screenshot review).
 - weekly-sync x2: seo-audit 425 TOTAL 0, all translations current, stable. linkcheck: only the 2 known JS-template false positives.
 - Ad video re-encode was NOT done in this session (parent handled assets/videos/savingplanets-ad.mp4 separately).
 
