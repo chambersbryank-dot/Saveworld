@@ -748,3 +748,16 @@ body.toc-sub.dscovr-epic-page .page-hero.space-hero { background: linear-gradien
 .mission-block .criteria-link a { color: #8fd3ff; text-decoration: underline; text-underline-offset: 3px; }
 .mission-block .criteria-link a:hover { color: #4da3ff; }
 .card .photo-credit, .w-card .photo-credit { padding: 0; margin: 0.3rem 0 0; }
+
+/* Help This Work: Donate / Join the work buttons (2026-10-11) */
+.help-actions { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 3.5rem; text-align: center; }
+.help-actions p { margin: 0.4rem auto 0; max-width: 640px; }
+.help-btns { display: flex; flex-wrap: wrap; gap: 0.9rem; justify-content: center; margin-top: 0.4rem; }
+body.toc-sub .help-btns .btn { margin-top: 0.7rem; min-width: 150px; text-align: center; }
+html.dark body.toc-sub .help-btn-join, body.toc-sub .help-btn-join { background: var(--solution-green); color: #002b1f; }
+html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover { background: #00d1a8; }
+.help-actions .help-more { margin-top: 1rem; font-size: 0.95rem; }
+.help-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.help-table th, .help-table td { padding: 0.7rem 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.15); text-align: start; vertical-align: top; }
+.help-table td .btn { margin: 0.2rem 0.4rem 0.2rem 0 !important; padding: 8px 14px; font-size: 0.92rem; }
+@media (max-width: 640px) { .help-table thead { display: none; } .help-table tr, .help-table td { display: block; } .help-table td { border: 0; padding: 0.3rem 0; } .help-table tr { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 0.8rem 0; } }
