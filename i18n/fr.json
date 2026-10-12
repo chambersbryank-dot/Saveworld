@@ -487,7 +487,6 @@
 "Get in Touch": "Nous contacter",
 "Getting close to an object safely is the hardest part of removing it. PRELUDE rehearses that step first.": "S'approcher d'un objet en sécurité est le plus difficile pour le retirer. PRELUDE répète d'abord cette étape.",
 "Goal:": "Objectif :",
-"Google Analytics loads only after you click Accept on the consent banner. Decline, and nothing from Google loads.": "Google Analytics ne se charge qu'après avoir cliqué sur Accepter dans la bannière de consentement. Si vous refusez, rien de Google ne se charge.",
 "Gravity": "Gravité",
 "Great Lakes Plastic Cleanup reports more than 277,000 pieces of debris removed and reported through 2025.": "Great Lakes Plastic Cleanup déclare plus de 277 000 débris retirés et signalés jusqu'en 2025.",
 "Great Red Spot": "Grande Tache rouge",
@@ -2392,5 +2391,6 @@
 "Cited on 5 pages ·": "Cité sur 5 pages ·",
 "Cited on 3 pages ·": "Cité sur 3 pages ·",
 "Cited on 4 pages ·": "Cité sur 4 pages ·",
-"Cited on 20 pages ·": "Cité sur 20 pages ·"
+"Cited on 20 pages ·": "Cité sur 20 pages ·",
+"We use Google Analytics for anonymous visit statistics. Until you click Accept on the consent banner, it runs in a restricted mode that sets no analytics cookies; Decline keeps it that way.": "Nous utilisons Google Analytics pour des statistiques de visite anonymes. Tant que vous n'avez pas cliqué sur Accepter dans la bannière de consentement, il fonctionne en mode restreint sans cookies d'analyse ; si vous refusez, il reste ainsi."
 }

@@ -1057,3 +1057,9 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 
 ## User To-Do (Partner With Us)
 - [ ] TODO: supply real, verified audience stats (visitors, newsletter subscribers, video views) before any are added to the Partner With Us section. None are shown now.
+
+## Session Log — 2026-10-12: GA4 tag G-ZCJ7CEKN94 on every page (Consent Mode)
+- Found existing consent-gated GA (consent.js loaded G-M5L2259Z68 only after Accept). Replaced: old ID removed; the user's GA4 snippet (G-ZCJ7CEKN94) now sits right after `<head>` on all 425 pages (EN + fr/es/ar + 404; skipped the Google verification file), wrapped `<!-- Google tag (gtag.js) --> … <!-- /Google tag -->`.
+- Consent Mode v2: one added line before gtag('js') sets analytics_storage default from localStorage sp_consent (granted only if previously accepted), ad_storage/ad_user_data/ad_personalization denied. consent.js Accept now calls gtag('consent','update',{analytics_storage:'granted'}); Decline leaves denied. Note: gtag.js now loads before consent (cookieless pings), not "nothing loads" as before. consent.js cache-bust → v=20261012g.
+- scripts/add-gtag.py (idempotent) runs in weekly-sync.sh before and after i18n-build/seo-fix, so generated/translated/new pages get the tag. Newsletter emails intentionally have no JS tag.
+- About #privacy Analytics text updated (en + i18n fr/es/ar). No meta CSP exists, so nothing to allow.

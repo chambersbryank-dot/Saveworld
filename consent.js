@@ -1,17 +1,13 @@
-/* Consent-gated Google Analytics (GA4). Nothing from Google loads until the visitor clicks Accept.
+/* Consent-gated Google Analytics (GA4). GA4 runs in Consent Mode: analytics_storage stays denied (no analytics cookies) until the visitor clicks Accept.
    Choice is stored in localStorage as sp_consent = 'granted' | 'denied'. */
 (function () {
-  var GA_ID = 'G-M5L2259Z68', KEY = 'sp_consent';
+  var KEY = 'sp_consent';
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function loadGA() {
+    // GA4 tag (G-ZCJ7CEKN94) is in every page <head> with Consent Mode default denied; grant on Accept.
     if (window.__spGaLoaded) return; window.__spGaLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { dataLayer.push(arguments); };
-    gtag('js', new Date()); gtag('config', GA_ID);
-    var s = document.createElement('script'); s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
+    if (typeof window.gtag === 'function') gtag('consent', 'update', { analytics_storage: 'granted' });
   }
   function banner() {
     var css = '.sp-consent{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999;width:calc(100% - 24px);max-width:640px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 16px;background:#0b1f33;color:#e8eef5;border:1px solid rgba(0,156,222,0.45);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,0.45);font:500 0.875rem/1.45 Montserrat,system-ui,sans-serif}' +
