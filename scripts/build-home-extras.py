@@ -44,7 +44,8 @@ def video_html(slug, heading):
 for page, (slug, heading) in VIDEOS.items():
   s = open(page, encoding='utf-8').read()
   # right after the page hero (first section on the page)
-  s = put(s, 'VIDEO', video_html(slug, heading), r'<section class="page-hero[^"]*">.*?</section>')
+  s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)  # re-place each run
+  s = put(s, 'VIDEO', video_html(slug, heading), r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
   open(page, 'w', encoding='utf-8').write(s)
 
 # ---- Planet Scoreboard (figures already on the site, each verified at its source) ----
