@@ -1037,3 +1037,23 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - [ ] Optional: remake the Artemis video (garbled "Artegs III" text)
 - [ ] Create the 4 Grok Plus ad clips from /workspace/grok-ad-savingplanets.txt and send them for stitching
 - [x] Cloudflare redirect saveplanetminusthedoom.com -> savingplanets.com (done 2026-10-12)
+
+## Session Log — 2026-10-12: About page — Our Sources + Partner With Us
+- About.html (+fr/es/ar via i18n): new `<!-- SOURCES:START/END -->` section#sources and `<!-- PARTNER:START/END -->` section#partner, inserted before #privacy, five-ws/w-card template. Generator: /workspace/about_add.py (idempotent); strings: /workspace/src_tr.py (57 strings/lang, machine-quality).
+- Our Sources: 12 cards (NASA 84, NOAA 34, ESA 34, Copernicus 17, JAXA 16, ISRO 10, U.S. EPA 10, CNES 6, USGS 5, EUMETSAT 3, peer-reviewed journals 4, organization/company figures 20). Counts = English root pages mentioning the source in the body (nav and head excluded), counted 2026-10-12. Disclaimer: "Saving Planets cites these organizations' public data. Inclusion does not imply endorsement."
+- LOGOS: none used. Every card uses a styled wordmark badge (.src-badge, Montserrat in a rounded card); nothing added under assets/img/sources/. Policies checked 2026-10-12:
+  - NASA: insignia/meatball and worm need permission and must not imply endorsement (https://www.nasa.gov/nasa-brand-center/images-and-media/).
+  - NOAA: emblem and logo "may not be used without explicit permission" (https://www.noaa.gov/noaa-emblem-usage-and-licensing).
+  - ESA: "any use ... of the ESA logo requires prior written authorisation" (https://www.esa.int/About_Us/Branding_and_Partnerships/Frequently_asked_questions).
+  - Copernicus: trade mark use requires accepting a licence via form, and the mark may not be shown with other logos (https://www.copernicus.eu/en/access-data/copyright-and-licences).
+  - JAXA: logo is a registered trademark; advance permission required (https://global.jaxa.jp/policy.html).
+  - ISRO, EPA, CNES, USGS, EUMETSAT: no published permission for third-party informational use found (USGS visual identity is reserved for USGS products), so treated as unclear and badged.
+  - To use a real logo later: get written permission and record it here first.
+- Partner With Us (#partner): what Saving Planets is, sponsorship ideas (Solution of the Week, newsletter, video series, org partnerships), integrity rules (no sponsor influence on facts/sourcing/selection; "Sponsored" labels; no China/Russia-state-led sponsors), Contact Us button -> Contact.html (which lists hello@savingplanets.com and ideas@savingplanets.com). NO audience numbers.
+- Links: About footer-links + "Partner With Us" (About.html#partner); Press.html footer link + a one-line pointer section before the footer. Other pages' footers unchanged (generated footer-links not edited).
+- CSS: .src-* and .partner-* appended to styles.css; About only bumped to styles.css?v=20261012t.
+- weekly-sync x2: seo-audit 425 TOTAL 0, all translations current, stable. linkcheck: only the 2 known JS-template false positives.
+- Ad video re-encode was NOT done in this session (parent handled assets/videos/savingplanets-ad.mp4 separately).
+
+## User To-Do (Partner With Us)
+- [ ] TODO: supply real, verified audience stats (visitors, newsletter subscribers, video views) before any are added to the Partner With Us section. None are shown now.

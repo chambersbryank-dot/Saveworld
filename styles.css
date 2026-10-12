@@ -951,3 +951,14 @@ body.toc-sub.roman-page .page-hero.space-hero { background: linear-gradient(180d
 .roman-sec .roman-facts { max-width: none; margin: 1.25rem 0 .5rem; padding: 0; }
 .roman-facts.roman-facts-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 640px) { .roman-facts.roman-facts-3 { grid-template-columns: 1fr; } }
+/* About: Our Sources + Partner With Us (2026-10-12) */
+body.toc-sub .src-intro, body.toc-sub .src-disclaimer { max-width: 900px; margin: 0 auto 1rem; text-align: center; }
+body.toc-sub .src-disclaimer { font-size: 0.92rem; opacity: 0.85; font-style: italic; margin-top: 0.4rem; }
+body.toc-sub .src-badge { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 0.06em; font-size: 1.05rem; color: #fff; border: 2px solid rgba(255,255,255,0.55); border-radius: 12px; padding: 0.45rem 0.9rem; margin-bottom: 0.7rem; background: rgba(0,156,222,0.18); }
+body.toc-sub .src-card h3 { margin-top: 0; }
+body.toc-sub .src-meta { margin-top: 0.6rem !important; font-size: 0.9rem; opacity: 0.9; }
+body.toc-sub .partner-list { margin: 0; padding-left: 1.2rem; }
+body.toc-sub .partner-list li { margin-bottom: 0.35rem; }
+body.toc-sub .partner-cta { margin-top: 1rem !important; }
+body.toc-sub .partner-cta .btn-nav { display: inline-block; min-height: 44px; box-sizing: border-box; }
+html[dir="rtl"] body.toc-sub .partner-list { padding-left: 0; padding-right: 1.2rem; }
