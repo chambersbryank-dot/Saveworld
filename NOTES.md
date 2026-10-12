@@ -908,3 +908,38 @@ Sources: science.nasa.gov/mission/europa-clipper/; esa.int/Science_Exploration/S
 - Project Rawane "New" callout (d16c220): NEW-CALLOUT block under the hero, linking to Myth_vs_Fact.html, with optional date. Edit new-callout.json (enabled false hides it). Project-R.html is only a redirect, so the callout lives on Project-Rawane.html.
 - Glitches: (1) the nav on most pages has no Contact item, so the first nav anchor touched only 14 pages; it now anchors on Search. (2) i18n json is insertion-ordered, so a sort_keys dump made a big diff, which was reverted. (3) build-batch2 rewrote the .ics DTSTAMP on every run because it compared after universal newlines (CRLF); it now reads with newline=''. (4) i18n --missing skips external link text, so the "Do it with X" strings were added explicitly.
 - i18n: about 120 new strings per language (machine-quality). weekly-sync ran clean twice after each change (seo-audit 357 pages, TOTAL 0; all translations current). Broken local links: 0 (the 2 known JS-template false positives). styles v=20261011q, site.js v=20261011s.
+
+## Candidate Queue — batch 2026-10-12
+
+Fourth daily batch (17), prepared by the 6:17 AM HST routine. Nothing built; awaiting Brian's yes/no on each. Checked against every page, solutions.json, and the 2026-10-09/10/11 queues (no repeats). Company/nonprofit figures labeled as such.
+
+| ID | Candidate | Classification | Suggested hub | Mission widget | Status |
+|---|---|---|---|---|---|
+| A | Nancy Grace Roman Space Telescope (NASA; launched Aug 30 2026 on Falcon Heavy; L2 ~1M mi; 300-megapixel camera; first images by early 2027) | Agency mission (NASA) | Project Rawane (Voyages Outward) | Yes, L2 arrival + first images | PENDING |
+| B | Plato (ESA; 26 cameras; launch planned March 2027 on Ariane 6 to L2; 4-yr mission) | Agency mission (ESA) | Project Rawane (Voyages Outward) | Yes, launch Mar 2027 | PENDING |
+| C | ExoMars Rosalind Franklin rover (ESA; launch target 2028; drill to 2 m) | Agency mission (ESA) | Project Rawane (Voyages Outward, next to ESCAPADE) | Yes, launch 2028 | PENDING |
+| D | Copernicus Sentinel-2C (ESA; launched Sept 5 2024 on final Vega; 290 km swath, 13 bands, 5-day revisit) | Agency mission (ESA) | Earth Observation + Deforestation cross-link | Yes, active | PENDING |
+| E | MetOp-SG-A1 + Sentinel-5A (ESA/EUMETSAT; launched Aug 13 2025 on Ariane 6; daily global air-pollutant data) | Agency mission (ESA/EUMETSAT) | Earth Observation | Yes, active | PENDING |
+| F | Landsat 9 and the 50-year Landsat record (NASA/USGS; launched Sept 27 2021; 740 scenes/day; 8-day revisit with Landsat 8) | Agency mission (NASA/USGS) | Earth Observation + Forests/Lakes cross-links | Yes, active | PENDING |
+| G | ISS water recovery reaches 98% (NASA, Brine Processor Assembly, June 2023) | Agency program (NASA) | Project Rawane (voyages outward benefit Earth) | No | PENDING |
+| H | Saharan dust feeds the Amazon (natural; NASA CALIPSO: 27.7M tons/yr, ~22,000 tons phosphorus) | Natural | Forests (Deforestation) | No | PENDING |
+| I | The Amazon makes its own rainy season (natural; NASA JPL 2017, transpiration starts rains 2-3 months early) | Natural | Forests (pairs with H) | No | PENDING |
+| J | The Moon steadies Earth's tilt (natural; NASA: 23.5-degree tilt kept in check, tides) | Natural | Space Disposal "saving moons" / Space | No | PENDING |
+| K | Beavers, river engineers (natural + NOAA Fisheries beaver dam analogs; Bridge Creek +52% steelhead survival, +175% production) | Natural / agency restoration | Rivers | No | PENDING |
+| L | Salt marshes (natural, NOAA; nursery for 75%+ of fisheries species, erosion buffer) | Natural | Oceans (cross-link Mangroves, Seagrass) | No | PENDING |
+| M | Ocean Voyages Institute (nonprofit; 850,000+ lb from Pacific Gyre in 10 voyages; 340,000 lb in 2020) | Nonprofit | Oceans | No | PENDING |
+| N | Healthy Seas (nonprofit; ghost nets; 1,309.1 tons marine litter removed since 2013) | Nonprofit | Oceans | No | PENDING |
+| O | Mote Marine Laboratory coral restoration (nonprofit; 216,000+ corals restored to Florida's Coral Reef) | Nonprofit | Oceans (cross-link Coral Restoration Foundation) | No | PENDING |
+| P | Trees for the Future (nonprofit; 450M+ trees grown, 99,000 acres restored, 63,700 farmers, East Africa) | Nonprofit | Forests | No | PENDING |
+| Q | Seabin (company; Sydney Harbour since 2020: 33.0M items captured, 18.9M microplastics, 21 active Seabins) | Corporate | Oceans (cross-link Great Lakes Plastic Cleanup, which uses Seabins) | No | PENDING |
+
+Flags: N's 2026 press kit gives 1,309.1 tons in one section and an older "991 tons since 2013" in another; use 1,309.1 as the latest headline and label it as a Healthy Seas figure. Q's donate path is a corporate partnership model (no individual donate page). A's first-images timing per NASA ("by early 2027"); L2 arrival ~100 days after launch is from a non-NASA tracker, so the widget should say "NASA: L2 orbit early December" only after confirming on a NASA page.
+
+Dropped this morning: Sea otters as kelp keystone (NOAA Sanctuaries page did not load), NASA L2 arrival date for Roman (not found on a NASA page; kept only the launch and first-images milestones).
+
+Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches/; science.nasa.gov/mission/roman-space-telescope/; esa.int/Science_Exploration/Space_Science/Plato; esa.int/Science_Exploration/Space_Science/Plato_factsheet; cosmos.esa.int/web/plato/status-and-history; esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars; esa.int/.../ExoMars/ExoMars_rover; esa.int/Newsroom/Press_Releases/Sentinel-2C_joins_the_Copernicus_family_in_orbit; esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Facts_and_figures; esa.int/Newsroom/Press_Releases/First_MetOp-SG_satellite_and_Sentinel-5A_launched; science.nasa.gov/mission/landsat-9/; nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/; nasa.gov/centers-and-facilities/goddard/nasa-satellite-reveals-how-much-saharan-dust-feeds-amazons-plants/; doi.org/10.1002/2015GL063040; jpl.nasa.gov/news/new-study-shows-the-amazon-makes-its-own-rainy-season/; science.nasa.gov/solar-system/moon/10-things-what-we-learn-about-earth-by-studying-the-moon/; science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/; fisheries.noaa.gov/feature-story/oregon-beavers-engineer-better-fish-habitat-more-fish; fisheries.noaa.gov/feature-story/start-beaver-dams-transform-parched-california-creeks-salmon-havens-new-research-finds; oceanservice.noaa.gov/facts/saltmarsh.html; oceanvoyagesinstitute.org; healthyseas.org/assets/uploads/Press-Kit-3_2026.pdf; mote.org/research/program/coral-reef-restoration/; trees.org; seabin.io.
+
+## Session Log — 2026-10-12 (morning candidate run)
+
+- Session start: git pull (85150bb, already up to date), NOTES.md read, last 24h of commits reviewed (Batches 1-4 site enhancements, videos, newsletter; no new solution pages). No glitches.
+- Prepared batch 2026-10-12 (A–Q above) for Brian's yes/no. No pages built or pushed.
