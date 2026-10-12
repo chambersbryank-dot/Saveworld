@@ -1,7 +1,9 @@
 {
   "usedFacts": [
     "Aeolus.html|assets/ATV1_Departure_ISS.jpg",
-    "Europa_Clipper.html|assets/Europa_Clipper_Jupiter.jpg"
+    "Europa_Clipper.html|assets/Europa_Clipper_Jupiter.jpg",
+    "GOES-19.html|assets/GOES19_GOESU_KSC.jpg",
+    "ICESat-2.html|assets/ICESat2_Launch.jpg"
   ],
   "issues": {
     "2026-10-11": {
@@ -12,9 +14,19 @@
       ],
       "solutions": 67,
       "launches": 3
+    },
+    "2026-10-12": {
+      "joke": 1,
+      "facts": [
+        "GOES-19.html|assets/GOES19_GOESU_KSC.jpg",
+        "ICESat-2.html|assets/ICESat2_Launch.jpg"
+      ],
+      "solutions": 67,
+      "launches": 3
     }
   },
   "usedJokes": [
-    0
+    0,
+    1
   ]
 }

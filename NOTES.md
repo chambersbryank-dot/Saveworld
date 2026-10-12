@@ -949,3 +949,16 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - Routine: pulled main (already up to date at b31b423), ran scripts/weekly-sync.sh.
 - SOTW still Great_Bubble_Barrier; EO active 15; fr/es/ar rebuilt 89 pages each (no content diff); seo-audit 357 pages TOTAL 0; i18n-check all current.
 - Only change: sitemap.xml lastmod refresh (267 URLs). Committed and pushed.
+
+## Session Log — 2026-10-12 (Monday newsletter drafts)
+
+- Routine: git pull (already up to date at 10107ad after morning translation sync), NOTES.md read, last 24h of commits reviewed.
+- Ran `node scripts/newsletter-draft.js` (key from `/home/box/.mailerlite_key`). Created **draft-only** campaigns (never sent or scheduled):
+  - Weekly Brief 2026-10-12 (EN) id=201145275148928579
+  - Weekly Brief 2026-10-12 (FR) id=201145277909829187
+  - Weekly Brief 2026-10-12 (ES) id=201145280540706614
+  - Weekly Brief 2026-10-12 (AR) id=201145283144320564
+- Issue content: Solution of the Week = Great Bubble Barrier; 67 new solution pages in the last 7 days (Oct 10–11 batch), capped at 3 per hub with “see all” links; 3 launches this week (Falcon 9 Starlink Group 15-25, Dragon CRS-2 SpX-35, USSF-481); Amazing Facts GOES-19 CCOR-1 (NOAA SWPC) + ICESat-2 photon return (NASA); dad joke #1.
+- Preview check vs sourcing rules: page meta pulled as-is; nonprofit/organization/company figures labeled where the page description already says so; NASA/NOAA/ESA/JAXA/ISRO named in agency items. Horizon-only pages added this week (LignoSat, PRELUDE) sit behind Space Disposal “see all 11” so the horizon badge is not in the capped list. Spot note for Brian: Life_Terra.html meta still says “planting 500 million trees” (goal language) while the page/impact figures use 36M+ planted — newsletter inherits the meta.
+- State: `scripts/newsletter-state.json` updated (usedFacts + issues[2026-10-12]). Preview HTML also at `/tmp/newsletter-2026-10-12-{en,fr,es,ar}.html`.
+- Glitches: none. Older Weekly Brief 2026-10-11 drafts remain in MailerLite as drafts (still unsent).
