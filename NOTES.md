@@ -962,3 +962,10 @@ Sources: nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-spa
 - Preview check vs sourcing rules: page meta pulled as-is; nonprofit/organization/company figures labeled where the page description already says so; NASA/NOAA/ESA/JAXA/ISRO named in agency items. Horizon-only pages added this week (LignoSat, PRELUDE) sit behind Space Disposal “see all 11” so the horizon badge is not in the capped list. Spot note for Brian: Life_Terra.html meta still says “planting 500 million trees” (goal language) while the page/impact figures use 36M+ planted — newsletter inherits the meta.
 - State: `scripts/newsletter-state.json` updated (usedFacts + issues[2026-10-12]). Preview HTML also at `/tmp/newsletter-2026-10-12-{en,fr,es,ar}.html`.
 - Glitches: none. Older Weekly Brief 2026-10-11 drafts remain in MailerLite as drafts (still unsent).
+
+## Session Log — 2026-10-12 (Monday newsletter rerun check)
+
+- Asked to rerun the "interrupted" Monday newsletter routine. git pull: already up to date at 38ae3d7, which already logged the 7:45 AM HST run as complete.
+- MailerLite check: exactly one draft per language for 2026-10-12 (EN 201145275148928579, FR 201145277909829187, ES 201145280540706614, AR 201145283144320564), all status draft and not scheduled. No duplicates, so nothing deleted. Did not rerun newsletter-draft.js: it skips existing names, and a rerun could only rotate the facts/joke state.
+- Solution of the Week (Great Bubble Barrier) section confirmed in the issue (in-issue link #sp-sotw plus card).
+- FLAG for Brian: MailerLite lists "Weekly Brief 2026-10-11 (EN)" (201069299318653981) as **sent**, finished 2026-10-11 21:40:51 UTC (11:40 AM HST Oct 11). The FR/ES/AR 10-11 drafts are still drafts. No send was made in this session.
