@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T18:17:27.731Z",
+ "generated": "2026-10-12T18:31:58.264Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -88,6 +88,10 @@
      "name": "Starfish Space Otter"
     },
     {
+     "href": "Moon_Steadies_Earth.html",
+     "name": "The Moon Steadies Earth’s Tilt"
+    },
+    {
      "href": "Titan.html",
      "name": "Titan"
     },
@@ -146,16 +150,16 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 67,
+  "solutions": 83,
   "horizon": 5,
   "hubs": 10,
   "byClassification": {
-   "nonprofit": 11,
-   "corporate": 12,
-   "natural": 7,
-   "agency": 37
+   "nonprofit": 15,
+   "corporate": 13,
+   "natural": 12,
+   "agency": 43
   },
-  "upcomingMissions": 11,
+  "upcomingMissions": 16,
   "impactTotals": [
    {
     "unit": "kg",
@@ -179,13 +183,13 @@
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 8,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 3,
-    "corporate": 2,
-    "natural": 3
+    "nonprofit": 6,
+    "corporate": 3,
+    "natural": 4
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -221,18 +225,6 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 3,
-   "horizon": 0,
-   "hubs": 1,
-   "byClassification": {
-    "nonprofit": 2,
-    "corporate": 1
-   },
-   "upcomingMissions": 0,
-   "impactTotals": []
-  },
-  "forests": {
-   "name": "Forests",
    "solutions": 4,
    "horizon": 0,
    "hubs": 1,
@@ -240,6 +232,19 @@
     "nonprofit": 2,
     "corporate": 1,
     "natural": 1
+   },
+   "upcomingMissions": 0,
+   "impactTotals": []
+  },
+  "forests": {
+   "name": "Forests",
+   "solutions": 7,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "nonprofit": 3,
+    "corporate": 1,
+    "natural": 3
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -289,27 +294,27 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 15,
+   "solutions": 18,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 14,
+    "agency": 17,
     "corporate": 1
    },
-   "upcomingMissions": 0,
+   "upcomingMissions": 3,
    "impactTotals": []
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 13,
+   "solutions": 17,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 9,
-    "natural": 1,
+    "agency": 12,
+    "natural": 2,
     "corporate": 3
    },
-   "upcomingMissions": 5,
+   "upcomingMissions": 7,
    "impactTotals": []
   }
  },
@@ -1520,6 +1525,300 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Plato.html",
+   "title": "Plato (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Plato cameras",
+     "value": 26,
+     "unit": "cameras",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Plato"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Plato",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "ExoMars_Rosalind_Franklin.html",
+   "title": "ExoMars Rosalind Franklin Rover (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Rover drill depth",
+     "value": 2,
+     "unit": "m",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars/ExoMars_rover"
+    }
+   ],
+   "missions": [
+    {
+     "name": "ExoMars Rosalind Franklin Rover",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Sentinel-2C.html",
+   "title": "Copernicus Sentinel-2C (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Sentinel-2 revisit time",
+     "value": 5,
+     "unit": "days",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2/Facts_and_figures"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Copernicus Sentinel-2C",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "MetOp-SG-A1_Sentinel-5A.html",
+   "title": "MetOp-SG-A1 and Sentinel-5A",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "MetOp-SG-A1 and Sentinel-5A",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "Landsat_9.html",
+   "title": "Landsat 9 (NASA / USGS)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Landsat 9 scenes per day",
+     "value": 740,
+     "unit": "scenes",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/landsat-9/"
+    }
+   ],
+   "missions": [
+    {
+     "name": "Landsat 9",
+     "upcoming": true,
+     "next": null
+    }
+   ]
+  },
+  {
+   "url": "ISS_Water_Recovery.html",
+   "title": "ISS Water Recovery: 98%",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "ISS water recovery",
+     "value": 98,
+     "unit": "%",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Saharan_Dust_Amazon.html",
+   "title": "Saharan Dust Feeds the Amazon",
+   "category": "forests",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Phosphorus delivered to the Amazon each year",
+     "value": 22000,
+     "unit": "tons",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/centers-and-facilities/goddard/nasa-satellite-reveals-how-much-saharan-dust-feeds-amazons-plants/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Amazon_Rainy_Season.html",
+   "title": "The Amazon Makes Its Own Rainy Season",
+   "category": "forests",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Moon_Steadies_Earth.html",
+   "title": "The Moon Steadies Earth’s Tilt",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Beavers_River_Engineers.html",
+   "title": "Beavers, River Engineers",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Juvenile steelhead survival increase",
+     "value": 52,
+     "unit": "%",
+     "kind": "fact",
+     "sourceUrl": "https://www.fisheries.noaa.gov/feature-story/oregon-beavers-engineer-better-fish-habitat-more-fish"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Salt_Marshes.html",
+   "title": "Salt Marshes",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Fisheries species that use salt marshes",
+     "value": 75,
+     "unit": "% (more than)",
+     "kind": "fact",
+     "sourceUrl": "https://oceanservice.noaa.gov/facts/saltmarsh.html"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Ocean_Voyages_Institute.html",
+   "title": "Ocean Voyages Institute",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Plastic removed from the Pacific Gyre (nonprofit figure)",
+     "value": 850000,
+     "unit": "lb",
+     "kind": "fact",
+     "sourceUrl": "https://www.oceanvoyagesinstitute.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Healthy_Seas.html",
+   "title": "Healthy Seas",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Marine litter removed since 2013 (Healthy Seas figure)",
+     "value": 1309.1,
+     "unit": "tons",
+     "kind": "fact",
+     "sourceUrl": "https://www.healthyseas.org/assets/uploads/Press-Kit-3_2026.pdf"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Mote_Marine_Laboratory.html",
+   "title": "Mote Marine Laboratory",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Corals restored (Mote figure)",
+     "value": 216000,
+     "unit": "corals",
+     "kind": "fact",
+     "sourceUrl": "https://mote.org/research/program/coral-reef-restoration/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Trees_for_the_Future.html",
+   "title": "Trees for the Future",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Trees grown (nonprofit figure)",
+     "value": 450000000,
+     "unit": "trees",
+     "kind": "fact",
+     "sourceUrl": "https://trees.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Seabin.html",
+   "title": "Seabin",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Items captured in Sydney Harbour (company figure)",
+     "value": 33000000,
+     "unit": "items",
+     "kind": "fact",
+     "sourceUrl": "https://seabin.io/"
+    }
+   ],
    "missions": []
   }
  ]
