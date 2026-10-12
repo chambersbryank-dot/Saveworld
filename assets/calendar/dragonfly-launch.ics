@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Saving Planets//Launch calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dragonfly-launch-20280705@savingplanets.com
+DTSTAMP:20261012T075821Z
+DTSTART;VALUE=DATE:20280705
+DTEND;VALUE=DATE:20280706
+SUMMARY:Dragonfly launch period opens (NASA\, Falcon Heavy\, Kennedy Space Center)
+DESCRIPTION:Launch period opening date from NASA. Launch dates can slip. Source: https://science.nasa.gov/mission/dragonfly/ · More: https://www.savingplanets.com/Titan.html
+URL:https://www.savingplanets.com/Titan.html
+END:VEVENT
+END:VCALENDAR

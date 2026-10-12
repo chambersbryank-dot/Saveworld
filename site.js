@@ -263,3 +263,11 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
+// Hero background video: poster only under prefers-reduced-motion (no download, no playback).
+(function () {
+  var v = document.querySelector('.hero-video');
+  if (!v) return;
+  var mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  function apply() { if (mq && mq.matches) { v.pause(); v.removeAttribute('autoplay'); v.preload = 'none'; } else if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+  apply(); if (mq && mq.addEventListener) mq.addEventListener('change', apply);
+})();

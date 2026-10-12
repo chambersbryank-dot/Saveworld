@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Saving Planets//Launch calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mmx-launch-20261019@savingplanets.com
+DTSTAMP:20261012T075821Z
+DTSTART:20261019T194103Z
+DTEND:20261019T204103Z
+SUMMARY:MMX launch (JAXA\, H3 F10\, Tanegashima)
+DESCRIPTION:Date and time from JAXA. Launch dates can slip. Source: https://global.jaxa.jp/press/2026/08/20260820-1_e.html · More: https://www.savingplanets.com/MMX.html
+URL:https://www.savingplanets.com/MMX.html
+END:VEVENT
+END:VCALENDAR
