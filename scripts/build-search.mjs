@@ -24,7 +24,7 @@ for (const dir of ['', 'fr', 'es', 'ar']) {
 // ---------- 1) Pagefind ----------
 fs.rmSync(path.join(OUT, 'pagefind'), { recursive: true, force: true }); // drop stale hashed chunks
 const { index, errors } = await pagefind.createIndex({
-  excludeSelectors: ['nav', 'footer', 'script', 'style', '.skip-link', '.lang-switch', '[data-pagefind-ignore]'],
+  excludeSelectors: ['.share-bar', '.related-solutions', '.page-reviewed', '.diff-strip', 'nav', 'footer', 'script', 'style', '.skip-link', '.lang-switch', '[data-pagefind-ignore]'],
   forceLanguage: undefined,
 });
 if (errors.length) throw new Error(errors.join('\n'));
@@ -50,7 +50,8 @@ for (const f of files.filter(f => !f.includes('/'))) {
   let h = fs.readFileSync(path.join(SITE, f), 'utf8');
   const title = text((h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || (h.match(/<title>([^<]*)/) || [])[1] || f).split('|')[0].trim();
   const desc = decode((h.match(/name="description" content="([^"]*)"/) || [])[1] || '');
-  h = h.replace(/<head[\s\S]*?<\/head>/, '').replace(/<(script|style|nav|footer|noscript)[\s\S]*?<\/\1>/g, ' ')
+  h = h.replace(/<!-- (SHARE|RELATED|REVIEWED|DIFF):START -->[\s\S]*?<!-- \1:END -->/g, ' ') // Batch A UI blocks: not page content
+       .replace(/<head[\s\S]*?<\/head>/, '').replace(/<(script|style|nav|footer|noscript)[\s\S]*?<\/\1>/g, ' ')
        .replace(/<[^>]*data-pagefind-ignore[^>]*>/g, ' ');
   const blocks = [...h.matchAll(/<(h2|h3|p|li|td|blockquote)[^>]*>([\s\S]*?)<\/\1>/g)].map(m => text(m[2])).filter(t => t.length > 25);
   const kind = HUBS.test(f) ? 'hub' : GENERAL.test(f) ? 'page' : 'solution';

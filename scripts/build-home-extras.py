@@ -58,12 +58,7 @@ AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="v
   '<source src="assets/videos/savingplanets-ad-v2.mp4" type="video/mp4"><a href="assets/videos/savingplanets-ad-v2.mp4">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">SI-generated visuals by Saving Planets</span></figcaption></figure></section>')
 s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
-w, h = dims('assets/videos/channel-intro.mp4')
-INTRO = ('<section class="sp-video" id="channel-intro" aria-labelledby="intro-title"><h2 id="intro-title">Our Channel Intro</h2>'
-  f'<figure class="sp-video-fig"><video controls playsinline preload="none" poster="assets/videos/channel-intro.jpg" width="{w}" height="{h}">'
-  '<source src="assets/videos/channel-intro.mp4" type="video/mp4"><a href="assets/videos/channel-intro.mp4">Download the video</a></video>'
-  f'<figcaption class="photo-credit">{CAP}</figcaption></figure></section>')
-s = s.replace('<!-- SOURCES:START -->', block('VIDEO2', INTRO) + '<!-- SOURCES:START -->', 1)
+# (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
 open('About.html', 'w', encoding='utf-8').write(s)
 
 # ---- Planet Scoreboard (figures already on the site, each verified at its source) ----
