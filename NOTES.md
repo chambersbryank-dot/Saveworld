@@ -21,6 +21,7 @@
 - **SEO** (fc2a4f5, 46117d7): JSON-LD via scripts/seo-jsonld.py (Article+citations on solutions, CollectionPage hubs, Org+WebSite SearchAction, DefinedTermSet, LearningResource; no person names); robots.txt with Sitemap + disallows.
 - **Organic discovery plan** (0dffe5a): docs/organic-discovery-plan.md. Tech SEO is sufficient; missing = verification + IndexNow wiring.
 - Site review: distinctive combination, not "the only one" — claim the combination, never uniqueness.
+- **Video hook (Oct 13, owner voice session):** Thank-you/updates video (education features, 22 new updates) opens with "We heard your feedback, and we took action." Captions on, no text overlay, so viewers see the new education features. Recycle existing clips, no new footage. Target ~30s, tonight or this week. Chief of Staff drafts script when owner is ready.
 
 ## Next / Open
 **User to-dos**
