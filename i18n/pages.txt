@@ -108,3 +108,15 @@ Solutions.html
 Glossary.html
 Teachers.html
 Sitemap.html
+Klamath_River_Dam_Removal.html
+Elwha_River_Restoration.html
+Living_Lands_and_Waters.html
+American_Rivers.html
+Lake_Erie_Algal_Bloom_Forecast.html
+Alliance_for_the_Great_Lakes_Adopt_a_Beach.html
+Global_Forest_Watch.html
+Rainforest_Connection.html
+One_Tree_Planted.html
+Global_Fishing_Watch.html
+TEMPO.html
+Zero_Debris_Charter.html

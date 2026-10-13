@@ -15,25 +15,33 @@
   "sig": "9b5d8535d59e",
   "date": "2026-10-12"
  },
+ "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
+  "sig": "61a64e4ef360",
+  "date": "2026-10-13"
+ },
  "Amazon_Rainy_Season.html": {
   "sig": "47c59476a8ef",
   "date": "2026-10-12"
+ },
+ "American_Rivers.html": {
+  "sig": "a6c80227bb3a",
+  "date": "2026-10-13"
  },
  "Artemis_II.html": {
   "sig": "92193a89b03e",
   "date": "2026-10-12"
  },
  "Astroscale.html": {
-  "sig": "4d6048bab200",
-  "date": "2026-10-12"
+  "sig": "971dda02893b",
+  "date": "2026-10-13"
  },
  "Atmospheric_Drag.html": {
   "sig": "4d930845ba6d",
   "date": "2026-10-12"
  },
  "Beavers_River_Engineers.html": {
-  "sig": "1ab1cf7a59f9",
-  "date": "2026-10-12"
+  "sig": "8590f64a2b87",
+  "date": "2026-10-13"
  },
  "Billion_Oyster_Project.html": {
   "sig": "d70983240f5e",
@@ -64,8 +72,8 @@
   "date": "2026-10-11"
  },
  "EOS-06.html": {
-  "sig": "11d69b5d066b",
-  "date": "2026-10-12"
+  "sig": "66c4a5c00d23",
+  "date": "2026-10-13"
  },
  "ESCAPADE.html": {
   "sig": "7e7be9f51fbd",
@@ -74,6 +82,10 @@
  "EarthCARE.html": {
   "sig": "8963ce980166",
   "date": "2026-10-12"
+ },
+ "Elwha_River_Restoration.html": {
+  "sig": "2029fee08cdf",
+  "date": "2026-10-13"
  },
  "Europa_Clipper.html": {
   "sig": "47f600e98f18",
@@ -88,8 +100,8 @@
   "date": "2026-10-12"
  },
  "GOES-19.html": {
-  "sig": "156a0997a0c6",
-  "date": "2026-10-12"
+  "sig": "5b66b83bc00b",
+  "date": "2026-10-13"
  },
  "GOSAT-GW.html": {
   "sig": "333665431e35",
@@ -98,6 +110,14 @@
  "GRACE-FO.html": {
   "sig": "ea7294711c91",
   "date": "2026-10-12"
+ },
+ "Global_Fishing_Watch.html": {
+  "sig": "34960c63e746",
+  "date": "2026-10-13"
+ },
+ "Global_Forest_Watch.html": {
+  "sig": "02892467c789",
+  "date": "2026-10-13"
  },
  "Great_Bubble_Barrier.html": {
   "sig": "ca9f450a810d",
@@ -139,6 +159,14 @@
   "sig": "65c779bbb3ad",
   "date": "2026-10-12"
  },
+ "Klamath_River_Dam_Removal.html": {
+  "sig": "196dc4951f0b",
+  "date": "2026-10-13"
+ },
+ "Lake_Erie_Algal_Bloom_Forecast.html": {
+  "sig": "3ab0ac76d2ea",
+  "date": "2026-10-13"
+ },
  "Lake_Plastic_Recovery.html": {
   "sig": "bb09a5b9cc03",
   "date": "2026-10-10"
@@ -152,12 +180,16 @@
   "date": "2026-10-12"
  },
  "Life_Terra.html": {
-  "sig": "180545466b45",
-  "date": "2026-10-12"
+  "sig": "da1061b4d945",
+  "date": "2026-10-13"
  },
  "LignoSat.html": {
   "sig": "d368264961a8",
   "date": "2026-10-12"
+ },
+ "Living_Lands_and_Waters.html": {
+  "sig": "0fda9f61ce0e",
+  "date": "2026-10-13"
  },
  "MMX.html": {
   "sig": "81d9b575576d",
@@ -207,6 +239,10 @@
   "sig": "7645a220b566",
   "date": "2026-10-12"
  },
+ "One_Tree_Planted.html": {
+  "sig": "c98e5b149706",
+  "date": "2026-10-13"
+ },
  "Orbital_Data_Centers.html": {
   "sig": "1f06e8a2f283",
   "date": "2026-10-12"
@@ -235,6 +271,10 @@
   "sig": "27958148e123",
   "date": "2026-10-12"
  },
+ "Rainforest_Connection.html": {
+  "sig": "4b8a7d6a3e3f",
+  "date": "2026-10-13"
+ },
  "Ramses.html": {
   "sig": "8942a48adb79",
   "date": "2026-10-12"
@@ -256,8 +296,8 @@
   "date": "2026-10-12"
  },
  "Salt_Marshes.html": {
-  "sig": "559904b5cba3",
-  "date": "2026-10-12"
+  "sig": "8675ff37c020",
+  "date": "2026-10-13"
  },
  "Seabin.html": {
   "sig": "45a7dfff4404",
@@ -295,6 +335,10 @@
   "sig": "ee6a97e35a1b",
   "date": "2026-10-10"
  },
+ "TEMPO.html": {
+  "sig": "7e91fa3f0a1d",
+  "date": "2026-10-13"
+ },
  "TRACERS.html": {
   "sig": "265d25d55e8b",
   "date": "2026-10-12"
@@ -304,8 +348,8 @@
   "date": "2026-10-12"
  },
  "Terraformation.html": {
-  "sig": "dea1f8a7b61a",
-  "date": "2026-10-10"
+  "sig": "dcafbdd90d1d",
+  "date": "2026-10-13"
  },
  "Three_Shields.html": {
   "sig": "5c3895342a62",
@@ -334,5 +378,9 @@
  "Webb_2024_YR4.html": {
   "sig": "6deebe9d39c0",
   "date": "2026-10-12"
+ },
+ "Zero_Debris_Charter.html": {
+  "sig": "96a6b877dbf3",
+  "date": "2026-10-13"
  }
 }

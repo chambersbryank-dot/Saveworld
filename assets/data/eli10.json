@@ -1,0 +1,63 @@
+{
+ "_about": "Simple-language Explain Like I am 10 overrides (scripts/build-batch-b.py).",
+ "Klamath_River_Dam_Removal.html": [
+  "Dams are walls across rivers. On the Klamath River, four big dams stopped salmon from swimming upstream for about 100 years.",
+  "In 2024 all four dams were taken out.",
+  "Now salmon can swim to more than 400 miles of river again, and people are planting new plants where the old lakes were."
+ ],
+ "Elwha_River_Restoration.html": [
+  "The Elwha River had two dams that stopped salmon from swimming home.",
+  "Between 2011 and 2014 both dams were taken down.",
+  "Sand and gravel stuck behind the dams washed down the river and helped rebuild the beach, and the river runs free again."
+ ],
+ "Living_Lands_and_Waters.html": [
+  "Living Lands & Waters is a team that lives on a big boat called a barge.",
+  "They travel down rivers and pick up trash with help from volunteers.",
+  "They have picked up more than 14 million pounds of trash and planted millions of trees."
+ ],
+ "American_Rivers.html": [
+  "American Rivers is a group that helps take out old dams that are not needed anymore.",
+  "When a dam comes out, fish can swim up the river again.",
+  "In 2025, 100 dams came out in the U.S., freeing almost 5,000 miles of river."
+ ],
+ "Lake_Erie_Algal_Bloom_Forecast.html": [
+  "Sometimes tiny green living things called algae grow so much in Lake Erie that the water turns green.",
+  "Some of this algae makes poison that can get into drinking water.",
+  "NOAA watches the lake from space and from boats and warns people where the bad water is, like a weather report."
+ ],
+ "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": [
+  "Adopt-a-Beach is when people go to a beach on the Great Lakes and pick up trash.",
+  "Most of the trash they find is plastic.",
+  "They also write down what they find, so scientists can learn where the trash comes from."
+ ],
+ "Global_Forest_Watch.html": [
+  "Global Forest Watch is a free map of the world's forests made from satellite pictures.",
+  "When trees are cut down, the map sends an alert.",
+  "People who live in forests use the alerts to stop illegal cutting fast."
+ ],
+ "Rainforest_Connection.html": [
+  "Rainforest Connection puts listening boxes high up in trees.",
+  "The boxes use the sun for power and a computer that can tell when it hears a chainsaw.",
+  "When it hears one, a ranger gets a message on a phone and can go stop the cutting."
+ ],
+ "One_Tree_Planted.html": [
+  "One Tree Planted is a group that plants trees all over the world.",
+  "They work with local helpers and check on the trees for three years to make sure they grow.",
+  "They have planted more than 171 million trees in 84 countries."
+ ],
+ "Global_Fishing_Watch.html": [
+  "Big fishing ships sail all over the ocean, and many of them are hard to see.",
+  "Global Fishing Watch uses pictures from space and smart computers to find them.",
+  "They put the map online for free, so everyone can see where fishing happens and protect the ocean."
+ ],
+ "TEMPO.html": [
+  "TEMPO is a space tool that checks how dirty the air is.",
+  "It stays above the same spot on Earth and looks at North America every hour while the sun is up.",
+  "This helps warn people on bad air days so they can stay safe."
+ ],
+ "Zero_Debris_Charter.html": [
+  "Space junk is old satellites and broken pieces still flying around Earth.",
+  "The Zero Debris Charter is a promise to stop making new space junk by 2030.",
+  "Many space companies and countries signed it so useful satellites can stay safe."
+ ]
+}

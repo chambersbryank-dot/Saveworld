@@ -894,6 +894,212 @@
     ],
     "def": "أداة تجمع الضوء (أو طاقة أخرى) لرؤية الأشياء البعيدة بوضوح أكبر."
    }
+  },
+  {
+   "id": "sediment",
+   "en": {
+    "term": "Sediment",
+    "match": [
+     "sediment"
+    ],
+    "def": "Sand, mud and gravel carried by water that settles on river beds, lake bottoms and beaches."
+   },
+   "fr": {
+    "term": "Sédiments",
+    "match": [
+     "sédiments",
+     "sédiment"
+    ],
+    "def": "Sable, boue et gravier transportés par l'eau, qui se déposent au fond des rivières, des lacs et sur les plages."
+   },
+   "es": {
+    "term": "Sedimento",
+    "match": [
+     "sedimentos",
+     "sedimento"
+    ],
+    "def": "Arena, lodo y grava que arrastra el agua y que se depositan en el fondo de ríos, lagos y en las playas."
+   },
+   "ar": {
+    "term": "الرواسب",
+    "match": [
+     "الرواسب",
+     "رواسب"
+    ],
+    "def": "رمل وطين وحصى تحملها المياه وتترسب في قيعان الأنهار والبحيرات وعلى الشواطئ."
+   }
+  },
+  {
+   "id": "watershed",
+   "en": {
+    "term": "Watershed",
+    "match": [
+     "watersheds",
+     "watershed"
+    ],
+    "def": "All the land where rain and snow drain into the same river or lake."
+   },
+   "fr": {
+    "term": "Bassin versant",
+    "match": [
+     "bassins versants",
+     "bassin versant"
+    ],
+    "def": "Toute la zone de terre où la pluie et la neige s'écoulent vers la même rivière ou le même lac."
+   },
+   "es": {
+    "term": "Cuenca",
+    "match": [
+     "cuencas",
+     "cuenca"
+    ],
+    "def": "Toda la tierra desde la que la lluvia y la nieve escurren hacia el mismo río o lago."
+   },
+   "ar": {
+    "term": "مستجمع المياه",
+    "match": [
+     "مستجمعات المياه",
+     "مستجمع المياه"
+    ],
+    "def": "كل الأرض التي تنصرف منها مياه الأمطار والثلوج إلى النهر أو البحيرة نفسها."
+   }
+  },
+  {
+   "id": "algal-bloom",
+   "en": {
+    "term": "Harmful algal bloom",
+    "match": [
+     "harmful algal bloom",
+     "bloom"
+    ],
+    "def": "When tiny water plants called algae grow out of control. Some make toxins that can harm people, pets and fish."
+   },
+   "fr": {
+    "term": "Prolifération d'algues nuisibles",
+    "match": [
+     "prolifération d'algues",
+     "efflorescence"
+    ],
+    "def": "Quand de minuscules plantes aquatiques, les algues, se multiplient sans contrôle. Certaines produisent des toxines dangereuses pour les gens, les animaux et les poissons."
+   },
+   "es": {
+    "term": "Floración de algas nocivas",
+    "match": [
+     "floración de algas",
+     "floración"
+    ],
+    "def": "Cuando pequeñas plantas acuáticas llamadas algas crecen sin control. Algunas producen toxinas que dañan a personas, mascotas y peces."
+   },
+   "ar": {
+    "term": "تكاثر الطحالب الضارة",
+    "match": [
+     "تكاثر الطحالب",
+     "ازدهار الطحالب"
+    ],
+    "def": "عندما تنمو نباتات مائية صغيرة تسمى الطحالب بلا سيطرة. بعضها يفرز سمومًا تضر الناس والحيوانات الأليفة والأسماك."
+   }
+  },
+  {
+   "id": "reforestation",
+   "en": {
+    "term": "Reforestation",
+    "match": [
+     "reforestation"
+    ],
+    "def": "Planting trees where a forest was lost so it can grow back."
+   },
+   "fr": {
+    "term": "Reboisement",
+    "match": [
+     "reboisement",
+     "reforestation"
+    ],
+    "def": "Planter des arbres là où une forêt a disparu pour qu'elle repousse."
+   },
+   "es": {
+    "term": "Reforestación",
+    "match": [
+     "reforestación"
+    ],
+    "def": "Plantar árboles donde se perdió un bosque para que vuelva a crecer."
+   },
+   "ar": {
+    "term": "إعادة التشجير",
+    "match": [
+     "إعادة التشجير",
+     "التشجير"
+    ],
+    "def": "زراعة الأشجار في مكان فُقدت فيه غابة حتى تنمو من جديد."
+   }
+  },
+  {
+   "id": "geostationary",
+   "en": {
+    "term": "Geostationary orbit",
+    "match": [
+     "geostationary orbit",
+     "geostationary"
+    ],
+    "def": "A high orbit, about 22,000 miles up, where a satellite moves with Earth's spin and stays over the same spot."
+   },
+   "fr": {
+    "term": "Orbite géostationnaire",
+    "match": [
+     "orbite géostationnaire",
+     "géostationnaire"
+    ],
+    "def": "Une orbite haute, à environ 36 000 km, où un satellite tourne avec la Terre et reste au-dessus du même endroit."
+   },
+   "es": {
+    "term": "Órbita geoestacionaria",
+    "match": [
+     "órbita geoestacionaria",
+     "geoestacionaria"
+    ],
+    "def": "Una órbita alta, a unos 36.000 km, donde un satélite gira con la Tierra y se queda sobre el mismo lugar."
+   },
+   "ar": {
+    "term": "المدار الثابت بالنسبة للأرض",
+    "match": [
+     "المدار الثابت بالنسبة للأرض",
+     "مدار ثابت"
+    ],
+    "def": "مدار مرتفع على بعد نحو 36 ألف كيلومتر، يدور فيه القمر الصناعي مع دوران الأرض فيبقى فوق المكان نفسه."
+   }
+  },
+  {
+   "id": "space-debris",
+   "en": {
+    "term": "Space debris",
+    "match": [
+     "space debris",
+     "space junk"
+    ],
+    "def": "Old satellites, rocket parts and broken pieces left in orbit that no longer do anything useful."
+   },
+   "fr": {
+    "term": "Débris spatiaux",
+    "match": [
+     "débris spatiaux"
+    ],
+    "def": "Vieux satellites, morceaux de fusées et fragments laissés en orbite qui ne servent plus à rien."
+   },
+   "es": {
+    "term": "Basura espacial",
+    "match": [
+     "basura espacial",
+     "desechos espaciales"
+    ],
+    "def": "Satélites viejos, partes de cohetes y fragmentos que quedan en órbita y ya no sirven."
+   },
+   "ar": {
+    "term": "الحطام الفضائي",
+    "match": [
+     "الحطام الفضائي",
+     "النفايات الفضائية"
+    ],
+    "def": "أقمار صناعية قديمة وأجزاء صواريخ وقطع مكسورة تبقى في المدار ولم تعد مفيدة."
+   }
   }
  ]
 }
