@@ -18,3 +18,6 @@ python3 scripts/add-gtag.py
 python3 scripts/i18n-sitemap.py
 python3 scripts/seo-audit.py | tail -3
 node scripts/i18n-check.js | tail -3
+# Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
+[ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
+node scripts/build-search.mjs

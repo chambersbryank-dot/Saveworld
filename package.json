@@ -1,0 +1,10 @@
+{
+  "name": "savingplanets-search-build",
+  "private": true,
+  "description": "Build-time tooling for site search (Pagefind keyword index + semantic vector index). Not shipped to the site.",
+  "scripts": { "build:search": "node scripts/build-search.mjs" },
+  "devDependencies": {
+    "pagefind": "1.5.2",
+    "@huggingface/transformers": "3.7.6"
+  }
+}

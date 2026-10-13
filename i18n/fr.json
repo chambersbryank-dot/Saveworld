@@ -2395,5 +2395,7 @@
 "We use Google Analytics for anonymous visit statistics. Until you click Accept on the consent banner, it runs in a restricted mode that sets no analytics cookies; Decline keeps it that way.": "Nous utilisons Google Analytics pour des statistiques de visite anonymes. Tant que vous n'avez pas cliqué sur Accepter dans la bannière de consentement, il fonctionne en mode restreint sans cookies d'analyse ; si vous refusez, il reste ainsi.",
 "The full tour: every solution hub, Amazing Facts, the Live Launch Tracker, Roman and Ways to Help, in 78 seconds.": "La visite complète : chaque pôle de solutions, les Faits étonnants, le suivi des lancements en direct, Roman et Comment aider, en 78 secondes.",
 "SI-generated visuals by Saving Planets": "Visuels générés par SI, par Saving Planets",
-"Our Channel Intro": "Notre vidéo de présentation de la chaîne"
+"Our Channel Intro": "Notre vidéo de présentation de la chaîne",
+"Search powered by": "Recherche propulsée par",
+"(MIT). Smart results use the open bge-small-en-v1.5 model (MIT) via Transformers.js (Apache-2.0), running entirely in your browser.": "(MIT). Recherche par mots-clés dans toutes les langues ; les résultats intelligents (par le sens) sont disponibles en anglais et s'exécutent entièrement dans votre navigateur."
 }
