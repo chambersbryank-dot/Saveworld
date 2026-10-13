@@ -30,3 +30,8 @@ body.sol-page .sol-more a { font-weight: 700; }
 body.sol-page .photo-credit { padding: 0 1rem; }
 @media (max-width: 900px) { body.sol-page .sol-hub .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; } }
 .sol-page [hidden] { display: none !important; }
+body.sol-page .sol-hub h2 a.sol-top { font-size: 0.85rem; font-weight: 600; color: #8fb8d8; vertical-align: middle; margin-inline-start: 0.4rem; text-decoration: none; }
+body.sol-page .sol-hub h2 a.sol-top:hover { color: #4da3ff; text-decoration: underline; }
+html:has(body.sol-page) { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html:has(body.sol-page) { scroll-behavior: auto; } }
+#top { scroll-margin-top: 0; }

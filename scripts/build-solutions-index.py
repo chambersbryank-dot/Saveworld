@@ -87,7 +87,7 @@ def build():
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
         jump.append(f'<li><a href="#{sid}">{esc(name)}</a></li>')
         cards = ''.join(card(h, n, info(h), missing) for h, n in items); total += len(items)
-        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a></h2><div class="grid">{cards}</div></section>')
+        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div></section>')
     desc = f'Every Saving Planets solution in one place: {total} sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites.'
     # head: retarget Contact -> Solutions
     h = head.replace('Contact.html', OUT).replace('<title>Contact | Saving Planets</title>', '<title>Saving Planets Solutions | Saving Planets</title>')
@@ -96,12 +96,12 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Saving Planets Solutions", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012a">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012b">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     chips = ''.join(f'<button type="button" class="sol-chip">{c}</button>' for c in
                     ['ways to clean a river near me', 'how space tech helps farmers', 'protecting coasts from storms', 'junk satellites crowding orbit'])
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
-        '<section class="page-hero sol-hero"><div class="page-hero-content"><h1>Search Saving Planets</h1>'
+        '<section class="page-hero sol-hero" id="top"><div class="page-hero-content"><h1>Search Saving Planets</h1>'
         '<form class="sol-search-form" role="search" action="Solutions.html" onsubmit="return false"><label class="visually-hidden" for="sol-q">Search solutions</label>'
         '<input id="sol-q" name="q" type="search" autocomplete="off" placeholder="Try: protecting coasts from storms" aria-describedby="sol-status"></form>'
         '<p id="sol-status" class="sol-status" aria-live="polite"></p></div></section>\n'
