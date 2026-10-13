@@ -39,13 +39,12 @@ window.SP_SEARCH_STARTED = true;
     }));
   }).catch(() => {});
 
-  // hub/category label for each page, read from this page's own (translated) Solutions menu
+  // hub/category label for each result card (search/hubs.json, built from page breadcrumbs by scripts/build-search.mjs)
   const hubOf = new Map();
-  document.querySelectorAll('.solutions-menu .menu-group').forEach(g => {
-    const hub = g.querySelector('.menu-hub'); if (!hub) return;
-    hubOf.set(base(hub.getAttribute('href')), msg('hub'));
-    g.querySelectorAll('ul a').forEach(a => { const k = base(a.getAttribute('href')); if (!hubOf.has(k)) hubOf.set(k, hub.textContent.trim()); });
-  });
+  const hubsReady = fetch('/search/hubs.json').then(r => r.json()).then(d => {
+    const names = d.hubNames[lang.slice(0, 2)] || d.hubNames.en;
+    for (const [pg, hub] of Object.entries(d.hubOf)) hubOf.set(pg, pg === hub ? msg('hub') : (names[hub] || d.hubNames.en[hub]));
+  }).catch(() => {});
   function base(u) { return (u || '').replace(/[?#].*$/, '').split('/').pop(); }
 
   let pf;
@@ -86,7 +85,7 @@ window.SP_SEARCH_STARTED = true;
     if (!keepShown) shown = 0;
     if (updateUrl) history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
     if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = !!$('sp-float')?.children.length; return; }
-    const kwr = await keyword(q);
+    const kwr = await keyword(q); await hubsReady;
     if (my !== seq) return;
     const kw = await Promise.all(kwr.hits.map(x => x.data()));
     let items = kw.map(d => ({ url: norm(d.url), title: d.meta.title || d.url, html: d.excerpt }));

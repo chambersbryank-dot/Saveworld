@@ -61,6 +61,22 @@ for (const f of files.filter(f => !f.includes('/'))) {
   for (let i = 0, n = 0; i < words.length && n < 14; i += 75, n++) chunks.push({ p, t: `${title}: ` + words.slice(i, i + 90).join(' ') });
 }
 
+// ---------- hub labels for result cards: page -> hub (from each page's BreadcrumbList), hub names per language ----------
+const hubOf = {}, hubNames = { en: {}, fr: {}, es: {}, ar: {} };
+for (const f of files.filter(f => !f.includes('/'))) {
+  const h = fs.readFileSync(path.join(SITE, f), 'utf8');
+  const bc = (h.match(/"BreadcrumbList", "itemListElement": (\[[^\]]*\])/) || [])[1];
+  if (HUBS.test(f)) { hubOf[f] = f; continue; }
+  try { const items = JSON.parse(bc || '[]'); if (items.length >= 3) { const hub = path.basename(items[1].item); if (HUBS.test(hub)) hubOf[f] = hub; } } catch (e) { /* skip */ }
+}
+for (const hub of new Set(Object.values(hubOf))) for (const l of Object.keys(hubNames)) {
+  const fp = path.join(SITE, l === 'en' ? '' : l, hub); if (!fs.existsSync(fp)) continue;
+  hubNames[l][hub] = text((fs.readFileSync(fp, 'utf8').match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || hub);
+}
+fs.mkdirSync(path.join(OUT, 'search'), { recursive: true });
+fs.writeFileSync(path.join(OUT, 'search', 'hubs.json'), JSON.stringify({ hubOf, hubNames }));
+console.log(`hubs: ${Object.keys(hubOf).length} pages mapped to ${Object.keys(hubNames.en).length} hubs`);
+
 const { pipeline, env } = await import('@huggingface/transformers');
 env.cacheDir = path.resolve('.cache/hf');
 const MODEL = 'Xenova/bge-small-en-v1.5';
