@@ -13,15 +13,31 @@ window.SP_SEARCH_STARTED = true;
   const fallback = () => { window.SP_SEARCH_STARTED = false; window.SP_START_FALLBACK && window.SP_START_FALLBACK(); };
   const msg = k => { const el = document.querySelector('#sp-msg [data-k="' + k + '"]'); return el ? el.textContent : k; };
   const lang = document.documentElement.lang || 'en';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const initial = new URLSearchParams(location.search).get('q') || '';
   if (initial) input.value = initial;
 
   // example queries: link text is the query (translated with the page)
   document.querySelectorAll('.sp-examples a').forEach(a => {
     a.href = '?q=' + encodeURIComponent(a.textContent.trim());
-    a.addEventListener('click', e => { e.preventDefault(); input.value = a.textContent.trim(); input.focus(); go(); });
+    a.addEventListener('click', e => { e.preventDefault(); input.value = a.textContent.trim(); track(input.value); input.focus(); go(); });
   });
-  input.closest('form')?.addEventListener('submit', e => { e.preventDefault(); input.blur(); go(); });
+  // GA4 'search' event (gtag + Consent Mode already on every page); sent on submit and on question/example clicks
+  const track = q => { try { if (q && window.gtag) window.gtag('event', 'search', { search_term: q.slice(0, 100) }); } catch (e) { /* ignore */ } };
+  input.closest('form')?.addEventListener('submit', e => { e.preventDefault(); input.blur(); track(input.value.trim()); go(); });
+
+  // floating example questions (search/featured-questions.json, per language)
+  fetch('/search/featured-questions.json').then(r => r.json()).then(d => {
+    const box = $('sp-float'); const qs = (d[lang.slice(0, 2)] || d.en || []).slice(0, 12); if (!box) return;
+    const chip = (q, i, dup) => `<a class="sp-q sp-q${i}" href="?q=${encodeURIComponent(q)}" style="--i:${i}"${dup ? ' aria-hidden="true" tabindex="-1"' : ''}>${esc(q)}</a>`;
+    // second copy is only for the seamless marquee on narrow screens (hidden on desktop and for screen readers)
+    box.innerHTML = `<div class="sp-track">${qs.map((q, i) => chip(q, i)).join('')}<span class="sp-dup">${qs.map((q, i) => chip(q, i, true)).join('')}</span></div>`;
+    if (qs.length && empty && !input.value.trim()) empty.hidden = true; // floating questions replace the starter chips
+    box.querySelectorAll('a').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault(); input.value = a.textContent; track(a.textContent); go();
+      $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    }));
+  }).catch(() => {});
 
   // hub/category label for each page, read from this page's own (translated) Solutions menu
   const hubOf = new Map();
@@ -43,11 +59,10 @@ window.SP_SEARCH_STARTED = true;
   function startSemantic() {
     if (semLoading || !semantic || !semantic.supports(lang)) return;
     if (note) note.textContent = msg('loading');
-    semLoading = semantic.load().then(e => { sem = e; if (note) note.textContent = msg('smart'); if (input.value.trim()) run(false); })
+    semLoading = semantic.load().then(e => { sem = e; if (note) note.textContent = msg('smart'); if (input.value.trim() && lastItems.length) run(false, true); })
       .catch(e => { console.info('Semantic layer unavailable', e); if (note) note.textContent = ''; });
   }
 
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const norm = u => u.replace(/^https?:\/\/[^/]+/, '').replace(/[?#].*$/, '');
   const STOP = new Set('a an and are as at be been but by can do does for from had has have how i i\'m im in into is it its may me my of on or our so such that the their them there these they this to too was we were what when where which who why will with would you your about also any some very just get help people stay away years ago because interested'.split(' '));
   const keyTerms = q => [...new Set(q.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, ' ').split(/\s+/).filter(w => w.length > 2 && !STOP.has(w) && !/^\d+$/.test(w)))].slice(0, 8);
@@ -66,10 +81,11 @@ window.SP_SEARCH_STARTED = true;
     return { partial: hits.length > 0, hits };
   }
 
-  async function run(updateUrl = true) {
+  async function run(updateUrl = true, keepShown = false) {
     const q = input.value.trim(), my = ++seq;
+    if (!keepShown) shown = 0;
     if (updateUrl) history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
-    if (!q) { list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = false; return; }
+    if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = !!$('sp-float')?.children.length; return; }
     const kwr = await keyword(q);
     if (my !== seq) return;
     const kw = await Promise.all(kwr.hits.map(x => x.data()));
@@ -88,18 +104,29 @@ window.SP_SEARCH_STARTED = true;
       items = [...score.entries()].sort((a, b) => b[1] - a[1]).map(([u]) => info.get(u));
       usedSem = hits.length > 0;
     }
-    items = items.slice(0, 15);
+    items = items.slice(0, 20);
     if (empty) empty.hidden = items.length > 0;
+    lastItems = items; shown = Math.max(shown, 5);
+    paint();
+    status.textContent = !items.length ? msg('none')
+      : items.length + ' ' + msg(items.length === 1 ? 'result' : 'results') + (kwr.partial && !usedSem ? ' · ' + msg('partial') : '');
+  }
+  let lastItems = [], shown = 0;
+  const more = $('sp-more'), refine = $('sp-refine');
+  more?.addEventListener('click', () => { shown += 5; paint(); });
+  function paint() {
+    const items = lastItems.slice(0, shown);
+    if (more) more.hidden = lastItems.length <= shown;
+    if (refine) refine.hidden = !lastItems.length;
     list.innerHTML = items.map(it => {
       const hub = hubOf.get(base(it.url));
       return `<li class="sp-card"><a href="${esc(it.url)}">${hub ? `<span class="sp-hub">${esc(hub)}</span>` : ''}<span class="sp-title">${esc(it.title.split(' | ')[0])}</span><span class="sp-excerpt">${it.html || ''}</span></a></li>`;
     }).join('');
-    status.textContent = !items.length ? msg('none')
-      : items.length + ' ' + msg(items.length === 1 ? 'result' : 'results') + (kwr.partial && !usedSem ? ' · ' + msg('partial') : '');
   }
 
   let t = 0;
-  function go() { startSemantic(); clearTimeout(t); run(); }
-  input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(go, 160); });
+  function go() { if (!window.SP_SEARCH_ACTIVE) return; startSemantic(); clearTimeout(t); run(); }
+  // no live results while typing: search runs on Enter/Search, question/chip clicks and ?q= links
+  input.addEventListener('focus', () => { if (window.SP_SEARCH_ACTIVE) startSemantic(); }, { once: true }); // quiet model preload
   if (input.value.trim()) go();
 })();

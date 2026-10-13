@@ -1,0 +1,59 @@
+{
+  "_about": "Floating example questions on Search.html. Edit freely; keep 8-12 per language, same order across languages. They model good question framing (specific goal, context, who/where, constraints, follow-up). Not based on real query data; never label them 'popular'.",
+  "en": [
+    "How do satellites help warn coastal towns about rising seas?",
+    "What can my family do this weekend to keep trash out of our local river?",
+    "Which satellites track plankton and ocean health from space, and how?",
+    "Compare two ways to protect coral reefs for people and wildlife",
+    "How do mangroves and salt marshes protect coastal communities from storms?",
+    "Which tree-planting groups work with farmers, and how can I support one?",
+    "How do telescopes spot an asteroid headed for Earth, and how could we deflect it?",
+    "Which space missions are cleaning up junk satellites in orbit, and how?",
+    "How do solar storms affect power grids, and which missions give early warning?",
+    "How can volunteers join a lake cleanup and pull plastic out of the water?",
+    "Explain how seagrass and kelp forests store carbon, in simple terms",
+    "Which satellites spot methane plumes from space, and who uses the data?"
+  ],
+  "fr": [
+    "Comment les satellites aident-ils à alerter les villes côtières face à la montée des mers ?",
+    "Que peut faire ma famille ce week-end pour garder les déchets hors de notre rivière ?",
+    "Quels satellites suivent le plancton et la santé des océans depuis l'espace, et comment ?",
+    "Comparez deux façons de protéger les récifs coralliens pour les humains et la faune",
+    "Comment les mangroves et les marais salés protègent-ils les côtes des tempêtes ?",
+    "Quels groupes de plantation d'arbres travaillent avec des agriculteurs, et comment les soutenir ?",
+    "Comment les télescopes repèrent-ils un astéroïde qui se dirige vers la Terre ?",
+    "Quelles missions spatiales nettoient les débris de satellites en orbite, et comment ?",
+    "Comment les tempêtes solaires affectent-elles les réseaux électriques, et quelles missions alertent ?",
+    "Comment des bénévoles peuvent-ils nettoyer un lac et retirer le plastique ?",
+    "Expliquez simplement comment les herbiers marins et les forêts de varech stockent le carbone",
+    "Quels satellites repèrent les panaches de méthane depuis l'espace ?"
+  ],
+  "es": [
+    "¿Cómo ayudan los satélites a alertar a las ciudades costeras sobre la subida del mar?",
+    "¿Qué puede hacer mi familia este fin de semana para mantener la basura fuera de nuestro río?",
+    "¿Qué satélites vigilan el plancton y la salud del océano desde el espacio, y cómo?",
+    "Compara dos formas de proteger los arrecifes de coral para las personas y la fauna",
+    "¿Cómo protegen los manglares y las marismas a las costas de las tormentas?",
+    "¿Qué grupos que plantan árboles trabajan con agricultores, y cómo puedo apoyarlos?",
+    "¿Cómo detectan los telescopios un asteroide que se dirige a la Tierra?",
+    "¿Qué misiones espaciales limpian la basura de satélites en órbita, y cómo?",
+    "¿Cómo afectan las tormentas solares a las redes eléctricas, y qué misiones alertan?",
+    "¿Cómo pueden los voluntarios limpiar un lago y sacar el plástico del agua?",
+    "Explica de forma sencilla cómo las praderas marinas y los bosques de kelp almacenan carbono",
+    "¿Qué satélites detectan columnas de metano desde el espacio?"
+  ],
+  "ar": [
+    "كيف تساعد الأقمار الصناعية في تحذير المدن الساحلية من ارتفاع مستوى البحر؟",
+    "ماذا يمكن لعائلتي أن تفعل في عطلة نهاية الأسبوع لإبعاد النفايات عن نهرنا؟",
+    "ما الأقمار الصناعية التي تراقب العوالق وصحة المحيط من الفضاء، وكيف؟",
+    "قارن بين طريقتين لحماية الشعاب المرجانية للناس والحياة البرية",
+    "كيف تحمي غابات المانغروف والمستنقعات المالحة السواحل من العواصف؟",
+    "ما مجموعات زراعة الأشجار التي تعمل مع المزارعين، وكيف أدعمها؟",
+    "كيف ترصد التلسكوبات كويكبًا متجهًا نحو الأرض؟",
+    "ما المهمات الفضائية التي تنظف حطام الأقمار الصناعية في المدار، وكيف؟",
+    "كيف تؤثر العواصف الشمسية على شبكات الكهرباء، وما المهمات التي تحذر منها؟",
+    "كيف يمكن للمتطوعين تنظيف بحيرة وإزالة البلاستيك من الماء؟",
+    "اشرح ببساطة كيف تخزن الأعشاب البحرية وغابات عشب البحر الكربون",
+    "ما الأقمار الصناعية التي ترصد أعمدة الميثان من الفضاء؟"
+  ]
+}

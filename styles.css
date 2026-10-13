@@ -1030,3 +1030,41 @@ body.sp-search-page .sp-hero h1 { text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
 #results.sp-results li { margin: 0; }
 .sp-excerpt { font-weight: 400; }
 .sp-hub, .sp-title { font-weight: 700; }
+
+/* ===== Search hero: floating example questions (search/featured-questions.json) ===== */
+.sp-float { overflow: hidden; margin: 1rem -1.5rem 0; padding: 0.3rem 0 0.6rem; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.sp-track, .sp-dup { display: flex; gap: 0.5rem; width: max-content; }
+.sp-dup { padding-inline-start: 0.5rem; }
+.sp-track { animation: sp-marquee 110s linear infinite; }
+html[dir="rtl"] .sp-track { animation-name: sp-marquee-rtl; }
+.sp-float:hover .sp-track, .sp-float:focus-within .sp-track, .sp-float:active .sp-track { animation-play-state: paused; }
+@keyframes sp-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes sp-marquee-rtl { from { transform: translateX(0); } to { transform: translateX(50%); } }
+@media (prefers-reduced-motion: reduce) { .sp-float { -webkit-mask-image: none; mask-image: none; } .sp-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; padding: 0 1.5rem; } .sp-dup { display: none; } }
+.sp-float::-webkit-scrollbar { display: none; }
+.sp-q { flex: none; max-width: 17rem; white-space: normal; text-align: start; font-size: 0.85rem; line-height: 1.35; font-weight: 500; color: #e8f4ff; text-decoration: none; padding: 0.5rem 0.85rem; border-radius: 14px; background: rgba(8,20,45,0.62); border: 1px solid rgba(120,190,255,0.45); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-shadow: 0 4px 16px rgba(0,0,0,0.35); transition: background .2s, border-color .2s; }
+.sp-q:hover, .sp-q:focus-visible { background: rgba(0,120,200,0.75); border-color: #9fd4ff; color: #fff; }
+.sp-float-note { position: relative; z-index: 1; margin: 0.6rem auto 0; max-width: 46rem; font-size: 0.75rem; line-height: 1.4; color: rgba(232,244,255,0.85); text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
+@media (min-width: 1200px) {
+  body.toc-sub.sp-search-page .page-hero.sp-hero { min-height: 640px; }
+  body.sp-search-page .sp-hero .page-hero-content { position: static; }
+  body.sp-search-page .sp-hero h1, body.sp-search-page .sp-hero .sp-search-form, body.sp-search-page .sp-hero .sp-float-note { position: relative; z-index: 2; }
+  .sp-float { position: absolute; inset: 0; z-index: 1; margin: 0; padding: 0; overflow: visible; display: block; pointer-events: none; -webkit-mask-image: none; mask-image: none; }
+  .sp-track { display: contents; animation: none; } .sp-dup { display: none; }
+  .sp-q { position: absolute; width: 15.5rem; max-width: none; pointer-events: auto; animation: sp-bob calc(9s + var(--i) * 0.7s) ease-in-out calc(var(--i) * -1.3s) infinite alternate; }
+  .sp-float:hover .sp-q, .sp-q:focus-visible { animation-play-state: paused; }
+  /* 12 slots around the centred title + bar (centre band left clear) */
+  .sp-q0 { left: 3%;  top: 20%; } .sp-q1 { left: 4%;  top: 42%; } .sp-q2 { left: 2.5%; top: 64%; }
+  .sp-q3 { right: 3%; top: 20%; } .sp-q4 { right: 4%; top: 42%; } .sp-q5 { right: 2.5%; top: 64%; }
+  .sp-q6 { left: 21%; top: 82%; } .sp-q7 { left: 42%; top: 84%; } .sp-q8 { right: 21%; top: 82%; }
+  .sp-q9 { left: 22.5%; top: 17%; } .sp-q10 { right: 22.5%; top: 17%; } .sp-q11 { left: 42%; top: 14%; }
+  html[dir="rtl"] .sp-q { text-align: right; }
+}
+@keyframes sp-bob { 0% { transform: translate(0, 0); } 50% { transform: translate(6px, -8px); } 100% { transform: translate(-5px, 6px); } }
+@media (prefers-reduced-motion: reduce) { .sp-q { animation: none !important; } }
+.sp-more { display: block; margin: 1rem auto 0; font: inherit; font-weight: 700; padding: 0.6rem 1.4rem; border-radius: 999px; border: 2px solid #009cde; background: transparent; color: #009cde; cursor: pointer; }
+.sp-more:hover { background: rgba(0,156,222,0.12); }
+.sp-more[hidden], .sp-refine[hidden] { display: none; }
+html.dark .sp-more { color: #4da3ff; border-color: #4da3ff; }
+.sp-refine { margin: 1rem 0 0; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+html.dark .sp-refine { color: #e8eef5; }
