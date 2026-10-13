@@ -152,3 +152,12 @@ No page errors in any run.
 - DSCOVR/EPIC does not reach the top 12 for the sea-level/tsunami query, because "warning" pulls space-weather pages. Options: add a short "what it warns about" summary to the solution pages' meta descriptions, or move to bge-base or a multilingual model (multilingual-e5-small would also cover fr/es/ar).
 - Keyword fallback for 0-hit long queries: retry Pagefind with the 2–3 rarest terms.
 - Optional header search box (inline input) on desktop instead of the pill link. Optional live analytics of top queries (GA4 event, no query text stored).
+
+### Search page cleanup - Oct 12 (evening)
+- Hero: the only heading is "Search Saving Planets" (translated), with the search bar directly under it. The background is assets/search-hero.webp/.jpg, 76/131 KB, made by /tmp/mkhero.py-style compositing. Credit: "original composite by SI and biological SI partner; Earth NASA/NOAA DSCOVR EPIC; Earth limb NASA (ISS); nebula, stars and planet generated". It has a dark overlay and a 60s drift animation, turned off when the visitor's device is set to reduce motion.
+- Results are cards: hub label (read from the page's own translated Solutions menu), title, 2-line excerpt. Example-query chips show when the box is empty or nothing matches. A status line notes when smart results load and turn on.
+- The old list search is now fallback-only: it starts only if search-ui.js fails or hasn't started within 4s. This fixes the race where old results showed first.
+- Long queries with no every-word hit retry Pagefind with key terms (stopwords removed), and the status says so.
+- `?q=` deep links work, and the address bar keeps the current query.
+- Newsletter footer block is suppressed on Search.html via `<body data-no-newsletter>` (site.js). It still shows on all other pages.
+- Screenshots: /workspace/search-test/ (before-*, after-*).
