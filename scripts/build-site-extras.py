@@ -9,7 +9,7 @@ def wr(f, s):
     if rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
 esc = lambda s: html.escape(s, quote=True)
-V = '20261013b'
+V = '20261013c'
 CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),
@@ -50,8 +50,8 @@ def hubs():
 def footer_map(hl):
     hub_links = ''.join(f'<li><a href="{f}">{esc(n)}</a></li>' for f, n, _ in hl)
     key_links = ''.join(f'<li><a href="{f}">{n}</a></li>' for f, n in KEY)
-    return ('<!-- FOOTER-MAP:START --><nav class="footer-map" aria-label="Site map"><div class="fm-col"><h2 class="fm-h">Hubs</h2><ul>' + hub_links +
-            '</ul></div><div class="fm-col"><h2 class="fm-h">Explore</h2><ul>' + key_links + '</ul></div></nav><!-- FOOTER-MAP:END -->')
+    return ('<!-- FOOTER-MAP:START --><div class="footer-map" role="navigation" aria-label="Site map"><div class="fm-col"><h2 class="fm-h">Hubs</h2><ul>' + hub_links +
+            '</ul></div><div class="fm-col"><h2 class="fm-h">Explore</h2><ul>' + key_links + '</ul></div></div><!-- FOOTER-MAP:END -->')
 
 def sitemap_page(hl):
     tpl = rd('Contact.html'); head, b = tpl.split('<body', 1)
