@@ -12,6 +12,7 @@
 
 ## Last 24h (Oct 12–13 HST)
 - **12 solution pages** (Oct 13, approved A–L): Klamath_River_Dam_Removal, Elwha_River_Restoration, Living_Lands_and_Waters, American_Rivers (Rivers); Lake_Erie_Algal_Bloom_Forecast, Alliance_for_the_Great_Lakes_Adopt_a_Beach (Lakes); Global_Forest_Watch, Rainforest_Connection, One_Tree_Planted (Forests); Global_Fishing_Watch (Ocean); TEMPO (EO); Zero_Debris_Charter (Space Disposal). en/fr/es/ar, ELI10 overrides in assets/data/eli10.json, +6 glossary terms, 7 orgs + TEMPO on Ways_to_Help. Generator: page data kept in commit msg/diff. Note: weekly-sync exits 1 at i18n-check (pre-existing missing strings) so build-search must be run by hand after it.
+- **16 more solution pages** (Oct 13, approved A–Q; I merged): BepiColombo, Psyche, EnVision, SPHEREx, Veggie_Space_Garden (Project Rawane); Hayabusa2_Torifune, Lucy, Comet_Interceptor (Planetary Defense); Sentinel-4, SARSAT (EO); Coral_IVF, Posidonia_Meadows, Whales_Ocean_Gardeners (Ocean); Justdiggit, Great_Green_Wall (Forests); River_Cleanup (Rivers). CyAN merged into Lake_Erie_Algal_Bloom_Forecast. Ways_to_Help: +Justdiggit, River Cleanup, Great Barrier Reef Foundation; NASA citizen table +Psyche, Lucy, SPHEREx, Veggie, SARSAT. GGW: no donate, UNCCD link only (AU page 404); figure corrected ~20M → ~4M ha in zone / ~18M wider (UNCCD 2020). SARSAT: 50,000+ rescues; one neutral line on 1979 co-founders incl. Russia (then USSR). Mission widgets for A–H not built.
 - **Search** (1cfa5c1 → 31aaba1): Pagefind keyword + in-browser semantic (bge-small-en) on Search.html; hero "Search Saving Planets" over ocean/Earth/nebula bg; results only on Enter, top 5 + Show more + refine hint; 12 floating best-practice questions (search/featured-questions.json — never label "popular"); `?q=` deep links; key-term retry for 0-hit long queries; newsletter block off on Search only; 2-line credits (d3c8ef3); GA4 `search` event.
 - **Solutions.html** directory (7da53ce, 3e39335, 093f635, 9b57735): hubs A–Z, 84 cards, search bar filters cards, (Top) links, left-aligned hub titles + synopsis/impact/links per hub; long nav dropdown removed (plain "Solutions" link).
 - **Batch B** (08273c6): ELI10 boxes, Glossary (27 terms) + tap definitions, homepage Start Here row, Cite This Page, teacher print sheets + Teachers.html.
@@ -24,6 +25,12 @@
 - **Video hook (Oct 13, owner voice session):** Thank-you/updates video (education features, 22 new updates) opens with "We heard your feedback, and we took action." Captions on, no text overlay, so viewers see the new education features. Recycle existing clips, no new footage. Target ~30s, tonight or this week. Chief of Staff drafts script when owner is ready.
 
 ## Next / Open
+**Next priorities (after current builds)**
+- (a) Interactive data visualizations: embed real climate data tools (PhET / Fluid Earth style) on Amazing Facts or the Earth Observation hub.
+- (b) Adaptive learning paths branching deeper by age (kids / teens / adults), beyond the Start Here row.
+- (c) Eco-anxiety support content after heavy topics, with "what you can actually do" reassurance.
+- (d) Choose-your-own-adventure action guide tied to Ways_to_Help, branching by role (citizen, investor, professional, consumer, role model).
+
 **User to-dos**
 - [ ] YouTube Studio: "Altered or synthetic content" = Yes on ad v2 + older SI videos (Life Terra, GRACE-FO, earlier); Postiz can't set it.
 - [ ] Pin comment "Every fact and source at savingplanets.com 🌍" on YouTube + TikTok uploads.
@@ -87,23 +94,23 @@
 **Batch 2026-10-13** (17, 6:17 AM run). Nothing built; awaiting owner yes/no. No repeats vs pages, solutions.json, prior queues. Org figures labeled as org figures.
 | ID | Candidate | Hub | Widget | Status |
 |---|---|---|---|---|
-| A | BepiColombo arrives at Mercury (ESA/JAXA; orbit 21 Nov 2026, split 9-10 Dec, science Apr 2027) | Project Rawane | Yes | PENDING |
-| B | Hayabusa2# Torifune flyby (JAXA; 5 Jul 2026, ~400 m from surface, record) | Planetary Defense | Yes, Earth swing-by Dec 2027 | PENDING |
-| C | Psyche (NASA; launched 13 Oct 2023, Mars flyby 15 May 2026, arrives Aug 2029) | Project Rawane | Yes | PENDING |
-| D | Lucy (NASA; 11 asteroids, Eurybates 11 Aug 2027) | Project Rawane / Planetary Defense | Yes | PENDING |
-| E | Comet Interceptor (ESA+JAXA; launch late 2028/early 2029) | Planetary Defense | Yes | PENDING |
-| F | EnVision (ESA Venus; launch Nov 2031) | Project Rawane | Yes | PENDING |
-| G | SPHEREx (NASA; launched 11 Mar 2025, all-sky ice maps) | Project Rawane | Yes, active | PENDING |
-| H | Sentinel-4 on MTG-S1 (ESA/EUMETSAT, GEO hourly air quality) | Earth Observation | Yes, active | PENDING |
-| I | CyAN satellite algae watch, 2,000+ US lakes (EPA/NASA/NOAA/USGS/USACE) | Lakes + Earth Observation | No | PENDING |
-| J | SARSAT search-and-rescue satellites incl. MEOSAR (NOAA/NASA/USCG/DAF) | Earth Observation | No | PENDING (flag: part of Cospas-Sarsat, Russia a founding party; page gives 50k and 60k lives) |
-| K | Coral IVF, Great Barrier Reef (GBRF + RRAP) | Oceans | Spawning Oct/Nov | PENDING |
-| L | Posidonia oceanica meadows (natural, Balearics/Spain; peer-reviewed) | Oceans (x-link Seagrass) | No | PENDING |
-| M | Whales as ocean gardeners (natural; NOAA Fisheries) | Oceans (x-link Phytoplankton) | No | PENDING |
-| N | Justdiggit (nonprofit; Kenya, Tanzania, Senegal; 525,000 ha) | Forests | No | PENDING |
-| O | River Cleanup (nonprofit; 4,397,462 kg, 1,000 rivers by 2050) | Rivers | No | PENDING |
-| P | Great Green Wall (African Union, UNCCD; ~20M ha restored 2007-18) | Forests | No | PENDING (flag: no clear donate path; state-led) |
-| Q | Veggie space garden (NASA ISS) | Project Rawane (x-link ISS_Water_Recovery) | No | PENDING |
+| A | BepiColombo arrives at Mercury (ESA/JAXA; orbit 21 Nov 2026, split 9-10 Dec, science Apr 2027) | Project Rawane | Yes | BUILT |
+| B | Hayabusa2# Torifune flyby (JAXA; 5 Jul 2026, ~400 m from surface, record) | Planetary Defense | Yes, Earth swing-by Dec 2027 | BUILT |
+| C | Psyche (NASA; launched 13 Oct 2023, Mars flyby 15 May 2026, arrives Aug 2029) | Project Rawane | Yes | BUILT |
+| D | Lucy (NASA; 11 asteroids, Eurybates 11 Aug 2027) | Project Rawane / Planetary Defense | Yes | BUILT |
+| E | Comet Interceptor (ESA+JAXA; launch late 2028/early 2029) | Planetary Defense | Yes | BUILT |
+| F | EnVision (ESA Venus; launch Nov 2031) | Project Rawane | Yes | BUILT |
+| G | SPHEREx (NASA; launched 11 Mar 2025, all-sky ice maps) | Project Rawane | Yes, active | BUILT |
+| H | Sentinel-4 on MTG-S1 (ESA/EUMETSAT, GEO hourly air quality) | Earth Observation | Yes, active | BUILT |
+| I | CyAN satellite algae watch, 2,000+ US lakes (EPA/NASA/NOAA/USGS/USACE) | Lakes + Earth Observation | No | MERGED into Lake_Erie_Algal_Bloom_Forecast |
+| J | SARSAT search-and-rescue satellites incl. MEOSAR (NOAA/NASA/USCG/DAF) | Earth Observation | No | BUILT (SARSAT.html; flag for integrity rules: Cospas-Sarsat co-founded 1979 by Russia/USSR with Canada, France, US; one neutral sentence; 50,000+ used) |
+| K | Coral IVF, Great Barrier Reef (GBRF + RRAP) | Oceans | Spawning Oct/Nov | BUILT |
+| L | Posidonia oceanica meadows (natural, Balearics/Spain; peer-reviewed) | Oceans (x-link Seagrass) | No | BUILT |
+| M | Whales as ocean gardeners (natural; NOAA Fisheries) | Oceans (x-link Phytoplankton) | No | BUILT |
+| N | Justdiggit (nonprofit; Kenya, Tanzania, Senegal; 525,000 ha) | Forests | No | BUILT |
+| O | River Cleanup (nonprofit; 4,397,462 kg, 1,000 rivers by 2050) | Rivers | No | BUILT |
+| P | Great Green Wall (African Union, UNCCD; ~20M ha restored 2007-18) | Forests | No | BUILT (Great_Green_Wall.html; no donate, UNCCD link; 20M ha softened to ~4M in zone / ~18M wider) |
+| Q | Veggie space garden (NASA ISS) | Project Rawane (x-link ISS_Water_Recovery) | No | BUILT |
 Dropped 10-13: JPSS/NOAA-21 (too few confirmed facts), ozone recovery (already a Myth vs Fact card), The Rivers Trust UK (no figures on impact page), Hayabusa2 1998 KY26 arrival date and Comet Interceptor L2 parking (not on pages read).
 Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; global.jaxa.jp/press/2026/07/20260730-1_e.html, -2_e.html, 20260706-3_e.html; hayabusa2.jaxa.jp press PDF 20260706; science.nasa.gov/mission/{psyche,lucy,spherex}/; esa.int Comet_Interceptor, EnVision, Copernicus/Sentinel-4; epa.gov/water-research/cyanobacteria-assessment-network-cyan (+ -application-cyan-app); sarsat.noaa.gov; barrierreef.org/news/explainers/what-is-coral-ivf + GBRF Year in Review 2023-24 PDF; gbrrestoration.org RRAP-MC-01 final report 2025; doi.org/10.1002/lno.10510; doi.org/10.1371/journal.pone.0030454; pubmed 33360312; fisheries.noaa.gov/feature-story/whales-and-carbon-sequestration-can-whales-store-carbon; justdiggit.org/what-we-do/impact/ + water-bunds; river-cleanup.org/en; unccd.int GGWI page + 2020 status report press release; nasa.gov growing-plants-in-space + Veggie activation (2014).
 

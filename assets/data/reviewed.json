@@ -43,6 +43,10 @@
   "sig": "8590f64a2b87",
   "date": "2026-10-13"
  },
+ "BepiColombo.html": {
+  "sig": "3b283c21c4fb",
+  "date": "2026-10-13"
+ },
  "Billion_Oyster_Project.html": {
   "sig": "d70983240f5e",
   "date": "2026-10-11"
@@ -62,6 +66,14 @@
  "ClearSpace.html": {
   "sig": "67fe6716e558",
   "date": "2026-10-12"
+ },
+ "Comet_Interceptor.html": {
+  "sig": "c8e374ad4388",
+  "date": "2026-10-13"
+ },
+ "Coral_IVF.html": {
+  "sig": "5dafc150076e",
+  "date": "2026-10-13"
  },
  "Coral_Restoration_Foundation.html": {
   "sig": "86b583d76e80",
@@ -85,6 +97,10 @@
  },
  "Elwha_River_Restoration.html": {
   "sig": "2029fee08cdf",
+  "date": "2026-10-13"
+ },
+ "EnVision.html": {
+  "sig": "db41441490cf",
   "date": "2026-10-13"
  },
  "Europa_Clipper.html": {
@@ -123,9 +139,17 @@
   "sig": "ca9f450a810d",
   "date": "2026-10-10"
  },
+ "Great_Green_Wall.html": {
+  "sig": "9b1ad761ac51",
+  "date": "2026-10-13"
+ },
  "Great_Lakes_Plastic_Cleanup.html": {
   "sig": "3b8bd7885d94",
   "date": "2026-10-10"
+ },
+ "Hayabusa2_Torifune.html": {
+  "sig": "d340a9af09e6",
+  "date": "2026-10-13"
  },
  "Healthy_Seas.html": {
   "sig": "6f0462c72b89",
@@ -154,6 +178,10 @@
  "Jupiter.html": {
   "sig": "65b74499e934",
   "date": "2026-10-12"
+ },
+ "Justdiggit.html": {
+  "sig": "4d89c523b518",
+  "date": "2026-10-13"
  },
  "Kelp_Forests.html": {
   "sig": "65c779bbb3ad",
@@ -189,6 +217,10 @@
  },
  "Living_Lands_and_Waters.html": {
   "sig": "0fda9f61ce0e",
+  "date": "2026-10-13"
+ },
+ "Lucy.html": {
+  "sig": "d5a584d0362c",
   "date": "2026-10-13"
  },
  "MMX.html": {
@@ -271,6 +303,14 @@
   "sig": "27958148e123",
   "date": "2026-10-12"
  },
+ "Posidonia_Meadows.html": {
+  "sig": "ee535392290f",
+  "date": "2026-10-13"
+ },
+ "Psyche.html": {
+  "sig": "b6a05421875f",
+  "date": "2026-10-13"
+ },
  "Rainforest_Connection.html": {
   "sig": "4b8a7d6a3e3f",
   "date": "2026-10-13"
@@ -283,9 +323,21 @@
   "sig": "948887bd152e",
   "date": "2026-10-12"
  },
+ "River_Cleanup.html": {
+  "sig": "844594dfff3d",
+  "date": "2026-10-13"
+ },
+ "SARSAT.html": {
+  "sig": "1c2a5292e176",
+  "date": "2026-10-13"
+ },
  "SOLAR_1.html": {
   "sig": "741489d471aa",
   "date": "2026-10-12"
+ },
+ "SPHEREx.html": {
+  "sig": "e16bc4e614a9",
+  "date": "2026-10-13"
  },
  "SWOT.html": {
   "sig": "d41c53743c44",
@@ -314,6 +366,10 @@
  "Sentinel-2C.html": {
   "sig": "bb1cfc6ebb2d",
   "date": "2026-10-12"
+ },
+ "Sentinel-4.html": {
+  "sig": "28cbe8e45251",
+  "date": "2026-10-13"
  },
  "Sentinel-6B.html": {
   "sig": "5e2faa57df4b",
@@ -371,6 +427,10 @@
   "sig": "6ac735449403",
   "date": "2026-10-12"
  },
+ "Veggie_Space_Garden.html": {
+  "sig": "573ef3c644c9",
+  "date": "2026-10-13"
+ },
  "Vigil.html": {
   "sig": "530371481456",
   "date": "2026-10-12"
@@ -378,6 +438,10 @@
  "Webb_2024_YR4.html": {
   "sig": "6deebe9d39c0",
   "date": "2026-10-12"
+ },
+ "Whales_Ocean_Gardeners.html": {
+  "sig": "285c0222c31c",
+  "date": "2026-10-13"
  },
  "Zero_Debris_Charter.html": {
   "sig": "96a6b877dbf3",
