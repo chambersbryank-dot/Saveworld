@@ -73,3 +73,8 @@
   .five-ws .w-card p.fact-source { margin: 0 !important; }
   .print-only { display: block !important; font-size: 8pt; color: #333; margin-top: 2mm; }
 }
+
+/* Lake solution heroes (Oct 13): public-domain photos replacing the logo */
+body.lake-tahoe-page .page-hero.lakes-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35), rgba(0,20,40,0.55)), url('assets/Lake_Tahoe_ISS.jpg') center/cover no-repeat; }
+body.great-lakes-page .page-hero.lakes-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35), rgba(0,20,40,0.55)), url('assets/Great_Lakes_MODIS.jpg') center/cover no-repeat; }
+body.lake-shore-page .page-hero.lakes-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35), rgba(0,20,40,0.55)), url('assets/Lake_Shore_Cleanup_NPS.jpg') center 40%/cover no-repeat; }

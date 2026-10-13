@@ -15,11 +15,20 @@ def wr(f, s):
     return 0
 esc = lambda s: html.escape(s, quote=True)
 LANGS = ['fr', 'es', 'ar']
-V = '20261012c'
+V = '20261013a'
 CSS = f'<link rel="stylesheet" href="batchb.css?v={V}">'
 JS = f'<script src="batchb.js?v={V}" defer></script>'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 GL = json.load(open('assets/data/glossary.json', encoding='utf8'))['terms']
+
+
+def write_generated(f, page):
+    """Write a generated page only when its generated content changed (keeps later seo-fix/add-gtag edits, so translations stay current)."""
+    import hashlib
+    sig = hashlib.sha1(page.encode('utf8')).hexdigest()[:12]
+    page = page.replace('</body>', f'<!-- GEN {sig} --></body>', 1)
+    if os.path.exists(f) and f'<!-- GEN {sig} -->' in open(f, encoding='utf8').read(): return 0
+    open(f, 'w', encoding='utf8').write(page); return 1
 
 def solution_pages():
     seen, out = set(), []
@@ -40,6 +49,8 @@ UI = {
  "All teacher sheets": ("Toutes les fiches enseignants", "Todas las fichas docentes", "كل أوراق المعلمين"),
  "Cite This Page": ("Citer cette page", "Citar esta página", "استشهد بهذه الصفحة"),
  "Copy": ("Copier", "Copiar", "نسخ"),
+ "Copy APA citation": ("Copier la citation APA", "Copiar la cita APA", "انسخ استشهاد APA"),
+ "Copy MLA citation": ("Copier la citation MLA", "Copiar la cita MLA", "انسخ استشهاد MLA"),
  "Sources are listed with each fact in the Five W's above.": ("Les sources figurent avec chaque fait dans les 5 W ci-dessus.", "Las fuentes aparecen con cada dato en las 5 W de arriba.", "المصادر مذكورة مع كل معلومة في الأسئلة الخمسة أعلاه."),
  "Start Here": ("Commencez ici", "Empieza aquí", "ابدأ من هنا"),
  "Kids": ("Enfants", "Niños", "الأطفال"),
@@ -106,9 +117,9 @@ def blocks(page, s, override):
              '<a href="Teachers.html">All teacher sheets</a></p></section><!-- TEACHER:END -->')
     cite = ('<!-- CITE:START --><section class="cite-box" id="cite" aria-labelledby="cite-h" data-pagefind-ignore><h2 id="cite-h">Cite This Page</h2>'
             f'<div class="cite-row"><p class="cite-style">APA</p><p class="cite-text" data-cite="apa">Saving Planets. (n.d.). {t}. https://www.savingplanets.com/{page}</p>'
-            '<button type="button" class="cite-copy">Copy</button></div>'
+            '<button type="button" class="cite-copy" aria-label="Copy APA citation">Copy</button></div>'
             f'<div class="cite-row"><p class="cite-style">MLA</p><p class="cite-text" data-cite="mla">&quot;{t}.&quot; Saving Planets, https://www.savingplanets.com/{page}.</p>'
-            '<button type="button" class="cite-copy">Copy</button></div></section><!-- CITE:END -->')
+            '<button type="button" class="cite-copy" aria-label="Copy MLA citation">Copy</button></div></section><!-- CITE:END -->')
     return eli, teach, cite
 
 def put(s, name, block, anchor_rx, before=True):
@@ -190,7 +201,7 @@ def pre():
         s = put(s, 'CITE', cite, r'<footer>')
         n += wr(page, assets(s))
     s = rd('index.html'); s = assets(put(s, 'AUDIENCE', AUD, r'<!-- SOTW:START -->')); wr('index.html', s)
-    wr('Glossary.html', glossary_page()); wr('Teachers.html', teachers_page())
+    write_generated('Glossary.html', glossary_page()); write_generated('Teachers.html', teachers_page())
     pl = rd('i18n/pages.txt')
     for p in ('Glossary.html', 'Teachers.html'):
         if p not in pl.split(): pl = pl.rstrip('\n') + '\n' + p + '\n'

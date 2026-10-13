@@ -107,3 +107,4 @@ Seabin.html
 Solutions.html
 Glossary.html
 Teachers.html
+Sitemap.html

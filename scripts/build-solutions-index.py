@@ -26,10 +26,12 @@ def info(page):
         for a in re.findall(r'<img [^>]*src="' + re.escape(img) + r'"[^>]*>', s):
             v = m1(r'alt="([^"]*)"', a)
             if v and not re.match(r'(Learn more about|Support|Donate|Join)\b', v): alt = v; break
+    if not alt: alt = html.unescape(m1(r'<meta property="og:image:alt" content="([^"]*)"', s))
     credit = m1(r'<p class="photo-credit">(.*?)</p>', s)
     desc = un(m1(r'<meta name="description" content="([^"]*)"', s))
     what = m1(r'<h3>What</h3><p>(.*?)</p>', s)
     what = un(re.sub(r'<[^>]+>', '', what))
+    if desc.endswith('...'): desc = desc[:-3] + '…'
     if desc.endswith('…'):  # meta descriptions are clipped; keep whole sentences only
         cut = max(desc.rfind('. ', 0, len(desc) - 1), desc.rfind('.) ', 0, len(desc) - 1))
         desc = desc[:cut + 1].strip() if cut > 0 else ''
@@ -66,7 +68,7 @@ def hub_summary(f, name):
             f'<p class="sol-impact"><strong>Impact:</strong> {imp}</p>'
             f'<p class="sol-hub-links"><a href="{f}">Read the hub&#x27;s 5 W&#x27;s</a> <span aria-hidden="true">·</span> <a href="Ways_to_Help.html">More: Ways to Help</a></p></div>')
 
-def card(href, name, i, missing):
+def card(href, name, i, missing, also=()):
     if not i['img']: missing.append(f'{href}: no image')
     if not (i['desc'] or i['what']): missing.append(f'{href}: no description')
     alt = i['alt'] or f'{name} image'
@@ -76,7 +78,9 @@ def card(href, name, i, missing):
     img = (f'<div class="image-container"><a class="photo-link" href="{href}"><img src="{i["img"]}" alt="{esc(alt)}" loading="lazy" decoding="async"></a></div>'
            + (f'<p class="photo-credit">{i["credit"]}</p>' if i['credit'] else '')) if i['img'] else ''
     return (f'<article class="card sol-card" data-url="{href}">{img}<h3><a href="{href}">{esc(name)}</a></h3>'
-            f'<p class="sol-desc">{desc}</p><p class="sol-more"><a href="{href}">Read the 5 W&#x27;s</a></p></article>')
+            f'<p class="sol-desc">{desc}</p>'
+            + (('<p class="sol-also">Also in: ' + ', '.join(f'<a href="{f}">{esc(n)}</a>' for f, n in also) + '</p>') if also else '')
+            + f'<p class="sol-more"><a href="{href}">Read the 5 W&#x27;s</a></p></article>')
 
 NAV_RE = re.compile(r'<li class="nav-dropdown"><a [^>]*class="dropdown-toggle"[^>]*>Solutions</a><ul class="dropdown-menu solutions-menu">[\s\S]*?<!-- SOLUTIONS-MENU:END --></ul></li>')
 NAV_RE2 = re.compile(r'<li class="nav-dropdown"><a class="dropdown-toggle" href="[^"]*">Solutions</a><ul class="dropdown-menu solutions-menu">[\s\S]*?<!-- SOLUTIONS-MENU:END --></ul></li>')
@@ -99,10 +103,21 @@ def build():
     js_v = m1(r'site\.js\?v=([0-9a-z]+)', body, '1')
     missing, secs, jump, total = [], [], [], 0
     hl = hubs()
+    # Each solution is listed once, under its primary hub (the hub in its breadcrumb; else the first hub listing it).
+    where = {}
+    for f, name, items in hl:
+        for h, n in items: where.setdefault(h, []).append((f, name))
+    primary = {}
+    for h, hs in where.items():
+        bc = re.findall(r'<nav aria-label="Breadcrumb"[^>]*>.*?</nav>', rd(h), re.S)
+        bc_hubs = re.findall(r'href="([A-Za-z0-9_.-]+\.html)"', bc[0]) if bc else []
+        primary[h] = next((x for x in hs if x[0] in bc_hubs), hs[0])
+    also = {h: [x for x in hs if x != primary[h]] for h, hs in where.items()}
+    hl = [(f, name, [(h, n) for h, n in items if primary[h][0] == f]) for f, name, items in hl]
     for f, name, items in hl:
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
         jump.append(f'<li><a href="#{sid}">{esc(name)}</a></li>')
-        cards = ''.join(card(h, n, info(h), missing) for h, n in items); total += len(items)
+        cards = ''.join(card(h, n, info(h), missing, also.get(h, [])) for h, n in items); total += len(items)
         secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div>{hub_summary(f, name)}</section>')
     desc = f'Every Saving Planets solution in one place: {total} sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites.'
     # head: retarget Contact -> Solutions
@@ -112,7 +127,7 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Saving Planets Solutions", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012d">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261013a">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     chips = ''.join(f'<button type="button" class="sol-chip">{c}</button>' for c in
                     ['ways to clean a river near me', 'how space tech helps farmers', 'protecting coasts from storms', 'junk satellites crowding orbit'])

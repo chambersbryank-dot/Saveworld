@@ -42,3 +42,4 @@ body.sol-page .sol-hub-summary { margin: 1.2rem 0 0.5rem; padding: 1rem 1.2rem; 
 body.sol-page .sol-hub-summary h3 { margin: 0 0 0.5rem; font-size: 1.15rem; color: #4da3ff; }
 body.sol-page .sol-hub-summary p { margin: 0.4rem 0; line-height: 1.5; }
 body.sol-page .sol-hub-links a { font-weight: 700; }
+body.sol-page .sol-also { padding: 0 1rem; margin: -0.3rem 0 0.6rem; font-size: 0.85rem; opacity: 0.85; }

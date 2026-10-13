@@ -1,0 +1,21 @@
+/* Site-wide extras (Oct 13): footer site map, contrast fixes (WCAG AA), About sources list. Generated pages link this via scripts/build-site-extras.py */
+.footer-map { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 3rem; max-width: 1000px; margin: 0 auto 1.2rem; padding: 0 1rem 1rem; border-bottom: 1px solid rgba(127,127,127,0.25); text-align: start; }
+.footer-map .fm-h { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.4rem; opacity: 0.85; }
+.footer-map ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; max-width: 420px; }
+.footer-map a { font-size: 0.9rem; }
+.sm-grid { max-width: 1100px; margin: 1.5rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem 2rem; }
+.sm-hub h2 { font-size: 1.2rem; margin: 0.6rem 0 0.4rem; }
+.sm-hub ul { margin: 0; padding-inline-start: 1.1rem; }
+.sm-hub li { margin: 0.25rem 0; }
+/* contrast: white text on brand blue/green needs a darker fill (>= 4.5:1) */
+button[type="submit"]:not(.help-btn), .sp-accept, .btn-nav, .sotw-actions .btn, .print-sheet, .sp-search-btn { background-color: #0072b1 !important; }
+button[type="submit"]:not(.help-btn):hover, .sp-accept:hover, .btn-nav:hover, .sotw-actions .btn:hover, .print-sheet:hover { background-color: #005a8c !important; }
+.status-badge.status-active { background-color: #1d7a45 !important; }
+.mw-date { color: #c9d7e3 !important; }
+/* About: sources as a readable list */
+.src-list { list-style: none; padding: 0; margin: 1rem auto 0; max-width: 900px; text-align: start; }
+.src-list li { padding: 0.8rem 0; border-bottom: 1px solid rgba(127,127,127,0.25); }
+.src-list h3 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+.src-list p { margin: 0.15rem 0; line-height: 1.5; }
+.src-list .src-meta { font-size: 0.9rem; opacity: 0.85; }
+html.dark body.toc-home .card-band .card { background: #0f1b26; box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
