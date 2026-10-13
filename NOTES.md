@@ -80,3 +80,27 @@
 - `git add -u` or explicit paths, never `-A` (shared box clone has other workers' scratch files).
 - Launch Library: use /2.3.0/ (2.2.0 404s). Use curl with browser UA when WebFetch times out (nasa.gov).
 - Concurrent workers: on heavy generated-file conflicts, reset to origin/main and re-run generators instead of rebasing.
+
+## Candidate Queue (append-only; older batches 10-09..10-12 in docs/notes-archive-2026-10-12.md, all built)
+**Batch 2026-10-13** (17, 6:17 AM run). Nothing built; awaiting owner yes/no. No repeats vs pages, solutions.json, prior queues. Org figures labeled as org figures.
+| ID | Candidate | Hub | Widget | Status |
+|---|---|---|---|---|
+| A | BepiColombo arrives at Mercury (ESA/JAXA; orbit 21 Nov 2026, split 9-10 Dec, science Apr 2027) | Project Rawane | Yes | PENDING |
+| B | Hayabusa2# Torifune flyby (JAXA; 5 Jul 2026, ~400 m from surface, record) | Planetary Defense | Yes, Earth swing-by Dec 2027 | PENDING |
+| C | Psyche (NASA; launched 13 Oct 2023, Mars flyby 15 May 2026, arrives Aug 2029) | Project Rawane | Yes | PENDING |
+| D | Lucy (NASA; 11 asteroids, Eurybates 11 Aug 2027) | Project Rawane / Planetary Defense | Yes | PENDING |
+| E | Comet Interceptor (ESA+JAXA; launch late 2028/early 2029) | Planetary Defense | Yes | PENDING |
+| F | EnVision (ESA Venus; launch Nov 2031) | Project Rawane | Yes | PENDING |
+| G | SPHEREx (NASA; launched 11 Mar 2025, all-sky ice maps) | Project Rawane | Yes, active | PENDING |
+| H | Sentinel-4 on MTG-S1 (ESA/EUMETSAT, GEO hourly air quality) | Earth Observation | Yes, active | PENDING |
+| I | CyAN satellite algae watch, 2,000+ US lakes (EPA/NASA/NOAA/USGS/USACE) | Lakes + Earth Observation | No | PENDING |
+| J | SARSAT search-and-rescue satellites incl. MEOSAR (NOAA/NASA/USCG/DAF) | Earth Observation | No | PENDING (flag: part of Cospas-Sarsat, Russia a founding party; page gives 50k and 60k lives) |
+| K | Coral IVF, Great Barrier Reef (GBRF + RRAP) | Oceans | Spawning Oct/Nov | PENDING |
+| L | Posidonia oceanica meadows (natural, Balearics/Spain; peer-reviewed) | Oceans (x-link Seagrass) | No | PENDING |
+| M | Whales as ocean gardeners (natural; NOAA Fisheries) | Oceans (x-link Phytoplankton) | No | PENDING |
+| N | Justdiggit (nonprofit; Kenya, Tanzania, Senegal; 525,000 ha) | Forests | No | PENDING |
+| O | River Cleanup (nonprofit; 4,397,462 kg, 1,000 rivers by 2050) | Rivers | No | PENDING |
+| P | Great Green Wall (African Union, UNCCD; ~20M ha restored 2007-18) | Forests | No | PENDING (flag: no clear donate path; state-led) |
+| Q | Veggie space garden (NASA ISS) | Project Rawane (x-link ISS_Water_Recovery) | No | PENDING |
+Dropped 10-13: JPSS/NOAA-21 (too few confirmed facts), ozone recovery (already a Myth vs Fact card), The Rivers Trust UK (no figures on impact page), Hayabusa2 1998 KY26 arrival date and Comet Interceptor L2 parking (not on pages read).
+Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; global.jaxa.jp/press/2026/07/20260730-1_e.html, -2_e.html, 20260706-3_e.html; hayabusa2.jaxa.jp press PDF 20260706; science.nasa.gov/mission/{psyche,lucy,spherex}/; esa.int Comet_Interceptor, EnVision, Copernicus/Sentinel-4; epa.gov/water-research/cyanobacteria-assessment-network-cyan (+ -application-cyan-app); sarsat.noaa.gov; barrierreef.org/news/explainers/what-is-coral-ivf + GBRF Year in Review 2023-24 PDF; gbrrestoration.org RRAP-MC-01 final report 2025; doi.org/10.1002/lno.10510; doi.org/10.1371/journal.pone.0030454; pubmed 33360312; fisheries.noaa.gov/feature-story/whales-and-carbon-sequestration-can-whales-store-carbon; justdiggit.org/what-we-do/impact/ + water-bunds; river-cleanup.org/en; unccd.int GGWI page + 2020 status report press release; nasa.gov growing-plants-in-space + Veggie activation (2014).
