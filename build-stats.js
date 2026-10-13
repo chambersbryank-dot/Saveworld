@@ -16,7 +16,7 @@ const path = require('path');
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
   'planetary-defense': 'Planetary Defense', 'space-weather': 'Space Weather & Shields',
   'earth-observation': 'Earth Observation', 'project-r': 'Project Rawane' };
-const SKIP = ['Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];
+const SKIP = ['Solutions.html', 'Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
 };
@@ -151,7 +151,7 @@ function build() {
   const solutionsMenu = buildSolutionsMenu();
   const projectRMenu = PROJECT_R_HUBS.map(([f, name]) => { const g = solutionsMenu.find(x => x.href === f); return { hub: name, href: f, items: g ? g.items : [] }; });
   if (!projectRMenu.length) buildProjectRMenu(warnings);
-  const out = { generated: new Date().toISOString(), projectRMenu, site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
+  const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
   fs.mkdirSync('assets/data', { recursive: true });
   fs.writeFileSync('assets/data/solutions.json', JSON.stringify(out, null, 1) + '\n');
   console.log(`solutions.json: ${out.site.solutions} active solutions, ${out.site.horizon} on the horizon, ${out.site.hubs} hubs, ${out.site.upcomingMissions} upcoming missions, ${pages.length} pages.`);

@@ -58,6 +58,10 @@ function meta(html) {
 function hubMap(lang) {
   const html = rd(pageFile(lang, 'index.html')) || rd('index.html'), map = {}, order = [];
   const menu = (html.match(/<!-- SOLUTIONS-MENU:START -->([\s\S]*?)<!-- SOLUTIONS-MENU:END -->/) || [])[1] || '';
+  if (!menu) { // Oct 12: the nav dropdown was removed; hub membership now comes from solutions.json (build-stats.js)
+    try { for (const g of JSON.parse(rd('assets/data/solutions.json')).solutionsMenu || []) { order.push({ url: g.href, name: g.hub }); for (const i of g.items) if (!map[i.href]) map[i.href] = g.href; } } catch (e) {}
+    return { map, order };
+  }
   for (const g of menu.split('<li class="menu-group">').slice(1)) {
     const h = g.match(/class="menu-hub" href="([^"]+)">([^<]+)</); if (!h) continue;
     order.push({ url: h[1], name: dec(h[2]) });

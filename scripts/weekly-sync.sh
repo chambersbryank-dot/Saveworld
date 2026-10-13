@@ -12,6 +12,7 @@ python3 scripts/build-home-extras.py
 python3 scripts/build-batch2.py
 python3 scripts/build-batch3.py
 python3 scripts/build-batch4.py
+python3 scripts/build-solutions-index.py   # Solutions.html directory + plain Solutions nav link (Oct 12)
 python3 scripts/add-gtag.py
 python3 scripts/i18n-build.py
 python3 scripts/add-gtag.py

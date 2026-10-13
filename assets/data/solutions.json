@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T18:31:58.264Z",
+ "generated": "2026-10-13T04:49:40.603Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -103,6 +103,424 @@
   },
   {
    "hub": "Space Weather & Shields",
+   "href": "Space_Weather.html",
+   "items": [
+    {
+     "href": "Aditya_L1.html",
+     "name": "Aditya-L1 (ISRO)"
+    },
+    {
+     "href": "Carruthers.html",
+     "name": "Carruthers Geocorona Observatory (NASA)"
+    },
+    {
+     "href": "GOES-19.html",
+     "name": "GOES-19 and CCOR-1 (NOAA)"
+    },
+    {
+     "href": "IMAP.html",
+     "name": "IMAP (NASA)"
+    },
+    {
+     "href": "PUNCH.html",
+     "name": "PUNCH (NASA)"
+    },
+    {
+     "href": "Solar_Orbiter.html",
+     "name": "Solar Orbiter (ESA / NASA)"
+    },
+    {
+     "href": "SOLAR_1.html",
+     "name": "SOLAR-1 (NOAA)"
+    },
+    {
+     "href": "Three_Shields.html",
+     "name": "Three Invisible Shields"
+    },
+    {
+     "href": "TRACERS.html",
+     "name": "TRACERS (NASA)"
+    },
+    {
+     "href": "Vigil.html",
+     "name": "Vigil (ESA)"
+    }
+   ]
+  }
+ ],
+ "solutionsMenu": [
+  {
+   "hub": "Project Rawane",
+   "href": "Project-Rawane.html",
+   "items": [
+    {
+     "href": "Artemis_II.html",
+     "name": "Artemis II (NASA / CSA)"
+    },
+    {
+     "href": "ESCAPADE.html",
+     "name": "ESCAPADE (NASA)"
+    },
+    {
+     "href": "ExoMars_Rosalind_Franklin.html",
+     "name": "ExoMars Rosalind Franklin Rover (ESA)"
+    },
+    {
+     "href": "ISS_Water_Recovery.html",
+     "name": "ISS Water Recovery (NASA)"
+    },
+    {
+     "href": "Nancy_Grace_Roman.html",
+     "name": "Nancy Grace Roman Space Telescope (NASA)"
+    },
+    {
+     "href": "Plato.html",
+     "name": "Plato (ESA)"
+    }
+   ]
+  },
+  {
+   "hub": "Earth Observation",
+   "href": "Earth_Observation.html",
+   "items": [
+    {
+     "href": "ALOS-4.html",
+     "name": "ALOS-4 \"DAICHI-4\" (JAXA)"
+    },
+    {
+     "href": "Biomass.html",
+     "name": "Biomass (ESA)"
+    },
+    {
+     "href": "Sentinel-1.html",
+     "name": "Copernicus Sentinel-1 (ESA)"
+    },
+    {
+     "href": "Sentinel-2C.html",
+     "name": "Copernicus Sentinel-2C (ESA)"
+    },
+    {
+     "href": "Sentinel-6B.html",
+     "name": "Copernicus Sentinel-6B (ESA / NASA)"
+    },
+    {
+     "href": "DSCOVR_EPIC.html",
+     "name": "DSCOVR / EPIC (NASA–NOAA)"
+    },
+    {
+     "href": "EarthCARE.html",
+     "name": "EarthCARE (ESA–JAXA)"
+    },
+    {
+     "href": "EOS-06.html",
+     "name": "EOS-06 / Oceansat-3 (ISRO)"
+    },
+    {
+     "href": "FLEX.html",
+     "name": "FLEX and Sentinel-3C (ESA)"
+    },
+    {
+     "href": "GOSAT-GW.html",
+     "name": "GOSAT-GW \"IBUKI GW\" (JAXA)"
+    },
+    {
+     "href": "GRACE-FO.html",
+     "name": "GRACE-FO (NASA / Germany)"
+    },
+    {
+     "href": "ICESat-2.html",
+     "name": "ICESat-2 (NASA)"
+    },
+    {
+     "href": "Landsat_9.html",
+     "name": "Landsat 9 (NASA / USGS)"
+    },
+    {
+     "href": "MetOp-SG-A1_Sentinel-5A.html",
+     "name": "MetOp-SG-A1 and Sentinel-5A (ESA / EUMETSAT)"
+    },
+    {
+     "href": "NISAR.html",
+     "name": "NISAR (NASA–ISRO)"
+    },
+    {
+     "href": "PACE.html",
+     "name": "PACE (NASA)"
+    },
+    {
+     "href": "SWOT.html",
+     "name": "SWOT (NASA–CNES)"
+    },
+    {
+     "href": "Tanager-1.html",
+     "name": "Tanager-1 (Carbon Mapper / Planet)"
+    }
+   ]
+  },
+  {
+   "hub": "Forests",
+   "href": "Deforestation.html",
+   "items": [
+    {
+     "href": "Life_Terra.html",
+     "name": "Life Terra"
+    },
+    {
+     "href": "Mangroves.html",
+     "name": "Mangrove Forests"
+    },
+    {
+     "href": "Saharan_Dust_Amazon.html",
+     "name": "Saharan Dust Feeds the Amazon"
+    },
+    {
+     "href": "Terraformation.html",
+     "name": "Terraformation"
+    },
+    {
+     "href": "Amazon_Rainy_Season.html",
+     "name": "The Amazon Makes Its Own Rainy Season"
+    },
+    {
+     "href": "Three_Trees.html",
+     "name": "Three Trees for Every One Removed"
+    },
+    {
+     "href": "Trees_for_the_Future.html",
+     "name": "Trees for the Future"
+    }
+   ]
+  },
+  {
+   "hub": "Lakes",
+   "href": "Lakes.html",
+   "items": [
+    {
+     "href": "Clean_Up_the_Lake.html",
+     "name": "Clean Up the Lake"
+    },
+    {
+     "href": "Great_Lakes_Plastic_Cleanup.html",
+     "name": "Great Lakes Plastic Cleanup"
+    },
+    {
+     "href": "Lake_Plastic_Recovery.html",
+     "name": "Lake Plastic Recovery"
+    },
+    {
+     "href": "Restoring_the_Lake_Depths.html",
+     "name": "Restoring the Lake Depths Foundation"
+    }
+   ]
+  },
+  {
+   "hub": "Ocean",
+   "href": "Oceans.html",
+   "items": [
+    {
+     "href": "4ocean.html",
+     "name": "4ocean"
+    },
+    {
+     "href": "Billion_Oyster_Project.html",
+     "name": "Billion Oyster Project"
+    },
+    {
+     "href": "Coral_Restoration_Foundation.html",
+     "name": "Coral Restoration Foundation"
+    },
+    {
+     "href": "Healthy_Seas.html",
+     "name": "Healthy Seas"
+    },
+    {
+     "href": "Kelp_Forests.html",
+     "name": "Kelp Forests"
+    },
+    {
+     "href": "Mote_Marine_Laboratory.html",
+     "name": "Mote Marine Laboratory"
+    },
+    {
+     "href": "Ocean_Voyages_Institute.html",
+     "name": "Ocean Voyages Institute"
+    },
+    {
+     "href": "Phytoplankton.html",
+     "name": "Phytoplankton, the Ocean's Oxygen Engine"
+    },
+    {
+     "href": "Plastic_Bank.html",
+     "name": "Plastic Bank"
+    },
+    {
+     "href": "Salt_Marshes.html",
+     "name": "Salt Marshes"
+    },
+    {
+     "href": "Seabin.html",
+     "name": "Seabin"
+    },
+    {
+     "href": "Seagrass.html",
+     "name": "Seagrass Meadows"
+    },
+    {
+     "href": "Ocean_Cleanup.html",
+     "name": "The Ocean Cleanup"
+    }
+   ]
+  },
+  {
+   "hub": "Planetary Defense",
+   "href": "Planetary_Defense.html",
+   "items": [
+    {
+     "href": "Hera.html",
+     "name": "Hera"
+    },
+    {
+     "href": "Jupiter.html",
+     "name": "Jupiter"
+    },
+    {
+     "href": "NEO_Surveyor.html",
+     "name": "NEO Surveyor"
+    },
+    {
+     "href": "OSIRIS-APEX.html",
+     "name": "OSIRIS-APEX and Apophis 2029 (NASA)"
+    },
+    {
+     "href": "Ramses.html",
+     "name": "Ramses (ESA / JAXA)"
+    },
+    {
+     "href": "Webb_2024_YR4.html",
+     "name": "Webb and 2024 YR4"
+    }
+   ]
+  },
+  {
+   "hub": "Rivers",
+   "href": "Rivers.html",
+   "items": [
+    {
+     "href": "Beavers_River_Engineers.html",
+     "name": "Beavers, River Engineers"
+    },
+    {
+     "href": "Mr_Trash_Wheel.html",
+     "name": "Mr. Trash Wheel Family"
+    },
+    {
+     "href": "Sungai_Watch.html",
+     "name": "Sungai Watch"
+    },
+    {
+     "href": "Great_Bubble_Barrier.html",
+     "name": "The Great Bubble Barrier"
+    }
+   ]
+  },
+  {
+   "hub": "Space",
+   "href": "Space.html",
+   "items": [
+    {
+     "href": "Astroscale.html",
+     "name": "Astroscale"
+    },
+    {
+     "href": "ClearSpace.html",
+     "name": "ClearSpace"
+    },
+    {
+     "href": "Jupiter.html",
+     "name": "Jupiter"
+    },
+    {
+     "href": "Orbital_Data_Centers.html",
+     "name": "Orbital Data Centers"
+    },
+    {
+     "href": "PRELUDE.html",
+     "name": "PRELUDE (ClearSpace)"
+    }
+   ]
+  },
+  {
+   "hub": "Space Disposal",
+   "href": "Space_Disposal.html",
+   "items": [
+    {
+     "href": "Aeolus.html",
+     "name": "Aeolus Assisted Reentry (ESA)"
+    },
+    {
+     "href": "Astroscale.html",
+     "name": "Astroscale"
+    },
+    {
+     "href": "Atmospheric_Drag.html",
+     "name": "Atmospheric Drag"
+    },
+    {
+     "href": "ClearSpace.html",
+     "name": "ClearSpace"
+    },
+    {
+     "href": "Europa_Clipper.html",
+     "name": "Europa Clipper"
+    },
+    {
+     "href": "Juice.html",
+     "name": "Juice"
+    },
+    {
+     "href": "Jupiter.html",
+     "name": "Jupiter"
+    },
+    {
+     "href": "LeoLabs.html",
+     "name": "LeoLabs"
+    },
+    {
+     "href": "LignoSat.html",
+     "name": "LignoSat Wooden Satellite (Kyoto University)"
+    },
+    {
+     "href": "MMX.html",
+     "name": "MMX"
+    },
+    {
+     "href": "SpaceLogistics.html",
+     "name": "Northrop Grumman SpaceLogistics"
+    },
+    {
+     "href": "PRELUDE.html",
+     "name": "PRELUDE (ClearSpace)"
+    },
+    {
+     "href": "Starfish_Otter.html",
+     "name": "Starfish Space Otter"
+    },
+    {
+     "href": "Moon_Steadies_Earth.html",
+     "name": "The Moon Steadies Earth’s Tilt"
+    },
+    {
+     "href": "Titan.html",
+     "name": "Titan"
+    },
+    {
+     "href": "US_Deorbit_Vehicle.html",
+     "name": "U.S. Deorbit Vehicle (NASA / SpaceX)"
+    }
+   ]
+  },
+  {
+   "hub": "Space Weather",
    "href": "Space_Weather.html",
    "items": [
     {

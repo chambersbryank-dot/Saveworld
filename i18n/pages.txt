@@ -104,3 +104,4 @@ Healthy_Seas.html
 Mote_Marine_Laboratory.html
 Trees_for_the_Future.html
 Seabin.html
+Solutions.html
