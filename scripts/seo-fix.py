@@ -70,6 +70,9 @@ def fix(p):
         block = [f'<title>{esc(t)}</title>', '<meta name="robots" content="noindex">']
         c = soup.find('link', rel='canonical')
         if c: block.append(f'<link rel="canonical" href="{c["href"]}">')
+        img = (soup.find('meta', property='og:image') or {}).get('content') or SITE + 'assets/SavePlanetLogo.jpg'  # Batch A: share card even on noindex pages
+        block += [f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:image" content="{esc(img)}">',
+                  '<meta name="twitter:card" content="summary_large_image">', f'<meta name="twitter:image" content="{esc(img)}">']
     else:
         url = SITE + p
         translated = all(os.path.exists(f'{l}/{base}') for l in LANGS)
