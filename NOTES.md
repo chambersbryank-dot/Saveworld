@@ -71,7 +71,7 @@
 - Data files: assets/data/{solutions,reviewed,eli10,glossary,roman,artemis*,daily-actions,community,new-callout}.json; scripts/batch3-content.py (myths, mission log, quizzes); scripts/newsletter-corrections.json.
 - Newsletter: MailerLite acct 2704021, key /home/box/.mailerlite_key; `node scripts/newsletter-draft.js [--update]` creates DRAFTS only (never send/schedule); groups EN 201062857381512972, FR …692939304, ES …966617859, AR …265462233; language_id en4 fr6 es8 ar23.
 - GA4 G-ZCJ7CEKN94 (Consent Mode v2, add-gtag.py). IndexNow key aa19429b4f58f36d34c263abe996de09.txt.
-- Postiz: post via `integrationList` (X, TikTok, YouTube are connected); YouTube category + altered-content flags not exposed.
+- Postiz: post via `integrationList` (X, TikTok, YouTube are connected); YouTube category + altered-content flags not exposed. IDs: X cmv4dud7z1utemq0y74sa8177, TikTok cmv4dwne61uxdmq0ykvftgylr (DIRECT_POST, video_made_with_ai true), YouTube cmv4dv4qy1urrqz0y6xnd3d4y.
 - Cloudflare: www grey-cloud CNAME → chambersbryank-dot.github.io, apex A 185.199.108-111.153, HTTPS enforced (cert to 2027-01-08); saveplanetminusthedoom.com → savingplanets.com redirect (Oct 12).
 - Cache-bust `?v=YYYYMMDDx` on styles.css/site.js when CSS/JS changes.
 
