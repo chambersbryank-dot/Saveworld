@@ -64,20 +64,28 @@ window.SP_SEARCH_STARTED = true;
 
   const norm = u => u.replace(/^https?:\/\/[^/]+/, '').replace(/[?#].*$/, '');
   const STOP = new Set('a an and are as at be been but by can do does for from had has have how i i\'m im in into is it its may me my of on or our so such that the their them there these they this to too was we were what when where which who why will with would you your about also any some very just get help people stay away years ago because interested'.split(' '));
+  // fr / es / ar question words and fillers (keyword retry only)
+  'comment les des une un est sont pour dans sur avec que qui quels quelles quel quelle ils elles nous notre nos votre vos faire peut ce cette ces du au aux et ou se il la le de en vers depuis leur leurs plus deux façons simplement expliquez comparez week-end hors'.split(' ').forEach(w => STOP.add(w));
+  'cómo como los las del una uno es son para por con que qué quién cuál cuáles sus nuestro nuestra mi mis este esta estos fin semana puede puedo hacer y o se el la de en al desde más dos formas forma sencilla explica compara'.split(' ').forEach(w => STOP.add(w));
+  'كيف ما ماذا من في على إلى عن مع هل التي الذي وكيف وما يمكن أن أو و بين نهاية الأسبوع عطلة اشرح ببساطة قارن طريقتين'.split(' ').forEach(w => STOP.add(w));
+  // general/directory pages sink below solution & hub pages in keyword lists (they mention everything)
+  const GENERAL = /\/(index|Solutions|About|Amazing_Facts|Myth_vs_Fact|Community|Contact|Press|Ways_to_Help|Find_a_Cleanup|Rawanes_Mission_Log)\.html$/;
   const keyTerms = q => [...new Set(q.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, ' ').split(/\s+/).filter(w => w.length > 2 && !STOP.has(w) && !/^\d+$/.test(w)))].slice(0, 8);
 
   async function keyword(q) {
     const r = await pf.search(q);
-    if (r.results.length) return { partial: false, hits: r.results.slice(0, 15) };
     const terms = keyTerms(q);
-    if (terms.length < 2) return { partial: false, hits: [] };
+    // enough every-word hits (or a short query): use them. Otherwise add key-term matches after them.
+    if (r.results.length >= 3 || terms.length < 2) return { partial: false, hits: r.results.slice(0, 15) };
+    const exact = r.results;
     const score = new Map(), keep = new Map();
     for (const t of terms) {
       const rr = await pf.search(t);
       rr.results.slice(0, 20).forEach((x, i) => { score.set(x.id, (score.get(x.id) || 0) + 1 / (5 + i)); keep.set(x.id, x); });
     }
-    const hits = [...score.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15).map(([id]) => keep.get(id));
-    return { partial: hits.length > 0, hits };
+    const ids = new Set(exact.map(x => x.id));
+    const hits = [...exact, ...[...score.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => keep.get(id)).filter(x => !ids.has(x.id))].slice(0, 15);
+    return { partial: hits.length > exact.length, hits };
   }
 
   async function run(updateUrl = true, keepShown = false) {
@@ -89,6 +97,7 @@ window.SP_SEARCH_STARTED = true;
     if (my !== seq) return;
     const kw = await Promise.all(kwr.hits.map(x => x.data()));
     let items = kw.map(d => ({ url: norm(d.url), title: d.meta.title || d.url, html: d.excerpt }));
+    items = [...items.filter(it => !GENERAL.test(it.url)), ...items.filter(it => GENERAL.test(it.url))];
     let usedSem = false;
     if (sem) {
       const hits = (await sem.search(q, 12)).filter(h => h.score > 0.45);
