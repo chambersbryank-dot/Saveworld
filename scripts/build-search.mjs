@@ -44,7 +44,7 @@ const text = h => decode(h.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim()
 const HUBS = /^(Oceans|Lakes|Rivers|Deforestation|Space|Earth_Observation|Planetary_Defense|Space_Disposal|Space_Weather|Project-Rawane)\.html$/;
 
 // general/site pages rank slightly below solution and hub pages in the semantic layer
-const GENERAL = /^(index|About|Amazing_Facts|Myth_vs_Fact|Community|Contact|Press|Ways_to_Help|Find_a_Cleanup|Rawanes_Mission_Log)\.html$/;
+const GENERAL = /^(index|Solutions|About|Amazing_Facts|Myth_vs_Fact|Community|Contact|Press|Ways_to_Help|Find_a_Cleanup|Rawanes_Mission_Log)\.html$/;
 const pages = [], chunks = [];
 for (const f of files.filter(f => !f.includes('/'))) {
   let h = fs.readFileSync(path.join(SITE, f), 'utf8');
