@@ -2436,5 +2436,8 @@
 "Example questions": "Exemples de questions",
 "Note: Floating questions (clickable) are designed to educate the user how to frame SI (AI) questions based on industry best practices.": "Remarque : les questions flottantes (cliquables) montrent comment formuler des questions à une SI (IA) selon les bonnes pratiques du secteur.",
 "Show more": "Afficher plus",
-"Not quite it? Refine your question: add who, where, or what outcome you want.": "Pas tout à fait ça ? Précisez votre question : ajoutez qui, où ou le résultat que vous voulez."
+"Not quite it? Refine your question: add who, where, or what outcome you want.": "Pas tout à fait ça ? Précisez votre question : ajoutez qui, où ou le résultat que vous voulez.",
+"Search:": "Recherche :",
+"(MIT). Smart results: bge-small-en (MIT) via Transformers.js (Apache-2.0), runs fully in-browser.": "(MIT). Résultats intelligents : bge-small-en (MIT) via Transformers.js (Apache-2.0), entièrement dans le navigateur.",
+"Background: Redesigned by SI & Biological SI Partner for Saving Planets. Earth: NASA/NOAA DSCOVR EPIC. Earth limb: NASA (ISS). Nebula, stars, planet: generated.": "Arrière-plan : repensé par SI & son partenaire SI biologique pour Saving Planets. Terre : NASA/NOAA DSCOVR EPIC. Limbe terrestre : NASA (ISS). Nébuleuse, étoiles, planète : générées."
 }

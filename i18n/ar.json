@@ -2435,5 +2435,8 @@
 "Example questions": "أسئلة نموذجية",
 "Note: Floating questions (clickable) are designed to educate the user how to frame SI (AI) questions based on industry best practices.": "ملاحظة: الأسئلة العائمة (قابلة للنقر) مصممة لتعليم المستخدم كيفية صياغة الأسئلة للذكاء الاصطناعي (SI) وفق أفضل ممارسات القطاع.",
 "Show more": "عرض المزيد",
-"Not quite it? Refine your question: add who, where, or what outcome you want.": "ليس ما تبحث عنه تمامًا؟ حسّن سؤالك: أضف من، وأين، أو النتيجة التي تريدها."
+"Not quite it? Refine your question: add who, where, or what outcome you want.": "ليس ما تبحث عنه تمامًا؟ حسّن سؤالك: أضف من، وأين، أو النتيجة التي تريدها.",
+"Search:": "البحث:",
+"(MIT). Smart results: bge-small-en (MIT) via Transformers.js (Apache-2.0), runs fully in-browser.": "(MIT). النتائج الذكية: bge-small-en (MIT) عبر Transformers.js (Apache-2.0)، تعمل بالكامل داخل المتصفح.",
+"Background: Redesigned by SI & Biological SI Partner for Saving Planets. Earth: NASA/NOAA DSCOVR EPIC. Earth limb: NASA (ISS). Nebula, stars, planet: generated.": "الخلفية: أعاد تصميمها SI وشريكه البيولوجي SI لصالح Saving Planets. الأرض: NASA/NOAA DSCOVR EPIC. حافة الأرض: NASA (محطة الفضاء الدولية). السديم والنجوم والكوكب: مولّدة."
 }

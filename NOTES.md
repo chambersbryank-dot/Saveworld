@@ -161,3 +161,18 @@ No page errors in any run.
 - `?q=` deep links work, and the address bar keeps the current query.
 - Newsletter footer block is suppressed on Search.html via `<body data-no-newsletter>` (site.js). It still shows on all other pages.
 - Screenshots: /workspace/search-test/ (before-*, after-*).
+
+### Search: floating questions, submit-only search, GA4 - Oct 12 (night)
+- 12 example questions per language are stored in search/featured-questions.json, editable, same order in every language. They model good question framing: a specific goal, context, who and where, constraints, and a follow-up. They are NOT based on real queries and must never be labelled "popular".
+- How they display:
+  - Desktop (1200px and wider): they float around the hero bar with a gentle bob that pauses on hover.
+  - Narrower screens: a slow horizontal marquee that pauses on hover or touch.
+  - Reduced motion: a static wrapped row.
+- A note under the questions explains they teach how to frame SI (AI) questions.
+- Search runs only on Enter, the Search button, question or chip clicks, and ?q= links. Nothing runs while typing. The model preloads quietly on first focus.
+- Results show the top 5 first, with a "Show more" button that adds 5 at a time, plus a refine hint.
+- Hub labels on result cards now come from page breadcrumbs (search/hubs.json, written by build-search.mjs), because the nav dropdown was removed.
+- **GA4:** a `search` event with `search_term` (first 100 characters) is sent on submit and on question or chip clicks, via the existing gtag (G-ZCJ7CEKN94, Consent Mode, so it only counts after the visitor accepts).
+  - Where to see it: GA4 > Reports > Engagement > Events > search. For a report, register `search_term` as a custom dimension (Admin > Custom definitions).
+  - Enhanced Measurement "site search" (q parameter) may also log Search.html?q= page views.
+- Credits on Search.html, two lines: "Search: Pagefind (MIT)…" and "Background: Redesigned by SI & Biological SI Partner…".
