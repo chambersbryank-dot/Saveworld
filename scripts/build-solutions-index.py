@@ -96,16 +96,16 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Saving Planets Solutions", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012b">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012c">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     chips = ''.join(f'<button type="button" class="sol-chip">{c}</button>' for c in
                     ['ways to clean a river near me', 'how space tech helps farmers', 'protecting coasts from storms', 'junk satellites crowding orbit'])
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
-        '<section class="page-hero sol-hero" id="top"><div class="page-hero-content"><h1>Search Saving Planets</h1>'
+        '<section class="page-hero sol-hero" id="top"><div class="page-hero-content"><p class="sol-hero-title" data-pagefind-ignore>Search Saving Planets</p>'
         '<form class="sol-search-form" role="search" action="Solutions.html" onsubmit="return false"><label class="visually-hidden" for="sol-q">Search solutions</label>'
         '<input id="sol-q" name="q" type="search" autocomplete="off" placeholder="Try: protecting coasts from storms" aria-describedby="sol-status"></form>'
         '<p id="sol-status" class="sol-status" aria-live="polite"></p></div></section>\n'
-        f'<main id="directory"><section class="sol-intro"><h2>Saving Planets Solutions</h2><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
+        f'<main id="directory"><section class="sol-intro"><h1>Saving Planets Solutions</h1><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
         f'<section class="sol-empty" hidden><p>No matching solutions yet. Try one of these:</p><div class="sol-chips">{chips}</div></section>\n'
         + '\n'.join(secs) + '\n</main>\n'
         f'{footer}<script src="site.js?v={js_v}"></script><script type="module" src="solutions.js?v=20261012a"></script></body></html>\n')

@@ -3,7 +3,7 @@ body.sol-page .page-hero.sol-hero { position: relative; overflow: hidden; min-he
 body.sol-page .sol-hero::before { content: ""; position: absolute; inset: -4%; z-index: 0; background: url('assets/search-hero.jpg') 68% center/cover no-repeat; animation: sol-drift 60s ease-in-out infinite alternate; }
 body.sol-page .sol-hero::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(3,8,20,0.55) 0%, rgba(3,8,20,0.35) 45%, rgba(3,8,20,0.7) 100%); }
 body.sol-page .sol-hero .page-hero-content { position: relative; z-index: 1; width: min(46rem, 92vw); }
-body.sol-page .sol-hero h1 { text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
+body.sol-page .sol-hero .sol-hero-title { text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
 @keyframes sol-drift { from { transform: scale(1.04) translateX(-1%); } to { transform: scale(1.08) translateX(1%); } }
 @media (prefers-reduced-motion: reduce) { body.sol-page .sol-hero::before { animation: none; } }
 .sol-search-form { margin-top: 1rem; }
@@ -11,7 +11,7 @@ body.sol-page .sol-hero h1 { text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
 .sol-status { min-height: 1.3em; margin: 0.6rem 0 0; font-size: 0.9rem; color: #cfe3f5; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .sol-intro { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 0; text-align: center; }
-.sol-intro h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0 0 1rem; }
+.sol-intro h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0 0 1rem; }
 .sol-jump ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0; margin: 0; }
 .sol-jump a, .sol-chip { display: inline-block; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid #4da3ff; color: #cfe8ff; text-decoration: none; font: inherit; font-size: 0.95rem; background: transparent; cursor: pointer; }
 .sol-jump a:hover, .sol-chip:hover { background: #009cde; color: #fff; }
@@ -35,3 +35,4 @@ body.sol-page .sol-hub h2 a.sol-top:hover { color: #4da3ff; text-decoration: und
 html:has(body.sol-page) { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html:has(body.sol-page) { scroll-behavior: auto; } }
 #top { scroll-margin-top: 0; }
+body.sol-page .sol-hero .sol-hero-title { font-family: "Montserrat", "Segoe UI", sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 0.5rem; color: #fff; }
