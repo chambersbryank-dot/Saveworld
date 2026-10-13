@@ -50,6 +50,22 @@ def hubs():
         out.append((f, name, items))
     return sorted(out, key=lambda h: h[1].lower())
 
+def hub_summary(f, name):
+    """Synopsis + impact taken only from the hub page itself (Five W's What/Why, first Impact Statement paragraph)."""
+    s = rd(f)
+    what, why = m1(r'<h3>What</h3><p>(.*?)</p>', s), m1(r'<h3>Why</h3><p>(.*?)</p>', s)
+    imp = ''
+    sec = m1(r'(<section[^>]*id="(?:saves|impact)"[^>]*>.*?</section>)', s)
+    for cls, txt in re.findall(r'<p( class="[^"]*")?>(.*?)</p>', sec, re.S):
+        plain = re.sub(r'<[^>]+>', '', txt)
+        if 'fact-source' in cls or 'hub-label' in cls or 'inline-link' in txt or plain.startswith(('Source', 'Organization source', 'Company source')) or len(plain) < 40: continue
+        imp = txt.strip(); break
+    if not imp: imp = esc(un(m1(r'<meta name="description" content="([^"]*)"', s)))
+    syn = ''.join(f'<p>{x}</p>' for x in (what, why) if x)
+    return ('<div class="sol-hub-summary"><h3>Hub Summary</h3>' + syn +
+            f'<p class="sol-impact"><strong>Impact:</strong> {imp}</p>'
+            f'<p class="sol-hub-links"><a href="{f}">Read the hub&#x27;s 5 W&#x27;s</a> <span aria-hidden="true">·</span> <a href="Ways_to_Help.html">More: Ways to Help</a></p></div>')
+
 def card(href, name, i, missing):
     if not i['img']: missing.append(f'{href}: no image')
     if not (i['desc'] or i['what']): missing.append(f'{href}: no description')
@@ -87,7 +103,7 @@ def build():
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
         jump.append(f'<li><a href="#{sid}">{esc(name)}</a></li>')
         cards = ''.join(card(h, n, info(h), missing) for h, n in items); total += len(items)
-        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div></section>')
+        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div>{hub_summary(f, name)}</section>')
     desc = f'Every Saving Planets solution in one place: {total} sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites.'
     # head: retarget Contact -> Solutions
     h = head.replace('Contact.html', OUT).replace('<title>Contact | Saving Planets</title>', '<title>Saving Planets Solutions | Saving Planets</title>')
@@ -96,7 +112,7 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Saving Planets Solutions", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012c">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261012d">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     chips = ''.join(f'<button type="button" class="sol-chip">{c}</button>' for c in
                     ['ways to clean a river near me', 'how space tech helps farmers', 'protecting coasts from storms', 'junk satellites crowding orbit'])

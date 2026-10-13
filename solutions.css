@@ -36,3 +36,9 @@ html:has(body.sol-page) { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html:has(body.sol-page) { scroll-behavior: auto; } }
 #top { scroll-margin-top: 0; }
 body.sol-page .sol-hero .sol-hero-title { font-family: "Montserrat", "Segoe UI", sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 0.5rem; color: #fff; }
+body.sol-page .sol-hub > h2 { text-align: start; display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+body.sol-page .sol-hub > h2 a.sol-top { margin-inline-start: 0.2rem; }
+body.sol-page .sol-hub-summary { margin: 1.2rem 0 0.5rem; padding: 1rem 1.2rem; border-radius: 12px; border: 1px solid rgba(77,163,255,0.4); background: rgba(21,32,51,0.55); }
+body.sol-page .sol-hub-summary h3 { margin: 0 0 0.5rem; font-size: 1.15rem; color: #4da3ff; }
+body.sol-page .sol-hub-summary p { margin: 0.4rem 0; line-height: 1.5; }
+body.sol-page .sol-hub-links a { font-weight: 700; }
