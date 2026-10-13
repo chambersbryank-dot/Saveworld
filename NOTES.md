@@ -176,3 +176,11 @@ No page errors in any run.
   - Where to see it: GA4 > Reports > Engagement > Events > search. For a report, register `search_term` as a custom dimension (Admin > Custom definitions).
   - Enhanced Measurement "site search" (q parameter) may also log Search.html?q= page views.
 - Credits on Search.html, two lines: "Search: Pagefind (MIT)…" and "Background: Redesigned by SI & Biological SI Partner…".
+
+## Batch B learning features - Oct 12
+Built by `scripts/build-batch-b.py` (weekly-sync runs it before i18n-build, and `--glossary` after it). Styles `batchb.css`, script `batchb.js`.
+- **Explain Like I'm 10** box above the Five W's on all 84 solution pages. Built only from the page's own What / Why (and For People when short) text, so no new facts and translations reuse existing strings. Hand-written simpler versions can go in `assets/data/eli10.json` (`{"Page.html": ["sentence", ...]}`), which overrides the generated box.
+- **Glossary**: `Glossary.html` (A-Z, 27 terms in `assets/data/glossary.json` with fr/es/ar). Tap/hover definitions (accessible button + popover, works with iPad touch, Esc/outside tap closes) on the first occurrence of each term in the ELI10 / Five W's / impact sections, in all four languages. `i18n-build.py` and `i18n-check.js` strip this markup before translating/hashing.
+- **Homepage "Start Here"** row: Kids -> Amazing Facts, Students & Teachers -> Teachers.html, Curious Adults -> Solutions.html, Partners -> About#partner.
+- **Cite This Page** (APA + MLA with accessed date, Copy button) and **For Teachers** box (3 discussion questions from templates, print button) on solution pages. The print stylesheet produces a one-page sheet (title, ELI10, Five W's with sources, questions, URL). 83/84 fit one Letter page; Life_Terra runs to two. `Teachers.html` lists every sheet (`Page.html?print=1` opens the print dialog).
+- Next: hand-write simpler ELI10 text for the most-visited pages (eli10.json); add more glossary terms as pages grow.

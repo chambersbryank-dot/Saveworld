@@ -1,0 +1,899 @@
+{
+ "_about": "Glossary terms for Glossary.html and the tap/hover definitions on solution pages (scripts/build-batch-b.py). match = words to look for (first occurrence per page gets a definition). Keep definitions simple and consistent with the site's sourced pages.",
+ "terms": [
+  {
+   "id": "aerosol",
+   "en": {
+    "term": "Aerosol",
+    "match": [
+     "aerosols",
+     "aerosol"
+    ],
+    "def": "Tiny bits of dust, smoke, salt or pollution floating in the air. They can block sunlight and help clouds form."
+   },
+   "fr": {
+    "term": "Aérosol",
+    "match": [
+     "aérosols",
+     "aérosol"
+    ],
+    "def": "De minuscules particules de poussière, de fumée, de sel ou de pollution en suspension dans l'air. Elles peuvent bloquer la lumière du Soleil et aider les nuages à se former."
+   },
+   "es": {
+    "term": "Aerosol",
+    "match": [
+     "aerosoles",
+     "aerosol"
+    ],
+    "def": "Partículas diminutas de polvo, humo, sal o contaminación que flotan en el aire. Pueden bloquear la luz del Sol y ayudar a formar nubes."
+   },
+   "ar": {
+    "term": "الهباء الجوي",
+    "match": [
+     "الهباء الجوي",
+     "الهباء"
+    ],
+    "def": "جسيمات صغيرة جدًا من الغبار أو الدخان أو الملح أو التلوث تطفو في الهواء. يمكنها حجب ضوء الشمس والمساعدة في تكوّن السحب."
+   }
+  },
+  {
+   "id": "asteroid",
+   "en": {
+    "term": "Asteroid",
+    "match": [
+     "asteroids",
+     "asteroid"
+    ],
+    "def": "A rocky object that orbits the Sun, much smaller than a planet. Most are in a belt between Mars and Jupiter."
+   },
+   "fr": {
+    "term": "Astéroïde",
+    "match": [
+     "astéroïdes",
+     "astéroïde"
+    ],
+    "def": "Un objet rocheux qui tourne autour du Soleil, bien plus petit qu'une planète. La plupart se trouvent dans une ceinture entre Mars et Jupiter."
+   },
+   "es": {
+    "term": "Asteroide",
+    "match": [
+     "asteroides",
+     "asteroide"
+    ],
+    "def": "Un objeto rocoso que gira alrededor del Sol, mucho más pequeño que un planeta. La mayoría está en un cinturón entre Marte y Júpiter."
+   },
+   "ar": {
+    "term": "الكويكب",
+    "match": [
+     "الكويكبات",
+     "الكويكب",
+     "كويكب"
+    ],
+    "def": "جسم صخري يدور حول الشمس، أصغر بكثير من الكوكب. يقع معظمها في حزام بين المريخ والمشتري."
+   }
+  },
+  {
+   "id": "biodiversity",
+   "en": {
+    "term": "Biodiversity",
+    "match": [
+     "biodiversity"
+    ],
+    "def": "The variety of all living things in a place: plants, animals, fungi and tiny microbes."
+   },
+   "fr": {
+    "term": "Biodiversité",
+    "match": [
+     "biodiversité"
+    ],
+    "def": "La variété de tous les êtres vivants d'un lieu : plantes, animaux, champignons et minuscules microbes."
+   },
+   "es": {
+    "term": "Biodiversidad",
+    "match": [
+     "biodiversidad"
+    ],
+    "def": "La variedad de todos los seres vivos de un lugar: plantas, animales, hongos y microbios diminutos."
+   },
+   "ar": {
+    "term": "التنوع البيولوجي",
+    "match": [
+     "التنوع البيولوجي"
+    ],
+    "def": "تنوّع جميع الكائنات الحية في مكان ما: النباتات والحيوانات والفطريات والميكروبات الدقيقة."
+   }
+  },
+  {
+   "id": "biomass",
+   "en": {
+    "term": "Biomass",
+    "match": [
+     "biomass"
+    ],
+    "def": "The total amount of living material, like the wood and leaves in a forest. Measuring it shows how much carbon plants store."
+   },
+   "fr": {
+    "term": "Biomasse",
+    "match": [
+     "biomasse"
+    ],
+    "def": "La quantité totale de matière vivante, comme le bois et les feuilles d'une forêt. La mesurer montre combien de carbone les plantes stockent."
+   },
+   "es": {
+    "term": "Biomasa",
+    "match": [
+     "biomasa"
+    ],
+    "def": "La cantidad total de materia viva, como la madera y las hojas de un bosque. Medirla muestra cuánto carbono almacenan las plantas."
+   },
+   "ar": {
+    "term": "الكتلة الحيوية",
+    "match": [
+     "الكتلة الحيوية"
+    ],
+    "def": "الكمية الكلية للمادة الحية، مثل الخشب والأوراق في الغابة. قياسها يبيّن مقدار الكربون الذي تخزّنه النباتات."
+   }
+  },
+  {
+   "id": "carbon-dioxide",
+   "en": {
+    "term": "Carbon dioxide (CO₂)",
+    "match": [
+     "carbon dioxide"
+    ],
+    "def": "A gas that people and animals breathe out and that burning fuel releases. Plants take it in, and too much of it in the air warms the planet."
+   },
+   "fr": {
+    "term": "Dioxyde de carbone (CO₂)",
+    "match": [
+     "dioxyde de carbone"
+    ],
+    "def": "Un gaz que les humains et les animaux expirent et que la combustion libère. Les plantes l'absorbent, et trop de CO₂ dans l'air réchauffe la planète."
+   },
+   "es": {
+    "term": "Dióxido de carbono (CO₂)",
+    "match": [
+     "dióxido de carbono"
+    ],
+    "def": "Un gas que exhalan las personas y los animales y que libera la quema de combustibles. Las plantas lo absorben, y demasiado en el aire calienta el planeta."
+   },
+   "ar": {
+    "term": "ثاني أكسيد الكربون",
+    "match": [
+     "ثاني أكسيد الكربون"
+    ],
+    "def": "غاز يزفره الإنسان والحيوان ويطلقه حرق الوقود. تمتصه النباتات، وزيادته في الهواء تُدفئ الكوكب."
+   }
+  },
+  {
+   "id": "cme",
+   "en": {
+    "term": "Coronal mass ejection (CME)",
+    "match": [
+     "coronal mass ejections",
+     "coronal mass ejection"
+    ],
+    "def": "A huge cloud of charged gas thrown out from the Sun. If it hits Earth it can cause auroras and disturb satellites and power grids."
+   },
+   "fr": {
+    "term": "Éjection de masse coronale (CME)",
+    "match": [
+     "éjections de masse coronale",
+     "éjection de masse coronale"
+    ],
+    "def": "Un énorme nuage de gaz chargé projeté par le Soleil. S'il atteint la Terre, il peut provoquer des aurores et perturber les satellites et les réseaux électriques."
+   },
+   "es": {
+    "term": "Eyección de masa coronal (CME)",
+    "match": [
+     "eyecciones de masa coronal",
+     "eyección de masa coronal"
+    ],
+    "def": "Una enorme nube de gas cargado lanzada por el Sol. Si llega a la Tierra puede causar auroras y perturbar satélites y redes eléctricas."
+   },
+   "ar": {
+    "term": "الانبعاث الكتلي الإكليلي",
+    "match": [
+     "الانبعاثات الكتلية الإكليلية",
+     "الانبعاث الكتلي الإكليلي"
+    ],
+    "def": "سحابة ضخمة من الغاز المشحون تقذفها الشمس. إذا اصطدمت بالأرض قد تسبب الشفق القطبي وتعطّل الأقمار الصناعية وشبكات الكهرباء."
+   }
+  },
+  {
+   "id": "deorbit",
+   "en": {
+    "term": "Deorbit",
+    "match": [
+     "deorbiting",
+     "deorbit"
+    ],
+    "def": "To bring a satellite or piece of space junk down out of orbit on purpose, usually so it burns up in the atmosphere."
+   },
+   "fr": {
+    "term": "Désorbitation",
+    "match": [
+     "désorbiter",
+     "désorbitation"
+    ],
+    "def": "Faire descendre volontairement un satellite ou un débris spatial de son orbite, en général pour qu'il brûle dans l'atmosphère."
+   },
+   "es": {
+    "term": "Desorbitar",
+    "match": [
+     "desorbitar",
+     "desorbitación"
+    ],
+    "def": "Hacer bajar a propósito un satélite o un trozo de basura espacial de su órbita, normalmente para que se queme en la atmósfera."
+   },
+   "ar": {
+    "term": "الإخراج من المدار",
+    "match": [
+     "الإخراج من المدار"
+    ],
+    "def": "إنزال قمر صناعي أو قطعة من الحطام الفضائي من مدارها عمدًا، عادةً لكي تحترق في الغلاف الجوي."
+   }
+  },
+  {
+   "id": "ecosystem",
+   "en": {
+    "term": "Ecosystem",
+    "match": [
+     "ecosystems",
+     "ecosystem"
+    ],
+    "def": "A community of living things and the place they live, like a reef or a forest, all depending on each other."
+   },
+   "fr": {
+    "term": "Écosystème",
+    "match": [
+     "écosystèmes",
+     "écosystème"
+    ],
+    "def": "Une communauté d'êtres vivants et le lieu où ils vivent, comme un récif ou une forêt, tous dépendant les uns des autres."
+   },
+   "es": {
+    "term": "Ecosistema",
+    "match": [
+     "ecosistemas",
+     "ecosistema"
+    ],
+    "def": "Una comunidad de seres vivos y el lugar donde viven, como un arrecife o un bosque, que dependen unos de otros."
+   },
+   "ar": {
+    "term": "النظام البيئي",
+    "match": [
+     "النظم البيئية",
+     "النظام البيئي"
+    ],
+    "def": "مجتمع من الكائنات الحية والمكان الذي تعيش فيه، مثل الشعاب المرجانية أو الغابة، يعتمد بعضها على بعض."
+   }
+  },
+  {
+   "id": "greenhouse-gas",
+   "en": {
+    "term": "Greenhouse gas",
+    "match": [
+     "greenhouse gases",
+     "greenhouse gas"
+    ],
+    "def": "A gas, like carbon dioxide or methane, that traps heat in the air around Earth, the way a greenhouse keeps plants warm."
+   },
+   "fr": {
+    "term": "Gaz à effet de serre",
+    "match": [
+     "gaz à effet de serre"
+    ],
+    "def": "Un gaz, comme le dioxyde de carbone ou le méthane, qui retient la chaleur autour de la Terre, comme une serre garde les plantes au chaud."
+   },
+   "es": {
+    "term": "Gas de efecto invernadero",
+    "match": [
+     "gases de efecto invernadero",
+     "gas de efecto invernadero"
+    ],
+    "def": "Un gas, como el dióxido de carbono o el metano, que atrapa el calor alrededor de la Tierra, como un invernadero mantiene calientes las plantas."
+   },
+   "ar": {
+    "term": "غازات الدفيئة",
+    "match": [
+     "غازات الدفيئة"
+    ],
+    "def": "غازات مثل ثاني أكسيد الكربون والميثان تحبس الحرارة حول الأرض، كما تحافظ الدفيئة على دفء النباتات."
+   }
+  },
+  {
+   "id": "infrared",
+   "en": {
+    "term": "Infrared",
+    "match": [
+     "infrared"
+    ],
+    "def": "A kind of light our eyes can't see that we feel as heat. Special cameras use it to see warm objects and gases."
+   },
+   "fr": {
+    "term": "Infrarouge",
+    "match": [
+     "infrarouge"
+    ],
+    "def": "Une lumière invisible pour nos yeux que nous ressentons comme de la chaleur. Des caméras spéciales l'utilisent pour voir des objets chauds et des gaz."
+   },
+   "es": {
+    "term": "Infrarrojo",
+    "match": [
+     "infrarroja",
+     "infrarrojo"
+    ],
+    "def": "Un tipo de luz que nuestros ojos no ven y que sentimos como calor. Cámaras especiales la usan para ver objetos calientes y gases."
+   },
+   "ar": {
+    "term": "الأشعة تحت الحمراء",
+    "match": [
+     "تحت الحمراء"
+    ],
+    "def": "نوع من الضوء لا تراه أعيننا ونشعر به كحرارة. تستخدمه كاميرات خاصة لرؤية الأجسام الدافئة والغازات."
+   }
+  },
+  {
+   "id": "kelp",
+   "en": {
+    "term": "Kelp",
+    "match": [
+     "kelp"
+    ],
+    "def": "Large brown seaweed that grows in cool ocean water and forms underwater forests full of sea life."
+   },
+   "fr": {
+    "term": "Varech (kelp)",
+    "match": [
+     "varech",
+     "kelp"
+    ],
+    "def": "Une grande algue brune qui pousse dans les eaux fraîches et forme des forêts sous-marines pleines de vie."
+   },
+   "es": {
+    "term": "Kelp (quelpo)",
+    "match": [
+     "kelp",
+     "quelpo"
+    ],
+    "def": "Grandes algas pardas que crecen en aguas frías y forman bosques submarinos llenos de vida marina."
+   },
+   "ar": {
+    "term": "عشب البحر (كِلب)",
+    "match": [
+     "عشب البحر"
+    ],
+    "def": "أعشاب بحرية بنية كبيرة تنمو في مياه المحيط الباردة وتشكّل غابات تحت الماء مليئة بالحياة البحرية."
+   }
+  },
+  {
+   "id": "lagrange-point",
+   "en": {
+    "term": "Lagrange point",
+    "match": [
+     "Lagrange points",
+     "Lagrange point"
+    ],
+    "def": "A spot in space where the pull of the Sun and Earth balance, so a spacecraft can stay in place with little fuel. L1 sits between Earth and the Sun."
+   },
+   "fr": {
+    "term": "Point de Lagrange",
+    "match": [
+     "points de Lagrange",
+     "point de Lagrange"
+    ],
+    "def": "Un endroit de l'espace où les attractions du Soleil et de la Terre s'équilibrent, si bien qu'un engin peut y rester avec peu de carburant. L1 se trouve entre la Terre et le Soleil."
+   },
+   "es": {
+    "term": "Punto de Lagrange",
+    "match": [
+     "puntos de Lagrange",
+     "punto de Lagrange"
+    ],
+    "def": "Un lugar del espacio donde la atracción del Sol y de la Tierra se equilibra, así que una nave puede quedarse allí con poco combustible. L1 está entre la Tierra y el Sol."
+   },
+   "ar": {
+    "term": "نقطة لاغرانج",
+    "match": [
+     "نقطة لاغرانج",
+     "نقاط لاغرانج"
+    ],
+    "def": "موضع في الفضاء تتوازن فيه جاذبية الشمس والأرض، فيمكن للمركبة البقاء فيه بقليل من الوقود. تقع L1 بين الأرض والشمس."
+   }
+  },
+  {
+   "id": "magnetosphere",
+   "en": {
+    "term": "Magnetosphere",
+    "match": [
+     "magnetosphere"
+    ],
+    "def": "Earth's invisible magnetic shield. It steers most of the Sun's charged particles away from our planet."
+   },
+   "fr": {
+    "term": "Magnétosphère",
+    "match": [
+     "magnétosphère"
+    ],
+    "def": "Le bouclier magnétique invisible de la Terre. Il détourne la plupart des particules chargées venues du Soleil."
+   },
+   "es": {
+    "term": "Magnetosfera",
+    "match": [
+     "magnetosfera"
+    ],
+    "def": "El escudo magnético invisible de la Tierra. Desvía la mayoría de las partículas cargadas que llegan del Sol."
+   },
+   "ar": {
+    "term": "الغلاف المغناطيسي",
+    "match": [
+     "الغلاف المغناطيسي"
+    ],
+    "def": "الدرع المغناطيسي غير المرئي للأرض. يُبعد معظم الجسيمات المشحونة القادمة من الشمس عن كوكبنا."
+   }
+  },
+  {
+   "id": "mangrove",
+   "en": {
+    "term": "Mangrove",
+    "match": [
+     "mangroves",
+     "mangrove"
+    ],
+    "def": "A tree that grows in salty water along tropical coasts. Its tangled roots protect shores from waves and shelter young fish."
+   },
+   "fr": {
+    "term": "Mangrove",
+    "match": [
+     "mangroves",
+     "mangrove",
+     "palétuviers"
+    ],
+    "def": "Des arbres qui poussent dans l'eau salée des côtes tropicales. Leurs racines enchevêtrées protègent les rivages des vagues et abritent les jeunes poissons."
+   },
+   "es": {
+    "term": "Manglar",
+    "match": [
+     "manglares",
+     "manglar",
+     "mangle"
+    ],
+    "def": "Árboles que crecen en agua salada en costas tropicales. Sus raíces enredadas protegen las orillas de las olas y dan refugio a peces jóvenes."
+   },
+   "ar": {
+    "term": "المانغروف",
+    "match": [
+     "المانغروف",
+     "أشجار المانغروف"
+    ],
+    "def": "أشجار تنمو في المياه المالحة على السواحل الاستوائية. جذورها المتشابكة تحمي الشواطئ من الأمواج وتؤوي صغار الأسماك."
+   }
+  },
+  {
+   "id": "methane",
+   "en": {
+    "term": "Methane",
+    "match": [
+     "methane"
+    ],
+    "def": "A greenhouse gas that traps much more heat than carbon dioxide over a few decades. It leaks from oil and gas sites, landfills and farms."
+   },
+   "fr": {
+    "term": "Méthane",
+    "match": [
+     "méthane"
+    ],
+    "def": "Un gaz à effet de serre qui retient bien plus de chaleur que le dioxyde de carbone sur quelques décennies. Il fuit des sites pétroliers et gaziers, des décharges et des fermes."
+   },
+   "es": {
+    "term": "Metano",
+    "match": [
+     "metano"
+    ],
+    "def": "Un gas de efecto invernadero que atrapa mucho más calor que el dióxido de carbono durante unas décadas. Se escapa de instalaciones de petróleo y gas, vertederos y granjas."
+   },
+   "ar": {
+    "term": "الميثان",
+    "match": [
+     "الميثان"
+    ],
+    "def": "غاز دفيئة يحبس حرارة أكثر بكثير من ثاني أكسيد الكربون على مدى بضعة عقود. يتسرب من مواقع النفط والغاز ومكبات النفايات والمزارع."
+   }
+  },
+  {
+   "id": "microplastics",
+   "en": {
+    "term": "Microplastics",
+    "match": [
+     "microplastics",
+     "microplastic"
+    ],
+    "def": "Pieces of plastic smaller than 5 millimeters, about the size of a grain of rice or smaller. They come from bigger plastic breaking apart."
+   },
+   "fr": {
+    "term": "Microplastiques",
+    "match": [
+     "microplastiques",
+     "microplastique"
+    ],
+    "def": "Des morceaux de plastique de moins de 5 millimètres, à peu près la taille d'un grain de riz ou moins. Ils viennent de plus gros plastiques qui se fragmentent."
+   },
+   "es": {
+    "term": "Microplásticos",
+    "match": [
+     "microplásticos",
+     "microplástico"
+    ],
+    "def": "Trozos de plástico de menos de 5 milímetros, como un grano de arroz o más pequeños. Vienen de plásticos más grandes que se rompen."
+   },
+   "ar": {
+    "term": "اللدائن الدقيقة",
+    "match": [
+     "اللدائن الدقيقة",
+     "الجسيمات البلاستيكية الدقيقة",
+     "البلاستيك الدقيق"
+    ],
+    "def": "قطع بلاستيكية أصغر من 5 ملليمترات، بحجم حبة الأرز أو أصغر. تنتج عن تفتت البلاستيك الأكبر."
+   }
+  },
+  {
+   "id": "orbit",
+   "en": {
+    "term": "Orbit",
+    "match": [
+     "orbit"
+    ],
+    "def": "The curved path an object takes as it travels around a planet, moon or star, like a satellite circling Earth."
+   },
+   "fr": {
+    "term": "Orbite",
+    "match": [
+     "orbite"
+    ],
+    "def": "La trajectoire courbe d'un objet qui tourne autour d'une planète, d'une lune ou d'une étoile, comme un satellite autour de la Terre."
+   },
+   "es": {
+    "term": "Órbita",
+    "match": [
+     "órbita"
+    ],
+    "def": "El camino curvo que sigue un objeto al girar alrededor de un planeta, una luna o una estrella, como un satélite alrededor de la Tierra."
+   },
+   "ar": {
+    "term": "المدار",
+    "match": [
+     "المدار",
+     "مدار"
+    ],
+    "def": "المسار المنحني الذي يسلكه جسم أثناء دورانه حول كوكب أو قمر أو نجم، مثل قمر صناعي يدور حول الأرض."
+   }
+  },
+  {
+   "id": "ozone",
+   "en": {
+    "term": "Ozone",
+    "match": [
+     "ozone"
+    ],
+    "def": "A gas high in the sky that blocks harmful ultraviolet rays from the Sun. Near the ground, ozone is a pollutant."
+   },
+   "fr": {
+    "term": "Ozone",
+    "match": [
+     "ozone"
+    ],
+    "def": "Un gaz situé haut dans le ciel qui bloque les rayons ultraviolets nocifs du Soleil. Près du sol, l'ozone est un polluant."
+   },
+   "es": {
+    "term": "Ozono",
+    "match": [
+     "ozono"
+    ],
+    "def": "Un gas en lo alto del cielo que bloquea los rayos ultravioleta dañinos del Sol. Cerca del suelo, el ozono es un contaminante."
+   },
+   "ar": {
+    "term": "الأوزون",
+    "match": [
+     "الأوزون"
+    ],
+    "def": "غاز في طبقات الجو العليا يحجب الأشعة فوق البنفسجية الضارة القادمة من الشمس. وقرب سطح الأرض يكون الأوزون ملوِّثًا."
+   }
+  },
+  {
+   "id": "phytoplankton",
+   "en": {
+    "term": "Phytoplankton",
+    "match": [
+     "phytoplankton"
+    ],
+    "def": "Tiny plant-like living things that drift in water and use sunlight to make food. They make much of the oxygen we breathe and feed ocean life."
+   },
+   "fr": {
+    "term": "Phytoplancton",
+    "match": [
+     "phytoplancton"
+    ],
+    "def": "De minuscules êtres vivants proches des plantes qui dérivent dans l'eau et utilisent la lumière du Soleil pour se nourrir. Ils produisent une grande part de l'oxygène que nous respirons et nourrissent la vie marine."
+   },
+   "es": {
+    "term": "Fitoplancton",
+    "match": [
+     "fitoplancton"
+    ],
+    "def": "Seres vivos diminutos parecidos a plantas que flotan en el agua y usan la luz del Sol para hacer su alimento. Producen gran parte del oxígeno que respiramos y alimentan la vida marina."
+   },
+   "ar": {
+    "term": "العوالق النباتية",
+    "match": [
+     "العوالق النباتية"
+    ],
+    "def": "كائنات حية دقيقة شبيهة بالنباتات تنجرف في الماء وتستخدم ضوء الشمس لصنع غذائها. تنتج جزءًا كبيرًا من الأكسجين الذي نتنفسه وتغذي الحياة البحرية."
+   }
+  },
+  {
+   "id": "radar",
+   "en": {
+    "term": "Radar",
+    "match": [
+     "radar"
+    ],
+    "def": "A tool that sends out radio waves and listens for the echoes. From space it can see the ground through clouds, day or night."
+   },
+   "fr": {
+    "term": "Radar",
+    "match": [
+     "radar"
+    ],
+    "def": "Un outil qui envoie des ondes radio et écoute leurs échos. Depuis l'espace, il voit le sol à travers les nuages, de jour comme de nuit."
+   },
+   "es": {
+    "term": "Radar",
+    "match": [
+     "radar"
+    ],
+    "def": "Una herramienta que envía ondas de radio y escucha sus ecos. Desde el espacio puede ver el suelo a través de las nubes, de día o de noche."
+   },
+   "ar": {
+    "term": "الرادار",
+    "match": [
+     "الرادار",
+     "رادار"
+    ],
+    "def": "أداة ترسل موجات راديوية وتستمع إلى صداها. من الفضاء يمكنها رؤية الأرض عبر السحب ليلًا ونهارًا."
+   }
+  },
+  {
+   "id": "reentry",
+   "en": {
+    "term": "Reentry",
+    "match": [
+     "reentry",
+     "re-entry"
+    ],
+    "def": "When a spacecraft or piece of space junk falls back into Earth's air. The friction makes it very hot, so most small objects burn up."
+   },
+   "fr": {
+    "term": "Rentrée atmosphérique",
+    "match": [
+     "rentrée"
+    ],
+    "def": "Quand un engin spatial ou un débris retombe dans l'air de la Terre. Le frottement le rend très chaud, si bien que la plupart des petits objets brûlent."
+   },
+   "es": {
+    "term": "Reentrada",
+    "match": [
+     "reentrada"
+    ],
+    "def": "Cuando una nave o un trozo de basura espacial vuelve a caer al aire de la Tierra. La fricción lo calienta mucho, así que la mayoría de los objetos pequeños se queman."
+   },
+   "ar": {
+    "term": "العودة إلى الغلاف الجوي",
+    "match": [
+     "العودة إلى الغلاف الجوي",
+     "إعادة الدخول"
+    ],
+    "def": "عندما تسقط مركبة فضائية أو قطعة حطام عائدةً إلى هواء الأرض. يسخّنها الاحتكاك كثيرًا فتحترق معظم الأجسام الصغيرة."
+   }
+  },
+  {
+   "id": "salt-marsh",
+   "en": {
+    "term": "Salt marsh",
+    "match": [
+     "salt marshes",
+     "salt marsh"
+    ],
+    "def": "A coastal wetland of grasses that floods with salty tide water. It soaks up storm surges and stores carbon in its mud."
+   },
+   "fr": {
+    "term": "Marais salé",
+    "match": [
+     "marais salés",
+     "marais salé"
+    ],
+    "def": "Une zone humide côtière couverte d'herbes, inondée par l'eau salée des marées. Elle absorbe les ondes de tempête et stocke du carbone dans sa vase."
+   },
+   "es": {
+    "term": "Marisma",
+    "match": [
+     "marismas",
+     "marisma"
+    ],
+    "def": "Un humedal costero de pastos que se inunda con el agua salada de las mareas. Absorbe las mareas de tormenta y guarda carbono en su barro."
+   },
+   "ar": {
+    "term": "المستنقع الملحي",
+    "match": [
+     "المستنقعات الملحية",
+     "المستنقع الملحي"
+    ],
+    "def": "أرض رطبة ساحلية من الأعشاب تغمرها مياه المد المالحة. تمتص عواصف المد وتخزن الكربون في طينها."
+   }
+  },
+  {
+   "id": "altimetry",
+   "en": {
+    "term": "Satellite altimetry",
+    "match": [
+     "altimetry",
+     "altimeter"
+    ],
+    "def": "Measuring the height of the sea or land from space by timing how long a radar or laser pulse takes to bounce back."
+   },
+   "fr": {
+    "term": "Altimétrie satellitaire",
+    "match": [
+     "altimétrie",
+     "altimètre"
+    ],
+    "def": "Mesurer la hauteur de la mer ou des terres depuis l'espace en chronométrant le retour d'une impulsion radar ou laser."
+   },
+   "es": {
+    "term": "Altimetría satelital",
+    "match": [
+     "altimetría",
+     "altímetro"
+    ],
+    "def": "Medir la altura del mar o de la tierra desde el espacio cronometrando cuánto tarda en volver un pulso de radar o láser."
+   },
+   "ar": {
+    "term": "قياس الارتفاع بالأقمار الصناعية",
+    "match": [
+     "قياس الارتفاع",
+     "مقياس الارتفاع"
+    ],
+    "def": "قياس ارتفاع البحر أو اليابسة من الفضاء عبر حساب الوقت الذي تستغرقه نبضة رادار أو ليزر للارتداد."
+   }
+  },
+  {
+   "id": "seagrass",
+   "en": {
+    "term": "Seagrass",
+    "match": [
+     "seagrass"
+    ],
+    "def": "Flowering plants that grow underwater in shallow seas, forming meadows that shelter animals and store carbon."
+   },
+   "fr": {
+    "term": "Herbier marin",
+    "match": [
+     "herbiers marins",
+     "herbier marin",
+     "herbiers"
+    ],
+    "def": "Des plantes à fleurs qui poussent sous l'eau dans les mers peu profondes et forment des prairies qui abritent des animaux et stockent du carbone."
+   },
+   "es": {
+    "term": "Pastos marinos",
+    "match": [
+     "pastos marinos",
+     "praderas marinas"
+    ],
+    "def": "Plantas con flores que crecen bajo el agua en mares poco profundos y forman praderas que dan refugio a animales y guardan carbono."
+   },
+   "ar": {
+    "term": "الأعشاب البحرية",
+    "match": [
+     "الأعشاب البحرية"
+    ],
+    "def": "نباتات مزهرة تنمو تحت الماء في البحار الضحلة، وتشكّل مروجًا تؤوي الحيوانات وتخزن الكربون."
+   }
+  },
+  {
+   "id": "solar-wind",
+   "en": {
+    "term": "Solar wind",
+    "match": [
+     "solar wind"
+    ],
+    "def": "A steady stream of charged particles flowing out from the Sun in every direction."
+   },
+   "fr": {
+    "term": "Vent solaire",
+    "match": [
+     "vent solaire"
+    ],
+    "def": "Un flux continu de particules chargées qui s'échappe du Soleil dans toutes les directions."
+   },
+   "es": {
+    "term": "Viento solar",
+    "match": [
+     "viento solar"
+    ],
+    "def": "Una corriente constante de partículas cargadas que sale del Sol en todas direcciones."
+   },
+   "ar": {
+    "term": "الرياح الشمسية",
+    "match": [
+     "الرياح الشمسية"
+    ],
+    "def": "تيار مستمر من الجسيمات المشحونة يتدفق من الشمس في كل الاتجاهات."
+   }
+  },
+  {
+   "id": "sar",
+   "en": {
+    "term": "Synthetic aperture radar (SAR)",
+    "match": [
+     "synthetic aperture radar"
+    ],
+    "def": "A radar on a moving satellite that combines many echoes into one sharp picture, as if it had a giant antenna."
+   },
+   "fr": {
+    "term": "Radar à synthèse d'ouverture (SAR)",
+    "match": [
+     "radar à synthèse d'ouverture"
+    ],
+    "def": "Un radar embarqué sur un satellite en mouvement qui combine de nombreux échos en une image nette, comme s'il avait une antenne géante."
+   },
+   "es": {
+    "term": "Radar de apertura sintética (SAR)",
+    "match": [
+     "radar de apertura sintética"
+    ],
+    "def": "Un radar en un satélite en movimiento que combina muchos ecos en una imagen nítida, como si tuviera una antena gigante."
+   },
+   "ar": {
+    "term": "رادار الفتحة الاصطناعية",
+    "match": [
+     "رادار الفتحة الاصطناعية",
+     "الفتحة الاصطناعية"
+    ],
+    "def": "رادار على قمر صناعي متحرك يجمع أصداء كثيرة في صورة واحدة واضحة، كأن لديه هوائيًا عملاقًا."
+   }
+  },
+  {
+   "id": "telescope",
+   "en": {
+    "term": "Telescope",
+    "match": [
+     "telescope"
+    ],
+    "def": "An instrument that collects light (or other energy) to see faraway things more clearly."
+   },
+   "fr": {
+    "term": "Télescope",
+    "match": [
+     "télescope"
+    ],
+    "def": "Un instrument qui recueille la lumière (ou une autre énergie) pour voir plus clairement des objets lointains."
+   },
+   "es": {
+    "term": "Telescopio",
+    "match": [
+     "telescopio"
+    ],
+    "def": "Un instrumento que recoge luz (u otra energía) para ver con más claridad cosas lejanas."
+   },
+   "ar": {
+    "term": "التلسكوب",
+    "match": [
+     "التلسكوب",
+     "تلسكوب"
+    ],
+    "def": "أداة تجمع الضوء (أو طاقة أخرى) لرؤية الأشياء البعيدة بوضوح أكبر."
+   }
+  }
+ ]
+}

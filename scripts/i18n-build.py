@@ -16,8 +16,14 @@ ATTRS = ('alt', 'aria-label', 'title', 'data-title', 'data-image-alt', 'placehol
 META = {'description', 'twitter:description', 'twitter:title', 'og:description', 'og:title'}
 FFI = 'For Further Information: '
 
+GL_RE = re.compile(r'<span class="gl"><button[^>]*>(.*?)</button><span class="gl-pop"[^>]*>.*?</span></span>', re.S)
+def unglossary(src):
+    """Strip glossary tap/hover markup (added after translation by scripts/build-batch-b.py --glossary)."""
+    return GL_RE.sub(r'\1', src)
+
 def normalize(src):
     """English source minus parts that change for site-wide/nav reasons (kept in sync with scripts/i18n-check.js)."""
+    src = unglossary(src)
     src = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?', '', src)
     src = re.sub(r'<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->', '', src)
     src = re.sub(r'<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->', '', src)
@@ -52,7 +58,10 @@ PATTERNS = [(r'^(.+) \| Saving Planets$', '{x} | Saving Planets'),
             (r'^Learn more about (.+)$', 'Learn more about {x}'),
             (r'^Read more about (.+)$', 'Read more about {x}'),
             (r'^(.+): Mission Status$', '{x}: Mission Status'),
-            (r"^The Five W's of (.+)$", "The Five W's of {x}")]
+            (r"^The Five W's of (.+)$", "The Five W's of {x}"),
+            (r'^What is (.+), and what problem does it help solve\?$', 'What is {x}, and what problem does it help solve?'),
+            (r'^Who is behind (.+), and where does the work happen\?$', 'Who is behind {x}, and where does the work happen?'),
+            (r'^How does (.+) help both people and nature\? Use one fact from this page\.$', 'How does {x} help both people and nature? Use one fact from this page.')]
 
 def lookup(m, st):
     if st in m: return m[st]
@@ -95,7 +104,7 @@ def localize_search(js, m):
     return js.replace('return p.text.indexOf(q)', 'return p.text.toLowerCase().indexOf(q)')
 
 def build(page, lang, m):
-    raw = open(page, encoding='utf8').read()
+    raw = unglossary(open(page, encoding='utf8').read())
     soup = BeautifulSoup(raw, 'html.parser')
     html = soup.html
     html['lang'] = lang

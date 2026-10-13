@@ -1,0 +1,75 @@
+/* Batch B (Oct 12): ELI10 box, glossary tooltips, cite box, teacher box + print sheet, homepage audience row, Glossary/Teachers pages. */
+.eli10 { max-width: 1100px; margin: 1.5rem auto 0; padding: 1.2rem 1.4rem; border-radius: 14px; background: linear-gradient(135deg, rgba(0,156,222,0.16), rgba(77,163,255,0.08)); border: 1px solid rgba(77,163,255,0.45); }
+.eli10 h2 { margin: 0 0 0.6rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem; }
+.eli10-icon { font-size: 1.5rem; }
+.eli10 ul { margin: 0; padding-inline-start: 1.1rem; }
+.eli10 li { margin: 0.35rem 0; line-height: 1.5; font-size: 1.05rem; }
+@media (max-width: 1150px) { .eli10 { margin-left: 1rem; margin-right: 1rem; } }
+.gl { position: relative; display: inline; }
+.gl-term { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: help; text-decoration: underline dotted #4da3ff; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.gl-term:focus-visible { outline: 2px solid #4da3ff; outline-offset: 2px; border-radius: 3px; }
+.gl-pop { position: absolute; z-index: 50; inset-inline-start: 0; top: calc(100% + 6px); width: min(280px, 80vw); padding: 0.7rem 0.85rem; border-radius: 10px; background: #0f1b2d; color: #e8eef5; border: 1px solid #4da3ff; box-shadow: 0 10px 28px rgba(0,0,0,0.45); font-size: 0.92rem; line-height: 1.45; font-weight: 500; text-align: start; white-space: normal; }
+.gl-pop[hidden] { display: none; }
+.gl-pop a { color: #8fd0ff; }
+.cite-box, .teacher-box { max-width: 1100px; margin: 2rem auto; padding: 1.2rem 1.4rem; border-radius: 14px; border: 1px solid rgba(127,127,127,0.35); background: rgba(21,32,51,0.55); }
+@media (max-width: 1150px) { .cite-box, .teacher-box { margin-left: 1rem; margin-right: 1rem; } }
+.cite-box h2, .teacher-box h2 { margin-top: 0; font-size: 1.3rem; }
+.teacher-box h3 { font-size: 1.05rem; margin: 0.4rem 0; }
+.cite-row { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; margin: 0.5rem 0; }
+.cite-style { margin: 0; font-weight: 800; min-width: 3rem; }
+.cite-text { margin: 0; flex: 1 1 320px; font-size: 0.95rem; overflow-wrap: anywhere; user-select: all; }
+.cite-copy { font: inherit; font-weight: 700; padding: 0.4rem 1rem; border-radius: 999px; border: 1px solid #4da3ff; background: transparent; color: #cfe8ff; cursor: pointer; }
+.cite-copy:hover, .print-sheet:hover { background: #009cde; color: #fff; }
+.print-sheet { font: inherit; cursor: pointer; border: 0; }
+.teacher-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.audience { max-width: 1200px; margin: 2rem auto 0; padding: 0 1.5rem; text-align: center; }
+.audience h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: 0 0 0.9rem; }
+.aud-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
+.aud-card { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0.9rem 0.7rem; border-radius: 12px; border: 1px solid rgba(77,163,255,0.45); background: rgba(21,32,51,0.6); color: inherit; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease; }
+.aud-card:hover, .aud-card:focus-visible { transform: translateY(-2px); background: rgba(0,156,222,0.2); }
+.aud-icon { font-size: 1.6rem; }
+.aud-title { font-weight: 800; color: #4da3ff; }
+.aud-text { font-size: 0.9rem; opacity: 0.85; }
+@media (max-width: 700px) { .aud-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .aud-card { transition: none; } .aud-card:hover { transform: none; } }
+.gloss { max-width: 900px; margin: 0 auto; }
+.gloss-jump { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+.gloss-jump a { padding: 0.25rem 0.6rem; border: 1px solid #4da3ff; border-radius: 6px; text-decoration: none; }
+.gloss-letter { margin: 1.4rem 0 0.4rem; border-bottom: 1px solid rgba(127,127,127,0.3); scroll-margin-top: 90px; }
+.gloss dt { font-weight: 800; margin-top: 0.8rem; scroll-margin-top: 90px; }
+.gloss dt:target { color: #4da3ff; }
+.gloss dd { margin: 0.2rem 0 0; line-height: 1.5; }
+.t-intro { text-align: center; margin-top: 1.5rem; }
+.t-hub { max-width: 900px; margin: 0 auto; }
+.t-hub h2 a { color: inherit; text-decoration: none; }
+.t-list { list-style: none; padding: 0; columns: 2 280px; }
+.t-list li { padding: 0.35rem 0; break-inside: avoid; }
+.t-print { font-size: 0.85rem; margin-inline-start: 0.4rem; }
+.print-only { display: none; }
+@media print {
+  @page { size: auto; margin: 10mm; }
+  html, body { background: #fff !important; color: #000 !important; font-size: 10pt; }
+  body.toc-sub > *:not(.page-hero):not(.eli10):not(#solution):not(.teacher-box) { display: none !important; }
+  .page-hero { background: none !important; min-height: 0 !important; padding: 0 !important; margin: 0 0 4mm !important; }
+  .page-hero::before, .page-hero::after, .page-hero img, .page-hero-content > :not(h1), .page-hero video { display: none !important; }
+  .page-hero h1 { color: #000 !important; text-shadow: none !important; font-size: 18pt !important; margin: 0 !important; }
+  .eli10, .teacher-box, .five-ws { background: none !important; border: 1px solid #999 !important; box-shadow: none !important; margin: 0 0 3mm !important; padding: 3mm 4mm !important; max-width: none !important; color: #000 !important; }
+  .eli10 h2, .teacher-box h2, .five-ws h2 { font-size: 12pt !important; margin: 0 0 1.5mm !important; color: #000 !important; }
+  .eli10 li, .teacher-box li { font-size: 9.5pt; margin: 0.6mm 0; }
+  .five-ws .ws-grid { display: block !important; }
+  .five-ws .w-card { display: block !important; background: none !important; box-shadow: none !important; border: 0 !important; padding: 0 !important; margin: 0 0 1.5mm !important; color: #000 !important; break-inside: avoid; }
+  .five-ws .w-card h3 { display: inline; font-size: 10pt !important; margin: 0 !important; color: #000 !important; }
+  .five-ws .w-card h3::after { content: ": "; }
+  .five-ws .w-card p { display: inline; font-size: 9pt; margin: 0; color: #000 !important; }
+  .five-ws .w-card p.fact-source { display: block; font-size: 8pt; color: #333 !important; }
+  .five-ws a, .eli10 a, .teacher-box a { color: #000 !important; text-decoration: none; }
+  .teacher-actions, .teacher-src { display: none !important; }
+  .teacher-box h3 { font-size: 10pt; margin: 0 0 1mm; }
+  .gl-term { text-decoration: none !important; }
+  .gl-pop { display: none !important; }
+  body { padding: 0 !important; margin: 0 !important; }
+  .page-hero, .page-hero-content { height: auto !important; display: block !important; padding: 0 !important; margin: 0 0 3mm !important; position: static !important; }
+  .eli10 ul, .teacher-box ol { margin: 0 !important; }
+  .five-ws .w-card p.fact-source { margin: 0 !important; }
+  .print-only { display: block !important; font-size: 8pt; color: #333; margin-top: 2mm; }
+}

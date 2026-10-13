@@ -8,7 +8,8 @@ const fs = require('fs'), crypto = require('crypto'), path = require('path');
 const LANGS = ['fr', 'es', 'ar'];
 const PAGES = fs.readFileSync('i18n/pages.txt', 'utf8').split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
 function normalize(src) {
-  return src.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?/g, '')
+  return src.replace(/<span class="gl"><button[^>]*>([\s\S]*?)<\/button><span class="gl-pop"[^>]*>[\s\S]*?<\/span><\/span>/g, '$1')
+    .replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?/g, '')
     .replace(/<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/g, '')
     .replace(/<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/g, '')
     .replace(/<li class="lang-switch"[\s\S]*?<\/li>/g, '')

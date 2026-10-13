@@ -13,10 +13,12 @@ python3 scripts/build-batch2.py
 python3 scripts/build-batch3.py
 python3 scripts/build-batch4.py
 python3 scripts/build-solutions-index.py   # Solutions.html directory + plain Solutions nav link (Oct 12)
+python3 scripts/build-batch-b.py           # ELI10 / teacher / cite boxes, Glossary + Teachers pages, homepage audience row (Oct 12)
 python3 scripts/add-gtag.py
 python3 scripts/i18n-build.py
 python3 scripts/add-gtag.py
 python3 scripts/i18n-sitemap.py
+python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)
 python3 scripts/seo-audit.py | tail -3
 node scripts/i18n-check.js | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
