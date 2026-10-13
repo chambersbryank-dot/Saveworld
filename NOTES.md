@@ -7,199 +7,76 @@
 3. **A clear donate path** — Visitors should be able to support the work directly. A donation page, a product-funded model, or a transparent get-involved route all count.
 4. **Solutions, not advocacy** — The focus is on solutions that remove, restore, or build. Lobbying groups, awareness campaigns without measurable action, and pure research projects are out of scope.
 
-... [full content truncated for this call demonstration; in actual execution the complete 181k character file content is supplied] ...
+> Working file for Chief of Staff + Grok only. Keep lean: last 24h, next/open, reference. Long detail goes in docs/ and gets a one-line link.
+> Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
-## Navigation & IA Research - Oct 12
+## Last 24h (Oct 12–13 HST)
+- **Search** (1cfa5c1 → 31aaba1): Pagefind keyword + in-browser semantic (bge-small-en) on Search.html; hero "Search Saving Planets" over ocean/Earth/nebula bg; results only on Enter, top 5 + Show more + refine hint; 12 floating best-practice questions (search/featured-questions.json — never label "popular"); `?q=` deep links; key-term retry for 0-hit long queries; newsletter block off on Search only; 2-line credits (d3c8ef3); GA4 `search` event.
+- **Solutions.html** directory (7da53ce, 3e39335, 093f635, 9b57735): hubs A–Z, 84 cards, search bar filters cards, (Top) links, left-aligned hub titles + synopsis/impact/links per hub; long nav dropdown removed (plain "Solutions" link).
+- **Batch B** (08273c6): ELI10 boxes, Glossary (27 terms) + tap definitions, homepage Start Here row, Cite This Page, teacher print sheets + Teachers.html.
+- **Batch A** (3322291, 5f996c5): share bars (96 pages), Last reviewed + sources count, 4 Related Solutions, "what makes us different" strip (home + About), videos compressed (ad 36→17 MB, GRACE-FO 19→8 MB), removed savingplanets-ad.mp4 + channel-intro.
+- **Contacts**: media@savingplanets.com (Press), partners@savingplanets.com (About#partner), new Contact cards; hello@/ideas@ kept.
+- **Ad v2** posted via Postiz (X/TikTok/YouTube) + featured on About; GA4 G-ZCJ7CEKN94 on every page (Consent Mode v2).
+- **SEO** (fc2a4f5, 46117d7): JSON-LD via scripts/seo-jsonld.py (Article+citations on solutions, CollectionPage hubs, Org+WebSite SearchAction, DefinedTermSet, LearningResource; no person names); robots.txt with Sitemap + disallows.
+- **Organic discovery plan** (0dffe5a): docs/organic-discovery-plan.md. Tech SEO is sufficient; missing = verification + IndexNow wiring.
+- Site review: distinctive combination, not "the only one" — claim the combination, never uniqueness.
 
-**Problem:** Dropdown nav currently fills most of the screen with individual solution links as the site grows past 60-70 solution pages. Need scalable information architecture.
+## Next / Open
+**User to-dos**
+- [ ] YouTube Studio: "Altered or synthetic content" = Yes on ad v2 + older SI videos (Life Terra, GRACE-FO, earlier); Postiz can't set it.
+- [ ] Pin comment "Every fact and source at savingplanets.com 🌍" on YouTube + TikTok uploads.
+- [ ] Awards: CSS Design Awards ($50), Awwwards ($65), Indie Hackers (free); kit /workspace/awards_kit.md.
+- [ ] GA4: register `search_term` custom dimension (Admin > Custom definitions) to see search report.
+- [ ] Optional: swap .github/workflows/static.yml for docs/static-with-search.yml.txt (token lacks workflow scope) → indexes build per deploy.
+- [ ] Old GA ID G-M5L2259Z68: removed from site; decide whether to delete that property.
+- [ ] Partner With Us: supply real, verified audience stats (none shown until then).
+- [ ] Google Search Console (Cloudflare DNS TXT) + submit sitemap; Bing Webmaster (import from GSC); Cloudflare Crawler Hints; Brave submit; then OER Commons, Curlie (EN/FR/ES/AR), TES/Procomún. Rich Results Test on solution/hub/Glossary/home/an /ar/ page.
+- [ ] Grok Plus 9:16 setting still yields wide video; optional Artemis video remake ("Artegs III"); 4 ad clips from /workspace/grok-ad-savingplanets.txt.
+- [ ] MailerLite double-opt-in confirmation texts: manual edit in dashboard (scripts/newsletter-confirmation-texts.md).
 
-### Exemplary Sites Reviewed
+**Open decisions**
+- Merge Related Solutions with "Next: Explore Another Solution" (two "more" lists now).
+- Homepage "minus the doom" appears in strip and headline — shorten one.
+- Rewrite ELI10 in truly simple language (assets/data/eli10.json overrides) for most-visited pages.
+- Hub/solution pages lacking "How This Saves People & the Planet" section — add when touched (people+nature rule).
+- Tsunami early-warning page: ON HOLD (no page mentions "tsunami"; would fix tsunami queries; NOAA DART, SWOT, Sentinel-6).
+- Real photos for the 3 lake cleanup cards (currently site logo).
+- Multilingual semantic model (e.g. multilingual-e5-small) so fr/es/ar get meaning search; also DSCOVR misses top 12 for sea-level query.
+- IndexNow: key file exists; wire `node scripts/indexnow-ping.js --send` into post-deploy (proposal).
 
-**NASA.gov**
-- Uses USWDS-based headers with mega-menus for deep hierarchy.
-- Top-level categories with column-grouped sub-links in mega-menus.
-- Strong search, category hubs, progressive disclosure. Mobile hamburger.
+**Follow-ups**
+- Newsletter "What's New with Saving Planets" section in next Monday's issue (only live features).
+- Daily 6:17 AM HST solution-candidate run → owner approves yes/no before anything is built.
+- Glossary: add terms as pages grow. Stash `stash@{0}` (pre-Roman, Oct 12) in shared clone still unreviewed.
 
-**NOAA.gov**
-- Focus-area driven with left-side portals.
-- Header quick links, Tools & Resources. Strong search and sitemaps.
+## Reference
+**Content rules (standing)**
+- Say "SI" not "AI" in owner-facing/site copy. Credits: "Made from SI and Biological SI Partner" / "SI-generated … by Saving Planets"; owner alias = "SI Partner". **Never write the owner's real name** anywhere (repo, site, newsletter, JSON-LD — Organization author only).
+- People + nature rule: every solution page ties to saving planets for BOTH people and nature: `<section class="impact saves-planets" id="saves">` "How This Saves People & the Planet" after Impact Statement, h3 "For People"/"For Nature", sourced claims + fact-source lines.
+- Horizon rule: unconfirmed contract/funding ⇒ "Potential solution on the horizon" badge + note "This is a potential solution [ORG] is advancing. We expect to know more within [TIMEFRAME] and will keep you updated here." (`.horizon-note` data-org/data-timeframe/data-next-milestone; `sp:status` horizon; never summed into totals; never invent dates).
+- Sourcing: only cited, checkable figures; label company/nonprofit figures as such. Amazing Facts: `p.amazing-fact` with data-source, else skipped.
+- Bottom-link rule: one `section.donate-banner.bottom-link#bottom-link` per content page (Donate → Join the work → "For further information").
+- Ways to Help: EN Solution column Title Case (FR/ES sentence case); nothing non-link may look underlined. Never run /workspace/build_wth.py.
+- Logos: none (agency logos need permission); use wordmark badges. Partner page: no sponsor influence, "Sponsored" labels, no China/Russia-state sponsors, no audience numbers until verified.
+- Translations machine-quality (Arabic = MSA, RTL); keep numbers/names/URLs exact.
+- Video: 9:16 1080x1920, H.264 High yuv420p +faststart; SI-generated visuals; rising www.savingplanets.com end card; AI label on TikTok (video_made_with_ai), YouTube public/not for kids; X strips domains → end "Follow @SISavingPlanets, link in bio".
+- One canonical URL https://www.savingplanets.com; fallback chambersbryank-dot.github.io/Saveworld/.
 
-**The Ocean Cleanup**
-- Lean top nav on core pillars (Oceans, Rivers, etc.).
-- Category hubs, impact dashboard. Progressive via sections.
+**Pipeline**
+- Deploy: .github/workflows/static.yml uploads repo root to GitHub Pages (static). Search indexes are committed.
+- `scripts/weekly-sync.sh` order: build-roman.py → build-home-extras.py → build-batch2/3/4.py → build-solutions-index.py → build-batch-b.py → build-batch-a.py → add-gtag.py → i18n-build.py (runs seo-fix.py → seo-jsonld.py) → add-gtag.py → i18n-sitemap.py → build-batch-b.py --glossary → seo-audit.py → i18n-check.js → npm ci (if needed) → build-search.mjs. Expect: seo-audit TOTAL 0, "All translations current", 2 known JS-template linkcheck false positives.
+- Older generators: `node build-search-index.js` → build-stats.js (solutions.json, nav/menus, lang switcher in PROJECT-R-MENU) + build-facts.js (Amazing_Facts). New solution = sp: meta tags + page-stats + sitemap entry, then rerun.
+- i18n: i18n/<lang>.json translation memory, i18n/pages.txt list, `i18n-build.py --missing fr|es|ar`, i18n-check.js hashes (`i18n-source` meta). Artemis data: update-artemis.js → i18n-data.py.
+- Search: `npm ci && node scripts/build-search.mjs` → /pagefind/ (4 langs) + /search/semantic-index.json + semantic-vectors.bin + hubs.json. search/semantic.js is the swappable module (contract: supports/load/search). search-ui.js fuses RRF.
+- Data files: assets/data/{solutions,reviewed,eli10,glossary,roman,artemis*,daily-actions,community,new-callout}.json; scripts/batch3-content.py (myths, mission log, quizzes); scripts/newsletter-corrections.json.
+- Newsletter: MailerLite acct 2704021, key /home/box/.mailerlite_key; `node scripts/newsletter-draft.js [--update]` creates DRAFTS only (never send/schedule); groups EN 201062857381512972, FR …692939304, ES …966617859, AR …265462233; language_id en4 fr6 es8 ar23.
+- GA4 G-ZCJ7CEKN94 (Consent Mode v2, add-gtag.py). IndexNow key aa19429b4f58f36d34c263abe996de09.txt.
+- Postiz: post via `integrationList` (X, TikTok, YouTube are connected); YouTube category + altered-content flags not exposed.
+- Cloudflare: www grey-cloud CNAME → chambersbryank-dot.github.io, apex A 185.199.108-111.153, HTTPS enforced (cert to 2027-01-08); saveplanetminusthedoom.com → savingplanets.com redirect (Oct 12).
+- Cache-bust `?v=YYYYMMDDx` on styles.css/site.js when CSS/JS changes.
 
-**MDN Web Docs**
-- Top nav + persistent expandable left sidebar (progressive disclosure).
-- Strong search, breadcrumbs, category hubs.
-
-**Wikipedia**
-- Search-dominant. Categories + navigation templates. Scales via search/linking.
-
-**4ocean.com**
-- Commerce-focused collections/mega. Product hubs + search.
-
-### Proposed Redesign Options
-
-**Option 1: Category-only top nav + hub pages (Recommended)**
-- Top nav categories pointing to hub pages with solution cards.
-- Pros: Scales, matches structure, simple. Cons: Extra click.
-
-**Option 2: Searchable mega-menu**
-- Categories with featured solutions + view all.
-
-**Option 3: Card-based solution browser**
-- Filterable /solutions page.
-
-**Recommended:** Option 1 + prominent search.
-
-### Quick Wins
-- Collapse dropdown to categories.
-- Add header search.
-- Accordion mobile menu.
-
-### Open Questions
-- Long-term category count?
-- Hover vs click vs search priority?
-- Must-keep direct solution links?
-
-## Search Upgrade & Hero Page Design - Oct 12 (continued)
-
-### 1. Search upgrade (two phases, built in sync in one build/deploy step)
-Both layers ship together so they can cross-check each other during testing.
-
-**Phase 1, the backbone: Pagefind**
-- Pagefind is MIT licensed and built by the Eleventy team. Its creator, Zach Leatherman, has twice won the Google Open Source Peer Bonus. The project has 5.5k stars and 210 forks, and v1.5.2 was released in April 2026.
-- It indexes the built HTML at build time and ships chunked static index files.
-- It runs in the browser, with no server, no API keys and no per-query billing.
-- Wire it into the build pipeline right after the site build.
-- Use the PagefindUI web components or a custom mount.
-- Support all four languages: English, French, Spanish and Arabic.
-- Put a prominent search in the header nav, following the Oct 12 navigation research. Option 1 was a category-only top nav plus prominent search.
-
-**Phase 2, the semantic layer**
-- Add client-side semantic search on top of Pagefind, using in-browser embeddings: bge-small-en-v1.5, quantized (about 34MB), via Transformers.js. The SQLite index (or equivalent) is built at deploy time.
-- Keyword results appear instantly. Once the model loads, results upgrade to semantic matching.
-- Goal: a query like "space and warning folks around the world about rising sea levels or tsunamis" should surface Earth-observation solutions (DSCOVR, GRACE-FO, etc.) without exact keyword matches.
-- Reference: github.com/romanI04/sift. It is MIT licensed but is a solo dev project from Feb 2026 with 2 stars. Treat it as a reference only, NOT a dependency. We must be able to reimplement the semantic layer ourselves if it's abandoned. The risk is a gap while rebuilding, not technical debt.
-
-**Other requirements**
-- Keep the MIT/Pagefind attribution visible or documented, for credibility.
-- Test with real queries against the 80+ solution pages across 10 hubs.
-- Key test case: "my parents died 3,000 years ago because of a tsunami, I'm interested in space technology and ocean technology that may help people stay away from such devastation". It should connect tsunami, ocean monitoring, early warning and satellite observation coherently.
-- Do not break the existing site. Pagefind is additive.
-
-### 2. Hero page design (new homepage concept)
-Expect trial and error. Keep it free of clutter but powerful.
-- **Top of page:** "Saving Planets semantic search", kept short, small and ownable. An MIT badge sits on top of "semantic" as silent proof of credibility, so users who don't know what semantic or AI means still see a trusted backbone.
-- **Center of screen:** one big search bar, nothing else.
-- **Background:** a soft, low-opacity nebula watermark, maybe slowly drifting, kept crisp.
-- **Below the bar:** "Would you like help framing your question so you're able to zero in to exactly [what you're after]?" It's an open invitation, not forced.
-- **"How to frame your question" section:**
-  - It shows a few rotating example prompts that are deliberately vague and human, such as "something that protects my family from weather", "how space tech helps farmers" and "ways to clean a river near me".
-  - Clicking an example runs it through the semantic layer and shows the matched solutions.
-  - A before/after shows how refining the question changes the results.
-  - This teaches the 90% lesson: AI is about how you frame the question and drill in based on the answers, reframing until you pinpoint the output. No jargon. Show, don't tell.
-- **Avoid copyrighted phrases.** For example, "goosefraba" from Anger Management is fine in conversation but not as a branded site term, so we'll invent our own made-up word instead.
-- **Branding to weave in:** MIT, semantics, savingplanets.com, SI, and its biological SI partner.
-- **Tagline concept:** "MIT, semantics, savingplanets.com, SI, and including its biological SI partner brings you [made-up word] searching."
-
-### 3. Context
-- The site owner likes dense-but-directed sites that are interesting to explore without 1,000 rabbit holes.
-- Strong focus on solutions and people working together. Not quantum mechanics or carburetors.
-
-## Search Upgrade - Oct 12
-
-**Plan (approved):** two layers built together in ONE build step so they ship in sync and can cross-check each other.
-1. **Keyword backbone: Pagefind 1.5.2** (MIT, built by the Eleventy team, https://pagefind.app). Static chunked index, runs in the browser, no server, no API keys, no per-query cost. Indexes en/fr/es/ar separately from each page's `<html lang>` (Arabic pages are `dir="rtl"`).
-2. **Semantic layer:** `Xenova/bge-small-en-v1.5` (MIT), q8 quantized (~34 MB, downloaded by the visitor's browser only after they start typing on the Search page) via **Transformers.js 3.7.6** (Apache-2.0). Reference idea: github.com/romanI04/sift (MIT), used as a reference only, with no code dependency.
-
-**Pipeline changes**
-- The site deploys with `.github/workflows/static.yml`, which uploads the repo as-is to GitHub Pages. I planned to build the indexes in that workflow, but the push token has no `workflow` scope, so GitHub refused the workflow edit. **Fallback in use:** the indexes are generated and committed (`/pagefind/` and `/search/semantic-index.json` + `semantic-vectors.bin`), and `scripts/weekly-sync.sh` regenerates them after the i18n/sitemap steps. Run manually after any page change: `npm ci && node scripts/build-search.mjs`.
-- **User To-Do (optional):** to build the indexes on every push instead, replace `.github/workflows/static.yml` with `docs/static-with-search.yml.txt` in the GitHub web editor. You can then drop the committed indexes.
-- `scripts/build-search.mjs` builds both layers in one run:
-  - `/pagefind/` (all 4 languages, 416 pages). Excluded: nav, footer, scripts, the language switch, and Search/404/Project-R/google verification pages.
-  - `/search/semantic-*` (104 English pages, 665 chunks, int8 vectors, ~250 KB). Each page gets one title+description chunk plus up to 14 body windows of about 90 words.
-  - Build time is about 10 s. Output is deterministic, so unchanged pages produce no diff. Tooling lives in package.json/package-lock.json; node_modules/ and .cache/ are gitignored.
-- `search/semantic.js` is the replaceable module. Its contract is documented at the top of the file: `supports(lang)`, `load()`, `engine.search(q,k) -> [{url,title,desc,kind,score}]`. Any rewrite that keeps that contract and the two data files can drop in (a weekend job).
-- `search/search-ui.js` runs on Search.html. Pagefind results show instantly. On English pages the semantic layer loads in the background, then results are re-ranked with reciprocal-rank fusion (keyword weight 1.0, meaning weight 1.2, cosine > 0.45). General site pages get a -0.03 penalty so solution and hub pages win close calls. If Pagefind fails to load, the old built-in list search still works.
-- Header: the existing nav "Search" link is now a pill with a magnifier icon on every page, styled from CSS only (styles.css, cache-bust v=20261012w). It also shows in the mobile menu. The nav markup is unchanged.
-- Visible attribution on Search.html (all 4 languages): "Search powered by Pagefind (MIT)…", plus the model and library licenses.
-
-**Licenses:** Pagefind MIT · Transformers.js Apache-2.0 · bge-small-en-v1.5 MIT (BAAI; ONNX conversion Xenova).
-
-**Limits:** semantic matching is English-only (bge-small-en). fr/es/ar get Pagefind keyword search with language-aware stemming. Pagefind matches ALL words, so long natural-language queries often return 0 keyword hits; that is where the semantic layer helps.
-
-**Test results (local build, headless Chromium; top 5)**
-| Query | Keyword (Pagefind) | Hybrid (after model loads) |
-|---|---|---|
-| space and warning folks around the world about rising sea levels or tsunamis | (none) | Sentinel-6B, Aditya-L1, IMAP, GRACE-FO, Space Weather (then EOS-06, Vigil, Earth Observation) |
-| plastic floating in the ocean | Ocean Cleanup, Seabin, Rivers, Oceans, Lakes | Seabin, Oceans, Rivers, Ocean Cleanup, … |
-| planting trees with farmers | Trees for the Future, Forests, Ways to Help | Trees for the Future, Forests, Life Terra, Three Trees, … |
-| stopping trash before it reaches the sea from rivers | Mr. Trash Wheel, Oceans, Rivers, Lakes | Mr. Trash Wheel, Rivers, Oceans, Lakes, … |
-| cleaning plastic out of lakes by diving | Lakes, Home, Oceans | Lakes, Oceans, Lake Plastic Recovery, Clean Up the Lake, … |
-| asteroid hitting earth | Myth vs Fact, OSIRIS-APEX, NEO Surveyor, Webb YR4, Hera | Myth vs Fact, Webb YR4, Planetary Defense, … |
-| junk satellites crowding orbit | Space Disposal | Space Disposal, Astroscale, Project Rawane, Atmospheric Drag, Orbital Data Centers |
-| solar storms knocking out power grids | Space Weather, Project Rawane | Space Weather, Aditya-L1, SOLAR-1, PUNCH, … |
-| fish nurseries along coasts | Salt Marshes | Salt Marshes, Oceans, Seagrass, Mangroves, … |
-| FR: déchets plastiques dans l'océan | fr/Oceans, fr/Plastic Bank, fr/Rivers, fr/index, fr/Lakes | (keyword only) |
-| ES: árboles | es/Three Trees, es/Life Terra, es/Forests, … | (keyword only) |
-| AR: المحيط | ar/Oceans, ar/Phytoplankton, ar/EOS-06, ar/Ocean Cleanup, … | (keyword only) |
-| my parents died 3,000 years ago because of a tsunami, I'm interested in space technology and ocean technology that may help people stay away from such devastation | (none) | Ways to Help, Project Rawane, OSIRIS-APEX, Space Disposal, Artemis II, … (weak) |
-No page errors in any run.
-**Content gap:** no page on the site uses the word "tsunami". The tsunami queries can only match nearby sea-level and Earth-observation pages, and the long story-style query mostly matches general pages. Splitting it into clauses didn't help (tested). Fix it in content, not in code: add sourced tsunami early-warning facts (NOAA DART buoys and Tsunami Warning Centers; GNSS/satellite altimetry such as SWOT and Sentinel-6 observing tsunami waves) to the Earth Observation, SWOT and Sentinel-6B pages, or add a dedicated solution page. Then rerun scripts/build-search.mjs.
-
-**Next steps**
-- DSCOVR/EPIC does not reach the top 12 for the sea-level/tsunami query, because "warning" pulls space-weather pages. Options: add a short "what it warns about" summary to the solution pages' meta descriptions, or move to bge-base or a multilingual model (multilingual-e5-small would also cover fr/es/ar).
-- Keyword fallback for 0-hit long queries: retry Pagefind with the 2–3 rarest terms.
-- Optional header search box (inline input) on desktop instead of the pill link. Optional live analytics of top queries (GA4 event, no query text stored).
-
-### Search page cleanup - Oct 12 (evening)
-- Hero: the only heading is "Search Saving Planets" (translated), with the search bar directly under it. The background is assets/search-hero.webp/.jpg, 76/131 KB, made by /tmp/mkhero.py-style compositing. Credit: "original composite by SI and biological SI partner; Earth NASA/NOAA DSCOVR EPIC; Earth limb NASA (ISS); nebula, stars and planet generated". It has a dark overlay and a 60s drift animation, turned off when the visitor's device is set to reduce motion.
-- Results are cards: hub label (read from the page's own translated Solutions menu), title, 2-line excerpt. Example-query chips show when the box is empty or nothing matches. A status line notes when smart results load and turn on.
-- The old list search is now fallback-only: it starts only if search-ui.js fails or hasn't started within 4s. This fixes the race where old results showed first.
-- Long queries with no every-word hit retry Pagefind with key terms (stopwords removed), and the status says so.
-- `?q=` deep links work, and the address bar keeps the current query.
-- Newsletter footer block is suppressed on Search.html via `<body data-no-newsletter>` (site.js). It still shows on all other pages.
-- Screenshots: /workspace/search-test/ (before-*, after-*).
-
-### Search: floating questions, submit-only search, GA4 - Oct 12 (night)
-- 12 example questions per language are stored in search/featured-questions.json, editable, same order in every language. They model good question framing: a specific goal, context, who and where, constraints, and a follow-up. They are NOT based on real queries and must never be labelled "popular".
-- How they display:
-  - Desktop (1200px and wider): they float around the hero bar with a gentle bob that pauses on hover.
-  - Narrower screens: a slow horizontal marquee that pauses on hover or touch.
-  - Reduced motion: a static wrapped row.
-- A note under the questions explains they teach how to frame SI (AI) questions.
-- Search runs only on Enter, the Search button, question or chip clicks, and ?q= links. Nothing runs while typing. The model preloads quietly on first focus.
-- Results show the top 5 first, with a "Show more" button that adds 5 at a time, plus a refine hint.
-- Hub labels on result cards now come from page breadcrumbs (search/hubs.json, written by build-search.mjs), because the nav dropdown was removed.
-- **GA4:** a `search` event with `search_term` (first 100 characters) is sent on submit and on question or chip clicks, via the existing gtag (G-ZCJ7CEKN94, Consent Mode, so it only counts after the visitor accepts).
-  - Where to see it: GA4 > Reports > Engagement > Events > search. For a report, register `search_term` as a custom dimension (Admin > Custom definitions).
-  - Enhanced Measurement "site search" (q parameter) may also log Search.html?q= page views.
-- Credits on Search.html, two lines: "Search: Pagefind (MIT)…" and "Background: Redesigned by SI & Biological SI Partner…".
-
-## Batch B learning features - Oct 12
-Built by `scripts/build-batch-b.py` (weekly-sync runs it before i18n-build, and `--glossary` after it). Styles `batchb.css`, script `batchb.js`.
-- **Explain Like I'm 10** box above the Five W's on all 84 solution pages. Built only from the page's own What / Why (and For People when short) text, so no new facts and translations reuse existing strings. Hand-written simpler versions can go in `assets/data/eli10.json` (`{"Page.html": ["sentence", ...]}`), which overrides the generated box.
-- **Glossary**: `Glossary.html` (A-Z, 27 terms in `assets/data/glossary.json` with fr/es/ar). Tap/hover definitions (accessible button + popover, works with iPad touch, Esc/outside tap closes) on the first occurrence of each term in the ELI10 / Five W's / impact sections, in all four languages. `i18n-build.py` and `i18n-check.js` strip this markup before translating/hashing.
-- **Homepage "Start Here"** row: Kids -> Amazing Facts, Students & Teachers -> Teachers.html, Curious Adults -> Solutions.html, Partners -> About#partner.
-- **Cite This Page** (APA + MLA with accessed date, Copy button) and **For Teachers** box (3 discussion questions from templates, print button) on solution pages. The print stylesheet produces a one-page sheet (title, ELI10, Five W's with sources, questions, URL). 83/84 fit one Letter page; Life_Terra runs to two. `Teachers.html` lists every sheet (`Page.html?print=1` opens the print dialog).
-- Next: hand-write simpler ELI10 text for the most-visited pages (eli10.json); add more glossary terms as pages grow.
-
-## Batch A Upgrades - Oct 12 (share, last reviewed, related, videos, difference strip)
-All generated by `scripts/build-batch-a.py` (hooked into `weekly-sync.sh` right after build-solutions-index.py, so the weekly sync keeps it, and fr/es/ar regenerate via i18n-build.py). Blocks sit between `<!-- SHARE|REVIEWED|RELATED|DIFF:START/END -->` markers; the script is idempotent and writes its own i18n keys (dates, source counts, strip text) into i18n/<lang>.json.
-- **Share bar** on 84 solution pages, 10 hubs, Amazing Facts, Myth vs Fact: native Share button (Web Share API, shows on iPad/phones), X, Facebook, LinkedIn, Email, Copy link. Plain links plus `share.js`, with no third-party scripts or trackers. Styles live in `batch-a.css`. Added an OG image (homepage card) to 404 and Project-R.
-- **Last reviewed + sources cited** under each solution's breadcrumb. The date is the last change to the substantive text (hero, Five W's, impact, mission status). It was bootstrapped from git history and is now kept in `assets/data/reviewed.json`; later edits get stamped with the sync date (HST). The source count is the number of unique external citation links on the page (nav, footer, help and share links are excluded).
-- **Related Solutions** (4 cards) before "Next: Explore Another Solution". Each page vector is the normalized mean of its bge-small-en-v1.5 chunk vectors plus its title/description chunk, read from the committed semantic index. build-search.mjs now strips these UI blocks so they don't feed back into search. Related cards use the previous build's index, which is fine because they lag by at most one sync.
-- **Difference strip** under the homepage hero and at the top of About ("From the ocean floor to low Earth orbit, solutions minus the doom."). The solution and hub counts come from the hub pages, the same rule as Solutions.html, and translations are kept for all 4 languages.
-- **Videos:** savingplanets-ad-v2.mp4 went from 36.2 MB to 17.2 MB and grace-fo-satellites.mp4 from 18.8 MB to 7.9 MB. Both are H.264 High, yuv420p, +faststart, SSIM about 0.98, same filenames. Removed unused files: savingplanets-ad.mp4 (no references), channel-intro.mp4 and channel-intro.jpg. build-home-extras.py no longer re-inserts the old channel intro on About; before this fix, the weekly sync would have brought it back.
-- Possible follow-up: merge "Next: Explore Another Solution" (hand-picked links) into Related Solutions to avoid two "more" lists.
-
-## Structured Data & robots.txt - Oct 13
-- `scripts/seo-jsonld.py` (auto-run by seo-fix): Article (Organization author, citations, Last-reviewed dateModified, hub isPartOf) on 84 solutions, hub CollectionPage+hasPart, Organization+WebSite SearchAction, Glossary DefinedTermSet, Teachers LearningResource; localized breadcrumbs, all 4 languages; no person names.
-- robots.txt extended (semantic blobs, /scripts/, /node_modules/, /.cache/ disallowed; Sitemap line).
-- Follow-ups: submit sitemap in Google Search Console + Bing Webmaster; Rich Results Test on a solution, hub, Glossary, homepage and an /ar/ page.
-
-## Organic Discovery Plan - Oct 13
-Full research is in docs/organic-discovery-plan.md. Current technical SEO (hreflang, sitemap, JSON-LD, robots.txt) is enough for all crawler engines. What's missing is verification + IndexNow.
-Next actions: (1) User: Google Search Console via Cloudflare DNS TXT + submit sitemap; (2) User: Bing Webmaster (import from GSC; covers Yahoo/DDG/most of Ecosia/Qwant); (3) Repo: IndexNow key file + ping script in weekly-sync (proposal); (4) User: Cloudflare Crawler Hints on, check bot settings; (5) User: Brave submit-url; (6) OER Commons + Curlie (EN/FR/ES/AR) + TES/Procomún teacher sheets; (7) Yandex optional.
-Not applicable: Google Scholar/BASE/CORE/Semantic Scholar (non-scholarly). Later, once a registered org or press coverage exists: Wikipedia/Wikidata, UN SDG, Candid.
+**Gotchas**
+- NEVER edit via GitHub connector create_or_update_file (truncated NOTES/styles.css; decodes HTML entities). Use git clone + push, `pull --rebase`.
+- `git add -u` or explicit paths, never `-A` (shared box clone has other workers' scratch files).
+- Launch Library: use /2.3.0/ (2.2.0 404s). Use curl with browser UA when WebFetch times out (nasa.gov).
+- Concurrent workers: on heavy generated-file conflicts, reset to origin/main and re-run generators instead of rebasing.
