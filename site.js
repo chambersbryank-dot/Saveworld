@@ -223,6 +223,7 @@
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     var hosts = document.querySelectorAll('[data-sp-newsletter]'), n = 0;
     if (hosts.length) { for (var i = 0; i < hosts.length; i++) build(hosts[i], false, ++n); return; }
+    if (document.body.hasAttribute('data-no-newsletter')) return; // e.g. Search.html opts out of the footer block
     var ft = document.querySelector('footer'); if (!ft) return;
     var d = document.createElement('div'); ft.insertBefore(d, ft.firstChild); build(d, true, ++n);
   }

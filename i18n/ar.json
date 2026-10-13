@@ -2396,5 +2396,22 @@
 "SI-generated visuals by Saving Planets": "صور مُولَّدة بالذكاء الاصطناعي من Saving Planets",
 "Our Channel Intro": "مقدمة قناتنا",
 "Search powered by": "البحث مدعوم من",
-"(MIT). Smart results use the open bge-small-en-v1.5 model (MIT) via Transformers.js (Apache-2.0), running entirely in your browser.": "(MIT). البحث بالكلمات المفتاحية متاح بكل اللغات؛ أما النتائج الذكية (حسب المعنى) فمتاحة بالإنجليزية وتعمل بالكامل داخل متصفحك."
+"(MIT). Smart results use the open bge-small-en-v1.5 model (MIT) via Transformers.js (Apache-2.0), running entirely in your browser.": "(MIT). البحث بالكلمات المفتاحية متاح بكل اللغات؛ أما النتائج الذكية (حسب المعنى) فمتاحة بالإنجليزية وتعمل بالكامل داخل متصفحك.",
+"Find ocean, lake, river, forest and space solutions.": "اعثر على حلول للمحيطات والبحيرات والأنهار والغابات والفضاء.",
+"Search Saving Planets": "ابحث في Saving Planets",
+"Try:": "جرّب:",
+"sea level satellites": "أقمار مستوى سطح البحر",
+"plastic in rivers": "البلاستيك في الأنهار",
+"planting trees": "زراعة الأشجار",
+"coral reefs": "الشعاب المرجانية",
+"asteroid defense": "الدفاع الكوكبي",
+"solar storms": "العواصف الشمسية",
+"results": "نتائج",
+"result": "نتيجة",
+"No matches. Try one of these:": "لا توجد نتائج. جرّب أحد هذه:",
+"No exact match for every word. Showing pages that match some of them.": "لا توجد صفحة تحتوي على كل الكلمات. نعرض الصفحات التي تحتوي على بعضها.",
+"Smart results loading…": "جارٍ تحميل النتائج الذكية…",
+"Smart results on: also matched by meaning, right in your browser.": "النتائج الذكية مفعّلة: مرتبة أيضًا حسب المعنى داخل متصفحك.",
+"Hub": "قسم رئيسي",
+"Background: original composite by SI and biological SI partner. Earth: NASA/NOAA DSCOVR EPIC. Earth limb: NASA (ISS). Nebula, stars and planet generated.": "الخلفية: تركيب أصلي من SI وشريكه البيولوجي SI. الأرض: NASA/NOAA DSCOVR EPIC. حافة الأرض: NASA (محطة الفضاء الدولية). السديم والنجوم والكوكب مولّدة."
 }

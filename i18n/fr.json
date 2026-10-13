@@ -2397,5 +2397,22 @@
 "SI-generated visuals by Saving Planets": "Visuels générés par SI, par Saving Planets",
 "Our Channel Intro": "Notre vidéo de présentation de la chaîne",
 "Search powered by": "Recherche propulsée par",
-"(MIT). Smart results use the open bge-small-en-v1.5 model (MIT) via Transformers.js (Apache-2.0), running entirely in your browser.": "(MIT). Recherche par mots-clés dans toutes les langues ; les résultats intelligents (par le sens) sont disponibles en anglais et s'exécutent entièrement dans votre navigateur."
+"(MIT). Smart results use the open bge-small-en-v1.5 model (MIT) via Transformers.js (Apache-2.0), running entirely in your browser.": "(MIT). Recherche par mots-clés dans toutes les langues ; les résultats intelligents (par le sens) sont disponibles en anglais et s'exécutent entièrement dans votre navigateur.",
+"Find ocean, lake, river, forest and space solutions.": "Trouvez des solutions pour les océans, lacs, rivières, forêts et l'espace.",
+"Search Saving Planets": "Rechercher sur Saving Planets",
+"Try:": "Essayez :",
+"sea level satellites": "satellites niveau de la mer",
+"plastic in rivers": "plastique dans les rivières",
+"planting trees": "planter des arbres",
+"coral reefs": "récifs coralliens",
+"asteroid defense": "défense planétaire",
+"solar storms": "tempêtes solaires",
+"results": "résultats",
+"result": "résultat",
+"No matches. Try one of these:": "Aucun résultat. Essayez l'une de ces recherches :",
+"No exact match for every word. Showing pages that match some of them.": "Aucune page ne contient tous les mots. Voici les pages qui en contiennent certains.",
+"Smart results loading…": "Résultats intelligents en cours de chargement…",
+"Smart results on: also matched by meaning, right in your browser.": "Résultats intelligents activés : aussi classés par le sens, directement dans votre navigateur.",
+"Hub": "Pôle",
+"Background: original composite by SI and biological SI partner. Earth: NASA/NOAA DSCOVR EPIC. Earth limb: NASA (ISS). Nebula, stars and planet generated.": "Arrière-plan : composition originale par SI et son partenaire SI biologique. Terre : NASA/NOAA DSCOVR EPIC. Limbe terrestre : NASA (ISS). Nébuleuse, étoiles et planète générées."
 }
