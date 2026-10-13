@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+# Build artifacts and binary search blobs (not pages; the browser still loads them for search)
+Disallow: /search/semantic-vectors.bin
+Disallow: /search/semantic-index.json
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /.cache/
+
 Sitemap: https://www.savingplanets.com/sitemap.xml

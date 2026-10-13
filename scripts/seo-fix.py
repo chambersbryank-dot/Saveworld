@@ -150,6 +150,9 @@ def run(langs):
     for l in langs:
         files = sorted(glob.glob('*.html')) if l == 'en' else sorted(glob.glob(f'{l}/*.html')) ; files = [f for f in files if not re.match(r'google[0-9a-f]+\.html$', os.path.basename(f))]
         n += sum(fix(f) for f in files)
+    import importlib.util  # structured-data enrichment (Article/CollectionPage/DefinedTermSet/...; Oct 13)
+    sp = importlib.util.spec_from_file_location('seojsonld', 'scripts/seo-jsonld.py'); sj = importlib.util.module_from_spec(sp); sp.loader.exec_module(sj)
+    sj.run(langs)
     return n
 
 if __name__ == '__main__':
