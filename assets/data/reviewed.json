@@ -71,6 +71,10 @@
   "sig": "c8e374ad4388",
   "date": "2026-10-13"
  },
+ "Coral_Gardeners.html": {
+  "sig": "d1dec4cfb235",
+  "date": "2026-10-14"
+ },
  "Coral_IVF.html": {
   "sig": "5dafc150076e",
   "date": "2026-10-13"
@@ -115,6 +119,10 @@
   "sig": "b07f551fbaef",
   "date": "2026-10-12"
  },
+ "FreshWater_Watch.html": {
+  "sig": "daa34184b7e5",
+  "date": "2026-10-14"
+ },
  "GOES-19.html": {
   "sig": "5b66b83bc00b",
   "date": "2026-10-13"
@@ -134,6 +142,10 @@
  "Global_Forest_Watch.html": {
   "sig": "02892467c789",
   "date": "2026-10-13"
+ },
+ "Globe_at_Night.html": {
+  "sig": "03a1b25d5f4a",
+  "date": "2026-10-14"
  },
  "Great_Bubble_Barrier.html": {
   "sig": "ca9f450a810d",
@@ -307,6 +319,10 @@
   "sig": "ee535392290f",
   "date": "2026-10-13"
  },
+ "Project_Seagrass.html": {
+  "sig": "30bac81aea36",
+  "date": "2026-10-14"
+ },
  "Psyche.html": {
   "sig": "b6a05421875f",
   "date": "2026-10-13"
@@ -322,6 +338,10 @@
  "Restoring_the_Lake_Depths.html": {
   "sig": "948887bd152e",
   "date": "2026-10-12"
+ },
+ "Rewilding_Europe.html": {
+  "sig": "8452afba1408",
+  "date": "2026-10-14"
  },
  "River_Cleanup.html": {
   "sig": "844594dfff3d",
@@ -424,8 +444,8 @@
   "date": "2026-10-12"
  },
  "Tsunami_Early_Warning.html": {
-  "sig": "cfd7ab588c96",
-  "date": "2026-10-13"
+  "sig": "d381c30b889c",
+  "date": "2026-10-14"
  },
  "US_Deorbit_Vehicle.html": {
   "sig": "6ac735449403",
