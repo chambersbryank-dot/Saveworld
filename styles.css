@@ -1068,3 +1068,13 @@ html[dir="rtl"] .sp-track { animation-name: sp-marquee-rtl; }
 html.dark .sp-more { color: #4da3ff; border-color: #4da3ff; }
 .sp-refine { margin: 1rem 0 0; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
 html.dark .sp-refine { color: #e8eef5; }
+
+/* ===== Page-specific: Tsunami (hero) ===== */
+body.toc-sub.tsunami-early-warning-page .page-hero.tsunami-hero { height: auto; min-height: 58vh; padding: 5.5rem 1rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(ellipse at center, rgba(0,15,30,0.55) 0%, rgba(0,15,30,0.25) 70%), linear-gradient(180deg, rgba(0,20,40,0.25) 0%, rgba(0,20,40,0.55) 100%), url('assets/tsunami-hero.jpg') center 45%/cover no-repeat; }
+body.toc-sub.tsunami-early-warning-page .tsunami-hero .page-hero-content { max-width: 860px; margin: 0 auto; }
+body.toc-sub.tsunami-early-warning-page .tsunami-hero h1 { text-shadow: 0 2px 16px rgba(0,0,0,0.75); }
+body.toc-sub.tsunami-early-warning-page .tsunami-hero p { line-height: 1.5; text-shadow: 0 1px 10px rgba(0,0,0,0.75); }
+body.toc-sub.tsunami-early-warning-page .tsunami-hero p.tsunami-alert-note { display: inline-block; margin-top: 1rem; padding: .45rem .9rem; border-radius: 999px; background: rgba(0,0,0,0.45); font-size: .98rem; }
+body.toc-sub.tsunami-early-warning-page .tsunami-alert-note a { color: #f5b942; font-weight: 700; text-decoration: underline; }
+body.toc-sub.tsunami-early-warning-page .tsunami-credit { text-align: center; font-size: .8rem; opacity: .8; margin: .4rem 1rem 0; }
+@media (max-width: 600px) { body.toc-sub.tsunami-early-warning-page .page-hero.tsunami-hero { min-height: 50vh; padding: 4.5rem .8rem 2.2rem; background-position: 30% center; } }
