@@ -126,3 +126,7 @@ Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; 
 - scripts/build-site-extras.py (weekly-sync, after batch-b): footer site map + Sitemap.html, <main> landmark, video labels, extras.css (contrast). axe: 295 -> ~4 issues on 18 sampled pages.
 - Lake pages use public-domain NASA/NPS photos; Solutions lists each solution once (primary hub = breadcrumb) with "Also in"; About sources are a plain list.
 - Daily sync (Oct 13, 7:06 AM run, 5e3f2b8): first pass left 339 translations stale (English solution pages change after i18n-build hashes them, so i18n-check fails and build-search never runs). Fix: rerun i18n-build → add-gtag → i18n-sitemap → batch-b --glossary, then build-search. Proposal: add that second pass to weekly-sync.sh. seo-audit TOTAL 49 (was 113 on main): 36 English img alts on fr/es/ar, 12 missing breadcrumbs on Glossary/Sitemap/Teachers (×4 langs), ar/Sitemap description 114 chars.
+
+## Brainstorm (ideas only, NOT committed to-dos)
+- Press outreach (Oct 13): intro emails to news outlets introducing savingplanets.com (features, education content, EN/FR/ES/AR). Owner framing: out-of-the-box, speed-to-scale near a tipping point. Research only, no contact: target outlets (local Hawaii, national US, France/Spain/Arabic-speaking), contact best practices, one master email + language variants? Nothing sent.
+- Human-SI awards as free advertising ("SI and its Biological SI Partner" team entry): covered by /workspace/awards/human-si-collaboration-writeup.md and the User to-dos line (6342867).
