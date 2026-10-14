@@ -79,3 +79,12 @@ html.dark #actions .mission-block h2 { color: #bfe9ff; }
 body #actions .mission-block .brand-blue { color: #8fe0ff; }
 body.toc-home #actions .join-lead a.btn, body.toc-sub #actions .join-lead a.btn, #actions .join-lead a.btn { background: rgb(255 255 255 / .94); color: #00405f; text-decoration: none; }
 body.toc-home #actions .join-lead a.btn:hover, body.toc-sub #actions .join-lead a.btn:hover { background: #fff; color: #002a42; }
+
+/* Mobile hamburger menu: light blue links for readability on the dark panel */
+@media (max-width: 900px) {
+  nav.open .nav-links a,
+  body.toc-home nav.open .nav-links a, body.toc-sub nav.open .nav-links a,
+  body.toc-home nav.scrolled.open .nav-links a, body.toc-sub nav.scrolled.open .nav-links a,
+  html.dark nav.open .nav-links a { color: #8fd3ff !important; }
+  nav.open .nav-links a:hover, nav.open .nav-links a:focus-visible { color: #c6ecff !important; }
+}
