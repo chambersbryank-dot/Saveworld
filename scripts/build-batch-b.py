@@ -186,7 +186,7 @@ AUD = ('<!-- AUDIENCE:START --><section class="audience" aria-labelledby="aud-h"
        '<a class="aud-card" href="Amazing_Facts.html"><span class="aud-icon" aria-hidden="true">🧒</span><span class="aud-title">Kids</span><span class="aud-text">Amazing facts and simple explanations.</span></a>'
        '<a class="aud-card" href="Teachers.html"><span class="aud-icon" aria-hidden="true">🎓</span><span class="aud-title">Students &amp; Teachers</span><span class="aud-text">Printable sheets, a glossary and citations.</span></a>'
        '<a class="aud-card" href="Solutions.html"><span class="aud-icon" aria-hidden="true">🔭</span><span class="aud-title">Curious Adults</span><span class="aud-text">Every solution, searchable in one place.</span></a>'
-       '<a class="aud-card" href="About.html#partner"><span class="aud-icon" aria-hidden="true">🤝</span><span class="aud-title">Partners</span><span class="aud-text">Sponsor or work with Saving Planets.</span></a>'
+       '<a class="aud-card" href="mailto:partners@savingplanets.com?subject=Creating%20Partnership%20Starts%20Here"><span class="aud-icon" aria-hidden="true">🤝</span><span class="aud-title">Partners</span><span class="aud-text">Sponsor or work with Saving Planets.</span></a>'
        '</div></section><!-- AUDIENCE:END -->')
 
 def pre():
