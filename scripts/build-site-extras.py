@@ -9,7 +9,7 @@ def wr(f, s):
     if rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
 esc = lambda s: html.escape(s, quote=True)
-V = '20261013c'
+V = '20261014a'
 CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),
@@ -71,12 +71,25 @@ def sitemap_page(hl):
             f'<section class="page-hero"><div class="page-hero-content"><h1>Site Map</h1><p>{desc}</p></div></section>\n'
             f'<main id="main"><div class="sm-grid">{keys}{secs}</div></main>\n{footer}<script src="site.js?v={jsv}"></script></body></html>\n')
 
+GLASS_CAT = {'ocean': 'ocean', 'oceans': 'ocean', 'lakes': 'lakes', 'rivers': 'rivers', 'forests': 'forests', 'earth-observation': 'earth',
+             'space': 'space', 'project-r': 'space', 'planetary-defense': 'defense', 'space-weather': 'sun'}
+GLASS_PAGE = {'Titan.html': 'titan', 'ExoMars_Rosalind_Franklin.html': 'mars', 'ESCAPADE.html': 'mars', 'MMX.html': 'mars',
+              'Oceans.html': 'ocean', 'Lakes.html': 'lakes', 'Rivers.html': 'rivers', 'Deforestation.html': 'forests', 'Space.html': 'space',
+              'Earth_Observation.html': 'earth', 'Planetary_Defense.html': 'defense', 'Space_Weather.html': 'sun', 'Space_Disposal.html': 'space'}
+def set_glass(f, s):
+    m = re.search(r'<meta name="sp:category" content="([^"]+)"', s)
+    t = GLASS_PAGE.get(os.path.basename(f)) or (m and GLASS_CAT.get(m.group(1)))
+    s = re.sub(r'(<body[^>]*?) data-glass="[^"]*"', r'\1', s, count=1)
+    return re.sub(r'<body\b', f'<body data-glass="{t}"', s, count=1) if t else s
+
 def fix(f, fm):
     s = rd(f)
     if '<nav id="topnav">' not in s or '<footer>' not in s: return 0
     # extras.css
     if 'extras.css' not in s: s = s.replace('</head>', CSS + '\n</head>', 1)
     else: s = re.sub(r'extras\.css\?v=[0-9a-z]+', f'extras.css?v={V}', s)
+    # glass theme tint (Oct 14): data-glass on <body> from page/category
+    s = set_glass(f, s)
     # <main> landmark
     if '<main' not in s:
         i = s.index('<nav id="topnav">'); j = s.index('</nav>', i) + len('</nav>')
