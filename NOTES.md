@@ -42,6 +42,7 @@
 - [ ] Google Search Console (Cloudflare DNS TXT) + submit sitemap; Bing Webmaster (import from GSC); Cloudflare Crawler Hints; Brave submit; then OER Commons, Curlie (EN/FR/ES/AR), TES/Procomún. Rich Results Test on solution/hub/Glossary/home/an /ar/ page.
 - [ ] Grok Plus 9:16 setting still yields wide video; optional Artemis video remake ("Artegs III"); 4 ad clips from /workspace/grok-ad-savingplanets.txt.
 - [ ] MailerLite double-opt-in confirmation texts: manual edit in dashboard (scripts/newsletter-confirmation-texts.md).
+- [ ] Human-SI collab awards (draft /workspace/awards/human-si-collaboration-writeup.md): Fast Company World Changing Ideas (early Nov 13 / final Dec 11, 2026, $345/$445); Telly (early Dec 11, unconfirmed); A' Design late Feb 28, 2027 (unconfirmed); Internationalist AI for Better Marketing (May 7, 2027, $495); Anthem (opens Spring 2027); NI Prize 2026 closed, watch 2027.
 
 **Open decisions**
 - Merge Related Solutions with "Next: Explore Another Solution" (two "more" lists now).
