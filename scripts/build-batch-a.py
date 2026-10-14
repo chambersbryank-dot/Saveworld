@@ -107,12 +107,25 @@ def related():
         out[f] = [g for _, g in sc[:4]]
     return out
 
+# Manual overrides (assets/data/related-overrides.json: {"Page.html": ["A.html", ...]}) win over the similarity picks,
+# so hand-chosen cards survive the weekly sync. Targets may be solution pages or hub pages.
+OVR_F = 'assets/data/related-overrides.json'
+HUBNAME = dict(sol.HUBS)
+def apply_overrides(rel):
+    if not os.path.exists(OVR_F): return rel
+    for page, picks in json.load(open(OVR_F)).items():
+        if page.startswith('_'): continue
+        picks = [g for g in picks if os.path.exists(g) and g != page][:4]
+        if picks: rel[page] = picks
+    return rel
+
 def related_block(page, rel):
     cards = []
     for g in rel:
         i = sol.info(g)  # decorative: the card's visible name is the link text
         img = f'<img src="{i["img"]}" alt="" loading="lazy" decoding="async">' if i['img'] else ''
-        cards.append(f'<li class="rel-card"><a href="{g}">{img}<span class="rel-hub">{sol.esc(HUB[g])}</span><span class="rel-name">{sol.esc(NAME[g])}</span></a></li>')
+        hub, name = (HUB[g], NAME[g]) if g in NAME else ('Hub', HUBNAME.get(g, g[:-5].replace('_', ' ')))
+        cards.append(f'<li class="rel-card"><a href="{g}">{img}<span class="rel-hub">{sol.esc(hub)}</span><span class="rel-name">{sol.esc(name)}</span></a></li>')
     return ('<section class="related-solutions" aria-labelledby="rel-title" data-pagefind-ignore><h2 id="rel-title">Related Solutions</h2>'
             '<p class="rel-intro">More solutions like this one, matched by meaning.</p><ul class="rel-grid">' + ''.join(cards) + '</ul></section>')
 
@@ -148,6 +161,7 @@ def main():
     store = json.load(open(store_f)) if os.path.exists(store_f) else {}
     try: rel = related()
     except FileNotFoundError: rel = {}
+    rel = apply_overrides(rel)
     stats = dict(share=0, reviewed=0, related=0)
     for page in SHARE_PAGES:
         s = rd(page); o = s

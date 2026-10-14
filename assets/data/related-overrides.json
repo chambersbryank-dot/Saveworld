@@ -1,0 +1,4 @@
+{
+ "_note": "Hand-picked Related Solutions; build-batch-a.py uses these instead of the similarity picks (max 4).",
+ "Tsunami_Early_Warning.html": ["SWOT.html", "Sentinel-6B.html", "DSCOVR_EPIC.html", "Earth_Observation.html"]
+}
