@@ -114,6 +114,13 @@
 Dropped 10-13: JPSS/NOAA-21 (too few confirmed facts), ozone recovery (already a Myth vs Fact card), The Rivers Trust UK (no figures on impact page), Hayabusa2 1998 KY26 arrival date and Comet Interceptor L2 parking (not on pages read).
 Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; global.jaxa.jp/press/2026/07/20260730-1_e.html, -2_e.html, 20260706-3_e.html; hayabusa2.jaxa.jp press PDF 20260706; science.nasa.gov/mission/{psyche,lucy,spherex}/; esa.int Comet_Interceptor, EnVision, Copernicus/Sentinel-4; epa.gov/water-research/cyanobacteria-assessment-network-cyan (+ -application-cyan-app); sarsat.noaa.gov; barrierreef.org/news/explainers/what-is-coral-ivf + GBRF Year in Review 2023-24 PDF; gbrrestoration.org RRAP-MC-01 final report 2025; doi.org/10.1002/lno.10510; doi.org/10.1371/journal.pone.0030454; pubmed 33360312; fisheries.noaa.gov/feature-story/whales-and-carbon-sequestration-can-whales-store-carbon; justdiggit.org/what-we-do/impact/ + water-bunds; river-cleanup.org/en; unccd.int GGWI page + 2020 status report press release; nasa.gov growing-plants-in-space + Veggie activation (2014).
 
+## Oct 13 approvals (owner voice session)
+1. Merge Related Solutions + "Next: Explore Another Solution" into one more-list.
+2. Homepage "minus the doom": keep it in only the strip or only the headline, not both.
+3. Rewrite ELI10 boxes in truly simple language, starting with most-visited pages.
+4. Add "How This Saves People & the Planet" to hub/solution pages lacking it, when touched.
+5. Tsunami early-warning page is now ACTIVE (off hold); to be built.
+
 ## Oct 13 fixes
 - scripts/build-site-extras.py (weekly-sync, after batch-b): footer site map + Sitemap.html, <main> landmark, video labels, extras.css (contrast). axe: 295 -> ~4 issues on 18 sampled pages.
 - Lake pages use public-domain NASA/NPS photos; Solutions lists each solution once (primary hub = breadcrumb) with "Also in"; About sources are a plain list.
