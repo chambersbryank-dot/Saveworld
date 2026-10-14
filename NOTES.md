@@ -23,6 +23,7 @@
 - **Organic discovery plan** (0dffe5a): docs/organic-discovery-plan.md. Tech SEO is sufficient; missing = verification + IndexNow wiring.
 - Site review: distinctive combination, not "the only one" — claim the combination, never uniqueness.
 - **Video hook (Oct 13, owner voice session):** Thank-you/updates video (education features, 22 new updates) opens with "We heard your feedback, and we took action." Captions on, no text overlay, so viewers see the new education features. Recycle existing clips, no new footage. Target ~30s, tonight or this week. Chief of Staff drafts script when owner is ready.
+- **Tsunami_Early_Warning** (Oct 13, ACTIVE per Oct 13 approvals): EO hub + Ocean (Also in), en/fr/es/ar. Covers what a tsunami is, DART (39-station network 2008, 15 s, ~1 cm, GOES/Iridium), SWOT Kamchatka (Science 2026 Sepúlveda; Seismic Record Ruiz-Angulo ~400 vs ~300 km; Titov quote), GUARDIAN (350+ stations, 1,200 km, ≥20 min, 30–40 min before Hawaii, 580 mph, Moore quote, Scout), DAS cable (arXiv preprint), Med buoys (Sonardyne/INGV), BMKG Aceh HF radar, USGS GNSS-A Cascadia, Sentinel-6; NOAA safety; required caveat box near top. Horizon notes: SWOT ops, GUARDIAN, cables. Corrected: GUARDIAN 8 min→20 min, 30–45→30–40 min. Dropped: GREAT v1.0 (no primary source), Med buoy "Oct 2026" date (not on Sonardyne page), current DART count. Image NASA/JPL PIA26652. Follow-up: Related Solutions are auto (SARSAT, GRACE-FO, SOLAR-1, Sentinel-1); SWOT/Sentinel-6B/DSCOVR linked in Next + Explore.
 
 ## Next / Open
 **Next priorities (after current builds)**
@@ -49,7 +50,6 @@
 - Homepage "minus the doom" appears in strip and headline — shorten one.
 - Rewrite ELI10 in truly simple language (assets/data/eli10.json overrides) for most-visited pages.
 - Hub/solution pages lacking "How This Saves People & the Planet" section — add when touched (people+nature rule).
-- Tsunami early-warning page: ON HOLD (no page mentions "tsunami"; would fix tsunami queries; NOAA DART, SWOT, Sentinel-6).
 - Real photos for the 3 lake cleanup cards (currently site logo).
 - Multilingual semantic model (e.g. multilingual-e5-small) so fr/es/ar get meaning search; also DSCOVR misses top 12 for sea-level query.
 - IndexNow: key file exists; wire `node scripts/indexnow-ping.js --send` into post-deploy (proposal).

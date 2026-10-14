@@ -1100,6 +1100,102 @@
     ],
     "def": "أقمار صناعية قديمة وأجزاء صواريخ وقطع مكسورة تبقى في المدار ولم تعد مفيدة."
    }
+  },
+  {
+   "id": "tsunami",
+   "en": {
+    "term": "Tsunami",
+    "match": [
+     "tsunamis",
+     "tsunami"
+    ],
+    "def": "A series of giant ocean waves, usually caused by an undersea earthquake, volcano or landslide."
+   },
+   "fr": {
+    "term": "Tsunami",
+    "match": [
+     "tsunamis",
+     "tsunami"
+    ],
+    "def": "Une série de vagues géantes, le plus souvent causée par un séisme sous-marin, un volcan ou un glissement de terrain."
+   },
+   "es": {
+    "term": "Tsunami",
+    "match": [
+     "tsunamis",
+     "tsunami"
+    ],
+    "def": "Una serie de olas gigantes, casi siempre causada por un terremoto submarino, un volcán o un deslizamiento."
+   },
+   "ar": {
+    "term": "تسونامي",
+    "match": [
+     "تسونامي"
+    ],
+    "def": "سلسلة من الأمواج العملاقة، تنتج غالبًا عن زلزال تحت البحر أو بركان أو انهيار أرضي."
+   }
+  },
+  {
+   "id": "ionosphere",
+   "en": {
+    "term": "Ionosphere",
+    "match": [
+     "ionosphere"
+    ],
+    "def": "A high layer of the atmosphere, about 50 to 600 miles up, full of electrically charged particles."
+   },
+   "fr": {
+    "term": "Ionosphère",
+    "match": [
+     "ionosphère"
+    ],
+    "def": "Une couche haute de l'atmosphère, entre environ 80 et 1 000 km d'altitude, pleine de particules chargées."
+   },
+   "es": {
+    "term": "Ionosfera",
+    "match": [
+     "ionosfera"
+    ],
+    "def": "Una capa alta de la atmósfera, entre unos 80 y 1.000 km de altura, llena de partículas con carga eléctrica."
+   },
+   "ar": {
+    "term": "الغلاف الأيوني",
+    "match": [
+     "الغلاف الأيوني"
+    ],
+    "def": "طبقة عالية من الغلاف الجوي، على ارتفاع نحو 80 إلى 1000 كيلومتر، مليئة بجسيمات مشحونة كهربائيًا."
+   }
+  },
+  {
+   "id": "subduction-zone",
+   "en": {
+    "term": "Subduction zone",
+    "match": [
+     "subduction zone"
+    ],
+    "def": "A place where one of Earth's plates slides under another. The biggest earthquakes and tsunamis start here."
+   },
+   "fr": {
+    "term": "Zone de subduction",
+    "match": [
+     "zone de subduction"
+    ],
+    "def": "Un endroit où une plaque terrestre glisse sous une autre. Les plus grands séismes et tsunamis y naissent."
+   },
+   "es": {
+    "term": "Zona de subducción",
+    "match": [
+     "zona de subducción"
+    ],
+    "def": "Un lugar donde una placa de la Tierra se hunde bajo otra. Ahí nacen los mayores terremotos y tsunamis."
+   },
+   "ar": {
+    "term": "منطقة الاندساس",
+    "match": [
+     "منطقة الاندساس"
+    ],
+    "def": "مكان تنزلق فيه إحدى صفائح الأرض تحت صفيحة أخرى، وفيه تبدأ أكبر الزلازل وموجات التسونامي."
+   }
   }
  ]
 }
