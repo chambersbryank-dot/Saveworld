@@ -9,7 +9,7 @@ def wr(f, s):
     if rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
 esc = lambda s: html.escape(s, quote=True)
-V = '20261014a'
+V = '20261014c'
 CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),

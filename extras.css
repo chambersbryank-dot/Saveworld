@@ -88,3 +88,9 @@ body.toc-home #actions .join-lead a.btn:hover, body.toc-sub #actions .join-lead 
   html.dark nav.open .nav-links a { color: #8fd3ff !important; }
   nav.open .nav-links a:hover, nav.open .nav-links a:focus-visible { color: #c6ecff !important; }
 }
+/* Video transcripts (Oct 14) */
+.video-transcript { max-width: 760px; margin: .8rem auto 0; padding: .6rem 1rem; border: 1px solid rgb(143 211 255 / .45); border-radius: 14px; background: rgb(0 40 64 / .55); color: #e8eef5; text-align: start; overflow-wrap: break-word; }
+.video-transcript summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.video-transcript p { margin: .4rem 0; line-height: 1.5; }
+html:not(.dark) body:not(.toc-home):not(.toc-sub) .video-transcript { background: #f3f8fc; color: #10202c; }
+video::cue { background: rgb(0 0 0 / .8); color: #fff; }
