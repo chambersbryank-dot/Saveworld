@@ -1105,3 +1105,5 @@ body.toc-sub .page-hero.hero-ocean{background-image:linear-gradient(180deg,rgba(
 }
 .page-hero .hero-credit{position:absolute;right:.6rem;bottom:.4rem;font-size:.7rem;color:rgba(255,255,255,.85);text-shadow:0 1px 2px #000;background:rgba(0,0,0,.25);padding:.1rem .4rem;border-radius:6px}
 [dir=rtl] .page-hero .hero-credit{right:auto;left:.6rem}
+body.toc-sub.co2m-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Clouds_Limb_ISS.jpg') center/cover no-repeat; }
+body.toc-sub.hope-spots-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Bahamas_Ocean_ISS.jpg') center/cover no-repeat; }

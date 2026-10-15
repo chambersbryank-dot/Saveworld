@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T05:42:35.838Z",
+ "generated": "2026-10-15T05:59:10.915Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -228,6 +228,10 @@
      "name": "Biomass (ESA)"
     },
     {
+     "href": "CO2M.html",
+     "name": "Copernicus CO2M Carbon Dioxide Monitoring (ESA / EU)"
+    },
+    {
      "href": "Sentinel-1.html",
      "name": "Copernicus Sentinel-1 (ESA)"
     },
@@ -432,6 +436,10 @@
     {
      "href": "Kelp_Forests.html",
      "name": "Kelp Forests"
+    },
+    {
+     "href": "Mission_Blue_Hope_Spots.html",
+     "name": "Mission Blue Hope Spots"
     },
     {
      "href": "Mote_Marine_Laboratory.html",
@@ -724,7 +732,7 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 118,
+  "solutions": 120,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {

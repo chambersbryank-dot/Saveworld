@@ -148,3 +148,5 @@ Privacy.html
 Editorial_Policy.html
 Corrections.html
 Topics.html
+CO2M.html
+Mission_Blue_Hope_Spots.html
