@@ -30,6 +30,14 @@
         "es": "Explorador de satélites: nuevas animaciones, un laboratorio 3D para construir un satélite e imágenes y videos de la NASA.",
         "ar": "مستكشف الأقمار الصناعية: رسوم متحركة جديدة، ومختبر ثلاثي الأبعاد لبناء قمر صناعي، وصور ومقاطع فيديو من NASA."
       }
+    },
+    {
+      "date": "2026-10-14",
+      "page": "About.html",
+      "what": {
+        "en": "new 70s About video v3 (real site footage + NASA B-roll), poster, 4-language captions/transcripts, VideoObject, Footage: NASA credit"
+      },
+      "commit": "c582009447877b65693f84e84585765cfe0caba1"
     }
   ]
 }

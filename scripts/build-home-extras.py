@@ -55,7 +55,7 @@ s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
 w, h = dims('assets/videos/savingplanets-about-v3.mp4')
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
   f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v3.jpg" width="{w}" height="{h}">'
-  '<source src="assets/videos/savingplanets-about-v3.mp4" type="video/mp4"><a href="assets/videos/savingplanets-about-v3.mp4">Download the video</a></video>'
+  '<source src="assets/videos/savingplanets-about-v3.mp4" type="video/mp4"><source src="assets/videos/savingplanets-about-v3-720.mp4" type="video/mp4"><a href="assets/videos/savingplanets-about-v3.mp4">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
 s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
