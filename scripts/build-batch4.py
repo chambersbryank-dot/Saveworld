@@ -59,7 +59,7 @@ else:
     for f in glob.glob('*.html') + glob.glob('fr/*.html') + glob.glob('es/*.html') + glob.glob('ar/*.html'): strip(f, 'DOT')
 print('dot enabled' if DOT_ENABLED else 'dot DISABLED', 'dot: index +', len(C.QUIZZES), 'hubs,', len(items), 'actions')
 
-# ---- Community.html (Oct 14: paused; archived in _archive/community/. Set True + see README there to restore.)
+# ---- Community.html (Oct 14: paused; saved on branch archive/community-wall. Set True + see docs/community-archive.md to restore.)
 COMMUNITY_ENABLED = False
 MAIL = 'mailto:ideas@savingplanets.com?subject=Solution%20idea%20for%20Saving%20Planets)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'
 G = ['Send photos you took yourself. Please don&#x27;t send photos from the internet or someone else&#x27;s camera.',

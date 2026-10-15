@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Oct 14: Community Wall paused (archived in _archive/community/). While COMMUNITY_ENABLED is False:
+"""Oct 14: Community Wall paused (saved copy: branch archive/community-wall, _archive/community/; see docs/community-archive.md). While COMMUNITY_ENABLED is False:
 strip every link to Community.html in en/fr/es/ar, keep redirect stubs at the old URLs, drop it from sitemap.xml + pages.txt. Idempotent."""
 import os, re, glob
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
