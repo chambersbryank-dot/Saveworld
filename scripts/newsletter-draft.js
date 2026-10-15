@@ -169,7 +169,7 @@ function whatsNew(state) {
 function siteStats(launchList) {
   const s = (readJson('assets/data/solutions.json') || {}).site || {}, art = readJson('assets/data/artemis.json');
   const facts = factCards('en').length;
-  return { solutions: s.solutions, hubs: s.hubs, languages: 4, upcomingMissions: s.upcomingMissions, facts: facts || null, launchesThisWeek: launchList ? launchList.length : null, artemisUpcoming: art ? art.missions.filter(m => m.state === 'upcoming').length : null };
+  return { solutions: s.solutions, hubs: s.hubs, languages: Object.keys(GROUPS).length, upcomingMissions: s.upcomingMissions, facts: facts || null, launchesThisWeek: launchList ? launchList.length : null, artemisUpcoming: art ? art.missions.filter(m => m.state === 'upcoming').length : null };
 }
 function kidsPick(lang) {
   const e = readJson(`assets/data/edu.${lang}.json`) || readJson('assets/data/edu.en.json'), keys = Object.keys(e.hubs);
