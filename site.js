@@ -186,7 +186,7 @@
   };
   var NAMES = { en: 'English', fr: 'Fran\u00e7ais', es: 'Espa\u00f1ol', ar: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629' };
   var L = window.spLang || 'en'; if (!FORMS[L]) L = 'en';
-  var t = T[L], about = (L === 'en' ? '' : '../') + 'About.html#privacy';
+  var t = T[L], about = 'Privacy.html'; // Oct 14: standalone Privacy page in every language folder
   var css = '.sp-nl{max-width:640px;margin:2.2rem auto 0;padding:1.4rem 1.5rem;border:1px solid rgba(0,156,222,.35);border-radius:12px;background:#f3f9fd;color:#003755;text-align:center;font-family:Montserrat,"Segoe UI",sans-serif;box-sizing:border-box}' +
     '.sp-nl h2,.sp-nl h3{margin:0 0 .35rem;font-size:1.35rem;color:#003755}.sp-nl p{margin:0 0 .8rem;font-size:.92rem;line-height:1.45}' +
     '.sp-nl form{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.sp-nl input[type=email]{flex:1 1 220px;min-width:0;padding:10px 12px;font:inherit;font-size:.95rem;border:1px solid #7aa7c2;border-radius:6px;color:#003755;background:#fff}' +
@@ -215,7 +215,7 @@
       var fd = new FormData(); fd.append('fields[email]', v); fd.append('ml-submit', '1'); fd.append('anticsrf', 'true');
       fetch('https://assets.mailerlite.com/jsonp/' + ACCT + '/forms/' + FORMS[FORMS[f.lang.value] ? f.lang.value : L] + '/subscribe', { method: 'POST', body: fd, credentials: 'omit', headers: { 'Accept': 'application/json' } })
         .then(function (r) { return r.json(); })
-        .then(function (d) { if (d && d.success) { say(t[6], true); f.reset(); } else say(t[7], false); })
+        .then(function (d) { if (d && d.success) { say(t[6], true); f.reset(); if (window.spTrack) spTrack('newsletter_signup', { form_lang: f.lang ? f.lang.value : L }); } else say(t[7], false); })
         .catch(function () { say(t[7], false); })
         .then(function () { btn.disabled = false; });
     });

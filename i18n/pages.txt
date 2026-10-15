@@ -145,3 +145,7 @@ Globe_at_Night.html
 Kids_Map.html
 Lesson_Builder.html
 Satellite_Explorer.html
+Privacy.html
+Editorial_Policy.html
+Corrections.html
+Topics.html

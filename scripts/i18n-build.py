@@ -123,6 +123,8 @@ def build(page, lang, m):
         for a in ('href', 'src', 'poster', 'data-image', 'data-fact-page'):
             if tag.get(a) and not (tag.name == 'link' and tag.get('rel') in (['canonical'], ['alternate'])):
                 tag[a] = fix_url(tag[a])
+        if tag.get('srcset'):  # Oct 14: responsive images (comma list of "url width")
+            tag['srcset'] = ', '.join(' '.join([fix_url(p.split()[0])] + p.split()[1:]) for p in tag['srcset'].split(','))
     ui = json.load(open('i18n/ui.json', encoding='utf8')).get(lang, {})
     for s in soup.find_all('script'):
         if not s.get('src') and s.get('type') != 'application/ld+json' and s.string:

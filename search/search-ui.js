@@ -116,6 +116,7 @@ window.SP_SEARCH_STARTED = true;
     if (empty) empty.hidden = items.length > 0;
     lastItems = items; shown = Math.max(shown, 5);
     paint();
+    if (!items.length && window.spTrack) spTrack('search_no_results', { search_term: q.slice(0, 100) });
     status.textContent = !items.length ? msg('none')
       : items.length + ' ' + msg(items.length === 1 ? 'result' : 'results') + (kwr.partial && !usedSem ? ' · ' + msg('partial') : '');
   }

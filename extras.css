@@ -105,3 +105,32 @@ body .partner-cta a.btn-nav { display: inline-flex; align-items: center; gap: .6
   .partner-cta .btn-nav::before { background: radial-gradient(120% 90% at 25% 15%, rgb(255 255 255 / .28), transparent 45%), linear-gradient(160deg, rgb(var(--glass-tint) / .78), rgb(var(--glass-tint) / .58));
     -webkit-backdrop-filter: blur(12px) saturate(140%); backdrop-filter: blur(12px) saturate(140%); }
 }
+/* Oct 14 2026: tap targets >= 44px on touch screens (Lighthouse target-size), search credit contrast, A-Z + trust pages */
+.footer-map a { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 2px; }
+@media (pointer: coarse), (max-width: 768px) {
+  .footer-map a, footer a, .breadcrumb a, .chip, .sp-q, .az-nav a, .sol-top { min-height: 44px; display: inline-flex; align-items: center; }
+  .footer-map ul { gap: 0 1.2rem; }
+  .az-nav a { min-width: 44px; justify-content: center; }
+}
+.sp-search .search-credit, .search-credit { opacity: 1; color: #c9d6e3; }
+.search-credit a, .sp-search .search-credit a { color: #8fd3ff; }
+.az-nav { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 1.5rem auto; max-width: 900px; position: sticky; top: 64px; z-index: 5; padding: 6px; border-radius: 12px; background: rgba(255,255,255,.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+html.dark .az-nav { background: rgba(11,18,32,.75); }
+.az-nav a { padding: 6px 10px; border-radius: 8px; font-weight: 700; text-decoration: none; }
+.az-nav a:hover, .az-nav a:focus-visible { background: rgba(0,156,222,.15); }
+.az-group { max-width: 900px; margin: 0 auto 1.5rem; padding: 0 1.25rem; scroll-margin-top: 130px; }
+.az-group h2 { border-bottom: 2px solid rgba(0,156,222,.35); padding-bottom: .2rem; }
+.az-list { list-style: none; padding: 0; columns: 2 280px; column-gap: 2rem; }
+.az-list li { break-inside: avoid; padding: 6px 0; }
+.az-kind { font-size: .75rem; opacity: .85; margin-inline-start: .35rem; padding: 1px 6px; border-radius: 999px; background: rgba(0,156,222,.12); }
+.trust-updated { max-width: 900px; margin: 1rem auto 0; padding: 0 1.25rem; font-size: .85rem; opacity: .85; }
+/* Oct 14 2026 edu-extras: standards + badges */
+.lb-std { margin-top: 1.2rem; padding: .8rem 1rem; border: 1px solid rgba(0,156,222,.35); border-radius: 12px; }
+.lb-std-code { font-weight: 800; font-family: ui-monospace, monospace; background: rgba(0,156,222,.12); padding: 1px 6px; border-radius: 6px; }
+.lb-std li { margin: .4rem 0; }
+.sp-badge { margin: 1rem auto; max-width: 520px; padding: 1rem 1.2rem; border-radius: 16px; text-align: center; }
+.sp-badge-t { font-size: 1.15rem; margin: 0 0 .6rem; }
+.sp-badge-l { display: block; font-size: .85rem; margin-bottom: .6rem; }
+.sp-badge-l input { display: block; width: 100%; margin-top: .3rem; min-height: 44px; padding: 8px 10px; border-radius: 8px; border: 1px solid #7aa7c2; box-sizing: border-box; }
+.sp-badge .btn { min-height: 44px; }
+@media print { .lb-std { break-inside: avoid; } }

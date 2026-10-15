@@ -187,6 +187,7 @@ AUD = ('<!-- AUDIENCE:START --><section class="audience" aria-labelledby="aud-h"
        '<a class="aud-card" href="Teachers.html"><span class="aud-icon" aria-hidden="true">🎓</span><span class="aud-title">Students &amp; Teachers</span><span class="aud-text">Printable sheets, a glossary and citations.</span></a>'
        '<a class="aud-card" href="Solutions.html"><span class="aud-icon" aria-hidden="true">🔭</span><span class="aud-title">Curious Adults</span><span class="aud-text">Every solution, searchable in one place.</span></a>'
        '<a class="aud-card" href="mailto:partners@savingplanets.com?subject=Creating%20Partnership%20Starts%20Here"><span class="aud-icon" aria-hidden="true">🤝</span><span class="aud-title">Partners</span><span class="aud-text">Sponsor or work with Saving Planets.</span></a>'
+       '<a class="aud-card" href="Press.html"><span class="aud-icon" aria-hidden="true">📰</span><span class="aud-title">Press</span><span class="aud-text">Press kit, logos, fact sheets and contacts.</span></a><a class="aud-card" href="Topics.html"><span class="aud-icon" aria-hidden="true">🧭</span><span class="aud-title">Explore A to Z</span><span class="aud-text">Every solution and science word, from A to Z.</span></a>'  # Oct 14: Press + Explore tiles
        '</div></section><!-- AUDIENCE:END -->')
 
 def pre():

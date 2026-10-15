@@ -97,7 +97,7 @@ def shell(page, title, desc, body_class, glass, main, rtype='LearningResource'):
     scripts = re.findall(r'<script src="site\.js[^"]*"></script>', t)[0]
     return (head + '</head>\n' + f'<body class="toc-sub {body_class}" data-glass="{glass}"><a class="skip-link" href="#main">Skip to content</a>{nav}<main id="main">\n'
             + f'<section class="page-hero"><div class="page-hero-content"><h1>{esc(title)}</h1><p>{esc(desc)}</p></div></section>\n'
-            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
+            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script><script src="edu-extras.js?v=20261014u" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
 
 MAP_POS = {  # hub: (label, x, y, mobile x, mobile y)
  'Space_Weather.html': ('Space Weather', 86, 12, 72, 6), 'Planetary_Defense.html': ('Asteroids', 60, 10, 28, 13),

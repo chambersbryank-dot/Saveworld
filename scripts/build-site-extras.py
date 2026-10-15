@@ -9,13 +9,14 @@ def wr(f, s):
     if rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
 esc = lambda s: html.escape(s, quote=True)
-V = '20261014e'
+V = '20261014u'
 CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),
        ('Amazing_Facts.html', 'Amazing Facts'), ('Kids_Map.html', 'Kids Planet Map'), ('Lesson_Builder.html', 'Lesson Plan Builder'), ('Satellite_Explorer.html', 'Satellite Explorer'), ('Ways_to_Help.html', 'Ways to Help'), ('About.html', 'About'), ('Press.html', 'Press &amp; media'),
-       ('Contact.html', 'Contact'), ('Sitemap.html', 'Site Map')]
-UI = {'Site map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'), 'Site Map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'),
+       ('Contact.html', 'Contact'), ('Topics.html', 'Topics A to Z'), ('Privacy.html', 'Privacy'), ('Editorial_Policy.html', 'Editorial Policy'), ('Corrections.html', 'Corrections'), ('Sitemap.html', 'Site Map')]
+UI = {'Topics A to Z': ('Sujets de A à Z', 'Temas de la A a la Z', 'الموضوعات من الألف إلى الياء'), 'Privacy': ('Confidentialité', 'Privacidad', 'الخصوصية'), 'Editorial Policy': ('Politique éditoriale', 'Política editorial', 'السياسة التحريرية'), 'Corrections': ('Corrections', 'Correcciones', 'التصحيحات'),
+      'Site map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'), 'Site Map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'),
       'Hubs': ('Pôles', 'Centros', 'المحاور'), 'Explore': ('Explorer', 'Explorar', 'استكشف'), 'All Solutions': ('Toutes les solutions', 'Todas las soluciones', 'كل الحلول'),
       'Search': ('Rechercher', 'Buscar', 'بحث'), 'Teacher Sheets': ('Fiches enseignants', 'Fichas docentes', 'أوراق المعلمين'),
       'Every hub and solution on Saving Planets, in one list.': ('Tous les pôles et toutes les solutions de Saving Planets, en une seule liste.', 'Todos los centros y soluciones de Saving Planets, en una sola lista.', 'كل المحاور والحلول في Saving Planets في قائمة واحدة.'),
