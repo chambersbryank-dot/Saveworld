@@ -40,6 +40,7 @@ python3 scripts/disable-community.py     # Oct 14: Community Wall paused (archiv
 python3 scripts/i18n-sitemap.py
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)
+python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/seo-audit.py | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null

@@ -349,3 +349,23 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
+
+/* UX-OCT15:START */
+(function(){
+  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  var f=document.querySelector('.sol-filters');if(!f)return;
+  var L=JSON.parse(f.getAttribute('data-i18n'));
+  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
+  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
+    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
+    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
+  var dom='all',hub='all',sel=f.querySelector('select');
+  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
+    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
+  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
+  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
+})();
+/* UX-OCT15:END */
