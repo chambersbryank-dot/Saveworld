@@ -15,7 +15,7 @@ for f in glob.glob('*.html') + glob.glob('*/*.html'):
     # linkify plain-text errors@ inside <p>/<li> body text (not inside tags, anchors, head or scripts)
     head, sep, body = s.partition('<body')
     def link(seg):
-        for box, href in (('errors', ERR), ('privacy', 'mailto:privacy@savingplanets.com?subject=Privacy%20request')):
+        for box, href in (('errors', ERR), ('privacy', 'mailto:privacy@savingplanets.com?subject=Privacy%20or%20data%20request')):
             seg = re.sub(r'(?<![">/=@\w.])' + box + r'@savingplanets\.com', f'<a href="{href}">{box}@savingplanets.com</a>', seg)
         return seg
     parts = re.split(r'(<script.*?</script>|<a\b.*?</a>|<[^>]+>)', body, flags=re.S)

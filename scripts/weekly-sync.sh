@@ -30,6 +30,7 @@ python3 scripts/optimize-images.py        # Oct 14: WebP srcset for homepage car
 python3 scripts/add-video-schema.py       # Oct 14: VideoObject JSON-LD (all langs)
 python3 scripts/link-errors.py           # Oct 14: errors@ mailto for error/bug reports (all langs)
 python3 scripts/dept-contacts.py         # Oct 14: department inboxes (all langs)
+python3 scripts/mailto-subjects.py        # Oct 14: purpose subject on every mailto (all langs)
 python3 scripts/i18n-sitemap.py
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)

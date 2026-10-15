@@ -5,8 +5,8 @@ Writes EN blocks (marker comments) + i18n strings; run before i18n-build and aga
 import re, glob, os, json
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 S = 'mailto:%s@savingplanets.com?subject=%s'
-M = {'teachers': S % ('teachers', 'Classroom%20question'), 'privacy': S % ('privacy', 'Privacy%20request'),
-     'translate': S % ('translate', 'Help%20translate%20Saving%20Planets'), 'hello': S % ('hello', 'Question')}
+M = {'teachers': S % ('teachers', 'Teacher%20question%20or%20lesson%20plan%20request'), 'privacy': S % ('privacy', 'Privacy%20or%20data%20request'),
+     'translate': S % ('translate', 'I%20can%20help%20translate'), 'hello': S % ('hello', 'Hello%20from%20a%20Saving%20Planets%20visitor')}
 TR = {
  'Teachers & Schools': ('Enseignants et écoles', 'Docentes y escuelas', 'المعلمون والمدارس'),
  'Classroom questions, lesson-plan requests and school partnerships.': ('Questions de classe, demandes de plans de cours et partenariats scolaires.', 'Preguntas de clase, solicitudes de planes de clase y alianzas escolares.', 'أسئلة الصف وطلبات خطط الدروس والشراكات المدرسية.'),

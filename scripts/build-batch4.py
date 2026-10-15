@@ -60,7 +60,7 @@ else:
 print('dot enabled' if DOT_ENABLED else 'dot DISABLED', 'dot: index +', len(C.QUIZZES), 'hubs,', len(items), 'actions')
 
 # ---- Community.html
-MAIL = 'mailto:ideas@savingplanets.com?subject=Community%20photo&amp;body=First%20name%20or%20alias%3A%0APlace%20(city%20or%20beach)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'
+MAIL = 'mailto:ideas@savingplanets.com?subject=Solution%20idea%20for%20Saving%20Planets)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'
 G = ['Send photos you took yourself. Please don&#x27;t send photos from the internet or someone else&#x27;s camera.',
      'Use your first name or an alias only. We never publish last names, emails or addresses.',
      'No faces of children or teens. Hands, gear, bags of trash and the beach are perfect.',
