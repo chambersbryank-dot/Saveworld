@@ -10,7 +10,7 @@ import edu_text as X
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar']
-CSSV = '20261014f'
+CSSV = '20261014k'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
 esc = lambda s: html.escape(s, quote=True)
@@ -85,6 +85,7 @@ def shell(page, title, desc, body_class, glass, main, rtype='LearningResource'):
     head = re.sub(r'\n?<meta name="i18n-source"[^>]*>', '', head)
     head = head.replace('Teachers.html', page)
     head = re.sub(r'<script type="application/ld\+json">.*?</script>', '', head, flags=re.S)
+    head = re.sub(r'\n?<link rel="stylesheet" href="edu\.css\?v=[^"]*">', '', head)
     lr = {"@type": rtype, "name": title, "description": desc, "url": SITE + page, "inLanguage": "en", "isAccessibleForFree": True,
           "learningResourceType": "Interactive resource", "publisher": {"@type": "Organization", "name": "Saving Planets", "url": "https://www.savingplanets.com"}}
     ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "description": desc, "url": SITE + page, "inLanguage": "en",
@@ -96,7 +97,7 @@ def shell(page, title, desc, body_class, glass, main, rtype='LearningResource'):
     scripts = re.findall(r'<script src="site\.js[^"]*"></script>', t)[0]
     return (head + '</head>\n' + f'<body class="toc-sub {body_class}" data-glass="{glass}"><a class="skip-link" href="#main">Skip to content</a>{nav}<main id="main">\n'
             + f'<section class="page-hero"><div class="page-hero-content"><h1>{esc(title)}</h1><p>{esc(desc)}</p></div></section>\n'
-            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script></body></html>\n')
+            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
 
 MAP_POS = {  # hub: (label, x, y, mobile x, mobile y)
  'Space_Weather.html': ('Space Weather', 86, 12, 72, 6), 'Planetary_Defense.html': ('Asteroids', 60, 10, 28, 13),
@@ -165,15 +166,31 @@ PART_TEXT = {
  'propulsion': ['Little rocket thrusters give gentle pushes so the satellite stays in the right place.', 'Thrusters raise or adjust the orbit and help dodge space junk. At the end of the mission they can push the satellite down to burn up, so it does not become debris.', 'Chemical thrusters give high thrust; electric thrusters (ion or Hall-effect) use far less propellant but push gently for a long time. Planning end-of-life disposal is part of space sustainability, as in the'],
  'antennas': ['Antennas let the satellite talk to Earth, sending pictures home through the air!', 'Antennas send data down and receive commands. Ground stations around the world catch the signals as the satellite flies overhead.', 'Link budgets balance transmitter power, antenna gain, distance, frequency and noise. Radio spectrum is limited and licensed, one reason missions are turning to laser links and to processing data on board.']}
 
+SX_S = [('idle', 'Build your satellite, then press Launch!'), ('built', 'Your satellite is built. Ready for launch!'), ('count3', '3…'), ('count2', '2…'), ('count1', '1…'),
+ ('liftoff', 'Liftoff! The rocket engines roar.'), ('maxq', 'Climbing through the thick air. The sky turns dark.'), ('staging', 'Stage separation! The empty first stage falls away.'),
+ ('fairing', 'Fairing separation: the nose cone opens and your satellite sees space.'), ('orbit', 'Orbit insertion! Your satellite is circling Earth.'),
+ ('arrays', 'Solar arrays unfolding to catch sunlight.'), ('antenna', 'Antenna deploying to talk to Earth.'), ('ready', 'Mission ready: your satellite is at work in orbit!'),
+ ('reducedsum', 'Launch complete: liftoff, stage separation, fairing separation, orbit insertion, solar arrays and antenna deployed.'),
+ ('day', 'Day'), ('night', 'Night'), ('leo', 'LEO'), ('meo', 'MEO'), ('geo', 'GEO'), ('you', 'Your orbit'), ('notscale', 'Not to scale; time sped up'),
+ ('gravity', 'Red arrow: gravity pulls toward Earth'), ('altitude', 'Altitude'), ('speed', 'Speed'), ('period', 'Period'), ('km', 'km'), ('kms', 'km/s'), ('min', 'min'), ('h', 'h'),
+ ('radio', 'Radio'), ('laser', 'Laser'), ('handoff', 'Handoff to the next ground station'), ('blocked', 'Cloud blocks the laser'), ('illustrative', 'Illustrative speeds, not to scale'),
+ ('chip', 'SI chip'), ('clear', 'Clear: sent home'), ('cloudy', 'Cloudy: deleted'), ('waterh', 'Water used by US data centers (LBNL)'),
+ ('w2014', 'about 21 billion L'), ('w2023', 'about 66 billion L'), ('heat', 'In orbit: heat radiates into space'), ('nowater', 'no cooling water'),
+ ('pause', 'Pause animations'), ('play', 'Play animations')]
+
 def sat_explorer():
-    svg = ('<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-           + ''.join(f'<circle cx="{x}" cy="{y}" r=".5" fill="#fff" opacity=".7"/>' for x, y in [(8,8),(25,92),(70,6),(92,90),(40,4),(96,45),(4,70)])
-           + '<rect x="34" y="36" width="32" height="28" rx="3" fill="#b0bec5" stroke="#eceff1" stroke-width=".8"/>'
-           + '<rect x="2" y="42" width="28" height="16" fill="#3f51b5" stroke="#c5cae9" stroke-width=".6"/><path d="M9 42v16M16 42v16M23 42v16M2 50h28" stroke="#c5cae9" stroke-width=".4"/><path d="M30 50h4" stroke="#eceff1" stroke-width="1.2"/>'
-           + '<path d="M66 40 78 30" stroke="#eceff1" stroke-width="1"/><path d="M74 22a10 10 0 0 1 12 12z" fill="#eceff1"/>'
-           + '<path d="M66 60 76 68l6 10h-8z" fill="#78909c"/><path d="M76 80l3 6 3-6" fill="#ff8a65"/>'
-           + '<rect x="44" y="64" width="12" height="8" fill="#546e7a"/><circle cx="50" cy="75" r="4" fill="#263238" stroke="#90a4ae"/>'
-           + '<rect x="46" y="28" width="8" height="8" fill="#90a4ae"/><circle cx="50" cy="26" r="2.5" fill="#263238"/></svg>')
+    svg = ('<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><defs>'
+           '<linearGradient id="sxFoil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#c9962b"/><stop offset="1" stop-color="#8a5d12"/></linearGradient>'
+           '<linearGradient id="sxCell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a237e"/><stop offset=".55" stop-color="#3949ab"/><stop offset="1" stop-color="#29b6f6"/></linearGradient>'
+           '<linearGradient id="sxMetal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#90a4ae"/><stop offset=".5" stop-color="#eceff1"/><stop offset="1" stop-color="#78909c"/></linearGradient>'
+           '<radialGradient id="sxGlass" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#e1f5fe"/><stop offset=".4" stop-color="#4fc3f7"/><stop offset="1" stop-color="#0d1b4a"/></radialGradient>'
+           '<radialGradient id="sxFlame" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#fff8e1"/><stop offset=".4" stop-color="#ffab40"/><stop offset="1" stop-color="#ff3d00" stop-opacity="0"/></radialGradient></defs>'
+           '<g data-p="solar" class="sxp"><rect x="2" y="42" width="28" height="16" rx="1" fill="url(#sxCell)" stroke="#c5cae9" stroke-width=".5"/><path d="M9 42v16M16 42v16M23 42v16M2 50h28" stroke="#c5cae9" stroke-width=".35" opacity=".8"/><path d="M3 43h26" stroke="#fff" stroke-width=".6" opacity=".5"/><path d="M30 50h4" stroke="#eceff1" stroke-width="1.2"/></g>'
+           '<g data-p="bus" class="sxp"><rect x="34" y="36" width="32" height="28" rx="3" fill="url(#sxFoil)" stroke="#fff3c4" stroke-width=".7"/><path d="M38 40l6 4-3 7 8 2M60 41l-5 6 4 6-6 5" stroke="#fff3c4" stroke-width=".35" fill="none" opacity=".7"/><rect x="36" y="38" width="28" height="3" rx="1" fill="#fff" opacity=".25"/></g>'
+           '<g data-p="antennas" class="sxp"><path d="M66 40 78 30" stroke="url(#sxMetal)" stroke-width="1.2"/><path d="M73 21a11 11 0 0 1 14 14z" fill="url(#sxMetal)" stroke="#fff" stroke-width=".4"/><circle cx="80" cy="28" r="1" fill="#ffd54a"/></g>'
+           '<g data-p="propulsion" class="sxp"><path d="M66 60 76 68l6 10h-8z" fill="url(#sxMetal)"/><ellipse class="sx-flame" cx="79" cy="84" rx="3.2" ry="5" fill="url(#sxFlame)"/></g>'
+           '<g data-p="payload" class="sxp"><rect x="44" y="64" width="12" height="8" fill="#546e7a"/><circle cx="50" cy="75" r="4.2" fill="url(#sxGlass)" stroke="#cfd8dc" stroke-width=".6"/><circle cx="48.6" cy="73.6" r="1" fill="#fff" opacity=".8"/></g>'
+           '<g data-p="sensors" class="sxp"><rect x="46" y="28" width="8" height="8" rx="1" fill="url(#sxMetal)"/><circle cx="50" cy="26" r="2.6" fill="url(#sxGlass)"/></g></svg>')
     slots = ''.join(f'<button type="button" class="sx-slot" data-part="{p}" aria-label="{lab}" style="left:{x}%;top:{y}%">?</button>' for p, e, n, lab, x, y in PARTS)
     tray = ''.join(f'<li><button type="button" class="sx-part edu-bubble glass" data-tint="space" data-part="{p}" data-em="{e}" data-name="{n}" aria-pressed="false"><span class="em" aria-hidden="true">{e}</span>{n}</button></li>' for p, e, n, lab, x, y in PARTS)
     # data-name must be translated too: use title attribute trick -> keep visible text; JS reads data-name. Translations: handled in post step.
@@ -185,23 +202,36 @@ def sat_explorer():
                   f'<p data-level="1">{L[0]}</p><p data-level="2">{L[1]}</p><p data-level="3">{L[2]}{extra}</p></article>')
     msgs = ''.join(f'<span hidden data-msg="{k}">{v}</span>' for k, v in [('wrong', 'Try another spot!'), ('right', 'Nice!'), ('done', 'You built a satellite! Read about each part below.'),
                     ('pick', 'Now tap its spot on the satellite:'), ('first', 'Pick a part first.'), ('drop', 'Drop it on a dashed spot.'), ('reset', 'Satellite cleared. Ready to build again!')])
+    sxs = ''.join(f'<span hidden data-s="{k}">{v}</span>' for k, v in SX_S)
     lv = lambda v, lab, chk='': f'<label><input type="radio" name="sx-level" value="{v}"{chk}><span class="edu-bubble glass" data-tint="space">{lab}</span></label>'
     src = lambda u, t: f'<li><a href="{u}" rel="noopener">{t}</a></li>'
     main = ('<div class="edu-wrap">'
             '<p class="edu-lead">Build a satellite! Drag each part onto its spot (or tap a part, then tap its spot). Then pick a level to go from a K-3 wow to university detail.</p>'
             '<fieldset class="sx-levels"><legend>Choose your level</legend>' + lv(1, 'Wow (K-3)', ' checked') + lv(2, 'Explorer (grades 4-12)') + lv(3, 'University') + '</fieldset>'
-            f'<div id="sx">{msgs}<div class="sx-lab"><div class="sx-stage" role="group" aria-label="Satellite drawing with spots for each part">{svg}{slots}</div>'
+            f'<div id="sx">{msgs}{sxs}<div class="sx-lab"><div class="sx-stage" role="group" aria-label="Satellite drawing with spots for each part">{svg}{slots}</div>'
             f'<div><h2 id="sx-tray-h" style="margin-top:0">Satellite parts</h2><ul class="sx-tray" aria-labelledby="sx-tray-h">{tray}</ul>'
             '<p style="margin-top:.8rem"><button type="button" id="sx-auto" class="edu-bubble glass" data-tint="sun"><span class="em" aria-hidden="true">🪄</span>Build it for me</button> '
             '<button type="button" id="sx-reset" class="edu-bubble glass" data-tint="earth"><span class="em" aria-hidden="true">🔄</span>Start over</button></p></div></div>'
             '<p class="sx-status" id="sx-status" role="status" aria-live="polite"></p></div>'
             '<div id="sx-body" class="lvl-1">'
+            '<section class="sx-show" id="sx-mission" aria-labelledby="sx-mission-h"><h2 id="sx-mission-h">Mission control: launch your satellite</h2>'
+            '<p data-level="1">Press Launch and watch your satellite ride a rocket into space!</p>'
+            '<p data-level="2">Watch the launch, then compare three orbit heights. Low Earth orbit (LEO) laps Earth in about an hour and a half, GPS satellites in medium Earth orbit (MEO) take about 12 hours, and geostationary (GEO) satellites take a whole day, so they seem to hover over one spot.</p>'
+            '<p data-level="3">Move the altitude slider. The page computes the circular orbital speed v = √(μ/a) and the period from Kepler’s third law, T = 2π√(a³/μ), live, with μ = 398,600 km³/s² and Earth radius 6,371 km. The green arrow is the velocity, always along the orbit; the red arrow is gravity, always toward Earth’s center.</p>'
+            '<div class="sx-screen"><canvas id="sx-cv-mission" role="img" aria-label="Animation: a rocket launches your satellite, drops its first stage, opens its nose cone, and puts the satellite into orbit around a turning Earth with day and night sides"></canvas>'
+            '<p class="sx-cap" id="sx-cap" role="status" aria-live="polite"></p></div><p class="sx-credit">Created by SI and Biological SI Partner</p>'
+            '<div class="sx-ctrl"><button type="button" id="sx-launch" class="edu-bubble glass" data-tint="sun"><span class="em" aria-hidden="true">🚀</span>Launch!</button> '
+            '<button type="button" id="sx-pause" class="edu-bubble glass" data-tint="space" aria-pressed="false"><span class="em" aria-hidden="true">⏸️</span><span class="lab">Pause animations</span></button></div>'
+            '<p data-level="3" class="sx-alt"><label for="sx-alt">Altitude (km)</label> <input type="range" id="sx-alt" min="200" max="36000" step="100" value="400"> <output id="sx-readout" for="sx-alt" aria-live="polite"></output></p>'
+            '<p data-level="3">Link budget note: received power falls with the square of distance, so a GEO link (about 36,000 km) is roughly 8,000 times weaker than a 400 km LEO link at the same power, antennas and frequency. That is why GEO satellites use big dishes and high power.</p>'
+            '</section>'
             f'<h2>What each part does</h2><div class="sx-info">{cards}</div>'
             '<section class="sx-deep" id="laser"><h2>Laser communication: talking with light</h2>'
             '<p data-level="1">Some satellites send messages with invisible laser light instead of radio. It is like sending a whole library home in minutes!</p>'
             '<p data-level="2">Laser (optical) links pack information into infrared light. The beam is very narrow, so it can carry far more data than radio, but the satellite must point it very precisely, and clouds can block it.</p>'
             '<p data-level="3">Laser (optical) links pack information into infrared light. The beam is very narrow, so it can carry far more data than radio, but the satellite must point it very precisely, and clouds can block it.</p>'
             '<p>In 2023, NASA’s TBIRD CubeSat sent 4.8 terabytes of error-free data to the ground in under five minutes at 200 gigabits per second, the fastest satellite-to-ground data link on record.</p>'
+            '<div class="sx-screen sx-wide"><canvas id="sx-cv-comm" role="img" aria-label="Animation comparing radio and laser links: the radio beam is wide and sends a few data packets, the narrow laser beam sends many more; a cloud can block the laser, so the satellite hands off to another ground station"></canvas></div><p class="sx-credit">Created by SI and Biological SI Partner</p>'
             '<p data-level="3">Optical terminals need extremely precise pointing, ground stations at clear-sky sites, and error-recovery protocols (TBIRD used automatic repeat request) to survive atmospheric fading.</p>'
             '<p><b>How it helps people and nature: faster downlinks get flood, fire and forest data to the people who need it sooner.</b></p></section>'
             '<section class="sx-deep" id="orbit-compute"><h2>Computing in orbit (SI in space)</h2>'
@@ -209,6 +239,7 @@ def sat_explorer():
             '<p>In 2020, ESA’s Φ-sat-1 became the first European satellite to run a deep-learning SI model on board. It sorted cloudy images from clear ones, so only useful pictures were sent to the ground.</p>'
             '<p>On the ground, many data centers use water for cooling. Lawrence Berkeley National Laboratory estimated that US data centers directly consumed about 66 billion liters of water in 2023 (about 17 billion gallons), up from about 21 billion liters in 2014.</p>'
             '<p>In orbit, waste heat is radiated into space, so a data center there would not need cooling water. The EU-funded ASCEND study, led by Thales Alenia Space (2024), found space data centers could be feasible, but would only cut carbon emissions if launchers became about ten times less emitting over their whole life cycle.</p>'
+            '<div class="sx-screen sx-wide"><canvas id="sx-cv-ai" role="img" aria-label="Animation: an SI chip on the satellite deletes cloudy pictures and sends clear ones home. Below, two water drops compare US data center water use, about 21 billion liters in 2014 and about 66 billion liters in 2023, next to a space radiator that sheds heat without cooling water"></canvas></div><p class="sx-credit">Created by SI and Biological SI Partner</p>'
             '<p>Early flights are already testing chips in orbit. See our <a href="Orbital_Data_Centers.html">Orbital Data Centers</a> page.</p>'
             '<p data-level="3">Trade-offs to weigh: radiation hardening, radiator mass and area, launch emissions, debris risk, repair, and the delay of sending results down. Honest comparisons count the whole life cycle, not just cooling water.</p>'
             '<p><b>How it helps people and nature: less water drawn from rivers and lakes for cooling, and quicker answers from satellite data.</b></p></section>'

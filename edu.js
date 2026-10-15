@@ -105,6 +105,7 @@
       var card = document.getElementById('part-' + p.dataset.part); if (card) { card.classList.remove('locked'); card.classList.add('current'); }
       var left = slots.filter(function (x) { return !x.classList.contains('done'); }).length;
       say(left ? (msg.right || 'Nice!') + ' ' + p.dataset.name + ' ✓' : (msg.done || 'You built a satellite!'));
+      try { sx.dispatchEvent(new CustomEvent('sx:dock', { detail: { part: p.dataset.part, slot: s, left: left } })); } catch (_) {}
       return true;
     }
     function select(p) { if (p.classList.contains('used')) return; sel = p; parts.forEach(function (x) { x.setAttribute('aria-pressed', x === p ? 'true' : 'false'); }); say((msg.pick || 'Now tap its spot on the satellite:') + ' ' + p.dataset.name); }
@@ -148,6 +149,7 @@
       parts.forEach(function (p) { p.classList.remove('used'); p.setAttribute('aria-pressed', 'false'); });
       [].forEach.call(document.querySelectorAll('.sx-card'), function (c) { c.classList.add('locked'); c.classList.remove('current'); });
       sel = null; say(msg.reset || '');
+      try { sx.dispatchEvent(new CustomEvent('sx:reset')); } catch (_) {}
     });
     [].forEach.call(document.querySelectorAll('.sx-card'), function (c) { c.classList.add('locked'); });
   }

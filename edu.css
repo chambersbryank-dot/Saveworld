@@ -116,3 +116,38 @@ body.toc-home nav.edu-links, body.toc-sub nav.edu-links, nav.edu-links, nav.edu-
 /* Dark mode: keep hamburger lines visible after scrolling */
 html.dark nav.scrolled .nav-toggle span { background: #fff !important; }
 html.dark nav.scrolled .nav-toggle { border-color: rgba(255,255,255,0.55) !important; }
+/* ---- Satellite Explorer animations (v=20261014k) ---- */
+.sx-stage{box-shadow:inset 0 0 60px rgb(120 90 255/.25),0 12px 34px rgb(0 0 0/.35)}
+.sx-stage canvas.sx-stars,.sx-stage canvas.sx-fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.sx-stage canvas.sx-fx{z-index:3}
+.sx-stage svg{transition:transform .2s ease-out;will-change:transform}
+.sx-stage .sxp{opacity:.28;filter:grayscale(.8);transition:opacity .5s,filter .5s}
+.sx-stage .sxp.on{opacity:1;filter:drop-shadow(0 0 1.6px rgb(190 170 255/.95)) drop-shadow(0 0 4px rgb(120 220 255/.6))}
+.sx-stage .sx-flame{opacity:0}
+.sx-stage.sx-complete .sx-flame{opacity:1;animation:sx-flick .18s infinite alternate}
+.sx-stage.sx-complete{animation:sx-glow 2.4s ease-in-out infinite}
+.sx-slot{z-index:2;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.sx-slot:not(.done){animation:sx-breathe 2.2s ease-in-out infinite}
+.sx-pop{animation:sx-pop .5s cubic-bezier(.2,1.6,.4,1)!important}
+#sx-launch.sx-ready{animation:sx-ready 1.2s ease-in-out infinite}
+@keyframes sx-pop{0%{transform:translate(-50%,-50%) scale(.6)}60%{transform:translate(-50%,-50%) scale(1.18)}100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes sx-breathe{50%{border-color:#ffd54a;box-shadow:0 0 14px rgb(255 213 74/.45)}}
+@keyframes sx-flick{to{transform:scaleY(1.25);transform-origin:79px 80px}}
+@keyframes sx-glow{50%{box-shadow:inset 0 0 90px rgb(255 213 74/.28),0 12px 34px rgb(0 0 0/.35)}}
+@keyframes sx-ready{50%{box-shadow:0 0 0 6px rgb(255 213 74/.55),0 0 24px rgb(255 160 60/.8)}}
+.sx-show{margin:1.4rem 0;border-radius:22px;padding:1rem 1.1rem;background:linear-gradient(160deg,#0e1440,#1d0f4a);color:#eef1ff;border:1px solid rgb(190 170 255/.35)}
+.sx-show h2{margin-top:.2rem;color:#fff!important}
+.sx-show p{line-height:1.6}
+.sx-screen{position:relative;border-radius:18px;overflow:hidden;background:#030619;box-shadow:0 10px 30px rgb(0 0 0/.4);margin:.6rem 0}
+.sx-screen canvas{display:block;width:100%;aspect-ratio:16/10}
+.sx-screen.sx-wide canvas{aspect-ratio:16/9}
+.sx-deep .sx-screen{margin:.9rem 0}
+.sx-cap{margin:0;padding:.55rem .9rem;background:rgb(0 0 0/.55);color:#fff;font-weight:700;min-height:2.6em}
+.sx-ctrl{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+.sx-alt{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+.sx-alt input{flex:1 1 220px;min-height:44px;accent-color:#b9f6ca}
+.sx-alt output{font-weight:700;color:#b9f6ca}
+.sx-show :focus-visible{outline:3px solid #ffd54a;outline-offset:3px}
+@media (max-width:600px){.sx-screen canvas{aspect-ratio:4/5}.sx-screen.sx-wide canvas{aspect-ratio:1/1}}
+@media (prefers-reduced-motion:reduce){.sx-stage .sxp,.sx-slot,.sx-pop,#sx-launch.sx-ready,.sx-stage.sx-complete,.sx-stage .sx-flame{animation:none!important;transition:none!important}.sx-stage svg{transform:none!important}}
+.sx-credit{margin:.2rem 0 .8rem;font-size:.85rem;font-weight:700;opacity:.9}
