@@ -113,7 +113,7 @@ def mini(card):
 
 def home(l, n, hubs):
     t = T[l]; p = d(l) + 'index.html'; s = rd(p); pre = '' if l == 'en' else '../'
-    imp = [n, len(hubs), 4, 3]
+    imp = [n, len(hubs), len(LANGS), 3]  # EN+FR+ES+AR+IT
     strip = '<section class="impact-strip" aria-label="Saving Planets">' + ''.join(
         f'<div class="imp-item"><span class="imp-num">{v}</span><span class="imp-label">{lab}</span></div>' for v, lab in zip(imp, t['imp'])) + '</section>'
     s = block(s, 'IMPACT', strip, r'<!-- DIFF:START -->')

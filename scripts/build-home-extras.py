@@ -48,7 +48,7 @@ for page, (slug, heading) in VIDEOS.items():
   open(page, 'w', encoding='utf-8').write(s)
 
 # ---- About: featured 9:16 ad on top, older channel intro lower on the page ----
-AD_CAP = 'A 70-second tour: 120 real solutions, free lesson plans, the Kids Planet Map, the 3D Satellite Explorer, search, Amazing Facts, Myth vs Fact, live launches and four languages.'  # Oct 14: v3 (real site footage + NASA B-roll)
+AD_CAP = 'A 70-second tour: 120 real solutions, free lesson plans, the Kids Planet Map, the 3D Satellite Explorer, search, Amazing Facts, Myth vs Fact, live launches and five languages.'  # Oct 14: v3 (real site footage + NASA B-roll)
 s = open('About.html', encoding='utf-8').read()
 s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
