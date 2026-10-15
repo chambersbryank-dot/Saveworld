@@ -10,9 +10,9 @@
     if (typeof window.gtag === 'function') gtag('consent', 'update', { analytics_storage: 'granted' });
   }
   function banner() {
-    var css = '.sp-consent{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999;width:calc(100% - 24px);max-width:640px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 16px;background:#0b1f33;color:#e8eef5;border:1px solid rgba(0,156,222,0.45);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,0.45);font:500 0.875rem/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;min-height:68px}' +
+    var css = '.sp-consent{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999;width:calc(100% - 24px);max-width:640px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 16px;background:#0b1f33;color:#e8eef5;border:1px solid rgba(0,156,222,0.45);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,0.45);font:500 0.875rem/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:68px}' +
       '.sp-consent p{margin:0;flex:1 1 260px}.sp-consent a{color:#8fd3ff}.sp-consent-btns{display:flex;gap:8px;margin-left:auto}.sp-consent[dir=rtl] .sp-consent-btns{margin-left:0;margin-right:auto}' +
-      '.sp-consent button{font:600 0.9rem system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;min-height:44px;min-width:88px;padding:10px 18px;border-radius:6px;cursor:pointer;border:1px solid #009cde}' +
+      '.sp-consent button{font:600 0.9rem system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:44px;min-width:88px;padding:10px 18px;border-radius:6px;cursor:pointer;border:1px solid #009cde}' +
       '.sp-consent .sp-accept{background:#009cde;color:#fff}.sp-consent .sp-decline{background:transparent;color:#e8eef5}' +
       '.sp-consent button:focus-visible{outline:2px solid #8fd3ff;outline-offset:2px}' +
       '@media (max-width:480px){.sp-consent{bottom:8px;padding:10px 12px;font-size:0.8rem}.sp-consent-btns{width:100%}.sp-consent button{flex:1}}';
