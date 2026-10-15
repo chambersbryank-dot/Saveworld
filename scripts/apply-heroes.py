@@ -2,7 +2,7 @@
 """Themed page heroes (standing rule, Oct 14 2026): every page hero depicts the page's main theme.
 Idempotent post-process for EN/fr/es/ar. Images live in assets/hero/<key>-{800,1600}.{webp,jpg}; CSS in styles.css."""
 import re, os
-MAP = {'Kids_Map': ('kids', 'NASA EPIC'), 'Satellite_Explorer': ('satx', 'NASA/JPL-Caltech'), 'Lesson_Builder': ('lesson', 'USFWS'),
+MAP = {'Kids_Map': ('kids', 'NASA EPIC'), 'World_Map': ('kids', 'NASA EPIC'), 'Satellite_Explorer': ('satx', 'NASA/JPL-Caltech'), 'Lesson_Builder': ('lesson', 'USFWS'),
        'Teachers': ('teach', 'USFWS'), 'About': ('about', 'NASA'), 'Contact': ('about', 'NASA'), 'Press': ('about', 'NASA'),
        'Community': ('help', 'NPS'), 'Find_a_Cleanup': ('help', 'NPS'), 'Ways_to_Help': ('help', 'NPS'),
        'Glossary': ('learn', 'NASA'), 'Myth_vs_Fact': ('learn', 'NASA'), 'Sitemap': ('learn', 'NASA'), '404': ('learn', 'NASA'),

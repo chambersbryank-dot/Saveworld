@@ -1,0 +1,1327 @@
+{
+ "_about": "Map data for World_Map.html. One entry per solution page. status: active|upcoming. pins: real places named on the solution page (basis=page), launch site named on the page (basis=launch), or org headquarters when the page names no single site (basis=hq). strip: orbit = also listed in the From Orbit strip; world = worldwide, no single place (listed in the Worldwide strip). New solution? Add an entry here; build-map.py warns about any solution without one.",
+ "solutions": {
+  "4ocean.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 26.36,
+     "lng": -80.08,
+     "label": "Boca Raton, Florida (HQ)",
+     "basis": "hq"
+    },
+    {
+     "lat": -6.2,
+     "lng": 106.85,
+     "label": "Indonesia (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 14.63,
+     "lng": -90.51,
+     "label": "Guatemala (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 18.49,
+     "lng": -69.93,
+     "label": "Dominican Republic (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "ALOS-4.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Launched from Tanegashima, Japan",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Aditya_L1.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Aeolus.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.88,
+     "lng": -87.63,
+     "label": "Chicago, Illinois (HQ, Lake Michigan)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Amazon_Rainy_Season.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -10.0,
+     "lng": -60.0,
+     "label": "Southern Amazon",
+     "basis": "page"
+    }
+   ]
+  },
+  "American_Rivers.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.9,
+     "lng": -77.04,
+     "label": "Washington, DC (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Artemis_II.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 28.627,
+     "lng": -80.621,
+     "label": "Kennedy Space Center, Florida",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Astroscale.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 35.68,
+     "lng": 139.76,
+     "label": "Tokyo, Japan (HQ)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Atmospheric_Drag.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Beavers_River_Engineers.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 44.72,
+     "lng": -120.22,
+     "label": "Bridge Creek, Central Oregon",
+     "basis": "page"
+    }
+   ]
+  },
+  "BepiColombo.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Billion_Oyster_Project.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 40.689,
+     "lng": -74.016,
+     "label": "New York Harbor",
+     "basis": "page"
+    }
+   ]
+  },
+  "Biomass.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "CO2M.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Carruthers.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Clean_Up_the_Lake.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 39.09,
+     "lng": -120.04,
+     "label": "Lake Tahoe",
+     "basis": "page"
+    },
+    {
+     "lat": 37.63,
+     "lng": -118.99,
+     "label": "Mammoth Lakes Basin",
+     "basis": "page"
+    },
+    {
+     "lat": 39.32,
+     "lng": -120.27,
+     "label": "Donner Lake",
+     "basis": "page"
+    }
+   ]
+  },
+  "ClearSpace.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 46.52,
+     "lng": 6.63,
+     "label": "Lausanne, Switzerland (HQ)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Comet_Interceptor.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Coral_Gardeners.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -17.53,
+     "lng": -149.83,
+     "label": "Moorea, French Polynesia",
+     "basis": "page"
+    },
+    {
+     "lat": -17.71,
+     "lng": 178.07,
+     "label": "Fiji (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 9.5,
+     "lng": 99.9,
+     "label": "Thailand (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Coral_IVF.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -18.29,
+     "lng": 147.7,
+     "label": "Great Barrier Reef, Australia",
+     "basis": "page"
+    }
+   ]
+  },
+  "Coral_Restoration_Foundation.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 25.09,
+     "lng": -80.44,
+     "label": "Florida Keys",
+     "basis": "page"
+    }
+   ]
+  },
+  "DSCOVR_EPIC.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "EOS-06.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "ESCAPADE.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "EarthCARE.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.63,
+     "lng": -120.61,
+     "label": "Launched from Vandenberg, California",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Eden_People_Planet.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -7.0,
+     "lng": 36.6,
+     "label": "Rubeho Mountains, Tanzania",
+     "basis": "page"
+    }
+   ]
+  },
+  "Elwha_River_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.1,
+     "lng": -123.56,
+     "label": "Elwha River, Washington",
+     "basis": "page"
+    }
+   ]
+  },
+  "EnVision.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Europa_Clipper.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "ExoMars_Rosalind_Franklin.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "FLEX.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.24,
+     "lng": -52.77,
+     "label": "Launched from Europe's Spaceport, French Guiana",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "FireSat.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -32.25,
+     "lng": 148.6,
+     "label": "Dubbo, Australia (first images)",
+     "basis": "page"
+    },
+    {
+     "lat": 41.15,
+     "lng": -8.61,
+     "label": "Porto District, Portugal (first images)",
+     "basis": "page"
+    },
+    {
+     "lat": 43.9,
+     "lng": -117.0,
+     "label": "Oregon–Idaho border (Big Grass Fire)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "FreshWater_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 51.75,
+     "lng": -1.26,
+     "label": "Oxford, UK (Earthwatch Europe HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "GOES-19.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "GOSAT-GW.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Launched from Tanegashima, Japan",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "GRACE-FO.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Global_Fishing_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.9,
+     "lng": -77.04,
+     "label": "Washington, DC (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Global_Forest_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.9,
+     "lng": -77.04,
+     "label": "Washington, DC (WRI HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Globe_at_Night.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 32.23,
+     "lng": -110.95,
+     "label": "Tucson, Arizona (NSF NOIRLab HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Great_Bubble_Barrier.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 52.385,
+     "lng": 4.89,
+     "label": "Westerdok, Amsterdam",
+     "basis": "page"
+    },
+    {
+     "lat": 52.2,
+     "lng": 4.4,
+     "label": "Katwijk, Netherlands",
+     "basis": "page"
+    },
+    {
+     "lat": 53.17,
+     "lng": 5.42,
+     "label": "Harlingen, Netherlands",
+     "basis": "page"
+    },
+    {
+     "lat": 41.35,
+     "lng": -8.75,
+     "label": "Vila do Conde, Portugal",
+     "basis": "page"
+    }
+   ]
+  },
+  "Great_Green_Wall.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 14.7,
+     "lng": -17.4,
+     "label": "Sahel – Senegal (western end)",
+     "basis": "page"
+    },
+    {
+     "lat": 13.5,
+     "lng": 2.1,
+     "label": "Sahel – Niger",
+     "basis": "page"
+    },
+    {
+     "lat": 11.6,
+     "lng": 43.1,
+     "label": "Sahel – Djibouti (eastern end)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Great_Lakes_Plastic_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 47.7,
+     "lng": -87.5,
+     "label": "Lake Superior",
+     "basis": "page"
+    },
+    {
+     "lat": 43.65,
+     "lng": -79.38,
+     "label": "Toronto, Lake Ontario",
+     "basis": "page"
+    },
+    {
+     "lat": 45.5,
+     "lng": -73.55,
+     "label": "St. Lawrence River",
+     "basis": "page"
+    }
+   ]
+  },
+  "Hayabusa2_Torifune.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Healthy_Seas.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 37.9,
+     "lng": 23.7,
+     "label": "Greece (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 52.37,
+     "lng": 4.9,
+     "label": "Netherlands (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 41.9,
+     "lng": 12.5,
+     "label": "Italy (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 40.4,
+     "lng": -3.7,
+     "label": "Spain (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 54.4,
+     "lng": 18.6,
+     "label": "Poland (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 54.3,
+     "lng": 10.1,
+     "label": "Germany (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Hera.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "ICESat-2.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.63,
+     "lng": -120.61,
+     "label": "Launched from Vandenberg, California",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "IMAP.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "ISS_Water_Recovery.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Juice.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Jupiter.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Justdiggit.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -1.29,
+     "lng": 36.82,
+     "label": "Kenya (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": -6.16,
+     "lng": 35.75,
+     "label": "Tanzania (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Kelp_Forests.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Klamath_River_Dam_Removal.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.95,
+     "lng": -122.4,
+     "label": "Klamath River, Oregon–California",
+     "basis": "page"
+    }
+   ]
+  },
+  "Lake_Erie_Algal_Bloom_Forecast.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.7,
+     "lng": -83.45,
+     "label": "Maumee Bay, Toledo, Ohio",
+     "basis": "page"
+    }
+   ]
+  },
+  "Lake_Plastic_Recovery.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Landsat_9.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "LeoLabs.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 37.74,
+     "lng": -25.67,
+     "label": "Azores radar (archipelago-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 10.6,
+     "lng": -85.4,
+     "label": "Costa Rica radar (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": -45.0,
+     "lng": 170.0,
+     "label": "New Zealand radar (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 31.0,
+     "lng": -100.0,
+     "label": "Texas radar (state-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 34.0,
+     "lng": -111.7,
+     "label": "Arizona UHF radar (state-level)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Life_Terra.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 52.37,
+     "lng": 4.9,
+     "label": "Netherlands",
+     "basis": "page"
+    },
+    {
+     "lat": 40.4,
+     "lng": -3.7,
+     "label": "Spain",
+     "basis": "page"
+    }
+   ]
+  },
+  "LignoSat.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Living_Lakes.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 51.0,
+     "lng": 100.5,
+     "label": "Lake Hovsgol, Mongolia",
+     "basis": "page"
+    },
+    {
+     "lat": 47.74,
+     "lng": 8.97,
+     "label": "Radolfzell, Germany (Global Nature Fund HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Living_Lands_and_Waters.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.51,
+     "lng": -90.44,
+     "label": "Mississippi River, East Moline, Illinois (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Lucy.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "MMX.html": {
+   "status": "upcoming",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Launching from Tanegashima, Japan",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Mangroves.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 25.3,
+     "lng": -80.9,
+     "label": "Florida mangroves (Everglades)",
+     "basis": "page"
+    }
+   ]
+  },
+  "MetOp-SG-A1_Sentinel-5A.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.24,
+     "lng": -52.77,
+     "label": "Launched from Kourou, French Guiana",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Mission_Blue_Hope_Spots.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Moon_Steadies_Earth.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Mote_Marine_Laboratory.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 27.33,
+     "lng": -82.58,
+     "label": "Sarasota, Florida (HQ)",
+     "basis": "hq"
+    },
+    {
+     "lat": 24.66,
+     "lng": -81.45,
+     "label": "Florida's Coral Reef, Florida Keys",
+     "basis": "page"
+    }
+   ]
+  },
+  "Mr_Trash_Wheel.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 39.285,
+     "lng": -76.607,
+     "label": "Baltimore Inner Harbor, Maryland",
+     "basis": "page"
+    }
+   ]
+  },
+  "NEO_Surveyor.html": {
+   "status": "upcoming",
+   "pins": [
+    {
+     "lat": 28.49,
+     "lng": -80.58,
+     "label": "Launching on Falcon 9 from Florida",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "NISAR.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 13.72,
+     "lng": 80.23,
+     "label": "Launched from Sriharikota, India",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Nancy_Grace_Roman.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "OSIRIS-APEX.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Ocean_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 32.0,
+     "lng": -145.0,
+     "label": "Great Pacific Garbage Patch",
+     "basis": "page"
+    },
+    {
+     "lat": 51.92,
+     "lng": 4.48,
+     "label": "Rotterdam, Netherlands (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Ocean_Voyages_Institute.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 35.0,
+     "lng": -140.0,
+     "label": "North Pacific Gyre",
+     "basis": "page"
+    }
+   ]
+  },
+  "One_Tree_Planted.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 44.38,
+     "lng": -73.23,
+     "label": "Shelburne, Vermont (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Orbital_Data_Centers.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "PACE.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 28.49,
+     "lng": -80.58,
+     "label": "Launched from Cape Canaveral, Florida",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "PRELUDE.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "PUNCH.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Phytoplankton.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Plastic_Bank.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -6.2,
+     "lng": 106.85,
+     "label": "Indonesia (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 14.6,
+     "lng": 121.0,
+     "label": "Philippines (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": -15.8,
+     "lng": -47.9,
+     "label": "Brazil (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 30.04,
+     "lng": 31.24,
+     "label": "Egypt (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 13.75,
+     "lng": 100.5,
+     "label": "Thailand (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 4.05,
+     "lng": 9.7,
+     "label": "Cameroon (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Plato.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Posidonia_Meadows.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 39.57,
+     "lng": 2.65,
+     "label": "Balearic Islands, Spain",
+     "basis": "page"
+    }
+   ]
+  },
+  "Project_Seagrass.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 51.5,
+     "lng": -3.58,
+     "label": "Bridgend, Wales (HQ)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Psyche.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Rainforest_Connection.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -3.1,
+     "lng": -60.0,
+     "label": "Brazil (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 4.6,
+     "lng": -74.1,
+     "label": "Colombia (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": -0.5,
+     "lng": 101.4,
+     "label": "Indonesia (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 52.7,
+     "lng": 23.9,
+     "label": "Poland (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Ramses.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Restoring_the_Lake_Depths.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.94,
+     "lng": -119.98,
+     "label": "South shore, Lake Tahoe",
+     "basis": "page"
+    }
+   ]
+  },
+  "Rewilding_Europe.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 45.2,
+     "lng": 22.3,
+     "label": "Southern Carpathians, Romania",
+     "basis": "page"
+    },
+    {
+     "lat": 41.9,
+     "lng": 13.8,
+     "label": "Central Apennines, Italy",
+     "basis": "page"
+    }
+   ]
+  },
+  "River_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -6.95,
+     "lng": 107.6,
+     "label": "Citarum River, Indonesia",
+     "basis": "page"
+    }
+   ]
+  },
+  "SARSAT.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "SOLAR_1.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "SPHEREx.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "SWOT.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Saharan_Dust_Amazon.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 17.0,
+     "lng": 17.8,
+     "label": "Bodélé Depression, Chad",
+     "basis": "page"
+    },
+    {
+     "lat": -3.0,
+     "lng": -60.0,
+     "label": "Amazon basin",
+     "basis": "page"
+    }
+   ]
+  },
+  "Salt_Marshes.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "SeaTrees.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -4.0,
+     "lng": 39.6,
+     "label": "Kenya mangroves (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 19.4,
+     "lng": -99.1,
+     "label": "Mexico mangroves (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 9.9,
+     "lng": -84.1,
+     "label": "Costa Rica coral (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": -17.7,
+     "lng": 178.0,
+     "label": "Fiji coral (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 38.7,
+     "lng": -9.1,
+     "label": "Portugal kelp (country-level)",
+     "basis": "page"
+    },
+    {
+     "lat": 34.0,
+     "lng": -118.5,
+     "label": "California kelp (state-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Seabin.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -33.85,
+     "lng": 151.21,
+     "label": "Sydney Harbour, Australia",
+     "basis": "page"
+    }
+   ]
+  },
+  "Seagrass.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Sentinel-1.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Sentinel-2C.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.24,
+     "lng": -52.77,
+     "label": "Launched from French Guiana",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Sentinel-4.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Sentinel-6B.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.63,
+     "lng": -120.61,
+     "label": "Launched from Vandenberg, California",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Solar_Orbiter.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "SpaceLogistics.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Starfish_Otter.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Sungai_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -8.65,
+     "lng": 115.22,
+     "label": "Bali, Indonesia",
+     "basis": "page"
+    },
+    {
+     "lat": -7.0,
+     "lng": 110.4,
+     "label": "Java, Indonesia",
+     "basis": "page"
+    }
+   ]
+  },
+  "TEMPO.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "TRACERS.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Tanager-1.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 24.86,
+     "lng": 67.0,
+     "label": "First published plume: Karachi, Pakistan",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Terraformation.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 20.23,
+     "lng": -155.8,
+     "label": "'Iole, North Kohala, Hawaii",
+     "basis": "page"
+    }
+   ]
+  },
+  "Three_Shields.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Three_Trees.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Titan.html": {
+   "status": "upcoming",
+   "pins": [
+    {
+     "lat": 28.57,
+     "lng": -80.65,
+     "label": "Dragonfly launches from Kennedy Space Center",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Trees_for_the_Future.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.99,
+     "lng": -77.03,
+     "label": "Silver Spring, Maryland (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Tsunami_Early_Warning.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "US_Deorbit_Vehicle.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Veggie_Space_Garden.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Vigil.html": {
+   "status": "upcoming",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Waterkeeper_Alliance.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 40.71,
+     "lng": -74.01,
+     "label": "New York (HQ)",
+     "basis": "hq"
+    },
+    {
+     "lat": 41.7,
+     "lng": -73.95,
+     "label": "Hudson River (where the movement began)",
+     "basis": "page"
+    },
+    {
+     "lat": 20.46,
+     "lng": 85.88,
+     "label": "Mahanadi River, India",
+     "basis": "page"
+    }
+   ]
+  },
+  "Webb_2024_YR4.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Whales_Ocean_Gardeners.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
+  "Zero_Debris_Charter.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  }
+ }
+}
