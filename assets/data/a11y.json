@@ -425,6 +425,116 @@
      }
     ]
    ]
+  },
+  "savingplanets-about-v3": {
+   "visual": {
+    "en": "A rocket launch and Earth from orbit (NASA footage) with the words \"Solutions, minus the doom\"; SI-generated scenes of Earth, ocean, forest and rivers; NASA footage of the Space Station, the Amazon, a reef island, the Sun and satellites; real screen recordings of the Saving Planets site (Solutions, CO2M, Mission Blue Hope Spots, Ways to Help, the Lesson Plan Builder, the Kids Planet Map, the 3D Satellite Explorer, Search, Amazing Facts, the Live Launch Tracker, the homepage in four languages and Myth vs Fact); and a sprouting Earth with www.savingplanets.com.",
+    "fr": "Un lancement de fusée et la Terre vue de l'orbite (images NASA) avec les mots « Des solutions, sans le catastrophisme » ; des scènes générées par SI de la Terre, de l'océan, de la forêt et des rivières ; des images NASA de la Station spatiale, de l'Amazonie, d'une île récifale, du Soleil et de satellites ; de vraies captures d'écran du site Saving Planets (Solutions, CO2M, Hope Spots de Mission Blue, Comment aider, le générateur de plans de cours, la carte de la planète pour enfants, l'explorateur de satellites 3D, la recherche, les Faits étonnants, le suivi des lancements en direct, la page d'accueil en quatre langues et Mythe ou réalité) ; et une Terre qui germe avec www.savingplanets.com.",
+    "es": "Un lanzamiento de cohete y la Tierra desde la órbita (imágenes de la NASA) con las palabras «Soluciones, sin catastrofismo»; escenas generadas por SI de la Tierra, el océano, el bosque y los ríos; imágenes de la NASA de la Estación Espacial, la Amazonía, una isla de arrecife, el Sol y satélites; grabaciones reales de pantalla del sitio Saving Planets (Soluciones, CO2M, Hope Spots de Mission Blue, Formas de ayudar, el creador de planes de clase, el Mapa del Planeta para niños, el Explorador de satélites 3D, la búsqueda, los Datos asombrosos, el rastreador de lanzamientos en vivo, la portada en cuatro idiomas y Mito o realidad); y una Tierra que brota con www.savingplanets.com.",
+    "ar": "إطلاق صاروخ والأرض من المدار (لقطات ناسا) مع عبارة «حلول بلا تهويل»؛ مشاهد مولّدة بالذكاء الاصطناعي للأرض والمحيط والغابة والأنهار؛ لقطات من ناسا لمحطة الفضاء والأمازون وجزيرة مرجانية والشمس والأقمار الصناعية؛ تسجيلات شاشة حقيقية لموقع Saving Planets (الحلول، CO2M، مواقع الأمل من Mission Blue، طرق المساعدة، منشئ خطط الدروس، خريطة الكوكب للأطفال، مستكشف الأقمار الصناعية ثلاثي الأبعاد، البحث، الحقائق المذهلة، متتبع الإطلاقات المباشر، الصفحة الرئيسية بأربع لغات، وخرافة أم حقيقة)؛ وأرض تنبت منها نبتة مع www.savingplanets.com."
+   },
+   "cues": [
+    [
+     2.68,
+     4.82,
+     {
+      "en": "Our planet faces big problems.",
+      "fr": "Notre planète fait face à de grands problèmes.",
+      "es": "Nuestro planeta enfrenta grandes problemas.",
+      "ar": "يواجه كوكبنا مشكلات كبيرة."
+     }
+    ],
+    [
+     5.42,
+     8.68,
+     {
+      "en": "But for every problem, people are already building solutions.",
+      "fr": "Mais pour chaque problème, des gens construisent déjà des solutions.",
+      "es": "Pero para cada problema, ya hay personas construyendo soluciones.",
+      "ar": "لكن لكل مشكلة، هناك أشخاص يبنون الحلول بالفعل."
+     }
+    ],
+    [
+     9.58,
+     12.02,
+     {
+      "en": "Saving Planets brings them together in one place.",
+      "fr": "Saving Planets les réunit en un seul endroit.",
+      "es": "Saving Planets las reúne en un solo lugar.",
+      "ar": "يجمعها Saving Planets في مكان واحد."
+     }
+    ],
+    [
+     20.98,
+     26.68,
+     {
+      "en": "Explore 120 real solutions across oceans, forests, lakes, rivers, and space.",
+      "fr": "Explorez 120 solutions réelles pour les océans, les forêts, les lacs, les rivières et l'espace.",
+      "es": "Explora 120 soluciones reales para océanos, bosques, lagos, ríos y el espacio.",
+      "ar": "استكشف 120 حلاً حقيقياً للمحيطات والغابات والبحيرات والأنهار والفضاء."
+     }
+    ],
+    [
+     26.9,
+     33.91,
+     {
+      "en": "New this week: satellites that track the carbon we put in the air, and Hope Spots protecting the ocean in 115 countries.",
+      "fr": "Nouveau cette semaine : des satellites qui suivent le carbone que nous rejetons dans l'air, et des Hope Spots qui protègent l'océan dans 115 pays.",
+      "es": "Novedad esta semana: satélites que rastrean el carbono que emitimos al aire y Hope Spots que protegen el océano en 115 países.",
+      "ar": "جديد هذا الأسبوع: أقمار صناعية تتتبع الكربون الذي نطلقه في الهواء، ومواقع الأمل (Hope Spots) التي تحمي المحيط في 115 دولة."
+     }
+    ],
+    [
+     34.22,
+     36.2,
+     {
+      "en": "Every one helps people and nature.",
+      "fr": "Chacune aide les gens et la nature.",
+      "es": "Cada una ayuda a las personas y a la naturaleza.",
+      "ar": "كل منها يساعد الناس والطبيعة."
+     }
+    ],
+    [
+     36.41,
+     43.95,
+     {
+      "en": "Teachers can build free lesson plans in seconds, from kindergarten to university, tagged to NGSS-style standards.",
+      "fr": "Les enseignants peuvent créer des plans de cours gratuits en quelques secondes, de la maternelle à l'université, alignés sur des normes de type NGSS.",
+      "es": "Los docentes pueden crear planes de clase gratuitos en segundos, desde preescolar hasta la universidad, etiquetados con estándares tipo NGSS.",
+      "ar": "يمكن للمعلمين إنشاء خطط دروس مجانية في ثوانٍ، من رياض الأطفال إلى الجامعة، مرتبطة بمعايير على غرار NGSS."
+     }
+    ],
+    [
+     44.65,
+     49.69,
+     {
+      "en": "Kids explore the Planet Map, and students build a satellite piece by piece in 3D.",
+      "fr": "Les enfants explorent la carte de la planète, et les élèves construisent un satellite pièce par pièce en 3D.",
+      "es": "Los niños exploran el Mapa del Planeta y los estudiantes construyen un satélite pieza por pieza en 3D.",
+      "ar": "يستكشف الأطفال خريطة الكوكب، ويبني الطلاب قمراً صناعياً قطعة قطعة بتقنية ثلاثية الأبعاد."
+     }
+    ],
+    [
+     50.91,
+     58.01,
+     {
+      "en": "Search any topic, discover amazing facts, and follow live launches, in English, French, Spanish, and Arabic.",
+      "fr": "Recherchez n'importe quel sujet, découvrez des faits étonnants et suivez les lancements en direct, en anglais, français, espagnol et arabe.",
+      "es": "Busca cualquier tema, descubre datos asombrosos y sigue lanzamientos en vivo, en inglés, francés, español y árabe.",
+      "ar": "ابحث عن أي موضوع، واكتشف حقائق مذهلة، وتابع عمليات الإطلاق مباشرة، بالإنجليزية والفرنسية والإسبانية والعربية."
+     }
+    ],
+    [
+     58.23,
+     60.95,
+     {
+      "en": "Learn it, teach it, and help save our planet.",
+      "fr": "Apprenez-le, enseignez-le et aidez à sauver notre planète.",
+      "es": "Apréndelo, enséñalo y ayuda a salvar nuestro planeta.",
+      "ar": "تعلّمه، وعلّمه، وساعد في إنقاذ كوكبنا."
+     }
+    ]
+   ]
   }
  }
 }
