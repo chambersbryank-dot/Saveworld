@@ -113,3 +113,6 @@ body.kids-map-page main, body.lesson-builder-page main, body.satellite-explorer-
 body.kids-map-page .page-hero, body.lesson-builder-page .page-hero, body.satellite-explorer-page .page-hero { height: auto; min-height: 260px; padding: calc(var(--nav-height, 88px) + 1.6rem) 1.25rem 2rem; box-sizing: border-box; }
 /* The learning-tools strip is a <nav>, so keep it out of the fixed top-bar styling */
 body.toc-home nav.edu-links, body.toc-sub nav.edu-links, nav.edu-links, nav.edu-links.scrolled { position: static !important; top: auto; left: auto; right: auto; background: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: 0 !important; box-shadow: none !important; z-index: auto !important; }
+/* Dark mode: keep hamburger lines visible after scrolling */
+html.dark nav.scrolled .nav-toggle span { background: #fff !important; }
+html.dark nav.scrolled .nav-toggle { border-color: rgba(255,255,255,0.55) !important; }
