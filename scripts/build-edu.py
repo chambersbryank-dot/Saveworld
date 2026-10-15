@@ -7,10 +7,11 @@ import json, os, re, sys, html, hashlib, importlib.util
 from bs4 import BeautifulSoup
 sys.path.insert(0, 'scripts')
 import edu_text as X
+import sx_media as SM
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar']
-CSSV = '20261014k'
+CSSV = '20261014m'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
 esc = lambda s: html.escape(s, quote=True)
@@ -176,7 +177,7 @@ SX_S = [('idle', 'Build your satellite, then press Launch!'), ('built', 'Your sa
  ('radio', 'Radio'), ('laser', 'Laser'), ('handoff', 'Handoff to the next ground station'), ('blocked', 'Cloud blocks the laser'), ('illustrative', 'Illustrative speeds, not to scale'),
  ('chip', 'SI chip'), ('clear', 'Clear: sent home'), ('cloudy', 'Cloudy: deleted'), ('waterh', 'Water used by US data centers (LBNL)'),
  ('w2014', 'about 21 billion L'), ('w2023', 'about 66 billion L'), ('heat', 'In orbit: heat radiates into space'), ('nowater', 'no cooling water'),
- ('pause', 'Pause animations'), ('play', 'Play animations')]
+ ('pause', 'Pause animations'), ('play', 'Play animations')] + SM.S3D
 
 def sat_explorer():
     svg = ('<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><defs>'
@@ -198,8 +199,12 @@ def sat_explorer():
     for p, e, n, lab, x, y in PARTS:
         L = PART_TEXT[p]
         extra = ' <a href="Zero_Debris_Charter.html">Zero Debris Charter</a>.' if p == 'propulsion' else ''
-        cards += (f'<article class="sx-card" id="part-{p}"><h3><span aria-hidden="true">{e}</span> {n}</h3>'
+        cards += (f'<article class="sx-card" id="part-{p}"><h3><span aria-hidden="true">{e}</span> {n}</h3>' + (SM.figure(p) if p in SM.PHOTO else '') +
                   f'<p data-level="1">{L[0]}</p><p data-level="2">{L[1]}</p><p data-level="3">{L[2]}{extra}</p></article>')
+    for p, e, n, L in SM.EXTRA_PARTS:
+        cards += (f'<article class="sx-card" id="part-{p}"><h3><span aria-hidden="true">{e}</span> {n}</h3>' + SM.figure(p) +
+                  f'<p data-level="1">{L[0]}</p><p data-level="2">{L[1]}</p><p data-level="3">{L[2]}</p></article>')
+    cards += f'<article class="sx-card" id="part-launch"><h3><span aria-hidden="true">🔥</span> Launch</h3>' + SM.figure('launch') + '</article>'
     msgs = ''.join(f'<span hidden data-msg="{k}">{v}</span>' for k, v in [('wrong', 'Try another spot!'), ('right', 'Nice!'), ('done', 'You built a satellite! Read about each part below.'),
                     ('pick', 'Now tap its spot on the satellite:'), ('first', 'Pick a part first.'), ('drop', 'Drop it on a dashed spot.'), ('reset', 'Satellite cleared. Ready to build again!')])
     sxs = ''.join(f'<span hidden data-s="{k}">{v}</span>' for k, v in SX_S)
@@ -214,6 +219,7 @@ def sat_explorer():
             '<button type="button" id="sx-reset" class="edu-bubble glass" data-tint="earth"><span class="em" aria-hidden="true">🔄</span>Start over</button></p></div></div>'
             '<p class="sx-status" id="sx-status" role="status" aria-live="polite"></p></div>'
             '<div id="sx-body" class="lvl-1">'
+            + SM.lab3d() +
             '<section class="sx-show" id="sx-mission" aria-labelledby="sx-mission-h"><h2 id="sx-mission-h">Mission control: launch your satellite</h2>'
             '<p data-level="1">Press Launch and watch your satellite ride a rocket into space!</p>'
             '<p data-level="2">Watch the launch, then compare three orbit heights. Low Earth orbit (LEO) laps Earth in about an hour and a half, GPS satellites in medium Earth orbit (MEO) take about 12 hours, and geostationary (GEO) satellites take a whole day, so they seem to hover over one spot.</p>'
@@ -224,6 +230,7 @@ def sat_explorer():
             '<button type="button" id="sx-pause" class="edu-bubble glass" data-tint="space" aria-pressed="false"><span class="em" aria-hidden="true">⏸️</span><span class="lab">Pause animations</span></button></div>'
             '<p data-level="3" class="sx-alt"><label for="sx-alt">Altitude (km)</label> <input type="range" id="sx-alt" min="200" max="36000" step="100" value="400"> <output id="sx-readout" for="sx-alt" aria-live="polite"></output></p>'
             '<p data-level="3">Link budget note: received power falls with the square of distance, so a GEO link (about 36,000 km) is roughly 8,000 times weaker than a 400 km LEO link at the same power, antennas and frequency. That is why GEO satellites use big dishes and high power.</p>'
+            + SM.live_strip() + SM.nasa_plus('Launch') + SM.nasa_plus('Orbit') +
             '</section>'
             f'<h2>What each part does</h2><div class="sx-info">{cards}</div>'
             '<section class="sx-deep" id="laser"><h2>Laser communication: talking with light</h2>'
@@ -233,6 +240,7 @@ def sat_explorer():
             '<p>In 2023, NASA’s TBIRD CubeSat sent 4.8 terabytes of error-free data to the ground in under five minutes at 200 gigabits per second, the fastest satellite-to-ground data link on record.</p>'
             '<div class="sx-screen sx-wide"><canvas id="sx-cv-comm" role="img" aria-label="Animation comparing radio and laser links: the radio beam is wide and sends a few data packets, the narrow laser beam sends many more; a cloud can block the laser, so the satellite hands off to another ground station"></canvas></div><p class="sx-credit">Created by SI and Biological SI Partner</p>'
             '<p data-level="3">Optical terminals need extremely precise pointing, ground stations at clear-sky sites, and error-recovery protocols (TBIRD used automatic repeat request) to survive atmospheric fading.</p>'
+            + SM.nasa_plus('Comms') +
             '<p><b>How it helps people and nature: faster downlinks get flood, fire and forest data to the people who need it sooner.</b></p></section>'
             '<section class="sx-deep" id="orbit-compute"><h2>Computing in orbit (SI in space)</h2>'
             '<p data-level="1">Some satellites have a tiny SI brain that throws away cloudy pictures before sending them home!</p>'
@@ -243,6 +251,7 @@ def sat_explorer():
             '<p>Early flights are already testing chips in orbit. See our <a href="Orbital_Data_Centers.html">Orbital Data Centers</a> page.</p>'
             '<p data-level="3">Trade-offs to weigh: radiation hardening, radiator mass and area, launch emissions, debris risk, repair, and the delay of sending results down. Honest comparisons count the whole life cycle, not just cooling water.</p>'
             '<p><b>How it helps people and nature: less water drawn from rivers and lakes for cooling, and quicker answers from satellite data.</b></p></section>'
+            + SM.videos() +
             '<section class="sx-deep sx-cite"><h2>Sources</h2><ul>'
             + src('https://science.nasa.gov/learn/basics-of-space-flight/chapter11-1/', 'NASA, Basics of Space Flight: Typical Onboard Systems')
             + src('https://www.nasa.gov/smallsat-institute/sst-soa/', 'NASA, State-of-the-Art of Small Spacecraft Technology')
@@ -288,7 +297,7 @@ def main():
     pl = rd('i18n/pages.txt'); PL = set(pl.split())
     add = [p for p in PAGES_NEW if p not in PL]
     if add: open('i18n/pages.txt', 'w', encoding='utf8').write(pl.rstrip('\n') + '\n' + '\n'.join(add) + '\n'); PL |= set(add)
-    T = dict(X.T)
+    T = dict(X.T); T.update(SM.T)
     for i, l in enumerate(LANGS):
         p = f'i18n/{l}.json'; m = json.load(open(p, encoding='utf8')); n0 = dict(m)
         for k, v in T.items(): m[k] = v[i]
@@ -312,8 +321,10 @@ def post_translate():
         f = f'{l}/Satellite_Explorer.html'
         if not os.path.exists(f): continue
         m = json.load(open(f'i18n/{l}.json', encoding='utf8')); s0 = rd(f)
+        o0 = s0; lab = {'fr': 'Français', 'es': 'Español', 'ar': 'العربية'}[l]
+        s0 = re.sub(r'<track[^>]*assets/sx/[^>]*>', lambda mm: mm.group(0).replace('.en.vtt', f'.{l}.vtt').replace('srclang="en"', f'srclang="{l}"').replace('label="English"', f'label="{lab}"'), s0)
         s = re.sub(r'data-name="([^"]+)"', lambda mm: 'data-name="' + esc(m.get(html.unescape(mm.group(1)), html.unescape(mm.group(1)))) + '"', s0)
-        if s != s0: open(f, 'w', encoding='utf8').write(s)
+        if s != o0: open(f, 'w', encoding='utf8').write(s)
 
 if __name__ == '__main__':
     post_translate() if '--translated' in sys.argv else main()

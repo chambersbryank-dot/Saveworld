@@ -151,3 +151,36 @@ html.dark nav.scrolled .nav-toggle { border-color: rgba(255,255,255,0.55) !impor
 @media (max-width:600px){.sx-screen canvas{aspect-ratio:4/5}.sx-screen.sx-wide canvas{aspect-ratio:1/1}}
 @media (prefers-reduced-motion:reduce){.sx-stage .sxp,.sx-slot,.sx-pop,#sx-launch.sx-ready,.sx-stage.sx-complete,.sx-stage .sx-flame{animation:none!important;transition:none!important}.sx-stage svg{transform:none!important}}
 .sx-credit{margin:.2rem 0 .8rem;font-size:.85rem;font-weight:700;opacity:.9}
+/* ---- Satellite Explorer 3D lab, photos, NASA+ and videos (v=20261014m) ---- */
+.sx3d{margin:1.4rem 0;border-radius:22px;padding:1rem 1.1rem;background:radial-gradient(circle at 20% 0%,#1d1760,#05071a 70%);color:#eef1ff;border:1px solid rgb(190 170 255/.35)}
+.sx3d h2{margin-top:.2rem;color:#fff!important}
+.sx3d-stage{position:relative;border-radius:18px;overflow:hidden;background:#02040f;box-shadow:0 14px 40px rgb(0 0 0/.5);touch-action:none}
+.sx3d-stage canvas{display:block;width:100%;aspect-ratio:16/10;touch-action:none}
+.sx3d-hot{position:absolute;inset:0;pointer-events:none}
+.sx3d-pin{position:absolute;left:0;top:0;pointer-events:auto;font:700 .78rem/1.1 Montserrat,system-ui,sans-serif;color:#fff;background:rgb(30 22 90/.72);border:1px solid rgb(190 170 255/.8);border-radius:999px;padding:.35rem .6rem;min-height:32px;cursor:pointer;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);white-space:nowrap}
+.sx3d-pin.loose{background:rgb(255 213 74/.9);color:#1a1300;border-color:#fff;animation:sx-breathe 1.4s ease-in-out infinite}
+.sx3d-pin:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
+.sx3d-fallback{display:none;position:absolute;inset:auto 0 0 0;margin:0;padding:.8rem;background:rgb(0 0 0/.6)}
+.sx3d.nogl .sx3d-fallback{display:block}.sx3d.nogl .sx-ctrl{display:none}
+.sx3d.loading .sx3d-stage::after{content:"";position:absolute;inset:45% auto auto 50%;width:36px;height:36px;margin-left:-18px;border:4px solid rgb(255 255 255/.25);border-top-color:#ffd54a;border-radius:50%;animation:sx-spin 1s linear infinite}
+@keyframes sx-spin{to{transform:rotate(360deg)}}
+.sx3d .sx-cite a{color:#c9bdff}
+.sx-photo{margin:.4rem 0 .7rem;border-radius:14px;overflow:hidden;background:#0b1240}
+.sx-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.sx-photo figcaption{padding:.45rem .65rem;font-size:.85rem;line-height:1.4;color:#eef1ff}
+.sx-photo .photo-credit,.sx-vid .photo-credit{display:block;opacity:.85;font-size:.78rem}
+.sx-photo a{color:#c9e3ff}
+.sx-nplus{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.7rem;margin:.9rem 0;padding:0}
+.sx-np{display:flex;flex-direction:column;gap:.25rem;padding:.8rem .95rem;border-radius:16px;text-decoration:none;color:#fff!important;background:linear-gradient(135deg,#0b3d91,#14206a);border:1px solid rgb(160 200 255/.5);min-height:44px}
+.sx-np:hover,.sx-np:focus-visible{border-color:#ffd54a;outline:none;box-shadow:0 0 0 3px rgb(255 213 74/.5)}
+.sx-np-k{font-size:.75rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#ffd54a}
+.sx-np span:last-child{font-size:.88rem;opacity:.92}
+.sx-live{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.8rem 0;padding:.6rem .9rem;border-radius:999px;background:rgb(255 255 255/.08);border:1px solid rgb(255 120 120/.5);font-weight:700}
+.sx-live a{color:#ffd54a}
+.sx-vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:.8rem 0}
+.sx-vid{margin:0;border-radius:14px;overflow:hidden;background:#0b1240;color:#eef1ff}
+.sx-vid video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.sx-vid figcaption{padding:.45rem .65rem;font-size:.85rem}
+.sx-vid a{color:#c9e3ff}
+.sx-deep .sx-np{color:#fff!important}
+@media (max-width:600px){.sx3d-stage canvas{aspect-ratio:4/5}.sx3d-pin{font-size:.7rem;padding:.3rem .5rem}}

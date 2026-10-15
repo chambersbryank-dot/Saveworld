@@ -326,6 +326,19 @@
       void dir;
     }); }
 
+
+  /* ---------- 5. 3D lab: lazy-load the self-hosted three.js bundle when the lab nears the viewport ---------- */
+  var box3 = document.getElementById('sx3d');
+  if (box3) {
+    var me = document.querySelector('script[src*="sx-anim.js"]'), base = me ? me.getAttribute('src').replace(/sx-anim\.js.*$/, '') : '';
+    var ver = me && /\?v=([^&]+)/.exec(me.getAttribute('src')); ver = ver ? ver[1] : '';
+    var gl = false; try { var tc = document.createElement('canvas'); gl = !!(tc.getContext('webgl2') || tc.getContext('webgl')); } catch (_) {}
+    if (!gl) box3.classList.add('nogl');
+    else { var go = function () { if (box3.dataset.loading) return; box3.dataset.loading = '1'; box3.classList.add('loading');
+        import(new URL(base + 'sx3d.js?v=' + ver, location.href).href).then(function (m) { box3.classList.remove('loading'); m.start(box3, new URL(base || './', location.href).href); })
+          .catch(function (e) { box3.classList.remove('loading'); box3.classList.add('nogl'); if (window.console) console.warn('3D lab:', e); }); };
+      if (window.IntersectionObserver) new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { o.disconnect(); go(); } }, { rootMargin: '400px' }).observe(box3); else go(); }
+  }
   /* ---------- pause control ---------- */
   var pb = document.getElementById('sx-pause');
   if (pb) { if (reduced) pb.hidden = true; pb.addEventListener('click', function () { paused = !paused; pb.setAttribute('aria-pressed', paused ? 'true' : 'false');
