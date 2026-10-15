@@ -102,3 +102,10 @@
 @media (max-width:600px){.km-sols{grid-template-columns:repeat(2,1fr)}}
 @media print{body.lesson-builder-page.toc-sub>main#main:not(#x):not(.y){display:block!important}body.lesson-builder-page main .edu-wrap>:not(.lb-plan){display:none!important}}
 .km-wow{background:linear-gradient(160deg,var(--glass-solid),rgb(var(--glass-tint)/.95))!important}
+
+/* Solid nav on education pages so content doesn't show through while scrolling */
+body.kids-map-page nav:not(.breadcrumb):not(.edu-links), body.lesson-builder-page nav:not(.breadcrumb):not(.edu-links), body.satellite-explorer-page nav:not(.breadcrumb):not(.edu-links),
+body.kids-map-page nav.scrolled:not(.breadcrumb), body.lesson-builder-page nav.scrolled:not(.breadcrumb), body.satellite-explorer-page nav.scrolled:not(.breadcrumb) { background: rgba(6,12,26,0.96) !important; border-bottom-color: rgba(255,255,255,0.12) !important; }
+body.kids-map-page nav.scrolled .brand-word, body.lesson-builder-page nav.scrolled .brand-word, body.satellite-explorer-page nav.scrolled .brand-word { color: #fff !important; }
+body.kids-map-page nav.scrolled .nav-toggle span, body.lesson-builder-page nav.scrolled .nav-toggle span, body.satellite-explorer-page nav.scrolled .nav-toggle span { background: #fff !important; }
+body.kids-map-page main, body.lesson-builder-page main, body.satellite-explorer-page main { position: relative; z-index: 0; }
