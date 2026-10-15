@@ -1,0 +1,35 @@
+{
+  "_doc": "Site improvements shown under What's New in the Weekly Brief (new pages are detected automatically from git; list improvements to existing pages here). One entry per improvement: date (HST, YYYY-MM-DD, the day it went live), page (site-relative), what {en,fr,es,ar}. Facts only. An issue shows entries dated after the previous issue, up to the issue date.",
+  "entries": [
+    {
+      "date": "2026-10-14",
+      "page": "Contact.html",
+      "what": {
+        "en": "Contact page: every department now has its own inbox, for general hellos, solution ideas, press, partnerships, teachers, error reports, privacy requests and translations.",
+        "fr": "Page Contact : chaque service a désormais sa propre adresse : bonjour, idées de solutions, presse, partenariats, enseignants, signalement d'erreurs, confidentialité et traductions.",
+        "es": "Página de contacto: cada departamento tiene ahora su propio buzón: saludos, ideas de soluciones, prensa, alianzas, docentes, reportes de errores, privacidad y traducciones.",
+        "ar": "صفحة التواصل: أصبح لكل قسم بريده الخاص: التحية العامة، أفكار الحلول، الصحافة، الشراكات، المعلمون، الإبلاغ عن الأخطاء، الخصوصية والترجمة."
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "page": "Lesson_Builder.html",
+      "what": {
+        "en": "Lesson Plan Builder: generated plans now include NGSS-style standards tags for each grade band.",
+        "fr": "Créateur de plans de cours : les plans générés incluent désormais des repères NGSS pour chaque niveau.",
+        "es": "Creador de planes de clase: los planes generados ahora incluyen etiquetas de estándares NGSS para cada nivel.",
+        "ar": "منشئ خطط الدروس: تتضمن الخطط المُنشأة الآن وسوم معايير NGSS لكل مرحلة دراسية."
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "page": "Satellite_Explorer.html",
+      "what": {
+        "en": "Satellite Explorer: new animations, a 3D build-a-satellite lab and NASA images and videos.",
+        "fr": "Explorateur de satellites : nouvelles animations, un atelier 3D pour construire un satellite et des images et vidéos de la NASA.",
+        "es": "Explorador de satélites: nuevas animaciones, un laboratorio 3D para construir un satélite e imágenes y videos de la NASA.",
+        "ar": "مستكشف الأقمار الصناعية: رسوم متحركة جديدة، ومختبر ثلاثي الأبعاد لبناء قمر صناعي، وصور ومقاطع فيديو من NASA."
+      }
+    }
+  ]
+}

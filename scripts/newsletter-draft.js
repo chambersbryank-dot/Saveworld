@@ -71,7 +71,7 @@ function hubMap(lang) {
 }
 function newSolutions() {
   const data = JSON.parse(rd('assets/data/solutions.json'));
-  const since = Date.now() - DAYS * 864e5, status = {};
+  const pv = prevIssue(loadState()), since = pv ? Date.parse(pv + 'T23:59:59-10:00') : Date.now() - DAYS * 864e5, status = {};
   for (const p of data.pages) if (p.type !== 'hub') (status[p.url] = status[p.url] || new Set()).add(p.status);
   const out = [];
   for (const url of Object.keys(status)) {
@@ -127,8 +127,60 @@ function corrections(state) {
   const prev = Object.keys(state.issues || {}).filter(k => k < iso).sort().pop() || '0000-00-00';
   return (d.entries || []).filter(e => e.date > prev && e.date <= iso);
 }
-function build(lang, sols, factKeys, launchList, joke, corr = []) {
-  const t = { ...T[lang], ...T2[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
+// ---- v3 sections (2026-10-14): What's New, By the Numbers, Kids Corner, For Teachers, Space, Footer. All data-driven. ----
+const T3 = {
+  en: { wn: "What's New on the Site", wnIntro: 'New pages and features since the last issue:', nums: 'By the Numbers', numsNote: 'Live counts from our site data.', since: 'since last issue', nSol: 'Solutions', nHub: 'Topic hubs', nLang: 'Languages', nUp: 'Upcoming missions tracked', nFacts: 'Amazing Facts', nLaunch: 'Launches this week', kids: 'Kids Corner', kidsCta: 'Explore the Kids Planet Map', kidsAct: 'Activity: find this fact on the map, then pick one solution to tell a friend about.', teach: 'For Teachers', teachText: h => `This week's featured topic: ${h}. Build a free printable lesson plan for any grade, K-3 to university, with NGSS-style standards tags.`, teachCta: 'Open the Lesson Plan Builder', vocab: 'Vocabulary word', ngss: 'Middle school NGSS', teachMail: 'Questions or lesson requests:', teachersPage: 'Teacher resources', help: 'How to help', donate: 'Donate', ways: 'See all Ways to Help', space: 'Space Watch', artemisNext: 'Next Artemis mission', roman: 'Nancy Grace Roman Space Telescope', romanDist: (km, mi, d) => `About ${km} km (${mi} mi) from Earth as of ${d}.`, hello: 'Say hello:', translate: 'Help us translate or fix a translation:', credit: 'Images and videos marked as SI-made were created by SI and Biological SI Partner.' },
+  fr: { wn: 'Nouveautés sur le site', wnIntro: 'Nouvelles pages et fonctionnalités depuis le dernier numéro :', nums: 'En chiffres', numsNote: 'Chiffres en direct issus des données du site.', since: 'depuis le dernier numéro', nSol: 'Solutions', nHub: 'Thèmes', nLang: 'Langues', nUp: 'Missions à venir suivies', nFacts: 'Faits étonnants', nLaunch: 'Lancements cette semaine', kids: 'Coin des enfants', kidsCta: 'Explorer la Carte de la planète pour les enfants', kidsAct: 'Activité : retrouve ce fait sur la carte, puis choisis une solution à raconter à un ami.', teach: 'Pour les enseignants', teachText: h => `Thème de la semaine : ${h}. Créez gratuitement un plan de cours imprimable pour tous les niveaux, de la maternelle à l'université, avec des repères NGSS.`, teachCta: 'Ouvrir le créateur de plans de cours', vocab: 'Mot de vocabulaire', ngss: 'NGSS collège', teachMail: 'Questions ou demandes de cours :', teachersPage: 'Ressources pour enseignants', help: 'Comment aider', donate: 'Faire un don', ways: 'Voir toutes les façons d\u2019aider', space: 'Veille spatiale', artemisNext: 'Prochaine mission Artemis', roman: 'Télescope spatial Nancy Grace Roman', romanDist: (km, mi, d) => `Environ ${km} km (${mi} mi) de la Terre au ${d}.`, hello: 'Dites bonjour :', translate: 'Aidez-nous à traduire ou à corriger une traduction :', credit: 'Les images et vidéos signalées comme créées par SI ont été créées par SI et Biological SI Partner.' },
+  es: { wn: 'Novedades en el sitio', wnIntro: 'Páginas y funciones nuevas desde el último número:', nums: 'En cifras', numsNote: 'Cifras en vivo de los datos del sitio.', since: 'desde el último número', nSol: 'Soluciones', nHub: 'Temas', nLang: 'Idiomas', nUp: 'Misiones próximas en seguimiento', nFacts: 'Datos asombrosos', nLaunch: 'Lanzamientos esta semana', kids: 'Rincón infantil', kidsCta: 'Explora el Mapa del planeta para niños', kidsAct: 'Actividad: busca este dato en el mapa y elige una solución para contársela a un amigo.', teach: 'Para docentes', teachText: h => `Tema destacado de la semana: ${h}. Crea gratis un plan de clase imprimible para cualquier nivel, de infantil a universidad, con etiquetas de estándares NGSS.`, teachCta: 'Abrir el creador de planes de clase', vocab: 'Palabra de vocabulario', ngss: 'NGSS secundaria', teachMail: 'Preguntas o solicitudes de clases:', teachersPage: 'Recursos para docentes', help: 'Cómo ayudar', donate: 'Donar', ways: 'Ver todas las formas de ayudar', space: 'Vigilancia espacial', artemisNext: 'Próxima misión Artemis', roman: 'Telescopio espacial Nancy Grace Roman', romanDist: (km, mi, d) => `A unos ${km} km (${mi} mi) de la Tierra al ${d}.`, hello: 'Salúdanos:', translate: 'Ayúdanos a traducir o corregir una traducción:', credit: 'Las imágenes y videos marcados como hechos por SI fueron creados por SI y Biological SI Partner.' },
+  ar: { wn: 'الجديد في الموقع', wnIntro: 'صفحات وميزات جديدة منذ العدد الماضي:', nums: 'بالأرقام', numsNote: 'أرقام مباشرة من بيانات موقعنا.', since: 'منذ العدد الماضي', nSol: 'الحلول', nHub: 'المحاور', nLang: 'اللغات', nUp: 'مهام قادمة نتابعها', nFacts: 'حقائق مذهلة', nLaunch: 'عمليات إطلاق هذا الأسبوع', kids: 'ركن الأطفال', kidsCta: 'استكشف خريطة الكوكب للأطفال', kidsAct: 'نشاط: ابحث عن هذه الحقيقة على الخريطة، ثم اختر حلًا واحدًا واحكِه لصديق.', teach: 'للمعلمين', teachText: h => `موضوع الأسبوع: ${h}. أنشئ مجانًا خطة درس قابلة للطباعة لأي مرحلة، من الروضة إلى الجامعة، مع وسوم معايير NGSS.`, teachCta: 'افتح منشئ خطط الدروس', vocab: 'كلمة اليوم', ngss: 'NGSS للمرحلة المتوسطة', teachMail: 'للأسئلة أو طلبات الدروس:', teachersPage: 'موارد المعلمين', help: 'كيف تساعد', donate: 'تبرّع', ways: 'اطّلع على جميع طرق المساعدة', space: 'متابعة الفضاء', artemisNext: 'مهمة Artemis التالية', roman: 'تلسكوب نانسي غريس رومان الفضائي', romanDist: (km, mi, d) => `على بُعد نحو ${km} كم (${mi} ميل) من الأرض بتاريخ ${d}.`, hello: 'راسلنا:', translate: 'ساعدنا في الترجمة أو تصحيح ترجمة:', credit: 'الصور ومقاطع الفيديو المشار إليها بأنها من إنشاء SI أنشأها SI وBiological SI Partner.' }
+};
+const MAIL = { hello: 'mailto:hello@savingplanets.com?subject=Hello%20from%20a%20Saving%20Planets%20visitor', translate: 'mailto:translate@savingplanets.com?subject=Translation%20help%20%2F%20language%20correction', teachers: 'mailto:teachers@savingplanets.com?subject=Teacher%20question%20%2F%20lesson%20plan%20request' };
+const prevIssue = state => Object.keys(state.issues || {}).filter(k => k < iso).sort().pop() || null;
+const weekIdx = () => Math.floor((Date.parse(iso + 'T00:00:00Z') - Date.parse('2026-01-05T00:00:00Z')) / (7 * 864e5));
+const readJson = f => { try { return JSON.parse(rd(f)); } catch (e) { return null; } };
+// New non-solution pages (education features, trust pages, tools) first added since the previous issue, plus curated entries in scripts/newsletter-updates.json.
+const SKIP_PAGES = /^(404|Sitemap|index|ways[-_]to[-_]help|Community)\.html$/;
+function whatsNew(state) {
+  const prev = prevIssue(state), since = prev || new Date(Date.now() - DAYS * 864e5).toISOString().slice(0, 10);
+  const sol = new Set((readJson('assets/data/solutions.json') || { pages: [] }).pages.map(p => p.url)), out = [];
+  let files = []; try { files = execSync(`git log --diff-filter=A --since="${since}T23:59:59-10:00" --name-only --format= -- "*.html"`, { cwd: ROOT }).toString().split('\n'); } catch (e) {}
+  for (const f of [...new Set(files.map(s => s.trim()))].sort()) {
+    if (!f || f.includes('/') || SKIP_PAGES.test(f) || sol.has(f) || !fs.existsSync(path.join(ROOT, f))) continue;
+    const html = rd(f); if (!html || /"@type": ?"Article"/.test(html) || /http-equiv="refresh"/i.test(html) || /name="robots" content="noindex/i.test(html)) continue;
+    out.push({ page: f });
+  }
+  const upd = ((readJson('scripts/newsletter-updates.json') || {}).entries || []).filter(e => e.date > (prev || '0000-00-00') && e.date <= iso);
+  return { pages: out, updates: upd };
+}
+function siteStats(launchList) {
+  const s = (readJson('assets/data/solutions.json') || {}).site || {}, art = readJson('assets/data/artemis.json');
+  const facts = factCards('en').length;
+  return { solutions: s.solutions, hubs: s.hubs, languages: 4, upcomingMissions: s.upcomingMissions, facts: facts || null, launchesThisWeek: launchList ? launchList.length : null, artemisUpcoming: art ? art.missions.filter(m => m.state === 'upcoming').length : null };
+}
+function kidsPick(lang) {
+  const e = readJson(`assets/data/edu.${lang}.json`) || readJson('assets/data/edu.en.json'), keys = Object.keys(e.hubs);
+  const w = weekIdx(), hub = e.hubs[keys[((w % keys.length) + keys.length) % keys.length]], f = hub.facts && hub.facts.length ? hub.facts[Math.floor(w / keys.length) % hub.facts.length] : null;
+  return f && { hub, fact: f };
+}
+function teachPick(lang) {
+  const e = readJson(`assets/data/edu.${lang}.json`) || readJson('assets/data/edu.en.json'), keys = Object.keys(e.hubs);
+  const k = keys[(((weekIdx() + 3) % keys.length) + keys.length) % keys.length], hub = e.hubs[k];
+  const term = hub.terms && hub.terms.length ? hub.terms[weekIdx() % hub.terms.length] : null;
+  const ngss = /Space|Rawane|Planetary_Defense/.test(k) ? ['MS-ESS1-2', 'MS-ESS3-3'] : ['MS-ESS3-3', 'MS-LS2-5']; // same mapping as edu-extras.js
+  return { key: k, hub, term, ngss };
+}
+function donateLink(lang, page) {
+  const html = rd(pageFile(lang, page)) || rd(page) || '';
+  const m = html.match(/<a [^>]*href="(https?:[^"]+)"[^>]*>\s*(?:Donate|Faire un don|Donar|تبرّع|تبرع)\b/i);
+  return m ? m[1] : null;
+}
+function spaceData(lang) {
+  const a = readJson(`assets/data/artemis.${lang}.json`) || readJson('assets/data/artemis.json'), r = readJson('assets/data/roman.json');
+  const next = a && a.missions.find(m => m.state === 'upcoming');
+  return { next, roman: r && r.distance ? r.distance : null };
+}
+function build(lang, sols, factKeys, launchList, joke, corr = [], extra = {}) {
+  const t = { ...T[lang], ...T2[lang], ...T3[lang] }, rtl = lang === 'ar', dir = rtl ? 'rtl' : 'ltr', al = rtl ? 'right' : 'left', P = SITE + pre(lang);
   const a = (href, txt, bold) => `<a href="${href}" style="color:#009cde;${bold ? 'font-weight:700;' : ''}text-decoration:none">${esc(txt)}</a>`;
   const top = `<p style="margin:10px 0 0;font-size:12px;text-align:${rtl ? 'left' : 'right'}"><a href="#sp-top" style="color:#5b7486;text-decoration:none">${esc(t.backTop)} ↑</a></p>`;
   const h2 = (s, id) => `<h2${id ? ` id="${id}"` : ''} style="margin:30px 0 12px;font-size:20px;color:#003755;border-bottom:2px solid #009cde;padding-bottom:6px">${esc(s)}</h2>`;
@@ -163,6 +215,27 @@ function build(lang, sols, factKeys, launchList, joke, corr = []) {
   const facts = factKeys.map(k => { const i = enCards.findIndex(c => c.key === k); return cards.find(c => c.key === k) || cards[i] || enCards[i]; }).filter(Boolean);
   const fHtml = facts.map(f => `<h3 style="margin:16px 0 8px;color:#003755;font-size:17px">${esc(f.h)}</h3>${f.img ? `<img src="${f.img}" alt="${esc(f.alt)}" width="552" style="width:100%;max-width:552px;height:auto;border-radius:8px;display:block;margin:0 0 10px">` : ''}<p style="margin:0 0 6px">${esc(f.text)}</p><p style="margin:0;font-size:13px">${f.page ? a(P + f.page, t.read) : ''}${f.srcUrl ? ` · ${esc(t.source)}: ${a(f.srcUrl, f.srcLabel || f.srcUrl)}` : ''}</p>`).join('')
     + `<p style="margin:16px 0 0">${a(P + 'Amazing_Facts.html', t.allFacts + ' →', true)}</p>`;
+  // v3: What's New
+  const nf = new Intl.NumberFormat(T[lang].dateLoc);
+  const wn = extra.wn || { pages: [], updates: [] };
+  const wnHtml = (wn.pages.length || wn.updates.length) ? `<p style="margin:0 0 10px;font-size:14px">${esc(t.wnIntro)}</p>` + wn.pages.map(x => { const m = meta(rd(pageFile(lang, x.page)) || rd(x.page)); return `<p style="margin:0 0 12px">${a(P + x.page, m.title, true)}<br><span style="font-size:14px">${esc(m.desc.split(/\s*(?:Last updated|Dernière mise à jour|Última actualización|آخر تحديث|©)/)[0])}</span></p>`; }).join('') + wn.updates.map(u => `<p style="margin:0 0 12px">${esc((u.what && (u.what[lang] || u.what.en)) || '')}${u.page ? ' ' + a(P + u.page, t.read + ' →', true) : ''}</p>`).join('') : '';
+  // v3: By the Numbers
+  const st = extra.stats || {}, ps = extra.prevStats || null;
+  const rows = [['solutions', t.nSol], ['hubs', t.nHub], ['languages', t.nLang], ['facts', t.nFacts], ['upcomingMissions', t.nUp], ['launchesThisWeek', t.nLaunch]].filter(r => st[r[0]] != null);
+  const numsHtml = rows.length ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse">` + rows.map(r => { const v = st[r[0]], d = ps && ps[r[0]] != null && r[0] !== 'launchesThisWeek' ? v - ps[r[0]] : 0;
+    return `<tr><td dir="${dir}" style="padding:7px 0;border-bottom:1px solid #e3edf4;text-align:${al}">${esc(r[1])}</td><td dir="ltr" style="padding:7px 0;border-bottom:1px solid #e3edf4;text-align:${rtl ? 'left' : 'right'};font-weight:800;font-size:18px">${esc(nf.format(v))}${d ? ` <span style="font-size:12px;color:#1a7f37;font-weight:700">${d > 0 ? '+' : ''}${esc(nf.format(d))} ${esc(t.since)}</span>` : ''}</td></tr>`; }).join('') + `</table><p style="margin:8px 0 0;font-size:12px;color:#5b7486">${esc(t.numsNote)}</p>` : '';
+  // v3: Kids Corner
+  const kp = extra.kids === false ? null : kidsPick(lang);
+  const kidsHtml = kp ? `<div style="background:#fff8e1;border-radius:8px;padding:16px 18px"><p style="margin:0 0 6px;font-size:16px;font-weight:700">${esc(kp.hub.emoji || '')} ${esc(kp.hub.name)}</p><p style="margin:0 0 8px">${esc(kp.fact.x)}</p>${kp.fact.src ? `<p style="margin:0 0 8px;font-size:12px">${esc(t.source)}: ${a(kp.fact.src, kp.fact.sn || kp.fact.src)}</p>` : ''}<p style="margin:0 0 10px;font-size:14px">${esc(t.kidsAct)}</p><p style="margin:0">${a(P + 'Kids_Map.html', t.kidsCta + ' →', true)}${kp.fact.page ? ' · ' + a(P + kp.fact.page, t.read) : ''}</p></div>` : '';
+  // v3: For Teachers
+  const tp = teachPick(lang);
+  const teachHtml = `<p style="margin:0 0 8px">${esc(t.teachText(tp.hub.name))}</p>${tp.term ? `<p style="margin:0 0 8px;font-size:14px"><strong>${esc(t.vocab)}:</strong> ${esc(tp.term.t)} — ${esc(tp.term.d)}</p>` : ''}<p style="margin:0 0 10px;font-size:14px"><strong>${esc(t.ngss)}:</strong> ${esc(tp.ngss.join(', '))}</p><p style="margin:0 0 10px"><a href="${P}Lesson_Builder.html" style="display:inline-block;background:#009cde;color:#fff;font-weight:700;padding:10px 18px;border-radius:6px;text-decoration:none">${esc(t.teachCta)}</a></p><p style="margin:0;font-size:13px">${a(P + 'Teachers.html', t.teachersPage + ' →', true)} · ${esc(t.teachMail)} <a href="${MAIL.teachers}" style="color:#009cde;font-weight:700">teachers@savingplanets.com</a></p>`;
+  // v3: Space Watch (Artemis + Roman from site data)
+  const sd = spaceData(lang);
+  const spaceHtml = (sd.next || sd.roman) ? (sd.next ? `<p style="margin:0 0 12px"><strong>${esc(t.artemisNext)}:</strong> ${a(P + 'Artemis_II.html', sd.next.name, true)} (${esc(sd.next.targetLabel || sd.next.target)})<br><span style="font-size:14px">${esc(sd.next.missionType || '')}</span></p>` : '') + (sd.roman ? `<p style="margin:0">${a(P + 'Nancy_Grace_Roman.html', t.roman, true)}<br><span style="font-size:14px">${esc(t.romanDist(nf.format(sd.roman.km), nf.format(sd.roman.mi), fmtDate(sd.roman.date + 'T12:00:00-10:00', lang)))} ${esc(t.source)}: ${a(sd.roman.url, sd.roman.source)}</span></p>` : '') : '';
+  // v3: helping links for Solution of the Week
+  const don = sw ? donateLink(lang, sw.page) : null;
+  const helpHtml = sw ? `<p style="margin:12px 0 0;font-size:14px"><strong>${esc(t.help)}:</strong> ${don ? a(don, t.donate, true) + ' · ' : ''}${a(P + 'Ways_to_Help.html', t.ways + ' →', true)}</p>` : '';
   return `<!DOCTYPE html><html lang="${lang}" dir="${dir}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t.title)}</title></head>
 <body style="margin:0;background:#eef5fa"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef5fa"><tr><td align="center" style="padding:20px 10px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:10px;overflow:hidden">
@@ -173,16 +246,22 @@ function build(lang, sols, factKeys, launchList, joke, corr = []) {
 <p style="margin:4px 0 0;font-size:16px;color:#cfe9f7">${esc(t.title)}</p></td><td valign="middle" style="padding-${rtl ? 'right' : 'left'}:16px"><a href="${P}index.html"><img src="${SITE}assets/SavePlanetLogo-email.png" width="72" height="84" alt="Saving Planets" style="display:block;width:72px;height:84px;border:0;border-radius:8px"></a></td></tr></table></td></tr>
 <tr><td dir="${dir}" style="padding:24px 24px 28px;font-family:Montserrat,Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#003755;text-align:${al}">
 <p id="sp-top" style="margin:0;text-align:center;font-weight:700;font-size:17px">${esc(t.intro)}</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[...(sw ? [['sp-sotw', sw.label]] : []), ['sp-new', t.newS], ['sp-launches', t.launches], ['sp-facts', t.facts]].concat(cHtml ? [['sp-corr', t.corr]] : []).concat([['sp-suggest', t.suggest]]).concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
-${sw ? h2(sw.label, 'sp-sotw') + swHtml + top : ''}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:16px 0 0;background:#eef5fa;border-radius:8px"><tr><td dir="${dir}" style="padding:10px 14px;font-size:13px;line-height:1.9;text-align:center"><strong style="color:#003755">${esc(t.inIssue)}:</strong> ${[...(wnHtml ? [['sp-wn', t.wn]] : []), ...(numsHtml ? [['sp-nums', t.nums]] : []), ...(sw ? [['sp-sotw', sw.label]] : []), ['sp-new', t.newS], ...(kidsHtml ? [['sp-kids', t.kids]] : []), ['sp-teach', t.teach], ['sp-launches', t.launches], ...(spaceHtml ? [['sp-space', t.space]] : []), ['sp-facts', t.facts]].concat(cHtml ? [['sp-corr', t.corr]] : []).concat([['sp-suggest', t.suggest]]).concat(joke ? [['sp-joke', t.joke]] : []).map(x => `<a href="#${x[0]}" style="color:#009cde;font-weight:700;text-decoration:none;white-space:nowrap">${esc(x[1])}</a>`).join(' &middot; ')}</td></tr></table>
+${wnHtml ? h2(t.wn, 'sp-wn') + wnHtml + top : ''}
+${numsHtml ? h2(t.nums, 'sp-nums') + numsHtml + top : ''}
+${sw ? h2(sw.label, 'sp-sotw') + swHtml + helpHtml + top : ''}
 ${h2(t.newS, 'sp-new')}${solsHtml}${top}
+${kidsHtml ? h2(t.kids, 'sp-kids') + kidsHtml + top : ''}
+${h2(t.teach, 'sp-teach')}${teachHtml}${top}
 ${h2(t.launches, 'sp-launches')}${lHtml}${top}
+${spaceHtml ? h2(t.space, 'sp-space') + spaceHtml + top : ''}
 ${cHtml ? h2(t.corr, 'sp-corr') + cHtml + top : ''}
 ${h2(t.suggest, 'sp-suggest')}${sugHtml}${top}
 ${h2(t.facts, 'sp-facts')}${fHtml}${top}
 ${joke ? h2(t.joke, 'sp-joke') + `<div style="background:#003755;color:#ffffff;border-radius:8px;padding:16px 18px;font-size:16px" dir="${dir}" lang="${lang}"><span style="font-size:22px">🚀</span> ${esc(joke)}</div>` + top : ''}
 <p style="margin:28px 0 0;text-align:center"><a href="${P}index.html" style="display:inline-block;background:#009cde;color:#fff;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none">${esc(t.visit)}</a></p>
-<p style="margin:26px 0 0;font-size:12px;color:#5b7486;text-align:center">${esc(t.foot)}<br>{$account_address}<br><a href="{$unsubscribe}" style="color:#5b7486">${esc(t.unsub)}</a></p>
+<p style="margin:26px 0 0;font-size:13px;color:#5b7486;text-align:center">${esc(t.hello)} <a href="${MAIL.hello}" style="color:#009cde">hello@savingplanets.com</a><br>${esc(t.translate)} <a href="${MAIL.translate}" style="color:#009cde">translate@savingplanets.com</a><br><span style="font-size:11px">${esc(t.credit)}</span></p>
+<p style="margin:14px 0 0;font-size:12px;color:#5b7486;text-align:center">${esc(t.foot)}<br>{$account_address}<br><a href="{$unsubscribe}" style="color:#5b7486">${esc(t.unsub)}</a></p>
 </td></tr></table></td></tr></table></body></html>`;
 }
 async function api(method, p, body) {
@@ -198,11 +277,12 @@ async function api(method, p, body) {
   if (jokeIdx == null) { const used = new Set(state.usedJokes || []); let free = JOKES.map((_, i) => i).filter(i => !used.has(i)); if (!free.length) { state.usedJokes = []; free = JOKES.map((_, i) => i); } jokeIdx = free[0]; }
   const joke = JOKES[jokeIdx];
   let launchList = null; try { launchList = await launches(); } catch (e) { console.log('note: launches unavailable (' + e.message + ')'); }
+  const wn = whatsNew(state), stats = siteStats(launchList), pv = prevIssue(state), prevStats = pv && state.issues[pv].stats || null;
   let existing = [];
   let drafts = [];
   if (!DRY) { drafts = (await api('GET', '/campaigns?filter[status]=draft&limit=100')).data; existing = drafts.map(c => c.name); }
   for (const lang of LANGS) {
-    const html = build(lang, sols, factKeys, launchList, lang === 'en' ? joke : JOKES_T[lang][jokeIdx], corr), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
+    const html = build(lang, sols, factKeys, launchList, lang === 'en' ? joke : JOKES_T[lang][jokeIdx], corr, { wn, stats, prevStats }), name = `Weekly Brief ${iso}${process.env.NL_SUFFIX || ""} (${lang.toUpperCase()})`;
     fs.writeFileSync(`/tmp/newsletter-${iso}-${lang}.html`, html);
     if (DRY) { console.log(`[dry-run] ${name}: ${html.length} bytes -> /tmp/newsletter-${iso}-${lang}.html`); continue; }
     const email = { subject: T[lang].subject(fmtDate(today, lang)), from_name: FROM.name, from: FROM.email, content: html };
@@ -224,9 +304,10 @@ async function api(method, p, body) {
   }
   if (!DRY) {  // record facts so later issues never repeat them
     state.usedJokes = [...new Set([...(state.usedJokes || []), jokeIdx])];
-    state.issues[iso] = { joke: jokeIdx, facts: factKeys, solutions: sols.length, launches: launchList ? launchList.length : null };
+    state.issues[iso] = { joke: jokeIdx, facts: factKeys, solutions: sols.length, launches: launchList ? launchList.length : null, stats };
     state.usedFacts = [...new Set([...state.usedFacts, ...factKeys])];
     fs.writeFileSync(STATE, JSON.stringify(state, null, 2) + '\n');
   }
+  console.log('whatsNew:', wn.pages.map(x => x.page).join(',') + (wn.updates.length ? ' +' + wn.updates.length + ' updates' : ''), '| stats:', JSON.stringify(stats));
   console.log('facts:', factKeys.join(', '), '| solutions:', sols.length, '| launches:', launchList ? launchList.length : 'n/a');
 })().catch(e => { console.error('ERROR', e.message); process.exit(1); });
