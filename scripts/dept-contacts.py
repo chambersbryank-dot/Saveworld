@@ -13,12 +13,12 @@ TR = {
  'Privacy & Data Requests': ('Confidentialité et données', 'Privacidad y datos', 'الخصوصية وطلبات البيانات'),
  'Questions about your data, or a deletion request.': ('Questions sur vos données ou demande de suppression.', 'Preguntas sobre tus datos o una solicitud de borrado.', 'أسئلة عن بياناتك أو طلب حذف.'),
  'Help Translate': ('Aider à traduire', 'Ayuda a traducir', 'ساعد في الترجمة'),
- 'Volunteer translators and language corrections for French, Spanish and Arabic.': ('Traducteurs bénévoles et corrections linguistiques en français, espagnol et arabe.', 'Traductores voluntarios y correcciones de idioma en francés, español y árabe.', 'المترجمون المتطوعون وتصحيحات اللغة للفرنسية والإسبانية والعربية.'),
+ 'Volunteer translators and language corrections for French, Spanish, Arabic and Italian.': ('Traducteurs bénévoles et corrections linguistiques en français, espagnol, arabe et italien.', 'Traductores voluntarios y correcciones de idioma en francés, español, árabe e italiano.', 'المترجمون المتطوعون وتصحيحات اللغة للفرنسية والإسبانية والعربية والإيطالية.', 'Traduttori volontari e correzioni linguistiche per francese, spagnolo, arabo e italiano.'),
  'For grown-ups and teachers: classroom questions, lesson-plan requests or school partnerships?': ('Pour les adultes et les enseignants : questions de classe, demandes de plans de cours ou partenariats scolaires ?', 'Para adultos y docentes: ¿preguntas de clase, solicitudes de planes de clase o alianzas escolares?', 'للكبار والمعلمين: أسئلة الصف أو طلبات خطط الدروس أو الشراكات المدرسية؟'),
- 'Speak French, Spanish or Arabic? Volunteer translators and language corrections are welcome.': ('Vous parlez français, espagnol ou arabe ? Les traducteurs bénévoles et les corrections linguistiques sont les bienvenus.', '¿Hablas francés, español o árabe? Los traductores voluntarios y las correcciones de idioma son bienvenidos.', 'هل تتحدث الفرنسية أو الإسبانية أو العربية؟ نرحب بالمترجمين المتطوعين وتصحيحات اللغة.'),
+ 'Speak French, Spanish, Arabic or Italian? Volunteer translators and language corrections are welcome.': ('Vous parlez français, espagnol, arabe ou italien ? Les traducteurs bénévoles et les corrections linguistiques sont les bienvenus.', '¿Hablas francés, español, árabe o italiano? Los traductores voluntarios y las correcciones de idioma son bienvenidos.', 'هل تتحدث الفرنسية أو الإسبانية أو العربية أو الإيطالية؟ نرحب بالمترجمين المتطوعين وتصحيحات اللغة.', 'Parli francese, spagnolo, arabo o italiano? Traduttori volontari e correzioni linguistiche sono i benvenuti.'),
  'Questions? Write to': ('Des questions ? Écrivez à', '¿Preguntas? Escribe a', 'أسئلة؟ راسل'),
 }
-HELP = {'fr': 'Une traduction à améliorer ? Aidez-nous :', 'es': '¿Ves una traducción que mejorar? Ayúdanos:', 'ar': 'هل ترى ترجمة تحتاج إلى تحسين؟ ساعدنا:'}
+HELP = {'fr': 'Une traduction à améliorer ? Aidez-nous :', 'es': '¿Ves una traducción que mejorar? Ayúdanos:', 'ar': 'هل ترى ترجمة تحتاج إلى تحسين؟ ساعدنا:', 'it': 'Vedi una traduzione da migliorare? Aiutaci:'}
 def a(k): return f'<a href="{M[k]}">{k}@savingplanets.com</a>'
 def card(h, p, k): return f'<div class="w-card" id="dept-{k}"><h3>{h.replace("&", "&amp;")}</h3><p>{p}</p><p>{a(k)}</p></div>'
 def put(s, name, block, before):
@@ -26,13 +26,13 @@ def put(s, name, block, before):
     if f'<!-- DEPT:{name} -->' in s: return re.sub(rf'<!-- DEPT:{name} -->.*?<!-- /DEPT:{name} -->', lambda m: blk, s, flags=re.S)
     i = s.find(before)
     return s if i < 0 else s[:i] + blk + s[i:]
-for l, d in (('fr', 0), ('es', 1), ('ar', 2)):
+for l, d in (('fr', 0), ('es', 1), ('ar', 2), ('it', 3)):
     f = f'i18n/{l}.json'; m = json.load(open(f, encoding='utf-8')); ch = False
     for k, v in TR.items():
-        if m.get(k) != v[d]: m[k] = v[d]; ch = True
+        if d < len(v) and m.get(k) != v[d]: m[k] = v[d]; ch = True
     if ch: json.dump(m, open(f, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 n = 0
-for lang in ('', 'fr/', 'es/', 'ar/'):
+for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):
     for f in glob.glob(lang + '*.html'):
         s = open(f, encoding='utf-8').read(); o = s
         base = os.path.basename(f)
@@ -40,16 +40,16 @@ for lang in ('', 'fr/', 'es/', 'ar/'):
             if base == 'Contact.html':
                 s = put(s, 'contact', card('Teachers & Schools', TR['Teachers & Schools'] and 'Classroom questions, lesson-plan requests and school partnerships.', 'teachers') +
                         card('Privacy & Data Requests', 'Questions about your data, or a deletion request.', 'privacy') +
-                        card('Help Translate', 'Volunteer translators and language corrections for French, Spanish and Arabic.', 'translate'), '<div class="w-card"><h3>General Questions</h3>')
+                        card('Help Translate', 'Volunteer translators and language corrections for French, Spanish, Arabic and Italian.', 'translate'), '<div class="w-card"><h3>General Questions</h3>')
             if base in ('Teachers.html', 'Lesson_Builder.html', 'Kids_Map.html'):
                 s = put(s, 'teachers', '<section class="help-actions dept-note" id="grown-ups"><p>For grown-ups and teachers: classroom questions, lesson-plan requests or school partnerships?</p><p>' + a('teachers') + '</p></section>', '</main>')
             if base == 'About.html':
-                s = put(s, 'translate', '<section class="help-actions dept-note" id="translate"><p>Speak French, Spanish or Arabic? Volunteer translators and language corrections are welcome.</p><p>' + a('translate') + '</p></section>', '</main>')
+                s = put(s, 'translate', '<section class="help-actions dept-note" id="translate"><p>Speak French, Spanish, Arabic or Italian? Volunteer translators and language corrections are welcome.</p><p>' + a('translate') + '</p></section>', '</main>')
         if '<footer>' in s and not base.startswith('google') and base not in ('ways_to_help.html', 'ways-to-help.html'):
             ln = lang.rstrip('/')
             extra = f'<p class="dept-foot">Questions? Write to {a("hello")}</p>'
             if ln:
-                q = {'fr': 'Des questions ? Écrivez à', 'es': '¿Preguntas? Escribe a', 'ar': 'أسئلة؟ راسل'}[ln]
+                q = {'fr': 'Des questions ? Écrivez à', 'es': '¿Preguntas? Escribe a', 'ar': 'أسئلة؟ راسل', 'it': 'Domande? Scrivi a'}[ln]
                 extra = f'<p class="dept-foot">{q} {a("hello")}</p><p class="dept-foot">{HELP[ln]} {a("translate")}</p>'
             s = put(s, 'foot', extra, '</footer>')
         if s != o: open(f, 'w', encoding='utf-8').write(s); n += 1

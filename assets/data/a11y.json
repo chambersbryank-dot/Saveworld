@@ -5,43 +5,50 @@
    "en": "Satellite view of the five Great Lakes of North America",
    "fr": "Vue satellite des cinq Grands Lacs d'Amérique du Nord",
    "es": "Vista satelital de los cinco Grandes Lagos de América del Norte",
-   "ar": "صورة بالأقمار الصناعية للبحيرات العظمى الخمس في أمريكا الشمالية"
+   "ar": "صورة بالأقمار الصناعية للبحيرات العظمى الخمس في أمريكا الشمالية",
+   "it": "Vista satellitare dei cinque Grandi Laghi del Nord America"
   },
   "assets/Lake_Shore_Cleanup_NPS.jpg": {
    "en": "A volunteer in a life vest pulling trash from a lakeshore into a canoe below rocky cliffs",
    "fr": "Un bénévole en gilet de sauvetage ramasse des déchets sur une rive de lac et les met dans un canoë, au pied de falaises",
    "es": "Un voluntario con chaleco salvavidas recoge basura de la orilla de un lago y la sube a una canoa, bajo unos acantilados",
-   "ar": "متطوع يرتدي سترة نجاة يجمع النفايات من شاطئ بحيرة ويضعها في زورق تحت منحدرات صخرية"
+   "ar": "متطوع يرتدي سترة نجاة يجمع النفايات من شاطئ بحيرة ويضعها في زورق تحت منحدرات صخرية",
+   "it": "Un volontario in un giubbotto di salvataggio tirando spazzatura da una riva del lago in una canoa sotto scogliere rocciose"
   },
   "assets/Lake_Tahoe_ISS.jpg": {
    "en": "Lake Tahoe and the snowy Sierra Nevada seen from the International Space Station",
    "fr": "Le lac Tahoe et la Sierra Nevada enneigée vus depuis la Station spatiale internationale",
    "es": "El lago Tahoe y la Sierra Nevada nevada vistos desde la Estación Espacial Internacional",
-   "ar": "بحيرة تاهو وجبال سييرا نيفادا المكسوة بالثلوج كما تُرى من محطة الفضاء الدولية"
+   "ar": "بحيرة تاهو وجبال سييرا نيفادا المكسوة بالثلوج كما تُرى من محطة الفضاء الدولية",
+   "it": "Lake Tahoe e la nevosa Sierra Nevada vista dalla Stazione Spaziale Internazionale"
   },
   "assets/SavePlanetLogo.jpg": {
    "en": "Saving Planets logo: Earth inside green recycling arrows",
    "fr": "Logo de Saving Planets : la Terre entourée de flèches de recyclage vertes",
    "es": "Logotipo de Saving Planets: la Tierra rodeada de flechas verdes de reciclaje",
-   "ar": "شعار Saving Planets: الأرض داخل أسهم إعادة تدوير خضراء"
+   "ar": "شعار Saving Planets: الأرض داخل أسهم إعادة تدوير خضراء",
+   "it": "Logo Saving Planets: Terra all'interno di frecce di riciclaggio verde"
   },
   "assets/Saturn.jpg": {
    "en": "Saturn and its rings, photographed by NASA's Cassini spacecraft",
    "fr": "Saturne et ses anneaux, photographiés par la sonde Cassini de la NASA",
    "es": "Saturno y sus anillos, fotografiados por la nave Cassini de la NASA",
-   "ar": "زحل وحلقاته كما صورته مركبة Cassini التابعة لـ NASA"
+   "ar": "زحل وحلقاته كما صورته مركبة Cassini التابعة لـ NASA",
+   "it": "Saturno e i suoi anelli, fotografati dalla sonda Cassini della NASA"
   },
   "assets/Jupiter.jpg": {
    "en": "Jupiter's swirling clouds seen by NASA's Juno spacecraft",
    "fr": "Les nuages tourbillonnants de Jupiter vus par la sonde Juno de la NASA",
    "es": "Las nubes arremolinadas de Júpiter vistas por la nave Juno de la NASA",
-   "ar": "سحب المشتري الدوّامة كما تراها مركبة Juno التابعة لـ NASA"
+   "ar": "سحب المشتري الدوّامة كما تراها مركبة Juno التابعة لـ NASA",
+   "it": "Nuvole ardenti di Giove viste dalla sonda Juno della NASA"
   },
   "assets/Uranus.jpg": {
    "en": "A deep-blue ice giant planet against black space",
    "fr": "Une planète géante de glace d'un bleu profond sur le noir de l'espace",
    "es": "Un planeta gigante helado de un azul intenso sobre el negro del espacio",
-   "ar": "كوكب جليدي عملاق أزرق داكن على خلفية الفضاء السوداء"
+   "ar": "كوكب جليدي عملاق أزرق داكن على خلفية الفضاء السوداء",
+   "it": "Un pianeta gigante di ghiaccio blu profondo contro lo spazio nero"
   }
  },
  "alt_fix": {
@@ -50,19 +57,22 @@
    "en": "ClearSpace: Saturn and its rings, photographed by NASA's Cassini spacecraft",
    "fr": "ClearSpace : Saturne et ses anneaux, photographiés par la sonde Cassini de la NASA",
    "es": "ClearSpace: Saturno y sus anillos, fotografiados por la nave Cassini de la NASA",
-   "ar": "ClearSpace: زحل وحلقاته كما صورته مركبة Cassini التابعة لـ NASA"
+   "ar": "ClearSpace: زحل وحلقاته كما صورته مركبة Cassini التابعة لـ NASA",
+   "it": "ClearSpace: Saturno e i suoi anelli, fotografati dalla sonda Cassini della NASA"
   },
   "assets/Jupiter.jpg|Astroscale": {
    "en": "Astroscale: Jupiter's swirling clouds seen by NASA's Juno spacecraft",
    "fr": "Astroscale : les nuages tourbillonnants de Jupiter vus par la sonde Juno de la NASA",
    "es": "Astroscale: las nubes arremolinadas de Júpiter vistas por la nave Juno de la NASA",
-   "ar": "Astroscale: سحب المشتري الدوّامة كما تراها مركبة Juno التابعة لـ NASA"
+   "ar": "Astroscale: سحب المشتري الدوّامة كما تراها مركبة Juno التابعة لـ NASA",
+   "it": "Astroscala: Nuvole ardenti di Giove viste dalla sonda Juno della NASA"
   },
   "assets/Landsat9_Launch.jpg|Atlas V rocket launching Landsat 9 from Vandenberg": {
    "en": "An Atlas V rocket lifting off with NASA's Landsat 9 satellite from Vandenberg Space Force Base",
    "fr": "Une fusée Atlas V décolle avec le satellite Landsat 9 de la NASA depuis la base de Vandenberg",
    "es": "Un cohete Atlas V despega con el satélite Landsat 9 de la NASA desde la base de Vandenberg",
-   "ar": "صاروخ أطلس 5 ينطلق حاملاً القمر الصناعي لاندسات 9 التابع لناسا من قاعدة فاندنبرغ"
+   "ar": "صاروخ أطلس 5 ينطلق حاملاً القمر الصناعي لاندسات 9 التابع لناسا من قاعدة فاندنبرغ",
+   "it": "Un razzo Atlas V che si stacca con il satellite Landsat 9 della NASA da Vandenberg Space Force Base"
   }
  },
  "videos": {
@@ -71,7 +81,8 @@
     "en": "SI-generated visuals: the words 252,756 miles over stars, Earth through a spacecraft window, a spacecraft passing Earth, then the savingplanets.com end card.",
     "fr": "Images générées par SI : les mots « 252 756 miles » sur fond d'étoiles, la Terre vue par un hublot, un vaisseau passant devant la Terre, puis la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: las palabras «252.756 millas» sobre estrellas, la Tierra vista por una ventanilla, una nave pasando frente a la Tierra y la tarjeta final de savingplanets.com.",
-    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: عبارة «252,756 ميلاً» فوق النجوم، والأرض من نافذة مركبة فضائية، ومركبة تمر بجوار الأرض، ثم بطاقة الختام savingplanets.com."
+    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: عبارة «252,756 ميلاً» فوق النجوم، والأرض من نافذة مركبة فضائية، ومركبة تمر بجوار الأرض، ثم بطاقة الختام savingplanets.com.",
+    "it": "Visivi generati da SI: le parole 252,756 miglia sopra le stelle, la Terra attraverso una vetrata spaziale, una sonda che passa la Terra, poi la scheda di fine saveplanets.com."
    },
    "cues": [
     [
@@ -81,7 +92,8 @@
       "en": "This is the farthest any human has ever been from home.",
       "fr": "C'est le plus loin qu'un être humain soit jamais allé de chez lui.",
       "es": "Es lo más lejos de casa que ha llegado jamás un ser humano.",
-      "ar": "هذا أبعد ما وصل إليه إنسان عن موطنه على الإطلاق."
+      "ar": "هذا أبعد ما وصل إليه إنسان عن موطنه على الإطلاق.",
+      "it": "Questo è il più lontano che ogni essere umano sia mai stato da casa."
      }
     ],
     [
@@ -91,7 +103,8 @@
       "en": "On April 6, 2026, NASA's Artemis II crew reached 252,756 [unclear] Moon.",
       "fr": "Le 6 avril 2026, l'équipage d'Artemis II de la NASA a atteint 252 756 [inaudible] Lune.",
       "es": "El 6 de abril de 2026, la tripulación de Artemis II de la NASA alcanzó 252.756 [inaudible] Luna.",
-      "ar": "في 6 أبريل 2026، وصل طاقم Artemis II التابع لـ NASA إلى 252,756 [غير واضح] القمر."
+      "ar": "في 6 أبريل 2026، وصل طاقم Artemis II التابع لـ NASA إلى 252,756 [غير واضح] القمر.",
+      "it": "Il 6 aprile 2026, l'equipaggio della NASA Artemis II raggiunse 252.756 [non chiaro] Luna."
      }
     ],
     [
@@ -101,7 +114,8 @@
       "en": "It was us.",
       "fr": "C'était nous.",
       "es": "Fuimos nosotros.",
-      "ar": "كنا نحن."
+      "ar": "كنا نحن.",
+      "it": "Siamo stati noi."
      }
     ],
     [
@@ -111,7 +125,8 @@
       "en": "Every voyage outward teaches us how precious home is.",
       "fr": "Chaque voyage vers l'extérieur nous apprend à quel point notre maison est précieuse.",
       "es": "Cada viaje hacia afuera nos enseña lo valioso que es nuestro hogar.",
-      "ar": "كل رحلة إلى الخارج تعلّمنا كم هو ثمين موطننا."
+      "ar": "كل رحلة إلى الخارج تعلّمنا كم هو ثمين موطننا.",
+      "it": "Ogni viaggio verso l'esterno ci insegna quanto sia preziosa la casa."
      }
     ]
    ]
@@ -121,7 +136,8 @@
     "en": "SI-generated visuals: twin satellites orbiting Earth, farmland and a drying river, melting ice, Earth from space, then the savingplanets.com end card.",
     "fr": "Images générées par SI : deux satellites jumeaux autour de la Terre, des terres agricoles et une rivière qui s'assèche, de la glace qui fond, la Terre vue de l'espace, puis la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: dos satélites gemelos orbitando la Tierra, tierras de cultivo y un río que se seca, hielo derritiéndose, la Tierra desde el espacio y la tarjeta final de savingplanets.com.",
-    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قمران صناعيان توأمان يدوران حول الأرض، وأراضٍ زراعية ونهر يجف، وجليد يذوب، والأرض من الفضاء، ثم بطاقة الختام savingplanets.com."
+    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قمران صناعيان توأمان يدوران حول الأرض، وأراضٍ زراعية ونهر يجف، وجليد يذوب، والأرض من الفضاء، ثم بطاقة الختام savingplanets.com.",
+    "it": "Visivi generati da SI: satelliti gemelli che orbitano attorno alla Terra, alla terraferma e ad un fiume di essiccamento, il ghiaccio di fusione, la Terra dallo spazio, poi la scheda di fine saveplanets.com."
    },
    "cues": [
     [
@@ -131,7 +147,8 @@
       "en": "These two satellites can weigh the water on Earth.",
       "fr": "Ces deux satellites peuvent peser l'eau sur Terre.",
       "es": "Estos dos satélites pueden pesar el agua de la Tierra.",
-      "ar": "يستطيع هذان القمران الصناعيان وزن الماء على الأرض."
+      "ar": "يستطيع هذان القمران الصناعيان وزن الماء على الأرض.",
+      "it": "Questi due satelliti possono pesare l'acqua sulla Terra."
      }
     ],
     [
@@ -141,7 +158,8 @@
       "en": "As they fly, the distance between them changes by less than the width of a hair, pulled by the gravity of water below.",
       "fr": "En vol, la distance qui les sépare varie de moins que l'épaisseur d'un cheveu, sous l'effet de la gravité de l'eau en dessous.",
       "es": "Mientras vuelan, la distancia entre ellos cambia menos que el grosor de un cabello, atraídos por la gravedad del agua de abajo.",
-      "ar": "أثناء طيرانهما تتغير المسافة بينهما بأقل من عرض شعرة، بفعل جاذبية الماء في الأسفل."
+      "ar": "أثناء طيرانهما تتغير المسافة بينهما بأقل من عرض شعرة، بفعل جاذبية الماء في الأسفل.",
+      "it": "Mentre volano, la distanza tra loro cambia di meno della larghezza di un capello, tirato dalla gravità dell'acqua sottostante."
      }
     ],
     [
@@ -151,7 +169,8 @@
       "en": "That shows where groundwater is vanishing, where ice is melting, and where drought is coming.",
       "fr": "Cela montre où les nappes souterraines disparaissent, où la glace fond et où la sécheresse arrive.",
       "es": "Eso muestra dónde desaparece el agua subterránea, dónde se derrite el hielo y dónde llega la sequía.",
-      "ar": "وهذا يُظهر أين تختفي المياه الجوفية، وأين يذوب الجليد، وأين يقترب الجفاف."
+      "ar": "وهذا يُظهر أين تختفي المياه الجوفية، وأين يذوب الجليد، وأين يقترب الجفاف.",
+      "it": "Ciò dimostra dove le acque sotterranee stanno scomparendo, dove il ghiaccio si sta sciogliendo, e dove sta arrivando la siccità."
      }
     ],
     [
@@ -161,7 +180,8 @@
       "en": "Saving a planet is saving people.",
       "fr": "Sauver une planète, c'est sauver des gens.",
       "es": "Salvar un planeta es salvar a las personas.",
-      "ar": "إنقاذ كوكب هو إنقاذ للناس."
+      "ar": "إنقاذ كوكب هو إنقاذ للناس.",
+      "it": "Salvare un pianeta sta salvando le persone."
      }
     ]
    ]
@@ -171,7 +191,8 @@
     "en": "SI-generated visuals: an Amsterdam canal at sunset, a curtain of bubbles pushing plastic bottles aside, a catchment full of plastic, then the canal again.",
     "fr": "Images générées par SI : un canal d'Amsterdam au coucher du soleil, un rideau de bulles qui pousse des bouteilles en plastique sur le côté, un bac de collecte rempli de plastique, puis de nouveau le canal.",
     "es": "Imágenes generadas por SI: un canal de Ámsterdam al atardecer, una cortina de burbujas que empuja botellas de plástico a un lado, un recolector lleno de plástico y de nuevo el canal.",
-    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قناة في أمستردام عند الغروب، وستارة من الفقاعات تدفع الزجاجات البلاستيكية جانبًا، وحاوية تجميع مليئة بالبلاستيك، ثم القناة مجددًا."
+    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قناة في أمستردام عند الغروب، وستارة من الفقاعات تدفع الزجاجات البلاستيكية جانبًا، وحاوية تجميع مليئة بالبلاستيك، ثم القناة مجددًا.",
+    "it": "Visivi SI-generati: un canale di Amsterdam al tramonto, una tenda di bolle che spinge le bottiglie di plastica da parte, un catchment pieno di plastica, poi il canale di nuovo."
    },
    "cues": [
     [
@@ -181,7 +202,8 @@
       "en": "Plastic in rivers flows straight to the ocean.",
       "fr": "Le plastique des rivières file tout droit vers l'océan.",
       "es": "El plástico de los ríos va directo al océano.",
-      "ar": "البلاستيك في الأنهار يتدفق مباشرة إلى المحيط."
+      "ar": "البلاستيك في الأنهار يتدفق مباشرة إلى المحيط.",
+      "it": "La plastica nei fiumi scorre dritto verso l'oceano."
      }
     ],
     [
@@ -191,7 +213,8 @@
       "en": "In Amsterdam, a wall of bubbles stops it.",
       "fr": "À Amsterdam, un mur de bulles l'arrête.",
       "es": "En Ámsterdam, un muro de burbujas lo detiene.",
-      "ar": "في أمستردام، يوقفه جدار من الفقاعات."
+      "ar": "في أمستردام، يوقفه جدار من الفقاعات.",
+      "it": "Ad Amsterdam, un muro di bolle lo ferma."
      }
     ],
     [
@@ -201,7 +224,8 @@
       "en": "The bubbles push plastic to the side while fish and boats pass right through.",
       "fr": "Les bulles poussent le plastique sur le côté, tandis que poissons et bateaux passent sans obstacle.",
       "es": "Las burbujas empujan el plástico a un lado mientras peces y barcos pasan sin problema.",
-      "ar": "تدفع الفقاعات البلاستيك جانبًا بينما تعبر الأسماك والقوارب دون عائق."
+      "ar": "تدفع الفقاعات البلاستيك جانبًا بينما تعبر الأسماك والقوارب دون عائق.",
+      "it": "Le bolle spingono la plastica a lato mentre i pesci e le barche passano a destra attraverso."
      }
     ],
     [
@@ -211,7 +235,8 @@
       "en": "The company says it has caught over one million pieces since 2019.",
       "fr": "L'entreprise affirme avoir capturé plus d'un million de déchets depuis 2019.",
       "es": "La empresa dice que ha atrapado más de un millón de piezas desde 2019.",
-      "ar": "تقول الشركة إنها التقطت أكثر من مليون قطعة منذ عام 2019."
+      "ar": "تقول الشركة إنها التقطت أكثر من مليون قطعة منذ عام 2019.",
+      "it": "L'azienda dice che ha catturato oltre un milione di pezzi dal 2019."
      }
     ],
     [
@@ -221,7 +246,8 @@
       "en": "Saving a planet is saving people.",
       "fr": "Sauver une planète, c'est sauver des gens.",
       "es": "Salvar un planeta es salvar a las personas.",
-      "ar": "إنقاذ كوكب هو إنقاذ للناس."
+      "ar": "إنقاذ كوكب هو إنقاذ للناس.",
+      "it": "Salvare un pianeta sta salvando le persone."
      }
     ],
     [
@@ -231,7 +257,8 @@
       "en": "Follow Saving Planets.",
       "fr": "Suivez Saving Planets.",
       "es": "Sigue a Saving Planets.",
-      "ar": "تابعوا Saving Planets."
+      "ar": "تابعوا Saving Planets.",
+      "it": "Seguire Saving Planets."
      }
     ]
    ]
@@ -241,7 +268,8 @@
     "en": "SI-generated visuals: sunlit forest with a deer, a seedling in soil, rows of young trees, forest again, then sprouts and the savingplanets.com end card.",
     "fr": "Images générées par SI : forêt ensoleillée avec un cerf, une jeune pousse dans la terre, des rangées de jeunes arbres, de nouveau la forêt, puis des pousses et la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: un bosque soleado con un ciervo, un brote en la tierra, hileras de árboles jóvenes, de nuevo el bosque y luego brotes y la tarjeta final de savingplanets.com.",
-    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: غابة مشمسة فيها غزال، وشتلة في التربة، وصفوف من الأشجار الصغيرة، ثم الغابة مجددًا، ثم براعم وبطاقة الختام savingplanets.com."
+    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: غابة مشمسة فيها غزال، وشتلة في التربة، وصفوف من الأشجار الصغيرة، ثم الغابة مجددًا، ثم براعم وبطاقة الختام savingplanets.com.",
+    "it": "Visivi SI-generati: foresta illuminata con un cervo, una piantina in terreno, file di giovani alberi, foresta di nuovo, poi germogli e la carta di fine saveplanets.com."
    },
    "cues": [
     [
@@ -251,7 +279,8 @@
       "en": "[Audio from the end of the video plays over the opening]",
       "fr": "[L'audio de la fin de la vidéo se superpose au début]",
       "es": "[El audio del final del video suena sobre el comienzo]",
-      "ar": "[يُسمع صوت نهاية الفيديو فوق بدايته]"
+      "ar": "[يُسمع صوت نهاية الفيديو فوق بدايته]",
+      "it": "[Audio dalla fine del video gioca sopra l'apertura]"
      }
     ],
     [
@@ -261,7 +290,8 @@
       "en": "36 million trees started exactly like this.",
       "fr": "36 millions d'arbres ont commencé exactement comme ça.",
       "es": "36 millones de árboles empezaron exactamente así.",
-      "ar": "36 مليون شجرة بدأت تمامًا هكذا."
+      "ar": "36 مليون شجرة بدأت تمامًا هكذا.",
+      "it": "36 milioni di alberi hanno cominciato esattamente così."
      }
     ],
     [
@@ -271,7 +301,8 @@
       "en": "Life Terra and its partners say they planted them across more than 30 European countries in just five years.",
       "fr": "Life Terra et ses partenaires disent les avoir plantés dans plus de 30 pays européens en cinq ans seulement.",
       "es": "Life Terra y sus socios dicen que los plantaron en más de 30 países europeos en solo cinco años.",
-      "ar": "تقول Life Terra وشركاؤها إنهم زرعوها في أكثر من 30 دولة أوروبية خلال خمس سنوات فقط."
+      "ar": "تقول Life Terra وشركاؤها إنهم زرعوها في أكثر من 30 دولة أوروبية خلال خمس سنوات فقط.",
+      "it": "Life Terra e i suoi partner dicono che li hanno piantati in più di 30 paesi europei in soli cinque anni."
      }
     ],
     [
@@ -281,7 +312,8 @@
       "en": "Every tree cleans the air, cools the land and shelters life,",
       "fr": "Chaque arbre purifie l'air, rafraîchit la terre et abrite la vie,",
       "es": "Cada árbol limpia el aire, refresca la tierra y da refugio a la vida,",
-      "ar": "كل شجرة تنقّي الهواء وتبرّد الأرض وتؤوي الحياة،"
+      "ar": "كل شجرة تنقّي الهواء وتبرّد الأرض وتؤوي الحياة،",
+      "it": "Ogni albero pulisce l'aria, raffredda la terra e ripara la vita,"
      }
     ],
     [
@@ -291,7 +323,8 @@
       "en": "and they are [unclear] people. Follow Saving Planets.",
       "fr": "et ils [inaudible] les gens. Suivez Saving Planets.",
       "es": "y [inaudible] a las personas. Sigue a Saving Planets.",
-      "ar": "و[غير واضح] الناس. تابعوا Saving Planets."
+      "ar": "و[غير واضح] الناس. تابعوا Saving Planets.",
+      "it": "e sono persone [non chiare]. Seguire Saving Planets."
      }
     ]
    ]
@@ -301,7 +334,8 @@
     "en": "SI-generated visuals: Earth above clouds, scrolling pages of the Saving Planets site (solutions, Amazing Facts, a Lagrange point explainer, the live launch tracker, Ways to Help), a whale under the northern lights, rocket launches, and a sunlit forest.",
     "fr": "Images générées par SI : la Terre au-dessus des nuages, des pages du site Saving Planets qui défilent (solutions, Faits étonnants, explication des points de Lagrange, suivi des lancements en direct, Comment aider), une baleine sous une aurore boréale, des lancements de fusées et une forêt ensoleillée.",
     "es": "Imágenes generadas por SI: la Tierra sobre las nubes, páginas del sitio Saving Planets desplazándose (soluciones, Datos asombrosos, una explicación de los puntos de Lagrange, el seguimiento de lanzamientos en vivo, Formas de ayudar), una ballena bajo la aurora boreal, lanzamientos de cohetes y un bosque soleado.",
-    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: الأرض فوق السحب، وصفحات من موقع Saving Planets تتمرر (الحلول، حقائق مذهلة، شرح نقاط لاغرانج، متتبع الإطلاقات المباشر، طرق المساعدة)، وحوت تحت الشفق القطبي، وإطلاقات صواريخ، وغابة مشمسة."
+    "ar": "مشاهد مولّدة بالذكاء الاصطناعي: الأرض فوق السحب، وصفحات من موقع Saving Planets تتمرر (الحلول، حقائق مذهلة، شرح نقاط لاغرانج، متتبع الإطلاقات المباشر، طرق المساعدة)، وحوت تحت الشفق القطبي، وإطلاقات صواريخ، وغابة مشمسة.",
+    "it": "Visivi generati da SI: Terra sopra le nuvole, pagine scorrevoli del sito Saving Planets (soluzioni, fatti incredibili, un spia punti Lagrange, il tracker di lancio dal vivo, Ways to Help), una balena sotto le luci del nord, lancia razzi e una foresta illuminata dal sole."
    },
    "cues": [
     [
@@ -311,7 +345,8 @@
       "en": "Stop scrolling. Our planet is not lost. Rivers are healing. Forests are rising. Oceans are being cleaned.",
       "fr": "Arrêtez de faire défiler. Notre planète n'est pas perdue. Les rivières guérissent. Les forêts repoussent. Les océans sont nettoyés.",
       "es": "Deja de desplazarte. Nuestro planeta no está perdido. Los ríos se recuperan. Los bosques crecen. Los océanos se están limpiando.",
-      "ar": "توقف عن التمرير. كوكبنا ليس ضائعًا. الأنهار تتعافى. الغابات تنهض. المحيطات تُنظَّف."
+      "ar": "توقف عن التمرير. كوكبنا ليس ضائعًا. الأنهار تتعافى. الغابات تنهض. المحيطات تُنظَّف.",
+      "it": "Smettila di scorrere. Il nostro pianeta non è perduto. I fiumi stanno guarendo. Le foreste stanno salendo. Gli oceani vengono ripuliti."
      }
     ],
     [
@@ -321,7 +356,8 @@
       "en": "83 real solutions and real people behind every one. Because saving a planet is saving us.",
       "fr": "83 vraies solutions, et de vraies personnes derrière chacune. Parce que sauver une planète, c'est nous sauver.",
       "es": "83 soluciones reales y personas reales detrás de cada una. Porque salvar un planeta es salvarnos.",
-      "ar": "83 حلًا حقيقيًا وأناس حقيقيون وراء كل منها. لأن إنقاذ كوكب هو إنقاذ لنا."
+      "ar": "83 حلًا حقيقيًا وأناس حقيقيون وراء كل منها. لأن إنقاذ كوكب هو إنقاذ لنا.",
+      "it": "83 soluzioni reali e persone reali dietro ogni uno. Perche' salvare un pianeta ci sta salvando."
      }
     ],
     [
@@ -331,7 +367,8 @@
       "en": "Watch what's working.",
       "fr": "Regardez ce qui fonctionne.",
       "es": "Mira lo que funciona.",
-      "ar": "شاهد ما ينجح."
+      "ar": "شاهد ما ينجح.",
+      "it": "Guarda cosa sta funzionando."
      }
     ],
     [
@@ -341,7 +378,8 @@
       "en": "Breathe in. Half the oxygen on Earth comes from tiny ocean plankton.",
       "fr": "Inspirez. La moitié de l'oxygène sur Terre vient de minuscules planctons océaniques.",
       "es": "Respira. La mitad del oxígeno de la Tierra viene del diminuto plancton del océano.",
-      "ar": "خذ نفسًا. نصف الأكسجين على الأرض يأتي من عوالق محيطية دقيقة."
+      "ar": "خذ نفسًا. نصف الأكسجين على الأرض يأتي من عوالق محيطية دقيقة.",
+      "it": "Respira. Meta' dell'ossigeno sulla Terra proviene dal piccolo plancton oceanico."
      }
     ],
     [
@@ -351,7 +389,8 @@
       "en": "A new NASA telescope, a million miles out, sees a hundred times more sky than Hubble, and may find over 100,000 worlds.",
       "fr": "Un nouveau télescope de la NASA, à un million de miles, voit cent fois plus de ciel que Hubble et pourrait trouver plus de 100 000 mondes.",
       "es": "Un nuevo telescopio de la NASA, a un millón de millas, ve cien veces más cielo que el Hubble y podría encontrar más de 100.000 mundos.",
-      "ar": "تلسكوب جديد لـ NASA على بعد مليون ميل يرى من السماء مئة ضعف ما يراه هابل، وقد يكتشف أكثر من 100,000 عالم."
+      "ar": "تلسكوب جديد لـ NASA على بعد مليون ميل يرى من السماء مئة ضعف ما يراه هابل، وقد يكتشف أكثر من 100,000 عالم.",
+      "it": "Un nuovo telescopio della NASA, un milione di miglia fuori, vede un centinaio di volte più cielo di Hubble, e può trovare oltre 100.000 mondi."
      }
     ],
     [
@@ -361,7 +400,8 @@
       "en": "Liftoff. Every launch now carries hope. Eyes in orbit watch hurricanes, wildfires and rising seas so families get warned in time. Follow every launch, live.",
       "fr": "Décollage. Chaque lancement porte désormais de l'espoir. Des yeux en orbite surveillent ouragans, incendies et montée des mers pour que les familles soient prévenues à temps. Suivez chaque lancement en direct.",
       "es": "Despegue. Cada lanzamiento lleva ahora esperanza. Ojos en órbita vigilan huracanes, incendios y la subida del mar para que las familias reciban aviso a tiempo. Sigue cada lanzamiento en vivo.",
-      "ar": "انطلاق. كل إطلاق يحمل الآن أملًا. عيون في المدار تراقب الأعاصير وحرائق الغابات وارتفاع البحار كي تُحذَّر العائلات في الوقت المناسب. تابع كل إطلاق مباشرة."
+      "ar": "انطلاق. كل إطلاق يحمل الآن أملًا. عيون في المدار تراقب الأعاصير وحرائق الغابات وارتفاع البحار كي تُحذَّر العائلات في الوقت المناسب. تابع كل إطلاق مباشرة.",
+      "it": "Sollevamento. Ogni lancio ora porta speranza. Gli occhi in orbita guardano gli uragani, i fuochi selvatici e i mari in aumento così le famiglie si avvertono nel tempo. Seguire ogni lancio, dal vivo."
      }
     ],
     [
@@ -371,7 +411,8 @@
       "en": "We go to space to protect the only home we have.",
       "fr": "Nous allons dans l'espace pour protéger le seul foyer que nous ayons.",
       "es": "Vamos al espacio para proteger el único hogar que tenemos.",
-      "ar": "نذهب إلى الفضاء لنحمي الموطن الوحيد الذي نملكه."
+      "ar": "نذهب إلى الفضاء لنحمي الموطن الوحيد الذي نملكه.",
+      "it": "Andiamo nello spazio per proteggere l'unica casa che abbiamo."
      }
     ],
     [
@@ -381,7 +422,8 @@
       "en": "We don't have to save the whole world. One river. One reef. One tree. Donate. Volunteer. Join in.",
       "fr": "Pas besoin de sauver le monde entier. Une rivière. Un récif. Un arbre. Donnez. Portez-vous bénévole. Participez.",
       "es": "No tenemos que salvar el mundo entero. Un río. Un arrecife. Un árbol. Dona. Sé voluntario. Súmate.",
-      "ar": "لسنا مضطرين لإنقاذ العالم كله. نهر واحد. شعاب واحدة. شجرة واحدة. تبرّع. تطوّع. شارك."
+      "ar": "لسنا مضطرين لإنقاذ العالم كله. نهر واحد. شعاب واحدة. شجرة واحدة. تبرّع. تطوّع. شارك.",
+      "it": "Non dobbiamo salvare il mondo intero. Un fiume. Una barriera corallina. Un albero. Donate. Volontariato. Entra."
      }
     ],
     [
@@ -391,7 +433,8 @@
       "en": "Every fact here is sourced from NASA, NOAA and ESA. Saving a planet is saving people.",
       "fr": "Chaque fait ici provient de la NASA, de la NOAA et de l'ESA. Sauver une planète, c'est sauver des gens.",
       "es": "Cada dato aquí proviene de la NASA, la NOAA y la ESA. Salvar un planeta es salvar a las personas.",
-      "ar": "كل حقيقة هنا مصدرها NASA وNOAA وESA. إنقاذ كوكب هو إنقاذ للناس."
+      "ar": "كل حقيقة هنا مصدرها NASA وNOAA وESA. إنقاذ كوكب هو إنقاذ للناس.",
+      "it": "Ogni fatto qui è fonte dalla NASA, NOAA e ESA. Salvare un pianeta sta salvando le persone."
      }
     ],
     [
@@ -401,7 +444,8 @@
       "en": "Follow Saving Planets.",
       "fr": "Suivez Saving Planets.",
       "es": "Sigue a Saving Planets.",
-      "ar": "تابعوا Saving Planets."
+      "ar": "تابعوا Saving Planets.",
+      "it": "Seguire Saving Planets."
      }
     ]
    ]
@@ -411,7 +455,8 @@
     "en": "Silent background loop: Earth at sunrise from orbit, waves on a beach, and forest canopy from above.",
     "fr": "Boucle de fond silencieuse : la Terre au lever du soleil vue de l'orbite, des vagues sur une plage et la canopée vue d'en haut.",
     "es": "Bucle de fondo sin sonido: la Tierra al amanecer vista desde la órbita, olas en una playa y el dosel de un bosque desde arriba.",
-    "ar": "مقطع خلفية صامت متكرر: الأرض عند الشروق من المدار، وأمواج على شاطئ، وقمم أشجار الغابة من الأعلى."
+    "ar": "مقطع خلفية صامت متكرر: الأرض عند الشروق من المدار، وأمواج على شاطئ، وقمم أشجار الغابة من الأعلى.",
+    "it": "Ciclo di sfondo silenzioso: la Terra all'alba dall'orbita, le onde su una spiaggia e la baldacchino della foresta dall'alto."
    },
    "cues": [
     [
@@ -421,7 +466,8 @@
       "en": "[No audio. Earth at sunrise from orbit, waves on a beach, forest canopy from above.]",
       "fr": "[Sans son. La Terre au lever du soleil vue de l'orbite, des vagues sur une plage, la canopée vue d'en haut.]",
       "es": "[Sin sonido. La Tierra al amanecer desde la órbita, olas en una playa, el dosel de un bosque desde arriba.]",
-      "ar": "[بلا صوت. الأرض عند الشروق من المدار، أمواج على شاطئ، قمم الغابة من الأعلى.]"
+      "ar": "[بلا صوت. الأرض عند الشروق من المدار، أمواج على شاطئ، قمم الغابة من الأعلى.]",
+      "it": "Non c'e' audio. Terra all'alba dall'orbita, onde su una spiaggia, baldacchino della foresta dall'alto.]"
      }
     ]
    ]
@@ -431,7 +477,8 @@
     "en": "A rocket launch and Earth from orbit (NASA footage) with the words \"Solutions, minus the doom\"; SI-generated scenes of Earth, ocean, forest and rivers; NASA footage of the Space Station, the Amazon, a reef island, the Sun and satellites; real screen recordings of the Saving Planets site (Solutions, CO2M, Mission Blue Hope Spots, Ways to Help, the Lesson Plan Builder, the Kids Planet Map, the 3D Satellite Explorer, Search, Amazing Facts, the Live Launch Tracker, the homepage in four languages and Myth vs Fact); and a sprouting Earth with www.savingplanets.com.",
     "fr": "Un lancement de fusée et la Terre vue de l'orbite (images NASA) avec les mots « Des solutions, sans le catastrophisme » ; des scènes générées par SI de la Terre, de l'océan, de la forêt et des rivières ; des images NASA de la Station spatiale, de l'Amazonie, d'une île récifale, du Soleil et de satellites ; de vraies captures d'écran du site Saving Planets (Solutions, CO2M, Hope Spots de Mission Blue, Comment aider, le générateur de plans de cours, la carte de la planète pour enfants, l'explorateur de satellites 3D, la recherche, les Faits étonnants, le suivi des lancements en direct, la page d'accueil en quatre langues et Mythe ou réalité) ; et une Terre qui germe avec www.savingplanets.com.",
     "es": "Un lanzamiento de cohete y la Tierra desde la órbita (imágenes de la NASA) con las palabras «Soluciones, sin catastrofismo»; escenas generadas por SI de la Tierra, el océano, el bosque y los ríos; imágenes de la NASA de la Estación Espacial, la Amazonía, una isla de arrecife, el Sol y satélites; grabaciones reales de pantalla del sitio Saving Planets (Soluciones, CO2M, Hope Spots de Mission Blue, Formas de ayudar, el creador de planes de clase, el Mapa del Planeta para niños, el Explorador de satélites 3D, la búsqueda, los Datos asombrosos, el rastreador de lanzamientos en vivo, la portada en cuatro idiomas y Mito o realidad); y una Tierra que brota con www.savingplanets.com.",
-    "ar": "إطلاق صاروخ والأرض من المدار (لقطات ناسا) مع عبارة «حلول بلا تهويل»؛ مشاهد مولّدة بالذكاء الاصطناعي للأرض والمحيط والغابة والأنهار؛ لقطات من ناسا لمحطة الفضاء والأمازون وجزيرة مرجانية والشمس والأقمار الصناعية؛ تسجيلات شاشة حقيقية لموقع Saving Planets (الحلول، CO2M، مواقع الأمل من Mission Blue، طرق المساعدة، منشئ خطط الدروس، خريطة الكوكب للأطفال، مستكشف الأقمار الصناعية ثلاثي الأبعاد، البحث، الحقائق المذهلة، متتبع الإطلاقات المباشر، الصفحة الرئيسية بأربع لغات، وخرافة أم حقيقة)؛ وأرض تنبت منها نبتة مع www.savingplanets.com."
+    "ar": "إطلاق صاروخ والأرض من المدار (لقطات ناسا) مع عبارة «حلول بلا تهويل»؛ مشاهد مولّدة بالذكاء الاصطناعي للأرض والمحيط والغابة والأنهار؛ لقطات من ناسا لمحطة الفضاء والأمازون وجزيرة مرجانية والشمس والأقمار الصناعية؛ تسجيلات شاشة حقيقية لموقع Saving Planets (الحلول، CO2M، مواقع الأمل من Mission Blue، طرق المساعدة، منشئ خطط الدروس، خريطة الكوكب للأطفال، مستكشف الأقمار الصناعية ثلاثي الأبعاد، البحث، الحقائق المذهلة، متتبع الإطلاقات المباشر، الصفحة الرئيسية بأربع لغات، وخرافة أم حقيقة)؛ وأرض تنبت منها نبتة مع www.savingplanets.com.",
+    "it": "Un lancio di razzi e la Terra dall'orbita (film NASA) con le parole \"Soluzioni, meno il destino\"; scene generate da SI di terra, oceano, foresta e fiumi; filmati della NASA della Stazione Spaziale, l'Amazzonia, un'isola di barriera corallina, i satelliti Sunrou Tracks; registrazioni reali dello schermo del sito Saving Planets (Soluzioni, CO2M, Mission Blue Hope Spots, Ways to Help)."
    },
    "cues": [
     [
@@ -441,7 +488,8 @@
       "en": "Our planet faces big problems.",
       "fr": "Notre planète fait face à de grands problèmes.",
       "es": "Nuestro planeta enfrenta grandes problemas.",
-      "ar": "يواجه كوكبنا مشكلات كبيرة."
+      "ar": "يواجه كوكبنا مشكلات كبيرة.",
+      "it": "Il nostro pianeta affronta grossi problemi."
      }
     ],
     [
@@ -451,7 +499,8 @@
       "en": "But for every problem, people are already building solutions.",
       "fr": "Mais pour chaque problème, des gens construisent déjà des solutions.",
       "es": "Pero para cada problema, ya hay personas construyendo soluciones.",
-      "ar": "لكن لكل مشكلة، هناك أشخاص يبنون الحلول بالفعل."
+      "ar": "لكن لكل مشكلة، هناك أشخاص يبنون الحلول بالفعل.",
+      "it": "Ma per ogni problema, le persone stanno già costruendo soluzioni."
      }
     ],
     [
@@ -461,7 +510,8 @@
       "en": "Saving Planets brings them together in one place.",
       "fr": "Saving Planets les réunit en un seul endroit.",
       "es": "Saving Planets las reúne en un solo lugar.",
-      "ar": "يجمعها Saving Planets في مكان واحد."
+      "ar": "يجمعها Saving Planets في مكان واحد.",
+      "it": "Saving Planets li riunisce in un unico posto."
      }
     ],
     [
@@ -471,7 +521,8 @@
       "en": "Explore 120 real solutions across oceans, forests, lakes, rivers, and space.",
       "fr": "Explorez 120 solutions réelles pour les océans, les forêts, les lacs, les rivières et l'espace.",
       "es": "Explora 120 soluciones reales para océanos, bosques, lagos, ríos y el espacio.",
-      "ar": "استكشف 120 حلاً حقيقياً للمحيطات والغابات والبحيرات والأنهار والفضاء."
+      "ar": "استكشف 120 حلاً حقيقياً للمحيطات والغابات والبحيرات والأنهار والفضاء.",
+      "it": "Esplora 120 soluzioni reali attraverso oceani, foreste, laghi, fiumi e spazio."
      }
     ],
     [
@@ -481,7 +532,8 @@
       "en": "New this week: satellites that track the carbon we put in the air, and Hope Spots protecting the ocean in 115 countries.",
       "fr": "Nouveau cette semaine : des satellites qui suivent le carbone que nous rejetons dans l'air, et des Hope Spots qui protègent l'océan dans 115 pays.",
       "es": "Novedad esta semana: satélites que rastrean el carbono que emitimos al aire y Hope Spots que protegen el océano en 115 países.",
-      "ar": "جديد هذا الأسبوع: أقمار صناعية تتتبع الكربون الذي نطلقه في الهواء، ومواقع الأمل (Hope Spots) التي تحمي المحيط في 115 دولة."
+      "ar": "جديد هذا الأسبوع: أقمار صناعية تتتبع الكربون الذي نطلقه في الهواء، ومواقع الأمل (Hope Spots) التي تحمي المحيط في 115 دولة.",
+      "it": "Nuova questa settimana: satelliti che tracciano il carbonio che mettiamo in aria, e Speranza Spots proteggere l'oceano in 115 paesi."
      }
     ],
     [
@@ -491,7 +543,8 @@
       "en": "Every one helps people and nature.",
       "fr": "Chacune aide les gens et la nature.",
       "es": "Cada una ayuda a las personas y a la naturaleza.",
-      "ar": "كل منها يساعد الناس والطبيعة."
+      "ar": "كل منها يساعد الناس والطبيعة.",
+      "it": "Ognuno aiuta le persone e la natura."
      }
     ],
     [
@@ -501,7 +554,8 @@
       "en": "Teachers can build free lesson plans in seconds, from kindergarten to university, tagged to NGSS-style standards.",
       "fr": "Les enseignants peuvent créer des plans de cours gratuits en quelques secondes, de la maternelle à l'université, alignés sur des normes de type NGSS.",
       "es": "Los docentes pueden crear planes de clase gratuitos en segundos, desde preescolar hasta la universidad, etiquetados con estándares tipo NGSS.",
-      "ar": "يمكن للمعلمين إنشاء خطط دروس مجانية في ثوانٍ، من رياض الأطفال إلى الجامعة، مرتبطة بمعايير على غرار NGSS."
+      "ar": "يمكن للمعلمين إنشاء خطط دروس مجانية في ثوانٍ، من رياض الأطفال إلى الجامعة، مرتبطة بمعايير على غرار NGSS.",
+      "it": "Gli insegnanti possono costruire piani di lezione gratuiti in pochi secondi, dall'asilo all'università, contrassegnati con gli standard di stile NGSS."
      }
     ],
     [
@@ -511,7 +565,8 @@
       "en": "Kids explore the Planet Map, and students build a satellite piece by piece in 3D.",
       "fr": "Les enfants explorent la carte de la planète, et les élèves construisent un satellite pièce par pièce en 3D.",
       "es": "Los niños exploran el Mapa del Planeta y los estudiantes construyen un satélite pieza por pieza en 3D.",
-      "ar": "يستكشف الأطفال خريطة الكوكب، ويبني الطلاب قمراً صناعياً قطعة قطعة بتقنية ثلاثية الأبعاد."
+      "ar": "يستكشف الأطفال خريطة الكوكب، ويبني الطلاب قمراً صناعياً قطعة قطعة بتقنية ثلاثية الأبعاد.",
+      "it": "I bambini esplorano la mappa del pianeta, e gli studenti costruiscono un pezzo per pezzo satellite in 3D."
      }
     ],
     [
@@ -521,7 +576,8 @@
       "en": "Search any topic, discover amazing facts, and follow live launches, in English, French, Spanish, and Arabic.",
       "fr": "Recherchez n'importe quel sujet, découvrez des faits étonnants et suivez les lancements en direct, en anglais, français, espagnol et arabe.",
       "es": "Busca cualquier tema, descubre datos asombrosos y sigue lanzamientos en vivo, en inglés, francés, español y árabe.",
-      "ar": "ابحث عن أي موضوع، واكتشف حقائق مذهلة، وتابع عمليات الإطلاق مباشرة، بالإنجليزية والفرنسية والإسبانية والعربية."
+      "ar": "ابحث عن أي موضوع، واكتشف حقائق مذهلة، وتابع عمليات الإطلاق مباشرة، بالإنجليزية والفرنسية والإسبانية والعربية.",
+      "it": "Cerca qualsiasi argomento, scopri fatti sorprendenti e segui i lanci dal vivo, in inglese, francese, spagnolo e arabo."
      }
     ],
     [
@@ -531,7 +587,8 @@
       "en": "Learn it, teach it, and help save our planet.",
       "fr": "Apprenez-le, enseignez-le et aidez à sauver notre planète.",
       "es": "Apréndelo, enséñalo y ayuda a salvar nuestro planeta.",
-      "ar": "تعلّمه، وعلّمه، وساعد في إنقاذ كوكبنا."
+      "ar": "تعلّمه، وعلّمه، وساعد في إنقاذ كوكبنا.",
+      "it": "Imparalo, insegnalo e aiuta a salvare il nostro pianeta."
      }
     ]
    ]

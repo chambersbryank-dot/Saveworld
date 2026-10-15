@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate /fr/, /es/, /ar/ translations of the pages in PAGES from the English originals.
+"""Generate /fr/, /es/, /ar/, /it/ translations of the pages in PAGES from the English originals.
 Translations live in i18n/<lang>.json (English string -> translation; missing = English kept).
 Run from repo root:  python3 scripts/i18n-build.py   then  node scripts/i18n-check.js
 Needs: pip install beautifulsoup4"""
@@ -7,11 +7,11 @@ import json, re, os, hashlib, sys
 from bs4 import BeautifulSoup, Comment
 
 SITE = 'https://www.savingplanets.com/'
-LANGS = ['fr', 'es', 'ar']
+LANGS = ['fr', 'es', 'ar', 'it']
 PAGES = [l.strip() for l in open('i18n/pages.txt', encoding='utf8') if l.strip() and not l.startswith('#')]  # pages to translate
-LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'العربية'}
-LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية'}
-SWITCH_ARIA = {'en': 'Language', 'fr': 'Langue', 'es': 'Idioma', 'ar': 'اللغة'}
+LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'العربية', 'it': 'IT'}
+LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}
+SWITCH_ARIA = {'en': 'Language', 'fr': 'Langue', 'es': 'Idioma', 'ar': 'اللغة', 'it': 'Lingua'}
 ATTRS = ('alt', 'aria-label', 'title', 'data-title', 'data-image-alt', 'placeholder', 'data-status', 'data-arrival-label')
 META = {'description', 'twitter:description', 'twitter:title', 'og:description', 'og:title'}
 FFI = 'For Further Information: '
@@ -146,7 +146,7 @@ def build(page, lang, m):
     head = soup.head
     can = head.find('link', rel='canonical')
     extra = BeautifulSoup(hreflang_links(page) + f'\n<meta name="i18n-source" content="{page} {src_hash(page)}">'
-                          + f'\n<meta property="og:locale" content="{ {"fr":"fr_FR","es":"es_ES","ar":"ar_AR"}[lang] }">', 'html.parser')
+                          + f'\n<meta property="og:locale" content="{ {"fr":"fr_FR","es":"es_ES","ar":"ar_AR","it":"it_IT"}[lang] }">', 'html.parser')
     (can.insert_after(extra) if can else head.append(extra))
     ul = soup.select_one('nav#topnav ul.nav-links')
     if ul: ul.append(BeautifulSoup(switcher(page, lang, '../'), 'html.parser'))

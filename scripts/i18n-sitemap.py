@@ -1,7 +1,7 @@
 """Rewrite sitemap.xml i18n entries: every page in i18n/pages.txt gets fr/es/ar URLs, and English + translated
 entries carry xhtml:link hreflang alternates. Idempotent; leaves other English entries untouched."""
 import re, datetime
-SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar']
+SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
 PAGES = [l.strip() for l in open('i18n/pages.txt', encoding='utf8') if l.strip() and not l.startswith('#')]
 s = open('sitemap.xml', encoding='utf8').read()
 def alts(p):
@@ -10,7 +10,7 @@ urls = []
 for u in re.findall(r'<url>.*?</url>', s, flags=re.S):
     u = re.sub(r'<xhtml:link [^>]*/>', '', u)
     loc = re.search(r'<loc>([^<]+)</loc>', u).group(1)
-    if re.match(re.escape(SITE) + r'(fr|es|ar)/', loc): continue
+    if re.match(re.escape(SITE) + r'(fr|es|ar|it)/', loc): continue
     p = loc[len(SITE):]
     if p in PAGES: u = u.replace('</loc>', '</loc>' + alts(p), 1)
     urls.append(u)

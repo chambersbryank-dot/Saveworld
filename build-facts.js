@@ -27,7 +27,7 @@ function buildFacts() {
     cards.push({ title, key: strip(m[0]).toLowerCase(), html: m[0] });
   }
 
-  const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
+  const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
    
     .map(m => path.basename(m[1].trim())).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && f !== FILE && fs.existsSync(f));
   const seen = new Set();

@@ -14,8 +14,8 @@ def wr(f, s):
     if not os.path.exists(f) or rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
 esc = lambda s: html.escape(html.unescape(s), quote=True)  # idempotent: never double-encode
-LANGS = ['fr', 'es', 'ar']
-V = '20261013a'
+LANGS = ['fr', 'es', 'ar', 'it']
+V = '20261015it'
 CSS = f'<link rel="stylesheet" href="batchb.css?v={V}">'
 JS = f'<script src="batchb.js?v={V}" defer></script>'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
@@ -78,12 +78,13 @@ UI = {
  "Who is behind {x}, and where does the work happen?": ("Qui est derrière {x}, et où le travail a-t-il lieu ?", "¿Quién está detrás de {x} y dónde se realiza el trabajo?", "من يقف وراء {x}، وأين يجري العمل؟"),
  "How does {x} help both people and nature? Use one fact from this page.": ("Comment {x} aide-t-il à la fois les gens et la nature ? Utilisez un fait de cette page.", "¿Cómo ayuda {x} a las personas y a la naturaleza? Usa un dato de esta página.", "كيف يساعد {x} الناس والطبيعة معًا؟ استخدم معلومة واحدة من هذه الصفحة."),
 }
-GLOSS_LABEL = {'en': 'Glossary', 'fr': 'Glossaire', 'es': 'Glosario', 'ar': 'المسرد'}
+GLOSS_LABEL = {'en': 'Glossary', 'fr': 'Glossaire', 'es': 'Glosario', 'ar': 'المسرد', 'it': 'Glossario'}
 
 def merge_i18n():
     for i, l in enumerate(LANGS):
         p = f'i18n/{l}.json'; m = json.load(open(p, encoding='utf8')); n0 = json.dumps(m, ensure_ascii=False)
-        for k, v in UI.items(): m[k] = v[i]
+        for k, v in UI.items():
+            if i < len(v): m[k] = v[i]
         for t in GL:
             m[t['en']['term']] = t[l]['term']; m[t['en']['def']] = t[l]['def']
         if json.dumps(m, ensure_ascii=False) != n0: json.dump(m, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0)

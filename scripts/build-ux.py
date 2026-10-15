@@ -4,7 +4,7 @@ grouped nav + sticky Help/Donate, homepage impact strip / domain sections / late
 domain+hub filter and per-hub 'show more', auto solution counts, lazy images, About video 720p-first
 preload=none, canonical / for index pages, distinct FR/ES Hope Spots titles."""
 import re, json, glob, os, html
-LANGS = ['en', 'fr', 'es', 'ar']
+LANGS = ['en', 'fr', 'es', 'ar', 'it']
 SITE = 'https://www.savingplanets.com/'
 def d(l): return '' if l == 'en' else l + '/'
 def rd(p): return open(p, encoding='utf8').read()
@@ -61,6 +61,16 @@ T = {
    dom=[('الماء','المحيطات والأنهار والبحيرات'),('اليابسة','الغابات والناس الذين يعيشون فيها'),('الفضاء','الأقمار الصناعية والبعثات ومدار أنظف')],
    seeall='عرض كل الحلول ({n}): {d}', news='آخر المستجدات', newsintro='ما تغيّر مؤخرًا في الموقع. اشترك في النشرة الأسبوعية لتصلك كل أسبوع.',
    kidsh='الأطفال والمعلمون', filt='عرض', all='الكل', more='عرض الكل ({n})', less='عرض أقل', hub='المركز', allhubs='كل المراكز', menu='القائمة'),
+ 'it': dict(sol='Soluzioni', kt='Bambini e insegnanti', sl='Spazio e lanci', gi='Partecipa', ab='Chi siamo', help='Aiuta / Dona',
+   items={'Solutions.html':'Tutte le soluzioni','World_Map.html':'Mappa del mondo','Oceans.html':'Oceano','Rivers.html':'Fiumi','Lakes.html':'Laghi','Deforestation.html':'Foreste','Earth_Observation.html':'Osservazione della Terra','Search.html':'Cerca','Topics.html':'Argomenti dalla A alla Z',
+     'Kids_Map.html':'Mappa del pianeta per bambini','Amazing_Facts.html':'Fatti incredibili','Satellite_Explorer.html':'Esploratore di satelliti','Lesson_Builder.html':'Creatore di piani di lezione','Teachers.html':'Schede per insegnanti','Myth_vs_Fact.html':'Mito o realtà','Glossary.html':'Glossario',
+     'Space.html':'Spazio','Artemis_II.html#launches':'Tracker dei lanci in diretta','Planetary_Defense.html':'Difesa planetaria','Space_Weather.html':'Meteo spaziale','Space_Disposal.html':'Smaltimento dei detriti spaziali','Project-Rawane.html':'Progetto Rawane','Rawanes_Mission_Log.html':'Diario di missione di Rawane',
+     'Ways_to_Help.html':'Come aiutare','Find_a_Cleanup.html':'Trova una pulizia','index.html#newsletter':'Brief settimanale','Contact.html':'Contatti',
+     'About.html':'Chi siamo','Editorial_Policy.html':'Politica editoriale','Corrections.html':'Correzioni','Press.html':'Stampa e media','Privacy.html':'Privacy'},
+   cta1='Esplora tutte le soluzioni', cta2='Come aiutare', imp=['soluzioni reali e con fonti','hub di soluzioni','lingue','strumenti per bambini e insegnanti'],
+   dom=[('Acqua','Oceani, fiumi e laghi'),('Terra','Le foreste e le persone che ci vivono'),('Spazio','Satelliti, missioni e un’orbita più pulita')],
+   seeall='Vedi tutte le {n} soluzioni: {d}', news='Ultime novità', newsintro='Cosa è cambiato di recente sul sito. Iscriviti al Brief settimanale per riceverlo ogni settimana.',
+   kidsh='Bambini e insegnanti', filt='Mostra', all='Tutto', more='Mostra tutte ({n})', less='Mostra di meno', hub='Hub', allhubs='Tutti gli hub', menu='Menu'),
 }
 GROUPS = [('sol', ['Solutions.html','World_Map.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
@@ -242,7 +252,7 @@ def page_pass(p, l, n):
     # canonical/og for index pages
     if page == 'index.html':
         s = s.replace(f'{SITE}{d(l)}index.html"', f'{SITE}{d(l)}"')
-    s = re.sub(r'(href="%s(?:(?:fr|es|ar)/)?)index\.html"' % re.escape(SITE), r'\1"', s)
+    s = re.sub(r'(href="%s(?:(?:fr|es|ar|it)/)?)index\.html"' % re.escape(SITE), r'\1"', s)
     if page == 'About.html':
         def about_vid(m):
             tag = m.group(0)
@@ -264,7 +274,7 @@ def page_pass(p, l, n):
 def sitemap():
     s = rd('sitemap.xml'); o = s
     s = re.sub(r'\s*<url><loc>[^<]*404\.html</loc>.*?</url>', '', s, flags=re.S)
-    s = re.sub(r'(%s(?:(?:fr|es|ar)/)?)index\.html' % re.escape(SITE), r'\1', s)
+    s = re.sub(r'(%s(?:(?:fr|es|ar|it)/)?)index\.html' % re.escape(SITE), r'\1', s)
     wr('sitemap.xml', s)
 
 if __name__ == '__main__':

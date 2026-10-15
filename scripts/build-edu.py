@@ -10,7 +10,7 @@ import edu_text as X
 import sx_media as SM
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
-LANGS = ['fr', 'es', 'ar']
+LANGS = ['fr', 'es', 'ar', 'it']
 CSSV = '20261014m'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
@@ -58,7 +58,7 @@ def collect():
 def data_for(lang, hubs, PL):
     m = {} if lang == 'en' else json.load(open(f'i18n/{lang}.json', encoding='utf8'))
     T = (lambda s: s) if lang == 'en' else (lambda s: I.lookup(m, s) or s)
-    li = {'en': 0, 'fr': 1, 'es': 2, 'ar': 3}[lang]
+    li = {'en': 0, 'fr': 1, 'es': 2, 'ar': 3, 'it': 4}[lang]
     def url(u):  # links from a page in the language folder
         if lang == 'en' or re.match(r'^(https?:|#)', u): return u
         return u if u.split('#')[0] in PL else '../' + u
@@ -98,7 +98,7 @@ def shell(page, title, desc, body_class, glass, main, rtype='LearningResource'):
     scripts = re.findall(r'<script src="site\.js[^"]*"></script>', t)[0]
     return (head + '</head>\n' + f'<body class="toc-sub {body_class}" data-glass="{glass}"><a class="skip-link" href="#main">Skip to content</a>{nav}<main id="main">\n'
             + f'<section class="page-hero"><div class="page-hero-content"><h1>{esc(title)}</h1><p>{esc(desc)}</p></div></section>\n'
-            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script><script src="edu-extras.js?v=20261014u" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
+            + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script><script src="edu-extras.js?v=20261015it" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
 
 MAP_POS = {  # hub: (label, x, y, mobile x, mobile y)
  'Space_Weather.html': ('Space Weather', 86, 12, 72, 6), 'Planetary_Defense.html': ('Asteroids', 60, 10, 28, 13),
@@ -300,7 +300,8 @@ def main():
     T = dict(X.T); T.update(SM.T)
     for i, l in enumerate(LANGS):
         p = f'i18n/{l}.json'; m = json.load(open(p, encoding='utf8')); n0 = dict(m)
-        for k, v in T.items(): m[k] = v[i]
+        for k, v in T.items():
+            if i < len(v): m[k] = v[i]
         for lab, *_ in MAP_POS.values(): pass
         if m != n0: json.dump(m, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0)
     os.makedirs('assets/data', exist_ok=True)
@@ -321,7 +322,7 @@ def post_translate():
         f = f'{l}/Satellite_Explorer.html'
         if not os.path.exists(f): continue
         m = json.load(open(f'i18n/{l}.json', encoding='utf8')); s0 = rd(f)
-        o0 = s0; lab = {'fr': 'Français', 'es': 'Español', 'ar': 'العربية'}[l]
+        o0 = s0; lab = {'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}[l]
         s0 = re.sub(r'<track[^>]*assets/sx/[^>]*>', lambda mm: mm.group(0).replace('.en.vtt', f'.{l}.vtt').replace('srclang="en"', f'srclang="{l}"').replace('label="English"', f'label="{lab}"'), s0)
         s = re.sub(r'data-name="([^"]+)"', lambda mm: 'data-name="' + esc(m.get(html.unescape(mm.group(1)), html.unescape(mm.group(1)))) + '"', s0)
         if s != o0: open(f, 'w', encoding='utf8').write(s)

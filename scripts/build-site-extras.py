@@ -115,9 +115,10 @@ def fix(f, fm):
 
 def main():
     hl = hubs(); fm = footer_map(hl)
-    for i, l in enumerate(['fr', 'es', 'ar']):
+    for i, l in enumerate(['fr', 'es', 'ar', 'it']):
         p = f'i18n/{l}.json'; m = json.load(open(p, encoding='utf8')); n0 = dict(m)
-        for k, v in UI.items(): m.setdefault(k, v[i])
+        for k, v in UI.items():
+            if i < len(v): m.setdefault(k, v[i])
         if m != n0: json.dump(m, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0)
     write_generated('Sitemap.html', sitemap_page(hl))
     n = sum(fix(f, fm) for f in sorted(os.listdir('.')) if f.endswith('.html') and not f.startswith('google'))

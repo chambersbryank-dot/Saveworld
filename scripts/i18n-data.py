@@ -11,7 +11,7 @@ def strings(d):
         for p in m.get('crew') or []: yield p, 'role', p['role']
 src = json.load(open('assets/data/artemis.json', encoding='utf8'))
 miss = '--missing' in sys.argv
-for lang in ('fr', 'es', 'ar'):
+for lang in ('fr', 'es', 'ar', 'it'):
     tm = json.load(open(f'i18n/{lang}.json', encoding='utf8')); d = copy.deepcopy(src); d['lang'] = lang
     for obj, k, v in strings(d):
         if v in tm: obj[k] = tm[v]

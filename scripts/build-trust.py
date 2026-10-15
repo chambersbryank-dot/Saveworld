@@ -8,9 +8,10 @@ spec = importlib.util.spec_from_file_location('c', 'scripts/trust-content.py'); 
 E = lambda s, quote=True: html.escape(html.unescape(s), quote=quote)  # idempotent: never double-encode
 TPL = open('Press.html', encoding='utf8').read()
 FOOT = TPL[TPL.index('<footer>'):]
-TR = {'fr': {}, 'es': {}, 'ar': {}}
+TR = {'fr': {}, 'es': {}, 'ar': {}, 'it': {}}
 def T(t):  # register translation tuple, return English
-    for i, l in enumerate(('fr', 'es', 'ar'), 1): TR[l][t[0]] = t[i]
+    for i, l in enumerate(('fr', 'es', 'ar', 'it'), 1):
+        if i < len(t): TR[l][t[0]] = t[i]
     return t[0]
 PRESS_DESC = re.search(r'<meta name="description" content="([^"]*)"', TPL).group(1)
 PRESS_TITLE = re.search(r'<title>([^<]*)</title>', TPL).group(1)

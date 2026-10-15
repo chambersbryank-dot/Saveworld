@@ -5,7 +5,7 @@
 // --all also lists every English sitemap page that has no translation yet (informational).
 // Exit 0 = all translated pages current, 1 = something missing/stale in the translated set.
 const fs = require('fs'), crypto = require('crypto'), path = require('path');
-const LANGS = ['fr', 'es', 'ar'];
+const LANGS = ['fr', 'es', 'ar', 'it'];
 const PAGES = fs.readFileSync('i18n/pages.txt', 'utf8').split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
 function normalize(src) {
   return src.replace(/<span class="gl"><button[^>]*>([\s\S]*?)<\/button><span class="gl-pop"[^>]*>[\s\S]*?<\/span><\/span>/g, '$1')
@@ -32,7 +32,7 @@ for (const page of PAGES) {
 }
 if (process.argv.includes('--all')) {
   const all = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
-    .filter(u => !/\/(fr|es|ar)\//.test(u)).map(u => path.basename(u)).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && !PAGES.includes(f));
+    .filter(u => !/\/(fr|es|ar|it)\//.test(u)).map(u => path.basename(u)).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && !PAGES.includes(f));
   console.log(`Not translated (not in scope yet): ${all.length} pages`);
 }
 console.log(bad ? `${bad} translation(s) missing or stale. Update i18n/<lang>.json for new strings, then python3 scripts/i18n-build.py.` : 'All translations current.');

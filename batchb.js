@@ -4,6 +4,7 @@
   var T = { fr: { copied: 'Copié !', retrieved: 'Consulté le', from: 'sur', accessed: 'Consulté le' },
             es: { copied: '¡Copiado!', retrieved: 'Recuperado el', from: 'de', accessed: 'Consultado el' },
             ar: { copied: 'تم النسخ!', retrieved: 'استُرجع في', from: 'من', accessed: 'تاريخ الوصول' },
+            it: { copied: 'Copiato!', retrieved: 'Consultato il', from: 'da', accessed: 'Consultato il' },
             en: { copied: 'Copied!', retrieved: 'Retrieved', from: 'from', accessed: 'Accessed' } }[L] || null;
   T = T || { copied: 'Copied!', retrieved: 'Retrieved', from: 'from', accessed: 'Accessed' };
   // --- glossary popovers: tap/click toggles (works on iPad), hover on mouse devices, Esc / outside tap closes

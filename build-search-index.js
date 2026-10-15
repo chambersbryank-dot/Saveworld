@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
+const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
    
   .map(m => path.basename(m[1].trim()))
   .filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f))

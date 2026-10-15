@@ -1,6 +1,6 @@
 /* Nancy_Grace_Roman.html: daily distance + newest NASA image from assets/data/roman.json (built by scripts/build-roman.py), countdown. */
 (function () {
-  var pre = /\/(fr|es|ar)\//.test(location.pathname) ? '../' : '';
+  var pre = /\/(fr|es|ar|it)\//.test(location.pathname) ? '../' : '';
   var loc = document.documentElement.lang || 'en';
   function set(id, v) { var e = document.getElementById(id); if (e && v != null) e.textContent = v; }
   fetch(pre + 'assets/data/roman.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {

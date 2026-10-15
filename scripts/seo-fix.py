@@ -4,16 +4,17 @@ canonical/og:url, hreflang set incl. x-default, og:locale(+alternates), JSON-LD 
 width/height/lazy. Run after build-stats.js and after scripts/i18n-build.py (which calls it for translations)."""
 import glob, json, os, re, subprocess, sys
 from bs4 import BeautifulSoup
-SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar']
+SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
 NOINDEX = {'Project-R.html', '404.html'}
-LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR'}
+LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
 BRAND = ' | Saving Planets'
 # Language tag added to translated titles that would otherwise equal the English title (proper names).
-TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية'}
+TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية', 'it': ' · Italiano'}
 PAD = {'en': 'Sourced facts, the Five W\'s and why it matters, on Saving Planets.',
        'fr': 'Faits sourcés, les cinq W et l\'impact, sur Saving Planets.',
        'es': 'Datos con fuentes, las cinco W y su impacto, en Saving Planets.',
-       'ar': 'حقائق موثّقة والأسئلة الخمسة وأهمية الحل، على Saving Planets.'}
+       'ar': 'حقائق موثّقة والأسئلة الخمسة وأهمية الحل، على Saving Planets.',
+       'it': 'Fatti con fonti, le cinque W e perché conta, su Saving Planets.'}
 END = re.compile(r'(?<=[.!?؟。])\s+')
 _git = {}
 def gitdates(f):

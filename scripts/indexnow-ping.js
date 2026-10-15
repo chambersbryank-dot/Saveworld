@@ -23,7 +23,7 @@ if (args.includes('--all')) urls = sitemap();
 else {
   try {
     const files = sh('git diff --name-only --diff-filter=AM ' + since + ' HEAD').split('\n')
-      .filter(f => /^((fr|es|ar)\/)?[^/]+\.html$/.test(f) && !NOINDEX.has(f.split('/').pop()) && fs.existsSync(f));
+      .filter(f => /^((fr|es|ar|it)\/)?[^/]+\.html$/.test(f) && !NOINDEX.has(f.split('/').pop()) && fs.existsSync(f));
     urls = files.map(f => SITE + (f.replace(/(^|\/)index\.html$/, '$1')));
     if (files.length && fs.existsSync('sitemap.xml')) urls.push(SITE + 'sitemap.xml');
   } catch (e) { console.log('IndexNow: ref ' + since + ' unknown; falling back to sitemap'); since = 'sitemap'; urls = sitemap(); }

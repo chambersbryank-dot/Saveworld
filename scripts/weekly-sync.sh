@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Weekly (or daily; idempotent) translation sync. Hook for the daily translation sync routine:
-# refreshes Solution of the Week (rotation flips Sundays, HST) + batch-2 blocks, rebuilds /fr/ /es/ /ar/, sitemap, checks.
+# refreshes Solution of the Week (rotation flips Sundays, HST) + batch-2 blocks, rebuilds /fr/ /es/ /ar/ /it/, sitemap, checks.
 # Exit non-zero if a check fails. Commit + push only if `git status --porcelain` shows changes.
 # Roman: build-roman.py refreshes assets/data/roman.json (JPL Horizons distance + newest NASA image) before the builds.
 # Batch 4: build-batch4.py renders Do One Thing Today from assets/data/daily-actions.json (edit there), Community + Find a Cleanup pages, nav/footer links.
@@ -28,7 +28,7 @@ python3 scripts/i18n-build.py
 # Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors
 # (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.
 node scripts/i18n-check.js | tail -3
-python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar
+python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar/it
 python3 scripts/add-gtag.py
 python3 scripts/apply-heroes.py           # Oct 14: themed page heroes (all langs)
 python3 scripts/optimize-images.py        # Oct 14: WebP srcset for homepage cards (all langs)
@@ -38,8 +38,8 @@ python3 scripts/dept-contacts.py         # Oct 14: department inboxes (all langs
 python3 scripts/mailto-subjects.py        # Oct 14: purpose subject on every mailto (all langs)
 python3 scripts/disable-community.py     # Oct 14: Community Wall paused (archived; flag inside)
 python3 scripts/i18n-sitemap.py
-python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
-python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)
+python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/it
+python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/seo-audit.py | tail -3

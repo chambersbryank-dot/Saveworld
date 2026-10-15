@@ -120,4 +120,4 @@ def run(langs):
     return n
 
 if __name__ == '__main__':
-    print('seo-jsonld: updated', run(sys.argv[1:] or ['en', 'fr', 'es', 'ar']), 'pages')
+    print('seo-jsonld: updated', run(sys.argv[1:] or ['en', 'fr', 'es', 'ar', 'it']), 'pages')

@@ -80,8 +80,9 @@ def sources(s):
 MONTHS = {'en': 'January February March April May June July August September October November December'.split(),
           'fr': 'janvier février mars avril mai juin juillet août septembre octobre novembre décembre'.split(),
           'es': 'enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre'.split(),
-          'ar': 'يناير فبراير مارس أبريل مايو يونيو يوليو أغسطس سبتمبر أكتوبر نوفمبر ديسمبر'.split()}
-SRC_T = {'fr': ('{n} sources citées', '1 source citée'), 'es': ('{n} fuentes citadas', '1 fuente citada'), 'ar': ('{n} مصادر مذكورة', 'مصدر واحد مذكور')}
+          'ar': 'يناير فبراير مارس أبريل مايو يونيو يوليو أغسطس سبتمبر أكتوبر نوفمبر ديسمبر'.split(),
+          'it': 'gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre'.split()}
+SRC_T = {'fr': ('{n} sources citées', '1 source citée'), 'es': ('{n} fuentes citadas', '1 fuente citada'), 'ar': ('{n} مصادر مذكورة', 'مصدر واحد مذكور'), 'it': ('{n} fonti citate', '1 fonte citata')}
 
 # ---------- 3) related ----------
 def related():
@@ -131,13 +132,15 @@ def related_block(page, rel):
 
 # ---------- 4) difference strip ----------
 DIFF_LEAD = 'From the ocean floor to low Earth orbit, solutions minus the doom.'
-DIFF_BODY = '{n} real, sourced solutions across {h} hubs, explained the same simple way (Who, What, When, Where, Why), in English, French, Spanish and Arabic. Search by meaning, privately in your browser, powered by trusted MIT open-source tools.'
+DIFF_BODY = '{n} real, sourced solutions across {h} hubs, explained the same simple way (Who, What, When, Where, Why), in English, French, Spanish, Arabic and Italian. Search by meaning, privately in your browser, powered by trusted MIT open-source tools.'
 DIFF_T = {'fr': ("Du fond de l'océan à l'orbite terrestre basse, des solutions sans le catastrophisme.",
-                 "{n} solutions réelles et sourcées réparties en {h} pôles, expliquées de la même façon simple (Qui, Quoi, Quand, Où, Pourquoi), en anglais, français, espagnol et arabe. Recherchez par le sens, en toute confidentialité dans votre navigateur, grâce à des outils open source MIT de confiance."),
+                 "{n} solutions réelles et sourcées réparties en {h} pôles, expliquées de la même façon simple (Qui, Quoi, Quand, Où, Pourquoi), en anglais, français, espagnol, arabe et italien. Recherchez par le sens, en toute confidentialité dans votre navigateur, grâce à des outils open source MIT de confiance."),
           'es': ('Desde el fondo del océano hasta la órbita terrestre baja, soluciones sin catastrofismo.',
-                 '{n} soluciones reales y con fuentes en {h} áreas, explicadas de la misma forma sencilla (Quién, Qué, Cuándo, Dónde, Por qué), en inglés, francés, español y árabe. Busca por significado, de forma privada en tu navegador, con herramientas de código abierto MIT de confianza.'),
+                 '{n} soluciones reales y con fuentes en {h} áreas, explicadas de la misma forma sencilla (Quién, Qué, Cuándo, Dónde, Por qué), en inglés, francés, español, árabe e italiano. Busca por significado, de forma privada en tu navegador, con herramientas de código abierto MIT de confianza.'),
           'ar': ('من قاع المحيط إلى المدار الأرضي المنخفض، حلول بلا تهويل.',
-                 '{n} حلاً حقيقياً وموثّق المصادر في {h} محاور، مشروحة بالطريقة البسيطة نفسها (من، ماذا، متى، أين، لماذا)، بالإنجليزية والفرنسية والإسبانية والعربية. ابحث بالمعنى، بخصوصية داخل متصفحك، بأدوات مفتوحة المصدر موثوقة بترخيص MIT.')}
+                 '{n} حلاً حقيقياً وموثّق المصادر في {h} محاور، مشروحة بالطريقة البسيطة نفسها (من، ماذا، متى، أين، لماذا)، بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية. ابحث بالمعنى، بخصوصية داخل متصفحك، بأدوات مفتوحة المصدر موثوقة بترخيص MIT.'),
+          'it': ('Dal fondo dell’oceano all’orbita terrestre bassa, soluzioni senza catastrofismo.',
+                 '{n} soluzioni reali e con fonti in {h} hub, spiegate nello stesso modo semplice (Chi, Cosa, Quando, Dove, Perché), in inglese, francese, spagnolo, arabo e italiano. Cerca per significato, in privato nel tuo browser, con strumenti open source MIT di fiducia.')}
 UI = {'fr': {'Share this page': 'Partager cette page', 'Share': 'Partager', 'Share on X': 'Partager sur X', 'Share on Facebook': 'Partager sur Facebook',
              'Share on LinkedIn': 'Partager sur LinkedIn', 'Share by email': 'Partager par e-mail', 'Email': 'E-mail', 'Copy link': 'Copier le lien',
              'Link copied': 'Lien copié', 'Last reviewed:': 'Dernière révision :', 'Related Solutions': 'Solutions similaires',
@@ -152,7 +155,12 @@ UI = {'fr': {'Share this page': 'Partager cette page', 'Share': 'Partager', 'Sha
              'Share on LinkedIn': 'شارك على لينكدإن', 'Share by email': 'شارك عبر البريد الإلكتروني', 'Email': 'البريد', 'Copy link': 'نسخ الرابط',
              'Link copied': 'تم نسخ الرابط', 'Last reviewed:': 'آخر مراجعة:', 'Related Solutions': 'حلول ذات صلة',
              'More solutions like this one, matched by meaning.': 'حلول أخرى مشابهة لهذا الحل، مطابقة حسب المعنى.',
-             'What makes us different': 'ما يميزنا', 'Page review and sources': 'مراجعة الصفحة ومصادرها'}}
+             'What makes us different': 'ما يميزنا', 'Page review and sources': 'مراجعة الصفحة ومصادرها'},
+      'it': {'Share this page': 'Condividi questa pagina', 'Share': 'Condividi', 'Share on X': 'Condividi su X', 'Share on Facebook': 'Condividi su Facebook',
+             'Share on LinkedIn': 'Condividi su LinkedIn', 'Share by email': 'Condividi via email', 'Email': 'Email', 'Copy link': 'Copia link',
+             'Link copied': 'Link copiato', 'Last reviewed:': 'Ultima revisione:', 'Related Solutions': 'Soluzioni correlate',
+             'More solutions like this one, matched by meaning.': 'Altre soluzioni come questa, abbinate per significato.',
+             'What makes us different': 'Cosa ci rende diversi', 'Page review and sources': 'Revisione e fonti della pagina'}}
 
 def main():
     keys = {l: dict(UI[l]) for l in UI}

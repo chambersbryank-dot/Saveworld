@@ -23,7 +23,8 @@
       en: ['We use Google Analytics to understand how visitors use the site. Accept or decline?', 'Privacy', 'Accept', 'Decline', 'Analytics consent'],
       fr: ['Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent le site. Accepter ou refuser ?', 'Confidentialité', 'Accepter', 'Refuser', 'Consentement aux statistiques'],
       es: ['Usamos Google Analytics para entender cómo los visitantes usan el sitio. ¿Aceptar o rechazar?', 'Privacidad', 'Aceptar', 'Rechazar', 'Consentimiento de analítica'],
-      ar: ['نستخدم Google Analytics لفهم كيفية استخدام الزوار للموقع. هل تقبل أم ترفض؟', 'الخصوصية', 'قبول', 'رفض', 'الموافقة على التحليلات']
+      ar: ['نستخدم Google Analytics لفهم كيفية استخدام الزوار للموقع. هل تقبل أم ترفض؟', 'الخصوصية', 'قبول', 'رفض', 'الموافقة على التحليلات'],
+      it: ['Usiamo Google Analytics per capire come i visitatori usano il sito. Accetti o rifiuti?', 'Privacy', 'Accetta', 'Rifiuta', 'Consenso alle statistiche']
     };
     var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2), t = T[lang] || T.en;
     var about = lang === 'en' ? 'Privacy.html' : 'Privacy.html'; // Privacy.html exists in every language folder

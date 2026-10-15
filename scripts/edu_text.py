@@ -355,3 +355,12 @@ T.update({
 })
 
 T['Created by SI and Biological SI Partner'] = ('Created by SI and Biological SI Partner',) * 3
+
+# ---- Italian (Oct 15 2026): strings live in assets/data/edu-it.json (ui, lesson, kid blurbs, T tuple values).
+import json as _json, os as _os
+_f = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', 'assets', 'data', 'edu-it.json')
+if _os.path.exists(_f):
+    _it = _json.load(open(_f, encoding='utf8'))
+    UI['it'] = _it['ui']; LESSON['it'] = _it['lesson']
+    BLURB = {k: tuple(v[:6]) + (_it['blurb'].get(k, v[2]),) for k, v in BLURB.items()}
+    T = {k: tuple(v[:3]) + (_it['T'].get(k, k),) for k, v in T.items()}

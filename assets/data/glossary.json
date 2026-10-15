@@ -34,6 +34,13 @@
      "الهباء"
     ],
     "def": "جسيمات صغيرة جدًا من الغبار أو الدخان أو الملح أو التلوث تطفو في الهواء. يمكنها حجب ضوء الشمس والمساعدة في تكوّن السحب."
+   },
+   "it": {
+    "term": "Aerosol",
+    "match": [
+     "aerosol"
+    ],
+    "def": "Piccoli frammenti di polvere, fumo, sale o inquinamento che galleggiano nell'aria. Possono bloccare la luce del sole e aiutare le nuvole forma."
    }
   },
   {
@@ -70,6 +77,14 @@
      "كويكب"
     ],
     "def": "جسم صخري يدور حول الشمس، أصغر بكثير من الكوكب. يقع معظمها في حزام بين المريخ والمشتري."
+   },
+   "it": {
+    "term": "Asteroide",
+    "match": [
+     "asteroidi",
+     "asteroide"
+    ],
+    "def": "Un oggetto roccioso che orbita attorno al Sole, molto più piccolo di un pianeta. La maggior parte sono in una cintura tra Marte e Giove."
    }
   },
   {
@@ -101,6 +116,13 @@
      "التنوع البيولوجي"
     ],
     "def": "تنوّع جميع الكائنات الحية في مكان ما: النباتات والحيوانات والفطريات والميكروبات الدقيقة."
+   },
+   "it": {
+    "term": "Biodiversità",
+    "match": [
+     "biodiversità"
+    ],
+    "def": "La varietà di tutte le cose viventi in un posto: piante, animali, funghi e piccoli microbi."
    }
   },
   {
@@ -132,6 +154,14 @@
      "الكتلة الحيوية"
     ],
     "def": "الكمية الكلية للمادة الحية، مثل الخشب والأوراق في الغابة. قياسها يبيّن مقدار الكربون الذي تخزّنه النباتات."
+   },
+   "it": {
+    "term": "Biomassa",
+    "match": [
+     "biomassa",
+     "biomasse"
+    ],
+    "def": "La quantità totale di materiale vivente, come il legno e parte in una foresta. Misurarlo mostra quanto le piante di carbonio immagazzinano."
    }
   },
   {
@@ -163,6 +193,13 @@
      "ثاني أكسيد الكربون"
     ],
     "def": "غاز يزفره الإنسان والحيوان ويطلقه حرق الوقود. تمتصه النباتات، وزيادته في الهواء تُدفئ الكوكب."
+   },
+   "it": {
+    "term": "Anidride carbonica (CO₂)",
+    "match": [
+     "anidride carbonica (co₂)"
+    ],
+    "def": "Un gas che la gente e gli animali emettono e che brucia il carburante rilascia. Le piante lo prendono, e troppo di esso nell'aria riscalda il pianeta."
    }
   },
   {
@@ -198,6 +235,13 @@
      "الانبعاث الكتلي الإكليلي"
     ],
     "def": "سحابة ضخمة من الغاز المشحون تقذفها الشمس. إذا اصطدمت بالأرض قد تسبب الشفق القطبي وتعطّل الأقمار الصناعية وشبكات الكهرباء."
+   },
+   "it": {
+    "term": "Eiezione di massa coronale (CME)",
+    "match": [
+     "eiezione di massa coronale (cme)"
+    ],
+    "def": "Un'enorme nuvola di gas caricato buttato fuori dal Sole. Se colpisce la Terra può causare aurore e disturbare i satelliti e le reti elettriche."
    }
   },
   {
@@ -232,6 +276,13 @@
      "الإخراج من المدار"
     ],
     "def": "إنزال قمر صناعي أو قطعة من الحطام الفضائي من مدارها عمدًا، عادةً لكي تحترق في الغلاف الجوي."
+   },
+   "it": {
+    "term": "Deorbit",
+    "match": [
+     "deorbit"
+    ],
+    "def": "Per portare un satellite o un pezzo di spazzatura spaziale giù dall'orbita di proposito, di solito in modo che brucia nell'atmosfera."
    }
   },
   {
@@ -267,6 +318,14 @@
      "النظام البيئي"
     ],
     "def": "مجتمع من الكائنات الحية والمكان الذي تعيش فيه، مثل الشعاب المرجانية أو الغابة، يعتمد بعضها على بعض."
+   },
+   "it": {
+    "term": "Ecosistema",
+    "match": [
+     "ecosistema",
+     "ecosisteme"
+    ],
+    "def": "Una comunità di cose viventi e il luogo in cui vivono, come una barriera corallina o una foresta, il tutto dipende l'uno dall'altro."
    }
   },
   {
@@ -300,6 +359,14 @@
      "غازات الدفيئة"
     ],
     "def": "غازات مثل ثاني أكسيد الكربون والميثان تحبس الحرارة حول الأرض، كما تحافظ الدفيئة على دفء النباتات."
+   },
+   "it": {
+    "term": "Gas serra",
+    "match": [
+     "gas serra",
+     "gas serre"
+    ],
+    "def": "Un gas, come l'anidride carbonica o il metano, che intrappola calore nell'aria intorno alla Terra, il modo in cui una serra mantiene le piante calde."
    }
   },
   {
@@ -332,6 +399,14 @@
      "تحت الحمراء"
     ],
     "def": "نوع من الضوء لا تراه أعيننا ونشعر به كحرارة. تستخدمه كاميرات خاصة لرؤية الأجسام الدافئة والغازات."
+   },
+   "it": {
+    "term": "Infrarosso",
+    "match": [
+     "infrarossi",
+     "infrarosso"
+    ],
+    "def": "Una specie di luce che i nostri occhi non possono vedere che ci sentiamo come calore. Le telecamere speciali lo usano per vedere oggetti caldi e gas."
    }
   },
   {
@@ -365,6 +440,13 @@
      "عشب البحر"
     ],
     "def": "أعشاب بحرية بنية كبيرة تنمو في مياه المحيط الباردة وتشكّل غابات تحت الماء مليئة بالحياة البحرية."
+   },
+   "it": {
+    "term": "Kelp",
+    "match": [
+     "kelp"
+    ],
+    "def": "Grande alghe brune che cresce in acqua fredda dell'oceano e forma le foreste subacquee piene di vita marina."
    }
   },
   {
@@ -400,6 +482,14 @@
      "نقاط لاغرانج"
     ],
     "def": "موضع في الفضاء تتوازن فيه جاذبية الشمس والأرض، فيمكن للمركبة البقاء فيه بقليل من الوقود. تقع L1 بين الأرض والشمس."
+   },
+   "it": {
+    "term": "Punto di Lagrange",
+    "match": [
+     "punto di lagrange",
+     "punto di lagrangi"
+    ],
+    "def": "Un posto nello spazio dove la spinta del Sole e della Terra equilibrio, in modo che un veicolo spaziale può rimanere in posizione con poco carburante. L1 siede tra la Terra e il Sole."
    }
   },
   {
@@ -431,6 +521,14 @@
      "الغلاف المغناطيسي"
     ],
     "def": "الدرع المغناطيسي غير المرئي للأرض. يُبعد معظم الجسيمات المشحونة القادمة من الشمس عن كوكبنا."
+   },
+   "it": {
+    "term": "Magnete",
+    "match": [
+     "magnete",
+     "magneti"
+    ],
+    "def": "Lo scudo magnetico invisibile della Terra. Sta allontanando gran parte delle particelle cariche del Sole dal nostro pianeta."
    }
   },
   {
@@ -468,6 +566,14 @@
      "أشجار المانغروف"
     ],
     "def": "أشجار تنمو في المياه المالحة على السواحل الاستوائية. جذورها المتشابكة تحمي الشواطئ من الأمواج وتؤوي صغار الأسماك."
+   },
+   "it": {
+    "term": "Mangrove",
+    "match": [
+     "mangrove",
+     "mangrovi"
+    ],
+    "def": "Un albero che cresce in acqua salata lungo le coste tropicali. Le sue radici aggrovigliate proteggono le sponde dalle onde e riparano i pesci giovani."
    }
   },
   {
@@ -499,6 +605,14 @@
      "الميثان"
     ],
     "def": "غاز دفيئة يحبس حرارة أكثر بكثير من ثاني أكسيد الكربون على مدى بضعة عقود. يتسرب من مواقع النفط والغاز ومكبات النفايات والمزارع."
+   },
+   "it": {
+    "term": "Metano",
+    "match": [
+     "metani",
+     "metano"
+    ],
+    "def": "Un gas serra che intrappola molto più calore dell'anidride carbonica nel corso di alcuni decenni. Si tralascia da siti di petrolio e gas, discariche e fattorie."
    }
   },
   {
@@ -535,6 +649,14 @@
      "البلاستيك الدقيق"
     ],
     "def": "قطع بلاستيكية أصغر من 5 ملليمترات، بحجم حبة الأرز أو أصغر. تنتج عن تفتت البلاستيك الأكبر."
+   },
+   "it": {
+    "term": "Microplastiche",
+    "match": [
+     "microplastichi",
+     "microplastiche"
+    ],
+    "def": "Pezzi di plastica più piccoli di 5 millimetri, circa la dimensione di un grano di riso o più piccolo. Vengono da plastica più grande che si disgrega."
    }
   },
   {
@@ -567,6 +689,13 @@
      "مدار"
     ],
     "def": "المسار المنحني الذي يسلكه جسم أثناء دورانه حول كوكب أو قمر أو نجم، مثل قمر صناعي يدور حول الأرض."
+   },
+   "it": {
+    "term": "Orbit",
+    "match": [
+     "orbit"
+    ],
+    "def": "Il percorso curvo che un oggetto prende mentre viaggia intorno a un pianeta, una luna o una stella, come un satellite che circonda la Terra."
    }
   },
   {
@@ -598,6 +727,14 @@
      "الأوزون"
     ],
     "def": "غاز في طبقات الجو العليا يحجب الأشعة فوق البنفسجية الضارة القادمة من الشمس. وقرب سطح الأرض يكون الأوزون ملوِّثًا."
+   },
+   "it": {
+    "term": "Ozono",
+    "match": [
+     "ozoni",
+     "ozono"
+    ],
+    "def": "Un gas alto nel cielo che blocca i raggi ultravioletti nocivi dal Sole. Vicino al terreno, l'ozono è un inquinante."
    }
   },
   {
@@ -629,6 +766,13 @@
      "العوالق النباتية"
     ],
     "def": "كائنات حية دقيقة شبيهة بالنباتات تنجرف في الماء وتستخدم ضوء الشمس لصنع غذائها. تنتج جزءًا كبيرًا من الأكسجين الذي نتنفسه وتغذي الحياة البحرية."
+   },
+   "it": {
+    "term": "Fitoplancton",
+    "match": [
+     "fitoplancton"
+    ],
+    "def": "Le piccole cose viventi simili alle piante che si allontanano in acqua e usano la luce solare per fare il cibo. Fanno gran parte dell'ossigeno che respiriamo e nutriamo la vita dell'oceano."
    }
   },
   {
@@ -661,6 +805,13 @@
      "رادار"
     ],
     "def": "أداة ترسل موجات راديوية وتستمع إلى صداها. من الفضاء يمكنها رؤية الأرض عبر السحب ليلًا ونهارًا."
+   },
+   "it": {
+    "term": "Radar",
+    "match": [
+     "radar"
+    ],
+    "def": "Uno strumento che invia onde radio e ascolta per gli echi. Dallo spazio può vedere il terreno attraverso le nuvole, giorno o notte."
    }
   },
   {
@@ -694,6 +845,13 @@
      "إعادة الدخول"
     ],
     "def": "عندما تسقط مركبة فضائية أو قطعة حطام عائدةً إلى هواء الأرض. يسخّنها الاحتكاك كثيرًا فتحترق معظم الأجسام الصغيرة."
+   },
+   "it": {
+    "term": "Reentry",
+    "match": [
+     "reentry"
+    ],
+    "def": "Quando un'astronave o un pezzo di spazzatura spaziale ricadranno nell'aria della Terra. L'attrito lo rende molto caldo, quindi la maggior parte dei piccoli oggetti bruciano."
    }
   },
   {
@@ -729,6 +887,14 @@
      "المستنقع الملحي"
     ],
     "def": "أرض رطبة ساحلية من الأعشاب تغمرها مياه المد المالحة. تمتص عواصف المد وتخزن الكربون في طينها."
+   },
+   "it": {
+    "term": "Salsa di sale",
+    "match": [
+     "salsa di sali",
+     "salsa di sale"
+    ],
+    "def": "Una palude costiera di erbe che inonda con acqua di marea salata. Si assorbe tempeste e immagazzina il carbonio nel suo fango."
    }
   },
   {
@@ -764,6 +930,14 @@
      "مقياس الارتفاع"
     ],
     "def": "قياس ارتفاع البحر أو اليابسة من الفضاء عبر حساب الوقت الذي تستغرقه نبضة رادار أو ليزر للارتداد."
+   },
+   "it": {
+    "term": "Altimetria satellitare",
+    "match": [
+     "altimetria satellitare",
+     "altimetria satellitari"
+    ],
+    "def": "Misurare l'altezza del mare o della terra dallo spazio con tempistiche quanto tempo un radar o un impulso laser prende per rimbalzare indietro."
    }
   },
   {
@@ -798,6 +972,14 @@
      "الأعشاب البحرية"
     ],
     "def": "نباتات مزهرة تنمو تحت الماء في البحار الضحلة، وتشكّل مروجًا تؤوي الحيوانات وتخزن الكربون."
+   },
+   "it": {
+    "term": "Fanerogame marine",
+    "match": [
+     "fanerogame marine",
+     "fanerogame marini"
+    ],
+    "def": "Piante fiorite che crescono sott'acqua in mari poco profondi, formando prati che riparano gli animali e immagazzinano il carbonio."
    }
   },
   {
@@ -829,6 +1011,14 @@
      "الرياح الشمسية"
     ],
     "def": "تيار مستمر من الجسيمات المشحونة يتدفق من الشمس في كل الاتجاهات."
+   },
+   "it": {
+    "term": "vento solare",
+    "match": [
+     "vento solari",
+     "vento solare"
+    ],
+    "def": "Un flusso costante di particelle cariche che sgorga dal Sole in ogni direzione."
    }
   },
   {
@@ -861,6 +1051,13 @@
      "الفتحة الاصطناعية"
     ],
     "def": "رادار على قمر صناعي متحرك يجمع أصداء كثيرة في صورة واحدة واضحة، كأن لديه هوائيًا عملاقًا."
+   },
+   "it": {
+    "term": "radar di apertura sintetico (SAR)",
+    "match": [
+     "radar di apertura sintetico (sar)"
+    ],
+    "def": "Un radar su un satellite in movimento che combina molti eco in un'immagine affilata, come se avesse un'antenna gigante."
    }
   },
   {
@@ -893,6 +1090,14 @@
      "تلسكوب"
     ],
     "def": "أداة تجمع الضوء (أو طاقة أخرى) لرؤية الأشياء البعيدة بوضوح أكبر."
+   },
+   "it": {
+    "term": "Telescopio",
+    "match": [
+     "telescopii",
+     "telescopio"
+    ],
+    "def": "Uno strumento che raccoglie la luce (o altra energia) per vedere le cose lontane più chiaramente."
    }
   },
   {
@@ -927,6 +1132,13 @@
      "رواسب"
     ],
     "def": "رمل وطين وحصى تحملها المياه وتترسب في قيعان الأنهار والبحيرات وعلى الشواطئ."
+   },
+   "it": {
+    "term": "Sedimenti",
+    "match": [
+     "sedimenti"
+    ],
+    "def": "Sabbia, fango e ghiaia trasportata dall'acqua che si deposita sui letti del fiume, fondali del lago e spiagge."
    }
   },
   {
@@ -962,6 +1174,13 @@
      "مستجمع المياه"
     ],
     "def": "كل الأرض التي تنصرف منها مياه الأمطار والثلوج إلى النهر أو البحيرة نفسها."
+   },
+   "it": {
+    "term": "Watershed",
+    "match": [
+     "watershed"
+    ],
+    "def": "Tutta la terra dove la pioggia e la neve drenano nello stesso fiume o lago."
    }
   },
   {
@@ -997,6 +1216,14 @@
      "ازدهار الطحالب"
     ],
     "def": "عندما تنمو نباتات مائية صغيرة تسمى الطحالب بلا سيطرة. بعضها يفرز سمومًا تضر الناس والحيوانات الأليفة والأسماك."
+   },
+   "it": {
+    "term": "Fioritura algale armoniosa",
+    "match": [
+     "fioritura algale armoniose",
+     "fioritura algale armoniosa"
+    ],
+    "def": "Quando piccole piante d'acqua chiamate alghe crescono fuori controllo. Alcuni fanno le tossine che possono danneggiare le persone, animali domestici e pesci."
    }
   },
   {
@@ -1030,6 +1257,14 @@
      "التشجير"
     ],
     "def": "زراعة الأشجار في مكان فُقدت فيه غابة حتى تنمو من جديد."
+   },
+   "it": {
+    "term": "Riforestazione",
+    "match": [
+     "riforestazioni",
+     "riforestazione"
+    ],
+    "def": "Piantare alberi dove una foresta è stata persa in modo che possa crescere indietro."
    }
   },
   {
@@ -1065,6 +1300,14 @@
      "مدار ثابت"
     ],
     "def": "مدار مرتفع على بعد نحو 36 ألف كيلومتر، يدور فيه القمر الصناعي مع دوران الأرض فيبقى فوق المكان نفسه."
+   },
+   "it": {
+    "term": "Orbita geostazionaria",
+    "match": [
+     "orbita geostazionarie",
+     "orbita geostazionaria"
+    ],
+    "def": "Un'orbita alta, a circa 2.000 miglia in alto, dove un satellite si muove con la rotazione della Terra e rimane sullo stesso punto."
    }
   },
   {
@@ -1099,6 +1342,13 @@
      "النفايات الفضائية"
     ],
     "def": "أقمار صناعية قديمة وأجزاء صواريخ وقطع مكسورة تبقى في المدار ولم تعد مفيدة."
+   },
+   "it": {
+    "term": "Detriti spaziali",
+    "match": [
+     "detriti spaziali"
+    ],
+    "def": "Vecchi satelliti, parti di razzi e pezzi rotti lasciati in orbita che non fanno più nulla di utile."
    }
   },
   {
@@ -1133,6 +1383,13 @@
      "تسونامي"
     ],
     "def": "سلسلة من الأمواج العملاقة، تنتج غالبًا عن زلزال تحت البحر أو بركان أو انهيار أرضي."
+   },
+   "it": {
+    "term": "Tsunami",
+    "match": [
+     "tsunami"
+    ],
+    "def": "Una serie di onde oceaniche giganti, di solito causate da un terremoto sottomare, vulcano o frana."
    }
   },
   {
@@ -1164,6 +1421,13 @@
      "الغلاف الأيوني"
     ],
     "def": "طبقة عالية من الغلاف الجوي، على ارتفاع نحو 80 إلى 1000 كيلومتر، مليئة بجسيمات مشحونة كهربائيًا."
+   },
+   "it": {
+    "term": "Ionos",
+    "match": [
+     "ionos"
+    ],
+    "def": "Un alto strato dell'atmosfera, circa 50 a 600 miglia in su, pieno di particelle caricate elettricamente."
    }
   },
   {
@@ -1195,6 +1459,14 @@
      "منطقة الاندساس"
     ],
     "def": "مكان تنزلق فيه إحدى صفائح الأرض تحت صفيحة أخرى، وفيه تبدأ أكبر الزلازل وموجات التسونامي."
+   },
+   "it": {
+    "term": "Zona di subduzione",
+    "match": [
+     "zona di subduzioni",
+     "zona di subduzione"
+    ],
+    "def": "Un posto dove una delle placche della Terra scivola sotto l'altra. Qui iniziano i più grandi terremoti e tsunami."
    }
   }
  ]

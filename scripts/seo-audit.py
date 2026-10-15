@@ -2,9 +2,9 @@
 Usage: python3 scripts/seo-audit.py [--list]   (--list prints each issue)"""
 import glob, json, os, re, sys, collections
 from bs4 import BeautifulSoup
-SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar']
+SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
 NOINDEX = {'Project-R.html', '404.html'}
-LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR'}
+LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
 pages = sorted(glob.glob('*.html')) + sorted(p for l in LANGS for p in glob.glob(f'{l}/*.html'))
 pages = [p for p in pages if not re.match(r'google[0-9a-f]+\.html$', os.path.basename(p))]  # Search Console verification file
 issues = collections.defaultdict(list); titles = collections.defaultdict(list); descs = collections.defaultdict(list)

@@ -53,7 +53,7 @@ function menuHtml(menu) {
 // Language switcher (EN · FR · ES · العربية), appended inside the PROJECT-R-MENU block of every English page so it
 // survives regeneration. Links to the translated page when fr/<page> etc. exists, else that language's Project Rawane.
 // Translated pages get their own switcher from scripts/i18n-build.py.
-const I18N_LANGS = [['fr', 'FR', 'Français'], ['es', 'ES', 'Español'], ['ar', 'العربية', 'العربية']];
+const I18N_LANGS = [['fr', 'FR', 'Français'], ['es', 'ES', 'Español'], ['ar', 'العربية', 'العربية'], ['it', 'IT', 'Italiano']];
 function langSwitch(f) {
   return '<li class="lang-switch" aria-label="Language"><a href="' + f + '" hreflang="en" lang="en" aria-current="true" title="English">EN</a>' +
     I18N_LANGS.map(([l, label, name]) => '<span aria-hidden="true"> · </span><a href="' + l + '/' + (fs.existsSync(l + '/' + f) ? f : 'Project-Rawane.html') +
@@ -106,7 +106,7 @@ function writeSolutionsMenu(menu) {
 
 function build() {
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar)\//.test(m[1])) // translations (i18n) are not re-collected
+  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
    .map(m => path.basename(m[1].trim()))
     .filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && !SKIP.includes(f) && fs.existsSync(f));
   const now = Date.now();

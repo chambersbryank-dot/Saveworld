@@ -38,6 +38,43 @@
         "en": "new 70s About video v3 (real site footage + NASA B-roll), poster, 4-language captions/transcripts, VideoObject, Footage: NASA credit"
       },
       "commit": "c582009447877b65693f84e84585765cfe0caba1"
+    },
+    {
+      "date": "2026-10-15",
+      "what": {
+        "en": "add 5 solutions - FireSat/Earth Fire Alliance (Earth Observation), Eden: People+Planet (Forests), Waterkeeper Alliance (Rivers), SeaTrees (Ocean), Living Lakes/Global Nature Fund (Lakes); hubs, Ways to Help, ELI10, fr/es/ar, sitemap, search, Topics; themed NASA heroes; count 125; styles/site.js v=20261015a"
+      },
+      "commit": "832050013587b3c0d6a420440fee2c39949705ee"
+    },
+    {
+      "date": "2026-10-15",
+      "what": {
+        "en": "build-ux.py generator (grouped nav, sticky Help/Donate, homepage impact strip/domains/latest updates, Solutions filters, auto counts, About video 720p-first) + styles/site.js; wired into weekly-sync"
+      },
+      "commit": "e88cc2935908144aa176bacf25a7691b9bac50fe"
+    },
+    {
+      "date": "2026-10-15",
+      "page": "index.html",
+      "what": {
+        "en": "homepage hub redesign (hero CTAs, auto impact numbers, Water/Land/Space featured solutions, Latest Updates), grouped nav + sticky Help/Donate on all pages (en/fr/es/ar), Solutions domain/hub filters + show-more, lazy images, About video preload=none 720p-first, canonical / for home, distinct FR/ES Hope Spots titles, 404s out of sitemap; styles/site.js v=20261015b"
+      },
+      "commit": "9a0b7bd21a16e756bcbe73a44bd1665a17c2ea57"
+    },
+    {
+      "date": "2026-10-15",
+      "page": "World_Map.html",
+      "what": {
+        "en": "interactive Leaflet world map (self-hosted 1.9.4, OSM tiles): green active / blue upcoming solution pins from assets/data/map-locations.json, rocket launch-site pins from Launch Library 2 (RU/CN/KP excluded), hub filter + legend toggles, From Orbit + Worldwide strips, accessible list; en/fr/es/ar (RTL); build-map.py wired into weekly-sync"
+      },
+      "commit": "01e6087209930bb980068aa7a18850e797926d7a"
+    },
+    {
+      "date": "2026-10-15",
+      "what": {
+        "en": "World Map in Solutions nav group (all langs) + map links on Solutions and homepage"
+      },
+      "commit": "2012477ea3bf476c28d7ba450b10523010eea748"
     }
   ]
 }
