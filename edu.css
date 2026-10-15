@@ -109,3 +109,5 @@ body.kids-map-page nav.scrolled:not(.breadcrumb), body.lesson-builder-page nav.s
 body.kids-map-page nav.scrolled .brand-word, body.lesson-builder-page nav.scrolled .brand-word, body.satellite-explorer-page nav.scrolled .brand-word { color: #fff !important; }
 body.kids-map-page nav.scrolled .nav-toggle span, body.lesson-builder-page nav.scrolled .nav-toggle span, body.satellite-explorer-page nav.scrolled .nav-toggle span { background: #fff !important; }
 body.kids-map-page main, body.lesson-builder-page main, body.satellite-explorer-page main { position: relative; z-index: 0; }
+/* Keep hero text clear of the fixed top nav */
+body.kids-map-page .page-hero, body.lesson-builder-page .page-hero, body.satellite-explorer-page .page-hero { height: auto; min-height: 260px; padding: calc(var(--nav-height, 88px) + 1.6rem) 1.25rem 2rem; box-sizing: border-box; }
