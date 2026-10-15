@@ -29,6 +29,8 @@ def normalize(src):
     src = re.sub(r'<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->', '', src)
     src = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', '', src)
     src = re.sub(r'\?v=[0-9a-z]+', '', src)
+    src = re.sub(r'<script type="application/ld\+json"[^>]*>[\s\S]*?</script>\n?', '', src)  # JSON-LD is regenerated per language (seo-fix / add-video-schema)
+    src = re.sub(r'<!-- RELATED:START -->[\s\S]*?<!-- RELATED:END -->', '', src)  # Related Solutions block is regenerated from the semantic index
     return src
 
 def src_hash(page):
@@ -183,10 +185,11 @@ if __name__ == '__main__':
         missing(sys.argv[2] if len(sys.argv) > 2 else 'fr'); sys.exit(0)
     langs = sys.argv[1:] or LANGS
     for page in PAGES: english_head(page)
+    import importlib.util  # SEO pass on translations (titles/descriptions per language, og/hreflang/JSON-LD)
+    spec = importlib.util.spec_from_file_location('seo', 'scripts/seo-fix.py'); seo = importlib.util.module_from_spec(spec); spec.loader.exec_module(seo)
+    seo.run(['en'])  # finalize English first so the i18n-source hashes match the English that ships
     for lang in langs:
         m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
         for page in PAGES: build(page, lang, m)
         print(lang, 'built', len(PAGES), 'pages')
-    import importlib.util  # SEO pass on translations (titles/descriptions per language, og/hreflang/JSON-LD)
-    spec = importlib.util.spec_from_file_location('seo', 'scripts/seo-fix.py'); seo = importlib.util.module_from_spec(spec); spec.loader.exec_module(seo)
     print('seo-fix:', seo.run(['en'] + langs), 'pages updated')

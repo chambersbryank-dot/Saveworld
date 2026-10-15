@@ -13,7 +13,9 @@ function normalize(src) {
     .replace(/<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/g, '')
     .replace(/<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/g, '')
     .replace(/<li class="lang-switch"[\s\S]*?<\/li>/g, '')
-    .replace(/\?v=[0-9a-z]+/g, '');
+    .replace(/\?v=[0-9a-z]+/g, '')
+    .replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>\n?/g, '')  // JSON-LD regenerated per language
+    .replace(/<!-- RELATED:START -->[\s\S]*?<!-- RELATED:END -->/g, '');  // Related Solutions regenerated from semantic index
 }
 const hash = f => crypto.createHash('sha1').update(normalize(fs.readFileSync(f, 'utf8')), 'utf8').digest('hex').slice(0, 12);
 let bad = 0;

@@ -24,6 +24,9 @@ python3 scripts/add-gtag.py
 python3 scripts/dept-contacts.py         # Oct 14: EN department blocks before translation
 python3 scripts/disable-community.py
 python3 scripts/i18n-build.py
+# Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors
+# (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.
+node scripts/i18n-check.js | tail -3
 python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar
 python3 scripts/add-gtag.py
 python3 scripts/apply-heroes.py           # Oct 14: themed page heroes (all langs)
@@ -37,7 +40,6 @@ python3 scripts/i18n-sitemap.py
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)
 python3 scripts/seo-audit.py | tail -3
-node scripts/i18n-check.js | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 node scripts/build-search.mjs
