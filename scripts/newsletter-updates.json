@@ -1,5 +1,5 @@
 {
-  "_doc": "Site improvements shown under What's New in the Weekly Brief (new pages are detected automatically from git; list improvements to existing pages here). One entry per improvement: date (HST, YYYY-MM-DD, the day it went live), page (site-relative), what {en,fr,es,ar}. Facts only. An issue shows entries dated after the previous issue, up to the issue date.",
+  "_doc": "Site improvements shown under What's New in the Weekly Brief (new pages are detected automatically from git; list improvements to existing pages here). One entry per improvement: date (HST, YYYY-MM-DD, the day it went live), page (site-relative), what {en,fr,es,ar}. Facts only. An issue shows entries dated after the previous issue, up to the issue date. Auto-appended by scripts/newsletter-updates-sync.js (run in weekly-sync.sh) from commits 'feat(Page.html): reader-facing sentence' and NOTES.md '## Newsletter' bullets '- YYYY-MM-DD | Page.html | sentence'; auto entries are English-only until what.fr/es/ar are added.",
   "entries": [
     {
       "date": "2026-10-14",

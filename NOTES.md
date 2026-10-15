@@ -145,3 +145,9 @@ Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; 
   - Draft subject idea: "Kid-friendly explainer: how the 2025 Pacific tsunami was tracked". Keep the no-exact-time/place caveat in any pitch.
 - Outreach drafts (Oct 13): 15 Gmail drafts created, UNSENT (CNN, MS NOW, Fox tips, MERLOT, OER Commons, SERC, UH librarian, UH SOEST, FR/ES/AR outlets, EN/FR/ES/AR master intros). Pending owner: set Reply-To media@savingplanets.com and send-as Name 'Saving Planets' in Gmail (alias currently shows real name); add verified recipients.
 - Outreach framing (owner, Oct 13): pure introduction, NO donation/membership asks. Lead with the tsunami early-warning hub + differentiators (education side, news side, teaching people worldwide one-on-one about satellites, tsunami alerts, how buoys work). Target list to expand and review together before anything sends: big international list incl. Spain, France, UK, Australia, Saudi Arabia (friendly Arab country), plus universities. Pre-send blockers on the 15 drafts (8d5c65c): reply-to media@savingplanets.com; From name must not show the owner's name, ideally send from media@savingplanets.com as a Send mail as alias. Nothing sent.
+
+## Newsletter
+<!-- Weekly Brief "What's New" feed. scripts/newsletter-updates-sync.js (run by scripts/weekly-sync.sh) appends to
+     scripts/newsletter-updates.json from: (1) commits titled "feat(Page.html): reader-facing sentence" (or "feat: sentence"),
+     and (2) bullets in this section formatted "- YYYY-MM-DD | Page.html | reader-facing sentence".
+     Auto entries are English-only; add what.fr / what.es / what.ar in the JSON for translated issues (otherwise English shows). -->

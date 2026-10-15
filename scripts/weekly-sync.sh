@@ -13,6 +13,7 @@ python3 scripts/build-batch2.py
 python3 scripts/build-batch3.py
 python3 scripts/build-batch4.py
 python3 scripts/build-solutions-index.py   # Solutions.html directory + plain Solutions nav link (Oct 12)
+node scripts/newsletter-updates-sync.js || true  # Oct 14: 'feat(Page.html): ...' commits and NOTES.md '## Newsletter' bullets -> scripts/newsletter-updates.json (What's New)
 node build-stats.js --data-only          # Oct 14: live solution/hub counts (assets/data/solutions.json) from Solutions.html
 python3 scripts/build-trust.py             # Oct 14: Privacy, Editorial_Policy, Corrections, Topics A-Z (+ i18n strings)
 python3 scripts/build-batch-b.py           # ELI10 / teacher / cite boxes, Glossary + Teachers pages, homepage audience row (Oct 12)

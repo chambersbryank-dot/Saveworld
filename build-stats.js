@@ -19,7 +19,11 @@ const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 
 const SKIP = ['Solutions.html', 'Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
 const FALLBACK = {
+  'CO2M.html': { category: 'earth-observation', type: 'solution', classification: 'agency', status: 'active' },
+  'Mission_Blue_Hope_Spots.html': { category: 'ocean', type: 'solution', classification: 'nonprofit', status: 'active' }
 };
+// Oct 14: common sp:category spellings mapped to the canonical keys (Coral_Gardeners/Project_Seagrass used "oceans" and were silently skipped).
+const CATEGORY_ALIASES = { oceans: 'ocean', lake: 'lakes', river: 'rivers', forest: 'forests', deforestation: 'forests', 'earth_observation': 'earth-observation', 'planetary_defense': 'planetary-defense', 'space_weather': 'space-weather', 'project-rawane': 'project-r' };
 
 
 // ---- Project R nav dropdown (single source: solutions.json "projectRMenu") ----
@@ -113,6 +117,7 @@ function build() {
     for (const m of html.matchAll(/<meta name="sp:([a-z]+)" content="([^"]*)">/g)) (metas[m[1]] = metas[m[1]] || []).push(m[2].replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, '&').replace(/&quot;/g, '"'));
     const one = k => (metas[k] || [])[0];
     let meta = { category: one('category'), type: one('type'), classification: one('classification'), status: one('status') || 'active' };
+    if (meta.category && CATEGORY_ALIASES[meta.category]) { warnings.push(`${file}: sp:category "${meta.category}" normalized to "${CATEGORY_ALIASES[meta.category]}"`); meta.category = CATEGORY_ALIASES[meta.category]; }
     if (!meta.category && FALLBACK[file]) { meta = Object.assign({}, FALLBACK[file]); warnings.push(`${file}: no sp: tags, using FALLBACK in build-stats.js`); }
     if (!meta.category || !CATEGORIES[meta.category]) { warnings.push(`${file}: missing or unknown sp:category, skipped`); continue; }
     if (!meta.type) warnings.push(`${file}: missing sp:type`);

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T05:59:10.915Z",
+ "generated": "2026-10-15T06:06:09.110Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -736,10 +736,10 @@
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "nonprofit": 27,
+   "nonprofit": 30,
    "corporate": 13,
    "natural": 14,
-   "agency": 60,
+   "agency": 61,
    "government": 1
   },
   "upcomingMissions": 16,
@@ -762,16 +762,16 @@
     ]
    }
   ],
-  "taggedSolutions": 115
+  "taggedSolutions": 119
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 17,
+   "solutions": 20,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 8,
+    "nonprofit": 11,
     "corporate": 3,
     "natural": 6
    },
@@ -882,11 +882,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 22,
+   "solutions": 23,
    "horizon": 3,
    "hubs": 1,
    "byClassification": {
-    "agency": 21,
+    "agency": 22,
     "corporate": 1
    },
    "upcomingMissions": 3,
@@ -1495,6 +1495,24 @@
    "missions": []
   },
   {
+   "url": "Coral_Gardeners.html",
+   "title": "Coral Gardeners",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Corals planted",
+     "value": 238250,
+     "unit": "corals",
+     "kind": "fact",
+     "sourceUrl": "https://coralgardeners.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
    "url": "FreshWater_Watch.html",
    "title": "FreshWater Watch (Earthwatch Europe)",
    "category": "rivers",
@@ -1526,6 +1544,24 @@
      "unit": "observations",
      "kind": "fact",
      "sourceUrl": "https://globeatnight.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Project_Seagrass.html",
+   "title": "Project Seagrass",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Seagrass seeds planted",
+     "value": 150000,
+     "unit": "seeds",
+     "kind": "fact",
+     "sourceUrl": "https://www.projectseagrass.org/"
     }
    ],
    "missions": []
@@ -2821,6 +2857,26 @@
      "sourceUrl": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-4/Sentinel-4_offers_first_glimpses_of_air_pollutants"
     }
    ],
+   "missions": []
+  },
+  {
+   "url": "CO2M.html",
+   "title": "Copernicus CO2M Carbon Dioxide Monitoring (ESA / EU)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Mission_Blue_Hope_Spots.html",
+   "title": "Mission Blue Hope Spots",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
    "missions": []
   },
   {
