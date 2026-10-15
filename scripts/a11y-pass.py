@@ -50,6 +50,7 @@ def videos(s, l, prefix):
         blk = m.group(0); v = re.search(r'assets/videos/([\w-]+)\.mp4', blk)
         if not v or v.group(1) not in D['videos']: return blk
         v = v.group(1); blk = re.sub(r'<track kind="captions"[^>]*>', '', blk)
+        if 'hero-video' in blk: return blk  # silent decorative loop: no visible captions
         tag = f'<track kind="captions" src="{prefix}assets/captions/{v}.{l}.vtt" srclang="{l}" label="{LABEL[l]}" default>'
         return blk.replace('</video>', tag + '</video>')
     s = re.sub(r'<video\b.*?</video>', tr, s, flags=re.S)
