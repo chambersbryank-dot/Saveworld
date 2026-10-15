@@ -11,6 +11,7 @@
 // Upcoming missions are read from [data-mission] elements (data-launch / data-arrival in the future).
 // Horizon pages are counted separately and their impact numbers are never summed.
 const fs = require('fs');
+const decodeEnt = s => s.replace(/&quot;/g,'"').replace(/&#0?39;|&#x27;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&');
 const path = require('path');
 
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
@@ -122,7 +123,7 @@ function build() {
     if (!meta.category || !CATEGORIES[meta.category]) { warnings.push(`${file}: missing or unknown sp:category, skipped`); continue; }
     if (!meta.type) warnings.push(`${file}: missing sp:type`);
     if (meta.type === 'solution' && !meta.classification) warnings.push(`${file}: missing sp:classification`);
-    const title = ((html.match(/<h1[^>]*>(.*?)<\/h1>/s) || [])[1] || file).replace(/<[^>]+>/g, '').trim();
+    const title = decodeEnt(((html.match(/<h1[^>]*>(.*?)<\/h1>/s) || [])[1] || file).replace(/<[^>]+>/g, '').trim());
     const stats = (metas.stat || []).map(s => { const [label, value, unit, kind, sourceUrl] = s.split('|'); return { label, value: isNaN(+value) ? value : +value, unit, kind, sourceUrl }; });
     stats.forEach(s => { if (!/^https?:\/\//.test(s.sourceUrl || '')) warnings.push(`${file}: stat "${s.label}" has no source URL`); });
     const missions = [];
@@ -136,7 +137,7 @@ function build() {
     pages.push(Object.assign({ url: file, title }, meta, { stats, missions }));
     // Hub sections that each present a solution: <meta name="sp:item" content="name|classification|status">
     (metas.item || []).forEach(it => { const [name, classification, status] = it.split('|');
-      pages.push({ url: file, title: name, category: meta.category, type: 'solution', classification, status: status || 'active', section: true, stats: [], missions: [] }); });
+      pages.push({ url: file, title: decodeEnt(name), category: meta.category, type: 'solution', classification, status: status || 'active', section: true, stats: [], missions: [] }); });
   }
   function agg(list) {
     const sol = list.filter(p => p.type === 'solution');

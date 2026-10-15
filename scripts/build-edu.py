@@ -14,7 +14,7 @@ LANGS = ['fr', 'es', 'ar']
 CSSV = '20261014m'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
-esc = lambda s: html.escape(s, quote=True)
+esc = lambda s: html.escape(html.unescape(s), quote=True)  # idempotent
 txt = lambda el: re.sub(r'\s+', ' ', el.get_text(' ', strip=True)).strip() if el else ''
 
 def write_generated(f, page):

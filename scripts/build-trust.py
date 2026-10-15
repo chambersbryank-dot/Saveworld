@@ -5,7 +5,7 @@ renders fr/es/ar). Content: scripts/trust-content.py (policy text approved Oct 1
 import re, html, json, os, importlib.util
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 spec = importlib.util.spec_from_file_location('c', 'scripts/trust-content.py'); C = importlib.util.module_from_spec(spec); spec.loader.exec_module(C)
-E = html.escape
+E = lambda s, quote=True: html.escape(html.unescape(s), quote=quote)  # idempotent: never double-encode
 TPL = open('Press.html', encoding='utf8').read()
 FOOT = TPL[TPL.index('<footer>'):]
 TR = {'fr': {}, 'es': {}, 'ar': {}}

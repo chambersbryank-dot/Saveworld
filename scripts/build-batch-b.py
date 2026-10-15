@@ -13,7 +13,7 @@ rd = lambda f: open(f, encoding='utf8').read()
 def wr(f, s):
     if not os.path.exists(f) or rd(f) != s: open(f, 'w', encoding='utf8').write(s); return 1
     return 0
-esc = lambda s: html.escape(s, quote=True)
+esc = lambda s: html.escape(html.unescape(s), quote=True)  # idempotent: never double-encode
 LANGS = ['fr', 'es', 'ar']
 V = '20261013a'
 CSS = f'<link rel="stylesheet" href="batchb.css?v={V}">'

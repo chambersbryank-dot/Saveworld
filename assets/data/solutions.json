@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T06:08:31.560Z",
+ "generated": "2026-10-15T07:13:32.231Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1396,7 +1396,7 @@
   },
   {
    "url": "Space_Weather.html",
-   "title": "Space Weather &amp; Shields",
+   "title": "Space Weather & Shields",
    "category": "space-weather",
    "type": "hub",
    "status": "active",
@@ -1920,7 +1920,7 @@
   },
   {
    "url": "GOSAT-GW.html",
-   "title": "GOSAT-GW &quot;IBUKI GW&quot; (JAXA)",
+   "title": "GOSAT-GW \"IBUKI GW\" (JAXA)",
    "category": "earth-observation",
    "type": "solution",
    "classification": "agency",
@@ -1940,7 +1940,7 @@
   },
   {
    "url": "ALOS-4.html",
-   "title": "ALOS-4 &quot;DAICHI-4&quot; (JAXA)",
+   "title": "ALOS-4 \"DAICHI-4\" (JAXA)",
    "category": "earth-observation",
    "type": "solution",
    "classification": "agency",
@@ -2030,7 +2030,7 @@
   },
   {
    "url": "Phytoplankton.html",
-   "title": "Phytoplankton, the Ocean&#x27;s Oxygen Engine",
+   "title": "Phytoplankton, the Ocean's Oxygen Engine",
    "category": "ocean",
    "type": "solution",
    "classification": "natural",
@@ -2537,7 +2537,7 @@
   },
   {
    "url": "Living_Lands_and_Waters.html",
-   "title": "Living Lands &amp; Waters",
+   "title": "Living Lands & Waters",
    "category": "rivers",
    "type": "solution",
    "classification": "nonprofit",

@@ -13,7 +13,7 @@ HUBS = [('Earth_Observation.html', 'Earth Observation'), ('Deforestation.html', 
 OUT = 'Solutions.html'
 rd = lambda f: open(f, encoding='utf8').read()
 un = html.unescape
-esc = lambda s: html.escape(s, quote=True).replace('&#x27;', '&#x27;')
+esc = lambda s: html.escape(html.unescape(s), quote=True).replace('&#x27;', '&#x27;')
 
 def m1(rx, s, d=''):
     m = re.search(rx, s, re.S); return m.group(1).strip() if m else d

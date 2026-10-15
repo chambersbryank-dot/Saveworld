@@ -1167,3 +1167,8 @@ body.toc-sub[class].hp-veggie-space-garden .page-hero[class]{background:linear-g
 body.toc-sub[class].hp-whales-ocean-gardeners .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Phytoplankton_Bloom_Iceland.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-zero-debris-charter .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/LEO_View.jpg') center/cover no-repeat}
 /* PAGE-HEROES:END */
+/* Oct 14: heroes/titles always clear the fixed top nav (all widths, LTR + RTL) */
+body.toc-sub[class] .page-hero[class]{height:auto!important;min-height:max(34vh,260px)!important;padding:calc(var(--nav-height,88px) + 1.5rem) 1.25rem 2rem!important;box-sizing:border-box}
+body.toc-sub.nf-page[class] .page-hero[class]{min-height:max(50vh,320px)!important}
+body.toc-sub .page-hero h1{overflow-wrap:anywhere}
+@media print{body.toc-sub[class] .page-hero[class]{min-height:0!important;padding:0!important}}
