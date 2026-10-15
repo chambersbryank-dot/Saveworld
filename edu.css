@@ -100,3 +100,5 @@
 @media (max-width:600px){.sx-slot{min-width:50px;min-height:44px;font-size:1rem;padding:.2rem .4rem}}
 .km-panel,.lb-plan,#km{scroll-margin-top:90px}
 @media (max-width:600px){.km-sols{grid-template-columns:repeat(2,1fr)}}
+@media print{body.lesson-builder-page.toc-sub>main#main:not(#x):not(.y){display:block!important}body.lesson-builder-page main .edu-wrap>:not(.lb-plan){display:none!important}}
+.km-wow{background:linear-gradient(160deg,var(--glass-solid),rgb(var(--glass-tint)/.95))!important}

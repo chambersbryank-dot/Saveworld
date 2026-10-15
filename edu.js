@@ -8,7 +8,7 @@
   var D = null;
   function load(cb) {
     if (D) return cb(D);
-    fetch(root + 'assets/data/edu.' + lang + '.json?v=20261014e').then(function (r) { return r.json(); }).then(function (d) { D = d; cb(d); })
+    fetch(root + 'assets/data/edu.' + lang + '.json?v=20261014f').then(function (r) { return r.json(); }).then(function (d) { D = d; cb(d); })
       .catch(function () { var e = document.querySelector('.edu-error'); if (e) e.hidden = false; });
   }
   /* ---------------- Kids map ---------------- */

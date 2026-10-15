@@ -10,7 +10,7 @@ import edu_text as X
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar']
-CSSV = '20261014e'
+CSSV = '20261014f'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
 esc = lambda s: html.escape(s, quote=True)
