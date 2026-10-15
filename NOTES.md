@@ -117,6 +117,29 @@
 Dropped 10-13: JPSS/NOAA-21 (too few confirmed facts), ozone recovery (already a Myth vs Fact card), The Rivers Trust UK (no figures on impact page), Hayabusa2 1998 KY26 arrival date and Comet Interceptor L2 parking (not on pages read).
 Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; global.jaxa.jp/press/2026/07/20260730-1_e.html, -2_e.html, 20260706-3_e.html; hayabusa2.jaxa.jp press PDF 20260706; science.nasa.gov/mission/{psyche,lucy,spherex}/; esa.int Comet_Interceptor, EnVision, Copernicus/Sentinel-4; epa.gov/water-research/cyanobacteria-assessment-network-cyan (+ -application-cyan-app); sarsat.noaa.gov; barrierreef.org/news/explainers/what-is-coral-ivf + GBRF Year in Review 2023-24 PDF; gbrrestoration.org RRAP-MC-01 final report 2025; doi.org/10.1002/lno.10510; doi.org/10.1371/journal.pone.0030454; pubmed 33360312; fisheries.noaa.gov/feature-story/whales-and-carbon-sequestration-can-whales-store-carbon; justdiggit.org/what-we-do/impact/ + water-bunds; river-cleanup.org/en; unccd.int GGWI page + 2020 status report press release; nasa.gov growing-plants-in-space + Veggie activation (2014).
 
+**Batch 2026-10-15** (17, ~6:38 AM HST run). Nothing built; awaiting owner yes/no. No new solution pages vs existing *.html; Dragonfly already has a mission widget on Titan.html (flagged). Org figures labeled as org figures. Spot-checked ESA Sentinel-3 (3C 15 Sep 2026) and HydroGNSS (science ops / open data 31 Jul 2026).
+| ID | Candidate | Hub | Widget | Status |
+|---|---|---|---|---|
+| A | NASA EMIT (ISS spectrometer; methane/CO₂ plumes + mineral dust) | Earth Observation | Yes, extended ≥2026 | PENDING |
+| B | NASA GEDI (ISS lidar; forest canopy / carbon) | Forests (+ EO) | Yes, ops post-2024 reinstall | PENDING |
+| C | NASA OCO-2 (global CO₂; Caltech ops partnership 2026) | Earth Observation | Yes, active (+ OCO-3 note) | PENDING |
+| D | ESA Sentinel-5P / TROPOMI (daily air quality + CH₄) | Earth Observation | Yes, operational | PENDING |
+| E | NASA PREFIRE (polar far-IR CubeSats; extended through Sep 2026) | Earth Observation | Yes | PENDING |
+| F | ESA HydroGNSS (Scout GNSS-R soil moisture/wetlands; open data 31 Jul 2026) | Earth Observation (+ Rivers/Lakes) | Yes | PENDING |
+| G | ESA Sentinel-3 A/B/C (ocean/land/ice; 3C launched 15 Sep 2026) | Earth Observation | Yes, 3C commissioning | PENDING |
+| H | NASA Libera (Earth radiation budget on JPSS-4; LRD ~2027) | Earth Observation | Yes, horizon to launch | PENDING |
+| I | Surfrider Foundation (beach cleanups + plastic policy) | Oceans | No | PENDING |
+| J | Heal the Bay (Santa Monica Bay / LA County) | Oceans | No | PENDING |
+| K | Plastic Odyssey (containerized recycling factories) | Oceans | No | PENDING |
+| L | Trout Unlimited (coldwater river restore/reconnect) | Rivers | No | PENDING |
+| M | Chesapeake Bay Foundation (oysters, trees, living shorelines) | Rivers (+ estuaries) | No | PENDING |
+| N | League to Save Lake Tahoe / Keep Tahoe Blue | Lakes | No | PENDING |
+| O | American Forests (Tree Equity + U.S. reforestation) | Forests | No | PENDING |
+| P | Plant-for-the-Planet (youth restoration + platform) | Forests | No | PENDING |
+| Q | NASA Dragonfly (Titan rotorcraft; launch ~Jul 2028) | Project Rawane | Yes | PENDING — already mission widget on Titan.html; approve only for dedicated page |
+Dropped 10-15: MethaneSAT (lost 2025); Oceana / International Rivers / Blue Marine (advocacy-heavy); SECORE (overlaps Coral IVF/CRF/Gardeners); Kelp Blue (weak totals + Kelp_Forests exists); Rainforest Trust / Trillion Trees / Restor / Canopy / Wetlands International / Restore America’s Estuaries (funders/networks); FORUM / CHIME / LSTM / ROSE-L / CRISTAL (later EO); VERITAS / DAVINCI / Ariel (thin near-term Earth hook); Destiny+ (Apophis overlaps Ramses).
+Sources: earthdata.nasa.gov EMIT/GEDI/OCO-3; nasa.gov OCO-2 launch + PREFIRE + Libera + Dragonfly; science.nasa.gov OCO-2 blog 2026-08-24, Libera test blog, Dragonfly; ocov2.jpl.nasa.gov; earth.jpl.nasa.gov/emit; gedi.umd.edu; esa.int Sentinel-5P, Sentinel-3, HydroGNSS (+ data-open 31 Jul 2026); dataspace.copernicus.eu Sentinel-5P; tropomi.eu methane; prefire.ssec.wisc.edu; nesdis.noaa.gov Libera; surfrider.org 2025 Beach Cleanup Report PDF + plastic initiative; healthebay.org CCD 2025/2026 wrap-ups; factories.plasticodyssey.com + plasticodyssey.org SUNU; tu.org 2024-25 Annual Report PDF; cbf.org FY26 impact report PDF + restoration; keeptahoeblue.org science-to-solutions + July 5 cleanup news + BEBOT StoryMap; americanforests.org + Tree Equity Score; plant-for-the-planet.org + trilliontreecampaign.org.
+
 ## Oct 13 approvals (owner voice session)
 1. Merge Related Solutions + "Next: Explore Another Solution" into one more-list.
 2. Homepage "minus the doom": keep it in only the strip or only the headline, not both.
