@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T07:53:42.845Z",
+ "generated": "2026-10-15T15:15:06.760Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -260,6 +260,10 @@
      "name": "EOS-06 / Oceansat-3 (ISRO)"
     },
     {
+     "href": "FireSat.html",
+     "name": "FireSat (Earth Fire Alliance)"
+    },
+    {
      "href": "FLEX.html",
      "name": "FLEX and Sentinel-3C (ESA)"
     },
@@ -317,6 +321,10 @@
    "hub": "Forests",
    "href": "Deforestation.html",
    "items": [
+    {
+     "href": "Eden_People_Planet.html",
+     "name": "Eden: People+Planet"
+    },
     {
      "href": "Global_Forest_Watch.html",
      "name": "Global Forest Watch (WRI)"
@@ -394,6 +402,10 @@
     {
      "href": "Lake_Plastic_Recovery.html",
      "name": "Lake Plastic Recovery"
+    },
+    {
+     "href": "Living_Lakes.html",
+     "name": "Living Lakes (Global Nature Fund)"
     },
     {
      "href": "Restoring_the_Lake_Depths.html",
@@ -476,6 +488,10 @@
     {
      "href": "Seagrass.html",
      "name": "Seagrass Meadows"
+    },
+    {
+     "href": "SeaTrees.html",
+     "name": "SeaTrees"
     },
     {
      "href": "Ocean_Cleanup.html",
@@ -576,6 +592,10 @@
     {
      "href": "Great_Bubble_Barrier.html",
      "name": "The Great Bubble Barrier"
+    },
+    {
+     "href": "Waterkeeper_Alliance.html",
+     "name": "Waterkeeper Alliance"
     }
    ]
   },
@@ -732,11 +752,11 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 120,
+  "solutions": 125,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "nonprofit": 30,
+   "nonprofit": 35,
    "corporate": 13,
    "natural": 14,
    "agency": 61,
@@ -762,16 +782,16 @@
     ]
    }
   ],
-  "taggedSolutions": 119
+  "taggedSolutions": 124
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 20,
+   "solutions": 21,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 11,
+    "nonprofit": 12,
     "corporate": 3,
     "natural": 6
    },
@@ -790,11 +810,11 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 6,
+   "solutions": 7,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 5,
+    "nonprofit": 6,
     "agency": 1
    },
    "upcomingMissions": 0,
@@ -810,11 +830,11 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 10,
+   "solutions": 11,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 6,
+    "nonprofit": 7,
     "corporate": 1,
     "natural": 1,
     "agency": 2
@@ -824,11 +844,11 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 13,
+   "solutions": 14,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 8,
+    "nonprofit": 9,
     "corporate": 1,
     "natural": 3,
     "agency": 1
@@ -882,12 +902,13 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 23,
+   "solutions": 24,
    "horizon": 3,
    "hubs": 1,
    "byClassification": {
     "agency": 22,
-    "corporate": 1
+    "corporate": 1,
+    "nonprofit": 1
    },
    "upcomingMissions": 3,
    "impactTotals": []
@@ -2873,6 +2894,56 @@
    "url": "Mission_Blue_Hope_Spots.html",
    "title": "Mission Blue Hope Spots",
    "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "FireSat.html",
+   "title": "FireSat (Earth Fire Alliance)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Eden_People_Planet.html",
+   "title": "Eden: People+Planet",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Waterkeeper_Alliance.html",
+   "title": "Waterkeeper Alliance",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "SeaTrees.html",
+   "title": "SeaTrees",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Living_Lakes.html",
+   "title": "Living Lakes (Global Nature Fund)",
+   "category": "lakes",
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",

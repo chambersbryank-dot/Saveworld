@@ -150,3 +150,8 @@ Corrections.html
 Topics.html
 CO2M.html
 Mission_Blue_Hope_Spots.html
+FireSat.html
+Eden_People_Planet.html
+Waterkeeper_Alliance.html
+SeaTrees.html
+Living_Lakes.html

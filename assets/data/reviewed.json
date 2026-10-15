@@ -103,6 +103,10 @@
   "sig": "8963ce980166",
   "date": "2026-10-12"
  },
+ "Eden_People_Planet.html": {
+  "sig": "51e9770360cd",
+  "date": "2026-10-15"
+ },
  "Elwha_River_Restoration.html": {
   "sig": "2029fee08cdf",
   "date": "2026-10-13"
@@ -122,6 +126,10 @@
  "FLEX.html": {
   "sig": "b07f551fbaef",
   "date": "2026-10-12"
+ },
+ "FireSat.html": {
+  "sig": "f32376c93a28",
+  "date": "2026-10-15"
  },
  "FreshWater_Watch.html": {
   "sig": "daa34184b7e5",
@@ -230,6 +238,10 @@
  "LignoSat.html": {
   "sig": "d368264961a8",
   "date": "2026-10-12"
+ },
+ "Living_Lakes.html": {
+  "sig": "664b13ea3a84",
+  "date": "2026-10-15"
  },
  "Living_Lands_and_Waters.html": {
   "sig": "0fda9f61ce0e",
@@ -379,6 +391,10 @@
   "sig": "8675ff37c020",
   "date": "2026-10-13"
  },
+ "SeaTrees.html": {
+  "sig": "c0de86671f08",
+  "date": "2026-10-15"
+ },
  "Seabin.html": {
   "sig": "45a7dfff4404",
   "date": "2026-10-12"
@@ -466,6 +482,10 @@
  "Vigil.html": {
   "sig": "530371481456",
   "date": "2026-10-12"
+ },
+ "Waterkeeper_Alliance.html": {
+  "sig": "8b6b31a42b01",
+  "date": "2026-10-15"
  },
  "Webb_2024_YR4.html": {
   "sig": "6deebe9d39c0",

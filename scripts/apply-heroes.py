@@ -47,6 +47,10 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Space': ('ISS_Flyaround_2021.jpg', 'NASA'),
     'Restoring_the_Lake_Depths': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
     'Terraformation': ('Yishan_Tree.jpg', None), 'Three_Trees': ('ThreeTrees2.jpg', None),
+    # Oct 15: new solutions
+    'FireSat': ('Rim_Fire_MODIS.jpg', 'NASA (MODIS, Terra satellite)'), 'Eden_People_Planet': ('Kilimanjaro_STS72.jpg', 'NASA (STS-72)'),
+    'Waterkeeper_Alliance': ('NYC_Hudson_Harbor.jpg', 'NASA, Space Shuttle'), 'SeaTrees': ('Mangrove_Delta_ISS.jpg', 'NASA, International Space Station'),
+    'Living_Lakes': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
 }
 SI_T = {'': 'Created by SI and Biological SI Partner', 'fr/': 'Créé par SI et Biological SI Partner', 'es/': 'Creado por SI y Biological SI Partner', 'ar/': 'أُنشئ بواسطة SI وBiological SI Partner'}
 IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة'}
