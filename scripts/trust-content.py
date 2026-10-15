@@ -1,4 +1,4 @@
-# Trust pages content (Oct 14 2026). DRAFT policy text, pending owner approval. Each string: (en, fr, es, ar).
+# Trust pages content (Oct 14 2026). Policy text approved by the owner Oct 14 2026. Each string: (en, fr, es, ar).
 # No real names. Contact addresses are the site's public role inboxes.
 UPDATED = ('Last updated: October 14, 2026', 'Dernière mise à jour : 14 octobre 2026', 'Última actualización: 14 de octubre de 2026', 'آخر تحديث: 14 أكتوبر 2026')
 PAGES = {
@@ -51,10 +51,10 @@ PAGES = {
     'Guardamos tu elección de consentimiento y, a veces, pequeños ajustes como tu progreso en una herramienta educativa, en el almacenamiento local del navegador. Se queda en tu dispositivo.',
     'نحفظ اختيارك بشأن الموافقة، وأحيانًا إعدادات صغيرة مثل تقدّمك في أداة تعليمية، في التخزين المحلي لمتصفحك. وتبقى على جهازك.')]),
   (('Hosting and Contact', 'Hébergement et contact', 'Alojamiento y contacto', 'الاستضافة والتواصل'), [
-   ('The site is hosted on GitHub Pages, which may keep standard server logs such as IP addresses for security. Questions or deletion requests: media@savingplanets.com.',
-    'Le site est hébergé sur GitHub Pages, qui peut conserver des journaux serveur standard, comme les adresses IP, pour la sécurité. Questions ou demandes de suppression : media@savingplanets.com.',
-    'El sitio está alojado en GitHub Pages, que puede guardar registros estándar del servidor, como direcciones IP, por seguridad. Preguntas o solicitudes de borrado: media@savingplanets.com.',
-    'الموقع مستضاف على GitHub Pages، التي قد تحتفظ بسجلات خادم عادية مثل عناوين IP لأغراض الأمان. للأسئلة أو طلبات الحذف: media@savingplanets.com.')]),
+   ('The site is hosted on GitHub Pages, which may keep standard server logs such as IP addresses for security. Questions or deletion requests: privacy@savingplanets.com.',
+    'Le site est hébergé sur GitHub Pages, qui peut conserver des journaux serveur standard, comme les adresses IP, pour la sécurité. Questions ou demandes de suppression : privacy@savingplanets.com.',
+    'El sitio está alojado en GitHub Pages, que puede guardar registros estándar del servidor, como direcciones IP, por seguridad. Preguntas o solicitudes de borrado: privacy@savingplanets.com.',
+    'الموقع مستضاف على GitHub Pages، التي قد تحتفظ بسجلات خادم عادية مثل عناوين IP لأغراض الأمان. للأسئلة أو طلبات الحذف: privacy@savingplanets.com.')]),
  ]},
 'Editorial_Policy': {
  'title': ('Editorial & Sources Policy', 'Politique éditoriale et des sources', 'Política editorial y de fuentes', 'السياسة التحريرية والمصادر'),
@@ -95,10 +95,10 @@ PAGES = {
  'sub': ('Spot a mistake? Tell us and we will fix it fast, in every language.', 'Une erreur ? Dites-le-nous et nous la corrigerons vite, dans toutes les langues.', '¿Ves un error? Avísanos y lo corregiremos rápido, en todos los idiomas.', 'هل لاحظت خطأ؟ أخبرنا وسنصلحه بسرعة وبكل اللغات.'),
  'sections': [
   (('How to Report an Error', 'Signaler une erreur', 'Cómo reportar un error', 'كيف تبلغ عن خطأ'), [
-   ('Email media@savingplanets.com with the page address, what is wrong and, if you can, a source. Any language is fine.',
-    'Écrivez à media@savingplanets.com avec l’adresse de la page, ce qui est faux et, si possible, une source. Toutes les langues sont acceptées.',
-    'Escribe a media@savingplanets.com con la dirección de la página, qué está mal y, si puedes, una fuente. Cualquier idioma sirve.',
-    'راسل media@savingplanets.com مع رابط الصفحة وما الخطأ فيها، ومصدر إن أمكن. يمكنك الكتابة بأي لغة.')]),
+   ('Email errors@savingplanets.com with the page address, what is wrong and, if you can, a source. Any language is fine.',
+    'Écrivez à errors@savingplanets.com avec l’adresse de la page, ce qui est faux et, si possible, une source. Toutes les langues sont acceptées.',
+    'Escribe a errors@savingplanets.com con la dirección de la página, qué está mal y, si puedes, una fuente. Cualquier idioma sirve.',
+    'راسل errors@savingplanets.com مع رابط الصفحة وما الخطأ فيها، ومصدر إن أمكن. يمكنك الكتابة بأي لغة.')]),
   (('What Happens Next', 'Et ensuite ?', 'Qué pasa después', 'ماذا يحدث بعد ذلك'), [
    ('We aim to reply within 5 business days. If a fact is wrong, we fix it on all four language versions and update the page’s “Last reviewed” date.',
     'Nous visons une réponse sous 5 jours ouvrés. Si un fait est faux, nous le corrigeons dans les quatre langues et mettons à jour la date de « dernière relecture ».',

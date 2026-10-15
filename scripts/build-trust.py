@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Oct 14 2026: trust pages (Privacy, Editorial_Policy, Corrections) + A-Z Topics index, from the Press.html template.
 Writes EN pages, merges fr/es/ar strings into i18n/<lang>.json and adds the pages to i18n/pages.txt (i18n-build.py then
-renders fr/es/ar). Content: scripts/trust-content.py (DRAFT policy text, pending owner approval). Idempotent."""
+renders fr/es/ar). Content: scripts/trust-content.py (policy text approved Oct 14 2026). Idempotent."""
 import re, html, json, os, importlib.util
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 spec = importlib.util.spec_from_file_location('c', 'scripts/trust-content.py'); C = importlib.util.module_from_spec(spec); spec.loader.exec_module(C)

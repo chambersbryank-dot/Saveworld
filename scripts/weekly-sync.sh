@@ -21,12 +21,15 @@ python3 scripts/build-batch-a.py   # Batch A (Oct 12): share bar, Last reviewed 
 python3 scripts/build-edu.py               # Oct 14: Kids Map, Lesson Builder, Satellite Explorer + edu.<lang>.json + links
 python3 scripts/a11y-pass.py              # Oct 14: specific img alts, video captions (WebVTT) + transcripts, i18n memory
 python3 scripts/add-gtag.py
+python3 scripts/dept-contacts.py         # Oct 14: EN department blocks before translation
 python3 scripts/i18n-build.py
 python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar
 python3 scripts/add-gtag.py
 python3 scripts/apply-heroes.py           # Oct 14: themed page heroes (all langs)
 python3 scripts/optimize-images.py        # Oct 14: WebP srcset for homepage cards (all langs)
 python3 scripts/add-video-schema.py       # Oct 14: VideoObject JSON-LD (all langs)
+python3 scripts/link-errors.py           # Oct 14: errors@ mailto for error/bug reports (all langs)
+python3 scripts/dept-contacts.py         # Oct 14: department inboxes (all langs)
 python3 scripts/i18n-sitemap.py
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)

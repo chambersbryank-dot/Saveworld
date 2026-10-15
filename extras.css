@@ -134,3 +134,6 @@ html.dark .az-nav { background: rgba(11,18,32,.75); }
 .sp-badge-l input { display: block; width: 100%; margin-top: .3rem; min-height: 44px; padding: 8px 10px; border-radius: 8px; border: 1px solid #7aa7c2; box-sizing: border-box; }
 .sp-badge .btn { min-height: 44px; }
 @media print { .lb-std { break-inside: avoid; } }
+.dept-foot { margin: .3rem 0; font-size: .9rem; }
+.dept-foot a { display: inline-flex; align-items: center; min-height: 44px; }
+.dept-note { text-align: center; }
