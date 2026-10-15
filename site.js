@@ -179,7 +179,7 @@
    placeholders (index, Amazing Facts); on other pages adds a compact block inside the footer. */
 (function () {
   var ACCT = '2704021';
-  var FORMS = { en: '201062861124929242', fr: '201062865506927746', es: '201062865837229281', ar: '201062866183259490' };
+  var FORMS = { en: '201062861124929242', fr: '201062865506927746', es: '201062865837229281', ar: '201062866183259490', it: '201435178471523359' };
   var T = {
     en: ['Get the Weekly Saving Planets Brief', 'New sourced solutions, one amazing fact and upcoming launches, every Monday. Free; unsubscribe anytime.', 'Email address', 'you@example.com', 'Subscribe', 'Please enter a valid email address.', 'Almost done! Check your inbox and confirm your subscription.', 'Sorry, something went wrong. Please try again later.', 'Sending…', 'Privacy', 'Newsletter language'],
     fr: ['Recevez le Brief hebdomadaire Saving Planets', 'De nouvelles solutions sourcées, un fait étonnant et les prochains lancements, chaque lundi. Gratuit ; désabonnement à tout moment.', 'Adresse e-mail', 'vous@exemple.com', 'S\u2019abonner', 'Veuillez saisir une adresse e-mail valide.', 'Presque fini ! Vérifiez votre boîte de réception et confirmez votre abonnement.', 'Désolé, une erreur s\u2019est produite. Veuillez réessayer plus tard.', 'Envoi…', 'Confidentialité', 'Langue de la newsletter'],
@@ -188,7 +188,7 @@
     it: ['Ricevi il Brief settimanale di Saving Planets', 'Nuove soluzioni con fonti, un fatto incredibile e i prossimi lanci, ogni lunedì. Gratis; puoi annullare l\u2019iscrizione in qualsiasi momento.', 'Indirizzo email', 'tu@esempio.it', 'Iscriviti', 'Inserisci un indirizzo email valido.', 'Ci siamo quasi! Controlla la tua casella di posta e conferma l\u2019iscrizione.', 'Spiacenti, qualcosa è andato storto. Riprova più tardi.', 'Invio…', 'Privacy', 'Lingua della newsletter']
   };
   var NAMES = { en: 'English', fr: 'Fran\u00e7ais', es: 'Espa\u00f1ol', ar: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629', it: 'Italiano' };
-  var L = window.spLang || 'en', t = T[L] || T.en; if (!FORMS[L]) L = 'en'; // Italian UI text; no Italian MailerLite list yet, so it signs up to English
+  var L = window.spLang || 'en', t = T[L] || T.en; if (!FORMS[L]) L = 'en'; // Oct 15: Italian form/group live (group 201435173183555461)
   var about = 'Privacy.html'; // Oct 14: standalone Privacy page in every language folder
   var css = '.sp-nl{max-width:640px;margin:2.2rem auto 0;padding:1.4rem 1.5rem;border:1px solid rgba(0,156,222,.35);border-radius:12px;background:#f3f9fd;color:#003755;text-align:center;font-family:Montserrat,"Segoe UI",sans-serif;box-sizing:border-box}' +
     '.sp-nl h2,.sp-nl h3{margin:0 0 .35rem;font-size:1.35rem;color:#003755}.sp-nl p{margin:0 0 .8rem;font-size:.92rem;line-height:1.45}' +
@@ -204,7 +204,7 @@
     host.innerHTML = '<' + hTag + '>' + t[0] + '</' + hTag + '><p>' + t[1] + '</p>' +
       '<form novalidate><label class="sp-nl-hp" aria-hidden="true">Leave empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>' +
       '<label class="sp-nl-hp" for="' + id + '">' + t[2] + '</label><input id="' + id + '" type="email" name="email" required autocomplete="email" inputmode="email" dir="ltr" placeholder="' + t[3] + '" aria-describedby="' + mid + '">' +
-      '<label class="sp-nl-hp" for="' + sid + '">' + t[10] + '</label><select id="' + sid + '" name="lang" class="sp-nl-lang">' + ['en', 'fr', 'es', 'ar'].map(function (k) { return '<option value="' + k + '" lang="' + k + '" dir="' + (k === 'ar' ? 'rtl' : 'ltr') + '"' + (k === L ? ' selected' : '') + '>' + NAMES[k] + '</option>'; }).join('') + '</select>' +
+      '<label class="sp-nl-hp" for="' + sid + '">' + t[10] + '</label><select id="' + sid + '" name="lang" class="sp-nl-lang">' + ['en', 'fr', 'es', 'ar', 'it'].map(function (k) { return '<option value="' + k + '" lang="' + k + '" dir="' + (k === 'ar' ? 'rtl' : 'ltr') + '"' + (k === L ? ' selected' : '') + '>' + NAMES[k] + '</option>'; }).join('') + '</select>' +
       '<button type="submit">' + t[4] + '</button></form><p class="sp-nl-msg" id="' + mid + '" role="status" aria-live="polite"></p>' +
       '<small><a href="' + about + '">' + t[9] + '</a></small>';
     var f = host.querySelector('form'), inp = f.querySelector('input[type=email]'), btn = f.querySelector('button'), msg = host.querySelector('.sp-nl-msg');
