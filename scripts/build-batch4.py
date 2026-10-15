@@ -59,7 +59,8 @@ else:
     for f in glob.glob('*.html') + glob.glob('fr/*.html') + glob.glob('es/*.html') + glob.glob('ar/*.html'): strip(f, 'DOT')
 print('dot enabled' if DOT_ENABLED else 'dot DISABLED', 'dot: index +', len(C.QUIZZES), 'hubs,', len(items), 'actions')
 
-# ---- Community.html
+# ---- Community.html (Oct 14: paused; archived in _archive/community/. Set True + see README there to restore.)
+COMMUNITY_ENABLED = False
 MAIL = 'mailto:ideas@savingplanets.com?subject=Solution%20idea%20for%20Saving%20Planets)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'
 G = ['Send photos you took yourself. Please don&#x27;t send photos from the internet or someone else&#x27;s camera.',
      'Use your first name or an alias only. We never publish last names, emails or addresses.',
@@ -72,7 +73,7 @@ body = ('<section class="impact" id="intro"><h2>Show Us Your Cleanup</h2><div cl
         '<section class="five-ws" id="guidelines"><h2>Guidelines</h2><ul class="comm-rules">' + ''.join(f'<li>{g}</li>' for g in G) + '</ul></section>\n'
         '<section class="comm-wall" id="wall" aria-labelledby="wall-h"><h2 id="wall-h">Community Wall</h2><div class="comm-grid" data-community="assets/data/community.json"></div>'
         '<div class="comm-empty"><p class="comm-empty-icon" aria-hidden="true">🌍</p><h3>Be the first</h3><p>No photos yet. Yours could be the first one on the wall.</p><p><a class="btn" href="' + MAIL + '">Send a photo</a> <a class="btn help-btn" href="Find_a_Cleanup.html">Find a cleanup</a></p></div></section>')
-page('Community', 'Community Wall: Reader Cleanup Photos | Saving Planets', 'Community Wall', 'Real people, real cleanups. Send us yours.',
+if COMMUNITY_ENABLED: page('Community', 'Community Wall: Reader Cleanup Photos | Saving Planets', 'Community Wall', 'Real people, real cleanups. Send us yours.',
      'Send Saving Planets a photo of your cleanup, tree planting or citizen-science project. Guidelines, consent, and the community wall.', body)
 
 # ---- Find_a_Cleanup.html
@@ -101,19 +102,20 @@ body = ('<section class="impact" id="intro"><h2>How This Works</h2><div class="i
         '<section class="fc-regions" id="regions" aria-label="Cleanup finders by region">' + ''.join(secs) + '</section>\n'
         '<section class="five-ws" id="none-near"><h2>No Event Near You?</h2><p>Start your own small cleanup with <a href="https://oceanconservancy.org/work/plastics/cleanups-icc/start-a-cleanup/"' + EXT + '>Ocean Conservancy&#x27;s free guide</a>, and log what you find in the <a href="https://oceanconservancy.org/work/plastics/cleanups-icc/clean-swell-app/"' + EXT + '>Clean Swell app</a>.</p></section>\n'
         '<section class="five-ws" id="safety"><h2>Stay Safe</h2><ul class="comm-rules"><li>Wear gloves and closed shoes.</li><li>Don&#x27;t pick up needles, sharp metal or broken glass by hand. Tell the organizer.</li><li>Kids should always clean up with an adult.</li><li>Watch the tide, the sun and the weather.</li></ul></section>\n'
-        '<section class="help-actions" id="share"><h2>Share Your Cleanup</h2><p>Send us a photo for the Community Wall, or find more ways to give and volunteer.</p><p><a class="btn" href="Community.html">Community Wall</a> <a class="btn help-btn" href="Ways_to_Help.html">Ways to Help</a></p></section>')
+        '<section class="help-actions" id="share"><h2>Share Your Cleanup</h2>' + ('<p>Send us a photo for the Community Wall, or find more ways to give and volunteer.</p><p><a class="btn" href="Community.html">Community Wall</a> <a class="btn help-btn" href="Ways_to_Help.html">Ways to Help</a></p>' if COMMUNITY_ENABLED else '<p>Find more ways to give and volunteer.</p><p><a class="btn help-btn" href="Ways_to_Help.html">Ways to Help</a></p>') + '</section>')
 page('Find_a_Cleanup', 'Find a Cleanup Near You | Saving Planets', 'Find a Cleanup', 'Official cleanup event finders, sorted by region.',
      'Find a beach, river or lake cleanup near you. Links to official event finders from Ocean Conservancy, Surfrider, Keep America Beautiful, Alliance for the Great Lakes and more.', body)
 
 # ---- Ways to Help link
-WB = ('<!-- B4-WTH:START --><section class="help-actions" id="cleanups"><h2>Join a Cleanup</h2><p>Want to help with your own hands? Find an official cleanup near you, then send us a photo for the Community Wall.</p>'
-      '<p><a class="btn" href="Find_a_Cleanup.html">Find a Cleanup</a> <a class="btn help-btn" href="Community.html">Community Wall</a></p></section><!-- B4-WTH:END -->')
+WB = ('<!-- B4-WTH:START --><section class="help-actions" id="cleanups"><h2>Join a Cleanup</h2><p>Want to help with your own hands? Find an official cleanup near you' + (', then send us a photo for the Community Wall.' if COMMUNITY_ENABLED else '.') + '</p>'
+      '<p><a class="btn" href="Find_a_Cleanup.html">Find a Cleanup</a>' + (' <a class="btn help-btn" href="Community.html">Community Wall</a>' if COMMUNITY_ENABLED else '') + '</p></section><!-- B4-WTH:END -->')
 put('Ways_to_Help.html', WB, 'B4-WTH', ['<section class="help-actions">'])
 
 # ---- Footer + nav (English pages; translations regenerate)
 OLDF = '<a href="Rawanes_Mission_Log.html">Rawane&#x27;s Mission Log</a></p>'
 NEWF = '<a href="Rawanes_Mission_Log.html">Rawane&#x27;s Mission Log</a><span aria-hidden="true"> · </span><a href="Community.html">Community Wall</a><span aria-hidden="true"> · </span><a href="Find_a_Cleanup.html">Find a Cleanup</a></p>'
-NAVC = '<li><a href="Community.html">Community</a></li>'
+if not COMMUNITY_ENABLED: NEWF = NEWF.replace('<a href="Community.html">Community Wall</a><span aria-hidden="true"> · </span>', '')
+NAVC = '<li><a href="Community.html">Community</a></li>' if COMMUNITY_ENABLED else ''
 NAVO = '<li><a href="Search.html">Search</a></li>'
 NAVN = NAVC + NAVO
 nf = nn = 0
@@ -121,20 +123,21 @@ for f in sorted(os.listdir('.')):
     if not f.endswith('.html'): continue
     s = open(f, encoding='utf8').read(); o = s
     if NEWF not in s and OLDF in s: s = s.replace(OLDF, NEWF); nf += 1
-    if NAVN not in s and NAVO in s and 'class="nav-links"' in s: s = s.replace(NAVC, '').replace(NAVO, NAVN, 1); nn += 1
+    if not COMMUNITY_ENABLED: s = s.replace('<li><a href="Community.html">Community</a></li>', '')
+    if NAVC and NAVN not in s and NAVO in s and 'class="nav-links"' in s: s = s.replace(NAVC, '').replace(NAVO, NAVN, 1); nn += 1
     if s != o: open(f, 'w', encoding='utf8').write(s)
 print('footers:', nf, 'nav:', nn)
 
 # ---- sitemap, pages.txt, build-stats SKIP
 sm = open('sitemap.xml', encoding='utf8').read()
-for p in ('Community.html', 'Find_a_Cleanup.html'):
+for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + ('Find_a_Cleanup.html',):
     loc = f'<loc>https://www.savingplanets.com/{p}</loc>'
     if loc not in sm:
         anchor = sm.index('<url><loc>https://www.savingplanets.com/Ways_to_Help.html</loc>')
         sm = sm[:anchor] + f'<url>{loc}<lastmod>2026-10-11</lastmod></url>\n  ' + sm[anchor:]
 open('sitemap.xml', 'w', encoding='utf8').write(sm)
 pt = open('i18n/pages.txt', encoding='utf8').read()
-for p in ('Community.html', 'Find_a_Cleanup.html'):
+for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + ('Find_a_Cleanup.html',):
     if p not in pt.split(): pt = pt.rstrip('\n') + '\n' + p + '\n'
 open('i18n/pages.txt', 'w', encoding='utf8').write(pt)
 bs = open('build-stats.js', encoding='utf8').read()
