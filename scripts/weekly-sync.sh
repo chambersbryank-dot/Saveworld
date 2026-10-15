@@ -44,3 +44,7 @@ python3 scripts/seo-audit.py | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 node scripts/build-search.mjs
+# IndexNow (Oct 14): pages are not live yet at this point. After committing + pushing, run
+#   bash scripts/post-deploy.sh   (waits for the live key file, pings changed URLs, never fails the sync)
+# With WEEKLY_SYNC_POST_DEPLOY=1 the caller has already pushed, so ping now.
+if [ "${WEEKLY_SYNC_POST_DEPLOY:-0}" = 1 ]; then bash scripts/post-deploy.sh || true; fi
