@@ -6,7 +6,7 @@ Run weekly (or any time) to refresh the Solution of the Week static fallback."""
 import json, re, subprocess, html, datetime, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-CAP = 'SI-generated video by Saving Planets.'
+CAP = 'Created by SI and Biological SI Partner.'
 
 VIDEOS = {  # page: (file, heading, anchor regex to insert AFTER)
   'Great_Bubble_Barrier.html': ('great-bubble-barrier', 'Watch: A Wall of Bubbles Stopping Plastic'),
@@ -56,7 +56,7 @@ w, h = dims('assets/videos/savingplanets-ad-v2.mp4')
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
   f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-ad-v2.jpg" width="{w}" height="{h}">'
   '<source src="assets/videos/savingplanets-ad-v2.mp4" type="video/mp4"><a href="assets/videos/savingplanets-ad-v2.mp4">Download the video</a></video>'
-  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">SI-generated visuals by Saving Planets</span></figcaption></figure></section>')
+  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span></figcaption></figure></section>')
 s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
 open('About.html', 'w', encoding='utf-8').write(s)
@@ -95,7 +95,7 @@ SW = (f'<section class="sotw" id="solution-of-the-week" aria-labelledby="sotw-ti
       f'<a class="sotw-img" href="{href}"><img src="{e["image"]}" alt="{html.escape(e["imageAlt"])}" width="{dims_img(e["image"])[0]}" height="{dims_img(e["image"])[1]}" loading="lazy" decoding="async"></a>'
       f'<div class="sotw-body"><p class="sotw-kicker">Solution of the Week</p><h2 id="sotw-title"><a href="{e["page"]}">{html.escape(e["title"])}</a></h2>'
       f'<p class="sotw-blurb">{html.escape(e["blurb"])}</p><p class="sotw-actions"><a class="btn" href="{href}">{"Watch and Learn More" if e.get("video") else "Learn More"}</a></p>'
-      f'<p class="photo-credit">SI-generated image by Saving Planets.</p></div></div></section>')
+      f'<p class="photo-credit">Created by SI and Biological SI Partner.</p></div></div></section>')
 
 s = open('index.html', encoding='utf-8').read()
 s = put(s, 'SOTW', SW, r'<section class="mission-block">.*?</section>')

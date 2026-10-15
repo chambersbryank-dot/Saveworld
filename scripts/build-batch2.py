@@ -18,7 +18,7 @@ def put(src, name, inner, after_re):
 # 1) Hero video (index only)
 HERO = ('<div class="hero-media" aria-hidden="true"><video class="hero-video" autoplay muted loop playsinline preload="metadata" '
         'poster="assets/videos/hero-loop.jpg" width="1280" height="546"><source src="assets/videos/hero-loop.mp4" type="video/mp4"></video>'
-        '<div class="hero-overlay"></div></div><p class="hero-video-credit">SI-generated video by Saving Planets.</p>')
+        '<div class="hero-overlay"></div></div><p class="hero-video-credit">Created by SI and Biological SI Partner.</p>')
 s = open('index.html', encoding='utf8').read()
 s = put(s, 'HERO-VIDEO', HERO, r'<section class="hero space-hero">')
 s = s.replace('<section class="hero space-hero">', '<section class="hero space-hero has-video">', 1) if 'has-video' not in s else s

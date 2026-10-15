@@ -11,7 +11,7 @@ TPL = open('Press.html', encoding='utf8').read()
 FOOT = TPL[TPL.index('<footer>'):]
 
 def page(slug, title, h1, sub, desc, body):
-    head = TPL[:TPL.index('<section class="page-hero">')]
+    head = TPL[:TPL.index('<section class="page-hero')]
     head = head.replace('Press and media kit for Saving Planets: logo downloads, mission, boilerplate, contact and fact sheets. Everything you need to write about Saving Planets.', E(desc, quote=True))
     head = head.replace('Press and Media | Saving Planets', E(title)).replace('"Press and Media"', json.dumps(h1)).replace('Press.html', slug + '.html')
     head = head.replace('"Press and Media"', json.dumps(h1))
@@ -21,7 +21,7 @@ def page(slug, title, h1, sub, desc, body):
     mid = hero + crumbs + '\n' + body + '\n'
     f = slug + '.html'
     if os.path.exists(f):  # keep the existing (seo-fixed) head and footer; only refresh the body
-        cur = open(f, encoding='utf8').read(); a = cur.index('<section class="page-hero">'); b = cur.index('<footer>')
+        cur = open(f, encoding='utf8').read(); a = cur.index('<section class="page-hero'); b = cur.index('<footer>')
         if cur[a:b] == mid: print('unchanged', slug); return
         open(f, 'w', encoding='utf8').write(cur[:a] + mid + cur[b:]); print('updated', slug); return
     open(f, 'w', encoding='utf8').write(head + mid + FOOT)

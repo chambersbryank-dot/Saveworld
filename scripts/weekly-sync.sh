@@ -23,6 +23,7 @@ python3 scripts/add-gtag.py
 python3 scripts/i18n-build.py
 python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar
 python3 scripts/add-gtag.py
+python3 scripts/apply-heroes.py           # Oct 14: themed page heroes (all langs)
 python3 scripts/i18n-sitemap.py
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar (after translation)
