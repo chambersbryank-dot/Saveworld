@@ -13,7 +13,7 @@ V = '20261014c'
 CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),
-       ('Amazing_Facts.html', 'Amazing Facts'), ('Ways_to_Help.html', 'Ways to Help'), ('About.html', 'About'), ('Press.html', 'Press &amp; media'),
+       ('Amazing_Facts.html', 'Amazing Facts'), ('Kids_Map.html', 'Kids Planet Map'), ('Lesson_Builder.html', 'Lesson Plan Builder'), ('Satellite_Explorer.html', 'Satellite Explorer'), ('Ways_to_Help.html', 'Ways to Help'), ('About.html', 'About'), ('Press.html', 'Press &amp; media'),
        ('Contact.html', 'Contact'), ('Sitemap.html', 'Site Map')]
 UI = {'Site map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'), 'Site Map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'),
       'Hubs': ('Pôles', 'Centros', 'المحاور'), 'Explore': ('Explorer', 'Explorar', 'استكشف'), 'All Solutions': ('Toutes les solutions', 'Todas las soluciones', 'كل الحلول'),
@@ -75,7 +75,7 @@ GLASS_CAT = {'ocean': 'ocean', 'oceans': 'ocean', 'lakes': 'lakes', 'rivers': 'r
              'space': 'space', 'project-r': 'space', 'planetary-defense': 'defense', 'space-weather': 'sun'}
 GLASS_PAGE = {'Titan.html': 'titan', 'ExoMars_Rosalind_Franklin.html': 'mars', 'ESCAPADE.html': 'mars', 'MMX.html': 'mars',
               'Oceans.html': 'ocean', 'Lakes.html': 'lakes', 'Rivers.html': 'rivers', 'Deforestation.html': 'forests', 'Space.html': 'space',
-              'Earth_Observation.html': 'earth', 'Planetary_Defense.html': 'defense', 'Space_Weather.html': 'sun', 'Space_Disposal.html': 'space'}
+              'Earth_Observation.html': 'earth', 'Planetary_Defense.html': 'defense', 'Space_Weather.html': 'sun', 'Space_Disposal.html': 'space', 'Kids_Map.html': 'ocean', 'Lesson_Builder.html': 'earth', 'Satellite_Explorer.html': 'space'}
 def set_glass(f, s):
     m = re.search(r'<meta name="sp:category" content="([^"]+)"', s)
     t = GLASS_PAGE.get(os.path.basename(f)) or (m and GLASS_CAT.get(m.group(1)))

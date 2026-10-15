@@ -4,7 +4,7 @@ Consent Mode v2: analytics/ad storage default to denied; consent.js flips analyt
 to granted when the visitor clicks Accept. Run by weekly-sync.sh after all generators."""
 import pathlib, re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SKIP = {"googlea5d3cc0c785fec04.html"}
+SKIP = {"googlea5d3cc0c785fec04.html", "ways_to_help.html", "ways-to-help.html"}  # redirect stubs
 TAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCJ7CEKN94"></script>
 <script>

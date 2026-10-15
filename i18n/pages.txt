@@ -142,3 +142,6 @@ Project_Seagrass.html
 FreshWater_Watch.html
 Rewilding_Europe.html
 Globe_at_Night.html
+Kids_Map.html
+Lesson_Builder.html
+Satellite_Explorer.html

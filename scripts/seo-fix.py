@@ -60,6 +60,7 @@ def fix(p):
     lang = p.split('/')[0] if '/' in p else 'en'; base = os.path.basename(p)
     raw = open(p, encoding='utf8').read(); soup = BeautifulSoup(raw, 'html.parser')
     if not soup.head: return False
+    if 'http-equiv="refresh"' in raw: return False  # lowercase ways-to-help redirect stubs stay tiny
     src = raw
     src = re.sub(r'<html[^>]*>', lambda m: '<html lang="%s"%s class="dark">' % (lang, ' dir="rtl"' if lang == 'ar' else ''), src, count=1)
     head_end = src.index('</head>'); head = src[:head_end]; rest = src[head_end:]
