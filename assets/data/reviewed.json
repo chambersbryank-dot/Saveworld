@@ -23,6 +23,10 @@
   "sig": "47c59476a8ef",
   "date": "2026-10-12"
  },
+ "American_Forests.html": {
+  "sig": "ccec4904914b",
+  "date": "2026-10-15"
+ },
  "American_Rivers.html": {
   "sig": "a6c80227bb3a",
   "date": "2026-10-13"
@@ -63,6 +67,10 @@
   "sig": "3afd01bd7ed2",
   "date": "2026-10-11"
  },
+ "Chesapeake_Bay_Foundation.html": {
+  "sig": "9eb173933471",
+  "date": "2026-10-15"
+ },
  "Clean_Up_the_Lake.html": {
   "sig": "262f1513f895",
   "date": "2026-10-10"
@@ -90,6 +98,14 @@
  "DSCOVR_EPIC.html": {
   "sig": "d5b26328f399",
   "date": "2026-10-11"
+ },
+ "Dragonfly.html": {
+  "sig": "c938df91acd6",
+  "date": "2026-10-15"
+ },
+ "EMIT.html": {
+  "sig": "d58f065c2519",
+  "date": "2026-10-15"
  },
  "EOS-06.html": {
   "sig": "66c4a5c00d23",
@@ -135,6 +151,10 @@
   "sig": "daa34184b7e5",
   "date": "2026-10-14"
  },
+ "GEDI.html": {
+  "sig": "5da9569a7728",
+  "date": "2026-10-15"
+ },
  "GOES-19.html": {
   "sig": "5b66b83bc00b",
   "date": "2026-10-13"
@@ -175,6 +195,10 @@
   "sig": "d340a9af09e6",
   "date": "2026-10-13"
  },
+ "Heal_the_Bay.html": {
+  "sig": "3b04a97eba7c",
+  "date": "2026-10-15"
+ },
  "Healthy_Seas.html": {
   "sig": "6f0462c72b89",
   "date": "2026-10-12"
@@ -182,6 +206,10 @@
  "Hera.html": {
   "sig": "5c346311f843",
   "date": "2026-10-12"
+ },
+ "HydroGNSS.html": {
+  "sig": "e6b29cd06d53",
+  "date": "2026-10-15"
  },
  "ICESat-2.html": {
   "sig": "baf60a3ac0cb",
@@ -207,6 +235,10 @@
   "sig": "4d89c523b518",
   "date": "2026-10-13"
  },
+ "Keep_Tahoe_Blue.html": {
+  "sig": "e30e4cab6630",
+  "date": "2026-10-15"
+ },
  "Kelp_Forests.html": {
   "sig": "65c779bbb3ad",
   "date": "2026-10-12"
@@ -230,6 +262,10 @@
  "LeoLabs.html": {
   "sig": "cba0c894f6af",
   "date": "2026-10-12"
+ },
+ "Libera.html": {
+  "sig": "ad1cf894d130",
+  "date": "2026-10-15"
  },
  "Life_Terra.html": {
   "sig": "da1061b4d945",
@@ -291,6 +327,10 @@
   "sig": "b9a9a26ff869",
   "date": "2026-10-12"
  },
+ "OCO-2.html": {
+  "sig": "70379cda4e0e",
+  "date": "2026-10-15"
+ },
  "OSIRIS-APEX.html": {
   "sig": "42c3c95033a0",
   "date": "2026-10-12"
@@ -315,6 +355,10 @@
   "sig": "850830e46d3b",
   "date": "2026-10-12"
  },
+ "PREFIRE.html": {
+  "sig": "49afc98c1f3d",
+  "date": "2026-10-15"
+ },
  "PRELUDE.html": {
   "sig": "7c2e8d3a235b",
   "date": "2026-10-14"
@@ -327,9 +371,17 @@
   "sig": "aa718da5f2d6",
   "date": "2026-10-12"
  },
+ "Plant-for-the-Planet.html": {
+  "sig": "44ccb63f2743",
+  "date": "2026-10-15"
+ },
  "Plastic_Bank.html": {
   "sig": "7d0a54c84f3e",
   "date": "2026-10-14"
+ },
+ "Plastic_Odyssey.html": {
+  "sig": "664303c1ee7b",
+  "date": "2026-10-15"
  },
  "Plato.html": {
   "sig": "27958148e123",
@@ -411,9 +463,17 @@
   "sig": "bb1cfc6ebb2d",
   "date": "2026-10-12"
  },
+ "Sentinel-3.html": {
+  "sig": "2479dd931a6f",
+  "date": "2026-10-15"
+ },
  "Sentinel-4.html": {
   "sig": "28cbe8e45251",
   "date": "2026-10-13"
+ },
+ "Sentinel-5P.html": {
+  "sig": "58162b372379",
+  "date": "2026-10-15"
  },
  "Sentinel-6B.html": {
   "sig": "5e2faa57df4b",
@@ -434,6 +494,10 @@
  "Sungai_Watch.html": {
   "sig": "ee6a97e35a1b",
   "date": "2026-10-10"
+ },
+ "Surfrider_Foundation.html": {
+  "sig": "17fcbeb4c404",
+  "date": "2026-10-15"
  },
  "TEMPO.html": {
   "sig": "7e91fa3f0a1d",
@@ -466,6 +530,10 @@
  "Trees_for_the_Future.html": {
   "sig": "648593942872",
   "date": "2026-10-12"
+ },
+ "Trout_Unlimited.html": {
+  "sig": "88fab166f46f",
+  "date": "2026-10-15"
  },
  "Tsunami_Early_Warning.html": {
   "sig": "d381c30b889c",

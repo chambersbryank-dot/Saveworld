@@ -74,6 +74,17 @@
     }
    ]
   },
+  "American_Forests.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.9,
+     "lng": -77.04,
+     "label": "Washington, DC (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
   "American_Rivers.html": {
    "status": "active",
    "pins": [
@@ -155,6 +166,17 @@
    "status": "active",
    "pins": [],
    "strip": "orbit"
+  },
+  "Chesapeake_Bay_Foundation.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.0,
+     "lng": -76.3,
+     "label": "Chesapeake Bay",
+     "basis": "page"
+    }
+   ]
   },
   "Clean_Up_the_Lake.html": {
    "status": "active",
@@ -242,6 +264,23 @@
    ]
   },
   "DSCOVR_EPIC.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Dragonfly.html": {
+   "status": "upcoming",
+   "pins": [
+    {
+     "lat": 28.61,
+     "lng": -80.6,
+     "label": "Launching from Kennedy Space Center, Florida",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "EMIT.html": {
    "status": "active",
    "pins": [],
    "strip": "orbit"
@@ -351,6 +390,11 @@
      "basis": "hq"
     }
    ]
+  },
+  "GEDI.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
   },
   "GOES-19.html": {
    "status": "active",
@@ -487,6 +531,17 @@
    "pins": [],
    "strip": "orbit"
   },
+  "Heal_the_Bay.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.01,
+     "lng": -118.5,
+     "label": "Santa Monica Pier, Los Angeles",
+     "basis": "page"
+    }
+   ]
+  },
   "Healthy_Seas.html": {
    "status": "active",
    "pins": [
@@ -529,6 +584,11 @@
    ]
   },
   "Hera.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "HydroGNSS.html": {
    "status": "active",
    "pins": [],
    "strip": "orbit"
@@ -578,6 +638,17 @@
      "lat": -6.16,
      "lng": 35.75,
      "label": "Tanzania (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Keep_Tahoe_Blue.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 39.09,
+     "lng": -120.04,
+     "label": "Lake Tahoe, California–Nevada",
      "basis": "page"
     }
    ]
@@ -651,6 +722,18 @@
      "lng": -111.7,
      "label": "Arizona UHF radar (state-level)",
      "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Libera.html": {
+   "status": "upcoming",
+   "pins": [
+    {
+     "lat": 34.63,
+     "lng": -120.61,
+     "label": "Launching from Vandenberg, California",
+     "basis": "launch"
     }
    ],
    "strip": "orbit"
@@ -812,6 +895,18 @@
    "pins": [],
    "strip": "orbit"
   },
+  "OCO-2.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.63,
+     "lng": -120.61,
+     "label": "Launched from Vandenberg, California",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
   "OSIRIS-APEX.html": {
    "status": "active",
    "pins": [],
@@ -873,6 +968,18 @@
    ],
    "strip": "orbit"
   },
+  "PREFIRE.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -39.26,
+     "lng": 177.86,
+     "label": "Launched from Rocket Lab Launch Complex 1, New Zealand",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
   "PRELUDE.html": {
    "status": "upcoming",
    "pins": [],
@@ -887,6 +994,17 @@
    "status": "active",
    "pins": [],
    "strip": "world"
+  },
+  "Plant-for-the-Planet.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 18.6,
+     "lng": -89.4,
+     "label": "Mayan forests, Yucatán Peninsula, Mexico",
+     "basis": "page"
+    }
+   ]
   },
   "Plastic_Bank.html": {
    "status": "active",
@@ -925,6 +1043,17 @@
      "lat": 4.05,
      "lng": 9.7,
      "label": "Cameroon (country-level)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Plastic_Odyssey.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.3,
+     "lng": 5.37,
+     "label": "Marseille, France (expedition start)",
      "basis": "page"
     }
    ]
@@ -1150,7 +1279,24 @@
    ],
    "strip": "orbit"
   },
+  "Sentinel-3.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.24,
+     "lng": -52.77,
+     "label": "Sentinel-3C launched from Europe's Spaceport, French Guiana",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
   "Sentinel-4.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Sentinel-5P.html": {
    "status": "active",
    "pins": [],
    "strip": "orbit"
@@ -1198,6 +1344,11 @@
      "basis": "page"
     }
    ]
+  },
+  "Surfrider_Foundation.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
   },
   "TEMPO.html": {
    "status": "active",
@@ -1262,6 +1413,17 @@
      "lng": -77.03,
      "label": "Silver Spring, Maryland (HQ)",
      "basis": "hq"
+    }
+   ]
+  },
+  "Trout_Unlimited.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.5,
+     "lng": -111.0,
+     "label": "Upper Bear River Watershed (Utah–Wyoming)",
+     "basis": "page"
     }
    ]
   },

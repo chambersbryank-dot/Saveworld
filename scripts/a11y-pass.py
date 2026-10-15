@@ -9,6 +9,25 @@
       and re-apply alt fixes if translation memory was missing."""
 import json, re, os, sys, glob, html, collections
 D = json.load(open('assets/data/a11y.json', encoding='utf8'))
+# Oct 15: solution counts in video captions/transcripts follow the live count (assets/data/solutions.json, written by build-stats.js)
+try: _N = json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions']
+except Exception: _N = None
+if _N:
+    _NUM = re.compile(r'\b\d{2,4}(?=\s*(?:real solutions|solutions réelles|soluciones reales|soluzioni reali|حلاً))')
+    for _v in D['videos'].values():
+        for _cue in _v['cues']:
+            for _l in _cue[2]: _cue[2][_l] = _NUM.sub(str(_N), _cue[2][_l])
+    # live-count variants in translation memory, so translated captions/figcaptions never fall back to a stale count
+    if '--translated' not in sys.argv:
+        for _lg in ['fr', 'es', 'ar', 'it']:
+            _f = f'i18n/{_lg}.json'
+            if not os.path.exists(_f): continue
+            _m = json.load(open(_f, encoding='utf8')); _ch = 0
+            for _k in list(_m):
+                if re.search(r'\b\d{2,4} real solutions', _k):
+                    _nk = _NUM.sub(str(_N), _k)
+                    if _nk != _k and _nk not in _m: _m[_nk] = _NUM.sub(str(_N), _m[_k]); _ch = 1
+            if _ch: json.dump(_m, open(_f, 'w', encoding='utf8'), ensure_ascii=False, indent=0)
 LANGS = ['fr', 'es', 'ar', 'it']
 LABEL = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}
 UI = {'All facts': {'fr': 'Tous les faits', 'es': 'Todos los datos', 'ar': 'كل الحقائق', 'it': 'Tutti i fatti'}, 'Transcript': {'fr': 'Transcription', 'es': 'Transcripción', 'ar': 'النص المكتوب', 'it': 'Trascrizione'},

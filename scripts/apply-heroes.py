@@ -51,6 +51,24 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'FireSat': ('Rim_Fire_MODIS.jpg', 'NASA (MODIS, Terra satellite)'), 'Eden_People_Planet': ('Kilimanjaro_STS72.jpg', 'NASA (STS-72)'),
     'Waterkeeper_Alliance': ('NYC_Hudson_Harbor.jpg', 'NASA, Space Shuttle'), 'SeaTrees': ('Mangrove_Delta_ISS.jpg', 'NASA, International Space Station'),
     'Living_Lakes': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
+    # Oct 15 (batch 2): 17 new solutions
+    'EMIT': ('EMIT_Methane_Fingerprint.jpg', 'NASA/JPL-Caltech'),
+    'GEDI': ('ISS_Flyaround_2021.jpg', 'NASA'),
+    'OCO-2': ('Global_Plant_Fluorescence.jpg', 'NASA/JPL-Caltech'),
+    'Sentinel-5P': ('Clouds_Limb_ISS.jpg', 'NASA'),
+    'PREFIRE': ('LEO_View.jpg', 'NASA, ISS Expedition 23 crew (iss023e057948)'),
+    'HydroGNSS': ('Danube_Delta_GSFC.jpg', 'NASA'),
+    'Sentinel-3': ('Bahamas_Ocean_ISS.jpg', 'NASA, International Space Station'),
+    'Libera': ('EPIC_Earth.jpg', 'NASA/NOAA DSCOVR EPIC'),
+    'Surfrider_Foundation': ('North_Pacific_ISS.jpg', 'NASA (iss073e0257194)'),
+    'Heal_the_Bay': ('Lake_Shore_Cleanup_NPS.jpg', 'NPS photo, Lake Roosevelt National Recreation Area'),
+    'Plastic_Odyssey': ('PlasticBank_Indonesia_STS66.jpg', 'NASA (STS-66)'),
+    'Trout_Unlimited': ('Klamath_River.jpg', 'NASA (PIA26448)'),
+    'Chesapeake_Bay_Foundation': ('Baltimore_DC_Skylab.jpg', 'NASA'),
+    'Keep_Tahoe_Blue': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
+    'American_Forests': ('Threetrees3.jpg', 'SI Partner'),
+    'Plant-for-the-Planet': ('Yishan_Tree.jpg', 'SI Partner'),
+    'Dragonfly': ('Titan.jpg', 'NASA'),
 }
 SI_T = {'': 'Created by SI and Biological SI Partner', 'fr/': 'Créé par SI et Biological SI Partner', 'es/': 'Creado por SI y Biological SI Partner', 'ar/': 'أُنشئ بواسطة SI وBiological SI Partner'}
 IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة'}

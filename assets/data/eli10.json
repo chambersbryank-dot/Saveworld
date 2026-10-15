@@ -204,5 +204,90 @@
   "Living Lakes is a team of groups that look after lakes all over the world.",
   "They clean up trash and help people near lakes earn money without harming nature.",
   "In Mongolia they help protect a lake that is about 2 million years old."
+ ],
+ "EMIT.html": [
+  "EMIT is a special camera on the International Space Station.",
+  "It splits sunlight into many colors to tell what the ground is made of.",
+  "It also spotted big leaks of methane, a gas that heats the planet, so they can be fixed."
+ ],
+ "GEDI.html": [
+  "GEDI is a laser tool on the International Space Station.",
+  "It shines light down on forests and times how long it takes to bounce back.",
+  "That tells scientists how tall trees are and how much carbon forests hold."
+ ],
+ "OCO-2.html": [
+  "OCO-2 is a satellite that measures carbon dioxide in the air.",
+  "It shows where the gas comes from and where plants and oceans soak it up.",
+  "It can even see plants glow faintly, which shows how healthy they are."
+ ],
+ "Sentinel-5P.html": [
+  "Sentinel-5P is a satellite that sniffs the air from space.",
+  "Every day it checks the whole planet for gases that make air dirty.",
+  "This helps keep people healthy and track gases that warm Earth."
+ ],
+ "PREFIRE.html": [
+  "PREFIRE is two tiny satellites about the size of a shoebox.",
+  "They measure heat leaving the Arctic and Antarctica that our eyes can't see.",
+  "That helps scientists understand melting ice and make better weather forecasts."
+ ],
+ "HydroGNSS.html": [
+  "Navigation satellites send signals that bounce off the ground.",
+  "HydroGNSS catches those echoes to tell how wet the soil is.",
+  "That helps farmers, flood planners and scientists watch Earth's water."
+ ],
+ "Sentinel-3.html": [
+  "Sentinel-3 satellites check the oceans, land and ice all the time.",
+  "They measure how warm the sea is, how high it is, and even spot fires.",
+  "Weather and ocean forecasters use this to keep people safe."
+ ],
+ "Libera.html": [
+  "Sunlight brings energy to Earth, and Earth sends some back to space.",
+  "Libera will measure how much energy leaves our planet each day.",
+  "If more comes in than goes out, Earth warms, so this helps track climate."
+ ],
+ "Surfrider_Foundation.html": [
+  "Surfrider is a group of people who love the beach and want it clean.",
+  "Volunteers pick up trash so it doesn't hurt sea animals.",
+  "They also count what they find to help stop plastic at the source."
+ ],
+ "Heal_the_Bay.html": [
+  "Heal the Bay helps keep the beaches and ocean near Los Angeles clean.",
+  "Thousands of volunteers pick up trash on special cleanup days.",
+  "They also run a small aquarium where kids meet local sea animals."
+ ],
+ "Plastic_Odyssey.html": [
+  "In many places there is nowhere to recycle plastic, so it ends up in the sea.",
+  "Plastic Odyssey helps people build small recycling factories.",
+  "They turn old plastic into useful things, like paving stones, and create jobs."
+ ],
+ "Trout_Unlimited.html": [
+  "Trout and salmon need cold, clean rivers to live.",
+  "Trout Unlimited fixes damaged streams and removes things that block fish.",
+  "More than 20,000 volunteers help care for rivers."
+ ],
+ "Chesapeake_Bay_Foundation.html": [
+  "The Chesapeake Bay is a huge bay fed by many rivers.",
+  "Oysters clean the water, so this group grows and plants millions of them.",
+  "They also plant trees by streams and teach students outdoors."
+ ],
+ "Keep_Tahoe_Blue.html": [
+  "Lake Tahoe is famous for its clear blue water.",
+  "After the Fourth of July, volunteers clean up beaches so trash doesn't reach the lake.",
+  "Keep Tahoe Blue uses science to keep the lake clear for people and fish."
+ ],
+ "American_Forests.html": [
+  "American Forests is one of the oldest forest groups in the United States.",
+  "It plants trees in big forests and in city neighborhoods that need shade.",
+  "Trees clean the air, cool hot streets and give animals homes."
+ ],
+ "Plant-for-the-Planet.html": [
+  "A 9-year-old boy named Felix asked kids to plant a million trees in every country.",
+  "Now more than 100,000 young people have learned to help forests and climate.",
+  "The group has planted over 12 million trees in Mexico's Mayan forests."
+ ],
+ "Dragonfly.html": [
+  "Dragonfly is like a giant drone with eight rotors.",
+  "It will fly to Titan, a moon of Saturn with a thick, hazy sky.",
+  "It will look for the kinds of chemistry that came before life on Earth."
  ]
 }

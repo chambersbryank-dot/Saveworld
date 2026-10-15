@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-15T16:57:20Z",
+"generated": "2026-10-15T22:55:18Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -307,15 +307,6 @@
 "rocket": "Unknown",
 "mission": "VCLS Demo 2 Mission One",
 "pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan",
-"mission": "NROL-109",
-"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -375,15 +366,6 @@
 "rocket": "Vega-C",
 "mission": "IRIDE 1",
 "pad": "Ariane Launch Area 1 (ELV)"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Avio S.p.A",
-"rocket": "Vega-C",
-"mission": "IRIDE 2",
-"pad": "Ariane Launch Area 1 (ELV)"
 }
 ]
 },
@@ -430,9 +412,9 @@
 "lng": 177.865,
 "launches": [
 {
-"net": "2026-10-21T00:00:00Z",
+"net": "2026-10-21T05:00:00Z",
 "exact": true,
-"prec": "DAY",
+"prec": "HR",
 "provider": "Rocket Lab",
 "rocket": "Electron",
 "mission": "We're Not Hawking Around (3x HawkEye 360)",
@@ -686,7 +668,7 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-15T23:57:05Z",
+"net": "2026-10-16T00:01:05Z",
 "exact": true,
 "prec": "SEC",
 "provider": "SpaceX",
@@ -909,15 +891,6 @@
 "rocket": "Firefly Alpha Block 2",
 "mission": "TacSat",
 "pad": "Space Launch Complex 2W"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan",
-"mission": "NROL-100",
-"pad": "Space Launch Complex 3E"
 }
 ]
 },

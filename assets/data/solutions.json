@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T16:56:28.597Z",
+ "generated": "2026-10-15T22:54:24.425Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -178,6 +178,10 @@
      "name": "BepiColombo (ESA / JAXA)"
     },
     {
+     "href": "Dragonfly.html",
+     "name": "Dragonfly Titan Rotorcraft (NASA)"
+    },
+    {
      "href": "EnVision.html",
      "name": "EnVision (ESA)"
     },
@@ -240,8 +244,16 @@
      "name": "Copernicus Sentinel-2C (ESA)"
     },
     {
+     "href": "Sentinel-3.html",
+     "name": "Copernicus Sentinel-3 (ESA / EUMETSAT)"
+    },
+    {
      "href": "Sentinel-4.html",
      "name": "Copernicus Sentinel-4 (ESA / EUMETSAT)"
+    },
+    {
+     "href": "Sentinel-5P.html",
+     "name": "Copernicus Sentinel-5P (ESA)"
     },
     {
      "href": "Sentinel-6B.html",
@@ -254,6 +266,10 @@
     {
      "href": "EarthCARE.html",
      "name": "EarthCARE (ESA–JAXA)"
+    },
+    {
+     "href": "EMIT.html",
+     "name": "EMIT (NASA)"
     },
     {
      "href": "EOS-06.html",
@@ -276,12 +292,20 @@
      "name": "GRACE-FO (NASA / Germany)"
     },
     {
+     "href": "HydroGNSS.html",
+     "name": "HydroGNSS (ESA)"
+    },
+    {
      "href": "ICESat-2.html",
      "name": "ICESat-2 (NASA)"
     },
     {
      "href": "Landsat_9.html",
      "name": "Landsat 9 (NASA / USGS)"
+    },
+    {
+     "href": "Libera.html",
+     "name": "Libera Earth Energy Instrument (NASA)"
     },
     {
      "href": "MetOp-SG-A1_Sentinel-5A.html",
@@ -292,8 +316,16 @@
      "name": "NISAR (NASA–ISRO)"
     },
     {
+     "href": "OCO-2.html",
+     "name": "OCO-2 Orbiting Carbon Observatory (NASA)"
+    },
+    {
      "href": "PACE.html",
      "name": "PACE (NASA)"
+    },
+    {
+     "href": "PREFIRE.html",
+     "name": "PREFIRE Polar CubeSats (NASA)"
     },
     {
      "href": "SARSAT.html",
@@ -322,8 +354,16 @@
    "href": "Deforestation.html",
    "items": [
     {
+     "href": "American_Forests.html",
+     "name": "American Forests"
+    },
+    {
      "href": "Eden_People_Planet.html",
      "name": "Eden: People+Planet"
+    },
+    {
+     "href": "GEDI.html",
+     "name": "GEDI Forest Lidar (NASA)"
     },
     {
      "href": "Global_Forest_Watch.html",
@@ -348,6 +388,10 @@
     {
      "href": "One_Tree_Planted.html",
      "name": "One Tree Planted"
+    },
+    {
+     "href": "Plant-for-the-Planet.html",
+     "name": "Plant-for-the-Planet"
     },
     {
      "href": "Rainforest_Connection.html",
@@ -396,6 +440,10 @@
      "name": "Great Lakes Plastic Cleanup"
     },
     {
+     "href": "Keep_Tahoe_Blue.html",
+     "name": "Keep Tahoe Blue (League to Save Lake Tahoe)"
+    },
+    {
      "href": "Lake_Erie_Algal_Bloom_Forecast.html",
      "name": "Lake Erie Harmful Algal Bloom Forecast (NOAA)"
     },
@@ -442,6 +490,10 @@
      "name": "Global Fishing Watch"
     },
     {
+     "href": "Heal_the_Bay.html",
+     "name": "Heal the Bay"
+    },
+    {
      "href": "Healthy_Seas.html",
      "name": "Healthy Seas"
     },
@@ -470,6 +522,10 @@
      "name": "Plastic Bank"
     },
     {
+     "href": "Plastic_Odyssey.html",
+     "name": "Plastic Odyssey"
+    },
+    {
      "href": "Posidonia_Meadows.html",
      "name": "Posidonia Seagrass Meadows"
     },
@@ -492,6 +548,10 @@
     {
      "href": "SeaTrees.html",
      "name": "SeaTrees"
+    },
+    {
+     "href": "Surfrider_Foundation.html",
+     "name": "Surfrider Foundation"
     },
     {
      "href": "Ocean_Cleanup.html",
@@ -562,6 +622,10 @@
      "name": "Beavers, River Engineers"
     },
     {
+     "href": "Chesapeake_Bay_Foundation.html",
+     "name": "Chesapeake Bay Foundation"
+    },
+    {
      "href": "Elwha_River_Restoration.html",
      "name": "Elwha River Restoration"
     },
@@ -592,6 +656,10 @@
     {
      "href": "Great_Bubble_Barrier.html",
      "name": "The Great Bubble Barrier"
+    },
+    {
+     "href": "Trout_Unlimited.html",
+     "name": "Trout Unlimited"
     },
     {
      "href": "Waterkeeper_Alliance.html",
@@ -752,7 +820,7 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 125,
+  "solutions": 142,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
