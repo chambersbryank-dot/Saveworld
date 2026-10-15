@@ -82,6 +82,20 @@
         "en": "Italian (it) as 5th language: i18n/it.json + ui.json, /it/ pages (158 incl. 404), switcher IT on all pages, hreflang/og:locale it_IT, sitemap, search index, glossary/captions/edu/map data, generators + weekly-sync include it; JS v=20261015it"
       },
       "commit": "4d904ca22377a4099d941893e3752f00e8d94428"
+    },
+    {
+      "date": "2026-10-15",
+      "what": {
+        "en": "Italian newsletter option + MailerLite Italian form/group; World Solutions Map section in Weekly Brief"
+      },
+      "commit": "27545f321657098ceb0fe168efd2cbd9e7bc973d"
+    },
+    {
+      "date": "2026-10-15",
+      "what": {
+        "en": "Italian Weekly Brief issue for the Italian MailerLite group"
+      },
+      "commit": "ae7eb5443bb09c4870435fa21bb6623dddb7f430"
     }
   ]
 }
