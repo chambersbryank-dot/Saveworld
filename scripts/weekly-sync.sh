@@ -13,6 +13,7 @@ python3 scripts/build-batch2.py
 python3 scripts/build-batch3.py
 python3 scripts/build-batch4.py
 python3 scripts/build-solutions-index.py   # Solutions.html directory + plain Solutions nav link (Oct 12)
+node build-stats.js --data-only          # Oct 14: live solution/hub counts (assets/data/solutions.json) from Solutions.html
 python3 scripts/build-batch-b.py           # ELI10 / teacher / cite boxes, Glossary + Teachers pages, homepage audience row (Oct 12)
 python3 scripts/build-site-extras.py        # footer site map, Sitemap.html, <main> landmark, video labels, extras.css (Oct 13)
 python3 scripts/build-batch-a.py   # Batch A (Oct 12): share bar, Last reviewed + sources, Related Solutions (from last semantic index), difference strip

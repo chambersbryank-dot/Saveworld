@@ -151,10 +151,20 @@ function build() {
   const solutionsMenu = buildSolutionsMenu();
   const projectRMenu = PROJECT_R_HUBS.map(([f, name]) => { const g = solutionsMenu.find(x => x.href === f); return { hub: name, href: f, items: g ? g.items : [] }; });
   if (!projectRMenu.length) buildProjectRMenu(warnings);
-  const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site: Object.assign({ categories: Object.keys(categories).length }, agg(pages)), categories, pages };
+  const site = Object.assign({ categories: Object.keys(categories).length }, agg(pages));
+  // Oct 14: the canonical solution/hub count is the Solutions.html directory (one card per solution, one section per hub),
+  // so newer pages without sp: tags are still counted. Tag-based totals are kept as taggedSolutions.
+  if (fs.existsSync('Solutions.html')) {
+    const dir = fs.readFileSync('Solutions.html', 'utf8');
+    const cards = (dir.match(/<article class="card sol-card/g) || []).length, hubs = (dir.match(/<section class="card-band sol-hub"/g) || []).length;
+    if (cards) { site.taggedSolutions = site.solutions; site.solutions = cards; site.horizon = 0; }
+    if (hubs) site.hubs = hubs;
+  }
+  const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site, categories, pages };
   fs.mkdirSync('assets/data', { recursive: true });
   fs.writeFileSync('assets/data/solutions.json', JSON.stringify(out, null, 1) + '\n');
   console.log(`solutions.json: ${out.site.solutions} active solutions, ${out.site.horizon} on the horizon, ${out.site.hubs} hubs, ${out.site.upcomingMissions} upcoming missions, ${pages.length} pages.`);
+  if (process.argv.includes('--data-only')) { warnings.length = 0; return out; }
   const menuPages = writeProjectRMenu(projectRMenu);
   console.log(`Project R menu: ${projectRMenu.reduce((n, g) => n + g.items.length, 0)} items in ${projectRMenu.length} hubs; ${menuPages} pages updated.`);
   const solPages = writeSolutionsMenu(solutionsMenu);

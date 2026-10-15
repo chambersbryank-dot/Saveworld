@@ -45,9 +45,19 @@ def put(f, block, tag, before):
             i = s.index(b); s = s[:i] + block + '\n' + s[i:]; break
     else: raise SystemExit(f'no anchor in {f}')
     open(f, 'w', encoding='utf8').write(s)
-put('index.html', DOT, 'DOT', ['<section id="actions">'])
-for hub in C.QUIZZES: put(hub + '.html', DOT, 'DOT', ['<!-- QUIZ:START -->'])
-print('dot: index +', len(C.QUIZZES), 'hubs,', len(items), 'actions')
+# Oct 14: "Do One Thing Today" disabled (revive later by setting DOT_ENABLED = True; data kept in daily-actions.json).
+DOT_ENABLED = False
+def strip(f, tag):
+    s = open(f, encoding='utf8').read()
+    n = re.sub(r'<!-- ' + tag + r':START -->.*?<!-- ' + tag + r':END -->\n?', '', s, flags=re.S)
+    if n != s: open(f, 'w', encoding='utf8').write(n)
+if DOT_ENABLED:
+    put('index.html', DOT, 'DOT', ['<section id="actions">'])
+    for hub in C.QUIZZES: put(hub + '.html', DOT, 'DOT', ['<!-- QUIZ:START -->'])
+else:
+    import glob
+    for f in glob.glob('*.html') + glob.glob('fr/*.html') + glob.glob('es/*.html') + glob.glob('ar/*.html'): strip(f, 'DOT')
+print('dot enabled' if DOT_ENABLED else 'dot DISABLED', 'dot: index +', len(C.QUIZZES), 'hubs,', len(items), 'actions')
 
 # ---- Community.html
 MAIL = 'mailto:ideas@savingplanets.com?subject=Community%20photo&amp;body=First%20name%20or%20alias%3A%0APlace%20(city%20or%20beach)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'

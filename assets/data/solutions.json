@@ -1,10 +1,18 @@
 {
- "generated": "2026-10-13T04:49:40.603Z",
+ "generated": "2026-10-15T04:10:46.213Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
    "href": "Planetary_Defense.html",
    "items": [
+    {
+     "href": "Comet_Interceptor.html",
+     "name": "Comet Interceptor (ESA / JAXA)"
+    },
+    {
+     "href": "Hayabusa2_Torifune.html",
+     "name": "Hayabusa2 Torifune Flyby (JAXA)"
+    },
     {
      "href": "Hera.html",
      "name": "Hera"
@@ -12,6 +20,10 @@
     {
      "href": "Jupiter.html",
      "name": "Jupiter"
+    },
+    {
+     "href": "Lucy.html",
+     "name": "Lucy (NASA)"
     },
     {
      "href": "NEO_Surveyor.html",
@@ -98,6 +110,10 @@
     {
      "href": "US_Deorbit_Vehicle.html",
      "name": "U.S. Deorbit Vehicle (NASA / SpaceX)"
+    },
+    {
+     "href": "Zero_Debris_Charter.html",
+     "name": "Zero Debris Charter (ESA)"
     }
    ]
   },
@@ -158,6 +174,14 @@
      "name": "Artemis II (NASA / CSA)"
     },
     {
+     "href": "BepiColombo.html",
+     "name": "BepiColombo (ESA / JAXA)"
+    },
+    {
+     "href": "EnVision.html",
+     "name": "EnVision (ESA)"
+    },
+    {
      "href": "ESCAPADE.html",
      "name": "ESCAPADE (NASA)"
     },
@@ -176,6 +200,18 @@
     {
      "href": "Plato.html",
      "name": "Plato (ESA)"
+    },
+    {
+     "href": "Psyche.html",
+     "name": "Psyche (NASA)"
+    },
+    {
+     "href": "SPHEREx.html",
+     "name": "SPHEREx (NASA)"
+    },
+    {
+     "href": "Veggie_Space_Garden.html",
+     "name": "Veggie Space Garden (NASA)"
     }
    ]
   },
@@ -198,6 +234,10 @@
     {
      "href": "Sentinel-2C.html",
      "name": "Copernicus Sentinel-2C (ESA)"
+    },
+    {
+     "href": "Sentinel-4.html",
+     "name": "Copernicus Sentinel-4 (ESA / EUMETSAT)"
     },
     {
      "href": "Sentinel-6B.html",
@@ -248,12 +288,24 @@
      "name": "PACE (NASA)"
     },
     {
+     "href": "SARSAT.html",
+     "name": "SARSAT Search and Rescue Satellites (NOAA)"
+    },
+    {
      "href": "SWOT.html",
      "name": "SWOT (NASA–CNES)"
     },
     {
      "href": "Tanager-1.html",
      "name": "Tanager-1 (Carbon Mapper / Planet)"
+    },
+    {
+     "href": "TEMPO.html",
+     "name": "TEMPO Air Quality Mission (NASA)"
+    },
+    {
+     "href": "Tsunami_Early_Warning.html",
+     "name": "The Science of Tsunami Detection"
     }
    ]
   },
@@ -262,12 +314,36 @@
    "href": "Deforestation.html",
    "items": [
     {
+     "href": "Global_Forest_Watch.html",
+     "name": "Global Forest Watch (WRI)"
+    },
+    {
+     "href": "Great_Green_Wall.html",
+     "name": "Great Green Wall (African Union / UNCCD)"
+    },
+    {
+     "href": "Justdiggit.html",
+     "name": "Justdiggit"
+    },
+    {
      "href": "Life_Terra.html",
      "name": "Life Terra"
     },
     {
      "href": "Mangroves.html",
      "name": "Mangrove Forests"
+    },
+    {
+     "href": "One_Tree_Planted.html",
+     "name": "One Tree Planted"
+    },
+    {
+     "href": "Rainforest_Connection.html",
+     "name": "Rainforest Connection"
+    },
+    {
+     "href": "Rewilding_Europe.html",
+     "name": "Rewilding Europe"
     },
     {
      "href": "Saharan_Dust_Amazon.html",
@@ -296,12 +372,20 @@
    "href": "Lakes.html",
    "items": [
     {
+     "href": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
+     "name": "Adopt-a-Beach (Alliance for the Great Lakes)"
+    },
+    {
      "href": "Clean_Up_the_Lake.html",
      "name": "Clean Up the Lake"
     },
     {
      "href": "Great_Lakes_Plastic_Cleanup.html",
      "name": "Great Lakes Plastic Cleanup"
+    },
+    {
+     "href": "Lake_Erie_Algal_Bloom_Forecast.html",
+     "name": "Lake Erie Harmful Algal Bloom Forecast (NOAA)"
     },
     {
      "href": "Lake_Plastic_Recovery.html",
@@ -326,8 +410,20 @@
      "name": "Billion Oyster Project"
     },
     {
+     "href": "Coral_Gardeners.html",
+     "name": "Coral Gardeners"
+    },
+    {
+     "href": "Coral_IVF.html",
+     "name": "Coral IVF (Great Barrier Reef Foundation)"
+    },
+    {
      "href": "Coral_Restoration_Foundation.html",
      "name": "Coral Restoration Foundation"
+    },
+    {
+     "href": "Global_Fishing_Watch.html",
+     "name": "Global Fishing Watch"
     },
     {
      "href": "Healthy_Seas.html",
@@ -354,6 +450,14 @@
      "name": "Plastic Bank"
     },
     {
+     "href": "Posidonia_Meadows.html",
+     "name": "Posidonia Seagrass Meadows"
+    },
+    {
+     "href": "Project_Seagrass.html",
+     "name": "Project Seagrass"
+    },
+    {
      "href": "Salt_Marshes.html",
      "name": "Salt Marshes"
     },
@@ -368,6 +472,14 @@
     {
      "href": "Ocean_Cleanup.html",
      "name": "The Ocean Cleanup"
+    },
+    {
+     "href": "Tsunami_Early_Warning.html",
+     "name": "The Science of Tsunami Detection"
+    },
+    {
+     "href": "Whales_Ocean_Gardeners.html",
+     "name": "Whales, Ocean Gardeners"
     }
    ]
   },
@@ -376,12 +488,24 @@
    "href": "Planetary_Defense.html",
    "items": [
     {
+     "href": "Comet_Interceptor.html",
+     "name": "Comet Interceptor (ESA / JAXA)"
+    },
+    {
+     "href": "Hayabusa2_Torifune.html",
+     "name": "Hayabusa2 Torifune Flyby (JAXA)"
+    },
+    {
      "href": "Hera.html",
      "name": "Hera"
     },
     {
      "href": "Jupiter.html",
      "name": "Jupiter"
+    },
+    {
+     "href": "Lucy.html",
+     "name": "Lucy (NASA)"
     },
     {
      "href": "NEO_Surveyor.html",
@@ -406,12 +530,36 @@
    "href": "Rivers.html",
    "items": [
     {
+     "href": "American_Rivers.html",
+     "name": "American Rivers"
+    },
+    {
      "href": "Beavers_River_Engineers.html",
      "name": "Beavers, River Engineers"
     },
     {
+     "href": "Elwha_River_Restoration.html",
+     "name": "Elwha River Restoration"
+    },
+    {
+     "href": "FreshWater_Watch.html",
+     "name": "FreshWater Watch (Earthwatch Europe)"
+    },
+    {
+     "href": "Klamath_River_Dam_Removal.html",
+     "name": "Klamath River Dam Removal"
+    },
+    {
+     "href": "Living_Lands_and_Waters.html",
+     "name": "Living Lands & Waters"
+    },
+    {
      "href": "Mr_Trash_Wheel.html",
      "name": "Mr. Trash Wheel Family"
+    },
+    {
+     "href": "River_Cleanup.html",
+     "name": "River Cleanup"
     },
     {
      "href": "Sungai_Watch.html",
@@ -434,6 +582,10 @@
     {
      "href": "ClearSpace.html",
      "name": "ClearSpace"
+    },
+    {
+     "href": "Globe_at_Night.html",
+     "name": "Globe at Night (NSF NOIRLab)"
     },
     {
      "href": "Jupiter.html",
@@ -516,6 +668,10 @@
     {
      "href": "US_Deorbit_Vehicle.html",
      "name": "U.S. Deorbit Vehicle (NASA / SpaceX)"
+    },
+    {
+     "href": "Zero_Debris_Charter.html",
+     "name": "Zero Debris Charter (ESA)"
     }
    ]
   },
@@ -568,14 +724,15 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 83,
-  "horizon": 5,
+  "solutions": 118,
+  "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "nonprofit": 15,
+   "nonprofit": 27,
    "corporate": 13,
-   "natural": 12,
-   "agency": 43
+   "natural": 14,
+   "agency": 60,
+   "government": 1
   },
   "upcomingMissions": 16,
   "impactTotals": [
@@ -596,18 +753,19 @@
      "Life_Terra.html"
     ]
    }
-  ]
+  ],
+  "taggedSolutions": 115
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 13,
+   "solutions": 17,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 6,
+    "nonprofit": 8,
     "corporate": 3,
-    "natural": 4
+    "natural": 6
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -624,11 +782,12 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 4,
+   "solutions": 6,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 4
+    "nonprofit": 5,
+    "agency": 1
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -643,26 +802,28 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 4,
+   "solutions": 10,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 2,
+    "nonprofit": 6,
     "corporate": 1,
-    "natural": 1
+    "natural": 1,
+    "agency": 2
    },
    "upcomingMissions": 0,
    "impactTotals": []
   },
   "forests": {
    "name": "Forests",
-   "solutions": 7,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 3,
+    "nonprofit": 8,
     "corporate": 1,
-    "natural": 3
+    "natural": 3,
+    "agency": 1
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -677,23 +838,24 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 5,
+   "solutions": 6,
    "horizon": 4,
    "hubs": 1,
    "byClassification": {
     "corporate": 4,
-    "natural": 1
+    "natural": 1,
+    "government": 1
    },
    "upcomingMissions": 1,
    "impactTotals": []
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 5,
+   "solutions": 8,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 5
+    "agency": 8
    },
    "upcomingMissions": 4,
    "impactTotals": []
@@ -712,11 +874,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 18,
-   "horizon": 0,
+   "solutions": 22,
+   "horizon": 3,
    "hubs": 1,
    "byClassification": {
-    "agency": 17,
+    "agency": 21,
     "corporate": 1
    },
    "upcomingMissions": 3,
@@ -724,11 +886,11 @@
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 17,
+   "solutions": 23,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 12,
+    "agency": 18,
     "natural": 2,
     "corporate": 3
    },
@@ -1322,6 +1484,60 @@
    "type": "hub",
    "status": "active",
    "stats": [],
+   "missions": []
+  },
+  {
+   "url": "FreshWater_Watch.html",
+   "title": "FreshWater Watch (Earthwatch Europe)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Water-quality datasets",
+     "value": 80000,
+     "unit": "datasets",
+     "kind": "fact",
+     "sourceUrl": "https://www.freshwaterwatch.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Globe_at_Night.html",
+   "title": "Globe at Night (NSF NOIRLab)",
+   "category": "space",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Night-sky observations",
+     "value": 331065,
+     "unit": "observations",
+     "kind": "fact",
+     "sourceUrl": "https://globeatnight.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Rewilding_Europe.html",
+   "title": "Rewilding Europe",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Wild European bison",
+     "value": 7000,
+     "unit": "bison",
+     "kind": "fact",
+     "sourceUrl": "https://rewildingeurope.com/"
+    }
+   ],
    "missions": []
   },
   {
@@ -2237,6 +2453,561 @@
      "sourceUrl": "https://seabin.io/"
     }
    ],
+   "missions": []
+  },
+  {
+   "url": "Klamath_River_Dam_Removal.html",
+   "title": "Klamath River Dam Removal",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "River habitat reopened to fish",
+     "value": 400,
+     "unit": "miles",
+     "kind": "fact",
+     "sourceUrl": "https://klamathrenewal.org/klamath-dam-removal-comes-to-a-close/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Elwha_River_Restoration.html",
+   "title": "Elwha River Restoration",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Sediment released downstream",
+     "value": 20,
+     "unit": "million tons",
+     "kind": "fact",
+     "sourceUrl": "https://www.usgs.gov/news/state-news-release/moving-mountains-elwha-river-still-changing-five-years-after-worlds-largest"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Living_Lands_and_Waters.html",
+   "title": "Living Lands &amp; Waters",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Pounds of trash removed from rivers",
+     "value": 14233270,
+     "unit": "lb",
+     "kind": "fact",
+     "sourceUrl": "https://livinglandsandwaters.org/about-us/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "American_Rivers.html",
+   "title": "American Rivers",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "River miles reconnected in 2025",
+     "value": 4893,
+     "unit": "miles",
+     "kind": "fact",
+     "sourceUrl": "https://www.americanrivers.org/2026/03/100-dams-down-2025-a-big-year-for-reconnecting-rivers-in-the-u-s/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Lake_Erie_Algal_Bloom_Forecast.html",
+   "title": "Lake Erie Harmful Algal Bloom Forecast (NOAA)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "People under the 2014 Toledo water advisory",
+     "value": 400000,
+     "unit": "people",
+     "kind": "fact",
+     "sourceUrl": "https://coastalscience.noaa.gov/news/noaa-hab-event-response-delivers-timely-trusted-cyanobacteria-toxin-data-ohio-epa/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
+   "title": "Adopt-a-Beach (Alliance for the Great Lakes)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Share of beach litter that is plastic",
+     "value": 85,
+     "unit": "%",
+     "kind": "fact",
+     "sourceUrl": "https://greatlakes.org/get-involved/adopt-a-beach/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Global_Forest_Watch.html",
+   "title": "Global Forest Watch (WRI)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Drop in deforestation where monitors used the data",
+     "value": 52,
+     "unit": "%",
+     "kind": "fact",
+     "sourceUrl": "https://www.globalforestwatch.org/about/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Rainforest_Connection.html",
+   "title": "Rainforest Connection",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Hectares of rainforest protected",
+     "value": 726000,
+     "unit": "ha",
+     "kind": "fact",
+     "sourceUrl": "https://rfcx.org/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "One_Tree_Planted.html",
+   "title": "One Tree Planted",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Trees planted",
+     "value": 171000000,
+     "unit": "trees",
+     "kind": "fact",
+     "sourceUrl": "https://onetreeplanted.org/pages/about-us"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Global_Fishing_Watch.html",
+   "title": "Global Fishing Watch",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Industrial fishing vessels not publicly tracked",
+     "value": 75,
+     "unit": "%",
+     "kind": "fact",
+     "sourceUrl": "https://globalfishingwatch.org/press-release/new-research-harnesses-ai-and-satellite-imagery-to-reveal-the-expanding-footprint-of-human-activity-at-sea/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "TEMPO.html",
+   "title": "TEMPO Air Quality Mission (NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Smallest area measured",
+     "value": 4,
+     "unit": "sq mi",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/news-release/nasas-high-resolution-air-quality-control-instrument-launches/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Zero_Debris_Charter.html",
+   "title": "Zero Debris Charter (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Charter signatories",
+     "value": 228,
+     "unit": "signatories",
+     "kind": "fact",
+     "sourceUrl": "https://blogs.esa.int/spacesafety-community/2026/05/26/zero-debris-webinar-4-zero-debris-policy-governance/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "BepiColombo.html",
+   "title": "BepiColombo (ESA / JAXA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Spacecraft orbiting Mercury",
+     "value": 2,
+     "unit": "orbiters",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo/Latest_updates_BepiColombo_s_arrival_at_Mercury"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Hayabusa2_Torifune.html",
+   "title": "Hayabusa2 Torifune Flyby (JAXA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Closest distance to the asteroid surface",
+     "value": 400,
+     "unit": "m",
+     "kind": "fact",
+     "sourceUrl": "https://global.jaxa.jp/press/2026/07/20260730-1_e.html"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Psyche.html",
+   "title": "Psyche (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Speed boost from the Mars flyby",
+     "value": 1000,
+     "unit": "mph",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/missions/psyche-mission/nasas-psyche-mission-aces-mars-flyby-targets-metal-rich-asteroid/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Lucy.html",
+   "title": "Lucy (NASA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Year of first Trojan flyby",
+     "value": 2027,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/mission/lucy/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Comet_Interceptor.html",
+   "title": "Comet Interceptor (ESA / JAXA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Spacecraft in the mission",
+     "value": 3,
+     "unit": "spacecraft",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Comet_Interceptor/Comet_Interceptor_factsheet"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "EnVision.html",
+   "title": "EnVision (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Planned launch year",
+     "value": 2031,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Envision/Envision_factsheet"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "SPHEREx.html",
+   "title": "SPHEREx (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Infrared colors mapped",
+     "value": 102,
+     "unit": "bands",
+     "kind": "fact",
+     "sourceUrl": "https://www.jpl.nasa.gov/news/nasas-spherex-observatory-completes-first-cosmic-map-like-no-other/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Sentinel-4.html",
+   "title": "Copernicus Sentinel-4 (ESA / EUMETSAT)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Launch year",
+     "value": 2025,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-4/Sentinel-4_offers_first_glimpses_of_air_pollutants"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "SARSAT.html",
+   "title": "SARSAT Search and Rescue Satellites (NOAA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "People rescued in the U.S. in 2025",
+     "value": 300,
+     "unit": "people",
+     "kind": "fact",
+     "sourceUrl": "https://www.noaa.gov/news-release/noaa-satellites-helped-rescue-300-people-in-2025"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Coral_IVF.html",
+   "title": "Coral IVF (Great Barrier Reef Foundation)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Year Coral IVF corals first reproduced",
+     "value": 2021,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://www.barrierreef.org/news/explainers/what-is-coral-ivf"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Posidonia_Meadows.html",
+   "title": "Posidonia Seagrass Meadows",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Age of the Illetes meadow",
+     "value": 2355,
+     "unit": "years",
+     "kind": "fact",
+     "sourceUrl": "https://www.ceab.csic.es/en/the-illetes-posidonia-meadow-is-over-2000-years-old/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Whales_Ocean_Gardeners.html",
+   "title": "Whales, Ocean Gardeners",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Key nutrients whales bring to the surface",
+     "value": 3,
+     "unit": "types",
+     "kind": "fact",
+     "sourceUrl": "https://www.fisheries.noaa.gov/feature-story/whales-and-carbon-sequestration-can-whales-store-carbon"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Justdiggit.html",
+   "title": "Justdiggit",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Hectares under restoration",
+     "value": 525000,
+     "unit": "ha",
+     "kind": "fact",
+     "sourceUrl": "https://justdiggit.org/what-we-do/impact/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "River_Cleanup.html",
+   "title": "River Cleanup",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Waste removed from rivers",
+     "value": 4397462,
+     "unit": "kg",
+     "kind": "fact",
+     "sourceUrl": "https://www.river-cleanup.org/en/"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Great_Green_Wall.html",
+   "title": "Great Green Wall (African Union / UNCCD)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Hectares restored inside the GGW zone (2020 report)",
+     "value": 4000000,
+     "unit": "ha",
+     "kind": "fact",
+     "sourceUrl": "https://www.unccd.int/news-stories/press-releases/ministers-release-first-status-report-and-share-next-steps-great-green"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Veggie_Space_Garden.html",
+   "title": "Veggie Space Garden (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Year of first space-grown salad",
+     "value": 2015,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://www.nasa.gov/wp-content/uploads/2019/04/veggie_fact_sheet_508.pdf"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Tsunami_Early_Warning.html",
+   "title": "The Science of Tsunami Detection",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [
+    {
+     "label": "DART stations in NOAA's full network (2008)",
+     "value": 39,
+     "unit": "",
+     "kind": "fact",
+     "sourceUrl": "https://www.ndbc.noaa.gov/dart/dart.shtml"
+    }
+   ],
+   "missions": []
+  },
+  {
+   "url": "Tsunami_Early_Warning.html",
+   "title": "GUARDIAN (NASA JPL)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Tsunami_Early_Warning.html",
+   "title": "SWOT for operational tsunami forecasts",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Tsunami_Early_Warning.html",
+   "title": "Seafloor telecom cable sensing",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "research",
+   "status": "horizon",
+   "section": true,
+   "stats": [],
    "missions": []
   }
  ]

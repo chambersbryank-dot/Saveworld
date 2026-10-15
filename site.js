@@ -119,8 +119,9 @@
 (function () {
   var site = document.querySelector('[data-site-stats]');
   var blocks = document.querySelectorAll('.page-stats[data-stats-category]');
-  if (!site && !blocks.length) return;
-  var KEY = 'sp-solutions-v2';
+  var diffs = document.querySelectorAll('.diff-body');
+  if (!site && !blocks.length && !diffs.length) return;
+  var KEY = 'sp-solutions-v3';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function num(n) { return typeof n === 'number' ? n.toLocaleString(spLang === 'en' ? 'en-US' : spLang) : esc(n); }
   function plural(n, a, b) { return num(n) + ' ' + spT(n === 1 ? a : b); }
@@ -131,6 +132,7 @@
   function solLine(a) { return plural(a.solutions, 'active solution', 'active solutions') + (a.horizon ? ', ' + a.horizon + ' ' + spT('on the horizon') : ''); }
   function updated(d) { var t = new Date(d.generated); return isNaN(t) ? '' : t.toLocaleDateString(spLang === 'en' ? 'en-US' : spLang, { year: 'numeric', month: 'long', day: 'numeric' }); }
   function render(d) {
+    Array.prototype.forEach.call(diffs, function (el) { var n = d.site && d.site.solutions, h = d.site && d.site.hubs; if (!n) return; el.textContent = el.textContent.replace(/^\d+/, String(n)); });
     if (site) {
       var s = d.site;
       site.innerHTML = '<div class="stat-row">' +
