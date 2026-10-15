@@ -96,7 +96,7 @@ html:not(.dark) body:not(.toc-home):not(.toc-sub) .video-transcript { background
 video::cue { background: rgb(0 0 0 / .8); color: #fff; }
 
 /* Oct 14: Become a Partner / Contact Us buttons use the glass teardrop bubble icon (same component as .aud-icon) */
-.partner-cta .btn-nav { display: inline-flex; align-items: center; gap: .6em; }
+body .partner-cta a.btn-nav { display: inline-flex; align-items: center; gap: .6em; }
 .partner-cta .btn-nav::before { content: "\1F91D"; display: inline-grid; place-items: center; width: 2.2em; height: 2.2em; flex: none; font-size: 1.1rem; line-height: 1;
   border-radius: 50% 50% 46% 54% / 55% 48% 52% 45%; color: var(--glass-ink);
   background: var(--glass-solid); border: 1px solid rgb(var(--glass-glow) / .55);
