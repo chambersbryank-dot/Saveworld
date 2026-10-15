@@ -1,5 +1,5 @@
 # Community Wall (archived Oct 14, 2026)
-Paused until traffic grows. Not published (Jekyll skips `_` folders).
+Paused until traffic grows. Saved copies: branch `archive/community-wall`, folder `_archive/community/{en,fr,es,ar}/Community.html` (kept off main because main publishes the whole repo).
 Restore:
 1. Set `COMMUNITY_ENABLED = True` in scripts/build-batch4.py and scripts/disable-community.py.
 2. Add `Community.html` back to i18n/pages.txt; remove it from SKIP in scripts/build-search.mjs.
