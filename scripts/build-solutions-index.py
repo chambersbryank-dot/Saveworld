@@ -34,9 +34,10 @@ def info(page):
     what = un(re.sub(r'<[^>]+>', '', what))
     if desc.endswith('...'): desc = desc[:-3] + '…'
     if desc.endswith('…'):  # meta descriptions are clipped; keep whole sentences only
-        cut = max(desc.rfind('. ', 0, len(desc) - 1), desc.rfind('.) ', 0, len(desc) - 1))
+        ends = [m.start() for m in re.finditer(r'(?<!U\.S)(?<!\b[A-Z])\.\)? (?=[A-Z])', desc[:-1])]  # Oct 15: don't clip at 'U.S. '
+        cut = ends[-1] if ends else -1
         desc = desc[:cut + 1].strip() if cut > 0 else ''
-    sents = re.split(r'(?<=[.!?])\s+(?=[A-Z])', what)
+    sents = re.split(r'(?<!U\.S\.)(?<=[.!?])\s+(?=[A-Z])', what)
     what = ' '.join(sents[:2])
     return dict(img=img, alt=alt, credit=credit, desc=desc, what=what)
 
