@@ -4,6 +4,7 @@
 // Per-page metadata (in <head>):
 //   <meta name="sp:category" content="ocean|lakes|rivers|forests|space|planetary-defense|space-weather|earth-observation|project-r">
 //   <meta name="sp:type" content="hub|solution">
+//   <meta name="sp:added" content="YYYY-MM-DD">   (optional) release batch date; newest batch within 7 days = New this week
 //   <meta name="sp:classification" content="natural|corporate|agency|nonprofit">   (solutions)
 //   <meta name="sp:status" content="active|horizon">   horizon = no confirmed contract/funding yet
 //   <meta name="sp:item" content="name|classification|status">   a solution presented as a section of a hub; repeatable
@@ -141,6 +142,8 @@ function build() {
       return { title: decodeEnt(name), classification, status: status || 'active' }; });
     const entry = Object.assign({ url: file, title }, meta, { stats, missions });
     if (sections.length) entry.sections = sections;
+    // Oct 15: release batch date (<meta name="sp:added" content="YYYY-MM-DD">) drives the New this week strip + Changelog (scripts/build-new.py)
+    if (/^\d{4}-\d{2}-\d{2}$/.test(one('added') || '')) entry.added = one('added');
     if (!pages.some(p => p.url === file)) pages.push(entry);
   }
   function agg(list) {

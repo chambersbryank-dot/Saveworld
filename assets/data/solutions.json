@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T04:40:09.140Z",
+ "generated": "2026-10-16T05:08:40.996Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -3185,7 +3185,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "GEDI.html",
@@ -3195,7 +3196,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "OCO-2.html",
@@ -3205,7 +3207,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Sentinel-5P.html",
@@ -3215,7 +3218,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "PREFIRE.html",
@@ -3225,7 +3229,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "HydroGNSS.html",
@@ -3235,7 +3240,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Sentinel-3.html",
@@ -3245,7 +3251,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Libera.html",
@@ -3255,7 +3262,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Surfrider_Foundation.html",
@@ -3265,7 +3273,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Heal_the_Bay.html",
@@ -3275,7 +3284,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Plastic_Odyssey.html",
@@ -3285,7 +3295,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Trout_Unlimited.html",
@@ -3295,7 +3306,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Chesapeake_Bay_Foundation.html",
@@ -3305,7 +3317,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Keep_Tahoe_Blue.html",
@@ -3315,7 +3328,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "American_Forests.html",
@@ -3325,7 +3339,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Plant-for-the-Planet.html",
@@ -3335,7 +3350,8 @@
    "classification": "nonprofit",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Dragonfly.html",
@@ -3345,7 +3361,8 @@
    "classification": "agency",
    "status": "active",
    "stats": [],
-   "missions": []
+   "missions": [],
+   "added": "2026-10-15"
   }
  ]
 }
