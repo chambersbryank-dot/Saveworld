@@ -163,7 +163,7 @@ No page errors in any run.
 - Search runs only on Enter, the Search button, question or chip clicks, and ?q= links. Nothing runs while typing. The model preloads quietly on first focus.
 - Results show the top 5 first, with a "Show more" button that adds 5 at a time, plus a refine hint.
 - Hub labels on result cards now come from page breadcrumbs (search/hubs.json, written by build-search.mjs), because the nav dropdown was removed.
-- **GA4:** a `search` event with `search_term` (first 100 characters) is sent on submit and on question or chip clicks, via the existing gtag (G-ZCJ7CEKN94, Consent Mode, so it only counts after the visitor accepts).
+- **GA4:** a `search` event with `search_term` (first 100 characters) is sent on submit and on question or chip clicks, via the existing gtag (G-M5L2259Z68, Consent Mode, so it only counts after the visitor accepts).
   - Where to see it: GA4 > Reports > Engagement > Events > search. For a report, register `search_term` as a custom dimension (Admin > Custom definitions).
   - Enhanced Measurement "site search" (q parameter) may also log Search.html?q= page views.
 - Credits on Search.html, two lines: "Search: Pagefind (MIT)…" and "Background: Redesigned by SI & Biological SI Partner…".

@@ -4,7 +4,7 @@
 # Exit non-zero if a check fails. Commit + push only if `git status --porcelain` shows changes.
 # Roman: build-roman.py refreshes assets/data/roman.json (JPL Horizons distance + newest NASA image) before the builds.
 # Batch 4: build-batch4.py renders Do One Thing Today from assets/data/daily-actions.json (edit there), Community + Find a Cleanup pages, nav/footer links.
-# GA4: add-gtag.py injects the G-ZCJ7CEKN94 tag after <head> on every page (idempotent, Consent Mode).
+# GA4: add-gtag.py injects the G-M5L2259Z68 tag after <head> on every page (idempotent, Consent Mode).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 scripts/build-roman.py || echo "build-roman failed (kept previous data)"

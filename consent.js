@@ -5,7 +5,7 @@
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function loadGA() {
-    // GA4 tag (G-ZCJ7CEKN94) is in every page <head> with Consent Mode default denied; grant on Accept.
+    // GA4 tag (G-M5L2259Z68) is in every page <head> with Consent Mode default denied; grant on Accept.
     if (window.__spGaLoaded) return; window.__spGaLoaded = true;
     if (typeof window.gtag === 'function') gtag('consent', 'update', { analytics_storage: 'granted' });
   }
