@@ -1,0 +1,1 @@
+Montserrat and Noto Sans Arabic, SIL Open Font License 1.1 (https://openfontlicense.org). Used only by scripts/build-og.py to render share cards.

@@ -50,6 +50,7 @@ python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/n
 python3 scripts/build-glass.py  # Oct 15 item 6: Liquid Glass only on primary buttons + nav panels; flat tinted icons; -webkit- pairing; reduced-transparency/contrast fallbacks
 python3 scripts/build-spotfire.py       # Oct 15: astroEDU "Spot the Fire from Space" page (all langs) + links from Teachers/Kids_Map/FireSat/Lesson_Builder + sitemap
 python3 scripts/si-credits.py           # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
+python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-audit.py | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
