@@ -233,3 +233,10 @@ Not used: braeunig.us orbital mechanics page (did not respond). Fighter-jet/heli
      scripts/newsletter-updates.json from: (1) commits titled "feat(Page.html): reader-facing sentence" (or "feat: sentence"),
      and (2) bullets in this section formatted "- YYYY-MM-DD | Page.html | reader-facing sentence".
      Auto entries are English-only; add what.fr / what.es / what.ar in the JSON for translated issues (otherwise English shows). -->
+
+## 2026-10-16 — Friday community outreach campaign (prepared, NOT sent)
+- Contacts researched/verified against official sites: /workspace/outreach-community-1016/contacts.csv (26 rows).
+- 23 drafts prepared (EN 15, FR 3, IT 3, ES 2) + AR master template, in /workspace/outreach-community-1016/drafts/. All linked pages checked live (200).
+- Contact-form only: CNES, Agencia Espacial Española. Unverified: Australian Space Agency (media@space.gov.au; official page unreachable).
+- Skipped as duplicates: JAXA, ISRO (already thanked in outreach-142).
+- Awaiting owner approval before any send.
