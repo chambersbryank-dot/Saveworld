@@ -157,6 +157,63 @@ Sources: earthdata.nasa.gov EMIT/GEDI/OCO-3; nasa.gov OCO-2 launch + PREFIRE + L
 - Daily sync FIXED (Oct 14, 85524bfc): i18n-check now runs right after i18n-build in weekly-sync.sh (later all-language post-processors edit English and always read as stale); i18n-build runs seo-fix on English before hashing; JSON-LD and RELATED blocks ignored in i18n hashes (py + js). Full sync exits 0.
 - Solution candidates 10/14: CO2M (Earth Observation) and Mission Blue Hope Spots (Oceans) approved and BUILT (3fefc99b), 120 solutions.
 
+## Oct 16 request: Education expansion + orbital mechanics + aerospace track (SCOPE ONLY, nothing built)
+Owner request (11:38 AM HST, + 11:39 addition): expand education beyond kids to community college, university and graduate; teachers stay top priority.
+Components: (1) plain-language orbital mechanics guide; (2) interactive delta-v / Hohmann transfer tool (real vis-viva, animated); (3) leveled math help guide
+(vis-viva, Kepler, Hohmann, rocket equation, plane changes; K-12 to grad); (4) aerospace/aeronautical engineering track for college students (fighter-jet and
+helicopter design aims): aerodynamics, propulsion, performance, stability & control, structures/materials, rotorcraft. Public/unclassified material only, no export-controlled details.
+
+**Levels** (badge on every section): Kids (K-5), Teens (6-12), College (community college / first two years), University (upper division), Graduate.
+
+**Pages (EN + fr/es/ar/it via the generators; new generator scripts/build-learn.py; equations rendered with KaTeX, MIT licence, self-hosted under assets/vendor/katex/, MathML output for screen readers)**
+| File | What | Effort |
+|---|---|---|
+| Learn.html | "Learn" hub: pick a level, then a topic (orbits, rockets, flight, helicopters); the teacher path is first | S |
+| Orbits_Guide.html | Plain-language orbital mechanics: what an orbit is, why things stay up, LEO/GEO, transfers, plane changes; ELI10 box per section, then "go deeper" per level | M |
+| Orbit_Lab.html + assets/orbit-lab.js | Interactive tool: choose a body (Earth default), starting circular orbit (altitude), enter a delta-v (or a target altitude). It computes the Hohmann burns with vis-viva v^2 = mu(2/r - 1/a), shows the transfer ellipse and an animated rocket on canvas/SVG, total delta-v, transfer time (half the ellipse period), and says plainly when the delta-v is not enough or reaches escape. Static JS (no build step, no libraries except KaTeX); keyboard controls, live text readout (aria-live), table alternative to the animation, reduced-motion still frames, RTL layout for Arabic, numbers via Intl.NumberFormat. Constants from JPL SSD (mu, radii), cited on the page. Unit-tested against textbook cases (LEO 300 km to GEO, about 3.9 km/s total). | M-L (about 2-3 days) |
+| Orbit_Math.html | Math guide, leveled: Kepler's 3 laws, vis-viva, circular and escape speed, Hohmann delta-v, Tsiolkovsky rocket equation, plane-change delta-v = 2v sin(di/2), with worked examples and "check your answer" boxes | M |
+| Aero_Track.html | Aerospace engineering track hub, freshman to senior: course map and links | S |
+| Aero_Aerodynamics.html | Lift/drag equations, Bernoulli, airfoils and thin-airfoil theory (Cl = 2*pi*alpha), compressible flow, Mach and normal/oblique shocks (textbook relations only) | M |
+| Aero_Propulsion.html | Brayton cycle, thrust equation, specific fuel consumption, turbojet/turbofan/afterburner principles (public textbook level, no specific engine data) | M |
+| Aero_Performance_Stability.html | Flight performance (range/Breguet, climb, turn), static stability, control-surface basics | M |
+| Aero_Structures.html | Loads, stress and strain, beam bending, material families (aluminium, titanium, composites) at textbook level | S-M |
+| Rotorcraft.html | Momentum theory (hover induced velocity, figure of merit), blade element theory, autorotation; FAA Helicopter Flying Handbook as the plain-language companion | M |
+| Teacher kits | Each page gets a teacher box: NGSS/CCSS where they really apply (HS-PS2-4 gravitation, HS-ESS1-4 orbits already in standards.json), printable handout and Lesson Builder seeds | S each |
+
+**Ties into existing pages**: Teachers.html (new "Orbits & Flight" browse chip + teacher kits), Lesson_Builder.html (new topics with standards and slides), Satellite_Explorer.html ("now fly it" link to Orbit_Lab), Play_and_Learn.html (Orbit Lab tile, kid mode), Glossary.html (new terms), Project-Rawane / Space pages (real missions as worked examples: Hohmann-like transfers), World_Map untouched. Nav: Kids & Teachers door gains "Learn (all levels)". standards.json gets the new pages.
+
+**Estimate**: orbital part (Learn, Orbits_Guide, Orbit_Lab, Orbit_Math) about 5-7 working sessions incl. 5 languages; aerospace track (6 pages) about 6-8 sessions. Translation of equations is cheap (math is shared); prose follows the existing i18n flow. Feasibility of the tool as a static GitHub Pages JS page: high (vis-viva and Kepler are closed-form; no server).
+
+**Verified free resources (checked Oct 16 2026; link out, do not copy unless the licence allows)**
+- NASA Basics of Space Flight: https://science.nasa.gov/learn/basics-of-space-flight/ (US gov, public)
+- MIT OCW 16.346 Astrodynamics (Battin): https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/ (CC BY-NC-SA 4.0)
+- Orbital Mechanics & Astrodynamics open textbook: https://orbital-mechanics.space/ (licence to confirm before reuse)
+- PhET Gravity and Orbits: https://phet.colorado.edu/en/simulations/gravity-and-orbits ; Kepler's Laws: https://phet.colorado.edu/en/simulations/keplers-laws (CC BY 4.0 per PhET; confirm per sim)
+- OpenStax University Physics Vol 1, ch. 13 Gravitation: https://openstax.org/books/university-physics-volume-1/pages/13-introduction (page shows CC BY-NC-SA 4.0; confirm)
+- NASA Eyes on the Solar System: https://eyes.nasa.gov/ ; NASA Space Place (kids): https://spaceplace.nasa.gov/
+- JPL SSD planetary constants: https://ssd.jpl.nasa.gov/planets/phys_par.html
+- Kerbal Space Program wiki, Basic Orbiting (Math): https://wiki.kerbalspaceprogram.com/wiki/Tutorial:Basic_Orbiting_(Math) (game wiki, link only)
+- Bate, Mueller, White, Fundamentals of Astrodynamics (Dover, copyrighted book, cite/link only): https://store.doverpublications.com/products/9780486497044
+- Curtis, Orbital Mechanics for Engineering Students (Elsevier, copyrighted; no official open notes found, cite only)
+- ESA Education: https://www.esa.int/Education
+- NASA Glenn Beginner's Guide to Aeronautics: https://www.grc.nasa.gov/www/k-12/airplane/ (and bga.html); Beginner's Guide to Rockets: https://www.grc.nasa.gov/www/k-12/rocket/
+- MIT OCW 16.100 Aerodynamics: https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/ ; 16.01-04 Unified Engineering: https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/ ; 16.50 Propulsion Systems: https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/ ; 16.333 Aircraft Stability and Control: https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/ ; 16.07 Dynamics: https://ocw.mit.edu/courses/16-07-dynamics-fall-2009/ (OCW: CC BY-NC-SA)
+- FAA Helicopter Flying Handbook: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/helicopter_flying_handbook ; Pilot's Handbook of Aeronautical Knowledge: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak ; Airplane Flying Handbook: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook (US gov, public)
+- NASA Technical Reports Server: https://ntrs.nasa.gov/ (public reports)
+- AIAA students: https://www.aiaa.org/get-involved/students-educators (blocks automated checks, 403; verify in a browser)
+- KaTeX: https://katex.org/ (MIT licence)
+Not used: braeunig.us orbital mechanics page (did not respond). Fighter-jet/helicopter content stays at public textbook level (equations, principles, FAA/NASA/OCW), no specific military aircraft performance, design or export-controlled data.
+
+**Open decisions for the owner**
+1. Level names and order (Kids / Teens / College / University / Graduate)? Include community college as its own level or merge with College?
+2. Build order: orbital part first (recommended), then aerospace track?
+3. Orbit Lab scope v1: Earth only, circular start orbits, coplanar Hohmann + altitude raise; later: Moon/Mars, plane change, bi-elliptic?
+4. Equations via self-hosted KaTeX (recommended, works offline, about 300 KB) or native MathML only (no library, less consistent on iPad Safari)?
+5. Translate full grad-level prose into fr/es/ar/it, or translate K-12/college sections fully and keep grad derivations in English with translated headings?
+6. Fighter-jet / helicopter framing: generic "high-performance jet" and "rotorcraft" with textbook examples (recommended), or name public aircraft (F-16, F-35) only where public sources such as NASA or the manufacturers say so?
+7. Credit for any SI-made diagrams ("Created by SI and Biological SI Partner") vs only NASA/public-domain images?
+8. Add a "Learn" door to the nav, or keep it under Kids & Teachers?
+
 ## Brainstorm (ideas only, NOT committed to-dos)
 - Press outreach (Oct 13): intro emails to news outlets introducing savingplanets.com (features, education content, EN/FR/ES/AR). Owner framing: out-of-the-box, speed-to-scale near a tipping point. Research only, no contact: target outlets (local Hawaii, national US, France/Spain/Arabic-speaking), contact best practices, one master email + language variants? Nothing sent.
 - Human-SI awards as free advertising ("SI and its Biological SI Partner" team entry): covered by /workspace/awards/human-si-collaboration-writeup.md and the User to-dos line (6342867).
