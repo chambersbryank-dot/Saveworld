@@ -1,0 +1,45 @@
+name: Report a correction
+description: Something on savingplanets.com is wrong, out of date or unclear. Tell us and we will check it against the source.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep Saving Planets accurate. We check every report against the original source. See our [Corrections policy](https://www.savingplanets.com/Corrections.html).
+        Please do not include personal information.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page with the problem (the link is filled in automatically when you use the footer link).
+      placeholder: https://www.savingplanets.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language of the page
+      options: [English, Français, Español, العربية, Italiano]
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong?
+      description: Quote the sentence, number, date or image if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it say?
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to a reliable source (agency, peer-reviewed paper, official site) that supports the correction.
+    validations:
+      required: false

@@ -1,0 +1,46 @@
+name: Suggest a solution
+description: Know a real, working solution for oceans, rivers, lakes, forests or space? Suggest it for Saving Planets.
+title: "[Solution idea] "
+labels: ["solution-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We feature real solutions with sources we can verify. Please do not include personal information.
+  - type: input
+    id: name
+    attributes:
+      label: Name of the solution, project or organization
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: hub
+    attributes:
+      label: Which area?
+      options: [Ocean, Rivers, Lakes, Forests, Earth Observation, Space, Space Weather, Space Disposal, Planetary Defense, Project Rawane, Not sure]
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options: [Active now, Coming soon, Not sure]
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do, and what has it achieved?
+      description: Numbers and dates help, with a link to where they come from.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links to reliable sources (agency reports, news, peer-reviewed papers).
