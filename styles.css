@@ -1220,7 +1220,6 @@ body.toc-sub .page-hero h1{overflow-wrap:anywhere}
 .sol-card.sd-off,.sol-hub.sd-empty{display:none !important}
 body.sd-on .sp-collapsed .grid>.sol-card:not(.sd-off){display:block !important}body.sd-on .sp-more{display:none}
 /* SD:END */
-
 /* UX-OCT15:START */
 .nav-links{gap:1.1rem}
 .nav-group details{position:relative}
@@ -1283,3 +1282,38 @@ html.dark .dom-card{background:#13232f}
 .sol-hub.sp-collapsed .grid>.sol-card:nth-child(n+7){display:none}
 .sp-more{display:block;margin:1rem auto 0;min-height:44px;padding:.5rem 1.2rem;border-radius:999px;border:0;background:#003755;color:#fff;font-weight:600;cursor:pointer}
 /* UX-OCT15:END */
+/* LG-HARDEN:START */
+/* Flat icons: per-page tint, consistent size, no blur (overrides extras.css/edu.css glass) */
+.aud-icon,.eli10-icon,.share-btn,.nav-toggle,.edu-bubble.glass,.t-chip,.dt-btn{background:var(--lg-solid,#1d3f73) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;color:#fff !important;border:1px solid rgba(255,255,255,.28) !important;box-shadow:0 2px 6px rgba(0,0,0,.18) !important;background-image:none !important}
+.aud-icon,.eli10-icon{width:2.75rem !important;height:2.75rem !important;border-radius:50% !important;font-size:1.2rem !important}
+.partner-cta .btn-nav::before{width:2rem !important;height:2rem !important;border-radius:50% !important;font-size:1rem !important;background:rgba(255,255,255,.18) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:none !important;color:#fff !important}
+.nav-toggle{border-radius:10px !important;min-width:44px;min-height:44px}.nav-toggle span,nav.scrolled .nav-toggle span{background:#fff !important}
+.t-chip,.dt-btn{border-radius:999px !important;min-height:40px}
+.t-chip[aria-pressed=true]{background:#fff !important;color:var(--lg-solid,#1d3f73) !important;border-color:#fff !important;font-weight:700}
+.edu-bubble.glass{border-radius:18px !important}
+.edu-bubble.glass .lb-small{color:rgba(255,255,255,.9) !important}
+.share-btn:hover,.share-btn:focus-visible,.dt-btn:hover,.dt-btn:focus-visible,.t-chip:hover,.edu-bubble.glass:hover{filter:brightness(1.12)}
+.sx-slot,.az-nav,#actions .mission-block{-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+html.dark .az-nav{background:rgba(11,18,32,.95) !important}.az-nav{background:rgba(255,255,255,.96) !important}
+/* No backdrop-filter support: make glass surfaces opaque enough to read */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ body.toc-home nav,body.toc-sub nav{background:rgba(0,20,40,.92) !important}
+ body.toc-home nav.scrolled,body.toc-sub nav.scrolled{background:#fff !important}
+ .nav-sub,.dropdown-menu{background:#fff !important}html.dark .nav-sub{background:#0f1b26 !important}
+ .hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn{background:var(--lg-solid,#1d3f73) !important}
+}
+/* User asked for less transparency, or more contrast: drop glass everywhere, solid colours */
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+ body.toc-home nav,body.toc-sub nav,body.toc-home nav.scrolled,body.toc-sub nav.scrolled,.nav-sub,.dropdown-menu,body.toc-home .nav-links,body.toc-sub .nav-links,.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn,.glass,#actions .mission-block{-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+ body.toc-home nav,body.toc-sub nav{background:#001428 !important}
+ body.toc-home nav.scrolled,body.toc-sub nav.scrolled{background:#fff !important}
+ .nav-sub,.dropdown-menu{background:#fff !important}html.dark .nav-sub{background:#0f1b26 !important}
+ .hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn{background:var(--lg-solid,#1d3f73) !important;background-image:none !important;color:#fff !important}
+ .glass,#actions .mission-block{background:var(--glass-solid,#003755) !important;background-image:none !important}
+}
+@media (prefers-contrast:more){
+ .hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn,.aud-icon,.eli10-icon,.share-btn,.nav-toggle,.edu-bubble.glass,.t-chip,.dt-btn{border:2px solid #fff !important;box-shadow:none !important}
+ .nav-sub,.dropdown-menu{border:2px solid currentColor !important}
+}
+@media (forced-colors:active){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn,.aud-icon,.eli10-icon,.share-btn,.nav-toggle,.edu-bubble.glass,.t-chip,.dt-btn{border:1px solid ButtonText !important;forced-color-adjust:auto}}
+/* LG-HARDEN:END */
