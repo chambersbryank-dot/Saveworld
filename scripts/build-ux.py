@@ -72,17 +72,18 @@ T = {
    seeall='Vedi tutte le {n} soluzioni: {d}', news='Ultime novità', newsintro='Cosa è cambiato di recente sul sito. Iscriviti al Notiziario settimanale per riceverle ogni settimana.',
    kidsh='Bambini e insegnanti', filt='Mostra', all='Tutto', more='Mostra tutte ({n})', less='Mostra meno', hub='Hub', allhubs='Tutti gli hub', menu='Menu'),
 }
-GROUPS = [('sol', ['Solutions.html','World_Map.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
+# Oct 15 item 5: 5 doors, no duplicates. World Map + Mission Log live only under Project Rawane;
+# Education has its own Kids & Teachers door; About folded into Get Involved (policy pages stay in the footer).
+GROUPS = [('sol', ['Solutions.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
-  ('sl', ['Space.html','Artemis_II.html#launches','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html','Project-Rawane.html','Rawanes_Mission_Log.html']),
-  ('pr', ['Rawanes_Mission_Log.html','World_Map.html','Teachers.html']),  # Oct 15: Project Rawane dropdown (labels in PR below)
-  ('gi', ['Ways_to_Help.html','Find_a_Cleanup.html','index.html#newsletter','Contact.html']),
-  ('ab', ['About.html','Editorial_Policy.html','Corrections.html','Press.html','Privacy.html'])]
-PR = {'en': ('Project Rawane', ["Rawane&#x27;s Mission Log", 'Solutions Pinned to the World', 'Education']),
-      'fr': ('Projet Rawane', ['Journal de mission de Rawane', 'Solutions épinglées sur le monde', 'Éducation']),
-      'es': ('Proyecto Rawane', ['Bitácora de Rawane', 'Soluciones fijadas en el mundo', 'Educación']),
-      'ar': ('مشروع Rawane', ['سجل مهمة Rawane', 'حلول مثبتة على العالم', 'التعليم']),
-      'it': ('Progetto Rawane', ['Diario di missione di Rawane', 'Soluzioni fissate nel mondo', 'Istruzione'])}
+  ('sl', ['Space.html','Artemis_II.html#launches','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html']),
+  ('pr', ['Project-Rawane.html','Rawanes_Mission_Log.html','World_Map.html']),
+  ('gi', ['Ways_to_Help.html','Find_a_Cleanup.html','index.html#newsletter','Contact.html','About.html'])]
+PR = {'en': ('Project Rawane', ['About Project Rawane', "Rawane&#x27;s Mission Log", 'Solutions Pinned to the World']),
+      'fr': ('Projet Rawane', ['À propos du projet Rawane', 'Journal de mission de Rawane', 'Solutions épinglées sur le monde']),
+      'es': ('Proyecto Rawane', ['Acerca del Proyecto Rawane', 'Bitácora de Rawane', 'Soluciones fijadas en el mundo']),
+      'ar': ('مشروع Rawane', ['عن مشروع Rawane', 'سجل مهمة Rawane', 'حلول مثبتة على العالم']),
+      'it': ('Progetto Rawane', ['Il Progetto Rawane', 'Diario di missione di Rawane', 'Soluzioni fissate nel mondo'])}
 DOMAINS = [['Oceans.html','Rivers.html','Lakes.html'], ['Deforestation.html'],
            ['Space.html','Project-Rawane.html','Earth_Observation.html','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html']]
 DOMAIN_IMG = ['assets/videos/great-bubble-barrier.jpg', None, None]
@@ -95,7 +96,7 @@ def nav_html(l, page):
         lab = (lambda i: PR[l][1][items.index(i)]) if key == 'pr' else (lambda i: t["items"][i])
         lis = ''.join(f'<li><a href="{hr(i)}"{" aria-current=\"page\"" if i == page else ""}>{lab(i)}</a></li>' for i in items)
         name = PR[l][0] if key == 'pr' else t[key]
-        if key == 'pr': cur = page in ('Project-Rawane.html', 'Rawanes_Mission_Log.html')
+        if key == 'pr': cur = page in ('Project-Rawane.html', 'Rawanes_Mission_Log.html', 'World_Map.html')
         out.append(f'<li class="nav-group nav-{key}{" is-current" if cur else ""}"><details><summary aria-haspopup="true" aria-expanded="false">{name}</summary><ul class="nav-sub">{lis}</ul></details></li>')
     return ''.join(out)
 
@@ -162,7 +163,7 @@ nav.scrolled .nav-group summary{color:#003755}
 .nav-group.is-current summary{text-decoration:underline;text-underline-offset:6px}
 .nav-sub{position:absolute;top:100%;inset-inline-start:0;min-width:230px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:.5rem;list-style:none;margin:.4rem 0 0;z-index:1200}
 .nav-sub a{display:block;color:#003755 !important;font-size:1rem;padding:.55rem .7rem;border-radius:8px}
-.nav-sub a:hover,.nav-sub a[aria-current]{background:#e6f5fc}
+.nav-sub a:hover,.nav-sub a[aria-current]{background:#e6f5fc;color:#0b3a53 !important}
 .nav-help a{background:#2e9e4f !important;color:#fff !important;border:0 !important;padding:.5rem .9rem;border-radius:999px;white-space:nowrap}
 .sticky-help{position:fixed;inset-inline-end:16px;bottom:16px;z-index:1100;background:#2e9e4f;color:#fff;font-weight:700;padding:.75rem 1.1rem;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none}
 .sticky-help:hover{background:#23803f;color:#fff}
@@ -237,7 +238,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = '20261015s4'  # bump when styles.css changes
+STYLEV = '20261015s5'  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
