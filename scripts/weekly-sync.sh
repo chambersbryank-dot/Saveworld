@@ -24,6 +24,7 @@ python3 scripts/a11y-pass.py              # Oct 14: specific img alts, video cap
 python3 scripts/add-gtag.py
 python3 scripts/dept-contacts.py         # Oct 14: EN department blocks before translation
 python3 scripts/disable-community.py
+python3 scripts/build-fivews.py          # Oct 15: sourced Five W's for Roman + tsunami horizon tools (EN + i18n strings)
 python3 scripts/i18n-build.py
 # Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors
 # (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.

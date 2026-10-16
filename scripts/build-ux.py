@@ -63,14 +63,14 @@ T = {
    kidsh='الأطفال والمعلمون', filt='عرض', all='الكل', more='عرض الكل ({n})', less='عرض أقل', hub='المركز', allhubs='كل المراكز', menu='القائمة'),
  'it': dict(sol='Soluzioni', kt='Bambini e insegnanti', sl='Spazio e lanci', gi='Partecipa', ab='Chi siamo', help='Aiuta / Dona',
    items={'Solutions.html':'Tutte le soluzioni','World_Map.html':'Mappa del mondo','Oceans.html':'Oceano','Rivers.html':'Fiumi','Lakes.html':'Laghi','Deforestation.html':'Foreste','Earth_Observation.html':'Osservazione della Terra','Search.html':'Cerca','Topics.html':'Argomenti dalla A alla Z',
-     'Kids_Map.html':'Mappa del pianeta per bambini','Amazing_Facts.html':'Fatti incredibili','Satellite_Explorer.html':'Esploratore di satelliti','Lesson_Builder.html':'Creatore di piani di lezione','Teachers.html':'Schede per insegnanti','Myth_vs_Fact.html':'Mito o realtà','Glossary.html':'Glossario',
-     'Space.html':'Spazio','Artemis_II.html#launches':'Tracker dei lanci in diretta','Planetary_Defense.html':'Difesa planetaria','Space_Weather.html':'Meteo spaziale','Space_Disposal.html':'Smaltimento dei detriti spaziali','Project-Rawane.html':'Progetto Rawane','Rawanes_Mission_Log.html':'Diario di missione di Rawane',
-     'Ways_to_Help.html':'Come aiutare','Find_a_Cleanup.html':'Trova una pulizia','index.html#newsletter':'Brief settimanale','Contact.html':'Contatti',
+     'Kids_Map.html':'Mappa del pianeta per bambini','Amazing_Facts.html':'Fatti incredibili','Satellite_Explorer.html':'Esploratore di satelliti','Lesson_Builder.html':'Generatore di piani di lezione','Teachers.html':'Schede per insegnanti','Myth_vs_Fact.html':'Mito o realtà','Glossary.html':'Glossario',
+     'Space.html':'Spazio','Artemis_II.html#launches':'Lanci in diretta','Planetary_Defense.html':'Difesa planetaria','Space_Weather.html':'Meteo spaziale','Space_Disposal.html':'Smaltimento dei detriti spaziali','Project-Rawane.html':'Progetto Rawane','Rawanes_Mission_Log.html':'Diario di missione di Rawane',
+     'Ways_to_Help.html':'Come aiutare','Find_a_Cleanup.html':'Trova un evento di pulizia','index.html#newsletter':'Notiziario settimanale','Contact.html':'Contatti',
      'About.html':'Chi siamo','Editorial_Policy.html':'Politica editoriale','Corrections.html':'Correzioni','Press.html':'Stampa e media','Privacy.html':'Privacy'},
    cta1='Esplora tutte le soluzioni', cta2='Come aiutare', imp=['soluzioni reali e con fonti','hub di soluzioni','lingue','strumenti per bambini e insegnanti'],
    dom=[('Acqua','Oceani, fiumi e laghi'),('Terra','Le foreste e le persone che ci vivono'),('Spazio','Satelliti, missioni e un’orbita più pulita')],
-   seeall='Vedi tutte le {n} soluzioni: {d}', news='Ultime novità', newsintro='Cosa è cambiato di recente sul sito. Iscriviti al Brief settimanale per riceverlo ogni settimana.',
-   kidsh='Bambini e insegnanti', filt='Mostra', all='Tutto', more='Mostra tutte ({n})', less='Mostra di meno', hub='Hub', allhubs='Tutti gli hub', menu='Menu'),
+   seeall='Vedi tutte le {n} soluzioni: {d}', news='Ultime novità', newsintro='Cosa è cambiato di recente sul sito. Iscriviti al Notiziario settimanale per riceverle ogni settimana.',
+   kidsh='Bambini e insegnanti', filt='Mostra', all='Tutto', more='Mostra tutte ({n})', less='Mostra meno', hub='Hub', allhubs='Tutti gli hub', menu='Menu'),
 }
 GROUPS = [('sol', ['Solutions.html','World_Map.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
@@ -228,7 +228,7 @@ def solutions_filters(l, hubs):
     s = block(s, 'SOL-FILTERS', fb, r'<div [^>]*sol-jump')
     return wr(p, s)
 
-COUNT_RE = re.compile(r'\b1[0-9]{2}(?=(\+)? (real|soluciones|solutions|حل))')
+COUNT_RE = re.compile(r'\b1[0-9]{2}(?=(\+)? (real|soluciones|solutions|soluzioni|حل))')
 def page_pass(p, l, n):
     s = rd(p); o = s
     page = os.path.basename(p)
@@ -238,6 +238,8 @@ def page_pass(p, l, n):
         ls = re.search(r'<li[^>]*class="lang-switch".*?</li>', m.group(2), re.S).group(0)
         inner = nav_html(l, page) + ls + f'<li class="nav-help"><a href="Ways_to_Help.html">{T[l]["help"]}</a></li>'
         s = s[:m.start()] + m.group(1) + inner + m.group(3) + s[m.end():]
+    # Oct 15: translated pages inherit the English sticky button from i18n-build; always set this language's label.
+    s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)[^<]*(</a>)', lambda mm: mm.group(1) + T[l]["help"] + mm.group(2), s)
     if 'class="sticky-help"' not in s and '</main>' in s:
         s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{T[l]["help"]}</a>', 1)
     # lazy images below the hero
@@ -247,7 +249,7 @@ def page_pass(p, l, n):
     parts = s.split('</section>', 1)
     if len(parts) == 2: s = parts[0] + '</section>' + re.sub(r'<img\b[^>]*>', lazy, parts[1])
     # auto counts in visible text (not inside dates)
-    s = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|حل|حلًا))', str(n), s)
+    s = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), s)
     s = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (حلول|حلا))', str(n), s)
     # canonical/og for index pages
     if page == 'index.html':
