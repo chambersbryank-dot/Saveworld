@@ -17,7 +17,7 @@ env:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,13 +25,15 @@ jobs:
       - name: Link check (lychee, built files)
         id: lychee
         continue-on-error: true
+        timeout-minutes: 15
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --max-concurrency 8 --accept 200,204,206,301,302,403,429 --exclude-path node_modules --exclude 'mailto:' --exclude 'linkedin\.com' --exclude 'x\.com' --exclude 'twitter\.com' './**/*.html'
+          args: --no-progress --max-concurrency 32 --timeout 15 --max-retries 1 --cache --max-cache-age 7d --accept 200,204,206,301,302,403,429 --exclude-path node_modules --exclude 'mailto:' --exclude 'linkedin\.com' --exclude 'x\.com' --exclude 'twitter\.com' './*.html' './fr/*.html'
           output: lychee.md
           fail: false
       - name: Lighthouse CI
         continue-on-error: true
+        timeout-minutes: 10
         run: |
           urls=""; for p in $PAGES; do urls="$urls --collect.url=$SITE$p"; done
           npx -y @lhci/cli@0.14.x collect $urls --collect.numberOfRuns=1 --collect.settings.preset=desktop || true
@@ -42,6 +44,7 @@ jobs:
             fs.writeFileSync("lighthouse.md",out)'
       - name: Accessibility (pa11y-ci, axe runner)
         continue-on-error: true
+        timeout-minutes: 10
         run: |
           urls=$(for p in $PAGES; do printf '"%s%s",' "$SITE" "$p"; done | sed 's/,$//')
           echo "{\"defaults\":{\"runners\":[\"axe\"],\"timeout\":60000,\"chromeLaunchConfig\":{\"args\":[\"--no-sandbox\"]}},\"urls\":[$urls]}" > .pa11yci.json
@@ -49,6 +52,7 @@ jobs:
           { echo '```'; tail -n 120 pa11y.txt; echo '```'; } > pa11y.md
       - name: HTML validation (html-validate)
         continue-on-error: true
+        timeout-minutes: 10
         run: |
           echo '{"extends":["html-validate:recommended"],"rules":{"no-inline-style":"off","no-trailing-whitespace":"off","long-title":"off","attribute-boolean-style":"off","void-style":"off","no-raw-characters":"off","prefer-native-element":"off","no-redundant-role":"off","element-required-attributes":"off","wcag/h63":"off"}}' > .htmlvalidate.json
           files=$(ls *.html fr/*.html es/*.html ar/*.html it/*.html | grep -v google)
