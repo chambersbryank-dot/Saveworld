@@ -1,5 +1,5 @@
 {
- "_about": "Map data for World_Map.html. One entry per solution page. status: active|upcoming. pins: real places named on the solution page (basis=page), launch site named on the page (basis=launch), or org headquarters when the page names no single site (basis=hq). strip: orbit = also listed in the From Orbit strip; world = worldwide, no single place (listed in the Worldwide strip). New solution? Add an entry here; build-map.py warns about any solution without one.",
+ "_about": "Map data for World_Map.html. One entry per solution page. status: active|upcoming. pins: real places named on the solution page (basis=page), launch site named on the page (basis=launch), or org headquarters when the page names no single site (basis=hq). strip: orbit = also listed in the From Orbit strip; world = worldwide, no single place (listed in the Worldwide strip). New solution? Add an entry here; build-map.py warns about any solution without one. Oct 15 (pins for all): space missions use the operating agency HQ or mission control (label says which). Natural systems and general concepts with no operating organization stay unpinned in the Worldwide/From Orbit strips.",
  "solutions": {
   "4ocean.html": {
    "status": "active",
@@ -44,12 +44,26 @@
   },
   "Aditya_L1.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 12.971,
+     "lng": 77.594,
+     "label": "ISRO headquarters, Bengaluru, India (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Aeolus.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
@@ -138,7 +152,14 @@
   },
   "BepiColombo.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Billion_Oyster_Project.html": {
@@ -154,17 +175,38 @@
   },
   "Biomass.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "CO2M.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Carruthers.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 40.102,
+     "lng": -88.227,
+     "label": "University of Illinois Urbana-Champaign (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Chesapeake_Bay_Foundation.html": {
@@ -215,7 +257,14 @@
   },
   "Comet_Interceptor.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Coral_Gardeners.html": {
@@ -265,7 +314,14 @@
   },
   "DSCOVR_EPIC.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.852,
+     "lng": -76.934,
+     "label": "NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Dragonfly.html": {
@@ -282,17 +338,38 @@
   },
   "EMIT.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "EOS-06.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 12.971,
+     "lng": 77.594,
+     "label": "ISRO headquarters, Bengaluru, India (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "ESCAPADE.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 37.88,
+     "lng": -122.244,
+     "label": "UC Berkeley Space Sciences Laboratory (mission lead and operations)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "EarthCARE.html": {
@@ -331,17 +408,38 @@
   },
   "EnVision.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Europa_Clipper.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "ExoMars_Rosalind_Franklin.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "FLEX.html": {
@@ -393,12 +491,26 @@
   },
   "GEDI.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.986,
+     "lng": -76.943,
+     "label": "University of Maryland, College Park (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "GOES-19.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.852,
+     "lng": -76.934,
+     "label": "NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "GOSAT-GW.html": {
@@ -415,7 +527,14 @@
   },
   "GRACE-FO.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Global_Fishing_Watch.html": {
@@ -528,7 +647,14 @@
   },
   "Hayabusa2_Torifune.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 35.558,
+     "lng": 139.395,
+     "label": "JAXA ISAS, Sagamihara, Japan (mission control)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Heal_the_Bay.html": {
@@ -585,12 +711,26 @@
   },
   "Hera.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "HydroGNSS.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "ICESat-2.html": {
@@ -607,17 +747,38 @@
   },
   "IMAP.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 39.162,
+     "lng": -76.898,
+     "label": "Johns Hopkins APL, Laurel, Maryland (mission operations)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "ISS_Water_Recovery.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 29.559,
+     "lng": -95.09,
+     "label": "NASA Johnson Space Center, Houston (ISS mission control)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Juice.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Jupiter.html": {
@@ -687,7 +848,14 @@
   },
   "Landsat_9.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 43.735,
+     "lng": -96.623,
+     "label": "USGS EROS Center, Sioux Falls, South Dakota (operator and data archive)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "LeoLabs.html": {
@@ -757,7 +925,14 @@
   },
   "LignoSat.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 35.026,
+     "lng": 135.781,
+     "label": "Kyoto University, Japan (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Living_Lakes.html": {
@@ -790,7 +965,14 @@
   },
   "Lucy.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.991,
+     "lng": -76.852,
+     "label": "NASA Goddard, Greenbelt, Maryland (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "MMX.html": {
@@ -830,7 +1012,14 @@
   },
   "Mission_Blue_Hope_Spots.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.299,
+     "lng": -122.286,
+     "label": "Napa, California (HQ)",
+     "basis": "hq"
+    }
+   ],
    "strip": "world"
   },
   "Moon_Steadies_Earth.html": {
@@ -892,7 +1081,14 @@
   },
   "Nancy_Grace_Roman.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.991,
+     "lng": -76.852,
+     "label": "NASA Goddard, Greenbelt, Maryland (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "OCO-2.html": {
@@ -909,7 +1105,14 @@
   },
   "OSIRIS-APEX.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.991,
+     "lng": -76.852,
+     "label": "NASA Goddard, Greenbelt, Maryland (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Ocean_Cleanup.html": {
@@ -982,12 +1185,26 @@
   },
   "PRELUDE.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 46.52,
+     "lng": 6.63,
+     "label": "ClearSpace, Lausanne, Switzerland (HQ)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "PUNCH.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 40.016,
+     "lng": -105.25,
+     "label": "Southwest Research Institute, Boulder, Colorado (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Phytoplankton.html": {
@@ -1060,7 +1277,14 @@
   },
   "Plato.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Posidonia_Meadows.html": {
@@ -1087,7 +1311,14 @@
   },
   "Psyche.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Rainforest_Connection.html": {
@@ -1121,7 +1352,14 @@
   },
   "Ramses.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Restoring_the_Lake_Depths.html": {
@@ -1165,22 +1403,56 @@
   },
   "SARSAT.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.852,
+     "lng": -76.934,
+     "label": "U.S. SARSAT Mission Control Center, Suitland, Maryland (NOAA)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "SOLAR_1.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.992,
+     "lng": -77.031,
+     "label": "NOAA headquarters, Silver Spring, Maryland (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "SPHEREx.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "SWOT.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 34.201,
+     "lng": -118.172,
+     "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    },
+    {
+     "lat": 43.562,
+     "lng": 1.481,
+     "label": "CNES, Toulouse, France (mission partner)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Saharan_Dust_Amazon.html": {
@@ -1264,7 +1536,14 @@
   },
   "Sentinel-1.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Sentinel-2C.html": {
@@ -1293,12 +1572,26 @@
   },
   "Sentinel-4.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.858,
+     "lng": 8.628,
+     "label": "EUMETSAT, Darmstadt, Germany (operates MTG-S1, which carries Sentinel-4)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Sentinel-5P.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Sentinel-6B.html": {
@@ -1315,17 +1608,38 @@
   },
   "Solar_Orbiter.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "SpaceLogistics.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 38.996,
+     "lng": -77.448,
+     "label": "Dulles, Virginia (SpaceLogistics HQ, Northrop Grumman)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Starfish_Otter.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 47.459,
+     "lng": -122.254,
+     "label": "Tukwila, Washington (Starfish Space HQ)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Sungai_Watch.html": {
@@ -1347,17 +1661,38 @@
   },
   "Surfrider_Foundation.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 33.427,
+     "lng": -117.612,
+     "label": "San Clemente, California (HQ)",
+     "basis": "hq"
+    }
+   ],
    "strip": "world"
   },
   "TEMPO.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 42.381,
+     "lng": -71.128,
+     "label": "Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "TRACERS.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 41.661,
+     "lng": -91.536,
+     "label": "University of Iowa, Iowa City (mission lead)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Tanager-1.html": {
@@ -1429,22 +1764,56 @@
   },
   "Tsunami_Early_Warning.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 21.364,
+     "lng": -157.962,
+     "label": "Pacific Tsunami Warning Center, Ford Island, Hawaii (NOAA)",
+     "basis": "hq"
+    },
+    {
+     "lat": 61.599,
+     "lng": -149.112,
+     "label": "National Tsunami Warning Center, Palmer, Alaska (NOAA)",
+     "basis": "hq"
+    }
+   ],
    "strip": "world"
   },
   "US_Deorbit_Vehicle.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 29.559,
+     "lng": -95.09,
+     "label": "NASA Johnson Space Center, Houston (ISS program)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Veggie_Space_Garden.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 29.559,
+     "lng": -95.09,
+     "label": "NASA Johnson Space Center, Houston (ISS mission control)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Vigil.html": {
    "status": "upcoming",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (operating agency)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Waterkeeper_Alliance.html": {
@@ -1472,7 +1841,14 @@
   },
   "Webb_2024_YR4.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 39.332,
+     "lng": -76.623,
+     "label": "Space Telescope Science Institute, Baltimore (Webb mission operations)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   },
   "Whales_Ocean_Gardeners.html": {
@@ -1482,7 +1858,14 @@
   },
   "Zero_Debris_Charter.html": {
    "status": "active",
-   "pins": [],
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.302,
+     "label": "ESA headquarters, Paris (charter facilitator)",
+     "basis": "hq"
+    }
+   ],
    "strip": "orbit"
   }
  }

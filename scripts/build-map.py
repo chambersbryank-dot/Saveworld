@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261015n'
+ASSETV = '20261015p'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0

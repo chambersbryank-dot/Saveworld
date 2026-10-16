@@ -118,7 +118,7 @@ def home(l, n, hubs):
         f'<div class="imp-item"><span class="imp-num">{v}</span><span class="imp-label">{lab}</span></div>' for v, lab in zip(imp, t['imp'])) + '</section>'
     s = block(s, 'IMPACT', strip, r'<!-- DIFF:START -->')
     s = re.sub(r'<!-- DIFF:START -->.*?<!-- DIFF:END -->\n?', '', s, flags=re.S)  # replaced by the impact strip (hard-coded count)
-    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{t["cta1"]}</a><a class="btn hero-cta2" href="Ways_to_Help.html">{t["cta2"]}</a></p>'
+    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{DROP}{t["cta1"]}</a><a class="btn hero-cta2" href="Ways_to_Help.html">{t["cta2"]}</a></p>'
     s = block(s, 'HERO-CTA', cta, r'<p class="hero-email">')
     secs = []
     for i, (hs, (dn, dd)) in enumerate(zip(DOMAINS, t['dom'])):
@@ -128,7 +128,7 @@ def home(l, n, hubs):
         feat = ''.join(mini(c) for c in rr[:3])
         chips = ''.join(f'<a class="dom-chip" href="Solutions.html#{hubs[h]["id"]}">{hubs[h]["name"]} ({len(hubs[h]["cards"])})</a>' for h in hs if h in hubs)
         cls = ['water', 'land', 'space'][i]
-        secs.append(f'<section class="domain domain-{cls}" aria-labelledby="dom-{cls}"><div class="dom-head"><h2 id="dom-{cls}">{dn}</h2><p>{dd}</p><div class="dom-chips">{chips}</div></div><div class="dom-grid">{feat}</div>'
+        secs.append(f'<section class="domain domain-{cls}" aria-labelledby="dom-{cls}"><div class="dom-head"><h2 id="dom-{cls}">{dn}</h2>{"" if cls == "water" else f"<p>{dd}</p>"}<div class="dom-chips">{chips}</div></div><div class="dom-grid">{feat}</div>'
                     f'<p class="dom-all"><a class="btn" href="Solutions.html?domain={cls}">{t["seeall"].format(n=len(cards), d=dn)}</a></p></section>')
     s = block(s, 'DOMAINS', ''.join(secs), r'<!-- AUDIENCE:START -->')
     try:
@@ -163,6 +163,7 @@ nav.scrolled .nav-group summary{color:#003755}
 html.dark .nav-sub{background:#0f1b26} html.dark .nav-sub a{color:#e8eef5 !important}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
 .hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
+.hero-cta{display:inline-flex;align-items:center;gap:.45rem}.cta-drop{flex:none;border:0;background:none;box-shadow:none;outline:0}
 .hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
@@ -212,6 +213,13 @@ JS = r"""
 })();
 /* UX-OCT15:END */
 """
+# Oct 15: teardrop icon on 'Explore all solutions' (inline SVG, currentColor, no ring/box so it blends with the button)
+DROP = '<svg class="cta-drop" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C12 2 5 10.2 5 15a7 7 0 0 0 14 0C19 10.2 12 2 12 2z"/></svg>'
+STYLEV = '20261015t'  # bump when styles.css changes
+def bump_styles():
+    for f in glob.glob('*.html') + glob.glob('*/*.html'):
+        s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
+        if s2 != s: wr(f, s2)
 def asset(path, txt):
     s = rd(path); s = re.sub(r'\n?/\* UX-OCT15:START \*/.*?/\* UX-OCT15:END \*/\n?', '', s, flags=re.S)
     wr(path, s.rstrip('\n') + '\n' + txt)
@@ -285,5 +293,5 @@ if __name__ == '__main__':
     for l in LANGS:
         for p in sorted(glob.glob(d(l) + '*.html')): ch += page_pass(p, l, n)
         ch += home(l, n, hubs_by[l]); ch += solutions_filters(l, hubs_by[l])
-    asset('styles.css', CSS); asset('site.js', JS); sitemap()
+    asset('styles.css', CSS); asset('site.js', JS); sitemap(); bump_styles()
     print(f'build-ux: {n} solutions, {ch} page writes')
