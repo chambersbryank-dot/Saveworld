@@ -184,3 +184,13 @@ html.dark nav.scrolled .nav-toggle { border-color: rgba(255,255,255,0.55) !impor
 .sx-vid a{color:#c9e3ff}
 .sx-deep .sx-np{color:#fff!important}
 @media (max-width:600px){.sx3d-stage canvas{aspect-ratio:4/5}.sx3d-pin{font-size:.7rem;padding:.3rem .5rem}}
+/* Oct 15 (Top-10 #2): Lesson Builder 2.0 tools, slides, handout */
+.lb-tools{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+.lb-deck{position:fixed;inset:0;z-index:3000;background:#0b1622;color:#fff;display:flex;flex-direction:column}
+.lb-deck-bar{display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.7rem;border-bottom:1px solid rgba(255,255,255,.2)}
+.lb-deck-bar button{font:inherit;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.5rem 1rem;min-height:44px;cursor:pointer}
+.lb-deck-stage{flex:1;overflow:auto;padding:4vh 6vw;font-size:clamp(1.1rem,2.4vw,1.8rem);line-height:1.45}
+.lb-deck-stage a{color:#9fdcff}.lb-deck .lb-deck-stage h2,.lb-deck .lb-deck-stage h3{font-size:1.6em !important;margin-top:0;color:#fff !important}
+body.lb-deck-on{overflow:hidden}
+@media print{body.lb-handout header,body.lb-handout nav,body.lb-handout footer,body.lb-handout .lb-form,body.lb-handout .lb-std,body.lb-handout .no-print,body.lb-handout .page-hero,body.lb-handout .sticky-help{display:none !important}
+ body.lb-handout .lb-plan{font-size:11pt}.lb-deck{display:none}}

@@ -11,7 +11,7 @@ import sx_media as SM
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar', 'it']
-CSSV = '20261015n'
+CSSV = '20261015s2'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
 esc = lambda s: html.escape(html.unescape(s), quote=True)  # idempotent

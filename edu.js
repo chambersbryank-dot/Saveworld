@@ -44,11 +44,63 @@
     var U = d.ui, L = d.lesson, out = document.getElementById('lb-plan');
     var q = new URLSearchParams(location.search);
     ['band', 'hub', 'min'].forEach(function (k) { var v = q.get(k), el = lb.elements[k]; if (v && el && [].some.call(el.options, function (o) { return o.value === v; })) el.value = v; });
+
+    /* Oct 15 (Top-10 #2): Lesson Builder 2.0: permanent link (?band&hub&min&seed), Google Classroom share (official share URL),
+       Copy link, printable handout and client-side slides. No accounts, no backend. */
+    var X = {
+      en: { copy: 'Copy link', copied: 'Link copied', gc: 'Share to Google Classroom', handout: 'Print handout', slides: 'Slides', exit: 'Exit slides', prev: 'Previous', next: 'Next', std: 'Standards', slide: 'Slide {i} of {n}' },
+      fr: { copy: 'Copier le lien', copied: 'Lien copié', gc: 'Partager sur Google Classroom', handout: 'Imprimer la fiche', slides: 'Diapositives', exit: 'Quitter', prev: 'Précédente', next: 'Suivante', std: 'Normes', slide: 'Diapositive {i} sur {n}' },
+      es: { copy: 'Copiar enlace', copied: 'Enlace copiado', gc: 'Compartir en Google Classroom', handout: 'Imprimir ficha', slides: 'Diapositivas', exit: 'Salir', prev: 'Anterior', next: 'Siguiente', std: 'Estándares', slide: 'Diapositiva {i} de {n}' },
+      ar: { copy: 'نسخ الرابط', copied: 'تم نسخ الرابط', gc: 'شارك في Google Classroom', handout: 'اطبع الورقة', slides: 'شرائح', exit: 'خروج', prev: 'السابق', next: 'التالي', std: 'المعايير', slide: 'الشريحة {i} من {n}' },
+      it: { copy: 'Copia link', copied: 'Link copiato', gc: 'Condividi su Google Classroom', handout: 'Stampa la scheda', slides: 'Diapositive', exit: 'Esci', prev: 'Precedente', next: 'Successiva', std: 'Standard', slide: 'Diapositiva {i} di {n}' }
+    }[lang] || {};
+    var STD = null;
+    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && q.get('hub')) build(); }).catch(function () {});
+    function stdHtml(hub) {
+      if (!STD || !STD.hubs[hub]) return '';
+      return '<h3>' + esc(X.std) + '</h3><ul class="lb-small">' + STD.hubs[hub].map(function (c) { var o = STD.codes[c]; return '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(c.replace('CCSS.ELA-LITERACY.', 'CCSS ')) + '</a> (' + esc(o.band) + '): <span lang="en">' + esc(o.text) + '</span></li>'; }).join('') + '</ul>';
+    }
+    function tools(h, B, min) {
+      var bar = document.getElementById('lb-tools');
+      if (!bar) { bar = document.createElement('div'); bar.id = 'lb-tools'; bar.className = 'lb-actions lb-tools no-print'; var pb = document.getElementById('lb-print'); pb.parentNode.insertBefore(bar, pb.nextSibling); }
+      var url = location.href, title = (out.querySelector('h2') || {}).textContent || 'Saving Planets lesson';
+      var gc = 'https://classroom.google.com/share?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+      bar.innerHTML = '<button type="button" class="edu-bubble glass" data-tint="ocean" data-act="copy"><span class="em" aria-hidden="true">🔗</span>' + esc(X.copy) + '</button>' +
+        '<a class="edu-bubble glass" data-tint="earth" href="' + esc(gc) + '" target="_blank" rel="noopener"><span class="em" aria-hidden="true">🎓</span>' + esc(X.gc) + '</a>' +
+        '<button type="button" class="edu-bubble glass" data-tint="sun" data-act="handout"><span class="em" aria-hidden="true">📄</span>' + esc(X.handout) + '</button>' +
+        '<button type="button" class="edu-bubble glass" data-tint="space" data-act="slides"><span class="em" aria-hidden="true">🖥️</span>' + esc(X.slides) + '</button>' +
+        '<span class="lb-small" role="status" aria-live="polite"></span>';
+    }
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('#lb-tools [data-act]'); if (!b) return;
+      var st = document.querySelector('#lb-tools [role=status]');
+      if (b.dataset.act === 'copy') {
+        var done = function () { st.textContent = X.copied; };
+        if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { prompt('', location.href); });
+        else { prompt('', location.href); }
+      } else if (b.dataset.act === 'handout') { document.body.classList.add('lb-handout'); window.print(); setTimeout(function () { document.body.classList.remove('lb-handout'); }, 500); }
+      else if (b.dataset.act === 'slides') slides();
+    });
+    function slides() {
+      var parts = [], cur = null;
+      [].forEach.call(out.children, function (n) { if (/^H[23]$/.test(n.tagName)) { cur = document.createElement('section'); cur.className = 'lb-slide'; parts.push(cur); } if (!cur) { cur = document.createElement('section'); cur.className = 'lb-slide'; parts.push(cur); } cur.appendChild(n.cloneNode(true)); });
+      var ov = document.createElement('div'); ov.className = 'lb-deck'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', X.slides);
+      var i = 0, n = parts.length;
+      ov.innerHTML = '<div class="lb-deck-bar no-print"><button type="button" data-d="-1">‹ ' + esc(X.prev) + '</button><span class="lb-deck-n" aria-live="polite"></span><button type="button" data-d="1">' + esc(X.next) + ' ›</button><button type="button" data-d="x">' + esc(X.exit) + '</button></div>';
+      var stage = document.createElement('div'); stage.className = 'lb-deck-stage'; parts.forEach(function (p) { stage.appendChild(p); }); ov.appendChild(stage);
+      function go(k) { i = Math.max(0, Math.min(n - 1, k)); parts.forEach(function (p, j) { p.hidden = j !== i; }); ov.querySelector('.lb-deck-n').textContent = fmt(X.slide, { i: i + 1, n: n }); }
+      function close() { document.removeEventListener('keydown', key); ov.remove(); document.body.classList.remove('lb-deck-on'); var t = document.querySelector('#lb-tools [data-act=slides]'); if (t) t.focus(); }
+      function key(e) { if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(i + 1); } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(i - 1); } else if (e.key === 'Escape') close(); }
+      ov.addEventListener('click', function (e) { var d = e.target.closest('[data-d]'); if (!d) return; if (d.dataset.d === 'x') close(); else go(i + +d.dataset.d); });
+      var sx0 = null; ov.addEventListener('touchstart', function (e) { sx0 = e.touches[0].clientX; }, { passive: true });
+      ov.addEventListener('touchend', function (e) { if (sx0 == null) return; var dx = e.changedTouches[0].clientX - sx0; if (Math.abs(dx) > 50) go(i + ((dx < 0) === (document.dir !== 'rtl') ? 1 : -1)); sx0 = null; });
+      document.addEventListener('keydown', key); document.body.appendChild(ov); document.body.classList.add('lb-deck-on'); go(0); ov.querySelector('[data-d="1"]').focus();
+    }
     function pick(arr, n, seed) { var a = arr.slice(), r = []; seed = seed || 1; while (a.length && r.length < n) { seed = (seed * 9301 + 49297) % 233280; r.push(a.splice(Math.floor(seed / 233280 * a.length), 1)[0]); } return r; }
     function build(e) {
       if (e) e.preventDefault();
       var band = lb.elements.band.value, hub = lb.elements.hub.value, min = +lb.elements.min.value, B = L.bands[band], h = d.hubs[hub];
-      var seed = (new Date().getDate() * 31 + min) % 997 + 1;
+      var qs = new URLSearchParams(location.search), seed = +qs.get('seed') || ((new Date().getDate() * 31 + min) % 997 + 1); /* Oct 15: seed in URL = permanent plan link */
       var nS = B.sols + (min >= 90 ? 1 : 0), nF = B.facts + (min >= 60 ? 1 : 0);
       var sols = pick(h.sols, nS, seed), facts = pick(h.facts, nF, seed + 7), terms = h.terms.slice(0, B.terms);
       var T = { hub: h.name, sol: sols[0] ? sols[0].t : h.name };
@@ -73,10 +125,11 @@
         '<h3>' + esc(L.h.sources) + '</h3><ul class="lb-small">' +
           sols.map(function (s) { return '<li>Saving Planets. (n.d.). ' + esc(s.t) + '. ' + esc(s.abs) + '</li>'; }).join('') +
           facts.map(function (f) { return '<li>' + esc(f.sn) + '. ' + esc(f.src) + '</li>'; }).join('') + '</ul>' +
+        stdHtml(hub) +
         '<p class="lb-small">' + esc(L.footer) + '</p>';
       out.innerHTML = html; out.hidden = false;
       document.getElementById('lb-print').hidden = false;
-      var u = new URL(location.href); u.searchParams.set('band', band); u.searchParams.set('hub', hub); u.searchParams.set('min', min); history.replaceState(null, '', u);
+      var u = new URL(location.href); u.searchParams.set('band', band); u.searchParams.set('hub', hub); u.searchParams.set('min', min); u.searchParams.set('seed', seed); history.replaceState(null, '', u); tools(h, B, min);
       if (e) { out.setAttribute('tabindex', '-1'); out.focus(); }
     }
     lb.addEventListener('submit', build);
