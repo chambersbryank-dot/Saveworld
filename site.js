@@ -356,7 +356,7 @@
 /* UX-OCT15:START */
 (function(){
   document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
   var f=document.querySelector('.sol-filters');if(!f)return;
   var L=JSON.parse(f.getAttribute('data-i18n'));
   var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));

@@ -75,8 +75,14 @@ T = {
 GROUPS = [('sol', ['Solutions.html','World_Map.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
   ('sl', ['Space.html','Artemis_II.html#launches','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html','Project-Rawane.html','Rawanes_Mission_Log.html']),
+  ('pr', ['Rawanes_Mission_Log.html','World_Map.html','Teachers.html']),  # Oct 15: Project Rawane dropdown (labels in PR below)
   ('gi', ['Ways_to_Help.html','Find_a_Cleanup.html','index.html#newsletter','Contact.html']),
   ('ab', ['About.html','Editorial_Policy.html','Corrections.html','Press.html','Privacy.html'])]
+PR = {'en': ('Project Rawane', ["Rawane&#x27;s Mission Log", 'Solutions Pinned to the World', 'Education']),
+      'fr': ('Projet Rawane', ['Journal de mission de Rawane', 'Solutions épinglées sur le monde', 'Éducation']),
+      'es': ('Proyecto Rawane', ['Bitácora de Rawane', 'Soluciones fijadas en el mundo', 'Educación']),
+      'ar': ('مشروع Rawane', ['سجل مهمة Rawane', 'حلول مثبتة على العالم', 'التعليم']),
+      'it': ('Progetto Rawane', ['Diario di missione di Rawane', 'Soluzioni fissate nel mondo', 'Istruzione'])}
 DOMAINS = [['Oceans.html','Rivers.html','Lakes.html'], ['Deforestation.html'],
            ['Space.html','Project-Rawane.html','Earth_Observation.html','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html']]
 DOMAIN_IMG = ['assets/videos/great-bubble-barrier.jpg', None, None]
@@ -86,8 +92,11 @@ def nav_html(l, page):
     for key, items in GROUPS:
         cur = any(page == i.split('#')[0] for i in items if '#' not in i)
         def hr(i): return i if l == 'en' or os.path.exists(d(l) + i.split('#')[0]) else '../' + i
-        lis = ''.join(f'<li><a href="{hr(i)}"{" aria-current=\"page\"" if i == page else ""}>{t["items"][i]}</a></li>' for i in items)
-        out.append(f'<li class="nav-group{" is-current" if cur else ""}"><details><summary>{t[key]}</summary><ul class="nav-sub">{lis}</ul></details></li>')
+        lab = (lambda i: PR[l][1][items.index(i)]) if key == 'pr' else (lambda i: t["items"][i])
+        lis = ''.join(f'<li><a href="{hr(i)}"{" aria-current=\"page\"" if i == page else ""}>{lab(i)}</a></li>' for i in items)
+        name = PR[l][0] if key == 'pr' else t[key]
+        if key == 'pr': cur = page in ('Project-Rawane.html', 'Rawanes_Mission_Log.html')
+        out.append(f'<li class="nav-group nav-{key}{" is-current" if cur else ""}"><details><summary aria-haspopup="true" aria-expanded="false">{name}</summary><ul class="nav-sub">{lis}</ul></details></li>')
     return ''.join(out)
 
 def sol_cards(l):
@@ -157,10 +166,13 @@ nav.scrolled .nav-group summary{color:#003755}
 .nav-help a{background:#2e9e4f !important;color:#fff !important;border:0 !important;padding:.5rem .9rem;border-radius:999px;white-space:nowrap}
 .sticky-help{position:fixed;inset-inline-end:16px;bottom:16px;z-index:1100;background:#2e9e4f;color:#fff;font-weight:700;padding:.75rem 1.1rem;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none}
 .sticky-help:hover{background:#23803f;color:#fff}
-@media (max-width:1250px){.nav-links{gap:.8rem}.nav-group summary{font-size:.98rem}}
+@media (min-width:901px){nav .nav-container{padding-inline:clamp(10px,1.6vw,40px) !important;max-width:1500px !important}nav .brand-word{font-size:clamp(.72rem,1vw,1.05rem) !important;white-space:nowrap;flex:none;margin-inline-end:clamp(.4rem,1vw,1rem)}.nav-links{gap:clamp(.3rem,.9vw,.9rem) !important;flex-wrap:nowrap}.nav-group summary{font-size:clamp(.7rem,1vw,1.02rem) !important}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:clamp(.62rem,.8vw,.88rem) !important;white-space:nowrap;letter-spacing:0}nav .nav-links .lang-switch{gap:.15rem}nav .nav-links .nav-help a{font-size:clamp(.68rem,.9vw,.98rem) !important;padding:.35em .75em !important}}
+@media (min-width:901px) and (max-width:1100px){nav .nav-sub{position:absolute !important;min-width:250px !important;padding:.5rem !important;box-shadow:0 10px 30px rgba(0,0,0,.35) !important}nav .nav-sub a{font-size:.95rem !important;white-space:normal}}
+html.dark nav.open .nav-group summary,html.dark nav .nav-links .nav-group summary{color:#fff}
+@media (min-width:901px) and (max-width:1000px){nav .nav-links{gap:.22rem !important}nav .nav-group summary{font-size:.64rem !important}nav .brand-word{font-size:.66rem !important;margin-inline-end:.3rem}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:.58rem !important}nav .nav-links .nav-help a{font-size:.62rem !important;padding:.3em .55em !important}}
 @media (max-width:1100px){.nav-sub{position:static;box-shadow:none;padding:0 0 0 .8rem;min-width:0}
  nav.open .nav-group summary{color:#003755;padding:.6rem 0;font-size:1.1rem}}
-html.dark .nav-sub{background:#0f1b26} html.dark .nav-sub a{color:#e8eef5 !important}
+html.dark .nav-sub{background:#0f1b26}@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){@media (min-width:1101px){html.dark .nav-sub{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03)),rgba(15,27,38,.82);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px rgba(0,0,0,.35)}}} html.dark .nav-sub a{color:#e8eef5 !important}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
 .hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
 .hero-cta{display:inline-flex;align-items:center;gap:.45rem}/* Liquid Glass: translucent, page background shows through; solid fallback without backdrop-filter */
@@ -168,7 +180,12 @@ html.dark .nav-sub{background:#0f1b26} html.dark .nav-sub a{color:#e8eef5 !impor
 .hero-ctas .hero-cta:hover,.wm-cta .btn:hover,.nav-help a:hover,.sticky-help:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint) !important}
 .hero-ctas .hero-cta:focus-visible,.wm-cta .btn:focus-visible,.nav-help a:focus-visible,.sticky-help:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{background:var(--lg-solid) !important}}
-body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}
+body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}body[data-glass-tint=help]{--lg-tint:rgba(30,110,70,.55);--lg-solid:#1e6e46}
+/* Ways to Help: Donate / Join buttons in Liquid Glass (Donate = page tint, Join = teal tint) */
+.help-btns .help-btn,.help-table .help-btn,.help-actions .help-btn,a.help-btn{border-radius:999px !important;color:#fff !important;text-decoration:none !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(0,0,0,.25) !important;-webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
+a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
+a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){a.help-btn{background:var(--lg-solid) !important}a.help-btn.help-btn-join{background:#00695c !important}}
 .hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
@@ -201,7 +218,7 @@ JS = r"""
 /* UX-OCT15:START */
 (function(){
   document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
   var f=document.querySelector('.sol-filters');if(!f)return;
   var L=JSON.parse(f.getAttribute('data-i18n'));
   var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
@@ -220,10 +237,11 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = '20261015zb'  # bump when styles.css changes
+STYLEV = '20261015zi'  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
+        s2 = re.sub(r'(?<![\w-])site\.js\?v=[\w.-]+', 'site.js?v=' + STYLEV, s2)  # Oct 15: nav JS (aria-expanded) ships with the CSS
         if s2 != s: wr(f, s2)
 # Oct 15: per-page glass tint. data-glass-tint on <body> = the page's domain colour (water/land/space, same as the homepage domain
 # headings); everything else keeps the site navy. CSS reads it as --lg-tint.
@@ -239,8 +257,8 @@ def apply_tint(hubs):
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); m = re.search(r'<body\b[^>]*>', s)
         if not m: continue
-        t = dom.get(os.path.basename(f), 'site')
-        b = re.sub(r' data-(?:glass-)?tint="(?:site|water|land|space)"', '', m.group(0)); b = b[:-1] + f' data-glass-tint="{t}">'
+        t = 'help' if os.path.basename(f) == 'Ways_to_Help.html' else dom.get(os.path.basename(f), 'site')
+        b = re.sub(r' data-(?:glass-)?tint="(?:site|water|land|space|help)"', '', m.group(0)); b = b[:-1] + f' data-glass-tint="{t}">'
         if b != m.group(0): wr(f, s[:m.start()] + b + s[m.end():]); n += 1
     return n
 def asset(path, txt):
