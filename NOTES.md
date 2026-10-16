@@ -188,7 +188,7 @@ helicopter design aims): aerodynamics, propulsion, performance, stability & cont
 - NASA Basics of Space Flight: https://science.nasa.gov/learn/basics-of-space-flight/ (US gov, public)
 - MIT OCW 16.346 Astrodynamics (Battin): https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/ (CC BY-NC-SA 4.0)
 - Orbital Mechanics & Astrodynamics open textbook: https://orbital-mechanics.space/ (licence to confirm before reuse)
-- PhET Gravity and Orbits: https://phet.colorado.edu/en/simulations/gravity-and-orbits ; Kepler's Laws: https://phet.colorado.edu/en/simulations/keplers-laws (CC BY 4.0 per PhET; confirm per sim)
+- PhET Gravity and Orbits: https://phet.colorado.edu/en/simulations/gravity-and-orbits ; Kepler's Laws: https://phet.colorado.edu/en/simulations/keplers-laws (PhET page links CC BY-NC 4.0 and GPL 2.0; link out, confirm per sim before embedding)
 - OpenStax University Physics Vol 1, ch. 13 Gravitation: https://openstax.org/books/university-physics-volume-1/pages/13-introduction (page shows CC BY-NC-SA 4.0; confirm)
 - NASA Eyes on the Solar System: https://eyes.nasa.gov/ ; NASA Space Place (kids): https://spaceplace.nasa.gov/
 - JPL SSD planetary constants: https://ssd.jpl.nasa.gov/planets/phys_par.html
