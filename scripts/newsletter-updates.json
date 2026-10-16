@@ -96,6 +96,14 @@
         "en": "Italian Weekly Brief issue for the Italian MailerLite group"
       },
       "commit": "ae7eb5443bb09c4870435fa21bb6623dddb7f430"
+    },
+    {
+      "date": "2026-10-15",
+      "page": "Spot_the_Fire.html",
+      "what": {
+        "en": "astroEDU activity page in 5 languages with PDF/DOCX downloads, CC BY 4.0 credit; linked from Teachers, Kids Map, FireSat, Lesson Builder; sitemap + search"
+      },
+      "commit": "5dd048bd8fbc4747024f2698a1113347c7c1b6dd"
     }
   ]
 }

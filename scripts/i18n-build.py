@@ -56,6 +56,7 @@ def hreflang_links(page):
 
 # Templates: (regex on English, key in i18n/<lang>.json whose value contains {x}); {x} is translated if known.
 PATTERNS = [(r'^(.+) \| Saving Planets$', '{x} | Saving Planets'),
+            (r'^(.+) image$', '{x} image'), (r'^Image: (.+)$', 'Image: {x}'), (r'^Photo: (.+)$', 'Photo: {x}'),  # Oct 15: generic alts/credits
             (r'^Want to go deeper\? (.+) has the full story and the latest updates\.$', 'Want to go deeper? {x} has the full story and the latest updates.'),
             (r'^Learn more about (.+)$', 'Learn more about {x}'),
             (r'^Read more about (.+)$', 'Read more about {x}'),

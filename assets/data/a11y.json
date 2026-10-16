@@ -60,12 +60,12 @@
    "ar": "ClearSpace: زحل وحلقاته كما صورته مركبة Cassini التابعة لـ NASA",
    "it": "ClearSpace: Saturno e i suoi anelli, fotografati dalla sonda Cassini della NASA"
   },
-  "assets/Jupiter.jpg|Astroscale": {
-   "en": "Astroscale: Jupiter's swirling clouds seen by NASA's Juno spacecraft",
-   "fr": "Astroscale : les nuages tourbillonnants de Jupiter vus par la sonde Juno de la NASA",
-   "es": "Astroscale: las nubes arremolinadas de Júpiter vistas por la nave Juno de la NASA",
-   "ar": "Astroscale: سحب المشتري الدوّامة كما تراها مركبة Juno التابعة لـ NASA",
-   "it": "Astroscala: Nuvole ardenti di Giove viste dalla sonda Juno della NASA"
+  "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg|Astroscale": {
+   "en": "Astroscale: artist's illustration of the ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
+   "fr": "Astroscale : illustration du vaisseau ADRAS-J approchant un étage supérieur usagé de fusée H-IIA en orbite",
+   "es": "Astroscale: ilustración de la nave ADRAS-J acercándose a una etapa superior usada de un cohete H-IIA en órbita",
+   "ar": "Astroscale: رسم توضيحي لمركبة ADRAS-J وهي تقترب من مرحلة عليا مستهلكة لصاروخ H-IIA في المدار",
+   "it": "Astroscale: illustrazione della sonda ADRAS-J che si avvicina a uno stadio superiore esausto di un razzo H-IIA in orbita"
   },
   "assets/Landsat9_Launch.jpg|Atlas V rocket launching Landsat 9 from Vandenberg": {
    "en": "An Atlas V rocket lifting off with NASA's Landsat 9 satellite from Vandenberg Space Force Base",

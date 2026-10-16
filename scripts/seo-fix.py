@@ -84,7 +84,10 @@ def fix(p):
         dm = soup.find('meta', attrs={'name': 'description'}); d = dm.get('content', '') if dm else ''
         en_d = ((en.find('meta', attrs={'name': 'description'}) or {}).get('content', '') if en else '')
         hero = soup.select_one('.page-hero-content p, .hub-hero p, .pr-hero p, header p')
-        extra = [x.get_text(' ', strip=True) for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p')[:4]]
+        # Oct 15: never pad descriptions with image/video credits (the SI credit leaked into the Arabic homepage description)
+        cands = [x for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p') if not any('credit' in c for c in (x.get('class') or []))][:4]
+        extra = [x.get_text(' ', strip=True) for x in cands]
+        extra = [e for e in extra if 'Biological SI' not in e and 'SI Partner' not in e]
         extra = [e for e in extra if e and not e.startswith(('Image', 'Source', 'Image :', 'Imagen', 'الصورة'))]
         if lang != 'en' and (not d or d.strip() == en_d.strip()): d = extra[0] if extra else PAD[lang]
         d = fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang)

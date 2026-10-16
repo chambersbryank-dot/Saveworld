@@ -41,6 +41,35 @@ def wr(f, s):
     return 0
 def key(src): return re.sub(r'^(\.\./)+', '', src.split('?')[0])
 def esc(s): return html.escape(s, quote=True)
+# Oct 15: idempotency. Composed alts ('<Name>: <desc>') were re-composed on every run because best_desc() picked already
+# composed alts as the description, so screen readers heard '4ocean: 4ocean: 4ocean: ...'. strip_prefix() keeps the bare
+# description; collapse() repairs existing repeats ('A: A: A: B: B: desc' -> 'A: desc') in pages and translation memory.
+def strip_prefix(v):
+    d2 = re.sub(r'^(?:[^:"]{1,80}?: )+', '', v)
+    return d2 if len(d2) > 15 else v
+def collapse(v):
+    p = v.split(': ')
+    if len(p) >= 3 and p[0] == p[1]: return p[0] + ': ' + p[-1]
+    return v
+def collapse_attrs(s):
+    def f(m):
+        raw = html.unescape(m.group(2)); c = collapse(raw)
+        return m.group(0) if c == raw else f'{m.group(1)}="{esc(c)}"'
+    return re.sub(r'\b(alt|aria-label|title|content|data-image-alt)="([^"]*)"', f, s)
+def cleanup_all():
+    n = 0
+    for f in [f for f in glob.glob('*.html') + glob.glob('*/*.html') if not os.path.basename(f).startswith('google')]:
+        s = rd(f); s2 = collapse_attrs(s)
+        if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
+    for l in LANGS:
+        fp = f'i18n/{l}.json'; m = json.load(open(fp, encoding='utf8'))
+        m2 = {}
+        for k, v in m.items():
+            k2 = collapse(k)
+            if k2 in m2 and k2 != k: continue
+            m2[k2] = collapse(v) if isinstance(v, str) else v
+        if m2 != m: json.dump(m2, open(fp, 'w', encoding='utf8'), ensure_ascii=False, indent=0); n += 1
+    return n
 
 def best_desc(pages):
     c = collections.defaultdict(collections.Counter)
@@ -50,7 +79,7 @@ def best_desc(pages):
             if s and a:
                 v = html.unescape(a.group(1))
                 if not SKIP.match(v) and not WEAK.match(v) and len(v) > 25: c[key(s.group(1))][v] += 1
-    out = {k: max(v, key=lambda x: (v[x], len(x))) for k, v in c.items()}
+    out = {k: strip_prefix(collapse(max(v, key=lambda x: (v[x], len(x))))) for k, v in c.items()}
     for k, v in D['alt_desc'].items(): out[k] = v['en']
     return out
 
@@ -91,12 +120,13 @@ def alts(s, desc, l, mem):
         if fx: new = fx[l]
         elif l == 'en':
             w = WEAK.match(old)
-            if w and k in desc: new = f'{w.group(1)}: {desc[k]}'
+            if w and k in desc: new = f'{w.group(1)}: {strip_prefix(desc[k])}'
         if new is None or new == old: return t
         n += 1; return t.replace(a.group(0), f'alt="{esc(new)}"')
     return re.sub(r'<img\b[^>]*>', fix, s), n
 
 def main():
+    print(f'a11y-pass: repeated-alt cleanup touched {cleanup_all()} files')
     en = [f for f in sorted(glob.glob('*.html')) if not f.startswith('google')]
     if '--translated' in sys.argv:
         n = 0

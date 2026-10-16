@@ -30,6 +30,7 @@ def info(page):
     credit = m1(r'<p class="photo-credit">(.*?)</p>', s)
     desc = un(m1(r'<meta name="description" content="([^"]*)"', s))
     what = m1(r'<h3>What</h3><p>(.*?)</p>', s)
+    what = re.sub(r'<span class="gl-pop"[^>]*>.*?</span></span>', '</span>', what, flags=re.S)  # Oct 15: drop glossary pop-up text ('radarA tool that...')
     what = un(re.sub(r'<[^>]+>', '', what))
     if desc.endswith('...'): desc = desc[:-3] + '…'
     if desc.endswith('…'):  # meta descriptions are clipped; keep whole sentences only

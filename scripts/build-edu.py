@@ -11,7 +11,7 @@ import sx_media as SM
 spec = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); I = importlib.util.module_from_spec(spec); spec.loader.exec_module(I)
 SITE = 'https://www.savingplanets.com/'
 LANGS = ['fr', 'es', 'ar', 'it']
-CSSV = '20261014m'
+CSSV = '20261015n'
 PAGES_NEW = ['Kids_Map.html', 'Lesson_Builder.html', 'Satellite_Explorer.html']
 rd = lambda f: open(f, encoding='utf8').read()
 esc = lambda s: html.escape(html.unescape(s), quote=True)  # idempotent
@@ -126,7 +126,7 @@ def kids_map(hubs):
             '<p class="edu-lead">Tap a bubble to explore a part of our planet. Every bubble has a wow fact and real solutions that help both people and nature.</p>'
             '<p class="km-tools"><button type="button" class="edu-bubble glass" data-tint="sun" id="km-surprise"><span class="em" aria-hidden="true">🎲</span>Surprise me!</button></p>'
             f'<div class="km-stage" id="km" role="group" aria-label="Map of our planet with bubbles to tap">{svg}{btns}</div>'
-            '<p class="edu-error" hidden>Sorry, the map could not load. Please refresh the page.</p>'
+            '<template class="edu-error-tpl"><p class="edu-error" role="alert">Sorry, the map could not load. Please refresh the page.</p></template>'
             '<noscript><div class="km-noscript"><p>The map needs JavaScript. You can still visit every part of the planet here:</p><ul>' + nos + '</ul></div></noscript>'
             '<section class="km-panel" id="km-panel" aria-live="polite" hidden></section>'
             '<h2>For grown-ups</h2><p>Every fact on this map comes from a Saving Planets page and links to its original source. Teachers can turn any part of the map into a lesson with the <a href="Lesson_Builder.html">Lesson Plan Builder</a>.</p>'
@@ -147,8 +147,13 @@ def lesson_builder(hubs):
             '<div><button type="submit" class="edu-bubble glass" data-tint="sun"><span class="em" aria-hidden="true">📝</span>Build my lesson plan</button></div></form>'
             '<div class="lb-actions"><button type="button" id="lb-print" class="edu-bubble glass" data-tint="earth" hidden><span class="em" aria-hidden="true">🖨️</span>Print plan</button></div>'
             '<p class="lb-small no-print">Tip: the link in your address bar saves your choices, so you can share the plan with a colleague.</p>'
-            '<p class="edu-error" hidden>Sorry, the lesson builder could not load. Please refresh the page.</p>'
+            '<template class="edu-error-tpl"><p class="edu-error" role="alert">Sorry, the lesson builder could not load. Please refresh the page.</p></template>'
             '<article class="lb-plan" id="lb-plan" aria-live="polite" hidden></article>'
+            '<noscript><style>#lb,.lb-small{display:none}</style><div class="km-noscript lb-noscript"><p>The Lesson Plan Builder needs JavaScript to build a custom plan. You can still teach with these free, ready-to-use resources:</p><ul>'
+            '<li><a href="Teachers.html">Teacher sheets for every solution (discussion questions and sources)</a></li>'
+            '<li><a href="Spot_the_Fire.html">Classroom activity: Spot the Fire from Space (printable PDF)</a></li>'
+            '<li><a href="Glossary.html">Glossary of key words</a></li>'
+            '<li><a href="Amazing_Facts.html">Amazing Facts with sources</a></li></ul><p>Or start from a topic:</p><ul>' + ''.join(f'<li><a href="{h}">{esc(n)}</a></li>' for h, n in hub_opts) + '</ul></div></noscript>'
             '<p class="no-print"><a href="Teachers.html">Teacher Sheets</a> · <a href="Glossary.html">Glossary</a> · <a href="Kids_Map.html">Kids Planet Map</a> · <a href="Satellite_Explorer.html">Satellite Explorer</a></p></div>\n')
     return shell('Lesson_Builder.html', 'Lesson Plan Builder', 'Free printable lesson plans for K-3 to university, built from real environmental and space solutions that help both people and nature.', 'lesson-builder-page', 'earth', main)
 

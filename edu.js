@@ -9,7 +9,7 @@
   function load(cb) {
     if (D) return cb(D);
     fetch(root + 'assets/data/edu.' + lang + '.json?v=20261014f').then(function (r) { return r.json(); }).then(function (d) { D = d; cb(d); })
-      .catch(function () { var e = document.querySelector('.edu-error'); if (e) e.hidden = false; });
+      .catch(function () { var t = document.querySelector('.edu-error-tpl'), e = document.querySelector('.edu-error'); if (t && !e) { t.parentNode.insertBefore(t.content.cloneNode(true), t); } else if (e) e.hidden = false; });
   }
   /* ---------------- Kids map ---------------- */
   var km = document.getElementById('km');
