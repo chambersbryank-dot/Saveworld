@@ -43,6 +43,7 @@ node build-stats.js --data-only          # Oct 15: re-run after the sitemap list
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/it
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)
+python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/build-spotfire.py       # Oct 15: astroEDU "Spot the Fire from Space" page (all langs) + links from Teachers/Kids_Map/FireSat/Lesson_Builder + sitemap
 python3 scripts/si-credits.py           # Oct 15: visible SI credit caption next to every SI-generated image (all langs)

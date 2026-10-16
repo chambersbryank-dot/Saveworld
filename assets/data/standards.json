@@ -1,0 +1,36 @@
+{
+ "_note": "Oct 15, 2026. Real NGSS performance expectations and Common Core ELA standards, statements quoted verbatim from nextgenscience.org / thecorestandards.org (official English text). Tagged per hub only where the solution pages genuinely support the expectation; page overrides in 'pages'. Edit here; scripts/build-standards.py renders it.",
+ "codes": {
+  "K-ESS3-3": {"band": "K-2", "subject": "earth", "url": "https://www.nextgenscience.org/pe/k-ess3-3-earth-and-human-activity", "text": "Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment."},
+  "4-ESS3-2": {"band": "3-5", "subject": "earth", "url": "https://www.nextgenscience.org/search-standards?keys=4-ESS3-2", "text": "Generate and compare multiple solutions to reduce the impacts of natural Earth processes on humans."},
+  "5-ESS3-1": {"band": "3-5", "subject": "earth", "url": "https://www.nextgenscience.org/search-standards?keys=5-ESS3-1", "text": "Obtain and combine information about ways individual communities use science ideas to protect the Earth's resources and environment."},
+  "MS-ESS1-3": {"band": "6-8", "subject": "space", "url": "https://www.nextgenscience.org/search-standards?keys=MS-ESS1-3", "text": "Analyze and interpret data to determine scale properties of objects in the solar system."},
+  "MS-ESS3-2": {"band": "6-8", "subject": "earth", "url": "https://www.nextgenscience.org/pe/ms-ess3-2-earth-and-human-activity", "text": "Analyze and interpret data on natural hazards to forecast future catastrophic events and inform the development of technologies to mitigate their effects."},
+  "MS-ESS3-3": {"band": "6-8", "subject": "earth", "url": "https://www.nextgenscience.org/search-standards?keys=MS-ESS3-3", "text": "Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment."},
+  "MS-LS2-5": {"band": "6-8", "subject": "life", "url": "https://www.nextgenscience.org/search-standards?keys=MS-LS2-5", "text": "Evaluate competing design solutions for maintaining biodiversity and ecosystem services."},
+  "HS-ESS1-4": {"band": "9-12", "subject": "space", "url": "https://www.nextgenscience.org/search-standards?keys=HS-ESS1-4", "text": "Use mathematical or computational representations to predict the motion of orbiting objects in the solar system."},
+  "HS-ESS3-4": {"band": "9-12", "subject": "earth", "url": "https://www.nextgenscience.org/search-standards?keys=HS-ESS3-4", "text": "Evaluate or refine a technological solution that reduces impacts of human activities on natural systems."},
+  "CCSS.ELA-LITERACY.RI.5.9": {"band": "3-5", "subject": "literacy", "url": "https://www.thecorestandards.org/ELA-Literacy/RI/5/9/", "text": "Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably."},
+  "CCSS.ELA-LITERACY.RST.6-8.1": {"band": "6-8", "subject": "literacy", "url": "https://www.thecorestandards.org/ELA-Literacy/RST/6-8/1/", "text": "Cite specific textual evidence to support analysis of science and technical texts."}
+ },
+ "hubs": {
+  "Oceans.html": ["K-ESS3-3", "5-ESS3-1", "MS-ESS3-3", "MS-LS2-5", "HS-ESS3-4", "CCSS.ELA-LITERACY.RI.5.9", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Rivers.html": ["K-ESS3-3", "5-ESS3-1", "MS-ESS3-3", "MS-LS2-5", "HS-ESS3-4", "CCSS.ELA-LITERACY.RI.5.9", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Lakes.html": ["K-ESS3-3", "5-ESS3-1", "MS-ESS3-3", "MS-LS2-5", "HS-ESS3-4", "CCSS.ELA-LITERACY.RI.5.9", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Deforestation.html": ["K-ESS3-3", "5-ESS3-1", "MS-ESS3-3", "MS-LS2-5", "HS-ESS3-4", "CCSS.ELA-LITERACY.RI.5.9", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Earth_Observation.html": ["5-ESS3-1", "MS-ESS3-2", "MS-ESS3-3", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Planetary_Defense.html": ["4-ESS3-2", "MS-ESS1-3", "MS-ESS3-2", "HS-ESS1-4", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Space_Weather.html": ["MS-ESS3-2", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Space_Disposal.html": ["HS-ESS1-4", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Project-Rawane.html": ["MS-ESS1-3", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Space.html": ["CCSS.ELA-LITERACY.RST.6-8.1"]
+ },
+ "pages": {
+  "Globe_at_Night.html": ["5-ESS3-1", "MS-ESS3-3", "CCSS.ELA-LITERACY.RI.5.9", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Jupiter.html": ["MS-ESS1-3", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Astroscale.html": ["HS-ESS1-4", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "ClearSpace.html": ["HS-ESS1-4", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "Tsunami_Early_Warning.html": ["4-ESS3-2", "MS-ESS3-2", "CCSS.ELA-LITERACY.RST.6-8.1"],
+  "FireSat.html": ["4-ESS3-2", "MS-ESS3-2", "MS-ESS3-3", "CCSS.ELA-LITERACY.RST.6-8.1"]
+ }
+}
