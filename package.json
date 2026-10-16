@@ -5,6 +5,6 @@
   "scripts": { "build:search": "node scripts/build-search.mjs" },
   "devDependencies": {
     "pagefind": "1.5.2",
-    "@huggingface/transformers": "3.7.6"
+    "@huggingface/transformers": "4.3.1"
   }
 }
