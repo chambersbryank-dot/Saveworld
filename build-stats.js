@@ -134,10 +134,14 @@ function build() {
       const next = dates.find(d => new Date(d[1]).getTime() > now);
       missions.push({ name: m[1], upcoming: !!next || !dates.length && /no earlier|NET|launch/i.test(get('data-status') || ''), next: next ? { event: next[0], date: next[1] } : null });
     }
-    pages.push(Object.assign({ url: file, title }, meta, { stats, missions }));
-    // Hub sections that each present a solution: <meta name="sp:item" content="name|classification|status">
-    (metas.item || []).forEach(it => { const [name, classification, status] = it.split('|');
-      pages.push({ url: file, title: decodeEnt(name), category: meta.category, type: 'solution', classification, status: status || 'active', section: true, stats: [], missions: [] }); });
+    // Oct 15: one entry per page (no duplicates). Hub sections that present a sub-solution/mission
+    // (<meta name="sp:item" content="name|classification|status">) are listed under that page's "sections",
+    // so the solution count counts pages (matching the Solutions directory), not sections.
+    const sections = (metas.item || []).map(it => { const [name, classification, status] = it.split('|');
+      return { title: decodeEnt(name), classification, status: status || 'active' }; });
+    const entry = Object.assign({ url: file, title }, meta, { stats, missions });
+    if (sections.length) entry.sections = sections;
+    if (!pages.some(p => p.url === file)) pages.push(entry);
   }
   function agg(list) {
     const sol = list.filter(p => p.type === 'solution');
@@ -163,7 +167,7 @@ function build() {
   if (fs.existsSync('Solutions.html')) {
     const dir = fs.readFileSync('Solutions.html', 'utf8');
     const cards = (dir.match(/<article class="card sol-card/g) || []).length, hubs = (dir.match(/<section class="card-band sol-hub"/g) || []).length;
-    if (cards) { site.taggedSolutions = site.solutions; site.solutions = cards; site.horizon = 0; }
+    if (cards) { site.taggedSolutions = site.solutions + site.horizon; if (cards !== site.taggedSolutions) warnings.push(`Solutions.html has ${cards} cards but solutions.json has ${site.taggedSolutions} unique solution pages`); site.solutions = cards; site.horizon = 0; }
     if (hubs) site.hubs = hubs;
   }
   const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site, categories, pages };

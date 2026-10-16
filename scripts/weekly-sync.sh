@@ -38,6 +38,7 @@ python3 scripts/dept-contacts.py         # Oct 14: department inboxes (all langs
 python3 scripts/mailto-subjects.py        # Oct 14: purpose subject on every mailto (all langs)
 python3 scripts/disable-community.py     # Oct 14: Community Wall paused (archived; flag inside)
 python3 scripts/i18n-sitemap.py
+node build-stats.js --data-only          # Oct 15: re-run after the sitemap lists every English page, so new solutions land in solutions.json (one entry per page)
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/it
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)

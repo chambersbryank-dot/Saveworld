@@ -84,7 +84,7 @@ function hubMap(lang) {
 function newSolutions() {
   const data = JSON.parse(rd('assets/data/solutions.json'));
   const pv = prevIssue(loadState()), since = pv ? Date.parse(pv + 'T23:59:59-10:00') : Date.now() - DAYS * 864e5, status = {};
-  for (const p of data.pages) if (p.type !== 'hub') (status[p.url] = status[p.url] || new Set()).add(p.status);
+  for (const p of data.pages) if (p.type !== 'hub') { const st = (status[p.url] = status[p.url] || new Set()); st.add(p.status); (p.sections || []).forEach(x => st.add(x.status)); }
   const out = [];
   for (const url of Object.keys(status)) {
     let added; try { added = execSync(`git log --diff-filter=A --format=%cI -- "${url}" | tail -1`, { cwd: ROOT }).toString().trim(); } catch (e) { continue; }

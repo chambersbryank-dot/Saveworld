@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T01:12:49.624Z",
+ "generated": "2026-10-16T02:42:35.702Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -824,10 +824,10 @@
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "nonprofit": 35,
-   "corporate": 13,
+   "nonprofit": 43,
+   "corporate": 12,
    "natural": 14,
-   "agency": 61,
+   "agency": 70,
    "government": 1
   },
   "upcomingMissions": 16,
@@ -850,16 +850,16 @@
     ]
    }
   ],
-  "taggedSolutions": 124
+  "taggedSolutions": 142
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 21,
+   "solutions": 24,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 12,
+    "nonprofit": 15,
     "corporate": 3,
     "natural": 6
    },
@@ -878,11 +878,11 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 7,
+   "solutions": 8,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 6,
+    "nonprofit": 7,
     "agency": 1
    },
    "upcomingMissions": 0,
@@ -898,11 +898,11 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 11,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 7,
+    "nonprofit": 9,
     "corporate": 1,
     "natural": 1,
     "agency": 2
@@ -912,14 +912,14 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 14,
+   "solutions": 17,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 9,
+    "nonprofit": 11,
     "corporate": 1,
     "natural": 3,
-    "agency": 1
+    "agency": 2
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -934,11 +934,11 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 6,
-   "horizon": 4,
+   "solutions": 5,
+   "horizon": 1,
    "hubs": 1,
    "byClassification": {
-    "corporate": 4,
+    "corporate": 3,
     "natural": 1,
     "government": 1
    },
@@ -970,11 +970,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 24,
-   "horizon": 3,
+   "solutions": 31,
+   "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 22,
+    "agency": 29,
     "corporate": 1,
     "nonprofit": 1
    },
@@ -983,11 +983,11 @@
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 23,
+   "solutions": 24,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 18,
+    "agency": 19,
     "natural": 2,
     "corporate": 3
    },
@@ -1188,40 +1188,24 @@
    "classification": "corporate",
    "status": "active",
    "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Astroscale.html",
-   "title": "APS-R",
-   "category": "space",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "active",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Astroscale.html",
-   "title": "ISSA-J1 Phase 3",
-   "category": "space",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "horizon",
-   "section": true,
-   "stats": [],
-   "missions": []
-  },
-  {
-   "url": "Astroscale.html",
-   "title": "LEXI-P",
-   "category": "space",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "horizon",
-   "section": true,
-   "stats": [],
-   "missions": []
+   "missions": [],
+   "sections": [
+    {
+     "title": "APS-R",
+     "classification": "corporate",
+     "status": "active"
+    },
+    {
+     "title": "ISSA-J1 Phase 3",
+     "classification": "corporate",
+     "status": "horizon"
+    },
+    {
+     "title": "LEXI-P",
+     "classification": "corporate",
+     "status": "horizon"
+    }
+   ]
   },
   {
    "url": "ClearSpace.html",
@@ -1231,18 +1215,14 @@
    "classification": "corporate",
    "status": "active",
    "stats": [],
-   "missions": []
-  },
-  {
-   "url": "ClearSpace.html",
-   "title": "CLEAR (UK)",
-   "category": "space",
-   "type": "solution",
-   "classification": "corporate",
-   "status": "horizon",
-   "section": true,
-   "stats": [],
-   "missions": []
+   "missions": [],
+   "sections": [
+    {
+     "title": "CLEAR (UK)",
+     "classification": "corporate",
+     "status": "horizon"
+    }
+   ]
   },
   {
    "url": "Deforestation.html",
@@ -3178,38 +3158,192 @@
      "sourceUrl": "https://www.ndbc.noaa.gov/dart/dart.shtml"
     }
    ],
-   "missions": []
+   "missions": [],
+   "sections": [
+    {
+     "title": "GUARDIAN (NASA JPL)",
+     "classification": "agency",
+     "status": "horizon"
+    },
+    {
+     "title": "SWOT for operational tsunami forecasts",
+     "classification": "agency",
+     "status": "horizon"
+    },
+    {
+     "title": "Seafloor telecom cable sensing",
+     "classification": "research",
+     "status": "horizon"
+    }
+   ]
   },
   {
-   "url": "Tsunami_Early_Warning.html",
-   "title": "GUARDIAN (NASA JPL)",
+   "url": "EMIT.html",
+   "title": "EMIT (NASA)",
    "category": "earth-observation",
    "type": "solution",
    "classification": "agency",
-   "status": "horizon",
-   "section": true,
+   "status": "active",
    "stats": [],
    "missions": []
   },
   {
-   "url": "Tsunami_Early_Warning.html",
-   "title": "SWOT for operational tsunami forecasts",
-   "category": "earth-observation",
+   "url": "GEDI.html",
+   "title": "GEDI Forest Lidar (NASA)",
+   "category": "forests",
    "type": "solution",
    "classification": "agency",
-   "status": "horizon",
-   "section": true,
+   "status": "active",
    "stats": [],
    "missions": []
   },
   {
-   "url": "Tsunami_Early_Warning.html",
-   "title": "Seafloor telecom cable sensing",
+   "url": "OCO-2.html",
+   "title": "OCO-2 Orbiting Carbon Observatory (NASA)",
    "category": "earth-observation",
    "type": "solution",
-   "classification": "research",
-   "status": "horizon",
-   "section": true,
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Sentinel-5P.html",
+   "title": "Copernicus Sentinel-5P (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "PREFIRE.html",
+   "title": "PREFIRE Polar CubeSats (NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "HydroGNSS.html",
+   "title": "HydroGNSS (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Sentinel-3.html",
+   "title": "Copernicus Sentinel-3 (ESA / EUMETSAT)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Libera.html",
+   "title": "Libera Earth Energy Instrument (NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Surfrider_Foundation.html",
+   "title": "Surfrider Foundation",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Heal_the_Bay.html",
+   "title": "Heal the Bay",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Plastic_Odyssey.html",
+   "title": "Plastic Odyssey",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Trout_Unlimited.html",
+   "title": "Trout Unlimited",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Chesapeake_Bay_Foundation.html",
+   "title": "Chesapeake Bay Foundation",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Keep_Tahoe_Blue.html",
+   "title": "Keep Tahoe Blue (League to Save Lake Tahoe)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "American_Forests.html",
+   "title": "American Forests",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Plant-for-the-Planet.html",
+   "title": "Plant-for-the-Planet",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
+   "url": "Dragonfly.html",
+   "title": "Dragonfly Titan Rotorcraft (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
    "stats": [],
    "missions": []
   }
