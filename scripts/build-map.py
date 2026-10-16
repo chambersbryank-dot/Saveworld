@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261015m'
+ASSETV = '20261015n'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
@@ -25,7 +25,7 @@ U = {
    world='Worldwide', worldintro='These solutions happen all over the planet, with no single place to pin.',
    list='Map as a list', listintro='The same information as the map, for screen readers and keyboards.', read='Read more',
    next='Upcoming launches', none='No launches scheduled', tbd='date to be confirmed', src='Launch data: The Space Devs Launch Library 2 (same feed as our Live Launch Tracker). Launches by Russia, China and North Korea are not shown.',
-   basis_hq='headquarters', basis_launch='launch site', pins='{g} active · {b} coming soon · {r} launch sites', label='Interactive world map of solutions and launch sites', live='Live Launch Tracker'),
+   basis_hq='headquarters', basis_launch='launch site', pins='{t} solutions: {g} active · {b} coming soon · {r} launch sites', label='Interactive world map of solutions and launch sites', live='Live Launch Tracker'),
  'fr': dict(title='Carte mondiale des solutions', desc="Une carte interactive de toutes les solutions de Saving Planets : épingles vertes pour celles qui agissent déjà, bleues pour celles à venir, et fusées pour les prochains lancements.",
    lead="Touchez une épingle pour voir une solution, où elle agit et un lien vers sa page. Vert : active ; bleu : bientôt ; fusée : prochains lancements depuis ce site.",
    active='Active', upcoming='Bientôt', rocket='Site de lancement', hub='Pôle', allhubs='Tous les pôles', launches='Lancements', show='Afficher',
@@ -33,7 +33,7 @@ U = {
    world='Partout dans le monde', worldintro="Ces solutions agissent sur toute la planète, sans lieu unique à épingler.",
    list='La carte sous forme de liste', listintro="Les mêmes informations que la carte, pour les lecteurs d'écran et le clavier.", read='En savoir plus',
    next='Prochains lancements', none='Aucun lancement prévu', tbd='date à confirmer', src="Données de lancement : The Space Devs Launch Library 2 (la même source que notre suivi des lancements). Les lancements de la Russie, de la Chine et de la Corée du Nord ne sont pas affichés.",
-   basis_hq='siège', basis_launch='site de lancement', pins='{g} actives · {b} bientôt · {r} sites de lancement', label='Carte mondiale interactive des solutions et des sites de lancement', live='Suivi des lancements en direct'),
+   basis_hq='siège', basis_launch='site de lancement', pins='{t} solutions : {g} actives · {b} bientôt · {r} sites de lancement', label='Carte mondiale interactive des solutions et des sites de lancement', live='Suivi des lancements en direct'),
  'es': dict(title='Mapa mundial de soluciones', desc='Un mapa interactivo de todas las soluciones de Saving Planets: pines verdes para las que ya funcionan, azules para las que llegan pronto y cohetes para los próximos lanzamientos.',
    lead='Toca un pin para ver una solución, dónde actúa y un enlace a su página. Verde: activa; azul: próximamente; cohete: próximos lanzamientos desde ese sitio.',
    active='Activa', upcoming='Próximamente', rocket='Sitio de lanzamiento', hub='Centro', allhubs='Todos los centros', launches='Lanzamientos', show='Mostrar',
@@ -41,7 +41,7 @@ U = {
    world='En todo el mundo', worldintro='Estas soluciones ocurren en todo el planeta, sin un único lugar que marcar.',
    list='El mapa como lista', listintro='La misma información que el mapa, para lectores de pantalla y teclado.', read='Leer más',
    next='Próximos lanzamientos', none='No hay lanzamientos programados', tbd='fecha por confirmar', src='Datos de lanzamientos: The Space Devs Launch Library 2 (la misma fuente que nuestro rastreador de lanzamientos). No se muestran lanzamientos de Rusia, China ni Corea del Norte.',
-   basis_hq='sede', basis_launch='sitio de lanzamiento', pins='{g} activas · {b} próximamente · {r} sitios de lanzamiento', label='Mapa mundial interactivo de soluciones y sitios de lanzamiento', live='Rastreador de lanzamientos en vivo'),
+   basis_hq='sede', basis_launch='sitio de lanzamiento', pins='{t} soluciones: {g} activas · {b} próximamente · {r} sitios de lanzamiento', label='Mapa mundial interactivo de soluciones y sitios de lanzamiento', live='Rastreador de lanzamientos en vivo'),
  'ar': dict(title='خريطة الحلول حول العالم', desc='خريطة تفاعلية لكل حلول Saving Planets: الدبابيس الخضراء لحلول تعمل الآن، والزرقاء لحلول قادمة قريبًا، والصواريخ لعمليات الإطلاق القادمة.',
    lead='اضغط على دبوس لترى الحل ومكان عمله ورابط صفحته. الأخضر: يعمل الآن، الأزرق: قريبًا، الصاروخ: الإطلاقات القادمة من ذلك الموقع.',
    active='يعمل الآن', upcoming='قريبًا', rocket='موقع إطلاق', hub='المركز', allhubs='كل المراكز', launches='الإطلاقات', show='عرض',
@@ -49,7 +49,7 @@ U = {
    world='حول العالم', worldintro='تحدث هذه الحلول في كل أنحاء الكوكب، دون مكان واحد لتحديده.',
    list='الخريطة على شكل قائمة', listintro='المعلومات نفسها الموجودة في الخريطة، لقارئات الشاشة ولوحة المفاتيح.', read='اقرأ المزيد',
    next='الإطلاقات القادمة', none='لا توجد إطلاقات مجدولة', tbd='الموعد لم يتأكد بعد', src='بيانات الإطلاق: The Space Devs Launch Library 2 (المصدر نفسه لمتتبع الإطلاقات لدينا). لا تُعرض إطلاقات روسيا والصين وكوريا الشمالية.',
-   basis_hq='المقر', basis_launch='موقع الإطلاق', pins='{g} يعمل الآن · {b} قريبًا · {r} مواقع إطلاق', label='خريطة عالمية تفاعلية للحلول ومواقع الإطلاق', live='متتبع الإطلاقات المباشر'),
+   basis_hq='المقر', basis_launch='موقع الإطلاق', pins='{t} حلًا: {g} يعمل الآن · {b} قريبًا · {r} مواقع إطلاق', label='خريطة عالمية تفاعلية للحلول ومواقع الإطلاق', live='متتبع الإطلاقات المباشر'),
  'it': dict(title='Mappa mondiale delle soluzioni', desc='Una mappa interattiva di tutte le soluzioni di Saving Planets: spilli verdi per quelle già attive, blu per quelle in arrivo e razzi per i prossimi lanci.',
    lead='Tocca uno spillo per vedere una soluzione, dove opera e il link alla sua pagina. Verde: attiva; blu: in arrivo; razzo: prossimi lanci da quel sito.',
    active='Attiva', upcoming='In arrivo', rocket='Sito di lancio', hub='Polo', allhubs='Tutti i poli', launches='Lanci', show='Mostra',
@@ -57,7 +57,7 @@ U = {
    world='In tutto il mondo', worldintro='Queste soluzioni avvengono in tutto il pianeta, senza un unico luogo da segnare.',
    list='La mappa come elenco', listintro='Le stesse informazioni della mappa, per lettori di schermo e tastiera.', read='Scopri di più',
    next='Prossimi lanci', none='Nessun lancio in programma', tbd='data da confermare', src='Dati sui lanci: The Space Devs Launch Library 2 (la stessa fonte del nostro tracker dei lanci). I lanci di Russia, Cina e Corea del Nord non sono mostrati.',
-   basis_hq='sede', basis_launch='sito di lancio', pins='{g} attive · {b} in arrivo · {r} siti di lancio', label='Mappa mondiale interattiva di soluzioni e siti di lancio', live='Tracker dei lanci in diretta'),
+   basis_hq='sede', basis_launch='sito di lancio', pins='{t} soluzioni: {g} attive · {b} in arrivo · {r} siti di lancio', label='Mappa mondiale interattiva di soluzioni e siti di lancio', live='Tracker dei lanci in diretta'),
 }
 
 # ---------- launches (Launch Library 2, same feed as the Live Launch Tracker) ----------
@@ -178,7 +178,7 @@ def page_html(l, data, n_by):
 <label class="wm-tog"><input type="checkbox" id="wm-u" checked> <span class="wm-dot wm-upcoming" aria-hidden="true"></span>{esc(u["upcoming"])}</label>
 <label class="wm-tog"><input type="checkbox" id="wm-r" checked> <span class="wm-rk" aria-hidden="true">🚀</span>{esc(u["launches"])}</label>
 </div>
-<p class="wm-count" aria-live="polite">{esc(u["pins"].format(g=gp, b=bp, r=rk))}</p>
+<p class="wm-count" aria-live="polite">{esc(u["pins"].format(t=len(LOC), g=sum(1 for e in LOC.values() if e["status"] == "active"), b=sum(1 for e in LOC.values() if e["status"] == "upcoming"), r=rk))}</p>
 <div id="wm" class="wm-map" dir="ltr" role="region" aria-label="{esc(u["label"])}"></div>
 <p class="wm-src">{esc(u["src"])} <a href="{pre if l != "en" and not os.path.exists(d(l) + "Artemis_II.html") else ""}Artemis_II.html#launches">{esc(u["live"])}</a></p>
 <section class="wm-strip" id="from-orbit"><h2>🛰️ {esc(u["orbit"])}</h2><p>{esc(u["orbitintro"])}</p><ul class="wm-chips">{strip("orbit")}</ul></section>
