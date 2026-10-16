@@ -240,3 +240,77 @@ Not used: braeunig.us orbital mechanics page (did not respond). Fighter-jet/heli
 - Contact-form only: CNES, Agencia Espacial Española. Unverified: Australian Space Agency (media@space.gov.au; official page unreachable).
 - Skipped as duplicates: JAXA, ISRO (already thanked in outreach-142).
 - Awaiting owner approval before any send.
+
+## 2026-10-16 — Learn hub math-layer benchmark research
+Full spec also at /workspace/learn-benchmark-spec.md (box). Research only; no site pages edited.
+
+## 1. Benchmark table
+| Resource | What makes it exceptional | Wow-factor | Weaknesses / gaps we can beat |
+|---|---|---|---|
+| MIT OCW 16.07 Dynamics, 16.346 Astrodynamics, 16.100 Aerodynamics, 8.01SC, 18.03SC (ocw.mit.edu) | Real MIT rigor, full problem sets + solutions, lecture notes; "SC" scholar courses add sequenced sessions + recitation videos | Authenticity; complete problem/solution sets | Static PDFs, little interactivity, no intuition-first layer, English only, uneven accessibility (scanned PDFs, raw LaTeX images) |
+| Khan Academy (khanacademy.org/science/physics) | Mastery learning, short videos, auto-graded practice with hints, multilingual | Instant feedback + step hints | Stops ~intro college; little aero/astro; no graduate depth |
+| Paul's Online Math Notes (tutorial.math.lamar.edu) | Extremely clear step-by-step worked examples, every algebra step shown; notes/practice/assignment split | "Show every step" examples; hidden solutions | Pure math only, no applications, no visuals, English only |
+| NASA Glenn Beginner's Guide to Aeronautics (grc.nasa.gov/www/k-12/airplane) | Authoritative, one-concept-per-page, equation pages + FoilSim/EngineSim interactives | Interactive simulators tied to equations | Dated UI, Java-era sims partly broken, shallow math beyond algebra, weak navigation |
+| NASA Basics of Space Flight (science.nasa.gov/learn/basics-of-space-flight) | Plain-language JPL mission context, real spacecraft examples | Real-mission storytelling | Almost no equations or worked problems; no practice |
+| ESA Education (esa.int/Education) | Teacher kits, classroom activities, multilingual European reach | Teacher-ready packs | Mostly school level; little university math |
+| OpenStax University Physics (openstax.org) | Free peer-reviewed textbook, CC BY, worked "Strategy/Solution/Significance" examples, end-of-chapter problems, accessible HTML | Strategy→Solution→Significance example format | Static; no interactive solvers; no aero/astro specialization |
+| 3Blue1Brown (3blue1brown.com) | Visual intuition first; animations reveal why | Geometric "aha" visuals | No practice, no worked engineering problems |
+| Brilliant (brilliant.org) | Active learning: interact before being told; bite-size, gamified | Learn-by-doing puzzles | Paywalled, shallow at grad level, no citations |
+| PhET (phet.colorado.edu) | Research-based HTML5 sims, accessible (keyboard, screen-reader descriptions, sonification), 90+ languages, teacher activities | Inclusive sims + translations | Intro physics only; no orbital transfers/aircraft dynamics |
+| LibreTexts (phys.libretexts.org) | Huge open library, remixable, upper-division content | Breadth to grad level | Inconsistent quality/format, cluttered |
+| Stanford AA, Caltech GALCIT, Purdue AAE, Georgia Tech AE | Define the canonical curriculum sequence (statics→dynamics→aero→propulsion→controls→astro; grad: viscous flow, optimal control, perturbation theory) | Curriculum map | Not public learning resources; behind enrollment |
+| Curtis, *Orbital Mechanics for Engineering Students*; Vallado, *Fundamentals of Astrodynamics and Applications* (cite only) | Gold-standard derivations + algorithms (Kepler/Newton-Raphson, Lambert, Hohmann); Vallado has public code (celestrak.org/software/vallado-sw.php) | Algorithm-level worked examples | Paid texts; no interactivity; we cite, never copy |
+
+## 2. Synthesis — top wow-factors to adopt
+1. Intuition first, then rigor (3B1B/Brilliant): every topic opens with an interactive or visual before the equations.
+2. Paul's-style fully shown steps + OpenStax "Strategy → Solution → Significance" framing.
+3. Live calculators tied to the worked example (NASA Glenn/PhET): change inputs, watch numbers and animation update.
+4. Auto-checked practice with progressive hints and hidden full solutions (Khan).
+5. PhET-grade accessibility + true 5-language support (nobody does this at grad level).
+
+## 3. Gaps we can beat
+- No free resource spans freshman → PhD in one consistent format for astro/aero.
+- Rigorous sources (OCW, Curtis, Vallado) lack interactivity; interactive ones (Khan, PhET, Brilliant) lack depth.
+- Almost no aero/astro math is in FR/ES/IT/AR with RTL support.
+- Few show code (Python) side-by-side with math; few cite sources per equation.
+- Teacher packs exist for school level only — we add college-level instructor notes.
+
+## 4. Page template (every topic page, in order)
+1. Header: title, track, **level badge** (Kids/Teens/College/Graduate/PhD), est. time, last-verified date.
+2. **Learning goals** (3–5 measurable "you will be able to…").
+3. **Prerequisites** with links to our own lower-level pages + external (Khan/Paul's/OpenStax).
+4. **Intuition first**: short plain-language story + interactive/visual; "Explain like I'm 10" box.
+5. **Derivation**: numbered steps, each with a one-line "why"; collapsible for lower levels.
+6. **Worked example on a real problem** — Given / Find / Strategy / Step-by-step / Answer with units / Sanity check / Significance. Plus a Python snippet toggle.
+7. **Practice problems** (3–6, graded easy→hard): numeric answer box with tolerance check, progressive hints, hidden full step-by-step solution (`<details>`).
+8. **Common mistakes** (degrees vs radians, km vs m, mean vs eccentric anomaly, sign conventions, etc.).
+9. **Check your understanding**: 3 conceptual multiple-choice/explain questions with feedback.
+10. **Go deeper**: next level page + grad/PhD extensions.
+11. **For teachers**: objectives alignment, slide-ready figure, lesson time, answer key note.
+12. **Cited sources**: per-equation citations (Curtis ch./Vallado algorithm number, OCW course, NASA page).
+
+## 5. Flagship worked examples (verify numbers in build)
+- **Kepler's equation via Newton-Raphson**: M = E − e sinE; E₀ = M (or π for e>0.8); E_{n+1} = E_n − (E_n − e sinE_n − M)/(1 − e cosE_n); stop |ΔE|<1e-10. Example e=0.37255, M=3.6029 rad (Curtis Ex. 3.2 style; cite, use own numbers). Show iteration table.
+- **LEO→GEO Hohmann**: μ=398600.4418 km³/s², r1=6678 km (300 km alt), r2=42164 km; Δv1≈2.43 km/s, Δv2≈1.47 km/s, total ≈3.89 km/s (excl. plane change); TOF ≈5.28 h. Extension: combined 28.5° plane change at apogee (~4.2 km/s total to GEO).
+- **Short-period aircraft stability**: 2-state [α, q] linear model, characteristic eq s² − (Z_α/V + M_q + M_α̇)s + (Z_α M_q/V − M_α) = 0; compute ω_n, ζ; compare to MIL-STD-1797 / FAA handling-quality ranges (generic high-performance jet; public data only).
+- **Rotor momentum theory (hover)**: T = 2ρA v_i², v_i = √(T/2ρA), P_ideal = T v_i, figure of merit FM = P_ideal/P_actual; example ~2,700 kg light helicopter, R=5.1 m (generic).
+- Physics track: projectile with drag (ODE, numeric), simple harmonic oscillator → damped → eigenvalues (ties to aircraft stability), Lagrangian of a pendulum (grad).
+
+## 6. Interactive elements
+- Orbit Lab (Δv → animated orbit raise; vis-viva live readout), Kepler solver iteration stepper, Hohmann calculator, root-locus/eigenvalue plotter for short-period, rotor disk-loading slider, unit converter.
+- Vanilla JS + canvas/SVG, no build step, works offline-ish on iPad; KaTeX self-hosted.
+- Every interactive: keyboard operable, visible focus, `aria-live` numeric readouts, text description of the animation, pause/reduced-motion honoring `prefers-reduced-motion`.
+
+## 7. Accessibility (WCAG 2.2 AA)
+- Math as KaTeX with MathML output (screen-reader readable); never equations as images.
+- Alt text for figures, long descriptions for diagrams; color-blind-safe palettes; ≥4.5:1 contrast.
+- Hidden solutions via native `<details>/<summary>`; touch targets ≥44px; works at 200% zoom.
+
+## 8. Five-language considerations (EN/FR/ES/IT/AR)
+- Math notation stays LTR inside RTL Arabic (`dir="ltr"` on math spans/code); numbers use locale decimal separator in prose but `.` in code/inputs (accept both in answer boxes).
+- Glossary per language for terms (eccentric anomaly, figure of merit, short-period mode) reviewed against ESA/CNES/ASI terminology.
+- Units SI everywhere; imperial secondary for aero (ft, lbf) shown in parentheses.
+- Translated `hreflang` + same slug pattern (/fr/, /es/, /it/, /ar/).
+
+## 9. Sources (verified 200, 2026-10-16)
+ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astrodynamics-fall-2008 · ocw.mit.edu/courses/16-100-aerodynamics-fall-2005 · ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016 · ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011 · khanacademy.org/science/physics · tutorial.math.lamar.edu · grc.nasa.gov/www/k-12/airplane · science.nasa.gov/learn/basics-of-space-flight · esa.int/Education · openstax.org/details/books/university-physics-volume-1 · 3blue1brown.com · brilliant.org · phet.colorado.edu · phys.libretexts.org · aa.stanford.edu · galcit.caltech.edu · engineering.purdue.edu/AAE · ae.gatech.edu · Curtis (Elsevier) · Vallado software (celestrak.org/software/vallado-sw.php)
