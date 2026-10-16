@@ -88,6 +88,9 @@ for f in sorted(os.listdir('.')):
     if any(c.startswith('hero-') or c in ('af-hero', 'sol-hero') for c in hc) or p in MAP: continue  # af/sol heroes carry their own themed banners
     if 'hub-hero' not in hc and _has_rule(css, s): continue
     og = re.search(r'og:image" content="[^"]*/assets/([^"/]+)"', s)
+    if not og:  # Oct 16: build-og swaps og:image to assets/og/<lang>/<page>.jpg share cards; keep the photo hero already chosen for this page
+        prev = re.search(r'\.hp-' + re.escape(_slug(p)) + r" \.page-hero\[class\]\{[^}]*url\('assets/([^'/]+)'\)", css)
+        if prev and os.path.exists('assets/' + prev.group(1)): chosen[p] = (prev.group(1), None); continue
     if og and og.group(1) not in GENERIC and os.path.exists('assets/' + og.group(1)) and '<p class="photo-credit">' in s:
         chosen[p] = (og.group(1), None)
     else:
