@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261015q'
+ASSETV = '20261015r'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
@@ -190,8 +190,7 @@ def page_html(l, data, n_by):
     foot = foot.replace('</body>', scripts + '</body>', 1)
     return head + '</head>\n' + body_open + nav + main + foot
 
-# Oct 15: same teardrop as the homepage 'Explore All Solutions' button (build-ux.py); transparent, no ring, so it blends with any page background
-DROP = '<svg class="cta-drop" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C12 2 5 10.2 5 15a7 7 0 0 0 14 0C19 10.2 12 2 12 2z"/></svg>'
+DROP = ''  # Oct 15: teardrop reverted; Liquid Glass styling lives in build-ux.py CSS
 def link_in(l):
     """Link from Solutions page and homepage (idempotent marker blocks)."""
     n = 0

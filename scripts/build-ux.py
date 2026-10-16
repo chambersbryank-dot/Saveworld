@@ -163,7 +163,12 @@ nav.scrolled .nav-group summary{color:#003755}
 html.dark .nav-sub{background:#0f1b26} html.dark .nav-sub a{color:#e8eef5 !important}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
 .hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
-.hero-cta{display:inline-flex;align-items:center;gap:.45rem}.nav-help a,.sticky-help{display:inline-flex;align-items:center;gap:.35rem}.cta-drop{flex:none;border:0;background:none;box-shadow:none;outline:0}
+.hero-cta{display:inline-flex;align-items:center;gap:.45rem}/* Liquid Glass: translucent, page background shows through; solid fallback without backdrop-filter */
+.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{border-radius:999px !important;color:#fff !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,0,0,.28) !important;-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.hero-ctas .hero-cta:hover,.wm-cta .btn:hover,.nav-help a:hover,.sticky-help:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint) !important}
+.hero-ctas .hero-cta:focus-visible,.wm-cta .btn:focus-visible,.nav-help a:focus-visible,.sticky-help:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{background:var(--lg-solid) !important}}
+body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}
 .hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
@@ -213,13 +218,31 @@ JS = r"""
 })();
 /* UX-OCT15:END */
 """
-# Oct 15: teardrop icon on 'Explore all solutions' (inline SVG, currentColor, no ring/box so it blends with the button)
-DROP = '<svg class="cta-drop" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C12 2 5 10.2 5 15a7 7 0 0 0 14 0C19 10.2 12 2 12 2z"/></svg>'
-STYLEV = '20261015v'  # bump when styles.css changes
+# Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
+DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
+STYLEV = '20261015zb'  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
         if s2 != s: wr(f, s2)
+# Oct 15: per-page glass tint. data-glass-tint on <body> = the page's domain colour (water/land/space, same as the homepage domain
+# headings); everything else keeps the site navy. CSS reads it as --lg-tint.
+def apply_tint(hubs):
+    dom = {}
+    for i, hs in enumerate(DOMAINS):
+        for h in hs: dom[h] = ['water', 'land', 'space'][i]
+    for h, v in hubs.items():
+        for c in v['cards']:
+            u = re.search(r'data-url="([^"#]+)', c)
+            if u and h in dom: dom.setdefault(u.group(1), dom[h])
+    n = 0
+    for f in glob.glob('*.html') + glob.glob('*/*.html'):
+        s = rd(f); m = re.search(r'<body\b[^>]*>', s)
+        if not m: continue
+        t = dom.get(os.path.basename(f), 'site')
+        b = re.sub(r' data-(?:glass-)?tint="(?:site|water|land|space)"', '', m.group(0)); b = b[:-1] + f' data-glass-tint="{t}">'
+        if b != m.group(0): wr(f, s[:m.start()] + b + s[m.end():]); n += 1
+    return n
 def asset(path, txt):
     s = rd(path); s = re.sub(r'\n?/\* UX-OCT15:START \*/.*?/\* UX-OCT15:END \*/\n?', '', s, flags=re.S)
     wr(path, s.rstrip('\n') + '\n' + txt)
@@ -293,5 +316,5 @@ if __name__ == '__main__':
     for l in LANGS:
         for p in sorted(glob.glob(d(l) + '*.html')): ch += page_pass(p, l, n)
         ch += home(l, n, hubs_by[l]); ch += solutions_filters(l, hubs_by[l])
-    asset('styles.css', CSS); asset('site.js', JS); sitemap(); bump_styles()
+    asset('styles.css', CSS); asset('site.js', JS); sitemap(); bump_styles(); ch += apply_tint(hubs_by['en'])
     print(f'build-ux: {n} solutions, {ch} page writes')
