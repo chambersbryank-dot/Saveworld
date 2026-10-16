@@ -6,8 +6,9 @@
     "build:search": "node scripts/build-search.mjs"
   },
   "devDependencies": {
-    "pagefind": "1.5.2",
-    "@huggingface/transformers": "3.7.6"
+    "@huggingface/transformers": "3.7.6",
+    "katex": "^0.16.47",
+    "pagefind": "1.5.2"
   },
   "overrides": {
     "sharp": "^0.35.5"

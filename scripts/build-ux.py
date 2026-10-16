@@ -76,6 +76,7 @@ T = {
 # Education has its own Kids & Teachers door; About folded into Get Involved (policy pages stay in the footer).
 GROUPS = [('sol', ['Solutions.html','Oceans.html','Rivers.html','Lakes.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Play_and_Learn.html','Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
+  ('le', ['Learn.html','Orbits_Guide.html','Orbit_Math.html','Orbit_Lab.html']),  # Oct 16: Learn door (3 tracks; labels from learn_text.py)
   ('sl', ['Space.html','Artemis_II.html#launches','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html']),
   ('pr', ['Project-Rawane.html','Rawanes_Mission_Log.html','World_Map.html']),
   ('gi', ['Ways_to_Help.html','Find_a_Cleanup.html','index.html#newsletter','Contact.html','About.html'])]
@@ -89,14 +90,15 @@ DOMAINS = [['Oceans.html','Rivers.html','Lakes.html'], ['Deforestation.html'],
 DOMAIN_IMG = ['assets/videos/great-bubble-barrier.jpg', None, None]
 
 PLAYL = {'en': '🎮 Play &amp; Learn', 'fr': '🎮 Jouer et apprendre', 'es': '🎮 Juega y aprende', 'ar': '🎮 العب وتعلّم', 'it': '🎮 Gioca e impara'}  # Oct 15 item 9
+import sys as _sys; _sys.path.insert(0, 'scripts'); import learn_text as _LT  # Oct 16 Learn door labels
 def nav_html(l, page):
     t = T[l]; out = []
     for key, items in GROUPS:
         cur = any(page == i.split('#')[0] for i in items if '#' not in i)
         def hr(i): return i if l == 'en' or os.path.exists(d(l) + i.split('#')[0]) else '../' + i
-        lab = (lambda i: PR[l][1][items.index(i)]) if key == 'pr' else (lambda i: PLAYL[l] if i == 'Play_and_Learn.html' else t["items"][i])
+        lab = (lambda i: PR[l][1][items.index(i)]) if key == 'pr' else (lambda i: _LT.NAV_ITEMS[i][l]) if key == 'le' else (lambda i: PLAYL[l] if i == 'Play_and_Learn.html' else t["items"][i])
         lis = ''.join(f'<li><a href="{hr(i)}"{" aria-current=\"page\"" if i == page else ""}>{lab(i)}</a></li>' for i in items)
-        name = PR[l][0] if key == 'pr' else t[key]
+        name = PR[l][0] if key == 'pr' else _LT.NAV[l] if key == 'le' else t[key]
         if key == 'pr': cur = page in ('Project-Rawane.html', 'Rawanes_Mission_Log.html', 'World_Map.html')
         out.append(f'<li class="nav-group nav-{key}{" is-current" if cur else ""}"><details><summary aria-haspopup="true" aria-expanded="false">{name}</summary><ul class="nav-sub">{lis}</ul></details></li>')
     return ''.join(out)
@@ -239,7 +241,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = '20261016a'  # bump when styles.css changes
+STYLEV = '20261016L'  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
