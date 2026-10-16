@@ -1,0 +1,69 @@
+name: Weekly quality check
+# Non-blocking report: link check (lychee), Lighthouse, accessibility (pa11y-ci / axe), HTML validation (html-validate).
+# Every step uses continue-on-error; results go into ONE issue labelled "quality-report" (created once, then updated).
+on:
+  schedule:
+    - cron: "17 16 * * 1"   # Mondays 16:17 UTC = 06:17 Hawaii
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency: { group: quality, cancel-in-progress: true }
+env:
+  SITE: https://www.savingplanets.com
+  PAGES: >-
+    / /Solutions.html /World_Map.html /Teachers.html /Play_and_Learn.html /Oceans.html
+    /fr/index.html /es/Solutions.html /ar/index.html /it/Teachers.html
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Link check (lychee, built files)
+        id: lychee
+        continue-on-error: true
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-concurrency 8 --accept 200,204,206,301,302,403,429 --exclude-path node_modules --exclude 'mailto:' --exclude 'linkedin\.com' --exclude 'x\.com' --exclude 'twitter\.com' './**/*.html'
+          output: lychee.md
+          fail: false
+      - name: Lighthouse CI
+        continue-on-error: true
+        run: |
+          urls=""; for p in $PAGES; do urls="$urls --collect.url=$SITE$p"; done
+          npx -y @lhci/cli@0.14.x collect $urls --collect.numberOfRuns=1 --collect.settings.preset=desktop || true
+          npx -y @lhci/cli@0.14.x upload --target=filesystem --outputDir=lhci || true
+          node -e '
+            const fs=require("fs");let out="| Page | Perf | A11y | Best | SEO |\n|---|---|---|---|---|\n";
+            try{const m=JSON.parse(fs.readFileSync("lhci/manifest.json"));for(const r of m){const s=r.summary;const f=k=>Math.round((s[k]||0)*100);out+=`| ${r.url.replace(process.env.SITE,"")} | ${f("performance")} | ${f("accessibility")} | ${f("best-practices")} | ${f("seo")} |\n`}}catch(e){out="Lighthouse did not produce results.\n"}
+            fs.writeFileSync("lighthouse.md",out)'
+      - name: Accessibility (pa11y-ci, axe runner)
+        continue-on-error: true
+        run: |
+          urls=$(for p in $PAGES; do printf '"%s%s",' "$SITE" "$p"; done | sed 's/,$//')
+          echo "{\"defaults\":{\"runners\":[\"axe\"],\"timeout\":60000,\"chromeLaunchConfig\":{\"args\":[\"--no-sandbox\"]}},\"urls\":[$urls]}" > .pa11yci.json
+          npx -y pa11y-ci@3 --config .pa11yci.json > pa11y.txt 2>&1 || true
+          { echo '```'; tail -n 120 pa11y.txt; echo '```'; } > pa11y.md
+      - name: HTML validation (html-validate)
+        continue-on-error: true
+        run: |
+          echo '{"extends":["html-validate:recommended"],"rules":{"no-inline-style":"off","no-trailing-whitespace":"off","long-title":"off","attribute-boolean-style":"off","void-style":"off","no-raw-characters":"off","prefer-native-element":"off","no-redundant-role":"off","element-required-attributes":"off","wcag/h63":"off"}}' > .htmlvalidate.json
+          files=$(ls *.html fr/*.html es/*.html ar/*.html it/*.html | grep -v google)
+          npx -y html-validate@8 --formatter text $files > htmlval.txt 2>&1 || true
+          { echo "Total problems reported: $(grep -cE '^\S.*:[0-9]+:[0-9]+' htmlval.txt || true)"; echo '```'; head -n 80 htmlval.txt; echo '```'; } > htmlval.md
+      - name: Open or update the quality issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs'); const rd = f => { try { return fs.readFileSync(f, 'utf8').slice(0, 15000) } catch (e) { return '_No output._' } };
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = `Automated weekly quality report (non-blocking). Run: ${run}\nUpdated: ${new Date().toISOString()}\n\n## Links (lychee)\n${rd('lychee.md')}\n\n## Lighthouse\n${rd('lighthouse.md')}\n\n## Accessibility (pa11y-ci, axe)\n${rd('pa11y.md')}\n\n## HTML validation\n${rd('htmlval.md')}`.slice(0, 64000);
+            const { owner, repo } = context.repo; const label = 'quality-report';
+            try { await github.rest.issues.getLabel({ owner, repo, name: label }) } catch (e) { await github.rest.issues.createLabel({ owner, repo, name: label, color: '5319e7' }) }
+            const open = await github.rest.issues.listForRepo({ owner, repo, labels: label, state: 'open', per_page: 1 });
+            if (open.data.length) await github.rest.issues.update({ owner, repo, issue_number: open.data[0].number, body });
+            else await github.rest.issues.create({ owner, repo, title: 'Weekly quality report', labels: [label], body });

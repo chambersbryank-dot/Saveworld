@@ -1,0 +1,61 @@
+name: Weekly build and deploy
+# Runs scripts/weekly-sync.sh (all generators), commits any changes as chambersbryank-dot, then deploys GitHub Pages.
+# SAFETY SWITCH: the schedule only does work when the repo variable WEEKLY_BUILD_ENABLED is "true"
+# (Settings > Secrets and variables > Actions > Variables). Manual runs (workflow_dispatch) always work, so test with one first.
+# OG images: still committed (build-og.py only re-renders changed cards). Set repo variable OG_AT_BUILD to "true" to render
+# share cards here at deploy time instead; see docs/github-automation.md before switching. No secrets are needed or used.
+on:
+  schedule:
+    - cron: "23 15 * * 0"   # Sundays 15:23 UTC = 05:23 Hawaii (after the Sunday Solution-of-the-Week flip)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency: { group: pages, cancel-in-progress: false }
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || vars.WEEKLY_BUILD_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # build-new.py / changelog need full history only for legacy fallbacks
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Python deps
+        run: pip install --quiet "pillow>=10.4" beautifulsoup4
+      - name: Run generators
+        env: { TZ: Pacific/Honolulu, WEEKLY_SYNC_POST_DEPLOY: "0" }
+        run: bash scripts/weekly-sync.sh
+      - name: Commit changes (explicit file list, never -A)
+        run: |
+          git config user.name "chambersbryank-dot"; git config user.email "chambersbryank-dot@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then echo "No changes"; exit 0; fi
+          git status -z --porcelain | tr '\0' '\n' | cut -c4- | grep . | tr '\n' '\0' | xargs -0 git add --
+          git commit -m "Weekly build $(date +%Y-%m-%d) (Actions)"
+          git pull --rebase && git push
+      - name: Render share cards at build time (only if OG_AT_BUILD)
+        if: vars.OG_AT_BUILD == 'true'
+        run: python3 scripts/build-og.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: "." }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
+  ping:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: bash scripts/post-deploy.sh || true
