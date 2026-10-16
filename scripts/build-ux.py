@@ -27,7 +27,7 @@ T = {
      'Space.html':'Space','Artemis_II.html#launches':'Live Launch Tracker','Planetary_Defense.html':'Planetary Defense','Space_Weather.html':'Space Weather','Space_Disposal.html':'Space Disposal','Project-Rawane.html':'Project Rawane','Rawanes_Mission_Log.html':"Rawane's Mission Log",
      'Ways_to_Help.html':'Ways to Help','Find_a_Cleanup.html':'Find a Cleanup','index.html#newsletter':'Weekly Brief','Contact.html':'Contact',
      'About.html':'About Us','Editorial_Policy.html':'Editorial Policy','Corrections.html':'Corrections','Press.html':'Press &amp; Media','Privacy.html':'Privacy'},
-   cta1='Explore all solutions', cta2='Ways to help', imp=['real, sourced solutions','solution hubs','languages','learning tools for kids and teachers'],
+   cta1='Explore All Solutions', cta2='Ways to help', imp=['real, sourced solutions','solution hubs','languages','learning tools for kids and teachers'],
    dom=[('Water','Oceans, rivers and lakes'),('Land','Forests and the people who live with them'),('Space','Satellites, missions and keeping orbit clean')],
    seeall='See all {n} {d} solutions', news='Latest Updates', newsintro='What changed on the site recently. Sign up for the Weekly Brief to get it every week.',
    kidsh='Kids &amp; Teachers', filt='Show', all='All', more='Show all {n}', less='Show fewer', hub='Hub', allhubs='All hubs', menu='Menu'),
@@ -163,7 +163,7 @@ nav.scrolled .nav-group summary{color:#003755}
 html.dark .nav-sub{background:#0f1b26} html.dark .nav-sub a{color:#e8eef5 !important}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
 .hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
-.hero-cta{display:inline-flex;align-items:center;gap:.45rem}.cta-drop{flex:none;border:0;background:none;box-shadow:none;outline:0}
+.hero-cta{display:inline-flex;align-items:center;gap:.45rem}.nav-help a,.sticky-help{display:inline-flex;align-items:center;gap:.35rem}.cta-drop{flex:none;border:0;background:none;box-shadow:none;outline:0}
 .hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
@@ -215,7 +215,7 @@ JS = r"""
 """
 # Oct 15: teardrop icon on 'Explore all solutions' (inline SVG, currentColor, no ring/box so it blends with the button)
 DROP = '<svg class="cta-drop" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C12 2 5 10.2 5 15a7 7 0 0 0 14 0C19 10.2 12 2 12 2z"/></svg>'
-STYLEV = '20261015t'  # bump when styles.css changes
+STYLEV = '20261015v'  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
@@ -244,12 +244,12 @@ def page_pass(p, l, n):
     m = re.search(r'(<ul class="nav-links">)(.*?)(</ul></div></nav>)', s, re.S)
     if m and 'lang-switch' in m.group(2):
         ls = re.search(r'<li[^>]*class="lang-switch".*?</li>', m.group(2), re.S).group(0)
-        inner = nav_html(l, page) + ls + f'<li class="nav-help"><a href="Ways_to_Help.html">{T[l]["help"]}</a></li>'
+        inner = nav_html(l, page) + ls + f'<li class="nav-help"><a href="Ways_to_Help.html">{DROP}{T[l]["help"]}</a></li>'
         s = s[:m.start()] + m.group(1) + inner + m.group(3) + s[m.end():]
     # Oct 15: translated pages inherit the English sticky button from i18n-build; always set this language's label.
-    s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)[^<]*(</a>)', lambda mm: mm.group(1) + T[l]["help"] + mm.group(2), s)
+    s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)(?:<svg class="cta-drop".*?</svg>)?[^<]*(</a>)', lambda mm: mm.group(1) + DROP + T[l]["help"] + mm.group(2), s)
     if 'class="sticky-help"' not in s and '</main>' in s:
-        s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{T[l]["help"]}</a>', 1)
+        s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{DROP}{T[l]["help"]}</a>', 1)
     # lazy images below the hero
     def lazy(mm):
         tag = mm.group(0)

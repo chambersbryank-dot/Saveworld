@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261015p'
+ASSETV = '20261015q'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
@@ -190,12 +190,14 @@ def page_html(l, data, n_by):
     foot = foot.replace('</body>', scripts + '</body>', 1)
     return head + '</head>\n' + body_open + nav + main + foot
 
+# Oct 15: same teardrop as the homepage 'Explore All Solutions' button (build-ux.py); transparent, no ring, so it blends with any page background
+DROP = '<svg class="cta-drop" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C12 2 5 10.2 5 15a7 7 0 0 0 14 0C19 10.2 12 2 12 2z"/></svg>'
 def link_in(l):
     """Link from Solutions page and homepage (idempotent marker blocks)."""
     n = 0
-    lab = {'en': 'See every solution on the World Map', 'fr': 'Voir toutes les solutions sur la carte du monde', 'es': 'Ver todas las soluciones en el mapa mundial',
-           'ar': 'شاهد كل الحلول على خريطة العالم', 'it': 'Guarda tutte le soluzioni sulla mappa del mondo'}[l]
-    blk = f'<!-- WMAP-LINK:START --><p class="wm-cta"><a class="btn" href="World_Map.html">🗺️ {esc(lab)}</a></p><!-- WMAP-LINK:END -->'
+    lab = {'en': 'See Solutions on the World Map', 'fr': 'Voir les solutions sur la carte du monde', 'es': 'Ver las soluciones en el mapa mundial',
+           'ar': 'شاهد كل الحلول على خريطة العالم', 'it': 'Guarda le soluzioni sulla mappa del mondo'}[l]
+    blk = f'<!-- WMAP-LINK:START --><p class="wm-cta"><a class="btn hero-cta" href="World_Map.html">{DROP}{esc(lab)}</a></p><!-- WMAP-LINK:END -->'
     for page, anchor in (('Solutions.html', r'<!-- SOL-FILTERS:START -->'), ('index.html', r'<!-- DOMAINS:START -->')):
         p = d(l) + page
         if not os.path.exists(p): continue
