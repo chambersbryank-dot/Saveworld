@@ -74,8 +74,10 @@ python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search b
 python3 scripts/build-langbanner.py      # Oct 16: language-suggestion banner (site.js + styles.css; localStorage only, never redirects)
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
+python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
-python3 scripts/seo-audit.py | tail -3
+python3 scripts/i18n-sitemap.py           # Oct 16: sitemap.xml rebuilt from the pages on disk (all langs, hreflang alternates, git lastmod)
+python3 scripts/seo-lint.py --no-fail | tail -6   # gap counts (strict run at the end)
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 node scripts/build-search.mjs
@@ -86,3 +88,5 @@ if [ -f /home/box/.cloudflare_token ]; then python3 scripts/si-index.py || echo 
 #   bash scripts/post-deploy.sh   (waits for the live key file, pings changed URLs, never fails the sync)
 # With WEEKLY_SYNC_POST_DEPLOY=1 the caller has already pushed, so ping now.
 if [ "${WEEKLY_SYNC_POST_DEPLOY:-0}" = 1 ]; then bash scripts/post-deploy.sh || true; fi
+# Oct 16 SEO lint (strict): fails the sync on missing/duplicate titles or descriptions, broken hreflang reciprocity or invalid JSON-LD.
+python3 scripts/seo-lint.py > /tmp/seo-lint.log || { tail -12 /tmp/seo-lint.log; echo 'seo-lint: ERRORS (see python3 scripts/seo-lint.py --list)'; exit 1; }
