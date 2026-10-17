@@ -5,4 +5,6 @@ cd "$(dirname "$0")/.."
 # Oct 16: SEO lint first (prints gap counts; errors are reported loudly but never block the IndexNow ping).
 python3 scripts/seo-lint.py > /tmp/seo-lint-post.log; rc=$?; tail -8 /tmp/seo-lint-post.log
 [ "$rc" = 0 ] || echo "SEO LINT FAILED: run python3 scripts/seo-lint.py --list and fix the generators (scripts/seo-fix.py, seo-jsonld.py, i18n/seo-meta.json)"
+# Oct 16: warn when styles.css/batch*.css changed without re-running build-critical.py (never blocks the ping).
+python3 scripts/build-critical.py --check || echo "CRITICAL CSS STALE: run python3 scripts/build-critical.py and commit"
 node scripts/indexnow-ping.js --send --wait || echo "IndexNow ping failed (ignored)"

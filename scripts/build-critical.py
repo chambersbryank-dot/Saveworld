@@ -9,7 +9,7 @@ own image), :root/html/body, @font-face and @keyframes. The result is inlined in
 <link rel="stylesheet"> becomes <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"> with a
 <noscript> fallback. Document order is unchanged, so the cascade is too. Cache: scripts/critical-cache.json, keyed by template
 and a hash of the CSS files, so the weekly run only re-extracts when CSS changes.
-Usage: python3 scripts/build-critical.py [--only PAGE.html ...] [--revert]
+Usage: python3 scripts/build-critical.py [--only PAGE.html ...] [--revert] [--check]
 Run last in weekly-sync.sh (after every generator that touches <head>)."""
 import os, re, sys, json, glob, hashlib, threading, http.server, socketserver, functools
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
@@ -135,8 +135,28 @@ def apply(f, s, css):
         return f'<link rel="preload" as="style" href="{h}" onload="this.onload=null;this.rel=\'stylesheet\'"><noscript class="crit-ns"><link rel="stylesheet" href="{h}"></noscript>'
     return LINK.sub(swap, s)
 
+def check():
+    """--check: no browser. Warn (exit 1) when a page carries inline critical CSS but the stylesheets it links changed since
+    extraction (cache hash mismatch) or the inline block differs from what the cache would write now."""
+    cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
+    stale, keys = [], {}
+    for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
+        s = open(f, encoding='utf8').read()
+        if '<!-- CRIT:START -->' not in s: continue
+        k = template(apply(f, s, None)); keys.setdefault(k, []).append(f)
+    for k, fs in keys.items():
+        if cache.get(k, {}).get('hash') != css_hash(k): stale.append((k, len(fs), fs[0]))
+    if stale:
+        print('build-critical --check: STALE critical CSS (stylesheets changed since extraction):')
+        for k, n, f in stale: print(f'   {n} pages, e.g. {f}  [{k}]')
+        print('   fix: python3 scripts/build-critical.py   (re-extracts only changed templates), then commit')
+        return 1
+    print('build-critical --check: OK,', sum(map(len, keys.values())), 'pages,', len(keys), 'templates')
+    return 0
+
 def main():
     args = sys.argv[1:]; revert = '--revert' in args
+    if '--check' in args: sys.exit(check())
     only = set(a for a in args if a.endswith('.html'))
     files = sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html'))
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
