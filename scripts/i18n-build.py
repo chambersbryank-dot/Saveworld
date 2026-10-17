@@ -195,4 +195,14 @@ if __name__ == '__main__':
         m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
         for page in PAGES: build(page, lang, m)
         print(lang, 'built', len(PAGES), 'pages')
+    h0 = {p: src_hash(p) for p in PAGES}
     print('seo-fix:', seo.run(['en'] + langs), 'pages updated')
+    # Oct 16: a brand-new page's English changes once its translations exist (seo-fix adds the hreflang/alternate data it can
+    # only see now), so its fresh i18n-source hashes went stale and the weekly-sync check failed on the first run. Rebuild just
+    # those pages against the final English, then re-run the SEO pass once more.
+    changed = [p for p in PAGES if src_hash(p) != h0[p]]
+    if changed:
+        for lang in langs:
+            m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
+            for page in changed: build(page, lang, m)
+        print('re-stamped after final seo-fix:', ', '.join(changed), '| seo-fix:', seo.run(['en'] + langs), 'pages updated')
