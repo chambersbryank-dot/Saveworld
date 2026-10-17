@@ -121,7 +121,7 @@ def mini(card):
     url = re.search(r'data-url="([^"]+)"', card).group(1)
     img = re.search(r'<img[^>]*>', card).group(0)
     img = re.sub(r'\sloading="[^"]*"', '', img).replace('<img', '<img loading="lazy"', 1)
-    # Oct 16: responsive card images (scripts/r2-home-cards.py puts WebP widths on R2); the repo JPEG stays the src fallback
+    # Oct 16: responsive card images (scripts/r2-cards.py puts WebP widths on R2); the repo JPEG stays the src fallback
     m = re.search(r'\ssrc="(?:\.\./)?assets/og/([a-z]{2})/([^"?]+)', img)
     e = MEDIA.get(f'images/og/{m.group(1)}/{m.group(2)}') if m else None
     if e and e.get('srcset') and 'srcset=' not in img:

@@ -47,7 +47,7 @@ python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Em
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
 python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, region (map pins), grade (standards), name; URL state (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
-python3 scripts/r2-home-cards.py && python3 scripts/build-ux.py   # Oct 16: homepage card images get R2 WebP srcset (uploads only new ones), then re-run build-ux
+python3 scripts/r2-cards.py && python3 scripts/build-ux.py   # Oct 16: card images (home + Related Solutions) get R2 WebP srcset (uploads only new ones), then re-run build-ux
 python3 scripts/add-video-schema.py       # Oct 16: re-run after build-ux puts the 720p About source first (VideoObject contentUrl = first source)
 python3 scripts/build-glass.py  # Oct 15 item 6: Liquid Glass only on primary buttons + nav panels; flat tinted icons; -webkit- pairing; reduced-transparency/contrast fallbacks
 python3 scripts/build-spotfire.py       # Oct 15: astroEDU "Spot the Fire from Space" page (all langs) + links from Teachers/Kids_Map/FireSat/Lesson_Builder + sitemap
@@ -75,6 +75,7 @@ python3 scripts/build-learn-standards.py  # Oct 16: NGSS/CCSS/AP/IB chips + educ
 python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search bar + floating example questions + credits only (all langs)
 python3 scripts/build-langbanner.py      # Oct 16: language-suggestion banner (site.js + styles.css; localStorage only, never redirects)
 python3 scripts/build-lcp.py            # Oct 16: preload the page-hero background WebP (fetchpriority=high) on shared-hero pages (all langs)
+python3 scripts/r2-cards.py             # Oct 16: again after i18n-build so translated pages keep the card srcset
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
