@@ -103,6 +103,7 @@ def shell(l, page, title, desc, main, extra_head='', ld_type='LearningResource',
     head += extra_head + f'<style>{CSS}</style>\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
     body = re.sub(r'class="[^"]*"', 'class="toc-sub learn-page"', re.search(r'<body[^>]*>', s).group(0), count=1)
     body = re.sub(r' data-glass-tint="[^"]*"', '', body)[:-1] + ' data-glass-tint="space">'
+    body = body.replace(' data-no-newsletter', '')  # Oct 16: Kids_Map template is a kids page (build-share.py); Learn pages decide for themselves
     nav = re.search(r'<a class="skip-link".*?</nav>', s, re.S).group(0)
     nav = re.sub(r'(<li class="lang-switch".*?</li>)', lambda m: m.group(1).replace('Kids_Map.html', page), nav, flags=re.S)
     foot = s[s.index('</main>'):]

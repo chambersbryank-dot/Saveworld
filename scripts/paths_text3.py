@@ -1,0 +1,45 @@
+"""Oct 16 2026: Homeschool "Start here" page text. Kid-facing: no sign-up, no newsletter. See paths_text.py for markup."""
+from paths_text import T, S
+HS = dict(
+ title=T('Start Here: Homeschool Space and Flight Science, Ages 5–18', 'Commencer ici : sciences de l’espace et du vol en famille, 5–18 ans', 'Empieza aquí: ciencia del espacio y el vuelo en casa, de 5 a 18 años', 'ابدأ هنا: علوم الفضاء والطيران في التعليم المنزلي، من 5 إلى 18 عامًا', 'Inizia qui: scienze dello spazio e del volo a casa, 5–18 anni'),
+ desc=T('A free, no-sign-up path for homeschool families: what to use at each age, a 12-week plan from kids pages to high-school math, and a printable plan.',
+        'Un parcours gratuit et sans inscription pour l’instruction en famille : quoi utiliser à chaque âge, un plan de 12 semaines des pages enfants aux maths du lycée, et un plan imprimable.',
+        'Un itinerario gratuito y sin registro para familias que educan en casa: qué usar a cada edad, un plan de 12 semanas de las páginas infantiles a las matemáticas de secundaria y un plan imprimible.',
+        'مسار مجاني بلا تسجيل لعائلات التعليم المنزلي: ماذا تستخدم في كل عمر، وخطة من 12 أسبوعًا من صفحات الأطفال إلى رياضيات الثانوية، وخطة قابلة للطباعة.',
+        'Un percorso gratuito e senza registrazione per l’istruzione parentale: cosa usare a ogni età, un piano di 12 settimane dalle pagine per bambini alla matematica delle superiori e un piano stampabile.'),
+ kicker=T('Everything here is free, with no accounts and no sign-up for children.', 'Tout est gratuit, sans compte ni inscription pour les enfants.', 'Todo es gratis, sin cuentas ni registro para los niños.', 'كل شيء هنا مجاني، بلا حسابات ولا تسجيل للأطفال.', 'Tutto è gratuito, senza account né registrazione per i bambini.'),
+ ages=T('By age and level', 'Par âge et niveau', 'Por edad y nivel', 'حسب العمر والمستوى', 'Per età e livello'),
+ plan=T('A 12-week path, kids to high school', 'Un parcours de 12 semaines, des enfants au lycée', 'Un itinerario de 12 semanas, de niños a secundaria', 'مسار من 12 أسبوعًا، من الأطفال إلى الثانوية', 'Un percorso di 12 settimane, dai bambini alle superiori'),
+ plan_t=T('One short session a week (30–45 minutes). Younger children can repeat weeks 1–4; teens can start at week 5. Print the plan and tick each week.',
+          'Une courte séance par semaine (30–45 minutes). Les plus jeunes peuvent répéter les semaines 1–4 ; les ados peuvent commencer à la semaine 5. Imprimez le plan et cochez chaque semaine.',
+          'Una sesión corta por semana (30–45 minutos). Los pequeños pueden repetir las semanas 1–4; los adolescentes pueden empezar en la 5. Imprime el plan y marca cada semana.',
+          'جلسة قصيرة أسبوعيًا (30–45 دقيقة). يمكن للصغار تكرار الأسابيع 1–4، ويمكن للمراهقين البدء من الأسبوع 5. اطبع الخطة وضع علامة لكل أسبوع.',
+          'Una breve sessione a settimana (30–45 minuti). I più piccoli possono ripetere le settimane 1–4; gli adolescenti possono partire dalla 5. Stampa il piano e spunta ogni settimana.'),
+ week=T('Week', 'Semaine', 'Semana', 'الأسبوع', 'Settimana'), do=T('Do this', 'À faire', 'Haz esto', 'افعل هذا', 'Da fare'), tick=T('Done', 'Fait', 'Hecho', 'تم', 'Fatto'),
+ more=T('Going further', 'Pour aller plus loin', 'Para ir más allá', 'للتعمق أكثر', 'Per approfondire'),
+ more_t=T('Teens heading for AP or IB can use the [AP and IB Physics map](AP_IB_Physics.html). Curious about jobs? See [Careers and pathways](Careers.html). Parents can find teaching tips on the [Teachers page](Teachers.html).',
+          'Les ados visant l’AP ou l’IB peuvent utiliser la [carte AP et IB](AP_IB_Physics.html). Curieux des métiers ? Voir [Métiers et parcours](Careers.html). Conseils pédagogiques sur la [page Enseignants](Teachers.html).',
+          'Los adolescentes que van a AP o IB pueden usar el [mapa de AP e IB](AP_IB_Physics.html). ¿Curiosidad por los trabajos? Mira [Carreras e itinerarios](Careers.html). Consejos para enseñar en la [página para docentes](Teachers.html).',
+          'يمكن للمراهقين المتجهين إلى AP أو IB استخدام [خريطة فيزياء AP وIB](AP_IB_Physics.html). ولمن يهتم بالوظائف: [المهن والمسارات](Careers.html). ونصائح التدريس في [صفحة المعلمين](Teachers.html).',
+          'Gli adolescenti diretti ad AP o IB possono usare la [mappa AP e IB](AP_IB_Physics.html). Curiosi dei lavori? Vedi [Carriere e percorsi](Careers.html). Consigli didattici nella [pagina Insegnanti](Teachers.html).'),
+)
+AGES = [
+ (T('Ages 5–8', '5–8 ans', '5–8 años', 'من 5 إلى 8 أعوام', '5–8 anni'), T('Read together and play.', 'Lire ensemble et jouer.', 'Leer juntos y jugar.', 'اقرؤوا معًا والعبوا.', 'Leggere insieme e giocare.'), ['Play_and_Learn.html', 'Amazing_Facts.html', 'Kids_Map.html']),
+ (T('Ages 9–12', '9–12 ans', '9–12 años', 'من 9 إلى 12 عامًا', '9–12 anni'), T('Explore, sort myths from facts, and start the picture guides.', 'Explorer, démêler mythes et faits, commencer les guides illustrés.', 'Explorar, separar mitos de hechos y empezar las guías ilustradas.', 'استكشفوا، وميّزوا الخرافات من الحقائق، وابدؤوا الأدلة المصورة.', 'Esplorare, distinguere miti e fatti, iniziare le guide illustrate.'), ['Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Orbits_Guide.html', 'Aero_Guide.html']),
+ (T('Ages 13–15', '13–15 ans', '13–15 años', 'من 13 إلى 15 عامًا', '13–15 anni'), T('Guides, labs and calculators: change one thing and watch what happens.', 'Guides, labos et calculateurs : changer une chose et observer.', 'Guías, laboratorios y calculadoras: cambia una cosa y observa.', 'الأدلة والمختبرات والحاسبات: غيّر شيئًا واحدًا ولاحظ ما يحدث.', 'Guide, laboratori e calcolatori: cambia una cosa e osserva.'), ['Physics_Guide.html', 'Orbit_Lab.html', 'Aero_Lab.html', 'Calculators.html']),
+ (T('Ages 16–18', '16–18 ans', '16–18 años', 'من 16 إلى 18 عامًا', '16–18 anni'), T('Math pages with worked examples and self-checking practice.', 'Pages de maths avec exemples résolus et exercices auto-corrigés.', 'Páginas de matemáticas con ejemplos resueltos y práctica autocorregida.', 'صفحات رياضيات بأمثلة محلولة وتمارين ذاتية التصحيح.', 'Pagine di matematica con esempi svolti ed esercizi autocorretti.'), ['Orbit_Math.html', 'Aero_Math.html', 'Physics_Math.html', 'AP_IB_Physics.html']),
+]
+WEEKS = [
+ (T('Play a game and spot facts', 'Jouer et repérer des faits', 'Jugar y descubrir datos', 'العب واكتشف الحقائق', 'Gioca e scopri fatti'), ['Play_and_Learn.html', 'Amazing_Facts.html']),
+ (T('Explore the world map', 'Explorer la carte du monde', 'Explorar el mapa del mundo', 'استكشف خريطة العالم', 'Esplora la mappa del mondo'), ['Kids_Map.html']),
+ (T('Meet satellites', 'Découvrir les satellites', 'Conocer los satélites', 'تعرّف إلى الأقمار الصناعية', 'Conosci i satelliti'), ['Satellite_Explorer.html']),
+ (T('Myth or fact?', 'Mythe ou fait ?', '¿Mito o hecho?', 'خرافة أم حقيقة؟', 'Mito o fatto?'), ['Myth_vs_Fact.html', 'Glossary.html']),
+ (T('How things fly', 'Comment ça vole', 'Cómo vuelan las cosas', 'كيف تطير الأشياء', 'Come volano le cose'), ['Aero_Guide.html']),
+ (T('Try the flight lab', 'Essayer le labo de vol', 'Probar el laboratorio de vuelo', 'جرّب مختبر الطيران', 'Prova il laboratorio di volo'), ['Aero_Lab.html', 'Stall_Speed_Calculator.html']),
+ (T('Why orbits work', 'Pourquoi les orbites fonctionnent', 'Por qué funcionan las órbitas', 'لماذا تعمل المدارات', 'Perché le orbite funzionano'), ['Orbits_Guide.html']),
+ (T('Launch in the orbit lab', 'Lancer dans le labo orbital', 'Lanzar en el laboratorio orbital', 'أطلق في مختبر المدارات', 'Lancia nel laboratorio orbitale'), ['Orbit_Lab.html', 'Orbital_Period_Calculator.html']),
+ (T('Forces and motion', 'Forces et mouvement', 'Fuerzas y movimiento', 'القوى والحركة', 'Forze e moto'), ['Physics_Guide.html', 'Physics_Lab.html']),
+ (T('Pendulums and projectiles', 'Pendules et projectiles', 'Péndulos y proyectiles', 'البندولات والمقذوفات', 'Pendoli e proiettili'), ['Pendulum_Period_Calculator.html', 'Projectile_Motion_Drag_Calculator.html']),
+ (T('Rocket math', 'Maths des fusées', 'Matemáticas de cohetes', 'رياضيات الصواريخ', 'Matematica dei razzi'), ['Orbit_Math.html#rocket', 'Delta_V_Calculator.html']),
+ (T('Wing math and a look at careers', 'Maths de l’aile et métiers', 'Matemáticas del ala y carreras', 'رياضيات الجناح ونظرة على المهن', 'Matematica dell’ala e carriere'), ['Aero_Math.html#airfoil', 'Careers.html']),
+]

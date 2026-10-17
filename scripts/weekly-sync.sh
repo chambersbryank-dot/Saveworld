@@ -55,6 +55,9 @@ node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails 
 if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
 python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teachers), SI_Helper.html, Privacy section (all langs)
 node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
+python3 scripts/calc_check.py >/dev/null && node scripts/test-calcs.js >/dev/null  # Oct 16: calculator textbook checks + calc.js vs Python vectors (fails the sync on error)
+python3 scripts/build-calcs.py          # Oct 16: 11 search-named calculator pages + Calculators.html (all langs, sitemap)
+python3 scripts/build-paths.py          # Oct 16: Careers, Cadets (JROTC+CAP), AP_IB_Physics, Homeschool + Learn hub Start-here block (all langs, sitemap)
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
 python3 scripts/build-nav.py            # Oct 16: header nav v2 (two rows, dropdowns, mobile accordion); LAST page generator so copied pages get correct nav
 python3 scripts/build-events.py         # Oct 16: privacy-safe aggregate event counter block in site.js (Analytics Engine via si-helper /e)
@@ -62,6 +65,8 @@ python3 scripts/build-analytics.py      # Oct 16: again after the late generator
 python3 scripts/build-report-link.py    # Oct 16: Report a correction footer link (all langs) -> on-site form (Corrections.html#report)
 python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=license, JSON-LD license, About "Use & licence" (all langs)
 python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link
+python3 scripts/build-embed.py         # Oct 16: Embed button + ?embed=1 minimal mode (calculators, labs, Artemis_II launches)
+python3 scripts/build-learn-standards.py  # Oct 16: NGSS/CCSS/AP/IB chips + educationalAlignment on Learn pages and calculators, Learn hub filter
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-audit.py | tail -3

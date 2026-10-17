@@ -151,3 +151,5 @@ import learn_aero as _LA
 NAV_ITEMS.update(_LA.NAV_ITEMS)
 import learn_phys as _LP
 NAV_ITEMS.update(_LP.NAV_ITEMS)
+import paths_text as _PT  # Oct 16: Calculators + Start-here + Careers
+NAV_ITEMS.update(_PT.NAV)

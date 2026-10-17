@@ -362,31 +362,26 @@ function draw(){var g=document.querySelector('.pl-grid');if(!g)return;var o=get(
 var t=P.length,lv=n>=t?3:n>=3?2:n>=1?1:0;w.querySelector('.pl-count').textContent=w.dataset.prog.replace('{n}',n).replace('{t}',t);w.querySelector('.pl-level').textContent=(lv?'🏅 ':'🚀 ')+L[lv]}
 document.addEventListener('DOMContentLoaded',function(){draw();var r=document.querySelector('.pl-reset');if(r)r.addEventListener('click',function(){put({});draw()})});
 window.addEventListener('pageshow',draw)})();
-/* PLAY:END *//* SPEV:START */
+/* PLAY:END */
+/* UX-OCT15:START */
 (function(){
-  var N=navigator,W=window,D=document;
-  if(N.doNotTrack==='1'||W.doNotTrack==='1'||N.msDoNotTrack==='1'||N.globalPrivacyControl===true){W.spTrack=function(){};return}
-  var URL_='https://si-helper.chambersbryank.workers.dev/e',L=(D.documentElement.getAttribute('lang')||'en').slice(0,2),Q=[],once={};
-  function flush(){if(!Q.length||!N.sendBeacon)return;var b=JSON.stringify({l:L,e:Q.splice(0,20)});try{N.sendBeacon(URL_,new Blob([b],{type:'text/plain'}))}catch(e){}}
-  function add(o,key){if(key){if(once[key])return;once[key]=1}Q.push(o);if(Q.length>=10)flush()}
-  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'});if(n==='share'&&p)add({n:'share',kind:p.kind,page:p.page})};
-  D.addEventListener('visibilitychange',function(){if(D.visibilityState==='hidden')flush()});
-  W.addEventListener('pagehide',flush);
-  var pg=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''),m=/^(Orbits?|Aero|Physics)_(Guide|Math|Lab)$/.exec(pg);
-  var TR={Orbit:'orbit',Orbits:'orbit',Aero:'aero',Physics:'phys'};
-  if(pg==='Learn')add({n:'learn',track:'all',kind:'hub'},'lv');
-  if(m){var tr=TR[m[1]],kind=m[2].toLowerCase();add({n:'learn',track:tr,kind:kind},'lv');
-    if(kind==='lab'){var f=function(e){if(e.target.closest&&e.target.closest('main')){add({n:'lab',tool:tr},'lab');D.removeEventListener('input',f,true);D.removeEventListener('click',f,true)}};D.addEventListener('input',f,true);D.addEventListener('click',f,true)}
-    D.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lnp-check,.lmcq button');if(!b)return;
-      var box=b.closest('.lnp,.lmcq'),fb=box&&box.querySelector('.lnp-fb');if(!fb)return;
-      var res=/\bis-ok\b/.test(fb.className)?'correct':/\bis-no\b/.test(fb.className)?'attempt':'';if(!res)return;
-      var sec=box.closest('section[id]'),topic=sec?String(sec.id).toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,32):'page';
-      add({n:'practice',track:tr,result:res,topic:topic||'page'});if(res==='correct')add({n:'practice',track:tr,result:'attempt',topic:topic||'page'})},false)}
-  if(pg==='Ways_to_Help')D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="http"]');if(!a)return;
-    var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
-    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link'});flush()},true);
+  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  var f=document.querySelector('.sol-filters');if(!f)return;
+  var L=JSON.parse(f.getAttribute('data-i18n'));
+  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
+  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
+    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
+    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
+  var dom='all',hub='all',sel=f.querySelector('select');
+  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
+    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
+  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
+  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
 })();
-/* SPEV:END *//* SPNAV:START */
+/* UX-OCT15:END *//* SPNAV:START */
 (function(){var n=document.getElementById('topnav');if(!n||!n.querySelector('.spn'))return;
 var tg=n.querySelector('.spn-toggle'),mq=window.matchMedia('(min-width:992px)'),hv=window.matchMedia('(hover:hover) and (pointer:fine)');
 var dds=[].slice.call(n.querySelectorAll('.spn-dd'));
@@ -410,23 +405,28 @@ var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.scrol
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
 })();
 /* SPNAV:END */
-
-/* UX-OCT15:START */
+/* SPEV:START */
 (function(){
-  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
-  var f=document.querySelector('.sol-filters');if(!f)return;
-  var L=JSON.parse(f.getAttribute('data-i18n'));
-  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
-  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
-    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
-    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
-  var dom='all',hub='all',sel=f.querySelector('select');
-  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
-    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
-  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
-  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
-  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
-  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
+  var N=navigator,W=window,D=document;
+  if(N.doNotTrack==='1'||W.doNotTrack==='1'||N.msDoNotTrack==='1'||N.globalPrivacyControl===true){W.spTrack=function(){};return}
+  var URL_='https://si-helper.chambersbryank.workers.dev/e',L=(D.documentElement.getAttribute('lang')||'en').slice(0,2),Q=[],once={};
+  function flush(){if(!Q.length||!N.sendBeacon)return;var b=JSON.stringify({l:L,e:Q.splice(0,20)});try{N.sendBeacon(URL_,new Blob([b],{type:'text/plain'}))}catch(e){}}
+  function add(o,key){if(key){if(once[key])return;once[key]=1}Q.push(o);if(Q.length>=10)flush()}
+  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'});if(n==='share'&&p)add({n:'share',kind:p.kind,page:p.page});if(n==='calc'&&p)add({n:'calc',tool:p.tool},'c'+p.tool)};
+  D.addEventListener('visibilitychange',function(){if(D.visibilityState==='hidden')flush()});
+  W.addEventListener('pagehide',flush);
+  var pg=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''),m=/^(Orbits?|Aero|Physics)_(Guide|Math|Lab)$/.exec(pg);
+  var TR={Orbit:'orbit',Orbits:'orbit',Aero:'aero',Physics:'phys'};
+  if(pg==='Learn')add({n:'learn',track:'all',kind:'hub'},'lv');
+  if(m){var tr=TR[m[1]],kind=m[2].toLowerCase();add({n:'learn',track:tr,kind:kind},'lv');
+    if(kind==='lab'){var f=function(e){if(e.target.closest&&e.target.closest('main')){add({n:'lab',tool:tr},'lab');D.removeEventListener('input',f,true);D.removeEventListener('click',f,true)}};D.addEventListener('input',f,true);D.addEventListener('click',f,true)}
+    D.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lnp-check,.lmcq button');if(!b)return;
+      var box=b.closest('.lnp,.lmcq'),fb=box&&box.querySelector('.lnp-fb');if(!fb)return;
+      var res=/\bis-ok\b/.test(fb.className)?'correct':/\bis-no\b/.test(fb.className)?'attempt':'';if(!res)return;
+      var sec=box.closest('section[id]'),topic=sec?String(sec.id).toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,32):'page';
+      add({n:'practice',track:tr,result:res,topic:topic||'page'});if(res==='correct')add({n:'practice',track:tr,result:'attempt',topic:topic||'page'})},false)}
+  if(pg==='Ways_to_Help')D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="http"]');if(!a)return;
+    var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
+    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link'});flush()},true);
 })();
-/* UX-OCT15:END */
+/* SPEV:END */

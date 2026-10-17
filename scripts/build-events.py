@@ -13,7 +13,7 @@ JS = r"""
   var URL_='https://si-helper.chambersbryank.workers.dev/e',L=(D.documentElement.getAttribute('lang')||'en').slice(0,2),Q=[],once={};
   function flush(){if(!Q.length||!N.sendBeacon)return;var b=JSON.stringify({l:L,e:Q.splice(0,20)});try{N.sendBeacon(URL_,new Blob([b],{type:'text/plain'}))}catch(e){}}
   function add(o,key){if(key){if(once[key])return;once[key]=1}Q.push(o);if(Q.length>=10)flush()}
-  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'});if(n==='share'&&p)add({n:'share',kind:p.kind,page:p.page})};
+  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'});if(n==='share'&&p)add({n:'share',kind:p.kind,page:p.page});if(n==='calc'&&p)add({n:'calc',tool:p.tool},'c'+p.tool)};
   D.addEventListener('visibilitychange',function(){if(D.visibilityState==='hidden')flush()});
   W.addEventListener('pagehide',flush);
   var pg=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''),m=/^(Orbits?|Aero|Physics)_(Guide|Math|Lab)$/.exec(pg);

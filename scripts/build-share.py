@@ -15,7 +15,12 @@ def kind(b):
     if b == 'Learn.html': return 'learn'
     if b == 'Teachers.html': return 'teachers'
     m = re.match(r'(Orbits?|Aero|Physics)_(Guide|Math|Lab)\.html$', b)
-    return m.group(2).lower() if m else None
+    if m: return m.group(2).lower()
+    if b.endswith('_Calculator.html') or b == 'Calculators.html': return 'calc'  # Oct 16: build-calcs.py
+    if b in PATHS: return 'path'  # Oct 16: build-paths.py
+    return None
+PATHS = {'Careers.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html'}
+NOSIGNUP = {'Cadets.html', 'Homeschool.html'}  # kid-facing (CAP cadets can be 12; homeschool plans are used by children)
 KIDS = {'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Spot_the_Fire.html', 'Myth_vs_Fact.html', 'Play_and_Learn.html', 'Glossary.html'}
 T = {
  'en': dict(grp='Share this page', cr='Share to Google Classroom', cp='Copy link', ok='Link copied', aud='For teachers, parents and students 13+',
@@ -56,10 +61,10 @@ def main():
                    f'<button type="button" class="shr-copy" data-ok="{e(t["ok"])}">{ICON_CP}<span>{e(t["cp"])}</span></button>'
                    f'<span class="shr-st" role="status" aria-live="polite"></span></div><script src="{pre}assets/share.js?v={V}" defer></script><!-- CLSHARE:END -->')
             if m: s2 = s2[:m.end()] + bar + s2[m.end():]
-        if k in ('learn', 'math', 'teachers') and '</main>' in s2:
+        if (k in ('learn', 'math', 'teachers', 'calc') or b in ('Careers.html', 'AP_IB_Physics.html')) and '</main>' in s2:
             call = f'<!-- NLCALL:START --><aside class="nl-call" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
             s2 = s2.replace('</main>', call + '</main>', 1)
-        if b in KIDS or k in ('guide', 'lab'):
+        if b in KIDS or b in NOSIGNUP or k in ('guide', 'lab'):
             s2 = re.sub(r'<section[^>]*newsletter-band[^>]*>\s*<div[^>]*data-sp-newsletter[^>]*>\s*</div>\s*</section>\n?', '', s2)  # e.g. Amazing_Facts had a static band
             s2 = re.sub(r'<body(?![^>]*data-no-newsletter)([^>]*)>', r'<body\1 data-no-newsletter>', s2, count=1)
             s2 = s2.replace('<footer>', f'<footer><!-- GROWNUPS:START --><p class="gu-link"><a href="Teachers.html#weekly-brief">{e(t["gu"])}</a></p><!-- GROWNUPS:END -->', 1)

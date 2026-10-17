@@ -32,7 +32,8 @@ const EV = {
   learn: { track: ['orbit', 'aero', 'phys', 'all'], kind: ['hub', 'guide', 'math', 'lab'] },
   practice: { track: ['orbit', 'aero', 'phys'], result: ['attempt', 'correct'], topic: /^[a-z0-9-]{1,32}$/ },
   newsletter: {},
-  share: { kind: ['classroom', 'copy'], page: ['learn', 'guide', 'math', 'lab', 'teachers'] },
+  share: { kind: ['classroom', 'copy', 'embed'], page: ['learn', 'guide', 'math', 'lab', 'teachers', 'calc', 'path', 'launches'] },
+  calc: { tool: ['dv', 'hohmann', 'period', 'vel', 'stall', 'lift', 'mach', 'tw', 'rotor', 'proj', 'pend'] },  // Oct 16: calculator pages (first input only)
   partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'] },
 };
 function evWrite(env, name, lang, a = '', b = '', c = '') {

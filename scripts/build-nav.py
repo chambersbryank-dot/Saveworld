@@ -23,7 +23,7 @@ X = {
 GROUPS = [
  ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Deforestation.html', 'Earth_Observation.html', 'World_Map.html', 'Topics.html']),
  ('space', ['Space.html', 'Artemis_II.html#launches', 'Planetary_Defense.html', 'Space_Weather.html', 'Space_Disposal.html', 'Project-Rawane.html', 'Rawanes_Mission_Log.html']),
- ('le', ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html']),
+ ('le', ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']),
  ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Glossary.html']),
  ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
