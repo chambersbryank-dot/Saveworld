@@ -21,27 +21,27 @@ ABOUT = {
    'Original Saving Planets text, lessons and labs are licensed under {cc}. You may copy, share and adapt them for non-commercial purposes, such as classrooms, clubs and homeschooling, as long as you credit “Saving Planets (savingplanets.com)”, link to the licence and say if you made changes.',
    'Third-party images and media (for example from NASA, ESA or Pexels) are not covered by this licence. They keep their own credits and licences, shown next to each item; please follow those terms.',
    'Images and videos made with SI keep the credit “Created by SI and Biological SI Partner”.',
-   'For commercial use, write to <a href="mailto:media@savingplanets.com">media@savingplanets.com</a>.']),
+   'For commercial use, write to <a href="mailto:media@savingplanets.com?subject=Media%20inquiry">media@savingplanets.com</a>.']),
  'fr': ('Utilisation et licence', [
    'Les textes, leçons et labos originaux de Saving Planets sont sous licence {cc}. Vous pouvez les copier, les partager et les adapter à des fins non commerciales, par exemple en classe, en club ou à la maison, à condition de créditer « Saving Planets (savingplanets.com) », d’indiquer un lien vers la licence et de signaler vos modifications.',
    'Les images et médias de tiers (par exemple de la NASA, de l’ESA ou de Pexels) ne sont pas couverts par cette licence. Ils conservent leurs propres crédits et licences, indiqués à côté de chaque élément ; merci d’en respecter les conditions.',
    'Les images et vidéos créées avec la SI conservent le crédit « Created by SI and Biological SI Partner ».',
-   'Pour un usage commercial, écrivez à <a href="mailto:media@savingplanets.com">media@savingplanets.com</a>.']),
+   'Pour un usage commercial, écrivez à <a href="mailto:media@savingplanets.com?subject=Media%20inquiry">media@savingplanets.com</a>.']),
  'es': ('Uso y licencia', [
    'Los textos, lecciones y laboratorios originales de Saving Planets tienen licencia {cc}. Puedes copiarlos, compartirlos y adaptarlos con fines no comerciales, como en clase, clubes o educación en casa, siempre que cites «Saving Planets (savingplanets.com)», enlaces la licencia e indiques si hiciste cambios.',
    'Las imágenes y medios de terceros (por ejemplo de la NASA, la ESA o Pexels) no están cubiertos por esta licencia. Conservan sus propios créditos y licencias, indicados junto a cada elemento; respeta esas condiciones.',
    'Las imágenes y videos hechos con SI conservan el crédito «Created by SI and Biological SI Partner».',
-   'Para uso comercial, escribe a <a href="mailto:media@savingplanets.com">media@savingplanets.com</a>.']),
+   'Para uso comercial, escribe a <a href="mailto:media@savingplanets.com?subject=Media%20inquiry">media@savingplanets.com</a>.']),
  'ar': ('الاستخدام والترخيص', [
    'النصوص والدروس والمختبرات الأصلية في Saving Planets مرخّصة بموجب {cc}. يمكنك نسخها ومشاركتها وتعديلها لأغراض غير تجارية، مثل الفصول الدراسية والنوادي والتعليم المنزلي، بشرط نسبتها إلى «Saving Planets (savingplanets.com)» ووضع رابط للترخيص وذكر أي تغييرات أجريتها.',
    'لا يشمل هذا الترخيص الصور والوسائط التابعة لجهات أخرى (مثل NASA أو ESA أو Pexels)، فهي تحتفظ بنسبها وتراخيصها الخاصة المذكورة بجانب كل عنصر؛ يُرجى الالتزام بشروطها.',
    'تحتفظ الصور ومقاطع الفيديو المصنوعة بمساعدة SI بعبارة النسب «Created by SI and Biological SI Partner».',
-   'للاستخدام التجاري، راسلنا على <a href="mailto:media@savingplanets.com">media@savingplanets.com</a>.']),
+   'للاستخدام التجاري، راسلنا على <a href="mailto:media@savingplanets.com?subject=Media%20inquiry">media@savingplanets.com</a>.']),
  'it': ('Uso e licenza', [
    'I testi, le lezioni e i laboratori originali di Saving Planets sono distribuiti con licenza {cc}. Puoi copiarli, condividerli e adattarli per scopi non commerciali, ad esempio in classe, nei club o nell’istruzione parentale, citando «Saving Planets (savingplanets.com)», inserendo un link alla licenza e indicando eventuali modifiche.',
    'Immagini e media di terzi (ad esempio NASA, ESA o Pexels) non sono coperti da questa licenza. Mantengono i propri crediti e licenze, indicati accanto a ciascun elemento; rispetta quelle condizioni.',
    'Immagini e video realizzati con la SI mantengono il credito «Created by SI and Biological SI Partner».',
-   'Per usi commerciali scrivi a <a href="mailto:media@savingplanets.com">media@savingplanets.com</a>.']),
+   'Per usi commerciali scrivi a <a href="mailto:media@savingplanets.com?subject=Media%20inquiry">media@savingplanets.com</a>.']),
 }
 PAGE_TYPES = {'WebPage', 'AboutPage', 'CollectionPage', 'ContactPage', 'FAQPage', 'ItemPage', 'Article', 'NewsArticle', 'BlogPosting',
               'TechArticle', 'LearningResource', 'Course', 'Quiz', 'Dataset', 'WebSite', 'HowTo'}

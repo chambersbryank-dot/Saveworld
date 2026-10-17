@@ -104,6 +104,66 @@
         "en": "astroEDU activity page in 5 languages with PDF/DOCX downloads, CC BY 4.0 credit; linked from Teachers, Kids Map, FireSat, Lesson Builder; sitemap + search"
       },
       "commit": "5dd048bd8fbc4747024f2698a1113347c7c1b6dd"
+    },
+    {
+      "date": "2026-10-16",
+      "page": "Learn.html",
+      "what": {
+        "en": "Phase 1 education - Learn hub (3 tracks), Orbits_Guide, Orbit_Math (KaTeX, worked examples, auto-checked practice), Orbit_Lab; Learn nav door (all langs)"
+      },
+      "commit": "0dcb249df2df1454c2b07b7f72320396379e2a6d"
+    },
+    {
+      "date": "2026-10-16",
+      "page": "Orbit_Math.html",
+      "what": {
+        "en": "ELI10 box per topic, full worked-example format for all 13 topics, Kepler stepper + Hohmann calculator; Learn links from Teachers/Satellite_Explorer/Play_and_Learn (all langs)"
+      },
+      "commit": "8cd2c65ec47614f708bccab935edfffc8ad9e913"
+    },
+    {
+      "date": "2026-10-16",
+      "what": {
+        "en": "Phase 2 Aeronautical Engineering track — Aero_Guide, Aero_Math (9 topics, KaTeX, worked examples, auto-checked practice), Aero_Lab (ISA stall, short-period eigenvalues, rotor hover); hub live, nav door, all langs"
+      },
+      "commit": "fe7a91624d2b1defbce14283a0f1ef1d59bf2045"
+    },
+    {
+      "date": "2026-10-16",
+      "what": {
+        "en": "Phase 3 Physics track (Physics_Guide, Physics_Math 8 topics, Physics_Lab), blade-element theory in Aero rotorcraft, LTR bdi for Arabic lab readouts; all langs"
+      },
+      "commit": "a9752aa4043ff12bbf452c4263d001f9ec88c635"
+    },
+    {
+      "date": "2026-10-16",
+      "what": {
+        "en": "11 search-named calculators, Start-here pages, Careers & pathways, standards tags, embed buttons + ?embed=1 (all langs)"
+      },
+      "commit": "543db2e6def56410c840e7a3453e1cc31fdcc0bb"
+    },
+    {
+      "date": "2026-10-16",
+      "what": {
+        "en": "alphabetical dropdown subs per language, Start-here + Careers pinned at top of Learn; stall calculator distinct m/s and knots labels"
+      },
+      "commit": "dd7713301cc8c849616426f4dd116a81b45be7b0"
+    },
+    {
+      "date": "2026-10-16",
+      "page": "Search.html",
+      "what": {
+        "en": "centred search bar + floating SI example questions only (5 langs); keep share/embed/standards chrome out of the search index"
+      },
+      "commit": "a55c020763296d642d66e89e7289185d9828eaf0"
+    },
+    {
+      "date": "2026-10-16",
+      "page": "Search.html",
+      "what": {
+        "en": "bar dead-centre with SI example questions floating in a ring, bounded below the nav; no footer, single licence + privacy line (5 langs)"
+      },
+      "commit": "ed753e7f1002762d8015ba086a18f6aabc84c41a"
     }
   ]
 }

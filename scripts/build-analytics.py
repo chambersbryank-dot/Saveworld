@@ -20,31 +20,31 @@ PRIV = {
    'We count visits with Cloudflare Web Analytics. It sets no cookies, uses no local storage and does not build a profile of you or follow you across sites. We see only totals such as page views, referring sites, countries and browser types.',
    'We stopped using Google Analytics on October 16, 2026, so there is no consent banner: nothing on this site sets a tracking cookie.'],
    kid='Analytics on every page, including kids pages, is cookie-free and counts totals only. Lesson plans are built in your browser and are not sent to us.',
-   st='We save small settings, such as badges and progress in a learning tool, in your browser’s local storage. It stays on your device.',
+   st='We save small settings, such as badges and progress in a learning tool or whether you dismissed the language suggestion, in your browser’s local storage. It stays on your device.',
    up='Last updated: October 16, 2026'),
  'fr': dict(h='Statistiques (Cloudflare Web Analytics)', p=[
    'Nous comptons les visites avec Cloudflare Web Analytics. Cet outil ne dépose aucun cookie, n’utilise pas le stockage local et ne crée pas de profil de vous ni ne vous suit d’un site à l’autre. Nous ne voyons que des totaux : pages vues, sites d’origine, pays et types de navigateur.',
    'Nous n’utilisons plus Google Analytics depuis le 16 octobre 2026 ; il n’y a donc plus de bandeau de consentement : rien sur ce site ne dépose de cookie de suivi.'],
    kid='Sur toutes les pages, y compris celles pour les enfants, les statistiques sont sans cookie et ne comptent que des totaux. Les plans de cours sont créés dans votre navigateur et ne nous sont pas envoyés.',
-   st='Nous enregistrons de petits réglages, comme les badges et la progression dans un outil d’apprentissage, dans le stockage local de votre navigateur. Ils restent sur votre appareil.',
+   st='Nous enregistrons de petits réglages, comme les badges et la progression dans un outil d’apprentissage ou votre choix face à la suggestion de langue, dans le stockage local de votre navigateur. Ils restent sur votre appareil.',
    up='Dernière mise à jour : 16 octobre 2026'),
  'es': dict(h='Analítica (Cloudflare Web Analytics)', p=[
    'Contamos las visitas con Cloudflare Web Analytics. No usa cookies ni almacenamiento local, y no crea un perfil tuyo ni te sigue de un sitio a otro. Solo vemos totales como páginas vistas, sitios de procedencia, países y tipos de navegador.',
    'Dejamos de usar Google Analytics el 16 de octubre de 2026, así que no hay banner de consentimiento: nada en este sitio instala una cookie de seguimiento.'],
    kid='En todas las páginas, incluidas las infantiles, la analítica no usa cookies y solo cuenta totales. Los planes de clase se crean en tu navegador y no se nos envían.',
-   st='Guardamos pequeños ajustes, como insignias y tu progreso en una herramienta educativa, en el almacenamiento local del navegador. Se quedan en tu dispositivo.',
+   st='Guardamos pequeños ajustes, como insignias, tu progreso en una herramienta educativa o tu elección ante la sugerencia de idioma, en el almacenamiento local del navegador. Se quedan en tu dispositivo.',
    up='Última actualización: 16 de octubre de 2026'),
  'ar': dict(h='التحليلات (Cloudflare Web Analytics)', p=[
    'نحسب الزيارات باستخدام Cloudflare Web Analytics، وهي لا تضع ملفات تعريف ارتباط ولا تستخدم التخزين المحلي، ولا تنشئ ملفًا شخصيًا عنك ولا تتبعك عبر المواقع. لا نرى إلا الأعداد الإجمالية مثل مشاهدات الصفحات والمواقع المُحيلة والبلدان وأنواع المتصفحات.',
    'توقفنا عن استخدام Google Analytics في 16 أكتوبر 2026، لذلك لا يوجد شريط موافقة: لا شيء في هذا الموقع يضع ملف تعريف ارتباط للتتبع.'],
    kid='التحليلات في كل الصفحات، بما فيها صفحات الأطفال، بلا ملفات تعريف ارتباط وتحسب الأعداد الإجمالية فقط. تُنشأ خطط الدروس في متصفحك ولا تُرسل إلينا.',
-   st='نحفظ إعدادات صغيرة، مثل الشارات والتقدّم في أداة تعليمية، في التخزين المحلي لمتصفحك، وتبقى على جهازك.',
+   st='نحفظ إعدادات صغيرة، مثل الشارات والتقدّم في أداة تعليمية أو اختيارك عند اقتراح اللغة، في التخزين المحلي لمتصفحك، وتبقى على جهازك.',
    up='آخر تحديث: 16 أكتوبر 2026'),
  'it': dict(h='Statistiche (Cloudflare Web Analytics)', p=[
    'Contiamo le visite con Cloudflare Web Analytics. Non usa cookie né archiviazione locale, e non crea un tuo profilo né ti segue da un sito all’altro. Vediamo solo totali come pagine viste, siti di provenienza, paesi e tipi di browser.',
    'Abbiamo smesso di usare Google Analytics il 16 ottobre 2026, quindi non c’è un banner di consenso: niente su questo sito imposta cookie di tracciamento.'],
    kid='Su tutte le pagine, comprese quelle per bambini, le statistiche sono senza cookie e contano solo totali. I piani di lezione vengono creati nel tuo browser e non ci vengono inviati.',
-   st='Salviamo piccole impostazioni, come badge e progressi in uno strumento didattico, nell’archiviazione locale del browser. Restano sul tuo dispositivo.',
+   st='Salviamo piccole impostazioni, come badge e progressi in uno strumento didattico o la tua scelta sul suggerimento della lingua, nell’archiviazione locale del browser. Restano sul tuo dispositivo.',
    up='Ultimo aggiornamento: 16 ottobre 2026'),
 }
 EXTRA = {}  # lang -> extra <p> appended to the analytics section (filled by build-events text, Oct 16)

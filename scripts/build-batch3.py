@@ -38,7 +38,7 @@ for i, m in enumerate(C.MYTHS, 1):
 body = ('<section class="impact" id="intro"><h2>Why This Page Exists</h2><div class="impact-box"><p>' + E(C.MYTH_INTRO) + '</p></div></section>\n'
         '<section class="myths" aria-label="Myths and facts">' + ''.join(cards) + '</section>\n'
         '<section class="help-actions" id="more"><h2>More Sourced Good News</h2><p>' + E(C.MYTH_MORE) + '</p><p><a class="btn" href="Amazing_Facts.html">Amazing Facts</a> <a class="btn help-btn" href="Rawanes_Mission_Log.html">Rawane&#x27;s Mission Log</a></p></section>')
-page('Myth_vs_Fact', 'Myth vs Fact: Doom Myths, Busted | Saving Planets', 'Myth vs Fact', 'Common doom myths, checked against NASA, NOAA and ESA.', C.MYTH_DESC, body)
+page('Myth_vs_Fact', 'Myth vs Fact: Doom Myths, Busted | Saving Planets', 'Myth vs Fact', "Common myths about Earth and space, checked against NASA, NOAA, ESA and EPA.", C.MYTH_DESC, body)
 
 # ---- Mission Log
 ents = []
