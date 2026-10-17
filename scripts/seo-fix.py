@@ -67,6 +67,15 @@ def fit_title(t, en_title=None, lang='en'):
             return head + BRAND if len(head + BRAND) <= 60 else head
     return core[:59].rsplit(' ', 1)[0].rstrip(' ,:;–-') + '…'
 
+_STOP = set('a an the of and or to in on for with from by at is are was were it its their they this that as be has have not into across our your'.split())
+def _words(x): return {w for w in re.findall(r"\w+", x.lower()) if len(w) > 2 and w not in _STOP}
+def _dup(x, text):
+    """Oct 16: a pad sentence that mostly repeats what the description already says ('Growing native forests from seed to canopy'
+    after 'restores native forests from seed to canopy'), or a bare card label ('ESA (European Space Agency).'), adds nothing."""
+    a, b = _words(x), _words(text)
+    if len(x) < 35 or not a: return True
+    return len(a & b) / len(a) >= 0.5
+
 def fit_desc(base, extra, lang, learn=False):
     """Whole sentences, 120-160 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
     then the language pad. A description we truncated earlier (ends with an ellipsis) is rebuilt from the page copy.
@@ -77,6 +86,7 @@ def fit_desc(base, extra, lang, learn=False):
     if base.endswith('…') and len(base) <= 160: return base  # earlier cut whose full text is no longer on the page: keep it
     pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
     sents = [x for x in END.split(base) if x] if base else []
+    sents = [x for i, x in enumerate(sents) if i == 0 or not (len(_words(x)) >= 3 and len(_words(x) & _words(' '.join(sents[:i]))) / len(_words(x)) >= 0.6)]  # Oct 16: drop a repeated sentence
     if not sents and pool: sents = [pool.pop(0)]
     text = ''
     for x in sents:
@@ -98,7 +108,7 @@ def fit_desc(base, extra, lang, learn=False):
                 text = keep.rstrip(' ,.') + ('.' if lang != 'ar' else '.')
                 for x in pool + [pad]:
                     if len(text) >= 120: break
-                    if x not in text and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+                    if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
                 return text
     if len(text) > 160:  # one long sentence: cut at a clause boundary, then a word boundary
         cut = text[:159]
@@ -108,7 +118,7 @@ def fit_desc(base, extra, lang, learn=False):
         return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…'
     for x in pool + [pad]:
         if len(text) >= 120: break
-        if x not in text and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+        if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
     return text
 
 def ptext(el):
