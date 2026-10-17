@@ -14,11 +14,13 @@ Run last in weekly-sync.sh (after every generator that touches <head>)."""
 import os, re, sys, json, glob, hashlib, threading, http.server, socketserver, functools
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 CACHE = 'scripts/critical-cache.json'
+EXTRACT_V = '2'  # bump when the extraction JS changes (forces re-extract). v2: bare img/svg/video rules always kept (below-fold 1200px card images overflowed in RTL before the full CSS loaded)
+SKIP = {'index.html'}  # homepage head is owned by the hero generator (build-batch2 / hero-themes); never rewritten here
 LINK = re.compile(r'<link (?:rel="stylesheet" href="([^"]+\.css[^"]*)"|href="([^"]+\.css[^"]*)" rel="stylesheet")\s*/?>')
 BLOCK = re.compile(r'<!-- CRIT:START -->.*?<!-- CRIT:END -->', re.S)
 JS = r"""(fold) => {
  const keep = [], DYN = /::?(hover|focus-visible|focus-within|focus|active|visited|target|before|after|placeholder|marker|selection|first-letter|first-line|backdrop|file-selector-button|-webkit-[\w-]+|-moz-[\w-]+)(\([^)]*\))?/g;
- const ALWAYS = /topnav|spn|skip-link|sp-lb/, HERO = /page-hero|space-hero|-hero\b/, BARE = /^(html|body|:root|\*|html\.dark|html\.dark body|html\[dir=rtl\]|\[dir=rtl\])$/;
+ const ALWAYS = /topnav|spn|skip-link|sp-lb/, HERO = /page-hero|space-hero|-hero\b/, BARE = /^(img|svg|video|picture|iframe|canvas|html|body|:root|\*|html\.dark|html\.dark body|html\[dir=rtl\]|\[dir=rtl\])$/;
  const nav = document.getElementById('topnav');
  const top = el => { if (nav && nav.contains(el)) return 0; const r = el.getBoundingClientRect(); if (!r.width && !r.height) return 1e9; return r.top + scrollY; };
  const hit = sel => { if (ALWAYS.test(sel) || sel.split(',').some(x => BARE.test(x.trim().replace(DYN, '')))) return true; let s = sel.replace(DYN, '').replace(/\(\s*\)/g, '');
@@ -41,7 +43,7 @@ def template(s):
     hero = re.search(r'<section class="page-hero((?: [\w-]+)*)"', s)
     return '+'.join(sorted(name(h) for h in links(s))) + '|' + (hero.group(1).split()[0] if hero and hero.group(1).split() else ('page-hero' if hero else '-'))
 def css_hash(key):
-    h = hashlib.sha256()
+    h = hashlib.sha256(EXTRACT_V.encode())
     for n in key.split('|')[0].split('+'):
         if os.path.exists(n): h.update(open(n, 'rb').read())
     return h.hexdigest()[:16]
@@ -122,6 +124,7 @@ def main():
     for f in files:
         en = f.split('/', 1)[1] if '/' in f else f
         if only and en not in only: continue
+        if en in SKIP: continue
         s = BLOCK.sub('', open(f, encoding='utf8').read())
         if 'http-equiv="refresh"' in s or not links(s): continue
         k = template(apply(f, s, None)); groups.setdefault(k, []).append(f)
