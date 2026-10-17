@@ -16,7 +16,7 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 CACHE = 'scripts/critical-cache.json'
 JSCLS = re.compile(r'(mw-|spn|topnav|sp-lb|is-|js-)')  # classes added by JS at runtime: never required to be in the HTML
 EXTRACT_V = '6'  # bump when the extraction JS changes (forces re-extract). v2: bare img/svg/video rules always kept (below-fold 1200px card images overflowed in RTL before the full CSS loaded). v3: .sp-video always kept; v4: class-coverage sampling + per-page rule filter (only selectors whose classes appear in the page). v5: mission widget (+ JS-built .mw-*) always kept. v6: .horizon-note/.horizon-badge always kept
-SKIP = {'index.html'}  # homepage head is owned by the hero generator (build-batch2 / hero-themes); never rewritten here
+SKIP = {'index.html', 'Solutions.html'}  # homepage head is owned by the hero generator (build-batch2 / hero-themes); never rewritten here. Solutions.html: A/B Oct 16 (6 Lighthouse runs each, gzip) showed no FCP gain and +15 KB HTML, so it keeps plain stylesheets
 LINK = re.compile(r'<link (?:rel="stylesheet" href="([^"]+\.css[^"]*)"|href="([^"]+\.css[^"]*)" rel="stylesheet")\s*/?>')
 BLOCK = re.compile(r'<!-- CRIT:START -->.*?<!-- CRIT:END -->', re.S)
 JS = r"""(fold) => {
