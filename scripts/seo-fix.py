@@ -188,6 +188,12 @@ def fix(p):
                 sfx = f' – {en_hub}'
                 if core.endswith(sfx): core = core[:-len(sfx)]; raw_t = core
                 if en_core.endswith(sfx): en_core = en_core[:-len(sfx)]
+                # Oct 16 fix: the English hub must also leave en_title, or fit_title() re-adds it with the language tag
+                # ('NISAR (NASA–ISRO) – Earth Observation · Español'). Translated pages use their own breadcrumb hub.
+                if en_title and lang != 'en':
+                    en_title = en_title.replace(sfx + BRAND, BRAND)
+                    if en_title.endswith(sfx): en_title = en_title[:-len(sfx)]
+            if lang != 'en' and en_hub and hub == en_hub and core == en_core: hub = None  # untranslated breadcrumb: never put English in
             if hub and hub not in core and (len(core) < 30 or (lang != 'en' and core == en_core)) and len(f'{core} – {hub}{BRAND}') <= 60:
                 t = f'{core} – {hub}{BRAND}'
             else: t = fit_title(raw_t if not (lang != 'en' and core == en_core) else en_title, en_title, lang)
