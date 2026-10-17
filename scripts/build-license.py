@@ -74,7 +74,7 @@ def main():
         s2 = re.sub(r'<!-- LICENSE:START -->.*?<!-- LICENSE:END -->', '', s2, flags=re.S)
         if '</footer>' in s2:
             t, more = FOOT[l]
-            blk = f'<!-- LICENSE:START --><p class="lic-foot">{t.format(cc=cc(l))} <a href="{pre}About.html#licence">{more}</a></p><!-- LICENSE:END -->'
+            blk = f'<!-- LICENSE:START --><style>footer .lic-foot{{font-size:.85rem;opacity:.9}}footer .lic-foot a{{display:inline!important;margin:0!important;padding:0!important;min-height:0!important;width:auto!important}}</style><p class="lic-foot">{t.format(cc=cc(l))} <a href="{pre}About.html#licence">{more}</a></p><!-- LICENSE:END -->'
             s2 = s2.replace('</footer>', blk + '</footer>', 1)
         s2 = ld(s2)
         if f.endswith('About.html'):
