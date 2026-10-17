@@ -221,13 +221,13 @@
   // or the language banner (short landscape screens), it moves to the inline-start top corner just under the nav.
   function hit(a, b) { return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top; }
   function placeCaption() {
-    if (!caps.length) return; hero.classList.remove('hs-captop');
+    if (!caps.length) return; var was = hero.classList.contains('hs-captop'); hero.classList.remove('hs-captop');
     var obs = [].map.call(hero.querySelectorAll('.hero-content > *, .sticky-help, .sp-lb-in'), function (e) { return e.getBoundingClientRect(); }).filter(function (q) { return q.width > 0; });
     var bad = function () { return caps.some(function (c) { var q = c.getBoundingClientRect(); return obs.some(function (o) { return hit(q, o); }); }); };
-    if (!bad()) return;
+    if (!bad()) { hero.classList.add('hs-placed'); return; }
     var hr = hero.getBoundingClientRect(), top = 0;
     [].forEach.call(document.querySelectorAll('#topnav, .sp-lb-in'), function (e) { var q = e.getBoundingClientRect(); if (q.height) top = Math.max(top, q.bottom - hr.top); });
-    hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop');
+    hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop', 'hs-placed');
   }
   function setup() {
     tok++; sprites = {};

@@ -53,6 +53,7 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hs-cap:focus-visible{outline:3px solid #fff;outline-offset:3px}'
        '.hs-cap .hs-arr{color:#8fd3ff;flex:none}[dir=rtl] .hs-cap .hs-arr{transform:scaleX(-1)}'
        '.hero[data-hero=space].hs-lowsky .hero-email{background:rgba(0,8,18,.72);border-radius:12px;box-shadow:0 0 0 .4rem rgba(0,8,18,.72)}'
+       '.hero:not(.hs-placed) .hs-cap{visibility:hidden!important}'  # hidden until placed, so moving it is not a layout shift
        '.hero[data-hero=space].hs-captop .hs-caps{bottom:auto;top:var(--hs-captop,96px)}.hs-captop .hs-cap{bottom:auto;top:0}'
        '@media (max-width:600px){.hero[data-hero=space] .hs-caps{bottom:5rem;width:calc(100% - 1.6rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
