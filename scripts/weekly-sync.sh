@@ -56,6 +56,7 @@ if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/nul
 python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teachers), SI_Helper.html, Privacy section (all langs)
 node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
+python3 scripts/build-nav.py            # Oct 16: header nav v2 (two rows, dropdowns, mobile accordion); LAST page generator so copied pages get correct nav
 python3 scripts/build-report-link.py    # Oct 15: Report a correction footer link (all langs) -> GitHub issue form
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI

@@ -28,6 +28,7 @@ def normalize(src):
     src = re.sub(r'<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->', '', src)
     src = re.sub(r'<!-- (LEARNLINK|SIHELPER):START -->[\s\S]*?<!-- \1:END -->', '', src)  # Oct 16: build-learn.py adds this per language
     src = re.sub(r'<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->', '', src)
+    src = re.sub(r'<nav id="topnav">[\s\S]*?</nav>', '', src)  # Oct 16: header nav regenerated per language by build-nav.py
     src = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', '', src)
     src = re.sub(r'\?v=[0-9a-z]+', '', src)
     src = re.sub(r'<script type="application/ld\+json"[^>]*>[\s\S]*?</script>\n?', '', src)  # JSON-LD is regenerated per language (seo-fix / add-video-schema)
@@ -171,7 +172,7 @@ def missing(lang):
     m = json.load(open(f'i18n/{lang}.json', encoding='utf8')); seen = set()
     for page in PAGES:
         soup = BeautifulSoup(open(page, encoding='utf8').read(), 'html.parser')
-        for li in soup.select('li.lang-switch'): li.decompose()
+        for li in soup.select('li.lang-switch, nav#topnav'): li.decompose()
         vals = [str(t).strip() for t in soup.find_all(string=True) if not isinstance(t, Comment) and t.parent.name not in ('script', 'style')
                 and not (t.find_parent('a') and t.find_parent('a').get('href', '').startswith('http') and not str(t).strip().startswith(FFI))]
         vals += [tag[a].strip() for tag in soup.find_all(True) for a in ATTRS if tag.get(a)]

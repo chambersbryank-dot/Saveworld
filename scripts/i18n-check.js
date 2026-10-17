@@ -13,6 +13,7 @@ function normalize(src) {
     .replace(/<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/g, '')
     .replace(/<!-- (LEARNLINK|SIHELPER):START -->[\s\S]*?<!-- \1:END -->/g, '')
     .replace(/<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/g, '')
+    .replace(/<nav id="topnav">[\s\S]*?<\/nav>/g, '')  // Oct 16: nav regenerated per language (build-nav.py)
     .replace(/<li class="lang-switch"[\s\S]*?<\/li>/g, '')
     .replace(/\?v=[0-9a-z]+/g, '')
     .replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>\n?/g, '')  // JSON-LD regenerated per language
