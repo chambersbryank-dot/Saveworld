@@ -4,10 +4,15 @@
   var wrap = document.querySelector('.wm-wrap');
   if (!wrap || !window.L) return;
   var mapEl = document.getElementById('wm');
+  var rtl = (document.documentElement.getAttribute('dir') || '') === 'rtl';
+  // Oct 17: map fills the viewport below the fixed nav; measure the real nav height (CSS has 92/56 px fallbacks)
+  var nav = document.getElementById('topnav') || document.querySelector('body > nav');
+  function navh() { if (nav && nav.offsetHeight) document.body.style.setProperty('--wm-navh', nav.offsetHeight + 'px'); }
+  navh(); window.addEventListener('resize', navh);
   var EXCL = /roscosmos|russia|china|chinese|baikonur|plesetsk|vostochny|jiuquan|wenchang|xichang|taiyuan|haiyang|dongfeng|sohae|tonghae|korean committee|nada|korean people.s|landspace|galactic energy|i-space|orienspace|deep blue aero|space pioneer|cas space|expace|casc|casic|kazakhstan/i;
   var EXCC = { RUS: 1, CHN: 1, PRK: 1 };
   fetch(wrap.getAttribute('data-src')).then(function (r) { return r.json(); }).then(boot).catch(function () {
-    mapEl.innerHTML = '<p class="wm-err">Map data could not load. The list below has everything.</p>';
+    mapEl.innerHTML = '<p class="wm-err">Map data could not load. The list below the map has everything.</p>';
   });
   function icon(c, g) {
     return L.divIcon({ className: 'wm-pin', html: '<span class="wm-m" style="--c:' + c + '"><i>' + (g || '') + '</i></span>', iconSize: [26, 26], iconAnchor: [13, 26], popupAnchor: [0, -22] });
@@ -16,9 +21,18 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function boot(D) {
     var ui = D.ui || {}, lang = D.lang || 'en';
-    var map = L.map(mapEl, { scrollWheelZoom: false, tapTolerance: 20, worldCopyJump: true, minZoom: 1 }).setView([20, 0], 2);
+    var map = L.map(mapEl, { scrollWheelZoom: false, tapTolerance: 20, worldCopyJump: true, minZoom: 1, zoomSnap: 0.25, zoomControl: false, attributionControl: false });
+    // controls away from the floating Help button (bottom inline-end) and the map key (top inline-end)
+    L.control.zoom({ position: rtl ? 'topright' : 'topleft' }).addTo(map);
+    L.control.attribution({ position: rtl ? 'bottomright' : 'bottomleft', prefix: false }).addTo(map);
+    var WORLD = L.latLngBounds([-50, -165], [72, 180]), moved = false;
+    function fit() { map.invalidateSize(); if (!moved) map.fitBounds(WORLD, { padding: [8, 8], animate: false }); }
+    fit();
+    map.on('dragstart zoomstart', function (e) { if (e && e.hard !== true && map._loaded && !fitting) moved = true; });
+    var fitting = false, rz;
+    window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { fitting = true; fit(); fitting = false; }, 200); });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · ' + esc(ui.launches || 'Launches') + ': <a href="https://thespacedevs.com/llapi">The Space Devs</a>',
       subdomains: 'abc', maxZoom: 19 }).addTo(map);
     mapEl.addEventListener('click', function () { map.scrollWheelZoom.enable(); });
     mapEl.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
@@ -77,6 +91,6 @@
     }
     ['wm-hub', 'wm-a', 'wm-u', 'wm-r'].forEach(function (id) { document.getElementById(id).addEventListener('change', apply); });
     window.spWorldMap = { map: map, count: function () { var c = { a: 0, u: 0, r: 0 }; ['a', 'u', 'r'].forEach(function (k) { c[k] = groups[k].getLayers().length; }); return c; } };
-    setTimeout(function () { map.invalidateSize(); }, 250);
+    setTimeout(function () { fitting = true; fit(); fitting = false; }, 250);
   }
 })();

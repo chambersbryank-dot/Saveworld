@@ -100,7 +100,8 @@ def worldmap(l):
         for pin in (x['p'] or [None]):
             rows.append([x['n'], x['st'], x['hn'], pin['label'] if pin else ({'orbit': 'From orbit', 'world': 'Worldwide'}.get(x['x'], '')), pin['lat'] if pin else '', pin['lng'] if pin else '', pin.get('basis', '') if pin else '', page])
     n = wr(f'assets/data/export/map.{l}.csv', to_csv(rows))
-    s = rd(p); s = put(s, 'DATA-TOOLS', bar(l, pagetitle(s), f'{SITE}{d(l)}World_Map.html', ('' if l == 'en' else '../') + f'assets/data/export/map.{l}.csv'), before='</main>')
+    # Oct 17: map-first World Map (user: "remove noise"): no data bar on the page; the CSV is linked from the page's list section instead
+    s = rd(p); s = re.sub(r'<!-- DATA-TOOLS:START -->.*?<!-- DATA-TOOLS:END -->', '', s, flags=re.S)
     return n + wr(p, s)
 def home(l):
     p = d(l) + 'index.html'; s = rd(p)

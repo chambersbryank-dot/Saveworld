@@ -1,32 +1,43 @@
-/* World Solutions Map (Oct 15) */
-.wm-wrap{max-width:1150px;margin:0 auto;padding:0 1.1rem 2.5rem}
-.wm-lead{font-size:1.1rem;line-height:1.55;margin:1.1rem 0}
-.wm-controls{display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;align-items:center;margin-bottom:.5rem}
-.wm-hubsel{display:flex;gap:.45rem;align-items:center;font-weight:600}
-.wm-hubsel select{font:inherit;padding:.4rem .6rem;border-radius:8px;border:1px solid #9bb;min-height:40px}
-.wm-tog{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;font-weight:600;min-height:40px}
-.wm-tog input{width:1.15rem;height:1.15rem}
-.wm-dot{display:inline-block;width:.9rem;height:.9rem;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.3);flex:none}
+/* World Solutions Map (Oct 15; Oct 17 map-first layout: short title + map centred in the viewport below the fixed nav) */
+body.world-map-page{background:#001428}
+.world-map-page{--wm-navh:92px}
+@media (max-width:900px){.world-map-page{--wm-navh:56px}}
+.wm-main{color:#e8eef5;background:#001428}
+.wm-wrap{margin:0 auto}
+.wm-screen{box-sizing:border-box;height:calc(100vh - var(--wm-navh));height:calc(100svh - var(--wm-navh));min-height:420px;margin-top:var(--wm-navh);
+  padding:.7rem clamp(.6rem,2vw,1.5rem) clamp(.7rem,2vh,1.4rem);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem}
+.wm-title{flex:none;margin:0;max-width:100%;text-align:center;color:#fff;font-size:clamp(1.05rem,.8rem + 1vw,1.5rem);line-height:1.25;font-weight:700;letter-spacing:.01em}
+.wm-stage{position:relative;flex:1 1 auto;min-height:0;width:100%;max-width:2400px;max-height:calc(100vw * .82)}
+/* portrait: a world map is wider than tall, so cap the height (no empty polar bands) and keep the box centred */
+.wm-map{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.35);z-index:1;background:#aad3df}
+.wm-key{position:absolute;top:10px;inset-inline-end:10px;z-index:500;display:flex;flex-direction:column;gap:.15rem;padding:.4rem .6rem;border-radius:12px;
+  background:rgba(255,255,255,.94);color:#10202c;box-shadow:0 2px 10px rgba(0,0,0,.25);font-size:.88rem;max-width:calc(100% - 70px)}
+.wm-tog{display:flex;align-items:center;gap:.4rem;cursor:pointer;font-weight:600;min-height:32px}
+.wm-tog input{width:1.05rem;height:1.05rem;margin:0}
+.wm-hubsel select{font:inherit;font-size:.85rem;padding:.25rem .4rem;border-radius:8px;border:1px solid #9bb;min-height:32px;max-width:100%;background:#fff;color:#10202c}
+.wm-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wm-dot{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.3);flex:none}
 .wm-active{background:#2e9e4f}.wm-upcoming{background:#2f7fd1}
-.wm-count{font-size:.95rem;opacity:.85;margin:.2rem 0 .8rem}
-.wm-map{height:min(70vh,640px);min-height:360px;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.2);z-index:1;background:#aad3df}
-.wm-src{font-size:.85rem;opacity:.8;margin:.7rem 0 1.4rem}
-.wm-strip{margin:1.5rem 0}.wm-strip h2{font-size:1.3rem;margin:0 0 .4rem}
-.wm-chips{list-style:none;padding:0;margin:.6rem 0 0;display:flex;flex-wrap:wrap;gap:.45rem}
-.wm-chips a{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .75rem;border-radius:999px;background:#e8f4fb;color:#003755;text-decoration:none;font-weight:600;font-size:.95rem}
-html.dark .wm-chips a{background:#1a2a38;color:#e8eef5}
-.wm-list{margin:1.5rem 0}.wm-list summary{cursor:pointer;font-weight:700;font-size:1.15rem;padding:.4rem 0}
+.wm-list{max-width:1150px;margin:0 auto;padding:.4rem 1.1rem 2.2rem}
+.wm-list summary{cursor:pointer;font-weight:700;font-size:1.05rem;padding:.5rem 0;color:#fff}
+.wm-list a{color:#8fd3ff}
 .wm-list ul{padding-inline-start:1.2rem;line-height:1.6}
+.wm-src{font-size:.85rem;opacity:.85;margin:1.2rem 0 0}
+.wm-strip{margin:1.3rem 0}body .wm-list .wm-strip h2{font-size:1.2rem;margin:0 0 .4rem}body .wm-list h3{font-size:1.05rem;margin:1.1rem 0 .3rem}
+.wm-chips{list-style:none;padding:0 !important;margin:.6rem 0 0;display:flex;flex-wrap:wrap;gap:.45rem}
+.wm-list .wm-chips a{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .7rem;border-radius:999px;background:#e8f4fb;color:#003755;text-decoration:none;font-weight:600;font-size:.92rem}
 .wm-badge{display:inline-block;padding:.05rem .45rem;border-radius:6px;color:#fff;font-size:.78rem;font-weight:700}
 .wm-hubn{opacity:.75;font-size:.9rem}
 .wm-cta{margin:1rem 0;text-align:center}
 .wm-pin{background:none;border:0}
 .wm-m{display:flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 2px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--c);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.4)}
 .wm-m i{transform:rotate(45deg);font-style:normal;font-size:13px;line-height:1}
-.leaflet-popup-content{margin:.7rem .9rem;font-size:.95rem;line-height:1.4;min-width:210px}
+.leaflet-popup-content{margin:.7rem .9rem;font-size:.95rem;line-height:1.4;min-width:210px;color:#10202c}
 .leaflet-popup-content .wm-pop p{margin:.25rem 0}
 .wm-pop-h{font-weight:700;font-size:1.05rem}
 .wm-pop-hub,.wm-pop-loc{font-size:.88rem;opacity:.85}
 .wm-pop ul{margin:.3rem 0 0;padding-inline-start:1.1rem}
 .leaflet-container a{color:#0a6aa1}
-@media (max-width:700px){.wm-map{height:58vh;min-height:300px;border-radius:12px}}
+.wm-err{padding:1rem;color:#10202c}
+@media (max-width:700px){.wm-map{border-radius:12px}.wm-key{font-size:.8rem;padding:.3rem .45rem}.wm-tog{min-height:28px}}
+@media (max-height:500px){.wm-screen{min-height:320px}}

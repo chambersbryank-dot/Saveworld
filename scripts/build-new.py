@@ -100,6 +100,9 @@ def changelog(l, sols, dates, ups):
     if early: body += f'<section class="cl-day"><h2>{esc(t["early"])} ({len(early)})</h2><ul>' + ''.join(f'<li><a href="{sf.href(l, u)}">{esc(sols.get(u, u[:-5]))}</a></li>' for u in early) + '</ul></section>'
     main = (f'<main id="main">\n<div class="cl-wrap"><h1>{esc(t["title"])}</h1><p class="edu-lead">{esc(t["lead"])}</p>{body}</div>\n')
     return head + '</head>\n' + body_open + nav + main + foot
+def unstrip(p):
+    if not os.path.exists(p): return 0
+    s = rd(p); return wr(p, re.sub(r'<!-- NEW-STRIP:START -->.*?<!-- NEW-STRIP:END -->', '', s, flags=re.S))
 def main():
     global EN_URLS
     en = cards('en'); EN_URLS = set(en); dates = added(sorted(en)); today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-10))).date()
@@ -110,7 +113,7 @@ def main():
         blk = strip(l, sols, dates, today, total, pre)
         ch += put(d(l) + 'index.html', blk, r'<section class="news-briefs"')
         ch += put(d(l) + 'Solutions.html', blk, r'<!-- SOL-DIR:END -->', before=False)
-        ch += put(d(l) + 'World_Map.html', blk, r'</main>')
+        ch += unstrip(d(l) + 'World_Map.html')  # Oct 17: the World Map is map-only now (user: "remove noise"); strip never goes there
         ch += wr(d(l) + PAGE, changelog(l, sols, dates, ups))
     css = rd('styles.css'); css2 = re.sub(r'\n?/\* NEWS:START \*/.*?/\* NEWS:END \*/', '', css, flags=re.S).rstrip('\n') + '\n/* NEWS:START */\n' + CSS + '\n/* NEWS:END */\n'
     ch += wr('styles.css', css2)

@@ -2076,6 +2076,11 @@
     }
    ],
    "strip": "orbit"
+  },
+  "Enceladus.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
   }
  }
 }
