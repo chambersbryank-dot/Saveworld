@@ -521,6 +521,28 @@
    "description": "EnVision dell’ESA studierà Venere dal nucleo all’alta atmosfera e potrebbe spiegare come un pianeta simile al nostro sia diventato così caldo. Lancio nel 2031."
   }
  },
+ "Enceladus.html": {
+  "en": {
+   "description": "Saturn’s small moon Enceladus hides a global ocean and sprays it into space. Cassini found water, salts, organics, hydrogen and phosphates there.",
+   "title": "Enceladus: The Ocean Moon That Sprays Into Space"
+  },
+  "fr": {
+   "description": "Encelade, petite lune de Saturne, cache un océan global qu’elle projette dans l’espace. Cassini y a trouvé eau, sels, organiques, hydrogène et phosphates.",
+   "title": "Encelade, la lune océan qui jaillit dans l’espace"
+  },
+  "es": {
+   "description": "Encélado, pequeña luna de Saturno, oculta un océano global y lo lanza al espacio. Cassini halló allí agua, sales, orgánicos, hidrógeno y fosfatos.",
+   "title": "Encélado: la luna océano que se rocía al espacio"
+  },
+  "ar": {
+   "description": "يخفي إنسيلادوس، قمر زحل الصغير، محيطًا عالميًا ويقذفه إلى الفضاء. وجدت فيه كاسيني ماءً وأملاحًا ومواد عضوية وهيدروجين وفوسفات.",
+   "title": "إنسيلادوس: القمر المحيطي الذي يقذف ماءه إلى الفضاء"
+  },
+  "it": {
+   "description": "Encelado, piccola luna di Saturno, nasconde un oceano globale e lo spruzza nello spazio. Cassini vi ha trovato acqua, sali, organici, idrogeno e fosfati.",
+   "title": "Encelado: la luna oceano che spruzza nello spazio"
+  }
+ },
  "Europa_Clipper.html": {
   "es": {
    "description": "Europa Clipper (NASA) va hacia la luna oceánica de Júpiter: asistencia gravitatoria de la Tierra el 3 de diciembre de 2026 y 49 sobrevuelos desde 2030."

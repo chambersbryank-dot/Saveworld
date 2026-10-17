@@ -53,7 +53,7 @@ CAPS = {
   'ar': ('إنسيلادوس: نفثات من بخار الماء والجليد من محيط خفي', 'شروق الأرض من مدار القمر، كما رآه طاقم أبولو 8 لأول مرة عام 1968'),
   'it': ("Encelado: getti di vapore acqueo e ghiaccio da un oceano nascosto", "Il sorgere della Terra dall'orbita lunare, visto per la prima volta dall'Apollo 8 nel 1968"),
 }
-CAP_HREF = ('Space.html', 'Artemis_II.html')  # no Enceladus page yet -> Space hub; Earthrise -> Artemis II (crewed flight around the Moon)
+CAP_HREF = ('Enceladus.html', 'Artemis_II.html')  # Oct 16: Enceladus caption -> the Enceladus page; Earthrise -> Artemis II (crewed flight around the Moon)
 
 CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=space] .hero-media{display:none}'
        '.hero[data-hero=space] .hero-space{display:block;position:absolute;inset:0;z-index:-1;overflow:hidden;contain:strict;background:#000}'

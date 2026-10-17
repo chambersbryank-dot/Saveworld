@@ -71,6 +71,7 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Dragonfly': ('Titan.jpg', 'NASA'),
     # Oct 16: the hero is the page's Ryugu photo; the line under it named an EPIC Earth image
     'Hayabusa2_Torifune': ('Ryugu_Hayabusa2.jpg', 'JAXA Hayabusa2 ONC data, processed by Anonymsiy (CC BY 4.0)'),
+    'Enceladus': ('Enceladus_Geyser_Basin.jpg', 'NASA/JPL/Space Science Institute (PIA11688)'),
     # Oct 16 (agency batch): 20 new solutions, public-domain NASA/NOAA images
     'International_Charter': ('Missouri_Flood_Hamburg_EO1.jpg', 'NASA Earth Observatory (EO-1 ALI, July 17, 2011)'),
     'Copernicus_EMS': ('Canada_Wildfires_ISS_2025b.jpg', 'NASA (ISS073-E-0420617, Aug. 3, 2025)'),

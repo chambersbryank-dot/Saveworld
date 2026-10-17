@@ -48,7 +48,8 @@ _git = {}
 def gitdates(f):
     if f not in _git:
         out = subprocess.run(['git', 'log', '--follow', '--format=%as', '--', f], capture_output=True, text=True).stdout.split()
-        _git[f] = (out[-1], out[0]) if out else (None, None)
+        today = __import__('datetime').date.today().isoformat()  # Oct 16: a new, not-yet-committed page has no git history -> date it today (was a max() crash)
+        _git[f] = (out[-1], out[0]) if out else (today, today)
     return _git[f]
 
 def fit_title(t, en_title=None, lang='en'):
