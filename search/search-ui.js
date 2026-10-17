@@ -26,18 +26,18 @@ window.SP_SEARCH_STARTED = true;
   const track = () => {};  // Oct 16: GA removed; search text is never sent anywhere (COPPA)
   input.closest('form')?.addEventListener('submit', e => { e.preventDefault(); input.blur(); track(input.value.trim()); go(); });
 
-  // floating example questions (search/featured-questions.json, per language)
-  fetch('/search/featured-questions.json').then(r => r.json()).then(d => {
-    const box = $('sp-float'); const qs = (d[lang.slice(0, 2)] || d.en || []).slice(0, 12); if (!box) return;
-    const chip = (q, i, dup) => `<a class="sp-q sp-q${i}" href="?q=${encodeURIComponent(q)}" style="--i:${i}"${dup ? ' aria-hidden="true" tabindex="-1"' : ''}>${esc(q)}</a>`;
-    // second copy is only for the seamless marquee on narrow screens (hidden on desktop and for screen readers)
-    box.innerHTML = `<div class="sp-track">${qs.map((q, i) => chip(q, i)).join('')}<span class="sp-dup">${qs.map((q, i) => chip(q, i, true)).join('')}</span></div>`;
-    if (qs.length && empty && !input.value.trim()) empty.hidden = true; // floating questions replace the starter chips
-    box.querySelectorAll('a').forEach(a => a.addEventListener('click', e => {
-      e.preventDefault(); input.value = a.textContent; track(a.textContent); go();
-      $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-    }));
-  }).catch(() => {});
+  // floating example questions: placed at build time by scripts/build-search-page.py (all topics; CSS shows the active one).
+  // Oct 16: no client-side rendering any more, so the ring never shifts the search bar (CLS).
+  document.querySelectorAll('.sp-ring .sp-q').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); input.value = a.textContent; go();
+    $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  }));
+  // approved SI Helper Q&A (search/student-qa.json from scripts/build-student-qa.py; absent until the first answer is approved)
+  const QA_T = { aero: 'aero', orbit: 'orbital', phys: 'physics', all: 'all' };
+  let qa = [];
+  fetch('/search/student-qa.json').then(r => r.ok ? r.json() : {}).then(d => { qa = (d[lang.slice(0, 2)] || []).map(e => ({ ...e, tab: QA_T[e.topic] || 'all' })); }).catch(() => {});
+  const topic = () => document.documentElement.getAttribute('data-sp-topic') || 'all';
+  document.addEventListener('sp-topic', () => { if (input.value.trim() && window.SP_SEARCH_ACTIVE) run(false, true); });
 
   // hub/category label for each result card (search/hubs.json, built from page breadcrumbs by scripts/build-search.mjs)
   const hubOf = new Map();
@@ -91,12 +91,18 @@ window.SP_SEARCH_STARTED = true;
   async function run(updateUrl = true, keepShown = false) {
     const q = input.value.trim(), my = ++seq;
     if (!keepShown) shown = 0;
-    if (updateUrl) history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
+    if (updateUrl) { const u = new URLSearchParams(); if (topic() !== 'all') u.set('topic', topic()); if (q) u.set('q', q); const qs = u.toString(); history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '')); }
     if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = !!$('sp-float')?.children.length; return; }
     const kwr = await keyword(q); await hubsReady;
+    // topic tab: filtered Pagefind search over that topic's tagged math/Learn/calculator pages (meta data-pagefind-filter="topic")
+    const tp = topic(); let topicHits = [];
+    if (tp !== 'all') { try { topicHits = (await pf.search(q, { filters: { topic: tp } })).results.slice(0, 8); } catch (e) {} }
     if (my !== seq) return;
     const kw = await Promise.all(kwr.hits.map(x => x.data()));
+    const th = await Promise.all(topicHits.map(x => x.data()));
+    if (my !== seq) return;
     let items = kw.map(d => ({ url: norm(d.url), title: d.meta.title || d.url, html: d.excerpt }));
+    const thItems = th.map(d => ({ url: norm(d.url), title: d.meta.title || d.url, html: d.excerpt }));
     items = [...items.filter(it => !GENERAL.test(it.url)), ...items.filter(it => GENERAL.test(it.url))];
     let usedSem = false;
     if (sem) {
@@ -111,6 +117,24 @@ window.SP_SEARCH_STARTED = true;
       });
       items = [...score.entries()].sort((a, b) => b[1] - a[1]).map(([u]) => info.get(u));
       usedSem = hits.length > 0;
+    }
+    // topic tab: that topic's Learn/math/lab/calculator pages first, the rest of the site after them (still a whole-site search)
+    const boost = (window.SP_TOPIC_BOOST || {})[topic()];
+    // Q&A entries whose question shares most key terms with the query; the active tab's entries go first
+    const kt = keyTerms(q);
+    const qaHits = kt.length ? qa.filter(e => { const w = e.q.toLowerCase(); return kt.filter(t => w.includes(t)).length >= Math.max(1, Math.ceil(kt.length / 2)); }) : [];
+    if (qaHits.length) {
+      const toItem = e => ({ url: norm(e.url), title: e.q, html: '' });
+      const mine = qaHits.filter(e => e.tab === topic()).map(toItem), other = qaHits.filter(e => e.tab !== topic()).map(toItem);
+      const qs = new Set(qaHits.map(e => norm(e.url)));
+      items = items.filter(it => !qs.has(it.url));
+      items = topic() !== 'all' ? [...mine, ...items.slice(0, 3), ...other, ...items.slice(3)] : [...items.slice(0, 3), ...mine, ...other, ...items.slice(3)];
+    }
+    if (boost) {
+      const seen = new Set(thItems.map(it => it.url));
+      items = [...thItems, ...items.filter(it => !seen.has(it.url))];
+      const hit = it => boost.includes(base(it.url)) || (it.url.includes('Student_Questions.html') && qa.some(e => norm(e.url) === it.url && e.tab === topic()));
+      items = [...items.filter(hit), ...items.filter(it => !hit(it))];
     }
     items = items.slice(0, 20);
     if (empty) empty.hidden = items.length > 0;

@@ -463,3 +463,13 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
 - Reuses existing .five-ws/.w-card/.partner-list/.btn-nav styles: no CSS/JS change, so no ?v= bump. No third-party scripts. hreflang already present on About/index.
 - Noticed, not changed: fr/ar About + homepage partner text says "four languages" (quatre / بأربع); site has five.
 - 7:40 PM: the .hs-caps positioning box itself is visibility:hidden (only the active caption is visible), so its move is not counted as a shift either. Separate, pre-existing: /ar/ (and other non-matching locales) shift ~0.059 when the language-suggestion banner pads <body> (seen on the earth theme too; build-langbanner.py).
+- Oct 16 7:12–7:34 PM Search topic tabs (scripts/build-search-page.py + scripts/search_topics.py + search/search-ui.js):
+  All / Aeronautical Engineering / Orbital Mechanics / Physics as an ARIA tablist (arrow keys, Home/End, RTL mirrored),
+  ?topic=aero|orbital|physics, pushState and back button, H1/title show the topic, hreflang and language links keep ?topic.
+  12 example SI questions per topic and language, placed at build time (the old client-side ring JS is gone: no CLS). Italian
+  'All' questions added (it was falling back to English). The topic pages (Learn guide, math, lab, calculators, AP_IB_Physics,
+  Careers, Calculators, Student_Questions) get <meta data-pagefind-filter="topic[content]"> (SPTOPIC marker, ignored by the
+  i18n hash). search-ui.js runs a filtered Pagefind search first, then boosts the topic's pages above the whole-site results.
+  search/student-qa.json (build-student-qa.py) is merged in when present, active topic first. Search and SI stay separate.
+  Chips: "Liquid Glass" (blur + saturate, tint, inner highlight, specular edge, static sheen, solid fallback) and a gentle
+  transform-only 8px orbit, paused on hover/focus, static under reduced motion. To add a topic: one entry in search_topics.py.

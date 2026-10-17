@@ -7,10 +7,43 @@ the "how to frame an SI question" note stay for screen readers only. Strings are
 i18n-build translations), so the generator is idempotent. Run after i18n-build.py and build-nav.py."""
 import re, os, html, json
 LANGS = ['en', 'fr', 'es', 'ar', 'it']; V = '20261016q'
-RING_JS = ('<script>(function(){var t=document.getElementById("sp-float");if(!t)return;var z=[".sp-zl",".sp-zr",".sp-zb"].map(function(c){return document.querySelector(c)});'
-           'function spread(){var q=[].slice.call(t.querySelectorAll(".sp-track > .sp-q"));if(q.length<4)return false;var d=t.querySelector(".sp-dup");if(d)d.remove();'
-           'var n=Math.ceil(q.length/4);q.forEach(function(a,i){var k=Math.floor(i/n);if(k>0)z[k-1].appendChild(a)});return true}'
-           'if(!spread()){var mo=new MutationObserver(function(){if(spread())mo.disconnect()});mo.observe(t,{childList:true,subtree:true})}})();</script>')
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import search_topics as ST
+# Oct 16 7:12 PM (user): topic tabs (All / Aero / Orbital / Physics, ?topic=), chips placed at build time (no layout shift).
+TOPIC_HEAD = ('<script>(function(){var t=(new URLSearchParams(location.search).get("topic")||"all").toLowerCase();'
+              'if(!document.querySelector(\'.sp-tabs [data-t="\'+t+\'"]\'))t="all";document.documentElement.setAttribute("data-sp-topic",t)})();</script>')
+TOPIC_JS = r"""<script>(function(){var d=document.documentElement,tl=document.querySelector('.sp-tabs');if(!tl)return;
+var tabs=[].slice.call(tl.querySelectorAll('[role=tab]')),h1=document.getElementById('sp-h1'),baseH=h1.getAttribute('data-base'),baseT=document.title;
+var alts=[].slice.call(document.querySelectorAll('link[rel=alternate][hreflang],#topnav .lang-switch a'));alts.forEach(function(a){a.setAttribute('data-href0',a.getAttribute('href'))});
+function set(t,push,focus){var tab=tl.querySelector('[data-t="'+t+'"]')||tabs[0];t=tab.getAttribute('data-t');d.setAttribute('data-sp-topic',t);
+ tabs.forEach(function(x){var on=x===tab;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1});if(focus)tab.focus();
+ var nm=t==='all'?'':tab.textContent.trim();h1.textContent=nm?baseH+' · '+nm:baseH;document.title=nm?nm+' · '+baseT:baseT;
+ alts.forEach(function(a){var h=a.getAttribute('data-href0');a.setAttribute('href',t==='all'?h:h.replace(/[?#].*$/,'')+'?topic='+t)});
+ if(push){var u=new URLSearchParams(location.search);if(t==='all')u.delete('topic');else u.set('topic',t);var qs=u.toString();history.pushState({t:t},'',location.pathname+(qs?'?'+qs:''))}
+ document.dispatchEvent(new CustomEvent('sp-topic',{detail:t}))}
+tabs.forEach(function(x){x.addEventListener('click',function(e){e.preventDefault();if(x.getAttribute('aria-selected')!=='true')set(x.getAttribute('data-t'),true,false)})});
+tl.addEventListener('keydown',function(e){var i=tabs.indexOf(document.activeElement);if(i<0)return;var r=getComputedStyle(tl).direction==='rtl',n=null;
+ if(e.key==='ArrowRight')n=r?i-1:i+1;else if(e.key==='ArrowLeft')n=r?i+1:i-1;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;
+ e.preventDefault();n=(n+tabs.length)%tabs.length;set(tabs[n].getAttribute('data-t'),true,true)});
+window.addEventListener('popstate',function(){set((new URLSearchParams(location.search).get('topic')||'all').toLowerCase(),false,false)});
+window.SP_TOPIC_BOOST=JSON.parse(tl.getAttribute('data-boost'));set(d.getAttribute('data-sp-topic')||'all',false,false)})();</script>"""
+FEAT = json.load(open('search/featured-questions.json', encoding='utf8'))
+def topic_sets(l):
+    allq = FEAT.get(l) or (ST.IT_ALL if l == 'it' else FEAT['en'])
+    return [('all', ST.ALL[l], allq[:12])] + [(t['id'], t['label'][l], t['q'][l]) for t in ST.TOPICS]
+def chip(t, q, i):
+    pre = '' if t == 'all' else f'topic={t}&amp;'
+    return f'<a class="sp-q" data-t="{t}" href="?{pre}q={html.escape(__import__("urllib.parse").parse.quote(q))}" style="--i:{i}">{html.escape(q)}</a>'
+def zones(l):
+    z = ['', '', '', '']
+    for t, _, qs in topic_sets(l):
+        for i, q in enumerate(qs): z[i // 3] += chip(t, q, i)
+    return z
+def tabs(l):
+    pre = '' 
+    items = ''.join(f'<a role="tab" class="sp-tab" data-t="{t}" href="Search.html{"" if t == "all" else "?topic=" + t}" aria-selected="{"true" if t == "all" else "false"}" tabindex="{0 if t == "all" else -1}" aria-controls="sp-ring">{html.escape(lab)}</a>'
+                    for t, lab, _ in topic_sets(l))
+    boost = html.escape(json.dumps({t['id']: t['boost'] for t in ST.TOPICS}, separators=(',', ':')))
+    return f'<div class="sp-tabs" role="tablist" aria-label="{html.escape(ST.TAB_LABEL[l])}" data-boost="{boost}">{items}</div>'
 def grab(s, pat, default=''):
     m = re.search(pat, s, re.S); return m.group(1).strip() if m else default
 CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
@@ -25,29 +58,44 @@ CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
        '.spx-float{position:static!important;inset:auto!important;width:min(980px,100%);margin:0!important;padding:0!important;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important;pointer-events:auto!important}'
        '.spx-float .sp-track{display:flex!important;flex-wrap:wrap;justify-content:center;gap:.7rem;animation:none!important;transform:none!important;width:auto!important}'
        '.spx-float .sp-dup{display:none!important}'
-       '.sp-z .sp-q{position:static!important;inset:auto!important;transform:none;display:inline-flex;align-items:center;min-height:44px;width:min(250px,100%);min-height:64px;box-sizing:border-box;padding:.55rem 1rem;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.35);'
-       'border:1px solid rgba(143,211,255,.45);background:rgba(0,55,85,.55);color:#e8f4ff!important;font:500 .9rem/1.35 Montserrat,system-ui,sans-serif;text-decoration:none!important;text-align:start;'
-       'animation:spx-bob 9s ease-in-out infinite!important;will-change:transform;animation-delay:calc(var(--i,0) * -0.7s)!important;opacity:1!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}'
-       '.sp-z .sp-q:nth-child(3n+2){animation-duration:11s!important}.sp-z .sp-q:nth-child(3n){animation-duration:13s!important}'
-       '.sp-z .sp-q:hover,.sp-z .sp-q:focus-visible{border-color:#ffd54a;background:rgba(0,156,222,.35);animation-play-state:paused!important}'
-       '.sp-z .sp-q:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}'
-       '@keyframes spx-bob{0%,100%{transform:translate3d(0,0,0)}33%{transform:translate3d(3px,-4px,0)}66%{transform:translate3d(-3px,-2px,0)}}'
-       '@media (prefers-reduced-motion:reduce){.sp-z .sp-q{animation:none!important}}'
-       '.sp-ring{display:grid;width:min(1180px,100%);gap:1.1rem 1.4rem;align-items:center;justify-items:center;grid-template-columns:minmax(0,1fr) minmax(0,640px) minmax(0,1fr);grid-template-areas:"t t t" "l c r" "b b b"}'
+       # Oct 16 7:25 PM (user): "Liquid Glass" chips (blur + saturate, tinted, inner highlight, specular edge, static sheen) that
+       # orbit gently on small ellipses (transform only: no layout, no CLS). Same direction per zone + phase offsets so chips never
+       # meet each other; amplitude (8px) is below the ring gaps, so they never touch the bar or the tabs. Pause on hover/focus.
+       '.sp-z .sp-q{position:relative!important;inset:auto!important;transform:none;display:inline-flex;align-items:center;width:min(250px,100%);min-height:64px;box-sizing:border-box;padding:.6rem 1.05rem;border-radius:20px;overflow:hidden;isolation:isolate;'
+       'color:#f4faff!important;font:500 .9rem/1.35 Montserrat,system-ui,sans-serif;text-decoration:none!important;text-align:start;text-shadow:0 1px 2px rgba(0,20,40,.45);'
+       'background:linear-gradient(135deg,rgba(143,211,255,.24),rgba(0,156,222,.12) 45%,rgba(0,55,85,.30));border:1px solid rgba(255,255,255,.26);'
+       'box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(0,0,0,.28),inset 0 0 0 1px rgba(143,211,255,.10),0 10px 26px rgba(0,8,20,.40);'
+       '-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);'
+       'animation:spx-orbit 14s linear infinite!important;animation-delay:calc(var(--z,0) * -3.5s)!important;will-change:transform;opacity:1!important}'
+       '.sp-z .sp-q::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:radial-gradient(120% 70% at 18% 0%,rgba(255,255,255,.34),rgba(255,255,255,0) 55%),linear-gradient(115deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.10) 50%,rgba(255,255,255,0) 60%)}'
+       '.sp-z .sp-q::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;padding:1px;background:linear-gradient(160deg,rgba(255,255,255,.65),rgba(255,255,255,0) 35%,rgba(143,211,255,0) 65%,rgba(143,211,255,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}'
+       '@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.sp-z .sp-q{background:linear-gradient(135deg,#1d5f86,#0b3a57)}}'
+       '.sp-zt{--z:0}.sp-zr{--z:1}.sp-zb{--z:2}.sp-zl{--z:3}'
+       '.sp-z .sp-q:hover,.sp-z .sp-q:focus-visible{border-color:rgba(255,213,74,.9);animation-play-state:paused!important;background:linear-gradient(135deg,rgba(143,211,255,.34),rgba(0,156,222,.26) 45%,rgba(0,55,85,.36))}'
+       '.sp-z .sp-q:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}'
+       '@keyframes spx-orbit{0%{transform:translate3d(8px,0,0)}12.5%{transform:translate3d(5.7px,4.2px,0)}25%{transform:translate3d(0,6px,0)}37.5%{transform:translate3d(-5.7px,4.2px,0)}50%{transform:translate3d(-8px,0,0)}62.5%{transform:translate3d(-5.7px,-4.2px,0)}75%{transform:translate3d(0,-6px,0)}87.5%{transform:translate3d(5.7px,-4.2px,0)}100%{transform:translate3d(8px,0,0)}}'
+       '[dir=rtl] .sp-z .sp-q{animation-direction:reverse!important}'
+       '@media (prefers-reduced-motion:reduce){.sp-z .sp-q{animation:none!important;transform:none!important}}'
+       '.sp-ring{display:grid;width:min(1180px,100%);gap:1.6rem 2rem;align-items:center;justify-items:center;grid-template-columns:minmax(0,1fr) minmax(0,640px) minmax(0,1fr);grid-template-areas:"t t t" "l c r" "b b b"}'
        '.sp-ring .sp-search-form{grid-area:c}.sp-zt{grid-area:t}.sp-zl{grid-area:l}.sp-zr{grid-area:r}.sp-zb{grid-area:b}'
-       '.sp-z{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.7rem}.sp-zl,.sp-zr{flex-direction:column}'
+       '.sp-z{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.1rem 1.2rem}.sp-zl,.sp-zr{flex-direction:column}'
        
-       '@media (max-width:1099px){.sp-ring{grid-template-columns:minmax(0,1fr);grid-template-areas:"t" "l" "c" "r" "b"}.sp-zl,.sp-zr{flex-direction:row}.sp-ring .sp-search-form{width:min(640px,100%)}}'
+       '@media (max-width:1099px){.sp-z{gap:1.1rem .7rem}.sp-ring{grid-template-columns:minmax(0,1fr);grid-template-areas:"t" "l" "c" "r" "b"}.sp-zl,.sp-zr{flex-direction:row}.sp-ring .sp-search-form{width:min(640px,100%)}}'
        '.sp-stage:has(#results li) .sp-z{display:none!important}.sp-stage:has(#results li) .sp-ring{grid-template-areas:"c";grid-template-columns:minmax(0,1fr)}.sp-stage .sp-results-wrap{width:min(860px,100%);text-align:start}.sp-stage .sp-results-wrap:empty{display:none}'
        '.sp-stage .sp-status:empty,.sp-stage .search-mode:empty{display:none}'
        '.sp-credits{max-width:860px;margin:0 auto;padding:.4rem 1rem 1.2rem;text-align:center;font-size:.75rem;opacity:.85}.sp-credits p{margin:.2rem 0}'
        '.sp-mini-foot{text-align:center;font-size:.75rem;opacity:.8;padding:.4rem 1rem .8rem}.sp-mini-foot p{margin:0}.sp-mini-foot a{display:inline-block;min-height:24px;padding:2px 0}'
        'body.sp-search-page .sticky-help{display:none!important}.sp-stage{min-height:calc(100svh - 40px)}'
+       '.sp-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;max-width:min(980px,100%);margin:0 auto}'
+       '.sp-tab{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.1rem;border-radius:999px;border:1px solid rgba(143,211,255,.5);background:rgba(11,22,32,.7);color:#cfe9ff!important;font:600 .92rem/1.2 Montserrat,system-ui,sans-serif;text-decoration:none!important;white-space:nowrap;transition:background-color .2s,border-color .2s}'
+       '.sp-tab:hover{border-color:#8fd3ff;background:rgba(0,156,222,.2)}.sp-tab[aria-selected=true]{background:#009cde;border-color:#009cde;color:#fff!important;box-shadow:0 6px 18px rgba(0,156,222,.35)}'
+       '.sp-tab:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}'
+       '.sp-ring .sp-q{display:none!important}html:not([data-sp-topic]) .sp-ring .sp-q[data-t=all],html[data-sp-topic=all] .sp-q[data-t=all],html[data-sp-topic=aero] .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-q[data-t=physics]{display:inline-flex!important}'
        '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>')
 def build(l, s):
     i, j = s.find('<main id="main">'), s.find('</main>')
     m = s[i:j]
-    h1 = grab(m, r'<h1[^>]*>(.*?)</h1>'); lab = grab(m, r'<label[^>]*for="q"[^>]*>(.*?)</label>', h1)
+    h1 = grab(m, r'<h1[^>]*data-base="([^"]*)"') or grab(m, r'<h1[^>]*>(.*?)</h1>'); lab = grab(m, r'<label[^>]*for="q"[^>]*>(.*?)</label>', h1)
     ph = grab(m, r'<input[^>]*placeholder="([^"]*)"'); btn = grab(m, r'<button[^>]*class="sp-search-btn"[^>]*>(.*?)</button>')
     fl = grab(m, r'id="sp-float"[^>]*aria-label="([^"]*)"') or grab(m, r'aria-label="([^"]*)"[^>]*id="sp-float"')
     note = grab(m, r'<p[^>]*(?:sp-float-note|id="sp-note")[^>]*>(.*?)</p>')
@@ -55,15 +103,17 @@ def build(l, s):
     msg = grab(m, r'(<div[^>]*id="sp-msg"[^>]*>.*?</div>)'); credits = re.findall(r'<p class="search-credit[^"]*">.*?</p>', m, re.S)
     ex = grab(m, r'(<p class="sp-empty-title">.*?</ul>)')
     assert h1 and ph and btn and msg, (l, 'missing strings')
+    h1 = re.sub(r' · .*$', '', h1); Z = zones(l)
     main = ('<main id="main">\n' + CSS +
-            f'<section class="sp-stage" id="solution" aria-labelledby="sp-h1"><h1 id="sp-h1" class="sr-only-x">{h1}</h1>'
-            f'<div class="sp-ring"><div id="sp-float" class="spx-float sp-z sp-zt" role="group" aria-label="{fl}" aria-describedby="sp-note"></div>'
-            '<div class="sp-z sp-zl" role="group" aria-label="' + fl + '"></div>'
+            f'<section class="sp-stage" id="solution" aria-labelledby="sp-h1"><h1 id="sp-h1" class="sr-only-x" data-base="{h1}">{h1}</h1>'
+            + tabs(l) + TOPIC_HEAD +
+            f'<div class="sp-ring" id="sp-ring"><div id="sp-float" class="spx-float sp-z sp-zt" role="group" aria-label="{fl}" aria-describedby="sp-note">{Z[0]}</div>'
+            '<div class="sp-z sp-zl" role="group" aria-label="' + fl + '">' + Z[1] + '</div>'
             f'<form class="sp-search-form" role="search" action="Search.html" method="get"><label for="q" class="sr-only-x">{lab}</label>'
             f'<input id="q" name="q" type="search" placeholder="{ph}" autocomplete="off" enterkeyhint="search" aria-describedby="status sp-note">'
             f'<button type="submit" class="sp-search-btn">{btn}</button></form>'
-            '<div class="sp-z sp-zr" role="group" aria-label="' + fl + '"></div><div class="sp-z sp-zb" role="group" aria-label="' + fl + '"></div></div>'
-            f'<p id="sp-note" class="sr-only-x">{note}</p>' + RING_JS +
+            '<div class="sp-z sp-zr" role="group" aria-label="' + fl + '">' + Z[2] + '</div><div class="sp-z sp-zb" role="group" aria-label="' + fl + '">' + Z[3] + '</div></div>'
+            f'<p id="sp-note" class="sr-only-x">{note}</p>' + TOPIC_JS +
             f'<div class="sp-results-wrap"><p id="status" class="sp-status" aria-live="polite"></p><p id="search-mode" class="search-mode" aria-live="polite"></p>'
             f'<div id="sp-empty" class="sp-empty" hidden>{ex}</div><ol id="results" class="sp-results"></ol>'
             f'<button type="button" id="sp-more" class="sp-more" hidden>{more}</button><p id="sp-refine" class="sp-refine" hidden>{refine}</p>{msg}</div></section>\n'
@@ -77,7 +127,24 @@ def build(l, s):
     mini = (f'<footer class="sp-mini-foot" data-pagefind-ignore="all"><p class="sp-mini-foot-p">© 2026 Saving Planets · '
             f'<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> · <a href="{"Privacy.html" if l == "en" or os.path.exists(l + "/Privacy.html") else "../Privacy.html"}">{priv}</a></p></footer>')
     return out[:fm.start()] + mini + out[fm.end():]
+def tag_pages():
+    # Pagefind filter "topic" on every math/Learn/calculator page of a topic (all languages), so a topic tab can pull
+    # them to the top (search-ui.js runs a filtered search first). Marker is stripped by i18n-build/i18n-check normalize.
+    pages = {}
+    for t in ST.TOPICS:
+        for b in t['boost']: pages.setdefault(b, []).append(t['id'])
+    n = 0
+    for l in LANGS:
+        for b, ts in pages.items():
+            f = ('' if l == 'en' else l + '/') + b
+            if not os.path.exists(f): continue
+            s = open(f, encoding='utf8').read()
+            blk = '<!-- SPTOPIC:START -->' + ''.join(f'<meta data-pagefind-filter="topic[content]" content="{t}">' for t in ts) + '<!-- SPTOPIC:END -->'
+            s2 = re.sub(r'<!-- SPTOPIC:START -->.*?<!-- SPTOPIC:END -->', '', s, flags=re.S).replace('</head>', blk + '</head>', 1)
+            if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
+    print(f'build-search-page: topic tags on {n} pages')
 if __name__ == '__main__':
+    tag_pages()
     n = 0
     for l in LANGS:
         f = ('' if l == 'en' else l + '/') + 'Search.html'
