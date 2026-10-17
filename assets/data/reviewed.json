@@ -4,8 +4,12 @@
   "date": "2026-10-14"
  },
  "ALOS-4.html": {
-  "sig": "5511a8f4a527",
-  "date": "2026-10-12"
+  "sig": "e2e8fc059f11",
+  "date": "2026-10-16"
+ },
+ "ATLAS.html": {
+  "sig": "bea236cdbbe0",
+  "date": "2026-10-16"
  },
  "Aditya_L1.html": {
   "sig": "f8e8464f4b1b",
@@ -30,6 +34,14 @@
  "American_Rivers.html": {
   "sig": "a6c80227bb3a",
   "date": "2026-10-13"
+ },
+ "Argo.html": {
+  "sig": "98769bb6665a",
+  "date": "2026-10-16"
+ },
+ "Argos.html": {
+  "sig": "f50495bc8d7b",
+  "date": "2026-10-16"
  },
  "Artemis_II.html": {
   "sig": "92193a89b03e",
@@ -59,6 +71,10 @@
   "sig": "b39dad23e29e",
   "date": "2026-10-12"
  },
+ "CAMS.html": {
+  "sig": "d8971391ec48",
+  "date": "2026-10-16"
+ },
  "CO2M.html": {
   "sig": "a50f598ce4b1",
   "date": "2026-10-14"
@@ -66,6 +82,10 @@
  "Carruthers.html": {
   "sig": "3afd01bd7ed2",
   "date": "2026-10-11"
+ },
+ "Catalina_Sky_Survey.html": {
+  "sig": "4f2a9a7789ab",
+  "date": "2026-10-16"
  },
  "Chesapeake_Bay_Foundation.html": {
   "sig": "9eb173933471",
@@ -83,6 +103,14 @@
   "sig": "c8e374ad4388",
   "date": "2026-10-13"
  },
+ "Copernicus_EMS.html": {
+  "sig": "a872f17e8d70",
+  "date": "2026-10-16"
+ },
+ "Copernicus_Marine.html": {
+  "sig": "65394baf1741",
+  "date": "2026-10-16"
+ },
  "Coral_Gardeners.html": {
   "sig": "d1dec4cfb235",
   "date": "2026-10-14"
@@ -90,6 +118,10 @@
  "Coral_IVF.html": {
   "sig": "5dafc150076e",
   "date": "2026-10-13"
+ },
+ "Coral_Reef_Watch.html": {
+  "sig": "49e6bceb6554",
+  "date": "2026-10-16"
  },
  "Coral_Restoration_Foundation.html": {
   "sig": "86b583d76e80",
@@ -103,6 +135,10 @@
   "sig": "c938df91acd6",
   "date": "2026-10-15"
  },
+ "EFFIS.html": {
+  "sig": "2c1086f413de",
+  "date": "2026-10-16"
+ },
  "EMIT.html": {
   "sig": "d58f065c2519",
   "date": "2026-10-15"
@@ -110,6 +146,10 @@
  "EOS-06.html": {
   "sig": "66c4a5c00d23",
   "date": "2026-10-13"
+ },
+ "ESA_NEOCC.html": {
+  "sig": "98ab8871b6db",
+  "date": "2026-10-16"
  },
  "ESCAPADE.html": {
   "sig": "7e7be9f51fbd",
@@ -139,6 +179,10 @@
   "sig": "3ccce36ff4c2",
   "date": "2026-10-12"
  },
+ "FIRMS.html": {
+  "sig": "c6eb359cd947",
+  "date": "2026-10-16"
+ },
  "FLEX.html": {
   "sig": "b07f551fbaef",
   "date": "2026-10-12"
@@ -155,6 +199,10 @@
   "sig": "5da9569a7728",
   "date": "2026-10-15"
  },
+ "GLOBE_Program.html": {
+  "sig": "576fe8fcdab1",
+  "date": "2026-10-16"
+ },
  "GOES-19.html": {
   "sig": "5b66b83bc00b",
   "date": "2026-10-13"
@@ -166,6 +214,14 @@
  "GRACE-FO.html": {
   "sig": "ea7294711c91",
   "date": "2026-10-12"
+ },
+ "GSMaP.html": {
+  "sig": "c1f985b53260",
+  "date": "2026-10-16"
+ },
+ "GloFAS.html": {
+  "sig": "97c86150c45e",
+  "date": "2026-10-16"
  },
  "Global_Fishing_Watch.html": {
   "sig": "34960c63e746",
@@ -222,6 +278,14 @@
  "ISS_Water_Recovery.html": {
   "sig": "9ba33231f88e",
   "date": "2026-10-12"
+ },
+ "International_Charter.html": {
+  "sig": "55c54b25979c",
+  "date": "2026-10-16"
+ },
+ "JPSS.html": {
+  "sig": "6d888ab17bb3",
+  "date": "2026-10-16"
  },
  "Juice.html": {
   "sig": "cd06c6c84981",
@@ -347,6 +411,10 @@
   "sig": "c98e5b149706",
   "date": "2026-10-13"
  },
+ "OpenET.html": {
+  "sig": "9f2e77953f6a",
+  "date": "2026-10-16"
+ },
  "Orbital_Data_Centers.html": {
   "sig": "1f06e8a2f283",
   "date": "2026-10-12"
@@ -366,6 +434,10 @@
  "PUNCH.html": {
   "sig": "a39d4cca5b00",
   "date": "2026-10-12"
+ },
+ "Pan-STARRS.html": {
+  "sig": "c9756476b57f",
+  "date": "2026-10-16"
  },
  "Phytoplankton.html": {
   "sig": "aa718da5f2d6",
@@ -398,6 +470,10 @@
  "Psyche.html": {
   "sig": "b6a05421875f",
   "date": "2026-10-13"
+ },
+ "RCM.html": {
+  "sig": "1b755ff48cc1",
+  "date": "2026-10-16"
  },
  "Rainforest_Connection.html": {
   "sig": "4b8a7d6a3e3f",
@@ -516,8 +592,8 @@
   "date": "2026-10-13"
  },
  "Three_Shields.html": {
-  "sig": "5c3895342a62",
-  "date": "2026-10-12"
+  "sig": "e20f840df5b7",
+  "date": "2026-10-16"
  },
  "Three_Trees.html": {
   "sig": "9f0ef37c0f62",
@@ -538,6 +614,10 @@
  "Tsunami_Early_Warning.html": {
   "sig": "1bdff9584ccf",
   "date": "2026-10-15"
+ },
+ "UNEP_MARS.html": {
+  "sig": "df3df8d61004",
+  "date": "2026-10-16"
  },
  "US_Deorbit_Vehicle.html": {
   "sig": "6ac735449403",
