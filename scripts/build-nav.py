@@ -79,7 +79,7 @@ BRAND_RE = re.compile(r'<a class="(?:brand-word|spn-brand)" href="([^"]*)">(.*?)
 CSS = r"""
 /* SPNAV:START */
 /* Header nav v2 (scripts/build-nav.py). Colours: site navy/dark tokens (#003755, #071018, #0f1b26), accent #009cde / #8fd3ff; Montserrat. */
-html body nav#topnav{position:fixed !important;top:0;left:0;right:0;z-index:1000;height:auto !important;background:transparent !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;box-shadow:none !important;border:0 !important;transition:background-color .3s ease,box-shadow .3s ease !important}
+/* Oct 16: Learn 'On this page' TOC (.lw nav) was caught by the old body.toc-sub nav{position:fixed} rule and covered the hero */html body .lw nav:not(#topnav){position:static !important;background:none;box-shadow:none;z-index:auto;-webkit-backdrop-filter:none;backdrop-filter:none;height:auto}html body nav#topnav{position:fixed !important;top:0;left:0;right:0;z-index:1000;height:auto !important;background:transparent !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;box-shadow:none !important;border:0 !important;transition:background-color .3s ease,box-shadow .3s ease !important}
 html body nav#topnav::before{content:"";position:absolute;inset:0 0 -28px 0;background:linear-gradient(180deg,rgba(0,20,40,.72),rgba(0,20,40,.35) 70%,rgba(0,20,40,0));pointer-events:none;transition:opacity .3s ease;z-index:-1}
 html body nav#topnav.spn-solid,html body nav#topnav.spn-open{background:rgba(7,16,24,.96) !important;box-shadow:0 6px 24px rgba(0,0,0,.35) !important}
 html body nav#topnav.spn-open{z-index:1200 !important}

@@ -32,6 +32,7 @@ const EV = {
   learn: { track: ['orbit', 'aero', 'phys', 'all'], kind: ['hub', 'guide', 'math', 'lab'] },
   practice: { track: ['orbit', 'aero', 'phys'], result: ['attempt', 'correct'], topic: /^[a-z0-9-]{1,32}$/ },
   newsletter: {},
+  share: { kind: ['classroom', 'copy'], page: ['learn', 'guide', 'math', 'lab', 'teachers'] },
   partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'] },
 };
 function evWrite(env, name, lang, a = '', b = '', c = '') {

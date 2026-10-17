@@ -369,7 +369,7 @@ window.addEventListener('pageshow',draw)})();
   var URL_='https://si-helper.chambersbryank.workers.dev/e',L=(D.documentElement.getAttribute('lang')||'en').slice(0,2),Q=[],once={};
   function flush(){if(!Q.length||!N.sendBeacon)return;var b=JSON.stringify({l:L,e:Q.splice(0,20)});try{N.sendBeacon(URL_,new Blob([b],{type:'text/plain'}))}catch(e){}}
   function add(o,key){if(key){if(once[key])return;once[key]=1}Q.push(o);if(Q.length>=10)flush()}
-  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'})};
+  W.spTrack=function(n,p){if(n==='newsletter_signup')add({n:'newsletter'});if(n==='share'&&p)add({n:'share',kind:p.kind,page:p.page})};
   D.addEventListener('visibilitychange',function(){if(D.visibilityState==='hidden')flush()});
   W.addEventListener('pagehide',flush);
   var pg=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''),m=/^(Orbits?|Aero|Physics)_(Guide|Math|Lab)$/.exec(pg);
@@ -386,28 +386,7 @@ window.addEventListener('pageshow',draw)})();
     var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
     add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link'});flush()},true);
 })();
-/* SPEV:END */
-
-/* UX-OCT15:START */
-(function(){
-  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
-  var f=document.querySelector('.sol-filters');if(!f)return;
-  var L=JSON.parse(f.getAttribute('data-i18n'));
-  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
-  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
-    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
-    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
-  var dom='all',hub='all',sel=f.querySelector('select');
-  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
-    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
-  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
-  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
-  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
-  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
-})();
-/* UX-OCT15:END */
-/* SPNAV:START */
+/* SPEV:END *//* SPNAV:START */
 (function(){var n=document.getElementById('topnav');if(!n||!n.querySelector('.spn'))return;
 var tg=n.querySelector('.spn-toggle'),mq=window.matchMedia('(min-width:992px)'),hv=window.matchMedia('(hover:hover) and (pointer:fine)');
 var dds=[].slice.call(n.querySelectorAll('.spn-dd'));
@@ -431,3 +410,23 @@ var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.scrol
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
 })();
 /* SPNAV:END */
+
+/* UX-OCT15:START */
+(function(){
+  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  var f=document.querySelector('.sol-filters');if(!f)return;
+  var L=JSON.parse(f.getAttribute('data-i18n'));
+  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
+  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
+    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
+    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
+  var dom='all',hub='all',sel=f.querySelector('select');
+  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
+    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
+  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
+  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
+})();
+/* UX-OCT15:END */

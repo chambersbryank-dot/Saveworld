@@ -18,6 +18,7 @@ SECTIONS = [
  ('Practice problems (attempts / correct)', "SELECT blob3 AS track, blob5 AS topic, blob4 AS result, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='practice' AND {w} GROUP BY track, topic, result ORDER BY track, topic, result"),
  ('SI Helper questions by outcome', "SELECT blob3 AS outcome, blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='si' AND {w} GROUP BY outcome, lang ORDER BY n DESC"),
  ('Newsletter sign-ups (successful submits)', "SELECT blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='newsletter' AND {w} GROUP BY lang ORDER BY n DESC"),
+ ('Share buttons (Learn and Teachers pages)', "SELECT blob3 AS kind, blob4 AS page, blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='share' AND {w} GROUP BY kind, page, lang ORDER BY n DESC"),
  ('Ways to Help: outbound partner clicks', "SELECT blob3 AS partner, blob4 AS kind, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='partner' AND {w} GROUP BY partner, kind ORDER BY n DESC LIMIT 50"),
 ]
 lines = [f'# Saving Planets events: last {days} days (generated {datetime.datetime.now():%Y-%m-%d %H:%M} HST)', '',

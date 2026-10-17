@@ -61,6 +61,7 @@ python3 scripts/build-events.py         # Oct 16: privacy-safe aggregate event c
 python3 scripts/build-analytics.py      # Oct 16: again after the late generators (Cloudflare beacon on every page, no GA, Privacy/About analytics text)
 python3 scripts/build-report-link.py    # Oct 16: Report a correction footer link (all langs) -> on-site form (Corrections.html#report)
 python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=license, JSON-LD license, About "Use & licence" (all langs)
+python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-audit.py | tail -3
