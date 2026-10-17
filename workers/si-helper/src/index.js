@@ -68,7 +68,7 @@ export default {
       const r = await env.AI.run('@cf/openai/gpt-oss-120b', { messages: [{ role: 'system', content: sys }, { role: 'user', content: q }], max_tokens: 900, temperature: 0.2, reasoning: { effort: 'low' } }); used += neurons(r);
       let ans = String((r.choices && r.choices[0] && r.choices[0].message && r.choices[0].message.content) || r.response || '').trim();
       if (!ans || /NO_ANSWER/.test(ans)) { await settle(); return say('none'); }
-      ans = ans.replace(/[*#`]+/g, '').slice(0, 1500);
+      ans = ans.replace(/\u3010\s*(\d+)[^\u3011]*\u3011/g, '[$1]').replace(/[*#`]+/g, '').slice(0, 1500); // normalize model-style 【1†L9】 citations to [1]
       const g2 = await env.AI.run('@cf/meta/llama-guard-3-8b', { messages: [{ role: 'user', content: q }, { role: 'assistant', content: ans }], max_tokens: 16 }); used += neurons(g2);
       await settle();
       if (unsafe(g2)) return say('unsafe');
