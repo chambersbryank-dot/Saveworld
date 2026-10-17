@@ -28,4 +28,7 @@ for title, sql in SECTIONS:
     if not rows: lines += ['(none)', '']; continue
     cols = list(rows[0].keys()); lines += ['| ' + ' | '.join(cols) + ' |', '|' + '---|' * len(cols)]
     lines += ['| ' + ' | '.join(str(r[c]) for c in cols) + ' |' for r in rows] + ['']
+try:  # Oct 16: Cloudflare R2 media usage vs free tier (scripts/r2_usage.py)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import r2_usage; lines += ['', r2_usage.section()]
+except Exception as e: lines += ['', f'## Cloudflare R2 usage', '', f'(unavailable: {e})', '']
 os.makedirs(os.path.dirname(out), exist_ok=True); open(out, 'w').write('\n'.join(lines)); print(out)

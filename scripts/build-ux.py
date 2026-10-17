@@ -315,7 +315,7 @@ def page_pass(p, l, n):
             if 'preload=' not in tag: tag = tag.replace('<video', '<video preload="none"', 1)
             srcs = re.findall(r'<source[^>]*>', tag)
             if len(srcs) >= 2:
-                full = next((x for x in srcs if 'v3.mp4' in x and '720' not in x), None)
+                full = next((x for x in srcs if 'about-v3' in x and '720' not in x), None)
                 small = next((x for x in srcs if '720' in x), None)
                 if full and small and tag.find(small) > tag.find(full):
                     tag = tag.replace(full, '@@FULL@@', 1).replace(small, full, 1).replace('@@FULL@@', small, 1)

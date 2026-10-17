@@ -1,0 +1,82 @@
+{
+ "videos/artemis-ii-farthest.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-ii-farthest.ddc8c5d0d9b8.mp4",
+  "key": "videos/artemis-ii-farthest.ddc8c5d0d9b8.mp4",
+  "bytes": 5089923,
+  "sha256": "ddc8c5d0d9b856cb5550cec279ecdca4c4af23bf1da1f4c38507ea41ead96452",
+  "type": "video/mp4",
+  "width": 1280,
+  "height": 548,
+  "duration": 15.04
+ },
+ "videos/grace-fo-satellites.mp4": {
+  "url": "https://media.savingplanets.com/videos/grace-fo-satellites.64086a1767a2.mp4",
+  "key": "videos/grace-fo-satellites.64086a1767a2.mp4",
+  "bytes": 7894311,
+  "sha256": "64086a1767a2cdc969dd5b5ecacd4e6ce899a1d3a1f8e97c83d6950d9813df11",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 968,
+  "duration": 16.47
+ },
+ "videos/great-bubble-barrier.mp4": {
+  "url": "https://media.savingplanets.com/videos/great-bubble-barrier.10dbbfef77d1.mp4",
+  "key": "videos/great-bubble-barrier.10dbbfef77d1.mp4",
+  "bytes": 14421673,
+  "sha256": "10dbbfef77d117995f23201ffd921a8ffb2fd578e1dd6ab4b2e1339d7ce36f3e",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 810,
+  "duration": 14.72
+ },
+ "videos/hero-loop.mp4": {
+  "url": "https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4",
+  "key": "videos/hero-loop.97191e628115.mp4",
+  "bytes": 1129578,
+  "sha256": "97191e6281156b458fb0e77766feba102adb8ecc3e2574f274de65a42957c189",
+  "type": "video/mp4",
+  "width": 1280,
+  "height": 546,
+  "duration": 7.38
+ },
+ "videos/life-terra-trees.mp4": {
+  "url": "https://media.savingplanets.com/videos/life-terra-trees.a08cc05f9dd2.mp4",
+  "key": "videos/life-terra-trees.a08cc05f9dd2.mp4",
+  "bytes": 16928861,
+  "sha256": "a08cc05f9dd2c4daa5630ccd0b80a67b7c7b1079feaba0a9bcd059f75abc8764",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 794,
+  "duration": 22.6
+ },
+ "videos/savingplanets-about-v3-720.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-about-v3-720.a27f8fded797.mp4",
+  "key": "videos/savingplanets-about-v3-720.a27f8fded797.mp4",
+  "bytes": 16665964,
+  "sha256": "a27f8fded79741ff727eb4ae1a22196c36350b54cea9904640101026307f21fc",
+  "type": "video/mp4",
+  "width": 720,
+  "height": 1280,
+  "duration": 70.0
+ },
+ "videos/savingplanets-about-v3.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-about-v3.8d75c14c37d4.mp4",
+  "key": "videos/savingplanets-about-v3.8d75c14c37d4.mp4",
+  "bytes": 43747379,
+  "sha256": "8d75c14c37d4164989ecc2b8736c324b0549efadc00fde2e9e26b110b19e93ab",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 70.0
+ },
+ "videos/savingplanets-ad-v2.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-ad-v2.222b8efcdd78.mp4",
+  "key": "videos/savingplanets-ad-v2.222b8efcdd78.mp4",
+  "bytes": 17205248,
+  "sha256": "222b8efcdd78895ff8991ccab6cc26ba1d0c1ee17f270dc7f24b415118a2fd12",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 78.25
+ }
+}

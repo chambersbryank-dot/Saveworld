@@ -3,10 +3,11 @@
 Idempotent: each block lives between <!-- NAME:START --> / <!-- NAME:END --> markers.
 Run, then: python3 scripts/i18n-build.py && python3 scripts/i18n-sitemap.py && python3 scripts/seo-audit.py
 Run weekly (or any time) to refresh the Solution of the Week static fallback."""
-import json, re, subprocess, html, datetime, os
+import json, re, subprocess, html, datetime, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 CAP = 'Created by SI and Biological SI Partner.'
+sys.path.insert(0, os.path.join(ROOT, 'scripts')); import media as MEDIA  # Oct 16: videos served from R2 (media.savingplanets.com)
 
 VIDEOS = {  # page: (file, heading, anchor regex to insert AFTER)
   'Great_Bubble_Barrier.html': ('great-bubble-barrier', 'Watch: A Wall of Bubbles Stopping Plastic'),
@@ -34,10 +35,10 @@ def put(src, name, inner, after_re):
   return src[:m.end()] + '\n' + b + src[m.end():]
 
 def video_html(slug, heading):
-  w, h = dims(f'assets/videos/{slug}.mp4')
+  w, h = MEDIA.dims(f'{slug}.mp4'); u = MEDIA.vurl(f'{slug}.mp4')
   return (f'<section class="sp-video" id="video" aria-labelledby="video-title"><h2 id="video-title">{html.escape(heading)}</h2>'
     f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/{slug}.jpg" width="{w}" height="{h}">'
-    f'<source src="assets/videos/{slug}.mp4" type="video/mp4"><a href="assets/videos/{slug}.mp4">Download the video</a></video>'
+    f'<source src="{u}" type="video/mp4"><a href="{u}">Download the video</a></video>'
     f'<figcaption class="photo-credit">{CAP}</figcaption></figure></section>')
 
 for page, (slug, heading) in VIDEOS.items():
@@ -54,10 +55,10 @@ AD_CAP = f'A 70-second tour: {_N} real solutions, free lesson plans, the Kids Pl
 s = open('About.html', encoding='utf-8').read()
 s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
-w, h = dims('assets/videos/savingplanets-about-v3.mp4')
+w, h = MEDIA.dims('savingplanets-about-v3.mp4'); U = MEDIA.vurl('savingplanets-about-v3.mp4'); U7 = MEDIA.vurl('savingplanets-about-v3-720.mp4')
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
   f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v3.jpg" width="{w}" height="{h}">'
-  '<source src="assets/videos/savingplanets-about-v3.mp4" type="video/mp4"><source src="assets/videos/savingplanets-about-v3-720.mp4" type="video/mp4"><a href="assets/videos/savingplanets-about-v3.mp4">Download the video</a></video>'
+  f'<source src="{U}" type="video/mp4"><source src="{U7}" type="video/mp4"><a href="{U}">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
 s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.

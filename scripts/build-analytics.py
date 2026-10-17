@@ -52,6 +52,14 @@ try:
     import sys; sys.path.insert(0, str(ROOT / 'scripts')); import events_text as _EV; EXTRA = _EV.PRIV_P
 except Exception: pass
 
+# Oct 16 2026: videos moved to Cloudflare R2 at media.savingplanets.com (no cookies). Listed under Hosting and Contact (s6).
+MEDIA_P = {
+ 'en': 'Videos load from media.savingplanets.com, our own Cloudflare R2 storage. It sets no cookies; like any web host, Cloudflare may keep standard server logs such as IP addresses for security.',
+ 'fr': 'Les vidéos sont chargées depuis media.savingplanets.com, notre propre stockage Cloudflare R2. Il ne dépose aucun cookie ; comme tout hébergeur, Cloudflare peut conserver des journaux serveur standard, comme les adresses IP, pour la sécurité.',
+ 'es': 'Los vídeos se cargan desde media.savingplanets.com, nuestro propio almacenamiento en Cloudflare R2. No usa cookies; como cualquier alojamiento web, Cloudflare puede guardar registros estándar del servidor, como direcciones IP, por seguridad.',
+ 'ar': 'تُحمَّل مقاطع الفيديو من media.savingplanets.com، وهي مساحة التخزين الخاصة بنا على Cloudflare R2. لا تضع أي ملفات تعريف ارتباط، وقد تحتفظ Cloudflare، مثل أي جهة استضافة، بسجلات خادم عادية مثل عناوين IP لأغراض الأمان.',
+ 'it': 'I video vengono caricati da media.savingplanets.com, il nostro spazio di archiviazione su Cloudflare R2. Non imposta cookie; come qualsiasi servizio di hosting, Cloudflare può conservare registri server standard, come gli indirizzi IP, per la sicurezza.'}
+
 def privacy(p, l):
     s = p.read_text(encoding='utf-8'); t = PRIV[l]
     paras = ''.join(f'<p>{E(x)}</p>' for x in t['p'] + ([EXTRA[l]] if l in EXTRA else []))
@@ -65,6 +73,8 @@ def privacy(p, l):
     except Exception: rp = ''
     s = re.sub(r'<p class="rf-priv">.*?</p>', '', s, flags=re.S)
     if rp: s = re.sub(r'(<section class="five-ws" id="s6">.*?)(</section>)', lambda m: m.group(1) + f'<p class="rf-priv">{E(rp)}</p>' + m.group(2), s, count=1, flags=re.S)
+    s = re.sub(r'<p class="media-priv">.*?</p>', '', s, flags=re.S)
+    if l in MEDIA_P: s = re.sub(r'(<section class="five-ws" id="s6">.*?)(</section>)', lambda m: m.group(1) + f'<p class="media-priv">{E(MEDIA_P[l])}</p>' + m.group(2), s, count=1, flags=re.S)
     s = re.sub(r'<p class="trust-updated">[^<]*</p>', f'<p class="trust-updated">{E(t["up"])}</p>', s, count=1)
     return s
 

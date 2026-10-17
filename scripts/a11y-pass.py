@@ -95,7 +95,7 @@ def transcript(v, l):
 
 def videos(s, l, prefix):
     def tr(m):
-        blk = m.group(0); v = re.search(r'assets/videos/([\w-]+)\.mp4', blk)
+        blk = m.group(0); v = re.search(r'(?:assets|media\.savingplanets\.com)/videos/([\w-]+?)(?:\.[0-9a-f]{8,16})?\.mp4', blk)
         if not v or v.group(1) not in D['videos']: return blk
         v = v.group(1); blk = re.sub(r'<track kind="captions"[^>]*>', '', blk)
         if 'hero-video' in blk: return blk  # silent decorative loop: no visible captions
@@ -104,7 +104,7 @@ def videos(s, l, prefix):
     s = re.sub(r'<video\b.*?</video>', tr, s, flags=re.S)
     s = re.sub(r'<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->', '', s, flags=re.S)
     def add(m):
-        v = re.search(r'assets/videos/([\w-]+)\.mp4', m.group(0))
+        v = re.search(r'(?:assets|media\.savingplanets\.com)/videos/([\w-]+?)(?:\.[0-9a-f]{8,16})?\.mp4', m.group(0))
         if not v or 'hero-video' in m.group(0) or v.group(1) not in D['videos']: return m.group(0)
         return m.group(0) + transcript(v.group(1), l)
     return re.sub(r'<figure class="sp-video-fig">.*?</figure>', add, s, flags=re.S)

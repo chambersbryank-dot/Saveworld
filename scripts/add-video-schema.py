@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Oct 14 2026: schema.org VideoObject JSON-LD (with transcript) for every page that has a <!-- VIDEO:START --> block, all langs. Idempotent."""
-import re, json, os, subprocess, html, glob
+import re, json, os, subprocess, html, glob, sys
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, 'scripts'); import media as MEDIA  # Oct 16: videos on R2; duration from the manifest, upload date from git history of the original path
 SITE = 'https://www.savingplanets.com/'
 def clean(s): return html.unescape(re.sub(r'<[^>]+>', ' ', s)).split() and ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', s)).split())
 def upload(mp4):
@@ -27,10 +28,11 @@ for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
     desc = re.search(r'<meta name="description" content="([^"]*)"', s)
     name = re.sub(r'^[^:：]{2,12}[:：]\s*', '', clean(h2.group(1)))
     ld = {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': name, 'description': html.unescape(desc.group(1)) if desc else name,
-          'contentUrl': SITE + src.group(1), 'inLanguage': lang, 'isFamilyFriendly': True,
+          'contentUrl': src.group(1) if src.group(1).startswith('http') else SITE + src.group(1), 'inLanguage': lang, 'isFamilyFriendly': True,
           'publisher': {'@type': 'Organization', 'name': 'Saving Planets', 'url': SITE.rstrip('/')}, 'creditText': 'Created by SI and Biological SI Partner'}
     if poster: ld['thumbnailUrl'] = SITE + poster.group(1)
-    u = upload(src.group(1)); d = dur(src.group(1))
+    e = MEDIA.by_url(src.group(1)); u = upload(MEDIA.orig_path(src.group(1)))
+    d = f"PT{int(e['duration'] // 60)}M{int(round(e['duration'] % 60))}S" if e and e.get('duration') else dur(src.group(1))
     if u: ld['uploadDate'] = u
     if d: ld['duration'] = d
     if tr: ld['transcript'] = clean(re.sub(r'<summary>.*?</summary>', '', tr.group(1), flags=re.S))

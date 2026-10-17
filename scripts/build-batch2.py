@@ -15,9 +15,9 @@ def put(src, name, inner, after_re):
   if not m: raise SystemExit(f'anchor not found for {name}')
   return src[:m.end()] + b + src[m.end():]
 
-# 1) Hero video (index only)
+# 1) Hero video (index only). Oct 16: video served from R2 (see assets/data/media-manifest.json); poster stays local
 HERO = ('<div class="hero-media" aria-hidden="true"><video class="hero-video" autoplay muted loop playsinline preload="metadata" '
-        'poster="assets/videos/hero-loop.jpg" width="1280" height="546"><source src="assets/videos/hero-loop.mp4" type="video/mp4"></video>'
+        'poster="assets/videos/hero-loop.jpg" width="1280" height="546"><source src="https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4" type="video/mp4"></video>'
         '<div class="hero-overlay"></div></div><p class="hero-video-credit">Created by SI and Biological SI Partner.</p>')
 s = open('index.html', encoding='utf8').read()
 s = put(s, 'HERO-VIDEO', HERO, r'<section class="hero space-hero">')
