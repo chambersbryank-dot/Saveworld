@@ -123,7 +123,8 @@ def build():
         secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div>{hub_summary(f, name)}</section>')
     desc = f'Every Saving Planets solution in one place: {total} sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites.'
     # head: retarget Contact -> Solutions
-    h = head.replace('Contact.html', OUT).replace('<title>Contact | Saving Planets</title>', '<title>Saving Planets Solutions | Saving Planets</title>')
+    h = head.replace('Contact.html', OUT)  # Oct 16: any Contact title (seo-meta override changed it)
+    h = re.sub(r'<title>[^<]*</title>', lambda _m: '<title>Saving Planets Solutions | Saving Planets</title>', h, count=1)
     h = re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*"', lambda m: m.group(1) + esc(desc) + '"', h)
     h = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*"', r'\1Saving Planets Solutions | Saving Planets"', h)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)

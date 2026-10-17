@@ -42,6 +42,36 @@
    ],
    "strip": "orbit"
   },
+  "ATLAS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 20.708,
+     "lng": -156.257,
+     "label": "ATLAS telescope, Haleakalā, Maui",
+     "basis": "page"
+    },
+    {
+     "lat": 19.536,
+     "lng": -155.576,
+     "label": "ATLAS telescope, Maunaloa, Hawaiʻi Island",
+     "basis": "page"
+    },
+    {
+     "lat": -32.38,
+     "lng": 20.81,
+     "label": "ATLAS telescope, Sutherland, South Africa",
+     "basis": "page"
+    },
+    {
+     "lat": -30.47,
+     "lng": -70.76,
+     "label": "ATLAS telescope, El Sauce Observatory, Chile",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
   "Aditya_L1.html": {
    "status": "active",
    "pins": [
@@ -109,6 +139,30 @@
      "basis": "hq"
     }
    ]
+  },
+  "Argo.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 32.866,
+     "lng": -117.254,
+     "label": "Argo Program Office, Scripps Institution of Oceanography, San Diego",
+     "basis": "hq"
+    }
+   ],
+   "strip": "world"
+  },
+  "Argos.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.852,
+     "lng": -76.934,
+     "label": "NOAA Office of Satellite and Product Operations, Suitland, Maryland",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
   },
   "Artemis_II.html": {
    "status": "active",
@@ -185,6 +239,18 @@
    ],
    "strip": "orbit"
   },
+  "CAMS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 51.42,
+     "lng": -0.95,
+     "label": "ECMWF, Reading, United Kingdom",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
   "CO2M.html": {
    "status": "upcoming",
    "pins": [
@@ -204,6 +270,18 @@
      "lat": 40.102,
      "lng": -88.227,
      "label": "University of Illinois Urbana-Champaign (mission lead)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Catalina_Sky_Survey.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 32.233,
+     "lng": -110.95,
+     "label": "Lunar and Planetary Laboratory, University of Arizona, Tucson",
      "basis": "hq"
     }
    ],
@@ -267,6 +345,23 @@
    ],
    "strip": "orbit"
   },
+  "Copernicus_EMS.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "Copernicus_Marine.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.56,
+     "lng": 1.48,
+     "label": "Mercator Ocean International, Toulouse, France",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
   "Coral_Gardeners.html": {
    "status": "active",
    "pins": [
@@ -300,6 +395,18 @@
      "basis": "page"
     }
    ]
+  },
+  "Coral_Reef_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.972,
+     "lng": -76.923,
+     "label": "NOAA Center for Weather and Climate Prediction, College Park, Maryland",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
   },
   "Coral_Restoration_Foundation.html": {
    "status": "active",
@@ -336,6 +443,18 @@
    ],
    "strip": "orbit"
   },
+  "EFFIS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 45.81,
+     "lng": 8.63,
+     "label": "European Commission Joint Research Centre, Ispra, Italy",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
   "EMIT.html": {
    "status": "active",
    "pins": [
@@ -355,6 +474,18 @@
      "lat": 12.971,
      "lng": 77.594,
      "label": "ISRO headquarters, Bengaluru, India (operating agency)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "ESA_NEOCC.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.827,
+     "lng": 12.674,
+     "label": "ESA ESRIN, Frascati, Italy",
      "basis": "hq"
     }
    ],
@@ -442,6 +573,11 @@
    ],
    "strip": "orbit"
   },
+  "FIRMS.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
   "FLEX.html": {
    "status": "active",
    "pins": [
@@ -501,6 +637,11 @@
    ],
    "strip": "orbit"
   },
+  "GLOBE_Program.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
+  },
   "GOES-19.html": {
    "status": "active",
    "pins": [
@@ -536,6 +677,16 @@
     }
    ],
    "strip": "orbit"
+  },
+  "GSMaP.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "GloFAS.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "world"
   },
   "Global_Fishing_Watch.html": {
    "status": "active",
@@ -767,6 +918,16 @@
      "basis": "hq"
     }
    ],
+   "strip": "orbit"
+  },
+  "International_Charter.html": {
+   "status": "active",
+   "pins": [],
+   "strip": "orbit"
+  },
+  "JPSS.html": {
+   "status": "active",
+   "pins": [],
    "strip": "orbit"
   },
   "Juice.html": {
@@ -1154,6 +1315,18 @@
     }
    ]
   },
+  "OpenET.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 40.76,
+     "lng": -111.89,
+     "label": "OpenET, Salt Lake City, Utah",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
   "Orbital_Data_Centers.html": {
    "status": "active",
    "pins": [],
@@ -1203,6 +1376,18 @@
      "lng": -105.25,
      "label": "Southwest Research Institute, Boulder, Colorado (mission lead)",
      "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Pan-STARRS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 20.708,
+     "lng": -156.257,
+     "label": "Pan-STARRS telescopes, Haleakalā, Maui",
+     "basis": "page"
     }
    ],
    "strip": "orbit"
@@ -1316,6 +1501,18 @@
      "lat": 34.201,
      "lng": -118.172,
      "label": "NASA JPL, Pasadena, California (mission management)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "RCM.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 45.52,
+     "lng": -73.39,
+     "label": "CSA Satellite Operations Control Centre, Longueuil, Quebec",
      "basis": "hq"
     }
    ],
@@ -1779,6 +1976,18 @@
     }
    ],
    "strip": "world"
+  },
+  "UNEP_MARS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -1.233,
+     "lng": 36.817,
+     "label": "UNEP headquarters, Nairobi, Kenya",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
   },
   "US_Deorbit_Vehicle.html": {
    "status": "upcoming",

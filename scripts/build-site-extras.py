@@ -60,7 +60,8 @@ def sitemap_page(hl):
     footer = re.sub(r'<script[^>]*></script>', '', re.search(r'(<footer>.*?</footer>)', b, re.S).group(1))
     jsv = re.search(r'site\.js\?v=([0-9a-z]+)', b).group(1)
     desc = 'Every hub and solution on Saving Planets, in one list.'
-    h = head.replace('Contact.html', 'Sitemap.html').replace('<title>Contact | Saving Planets</title>', '<title>Site Map | Saving Planets</title>')
+    h = head.replace('Contact.html', 'Sitemap.html')  # Oct 16: any Contact title (seo-meta override changed it)
+    h = re.sub(r'<title>[^<]*</title>', lambda _m: '<title>Site Map | Saving Planets</title>', h, count=1)
     h = re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*"', lambda m: m.group(1) + desc + '"', h)
     h = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*"', r'\1Site Map | Saving Planets"', h)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)

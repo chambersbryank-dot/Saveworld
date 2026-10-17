@@ -289,5 +289,105 @@
   "Dragonfly is like a giant drone with eight rotors.",
   "It will fly to Titan, a moon of Saturn with a thick, hazy sky.",
   "It will look for the kinds of chemistry that came before life on Earth."
+ ],
+ "International_Charter.html": [
+  "When a big flood or earthquake happens, rescuers need a map fast.",
+  "Space agencies around the world agree to point their satellites at the disaster.",
+  "They give the pictures away for free, so helpers know where people need them."
+ ],
+ "Copernicus_EMS.html": [
+  "When a disaster happens, helpers need to know which roads and houses are damaged.",
+  "Copernicus EMS uses satellite pictures to draw those maps quickly.",
+  "It works day and night and has helped more than 120 countries."
+ ],
+ "FIRMS.html": [
+  "Satellites can feel the heat of a fire from space.",
+  "FIRMS puts those hot spots on a free map within a few hours.",
+  "Firefighters and farmers can even get an email when a fire starts nearby."
+ ],
+ "UNEP_MARS.html": [
+  "Methane is a gas that heats the planet, and big leaks can be seen from space.",
+  "The United Nations watches satellite data and tells countries and companies about leaks.",
+  "When they fix a leak, the air gets cleaner and the planet heats up less."
+ ],
+ "GLOBE_Program.html": [
+  "GLOBE lets kids and grown-ups do real science outside.",
+  "You look at clouds, trees or soil and send what you see with an app.",
+  "Scientists use your measurements to understand our planet."
+ ],
+ "Argo.html": [
+  "Argo floats are robots that sink deep into the ocean and come back up.",
+  "On the way they measure how warm and how salty the water is.",
+  "They send the numbers to a satellite, and anyone can use them for free."
+ ],
+ "Argos.html": [
+  "Scientists put a tiny radio tag on a turtle, bird or whale.",
+  "Satellites pick up the tag's signal and work out where the animal is.",
+  "Knowing where animals travel helps people protect them."
+ ],
+ "Coral_Reef_Watch.html": [
+  "Corals are tiny animals that build reefs, and too much heat makes them turn white.",
+  "NOAA satellites check the ocean's temperature every day.",
+  "Reef managers use the warnings to protect corals before it is too late."
+ ],
+ "RCM.html": [
+  "RCM is three satellites that use radar, like a bat uses sound.",
+  "Radar works in the dark and sees through clouds and smoke.",
+  "It helps ships find safe paths through ice and helps after floods."
+ ],
+ "ATLAS.html": [
+  "ATLAS is four robot telescopes that scan the night sky.",
+  "They look for space rocks that come close to Earth.",
+  "An early warning gives people time to get ready or move away."
+ ],
+ "Pan-STARRS.html": [
+  "Pan-STARRS is two big telescopes on a mountain in Maui.",
+  "Their giant cameras photograph the sky to find moving space rocks.",
+  "Finding them early keeps Earth safe."
+ ],
+ "Catalina_Sky_Survey.html": [
+  "Catalina is a team in Arizona that hunts for space rocks every clear night.",
+  "They have found more near-Earth asteroids than anyone else.",
+  "They even spotted a small one hours before it burned up over Africa."
+ ],
+ "ESA_NEOCC.html": [
+  "Some asteroids pass near Earth, and scientists need to know where they will go.",
+  "ESA's centre in Italy collects telescope data and works out their paths.",
+  "If an asteroid ever looks dangerous, they warn emergency teams."
+ ],
+ "EFFIS.html": [
+  "EFFIS warns when the weather makes forest fires likely.",
+  "After a fire, satellites show exactly how much land burned.",
+  "Countries use this to fight fires and plan how forests recover."
+ ],
+ "JPSS.html": [
+  "JPSS satellites fly over the North and South Poles, around and around.",
+  "They scan the whole Earth twice a day for temperature, clouds and rain.",
+  "Forecasters use the data to warn people before hurricanes and blizzards."
+ ],
+ "GSMaP.html": [
+  "GSMaP is a map that shows where it is raining all over the world.",
+  "It mixes data from many satellites and updates every hour.",
+  "Scientists use it to watch rain as it falls and to study climate."
+ ],
+ "CAMS.html": [
+  "CAMS checks the air all over the world, from smoke to dust to pollution.",
+  "It uses satellites and computer models to forecast dirty air days ahead.",
+  "People can plan to stay safe on bad air days."
+ ],
+ "GloFAS.html": [
+  "GloFAS predicts when rivers might flood, up to a month ahead.",
+  "It uses weather forecasts and computer models of rivers.",
+  "Early warnings give families time to move to safety."
+ ],
+ "Copernicus_Marine.html": [
+  "Copernicus Marine is like a weather service for the ocean.",
+  "It shows ocean temperature, currents, sea ice and tiny plant life.",
+  "Sailors, scientists and fishers use it for free."
+ ],
+ "OpenET.html": [
+  "Plants drink water and breathe it out into the air.",
+  "OpenET uses satellites to measure how much water every field uses.",
+  "Farmers can then water only what crops need and save water."
  ]
 }

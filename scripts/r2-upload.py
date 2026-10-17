@@ -11,6 +11,7 @@ Usage:
   python3 scripts/r2-upload.py --prefix videos/ path/to/clip.mp4 [...]
   python3 scripts/r2-upload.py --prefix images/ --srcset path/to/photo.jpg [...]
      --srcset: also make responsive WebP widths (480..3840, never upscaled, quality 90) and record a srcset string.
+               Oct 16: also AVIF widths (quality 70, near-lossless visually) recorded as srcset_avif, plus width/height.
                The original file is uploaded untouched as the full-resolution master. Videos are never re-encoded.
   --dry-run   show what would be uploaded
 Quality rule (owner): images and videos stay extra high-res. Don't recompress originals."""
@@ -87,6 +88,14 @@ def main():
                 k = versioned(pre, f'{os.path.splitext(name)[0]}-{w}.webp', b); put(k, b, 'image/webp', a.dry_run)
                 parts.append(f'{PUBLIC}{k} {w}w')
             e['srcset'] = ', '.join(dict.fromkeys(parts))
+            e['width'], e['height'] = W, im.height
+            av = []
+            for w in [x for x in WIDTHS if x < W] + [min(W, 3840)]:
+                r = im if w == W else im.resize((w, round(im.height * w / W)), Image.LANCZOS)
+                b = io.BytesIO(); r.convert('RGB').save(b, 'AVIF', quality=70, speed=4); b = b.getvalue()
+                k = versioned(pre, f'{os.path.splitext(name)[0]}-{w}.avif', b); put(k, b, 'image/avif', a.dry_run)
+                av.append(f'{PUBLIC}{k} {w}w')
+            e['srcset_avif'] = ', '.join(dict.fromkeys(av))
         man[pre + name] = e
     if not a.dry_run:
         os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)

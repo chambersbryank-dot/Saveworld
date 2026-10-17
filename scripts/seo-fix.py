@@ -171,6 +171,13 @@ def fix(p):
             core = re.sub(r'\s+', ' ', raw_t).replace(BRAND, '').replace(TAG.get(lang, '@@'), '').strip()
             en_core = (en_title or '').replace(BRAND, '').replace(TAG.get('en', '@@'), '').strip()
             hub = hub_name(soup)
+            # Oct 16: English titles already carry ' – <English hub>' from an earlier seo-fix pass; i18n-build copies that
+            # untranslated title into fr/es/ar/it, so strip it before re-adding the hub in the page language (idempotent).
+            en_hub = hub_name(en) if en is not None else None
+            if en_hub:
+                sfx = f' – {en_hub}'
+                if core.endswith(sfx): core = core[:-len(sfx)]; raw_t = core
+                if en_core.endswith(sfx): en_core = en_core[:-len(sfx)]
             if hub and hub not in core and (len(core) < 30 or (lang != 'en' and core == en_core)) and len(f'{core} – {hub}{BRAND}') <= 60:
                 t = f'{core} – {hub}{BRAND}'
             else: t = fit_title(raw_t if not (lang != 'en' and core == en_core) else en_title, en_title, lang)

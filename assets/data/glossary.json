@@ -1468,6 +1468,172 @@
     ],
     "def": "Un posto dove una delle placche della Terra scivola sotto l'altra. Qui iniziano i più grandi terremoti e tsunami."
    }
+  },
+  {
+   "id": "evapotranspiration",
+   "en": {
+    "term": "Evapotranspiration",
+    "match": [
+     "evapotranspiration"
+    ],
+    "def": "Water moving from the ground into the air, partly by evaporating from soil and partly by passing through plants and out of their leaves."
+   },
+   "fr": {
+    "term": "Évapotranspiration",
+    "match": [
+     "évapotranspiration"
+    ],
+    "def": "L'eau qui passe du sol à l'air, en partie en s'évaporant du sol et en partie en traversant les plantes puis en sortant par leurs feuilles."
+   },
+   "es": {
+    "term": "Evapotranspiración",
+    "match": [
+     "evapotranspiración"
+    ],
+    "def": "El agua que pasa del suelo al aire, en parte al evaporarse del suelo y en parte al atravesar las plantas y salir por sus hojas."
+   },
+   "ar": {
+    "term": "التبخر والنتح",
+    "match": [
+     "التبخر والنتح",
+     "التبخر-النتح"
+    ],
+    "def": "انتقال الماء من الأرض إلى الهواء، جزء منه بالتبخر من التربة وجزء بالمرور عبر النباتات والخروج من أوراقها."
+   },
+   "it": {
+    "term": "Evapotraspirazione",
+    "match": [
+     "evapotraspirazione"
+    ],
+    "def": "L'acqua che passa dal suolo all'aria, in parte evaporando dal terreno e in parte attraversando le piante e uscendo dalle foglie."
+   }
+  },
+  {
+   "id": "coral-bleaching",
+   "en": {
+    "term": "Coral bleaching",
+    "match": [
+     "coral bleaching",
+     "bleaching"
+    ],
+    "def": "When water stays too warm, corals push out the tiny algae living inside them and turn white. Bleached corals can recover, but they may starve and die if the heat lasts."
+   },
+   "fr": {
+    "term": "Blanchissement des coraux",
+    "match": [
+     "blanchissement"
+    ],
+    "def": "Quand l'eau reste trop chaude, les coraux expulsent les minuscules algues qui vivent en eux et deviennent blancs. Ils peuvent s'en remettre, mais risquent de mourir de faim si la chaleur dure."
+   },
+   "es": {
+    "term": "Blanqueamiento de coral",
+    "match": [
+     "blanqueamiento"
+    ],
+    "def": "Cuando el agua se mantiene demasiado caliente, los corales expulsan las diminutas algas que viven en ellos y se vuelven blancos. Pueden recuperarse, pero pueden morir de hambre si el calor dura."
+   },
+   "ar": {
+    "term": "ابيضاض المرجان",
+    "match": [
+     "ابيضاض المرجان",
+     "ابيضاض"
+    ],
+    "def": "عندما يبقى الماء دافئًا جدًا، تطرد الشعاب المرجانية الطحالب الدقيقة التي تعيش داخلها فيتحول لونها إلى الأبيض. يمكنها التعافي، لكنها قد تجوع وتموت إذا استمرت الحرارة."
+   },
+   "it": {
+    "term": "Sbiancamento dei coralli",
+    "match": [
+     "sbiancamento"
+    ],
+    "def": "Quando l'acqua resta troppo calda, i coralli espellono le minuscole alghe che vivono al loro interno e diventano bianchi. Possono riprendersi, ma rischiano di morire di fame se il caldo dura."
+   }
+  },
+  {
+   "id": "near-earth-object",
+   "en": {
+    "term": "Near-Earth object",
+    "match": [
+     "near-Earth objects",
+     "near-Earth object",
+     "near-Earth asteroids",
+     "near-Earth asteroid"
+    ],
+    "def": "An asteroid or comet whose orbit brings it close to Earth's path around the Sun. Scientists track them to make sure none is on course to hit us."
+   },
+   "fr": {
+    "term": "Géocroiseur",
+    "match": [
+     "géocroiseurs",
+     "géocroiseur"
+    ],
+    "def": "Un astéroïde ou une comète dont l'orbite passe près de celle de la Terre autour du Soleil. Les scientifiques les suivent pour vérifier qu'aucun ne se dirige vers nous."
+   },
+   "es": {
+    "term": "Objeto cercano a la Tierra",
+    "match": [
+     "objetos cercanos a la Tierra",
+     "objeto cercano a la Tierra",
+     "asteroides cercanos a la Tierra"
+    ],
+    "def": "Un asteroide o cometa cuya órbita pasa cerca del camino de la Tierra alrededor del Sol. Los científicos los vigilan para asegurarse de que ninguno vaya a chocar con nosotros."
+   },
+   "ar": {
+    "term": "جسم قريب من الأرض",
+    "match": [
+     "الأجسام القريبة من الأرض",
+     "جسم قريب من الأرض",
+     "الكويكبات القريبة من الأرض"
+    ],
+    "def": "كويكب أو مذنب يقترب مداره من مسار الأرض حول الشمس. يتتبعها العلماء للتأكد من أن أيًا منها ليس في طريقه إلى الاصطدام بنا."
+   },
+   "it": {
+    "term": "Oggetto near-Earth",
+    "match": [
+     "oggetti near-Earth",
+     "oggetto near-Earth",
+     "asteroidi near-Earth"
+    ],
+    "def": "Un asteroide o una cometa la cui orbita passa vicino al percorso della Terra intorno al Sole. Gli scienziati li seguono per assicurarsi che nessuno sia in rotta di collisione."
+   }
+  },
+  {
+   "id": "salinity",
+   "en": {
+    "term": "Salinity",
+    "match": [
+     "salinity"
+    ],
+    "def": "How salty water is. Saltier water is heavier, so differences in salinity help drive ocean currents."
+   },
+   "fr": {
+    "term": "Salinité",
+    "match": [
+     "salinité"
+    ],
+    "def": "La quantité de sel dans l'eau. L'eau plus salée est plus lourde, donc les différences de salinité aident à mettre en mouvement les courants océaniques."
+   },
+   "es": {
+    "term": "Salinidad",
+    "match": [
+     "salinidad"
+    ],
+    "def": "Lo salada que está el agua. El agua más salada pesa más, así que las diferencias de salinidad ayudan a mover las corrientes oceánicas."
+   },
+   "ar": {
+    "term": "الملوحة",
+    "match": [
+     "الملوحة",
+     "ملوحة"
+    ],
+    "def": "مقدار الملح في الماء. الماء الأكثر ملوحة أثقل، لذلك تساعد اختلافات الملوحة على تحريك تيارات المحيط."
+   },
+   "it": {
+    "term": "Salinità",
+    "match": [
+     "salinità"
+    ],
+    "def": "Quanto è salata l'acqua. L'acqua più salata è più pesante, quindi le differenze di salinità aiutano a muovere le correnti oceaniche."
+   }
   }
  ]
 }

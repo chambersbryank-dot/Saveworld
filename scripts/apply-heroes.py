@@ -69,6 +69,27 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'American_Forests': ('Threetrees3.jpg', 'SI Partner'),
     'Plant-for-the-Planet': ('Yishan_Tree.jpg', 'SI Partner'),
     'Dragonfly': ('Titan.jpg', 'NASA'),
+    # Oct 16 (agency batch): 20 new solutions, public-domain NASA/NOAA images
+    'International_Charter': ('Missouri_Flood_Hamburg_EO1.jpg', 'NASA Earth Observatory (EO-1 ALI, July 17, 2011)'),
+    'Copernicus_EMS': ('Canada_Wildfires_ISS_2025b.jpg', 'NASA (ISS073-E-0420617, Aug. 3, 2025)'),
+    'FIRMS': ('Canada_Wildfires_ISS_2025.jpg', 'NASA (ISS073-E-0420604, Aug. 3, 2025)'),
+    'UNEP_MARS': ('EMIT_Methane_Plumes_Uzbekistan.jpg', 'NASA/JPL-Caltech (PIA26113)'),
+    'GLOBE_Program': ('Pacific_Clouds_Sunset_ISS.jpg', 'NASA (ISS074-E-0046371, Jan. 3, 2026)'),
+    'Argo': ('NOAA_Deep_SOLO_Float_2018.jpg', 'NOAA (Deep SOLO float deployment from R/V Kaʻimikai-O-Kanaloa, 2018)'),
+    'Argos': ('Loggerhead_Release_MINWR.jpg', 'NASA (2010-5237)'),
+    'Coral_Reef_Watch': ('Great_Barrier_Reef_ISS_2022.jpg', 'NASA (ISS068-E-004262, Sept. 30, 2022)'),
+    'RCM': ('Labrador_Sea_Ice_ISS.jpg', 'NASA (ISS070-E-086805, Feb. 3, 2024)'),
+    'ATLAS': ('Hawaii_Island_ISS_2024.jpg', 'NASA (ISS072-E-421839, Dec. 28, 2024)'),
+    'Pan-STARRS': ('Comet_PANSTARRS_ISS_2026.jpg', 'NASA (ISS074-E-0480485, April 17, 2026)'),
+    'Catalina_Sky_Survey': ('Asteroid_2018LA_CSS.jpg', 'NASA/JPL-Caltech/CSS-Univ. of Arizona (PIA22468)'),
+    'ESA_NEOCC': ('Goldstone_Radar_2011UL21.jpg', 'NASA/JPL-Caltech (PIA26384)'),
+    'EFFIS': ('Portugal_Wildfires_ISS_2018.jpg', 'NASA (ISS056-E-127068, Aug. 6, 2018)'),
+    'JPSS': ('JPSS2_Atlas_V_Launch_Pad.jpg', 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)'),
+    'GSMaP': ('GPM_Core_Observatory_GMI.jpg', 'NASA/Goddard (GPM Core Observatory)'),
+    'CAMS': ('Sumatra_Smoke_Singapore_MODIS.jpg', 'NASA Earth Observatory (Aqua MODIS, June 19, 2013)'),
+    'GloFAS': ('Pakistan_Flood_Kheshgi_2010.jpg', 'NASA Earth Observatory (ASTER on Terra, Aug. 4, 2010)'),
+    'Copernicus_Marine': ('North_Atlantic_Bloom_MODIS.jpg', 'NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team'),
+    'OpenET': ('Garden_City_Kansas_Landsat.jpg', 'NASA/GSFC/Landsat (Sept. 25, 2000)'),
 }
 SI_T = {'': 'Created by SI and Biological SI Partner', 'fr/': 'Créé par SI et Biological SI Partner', 'es/': 'Creado por SI y Biological SI Partner', 'ar/': 'أُنشئ بواسطة SI وBiological SI Partner'}
 IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة'}

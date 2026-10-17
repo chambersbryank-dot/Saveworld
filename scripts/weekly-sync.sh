@@ -48,6 +48,7 @@ python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (st
 python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, region (map pins), grade (standards), name; URL state (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/r2-home-cards.py && python3 scripts/build-ux.py   # Oct 16: homepage card images get R2 WebP srcset (uploads only new ones), then re-run build-ux
+python3 scripts/add-video-schema.py       # Oct 16: re-run after build-ux puts the 720p About source first (VideoObject contentUrl = first source)
 python3 scripts/build-glass.py  # Oct 15 item 6: Liquid Glass only on primary buttons + nav panels; flat tinted icons; -webkit- pairing; reduced-transparency/contrast fallbacks
 python3 scripts/build-spotfire.py       # Oct 15: astroEDU "Spot the Fire from Space" page (all langs) + links from Teachers/Kids_Map/FireSat/Lesson_Builder + sitemap
 python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (all langs), progress badges (site.js PLAY block), homepage Kids card

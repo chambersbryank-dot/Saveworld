@@ -142,7 +142,8 @@ def shell(fname, title, desc, h1, intro, body, bodyclass):
     tpl = rd('Contact.html'); head, b = tpl.split('<body', 1)
     nav = m1(r'(<nav id="topnav">.*?</nav>)', b); footer = re.sub(r'<script[^>]*></script>', '', m1(r'(<footer>.*?</footer>)', b))
     jsv = m1(r'site\.js\?v=([0-9a-z]+)', b) or '1'
-    h = head.replace('Contact.html', fname).replace('<title>Contact | Saving Planets</title>', f'<title>{title} | Saving Planets</title>')
+    h = head.replace('Contact.html', fname)  # Oct 16: any Contact title (seo-meta override changed it)
+    h = re.sub(r'<title>[^<]*</title>', lambda _m: f'<title>{title} | Saving Planets</title>', h, count=1)
     h = re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*"', lambda m: m.group(1) + esc(desc) + '"', h)
     h = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*"', lambda m: m.group(1) + title + ' | Saving Planets"', h)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)

@@ -233,6 +233,27 @@ Not used: braeunig.us orbital mechanics page (did not respond). Fighter-jet/heli
      scripts/newsletter-updates.json from: (1) commits titled "feat(Page.html): reader-facing sentence" (or "feat: sentence"),
      and (2) bullets in this section formatted "- YYYY-MM-DD | Page.html | reader-facing sentence".
      Auto entries are English-only; add what.fr / what.es / what.ar in the JSON for translated issues (otherwise English shows). -->
+- 2026-10-16 | International_Charter.html | New solution: International Charter: Space and Major Disasters. When disaster strikes, 17 space agencies and satellite operators pool their satellites and give free images to rescue teams. Activated 1,000 times.
+- 2026-10-16 | Copernicus_EMS.html | New solution: Copernicus EMS On-Demand Mapping. The European Union's emergency mapping service turns satellite images into maps for disaster teams, 24/7 since 2012, with more than 1,000 activations.
+- 2026-10-16 | FIRMS.html | New solution: FIRMS: NASA's Satellite Fire Map. NASA's FIRMS delivers satellite fire detections within 3 hours anywhere on Earth, and in real time for the US and Canada. Free for firefighters and everyone.
+- 2026-10-16 | UNEP_MARS.html | New solution: UNEP Methane Alert and Response System. The UN's satellite methane alert system has sent more than 3,500 alerts about major leaks in 33 countries, and responses rose from 1% to 12% in a year.
+- 2026-10-16 | GLOBE_Program.html | New solution: The GLOBE Program: Student Earth Science. A worldwide science program where students and citizen scientists collect real environmental data: more than 293 million measurements from 127 countries.
+- 2026-10-16 | Argo.html | New solution: Argo Ocean Float Array. Close to 4,000 robotic floats dive through the ocean and send back temperature and salinity data, free to everyone. The 3 millionth profile came in 2024.
+- 2026-10-16 | Argos.html | New solution: Argos Satellite Tracking System. A satellite system that tracks wildlife and ocean instruments from tiny transmitters, following more than 8,000 animals every month for conservation science.
+- 2026-10-16 | Coral_Reef_Watch.html | New solution: NOAA Coral Reef Watch: Bleaching Alerts. NOAA's Coral Reef Watch uses satellites to warn of the ocean heat that bleaches corals, with daily monitoring of 95% of the world's coral reefs.
+- 2026-10-16 | RCM.html | New solution: RADARSAT Constellation Mission (Canada). Three Canadian radar satellites watch Canada's land, coasts and Arctic day and night, through cloud and smoke, with about 250,000 images a year.
+- 2026-10-16 | ATLAS.html | New solution: ATLAS Asteroid Last Alert System. Four robotic telescopes, two in Hawaiʻi, search the entire dark sky every 24 hours for asteroids that could hit Earth, so people can be warned.
+- 2026-10-16 | Pan-STARRS.html | New solution: Pan-STARRS Near-Earth Object Search. Two telescopes on Haleakalā, Maui, that in 2021 found nearly as many near-Earth objects as the rest of the world's observatories combined.
+- 2026-10-16 | Catalina_Sky_Survey.html | New solution: Catalina Sky Survey: Asteroid Hunters. A NASA-funded survey in Arizona that has discovered more near-Earth objects than any other: 17,918 near-Earth asteroids since 1995.
+- 2026-10-16 | ESA_NEOCC.html | New solution: ESA Near-Earth Object Coordination Centre. Europe's asteroid watch centre computes orbits and impact risks every day and keeps a public list of every asteroid with a non-zero chance of hitting Earth.
+- 2026-10-16 | EFFIS.html | New solution: EFFIS: European Forest Fire Information System. Europe's wildfire system forecasts fire danger and maps burnt areas from satellites. In 2024 it mapped wildfires in 42 countries.
+- 2026-10-16 | JPSS.html | New solution: Joint Polar Satellite System (NOAA). NOAA's polar weather satellites circle Earth 14 times a day. Polar-orbiting satellites supply about 85% of the data used by weather prediction models.
+- 2026-10-16 | GSMaP.html | New solution: GSMaP Global Rainfall Map (JAXA). JAXA's Global Satellite Mapping of Precipitation maps rain around the world every hour, used by 18,673 registered users in 163 countries and regions.
+- 2026-10-16 | CAMS.html | New solution: Copernicus Atmosphere Monitoring Service. Europe's air monitoring service forecasts air pollution, smoke and dust worldwide twice a day for more than 23,500 users, free and open.
+- 2026-10-16 | GloFAS.html | New solution: GloFAS: Global Flood Awareness System. Free global river flood forecasts up to 30 days ahead, plus 4-month outlooks, from the Copernicus Emergency Management Service.
+- 2026-10-16 | Copernicus_Marine.html | New solution: Copernicus Marine Service: Free Ocean Data. Free, open ocean data and forecasts for the whole planet. In 2025 users downloaded almost 15,000 terabytes of ocean data from Copernicus Marine.
+- 2026-10-16 | OpenET.html | New solution: OpenET: Satellite Water Data for Farms. Free satellite data on how much water crops and land use, now for all 48 contiguous states, with more than 13,000 registered users.
+- 2026-10-16 | ALOS-4.html | The ALOS-4 page now covers JJ-FAST, the JICA and JAXA radar system that tracks tropical forest loss from ALOS-2 (updates limited to Brazil since April 2024).
 
 ## 2026-10-16 — Friday community outreach campaign (prepared, NOT sent)
 - Contacts researched/verified against official sites: /workspace/outreach-community-1016/contacts.csv (26 rows).

@@ -171,7 +171,7 @@ def missing(lang):
     """Print English strings on the PAGES that have no entry in i18n/<lang>.json (to translate next)."""
     m = json.load(open(f'i18n/{lang}.json', encoding='utf8')); seen = set()
     for page in PAGES:
-        soup = BeautifulSoup(open(page, encoding='utf8').read(), 'html.parser')
+        soup = BeautifulSoup(unglossary(open(page, encoding='utf8').read()), 'html.parser')  # Oct 16: same source build() translates (no glossary fragments)
         for li in soup.select('li.lang-switch, nav#topnav'): li.decompose()
         vals = [str(t).strip() for t in soup.find_all(string=True) if not isinstance(t, Comment) and t.parent.name not in ('script', 'style')
                 and not (t.find_parent('a') and t.find_parent('a').get('href', '').startswith('http') and not str(t).strip().startswith(FFI))]

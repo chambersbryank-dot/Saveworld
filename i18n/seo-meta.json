@@ -1,13 +1,21 @@
 {
  "4ocean.html": {
   "ar": {
-   "description": "تزيل 4ocean البلاستيك من المحيطات والأنهار والسواحل بفرق تنظيف متفرغة، تموّلها منتجات مصنوعة من البلاستيك المستعاد. حل للمحيطات على Saving Planets."
+   "description": "تزيل 4ocean البلاستيك من المحيطات والأنهار والسواحل بفرق تنظيف متفرغة، تموّلها منتجات مصنوعة من البلاستيك المستعاد. حل للمحيطات على Saving Planets.",
+   "title": "4ocean – المحيطات"
   },
   "en": {
    "title": "4ocean: Full-Time Crews Removing Ocean Plastic"
   },
   "fr": {
-   "description": "4ocean retire le plastique des océans, des rivières et des côtes grâce à des équipes à plein temps, financées par des produits en plastique récupéré."
+   "description": "4ocean retire le plastique des océans, des rivières et des côtes grâce à des équipes à plein temps, financées par des produits en plastique récupéré.",
+   "title": "4ocean – Océans"
+  },
+  "es": {
+   "title": "4ocean – Océanos"
+  },
+  "it": {
+   "title": "4ocean – Oceani"
   }
  },
  "AP_IB_Physics.html": {
@@ -314,13 +322,21 @@
  },
  "ClearSpace.html": {
   "ar": {
-   "description": "تقود ClearSpace أول مهمة أوروبية للإزالة النشطة للحطام الفضائي، وتقدّم خدمات في المدار، وهي شركة خاصة. حل للفضاء على Saving Planets."
+   "description": "تقود ClearSpace أول مهمة أوروبية للإزالة النشطة للحطام الفضائي، وتقدّم خدمات في المدار، وهي شركة خاصة. حل للفضاء على Saving Planets.",
+   "title": "ClearSpace – الفضاء"
   },
   "en": {
    "title": "ClearSpace: Europe’s First Active Debris Removal"
   },
   "fr": {
-   "description": "ClearSpace mène la première mission européenne d'élimination active de débris spatiaux et propose des services en orbite. C'est une entreprise privée."
+   "description": "ClearSpace mène la première mission européenne d'élimination active de débris spatiaux et propose des services en orbite. C'est une entreprise privée.",
+   "title": "ClearSpace – Espace"
+  },
+  "es": {
+   "title": "ClearSpace – Espacio"
+  },
+  "it": {
+   "title": "ClearSpace – Spazio"
   }
  },
  "Comet_Interceptor.html": {
@@ -1520,10 +1536,14 @@
  },
  "Veggie_Space_Garden.html": {
   "es": {
-   "description": "El huerto Veggie de la NASA cultiva alimentos frescos en la Estación Espacial Internacional; en 2015 los astronautas comieron la primera lechuga de este huerto."
+   "description": "El huerto Veggie de la NASA cultiva alimentos frescos en la Estación Espacial Internacional; en 2015 los astronautas comieron la primera lechuga de este huerto.",
+   "title": "Veggie, el huerto espacial (NASA)"
   },
   "fr": {
    "description": "Le jardin Veggie de la NASA fait pousser des aliments frais sur la Station spatiale ; en 2015, des astronautes y ont mangé la première laitue cultivée."
+  },
+  "it": {
+   "title": "Veggie, l'orto spaziale (NASA)"
   }
  },
  "Waterkeeper_Alliance.html": {
@@ -1576,6 +1596,460 @@
   },
   "fr": {
    "description": "Une carte interactive des solutions de Saving Planets : épingles vertes pour celles qui agissent déjà, bleues pour celles à venir, fusées pour les lancements."
+  }
+ },
+ "International_Charter.html": {
+  "en": {
+   "title": "International Charter: Space and Major Disasters",
+   "description": "When disaster strikes, 17 space agencies and satellite operators pool their satellites and give free images to rescue teams. Activated 1,000 times."
+  },
+  "fr": {
+   "title": "Charte internationale Espace et catastrophes",
+   "description": "Lors d'une catastrophe, 17 agences spatiales et opérateurs mettent en commun leurs satellites et offrent des images aux secours. 1 000 activations."
+  },
+  "es": {
+   "title": "Carta Internacional Espacio y Grandes Desastres",
+   "description": "Ante un desastre, 17 agencias espaciales y operadores comparten sus satélites y dan imágenes gratuitas a los equipos de rescate. 1.000 activaciones."
+  },
+  "ar": {
+   "title": "الميثاق الدولي للفضاء والكوارث الكبرى",
+   "description": "عند وقوع كارثة، تجمع 17 وكالة فضاء ومشغّل أقمار صناعية أقمارها وتقدّم صورًا مجانية لفرق الإنقاذ. فُعّل الميثاق 1,000 مرة في 146 بلدًا."
+  },
+  "it": {
+   "title": "Carta internazionale Spazio e grandi catastrofi",
+   "description": "Quando colpisce un disastro, 17 agenzie spaziali e operatori mettono insieme i satelliti e danno immagini gratuite ai soccorritori. 1.000 attivazioni."
+  }
+ },
+ "Copernicus_EMS.html": {
+  "en": {
+   "title": "Copernicus EMS On-Demand Mapping",
+   "description": "The European Union's emergency mapping service turns satellite images into maps for disaster teams, 24/7 since 2012, with more than 1,000 activations."
+  },
+  "fr": {
+   "title": "Copernicus EMS : cartographie d'urgence",
+   "description": "Le service d'urgence de l'Union européenne transforme les images satellites en cartes pour les secours, 24 h/24 depuis 2012 : plus de 1 000 activations."
+  },
+  "es": {
+   "title": "Copernicus EMS: cartografía de emergencia",
+   "description": "El servicio de emergencias de la Unión Europea convierte imágenes de satélite en mapas para los equipos de rescate, 24/7 desde 2012: más de 1.000 activaciones."
+  },
+  "ar": {
+   "title": "Copernicus EMS: خرائط الطوارئ عند الطلب",
+   "description": "تحوّل خدمة الطوارئ في الاتحاد الأوروبي صور الأقمار الصناعية إلى خرائط لفرق الكوارث على مدار الساعة منذ 2012، مع أكثر من 1,000 تفعيل."
+  },
+  "it": {
+   "title": "Copernicus EMS: mappatura d'emergenza",
+   "description": "Il servizio di emergenza dell'Unione europea trasforma le immagini satellitari in mappe per i soccorritori, 24 ore su 24 dal 2012: oltre 1.000 attivazioni."
+  }
+ },
+ "FIRMS.html": {
+  "en": {
+   "title": "FIRMS: NASA's Satellite Fire Map",
+   "description": "NASA's FIRMS delivers satellite fire detections within 3 hours anywhere on Earth, and in real time for the US and Canada. Free for firefighters and everyone."
+  },
+  "fr": {
+   "title": "FIRMS : la carte des feux par satellite de la NASA",
+   "description": "FIRMS, de la NASA, fournit les détections de feux par satellite en moins de 3 heures partout sur Terre, et en temps réel pour les États-Unis et le Canada."
+  },
+  "es": {
+   "title": "FIRMS: el mapa de incendios por satélite de la NASA",
+   "description": "FIRMS, de la NASA, entrega detecciones de incendios por satélite en menos de 3 horas en cualquier lugar de la Tierra, y en tiempo real para EE. UU. y Canadá."
+  },
+  "ar": {
+   "title": "FIRMS: خريطة الحرائق الفضائية من NASA",
+   "description": "يقدّم نظام FIRMS التابع لـNASA رصد الحرائق بالأقمار الصناعية خلال 3 ساعات في أي مكان على الأرض، وفي الوقت الفعلي للولايات المتحدة وكندا."
+  },
+  "it": {
+   "title": "FIRMS: la mappa satellitare degli incendi NASA",
+   "description": "FIRMS della NASA fornisce i rilevamenti satellitari degli incendi entro 3 ore in qualsiasi punto della Terra, e in tempo reale per Stati Uniti e Canada."
+  }
+ },
+ "UNEP_MARS.html": {
+  "en": {
+   "title": "UNEP Methane Alert and Response System",
+   "description": "The UN's satellite methane alert system has sent more than 3,500 alerts about major leaks in 33 countries, and responses rose from 1% to 12% in a year."
+  },
+  "fr": {
+   "title": "Système d'alerte méthane MARS (PNUE)",
+   "description": "Le système d'alerte méthane de l'ONU a envoyé plus de 3 500 alertes sur de grosses fuites dans 33 pays, et les réponses sont passées de 1 % à 12 % en un an."
+  },
+  "es": {
+   "title": "Sistema de alerta de metano MARS (PNUMA)",
+   "description": "El sistema de alerta de metano de la ONU ha enviado más de 3.500 alertas sobre grandes fugas en 33 países, y las respuestas subieron del 1 % al 12 % en un año."
+  },
+  "ar": {
+   "title": "نظام MARS للإنذار بالميثان (الأمم المتحدة)",
+   "description": "أرسل نظام الأمم المتحدة للإنذار بالميثان عبر الأقمار الصناعية أكثر من 3,500 إنذار عن تسرّبات كبيرة في 33 بلدًا، وارتفعت الاستجابة من 1% إلى 12% في عام."
+  },
+  "it": {
+   "title": "Sistema di allerta metano MARS (UNEP)",
+   "description": "Il sistema di allerta sul metano dell'ONU ha inviato oltre 3.500 allerte su grandi perdite in 33 paesi, e le risposte sono salite dall'1% al 12% in un anno."
+  }
+ },
+ "GLOBE_Program.html": {
+  "en": {
+   "title": "The GLOBE Program: Student Earth Science",
+   "description": "A worldwide science program where students and citizen scientists collect real environmental data: more than 293 million measurements from 127 countries."
+  },
+  "fr": {
+   "title": "Le programme GLOBE : science de la Terre à l'école",
+   "description": "Un programme scientifique mondial où élèves et citoyens recueillent de vraies données sur l'environnement : plus de 293 millions de mesures dans 127 pays."
+  },
+  "es": {
+   "title": "El programa GLOBE: ciencia de la Tierra escolar",
+   "description": "Un programa científico mundial en el que estudiantes y ciudadanos recogen datos ambientales reales: más de 293 millones de mediciones de 127 países."
+  },
+  "ar": {
+   "title": "برنامج GLOBE: علوم الأرض للطلاب",
+   "description": "برنامج علمي عالمي يجمع فيه الطلاب والعلماء المواطنون بيانات بيئية حقيقية: أكثر من 293 مليون قياس من 127 بلدًا، متاحة مجانًا للجميع."
+  },
+  "it": {
+   "title": "Il programma GLOBE: scienze della Terra a scuola",
+   "description": "Un programma scientifico mondiale in cui studenti e cittadini raccolgono veri dati ambientali: oltre 293 milioni di misurazioni da 127 paesi."
+  }
+ },
+ "Argo.html": {
+  "en": {
+   "title": "Argo Ocean Float Array",
+   "description": "Close to 4,000 robotic floats dive through the ocean and send back temperature and salinity data, free to everyone. The 3 millionth profile came in 2024."
+  },
+  "fr": {
+   "title": "Argo, le réseau de flotteurs océaniques",
+   "description": "Près de 4 000 flotteurs robotisés plongent dans l'océan et transmettent des données de température et de salinité, gratuites pour tous, depuis plus de 25 ans."
+  },
+  "es": {
+   "title": "Argo, la red de flotadores oceánicos",
+   "description": "Cerca de 4.000 flotadores robóticos se sumergen en el océano y envían datos de temperatura y salinidad, gratis para todos. El perfil 3 millones llegó en 2024."
+  },
+  "ar": {
+   "title": "Argo: شبكة العوامات المحيطية",
+   "description": "نحو 4,000 عوامة آلية تغوص في المحيط وترسل بيانات درجة الحرارة والملوحة مجانًا للجميع. وصل الملف الثلاثة ملايين في يوليو 2024."
+  },
+  "it": {
+   "title": "Argo, la rete di galleggianti oceanici",
+   "description": "Quasi 4.000 galleggianti robotici si immergono nell'oceano e inviano dati di temperatura e salinità, gratuiti per tutti. Il profilo 3 milioni è del 2024."
+  }
+ },
+ "Argos.html": {
+  "en": {
+   "title": "Argos Satellite Tracking System",
+   "description": "A satellite system that tracks wildlife and ocean instruments from tiny transmitters, following more than 8,000 animals every month for conservation science."
+  },
+  "fr": {
+   "title": "Argos, le système de suivi par satellite",
+   "description": "Un système satellitaire qui suit la faune et les instruments océaniques grâce à de minuscules balises : plus de 8 000 animaux suivis chaque mois."
+  },
+  "es": {
+   "title": "Argos, el sistema de seguimiento por satélite",
+   "description": "Un sistema satelital que sigue a la fauna y a instrumentos oceánicos con diminutos transmisores: más de 8.000 animales seguidos cada mes para la ciencia."
+  },
+  "ar": {
+   "title": "Argos: نظام التتبع بالأقمار الصناعية",
+   "description": "نظام فضائي يتتبّع الحياة البرية والأجهزة المحيطية عبر أجهزة إرسال صغيرة، ويتابع أكثر من 8,000 حيوان كل شهر لخدمة علوم الحفاظ على الطبيعة."
+  },
+  "it": {
+   "title": "Argos, il sistema di tracciamento satellitare",
+   "description": "Un sistema satellitare che segue la fauna e gli strumenti oceanici con minuscoli trasmettitori: oltre 8.000 animali seguiti ogni mese per la scienza."
+  }
+ },
+ "Coral_Reef_Watch.html": {
+  "en": {
+   "title": "NOAA Coral Reef Watch: Bleaching Alerts",
+   "description": "NOAA's Coral Reef Watch uses satellites to warn of the ocean heat that bleaches corals, with daily monitoring of 95% of the world's coral reefs."
+  },
+  "fr": {
+   "title": "Coral Reef Watch (NOAA) : alertes au blanchissement",
+   "description": "Coral Reef Watch, de la NOAA, utilise les satellites pour alerter sur la chaleur océanique qui blanchit les coraux et suit chaque jour 95 % des récifs."
+  },
+  "es": {
+   "title": "Coral Reef Watch (NOAA): alertas de blanqueamiento",
+   "description": "Coral Reef Watch, de la NOAA, usa satélites para avisar del calor oceánico que blanquea los corales y vigila a diario el 95 % de los arrecifes del mundo."
+  },
+  "ar": {
+   "title": "مراقبة الشعاب المرجانية من NOAA: إنذارات الابيضاض",
+   "description": "تستخدم Coral Reef Watch التابعة لـNOAA الأقمار الصناعية للتحذير من حرارة المحيط التي تبيّض المرجان، وتراقب يوميًا 95% من الشعاب المرجانية في العالم."
+  },
+  "it": {
+   "title": "Coral Reef Watch (NOAA): allerte sbiancamento",
+   "description": "Coral Reef Watch della NOAA usa i satelliti per avvisare del caldo oceanico che sbianca i coralli, e controlla ogni giorno il 95% delle barriere del mondo."
+  }
+ },
+ "RCM.html": {
+  "en": {
+   "title": "RADARSAT Constellation Mission (Canada)",
+   "description": "Three Canadian radar satellites watch Canada's land, coasts and Arctic day and night, through cloud and smoke, with about 250,000 images a year."
+  },
+  "fr": {
+   "title": "Mission de la Constellation RADARSAT (Canada)",
+   "description": "Trois satellites radar canadiens surveillent les terres, les côtes et l'Arctique du Canada jour et nuit, à travers nuages et fumée : 250 000 images par an."
+  },
+  "es": {
+   "title": "Misión de la Constelación RADARSAT (Canadá)",
+   "description": "Tres satélites radar canadienses vigilan la tierra, las costas y el Ártico de Canadá de día y de noche, a través de nubes y humo: unas 250.000 imágenes al año."
+  },
+  "ar": {
+   "title": "كوكبة رادارسات الكندية RCM",
+   "description": "ثلاثة أقمار رادار كندية تراقب أراضي كندا وسواحلها والقطب الشمالي ليلًا ونهارًا عبر الغيوم والدخان، بنحو 250,000 صورة سنويًا لحكومة كندا."
+  },
+  "it": {
+   "title": "Missione Costellazione RADARSAT (Canada)",
+   "description": "Tre satelliti radar canadesi sorvegliano terre, coste e Artico del Canada giorno e notte, attraverso nuvole e fumo: circa 250.000 immagini l'anno."
+  }
+ },
+ "ATLAS.html": {
+  "en": {
+   "title": "ATLAS Asteroid Last Alert System",
+   "description": "Four robotic telescopes, two in Hawaiʻi, search the entire dark sky every 24 hours for asteroids that could hit Earth, so people can be warned."
+  },
+  "fr": {
+   "title": "ATLAS, l'alerte de dernière minute aux astéroïdes",
+   "description": "Quatre télescopes robotisés, dont deux à Hawaï, scrutent tout le ciel nocturne toutes les 24 heures à la recherche d'astéroïdes qui pourraient frapper la Terre."
+  },
+  "es": {
+   "title": "ATLAS, la alerta de último minuto de asteroides",
+   "description": "Cuatro telescopios robóticos, dos de ellos en Hawái, rastrean todo el cielo nocturno cada 24 horas en busca de asteroides que podrían chocar con la Tierra."
+  },
+  "ar": {
+   "title": "ATLAS: نظام الإنذار الأخير من الكويكبات",
+   "description": "أربعة تلسكوبات آلية، اثنان منها في هاواي، تمسح السماء المظلمة كلها كل 24 ساعة بحثًا عن كويكبات قد تصطدم بالأرض، لتمنح أيامًا من التحذير."
+  },
+  "it": {
+   "title": "ATLAS, l'allerta dell'ultimo minuto sugli asteroidi",
+   "description": "Quattro telescopi robotici, due alle Hawaiʻi, scrutano tutto il cielo notturno ogni 24 ore alla ricerca di asteroidi che potrebbero colpire la Terra."
+  }
+ },
+ "Pan-STARRS.html": {
+  "en": {
+   "title": "Pan-STARRS Near-Earth Object Search",
+   "description": "Two telescopes on Haleakalā, Maui, that in 2021 found nearly as many near-Earth objects as the rest of the world's observatories combined."
+  },
+  "fr": {
+   "title": "Pan-STARRS, chasseur de géocroiseurs",
+   "description": "Deux télescopes sur le Haleakalā, à Maui, qui ont trouvé en 2021 presque autant d'objets géocroiseurs que tous les autres observatoires du monde réunis."
+  },
+  "es": {
+   "title": "Pan-STARRS, cazador de objetos cercanos",
+   "description": "Dos telescopios en el Haleakalā, en Maui, que en 2021 hallaron casi tantos objetos cercanos a la Tierra como el resto de los observatorios del mundo juntos."
+  },
+  "ar": {
+   "title": "Pan-STARRS: البحث عن الأجرام القريبة",
+   "description": "تلسكوبان على قمة هاليكالا في ماوي اكتشفا في 2021 ما يقارب عدد الأجرام القريبة من الأرض التي اكتشفتها بقية مراصد العالم مجتمعة."
+  },
+  "it": {
+   "title": "Pan-STARRS, a caccia di oggetti near-Earth",
+   "description": "Due telescopi sull'Haleakalā, a Maui, che nel 2021 hanno trovato quasi tanti oggetti near-Earth quanti tutti gli altri osservatori del mondo messi insieme."
+  }
+ },
+ "Catalina_Sky_Survey.html": {
+  "en": {
+   "title": "Catalina Sky Survey: Asteroid Hunters",
+   "description": "A NASA-funded survey in Arizona that has discovered more near-Earth objects than any other: 17,918 near-Earth asteroids since 1995."
+  },
+  "fr": {
+   "title": "Catalina Sky Survey, chasseur d'astéroïdes",
+   "description": "Un relevé financé par la NASA en Arizona, qui a découvert plus d'objets géocroiseurs que tout autre : 17 918 astéroïdes géocroiseurs depuis 1995."
+  },
+  "es": {
+   "title": "Catalina Sky Survey, cazador de asteroides",
+   "description": "Un rastreo financiado por la NASA en Arizona que ha descubierto más objetos cercanos a la Tierra que ningún otro: 17.918 asteroides cercanos desde 1995."
+  },
+  "ar": {
+   "title": "مسح كاتالينا للسماء: صيّادو الكويكبات",
+   "description": "مسح فلكي في أريزونا تموّله NASA اكتشف أجرامًا قريبة من الأرض أكثر من أي مسح آخر في التاريخ: 17,918 كويكبًا قريبًا من الأرض منذ 1995."
+  },
+  "it": {
+   "title": "Catalina Sky Survey, cacciatori di asteroidi",
+   "description": "Una survey finanziata dalla NASA in Arizona che ha scoperto più oggetti near-Earth di qualsiasi altra: 17.918 asteroidi near-Earth dal 1995."
+  }
+ },
+ "ESA_NEOCC.html": {
+  "en": {
+   "title": "ESA Near-Earth Object Coordination Centre",
+   "description": "Europe's asteroid watch centre computes orbits and impact risks every day and keeps a public list of every asteroid with a non-zero chance of hitting Earth."
+  },
+  "fr": {
+   "title": "Centre de coordination des géocroiseurs (ESA)",
+   "description": "Le centre européen de veille des astéroïdes calcule chaque jour orbites et risques d'impact et publie la liste des astéroïdes qui pourraient frapper la Terre."
+  },
+  "es": {
+   "title": "Centro de Coordinación de Objetos Cercanos (ESA)",
+   "description": "El centro europeo de vigilancia de asteroides calcula a diario órbitas y riesgos de impacto y publica la lista de asteroides que podrían chocar con la Tierra."
+  },
+  "ar": {
+   "title": "مركز تنسيق الأجرام القريبة من الأرض (ESA)",
+   "description": "يحسب المركز الأوروبي لمراقبة الكويكبات المدارات ومخاطر الاصطدام يوميًا، ويحتفظ بقائمة عامة لكل كويكب لديه فرصة غير معدومة لضرب الأرض."
+  },
+  "it": {
+   "title": "Centro coordinamento oggetti near-Earth (ESA)",
+   "description": "Il centro europeo per gli asteroidi calcola ogni giorno orbite e rischi d'impatto e pubblica la lista degli asteroidi che potrebbero colpire la Terra."
+  }
+ },
+ "EFFIS.html": {
+  "en": {
+   "title": "EFFIS: European Forest Fire Information System",
+   "description": "Europe's wildfire system forecasts fire danger and maps burnt areas from satellites. In 2024 it mapped wildfires in 42 countries."
+  },
+  "fr": {
+   "title": "EFFIS : système européen d'information sur les feux",
+   "description": "Le système européen sur les feux de forêt prévoit le danger d'incendie et cartographie les surfaces brûlées par satellite. En 2024, il a couvert 42 pays."
+  },
+  "es": {
+   "title": "EFFIS: sistema europeo de información de incendios",
+   "description": "El sistema europeo de incendios forestales pronostica el peligro de incendio y cartografía las áreas quemadas desde satélites. En 2024 cubrió 42 países."
+  },
+  "ar": {
+   "title": "EFFIS: النظام الأوروبي لمعلومات حرائق الغابات",
+   "description": "يتنبّأ النظام الأوروبي لحرائق الغابات بخطر الحرائق ويرسم خرائط المساحات المحترقة بالأقمار الصناعية، وقد رسم في 2024 حرائق في 42 بلدًا."
+  },
+  "it": {
+   "title": "EFFIS: sistema europeo informazione incendi",
+   "description": "Il sistema europeo sugli incendi boschivi prevede il pericolo d'incendio e mappa le aree bruciate dai satelliti. Nel 2024 ha mappato incendi in 42 paesi."
+  }
+ },
+ "JPSS.html": {
+  "en": {
+   "title": "Joint Polar Satellite System (NOAA)",
+   "description": "NOAA's polar weather satellites circle Earth 14 times a day. Polar-orbiting satellites supply about 85% of the data used by weather prediction models."
+  },
+  "fr": {
+   "title": "JPSS, satellites météo polaires de la NOAA",
+   "description": "Les satellites météo polaires de la NOAA font 14 fois le tour de la Terre par jour ; les satellites polaires fournissent environ 85 % des données des modèles."
+  },
+  "es": {
+   "title": "JPSS, satélites meteorológicos polares de la NOAA",
+   "description": "Los satélites meteorológicos polares de la NOAA dan 14 vueltas a la Tierra al día. Los satélites polares aportan cerca del 85 % de los datos de los modelos."
+  },
+  "ar": {
+   "title": "نظام الأقمار القطبية المشترك JPSS من NOAA",
+   "description": "تدور أقمار الطقس القطبية التابعة لـNOAA حول الأرض 14 مرة يوميًا، وتوفّر الأقمار القطبية نحو 85% من البيانات التي تستخدمها نماذج التنبؤ بالطقس."
+  },
+  "it": {
+   "title": "JPSS, satelliti meteo polari della NOAA",
+   "description": "I satelliti meteo polari della NOAA compiono 14 giri della Terra al giorno. I satelliti polari forniscono circa l'85% dei dati usati dai modelli meteo."
+  }
+ },
+ "GSMaP.html": {
+  "en": {
+   "title": "GSMaP Global Rainfall Map (JAXA)",
+   "description": "JAXA's Global Satellite Mapping of Precipitation maps rain around the world every hour, used by 18,673 registered users in 163 countries and regions."
+  },
+  "fr": {
+   "title": "GSMaP, carte mondiale des pluies (JAXA)",
+   "description": "GSMaP, de la JAXA, cartographie la pluie dans le monde entier chaque heure ; 18 673 utilisateurs inscrits dans 163 pays et régions s'en servent."
+  },
+  "es": {
+   "title": "GSMaP, mapa mundial de lluvia (JAXA)",
+   "description": "GSMaP, de la JAXA, cartografía la lluvia en todo el mundo cada hora y lo usan 18.673 usuarios registrados en 163 países y regiones."
+  },
+  "ar": {
+   "title": "GSMaP: خريطة الأمطار العالمية من JAXA",
+   "description": "يرسم نظام GSMaP التابع لـJAXA خرائط الأمطار حول العالم كل ساعة، ويستخدمه 18,673 مستخدمًا مسجّلًا في 163 بلدًا ومنطقة حول العالم مجانًا."
+  },
+  "it": {
+   "title": "GSMaP, mappa mondiale delle piogge (JAXA)",
+   "description": "GSMaP della JAXA mappa la pioggia in tutto il mondo ogni ora ed è usato da 18.673 utenti registrati in 163 paesi e regioni."
+  }
+ },
+ "CAMS.html": {
+  "en": {
+   "title": "Copernicus Atmosphere Monitoring Service",
+   "description": "Europe's air monitoring service forecasts air pollution, smoke and dust worldwide twice a day for more than 23,500 users, free and open."
+  },
+  "fr": {
+   "title": "CAMS, surveillance de l'atmosphère Copernicus",
+   "description": "Le service européen de surveillance de l'air prévoit pollution, fumée et poussières dans le monde deux fois par jour, pour plus de 23 500 utilisateurs."
+  },
+  "es": {
+   "title": "CAMS, vigilancia atmosférica de Copernicus",
+   "description": "El servicio europeo de vigilancia del aire pronostica la contaminación, el humo y el polvo en todo el mundo dos veces al día, para más de 23.500 usuarios."
+  },
+  "ar": {
+   "title": "CAMS: خدمة كوبرنيكوس لمراقبة الغلاف الجوي",
+   "description": "تتنبّأ خدمة مراقبة الهواء الأوروبية بتلوث الهواء والدخان والغبار حول العالم مرتين يوميًا لأكثر من 23,500 مستخدم، مجانًا وبشكل مفتوح."
+  },
+  "it": {
+   "title": "CAMS, monitoraggio atmosfera Copernicus",
+   "description": "Il servizio europeo di monitoraggio dell'aria prevede inquinamento, fumo e polveri in tutto il mondo due volte al giorno, per oltre 23.500 utenti."
+  }
+ },
+ "GloFAS.html": {
+  "en": {
+   "title": "GloFAS: Global Flood Awareness System",
+   "description": "Free global river flood forecasts up to 30 days ahead, plus 4-month outlooks, from the Copernicus Emergency Management Service."
+  },
+  "fr": {
+   "title": "GloFAS, système mondial d'alerte aux crues",
+   "description": "Des prévisions gratuites de crues des fleuves du monde entier jusqu'à 30 jours à l'avance, avec des perspectives à 4 mois, par Copernicus EMS."
+  },
+  "es": {
+   "title": "GloFAS, sistema mundial de alerta de inundaciones",
+   "description": "Pronósticos gratuitos de crecidas de ríos de todo el mundo con hasta 30 días de antelación, más perspectivas a 4 meses, de Copernicus EMS."
+  },
+  "ar": {
+   "title": "GloFAS: النظام العالمي للتوعية بالفيضانات",
+   "description": "توقعات مجانية لفيضانات الأنهار حول العالم حتى 30 يومًا مسبقًا، مع توقعات لأربعة أشهر، من خدمة كوبرنيكوس لإدارة الطوارئ التابعة للاتحاد الأوروبي."
+  },
+  "it": {
+   "title": "GloFAS, sistema globale di allerta alluvioni",
+   "description": "Previsioni gratuite delle piene dei fiumi di tutto il mondo fino a 30 giorni prima, più prospettive a 4 mesi, dal servizio Copernicus EMS."
+  }
+ },
+ "Copernicus_Marine.html": {
+  "en": {
+   "title": "Copernicus Marine Service: Free Ocean Data",
+   "description": "Free, open ocean data and forecasts for the whole planet. In 2025 users downloaded almost 15,000 terabytes of ocean data from Copernicus Marine."
+  },
+  "fr": {
+   "title": "Copernicus Marine : données océaniques gratuites",
+   "description": "Des données et prévisions océaniques libres et gratuites pour toute la planète. En 2025, les utilisateurs ont téléchargé près de 15 000 téraoctets."
+  },
+  "es": {
+   "title": "Copernicus Marine: datos oceánicos gratuitos",
+   "description": "Datos y pronósticos oceánicos libres y gratuitos para todo el planeta. En 2025, los usuarios descargaron casi 15.000 terabytes de datos."
+  },
+  "ar": {
+   "title": "Copernicus Marine: بيانات محيطات مجانية",
+   "description": "بيانات وتوقعات محيطية مجانية ومفتوحة للكوكب كله. في 2025 نزّل المستخدمون ما يقارب 15,000 تيرابايت من بيانات المحيطات من Copernicus Marine."
+  },
+  "it": {
+   "title": "Copernicus Marine: dati oceanici gratuiti",
+   "description": "Dati e previsioni oceaniche liberi e gratuiti per tutto il pianeta. Nel 2025 gli utenti hanno scaricato quasi 15.000 terabyte di dati oceanici."
+  }
+ },
+ "OpenET.html": {
+  "en": {
+   "title": "OpenET: Satellite Water Data for Farms",
+   "description": "Free satellite data on how much water crops and land use, now for all 48 contiguous states, with more than 13,000 registered users."
+  },
+  "fr": {
+   "title": "OpenET : données satellitaires sur l'eau agricole",
+   "description": "Des données satellitaires gratuites sur l'eau consommée par les cultures et les sols, pour les 48 États contigus, avec plus de 13 000 utilisateurs inscrits."
+  },
+  "es": {
+   "title": "OpenET: datos satelitales del agua agrícola",
+   "description": "Datos satelitales gratuitos sobre cuánta agua usan los cultivos y el suelo, para los 48 estados contiguos, con más de 13.000 usuarios registrados."
+  },
+  "ar": {
+   "title": "OpenET: بيانات المياه الزراعية من الفضاء",
+   "description": "بيانات فضائية مجانية عن كمية المياه التي تستهلكها المحاصيل والأراضي، تغطي الآن الولايات الـ48 المتجاورة، مع أكثر من 13,000 مستخدم مسجّل."
+  },
+  "it": {
+   "title": "OpenET: dati satellitari sull'acqua agricola",
+   "description": "Dati satellitari gratuiti su quanta acqua usano colture e suoli, ora per tutti i 48 stati contigui, con oltre 13.000 utenti registrati."
+  }
+ },
+ "Zero_Debris_Charter.html": {
+  "fr": {
+   "title": "Charte Zéro Débris (ESA)"
+  },
+  "es": {
+   "title": "Carta Cero Desechos (ESA)"
+  },
+  "ar": {
+   "title": "ميثاق صفر حطام (وكالة الفضاء الأوروبية)"
+  },
+  "it": {
+   "title": "Carta Zero Detriti (ESA)"
   }
  }
 }
