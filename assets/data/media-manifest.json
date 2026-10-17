@@ -1028,6 +1028,17 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/EnVision-480.5f6c4f251fbe.webp 480w, https://media.savingplanets.com/images/og/en/EnVision-800.e6e74df89a9b.webp 800w, https://media.savingplanets.com/images/og/en/EnVision-1200.7b3bd3240a85.webp 1200w"
  },
+ "images/og/en/Enceladus.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/Enceladus.391a5369aa11.jpg",
+  "key": "images/og/en/Enceladus.391a5369aa11.jpg",
+  "bytes": 47904,
+  "sha256": "391a5369aa11c511df45fc3320b88563704ed42834b7ed1068ff035310e835d1",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/Enceladus-480.71215613fb37.webp 480w, https://media.savingplanets.com/images/og/en/Enceladus-800.f913736525ab.webp 800w, https://media.savingplanets.com/images/og/en/Enceladus-1200.6afc3946f604.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/Enceladus-480.b475782c5fab.avif 480w, https://media.savingplanets.com/images/og/en/Enceladus-800.12c80ab2afca.avif 800w, https://media.savingplanets.com/images/og/en/Enceladus-1200.a5ff3b1c3a9d.avif 1200w"
+ },
  "images/og/en/Europa_Clipper.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Europa_Clipper.6e8292813c6d.jpg",
   "key": "images/og/en/Europa_Clipper.6e8292813c6d.jpg",

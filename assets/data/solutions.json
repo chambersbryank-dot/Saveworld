@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T06:47:15.335Z",
+ "generated": "2026-10-17T08:40:36.495Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -776,6 +776,10 @@
      "name": "ClearSpace"
     },
     {
+     "href": "Enceladus.html",
+     "name": "Enceladus"
+    },
+    {
      "href": "Globe_at_Night.html",
      "name": "Globe at Night (NSF NOIRLab)"
     },
@@ -916,14 +920,14 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 162,
+  "solutions": 163,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
    "corporate": 12,
    "agency": 89,
    "nonprofit": 44,
-   "natural": 14,
+   "natural": 15,
    "government": 1
   },
   "upcomingMissions": 16,
@@ -946,7 +950,7 @@
     ]
    }
   ],
-  "taggedSolutions": 162
+  "taggedSolutions": 163
  },
  "categories": {
   "ocean": {
@@ -1031,13 +1035,13 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 5,
+   "solutions": 6,
    "horizon": 1,
    "hubs": 1,
    "byClassification": {
     "corporate": 3,
-    "government": 1,
-    "natural": 1
+    "natural": 2,
+    "government": 1
    },
    "upcomingMissions": 1,
    "impactTotals": []
@@ -1682,6 +1686,25 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-15"
+  },
+  {
+   "url": "Enceladus.html",
+   "title": "Enceladus",
+   "category": "space",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [
+    {
+     "label": "Plume jet speed",
+     "value": 400,
+     "unit": "m/s (about)",
+     "kind": "fact",
+     "sourceUrl": "https://science.nasa.gov/saturn/moons/enceladus/"
+    }
+   ],
+   "missions": [],
+   "added": "2026-10-16"
   },
   {
    "url": "EnVision.html",

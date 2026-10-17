@@ -124,7 +124,9 @@ def build_css(merged, order, have=frozenset()):
 def apply(f, s, css):
     s = BLOCK.sub('', s)
     s = re.sub(r'<noscript class="crit-ns">.*?</noscript>', '', s, flags=re.S)
-    s = re.sub(r'<link rel="preload" as="style" href="([^"]+)" onload="this.onload=null;this.rel=\'stylesheet\'">', r'<link rel="stylesheet" href="\1">', s)
+    # undo the async swap in any attribute order: i18n-build (BeautifulSoup) re-serialises translated pages as
+    # <link as="style" href=".." onload=".." rel="preload"/> and drops CRIT + the noscript (Oct 16: fr/es/ar/it were left with no inline CSS and no fallback)
+    s = re.sub(r'<link (?=[^>]*\brel="preload")(?=[^>]*\bas="style")(?=[^>]*\bonload="this\.onload=null;this\.rel=\'stylesheet\'")[^>]*\bhref="([^"]+)"[^>]*?/?>', r'<link rel="stylesheet" href="\1">', s)
     if css is None: return s
     hrefs = links(s)
     if not hrefs: return s
@@ -164,9 +166,14 @@ def main():
     for f in files:
         en = f.split('/', 1)[1] if '/' in f else f
         if only and en not in only: continue
-        if en in SKIP: continue
+        if en in SKIP:
+            # excluded pages keep plain stylesheets: strip a CRIT block/async links a generator copied in from a template head (Oct 16: Solutions, Satellite_Explorer, World_Map had picked one up)
+            if en != 'index.html':
+                s0 = open(f, encoding='utf8').read(); s1 = apply(f, s0, None)
+                if s1 != s0: open(f, 'w', encoding='utf8').write(s1)
+            continue
         s = BLOCK.sub('', open(f, encoding='utf8').read())
-        if 'http-equiv="refresh"' in s or not links(s): continue
+        if 'http-equiv="refresh"' in s or not links(apply(f, s, None)): continue  # apply() first: translated pages can carry the async-swapped links
         k = template(apply(f, s, None)); groups.setdefault(k, []).append(f)
     need = {}
     for k, fs in groups.items():
