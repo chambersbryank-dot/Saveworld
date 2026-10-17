@@ -462,3 +462,4 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
 - Facts computed from the repo at build time: "more than N pages in each of five languages" (N = min page count across langs rounded down to 100, now 200) and solutions = solutions.json site.solutions (now 142). No owner name, no veteran mention (grey area, left to owner).
 - Reuses existing .five-ws/.w-card/.partner-list/.btn-nav styles: no CSS/JS change, so no ?v= bump. No third-party scripts. hreflang already present on About/index.
 - Noticed, not changed: fr/ar About + homepage partner text says "four languages" (quatre / بأربع); site has five.
+- 7:40 PM: the .hs-caps positioning box itself is visibility:hidden (only the active caption is visible), so its move is not counted as a shift either. Separate, pre-existing: /ar/ (and other non-matching locales) shift ~0.059 when the language-suggestion banner pads <body> (seen on the earth theme too; build-langbanner.py).
