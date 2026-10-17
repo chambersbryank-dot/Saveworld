@@ -16,6 +16,7 @@ LOGO = SITE + 'assets/SavePlanetLogo.jpg'
 ORG = {'@type': 'Organization', 'name': 'Saving Planets', 'url': 'https://www.savingplanets.com', 'logo': {'@type': 'ImageObject', 'url': LOGO}}
 ORG_ID, SITE_ID = SITE + '#organization', SITE + '#website'
 ORG_REF = {'@id': ORG_ID}
+ORG_FULL = dict(ORG, **{'@id': ORG_ID})  # Article author/publisher: full node, since stricter validators don't resolve @id references
 SAME_AS = ['https://x.com/SISavingPlanets']
 SITENAME = 'Saving Planets'
 NOINDEX = {'Project-R.html', '404.html'}
@@ -132,7 +133,7 @@ def enrich(p):
         pub = main.get('datePublished'); rv = REVIEWED.get(page, {}).get('date') or main.get('dateModified')
         if pub: a['datePublished'] = min(pub, rv) if rv else pub
         if rv: a['dateModified'] = rv
-        a['author'] = ORG_REF; a['publisher'] = ORG_REF
+        a['author'] = ORG_FULL; a['publisher'] = ORG_FULL
         b = s.split('<body', 1)[-1]
         b = re.sub(r'<nav id="topnav">.*?</nav>|<footer>.*?</footer>|<section class="help-actions".*?</section>|<!-- (SHARE|RELATED|REVIEWED|CITE[A-Z-]*):START -->.*?<!-- \1:END -->|<section class="cite-box".*?</section>|<aside class="cite-box".*?</aside>', ' ', b, flags=re.S)
         cites = []
@@ -174,8 +175,12 @@ def enrich(p):
         me['url'] = U
     for o in by.values():  # replace stale inline publisher/author copies with the shared @id
         for k in ('publisher', 'author'):
-            if isinstance(o.get(k), dict) and o[k].get('@type') == 'Organization' and o[k].get('name') == SITENAME: o[k] = ORG_REF
+            if isinstance(o.get(k), dict) and o[k].get('@type') == 'Organization' and o[k].get('name') == SITENAME and o.get('@type') != 'Article': o[k] = ORG_REF
         if isinstance(o.get('isPartOf'), dict) and o['isPartOf'].get('@type') == 'WebSite': o['isPartOf'] = {'@id': SITE_ID}
+    md = re.search(r'<meta name="description" content="([^"]*)"', s)
+    if md:  # keep the main node's description identical to the (fitted) meta description
+        for k in ('Article', 'WebPage', 'CollectionPage', 'LearningResource', 'DefinedTermSet'):
+            if k in by and by[k].get('description'): by[k]['description'] = html.unescape(md.group(1))
     order = ['Organization', 'WebSite', 'BreadcrumbList', 'Article', 'LearningResource', 'CollectionPage', 'DefinedTermSet', 'FAQPage', 'WebPage', 'Multi']
     objs2 = [by[k] for k in order if k in by] + [v for k, v in by.items() if k not in order] + dup
     out = write(s, objs2)
