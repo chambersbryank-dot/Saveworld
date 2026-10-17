@@ -906,6 +906,17 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Coral_Restoration_Foundation-480.6207683abff3.webp 480w, https://media.savingplanets.com/images/og/en/Coral_Restoration_Foundation-800.a2da075cfec0.webp 800w, https://media.savingplanets.com/images/og/en/Coral_Restoration_Foundation-1200.8d6fac4d616a.webp 1200w"
  },
+ "images/og/en/CryoSat.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/CryoSat.d46be071a757.jpg",
+  "key": "images/og/en/CryoSat.d46be071a757.jpg",
+  "bytes": 58861,
+  "sha256": "d46be071a757205aef3011e70682bc1bd485f67bf5914cc19575ef7447daa759",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/CryoSat-480.db817ae0a26f.webp 480w, https://media.savingplanets.com/images/og/en/CryoSat-800.e4d53cb9d816.webp 800w, https://media.savingplanets.com/images/og/en/CryoSat-1200.da9a914d0974.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/CryoSat-480.5aee99da6920.avif 480w, https://media.savingplanets.com/images/og/en/CryoSat-800.0955e02498c3.avif 800w, https://media.savingplanets.com/images/og/en/CryoSat-1200.3004a09524ac.avif 1200w"
+ },
  "images/og/en/DSCOVR_EPIC.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/DSCOVR_EPIC.aaf7efee9a42.jpg",
   "key": "images/og/en/DSCOVR_EPIC.aaf7efee9a42.jpg",
@@ -1100,6 +1111,17 @@
   "width": 1200,
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/FreshWater_Watch-480.06957deefb68.webp 480w, https://media.savingplanets.com/images/og/en/FreshWater_Watch-800.1e1c9832b565.webp 800w, https://media.savingplanets.com/images/og/en/FreshWater_Watch-1200.f9c977d6b60d.webp 1200w"
+ },
+ "images/og/en/GCOM-C.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/GCOM-C.cc565a811824.jpg",
+  "key": "images/og/en/GCOM-C.cc565a811824.jpg",
+  "bytes": 35610,
+  "sha256": "cc565a811824f988713b9cf3eec2f88e0e322d78d93659dad1ed303f62df8884",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/GCOM-C-480.3f704e6dc8f0.webp 480w, https://media.savingplanets.com/images/og/en/GCOM-C-800.a75583b8c932.webp 800w, https://media.savingplanets.com/images/og/en/GCOM-C-1200.fb0be27284fb.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/GCOM-C-480.36b4456a2237.avif 480w, https://media.savingplanets.com/images/og/en/GCOM-C-800.8882c6865ad5.avif 800w, https://media.savingplanets.com/images/og/en/GCOM-C-1200.252a71fb08a2.avif 1200w"
  },
  "images/og/en/GEDI.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/GEDI.1549ed0dca63.jpg",
@@ -1327,6 +1349,17 @@
   "srcset": "https://media.savingplanets.com/images/og/en/International_Charter-480.3b21a31af636.webp 480w, https://media.savingplanets.com/images/og/en/International_Charter-800.91b0967435d2.webp 800w, https://media.savingplanets.com/images/og/en/International_Charter-1200.5f7d53fdc062.webp 1200w",
   "srcset_avif": "https://media.savingplanets.com/images/og/en/International_Charter-480.a7a38c5de002.avif 480w, https://media.savingplanets.com/images/og/en/International_Charter-800.046214e9808c.avif 800w, https://media.savingplanets.com/images/og/en/International_Charter-1200.10b2f5febf0e.avif 1200w"
  },
+ "images/og/en/International_Coastal_Cleanup.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup.73b1280a3f56.jpg",
+  "key": "images/og/en/International_Coastal_Cleanup.73b1280a3f56.jpg",
+  "bytes": 100297,
+  "sha256": "73b1280a3f56a8c19065f57e708bd0b88339eba5e7145f5dd4aa4e82a6b606cf",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-480.61601388b551.webp 480w, https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-800.467759c2a4c0.webp 800w, https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-1200.7393d15ae499.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-480.81d9f2d33bff.avif 480w, https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-800.468c07e840a9.avif 800w, https://media.savingplanets.com/images/og/en/International_Coastal_Cleanup-1200.ff3007740475.avif 1200w"
+ },
  "images/og/en/JPSS.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/JPSS.76eb96adac7b.jpg",
   "key": "images/og/en/JPSS.76eb96adac7b.jpg",
@@ -1387,6 +1420,17 @@
   "width": 1200,
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Kelp_Forests-480.7685e6116899.webp 480w, https://media.savingplanets.com/images/og/en/Kelp_Forests-800.f06d5488cd9f.webp 800w, https://media.savingplanets.com/images/og/en/Kelp_Forests-1200.c8b3d2e515e4.webp 1200w"
+ },
+ "images/og/en/Kissimmee_River_Restoration.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration.d195543042ff.jpg",
+  "key": "images/og/en/Kissimmee_River_Restoration.d195543042ff.jpg",
+  "bytes": 72766,
+  "sha256": "d195543042ff065b3aa44c5974afb23e358759176f974efc34083597ebece59f",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-480.b0177dd75fb9.webp 480w, https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-800.209e8bc6e7b7.webp 800w, https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-1200.8a8190c90e76.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-480.97bea3742173.avif 480w, https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-800.145fee68330d.avif 800w, https://media.savingplanets.com/images/og/en/Kissimmee_River_Restoration-1200.2e55bf438ec7.avif 1200w"
  },
  "images/og/en/Klamath_River_Dam_Removal.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Klamath_River_Dam_Removal.9dd2c4b913d9.jpg",
@@ -1490,6 +1534,17 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Living_Lands_and_Waters-480.4bcb01f666ff.webp 480w, https://media.savingplanets.com/images/og/en/Living_Lands_and_Waters-800.7ec185684a34.webp 800w, https://media.savingplanets.com/images/og/en/Living_Lands_and_Waters-1200.09630112709e.webp 1200w"
  },
+ "images/og/en/London_Tideway_Tunnel.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel.51fefa4a49a4.jpg",
+  "key": "images/og/en/London_Tideway_Tunnel.51fefa4a49a4.jpg",
+  "bytes": 116833,
+  "sha256": "51fefa4a49a41f19b1e2938f20797feadca6c277713b5f648f1be26d85d100b8",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-480.7e15fd924d91.webp 480w, https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-800.78e382c934aa.webp 800w, https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-1200.0010327ac02a.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-480.100542e913cc.avif 480w, https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-800.eca10ae17dbb.avif 800w, https://media.savingplanets.com/images/og/en/London_Tideway_Tunnel-1200.f3cf9d5d3582.avif 1200w"
+ },
  "images/og/en/Lucy.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Lucy.929b5dad2642.jpg",
   "key": "images/og/en/Lucy.929b5dad2642.jpg",
@@ -1530,6 +1585,17 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-480.c3258f006bde.webp 480w, https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-800.a1ac15b04791.webp 800w, https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-1200.121f0f7b60b5.webp 1200w",
   "srcset_avif": "https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-480.d245fc663ce9.avif 480w, https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-800.1fac6b9a3427.avif 800w, https://media.savingplanets.com/images/og/en/MetOp-SG-A1_Sentinel-5A-1200.30d6da97f6c3.avif 1200w"
+ },
+ "images/og/en/Meteosat_Third_Generation.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation.5cb076963237.jpg",
+  "key": "images/og/en/Meteosat_Third_Generation.5cb076963237.jpg",
+  "bytes": 39756,
+  "sha256": "5cb0769632376c419c42dae4a427b695a9ee49d52c5299e0a55ea0f95d7dcb05",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-480.21f38a143804.webp 480w, https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-800.3edee9646226.webp 800w, https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-1200.105f79a1dce8.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-480.7a5932b33200.avif 480w, https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-800.f5769609ce8e.avif 800w, https://media.savingplanets.com/images/og/en/Meteosat_Third_Generation-1200.283127143254.avif 1200w"
  },
  "images/og/en/Mission_Blue_Hope_Spots.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Mission_Blue_Hope_Spots.3c09dfba6774.jpg",
@@ -1727,6 +1793,28 @@
   "srcset": "https://media.savingplanets.com/images/og/en/Pan-STARRS-480.1fb200a5422e.webp 480w, https://media.savingplanets.com/images/og/en/Pan-STARRS-800.34730cec062d.webp 800w, https://media.savingplanets.com/images/og/en/Pan-STARRS-1200.c41d80aaf118.webp 1200w",
   "srcset_avif": "https://media.savingplanets.com/images/og/en/Pan-STARRS-480.48ae0dcb3f38.avif 480w, https://media.savingplanets.com/images/og/en/Pan-STARRS-800.7b71fed1ff1e.avif 800w, https://media.savingplanets.com/images/og/en/Pan-STARRS-1200.03fae9e103ac.avif 1200w"
  },
+ "images/og/en/Parker_Solar_Probe.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/Parker_Solar_Probe.f77893c06f4d.jpg",
+  "key": "images/og/en/Parker_Solar_Probe.f77893c06f4d.jpg",
+  "bytes": 75411,
+  "sha256": "f77893c06f4d85c9aae1ad30748c7d4a273b14023f91b0ecaff5d791b20b1684",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-480.acd5ef1fa48b.webp 480w, https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-800.8d07afb72d29.webp 800w, https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-1200.4f21946a128c.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-480.cdff713e671c.avif 480w, https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-800.3013625a89ae.avif 800w, https://media.savingplanets.com/images/og/en/Parker_Solar_Probe-1200.bc41e5d8a0a2.avif 1200w"
+ },
+ "images/og/en/Penobscot_River_Restoration.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration.665291c28f41.jpg",
+  "key": "images/og/en/Penobscot_River_Restoration.665291c28f41.jpg",
+  "bytes": 55729,
+  "sha256": "665291c28f419f8362c8b65119100fb9253e3111c2d0761437c46874d19b27e6",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-480.2493145cb1c0.webp 480w, https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-800.5afb6cd86c19.webp 800w, https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-1200.6ba36b689fd2.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-480.9f592cc886d1.avif 480w, https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-800.478451d657b8.avif 800w, https://media.savingplanets.com/images/og/en/Penobscot_River_Restoration-1200.e72e47c58806.avif 1200w"
+ },
  "images/og/en/Phytoplankton.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Phytoplankton.275642b5206a.jpg",
   "key": "images/og/en/Phytoplankton.275642b5206a.jpg",
@@ -1878,6 +1966,28 @@
   "width": 1200,
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/SARSAT-480.859457de67b2.webp 480w, https://media.savingplanets.com/images/og/en/SARSAT-800.9657df3d3db7.webp 800w, https://media.savingplanets.com/images/og/en/SARSAT-1200.d41eeb2c9fcb.webp 1200w"
+ },
+ "images/og/en/SMAP.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/SMAP.1035f05edbb6.jpg",
+  "key": "images/og/en/SMAP.1035f05edbb6.jpg",
+  "bytes": 100746,
+  "sha256": "1035f05edbb6701b90951f3f5ecfa597d38f00b69c20e9d370786679aaa45f6d",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/SMAP-480.db017970d729.webp 480w, https://media.savingplanets.com/images/og/en/SMAP-800.f876644cb509.webp 800w, https://media.savingplanets.com/images/og/en/SMAP-1200.9d682e188bf8.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/SMAP-480.5d45c0e8ce1d.avif 480w, https://media.savingplanets.com/images/og/en/SMAP-800.6bc9b09161ec.avif 800w, https://media.savingplanets.com/images/og/en/SMAP-1200.b30e57348271.avif 1200w"
+ },
+ "images/og/en/SOHO.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/SOHO.d21878b932b6.jpg",
+  "key": "images/og/en/SOHO.d21878b932b6.jpg",
+  "bytes": 79756,
+  "sha256": "d21878b932b6ce303e016a57734738fd666dd40d36856fbfdf2e9c2ac5fdeb22",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/SOHO-480.0b28bc45750e.webp 480w, https://media.savingplanets.com/images/og/en/SOHO-800.3347bb65dcaa.webp 800w, https://media.savingplanets.com/images/og/en/SOHO-1200.2aa49884053e.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/SOHO-480.682669e20a0d.avif 480w, https://media.savingplanets.com/images/og/en/SOHO-800.ae0d4a97a758.avif 800w, https://media.savingplanets.com/images/og/en/SOHO-1200.5e2987173416.avif 1200w"
  },
  "images/og/en/SOLAR_1.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/SOLAR_1.62a6edb71481.jpg",
@@ -2113,6 +2223,17 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Terraformation-480.90cf2b12ea3c.webp 480w, https://media.savingplanets.com/images/og/en/Terraformation-800.f3f968785f76.webp 800w, https://media.savingplanets.com/images/og/en/Terraformation-1200.0873d62790b1.webp 1200w"
  },
+ "images/og/en/The_SeaCleaners.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/The_SeaCleaners.5aa7268e9795.jpg",
+  "key": "images/og/en/The_SeaCleaners.5aa7268e9795.jpg",
+  "bytes": 61787,
+  "sha256": "5aa7268e979516d47bdbe5b2b622c8939d261ca65406a1030997f5dc1487bdcf",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/The_SeaCleaners-480.69f2e4fc7858.webp 480w, https://media.savingplanets.com/images/og/en/The_SeaCleaners-800.0dcced817010.webp 800w, https://media.savingplanets.com/images/og/en/The_SeaCleaners-1200.504a8bee00bf.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/The_SeaCleaners-480.06725eac08a5.avif 480w, https://media.savingplanets.com/images/og/en/The_SeaCleaners-800.c04d7d4bcc9b.avif 800w, https://media.savingplanets.com/images/og/en/The_SeaCleaners-1200.3b35fdc66b77.avif 1200w"
+ },
  "images/og/en/Three_Shields.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Three_Shields.9e41e771256a.jpg",
   "key": "images/og/en/Three_Shields.9e41e771256a.jpg",
@@ -2226,6 +2347,17 @@
   "width": 1200,
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Waterkeeper_Alliance-480.0e0cdd1a6730.webp 480w, https://media.savingplanets.com/images/og/en/Waterkeeper_Alliance-800.9ad1ca15f7f7.webp 800w, https://media.savingplanets.com/images/og/en/Waterkeeper_Alliance-1200.70f9a243a5c5.webp 1200w"
+ },
+ "images/og/en/WeForest.jpg": {
+  "url": "https://media.savingplanets.com/images/og/en/WeForest.34f60ff48a1b.jpg",
+  "key": "images/og/en/WeForest.34f60ff48a1b.jpg",
+  "bytes": 50795,
+  "sha256": "34f60ff48a1bea225a0aa61591985299e874f665630a812813fc75bfd7fa13e3",
+  "type": "image/jpeg",
+  "width": 1200,
+  "height": 630,
+  "srcset": "https://media.savingplanets.com/images/og/en/WeForest-480.1e486391de6c.webp 480w, https://media.savingplanets.com/images/og/en/WeForest-800.cc8aafc26e6d.webp 800w, https://media.savingplanets.com/images/og/en/WeForest-1200.30d8797d9535.webp 1200w",
+  "srcset_avif": "https://media.savingplanets.com/images/og/en/WeForest-480.c7d60f4fbf43.avif 480w, https://media.savingplanets.com/images/og/en/WeForest-800.26e369eeb063.avif 800w, https://media.savingplanets.com/images/og/en/WeForest-1200.5e60b72948e3.avif 1200w"
  },
  "images/og/en/Webb_2024_YR4.jpg": {
   "url": "https://media.savingplanets.com/images/og/en/Webb_2024_YR4.5ece0e0e9604.jpg",

@@ -286,7 +286,7 @@ def ensure_css(s):
 def inject():
     n = 0
     for f, anchor, which, where in [('index.html', '<!-- AUDIENCE:END -->', ['map', 'lesson', 'sat'], 'after'),
-                                    ('Amazing_Facts.html', '<!-- FACTS:START -->', ['map', 'sat'], 'before'),
+                                    ('Amazing_Facts.html', '<!-- FACTS:END -->', ['map', 'sat'], 'after'),  # Oct 17 wow rule: facts first
                                     ('Teachers.html', '<p class="t-intro">', ['lesson', 'map', 'sat'], 'before')]:
         s0 = rd(f); s = strip_links(s0)
         if anchor not in s: print('edu: anchor missing in', f); continue

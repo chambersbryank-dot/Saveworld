@@ -664,3 +664,14 @@ Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME
 - Not used (unsourced in fetched pages): Parker 24 Dec 2024 closest-pass date/3.8M mi (NASA article URL 404; page says ~3.9M mi), SHIKISAI name meaning. Donate links only where real: Ocean Conservancy (donate + partners), SeaCleaners (donate + volunteer), WeForest (donate + partner). Agencies/Tideway/Kissimmee: learn links; Penobscot: Trust site.
 - New public-domain NASA images: London_Thames_Night_ISS (iss074e0381351), New_England_Coast_ISS (iss072e394484), Lightning_Storm_ISS (iss073e0080625). Kissimmee uses the existing Florida Keys image (no Kissimmee photo found in NASA images API).
 - Generator fixes: build-site-extras main-landmark regex accepts extra attributes (World_Map <main class="wm-main"> crashed weekly-sync); seo-fix expands {n} in i18n/seo-meta.json overrides to the live count, and fr/Solutions description now uses {n} (was stuck at 142).
+
+## 2026-10-17 First-screen wow rule (top 5 pages)
+Owner rule "every page is real estate": the first screen (iPad 1024x768/768x1024, desktop 1440x900, phone 390x844) shows the best thing on the page. Nothing deleted, all moves via generators, all 5 languages.
+- New `scripts/build-wow.py` (runs in weekly-sync before i18n-build): EN source moves + `/* WOW:START */` CSS block in styles.css. Idempotent.
+  - Home: "Please email ideas@…" line moved out of the hero into "Be Part of the Fix". Hero = kicker, title, one line, two CTAs.
+  - Ways to Help: Donate or Volunteer table now starts the page; "How This Works" moved right after it; top Home/About buttons dropped (same links stay at the bottom).
+  - About: mission strip + "Saving Planets, Minus the Doom" first; video moved after them. #cohost unchanged.
+  - Solutions / Amazing Facts / Ways to Help / About: shorter heroes (min 200px); Solutions intro tighter, hub chips one scrollable row at >=700px, so cards start on the first screen.
+- `build-data-tools.py`: Amazing Facts "Use this data" bar now after the fact grid; homepage one now sits right above the Scoreboard it exports (regex anchor, `re:` prefix).
+- `build-edu.py`: Amazing Facts Kids Map / Satellite Explorer tiles now after the facts.
+- CSS v=20261017c. Screenshots: /workspace/wow-shots/1017/ (<page>-<size>-before/after.png).

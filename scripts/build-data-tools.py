@@ -26,7 +26,9 @@ def to_csv(rows):
 def put(s, name, new, before=None, after=None):
     s = re.sub(r'<!-- %s:START -->.*?<!-- %s:END -->' % (name, name), '', s, flags=re.S)
     if before:
-        i = s.find(before)
+        if before.startswith('re:'):  # Oct 17: tag start by regex (attribute order differs in translated pages)
+            mm = re.search(before[3:], s); i = mm.start() if mm else -1
+        else: i = s.find(before)
         if i < 0: i = s.find('</main>')
         return s if i < 0 else s[:i] + new + s[i:]
     i = s.find(after); return s if i < 0 else s[:i + len(after)] + new + s[i + len(after):]
@@ -72,7 +74,7 @@ def facts(l):
         i = c.rfind('</div>'); return c[:i] + mini(l, t, url) + c[i:]
     s = re.sub(r'<div class="w-card"[^>]*>.*?</div>(?=\s*(?:<div class="w-card"|<!-- FACTS:END|</div>))', card, s, flags=re.S)
     n = wr(f'assets/data/export/facts.{l}.csv', to_csv(rows))
-    s = put(s, 'DATA-TOOLS', bar(l, pagetitle(s), f'{SITE}{d(l)}Amazing_Facts.html', ('' if l == 'en' else '../') + f'assets/data/export/facts.{l}.csv'), before='<section class="five-ws" id="solution"')
+    s = put(s, 'DATA-TOOLS', bar(l, pagetitle(s), f'{SITE}{d(l)}Amazing_Facts.html', ('' if l == 'en' else '../') + f'assets/data/export/facts.{l}.csv'), before='<section class="impact-bar"')  # Oct 17 wow rule: facts first, data tools after the grid
     return n + wr(p, s)
 def myths(l):
     p = d(l) + 'Myth_vs_Fact.html'
@@ -110,7 +112,7 @@ def home(l):
     rows = [['figure', 'value', 'source']] + [[txt(b), txt(a), SITE + 'assets/data/solutions.json'] for a, b in re.findall(r'<span class="imp-num">(.*?)</span><span class="imp-label">(.*?)</span>', m.group(1))]
     n = wr(f'assets/data/export/scoreboard.{l}.csv', to_csv(rows))
     t = 'Saving Planets Scoreboard'
-    s = put(s, 'DATA-TOOLS', bar(l, t, f'{SITE}{d(l)}index.html', ('' if l == 'en' else '../') + f'assets/data/export/scoreboard.{l}.csv'), after='<!-- IMPACT:END -->')
+    s = put(s, 'DATA-TOOLS', bar(l, t, f'{SITE}{d(l)}index.html', ('' if l == 'en' else '../') + f'assets/data/export/scoreboard.{l}.csv'), before=r're:<section[^>]*id="scoreboard"')  # Oct 17 wow rule: next to the Scoreboard it exports
     return n + wr(p, s)
 def main():
     n = 0
