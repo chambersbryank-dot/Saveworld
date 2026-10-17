@@ -14,13 +14,14 @@ Run last in weekly-sync.sh (after every generator that touches <head>)."""
 import os, re, sys, json, glob, hashlib, threading, http.server, socketserver, functools
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 CACHE = 'scripts/critical-cache.json'
-EXTRACT_V = '2'  # bump when the extraction JS changes (forces re-extract). v2: bare img/svg/video rules always kept (below-fold 1200px card images overflowed in RTL before the full CSS loaded)
+JSCLS = re.compile(r'(mw-|spn|topnav|sp-lb|is-|js-)')  # classes added by JS at runtime: never required to be in the HTML
+EXTRACT_V = '6'  # bump when the extraction JS changes (forces re-extract). v2: bare img/svg/video rules always kept (below-fold 1200px card images overflowed in RTL before the full CSS loaded). v3: .sp-video always kept; v4: class-coverage sampling + per-page rule filter (only selectors whose classes appear in the page). v5: mission widget (+ JS-built .mw-*) always kept. v6: .horizon-note/.horizon-badge always kept
 SKIP = {'index.html'}  # homepage head is owned by the hero generator (build-batch2 / hero-themes); never rewritten here
 LINK = re.compile(r'<link (?:rel="stylesheet" href="([^"]+\.css[^"]*)"|href="([^"]+\.css[^"]*)" rel="stylesheet")\s*/?>')
 BLOCK = re.compile(r'<!-- CRIT:START -->.*?<!-- CRIT:END -->', re.S)
 JS = r"""(fold) => {
  const keep = [], DYN = /::?(hover|focus-visible|focus-within|focus|active|visited|target|before|after|placeholder|marker|selection|first-letter|first-line|backdrop|file-selector-button|-webkit-[\w-]+|-moz-[\w-]+)(\([^)]*\))?/g;
- const ALWAYS = /topnav|spn|skip-link|sp-lb/, HERO = /page-hero|space-hero|-hero\b/, BARE = /^(img|svg|video|picture|iframe|canvas|html|body|:root|\*|html\.dark|html\.dark body|html\[dir=rtl\]|\[dir=rtl\])$/;
+ const ALWAYS = /topnav|spn|skip-link|sp-lb|sp-video|mission-widget|mw-|horizon-/, HERO = /page-hero|space-hero|-hero\b/, BARE = /^(img|svg|video|picture|iframe|canvas|html|body|:root|\*|html\.dark|html\.dark body|html\[dir=rtl\]|\[dir=rtl\])$/;
  const nav = document.getElementById('topnav');
  const top = el => { if (nav && nav.contains(el)) return 0; const r = el.getBoundingClientRect(); if (!r.width && !r.height) return 1e9; return r.top + scrollY; };
  const hit = sel => { if (ALWAYS.test(sel) || sel.split(',').some(x => BARE.test(x.trim().replace(DYN, '')))) return true; let s = sel.replace(DYN, '').replace(/\(\s*\)/g, '');
@@ -92,10 +93,29 @@ def hero_css(merged, sheet, have):
     flush()
     return ''.join(out)
 
+def split_rules(css):
+    out, depth, start = [], 0, 0
+    for i, ch in enumerate(css):
+        if ch == '{': depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0: out.append(css[start:i + 1]); start = i + 1
+        elif ch == ';' and depth == 0: out.append(css[start:i + 1]); start = i + 1
+    return [r.strip() for r in out if r.strip()]
+
+def keep_rule(r, have):
+    head = r.split('{', 1)[0].strip()
+    if head.startswith('@media') or head.startswith('@supports') or head.startswith('@container') or head.startswith('@layer'):
+        inner = [x for x in split_rules(r[r.index('{') + 1:r.rindex('}')]) if keep_rule(x, have)]
+        return (head + '{' + ''.join(inner) + '}') if inner else None
+    if head.startswith('@') or not have: return r
+    sels = [x for x in head.split(',') if set(c for c in re.findall(r'\.([\w-]+)', re.sub(r':not\([^)]*\)', '', x)) if not JSCLS.match(c)) <= have]
+    return (','.join(sels) + r[len(r.split('{', 1)[0]):]) if sels else None
+
 def build_css(merged, order, have=frozenset()):
     parts = []
     for sheet in order:
-        rules = merged.get(sheet, [])
+        rules = [k for k in (keep_rule(r, have) for r in merged.get(sheet, [])) if k]
         parts.append(''.join(rules) + hero_css(merged, sheet, have))
     css = ''.join(parts)
     css = re.sub(r'\s*([{};:,>])\s*', r'\1', css).replace(';}', '}')
@@ -132,8 +152,14 @@ def main():
     for k, fs in groups.items():
         if revert: continue
         if cache.get(k, {}).get('hash') == css_hash(k): continue
-        ens = [f for f in fs if '/' not in f][:2] or fs[:1]
-        smp = [ens[0]] + ens[1:2]
+        allen = [f for f in fs if '/' not in f] or fs[:1]
+        # greedy: English samples (cap 40) until every class used on the template's pages is covered, so page-specific blocks near the fold (mission widgets, videos) are seen; build_css then keeps only rules whose classes the page actually uses that together cover the most distinct classes (page-specific blocks near the fold)
+        cls = {f: page_classes(open(f, encoding='utf8').read()) for f in allen}; ens, seen = [], set()
+        while allen and len(ens) < 40:
+            best = max((f for f in allen if f not in ens), key=lambda f: len(cls[f] - seen), default=None)
+            if best is None or (ens and not cls[best] - seen): break
+            ens.append(best); seen |= cls[best]
+        smp = list(ens)
         if os.path.exists('ar/' + ens[0]): smp.append('ar/' + ens[0])
         need[k] = smp
     if need:
