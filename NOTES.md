@@ -140,6 +140,26 @@ Sources: esa.int BepiColombo + Latest_updates_BepiColombo_s_arrival_at_Mercury; 
 Dropped 10-15: MethaneSAT (lost 2025); Oceana / International Rivers / Blue Marine (advocacy-heavy); SECORE (overlaps Coral IVF/CRF/Gardeners); Kelp Blue (weak totals + Kelp_Forests exists); Rainforest Trust / Trillion Trees / Restor / Canopy / Wetlands International / Restore America’s Estuaries (funders/networks); FORUM / CHIME / LSTM / ROSE-L / CRISTAL (later EO); VERITAS / DAVINCI / Ariel (thin near-term Earth hook); Destiny+ (Apophis overlaps Ramses).
 Sources: earthdata.nasa.gov EMIT/GEDI/OCO-3; nasa.gov OCO-2 launch + PREFIRE + Libera + Dragonfly; science.nasa.gov OCO-2 blog 2026-08-24, Libera test blog, Dragonfly; ocov2.jpl.nasa.gov; earth.jpl.nasa.gov/emit; gedi.umd.edu; esa.int Sentinel-5P, Sentinel-3, HydroGNSS (+ data-open 31 Jul 2026); dataspace.copernicus.eu Sentinel-5P; tropomi.eu methane; prefire.ssec.wisc.edu; nesdis.noaa.gov Libera; surfrider.org 2025 Beach Cleanup Report PDF + plastic initiative; healthebay.org CCD 2025/2026 wrap-ups; factories.plasticodyssey.com + plasticodyssey.org SUNU; tu.org 2024-25 Annual Report PDF; cbf.org FY26 impact report PDF + restoration; keeptahoeblue.org science-to-solutions + July 5 cleanup news + BEBOT StoryMap; americanforests.org + Tree Equity Score; plant-for-the-planet.org + trilliontreecampaign.org.
 
+**Batch 2026-10-17** (14, ~4:55 AM HST run). Nothing built; awaiting owner yes/no. Checked against all *.html, both prior queues and the Oct 12 archive: no repeats (SWFO-L1 = SOLAR_1 and Proba-3 dropped 10-12 were skipped). Org/company figures labeled as such.
+| ID | Candidate | Hub | Widget | Status |
+|---|---|---|---|---|
+| A | Parker Solar Probe (NASA; closest-ever pass 3.8M mi, 430,000 mph, 24 Dec 2024) | Space (x-link Space_Weather) | Yes, active | PENDING |
+| B | SOHO at Sun-Earth L1 (ESA/NASA; launched 2 Dec 1995, 5,000+ comets) | Space (x-link Space_Weather, GOES-19) | Yes, in operation | PENDING |
+| C | Meteosat Third Generation Imagers + Lightning Imager (ESA/EUMETSAT, GEO; MTG-I2 launched 27 Aug 2026) | Earth Observation (x-link Sentinel-4) | Yes, MTG-I2 commissioning | PENDING |
+| D | CryoSat (ESA ice mission, 719 km LEO; 85 new subglacial lakes) | Earth Observation | Yes, active since 2010 | PENDING |
+| E | SMAP soil moisture (NASA/JPL; launched 31 Jan 2015) | Earth Observation (+ Forests/food) | Yes, status Current | PENDING |
+| F | GCOM-C "SHIKISAI" (JAXA; launched 23 Dec 2017, 798 km) | Earth Observation (+ Oceans) | Maybe (status not stated on page) | PENDING |
+| G | Ocean Conservancy International Coastal Cleanup (19M+ volunteers, 400M+ lb since 1986) | Oceans (x-link Find_a_Cleanup) | No | PENDING |
+| H | The SeaCleaners (Mobula boats; Malaysia + Indonesia expeditions) | Oceans (+ Rivers) | No | PENDING |
+| I | London Tideway Tunnel "super sewer" (company; 1.6M m3, full network May 2024) | Rivers | No | PENDING (company, no donate path) |
+| J | Penobscot River Restoration (Maine; ~1,000 mi habitat, 11 sea-run fish species) | Rivers | No | PENDING (source page dated; get current fish counts at build) |
+| K | Kissimmee River Restoration (Florida; USACE + SFWMD; 44 mi channel, 20,000 ac wetlands) | Rivers (+ Lakes/Okeechobee) | No | PENDING (agency, no donate path) |
+| L | North Aral Sea recovery, Kok-Aral dam 2005 (Kazakhstan; NASA Earth Observatory) | Lakes | No | PENDING (no donate path; only 3 facts) |
+| M | Mono Lake (California; Decision 1631 lake level 6,392 ft) | Lakes | No | PENDING (flag: Committee is legal/advocacy-heavy vs criterion 4) |
+| N | WeForest (nonprofit; 118M+ trees, 100,000 ha, Zambia + Ethiopia) | Forests | No | PENDING |
+Dropped 10-17: NASA TROPICS (mission completed), CYGNSS (status not on page), ICEYE (no impact figures, defense-heavy), GHGSat (site JS-only, no figures readable), Green Belt Movement (tree total not on its pages), Proba-3 / SWFO-L1 (already handled).
+Sources: science.nasa.gov/mission/parker-solar-probe/ + .../nasas-parker-solar-probe-makes-history-with-closest-pass-to-sun/; esa.int SOHO_overview2; science.nasa.gov/mission/soho/; esa.int meteosat_third_generation (+ Lightning_Imager, MTG-I2_completes_Europe_s_latest_weather_trio); esa.int CryoSat (+ Facts_and_figures, 85_new_subglacial_lakes_detected_below_Antarctica); jpl.nasa.gov/missions/soil-moisture-active-passive-smap/; smap.jpl.nasa.gov; global.jaxa.jp/projects/sat/gcom_c/; oceanconservancy.org/trash-free-seas/international-coastal-cleanup/; theseacleaners.org; tideway.london/the-tunnel/; penobscotriver.org; sfwmd.gov/our-work/kissimmee-river; earthobservatory.nasa.gov/world-of-change/AralSea; monolake.org/learn/aboutmonolake/saving-mono-lake/; weforest.org/about-us/.
+
 ## Oct 13 approvals (owner voice session)
 1. Merge Related Solutions + "Next: Explore Another Solution" into one more-list.
 2. Homepage "minus the doom": keep it in only the strip or only the headline, not both.
