@@ -1,5 +1,7 @@
 /* Homepage hero themes (Oct 16 2026). The theme is chosen inline in the hero (weekly rotation, ?hero=<name> override,
-   scripts/build-hero-themes.py); this file renders the procedural ones. No libraries, no images, no network.
+   scripts/build-hero-themes.py); this file renders the procedural ones. No libraries. Starts only after load + idle;
+   the ground textures (pre-rendered by scripts/build-hero-assets.py from the same code), the poster still and NASA's Blue
+   Marble Earth come from R2 (media.savingplanets.com) via data attributes; the procedural generators remain as fallback.
    Theme "space" = a seamless ~48 s two-scene loop (all procedural, scientifically grounded; facts in NOTES.md):
      A. Low glide over Enceladus's south polar terrain: bright white ice, blue-tinted "tiger stripe" fractures, fine
         water-ice jets rising from the stripes, side-lit by the low Sun; Saturn half-set on the horizon (Enceladus is
@@ -25,7 +27,7 @@
   function hash(a, b) { var h = Math.imul(a | 0, 374761393) + Math.imul(b | 0, 668265263) | 0; h = Math.imul(h ^ h >>> 13, 1274126177); return ((h ^ h >>> 16) >>> 0) / 4294967296; }
   function sstep(a, b, x) { x = Math.min(1, Math.max(0, (x - a) / (b - a))); return x * x * (3 - 2 * x); }
 
-  function mk(cls, tag) { var c = document.createElement(tag || 'canvas'); c.className = 'hs-layer ' + cls; box.appendChild(c); return c; }
+  function mk(cls, tag) { var c = document.createElement(tag || 'canvas'); c.className = 'hs-layer ' + cls; if (!tag) c.width = c.height = 0; box.appendChild(c); return c; } // 0x0 until sized at idle start (no layout shift)
   var cStars = mk('hs-stars'), cSkyA = mk('hs-skya'), cSkyB = mk('hs-skyb'), cEarth = mk('hs-earth'), cGround = mk('hs-ground'), cFx = mk('hs-fx');
 
   // ---------- periodic value noise (tiles seamlessly) ----------
@@ -71,7 +73,7 @@
         h[k] = 0.16 * base + 0.05 * crack + st * 0.45;
         var a = 0.93 + 0.07 * fbmp(u + 0.5, v + 0.5, 16, 3), tt = Math.min(1, tint);
         alb[k * 3] = 255 * a * (1 - 0.2 * tt); alb[k * 3 + 1] = 255 * a * (1 - 0.09 * tt); alb[k * 3 + 2] = 255 * Math.min(1, a * 1.02); } },
-      function () { shadeTex(h, alb, [0.9, 0.05, 0.42], 0.52, 16, done); }, true);
+      function () { shadeTex(h, alb, [0.9, 0.05, 0.42], 0.52, 16 * T / 512, done); }, true);
   }
   function moonTex(done) {
     var h = new Float32Array(T * T), alb = new Float32Array(T * T * 3); seed = 0x3b11;
@@ -80,19 +82,19 @@
         h[k] = 0.035 * fbmp(u, v, 32, 4); var a = (0.62 - 0.2 * m) * (0.9 + 0.1 * fbmp(u, v, 32, 3));
         alb[k * 3] = 255 * a * 1.02; alb[k * 3 + 1] = 255 * a; alb[k * 3 + 2] = 255 * a * 0.95; } },
       function () { // craters (power-law sizes), wrapped across tile edges
-        var n = 260; slices(n, function () { var cx = rnd() * T, cy = rnd() * T, r = T * (0.006 + 0.11 * Math.pow(rnd(), 2.6)), dep = 0.8 + rnd() * 0.4;
+        var n = 1160; slices(n, function (ci) { var cx = rnd() * T, cy = rnd() * T, r0 = rnd(), r = ci < 260 ? T * (0.006 + 0.11 * Math.pow(r0, 2.6)) : T * (0.0022 + 0.0055 * r0), dep = 0.8 + rnd() * 0.4; // + 900 small craters for close-up detail
           var R = Math.ceil(r * 1.4);
           for (var y = -R; y <= R; y++) for (var x = -R; x <= R; x++) { var q = Math.sqrt(x * x + y * y) / r; if (q > 1.4) continue;
             var ii = ((Math.round(cx) + x) % T + T) % T, jj = ((Math.round(cy) + y) % T + T) % T, k = jj * T + ii;
             var bowl = q < 1 ? (q * q - 1) * 0.5 * dep : 0, rim = 0.22 * dep * Math.exp(-Math.pow((q - 1) / 0.16, 2));
             h[k] += (bowl + rim) * r / T * 6; if (q < 1.15) { var e = 1 + 0.06 * (1 - q); alb[k * 3] *= e; alb[k * 3 + 1] *= e; alb[k * 3 + 2] *= e; } } },
-          function () { shadeTex(h, alb, [0.96, 0.0, 0.32], 0.16, 26, done); }, true); }, true);
+          function () { shadeTex(h, alb, [0.96, 0.0, 0.32], 0.16, 26 * T / 512, done); }, true); }, true);
   }
 
   // ---------- WebGL ground ----------
   var gl = null, prog = null, U = {}, texA = null, texB = null, glOk = false;
   function initGL() {
-    try { gl = cGround.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, powerPreference: 'low-power' }); } catch (e) { gl = null; }
+    try { gl = cGround.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, powerPreference: 'default' }); } catch (e) { gl = null; }
     if (!gl) return false;
     var vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
     var fs = '#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\n' +
@@ -100,6 +102,10 @@
       'void main(){vec2 q=gl_FragCoord.xy;float y=top+(res.y-q.y);float dx=q.x-res.x*.5;float yh=hY+curv*dx*dx;float dy=y-yh;' +
       'if(dy<=0.){gl_FragColor=vec4(0.);return;}float z=camH*f/dy;vec2 uv=vec2(dx*z/f,z+scroll)/tile;' +
       'vec3 c=mix(texture2D(tA,uv).rgb,texture2D(tB,uv).rgb,mixT);' +
+      // near-field detail: the same seamless texture at 4.7x frequency modulates brightness close to the camera, so the
+      // foreground ice / regolith stays crisp at full DPR instead of showing magnified texels
+      'vec2 u2=uv*4.7+vec2(.31,.57);vec3 dt=mix(texture2D(tA,u2).rgb,texture2D(tB,u2).rgb,mixT);' +
+      'float dl=dot(dt,vec3(.299,.587,.114))/mix(.86,.42,mixT);c*=mix(1.,clamp(dl,.55,1.4),.5*smoothstep(12.,2.5,z));' +
       'float lim=smoothstep(0.,28.*dpr,dy);c*=mix(.82,1.,lim);' +           // slight darkening right at the airless limb
       'float a=clamp(dy,0.,1.);gl_FragColor=vec4(c*a,a);}';
     function sh(t, s) { var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return gl.getShaderParameter(o, gl.COMPILE_STATUS) ? o : null; }
@@ -132,8 +138,9 @@
   // Level 1/2 render the ground and ice-jet canvases at 70% / 50% of the device pixel ratio (never below 0.75) and draw
   // 60% / 40% of the jet particles. Fast devices never leave level 0, so they keep full quality.
   var QL = 0, QS = [1, 0.7, 0.5], QN = [1, 0.6, 0.4];
+  function ED() { return Math.min(window.devicePixelRatio || 1, 3); } // small sprites (Earth): always full DPR, never budget-capped
   function qd() { return Math.max(0.75, D * QS[QL]); }
-  function sizeCanvas(c, w, h, x, y) { var k = (c === cGround || c === cFx) ? qd() : D; c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.width = w + 'px'; c.style.height = h + 'px';
+  function sizeCanvas(c, w, h, x, y) { var k = (c === cGround || c === cFx) ? qd() : c === cEarth ? ED() : D; c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.width = w + 'px'; c.style.height = h + 'px';
     c.style.left = (x || 0) + 'px'; c.style.top = (y || 0) + 'px'; if (c === cGround) return null; var g = c.getContext('2d'); g.setTransform(k, 0, 0, k, 0, 0); return g; }
   function sprite(r, rgb) { var key = r + rgb; if (sprites[key]) return sprites[key];
     var s = Math.ceil(r * 4) * 2 + 2, c = document.createElement('canvas'); c.width = c.height = s;
@@ -178,10 +185,38 @@
     x.restore();
   }
 
+  // Earth texture: NASA Blue Marble (land, ocean, ice and clouds; NASA Goddard / Visible Earth, public domain) from R2, fetched
+  // lazily after the first frames; until it arrives (or if it fails) the procedural Earth below is used.
+  var BM = null, bmTried = false;
+  function loadBM() { if (bmTried) return; bmTried = true;
+    var need = 2 * Math.PI * EAR.R * ED(), im = new Image(); im.crossOrigin = 'anonymous'; im.decoding = 'async';
+    im.onload = function () { try { var c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+        var g = c.getContext('2d'); g.drawImage(im, 0, 0); BM = { d: g.getImageData(0, 0, c.width, c.height).data, w: c.width, h: c.height };
+        drawEarth(true); } catch (e) { BM = null; } };
+    var set = (box.getAttribute('data-bm') || '').split(',').map(function (t) { var p = t.trim().split(/\s+/); return { u: p[0], w: parseInt(p[1], 10) || 0 }; })
+      .filter(function (e) { return e.u && e.w >= 1280; }).sort(function (a, b) { return a.w - b.w; });
+    if (!set.length) return; var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need * 2) { pick = set[k]; break; } // 2x oversampled: crisp coastlines and clouds
+    im.src = pick.u; }
+  function bmAt(lon, lat, out) { // bilinear sample, lon/lat in radians
+    var u = ((lon / 6.28319 + 0.5) % 1 + 1) % 1 * BM.w - 0.5, v = (0.5 - lat / 3.14159) * BM.h - 0.5;
+    var i0 = Math.floor(u), j0 = Math.max(0, Math.min(BM.h - 2, Math.floor(v))), fu = u - i0, fv = Math.max(0, Math.min(1, v - j0));
+    var i1 = (i0 + 1) % BM.w; i0 = (i0 + BM.w) % BM.w;
+    var a = (j0 * BM.w + i0) * 4, b = (j0 * BM.w + i1) * 4, c = ((j0 + 1) * BM.w + i0) * 4, e = ((j0 + 1) * BM.w + i1) * 4, d = BM.d;
+    for (var k = 0; k < 3; k++) out[k] = (d[a + k] * (1 - fu) + d[b + k] * fu) * (1 - fv) + (d[c + k] * (1 - fu) + d[e + k] * fu) * fv; }
   function planetPx(T2, L) {
+    var rgb = [0, 0, 0], tilt = 0.41, ct = Math.cos(tilt), st = Math.sin(tilt), lon0 = 0.35; // Atlantic / Africa facing us, axis tilted
     return function (d, o, i, j) {
       var nx = (i + 0.5) / T2 * 2 - 1, ny = (j + 0.5) / T2 * 2 - 1, rr = nx * nx + ny * ny; if (rr > 1) { d[o + 3] = 0; return; }
-      var nz = Math.sqrt(1 - rr), lon = Math.atan2(nx, nz) * 1.6, lat = Math.asin(ny) * 1.6;
+      var nz = Math.sqrt(1 - rr);
+      if (BM) { // orthographic globe: rotate view vector by the tilt, then lon/lat on the texture
+        var X = nx * ct - ny * st, Y = nx * st + ny * ct, la = Math.asin(Math.max(-1, Math.min(1, -Y))), lo = Math.atan2(X, nz) + lon0;
+        bmAt(lo, la, rgb);
+        var dif0 = Math.max(0, nx * L[0] + ny * L[1] + nz * L[2]), lit0 = sstep(-0.035, 0.18, dif0) * (0.1 + 0.9 * Math.pow(dif0, 0.8));
+        var blu = Math.max(0, Math.min(1, (rgb[2] - Math.max(rgb[0], rgb[1])) / 40)), sp0 = Math.pow(Math.max(0, 2 * dif0 * nz - L[2]), 30) * blu * 0.5;
+        var rim0 = Math.pow(1 - nz, 3);
+        d[o] = Math.min(255, rgb[0] * lit0 * 1.05 + 255 * sp0 + rim0 * 30 * lit0); d[o + 1] = Math.min(255, rgb[1] * lit0 * 1.05 + 250 * sp0 + rim0 * 120 * lit0);
+        d[o + 2] = Math.min(255, rgb[2] * lit0 * 1.08 + 245 * sp0 + rim0 * 210 * lit0); d[o + 3] = 255; return; }
+      var lon = Math.atan2(nx, nz) * 1.6, lat = Math.asin(ny) * 1.6;
       var ln = fb(lon + 30, lat + 11), land = sstep(0.56, 0.6, ln), hi = sstep(0.6, 0.75, ln), tone = vn(lon * 6 + 3, lat * 6 + 1);
       var cl = sstep(0.48, 0.8, fb(lon * 2.2 + 50 + lat * 0.6, lat * 3.6 + 4)) * 0.95;
       var dif = Math.max(0, nx * L[0] + ny * L[1] + nz * L[2]), lit = sstep(-0.04, 0.3, dif) * (0.2 + 0.8 * dif);
@@ -197,14 +232,14 @@
   // Earth from lunar orbit (telephoto framing like Apollo 8's 250 mm "Earthrise"); Sun/Earth size ratio 0.28 is real.
   function drawEarth(hi) {
     var R = EAR.R, pad = Math.ceil(R * 0.35), S = 2 * (R + pad), x = sizeCanvas(cEarth, S, S, 0, 0);
-    var T2 = hi ? Math.min(900, Math.round(2 * R * D)) : 128, img = new ImageData(T2, T2), px = planetPx(T2, [0.88, -0.18, 0.44]);
+    var T2 = hi ? Math.min(1400, Math.round(2 * R * ED())) : 128, img = new ImageData(T2, T2), px = planetPx(T2, [0.88, -0.18, 0.44]);
     var fin = function () { var t = document.createElement('canvas'); t.width = t.height = T2; t.getContext('2d').putImageData(img, 0, 0);
-      x.clearRect(0, 0, S, S); var c = S / 2, h = x.createRadialGradient(c, c, R * 0.97, c, c, R * 1.25);
+      x.clearRect(0, 0, S, S); var c = S / 2, h = x.createRadialGradient(c, c, R * 0.985, c, c, R * 1.12);
       h.addColorStop(0, 'rgba(90,190,255,0.45)'); h.addColorStop(0.3, 'rgba(0,156,222,0.14)'); h.addColorStop(1, 'rgba(0,156,222,0)');
-      x.fillStyle = h; x.beginPath(); x.arc(c, c, R * 1.3, 0, 7); x.fill();
+      x.fillStyle = h; x.beginPath(); x.arc(c, c, R * 1.14, 0, 7); x.fill();
       x.save(); x.beginPath(); x.arc(c, c, R, 0, 7); x.clip(); x.fillStyle = '#01040a'; x.fill(); x.drawImage(t, c - R, c - R, 2 * R, 2 * R); x.restore();
-      x.save(); x.globalCompositeOperation = 'lighter'; x.beginPath(); x.arc(c, c, R - 0.6, -1.15, 1.0); x.strokeStyle = 'rgba(170,230,255,0.7)'; x.lineWidth = 1.4;
-      x.shadowColor = 'rgba(0,156,222,0.9)'; x.shadowBlur = 8; x.stroke(); x.restore(); };
+      x.save(); x.globalCompositeOperation = 'lighter'; x.beginPath(); x.arc(c, c, R - 0.6, -1.15, 1.0); x.strokeStyle = 'rgba(170,230,255,0.75)'; x.lineWidth = 1;
+      x.stroke(); x.restore(); };
     if (!hi) { for (var j = 0; j < T2; j++) for (var i = 0; i < T2; i++) px(img.data, (j * T2 + i) * 4, i, j); fin(); }
     else slices(T2, function (j) { for (var i = 0; i < T2; i++) px(img.data, (j * T2 + i) * 4, i, j); }, fin);
   }
@@ -227,14 +262,16 @@
   function hit(a, b) { return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top; }
   var capKey = '';
   function placeCaption() {
-    if (!caps.length) return; hero.classList.remove('hs-captop');
+    if (!caps.length) return; hero.classList.remove('hs-captop', 'hs-capoff');
     var q0 = [].slice.call(hero.querySelectorAll('.hero-content > *, .sticky-help')).concat([].slice.call(document.querySelectorAll('.sp-lb-in')));
     var obs = q0.map(function (e) { return e.getBoundingClientRect(); }).filter(function (q) { return q.width > 0; });
     var bad = function () { return caps.some(function (c) { var q = c.getBoundingClientRect(); return obs.some(function (o) { return hit(q, o); }); }); };
     var key = 'b', top = 0;
     if (bad()) { var hr = hero.getBoundingClientRect();
       [].forEach.call(document.querySelectorAll('#topnav, .sp-lb-in'), function (e) { var q = e.getBoundingClientRect(); if (q.height) top = Math.max(top, q.bottom - hr.top); });
-      key = 't' + Math.round(top + 12); hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop'); }
+      key = 't' + Math.round(top + 12); hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop');
+      if (bad()) { key = 'off'; hero.classList.remove('hs-captop'); } } // no free spot (tiny/short screens): no caption, never over the text
+    hero.classList.toggle('hs-capoff', key === 'off');
     // A caption that is already showing and has to move (e.g. the language banner appeared under the nav) is hidden for
     // two frames while it moves, so the move is never a layout shift (CLS stays 0).
     if (hero.classList.contains('hs-placed') && key !== capKey) { hero.classList.remove('hs-placed');
@@ -245,32 +282,46 @@
   function setup() {
     tok++; sprites = {};
     var r = hero.getBoundingClientRect(); W = Math.max(320, Math.round(r.width)); H = Math.max(480, Math.round(r.height));
-    var dpr = Math.min(window.devicePixelRatio || 1, 3); D = Math.min(dpr, Math.sqrt(8.3e6 / (W * H)));
+    var big = /[?&]hero-poster=1/.test(location.search); // poster builder only: native 6K stills
+    var dpr = Math.min(window.devicePixelRatio || 1, big ? 6 : 3); D = Math.min(dpr, Math.sqrt((big ? 40e6 : 21e6) / (W * H))); // full DPR up to ~6K-wide backing (6016x3384 = 6K Retina @2x); slow devices step down via QL
     // Horizon sits below the hero text so the bright ice never sits behind white type.
     var port0 = W < H, last = hero.querySelector('.hero-email') || hero.querySelector('.hero-ctas'), cb = last ? last.getBoundingClientRect().bottom - r.top : H * 0.6;
-    hY = Math.round(Math.min(H * 0.88, Math.max(H * 0.6, cb + Math.max(40, H * (port0 ? 0.17 : 0.06)))));
+    // Oct 16 7:57 PM (user: 'move everything up'): text block sits higher (CSS), horizon follows it closely, never below 0.8H,
+    // so the jets, Saturn and Earthrise play in the upper/middle part of the hero, clear of the bottom pills and the fold.
+    hY = Math.round(Math.min(H * 0.8, Math.max(H * 0.5, cb + Math.max(36, H * (port0 ? 0.17 : 0.05)))));
     hero.classList.toggle('hs-lowsky', cb > hY - 8); // short screens: the last text line overlaps the horizon -> give it a backdrop
     FOC = Math.max(W, H) * 0.9; curvA = (H * 0.045) / Math.pow(W / 2, 2); curvB = (H * 0.022) / Math.pow(W / 2, 2);
     var port = W < H;
     // Saturn: in portrait it sits low, between the text and the horizon; in landscape it hangs beside the text column
     // (from ~65 deg S on Enceladus, Saturn stands about 25 deg above the horizon, its rings an edge-on line).
-    var tr = 0; [].forEach.call(hero.querySelectorAll('.hero-content > *'), function (e) { tr = Math.max(tr, e.getBoundingClientRect().right - r.left); });
-    if (port) { SAT = { R: Math.round(Math.min(W * 0.17, hY * 0.34)), x: W * 0.8 };
-      SAT.y = Math.max(hY - 0.85 * SAT.R, cb + 18 + SAT.R) + curvA * Math.pow((SAT.x - W / 2), 2); }
-    else { SAT = { R: Math.round(Math.max(90, Math.min(W * 0.15, (W - tr - 30) / 2, H * 0.27))) }; SAT.x = Math.max(W * 0.8, Math.min(W - SAT.R * 0.6, tr + 20 + SAT.R));
-      SAT.y = Math.min(hY - 0.85 * SAT.R, H * 0.5); }
-    EAR = { R: Math.round(Math.min(W, H) * (port ? 0.085 : 0.075)), x: W * (port ? 0.2 : 0.13) };
-    SUN = { R: Math.max(7, Math.round(EAR.R * 0.28)), x: W * (port ? 0.87 : 0.9), y: hY * (port ? 0.27 : 0.3) };
+    var tr = 0; TXT = [1e9, 1e9, -1e9, -1e9]; [].forEach.call(hero.querySelectorAll('.hero-content > *'), function (e) { var q = e.getBoundingClientRect(); if (!q.width) return;
+      if (e.tagName === 'H1') TXH = [q.left - r.left - 16, q.top - r.top - 14, q.right - r.left + 16, q.bottom - r.top + 14];
+      tr = Math.max(tr, q.right - r.left); TXT = [Math.min(TXT[0], q.left - r.left - 12), Math.min(TXT[1], q.top - r.top - 10), Math.max(TXT[2], q.right - r.left + 12), Math.max(TXT[3], q.bottom - r.top + 10)]; });
+    if (port) { SAT = { R: Math.round(Math.max(56, Math.min(W * 0.17, (hY - cb - 24) / 1.6))), x: W * 0.78 };
+      SAT.y = Math.max(cb + 16 + SAT.R, hY - 0.75 * SAT.R) + curvA * Math.pow((SAT.x - W / 2), 2); }
+    else { SAT = { R: Math.round(Math.max(90, Math.min(W * 0.15, (W - tr - 30) / 2, H * 0.27))) }; SAT.x = Math.max(W * 0.8, Math.min(W - SAT.R * 1.05, tr + 20 + SAT.R));
+      SAT.y = Math.min(hY - 1.15 * SAT.R, H * 0.42); }
+    EAR = { R: Math.round(Math.min(W, H) * (port ? 0.095 : 0.085)), x: W * (port ? 0.2 : 0.1) };
+    // Earth clears the horizon fully (centre 2.1 R above it), but in portrait never climbs into the text block.
+    EAR.peak = hY - 2.1 * EAR.R; if (port) EAR.peak = Math.max(EAR.peak, Math.min(hY - 1.2 * EAR.R, cb + 14 + EAR.R));
+    SUN = { R: Math.max(7, Math.round(EAR.R * 0.28)), x: W * (port ? 0.86 : 0.9) };
+    // the Sun never sits behind the text block: portrait -> between the text and the horizon; landscape -> beside the text column
+    SUN.y = port ? cb + (hY - cb) * 0.32 : Math.max(hY * 0.3, 170);
     drawStars(); drawSaturn(); drawSun(); drawEarth(false); drawEarth(true);
     gTop = Math.max(0, hY - 2); sizeCanvas(cGround, W, H - gTop, 0, gTop);
     sizeCanvas(cFx, W, H); placeCaption();
     if (!glOk) glOk = initGL();
     if (glOk) { gl.viewport(0, 0, cGround.width, cGround.height);
-      if (!texReady) { texReady = true; enceladusTex(function (img) { upTex(texA, img); box.classList.add('hs-ready'); if (!running()) frame(true);
-        moonTex(function (img2) { upTex(texB, img2); if (!running()) frame(true); }); }); } }
+      if (!texReady) { texReady = true; // pre-rendered 1024^2 textures (scripts/build-hero-assets.py); procedural only as a fallback
+        texFile('data-tex-a', enceladusTex, function (img) { safeTex(texA, img, enceladusTex); box.classList.add('hs-ready'); if (!running()) frame(true);
+          texFile('data-tex-b', moonTex, function (img2) { safeTex(texB, img2, moonTex); if (!running()) frame(true); }); }); } }
     else box.classList.add('hs-ready', 'hs-nogl');
   }
   var texReady = false;
+  function safeTex(t, img, gen) { try { upTex(t, img); } catch (e) { gen(function (c) { upTex(t, c); }); } } // CORS/decode failure -> procedural
+  function texFile(attr, gen, done) { // 2048^2 on large / high-DPR screens (iPad, Retina desktop), 1024^2 on small ones
+    var u = (W * D > 1500 && box.getAttribute(attr + '2')) || box.getAttribute(attr); if (!u) { gen(done); return; }
+    var im = new Image(); im.crossOrigin = 'anonymous'; im.decoding = 'async'; im.onload = function () { done(im); }; im.onerror = function () { gen(done); }; im.src = u; }
 
   // ---------- timeline ----------
   var A_LEN = 20, X_LEN = 4, B_LEN = 20, LOOP = A_LEN + X_LEN + B_LEN + X_LEN; // 48 s
@@ -281,11 +332,18 @@
   function earthRise(t) { t %= LOOP; var s = A_LEN, e = A_LEN + X_LEN + B_LEN + X_LEN * 0.5, p = (t - s) / (e - s); if (t < s) p = 0; return Math.min(1, Math.max(0, p)); }
 
   var SPEED = 1.15; // world units per second (camera height = 1)
-  var jetSprite = null;
+  var jetSprite = null, glint = null, haze = null, TXT = [0, 0, 0, 0], TXH = [0, 0, 0, 0];
+  // Oct 16 8:06 PM (user): taller, glowing, sparkling plumes that rise up through and behind the title. Science: the jets
+  // leave the four south-polar "tiger stripe" fractures (~400 m/s) and merge into one broad plume that fans out and fades
+  // with height. Grains drawn over the text block are dimmed (and the text has a shadow) so the title keeps >= 4.5:1.
   function drawJets(x, scroll, camH, alpha, now) {
     if (alpha <= 0.01) return;
-    if (!jetSprite) jetSprite = sprite(1.6, '200,228,255');
+    if (!jetSprite) { jetSprite = sprite(1.6, '200,228,255'); glint = sprite(0.9, '255,255,255');
+      haze = document.createElement('canvas'); haze.width = haze.height = 64; var hg = haze.getContext('2d'), rg = hg.createRadialGradient(32, 32, 0, 32, 32, 32);
+      rg.addColorStop(0, 'rgba(215,236,255,1)'); rg.addColorStop(0.45, 'rgba(205,230,255,.35)'); rg.addColorStop(1, 'rgba(200,226,255,0)'); hg.fillStyle = rg; hg.fillRect(0, 0, 64, 64); }
     var cx = W / 2, nMin = Math.floor((scroll + 4) / 3) - 1, nMax = Math.floor((scroll + 56) / 3) + 1;
+    var inR = function (q, px, py) { return px > q[0] && px < q[2] && py > q[1] && py < q[3]; };
+    var inT = function (px, py) { return inR(TXH, px, py) ? 0.06 : inR(TXT, px, py) ? 0.3 : 1; }; // title: plume only a whisper (coloured title >= 4.5:1)
     x.globalCompositeOperation = 'lighter';
     for (var n = nMin; n <= nMax; n++) {
       for (var m = 0; m < 2; m++) {
@@ -293,30 +351,36 @@
         var u = hash(n, m + 7), xw = (u - 0.5) * TILE * 1.6, s = ((n % 4) + 4) % 4;
         var zw = n * 3 + STRIPE_C + wob(((xw / TILE) % 1 + 1) % 1, s) * TILE - scroll; if (zw < 5 || zw > 56) continue;
         var fz = FOC / zw, bx = cx + xw * fz, by = hY + curvA * (bx - cx) * (bx - cx) + camH * fz;
-        if (bx < -200 || bx > W + 200) continue;
-        var fa = alpha * sstep(56, 40, zw) * sstep(7, 12, zw), Hj = 4 + 4 * hash(n, m + 3), N = Math.round(44 * QN[QL]), rate = 0.16 + 0.06 * hash(n, m + 5);
-        // faint narrow column of fine grains, brightest near the vent, fading with height
-        var top = by - Hj * fz, hz = x.createLinearGradient(0, by, 0, top); hz.addColorStop(0, 'rgba(220,238,255,' + (0.34 * fa) + ')');
-        hz.addColorStop(0.35, 'rgba(210,232,255,' + (0.08 * fa) + ')'); hz.addColorStop(1, 'rgba(210,232,255,0)');
-        x.globalAlpha = 1; x.fillStyle = hz; var wb = Math.max(1, 0.05 * fz), wt = Math.max(3, Hj * 0.09 * fz);
-        x.beginPath(); x.moveTo(bx - wb, by); x.lineTo(bx - wt, top); x.lineTo(bx + wt, top); x.lineTo(bx + wb, by); x.closePath(); x.fill();
+        if (bx < -300 || bx > W + 300) continue;
+        var big = hash(n, m + 11) > 0.55, Hj = big ? 16 + 14 * hash(n, m + 3) : 6 + 6 * hash(n, m + 3);
+        var fa = alpha * sstep(56, 40, zw) * sstep(7, 12, zw), N = Math.round((big ? 96 : 50) * QN[QL]), rate = (big ? 0.07 : 0.12) + 0.05 * hash(n, m + 5);
+        // soft glowing plume: overlapping soft blobs that widen and fade with height (no hard-edged cone)
+        var K = big ? 34 : 18, Hp = Hj * fz;
+        for (var k = 0; k < K; k++) { var t = (k + 0.5) / K, yy = by - Math.pow(t, 0.9) * Hp, rr = Math.max(3, (0.06 + 0.32 * t) * Hj * fz * 0.5);
+          var ov = function (q) { return bx + rr > q[0] && bx - rr < q[2] && yy + rr * 2 > q[1] && yy - rr * 2 < q[3]; };
+          var aa = fa * (big ? 0.24 : 0.2) * Math.pow(1 - t, 1.25) * (ov(TXH) ? 0.06 : ov(TXT) ? 0.3 : 1);
+          x.globalAlpha = Math.min(1, aa); x.drawImage(haze, bx - rr, yy - rr * 2, rr * 2, rr * 4); }
         for (var i = 0; i < N; i++) {
-          var ph = (now * rate + i / N + hash(n * 7 + i, m)) % 1, hh = Math.pow(ph, 0.8) * Hj, sp = (hash(i, n * 3 + m) - 0.5) * 0.22 * hh;
-          var px = bx + sp * fz, py = by - hh * fz, a = fa * Math.pow(1 - ph, 1.2) * (0.55 + 0.45 * hash(i + 99, n));
-          var tw = 0.6 + 0.4 * Math.sin(now * 9 + i * 2.3 + n);                // glints of sunlit ice grains
-          var sz = Math.max(0.9, (0.025 + 0.05 * ph) * fz) * (0.7 + 0.6 * hash(i, m + 50));
-          x.globalAlpha = Math.min(1, a * tw); x.drawImage(jetSprite, px - sz, py - sz, sz * 2, sz * 2);
+          var ph = (now * rate + i / N + hash(n * 7 + i, m)) % 1, hh = Math.pow(ph, 0.75) * Hj, sp = (hash(i, n * 3 + m) - 0.5) * 0.4 * hh;
+          var px = bx + sp * fz, py = by - hh * fz; if (py < -10) continue;
+          var a = fa * Math.pow(1 - ph, 1.1) * (0.7 + 0.5 * hash(i + 99, n)) * inT(px, py);
+          var tw = 0.6 + 0.4 * Math.sin(now * 9 + i * 2.3 + n);                // sunlit ice grains twinkle
+          var sz = Math.max(1, (0.04 + 0.07 * ph) * fz) * (0.7 + 0.6 * hash(i, m + 50));
+          x.globalAlpha = Math.min(1, 1.5 * a * tw); x.drawImage(jetSprite, px - sz, py - sz, sz * 2, sz * 2);
+          var gl1 = Math.sin(now * 5.3 + i * 7.1 + n * 3.7); // occasional sharp sparkle
+          if (gl1 > 0.93) { var gs = Math.max(1.2, sz * 0.7); x.globalAlpha = Math.min(1, a * 1.6 * (gl1 - 0.93) / 0.07); x.drawImage(glint, px - gs, py - gs, gs * 2, gs * 2); }
         }
       }
     }
     x.globalAlpha = 1; x.globalCompositeOperation = 'source-over';
   }
 
+
   var tScene = 0, tGlide = 0, last = 0, hold = false;
   function frame(still) {
     var mixT = sceneMix(tScene), lf = lift(tScene), camH = 1 + 2.6 * lf, scroll = (tGlide * SPEED) % (TILE * 1e3);
     cSkyA.style.opacity = (1 - mixT).toFixed(3); cSkyB.style.opacity = mixT.toFixed(3); cStars.style.opacity = (1 - 0.55 * mixT).toFixed(3);
-    var er = earthRise(tScene), ey = hY + EAR.R * 0.9 - er * EAR.R * 2.3, S = cEarth.width / D;
+    var er = earthRise(tScene), ey = hY + EAR.R * 0.9 - er * (hY + EAR.R * 0.9 - EAR.peak), S = parseFloat(cEarth.style.width) || 0;
     cEarth.style.opacity = mixT.toFixed(3);
     cEarth.style.transform = 'translate3d(' + (EAR.x - S / 2).toFixed(1) + 'px,' + (ey - S / 2 - lf * 18).toFixed(1) + 'px,0)';
     cSkyA.style.transform = 'translate3d(0,' + (-lf * 14).toFixed(1) + 'px,0)';
@@ -337,7 +401,7 @@
 
   var raf = 0, onScreen = true, nFrames = 0, ema = 0, slowT = 0, warm = 0;
   function quality(rawDt) { // rawDt in s; skip the first 2 s after (re)start (texture build, tab resume)
-    if ((warm += rawDt) < 2 || QL >= 2) return; ema = ema ? ema * 0.9 + rawDt * 0.1 : rawDt;
+    if ((warm += rawDt) < 2 || QL >= 2 || /[?&]hero-poster=1/.test(location.search)) return; ema = ema ? ema * 0.9 + rawDt * 0.1 : rawDt;
     slowT = ema > 0.04 ? slowT + rawDt : 0;
     if (slowT >= 3) { QL++; slowT = 0; ema = 0;
       sizeCanvas(cGround, W, H - gTop, 0, gTop); sizeCanvas(cFx, W, H); if (glOk) gl.viewport(0, 0, cGround.width, cGround.height); } }
@@ -358,10 +422,26 @@
   lastW = hero.getBoundingClientRect().width;
   var q = /[?&]hero-t=(\d+(?:\.\d+)?)/.exec(location.search); // preview a moment of the loop, e.g. ?hero=space&hero-t=30
   tScene = q ? +q[1] : (reduced ? 8 : 0); tGlide = tScene;
-  setup(); frame(true); kick();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { var o = hY; setup(); if (hY !== o || !running()) frame(true); });
+  // Oct 16 8:16 PM (Lighthouse): nothing runs before the page has loaded and the main thread is idle; until then the
+  // pre-rendered poster (CSS, .hero-space::before) is the hero background, and it fades out once the live ground is ready.
+  var started = false;
+  // Oct 16 2026 (Lighthouse + battery): the live scene needs a hardware GPU. Where the browser would fall back to software
+  // rendering (failIfMajorPerformanceCaveat) or the user asked to save data, the hi-res poster stays as the hero and no
+  // frame loop runs at all. ?hero-gpu=1 forces the live scene (tests, the poster builder).
+  function hwGL() { if (/[?&]hero-gpu=1/.test(location.search)) return true;
+    try { var c = document.createElement('canvas'), g = c.getContext('webgl', { failIfMajorPerformanceCaveat: true }); if (!g) return false;
+      var di = g.getExtension('WEBGL_debug_renderer_info'), rn = di ? String(g.getParameter(di.UNMASKED_RENDERER_WEBGL)) : '';
+      var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
+      var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
+  function start() { if (started) return; started = true;
+    if ((navigator.connection && navigator.connection.saveData) || !hwGL()) { box.classList.add('hs-static'); return; }
+    setup(); frame(true); kick();
+    setTimeout(loadBM, 2500); // Earth texture after first paint (it is first seen ~20 s into the loop)
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { var o = hY; setup(); if (hY !== o || !running()) frame(true); }); }
+  function idle() { (window.requestIdleCallback || function (f) { return setTimeout(f, 50); })(start, { timeout: 2500 }); }
+  if (document.readyState === 'complete') setTimeout(idle, 200); else window.addEventListener('load', function () { setTimeout(idle, 200); });
   window.addEventListener('sp-lb', function () { setTimeout(placeCaption, 50); }); // language banner shown/closed
   setTimeout(placeCaption, 1500);
-  window.__heroSpace = { frames: function () { return nFrames; }, quality: function () { return { level: QL, ground: cGround.width + "x" + cGround.height, fx: cFx.width + "x" + cFx.height }; }, size: function () { return { W: W, H: H, D: D, gl: glOk }; },
+  window.__heroSpace = { start: start, procTex: function (name, size, cb) { var o = T; T = size; (name === 'moon' ? moonTex : enceladusTex)(function (img) { T = o; cb(img); }); }, frames: function () { return nFrames; }, quality: function () { return { level: QL, ground: cGround.width + "x" + cGround.height, fx: cFx.width + "x" + cFx.height }; }, size: function () { return { W: W, H: H, D: D, hY: hY, gl: glOk }; },
     seek: function (t) { tScene = tGlide = t; frame(true); }, scene: function () { return sceneMix(tScene); } };
 })();

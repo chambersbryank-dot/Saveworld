@@ -9,7 +9,34 @@ Rotation: an inline script picks the theme before first paint, deterministically
 To add a theme: append it to ROTATION, render it in assets/hero-themes.js (or reuse the video kind), add CSS below.
 ?hero=<name> previews any theme. Non-video themes strip the video's sources before it downloads.
 Run after i18n-build.py (the block is excluded from the translation hash, see i18n-build.normalize / i18n-check.js)."""
-import re, os, hashlib
+import re, os, hashlib, json
+# Oct 16 8:05 PM: NASA Blue Marble Earth texture (R2, media-manifest.json) for the Earthrise scene; srcset handed to the JS.
+MAN = json.load(open('assets/data/media-manifest.json', encoding='utf-8'))
+BM = MAN['images/earth-blue-marble-land-ocean-ice-cloud.jpg']['srcset']
+# Oct 16 8:16-8:19 PM: pre-rendered ground textures + poster stills (scripts/build-hero-assets.py -> R2). Missing = procedural / no poster.
+HS = lambda f: (MAN.get('images/hero-space/' + f) or {}).get('url', '')
+def TEXATTR():
+    return ''.join(f' {a}="{HS(f)}"' for a, f in (('data-tex-a', 'enceladus-1024.webp'), ('data-tex-a2', 'enceladus-2048.webp'),
+                                                 ('data-tex-b', 'moon-1024.webp'), ('data-tex-b2', 'moon-2048.webp')) if HS(f))
+def POSTER():  # .hero-space::before = still frame until the live ground is ready; widths up to 6016 (6K Retina @2x)
+    sel, out = '.hero[data-hero=space] .hero-space::before', ''
+    # three compositions (build-hero-assets.py), each rendered at the CSS size whose text layout it matches:
+    # land = 1180x820 (iPad landscape .. 6K desktop), tab = 820x1180 portrait tablets, phone = 390x844 portrait phones
+    for key, ws, mq, steps, top in (('land', [1280, 1920, 2560, 3840, 5120, 6016], 'landscape', [0, 1000, 1400, 2000, 2600], 3008),
+                                    ('phone', [820, 1240], 'portrait', [0], 600), ('tab', [1640, 2048], 'portrait', [600, 900], 1200)):
+        ws = [w for w in ws if HS(f'poster-{key}-{w}.webp')]
+        if not ws: continue
+        for r, res in ((1, ''), (2, ' and (min-resolution:1.5dppx)'), (3, ' and (min-resolution:2.5dppx)')):  # resolution outer: last match wins
+            for n, lo in enumerate(steps):
+                hi = steps[n + 1] if n + 1 < len(steps) else top
+                w = next((x for x in ws if x >= hi * r * 0.95), ws[-1])  # smallest poster that covers the backing width
+                av, wb = HS(f'poster-{key}-{w}.avif'), HS(f'poster-{key}-{w}.webp')
+                img = (f'url("{wb}");background-image:image-set(url("{av}") type("image/avif"),url("{wb}") type("image/webp"))' if av else f'url("{wb}")')
+                out += f'@media (orientation:{mq}) and (min-width:{lo}px){res}{{{sel}{{background-image:{img}}}}}'
+    if out:
+        out = (sel + '{content:"";position:absolute;inset:0;z-index:6;pointer-events:none;background:#000 center top/cover no-repeat;'
+               'transition:opacity 1.2s ease}.hero[data-hero=space] .hero-space.hs-ready::before{opacity:0}') + out
+    return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 LANGS = ['en', 'fr', 'es', 'ar', 'it']
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
@@ -56,6 +83,19 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hs-caps{visibility:hidden}.hero:not(.hs-placed) .hs-cap{visibility:hidden!important}'  # hidden until placed, so moving it is not a layout shift
        '.hero[data-hero=space].hs-captop .hs-caps{bottom:auto;top:var(--hs-captop,96px)}.hs-captop .hs-cap{bottom:auto;top:0}'
        '@media (max-width:600px){.hero[data-hero=space] .hs-caps{bottom:5rem;width:calc(100% - 1.6rem)}}'
+       # Oct 16 7:57 PM (user: 'move everything up, the animation is cut off at the bottom'): the hero is framed by the visible
+       # viewport (svh, so Safari's toolbar never crops it) and, in the space theme, the text block sits just under the nav.
+       '.hero[data-hero],body.toc-home .hero.space-hero[data-hero]{height:100vh;height:100svh}'
+       # 8:03 PM (user: 'move the text up several spaces, close under the nav, I want to see more moons'): text block starts
+       # ~1rem under the nav (56px single row < 992px, 92px two rows from 992px) with tighter spacing between its lines.
+       '.hero[data-hero=space] .hero-content{padding-top:calc(56px + .9rem);padding-bottom:1rem}'
+       '@media (min-width:1140px){.hero[data-hero=space] .hero-content{padding-top:calc(92px + 1rem)}}'
+       '.hero[data-hero=space] .hero-kicker{margin-top:0;margin-bottom:1.1rem}.hero[data-hero=space] .hero-welcome{margin-bottom:.6rem}'
+       '.hero[data-hero=space] .hero-ctas{margin:.8rem 0 .4rem}.hero[data-hero=space] .hero-email{margin-top:.7rem}'
+       '.hero.hs-capoff .hs-cap{visibility:hidden!important}'
+       # 8:06 PM: the taller plumes rise behind the title: a soft dark scrim + tighter shadow keep the text >= 4.5:1
+       '.hero[data-hero=space] .hero-content{background:radial-gradient(closest-side,rgba(0,8,20,.42),rgba(0,8,20,.18) 70%,rgba(0,8,20,0))}'
+       '.hero[data-hero=space] .hero-welcome,.hero[data-hero=space] .hero-kicker,.hero[data-hero=space] .hero-example,.hero[data-hero=space] .hero-email{text-shadow:0 0 3px rgba(0,0,0,.9),0 2px 18px rgba(0,0,0,.85)}'
        # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
        '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
@@ -66,8 +106,10 @@ def chooser():
             f'var T=[{rot}],K={{earth:"video",space:"canvas"}},n=Math.floor((Date.now()-{ANCHOR_UTC})/6048e5),'
             'name=T[(n%T.length+T.length)%T.length],m=/[?&]hero=([a-z-]+)/.exec(location.search);'
             'if(m&&K[m[1]])name=m[1];h.setAttribute("data-hero",name);'
-            'if(K[name]!=="video"){var v=h.querySelector("video.hero-video");if(v){v.removeAttribute("autoplay");v.preload="none";'
-            'v.removeAttribute("poster");v.className="hero-video-off";[].forEach.call(v.querySelectorAll("source"),function(s){s.remove()});v.load()}}'
+            # the video ships inert (see lazy_video): only the video theme gives it its poster + source and starts it
+            'var v=h.querySelector("video.hero-video");if(v){if(K[name]==="video"){if(v.dataset.poster)v.poster=v.dataset.poster;'
+            '[].forEach.call(v.querySelectorAll("source[data-src]"),function(s){s.src=s.dataset.src});v.autoplay=true;v.load();'
+            'var pp=v.play&&v.play();if(pp&&pp.catch)pp.catch(function(){})}else v.className="hero-video-off"}'
             '})();</script>')
 
 def caps(l):
@@ -77,8 +119,19 @@ def caps(l):
     return f'<div class="hs-caps">{a}</div>'
 
 def block(pre, l):
-    return (f'<!-- HEROTHEME:START -->{CSS}<div class="hero-space" aria-hidden="true"></div>{caps(l)}{chooser()}'
+    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}></div>{caps(l)}{chooser()}'
             f'<script src="{pre}assets/hero-themes.js?v={JSV}" defer></script><!-- HEROTHEME:END -->')
+
+# Oct 16 2026 (Lighthouse): the hero video (1.1 MB, HERO-VIDEO block from build-batch2.py) used to start downloading
+# at parse time even in weeks when the space theme hides it. Ship it inert; chooser() activates it for the video theme.
+def lazy_video(s):
+    def fix(m):
+        t = m.group(0)
+        t = re.sub(r'(<video\b[^>]*?) autoplay(="[^"]*")?(?=[\s>])', r'\1', t)
+        t = re.sub(r'(<video\b[^>]*?)\bpreload="[^"]*"', r'\1preload="none"', t)
+        t = re.sub(r'(<video\b[^>]*?) poster="', r'\1 data-poster="', t)
+        return re.sub(r'<source src="', '<source data-src="', t)
+    return re.sub(r'<!-- HERO-VIDEO:START -->.*?<!-- HERO-VIDEO:END -->', fix, s, count=1, flags=re.S)
 
 for l in LANGS:
     p = 'index.html' if l == 'en' else f'{l}/index.html'
@@ -90,5 +143,6 @@ for l in LANGS:
         i = s.find('<!-- HERO-VIDEO:END -->')
         if i < 0: raise SystemExit(f'{p}: HERO-VIDEO block not found')
         i += len('<!-- HERO-VIDEO:END -->'); s = s[:i] + b + s[i:]
+    s = lazy_video(s)
     if s != o: open(p, 'w', encoding='utf8').write(s)
     print(p, 'updated' if s != o else 'unchanged')

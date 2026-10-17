@@ -558,3 +558,34 @@ Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME
 ## 2026-10-16 9:01 PM HST — AGENCY_1016 thank-you emails SENT (user-approved)
 - Sent 12 thank-yous via the Gmail connector (From Media@savingplanets.com), using the final/<slug>.txt drafts with the CAN-SPAM postal address and opt-out line added: Copernicus EMS (+GloFAS), UNEP IMEO, GLOBE, Argo, Canadian Space Agency, ATLAS, Pan-STARRS, EFFIS, CAMS, Copernicus Marine, OpenET, DLR ZKI. Not sent: International Charter and CLS/Argos (contact forms only), and Catalina Sky Survey (no contact found).
 - send_queue.csv rows are marked SENT with message ids. A follow-up is due 2026-10-23 if there's no reply (7 days, assumed; drafts are in outreach-142/drafts/agency-1016-followups/, draft only).
+
+## Oct 16 2026, 7:57-8:19 PM HST — hero: composition up, hi-res, taller plumes, fast first paint
+- User: "move everything up", "I want to see more moons", "crystal clear", "hi res on all", "WOW", 5K/6K Mac display.
+- Layout (build-hero-themes.py CSS, space theme only): hero height 100svh (Safari toolbar never crops it); text block
+  starts ~1rem under the nav (56px / 92px) with tighter line spacing. hero-themes.js: horizon = text bottom + 0.17H
+  (portrait) / 0.05H (landscape), clamped 0.5-0.8H; Saturn sized to fit between text and horizon (portrait) or beside the
+  text column fully on screen (landscape); Earth larger (0.095 / 0.085 of min side) and rises until fully clear of the
+  horizon (portrait: never into the text); the Sun never sits behind the text. Caption: bottom, else under the nav, else
+  hidden (hs-capoff) - never over the text.
+- Resolution: full-screen canvases at full DPR up to a 21 MP backing (6016x3384 = 6K Retina @2x); Earth sprite always
+  full DPR (cap 3). Ground textures pre-rendered at 2048^2 (1024^2 on small screens) by scripts/build-hero-assets.py
+  (same procedural code via __heroSpace.procTex, +900 small craters on the Moon), WebP q95, on R2; shader adds a 4.7x
+  near-field detail layer. Earth = NASA Blue Marble land/ocean/ice/cloud (Visible Earth, NASA Goddard, public domain;
+  8192x4096 master on R2, srcset 480-3840), picked at 2x the on-screen circumference, orthographic projection, crisp
+  1px limb, thin glow. Auto quality (QL) still only after >40 ms frames for 3 s.
+- Plumes: big jets 16-30 units tall (fan out, fade with height), soft blob columns + twinkling grains + sparkles. Over
+  the text block they are dimmed (title 6%, other text 30%) and the text has a soft scrim + shadow: measured worst-case
+  contrast (90th-percentile background, no-text render, several moments of the loop) >= 6.2:1 at 820x1180, 1180x820, 1280x800, 390x844.
+- Performance (Lighthouse mobile): the script now starts after window load + requestIdleCallback; no texture is
+  computed on the device (fetched from R2); poster still (.hero-space::before, AVIF/WebP image-set, landscape
+  1280-6016 px, portrait 820-2048 px, chosen by width x resolution media queries) shows until the live ground is ready,
+  then fades out. Procedural textures remain the fallback if a fetch fails.
+- Follow-ups (same push): the live scene starts only with a hardware GPU (WebGL failIfMajorPerformanceCaveat + renderer not
+  SwiftShader/llvmpipe/software) and not with Save-Data; otherwise the poster stays and no frame loop runs (battery; this
+  is also what Lighthouse's GPU-less Chrome sees). ?hero-gpu=1 forces the scene (tests, poster builder). Posters now come
+  from three compositions laid out at the CSS size they are shown at (land 1180x820, tab 820x1180, phone 390x844),
+  rendered natively up to 6016 px (?hero-poster=1 lifts the DPR cap only for the builder) -> poster-state contrast also
+  >= 6.5:1. Ground textures load with crossOrigin (WebGL needs CORS) and fall back to procedural on any failure.
+  Hero canvases start 0x0 (Arabic showed CLS 0.44-0.77 from the 300x150 default canvas). The hero video (1.1 MB) ships
+  inert (no autoplay/src/poster) and only the video theme activates it (lazy_video in build-hero-themes.py).
+  Text block top follows the nav: 56px bar under 1140px (hamburger, Oct 16 nav change), 92px two-row nav from 1140px.
