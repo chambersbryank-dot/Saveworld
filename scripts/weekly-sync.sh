@@ -77,6 +77,7 @@ python3 scripts/build-lcp.py            # Oct 16: preload the page-hero backgrou
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
+python3 scripts/add-video-schema.py       # Oct 16: again after seo-fix, so VideoObject descriptions match the final meta descriptions
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-jsonld.py             # Oct 16: re-sync JSON-LD image/description after build-og bumps og:image ?v=
 python3 scripts/i18n-sitemap.py           # Oct 16: sitemap.xml rebuilt from the pages on disk (all langs, hreflang alternates, git lastmod)
