@@ -60,6 +60,7 @@ def main():
             call = f'<!-- NLCALL:START --><aside class="nl-call" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
             s2 = s2.replace('</main>', call + '</main>', 1)
         if b in KIDS or k in ('guide', 'lab'):
+            s2 = re.sub(r'<section class="newsletter-band"[^>]*><div data-sp-newsletter></div></section>\n?', '', s2)  # e.g. Amazing_Facts had a static band
             s2 = re.sub(r'<body(?![^>]*data-no-newsletter)([^>]*)>', r'<body\1 data-no-newsletter>', s2, count=1)
             s2 = s2.replace('<footer>', f'<footer><!-- GROWNUPS:START --><p class="gu-link"><a href="Teachers.html#weekly-brief">{e(t["gu"])}</a></p><!-- GROWNUPS:END -->', 1)
         if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
