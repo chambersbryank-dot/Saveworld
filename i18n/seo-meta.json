@@ -622,6 +622,18 @@
  "Great_Bubble_Barrier.html": {
   "it": {
    "description": "Una cortina di bolle che cattura la plastica su tutta la larghezza e la profondità di un corso d’acqua, spingendola di lato senza bloccare barche o pesci."
+  },
+  "ar": {
+   "description": "ستارة فقاعات من The Great Bubble Barrier توجّه البلاستيك في قنوات أمستردام إلى مجمّع، على كامل عرض المجرى وعمقه، بينما تمرّ القوارب والأسماك."
+  },
+  "en": {
+   "description": "The Great Bubble Barrier's bubble curtain guides plastic out of Amsterdam's canals into a catchment across the full width and depth, while boats and fish pass."
+  },
+  "es": {
+   "description": "Una cortina de burbujas que desvía el plástico de los canales de Ámsterdam hacia un colector, en todo el ancho y la profundidad, sin frenar barcos ni peces."
+  },
+  "fr": {
+   "description": "Un rideau de bulles qui guide le plastique des canaux d'Amsterdam vers un collecteur, sur toute la largeur et la profondeur, sans gêner bateaux ni poissons."
   }
  },
  "Great_Green_Wall.html": {
@@ -708,6 +720,9 @@
  "Jupiter.html": {
   "it": {
    "description": "Giove è un sistema naturale di rimozione dei detriti spaziali: inghiotte o scaglia via molti più oggetti pericolosi di quanto potrebbe una missione umana."
+  },
+  "ar": {
+   "description": "المشتري نظام طبيعي لإزالة الحطام الفضائي، يبتلع أو يقذف بعيدًا أجسامًا خطرة أكثر بكثير مما تستطيعه أي مهمة بشرية، وهو أنشط نظام معروف لإزالة الحطام."
   }
  },
  "Keep_Tahoe_Blue.html": {
@@ -743,6 +758,18 @@
  "Lake_Plastic_Recovery.html": {
   "ar": {
    "description": "Lake Plastic Recovery: انتشال البلاستيك من البحيرات قبل أن ينتقل مع مجرى النهر، بالغواصين والمتطوعين وتقنيات الالتقاط. حل للمياه العذبة على Saving Planets."
+  },
+  "en": {
+   "description": "Saving Planets' own lake solution: recover plastic from freshwater lakes by skimming, shoreline collection and divers, before it travels downstream to the sea."
+  },
+  "es": {
+   "description": "La solución para lagos de Saving Planets: recuperar el plástico de los lagos, en superficie, en la orilla y con buzos, antes de que llegue al mar."
+  },
+  "fr": {
+   "description": "La solution lacs de Saving Planets : récupérer le plastique des lacs, en surface, sur les rives et avec des plongeurs, avant qu'il ne file vers la mer."
+  },
+  "it": {
+   "description": "La soluzione per i laghi di Saving Planets: recuperare la plastica dai laghi d’acqua dolce, in superficie, a riva e con i sub, prima che scenda verso il mare."
   }
  },
  "Lakes.html": {
@@ -922,6 +949,18 @@
  "NISAR.html": {
   "es": {
    "description": "NISAR, de la NASA y la ISRO, se lanzó desde la India el 30 de julio de 2025: un satélite radar que detecta movimientos del suelo y del hielo de un centímetro."
+  },
+  "ar": {
+   "description": "NISAR قمر راداري من NASA وISRO أُطلق من الهند في 30 يوليو 2025، يمسح معظم يابسة الأرض وجليدها مرتين كل 12 يومًا، عبر السحب والظلام."
+  },
+  "en": {
+   "description": "NISAR, a NASA and ISRO radar satellite launched from India on July 30, 2025, scans nearly all of Earth's land and ice twice every 12 days, even through clouds."
+  },
+  "fr": {
+   "description": "NISAR, satellite radar de la NASA et de l'ISRO lancé de l'Inde le 30 juillet 2025, scrute presque toutes les terres et glaces deux fois tous les 12 jours."
+  },
+  "it": {
+   "description": "NISAR, satellite radar di NASA e ISRO lanciato dall’India il 30 luglio 2025, scansiona quasi tutte le terre e i ghiacci della Terra due volte ogni 12 giorni."
   }
  },
  "Nancy_Grace_Roman.html": {
@@ -1125,6 +1164,12 @@
   },
   "it": {
    "description": "Plastic Bank trasforma la plastica diretta in mare in reddito per i raccoglitori di comunità vulnerabili: conviene raccoglierla prima che arrivi all’oceano."
+  },
+  "ar": {
+   "description": "تدفع Plastic Bank لجامعي البلاستيك في المجتمعات الهشة مقابل البلاستيك المتجه إلى المحيط، فيستبدلونه في فروع محلية بدخل وقسائم غذاء ولوازم مدرسية."
+  },
+  "en": {
+   "description": "Plastic Bank pays collectors in vulnerable communities to gather ocean-bound plastic, exchanged at local branches for income, food vouchers and school supplies."
   }
  },
  "Plastic_Odyssey.html": {
@@ -1237,6 +1282,15 @@
   },
   "it": {
    "description": "Un’organizzazione non profit del Nevada che con ROV e subacquei volontari rimuove i rifiuti sommersi dal lago Tahoe, dalla superficie fino a 1.640 piedi."
+  },
+  "en": {
+   "description": "A Nevada nonprofit whose ROVs and volunteer divers pull submerged trash from Lake Tahoe, from the surface down to 1,640 feet: over 13 tons in summer 2024 alone."
+  },
+  "es": {
+   "description": "Una ONG de Nevada cuyos ROV y buzos voluntarios sacan basura sumergida del lago Tahoe, hasta 1640 pies de profundidad: más de 13 toneladas en el verano de 2024."
+  },
+  "fr": {
+   "description": "Une association du Nevada dont les ROV et plongeurs bénévoles retirent les déchets immergés du lac Tahoe, jusqu'à 1 640 pieds : plus de 13 tonnes à l'été 2024."
   }
  },
  "River_Cleanup.html": {
@@ -1500,11 +1554,29 @@
   },
   "it": {
    "description": "Terraformation ripristina foreste autoctone e ricche di biodiversità, dal seme alla chioma degli alberi, nelle regioni tropicali e alle Hawaii."
+  },
+  "en": {
+   "description": "Terraformation grows native, biodiverse forests from seed to canopy across the tropics and Hawaii, funding seed collection, nurseries, planting and monitoring."
+  },
+  "fr": {
+   "description": "Terraformation fait pousser des forêts natives et riches en biodiversité, de la graine à la canopée, sous les tropiques et à Hawaï, en finançant tout le cycle."
   }
  },
  "Three_Shields.html": {
   "it": {
    "description": "Tre scudi naturali proteggono la Terra: l’eliosfera, la magnetosfera e l’atmosfera con lo strato di ozono, una protezione gratuita e naturale."
+  },
+  "ar": {
+   "description": "ثلاثة دروع طبيعية تحمي الأرض: الغلاف الشمسي والغلاف المغناطيسي والغلاف الجوي بطبقة الأوزون، فتصدّ الرياح الشمسية وتمتص معظم الأشعة فوق البنفسجية الضارة UV-B."
+  },
+  "en": {
+   "description": "Three natural shields protect Earth: the heliosphere, the magnetosphere, and the atmosphere with its ozone layer, deflecting solar wind and most harmful UV-B."
+  },
+  "es": {
+   "description": "Tres escudos naturales protegen la Tierra: la heliosfera, la magnetosfera y la atmósfera con su capa de ozono, frente al viento solar y casi todo el UV-B."
+  },
+  "fr": {
+   "description": "Trois boucliers naturels protègent la Terre : l'héliosphère, la magnétosphère, et l'atmosphère et sa couche d'ozone, contre le vent solaire et les UV-B."
   }
  },
  "Titan.html": {
@@ -2050,6 +2122,159 @@
   },
   "it": {
    "title": "Carta Zero Detriti (ESA)"
+  }
+ },
+ "Amazing_Facts.html": {
+  "ar": {
+   "description": "أرقام مدهشة وموثّقة عن تنظيف المحيطات والأنهار وإعادة التشجير والفضاء والحوسبة المدارية. لكل حقيقة مصدرها، ويمكن إعادة استخدامها مع رابط إلينا."
+  },
+  "en": {
+   "description": "Surprising, sourced numbers behind ocean cleanup, rivers, replanting, space and orbital computing. Every fact keeps its source and is free to reuse with a link."
+  },
+  "es": {
+   "description": "Cifras sorprendentes y con fuentes sobre limpieza oceánica, ríos, reforestación, espacio y computación orbital. Cada dato conserva su fuente."
+  },
+  "fr": {
+   "description": "Des chiffres étonnants et sourcés sur le nettoyage des océans, les rivières, le reboisement, l'espace et le calcul orbital, libres de réutilisation."
+  },
+  "it": {
+   "description": "Numeri sorprendenti e documentati su pulizia degli oceani, fiumi, riforestazione, spazio e calcolo in orbita. Ogni dato conserva la sua fonte."
+  }
+ },
+ "Biomass.html": {
+  "ar": {
+   "description": "يحمل القمر Biomass التابع لـ ESA، المُطلق في 29 أبريل 2025، أول رادار بالنطاق P في الفضاء، يخترق ظلّة الغابات ليقيس الكربون المخزّن في الأشجار."
+  },
+  "en": {
+   "description": "ESA's Biomass satellite, launched April 29, 2025, carries the first P-band radar in space, seeing through forest canopies to measure the carbon stored in trees."
+  },
+  "es": {
+   "description": "Biomass (ESA), lanzado el 29 de abril de 2025, lleva el primer radar de banda P en el espacio, que atraviesa el dosel para medir el carbono de los árboles."
+  },
+  "fr": {
+   "description": "Lancé le 29 avril 2025, Biomass (ESA) embarque le premier radar en bande P dans l'espace, qui traverse la canopée pour mesurer le carbone des arbres."
+  },
+  "it": {
+   "description": "Biomass (ESA), lanciato il 29 aprile 2025, porta il primo radar in banda P nello spazio, che attraversa la chioma per misurare il carbonio degli alberi."
+  }
+ },
+ "Mangroves.html": {
+  "ar": {
+   "description": "تحرس نحو 80 نوعًا من أشجار المانغروف السواحل الاستوائية: جذورها المتشابكة تثبّت الطين وتخفف عرام العواصف وتمنح الأسماك الغذاء والمأوى."
+  },
+  "en": {
+   "description": "About 80 species of mangrove trees guard tropical coastlines: their tangled roots hold mud in place, soften storm surges and give fish food and shelter."
+  },
+  "es": {
+   "description": "Unas 80 especies de manglares protegen las costas tropicales: sus raíces enredadas fijan el lodo, amortiguan las marejadas y dan a los peces alimento y refugio."
+  },
+  "fr": {
+   "description": "Environ 80 espèces de palétuviers protègent les côtes tropicales : leurs racines retiennent la vase, atténuent les tempêtes et abritent les poissons."
+  },
+  "it": {
+   "description": "Circa 80 specie di mangrovie proteggono le coste tropicali: le radici intrecciate trattengono il fango, attenuano le mareggiate e riparano i pesci."
+  }
+ },
+ "Ocean_Cleanup.html": {
+  "ar": {
+   "description": "تزيل The Ocean Cleanup البلاستيك المتراكم في رقع النفايات المحيطية وتعترضه في الأنهار، وقد جمعت أكثر من 65 مليون كيلوغرام حتى أكتوبر 2026."
+  },
+  "en": {
+   "description": "The Ocean Cleanup removes legacy plastic from ocean garbage patches and intercepts it in rivers: more than 65 million kilograms caught as of October 2026."
+  },
+  "es": {
+   "description": "The Ocean Cleanup retira el plástico acumulado en las islas de basura del océano y lo intercepta en los ríos: más de 65 millones de kilos a octubre de 2026."
+  },
+  "fr": {
+   "description": "The Ocean Cleanup retire le plastique des gyres océaniques et l'intercepte dans les rivières : plus de 65 millions de kilos collectés à octobre 2026."
+  },
+  "it": {
+   "description": "The Ocean Cleanup rimuove la plastica accumulata nelle isole di rifiuti oceaniche e la intercetta nei fiumi: oltre 65 milioni di chili raccolti a ottobre 2026."
+  }
+ },
+ "Orbital_Data_Centers.html": {
+  "ar": {
+   "description": "مراكز بيانات في المدار تشغّل رقائق الذكاء الاصطناعي بطاقة الشمس وتشعّ حرارتها إلى الفضاء دون أبراج تبريد بالماء. رحلات أولى فقط، لا بديل بعد."
+  },
+  "en": {
+   "description": "Data centers in orbit run AI chips on solar power and radiate waste heat into space, with no water-cooling towers. Early flights only, not yet a replacement."
+  },
+  "es": {
+   "description": "Centros de datos en órbita: chips de IA con energía solar que irradian su calor al espacio, sin refrigeración por agua. Por ahora, solo primeros vuelos."
+  },
+  "fr": {
+   "description": "Des centres de données en orbite : puces d'IA à l'énergie solaire, chaleur rayonnée dans l'espace, sans eau de refroidissement. Ce ne sont que de premiers vols."
+  },
+  "it": {
+   "description": "Data center in orbita: chip di IA a energia solare che irradiano il calore nello spazio, senza raffreddamento ad acqua. Per ora solo i primi voli."
+  }
+ },
+ "Seagrass.html": {
+  "ar": {
+   "description": "تغطي الأعشاب البحرية 0.1% فقط من قاع البحر لكنها تخزن 11% من الكربون العضوي المدفون في المحيط، وقد يعيل فدان واحد منها نحو 40,000 سمكة، وفق NOAA."
+  },
+  "en": {
+   "description": "Seagrass covers just 0.1% of the seafloor but stores 11% of the ocean's buried organic carbon, and one acre can support almost 40,000 fish, NOAA says."
+  },
+  "es": {
+   "description": "Las praderas marinas cubren el 0,1 % del fondo marino y guardan el 11 % del carbono orgánico enterrado en el océano; un acre sostiene casi 40.000 peces."
+  },
+  "fr": {
+   "description": "Les herbiers couvrent 0,1 % des fonds marins mais stockent 11 % du carbone organique enfoui dans l'océan ; un acre abrite près de 40 000 poissons (NOAA)."
+  },
+  "it": {
+   "description": "Le praterie marine coprono lo 0,1% dei fondali ma custodiscono l’11% del carbonio organico sepolto negli oceani; un acro ospita quasi 40.000 pesci."
+  }
+ },
+ "Sungai_Watch.html": {
+  "ar": {
+   "description": "توقف Sungai Watch البلاستيك في أنهار إندونيسيا بحواجز للنفايات وجمع وفرز يوميين وإعادة تدوير إبداعية، في بالي وجاوة منذ 2020."
+  },
+  "en": {
+   "description": "Sungai Watch stops plastic in Indonesian rivers with trash barriers, daily collection and sorting, plus upcycling, working in Bali and Java since 2020."
+  },
+  "es": {
+   "description": "Sungai Watch frena el plástico en los ríos de Indonesia con barreras, recogida y clasificación diarias y suprarreciclaje, en Bali y Java desde 2020."
+  },
+  "fr": {
+   "description": "Sungai Watch arrête le plastique dans les rivières indonésiennes : barrages, collecte et tri quotidiens, surcyclage, à Bali et Java depuis 2020."
+  },
+  "it": {
+   "description": "Sungai Watch ferma la plastica nei fiumi indonesiani con barriere, raccolta e smistamento quotidiani e upcycling, a Bali e Giava dal 2020."
+  }
+ },
+ "Three_Trees.html": {
+  "ar": {
+   "description": "قاعدة Saving Planets للغابات: ثلاث أشجار تُزرع مقابل كل شجرة تُزال، ليصبح كل قطع مكسبًا صافيًا للموائل والتربة والظل، مع سهولة التحقق."
+  },
+  "en": {
+   "description": "Saving Planets' own forest rule: plant three trees for every one removed, so each removal becomes a net gain for habitat, soil and shade, and is easy to verify."
+  },
+  "es": {
+   "description": "La regla forestal de Saving Planets: plantar tres árboles por cada uno talado, para una ganancia neta de hábitat, suelo y sombra, fácil de verificar."
+  },
+  "fr": {
+   "description": "La règle forestière de Saving Planets : trois arbres plantés pour chaque arbre abattu, pour un gain net d'habitat, de sol et d'ombre, simple à vérifier."
+  },
+  "it": {
+   "description": "La regola forestale di Saving Planets: tre alberi piantati per ogni albero abbattuto, per un guadagno netto di habitat, suolo e ombra, facile da verificare."
+  }
+ },
+ "index.html": {
+  "ar": {
+   "description": "حلول عملية وموثّقة للمحيطات والبحيرات والأنهار والغابات والفضاء، وحوسبة لا تستنزف مياه الكوكب. نركّز على العمل الإيجابي، لا على الذعر."
+  },
+  "en": {
+   "description": "Practical, sourced solutions for oceans, lakes, rivers, forests and space, plus computing that does not drink the planet dry. Positive action, not panic."
+  },
+  "es": {
+   "description": "Soluciones prácticas y con fuentes para océanos, lagos, ríos, bosques y el espacio, y una computación que no seca el planeta. Acción positiva, no pánico."
+  },
+  "fr": {
+   "description": "Des solutions concrètes et sourcées pour océans, lacs, rivières, forêts et espace, et un calcul qui n'assèche pas la planète. Agir positivement, sans paniquer."
+  },
+  "it": {
+   "description": "Soluzioni concrete e documentate per oceani, laghi, fiumi, foreste e spazio, e un’informatica che non prosciuga il pianeta. Azione positiva, non panico."
   }
  }
 }
