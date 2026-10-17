@@ -198,8 +198,8 @@ document.addEventListener('click',function(e){if(!n.contains(e.target)){closeAll
 document.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var o=n.querySelector('.spn-dd.is-open');
  if(o){set(o,false);o.querySelector('.spn-trig').focus();return}if(n.classList.contains('spn-open')){panel(false);tg&&tg.focus()}});
 var mqc=function(){panel(false)};if(mq.addEventListener)mq.addEventListener('change',mqc);else if(mq.addListener)mq.addListener(mqc);
-var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.scrollY||document.documentElement.scrollTop)>24)}
-window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
+var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.pageYOffset||0)>24)}/* Oct 16 perf: pageYOffset needs no layout; first check after paint */
+window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});if(window.pageYOffset>24)requestAnimationFrame(sc);
 })();
 /* SPNAV:END */
 """

@@ -61,7 +61,9 @@ g.addEventListener('click',function(){save('go')});
 b.querySelector('.sp-lb-stay').addEventListener('click',close);b.querySelector('.sp-lb-x').addEventListener('click',close);
 function show(){if(!document.body)return;if(nav&&nav.parentNode)nav.parentNode.insertBefore(b,nav.nextSibling);else document.body.insertBefore(b,document.body.firstChild);
 d.classList.add('sp-has-lb');place();ping();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+/* Oct 16 perf: overlay, so show it when the main thread is idle after load (never blocks first paint) */
+function later(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(show,{timeout:2500})}
+if(document.readyState==='complete')later();else window.addEventListener('load',later);
 }catch(e){}})();
 /* LANGBANNER:END */
 """

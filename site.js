@@ -404,8 +404,8 @@ document.addEventListener('click',function(e){if(!n.contains(e.target)){closeAll
 document.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var o=n.querySelector('.spn-dd.is-open');
  if(o){set(o,false);o.querySelector('.spn-trig').focus();return}if(n.classList.contains('spn-open')){panel(false);tg&&tg.focus()}});
 var mqc=function(){panel(false)};if(mq.addEventListener)mq.addEventListener('change',mqc);else if(mq.addListener)mq.addListener(mqc);
-var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.scrollY||document.documentElement.scrollTop)>24)}
-window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
+var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.pageYOffset||0)>24)}/* Oct 16 perf: pageYOffset needs no layout; first check after paint */
+window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});if(window.pageYOffset>24)requestAnimationFrame(sc);
 })();
 /* SPNAV:END */
 /* SPEV:START */
@@ -462,6 +462,8 @@ g.addEventListener('click',function(){save('go')});
 b.querySelector('.sp-lb-stay').addEventListener('click',close);b.querySelector('.sp-lb-x').addEventListener('click',close);
 function show(){if(!document.body)return;if(nav&&nav.parentNode)nav.parentNode.insertBefore(b,nav.nextSibling);else document.body.insertBefore(b,document.body.firstChild);
 d.classList.add('sp-has-lb');place();ping();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+/* Oct 16 perf: overlay, so show it when the main thread is idle after load (never blocks first paint) */
+function later(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(show,{timeout:2500})}
+if(document.readyState==='complete')later();else window.addEventListener('load',later);
 }catch(e){}})();
 /* LANGBANNER:END */
