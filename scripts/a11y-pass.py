@@ -9,12 +9,14 @@
       and re-apply alt fixes if translation memory was missing."""
 import json, re, os, sys, glob, html, collections
 D = json.load(open('assets/data/a11y.json', encoding='utf8'))
-# Oct 15: solution counts in video captions/transcripts follow the live count (assets/data/solutions.json, written by build-stats.js)
+# Oct 15: solution counts in video captions/transcripts follow the live count (assets/data/solutions.json, written by build-stats.js),
+# except videos marked "pinned" in a11y.json (narration: captions must say what the audio says)
 try: _N = json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions']
 except Exception: _N = None
 if _N:
     _NUM = re.compile(r'\b\d{2,4}(?=\s*(?:real solutions|solutions réelles|soluciones reales|soluzioni reali|حلاً))')
     for _v in D['videos'].values():
+        if _v.get('pinned'): continue  # Oct 16: narrated videos keep their recorded transcript so captions match the audio (About v3 says 120, ad v2 says 83)
         for _cue in _v['cues']:
             for _l in _cue[2]: _cue[2][_l] = _NUM.sub(str(_N), _cue[2][_l])
     # live-count variants in translation memory, so translated captions/figcaptions never fall back to a stale count

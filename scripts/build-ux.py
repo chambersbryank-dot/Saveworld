@@ -308,8 +308,11 @@ def page_pass(p, l, n):
     parts = s.split('</section>', 1)
     if len(parts) == 2: s = parts[0] + '</section>' + re.sub(r'<img\b[^>]*>', lazy, parts[1])
     # auto counts in visible text (not inside dates)
-    s = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), s)
-    s = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (حلول|حلا))', str(n), s)
+    # Oct 16: video transcripts are left alone: they say what the narration says (a11y.json "pinned"), not the live count
+    def _cnt(t):
+        t = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), t)
+        return re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (حلول|حلا))', str(n), t)
+    s = ''.join(x if x.startswith('<!-- TRANSCRIPT:START -->') else _cnt(x) for x in re.split(r'(<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->)', s, flags=re.S))
     # canonical/og for index pages
     if page == 'index.html':
         s = s.replace(f'{SITE}{d(l)}index.html"', f'{SITE}{d(l)}"')
