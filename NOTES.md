@@ -593,3 +593,14 @@ Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME
 ## Oct 16, 2026 (~9:30 PM HST): speed follow-up (card srcset finished, critical CSS rollout)
 - r2-cards.py now also covers Solutions.html directory cards (.sol-card .photo-link img; sizes "(max-width:600px) 90vw, 260px", measured 208–326 px rendered). 21 more card images uploaded; every assets/og <img> on the site (4015 tags, 5 langs) now has R2 WebP srcset 480/800/1200 (sources are 1200 px). Repo JPEG stays src.
 - Critical CSS stage 1 (build-critical.py --only Myth_vs_Fact Solutions 4ocean Ocean_Cleanup Plastic_Bank, 5 langs = 25 pages incl. Myth re-run). Fixes in the generator: SKIP={'index.html'} (homepage head belongs to the hero worker); EXTRACT_V=2 is mixed into the cache hash and the extractor always keeps bare img/svg/video/picture/iframe/canvas rules (without them, below-fold 1200 px related-card images overflowed the page by 40 px in Arabic until the full CSS arrived). Nav rules still always inlined. Check: CSS-blocked render at 1180x820 has scrollWidth 1180 in EN+AR; full render CLS ≤0.002.
+## Oct 16 2026, 8:54 PM HST — banner credit = what the banner shows (apply-heroes.py, 5 langs)
+- The 20 agency pages had PAGE_HERO entries but their styles.css rules were never generated, so the banner showed the shared
+  space hero (Saturn.jpg) while the line under it credited the page's own photo. Re-ran apply-heroes: banner = the credited
+  photo now (100 per-page heroes). Guard added: a page still left on the shared space hero gets "Image: NASA (Cassini)."
+  under it (its own photo stays credited where it appears) + the existing WARNING.
+- Italian added to both apply-heroes loops (13 it/ MAP pages showed the default ocean banner; SI/Immagine strings).
+- Hayabusa2_Torifune: banner = Ryugu photo, credit under it said "NASA/NOAA DSCOVR EPIC" -> JAXA Hayabusa2 ONC data,
+  processed by Anonymsiy (CC BY 4.0) (from the page's own photo credit). The credit rewrite keeps an existing (translated)
+  credit when every acronym/ID already matches (it/FireSat keeps "satellite Terra").
+- Flag only: the About video narration may still say 142 solutions (live count 162). Not re-recorded.
+- Cache v20261016zc (styles.css + site.js query on all pages).
