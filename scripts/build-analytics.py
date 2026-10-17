@@ -61,6 +61,10 @@ def privacy(p, l):
         return sec[:i] + f'<p>{E(t["kid"])}</p></section>' if i > 0 else sec
     s = re.sub(r'<section class="five-ws" id="s4">.*?</section>', kid, s, count=1, flags=re.S)
     s = re.sub(r'(<section class="five-ws" id="s5"><h2>[^<]*</h2>).*?(</section>)', lambda m: f'{m.group(1)}<p>{E(t["st"])}</p>{m.group(2)}', s, count=1, flags=re.S)
+    try: rp = _EV.REPORT_P[l]
+    except Exception: rp = ''
+    s = re.sub(r'<p class="rf-priv">.*?</p>', '', s, flags=re.S)
+    if rp: s = re.sub(r'(<section class="five-ws" id="s6">.*?)(</section>)', lambda m: m.group(1) + f'<p class="rf-priv">{E(rp)}</p>' + m.group(2), s, count=1, flags=re.S)
     s = re.sub(r'<p class="trust-updated">[^<]*</p>', f'<p class="trust-updated">{E(t["up"])}</p>', s, count=1)
     return s
 

@@ -1,3 +1,4 @@
+import { EmailMessage } from 'cloudflare:email';
 // SI Helper pilot (Oct 16 2026). Answers teachers' questions ONLY from Saving Planets pages, with source links.
 // Pipeline: origin + size checks -> personal-info block -> Turnstile -> per-IP limits (10/min, 50/day) -> daily spend guard
 // -> Llama Guard 3 on the question -> bge-m3 embedding -> Vectorize (same language) -> gpt-oss-120b grounded answer
@@ -54,12 +55,48 @@ async function events(req, env, h) {
   return new Response(null, { status: 204, headers: { ...h, 'Cache-Control': 'no-store' } });
 }
 
+// Oct 16: email to the site inbox via Cloudflare Email Routing send_email binding (destination fixed in wrangler.toml).
+async function mail(env, subject, text) {
+  const from = env.MAIL_FROM, to = env.MAIL_TO;
+  const raw = [`From: Saving Planets site <${from}>`, `To: ${to}`, `Subject: ${subject.replace(/[^\x20-\x7e]/g, '?').slice(0, 150)}`,
+    `Message-ID: <${crypto.randomUUID()}@savingplanets.com>`, `Date: ${new Date().toUTCString()}`, 'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=utf-8', 'Content-Transfer-Encoding: 8bit', 'Auto-Submitted: auto-generated', '', text].join('\r\n');
+  await env.MAIL.send(new EmailMessage(from, to, raw));
+}
+// Oct 16: "Report a correction" form (Corrections page, 5 languages). No name/email fields; refuses emails/phone numbers;
+// Turnstile + 3/min and REPORTS_PER_IP_DAY per visitor; nothing stored (the report only goes out as one email).
+const PAGE_RE = /^https:\/\/(www\.)?savingplanets\.com\/[A-Za-z0-9_\-./]{0,120}(#[A-Za-z0-9_-]{0,40})?$/;
+async function report(req, env, h) {
+  if (!h['Access-Control-Allow-Origin']) return out({ error: 'origin' }, 403, {});
+  let b; try { const t = await req.text(); if (t.length > 6000) throw 0; b = JSON.parse(t); } catch { return out({ status: 'error' }, 400, h); }
+  const clean = (x, n) => String(x || '').replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g, '').trim().slice(0, n);
+  const page = clean(b.page, 200), what = clean(b.what, 1500), fix = clean(b.fix, 1500), lang = LANGS.includes(b.lang) ? b.lang : 'en';
+  if (page && !PAGE_RE.test(page)) return out({ status: 'error' }, 400, h);
+  if (what.length < 10) return out({ status: 'short' }, 200, h);
+  if (PII.test(what) || PII.test(fix)) return out({ status: 'pii' }, 200, h);
+  const ip = req.headers.get('CF-Connecting-IP') || '0.0.0.0';
+  const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.ts || '')); fd.append('remoteip', ip);
+  const tv = await (await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: fd })).json().catch(() => ({}));
+  if (!tv.success) return out({ status: 'bot' }, 200, h);
+  const iph = await sha(env.IP_SALT + '|rep|' + ip);
+  if (!(await env.RL_REP.limit({ key: iph })).success) return out({ status: 'busy' }, 200, h);
+  const g = env.GUARD.get(env.GUARD.idFromName('global'));
+  if (!(await (await g.fetch('https://g/rep', { method: 'POST', body: JSON.stringify({ iph }) })).json()).ok) return out({ status: 'busy' }, 200, h);
+  const path = page ? new URL(page).pathname : '(not given)';
+  try {
+    await mail(env, `Correction report: ${path}`, `Page: ${page || '(not given)'}\nPage language: ${lang}\n\nWhat is wrong:\n${what}\n\nSuggested fix (optional):\n${fix || '(none)'}\n\n--\nSent from the Report a correction form on savingplanets.com. The form collects no name or email, so there is no one to reply to.\nCorrection log convention: credit fixes to "SI Partner".`);
+  } catch (e) { return out({ status: 'error' }, 200, h); }
+  evWrite(env, 'report', lang, 'sent');
+  return out({ status: 'ok' }, 200, h);
+}
+
 export default {
   async fetch(req, env) {
     const url = new URL(req.url), origin = req.headers.get('Origin') || '', h = cors(origin, env);
     if (req.method === 'OPTIONS') return new Response(null, { status: h['Access-Control-Allow-Origin'] ? 204 : 403, headers: h });
     if (url.pathname === '/health') return out({ ok: true, service: 'si-helper', pilot: true }, 200, {});
     if (url.pathname === '/e' && req.method === 'POST') return events(req, env, h);
+    if (url.pathname === '/report' && req.method === 'POST') return report(req, env, h);
     if (url.pathname !== '/ask' || req.method !== 'POST') return out({ error: 'not found' }, 404, h);
     if (!h['Access-Control-Allow-Origin']) return out({ error: 'origin' }, 403, {});
     let body; try { const t = await req.text(); if (t.length > 4000) throw 0; body = JSON.parse(t); } catch { return out({ error: 'bad request' }, 400, h); }
@@ -76,7 +113,7 @@ export default {
     if (!(await env.RL_MIN.limit({ key: iph })).success) return say('busy');
     const g = env.GUARD.get(env.GUARD.idFromName('global'));
     const chk = await (await g.fetch('https://g/check', { method: 'POST', body: JSON.stringify({ iph }) })).json();
-    if (!chk.ok) return say('busy');
+    if (!chk.ok) { if (chk.alert) await mail(env, 'SI Helper: daily $' + env.DAILY_USD_CAP + ' cap reached', `The SI Helper pilot reached its daily spending cap (${env.DAILY_USD_CAP} USD) on ${new Date().toISOString().slice(0, 10)} (UTC) after ${chk.q} questions (estimated ${Number(chk.usd).toFixed(3)} USD).\nIt answers "busy" until 00:00 UTC, then resets automatically. No action is needed unless this keeps happening.\n\nOne alert per UTC day. Sent by the si-helper Worker.`).catch(() => {}); return say('busy'); }
     let used = 0;
     const settle = () => g.fetch('https://g/settle', { method: 'POST', body: JSON.stringify({ usd: (used / 1000) * Number(env.USD_PER_KNEURON) }) });
     try {
@@ -118,13 +155,14 @@ export class Guard {
     await this.roll(); const p = new URL(req.url).pathname, b = await req.json().catch(() => ({}));
     const cap = Number(this.env.DAILY_USD_CAP), res = Number(this.env.RESERVE_USD); let usd = (await this.s.get('usd')) || 0;
     if (p === '/check') {
-      if (usd + res > cap) return Response.json({ ok: false, why: 'budget' });
+      if (usd + res > cap) { const first = !(await this.s.get('alerted')); if (first) await this.s.put('alerted', 1); return Response.json({ ok: false, why: 'budget', alert: first, usd, q: (await this.s.get('q')) || 0 }); }
       const k = 'ip:' + b.iph, n = (await this.s.get(k)) || 0;
       if (n >= Number(this.env.PER_IP_DAY)) return Response.json({ ok: false, why: 'daily' });
       await this.s.put(k, n + 1); await this.s.put('usd', usd + res); await this.s.put('q', ((await this.s.get('q')) || 0) + 1);
       return Response.json({ ok: true });
     }
     if (p === '/settle') { usd = usd - res + Math.max(0, Number(b.usd) || 0); await this.s.put('usd', usd); return Response.json({ ok: true }); }
+    if (p === '/rep') { const k = 'r:' + b.iph, n = (await this.s.get(k)) || 0; if (n >= Number(this.env.REPORTS_PER_IP_DAY)) return Response.json({ ok: false }); await this.s.put(k, n + 1); return Response.json({ ok: true }); }
     if (p === '/stats') return Response.json({ day: await this.s.get('day'), usd, questions: (await this.s.get('q')) || 0 });
     return new Response('no', { status: 404 });
   }

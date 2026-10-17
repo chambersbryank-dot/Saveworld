@@ -36,7 +36,21 @@ simple = { limit = 60, period = 60 }
 binding = "EVENTS"
 dataset = "sp_events"
 
+# Oct 16: correction reports: 3/min per visitor (plus REPORTS_PER_IP_DAY in the Guard)
+[[ratelimits]]
+name = "RL_REP"
+namespace_id = "41019"
+simple = { limit = 3, period = 60 }
+
+# Oct 16: email via Cloudflare Email Routing (already active on savingplanets.com; no DNS/MX change). Only this verified destination.
+[[send_email]]
+name = "MAIL"
+destination_address = "media@savingplanets.com"
+
 [vars]
+MAIL_FROM = "site-forms@savingplanets.com"
+MAIL_TO = "media@savingplanets.com"
+REPORTS_PER_IP_DAY = "10"
 DAILY_USD_CAP = "1.00"      # hard stop for Workers AI spend per UTC day (pilot)
 PER_IP_DAY = "50"           # questions per IP per UTC day
 USD_PER_KNEURON = "0.011"   # Workers AI price per 1,000 neurons (developers.cloudflare.com/workers-ai/platform/pricing)
