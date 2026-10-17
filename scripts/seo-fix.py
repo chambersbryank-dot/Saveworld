@@ -1,5 +1,8 @@
-"""Idempotent SEO normalizer. Usage: python3 scripts/seo-fix.py [en|fr|es|ar ...]  (default: all)
-Per page: meta robots, <=60-char localized title, 120-155-char localized description (og/twitter synced),
+"""Idempotent SEO normalizer. Usage: python3 scripts/seo-fix.py [en|fr|es|ar|it ...]  (default: all)
+Per page: meta robots, <=60-char localized title, 120-160-char localized description (og/twitter synced),
+hand-written per-language title/description overrides from i18n/seo-meta.json (wins over generator text),
+twitter:site, og:image width/height/type/alt, hreflang only for language versions that exist,
+redirect stubs: html lang/dir + noindex (Oct 16 SEO pass; scripts/seo-lint.py checks the result).
 canonical/og:url, hreflang set incl. x-default, og:locale(+alternates), JSON-LD dates/inLanguage, image
 width/height/lazy. Run after build-stats.js and after scripts/i18n-build.py (which calls it for translations)."""
 import glob, json, os, re, subprocess, sys
@@ -8,6 +11,13 @@ SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
 NOINDEX = {'Project-R.html', '404.html'}
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
 BRAND = ' | Saving Planets'
+TWITTER_SITE = '@SISavingPlanets'
+OVR = json.load(open('i18n/seo-meta.json', encoding='utf8')) if os.path.exists('i18n/seo-meta.json') else {}
+MAIN_TYPES = ('Article', 'WebPage', 'CollectionPage', 'LearningResource', 'Course', 'DefinedTermSet', 'FAQPage', 'AboutPage', 'ContactPage', 'SearchResultsPage')
+def page_url(lang, base):  # index.html is served at the directory URL
+    return SITE + ('' if lang == 'en' else lang + '/') + ('' if base == 'index.html' else base)
+def langs_of(base):  # languages that actually have this page
+    return ['en'] + [l for l in LANGS if os.path.exists(f'{l}/{base}')] if os.path.exists(base) else [l for l in LANGS if os.path.exists(f'{l}/{base}')]
 # Language tag added to translated titles that would otherwise equal the English title (proper names).
 TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية', 'it': ' · Italiano'}
 PAD = {'en': 'Sourced facts, the Five W\'s and why it matters, on Saving Planets.',
@@ -15,7 +25,18 @@ PAD = {'en': 'Sourced facts, the Five W\'s and why it matters, on Saving Planets
        'es': 'Datos con fuentes, las cinco W y su impacto, en Saving Planets.',
        'ar': 'حقائق موثّقة والأسئلة الخمسة وأهمية الحل، على Saving Planets.',
        'it': 'Fatti con fonti, le cinque W e perché conta, su Saving Planets.'}
-END = re.compile(r'(?<=[.!?؟。])\s+')
+_END = re.compile(r'(?<=[.!?؟。])\s+')
+_ABBR = re.compile(r'(?:\b[A-Z]\.|\b(?:[A-Z]\.){2,}|\b(?:e\.g|i\.e|Dr|St|Mt|No|vs|Inc|Ltd|Jr|Sr|Prof|approx|ca|av|apr|n°|Sra?|Sto|Ste|art)\.)$')
+class _Splitter:
+    """Sentence splitter that does not break after abbreviations (U.S., e.g., Dr., St.)."""
+    def split(self, text):
+        out = []
+        for part in _END.split(text):
+            if out and _ABBR.search(out[-1]): out[-1] += ' ' + part
+            else: out.append(part)
+        return out
+END = _Splitter()
+SKIP_P = re.compile(r'review|source|credit|cite|eyebrow|kicker|tag|crumb|share|caption|meta|note|disclaimer|lchip|badge')
 _git = {}
 def gitdates(f):
     if f not in _git:
@@ -33,22 +54,39 @@ def fit_title(t, en_title=None, lang='en'):
     if len(t) <= 60: return t
     core = t.replace(BRAND, '')
     if len(core) <= 60: return core
+    for sep in (': ', ' (', ' – ', ' — ', ', ', ' : '):  # keep the head clause ("Delta-v Calculator (Tsiolkovsky…)" -> "Delta-v Calculator")
+        head = core.split(sep)[0].strip()
+        if 20 <= len(head) <= 60 and head != core:
+            return head + BRAND if len(head + BRAND) <= 60 else head
     return core[:59].rsplit(' ', 1)[0].rstrip(' ,:;–-') + '…'
 
 def fit_desc(base, extra, lang):
-    """base sentence(s) first; add sentences from extra while <120; trim to <=155 at a sentence or word boundary."""
-    text = re.sub(r'\s+', ' ', base).strip()
-    for s in [x for e in extra for x in END.split(re.sub(r'\s+', ' ', e).strip()) if x] + [PAD[lang]]:
-        if len(text) >= 120: break
-        if s and s not in text: text = (text + ' ' + s).strip()
-    if len(text) <= 155: return text
-    sents = END.split(text); out = ''
-    for s in sents:
-        if len((out + ' ' + s).strip()) <= 155: out = (out + ' ' + s).strip()
+    """Whole sentences, 120-160 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
+    then the language pad. A description we truncated earlier (ends with an ellipsis) is rebuilt from the page copy.
+    Ellipsis only when the first sentence alone is longer than 160."""
+    norm = lambda x: re.sub(r'\s+', ' ', x or '').strip()
+    base = norm(base)
+    if base.endswith('…'): base = base[:-1].rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…' if False else ''
+    pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
+    sents = [x for x in END.split(base) if x] if base else []
+    if not sents and pool: sents = [pool.pop(0)]
+    text = ''
+    for x in sents:
+        if len((text + ' ' + x).strip()) <= 160 or not text: text = (text + ' ' + x).strip()
         else: break
-    if len(out) >= 120: return out
-    cut = text[:154].rsplit(' ', 1)[0].rstrip(' ,;:–-')
-    return cut + '…'
+    if len(text) > 160:  # drop a trailing source attribution "(NASA)." before cutting
+        t2 = re.sub(r'\s*\([^()]{2,60}\)(?=[.!?؟]?$)', '', text)
+        if len(t2) <= 160: text = t2
+    if len(text) > 160:  # one long sentence: cut at a clause boundary, then a word boundary
+        cut = text[:159]
+        for sep in ('; ', ', ', ' – ', ' — ', ' ('):
+            i = cut.rfind(sep)
+            if i >= 110: return cut[:i].rstrip(' ,;:–—(') + '…'
+        return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…'
+    for x in pool + [PAD[lang]]:
+        if len(text) >= 120: break
+        if x not in text and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+    return text
 
 def esc(v): return v.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
 HEAD_RX = [r'<meta name="robots"[^>]*>', r'<link rel="canonical"[^>]*>', r'<link rel="alternate" hreflang="[^"]*"[^>]*>',
@@ -61,7 +99,11 @@ def fix(p):
     lang = p.split('/')[0] if '/' in p else 'en'; base = os.path.basename(p)
     raw = open(p, encoding='utf8').read(); soup = BeautifulSoup(raw, 'html.parser')
     if not soup.head: return False
-    if 'http-equiv="refresh"' in raw: return False  # lowercase ways-to-help redirect stubs stay tiny
+    if 'http-equiv="refresh"' in raw:  # redirect stubs stay tiny: only html lang/dir + noindex (Oct 16)
+        out = re.sub(r'<html[^>]*>', '<html lang="%s"%s>' % (lang, ' dir="rtl"' if lang == 'ar' else ''), raw, count=1)
+        if not re.search(r'<meta name="robots"', out): out = out.replace('<meta charset="utf-8">', '<meta charset="utf-8"><meta name="robots" content="noindex">', 1)
+        if out != raw: open(p, 'w', encoding='utf8').write(out); return True
+        return False
     src = raw
     src = re.sub(r'<html[^>]*>', lambda m: '<html lang="%s"%s class="dark">' % (lang, ' dir="rtl"' if lang == 'ar' else ''), src, count=1)
     head_end = src.index('</head>'); head = src[:head_end]; rest = src[head_end:]
@@ -76,34 +118,53 @@ def fix(p):
         block += [f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:image" content="{esc(img)}">',
                   '<meta name="twitter:card" content="summary_large_image">', f'<meta name="twitter:image" content="{esc(img)}">']
     else:
-        url = SITE + p
-        translated = all(os.path.exists(f'{l}/{base}') for l in LANGS)
+        url = page_url(lang, base)
+        have_l = langs_of(base)
+        translated = len(have_l) > 1
+        ov = OVR.get(base, {}).get(lang, {})
         en = BeautifulSoup(open(base, encoding='utf8').read(), 'html.parser') if lang != 'en' and os.path.exists(base) else None
         en_title = en.title.get_text(strip=True) if en and en.title else None
-        t = fit_title(soup.title.get_text() if soup.title else base.replace('_', ' ').replace('.html', ''), en_title, lang)
+        if ov.get('title'):  # hand-written (i18n/seo-meta.json): brand appended when it fits in 60
+            t = ov['title'] if ov['title'].endswith(BRAND) or len(ov['title'] + BRAND) > 60 else ov['title'] + BRAND
+        else: t = fit_title(soup.title.get_text() if soup.title else base.replace('_', ' ').replace('.html', ''), en_title, lang)
         dm = soup.find('meta', attrs={'name': 'description'}); d = dm.get('content', '') if dm else ''
         en_d = ((en.find('meta', attrs={'name': 'description'}) or {}).get('content', '') if en else '')
         hero = soup.select_one('.page-hero-content p, .hub-hero p, .pr-hero p, header p')
         # Oct 15: never pad descriptions with image/video credits (the SI credit leaked into the Arabic homepage description)
-        cands = [x for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p') if not any('credit' in c for c in (x.get('class') or []))][:4]
-        extra = [x.get_text(' ', strip=True) for x in cands]
+        cands = [x for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p')
+                 if not any(SKIP_P.search(c) for c in (x.get('class') or [])) and not x.find_parent(class_=SKIP_P)
+                 and not x.find_parent(['nav', 'footer', 'figure', 'aside'])][:6]
+        extra = [re.sub(r'\s+([,.;:!?])', r'\1', x.get_text(' ', strip=True)) for x in cands]
         extra = [e for e in extra if 'Biological SI' not in e and 'SI Partner' not in e]
         extra = [e for e in extra if e and not e.startswith(('Image', 'Source', 'Image :', 'Imagen', 'الصورة'))]
         if lang != 'en' and (not d or d.strip() == en_d.strip()): d = extra[0] if extra else PAD[lang]
-        d = fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang)
+        if d.strip().endswith('…'):  # our earlier cut: restore the full sentence(s) from the page copy it came from
+            stem = re.sub(r'\s+', ' ', d.strip()[:-1]).strip()
+            for x in [re.sub(r'\s+([,.;:!?])', r'\1', y.get_text(' ', strip=True)) for y in soup.select('main p, header p, section p, .page-hero-content p')]:
+                if len(stem) > 30 and re.sub(r'\s+', ' ', x).startswith(stem): d = x; break
+        d = ov['description'].strip() if ov.get('description') else fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang)
         img = (soup.find('meta', property='og:image') or {}).get('content') or SITE + 'assets/og-default.jpg'
         if not img.startswith('http'): img = SITE + img.lstrip('./')
         card = (soup.find('meta', attrs={'name': 'twitter:card'}) or {}).get('content') or 'summary_large_image'
         ogtype = (soup.find('meta', property='og:type') or {}).get('content') or 'website'
         block = [f'<meta name="robots" content="index,follow">', f'<link rel="canonical" href="{url}">']
-        block += [f'<link rel="alternate" hreflang="{h}" href="{u}">' for h, u in [('en', SITE + base)] + ([(l, f'{SITE}{l}/{base}') for l in LANGS] if translated else []) + [('x-default', SITE + base)]]
+        block += [f'<link rel="alternate" hreflang="{h}" href="{page_url(h, base)}">' for h in have_l] + ([f'<link rel="alternate" hreflang="x-default" href="{page_url("en", base)}">'] if 'en' in have_l else [])
+        iw = ih = None; lf = img[len(SITE):].split('?')[0] if img.startswith(SITE) else None
+        if lf and os.path.exists(lf):
+            try:
+                from PIL import Image
+                with Image.open(lf) as I: iw, ih = I.width, I.height
+            except Exception: pass
         block += [f'<title>{esc(t)}</title>', f'<meta name="description" content="{esc(d)}">',
                   f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:description" content="{esc(d)}">',
-                  f'<meta property="og:image" content="{esc(img)}">', f'<meta property="og:url" content="{url}">',
+                  f'<meta property="og:image" content="{esc(img)}">']
+        if iw: block += [f'<meta property="og:image:width" content="{iw}">', f'<meta property="og:image:height" content="{ih}">',
+                         f'<meta property="og:image:type" content="image/{"png" if lf.endswith(".png") else "webp" if lf.endswith(".webp") else "jpeg"}">']
+        block += [f'<meta property="og:image:alt" content="{esc(t.replace(BRAND, ""))}">', f'<meta property="og:url" content="{url}">',
                   f'<meta property="og:type" content="{ogtype}">', f'<meta property="og:site_name" content="Saving Planets">',
                   f'<meta property="og:locale" content="{LOCALE[lang]}">']
-        if translated: block += [f'<meta property="og:locale:alternate" content="{LOCALE[l]}">' for l in ['en'] + LANGS if l != lang]
-        block += [f'<meta name="twitter:card" content="{card}">', f'<meta name="twitter:title" content="{esc(t)}">',
+        block += [f'<meta property="og:locale:alternate" content="{LOCALE[l]}">' for l in have_l if l != lang]
+        block += [f'<meta name="twitter:card" content="{card}">', f'<meta name="twitter:site" content="{TWITTER_SITE}">', f'<meta name="twitter:title" content="{esc(t)}">',
                   f'<meta name="twitter:description" content="{esc(d)}">', f'<meta name="twitter:image" content="{esc(img)}">']
         # JSON-LD
         pub, mod = gitdates(base); have = []
@@ -111,9 +172,10 @@ def fix(p):
             try: j = json.loads(m.group(1))
             except Exception: return m.group(0)
             typ = j.get('@type'); have.append(typ)
-            if typ in ('Article', 'WebPage', 'CollectionPage'):
+            if typ in MAIN_TYPES and typ not in ('DefinedTermSet', 'FAQPage'):
                 j['inLanguage'] = lang
-                j['headline' if typ == 'Article' else 'name'] = t.replace(BRAND, '').replace(TAG.get(lang, '@@'), '')
+                if typ == 'Article' or typ in ('Article', 'WebPage', 'CollectionPage') or not j.get('name'):
+                    j['headline' if typ == 'Article' else 'name'] = t.replace(BRAND, '').replace(TAG.get(lang, '@@'), '')
                 j['description'] = d; j['url'] = url
                 if typ == 'Article': j['mainEntityOfPage'] = url
                 j['datePublished'] = j.get('datePublished') or pub or mod
@@ -123,7 +185,7 @@ def fix(p):
                 j['potentialAction'] = {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + ('' if lang == 'en' else lang + '/') + 'Search.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}
             return '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>'
         head = re.sub(r'<script type="application/ld\+json">(.*?)</script>', ld, head, flags=re.S)
-        if base != 'index.html' and not ({'Article', 'WebPage', 'CollectionPage'} & set(have)):
+        if base != 'index.html' and not (set(MAIN_TYPES) & set(have)):
             j = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': t.replace(BRAND, '').replace(TAG.get(lang, '@@'), ''), 'description': d, 'url': url,
                  'inLanguage': lang, 'datePublished': pub, 'dateModified': mod or pub, 'isPartOf': {'@type': 'WebSite', 'name': 'Saving Planets', 'url': SITE}}
             head += '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>\n'

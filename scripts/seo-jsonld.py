@@ -5,11 +5,34 @@
   (assets/data/reviewed.json), citation[] = the page's source links, isPartOf hub, about; BreadcrumbList localized.
 - Hub pages: CollectionPage with hasPart (the hub's solutions).  Homepage: Organization (raster logo).
 - Glossary: DefinedTermSet (+ hasDefinedTerm).  Teachers: CollectionPage whose mainEntity is a LearningResource.
-Run standalone: python3 scripts/seo-jsonld.py [en fr es ar]"""
+- Oct 16 SEO pass: every indexable page carries WebSite (+ SearchAction -> Search.html?q=) and Organization nodes linked by
+  @id; pages without a visible breadcrumb get a BreadcrumbList (Home > section hub > page, names in the page language);
+  Myth_vs_Fact gets FAQPage built only from the visible myth cards; LearningResource gets educationalLevel from the
+  visible level chips (.lchip) and publisher/dates; several blocks of one @type are kept (no silent drops).
+Run standalone: python3 scripts/seo-jsonld.py [en fr es ar it]"""
 import json, os, re, sys, html, importlib.util
 SITE = 'https://www.savingplanets.com/'
 LOGO = SITE + 'assets/SavePlanetLogo.jpg'
 ORG = {'@type': 'Organization', 'name': 'Saving Planets', 'url': 'https://www.savingplanets.com', 'logo': {'@type': 'ImageObject', 'url': LOGO}}
+ORG_ID, SITE_ID = SITE + '#organization', SITE + '#website'
+ORG_REF = {'@id': ORG_ID}
+SAME_AS = ['https://x.com/SISavingPlanets']
+SITENAME = 'Saving Planets'
+NOINDEX = {'Project-R.html', '404.html'}
+# Section hub for pages that have no visible breadcrumb (BreadcrumbList = Home > hub > page)
+SECTION = {}
+for _f in ('Orbits_Guide', 'Orbit_Math', 'Orbit_Lab', 'Aero_Guide', 'Aero_Math', 'Aero_Lab', 'Physics_Guide', 'Physics_Math', 'Physics_Lab',
+           'AP_IB_Physics', 'Cadets', 'Careers', 'Homeschool', 'Calculators', 'Glossary', 'Satellite_Explorer', 'Lesson_Builder', 'SI_Helper'):
+    SECTION[_f + '.html'] = 'Learn.html'
+for _f in ('Kids_Map', 'Spot_the_Fire'): SECTION[_f + '.html'] = 'Play_and_Learn.html'
+def website(lang):
+    return {'@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, 'name': SITENAME, 'url': SITE, 'inLanguage': lang, 'publisher': ORG_REF,
+            'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + ('' if lang == 'en' else lang + '/') + 'Search.html?q={search_term_string}'},
+                                'query-input': 'required name=search_term_string'}}
+def org_node(full=False):
+    o = {'@context': 'https://schema.org', '@id': ORG_ID, **ORG, 'sameAs': SAME_AS}
+    if full: o.update({'image': LOGO, 'email': 'hello@savingplanets.com'})
+    return o
 _ld = lambda f: (lambda s: (s.loader.exec_module(m := importlib.util.module_from_spec(s)), m)[1])(importlib.util.spec_from_file_location(f, f'scripts/{f}.py'))
 sol = _ld('build-solutions-index'); ba = _ld('build-batch-a')
 HL = sol.hubs(); HUB_OF, HUB_NAME, PARTS = {}, {}, {}
@@ -36,6 +59,34 @@ def write(s, objs):
 
 def url(lang, page): return SITE + ('' if lang == 'en' else lang + '/') + page
 
+HOME_NAME = {'en': 'Home', 'fr': 'Accueil', 'es': 'Inicio', 'ar': 'الرئيسية', 'it': 'Home'}
+def page_name(lang, page):
+    """Visible name of a page in that language: its <h1>, else its <title> without the brand."""
+    f = page if lang == 'en' else f'{lang}/{page}'
+    if not os.path.exists(f): return None
+    s = open(f, encoding='utf8').read()
+    m = re.search(r'<h1[^>]*>(.*?)</h1>', s, re.S) or re.search(r'<title>(.*?)</title>', s, re.S)
+    return re.sub(r'\s*[|·]\s*(Saving Planets|Français|Español|بالعربية|Italiano)\s*$', '', un(m.group(1))).strip() if m else None
+
+def fallback_crumbs(s, lang, page):
+    """Home > (section hub) > page, for pages without a visible breadcrumb nav."""
+    items = [(HOME_NAME[lang], SITE + ('' if lang == 'en' else lang + '/'))]
+    hub = SECTION.get(page) or HUB_OF.get(page) or ('Calculators.html' if page.endswith('_Calculator.html') else None)
+    if hub and hub != page and page_name(lang, hub): items.append((page_name(lang, hub), url(lang, hub)))
+    items.append((page_name(lang, page) or page[:-5].replace('_', ' '), url(lang, page)))
+    return {'@context': 'https://schema.org', '@type': 'BreadcrumbList',
+            'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(items)]}
+
+def faq(s, lang, page):
+    """FAQPage from the visible myth cards: question = the myth as printed (h2), answer = the fact + honest note."""
+    qs = []
+    for card in re.findall(r'<article class="myth-card" id="[^"]+">(.*?)</article>', s, re.S):
+        h = re.search(r'<h2[^>]*>(.*?)</h2>', card, re.S)
+        ps = re.findall(r'<p(?: class="(myth-honest)")?>(.*?)</p>', card.split('class="myth-source"')[0], re.S)
+        ans = ' '.join(un(t) for c, t in ps if t and 'myth-tag' not in t)
+        if h and ans: qs.append({'@type': 'Question', 'name': un(h.group(1)), 'acceptedAnswer': {'@type': 'Answer', 'text': ans}})
+    return {'@context': 'https://schema.org', '@type': 'FAQPage', 'url': url(lang, page), 'inLanguage': lang, 'mainEntity': qs} if qs else None
+
 def crumbs(s, lang, page):
     nav = re.search(r'<nav [^>]*class="breadcrumb"[^>]*>(.*?)</nav>', s, re.S)
     if not nav: return None
@@ -44,19 +95,35 @@ def crumbs(s, lang, page):
         a = re.search(r'href="([^"]+)"', li); n = un(li)
         href = a.group(1) if a else page
         href = os.path.basename(href.split('#')[0]) or 'index.html'
-        items.append({'@type': 'ListItem', 'position': len(items) + 1, 'name': n, 'item': url(lang, href)})
+        items.append({'@type': 'ListItem', 'position': len(items) + 1, 'name': n, 'item': url(lang, href).replace('/index.html', '/')})
     return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': items} if items else None
 
 def enrich(p):
     lang = p.split('/')[0] if '/' in p else 'en'; page = os.path.basename(p)
     s = open(p, encoding='utf8').read(); objs = blocks(s)
-    if not objs: return False
-    by = {}
-    for o in objs: by.setdefault(o.get('@type') if isinstance(o.get('@type'), str) else 'Multi', o)
+    by = {}; dup = []
+    for o in objs:
+        k = o.get('@type') if isinstance(o.get('@type'), str) else 'Multi'
+        if k in by and k not in ('WebSite', 'Organization', 'BreadcrumbList', 'FAQPage'): dup.append(o)
+        else: by.setdefault(k, o)
     main = by.get('Article') or by.get('WebPage') or by.get('CollectionPage') or by.get('Multi')
     U = url(lang, page)
+    if page in NOINDEX or 'http-equiv="refresh"' in s: return False
     bc = crumbs(s, lang, page)
     if bc: by['BreadcrumbList'] = bc
+    elif page != 'index.html': by['BreadcrumbList'] = fallback_crumbs(s, lang, page)
+    by['WebSite'] = website(lang)
+    by['Organization'] = org_node(page == 'index.html')
+    if page == 'Myth_vs_Fact.html':
+        fq = faq(s, lang, page)
+        if fq: by['FAQPage'] = fq
+    lr = by.get('LearningResource')
+    if lr is not None:
+        lv = []
+        for c in re.findall(r'<li class="lchip">(.*?)</li>', s): c = un(c); lv.append(c) if c and c not in lv else None
+        if lv and not lr.get('educationalLevel'): lr['educationalLevel'] = lv if len(lv) > 1 else lv[0]
+        lr.setdefault('publisher', ORG_REF)
+        if main is None: main = lr
     if page in HUB_OF and main is not None:  # solution page
         a = {'@context': 'https://schema.org', '@type': 'Article', 'headline': main.get('headline') or main.get('name'), 'description': main.get('description'),
              'inLanguage': lang, 'url': U, 'mainEntityOfPage': {'@type': 'WebPage', '@id': U}}
@@ -65,7 +132,7 @@ def enrich(p):
         pub = main.get('datePublished'); rv = REVIEWED.get(page, {}).get('date') or main.get('dateModified')
         if pub: a['datePublished'] = min(pub, rv) if rv else pub
         if rv: a['dateModified'] = rv
-        a['author'] = ORG; a['publisher'] = ORG
+        a['author'] = ORG_REF; a['publisher'] = ORG_REF
         b = s.split('<body', 1)[-1]
         b = re.sub(r'<nav id="topnav">.*?</nav>|<footer>.*?</footer>|<section class="help-actions".*?</section>|<!-- (SHARE|RELATED|REVIEWED|CITE[A-Z-]*):START -->.*?<!-- \1:END -->|<section class="cite-box".*?</section>|<aside class="cite-box".*?</aside>', ' ', b, flags=re.S)
         cites = []
@@ -82,12 +149,12 @@ def enrich(p):
     elif page in PARTS and main is not None:  # hub page
         c = {k: v for k, v in main.items() if k not in ('headline', 'mainEntityOfPage', 'hasPart')}
         c['@type'] = 'CollectionPage'; c['name'] = main.get('name') or main.get('headline'); c['url'] = U; c['inLanguage'] = lang
-        c['publisher'] = ORG
-        c['hasPart'] = [{'@type': 'Article', 'url': url(lang, h), 'name': sol.NAME_CACHE.get(h, h) if hasattr(sol, 'NAME_CACHE') else h.replace('.html', '').replace('_', ' ')} for h in PARTS[page]]
+        c['publisher'] = ORG_REF
+        c['hasPart'] = [{'@type': 'WebPage', 'url': url(lang, h), 'name': sol.NAME_CACHE.get(h, h) if hasattr(sol, 'NAME_CACHE') else h.replace('.html', '').replace('_', ' ')} for h in PARTS[page]]
         for k in ('Article', 'WebPage', 'Multi'): by.pop(k, None)
         by['CollectionPage'] = c
     elif page == 'index.html':
-        by['Organization'] = {'@context': 'https://schema.org', **ORG, 'image': LOGO, 'email': 'hello@savingplanets.com'}
+        pass  # full Organization node added above
     elif page == 'Glossary.html' and main is not None:
         terms = [{'@type': 'DefinedTerm', 'name': un(dt), 'description': un(dd), 'url': U + '#' + i}
                  for i, dt, dd in re.findall(r'<dt id="([^"]+)">(.*?)</dt>\s*<dd>(.*?)</dd>', s, re.S)]
@@ -95,14 +162,22 @@ def enrich(p):
         by['DefinedTermSet'] = g
     elif page == 'Teachers.html' and main is not None:
         t = {k: v for k, v in main.items() if k not in ('mainEntity',)}
-        t['@type'] = 'CollectionPage'; t['inLanguage'] = lang; t['url'] = U; t['publisher'] = ORG
+        t['@type'] = 'CollectionPage'; t['inLanguage'] = lang; t['url'] = U; t['publisher'] = ORG_REF
         t['mainEntity'] = {'@type': 'LearningResource', 'name': main.get('name'), 'description': main.get('description'), 'url': U, 'inLanguage': lang,
                            'learningResourceType': 'Worksheet', 'audience': {'@type': 'EducationalAudience', 'educationalRole': 'teacher'},
-                           'isAccessibleForFree': True, 'publisher': ORG}
+                           'isAccessibleForFree': True, 'publisher': ORG_REF}
         for k in ('WebPage', 'CollectionPage', 'Multi'): by.pop(k, None)
         by['CollectionPage'] = t
-    order = ['Organization', 'WebSite', 'BreadcrumbList', 'Article', 'CollectionPage', 'DefinedTermSet', 'WebPage', 'Multi']
-    objs2 = [by[k] for k in order if k in by] + [v for k, v in by.items() if k not in order]
+    me = main.get('mainEntity') if isinstance(main, dict) else None
+    if isinstance(me, dict) and me.get('@type') == 'LearningResource' and lang != 'en':  # nested copy in the page language (was English)
+        me['name'] = main.get('name') or me.get('name'); me['description'] = main.get('description') or me.get('description'); me['inLanguage'] = lang
+        me['url'] = U
+    for o in by.values():  # replace stale inline publisher/author copies with the shared @id
+        for k in ('publisher', 'author'):
+            if isinstance(o.get(k), dict) and o[k].get('@type') == 'Organization' and o[k].get('name') == SITENAME: o[k] = ORG_REF
+        if isinstance(o.get('isPartOf'), dict) and o['isPartOf'].get('@type') == 'WebSite': o['isPartOf'] = {'@id': SITE_ID}
+    order = ['Organization', 'WebSite', 'BreadcrumbList', 'Article', 'LearningResource', 'CollectionPage', 'DefinedTermSet', 'FAQPage', 'WebPage', 'Multi']
+    objs2 = [by[k] for k in order if k in by] + [v for k, v in by.items() if k not in order] + dup
     out = write(s, objs2)
     if out != s: open(p, 'w', encoding='utf8').write(out); return True
     return False
