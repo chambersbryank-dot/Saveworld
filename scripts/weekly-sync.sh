@@ -67,6 +67,7 @@ python3 scripts/build-report-link.py    # Oct 16: Report a correction footer lin
 python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=license, JSON-LD license, About "Use & licence" (all langs)
 python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link
 python3 scripts/build-embed.py         # Oct 16: Embed button + ?embed=1 minimal mode (calculators, labs, Artemis_II launches)
+python3 scripts/build-cohost.py         # Oct 16: About "Co-host with us" (#cohost) + homepage teaser link (all langs)
 python3 scripts/build-learn-standards.py  # Oct 16: NGSS/CCSS/AP/IB chips + educationalAlignment on Learn pages and calculators, Learn hub filter
 python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search bar + floating example questions + credits only (all langs)
 python3 scripts/build-langbanner.py      # Oct 16: language-suggestion banner (site.js + styles.css; localStorage only, never redirects)
