@@ -373,8 +373,12 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
 - Privacy analytics section gets the extra paragraph from scripts/events_text.py (5 langs) via build-analytics.py.
 
 ## Report-a-correction form + SI cap alert email (Oct 16, 2026, HST; user-approved)
-- Email: Workers `send_email` binding MAIL (destination fixed to media@savingplanets.com) from site-forms@savingplanets.com. Email Routing was already active on the zone (MX route*.mx.cloudflare.net, cf DKIM present); NO DNS/MX/Routing change made. media@ was already a verified destination: test sends arrived (Gmail, 03:07 and 03:08 UTC Oct 17). The API token cannot read Email Routing/DNS (403) — not needed.
+- Email: Workers `send_email` binding MAIL (destination fixed to media@savingplanets.com) from site-forms@savingplanets.com. Email Routing was already active on the zone (MX route*.mx.cloudflare.net, cf DKIM present); NO DNS/MX/Routing change made. media@ was already a verified destination: test sends arrived (Gmail, 03:07 and 03:08 UTC Oct 17).
 - Worker POST /report: origin lock, ≤6 KB, page URL must be a savingplanets.com URL, "what" ≥10 chars, refuses emails/phone numbers (same PII regex as SI), Turnstile, RL_REP 3/min + Guard 10/day per salted IP hash (in DO day counters only), one email per report, nothing stored; event count report/sent. Email footer reminds: credit fixes in the correction log to "SI Partner".
 - SI cap alert: Guard sets `alerted` the first time a /check is refused for budget each UTC day → one email to media@ (tested with a temporary worker at cap 0: 1 email for 2 refusals; temp worker deleted).
 - Site: build-report-link.py now links every footer (5 langs, incl. kids pages) to Corrections.html?page=<page>#report; REPORTFORM block (form, 5 langs, RTL, 44px, aria-live) on each Corrections page + assets/report-form.js (v=20261016r). GitHub issue link removed from all footers; one small "Adults with a GitHub account…" line remains on Corrections only.
 - Privacy s6 gets the form paragraph (scripts/events_text.py REPORT_P via build-analytics.py).
+
+## CC BY-NC 4.0 licence (Oct 16, 2026, HST; user-approved)
+- scripts/build-license.py (weekly-sync, after build-report-link): footer line on every page in 5 langs (LICENSE block, rel="license" to the CC deed in that language), <link rel="license"> in every head, JSON-LD "license" on page-level types only (not ImageObject/VideoObject: third-party media keep own licences), About #licence "Use & licence" section (LICABOUT block): attribution "Saving Planets (savingplanets.com)", third-party media keep own credits, SI media keep "Created by SI and Biological SI Partner", commercial use → media@.
+- i18n-build/check strip REPORTFORM|LICENSE|LICABOUT blocks from the source hash.
