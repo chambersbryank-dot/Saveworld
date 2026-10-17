@@ -493,3 +493,19 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
   Saturn, Earth and Sun keep full resolution. Fast devices never drop (1280x800 stays level 0 at 16.5 ms). Headless
   SwiftShader iPad 820x1180@2x: 74 ms -> 31 ms per frame; 1180x820@2x: 59 -> 38-40 ms. `__heroSpace.quality()` reports it.
 - Oct 16 ~8:20 PM perf quick wins: scripts/r2-home-cards.py uploads homepage domain-card images to R2 (r2-upload.py --srcset, WebP q90 480/800/1200) and build-ux.py mini() writes srcset/sizes from media-manifest.json (repo JPEG stays the src, untouched). scripts/build-lcp.py adds fetchpriority=high preloads (media-split 800/1600 WebP, marker LCPPRE, ignored by the i18n hash) on pages whose LCP is the shared page-hero background. space-hero pages not covered yet. Home blocking time is mostly assets/hero-themes.js (hero owner, untouched).
+
+## Oct 16, 2026 (8:10 PM HST): search-engine metadata, 5 languages
+- **Pipeline order** (weekly-sync.sh): page generators → i18n-build → **seo-fix.py** (late pass, so pages from later generators are covered too) → build-og → **seo-jsonld.py** → **i18n-sitemap.py** → **seo-lint.py**. The strict lint runs at the end and exits 1 on errors.
+- **post-deploy.sh** runs `seo-lint.py`, writing the log to /tmp/seo-lint-post.log. If the lint fails it prints "SEO LINT FAILED", but the deploy itself never fails. Then it runs the IndexNow ping (`scripts/indexnow-ping.js`). The ping state is kept in ~/.cache/indexnow-last-saveworld, so a fresh clone still pings everything changed since the last good ping.
+- **Hand-written titles and descriptions**: `i18n/seo-meta.json` holds `{page: {lang: {title, desc}}}`. Edit it there, never in the HTML. The brand is appended only if the title still fits in 60 characters.
+- **The lint fails on**: missing or duplicate titles or descriptions, broken hreflang reciprocity, and invalid JSON-LD. It checks JSON-LD against `scripts/schemaorg-vocab.json`. Use `--report FILE.md` for a full report, `--list` to list pages and `--no-fail` for warnings only.
+- **Wording rule**: learning and calculator pages are padded with "Free on Saving Planets, with no ads on learning pages." (translated per language).
+- **IndexNow key**: `/aa19429b4f58f36d34c263abe996de09.txt`. Pings go to api.indexnow.org, which serves Bing, Yandex, Naver, Seznam and Yep.
+
+### One-time manual steps for the owner (not automated)
+Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME record where noted.
+1. **Google Search Console**: add a **Domain property** for `savingplanets.com`. Google shows a `google-site-verification=…` TXT value. In Cloudflare, go to DNS → Add record → Type TXT, Name `@`, paste the value and save. Then click Verify. The existing URL-prefix file `googlea5d3cc0c785fec04.html` also works. Then go to Sitemaps → submit `https://www.savingplanets.com/sitemap.xml`.
+2. **Bing Webmaster Tools**: the easiest way is "Import from Google Search Console". Alternatives: `BingSiteAuth.xml` (already live), or a DNS CNAME record that Bing provides. Submit the sitemap. IndexNow pings already go to Bing.
+3. **Yandex Webmaster** (webmaster.yandex.com): add the site and choose one method: a meta tag (send it to the SI so it can add it to the homepage), an HTML file (send it to the SI), or a DNS TXT record in Cloudflare (`yandex-verification: …`). Submit the sitemap.
+4. **Naver Search Advisor** (searchadvisor.naver.com): add the site and choose either the HTML file or the meta tag (`naver-site-verification`), and send it to the SI to publish. Submit the sitemap and robots.txt there.
+5. **Baidu** (ziyuan.baidu.com, low priority, needs a Chinese phone number): file, meta tag or CNAME verification.
