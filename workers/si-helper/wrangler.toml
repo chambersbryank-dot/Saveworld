@@ -1,0 +1,38 @@
+# Oct 16 SI Helper pilot (Teachers page). Deployed with: bash scripts/si-wrangler.sh deploy --config workers/si-helper/wrangler.toml
+# Secrets (set with `wrangler secret put`, never in the repo): TURNSTILE_SECRET, IP_SALT.
+name = "si-helper"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+preview_urls = false
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VEC"
+index_name = "si-helper-site"
+
+[[durable_objects.bindings]]
+name = "GUARD"
+class_name = "Guard"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Guard"]
+
+[[ratelimits]]
+name = "RL_MIN"
+namespace_id = "41016"
+simple = { limit = 10, period = 60 }
+
+[vars]
+DAILY_USD_CAP = "1.00"      # hard stop for Workers AI spend per UTC day (pilot)
+PER_IP_DAY = "50"           # questions per IP per UTC day
+USD_PER_KNEURON = "0.011"   # Workers AI price per 1,000 neurons (developers.cloudflare.com/workers-ai/platform/pricing)
+RESERVE_USD = "0.004"       # pre-charged per question before any model runs, settled to the measured neurons after
+MIN_SCORE = "0.50"          # retrieval similarity floor; below it SI says it does not know
+ORIGINS = "https://www.savingplanets.com,https://savingplanets.com"
+
+[observability]
+enabled = false             # no request logs: question text is never logged or stored

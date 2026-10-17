@@ -53,6 +53,7 @@ python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (
 python3 scripts/build-learn.py           # Oct 16 Phase 1 education: Learn hub (3 tracks), Orbits_Guide, Orbit_Math (KaTeX at build), Orbit_Lab (all langs)
 node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails the sync on error)
 if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
+python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teachers), SI_Helper.html, Privacy section (all langs)
 node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
 python3 scripts/build-report-link.py    # Oct 15: Report a correction footer link (all langs) -> GitHub issue form
@@ -62,6 +63,9 @@ python3 scripts/seo-audit.py | tail -3
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 [ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 node scripts/build-search.mjs
+# Oct 16: SI Helper pilot retrieval index (Workers AI bge-m3 -> Vectorize si-helper-site). Incremental; only runs on the box
+# where the Cloudflare token file exists; never fails the sync.
+if [ -f /home/box/.cloudflare_token ]; then python3 scripts/si-index.py || echo 'si-index: failed (non-fatal)'; fi
 # IndexNow (Oct 14): pages are not live yet at this point. After committing + pushing, run
 #   bash scripts/post-deploy.sh   (waits for the live key file, pings changed URLs, never fails the sync)
 # With WEEKLY_SYNC_POST_DEPLOY=1 the caller has already pushed, so ping now.
