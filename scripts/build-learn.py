@@ -9,9 +9,9 @@ import re, os, sys, json, glob, shutil, datetime, subprocess, importlib.util
 sys.path.insert(0, 'scripts')
 spec = importlib.util.spec_from_file_location('sf', 'scripts/build-spotfire.py'); sf = importlib.util.module_from_spec(spec); spec.loader.exec_module(sf)
 SITE, LANGS, d, rd, wr, esc = sf.SITE, sf.LANGS, sf.d, sf.rd, sf.wr, sf.esc
-import learn_calc, learn_orbit_math as OM, learn_text as LT, learn_extras as LX
-V = '20261016M'  # cache version for learn.css / orbit-lab.js / katex
-PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html']
+import learn_calc, learn_orbit_math as OM, learn_text as LT, learn_extras as LX, aero_calc, learn_aero as LA
+V = '20261016N'  # cache version for learn.css / orbit-lab.js / katex
+PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html']
 LV = dict(LT.LEVELS)
 def ex_values():
     e = dict(learn_calc.examples())
@@ -19,6 +19,8 @@ def ex_values():
     for k in ('lam_v1', 'lam_v2'):
         for i in range(3): e[f'{k}_{i}'] = float(e[k][i])
     x = learn_calc.extras(); e.update({k: v for k, v in x.items() if k != 'k2_rows'})
+    a = aero_calc.examples(); assert not set(a) & set(e); e.update(a)
+    e['a_eta30_pct'] = e['a_eta30'] * 100; e['a_T11C'] = e['a_T11'] - 273.15
     return {k: float(v) for k, v in e.items() if not isinstance(v, list)}
 K2 = learn_calc.extras()['k2_rows']
 TODAY = datetime.date.today().isoformat()
@@ -105,6 +107,7 @@ def shell(l, page, title, desc, main, extra_head='', ld_type='LearningResource',
     foot = s[s.index('</main>'):]
     foot = re.sub(r'<script src="(?:\.\./)?(?:edu|edu-extras)\.js[^"]*"[^>]*></script>', '', foot)
     foot = re.sub(r'<!-- GEN [0-9a-f]+ -->', '', foot)
+    foot = foot.replace('%2FKids_Map.html', '%2F' + page)  # report-a-correction link points at this page (idempotent with build-report-link.py)
     foot = foot.replace('</body>', tail + '</body>', 1)
     return head + '</head>\n' + body + nav + '<main id="main">\n' + main + foot
 def hero(t, k): return f'<section class="page-hero hero-learn"><div class="page-hero-content"><h1>{esc(t)}</h1><p>{esc(k)}</p></div></section>\n'
@@ -117,10 +120,12 @@ def learn_hub(l):
     orbit = (f'<li class="ltrack"><span class="lstat">{esc(H["live"][l])}</span><h3>{esc(H["orbit"][l])}</h3><p>{esc(H["orbit_d"][l])}</p><ul>'
              f'<li><a href="{h("Orbits_Guide.html")}">{esc(H["guide"][l])}</a></li><li><a href="{h("Orbit_Math.html")}">{esc(H["math"][l])}</a></li>'
              f'<li><a href="{h("Orbit_Lab.html")}">{esc(H["lab"][l])}</a></li></ul></li>')
+    aero = (f'<li class="ltrack"><span class="lstat">{esc(H["live"][l])}</span><h3>{esc(H["aero"][l])}</h3><p>{esc(H["aero_d"][l])}</p><ul>'
+            + ''.join(f'<li><a href="{h(p)}">{esc(LA.NAV_ITEMS[p][l])}</a></li>' for p in ('Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html')) + '</ul></li>')
     soon = lambda k: (f'<li class="ltrack"><span class="lstat soon">{esc(H["soon"][l])}</span><h3>{esc(H[k][l])}</h3><p>{esc(H[k + "_d"][l])}</p>'
                       f'<p class="lnote">{esc(H[k + "_topics"][l])}</p></li>')
     main = (hero(H['title'][l], H['kicker'][l]) + '<div class="lw">'
-            f'<h2>{esc(H["tracks"][l])}</h2><ul class="ltracks">{orbit}{soon("aero")}{soon("phys")}</ul>'
+            f'<h2>{esc(H["tracks"][l])}</h2><ul class="ltracks">{orbit}{aero}{soon("phys")}</ul>'
             f'<h2>{esc(H["levels"][l])}</h2>{chips([k for k, _ in LT.LEVELS], l)}'
             f'<h2>{esc(H["std"][l])}</h2><ul>' + ''.join(f'<li>{esc(x[l])}</li>' for x in H['std_items']) + '</ul>'
             f'<h2>{esc(H["teach"][l])}</h2><p>{esc(H["teach_t"][l])}</p><ul><li><a href="{h("Teachers.html")}">Teachers</a></li><li><a href="{h("Lesson_Builder.html")}">Lesson Builder</a></li></ul></div>\n')
@@ -139,9 +144,9 @@ def guide(l):
             f'<a href="{sf.href(l, "Orbit_Lab.html")}">{esc(OM.UI["tryit"][l])}</a></p></div>\n')
     return shell(l, 'Orbits_Guide.html', G['title'][l], G['desc'][l], main)
 def fillv(o, l, vals):
-    return esc(re.sub(r'\{(\w):(\d)\}', lambda m: num(vals[m.group(1)], int(m.group(2)), l), o[l]))
-def worked(sid, l):
-    w = LX.WE.get(sid); B = LX.LBL
+    return esc(fill(re.sub(r'\{([a-z]):(\d)\}', lambda m: num(vals[m.group(1)], int(m.group(2)), l), o[l]), l))
+def worked(sid, l, w=None):
+    w = w or LX.WE.get(sid); B = LX.LBL
     if not w: return None
     if w['steps'] == 'TABLE':
         rows = ''.join(f'<tr><td>{n}</td><td>{num(E, 10, l)}</td><td>{f"{dE:.2e}"}</td></tr>' for n, E, dE in K2)
@@ -163,58 +168,86 @@ def widget(sid, l):
                 f'<label>{g("h1")} <input name="h1" type="text" inputmode="decimal" dir="ltr" value="300"></label><label>{g("h2")} <input name="h2" type="text" inputmode="decimal" dir="ltr" value="35786"></label>'
                 f'<button type="button">{g("calc")}</button></div><p class="lnp-fb" role="status" aria-live="polite"></p></div>')
     return ''
-def practice(sid, l):
+def practice(sid, l, nps=None):
     B = LX.LBL; out = ''
-    for i, q in enumerate(LX.NP.get(sid, [])):
+    for i, q in enumerate(LX.NP.get(sid, []) if nps is None else nps):
         vals = dict(a=q['val'], **q.get('extra', {})); qid = f'np-{sid}-{i}'
-        hints = ''.join(f'<li hidden>{tx(h, l)}</li>' for h in q['hints'])
+        hints = ''.join(f'<li hidden>{fillv(h, l, vals)}</li>' for h in q['hints'])
         out += (f'<li class="lnp" data-ans="{q["val"]:.10g}" data-tol="{q["tol"]}" data-ok="{esc(B["ok"][l])}" data-no="{esc(B["no"][l])}" data-nan="{esc(B["nan"][l])}">'
-                f'<p><label for="{qid}">{tx(q["q"], l)}</label></p><span class="lnp-row"><input id="{qid}" type="text" inputmode="decimal" dir="ltr" autocomplete="off" aria-describedby="{qid}-fb">'
+                f'<p><label for="{qid}">{fillv(q["q"], l, vals)}</label></p><span class="lnp-row"><input id="{qid}" type="text" inputmode="decimal" dir="ltr" autocomplete="off" aria-describedby="{qid}-fb">'
                 f'{(" <span>" + esc(q["unit"]) + "</span>") if q["unit"] else ""} <button type="button" class="lnp-check">{esc(B["check"][l])}</button>'
                 f' <button type="button" class="lnp-hint">{esc(B["nexthint"][l])}</button></span>'
                 f'<p class="lnp-fb" id="{qid}-fb" role="status" aria-live="polite"></p><ol class="lnp-hints">{hints}</ol>'
                 f'<details><summary>{esc(B["full"][l])}</summary><p>{fillv(q["sol"], l, vals)}</p></details></li>')
     return f'<h3>{esc(B["auto"][l])}</h3><ol>{out}</ol>' if out else ''
-def cyu(l):
+def cyu(l, mcq=None):
     B = LX.LBL; out = ''
-    for i, (q, opts, a, why) in enumerate(LX.MCQ):
+    for i, (q, opts, a, why) in enumerate(mcq or LX.MCQ):
         o = ''.join(f'<label><input type="radio" name="mcq{i}" value="{j}"> {esc(x[l])}</label>' for j, x in enumerate(opts))
-        out += (f'<fieldset class="lmcq" data-ans="{a}" data-ok="{esc(B["ok"][l])}" data-no="{esc(LX.T("Not quite.", "Pas tout à fait.", "No del todo.", "ليس تمامًا.", "Non proprio.")[l])}" data-why="{esc(why[l])}">'
-                f'<legend>{esc(q[l])}</legend>{o}<button type="button">{esc(LX.CYU_BTN[l])}</button><p class="lnp-fb" role="status" aria-live="polite"></p></fieldset>')
+        out += (f'<fieldset class="lmcq" data-ans="{a}" data-ok="{esc(B["ok"][l])}" data-no="{esc(LX.T("Not quite.", "Pas tout à fait.", "No del todo.", "ليس تمامًا.", "Non proprio.")[l])}" data-why="{tx(why, l)}">'
+                f'<legend>{tx(q, l)}</legend>{o}<button type="button">{esc(LX.CYU_BTN[l])}</button><p class="lnp-fb" role="status" aria-live="polite"></p></fieldset>')
     return f'<section id="cyu"><h2>{esc(B["cyu"][l])}</h2>{out}</section>'
-def math_page(l, K):
-    U = OM.UI; toc = ''; body = ''
-    for s in OM.S:
+TRACKS = {
+  'orbit': dict(S=OM.S, UI=OM.UI, REFS=OM.REFS, CONSTS=None, TIME=LX.TIME, ELI=LX.ELI, MCQ=LX.MCQ, TEACH=LX.TEACH, DEEPER=LX.DEEPER, TRACK=LX.LBL['track'],
+                page='Orbit_Math.html', guide='Orbits_Guide.html', gtitle=LT.GUIDE['title'], lab='Orbit_Lab.html'),
+  'aero': dict(S=LA.S, UI={**OM.UI, **LA.UI}, REFS=LA.REFS, CONSTS=LA.CONSTS, TIME=LA.TIME, ELI=None, MCQ=LA.MCQ, TEACH=LA.TEACH, DEEPER=LA.DEEPER, TRACK=LA.TRACK,
+               page='Aero_Math.html', guide='Aero_Guide.html', gtitle=LA.GUIDE['title'], lab='Aero_Lab.html')}
+def math_page(l, K, tk='orbit'):
+    R = TRACKS[tk]; U = R['UI']; toc = ''; body = ''; B = LX.LBL
+    for s in R['S']:
         lvs = ' '.join(s['lv'])
         toc += f'<li data-lv="{lvs}"><a href="#{s["id"]}">{tx(s["t"], l)}</a></li>'
         steps = ''.join(f'<li><div class="leq" dir="ltr">{K[t]}</div><span class="lnote">{tx(n, l)}</span></li>' for t, n in s['steps'])
         prac = ''.join(f'<li><p>{tx(q, l)}</p><details><summary>{esc(U["sol"][l])}</summary><p>{tx(a, l)}</p></details></li>' for q, a in s['prac'])
-        refs = ''.join(f'<li>{OM.REFS[r]}</li>' for r in s['refs'])
-        B = LX.LBL; we = worked(s['id'], l)
+        refs = ''.join(f'<li>{R["REFS"][r]}</li>' for r in s['refs'])
+        we = worked(s['id'], l, s.get('we'))
         exbox = we if we else f'<p>{tx(s["ex"], l)}</p>'
-        meta = f'<p class="lmeta">{esc(B["track"][l])} · {esc(B["time"][l].replace("{n}", str(LX.TIME[s["id"]])))} · {esc(B["verified"][l])}: <time datetime="{TODAY}">{TODAY}</time></p>'
+        eli = s['eli'] if 'eli' in s else R['ELI'][s['id']]
+        meta = f'<p class="lmeta">{esc(R["TRACK"][l])} · {esc(B["time"][l].replace("{n}", str(R["TIME"][s["id"]])))} · {esc(B["verified"][l])}: <time datetime="{TODAY}">{TODAY}</time></p>'
         body += (f'<section id="{s["id"]}" data-lv="{lvs}"><h2>{tx(s["t"], l)}</h2>{chips(s["lv"], l)}{meta}'
                  f'<div class="lbox obj"><h3>{esc(U["obj"][l])}</h3><p>{tx(s["obj"], l)}</p></div>'
-                 f'<div class="lbox pre"><h3>{esc(U["pre"][l])}</h3><p>{tx(s["pre"], l)} <a href="{sf.href(l, "Orbits_Guide.html")}">{esc(LT.GUIDE["title"][l])}</a></p></div>'
+                 f'<div class="lbox pre"><h3>{esc(U["pre"][l])}</h3><p>{tx(s["pre"], l)} <a href="{sf.href(l, R["guide"])}">{esc(R["gtitle"][l])}</a></p></div>'
                  f'<div class="lbox intu"><h3>{esc(B["intu"][l])}</h3><p>{tx(s["body"], l)}</p></div>'
-                 f'<div class="lbox eli"><h3>🧒 {esc(B["eli"][l])}</h3><p>{tx(LX.ELI[s["id"]], l)}</p></div>'
+                 f'<div class="lbox eli"><h3>🧒 {esc(B["eli"][l])}</h3><p>{tx(eli, l)}</p></div>'
                  f'<h3>{esc(U["deriv"][l])}</h3><ol class="lsteps">{steps}</ol>'
                  f'<div class="lbox ex"><h3>{esc(U["ex"][l])}</h3>{exbox}</div>'
-                 f'{practice(s["id"], l)}<h3>{esc(U["prac"][l])}</h3><ol>{prac}</ol>'
+                 f'{practice(s["id"], l, s.get("np"))}<h3>{esc(U["prac"][l])}</h3><ol>{prac}</ol>'
                  f'<div class="lbox mist"><h3>{esc(U["mist"][l])}</h3><p>{tx(s["mist"], l)}</p></div>'
                  f'<h3>{esc(U["refs"][l])}</h3><ul class="lrefs">{refs}</ul></section>\n')
     lvset = []
-    for s in OM.S:
+    for s in R['S']:
         for x in s['lv']:
             if x not in lvset: lvset.append(x)
     filt = (f'<div class="lfilter" role="group" aria-label="{esc(U["level"][l])}"><button type="button" data-lv="all" aria-pressed="true">{esc(U["all"][l])}</button>'
             + ''.join(f'<button type="button" data-lv="{x}" aria-pressed="false">{esc(LV[x][l])}</button>' for x in [k for k, _ in LT.LEVELS] if x in lvset) + '</div>')
-    consts = '<div class="lbox pre"><h3>' + esc(U['consts'][l]) + '</h3>' + ''.join(f'<div class="leq" dir="ltr">{K[c]}</div>' for c in CONSTS) + f'<p class="lnote">{esc(U["verify"][l])}</p></div>'
-    allrefs = '<h2>' + esc(U['refs'][l]) + '</h2><ul class="lrefs">' + ''.join(f'<li>{v}</li>' for v in OM.REFS.values()) + '</ul>'
+    consts = '<div class="lbox pre"><h3>' + esc(U['consts'][l]) + '</h3>' + ''.join(f'<div class="leq" dir="ltr">{K[c]}</div>' for c in (R['CONSTS'] or CONSTS)) + f'<p class="lnote">{esc(U["verify"][l])}</p></div>'
+    allrefs = '<h2>' + esc(U['refs'][l]) + '</h2><ul class="lrefs">' + ''.join(f'<li>{v}</li>' for v in R['REFS'].values()) + '</ul>'
     main = (hero(U['title'][l], U['kicker'][l]) + f'<div class="lw">{filt}<nav aria-label="{esc(U["contents"][l])}"><h2>{esc(U["contents"][l])}</h2><ol class="ltoc">{toc}</ol></nav>'
-            f'{consts}<p><a href="{sf.href(l, "Orbit_Lab.html")}">{esc(U["tryit"][l])}</a></p>{body}{cyu(l)}<h2>{esc(LX.LBL["deeper"][l])}</h2><p>{esc(LX.DEEPER[l])}</p><h2>{esc(LX.LBL["teach"][l])}</h2><p>{esc(LX.TEACH[l])}</p>{allrefs}</div>\n')
-    desc = U['kicker'][l]
-    return shell(l, 'Orbit_Math.html', U['title'][l], desc, main, extra_head=katex_head(l), tail=f'<script>{FILTER_JS}</script>\n<script src="{"" if l == "en" else "../"}assets/learn.js?v={V}" defer></script>\n')
+            f'{consts}<p><a href="{sf.href(l, R["lab"])}">{esc(U["tryit"][l])}</a></p>{body}{cyu(l, R["MCQ"])}<h2>{esc(B["deeper"][l])}</h2><p>{esc(R["DEEPER"][l])}</p><h2>{esc(B["teach"][l])}</h2><p>{esc(R["TEACH"][l])}</p>{allrefs}</div>\n')
+    return shell(l, R['page'], U['title'][l], U['kicker'][l], main, extra_head=katex_head(l), tail=f'<script>{FILTER_JS}</script>\n<script src="{"" if l == "en" else "../"}assets/learn.js?v={V}" defer></script>\n')
+def aero_guide(l):
+    G = LA.GUIDE; secs = ''
+    for i, (lv, t, body, q, a) in enumerate(G['sections']):
+        secs += (f'<section id="g{i+1}"><h2>{tx(t, l)}</h2>{chips([lv], l)}<p>{tx(body, l)}</p>'
+                 f'<details><summary>{esc(LT.GUIDE["q"][l])}: {tx(q, l)}</summary><p>{tx(a, l)}</p></details></section>\n')
+    main = (hero(G['title'][l], G['kicker'][l]) + f'<div class="lw">{secs}<p class="lbox ex"><a href="{sf.href(l, "Aero_Math.html")}">{esc(G["next"][l])}</a> \u00b7 '
+            f'<a href="{sf.href(l, "Aero_Lab.html")}">{esc(LA.UI["tryit"][l])}</a></p></div>\n')
+    return shell(l, 'Aero_Guide.html', G['title'][l], G['desc'][l], main)
+def aero_lab(l, K):
+    L = LA.LAB; pre = '' if l == 'en' else '../'; g = lambda k: esc(L[k][l])
+    tr = {k: L[k][l] for k in ('stall_out', 'sp_out', 'lvl1', 'lvlx', 'unst', 'rot_out', 'bad')}
+    inp = lambda n, lab, v: f'<label>{lab}<input name="{n}" type="text" inputmode="decimal" dir="ltr" autocomplete="off" value="{v}"></label>'
+    rng = lambda n, lab, lo, hi, st, v: f'<label>{lab} <output dir="ltr" for="al-{n}">{v}</output><input id="al-{n}" name="{n}" type="range" min="{lo}" max="{hi}" step="{st}" value="{v}"></label>'
+    form = (f'<div id="ol" class="al" data-t="{esc(json.dumps(tr, ensure_ascii=False))}">'
+            f'<section id="al-stall"><h2>{g("stall")}</h2><form class="al-f" novalidate>{inp("alt", g("alt"), 0)}{inp("m", g("mass"), 1100)}{inp("S", g("area"), 16.2)}{inp("cl", g("clmax"), 1.6)}'
+            f'<button type="submit">{g("calc")}</button></form><p class="ol-out" role="status" aria-live="polite"></p></section>'
+            f'<section id="al-sp"><h2>{g("sp")}</h2><form class="al-f" novalidate>{rng("Ma", g("Ma"), -20, 2, 0.1, -8)}{rng("Mq", g("Mq"), -6, 1, 0.1, -1.5)}</form>'
+            f'<p class="lnote">{g("sp_fixed")}</p><p class="ol-out" role="status" aria-live="polite"></p><canvas width="600" height="360" role="img" aria-label="{g("splot")}"></canvas></section>'
+            f'<section id="al-rot"><h2>{g("rot")}</h2><form class="al-f" novalidate>{rng("m", g("mass"), 500, 12000, 100, 2700)}{rng("R", g("R"), 2, 12, 0.1, 5.1)}{rng("FM", g("FM"), 0.5, 0.85, 0.01, 0.75)}</form>'
+            f'<p class="ol-out" role="status" aria-live="polite"></p></section></div>')
+    how = ''.join(f'<div class="leq" dir="ltr">{K[e]}</div>' for e in LA.LAB_EQ) + f'<p>{g("how")}</p><p><a href="{sf.href(l, "Aero_Math.html")}">{g("learn")}</a></p>'
+    main = hero(L['title'][l], L['kicker'][l]) + f'<div class="lw">{form}{how}</div>\n'
+    return shell(l, 'Aero_Lab.html', L['title'][l], L['desc'][l], main, extra_head=katex_head(l), tail=f'<script src="{pre}assets/aero-lab.js?v={V}" defer></script>\n')
 def lab(l, K):
     L = LT.LAB; pre = '' if l == 'en' else '../'; tr = {k: v[l] for k, v in L['tr'].items()}
     form = (f'<div id="ol" data-t="{esc(json.dumps(tr, ensure_ascii=False))}"><form novalidate>'
@@ -246,15 +279,16 @@ def xlinks(l):
         blk = f'<!-- LEARNLINK:START --><aside class="learn-link card-band" aria-label="{esc(XT["h"][l])}"><h2>{esc(XT["h"][l])}</h2><p>{esc(XT[k][l])} {links}</p></aside><!-- LEARNLINK:END -->'
         s = s.replace('</main>', blk + '</main>', 1); ch += wr(p, s)
     return ch
-LINK_PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Lab.html']
+LINK_PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Lab.html']
 if __name__ == '__main__':
     global_tex = LAB_EQ + CONSTS
-    tl = [t for s in OM.S for t, _ in s['steps']] + global_tex
+    tl = [t for s in OM.S + LA.S for t, _ in s['steps']] + global_tex + LA.CONSTS + LA.LAB_EQ
     K = dict(zip(tl, json.loads(subprocess.run(['node', 'scripts/katex-render.cjs'], input=json.dumps(tl), capture_output=True, text=True, check=True).stdout)))
     ch = vendor()
     for l in LANGS:
         ch += wr(d(l) + 'Learn.html', learn_hub(l)); ch += wr(d(l) + 'Orbits_Guide.html', guide(l))
         ch += wr(d(l) + 'Orbit_Math.html', math_page(l, K)); ch += wr(d(l) + 'Orbit_Lab.html', lab(l, K))
+        ch += wr(d(l) + 'Aero_Guide.html', aero_guide(l)); ch += wr(d(l) + 'Aero_Math.html', math_page(l, K, 'aero')); ch += wr(d(l) + 'Aero_Lab.html', aero_lab(l, K))
     for l in LANGS: ch += xlinks(l)
     s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:

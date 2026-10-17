@@ -1221,7 +1221,6 @@ body.sd-on .sp-collapsed .grid>.sol-card:not(.sd-off){display:block !important}b
 /* SD:END *//* NEWS:START */
 .new-strip{max-width:1100px;margin:1.6rem auto;padding:1rem 1.2rem;border-radius:18px;border:1px solid rgba(143,211,255,.45);background:rgba(0,60,95,.35)}.new-strip h2{margin:.1rem 0 .3rem;font-size:1.3rem}.ns-sum{margin:.2rem 0 .7rem}.ns-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:.5rem .9rem}.ns-list li{display:flex;flex-direction:column;gap:.1rem;padding:.5rem .7rem;border-radius:12px;background:rgba(255,255,255,.06)}.ns-list time{font-size:.8rem;opacity:.85;font-weight:700}.ns-all{margin:.7rem 0 0;font-weight:700}html:not(.dark) body:not(.toc-home):not(.toc-sub) .new-strip{background:#eef7fc;color:#10202c}.cl-wrap{max-width:900px;margin:0 auto;padding:1rem 1.25rem 2rem}.cl-day{margin:1.4rem 0}.cl-day h2{font-size:1.25rem;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:.3rem}.cl-day h3{font-size:1rem;margin:.6rem 0 .3rem}
 /* NEWS:END */
-
 /* UX-OCT15:START */
 .nav-links{gap:1.1rem}
 .nav-group details{position:relative}
