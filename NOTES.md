@@ -554,3 +554,7 @@ Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME
 
 ## Oct 16 – Great Bubble Barrier: published total
 - The company's own press release (20 Aug 2025, thegreatbubblebarrier.com/bubble-barrier-amsterdam-captures-over-1-million-pieces-of-plastic/) says Bubble Barrier Amsterdam has intercepted more than 1,000,000 pieces of plastic since its 2019 launch. Impact text (5 langs, via i18n/*.json) now cites it with a link; the video line ("over one million pieces since 2019") is consistent and unchanged.
+
+## 2026-10-16 9:01 PM HST — AGENCY_1016 thank-you emails SENT (user-approved)
+- Sent 12 thank-yous via the Gmail connector (From Media@savingplanets.com), using the final/<slug>.txt drafts with the CAN-SPAM postal address and opt-out line added: Copernicus EMS (+GloFAS), UNEP IMEO, GLOBE, Argo, Canadian Space Agency, ATLAS, Pan-STARRS, EFFIS, CAMS, Copernicus Marine, OpenET, DLR ZKI. Not sent: International Charter and CLS/Argos (contact forms only), and Catalina Sky Survey (no contact found).
+- send_queue.csv rows are marked SENT with message ids. A follow-up is due 2026-10-23 if there's no reply (7 days, assumed; drafts are in outreach-142/drafts/agency-1016-followups/, draft only).
