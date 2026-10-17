@@ -20,13 +20,20 @@ def langs_of(base):  # languages that actually have this page
     return ['en'] + [l for l in LANGS if os.path.exists(f'{l}/{base}')] if os.path.exists(base) else [l for l in LANGS if os.path.exists(f'{l}/{base}')]
 # Language tag added to translated titles that would otherwise equal the English title (proper names).
 TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية', 'it': ' · Italiano'}
+# Learning pages (lessons, labs, calculators) get a pad that is true for them (no Five W's there)
+PAD_LEARN = {'en': 'Free on Saving Planets, with no ads on learning pages.',
+             'fr': 'Gratuit sur Saving Planets, sans publicité sur les pages d’apprentissage.',
+             'es': 'Gratis en Saving Planets, sin anuncios en las páginas de aprendizaje.',
+             'ar': 'مجاني على Saving Planets، بلا إعلانات في صفحات التعلّم.',
+             'it': 'Gratis su Saving Planets, senza pubblicità nelle pagine di apprendimento.'}
+UPDATED = re.compile(r'\s*(Last updated|Dernière mise à jour|Última actualización|Ultimo aggiornamento|آخر تحديث)\s*:?\s*[^.!?]*?\d{4}\.?')
 PAD = {'en': 'Sourced facts, the Five W\'s and why it matters, on Saving Planets.',
        'fr': 'Faits sourcés, les cinq W et l\'impact, sur Saving Planets.',
        'es': 'Datos con fuentes, las cinco W y su impacto, en Saving Planets.',
        'ar': 'حقائق موثّقة والأسئلة الخمسة وأهمية الحل، على Saving Planets.',
        'it': 'Fatti con fonti, le cinque W e perché conta, su Saving Planets.'}
 _END = re.compile(r'(?<=[.!?؟。])\s+')
-_ABBR = re.compile(r'(?:\b[A-Z]\.|\b(?:[A-Z]\.){2,}|\b(?:e\.g|i\.e|Dr|St|Mt|No|vs|Inc|Ltd|Jr|Sr|Prof|approx|ca|av|apr|n°|Sra?|Sto|Ste|art)\.)$')
+_ABBR = re.compile(r'(?:\b[A-Z]\.|\b(?:[A-Z]\.){2,}|\b(?:e\.g|i\.e|Dr|St|Mt|No|vs|Inc|Ltd|Jr|Sr|Prof|approx|ca|av|apr|n°|Sra?|Sto|Ste|art|EE|UU)\.)$')
 class _Splitter:
     """Sentence splitter that does not break after abbreviations (U.S., e.g., Dr., St.)."""
     def split(self, text):
@@ -36,7 +43,7 @@ class _Splitter:
             else: out.append(part)
         return out
 END = _Splitter()
-SKIP_P = re.compile(r'review|source|credit|cite|eyebrow|kicker|tag|crumb|share|caption|meta|note|disclaimer|lchip|badge')
+SKIP_P = re.compile(r'review|source|credit|cite|eyebrow|kicker|tag|crumb|share|caption|meta|note|disclaimer|lchip|badge|transcript|video|embed')
 _git = {}
 def gitdates(f):
     if f not in _git:
@@ -60,13 +67,14 @@ def fit_title(t, en_title=None, lang='en'):
             return head + BRAND if len(head + BRAND) <= 60 else head
     return core[:59].rsplit(' ', 1)[0].rstrip(' ,:;–-') + '…'
 
-def fit_desc(base, extra, lang):
+def fit_desc(base, extra, lang, learn=False):
     """Whole sentences, 120-160 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
     then the language pad. A description we truncated earlier (ends with an ellipsis) is rebuilt from the page copy.
     Ellipsis only when the first sentence alone is longer than 160."""
-    norm = lambda x: re.sub(r'\s+', ' ', x or '').strip()
-    base = norm(base)
-    if base.endswith('…'): base = base[:-1].rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…' if False else ''
+    norm = lambda x: re.sub(r'\s+', ' ', UPDATED.sub('', x or '')).strip()
+    pad = (PAD_LEARN if learn else PAD)[lang]
+    base = norm(base.replace(PAD[lang], '') if learn else base)
+    if base.endswith('…') and len(base) <= 160: return base  # earlier cut whose full text is no longer on the page: keep it
     pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
     sents = [x for x in END.split(base) if x] if base else []
     if not sents and pool: sents = [pool.pop(0)]
@@ -77,16 +85,48 @@ def fit_desc(base, extra, lang):
     if len(text) > 160:  # drop a trailing source attribution "(NASA)." before cutting
         t2 = re.sub(r'\s*\([^()]{2,60}\)(?=[.!?؟]?$)', '', text)
         if len(t2) <= 160: text = t2
+        elif len(t2) <= 175 and len(sents) == 1 and t2[-1:] in '.!?؟': return t2  # one whole sentence a little over 160 (French/Spanish/Italian run longer) beats an ellipsis cut
+    if len(text) > 160:  # a semicolon joins whole clauses: keep the clauses that fit, end with a full stop, re-pad
+        parts = re.split(r'\s*[;؛]\s+', text)
+        if len(parts) > 1:
+            keep = ''
+            for x in parts:
+                cand = (keep + '; ' + x) if keep else x
+                if len(cand) + 1 <= 160: keep = cand
+                else: break
+            if len(keep) >= 80:
+                text = keep.rstrip(' ,.') + ('.' if lang != 'ar' else '.')
+                for x in pool + [pad]:
+                    if len(text) >= 120: break
+                    if x not in text and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+                return text
     if len(text) > 160:  # one long sentence: cut at a clause boundary, then a word boundary
         cut = text[:159]
         for sep in ('; ', ', ', ' – ', ' — ', ' ('):
             i = cut.rfind(sep)
             if i >= 110: return cut[:i].rstrip(' ,;:–—(') + '…'
         return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…'
-    for x in pool + [PAD[lang]]:
+    for x in pool + [pad]:
         if len(text) >= 120: break
         if x not in text and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
     return text
+
+def ptext(el):
+    """Paragraph text without glossary pop-ups (.gl-pop), SI credits or screen-reader-only extras."""
+    el = BeautifulSoup(str(el), 'html.parser')
+    for x in el.select('.gl-pop, .si-credit, .sr-only, .visually-hidden, script, style'): x.decompose()
+    return el.get_text(' ', strip=True)
+
+def tidy(t, lang):
+    """Undo get_text spacing at tag edges: no space before , . (and before ; : ! ? except in French typography)."""
+    t = re.sub(r'\s+', ' ', t).strip()
+    return re.sub(r'\s+([,.،])', r'\1', t) if lang == 'fr' else re.sub(r'\s+([,.;:!?،؛؟])', r'\1', t)
+
+def hub_name(soup):
+    """Second breadcrumb item (the hub, in the page language), e.g. 'Oceans' / 'Océans' / 'المحيطات'."""
+    nav = soup.select_one('nav.breadcrumb')
+    lis = nav.select('li') if nav else []
+    return re.sub(r'\s+', ' ', lis[1].get_text(' ', strip=True)) if len(lis) >= 3 else None
 
 def esc(v): return v.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
 HEAD_RX = [r'<meta name="robots"[^>]*>', r'<link rel="canonical"[^>]*>', r'<link rel="alternate" hreflang="[^"]*"[^>]*>',
@@ -126,23 +166,35 @@ def fix(p):
         en_title = en.title.get_text(strip=True) if en and en.title else None
         if ov.get('title'):  # hand-written (i18n/seo-meta.json): brand appended when it fits in 60
             t = ov['title'] if ov['title'].endswith(BRAND) or len(ov['title'] + BRAND) > 60 else ov['title'] + BRAND
-        else: t = fit_title(soup.title.get_text() if soup.title else base.replace('_', ' ').replace('.html', ''), en_title, lang)
+        else:
+            raw_t = soup.title.get_text() if soup.title else base.replace('_', ' ').replace('.html', '')
+            core = re.sub(r'\s+', ' ', raw_t).replace(BRAND, '').replace(TAG.get(lang, '@@'), '').strip()
+            en_core = (en_title or '').replace(BRAND, '').replace(TAG.get('en', '@@'), '').strip()
+            hub = hub_name(soup)
+            if hub and hub not in core and (len(core) < 30 or (lang != 'en' and core == en_core)) and len(f'{core} – {hub}{BRAND}') <= 60:
+                t = f'{core} – {hub}{BRAND}'
+            else: t = fit_title(raw_t if not (lang != 'en' and core == en_core) else en_title, en_title, lang)
         dm = soup.find('meta', attrs={'name': 'description'}); d = dm.get('content', '') if dm else ''
         en_d = ((en.find('meta', attrs={'name': 'description'}) or {}).get('content', '') if en else '')
         hero = soup.select_one('.page-hero-content p, .hub-hero p, .pr-hero p, header p')
         # Oct 15: never pad descriptions with image/video credits (the SI credit leaked into the Arabic homepage description)
         cands = [x for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p')
                  if not any(SKIP_P.search(c) for c in (x.get('class') or [])) and not x.find_parent(class_=SKIP_P)
-                 and not x.find_parent(['nav', 'footer', 'figure', 'aside'])][:6]
-        extra = [re.sub(r'\s+([,.;:!?])', r'\1', x.get_text(' ', strip=True)) for x in cands]
+                 and not x.find_parent(['nav', 'footer', 'figure', 'aside', 'details'])][:6]
+        extra = [tidy(ptext(x), lang) for x in cands]
         extra = [e for e in extra if 'Biological SI' not in e and 'SI Partner' not in e]
         extra = [e for e in extra if e and not e.startswith(('Image', 'Source', 'Image :', 'Imagen', 'الصورة'))]
         if lang != 'en' and (not d or d.strip() == en_d.strip()): d = extra[0] if extra else PAD[lang]
         if d.strip().endswith('…'):  # our earlier cut: restore the full sentence(s) from the page copy it came from
-            stem = re.sub(r'\s+', ' ', d.strip()[:-1]).strip()
-            for x in [re.sub(r'\s+([,.;:!?])', r'\1', y.get_text(' ', strip=True)) for y in soup.select('main p, header p, section p, .page-hero-content p')]:
-                if len(stem) > 30 and re.sub(r'\s+', ' ', x).startswith(stem): d = x; break
-        d = ov['description'].strip() if ov.get('description') else fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang)
+            key = lambda x: re.sub(r'[\s\u00a0\u202f]+', '', x.replace('’', "'").replace('«', '"').replace('»', '"'))
+            stem = key(d.strip()[:-1])
+            for x in [tidy(ptext(y), lang) for y in soup.select('main p, header p, section p, .page-hero-content p')]:
+                if len(stem) > 25 and key(x).startswith(stem): d = x; break
+            else:
+                ss = END.split(re.sub(r'\s+', ' ', d.strip()))
+                if len(ss) > 1: d = ' '.join(ss[:-1])  # keep the whole sentences, drop the cut one; fit_desc re-pads
+        learn = bool(re.search(r'"@type": ?"(LearningResource|Course)"', raw)) or base.endswith('_Calculator.html')
+        d = ov['description'].strip() if ov.get('description') else fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang, learn)
         img = (soup.find('meta', property='og:image') or {}).get('content') or SITE + 'assets/og-default.jpg'
         if not img.startswith('http'): img = SITE + img.lstrip('./')
         card = (soup.find('meta', attrs={'name': 'twitter:card'}) or {}).get('content') or 'summary_large_image'
@@ -168,6 +220,8 @@ def fix(p):
                   f'<meta name="twitter:description" content="{esc(d)}">', f'<meta name="twitter:image" content="{esc(img)}">']
         # JSON-LD
         pub, mod = gitdates(base); have = []
+        h1e = soup.find('h1'); h1 = re.sub(r'\s+', ' ', h1e.get_text(' ', strip=True)) if h1e else ''
+        if len(h1) > 110: h1 = ''
         def ld(m):
             try: j = json.loads(m.group(1))
             except Exception: return m.group(0)
@@ -175,7 +229,7 @@ def fix(p):
             if typ in MAIN_TYPES and typ not in ('DefinedTermSet', 'FAQPage'):
                 j['inLanguage'] = lang
                 if typ == 'Article' or typ in ('Article', 'WebPage', 'CollectionPage') or not j.get('name'):
-                    j['headline' if typ == 'Article' else 'name'] = t.replace(BRAND, '').replace(TAG.get(lang, '@@'), '')
+                    j['headline' if typ == 'Article' else 'name'] = h1 or t.replace(BRAND, '').replace(TAG.get(lang, '@@'), '')
                 j['description'] = d; j['url'] = url
                 if typ == 'Article': j['mainEntityOfPage'] = url
                 j['datePublished'] = j.get('datePublished') or pub or mod
@@ -186,7 +240,7 @@ def fix(p):
             return '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>'
         head = re.sub(r'<script type="application/ld\+json">(.*?)</script>', ld, head, flags=re.S)
         if base != 'index.html' and not (set(MAIN_TYPES) & set(have)):
-            j = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': t.replace(BRAND, '').replace(TAG.get(lang, '@@'), ''), 'description': d, 'url': url,
+            j = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': h1 or t.replace(BRAND, '').replace(TAG.get(lang, '@@'), ''), 'description': d, 'url': url,
                  'inLanguage': lang, 'datePublished': pub, 'dateModified': mod or pub, 'isPartOf': {'@type': 'WebSite', 'name': 'Saving Planets', 'url': SITE}}
             head += '<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False) + '</script>\n'
     m = re.search(r'<meta name="viewport"[^>]*>|<meta content="[^"]*" name="viewport"/?>', head) or re.search(r'<meta charset[^>]*>', head)

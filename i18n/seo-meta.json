@@ -1,1 +1,654 @@
-{}
+{
+ "4ocean.html": {
+  "en": {
+   "title": "4ocean: Full-Time Crews Removing Ocean Plastic"
+  }
+ },
+ "AP_IB_Physics.html": {
+  "ar": {
+   "title": "خريطة موضوعات فيزياء AP وIB"
+  },
+  "en": {
+   "title": "AP Physics and IB Physics Topic Map"
+  },
+  "es": {
+   "description": "Páginas de matemáticas, laboratorios y calculadoras gratis de física, órbitas y aeronáutica, alineados con AP Physics 1, 2 y C: Mechanics y los temas del IB.",
+   "title": "Mapa de temas de Física AP e IB"
+  },
+  "fr": {
+   "description": "Pages de maths, labos et calculateurs gratuits (physique, orbites, aéronautique) alignés sur AP Physics 1, 2 et C: Mechanics et les thèmes de l’IB.",
+   "title": "Correspondance des thèmes de physique AP et IB"
+  },
+  "it": {
+   "description": "Pagine di matematica, laboratori e calcolatori gratuiti di fisica, orbite e aeronautica, allineati ad AP Physics 1, 2 e C: Mechanics e ai temi di Fisica IB.",
+   "title": "Mappa dei temi di fisica AP e IB"
+  }
+ },
+ "About.html": {
+  "ar": {
+   "description": "كيف يختار Saving Planets حلولًا عملية وموثّقة للمحيطات والبحيرات والأنهار والغابات والفضاء، وكيف يمكنك أن تقترح حلًا. عمل إيجابي بلا ذعر.",
+   "title": "من نحن: عمل إيجابي بلا ذعر"
+  },
+  "en": {
+   "description": "How Saving Planets picks practical, sourced solutions for oceans, lakes, rivers, forests and space, and how you can suggest one. Positive action, not panic.",
+   "title": "About Saving Planets: Positive Action, Not Panic"
+  },
+  "es": {
+   "description": "Cómo Saving Planets elige soluciones prácticas y con fuentes para océanos, lagos, ríos, bosques y el espacio, y cómo puedes proponer una.",
+   "title": "Acerca de Saving Planets: acción positiva, sin pánico"
+  },
+  "fr": {
+   "description": "Comment Saving Planets choisit des solutions concrètes et sourcées pour les océans, les lacs, les rivières, les forêts et l’espace, et comment en proposer une.",
+   "title": "À propos de Saving Planets : agir sans paniquer"
+  },
+  "it": {
+   "description": "Come Saving Planets sceglie soluzioni pratiche e documentate per oceani, laghi, fiumi, foreste e spazio, e come puoi proporne una. Azione positiva, non panico.",
+   "title": "Chi siamo: azione positiva, non panico"
+  }
+ },
+ "Aero_Guide.html": {
+  "ar": {
+   "description": "الطيران بلغة بسيطة: القوى الأربع، وكيف ترفع الأجنحة الطائرة، ولماذا تحلّق النفاثات عاليًا، وكيف تحوم المروحيات، ولماذا تبقى الطائرات مستقرة.",
+   "title": "كيف يعمل الطيران: الرفع والسحب والدفع والوزن"
+  },
+  "en": {
+   "title": "How Flight Works: Lift, Drag, Thrust and Weight"
+  },
+  "es": {
+   "description": "El vuelo en lenguaje sencillo: las cuatro fuerzas, cómo sustenta un ala, por qué los jets vuelan alto, cómo flota un helicóptero y por qué el avión es estable.",
+   "title": "Cómo se vuela: sustentación, resistencia, empuje y peso"
+  },
+  "fr": {
+   "description": "Le vol expliqué simplement : les quatre forces, comment l’aile porte, pourquoi les jets volent haut, comment l’hélicoptère tient en l’air et la stabilité.",
+   "title": "Comment on vole : portance, traînée, poussée et poids"
+  },
+  "it": {
+   "description": "Il volo spiegato semplice: le quattro forze, come portano le ali, perché i jet volano alti, come resta in aria un elicottero e perché gli aerei sono stabili.",
+   "title": "Come si vola: portanza, resistenza, spinta e peso"
+  }
+ },
+ "Aero_Lab.html": {
+  "ar": {
+   "title": "مختبر الطيران: الانهيار والاستقرار وقدرة الدوّار"
+  },
+  "en": {
+   "title": "Aero Lab: Stall Speed, Stability and Rotor Simulator"
+  },
+  "es": {
+   "title": "Aero Lab: pérdida, estabilidad y potencia del rotor"
+  },
+  "fr": {
+   "description": "Aero Lab interactif : vitesse de décrochage en atmosphère type (ISA), valeurs propres de l’oscillation d’incidence et puissance du rotor en vol stationnaire.",
+   "title": "Aero Lab : décrochage, stabilité et puissance du rotor"
+  },
+  "it": {
+   "description": "Aero Lab interattivo: velocità di stallo in atmosfera standard (ISA), autovalori del modo di corto periodo e potenza del rotore in hovering, in 5 lingue.",
+   "title": "Aero Lab: stallo, stabilità e potenza del rotore"
+  }
+ },
+ "Aero_Math.html": {
+  "es": {
+   "description": "Atmósfera, sustentación, alas, actuaciones, ondas de choque, motores a reacción, estabilidad y rotores: deducciones, ejemplos resueltos y ejercicios."
+  },
+  "fr": {
+   "description": "Atmosphère, portance, ailes, performances, ondes de choc, réacteurs, stabilité et rotors : démonstrations, exemples résolus et exercices, jusqu’au doctorat."
+  }
+ },
+ "Astroscale.html": {
+  "en": {
+   "title": "Astroscale: Inspecting, Servicing and Removing Debris"
+  }
+ },
+ "CO2M.html": {
+  "ar": {
+   "title": "كوبرنيكوس CO2M لرصد ثاني أكسيد الكربون"
+  },
+  "es": {
+   "description": "Un trío de satélites previsto para medir el dióxido de carbono y el metano que emitimos, para que los países comprueben si sus recortes de emisiones funcionan."
+  },
+  "fr": {
+   "description": "Trois satellites prévus pour mesurer le CO2 et le méthane émis par l’activité humaine, afin que les pays vérifient l’effet de leurs baisses d’émissions.",
+   "title": "Copernicus CO2M : surveiller le CO2 (ESA / UE)"
+  },
+  "it": {
+   "description": "Un trio di satelliti previsto per misurare l’anidride carbonica e il metano che emettiamo, così i Paesi possono verificare se i tagli alle emissioni funzionano.",
+   "title": "Copernicus CO2M: monitorare la CO2 (ESA / UE)"
+  }
+ },
+ "Cadets.html": {
+  "ar": {
+   "description": "صفحات ومختبرات وحاسبات مجانية مطابقة لموضوعات الطيران والفضاء في أوصاف مقررات JROTC العامة وفي وحدات التعليم الجوي لدورية الطيران المدني.",
+   "title": "موضوعات الطيران والفضاء في JROTC ودورية الطيران المدني"
+  },
+  "en": {
+   "description": "Free pages, labs and calculators matched to the aerospace topics in public JROTC course descriptions and in Civil Air Patrol aerospace education modules.",
+   "title": "JROTC & Civil Air Patrol Aerospace Topics"
+  },
+  "es": {
+   "description": "Páginas, laboratorios y calculadoras gratis alineados con los temas aeroespaciales de los cursos públicos de JROTC y los módulos de Civil Air Patrol.",
+   "title": "Temas aeroespaciales de JROTC y Civil Air Patrol"
+  },
+  "fr": {
+   "description": "Pages, labos et calculateurs gratuits alignés sur les thèmes aérospatiaux des cours du JROTC et des modules d’éducation aérospatiale de la Civil Air Patrol.",
+   "title": "Thèmes aérospatiaux du JROTC et de la Civil Air Patrol"
+  },
+  "it": {
+   "description": "Pagine, laboratori e calcolatori gratuiti allineati ai temi aerospaziali dei corsi pubblici JROTC e ai moduli di educazione aerospaziale della Civil Air Patrol.",
+   "title": "Temi aerospaziali di JROTC e Civil Air Patrol"
+  }
+ },
+ "Calculators.html": {
+  "ar": {
+   "description": "حاسبات مجانية وسريعة: دلتا-v، ومناورة هوهمان، والدورة والسرعة المداريتان، وسرعة الانهيار، والرفع، وعدد ماخ، ونسبة الدفع إلى الوزن، والبندول."
+  },
+  "en": {
+   "description": "Free, fast calculators for delta-v, Hohmann transfers, orbital period and velocity, stall speed, lift, Mach number, thrust-to-weight, hover power and pendulums."
+  },
+  "es": {
+   "description": "Calculadoras gratis y rápidas: delta-v, transferencia de Hohmann, periodo y velocidad orbital, pérdida, sustentación, número de Mach, empuje/peso y péndulo."
+  },
+  "fr": {
+   "description": "Calculateurs gratuits et rapides : delta-v, transfert de Hohmann, période et vitesse orbitales, décrochage, portance, nombre de Mach, poussée/poids, pendule."
+  },
+  "it": {
+   "description": "Calcolatori gratuiti e veloci: delta-v, trasferimento di Hohmann, periodo e velocità orbitali, stallo, portanza, numero di Mach, spinta/peso e pendolo."
+  }
+ },
+ "Careers.html": {
+  "ar": {
+   "description": "ماذا يفعل مهندسو الطيران والفضاء والطيارون وفنيو صيانة الطائرات وطيارو المسيّرات والفيزيائيون ومشغلو الفضاء، وطريق الوصول من المدرسة الثانوية، والأجور."
+  },
+  "en": {
+   "description": "What aerospace engineers, pilots, A&P mechanics, drone pilots, physicists and space operators do, the path from high school, and official U.S. pay data."
+  },
+  "es": {
+   "description": "Qué hacen ingenieros aeroespaciales, pilotos, mecánicos A&P, pilotos de drones, físicos y operadores espaciales, el camino desde la secundaria y los salarios.",
+   "title": "Carreras en aeroespacial y ciencias de la Tierra"
+  },
+  "fr": {
+   "description": "Ce que font ingénieurs aérospatiaux, pilotes, mécaniciens A&P, télépilotes, physiciens et opérateurs spatiaux, le parcours dès le lycée et les salaires.",
+   "title": "Métiers de l’aérospatiale et des sciences de la Terre"
+  },
+  "it": {
+   "description": "Cosa fanno ingegneri aerospaziali, piloti, meccanici A&P, piloti di droni, fisici e operatori spaziali, il percorso dalle superiori e i dati sugli stipendi.",
+   "title": "Carriere aerospaziali e nelle scienze della Terra"
+  }
+ },
+ "Changelog.html": {
+  "ar": {
+   "description": "كل الحلول المضافة إلى Saving Planets من الأحدث إلى الأقدم، مع تاريخ إضافة كل منها. كل دفعة مؤرّخة بيوم نشرها، لتعرف ما الجديد بسرعة.",
+   "title": "سجل التغييرات: الحلول الجديدة أولًا"
+  },
+  "en": {
+   "description": "Every solution added to Saving Planets, newest first, with the date it was added. Each batch is dated by the day it was released, so you can see what is new.",
+   "title": "Changelog: New Solutions, Newest First"
+  },
+  "es": {
+   "description": "Todas las soluciones añadidas a Saving Planets, de la más reciente a la más antigua, con su fecha. Cada lote lleva la fecha del día en que se publicó.",
+   "title": "Registro de cambios: nuevas soluciones"
+  },
+  "fr": {
+   "description": "Toutes les solutions ajoutées à Saving Planets, des plus récentes aux plus anciennes, avec leur date d’ajout. Chaque lot est daté du jour de sa publication.",
+   "title": "Journal des modifications : nouvelles solutions"
+  },
+  "it": {
+   "description": "Tutte le soluzioni aggiunte a Saving Planets, dalla più recente, con la data di aggiunta. Ogni gruppo è datato al giorno in cui è stato pubblicato.",
+   "title": "Registro delle modifiche: nuove soluzioni"
+  }
+ },
+ "ClearSpace.html": {
+  "en": {
+   "title": "ClearSpace: Europe’s First Active Debris Removal"
+  }
+ },
+ "Contact.html": {
+  "ar": {
+   "description": "أرسل إلينا حلًا أو فكرة أو سؤالًا. راسلنا على ideas@savingplanets.com واقترح الصفحة أو القصة أو الحل التالي الذي ينبغي أن يقدّمه Saving Planets.",
+   "title": "اتصل بنا: أرسل حلًا أو فكرة أو سؤالًا"
+  },
+  "en": {
+   "description": "Send us a solution, an idea or a question. Email ideas@savingplanets.com with the next page, story or fix you think Saving Planets should cover.",
+   "title": "Contact Us: Send a Solution, Idea or Question"
+  },
+  "es": {
+   "description": "Envíanos una solución, una idea o una pregunta. Escribe a ideas@savingplanets.com con la próxima página, historia o solución que deberíamos contar.",
+   "title": "Contacto: envía una solución o una idea"
+  },
+  "fr": {
+   "description": "Envoyez-nous une solution, une idée ou une question. Écrivez à ideas@savingplanets.com pour proposer la prochaine page, histoire ou solution à présenter.",
+   "title": "Nous contacter : proposer une solution ou une idée"
+  },
+  "it": {
+   "description": "Inviaci una soluzione, un’idea o una domanda. Scrivi a ideas@savingplanets.com con la prossima pagina, storia o soluzione che dovremmo raccontare.",
+   "title": "Contatti: invia una soluzione o un’idea"
+  }
+ },
+ "Corrections.html": {
+  "ar": {
+   "description": "هل لاحظت خطأً في Saving Planets؟ أخبرنا بما هو غير صحيح عبر النموذج القصير في هذه الصفحة، وسنصحّحه بسرعة وبكل اللغات الخمس.",
+   "title": "التصحيحات: أبلغنا عن خطأ"
+  },
+  "en": {
+   "description": "Spot a mistake on Saving Planets? Tell us what is wrong using the short form on this page and we will fix it fast, in every language.",
+   "title": "Corrections: Report a Mistake, We Fix It Fast"
+  },
+  "es": {
+   "description": "¿Has visto un error en Saving Planets? Cuéntanos qué está mal con el breve formulario de esta página y lo corregiremos rápido, en todos los idiomas.",
+   "title": "Correcciones: avísanos de un error"
+  },
+  "fr": {
+   "description": "Vous avez repéré une erreur sur Saving Planets ? Signalez-la avec le court formulaire de cette page : nous la corrigerons vite, dans toutes les langues.",
+   "title": "Corrections : signaler une erreur"
+  },
+  "it": {
+   "description": "Hai notato un errore su Saving Planets? Dicci cosa non va con il breve modulo di questa pagina e lo correggeremo in fretta, in tutte le lingue.",
+   "title": "Correzioni: segnala un errore"
+  }
+ },
+ "Deforestation.html": {
+  "ar": {
+   "title": "حلول الغابات: إعادة تشجير ناجحة"
+  },
+  "en": {
+   "title": "Forest Solutions: Reforestation That Works"
+  },
+  "es": {
+   "title": "Soluciones para los bosques: reforestar con éxito"
+  },
+  "fr": {
+   "title": "Solutions pour les forêts : un reboisement efficace"
+  },
+  "it": {
+   "title": "Soluzioni per le foreste: riforestazione efficace"
+  }
+ },
+ "Earth_Observation.html": {
+  "ar": {
+   "title": "رصد الأرض: قياس كوكب يتغيّر"
+  },
+  "es": {
+   "description": "No se puede proteger lo que no se mide. Satélites de la NASA, la ISRO, la ESA y la NOAA, con Carbon Mapper y Planet, en órbita baja y en el punto L1 Sol-Tierra."
+  },
+  "fr": {
+   "description": "On ne protège pas ce qu’on ne mesure pas. Satellites de la NASA, de l’ISRO, de l’ESA et de la NOAA, avec Carbon Mapper et Planet, en orbite basse et en L1."
+  }
+ },
+ "Glossary.html": {
+  "ar": {
+   "description": "تعريفات بسيطة للمصطلحات العلمية المستخدمة في Saving Planets. في صفحات الحلول، المس الكلمة المسطّرة بنقاط أو مرّر المؤشر فوقها لترى معناها.",
+   "title": "المسرد: مصطلحات الأرض والفضاء ببساطة"
+  },
+  "en": {
+   "description": "Simple definitions of the science words used across Saving Planets. On any solution page, tap or hover over a dotted word to see what it means.",
+   "title": "Glossary: Earth and Space Science Words, Made Simple"
+  },
+  "es": {
+   "description": "Definiciones sencillas de las palabras científicas de Saving Planets. En las páginas de soluciones, toca o pasa el cursor sobre una palabra punteada para verla.",
+   "title": "Glosario: palabras de la Tierra y el espacio"
+  },
+  "fr": {
+   "description": "Des définitions simples des mots scientifiques utilisés sur Saving Planets. Sur une page de solution, touchez ou survolez un mot en pointillé.",
+   "title": "Glossaire : les mots de la Terre et de l’espace"
+  },
+  "it": {
+   "description": "Definizioni semplici delle parole scientifiche usate su Saving Planets. Nelle pagine delle soluzioni tocca o passa il cursore su una parola a puntini.",
+   "title": "Glossario: le parole della Terra e dello spazio"
+  }
+ },
+ "Great_Green_Wall.html": {
+  "ar": {
+   "description": "جهد تقوده أفريقيا لاستعادة الأراضي عبر منطقة الساحل. أحصى تقرير للأمم المتحدة عام 2020 نحو 4 ملايين هكتار مستعادة داخل نطاق السور الأخضر العظيم.",
+   "title": "السور الأخضر العظيم (الاتحاد الأفريقي)"
+  },
+  "en": {
+   "description": "An African-led effort to restore land across the Sahel. A 2020 UN status report counted about 4 million hectares restored inside the Great Green Wall zone."
+  },
+  "es": {
+   "description": "Un esfuerzo liderado por África para restaurar tierras en el Sahel. Un informe de la ONU de 2020 contó unos 4 millones de hectáreas restauradas en su zona."
+  },
+  "fr": {
+   "description": "Un effort mené par l’Afrique pour restaurer les terres du Sahel. Un rapport de l’ONU de 2020 comptait environ 4 millions d’hectares restaurés dans sa zone."
+  },
+  "it": {
+   "description": "Un’iniziativa guidata dall’Africa per ripristinare le terre del Sahel. Un rapporto ONU del 2020 contava circa 4 milioni di ettari ripristinati nella sua area."
+  }
+ },
+ "Homeschool.html": {
+  "ar": {
+   "description": "مسار مجاني بلا تسجيل للعائلات التي تعلّم أبناءها في المنزل: ما الذي تستخدمه في كل عمر، وخطة من 12 أسبوعًا، ونسخة قابلة للطباعة.",
+   "title": "علوم الفضاء والطيران في التعليم المنزلي، 5–18 عامًا"
+  },
+  "en": {
+   "title": "Homeschool Space and Flight Science, Ages 5–18"
+  },
+  "es": {
+   "description": "Un camino gratis y sin registro para familias que educan en casa: qué usar en cada edad, un plan de 12 semanas y una versión para imprimir.",
+   "title": "Ciencia del espacio y el vuelo en casa, de 5 a 18 años"
+  },
+  "fr": {
+   "description": "Un parcours gratuit, sans inscription, pour l’instruction en famille : quoi utiliser à chaque âge, un plan de 12 semaines et une version à imprimer.",
+   "title": "Sciences de l’espace et du vol à la maison, 5–18 ans"
+  },
+  "it": {
+   "description": "Un percorso gratuito e senza registrazione per chi fa scuola a casa: cosa usare a ogni età, un piano di 12 settimane e una versione da stampare.",
+   "title": "Scienze dello spazio e del volo a casa, 5–18 anni"
+  }
+ },
+ "Kids_Map.html": {
+  "it": {
+   "description": "Una mappa giocosa del nostro pianeta per bambini: tocca Oceani, Foreste, Laghi, Fiumi, Spazio e altro per un fatto sorprendente e soluzioni vere.",
+   "title": "Mappa del pianeta per bambini"
+  }
+ },
+ "Lake_Erie_Algal_Bloom_Forecast.html": {
+  "es": {
+   "title": "Pronóstico de algas nocivas del lago Erie (NOAA)"
+  },
+  "fr": {
+   "title": "Prévision des algues nuisibles du lac Érié (NOAA)"
+  },
+  "it": {
+   "title": "Previsione delle alghe dannose del lago Erie (NOAA)"
+  }
+ },
+ "Lakes.html": {
+  "ar": {
+   "title": "حلول البحيرات: انتشال البلاستيك من البحيرات"
+  },
+  "en": {
+   "title": "Lake Solutions: Recovering Plastic From Lakes"
+  },
+  "es": {
+   "title": "Soluciones para lagos: recuperar el plástico"
+  },
+  "fr": {
+   "title": "Solutions pour les lacs : récupérer le plastique"
+  },
+  "it": {
+   "title": "Soluzioni per i laghi: recuperare la plastica"
+  }
+ },
+ "Learn.html": {
+  "ar": {
+   "description": "دروس مجانية من مستوى الأطفال حتى الدكتوراه في ثلاثة مسارات: الميكانيكا المدارية وهندسة الطيران والفيزياء، مع شرح الرياضيات خطوة بخطوة.",
+   "title": "تعلّم الميكانيكا المدارية والطيران والفيزياء"
+  },
+  "en": {
+   "title": "Learn Orbital Mechanics, Aeronautics and Physics"
+  },
+  "es": {
+   "description": "Cursos gratis, de niños a doctorado, en tres itinerarios: mecánica orbital, ingeniería aeronáutica y física, con las matemáticas explicadas paso a paso.",
+   "title": "Aprende mecánica orbital, aeronáutica y física"
+  },
+  "fr": {
+   "description": "Des cours gratuits, des enfants au doctorat, en trois parcours : mécanique orbitale, génie aéronautique et physique, avec les maths expliquées pas à pas.",
+   "title": "Apprendre : mécanique orbitale, aéronautique, physique"
+  },
+  "it": {
+   "description": "Lezioni gratuite, dai bambini al dottorato, in tre percorsi: meccanica orbitale, ingegneria aeronautica e fisica, con la matematica spiegata passo dopo passo.",
+   "title": "Impara meccanica orbitale, aeronautica e fisica"
+  }
+ },
+ "LeoLabs.html": {
+  "en": {
+   "description": "LeoLabs runs a global network of ground radars that track satellites and debris in low Earth orbit and turn the data into collision warnings."
+  },
+  "fr": {
+   "title": "LeoLabs : radars de circulation pour l’orbite basse"
+  },
+  "it": {
+   "title": "LeoLabs: radar del traffico per l’orbita bassa"
+  }
+ },
+ "Oceans.html": {
+  "ar": {
+   "title": "حلول المحيطات: تنظيف البلاستيك الآن"
+  },
+  "en": {
+   "title": "Ocean Solutions: Plastic Cleanup That Works Now"
+  },
+  "es": {
+   "title": "Soluciones para los océanos: limpiar el plástico"
+  },
+  "fr": {
+   "title": "Solutions pour les océans : nettoyer le plastique"
+  },
+  "it": {
+   "title": "Soluzioni per gli oceani: ripulire la plastica"
+  }
+ },
+ "Orbit_Lab.html": {
+  "ar": {
+   "description": "مختبر المدارات التفاعلي: خطّط لمناورة هوهمان أو لرفع المدار حول الأرض بفيزياء معادلة vis-viva الحقيقية، مع رسوم متحركة وسهولة في الوصول.",
+   "title": "مختبر المدارات: محاكي مناورة هوهمان"
+  },
+  "en": {
+   "title": "Orbit Lab: Hohmann Transfer Simulator"
+  },
+  "es": {
+   "description": "Orbit Lab interactivo: planifica una transferencia de Hohmann o una subida de altitud alrededor de la Tierra con física vis-viva real, animada y accesible.",
+   "title": "Orbit Lab: simulador de transferencia de Hohmann"
+  },
+  "fr": {
+   "description": "Orbit Lab interactif : planifiez un transfert de Hohmann ou une hausse d’altitude autour de la Terre avec la vraie physique vis-viva, animée et accessible.",
+   "title": "Orbit Lab : simulateur de transfert de Hohmann"
+  },
+  "it": {
+   "description": "Orbit Lab interattivo: pianifica un trasferimento di Hohmann o un innalzamento di quota attorno alla Terra con la vera fisica vis-viva, animata e accessibile.",
+   "title": "Orbit Lab: simulatore di trasferimento di Hohmann"
+  }
+ },
+ "Orbit_Math.html": {
+  "ar": {
+   "description": "من أول معادلة مدارية إلى مسألة لامبرت: اشتقاقات وأمثلة محلولة وتمارين، من السنة الجامعية الأولى حتى الدكتوراه، مجانًا وبخمس لغات."
+  },
+  "en": {
+   "description": "From your first orbit equation to Lambert’s problem: derivations, worked examples and practice problems, freshman to PhD, free and in five languages."
+  },
+  "es": {
+   "description": "De tu primera ecuación de órbita al problema de Lambert: deducciones, ejemplos resueltos y ejercicios, desde el primer año de universidad hasta el doctorado."
+  },
+  "fr": {
+   "description": "De la première équation d’orbite au problème de Lambert : démonstrations, exemples résolus et exercices, de la première année de licence au doctorat."
+  },
+  "it": {
+   "description": "Dalla prima equazione dell’orbita al problema di Lambert: derivazioni, esempi svolti ed esercizi, dal primo anno di università fino al dottorato."
+  }
+ },
+ "Orbits_Guide.html": {
+  "ar": {
+   "description": "لماذا لا تسقط الأقمار الصناعية، وما سرعتها، وكيف تغيّر الصواريخ مداراتها، بلغة بسيطة تناسب الأطفال والمراهقين وطلاب الجامعة.",
+   "title": "شرح المدارات: لماذا لا تسقط الأقمار الصناعية"
+  },
+  "en": {
+   "description": "Why satellites don’t fall down, how fast they go, and how rockets change orbits, in plain language for kids, teens and college students.",
+   "title": "Orbits Explained: Why Satellites Don’t Fall"
+  },
+  "es": {
+   "description": "Por qué los satélites no se caen, a qué velocidad van y cómo los cohetes cambian de órbita, en lenguaje sencillo, de niños a universitarios.",
+   "title": "Las órbitas explicadas: por qué no caen los satélites"
+  },
+  "fr": {
+   "description": "Pourquoi les satellites ne tombent pas, à quelle vitesse ils vont et comment les fusées changent d’orbite, en langage simple, des enfants aux étudiants.",
+   "title": "Les orbites : pourquoi les satellites ne tombent pas"
+  },
+  "it": {
+   "description": "Perché i satelliti non cadono, quanto vanno veloci e come i razzi cambiano orbita, in parole semplici, dai bambini agli studenti universitari.",
+   "title": "Le orbite spiegate: perché i satelliti non cadono"
+  }
+ },
+ "Physics_Lab.html": {
+  "ar": {
+   "description": "مختبر الفيزياء التفاعلي: مقذوف مع سحب تربيعي (RK4)، ومذبذب مخمَّد مع القيم الذاتية ومنحنى الاستجابة، والدورة الدقيقة للبندول.",
+   "title": "مختبر الفيزياء: المقذوف والمذبذب والبندول"
+  },
+  "en": {
+   "title": "Physics Lab: Projectile Drag, Oscillator and Pendulum"
+  },
+  "es": {
+   "description": "Physics Lab interactivo: proyectil con arrastre cuadrático (RK4), oscilador amortiguado con valores propios y su respuesta, y periodo exacto del péndulo.",
+   "title": "Physics Lab: proyectil, oscilador y péndulo"
+  },
+  "fr": {
+   "description": "Physics Lab interactif : projectile avec traînée quadratique (RK4), oscillateur amorti avec valeurs propres et courbe de réponse, et période exacte du pendule.",
+   "title": "Physics Lab : projectile, oscillateur et pendule"
+  },
+  "it": {
+   "description": "Physics Lab interattivo: proiettile con resistenza quadratica (RK4), oscillatore smorzato con autovalori e grafico di risposta, e periodo esatto del pendolo.",
+   "title": "Physics Lab: proiettile, oscillatore e pendolo"
+  }
+ },
+ "Play_and_Learn.html": {
+  "ar": {
+   "title": "العب وتعلّم: ألعاب وأنشطة عن الكوكب للأطفال"
+  },
+  "en": {
+   "title": "Play & Learn: Planet Games and Activities for Kids"
+  },
+  "es": {
+   "description": "Juegos y actividades sobre nuestro planeta para niños: el Mapa del planeta, Detecta el fuego desde el espacio, el Explorador de satélites y Datos asombrosos.",
+   "title": "Juega y aprende: juegos del planeta para niños"
+  },
+  "fr": {
+   "description": "Jeux et activités sur la planète pour enfants : la carte de la planète, Repérer un feu depuis l’espace, l’Explorateur de satellites et les Faits étonnants.",
+   "title": "Jouer et apprendre : jeux sur la planète pour enfants"
+  },
+  "it": {
+   "description": "Giochi e attività sul nostro pianeta per bambini: la Mappa del pianeta, Avvista l’incendio dallo spazio, l’Esploratore di satelliti e i Fatti incredibili.",
+   "title": "Gioca e impara: giochi sul pianeta per bambini"
+  }
+ },
+ "Projectile_Motion_Drag_Calculator.html": {
+  "en": {
+   "description": "Real balls do not follow a perfect parabola: air drag shortens the range and lowers the peak. A free projectile motion calculator with air resistance."
+  },
+  "fr": {
+   "title": "Calculateur de projectile avec résistance de l’air"
+  }
+ },
+ "Rivers.html": {
+  "ar": {
+   "title": "حلول الأنهار: التقاط البلاستيك قبل البحر"
+  },
+  "en": {
+   "title": "River Solutions: Catching Plastic Before the Sea"
+  },
+  "es": {
+   "title": "Soluciones para ríos: frenar el plástico antes del mar"
+  },
+  "fr": {
+   "title": "Solutions pour les rivières : stopper le plastique"
+  },
+  "it": {
+   "title": "Soluzioni per i fiumi: fermare la plastica prima del mare"
+  }
+ },
+ "Satellite_Explorer.html": {
+  "en": {
+   "description": "An interactive satellite explorer: drag the parts of a satellite into place, then learn about laser links and computing in orbit, from K-3 to university."
+  },
+  "es": {
+   "description": "Un explorador de satélites interactivo: arrastra las piezas de un satélite a su lugar y descubre la comunicación láser y la computación en órbita."
+  },
+  "fr": {
+   "description": "Un explorateur de satellites interactif : placez les pièces d’un satellite, puis découvrez la communication laser et le calcul en orbite."
+  },
+  "it": {
+   "description": "Un esploratore di satelliti interattivo: trascina le parti di un satellite al loro posto e scopri la comunicazione laser e il calcolo in orbita.",
+   "title": "Esploratore di satelliti"
+  }
+ },
+ "Search.html": {
+  "ar": {
+   "description": "ابحث في كل صفحات Saving Planets: حلول للمحيطات والبحيرات والأنهار والغابات والفضاء، ودروس في المدارات والطيران والفيزياء، وحقائق مدهشة.",
+   "title": "ابحث في Saving Planets: حلول ودروس وحقائق"
+  },
+  "en": {
+   "description": "Search every Saving Planets page in one place: ocean, lake, river, forest and space solutions, plus lessons in orbital mechanics, aeronautics and physics.",
+   "title": "Search Saving Planets: Solutions, Lessons and Facts"
+  },
+  "es": {
+   "description": "Busca en todas las páginas de Saving Planets: soluciones para océanos, lagos, ríos, bosques y el espacio, y lecciones de órbitas, aeronáutica y física.",
+   "title": "Buscar en Saving Planets: soluciones y lecciones"
+  },
+  "fr": {
+   "description": "Cherchez dans tout Saving Planets : solutions pour les océans, lacs, rivières, forêts et l’espace, et cours d’orbites, d’aéronautique et de physique.",
+   "title": "Rechercher sur Saving Planets : solutions et cours"
+  },
+  "it": {
+   "description": "Cerca in tutte le pagine di Saving Planets: soluzioni per oceani, laghi, fiumi, foreste e spazio, e lezioni di meccanica orbitale, aeronautica e fisica.",
+   "title": "Cerca su Saving Planets: soluzioni e lezioni"
+  }
+ },
+ "Sitemap.html": {
+  "ar": {
+   "description": "كل الأقسام والحلول في Saving Planets في قائمة واحدة، من المحيطات والبحيرات والأنهار والغابات إلى الفضاء ورصد الأرض، لتصل إلى أي صفحة بسرعة.",
+   "title": "خريطة الموقع: كل صفحات Saving Planets"
+  },
+  "en": {
+   "description": "Every hub and solution on Saving Planets in one list, from oceans, lakes, rivers and forests to space and Earth observation, so you can find any page fast.",
+   "title": "Site Map: Every Saving Planets Hub and Solution"
+  },
+  "es": {
+   "description": "Todas las secciones y soluciones de Saving Planets en una sola lista, de los océanos, lagos, ríos y bosques al espacio y la observación de la Tierra.",
+   "title": "Mapa del sitio: todo Saving Planets"
+  },
+  "fr": {
+   "description": "Toutes les rubriques et solutions de Saving Planets en une seule liste, des océans, lacs, rivières et forêts à l’espace et à l’observation de la Terre.",
+   "title": "Plan du site : toutes les pages de Saving Planets"
+  },
+  "it": {
+   "description": "Tutte le sezioni e le soluzioni di Saving Planets in un solo elenco, da oceani, laghi, fiumi e foreste fino allo spazio e all’osservazione della Terra.",
+   "title": "Mappa del sito: tutto Saving Planets"
+  }
+ },
+ "Space.html": {
+  "ar": {
+   "description": "الفضاء جزء من بيئة الأرض. حلول للمدار: الإزالة النشطة للحطام الفضائي، وخدمة الأقمار الصناعية في المدار بشكل مستدام، ومراكز البيانات المدارية.",
+   "title": "حلول الفضاء: إزالة الحطام والخدمة في المدار"
+  },
+  "en": {
+   "description": "Space is part of Earth’s environment. Solutions for orbit: active debris removal, sustainable in-orbit servicing and orbital data centers, each with sources.",
+   "title": "Space Solutions: Debris Removal and In-Orbit Servicing"
+  },
+  "es": {
+   "description": "El espacio es parte del entorno de la Tierra. Para la órbita: retirada activa de basura espacial, servicios en órbita sostenibles y centros de datos orbitales.",
+   "title": "Soluciones espaciales: basura y servicios en órbita"
+  },
+  "fr": {
+   "description": "L’espace fait partie de l’environnement de la Terre. Pour l’orbite : retrait actif des débris, services en orbite durables et centres de données orbitaux.",
+   "title": "Solutions spatiales : débris et services en orbite"
+  },
+  "it": {
+   "description": "Lo spazio fa parte dell’ambiente terrestre. Per l’orbita: rimozione attiva dei detriti, servizi in orbita sostenibili e data center orbitali, con le fonti.",
+   "title": "Soluzioni spaziali: detriti e servizi in orbita"
+  }
+ },
+ "Space_Disposal.html": {
+  "en": {
+   "description": "Space Disposal: the missions that capture and remove legacy debris from orbit, led by Astroscale's ADRAS-J2 for JAXA, with a source for every figure."
+  }
+ },
+ "Ways_to_Help.html": {
+  "ar": {
+   "description": "تبرّع أو انضمّ إلى من يقومون بالعمل، من تنظيف المحيطات والأنهار إلى زراعة الأشجار. لا يقبل Saving Planets التبرعات ولا يتلقى أي جزء من هذه الأموال.",
+   "title": "طرق المساعدة: ادعم من يقومون بالعمل"
+  },
+  "en": {
+   "description": "Give to, or join, the people doing the work, from ocean and river cleanups to tree planting. Saving Planets doesn’t take donations or receive any of the money.",
+   "title": "Ways to Help: Give to or Join the People Doing the Work"
+  },
+  "es": {
+   "description": "Dona o súmate a quienes hacen el trabajo, desde limpiar océanos y ríos hasta plantar árboles. Saving Planets no acepta donaciones ni recibe parte del dinero.",
+   "title": "Formas de ayudar: apoya a quienes hacen el trabajo"
+  },
+  "fr": {
+   "description": "Donnez ou engagez-vous auprès de ceux qui font le travail, du nettoyage des océans et des rivières à la plantation d’arbres. Saving Planets ne reçoit aucun don.",
+   "title": "Comment aider : soutenir ceux qui agissent"
+  },
+  "it": {
+   "description": "Dona o unisciti a chi fa il lavoro, dalla pulizia di oceani e fiumi alla piantumazione di alberi. Saving Planets non accetta donazioni e non riceve denaro.",
+   "title": "Come aiutare: sostieni chi fa il lavoro"
+  }
+ }
+}
