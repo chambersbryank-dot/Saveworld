@@ -23,16 +23,48 @@ async function sha(s) { const b = await crypto.subtle.digest('SHA-256', new Text
 const neurons = (r) => (r && r.usage && Number(r.usage.neurons)) || 0;
 const unsafe = (r) => /\bunsafe\b/i.test(String((r && (r.response ?? r)) || ''));
 
+
+// Oct 16: privacy-safe aggregate events (Workers Analytics Engine dataset sp_events). Strict allowlist, no free text,
+// no IP / user agent / page URL / identifiers written. Rate limit key is a salted hash used only in memory (never stored).
+const EV = {
+  lab: { tool: ['orbit', 'aero', 'phys'] },
+  learn: { track: ['orbit', 'aero', 'phys', 'all'], kind: ['hub', 'guide', 'math', 'lab'] },
+  practice: { track: ['orbit', 'aero', 'phys'], result: ['attempt', 'correct'], topic: /^[a-z0-9-]{1,32}$/ },
+  newsletter: {},
+  partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'] },
+};
+function evWrite(env, name, lang, a = '', b = '', c = '') {
+  try { if (env.EVENTS) env.EVENTS.writeDataPoint({ indexes: [name], blobs: [name, lang, a, b, c], doubles: [1] }); } catch (e) { /* never break a request */ }
+}
+async function events(req, env, h) {
+  if (!h['Access-Control-Allow-Origin']) return new Response(null, { status: 403 });
+  const ip = req.headers.get('CF-Connecting-IP') || '0.0.0.0';
+  if (!(await env.RL_EV.limit({ key: await sha(env.IP_SALT + '|ev|' + ip) })).success) return new Response(null, { status: 429, headers: h });
+  let body; try { const t = await req.text(); if (t.length > 3000) throw 0; body = JSON.parse(t); } catch { return new Response(null, { status: 400, headers: h }); }
+  const lang = LANGS.includes(body.l) ? body.l : 'en', list = Array.isArray(body.e) ? body.e.slice(0, 20) : [];
+  let n = 0;
+  for (const it of list) {
+    if (!it || typeof it !== 'object' || !Object.prototype.hasOwnProperty.call(EV, it.n)) continue;
+    const spec = EV[it.n], keys = Object.keys(spec), vals = [];
+    let ok = true;
+    for (const k of keys) { const v = String(it[k] ?? ''), r = spec[k]; if (Array.isArray(r) ? !r.includes(v) : !r.test(v)) { ok = false; break; } vals.push(v); }
+    if (!ok) continue;
+    evWrite(env, it.n, lang, ...vals); n++;
+  }
+  return new Response(null, { status: 204, headers: { ...h, 'Cache-Control': 'no-store' } });
+}
+
 export default {
   async fetch(req, env) {
     const url = new URL(req.url), origin = req.headers.get('Origin') || '', h = cors(origin, env);
     if (req.method === 'OPTIONS') return new Response(null, { status: h['Access-Control-Allow-Origin'] ? 204 : 403, headers: h });
     if (url.pathname === '/health') return out({ ok: true, service: 'si-helper', pilot: true }, 200, {});
+    if (url.pathname === '/e' && req.method === 'POST') return events(req, env, h);
     if (url.pathname !== '/ask' || req.method !== 'POST') return out({ error: 'not found' }, 404, h);
     if (!h['Access-Control-Allow-Origin']) return out({ error: 'origin' }, 403, {});
     let body; try { const t = await req.text(); if (t.length > 4000) throw 0; body = JSON.parse(t); } catch { return out({ error: 'bad request' }, 400, h); }
     const lang = LANGS.includes(body.lang) ? body.lang : 'en', q = String(body.q || '').replace(/\s+/g, ' ').trim();
-    const say = (k, extra = {}) => out({ status: k, answer: MSG[k][lang], sources: k === 'none' ? fallbackLinks(lang) : [], ...extra }, 200, h);
+    const say = (k, extra = {}) => (evWrite(env, 'si', lang, k), out({ status: k, answer: MSG[k][lang], sources: k === 'none' ? fallbackLinks(lang) : [], ...extra }, 200, h));
     if (q.length < 3 || q.length > 400) return out({ error: 'length' }, 400, h);
     if (PII.test(q)) return say('pii');
     const ip = req.headers.get('CF-Connecting-IP') || '0.0.0.0';
@@ -72,6 +104,7 @@ export default {
       const g2 = await env.AI.run('@cf/meta/llama-guard-3-8b', { messages: [{ role: 'user', content: q }, { role: 'assistant', content: ans }], max_tokens: 16 }); used += neurons(g2);
       await settle();
       if (unsafe(g2)) return say('unsafe');
+      evWrite(env, 'si', lang, 'ok');
       return out({ status: 'ok', answer: ans, sources: src }, 200, h);
     } catch (e) { await settle().catch(() => {}); return say('error'); }
   },
