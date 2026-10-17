@@ -27,6 +27,7 @@ for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
     tr = re.search(r'<details class="video-transcript">(.*?)</details>', b, re.S)
     desc = re.search(r'<meta name="description" content="([^"]*)"', s)
     name = re.sub(r'^[^:：]{2,12}[:：]\s*', '', clean(h2.group(1)))
+    if name[:1].islower(): name = name[0].upper() + name[1:]  # Oct 16: 'Video: satelliti che…' -> 'Satelliti che…'
     ld = {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': name, 'description': html.unescape(desc.group(1)) if desc else name,
           'contentUrl': src.group(1) if src.group(1).startswith('http') else SITE + src.group(1), 'inLanguage': lang, 'isFamilyFriendly': True,
           'publisher': {'@type': 'Organization', 'name': 'Saving Planets', 'url': SITE.rstrip('/')}, 'creditText': 'Created by SI and Biological SI Partner'}
@@ -37,7 +38,7 @@ for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
     if d: ld['duration'] = d
     if tr: ld['transcript'] = clean(re.sub(r'<summary>.*?</summary>', '', tr.group(1), flags=re.S))
     tag = '<script type="application/ld+json" id="sp-video-ld">' + json.dumps(ld, ensure_ascii=False) + '</script>'
-    t = re.sub(r'\n?<script type="application/ld\+json" id="sp-video-ld">.*?</script>', '', s, flags=re.S)
+    t = re.sub(r'\n?<script (?:type="application/ld\+json" id="sp-video-ld"|id="sp-video-ld" type="application/ld\+json")>.*?</script>', '', s, flags=re.S)  # Oct 16: either attribute order (i18n-build reorders them; left a stale English copy on translated pages)
     t = t.replace('</head>', tag + '\n</head>', 1)
     if t != s: open(f, 'w', encoding='utf-8').write(t); n += 1
 print(f'add-video-schema: {n} pages updated')
