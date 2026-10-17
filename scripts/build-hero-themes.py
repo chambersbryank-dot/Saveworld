@@ -26,6 +26,11 @@ CSS = ('<style>.hero .hero-space{display:none}.hero[data-hero=space] .hero-media
        'background:radial-gradient(60% 46% at 50% 50%,rgba(1,6,16,.62) 0%,rgba(1,6,16,.38) 55%,rgba(1,6,16,0) 100%),'
        'linear-gradient(180deg,rgba(0,20,40,.45) 0%,rgba(0,20,40,0) 22%,rgba(0,20,40,0) 78%,rgba(0,20,40,.55) 100%)}'
        '.hero[data-hero=space] .hero-welcome,.hero[data-hero=space] .hero-kicker{text-shadow:0 2px 18px rgba(0,0,0,.75)}'
+       # Oct 16 7:05 PM: SI credit at the hero's inline-start corner (bottom-left LTR, bottom-right RTL), away from the
+       # floating Help / Donate button (.sticky-help sits at inset-inline-end), on a dark pill so it reads on any frame.
+       '.hero .hero-video-credit{right:auto;left:auto;inset-inline-start:.8rem;inset-inline-end:auto;bottom:.75rem;z-index:1;'
+       'max-width:calc(100% - 13rem);padding:.22rem .6rem;border-radius:999px;background:rgba(0,10,22,.74);'
+       'color:rgba(255,255,255,.94);font-size:.75rem;line-height:1.3;text-shadow:none}'
        '@media (prefers-reduced-motion:reduce){.hs-neb{transition:none}}</style>')
 
 def chooser():
