@@ -1404,8 +1404,7 @@ html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:4
 .sp-lb .sp-lb-stay:hover{background:rgba(143,211,255,.12)}
 .sp-lb .sp-lb-x{background:transparent;color:#cfe9ff;border:0;padding:0;font-size:1.4rem}
 .sp-lb a:focus-visible,.sp-lb button:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
-html.sp-has-lb body{padding-top:var(--sp-lb-h,0px)}
-@keyframes sp-lb-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes sp-lb-in{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.sp-lb-in{animation:none}}
 @media print{.sp-lb{display:none}}
 /* LANGBANNER:END */

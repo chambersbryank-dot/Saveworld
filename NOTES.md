@@ -477,3 +477,18 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
 ## Oct 16, 2026 (7:50 PM HST): "four languages" → five in translations
 - scripts/fix-language-count.py (weekly-sync, after build-cohost): only entries whose English key says five languages (partner text, Project Rawane, Corrections, About video summary). Patches i18n/fr|es|ar.json memory, trust-content.py (FR Corrections), built fr/es/ar pages and a11y.json. IT had none; EN has none.
 - Left on purpose: About video description "the homepage in four languages" (EN source says four, describing what the video shows), and the comment "all four languages" in search/search-ui.js (code comment only).
+## Oct 16 2026, 7:36 PM HST — language banner CLS 0, hero adaptive quality
+- Language-suggestion banner (scripts/build-langbanner.py) is now a pure overlay: fixed under the nav with its existing
+  transform/opacity slide-in; the `html.sp-has-lb body{padding-top}` rule that pushed the whole page down (CLS ~0.059 on
+  /ar/ and every mismatched-locale visit) is gone. It fires window `sp-lb` on show/close.
+- Hero caption (assets/hero-themes.js placeCaption) treats the banner as an obstacle and re-places on `sp-lb`; a caption
+  that must move is hidden for two frames during the move so the move is not a layout shift.
+- Measured CLS 0.0000 on index.html in all 5 languages x {1280x800, 820x1180, 1180x820, 390x844} x {space, earth}, with a
+  mismatched browser locale so the banner shows; no overlap banner/caption/credit/Help-Donate.
+- Phones (<=480px): credit pill max-width calc(100% - 16rem) — the French credit touched the 13rem Help/Donate pill at 390px.
+- STYLEV 20261016Y (styles.css + site.js). Applied with build-ux.py's bump_styles regex only: running all of build-ux.py by
+  itself reverts later generators (glass tint, news strip), it must run in weekly-sync order.
+- Adaptive quality: if the smoothed frame time stays > 40 ms for 3 s (after a 2 s warm-up), level 1 then level 2 render the
+  ground + ice-jet canvases at 70% / 50% of devicePixelRatio (floor 0.75) and draw 60% / 40% of the jet particles. Stars,
+  Saturn, Earth and Sun keep full resolution. Fast devices never drop (1280x800 stays level 0 at 16.5 ms). Headless
+  SwiftShader iPad 820x1180@2x: 74 ms -> 31 ms per frame; 1180x820@2x: 59 -> 38-40 ms. `__heroSpace.quality()` reports it.

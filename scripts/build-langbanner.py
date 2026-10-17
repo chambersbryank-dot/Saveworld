@@ -2,8 +2,10 @@
 """Oct 16 (user, 6:34 PM): site-wide language-suggestion banner. Appends a marker block to site.js and styles.css.
 Shows only when the browser's preferred language (navigator.languages; en, fr, es, ar, it) differs from the page language
 AND the page lists a translated <link rel="alternate" hreflang>. Text is in the suggested language (Arabic RTL). Never
-redirects. The choice is remembered in localStorage only (no cookies, no events). Hidden in ?embed=1 mode. Sits fixed
-under the nav and pads <body> by its height so nothing (incl. the Search page's floating questions) slides under it."""
+redirects. The choice is remembered in localStorage only (no cookies, no events). Hidden in ?embed=1 mode.
+Oct 16 7:36 PM: it is now a pure overlay (fixed under the nav, transform/opacity slide-in), it no longer pads <body>, so it
+causes no layout shift (CLS was ~0.059). It dispatches window 'sp-lb' on show/close so the homepage hero caption can move
+out of its way (assets/hero-themes.js)."""
 import os, re
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 def rd(p): return open(p, encoding='utf8').read()
@@ -24,8 +26,7 @@ CSS = r"""
 .sp-lb .sp-lb-stay:hover{background:rgba(143,211,255,.12)}
 .sp-lb .sp-lb-x{background:transparent;color:#cfe9ff;border:0;padding:0;font-size:1.4rem}
 .sp-lb a:focus-visible,.sp-lb button:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
-html.sp-has-lb body{padding-top:var(--sp-lb-h,0px)}
-@keyframes sp-lb-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes sp-lb-in{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.sp-lb-in{animation:none}}
 @media print{.sp-lb{display:none}}
 /* LANGBANNER:END */
@@ -54,11 +55,12 @@ b.querySelector('.sp-lb-msg').textContent=T[0];var g=b.querySelector('.sp-lb-go'
 b.querySelector('.sp-lb-stay').textContent=T[2];b.querySelector('.sp-lb-x').setAttribute('aria-label',T[3]);
 var nav=document.getElementById('topnav');
 function place(){var t=nav?Math.max(0,nav.getBoundingClientRect().bottom):0;d.style.setProperty('--sp-lb-top',t+'px');d.style.setProperty('--sp-lb-h',b.offsetHeight+'px')}
-function close(){save('stay');b.remove();d.classList.remove('sp-has-lb');d.style.removeProperty('--sp-lb-h');if(nav){var f=nav.querySelector('a,button');f&&f.focus({preventScroll:true})}}
+function ping(){try{window.dispatchEvent(new Event('sp-lb'))}catch(e){}}
+function close(){save('stay');b.remove();d.classList.remove('sp-has-lb');d.style.removeProperty('--sp-lb-h');ping();if(nav){var f=nav.querySelector('a,button');f&&f.focus({preventScroll:true})}}
 g.addEventListener('click',function(){save('go')});
 b.querySelector('.sp-lb-stay').addEventListener('click',close);b.querySelector('.sp-lb-x').addEventListener('click',close);
 function show(){if(!document.body)return;if(nav&&nav.parentNode)nav.parentNode.insertBefore(b,nav.nextSibling);else document.body.insertBefore(b,document.body.firstChild);
-d.classList.add('sp-has-lb');place();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}
+d.classList.add('sp-has-lb');place();ping();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
 }catch(e){}})();
 /* LANGBANNER:END */

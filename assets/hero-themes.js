@@ -128,8 +128,13 @@
   // ---------- layout ----------
   var W = 0, H = 0, D = 1, hY = 0, FOC = 0, sprites = {};
   var SAT = {}, EAR = {}, SUN = {};
-  function sizeCanvas(c, w, h, x, y) { c.width = Math.round(w * D); c.height = Math.round(h * D); c.style.width = w + 'px'; c.style.height = h + 'px';
-    c.style.left = (x || 0) + 'px'; c.style.top = (y || 0) + 'px'; if (c === cGround) return null; var g = c.getContext('2d'); g.setTransform(D, 0, 0, D, 0, 0); return g; }
+  // Adaptive quality (battery saver): QL rises 0 -> 1 -> 2 only when the smoothed frame time stays above 40 ms for 3 s.
+  // Level 1/2 render the ground and ice-jet canvases at 70% / 50% of the device pixel ratio (never below 0.75) and draw
+  // 60% / 40% of the jet particles. Fast devices never leave level 0, so they keep full quality.
+  var QL = 0, QS = [1, 0.7, 0.5], QN = [1, 0.6, 0.4];
+  function qd() { return Math.max(0.75, D * QS[QL]); }
+  function sizeCanvas(c, w, h, x, y) { var k = (c === cGround || c === cFx) ? qd() : D; c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.width = w + 'px'; c.style.height = h + 'px';
+    c.style.left = (x || 0) + 'px'; c.style.top = (y || 0) + 'px'; if (c === cGround) return null; var g = c.getContext('2d'); g.setTransform(k, 0, 0, k, 0, 0); return g; }
   function sprite(r, rgb) { var key = r + rgb; if (sprites[key]) return sprites[key];
     var s = Math.ceil(r * 4) * 2 + 2, c = document.createElement('canvas'); c.width = c.height = s;
     var x = c.getContext('2d'), m = s / 2, g = x.createRadialGradient(m, m, 0, m, m, r * 4);
@@ -220,14 +225,22 @@
   // Caption goes at the inline-start bottom corner above the credit; if that would touch the hero text, the Help button
   // or the language banner (short landscape screens), it moves to the inline-start top corner just under the nav.
   function hit(a, b) { return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top; }
+  var capKey = '';
   function placeCaption() {
-    if (!caps.length) return; var was = hero.classList.contains('hs-captop'); hero.classList.remove('hs-captop');
-    var obs = [].map.call(hero.querySelectorAll('.hero-content > *, .sticky-help, .sp-lb-in'), function (e) { return e.getBoundingClientRect(); }).filter(function (q) { return q.width > 0; });
+    if (!caps.length) return; hero.classList.remove('hs-captop');
+    var q0 = [].slice.call(hero.querySelectorAll('.hero-content > *, .sticky-help')).concat([].slice.call(document.querySelectorAll('.sp-lb-in')));
+    var obs = q0.map(function (e) { return e.getBoundingClientRect(); }).filter(function (q) { return q.width > 0; });
     var bad = function () { return caps.some(function (c) { var q = c.getBoundingClientRect(); return obs.some(function (o) { return hit(q, o); }); }); };
-    if (!bad()) { hero.classList.add('hs-placed'); return; }
-    var hr = hero.getBoundingClientRect(), top = 0;
-    [].forEach.call(document.querySelectorAll('#topnav, .sp-lb-in'), function (e) { var q = e.getBoundingClientRect(); if (q.height) top = Math.max(top, q.bottom - hr.top); });
-    hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop', 'hs-placed');
+    var key = 'b', top = 0;
+    if (bad()) { var hr = hero.getBoundingClientRect();
+      [].forEach.call(document.querySelectorAll('#topnav, .sp-lb-in'), function (e) { var q = e.getBoundingClientRect(); if (q.height) top = Math.max(top, q.bottom - hr.top); });
+      key = 't' + Math.round(top + 12); hero.style.setProperty('--hs-captop', Math.round(top + 12) + 'px'); hero.classList.add('hs-captop'); }
+    // A caption that is already showing and has to move (e.g. the language banner appeared under the nav) is hidden for
+    // two frames while it moves, so the move is never a layout shift (CLS stays 0).
+    if (hero.classList.contains('hs-placed') && key !== capKey) { hero.classList.remove('hs-placed');
+      requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add('hs-placed'); }); }); }
+    else hero.classList.add('hs-placed');
+    capKey = key;
   }
   function setup() {
     tok++; sprites = {};
@@ -281,7 +294,7 @@
         var zw = n * 3 + STRIPE_C + wob(((xw / TILE) % 1 + 1) % 1, s) * TILE - scroll; if (zw < 5 || zw > 56) continue;
         var fz = FOC / zw, bx = cx + xw * fz, by = hY + curvA * (bx - cx) * (bx - cx) + camH * fz;
         if (bx < -200 || bx > W + 200) continue;
-        var fa = alpha * sstep(56, 40, zw) * sstep(7, 12, zw), Hj = 4 + 4 * hash(n, m + 3), N = 44, rate = 0.16 + 0.06 * hash(n, m + 5);
+        var fa = alpha * sstep(56, 40, zw) * sstep(7, 12, zw), Hj = 4 + 4 * hash(n, m + 3), N = Math.round(44 * QN[QL]), rate = 0.16 + 0.06 * hash(n, m + 5);
         // faint narrow column of fine grains, brightest near the vent, fading with height
         var top = by - Hj * fz, hz = x.createLinearGradient(0, by, 0, top); hz.addColorStop(0, 'rgba(220,238,255,' + (0.34 * fa) + ')');
         hz.addColorStop(0.35, 'rgba(210,232,255,' + (0.08 * fa) + ')'); hz.addColorStop(1, 'rgba(210,232,255,0)');
@@ -310,22 +323,28 @@
     if (glOk) {
       gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
       gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, texA); gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, texB);
-      gl.uniform2f(U.res, cGround.width, cGround.height); gl.uniform1f(U.mixT, mixT); gl.uniform1f(U.hY, hY * D); gl.uniform1f(U.f, FOC * D);
-      gl.uniform1f(U.camH, camH); gl.uniform1f(U.scroll, scroll % TILE); gl.uniform1f(U.curv, (curvA + (curvB - curvA) * mixT) / D);
-      gl.uniform1f(U.tile, TILE); gl.uniform1f(U.dpr, D); gl.uniform1f(U.top, gTop * D);
+      var G = cGround.width / W;
+      gl.uniform2f(U.res, cGround.width, cGround.height); gl.uniform1f(U.mixT, mixT); gl.uniform1f(U.hY, hY * G); gl.uniform1f(U.f, FOC * G);
+      gl.uniform1f(U.camH, camH); gl.uniform1f(U.scroll, scroll % TILE); gl.uniform1f(U.curv, (curvA + (curvB - curvA) * mixT) / G);
+      gl.uniform1f(U.tile, TILE); gl.uniform1f(U.dpr, G); gl.uniform1f(U.top, gTop * G);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     }
-    var x = cFx.getContext('2d'); x.setTransform(D, 0, 0, D, 0, 0); x.clearRect(0, 0, W, H);
+    var x = cFx.getContext('2d'), F = cFx.width / W; x.setTransform(F, 0, 0, F, 0, 0); x.clearRect(0, 0, W, H);
     drawJets(x, scroll, camH, (1 - mixT) * (glOk ? 1 : 0), tGlide);
     var sc = mixT < 0.5 ? 0 : 1;
     caps.forEach(function (c, i) { var on = i === sc; if (c.classList.contains('on') !== on) c.classList.toggle('on', on); });
   }
 
-  var raf = 0, onScreen = true, nFrames = 0;
-  function loop(now) { raf = 0; nFrames++; var dt = Math.min(0.1, (now - last) / 1000); last = now; tGlide += dt;
+  var raf = 0, onScreen = true, nFrames = 0, ema = 0, slowT = 0, warm = 0;
+  function quality(rawDt) { // rawDt in s; skip the first 2 s after (re)start (texture build, tab resume)
+    if ((warm += rawDt) < 2 || QL >= 2) return; ema = ema ? ema * 0.9 + rawDt * 0.1 : rawDt;
+    slowT = ema > 0.04 ? slowT + rawDt : 0;
+    if (slowT >= 3) { QL++; slowT = 0; ema = 0;
+      sizeCanvas(cGround, W, H - gTop, 0, gTop); sizeCanvas(cFx, W, H); if (glOk) gl.viewport(0, 0, cGround.width, cGround.height); } }
+  function loop(now) { raf = 0; nFrames++; var raw = (now - last) / 1000, dt = Math.min(0.1, raw); last = now; tGlide += dt; quality(Math.min(raw, 0.25));
     var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += dt; frame(false); if (running()) raf = requestAnimationFrame(loop); }
   function running() { return !reduced && onScreen && !document.hidden; }
-  function kick() { if (running() && !raf) { last = performance.now(); raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
+  function kick() { if (running() && !raf) { last = performance.now(); warm = 0; slowT = 0; ema = 0; raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
   // Keep the current scene (and its caption) while a caption is hovered or focused, so it never vanishes under the pointer or focus.
   caps.forEach(function (c) { ['mouseenter', 'focus'].forEach(function (e) { c.addEventListener(e, function () { hold = true; }); });
     ['mouseleave', 'blur'].forEach(function (e) { c.addEventListener(e, function () { hold = false; }); }); });
@@ -341,7 +360,8 @@
   tScene = q ? +q[1] : (reduced ? 8 : 0); tGlide = tScene;
   setup(); frame(true); kick();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { var o = hY; setup(); if (hY !== o || !running()) frame(true); });
-  setTimeout(placeCaption, 1500); // after the language banner (if any) has appeared
-  window.__heroSpace = { frames: function () { return nFrames; }, size: function () { return { W: W, H: H, D: D, gl: glOk }; },
+  window.addEventListener('sp-lb', function () { setTimeout(placeCaption, 50); }); // language banner shown/closed
+  setTimeout(placeCaption, 1500);
+  window.__heroSpace = { frames: function () { return nFrames; }, quality: function () { return { level: QL, ground: cGround.width + "x" + cGround.height, fx: cFx.width + "x" + cFx.height }; }, size: function () { return { W: W, H: H, D: D, gl: glOk }; },
     seek: function (t) { tScene = tGlide = t; frame(true); }, scene: function () { return sceneMix(tScene); } };
 })();

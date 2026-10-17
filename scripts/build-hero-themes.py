@@ -56,6 +56,8 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hs-caps{visibility:hidden}.hero:not(.hs-placed) .hs-cap{visibility:hidden!important}'  # hidden until placed, so moving it is not a layout shift
        '.hero[data-hero=space].hs-captop .hs-caps{bottom:auto;top:var(--hs-captop,96px)}.hs-captop .hs-cap{bottom:auto;top:0}'
        '@media (max-width:600px){.hero[data-hero=space] .hs-caps{bottom:5rem;width:calc(100% - 1.6rem)}}'
+       # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
+       '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
 
 def chooser():
