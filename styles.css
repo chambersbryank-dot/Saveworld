@@ -1255,7 +1255,6 @@ html.dark .az-nav{background:rgba(11,18,32,.95) !important}.az-nav{background:rg
 }
 @media (forced-colors:active){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help,a.help-btn,.aud-icon,.eli10-icon,.share-btn,.nav-toggle,.edu-bubble.glass,.t-chip,.dt-btn{border:1px solid ButtonText !important;forced-color-adjust:auto}}
 /* LG-HARDEN:END */
-
 /* UX-OCT15:START */
 .nav-links{gap:1.1rem}
 .nav-group details{position:relative}

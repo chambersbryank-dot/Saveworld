@@ -22,8 +22,8 @@ window.SP_SEARCH_STARTED = true;
     a.href = '?q=' + encodeURIComponent(a.textContent.trim());
     a.addEventListener('click', e => { e.preventDefault(); input.value = a.textContent.trim(); track(input.value); input.focus(); go(); });
   });
-  // GA4 'search' event (gtag + Consent Mode already on every page); sent on submit and on question/example clicks
-  const track = q => { try { if (q && window.gtag) window.gtag('event', 'search', { search_term: q.slice(0, 100) }); } catch (e) { /* ignore */ } };
+  // Oct 16: GA removed site-wide; no search analytics.
+  const track = () => {};  // Oct 16: GA removed; search text is never sent anywhere (COPPA)
   input.closest('form')?.addEventListener('submit', e => { e.preventDefault(); input.blur(); track(input.value.trim()); go(); });
 
   // floating example questions (search/featured-questions.json, per language)
@@ -116,7 +116,6 @@ window.SP_SEARCH_STARTED = true;
     if (empty) empty.hidden = items.length > 0;
     lastItems = items; shown = Math.max(shown, 5);
     paint();
-    if (!items.length && window.spTrack) spTrack('search_no_results', { search_term: q.slice(0, 100) });
     status.textContent = !items.length ? msg('none')
       : items.length + ' ' + msg(items.length === 1 ? 'result' : 'results') + (kwr.partial && !usedSem ? ' · ' + msg('partial') : '');
   }

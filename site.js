@@ -16,6 +16,7 @@
 })();
 (function () {
   var root = document.documentElement;
+  try { localStorage.removeItem('sp_consent'); } catch (e) {} // Oct 16: GA + consent banner removed
   root.classList.add('dark'); // site is permanently dark
   var nav = document.getElementById('topnav');
   if (nav) {
@@ -362,7 +363,6 @@ var t=P.length,lv=n>=t?3:n>=3?2:n>=1?1:0;w.querySelector('.pl-count').textConten
 document.addEventListener('DOMContentLoaded',function(){draw();var r=document.querySelector('.pl-reset');if(r)r.addEventListener('click',function(){put({});draw()})});
 window.addEventListener('pageshow',draw)})();
 /* PLAY:END */
-
 /* UX-OCT15:START */
 (function(){
   document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});

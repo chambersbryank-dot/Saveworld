@@ -4,7 +4,7 @@
 # Exit non-zero if a check fails. Commit + push only if `git status --porcelain` shows changes.
 # Roman: build-roman.py refreshes assets/data/roman.json (JPL Horizons distance + newest NASA image) before the builds.
 # Batch 4: build-batch4.py renders Do One Thing Today from assets/data/daily-actions.json (edit there), Community + Find a Cleanup pages, nav/footer links.
-# GA4: add-gtag.py injects the G-M5L2259Z68 tag after <head> on every page (idempotent, Consent Mode).
+# Analytics: build-analytics.py (Oct 16) strips GA4/consent.js remnants and adds the cookie-free Cloudflare Web Analytics beacon + Privacy text.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 scripts/build-roman.py || echo "build-roman failed (kept previous data)"
@@ -21,7 +21,7 @@ python3 scripts/build-site-extras.py        # footer site map, Sitemap.html, <ma
 python3 scripts/build-batch-a.py   # Batch A (Oct 12): share bar, Last reviewed + sources, Related Solutions (from last semantic index), difference strip
 python3 scripts/build-edu.py               # Oct 14: Kids Map, Lesson Builder, Satellite Explorer + edu.<lang>.json + links
 python3 scripts/a11y-pass.py              # Oct 14: specific img alts, video captions (WebVTT) + transcripts, i18n memory
-python3 scripts/add-gtag.py
+python3 scripts/build-analytics.py
 python3 scripts/dept-contacts.py         # Oct 14: EN department blocks before translation
 python3 scripts/disable-community.py
 python3 scripts/build-fivews.py          # Oct 15: sourced Five W's for Roman + tsunami horizon tools (EN + i18n strings)
@@ -30,7 +30,7 @@ python3 scripts/i18n-build.py
 # (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.
 node scripts/i18n-check.js | tail -3
 python3 scripts/a11y-pass.py --translated # point caption tracks at fr/es/ar/it
-python3 scripts/add-gtag.py
+python3 scripts/build-analytics.py
 python3 scripts/apply-heroes.py           # Oct 14: themed page heroes (all langs)
 python3 scripts/optimize-images.py        # Oct 14: WebP srcset for homepage cards (all langs)
 python3 scripts/add-video-schema.py       # Oct 14: VideoObject JSON-LD (all langs)
@@ -57,6 +57,7 @@ python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teache
 node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
 python3 scripts/build-nav.py            # Oct 16: header nav v2 (two rows, dropdowns, mobile accordion); LAST page generator so copied pages get correct nav
+python3 scripts/build-analytics.py      # Oct 16: again after the late generators (Cloudflare beacon on every page, no GA, Privacy/About analytics text)
 python3 scripts/build-report-link.py    # Oct 15: Report a correction footer link (all langs) -> GitHub issue form
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
