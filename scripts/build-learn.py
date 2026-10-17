@@ -9,9 +9,9 @@ import re, os, sys, json, glob, shutil, datetime, subprocess, importlib.util
 sys.path.insert(0, 'scripts')
 spec = importlib.util.spec_from_file_location('sf', 'scripts/build-spotfire.py'); sf = importlib.util.module_from_spec(spec); spec.loader.exec_module(sf)
 SITE, LANGS, d, rd, wr, esc = sf.SITE, sf.LANGS, sf.d, sf.rd, sf.wr, sf.esc
-import learn_calc, learn_orbit_math as OM, learn_text as LT, learn_extras as LX, aero_calc, learn_aero as LA
-V = '20261016N'  # cache version for learn.css / orbit-lab.js / katex
-PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html']
+import learn_calc, learn_orbit_math as OM, learn_text as LT, learn_extras as LX, aero_calc, learn_aero as LA, phys_calc, learn_phys as LP
+V = '20261016P'  # cache version for learn.css / orbit-lab.js / katex
+PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html']
 LV = dict(LT.LEVELS)
 def ex_values():
     e = dict(learn_calc.examples())
@@ -20,6 +20,7 @@ def ex_values():
         for i in range(3): e[f'{k}_{i}'] = float(e[k][i])
     x = learn_calc.extras(); e.update({k: v for k, v in x.items() if k != 'k2_rows'})
     a = aero_calc.examples(); assert not set(a) & set(e); e.update(a)
+    assert phys_calc.checks(); ph = phys_calc.examples(); assert not set(ph) & set(e); e.update(ph)
     e['a_eta30_pct'] = e['a_eta30'] * 100; e['a_T11C'] = e['a_T11'] - 273.15
     return {k: float(v) for k, v in e.items() if not isinstance(v, list)}
 K2 = learn_calc.extras()['k2_rows']
@@ -122,10 +123,12 @@ def learn_hub(l):
              f'<li><a href="{h("Orbit_Lab.html")}">{esc(H["lab"][l])}</a></li></ul></li>')
     aero = (f'<li class="ltrack"><span class="lstat">{esc(H["live"][l])}</span><h3>{esc(H["aero"][l])}</h3><p>{esc(H["aero_d"][l])}</p><ul>'
             + ''.join(f'<li><a href="{h(p)}">{esc(LA.NAV_ITEMS[p][l])}</a></li>' for p in ('Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html')) + '</ul></li>')
+    phys = (f'<li class="ltrack"><span class="lstat">{esc(H["live"][l])}</span><h3>{esc(H["phys"][l])}</h3><p>{esc(H["phys_d"][l])}</p><ul>'
+            + ''.join(f'<li><a href="{h(p)}">{esc(LP.NAV_ITEMS[p][l])}</a></li>' for p in ('Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html')) + '</ul></li>')
     soon = lambda k: (f'<li class="ltrack"><span class="lstat soon">{esc(H["soon"][l])}</span><h3>{esc(H[k][l])}</h3><p>{esc(H[k + "_d"][l])}</p>'
                       f'<p class="lnote">{esc(H[k + "_topics"][l])}</p></li>')
     main = (hero(H['title'][l], H['kicker'][l]) + '<div class="lw">'
-            f'<h2>{esc(H["tracks"][l])}</h2><ul class="ltracks">{orbit}{aero}{soon("phys")}</ul>'
+            f'<h2>{esc(H["tracks"][l])}</h2><ul class="ltracks">{orbit}{aero}{phys}</ul>'
             f'<h2>{esc(H["levels"][l])}</h2>{chips([k for k, _ in LT.LEVELS], l)}'
             f'<h2>{esc(H["std"][l])}</h2><ul>' + ''.join(f'<li>{esc(x[l])}</li>' for x in H['std_items']) + '</ul>'
             f'<h2>{esc(H["teach"][l])}</h2><p>{esc(H["teach_t"][l])}</p><ul><li><a href="{h("Teachers.html")}">Teachers</a></li><li><a href="{h("Lesson_Builder.html")}">Lesson Builder</a></li></ul></div>\n')
@@ -191,7 +194,9 @@ TRACKS = {
   'orbit': dict(S=OM.S, UI=OM.UI, REFS=OM.REFS, CONSTS=None, TIME=LX.TIME, ELI=LX.ELI, MCQ=LX.MCQ, TEACH=LX.TEACH, DEEPER=LX.DEEPER, TRACK=LX.LBL['track'],
                 page='Orbit_Math.html', guide='Orbits_Guide.html', gtitle=LT.GUIDE['title'], lab='Orbit_Lab.html'),
   'aero': dict(S=LA.S, UI={**OM.UI, **LA.UI}, REFS=LA.REFS, CONSTS=LA.CONSTS, TIME=LA.TIME, ELI=None, MCQ=LA.MCQ, TEACH=LA.TEACH, DEEPER=LA.DEEPER, TRACK=LA.TRACK,
-               page='Aero_Math.html', guide='Aero_Guide.html', gtitle=LA.GUIDE['title'], lab='Aero_Lab.html')}
+               page='Aero_Math.html', guide='Aero_Guide.html', gtitle=LA.GUIDE['title'], lab='Aero_Lab.html'),
+  'phys': dict(S=LP.S, UI={**OM.UI, **LP.UI}, REFS=LP.REFS, CONSTS=LP.CONSTS, TIME=LP.TIME, ELI=None, MCQ=LP.MCQ, TEACH=LP.TEACH, DEEPER=LP.DEEPER, TRACK=LP.TRACK,
+               page='Physics_Math.html', guide='Physics_Guide.html', gtitle=LP.GUIDE['title'], lab='Physics_Lab.html')}
 def math_page(l, K, tk='orbit'):
     R = TRACKS[tk]; U = R['UI']; toc = ''; body = ''; B = LX.LBL
     for s in R['S']:
@@ -225,14 +230,29 @@ def math_page(l, K, tk='orbit'):
     main = (hero(U['title'][l], U['kicker'][l]) + f'<div class="lw">{filt}<nav aria-label="{esc(U["contents"][l])}"><h2>{esc(U["contents"][l])}</h2><ol class="ltoc">{toc}</ol></nav>'
             f'{consts}<p><a href="{sf.href(l, R["lab"])}">{esc(U["tryit"][l])}</a></p>{body}{cyu(l, R["MCQ"])}<h2>{esc(B["deeper"][l])}</h2><p>{esc(R["DEEPER"][l])}</p><h2>{esc(B["teach"][l])}</h2><p>{esc(R["TEACH"][l])}</p>{allrefs}</div>\n')
     return shell(l, R['page'], U['title'][l], U['kicker'][l], main, extra_head=katex_head(l), tail=f'<script>{FILTER_JS}</script>\n<script src="{"" if l == "en" else "../"}assets/learn.js?v={V}" defer></script>\n')
-def aero_guide(l):
-    G = LA.GUIDE; secs = ''
+def aero_guide(l, M=LA, page='Aero_Guide.html', math='Aero_Math.html', labp='Aero_Lab.html'):
+    G = M.GUIDE; secs = ''
     for i, (lv, t, body, q, a) in enumerate(G['sections']):
         secs += (f'<section id="g{i+1}"><h2>{tx(t, l)}</h2>{chips([lv], l)}<p>{tx(body, l)}</p>'
                  f'<details><summary>{esc(LT.GUIDE["q"][l])}: {tx(q, l)}</summary><p>{tx(a, l)}</p></details></section>\n')
-    main = (hero(G['title'][l], G['kicker'][l]) + f'<div class="lw">{secs}<p class="lbox ex"><a href="{sf.href(l, "Aero_Math.html")}">{esc(G["next"][l])}</a> \u00b7 '
-            f'<a href="{sf.href(l, "Aero_Lab.html")}">{esc(LA.UI["tryit"][l])}</a></p></div>\n')
-    return shell(l, 'Aero_Guide.html', G['title'][l], G['desc'][l], main)
+    main = (hero(G['title'][l], G['kicker'][l]) + f'<div class="lw">{secs}<p class="lbox ex"><a href="{sf.href(l, math)}">{esc(G["next"][l])}</a> \u00b7 '
+            f'<a href="{sf.href(l, labp)}">{esc(M.UI["tryit"][l])}</a></p></div>\n')
+    return shell(l, page, G['title'][l], G['desc'][l], main)
+def phys_lab(l, K):
+    L = LP.LAB; pre = '' if l == 'en' else '../'; g = lambda k: esc(L[k][l])
+    tr = {k: L[k][l] for k in ('proj_out', 'osc_out', 'under', 'crit', 'over', 'undamp', 'pend_out', 'bad')}
+    inp = lambda n, lab, v: f'<label>{lab}<input name="{n}" type="text" inputmode="decimal" dir="ltr" autocomplete="off" value="{v}"></label>'
+    rng = lambda n, lab, lo, hi, st, v: f'<label>{lab} <output dir="ltr" for="pl-{n}">{v}</output><input id="pl-{n}" name="{n}" type="range" min="{lo}" max="{hi}" step="{st}" value="{v}"></label>'
+    form = (f'<div id="ol" class="al" data-t="{esc(json.dumps(tr, ensure_ascii=False))}">'
+            f'<section id="pl-proj"><h2>{g("proj")}</h2><form class="al-f" novalidate>{inp("v0", g("v0"), 40)}{inp("ang", g("ang"), 35)}{inp("m", g("mass"), 0.145)}{inp("d", g("dia"), 0.074)}{inp("cd", g("cd"), 0.35)}'
+            f'<button type="submit">{g("calc")}</button></form><p class="ol-out" role="status" aria-live="polite"></p><canvas width="640" height="320" role="img" aria-label="{g("proj_plot")}"></canvas></section>'
+            f'<section id="pl-osc"><h2>{g("osc")}</h2><form class="al-f" novalidate>{rng("wn", g("wn"), 0.5, 10, 0.1, 4)}{rng("z", g("z"), 0, 2, 0.01, 0.25)}</form>'
+            f'<p class="ol-out" role="status" aria-live="polite"></p><canvas width="640" height="260" role="img" aria-label="{g("osc_plot")}"></canvas></section>'
+            f'<section id="pl-pend"><h2>{g("pend")}</h2><form class="al-f" novalidate>{inp("L", g("len"), 1)}{inp("a", g("amp"), 60)}<button type="submit">{g("calc")}</button></form>'
+            f'<p class="ol-out" role="status" aria-live="polite"></p></section></div>')
+    how = ''.join(f'<div class="leq" dir="ltr">{K[e]}</div>' for e in LP.LAB_EQ) + f'<p>{g("how")}</p><p><a href="{sf.href(l, "Physics_Math.html")}">{g("learn")}</a></p>'
+    main = hero(L['title'][l], L['kicker'][l]) + f'<div class="lw">{form}{how}</div>\n'
+    return shell(l, 'Physics_Lab.html', L['title'][l], L['desc'][l], main, extra_head=katex_head(l), tail=f'<script src="{pre}assets/phys-lab.js?v={V}" defer></script>\n')
 def aero_lab(l, K):
     L = LA.LAB; pre = '' if l == 'en' else '../'; g = lambda k: esc(L[k][l])
     tr = {k: L[k][l] for k in ('stall_out', 'sp_out', 'lvl1', 'lvlx', 'unst', 'rot_out', 'bad')}
@@ -279,16 +299,17 @@ def xlinks(l):
         blk = f'<!-- LEARNLINK:START --><aside class="learn-link card-band" aria-label="{esc(XT["h"][l])}"><h2>{esc(XT["h"][l])}</h2><p>{esc(XT[k][l])} {links}</p></aside><!-- LEARNLINK:END -->'
         s = s.replace('</main>', blk + '</main>', 1); ch += wr(p, s)
     return ch
-LINK_PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Lab.html']
+LINK_PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Lab.html']
 if __name__ == '__main__':
     global_tex = LAB_EQ + CONSTS
-    tl = [t for s in OM.S + LA.S for t, _ in s['steps']] + global_tex + LA.CONSTS + LA.LAB_EQ
+    tl = [t for s in OM.S + LA.S + LP.S for t, _ in s['steps']] + global_tex + LA.CONSTS + LA.LAB_EQ + LP.CONSTS + LP.LAB_EQ
     K = dict(zip(tl, json.loads(subprocess.run(['node', 'scripts/katex-render.cjs'], input=json.dumps(tl), capture_output=True, text=True, check=True).stdout)))
     ch = vendor()
     for l in LANGS:
         ch += wr(d(l) + 'Learn.html', learn_hub(l)); ch += wr(d(l) + 'Orbits_Guide.html', guide(l))
         ch += wr(d(l) + 'Orbit_Math.html', math_page(l, K)); ch += wr(d(l) + 'Orbit_Lab.html', lab(l, K))
         ch += wr(d(l) + 'Aero_Guide.html', aero_guide(l)); ch += wr(d(l) + 'Aero_Math.html', math_page(l, K, 'aero')); ch += wr(d(l) + 'Aero_Lab.html', aero_lab(l, K))
+        ch += wr(d(l) + 'Physics_Guide.html', aero_guide(l, LP, 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html')); ch += wr(d(l) + 'Physics_Math.html', math_page(l, K, 'phys')); ch += wr(d(l) + 'Physics_Lab.html', phys_lab(l, K))
     for l in LANGS: ch += xlinks(l)
     s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:

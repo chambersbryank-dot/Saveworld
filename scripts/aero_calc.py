@@ -59,3 +59,13 @@ def examples():
     return X
 if __name__ == '__main__':
     for k, v in examples().items(): print(k, round(v, 6))
+def bemt(sigma, a, theta_deg, cd0):  # combined blade-element momentum theory, hover, uniform inflow, linear twist-free, theta at 0.75R (Leishman ch. 3)
+    th = math.radians(theta_deg); lam = sigma * a / 16 * (math.sqrt(1 + 64 * th / (3 * sigma * a)) - 1)
+    CT = sigma * a / 2 * (th / 3 - lam / 2); CPi = CT ** 1.5 / math.sqrt(2); CPo = sigma * cd0 / 8
+    return dict(lam=lam, CT=CT, CPi=CPi, CPo=CPo, CP=CPi + CPo, FM=CPi / (CPi + CPo))
+_ex0 = examples
+def examples():
+    X = _ex0(); b = bemt(0.08, 5.73, 8.0, 0.011); X.update({'a_b' + k: v for k, v in b.items()})
+    X['a_bchk'] = math.sqrt(b['CT'] / 2)  # must equal a_blam
+    b2 = bemt(0.08, 5.73, 10.0, 0.011); X['a_b2CT'] = b2['CT']; X['a_b2FM'] = b2['FM']
+    return X

@@ -15,11 +15,11 @@ HUB = {
              'Tres itinerarios, seis niveles: desde la primera pregunta de un niño sobre las órbitas hasta deducciones de nivel de investigación. Las matemáticas se enseñan dentro de cada itinerario, paso a paso.',
              'ثلاثة مسارات وستة مستويات: من أول سؤال لطفل عن المدارات إلى اشتقاقات بمستوى البحث العلمي. تُدرَّس الرياضيات داخل كل مسار خطوة بخطوة.',
              'Tre percorsi, sei livelli: dalla prima domanda di un bambino sulle orbite alle dimostrazioni di livello di ricerca. La matematica è insegnata dentro ogni percorso, passo dopo passo.'),
- 'desc': T('Free orbital mechanics lessons from kids to PhD: plain-language guide, step-by-step derivations with worked examples and practice, and an interactive Orbit Lab; plus aeronautical engineering from how wings lift to stability and rotorcraft. Physics track coming next.',
-           'Cours gratuits de mécanique orbitale, des enfants au doctorat : guide simple, démonstrations pas à pas avec exemples résolus et exercices, et un Orbit Lab interactif ; et l\u2019ingénierie aéronautique, de la portance des ailes à la stabilité et aux giravions. Parcours physique à venir.',
-           'Lecciones gratuitas de mecánica orbital, de niños a doctorado: guía sencilla, deducciones paso a paso con ejemplos resueltos y práctica, y un Orbit Lab interactivo; además, ingeniería aeronáutica, de la sustentación del ala a la estabilidad y los helicópteros. Próximamente, física.',
-           'دروس مجانية في الميكانيكا المدارية من الأطفال إلى الدكتوراه: دليل مبسّط واشتقاقات خطوة بخطوة مع أمثلة محلولة وتمارين ومختبر مدارات تفاعلي؛ إضافة إلى هندسة الطيران من رفع الأجنحة إلى الاستقرار والطائرات العمودية. مسار الفيزياء قريبًا.',
-           'Lezioni gratuite di meccanica orbitale dai bambini al dottorato: guida semplice, dimostrazioni passo dopo passo con esempi svolti ed esercizi, e un Orbit Lab interattivo; inoltre ingegneria aeronautica, dalla portanza delle ali alla stabilità e agli elicotteri. In arrivo il percorso di fisica.'),
+ 'desc': T('Free lessons from kids to PhD in three tracks: orbital mechanics, aeronautical engineering and physics. Plain-language guides, step-by-step derivations with worked examples and auto-checked practice, and interactive labs.',
+           'Cours gratuits des enfants au doctorat en trois parcours : mécanique orbitale, ingénierie aéronautique et physique. Guides simples, démonstrations pas à pas avec exemples résolus et exercices corrigés automatiquement, et labos interactifs.',
+           'Lecciones gratuitas de niños a doctorado en tres itinerarios: mecánica orbital, ingeniería aeronáutica y física. Guías sencillas, deducciones paso a paso con ejemplos resueltos y práctica con corrección automática, y laboratorios interactivos.',
+           'دروس مجانية من الأطفال إلى الدكتوراه في ثلاثة مسارات: الميكانيكا المدارية وهندسة الطيران والفيزياء. أدلة مبسطة واشتقاقات خطوة بخطوة مع أمثلة محلولة وتمارين بتصحيح تلقائي ومختبرات تفاعلية.',
+           'Lezioni gratuite dai bambini al dottorato in tre percorsi: meccanica orbitale, ingegneria aeronautica e fisica. Guide semplici, dimostrazioni passo dopo passo con esempi svolti ed esercizi a correzione automatica, e laboratori interattivi.'),
  'tracks': T('Tracks', 'Parcours', 'Itinerarios', 'المسارات', 'Percorsi'),
  'live': T('Available now', 'Disponible', 'Disponible', 'متاح الآن', 'Disponibile'),
  'soon': T('Coming next', 'Bientôt', 'Próximamente', 'قريبًا', 'In arrivo'),
@@ -149,3 +149,5 @@ NAV_ITEMS = {'Learn.html': T('🎓 Learn: all tracks', '🎓 Apprendre : tous le
              'Orbit_Lab.html': LAB['title']}
 import learn_aero as _LA
 NAV_ITEMS.update(_LA.NAV_ITEMS)
+import learn_phys as _LP
+NAV_ITEMS.update(_LP.NAV_ITEMS)

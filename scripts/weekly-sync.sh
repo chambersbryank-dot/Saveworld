@@ -53,6 +53,7 @@ python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (
 python3 scripts/build-learn.py           # Oct 16 Phase 1 education: Learn hub (3 tracks), Orbits_Guide, Orbit_Math (KaTeX at build), Orbit_Lab (all langs)
 node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails the sync on error)
 if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
+node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
 python3 scripts/build-report-link.py    # Oct 15: Report a correction footer link (all langs) -> GitHub issue form
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
