@@ -421,3 +421,4 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
 - Usage: scripts/r2_usage.py (GraphQL r2OperationsAdaptiveGroups / r2StorageAdaptiveGroups; storage falls back to a live listing while analytics lag), appended to the weekly events-report.py summary. Free tier: 10 GB-month, 1M Class A, 10M Class B; egress free.
 - Token lacks Zone > Cache Purge (purge API returned Authentication error); not needed with hashed names.
 - No CSS/JS changed, so no ?v= bumps. Email setup (MX, Email Routing) untouched.
+- 6:59 PM HST: after live pages were verified playing from R2 (Chromium + WebKit, iPad Pro 11 emulation, EN/FR/ES/AR/IT), the 8 .mp4 files were removed from assets/videos/ with git rm (history kept, no rewrite). Re-add videos only via scripts/r2-upload.py, never into the repo.
