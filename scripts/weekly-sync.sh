@@ -69,6 +69,7 @@ python3 scripts/build-embed.py         # Oct 16: Embed button + ?embed=1 minimal
 python3 scripts/build-learn-standards.py  # Oct 16: NGSS/CCSS/AP/IB chips + educationalAlignment on Learn pages and calculators, Learn hub filter
 python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search bar + floating example questions + credits only (all langs)
 python3 scripts/build-langbanner.py      # Oct 16: language-suggestion banner (site.js + styles.css; localStorage only, never redirects)
+python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-audit.py | tail -3
