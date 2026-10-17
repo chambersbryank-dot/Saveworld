@@ -473,3 +473,7 @@ ocw.mit.edu/courses/16-07-dynamics-fall-2009 · ocw.mit.edu/courses/16-346-astro
   search/student-qa.json (build-student-qa.py) is merged in when present, active topic first. Search and SI stay separate.
   Chips: "Liquid Glass" (blur + saturate, tint, inner highlight, specular edge, static sheen, solid fallback) and a gentle
   transform-only 8px orbit, paused on hover/focus, static under reduced motion. To add a topic: one entry in search_topics.py.
+
+## Oct 16, 2026 (7:50 PM HST): "four languages" → five in translations
+- scripts/fix-language-count.py (weekly-sync, after build-cohost): only entries whose English key says five languages (partner text, Project Rawane, Corrections, About video summary). Patches i18n/fr|es|ar.json memory, trust-content.py (FR Corrections), built fr/es/ar pages and a11y.json. IT had none; EN has none.
+- Left on purpose: About video description "the homepage in four languages" (EN source says four, describing what the video shows), and the comment "all four languages" in search/search-ui.js (code comment only).
