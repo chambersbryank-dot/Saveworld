@@ -44,6 +44,26 @@ def label(l, key, i):
     if i == 'SI_Helper.html': return X[l]['si']
     return t['items'][i]
 
+# Oct 16 (user): sub-items alphabetical by displayed label in each language; Start-here entries + Careers stay pinned at the
+# top of their dropdown as a group, in this order. Collation without ICU (weekly sync has no extra deps): leading emoji and
+# punctuation ignored, accents folded (primary-strength, like fr/it/es/ar locale collation), Spanish ñ after n, Arabic
+# hamza/alef forms folded. Articles are not stripped (raw label).
+PINNED = ['Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
+def sort_key(l, lab):
+    import unicodedata
+    t = html.unescape(re.sub('<[^>]+>', '', lab))
+    t = re.sub(r'^[^\w]+', '', t)
+    if l == 'es': t = t.replace('ñ', 'n\uffff').replace('Ñ', 'N\uffff')
+    if l == 'ar':
+        t = re.sub('[أإآٱ]', 'ا', t).replace('ى', 'ي')
+        if re.match('[A-Za-z]', t): t = '\uffff' + t  # ICU ar order: Arabic script before Latin
+    t = ''.join(c for c in unicodedata.normalize('NFKD', t) if not unicodedata.combining(c))
+    return t.casefold()
+def sort_items(l, key, items):
+    pin = [i for i in PINNED if i in items]
+    rest = sorted((i for i in items if i not in pin), key=lambda i: sort_key(l, label(l, key, i)))
+    return pin + rest
+
 def gname(l, key):
     return {'sol': T[l]['sol'], 'space': T[l]['items']['Space.html'], 'le': LT.NAV[l], 'kids': X[l]['kids'], 'teach': X[l]['teachers'], 'ab': T[l]['ab']}[key]
 
@@ -64,6 +84,7 @@ def nav(l, page, brand_href, brand_txt):
     main = []
     for key, items in GROUPS:
         cur = any(i.split('#')[0] == page for i in items if '#' not in i)
+        items = sort_items(l, key, items)
         lis = ''.join(f'<li><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{label(l, key, i)}</a></li>' for i in items)
         main.append(f'<li class="spn-dd{" is-current" if cur else ""}"><button type="button" class="spn-trig" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></button>'
                     f'<ul class="spn-sub" id="spn-{key}">{lis}</ul></li>')
