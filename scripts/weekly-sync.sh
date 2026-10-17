@@ -76,6 +76,8 @@ python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search b
 python3 scripts/build-langbanner.py      # Oct 16: language-suggestion banner (site.js + styles.css; localStorage only, never redirects)
 python3 scripts/build-lcp.py            # Oct 16: preload the page-hero background WebP (fetchpriority=high) on shared-hero pages (all langs)
 python3 scripts/r2-cards.py             # Oct 16: again after i18n-build so translated pages keep the card srcset
+python3 scripts/defer-sitejs.py         # Oct 16: site.js loads with defer (skips pages whose inline scripts call window.sp*)
+python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async stylesheets (cached per template; run after every head-touching generator)
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
