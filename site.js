@@ -382,10 +382,9 @@ function draw(){var g=document.querySelector('.pl-grid');if(!g)return;var o=get(
 var t=P.length,lv=n>=t?3:n>=3?2:n>=1?1:0;w.querySelector('.pl-count').textContent=w.dataset.prog.replace('{n}',n).replace('{t}',t);w.querySelector('.pl-level').textContent=(lv?'🏅 ':'🚀 ')+L[lv]}
 document.addEventListener('DOMContentLoaded',function(){draw();var r=document.querySelector('.pl-reset');if(r)r.addEventListener('click',function(){put({});draw()})});
 window.addEventListener('pageshow',draw)})();
-/* PLAY:END */
-/* SPNAV:START */
+/* PLAY:END *//* SPNAV:START */
 (function(){var n=document.getElementById('topnav');if(!n||!n.querySelector('.spn'))return;
-var tg=n.querySelector('.spn-toggle'),mq=window.matchMedia('(min-width:992px)'),hv=window.matchMedia('(hover:hover) and (pointer:fine)');
+var tg=n.querySelector('.spn-toggle'),mq=window.matchMedia('(min-width:1140px)'),hv=window.matchMedia('(hover:hover) and (pointer:fine)');
 var dds=[].slice.call(n.querySelectorAll('.spn-dd'));
 function set(li,o){li.classList.toggle('is-open',o);li.querySelector('.spn-trig').setAttribute('aria-expanded',o?'true':'false');if(!o)li.removeAttribute('data-hov')}
 function closeAll(x){dds.forEach(function(li){if(li!==x)set(li,false)})}
@@ -406,6 +405,27 @@ document.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Es
 var mqc=function(){panel(false)};if(mq.addEventListener)mq.addEventListener('change',mqc);else if(mq.addListener)mq.addListener(mqc);
 var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.pageYOffset||0)>24)}/* Oct 16 perf: pageYOffset needs no layout; first check after paint */
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});if(window.pageYOffset>24)requestAnimationFrame(sc);
+/* Oct 16 (t886) language slide switches: tap, drag/swipe (pointer events), Space/Enter, arrow toward 'on'. One on at a time;
+   turning one on goes to that language's version of this page, keeping ?query and #hash. RTL: on = thumb left (mirrored). */
+var rtl=(document.documentElement.getAttribute('dir')||'').toLowerCase()==='rtl',rm=window.matchMedia('(prefers-reduced-motion: reduce)');
+var lss=[].slice.call(n.querySelectorAll('.spn-ls'));
+function lurl(a){return (a.getAttribute('data-href0')||a.getAttribute('href')).replace(/[?#].*$/,'')+location.search+location.hash}
+function lgo(a){lss.forEach(function(x){x.setAttribute('aria-checked',x===a?'true':'false')});var u=lurl(a);setTimeout(function(){location.href=u},rm.matches?0:220)}
+window.spnLang=function(c){var a=n.querySelector('.spn-ls[data-lang="'+c+'"]');if(!a||a.getAttribute('aria-current'))return false;lgo(a);return true};
+lss.forEach(function(a,ix){var k=a.querySelector('.spn-ls-k'),st=null,moved=false,TR=16;
+ function on(){return a.getAttribute('aria-checked')==='true'}
+ a.addEventListener('pointerdown',function(e){if(e.button>0)return;moved=false;st={x:e.clientX,y:e.clientY,b:on()?TR:0,v:on()?TR:0,id:e.pointerId,act:false}});
+ a.addEventListener('pointermove',function(e){if(!st||e.pointerId!==st.id)return;var dx=e.clientX-st.x,dy=e.clientY-st.y;
+  if(!st.act){if(Math.abs(dx)<5)return;if(Math.abs(dy)>Math.abs(dx)){st=null;return}st.act=true;moved=true;a.classList.add('spn-drag');try{a.setPointerCapture(e.pointerId)}catch(_){}}
+  var v=Math.max(0,Math.min(TR,st.b+(rtl?-dx:dx)));st.v=v;k.style.setProperty('--spn-x',v+'px');a.classList.toggle('spn-half',v>TR/2);e.preventDefault()});
+ function end(e){if(!st)return;var s0=st;st=null;if(!s0.act)return;a.classList.remove('spn-drag','spn-half');k.style.removeProperty('--spn-x');
+  if(e.type==='pointerup'&&s0.v>TR/2&&!on())lgo(a)}
+ a.addEventListener('pointerup',end);a.addEventListener('pointercancel',end);a.addEventListener('dragstart',function(e){e.preventDefault()});
+ a.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;return}if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();if(!on())lgo(a)});
+ a.addEventListener('keydown',function(e){var K=e.key,fw=rtl?'ArrowLeft':'ArrowRight',bk=rtl?'ArrowRight':'ArrowLeft';
+  if(K===' '||K==='Spacebar'||K===fw){e.preventDefault();if(!on())lgo(a)}else if(K===bk){e.preventDefault()}
+  else if(K==='ArrowDown'||K==='ArrowUp'){e.preventDefault();var j=(ix+(K==='ArrowDown'?1:lss.length-1))%lss.length;lss[j].focus()}});
+});
 })();
 /* SPNAV:END */
 /* SPEV:START */
@@ -452,13 +472,13 @@ it:['Questa pagina è disponibile in italiano.','Vedi in italiano','Resta in '+N
 function save(v){st[cur+'>'+tgt]=v;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
 var b=document.createElement('div');b.className='sp-lb';b.setAttribute('role','region');b.setAttribute('aria-label',T[0]);b.lang=tgt;b.dir=tgt==='ar'?'rtl':'ltr';
 b.innerHTML='<div class="sp-lb-in"><p class="sp-lb-msg"></p><div class="sp-lb-btns"><a class="sp-lb-go"></a><button type="button" class="sp-lb-stay"></button><button type="button" class="sp-lb-x"><span aria-hidden="true">×</span></button></div></div>';
-b.querySelector('.sp-lb-msg').textContent=T[0];var g=b.querySelector('.sp-lb-go');g.textContent=T[1];g.href=alt.href+location.hash;g.hreflang=tgt;
+b.querySelector('.sp-lb-msg').textContent=T[0];var g=b.querySelector('.sp-lb-go');g.textContent=T[1];g.href=alt.href.replace(/[?#].*$/,'')+location.search+location.hash;g.hreflang=tgt;
 b.querySelector('.sp-lb-stay').textContent=T[2];b.querySelector('.sp-lb-x').setAttribute('aria-label',T[3]);
 var nav=document.getElementById('topnav');
 function place(){var t=nav?Math.max(0,nav.getBoundingClientRect().bottom):0;d.style.setProperty('--sp-lb-top',t+'px');d.style.setProperty('--sp-lb-h',b.offsetHeight+'px')}
 function ping(){try{window.dispatchEvent(new Event('sp-lb'))}catch(e){}}
 function close(){save('stay');b.remove();d.classList.remove('sp-has-lb');d.style.removeProperty('--sp-lb-h');ping();if(nav){var f=nav.querySelector('a,button');f&&f.focus({preventScroll:true})}}
-g.addEventListener('click',function(){save('go')});
+g.addEventListener('click',function(e){save('go');/* Oct 16 t886: switch the same way as the nav language switches (green toggle, keeps ?query/#hash) */if(!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&window.spnLang&&window.spnLang(tgt))e.preventDefault()});
 b.querySelector('.sp-lb-stay').addEventListener('click',close);b.querySelector('.sp-lb-x').addEventListener('click',close);
 function show(){if(!document.body)return;if(nav&&nav.parentNode)nav.parentNode.insertBefore(b,nav.nextSibling);else document.body.insertBefore(b,document.body.firstChild);
 d.classList.add('sp-has-lb');place();ping();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}

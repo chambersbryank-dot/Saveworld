@@ -5,7 +5,9 @@ AND the page lists a translated <link rel="alternate" hreflang>. Text is in the 
 redirects. The choice is remembered in localStorage only (no cookies, no events). Hidden in ?embed=1 mode.
 Oct 16 7:36 PM: it is now a pure overlay (fixed under the nav, transform/opacity slide-in), it no longer pads <body>, so it
 causes no layout shift (CLS was ~0.059). It dispatches window 'sp-lb' on show/close so the homepage hero caption can move
-out of its way (assets/hero-themes.js)."""
+out of its way (assets/hero-themes.js).
+Oct 16 (t886): "View in ..." keeps ?query + #hash and goes through window.spnLang (nav language switches), so the matching
+switch turns green before the page changes, exactly like using the nav."""
 import os, re
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 def rd(p): return open(p, encoding='utf8').read()
@@ -51,13 +53,13 @@ it:['Questa pagina è disponibile in italiano.','Vedi in italiano','Resta in '+N
 function save(v){st[cur+'>'+tgt]=v;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
 var b=document.createElement('div');b.className='sp-lb';b.setAttribute('role','region');b.setAttribute('aria-label',T[0]);b.lang=tgt;b.dir=tgt==='ar'?'rtl':'ltr';
 b.innerHTML='<div class="sp-lb-in"><p class="sp-lb-msg"></p><div class="sp-lb-btns"><a class="sp-lb-go"></a><button type="button" class="sp-lb-stay"></button><button type="button" class="sp-lb-x"><span aria-hidden="true">×</span></button></div></div>';
-b.querySelector('.sp-lb-msg').textContent=T[0];var g=b.querySelector('.sp-lb-go');g.textContent=T[1];g.href=alt.href+location.hash;g.hreflang=tgt;
+b.querySelector('.sp-lb-msg').textContent=T[0];var g=b.querySelector('.sp-lb-go');g.textContent=T[1];g.href=alt.href.replace(/[?#].*$/,'')+location.search+location.hash;g.hreflang=tgt;
 b.querySelector('.sp-lb-stay').textContent=T[2];b.querySelector('.sp-lb-x').setAttribute('aria-label',T[3]);
 var nav=document.getElementById('topnav');
 function place(){var t=nav?Math.max(0,nav.getBoundingClientRect().bottom):0;d.style.setProperty('--sp-lb-top',t+'px');d.style.setProperty('--sp-lb-h',b.offsetHeight+'px')}
 function ping(){try{window.dispatchEvent(new Event('sp-lb'))}catch(e){}}
 function close(){save('stay');b.remove();d.classList.remove('sp-has-lb');d.style.removeProperty('--sp-lb-h');ping();if(nav){var f=nav.querySelector('a,button');f&&f.focus({preventScroll:true})}}
-g.addEventListener('click',function(){save('go')});
+g.addEventListener('click',function(e){save('go');/* Oct 16 t886: switch the same way as the nav language switches (green toggle, keeps ?query/#hash) */if(!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&window.spnLang&&window.spnLang(tgt))e.preventDefault()});
 b.querySelector('.sp-lb-stay').addEventListener('click',close);b.querySelector('.sp-lb-x').addEventListener('click',close);
 function show(){if(!document.body)return;if(nav&&nav.parentNode)nav.parentNode.insertBefore(b,nav.nextSibling);else document.body.insertBefore(b,document.body.firstChild);
 d.classList.add('sp-has-lb');place();ping();if(window.ResizeObserver){var ro=new ResizeObserver(place);ro.observe(b);nav&&ro.observe(nav)}window.addEventListener('resize',place,{passive:true});window.addEventListener('scroll',place,{passive:true})}
