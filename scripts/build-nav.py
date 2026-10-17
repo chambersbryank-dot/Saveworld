@@ -22,7 +22,11 @@ X = {
 # Every link from the previous nav (build-ux GROUPS) stays reachable; About pages (were footer-only) added.
 GROUPS = [
  ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Deforestation.html', 'Earth_Observation.html', 'World_Map.html', 'Topics.html']),
- ('space', ['Space.html', 'Artemis_II.html#launches', 'Planetary_Defense.html', 'Space_Weather.html', 'Space_Disposal.html', 'Project-Rawane.html', 'Rawanes_Mission_Log.html']),
+ ('space', ['Space.html', 'Artemis_II.html#launches', 'Planetary_Defense.html', 'Space_Weather.html', 'Space_Disposal.html']),
+ # Oct 16 6:15 PM (user): Project Rawane back as its own top-level menu right after Space; label links to the overview,
+ # first tap/click opens the dropdown (second follows the link); overview pinned first, the rest alphabetical.
+ # 6:17/6:18 PM (user): Myth vs Fact listed here AND kept in Kids.
+ ('pr', ['Project-Rawane.html', 'Rawanes_Mission_Log.html', 'Myth_vs_Fact.html']),
  ('le', ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']),
  ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Glossary.html']),
  ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
@@ -40,7 +44,7 @@ def label(l, key, i):
     t = T[l]
     if key == 'le': return LT.NAV_ITEMS[i][l]
     if i == 'Play_and_Learn.html': return UX.PLAYL[l]
-    if i == 'Project-Rawane.html': return UX.PR[l][0]
+    if i == 'Project-Rawane.html': return UX.PR[l][1][0]
     if i == 'SI_Helper.html': return X[l]['si']
     return t['items'][i]
 
@@ -48,7 +52,7 @@ def label(l, key, i):
 # top of their dropdown as a group, in this order. Collation without ICU (weekly sync has no extra deps): leading emoji and
 # punctuation ignored, accents folded (primary-strength, like fr/it/es/ar locale collation), Spanish ñ after n, Arabic
 # hamza/alef forms folded. Articles are not stripped (raw label).
-PINNED = ['Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
+PINNED = ['Project-Rawane.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
 def sort_key(l, lab):
     import unicodedata
     t = html.unescape(re.sub('<[^>]+>', '', lab))
@@ -65,7 +69,7 @@ def sort_items(l, key, items):
     return pin + rest
 
 def gname(l, key):
-    return {'sol': T[l]['sol'], 'space': T[l]['items']['Space.html'], 'le': LT.NAV[l], 'kids': X[l]['kids'], 'teach': X[l]['teachers'], 'ab': T[l]['ab']}[key]
+    return {'sol': T[l]['sol'], 'space': T[l]['items']['Space.html'], 'pr': UX.PR[l][0], 'le': LT.NAV[l], 'kids': X[l]['kids'], 'teach': X[l]['teachers'], 'ab': T[l]['ab']}[key]
 
 def switcher(l, page):
     pre = '' if l == 'en' else '../'
@@ -86,7 +90,9 @@ def nav(l, page, brand_href, brand_txt):
         cur = any(i.split('#')[0] == page for i in items if '#' not in i)
         items = sort_items(l, key, items)
         lis = ''.join(f'<li><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{label(l, key, i)}</a></li>' for i in items)
-        main.append(f'<li class="spn-dd{" is-current" if cur else ""}"><button type="button" class="spn-trig" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></button>'
+        trig = (f'<a class="spn-trig spn-trig-link" href="{hr(l, items[0])}" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></a>' if key == 'pr' else
+                f'<button type="button" class="spn-trig" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></button>')
+        main.append(f'<li class="spn-dd{" is-current" if cur else ""}">{trig}'
                     f'<ul class="spn-sub" id="spn-{key}">{lis}</ul></li>')
     main.append(f'<li class="spn-cta nav-help"><a href="Ways_to_Help.html"{" aria-current=\"page\"" if page == "Ways_to_Help.html" else ""}>{t["help"]}</a></li>')
     return (f'<nav id="topnav"><div class="spn"><a class="spn-brand" href="{brand_href}">{brand_txt}</a>'
@@ -126,6 +132,7 @@ html body nav#topnav.spn-solid::before,html body nav#topnav.spn-open::before{opa
 #topnav .spn-trig{appearance:none;background:transparent;border:0;border-radius:6px;color:#fff;font:700 13px/1 "Montserrat","Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.04em;min-height:44px;padding:0 .75rem;display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;white-space:nowrap;transition:background-color .2s ease,color .2s ease}
 #topnav .spn-chev{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;transition:transform .2s ease}
 #topnav .spn-trig:hover{color:#8fd3ff}
+#topnav a.spn-trig{text-decoration:none}
 #topnav .spn-dd.is-current>.spn-trig{box-shadow:inset 0 -2px 0 #009cde}
 #topnav .spn-dd.is-open>.spn-trig{background:#8fd3ff;color:#071018;box-shadow:none}
 #topnav .spn-dd.is-open .spn-chev{transform:rotate(180deg)}
@@ -179,6 +186,7 @@ function closeAll(x){dds.forEach(function(li){if(li!==x)set(li,false)})}
 function panel(o){n.classList.toggle('spn-open',o);if(tg){tg.setAttribute('aria-expanded',o?'true':'false');tg.setAttribute('aria-label',tg.getAttribute(o?'data-close':'data-open'))}if(!o)closeAll()}
 dds.forEach(function(li){var b=li.querySelector('.spn-trig'),t;
  b.addEventListener('click',function(e){e.stopPropagation();var desk=mq.matches;
+  if(b.tagName==='A'){var hov=desk&&hv.matches&&li.getAttribute('data-hov')==='1';if(li.classList.contains('is-open')&&(hov||li.getAttribute('data-hov')!=='1'))return;e.preventDefault();if(desk)closeAll(li);li.setAttribute('data-hov','2');set(li,true);return}
   if(desk&&hv.matches&&li.getAttribute('data-hov')==='1'){li.setAttribute('data-hov','2');set(li,true);return}
   var o=!li.classList.contains('is-open');if(desk)closeAll(li);set(li,o)});
  li.addEventListener('mouseenter',function(){if(!mq.matches||!hv.matches)return;clearTimeout(t);if(!li.classList.contains('is-open')){closeAll(li);set(li,true);li.setAttribute('data-hov','1')}});

@@ -1282,6 +1282,7 @@ html body nav#topnav.spn-solid::before,html body nav#topnav.spn-open::before{opa
 #topnav .spn-trig{appearance:none;background:transparent;border:0;border-radius:6px;color:#fff;font:700 13px/1 "Montserrat","Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.04em;min-height:44px;padding:0 .75rem;display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;white-space:nowrap;transition:background-color .2s ease,color .2s ease}
 #topnav .spn-chev{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;transition:transform .2s ease}
 #topnav .spn-trig:hover{color:#8fd3ff}
+#topnav a.spn-trig{text-decoration:none}
 #topnav .spn-dd.is-current>.spn-trig{box-shadow:inset 0 -2px 0 #009cde}
 #topnav .spn-dd.is-open>.spn-trig{background:#8fd3ff;color:#071018;box-shadow:none}
 #topnav .spn-dd.is-open .spn-chev{transform:rotate(180deg)}
