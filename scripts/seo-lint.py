@@ -116,7 +116,8 @@ def main():
         if not d: add('desc-missing', p)
         else:
             descs[d].append(p)
-            if not 120 <= len(d) <= 160: add('desc-length', p, f'{len(d)}')
+            if 160 < len(d) <= 175 and not d.endswith('…'): add('desc-slightly-long', p, f'{len(d)} (one whole sentence; search engines trim the display)')
+            elif not 120 <= len(d) <= 160: add('desc-length', p, f'{len(d)}')
             if d.endswith('…'): add('desc-truncated', p, d[-40:])
         if lang == 'en': en_meta[base] = (t, d)
         c = soup.find_all('link', rel='canonical')
