@@ -11,7 +11,12 @@
 // Never exits non-zero (errors are logged) so it can't fail the weekly sync.
 const fs = require('fs'), { execSync } = require('child_process');
 const HOST = 'www.savingplanets.com', SITE = 'https://' + HOST + '/', KEY = 'aa19429b4f58f36d34c263abe996de09';
-const KEY_URL = SITE + KEY + '.txt', STATE = '.indexnow-last';
+// Oct 16: last-ping state lives outside the clone when running on the shared box, so every fresh /tmp clone
+// pings everything changed since the last successful ping (not just HEAD~1). Override with INDEXNOW_STATE.
+const os = require('os'), path = require('path');
+const BOX_STATE = path.join(os.homedir(), '.cache', 'indexnow-last-saveworld');
+const STATE = process.env.INDEXNOW_STATE || (fs.existsSync(path.dirname(BOX_STATE)) ? BOX_STATE : '.indexnow-last');
+const KEY_URL = SITE + KEY + '.txt';
 const args = process.argv.slice(2), send = args.includes('--send');
 const i = args.indexOf('--since');
 const sh = c => execSync(c, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
