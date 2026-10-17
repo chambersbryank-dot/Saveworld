@@ -1,7 +1,13 @@
 {
  "4ocean.html": {
+  "ar": {
+   "description": "تزيل 4ocean البلاستيك من المحيطات والأنهار والسواحل بفرق تنظيف متفرغة، تموّلها منتجات مصنوعة من البلاستيك المستعاد. حل للمحيطات على Saving Planets."
+  },
   "en": {
    "title": "4ocean: Full-Time Crews Removing Ocean Plastic"
+  },
+  "fr": {
+   "description": "4ocean retire le plastique des océans, des rivières et des côtes grâce à des équipes à plein temps, financées par des produits en plastique récupéré."
   }
  },
  "AP_IB_Physics.html": {
@@ -46,12 +52,29 @@
    "title": "Chi siamo: azione positiva, non panico"
   }
  },
+ "Aditya_L1.html": {
+  "es": {
+   "description": "Aditya-L1, el primer observatorio solar espacial de ISRO, estudia el Sol desde una órbita de halo alrededor de L1, a 1,5 millones de km de la Tierra."
+  },
+  "fr": {
+   "description": "Aditya-L1, premier observatoire solaire spatial de l'ISRO, étudie le Soleil depuis une orbite de halo autour de L1, à 1,5 million de km de la Terre."
+  }
+ },
+ "Aeolus.html": {
+  "fr": {
+   "description": "L'ESA a guidé la descente de son satellite Aeolus, retiré du service, lors d'une première rentrée assistée, divisant par 150 un risque déjà faible."
+  },
+  "it": {
+   "description": "L’ESA ha guidato a terra Aeolus, il suo satellite per il vento ormai dismesso, nel primo rientro assistito del genere: rischio detriti ridotto di 150 volte."
+  }
+ },
  "Aero_Guide.html": {
   "ar": {
    "description": "الطيران بلغة بسيطة: القوى الأربع، وكيف ترفع الأجنحة الطائرة، ولماذا تحلّق النفاثات عاليًا، وكيف تحوم المروحيات، ولماذا تبقى الطائرات مستقرة.",
    "title": "كيف يعمل الطيران: الرفع والسحب والدفع والوزن"
   },
   "en": {
+   "description": "Flight explained for kids, teens and college students: lift, weight, thrust and drag, wings, the atmosphere, jet engines, helicopters and stability.",
    "title": "How Flight Works: Lift, Drag, Thrust and Weight"
   },
   "es": {
@@ -94,9 +117,80 @@
    "description": "Atmosphère, portance, ailes, performances, ondes de choc, réacteurs, stabilité et rotors : démonstrations, exemples résolus et exercices, jusqu’au doctorat."
   }
  },
+ "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
+  "fr": {
+   "description": "Chaque année, les bénévoles d'Adopt-a-Beach ramassent des dizaines de milliers de livres de déchets sur les plages des Grands Lacs, à 85 % du plastique."
+  }
+ },
+ "Amazon_Rainy_Season.html": {
+  "ar": {
+   "description": "الماء الذي تطلقه أشجار الأمازون يبدأ موسم الأمطار قبل أن تجلبه الرياح وحدها بشهرين إلى ثلاثة (JPL التابع لناسا)، ولذلك يحمي بقاء الغابة مياه الناس."
+  }
+ },
+ "American_Forests.html": {
+  "es": {
+   "description": "Desde 1875, American Forests restaura los bosques de EE. UU., de grandes paisajes naturales a calles urbanas, con más de 63 millones de árboles plantados."
+  },
+  "fr": {
+   "description": "Depuis 1875, American Forests restaure les forêts des États-Unis, des grands espaces naturels aux rues des villes, avec plus de 63 millions d'arbres plantés."
+  },
+  "it": {
+   "description": "Dal 1875 American Forests ripristina le foreste degli Stati Uniti, dai grandi paesaggi naturali alle strade cittadine, con oltre 63 milioni di alberi piantati."
+  }
+ },
+ "American_Rivers.html": {
+  "fr": {
+   "description": "American Rivers a participé à plus de 200 suppressions de barrages ; en 2025, les États-Unis ont retiré 100 barrages et reconnecté 7 870 km de rivières."
+  },
+  "it": {
+   "description": "American Rivers ha partecipato a oltre 200 rimozioni di dighe; nel 2025 gli Stati Uniti hanno rimosso 100 dighe e ricollegato oltre 4.893 miglia di fiumi."
+  }
+ },
+ "Artemis_II.html": {
+  "it": {
+   "description": "Ad aprile 2026 Artemis II ha portato quattro astronauti intorno alla Luna, a 252.756 miglia dalla Terra: più lontano di qualsiasi essere umano prima."
+  }
+ },
  "Astroscale.html": {
+  "ar": {
+   "description": "تفحص Astroscale الحطام في المدار وتخدمه وتزيله: ELSA-d، وصورة ADRAS-J المقرّبة عام 2024 لمرحلة عليا من H-IIA، وADRAS-J2 المستهدفة في السنة المالية 2027."
+  },
   "en": {
    "title": "Astroscale: Inspecting, Servicing and Removing Debris"
+  },
+  "es": {
+   "description": "Astroscale inspecciona, da servicio y retira basura en órbita: ELSA-d, el primer plano de ADRAS-J en 2024 y ADRAS-J2, previsto para el año fiscal 2027."
+  },
+  "fr": {
+   "description": "Astroscale inspecte, entretient et retire les débris en orbite : ELSA-d, le gros plan d'ADRAS-J en 2024, et ADRAS-J2, visé pour l'exercice 2027."
+  },
+  "it": {
+   "description": "Astroscale ispeziona, assiste e rimuove i detriti in orbita: ELSA-d, il ravvicinamento di ADRAS-J a uno stadio H-IIA nel 2024 e ADRAS-J2 (anno fiscale 2027)."
+  }
+ },
+ "Atmospheric_Drag.html": {
+  "ar": {
+   "description": "السحب الجوي نظام طبيعي لإزالة الحطام الفضائي: يسحب نفايات المدار المنخفض لتحترق، وأسرع حين تنشط الشمس، لكنه يكاد لا يعمل على الارتفاعات العالية."
+  },
+  "en": {
+   "description": "Atmospheric drag is Earth's natural space debris removal: it pulls low-orbit junk down to burn up, faster when the Sun is active, but barely works up high."
+  },
+  "es": {
+   "description": "El arrastre atmosférico retira de forma natural la basura de órbita baja para que se desintegre, más rápido con el Sol activo, pero casi nada a gran altura."
+  },
+  "fr": {
+   "description": "La traînée atmosphérique élimine naturellement les débris en orbite basse, qui se consument, plus vite quand le Soleil est actif, mais agit peu en altitude."
+  },
+  "it": {
+   "description": "La resistenza atmosferica rimuove in modo naturale i detriti in orbita bassa, che scendono e bruciano, più in fretta col Sole attivo, ma quasi nulla in alto."
+  }
+ },
+ "Beavers_River_Engineers.html": {
+  "es": {
+   "description": "En Bridge Creek (Oregón), castores ayudados con bases de presas elevaron un 52 % la supervivencia de las truchas steelhead jóvenes y un 175 % su producción."
+  },
+  "it": {
+   "description": "Nel Bridge Creek, in Oregon, i castori aiutati con semplici basi per dighe hanno aumentato del 52% la sopravvivenza delle giovani trote iridee migratrici."
   }
  },
  "CO2M.html": {
@@ -174,6 +268,17 @@
    "title": "Carriere aerospaziali e nelle scienze della Terra"
   }
  },
+ "Carruthers.html": {
+  "es": {
+   "description": "Primera misión dedicada a la exosfera terrestre, Carruthers vigila el halo ultravioleta de nuestro planeta desde un millón de millas, en dirección al Sol."
+  },
+  "fr": {
+   "description": "Première mission consacrée à l'exosphère, Carruthers observe le halo ultraviolet de la Terre à environ un million de miles en direction du Soleil."
+  },
+  "it": {
+   "description": "Prima missione dedicata all’esosfera terrestre, Carruthers osserva l’alone ultravioletto del nostro pianeta da circa un milione di miglia, verso il Sole."
+  }
+ },
  "Changelog.html": {
   "ar": {
    "description": "كل الحلول المضافة إلى Saving Planets من الأحدث إلى الأقدم، مع تاريخ إضافة كل منها. كل دفعة مؤرّخة بيوم نشرها، لتعرف ما الجديد بسرعة.",
@@ -196,9 +301,37 @@
    "title": "Registro delle modifiche: nuove soluzioni"
   }
  },
+ "Clean_Up_the_Lake.html": {
+  "en": {
+   "description": "Clean Up the Lake removes submerged litter from freshwater lakes using scuba divers and volunteers, and GPS-pins, sorts and weighs every piece it finds."
+  },
+  "fr": {
+   "description": "Clean Up the Lake retire les déchets immergés des lacs d'eau douce grâce à des plongeurs et des bénévoles, et localise, trie et pèse chaque objet retrouvé."
+  },
+  "it": {
+   "description": "Clean Up the Lake rimuove i rifiuti sommersi dai laghi d’acqua dolce con subacquei e volontari, e localizza con il GPS, classifica e pesa ogni rifiuto trovato."
+  }
+ },
  "ClearSpace.html": {
+  "ar": {
+   "description": "تقود ClearSpace أول مهمة أوروبية للإزالة النشطة للحطام الفضائي، وتقدّم خدمات في المدار، وهي شركة خاصة. حل للفضاء على Saving Planets."
+  },
   "en": {
    "title": "ClearSpace: Europe’s First Active Debris Removal"
+  },
+  "fr": {
+   "description": "ClearSpace mène la première mission européenne d'élimination active de débris spatiaux et propose des services en orbite. C'est une entreprise privée."
+  }
+ },
+ "Comet_Interceptor.html": {
+  "es": {
+   "description": "Tres naves esperarán en el espacio a un cometa nuevo y lo sobrevolarán juntas para hacer un mapa en 3D; su lanzamiento está previsto para 2028 o 2029."
+  },
+  "fr": {
+   "description": "Trois engins attendront dans l'espace une comète fraîche et la survoleront ensemble pour en faire une carte en 3D ; lancement prévu fin 2028 ou début 2029."
+  },
+  "it": {
+   "description": "Tre sonde aspetteranno nello spazio una cometa «nuova» e la sorvoleranno insieme per ricostruirne una mappa 3D; lancio previsto tra fine 2028 e inizio 2029."
   }
  },
  "Contact.html": {
@@ -223,6 +356,28 @@
    "title": "Contatti: invia una soluzione o un’idea"
   }
  },
+ "Coral_Gardeners.html": {
+  "ar": {
+   "description": "تزرع Coral Gardeners المرجان في مشاتل ثم تعيد غرسه في الشعاب المرجانية في بولينيزيا الفرنسية وفيجي وتايلاند، وقد زرعت حتى الآن 238,250 مرجانًا."
+  },
+  "fr": {
+   "description": "Coral Gardeners cultive des coraux en pépinière et les replante sur les récifs de Polynésie française, des Fidji et de Thaïlande : 238 250 coraux à ce jour."
+  },
+  "it": {
+   "description": "Coral Gardeners coltiva coralli in vivaio e li ripianta sulle barriere di Polinesia francese, Figi e Thailandia: finora ha piantato 238.250 coralli."
+  }
+ },
+ "Coral_IVF.html": {
+  "es": {
+   "description": "Investigadores recogen el desove de coral y crían millones de corales bebé para arrecifes dañados; los primeros se reprodujeron en la Gran Barrera en 2021."
+  },
+  "fr": {
+   "description": "Des chercheurs recueillent le frai de corail et élèvent des millions de bébés coraux pour les récifs abîmés ; les premiers se sont reproduits en 2021."
+  },
+  "it": {
+   "description": "I ricercatori raccolgono le uova di corallo e allevano milioni di piccoli coralli per le barriere danneggiate; i primi si sono riprodotti nel 2021."
+  }
+ },
  "Corrections.html": {
   "ar": {
    "description": "هل لاحظت خطأً في Saving Planets؟ أخبرنا بما هو غير صحيح عبر النموذج القصير في هذه الصفحة، وسنصحّحه بسرعة وبكل اللغات الخمس.",
@@ -245,6 +400,20 @@
    "title": "Correzioni: segnala un errore"
   }
  },
+ "DSCOVR_EPIC.html": {
+  "ar": {
+   "description": "تحلّق كاميرا EPIC التابعة لـ NASA على متن DSCOVR التابعة لـ NOAA عند النقطة L1، وتصوّر وجه الأرض المضاء بالكامل عدة مرات يوميًا منذ 2015."
+  },
+  "es": {
+   "description": "La cámara EPIC de la NASA, en la nave DSCOVR de la NOAA en el punto L1, fotografía la cara iluminada de la Tierra varias veces al día, con archivo desde 2015."
+  },
+  "fr": {
+   "description": "La caméra EPIC de la NASA, à bord de DSCOVR (NOAA) au point L1, photographie toute la face éclairée de la Terre plusieurs fois par jour ; archives depuis 2015."
+  },
+  "it": {
+   "description": "La fotocamera EPIC della NASA, a bordo della sonda DSCOVR della NOAA nel punto L1, fotografa più volte al giorno l’intera faccia illuminata della Terra."
+  }
+ },
  "Deforestation.html": {
   "ar": {
    "title": "حلول الغابات: إعادة تشجير ناجحة"
@@ -262,15 +431,154 @@
    "title": "Soluzioni per le foreste: riforestazione efficace"
   }
  },
+ "EMIT.html": {
+  "es": {
+   "description": "El instrumento EMIT de la NASA, en la Estación Espacial Internacional, cartografía los minerales del polvo del desierto y detecta superemisores de metano."
+  },
+  "fr": {
+   "description": "L'instrument EMIT de la NASA, sur la Station spatiale, cartographie les minéraux des poussières du désert et repère des super-émetteurs de méthane."
+  },
+  "it": {
+   "description": "Lo strumento EMIT della NASA, sulla Stazione Spaziale Internazionale, mappa i minerali della polvere del deserto e individua i super-emettitori di metano."
+  }
+ },
+ "EOS-06.html": {
+  "fr": {
+   "description": "EOS-06, le troisième Oceansat de l'Inde, suit la couleur de l'océan, la température de surface de la mer et les vents, pour la pêche, les cyclones et les côtes."
+  }
+ },
+ "ESCAPADE.html": {
+  "fr": {
+   "description": "Les sondes jumelles ESCAPADE de la NASA étudieront comment le vent solaire arrache l'atmosphère de Mars, après une fronde autour de la Terre à l'automne 2026."
+  },
+  "it": {
+   "description": "Le sonde gemelle ESCAPADE della NASA studieranno come il vento solare erode l’atmosfera di Marte, dopo una fionda gravitazionale terrestre nell’autunno 2026."
+  }
+ },
+ "EarthCARE.html": {
+  "en": {
+   "description": "ESA–JAXA EarthCARE carries the first space cloud radar that can measure how cloud particles move up and down, sharpening forecasts of how clouds affect climate."
+  },
+  "es": {
+   "description": "EarthCARE (ESA–JAXA) lleva el primer radar espacial de nubes capaz de medir cómo suben y bajan sus partículas, para saber si las nubes calientan o enfrían."
+  }
+ },
  "Earth_Observation.html": {
   "ar": {
+   "description": "حلول رصد الأرض: NISAR (NASA-ISRO) وBiomass (ESA) ورصد الميثان بـ Tanager-1 وDSCOVR EPIC، تقيس من الفضاء اليابسة والغابات والتسربات والأوزون.",
    "title": "رصد الأرض: قياس كوكب يتغيّر"
+  },
+  "en": {
+   "description": "Earth Observation solutions: NASA-ISRO NISAR, ESA Biomass, Tanager-1 methane detection and DSCOVR EPIC, measuring land, forests, leaks and ozone."
   },
   "es": {
    "description": "No se puede proteger lo que no se mide. Satélites de la NASA, la ISRO, la ESA y la NOAA, con Carbon Mapper y Planet, en órbita baja y en el punto L1 Sol-Tierra."
   },
   "fr": {
    "description": "On ne protège pas ce qu’on ne mesure pas. Satellites de la NASA, de l’ISRO, de l’ESA et de la NOAA, avec Carbon Mapper et Planet, en orbite basse et en L1."
+  },
+  "it": {
+   "description": "Osservazione della Terra: NISAR (NASA-ISRO), Biomass dell’ESA, il metano rilevato da Tanager-1 e DSCOVR EPIC misurano dallo spazio suolo, foreste e ozono."
+  }
+ },
+ "Editorial_Policy.html": {
+  "fr": {
+   "description": "Comment nous choisissons les solutions, vérifions les faits et utilisons la SI. Chaque chiffre renvoie à sa source, et ceux des organisations sont signalés."
+  }
+ },
+ "Elwha_River_Restoration.html": {
+  "es": {
+   "description": "Dos presas del río Elwha se demolieron entre 2011 y 2014, y más de 20 millones de toneladas de sedimentos bajaron por el río para reconstruir cauce y costa."
+  },
+  "fr": {
+   "description": "Deux barrages de l'Elwha ont été démolis de 2011 à 2014, et plus de 20 millions de tonnes de sédiments ont descendu la rivière pour reconstruire lit et côte."
+  },
+  "it": {
+   "description": "Tra il 2011 e il 2014 sono state demolite due dighe sull’Elwha, e oltre 20 milioni di tonnellate di sedimenti sono scese a valle a ricostruire fiume e costa."
+  }
+ },
+ "EnVision.html": {
+  "en": {
+   "description": "ESA's EnVision will study Venus from its inner core to its upper atmosphere, and may show how a planet like ours got so hot. Launch is planned for late 2031."
+  },
+  "it": {
+   "description": "EnVision dell’ESA studierà Venere dal nucleo all’alta atmosfera e potrebbe spiegare come un pianeta simile al nostro sia diventato così caldo. Lancio nel 2031."
+  }
+ },
+ "Europa_Clipper.html": {
+  "es": {
+   "description": "Europa Clipper (NASA) va hacia la luna oceánica de Júpiter: asistencia gravitatoria de la Tierra el 3 de diciembre de 2026 y 49 sobrevuelos desde 2030."
+  },
+  "fr": {
+   "description": "Europa Clipper (NASA) file vers la lune océan de Jupiter : assistance gravitationnelle de la Terre le 3 décembre 2026, puis 49 survols d'Europe dès 2030."
+  },
+  "it": {
+   "description": "Europa Clipper (NASA) è in viaggio verso la luna oceanica di Giove: spinta gravitazionale dalla Terra il 3 dicembre 2026 e 49 sorvoli di Europa dal 2030."
+  }
+ },
+ "FLEX.html": {
+  "es": {
+   "description": "Lanzado junto a Sentinel-3C el 15 de septiembre de 2026, FLEX de la ESA cartografía el tenue brillo de la fotosíntesis y Sentinel-3C vigila océanos y tierras."
+  },
+  "fr": {
+   "description": "Lancé avec Sentinel-3C le 15 septembre 2026, FLEX de l'ESA cartographie la faible lueur de la photosynthèse, et Sentinel-3C observe océans et terres."
+  }
+ },
+ "FireSat.html": {
+  "ar": {
+   "description": "صُممت أقمار FireSat التابعة لـ Earth Fire Alliance لرصد حرائق لا يتجاوز حجمها 5 × 5 أمتار من الفضاء، وإيصال البيانات إلى رجال الإطفاء بسرعة."
+  },
+  "es": {
+   "description": "Los satélites FireSat de Earth Fire Alliance están hechos para detectar desde el espacio incendios de solo 5 por 5 metros y avisar rápido a los bomberos."
+  },
+  "fr": {
+   "description": "Les satellites FireSat d'Earth Fire Alliance sont conçus pour repérer depuis l'espace des feux de 5 m sur 5 seulement et alerter vite les pompiers."
+  },
+  "it": {
+   "description": "I satelliti FireSat di Earth Fire Alliance sono pensati per individuare dallo spazio incendi di appena 5 metri per 5 e inviare subito i dati ai pompieri."
+  }
+ },
+ "GOES-19.html": {
+  "ar": {
+   "description": "يحمل GOES-19 التابع لـ NOAA الجهاز CCOR-1، أول مِكشاف إكليلي فضائي تشغيلي في العالم، ويصوّر هالة الشمس كل 15 دقيقة لرصد الانبعاثات الكتلية مبكرًا."
+  }
+ },
+ "GOSAT-GW.html": {
+  "es": {
+   "description": "IBUKI GW de JAXA sigue el dióxido de carbono, el metano y el dióxido de nitrógeno, y además mide el ciclo del agua. Se lanzó el 29 de junio de 2025."
+  },
+  "fr": {
+   "description": "IBUKI GW de la JAXA suit le dioxyde de carbone, le méthane et le dioxyde d'azote tout en mesurant le cycle de l'eau. Lancé le 29 juin 2025 depuis Tanegashima."
+  }
+ },
+ "GRACE-FO.html": {
+  "fr": {
+   "description": "Des satellites jumeaux américano-allemands pèsent l'eau de la Terre par la gravité, et suivent nappes souterraines, glace et niveau de la mer depuis 2018."
+  }
+ },
+ "Global_Fishing_Watch.html": {
+  "ar": {
+   "description": "ترسم Global Fishing Watch خرائط الصيد بالأقمار الصناعية والذكاء الاصطناعي، ووجدت دراستها في Nature عام 2024 أن نحو 75% من سفن الصيد الصناعي لا تُتتبَّع علنًا."
+  },
+  "es": {
+   "description": "Global Fishing Watch mapea la pesca con satélites e IA; su estudio de 2024 en Nature halló que cerca del 75 % de los buques industriales no se rastrean."
+  },
+  "fr": {
+   "description": "Global Fishing Watch cartographie la pêche par satellite et IA ; selon son étude de 2024 (Nature), 75 % des navires industriels échappent au suivi public."
+  },
+  "it": {
+   "description": "Global Fishing Watch mappa la pesca con satelliti e IA; uno studio del 2024 su Nature indica che il 75% circa dei pescherecci industriali non è tracciato."
+  }
+ },
+ "Global_Forest_Watch.html": {
+  "ar": {
+   "description": "بيانات أقمار صناعية مجانية عن الغابات وتنبيهات بإزالتها من معهد الموارد العالمية؛ وحيث استخدمها مراقبو الغابات من الشعوب الأصلية تراجعت الإزالة 52% في عام."
+  },
+  "es": {
+   "description": "Datos satelitales gratuitos de bosques y alertas de deforestación del WRI; donde los usaron monitores indígenas, la deforestación bajó un 52 % en un año."
+  },
+  "it": {
+   "description": "Dati satellitari gratuiti e allerte di deforestazione dal WRI: dove li usano i guardiani forestali indigeni, la deforestazione è calata del 52% in un anno."
   }
  },
  "Glossary.html": {
@@ -295,6 +603,11 @@
    "title": "Glossario: le parole della Terra e dello spazio"
   }
  },
+ "Great_Bubble_Barrier.html": {
+  "it": {
+   "description": "Una cortina di bolle che cattura la plastica su tutta la larghezza e la profondità di un corso d’acqua, spingendola di lato senza bloccare barche o pesci."
+  }
+ },
  "Great_Green_Wall.html": {
   "ar": {
    "description": "جهد تقوده أفريقيا لاستعادة الأراضي عبر منطقة الساحل. أحصى تقرير للأمم المتحدة عام 2020 نحو 4 ملايين هكتار مستعادة داخل نطاق السور الأخضر العظيم.",
@@ -311,6 +624,33 @@
   },
   "it": {
    "description": "Un’iniziativa guidata dall’Africa per ripristinare le terre del Sahel. Un rapporto ONU del 2020 contava circa 4 milioni di ettari ripristinati nella sua area."
+  }
+ },
+ "Hayabusa2_Torifune.html": {
+  "fr": {
+   "description": "Le 5 juillet 2026, Hayabusa2 (JAXA) est passée à 400 m environ de l'astéroïde Torifune, le survol le plus proche jamais réalisé d'un corps du Système solaire."
+  }
+ },
+ "Hera.html": {
+  "es": {
+   "description": "Hera de la ESA llega al asteroide Dimorphos en noviembre de 2026 para medir el efecto del impacto de DART y convertir la desviación en una defensa repetible."
+  },
+  "fr": {
+   "description": "Hera de l'ESA arrive à l'astéroïde Dimorphos en novembre 2026 pour mesurer l'effet de l'impact de DART, pour faire de la déviation une défense reproductible."
+  },
+  "it": {
+   "description": "Hera dell’ESA arriva all’asteroide Dimorphos a novembre 2026 per misurare gli effetti dell’impatto di DART (NASA) e rendere la deviazione una difesa ripetibile."
+  }
+ },
+ "Hohmann_Transfer_Calculator.html": {
+  "es": {
+   "description": "Una transferencia de Hohmann lleva una nave entre dos órbitas circulares con dos encendidos, por ejemplo de órbita baja a geoestacionaria. Calculadora gratuita."
+  },
+  "fr": {
+   "description": "Un transfert de Hohmann fait passer un engin d’une orbite circulaire à une autre avec deux allumages, par exemple de l’orbite basse à l’orbite géostationnaire."
+  },
+  "it": {
+   "description": "Un trasferimento di Hohmann porta un veicolo da un’orbita circolare a un’altra con due accensioni, ad esempio dall’orbita bassa a quella geostazionaria."
   }
  },
  "Homeschool.html": {
@@ -334,7 +674,38 @@
    "title": "Scienze dello spazio e del volo a casa, 5–18 anni"
   }
  },
+ "HydroGNSS.html": {
+  "fr": {
+   "description": "La première mission Scout de l'ESA utilise les signaux réfléchis des satellites de navigation pour mesurer l'humidité des sols, les zones humides et le gel."
+  }
+ },
+ "IMAP.html": {
+  "fr": {
+   "description": "IMAP de la NASA observe le Soleil à environ un million de miles de la Terre et peut donner une demi-heure d'avance sur l'arrivée des radiations."
+  }
+ },
+ "ISS_Water_Recovery.html": {
+  "it": {
+   "description": "La Stazione spaziale ricicla il 98% dell’acqua portata dagli equipaggi grazie al Brine Processor Assembly, tecnologia preziosa ovunque l’acqua scarseggi."
+  }
+ },
+ "Jupiter.html": {
+  "it": {
+   "description": "Giove è un sistema naturale di rimozione dei detriti spaziali: inghiotte o scaglia via molti più oggetti pericolosi di quanto potrebbe una missione umana."
+  }
+ },
+ "Keep_Tahoe_Blue.html": {
+  "es": {
+   "description": "Keep Tahoe Blue, la League to Save Lake Tahoe, protege el lago desde hace décadas; sus voluntarios recogieron 1.330 libras de basura tras el 4 de julio de 2026."
+  }
+ },
  "Kids_Map.html": {
+  "es": {
+   "description": "Un mapa divertido del planeta para niños: toca Océanos, Bosques, Lagos, Ríos o Espacio para descubrir un dato asombroso y soluciones reales."
+  },
+  "fr": {
+   "description": "Une carte ludique de la planète pour les enfants : touche Océans, Forêts, Lacs, Rivières ou Espace pour un fait incroyable et de vraies solutions."
+  },
   "it": {
    "description": "Una mappa giocosa del nostro pianeta per bambini: tocca Oceani, Foreste, Laghi, Fiumi, Spazio e altro per un fatto sorprendente e soluzioni vere.",
    "title": "Mappa del pianeta per bambini"
@@ -342,29 +713,40 @@
  },
  "Lake_Erie_Algal_Bloom_Forecast.html": {
   "es": {
+   "description": "La NOAA pronostica y sigue las algas tóxicas del oeste del lago Erie cada verano para que ciudades y bañistas protejan el agua potable y a las personas.",
    "title": "Pronóstico de algas nocivas del lago Erie (NOAA)"
   },
   "fr": {
    "title": "Prévision des algues nuisibles du lac Érié (NOAA)"
   },
   "it": {
+   "description": "Per tutta l’estate la NOAA prevede e monitora le alghe tossiche nel lago Erie occidentale, così città e bagnanti possono tutelare l’acqua potabile e le persone.",
    "title": "Previsione delle alghe dannose del lago Erie (NOAA)"
+  }
+ },
+ "Lake_Plastic_Recovery.html": {
+  "ar": {
+   "description": "Lake Plastic Recovery: انتشال البلاستيك من البحيرات قبل أن ينتقل مع مجرى النهر، بالغواصين والمتطوعين وتقنيات الالتقاط. حل للمياه العذبة على Saving Planets."
   }
  },
  "Lakes.html": {
   "ar": {
+   "description": "استعادة البلاستيك من البحيرات: انتشال النفايات المغمورة من بحيرات المياه العذبة بالغواصين وتقنيات الالتقاط في البحيرات العظمى ومركبات ROV في الأعماق.",
    "title": "حلول البحيرات: انتشال البلاستيك من البحيرات"
   },
   "en": {
    "title": "Lake Solutions: Recovering Plastic From Lakes"
   },
   "es": {
+   "description": "Recuperar plástico de los lagos: basura sumergida de lagos de agua dulce, buzos, tecnología de captura en los Grandes Lagos y limpieza profunda con ROV.",
    "title": "Soluciones para lagos: recuperar el plástico"
   },
   "fr": {
+   "description": "Récupérer le plastique des lacs : déchets immergés retirés des lacs d'eau douce, plongeurs, capture dans les Grands Lacs et nettoyage profond par ROV.",
    "title": "Solutions pour les lacs : récupérer le plastique"
   },
   "it": {
+   "description": "Plastica nei laghi: rifiuti sommersi rimossi dai laghi d’acqua dolce con subacquei, tecnologie di cattura nei Grandi Laghi e pulizia dei fondali con ROV.",
    "title": "Soluzioni per i laghi: recuperare la plastica"
   }
  },
@@ -390,14 +772,162 @@
   }
  },
  "LeoLabs.html": {
+  "ar": {
+   "description": "تدير LeoLabs شبكة عالمية من الرادارات الأرضية تتتبع الأقمار الصناعية والحطام في المدار الأرضي المنخفض، وتحوّل بياناتها إلى تحذيرات من الاصطدام."
+  },
   "en": {
    "description": "LeoLabs runs a global network of ground radars that track satellites and debris in low Earth orbit and turn the data into collision warnings."
   },
+  "es": {
+   "description": "LeoLabs opera una red mundial de radares terrestres que siguen satélites y desechos en órbita baja y convierten los datos en alertas de colisión."
+  },
   "fr": {
+   "description": "LeoLabs exploite un réseau mondial de radars au sol qui suivent satellites et débris en orbite basse et en tirent des alertes de collision.",
    "title": "LeoLabs : radars de circulation pour l’orbite basse"
   },
   "it": {
+   "description": "LeoLabs gestisce una rete globale di radar a terra che seguono satelliti e detriti in orbita bassa e trasformano i dati in allerte di collisione.",
    "title": "LeoLabs: radar del traffico per l’orbita bassa"
+  }
+ },
+ "Lesson_Builder.html": {
+  "es": {
+   "description": "Planes de clase imprimibles y gratuitos, de infantil a la universidad, creados con soluciones reales para el medio ambiente y el espacio."
+  },
+  "fr": {
+   "description": "Plans de cours imprimables gratuits, de la maternelle à l’université, tirés de vraies solutions pour l’environnement et l’espace."
+  }
+ },
+ "Libera.html": {
+  "es": {
+   "description": "Libera medirá cada día cuánta energía sale de la Tierra y mantendrá un registro climático iniciado en 2000: si entra más de la que sale, la Tierra se calienta."
+  },
+  "fr": {
+   "description": "Libera mesurera chaque jour l'énergie qui quitte la Terre et prolongera un relevé climatique commencé en 2000 : si la Terre en reçoit plus, elle se réchauffe."
+  }
+ },
+ "Life_Terra.html": {
+  "en": {
+   "description": "Life Terra and its partners have planted more than 36 million trees across Europe (company figure), working toward a goal of 500 million trees."
+  },
+  "es": {
+   "description": "Life Terra y sus socios han plantado más de 36 millones de árboles en Europa (cifra de la organización), rumbo a una meta de 500 millones de árboles."
+  },
+  "fr": {
+   "description": "Life Terra et ses partenaires ont planté plus de 36 millions d'arbres en Europe (chiffre de l'organisation), en route vers un objectif de 500 millions."
+  },
+  "it": {
+   "description": "Life Terra e i suoi partner hanno piantato oltre 36 milioni di alberi in Europa (dato dell’organizzazione), verso un obiettivo di 500 milioni di alberi."
+  }
+ },
+ "Lift_Equation_Calculator.html": {
+  "en": {
+   "description": "The lift equation says how much upward force a wing makes: twice as fast means four times the lift. Free on Saving Planets, with no ads on learning pages."
+  }
+ },
+ "Living_Lakes.html": {
+  "ar": {
+   "description": "منذ 1998، تحمي شبكة Living Lakes التابعة لـ Global Nature Fund البحيرات والأراضي الرطبة وتستعيدها مع 130 منظمة عضوًا في أكثر من 60 دولة."
+  },
+  "it": {
+   "description": "Dal 1998 la rete Living Lakes del Global Nature Fund protegge e ripristina laghi e zone umide con 130 organizzazioni aderenti in oltre 60 paesi."
+  }
+ },
+ "Living_Lands_and_Waters.html": {
+  "es": {
+   "description": "Un equipo de limpieza que vive en una barcaza y que, con más de 141.000 voluntarios, ha sacado más de 14 millones de libras de basura de ríos de EE. UU."
+  },
+  "fr": {
+   "description": "Une équipe installée sur une barge qui, avec plus de 141 000 bénévoles, a retiré plus de 14 millions de livres de déchets des rivières américaines."
+  },
+  "it": {
+   "description": "Una squadra che pulisce i fiumi da una chiatta e che, con oltre 141.000 volontari, ha rimosso più di 14 milioni di libbre di rifiuti dai fiumi americani."
+  }
+ },
+ "MMX.html": {
+  "es": {
+   "description": "MMX de JAXA despega en octubre de 2026 para aterrizar en Fobos, la luna de Marte, y traer al menos 10 gramos a la Tierra en 2031, una primicia."
+  },
+  "fr": {
+   "description": "MMX de la JAXA décolle en octobre 2026 pour se poser sur Phobos, lune de Mars, et en rapporter au moins 10 grammes en 2031, une première martienne."
+  },
+  "it": {
+   "description": "MMX della JAXA parte a ottobre 2026 per atterrare su Phobos, luna di Marte, e riportare sulla Terra almeno 10 grammi di campioni nel 2031: una prima assoluta."
+  }
+ },
+ "Mach_Number_Calculator.html": {
+  "en": {
+   "description": "The speed of sound depends only on air temperature, so it falls as you climb to about 11 km. The Mach number is your speed divided by the local speed of sound."
+  },
+  "es": {
+   "description": "La velocidad del sonido solo depende de la temperatura del aire: baja al subir hasta unos 11 km. El número de Mach es tu velocidad entre la del sonido local."
+  },
+  "it": {
+   "description": "La velocità del suono dipende solo dalla temperatura dell’aria: cala salendo fino a circa 11 km. Il numero di Mach è la velocità divisa per quella del suono."
+  }
+ },
+ "MetOp-SG-A1_Sentinel-5A.html": {
+  "es": {
+   "description": "Lanzado en agosto de 2025 en un Ariane 6, MetOp-SG-A1 lleva Sentinel-5, que ofrece datos diarios y globales de contaminantes del aire, ozono y gases del clima."
+  },
+  "fr": {
+   "description": "Lancé en août 2025 sur Ariane 6, MetOp-SG-A1 emporte Sentinel-5, qui fournit chaque jour des données mondiales sur la pollution de l'air, l'ozone et le climat."
+  },
+  "it": {
+   "description": "Lanciato ad agosto 2025 con Ariane 6, MetOp-SG-A1 trasporta Sentinel-5, che fornisce ogni giorno dati globali su inquinanti, ozono e gas climalteranti."
+  }
+ },
+ "Mission_Blue_Hope_Spots.html": {
+  "es": {
+   "description": "Fundada por la científica oceánica Sylvia Earle, Mission Blue respalda una red de 168 Hope Spots, lugares del océano que defensores locales protegen."
+  },
+  "fr": {
+   "description": "Fondée par l'océanographe Sylvia Earle, Mission Blue soutient 168 Hope Spots, des lieux de l'océan que des champions locaux s'efforcent de protéger."
+  }
+ },
+ "Mote_Marine_Laboratory.html": {
+  "ar": {
+   "description": "أعاد علماء Mote أكثر من 216,000 مرجانة إلى الشعاب المرجانية في فلوريدا، وباتت مرجاناتهم المستعادة تتكاثر (رقم Mote). حل للمحيطات على Saving Planets."
+  }
+ },
+ "Mr_Trash_Wheel.html": {
+  "ar": {
+   "description": "تعترض عجلات Trash Wheels الأربع في بالتيمور نحو 500 طن من النفايات سنويًا، بقوة التيار والطاقة الشمسية، قبل وصولها إلى الميناء وخليج تشيسابيك."
+  }
+ },
+ "NEO_Surveyor.html": {
+  "es": {
+   "description": "NEO Surveyor (NASA), primer telescopio espacial para hallar asteroides peligrosos, incluso oscuros y ocultos por el Sol. Lanzamiento: no antes de sept. de 2027."
+  },
+  "fr": {
+   "description": "NEO Surveyor (NASA), premier télescope spatial dédié aux astéroïdes dangereux, même sombres et cachés par le Soleil. Lancement : sept. 2027 au plus tôt."
+  }
+ },
+ "NISAR.html": {
+  "es": {
+   "description": "NISAR, de la NASA y la ISRO, se lanzó desde la India el 30 de julio de 2025: un satélite radar que detecta movimientos del suelo y del hielo de un centímetro."
+  }
+ },
+ "Nancy_Grace_Roman.html": {
+  "es": {
+   "description": "El telescopio Roman de la NASA despegó el 30 de agosto de 2026 hacia L2: la nitidez del Hubble con un campo 100 veces mayor y primeras imágenes en 2027."
+  },
+  "fr": {
+   "description": "Le télescope Roman de la NASA a décollé le 30 août 2026 vers L2 : la netteté de Hubble sur un champ 100 fois plus large, premières images début 2027."
+  },
+  "it": {
+   "description": "Il telescopio Roman della NASA è partito il 30 agosto 2026 verso L2: la nitidezza di Hubble su un campo 100 volte più ampio, prime immagini entro inizio 2027."
+  }
+ },
+ "OCO-2.html": {
+  "es": {
+   "description": "Desde 2014, el satélite OCO-2 de la NASA mide el dióxido de carbono en todo el planeta: dónde se libera el carbono y dónde lo absorben bosques y océanos."
+  },
+  "fr": {
+   "description": "Depuis 2014, le satellite OCO-2 de la NASA mesure le dioxyde de carbone sur toute la planète : où il est rejeté, et où forêts et océans l'absorbent."
+  },
+  "it": {
+   "description": "Dal 2014 il satellite OCO-2 della NASA misura l'anidride carbonica in tutto il pianeta: dove il carbonio viene rilasciato e dove foreste e oceani lo assorbono."
   }
  },
  "Oceans.html": {
@@ -408,12 +938,15 @@
    "title": "Ocean Solutions: Plastic Cleanup That Works Now"
   },
   "es": {
+   "description": "Soluciones para el océano que ya funcionan: sistemas e Interceptors de The Ocean Cleanup, equipos de 4ocean y la economía del reciclaje de Plastic Bank.",
    "title": "Soluciones para los océanos: limpiar el plástico"
   },
   "fr": {
+   "description": "Des solutions pour l'océan qui marchent déjà : systèmes et Interceptors de The Ocean Cleanup, équipes de 4ocean et économie du recyclage de Plastic Bank.",
    "title": "Solutions pour les océans : nettoyer le plastique"
   },
   "it": {
+   "description": "Soluzioni per l’oceano che funzionano già: i sistemi e gli Interceptor di The Ocean Cleanup, le squadre di 4ocean e l’economia del riciclo di Plastic Bank.",
    "title": "Soluzioni per gli oceani: ripulire la plastica"
   }
  },
@@ -477,6 +1010,28 @@
    "title": "Le orbite spiegate: perché i satelliti non cadono"
   }
  },
+ "PREFIRE.html": {
+  "es": {
+   "description": "Dos satélites de la NASA del tamaño de una caja de zapatos miden el calor en el infrarrojo lejano que los polos de la Tierra envían al espacio."
+  },
+  "fr": {
+   "description": "Deux satellites de la NASA de la taille d'une boîte à chaussures mesurent la chaleur infrarouge lointaine que les pôles de la Terre renvoient vers l'espace."
+  },
+  "it": {
+   "description": "Due satelliti NASA grandi come una scatola da scarpe misurano il calore nel lontano infrarosso che i poli della Terra disperdono nello spazio (JPL della NASA)."
+  }
+ },
+ "Physics_Guide.html": {
+  "en": {
+   "description": "Physics for kids, teens and college students: forces and collisions, air resistance, pendulums, magnetism and auroras, heat, and relativity in GPS."
+  },
+  "es": {
+   "description": "Física para niños, adolescentes y estudiantes: fuerzas y choques, resistencia del aire, péndulos, imanes y auroras, calor y la relatividad del GPS."
+  },
+  "fr": {
+   "description": "La physique pour enfants, ados et étudiants : forces et chocs, résistance de l’air, pendules, aimants et aurores, chaleur et relativité du GPS."
+  }
+ },
  "Physics_Lab.html": {
   "ar": {
    "description": "مختبر الفيزياء التفاعلي: مقذوف مع سحب تربيعي (RK4)، ومذبذب مخمَّد مع القيم الذاتية ومنحنى الاستجابة، والدورة الدقيقة للبندول.",
@@ -496,6 +1051,77 @@
   "it": {
    "description": "Physics Lab interattivo: proiettile con resistenza quadratica (RK4), oscillatore smorzato con autovalori e grafico di risposta, e periodo esatto del pendolo.",
    "title": "Physics Lab: proiettile, oscillatore e pendolo"
+  }
+ },
+ "Physics_Math.html": {
+  "ar": {
+   "description": "الميكانيكا والاهتزازات واللاغرانجيات والكهرومغناطيسية والديناميكا الحرارية والموائع ونسبية GPS: اشتقاقات وأمثلة محلولة، من الكلية إلى الدكتوراه."
+  },
+  "en": {
+   "description": "Mechanics, drag, oscillations, Lagrangians, electromagnetism, thermodynamics, fluids and GPS relativity: derivations and worked examples, college to PhD."
+  },
+  "es": {
+   "description": "Mecánica, oscilaciones, lagrangianos, electromagnetismo, termodinámica, fluidos y la relatividad del GPS: deducciones y ejercicios, hasta el doctorado."
+  },
+  "fr": {
+   "description": "Mécanique, oscillations, lagrangiens, électromagnétisme, thermodynamique, fluides et relativité du GPS : démonstrations et exercices, jusqu'au doctorat."
+  },
+  "it": {
+   "description": "Meccanica, oscillazioni, lagrangiane, elettromagnetismo, termodinamica, fluidi e la relatività del GPS: dimostrazioni ed esercizi svolti, fino al dottorato."
+  }
+ },
+ "Phytoplankton.html": {
+  "es": {
+   "description": "Diminutas plantas oceánicas producen cerca de la mitad del oxígeno de la Tierra: el fitoplancton es uno de los sistemas naturales más importantes del planeta."
+  },
+  "fr": {
+   "description": "De minuscules plantes océaniques produisent environ la moitié de l'oxygène de la Terre : le phytoplancton est l'un des systèmes naturels les plus importants."
+  }
+ },
+ "Planetary_Defense.html": {
+  "es": {
+   "description": "Defensa planetaria: Hera (ESA) en el asteroide que movió DART, NEO Surveyor (NASA), Webb y el asteroide 2024 YR4, y Júpiter, el escudo natural."
+  },
+  "fr": {
+   "description": "Défense planétaire : Hera (ESA) à l'astéroïde déplacé par DART, NEO Surveyor (NASA), Webb et 2024 YR4, et Jupiter, le bouclier naturel."
+  },
+  "it": {
+   "description": "Difesa planetaria: Hera dell’ESA all’asteroide deviato da DART, NEO Surveyor della NASA, Webb e l’asteroide 2024 YR4, e Giove, lo scudo naturale."
+  }
+ },
+ "Plant-for-the-Planet.html": {
+  "es": {
+   "description": "Fundada en 2007 por un niño de 9 años, Plant-for-the-Planet forma a jóvenes Embajadores de la Justicia Climática y restaura bosques, como los mayas de México."
+  },
+  "fr": {
+   "description": "Lancée en 2007 par un enfant de 9 ans, Plant-for-the-Planet forme de jeunes Ambassadeurs de la justice climatique et restaure des forêts, au Mexique notamment."
+  },
+  "it": {
+   "description": "Nata nel 2007 da un bambino di 9 anni, Plant-for-the-Planet forma giovani Ambasciatori della giustizia climatica e ripristina foreste, tra cui quelle maya."
+  }
+ },
+ "Plastic_Bank.html": {
+  "es": {
+   "description": "Plastic Bank convierte el plástico que acabaría en el océano en ingresos para recolectores de comunidades vulnerables, que lo recogen antes de llegar al mar."
+  },
+  "fr": {
+   "description": "Plastic Bank transforme le plastique destiné à l'océan en revenu pour les collecteurs de communautés vulnérables, pour qu'il soit ramassé avant d'y arriver."
+  },
+  "it": {
+   "description": "Plastic Bank trasforma la plastica diretta in mare in reddito per i raccoglitori di comunità vulnerabili: conviene raccoglierla prima che arrivi all’oceano."
+  }
+ },
+ "Plastic_Odyssey.html": {
+  "fr": {
+   "description": "Plastic Odyssey installe de petites usines de recyclage là où il n'existe aucune filière, pour faire des déchets plastiques des produits utiles et des emplois."
+  }
+ },
+ "Plato.html": {
+  "es": {
+   "description": "Plato, de la ESA, usará 26 cámaras para buscar planetas parecidos a la Tierra alrededor de estrellas como el Sol; lanzamiento previsto en marzo de 2027."
+  },
+  "fr": {
+   "description": "Plato, de l'ESA, utilisera 26 caméras pour chercher des planètes semblables à la Terre autour d'étoiles comme le Soleil ; lancement prévu en mars 2027."
   }
  },
  "Play_and_Learn.html": {
@@ -518,16 +1144,99 @@
    "title": "Gioca e impara: giochi sul pianeta per bambini"
   }
  },
+ "Posidonia_Meadows.html": {
+  "ar": {
+   "description": "يشكّل عشب البوسيدونيا المتوسطي (Posidonia oceanica) مروجًا عمر بعضها أكثر من 2000 عام، تخزّن الكربون في قاع البحر وتؤوي صغار الأسماك (CEAB-CSIC)."
+  }
+ },
+ "Press.html": {
+  "it": {
+   "description": "Cartella stampa di Saving Planets: loghi da scaricare, missione, testo di presentazione, contatti e schede informative. Tutto per scrivere di Saving Planets."
+  }
+ },
+ "Privacy.html": {
+  "fr": {
+   "description": "Ce que nous collectons, pourquoi, et comment vous gardez le contrôle. En bref : très peu, et rien sans votre accord. Nous ne vendons aucune donnée personnelle."
+  },
+  "it": {
+   "description": "Cosa raccogliamo, perché e come mantieni il controllo. In breve: pochissimo, e niente senza il tuo consenso. Non vendiamo né condividiamo dati personali."
+  }
+ },
+ "Project-Rawane.html": {
+  "ar": {
+   "title": "مشروع Rawane: علاقة متبادلة بين الأرض والفضاء"
+  },
+  "es": {
+   "description": "Proyecto R: la relación de doble sentido entre la Tierra y el espacio; el trabajo espacial protege el planeta y el planetario cuida el espacio."
+  },
+  "fr": {
+   "description": "Projet R : la relation à double sens entre la Terre et l'espace, où le travail spatial protège la planète et le travail sur Terre préserve l'espace."
+  },
+  "it": {
+   "description": "Project R: il rapporto a doppio senso tra Terra e spazio, in cui il lavoro nello spazio protegge il pianeta e quello sulla Terra rende lo spazio da tutelare."
+  }
+ },
  "Projectile_Motion_Drag_Calculator.html": {
   "en": {
    "description": "Real balls do not follow a perfect parabola: air drag shortens the range and lowers the peak. A free projectile motion calculator with air resistance."
   },
+  "es": {
+   "description": "Una pelota real no sigue una parábola perfecta: la resistencia del aire acorta el alcance y baja la altura máxima. Calculadora gratuita con rozamiento del aire."
+  },
   "fr": {
+   "description": "Une vraie balle ne suit pas une parabole parfaite : la traînée raccourcit la portée et abaisse le sommet. Calculateur gratuit de tir avec résistance de l'air.",
    "title": "Calculateur de projectile avec résistance de l’air"
+  }
+ },
+ "Psyche.html": {
+  "en": {
+   "description": "NASA's Psyche used a Mars flyby on 15 May 2026 to head for a metal-rich asteroid it will orbit from August 2029, to learn what a planet's core is like."
+  },
+  "it": {
+   "description": "Il 15 maggio 2026 la sonda Psyche della NASA ha sfruttato un sorvolo di Marte per puntare su un asteroide ricco di metalli, attorno a cui orbiterà dal 2029."
+  }
+ },
+ "Rainforest_Connection.html": {
+  "ar": {
+   "description": "أجهزة استماع «غارديان» تعمل بالطاقة الشمسية والذكاء الاصطناعي ترصد المناشير لحظة تشغيلها؛ وتفيد Rainforest Connection بحماية أكثر من 726 ألف هكتار."
+  },
+  "es": {
+   "description": "Dispositivos de escucha Guardian, con energía solar e IA, detectan motosierras en tiempo real; Rainforest Connection informa de 726.000 hectáreas protegidas."
+  },
+  "it": {
+   "description": "Dispositivi di ascolto Guardian a energia solare e IA rilevano le motoseghe in tempo reale; Rainforest Connection segnala oltre 726.000 ettari protetti."
+  }
+ },
+ "Rawanes_Mission_Log.html": {
+  "fr": {
+   "description": "Le journal de mission de Rawane : de courts récits chaque semaine de la mascotte astronaute de Saving Planets, liés à de vraies solutions sourcées."
+  },
+  "it": {
+   "description": "Il diario di missione di Rawane: brevi racconti settimanali della mascotte astronauta di Saving Planets, legati a soluzioni reali e con ogni fatto documentato."
+  }
+ },
+ "Restoring_the_Lake_Depths.html": {
+  "ar": {
+   "description": "منظمة غير ربحية في نيفادا تستخدم مركبات تُشغَّل عن بُعد وغواصين متطوعين لإزالة المخلفات المغمورة من بحيرة تاهو، من السطح حتى عمق 1,640 قدمًا."
+  },
+  "it": {
+   "description": "Un’organizzazione non profit del Nevada che con ROV e subacquei volontari rimuove i rifiuti sommersi dal lago Tahoe, dalla superficie fino a 1.640 piedi."
+  }
+ },
+ "River_Cleanup.html": {
+  "es": {
+   "description": "River Cleanup y sus voluntarios han recuperado más de 4,39 millones de kg de residuos de ríos de todo el mundo y aspiran a 1.000 ríos sin plástico para 2050."
+  },
+  "fr": {
+   "description": "River Cleanup et ses bénévoles ont retiré plus de 4,39 millions de kg de déchets des rivières du monde et visent 1 000 rivières sans plastique d'ici 2050."
+  },
+  "it": {
+   "description": "River Cleanup e i suoi volontari hanno recuperato oltre 4,39 milioni di kg di rifiuti dai fiumi del mondo e puntano a 1.000 fiumi senza plastica entro il 2050."
   }
  },
  "Rivers.html": {
   "ar": {
+   "description": "تلتقط River Interceptors البلاستيك في الأنهار التي تحمل معظمه إلى المحيط، فالتقاطه في النهر يمنعه من بلوغ البحر. وتذكر كل صفحة حل أرقامها الموثقة.",
    "title": "حلول الأنهار: التقاط البلاستيك قبل البحر"
   },
   "en": {
@@ -537,10 +1246,51 @@
    "title": "Soluciones para ríos: frenar el plástico antes del mar"
   },
   "fr": {
+   "description": "Les River Interceptors captent le plastique dans les rivières qui en apportent la majeure partie à l'océan. Chaque page de solution cite ses propres chiffres.",
    "title": "Solutions pour les rivières : stopper le plastique"
   },
   "it": {
    "title": "Soluzioni per i fiumi: fermare la plastica prima del mare"
+  }
+ },
+ "Rotor_Hover_Power_Calculator.html": {
+  "fr": {
+   "description": "Un hélicoptère ou un drone en vol stationnaire pousse l’air vers le bas pour se maintenir. Calculez la puissance idéale et réaliste avec la théorie de Froude."
+  }
+ },
+ "SARSAT.html": {
+  "es": {
+   "description": "Los satélites SARSAT de la NOAA retransmiten las señales de radiobalizas de socorro; desde 1982 el sistema internacional ha apoyado más de 50.000 rescates."
+  },
+  "it": {
+   "description": "I satelliti SARSAT della NOAA inoltrano ai soccorritori i segnali dei radiofari di emergenza; dal 1982 il sistema ha contribuito a oltre 50.000 salvataggi."
+  }
+ },
+ "SI_Helper.html": {
+  "fr": {
+   "description": "Comment le pilote SI Helper de la page Enseignants répond uniquement à partir des pages de Saving Planets : contrôles de sécurité, limites, rien de conservé."
+  }
+ },
+ "SOLAR_1.html": {
+  "ar": {
+   "description": "يراقب SOLAR-1 التابع لـ NOAA (سابقًا SWFO-L1) الشمس من L1، على بعد نحو مليون ميل من الأرض، ويبث بيانات الطقس الفضائي إلى المتنبئين لحظة بلحظة."
+  },
+  "es": {
+   "description": "SOLAR-1 de la NOAA (antes SWFO-L1) vigila el Sol desde L1, a un millón de millas de la Tierra, y envía datos de clima espacial en tiempo real."
+  },
+  "fr": {
+   "description": "SOLAR-1 de la NOAA (ex-SWFO-L1) observe le Soleil depuis L1, à environ un million de miles, et transmet la météo spatiale en temps réel."
+  },
+  "it": {
+   "description": "SOLAR-1 della NOAA (ex SWFO-L1) osserva il Sole da L1, a circa un milione di miglia dalla Terra, e invia in tempo reale ai previsori i dati sul meteo spaziale."
+  }
+ },
+ "Saharan_Dust_Amazon.html": {
+  "fr": {
+   "description": "Chaque année, environ 27,7 millions de tonnes de poussière saharienne tombent sur l'Amazonie, avec quelque 22 000 tonnes de phosphore utiles à la forêt."
+  },
+  "it": {
+   "description": "Ogni anno circa 27,7 milioni di tonnellate di polvere del Sahara cadono sull’Amazzonia, portando circa 22.000 tonnellate di fosforo utile alla foresta pluviale."
   }
  },
  "Satellite_Explorer.html": {
@@ -580,6 +1330,43 @@
    "title": "Cerca su Saving Planets: soluzioni e lezioni"
   }
  },
+ "Sentinel-1.html": {
+  "es": {
+   "description": "El radar de Sentinel-1 ve a través de las nubes, de día y de noche, para cartografiar inundaciones, terremotos y hielo; 1C y 1D se sumaron en 2024 y 2025."
+  },
+  "it": {
+   "description": "Il radar di Sentinel-1 vede attraverso le nuvole, di giorno e di notte, per mappare alluvioni, terremoti e ghiacci; 1C e 1D sono arrivati nel 2024 e nel 2025."
+  }
+ },
+ "Sentinel-2C.html": {
+  "fr": {
+   "description": "Sentinel-2C a rejoint la flotte Copernicus en septembre 2024 ; il photographie terres et côtes en 13 bandes pour suivre forêts et cultures tous les 5 jours."
+  },
+  "it": {
+   "description": "Sentinel-2C è entrato nella flotta Copernicus a settembre 2024: riprende terre e coste in 13 bande, così foreste e colture sono controllate ogni cinque giorni."
+  }
+ },
+ "Sentinel-3.html": {
+  "es": {
+   "description": "Los satélites Copernicus Sentinel-3 miden océanos, tierra, hielo y atmósfera, y un tercero, Sentinel-3C, se lanzó el 15 de septiembre de 2026 (ESA)."
+  },
+  "fr": {
+   "description": "Les satellites Copernicus Sentinel-3 mesurent océans, terres, glaces et atmosphère ; un troisième satellite, Sentinel-3C, a été lancé le 15 septembre 2026."
+  },
+  "it": {
+   "description": "I satelliti Copernicus Sentinel-3 misurano oceani, terre emerse, ghiacci e atmosfera; un terzo satellite, Sentinel-3C, è stato lanciato il 15 settembre 2026."
+  }
+ },
+ "Sentinel-4.html": {
+  "en": {
+   "description": "From geostationary orbit on MTG-S1, Sentinel-4 measures air pollution such as nitrogen dioxide and ozone over Europe and North Africa every hour (ESA)."
+  }
+ },
+ "Sentinel-6B.html": {
+  "ar": {
+   "description": "يواصل Sentinel-6B، الذي أُطلق في 17 نوفمبر 2025، السجل الدقيق لمستوى سطح البحر العالمي الذي بدأ في أوائل التسعينيات، ليساعد المدن الساحلية على التخطيط."
+  }
+ },
  "Sitemap.html": {
   "ar": {
    "description": "كل الأقسام والحلول في Saving Planets في قائمة واحدة، من المحيطات والبحيرات والأنهار والغابات إلى الفضاء ورصد الأرض، لتصل إلى أي صفحة بسرعة.",
@@ -600,6 +1387,11 @@
   "it": {
    "description": "Tutte le sezioni e le soluzioni di Saving Planets in un solo elenco, da oceani, laghi, fiumi e foreste fino allo spazio e all’osservazione della Terra.",
    "title": "Mappa del sito: tutto Saving Planets"
+  }
+ },
+ "Solutions.html": {
+  "fr": {
+   "description": "Toutes les solutions de Saving Planets au même endroit : 142 solutions sourcées dans 10 pôles, du nettoyage des océans aux satellites d'observation de la Terre."
   }
  },
  "Space.html": {
@@ -624,14 +1416,130 @@
    "title": "Soluzioni spaziali: detriti e servizi in orbita"
   }
  },
+ "SpaceLogistics.html": {
+  "it": {
+   "description": "Estensione della vita in orbita geostazionaria: due MEV agganciati a tre satelliti, e il Mission Robotic Vehicle con tre moduli partito il 21 luglio 2026."
+  }
+ },
  "Space_Disposal.html": {
   "en": {
    "description": "Space Disposal: the missions that capture and remove legacy debris from orbit, led by Astroscale's ADRAS-J2 for JAXA, with a source for every figure."
   }
  },
+ "Space_Weather.html": {
+  "ar": {
+   "description": "الطقس الفضائي والدروع: الغلاف الشمسي والغلاف المغناطيسي وطبقة الأوزون، مع SOLAR-1 من NOAA وVigil من ESA وAditya-L1 من ISRO التي تراقب الشمس."
+  },
+  "es": {
+   "description": "Clima espacial y escudos: heliosfera, magnetosfera y capa de ozono, más SOLAR-1 (NOAA), Vigil (ESA) y Aditya-L1 (ISRO), que vigilan el Sol."
+  },
+  "fr": {
+   "description": "Météo spatiale et boucliers : héliosphère, magnétosphère et ozone, plus SOLAR-1 (NOAA), Vigil (ESA) et Aditya-L1 (ISRO), qui surveillent le Soleil."
+  },
+  "it": {
+   "description": "Meteo spaziale e scudi: eliosfera, magnetosfera e strato di ozono, più SOLAR-1 (NOAA), Vigil (ESA) e Aditya-L1 (ISRO), che osservano il Sole per proteggerci."
+  }
+ },
+ "Spot_the_Fire.html": {
+  "ar": {
+   "description": "نشاط صفي مجاني بصيغة astroEDU: يضع الطلاب شبكتين، كبيرة المربعات ودقيقة، فوق منظر مطبوع ليفهموا لماذا يهم حجم البكسل في رصد حرائق الغابات."
+  },
+  "en": {
+   "description": "A free astroEDU-format classroom activity: students lay coarse and fine grids over a paper landscape to see why pixel size matters for spotting wildfires."
+  },
+  "es": {
+   "description": "Actividad gratuita en formato astroEDU: el alumnado pone cuadrículas sobre un paisaje impreso para ver por qué el tamaño del píxel importa ante incendios."
+  },
+  "fr": {
+   "description": "Activité gratuite au format astroEDU : les élèves posent des grilles sur un paysage imprimé pour voir pourquoi la taille des pixels compte face aux feux."
+  },
+  "it": {
+   "description": "Attività gratuita in formato astroEDU: gli studenti sovrappongono due griglie a un paesaggio stampato e scoprono perché i pixel contano per vedere gli incendi."
+  }
+ },
+ "Starfish_Otter.html": {
+  "fr": {
+   "description": "Le premier Otter a été lancé le 1er octobre 2026 pour la mission SSPICY de la NASA : inspecter jusqu'à quatre satellites et étages de fusée morts dès 2027."
+  }
+ },
+ "TRACERS.html": {
+  "es": {
+   "description": "Los satélites gemelos TRACERS de la NASA atraviesan las cúspides polares de la Tierra para estudiar la reconexión magnética, motor del clima espacial."
+  },
+  "it": {
+   "description": "I satelliti gemelli TRACERS della NASA attraversano le cuspidi polari della Terra per studiare la riconnessione magnetica, motore chiave del meteo spaziale."
+  }
+ },
+ "Tanager-1.html": {
+  "en": {
+   "description": "Tanager-1, built by Planet with a NASA JPL-designed spectrometer for the nonprofit Carbon Mapper, pinpoints methane and CO2 plumes from single sources."
+  }
+ },
+ "Terraformation.html": {
+  "ar": {
+   "description": "تستعيد Terraformation غابات محلية غنية بالتنوع الحيوي، من البذرة حتى اكتمال الظلّة، في المناطق الاستوائية وهاواي، وتموّل دورة حياة الأشجار كاملة."
+  },
+  "es": {
+   "description": "Terraformation restaura bosques nativos y biodiversos, de la semilla al dosel, en los trópicos y Hawái, y financia todo el ciclo para que los árboles vivan."
+  },
+  "it": {
+   "description": "Terraformation ripristina foreste autoctone e ricche di biodiversità, dal seme alla chioma degli alberi, nelle regioni tropicali e alle Hawaii."
+  }
+ },
+ "Three_Shields.html": {
+  "it": {
+   "description": "Tre scudi naturali proteggono la Terra: l’eliosfera, la magnetosfera e l’atmosfera con lo strato di ozono, una protezione gratuita e naturale."
+  }
+ },
+ "Titan.html": {
+  "es": {
+   "description": "Titán es una cápsula del tiempo prebiótica que el helicóptero Dragonfly de la NASA explorará desde 2034, con radar, energía y autonomía útiles en la Tierra."
+  },
+  "fr": {
+   "description": "Titan est une capsule temporelle prébiotique, que le giravion Dragonfly de la NASA explorera dès 2034, avec des outils radar, énergie et autonomie."
+  },
+  "it": {
+   "description": "Titano è una capsula del tempo prebiotica che il velivolo a rotori Dragonfly della NASA esplorerà dal 2034, con radar, energia e autonomia utili alla Terra."
+  }
+ },
+ "Topics.html": {
+  "en": {
+   "description": "Every solution, hub and science word on Saving Planets, from A to Z: oceans, lakes, rivers, forests, space, Earth observation and the glossary terms."
+  }
+ },
+ "Tsunami_Early_Warning.html": {
+  "es": {
+   "description": "Boyas de aguas profundas, satélites, señales GPS y cables submarinos detectan tsunamis en mar abierto para que la costa tenga tiempo de llegar a zonas altas."
+  },
+  "fr": {
+   "description": "Bouées de grand fond, satellites, GPS et câbles sous-marins repèrent les tsunamis au large pour laisser aux côtes le temps de gagner les hauteurs."
+  },
+  "it": {
+   "description": "Boe d’alto mare, satelliti, segnali GPS e cavi sottomarini individuano gli tsunami in mare aperto, dando alle comunità costiere il tempo di salire in quota."
+  }
+ },
+ "Veggie_Space_Garden.html": {
+  "es": {
+   "description": "El huerto Veggie de la NASA cultiva alimentos frescos en la Estación Espacial Internacional; en 2015 los astronautas comieron la primera lechuga de este huerto."
+  },
+  "fr": {
+   "description": "Le jardin Veggie de la NASA fait pousser des aliments frais sur la Station spatiale ; en 2015, des astronautes y ont mangé la première laitue cultivée."
+  }
+ },
+ "Waterkeeper_Alliance.html": {
+  "ar": {
+   "description": "تجمع Waterkeeper Alliance مئات المجموعات المحلية التي تحرس وتحمي أكثر من 6 ملايين ميل مربع من الأنهار والبحيرات والسواحل."
+  },
+  "fr": {
+   "description": "Waterkeeper Alliance réunit des centaines de groupes locaux qui surveillent et protègent plus de 6 millions de miles carrés de rivières, de lacs et de côtes."
+  },
+  "it": {
+   "description": "Waterkeeper Alliance riunisce centinaia di gruppi locali Waterkeeper che sorvegliano e proteggono oltre 6 milioni di miglia quadrate di fiumi, laghi e coste."
+  }
+ },
  "Ways_to_Help.html": {
   "ar": {
-   "description": "تبرّع أو انضمّ إلى من يقومون بالعمل، من تنظيف المحيطات والأنهار إلى زراعة الأشجار. لا يقبل Saving Planets التبرعات ولا يتلقى أي جزء من هذه الأموال.",
+   "description": "تبرّع أو انضمّ إلى من يقومون بالعمل، من تنظيف المحيطات والأنهار إلى زراعة الأشجار. لا يقبل Saving Planets التبرعات ولا يتلقى أي جزء من المال.",
    "title": "طرق المساعدة: ادعم من يقومون بالعمل"
   },
   "en": {
@@ -639,16 +1547,35 @@
    "title": "Ways to Help: Give to or Join the People Doing the Work"
   },
   "es": {
-   "description": "Dona o súmate a quienes hacen el trabajo, desde limpiar océanos y ríos hasta plantar árboles. Saving Planets no acepta donaciones ni recibe parte del dinero.",
+   "description": "Dona o súmate a quienes hacen el trabajo, de limpiar océanos y ríos a plantar árboles. Saving Planets no acepta donaciones y no recibe nada de ese dinero.",
    "title": "Formas de ayudar: apoya a quienes hacen el trabajo"
   },
   "fr": {
-   "description": "Donnez ou engagez-vous auprès de ceux qui font le travail, du nettoyage des océans et des rivières à la plantation d’arbres. Saving Planets ne reçoit aucun don.",
+   "description": "Donnez ou engagez-vous auprès de ceux qui agissent, des océans et rivières aux arbres. Saving Planets n'accepte pas de dons et ne reçoit rien de cet argent.",
    "title": "Comment aider : soutenir ceux qui agissent"
   },
   "it": {
-   "description": "Dona o unisciti a chi fa il lavoro, dalla pulizia di oceani e fiumi alla piantumazione di alberi. Saving Planets non accetta donazioni e non riceve denaro.",
+   "description": "Dona o unisciti a chi fa il lavoro, dalla pulizia di oceani e fiumi agli alberi. Saving Planets non accetta donazioni e non riceve nulla di quel denaro.",
    "title": "Come aiutare: sostieni chi fa il lavoro"
+  }
+ },
+ "Webb_2024_YR4.html": {
+  "es": {
+   "description": "Cómo el telescopio James Webb siguió al asteroide 2024 YR4 en febrero de 2026 y descartó un impacto lunar en 2032, dos años antes que los telescopios en tierra."
+  },
+  "fr": {
+   "description": "Comment le télescope James Webb a suivi l'astéroïde 2024 YR4 en février 2026 et écarté un impact lunaire en 2032, deux ans avant les télescopes au sol."
+  },
+  "it": {
+   "description": "Come il telescopio James Webb ha seguito l’asteroide 2024 YR4 a febbraio 2026 escludendo un impatto con la Luna nel 2032, due anni prima dei telescopi a terra."
+  }
+ },
+ "World_Map.html": {
+  "es": {
+   "description": "Un mapa interactivo de las soluciones de Saving Planets: pines verdes para las que ya funcionan, azules para las próximas y cohetes para los lanzamientos."
+  },
+  "fr": {
+   "description": "Une carte interactive des solutions de Saving Planets : épingles vertes pour celles qui agissent déjà, bleues pour celles à venir, fusées pour les lancements."
   }
  }
 }
