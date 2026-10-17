@@ -47,7 +47,15 @@ simple = { limit = 3, period = 60 }
 name = "MAIL"
 destination_address = "media@savingplanets.com"
 
+# Oct 16: unanswered-question log (question text scrubbed of personal details + language + topic tab + UTC minute; no IP/UA/IDs).
+# Exported weekly by scripts/unanswered-pull.py (Cloudflare API, token on the box). Entries expire after UQ_TTL_DAYS.
+[[kv_namespaces]]
+binding = "UQ"
+id = "b88ab6c1a4d64d38a0d09ac3b0a4e17c"   # si-helper-unanswered
+
 [vars]
+UQ_DAY_CAP = "200"          # max NEW unanswered questions saved per UTC day (all visitors); 5 new per visitor per day (Guard)
+UQ_TTL_DAYS = "45"          # unanswered entries auto-delete after 45 days
 MAIL_FROM = "site-forms@savingplanets.com"
 MAIL_TO = "media@savingplanets.com"
 REPORTS_PER_IP_DAY = "10"

@@ -1,0 +1,4 @@
+{
+ "_about": "Approved answers to SI Helper questions the site could not answer (Oct 16 2026 workflow, see NOTES.md 'Unanswered-question log'). Each entry: id (a-z0-9-), topic (all|aero|orbit|phys), approved (true to publish), added (YYYY-MM-DD), from_keys (KV keys from scripts/unanswered-pull.py, so they are not exported again), q and a in en/fr/es/ar/it (plain text), sources [{title, url}] (https, at least one). Built by scripts/build-student-qa.py into Student_Questions.html (5 langs), search/student-qa.json, sitemap, and Vectorize via scripts/si-index.py.",
+ "entries": []
+}

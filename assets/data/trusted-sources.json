@@ -1,0 +1,488 @@
+{
+ "_about": "Oct 16 2026: curated allowlist of trusted outside learning sources for SI Helper (fallback when the site cannot answer) and for the Wednesday routine that researches unanswered questions. Tags: math, physics, orbital, aero, earth (any Earth science), ocean, weather, climate, general. w = priority (higher first). urls/titles = language-specific versions; other languages get the default url labelled as English. Every url was checked to load on Oct 16 2026 (curl, or a real browser for feynmanlectures.caltech.edu and online.princeton.edu, which block non-browser clients). Bundled into the si-helper Worker at deploy and used for the widget link allowlist (scripts/build-si-helper.py), so redeploy the Worker and rebuild after editing. MIT OCW and Open Yale are CC BY-NC-SA: link to them and summarise in our own words; never copy their material wholesale.",
+ "checked": "2026-10-16",
+ "sources": [
+  {
+   "id": "nasa-spaceplace",
+   "org": "NASA",
+   "title": "NASA Space Place",
+   "url": "https://spaceplace.nasa.gov/",
+   "urls": {
+    "es": "https://spaceplace.nasa.gov/sp/"
+   },
+   "titles": {
+    "es": "NASA Space Place en español"
+   },
+   "tags": [
+    "general",
+    "earth",
+    "physics",
+    "orbital"
+   ],
+   "w": 3,
+   "level": "k12"
+  },
+  {
+   "id": "nasa-glenn-aero",
+   "org": "NASA",
+   "title": "NASA Glenn: Beginner’s Guide to Aeronautics",
+   "url": "https://www.grc.nasa.gov/www/k-12/airplane/",
+   "tags": [
+    "aero"
+   ],
+   "w": 5,
+   "level": "k12-hs"
+  },
+  {
+   "id": "nasa-glenn-rockets",
+   "org": "NASA",
+   "title": "NASA Glenn: Beginner’s Guide to Rockets",
+   "url": "https://www.grc.nasa.gov/www/k-12/rocket/",
+   "tags": [
+    "aero",
+    "orbital"
+   ],
+   "w": 3,
+   "level": "k12-hs"
+  },
+  {
+   "id": "nasa-basics-spaceflight",
+   "org": "NASA",
+   "title": "NASA: Basics of Space Flight",
+   "url": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "tags": [
+    "orbital"
+   ],
+   "w": 5,
+   "level": "hs-university"
+  },
+  {
+   "id": "nasa-climate",
+   "org": "NASA",
+   "title": "NASA Science: Climate Change",
+   "url": "https://science.nasa.gov/climate-change/",
+   "tags": [
+    "earth",
+    "climate"
+   ],
+   "w": 4,
+   "level": "all"
+  },
+  {
+   "id": "noaa-education",
+   "org": "NOAA",
+   "title": "NOAA Education",
+   "url": "https://www.noaa.gov/education",
+   "tags": [
+    "earth"
+   ],
+   "w": 4,
+   "level": "all"
+  },
+  {
+   "id": "noaa-ocean-education",
+   "org": "NOAA",
+   "title": "NOAA Ocean Service Education",
+   "url": "https://oceanservice.noaa.gov/education/",
+   "tags": [
+    "earth",
+    "ocean"
+   ],
+   "w": 4,
+   "level": "k12-hs"
+  },
+  {
+   "id": "nws-jetstream",
+   "org": "NOAA",
+   "title": "NOAA National Weather Service: JetStream weather school",
+   "url": "https://www.weather.gov/jetstream/",
+   "tags": [
+    "earth",
+    "weather",
+    "physics"
+   ],
+   "w": 3,
+   "level": "hs"
+  },
+  {
+   "id": "openstax-college-physics",
+   "org": "OpenStax",
+   "title": "OpenStax: College Physics 2e",
+   "url": "https://openstax.org/details/books/college-physics-2e",
+   "urls": {
+    "es": "https://openstax.org/details/books/fisica-universitaria-volumen-1"
+   },
+   "titles": {
+    "es": "OpenStax: Física universitaria, volumen 1"
+   },
+   "tags": [
+    "physics",
+    "aero",
+    "math"
+   ],
+   "w": 4,
+   "level": "hs-university",
+   "license": "CC BY 4.0"
+  },
+  {
+   "id": "openstax-university-physics",
+   "org": "OpenStax",
+   "title": "OpenStax: University Physics, Volume 1",
+   "url": "https://openstax.org/details/books/university-physics-volume-1",
+   "tags": [
+    "physics",
+    "orbital"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY 4.0"
+  },
+  {
+   "id": "openstax-calculus",
+   "org": "OpenStax",
+   "title": "OpenStax: Calculus, Volume 1",
+   "url": "https://openstax.org/details/books/calculus-volume-1",
+   "tags": [
+    "math"
+   ],
+   "w": 4,
+   "level": "hs-university",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  {
+   "id": "openstax-astronomy",
+   "org": "OpenStax",
+   "title": "OpenStax: Astronomy 2e",
+   "url": "https://openstax.org/details/books/astronomy-2e",
+   "tags": [
+    "orbital",
+    "general"
+   ],
+   "w": 3,
+   "level": "hs-university",
+   "license": "CC BY 4.0"
+  },
+  {
+   "id": "openstax-science",
+   "org": "OpenStax",
+   "title": "OpenStax: free science textbooks",
+   "url": "https://openstax.org/subjects/science",
+   "urls": {
+    "es": "https://openstax.org/subjects/espanol"
+   },
+   "titles": {
+    "es": "OpenStax: libros de texto gratuitos en español"
+   },
+   "tags": [
+    "general"
+   ],
+   "w": 3,
+   "level": "hs-university"
+  },
+  {
+   "id": "khan-physics",
+   "org": "Khan Academy",
+   "title": "Khan Academy: Physics",
+   "url": "https://www.khanacademy.org/science/physics",
+   "urls": {
+    "fr": "https://fr.khanacademy.org/science/physics",
+    "es": "https://es.khanacademy.org/science/physics",
+    "ar": "https://ar.khanacademy.org/science/physics",
+    "it": "https://it.khanacademy.org/science/physics"
+   },
+   "titles": {
+    "fr": "Khan Academy : physique",
+    "es": "Khan Academy: física",
+    "ar": "أكاديمية خان: الفيزياء",
+    "it": "Khan Academy: fisica"
+   },
+   "tags": [
+    "physics",
+    "aero"
+   ],
+   "w": 4,
+   "level": "all"
+  },
+  {
+   "id": "khan-math",
+   "org": "Khan Academy",
+   "title": "Khan Academy: Math",
+   "url": "https://www.khanacademy.org/math",
+   "urls": {
+    "fr": "https://fr.khanacademy.org/math",
+    "es": "https://es.khanacademy.org/math",
+    "ar": "https://ar.khanacademy.org/math",
+    "it": "https://it.khanacademy.org/math"
+   },
+   "titles": {
+    "fr": "Khan Academy : mathématiques",
+    "es": "Khan Academy: matemáticas",
+    "ar": "أكاديمية خان: الرياضيات",
+    "it": "Khan Academy: matematica"
+   },
+   "tags": [
+    "math"
+   ],
+   "w": 5,
+   "level": "all"
+  },
+  {
+   "id": "khan-science",
+   "org": "Khan Academy",
+   "title": "Khan Academy: Science",
+   "url": "https://www.khanacademy.org/science",
+   "urls": {
+    "fr": "https://fr.khanacademy.org/science",
+    "es": "https://es.khanacademy.org/science",
+    "ar": "https://ar.khanacademy.org/science",
+    "it": "https://it.khanacademy.org/science"
+   },
+   "titles": {
+    "fr": "Khan Academy : sciences",
+    "es": "Khan Academy: ciencias",
+    "ar": "أكاديمية خان: العلوم",
+    "it": "Khan Academy: scienze"
+   },
+   "tags": [
+    "general"
+   ],
+   "w": 3,
+   "level": "all"
+  },
+  {
+   "id": "khan-astronomy",
+   "org": "Khan Academy",
+   "title": "Khan Academy: Cosmology and astronomy",
+   "url": "https://www.khanacademy.org/science/cosmology-and-astronomy",
+   "tags": [
+    "orbital"
+   ],
+   "w": 2,
+   "level": "all"
+  },
+  {
+   "id": "mit-8-01sc",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 8.01SC: Classical Mechanics",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+   "tags": [
+    "physics",
+    "orbital"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-16-00",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design",
+   "url": "https://ocw.mit.edu/courses/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/",
+   "tags": [
+    "aero"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-16-01",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 16.01–16.04: Unified Engineering",
+   "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/",
+   "tags": [
+    "aero",
+    "physics"
+   ],
+   "w": 1,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-16-346",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 16.346: Astrodynamics",
+   "url": "https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/",
+   "tags": [
+    "orbital"
+   ],
+   "w": 2,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-16-07",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 16.07: Dynamics",
+   "url": "https://ocw.mit.edu/courses/16-07-dynamics-fall-2009/",
+   "tags": [
+    "orbital",
+    "physics"
+   ],
+   "w": 1,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-18-01sc",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 18.01SC: Single Variable Calculus",
+   "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+   "tags": [
+    "math"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "mit-12-003",
+   "org": "MIT OpenCourseWare",
+   "title": "MIT OpenCourseWare 12.003: Atmosphere, Ocean and Climate Dynamics",
+   "url": "https://ocw.mit.edu/courses/12-003-atmosphere-ocean-and-climate-dynamics-fall-2008/",
+   "tags": [
+    "earth",
+    "ocean"
+   ],
+   "w": 2,
+   "level": "university",
+   "license": "CC BY-NC-SA 4.0 (link and summarise only)"
+  },
+  {
+   "id": "yale-phys-200",
+   "org": "Open Yale Courses",
+   "title": "Open Yale Courses PHYS 200: Fundamentals of Physics I",
+   "url": "https://oyc.yale.edu/physics/phys-200",
+   "tags": [
+    "physics",
+    "orbital"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY-NC-SA 3.0 (link and summarise only)"
+  },
+  {
+   "id": "yale-astr-160",
+   "org": "Open Yale Courses",
+   "title": "Open Yale Courses ASTR 160: Frontiers and Controversies in Astrophysics",
+   "url": "https://oyc.yale.edu/astronomy/astr-160",
+   "tags": [
+    "orbital"
+   ],
+   "w": 1,
+   "level": "university",
+   "license": "CC BY-NC-SA 3.0 (link and summarise only)"
+  },
+  {
+   "id": "yale-gg-140",
+   "org": "Open Yale Courses",
+   "title": "Open Yale Courses G&G 140: The Atmosphere, the Ocean and Environmental Change",
+   "url": "https://oyc.yale.edu/geology-and-geophysics/gg-140",
+   "tags": [
+    "earth",
+    "ocean"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "CC BY-NC-SA 3.0 (link and summarise only)"
+  },
+  {
+   "id": "caltech-feynman",
+   "org": "Caltech",
+   "title": "Caltech: The Feynman Lectures on Physics",
+   "url": "https://www.feynmanlectures.caltech.edu/",
+   "tags": [
+    "physics"
+   ],
+   "w": 3,
+   "level": "university",
+   "license": "Free to read online (copyright Caltech; link only)"
+  },
+  {
+   "id": "stanford-free",
+   "org": "Stanford",
+   "title": "Stanford Online: free courses",
+   "url": "https://online.stanford.edu/free-courses",
+   "tags": [
+    "math",
+    "physics",
+    "aero",
+    "earth"
+   ],
+   "w": 1,
+   "level": "university"
+  },
+  {
+   "id": "stanford-see",
+   "org": "Stanford",
+   "title": "Stanford Engineering Everywhere (free courses)",
+   "url": "https://see.stanford.edu/",
+   "tags": [
+    "math",
+    "physics"
+   ],
+   "w": 1,
+   "level": "university"
+  },
+  {
+   "id": "harvard-free",
+   "org": "Harvard",
+   "title": "Harvard: free online courses",
+   "url": "https://pll.harvard.edu/catalog/free",
+   "tags": [
+    "math",
+    "physics",
+    "earth"
+   ],
+   "w": 1,
+   "level": "university"
+  },
+  {
+   "id": "berkeley-undsci",
+   "org": "UC Berkeley",
+   "title": "UC Berkeley: Understanding Science (how science works)",
+   "url": "https://undsci.berkeley.edu/",
+   "tags": [
+    "general"
+   ],
+   "w": 2,
+   "level": "k12-hs"
+  },
+  {
+   "id": "berkeleyx",
+   "org": "UC Berkeley",
+   "title": "UC BerkeleyX free online courses (edX)",
+   "url": "https://www.edx.org/school/uc-berkeleyx",
+   "tags": [
+    "math",
+    "physics"
+   ],
+   "w": 1,
+   "level": "university"
+  },
+  {
+   "id": "princeton-online",
+   "org": "Princeton",
+   "title": "Princeton Online: free online courses",
+   "url": "https://online.princeton.edu/",
+   "tags": [
+    "math",
+    "physics"
+   ],
+   "w": 1,
+   "level": "university"
+  },
+  {
+   "id": "cmu-oli",
+   "org": "Carnegie Mellon OLI",
+   "title": "Carnegie Mellon Open Learning Initiative: free independent-learner courses",
+   "url": "https://oli.cmu.edu/independent-learner-courses/",
+   "tags": [
+    "math",
+    "physics"
+   ],
+   "w": 2,
+   "level": "hs-university"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 """Oct 16 SI Helper pilot: build the retrieval index of site pages (5 languages) for the si-helper Worker.
 Extracts each page's <main> text, splits it into ~900-character chunks, embeds them with Workers AI @cf/baai/bge-m3
 (1024-d, multilingual) and upserts them into the Vectorize index 'si-helper-site' (metadata: url, title, lang, text).
-Only public page text is indexed. Incremental: a manifest of chunk hashes (~/.cache/si-index-state.json on the box) means only changed
+Only public page text is indexed. Student_Questions.html (Oct 16) is indexed one chunk per approved entry of assets/data/student-qa.json. Incremental: a manifest of chunk hashes (~/.cache/si-index-state.json on the box) means only changed
 chunks are re-embedded, and removed chunks are deleted. Runs from weekly-sync.sh when the Cloudflare token exists on the box.
 Usage: python3 scripts/si-index.py [--dry]"""
 import os, re, sys, json, html, glob, hashlib
@@ -35,6 +35,12 @@ def collect():
             s = open(f, encoding='utf8').read()
             if 'noindex' in s[:3000]: continue
             title = html.unescape(re.sub(r'\s*\|\s*Saving Planets.*$', '', (re.search(r'<title>(.*?)</title>', s, re.S) or [None, name])[1])).strip()
+            if name == 'Student_Questions.html':  # Oct 16: one chunk per approved Q&A entry (scripts/build-student-qa.py), linked to its anchor
+                for e in [e for e in json.load(open('assets/data/student-qa.json', encoding='utf8')).get('entries', []) if e.get('approved') is True]:
+                    c = (e['q'][l] + '\n' + e['a'][l] + '\nSources: ' + '; '.join(x['title'] for x in e['sources']))[:MAXC * 2]
+                    cid = hashlib.sha1(f'{l}/{name}#{e["id"]}'.encode()).hexdigest()[:32]
+                    docs.append(dict(id=cid, h=hashlib.sha1((title + c).encode()).hexdigest()[:16], url=SITE + pre + name + '#' + e['id'], title=(e['q'][l] + ' | ' + title)[:200], lang=l, text=c))
+                continue
             for i, c in enumerate(chunks(text_of(s))):
                 cid = hashlib.sha1(f'{l}/{name}#{i}'.encode()).hexdigest()[:32]
                 docs.append(dict(id=cid, h=hashlib.sha1((title + c).encode()).hexdigest()[:16], url=SITE + pre + name, title=title[:200], lang=l, text=c))
