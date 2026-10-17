@@ -589,3 +589,6 @@ Do NOT touch MX records, Email Routing or the mailbox. Only *add* a TXT or CNAME
   Hero canvases start 0x0 (Arabic showed CLS 0.44-0.77 from the 300x150 default canvas). The hero video (1.1 MB) ships
   inert (no autoplay/src/poster) and only the video theme activates it (lazy_video in build-hero-themes.py).
   Text block top follows the nav: 56px bar under 1140px (hamburger, Oct 16 nav change), 92px two-row nav from 1140px.
+
+## Oct 16, 2026 (~9:30 PM HST): speed follow-up (card srcset finished, critical CSS rollout)
+- r2-cards.py now also covers Solutions.html directory cards (.sol-card .photo-link img; sizes "(max-width:600px) 90vw, 260px", measured 208–326 px rendered). 21 more card images uploaded; every assets/og <img> on the site (4015 tags, 5 langs) now has R2 WebP srcset 480/800/1200 (sources are 1200 px). Repo JPEG stays src.
