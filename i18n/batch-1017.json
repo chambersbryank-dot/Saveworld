@@ -1,0 +1,1664 @@
+{
+ "Parker Solar Probe (NASA)": {
+  "fr": "Sonde solaire Parker (NASA)",
+  "es": "Sonda Solar Parker (NASA)",
+  "ar": "مسبار باركر الشمسي (ناسا)",
+  "it": "Sonda solare Parker (NASA)"
+ },
+ "The first spacecraft to fly through the Sun's outer atmosphere, helping scientists understand the space weather that affects life and technology on Earth (NASA).": {
+  "fr": "Le premier engin à traverser l'atmosphère extérieure du Soleil aide les scientifiques à comprendre la météo spatiale qui touche la vie et la technologie sur Terre (NASA).",
+  "es": "La primera nave en atravesar la atmósfera exterior del Sol ayuda a entender el clima espacial que afecta a la vida y la tecnología en la Tierra (NASA).",
+  "ar": "أول مركبة تطير عبر الغلاف الجوي الخارجي للشمس، تساعد العلماء على فهم طقس الفضاء الذي يؤثر في الحياة والتقنية على الأرض (ناسا).",
+  "it": "Il primo veicolo ad attraversare l'atmosfera esterna del Sole aiuta gli scienziati a capire il meteo spaziale che influisce sulla vita e sulla tecnologia sulla Terra (NASA)."
+ },
+ "The Sun seen by NASA's Solar Dynamics Observatory": {
+  "fr": "Le Soleil vu par le Solar Dynamics Observatory de la NASA",
+  "es": "El Sol visto por el Observatorio de Dinámica Solar de la NASA",
+  "ar": "الشمس كما يراها مرصد ديناميكيات الشمس التابع لناسا",
+  "it": "Il Sole visto dal Solar Dynamics Observatory della NASA"
+ },
+ "Parker Solar Probe is a spacecraft that flies closer to the Sun than any other.": {
+  "fr": "La sonde Parker est un engin spatial qui s'approche du Soleil plus que tous les autres.",
+  "es": "La sonda Parker es una nave que vuela más cerca del Sol que ninguna otra.",
+  "ar": "مسبار باركر مركبة فضائية تقترب من الشمس أكثر من أي مركبة أخرى.",
+  "it": "La sonda Parker è un veicolo spaziale che vola più vicino al Sole di qualsiasi altro."
+ },
+ "A thick heat shield keeps it safe from the Sun's heat.": {
+  "fr": "Un épais bouclier thermique la protège de la chaleur du Soleil.",
+  "es": "Un grueso escudo térmico la protege del calor del Sol.",
+  "ar": "درع حراري سميك يحميه من حرارة الشمس.",
+  "it": "Uno spesso scudo termico la protegge dal calore del Sole."
+ },
+ "It helps scientists learn about solar storms that can affect satellites on Earth.": {
+  "fr": "Elle aide les scientifiques à étudier les tempêtes solaires qui peuvent perturber les satellites autour de la Terre.",
+  "es": "Ayuda a los científicos a estudiar las tormentas solares que pueden afectar a los satélites de la Tierra.",
+  "ar": "يساعد العلماء على فهم العواصف الشمسية التي قد تؤثر في الأقمار الصناعية حول الأرض.",
+  "it": "Aiuta gli scienziati a studiare le tempeste solari che possono colpire i satelliti intorno alla Terra."
+ },
+ "The Five W's of Parker Solar Probe": {
+  "fr": "Les 5 questions sur la sonde Parker",
+  "es": "Las cinco preguntas sobre la sonda Parker",
+  "ar": "الأسئلة الخمسة عن مسبار باركر",
+  "it": "Le 5 domande sulla sonda Parker"
+ },
+ "NASA's Goddard Space Flight Center and the Johns Hopkins University Applied Physics Laboratory run the mission. It is named for Dr. Eugene N. Parker, who predicted the solar wind in the 1950s.": {
+  "fr": "Le Goddard Space Flight Center de la NASA et l'Applied Physics Laboratory de l'Université Johns Hopkins mènent la mission. Elle porte le nom du Dr Eugene N. Parker, qui a prédit le vent solaire dans les années 1950.",
+  "es": "El Centro de Vuelo Espacial Goddard de la NASA y el Laboratorio de Física Aplicada de la Universidad Johns Hopkins dirigen la misión. Lleva el nombre del Dr. Eugene N. Parker, que predijo el viento solar en los años cincuenta.",
+  "ar": "يدير المهمة مركز غودارد لرحلات الفضاء التابع لناسا ومختبر الفيزياء التطبيقية في جامعة جونز هوبكنز. وتحمل اسم الدكتور يوجين ن. باركر الذي تنبأ بالرياح الشمسية في خمسينيات القرن العشرين.",
+  "it": "La missione è gestita dal Goddard Space Flight Center della NASA e dall'Applied Physics Laboratory della Johns Hopkins University. Porta il nome del dottor Eugene N. Parker, che negli anni '50 previde il vento solare."
+ },
+ "A spacecraft with four instrument suites that study magnetic fields, plasma and energetic particles, and take images of the solar wind.": {
+  "fr": "Un engin doté de quatre ensembles d'instruments qui étudient les champs magnétiques, le plasma et les particules énergétiques, et photographient le vent solaire.",
+  "es": "Una nave con cuatro conjuntos de instrumentos que estudian campos magnéticos, plasma y partículas energéticas, y toman imágenes del viento solar.",
+  "ar": "مركبة تحمل أربع مجموعات من الأجهزة تدرس المجالات المغناطيسية والبلازما والجسيمات النشطة، وتلتقط صورًا للرياح الشمسية.",
+  "it": "Un veicolo con quattro gruppi di strumenti che studiano campi magnetici, plasma e particelle energetiche e riprendono immagini del vento solare."
+ },
+ "It launched in 2018. In 2021 it became the first spacecraft to fly through the corona, the Sun's upper atmosphere.": {
+  "fr": "Lancée en 2018, elle est devenue en 2021 le premier engin à traverser la couronne, la haute atmosphère du Soleil.",
+  "es": "Se lanzó en 2018. En 2021 se convirtió en la primera nave en atravesar la corona, la atmósfera superior del Sol.",
+  "ar": "أُطلق عام 2018، وفي عام 2021 أصبح أول مركبة تطير عبر الهالة، وهي الغلاف الجوي العلوي للشمس.",
+  "it": "È stata lanciata nel 2018. Nel 2021 è diventata il primo veicolo ad attraversare la corona, l'atmosfera superiore del Sole."
+ },
+ "In orbit around the Sun, well inside the orbit of Mercury. At its closest it comes within about 3.9 million miles (6.2 million km) of the Sun.": {
+  "fr": "En orbite autour du Soleil, bien à l'intérieur de l'orbite de Mercure. Au plus près, elle passe à environ 6,2 millions de km (3,9 millions de miles) du Soleil.",
+  "es": "En órbita alrededor del Sol, muy dentro de la órbita de Mercurio. En su punto más cercano pasa a unos 6,2 millones de km (3,9 millones de millas) del Sol.",
+  "ar": "في مدار حول الشمس، داخل مدار عطارد بكثير. وفي أقرب نقطة يقترب إلى نحو 6.2 مليون كيلومتر (3.9 مليون ميل) من الشمس.",
+  "it": "In orbita attorno al Sole, ben all'interno dell'orbita di Mercurio. Nel punto più vicino passa a circa 6,2 milioni di km (3,9 milioni di miglia) dal Sole."
+ },
+ "Space weather can change the orbits of satellites, shorten their lifetimes or interfere with their electronics. Parker's data are key to understanding and forecasting it.": {
+  "fr": "La météo spatiale peut modifier l'orbite des satellites, raccourcir leur durée de vie ou perturber leur électronique. Les données de Parker sont essentielles pour la comprendre et la prévoir.",
+  "es": "El clima espacial puede cambiar las órbitas de los satélites, acortar su vida o interferir con su electrónica. Los datos de Parker son clave para entenderlo y pronosticarlo.",
+  "ar": "يمكن لطقس الفضاء أن يغيّر مدارات الأقمار الصناعية أو يقصّر أعمارها أو يعطّل إلكترونياتها. وبيانات باركر أساسية لفهمه والتنبؤ به.",
+  "it": "Il meteo spaziale può cambiare l'orbita dei satelliti, accorciarne la vita o disturbarne l'elettronica. I dati di Parker sono fondamentali per capirlo e prevederlo."
+ },
+ "NASA, Parker Solar Probe": {
+  "fr": "NASA, sonde solaire Parker",
+  "es": "NASA, Sonda Solar Parker",
+  "ar": "ناسا، مسبار باركر الشمسي",
+  "it": "NASA, Sonda solare Parker"
+ },
+ "At closest approach, Parker Solar Probe moves at about 430,000 mph (700,000 km/h), fast enough to get from Philadelphia to Washington, D.C., in one second (NASA).": {
+  "fr": "Au plus près du Soleil, la sonde Parker file à environ 700 000 km/h (430 000 mph), assez vite pour aller de Philadelphie à Washington en une seconde (NASA).",
+  "es": "En su máximo acercamiento, la sonda Parker viaja a unos 700.000 km/h (430.000 mph), lo bastante rápido para ir de Filadelfia a Washington D. C. en un segundo (NASA).",
+  "ar": "عند أقرب نقطة يتحرك مسبار باركر بسرعة نحو 700,000 كم/ساعة (430,000 ميل/ساعة)، وهي سرعة تكفي للانتقال من فيلادلفيا إلى واشنطن العاصمة في ثانية واحدة (ناسا).",
+  "it": "Nel punto più vicino la sonda Parker viaggia a circa 700.000 km/h (430.000 mph), abbastanza da andare da Filadelfia a Washington in un secondo (NASA)."
+ },
+ "For Further Information: NASA, Parker Solar Probe": {
+  "fr": "Pour en savoir plus : NASA, sonde solaire Parker",
+  "es": "Más información: NASA, Sonda Solar Parker",
+  "ar": "لمزيد من المعلومات: ناسا، مسبار باركر الشمسي",
+  "it": "Per saperne di più: NASA, Sonda solare Parker"
+ },
+ "A 4.5-Inch Heat Shield": {
+  "fr": "Un bouclier thermique de 11,43 cm",
+  "es": "Un escudo térmico de 11,43 cm",
+  "ar": "درع حراري بسماكة 11.43 سم",
+  "it": "Uno scudo termico di 11,43 cm"
+ },
+ "Parker's 4.5-inch-thick carbon-composite shield can withstand temperatures of nearly 2,500 degrees Fahrenheit (1,377 Celsius).": {
+  "fr": "Le bouclier en composite de carbone de Parker, épais de 11,43 cm (4,5 pouces), résiste à des températures de près de 1 377 °C (2 500 °F).",
+  "es": "El escudo de compuesto de carbono de Parker, de 11,43 cm (4,5 pulgadas) de grosor, resiste temperaturas de casi 1.377 °C (2.500 °F).",
+  "ar": "يتحمل درع باركر المصنوع من مركّب الكربون، بسماكة 11.43 سم (4.5 بوصات)، درجات حرارة تقارب 1,377 درجة مئوية (2,500 فهرنهايت).",
+  "it": "Lo scudo in composito di carbonio di Parker, spesso 11,43 cm (4,5 pollici), resiste a temperature di quasi 1.377 °C (2.500 °F)."
+ },
+ "Parker's data help forecast space weather that can disrupt the satellites people depend on (NASA).": {
+  "fr": "Les données de Parker aident à prévoir la météo spatiale qui peut perturber les satellites dont nous dépendons (NASA).",
+  "es": "Los datos de Parker ayudan a pronosticar el clima espacial que puede alterar los satélites de los que dependemos (NASA).",
+  "ar": "تساعد بيانات باركر على التنبؤ بطقس الفضاء الذي قد يعطّل الأقمار الصناعية التي يعتمد عليها الناس (ناسا).",
+  "it": "I dati di Parker aiutano a prevedere il meteo spaziale che può disturbare i satelliti da cui dipendiamo (NASA)."
+ },
+ "We live in the Sun's atmosphere, and Parker helps scientists understand the Sun's impact on Earth (NASA).": {
+  "fr": "Nous vivons dans l'atmosphère du Soleil, et Parker aide les scientifiques à comprendre son influence sur la Terre (NASA).",
+  "es": "Vivimos dentro de la atmósfera del Sol, y Parker ayuda a entender su impacto en la Tierra (NASA).",
+  "ar": "نحن نعيش داخل الغلاف الجوي للشمس، ويساعد باركر العلماء على فهم تأثير الشمس في الأرض (ناسا).",
+  "it": "Viviamo nell'atmosfera del Sole e Parker aiuta gli scienziati a capirne l'impatto sulla Terra (NASA)."
+ },
+ "Get Involved With Parker Solar Probe": {
+  "fr": "Participer à la sonde Parker",
+  "es": "Participa con la sonda Parker",
+  "ar": "شارك مع مسبار باركر",
+  "it": "Partecipa con la sonda Parker"
+ },
+ "Learn About Parker Solar Probe": {
+  "fr": "Découvrir la sonde Parker",
+  "es": "Conoce la sonda Parker",
+  "ar": "تعرّف على مسبار باركر",
+  "it": "Scopri la sonda Parker"
+ },
+ "Want to go deeper? NASA has the full Parker Solar Probe story.": {
+  "fr": "Envie d'aller plus loin ? La NASA raconte toute l'histoire de la sonde Parker.",
+  "es": "¿Quieres saber más? La NASA cuenta toda la historia de la sonda Parker.",
+  "ar": "هل تريد التعمق أكثر؟ لدى ناسا القصة الكاملة لمسبار باركر.",
+  "it": "Vuoi approfondire? La NASA racconta tutta la storia della sonda Parker."
+ },
+ "Learn more about Parker Solar Probe (NASA)": {
+  "fr": "En savoir plus sur la sonde solaire Parker (NASA)",
+  "es": "Más información sobre la Sonda Solar Parker (NASA)",
+  "ar": "اعرف المزيد عن مسبار باركر الشمسي (ناسا)",
+  "it": "Scopri di più sulla sonda solare Parker (NASA)"
+ },
+ "SOHO Solar and Heliospheric Observatory (ESA / NASA)": {
+  "fr": "SOHO, observatoire solaire et héliosphérique (ESA / NASA)",
+  "es": "SOHO, Observatorio Solar y Heliosférico (ESA / NASA)",
+  "ar": "سوهو، المرصد الشمسي والهيليوسفيري (وكالة الفضاء الأوروبية / ناسا)",
+  "it": "SOHO, Osservatorio solare ed eliosferico (ESA / NASA)"
+ },
+ "Watching the Sun nonstop since 1995, SOHO helps experts predict solar storms and has found more than 5,000 comets (NASA).": {
+  "fr": "SOHO observe le Soleil sans relâche depuis 1995, aide à prévoir les tempêtes solaires et a découvert plus de 5 000 comètes (NASA).",
+  "es": "SOHO vigila el Sol sin pausa desde 1995, ayuda a predecir tormentas solares y ha descubierto más de 5.000 cometas (NASA).",
+  "ar": "يراقب سوهو الشمس دون توقف منذ 1995، ويساعد الخبراء على التنبؤ بالعواصف الشمسية، واكتشف أكثر من 5,000 مذنب (ناسا).",
+  "it": "SOHO osserva il Sole senza sosta dal 1995, aiuta a prevedere le tempeste solari e ha scoperto più di 5.000 comete (NASA)."
+ },
+ "SOHO is a spacecraft that has watched the Sun every day for 30 years.": {
+  "fr": "SOHO est un engin spatial qui observe le Soleil chaque jour depuis 30 ans.",
+  "es": "SOHO es una nave que observa el Sol todos los días desde hace 30 años.",
+  "ar": "سوهو مركبة فضائية تراقب الشمس كل يوم منذ 30 عامًا.",
+  "it": "SOHO è un veicolo spaziale che osserva il Sole ogni giorno da 30 anni."
+ },
+ "It sits in a special spot in space where it can always see the Sun.": {
+  "fr": "Il se trouve à un endroit spécial de l'espace d'où il voit toujours le Soleil.",
+  "es": "Está en un lugar especial del espacio desde donde siempre ve el Sol.",
+  "ar": "يوجد في نقطة خاصة في الفضاء يرى منها الشمس دائمًا.",
+  "it": "Si trova in un punto speciale dello spazio da cui vede sempre il Sole."
+ },
+ "Its pictures help people get ready for solar storms.": {
+  "fr": "Ses images aident à se préparer aux tempêtes solaires.",
+  "es": "Sus imágenes ayudan a prepararse para las tormentas solares.",
+  "ar": "تساعد صوره الناس على الاستعداد للعواصف الشمسية.",
+  "it": "Le sue immagini aiutano a prepararsi alle tempeste solari."
+ },
+ "The Five W's of SOHO": {
+  "fr": "Les 5 questions sur SOHO",
+  "es": "Las cinco preguntas sobre SOHO",
+  "ar": "الأسئلة الخمسة عن سوهو",
+  "it": "Le 5 domande su SOHO"
+ },
+ "SOHO is a joint project of ESA and NASA. ESA leads the mission, and NASA contributed three instruments and the launch.": {
+  "fr": "SOHO est un projet commun de l'ESA et de la NASA. L'ESA dirige la mission ; la NASA a fourni trois instruments et le lancement.",
+  "es": "SOHO es un proyecto conjunto de la ESA y la NASA. La ESA dirige la misión y la NASA aportó tres instrumentos y el lanzamiento.",
+  "ar": "سوهو مشروع مشترك بين وكالة الفضاء الأوروبية وناسا. تقود الوكالة الأوروبية المهمة، وقدّمت ناسا ثلاثة أجهزة والإطلاق.",
+  "it": "SOHO è un progetto comune di ESA e NASA. L'ESA guida la missione, la NASA ha fornito tre strumenti e il lancio."
+ },
+ "An observatory with 12 instruments that studies the Sun from its hot interior to its stormy atmosphere and the solar wind.": {
+  "fr": "Un observatoire doté de 12 instruments qui étudie le Soleil, de son intérieur brûlant à son atmosphère agitée et au vent solaire.",
+  "es": "Un observatorio con 12 instrumentos que estudia el Sol, desde su interior caliente hasta su atmósfera tormentosa y el viento solar.",
+  "ar": "مرصد يحمل 12 جهازًا يدرس الشمس من باطنها الحار إلى غلافها الجوي العاصف والرياح الشمسية.",
+  "it": "Un osservatorio con 12 strumenti che studia il Sole, dal suo interno caldissimo all'atmosfera tempestosa e al vento solare."
+ },
+ "SOHO launched on 2 December 1995. It was meant to work until 1998, and in December 2025 it marked 30 years of operation.": {
+  "fr": "SOHO a été lancé le 2 décembre 1995. Prévu pour fonctionner jusqu'en 1998, il a fêté en décembre 2025 ses 30 ans d'activité.",
+  "es": "SOHO se lanzó el 2 de diciembre de 1995. Debía funcionar hasta 1998, y en diciembre de 2025 cumplió 30 años de operación.",
+  "ar": "أُطلق سوهو في 2 ديسمبر 1995. كان من المقرر أن يعمل حتى 1998، وفي ديسمبر 2025 أتمّ 30 عامًا من التشغيل.",
+  "it": "SOHO è stato lanciato il 2 dicembre 1995. Doveva funzionare fino al 1998 e a dicembre 2025 ha compiuto 30 anni di attività."
+ },
+ "About 1.5 million kilometres (932,000 miles) from Earth, orbiting the L1 point, where it has an uninterrupted view of the Sun.": {
+  "fr": "À environ 1,5 million de km de la Terre, en orbite autour du point L1, d'où il voit le Soleil sans interruption.",
+  "es": "A unos 1,5 millones de km de la Tierra, en órbita alrededor del punto L1, desde donde ve el Sol sin interrupción.",
+  "ar": "على بعد نحو 1.5 مليون كيلومتر من الأرض، في مدار حول النقطة L1، حيث يرى الشمس دون انقطاع.",
+  "it": "A circa 1,5 milioni di km dalla Terra, in orbita attorno al punto L1, da cui vede il Sole senza interruzioni."
+ },
+ "Experts around the world use SOHO images and data to help predict space weather events that affect our planet.": {
+  "fr": "Des experts du monde entier utilisent les images et données de SOHO pour prévoir les épisodes de météo spatiale qui touchent notre planète.",
+  "es": "Expertos de todo el mundo usan las imágenes y datos de SOHO para predecir fenómenos de clima espacial que afectan a nuestro planeta.",
+  "ar": "يستخدم خبراء حول العالم صور سوهو وبياناته للتنبؤ بأحداث طقس الفضاء التي تؤثر في كوكبنا.",
+  "it": "Esperti di tutto il mondo usano immagini e dati di SOHO per prevedere gli eventi di meteo spaziale che colpiscono il nostro pianeta."
+ },
+ "NASA, SOHO": {
+  "fr": "NASA, SOHO",
+  "es": "NASA, SOHO",
+  "ar": "ناسا، سوهو",
+  "it": "NASA, SOHO"
+ },
+ "ESA, SOHO overview": {
+  "fr": "ESA, présentation de SOHO",
+  "es": "ESA, resumen de SOHO",
+  "ar": "وكالة الفضاء الأوروبية، نظرة عامة على سوهو",
+  "it": "ESA, panoramica di SOHO"
+ },
+ "SOHO is the most prolific discoverer of comets in history, with more than 5,000 found, over half of all known comets (NASA).": {
+  "fr": "SOHO est le plus grand découvreur de comètes de l'histoire : plus de 5 000, soit plus de la moitié des comètes connues (NASA).",
+  "es": "SOHO es el mayor descubridor de cometas de la historia, con más de 5.000, más de la mitad de todos los cometas conocidos (NASA).",
+  "ar": "سوهو أغزر مكتشف للمذنبات في التاريخ، إذ اكتشف أكثر من 5,000 مذنب، أي أكثر من نصف المذنبات المعروفة (ناسا).",
+  "it": "SOHO è il più grande scopritore di comete della storia: oltre 5.000, più della metà di tutte quelle conosciute (NASA)."
+ },
+ "For Further Information: NASA, SOHO": {
+  "fr": "Pour en savoir plus : NASA, SOHO",
+  "es": "Más información: NASA, SOHO",
+  "ar": "لمزيد من المعلومات: ناسا، سوهو",
+  "it": "Per saperne di più: NASA, SOHO"
+ },
+ "Lost and Found in Space": {
+  "fr": "Perdu puis retrouvé dans l'espace",
+  "es": "Perdido y encontrado en el espacio",
+  "ar": "ضاع ثم وُجد في الفضاء",
+  "it": "Perso e ritrovato nello spazio"
+ },
+ "In 1998 contact with SOHO was lost for weeks. A powerful radar signal from Earth found it, and engineers brought it back to work (ESA).": {
+  "fr": "En 1998, le contact avec SOHO a été perdu pendant des semaines. Un puissant signal radar envoyé de la Terre l'a retrouvé, et les ingénieurs l'ont remis en service (ESA).",
+  "es": "En 1998 se perdió el contacto con SOHO durante semanas. Una potente señal de radar desde la Tierra lo encontró y los ingenieros lo volvieron a poner en marcha (ESA).",
+  "ar": "في عام 1998 انقطع الاتصال بسوهو لأسابيع. عثرت عليه إشارة رادار قوية من الأرض، وأعاده المهندسون إلى العمل (وكالة الفضاء الأوروبية).",
+  "it": "Nel 1998 il contatto con SOHO si perse per settimane. Un potente segnale radar dalla Terra lo ritrovò e gli ingegneri lo rimisero in funzione (ESA)."
+ },
+ "SOHO plays a vital role in forecasting potentially dangerous solar storms (NASA).": {
+  "fr": "SOHO joue un rôle vital dans la prévision des tempêtes solaires potentiellement dangereuses (NASA).",
+  "es": "SOHO tiene un papel vital en el pronóstico de tormentas solares potencialmente peligrosas (NASA).",
+  "ar": "يؤدي سوهو دورًا حيويًا في التنبؤ بالعواصف الشمسية التي قد تكون خطرة (ناسا).",
+  "it": "SOHO ha un ruolo vitale nel prevedere tempeste solari potenzialmente pericolose (NASA)."
+ },
+ "SOHO has watched two full 11-year solar cycles, showing how our star changes over time (NASA).": {
+  "fr": "SOHO a observé deux cycles solaires complets de 11 ans, montrant comment notre étoile évolue (NASA).",
+  "es": "SOHO ha observado dos ciclos solares completos de 11 años y muestra cómo cambia nuestra estrella (NASA).",
+  "ar": "راقب سوهو دورتين شمسيتين كاملتين مدة كل منهما 11 عامًا، مبيّنًا كيف يتغير نجمنا مع الزمن (ناسا).",
+  "it": "SOHO ha osservato due cicli solari completi di 11 anni, mostrando come cambia la nostra stella nel tempo (NASA)."
+ },
+ "Get Involved With SOHO": {
+  "fr": "Participer à SOHO",
+  "es": "Participa con SOHO",
+  "ar": "شارك مع سوهو",
+  "it": "Partecipa con SOHO"
+ },
+ "Learn About SOHO": {
+  "fr": "Découvrir SOHO",
+  "es": "Conoce SOHO",
+  "ar": "تعرّف على سوهو",
+  "it": "Scopri SOHO"
+ },
+ "Want to go deeper? NASA has the full SOHO story.": {
+  "fr": "Envie d'aller plus loin ? La NASA raconte toute l'histoire de SOHO.",
+  "es": "¿Quieres saber más? La NASA cuenta toda la historia de SOHO.",
+  "ar": "هل تريد التعمق أكثر؟ لدى ناسا القصة الكاملة لسوهو.",
+  "it": "Vuoi approfondire? La NASA racconta tutta la storia di SOHO."
+ },
+ "Learn more about SOHO Solar and Heliospheric Observatory (ESA / NASA)": {
+  "fr": "En savoir plus sur SOHO (ESA / NASA)",
+  "es": "Más información sobre SOHO (ESA / NASA)",
+  "ar": "اعرف المزيد عن سوهو (وكالة الفضاء الأوروبية / ناسا)",
+  "it": "Scopri di più su SOHO (ESA / NASA)"
+ },
+ "CryoSat Ice Mission (ESA)": {
+  "fr": "CryoSat, mission glaces (ESA)",
+  "es": "CryoSat, misión del hielo (ESA)",
+  "ar": "كرايوسات، مهمة الجليد (وكالة الفضاء الأوروبية)",
+  "it": "CryoSat, missione dei ghiacci (ESA)"
+ },
+ "CryoSat measures polar sea ice and the great ice sheets from space, and its data revealed 85 hidden lakes under Antarctica (ESA).": {
+  "fr": "CryoSat mesure depuis l'espace la banquise polaire et les grandes calottes glaciaires ; ses données ont révélé 85 lacs cachés sous l'Antarctique (ESA).",
+  "es": "CryoSat mide desde el espacio el hielo marino polar y las grandes capas de hielo, y sus datos revelaron 85 lagos ocultos bajo la Antártida (ESA).",
+  "ar": "يقيس كرايوسات من الفضاء الجليد البحري القطبي والصفائح الجليدية الكبرى، وكشفت بياناته 85 بحيرة مخفية تحت القارة القطبية الجنوبية (وكالة الفضاء الأوروبية).",
+  "it": "CryoSat misura dallo spazio il ghiaccio marino polare e le grandi calotte, e i suoi dati hanno rivelato 85 laghi nascosti sotto l'Antartide (ESA)."
+ },
+ "Sea ice in the Labrador Sea seen from the International Space Station": {
+  "fr": "Banquise dans la mer du Labrador vue depuis la Station spatiale internationale",
+  "es": "Hielo marino en el mar de Labrador visto desde la Estación Espacial Internacional",
+  "ar": "جليد بحري في بحر لابرادور كما يُرى من محطة الفضاء الدولية",
+  "it": "Ghiaccio marino nel mare del Labrador visto dalla Stazione spaziale internazionale"
+ },
+ "CryoSat is a satellite that measures how thick the ice is near the North and South Poles.": {
+  "fr": "CryoSat est un satellite qui mesure l'épaisseur de la glace près des pôles Nord et Sud.",
+  "es": "CryoSat es un satélite que mide el grosor del hielo cerca de los polos Norte y Sur.",
+  "ar": "كرايوسات قمر صناعي يقيس سماكة الجليد قرب القطبين الشمالي والجنوبي.",
+  "it": "CryoSat è un satellite che misura lo spessore del ghiaccio vicino ai poli Nord e Sud."
+ },
+ "It uses radar to spot tiny changes in the height of the ice.": {
+  "fr": "Il utilise un radar pour repérer de minuscules changements de hauteur de la glace.",
+  "es": "Usa un radar para detectar cambios diminutos en la altura del hielo.",
+  "ar": "يستخدم الرادار لرصد تغيّرات صغيرة جدًا في ارتفاع الجليد.",
+  "it": "Usa un radar per notare minuscoli cambiamenti nell'altezza del ghiaccio."
+ },
+ "Knowing how ice changes helps scientists understand sea level rise.": {
+  "fr": "Savoir comment la glace change aide à comprendre la montée du niveau de la mer.",
+  "es": "Saber cómo cambia el hielo ayuda a entender la subida del nivel del mar.",
+  "ar": "معرفة كيف يتغير الجليد تساعد العلماء على فهم ارتفاع مستوى سطح البحر.",
+  "it": "Sapere come cambia il ghiaccio aiuta a capire l'innalzamento del livello del mare."
+ },
+ "The Five W's of CryoSat": {
+  "fr": "Les 5 questions sur CryoSat",
+  "es": "Las cinco preguntas sobre CryoSat",
+  "ar": "الأسئلة الخمسة عن كرايوسات",
+  "it": "Le 5 domande su CryoSat"
+ },
+ "The European Space Agency (ESA). CryoSat is an Earth Explorer mission, flown from ESA's operations centre in Darmstadt, Germany.": {
+  "fr": "L'Agence spatiale européenne (ESA). CryoSat est une mission Earth Explorer pilotée depuis le centre d'opérations de l'ESA à Darmstadt, en Allemagne.",
+  "es": "La Agencia Espacial Europea (ESA). CryoSat es una misión Earth Explorer operada desde el centro de operaciones de la ESA en Darmstadt (Alemania).",
+  "ar": "وكالة الفضاء الأوروبية. كرايوسات مهمة من فئة مستكشف الأرض، تُدار من مركز عمليات الوكالة في دارمشتات بألمانيا.",
+  "it": "L'Agenzia spaziale europea (ESA). CryoSat è una missione Earth Explorer gestita dal centro operativo dell'ESA a Darmstadt, in Germania."
+ },
+ "A satellite carrying a radar altimeter built for ice. It measures the thickness of polar sea ice and changes in the ice sheets of Greenland and Antarctica.": {
+  "fr": "Un satellite équipé d'un altimètre radar conçu pour la glace. Il mesure l'épaisseur de la banquise et l'évolution des calottes du Groenland et de l'Antarctique.",
+  "es": "Un satélite con un altímetro de radar diseñado para el hielo. Mide el grosor del hielo marino polar y los cambios en las capas de hielo de Groenlandia y la Antártida.",
+  "ar": "قمر صناعي يحمل مقياس ارتفاع راداريًا صُمم للجليد. يقيس سماكة الجليد البحري القطبي والتغيرات في الصفائح الجليدية في غرينلاند والقارة القطبية الجنوبية.",
+  "it": "Un satellite con un altimetro radar pensato per il ghiaccio. Misura lo spessore del ghiaccio marino polare e i cambiamenti delle calotte di Groenlandia e Antartide."
+ },
+ "CryoSat launched on 8 April 2010 and has been in orbit for more than 10 years, far beyond its minimum 3-year mission.": {
+  "fr": "CryoSat a été lancé le 8 avril 2010 et est en orbite depuis plus de 10 ans, bien au-delà de sa mission minimale de 3 ans.",
+  "es": "CryoSat se lanzó el 8 de abril de 2010 y lleva más de 10 años en órbita, mucho más que su misión mínima de 3 años.",
+  "ar": "أُطلق كرايوسات في 8 أبريل 2010، وهو في المدار منذ أكثر من 10 سنوات، أي أطول بكثير من مهمته الدنيا البالغة 3 سنوات.",
+  "it": "CryoSat è stato lanciato l'8 aprile 2010 ed è in orbita da oltre 10 anni, ben oltre la missione minima di 3 anni."
+ },
+ "In a polar orbit at a mean altitude of 719 km, which lets it see almost the whole of the Arctic and Antarctic.": {
+  "fr": "Sur une orbite polaire à 719 km d'altitude moyenne, qui lui permet de voir presque tout l'Arctique et l'Antarctique.",
+  "es": "En una órbita polar a 719 km de altitud media, que le permite ver casi todo el Ártico y la Antártida.",
+  "ar": "في مدار قطبي على ارتفاع متوسط 719 كيلومترًا، يتيح له رؤية القطب الشمالي والقارة القطبية الجنوبية كلها تقريبًا.",
+  "it": "In un'orbita polare a 719 km di quota media, che gli permette di vedere quasi tutto l'Artico e l'Antartide."
+ },
+ "Lakes under the ice affect how fast glaciers move and so influence global sea level rise.": {
+  "fr": "Les lacs sous la glace influencent la vitesse des glaciers et donc la montée mondiale du niveau de la mer.",
+  "es": "Los lagos bajo el hielo influyen en la velocidad de los glaciares y, por tanto, en la subida mundial del nivel del mar.",
+  "ar": "تؤثر البحيرات تحت الجليد في سرعة حركة الأنهار الجليدية، وبالتالي في ارتفاع مستوى سطح البحر عالميًا.",
+  "it": "I laghi sotto il ghiaccio influiscono sulla velocità dei ghiacciai e quindi sull'innalzamento globale del mare."
+ },
+ "ESA, CryoSat": {
+  "fr": "ESA, CryoSat",
+  "es": "ESA, CryoSat",
+  "ar": "وكالة الفضاء الأوروبية، كرايوسات",
+  "it": "ESA, CryoSat"
+ },
+ "ESA, CryoSat facts and figures": {
+  "fr": "ESA, CryoSat en chiffres",
+  "es": "ESA, datos y cifras de CryoSat",
+  "ar": "وكالة الفضاء الأوروبية، حقائق وأرقام كرايوسات",
+  "it": "ESA, CryoSat in cifre"
+ },
+ "ESA, 85 new subglacial lakes detected below Antarctica": {
+  "fr": "ESA, 85 nouveaux lacs sous-glaciaires détectés sous l'Antarctique",
+  "es": "ESA, 85 nuevos lagos subglaciales detectados bajo la Antártida",
+  "ar": "وكالة الفضاء الأوروبية، رصد 85 بحيرة جديدة تحت جليد القارة القطبية الجنوبية",
+  "it": "ESA, 85 nuovi laghi subglaciali scoperti sotto l'Antartide"
+ },
+ "A decade of CryoSat data revealed 85 unknown lakes under Antarctica, raising the known active subglacial lakes by more than half, to 231 (ESA).": {
+  "fr": "Dix ans de données CryoSat ont révélé 85 lacs inconnus sous l'Antarctique, portant le nombre de lacs sous-glaciaires actifs connus à 231, soit plus de la moitié en plus (ESA).",
+  "es": "Una década de datos de CryoSat reveló 85 lagos desconocidos bajo la Antártida, lo que eleva más de la mitad los lagos subglaciales activos conocidos, hasta 231 (ESA).",
+  "ar": "كشفت بيانات كرايوسات على مدى عقد 85 بحيرة مجهولة تحت القارة القطبية الجنوبية، فارتفع عدد البحيرات النشطة المعروفة تحت الجليد بأكثر من النصف إلى 231 (وكالة الفضاء الأوروبية).",
+  "it": "Dieci anni di dati CryoSat hanno rivelato 85 laghi sconosciuti sotto l'Antartide, portando i laghi subglaciali attivi noti a 231, più della metà in più (ESA)."
+ },
+ "For Further Information: ESA, 85 new subglacial lakes detected below Antarctica": {
+  "fr": "Pour en savoir plus : ESA, 85 nouveaux lacs sous-glaciaires détectés sous l'Antarctique",
+  "es": "Más información: ESA, 85 nuevos lagos subglaciales detectados bajo la Antártida",
+  "ar": "لمزيد من المعلومات: وكالة الفضاء الأوروبية، رصد 85 بحيرة جديدة تحت جليد القارة القطبية الجنوبية",
+  "it": "Per saperne di più: ESA, 85 nuovi laghi subglaciali scoperti sotto l'Antartide"
+ },
+ "First of Its Kind": {
+  "fr": "Le premier du genre",
+  "es": "El primero de su tipo",
+  "ar": "الأول من نوعه",
+  "it": "Il primo del suo genere"
+ },
+ "CryoSat carries the first radar altimeter of its kind, designed to measure ice (ESA).": {
+  "fr": "CryoSat emporte le premier altimètre radar de son genre, conçu pour mesurer la glace (ESA).",
+  "es": "CryoSat lleva el primer altímetro de radar de su tipo, diseñado para medir el hielo (ESA).",
+  "ar": "يحمل كرايوسات أول مقياس ارتفاع راداري من نوعه، صُمم لقياس الجليد (وكالة الفضاء الأوروبية).",
+  "it": "CryoSat porta il primo altimetro radar del suo genere, progettato per misurare il ghiaccio (ESA)."
+ },
+ "CryoSat data help improve projections of future sea level rise, which matters for coastal communities (ESA).": {
+  "fr": "Les données de CryoSat aident à améliorer les projections de montée du niveau de la mer, un enjeu pour les populations côtières (ESA).",
+  "es": "Los datos de CryoSat ayudan a mejorar las proyecciones de subida del nivel del mar, algo clave para las comunidades costeras (ESA).",
+  "ar": "تساعد بيانات كرايوسات على تحسين توقعات ارتفاع مستوى سطح البحر مستقبلًا، وهو أمر مهم للمجتمعات الساحلية (وكالة الفضاء الأوروبية).",
+  "it": "I dati di CryoSat aiutano a migliorare le proiezioni sull'innalzamento del mare, importante per le comunità costiere (ESA)."
+ },
+ "CryoSat tracks the polar sea ice and ice sheets that shape the oceans around them (ESA).": {
+  "fr": "CryoSat suit la banquise et les calottes polaires qui façonnent les océans qui les entourent (ESA).",
+  "es": "CryoSat sigue el hielo marino y las capas de hielo polares que moldean los océanos que las rodean (ESA).",
+  "ar": "يتتبع كرايوسات الجليد البحري والصفائح الجليدية القطبية التي تشكّل المحيطات من حولها (وكالة الفضاء الأوروبية).",
+  "it": "CryoSat segue il ghiaccio marino e le calotte polari che modellano gli oceani intorno a loro (ESA)."
+ },
+ "Get Involved With CryoSat": {
+  "fr": "Participer à CryoSat",
+  "es": "Participa con CryoSat",
+  "ar": "شارك مع كرايوسات",
+  "it": "Partecipa con CryoSat"
+ },
+ "Learn About CryoSat": {
+  "fr": "Découvrir CryoSat",
+  "es": "Conoce CryoSat",
+  "ar": "تعرّف على كرايوسات",
+  "it": "Scopri CryoSat"
+ },
+ "Want to go deeper? ESA has the full CryoSat story.": {
+  "fr": "Envie d'aller plus loin ? L'ESA raconte toute l'histoire de CryoSat.",
+  "es": "¿Quieres saber más? La ESA cuenta toda la historia de CryoSat.",
+  "ar": "هل تريد التعمق أكثر؟ لدى وكالة الفضاء الأوروبية القصة الكاملة لكرايوسات.",
+  "it": "Vuoi approfondire? L'ESA racconta tutta la storia di CryoSat."
+ },
+ "Learn more about CryoSat Ice Mission (ESA)": {
+  "fr": "En savoir plus sur CryoSat (ESA)",
+  "es": "Más información sobre CryoSat (ESA)",
+  "ar": "اعرف المزيد عن كرايوسات (وكالة الفضاء الأوروبية)",
+  "it": "Scopri di più su CryoSat (ESA)"
+ },
+ "International Coastal Cleanup (Ocean Conservancy)": {
+  "fr": "Nettoyage international des côtes (Ocean Conservancy)",
+  "es": "Limpieza Internacional de Costas (Ocean Conservancy)",
+  "ar": "حملة التنظيف الدولية للسواحل (أوشن كونسرفانسي)",
+  "it": "Pulizia internazionale delle coste (Ocean Conservancy)"
+ },
+ "Since 1986, more than 19 million volunteers have collected more than 400 million pounds of trash from beaches and waterways (Ocean Conservancy).": {
+  "fr": "Depuis 1986, plus de 19 millions de bénévoles ont ramassé plus de 400 millions de livres (environ 180 000 tonnes) de déchets sur les plages et les cours d'eau (Ocean Conservancy).",
+  "es": "Desde 1986, más de 19 millones de voluntarios han recogido más de 400 millones de libras (unas 180.000 toneladas) de basura de playas y cursos de agua (Ocean Conservancy).",
+  "ar": "منذ عام 1986 جمع أكثر من 19 مليون متطوع أكثر من 400 مليون رطل (نحو 180 ألف طن) من النفايات من الشواطئ والمجاري المائية (أوشن كونسرفانسي).",
+  "it": "Dal 1986 oltre 19 milioni di volontari hanno raccolto più di 400 milioni di libbre (circa 180.000 tonnellate) di rifiuti da spiagge e corsi d'acqua (Ocean Conservancy)."
+ },
+ "Turquoise ocean around the Bahamas seen from the International Space Station": {
+  "fr": "Océan turquoise autour des Bahamas vu depuis la Station spatiale internationale",
+  "es": "Océano turquesa alrededor de las Bahamas visto desde la Estación Espacial Internacional",
+  "ar": "المحيط الفيروزي حول جزر البهاما كما يُرى من محطة الفضاء الدولية",
+  "it": "Oceano turchese intorno alle Bahamas visto dalla Stazione spaziale internazionale"
+ },
+ "Every year, people around the world clean trash off beaches and rivers on the same day.": {
+  "fr": "Chaque année, des gens du monde entier ramassent les déchets des plages et des rivières le même jour.",
+  "es": "Cada año, personas de todo el mundo limpian basura de playas y ríos el mismo día.",
+  "ar": "كل عام ينظّف أناس حول العالم الشواطئ والأنهار من النفايات في اليوم نفسه.",
+  "it": "Ogni anno persone di tutto il mondo puliscono spiagge e fiumi dai rifiuti nello stesso giorno."
+ },
+ "They also write down what they find.": {
+  "fr": "Ils notent aussi ce qu'ils trouvent.",
+  "es": "También anotan lo que encuentran.",
+  "ar": "ويسجّلون أيضًا ما يجدونه.",
+  "it": "Annotano anche quello che trovano."
+ },
+ "That list helps find ways to stop trash from reaching the ocean.": {
+  "fr": "Cette liste aide à trouver comment empêcher les déchets d'atteindre l'océan.",
+  "es": "Esa lista ayuda a encontrar formas de evitar que la basura llegue al océano.",
+  "ar": "تساعد تلك القائمة على إيجاد طرق لمنع النفايات من الوصول إلى المحيط.",
+  "it": "Quella lista aiuta a trovare modi per impedire ai rifiuti di arrivare all'oceano."
+ },
+ "The Five W's of Ocean Conservancy": {
+  "fr": "Les 5 questions sur Ocean Conservancy",
+  "es": "Las cinco preguntas sobre Ocean Conservancy",
+  "ar": "الأسئلة الخمسة عن أوشن كونسرفانسي",
+  "it": "Le 5 domande su Ocean Conservancy"
+ },
+ "Ocean Conservancy, working with volunteer groups and people around the globe.": {
+  "fr": "Ocean Conservancy, avec des associations de bénévoles et des particuliers du monde entier.",
+  "es": "Ocean Conservancy, junto con grupos de voluntarios y personas de todo el mundo.",
+  "ar": "أوشن كونسرفانسي، بالتعاون مع مجموعات متطوعين وأفراد حول العالم.",
+  "it": "Ocean Conservancy, insieme a gruppi di volontari e persone di tutto il mondo."
+ },
+ "A global cleanup where volunteers remove trash from beaches and waterways and record every item they collect.": {
+  "fr": "Un nettoyage mondial où les bénévoles retirent les déchets des plages et des cours d'eau et notent chaque objet ramassé.",
+  "es": "Una limpieza mundial en la que los voluntarios retiran basura de playas y cursos de agua y registran cada objeto que recogen.",
+  "ar": "حملة تنظيف عالمية يزيل فيها المتطوعون النفايات من الشواطئ والمجاري المائية ويسجّلون كل قطعة يجمعونها.",
+  "it": "Una pulizia mondiale in cui i volontari tolgono i rifiuti da spiagge e corsi d'acqua e registrano ogni oggetto raccolto."
+ },
+ "It began in 1986 with 2,800 volunteers and has grown every year since.": {
+  "fr": "Il a commencé en 1986 avec 2 800 bénévoles et n'a cessé de grandir depuis.",
+  "es": "Empezó en 1986 con 2.800 voluntarios y ha crecido desde entonces.",
+  "ar": "بدأت عام 1986 بمشاركة 2,800 متطوع، وتوسعت منذ ذلك الحين.",
+  "it": "È iniziata nel 1986 con 2.800 volontari ed è cresciuta da allora."
+ },
+ "It started on the coast of Texas and now happens on beaches and waterways around the world.": {
+  "fr": "Il est né sur la côte du Texas et a lieu aujourd'hui sur des plages et des cours d'eau du monde entier.",
+  "es": "Nació en la costa de Texas y hoy se realiza en playas y cursos de agua de todo el mundo.",
+  "ar": "بدأت على ساحل تكساس، وتُقام اليوم على الشواطئ والمجاري المائية حول العالم.",
+  "it": "È nata sulla costa del Texas e oggi si svolge su spiagge e corsi d'acqua di tutto il mondo."
+ },
+ "Recording each item builds the world's largest database on marine debris, used to find ways to stop ocean trash.": {
+  "fr": "Noter chaque objet alimente la plus grande base de données au monde sur les déchets marins, qui sert à trouver comment les stopper.",
+  "es": "Registrar cada objeto crea la mayor base de datos del mundo sobre basura marina, que sirve para encontrar formas de frenarla.",
+  "ar": "تسجيل كل قطعة يبني أكبر قاعدة بيانات في العالم عن الحطام البحري، تُستخدم لإيجاد طرق لوقف نفايات المحيط.",
+  "it": "Registrare ogni oggetto crea il più grande database al mondo sui rifiuti marini, usato per trovare modi per fermarli."
+ },
+ "Ocean Conservancy, International Coastal Cleanup": {
+  "fr": "Ocean Conservancy, Nettoyage international des côtes",
+  "es": "Ocean Conservancy, Limpieza Internacional de Costas",
+  "ar": "أوشن كونسرفانسي، حملة التنظيف الدولية للسواحل",
+  "it": "Ocean Conservancy, Pulizia internazionale delle coste"
+ },
+ "More than 19 million volunteers have collected more than 400 million pounds of trash since the Cleanup began (Ocean Conservancy).": {
+  "fr": "Plus de 19 millions de bénévoles ont ramassé plus de 400 millions de livres de déchets depuis le premier nettoyage (Ocean Conservancy).",
+  "es": "Más de 19 millones de voluntarios han recogido más de 400 millones de libras de basura desde que empezó la Limpieza (Ocean Conservancy).",
+  "ar": "جمع أكثر من 19 مليون متطوع أكثر من 400 مليون رطل من النفايات منذ انطلاق الحملة (أوشن كونسرفانسي).",
+  "it": "Oltre 19 milioni di volontari hanno raccolto più di 400 milioni di libbre di rifiuti dall'inizio della Pulizia (Ocean Conservancy)."
+ },
+ "For Further Information: Ocean Conservancy, International Coastal Cleanup": {
+  "fr": "Pour en savoir plus : Ocean Conservancy, Nettoyage international des côtes",
+  "es": "Más información: Ocean Conservancy, Limpieza Internacional de Costas",
+  "ar": "لمزيد من المعلومات: أوشن كونسرفانسي، حملة التنظيف الدولية للسواحل",
+  "it": "Per saperne di più: Ocean Conservancy, Pulizia internazionale delle coste"
+ },
+ "The World's Biggest Trash List": {
+  "fr": "La plus grande liste de déchets au monde",
+  "es": "La mayor lista de basura del mundo",
+  "ar": "أكبر قائمة نفايات في العالم",
+  "it": "La più grande lista di rifiuti al mondo"
+ },
+ "Cleanup volunteers add to the world's largest database on marine debris (Ocean Conservancy).": {
+  "fr": "Les bénévoles alimentent la plus grande base de données au monde sur les déchets marins (Ocean Conservancy).",
+  "es": "Los voluntarios amplían la mayor base de datos del mundo sobre basura marina (Ocean Conservancy).",
+  "ar": "يضيف المتطوعون إلى أكبر قاعدة بيانات في العالم عن الحطام البحري (أوشن كونسرفانسي).",
+  "it": "I volontari arricchiscono il più grande database al mondo sui rifiuti marini (Ocean Conservancy)."
+ },
+ "Volunteers make beaches and waterways cleaner for the communities that use them (Ocean Conservancy).": {
+  "fr": "Les bénévoles rendent plages et cours d'eau plus propres pour les populations qui en profitent (Ocean Conservancy).",
+  "es": "Los voluntarios dejan playas y cursos de agua más limpios para las comunidades que los usan (Ocean Conservancy).",
+  "ar": "يجعل المتطوعون الشواطئ والمجاري المائية أنظف للمجتمعات التي تستخدمها (أوشن كونسرفانسي).",
+  "it": "I volontari rendono spiagge e corsi d'acqua più puliti per le comunità che li usano (Ocean Conservancy)."
+ },
+ "Every item picked up is trash that no longer litters the coast and waterways (Ocean Conservancy).": {
+  "fr": "Chaque objet ramassé est un déchet de moins sur les côtes et dans les cours d'eau (Ocean Conservancy).",
+  "es": "Cada objeto recogido es basura que ya no ensucia la costa ni los cursos de agua (Ocean Conservancy).",
+  "ar": "كل قطعة تُلتقط هي نفايات لم تعد تلوّث الساحل والمجاري المائية (أوشن كونسرفانسي).",
+  "it": "Ogni oggetto raccolto è un rifiuto in meno su coste e corsi d'acqua (Ocean Conservancy)."
+ },
+ "Support the International Coastal Cleanup": {
+  "fr": "Soutenir le Nettoyage international des côtes",
+  "es": "Apoya la Limpieza Internacional de Costas",
+  "ar": "ادعم حملة التنظيف الدولية للسواحل",
+  "it": "Sostieni la Pulizia internazionale delle coste"
+ },
+ "Support Ocean Conservancy directly.": {
+  "fr": "Soutenez directement Ocean Conservancy.",
+  "es": "Apoya directamente a Ocean Conservancy.",
+  "ar": "ادعم أوشن كونسرفانسي مباشرة.",
+  "it": "Sostieni direttamente Ocean Conservancy."
+ },
+ "Donate to Ocean Conservancy": {
+  "fr": "Faire un don à Ocean Conservancy",
+  "es": "Donar a Ocean Conservancy",
+  "ar": "تبرّع لأوشن كونسرفانسي",
+  "it": "Dona a Ocean Conservancy"
+ },
+ "Mobula cleanup boats catch plastic close to where it starts, and in Malaysia one boat turned 135,000 pieces of debris into community walkways (The SeaCleaners).": {
+  "fr": "Les bateaux Mobula captent le plastique près de sa source ; en Malaisie, l'un d'eux a transformé 135 000 déchets en passerelles pour la communauté (The SeaCleaners).",
+  "es": "Los barcos Mobula atrapan el plástico cerca de su origen, y en Malasia uno convirtió 135.000 residuos en pasarelas para la comunidad (The SeaCleaners).",
+  "ar": "تلتقط قوارب موبولا البلاستيك قرب مصدره، وفي ماليزيا حوّل أحدها 135,000 قطعة حطام إلى ممرات للمجتمع المحلي (ذا سي كلينرز).",
+  "it": "Le barche Mobula catturano la plastica vicino alla fonte e in Malesia una di loro ha trasformato 135.000 rifiuti in passerelle per la comunità (The SeaCleaners)."
+ },
+ "Islands of Indonesia seen from the Space Shuttle": {
+  "fr": "Îles d'Indonésie vues depuis la navette spatiale",
+  "es": "Islas de Indonesia vistas desde el transbordador espacial",
+  "ar": "جزر إندونيسيا كما تُرى من المكوك الفضائي",
+  "it": "Isole dell'Indonesia viste dallo Space Shuttle"
+ },
+ "The SeaCleaners use special boats called Mobulas to scoop plastic out of the water.": {
+  "fr": "The SeaCleaners utilisent des bateaux spéciaux appelés Mobula pour retirer le plastique de l'eau.",
+  "es": "The SeaCleaners usan barcos especiales llamados Mobula para sacar el plástico del agua.",
+  "ar": "تستخدم ذا سي كلينرز قوارب خاصة تُسمى موبولا لانتشال البلاستيك من الماء.",
+  "it": "The SeaCleaners usano barche speciali chiamate Mobula per togliere la plastica dall'acqua."
+ },
+ "They work with local people so the cleanup keeps going after they leave.": {
+  "fr": "Ils travaillent avec les habitants pour que le nettoyage continue après leur départ.",
+  "es": "Trabajan con la gente del lugar para que la limpieza siga cuando se van.",
+  "ar": "يعملون مع السكان المحليين كي يستمر التنظيف بعد رحيلهم.",
+  "it": "Lavorano con la gente del posto perché la pulizia continui dopo la loro partenza."
+ },
+ "Some of the plastic is recycled into useful things, like walkways.": {
+  "fr": "Une partie du plastique est recyclée en objets utiles, comme des passerelles.",
+  "es": "Parte del plástico se recicla en cosas útiles, como pasarelas.",
+  "ar": "يُعاد تدوير بعض البلاستيك إلى أشياء مفيدة مثل الممرات.",
+  "it": "Parte della plastica viene riciclata in cose utili, come passerelle."
+ },
+ "The Five W's of The SeaCleaners": {
+  "fr": "Les 5 questions sur The SeaCleaners",
+  "es": "Las cinco preguntas sobre The SeaCleaners",
+  "ar": "الأسئلة الخمسة عن ذا سي كلينرز",
+  "it": "Le 5 domande su The SeaCleaners"
+ },
+ "The SeaCleaners, working with local teams, partners and volunteers.": {
+  "fr": "The SeaCleaners, avec des équipes locales, des partenaires et des bénévoles.",
+  "es": "The SeaCleaners, junto con equipos locales, socios y voluntarios.",
+  "ar": "ذا سي كلينرز، بالتعاون مع فرق محلية وشركاء ومتطوعين.",
+  "it": "The SeaCleaners, con squadre locali, partner e volontari."
+ },
+ "Three-year expeditions that use Mobula boats and floating barriers to clean up waste, support local recycling and engage communities.": {
+  "fr": "Des expéditions de trois ans qui utilisent des bateaux Mobula et des barrières flottantes pour ramasser les déchets, soutenir le recyclage local et mobiliser les habitants.",
+  "es": "Expediciones de tres años que usan barcos Mobula y barreras flotantes para limpiar residuos, apoyar el reciclaje local e implicar a las comunidades.",
+  "ar": "بعثات مدتها ثلاث سنوات تستخدم قوارب موبولا وحواجز عائمة لتنظيف النفايات ودعم إعادة التدوير المحلية وإشراك المجتمعات.",
+  "it": "Spedizioni di tre anni che usano barche Mobula e barriere galleggianti per raccogliere i rifiuti, sostenere il riciclo locale e coinvolgere le comunità."
+ },
+ "In 2025 the Mobula 8.2 worked in Kota Kinabalu, Malaysia; in its first three months it collected more than 53,000 pieces of plastic waste.": {
+  "fr": "En 2025, le Mobula 8.2 a travaillé à Kota Kinabalu, en Malaisie ; en trois mois, il a collecté plus de 53 000 déchets plastiques.",
+  "es": "En 2025 el Mobula 8.2 trabajó en Kota Kinabalu (Malasia); en sus tres primeros meses recogió más de 53.000 residuos plásticos.",
+  "ar": "في عام 2025 عمل القارب موبولا 8.2 في كوتا كينابالو بماليزيا، وجمع في أشهره الثلاثة الأولى أكثر من 53,000 قطعة نفايات بلاستيكية.",
+  "it": "Nel 2025 il Mobula 8.2 ha lavorato a Kota Kinabalu, in Malesia; nei primi tre mesi ha raccolto più di 53.000 rifiuti di plastica."
+ },
+ "Expeditions in Kota Kinabalu, Malaysia, and in Bali and Ambon, Indonesia.": {
+  "fr": "Expéditions à Kota Kinabalu (Malaisie), ainsi qu'à Bali et Ambon (Indonésie).",
+  "es": "Expediciones en Kota Kinabalu (Malasia) y en Bali y Ambon (Indonesia).",
+  "ar": "بعثات في كوتا كينابالو بماليزيا، وفي بالي وأمبون بإندونيسيا.",
+  "it": "Spedizioni a Kota Kinabalu (Malesia) e a Bali e Ambon (Indonesia)."
+ },
+ "Catching pollution close to its source, before it spreads at sea, delivers measurable impact.": {
+  "fr": "Capter la pollution près de sa source, avant qu'elle se disperse en mer, donne un impact mesurable.",
+  "es": "Atrapar la contaminación cerca de su origen, antes de que se disperse en el mar, logra un impacto medible.",
+  "ar": "التقاط التلوث قرب مصدره، قبل أن ينتشر في البحر، يحقق أثرًا يمكن قياسه.",
+  "it": "Catturare l'inquinamento vicino alla fonte, prima che si disperda in mare, porta un impatto misurabile."
+ },
+ "In Kota Kinabalu, the Mobula 8.2 collected 2 tons of waste, trained local teams and turned 630 kg of plastic into 61 meters of walkways (The SeaCleaners).": {
+  "fr": "À Kota Kinabalu, le Mobula 8.2 a collecté 2 tonnes de déchets, formé des équipes locales et transformé 630 kg de plastique en 61 mètres de passerelles (The SeaCleaners).",
+  "es": "En Kota Kinabalu, el Mobula 8.2 recogió 2 toneladas de residuos, formó equipos locales y convirtió 630 kg de plástico en 61 metros de pasarelas (The SeaCleaners).",
+  "ar": "في كوتا كينابالو جمع موبولا 8.2 طنين من النفايات، ودرّب فرقًا محلية، وحوّل 630 كغ من البلاستيك إلى 61 مترًا من الممرات (ذا سي كلينرز).",
+  "it": "A Kota Kinabalu il Mobula 8.2 ha raccolto 2 tonnellate di rifiuti, formato squadre locali e trasformato 630 kg di plastica in 61 metri di passerelle (The SeaCleaners)."
+ },
+ "For Further Information: The SeaCleaners": {
+  "fr": "Pour en savoir plus : The SeaCleaners",
+  "es": "Más información: The SeaCleaners",
+  "ar": "لمزيد من المعلومات: ذا سي كلينرز",
+  "it": "Per saperne di più: The SeaCleaners"
+ },
+ "Plastic Into Walkways": {
+  "fr": "Du plastique aux passerelles",
+  "es": "Del plástico a las pasarelas",
+  "ar": "من البلاستيك إلى ممرات",
+  "it": "Dalla plastica alle passerelle"
+ },
+ "The SeaCleaners turned 630 kg of collected plastic into 61 meters of walkways in Malaysia.": {
+  "fr": "The SeaCleaners ont transformé 630 kg de plastique collecté en 61 mètres de passerelles en Malaisie.",
+  "es": "The SeaCleaners convirtieron 630 kg de plástico recogido en 61 metros de pasarelas en Malasia.",
+  "ar": "حوّلت ذا سي كلينرز 630 كغ من البلاستيك المجموع إلى 61 مترًا من الممرات في ماليزيا.",
+  "it": "The SeaCleaners hanno trasformato 630 kg di plastica raccolta in 61 metri di passerelle in Malesia."
+ },
+ "Each mission trains local people so they can keep the cleanup going after the expedition ends (The SeaCleaners).": {
+  "fr": "Chaque mission forme des habitants pour qu'ils poursuivent le nettoyage après l'expédition (The SeaCleaners).",
+  "es": "Cada misión forma a gente del lugar para que siga limpiando cuando termine la expedición (The SeaCleaners).",
+  "ar": "تدرّب كل مهمة السكان المحليين ليواصلوا التنظيف بعد انتهاء البعثة (ذا سي كلينرز).",
+  "it": "Ogni missione forma persone del posto perché continuino la pulizia dopo la spedizione (The SeaCleaners)."
+ },
+ "Mobula boats remove plastic waste from coastal waters before it reaches the open ocean (The SeaCleaners).": {
+  "fr": "Les bateaux Mobula retirent les déchets plastiques des eaux côtières avant qu'ils n'atteignent le large (The SeaCleaners).",
+  "es": "Los barcos Mobula retiran residuos plásticos de las aguas costeras antes de que lleguen a mar abierto (The SeaCleaners).",
+  "ar": "تزيل قوارب موبولا النفايات البلاستيكية من المياه الساحلية قبل أن تصل إلى عرض المحيط (ذا سي كلينرز).",
+  "it": "Le barche Mobula tolgono i rifiuti di plastica dalle acque costiere prima che arrivino in mare aperto (The SeaCleaners)."
+ },
+ "Support The SeaCleaners": {
+  "fr": "Soutenir The SeaCleaners",
+  "es": "Apoya a The SeaCleaners",
+  "ar": "ادعم ذا سي كلينرز",
+  "it": "Sostieni The SeaCleaners"
+ },
+ "Support The SeaCleaners directly.": {
+  "fr": "Soutenez directement The SeaCleaners.",
+  "es": "Apoya directamente a The SeaCleaners.",
+  "ar": "ادعم ذا سي كلينرز مباشرة.",
+  "it": "Sostieni direttamente The SeaCleaners."
+ },
+ "Donate to The SeaCleaners": {
+  "fr": "Faire un don à The SeaCleaners",
+  "es": "Donar a The SeaCleaners",
+  "ar": "تبرّع لذا سي كلينرز",
+  "it": "Dona a The SeaCleaners"
+ },
+ "WeForest has grown more than 118 million trees and has 100,000 hectares of forest under restoration and conservation (WeForest).": {
+  "fr": "WeForest a fait pousser plus de 118 millions d'arbres et compte 100 000 hectares de forêt en restauration et en conservation (WeForest).",
+  "es": "WeForest ha hecho crecer más de 118 millones de árboles y tiene 100.000 hectáreas de bosque en restauración y conservación (WeForest).",
+  "ar": "زرعت وي فورست أكثر من 118 مليون شجرة، ولديها 100,000 هكتار من الغابات قيد الاستعادة والحماية (وي فورست).",
+  "it": "WeForest ha fatto crescere più di 118 milioni di alberi e ha 100.000 ettari di foresta in ripristino e conservazione (WeForest)."
+ },
+ "Mount Kilimanjaro and the surrounding forests of East Africa seen from the Space Shuttle": {
+  "fr": "Le Kilimandjaro et les forêts d'Afrique de l'Est qui l'entourent, vus depuis la navette spatiale",
+  "es": "El Kilimanjaro y los bosques de África oriental que lo rodean, vistos desde el transbordador espacial",
+  "ar": "جبل كليمنجارو والغابات المحيطة به في شرق أفريقيا كما تُرى من المكوك الفضائي",
+  "it": "Il Kilimangiaro e le foreste dell'Africa orientale intorno, visti dallo Space Shuttle"
+ },
+ "WeForest helps whole areas of land grow back into healthy forests.": {
+  "fr": "WeForest aide des paysages entiers à redevenir des forêts en bonne santé.",
+  "es": "WeForest ayuda a que zonas enteras vuelvan a ser bosques sanos.",
+  "ar": "تساعد وي فورست مناطق كاملة من الأرض على أن تعود غابات صحية.",
+  "it": "WeForest aiuta intere zone a tornare foreste sane."
+ },
+ "It works with local families so trees and people can both thrive.": {
+  "fr": "Elle travaille avec les familles locales pour que les arbres et les gens prospèrent ensemble.",
+  "es": "Trabaja con familias locales para que árboles y personas prosperen juntos.",
+  "ar": "تعمل مع الأسر المحلية كي تزدهر الأشجار والناس معًا.",
+  "it": "Lavora con le famiglie del posto perché alberi e persone prosperino insieme."
+ },
+ "It has grown more than 118 million trees so far.": {
+  "fr": "Elle a déjà fait pousser plus de 118 millions d'arbres.",
+  "es": "Ya ha hecho crecer más de 118 millones de árboles.",
+  "ar": "زرعت حتى الآن أكثر من 118 مليون شجرة.",
+  "it": "Finora ha fatto crescere più di 118 milioni di alberi."
+ },
+ "The Five W's of WeForest": {
+  "fr": "Les 5 questions sur WeForest",
+  "es": "Las cinco preguntas sobre WeForest",
+  "ar": "الأسئلة الخمسة عن وي فورست",
+  "it": "Le 5 domande su WeForest"
+ },
+ "WeForest, a nonprofit with more than 100 staff, mostly in its field offices in Zambia and Ethiopia, and a global team in Brussels.": {
+  "fr": "WeForest, une association de plus de 100 professionnels, surtout dans ses bureaux de terrain en Zambie et en Éthiopie, avec une équipe mondiale à Bruxelles.",
+  "es": "WeForest, una organización sin ánimo de lucro con más de 100 profesionales, sobre todo en sus oficinas de campo en Zambia y Etiopía, y un equipo global en Bruselas.",
+  "ar": "وي فورست منظمة غير ربحية تضم أكثر من 100 موظف، معظمهم في مكاتبها الميدانية في زامبيا وإثيوبيا، وفريقًا عالميًا في بروكسل.",
+  "it": "WeForest, un'organizzazione non profit con oltre 100 professionisti, soprattutto negli uffici sul campo in Zambia ed Etiopia, e un team globale a Bruxelles."
+ },
+ "It restores and conserves forests at the landscape level, to get the most out of trees for people, nature and climate.": {
+  "fr": "Elle restaure et protège les forêts à l'échelle des paysages, pour maximiser les bienfaits des arbres pour les gens, la nature et le climat.",
+  "es": "Restaura y conserva bosques a escala de paisaje para sacar el máximo partido a los árboles para las personas, la naturaleza y el clima.",
+  "ar": "تستعيد الغابات وتحميها على مستوى المناظر الطبيعية، لتحقيق أقصى فائدة من الأشجار للناس والطبيعة والمناخ.",
+  "it": "Ripristina e conserva le foreste su scala di paesaggio, per ottenere il massimo dagli alberi per le persone, la natura e il clima."
+ },
+ "Founded in 2009. For its first three years everyone was a volunteer and every euro went to growing trees.": {
+  "fr": "Fondée en 2009. Pendant ses trois premières années, tout le monde était bénévole et chaque euro servait à faire pousser des arbres.",
+  "es": "Fundada en 2009. Durante sus tres primeros años todos eran voluntarios y cada euro se destinaba a hacer crecer árboles.",
+  "ar": "تأسست عام 2009. وفي سنواتها الثلاث الأولى كان الجميع متطوعين وذهب كل يورو لزراعة الأشجار.",
+  "it": "Fondata nel 2009. Nei primi tre anni erano tutti volontari e ogni euro andava a far crescere alberi."
+ },
+ "Mainly in Zambia and Ethiopia, with its global team in Brussels, Belgium.": {
+  "fr": "Surtout en Zambie et en Éthiopie, avec son équipe mondiale à Bruxelles, en Belgique.",
+  "es": "Sobre todo en Zambia y Etiopía, con su equipo global en Bruselas (Bélgica).",
+  "ar": "في زامبيا وإثيوبيا أساسًا، مع فريقها العالمي في بروكسل ببلجيكا.",
+  "it": "Soprattutto in Zambia ed Etiopia, con il team globale a Bruxelles, in Belgio."
+ },
+ "Its vision is a world where communities and nature sustainably thrive together.": {
+  "fr": "Sa vision : un monde où les communautés et la nature prospèrent ensemble, durablement.",
+  "es": "Su visión es un mundo donde las comunidades y la naturaleza prosperen juntas de forma sostenible.",
+  "ar": "رؤيتها عالم تزدهر فيه المجتمعات والطبيعة معًا على نحو مستدام.",
+  "it": "La sua visione è un mondo in cui comunità e natura prosperano insieme in modo sostenibile."
+ },
+ "WeForest, About us": {
+  "fr": "WeForest, À propos",
+  "es": "WeForest, Quiénes somos",
+  "ar": "وي فورست، من نحن",
+  "it": "WeForest, Chi siamo"
+ },
+ "For Further Information: WeForest, About us": {
+  "fr": "Pour en savoir plus : WeForest, À propos",
+  "es": "Más información: WeForest, Quiénes somos",
+  "ar": "لمزيد من المعلومات: وي فورست، من نحن",
+  "it": "Per saperne di più: WeForest, Chi siamo"
+ },
+ "45,000 Households": {
+  "fr": "45 000 foyers",
+  "es": "45.000 hogares",
+  "ar": "45,000 أسرة",
+  "it": "45.000 famiglie"
+ },
+ "WeForest has engaged 45,000 households in alternative livelihood activities.": {
+  "fr": "WeForest a associé 45 000 foyers à des activités de subsistance alternatives.",
+  "es": "WeForest ha implicado a 45.000 hogares en actividades de medios de vida alternativos.",
+  "ar": "أشركت وي فورست 45,000 أسرة في أنشطة سبل عيش بديلة.",
+  "it": "WeForest ha coinvolto 45.000 famiglie in attività di sostentamento alternative."
+ },
+ "WeForest has engaged 45,000 households in alternative livelihood activities (WeForest).": {
+  "fr": "WeForest a associé 45 000 foyers à des activités de subsistance alternatives (WeForest).",
+  "es": "WeForest ha implicado a 45.000 hogares en actividades de medios de vida alternativos (WeForest).",
+  "ar": "أشركت وي فورست 45,000 أسرة في أنشطة سبل عيش بديلة (وي فورست).",
+  "it": "WeForest ha coinvolto 45.000 famiglie in attività di sostentamento alternative (WeForest)."
+ },
+ "100,000 hectares of forest are under restoration and conservation with WeForest (WeForest).": {
+  "fr": "100 000 hectares de forêt sont en restauration et en conservation avec WeForest (WeForest).",
+  "es": "100.000 hectáreas de bosque están en restauración y conservación con WeForest (WeForest).",
+  "ar": "100,000 هكتار من الغابات قيد الاستعادة والحماية مع وي فورست (وي فورست).",
+  "it": "100.000 ettari di foresta sono in ripristino e conservazione con WeForest (WeForest)."
+ },
+ "Support WeForest": {
+  "fr": "Soutenir WeForest",
+  "es": "Apoya a WeForest",
+  "ar": "ادعم وي فورست",
+  "it": "Sostieni WeForest"
+ },
+ "Partner With WeForest": {
+  "fr": "Devenir partenaire de WeForest",
+  "es": "Colabora con WeForest",
+  "ar": "كن شريكًا لوي فورست",
+  "it": "Diventa partner di WeForest"
+ },
+ "Support WeForest directly.": {
+  "fr": "Soutenez directement WeForest.",
+  "es": "Apoya directamente a WeForest.",
+  "ar": "ادعم وي فورست مباشرة.",
+  "it": "Sostieni direttamente WeForest."
+ },
+ "Donate to WeForest": {
+  "fr": "Faire un don à WeForest",
+  "es": "Donar a WeForest",
+  "ar": "تبرّع لوي فورست",
+  "it": "Dona a WeForest"
+ },
+ "Meteosat Third Generation (ESA / EUMETSAT)": {
+  "fr": "Meteosat troisième génération (ESA / EUMETSAT)",
+  "es": "Meteosat de Tercera Generación (ESA / EUMETSAT)",
+  "ar": "الجيل الثالث من ميتيوسات (وكالة الفضاء الأوروبية / يوميتسات)",
+  "it": "Meteosat di terza generazione (ESA / EUMETSAT)"
+ },
+ "Three weather satellites now watch Europe and Africa from 36,000 km up, with new images every 2.5 minutes and a camera that catches lightning day and night (ESA).": {
+  "fr": "Trois satellites météo observent l'Europe et l'Afrique à 36 000 km d'altitude, avec de nouvelles images toutes les 2,5 minutes et une caméra qui capte la foudre jour et nuit (ESA).",
+  "es": "Tres satélites meteorológicos vigilan Europa y África desde 36.000 km de altura, con imágenes nuevas cada 2,5 minutos y una cámara que capta rayos de día y de noche (ESA).",
+  "ar": "ثلاثة أقمار طقس تراقب الآن أوروبا وأفريقيا من ارتفاع 36,000 كيلومتر، بصور جديدة كل 2.5 دقيقة وكاميرا ترصد البرق ليلًا ونهارًا (وكالة الفضاء الأوروبية).",
+  "it": "Tre satelliti meteo osservano Europa e Africa da 36.000 km di quota, con nuove immagini ogni 2,5 minuti e una camera che coglie i fulmini di giorno e di notte (ESA)."
+ },
+ "Lightning lights up storm clouds off North Carolina, seen from the International Space Station": {
+  "fr": "Des éclairs illuminent des nuages d'orage au large de la Caroline du Nord, vus depuis la Station spatiale internationale",
+  "es": "Rayos iluminan nubes de tormenta frente a Carolina del Norte, vistos desde la Estación Espacial Internacional",
+  "ar": "برق يضيء سحب العاصفة قبالة نورث كارولينا كما يُرى من محطة الفضاء الدولية",
+  "it": "Fulmini illuminano nubi temporalesche al largo della Carolina del Nord, visti dalla Stazione spaziale internazionale"
+ },
+ "Meteosat Third Generation is a team of weather satellites that watch Europe and Africa.": {
+  "fr": "Meteosat troisième génération est une équipe de satellites météo qui surveillent l'Europe et l'Afrique.",
+  "es": "Meteosat de Tercera Generación es un equipo de satélites meteorológicos que vigilan Europa y África.",
+  "ar": "الجيل الثالث من ميتيوسات فريق من أقمار الطقس يراقب أوروبا وأفريقيا.",
+  "it": "Meteosat di terza generazione è una squadra di satelliti meteo che osservano Europa e Africa."
+ },
+ "One camera takes a new picture of the weather every 2.5 minutes.": {
+  "fr": "Une caméra prend une nouvelle photo de la météo toutes les 2,5 minutes.",
+  "es": "Una cámara toma una nueva foto del tiempo cada 2,5 minutos.",
+  "ar": "تلتقط كاميرا صورة جديدة للطقس كل 2.5 دقيقة.",
+  "it": "Una camera scatta una nuova foto del meteo ogni 2,5 minuti."
+ },
+ "Another camera spots lightning, which helps warn people about dangerous storms.": {
+  "fr": "Une autre caméra repère la foudre, ce qui aide à prévenir les gens des orages dangereux.",
+  "es": "Otra cámara detecta rayos, lo que ayuda a avisar de tormentas peligrosas.",
+  "ar": "وكاميرا أخرى ترصد البرق، ما يساعد على تحذير الناس من العواصف الخطرة.",
+  "it": "Un'altra camera individua i fulmini e aiuta ad avvisare le persone dei temporali pericolosi."
+ },
+ "The Five W's of Meteosat Third Generation": {
+  "fr": "Les 5 questions sur Meteosat troisième génération",
+  "es": "Las cinco preguntas sobre Meteosat de Tercera Generación",
+  "ar": "الأسئلة الخمسة عن الجيل الثالث من ميتيوسات",
+  "it": "Le 5 domande su Meteosat di terza generazione"
+ },
+ "ESA developed the satellites and EUMETSAT operates them, sharing the data. Thales Alenia Space led the European industry team that built them.": {
+  "fr": "L'ESA a développé les satellites et EUMETSAT les exploite et diffuse les données. Thales Alenia Space a dirigé le consortium industriel européen qui les a construits.",
+  "es": "La ESA desarrolló los satélites y EUMETSAT los opera y distribuye los datos. Thales Alenia Space lideró el consorcio industrial europeo que los construyó.",
+  "ar": "طوّرت وكالة الفضاء الأوروبية الأقمار وتشغّلها يوميتسات وتنشر بياناتها. وقادت تاليس ألينيا سبيس فريق الصناعة الأوروبية الذي بناها.",
+  "it": "L'ESA ha sviluppato i satelliti, EUMETSAT li gestisce e distribuisce i dati. Thales Alenia Space ha guidato il consorzio industriale europeo che li ha costruiti."
+ },
+ "ESA, MTG-I2 completes Europe's latest weather trio": {
+  "fr": "ESA, MTG-I2 complète le nouveau trio météo européen",
+  "es": "ESA, MTG-I2 completa el nuevo trío meteorológico europeo",
+  "ar": "وكالة الفضاء الأوروبية، MTG-I2 يكمل ثلاثي الطقس الأوروبي الجديد",
+  "it": "ESA, MTG-I2 completa il nuovo trio meteo europeo"
+ },
+ "Imager and Sounder satellites. The Imagers carry a Flexible Combined Imager and a Lightning Imager that sees lightning by day and night.": {
+  "fr": "Des satellites imageurs et sondeurs. Les imageurs emportent un imageur combiné flexible et un imageur d'éclairs qui voit la foudre de jour comme de nuit.",
+  "es": "Satélites generadores de imágenes y sondeadores. Los primeros llevan un generador de imágenes combinado flexible y un detector de rayos que los ve de día y de noche.",
+  "ar": "أقمار تصوير وأقمار سبر. تحمل أقمار التصوير جهاز تصوير مركّبًا مرنًا وجهاز تصوير للبرق يراه ليلًا ونهارًا.",
+  "it": "Satelliti imager e sounder. Gli imager portano un Flexible Combined Imager e un Lightning Imager che vede i fulmini di giorno e di notte."
+ },
+ "The first Imager launched in 2022 and the Sounder followed. MTG-I2 launched on 27 August 2026 on Ariane 6, completing the three-satellite system.": {
+  "fr": "Le premier imageur a été lancé en 2022, suivi du sondeur. MTG-I2 a décollé le 27 août 2026 sur Ariane 6, complétant le système de trois satellites.",
+  "es": "El primer generador de imágenes se lanzó en 2022 y luego el sondeador. MTG-I2 despegó el 27 de agosto de 2026 en un Ariane 6 y completó el sistema de tres satélites.",
+  "ar": "أُطلق أول قمر تصوير عام 2022 وتلاه قمر السبر. ثم أُطلق MTG-I2 في 27 أغسطس 2026 على صاروخ أريان 6، فاكتمل نظام الأقمار الثلاثة.",
+  "it": "Il primo imager è stato lanciato nel 2022, poi il sounder. MTG-I2 è partito il 27 agosto 2026 su Ariane 6, completando il sistema di tre satelliti."
+ },
+ "In geostationary orbit about 36,000 km up, watching the same part of Earth over Europe and Africa as it turns.": {
+  "fr": "En orbite géostationnaire à environ 36 000 km, ils regardent toujours la même partie de la Terre, au-dessus de l'Europe et de l'Afrique.",
+  "es": "En órbita geoestacionaria a unos 36.000 km, mirando siempre la misma parte de la Tierra sobre Europa y África mientras gira.",
+  "ar": "في مدار ثابت بالنسبة للأرض على ارتفاع نحو 36,000 كيلومتر، تراقب الجزء نفسه من الأرض فوق أوروبا وأفريقيا وهي تدور.",
+  "it": "In orbita geostazionaria a circa 36.000 km, guardano sempre la stessa parte della Terra sopra Europa e Africa mentre ruota."
+ },
+ "Lightning is a clear sign of turbulence linked to extreme weather, so spotting it early allows early warnings and storm tracking.": {
+  "fr": "La foudre est un signe clair de turbulences liées aux phénomènes extrêmes : la détecter tôt permet d'alerter et de suivre les orages.",
+  "es": "Los rayos son una señal clara de turbulencias ligadas al tiempo extremo, así que detectarlos pronto permite alertas tempranas y seguir las tormentas.",
+  "ar": "البرق علامة واضحة على اضطرابات مرتبطة بالطقس المتطرف، لذا فإن رصده مبكرًا يتيح الإنذار المبكر وتتبع العواصف.",
+  "it": "I fulmini sono un chiaro segno di turbolenza legata al maltempo estremo: vederli presto permette allerte precoci e il monitoraggio dei temporali."
+ },
+ "ESA, Lightning Imager": {
+  "fr": "ESA, imageur d'éclairs",
+  "es": "ESA, detector de rayos (Lightning Imager)",
+  "ar": "وكالة الفضاء الأوروبية، جهاز تصوير البرق",
+  "it": "ESA, Lightning Imager"
+ },
+ "MTG-I2 will deliver new images over Europe every 2.5 minutes, supporting early warnings and the tracking of wildfires and air pollution (ESA).": {
+  "fr": "MTG-I2 fournira de nouvelles images de l'Europe toutes les 2,5 minutes, au service des alertes précoces et du suivi des incendies et de la pollution de l'air (ESA).",
+  "es": "MTG-I2 ofrecerá imágenes nuevas de Europa cada 2,5 minutos, apoyando las alertas tempranas y el seguimiento de incendios y contaminación del aire (ESA).",
+  "ar": "سيقدّم MTG-I2 صورًا جديدة لأوروبا كل 2.5 دقيقة، دعمًا للإنذار المبكر وتتبع حرائق الغابات وتلوث الهواء (وكالة الفضاء الأوروبية).",
+  "it": "MTG-I2 fornirà nuove immagini dell'Europa ogni 2,5 minuti, a supporto delle allerte precoci e del monitoraggio di incendi e inquinamento dell'aria (ESA)."
+ },
+ "For Further Information: ESA, MTG-I2 completes Europe's latest weather trio": {
+  "fr": "Pour en savoir plus : ESA, MTG-I2 complète le nouveau trio météo européen",
+  "es": "Más información: ESA, MTG-I2 completa el nuevo trío meteorológico europeo",
+  "ar": "لمزيد من المعلومات: وكالة الفضاء الأوروبية، MTG-I2 يكمل ثلاثي الطقس الأوروبي الجديد",
+  "it": "Per saperne di più: ESA, MTG-I2 completa il nuovo trio meteo europeo"
+ },
+ "Three Million Flashes a Day": {
+  "fr": "Trois millions d'éclairs par jour",
+  "es": "Tres millones de rayos al día",
+  "ar": "ثلاثة ملايين ومضة يوميًا",
+  "it": "Tre milioni di fulmini al giorno"
+ },
+ "Around the world there are over three million lightning flashes every day (ESA).": {
+  "fr": "Dans le monde, on compte plus de trois millions d'éclairs chaque jour (ESA).",
+  "es": "En el mundo se producen más de tres millones de rayos cada día (ESA).",
+  "ar": "تحدث حول العالم أكثر من ثلاثة ملايين ومضة برق كل يوم (وكالة الفضاء الأوروبية).",
+  "it": "Nel mondo ci sono oltre tre milioni di fulmini ogni giorno (ESA)."
+ },
+ "MTG data support early warnings and will substantially improve weather forecasts for all European countries (ESA).": {
+  "fr": "Les données MTG soutiennent les alertes précoces et amélioreront nettement les prévisions météo de tous les pays européens (ESA).",
+  "es": "Los datos de MTG apoyan las alertas tempranas y mejorarán mucho las previsiones del tiempo de todos los países europeos (ESA).",
+  "ar": "تدعم بيانات MTG الإنذار المبكر وستحسّن توقعات الطقس كثيرًا لجميع الدول الأوروبية (وكالة الفضاء الأوروبية).",
+  "it": "I dati MTG supportano le allerte precoci e miglioreranno molto le previsioni meteo di tutti i paesi europei (ESA)."
+ },
+ "The satellites also provide key data for monitoring water, farming and the environment (ESA).": {
+  "fr": "Les satellites fournissent aussi des données clés pour suivre l'eau, l'agriculture et l'environnement (ESA).",
+  "es": "Los satélites también aportan datos clave para vigilar el agua, la agricultura y el medio ambiente (ESA).",
+  "ar": "توفّر الأقمار أيضًا بيانات أساسية لرصد المياه والزراعة والبيئة (وكالة الفضاء الأوروبية).",
+  "it": "I satelliti forniscono anche dati chiave per monitorare acqua, agricoltura e ambiente (ESA)."
+ },
+ "Get Involved With Meteosat Third Generation": {
+  "fr": "Participer à Meteosat troisième génération",
+  "es": "Participa con Meteosat de Tercera Generación",
+  "ar": "شارك مع الجيل الثالث من ميتيوسات",
+  "it": "Partecipa con Meteosat di terza generazione"
+ },
+ "Learn About Meteosat Third Generation": {
+  "fr": "Découvrir Meteosat troisième génération",
+  "es": "Conoce Meteosat de Tercera Generación",
+  "ar": "تعرّف على الجيل الثالث من ميتيوسات",
+  "it": "Scopri Meteosat di terza generazione"
+ },
+ "Want to go deeper? ESA has the full MTG story.": {
+  "fr": "Envie d'aller plus loin ? L'ESA raconte toute l'histoire de MTG.",
+  "es": "¿Quieres saber más? La ESA cuenta toda la historia de MTG.",
+  "ar": "هل تريد التعمق أكثر؟ لدى وكالة الفضاء الأوروبية القصة الكاملة لـMTG.",
+  "it": "Vuoi approfondire? L'ESA racconta tutta la storia di MTG."
+ },
+ "Learn more about Meteosat Third Generation (ESA / EUMETSAT)": {
+  "fr": "En savoir plus sur Meteosat troisième génération (ESA / EUMETSAT)",
+  "es": "Más información sobre Meteosat de Tercera Generación (ESA / EUMETSAT)",
+  "ar": "اعرف المزيد عن الجيل الثالث من ميتيوسات (وكالة الفضاء الأوروبية / يوميتسات)",
+  "it": "Scopri di più su Meteosat di terza generazione (ESA / EUMETSAT)"
+ },
+ "SMAP Soil Moisture Active Passive (NASA)": {
+  "fr": "SMAP, humidité des sols (NASA)",
+  "es": "SMAP, humedad del suelo (NASA)",
+  "ar": "سماب، رطوبة التربة (ناسا)",
+  "it": "SMAP, umidità del suolo (NASA)"
+ },
+ "SMAP maps the water in Earth's soil from space, helping improve predictions of weather, floods and droughts (NASA).": {
+  "fr": "SMAP cartographie depuis l'espace l'eau contenue dans les sols, pour mieux prévoir la météo, les inondations et les sécheresses (NASA).",
+  "es": "SMAP cartografía desde el espacio el agua del suelo y ayuda a mejorar las predicciones del tiempo, las inundaciones y las sequías (NASA).",
+  "ar": "يرسم سماب من الفضاء خرائط الماء في تربة الأرض، ما يساعد على تحسين التنبؤ بالطقس والفيضانات والجفاف (ناسا).",
+  "it": "SMAP mappa dallo spazio l'acqua nel suolo, aiutando a prevedere meglio meteo, alluvioni e siccità (NASA)."
+ },
+ "The Mississippi River seen from space": {
+  "fr": "Le Mississippi vu de l'espace",
+  "es": "El río Misisipi visto desde el espacio",
+  "ar": "نهر المسيسيبي كما يُرى من الفضاء",
+  "it": "Il fiume Mississippi visto dallo spazio"
+ },
+ "SMAP is a satellite that measures how wet or dry the ground is.": {
+  "fr": "SMAP est un satellite qui mesure si le sol est humide ou sec.",
+  "es": "SMAP es un satélite que mide lo húmedo o seco que está el suelo.",
+  "ar": "سماب قمر صناعي يقيس مدى رطوبة الأرض أو جفافها.",
+  "it": "SMAP è un satellite che misura quanto il terreno è umido o secco."
+ },
+ "It can also tell if the soil is frozen or thawed.": {
+  "fr": "Il sait aussi dire si le sol est gelé ou dégelé.",
+  "es": "También sabe si el suelo está congelado o descongelado.",
+  "ar": "ويمكنه أيضًا معرفة ما إذا كانت التربة متجمدة أو ذائبة.",
+  "it": "Sa anche dire se il suolo è gelato o disgelato."
+ },
+ "This helps farmers and scientists get ready for floods and droughts.": {
+  "fr": "Cela aide les agriculteurs et les scientifiques à se préparer aux inondations et aux sécheresses.",
+  "es": "Eso ayuda a agricultores y científicos a prepararse para inundaciones y sequías.",
+  "ar": "وهذا يساعد المزارعين والعلماء على الاستعداد للفيضانات والجفاف.",
+  "it": "Questo aiuta agricoltori e scienziati a prepararsi ad alluvioni e siccità."
+ },
+ "The Five W's of SMAP": {
+  "fr": "Les 5 questions sur SMAP",
+  "es": "Las cinco preguntas sobre SMAP",
+  "ar": "الأسئلة الخمسة عن سماب",
+  "it": "Le 5 domande su SMAP"
+ },
+ "NASA. The mission is run from NASA's Jet Propulsion Laboratory in Pasadena, California.": {
+  "fr": "La NASA. La mission est pilotée depuis le Jet Propulsion Laboratory de la NASA à Pasadena, en Californie.",
+  "es": "La NASA. La misión se opera desde el Laboratorio de Propulsión a Chorro de la NASA en Pasadena (California).",
+  "ar": "ناسا. تُدار المهمة من مختبر الدفع النفاث التابع لناسا في باسادينا بكاليفورنيا.",
+  "it": "La NASA. La missione è gestita dal Jet Propulsion Laboratory della NASA a Pasadena, in California."
+ },
+ "NASA JPL, SMAP": {
+  "fr": "NASA JPL, SMAP",
+  "es": "NASA JPL, SMAP",
+  "ar": "مختبر الدفع النفاث التابع لناسا، سماب",
+  "it": "NASA JPL, SMAP"
+ },
+ "A satellite with a radar, a radiometer and the largest rotating mesh antenna ever deployed in space, 20 feet (6 meters) wide.": {
+  "fr": "Un satellite doté d'un radar, d'un radiomètre et de la plus grande antenne maillée rotative jamais déployée dans l'espace : 6 mètres de large.",
+  "es": "Un satélite con un radar, un radiómetro y la mayor antena de malla giratoria jamás desplegada en el espacio, de 6 metros de ancho.",
+  "ar": "قمر صناعي يحمل رادارًا ومقياسًا إشعاعيًا وأكبر هوائي شبكي دوّار نُشر في الفضاء على الإطلاق، بعرض 6 أمتار.",
+  "it": "Un satellite con un radar, un radiometro e la più grande antenna a rete rotante mai aperta nello spazio, larga 6 metri."
+ },
+ "SMAP launched on 31 January 2015 and is an active NASA mission.": {
+  "fr": "SMAP a été lancé le 31 janvier 2015 et c'est une mission active de la NASA.",
+  "es": "SMAP se lanzó el 31 de enero de 2015 y es una misión activa de la NASA.",
+  "ar": "أُطلق سماب في 31 يناير 2015، وهو مهمة نشطة لناسا.",
+  "it": "SMAP è stato lanciato il 31 gennaio 2015 ed è una missione NASA attiva."
+ },
+ "NASA, SMAP": {
+  "fr": "NASA, SMAP",
+  "es": "NASA, SMAP",
+  "ar": "ناسا، سماب",
+  "it": "NASA, SMAP"
+ },
+ "It launched on a Delta II rocket from Vandenberg Air Force Base, California, and orbits Earth mapping soils worldwide.": {
+  "fr": "Il a décollé sur une fusée Delta II depuis la base de Vandenberg, en Californie, et tourne autour de la Terre pour cartographier les sols du monde entier.",
+  "es": "Despegó en un cohete Delta II desde la base de Vandenberg (California) y orbita la Tierra cartografiando suelos de todo el mundo.",
+  "ar": "أُطلق على صاروخ دلتا 2 من قاعدة فاندنبرغ الجوية في كاليفورنيا، ويدور حول الأرض راسمًا خرائط التربة في العالم كله.",
+  "it": "È partito su un razzo Delta II dalla base di Vandenberg, in California, e orbita attorno alla Terra mappando i suoli di tutto il mondo."
+ },
+ "Soil moisture links Earth's water, energy and carbon cycles, so mapping it improves predictions of weather, climate, floods and droughts.": {
+  "fr": "L'humidité des sols relie les cycles de l'eau, de l'énergie et du carbone : la cartographier améliore les prévisions de météo, de climat, d'inondations et de sécheresses.",
+  "es": "La humedad del suelo une los ciclos del agua, la energía y el carbono, así que cartografiarla mejora las predicciones del tiempo, el clima, las inundaciones y las sequías.",
+  "ar": "تربط رطوبة التربة دورات الماء والطاقة والكربون على الأرض، لذا فإن رسم خرائطها يحسّن التنبؤ بالطقس والمناخ والفيضانات والجفاف.",
+  "it": "L'umidità del suolo collega i cicli dell'acqua, dell'energia e del carbonio: mapparla migliora le previsioni di meteo, clima, alluvioni e siccità."
+ },
+ "SMAP maps soil moisture and whether soils are frozen or thawed across the globe (NASA).": {
+  "fr": "SMAP cartographie l'humidité des sols et leur état gelé ou dégelé sur tout le globe (NASA).",
+  "es": "SMAP cartografía la humedad del suelo y si está congelado o descongelado en todo el planeta (NASA).",
+  "ar": "يرسم سماب خرائط رطوبة التربة وما إذا كانت متجمدة أو ذائبة في أنحاء العالم (ناسا).",
+  "it": "SMAP mappa l'umidità del suolo e se è gelato o disgelato in tutto il pianeta (NASA)."
+ },
+ "For Further Information: NASA, SMAP": {
+  "fr": "Pour en savoir plus : NASA, SMAP",
+  "es": "Más información: NASA, SMAP",
+  "ar": "لمزيد من المعلومات: ناسا، سماب",
+  "it": "Per saperne di più: NASA, SMAP"
+ },
+ "A Golden Lasso in Space": {
+  "fr": "Un lasso doré dans l'espace",
+  "es": "Un lazo dorado en el espacio",
+  "ar": "لاسو ذهبي في الفضاء",
+  "it": "Un lazo d'oro nello spazio"
+ },
+ "SMAP's 20-foot (6-meter) \"golden lasso\" antenna is the largest rotating mesh antenna ever deployed in space (NASA JPL).": {
+  "fr": "Le « lasso doré » de SMAP, une antenne de 6 mètres, est la plus grande antenne maillée rotative jamais déployée dans l'espace (NASA JPL).",
+  "es": "El \"lazo dorado\" de SMAP, una antena de 6 metros, es la mayor antena de malla giratoria jamás desplegada en el espacio (NASA JPL).",
+  "ar": "هوائي سماب الملقب «اللاسو الذهبي» بعرض 6 أمتار هو أكبر هوائي شبكي دوّار نُشر في الفضاء (مختبر الدفع النفاث التابع لناسا).",
+  "it": "Il \"lazo d'oro\" di SMAP, un'antenna di 6 metri, è la più grande antenna a rete rotante mai aperta nello spazio (NASA JPL)."
+ },
+ "Better forecasts of floods and droughts help communities and farmers prepare (NASA).": {
+  "fr": "De meilleures prévisions d'inondations et de sécheresses aident les populations et les agriculteurs à se préparer (NASA).",
+  "es": "Mejores predicciones de inundaciones y sequías ayudan a comunidades y agricultores a prepararse (NASA).",
+  "ar": "تساعد التنبؤات الأفضل بالفيضانات والجفاف المجتمعات والمزارعين على الاستعداد (ناسا).",
+  "it": "Previsioni migliori di alluvioni e siccità aiutano comunità e agricoltori a prepararsi (NASA)."
+ },
+ "Soil moisture connects the water, energy and carbon cycles that all life depends on (NASA).": {
+  "fr": "L'humidité des sols relie les cycles de l'eau, de l'énergie et du carbone dont dépend toute vie (NASA).",
+  "es": "La humedad del suelo conecta los ciclos del agua, la energía y el carbono de los que depende toda la vida (NASA).",
+  "ar": "تربط رطوبة التربة دورات الماء والطاقة والكربون التي تعتمد عليها الحياة كلها (ناسا).",
+  "it": "L'umidità del suolo collega i cicli dell'acqua, dell'energia e del carbonio da cui dipende ogni forma di vita (NASA)."
+ },
+ "Get Involved With SMAP": {
+  "fr": "Participer à SMAP",
+  "es": "Participa con SMAP",
+  "ar": "شارك مع سماب",
+  "it": "Partecipa con SMAP"
+ },
+ "Learn About SMAP": {
+  "fr": "Découvrir SMAP",
+  "es": "Conoce SMAP",
+  "ar": "تعرّف على سماب",
+  "it": "Scopri SMAP"
+ },
+ "Want to go deeper? NASA has the full SMAP story.": {
+  "fr": "Envie d'aller plus loin ? La NASA raconte toute l'histoire de SMAP.",
+  "es": "¿Quieres saber más? La NASA cuenta toda la historia de SMAP.",
+  "ar": "هل تريد التعمق أكثر؟ لدى ناسا القصة الكاملة لسماب.",
+  "it": "Vuoi approfondire? La NASA racconta tutta la storia di SMAP."
+ },
+ "Learn more about SMAP Soil Moisture Active Passive (NASA)": {
+  "fr": "En savoir plus sur SMAP (NASA)",
+  "es": "Más información sobre SMAP (NASA)",
+  "ar": "اعرف المزيد عن سماب (ناسا)",
+  "it": "Scopri di più su SMAP (NASA)"
+ },
+ "GCOM-C \"SHIKISAI\" (JAXA)": {
+  "fr": "GCOM-C « SHIKISAI » (JAXA)",
+  "es": "GCOM-C \"SHIKISAI\" (JAXA)",
+  "ar": "GCOM-C «شيكيساي» (جاكسا)",
+  "it": "GCOM-C \"SHIKISAI\" (JAXA)"
+ },
+ "Japan's SHIKISAI satellite checks the health of Earth from space every 2 or 3 days, tracking clouds, aerosols, ocean color, plants, snow and ice (JAXA).": {
+  "fr": "Le satellite japonais SHIKISAI ausculte la Terre tous les 2 ou 3 jours : nuages, aérosols, couleur de l'océan, végétation, neige et glace (JAXA).",
+  "es": "El satélite japonés SHIKISAI revisa la salud de la Tierra cada 2 o 3 días: nubes, aerosoles, color del océano, plantas, nieve y hielo (JAXA).",
+  "ar": "يفحص القمر الياباني شيكيساي صحة الأرض من الفضاء كل يومين أو ثلاثة، متتبعًا السحب والهباء الجوي ولون المحيط والنباتات والثلج والجليد (جاكسا).",
+  "it": "Il satellite giapponese SHIKISAI controlla la salute della Terra ogni 2 o 3 giorni: nubi, aerosol, colore dell'oceano, vegetazione, neve e ghiaccio (JAXA)."
+ },
+ "Clouds over the Pacific Ocean at sunset seen from the International Space Station": {
+  "fr": "Nuages au-dessus du Pacifique au coucher du soleil, vus depuis la Station spatiale internationale",
+  "es": "Nubes sobre el océano Pacífico al atardecer vistas desde la Estación Espacial Internacional",
+  "ar": "سحب فوق المحيط الهادئ عند الغروب كما تُرى من محطة الفضاء الدولية",
+  "it": "Nubi sull'oceano Pacifico al tramonto viste dalla Stazione spaziale internazionale"
+ },
+ "GCOM-C, also called SHIKISAI, is a Japanese satellite that looks at the whole Earth.": {
+  "fr": "GCOM-C, aussi appelé SHIKISAI, est un satellite japonais qui observe toute la Terre.",
+  "es": "GCOM-C, también llamado SHIKISAI, es un satélite japonés que observa toda la Tierra.",
+  "ar": "GCOM-C، ويُسمى أيضًا شيكيساي، قمر صناعي ياباني يراقب الأرض كلها.",
+  "it": "GCOM-C, chiamato anche SHIKISAI, è un satellite giapponese che osserva tutta la Terra."
+ },
+ "It sees clouds, tiny particles in the air, plants, ocean color, snow and ice.": {
+  "fr": "Il voit les nuages, les minuscules particules dans l'air, les plantes, la couleur de l'océan, la neige et la glace.",
+  "es": "Ve nubes, partículas diminutas en el aire, plantas, el color del océano, nieve y hielo.",
+  "ar": "يرى السحب والجسيمات الدقيقة في الهواء والنباتات ولون المحيط والثلج والجليد.",
+  "it": "Vede nubi, minuscole particelle nell'aria, piante, il colore dell'oceano, neve e ghiaccio."
+ },
+ "This helps scientists understand climate change.": {
+  "fr": "Cela aide les scientifiques à comprendre le changement climatique.",
+  "es": "Eso ayuda a los científicos a entender el cambio climático.",
+  "ar": "وهذا يساعد العلماء على فهم تغيّر المناخ.",
+  "it": "Questo aiuta gli scienziati a capire il cambiamento climatico."
+ },
+ "The Five W's of GCOM-C": {
+  "fr": "Les 5 questions sur GCOM-C",
+  "es": "Las cinco preguntas sobre GCOM-C",
+  "ar": "الأسئلة الخمسة عن GCOM-C",
+  "it": "Le 5 domande su GCOM-C"
+ },
+ "JAXA, the Japan Aerospace Exploration Agency, as part of its Global Change Observation Mission (GCOM).": {
+  "fr": "La JAXA, l'agence spatiale japonaise, dans le cadre de sa mission d'observation des changements planétaires (GCOM).",
+  "es": "La JAXA, la agencia espacial japonesa, dentro de su Misión de Observación del Cambio Global (GCOM).",
+  "ar": "جاكسا، وكالة استكشاف الفضاء اليابانية، ضمن مهمتها لرصد التغير العالمي (GCOM).",
+  "it": "La JAXA, l'agenzia spaziale giapponese, nell'ambito della sua Global Change Observation Mission (GCOM)."
+ },
+ "JAXA, GCOM-C \"SHIKISAI\"": {
+  "fr": "JAXA, GCOM-C « SHIKISAI »",
+  "es": "JAXA, GCOM-C \"SHIKISAI\"",
+  "ar": "جاكسا، GCOM-C «شيكيساي»",
+  "it": "JAXA, GCOM-C \"SHIKISAI\""
+ },
+ "A satellite carrying SGLI, an optical sensor that sees from near-ultraviolet to thermal infrared light at 250 m to 1 km detail.": {
+  "fr": "Un satellite qui emporte SGLI, un capteur optique allant du proche ultraviolet à l'infrarouge thermique, avec une résolution de 250 m à 1 km.",
+  "es": "Un satélite con SGLI, un sensor óptico que ve del ultravioleta cercano al infrarrojo térmico con un detalle de 250 m a 1 km.",
+  "ar": "قمر صناعي يحمل SGLI، وهو مستشعر بصري يرى من الأشعة فوق البنفسجية القريبة إلى الأشعة تحت الحمراء الحرارية بدقة من 250 مترًا إلى كيلومتر واحد.",
+  "it": "Un satellite con SGLI, un sensore ottico che vede dal vicino ultravioletto all'infrarosso termico con un dettaglio da 250 m a 1 km."
+ },
+ "GCOM-C launched on 23 December 2017 on an H-IIA rocket and is in operation.": {
+  "fr": "GCOM-C a été lancé le 23 décembre 2017 sur une fusée H-IIA et il est en service.",
+  "es": "GCOM-C se lanzó el 23 de diciembre de 2017 en un cohete H-IIA y está en funcionamiento.",
+  "ar": "أُطلق GCOM-C في 23 ديسمبر 2017 على صاروخ H-IIA، وهو في الخدمة.",
+  "it": "GCOM-C è stato lanciato il 23 dicembre 2017 su un razzo H-IIA ed è in funzione."
+ },
+ "In orbit about 798 km above Earth, covering the whole globe every 2 or 3 days.": {
+  "fr": "En orbite à environ 798 km de la Terre, il couvre tout le globe tous les 2 ou 3 jours.",
+  "es": "En órbita a unos 798 km de la Tierra, cubre todo el planeta cada 2 o 3 días.",
+  "ar": "في مدار على ارتفاع نحو 798 كيلومترًا فوق الأرض، يغطي الكرة الأرضية كلها كل يومين أو ثلاثة.",
+  "it": "In orbita a circa 798 km dalla Terra, copre tutto il pianeta ogni 2 o 3 giorni."
+ },
+ "Long-term views of aerosols, clouds, plants and temperatures help explain climate change and improve climate models.": {
+  "fr": "Suivre longtemps aérosols, nuages, végétation et températures aide à expliquer le changement climatique et à améliorer les modèles.",
+  "es": "Observar durante años aerosoles, nubes, plantas y temperaturas ayuda a explicar el cambio climático y a mejorar los modelos.",
+  "ar": "تساعد المشاهدات الطويلة للهباء الجوي والسحب والنباتات ودرجات الحرارة على تفسير تغيّر المناخ وتحسين نماذجه.",
+  "it": "Osservare a lungo aerosol, nubi, vegetazione e temperature aiuta a spiegare il cambiamento climatico e a migliorare i modelli."
+ },
+ "SGLI collects global data once every 2 or 3 days on clouds, aerosols, ocean color, vegetation, snow and ice (JAXA).": {
+  "fr": "SGLI recueille tous les 2 ou 3 jours des données mondiales sur les nuages, les aérosols, la couleur de l'océan, la végétation, la neige et la glace (JAXA).",
+  "es": "SGLI reúne cada 2 o 3 días datos globales de nubes, aerosoles, color del océano, vegetación, nieve y hielo (JAXA).",
+  "ar": "يجمع SGLI كل يومين أو ثلاثة بيانات عالمية عن السحب والهباء الجوي ولون المحيط والنباتات والثلج والجليد (جاكسا).",
+  "it": "SGLI raccoglie ogni 2 o 3 giorni dati globali su nubi, aerosol, colore dell'oceano, vegetazione, neve e ghiaccio (JAXA)."
+ },
+ "For Further Information: JAXA, GCOM-C \"SHIKISAI\"": {
+  "fr": "Pour en savoir plus : JAXA, GCOM-C « SHIKISAI »",
+  "es": "Más información: JAXA, GCOM-C \"SHIKISAI\"",
+  "ar": "لمزيد من المعلومات: جاكسا، GCOM-C «شيكيساي»",
+  "it": "Per saperne di più: JAXA, GCOM-C \"SHIKISAI\""
+ },
+ "From Ultraviolet to Heat": {
+  "fr": "De l'ultraviolet à la chaleur",
+  "es": "Del ultravioleta al calor",
+  "ar": "من فوق البنفسجي إلى الحرارة",
+  "it": "Dall'ultravioletto al calore"
+ },
+ "SGLI observes light from near-ultraviolet to thermal infrared, from 380 nanometres to 12 micrometres (JAXA).": {
+  "fr": "SGLI observe la lumière du proche ultraviolet à l'infrarouge thermique, de 380 nanomètres à 12 micromètres (JAXA).",
+  "es": "SGLI observa la luz del ultravioleta cercano al infrarrojo térmico, de 380 nanómetros a 12 micrómetros (JAXA).",
+  "ar": "يرصد SGLI الضوء من الأشعة فوق البنفسجية القريبة إلى الأشعة تحت الحمراء الحرارية، من 380 نانومترًا إلى 12 ميكرومترًا (جاكسا).",
+  "it": "SGLI osserva la luce dal vicino ultravioletto all'infrarosso termico, da 380 nanometri a 12 micrometri (JAXA)."
+ },
+ "GCOM-C data help improve the accuracy of predictions of future environmental change (JAXA).": {
+  "fr": "Les données de GCOM-C aident à préciser les prévisions des changements environnementaux à venir (JAXA).",
+  "es": "Los datos de GCOM-C ayudan a afinar las predicciones de futuros cambios ambientales (JAXA).",
+  "ar": "تساعد بيانات GCOM-C على تحسين دقة التنبؤ بالتغيرات البيئية المستقبلية (جاكسا).",
+  "it": "I dati di GCOM-C aiutano a rendere più precise le previsioni dei futuri cambiamenti ambientali (JAXA)."
+ },
+ "SGLI maps phytoplankton in the ocean and the health of vegetation on land (JAXA).": {
+  "fr": "SGLI cartographie le phytoplancton dans l'océan et l'état de la végétation sur terre (JAXA).",
+  "es": "SGLI cartografía el fitoplancton del océano y la salud de la vegetación en tierra (JAXA).",
+  "ar": "يرسم SGLI خرائط العوالق النباتية في المحيط وصحة النباتات على اليابسة (جاكسا).",
+  "it": "SGLI mappa il fitoplancton nell'oceano e la salute della vegetazione sulla terraferma (JAXA)."
+ },
+ "Get Involved With GCOM-C": {
+  "fr": "Participer à GCOM-C",
+  "es": "Participa con GCOM-C",
+  "ar": "شارك مع GCOM-C",
+  "it": "Partecipa con GCOM-C"
+ },
+ "Learn About GCOM-C": {
+  "fr": "Découvrir GCOM-C",
+  "es": "Conoce GCOM-C",
+  "ar": "تعرّف على GCOM-C",
+  "it": "Scopri GCOM-C"
+ },
+ "Want to go deeper? JAXA has the full GCOM-C story.": {
+  "fr": "Envie d'aller plus loin ? La JAXA raconte toute l'histoire de GCOM-C.",
+  "es": "¿Quieres saber más? La JAXA cuenta toda la historia de GCOM-C.",
+  "ar": "هل تريد التعمق أكثر؟ لدى جاكسا القصة الكاملة لـGCOM-C.",
+  "it": "Vuoi approfondire? La JAXA racconta tutta la storia di GCOM-C."
+ },
+ "Learn more about GCOM-C \"SHIKISAI\" (JAXA)": {
+  "fr": "En savoir plus sur GCOM-C « SHIKISAI » (JAXA)",
+  "es": "Más información sobre GCOM-C \"SHIKISAI\" (JAXA)",
+  "ar": "اعرف المزيد عن GCOM-C «شيكيساي» (جاكسا)",
+  "it": "Scopri di più su GCOM-C \"SHIKISAI\" (JAXA)"
+ },
+ "London Tideway Tunnel (Super Sewer)": {
+  "fr": "Tunnel Tideway de Londres (super-égout)",
+  "es": "Túnel Tideway de Londres (supercolector)",
+  "ar": "نفق تايدواي في لندن (المجرور العملاق)",
+  "it": "Tunnel Tideway di Londra (super fognatura)"
+ },
+ "London's new super sewer catches sewage that used to spill into the River Thames in storms, with room for 1.6 million cubic metres (Tideway).": {
+  "fr": "Le nouveau super-égout de Londres capte les eaux usées qui se déversaient dans la Tamise lors des orages ; il peut en stocker 1,6 million de m³ (Tideway).",
+  "es": "El nuevo supercolector de Londres capta las aguas residuales que se vertían al Támesis en las tormentas, con capacidad para 1,6 millones de m³ (Tideway).",
+  "ar": "يلتقط المجرور العملاق الجديد في لندن مياه الصرف التي كانت تتدفق إلى نهر التايمز أثناء العواصف، وتبلغ سعته 1.6 مليون متر مكعب (تايدواي).",
+  "it": "La nuova super fognatura di Londra cattura i liquami che durante i temporali finivano nel Tamigi, con spazio per 1,6 milioni di m³ (Tideway)."
+ },
+ "London at night, split by the dark curve of the River Thames, seen from the International Space Station": {
+  "fr": "Londres la nuit, coupée par la courbe sombre de la Tamise, vue depuis la Station spatiale internationale",
+  "es": "Londres de noche, dividida por la curva oscura del Támesis, vista desde la Estación Espacial Internacional",
+  "ar": "لندن ليلًا يقسمها منحنى نهر التايمز الداكن كما تُرى من محطة الفضاء الدولية",
+  "it": "Londra di notte, divisa dalla curva scura del Tamigi, vista dalla Stazione spaziale internazionale"
+ },
+ "When it rains hard in London, old sewers used to overflow into the River Thames.": {
+  "fr": "Quand il pleuvait fort à Londres, les vieux égouts débordaient dans la Tamise.",
+  "es": "Cuando llovía mucho en Londres, las viejas alcantarillas se desbordaban en el Támesis.",
+  "ar": "عندما كانت تمطر بغزارة في لندن، كانت المجارير القديمة تفيض في نهر التايمز.",
+  "it": "Quando pioveva forte a Londra, le vecchie fognature traboccavano nel Tamigi."
+ },
+ "A giant new tunnel under the river now catches that dirty water.": {
+  "fr": "Un nouveau tunnel géant sous le fleuve recueille maintenant cette eau sale.",
+  "es": "Un nuevo túnel gigante bajo el río recoge ahora esa agua sucia.",
+  "ar": "يلتقط الآن نفق جديد عملاق تحت النهر تلك المياه القذرة.",
+  "it": "Un nuovo tunnel gigante sotto il fiume ora raccoglie quell'acqua sporca."
+ },
+ "The water is sent away to be cleaned, so the river stays healthier.": {
+  "fr": "L'eau est envoyée pour être nettoyée, et le fleuve reste en meilleure santé.",
+  "es": "El agua se envía a limpiar, así el río está más sano.",
+  "ar": "تُرسل المياه لتنظيفها، فيبقى النهر أكثر صحة.",
+  "it": "L'acqua viene mandata a depurare, così il fiume resta più sano."
+ },
+ "The Five W's of the Tideway Tunnel": {
+  "fr": "Les 5 questions sur le tunnel Tideway",
+  "es": "Las cinco preguntas sobre el túnel Tideway",
+  "ar": "الأسئلة الخمسة عن نفق تايدواي",
+  "it": "Le 5 domande sul tunnel Tideway"
+ },
+ "Tideway, the company that built the London Tideway Tunnel.": {
+  "fr": "Tideway, l'entreprise qui a construit le tunnel Tideway de Londres.",
+  "es": "Tideway, la empresa que construyó el túnel Tideway de Londres.",
+  "ar": "تايدواي، الشركة التي بنت نفق تايدواي في لندن.",
+  "it": "Tideway, l'azienda che ha costruito il tunnel Tideway di Londra."
+ },
+ "Tideway, The tunnel": {
+  "fr": "Tideway, le tunnel",
+  "es": "Tideway, el túnel",
+  "ar": "تايدواي، النفق",
+  "it": "Tideway, il tunnel"
+ },
+ "A \"super sewer\" tunnel 7.2 metres wide that intercepts, stores and transfers sewage away from the River Thames.": {
+  "fr": "Un tunnel « super-égout » de 7,2 mètres de diamètre qui intercepte, stocke et évacue les eaux usées loin de la Tamise.",
+  "es": "Un túnel \"supercolector\" de 7,2 metros de ancho que intercepta, almacena y aleja las aguas residuales del Támesis.",
+  "ar": "نفق «مجرور عملاق» بعرض 7.2 أمتار يعترض مياه الصرف ويخزنها وينقلها بعيدًا عن نهر التايمز.",
+  "it": "Un tunnel \"super fognatura\" largo 7,2 metri che intercetta, immagazzina e allontana i liquami dal Tamigi."
+ },
+ "In May 2024 the super sewer was connected to the Lee Tunnel, working since 2016, completing the full network.": {
+  "fr": "En mai 2024, le super-égout a été relié au tunnel de la Lee, en service depuis 2016, complétant le réseau.",
+  "es": "En mayo de 2024 el supercolector se conectó al túnel del Lee, en servicio desde 2016, y se completó la red.",
+  "ar": "في مايو 2024 وُصل المجرور العملاق بنفق لي العامل منذ 2016، فاكتملت الشبكة.",
+  "it": "A maggio 2024 la super fognatura è stata collegata al Lee Tunnel, attivo dal 2016, completando la rete."
+ },
+ "Under London, from Acton in the west, 31 metres deep, falling to 66 metres at Abbey Mills Pumping Station in the east.": {
+  "fr": "Sous Londres, depuis Acton à l'ouest, à 31 mètres de profondeur, jusqu'à 66 mètres à la station de pompage d'Abbey Mills à l'est.",
+  "es": "Bajo Londres, desde Acton al oeste, a 31 metros de profundidad, hasta 66 metros en la estación de bombeo de Abbey Mills al este.",
+  "ar": "تحت لندن، من أكتون في الغرب على عمق 31 مترًا، نزولًا إلى 66 مترًا عند محطة ضخ آبي ميلز في الشرق.",
+  "it": "Sotto Londra, da Acton a ovest, a 31 metri di profondità, fino a 66 metri alla stazione di pompaggio di Abbey Mills a est."
+ },
+ "During heavy storms, rain and sewage used to spill into the Thames at overflow points. The tunnel now captures it to be treated.": {
+  "fr": "Lors des gros orages, pluie et eaux usées se déversaient dans la Tamise par des points de débordement. Le tunnel les capte désormais pour les traiter.",
+  "es": "En las tormentas fuertes, la lluvia y las aguas residuales se vertían al Támesis por puntos de desbordamiento. El túnel ahora las capta para tratarlas.",
+  "ar": "أثناء العواصف الشديدة كانت مياه الأمطار والصرف تتدفق إلى التايمز من نقاط الفيضان. والآن يلتقطها النفق لمعالجتها.",
+  "it": "Durante i forti temporali pioggia e liquami finivano nel Tamigi dagli sfioratori. Ora il tunnel li cattura per depurarli."
+ },
+ "Company solution · active": {
+  "fr": "Solution d'entreprise · active",
+  "es": "Solución empresarial · activa",
+  "ar": "حل من شركة · نشط",
+  "it": "Soluzione aziendale · attiva"
+ },
+ "The London Tideway Tunnel network can store 1.6 million cubic metres of sewage, about 600 Olympic-size swimming pools, to protect the tidal Thames (Tideway).": {
+  "fr": "Le réseau du tunnel Tideway peut stocker 1,6 million de m³ d'eaux usées, environ 600 piscines olympiques, pour protéger la Tamise à marée (Tideway).",
+  "es": "La red del túnel Tideway puede almacenar 1,6 millones de m³ de aguas residuales, unas 600 piscinas olímpicas, para proteger el Támesis de marea (Tideway).",
+  "ar": "تستطيع شبكة نفق تايدواي تخزين 1.6 مليون متر مكعب من مياه الصرف، أي نحو 600 مسبح أولمبي، لحماية الجزء المدّي من التايمز (تايدواي).",
+  "it": "La rete del tunnel Tideway può contenere 1,6 milioni di m³ di liquami, circa 600 piscine olimpiche, per proteggere il Tamigi soggetto a marea (Tideway)."
+ },
+ "For Further Information: Tideway, The tunnel": {
+  "fr": "Pour en savoir plus : Tideway, le tunnel",
+  "es": "Más información: Tideway, el túnel",
+  "ar": "لمزيد من المعلومات: تايدواي، النفق",
+  "it": "Per saperne di più: Tideway, il tunnel"
+ },
+ "600 Swimming Pools": {
+  "fr": "600 piscines",
+  "es": "600 piscinas",
+  "ar": "600 مسبح",
+  "it": "600 piscine"
+ },
+ "The super sewer can hold about 600 Olympic-size swimming pools of sewage (Tideway).": {
+  "fr": "Le super-égout peut contenir l'équivalent d'environ 600 piscines olympiques d'eaux usées (Tideway).",
+  "es": "El supercolector puede contener unas 600 piscinas olímpicas de aguas residuales (Tideway).",
+  "ar": "يتسع المجرور العملاق لنحو 600 مسبح أولمبي من مياه الصرف (تايدواي).",
+  "it": "La super fognatura può contenere circa 600 piscine olimpiche di liquami (Tideway)."
+ },
+ "The tunnel protects the river that runs through the heart of London from polluting sewage spills (Tideway).": {
+  "fr": "Le tunnel protège le fleuve qui traverse le cœur de Londres des rejets d'eaux usées (Tideway).",
+  "es": "El túnel protege de los vertidos de aguas residuales al río que cruza el corazón de Londres (Tideway).",
+  "ar": "يحمي النفق النهر الذي يجري في قلب لندن من تسرب مياه الصرف الملوثة (تايدواي).",
+  "it": "Il tunnel protegge dagli sversamenti di liquami il fiume che attraversa il cuore di Londra (Tideway)."
+ },
+ "Sewage is now captured and sent for treatment, protecting the river and its wildlife (Tideway).": {
+  "fr": "Les eaux usées sont désormais captées et traitées, ce qui protège le fleuve et sa faune (Tideway).",
+  "es": "Las aguas residuales se captan ahora y se tratan, protegiendo el río y su fauna (Tideway).",
+  "ar": "تُلتقط مياه الصرف الآن وتُرسل للمعالجة، ما يحمي النهر وحياته البرية (تايدواي).",
+  "it": "I liquami ora vengono catturati e depurati, proteggendo il fiume e la sua fauna (Tideway)."
+ },
+ "Learn More About the Tideway Tunnel": {
+  "fr": "En savoir plus sur le tunnel Tideway",
+  "es": "Más sobre el túnel Tideway",
+  "ar": "اعرف المزيد عن نفق تايدواي",
+  "it": "Scopri di più sul tunnel Tideway"
+ },
+ "Learn About the Tunnel": {
+  "fr": "Découvrir le tunnel",
+  "es": "Conoce el túnel",
+  "ar": "تعرّف على النفق",
+  "it": "Scopri il tunnel"
+ },
+ "Want to go deeper? Tideway has the full story of the tunnel.": {
+  "fr": "Envie d'aller plus loin ? Tideway raconte toute l'histoire du tunnel.",
+  "es": "¿Quieres saber más? Tideway cuenta toda la historia del túnel.",
+  "ar": "هل تريد التعمق أكثر؟ لدى تايدواي القصة الكاملة للنفق.",
+  "it": "Vuoi approfondire? Tideway racconta tutta la storia del tunnel."
+ },
+ "Learn more about London Tideway Tunnel (Super Sewer)": {
+  "fr": "En savoir plus sur le tunnel Tideway de Londres",
+  "es": "Más información sobre el túnel Tideway de Londres",
+  "ar": "اعرف المزيد عن نفق تايدواي في لندن",
+  "it": "Scopri di più sul tunnel Tideway di Londra"
+ },
+ "Penobscot River Restoration (Maine)": {
+  "fr": "Restauration de la rivière Penobscot (Maine)",
+  "es": "Restauración del río Penobscot (Maine)",
+  "ar": "استعادة نهر بينوبسكوت (ولاية مين)",
+  "it": "Ripristino del fiume Penobscot (Maine)"
+ },
+ "After two dams came out of Maine's Penobscot River, nearly 5.93 million river herring climbed the Milford fish lift in 2025, up from about 590,000 in 2015 (Maine DMR).": {
+  "fr": "Après le retrait de deux barrages sur la Penobscot, dans le Maine, près de 5,93 millions de harengs de rivière ont emprunté l'ascenseur à poissons de Milford en 2025, contre environ 590 000 en 2015 (Maine DMR).",
+  "es": "Tras retirar dos presas del río Penobscot (Maine), casi 5,93 millones de arenques de río subieron por el ascensor de peces de Milford en 2025, frente a unos 590.000 en 2015 (Maine DMR).",
+  "ar": "بعد إزالة سدّين من نهر بينوبسكوت في ولاية مين، صعد نحو 5.93 مليون سمكة رنجة نهرية مصعد الأسماك في ميلفورد عام 2025، مقابل نحو 590 ألفًا عام 2015 (إدارة الموارد البحرية في مين).",
+  "it": "Dopo la rimozione di due dighe dal fiume Penobscot, nel Maine, quasi 5,93 milioni di aringhe di fiume hanno risalito l'ascensore per pesci di Milford nel 2025, contro circa 590.000 nel 2015 (Maine DMR)."
+ },
+ "The New England coast from Massachusetts to Maine seen from the International Space Station": {
+  "fr": "La côte de la Nouvelle-Angleterre, du Massachusetts au Maine, vue depuis la Station spatiale internationale",
+  "es": "La costa de Nueva Inglaterra, de Massachusetts a Maine, vista desde la Estación Espacial Internacional",
+  "ar": "ساحل نيو إنغلاند من ماساتشوستس إلى مين كما يُرى من محطة الفضاء الدولية",
+  "it": "La costa del New England, dal Massachusetts al Maine, vista dalla Stazione spaziale internazionale"
+ },
+ "Dams on the Penobscot River blocked fish from swimming up to lay their eggs.": {
+  "fr": "Des barrages sur la Penobscot empêchaient les poissons de remonter pondre.",
+  "es": "Las presas del río Penobscot impedían a los peces subir a desovar.",
+  "ar": "كانت السدود على نهر بينوبسكوت تمنع الأسماك من السباحة صعودًا لوضع بيضها.",
+  "it": "Le dighe sul Penobscot impedivano ai pesci di risalire a deporre le uova."
+ },
+ "People took out two dams and built new ways for fish to get past others.": {
+  "fr": "On a retiré deux barrages et créé de nouveaux passages pour franchir les autres.",
+  "es": "Se quitaron dos presas y se crearon nuevos pasos para que los peces superen otras.",
+  "ar": "أزال الناس سدّين وبنوا طرقًا جديدة لتعبر الأسماك سدودًا أخرى.",
+  "it": "Sono state tolte due dighe e create nuove vie per superare le altre."
+ },
+ "Now millions of fish swim up the river again each year.": {
+  "fr": "Aujourd'hui, des millions de poissons remontent à nouveau la rivière chaque année.",
+  "es": "Ahora millones de peces vuelven a remontar el río cada año.",
+  "ar": "والآن تعود ملايين الأسماك إلى السباحة صعودًا في النهر كل عام.",
+  "it": "Ora milioni di pesci risalgono di nuovo il fiume ogni anno."
+ },
+ "The Five W's of the Penobscot River Restoration": {
+  "fr": "Les 5 questions sur la restauration de la Penobscot",
+  "es": "Las cinco preguntas sobre la restauración del Penobscot",
+  "ar": "الأسئلة الخمسة عن استعادة نهر بينوبسكوت",
+  "it": "Le 5 domande sul ripristino del Penobscot"
+ },
+ "The Penobscot River Restoration Trust, a nonprofit, with the Penobscot Indian Nation, the State of Maine, federal agencies, conservation groups and a hydropower company.": {
+  "fr": "Le Penobscot River Restoration Trust, une association, avec la nation amérindienne Penobscot, l'État du Maine, des agences fédérales, des groupes de protection de la nature et une entreprise hydroélectrique.",
+  "es": "El Penobscot River Restoration Trust, una organización sin ánimo de lucro, junto con la Nación India Penobscot, el estado de Maine, agencias federales, grupos conservacionistas y una empresa hidroeléctrica.",
+  "ar": "صندوق استعادة نهر بينوبسكوت، وهو منظمة غير ربحية، مع أمة بينوبسكوت الأصلية وولاية مين ووكالات اتحادية ومجموعات حماية وشركة طاقة كهرومائية.",
+  "it": "Il Penobscot River Restoration Trust, un'organizzazione non profit, con la Nazione indiana Penobscot, lo Stato del Maine, agenzie federali, gruppi ambientalisti e un'azienda idroelettrica."
+ },
+ "Penobscot River Restoration Trust": {
+  "fr": "Penobscot River Restoration Trust",
+  "es": "Penobscot River Restoration Trust",
+  "ar": "صندوق استعادة نهر بينوبسكوت",
+  "it": "Penobscot River Restoration Trust"
+ },
+ "Removing the Great Works and Veazie dams, adding a fish lift at Milford Dam and a fish bypass around Howland Dam, while keeping hydropower.": {
+  "fr": "Retirer les barrages de Great Works et de Veazie, installer un ascenseur à poissons au barrage de Milford et une passe de contournement à Howland, tout en gardant l'hydroélectricité.",
+  "es": "Retirar las presas de Great Works y Veazie, añadir un ascensor de peces en la presa de Milford y un canal de paso alrededor de la de Howland, manteniendo la energía hidroeléctrica.",
+  "ar": "إزالة سدّي غريت ووركس وفيزي، وإضافة مصعد أسماك عند سد ميلفورد وممر جانبي للأسماك حول سد هاولاند، مع الحفاظ على الطاقة الكهرومائية.",
+  "it": "Rimuovere le dighe di Great Works e Veazie, aggiungere un ascensore per pesci alla diga di Milford e un passaggio attorno a quella di Howland, mantenendo l'idroelettrico."
+ },
+ "Marine and Coastal Fisheries, Fish assemblages in the Penobscot River a decade after dam removal": {
+  "fr": "Marine and Coastal Fisheries, les poissons de la Penobscot dix ans après le retrait des barrages",
+  "es": "Marine and Coastal Fisheries, los peces del Penobscot una década después de retirar las presas",
+  "ar": "مجلة Marine and Coastal Fisheries، تجمعات الأسماك في نهر بينوبسكوت بعد عقد من إزالة السدود",
+  "it": "Marine and Coastal Fisheries, i pesci del Penobscot dieci anni dopo la rimozione delle dighe"
+ },
+ "Great Works Dam came out in 2012, Veazie Dam in 2013, and the Howland bypass was built in 2016.": {
+  "fr": "Le barrage de Great Works a été retiré en 2012, celui de Veazie en 2013, et la passe de Howland construite en 2016.",
+  "es": "La presa de Great Works se retiró en 2012, la de Veazie en 2013, y el canal de Howland se construyó en 2016.",
+  "ar": "أُزيل سد غريت ووركس عام 2012، وسد فيزي عام 2013، وبُني ممر هاولاند الجانبي عام 2016.",
+  "it": "La diga di Great Works è stata rimossa nel 2012, quella di Veazie nel 2013, e il passaggio di Howland costruito nel 2016."
+ },
+ "The Penobscot River, Maine's largest river, which drains about a quarter of the state into Penobscot Bay.": {
+  "fr": "La Penobscot, plus grande rivière du Maine, qui draine environ un quart de l'État vers la baie de Penobscot.",
+  "es": "El río Penobscot, el mayor de Maine, que drena cerca de una cuarta parte del estado hacia la bahía de Penobscot.",
+  "ar": "نهر بينوبسكوت، أكبر أنهار ولاية مين، الذي يصرّف نحو ربع مساحة الولاية إلى خليج بينوبسكوت.",
+  "it": "Il Penobscot, il fiume più grande del Maine, che drena circa un quarto dello Stato nella baia di Penobscot."
+ },
+ "For centuries, dams blocked sea-run fish from their spawning grounds. The project improves access to nearly 1,000 miles of habitat for 11 native sea-run fish species.": {
+  "fr": "Pendant des siècles, des barrages ont coupé les poissons migrateurs de leurs frayères. Le projet rouvre l'accès à près de 1 600 km (1 000 miles) d'habitat pour 11 espèces migratrices indigènes.",
+  "es": "Durante siglos, las presas impidieron a los peces migratorios llegar a sus zonas de desove. El proyecto mejora el acceso a casi 1.600 km (1.000 millas) de hábitat para 11 especies migratorias nativas.",
+  "ar": "لقرون منعت السدود الأسماك المهاجرة من الوصول إلى أماكن تكاثرها. ويحسّن المشروع الوصول إلى نحو 1,600 كيلومتر (1,000 ميل) من الموائل لـ11 نوعًا محليًا من الأسماك المهاجرة.",
+  "it": "Per secoli le dighe hanno tagliato fuori i pesci migratori dalle zone di riproduzione. Il progetto migliora l'accesso a quasi 1.600 km (1.000 miglia) di habitat per 11 specie migratrici native."
+ },
+ "River herring counted at the Milford fish lift rose from 589,645 in 2015 to 5,927,002 in 2025 (Maine Department of Marine Resources).": {
+  "fr": "Les harengs de rivière comptés à l'ascenseur de Milford sont passés de 589 645 en 2015 à 5 927 002 en 2025 (Département des ressources marines du Maine).",
+  "es": "Los arenques de río contados en el ascensor de Milford pasaron de 589.645 en 2015 a 5.927.002 en 2025 (Departamento de Recursos Marinos de Maine).",
+  "ar": "ارتفع عدد أسماك الرنجة النهرية المسجلة عند مصعد ميلفورد من 589,645 عام 2015 إلى 5,927,002 عام 2025 (إدارة الموارد البحرية في مين).",
+  "it": "Le aringhe di fiume contate all'ascensore di Milford sono passate da 589.645 nel 2015 a 5.927.002 nel 2025 (Dipartimento delle risorse marine del Maine)."
+ },
+ "Maine Department of Marine Resources, trap counts 2015-2025": {
+  "fr": "Département des ressources marines du Maine, comptages 2015-2025",
+  "es": "Departamento de Recursos Marinos de Maine, conteos 2015-2025",
+  "ar": "إدارة الموارد البحرية في مين، أعداد الأسماك 2015-2025",
+  "it": "Dipartimento delle risorse marine del Maine, conteggi 2015-2025"
+ },
+ "For Further Information: Maine Department of Marine Resources, trap counts 2015-2025": {
+  "fr": "Pour en savoir plus : Département des ressources marines du Maine, comptages 2015-2025",
+  "es": "Más información: Departamento de Recursos Marinos de Maine, conteos 2015-2025",
+  "ar": "لمزيد من المعلومات: إدارة الموارد البحرية في مين، أعداد الأسماك 2015-2025",
+  "it": "Per saperne di più: Dipartimento delle risorse marine del Maine, conteggi 2015-2025"
+ },
+ "From 556 to Millions": {
+  "fr": "De 556 à des millions",
+  "es": "De 556 a millones",
+  "ar": "من 556 إلى الملايين",
+  "it": "Da 556 a milioni"
+ },
+ "Before restoration, an average of just 556 river herring returned each year (1978-2012). By 2018 the count passed 2.3 million.": {
+  "fr": "Avant la restauration, seuls 556 harengs de rivière revenaient en moyenne chaque année (1978-2012). En 2018, on en comptait plus de 2,3 millions.",
+  "es": "Antes de la restauración volvían de media solo 556 arenques de río al año (1978-2012). En 2018 el conteo superó los 2,3 millones.",
+  "ar": "قبل الاستعادة كان يعود في المتوسط 556 سمكة رنجة نهرية فقط كل عام (1978-2012). وبحلول 2018 تجاوز العدد 2.3 مليون.",
+  "it": "Prima del ripristino tornavano in media solo 556 aringhe di fiume l'anno (1978-2012). Nel 2018 il conteggio ha superato 2,3 milioni."
+ },
+ "Reconnecting the river rejoins the Penobscot Indian Nation's homeland with the Atlantic Ocean and revives fishing and paddling traditions (Penobscot River Restoration Trust).": {
+  "fr": "Reconnecter la rivière relie de nouveau la terre de la nation Penobscot à l'Atlantique et fait revivre les traditions de pêche et de pagaie (Penobscot River Restoration Trust).",
+  "es": "Reconectar el río une de nuevo la tierra de la Nación Penobscot con el Atlántico y revive tradiciones de pesca y remo (Penobscot River Restoration Trust).",
+  "ar": "إعادة وصل النهر تعيد ربط موطن أمة بينوبسكوت بالمحيط الأطلسي وتُحيي تقاليد الصيد والتجديف (صندوق استعادة نهر بينوبسكوت).",
+  "it": "Ricollegare il fiume riunisce la terra della Nazione Penobscot all'Atlantico e fa rivivere tradizioni di pesca e pagaia (Penobscot River Restoration Trust)."
+ },
+ "Eight of the 12 sea-run fish species native to the Penobscot have used the new Milford fish lift to swim upriver (Marine and Coastal Fisheries).": {
+  "fr": "Huit des 12 espèces de poissons migrateurs indigènes de la Penobscot ont emprunté le nouvel ascenseur de Milford pour remonter la rivière (Marine and Coastal Fisheries).",
+  "es": "Ocho de las 12 especies de peces migratorios nativas del Penobscot han usado el nuevo ascensor de Milford para remontar el río (Marine and Coastal Fisheries).",
+  "ar": "استخدم ثمانية من أصل 12 نوعًا من الأسماك المهاجرة المحلية في بينوبسكوت مصعد ميلفورد الجديد للسباحة صعودًا (Marine and Coastal Fisheries).",
+  "it": "Otto delle 12 specie di pesci migratori native del Penobscot hanno usato il nuovo ascensore di Milford per risalire il fiume (Marine and Coastal Fisheries)."
+ },
+ "Learn More About the Penobscot River": {
+  "fr": "En savoir plus sur la Penobscot",
+  "es": "Más sobre el río Penobscot",
+  "ar": "اعرف المزيد عن نهر بينوبسكوت",
+  "it": "Scopri di più sul Penobscot"
+ },
+ "Learn About the Project": {
+  "fr": "Découvrir le projet",
+  "es": "Conoce el proyecto",
+  "ar": "تعرّف على المشروع",
+  "it": "Scopri il progetto"
+ },
+ "Want to go deeper? The Penobscot River Restoration Trust has the full story.": {
+  "fr": "Envie d'aller plus loin ? Le Penobscot River Restoration Trust raconte toute l'histoire.",
+  "es": "¿Quieres saber más? El Penobscot River Restoration Trust cuenta toda la historia.",
+  "ar": "هل تريد التعمق أكثر؟ لدى صندوق استعادة نهر بينوبسكوت القصة الكاملة.",
+  "it": "Vuoi approfondire? Il Penobscot River Restoration Trust racconta tutta la storia."
+ },
+ "Learn more about Penobscot River Restoration (Maine)": {
+  "fr": "En savoir plus sur la restauration de la Penobscot (Maine)",
+  "es": "Más información sobre la restauración del río Penobscot (Maine)",
+  "ar": "اعرف المزيد عن استعادة نهر بينوبسكوت (ولاية مين)",
+  "it": "Scopri di più sul ripristino del Penobscot (Maine)"
+ },
+ "Kissimmee River Restoration (Florida)": {
+  "fr": "Restauration de la rivière Kissimmee (Floride)",
+  "es": "Restauración del río Kissimmee (Florida)",
+  "ar": "استعادة نهر كيسيمي (فلوريدا)",
+  "it": "Ripristino del fiume Kissimmee (Florida)"
+ },
+ "Once straightened into a canal, Florida's Kissimmee River is winding again: 44 miles of river and 20,000 acres of wetlands restored (SFWMD).": {
+  "fr": "Autrefois redressée en canal, la Kissimmee, en Floride, serpente de nouveau : 70 km (44 miles) de rivière et 8 000 hectares (20 000 acres) de zones humides restaurés (SFWMD).",
+  "es": "Antes convertido en un canal recto, el río Kissimmee de Florida vuelve a serpentear: 70 km (44 millas) de río y 8.000 hectáreas (20.000 acres) de humedales restaurados (SFWMD).",
+  "ar": "بعد أن حُوّل إلى قناة مستقيمة، عاد نهر كيسيمي في فلوريدا إلى التعرّج: استُعيد 70 كيلومترًا (44 ميلًا) من النهر و8,000 هكتار (20,000 فدان) من الأراضي الرطبة (SFWMD).",
+  "it": "Un tempo raddrizzato in un canale, il Kissimmee in Florida torna a serpeggiare: 70 km (44 miglia) di fiume e 8.000 ettari (20.000 acri) di zone umide ripristinati (SFWMD)."
+ },
+ "The Florida Keys seen from space": {
+  "fr": "Les Keys de Floride vues de l'espace",
+  "es": "Los cayos de Florida vistos desde el espacio",
+  "ar": "جزر فلوريدا كيز كما تُرى من الفضاء",
+  "it": "Le Florida Keys viste dallo spazio"
+ },
+ "Long ago, people dug a straight canal through the curvy Kissimmee River.": {
+  "fr": "Il y a longtemps, on a creusé un canal tout droit à travers la Kissimmee, une rivière pleine de méandres.",
+  "es": "Hace tiempo, se excavó un canal recto a través del sinuoso río Kissimmee.",
+  "ar": "منذ زمن حفر الناس قناة مستقيمة عبر نهر كيسيمي المتعرج.",
+  "it": "Tanto tempo fa fu scavato un canale dritto nel fiume Kissimmee, pieno di curve."
+ },
+ "That stopped floods but hurt the wetlands, birds and fish.": {
+  "fr": "Cela a arrêté les inondations mais a nui aux zones humides, aux oiseaux et aux poissons.",
+  "es": "Eso frenó las inundaciones pero dañó los humedales, las aves y los peces.",
+  "ar": "أوقف ذلك الفيضانات لكنه أضرّ بالأراضي الرطبة والطيور والأسماك.",
+  "it": "Questo fermò le alluvioni ma danneggiò zone umide, uccelli e pesci."
+ },
+ "Now workers have filled parts of the canal so the river can curve and flood its wetlands again.": {
+  "fr": "Aujourd'hui, des parties du canal ont été comblées pour que la rivière serpente et inonde à nouveau ses zones humides.",
+  "es": "Ahora se han rellenado partes del canal para que el río vuelva a serpentear e inundar sus humedales.",
+  "ar": "والآن رُدمت أجزاء من القناة كي يتعرج النهر من جديد ويغمر أراضيه الرطبة.",
+  "it": "Ora parti del canale sono state riempite perché il fiume torni a serpeggiare e allagare le sue zone umide."
+ },
+ "The Five W's of the Kissimmee River Restoration": {
+  "fr": "Les 5 questions sur la restauration de la Kissimmee",
+  "es": "Las cinco preguntas sobre la restauración del Kissimmee",
+  "ar": "الأسئلة الخمسة عن استعادة نهر كيسيمي",
+  "it": "Le 5 domande sul ripristino del Kissimmee"
+ },
+ "The South Florida Water Management District and the U.S. Army Corps of Engineers, working together.": {
+  "fr": "Le district de gestion de l'eau du sud de la Floride (SFWMD) et le Corps des ingénieurs de l'armée américaine, ensemble.",
+  "es": "El Distrito de Gestión del Agua del Sur de Florida (SFWMD) y el Cuerpo de Ingenieros del Ejército de EE. UU., juntos.",
+  "ar": "منطقة إدارة المياه في جنوب فلوريدا وسلاح المهندسين في الجيش الأمريكي، معًا.",
+  "it": "Il distretto per la gestione delle acque della Florida meridionale (SFWMD) e il Genio dell'Esercito degli Stati Uniti, insieme."
+ },
+ "South Florida Water Management District, Kissimmee River": {
+  "fr": "District de gestion de l'eau du sud de la Floride, rivière Kissimmee",
+  "es": "Distrito de Gestión del Agua del Sur de Florida, río Kissimmee",
+  "ar": "منطقة إدارة المياه في جنوب فلوريدا، نهر كيسيمي",
+  "it": "Distretto per la gestione delle acque della Florida meridionale, fiume Kissimmee"
+ },
+ "Filling in part of the C-38 canal so water flows again through the river's old curves and floods its wetlands with the seasons.": {
+  "fr": "Combler une partie du canal C-38 pour que l'eau coule de nouveau dans les anciens méandres et inonde les zones humides au fil des saisons.",
+  "es": "Rellenar parte del canal C-38 para que el agua vuelva a correr por los antiguos meandros e inunde los humedales según la estación.",
+  "ar": "ردم جزء من القناة C-38 كي تجري المياه من جديد في منعطفات النهر القديمة وتغمر أراضيه الرطبة مع الفصول.",
+  "it": "Riempire parte del canale C-38 perché l'acqua scorra di nuovo nelle vecchie anse e allaghi le zone umide con le stagioni."
+ },
+ "Congress authorized it in 1992, construction began in 1999, and the finish of construction was celebrated in July 2021.": {
+  "fr": "Le Congrès l'a autorisé en 1992, les travaux ont commencé en 1999 et leur achèvement a été célébré en juillet 2021.",
+  "es": "El Congreso lo autorizó en 1992, las obras empezaron en 1999 y su final se celebró en julio de 2021.",
+  "ar": "أقرّه الكونغرس عام 1992، وبدأ البناء عام 1999، واحتُفل بانتهاء الأعمال في يوليو 2021.",
+  "it": "Il Congresso lo ha autorizzato nel 1992, i lavori sono iniziati nel 1999 e la loro conclusione è stata celebrata a luglio 2021."
+ },
+ "Central Florida, between Lake Kissimmee and Lake Okeechobee. The basin is the headwaters of Lake Okeechobee and the Everglades.": {
+  "fr": "Le centre de la Floride, entre le lac Kissimmee et le lac Okeechobee. Ce bassin alimente le lac Okeechobee et les Everglades.",
+  "es": "El centro de Florida, entre el lago Kissimmee y el lago Okeechobee. La cuenca es la cabecera del lago Okeechobee y los Everglades.",
+  "ar": "وسط فلوريدا، بين بحيرة كيسيمي وبحيرة أوكيشوبي. والحوض هو منابع بحيرة أوكيشوبي ومستنقعات إيفرغليدز.",
+  "it": "La Florida centrale, tra il lago Kissimmee e il lago Okeechobee. Il bacino alimenta il lago Okeechobee e le Everglades."
+ },
+ "In the 1960s the river was dredged into a straight canal. It gave flood protection but destroyed much of the floodplain ecosystem.": {
+  "fr": "Dans les années 1960, la rivière a été transformée en canal rectiligne. Cela protégeait des crues mais a détruit une grande partie de l'écosystème de la plaine inondable.",
+  "es": "En los años sesenta el río se dragó hasta convertirlo en un canal recto. Protegió de las inundaciones pero destruyó gran parte del ecosistema de la llanura aluvial.",
+  "ar": "في ستينيات القرن العشرين جُرف النهر وحُوّل إلى قناة مستقيمة. وفّر ذلك حماية من الفيضانات لكنه دمّر جزءًا كبيرًا من نظام السهل الفيضي البيئي.",
+  "it": "Negli anni '60 il fiume fu dragato in un canale dritto. Diede protezione dalle piene ma distrusse gran parte dell'ecosistema della pianura alluvionale."
+ },
+ "Government solution · active": {
+  "fr": "Solution publique · active",
+  "es": "Solución gubernamental · activa",
+  "ar": "حل حكومي · نشط",
+  "it": "Soluzione pubblica · attiva"
+ },
+ "The project restores more than 40 square miles of river floodplain, 20,000 acres of wetlands and 44 miles of meandering river (SFWMD).": {
+  "fr": "Le projet restaure plus de 100 km² (40 miles carrés) de plaine inondable, 8 000 hectares de zones humides et 70 km de rivière à méandres (SFWMD).",
+  "es": "El proyecto restaura más de 100 km² (40 millas cuadradas) de llanura aluvial, 8.000 hectáreas de humedales y 70 km de río con meandros (SFWMD).",
+  "ar": "يستعيد المشروع أكثر من 100 كيلومتر مربع (40 ميلًا مربعًا) من السهل الفيضي و8,000 هكتار من الأراضي الرطبة و70 كيلومترًا من النهر المتعرج (SFWMD).",
+  "it": "Il progetto ripristina oltre 100 km² (40 miglia quadrate) di pianura alluvionale, 8.000 ettari di zone umide e 70 km di fiume a meandri (SFWMD)."
+ },
+ "For Further Information: South Florida Water Management District, Kissimmee River": {
+  "fr": "Pour en savoir plus : District de gestion de l'eau du sud de la Floride, rivière Kissimmee",
+  "es": "Más información: Distrito de Gestión del Agua del Sur de Florida, río Kissimmee",
+  "ar": "لمزيد من المعلومات: منطقة إدارة المياه في جنوب فلوريدا، نهر كيسيمي",
+  "it": "Per saperne di più: Distretto per la gestione delle acque della Florida meridionale, fiume Kissimmee"
+ },
+ "103 Miles of Bends": {
+  "fr": "166 km de méandres",
+  "es": "166 km de curvas",
+  "ar": "166 كيلومترًا من المنعطفات",
+  "it": "166 km di curve"
+ },
+ "The Kissimmee River once meandered for 103 miles through central Florida (SFWMD).": {
+  "fr": "La Kissimmee serpentait autrefois sur 166 km (103 miles) à travers le centre de la Floride (SFWMD).",
+  "es": "El río Kissimmee serpenteaba antes 166 km (103 millas) por el centro de Florida (SFWMD).",
+  "ar": "كان نهر كيسيمي يتعرج قديمًا مسافة 166 كيلومترًا (103 أميال) عبر وسط فلوريدا (SFWMD).",
+  "it": "Il Kissimmee un tempo serpeggiava per 166 km (103 miglia) attraverso la Florida centrale (SFWMD)."
+ },
+ "The project kept flood protection in place while restoring the river (SFWMD).": {
+  "fr": "Le projet a conservé la protection contre les crues tout en restaurant la rivière (SFWMD).",
+  "es": "El proyecto mantuvo la protección contra inundaciones mientras restauraba el río (SFWMD).",
+  "ar": "حافظ المشروع على الحماية من الفيضانات أثناء استعادة النهر (SFWMD).",
+  "it": "Il progetto ha mantenuto la protezione dalle piene mentre ripristinava il fiume (SFWMD)."
+ },
+ "Seasonal rains and flows now flood the restored floodplain again, where native wetland plants, wading birds and fish once thrived (SFWMD).": {
+  "fr": "Pluies et crues saisonnières inondent de nouveau la plaine restaurée, où prospéraient plantes de zones humides, échassiers et poissons (SFWMD).",
+  "es": "Las lluvias y crecidas estacionales vuelven a inundar la llanura restaurada, donde antes prosperaban plantas de humedal, aves zancudas y peces (SFWMD).",
+  "ar": "تغمر الأمطار والتدفقات الموسمية السهل المستعاد من جديد، حيث ازدهرت قديمًا نباتات الأراضي الرطبة والطيور الخواضة والأسماك (SFWMD).",
+  "it": "Piogge e piene stagionali allagano di nuovo la pianura ripristinata, dove un tempo prosperavano piante palustri, trampolieri e pesci (SFWMD)."
+ },
+ "Learn More About the Kissimmee River": {
+  "fr": "En savoir plus sur la Kissimmee",
+  "es": "Más sobre el río Kissimmee",
+  "ar": "اعرف المزيد عن نهر كيسيمي",
+  "it": "Scopri di più sul Kissimmee"
+ },
+ "Want to go deeper? The South Florida Water Management District has the full story.": {
+  "fr": "Envie d'aller plus loin ? Le district de gestion de l'eau du sud de la Floride raconte toute l'histoire.",
+  "es": "¿Quieres saber más? El Distrito de Gestión del Agua del Sur de Florida cuenta toda la historia.",
+  "ar": "هل تريد التعمق أكثر؟ لدى منطقة إدارة المياه في جنوب فلوريدا القصة الكاملة.",
+  "it": "Vuoi approfondire? Il distretto per la gestione delle acque della Florida meridionale racconta tutta la storia."
+ },
+ "Learn more about Kissimmee River Restoration (Florida)": {
+  "fr": "En savoir plus sur la restauration de la Kissimmee (Floride)",
+  "es": "Más información sobre la restauración del río Kissimmee (Florida)",
+  "ar": "اعرف المزيد عن استعادة نهر كيسيمي (فلوريدا)",
+  "it": "Scopri di più sul ripristino del Kissimmee (Florida)"
+ }
+}

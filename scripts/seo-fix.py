@@ -13,6 +13,10 @@ LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_
 BRAND = ' | Saving Planets'
 TWITTER_SITE = '@SISavingPlanets'
 OVR = json.load(open('i18n/seo-meta.json', encoding='utf8')) if os.path.exists('i18n/seo-meta.json') else {}
+# Oct 17: '{n}' in an override = live solution count (assets/data/solutions.json), so hand-written texts never go stale (fr Solutions said 142)
+try: _N = str(json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions'])
+except Exception: _N = None
+if _N: OVR = json.loads(json.dumps(OVR, ensure_ascii=False).replace('{n}', _N))
 MAIN_TYPES = ('Article', 'WebPage', 'CollectionPage', 'LearningResource', 'Course', 'DefinedTermSet', 'FAQPage', 'AboutPage', 'ContactPage', 'SearchResultsPage')
 def page_url(lang, base):  # index.html is served at the directory URL
     return SITE + ('' if lang == 'en' else lang + '/') + ('' if base == 'index.html' else base)

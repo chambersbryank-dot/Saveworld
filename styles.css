@@ -1128,6 +1128,7 @@ body.toc-sub[class].hp-copernicus-marine .page-hero[class]{background:linear-gra
 body.toc-sub[class].hp-coral-gardeners .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/BoraBora_Reefs_STS93.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-coral-ivf .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Florida_Keys_PIA03890.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-coral-reef-watch .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Great_Barrier_Reef_ISS_2022.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-cryosat .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Labrador_Sea_Ice_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-deforestation .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Amazon_Clouds_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-dragonfly .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Titan.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-effis .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Portugal_Wildfires_ISS_2018.jpg') center/cover no-repeat}
@@ -1141,6 +1142,7 @@ body.toc-sub[class].hp-enceladus .page-hero[class]{background:linear-gradient(18
 body.toc-sub[class].hp-firms .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Canada_Wildfires_ISS_2025.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-firesat .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Rim_Fire_MODIS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-freshwater-watch .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mississippi_River_PIA23534.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-gcom-c .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Pacific_Clouds_Sunset_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-gedi .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/ISS_Flyaround_2021.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-globe-program .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Pacific_Clouds_Sunset_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-gsmap .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/GPM_Core_Observatory_GMI.jpg') center/cover no-repeat}
@@ -1155,9 +1157,11 @@ body.toc-sub[class].hp-hayabusa2-torifune .page-hero[class]{background:linear-gr
 body.toc-sub[class].hp-heal-the-bay .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lake_Shore_Cleanup_NPS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-hydrognss .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Danube_Delta_GSFC.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-international-charter .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Missouri_Flood_Hamburg_EO1.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-international-coastal-cleanup .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Bahamas_Ocean_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-jpss .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/JPSS2_Atlas_V_Launch_Pad.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-justdiggit .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Kilimanjaro_STS72.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-keep-tahoe-blue .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lake_Tahoe_ISS.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-kissimmee-river-restoration .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Florida_Keys_PIA03890.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-klamath-river-dam-removal .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Klamath_River.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-lake-erie-algal-bloom-forecast .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Great_Lakes_GSFC.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-lake-plastic-recovery .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lake_Shore_Cleanup_NPS.jpg') center/cover no-repeat}
@@ -1166,7 +1170,9 @@ body.toc-sub[class].hp-libera .page-hero[class]{background:linear-gradient(180de
 body.toc-sub[class].hp-life-terra .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Threetrees3.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-living-lakes .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lake_Tahoe_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-living-lands-and-waters .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mississippi_River_PIA23534.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-london-tideway-tunnel .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/London_Thames_Night_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-lucy .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lucy_KSC.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-meteosat-third-generation .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lightning_Storm_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-oco-2 .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Global_Plant_Fluorescence.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-ocean-cleanup .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/theoceancleanup.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-oceans .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/North_Pacific_ISS.jpg') center/cover no-repeat}
@@ -1175,6 +1181,8 @@ body.toc-sub[class].hp-openet .page-hero[class]{background:linear-gradient(180de
 body.toc-sub[class].hp-prefire .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/LEO_View.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-prelude .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/ATV1_Departure_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-pan-starrs .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Comet_PANSTARRS_ISS_2026.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-parker-solar-probe .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/SDO_Sun.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-penobscot-river-restoration .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/New_England_Coast_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-planetary-defense .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Hera.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-plant-for-the-planet .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Yishan_Tree.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-plastic-bank .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/OceanBeach.JPG') center/cover no-repeat}
@@ -1190,6 +1198,8 @@ body.toc-sub[class].hp-rewilding-europe .page-hero[class]{background:linear-grad
 body.toc-sub[class].hp-river-cleanup .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mississippi_River_PIA23534.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-rivers .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mississippi_River_PIA23534.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-sarsat .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/GOES19_GOESU_KSC.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-smap .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mississippi_River_PIA23534.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-soho .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/SDO_Sun.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-spherex .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/SPHEREx_Spacecraft.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-seatrees .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Mangrove_Delta_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-sentinel-3 .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Bahamas_Ocean_ISS.jpg') center/cover no-repeat}
@@ -1202,11 +1212,13 @@ body.toc-sub[class].hp-sungai-watch .page-hero[class]{background:linear-gradient
 body.toc-sub[class].hp-surfrider-foundation .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/North_Pacific_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-tempo .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Clouds_Limb_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-terraformation .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Yishan_Tree.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-the-seacleaners .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/PlasticBank_Indonesia_STS66.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-three-trees .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/ThreeTrees2.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-trout-unlimited .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Klamath_River.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-unep-mars .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/EMIT_Methane_Plumes_Uzbekistan.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-veggie-space-garden .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Veggie_KSC.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-waterkeeper-alliance .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/NYC_Hudson_Harbor.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-weforest .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Kilimanjaro_STS72.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-whales-ocean-gardeners .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Phytoplankton_Bloom_Iceland.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-zero-debris-charter .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/LEO_View.jpg') center/cover no-repeat}
 /* PAGE-HEROES:END */
@@ -1246,69 +1258,6 @@ body.toc-sub .page-hero h1{overflow-wrap:anywhere}
 .sol-card.sd-off,.sol-hub.sd-empty{display:none !important}
 body.sd-on .sp-collapsed .grid>.sol-card:not(.sd-off){display:block !important}body.sd-on .sp-more{display:none}
 /* SD:END */
-
-/* UX-OCT15:START */
-.nav-links{gap:1.1rem}
-.nav-group details{position:relative}
-.nav-group summary{list-style:none;cursor:pointer;color:#fff;font-weight:600;font-size:1.05rem;padding:.3rem 0;white-space:nowrap}
-html.dark nav.scrolled .nav-group summary{color:#fff}
-.nav-group summary::-webkit-details-marker{display:none}
-.nav-group summary::after{content:" ▾";font-size:.8em}
-nav.scrolled .nav-group summary{color:#003755}
-.nav-group.is-current summary{text-decoration:underline;text-underline-offset:6px}
-.nav-sub{position:absolute;top:100%;inset-inline-start:0;min-width:230px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:.5rem;list-style:none;margin:.4rem 0 0;z-index:1200}
-.nav-sub a{display:block;color:#003755 !important;font-size:1rem;padding:.55rem .7rem;border-radius:8px}
-.nav-sub a:hover,.nav-sub a[aria-current]{background:#e6f5fc;color:#0b3a53 !important}
-.nav-help a{background:#2e9e4f !important;color:#fff !important;border:0 !important;padding:.5rem .9rem;border-radius:999px;white-space:nowrap}
-.sticky-help{position:fixed;inset-inline-end:16px;bottom:16px;z-index:1100;background:#2e9e4f;color:#fff;font-weight:700;padding:.75rem 1.1rem;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none}
-.sticky-help:hover{background:#23803f;color:#fff}
-@media (min-width:901px){nav .nav-container{padding-inline:clamp(10px,1.6vw,40px) !important;max-width:1500px !important}nav .brand-word{font-size:clamp(.72rem,1vw,1.05rem) !important;white-space:nowrap;flex:none;margin-inline-end:clamp(.4rem,1vw,1rem)}.nav-links{gap:clamp(.3rem,.9vw,.9rem) !important;flex-wrap:nowrap}.nav-group summary{font-size:clamp(.7rem,1vw,1.02rem) !important}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:clamp(.62rem,.8vw,.88rem) !important;white-space:nowrap;letter-spacing:0}nav .nav-links .lang-switch{gap:.15rem}nav .nav-links .nav-help a{font-size:clamp(.68rem,.9vw,.98rem) !important;padding:.35em .75em !important}}
-@media (min-width:901px) and (max-width:1100px){nav .nav-sub{position:absolute !important;min-width:250px !important;padding:.5rem !important;box-shadow:0 10px 30px rgba(0,0,0,.35) !important}nav .nav-sub a{font-size:.95rem !important;white-space:normal}}
-html.dark nav.open .nav-group summary,html.dark nav .nav-links .nav-group summary{color:#fff}
-@media (min-width:901px) and (max-width:1000px){nav .nav-links{gap:.22rem !important}nav .nav-group summary{font-size:.64rem !important}nav .brand-word{font-size:.66rem !important;margin-inline-end:.3rem}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:.58rem !important}nav .nav-links .nav-help a{font-size:.62rem !important;padding:.3em .55em !important}}
-@media (max-width:1100px){.nav-sub{position:static;box-shadow:none;padding:0 0 0 .8rem;min-width:0}
- nav.open .nav-group summary{color:#003755;padding:.6rem 0;font-size:1.1rem}}
-html.dark .nav-sub{background:#0f1b26}@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){@media (min-width:1101px){html.dark .nav-sub{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03)),rgba(15,27,38,.82);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px rgba(0,0,0,.35)}}} html.dark .nav-sub a{color:#e8eef5 !important}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
-.hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
-.hero-cta{display:inline-flex;align-items:center;gap:.45rem}/* Liquid Glass: translucent, page background shows through; solid fallback without backdrop-filter */
-.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{border-radius:999px !important;color:#fff !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,0,0,.28) !important;-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
-.hero-ctas .hero-cta:hover,.wm-cta .btn:hover,.nav-help a:hover,.sticky-help:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint) !important}
-.hero-ctas .hero-cta:focus-visible,.wm-cta .btn:focus-visible,.nav-help a:focus-visible,.sticky-help:focus-visible{outline:3px solid #fff;outline-offset:3px}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{background:var(--lg-solid) !important}}
-body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}body[data-glass-tint=help]{--lg-tint:rgba(30,110,70,.55);--lg-solid:#1e6e46}
-/* Ways to Help: Donate / Join buttons in Liquid Glass (Donate = page tint, Join = teal tint) */
-.help-btns .help-btn,.help-table .help-btn,.help-actions .help-btn,a.help-btn{border-radius:999px !important;color:#fff !important;text-decoration:none !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(0,0,0,.25) !important;-webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
-a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
-a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){a.help-btn{background:var(--lg-solid) !important}a.help-btn.help-btn-join{background:#00695c !important}}
-.hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
-.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
-.imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
-.imp-label{font-size:.95rem}
-.domain{max-width:1150px;margin:2.5rem auto;padding:0 1rem}
-.dom-head h2{margin:0 0 .2rem;font-size:2rem}
-.domain-water .dom-head h2{color:#0077b6}.domain-land .dom-head h2{color:#2e7d32}.domain-space .dom-head h2{color:#4a3aa8}
-.dom-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}
-.dom-chip{border:1px solid #9cc;border-radius:999px;padding:.35rem .8rem;text-decoration:none;font-size:.95rem}
-.dom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.dom-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.dom-card img{width:100%;height:190px;object-fit:cover;display:block}
-.dom-card h3{font-size:1.15rem;margin:.8rem 1rem .3rem}.dom-card p{margin:0 1rem 1rem;font-size:.97rem}
-html.dark .dom-card{background:#13232f}
-.dom-all{text-align:center;margin-top:1.2rem}
-.news-briefs{max-width:1000px;margin:2.5rem auto;padding:0 1rem}
-.news-list{list-style:none;padding:0}.news-list li{padding:.7rem 0;border-bottom:1px solid #dde}
-.news-list time{font-weight:700;color:#0077b6;margin-inline-end:.5rem}
-@media (max-width:900px){.dom-grid{grid-template-columns:1fr 1fr}.impact-strip{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.dom-grid{grid-template-columns:1fr}}
-.sol-filters{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0}
-.sol-filters button{border:1px solid #0077b6;background:#fff;color:#0077b6;border-radius:999px;padding:.45rem .9rem;font-weight:600;cursor:pointer;min-height:44px}
-.sol-filters button[aria-pressed="true"]{background:#0077b6;color:#fff}
-.sol-filters select{min-height:44px;border-radius:10px;padding:0 .6rem;font-size:1rem}
-.sol-hub.sp-collapsed .grid>.sol-card:nth-child(n+7){display:none}
-.sp-more{display:block;margin:1rem auto 0;min-height:44px;padding:.5rem 1.2rem;border-radius:999px;border:0;background:#003755;color:#fff;font-weight:600;cursor:pointer}
-/* UX-OCT15:END */
 /* LG-HARDEN:START */
 /* Flat icons: per-page tint, consistent size, no blur (overrides extras.css/edu.css glass) */
 .aud-icon,.eli10-icon,.share-btn,.nav-toggle,.edu-bubble.glass,.t-chip,.dt-btn{background:var(--lg-solid,#1d3f73) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;color:#fff !important;border:1px solid rgba(255,255,255,.28) !important;box-shadow:0 2px 6px rgba(0,0,0,.18) !important;background-image:none !important}
@@ -1455,3 +1404,66 @@ html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:4
 @media (prefers-reduced-motion:reduce){.sp-lb-in{animation:none}}
 @media print{.sp-lb{display:none}}
 /* LANGBANNER:END */
+
+/* UX-OCT15:START */
+.nav-links{gap:1.1rem}
+.nav-group details{position:relative}
+.nav-group summary{list-style:none;cursor:pointer;color:#fff;font-weight:600;font-size:1.05rem;padding:.3rem 0;white-space:nowrap}
+html.dark nav.scrolled .nav-group summary{color:#fff}
+.nav-group summary::-webkit-details-marker{display:none}
+.nav-group summary::after{content:" ▾";font-size:.8em}
+nav.scrolled .nav-group summary{color:#003755}
+.nav-group.is-current summary{text-decoration:underline;text-underline-offset:6px}
+.nav-sub{position:absolute;top:100%;inset-inline-start:0;min-width:230px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:.5rem;list-style:none;margin:.4rem 0 0;z-index:1200}
+.nav-sub a{display:block;color:#003755 !important;font-size:1rem;padding:.55rem .7rem;border-radius:8px}
+.nav-sub a:hover,.nav-sub a[aria-current]{background:#e6f5fc;color:#0b3a53 !important}
+.nav-help a{background:#2e9e4f !important;color:#fff !important;border:0 !important;padding:.5rem .9rem;border-radius:999px;white-space:nowrap}
+.sticky-help{position:fixed;inset-inline-end:16px;bottom:16px;z-index:1100;background:#2e9e4f;color:#fff;font-weight:700;padding:.75rem 1.1rem;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none}
+.sticky-help:hover{background:#23803f;color:#fff}
+@media (min-width:901px){nav .nav-container{padding-inline:clamp(10px,1.6vw,40px) !important;max-width:1500px !important}nav .brand-word{font-size:clamp(.72rem,1vw,1.05rem) !important;white-space:nowrap;flex:none;margin-inline-end:clamp(.4rem,1vw,1rem)}.nav-links{gap:clamp(.3rem,.9vw,.9rem) !important;flex-wrap:nowrap}.nav-group summary{font-size:clamp(.7rem,1vw,1.02rem) !important}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:clamp(.62rem,.8vw,.88rem) !important;white-space:nowrap;letter-spacing:0}nav .nav-links .lang-switch{gap:.15rem}nav .nav-links .nav-help a{font-size:clamp(.68rem,.9vw,.98rem) !important;padding:.35em .75em !important}}
+@media (min-width:901px) and (max-width:1100px){nav .nav-sub{position:absolute !important;min-width:250px !important;padding:.5rem !important;box-shadow:0 10px 30px rgba(0,0,0,.35) !important}nav .nav-sub a{font-size:.95rem !important;white-space:normal}}
+html.dark nav.open .nav-group summary,html.dark nav .nav-links .nav-group summary{color:#fff}
+@media (min-width:901px) and (max-width:1000px){nav .nav-links{gap:.22rem !important}nav .nav-group summary{font-size:.64rem !important}nav .brand-word{font-size:.66rem !important;margin-inline-end:.3rem}nav .nav-links .lang-switch,nav .nav-links .lang-switch *{font-size:.58rem !important}nav .nav-links .nav-help a{font-size:.62rem !important;padding:.3em .55em !important}}
+@media (max-width:1100px){.nav-sub{position:static;box-shadow:none;padding:0 0 0 .8rem;min-width:0}
+ nav.open .nav-group summary{color:#003755;padding:.6rem 0;font-size:1.1rem}}
+html.dark .nav-sub{background:#0f1b26}@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){@media (min-width:1101px){html.dark .nav-sub{background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03)),rgba(15,27,38,.82);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px rgba(0,0,0,.35)}}} html.dark .nav-sub a{color:#e8eef5 !important}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0 .6rem}
+.hero-ctas .btn{font-size:1.1rem;padding:.8rem 1.4rem}
+.hero-cta{display:inline-flex;align-items:center;gap:.45rem}/* Liquid Glass: translucent, page background shows through; solid fallback without backdrop-filter */
+.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{border-radius:999px !important;color:#fff !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,0,0,.28) !important;-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.hero-ctas .hero-cta:hover,.wm-cta .btn:hover,.nav-help a:hover,.sticky-help:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint) !important}
+.hero-ctas .hero-cta:focus-visible,.wm-cta .btn:focus-visible,.nav-help a:focus-visible,.sticky-help:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{background:var(--lg-solid) !important}}
+body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}body[data-glass-tint=help]{--lg-tint:rgba(30,110,70,.55);--lg-solid:#1e6e46}
+/* Ways to Help: Donate / Join buttons in Liquid Glass (Donate = page tint, Join = teal tint) */
+.help-btns .help-btn,.help-table .help-btn,.help-actions .help-btn,a.help-btn{border-radius:999px !important;color:#fff !important;text-decoration:none !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(0,0,0,.25) !important;-webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
+a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
+a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){a.help-btn{background:var(--lg-solid) !important}a.help-btn.help-btn-join{background:#00695c !important}}
+.hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
+.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
+.imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
+.imp-label{font-size:.95rem}
+.domain{max-width:1150px;margin:2.5rem auto;padding:0 1rem}
+.dom-head h2{margin:0 0 .2rem;font-size:2rem}
+.domain-water .dom-head h2{color:#0077b6}.domain-land .dom-head h2{color:#2e7d32}.domain-space .dom-head h2{color:#4a3aa8}
+.dom-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}
+.dom-chip{border:1px solid #9cc;border-radius:999px;padding:.35rem .8rem;text-decoration:none;font-size:.95rem}
+.dom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.dom-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.dom-card img{width:100%;height:190px;object-fit:cover;display:block}
+.dom-card h3{font-size:1.15rem;margin:.8rem 1rem .3rem}.dom-card p{margin:0 1rem 1rem;font-size:.97rem}
+html.dark .dom-card{background:#13232f}
+.dom-all{text-align:center;margin-top:1.2rem}
+.news-briefs{max-width:1000px;margin:2.5rem auto;padding:0 1rem}
+.news-list{list-style:none;padding:0}.news-list li{padding:.7rem 0;border-bottom:1px solid #dde}
+.news-list time{font-weight:700;color:#0077b6;margin-inline-end:.5rem}
+@media (max-width:900px){.dom-grid{grid-template-columns:1fr 1fr}.impact-strip{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.dom-grid{grid-template-columns:1fr}}
+.sol-filters{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0}
+.sol-filters button{border:1px solid #0077b6;background:#fff;color:#0077b6;border-radius:999px;padding:.45rem .9rem;font-weight:600;cursor:pointer;min-height:44px}
+.sol-filters button[aria-pressed="true"]{background:#0077b6;color:#fff}
+.sol-filters select{min-height:44px;border-radius:10px;padding:0 .6rem;font-size:1rem}
+.sol-hub.sp-collapsed .grid>.sol-card:nth-child(n+7){display:none}
+.sp-more{display:block;margin:1rem auto 0;min-height:44px;padding:.5rem 1.2rem;border-radius:999px;border:0;background:#003755;color:#fff;font-weight:600;cursor:pointer}
+/* UX-OCT15:END */

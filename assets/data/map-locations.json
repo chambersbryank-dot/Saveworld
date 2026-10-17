@@ -2081,6 +2081,169 @@
    "status": "active",
    "pins": [],
    "strip": "orbit"
+  },
+  "Parker_Solar_Probe.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 39.165,
+     "lng": -76.898,
+     "label": "Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "SOHO.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.604,
+     "lng": 1.444,
+     "label": "Toulouse, France, where SOHO was assembled",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "CryoSat.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 49.871,
+     "lng": 8.622,
+     "label": "ESA mission control (ESOC), Darmstadt, Germany",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "International_Coastal_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 29.3,
+     "lng": -94.8,
+     "label": "Texas coast, where the first Cleanup was held in 1986",
+     "basis": "page"
+    }
+   ],
+   "strip": "world"
+  },
+  "The_SeaCleaners.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.98,
+     "lng": 116.073,
+     "label": "Kota Kinabalu, Malaysia (Mobula 8.2 expedition)",
+     "basis": "page"
+    },
+    {
+     "lat": -3.695,
+     "lng": 128.181,
+     "label": "Ambon, Indonesia",
+     "basis": "page"
+    },
+    {
+     "lat": -8.65,
+     "lng": 115.216,
+     "label": "Bali, Indonesia",
+     "basis": "page"
+    }
+   ]
+  },
+  "WeForest.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -15.417,
+     "lng": 28.283,
+     "label": "Zambia field office (Lusaka)",
+     "basis": "page"
+    },
+    {
+     "lat": 9.03,
+     "lng": 38.74,
+     "label": "Ethiopia field office (Addis Ababa)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Meteosat_Third_Generation.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.24,
+     "lng": -52.77,
+     "label": "MTG-I2 launched from Europe's Spaceport, French Guiana",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "SMAP.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 34.2,
+     "lng": -118.17,
+     "label": "NASA Jet Propulsion Laboratory, Pasadena, California",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "GCOM-C.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 35.683,
+     "lng": 139.56,
+     "label": "JAXA headquarters, Tokyo, Japan",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "London_Tideway_Tunnel.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 51.531,
+     "lng": -0.002,
+     "label": "Abbey Mills Pumping Station, East London",
+     "basis": "page"
+    },
+    {
+     "lat": 51.508,
+     "lng": -0.27,
+     "label": "Acton, West London (tunnel start)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Penobscot_River_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 44.94,
+     "lng": -68.65,
+     "label": "Milford Dam fish lift, Penobscot River, Maine",
+     "basis": "page"
+    }
+   ]
+  },
+  "Kissimmee_River_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 27.5,
+     "lng": -81.05,
+     "label": "Kissimmee River, central Florida",
+     "basis": "page"
+    }
+   ]
   }
  }
 }

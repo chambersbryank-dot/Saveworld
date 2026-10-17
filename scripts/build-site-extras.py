@@ -99,7 +99,7 @@ def fix(f, fm):
         k = s.index('<footer>'); s = s[:k] + '</main>\n' + s[k:]
     # landmark must start right after the top nav (hero banners included)
     i = s.index('<nav id="topnav">'); j = s.index('</nav>', i) + len('</nav>')
-    mm = re.search(r'<main id="[^"]+">', s)
+    mm = re.search(r'<main id="[^"]+"[^>]*>', s)  # Oct 17: World_Map has class=wm-main
     if mm.start() > j and re.search(r'<(section|p|div)\b', s[j:mm.start()]):
         tag = mm.group(0); s = s[:mm.start()] + s[mm.end():]; s = s[:j] + tag + s[j:]
     mid = re.search(r'<main id="([^"]+)"', s).group(1)

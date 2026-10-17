@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T16:52:50.969Z",
+ "generated": "2026-10-17T21:34:36.367Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -154,8 +154,16 @@
      "name": "IMAP (NASA)"
     },
     {
+     "href": "Parker_Solar_Probe.html",
+     "name": "Parker Solar Probe (NASA)"
+    },
+    {
      "href": "PUNCH.html",
      "name": "PUNCH (NASA)"
+    },
+    {
+     "href": "SOHO.html",
+     "name": "SOHO Solar and Heliospheric Observatory (ESA / NASA)"
     },
     {
      "href": "Solar_Orbiter.html",
@@ -284,6 +292,10 @@
      "name": "Copernicus Sentinel-6B (ESA / NASA)"
     },
     {
+     "href": "CryoSat.html",
+     "name": "CryoSat Ice Mission (ESA)"
+    },
+    {
      "href": "DSCOVR_EPIC.html",
      "name": "DSCOVR / EPIC (NASA–NOAA)"
     },
@@ -310,6 +322,10 @@
     {
      "href": "FLEX.html",
      "name": "FLEX and Sentinel-3C (ESA)"
+    },
+    {
+     "href": "GCOM-C.html",
+     "name": "GCOM-C &quot;SHIKISAI&quot; (JAXA)"
     },
     {
      "href": "GOSAT-GW.html",
@@ -348,6 +364,10 @@
      "name": "Libera Earth Energy Instrument (NASA)"
     },
     {
+     "href": "Meteosat_Third_Generation.html",
+     "name": "Meteosat Third Generation (ESA / EUMETSAT)"
+    },
+    {
      "href": "UNEP_MARS.html",
      "name": "Methane Alert and Response System (UNEP)"
     },
@@ -378,6 +398,10 @@
     {
      "href": "SARSAT.html",
      "name": "SARSAT Search and Rescue Satellites (NOAA)"
+    },
+    {
+     "href": "SMAP.html",
+     "name": "SMAP Soil Moisture Active Passive (NASA)"
     },
     {
      "href": "SWOT.html",
@@ -476,6 +500,10 @@
     {
      "href": "Trees_for_the_Future.html",
      "name": "Trees for the Future"
+    },
+    {
+     "href": "WeForest.html",
+     "name": "WeForest"
     }
    ]
   },
@@ -570,6 +598,10 @@
      "name": "Healthy Seas"
     },
     {
+     "href": "International_Coastal_Cleanup.html",
+     "name": "International Coastal Cleanup (Ocean Conservancy)"
+    },
+    {
      "href": "Kelp_Forests.html",
      "name": "Kelp Forests"
     },
@@ -632,6 +664,10 @@
     {
      "href": "Tsunami_Early_Warning.html",
      "name": "The Science of Tsunami Detection"
+    },
+    {
+     "href": "The_SeaCleaners.html",
+     "name": "The SeaCleaners"
     },
     {
      "href": "Whales_Ocean_Gardeners.html",
@@ -726,6 +762,10 @@
      "name": "Global Flood Awareness System (GloFAS)"
     },
     {
+     "href": "Kissimmee_River_Restoration.html",
+     "name": "Kissimmee River Restoration (Florida)"
+    },
+    {
      "href": "Klamath_River_Dam_Removal.html",
      "name": "Klamath River Dam Removal"
     },
@@ -734,12 +774,20 @@
      "name": "Living Lands & Waters"
     },
     {
+     "href": "London_Tideway_Tunnel.html",
+     "name": "London Tideway Tunnel (Super Sewer)"
+    },
+    {
      "href": "Mr_Trash_Wheel.html",
      "name": "Mr. Trash Wheel Family"
     },
     {
      "href": "OpenET.html",
      "name": "OpenET Satellite Water Data"
+    },
+    {
+     "href": "Penobscot_River_Restoration.html",
+     "name": "Penobscot River Restoration (Maine)"
     },
     {
      "href": "River_Cleanup.html",
@@ -892,8 +940,16 @@
      "name": "IMAP (NASA)"
     },
     {
+     "href": "Parker_Solar_Probe.html",
+     "name": "Parker Solar Probe (NASA)"
+    },
+    {
      "href": "PUNCH.html",
      "name": "PUNCH (NASA)"
+    },
+    {
+     "href": "SOHO.html",
+     "name": "SOHO Solar and Heliospheric Observatory (ESA / NASA)"
     },
     {
      "href": "Solar_Orbiter.html",
@@ -920,15 +976,15 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 163,
+  "solutions": 175,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "corporate": 12,
-   "agency": 89,
-   "nonprofit": 44,
+   "corporate": 13,
+   "agency": 95,
+   "nonprofit": 48,
    "natural": 15,
-   "government": 1
+   "government": 2
   },
   "upcomingMissions": 16,
   "impactTotals": [
@@ -950,18 +1006,18 @@
     ]
    }
   ],
-  "taggedSolutions": 163
+  "taggedSolutions": 175
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 28,
+   "solutions": 30,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 3,
     "agency": 4,
-    "nonprofit": 15,
+    "nonprofit": 17,
     "natural": 6
    },
    "upcomingMissions": 0,
@@ -999,26 +1055,27 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 15,
+   "solutions": 18,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 10,
+    "nonprofit": 11,
     "natural": 1,
     "agency": 3,
-    "corporate": 1
+    "corporate": 2,
+    "government": 1
    },
    "upcomingMissions": 0,
    "impactTotals": []
   },
   "forests": {
    "name": "Forests",
-   "solutions": 18,
+   "solutions": 19,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "natural": 3,
-    "nonprofit": 11,
+    "nonprofit": 12,
     "agency": 3,
     "corporate": 1
    },
@@ -1059,11 +1116,11 @@
   },
   "space-weather": {
    "name": "Space Weather & Shields",
-   "solutions": 10,
+   "solutions": 12,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 9,
+    "agency": 11,
     "natural": 1
    },
    "upcomingMissions": 1,
@@ -1071,11 +1128,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 40,
+   "solutions": 44,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 38,
+    "agency": 42,
     "nonprofit": 1,
     "corporate": 1
    },
@@ -1574,6 +1631,17 @@
    "missions": []
   },
   {
+   "url": "CryoSat.html",
+   "title": "CryoSat Ice Mission (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
    "url": "Deforestation.html",
    "title": "Forests",
    "category": "forests",
@@ -1864,6 +1932,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "GCOM-C.html",
+   "title": "GCOM-C \"SHIKISAI\" (JAXA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "GEDI.html",
@@ -2175,6 +2254,17 @@
    "added": "2026-10-16"
   },
   {
+   "url": "International_Coastal_Cleanup.html",
+   "title": "International Coastal Cleanup (Ocean Conservancy)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
    "url": "ISS_Water_Recovery.html",
    "title": "ISS Water Recovery: 98%",
    "category": "project-r",
@@ -2285,6 +2375,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Kissimmee_River_Restoration.html",
+   "title": "Kissimmee River Restoration (Florida)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Klamath_River_Dam_Removal.html",
@@ -2451,6 +2552,17 @@
    "missions": []
   },
   {
+   "url": "London_Tideway_Tunnel.html",
+   "title": "London Tideway Tunnel (Super Sewer)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
    "url": "Lucy.html",
    "title": "Lucy (NASA)",
    "category": "planetary-defense",
@@ -2477,6 +2589,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Meteosat_Third_Generation.html",
+   "title": "Meteosat Third Generation (ESA / EUMETSAT)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "MetOp-SG-A1_Sentinel-5A.html",
@@ -2753,6 +2876,28 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Parker_Solar_Probe.html",
+   "title": "Parker Solar Probe (NASA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
+   "url": "Penobscot_River_Restoration.html",
+   "title": "Penobscot River Restoration (Maine)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Phytoplankton.html",
@@ -3235,6 +3380,28 @@
    "missions": []
   },
   {
+   "url": "SMAP.html",
+   "title": "SMAP Soil Moisture Active Passive (NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
+   "url": "SOHO.html",
+   "title": "SOHO Solar and Heliospheric Observatory (ESA / NASA)",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
+  },
+  {
    "url": "SOLAR_1.html",
    "title": "SOLAR-1 (NOAA)",
    "category": "space-weather",
@@ -3434,6 +3601,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "The_SeaCleaners.html",
+   "title": "The SeaCleaners",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Three_Shields.html",
@@ -3667,6 +3845,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "WeForest.html",
+   "title": "WeForest",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-15"
   },
   {
    "url": "Whales_Ocean_Gardeners.html",

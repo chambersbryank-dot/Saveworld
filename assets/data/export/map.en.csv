@@ -46,6 +46,7 @@ Coral Gardeners,active,Ocean,Thailand (country-level),9.5,99.9,page,https://www.
 Coral IVF (Great Barrier Reef Foundation),active,Ocean,"Great Barrier Reef, Australia",-18.29,147.7,page,https://www.savingplanets.com/Coral_IVF.html
 Coral Reef Watch (NOAA),active,Ocean,"NOAA Center for Weather and Climate Prediction, College Park, Maryland",38.972,-76.923,hq,https://www.savingplanets.com/Coral_Reef_Watch.html
 Coral Restoration Foundation,active,Ocean,Florida Keys,25.09,-80.44,page,https://www.savingplanets.com/Coral_Restoration_Foundation.html
+CryoSat Ice Mission (ESA),active,Earth Observation,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/CryoSat.html
 Dragonfly Titan Rotorcraft (NASA),upcoming,Project Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Earth Observation,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,Earth Observation,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/EarthCARE.html
@@ -65,6 +66,7 @@ FireSat (Earth Fire Alliance),active,Earth Observation,Oregon–Idaho border (Bi
 FIRMS Fire Information for Resource Management System (NASA),active,Earth Observation,From orbit,,,,https://www.savingplanets.com/FIRMS.html
 FLEX and Sentinel-3C (ESA),active,Earth Observation,"Launched from Europe's Spaceport, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/FLEX.html
 FreshWater Watch (Earthwatch Europe),active,Rivers,"Oxford, UK (Earthwatch Europe HQ)",51.75,-1.26,hq,https://www.savingplanets.com/FreshWater_Watch.html
+"GCOM-C ""SHIKISAI"" (JAXA)",active,Earth Observation,"JAXA headquarters, Tokyo, Japan",35.683,139.56,hq,https://www.savingplanets.com/GCOM-C.html
 GEDI Forest Lidar (NASA),active,Forests,"University of Maryland, College Park (mission lead)",38.986,-76.943,hq,https://www.savingplanets.com/GEDI.html
 Global Fishing Watch,active,Ocean,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/Global_Fishing_Watch.html
 Global Flood Awareness System (GloFAS),active,Rivers,Worldwide,,,,https://www.savingplanets.com/GloFAS.html
@@ -93,6 +95,7 @@ HydroGNSS (ESA),active,Earth Observation,"ESA headquarters, Paris (operating age
 ICESat-2 (NASA),active,Earth Observation,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/ICESat-2.html
 IMAP (NASA),active,Space Weather,"Johns Hopkins APL, Laurel, Maryland (mission operations)",39.162,-76.898,hq,https://www.savingplanets.com/IMAP.html
 International Charter: Space and Major Disasters,active,Earth Observation,From orbit,,,,https://www.savingplanets.com/International_Charter.html
+International Coastal Cleanup (Ocean Conservancy),active,Ocean,"Texas coast, where the first Cleanup was held in 1986",29.3,-94.8,page,https://www.savingplanets.com/International_Coastal_Cleanup.html
 ISS Water Recovery (NASA),active,Project Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/ISS_Water_Recovery.html
 Joint Polar Satellite System (NOAA),active,Earth Observation,From orbit,,,,https://www.savingplanets.com/JPSS.html
 Juice,active,Space Disposal,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Juice.html
@@ -101,6 +104,7 @@ Justdiggit,active,Forests,Kenya (country-level),-1.29,36.82,page,https://www.sav
 Justdiggit,active,Forests,Tanzania (country-level),-6.16,35.75,page,https://www.savingplanets.com/Justdiggit.html
 Keep Tahoe Blue (League to Save Lake Tahoe),active,Lakes,"Lake Tahoe, California–Nevada",39.09,-120.04,page,https://www.savingplanets.com/Keep_Tahoe_Blue.html
 Kelp Forests,active,Ocean,Worldwide,,,,https://www.savingplanets.com/Kelp_Forests.html
+Kissimmee River Restoration (Florida),active,Rivers,"Kissimmee River, central Florida",27.5,-81.05,page,https://www.savingplanets.com/Kissimmee_River_Restoration.html
 Klamath River Dam Removal,active,Rivers,"Klamath River, Oregon–California",41.95,-122.4,page,https://www.savingplanets.com/Klamath_River_Dam_Removal.html
 Lake Erie Harmful Algal Bloom Forecast (NOAA),active,Lakes,"Maumee Bay, Toledo, Ohio",41.7,-83.45,page,https://www.savingplanets.com/Lake_Erie_Algal_Bloom_Forecast.html
 Lake Plastic Recovery,active,Lakes,Worldwide,,,,https://www.savingplanets.com/Lake_Plastic_Recovery.html
@@ -117,8 +121,11 @@ LignoSat Wooden Satellite (Kyoto University),active,Space Disposal,"Kyoto Univer
 Living Lakes (Global Nature Fund),active,Lakes,"Lake Hovsgol, Mongolia",51.0,100.5,page,https://www.savingplanets.com/Living_Lakes.html
 Living Lakes (Global Nature Fund),active,Lakes,"Radolfzell, Germany (Global Nature Fund HQ)",47.74,8.97,hq,https://www.savingplanets.com/Living_Lakes.html
 Living Lands & Waters,active,Rivers,"Mississippi River, East Moline, Illinois (HQ)",41.51,-90.44,hq,https://www.savingplanets.com/Living_Lands_and_Waters.html
+London Tideway Tunnel (Super Sewer),active,Rivers,"Abbey Mills Pumping Station, East London",51.531,-0.002,page,https://www.savingplanets.com/London_Tideway_Tunnel.html
+London Tideway Tunnel (Super Sewer),active,Rivers,"Acton, West London (tunnel start)",51.508,-0.27,page,https://www.savingplanets.com/London_Tideway_Tunnel.html
 Lucy (NASA),active,Planetary Defense,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/Lucy.html
 Mangrove Forests,active,Forests,Florida mangroves (Everglades),25.3,-80.9,page,https://www.savingplanets.com/Mangroves.html
+Meteosat Third Generation (ESA / EUMETSAT),active,Earth Observation,"MTG-I2 launched from Europe's Spaceport, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/Meteosat_Third_Generation.html
 Methane Alert and Response System (UNEP),active,Earth Observation,"UNEP headquarters, Nairobi, Kenya",-1.233,36.817,hq,https://www.savingplanets.com/UNEP_MARS.html
 MetOp-SG-A1 and Sentinel-5A (ESA / EUMETSAT),active,Earth Observation,"Launched from Kourou, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/MetOp-SG-A1_Sentinel-5A.html
 Mission Blue Hope Spots,active,Ocean,"Napa, California (HQ)",38.299,-122.286,hq,https://www.savingplanets.com/Mission_Blue_Hope_Spots.html
@@ -139,6 +146,8 @@ Orbital Data Centers,active,Space,From orbit,,,,https://www.savingplanets.com/Or
 OSIRIS-APEX and Apophis 2029 (NASA),active,Planetary Defense,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/OSIRIS-APEX.html
 PACE (NASA),active,Earth Observation,"Launched from Cape Canaveral, Florida",28.49,-80.58,launch,https://www.savingplanets.com/PACE.html
 Pan-STARRS Near-Earth Object Search,active,Planetary Defense,"Pan-STARRS telescopes, Haleakalā, Maui",20.708,-156.257,page,https://www.savingplanets.com/Pan-STARRS.html
+Parker Solar Probe (NASA),active,Space Weather,"Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",39.165,-76.898,hq,https://www.savingplanets.com/Parker_Solar_Probe.html
+Penobscot River Restoration (Maine),active,Rivers,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/Penobscot_River_Restoration.html
 "Phytoplankton, the Ocean's Oxygen Engine",active,Ocean,Worldwide,,,,https://www.savingplanets.com/Phytoplankton.html
 Plant-for-the-Planet,active,Forests,"Mayan forests, Yucatán Peninsula, Mexico",18.6,-89.4,page,https://www.savingplanets.com/Plant-for-the-Planet.html
 Plastic Bank,active,Ocean,Indonesia (country-level),-6.2,106.85,page,https://www.savingplanets.com/Plastic_Bank.html
@@ -177,6 +186,8 @@ SeaTrees,active,Ocean,Costa Rica coral (country-level),9.9,-84.1,page,https://ww
 SeaTrees,active,Ocean,Fiji coral (country-level),-17.7,178.0,page,https://www.savingplanets.com/SeaTrees.html
 SeaTrees,active,Ocean,Portugal kelp (country-level),38.7,-9.1,page,https://www.savingplanets.com/SeaTrees.html
 SeaTrees,active,Ocean,California kelp (state-level),34.0,-118.5,page,https://www.savingplanets.com/SeaTrees.html
+SMAP Soil Moisture Active Passive (NASA),active,Earth Observation,"NASA Jet Propulsion Laboratory, Pasadena, California",34.2,-118.17,page,https://www.savingplanets.com/SMAP.html
+SOHO Solar and Heliospheric Observatory (ESA / NASA),active,Space Weather,"Toulouse, France, where SOHO was assembled",43.604,1.444,page,https://www.savingplanets.com/SOHO.html
 Solar Orbiter (ESA / NASA),active,Space Weather,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Solar_Orbiter.html
 SOLAR-1 (NOAA),active,Space Weather,"NOAA headquarters, Silver Spring, Maryland (operating agency)",38.992,-77.031,hq,https://www.savingplanets.com/SOLAR_1.html
 SPHEREx (NASA),active,Project Rawane,"NASA JPL, Pasadena, California (mission management)",34.201,-118.172,hq,https://www.savingplanets.com/SPHEREx.html
@@ -200,6 +211,9 @@ The Ocean Cleanup,active,Ocean,Great Pacific Garbage Patch,32.0,-145.0,page,http
 The Ocean Cleanup,active,Ocean,"Rotterdam, Netherlands (HQ)",51.92,4.48,hq,https://www.savingplanets.com/Ocean_Cleanup.html
 The Science of Tsunami Detection,active,Earth Observation,"Pacific Tsunami Warning Center, Ford Island, Hawaii (NOAA)",21.364,-157.962,hq,https://www.savingplanets.com/Tsunami_Early_Warning.html
 The Science of Tsunami Detection,active,Earth Observation,"National Tsunami Warning Center, Palmer, Alaska (NOAA)",61.599,-149.112,hq,https://www.savingplanets.com/Tsunami_Early_Warning.html
+The SeaCleaners,active,Ocean,"Kota Kinabalu, Malaysia (Mobula 8.2 expedition)",5.98,116.073,page,https://www.savingplanets.com/The_SeaCleaners.html
+The SeaCleaners,active,Ocean,"Ambon, Indonesia",-3.695,128.181,page,https://www.savingplanets.com/The_SeaCleaners.html
+The SeaCleaners,active,Ocean,"Bali, Indonesia",-8.65,115.216,page,https://www.savingplanets.com/The_SeaCleaners.html
 Three Invisible Shields,active,Space Weather,From orbit,,,,https://www.savingplanets.com/Three_Shields.html
 Three Trees for Every One Removed,active,Forests,Worldwide,,,,https://www.savingplanets.com/Three_Trees.html
 Titan,upcoming,Space Disposal,Dragonfly launches from Kennedy Space Center,28.57,-80.65,launch,https://www.savingplanets.com/Titan.html
@@ -213,5 +227,7 @@ Waterkeeper Alliance,active,Rivers,New York (HQ),40.71,-74.01,hq,https://www.sav
 Waterkeeper Alliance,active,Rivers,Hudson River (where the movement began),41.7,-73.95,page,https://www.savingplanets.com/Waterkeeper_Alliance.html
 Waterkeeper Alliance,active,Rivers,"Mahanadi River, India",20.46,85.88,page,https://www.savingplanets.com/Waterkeeper_Alliance.html
 Webb and 2024 YR4,active,Planetary Defense,"Space Telescope Science Institute, Baltimore (Webb mission operations)",39.332,-76.623,hq,https://www.savingplanets.com/Webb_2024_YR4.html
+WeForest,active,Forests,Zambia field office (Lusaka),-15.417,28.283,page,https://www.savingplanets.com/WeForest.html
+WeForest,active,Forests,Ethiopia field office (Addis Ababa),9.03,38.74,page,https://www.savingplanets.com/WeForest.html
 "Whales, Ocean Gardeners",active,Ocean,Worldwide,,,,https://www.savingplanets.com/Whales_Ocean_Gardeners.html
 Zero Debris Charter (ESA),active,Space Disposal,"ESA headquarters, Paris (charter facilitator)",48.849,2.302,hq,https://www.savingplanets.com/Zero_Debris_Charter.html

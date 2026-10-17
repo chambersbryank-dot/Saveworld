@@ -127,6 +127,10 @@
   "sig": "86b583d76e80",
   "date": "2026-10-11"
  },
+ "CryoSat.html": {
+  "sig": "3188a5fdef4a",
+  "date": "2026-10-17"
+ },
  "DSCOVR_EPIC.html": {
   "sig": "d5b26328f399",
   "date": "2026-10-11"
@@ -198,6 +202,10 @@
  "FreshWater_Watch.html": {
   "sig": "daa34184b7e5",
   "date": "2026-10-14"
+ },
+ "GCOM-C.html": {
+  "sig": "afa79a34d3a5",
+  "date": "2026-10-17"
  },
  "GEDI.html": {
   "sig": "5da9569a7728",
@@ -287,6 +295,10 @@
   "sig": "55c54b25979c",
   "date": "2026-10-16"
  },
+ "International_Coastal_Cleanup.html": {
+  "sig": "11f93cedd9cf",
+  "date": "2026-10-17"
+ },
  "JPSS.html": {
   "sig": "6d888ab17bb3",
   "date": "2026-10-16"
@@ -310,6 +322,10 @@
  "Kelp_Forests.html": {
   "sig": "65c779bbb3ad",
   "date": "2026-10-12"
+ },
+ "Kissimmee_River_Restoration.html": {
+  "sig": "60219f53b937",
+  "date": "2026-10-17"
  },
  "Klamath_River_Dam_Removal.html": {
   "sig": "196dc4951f0b",
@@ -351,6 +367,10 @@
   "sig": "0fda9f61ce0e",
   "date": "2026-10-13"
  },
+ "London_Tideway_Tunnel.html": {
+  "sig": "d48f44f9a120",
+  "date": "2026-10-17"
+ },
  "Lucy.html": {
   "sig": "d5a584d0362c",
   "date": "2026-10-13"
@@ -366,6 +386,10 @@
  "MetOp-SG-A1_Sentinel-5A.html": {
   "sig": "ff7b70241c70",
   "date": "2026-10-12"
+ },
+ "Meteosat_Third_Generation.html": {
+  "sig": "8b9a9811f601",
+  "date": "2026-10-17"
  },
  "Mission_Blue_Hope_Spots.html": {
   "sig": "26e7c9bd319a",
@@ -393,7 +417,7 @@
  },
  "Nancy_Grace_Roman.html": {
   "sig": "55471f64271b",
-  "date": "2026-10-16"
+  "date": "2026-10-17"
  },
  "OCO-2.html": {
   "sig": "70379cda4e0e",
@@ -442,6 +466,14 @@
  "Pan-STARRS.html": {
   "sig": "c9756476b57f",
   "date": "2026-10-16"
+ },
+ "Parker_Solar_Probe.html": {
+  "sig": "dc1a2cbb292f",
+  "date": "2026-10-17"
+ },
+ "Penobscot_River_Restoration.html": {
+  "sig": "6797a7f6969c",
+  "date": "2026-10-17"
  },
  "Phytoplankton.html": {
   "sig": "aa718da5f2d6",
@@ -502,6 +534,14 @@
  "SARSAT.html": {
   "sig": "1c2a5292e176",
   "date": "2026-10-13"
+ },
+ "SMAP.html": {
+  "sig": "73579587c007",
+  "date": "2026-10-17"
+ },
+ "SOHO.html": {
+  "sig": "73397c0a308d",
+  "date": "2026-10-17"
  },
  "SOLAR_1.html": {
   "sig": "741489d471aa",
@@ -595,6 +635,10 @@
   "sig": "dcafbdd90d1d",
   "date": "2026-10-13"
  },
+ "The_SeaCleaners.html": {
+  "sig": "35eda34c5dbd",
+  "date": "2026-10-17"
+ },
  "Three_Shields.html": {
   "sig": "e20f840df5b7",
   "date": "2026-10-16"
@@ -617,7 +661,7 @@
  },
  "Tsunami_Early_Warning.html": {
   "sig": "1bdff9584ccf",
-  "date": "2026-10-16"
+  "date": "2026-10-17"
  },
  "UNEP_MARS.html": {
   "sig": "df3df8d61004",
@@ -638,6 +682,10 @@
  "Waterkeeper_Alliance.html": {
   "sig": "8b6b31a42b01",
   "date": "2026-10-15"
+ },
+ "WeForest.html": {
+  "sig": "6d33eafed726",
+  "date": "2026-10-17"
  },
  "Webb_2024_YR4.html": {
   "sig": "e94b293518a5",
