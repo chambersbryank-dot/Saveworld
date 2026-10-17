@@ -49,9 +49,10 @@ python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, reg
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/build-glass.py  # Oct 15 item 6: Liquid Glass only on primary buttons + nav panels; flat tinted icons; -webkit- pairing; reduced-transparency/contrast fallbacks
 python3 scripts/build-spotfire.py       # Oct 15: astroEDU "Spot the Fire from Space" page (all langs) + links from Teachers/Kids_Map/FireSat/Lesson_Builder + sitemap
+python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (all langs), progress badges (site.js PLAY block), homepage Kids card
 python3 scripts/build-learn.py           # Oct 16 Phase 1 education: Learn hub (3 tracks), Orbits_Guide, Orbit_Math (KaTeX at build), Orbit_Lab (all langs)
 node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails the sync on error)
-python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (all langs), progress badges (site.js PLAY block), homepage Kids card
+if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
 python3 scripts/build-report-link.py    # Oct 15: Report a correction footer link (all langs) -> GitHub issue form
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)

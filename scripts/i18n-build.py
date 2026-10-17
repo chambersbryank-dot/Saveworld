@@ -26,6 +26,7 @@ def normalize(src):
     src = unglossary(src)
     src = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?', '', src)
     src = re.sub(r'<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->', '', src)
+    src = re.sub(r'<!-- LEARNLINK:START -->[\s\S]*?<!-- LEARNLINK:END -->', '', src)  # Oct 16: build-learn.py adds this per language
     src = re.sub(r'<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->', '', src)
     src = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', '', src)
     src = re.sub(r'\?v=[0-9a-z]+', '', src)
@@ -107,7 +108,7 @@ def localize_search(js, m):
     return js.replace('return p.text.indexOf(q)', 'return p.text.toLowerCase().indexOf(q)')
 
 def build(page, lang, m):
-    raw = unglossary(open(page, encoding='utf8').read())
+    raw = re.sub(r'<!-- LEARNLINK:START -->[\s\S]*?<!-- LEARNLINK:END -->', '', unglossary(open(page, encoding='utf8').read()))  # Oct 16: re-added per language by build-learn.py
     soup = BeautifulSoup(raw, 'html.parser')
     html = soup.html
     html['lang'] = lang

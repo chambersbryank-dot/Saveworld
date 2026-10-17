@@ -11,6 +11,7 @@ function normalize(src) {
   return src.replace(/<span class="gl"><button[^>]*>([\s\S]*?)<\/button><span class="gl-pop"[^>]*>[\s\S]*?<\/span><\/span>/g, '$1')
     .replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?/g, '')
     .replace(/<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->/g, '')
+    .replace(/<!-- LEARNLINK:START -->[\s\S]*?<!-- LEARNLINK:END -->/g, '')
     .replace(/<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->/g, '')
     .replace(/<li class="lang-switch"[\s\S]*?<\/li>/g, '')
     .replace(/\?v=[0-9a-z]+/g, '')

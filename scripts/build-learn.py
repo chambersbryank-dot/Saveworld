@@ -10,7 +10,7 @@ sys.path.insert(0, 'scripts')
 spec = importlib.util.spec_from_file_location('sf', 'scripts/build-spotfire.py'); sf = importlib.util.module_from_spec(spec); spec.loader.exec_module(sf)
 SITE, LANGS, d, rd, wr, esc = sf.SITE, sf.LANGS, sf.d, sf.rd, sf.wr, sf.esc
 import learn_calc, learn_orbit_math as OM, learn_text as LT, learn_extras as LX
-V = '20261016L'  # cache version for learn.css / orbit-lab.js / katex
+V = '20261016M'  # cache version for learn.css / orbit-lab.js / katex
 PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html']
 LV = dict(LT.LEVELS)
 def ex_values():
@@ -70,7 +70,7 @@ CSS = ('.lw{max-width:1000px;margin:0 auto;padding:1rem 1.25rem 2.5rem;line-heig
        '#ol input[type=number]{min-height:44px;font:inherit;padding:.3rem .6rem;border-radius:10px}#ol fieldset{border:1px solid rgba(255,255,255,.3);border-radius:10px}#ol fieldset label{flex-direction:row;align-items:center;min-height:44px}'
        '#ol button{min-height:44px;border-radius:999px;padding:.4rem 1.1rem;font:inherit;font-weight:800;cursor:pointer}#ol canvas{width:100%;display:block;margin:1rem 0 .5rem;background:#050b1a;border-radius:16px}'
        '.ol-out{font-weight:700;font-size:1.05rem;min-height:2.5em}.ol-table{width:100%;border-collapse:collapse}.ol-table th,.ol-table td{padding:.4rem .6rem;border-bottom:1px solid rgba(255,255,255,.15);text-align:start}'
-       '.ol-table td{direction:ltr;unicode-bidi:isolate}.lbox.intu{border-inline-start:5px solid #c9a7ff}.lmeta{font-size:.9rem;opacity:.85}'
+       '.ol-table td{direction:ltr;unicode-bidi:isolate}.lbox.intu{border-inline-start:5px solid #c9a7ff}.lbox.eli{border-inline-start:5px solid #7fdbca}.wk label,.wh label{display:flex;flex-direction:column;gap:.2rem;font-weight:700}.wk input,.wh input{min-height:44px;width:9rem;font:inherit;padding:.3rem .6rem;border-radius:10px}.wk button,.wh button{min-height:44px;border-radius:999px;padding:.35rem 1rem;font:inherit;font-weight:700;cursor:pointer;align-self:flex-end}.lmeta{font-size:.9rem;opacity:.85}'
        '.lwe dt{font-weight:800;margin-top:.6rem}.lwe dd{margin-inline-start:0}.lw pre{overflow-x:auto;background:#050b1a;padding:.8rem;border-radius:10px;text-align:left}'
        '.lnp{margin:.8rem 0}.lnp-row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}.lnp input{min-height:44px;width:9rem;font:inherit;padding:.3rem .6rem;border-radius:10px}'
        '.lnp button,.lmcq button{min-height:44px;border-radius:999px;padding:.35rem 1rem;font:inherit;font-weight:700;cursor:pointer}.lnp-fb{font-weight:700;min-height:1.4em}'
@@ -147,10 +147,22 @@ def worked(sid, l):
         rows = ''.join(f'<tr><td>{n}</td><td>{num(E, 10, l)}</td><td>{f"{dE:.2e}"}</td></tr>' for n, E, dE in K2)
         steps = f'<table class="ol-table" dir="ltr"><caption>{esc(B["iter"][l])}</caption><thead><tr><th scope="col">n</th><th scope="col">E_n (rad)</th><th scope="col">|ΔE|</th></tr></thead><tbody>{rows}</tbody></table>'
     else:
-        steps = '<ol>' + ''.join(f'<li><bdi dir="ltr">{tx(x, l)}</bdi></li>' for x in w['steps']) + '</ol>'
+        steps = '<ol>' + ''.join(f'<li><bdi dir="ltr">{esc(fill(x, l)) if isinstance(x, str) else tx(x, l)}</bdi></li>' for x in w['steps']) + '</ol>'
     dl = ''.join(f'<dt>{esc(B[k][l])}</dt><dd>{v}</dd>' for k, v in [('given', tx(w['given'], l)), ('find', tx(w['find'], l)), ('strat', tx(w['strat'], l)),
         ('steps', steps), ('ans', '<strong>' + tx(w['ans'], l) + '</strong>'), ('sanity', tx(w['sanity'], l)), ('sig', tx(w['sig'], l))])
-    return f'<dl class="lwe">{dl}</dl><details><summary>{esc(B["py"][l])}</summary><pre dir="ltr"><code>{esc(w["py"])}</code></pre></details>'
+    return f'<dl class="lwe">{dl}</dl>{widget(sid, l)}<details><summary>{esc(B["py"][l])}</summary><pre dir="ltr"><code>{esc(w["py"])}</code></pre></details>'
+def widget(sid, l):
+    W = LX.WID; g = lambda k: esc(W[k][l])
+    if sid == 'keplereq':
+        return (f'<div class="lbox wk" data-done="{g("done")}" data-bad="{g("bad")}"><h3>{g("kep")}</h3><div class="lnp-row">'
+                f'<label>{g("M")} <input name="M" type="text" inputmode="decimal" dir="ltr" value="3.6029"></label><label>{g("e")} <input name="e" type="text" inputmode="decimal" dir="ltr" value="0.37255"></label>'
+                f'<button type="button" class="wk-step">{g("step")}</button><button type="button" class="wk-reset">{g("reset")}</button></div>'
+                f'<p class="lnp-fb" role="status" aria-live="polite"></p><table class="ol-table" dir="ltr"><thead><tr><th scope="col">n</th><th scope="col">E_n (rad)</th><th scope="col">|ΔE|</th></tr></thead><tbody></tbody></table></div>')
+    if sid == 'hohmann':
+        return (f'<div class="lbox wh" data-res="{g("res")}" data-bad="{g("hbad")}"><h3>{g("hoh")}</h3><div class="lnp-row">'
+                f'<label>{g("h1")} <input name="h1" type="text" inputmode="decimal" dir="ltr" value="300"></label><label>{g("h2")} <input name="h2" type="text" inputmode="decimal" dir="ltr" value="35786"></label>'
+                f'<button type="button">{g("calc")}</button></div><p class="lnp-fb" role="status" aria-live="polite"></p></div>')
+    return ''
 def practice(sid, l):
     B = LX.LBL; out = ''
     for i, q in enumerate(LX.NP.get(sid, [])):
@@ -185,6 +197,7 @@ def math_page(l, K):
                  f'<div class="lbox obj"><h3>{esc(U["obj"][l])}</h3><p>{tx(s["obj"], l)}</p></div>'
                  f'<div class="lbox pre"><h3>{esc(U["pre"][l])}</h3><p>{tx(s["pre"], l)} <a href="{sf.href(l, "Orbits_Guide.html")}">{esc(LT.GUIDE["title"][l])}</a></p></div>'
                  f'<div class="lbox intu"><h3>{esc(B["intu"][l])}</h3><p>{tx(s["body"], l)}</p></div>'
+                 f'<div class="lbox eli"><h3>🧒 {esc(B["eli"][l])}</h3><p>{tx(LX.ELI[s["id"]], l)}</p></div>'
                  f'<h3>{esc(U["deriv"][l])}</h3><ol class="lsteps">{steps}</ol>'
                  f'<div class="lbox ex"><h3>{esc(U["ex"][l])}</h3>{exbox}</div>'
                  f'{practice(s["id"], l)}<h3>{esc(U["prac"][l])}</h3><ol>{prac}</ol>'
@@ -218,6 +231,22 @@ def lab(l, K):
     main = hero(L['title'][l], L['kicker'][l]) + f'<div class="lw">{form}{how}</div>\n'
     return shell(l, 'Orbit_Lab.html', L['title'][l], L['desc'][l], main, extra_head=katex_head(l), ld_type='LearningResource',
                  tail=f'<script src="{pre}assets/orbit-lab.js?v={V}" defer></script>\n')
+XLINK = {'Teachers.html': 'teach', 'Satellite_Explorer.html': 'sat', 'Play_and_Learn.html': 'play'}
+XT = dict(h=LX.T('Go further: Learn', 'Aller plus loin : Apprendre', 'Ve más allá: Aprender', 'تعمّق: تعلّم', 'Vai oltre: Impara'),
+  teach=LX.T('College and university lessons with worked examples, auto-checked practice and instructor notes:', 'Cours universitaires avec exemples résolus, exercices corrigés automatiquement et notes pour l’enseignant :', 'Lecciones universitarias con ejemplos resueltos, práctica con corrección automática y notas para docentes:', 'دروس جامعية مع أمثلة محلولة وتمارين بتصحيح تلقائي وملاحظات للمدرّسين:', 'Lezioni universitarie con esempi svolti, esercizi a correzione automatica e note per i docenti:'),
+  sat=LX.T('Built your satellite? Now find out how it stays in orbit:', 'Tu as construit ton satellite ? Découvre maintenant comment il reste en orbite :', '¿Ya construiste tu satélite? Descubre cómo se mantiene en órbita:', 'بنيت قمرك الصناعي؟ اكتشف الآن كيف يبقى في مداره:', 'Hai costruito il tuo satellite? Scopri come resta in orbita:'),
+  play=LX.T('Ready for a bigger challenge? Learn how orbits and airplanes work:', 'Prêt pour un plus grand défi ? Découvre comment marchent les orbites et les avions :', '¿Listo para un reto mayor? Aprende cómo funcionan las órbitas y los aviones:', 'مستعد لتحدٍّ أكبر؟ تعلّم كيف تعمل المدارات والطائرات:', 'Pronto per una sfida più grande? Scopri come funzionano orbite e aerei:'))
+def xlinks(l):
+    ch = 0
+    for page, k in XLINK.items():
+        p = d(l) + page
+        if not os.path.exists(p): continue
+        s = rd(p); s = re.sub(r'<!-- LEARNLINK:START -->.*?<!-- LEARNLINK:END -->', '', s, flags=re.S)
+        links = ' · '.join(f'<a href="{x}">{esc(LT.NAV_ITEMS[x][l])}</a>' for x in LINK_PAGES if os.path.exists(d(l) + x))
+        blk = f'<!-- LEARNLINK:START --><aside class="learn-link card-band" aria-label="{esc(XT["h"][l])}"><h2>{esc(XT["h"][l])}</h2><p>{esc(XT[k][l])} {links}</p></aside><!-- LEARNLINK:END -->'
+        s = s.replace('</main>', blk + '</main>', 1); ch += wr(p, s)
+    return ch
+LINK_PAGES = ['Learn.html', 'Orbits_Guide.html', 'Orbit_Lab.html']
 if __name__ == '__main__':
     global_tex = LAB_EQ + CONSTS
     tl = [t for s in OM.S for t, _ in s['steps']] + global_tex
@@ -226,6 +255,7 @@ if __name__ == '__main__':
     for l in LANGS:
         ch += wr(d(l) + 'Learn.html', learn_hub(l)); ch += wr(d(l) + 'Orbits_Guide.html', guide(l))
         ch += wr(d(l) + 'Orbit_Math.html', math_page(l, K)); ch += wr(d(l) + 'Orbit_Lab.html', lab(l, K))
+    for l in LANGS: ch += xlinks(l)
     s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:
         for p in PAGES:
