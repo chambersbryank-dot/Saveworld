@@ -56,13 +56,13 @@ def main():
             url = SITE + ('' if l == 'en' else l + '/') + b
             title = re.sub(r'<[^>]+>', '', m.group(0)).strip() if m else 'Saving Planets'
             cr = 'https://classroom.google.com/share?' + urllib.parse.urlencode({'url': url, 'title': title + ' | Saving Planets'})
-            bar = (f'<!-- CLSHARE:START -->{CSS}<div class="shr" role="group" aria-label="{e(t["grp"])}" data-url="{url}" data-page="{k}">'
+            bar = (f'<!-- CLSHARE:START -->{CSS}<div class="shr" data-pagefind-ignore="all" role="group" aria-label="{e(t["grp"])}" data-url="{url}" data-page="{k}">'
                    f'<a class="shr-cr" href="{e(cr)}" target="_blank" rel="noopener noreferrer">{ICON_CR}<span>{e(t["cr"])}</span><span class="sr-only visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{e(t["newtab"])}</span></a>'
                    f'<button type="button" class="shr-copy" data-ok="{e(t["ok"])}">{ICON_CP}<span>{e(t["cp"])}</span></button>'
                    f'<span class="shr-st" role="status" aria-live="polite"></span></div><script src="{pre}assets/share.js?v={V}" defer></script><!-- CLSHARE:END -->')
             if m: s2 = s2[:m.end()] + bar + s2[m.end():]
         if (k in ('learn', 'math', 'teachers', 'calc') or b in ('Careers.html', 'AP_IB_Physics.html')) and '</main>' in s2:
-            call = f'<!-- NLCALL:START --><aside class="nl-call" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
+            call = f'<!-- NLCALL:START --><aside class="nl-call" data-pagefind-ignore="all" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
             s2 = s2.replace('</main>', call + '</main>', 1)
         if b in KIDS or b in NOSIGNUP or k in ('guide', 'lab'):
             s2 = re.sub(r'<section[^>]*newsletter-band[^>]*>\s*<div[^>]*data-sp-newsletter[^>]*>\s*</div>\s*</section>\n?', '', s2)  # e.g. Amazing_Facts had a static band

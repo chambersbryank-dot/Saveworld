@@ -67,6 +67,7 @@ python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=l
 python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link
 python3 scripts/build-embed.py         # Oct 16: Embed button + ?embed=1 minimal mode (calculators, labs, Artemis_II launches)
 python3 scripts/build-learn-standards.py  # Oct 16: NGSS/CCSS/AP/IB chips + educationalAlignment on Learn pages and calculators, Learn hub filter
+python3 scripts/build-search-page.py    # Oct 16: Search.html = centred search bar + floating example questions + credits only (all langs)
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-audit.py | tail -3

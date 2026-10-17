@@ -40,7 +40,7 @@ def main():
             src = url + '?embed=1' + (f'&only={only}' if only else '')
             snip = (f'<iframe src="{E(src)}" title="{E(t)}" width="100%" height="{ht}" style="border:0;max-width:100%;display:block" loading="lazy"></iframe>\n'
                     f'<p style="font-size:13px"><a href="{E(url + ("#" + only if only else ""))}">{E(t)}</a> {E(u["by"])}, <a href="https://creativecommons.org/licenses/by-nc/4.0/">{u["lic"]}</a></p>')
-            bar = (f'<!-- EMBED:START --><section class="dt-bar emb-bar" aria-label="{E(u["b"])}" data-page="{kind}"><h2>{E(u["h"])}</h2>'
+            bar = (f'<!-- EMBED:START --><section class="dt-bar emb-bar" data-pagefind-ignore="all" aria-label="{E(u["b"])}" data-page="{kind}"><h2>{E(u["h"])}</h2>'
                    f'<button type="button" class="dt-btn" data-emb="show" aria-expanded="false">&lt;/&gt; {E(u["b"])}</button>'
                    f'<div class="dt-out" hidden><textarea readonly dir="ltr" aria-label="{E(u["b"])}">{E(snip)}</textarea><button type="button" class="dt-btn" data-emb="copy" data-ok="{E(u["ok"])}">{E(u["copy"])}</button> <span class="emb-st" role="status" aria-live="polite"></span></div>'
                    f'<p class="dt-note">{E(u["note"])}</p></section><script src="{pre}assets/embed.js?v={V}" defer></script><!-- EMBED:END -->')

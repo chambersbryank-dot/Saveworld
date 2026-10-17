@@ -42,7 +42,7 @@ L = {'en': dict(h='Standards', note='Our alignment; not reviewed by the standard
 def short(code): return code[5:] if code.startswith('CCSS.') else code
 def chips(l, codes):
     u = L[l]
-    return (f'<!-- STDTAGS:START --><div class="lw std-wrap" style="padding-top:.4rem"><p class="std-h" style="margin:.2rem 0;font-weight:700">{E(u["h"])}:</p><ul class="lchips std-chips" aria-label="{E(u["h"])}">'
+    return (f'<!-- STDTAGS:START --><div class="lw std-wrap" data-pagefind-ignore="all" style="padding-top:.4rem"><p class="std-h" style="margin:.2rem 0;font-weight:700">{E(u["h"])}:</p><ul class="lchips std-chips" aria-label="{E(u["h"])}">'
             + ''.join(f'<li class="lchip"><bdi dir="ltr" title="{E(fw(c)[0])}">{E(("NGSS " if c[:3] in ("HS-", "MS-") else "CCSS " if c.startswith("CCSS.") else "") + short(c))}</bdi></li>' for c in codes)
             + f'</ul><p class="lnote" style="font-size:.85rem;margin:.2rem 0 0">{E(u["note"])}</p></div><!-- STDTAGS:END -->')
 def align(codes): return [{'@type': 'AlignmentObject', 'alignmentType': 'teaches', 'educationalFramework': fw(c)[0], 'targetName': short(c), 'targetUrl': fw(c)[1]} for c in codes]

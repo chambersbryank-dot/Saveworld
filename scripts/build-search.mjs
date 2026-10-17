@@ -24,7 +24,7 @@ for (const dir of ['', 'fr', 'es', 'ar', 'it']) {
 // ---------- 1) Pagefind ----------
 fs.rmSync(path.join(OUT, 'pagefind'), { recursive: true, force: true }); // drop stale hashed chunks
 const { index, errors } = await pagefind.createIndex({
-  excludeSelectors: ['.share-bar', '.related-solutions', '.page-reviewed', '.diff-strip', 'nav', 'footer', 'script', 'style', '.skip-link', '.lang-switch', '[data-pagefind-ignore]'],
+  excludeSelectors: ['.share-bar', '.related-solutions', '.page-reviewed', '.diff-strip', 'nav', 'footer', 'script', 'style', '.skip-link', '.lang-switch', '[data-pagefind-ignore]', '.shr', '.nl-call', '.emb-bar', '.emb-attr', '.std-wrap', '.gu-link'],
   forceLanguage: undefined,
 });
 if (errors.length) throw new Error(errors.join('\n'));
