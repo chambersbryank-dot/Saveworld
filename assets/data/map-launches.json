@@ -1,10 +1,11 @@
 {
-"generated": "2026-10-17T08:40:45Z",
+"generated": "2026-10-17T16:52:57Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
 "Haiyang Oriental Spaceport",
 "Jiuquan Satellite Launch Center, People's Republic of China",
+"Taiyuan Satellite Launch Center, People's Republic of China",
 "Wenchang Space Launch Site, People's Republic of China"
 ],
 "sites": [
@@ -365,15 +366,6 @@
 "provider": "Avio S.p.A",
 "rocket": "Vega-C",
 "mission": "IRIDE 1",
-"pad": "Ariane Launch Area 1 (ELV)"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Avio S.p.A",
-"rocket": "Vega-C",
-"mission": "IRIDE 2",
 "pad": "Ariane Launch Area 1 (ELV)"
 }
 ]

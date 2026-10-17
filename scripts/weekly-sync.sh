@@ -7,6 +7,8 @@
 # Analytics: build-analytics.py (Oct 16) strips GA4/consent.js remnants and adds the cookie-free Cloudflare Web Analytics beacon + Privacy text.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+# Oct 17: install build deps first (build-learn/build-calcs need katex before build-search); was only checked right before build-search.
+[ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 python3 scripts/build-roman.py || echo "build-roman failed (kept previous data)"
 python3 scripts/build-home-extras.py
 python3 scripts/build-batch2.py
@@ -87,7 +89,6 @@ python3 scripts/seo-jsonld.py             # Oct 16: re-sync JSON-LD image/descri
 python3 scripts/i18n-sitemap.py           # Oct 16: sitemap.xml rebuilt from the pages on disk (all langs, hreflang alternates, git lastmod)
 python3 scripts/seo-lint.py --no-fail | tail -6   # gap counts (strict run at the end)
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
-[ -d node_modules ] || npm ci --no-audit --no-fund >/dev/null
 node scripts/build-search.mjs
 # Oct 16: SI Helper pilot retrieval index (Workers AI bge-m3 -> Vectorize si-helper-site). Incremental; only runs on the box
 # where the Cloudflare token file exists; never fails the sync.
