@@ -219,7 +219,7 @@
         drawEarth(true); } catch (e) { BM = null; } };
     var set = (box.getAttribute('data-bm') || '').split(',').map(function (t) { var p = t.trim().split(/\s+/); return { u: p[0], w: parseInt(p[1], 10) || 0 }; })
       .filter(function (e) { return e.u && e.w >= 1280; }).sort(function (a, b) { return a.w - b.w; });
-    if (!set.length) return; var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need * 2) { pick = set[k]; break; } // 2x oversampled: crisp coastlines and clouds
+    if (!set.length) return; var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need * 2.5) { pick = set[k]; break; } // 2.5x oversampled (Oct 17: Earth is 2x larger; prefer crisp Retina)
     im.src = pick.u; }
   function bmAt(lon, lat, out) { // bilinear sample, lon/lat in radians
     var u = ((lon / 6.28319 + 0.5) % 1 + 1) % 1 * BM.w - 0.5, v = (0.5 - lat / 3.14159) * BM.h - 0.5;
@@ -347,9 +347,31 @@
       SAT.y = Math.max(cb + 16 + SAT.R, hY - 0.75 * SAT.R) + curvA * Math.pow((SAT.x - W / 2), 2); }
     else { SAT = { R: Math.round(Math.max(90, Math.min(W * 0.15, (W - tr - 30) / 2, H * 0.27))) }; SAT.x = Math.max(W * 0.8, Math.min(W - SAT.R * 1.05, tr + 20 + SAT.R));
       SAT.y = Math.min(hY - 1.15 * SAT.R, H * 0.42); }
-    EAR = { R: Math.round(Math.min(W, H) * (port ? 0.095 : 0.085)), x: W * (port ? 0.2 : 0.1) };
-    // Earth clears the horizon fully (centre 2.1 R above it), but in portrait never climbs into the text block.
+    // Oct 17: Cassini PIA11141 sprite is wider to the RIGHT of the globe (gx≈0.35). Without this, the right ring
+    // ansa is clipped by the canvas edge on iPad landscape — looked like "part of the ring disappeared".
+    // Globe radius unchanged; only SAT.x shifts left enough for the full ring to fit. Ring shadow on the globe in
+    // the photo is real Cassini imagery (kept). Portrait uses the same clamp.
+    (function () {
+      var ringRight = SAT.R * (1 - satMeta.gx) / Math.max(0.05, satMeta.gr);
+      var ringLeft = SAT.R * satMeta.gx / Math.max(0.05, satMeta.gr);
+      SAT.x = Math.min(SAT.x, W - ringRight - 6);
+      if (port) SAT.x = Math.min(SAT.x, W - ringRight - 6);
+      // keep Saturn on the right half when possible; left ansa may hang off-screen (OK)
+      SAT.x = Math.max(SAT.x, Math.min(W * 0.62, W - ringRight - 6));
+    })();
+    // Oct 17 (owner: Earthrise Earth TWICE as big). Diameter 2x; Saturn/Enceladus/moons unchanged.
+    EAR = { R: Math.round(Math.min(W, H) * (port ? 0.19 : 0.17)), x: W * (port ? 0.18 : 0.08) };
+    // Earth clears the horizon (centre ~2.1 R above it). With 2x size, nudge left (x) so the disk stays mostly
+    // off the title column; portrait still never climbs into the text block.
     EAR.peak = hY - 2.1 * EAR.R; if (port) EAR.peak = Math.max(EAR.peak, Math.min(hY - 1.2 * EAR.R, cb + 14 + EAR.R));
+    // Keep the larger Earth from covering the title: hang it partly off the left edge when it would overlap.
+    if (TXT[0] < 1e8 && EAR.x + EAR.R > TXT[0] - 16) {
+      EAR.x = Math.max(EAR.R * 0.5, TXT[0] - EAR.R - 24);
+    }
+    if (!port && TXT[3] < 1e8 && (EAR.peak - EAR.R) < TXT[3] && (EAR.x + EAR.R) > TXT[0]) {
+      // last resort: lower the rise peak so the disk sits under the title block
+      EAR.peak = Math.min(hY - 1.15 * EAR.R, TXT[3] + EAR.R + 20);
+    }
     SUN = { R: Math.max(7, Math.round(EAR.R * 0.28)), x: W * (port ? 0.86 : 0.9) };
     // the Sun never sits behind the text block: portrait -> between the text and the horizon; landscape -> beside the text column
     SUN.y = port ? cb + (hY - cb) * 0.32 : Math.max(hY * 0.3, 170);

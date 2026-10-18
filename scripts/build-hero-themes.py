@@ -48,9 +48,13 @@ def POSTER():  # .hero-space::before = still frame until the live ground is read
     return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # Oct 17: he = Hebrew (built, unlinked until review; skipped if he/index.html is missing)
-# Oct 17 ~7:10 PM: APPROVED HERO POSITION. Earth/other themes: HERO_OFFSET lifts the flex-centered block.
-# Space theme: hero-themes.js placeTitleBlock() centers the title BETWEEN the nav bottom and the fixed moon horizon
-# (equal gaps); HERO_OFFSET is ignored there via CSS overrides. See NOTES.md 'Approved hero position'.
+# Oct 17 2026 — LOCKED / OWNER-APPROVED HERO POSITION (iPad landscape reference).
+# Owner: "Excellent. Set distance for future reference." Do not change without her ask.
+# Space theme: placeTitleBlock() in assets/hero-themes.js centers the title block (kicker→buttons) between the
+#   nav bottom and the scene's fixed horizon hY (equal gaps). Horizon is frozen so moons/planets do not move.
+#   Measured gaps: iPad-L 76/76.6, iPad-P 272/271.6, Mac 86/86. Ref shot: /workspace/wow-shots/approved/home-hero-ipad-l-approved.png
+# Earth/other themes (no horizon): HERO_OFFSET lifts the flex-centered block. Future themes MUST reuse this rule —
+#   with a horizon: center between nav bottom and that horizon; without: use HERO_OFFSET. See NOTES.md.
 HERO_OFFSET = '4vh'
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
 ANCHOR_UTC = 'Date.UTC(2026,9,12,10)'  # Mon 12 Oct 2026 00:00 HST
