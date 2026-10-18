@@ -6,3 +6,27 @@ Contact.html
 Solutions.html
 Amazing_Facts.html
 Ways_to_Help.html
+# Hub pages (Oct 17 2026, phase 2):
+Oceans.html
+Lakes.html
+Rivers.html
+Deforestation.html
+Space.html
+Space_Disposal.html
+Planetary_Defense.html
+Space_Weather.html
+Earth_Observation.html
+Project-Rawane.html
+# Solution batch 1 (Oct 17 2026): 12 newest
+Parker_Solar_Probe.html
+SOHO.html
+Meteosat_Third_Generation.html
+CryoSat.html
+SMAP.html
+GCOM-C.html
+International_Coastal_Cleanup.html
+The_SeaCleaners.html
+London_Tideway_Tunnel.html
+Penobscot_River_Restoration.html
+Kissimmee_River_Restoration.html
+WeForest.html

@@ -712,3 +712,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - **Done (live, unlinked):** core pages: index.html, About.html (incl. #cohost + Cc), Contact.html, Solutions.html (all 175 cards), Amazing_Facts.html, Ways_to_Help.html, plus shared nav/footer strings.
 - **Left:** all 175 individual solution pages, the hub pages (Oceans, Lakes, Rivers, Deforestation, Space, Space_Disposal, Planetary_Defense, Space_Weather, Earth_Observation, Project-Rawane) and the other site pages in i18n/pages.txt (~200). Solutions.html card text is already in he.json, so each solution page's summary lines are partly done. Also still English inside Hebrew pages: JS UI strings (i18n/ui.json has no 'he' block yet).
 - Oct 17 follow-up: he.json fixes (Solutions→פתרונות in nav, hero title spacing). Policy (user): Hebrew translated neutrally, no political framing or added context.
+
+## Hebrew phase 2 (Oct 17 2026)
+- ui.json: he block added. he.json: 10 hub pages and the 12 newest solutions added, plus {x} pattern strings. Nav brand is "דף הבית - Saving Planets", matching the /ar/ pattern.
+- /he/ now has 28 pages, still UNLINKED (HE_PUBLIC=False). Citations and NGSS text stay in English by design.
+- Remaining: about 163 solution pages plus other site pages. Add them to i18n/he-pages.txt in batches of about 25.
