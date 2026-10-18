@@ -767,3 +767,7 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 
 ## Oct 17 2026: Hebrew non-solution pages batch 2 (last)
 - Sitemap, Kids_Map, Lesson_Builder, Satellite_Explorer, Privacy, Editorial_Policy, Corrections, Topics translated (334 strings). All of i18n/pages.txt now in he-pages.txt. NGSS/CCSS standards statements left in English as on other he pages. HE_PUBLIC still False.
+
+## Oct 17 2026: search index rebuild + myth count sync
+- Rebuilt Pagefind + semantic index (en/fr/es/ar/it; he excluded while HE_PUBLIC=False). Search.html inline corpus: "ia" -> "si" (fr/es/it); stale TM values fixed.
+- Myth vs Fact count: Project-Rawane "New" callout said 7, page has 21 myth cards. new-callout.json now uses {myths}; build-batch4.py counts class="myth-card" on Myth_vs_Fact.html and syncs i18n entries. Updated en/fr/es/ar/it/he Project-Rawane.

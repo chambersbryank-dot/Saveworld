@@ -147,6 +147,17 @@ if "'Community.html'" not in bs:
 
 # ---- 'New' callout (assets/data/new-callout.json), placed right under the page hero
 N = json.load(open('assets/data/new-callout.json', encoding='utf8'))
+# Oct 17: '{myths}' in the callout text = live count of myth cards on Myth_vs_Fact.html; i18n entries are kept in sync from the existing translation.
+MYTHS = open('Myth_vs_Fact.html', encoding='utf8').read().count('class="myth-card"')
+if '{myths}' in N['text']:
+    _tpl = N['text']; N['text'] = _tpl.replace('{myths}', str(MYTHS))
+    _rx = re.compile('^' + re.escape(_tpl).replace(re.escape('{myths}'), r'\d+') + '$')
+    for _l in ('fr', 'es', 'ar', 'it', 'he'):
+        _p = f'i18n/{_l}.json'; _m = json.load(open(_p, encoding='utf8'))
+        _old = [k for k in _m if _rx.match(k)]
+        if _old and N['text'] not in _m:
+            _m[N['text']] = re.sub(r'\d+', str(MYTHS), _m[_old[0]], count=1)
+            json.dump(_m, open(_p, 'w', encoding='utf8'), ensure_ascii=False, indent=0)
 f = N['page']; s = open(f, encoding='utf8').read()
 s = re.sub(r'<!-- NEW-CALLOUT:START -->.*?<!-- NEW-CALLOUT:END -->\n?', '', s, flags=re.S)
 if N.get('enabled'):

@@ -3,7 +3,7 @@
   "enabled": true,
   "page": "Project-Rawane.html",
   "badge": "New",
-  "text": "New update on the Myth vs Fact page: 7 doom myths checked against NASA, NOAA and ESA.",
+  "text": "New update on the Myth vs Fact page: {myths} doom myths checked against NASA, NOAA and ESA.",
   "link": "Myth_vs_Fact.html",
   "link_text": "See Myth vs Fact",
   "date": "2026-10-11",
