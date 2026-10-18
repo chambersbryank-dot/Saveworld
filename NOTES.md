@@ -689,6 +689,13 @@ Fix: build-home-extras.py now removes any unmarked copy of the video and puts it
 ## 2026-10-17 Homepage hero title centered
 build-hero-themes.py: in the space hero the title block (slogan, title, line, buttons) is centered horizontally and vertically over the Enceladus/moons scene, with the buttons centered too. It keeps the existing scrim and text-shadow. CSS v=20261017d.
 
+## 2026-10-17 ~7:27 PM HST Earthrise caption: larger-than-scale note
+Owner: caption is correct; add that we increased Earth's size to show how beautiful it is.
+- Appended to the Earthrise (scene 1) caption in `scripts/build-hero-themes.py` CAPS for en/fr/es/ar/it/he. Enceladus caption unchanged.
+- EN: "… · Earth shown larger than true scale to celebrate how beautiful our planet is"
+- Caption pill CSS: height auto (was fixed 44px) so the longer line can wrap; placeCaption still dodges the title / Help button.
+- Translations by SI; FR/AR pending Rawane, HE pending native review, IT pending Italian reviewer.
+
 ## 2026-10-17 ~7:18 PM HST Approved hero position — LOCKED
 Owner (iPad landscape): **"Excellent. Set distance for future reference."**
 - **LOCKED rule (space theme):** `placeTitleBlock()` centers the title block (eyebrow → headline → slogan → buttons) between the **nav bottom** and the **fixed moon horizon** `hY`, with equal gaps above and below. Horizon/`hY` is frozen to the viewport (`layoutCb`), so Saturn / Enceladus / other moons do not move when the title moves. Plumes extend to the title.

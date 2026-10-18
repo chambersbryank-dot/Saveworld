@@ -64,12 +64,19 @@ JSV = hashlib.sha1(open('assets/hero-themes.js', 'rb').read()).hexdigest()[:8]  
 # jets of water vapor and ice particles; global subsurface saltwater ocean; jets from the "tiger stripe" fractures) and
 # NASA "Apollo 8: Earthrise" (nasa.gov/image-article/apollo-8-earthrise/: Bill Anders, Dec 24 1968, first crewed lunar orbit).
 CAPS = {
-  'en': ('Enceladus: jets of water vapor and ice from a hidden ocean', 'Earthrise from lunar orbit, first seen by Apollo 8 in 1968'),
-  'fr': ("Encelade : des jets de vapeur d'eau et de glace venus d'un océan caché", "Lever de Terre depuis l'orbite lunaire, vu pour la première fois par Apollo 8 en 1968"),
-  'es': ('Encélado: chorros de vapor de agua y hielo de un océano oculto', 'Salida de la Tierra desde la órbita lunar, vista por primera vez por el Apolo 8 en 1968'),
-  'ar': ('إنسيلادوس: نفثات من بخار الماء والجليد من محيط خفي', 'شروق الأرض من مدار القمر، كما رآه طاقم أبولو 8 لأول مرة عام 1968'),
-  'it': ("Encelado: getti di vapore acqueo e ghiaccio da un oceano nascosto", "Il sorgere della Terra dall'orbita lunare, visto per la prima volta dall'Apollo 8 nel 1968"),
-  'he': ('אנקלדוס: סילוני אדי מים וקרח מאוקיינוס נסתר', 'זריחת כדור הארץ ממסלול סביב הירח, שנצפתה לראשונה על ידי Apollo 8 ב-1968'),
+  # Oct 17 (owner): Earthrise caption keeps the Apollo 8 fact; add a short note that Earth is shown larger than true scale.
+  'en': ('Enceladus: jets of water vapor and ice from a hidden ocean',
+         'Earthrise from lunar orbit, first seen by Apollo 8 in 1968 · Earth shown larger than true scale to celebrate how beautiful our planet is'),
+  'fr': ("Encelade : des jets de vapeur d'eau et de glace venus d'un océan caché",
+         "Lever de Terre depuis l'orbite lunaire, vu pour la première fois par Apollo 8 en 1968 · Terre agrandie pour célébrer la beauté de notre planète"),
+  'es': ('Encélado: chorros de vapor de agua y hielo de un océano oculto',
+         'Salida de la Tierra desde la órbita lunar, vista por primera vez por el Apolo 8 en 1968 · Tierra ampliada para celebrar lo hermoso que es nuestro planeta'),
+  'ar': ('إنسيلادوس: نفثات من بخار الماء والجليد من محيط خفي',
+         'شروق الأرض من مدار القمر، كما رآه طاقم أبولو 8 لأول مرة عام 1968 · الأرض معروضة أكبر من مقياسها الحقيقي احتفاءً بجمال كوكبنا'),
+  'it': ("Encelado: getti di vapore acqueo e ghiaccio da un oceano nascosto",
+         "Il sorgere della Terra dall'orbita lunare, visto per la prima volta dall'Apollo 8 nel 1968 · Terra ingrandita per celebrare quanto sia bella"),
+  'he': ('אנקלדוס: סילוני אדי מים וקרח מאוקיינוס נסתר',
+         'זריחת כדור הארץ ממסלול סביב הירח, שנצפתה לראשונה על ידי Apollo 8 ב-1968 · כדור הארץ מוצג גדול יותר ממידתו האמיתית כדי לחגוג כמה שהוא יפה'),
 }
 CAP_HREF = ('Enceladus.html', 'Artemis_II.html')  # Oct 16: Enceladus caption -> the Enceladus page; Earthrise -> Artemis II (crewed flight around the Moon)
 
@@ -88,10 +95,11 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        'max-width:calc(100% - 13rem);padding:.22rem .6rem;border-radius:999px;background:rgba(0,10,22,.74);'
        'color:rgba(255,255,255,.94);font-size:.75rem;line-height:1.3;text-shadow:none}'
        # Oct 16 7:12 PM: scene caption, stacked above the credit at the same inline-start corner; fades with the scenes.
-       '.hero[data-hero=space] .hs-caps{display:block;position:absolute;inset-inline-start:.8rem;bottom:2.8rem;z-index:2;width:min(30rem,calc(100% - 13rem));height:44px}'
+       '.hero[data-hero=space] .hs-caps{display:block;position:absolute;inset-inline-start:.8rem;bottom:2.8rem;z-index:2;width:min(30rem,calc(100% - 13rem));height:auto;min-height:44px}'
        '.hs-cap{position:absolute;inset-inline-start:0;bottom:0;display:inline-flex;align-items:center;gap:.5rem;min-height:44px;box-sizing:border-box;'
-       'width:max-content;max-width:100%;padding:.5rem .95rem;border-radius:22px;background:rgba(0,10,22,.78);border:1px solid rgba(255,255,255,.22);'
-       'color:#fff!important;font-size:.88rem;font-weight:600;line-height:1.25;text-decoration:none!important;'
+       'width:max-content;max-width:100%;padding:.5rem .95rem;border-radius:16px;background:rgba(0,10,22,.78);border:1px solid rgba(255,255,255,.22);'
+       'color:#fff!important;font-size:.88rem;font-weight:600;line-height:1.3;text-decoration:none!important;'
+       '.hs-cap > span:first-child{flex:1;min-width:0;text-wrap:pretty}'
        'opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .9s ease,transform .9s ease,visibility 0s linear .9s}'
        '.hs-cap.on{opacity:1;visibility:visible;transform:none;transition:opacity .9s ease,transform .9s ease,visibility 0s}'
        '.hs-cap:hover{background:rgba(0,30,56,.88);border-color:rgba(143,211,255,.6)}'
