@@ -208,3 +208,11 @@ Rawanes_Mission_Log.html
 Find_a_Cleanup.html
 Glossary.html
 Teachers.html
+Sitemap.html
+Kids_Map.html
+Lesson_Builder.html
+Satellite_Explorer.html
+Privacy.html
+Editorial_Policy.html
+Corrections.html
+Topics.html

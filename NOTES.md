@@ -764,3 +764,6 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 
 ## Oct 17 2026: Hebrew non-solution pages batch 1
 - 404, Search, Press, Myth_vs_Fact, Rawanes_Mission_Log, Find_a_Cleanup, Glossary, Teachers translated (343 strings). Standards codes left as-is. HE_PUBLIC still False.
+
+## Oct 17 2026: Hebrew non-solution pages batch 2 (last)
+- Sitemap, Kids_Map, Lesson_Builder, Satellite_Explorer, Privacy, Editorial_Policy, Corrections, Topics translated (334 strings). All of i18n/pages.txt now in he-pages.txt. NGSS/CCSS standards statements left in English as on other he pages. HE_PUBLIC still False.
