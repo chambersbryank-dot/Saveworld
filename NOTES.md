@@ -738,3 +738,4 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Batch 4 (25 solutions, GEDI–Jupiter) added.
 - Batch 5 (25 solutions, Justdiggit–OCO-2) added.
 - Batch 6 (25 solutions, OSIRIS-APEX–River_Cleanup) added.
+- Batch 7 (25 solutions, SARSAT–Three_Shields) added.
