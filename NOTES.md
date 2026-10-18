@@ -725,3 +725,4 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - /he/ now has 28 pages, still UNLINKED (HE_PUBLIC=False). Citations and NGSS text stay in English by design.
 - Remaining: about 163 solution pages plus other site pages. Add them to i18n/he-pages.txt in batches of about 25.
 - Batch 2 (25 solutions, 4ocean–ClearSpace) added. Fixed the first SI mention on index (cohost line) so it reads "SI (בינה סינתטית)".
+- Batch 3 (25 solutions, Comet_Interceptor–FreshWater_Watch) added.
