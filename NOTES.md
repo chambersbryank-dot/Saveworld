@@ -792,3 +792,5 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - langs.pages_for(he) now also builds pages that fr/es/ar/it get from separate generators (Learn, labs, calculators...), translated from the EN output.
 - scripts/he-attr-i18n.py (+weekly-sync): translates data-t JSON tables and data-* UI messages on he/ pages via he.json.
 - 12 pages: Changelog, Play_and_Learn, Orbit_Lab, Aero_Lab, Calculators, Homeschool, Physics_Lab, SI_Helper, Spot_the_Fire, AP_IB_Physics, Aero_Guide, Physics_Guide.
+
+- 2026-10-17: Hebrew batch B: 15 calculator/Learn/Cadets/Careers/Orbits_Guide pages translated and added to he-pages.txt (HE_PUBLIC still False). Careers BLS occupation link titles remain English.
