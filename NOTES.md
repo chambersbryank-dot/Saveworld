@@ -180,6 +180,28 @@ Sources: earthdata.nasa.gov EMIT/GEDI/OCO-3; nasa.gov OCO-2 launch + PREFIRE + L
 Dropped 10-17: NASA TROPICS (mission completed), CYGNSS (status not on page), ICEYE (no impact figures, defense-heavy), GHGSat (site JS-only, no figures readable), Green Belt Movement (tree total not on its pages), Proba-3 / SWFO-L1 (already handled).
 Sources: science.nasa.gov/mission/parker-solar-probe/ + .../nasas-parker-solar-probe-makes-history-with-closest-pass-to-sun/; esa.int SOHO_overview2; science.nasa.gov/mission/soho/; esa.int meteosat_third_generation (+ Lightning_Imager, MTG-I2_completes_Europe_s_latest_weather_trio); esa.int CryoSat (+ Facts_and_figures, 85_new_subglacial_lakes_detected_below_Antarctica); jpl.nasa.gov/missions/soil-moisture-active-passive-smap/; smap.jpl.nasa.gov; global.jaxa.jp/projects/sat/gcom_c/; oceanconservancy.org/trash-free-seas/international-coastal-cleanup/; theseacleaners.org; tideway.london/the-tunnel/; penobscotriver.org; sfwmd.gov/our-work/kissimmee-river; earthobservatory.nasa.gov/world-of-change/AralSea; monolake.org/learn/aboutmonolake/saving-mono-lake/; weforest.org/about-us/.
 
+**Batch 2026-10-18** (16, ~5:00 AM HST run). Nothing built; awaiting owner yes/no. Checked against all *.html and the 10-13/10-15/10-17 queues; no repeats. Org/company/government figures labeled as such. China- and Russia-led programs excluded.
+| ID | Candidate | Hub | Widget | Status |
+|---|---|---|---|---|
+| A | Voyager 1 & 2 (NASA; launched 1977; Voyager 1 reaches one light-day, 16.094B mi, 18 Nov 2026) | Space / Project Rawane | Yes, countdown to 18 Nov 2026 | PENDING |
+| B | FORUM (ESA Earth Explorer; first far-infrared outgoing-radiation measurements; launch 2028, Vega-C) | Earth Observation | Yes, horizon to launch | PENDING |
+| C | CIMR (ESA Copernicus; polar sea ice/SST/salinity, 95% of globe daily; CIMR-A 2029, B 2035) | Earth Observation (+ Oceans) | Yes, horizon to launch | PENDING |
+| D | CRISTAL (ESA Copernicus; sea-ice thickness + snow depth; launch 2028 per ESA SUP, earlier "2H 2027") | Earth Observation (x-link CryoSat) | Yes, horizon to launch | PENDING (flag: date slipped; cite both) |
+| E | CHIME (ESA Copernicus; hyperspectral, 200+ bands, food security) | Earth Observation (+ Forests/food) | Maybe (launch date not on ESA pages read) | PENDING |
+| F | GeoXO (NOAA/NASA; next-gen GEO weather; first launch 2032, 4 satellites, ops into 2050s) | Earth Observation (x-link GOES-19) | Yes, horizon to 2032 | PENDING (flag: OIG 2026 continuity-gap risk) |
+| G | INSAT-3DS (ISRO/MoES; GEO weather; launched 17 Feb 2024; search-and-rescue transponder) | Earth Observation (x-link SARSAT) | Yes, operational | PENDING |
+| H | Galileo + SAR/Galileo (ESA/EU; MEO 23,222 km, 30-satellite design, 5B+ users; SAT 33/34 in service Jul 2026) | Earth Observation (x-link SARSAT) | Yes, L14 done; remaining launches | PENDING (flag: overlaps SARSAT MEOSAR) |
+| I | Ariel (ESA; 1,000 exoplanet atmospheres from Sun-Earth L2; launch 2031) | Space | Yes, horizon to launch | PENDING |
+| J | Forest elephants as carbon gardeners (natural; Nature Geoscience 2019: +26-60 t/ha biomass) | Forests | No | PENDING (flag: no donate partner verified yet) |
+| K | Yellowstone wolves (NPS; reintroduced 1995; 84+ wolves Jan 2026; trophic cascade) | Forests (+ Rivers, x-link Beavers) | No | PENDING (donate path: Yellowstone Forever) |
+| L | Coral Vita (company; land-based coral farms, Grand Bahama; 100,000+ corals, 52 species) | Oceans | No | PENDING (flag: overlaps Coral_Gardeners/CRF/Coral_IVF) |
+| M | Arbor Day Foundation (nonprofit; 500M+ trees since 1972, 60+ countries) | Forests | No | PENDING |
+| N | Namami Gange (India, Ministry of Jal Shakti; 4,263 MLD sewage treatment created; Clean Ganga Fund) | Rivers | No | PENDING (government figures) |
+| O | Clean Lakes Alliance (nonprofit; Yahara lakes, Madison WI; 81 monitoring stations, $1.4M+ grants) | Lakes | No | PENDING (flag: some advocacy, cf. Mono Lake rejection) |
+| P | Sea Turtle Conservancy (nonprofit; 8 countries, 550+ turtles tagged, 1,200+ researchers trained) | Oceans | No | PENDING |
+Dropped 10-18: NASA Terra (status page says "early 2020s", stale), Rhine salmon / ICPR (agency, no donate path), Ecosia (site blocked automated read), National Forest Foundation + Woodland Trust (impact totals not on pages read), ESA Harmony (page not found), ESA Smile (China co-led).
+Sources: science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/ + /mission-overview/ + blogs/voyager/2026/08/04/...; esa.int FutureEO/FORUM; esa.int Copernicus/CIMR + CIMR_facts_and_figures; esa.int CRISTAL_prepares_to_sparkle + Plans_underway_for_new_polar_ice_and_snow_topography_mission, sup.apex.esa.int/en/missions/cristal; sup.apex.esa.int/en/missions/chime; nesdis.noaa.gov geoxo-timeline + geostationary-extended-observations-geoxo; isro.gov.in GSLV-F14_INSAT-3DS_mission + INSAT-3DS_imaging_Earth, pib.gov.in PRID=2006794; esa.int Two_new_Galileo_satellites_enter_service + Galileo_satellites; esa.int Science_Exploration/Space_Science/Ariel; nature.com/articles/s41561-019-0395-6; nps.gov/yell/learn/management/wolf.htm + wolfreport_95-96_508.pdf, sciencedirect S0006320711004046; coralvita.co + /adopt-a-coral-program/; arborday.org/our-impact + news/500-million-trees...; pib.gov.in PRID=2280512; cleanlakesalliance.org 2024 Impact Report PDF; conserveturtles.org.
+
 ## Oct 13 approvals (owner voice session)
 1. Merge Related Solutions + "Next: Explore Another Solution" into one more-list.
 2. Homepage "minus the doom": keep it in only the strip or only the headline, not both.
