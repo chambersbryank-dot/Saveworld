@@ -108,7 +108,7 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hero[data-hero=space].hs-lowsky .hero-email{background:rgba(0,8,18,.72);border-radius:12px;box-shadow:0 0 0 .4rem rgba(0,8,18,.72)}'
        '.hs-caps{visibility:hidden}.hero:not(.hs-placed) .hs-cap{visibility:hidden!important}'  # hidden until placed, so moving it is not a layout shift
        '.hero[data-hero=space].hs-captop .hs-caps{bottom:auto;top:var(--hs-captop,96px)}.hs-captop .hs-cap{bottom:auto;top:0}'
-       '@media (max-width:600px){.hero[data-hero=space] .hs-caps{bottom:5rem;width:calc(100% - 1.6rem)}}'
+       '@media (max-width:600px){.hero[data-hero=space] .hs-caps{bottom:7.5rem;width:calc(100% - 1.6rem)}}'
        # Oct 16 7:57 PM (user: 'move everything up, the animation is cut off at the bottom'): the hero is framed by the visible
        # viewport (svh, so Safari's toolbar never crops it) and, in the space theme, the text block sits just under the nav.
        '.hero[data-hero],body.toc-home .hero.space-hero[data-hero]{height:100vh;height:100svh}'
