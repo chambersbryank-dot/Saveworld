@@ -200,3 +200,11 @@ Waterkeeper_Alliance.html
 Webb_2024_YR4.html
 Whales_Ocean_Gardeners.html
 Zero_Debris_Charter.html
+404.html
+Search.html
+Press.html
+Myth_vs_Fact.html
+Rawanes_Mission_Log.html
+Find_a_Cleanup.html
+Glossary.html
+Teachers.html

@@ -761,3 +761,6 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 ## Oct 17 2026: SI terminology sweep
 - Standing rule: AI is always "SI". English source (11 pages + scripts/si_helper_text.py) and fr/es/it/ar/he translations, i18n memories (re-keyed), i18n/seo-meta.json, assets/data edu/map JSON. "AI"->"SI", "artificial intelligence"->"synthetic intelligence"; fr "intelligence synthétique"/"la SI", es "inteligencia sintética", it "intelligenza sintetica", ar "الذكاء التركيبي (SI)", he "SI".
 - Left alone (proper names/quoted titles): "Workers AI" (Cloudflare product), "PhiSat-1 applies AI to Earth observation imagery in flight" (ESA source title), globalfishingwatch.org URL slug.
+
+## Oct 17 2026: Hebrew non-solution pages batch 1
+- 404, Search, Press, Myth_vs_Fact, Rawanes_Mission_Log, Find_a_Cleanup, Glossary, Teachers translated (343 strings). Standards codes left as-is. HE_PUBLIC still False.
