@@ -203,6 +203,11 @@ html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:4
 }
 @media (prefers-reduced-motion:reduce){html body nav#topnav,#topnav *,#topnav::before{transition:none !important}}
 @media (forced-colors:active){#topnav .spn-sub,#topnav .spn-panel{border:1px solid CanvasText}}
+/* Oct 18 (video capture): the Roman 'On this page' chips (nav.roman-jump) were caught by the old body.toc-sub nav{position:fixed;top:0}
+   rule and sat over the header. They now stick BELOW the header (--spn-h is the live header height, set in the JS below). Phone: one scrollable row. */
+html body nav.roman-jump{position:sticky !important;top:var(--spn-h,64px) !important;left:auto;right:auto;z-index:900 !important;height:auto !important;max-width:none;margin:1rem 0 0;padding:.5rem clamp(12px,2.2vw,32px);background:rgba(7,16,24,.94) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;box-shadow:0 4px 14px rgba(0,0,0,.3) !important;border:0 !important;transition:none !important}
+body.roman-page [id]{scroll-margin-top:calc(var(--spn-h,64px) + 76px)}
+@media (max-width:760px){html body nav.roman-jump{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}html body nav.roman-jump a{flex:none;white-space:nowrap}}
 /* SPNAV:END */
 """
 JS = r"""
@@ -229,6 +234,8 @@ document.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Es
 var mqc=function(){panel(false)};if(mq.addEventListener)mq.addEventListener('change',mqc);else if(mq.addListener)mq.addListener(mqc);
 var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.pageYOffset||0)>24)}/* Oct 16 perf: pageYOffset needs no layout; first check after paint */
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});if(window.pageYOffset>24)requestAnimationFrame(sc);
+/* Oct 18: --spn-h = live header height, so sticky bars (e.g. nav.roman-jump) sit below the header, never over it */
+var de=document.documentElement;function hh(){de.style.setProperty('--spn-h',n.offsetHeight+'px')}hh();if(window.ResizeObserver)new ResizeObserver(hh).observe(n);else window.addEventListener('resize',hh);
 /* Oct 16 (t886) language slide switches: tap, drag/swipe (pointer events), Space/Enter, arrow toward 'on'. One on at a time;
    turning one on goes to that language's version of this page, keeping ?query and #hash. RTL: on = thumb left (mirrored). */
 var rtl=(document.documentElement.getAttribute('dir')||'').toLowerCase()==='rtl',rm=window.matchMedia('(prefers-reduced-motion: reduce)');

@@ -2,6 +2,8 @@
 - distance from Earth: JPL Horizons (NASA/JPL), spacecraft -211, geocentric range 'delta' at 00:00 UTC today. Webb (-170) for comparison.
 - newest NASA image: NASA Image and Video Library search 'Roman Space Telescope' (newest date_created).
 Also refreshes the static fallback between <!-- ROMAN-LIVE:START/END --> in Nancy_Grace_Roman.html.
+Oct 18: the newest image is saved as assets/roman-latest.jpg (NASA public domain thumb, saved byte-for-byte) and written into the page
+between <!-- ROMAN-IMG:START/END --> with loading=eager, so the box never shows blank while waiting on images-assets.nasa.gov or roman.js.
 Network failure: keeps the previous JSON (never invents a value)."""
 import json, os, re, urllib.request, urllib.parse, datetime
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
@@ -33,6 +35,12 @@ try:
         'credit': (x.get('photographer') or x.get('secondary_creator') or 'NASA').strip(), 'thumb': thumb.replace('http://', 'https://'),
         'url': 'https://images.nasa.gov/details/' + x['nasa_id']}
 except Exception as e: print('roman: NASA Images failed, kept previous:', e)
+IMG = 'assets/roman-latest.jpg'
+if d.get('image', {}).get('thumb') and (d['image'].get('local_id') != d['image']['nasa_id'] or not os.path.exists(IMG)):
+    try:
+        b = urllib.request.urlopen(urllib.request.Request(d['image']['thumb'], headers={'User-Agent': 'Mozilla/5.0 (savingplanets-sync)'}), timeout=40).read()
+        if b[:3] == b'\xff\xd8\xff': open(IMG, 'wb').write(b); d['image']['local_id'] = d['image']['nasa_id']
+    except Exception as e: print('roman: image download failed, kept previous:', e)
 d['updated'] = day
 if d != old:
     json.dump(d, open(OUT, 'w'), indent=1, ensure_ascii=False); open(OUT, 'a').write('\n')
@@ -42,5 +50,13 @@ if os.path.exists(PAGE) and 'distance' in d:
     blk = (f'<!-- ROMAN-LIVE:START --><p class="roman-big"><span id="roman-km">{dist["km"]:,}</span> km</p>'
            f'<p class="roman-sub">about <span id="roman-mi">{dist["mi"]:,}</span> miles from Earth, as of <span id="roman-asof">{lab}</span> (00:00 UTC)</p><!-- ROMAN-LIVE:END -->')
     n = re.sub(r'<!-- ROMAN-LIVE:START -->.*?<!-- ROMAN-LIVE:END -->', blk, s, flags=re.S)
+    im = d.get('image') or {}
+    if im.get('local_id') and os.path.exists(IMG):
+        from html import escape as E
+        fig = (f'<!-- ROMAN-IMG:START --><figure id="roman-latest"><a href="{E(im["url"])}" target="_blank" rel="noreferrer">'
+               f'<img id="roman-latest-img" src="{IMG}?v={E(im["local_id"])}" data-id="{E(im["local_id"])}" alt="Newest Roman photo in NASA\'s image library" width="640" height="427" loading="eager" decoding="async"></a>'
+               f'<figcaption>Newest Roman photo in NASA\'s image library: <span id="roman-latest-title">{E(im["title"])}</span> (<span id="roman-latest-date">{E(im["date"])}</span>). '
+               f'Credit: <span id="roman-latest-credit">{E(im["credit"])}</span>.</figcaption></figure><!-- ROMAN-IMG:END -->')
+        n = re.sub(r'<!-- ROMAN-IMG:START -->.*?<!-- ROMAN-IMG:END -->', lambda _: fig, n, flags=re.S)
     if n != s: open(PAGE, 'w', encoding='utf8').write(n)
 print('roman:', d.get('distance', {}).get('km'), 'km;', d.get('image', {}).get('nasa_id'))

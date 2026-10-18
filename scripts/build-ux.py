@@ -250,6 +250,13 @@ html.dark .dom-card{background:#13232f}
 @media (min-width:601px){body.toc-home #solutions.card-band>.grid{display:flex;flex-wrap:wrap;justify-content:center}
 body.toc-home #solutions.card-band>.grid>.card{flex:1 1 200px;max-width:min(100%,360px)}}
 html.sp-has-lb .sticky-help{bottom:calc(var(--sp-lb-h,0px) + 12px)!important}
+/* Oct 18 (video capture): floating Help/Donate and Superpowers buttons covered the 'Where' card / Orbit Lab edge. While one sits over a card,
+   control or media it slides out of the way (fab-off, set in the JS below) and comes back over clear space; keyboard focus always shows it. */
+.sticky-help,.spow-b{transition:transform .25s ease,opacity .25s ease}
+.sticky-help.fab-off:not(:focus-visible),.spow-b.fab-off:not(:focus-visible){transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.sticky-help,.spow-b{transition:none}}
+main{padding-bottom:max(var(--fab-pad,0px),0px)}html.sp-fab main{--fab-pad:72px}
+#roman-latest img{display:block;width:100%;height:auto;aspect-ratio:640/427;object-fit:cover;background:#0d2238;border-radius:10px}
 .news-list li{border-bottom-color:rgba(127,127,127,.35)}.news-list time{color:#4fc3ff}
 /* UX-OCT15:END */
 """
@@ -272,11 +279,19 @@ JS = r"""
   var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
   var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
 })();
+(function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
+ var fabs=[],tk=false;/* looked up on every pass: the Superpowers button is added later by the kids script */
+ function hit(f){if(f.classList.contains('spow-b')&&f.getAttribute('aria-expanded')==='true')return false;var r=f.getBoundingClientRect();if(!r.width)return false;
+  var y0=f.classList.contains('fab-off')?window.innerHeight-r.height/2-16:r.top+r.height/2,pts=[[r.left+4,y0-r.height/2+4],[r.right-4,y0-r.height/2+4],[r.left+r.width/2,y0],[r.left+4,y0+r.height/2-4],[r.right-4,y0+r.height/2-4]];
+  for(var i=0;i<pts.length;i++){var es=document.elementsFromPoint(pts[i][0],pts[i][1]);for(var j=0;j<es.length;j++){var e=es[j];if(e===f||f.contains(e)||fabs.indexOf(e)>-1)continue;if(e.closest&&e.closest(sel))return true}}return false}
+ function run(){tk=false;fabs=[].slice.call(document.querySelectorAll('.sticky-help,.spow-b'));if(fabs.length)document.documentElement.classList.add('sp-fab');fabs.forEach(function(f){f.classList.toggle('fab-off',hit(f))})}
+ function q(){if(!tk){tk=true;requestAnimationFrame(run)}}window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);document.addEventListener('click',function(){setTimeout(q,50)});setTimeout(run,300);
+})();
 /* UX-OCT15:END */
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261018c"  # bump when styles.css changes
+STYLEV = "20261018d"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

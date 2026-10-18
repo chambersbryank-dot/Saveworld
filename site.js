@@ -371,6 +371,14 @@
   var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
   var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
 })();
+(function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
+ var fabs=[],tk=false;/* looked up on every pass: the Superpowers button is added later by the kids script */
+ function hit(f){if(f.classList.contains('spow-b')&&f.getAttribute('aria-expanded')==='true')return false;var r=f.getBoundingClientRect();if(!r.width)return false;
+  var y0=f.classList.contains('fab-off')?window.innerHeight-r.height/2-16:r.top+r.height/2,pts=[[r.left+4,y0-r.height/2+4],[r.right-4,y0-r.height/2+4],[r.left+r.width/2,y0],[r.left+4,y0+r.height/2-4],[r.right-4,y0+r.height/2-4]];
+  for(var i=0;i<pts.length;i++){var es=document.elementsFromPoint(pts[i][0],pts[i][1]);for(var j=0;j<es.length;j++){var e=es[j];if(e===f||f.contains(e)||fabs.indexOf(e)>-1)continue;if(e.closest&&e.closest(sel))return true}}return false}
+ function run(){tk=false;fabs=[].slice.call(document.querySelectorAll('.sticky-help,.spow-b'));if(fabs.length)document.documentElement.classList.add('sp-fab');fabs.forEach(function(f){f.classList.toggle('fab-off',hit(f))})}
+ function q(){if(!tk){tk=true;requestAnimationFrame(run)}}window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);document.addEventListener('click',function(){setTimeout(q,50)});setTimeout(run,300);
+})();
 /* UX-OCT15:END */
 /* PLAY:START */
 (function(){var K='sp-play-v1',P=['Kids_Map','Spot_the_Fire','Satellite_Explorer','Amazing_Facts','Myth_vs_Fact','Glossary'];
@@ -406,6 +414,8 @@ document.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Es
 var mqc=function(){panel(false)};if(mq.addEventListener)mq.addEventListener('change',mqc);else if(mq.addListener)mq.addListener(mqc);
 var tk=false;function sc(){tk=false;n.classList.toggle('spn-solid',(window.pageYOffset||0)>24)}/* Oct 16 perf: pageYOffset needs no layout; first check after paint */
 window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});if(window.pageYOffset>24)requestAnimationFrame(sc);
+/* Oct 18: --spn-h = live header height, so sticky bars (e.g. nav.roman-jump) sit below the header, never over it */
+var de=document.documentElement;function hh(){de.style.setProperty('--spn-h',n.offsetHeight+'px')}hh();if(window.ResizeObserver)new ResizeObserver(hh).observe(n);else window.addEventListener('resize',hh);
 /* Oct 16 (t886) language slide switches: tap, drag/swipe (pointer events), Space/Enter, arrow toward 'on'. One on at a time;
    turning one on goes to that language's version of this page, keeping ?query and #hash. RTL: on = thumb left (mirrored). */
 var rtl=(document.documentElement.getAttribute('dir')||'').toLowerCase()==='rtl',rm=window.matchMedia('(prefers-reduced-motion: reduce)');
