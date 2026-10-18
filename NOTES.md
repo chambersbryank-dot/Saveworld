@@ -804,3 +804,9 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - P-18 site.js SPOW block: Superpowers panel on kids pages (read aloud via browser speechSynthesis, matching-language voice only; bigger text; easy-read font per BDA guidance (Verdana stack, spacing; no letter-spacing on ar/he); high contrast; calm motion; tap instead of drag). Settings in localStorage sp-pow-v1. Also records visited pages for the passport.
 - Play & Learn: <!-- KIDSP1 --> "New" row (marker added to i18n-build/i18n-check normalize).
 - STYLEV -> 20261017h.
+
+## Oct 17 2026 (HST): Hebrew noindex meta normalized in generators
+- Every `/he/` page must carry `<meta name="robots" content="noindex,nofollow">` while `HE_PUBLIC = False` in `scripts/langs.py`.
+- BeautifulSoup in `i18n-build.py` was rewriting the tag to content-first attribute order (`content` before `name`), so checkers looking for `name="robots" content="noindex..."` reported misses (including `he/Play_and_Learn.html`) even though noindex was present.
+- Fix (generators only): `langs.ensure_hidden_robots()` re-asserts the canonical name-first tag when `HE_PUBLIC` is False. Wired into `i18n-build.py` (after soup write), `build-kids-p1.py` (shell + wr), `build-map-he.py`, and a guard in `seo-fix.py` so an accidental `seo-fix he` cannot mark `/he/` indexable. Swept all 241 `he/*.html` pages.
+- Verified: 0 Hebrew pages lack name-first noindex; 0 `/he/` URLs in `sitemap.xml`; 0 `hreflang="he"` on public pages.

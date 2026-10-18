@@ -7,6 +7,7 @@ canonical/og:url, hreflang set incl. x-default, og:locale(+alternates), JSON-LD 
 width/height/lazy. Run after build-stats.js and after scripts/i18n-build.py (which calls it for translations)."""
 import glob, json, os, re, subprocess, sys
 from bs4 import BeautifulSoup
+import langs as L10N  # Oct 17: HE_PUBLIC — keep /he/ noindex while unlinked
 SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
 NOINDEX = {'Project-R.html', '404.html'}
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
@@ -155,12 +156,12 @@ def fix(p):
     raw = open(p, encoding='utf8').read(); soup = BeautifulSoup(raw, 'html.parser')
     if not soup.head: return False
     if 'http-equiv="refresh"' in raw:  # redirect stubs stay tiny: only html lang/dir + noindex (Oct 16)
-        out = re.sub(r'<html[^>]*>', '<html lang="%s"%s>' % (lang, ' dir="rtl"' if lang == 'ar' else ''), raw, count=1)
+        out = re.sub(r'<html[^>]*>', '<html lang="%s"%s>' % (lang, ' dir="rtl"' if lang in L10N.RTL else ''), raw, count=1)
         if not re.search(r'<meta name="robots"', out): out = out.replace('<meta charset="utf-8">', '<meta charset="utf-8"><meta name="robots" content="noindex">', 1)
         if out != raw: open(p, 'w', encoding='utf8').write(out); return True
         return False
     src = raw
-    src = re.sub(r'<html[^>]*>', lambda m: '<html lang="%s"%s class="dark">' % (lang, ' dir="rtl"' if lang == 'ar' else ''), src, count=1)
+    src = re.sub(r'<html[^>]*>', lambda m: '<html lang="%s"%s class="dark">' % (lang, ' dir="rtl"' if lang in L10N.RTL else ''), src, count=1)
     head_end = src.index('</head>'); head = src[:head_end]; rest = src[head_end:]
     for rx in HEAD_RX: head = re.sub(r'\n?' + rx, '', head, flags=re.S)
     block = []
@@ -227,7 +228,8 @@ def fix(p):
         if not img.startswith('http'): img = SITE + img.lstrip('./')
         card = (soup.find('meta', attrs={'name': 'twitter:card'}) or {}).get('content') or 'summary_large_image'
         ogtype = (soup.find('meta', property='og:type') or {}).get('content') or 'website'
-        block = [f'<meta name="robots" content="index,follow">', f'<link rel="canonical" href="{url}">']
+        rob = 'noindex,nofollow' if (lang == 'he' and not L10N.HE_PUBLIC) else 'index,follow'
+        block = [f'<meta name="robots" content="{rob}">', f'<link rel="canonical" href="{url}">']
         block += [f'<link rel="alternate" hreflang="{h}" href="{page_url(h, base)}">' for h in have_l] + ([f'<link rel="alternate" hreflang="x-default" href="{page_url("en", base)}">'] if 'en' in have_l else [])
         iw = ih = None; lf = img[len(SITE):].split('?')[0] if img.startswith(SITE) else None
         if lf and os.path.exists(lf):

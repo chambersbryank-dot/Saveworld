@@ -170,6 +170,8 @@ def build(page, lang, m):
     for p in soup.select('p.amazing-fact'):
         p['class'] = [c for c in p['class'] if c != 'amazing-fact'] + ['amazing-fact-i18n']
     out = str(soup)
+    if not public:  # BeautifulSoup reorders attrs; re-assert name-first noindex while HE_PUBLIC is False
+        out = L10N.ensure_hidden_robots(out)
     os.makedirs(lang, exist_ok=True)
     open(os.path.join(lang, page), 'w', encoding='utf8').write(out)
 
@@ -212,6 +214,10 @@ if __name__ == '__main__':
     CUR_PAGES = None
     h0 = {p: src_hash(p) for p in PAGES}
     print('seo-fix:', seo.run(['en'] + [l for l in langs if l in PUBLIC]), 'pages updated')  # unlinked Hebrew stays out of seo-fix
+    if not L10N.HE_PUBLIC and 'he' in langs:
+        bad = L10N.assert_he_noindex()
+        if bad: raise SystemExit('he noindex missing on %d pages (e.g. %s)' % (len(bad), bad[0]))
+        print('he noindex: ok', len([x for x in os.listdir('he') if x.endswith('.html')]), 'pages')
     # Oct 16: a brand-new page's English changes once its translations exist (seo-fix adds the hreflang/alternate data it can
     # only see now), so its fresh i18n-source hashes went stale and the weekly-sync check failed on the first run. Rebuild just
     # those pages against the final English, then re-run the SEO pass once more.

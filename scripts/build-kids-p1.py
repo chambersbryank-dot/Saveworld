@@ -14,6 +14,8 @@ from kids_p1_text import PASS, ARC, BP, SPOW, NEW, CREDIT
 SITE = 'https://www.savingplanets.com/'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
+    if (p.startswith('he/') or '/he/' in p) and not L.HE_PUBLIC:
+        s = L.ensure_hidden_robots(s)
     if os.path.exists(p) and rd(p) == s: return 0
     open(p, 'w', encoding='utf8').write(s); return 1
 esc = lambda s: html.escape(s, quote=True)
@@ -76,7 +78,7 @@ def shell(l, page, title, desc):
     head = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', head, flags=re.S)
     head = re.sub(r'<style id="k1css">.*?</style>\n?', '', head, flags=re.S)
     head = head.replace('Play_and_Learn.jpg', '@@OG@@').replace('Play_and_Learn.html', page).replace('@@OG@@', 'Play_and_Learn.jpg')
-    if l == 'he' and 'name="robots"' not in head: head = head.replace('<head>', '<head>\n<meta name="robots" content="noindex,nofollow">', 1)
+    if l == 'he' and not L.HE_PUBLIC: head = L.ensure_hidden_robots(head)
     ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "description": desc, "url": f"{SITE}{d(l)}{page}", "inLanguage": l,
           "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "isAccessibleForFree": True}
     head += f'<style id="k1css">{CSS}</style>\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'

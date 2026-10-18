@@ -10,6 +10,7 @@ While HE_PUBLIC is False: /he/ pages are built (only the pages listed in i18n/he
 the sitemap, seo-fix/seo-lint, the language banner or search. English and the other languages never link to /he/.
 """
 import os
+import re
 HE_PUBLIC = False   # <<< the Hebrew launch switch (see NOTES.md 'Hebrew (/he/)')
 
 PUBLIC = ['fr', 'es', 'ar', 'it'] + (['he'] if HE_PUBLIC else [])   # translated languages shown to visitors / search engines
@@ -31,3 +32,42 @@ def pages_for(lang, all_pages):
     hp = he_pages(); return [p for p in all_pages if p in set(hp)] + [p for p in hp if p not in set(all_pages) and os.path.exists(os.path.join(_ROOT, p))]
 
 def is_rtl(lang): return lang in RTL
+
+_ROBOTS_RX = re.compile(r'\s*<meta[^>]*\brobots\b[^>]*>', re.I)
+# Canonical form (name first). BeautifulSoup reorders to content-first; checkers that look for
+# name="robots" content="noindex..." miss that, so generators must re-assert this string.
+HIDDEN_ROBOTS = '<meta name="robots" content="noindex,nofollow">'
+
+def ensure_hidden_robots(html):
+    """When HE_PUBLIC is False, force the canonical noindex robots meta early in <head>.
+    When HE_PUBLIC is True, leave robots alone (seo-fix owns them)."""
+    if HE_PUBLIC or not html:
+        return html
+    out = _ROBOTS_RX.sub('', html)
+    tag = HIDDEN_ROBOTS
+    if re.search(r'<meta[^>]*charset', out, re.I):
+        out = re.sub(r'(<meta[^>]*charset[^>]*>)', r'\1\n' + tag, out, count=1, flags=re.I)
+    elif '<head>' in out:
+        out = out.replace('<head>', '<head>\n' + tag, 1)
+    elif re.search(r'<head\s', out, re.I):
+        out = re.sub(r'(<head[^>]*>)', r'\1\n' + tag, out, count=1, flags=re.I)
+    return out
+
+def assert_he_noindex(root='he'):
+    """Return list of he/*.html paths that lack noindex while HE_PUBLIC is False. Empty when public."""
+    if HE_PUBLIC:
+        return []
+    bad = []
+    d = os.path.join(_ROOT, root)
+    if not os.path.isdir(d):
+        return bad
+    for name in sorted(os.listdir(d)):
+        if not name.endswith('.html'):
+            continue
+        path = os.path.join(d, name)
+        t = open(path, encoding='utf8', errors='replace').read()
+        if 'noindex' not in t.lower() or not re.search(r'<meta[^>]*\brobots\b[^>]*>', t, re.I):
+            bad.append(path)
+        elif not re.search(r'<meta\s+name="robots"\s+content="noindex', t):
+            bad.append(path)  # present but wrong attribute order / value
+    return bad

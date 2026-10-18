@@ -5,6 +5,7 @@ Writes assets/data/map.he.json from map.en.json, translating UI strings, hub/sol
 pin labels through i18n/he.json (English kept where no translation exists), then points he/World_Map.html at it.
 Run after i18n-build.py he (and after build-map.py, which refreshes map.en.json)."""
 import json, os, re
+import langs as L10N
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 if not os.path.exists('he/World_Map.html'): raise SystemExit('build-map-he: no he/World_Map.html, skipped')
 M = json.load(open('i18n/he.json', encoding='utf8'))
@@ -25,6 +26,7 @@ for site in d['sites']: site['name'] = t(site['name'])
 json.dump(d, open('assets/data/map.he.json', 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 f = 'he/World_Map.html'; h = open(f, encoding='utf8').read()
 h2 = re.sub(r'data-src="(?:\.\./)?assets/data/map\.[a-z]+\.json', 'data-src="../assets/data/map.he.json', h)
+if not L10N.HE_PUBLIC: h2 = L10N.ensure_hidden_robots(h2)
 if h2 != h: open(f, 'w', encoding='utf8').write(h2)
 ui = d['ui']; print('build-map-he: ui', sum(1 for v in ui.values() if re.search('[\u0590-\u05ff]', v)), '/', len(ui),
     'sols', sum(1 for s in d['sols'] if re.search('[\u0590-\u05ff]', s['n'] or '')), '/', len(d['sols']))
