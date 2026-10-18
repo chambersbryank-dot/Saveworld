@@ -689,6 +689,13 @@ Fix: build-home-extras.py now removes any unmarked copy of the video and puts it
 ## 2026-10-17 Homepage hero title centered
 build-hero-themes.py: in the space hero the title block (slogan, title, line, buttons) is centered horizontally and vertically over the Enceladus/moons scene, with the buttons centered too. It keeps the existing scrim and text-shadow. CSS v=20261017d.
 
+## 2026-10-17 ~7:00 PM HST Approved hero position (raised more)
+Owner (iPad landscape): "Raise title up more".
+- Was `HERO_OFFSET = '1.6vh'` (~13.1 px at 1180x820); title block still ~13.7 px below center on iPad landscape.
+- Now `HERO_OFFSET = '4vh'` (~32.8 px at 820 tall, ~47.2 px at 1180 landscape height). Expected: title block ~20 px above center on iPad-L (1180x820).
+- Still one shared `--hero-offset` on `.hero[data-hero]` in the inline HEROTHEME style block of index.html (en/fr/es/ar/it/he). No styles.css bump: the hero position is cache-busted by the HTML page itself (inline `<style>`), not by `styles.css?v=`.
+- Status: pending owner sign-off on iPad landscape; once approved, treat `HERO_OFFSET` as LOCKED.
+
 ## 2026-10-17 6:15 PM HST Approved hero position (homepage title nudged up)
 Owner: "So close. If you went 4 down, then move equal two up" (title block sat a bit low on the space hero).
 - Measured before (live, v=20261017d, ?hero=space): the visible title block (kicker → buttons) sat 26.8 px below true center at Mac 1440x900 and iPad landscape 1180x820 (≥1140px: padding-top 92px vs bottom 2rem), and 3.2 px above center at iPad portrait 820x1180 and phone 390x844 (56px/3.5rem, symmetric).

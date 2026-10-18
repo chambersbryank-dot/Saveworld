@@ -39,9 +39,10 @@ def POSTER():  # .hero-space::before = still frame until the live ground is read
     return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # Oct 17: he = Hebrew (built, unlinked until review; skipped if he/index.html is missing)
-# Oct 17 6:15 PM: APPROVED HERO POSITION (pending owner sign-off on iPad landscape, then LOCKED). How far the homepage title
+# Oct 17 ~7:00 PM: APPROVED HERO POSITION (owner: 'Raise title up more' on iPad landscape). How far the homepage title
 # block sits ABOVE its flex-centered spot, for every hero theme. Change only here; see NOTES.md 'Approved hero position'.
-HERO_OFFSET = '1.6vh'
+# Was 1.6vh (~13 px at 820 tall, still ~14 px below center on iPad-L); now 4vh (~33 px at 820 tall → ~20 px above center).
+HERO_OFFSET = '4vh'
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
 ANCHOR_UTC = 'Date.UTC(2026,9,12,10)'  # Mon 12 Oct 2026 00:00 HST
 JSV = hashlib.sha1(open('assets/hero-themes.js', 'rb').read()).hexdigest()[:8]  # cache version follows the file
