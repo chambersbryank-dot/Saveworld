@@ -775,3 +775,15 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Generator: `scripts/apply-heroes.py` special-cases Project-Rawane. CSS uses the same R2 Blue Marble WebP set as Earthrise (image-set 1920/3840 Retina; 1280/2560 tablet; 800/1280 phone) with a dark gradient overlay for title legibility; taller hero (`min(72vh,780px)`).
 - Credit (all langs incl. /he/): “Created by SI and Biological SI Partner · Earth: NASA Blue Marble” (translated).
 - STYLEV → 20261017f; build-critical re-extracted `pr-hero` template.
+
+## Oct 17 2026: Play & Learn audit fixes
+- 404.html: <base href="/"> so assets/links resolve in every language folder (GitHub Pages serves root 404 for /fr/x, /he/x...).
+- Language banner (build-langbanner.py): bottom sheet (never covers the H1), dismissible; skipped when the visitor already chose the page language (localStorage sp-lang-chosen, set by nav switches/banner); he-ready (only shows where hreflang exists).
+- Play & Learn: Spot the Fire tile = "Printable classroom activity, ages 10–14" in en/fr/es/ar/it (build-play.py + pages).
+- build-critical.py: KaTeX font urls -> /assets/vendor/katex/fonts/; fixed quoted-url rebasing bug (url(../"...")) in language folders.
+- Lab names translated (fr/es/it via learn_*.py titles + pages; he via he.json).
+- Amazing Facts: scripts/build-af-images.py -> assets/resp/*-480/800/1200.webp srcset + lazy, all langs (added to weekly-sync).
+- Editorial Policy: daily check refreshes live counts, weekly check mission dates (trust-content.py + i18n + pages).
+- ar: remaining indefinite "ذكاء اصطناعي" -> "ذكاء تركيبي (SI)" (methane/MARS, orbital chips).
+- build-ux.py: language count = 1 + len(langs.PUBLIC). '3 learning tools' left hard-coded: no source defines what it counts.
+- CSS/JS cache v=20261017g.

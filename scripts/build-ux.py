@@ -132,7 +132,10 @@ def mini(card):
 
 def home(l, n, hubs):
     t = T[l]; p = d(l) + 'index.html'; s = rd(p); pre = '' if l == 'en' else '../'
-    imp = [n, len(hubs), len(LANGS), 3]  # EN+FR+ES+AR+IT
+    # Oct 17: language count from the shared list (scripts/langs.py), so Hebrew counts automatically when HE_PUBLIC flips.
+    # '3 learning tools' stays hard-coded: no source defines which pages it counts (see NOTES.md).
+    import langs as _L
+    imp = [n, len(hubs), 1 + len(_L.PUBLIC), 3]
     strip = '<section class="impact-strip" aria-label="Saving Planets">' + ''.join(
         f'<div class="imp-item"><span class="imp-num">{v}</span><span class="imp-label">{lab}</span></div>' for v, lab in zip(imp, t['imp'])) + '</section>'
     s = block(s, 'IMPACT', strip, r'<!-- DIFF:START -->')
@@ -247,7 +250,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261017f"  # bump when styles.css changes
+STYLEV = "20261017g"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

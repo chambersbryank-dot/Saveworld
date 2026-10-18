@@ -200,7 +200,9 @@ def main():
             s = open(f, encoding='utf8').read()
             order = [name(h) for h in links(apply(f, s, None))]
             css = None if revert else build_css(cache[k]['merged'], order, page_classes(s))
-            if css is not None and '/' in f: css = re.sub(r"url\((['\"]?)(?!data:|https?:|/)", r"url(\1../", css)
+            # Oct 17: katex.min.css lives in assets/vendor/katex/, so its relative font urls must point there (were 404 at /fonts/).
+            if css is not None: css = re.sub(r"url\((['\"]?)(?:\./)?fonts/(KaTeX_)", r"url(\1/assets/vendor/katex/fonts/\2", css)
+            if css is not None and '/' in f: css = re.sub(r"url\((['\"]?)(?!['\"]|data:|https?:|/)", r"url(\1../", css)
             s2 = apply(f, s, css)
             if css: sizes[k] = len(css)
             if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1

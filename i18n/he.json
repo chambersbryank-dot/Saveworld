@@ -1367,7 +1367,7 @@
 "🏡 Start here: homeschool": "🏡 התחילו כאן: חינוך ביתי",
 "📘 Start here: AP & IB Physics": "📘 התחילו כאן: פיזיקה AP ו-IB",
 "🚀 Careers & pathways": "🚀 קריירה ומסלולים",
-"Aero Lab": "מעבדת אווירונאוטיקה",
+"Aero Lab": "מעבדת תעופה",
 "Aeronautical engineering math": "מתמטיקה של הנדסת אווירונאוטיקה",
 "🧮 Calculators": "🧮 מחשבונים",
 "How Flight Works": "איך טיסה עובדת",
@@ -5206,5 +5206,6 @@
 "with the page address, what is wrong and, if you can, a source. Any language is fine.": "עם כתובת הדף, מה שגוי, ואם אפשר, מקור. כל שפה מתאימה.",
 "{p} docked!": "{p} הוצמד!",
 "{p}: see the real hardware photo below.": "{p}: ראו את תמונת החומרה האמיתית למטה.",
-"New update on the Myth vs Fact page: 21 doom myths checked against NASA, NOAA and ESA.": "עדכון חדש בדף מיתוס מול עובדה: 21 מיתוסי אבדון שנבדקו מול NASA, ‏NOAA ו-ESA."
+"New update on the Myth vs Fact page: 21 doom myths checked against NASA, NOAA and ESA.": "עדכון חדש בדף מיתוס מול עובדה: 21 מיתוסי אבדון שנבדקו מול NASA, ‏NOAA ו-ESA.",
+"Each solution page shows a “Last reviewed” date. A daily check refreshes live counts, a weekly check refreshes mission dates, and pages are re-read when a source changes.": "בכל דף פתרון מוצג תאריך \"נבדק לאחרונה\". בדיקה יומית מרעננת ספירות חיות, בדיקה שבועית מרעננת תאריכי משימות, ודפים נקראים מחדש כשמקור משתנה."
 }

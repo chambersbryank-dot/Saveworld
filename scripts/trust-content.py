@@ -75,10 +75,10 @@ PAGES = {
     'Las afirmaciones de las organizaciones se presentan como cifras propias de ellas. No publicamos números que no podamos rastrear.',
     'تُعرض ادعاءات المنظمات على أنها أرقامها الخاصة. ولا ننشر أرقامًا لا يمكننا تتبّع مصدرها.')]),
   (('Reviews and Dates', 'Relectures et dates', 'Revisiones y fechas', 'المراجعة والتواريخ'), [
-   ('Each solution page shows a “Last reviewed” date. A weekly check refreshes mission dates and live counts; pages are re-read when a source changes.',
-    'Chaque page de solution affiche une date de « dernière relecture ». Une vérification hebdomadaire actualise les dates de mission et les compteurs ; les pages sont relues quand une source change.',
-    'Cada página de solución muestra una fecha de «última revisión». Una revisión semanal actualiza fechas de misiones y contadores; las páginas se releen cuando cambia una fuente.',
-    'تعرض كل صفحة حل تاريخ «آخر مراجعة». ويحدّث فحص أسبوعي تواريخ البعثات والأعداد المباشرة، وتُعاد قراءة الصفحات عند تغيّر أي مصدر.')]),
+   ('Each solution page shows a “Last reviewed” date. A daily check refreshes live counts, a weekly check refreshes mission dates, and pages are re-read when a source changes.',
+    'Chaque page de solution affiche une date de « dernière relecture ». Une vérification quotidienne actualise les compteurs, une vérification hebdomadaire actualise les dates de mission, et les pages sont relues quand une source change.',
+    'Cada página de solución muestra una fecha de «última revisión». Una revisión diaria actualiza los contadores, una revisión semanal actualiza las fechas de misiones y las páginas se releen cuando cambia una fuente.',
+    'تعرض كل صفحة حل تاريخ «آخر مراجعة». ويحدّث فحص يومي الأعداد المباشرة، ويحدّث فحص أسبوعي تواريخ البعثات، وتُعاد قراءة الصفحات عند تغيّر أي مصدر.')]),
   (('How We Use SI', 'Comment nous utilisons la SI', 'Cómo usamos la SI', 'كيف نستخدم SI'), [
    ('SI helps us draft, translate and make visuals. A person on our team checks every fact against its source before it goes live. Images and videos made with SI are labeled “Created by SI and Biological SI Partner”. Photos from agencies are credited to them.',
     'La SI nous aide à rédiger, traduire et créer des visuels. Une personne de notre équipe vérifie chaque fait auprès de sa source avant publication. Les images et vidéos réalisées avec la SI portent la mention « Créé par SI et Biological SI Partner ». Les photos des agences leur sont créditées.',
