@@ -675,3 +675,9 @@ Owner rule "every page is real estate": the first screen (iPad 1024x768/768x1024
 - `build-data-tools.py`: Amazing Facts "Use this data" bar now after the fact grid; homepage one now sits right above the Scoreboard it exports (regex anchor, `re:` prefix).
 - `build-edu.py`: Amazing Facts Kids Map / Satellite Explorer tiles now after the facts.
 - CSS v=20261017c. Screenshots: /workspace/wow-shots/1017/ (<page>-<size>-before/after.png).
+
+## 2026-10-17 biosipartner@ Cc line
+Owner request: "Feel free to Cc: our Biological SI Partner at biosipartner@savingplanets.com. He or she will reach out to you within 24 hours." (mailto link), all 5 languages.
+- Contact.html: right after hello@ in the General Questions card. `scripts/build-biosi-cc.py` (weekly-sync, before i18n-build) writes the EN block + i18n strings, and writes i18n/biosi-cc.json.
+- About.html #cohost "Get in touch": right after media@, written by `scripts/build-cohost.py` (reads i18n/biosi-cc.json).
+- Terms follow the existing ones: fr Partenaire SI Biologique, es Socio SI Biológico, it Partner SI Biologico, ar شريك بيولوجي (with "Biological SI Partner" in brackets). Footers ("Questions? Write to hello@") and other emails are unchanged. No CSS change.

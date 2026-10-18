@@ -39,6 +39,10 @@ T = {
   ask_h='Contattaci', ask='Raccontaci del tuo programma, corso o evento, del tuo pubblico e di alcune date possibili.', btn='Invitaci a co-condurre',
   teaser='Conduci un podcast, un corso o un evento? Co-conduci con noi una conversazione su come un Partner SI Biologico e la SI hanno creato questo sito.', tlink='Conduci con noi'),
 }
+# Oct 17: biosipartner@ Cc line right after media@ (strings shared with build-biosi-cc.py)
+CC = {'en': ('Feel free to Cc: our Biological SI Partner at', 'He or she will reach out to you within 24 hours.')}
+CC.update(json.load(open(os.path.join(ROOT, 'i18n', 'biosi-cc.json'), encoding='utf8')))
+CCA = '<a href="mailto:biosipartner@savingplanets.com?subject=Cc%3A%20Biological%20SI%20Partner">biosipartner@savingplanets.com</a>'
 def ul(xs): return '<ul class="partner-list">' + ''.join(f'<li>{x}</li>' for x in xs) + '</ul>'
 def put(s, name, block, after):
     s = re.sub(rf'<!-- {name}:START -->.*?<!-- {name}:END -->', '', s, flags=re.S)
@@ -53,6 +57,7 @@ for lang, t in T.items():
            f'<div class="w-card"><h3>{t["who_h"]}</h3>{ul(t["who"])}</div>'
            f'<div class="w-card"><h3>{t["top_h"]}</h3>{ul(t["top"])}</div>'
            f'<div class="w-card"><h3>{t["ask_h"]}</h3><p>{t["ask"]}</p><p><a href="{href}">{MAIL}</a></p>'
+           f'<p class="biosi-cc">{CC[lang][0]} {CCA}. <span>{CC[lang][1]}</span></p>'
            f'<p class="partner-cta"><a class="btn-nav" href="{href}">{t["btn"]}</a></p></div></div></section>')
     p = pre + 'About.html'; s = open(p).read()
     n = put(s, 'COHOST', sec, '<!-- PARTNER:END -->')
