@@ -2,7 +2,12 @@
 """Satellite Explorer media (Oct 14): real NASA hardware photos per part, 3D lab markup, NASA+ cards, NASA video clips.
 All NASA media credited 'NASA' (NASA Media Usage Guidelines: no NASA insignia, no implied endorsement). US Space Force photos: US Government works (public domain).
 Strings EN -> (fr, es, ar) in T; merged into i18n by build-edu.py."""
-import html
+import html, json, os
+# Oct 18: clips moved to R2 are served from media.savingplanets.com (manifest key videos/<stem>.mp4); others stay in assets/sx/.
+_MAN = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'assets', 'data', 'media-manifest.json'), encoding='utf-8'))
+def _vsrc(stem):
+    e = _MAN.get(f'videos/{stem}.mp4')
+    return e['url'] if e else f'assets/sx/{stem}.mp4'
 esc = lambda s: html.escape(s, quote=True)
 
 # part id -> (photo file, alt, caption, credit, source url)
@@ -79,7 +84,7 @@ def live_strip():
 def videos():
     out = ''
     for stem, t, cr, u in VIDEOS:
-        out += (f'<figure class="sx-vid"><video controls playsinline preload="none" poster="assets/sx/{stem}.jpg" aria-label="{esc(t)}"><source src="assets/sx/{stem}.mp4" type="video/mp4">'
+        out += (f'<figure class="sx-vid"><video controls playsinline preload="none" poster="assets/sx/{stem}.jpg" aria-label="{esc(t)}"><source src="{_vsrc(stem)}" type="video/mp4">'
                 f'<track kind="captions" src="assets/sx/{stem}.en.vtt" srclang="en" label="English" default></video>'
                 f'<figcaption>{esc(t)} <span class="photo-credit">Credit: <a href="{u}" rel="noopener">{esc(cr)}</a></span></figcaption></figure>')
     return ('<section class="sx-deep" id="sx-real"><h2>Real hardware, real launches</h2>'

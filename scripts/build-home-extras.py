@@ -52,17 +52,18 @@ for page, (slug, heading) in VIDEOS.items():
 try: _N = json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions']
 except Exception: _N = 120
 # Oct 17: the recorded narration says 120 (pinned in assets/data/a11y.json), so the caption says when it was recorded instead of the live count.
-AD_CAP = 'A 70-second tour, recorded when we had 120 solutions: free lesson plans, the Kids Planet Map, the 3D Satellite Explorer, search, Amazing Facts, Myth vs Fact, live launches and five languages.'  # Oct 14: v3 (real site footage + NASA B-roll)
+# Oct 18: About v4 (88 s, new clear narration recorded at 175 solutions; cues pinned in a11y.json). Old v3 (70 s, 120) retired and deleted from R2.
+AD_CAP = "An 88-second tour: 175 real solutions across 10 hubs, each explained with the Five W's, plus Ways to Help, free lesson plans, the Kids Planet Map, the Satellite Explorer, Myth vs Fact, Amazing Facts, live launches and five languages."
 s = open('About.html', encoding='utf-8').read()
 s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
 # Oct 17 fix (dup video): drop any unmarked copy left by the old build-wow.py move, so exactly one video remains.
 s = re.sub(r'\s*<section class="sp-video sp-video-vertical" id="video".*?</section>', '', s, flags=re.S)
-w, h = MEDIA.dims('savingplanets-about-v3.mp4'); U = MEDIA.vurl('savingplanets-about-v3.mp4'); U7 = MEDIA.vurl('savingplanets-about-v3-720.mp4')
+w, h = MEDIA.dims('savingplanets-about-v4.mp4'); U = MEDIA.vurl('savingplanets-about-v4.mp4'); U7 = MEDIA.vurl('savingplanets-about-v4-720.mp4')
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
-  f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v3.jpg" width="{w}" height="{h}">'
+  f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v4.jpg" width="{w}" height="{h}">'
   f'<source src="{U}" type="video/mp4"><source src="{U7}" type="video/mp4"><a href="{U}">Download the video</a></video>'
-  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
+  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
 # Oct 17 wow rule: the video goes after the summary strip + 'Saving Planets, Minus the Doom' cards (#solution), not on top.
 s = put(s, 'VIDEO', AD, r'<section class="five-ws" id="solution">.*?</section>')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
@@ -107,5 +108,24 @@ SW = (f'<section class="sotw" id="solution-of-the-week" aria-labelledby="sotw-ti
 s = open('index.html', encoding='utf-8').read()
 s = put(s, 'SOTW', SW, r'<section class="mission-block">.*?</section>')
 s = put(s, 'SCOREBOARD', SB, r'<section class="impact-bar">.*?</section>')
+# ---- Oct 18: promo v3 just below the hero + impact strip (hero position is LOCKED; this block only sits after it) ----
+# Wide 16:9 master for landscape/desktop/iPad, 9:16 master for narrow portrait phones (CSS picks one; preload=metadata, no autoplay).
+PW, PH = MEDIA.dims('savingplanets-promo-v3-1920x1080.mp4'); PU = MEDIA.vurl('savingplanets-promo-v3-1920x1080.mp4')
+TW, TH = MEDIA.dims('savingplanets-promo-v3-1080x1920.mp4'); TU = MEDIA.vurl('savingplanets-promo-v3-1080x1920.mp4')
+PROMO_H = "Watch: What's New on Saving Planets"
+PROMO_CAP = 'A 97-second look at the newest updates: 175 real solutions, the new homepage, five languages, the interactive World Map and Myth vs Fact.'
+PROMO_SRC = 'Earth: NASA Blue Marble and Black Marble · Saturn: NASA/JPL-Caltech/Space Science Institute · Site screens: Saving Planets'
+try: PROMO_X = json.load(open('assets/data/promo-links.json', encoding='utf-8')).get('x_post', '')
+except Exception: PROMO_X = ''
+PX = f'<p class="promo-x"><a href="{html.escape(PROMO_X)}" target="_blank" rel="noopener">See our new milestone on X →</a></p>' if PROMO_X else ''
+PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledby="promo-title">'
+  f'<h2 id="promo-title">{html.escape(PROMO_H, quote=False)}</h2><figure class="sp-video-fig">'
+  f'<video class="promo-wide" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-wide.jpg" width="{PW}" height="{PH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
+  f'<source src="{PU}" type="video/mp4"><a href="{PU}">Download the video</a></video>'
+  f'<video class="promo-tall" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-tall.jpg" width="{TW}" height="{TH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
+  f'<source src="{TU}" type="video/mp4"><a href="{TU}">Download the video</a></video>'
+  f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> '
+  f'<span class="photo-credit">{html.escape(PROMO_SRC, quote=False)}</span></figcaption></figure>{PX}</section>')
+s = put(s, 'PROMO', PROMO, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
 open('index.html', 'w', encoding='utf-8').write(s)
 print('SOTW:', e['page'], '| EO active:', len(eo))

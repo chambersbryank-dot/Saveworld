@@ -2513,6 +2513,26 @@
   "height": 1920,
   "duration": 70.0
  },
+ "videos/savingplanets-about-v4-720.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-about-v4-720.37cebdf1b4e4.mp4",
+  "key": "videos/savingplanets-about-v4-720.37cebdf1b4e4.mp4",
+  "bytes": 26965984,
+  "sha256": "37cebdf1b4e4762fee3e19944cdecbbca062ed85e14ed66d9d7d7b473d29e9fd",
+  "type": "video/mp4",
+  "width": 720,
+  "height": 1280,
+  "duration": 87.6
+ },
+ "videos/savingplanets-about-v4.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-about-v4.3e129fd96a00.mp4",
+  "key": "videos/savingplanets-about-v4.3e129fd96a00.mp4",
+  "bytes": 71702960,
+  "sha256": "3e129fd96a00fb35480e41fe1aae27b53ec5450f0756df6106775b8165ca3276",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 87.6
+ },
  "videos/savingplanets-ad-v2.mp4": {
   "url": "https://media.savingplanets.com/videos/savingplanets-ad-v2.222b8efcdd78.mp4",
   "key": "videos/savingplanets-ad-v2.222b8efcdd78.mp4",
@@ -2522,5 +2542,55 @@
   "width": 1080,
   "height": 1920,
   "duration": 78.25
+ },
+ "videos/savingplanets-promo-v3-1080x1080.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v3-1080x1080.dfdd1c1d3a5d.mp4",
+  "key": "videos/savingplanets-promo-v3-1080x1080.dfdd1c1d3a5d.mp4",
+  "bytes": 54084077,
+  "sha256": "dfdd1c1d3a5d7055caf51f46bad97d637cb91f9b495d9ad685b1c8eeb5d8ed44",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1080,
+  "duration": 97.0
+ },
+ "videos/savingplanets-promo-v3-1080x1920.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v3-1080x1920.eba3096ef4ed.mp4",
+  "key": "videos/savingplanets-promo-v3-1080x1920.eba3096ef4ed.mp4",
+  "bytes": 65999659,
+  "sha256": "eba3096ef4ed5e925574b051a0d961db3dd196c75caef5edaff8d92ba968901b",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 97.0
+ },
+ "videos/savingplanets-promo-v3-1920x1080.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v3-1920x1080.1d6455de4d8c.mp4",
+  "key": "videos/savingplanets-promo-v3-1920x1080.1d6455de4d8c.mp4",
+  "bytes": 74122750,
+  "sha256": "1d6455de4d8c4371e5bcb34a934a9d6b359f70f90afff3f5eec396582e964cfc",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 1080,
+  "duration": 97.0
+ },
+ "videos/savingplanets-promo-v3-3840x2160-4K.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v3-3840x2160-4K.8b6f7e1c9226.mp4",
+  "key": "videos/savingplanets-promo-v3-3840x2160-4K.8b6f7e1c9226.mp4",
+  "bytes": 124805633,
+  "sha256": "8b6f7e1c9226ce7e22f05d7df06b6fbc506dd914bcfd854f54cda24c74618b39",
+  "type": "video/mp4",
+  "width": 3840,
+  "height": 2160,
+  "duration": 97.0
+ },
+ "videos/v-solar.mp4": {
+  "url": "https://media.savingplanets.com/videos/v-solar.fec47ec4464a.mp4",
+  "key": "videos/v-solar.fec47ec4464a.mp4",
+  "bytes": 3460480,
+  "sha256": "fec47ec4464ad19582c2bc859ae2c389fabbf0bfcafee4adcfe5c9abfae0e6c6",
+  "type": "video/mp4",
+  "width": 640,
+  "height": 360,
+  "duration": 86.33
  }
 }

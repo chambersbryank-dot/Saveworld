@@ -494,124 +494,459 @@
     ]
    ]
   },
-  "savingplanets-about-v3": {
-   "pinned": "Cues are the narration as recorded (verified against the audio Oct 16, 2026); never rewritten to the live solution count.",
+  "savingplanets-about-v4": {
+   "pinned": "Cues are the narration as recorded (verified against the audio Oct 18, 2026); never rewritten to the live solution count.",
+   "burned": "Captions are burned into the picture, so the track is offered but not on by default.",
    "visual": {
-    "en": "A rocket launch and Earth from orbit (NASA footage) with the words \"Solutions, minus the doom\"; SI-generated scenes of Earth, ocean, forest and rivers; NASA footage of the Space Station, the Amazon, a reef island, the Sun and satellites; real screen recordings of the Saving Planets site (Solutions, CO2M, Mission Blue Hope Spots, Ways to Help, the Lesson Plan Builder, the Kids Planet Map, the 3D Satellite Explorer, Search, Amazing Facts, the Live Launch Tracker, the homepage in four languages and Myth vs Fact); and a sprouting Earth with www.savingplanets.com.",
-    "fr": "Un lancement de fusée et la Terre vue de l'orbite (images NASA) avec les mots « Des solutions, sans le catastrophisme » ; des scènes générées par SI de la Terre, de l'océan, de la forêt et des rivières ; des images NASA de la Station spatiale, de l'Amazonie, d'une île récifale, du Soleil et de satellites ; de vraies captures d'écran du site Saving Planets (Solutions, CO2M, Hope Spots de Mission Blue, Comment aider, le générateur de plans de cours, la carte de la planète pour enfants, l'explorateur de satellites 3D, la recherche, les Faits étonnants, le suivi des lancements en direct, la page d'accueil en quatre langues et Mythe ou réalité) ; et une Terre qui germe avec www.savingplanets.com.",
-    "es": "Un lanzamiento de cohete y la Tierra desde la órbita (imágenes de la NASA) con las palabras «Soluciones, sin catastrofismo»; escenas generadas por SI de la Tierra, el océano, el bosque y los ríos; imágenes de la NASA de la Estación Espacial, la Amazonía, una isla de arrecife, el Sol y satélites; grabaciones reales de pantalla del sitio Saving Planets (Soluciones, CO2M, Hope Spots de Mission Blue, Formas de ayudar, el creador de planes de clase, el Mapa del Planeta para niños, el Explorador de satélites 3D, la búsqueda, los Datos asombrosos, el rastreador de lanzamientos en vivo, la portada en cuatro idiomas y Mito o realidad); y una Tierra que brota con www.savingplanets.com.",
-    "ar": "إطلاق صاروخ والأرض من المدار (لقطات ناسا) مع عبارة «حلول بلا تهويل»؛ مشاهد مولّدة بالذكاء الاصطناعي للأرض والمحيط والغابة والأنهار؛ لقطات من ناسا لمحطة الفضاء والأمازون وجزيرة مرجانية والشمس والأقمار الصناعية؛ تسجيلات شاشة حقيقية لموقع Saving Planets (الحلول، CO2M، مواقع الأمل من Mission Blue، طرق المساعدة، منشئ خطط الدروس، خريطة الكوكب للأطفال، مستكشف الأقمار الصناعية ثلاثي الأبعاد، البحث، الحقائق المذهلة، متتبع الإطلاقات المباشر، الصفحة الرئيسية بأربع لغات، وخرافة أم حقيقة)؛ وأرض تنبت منها نبتة مع www.savingplanets.com.",
-    "it": "Un lancio di razzi e la Terra dall'orbita (film NASA) con le parole \"Soluzioni, meno il destino\"; scene generate da SI di terra, oceano, foresta e fiumi; filmati della NASA della Stazione Spaziale, l'Amazzonia, un'isola di barriera corallina, i satelliti Sunrou Tracks; registrazioni reali dello schermo del sito Saving Planets (Soluzioni, CO2M, Mission Blue Hope Spots, Ways to Help)."
+    "en": "A NASA rocket launch with the words \"Solutions, minus the doom\"; Earth and the Space Station from orbit (NASA footage); SI-generated scenes of an ocean, a forest, a lake and a river, and the Sun (NASA SDO); real screenshots of the Saving Planets site (a solution explained with the Five W's, Ways to Help, a lesson plan, the Kids Planet Map, the Satellite Explorer, Myth vs Fact, Amazing Facts, the Live Launch Tracker and the homepage in five languages); and a sprouting Earth with SavingPlanets.com.",
+    "fr": "Un lancement de fusée de la NASA avec les mots « Des solutions, sans le catastrophisme » ; la Terre et la Station spatiale vues de l'orbite (images NASA) ; des scènes générées par SI d'un océan, d'une forêt, d'un lac et d'une rivière, et le Soleil (NASA SDO) ; de vraies captures d'écran du site Saving Planets (une solution expliquée avec les 5 W, Comment aider, un plan de cours, la carte de la planète pour enfants, l'explorateur de satellites, Mythe ou réalité, les Faits étonnants, le suivi des lancements en direct et la page d'accueil en cinq langues) ; et une Terre qui germe avec SavingPlanets.com.",
+    "es": "Un lanzamiento de cohete de la NASA con las palabras «Soluciones, sin catastrofismo»; la Tierra y la Estación Espacial desde la órbita (imágenes de la NASA); escenas generadas por SI de un océano, un bosque, un lago y un río, y el Sol (NASA SDO); capturas reales del sitio Saving Planets (una solución explicada con las 5 W, Formas de ayudar, un plan de clase, el Mapa del planeta para niños, el Explorador de satélites, Mito o realidad, Datos asombrosos, Lanzamientos en vivo y la página de inicio en cinco idiomas); y una Tierra que brota con SavingPlanets.com.",
+    "ar": "إطلاق صاروخ لناسا مع عبارة «حلول، بلا تشاؤم»؛ الأرض ومحطة الفضاء من المدار (لقطات ناسا)؛ مشاهد مولّدة بـ SI لمحيط وغابة وبحيرة ونهر، والشمس (NASA SDO)؛ لقطات شاشة حقيقية من موقع Saving Planets (حل مشروح بالأسئلة الخمسة، وطرق المساعدة، وخطة درس، وخريطة الكوكب للأطفال، ومستكشف الأقمار الصناعية، وخرافة أم حقيقة، وحقائق مذهلة، ومتابعة الإطلاقات مباشرة، والصفحة الرئيسية بخمس لغات)؛ وأرض تنبت مع SavingPlanets.com.",
+    "it": "Un lancio di razzo della NASA con le parole «Soluzioni, senza catastrofismo»; la Terra e la Stazione spaziale dall'orbita (riprese NASA); scene generate da SI di un oceano, una foresta, un lago e un fiume, e il Sole (NASA SDO); vere schermate del sito Saving Planets (una soluzione spiegata con le 5 W, Come aiutare, un piano di lezione, la Mappa del pianeta per bambini, l'Esploratore di satelliti, Mito o realtà, Fatti incredibili, Lanci in diretta e la homepage in cinque lingue); e una Terra che germoglia con SavingPlanets.com."
    },
    "cues": [
     [
-     2.68,
-     4.82,
+     4.6,
+     10.36,
      {
-      "en": "Our planet faces big problems.",
-      "fr": "Notre planète fait face à de grands problèmes.",
-      "es": "Nuestro planeta enfrenta grandes problemas.",
-      "ar": "يواجه كوكبنا مشكلات كبيرة.",
-      "it": "Il nostro pianeta affronta grossi problemi."
+      "en": "Our planet faces big problems. But for every problem, people are already building solutions.",
+      "fr": "Notre planète fait face à de grands problèmes. Mais pour chaque problème, des gens construisent déjà des solutions.",
+      "es": "Nuestro planeta enfrenta grandes problemas. Pero para cada problema, ya hay personas construyendo soluciones.",
+      "ar": "يواجه كوكبنا مشكلات كبيرة. لكن لكل مشكلة، هناك أشخاص يبنون الحلول بالفعل.",
+      "it": "Il nostro pianeta affronta grandi problemi. Ma per ogni problema, c'è già chi sta costruendo soluzioni."
      }
     ],
     [
-     5.42,
-     8.68,
+     11.0,
+     13.89,
      {
-      "en": "But for every problem, people are already building solutions.",
-      "fr": "Mais pour chaque problème, des gens construisent déjà des solutions.",
-      "es": "Pero para cada problema, ya hay personas construyendo soluciones.",
-      "ar": "لكن لكل مشكلة، هناك أشخاص يبنون الحلول بالفعل.",
-      "it": "Ma per ogni problema, le persone stanno già costruendo soluzioni."
-     }
-    ],
-    [
-     9.58,
-     12.02,
-     {
-      "en": "Saving Planets brings them together in one place.",
-      "fr": "Saving Planets les réunit en un seul endroit.",
+      "en": "Saving Planets brings them together, in one place.",
+      "fr": "Saving Planets les rassemble, en un seul endroit.",
       "es": "Saving Planets las reúne en un solo lugar.",
       "ar": "يجمعها Saving Planets في مكان واحد.",
-      "it": "Saving Planets li riunisce in un unico posto."
+      "it": "Saving Planets le riunisce in un unico posto."
      }
     ],
     [
-     20.98,
-     26.68,
+     14.6,
+     22.44,
      {
-      "en": "Explore 120 real solutions across oceans, forests, lakes, rivers, and space.",
-      "fr": "Explorez 120 solutions réelles pour les océans, les forêts, les lacs, les rivières et l'espace.",
-      "es": "Explora 120 soluciones reales para océanos, bosques, lagos, ríos y el espacio.",
-      "ar": "استكشف 120 حلاً حقيقياً للمحيطات والغابات والبحيرات والأنهار والفضاء.",
-      "it": "Esplora 120 soluzioni reali attraverso oceani, foreste, laghi, fiumi e spazio."
+      "en": "Explore 175 real solutions across 10 hubs, from oceans and forests, to lakes, rivers, and space.",
+      "fr": "Explorez 175 solutions réelles réparties en 10 pôles, des océans et des forêts aux lacs, aux rivières et à l'espace.",
+      "es": "Explora 175 soluciones reales en 10 áreas, desde océanos y bosques hasta lagos, ríos y el espacio.",
+      "ar": "استكشف 175 حلاً حقيقياً في 10 محاور، من المحيطات والغابات إلى البحيرات والأنهار والفضاء.",
+      "it": "Esplora 175 soluzioni reali in 10 hub, da oceani e foreste a laghi, fiumi e spazio."
      }
     ],
     [
-     26.9,
-     33.91,
+     23.9,
+     30.51,
      {
-      "en": "New this week: satellites that track the carbon we put in the air, and Hope Spots protecting the ocean in 115 countries.",
-      "fr": "Nouveau cette semaine : des satellites qui suivent le carbone que nous rejetons dans l'air, et des Hope Spots qui protègent l'océan dans 115 pays.",
-      "es": "Novedad esta semana: satélites que rastrean el carbono que emitimos al aire y Hope Spots que protegen el océano en 115 países.",
-      "ar": "جديد هذا الأسبوع: أقمار صناعية تتتبع الكربون الذي نطلقه في الهواء، ومواقع الأمل (Hope Spots) التي تحمي المحيط في 115 دولة.",
-      "it": "Nuova questa settimana: satelliti che tracciano il carbonio che mettiamo in aria, e Speranza Spots proteggere l'oceano in 115 paesi."
+      "en": "Every solution is explained the same simple way: who, what, when, where, and why, with sources you can check.",
+      "fr": "Chaque solution est expliquée de la même façon simple : qui, quoi, quand, où et pourquoi, avec des sources vérifiables.",
+      "es": "Cada solución se explica de la misma forma sencilla: quién, qué, cuándo, dónde y por qué, con fuentes que puedes comprobar.",
+      "ar": "كل حل مشروح بالطريقة البسيطة نفسها: من، وماذا، ومتى، وأين، ولماذا، مع مصادر يمكنك التحقق منها.",
+      "it": "Ogni soluzione è spiegata nello stesso modo semplice: chi, cosa, quando, dove e perché, con fonti verificabili."
      }
     ],
     [
-     34.22,
-     36.2,
+     31.6,
+     37.22,
      {
-      "en": "Every one helps people and nature.",
-      "fr": "Chacune aide les gens et la nature.",
-      "es": "Cada una ayuda a las personas y a la naturaleza.",
-      "ar": "كل منها يساعد الناس والطبيعة.",
-      "it": "Ognuno aiuta le persone e la natura."
+      "en": "Want to help? Ways to Help connects you with the people doing the work, so you can give, or join in.",
+      "fr": "Envie d'aider ? Comment aider vous met en contact avec celles et ceux qui font le travail, pour donner ou participer.",
+      "es": "¿Quieres ayudar? Formas de ayudar te conecta con quienes hacen el trabajo, para que puedas donar o participar.",
+      "ar": "تريد المساعدة؟ يربطك قسم طرق المساعدة بالأشخاص الذين يقومون بالعمل، لتتبرع أو تشارك.",
+      "it": "Vuoi aiutare? Come aiutare ti mette in contatto con chi fa il lavoro, così puoi donare o partecipare."
      }
     ],
     [
-     36.41,
-     43.95,
+     38.5,
+     43.75,
      {
-      "en": "Teachers can build free lesson plans in seconds, from kindergarten to university, tagged to NGSS-style standards.",
-      "fr": "Les enseignants peuvent créer des plans de cours gratuits en quelques secondes, de la maternelle à l'université, alignés sur des normes de type NGSS.",
-      "es": "Los docentes pueden crear planes de clase gratuitos en segundos, desde preescolar hasta la universidad, etiquetados con estándares tipo NGSS.",
-      "ar": "يمكن للمعلمين إنشاء خطط دروس مجانية في ثوانٍ، من رياض الأطفال إلى الجامعة، مرتبطة بمعايير على غرار NGSS.",
-      "it": "Gli insegnanti possono costruire piani di lezione gratuiti in pochi secondi, dall'asilo all'università, contrassegnati con gli standard di stile NGSS."
+      "en": "Teachers can build free, printable lesson plans, from kindergarten to university.",
+      "fr": "Les enseignants peuvent créer des plans de cours gratuits et imprimables, de la maternelle à l'université.",
+      "es": "Los docentes pueden crear planes de clase gratuitos e imprimibles, desde preescolar hasta la universidad.",
+      "ar": "يمكن للمعلمين إنشاء خطط دروس مجانية وقابلة للطباعة، من رياض الأطفال حتى الجامعة.",
+      "it": "Gli insegnanti possono creare piani di lezione gratuiti e stampabili, dalla scuola dell'infanzia all'università."
      }
     ],
     [
-     44.65,
-     49.69,
+     44.7,
+     50.4,
      {
-      "en": "Kids explore the Planet Map, and students build a satellite piece by piece in 3D.",
-      "fr": "Les enfants explorent la carte de la planète, et les élèves construisent un satellite pièce par pièce en 3D.",
-      "es": "Los niños exploran el Mapa del Planeta y los estudiantes construyen un satélite pieza por pieza en 3D.",
-      "ar": "يستكشف الأطفال خريطة الكوكب، ويبني الطلاب قمراً صناعياً قطعة قطعة بتقنية ثلاثية الأبعاد.",
-      "it": "I bambini esplorano la mappa del pianeta, e gli studenti costruiscono un pezzo per pezzo satellite in 3D."
+      "en": "Kids explore the Planet Map, and students build a satellite, piece by piece.",
+      "fr": "Les enfants explorent la carte de la planète, et les élèves construisent un satellite, pièce par pièce.",
+      "es": "Los niños exploran el Mapa del planeta, y los estudiantes construyen un satélite, pieza a pieza.",
+      "ar": "يستكشف الأطفال خريطة الكوكب، ويبني الطلاب قمراً صناعياً قطعةً قطعة.",
+      "it": "I bambini esplorano la Mappa del pianeta e gli studenti costruiscono un satellite, pezzo per pezzo."
      }
     ],
     [
-     50.91,
-     58.01,
+     51.7,
+     55.42,
      {
-      "en": "Search any topic, discover amazing facts, and follow live launches, in English, French, Spanish, and Arabic.",
-      "fr": "Recherchez n'importe quel sujet, découvrez des faits étonnants et suivez les lancements en direct, en anglais, français, espagnol et arabe.",
-      "es": "Busca cualquier tema, descubre datos asombrosos y sigue lanzamientos en vivo, en inglés, francés, español y árabe.",
-      "ar": "ابحث عن أي موضوع، واكتشف حقائق مذهلة، وتابع عمليات الإطلاق مباشرة، بالإنجليزية والفرنسية والإسبانية والعربية.",
-      "it": "Cerca qualsiasi argomento, scopri fatti sorprendenti e segui i lanci dal vivo, in inglese, francese, spagnolo e arabo."
+      "en": "Myth vs Fact busts 21 doom myths with real facts,",
+      "fr": "Mythe ou réalité démonte 21 mythes catastrophistes avec de vrais faits,",
+      "es": "Mito o realidad desmiente 21 mitos catastrofistas con datos reales,",
+      "ar": "يفنّد قسم خرافة أم حقيقة 21 خرافة تشاؤمية بحقائق حقيقية،",
+      "it": "Mito o realtà smonta 21 miti catastrofisti con fatti reali,"
      }
     ],
     [
-     58.23,
-     60.95,
+     60.5,
+     64.52,
      {
-      "en": "Learn it, teach it, and help save our planet.",
-      "fr": "Apprenez-le, enseignez-le et aidez à sauver notre planète.",
-      "es": "Apréndelo, enséñalo y ayuda a salvar nuestro planeta.",
-      "ar": "تعلّمه، وعلّمه، وساعد في إنقاذ كوكبنا.",
-      "it": "Imparalo, insegnalo e aiuta a salvare il nostro pianeta."
+      "en": "and discover 26 amazing facts about our planet, and beyond.",
+      "fr": "et découvrez 26 faits étonnants sur notre planète et au-delà.",
+      "es": "y descubre 26 datos asombrosos sobre nuestro planeta y más allá.",
+      "ar": "واكتشف 26 حقيقة مذهلة عن كوكبنا وما وراءه.",
+      "it": "e scopri 26 fatti incredibili sul nostro pianeta e oltre."
+     }
+    ],
+    [
+     66.9,
+     69.4,
+     {
+      "en": "Follow upcoming launches on the live tracker,",
+      "fr": "Suivez les prochains lancements en direct,",
+      "es": "Sigue los próximos lanzamientos en el rastreador en vivo,",
+      "ar": "تابع عمليات الإطلاق القادمة على المتتبع المباشر،",
+      "it": "Segui i prossimi lanci con il tracker in diretta,"
+     }
+    ],
+    [
+     71.9,
+     76.49,
+     {
+      "en": "and read Saving Planets in English, French, Spanish, Arabic, and Italian.",
+      "fr": "et lisez Saving Planets en anglais, français, espagnol, arabe et italien.",
+      "es": "y lee Saving Planets en inglés, francés, español, árabe e italiano.",
+      "ar": "واقرأ Saving Planets بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية.",
+      "it": "e leggi Saving Planets in inglese, francese, spagnolo, arabo e italiano."
+     }
+    ],
+    [
+     79.9,
+     85.24,
+     {
+      "en": "Learn it, teach it, and help save our planet. Visit SavingPlanets.com",
+      "fr": "Apprenez-le, enseignez-le et aidez à sauver notre planète. Rendez-vous sur SavingPlanets.com",
+      "es": "Apréndelo, enséñalo y ayuda a salvar nuestro planeta. Visita SavingPlanets.com",
+      "ar": "تعلّمه، وعلّمه، وساعد في إنقاذ كوكبنا. زُر SavingPlanets.com",
+      "it": "Imparalo, insegnalo e aiuta a salvare il nostro pianeta. Visita SavingPlanets.com"
+     }
+    ]
+   ]
+  },
+  "savingplanets-promo-v3-1920x1080": {
+   "pinned": "Cues are the narration as recorded (verified against the audio Oct 18, 2026); never rewritten to the live solution count.",
+   "burned": "Captions are burned into the picture, so the track is offered but not on by default.",
+   "visual": {
+    "en": "Earth from space (NASA Blue Marble and Black Marble); the new homepage with Saturn and the ice plumes of Enceladus (NASA/JPL-Caltech/Space Science Institute); real screen recordings of the Saving Planets site: new solution pages, a counter showing 175 solutions, 21 myths, 26 facts, 5 languages and 1,000+ pages, search, one page in five languages, the Roman telescope, Orbit Lab and launch tracker pages, the interactive World Map with pins lighting up hub by hub, and Myth vs Fact cards; and Earth with SavingPlanets.com.",
+    "fr": "La Terre vue de l'espace (NASA Blue Marble et Black Marble) ; la nouvelle page d'accueil avec Saturne et les panaches de glace d'Encelade (NASA/JPL-Caltech/Space Science Institute) ; de vraies captures d'écran du site Saving Planets : de nouvelles pages de solutions, un compteur de 175 solutions, 21 mythes, 26 faits, 5 langues et plus de 1 000 pages, la recherche, une page en cinq langues, les pages du télescope Roman, de l'Orbit Lab et du suivi des lancements, la carte du monde interactive dont les repères s'allument pôle par pôle, et des cartes Mythe ou réalité ; et la Terre avec SavingPlanets.com.",
+    "es": "La Tierra desde el espacio (NASA Blue Marble y Black Marble); la nueva página de inicio con Saturno y las columnas de hielo de Encélado (NASA/JPL-Caltech/Space Science Institute); grabaciones reales del sitio Saving Planets: nuevas páginas de soluciones, un contador de 175 soluciones, 21 mitos, 26 datos, 5 idiomas y más de 1.000 páginas, la búsqueda, una página en cinco idiomas, las páginas del telescopio Roman, el Orbit Lab y los lanzamientos en vivo, el mapa mundial interactivo con marcadores que se encienden área por área y tarjetas de Mito o realidad; y la Tierra con SavingPlanets.com.",
+    "ar": "الأرض من الفضاء (NASA Blue Marble وBlack Marble)؛ الصفحة الرئيسية الجديدة مع زحل وأعمدة الجليد من إنسيلادوس (NASA/JPL-Caltech/Space Science Institute)؛ تسجيلات شاشة حقيقية لموقع Saving Planets: صفحات حلول جديدة، وعدّاد يعرض 175 حلاً و21 خرافة و26 حقيقة و5 لغات وأكثر من 1000 صفحة، والبحث، وصفحة بخمس لغات، وصفحات تلسكوب رومان ومختبر المدارات ومتابعة الإطلاقات، وخريطة العالم التفاعلية بعلامات تضيء محوراً تلو الآخر، وبطاقات خرافة أم حقيقة؛ والأرض مع SavingPlanets.com.",
+    "it": "La Terra dallo spazio (NASA Blue Marble e Black Marble); la nuova homepage con Saturno e i pennacchi di ghiaccio di Encelado (NASA/JPL-Caltech/Space Science Institute); vere registrazioni dello schermo del sito Saving Planets: nuove pagine di soluzioni, un contatore con 175 soluzioni, 21 miti, 26 fatti, 5 lingue e oltre 1.000 pagine, la ricerca, una pagina in cinque lingue, le pagine del telescopio Roman, dell'Orbit Lab e dei lanci in diretta, la mappa del mondo interattiva con i segnaposto che si accendono hub per hub e le schede Mito o realtà; e la Terra con SavingPlanets.com."
+   },
+   "cues": [
+    [
+     0.5,
+     3.27,
+     {
+      "en": "Big updates just dropped at SavingPlanets.com!",
+      "fr": "Grosses nouveautés sur SavingPlanets.com !",
+      "es": "¡Grandes novedades en SavingPlanets.com!",
+      "ar": "تحديثات كبيرة وصلت للتو إلى SavingPlanets.com!",
+      "it": "Grandi novità su SavingPlanets.com!"
+     }
+    ],
+    [
+     3.85,
+     9.12,
+     {
+      "en": "Our new homepage opens on Saturn, with Enceladus shooting plumes of ice up toward the title.",
+      "fr": "Notre nouvelle page d'accueil s'ouvre sur Saturne, avec Encelade qui projette des panaches de glace vers le titre.",
+      "es": "Nuestra nueva página de inicio se abre con Saturno y Encélado lanzando columnas de hielo hacia el título.",
+      "ar": "تُفتح صفحتنا الرئيسية الجديدة على زحل، مع إنسيلادوس وهو يقذف أعمدة من الجليد نحو العنوان.",
+      "it": "La nostra nuova homepage si apre su Saturno, con Encelado che lancia pennacchi di ghiaccio verso il titolo."
+     }
+    ],
+    [
+     10.5,
+     20.59,
+     {
+      "en": "We now feature 175 real solutions, including 12 new ones, like Parker Solar Probe, The SeaCleaners, and WeForest.",
+      "fr": "Nous présentons désormais 175 solutions réelles, dont 12 nouvelles, comme Parker Solar Probe, The SeaCleaners et WeForest.",
+      "es": "Ahora presentamos 175 soluciones reales, entre ellas 12 nuevas, como Parker Solar Probe, The SeaCleaners y WeForest.",
+      "ar": "نعرض الآن 175 حلاً حقيقياً، منها 12 حلاً جديداً، مثل مسبار باركر الشمسي وThe SeaCleaners وWeForest.",
+      "it": "Ora presentiamo 175 soluzioni reali, di cui 12 nuove, come Parker Solar Probe, The SeaCleaners e WeForest."
+     }
+    ],
+    [
+     22.55,
+     32.51,
+     {
+      "en": "By the numbers: 175 solutions, 21 myths busted, 26 amazing facts, 5 languages, and over 1,000 pages to explore.",
+      "fr": "En chiffres : 175 solutions, 21 mythes démontés, 26 faits étonnants, 5 langues et plus de 1 000 pages à explorer.",
+      "es": "En cifras: 175 soluciones, 21 mitos desmentidos, 26 datos asombrosos, 5 idiomas y más de 1.000 páginas para explorar.",
+      "ar": "بالأرقام: 175 حلاً، و21 خرافة مفنّدة، و26 حقيقة مذهلة، و5 لغات، وأكثر من 1000 صفحة للاستكشاف.",
+      "it": "In numeri: 175 soluzioni, 21 miti smontati, 26 fatti incredibili, 5 lingue e oltre 1.000 pagine da esplorare."
+     }
+    ],
+    [
+     33.25,
+     35.5,
+     {
+      "en": "Our smarter search matches by meaning, too.",
+      "fr": "Notre recherche plus intelligente trouve aussi par le sens.",
+      "es": "Nuestra búsqueda más inteligente también encuentra por significado.",
+      "ar": "وبحثنا الأذكى يطابق حسب المعنى أيضاً.",
+      "it": "La nostra ricerca più intelligente trova anche in base al significato."
+     }
+    ],
+    [
+     36.95,
+     42.03,
+     {
+      "en": "Every page reads in English, French, Spanish, Arabic, and Italian.",
+      "fr": "Chaque page se lit en anglais, français, espagnol, arabe et italien.",
+      "es": "Cada página se lee en inglés, francés, español, árabe e italiano.",
+      "ar": "كل صفحة متاحة بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية.",
+      "it": "Ogni pagina si legge in inglese, francese, spagnolo, arabo e italiano."
+     }
+    ],
+    [
+     43.05,
+     56.55,
+     {
+      "en": "Studying physics, orbital mechanics, or aerospace engineering? Learn why the Roman telescope heads to Lagrange point 2, play in our Orbit Lab, and follow upcoming launches on the live tracker.",
+      "fr": "Vous étudiez la physique, la mécanique orbitale ou l'ingénierie aérospatiale ? Découvrez pourquoi le télescope Roman se dirige vers le point de Lagrange 2, jouez dans notre Orbit Lab et suivez les prochains lancements en direct.",
+      "es": "¿Estudias física, mecánica orbital o ingeniería aeroespacial? Descubre por qué el telescopio Roman va al punto de Lagrange 2, juega en nuestro Orbit Lab y sigue los próximos lanzamientos en el rastreador en vivo.",
+      "ar": "هل تدرس الفيزياء أو الميكانيكا المدارية أو هندسة الطيران والفضاء؟ تعرّف لماذا يتجه تلسكوب رومان إلى نقطة لاغرانج 2، والعب في مختبر المدارات، وتابع عمليات الإطلاق القادمة على المتتبع المباشر.",
+      "it": "Studi fisica, meccanica orbitale o ingegneria aerospaziale? Scopri perché il telescopio Roman va verso il punto di Lagrange 2, gioca nel nostro Orbit Lab e segui i prossimi lanci con il tracker in diretta."
+     }
+    ],
+    [
+     57.6,
+     64.25,
+     {
+      "en": "Explore every solution on our interactive world map. Pick a hub, and watch its solutions light up around the world.",
+      "fr": "Explorez chaque solution sur notre carte du monde interactive. Choisissez un pôle et regardez ses solutions s'allumer partout dans le monde.",
+      "es": "Explora cada solución en nuestro mapa mundial interactivo. Elige un área y mira cómo sus soluciones se iluminan por todo el mundo.",
+      "ar": "استكشف كل حل على خريطة العالم التفاعلية. اختر محوراً وشاهد حلوله تضيء حول العالم.",
+      "it": "Esplora ogni soluzione sulla nostra mappa del mondo interattiva. Scegli un hub e guarda le sue soluzioni accendersi in tutto il mondo."
+     }
+    ],
+    [
+     69.9,
+     71.82,
+     {
+      "en": "And bust doom myths with real facts.",
+      "fr": "Et démontez les mythes catastrophistes avec de vrais faits.",
+      "es": "Y desmiente mitos catastrofistas con datos reales.",
+      "ar": "وفنّد الخرافات التشاؤمية بحقائق حقيقية.",
+      "it": "E smonta i miti catastrofisti con fatti reali."
+     }
+    ],
+    [
+     72.15,
+     76.94,
+     {
+      "en": "Myth: the ozone hole can't be fixed. Fact: it's healing, say NOAA and NASA.",
+      "fr": "Mythe : le trou dans la couche d'ozone est irréparable. Réalité : il se résorbe, selon la NOAA et la NASA.",
+      "es": "Mito: el agujero de ozono no tiene arreglo. Realidad: se está recuperando, según la NOAA y la NASA.",
+      "ar": "خرافة: ثقب الأوزون لا يمكن إصلاحه. حقيقة: إنه يتعافى، بحسب NOAA وناسا.",
+      "it": "Mito: il buco dell'ozono non si può riparare. Realtà: si sta richiudendo, secondo NOAA e NASA."
+     }
+    ],
+    [
+     80.6,
+     88.51,
+     {
+      "en": "Myth: if an asteroid were coming, there would be nothing we could do. Fact: humanity has already moved one, with NASA's DART spacecraft.",
+      "fr": "Mythe : si un astéroïde arrivait, nous ne pourrions rien faire. Réalité : l'humanité en a déjà dévié un, avec la sonde DART de la NASA.",
+      "es": "Mito: si se acercara un asteroide, no podríamos hacer nada. Realidad: la humanidad ya desvió uno, con la nave DART de la NASA.",
+      "ar": "خرافة: لو كان كويكب قادماً، فلن نستطيع فعل شيء. حقيقة: لقد حرّكت البشرية كويكباً بالفعل، بمركبة DART التابعة لناسا.",
+      "it": "Mito: se arrivasse un asteroide, non potremmo fare nulla. Realtà: l'umanità ne ha già spostato uno, con la sonda DART della NASA."
+     }
+    ],
+    [
+     89.45,
+     91.68,
+     {
+      "en": "This Halloween, something spooky is coming.",
+      "fr": "Pour Halloween, quelque chose d'effrayant arrive.",
+      "es": "Este Halloween, llega algo escalofriante.",
+      "ar": "في الهالوين هذا العام، شيء مخيف قادم.",
+      "it": "Questo Halloween sta arrivando qualcosa di spaventoso."
+     }
+    ],
+    [
+     92.8,
+     94.84,
+     {
+      "en": "Visit SavingPlanets.com today!",
+      "fr": "Rendez-vous dès aujourd'hui sur SavingPlanets.com !",
+      "es": "¡Visita SavingPlanets.com hoy!",
+      "ar": "زُر SavingPlanets.com اليوم!",
+      "it": "Visita SavingPlanets.com oggi!"
+     }
+    ]
+   ]
+  },
+  "savingplanets-promo-v3-1080x1920": {
+   "pinned": "Cues are the narration as recorded (verified against the audio Oct 18, 2026); never rewritten to the live solution count.",
+   "burned": "Captions are burned into the picture, so the track is offered but not on by default.",
+   "visual": {
+    "en": "Earth from space (NASA Blue Marble and Black Marble); the new homepage with Saturn and the ice plumes of Enceladus (NASA/JPL-Caltech/Space Science Institute); real screen recordings of the Saving Planets site: new solution pages, a counter showing 175 solutions, 21 myths, 26 facts, 5 languages and 1,000+ pages, search, one page in five languages, the Roman telescope, Orbit Lab and launch tracker pages, the interactive World Map with pins lighting up hub by hub, and Myth vs Fact cards; and Earth with SavingPlanets.com.",
+    "fr": "La Terre vue de l'espace (NASA Blue Marble et Black Marble) ; la nouvelle page d'accueil avec Saturne et les panaches de glace d'Encelade (NASA/JPL-Caltech/Space Science Institute) ; de vraies captures d'écran du site Saving Planets : de nouvelles pages de solutions, un compteur de 175 solutions, 21 mythes, 26 faits, 5 langues et plus de 1 000 pages, la recherche, une page en cinq langues, les pages du télescope Roman, de l'Orbit Lab et du suivi des lancements, la carte du monde interactive dont les repères s'allument pôle par pôle, et des cartes Mythe ou réalité ; et la Terre avec SavingPlanets.com.",
+    "es": "La Tierra desde el espacio (NASA Blue Marble y Black Marble); la nueva página de inicio con Saturno y las columnas de hielo de Encélado (NASA/JPL-Caltech/Space Science Institute); grabaciones reales del sitio Saving Planets: nuevas páginas de soluciones, un contador de 175 soluciones, 21 mitos, 26 datos, 5 idiomas y más de 1.000 páginas, la búsqueda, una página en cinco idiomas, las páginas del telescopio Roman, el Orbit Lab y los lanzamientos en vivo, el mapa mundial interactivo con marcadores que se encienden área por área y tarjetas de Mito o realidad; y la Tierra con SavingPlanets.com.",
+    "ar": "الأرض من الفضاء (NASA Blue Marble وBlack Marble)؛ الصفحة الرئيسية الجديدة مع زحل وأعمدة الجليد من إنسيلادوس (NASA/JPL-Caltech/Space Science Institute)؛ تسجيلات شاشة حقيقية لموقع Saving Planets: صفحات حلول جديدة، وعدّاد يعرض 175 حلاً و21 خرافة و26 حقيقة و5 لغات وأكثر من 1000 صفحة، والبحث، وصفحة بخمس لغات، وصفحات تلسكوب رومان ومختبر المدارات ومتابعة الإطلاقات، وخريطة العالم التفاعلية بعلامات تضيء محوراً تلو الآخر، وبطاقات خرافة أم حقيقة؛ والأرض مع SavingPlanets.com.",
+    "it": "La Terra dallo spazio (NASA Blue Marble e Black Marble); la nuova homepage con Saturno e i pennacchi di ghiaccio di Encelado (NASA/JPL-Caltech/Space Science Institute); vere registrazioni dello schermo del sito Saving Planets: nuove pagine di soluzioni, un contatore con 175 soluzioni, 21 miti, 26 fatti, 5 lingue e oltre 1.000 pagine, la ricerca, una pagina in cinque lingue, le pagine del telescopio Roman, dell'Orbit Lab e dei lanci in diretta, la mappa del mondo interattiva con i segnaposto che si accendono hub per hub e le schede Mito o realtà; e la Terra con SavingPlanets.com."
+   },
+   "cues": [
+    [
+     0.5,
+     3.27,
+     {
+      "en": "Big updates just dropped at SavingPlanets.com!",
+      "fr": "Grosses nouveautés sur SavingPlanets.com !",
+      "es": "¡Grandes novedades en SavingPlanets.com!",
+      "ar": "تحديثات كبيرة وصلت للتو إلى SavingPlanets.com!",
+      "it": "Grandi novità su SavingPlanets.com!"
+     }
+    ],
+    [
+     3.85,
+     9.12,
+     {
+      "en": "Our new homepage opens on Saturn, with Enceladus shooting plumes of ice up toward the title.",
+      "fr": "Notre nouvelle page d'accueil s'ouvre sur Saturne, avec Encelade qui projette des panaches de glace vers le titre.",
+      "es": "Nuestra nueva página de inicio se abre con Saturno y Encélado lanzando columnas de hielo hacia el título.",
+      "ar": "تُفتح صفحتنا الرئيسية الجديدة على زحل، مع إنسيلادوس وهو يقذف أعمدة من الجليد نحو العنوان.",
+      "it": "La nostra nuova homepage si apre su Saturno, con Encelado che lancia pennacchi di ghiaccio verso il titolo."
+     }
+    ],
+    [
+     10.5,
+     20.59,
+     {
+      "en": "We now feature 175 real solutions, including 12 new ones, like Parker Solar Probe, The SeaCleaners, and WeForest.",
+      "fr": "Nous présentons désormais 175 solutions réelles, dont 12 nouvelles, comme Parker Solar Probe, The SeaCleaners et WeForest.",
+      "es": "Ahora presentamos 175 soluciones reales, entre ellas 12 nuevas, como Parker Solar Probe, The SeaCleaners y WeForest.",
+      "ar": "نعرض الآن 175 حلاً حقيقياً، منها 12 حلاً جديداً، مثل مسبار باركر الشمسي وThe SeaCleaners وWeForest.",
+      "it": "Ora presentiamo 175 soluzioni reali, di cui 12 nuove, come Parker Solar Probe, The SeaCleaners e WeForest."
+     }
+    ],
+    [
+     22.55,
+     32.51,
+     {
+      "en": "By the numbers: 175 solutions, 21 myths busted, 26 amazing facts, 5 languages, and over 1,000 pages to explore.",
+      "fr": "En chiffres : 175 solutions, 21 mythes démontés, 26 faits étonnants, 5 langues et plus de 1 000 pages à explorer.",
+      "es": "En cifras: 175 soluciones, 21 mitos desmentidos, 26 datos asombrosos, 5 idiomas y más de 1.000 páginas para explorar.",
+      "ar": "بالأرقام: 175 حلاً، و21 خرافة مفنّدة، و26 حقيقة مذهلة، و5 لغات، وأكثر من 1000 صفحة للاستكشاف.",
+      "it": "In numeri: 175 soluzioni, 21 miti smontati, 26 fatti incredibili, 5 lingue e oltre 1.000 pagine da esplorare."
+     }
+    ],
+    [
+     33.25,
+     35.5,
+     {
+      "en": "Our smarter search matches by meaning, too.",
+      "fr": "Notre recherche plus intelligente trouve aussi par le sens.",
+      "es": "Nuestra búsqueda más inteligente también encuentra por significado.",
+      "ar": "وبحثنا الأذكى يطابق حسب المعنى أيضاً.",
+      "it": "La nostra ricerca più intelligente trova anche in base al significato."
+     }
+    ],
+    [
+     36.95,
+     42.03,
+     {
+      "en": "Every page reads in English, French, Spanish, Arabic, and Italian.",
+      "fr": "Chaque page se lit en anglais, français, espagnol, arabe et italien.",
+      "es": "Cada página se lee en inglés, francés, español, árabe e italiano.",
+      "ar": "كل صفحة متاحة بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية.",
+      "it": "Ogni pagina si legge in inglese, francese, spagnolo, arabo e italiano."
+     }
+    ],
+    [
+     43.05,
+     56.55,
+     {
+      "en": "Studying physics, orbital mechanics, or aerospace engineering? Learn why the Roman telescope heads to Lagrange point 2, play in our Orbit Lab, and follow upcoming launches on the live tracker.",
+      "fr": "Vous étudiez la physique, la mécanique orbitale ou l'ingénierie aérospatiale ? Découvrez pourquoi le télescope Roman se dirige vers le point de Lagrange 2, jouez dans notre Orbit Lab et suivez les prochains lancements en direct.",
+      "es": "¿Estudias física, mecánica orbital o ingeniería aeroespacial? Descubre por qué el telescopio Roman va al punto de Lagrange 2, juega en nuestro Orbit Lab y sigue los próximos lanzamientos en el rastreador en vivo.",
+      "ar": "هل تدرس الفيزياء أو الميكانيكا المدارية أو هندسة الطيران والفضاء؟ تعرّف لماذا يتجه تلسكوب رومان إلى نقطة لاغرانج 2، والعب في مختبر المدارات، وتابع عمليات الإطلاق القادمة على المتتبع المباشر.",
+      "it": "Studi fisica, meccanica orbitale o ingegneria aerospaziale? Scopri perché il telescopio Roman va verso il punto di Lagrange 2, gioca nel nostro Orbit Lab e segui i prossimi lanci con il tracker in diretta."
+     }
+    ],
+    [
+     57.6,
+     64.25,
+     {
+      "en": "Explore every solution on our interactive world map. Pick a hub, and watch its solutions light up around the world.",
+      "fr": "Explorez chaque solution sur notre carte du monde interactive. Choisissez un pôle et regardez ses solutions s'allumer partout dans le monde.",
+      "es": "Explora cada solución en nuestro mapa mundial interactivo. Elige un área y mira cómo sus soluciones se iluminan por todo el mundo.",
+      "ar": "استكشف كل حل على خريطة العالم التفاعلية. اختر محوراً وشاهد حلوله تضيء حول العالم.",
+      "it": "Esplora ogni soluzione sulla nostra mappa del mondo interattiva. Scegli un hub e guarda le sue soluzioni accendersi in tutto il mondo."
+     }
+    ],
+    [
+     69.9,
+     71.82,
+     {
+      "en": "And bust doom myths with real facts.",
+      "fr": "Et démontez les mythes catastrophistes avec de vrais faits.",
+      "es": "Y desmiente mitos catastrofistas con datos reales.",
+      "ar": "وفنّد الخرافات التشاؤمية بحقائق حقيقية.",
+      "it": "E smonta i miti catastrofisti con fatti reali."
+     }
+    ],
+    [
+     72.15,
+     76.94,
+     {
+      "en": "Myth: the ozone hole can't be fixed. Fact: it's healing, say NOAA and NASA.",
+      "fr": "Mythe : le trou dans la couche d'ozone est irréparable. Réalité : il se résorbe, selon la NOAA et la NASA.",
+      "es": "Mito: el agujero de ozono no tiene arreglo. Realidad: se está recuperando, según la NOAA y la NASA.",
+      "ar": "خرافة: ثقب الأوزون لا يمكن إصلاحه. حقيقة: إنه يتعافى، بحسب NOAA وناسا.",
+      "it": "Mito: il buco dell'ozono non si può riparare. Realtà: si sta richiudendo, secondo NOAA e NASA."
+     }
+    ],
+    [
+     80.6,
+     88.51,
+     {
+      "en": "Myth: if an asteroid were coming, there would be nothing we could do. Fact: humanity has already moved one, with NASA's DART spacecraft.",
+      "fr": "Mythe : si un astéroïde arrivait, nous ne pourrions rien faire. Réalité : l'humanité en a déjà dévié un, avec la sonde DART de la NASA.",
+      "es": "Mito: si se acercara un asteroide, no podríamos hacer nada. Realidad: la humanidad ya desvió uno, con la nave DART de la NASA.",
+      "ar": "خرافة: لو كان كويكب قادماً، فلن نستطيع فعل شيء. حقيقة: لقد حرّكت البشرية كويكباً بالفعل، بمركبة DART التابعة لناسا.",
+      "it": "Mito: se arrivasse un asteroide, non potremmo fare nulla. Realtà: l'umanità ne ha già spostato uno, con la sonda DART della NASA."
+     }
+    ],
+    [
+     89.45,
+     91.68,
+     {
+      "en": "This Halloween, something spooky is coming.",
+      "fr": "Pour Halloween, quelque chose d'effrayant arrive.",
+      "es": "Este Halloween, llega algo escalofriante.",
+      "ar": "في الهالوين هذا العام، شيء مخيف قادم.",
+      "it": "Questo Halloween sta arrivando qualcosa di spaventoso."
+     }
+    ],
+    [
+     92.8,
+     94.84,
+     {
+      "en": "Visit SavingPlanets.com today!",
+      "fr": "Rendez-vous dès aujourd'hui sur SavingPlanets.com !",
+      "es": "¡Visita SavingPlanets.com hoy!",
+      "ar": "زُر SavingPlanets.com اليوم!",
+      "it": "Visita SavingPlanets.com oggi!"
      }
     ]
    ]

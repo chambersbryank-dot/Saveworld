@@ -101,7 +101,9 @@ def videos(s, l, prefix):
         if not v or v.group(1) not in D['videos']: return blk
         v = v.group(1); blk = re.sub(r'<track kind="captions"[^>]*>', '', blk)
         if 'hero-video' in blk: return blk  # silent decorative loop: no visible captions
-        tag = f'<track kind="captions" src="{prefix}assets/captions/{v}.{l}.vtt" srclang="{l}" label="{LABEL[l]}" default>'
+        # Oct 18: videos with captions burned into the picture ("burned" in a11y.json) keep the track available but not 'default', so captions never show twice
+        dflt = '' if D['videos'][v].get('burned') else ' default'
+        tag = f'<track kind="captions" src="{prefix}assets/captions/{v}.{l}.vtt" srclang="{l}" label="{LABEL[l]}"{dflt}>'
         return blk.replace('</video>', tag + '</video>')
     s = re.sub(r'<video\b.*?</video>', tr, s, flags=re.S)
     s = re.sub(r'<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->', '', s, flags=re.S)

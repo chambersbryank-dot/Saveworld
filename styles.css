@@ -793,6 +793,17 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .sp-video-vertical figcaption { max-width: 380px; margin: 0.75rem auto 0; }
 .sp-video-cap { display: block; font-size: 0.98rem; line-height: 1.45; }
 .sp-video-vertical .photo-credit { display: block; }
+/* Oct 18: homepage promo (below the locked hero). 16:9 master on desktop/iPad/landscape, 9:16 master on narrow portrait phones */
+.sp-promo { max-width: 1100px; margin: 2.5rem auto 0; }
+.sp-promo h2 { margin: 0 0 0.4rem; }
+.sp-promo .promo-tall { display: none; }
+.sp-promo figcaption { max-width: 820px; margin: 0.75rem auto 0; }
+.sp-promo .photo-credit { display: inline-block; margin: 0.35rem 0.4rem 0; }
+.sp-promo .promo-x { margin: 0.9rem 0 0; font-weight: 600; }
+@media (orientation: portrait) and (max-width: 700px) {
+  .sp-promo .promo-wide { display: none; }
+  .sp-promo .promo-tall { display: block; width: 100%; max-width: min(380px, calc(80vh * 0.5625)); margin: 0 auto; border-radius: 16px; }
+}
 .scoreboard { max-width: 1100px; margin: var(--section-gap, 2.6rem) auto 0; padding: 0 1.5rem; text-align: center; }
 .sb-intro { margin: 0.4rem auto 1.4rem; max-width: 640px; opacity: 0.9; }
 .sb-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }

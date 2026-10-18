@@ -7,7 +7,10 @@ SITE = 'https://www.savingplanets.com/'
 def clean(s): return html.unescape(re.sub(r'<[^>]+>', ' ', s)).split() and ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', s)).split())
 def upload(mp4):
     d = subprocess.run(['git', 'log', '--diff-filter=A', '--format=%aI', '--', mp4], capture_output=True, text=True).stdout.split()
-    return d[-1] if d else None
+    return d[-1] if d else R2_ONLY.get(os.path.basename(mp4))
+# Oct 18: videos uploaded straight to R2 (never committed under assets/videos/) have no git history; their upload dates live here
+R2_ONLY = {'savingplanets-about-v4.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-about-v4-720.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v3-1920x1080.mp4': '2026-10-18T01:00:00-10:00',
+           'savingplanets-promo-v3-1080x1920.mp4': '2026-10-18T01:00:00-10:00'}
 def dur(mp4):
     try:
         s = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp4], capture_output=True, text=True).stdout.strip())
