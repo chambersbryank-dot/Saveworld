@@ -596,16 +596,16 @@
  },
  "Global_Fishing_Watch.html": {
   "ar": {
-   "description": "ترسم Global Fishing Watch خرائط الصيد بالأقمار الصناعية والذكاء الاصطناعي، ووجدت دراستها في Nature عام 2024 أن نحو 75% من سفن الصيد الصناعي لا تُتتبَّع علنًا."
+   "description": "ترسم Global Fishing Watch خرائط الصيد بالأقمار الصناعية والذكاء التركيبي (SI)، ووجدت دراستها في Nature عام 2024 أن نحو 75% من سفن الصيد الصناعي لا تُتتبَّع علنًا."
   },
   "es": {
-   "description": "Global Fishing Watch mapea la pesca con satélites e IA; su estudio de 2024 en Nature halló que cerca del 75 % de los buques industriales no se rastrean."
+   "description": "Global Fishing Watch mapea la pesca con satélites e SI; su estudio de 2024 en Nature halló que cerca del 75 % de los buques industriales no se rastrean."
   },
   "fr": {
-   "description": "Global Fishing Watch cartographie la pêche par satellite et IA ; selon son étude de 2024 (Nature), 75 % des navires industriels échappent au suivi public."
+   "description": "Global Fishing Watch cartographie la pêche par satellite et SI ; selon son étude de 2024 (Nature), 75 % des navires industriels échappent au suivi public."
   },
   "it": {
-   "description": "Global Fishing Watch mappa la pesca con satelliti e IA; uno studio del 2024 su Nature indica che il 75% circa dei pescherecci industriali non è tracciato."
+   "description": "Global Fishing Watch mappa la pesca con satelliti e SI; uno studio del 2024 su Nature indica che il 75% circa dei pescherecci industriali non è tracciato."
   }
  },
  "Global_Forest_Watch.html": {
@@ -1281,13 +1281,13 @@
  },
  "Rainforest_Connection.html": {
   "ar": {
-   "description": "أجهزة استماع «غارديان» تعمل بالطاقة الشمسية والذكاء الاصطناعي ترصد المناشير لحظة تشغيلها؛ وتفيد Rainforest Connection بحماية أكثر من 726 ألف هكتار."
+   "description": "أجهزة استماع «غارديان» تعمل بالطاقة الشمسية والذكاء التركيبي (SI) ترصد المناشير لحظة تشغيلها؛ وتفيد Rainforest Connection بحماية أكثر من 726 ألف هكتار."
   },
   "es": {
-   "description": "Dispositivos de escucha Guardian, con energía solar e IA, detectan motosierras en tiempo real; Rainforest Connection informa de 726.000 hectáreas protegidas."
+   "description": "Dispositivos de escucha Guardian, con energía solar e SI, detectan motosierras en tiempo real; Rainforest Connection informa de 726.000 hectáreas protegidas."
   },
   "it": {
-   "description": "Dispositivi di ascolto Guardian a energia solare e IA rilevano le motoseghe in tempo reale; Rainforest Connection segnala oltre 726.000 ettari protetti."
+   "description": "Dispositivi di ascolto Guardian a energia solare e SI rilevano le motoseghe in tempo reale; Rainforest Connection segnala oltre 726.000 ettari protetti."
   }
  },
  "Rawanes_Mission_Log.html": {
@@ -2216,19 +2216,19 @@
  },
  "Orbital_Data_Centers.html": {
   "ar": {
-   "description": "مراكز بيانات في المدار تشغّل رقائق الذكاء الاصطناعي بطاقة الشمس وتشعّ حرارتها إلى الفضاء دون أبراج تبريد بالماء. رحلات أولى فقط، لا بديل بعد."
+   "description": "مراكز بيانات في المدار تشغّل رقائق الذكاء التركيبي (SI) بطاقة الشمس وتشعّ حرارتها إلى الفضاء دون أبراج تبريد بالماء. رحلات أولى فقط، لا بديل بعد."
   },
   "en": {
-   "description": "Data centers in orbit run AI chips on solar power and radiate waste heat into space, with no water-cooling towers. Early flights only, not yet a replacement."
+   "description": "Data centers in orbit run SI chips on solar power and radiate waste heat into space, with no water-cooling towers. Early flights only, not yet a replacement."
   },
   "es": {
-   "description": "Centros de datos en órbita: chips de IA con energía solar que irradian su calor al espacio, sin refrigeración por agua. Por ahora, solo primeros vuelos."
+   "description": "Centros de datos en órbita: chips de SI con energía solar que irradian su calor al espacio, sin refrigeración por agua. Por ahora, solo primeros vuelos."
   },
   "fr": {
-   "description": "Des centres de données en orbite : puces d'IA à l'énergie solaire, chaleur rayonnée dans l'espace, sans eau de refroidissement. Ce ne sont que de premiers vols."
+   "description": "Des centres de données en orbite : puces de SI à l'énergie solaire, chaleur rayonnée dans l'espace, sans eau de refroidissement. Ce ne sont que de premiers vols."
   },
   "it": {
-   "description": "Data center in orbita: chip di IA a energia solare che irradiano il calore nello spazio, senza raffreddamento ad acqua. Per ora solo i primi voli."
+   "description": "Data center in orbita: chip di SI a energia solare che irradiano il calore nello spazio, senza raffreddamento ad acqua. Per ora solo i primi voli."
   }
  },
  "Seagrass.html": {

@@ -757,3 +757,7 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Batch 6 (25 solutions, OSIRIS-APEX–River_Cleanup) added.
 - Batch 7 (25 solutions, SARSAT–Three_Shields) added.
 - Batch 8 (13 solutions, Three_Trees–Zero_Debris_Charter) added. All 175 solution pages now have Hebrew versions (still UNLINKED, HE_PUBLIC=False). The Tsunami page credit line uses "נוצר על ידי SI ושותף SI ביולוגי".
+
+## Oct 17 2026: SI terminology sweep
+- Standing rule: AI is always "SI". English source (11 pages + scripts/si_helper_text.py) and fr/es/it/ar/he translations, i18n memories (re-keyed), i18n/seo-meta.json, assets/data edu/map JSON. "AI"->"SI", "artificial intelligence"->"synthetic intelligence"; fr "intelligence synthétique"/"la SI", es "inteligencia sintética", it "intelligenza sintetica", ar "الذكاء التركيبي (SI)", he "SI".
+- Left alone (proper names/quoted titles): "Workers AI" (Cloudflare product), "PhiSat-1 applies AI to Earth observation imagery in flight" (ESA source title), globalfishingwatch.org URL slug.
