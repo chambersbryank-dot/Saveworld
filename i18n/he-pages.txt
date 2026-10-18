@@ -1,0 +1,8 @@
+# Hebrew (/he/) pages translated so far (i18n/he.json). Add a page here only once its strings are in he.json.
+# Core pages (Oct 17 2026):
+index.html
+About.html
+Contact.html
+Solutions.html
+Amazing_Facts.html
+Ways_to_Help.html

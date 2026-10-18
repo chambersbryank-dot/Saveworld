@@ -7,11 +7,15 @@ import json, re, os, hashlib, sys
 from bs4 import BeautifulSoup, Comment
 
 SITE = 'https://www.savingplanets.com/'
-LANGS = ['fr', 'es', 'ar', 'it']
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import langs as L10N  # Oct 17: shared language lists + HE_PUBLIC launch switch (scripts/langs.py)
+LANGS = L10N.BUILD          # languages built (incl. Hebrew)
+PUBLIC = L10N.PUBLIC        # languages linked (switcher, hreflang); Hebrew only once L10N.HE_PUBLIC is True
+CUR_PAGES = None            # pages being built for the current language (Hebrew: i18n/he-pages.txt only)
 PAGES = [l.strip() for l in open('i18n/pages.txt', encoding='utf8') if l.strip() and not l.startswith('#')]  # pages to translate
-LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'العربية', 'it': 'IT'}
-LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}
-SWITCH_ARIA = {'en': 'Language', 'fr': 'Langue', 'es': 'Idioma', 'ar': 'اللغة', 'it': 'Lingua'}
+LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'العربية', 'it': 'IT', 'he': 'עברית'}
+LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
+SWITCH_ARIA = {'en': 'Language', 'fr': 'Langue', 'es': 'Idioma', 'ar': 'اللغة', 'it': 'Lingua', 'he': 'שפה'}
 ATTRS = ('alt', 'aria-label', 'title', 'data-title', 'data-image-alt', 'placeholder', 'data-status', 'data-arrival-label')
 META = {'description', 'twitter:description', 'twitter:title', 'og:description', 'og:title'}
 FFI = 'For Further Information: '
@@ -41,7 +45,7 @@ def src_hash(page):
 def switcher(page, cur, prefix):
     """Language switcher <li>. prefix = path from current page to site root ('' or '../')."""
     items = []
-    for l in ['en'] + LANGS:
+    for l in ['en'] + PUBLIC:
         if l == 'en':
             href = prefix + page
         else:
@@ -52,7 +56,7 @@ def switcher(page, cur, prefix):
 
 def hreflang_links(page):
     out = [f'<link rel="alternate" hreflang="en" href="{SITE}{page}">']
-    out += [f'<link rel="alternate" hreflang="{l}" href="{SITE}{l}/{page}">' for l in LANGS]
+    out += [f'<link rel="alternate" hreflang="{l}" href="{SITE}{l}/{page}">' for l in PUBLIC]
     out.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{page}">')
     return '\n'.join(out)
 
@@ -89,7 +93,7 @@ def tr(m, s):
 def fix_url(u):
     if not u or re.match(r'^(https?:|mailto:|tel:|#|/|data:|javascript:)', u): return u
     page = u.split('#')[0].split('?')[0]
-    if page in PAGES: return u            # stay inside the language folder
+    if page in (CUR_PAGES if CUR_PAGES is not None else PAGES): return u  # stay inside the language folder (Hebrew: only pages it has)
     return '../' + u
 
 def localize_search(js, m):
@@ -113,7 +117,7 @@ def build(page, lang, m):
     soup = BeautifulSoup(raw, 'html.parser')
     html = soup.html
     html['lang'] = lang
-    if lang == 'ar': html['dir'] = 'rtl'
+    if L10N.is_rtl(lang): html['dir'] = 'rtl'
     for t in soup.find_all(string=True):
         if isinstance(t, Comment) or t.parent.name in ('script', 'style'): continue
         new = tr(m, str(t))
@@ -148,11 +152,20 @@ def build(page, lang, m):
     for li in soup.select('li.lang-switch'): li.decompose()
     head = soup.head
     can = head.find('link', rel='canonical')
-    extra = BeautifulSoup(hreflang_links(page) + f'\n<meta name="i18n-source" content="{page} {src_hash(page)}">'
-                          + f'\n<meta property="og:locale" content="{ {"fr":"fr_FR","es":"es_ES","ar":"ar_AR","it":"it_IT"}[lang] }">', 'html.parser')
+    public = lang in PUBLIC
+    extra = BeautifulSoup((hreflang_links(page) if public else
+                           f'<meta name="robots" content="noindex,nofollow">\n<link rel="preconnect" href="https://fonts.googleapis.com">'
+                           f'\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700;800&amp;display=swap">') + f'\n<meta name="i18n-source" content="{page} {src_hash(page)}">'
+                          + f'\n<meta property="og:locale" content="{L10N.LOCALE[lang]}">', 'html.parser')
     (can.insert_after(extra) if can else head.append(extra))
     ul = soup.select_one('nav#topnav ul.nav-links')
-    if ul: ul.append(BeautifulSoup(switcher(page, lang, '../'), 'html.parser'))
+    if ul and public: ul.append(BeautifulSoup(switcher(page, lang, '../'), 'html.parser'))
+    if not public:  # Oct 17: unlinked language (Hebrew before review): no robots index line from the English copy, no hreflang
+        for mt in soup.find_all('meta', attrs={'name': 'robots'}):
+            if mt.get('content') != 'noindex,nofollow': mt.decompose()
+    if lang == 'he':  # Hebrew font stack (Montserrat has no Hebrew glyphs)
+        st = soup.new_tag('style'); st.string = 'html[lang=he] body,html[lang=he] h1,html[lang=he] h2,html[lang=he] h3,html[lang=he] .hero-welcome{font-family:"Noto Sans Hebrew",Heebo,"Arial Hebrew",Arial,system-ui,sans-serif}'
+        head.append(st)
     # amazing-fact tags in translations must not be collected again: drop the class marker
     for p in soup.select('p.amazing-fact'):
         p['class'] = [c for c in p['class'] if c != 'amazing-fact'] + ['amazing-fact-i18n']
@@ -170,7 +183,7 @@ def english_head(page):
 def missing(lang):
     """Print English strings on the PAGES that have no entry in i18n/<lang>.json (to translate next)."""
     m = json.load(open(f'i18n/{lang}.json', encoding='utf8')); seen = set()
-    for page in PAGES:
+    for page in (L10N.pages_for(lang, PAGES) if len(sys.argv) < 4 else sys.argv[3:]):  # optional page list: --missing he Page.html ...
         soup = BeautifulSoup(unglossary(open(page, encoding='utf8').read()), 'html.parser')  # Oct 16: same source build() translates (no glossary fragments)
         for li in soup.select('li.lang-switch, nav#topnav'): li.decompose()
         vals = [str(t).strip() for t in soup.find_all(string=True) if not isinstance(t, Comment) and t.parent.name not in ('script', 'style')
@@ -193,10 +206,12 @@ if __name__ == '__main__':
     seo.run(['en'])  # finalize English first so the i18n-source hashes match the English that ships
     for lang in langs:
         m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
-        for page in PAGES: build(page, lang, m)
-        print(lang, 'built', len(PAGES), 'pages')
+        CUR_PAGES = L10N.pages_for(lang, PAGES)
+        for page in CUR_PAGES: build(page, lang, m)
+        print(lang, 'built', len(CUR_PAGES), 'pages', '' if lang in PUBLIC else '(UNLINKED: noindex, not in switcher/hreflang/sitemap)')
+    CUR_PAGES = None
     h0 = {p: src_hash(p) for p in PAGES}
-    print('seo-fix:', seo.run(['en'] + langs), 'pages updated')
+    print('seo-fix:', seo.run(['en'] + [l for l in langs if l in PUBLIC]), 'pages updated')  # unlinked Hebrew stays out of seo-fix
     # Oct 16: a brand-new page's English changes once its translations exist (seo-fix adds the hreflang/alternate data it can
     # only see now), so its fresh i18n-source hashes went stale and the weekly-sync check failed on the first run. Rebuild just
     # those pages against the final English, then re-run the SEO pass once more.
@@ -204,5 +219,8 @@ if __name__ == '__main__':
     if changed:
         for lang in langs:
             m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
-            for page in changed: build(page, lang, m)
-        print('re-stamped after final seo-fix:', ', '.join(changed), '| seo-fix:', seo.run(['en'] + langs), 'pages updated')
+            CUR_PAGES = L10N.pages_for(lang, PAGES)
+            for page in changed:
+                if page in CUR_PAGES: build(page, lang, m)
+        CUR_PAGES = None
+        print('re-stamped after final seo-fix:', ', '.join(changed), '| seo-fix:', seo.run(['en'] + [l for l in langs if l in PUBLIC]), 'pages updated')

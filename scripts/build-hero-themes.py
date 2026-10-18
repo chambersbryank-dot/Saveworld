@@ -38,7 +38,7 @@ def POSTER():  # .hero-space::before = still frame until the live ground is read
                'transition:opacity 1.2s ease}.hero[data-hero=space] .hero-space.hs-ready::before{opacity:0}') + out
     return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
-LANGS = ['en', 'fr', 'es', 'ar', 'it']
+LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # Oct 17: he = Hebrew (built, unlinked until review; skipped if he/index.html is missing)
 # Oct 17 6:15 PM: APPROVED HERO POSITION (pending owner sign-off on iPad landscape, then LOCKED). How far the homepage title
 # block sits ABOVE its flex-centered spot, for every hero theme. Change only here; see NOTES.md 'Approved hero position'.
 HERO_OFFSET = '1.6vh'
@@ -55,6 +55,7 @@ CAPS = {
   'es': ('Encélado: chorros de vapor de agua y hielo de un océano oculto', 'Salida de la Tierra desde la órbita lunar, vista por primera vez por el Apolo 8 en 1968'),
   'ar': ('إنسيلادوس: نفثات من بخار الماء والجليد من محيط خفي', 'شروق الأرض من مدار القمر، كما رآه طاقم أبولو 8 لأول مرة عام 1968'),
   'it': ("Encelado: getti di vapore acqueo e ghiaccio da un oceano nascosto", "Il sorgere della Terra dall'orbita lunare, visto per la prima volta dall'Apollo 8 nel 1968"),
+  'he': ('אנקלדוס: סילוני אדי מים וקרח מאוקיינוס נסתר', 'זריחת כדור הארץ ממסלול סביב הירח, שנצפתה לראשונה על ידי Apollo 8 ב-1968'),
 }
 CAP_HREF = ('Enceladus.html', 'Artemis_II.html')  # Oct 16: Enceladus caption -> the Enceladus page; Earthrise -> Artemis II (crewed flight around the Moon)
 
@@ -147,6 +148,7 @@ def lazy_video(s):
 
 for l in LANGS:
     p = 'index.html' if l == 'en' else f'{l}/index.html'
+    if not os.path.exists(p): continue
     s = open(p, encoding='utf8').read(); o = s
     b = block('' if l == 'en' else '../', l)
     pat = re.compile(r'<!-- HEROTHEME:START -->.*?<!-- HEROTHEME:END -->', re.S)

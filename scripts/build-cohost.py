@@ -4,7 +4,7 @@ Idempotent marker blocks COHOST / COHOST-TEASER. Counts come from the repo (Engl
 import json, glob, os, re, urllib.parse
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-PAGES = min(len(glob.glob(d + '*.html')) for d in ['', 'fr/', 'es/', 'ar/', 'it/']) // 100 * 100  # 'more than N', true in every language
+PAGES = min(len(glob.glob(d + '*.html')) for d in ['', 'fr/', 'es/', 'ar/', 'it/']) // 100 * 100  # 'more than N', true in every PUBLIC language (Oct 17: he/ is partial, not counted)
 SOL = json.load(open('assets/data/solutions.json'))['site']['solutions']
 MAIL = 'media@savingplanets.com'
 T = {
@@ -38,6 +38,12 @@ T = {
   top_h='Temi di conversazione', top=["Il flusso di lavoro tra persona e SI, passo dopo passo","Garanzie: ogni fatto con una fonte, nessun fatto inventato, approvazione umana prima di pubblicare o inviare qualsiasi cosa","Istruzione multilingue su larga scala (inglese, francese, spagnolo, arabo, italiano)","Lezioni per insegnanti e studenti che usano bene la SI"],
   ask_h='Contattaci', ask='Raccontaci del tuo programma, corso o evento, del tuo pubblico e di alcune date possibili.', btn='Invitaci a co-condurre',
   teaser='Conduci un podcast, un corso o un evento? Co-conduci con noi una conversazione su come un Partner SI Biologico e la SI hanno creato questo sito.', tlink='Conduci con noi'),
+ 'he': dict(h='הנחו איתנו', subj='בקשה להנחיה משותפת: שותף SI ביולוגי ו-SI',
+  intro=f'Saving Planets נבנה על ידי שותף SI ביולוגי שעובד עם SI (בינה סינתטית): יותר מ-{PAGES} דפים בכל אחת מחמש שפות ו-{SOL} פתרונות, בחינם, ללא פרסומות בדפי הלמידה. נשמח להנחות יחד שיחה על האופן שבו השותפות הזו עובדת, ומה משמעותה לחינוך.',
+  who_h='עם מי אנחנו מנחים', who=['פודקאסטים ורדיו','בתי ספר, מורים ואוניברסיטאות','וובינרים וכנסים','עיתונאים ומדיה'],
+  top_h='נושאים לשיחה', top=['תהליך העבודה בין האדם ל-SI, צעד אחר צעד','מעקות בטיחות: לכל עובדה יש מקור, אין עובדות מומצאות, ואישור אנושי לפני שמשהו מתפרסם או נשלח','חינוך רב-לשוני בקנה מידה גדול (אנגלית, צרפתית, ספרדית, ערבית, איטלקית)','שיעורים למורים ולתלמידים שמשתמשים ב-SI היטב'],
+  ask_h='צרו קשר', ask='ספרו לנו על התוכנית, הכיתה או האירוע שלכם, על הקהל שלכם ועל כמה תאריכים אפשריים.', btn='הזמינו אותנו להנחות יחד',
+  teaser='מנחים פודקאסט, שיעור או אירוע? הנחו איתנו שיחה על האופן שבו שותף SI ביולוגי ו-SI בנו את האתר הזה.', tlink='הנחו איתנו'),
 }
 # Oct 17: biosipartner@ Cc line right after media@ (strings shared with build-biosi-cc.py)
 CC = {'en': ('Feel free to Cc: our Biological SI Partner at', 'He or she will reach out to you within 24 hours.')}
@@ -52,6 +58,7 @@ def put(s, name, block, after):
     return s[:i] + f'<!-- {name}:START -->{block}<!-- {name}:END -->' + s[i:]
 for lang, t in T.items():
     pre = '' if lang == 'en' else lang + '/'
+    if lang != 'en' and not os.path.exists(pre + 'About.html'): continue  # Oct 17: Hebrew is built only once its pages exist
     href = f'mailto:{MAIL}?subject=' + urllib.parse.quote(t['subj'])
     sec = (f'<section class="five-ws" id="cohost"><h2>{t["h"]}</h2><p class="src-intro">{t["intro"]}</p><div class="ws-grid">'
            f'<div class="w-card"><h3>{t["who_h"]}</h3>{ul(t["who"])}</div>'
