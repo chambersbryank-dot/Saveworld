@@ -120,12 +120,16 @@ except Exception: PROMO_X = ''
 PX = f'<p class="promo-x"><a href="{html.escape(PROMO_X)}" target="_blank" rel="noopener">See our new milestone on X →</a></p>' if PROMO_X else ''
 PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledby="promo-title">'
   f'<h2 id="promo-title">{html.escape(PROMO_H, quote=False)}</h2><figure class="sp-video-fig">'
-  f'<video class="promo-wide" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-wide.jpg" width="{PW}" height="{PH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
+  f'<video class="promo-wide" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-wide-b.jpg" width="{PW}" height="{PH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
   f'<source src="{PU}" type="video/mp4"><a href="{PU}">Download the video</a></video>'
-  f'<video class="promo-tall" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-tall.jpg" width="{TW}" height="{TH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
+  f'<video class="promo-tall" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-tall-b.jpg" width="{TW}" height="{TH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
   f'<source src="{TU}" type="video/mp4"><a href="{TU}">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> '
   f'<span class="photo-credit">{html.escape(PROMO_SRC, quote=False)}</span></figcaption></figure>{PX}</section>')
 s = put(s, 'PROMO', PROMO, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
 open('index.html', 'w', encoding='utf-8').write(s)
+# Oct 18 (owner request): the same promo at the top of About, directly below the 'From the ocean floor…' strip; About v4 stays further down
+s = open('About.html', encoding='utf-8').read()
+s = put(s, 'PROMO', PROMO.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
+open('About.html', 'w', encoding='utf-8').write(s)
 print('SOTW:', e['page'], '| EO active:', len(eo))

@@ -39,7 +39,7 @@ def fmt(l, iso, year=True):
 def cards(l):
     s = rd(d(l) + 'Solutions.html'); out = {}
     for m in re.finditer(r'<article class="card sol-card"[^>]*data-url="(?:\.\./)?([^"#]+)"[^>]*>.*?<h3[^>]*>(.*?)</h3>', s, re.S):
-        out.setdefault(m.group(1), re.sub(r'<[^>]+>', '', m.group(2)).strip())
+        out.setdefault(m.group(1), html.unescape(re.sub(r'<[^>]+>', '', m.group(2)).strip()))  # Oct 18: names are HTML in Solutions.html; unescape before esc() (was showing &quot;SHIKISAI&quot;)
     return out
 def added(urls):
     # Oct 15: release batch dates come from solutions.json "added" (set by <meta name="sp:added"> via build-stats.js), not git history

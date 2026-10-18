@@ -101,8 +101,10 @@ def videos(s, l, prefix):
         if not v or v.group(1) not in D['videos']: return blk
         v = v.group(1); blk = re.sub(r'<track kind="captions"[^>]*>', '', blk)
         if 'hero-video' in blk: return blk  # silent decorative loop: no visible captions
-        # Oct 18: videos with captions burned into the picture ("burned" in a11y.json) keep the track available but not 'default', so captions never show twice
-        dflt = '' if D['videos'][v].get('burned') else ' default'
+        # Oct 18: videos with captions burned into the picture ("burned" in a11y.json) get NO track: Safari/iPadOS turns tracks on by itself
+        # when the device caption setting is on, which drew a second caption over the burned-in one. The transcript below the video stays.
+        if D['videos'][v].get('burned'): return blk
+        dflt = ' default'
         tag = f'<track kind="captions" src="{prefix}assets/captions/{v}.{l}.vtt" srclang="{l}" label="{LABEL[l]}"{dflt}>'
         return blk.replace('</video>', tag + '</video>')
     s = re.sub(r'<video\b.*?</video>', tr, s, flags=re.S)
@@ -139,6 +141,11 @@ def main():
                 s = rd(f); s, _ = alts(s, {}, l, None)
                 s = re.sub(r'<track\b[^>]*kind="captions"[^>]*>', lambda m: m.group(0).replace('.en.vtt', f'.{l}.vtt').replace('srclang="en"', f'srclang="{l}"').replace('label="English"', f'label="{LABEL[l]}"'), s)
                 n += wr(f, s)
+        # Oct 18: translated pages are copies of the English ones made before this pass; drop tracks of burned-caption videos there too (incl. hidden he)
+        BURN = [k for k, x in D['videos'].items() if x.get('burned')]
+        rx = re.compile(r'<track\b[^>]*assets/captions/(?:' + '|'.join(map(re.escape, BURN)) + r')\.[a-z]{2}\.vtt[^>]*>') if BURN else None
+        for f in (glob.glob('*/*.html') if rx else []):
+            if f.split('/')[0] in LANGS + ['he']: n += wr(f, rx.sub('', rd(f)))
         print(f'a11y-pass --translated: {n} pages updated'); return
     desc = best_desc(en)
     mems = {l: json.load(open(f'i18n/{l}.json', encoding='utf8')) for l in LANGS}

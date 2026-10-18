@@ -117,6 +117,13 @@ def count_solutions():
     return len(re.findall(r'<article class="card sol-card"', rd('Solutions.html')))
 
 MEDIA = json.load(open('assets/data/media-manifest.json')) if os.path.exists('assets/data/media-manifest.json') else {}
+_HP = dict(re.findall(r"\.hp-([A-Za-z0-9_-]+) \.page-hero\[class\]\{[^}]*?url\('([^']+)'\)", rd('styles.css')))
+def hero_photo(url):
+    f = os.path.basename(url.split('#')[0].split('?')[0])
+    if not os.path.exists(f): return None
+    m = re.search(r'<body[^>]*class="[^"]*\bhp-([A-Za-z0-9_-]+)', rd(f))
+    ph = _HP.get(m.group(1)) if m else None
+    return ph if ph and os.path.exists(ph) else None
 def mini(card):
     url = re.search(r'data-url="([^"]+)"', card).group(1)
     img = re.search(r'<img[^>]*>', card).group(0)
@@ -126,6 +133,14 @@ def mini(card):
     e = MEDIA.get(f'images/og/{m.group(1)}/{m.group(2)}') if m else None
     if e and e.get('srcset') and 'srcset=' not in img:
         img = img.replace('<img', f'<img srcset="{e["srcset"]}" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 380px"', 1)
+    # Oct 18: share-card images carry the solution title baked in, so the card showed every title twice (image + h3).
+    # Homepage cards use the page's own hero photo instead (styles.css .hp-<slug> rule); share card only as fallback.
+    ph = hero_photo(url)
+    if ph:
+        pre = '../' if re.search(r'\ssrc="\.\./', img) else ''
+        alt = re.search(r'\salt="([^"]*)"', img); e = MEDIA.get('images/' + os.path.basename(ph))
+        ss = f' srcset="{e["srcset"]}" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 380px"' if e and e.get('srcset') else ''
+        img = f'<img loading="lazy"{ss} src="{pre}{ph}" alt="{alt.group(1) if alt else ""}" width="1200" height="630" decoding="async">'
     h3 = re.search(r'<h3>.*?</h3>', card, re.S).group(0)
     desc = re.search(r'<p class="sol-desc"><span>(.*?)</span>', card, re.S)
     return f'<article class="dom-card"><a class="dom-img" href="{url}">{img}</a>{h3}<p>{desc.group(1) if desc else ""}</p></article>'
@@ -261,7 +276,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261018b"  # bump when styles.css changes
+STYLEV = "20261018c"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

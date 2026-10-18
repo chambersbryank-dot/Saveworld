@@ -470,9 +470,15 @@
     {
       "date": "2026-10-18",
       "what": {
-        "en": "About video v4 (88 s, 175 solutions) + homepage promo v3 below the locked hero, all langs; R2 media; v-solar to R2; STYLEV 20261018a"
+        "en": "Watch what's new: a 97-second video tour on the homepage, plus a new 88-second About video with 175 solutions.",
+        "fr": "Découvrez les nouveautés : une visite vidéo de 97 secondes sur la page d'accueil, et une nouvelle vidéo de 88 secondes sur la page À propos, avec 175 solutions.",
+        "es": "Mira las novedades: un recorrido en video de 97 segundos en la página de inicio y un nuevo video de 88 segundos en Acerca de, con 175 soluciones.",
+        "ar": "شاهد الجديد: جولة فيديو مدتها 97 ثانية على الصفحة الرئيسية، وفيديو جديد مدته 88 ثانية في صفحة من نحن يعرض 175 حلاً.",
+        "it": "Guarda le novità: un video tour di 97 secondi in homepage e un nuovo video di 88 secondi nella pagina Chi siamo, con 175 soluzioni.",
+        "he": "צפו במה חדש: סיור וידאו של 97 שניות בדף הבית, וסרטון חדש של 88 שניות בדף אודות עם 175 פתרונות."
       },
-      "commit": "0deac62e8d87f8f6ad9c3e0167d6e1ba49814c52"
+      "commit": "0deac62e8d87f8f6ad9c3e0167d6e1ba49814c52",
+      "page": "index.html"
     }
   ]
 }

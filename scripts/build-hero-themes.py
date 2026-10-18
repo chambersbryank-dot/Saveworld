@@ -136,7 +136,7 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hero[data-hero=space] .hero-content{position:absolute;left:0;right:0;top:var(--hero-block-top,18%);margin:0 auto!important;padding-top:0!important;padding-bottom:1rem!important;width:min(46rem,62vw);max-width:46rem}'
        '@media (max-width:1100px){.hero[data-hero=space] .hero-content{width:min(46rem,88vw)}}'
        # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
-       '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
+       '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 12.5rem);border-radius:12px}}'  # Oct 18: was 100%-16rem (134px on a 390px phone): 5 lines squeezed into a pill, text spilled past its rounded edge
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
 
 def chooser():

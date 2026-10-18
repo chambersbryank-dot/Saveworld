@@ -800,6 +800,11 @@ html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover {
 .sp-promo figcaption { max-width: 820px; margin: 0.75rem auto 0; }
 .sp-promo .photo-credit { display: inline-block; margin: 0.35rem 0.4rem 0; }
 .sp-promo .promo-x { margin: 0.9rem 0 0; font-weight: 600; }
+/* Oct 18 homepage audit: World Map button was left-aligned (its centring rule lived only in map.css); "Be Part of the Fix" title sat on the panel's top edge (padding-top:0 override) with the bubble straddling the border */
+.wm-cta { margin: 1rem 0; text-align: center; }
+body.toc-home #actions .mission-block, body #actions .mission-block { padding-top: 2rem; }
+body #actions .mission-block::before { top: 12px; }
+.sp-promo-about { margin-top: 2rem; }
 @media (orientation: portrait) and (max-width: 700px) {
   .sp-promo .promo-wide { display: none; }
   .sp-promo .promo-tall { display: block; width: 100%; max-width: min(380px, calc(80vh * 0.5625)); margin: 0 auto; border-radius: 16px; }
