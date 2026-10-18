@@ -186,3 +186,17 @@ TRACERS.html
 Tanager-1.html
 Terraformation.html
 Three_Shields.html
+# Solution batch 8 (final)
+Three_Trees.html
+Titan.html
+Trees_for_the_Future.html
+Trout_Unlimited.html
+Tsunami_Early_Warning.html
+UNEP_MARS.html
+US_Deorbit_Vehicle.html
+Veggie_Space_Garden.html
+Vigil.html
+Waterkeeper_Alliance.html
+Webb_2024_YR4.html
+Whales_Ocean_Gardeners.html
+Zero_Debris_Charter.html
