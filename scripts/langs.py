@@ -26,6 +26,8 @@ def he_pages():
 def pages_for(lang, all_pages):
     """Pages i18n-build writes for a language: every page, except Hebrew = only the reviewed-for-translation list."""
     if lang != 'he': return list(all_pages)
-    hp = set(he_pages()); return [p for p in all_pages if p in hp]
+    # Oct 17: Hebrew also builds pages that fr/es/ar/it get from their own generators (Learn, calculators, labs...),
+    # translated from the English output via i18n/he.json, so every public EN page has a he/ twin.
+    hp = he_pages(); return [p for p in all_pages if p in set(hp)] + [p for p in hp if p not in set(all_pages) and os.path.exists(os.path.join(_ROOT, p))]
 
 def is_rtl(lang): return lang in RTL

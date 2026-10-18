@@ -216,3 +216,15 @@ Privacy.html
 Editorial_Policy.html
 Corrections.html
 Topics.html
+Changelog.html
+Play_and_Learn.html
+Orbit_Lab.html
+Aero_Lab.html
+Calculators.html
+Homeschool.html
+Physics_Lab.html
+SI_Helper.html
+Spot_the_Fire.html
+AP_IB_Physics.html
+Aero_Guide.html
+Physics_Guide.html

@@ -787,3 +787,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - ar: remaining indefinite "ذكاء اصطناعي" -> "ذكاء تركيبي (SI)" (methane/MARS, orbital chips).
 - build-ux.py: language count = 1 + len(langs.PUBLIC). '3 learning tools' left hard-coded: no source defines what it counts.
 - CSS/JS cache v=20261017g.
+
+## Oct 17 2026: Hebrew completeness batch A
+- langs.pages_for(he) now also builds pages that fr/es/ar/it get from separate generators (Learn, labs, calculators...), translated from the EN output.
+- scripts/he-attr-i18n.py (+weekly-sync): translates data-t JSON tables and data-* UI messages on he/ pages via he.json.
+- 12 pages: Changelog, Play_and_Learn, Orbit_Lab, Aero_Lab, Calculators, Homeschool, Physics_Lab, SI_Helper, Spot_the_Fire, AP_IB_Physics, Aero_Guide, Physics_Guide.

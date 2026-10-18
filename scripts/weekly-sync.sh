@@ -30,6 +30,7 @@ python3 scripts/build-fivews.py          # Oct 15: sourced Five W's for Roman + 
 python3 scripts/build-wow.py               # Oct 17: first-screen wow rule (EN source moves + WOW CSS block)
 python3 scripts/build-biosi-cc.py           # Oct 17: Cc biosipartner@ line on Contact + About #cohost
 python3 scripts/i18n-build.py
+python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 # Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors
 # (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.
 node scripts/i18n-check.js | tail -3
