@@ -352,26 +352,7 @@
     }).catch(function () {});
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();
-/* UX-OCT15:START */
-(function(){
-  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
-  var f=document.querySelector('.sol-filters');if(!f)return;
-  var L=JSON.parse(f.getAttribute('data-i18n'));
-  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
-  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
-    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
-    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
-  var dom='all',hub='all',sel=f.querySelector('select');
-  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
-    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
-  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
-  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
-  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
-  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
-})();
-/* UX-OCT15:END *//* SPNAV:START */
+})();/* SPNAV:START */
 (function(){var n=document.getElementById('topnav');if(!n||!n.querySelector('.spn'))return;
 var tg=n.querySelector('.spn-toggle'),mq=window.matchMedia('(min-width:1140px)'),hv=window.matchMedia('(hover:hover) and (pointer:fine)');
 var dds=[].slice.call(n.querySelectorAll('.spn-dd'));
@@ -491,3 +472,68 @@ var t=P.length,lv=n>=t?3:n>=3?2:n>=1?1:0;w.querySelector('.pl-count').textConten
 document.addEventListener('DOMContentLoaded',function(){draw();var r=document.querySelector('.pl-reset');if(r)r.addEventListener('click',function(){put({});draw()})});
 window.addEventListener('pageshow',draw)})();
 /* PLAY:END */
+/* UX-OCT15:START */
+(function(){
+  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  var f=document.querySelector('.sol-filters');if(!f)return;
+  var L=JSON.parse(f.getAttribute('data-i18n'));
+  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
+  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
+    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
+    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
+  var dom='all',hub='all',sel=f.querySelector('select');
+  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
+    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
+  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
+  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
+})();
+/* UX-OCT15:END */
+/* SPOW:START */
+(function(){var pg=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'')||'index',lang=(document.documentElement.lang||'en').slice(0,2);
+try{var K='sp-pass-v1',o=JSON.parse(localStorage.getItem(K))||{};o.p=o.p||{};o.l=o.l||{};o.p[pg]=1;o.l[lang]=1;localStorage.setItem(K,JSON.stringify(o))}catch(e){}
+var KS='sp-pow-v1',S={};try{S=JSON.parse(localStorage.getItem(KS))||{}}catch(e){}var R=document.documentElement;
+function apply(){R.classList.toggle('sp-big1',S.big===1);R.classList.toggle('sp-big2',S.big===2);['dys','hc','calm','tap'].forEach(function(k){R.classList.toggle('sp-'+k,!!S[k])});
+if(S.tap)[].forEach.call(document.querySelectorAll('[draggable=true]'),function(e){e.setAttribute('draggable','false');e.dataset.spDrag='1'});
+else[].forEach.call(document.querySelectorAll('[data-sp-drag]'),function(e){e.setAttribute('draggable','true');delete e.dataset.spDrag});
+if(S.calm)[].forEach.call(document.querySelectorAll('video[autoplay]'),function(v){try{v.pause()}catch(e){}})}
+apply();if(["Play_and_Learn", "Kids", "Kids_Map", "Spot_the_Fire", "Satellite_Explorer", "Amazing_Facts", "Myth_vs_Fact", "Glossary", "Space_Passport", "Myth_or_Fact_Arcade", "Boarding_Pass", "Orbits_Guide", "Orbit_Lab", "Learn", "Teachers", "Lesson_Builder", "Student_Questions"].indexOf(pg)<0)return;
+var T={"en": {"btn": "Superpowers", "h": "Your superpowers", "read": "Read to me", "stop": "Stop reading", "big": "Bigger text", "dys": "Easy-read font", "hc": "High contrast", "calm": "Calm motion", "tap": "Tap instead of drag", "reset": "Turn all off", "novoice": "This device has no voice for this language yet.", "note": "Saved only on this device.", "close": "Close"}, "fr": {"btn": "Super-pouvoirs", "h": "Tes super-pouvoirs", "read": "Lis-moi la page", "stop": "Arrêter la lecture", "big": "Texte plus grand", "dys": "Police facile à lire", "hc": "Contraste élevé", "calm": "Mouvements calmes", "tap": "Toucher au lieu de glisser", "reset": "Tout désactiver", "novoice": "Cet appareil n’a pas encore de voix pour cette langue.", "note": "Enregistré seulement sur cet appareil.", "close": "Fermer"}, "es": {"btn": "Superpoderes", "h": "Tus superpoderes", "read": "Léeme la página", "stop": "Dejar de leer", "big": "Texto más grande", "dys": "Letra fácil de leer", "hc": "Alto contraste", "calm": "Movimiento tranquilo", "tap": "Tocar en vez de arrastrar", "reset": "Desactivar todo", "novoice": "Este dispositivo aún no tiene voz para este idioma.", "note": "Se guarda solo en este dispositivo.", "close": "Cerrar"}, "ar": {"btn": "قوى خارقة", "h": "قواك الخارقة", "read": "اقرأ لي", "stop": "أوقف القراءة", "big": "نص أكبر", "dys": "خط سهل القراءة", "hc": "تباين عالٍ", "calm": "حركة هادئة", "tap": "المس بدل السحب", "reset": "أوقف الكل", "novoice": "لا يتوفر على هذا الجهاز صوت لهذه اللغة بعد.", "note": "يُحفظ على هذا الجهاز فقط.", "close": "إغلاق"}, "it": {"btn": "Superpoteri", "h": "I tuoi superpoteri", "read": "Leggimi la pagina", "stop": "Ferma la lettura", "big": "Testo più grande", "dys": "Carattere facile da leggere", "hc": "Contrasto elevato", "calm": "Movimento calmo", "tap": "Tocca invece di trascinare", "reset": "Disattiva tutto", "novoice": "Questo dispositivo non ha ancora una voce per questa lingua.", "note": "Salvato solo su questo dispositivo.", "close": "Chiudi"}, "he": {"btn": "כוחות־על", "h": "כוחות־העל שלכם", "read": "הקראה", "stop": "עצירת ההקראה", "big": "טקסט גדול יותר", "dys": "גופן קל לקריאה", "hc": "ניגודיות גבוהה", "calm": "תנועה רגועה", "tap": "הקשה במקום גרירה", "reset": "כיבוי הכול", "novoice": "למכשיר הזה עדיין אין קול בשפה הזו.", "note": "נשמר רק במכשיר הזה.", "close": "סגירה"}}[lang]||{"en": {"btn": "Superpowers", "h": "Your superpowers", "read": "Read to me", "stop": "Stop reading", "big": "Bigger text", "dys": "Easy-read font", "hc": "High contrast", "calm": "Calm motion", "tap": "Tap instead of drag", "reset": "Turn all off", "novoice": "This device has no voice for this language yet.", "note": "Saved only on this device.", "close": "Close"}, "fr": {"btn": "Super-pouvoirs", "h": "Tes super-pouvoirs", "read": "Lis-moi la page", "stop": "Arrêter la lecture", "big": "Texte plus grand", "dys": "Police facile à lire", "hc": "Contraste élevé", "calm": "Mouvements calmes", "tap": "Toucher au lieu de glisser", "reset": "Tout désactiver", "novoice": "Cet appareil n’a pas encore de voix pour cette langue.", "note": "Enregistré seulement sur cet appareil.", "close": "Fermer"}, "es": {"btn": "Superpoderes", "h": "Tus superpoderes", "read": "Léeme la página", "stop": "Dejar de leer", "big": "Texto más grande", "dys": "Letra fácil de leer", "hc": "Alto contraste", "calm": "Movimiento tranquilo", "tap": "Tocar en vez de arrastrar", "reset": "Desactivar todo", "novoice": "Este dispositivo aún no tiene voz para este idioma.", "note": "Se guarda solo en este dispositivo.", "close": "Cerrar"}, "ar": {"btn": "قوى خارقة", "h": "قواك الخارقة", "read": "اقرأ لي", "stop": "أوقف القراءة", "big": "نص أكبر", "dys": "خط سهل القراءة", "hc": "تباين عالٍ", "calm": "حركة هادئة", "tap": "المس بدل السحب", "reset": "أوقف الكل", "novoice": "لا يتوفر على هذا الجهاز صوت لهذه اللغة بعد.", "note": "يُحفظ على هذا الجهاز فقط.", "close": "إغلاق"}, "it": {"btn": "Superpoteri", "h": "I tuoi superpoteri", "read": "Leggimi la pagina", "stop": "Ferma la lettura", "big": "Testo più grande", "dys": "Carattere facile da leggere", "hc": "Contrasto elevato", "calm": "Movimento calmo", "tap": "Tocca invece di trascinare", "reset": "Disattiva tutto", "novoice": "Questo dispositivo non ha ancora una voce per questa lingua.", "note": "Salvato solo su questo dispositivo.", "close": "Chiudi"}, "he": {"btn": "כוחות־על", "h": "כוחות־העל שלכם", "read": "הקראה", "stop": "עצירת ההקראה", "big": "טקסט גדול יותר", "dys": "גופן קל לקריאה", "hc": "ניגודיות גבוהה", "calm": "תנועה רגועה", "tap": "הקשה במקום גרירה", "reset": "כיבוי הכול", "novoice": "למכשיר הזה עדיין אין קול בשפה הזו.", "note": "נשמר רק במכשיר הזה.", "close": "סגירה"}}.en;
+var css='.sp-big1{font-size:118%}.sp-big2{font-size:135%}.sp-dys body,.sp-dys body *:not(code):not(pre):not(.k1-ring):not([class*=emoji]){font-family:Verdana,Tahoma,"Trebuchet MS",Arial,sans-serif!important;font-style:normal!important;line-height:1.65!important}'
++'.sp-dys body *:not(:lang(ar)):not(:lang(he)){letter-spacing:.05em!important;word-spacing:.16em!important}.sp-dys main p,.sp-dys main li{max-width:70ch;text-align:start!important}'
++'.sp-hc body,.sp-hc main,.sp-hc main *:not(img):not(video):not(canvas):not(svg):not(svg *){background-color:#000!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important;text-shadow:none!important}'
++'.sp-hc main a{color:#ffe14d!important;text-decoration:underline!important}.sp-hc main button,.sp-hc main .k1-btn{outline:2px solid #fff}'
++'.sp-calm *,.sp-calm *:before,.sp-calm *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}'
++'.spow-b{position:fixed;z-index:9990;bottom:16px;inset-inline-start:16px;min-height:52px;padding:.55rem 1.05rem;border-radius:999px;border:2px solid #fff;background:#4a3aa8;color:#fff;font:inherit;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer}'
++'.spow-b:focus-visible,.spow-p button:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}'
++'.spow-p{position:fixed;z-index:9991;bottom:80px;inset-inline-start:16px;width:min(340px,calc(100vw - 32px));max-height:calc(100vh - 110px);overflow:auto;padding:1rem;border-radius:20px;background:#13123a;color:#fff;border:2px solid rgba(255,255,255,.35);box-shadow:0 14px 40px rgba(0,0,0,.5)}'
++'.spow-p h2{font-size:1.2rem;margin:0 0 .6rem;color:#fff}.spow-p button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:.6rem;min-height:48px;margin:.3rem 0;padding:.5rem .9rem;border-radius:14px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-weight:700;cursor:pointer;text-align:start}'
++'.spow-p button[aria-pressed=true]{background:#ffd54a;color:#1a1300;border-color:#ffd54a}.spow-p p{font-size:.85rem;opacity:.85;margin:.5rem 0 0}.spow-p .spow-x{width:auto;display:inline-flex;margin:0;float:inline-end}'
++'@media print{.spow-b,.spow-p{display:none!important}}';
+var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+var b=el('button','spow-b','✨ '+T.btn);b.type='button';b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','spow-p');
+var p=el('div','spow-p');p.id='spow-p';p.hidden=true;p.setAttribute('role','dialog');p.setAttribute('aria-label',T.h);
+var x=el('button','spow-x','✕');x.type='button';x.setAttribute('aria-label',T.close);p.appendChild(x);p.appendChild(el('h2','',T.h));
+var msg=el('p');msg.setAttribute('role','status');msg.setAttribute('aria-live','polite');
+var rd=el('button','','🔊 '+T.read);rd.type='button';p.appendChild(rd);
+function tog(k,lab,ic){var e=el('button','',ic+' '+lab);e.type='button';function u(){e.setAttribute('aria-pressed',k==='big'?String(!!S.big):String(!!S[k]));if(k==='big')e.textContent=ic+' '+lab+['',' +',' ++'][S.big||0]}
+e.onclick=function(){if(k==='big')S.big=((S.big||0)+1)%3;else S[k]=!S[k];save();u()};u();p.appendChild(e);return u}
+function save(){try{localStorage.setItem(KS,JSON.stringify(S))}catch(e){}apply()}
+var U=[tog('big',T.big,'🔠'),tog('dys',T.dys,'📖'),tog('hc',T.hc,'🌓'),tog('calm',T.calm,'🐢'),tog('tap',T.tap,'👆')];
+var rs=el('button','','↺ '+T.reset);rs.type='button';rs.onclick=function(){S={};save();U.forEach(function(f){f()})};p.appendChild(rs);p.appendChild(msg);p.appendChild(el('p','','🔒 '+T.note));
+var ss=window.speechSynthesis,speaking=false;
+function stop(){if(ss)ss.cancel();speaking=false;rd.textContent='🔊 '+T.read;rd.setAttribute('aria-pressed','false')}
+function text(){var s=window.getSelection&&String(window.getSelection()).trim();if(s)return s;var m=document.querySelector('main')||document.body,c=m.cloneNode(true);
+[].forEach.call(c.querySelectorAll('script,style,nav,button,textarea,select,[hidden],[aria-hidden=true],.dt-mini,.visually-hidden,.k1-noprint'),function(e){e.remove()});return c.textContent.replace(/\s+/g,' ').trim()}
+rd.onclick=function(){if(speaking){stop();return}if(!ss||!window.SpeechSynthesisUtterance){msg.textContent=T.novoice;return}
+var vs=ss.getVoices(),v=vs.filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf(lang)===0||(lang==='he'&&/^iw/i.test(v.lang))});if(vs.length&&!v.length){msg.textContent=T.novoice;return}
+var parts=text().match(/[^.!?。؟]+[.!?。؟]*\s*/g)||[];if(!parts.length)return;speaking=true;rd.textContent='⏹ '+T.stop;rd.setAttribute('aria-pressed','true');msg.textContent='';
+parts.forEach(function(t,i){var u=new SpeechSynthesisUtterance(t);u.lang=document.documentElement.lang||lang;if(v[0])u.voice=v[0];u.rate=.95;if(i===parts.length-1)u.onend=stop;ss.speak(u)})};
+function open(o){p.hidden=!o;b.setAttribute('aria-expanded',String(o));if(o)(p.querySelector('button:not(.spow-x)')||x).focus()}
+b.onclick=function(){open(p.hidden)};x.onclick=function(){open(false);b.focus()};p.addEventListener('keydown',function(e){if(e.key==='Escape'){open(false);b.focus()}});
+window.addEventListener('pagehide',stop);
+function mount(){document.body.appendChild(p);document.body.appendChild(b)}if(document.body)mount();else document.addEventListener('DOMContentLoaded',mount)})();
+/* SPOW:END */
