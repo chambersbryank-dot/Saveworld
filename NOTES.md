@@ -771,3 +771,7 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 ## Oct 17 2026: search index rebuild + myth count sync
 - Rebuilt Pagefind + semantic index (en/fr/es/ar/it; he excluded while HE_PUBLIC=False). Search.html inline corpus: "ia" -> "si" (fr/es/it); stale TM values fixed.
 - Myth vs Fact count: Project-Rawane "New" callout said 7, page has 21 myth cards. new-callout.json now uses {myths}; build-batch4.py counts class="myth-card" on Myth_vs_Fact.html and syncs i18n entries. Updated en/fr/es/ar/it/he Project-Rawane.
+## Oct 17 2026: Project Rawane hero → NASA Blue Marble (wow first screen)
+- Generator: `scripts/apply-heroes.py` special-cases Project-Rawane. CSS uses the same R2 Blue Marble WebP set as Earthrise (image-set 1920/3840 Retina; 1280/2560 tablet; 800/1280 phone) with a dark gradient overlay for title legibility; taller hero (`min(72vh,780px)`).
+- Credit (all langs incl. /he/): “Created by SI and Biological SI Partner · Earth: NASA Blue Marble” (translated).
+- STYLEV → 20261017f; build-critical re-extracted `pr-hero` template.

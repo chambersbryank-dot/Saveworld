@@ -9,7 +9,7 @@ MAP = {'Kids_Map': ('kids', 'NASA EPIC'), 'World_Map': ('kids', 'NASA EPIC'), 'S
        'Rawanes_Mission_Log': ('mission', 'NASA'), 'Privacy': ('about', 'NASA'), 'Editorial_Policy': ('learn', 'NASA'),
        'Corrections': ('learn', 'NASA'), 'Press_Kit': ('about', 'NASA'), 'Topics': ('learn', 'NASA')}
 n = 0
-for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):  # Oct 16: + Italian (its MAP pages showed the default ocean hero)
+for lang in ('', 'fr/', 'es/', 'ar/', 'it/', 'he/'):  # Oct 16: + Italian; Oct 17: + Hebrew
     for p, (k, c) in MAP.items():
         f = f'{lang}{p}.html'
         if not os.path.exists(f):
@@ -43,7 +43,7 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'PRELUDE': ('ATV1_Departure_ISS.jpg', NASA),
     'Ocean_Cleanup': ('theoceancleanup.jpg', 'Created by SI and Biological SI Partner'),
     '4ocean': ('OceanBeach.JPG', 'Created by SI and Biological SI Partner'), 'Plastic_Bank': ('OceanBeach.JPG', 'Created by SI and Biological SI Partner'),
-    'Project-Rawane': ('Moon_Crossing_Earth.jpg', 'NASA/NOAA DSCOVR EPIC'),
+    'Project-Rawane': ('Moon_Crossing_Earth.jpg', 'Created by SI and Biological SI Partner · Earth: NASA Blue Marble'),
     'Space': ('ISS_Flyaround_2021.jpg', 'NASA'),
     'Restoring_the_Lake_Depths': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
     'Terraformation': ('Yishan_Tree.jpg', None), 'Three_Trees': ('ThreeTrees2.jpg', None),
@@ -100,8 +100,16 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Copernicus_Marine': ('North_Atlantic_Bloom_MODIS.jpg', 'NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team'),
     'OpenET': ('Garden_City_Kansas_Landsat.jpg', 'NASA/GSFC/Landsat (Sept. 25, 2000)'),
 }
-SI_T = {'': 'Created by SI and Biological SI Partner', 'fr/': 'Créé par SI et Biological SI Partner', 'es/': 'Creado por SI y Biological SI Partner', 'ar/': 'أُنشئ بواسطة SI وBiological SI Partner', 'it/': 'Creato da SI e Biological SI Partner'}
-IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة', 'it/': 'Immagine'}
+SI_T = {'': 'Created by SI and Biological SI Partner', 'fr/': 'Créé par SI et Biological SI Partner', 'es/': 'Creado por SI y Biological SI Partner', 'ar/': 'أُنشئ بواسطة SI وBiological SI Partner', 'it/': 'Creato da SI e Biological SI Partner', 'he/': 'נוצר על ידי SI ושותף Biological SI'}
+PR_CREDIT = {  # Oct 17: Project Rawane Blue Marble hero (composed + NASA Earth)
+    '': 'Created by SI and Biological SI Partner · Earth: NASA Blue Marble',
+    'fr/': 'Créé par SI et Biological SI Partner · Terre : NASA Blue Marble',
+    'es/': 'Creado por SI y Biological SI Partner · Tierra: NASA Blue Marble',
+    'ar/': 'أُنشئ بواسطة SI وBiological SI Partner · الأرض: NASA Blue Marble',
+    'it/': 'Creato da SI e Biological SI Partner · Terra: NASA Blue Marble',
+    'he/': 'נוצר על ידי SI ושותף Biological SI · כדור הארץ: NASA Blue Marble',
+}
+IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة', 'it/': 'Immagine', 'he/': 'תמונה'}
 def _slug(p): return re.sub(r'[^a-z0-9]+', '-', p.lower()).strip('-')
 def _has_rule(css, s):
     b = re.search(r'<body[^>]*class="([^"]*)"', s)
@@ -126,11 +134,30 @@ for f in sorted(os.listdir('.')):
     else:
         flagged.append(f)
 rules = ''.join(f"body.toc-sub[class].hp-{_slug(p)} .page-hero[class]{{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/{img}') center/cover no-repeat}}\n" for p, (img, _) in sorted(chosen.items()))
+# Oct 17: Project Rawane first screen = NASA Blue Marble (same R2 WebP set as Earthrise, up to 3840 for Retina).
+# Dark gradient keeps the white title/dedication legible over bright oceans; taller hero = wow first screen.
+import json as _json
+_bm = {}
+for _t in _json.load(open('assets/data/media-manifest.json', encoding='utf-8'))['images/earth-blue-marble-land-ocean-ice-cloud.jpg']['srcset'].split(','):
+    _u, _w = _t.strip().rsplit(' ', 1); _bm[int(_w[:-1])] = _u
+_grad = 'linear-gradient(180deg,rgba(0,10,24,.58) 0%,rgba(0,10,24,.38) 42%,rgba(0,10,24,.65) 100%)'
+_pr = (
+    f"body.toc-sub[class].hp-project-rawane .page-hero[class]{{position:relative;overflow:hidden;isolation:isolate;"
+    f"min-height:min(72vh,780px)!important;background-color:#001428;background-image:{_grad},"
+    f"image-set(url('{_bm[1920]}') 1x type('image/webp'),url('{_bm[3840]}') 2x type('image/webp'));"
+    f"background-position:center 40%;background-size:cover;background-repeat:no-repeat}}\n"
+    f"@media (max-width:900px){{body.toc-sub[class].hp-project-rawane .page-hero[class]{{min-height:min(62vh,560px)!important;"
+    f"background-image:{_grad},image-set(url('{_bm[1280]}') 1x type('image/webp'),url('{_bm[2560]}') 2x type('image/webp'))}}}}\n"
+    f"@media (max-width:600px){{body.toc-sub[class].hp-project-rawane .page-hero[class]{{min-height:min(58vh,480px)!important;"
+    f"background-image:linear-gradient(180deg,rgba(0,10,24,.58) 0%,rgba(0,10,24,.42) 45%,rgba(0,10,24,.68) 100%),"
+    f"image-set(url('{_bm[800]}') 1x type('image/webp'),url('{_bm[1280]}') 2x type('image/webp'))}}}}\n"
+)
+rules = re.sub(r"body\.toc-sub\[class\]\.hp-project-rawane [^\n]+\n", _pr, rules)
 block = '/* PAGE-HEROES:START (generated by scripts/apply-heroes.py) */\n' + rules + '/* PAGE-HEROES:END */'
 css2 = re.sub(r'/\* PAGE-HEROES:START.*?PAGE-HEROES:END \*/', lambda m: block, css, flags=re.S) if 'PAGE-HEROES:START' in css else css.rstrip('\n') + '\n' + block + '\n'
 if css2 != css: open('styles.css', 'w', encoding='utf-8').write(css2)
 m = 0
-for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):
+for lang in ('', 'fr/', 'es/', 'ar/', 'it/', 'he/'):
     for p, (img, credit) in chosen.items():
         f = f'{lang}{p}.html'
         if not os.path.exists(f): continue
@@ -138,14 +165,24 @@ for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):
         s2 = s if re.search(r'<body[^>]*class="[^"]*\b' + cls + r'\b', s) else re.sub(r'(<body[^>]*class=")', r'\g<1>' + cls + ' ', s, count=1)
         if not re.search(r'<body[^>]*class=', s2): s2 = re.sub(r'<body', f'<body class="{cls}"', s2, count=1)
         if credit:  # the credit line right under the hero must name this hero's image
-            txt = SI_T[lang] if credit.startswith('Created by SI') else f'{IMG_T[lang]}: {credit}'
+            if p == 'Project-Rawane':
+                txt = PR_CREDIT.get(lang, PR_CREDIT[''])
+                hero_txt = txt
+            elif credit.startswith('Created by SI'):
+                txt = SI_T[lang]; hero_txt = SI_T[lang]
+            else:
+                txt = f'{IMG_T[lang]}: {credit}'; hero_txt = credit
             # keep an existing (possibly translated) credit that already names the same image: every acronym / ID matches
             keys = re.findall(r'[A-Z][A-Z0-9-]+|[\w-]*\d[\w-]*', credit)
             cur = re.search(r'<section class="page-hero[^"]*"[^>]*>.*?</section>\s*<p class="photo-credit">([^<]*)', s2, flags=re.S)
             if not (cur and keys and all(k in cur.group(1) for k in keys)):
                 s2 = re.sub(r'(<section class="page-hero[^"]*"[^>]*>.*?</section>\s*<p class="photo-credit">)[^<]*', lambda mm: mm.group(1) + txt + '.', s2, count=1, flags=re.S)
+            # refresh in-hero credit only for Project Rawane (other langs keep translated credits)
+            if p == 'Project-Rawane' and re.search(r'<span class="hero-credit">', s2):
+                s2 = re.sub(r'(<span class="hero-credit">)[^<]*', lambda mm: mm.group(1) + hero_txt, s2, count=1)
         if credit and not re.search(r'<section class="page-hero[^"]*"[^>]*>.*?</section>\s*<p class="photo-credit">', s2, flags=re.S) and 'class="hero-credit"' not in s2:
-            s2 = re.sub(r'(<section class="page-hero[^"]*"[^>]*>.*?)(</section>)', lambda mm: mm.group(1) + f'<span class="hero-credit">{SI_T[lang] if credit.startswith("Created by SI") else credit}</span>' + mm.group(2), s2, count=1, flags=re.S)
+            _hc = PR_CREDIT.get(lang, PR_CREDIT['']) if p == 'Project-Rawane' else (SI_T[lang] if credit.startswith('Created by SI') else credit)
+            s2 = re.sub(r'(<section class="page-hero[^"]*"[^>]*>.*?)(</section>)', lambda mm: mm.group(1) + f'<span class="hero-credit">{_hc}</span>' + mm.group(2), s2, count=1, flags=re.S)
         if lang: s2 = s2.replace('<span class="hero-credit">Created by SI and Biological SI Partner</span>', f'<span class="hero-credit">{SI_T[lang]}</span>')
         if s2 != s: open(f, 'w', encoding='utf-8').write(s2); m += 1
 print(f'apply-heroes: {len(chosen)} per-page photo heroes, {m} files updated')
@@ -156,7 +193,7 @@ SHARED_SPACE = 'NASA (Cassini)'
 for f in flagged:
     print(f'WARNING apply-heroes: {f} has no themed hero; add it to PAGE_HERO or MAP')
     if 'space-hero' not in re.search(r'<section class="(page-hero[^"]*)"', open(f, encoding='utf-8').read()).group(1).split(): continue
-    for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):
+    for lang in ('', 'fr/', 'es/', 'ar/', 'it/', 'he/'):
         g = lang + f
         if not os.path.exists(g): continue
         s = open(g, encoding='utf-8').read()
