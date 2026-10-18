@@ -23,13 +23,14 @@ d = lambda l: '' if l == 'en' else l + '/'
 LANGS = ['en'] + [l for l in L.BUILD if os.path.exists(d(l) + 'Play_and_Learn.html')]
 PUB = ['en'] + [l for l in L.PUBLIC if l in LANGS]
 PAGES = ['Space_Passport.html', 'Myth_or_Fact_Arcade.html', 'Boarding_Pass.html']
+PAGE_STEMS = [p[:-5] for p in PAGES]
 HUB_EMOJI = {'Project-Rawane.html': '🚀', 'Earth_Observation.html': '🛰️', 'Deforestation.html': '🌳', 'Lakes.html': '🏞️', 'Oceans.html': '🌊',
              'Planetary_Defense.html': '☄️', 'Rivers.html': '🏞', 'Space.html': '🔭', 'Space_Disposal.html': '♻️', 'Space_Weather.html': '☀️'}
 PLAY_EMOJI = {'Kids_Map': '🗺️', 'Spot_the_Fire': '🔥', 'Satellite_Explorer': '🛰️', 'Amazing_Facts': '🤩', 'Myth_vs_Fact': '🕵️', 'Glossary': '📖'}
 def href(l, p): return p if l == 'en' or os.path.exists(d(l) + p) else '../' + p
 def strip(s): return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', '', s))).strip()
 
-CSS = """.k1-hero{position:relative;overflow:hidden;padding:clamp(2.2rem,6vw,4.5rem) 1.25rem clamp(2rem,5vw,3.5rem);text-align:center;color:#fff;
+CSS = """.k1-hero{position:relative;overflow:hidden;padding:calc(var(--nav-height,88px) + clamp(1rem,3vw,2rem)) 1.25rem clamp(2rem,5vw,3.5rem);text-align:center;color:#fff;
 background:radial-gradient(ellipse at 20% 10%,rgba(120,90,255,.55),transparent 55%),radial-gradient(ellipse at 85% 80%,rgba(0,190,255,.45),transparent 50%),linear-gradient(160deg,#07071d,#141047 55%,#04121f)}
 .k1-hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 22%,#fff,transparent),radial-gradient(1px 1px at 32% 72%,#fff,transparent),radial-gradient(1.5px 1.5px at 58% 18%,#fff,transparent),radial-gradient(1px 1px at 76% 46%,#fff,transparent),radial-gradient(2px 2px at 90% 14%,#ffe9a8,transparent),radial-gradient(1px 1px at 44% 88%,#fff,transparent),radial-gradient(1.5px 1.5px at 6% 60%,#cfe8ff,transparent);opacity:.9;pointer-events:none}
 .k1-hero>*{position:relative}.k1-art{font-size:clamp(3.6rem,10vw,6.5rem);line-height:1;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5));margin-bottom:.4rem}
@@ -54,9 +55,11 @@ background:radial-gradient(ellipse at 20% 10%,rgba(120,90,255,.55),transparent 5
 .arc-ans{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.arc-ans button{min-height:88px;font-size:1.4rem;border-radius:20px}
 .arc-ans .m{background:#ff8a65;color:#1d0700}.arc-ans .f{background:#69f0ae;color:#00210f}
 .arc-ev{margin-top:1.2rem}.arc-ev h3{margin:.2rem 0 .5rem}.arc-ev img{width:100%;max-height:340px;object-fit:cover;border-radius:16px}.arc-verdict{font-size:1.3rem;font-weight:900}
-.arc-ev .src{font-size:.95rem}.arc-filter{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1rem 0}.arc-filter button[aria-pressed=true]{background:#ffd54a;color:#1a1300}
+.arc-start{text-align:center}.arc-start .arc-go{min-height:64px;font-size:1.3rem;padding:.8rem 2rem}.arc-ev .src{font-size:.95rem}.arc-filter{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1rem 0}.arc-filter button[aria-pressed=true]{background:#ffd54a;color:#1a1300}
 .bp-form{display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end;max-width:760px}.bp-form label{display:flex;flex-direction:column;gap:.3rem;font-weight:700;flex:1 1 260px}
 .bp-form input,.bp-form select{min-height:48px;font:inherit;font-size:1.1rem;padding:.4rem .8rem;border-radius:12px}
+.bp-form input{background:#fff;color:#0b1030;border:2px solid #ffd54a;box-shadow:0 0 0 3px rgba(255,213,74,.18)}.bp-form input::placeholder{color:#5a6390;opacity:1}
+.bp-form input:focus-visible,.bp-form select:focus-visible{outline:3px solid #4fc3ff;outline-offset:2px}
 .bp-card{display:grid;grid-template-columns:1fr auto;max-width:900px;margin:1.5rem auto;border-radius:24px;overflow:hidden;color:#0b1030;background:#fff;box-shadow:0 14px 40px rgba(0,0,0,.35)}
 .bp-main{padding:1.4rem 1.6rem;background:linear-gradient(135deg,#fff 60%,#eef3ff)}.bp-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:linear-gradient(90deg,#141047,#2a2fb0);color:#fff;margin:-1.4rem -1.6rem 1rem;padding:1rem 1.6rem}
 .bp-top b{font-size:1.25rem;letter-spacing:.12em}.bp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem 1.4rem}
@@ -195,7 +198,7 @@ def arcade(l):
         f'<div class="k1-wrap" id="k1a" data-t="{esc(json.dumps(tj, ensure_ascii=False))}" data-myths="{nm}" data-facts="{n - nm}">'
         f'<div class="arc-filter" role="group"><button type="button" class="k1-btn alt" data-m="all" aria-pressed="true">{esc(t["all"])} ({n})</button>'
         f'<button type="button" class="k1-btn alt" data-m="m" aria-pressed="false">{esc(t["only_m"])} ({nm})</button><button type="button" class="k1-btn alt" data-m="f" aria-pressed="false">{esc(t["only_f"])} ({n - nm})</button></div>'
-        f'<div class="arc-card" aria-live="polite"><p class="arc-claim">{esc(t["kicker"])}</p><button type="button" class="k1-btn arc-go">▶ {esc(t["start"])}</button></div>'
+        f'<div class="arc-card arc-start" aria-live="polite"><button type="button" class="k1-btn arc-go">▶ {esc(t["start"])}</button></div>'
         f'<p class="k1-note" style="text-align:center">🔒 {esc(t["note"])}</p></div>\n'
         f'<script type="application/json" id="k1a-data">{json.dumps(C, ensure_ascii=False).replace("</", "<\\/")}</script>\n<script>{AJS}</script>\n')
     return top + main + foot, n
@@ -229,7 +232,7 @@ def boarding(l):
     main = ('<main id="main">\n' + hero('🎫', t) +
         f'<div class="k1-wrap" id="k1b" data-t="{esc(json.dumps(tj, ensure_ascii=False))}">'
         f'<p class="bp-none" hidden>{esc(t["none"])}</p><div class="bp-form k1-noprint">'
-        f'<label for="bp-n">{esc(t["name"])}<input id="bp-n" type="text" maxlength="24" autocomplete="off" autocapitalize="words" spellcheck="false" aria-describedby="bp-h"></label>'
+        f'<label for="bp-n">{esc(t["name"])}<input id="bp-n" type="text" placeholder="{esc(t["ph"])}" maxlength="24" autocomplete="off" autocapitalize="words" spellcheck="false" aria-describedby="bp-h"></label>'
         f'<label for="bp-l">{esc(t["pick"])}<select id="bp-l"></select></label><button type="button" class="k1-btn bp-make">{esc(t["make"])}</button></div>'
         f'<p id="bp-h" class="k1-note k1-noprint">🔒 {esc(t["hint"])}</p>'
         f'<div class="k1-printable"><div class="bp-card" hidden><div class="bp-main"><div class="bp-top"><b>{esc(t["pass_h"])}</b><span aria-hidden="true">🌍 → 🌌</span></div>'
@@ -246,13 +249,17 @@ def playrow(l):
     p = d(l) + 'Play_and_Learn.html'; s = rd(p); s = re.sub(r'<!-- KIDSP1:START -->.*?<!-- KIDSP1:END -->', '', s, flags=re.S)
     items = [('Space_Passport.html', '🛂', PASS[l]['title'], PASS[l]['kicker']), ('Myth_or_Fact_Arcade.html', '🕵️', ARC[l]['title'], ARC[l]['kicker']), ('Boarding_Pass.html', '🎫', BP[l]['title'], BP[l]['kicker'])]
     li = ''.join(f'<li><a class="pl-tile" href="{href(l, h)}"><span class="pl-emoji" aria-hidden="true">{e}</span><span class="pl-name">{esc(n)}</span><span class="pl-text">{esc(x)}</span></a></li>' for h, e, n, x in items)
-    blk = f'<!-- KIDSP1:START --><section class="k1-new" aria-labelledby="k1new"><h2 id="k1new">✨ {esc(NEW[l])}</h2><ul>{li}</ul></section><!-- KIDSP1:END -->'
+    blk = (f'<!-- KIDSP1:START --><style>.k1-new{{margin:1.6rem 0 0}}.k1-new .pl-grid{{list-style:none;padding:0;margin:.6rem 0 0}}.k1-new .pl-tile{{min-height:0;height:100%}}'
+           f'@media (min-width:760px){{.k1-new .pl-grid{{grid-template-columns:repeat(3,minmax(0,1fr))}}}}</style>'
+           f'<section class="k1-new" aria-labelledby="k1new"><h2 id="k1new">✨ {esc(NEW[l])}</h2><ul class="pl-grid">{li}</ul></section><!-- KIDSP1:END -->')
     s = s.replace('<p class="pl-note">', blk + '\n<p class="pl-note">', 1)
     return wr(p, s)
 
 # ---------- P-18 Superpowers + visit recorder (site.js) ----------
-KIDS = ['Play_and_Learn', 'Kids', 'Kids_Map', 'Spot_the_Fire', 'Satellite_Explorer', 'Amazing_Facts', 'Myth_vs_Fact', 'Glossary', 'Space_Passport', 'Myth_or_Fact_Arcade',
+KIDS_ALL = ['Play_and_Learn', 'Kids', 'Kids_Map', 'Spot_the_Fire', 'Satellite_Explorer', 'Amazing_Facts', 'Myth_vs_Fact', 'Glossary', 'Space_Passport', 'Myth_or_Fact_Arcade',
         'Boarding_Pass', 'Orbits_Guide', 'Orbit_Lab', 'Learn', 'Teachers', 'Lesson_Builder', 'Student_Questions']
+# Oct 17: list only pages that exist and are not redirect stubs (Kids.html -> Play_and_Learn); Student_Questions joins when it is built.
+KIDS = [k for k in KIDS_ALL if k in PAGE_STEMS or (os.path.exists(k + '.html') and 'http-equiv="refresh"' not in rd(k + '.html'))]
 SJS = r"""/* SPOW:START */
 (function(){var pg=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'')||'index',lang=(document.documentElement.lang||'en').slice(0,2);
 try{var K='sp-pass-v1',o=JSON.parse(localStorage.getItem(K))||{};o.p=o.p||{};o.l=o.l||{};o.p[pg]=1;o.l[lang]=1;localStorage.setItem(K,JSON.stringify(o))}catch(e){}
@@ -261,14 +268,15 @@ function apply(){R.classList.toggle('sp-big1',S.big===1);R.classList.toggle('sp-
 if(S.tap)[].forEach.call(document.querySelectorAll('[draggable=true]'),function(e){e.setAttribute('draggable','false');e.dataset.spDrag='1'});
 else[].forEach.call(document.querySelectorAll('[data-sp-drag]'),function(e){e.setAttribute('draggable','true');delete e.dataset.spDrag});
 if(S.calm)[].forEach.call(document.querySelectorAll('video[autoplay]'),function(v){try{v.pause()}catch(e){}})}
-apply();if(KIDS_LIST.indexOf(pg)<0)return;
+apply();if(KIDS_LIST.indexOf(pg)<0)return;R.classList.add('sp-kidspage');
 var T=SPOW_T[lang]||SPOW_T.en;
 var css='.sp-big1{font-size:118%}.sp-big2{font-size:135%}.sp-dys body,.sp-dys body *:not(code):not(pre):not(.k1-ring):not([class*=emoji]){font-family:Verdana,Tahoma,"Trebuchet MS",Arial,sans-serif!important;font-style:normal!important;line-height:1.65!important}'
 +'.sp-dys body *:not(:lang(ar)):not(:lang(he)){letter-spacing:.05em!important;word-spacing:.16em!important}.sp-dys main p,.sp-dys main li{max-width:70ch;text-align:start!important}'
 +'.sp-hc body,.sp-hc main,.sp-hc main *:not(img):not(video):not(canvas):not(svg):not(svg *){background-color:#000!important;background-image:none!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important;text-shadow:none!important}'
 +'.sp-hc main a{color:#ffe14d!important;text-decoration:underline!important}.sp-hc main button,.sp-hc main .k1-btn{outline:2px solid #fff}'
 +'.sp-calm *,.sp-calm *:before,.sp-calm *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}'
-+'.spow-b{position:fixed;z-index:9990;bottom:16px;inset-inline-start:16px;min-height:52px;padding:.55rem 1.05rem;border-radius:999px;border:2px solid #fff;background:#4a3aa8;color:#fff;font:inherit;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer}'
++'html.sp-kidspage main{padding-bottom:84px}html.sp-has-lb .spow-b{bottom:calc(var(--sp-lb-h,0px) + 12px)}html.sp-has-lb .spow-p{bottom:calc(var(--sp-lb-h,0px) + 76px)}'
++'.spow-b{position:fixed;z-index:9990;bottom:16px;inset-inline-start:16px;min-height:48px;padding:.45rem .95rem;font-size:.95rem!important;border-radius:999px;border:2px solid #fff;background:#4a3aa8;color:#fff;font:inherit;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer}'
 +'.spow-b:focus-visible,.spow-p button:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}'
 +'.spow-p{position:fixed;z-index:9991;bottom:80px;inset-inline-start:16px;width:min(340px,calc(100vw - 32px));max-height:calc(100vh - 110px);overflow:auto;padding:1rem;border-radius:20px;background:#13123a;color:#fff;border:2px solid rgba(255,255,255,.35);box-shadow:0 14px 40px rgba(0,0,0,.5)}'
 +'.spow-p h2{font-size:1.2rem;margin:0 0 .6rem;color:#fff}.spow-p button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:.6rem;min-height:48px;margin:.3rem 0;padding:.5rem .9rem;border-radius:14px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-weight:700;cursor:pointer;text-align:start}'

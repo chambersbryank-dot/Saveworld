@@ -25,6 +25,8 @@ Detail for each item is in the dated sections below.
 - **Hebrew (/he/, RTL) Phase 1–2 and completeness**: 241 pages, including a Hebrew World Map. Hidden (`HE_PUBLIC = False`), and the build enforces noindex on every page. 0 /he/ URLs in the sitemap, no hreflang.
 - **Play & Learn audit fixes**: the 404 page base, the language bar as a bottom sheet, KaTeX fonts, lazy-loaded WebP images on Amazing Facts, translated lab names, and the daily-check wording in the Editorial Policy.
 - **Kids Phase 1 quick wins** (POA&M P-07/08/16/18): Space Passport, the Myth or Fact? Arcade (47 claims), the Boarding Pass, and the Superpowers accessibility panel. No data on kids is collected. STYLEV 20261017h.
+- **Oct 17 pre-posting quick fixes** (owner-approved 9:38 PM HST, iPad-landscape review; STYLEV 20261017i): homepage **Latest Updates** was empty in all 6 langs (build-ux crashed on newsletter entries without a page; now unlinked) + 5 Oct 17 entries in newsletter-updates.json (en/fr/es/ar/it/he); kids heroes clear the fixed nav; homepage stat breakdown counts horizon + government so it sums to 175 (build-stats.js, site.js labels); Superpowers/Help-Donate lift above the language sheet + compact pill + page bottom padding; Play & Learn New row = pl-grid, 3 across, no bullets; side margins on Partner With Us + Go further: Learn; Arcade start card no longer repeats the subtitle; Boarding Pass name box white + translated placeholder; Real Solutions in Action 5 across / centred last row; About video caption says it was recorded at 120 solutions (narration). Superpowers page list now only real pages (Kids.html redirect + unbuilt Student_Questions dropped automatically).
+- **Security (Oct 17 ~8:45 PM HST):** three NOTES.md pushes (ac98130, 2c0dddc, 99852352) were not requested by the owner; NOTES restored in 8d5c719. Pushes paused, then resumed on owner approval at 9:38 PM HST. Owner to check GitHub sessions/security log.
 - **Not in the repo yet:** the holiday calendar and policy patch, and the trademark wording, are drafted and waiting on the owner.
 
 ## Next / Open
@@ -33,12 +35,12 @@ Detail for each item is in the dated sections below.
 - (b) Adaptive learning paths by age. *Progress:* Start here pages and Learn guide/math levels are live. Next is Explorer Levels (kids Phase 2, below).
 - (c) Eco-anxiety support content after heavy topics, with "what you can actually do" reassurance. *Not started.*
 - (d) Choose-your-own-adventure action guide tied to Ways_to_Help, by role. *Not started.*
-- (e) **Kids Phase 2**: Explorer Levels (P-01) is deferred until after the Oct 25 usage reset. The tracker is the POA&M in /workspace/play-learn.
+- (e) **Kids Phase 2**: Explorer Levels (P-01) **pulled forward to the week of Oct 19** (Grok plan upgraded Oct 17; meter at 1%). The tracker is the POA&M in /workspace/play-learn.
 - (f) **SI Helper**: COPPA/legal review before promoting it to students. Also pending: custom domain decision and a Cloudflare billing alert.
 - (g) **Native-speaker checks**: FR/AR (Rawane; the 12 Oct 17 pages, the Cc line and the Earthrise caption), IT (reviewer still needed), HE (native reviewer needed).
 - (h) **Hebrew public decision**: after review, set `HE_PUBLIC = True` in scripts/langs.py and add 'he' to the fixed 5-language lists (seo-fix, seo-lint, i18n-sitemap, seo-jsonld…). Then weekly-sync, commit, post-deploy.
 - (i) **Holiday policy patch** (owner-approved, not committed): apply it to the Editorial Policy, update "Last updated", and run the builds. Then the holiday pages and the **Halloween** content once the owner reviews the calendar.
-- (j) **Promo video v2** is waiting on the owner's review. Nothing goes to Postiz until she approves.
+- (j) **Promo video v3 polish in progress.** Nothing goes to Postiz until she approves. FR/ES/AR/IT versions not started (est. 45–60 min each after the EN cut is approved, plus native review).
 - (k) **X Ads launch** is waiting on X support. At launch, swap in the 175 text and the v4 square video.
 - (l) **Remaining Learn items**: per-language glossary review against ESA/CNES/ASI terms, SI diagrams, Hebrew Careers BLS link titles (still English), Space Passport QR export, and the hard-coded "3 learning tools" count (no source).
 
@@ -71,7 +73,7 @@ Detail for each item is in the dated sections below.
 - ~~IndexNow wiring~~: done, post-deploy.sh pings it.
 
 **Follow-ups**
-- Paused until the Oct 25 reset (decide then): daily solution candidates, weekly translated video scripts, unanswered-question answers. Still running: the daily numbers check, the calendar heads-up, the Monday POA&M report and the outreach drafts.
+- **Routines resumed Oct 17 9:22 PM HST** (after the Grok plan upgrade, meter at 1%): daily solution candidates, weekly translated video scripts, unanswered-question answers; the Oct 25 resume reminder was removed. Also running: the daily numbers check, the calendar heads-up, the Monday POA&M report and the outreach drafts.
 - Positioning line for outreach once the kids ideas are built (drafts only).
 - Thank-you emails for the 12 Oct 17 solutions (drafts only).
 - Update pitch.md and social.md to 175. 200-milestone package held.

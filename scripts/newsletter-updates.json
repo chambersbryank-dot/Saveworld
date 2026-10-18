@@ -1,5 +1,5 @@
 {
-  "_doc": "Site improvements shown under What's New in the Weekly Brief (new pages are detected automatically from git; list improvements to existing pages here). One entry per improvement: date (HST, YYYY-MM-DD, the day it went live), page (site-relative), what {en,fr,es,ar}. Facts only. An issue shows entries dated after the previous issue, up to the issue date. Auto-appended by scripts/newsletter-updates-sync.js (run in weekly-sync.sh) from commits 'feat(Page.html): reader-facing sentence' and NOTES.md '## Newsletter' bullets '- YYYY-MM-DD | Page.html | sentence'; auto entries are English-only until what.fr/es/ar are added.",
+  "_doc": "Site improvements shown under What's New in the Weekly Brief (new pages are detected automatically from git; list improvements to existing pages here). One entry per improvement: date (HST, YYYY-MM-DD, the day it went live), page (site-relative), what {en,fr,es,ar,it,he}. Facts only. An issue shows entries dated after the previous issue, up to the issue date. Auto-appended by scripts/newsletter-updates-sync.js (run in weekly-sync.sh) from commits 'feat(Page.html): reader-facing sentence' and NOTES.md '## Newsletter' bullets '- YYYY-MM-DD | Page.html | sentence'; auto entries are English-only until what.fr/es/ar are added.",
   "entries": [
     {
       "date": "2026-10-14",
@@ -406,6 +406,66 @@
         "en": "The ALOS-4 page now covers JJ-FAST, the JICA and JAXA radar system that tracks tropical forest loss from ALOS-2 (updates limited to Brazil since April 2024)."
       },
       "note": "2026-10-16|The ALOS-4 page now covers JJ-FAST, the JICA and JAXA radar system that tracks tropical forest loss from ALOS-2 (updates limited to Brazil since April 2024)."
+    },
+    {
+      "date": "2026-10-17",
+      "page": "Solutions.html",
+      "what": {
+        "en": "12 new solutions, including Parker Solar Probe, The SeaCleaners and WeForest. Saving Planets now features 175 real solutions.",
+        "fr": "12 nouvelles solutions, dont Parker Solar Probe, The SeaCleaners et WeForest. Saving Planets présente désormais 175 solutions réelles.",
+        "es": "12 soluciones nuevas, entre ellas Parker Solar Probe, The SeaCleaners y WeForest. Saving Planets ya presenta 175 soluciones reales.",
+        "ar": "12 حلاً جديداً، منها Parker Solar Probe وThe SeaCleaners وWeForest. يعرض Saving Planets الآن 175 حلاً حقيقياً.",
+        "it": "12 nuove soluzioni, tra cui Parker Solar Probe, The SeaCleaners e WeForest. Saving Planets ora presenta 175 soluzioni reali.",
+        "he": "12 פתרונות חדשים, ביניהם Parker Solar Probe, ‏The SeaCleaners ו-WeForest. ב-Saving Planets יש עכשיו 175 פתרונות אמיתיים."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "page": "Space_Passport.html",
+      "what": {
+        "en": "New for kids: Space Passport. Collect a stamp for every part of Saving Planets you explore. Saved only on your device.",
+        "fr": "Nouveau pour les enfants : le Passeport spatial. Collecte un tampon pour chaque partie de Saving Planets que tu explores. Enregistré seulement sur ton appareil.",
+        "es": "Novedad para niños: el Pasaporte espacial. Consigue un sello por cada parte de Saving Planets que explores. Se guarda solo en tu dispositivo.",
+        "ar": "جديد للأطفال: جواز السفر الفضائي. اجمع ختماً عن كل جزء تستكشفه من Saving Planets. يُحفظ على جهازك فقط.",
+        "it": "Novità per i bambini: il Passaporto spaziale. Raccogli un timbro per ogni parte di Saving Planets che esplori. Salvato solo sul tuo dispositivo.",
+        "he": "חדש לילדים: דרכון החלל. אספו חותמת על כל חלק ב-Saving Planets שאתם חוקרים. נשמר רק במכשיר שלכם."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "page": "Myth_or_Fact_Arcade.html",
+      "what": {
+        "en": "New game: Myth or Fact? Evidence Arcade. Decide if each claim is a myth or a fact, then see the source that proves it.",
+        "fr": "Nouveau jeu : Mythe ou réalité ? L’arcade des preuves. Décide si chaque affirmation est un mythe ou une réalité, puis découvre la source qui le prouve.",
+        "es": "Juego nuevo: ¿Mito o realidad? La arcade de las pruebas. Decide si cada afirmación es un mito o una realidad y luego mira la fuente que lo demuestra.",
+        "ar": "لعبة جديدة: خرافة أم حقيقة؟ لعبة الأدلة. قرّر إن كان كل ادعاء خرافة أم حقيقة، ثم شاهد المصدر الذي يثبت ذلك.",
+        "it": "Nuovo gioco: Mito o realtà? L’arcade delle prove. Decidi se ogni affermazione è un mito o un fatto, poi guarda la fonte che lo dimostra.",
+        "he": "משחק חדש: מיתוס או עובדה? ארקייד הראיות. החליטו אם כל טענה היא מיתוס או עובדה, ואז ראו את המקור שמוכיח זאת."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "page": "Boarding_Pass.html",
+      "what": {
+        "en": "Launch Your Name: make a keepsake boarding pass for the next real rocket launch on our Launch Tracker. Your name is never saved or sent.",
+        "fr": "Lance ton nom : crée une carte d’embarquement souvenir pour le prochain vrai lancement de fusée de notre suivi des lancements. Ton nom n’est jamais enregistré ni envoyé.",
+        "es": "Lanza tu nombre: crea una tarjeta de embarque de recuerdo para el próximo lanzamiento real de nuestro seguimiento de lanzamientos. Tu nombre nunca se guarda ni se envía.",
+        "ar": "أطلق اسمك: اصنع بطاقة صعود تذكارية لإطلاق الصاروخ الحقيقي التالي في متتبع الإطلاقات لدينا. لا يُحفظ اسمك ولا يُرسل أبداً.",
+        "it": "Lancia il tuo nome: crea una carta d’imbarco ricordo per il prossimo vero lancio di un razzo del nostro tracker dei lanci. Il tuo nome non viene mai salvato né inviato.",
+        "he": "שגרו את השם שלכם: הכינו כרטיס עלייה למזכרת לשיגור הטיל האמיתי הבא במעקב השיגורים שלנו. השם שלכם אף פעם לא נשמר ולא נשלח."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "page": "Play_and_Learn.html",
+      "what": {
+        "en": "Superpowers panel on kids pages: Read to me, bigger text, an easy-read font, high contrast, calm motion and tap instead of drag. Saved only on your device.",
+        "fr": "Panneau Super-pouvoirs sur les pages enfants : lecture à voix haute, texte plus grand, police facile à lire, contraste élevé, mouvements calmes et toucher au lieu de glisser. Enregistré seulement sur ton appareil.",
+        "es": "Panel de Superpoderes en las páginas para niños: lectura en voz alta, texto más grande, letra fácil de leer, alto contraste, movimiento tranquilo y tocar en vez de arrastrar. Se guarda solo en tu dispositivo.",
+        "ar": "لوحة القوى الخارقة في صفحات الأطفال: القراءة بصوت عالٍ، ونص أكبر، وخط سهل القراءة، وتباين عالٍ، وحركة هادئة، واللمس بدل السحب. تُحفظ على جهازك فقط.",
+        "it": "Pannello Superpoteri nelle pagine per bambini: lettura ad alta voce, testo più grande, carattere facile da leggere, contrasto elevato, movimento calmo e tocco invece del trascinamento. Salvato solo sul tuo dispositivo.",
+        "he": "לוח כוחות־על בדפי הילדים: הקראה, טקסט גדול יותר, גופן קל לקריאה, ניגודיות גבוהה, תנועה רגועה והקשה במקום גרירה. נשמר רק במכשיר שלכם."
+      }
     }
   ]
 }

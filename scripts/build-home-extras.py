@@ -51,7 +51,8 @@ for page, (slug, heading) in VIDEOS.items():
 # ---- About: featured 9:16 ad on top, older channel intro lower on the page ----
 try: _N = json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions']
 except Exception: _N = 120
-AD_CAP = f'A 70-second tour: {_N} real solutions, free lesson plans, the Kids Planet Map, the 3D Satellite Explorer, search, Amazing Facts, Myth vs Fact, live launches and five languages.'  # Oct 14: v3 (real site footage + NASA B-roll)
+# Oct 17: the recorded narration says 120 (pinned in assets/data/a11y.json), so the caption says when it was recorded instead of the live count.
+AD_CAP = 'A 70-second tour, recorded when we had 120 solutions: free lesson plans, the Kids Planet Map, the 3D Satellite Explorer, search, Amazing Facts, Myth vs Fact, live launches and five languages.'  # Oct 14: v3 (real site footage + NASA B-roll)
 s = open('About.html', encoding='utf-8').read()
 s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)

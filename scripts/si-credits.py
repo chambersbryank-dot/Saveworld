@@ -9,7 +9,7 @@ SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 
              'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps'}
 SI_T = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
         'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner'}
-MARK = re.compile(r'SI Partner|SI وBiological')
+MARK = re.compile(r'SI Partner|SI وBiological|שותף SI ביולוגי|שותף Biological SI')  # Oct 17: hidden he pages carry the Hebrew credit
 CSS = '.si-credit{display:block;font-size:.75rem;line-height:1.3;opacity:.85;font-style:italic;margin:.25rem 0 0}'
 
 def is_si(src):

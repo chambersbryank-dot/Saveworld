@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T00:17:20.810Z",
+ "generated": "2026-10-18T08:07:11.050Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -980,7 +980,7 @@
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "corporate": 13,
+   "corporate": 15,
    "agency": 95,
    "nonprofit": 48,
    "natural": 15,

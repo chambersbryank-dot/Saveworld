@@ -170,7 +170,11 @@ function build() {
   if (fs.existsSync('Solutions.html')) {
     const dir = fs.readFileSync('Solutions.html', 'utf8');
     const cards = (dir.match(/<article class="card sol-card/g) || []).length, hubs = (dir.match(/<section class="card-band sol-hub"/g) || []).length;
-    if (cards) { site.taggedSolutions = site.solutions + site.horizon; if (cards !== site.taggedSolutions) warnings.push(`Solutions.html has ${cards} cards but solutions.json has ${site.taggedSolutions} unique solution pages`); site.solutions = cards; site.horizon = 0; }
+    if (cards) { site.taggedSolutions = site.solutions + site.horizon; if (cards !== site.taggedSolutions) warnings.push(`Solutions.html has ${cards} cards but solutions.json has ${site.taggedSolutions} unique solution pages`); site.solutions = cards; site.horizon = 0;
+      // Oct 17: the homepage breakdown must add up to the headline count, so it counts every tagged solution (horizon ones too) when the directory count is used.
+      const byAll = {}; pages.filter(p => p.type === 'solution').forEach(p => { const k = p.classification || 'other'; byAll[k] = (byAll[k] || 0) + 1; });
+      site.byClassification = byAll; const sum = Object.values(byAll).reduce((a, b) => a + b, 0);
+      if (sum !== cards) warnings.push(`byClassification sums to ${sum} but Solutions.html has ${cards} cards`); }
     if (hubs) site.hubs = hubs;
   }
   const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site, categories, pages };

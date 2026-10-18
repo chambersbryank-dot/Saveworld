@@ -156,8 +156,12 @@ def home(l, n, hubs):
     try:
         ent = json.load(open('scripts/newsletter-updates.json', encoding='utf8'))['entries']
         ent = sorted(ent, key=lambda e: e['date'], reverse=True)[:5]
-        lis = ''.join(f'<li><time datetime="{e["date"]}">{e["date"]}</time> <a href="{e["page"]}">{e["what"].get(l) or e["what"]["en"]}</a></li>' for e in ent)
-    except Exception: lis = ''
+        # Oct 17 fix: entries without a page (auto-appended from commits/NOTES) are listed unlinked; one bad entry no longer empties the list.
+        def _li(e):
+            w = html.escape(e['what'].get(l) or e['what']['en'], quote=False)
+            return f'<li><time datetime="{e["date"]}">{e["date"]}</time> ' + (f'<a href="{e["page"]}">{w}</a>' if e.get('page') else w) + '</li>'
+        lis = ''.join(_li(e) for e in ent if (e.get('what') or {}).get('en'))
+    except Exception as ex: print(f'build-ux: news list failed: {ex!r}'); lis = ''
     news = f'<section class="news-briefs" aria-labelledby="news-h"><h2 id="news-h">{t["news"]}</h2><p>{t["newsintro"]}</p><ul class="news-list">{lis}</ul></section>'
     s = block(s, 'NEWS', news, r'<section [^>]*newsletter-band')
     if 'id="newsletter"' not in s: s = re.sub(r'<section ([^>]*newsletter-band)', r'<section id="newsletter" \1', s, count=1)
@@ -225,6 +229,13 @@ html.dark .dom-card{background:#13232f}
 .sol-filters select{min-height:44px;border-radius:10px;padding:0 .6rem;font-size:1rem}
 .sol-hub.sp-collapsed .grid>.sol-card:nth-child(n+7){display:none}
 .sp-more{display:block;margin:1rem auto 0;min-height:44px;padding:.5rem 1.2rem;border-radius:999px;border:0;background:#003755;color:#fff;font-weight:600;cursor:pointer}
+/* Oct 17 quick fixes (iPad landscape review): side margins, Real Solutions row, floating buttons above the language sheet */
+#partner-teaser.five-ws,.learn-link{box-sizing:border-box;max-width:1200px;margin-inline:auto!important;padding-inline:clamp(1rem,4vw,1.5rem)!important}
+.learn-link{padding-block:1.4rem!important}
+@media (min-width:601px){body.toc-home #solutions.card-band>.grid{display:flex;flex-wrap:wrap;justify-content:center}
+body.toc-home #solutions.card-band>.grid>.card{flex:1 1 200px;max-width:min(100%,360px)}}
+html.sp-has-lb .sticky-help{bottom:calc(var(--sp-lb-h,0px) + 12px)!important}
+.news-list li{border-bottom-color:rgba(127,127,127,.35)}.news-list time{color:#4fc3ff}
 /* UX-OCT15:END */
 """
 JS = r"""
@@ -250,7 +261,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261017h"  # bump when styles.css changes
+STYLEV = "20261017i"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
@@ -315,7 +326,8 @@ def page_pass(p, l, n):
     def _cnt(t):
         t = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), t)
         return re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (حلول|حلا))', str(n), t)
-    s = ''.join(x if x.startswith('<!-- TRANSCRIPT:START -->') else _cnt(x) for x in re.split(r'(<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->)', s, flags=re.S))
+    # Oct 17: video captions (sp-video-cap) describe the recording ("recorded when we had 120"), so they keep their number too
+    s = ''.join(x if x.startswith(('<!-- TRANSCRIPT:START -->', '<span class="sp-video-cap"')) else _cnt(x) for x in re.split(r'(<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->|<span class="sp-video-cap"[^>]*>.*?</span>)', s, flags=re.S))
     # canonical/og for index pages
     if page == 'index.html':
         s = s.replace(f'{SITE}{d(l)}index.html"', f'{SITE}{d(l)}"')
