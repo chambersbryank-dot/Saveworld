@@ -319,6 +319,8 @@ def main():
         out = re.sub(r'(sp:category" content=")[^"]*', lambda m: m.group(1) + p['cat'], out)
         out = re.sub(r'(sp:classification" content=")[^"]*', lambda m: m.group(1) + p['cls'], out)
         out = re.sub(r'(sp:status" content=")[^"]*', lambda m: m.group(1) + p['status'], out)
+        # Oct 18 (daily numbers check): the Surfrider template carries sp:added 2026-10-15; this batch was released 2026-10-17
+        out = re.sub(r'(sp:added" content=")[^"]*', lambda m: m.group(1) + '2026-10-17', out)
         out = re.sub(r'<body[^>]*>', f'<body data-glass="{p["glass"]}" class="hp-{s.lower().replace("_","-")} toc-sub {s.lower().replace("_","-")}-page">', out, count=1)
         # strip old JSON-LD so seo-fix/seo-jsonld rebuild it from this page
         out = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', out, flags=re.S)
