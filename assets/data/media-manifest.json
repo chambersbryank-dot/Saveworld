@@ -2493,26 +2493,6 @@
   "height": 794,
   "duration": 22.6
  },
- "videos/savingplanets-about-v3-720.mp4": {
-  "url": "https://media.savingplanets.com/videos/savingplanets-about-v3-720.a27f8fded797.mp4",
-  "key": "videos/savingplanets-about-v3-720.a27f8fded797.mp4",
-  "bytes": 16665964,
-  "sha256": "a27f8fded79741ff727eb4ae1a22196c36350b54cea9904640101026307f21fc",
-  "type": "video/mp4",
-  "width": 720,
-  "height": 1280,
-  "duration": 70.0
- },
- "videos/savingplanets-about-v3.mp4": {
-  "url": "https://media.savingplanets.com/videos/savingplanets-about-v3.8d75c14c37d4.mp4",
-  "key": "videos/savingplanets-about-v3.8d75c14c37d4.mp4",
-  "bytes": 43747379,
-  "sha256": "8d75c14c37d4164989ecc2b8736c324b0549efadc00fde2e9e26b110b19e93ab",
-  "type": "video/mp4",
-  "width": 1080,
-  "height": 1920,
-  "duration": 70.0
- },
  "videos/savingplanets-about-v4-720.mp4": {
   "url": "https://media.savingplanets.com/videos/savingplanets-about-v4-720.37cebdf1b4e4.mp4",
   "key": "videos/savingplanets-about-v4-720.37cebdf1b4e4.mp4",

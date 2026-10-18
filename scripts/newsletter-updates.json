@@ -466,6 +466,13 @@
         "it": "Pannello Superpoteri nelle pagine per bambini: lettura ad alta voce, testo più grande, carattere facile da leggere, contrasto elevato, movimento calmo e tocco invece del trascinamento. Salvato solo sul tuo dispositivo.",
         "he": "לוח כוחות־על בדפי הילדים: הקראה, טקסט גדול יותר, גופן קל לקריאה, ניגודיות גבוהה, תנועה רגועה והקשה במקום גרירה. נשמר רק במכשיר שלכם."
       }
+    },
+    {
+      "date": "2026-10-18",
+      "what": {
+        "en": "About video v4 (88 s, 175 solutions) + homepage promo v3 below the locked hero, all langs; R2 media; v-solar to R2; STYLEV 20261018a"
+      },
+      "commit": "0deac62e8d87f8f6ad9c3e0167d6e1ba49814c52"
     }
   ]
 }
