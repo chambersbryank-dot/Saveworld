@@ -18,6 +18,15 @@ HS = lambda f: (MAN.get('images/hero-space/' + f) or {}).get('url', '')
 def TEXATTR():
     return ''.join(f' {a}="{HS(f)}"' for a, f in (('data-tex-a', 'enceladus-1024.webp'), ('data-tex-a2', 'enceladus-2048.webp'),
                                                  ('data-tex-b', 'moon-1024.webp'), ('data-tex-b2', 'moon-2048.webp')) if HS(f))
+
+def SATATTR():
+    # Cassini PIA11141 (NASA/JPL-Caltech/Space Science Institute). Meta = gx,gy,gr (globe center/radius as fractions of image).
+    parts = []
+    for w in (960, 1280, 1920, 2560, 3840):
+        e = MAN.get('images/hero-space/saturn-cassini-%d.webp' % w)
+        if e and e.get('url'): parts.append('%s %dw' % (e['url'], w))
+    if not parts: return ''
+    return ' data-sat="%s" data-sat-meta="0.34751,0.48782,0.13085"' % (','.join(parts),)
 def POSTER():  # .hero-space::before = still frame until the live ground is ready; widths up to 6016 (6K Retina @2x)
     sel, out = '.hero[data-hero=space] .hero-space::before', ''
     # three compositions (build-hero-assets.py), each rendered at the CSS size whose text layout it matches:
@@ -39,9 +48,9 @@ def POSTER():  # .hero-space::before = still frame until the live ground is read
     return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # Oct 17: he = Hebrew (built, unlinked until review; skipped if he/index.html is missing)
-# Oct 17 ~7:00 PM: APPROVED HERO POSITION (owner: 'Raise title up more' on iPad landscape). How far the homepage title
-# block sits ABOVE its flex-centered spot, for every hero theme. Change only here; see NOTES.md 'Approved hero position'.
-# Was 1.6vh (~13 px at 820 tall, still ~14 px below center on iPad-L); now 4vh (~33 px at 820 tall → ~20 px above center).
+# Oct 17 ~7:10 PM: APPROVED HERO POSITION. Earth/other themes: HERO_OFFSET lifts the flex-centered block.
+# Space theme: hero-themes.js placeTitleBlock() centers the title BETWEEN the nav bottom and the fixed moon horizon
+# (equal gaps); HERO_OFFSET is ignored there via CSS overrides. See NOTES.md 'Approved hero position'.
 HERO_OFFSET = '4vh'
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
 ANCHOR_UTC = 'Date.UTC(2026,9,12,10)'  # Mon 12 Oct 2026 00:00 HST
@@ -110,6 +119,10 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '.hero[data-hero] .hero-content{margin:auto!important;padding-top:calc(56px - var(--hero-offset));padding-bottom:calc(3.5rem + var(--hero-offset));position:relative;z-index:2}'
        '@media (min-width:1140px){.hero[data-hero] .hero-content{padding-top:calc(92px - var(--hero-offset));padding-bottom:calc(2rem + var(--hero-offset))}}'
        '.hero[data-hero] .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center}'
+       # Oct 17: space theme — title block top set by JS (--hero-block-top) so it sits centered between nav and horizon
+       '.hero[data-hero=space]{justify-content:flex-start!important}'
+       '.hero[data-hero=space] .hero-content{position:absolute;left:0;right:0;top:var(--hero-block-top,18%);margin:0 auto!important;padding-top:0!important;padding-bottom:1rem!important;width:min(46rem,62vw);max-width:46rem}'
+       '@media (max-width:1100px){.hero[data-hero=space] .hero-content{width:min(46rem,88vw)}}'
        # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
        '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
@@ -133,7 +146,7 @@ def caps(l):
     return f'<div class="hs-caps">{a}</div>'
 
 def block(pre, l):
-    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}></div>{caps(l)}{chooser()}'
+    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}{SATATTR()}></div>{caps(l)}{chooser()}'
             f'<script src="{pre}assets/hero-themes.js?v={JSV}" defer></script><!-- HEROTHEME:END -->')
 
 # Oct 16 2026 (Lighthouse): the hero video (1.1 MB, HERO-VIDEO block from build-batch2.py) used to start downloading

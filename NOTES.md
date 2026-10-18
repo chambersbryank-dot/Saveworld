@@ -689,6 +689,15 @@ Fix: build-home-extras.py now removes any unmarked copy of the video and puts it
 ## 2026-10-17 Homepage hero title centered
 build-hero-themes.py: in the space hero the title block (slogan, title, line, buttons) is centered horizontally and vertically over the Enceladus/moons scene, with the buttons centered too. It keeps the existing scrim and text-shadow. CSS v=20261017d.
 
+## 2026-10-17 ~7:10 PM HST Approved hero position (nav↔horizon centering) + photo-real Saturn
+Owner (iPad landscape): raise title further; equal gap between nav bottom and moon horizon; moons must not move; plumes reach the title; "Is that Jupiter?" → it is **Saturn** (Enceladus orbits Saturn).
+- **Positioning:** space theme only — `placeTitleBlock()` in `assets/hero-themes.js` sets `--hero-block-top` so the title block (kicker → buttons) is vertically centered between the nav bottom and the fixed horizon `hY`, equal gaps (±1 px verified). iPad-L 1180×820: nav 92, hY 646, gaps **76 / 76.6**. iPad-P: **272 / 271.6**. Mac 1440×900: **86 / 86**. Earth/other themes keep `HERO_OFFSET = '4vh'` flex centering.
+- **Horizon frozen:** `hY` no longer follows the title (`layoutCb` = 0.738H landscape / 0.576H portrait), so Saturn / Enceladus / Earthrise stay put when the title moves.
+- **Plumes:** canvas jets in `drawJets` (not baked into a still) — `Hj` extended so plume tops meet the title without scaling the moons.
+- **Saturn WOW:** Cassini **PIA11141** natural-color equinox mosaic (NASA/JPL-Caltech/Space Science Institute, public domain). Source: https://photojournal.jpl.nasa.gov/catalog/PIA11141 (Wikimedia full-res 4613×2233). Served from R2 as WebP srcset 960/1280/1920/2560/3840 (≈30–200 KB) + master ~221 KB; Retina picks ≥2× via `data-sat`. Same on-screen globe radius (`SAT.R`); rings from the photo (nearly edge-on, scientifically right from Enceladus). Credit: "Created by SI and Biological SI Partner · Saturn: NASA/JPL-Caltech/Space Science Institute". Procedural Saturn remains the fallback.
+- **Earth theme WOW check:** homepage earth theme is the SI `hero-loop` video at **1280×546** (1.1 MB on R2) — no higher-res master on the box; true 4K would need a re-render. Space-theme Earthrise already uses NASA Blue Marble (8K master, srcset to 3840 WebP) with 2× oversample pick.
+- No `styles.css` bump (hero CSS is inline HEROTHEME; JS cache follows file hash).
+
 ## 2026-10-17 ~7:00 PM HST Approved hero position (raised more)
 Owner (iPad landscape): "Raise title up more".
 - Was `HERO_OFFSET = '1.6vh'` (~13.1 px at 1180x820); title block still ~13.7 px below center on iPad landscape.

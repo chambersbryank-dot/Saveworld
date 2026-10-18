@@ -5,8 +5,9 @@
    Theme "space" = a seamless ~48 s two-scene loop (all procedural, scientifically grounded; facts in NOTES.md):
      A. Low glide over Enceladus's south polar terrain: bright white ice, blue-tinted "tiger stripe" fractures, fine
         water-ice jets rising from the stripes, side-lit by the low Sun; Saturn half-set on the horizon (Enceladus is
-        tidally locked, so from the south pole Saturn sits on the horizon), its rings edge-on as a hairline because
-        Enceladus orbits in Saturn's ring plane, and the faint E ring (fed by the plumes) along the same line.
+        tidally locked, so from the south pole Saturn sits on the horizon), drawn from Cassini PIA11141 (NASA/JPL-Caltech/
+        Space Science Institute, public domain) at up to 3840px for Retina; rings nearly edge-on (equinox view matches
+        Enceladus's ring-plane orbit). Procedural Saturn remains the fallback.
      B. Low glide over the cratered Moon from lunar orbit (Earthrise is only seen from orbit), Earth rising, Sun at right.
    Transition: the camera pulls up and away (ground recedes) while the scenes cross-fade.
    Ground = WebGL perspective plane (mipmapped, anisotropic, repeat-tiled procedural textures); sky/planets/jets = 2D
@@ -17,6 +18,8 @@
   if (!hero || hero.getAttribute('data-hero') !== 'space') return;
   var box = hero.querySelector('.hero-space');
   if (!box || !window.HTMLCanvasElement) return;
+  var credit = hero.querySelector('.hero-video-credit');
+  if (credit) credit.textContent = 'Created by SI and Biological SI Partner · Saturn: NASA/JPL-Caltech/Space Science Institute';
   var caps = [].slice.call(hero.querySelectorAll('.hs-cap'));
   var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
   var reduced = mq.matches;
@@ -158,6 +161,22 @@
 
   // Saturn seen from Enceladus (3.95 Saturn radii out): angular radius asin(1/3.95) = 14.7 deg; ring edge (A ring
   // outer edge, 2.27 Rs) appears atan(2.27/3.95) = 29.9 deg from the centre, i.e. about 2.0 apparent radii.
+  // Saturn: Cassini PIA11141 natural-color equinox mosaic (NASA/JPL-Caltech/Space Science Institute, public domain).
+  // Served from R2 up to 3840px WebP; meta gx,gy,gr map the globe center/radius so on-screen size stays SAT.R.
+  var SATIMG = null, satTried = false, satMeta = { gx: 0.34751, gy: 0.48782, gr: 0.13085 };
+  function loadSat() {
+    if (satTried) return; satTried = true;
+    var raw = (box.getAttribute('data-sat-meta') || '').split(',');
+    if (raw.length >= 3) { satMeta.gx = +raw[0] || satMeta.gx; satMeta.gy = +raw[1] || satMeta.gy; satMeta.gr = +raw[2] || satMeta.gr; }
+    var need = (2 * SAT.R / Math.max(0.05, satMeta.gr)) * Math.min(window.devicePixelRatio || 1, 3);
+    var set = (box.getAttribute('data-sat') || '').split(',').map(function (t) {
+      var p = t.trim().split(/\s+/); return { u: p[0], w: parseInt(p[1], 10) || 0 };
+    }).filter(function (e) { return e.u && e.w >= 640; }).sort(function (a, b) { return a.w - b.w; });
+    if (!set.length) return;
+    var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need) { pick = set[k]; break; }
+    var im = new Image(); im.crossOrigin = 'anonymous'; im.decoding = 'async';
+    im.onload = function () { SATIMG = im; drawSaturn(); }; im.onerror = function () { SATIMG = null; }; im.src = pick.u;
+  }
   function drawSaturn() {
     var x = sizeCanvas(cSkyA, W, H), R = SAT.R, cx = SAT.x, cy = SAT.y, roll = -0.1, flat = 0.902;
     var ang = function (r) { return Math.atan(r / 3.95) / Math.asin(1 / 3.95) * R; };
@@ -165,7 +184,13 @@
     x.save(); x.translate(cx, cy); x.rotate(roll);
     var eg = x.createLinearGradient(0, -R * 0.5, 0, R * 0.5); eg.addColorStop(0, 'rgba(160,200,255,0)'); eg.addColorStop(0.5, 'rgba(170,205,255,0.10)'); eg.addColorStop(1, 'rgba(160,200,255,0)');
     x.fillStyle = eg; x.fillRect(-W * 2, -R * 0.5, W * 4, R); x.restore();
-    // globe (oblate), lit from the right, banded; ring shadow just south of the equator on the lit side
+    if (SATIMG && satMeta.gr > 0) {
+      var imgW = R / satMeta.gr, imgH = imgW * (SATIMG.naturalHeight / SATIMG.naturalWidth);
+      x.save(); x.translate(cx, cy); x.rotate(roll);
+      x.drawImage(SATIMG, -satMeta.gx * imgW, -satMeta.gy * imgH, imgW, imgH);
+      x.restore(); return;
+    }
+    // procedural fallback (banded globe + edge-on rings) until the Cassini texture arrives
     var S = Math.ceil(2 * R * D), img = new ImageData(S, Math.ceil(2 * R * flat * D) + 2), d = img.data, L = [0.82, -0.12, 0.56];
     var ih = img.height;
     for (var j = 0; j < ih; j++) for (var i = 0; i < S; i++) {
@@ -176,7 +201,6 @@
       d[o] = Math.min(255, (226 + 30 * w) * lit * rs * 1.08); d[o + 1] = Math.min(255, (196 + 30 * w) * lit * rs * 1.08); d[o + 2] = Math.min(255, (146 + 24 * w) * lit * rs * 1.08); d[o + 3] = 255; }
     var g = document.createElement('canvas'); g.width = S; g.height = ih; g.getContext('2d').putImageData(img, 0, 0);
     x.save(); x.translate(cx, cy); x.rotate(roll); x.drawImage(g, -R, -R * flat, 2 * R, 2 * R * flat);
-    // rings edge-on: hairline with C / B / Cassini division / A ring brightness
     x.globalCompositeOperation = 'lighter'; x.lineCap = 'butt';
     [[1.24, 1.53, 0.22], [1.53, 1.95, 0.95], [1.95, 2.03, 0.08], [2.03, 2.27, 0.7]].forEach(function (b) {
       [-1, 1].forEach(function (sg) { var a0 = ang(b[0]) * sg, a1 = ang(b[1]) * sg;
@@ -279,16 +303,38 @@
     else hero.classList.add('hs-placed');
     capKey = key;
   }
+
+  // Oct 17: center the whole title block (kicker → buttons) in the empty band between the nav and the moon horizon,
+  // equal gap above and below (owner, iPad landscape reference). Moons stay put; only the text moves.
+  function placeTitleBlock(hr) {
+    var content = hero.querySelector('.hero-content'); if (!content) return;
+    var nav = document.getElementById('topnav') || document.querySelector('nav');
+    var navBottom = 56;
+    if (nav) { var nb = nav.getBoundingClientRect(); navBottom = Math.max(0, Math.round(nb.bottom - hr.top)); }
+    else if (W >= 1140) navBottom = 92;
+    hero.style.setProperty('--hero-block-top', navBottom + 'px'); // measure block height at a known top
+    var kicker = content.querySelector('.hero-kicker'), end = content.querySelector('.hero-email') || content.querySelector('.hero-ctas');
+    if (!kicker || !end) return;
+    var blockH = end.getBoundingClientRect().bottom - kicker.getBoundingClientRect().top;
+    if (!(blockH > 0) || !(hY > navBottom + 40)) return;
+    var top = navBottom + (hY - navBottom - blockH) / 2;
+    top = Math.max(navBottom + 4, Math.min(top, hY - blockH - 8));
+    hero.style.setProperty('--hero-block-top', Math.round(top) + 'px');
+  }
+
   function setup() {
     tok++; sprites = {};
     var r = hero.getBoundingClientRect(); W = Math.max(320, Math.round(r.width)); H = Math.max(480, Math.round(r.height));
     var big = /[?&]hero-poster=1/.test(location.search); // poster builder only: native 6K stills
     var dpr = Math.min(window.devicePixelRatio || 1, big ? 6 : 3); D = Math.min(dpr, Math.sqrt((big ? 40e6 : 21e6) / (W * H))); // full DPR up to ~6K-wide backing (6016x3384 = 6K Retina @2x); slow devices step down via QL
-    // Horizon sits below the hero text so the bright ice never sits behind white type.
-    var port0 = W < H, last = hero.querySelector('.hero-email') || hero.querySelector('.hero-ctas'), cb = last ? last.getBoundingClientRect().bottom - r.top : H * 0.6;
-    // Oct 16 7:57 PM (user: 'move everything up'): text block sits higher (CSS), horizon follows it closely, never below 0.8H,
-    // so the jets, Saturn and Earthrise play in the upper/middle part of the hero, clear of the bottom pills and the fold.
-    hY = Math.round(Math.min(H * 0.8, Math.max(H * 0.5, cb + Math.max(36, H * (port0 ? 0.17 : 0.05)))));
+    // Oct 17 ~7:10 PM: FREEZE horizon/Saturn/Enceladus/Earth to the viewport so raising the title never moves the moons.
+    // layoutCb matches the 4vh title-bottom fractions (iPad-L 605/820, iPad-P 680/1180). Title is then recentered in JS
+    // between the nav and this fixed horizon (equal gaps). Plumes grow upward to meet the title.
+    var port0 = W < H, last = hero.querySelector('.hero-email') || hero.querySelector('.hero-ctas');
+    var layoutCb = Math.round(H * (port0 ? 0.576 : 0.738));
+    hY = Math.round(Math.min(H * 0.8, Math.max(H * 0.5, layoutCb + Math.max(36, H * (port0 ? 0.17 : 0.05)))));
+    placeTitleBlock(r); // sets --hero-block-top so the text sits centered between nav bottom and hY
+    var cb = last ? last.getBoundingClientRect().bottom - r.top : H * 0.6;
     hero.classList.toggle('hs-lowsky', cb > hY - 8); // short screens: the last text line overlaps the horizon -> give it a backdrop
     FOC = Math.max(W, H) * 0.9; curvA = (H * 0.045) / Math.pow(W / 2, 2); curvB = (H * 0.022) / Math.pow(W / 2, 2);
     var port = W < H;
@@ -307,7 +353,7 @@
     SUN = { R: Math.max(7, Math.round(EAR.R * 0.28)), x: W * (port ? 0.86 : 0.9) };
     // the Sun never sits behind the text block: portrait -> between the text and the horizon; landscape -> beside the text column
     SUN.y = port ? cb + (hY - cb) * 0.32 : Math.max(hY * 0.3, 170);
-    drawStars(); drawSaturn(); drawSun(); drawEarth(false); drawEarth(true);
+    drawStars(); loadSat(); drawSaturn(); drawSun(); drawEarth(false); drawEarth(true);
     gTop = Math.max(0, hY - 2); sizeCanvas(cGround, W, H - gTop, 0, gTop);
     sizeCanvas(cFx, W, H); placeCaption();
     if (!glOk) glOk = initGL();
@@ -353,6 +399,8 @@
         var fz = FOC / zw, bx = cx + xw * fz, by = hY + curvA * (bx - cx) * (bx - cx) + camH * fz;
         if (bx < -300 || bx > W + 300) continue;
         var big = hash(n, m + 11) > 0.55, Hj = big ? 16 + 14 * hash(n, m + 3) : 6 + 6 * hash(n, m + 3);
+        // Oct 17: extend plumes so their tops meet the raised title (moons/horizon stay fixed)
+        if (TXT[1] < 1e8) { var need = Math.max(0, (by - TXT[1] + 12) / Math.max(8, fz)); Hj = Math.max(Hj, need * (big ? 1.25 : 0.95)); }
         var fa = alpha * sstep(56, 40, zw) * sstep(7, 12, zw), N = Math.round((big ? 96 : 50) * QN[QL]), rate = (big ? 0.07 : 0.12) + 0.05 * hash(n, m + 5);
         // soft glowing plume: overlapping soft blobs that widen and fade with height (no hard-edged cone)
         var K = big ? 34 : 18, Hp = Hj * fz;
