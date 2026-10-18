@@ -48,6 +48,7 @@ node build-stats.js --data-only          # Oct 15: re-run after the sitemap list
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/it
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)
+python3 scripts/build-map-he.py        # Oct 17: assets/data/map.he.json + he/World_Map.html data-src (needs map.en.json and the i18n-built he page)
 python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Embed) on Amazing Facts, Myth vs Fact, World Map, homepage Scoreboard; per-item Cite (all langs)
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
 python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, region (map pins), grade (standards), name; URL state (all langs)

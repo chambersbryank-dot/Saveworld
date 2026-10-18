@@ -24,7 +24,9 @@ def fix(s):
         if m.group(1) not in ONLY: return m.group(0)
         v = html.unescape(m.group(2)); t = tr(v)
         return m.group(0) if t == v else f'{m.group(1)}="{html.escape(t, quote=True)}"'
-    return re.sub(r'(data-[a-z][a-z0-9-]*)="([^"{][^"]*)"', at, s)
+    s = re.sub(r'(data-[a-z][a-z0-9-]*)="([^"{][^"]*)"', at, s)
+    # English-titled links (e.g. BLS occupation names on Careers): translate when he.json has the text; proper nouns stay English
+    return re.sub(r' lang="en">([^<]+)<', lambda m: '>' + M[m.group(1)] + '<' if m.group(1) in M else ('>' + m.group(1) + '<' if re.search('[\u0590-\u05ff]', m.group(1)) else m.group(0)), s)
 n = 0
 for f in glob.glob('he/*.html'):
     s = open(f, encoding='utf8').read(); t = fix(s)

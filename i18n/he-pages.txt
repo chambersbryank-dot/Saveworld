@@ -243,3 +243,7 @@ Cadets.html
 Stall_Speed_Calculator.html
 Projectile_Motion_Drag_Calculator.html
 Careers.html
+World_Map.html
+Aero_Math.html
+Physics_Math.html
+Orbit_Math.html
