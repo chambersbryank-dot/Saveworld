@@ -727,3 +727,4 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Batch 2 (25 solutions, 4ocean–ClearSpace) added. Fixed the first SI mention on index (cohost line) so it reads "SI (בינה סינתטית)".
 - Batch 3 (25 solutions, Comet_Interceptor–FreshWater_Watch) added.
 - Batch 4 (25 solutions, GEDI–Jupiter) added.
+- Batch 5 (25 solutions, Justdiggit–OCO-2) added.
