@@ -39,6 +39,9 @@ def POSTER():  # .hero-space::before = still frame until the live ground is read
     return out
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)
 LANGS = ['en', 'fr', 'es', 'ar', 'it']
+# Oct 17 6:15 PM: APPROVED HERO POSITION (pending owner sign-off on iPad landscape, then LOCKED). How far the homepage title
+# block sits ABOVE its flex-centered spot, for every hero theme. Change only here; see NOTES.md 'Approved hero position'.
+HERO_OFFSET = '1.6vh'
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
 ANCHOR_UTC = 'Date.UTC(2026,9,12,10)'  # Mon 12 Oct 2026 00:00 HST
 JSV = hashlib.sha1(open('assets/hero-themes.js', 'rb').read()).hexdigest()[:8]  # cache version follows the file
@@ -90,17 +93,21 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        # ~1rem under the nav (56px single row < 992px, 92px two rows from 992px) with tighter spacing between its lines.
        '.hero[data-hero=space] .hero-content{padding-top:calc(56px + .9rem);padding-bottom:1rem}'
        '@media (min-width:1140px){.hero[data-hero=space] .hero-content{padding-top:calc(92px + 1rem)}}'
-       '.hero[data-hero=space] .hero-kicker{margin-top:0;margin-bottom:1.1rem}.hero[data-hero=space] .hero-welcome{margin-bottom:.6rem}'
-       '.hero[data-hero=space] .hero-ctas{margin:.8rem 0 .4rem}.hero[data-hero=space] .hero-email{margin-top:.7rem}'
+       # Oct 17 6:15 PM: line spacing shared by every theme (was space-only) so the title block is identical on any background.
+       '.hero[data-hero] .hero-kicker{margin-top:0;margin-bottom:1.1rem}.hero[data-hero] .hero-welcome{margin-bottom:.6rem}'
+       '.hero[data-hero] .hero-ctas{margin:.8rem 0 .4rem}.hero[data-hero] .hero-email{margin-top:.7rem}'
        '.hero.hs-capoff .hs-cap{visibility:hidden!important}'
        # 8:06 PM: the taller plumes rise behind the title: a soft dark scrim + tighter shadow keep the text >= 4.5:1
        '.hero[data-hero=space] .hero-content{background:radial-gradient(closest-side,rgba(0,8,20,.42),rgba(0,8,20,.18) 70%,rgba(0,8,20,0))}'
        '.hero[data-hero=space] .hero-welcome,.hero[data-hero=space] .hero-kicker,.hero[data-hero=space] .hero-example,.hero[data-hero=space] .hero-email{text-shadow:0 0 3px rgba(0,0,0,.9),0 2px 18px rgba(0,0,0,.85)}'
-       # Oct 17 2:13 PM (owner): title block centered horizontally and vertically over the Enceladus/moons scene (overlap OK).
-       '.hero[data-hero=space]{display:flex!important;flex-direction:column;align-items:center!important;justify-content:center!important}'
-       '.hero[data-hero=space] .hero-content{margin:auto!important;padding-top:56px;padding-bottom:3.5rem;position:relative;z-index:2}'
-       '@media (min-width:1140px){.hero[data-hero=space] .hero-content{padding-top:92px;padding-bottom:2rem}}'
-       '.hero[data-hero=space] .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center}'
+       # Oct 17 2:13 PM (owner): title block centered horizontally and vertically over the hero scene (overlap OK).
+       # Oct 17 6:15 PM (owner: 'so close... move it up half'): APPROVED HERO POSITION. One shared value, HERO_OFFSET (top of
+       # this file) -> CSS var --hero-offset on .hero[data-hero], used by EVERY theme (space, earth, any future one), so
+       # swapping backgrounds never moves the title. Base = flex-centered block with nav-room padding; the offset lifts it.
+       '.hero[data-hero]{--hero-offset:' + HERO_OFFSET + ';display:flex!important;flex-direction:column;align-items:center!important;justify-content:center!important}'
+       '.hero[data-hero] .hero-content{margin:auto!important;padding-top:calc(56px - var(--hero-offset));padding-bottom:calc(3.5rem + var(--hero-offset));position:relative;z-index:2}'
+       '@media (min-width:1140px){.hero[data-hero] .hero-content{padding-top:calc(92px - var(--hero-offset));padding-bottom:calc(2rem + var(--hero-offset))}}'
+       '.hero[data-hero] .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center}'
        # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
        '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')

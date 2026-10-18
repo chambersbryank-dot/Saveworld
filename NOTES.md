@@ -688,3 +688,11 @@ Fix: build-home-extras.py now removes any unmarked copy of the video and puts it
 
 ## 2026-10-17 Homepage hero title centered
 build-hero-themes.py: in the space hero the title block (slogan, title, line, buttons) is centered horizontally and vertically over the Enceladus/moons scene, with the buttons centered too. It keeps the existing scrim and text-shadow. CSS v=20261017d.
+
+## 2026-10-17 6:15 PM HST Approved hero position (homepage title nudged up)
+Owner: "So close. If you went 4 down, then move equal two up" (title block sat a bit low on the space hero).
+- Measured before (live, v=20261017d, ?hero=space): the visible title block (kicker → buttons) sat 26.8 px below true center at Mac 1440x900 and iPad landscape 1180x820 (≥1140px: padding-top 92px vs bottom 2rem), and 3.2 px above center at iPad portrait 820x1180 and phone 390x844 (56px/3.5rem, symmetric).
+- Change: lifted by half the Mac/iPad-landscape offset, one shared value for all sizes: `HERO_OFFSET = '1.6vh'` → `--hero-offset` = 14.4 px at 1440x900, 13.1 px at 1180x820, 18.9 px at 820x1180, 13.5 px at 390x844. After: 12.4 / 13.7 px below center (Mac / iPad-L), 22.1 / 16.7 px above (iPad-P / phone).
+- **APPROVED HERO POSITION (single source of truth):** `HERO_OFFSET` near the top of `scripts/build-hero-themes.py`, emitted as CSS `--hero-offset` on `.hero[data-hero]` in the HEROTHEME block of index.html (5 langs). The flex centering, nav-room padding (56px / 92px ≥1140px, minus the offset; bottom 3.5rem / 2rem plus the offset), centered buttons and line spacing are now on `.hero[data-hero]` (every theme: space, earth, any future one), no longer space-only, so swapping backgrounds never moves the title. Verified: space and earth give identical title positions at all 4 sizes. Earth theme moved from its old padding-top `22vh + 3.4rem` layout to the shared centered layout.
+- Status: pending owner sign-off on the iPad landscape view; once approved, treat `HERO_OFFSET` as LOCKED (change only if she asks; new themes must not set their own hero-content padding/margins).
+- CSS cache v=20261017e on every page (build-ux.py STYLEV).
