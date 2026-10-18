@@ -89,11 +89,13 @@ def vtt(cues, l):
     t = lambda x: f'{int(x // 3600):02d}:{int(x % 3600 // 60):02d}:{x % 60:06.3f}'
     return 'WEBVTT\n\n' + ''.join(f'{i+1}\n{t(a)} --> {t(b)}\n{c[l]}\n\n' for i, (a, b, c) in enumerate(cues))
 
-def transcript(v, l):
+def transcript(v, l, sr=False):
     x = D['videos'][v]; T = lambda s: s if l == 'en' else UI[s][l]
-    return (f'<!-- TRANSCRIPT:START --><details class="video-transcript"><summary>{T("Transcript")}</summary>'
-            f'<p><strong>{T("What you see:")}</strong> {esc(x["visual"][l])}</p><p><strong>{T("What you hear:")}</strong></p>'
-            + ''.join(f'<p>{esc(c[l])}</p>' for _, _, c in x['cues']) + '</details><!-- TRANSCRIPT:END -->')
+    inner = (f'<p><strong>{T("What you see:")}</strong> {esc(x["visual"][l])}</p><p><strong>{T("What you hear:")}</strong></p>'
+             + ''.join(f'<p>{esc(c[l])}</p>' for _, _, c in x['cues']))
+    if sr:  # Oct 18 (owner): figure marked data-transcript="sr" (About): no visible toggle; transcript stays for screen readers
+        return f'<!-- TRANSCRIPT:START --><div class="video-transcript visually-hidden"><p>{T("Transcript")}</p>{inner}</div><!-- TRANSCRIPT:END -->'
+    return (f'<!-- TRANSCRIPT:START --><details class="video-transcript"><summary>{T("Transcript")}</summary>' + inner + '</details><!-- TRANSCRIPT:END -->')
 
 def videos(s, l, prefix):
     def tr(m):
@@ -112,8 +114,8 @@ def videos(s, l, prefix):
     def add(m):
         v = re.search(r'(?:assets|media\.savingplanets\.com)/videos/([\w-]+?)(?:\.[0-9a-f]{8,16})?\.mp4', m.group(0))
         if not v or 'hero-video' in m.group(0) or v.group(1) not in D['videos']: return m.group(0)
-        return m.group(0) + transcript(v.group(1), l)
-    return re.sub(r'<figure class="sp-video-fig">.*?</figure>', add, s, flags=re.S)
+        return m.group(0) + transcript(v.group(1), l, 'data-transcript="sr"' in m.group(0)[:80])
+    return re.sub(r'<figure class="sp-video-fig"[^>]*>.*?</figure>', add, s, flags=re.S)
 
 def alts(s, desc, l, mem):
     n = 0

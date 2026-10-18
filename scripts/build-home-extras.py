@@ -63,7 +63,9 @@ w, h = MEDIA.dims('savingplanets-about-v4.mp4'); U = MEDIA.vurl('savingplanets-a
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
   f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v4.jpg" width="{w}" height="{h}">'
   f'<source src="{U}" type="video/mp4"><source src="{U7}" type="video/mp4"><a href="{U}">Download the video</a></video>'
-  f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
+  '</figure></section>').replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
+# Oct 18 (owner): About shows just the video: no caption, credit/sources line or Transcript toggle. The SI credit is burned into the
+# video; a11y-pass.py keeps the transcript as visually hidden text (data-transcript="sr") as the accessible text alternative.
 # Oct 17 wow rule: the video goes after the summary strip + 'Saving Planets, Minus the Doom' cards (#solution), not on top.
 s = put(s, 'VIDEO', AD, r'<section class="five-ws" id="solution">.*?</section>')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
@@ -130,6 +132,8 @@ s = put(s, 'PROMO', PROMO, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
 open('index.html', 'w', encoding='utf-8').write(s)
 # Oct 18 (owner request): the same promo at the top of About, directly below the 'From the ocean floor…' strip; About v4 stays further down
 s = open('About.html', encoding='utf-8').read()
-s = put(s, 'PROMO', PROMO.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
+PROMO_ABOUT = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), flags=re.S)
+PROMO_ABOUT = PROMO_ABOUT.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)  # same owner rule as About v4 above
+s = put(s, 'PROMO', PROMO_ABOUT, r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
 open('About.html', 'w', encoding='utf-8').write(s)
 print('SOTW:', e['page'], '| EO active:', len(eo))
