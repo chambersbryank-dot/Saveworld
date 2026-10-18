@@ -1232,16 +1232,7 @@ body.toc-sub .page-hero h1{overflow-wrap:anywhere}
 .sol-photo img{display:block;width:100%;height:auto;border-radius:12px}
 .sol-photo figcaption{font-size:.85rem;opacity:.85;margin-top:.5rem;line-height:1.4}
 .sol-photo figcaption a{display:inline;padding:0;margin:0;min-height:0}
-/* SOL-PHOTO:END *//* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
-html body.sol-page .sol-hero .sol-hero-title{font-size:clamp(1.5rem,3.2vw,2.2rem);margin:0 0 .4rem}
-html .sol-intro{padding-top:1rem}html .sol-intro h1{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
-html .sol-intro .sol-filters{margin:.4rem 0;justify-content:center}
-@media (min-width:700px){html .sol-jump ul{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:thin;padding-bottom:.3rem}html .sol-jump li{flex:0 0 auto}}
-html .sol-hub>h2{margin-top:1rem}
-html body[class] .page-hero[class].sol-hero,html body[class] .page-hero[class].af-hero,html body[class] .page-hero[class].hero-help,html body[class] .page-hero[class].hero-about{min-height:200px!important;padding:calc(var(--nav-height,88px) + .5rem) 1.25rem 1rem!important}
-html body.toc-sub .page-hero.af-hero h1,html body.toc-sub .page-hero.hero-help h1,html body.toc-sub .page-hero.hero-about h1{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:.3rem}
-html body.toc-sub .page-hero.af-hero p.af-hero-credit{margin-top:.3rem}
-/* WOW:END */
+/* SOL-PHOTO:END */
 /* DT:START */
 .dt-bar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem auto;max-width:1200px;padding:.6rem 1rem}
 .dt-bar h2{font-size:1rem;margin:0 .4rem 0 0}.dt-note{flex-basis:100%;font-size:.82rem;opacity:.8;margin:0}
@@ -1477,3 +1468,13 @@ html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:4
 @media (prefers-reduced-motion:reduce){.sp-lb-in{animation:none}}
 @media print{.sp-lb{display:none}}
 /* LANGBANNER:END */
+/* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
+html body.sol-page .sol-hero .sol-hero-title{font-size:clamp(1.5rem,3.2vw,2.2rem);margin:0 0 .4rem}
+html .sol-intro{padding-top:1rem}html .sol-intro h1{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
+html .sol-intro .sol-filters{margin:.4rem 0;justify-content:center}
+@media (min-width:700px){html .sol-jump ul{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:thin;padding-bottom:.3rem}html .sol-jump li{flex:0 0 auto}}
+html .sol-hub>h2{margin-top:1rem}
+html body[class] .page-hero[class].sol-hero,html body[class] .page-hero[class].af-hero,html body[class] .page-hero[class].hero-help,html body[class] .page-hero[class].hero-about{min-height:200px!important;padding:calc(var(--nav-height,88px) + .5rem) 1.25rem 1rem!important}
+html body.toc-sub .page-hero.af-hero h1,html body.toc-sub .page-hero.hero-help h1,html body.toc-sub .page-hero.hero-about h1{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:.3rem}
+html body.toc-sub .page-hero.af-hero p.af-hero-credit{margin-top:.3rem}
+/* WOW:END */

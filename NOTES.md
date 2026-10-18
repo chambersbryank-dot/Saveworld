@@ -681,3 +681,10 @@ Owner request: "Feel free to Cc: our Biological SI Partner at biosipartner@savin
 - Contact.html: right after hello@ in the General Questions card. `scripts/build-biosi-cc.py` (weekly-sync, before i18n-build) writes the EN block + i18n strings, and writes i18n/biosi-cc.json.
 - About.html #cohost "Get in touch": right after media@, written by `scripts/build-cohost.py` (reads i18n/biosi-cc.json).
 - Terms follow the existing ones: fr Partenaire SI Biologique, es Socio SI Biológico, it Partner SI Biologico, ar شريك بيولوجي (with "Biological SI Partner" in brackets). Footers ("Questions? Write to hello@") and other emails are unchanged. No CSS change.
+
+## 2026-10-17 Fix: About video showed twice (caught by SI Partner)
+Root cause: build-wow.py (7e640b2b5) cut the About video `<section>` out of its `<!-- VIDEO:START/END -->` markers and moved it below #solution. On the next sync, build-home-extras.py rebuilt the marked (now empty) block after the hero, so the page had two videos. Each later sync added another copy (the translated pages had 3).
+Fix: build-home-extras.py now removes any unmarked copy of the video and puts its marked VIDEO block right after #solution (summary strip + "Minus the Doom" cards). build-wow.py no longer moves the About video. Re-running is idempotent: exactly 1 `<video>` on About in all 5 languages.
+
+## 2026-10-17 Homepage hero title centered
+build-hero-themes.py: in the space hero the title block (slogan, title, line, buttons) is centered horizontally and vertically over the Enceladus/moons scene, with the buttons centered too. It keeps the existing scrim and text-shadow. CSS v=20261017d.

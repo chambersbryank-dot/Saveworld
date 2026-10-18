@@ -96,6 +96,11 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        # 8:06 PM: the taller plumes rise behind the title: a soft dark scrim + tighter shadow keep the text >= 4.5:1
        '.hero[data-hero=space] .hero-content{background:radial-gradient(closest-side,rgba(0,8,20,.42),rgba(0,8,20,.18) 70%,rgba(0,8,20,0))}'
        '.hero[data-hero=space] .hero-welcome,.hero[data-hero=space] .hero-kicker,.hero[data-hero=space] .hero-example,.hero[data-hero=space] .hero-email{text-shadow:0 0 3px rgba(0,0,0,.9),0 2px 18px rgba(0,0,0,.85)}'
+       # Oct 17 2:13 PM (owner): title block centered horizontally and vertically over the Enceladus/moons scene (overlap OK).
+       '.hero[data-hero=space]{display:flex!important;flex-direction:column;align-items:center!important;justify-content:center!important}'
+       '.hero[data-hero=space] .hero-content{margin:auto!important;padding-top:56px;padding-bottom:3.5rem;position:relative;z-index:2}'
+       '@media (min-width:1140px){.hero[data-hero=space] .hero-content{padding-top:92px;padding-bottom:2rem}}'
+       '.hero[data-hero=space] .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center}'
        # Oct 16 7:36 PM: on phones the Help / Donate pill is ~13rem wide, so the credit keeps a wider gap (it may wrap to 2 lines).
        '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 16rem)}}'
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')

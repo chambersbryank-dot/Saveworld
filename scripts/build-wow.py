@@ -32,14 +32,9 @@ if s.find('<section class="impact" id="solution"') < s.find('<section class="fiv
     i = s.find('<section class="five-ws" id="donate"'); j = s.find('</section>', i) + len('</section>')
     s = s[:j] + '\n' + how.strip() + s[j:]
 n += wr('Ways_to_Help.html', s0, s)
-# About.html
-s0 = s = rd('About.html')
-iv = s.find('<section class="sp-video'); im = s.find('<section class="five-ws" id="solution"')
-if 0 <= iv < im:
-    s, vid = cut(s, r'<section class="sp-video[^"]*" id="video".*?</section>\s*')
-    i = s.find('<section class="five-ws" id="solution"'); j = s.find('</section>', i) + len('</section>')
-    s = s[:j] + '\n' + vid.strip() + s[j:]
-n += wr('About.html', s0, s)
+# About.html: the video placement now lives in build-home-extras.py (VIDEO marker block). The old move here cut the
+# section out of its markers, so each sync re-added it: duplicate videos (fixed Oct 17, caught by SI Partner).
+
 CSS = """/* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
 html body.sol-page .sol-hero .sol-hero-title{font-size:clamp(1.5rem,3.2vw,2.2rem);margin:0 0 .4rem}
 html .sol-intro{padding-top:1rem}html .sol-intro h1{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}

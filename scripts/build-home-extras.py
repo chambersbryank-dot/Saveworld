@@ -55,12 +55,15 @@ AD_CAP = f'A 70-second tour: {_N} real solutions, free lesson plans, the Kids Pl
 s = open('About.html', encoding='utf-8').read()
 s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 s = re.sub(r'<!-- VIDEO2:START -->.*?<!-- VIDEO2:END -->', '', s, flags=re.S)
+# Oct 17 fix (dup video): drop any unmarked copy left by the old build-wow.py move, so exactly one video remains.
+s = re.sub(r'\s*<section class="sp-video sp-video-vertical" id="video".*?</section>', '', s, flags=re.S)
 w, h = MEDIA.dims('savingplanets-about-v3.mp4'); U = MEDIA.vurl('savingplanets-about-v3.mp4'); U7 = MEDIA.vurl('savingplanets-about-v3-720.mp4')
 AD = ('<section class="sp-video sp-video-vertical" id="video" aria-labelledby="video-title"><h2 id="video-title">Watch: What Saving Planets Is About</h2>'
   f'<figure class="sp-video-fig"><video controls playsinline preload="metadata" poster="assets/videos/savingplanets-about-v3.jpg" width="{w}" height="{h}">'
   f'<source src="{U}" type="video/mp4"><source src="{U7}" type="video/mp4"><a href="{U}">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(AD_CAP)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> <span class="photo-credit">Footage: NASA</span></figcaption></figure></section>')
-s = put(s, 'VIDEO', AD, r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')
+# Oct 17 wow rule: the video goes after the summary strip + 'Saving Planets, Minus the Doom' cards (#solution), not on top.
+s = put(s, 'VIDEO', AD, r'<section class="five-ws" id="solution">.*?</section>')
 # (Oct 12) older channel intro removed from About; VIDEO2 block intentionally no longer rebuilt.
 open('About.html', 'w', encoding='utf-8').write(s)
 
