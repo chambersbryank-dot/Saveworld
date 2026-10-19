@@ -90,6 +90,7 @@ python3 scripts/build-lcp.py            # Oct 16: preload the page-hero backgrou
 python3 scripts/r2-cards.py             # Oct 16: again after i18n-build so translated pages keep the card srcset
 python3 scripts/build-af-images.py       # Oct 17: Amazing Facts responsive WebP srcset + lazy (all langs)
 python3 scripts/defer-sitejs.py         # Oct 16: site.js loads with defer (skips pages whose inline scripts call window.sp*)
+python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
 python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async stylesheets (cached per template; run after every head-touching generator)
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
