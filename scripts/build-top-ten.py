@@ -10,7 +10,7 @@ Card visuals: real 2x screenshots of each feature page (2880x1800 PNG masters on
 import json, re, os, html, datetime, sys
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 sys.path.insert(0, 'scripts'); import sp_banner as SPB  # shared animated banner (Oct 18)
-SITE = 'https://www.savingplanets.com/'; PAGE = 'Top_Ten.html'
+SITE = 'https://www.savingplanets.com/'; PAGE = 'Top_Ten.html'; STYLEV0 = '20261018s'
 MF = json.load(open('assets/data/media-manifest.json', encoding='utf-8'))
 SITED = json.load(open('assets/data/solutions.json', encoding='utf-8'))['site']
 N, H = SITED['solutions'], SITED['hubs']
@@ -35,6 +35,12 @@ S = {
    'ar': "أفضل 10 في Saving Planets هذا الأسبوع: {n} حلاً حقيقياً، وخرافة أم حقيقة، والنشرة الأسبوعية، ودروس من الأطفال إلى الدكتوراه، وخريطة العالم، ورومان، ومحور القطبين الجديد.",
    'it': "La top ten della settimana su Saving Planets: {n} soluzioni reali, Mito o realtà, il notiziario, lezioni dai bambini al dottorato, la mappa del mondo, Roman e il nuovo hub Poli.",
    'he': "עשרת המובילים של Saving Planets השבוע: {n} פתרונות אמיתיים, מיתוס מול עובדה, העלון השבועי, שיעורים מילדים ועד דוקטורט, מפת העולם, רומן ומרכז הקטבים החדש."}),
+ 'intro': ("Ten of the best places to start this week, from {n} real, sourced solutions to free lessons and a live space-telescope tracker.", {
+   'fr': "Dix des meilleurs points de départ cette semaine, des {n} solutions réelles et sourcées aux leçons gratuites et au suivi en direct d'un télescope spatial.",
+   'es': "Diez de los mejores puntos de partida esta semana, desde {n} soluciones reales y con fuentes hasta clases gratuitas y el seguimiento en vivo de un telescopio espacial.",
+   'ar': "عشرة من أفضل نقاط البداية هذا الأسبوع، من {n} حلاً حقيقياً موثّق المصادر إلى دروس مجانية ومتتبّع مباشر لتلسكوب فضائي.",
+   'it': "Dieci dei migliori punti di partenza di questa settimana, dalle {n} soluzioni reali e con fonti alle lezioni gratuite e al tracker in diretta di un telescopio spaziale.",
+   'he': "עשר מנקודות הפתיחה הטובות ביותר השבוע, מ-{n} פתרונות אמיתיים ומבוססי מקורות ועד שיעורים חינמיים ומעקב חי אחר טלסקופ חלל."}),
  'shot': ("Screenshot", {'fr': "Capture d'écran", 'es': "Captura de pantalla", 'ar': "لقطة شاشة", 'it': "Schermata", 'he': "צילום מסך"}),
  'nav': ("Top Ten", {'fr': "Top 10", 'es': "Top 10", 'ar': "أفضل 10", 'it': "Top 10", 'he': "עשרת המובילים"}),
  'photo': ("Photo", {'fr': "Photo", 'es': "Foto", 'ar': "صورة", 'it': "Foto", 'he': "תמונה"}),
@@ -133,6 +139,17 @@ F = [
    'he': "המרכז החדש ביותר שלנו: CryoSat, ‏CRISTAL, ‏CIMR, ‏ICESat-2 ו-PREFIRE עוקבים מהחלל אחר יריעות קרח, קרח ים ואזורי הקטבים."}),
   [('Polar.html', ("Explore Polar", {'fr': "Explorer le pôle Polaire", 'es': "Explorar el área Polar", 'ar': "استكشف محور القطبين", 'it': "Esplora l'hub Poli", 'he': "גלו את מרכז הקטבים"}))]),
 ]
+# Oct 18 (owner: "same card style as Solutions"): each card shows a real high-res photo (R2 original + srcset), not a screenshot
+PHOTO = {'solutions': ('images/earth-blue-marble-land-ocean-ice-cloud.jpg', 'NASA Blue Marble'),
+         'myths': ('images/Hawaii_Island_ISS_2024.jpg', 'NASA (ISS072-E-421839, Dec. 28, 2024)'),
+         'brief': ('images/JPSS2_Atlas_V_Launch_Pad.jpg', 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)'),
+         'learn': ('images/GPM_Core_Observatory_GMI.jpg', 'NASA/Goddard (GPM Core Observatory)'),
+         'help': ('images/Loggerhead_Release_MINWR.jpg', 'NASA (2010-5237)'),
+         'languages': ('images/Comet_PANSTARRS_ISS_2026.jpg', 'NASA (ISS074-E-0480485, April 17, 2026)'),
+         'lessons': ('images/Garden_City_Kansas_Landsat.jpg', 'NASA/GSFC/Landsat (Sept. 25, 2000)'),
+         'map': ('images/Great_Barrier_Reef_ISS_2022.jpg', 'NASA (ISS068-E-004262, Sept. 30, 2022)'),
+         'roman': ('images/Roman_Launch_NHQ202608300015.jpg', 'NASA/Joel Kowsky (NHQ202608300015)'),
+         'polar': ('images/Labrador_Sea_Ice_ISS.jpg', 'NASA (ISS070-E-086805, Feb. 3, 2024)')}
 LANG_LINKS = [('EN', SITE), ('FR', SITE + 'fr/'), ('ES', SITE + 'es/'), ('العربية', SITE + 'ar/'), ('IT', SITE + 'it/')]  # public languages only
 ALT = "Screenshot of the {t} page on Saving Planets"
 ALT_T = {'fr': "Capture d'écran de la page {t} sur Saving Planets", 'es': "Captura de pantalla de la página {t} en Saving Planets", 'ar': "لقطة شاشة لصفحة {t} على Saving Planets",
@@ -157,38 +174,39 @@ def strings():
     out.append((f"{S['shot'][0]}: {SI}", {l: f"{S['shot'][1][l]}: " + {'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
                'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner', 'he': 'נוצר על ידי SI ושותף SI ביולוגי'}[l] for l in LANGS}))
     out.append((f"{S['photo'][0]}: {BANNER_CREDIT}", {l: f"{S['photo'][1][l]}: {BANNER_CREDIT}" for l in LANGS}))
+    out += [S['intro']]  # the pause label is already in the TMs (Project Rawane banner)
+    for k, c in sorted(set(PHOTO.values())): out.append((f"{S['photo'][0]}: {c}", {l: f"{S['photo'][1][l]}: {c}" for l in LANGS}))
     return [(fill(en), {l: fill(tr[l]) for l in LANGS}) for en, tr in out]
 def body():
+    """Same components as Solutions.html (owner, Oct 18): sp_banner + solutions.css .sol-banner (Lesson Builder size, centred
+    title), .sol-intro/.sol-bluf one-line intro, and Solutions card markup (card sol-card: photo, credit, title, one short
+    description, link right after the text) in a .card-band.sol-hub .grid."""
     t = fill(S['title'][0])
     ban = SPB.banner(MF[BANNER], "An orbital sunset over the Pacific Ocean, seen from the International Space Station", t, fill(S["sub"][0]),
-                     f'{S["photo"][0]}: {BANNER_CREDIT}', h1_id='tt-h', extra_class='tt-banner')
+                     f'{S["photo"][0]}: {BANNER_CREDIT}', h1_id='tt-h', extra_class='sol-banner tt-banner', pause=True)
     cards = ''
     for i, (fid, href, shot, extra, title, syn, btns) in enumerate(F, 1):
-        tt = fill(title[0]); key = 'images/top-ten/' + shot
-        img = pic(key, ALT.format(t=tt), '(max-width:700px) 92vw, (max-width:1100px) 46vw, 520px')
-        imgw = f'<a class="tt-img" href="{href}" tabindex="-1" aria-hidden="true">{img}</a>' if href else f'<div class="tt-img">{img}</div>'
+        tt = fill(title[0]); key, cred = PHOTO[fid]
+        img = pic(key, tt, '(max-width:560px) 92vw, (max-width:900px) 46vw, 300px')
+        im = (f'<a class="photo-link" href="{href}" tabindex="-1" aria-hidden="true">{img}</a>' if href else img)
         if btns == 'LANGS':
-            bh = '<p class="tt-btns tt-langs">' + ''.join(f'<a class="tt-btn tt-lang" href="{u}" hreflang="{["en","fr","es","ar","it"][k]}" lang="{["en","fr","es","ar","it"][k]}">{esc(lab)}</a>' for k, (lab, u) in enumerate(LANG_LINKS)) + '</p>'
+            more = ' · '.join(f'<a href="{u}" hreflang="{["en","fr","es","ar","it"][k]}" lang="{["en","fr","es","ar","it"][k]}">{esc(lab)}</a>' for k, (lab, u) in enumerate(LANG_LINKS))
         else:
-            bh = '<p class="tt-btns">' + ''.join(f'<a class="tt-btn{" tt-btn2" if k else ""}" href="{h}">{esc(fill(b[0]))}</a>' for k, (h, b) in enumerate(btns)) + '</p>'
-        cred = f'{esc(S["shot"][0])}: {esc(SI)}' + (f' · {esc(extra)}' if extra else '')
-        cards += (f'<article class="tt-card" id="{fid}"><span class="tt-num" aria-hidden="true">{i}</span>{imgw}<div class="tt-body">'
-                  f'<h2>{esc(tt)}</h2><p>{esc(fill(syn[0]))}</p>{bh}<p class="tt-credit">{cred}</p></div></article>')
-    return f'<!-- TOPTEN:START -->{ban}<div class="tt-grid">{cards}</div><!-- TOPTEN:END -->'
+            more = ' · '.join(f'<a href="{h}">{esc(fill(b[0]))}</a>' for h, b in btns)
+        h3 = f'<a href="{href}">{esc(tt)}</a>' if href else esc(tt)
+        cards += (f'<article class="card sol-card tt-card" id="{fid}"><div class="image-container"><span class="tt-num" aria-hidden="true">{i}</span>{im}</div>'
+                  f'<p class="photo-credit">{esc(S["photo"][0])}: {esc(cred)}</p><h3>{h3}</h3>'
+                  f'<p class="sol-desc"><span>{esc(fill(syn[0]))}</span></p><p class="sol-more">{more}</p></article>')
+    return (f'<!-- TOPTEN:START -->{ban}<section class="sol-intro"><p class="sol-bluf">{esc(fill(S["intro"][0]))}</p></section>'
+            f'<section class="card-band sol-hub tt-hub" aria-labelledby="tt-h"><div class="grid">{cards}</div></section><!-- TOPTEN:END -->')
 CSS = ('.top-ten-page main{padding:0}'
- '.tt-credit{font-size:.72rem;opacity:.75;margin:.6rem 0 0}'
- '.tt-grid{max-width:1180px;margin:2.2rem auto 3rem;padding:0 1.25rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem}'
- '.tt-card{position:relative;display:flex;flex-direction:column;background:#0f1b26;border:1px solid rgba(143,211,255,.18);border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.4)}'
- '.tt-img{display:block;aspect-ratio:16/10;overflow:hidden;background:#061019;border-bottom:1px solid rgba(143,211,255,.15)}'
- '.tt-img img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block;transition:transform .35s ease}a.tt-img:hover img{transform:scale(1.025)}'
- '.tt-num{position:absolute;z-index:2;top:.8rem;left:.8rem;min-width:2.4rem;height:2.4rem;padding:0 .5rem;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.15rem;background:#009cde;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.45)}'
- '[dir=rtl] .tt-num{left:auto;right:.8rem}'
- '.tt-body{display:flex;flex-direction:column;flex:1;padding:1.1rem 1.25rem 1.1rem}.tt-body h2{margin:0 0 .45rem;font-size:1.35rem;line-height:1.2}.tt-body>p{margin:0 0 .9rem;line-height:1.5}'
- '.tt-btns{display:flex;flex-wrap:wrap;gap:.55rem;margin:auto 0 0 !important}'
- '.tt-btn{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 1.1rem;border-radius:999px;background:#009cde;color:#fff !important;font-weight:700;text-decoration:none !important}'
- '.tt-btn::after{content:"\\2192";margin-inline-start:.45rem}[dir=rtl] .tt-btn::after{content:"\\2190"}.tt-lang::after,.tt-btn2::after{content:none}'
- '.tt-btn:hover,.tt-btn:focus-visible{background:#0b7fb5}.tt-btn2,.tt-lang{background:transparent;border:1.5px solid #8fd3ff;color:#e8eef5 !important}.tt-btn2:hover,.tt-lang:hover{background:rgba(143,211,255,.15)}'
- '@media (max-width:760px){.tt-grid{grid-template-columns:1fr}}')
+ 'html body.sol-page.top-ten-page .tt-banner .spb-media img{object-position:50% 45%}'
+ 'html body.sol-page.top-ten-page .tt-banner::after{background:linear-gradient(180deg,rgba(2,6,12,.55) 0%,rgba(2,6,12,.25) 45%,rgba(2,6,12,.45) 100%)}'
+ 'body.sol-page .tt-card .image-container{position:relative}body.sol-page .tt-card .image-container img{width:100%;object-fit:cover;display:block}'
+ '.tt-num{position:absolute;z-index:2;top:.55rem;left:.55rem;min-width:2.1rem;height:2.1rem;padding:0 .45rem;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;background:#009cde;color:#fff;box-shadow:0 3px 10px rgba(0,0,0,.45)}'
+ '[dir=rtl] .tt-num{left:auto;right:.55rem}'
+ 'body.sol-page .tt-hub{padding-top:.4rem;padding-bottom:2.5rem}'
+ 'html body.sol-page .tt-hub .grid>.sol-card{height:auto}')  # styles.css .card-band .card{height:100%} re-stretched the cards; flush with the text
 def main():
     shell = rd('Glossary.html')
     head = shell[:shell.index('</head>')]
@@ -202,7 +220,9 @@ def main():
     head = re.sub(r'\n?<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', head)
     head = head.replace('Glossary.html', PAGE)
     b = re.search(r'<body[^>]*>', shell).group(0)
-    b = re.sub(r'class="[^"]*"', 'class="toc-sub top-ten-page"', b, count=1)
+    b = re.sub(r'class="[^"]*"', 'class="toc-sub sol-page top-ten-page"', b, count=1)  # sol-page: reuse solutions.css (banner, intro, cards)
+    solv = re.search(r'solutions\.css\?v=([\w.-]+)', rd('Solutions.html')); solv = solv.group(1) if solv else STYLEV0
+    head = re.sub(r'\n?<link rel="stylesheet" href="solutions\.css[^"]*">', '', head) + f'\n<link rel="stylesheet" href="solutions.css?v={solv}">'
     if 'data-no-newsletter' not in b: b = b.replace('<body', '<body data-no-newsletter', 1)  # owner: no newsletter box on this page
     nav = re.search(r'<a class="skip-link".*?</nav>', shell, re.S).group(0)
     nav = re.sub(r'(<li class="lang-switch".*?</li>)', lambda m: m.group(1).replace('Glossary.html', PAGE), nav, flags=re.S)

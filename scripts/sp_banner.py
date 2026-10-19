@@ -4,7 +4,7 @@ Used by build-top-ten.py; any generator can import it (Solutions.html worker: sa
   itself is never recompressed. The browser picks the right size (phones get 800-1280 w, iPad/Mac retina 2560-3840 w).
 - Motion: CSS only, transform/opacity on composited layers (no JS, no video, no layout work): a slow 4K drift/zoom of the
   photo plus a soft light sweep. prefers-reduced-motion: completely static. Fixed min-height, so no layout shift.
-Markup: banner(manifest_entry, alt, h1, sub, credit, h1_id) -> <section class="sp-anim-banner">...</section>
+Markup: banner(manifest_entry, alt, h1, sub, credit, h1_id[, pause=True: pause button for the CSS drift]) -> <section class="sp-anim-banner">...</section>
 Oct 18 (Solutions.html): optional keyword args, all backwards compatible: h1_html / credit_html (pre-escaped markup, e.g. the live
 count in its own span so translations never contain the number), sec_id, and video=[[width, url], ...] (R2 renditions of one
 loop, smallest first). With a video, the photo is its frame-0 poster: no drift/sweep (so the hand-off is seamless), and VIDEO_JS
@@ -40,8 +40,14 @@ VIDEO_JS = ("<script>(function(){document.querySelectorAll('.sp-anim-banner vide
     "if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?p():v.pause()}).observe(b)}else p();"
     "rm&&rm.addEventListener&&rm.addEventListener('change',function(e){if(e.matches){v.pause();b.classList.remove('is-playing')}})})})();</script>")
 
-def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class='', h1_html=None, credit_html=None, sec_id=None, video=None, video_ar=None):
-    cls = 'sp-anim-banner' + (' has-video' if video else '') + ((' ' + extra_class) if extra_class else '')
+# Oct 18 (Top Ten): pause=True on a photo banner (no video) shows the same pause button; it freezes the CSS drift/sweep
+PAUSE_JS = ("<script>(function(){document.querySelectorAll('.sp-anim-banner.has-pause .spb-pause').forEach(function(btn){var b=btn.closest('.sp-anim-banner');"
+    "btn.addEventListener('click',function(){var held=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',held);"
+    "btn.innerHTML=held?'&#9654;':'&#10074;&#10074;';b.classList.toggle('spb-paused',held)})})})();</script>")
+
+def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class='', h1_html=None, credit_html=None, sec_id=None, video=None, video_ar=None, pause=False):
+    pause = pause and not video  # a video banner always has its own pause button
+    cls = 'sp-anim-banner' + (' has-video' if video else '') + (' has-pause' if pause else '') + ((' ' + extra_class) if extra_class else '')
     vid = (f'<video class="spb-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture'
            + (f' data-ar="{video_ar}"' if video_ar else '') + f' data-srcs="{_e(json.dumps(video))}"></video>') if video else ''
     sizes = f'(max-aspect-ratio: 1/1) {round(100 * (video_ar or 2.34) * 0.4)}vh, 100vw' if video else '100vw'
@@ -49,7 +55,7 @@ def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class='', h1_html=None,
             + ('' if video else '<span class="spb-sweep" aria-hidden="true"></span>')
             + f'<div class="spb-text"><h1 id="{h1_id}">{h1_html if h1_html is not None else _e(h1)}</h1>' + (f'<p>{_e(sub)}</p>' if sub else '') + '</div>'
             f'<span class="spb-credit">{credit_html if credit_html is not None else _e(credit)}</span>'
-            + (PAUSE_BTN if video else '') + '</section>' + (VIDEO_JS if video else ''))
+            + (PAUSE_BTN if (video or pause) else '') + '</section>' + (VIDEO_JS if video else '') + (PAUSE_JS if pause else ''))
 
 CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,560px);display:flex;align-items:flex-end;overflow:hidden;background:#02060c;contain:paint}'
  '.sp-anim-banner .spb-media,.sp-anim-banner .spb-media img{position:absolute;inset:0;width:100%;height:100%}'
@@ -76,6 +82,7 @@ CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,
  '.sp-anim-banner.is-playing .spb-pause,.sp-anim-banner .spb-pause[aria-pressed=true]{display:block}'
  '.sp-anim-banner .spb-pause:focus-visible{outline:2px solid #4da3ff;outline-offset:2px}'
  '[dir=rtl] .sp-anim-banner .spb-pause{left:auto;right:.6rem}'
+ '.sp-anim-banner.has-pause .spb-pause{display:block}.sp-anim-banner.spb-paused .spb-media img,.sp-anim-banner.spb-paused .spb-sweep{animation-play-state:paused}'
  '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-video,.sp-anim-banner .spb-pause{display:none !important}}'
  '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-media img,.sp-anim-banner .spb-sweep,.sp-anim-banner h1,.sp-anim-banner .spb-text p{animation:none !important}.sp-anim-banner .spb-sweep{display:none}}')
 

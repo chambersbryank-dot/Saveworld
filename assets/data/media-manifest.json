@@ -2919,5 +2919,16 @@
   "width": 3840,
   "height": 900,
   "duration": 90.0
+ },
+ "images/Roman_Launch_NHQ202608300015.jpg": {
+  "url": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
+  "key": "images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
+  "bytes": 3525478,
+  "sha256": "0857285c339e3669ebca2d9c121fbc3fbdd000c526d178a0c9b95180bd478d1f",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 2194,
+  "srcset": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.7e186169eed7.webp 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.8a1fd22799a2.webp 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.452735ba9b8d.webp 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.0deed5ff27ce.webp 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.b78756c2e341.webp 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.32a4d1d7dfb9.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.9354c9c571b9.avif 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.d2cc4d0b8544.avif 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.bae8c7b502f4.avif 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.82c0dda5bf37.avif 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.0f70b3d79532.avif 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.1b40e05fb683.avif 3840w"
  }
 }
