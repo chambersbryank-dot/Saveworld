@@ -3,7 +3,9 @@
     "Aeolus.html|assets/ATV1_Departure_ISS.jpg",
     "Europa_Clipper.html|assets/Europa_Clipper_Jupiter.jpg",
     "GOES-19.html|assets/GOES19_GOESU_KSC.jpg",
-    "ICESat-2.html|assets/ICESat2_Launch.jpg"
+    "ICESat-2.html|assets/ICESat2_Launch.jpg",
+    "Nancy_Grace_Roman.html|assets/Roman_Launch_FH.jpg",
+    "Saharan_Dust_Amazon.html|assets/Saharan_Dust_Amazon.jpg"
   ],
   "issues": {
     "2026-10-11": {
@@ -23,10 +25,29 @@
       ],
       "solutions": 67,
       "launches": 3
+    },
+    "2026-10-19": {
+      "joke": 2,
+      "facts": [
+        "Nancy_Grace_Roman.html|assets/Roman_Launch_FH.jpg",
+        "Saharan_Dust_Amazon.html|assets/Saharan_Dust_Amazon.jpg"
+      ],
+      "solutions": 115,
+      "launches": 9,
+      "stats": {
+        "solutions": 199,
+        "hubs": 11,
+        "languages": 5,
+        "upcomingMissions": 24,
+        "facts": 26,
+        "launchesThisWeek": 9,
+        "artemisUpcoming": 3
+      }
     }
   },
   "usedJokes": [
     0,
-    1
+    1,
+    2
   ]
 }

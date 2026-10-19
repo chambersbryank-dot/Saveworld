@@ -23,7 +23,7 @@ const STATE = path.join(ROOT, 'scripts', 'newsletter-state.json');
 
 // Oct 15: World Solutions Map section (EN description verbatim from the owner)
 const MAPT = {
-  en: { h: 'World Solutions Map', d: 'An interactive world map of every saving planet solution. Green pins are working now. Blue pins are coming soon. Rocket pins show upcoming launches.', b: 'Open the World Map' },
+  en: { h: 'World Solutions Map', d: 'An interactive world map of every Saving Planets solution. Green pins are working now. Blue pins are coming soon. Rocket pins show upcoming launches.', b: 'Open the World Map' },
   fr: { h: 'Carte mondiale des solutions', d: 'Une carte du monde interactive de toutes les solutions Saving Planets. Les repères verts fonctionnent déjà. Les repères bleus arrivent bientôt. Les repères fusée indiquent les prochains lancements.', b: 'Ouvrir la carte du monde' },
   es: { h: 'Mapa mundial de soluciones', d: 'Un mapa del mundo interactivo con todas las soluciones de Saving Planets. Los marcadores verdes ya funcionan. Los marcadores azules llegan pronto. Los marcadores de cohete muestran los próximos lanzamientos.', b: 'Abrir el mapa mundial' },
   ar: { h: 'خريطة الحلول العالمية', d: 'خريطة عالمية تفاعلية لكل حلول Saving Planets. الدبابيس الخضراء تعمل الآن. الدبابيس الزرقاء قادمة قريبًا. دبابيس الصواريخ تُظهر عمليات الإطلاق القادمة.', b: 'افتح خريطة العالم' },
@@ -92,13 +92,20 @@ function newSolutions() {
   }
   return out.sort((a, b) => a.url.localeCompare(b.url));
 }
+// Fact cards now use responsive WebP (assets/resp/NAME-1200.webp); emails use the original JPG/PNG when it exists
+// (Outlook desktop can't show WebP) and the fact key stays the same as in earlier issues, so used facts aren't repeated.
+function origImg(src) {
+  const m = src && src.match(/^((?:\.\.\/)*)assets\/resp\/(.+?)-\d+\.webp$/); if (!m) return src;
+  for (const ext of ['jpg', 'jpeg', 'png']) if (fs.existsSync(path.join(ROOT, 'assets', m[2] + '.' + ext))) return m[1] + 'assets/' + m[2] + '.' + ext;
+  return src;
+}
 function factCards(lang) {
   const html = rd(pageFile(lang, 'Amazing_Facts.html')) || rd('Amazing_Facts.html');
-  return (html.match(/<div class="w-card" data-fact-origin[\s\S]*?<\/div>/g) || []).map(c => {
+  return (html.match(/<div class="w-card"[^>]*data-fact-origin[\s\S]*?<\/div>/g) || []).map(c => {
     const g = re => (c.match(re) || [])[1];
-    const img = g(/<img[^>]*src="([^"]+)"/), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => m[1].replace(/<[^>]+>/g, ''));
-    return { key: g(/data-fact-page="([^"]+)"/) + '|' + (g(/<img[^>]*src="([^"]+)"/) || ''), h: dec(g(/<h3>([\s\S]*?)<\/h3>/) || ''), img: img && SITE + img.replace(/^\.\.\//, ''), alt: dec(g(/alt="([^"]*)"/) || ''), text: dec(ps[0] || ''),
-      page: g(/data-fact-page="([^"]+)"/), srcUrl: g(/Source: <a href="([^"]+)"/), srcLabel: dec((c.match(/(?:Source|المصدر|Fuente)[^<]*<a [^>]*>([^<]+)</) || [])[1] || '') };
+    const img = origImg(g(/<img[^>]*src="([^"]+)"/)), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => m[1].replace(/<[^>]+>/g, ''));
+    return { key: g(/data-fact-page="([^"]+)"/) + '|' + (img || ''), h: dec(g(/<h3>([\s\S]*?)<\/h3>/) || ''), img: img && SITE + img.replace(/^\.\.\//, ''), alt: dec(g(/alt="([^"]*)"/) || ''), text: dec(ps[0] || ''),
+      page: g(/data-fact-page="([^"]+)"/), srcUrl: g(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a href="([^"]+)"/), srcLabel: dec((c.match(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a [^>]*>([^<]+)</) || [])[1] || '') };
   });
 }
 // Pick 2 facts never used in an earlier issue (keys from the EN page); reuse this issue's picks on re-runs.
@@ -163,8 +170,14 @@ function whatsNew(state) {
     const html = rd(f); if (!html || /"@type": ?"Article"/.test(html) || /http-equiv="refresh"/i.test(html) || /name="robots" content="noindex/i.test(html)) continue;
     out.push({ page: f });
   }
-  const upd = ((readJson('scripts/newsletter-updates.json') || {}).entries || []).filter(e => e.date > (prev || '0000-00-00') && e.date <= iso);
+  // Skip auto-synced commit entries that never got translations (developer wording, not reader-facing) and entries marked newsletter:false.
+  const upd = ((readJson('scripts/newsletter-updates.json') || {}).entries || []).filter(e => e.date > (prev || '0000-00-00') && e.date <= iso && e.newsletter !== false && !(e.commit && !(e.what && e.what.fr)));
   return { pages: out, updates: upd };
+}
+// An older update's closing "Saving Planets now features N solutions" sentence would contradict By the Numbers; drop it when N is not the current count.
+function dropStaleCount(text, n) {
+  if (!n) return text;
+  return text.replace(/(^|[.:]\s+)([^.:]*Saving Planets[^.]*?(\d[\d,]*)[^.]*\.)\s*$/, (m0, pre, sent, num) => +num.replace(/,/g, '') === n ? m0 : pre.replace(/\s+$/, '').replace(/:$/, '.') ).trim();
 }
 function siteStats(launchList) {
   const s = (readJson('assets/data/solutions.json') || {}).site || {}, art = readJson('assets/data/artemis.json');
@@ -232,7 +245,7 @@ function build(lang, sols, factKeys, launchList, joke, corr = [], extra = {}) {
   // v3: What's New
   const nf = new Intl.NumberFormat(T[lang].dateLoc);
   const wn = extra.wn || { pages: [], updates: [] };
-  const wnHtml = (wn.pages.length || wn.updates.length) ? `<p style="margin:0 0 10px;font-size:14px">${esc(t.wnIntro)}</p>` + wn.pages.map(x => { const m = meta(rd(pageFile(lang, x.page)) || rd(x.page)); return `<p style="margin:0 0 12px">${a(P + x.page, m.title, true)}<br><span style="font-size:14px">${esc(m.desc.split(/\s*(?:Last updated|Dernière mise à jour|Última actualización|آخر تحديث|©)/)[0])}</span></p>`; }).join('') + wn.updates.map(u => `<p style="margin:0 0 12px">${esc((u.what && (u.what[lang] || u.what.en)) || '')}${u.page ? ' ' + a(P + u.page, t.read + ' →', true) : ''}</p>`).join('') : '';
+  const wnHtml = (wn.pages.length || wn.updates.length) ? `<p style="margin:0 0 10px;font-size:14px">${esc(t.wnIntro)}</p>` + wn.pages.map(x => { const m = meta(rd(pageFile(lang, x.page)) || rd(x.page)); return `<p style="margin:0 0 12px">${a(P + x.page, m.title, true)}<br><span style="font-size:14px">${esc(m.desc.split(/\s*(?:Last updated|Dernière mise à jour|Última actualización|آخر تحديث|©)/)[0])}</span></p>`; }).join('') + wn.updates.map(u => `<p style="margin:0 0 12px">${esc(dropStaleCount((u.what && (u.what[lang] || u.what.en)) || '', (extra.stats || {}).solutions))}${u.page ? ' ' + a(P + u.page, t.read + ' →', true) : ''}</p>`).join('') : '';
   // v3: By the Numbers
   const st = extra.stats || {}, ps = extra.prevStats || null;
   const rows = [['solutions', t.nSol], ['hubs', t.nHub], ['languages', t.nLang], ['facts', t.nFacts], ['upcomingMissions', t.nUp], ['launchesThisWeek', t.nLaunch]].filter(r => st[r[0]] != null);
