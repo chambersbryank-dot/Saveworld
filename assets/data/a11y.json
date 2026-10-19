@@ -950,6 +950,437 @@
      }
     ]
    ]
+  },
+  "savingplanets-promo-v4-final-1080x1920": {
+   "pinned": "Cues are the narration as recorded (verified against the audio and the burned-in captions Oct 18, 2026); never rewritten to the live solution count.",
+   "burned": "Captions are burned into the picture, so the track is offered but not on by default.",
+   "visual": {
+    "en": "Earth from space (NASA Blue Marble and Black Marble); the new homepage with Saturn and the ice plumes of Enceladus (NASA/JPL-Caltech/Space Science Institute); real screen recordings of the Saving Planets site: the Five W's pages of Parker Solar Probe, The SeaCleaners and WeForest, a counter showing 191 solutions, 21 myths, 26 facts, 5 languages and 1,000+ pages, search, a translated page, the Roman telescope, Orbit Lab and launch tracker pages, the interactive World Map with pins lighting up hub by hub, and Myth vs Fact cards (sources: NOAA, NASA, NASA DART); and Earth with SavingPlanets.com.",
+    "fr": "La Terre vue de l'espace (NASA Blue Marble et Black Marble) ; la nouvelle page d'accueil avec Saturne et les panaches de glace d'Encelade (NASA/JPL-Caltech/Space Science Institute) ; de vraies captures d'écran du site Saving Planets : les pages des cinq W de Parker Solar Probe, The SeaCleaners et WeForest, un compteur affichant 191 solutions, 21 mythes, 26 faits, 5 langues et plus de 1 000 pages, la recherche, une page traduite, les pages du télescope Roman, de l'Orbit Lab et du suivi des lancements, la carte du monde interactive dont les repères s'allument pôle par pôle, et les cartes Mythe ou réalité (sources : NOAA, NASA, NASA DART) ; et la Terre avec SavingPlanets.com.",
+    "es": "La Tierra desde el espacio (NASA Blue Marble y Black Marble); la nueva página de inicio con Saturno y las columnas de hielo de Encélado (NASA/JPL-Caltech/Space Science Institute); grabaciones reales de pantalla del sitio Saving Planets: las páginas de las cinco W de Parker Solar Probe, The SeaCleaners y WeForest, un contador con 191 soluciones, 21 mitos, 26 datos, 5 idiomas y más de 1.000 páginas, la búsqueda, una página traducida, las páginas del telescopio Roman, el Orbit Lab y el rastreador de lanzamientos, el mapa mundial interactivo con marcadores que se iluminan área por área, y las tarjetas de Mito o realidad (fuentes: NOAA, NASA, NASA DART); y la Tierra con SavingPlanets.com.",
+    "ar": "الأرض من الفضاء (NASA Blue Marble وBlack Marble)؛ الصفحة الرئيسية الجديدة مع زحل وأعمدة الجليد من إنسيلادوس (NASA/JPL-Caltech/Space Science Institute)؛ تسجيلات شاشة حقيقية لموقع Saving Planets: صفحات الأسئلة الخمسة لمسبار باركر الشمسي وThe SeaCleaners وWeForest، وعدّاد يعرض 191 حلاً و21 خرافة و26 حقيقة و5 لغات وأكثر من 1000 صفحة، والبحث، وصفحة مترجمة، وصفحات تلسكوب رومان ومختبر المدارات ومتتبّع الإطلاقات، وخريطة العالم التفاعلية بعلاماتها التي تضيء محوراً تلو الآخر، وبطاقات خرافة أم حقيقة (المصادر: NOAA وناسا وNASA DART)؛ والأرض مع SavingPlanets.com.",
+    "it": "La Terra dallo spazio (NASA Blue Marble e Black Marble); la nuova homepage con Saturno e i pennacchi di ghiaccio di Encelado (NASA/JPL-Caltech/Space Science Institute); vere registrazioni dello schermo del sito Saving Planets: le pagine delle cinque W di Parker Solar Probe, The SeaCleaners e WeForest, un contatore con 191 soluzioni, 21 miti, 26 fatti, 5 lingue e oltre 1.000 pagine, la ricerca, una pagina tradotta, le pagine del telescopio Roman, dell'Orbit Lab e del tracker dei lanci, la mappa del mondo interattiva con i segnaposto che si accendono hub per hub, e le schede Mito o realtà (fonti: NOAA, NASA, NASA DART); e la Terra con SavingPlanets.com."
+   },
+   "cues": [
+    [
+     0.24,
+     3.27,
+     {
+      "en": "Hi, I'm Crimson. And I'm Archer.",
+      "fr": "Salut, je suis Crimson. Et moi, Archer.",
+      "es": "Hola, soy Crimson. Y yo soy Archer.",
+      "ar": "مرحباً، أنا كريمسون. وأنا آرتشر.",
+      "it": "Ciao, sono Crimson. E io sono Archer."
+     }
+    ],
+    [
+     3.68,
+     5.9,
+     {
+      "en": "Big updates just dropped at SavingPlanets.com!",
+      "fr": "Grosses nouveautés sur SavingPlanets.com !",
+      "es": "¡Grandes novedades en SavingPlanets.com!",
+      "ar": "تحديثات كبيرة وصلت للتو إلى SavingPlanets.com!",
+      "it": "Grandi novità su SavingPlanets.com!"
+     }
+    ],
+    [
+     6.86,
+     10.2,
+     {
+      "en": "I'll show you our new homepage and our newest solutions.",
+      "fr": "Je vous montre notre nouvelle page d'accueil et nos solutions les plus récentes.",
+      "es": "Te mostraré nuestra nueva página de inicio y nuestras soluciones más recientes.",
+      "ar": "سأريكم صفحتنا الرئيسية الجديدة وأحدث حلولنا.",
+      "it": "Vi mostro la nostra nuova homepage e le nostre soluzioni più recenti."
+     }
+    ],
+    [
+     10.58,
+     14.4,
+     {
+      "en": "Then Archer takes you through the numbers, space, and Myth vs Fact.",
+      "fr": "Ensuite, Archer vous présente les chiffres, l'espace et Mythe ou réalité.",
+      "es": "Luego Archer te guía por las cifras, el espacio y Mito o realidad.",
+      "ar": "ثم يأخذكم آرتشر في جولة على الأرقام والفضاء وخرافة أم حقيقة.",
+      "it": "Poi Archer vi guida tra i numeri, lo spazio e Mito o realtà."
+     }
+    ],
+    [
+     14.76,
+     17.9,
+     {
+      "en": "Before we dive in, here's the person who started it all.",
+      "fr": "Avant de commencer, voici la personne à l'origine de tout.",
+      "es": "Antes de empezar, aquí está la persona que lo comenzó todo.",
+      "ar": "قبل أن نبدأ، إليكم الشخص الذي بدأ كل شيء.",
+      "it": "Prima di iniziare, ecco la persona che ha dato il via a tutto."
+     }
+    ],
+    [
+     18.34,
+     25.42,
+     {
+      "en": "Hi, I'm the founder of Saving Planets. I got tired of hearing it's too late for our planet,",
+      "fr": "Bonjour, je suis le fondateur de Saving Planets. J'en avais assez d'entendre qu'il est trop tard pour notre planète,",
+      "es": "Hola, soy el fundador de Saving Planets. Me cansé de oír que es demasiado tarde para nuestro planeta,",
+      "ar": "مرحباً، أنا مؤسس Saving Planets. سئمت من سماع أن الأوان قد فات على كوكبنا،",
+      "it": "Ciao, sono il fondatore di Saving Planets. Ero stanco di sentir dire che è troppo tardi per il nostro pianeta,"
+     }
+    ],
+    [
+     26.38,
+     29.6,
+     {
+      "en": "so we went looking for people proving it isn't.",
+      "fr": "alors nous sommes partis à la recherche de ceux qui prouvent le contraire.",
+      "es": "así que salimos a buscar a quienes demuestran que no lo es.",
+      "ar": "فذهبنا نبحث عن أناس يثبتون أنه لم يفت.",
+      "it": "così siamo andati a cercare chi dimostra che non lo è."
+     }
+    ],
+    [
+     30.04,
+     32.9,
+     {
+      "en": "Real solutions, from every corner of the world.",
+      "fr": "De vraies solutions, venues des quatre coins du monde.",
+      "es": "Soluciones reales, de todos los rincones del mundo.",
+      "ar": "حلول حقيقية من كل أنحاء العالم.",
+      "it": "Soluzioni reali, da ogni angolo del mondo."
+     }
+    ],
+    [
+     33.06,
+     34.8,
+     {
+      "en": "Let's start with the homepage.",
+      "fr": "Commençons par la page d'accueil.",
+      "es": "Empecemos por la página de inicio.",
+      "ar": "لنبدأ بالصفحة الرئيسية.",
+      "it": "Cominciamo dalla homepage."
+     }
+    ],
+    [
+     35.3,
+     39.9,
+     {
+      "en": "It opens on Saturn, with Enceladus shooting plumes of ice toward the page title.",
+      "fr": "Elle s'ouvre sur Saturne, avec Encelade qui projette des panaches de glace vers le titre de la page.",
+      "es": "Se abre con Saturno y Encélado lanzando columnas de hielo hacia el título de la página.",
+      "ar": "تُفتح على زحل، مع إنسيلادوس وهو يقذف أعمدة من الجليد نحو عنوان الصفحة.",
+      "it": "Si apre su Saturno, con Encelado che lancia pennacchi di ghiaccio verso il titolo della pagina."
+     }
+    ],
+    [
+     40.46,
+     41.5,
+     {
+      "en": "And look at this.",
+      "fr": "Et regardez ça.",
+      "es": "Y mira esto.",
+      "ar": "وانظروا إلى هذا.",
+      "it": "E guardate qui."
+     }
+    ],
+    [
+     41.72,
+     50.5,
+     {
+      "en": "We now feature 191 real solutions, with new ones like Parker Solar Probe, The SeaCleaners, and WeForest.",
+      "fr": "Nous présentons désormais 191 solutions réelles, dont de nouvelles comme Parker Solar Probe, The SeaCleaners et WeForest.",
+      "es": "Ahora presentamos 191 soluciones reales, con nuevas como Parker Solar Probe, The SeaCleaners y WeForest.",
+      "ar": "نعرض الآن 191 حلاً حقيقياً، منها حلول جديدة مثل مسبار باركر الشمسي وThe SeaCleaners وWeForest.",
+      "it": "Ora presentiamo 191 soluzioni reali, con nuove come Parker Solar Probe, The SeaCleaners e WeForest."
+     }
+    ],
+    [
+     51.14,
+     52.3,
+     {
+      "en": "Over to you, Archer.",
+      "fr": "À toi, Archer.",
+      "es": "Te toca, Archer.",
+      "ar": "الكلمة لك يا آرتشر.",
+      "it": "A te, Archer."
+     }
+    ],
+    [
+     52.38,
+     55.3,
+     {
+      "en": "Thanks, Crimson. Folks, by the numbers:",
+      "fr": "Merci, Crimson. Les amis, en chiffres :",
+      "es": "Gracias, Crimson. Amigos, en cifras:",
+      "ar": "شكراً يا كريمسون. أيها الأصدقاء، إليكم الأرقام:",
+      "it": "Grazie, Crimson. Amici, in numeri:"
+     }
+    ],
+    [
+     55.68,
+     61.6,
+     {
+      "en": "191 solutions, 21 myths busted, 26 amazing facts,",
+      "fr": "191 solutions, 21 mythes démentis, 26 faits étonnants,",
+      "es": "191 soluciones, 21 mitos desmentidos, 26 datos asombrosos,",
+      "ar": "191 حلاً، و21 خرافة مدحوضة، و26 حقيقة مذهلة،",
+      "it": "191 soluzioni, 21 miti sfatati, 26 fatti sorprendenti,"
+     }
+    ],
+    [
+     62.46,
+     65.9,
+     {
+      "en": "five languages, and over 1,000 pages to explore.",
+      "fr": "cinq langues et plus de 1 000 pages à explorer.",
+      "es": "cinco idiomas y más de 1.000 páginas para explorar.",
+      "ar": "وخمس لغات، وأكثر من 1000 صفحة للاستكشاف.",
+      "it": "cinque lingue e oltre 1.000 pagine da esplorare."
+     }
+    ],
+    [
+     66.54,
+     68.7,
+     {
+      "en": "Our smarter search matches by meaning, too.",
+      "fr": "Notre recherche plus intelligente trouve aussi par le sens.",
+      "es": "Nuestra búsqueda más inteligente también encuentra por significado.",
+      "ar": "وبحثنا الأذكى يطابق حسب المعنى أيضاً.",
+      "it": "La nostra ricerca più intelligente trova anche per significato."
+     }
+    ],
+    [
+     69.24,
+     73.6,
+     {
+      "en": "And every page reads in English, French, Spanish, Arabic, and Italian.",
+      "fr": "Et chaque page se lit en anglais, français, espagnol, arabe et italien.",
+      "es": "Y cada página se lee en inglés, francés, español, árabe e italiano.",
+      "ar": "وكل صفحة تُقرأ بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية.",
+      "it": "E ogni pagina si legge in inglese, francese, spagnolo, arabo e italiano."
+     }
+    ],
+    [
+     74.06,
+     76.9,
+     {
+      "en": "Students of physics and aerospace, this one's for you.",
+      "fr": "Étudiants en physique et en aérospatiale, ceci est pour vous.",
+      "es": "Estudiantes de física y aeroespacial, esto es para ustedes.",
+      "ar": "طلاب الفيزياء وهندسة الطيران والفضاء، هذا لكم.",
+      "it": "Studenti di fisica e aerospazio, questo è per voi."
+     }
+    ],
+    [
+     77.64,
+     80.8,
+     {
+      "en": "Learn why the Roman telescope heads to Lagrange point 2,",
+      "fr": "Découvrez pourquoi le télescope Roman se rend au point de Lagrange 2,",
+      "es": "Descubre por qué el telescopio Roman va al punto de Lagrange 2,",
+      "ar": "تعرّفوا لماذا يتجه تلسكوب رومان إلى نقطة لاغرانج 2،",
+      "it": "Scoprite perché il telescopio Roman va verso il punto di Lagrange 2,"
+     }
+    ],
+    [
+     80.9,
+     86.3,
+     {
+      "en": "play in our Orbit Lab, and follow upcoming launches on the live tracker.",
+      "fr": "jouez dans notre Orbit Lab et suivez les prochains lancements sur le suivi en direct.",
+      "es": "juega en nuestro Orbit Lab y sigue los próximos lanzamientos en el rastreador en vivo.",
+      "ar": "والعبوا في مختبر المدارات، وتابعوا عمليات الإطلاق القادمة على المتتبّع المباشر.",
+      "it": "giocate nel nostro Orbit Lab e seguite i prossimi lanci sul tracker in diretta."
+     }
+    ],
+    [
+     87.08,
+     88.0,
+     {
+      "en": "Back to you, Crimson.",
+      "fr": "À toi, Crimson.",
+      "es": "Te devuelvo la palabra, Crimson.",
+      "ar": "أعود إليك يا كريمسون.",
+      "it": "A te, Crimson."
+     }
+    ],
+    [
+     88.12,
+     90.9,
+     {
+      "en": "Thanks, Archer. Now here's my favorite.",
+      "fr": "Merci, Archer. Et voici mon préféré.",
+      "es": "Gracias, Archer. Ahora, mi favorito.",
+      "ar": "شكراً يا آرتشر. والآن إليكم المفضّل لديّ.",
+      "it": "Grazie, Archer. Ed ecco il mio preferito."
+     }
+    ],
+    [
+     91.14,
+     97.0,
+     {
+      "en": "Explore every solution on our world map, pick a hub, and watch its solutions light up around the world.",
+      "fr": "Explorez chaque solution sur notre carte du monde, choisissez un pôle et regardez ses solutions s'allumer partout dans le monde.",
+      "es": "Explora cada solución en nuestro mapa mundial, elige un área y mira cómo sus soluciones se iluminan por todo el mundo.",
+      "ar": "استكشفوا كل حل على خريطة العالم، واختاروا محوراً، وشاهدوا حلوله تضيء حول العالم.",
+      "it": "Esplorate ogni soluzione sulla nostra mappa del mondo, scegliete un hub e guardate le sue soluzioni illuminarsi in tutto il mondo."
+     }
+    ],
+    [
+     97.64,
+     100.6,
+     {
+      "en": "Yeah, that map still gives me the chills.",
+      "fr": "Oui, cette carte me donne encore des frissons.",
+      "es": "Sí, ese mapa todavía me pone la piel de gallina.",
+      "ar": "نعم، تلك الخريطة ما زالت تقشعرّ لها أبداني.",
+      "it": "Sì, quella mappa mi fa ancora venire i brividi."
+     }
+    ],
+    [
+     102.38,
+     103.6,
+     {
+      "en": "Thanks, Crimson.",
+      "fr": "Merci, Crimson.",
+      "es": "Gracias, Crimson.",
+      "ar": "شكراً يا كريمسون.",
+      "it": "Grazie, Crimson."
+     }
+    ],
+    [
+     104.16,
+     106.8,
+     {
+      "en": "We take on doom myths with real facts.",
+      "fr": "Nous démontons les mythes catastrophistes avec de vrais faits.",
+      "es": "Enfrentamos los mitos catastrofistas con datos reales.",
+      "ar": "نتصدّى لخرافات التشاؤم بحقائق حقيقية.",
+      "it": "Affrontiamo i miti catastrofisti con fatti reali."
+     }
+    ],
+    [
+     107.3,
+     109.2,
+     {
+      "en": "Myth: the ozone hole can't be fixed.",
+      "fr": "Mythe : le trou dans la couche d'ozone ne peut pas être réparé.",
+      "es": "Mito: el agujero de la capa de ozono no tiene arreglo.",
+      "ar": "خرافة: ثقب الأوزون لا يمكن إصلاحه.",
+      "it": "Mito: il buco dell'ozono non si può riparare."
+     }
+    ],
+    [
+     109.32,
+     112.5,
+     {
+      "en": "Fact: it's healing, say NOAA and NASA.",
+      "fr": "Réalité : il se résorbe, selon la NOAA et la NASA.",
+      "es": "Realidad: se está recuperando, según la NOAA y la NASA.",
+      "ar": "حقيقة: إنه يتعافى، بحسب NOAA وناسا.",
+      "it": "Realtà: si sta richiudendo, dicono NOAA e NASA."
+     }
+    ],
+    [
+     116.03,
+     118.9,
+     {
+      "en": "Myth: if an asteroid were coming, we couldn't do a thing.",
+      "fr": "Mythe : si un astéroïde arrivait, nous ne pourrions rien faire.",
+      "es": "Mito: si viniera un asteroide, no podríamos hacer nada.",
+      "ar": "خرافة: لو كان كويكب قادماً، لما استطعنا فعل شيء.",
+      "it": "Mito: se arrivasse un asteroide, non potremmo fare nulla."
+     }
+    ],
+    [
+     119.49,
+     124.3,
+     {
+      "en": "Fact: humanity has already moved one, with NASA's DART spacecraft.",
+      "fr": "Réalité : l'humanité en a déjà dévié un, avec la sonde DART de la NASA.",
+      "es": "Realidad: la humanidad ya desvió uno, con la nave DART de la NASA.",
+      "ar": "حقيقة: لقد حرّكت البشرية كويكباً بالفعل، بمركبة DART التابعة لناسا.",
+      "it": "Realtà: l'umanità ne ha già spostato uno, con la sonda DART della NASA."
+     }
+    ],
+    [
+     126.38,
+     129.0,
+     {
+      "en": "And this Halloween, something spooky is coming.",
+      "fr": "Et pour Halloween, quelque chose d'effrayant se prépare.",
+      "es": "Y este Halloween, llega algo espeluznante.",
+      "ar": "وفي عيد الهالوين هذا، شيء مخيف قادم.",
+      "it": "E per questo Halloween, sta arrivando qualcosa di spaventoso."
+     }
+    ],
+    [
+     129.74,
+     133.9,
+     {
+      "en": "Folks, every solution here helps people and nature together.",
+      "fr": "Les amis, chaque solution ici aide à la fois les gens et la nature.",
+      "es": "Amigos, cada solución aquí ayuda a las personas y a la naturaleza a la vez.",
+      "ar": "أيها الأصدقاء، كل حل هنا يساعد الناس والطبيعة معاً.",
+      "it": "Amici, ogni soluzione qui aiuta insieme le persone e la natura."
+     }
+    ],
+    [
+     135.3,
+     137.4,
+     {
+      "en": "Find one you love, and share it.",
+      "fr": "Trouvez-en une que vous aimez, et partagez-la.",
+      "es": "Encuentra una que te encante y compártela.",
+      "ar": "اعثروا على حل تحبونه وشاركوه.",
+      "it": "Trovatene una che amate e condividetela."
+     }
+    ],
+    [
+     137.82,
+     139.9,
+     {
+      "en": "That's how we save a planet.",
+      "fr": "C'est comme ça qu'on sauve une planète.",
+      "es": "Así es como salvamos un planeta.",
+      "ar": "هكذا ننقذ كوكباً.",
+      "it": "È così che si salva un pianeta."
+     }
+    ],
+    [
+     140.74,
+     142.7,
+     {
+      "en": "Thanks for joining us. I'm Archer,",
+      "fr": "Merci d'être avec nous. Je suis Archer,",
+      "es": "Gracias por acompañarnos. Soy Archer,",
+      "ar": "شكراً لانضمامكم إلينا. أنا آرتشر،",
+      "it": "Grazie per essere stati con noi. Sono Archer,"
+     }
+    ],
+    [
+     142.78,
+     144.3,
+     {
+      "en": "and I'm Crimson.",
+      "fr": "et moi, Crimson.",
+      "es": "y yo soy Crimson.",
+      "ar": "وأنا كريمسون.",
+      "it": "e io sono Crimson."
+     }
+    ],
+    [
+     144.92,
+     146.7,
+     {
+      "en": "See you at SavingPlanets.com!",
+      "fr": "Rendez-vous sur SavingPlanets.com !",
+      "es": "¡Nos vemos en SavingPlanets.com!",
+      "ar": "نراكم على SavingPlanets.com!",
+      "it": "Ci vediamo su SavingPlanets.com!"
+     }
+    ]
+   ]
   }
  }
 }

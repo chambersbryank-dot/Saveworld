@@ -809,6 +809,10 @@ body #actions .mission-block::before { top: 12px; }
   .sp-promo .promo-wide { display: none; }
   .sp-promo .promo-tall { display: block; width: 100%; max-width: min(380px, calc(80vh * 0.5625)); margin: 0 auto; border-radius: 16px; }
 }
+/* Oct 18: promo v4 is one 9:16 master: a centred tall player at every width, capped by viewport height so poster + caption fit on iPad landscape */
+.sp-promo .promo-v4 { display: block; width: 100%; max-width: min(400px, calc(70vh * 0.5625)); margin: 0 auto; border-radius: 16px; }
+.sp-promo .promo-v4 ~ figcaption { max-width: 600px; }
+.sp-promo .promo-v4 ~ figcaption .photo-credit { text-align: center; }
 .scoreboard { max-width: 1100px; margin: var(--section-gap, 2.6rem) auto 0; padding: 0 1.5rem; text-align: center; }
 .sb-intro { margin: 0.4rem auto 1.4rem; max-width: 640px; opacity: 0.9; }
 .sb-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; }

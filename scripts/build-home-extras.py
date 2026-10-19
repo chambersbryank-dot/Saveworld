@@ -112,21 +112,19 @@ s = put(s, 'SOTW', SW, r'<section class="mission-block">.*?</section>')
 s = put(s, 'SCOREBOARD', SB, r'<section class="impact-bar">.*?</section>')
 # ---- Oct 18: promo v3 just below the hero + impact strip (hero position is LOCKED; this block only sits after it) ----
 # Wide 16:9 master for landscape/desktop/iPad, 9:16 master for narrow portrait phones (CSS picks one; preload=metadata, no autoplay).
-PW, PH = MEDIA.dims('savingplanets-promo-v3-1920x1080.mp4'); PU = MEDIA.vurl('savingplanets-promo-v3-1920x1080.mp4')
-TW, TH = MEDIA.dims('savingplanets-promo-v3-1080x1920.mp4'); TU = MEDIA.vurl('savingplanets-promo-v3-1080x1920.mp4')
+# Oct 18 3:45 PM HST (owner): promo v4 (148 s, 191 solutions / 11 hubs; caption-fixed cut, 5:17 PM) replaces v3. One 9:16 master only (no 16:9 cut), so one centred player at every width.
+VW, VH = MEDIA.dims('savingplanets-promo-v4-final-1080x1920.mp4'); VU = MEDIA.vurl('savingplanets-promo-v4-final-1080x1920.mp4')
 PROMO_H = "Watch: What's New on Saving Planets"
 # Oct 18: 191 solutions now; the promo was recorded at 175 and is not edited, so the caption says so
-PROMO_CAP = "A 97-second look at the newest updates (recorded when we had 175 solutions): the new homepage, five languages, the interactive World Map and Myth vs Fact."
-PROMO_SRC = 'Earth: NASA Blue Marble and Black Marble · Saturn: NASA/JPL-Caltech/Space Science Institute · Site screens: Saving Planets'
+PROMO_CAP = "A 2½-minute tour of Saving Planets today: 191 real solutions in 11 hubs, the new homepage, the interactive World Map and Myth vs Fact."
+PROMO_SRC = "Earth: NASA Blue Marble and Black Marble · Saturn: NASA/JPL-Caltech/Space Science Institute · Myth vs Fact: NOAA, NASA, NASA DART · Map: © OpenStreetMap · Launches: The Space Devs · Site screens: Saving Planets"
 try: PROMO_X = json.load(open('assets/data/promo-links.json', encoding='utf-8')).get('x_post', '')
 except Exception: PROMO_X = ''
 PX = f'<p class="promo-x"><a href="{html.escape(PROMO_X)}" target="_blank" rel="noopener">See our new milestone on X →</a></p>' if PROMO_X else ''
 PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledby="promo-title">'
   f'<h2 id="promo-title">{html.escape(PROMO_H, quote=False)}</h2><figure class="sp-video-fig">'
-  f'<video class="promo-wide" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-wide-b.jpg" width="{PW}" height="{PH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
-  f'<source src="{PU}" type="video/mp4"><a href="{PU}">Download the video</a></video>'
-  f'<video class="promo-tall" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v3-tall-b.jpg" width="{TW}" height="{TH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
-  f'<source src="{TU}" type="video/mp4"><a href="{TU}">Download the video</a></video>'
+  f'<video class="promo-v4" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v4-tall.jpg" width="{VW}" height="{VH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
+  f'<source src="{VU}" type="video/mp4"><a href="{VU}">Download the video</a></video>'
   f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> '
   f'<span class="photo-credit">{html.escape(PROMO_SRC, quote=False)}</span></figcaption></figure>{PX}</section>')
 s = put(s, 'PROMO', PROMO, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
