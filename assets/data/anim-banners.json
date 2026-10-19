@@ -84,6 +84,106 @@
    "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA26448)",
    "pos": "50% 50%",
    "r2": "images/Klamath_River.jpg"
+  },
+  "assets/LEO_View.jpg": {
+   "credit": "NASA (ISS023-E-057948, May 25, 2010)",
+   "pos": "50% 50%",
+   "r2": "images/LEO_View.jpg"
+  },
+  "assets/Mediterranean_ISS.jpg": {
+   "credit": "NASA (ISS071-E-207494, June 24, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Mediterranean_ISS.jpg"
+  },
+  "assets/ATV1_Departure_ISS.jpg": {
+   "credit": "NASA (ISS017-E-015496, Sept. 5, 2008)",
+   "pos": "50% 50%",
+   "r2": "images/ATV1_Departure_ISS.jpg"
+  },
+  "assets/Global_Plant_Fluorescence.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA18935)",
+   "pos": "50% 50%",
+   "r2": "images/Global_Plant_Fluorescence.jpg"
+  },
+  "assets/Labrador_Sea_Ice_ISS.jpg": {
+   "credit": "NASA (ISS070-E-086805, Feb. 3, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Labrador_Sea_Ice_ISS.jpg"
+  },
+  "assets/Baltimore_DC_Skylab.jpg": {
+   "credit": "NASA (SL3-83-166, Skylab, 1973)",
+   "pos": "50% 50%",
+   "r2": "images/Baltimore_DC_Skylab.jpg"
+  },
+  "assets/Danube_Delta_GSFC.jpg": {
+   "credit": "NASA/Goddard (Feb. 5, 2013)",
+   "pos": "50% 50%",
+   "r2": "images/Danube_Delta_GSFC.jpg"
+  },
+  "assets/EMIT_Methane_Fingerprint.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA25593)",
+   "pos": "50% 50%",
+   "r2": "images/EMIT_Methane_Fingerprint.jpg"
+  },
+  "assets/Great_Lakes_GSFC.jpg": {
+   "credit": "NASA/Goddard (Aug. 28, 2010)",
+   "pos": "50% 50%",
+   "r2": "images/Great_Lakes_GSFC.jpg"
+  },
+  "assets/Lightning_Storm_ISS.jpg": {
+   "credit": "NASA (ISS073-E-0080625, May 15, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Lightning_Storm_ISS.jpg"
+  },
+  "assets/North_Atlantic_Bloom_MODIS.jpg": {
+   "credit": "NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team",
+   "pos": "50% 50%",
+   "r2": "images/North_Atlantic_Bloom_MODIS.jpg"
+  },
+  "assets/Phytoplankton_Bloom_Iceland.jpg": {
+   "credit": "NASA/Goddard",
+   "pos": "50% 50%",
+   "r2": "images/Phytoplankton_Bloom_Iceland.jpg"
+  },
+  "assets/PlasticBank_Indonesia_STS66.jpg": {
+   "credit": "NASA (STS066-154-157, Nov. 1994)",
+   "pos": "50% 50%",
+   "r2": "images/PlasticBank_Indonesia_STS66.jpg"
+  },
+  "assets/Progress_Reentry.jpg": {
+   "credit": "NASA (ISS029-E-034092, Oct. 29, 2011)",
+   "pos": "50% 50%",
+   "r2": "images/Progress_Reentry.jpg"
+  },
+  "assets/Romania_City_Lights_ISS.jpg": {
+   "credit": "NASA (ISS074-E-0149572, Jan. 18, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/Romania_City_Lights_ISS.jpg"
+  },
+  "assets/Rondonia_Deforestation_STS46.jpg": {
+   "credit": "NASA (STS046-103-053, Aug. 1992)",
+   "pos": "50% 50%",
+   "r2": "images/Rondonia_Deforestation_STS46.jpg"
+  },
+  "assets/Satellite_Servicing_Arm_GSFC.jpg": {
+   "credit": "NASA/Debora McCallum",
+   "pos": "50% 50%",
+   "r2": "images/Satellite_Servicing_Arm_GSFC.tif"
+  },
+  "assets/GOES19_GOESU_KSC.jpg": {
+   "credit": "NASA/Ben Smegelsky (KSC-20240124-PH-JBS01_0071)",
+   "pos": "50% 50%",
+   "r2": "images/GOES19_GOESU_KSC.jpg"
+  },
+  "assets/NYC_Hudson_Harbor.jpg": {
+   "credit": "NASA (STS039-88-054, 1991)",
+   "pos": "50% 50%",
+   "r2": "images/NYC_Hudson_Harbor.jpg"
+  },
+  "assets/Titan.jpg": {
+   "credit": "NASA/JPL/University of Arizona/University of Idaho (PIA20016)",
+   "pos": "50% 50%",
+   "r2": "images/Titan.jpg"
   }
  },
  "pages": {
