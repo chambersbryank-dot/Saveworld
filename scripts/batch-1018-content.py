@@ -103,8 +103,8 @@ PAGES = [
   bottom=('Want to go deeper? ESA has the full FORUM story.', ESA_FORUM[0], 'For Further Information'),
   widget=W('FORUM', 'In development. Launch planned for 2028 on Vega-C from Kourou, French Guiana.', ESA_FORUM, 'ESA'),
   see=[], pin={'status': 'active', 'pins': [{'lat': 5.236, 'lng': -52.769, 'label': "Europe's Spaceport, Kourou, French Guiana (planned launch site)", 'basis': 'page'}], 'strip': 'orbit'}),
- dict(slug='CIMR', title='CIMR Copernicus Imaging Microwave Radiometer (ESA)', short='CIMR', cat='earth-observation',
-  hub=('Earth_Observation.html', 'Earth Observation'), cls='agency', status='active', glass='earth', label='Agency solution · in development',
+ dict(slug='CIMR', title='CIMR Copernicus Imaging Microwave Radiometer (ESA)', short='CIMR', cat='polar',
+  hub=('Polar.html', 'Polar'), cls='agency', status='active', glass='earth', label='Agency solution · in development',
   img=('North_Atlantic_Bloom_MODIS.jpg', 1536, 1920, 'Swirls of a phytoplankton bloom in the deep blue central North Atlantic Ocean, seen by satellite'), credit='NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team',
   lead='Two Copernicus satellites will measure sea ice, sea-surface temperature and salinity over 95% of the globe every day, with sub-daily polar views (ESA).',
   eli=['CIMR will be two satellites that measure the ocean and polar sea ice.',
@@ -126,8 +126,8 @@ PAGES = [
   see=[('CryoSat.html', 'CryoSat Ice Mission (ESA)', 'Measures the thickness of polar sea ice with radar.'),
        ('CRISTAL.html', 'CRISTAL Polar Ice and Snow Altimeter (ESA)', 'Will measure sea-ice thickness and the snow on top.')],
   pin={'status': 'active', 'pins': [{'lat': 52.218, 'lng': 4.42, 'label': 'ESA ESTEC, Noordwijk, Netherlands (project management)', 'basis': 'page'}], 'strip': 'orbit'}),
- dict(slug='CRISTAL', title='CRISTAL Polar Ice and Snow Altimeter (ESA)', short='CRISTAL', cat='earth-observation',
-  hub=('Earth_Observation.html', 'Earth Observation'), cls='agency', status='active', glass='earth', label='Agency solution · in development',
+ dict(slug='CRISTAL', title='CRISTAL Polar Ice and Snow Altimeter (ESA)', short='CRISTAL', cat='polar',
+  hub=('Polar.html', 'Polar'), cls='agency', status='active', glass='earth', label='Agency solution · in development',
   img=('Labrador_Sea_Ice_ISS.jpg', 1920, 1280, 'Sea ice in the Labrador Sea seen from the International Space Station'), credit='NASA (ISS070-E-086805, Feb. 3, 2024)',
   lead="CRISTAL will carry the first dual-frequency radar altimeter to measure polar sea-ice thickness and the snow on top, following ESA's CryoSat (ESA).",
   eli=['CRISTAL is a satellite that will measure how thick the polar sea ice is.',
@@ -469,7 +469,7 @@ def main():
         pin = dict(p['pin'])
         if pin.get('strip') is None: pin.pop('strip', None)
         ml['solutions'][s + '.html'] = pin
-    ICON = {'Earth_Observation.html': '🌍', 'Oceans.html': '🌊', 'Deforestation.html': '🌳', 'Rivers.html': '💧', 'Lakes.html': '🏞️', 'Project-Rawane.html': '🚀'}
+    ICON = {'Polar.html': '🧊', 'Earth_Observation.html': '🌍', 'Oceans.html': '🌊', 'Deforestation.html': '🌳', 'Rivers.html': '💧', 'Lakes.html': '🏞️', 'Project-Rawane.html': '🚀'}
     ANCHOR = {'Project-Rawane.html': 'id="group-voyages-outward"'}
     for p in PAGES:
         hf, hn = p['hub']; s = p['slug']; im, w, h, alt = p['img']

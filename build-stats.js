@@ -16,7 +16,7 @@ const decodeEnt = s => s.replace(/&quot;/g,'"').replace(/&#0?39;|&#x27;|&apos;/g
 const path = require('path');
 
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
-  'planetary-defense': 'Planetary Defense', 'space-weather': 'Space Weather & Shields',
+  'planetary-defense': 'Planetary Defense', 'polar': 'Polar', 'space-weather': 'Space Weather & Shields',
   'earth-observation': 'Earth Observation', 'project-r': 'Project Rawane' };
 const SKIP = ['Solutions.html', 'Search.html', '404.html', 'Project-R.html', 'index.html', 'About.html', 'Contact.html', 'Amazing_Facts.html', 'Ways_to_Help.html', 'Press.html', 'Myth_vs_Fact.html', 'Rawanes_Mission_Log.html', 'Community.html', 'Find_a_Cleanup.html'];
 // Pages another worker owns and that cannot carry tags yet. Remove an entry once the page has its own sp: tags.
@@ -74,7 +74,7 @@ function writeProjectRMenu(menu) {
 // ---- Solutions nav dropdown (every hub + every solution page, alphabetical within hub) ----
 // Items = <h3><a href="Page.html">Name</a> card titles on each hub page. Written into every page
 // between <!-- SOLUTIONS-MENU:START --> and <!-- SOLUTIONS-MENU:END -->.
-const SOLUTIONS_HUBS = [['Earth_Observation.html', 'Earth Observation'], ['Deforestation.html', 'Forests'], ['Lakes.html', 'Lakes'], ['Oceans.html', 'Ocean'], ['Planetary_Defense.html', 'Planetary Defense'], ['Rivers.html', 'Rivers'], ['Space.html', 'Space'], ['Space_Disposal.html', 'Space Disposal'], ['Space_Weather.html', 'Space Weather'], ['Project-Rawane.html', 'Project Rawane']];
+const SOLUTIONS_HUBS = [['Earth_Observation.html', 'Earth Observation'], ['Deforestation.html', 'Forests'], ['Lakes.html', 'Lakes'], ['Oceans.html', 'Ocean'], ['Planetary_Defense.html', 'Planetary Defense'], ['Polar.html', 'Polar'], ['Rivers.html', 'Rivers'], ['Space.html', 'Space'], ['Space_Disposal.html', 'Space Disposal'], ['Space_Weather.html', 'Space Weather'], ['Project-Rawane.html', 'Project Rawane']];
 // Display order: Project Rawane first, then hubs alphabetically (Rawane is computed last so it only lists pages not under another hub).
 // Project Rawane lists only pages not already under another hub (e.g. Voyages Outward).
 function buildSolutionsMenu() {

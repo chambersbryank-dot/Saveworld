@@ -27,7 +27,7 @@ open('index.html', 'w', encoding='utf8').write(s)
 # 2) Badges on solution cards
 HUB = {'ocean': ('🌊', 'Ocean'), 'lakes': ('🏞️', 'Lakes'), 'rivers': ('💧', 'Rivers'), 'forests': ('🌳', 'Forests'),
        'space': ('🛰️', 'Space'), 'planetary-defense': ('☄️', 'Planetary Defense'), 'space-weather': ('☀️', 'Space Weather'),
-       'earth-observation': ('🌍', 'Earth Observation'), 'project-r': ('🚀', 'Project Rawane')}
+       'earth-observation': ('🌍', 'Earth Observation'), 'polar': ('🧊', 'Polar'), 'project-r': ('🚀', 'Project Rawane')}
 data = json.load(open('assets/data/solutions.json', encoding='utf8'))
 info = {p['url']: p for p in data['pages'] if not p.get('section') and p['type'] == 'solution'}
 def badge(p):

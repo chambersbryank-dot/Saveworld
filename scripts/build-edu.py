@@ -105,7 +105,7 @@ MAP_POS = {  # hub: (label, x, y, mobile x, mobile y)
  'Space.html': ('Space', 20, 12, 72, 20), 'Space_Disposal.html': ('Space Junk', 38, 27, 28, 28),
  'Project-Rawane.html': ('Earth + Space', 13, 38, 72, 36), 'Earth_Observation.html': ('Satellites', 82, 38, 28, 45),
  'Deforestation.html': ('Forests', 56, 56, 72, 56), 'Oceans.html': ('Oceans', 24, 66, 28, 65),
- 'Lakes.html': ('Lakes', 78, 72, 72, 75), 'Rivers.html': ('Rivers', 46, 85, 28, 86)}
+ 'Lakes.html': ('Lakes', 78, 72, 72, 75), 'Polar.html': ('Polar Ice', 44, 42, 72, 46), 'Rivers.html': ('Rivers', 46, 85, 28, 86)}
 
 def kids_map(hubs):
     svg = ('<svg viewBox="0 0 160 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">'

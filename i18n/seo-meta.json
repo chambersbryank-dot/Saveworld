@@ -1483,7 +1483,16 @@
  },
  "Solutions.html": {
   "fr": {
-   "description": "Toutes les solutions de Saving Planets au même endroit : {n} solutions sourcées dans 10 pôles, du nettoyage des océans aux satellites d'observation de la Terre."
+   "description": "Toutes les solutions de Saving Planets au même endroit : {n} solutions sourcées dans {h} pôles, du nettoyage des océans aux satellites d'observation de la Terre."
+  },
+  "es": {
+   "description": "Todas las soluciones de Saving Planets en un lugar: {n} soluciones con fuentes en {h} áreas, de la limpieza oceánica a los satélites que observan la Tierra."
+  },
+  "it": {
+   "description": "Tutte le soluzioni di Saving Planets in un posto: {n} soluzioni con fonti in {h} hub, dalla pulizia degli oceani ai satelliti che osservano la Terra."
+  },
+  "ar": {
+   "description": "كل حلول Saving Planets في مكان واحد: {n} حلًا موثّق المصادر في {h} من المحاور، من تنظيف المحيطات إلى أقمار رصد الأرض، مشروحة بالأسئلة الخمسة."
   }
  },
  "Space.html": {

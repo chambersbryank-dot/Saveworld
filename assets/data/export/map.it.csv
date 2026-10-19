@@ -26,7 +26,7 @@ Catalina Sky Survey,active,Difesa planetaria,"Lunar and Planetary Laboratory, Un
 Centro di coordinamento per gli oggetti near-Earth (ESA),active,Difesa planetaria,"ESA ESRIN, Frascati, Italy",41.827,12.674,hq,https://www.savingplanets.com/it/ESA_NEOCC.html
 Chesapeake Bay Foundation,active,Fiumi,Chesapeake Bay,38.0,-76.3,page,https://www.savingplanets.com/it/Chesapeake_Bay_Foundation.html
 "CHIME, missione di imaging iperspettrale (ESA)",active,Osservazione della Terra,"ESA headquarters, Paris, France",48.849,2.303,hq,https://www.savingplanets.com/it/CHIME.html
-"CIMR, radiometro a microonde Copernicus (ESA)",active,Osservazione della Terra,"ESA ESTEC, Noordwijk, Netherlands (project management)",52.218,4.42,page,https://www.savingplanets.com/it/CIMR.html
+"CIMR, radiometro a microonde Copernicus (ESA)",active,Poli,"ESA ESTEC, Noordwijk, Netherlands (project management)",52.218,4.42,page,https://www.savingplanets.com/it/CIMR.html
 "Clean Lakes Alliance (Madison, Wisconsin)",active,Laghi,"Madison, Wisconsin (Yahara lakes)",43.074,-89.384,page,https://www.savingplanets.com/it/Clean_Lakes_Alliance.html
 Clean Up the Lake,active,Laghi,Lake Tahoe,39.09,-120.04,page,https://www.savingplanets.com/it/Clean_Up_the_Lake.html
 Clean Up the Lake,active,Laghi,Mammoth Lakes Basin,37.63,-118.99,page,https://www.savingplanets.com/it/Clean_Up_the_Lake.html
@@ -47,8 +47,8 @@ Coral IVF (Great Barrier Reef Foundation),active,Oceano,"Great Barrier Reef, Aus
 Coral Reef Watch (NOAA),active,Oceano,"NOAA Center for Weather and Climate Prediction, College Park, Maryland",38.972,-76.923,hq,https://www.savingplanets.com/it/Coral_Reef_Watch.html
 Coral Restoration Foundation,active,Oceano,Florida Keys,25.09,-80.44,page,https://www.savingplanets.com/it/Coral_Restoration_Foundation.html
 "Coral Vita, allevamenti di corallo a terra",active,Oceano,"Grand Bahama, The Bahamas (Coral Vita coral farm)",26.53,-78.7,page,https://www.savingplanets.com/it/Coral_Vita.html
-"CRISTAL, altimetro per ghiacci e neve polari (ESA)",active,Osservazione della Terra,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/it/CRISTAL.html
-"CryoSat, missione dei ghiacci (ESA)",active,Osservazione della Terra,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/it/CryoSat.html
+"CRISTAL, altimetro per ghiacci e neve polari (ESA)",active,Poli,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/it/CRISTAL.html
+"CryoSat, missione dei ghiacci (ESA)",active,Poli,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/it/CryoSat.html
 Data center orbitali,active,Spazio,From orbit,,,,https://www.savingplanets.com/it/Orbital_Data_Centers.html
 "Dragonfly, velivolo a rotori per Titano (NASA)",upcoming,Progetto Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/it/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Osservazione della Terra,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/it/DSCOVR_EPIC.html
@@ -102,7 +102,7 @@ Hope Spots di Mission Blue,active,Oceano,"Napa, California (HQ)",38.299,-122.286
 HydroGNSS (ESA),active,Osservazione della Terra,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/it/HydroGNSS.html
 "I castori, ingegneri dei fiumi",active,Fiumi,"Bridge Creek, Central Oregon",44.72,-120.22,page,https://www.savingplanets.com/it/Beavers_River_Engineers.html
 I lupi di Yellowstone,active,Foreste,"Yellowstone National Park, Wyoming",44.6,-110.5,page,https://www.savingplanets.com/it/Yellowstone_Wolves.html
-ICESat-2 (NASA),active,Osservazione della Terra,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/it/ICESat-2.html
+ICESat-2 (NASA),active,Poli,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/it/ICESat-2.html
 "Il fitoplancton, il motore d’ossigeno dell’oceano",active,Oceano,Worldwide,,,,https://www.savingplanets.com/it/Phytoplankton.html
 Il programma GLOBE,active,Osservazione della Terra,Worldwide,,,,https://www.savingplanets.com/it/GLOBE_Program.html
 IMAP (NASA),active,Meteo spaziale,"Johns Hopkins APL, Laurel, Maryland (mission operations)",39.162,-76.898,hq,https://www.savingplanets.com/it/IMAP.html
@@ -164,7 +164,7 @@ Plastic Odyssey,active,Oceano,"Marseille, France (expedition start)",43.3,5.37,p
 Plato (ESA),upcoming,Progetto Rawane,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/it/Plato.html
 Praterie di fanerogame marine,active,Oceano,Worldwide,,,,https://www.savingplanets.com/it/Seagrass.html
 Praterie di posidonia,active,Oceano,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/it/Posidonia_Meadows.html
-"PREFIRE, CubeSat polari (NASA)",active,Osservazione della Terra,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/it/PREFIRE.html
+"PREFIRE, CubeSat polari (NASA)",active,Poli,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/it/PREFIRE.html
 PRELUDE (ClearSpace),upcoming,Smaltimento dei detriti spaziali,"ClearSpace, Lausanne, Switzerland (HQ)",46.52,6.63,hq,https://www.savingplanets.com/it/PRELUDE.html
 Previsione delle fioriture algali dannose del lago Erie (NOAA),active,Laghi,"Maumee Bay, Toledo, Ohio",41.7,-83.45,page,https://www.savingplanets.com/it/Lake_Erie_Algal_Bloom_Forecast.html
 Project Seagrass,active,Oceano,"Bridgend, Wales (HQ)",51.5,-3.58,page,https://www.savingplanets.com/it/Project_Seagrass.html

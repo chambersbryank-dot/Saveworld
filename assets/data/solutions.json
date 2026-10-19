@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T23:48:08.804Z",
+ "generated": "2026-10-19T00:12:57.553Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -794,6 +794,36 @@
    ]
   },
   {
+   "hub": "Polar",
+   "href": "Polar.html",
+   "items": [
+    {
+     "href": "CIMR.html",
+     "name": "CIMR Copernicus Imaging Microwave Radiometer (ESA)"
+    },
+    {
+     "href": "CRISTAL.html",
+     "name": "CRISTAL Polar Ice and Snow Altimeter (ESA)"
+    },
+    {
+     "href": "CryoSat.html",
+     "name": "CryoSat Ice Mission (ESA)"
+    },
+    {
+     "href": "ICESat-2.html",
+     "name": "ICESat-2 (NASA)"
+    },
+    {
+     "href": "PREFIRE.html",
+     "name": "PREFIRE Polar CubeSats (NASA)"
+    },
+    {
+     "href": "RCM.html",
+     "name": "RADARSAT Constellation Mission (Canada)"
+    }
+   ]
+  },
+  {
    "hub": "Rivers",
    "href": "Rivers.html",
    "items": [
@@ -1039,10 +1069,10 @@
   }
  ],
  "site": {
-  "categories": 9,
+  "categories": 10,
   "solutions": 191,
   "horizon": 0,
-  "hubs": 10,
+  "hubs": 11,
   "byClassification": {
    "corporate": 16,
    "agency": 104,
@@ -1178,6 +1208,17 @@
    "upcomingMissions": 4,
    "impactTotals": []
   },
+  "polar": {
+   "name": "Polar",
+   "solutions": 5,
+   "horizon": 0,
+   "hubs": 1,
+   "byClassification": {
+    "agency": 5
+   },
+   "upcomingMissions": 1,
+   "impactTotals": []
+  },
   "space-weather": {
    "name": "Space Weather & Shields",
    "solutions": 12,
@@ -1192,15 +1233,15 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 51,
+   "solutions": 46,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 49,
+    "agency": 44,
     "nonprofit": 1,
     "corporate": 1
    },
-   "upcomingMissions": 7,
+   "upcomingMissions": 6,
    "impactTotals": []
   },
   "project-r": {
@@ -1600,7 +1641,7 @@
   {
    "url": "CIMR.html",
    "title": "CIMR Copernicus Imaging Microwave Radiometer (ESA)",
-   "category": "earth-observation",
+   "category": "polar",
    "type": "solution",
    "classification": "agency",
    "status": "active",
@@ -1781,7 +1822,7 @@
   {
    "url": "CRISTAL.html",
    "title": "CRISTAL Polar Ice and Snow Altimeter (ESA)",
-   "category": "earth-observation",
+   "category": "polar",
    "type": "solution",
    "classification": "agency",
    "status": "active",
@@ -1798,7 +1839,7 @@
   {
    "url": "CryoSat.html",
    "title": "CryoSat Ice Mission (ESA)",
-   "category": "earth-observation",
+   "category": "polar",
    "type": "solution",
    "classification": "agency",
    "status": "active",
@@ -2446,7 +2487,7 @@
   {
    "url": "ICESat-2.html",
    "title": "ICESat-2 (NASA)",
-   "category": "earth-observation",
+   "category": "polar",
    "type": "solution",
    "classification": "agency",
    "status": "active",
@@ -3239,6 +3280,15 @@
    ]
   },
   {
+   "url": "Polar.html",
+   "title": "Polar",
+   "category": "polar",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
+  },
+  {
    "url": "Posidonia_Meadows.html",
    "title": "Posidonia Seagrass Meadows",
    "category": "ocean",
@@ -3259,7 +3309,7 @@
   {
    "url": "PREFIRE.html",
    "title": "PREFIRE Polar CubeSats (NASA)",
-   "category": "earth-observation",
+   "category": "polar",
    "type": "solution",
    "classification": "agency",
    "status": "active",

@@ -31,7 +31,7 @@ Centro de Coordinación de Objetos Cercanos a la Tierra (ESA),active,Defensa pla
 Centros de datos orbitales,active,Espacio,From orbit,,,,https://www.savingplanets.com/es/Orbital_Data_Centers.html
 Chesapeake Bay Foundation,active,Ríos,Chesapeake Bay,38.0,-76.3,page,https://www.savingplanets.com/es/Chesapeake_Bay_Foundation.html
 "CHIME, misión de imágenes hiperespectrales (ESA)",active,Observación de la Tierra,"ESA headquarters, Paris, France",48.849,2.303,hq,https://www.savingplanets.com/es/CHIME.html
-"CIMR, radiómetro de imágenes de microondas de Copernicus (ESA)",active,Observación de la Tierra,"ESA ESTEC, Noordwijk, Netherlands (project management)",52.218,4.42,page,https://www.savingplanets.com/es/CIMR.html
+"CIMR, radiómetro de imágenes de microondas de Copernicus (ESA)",active,Polos,"ESA ESTEC, Noordwijk, Netherlands (project management)",52.218,4.42,page,https://www.savingplanets.com/es/CIMR.html
 "Clean Lakes Alliance (Madison, Wisconsin)",active,Lagos,"Madison, Wisconsin (Yahara lakes)",43.074,-89.384,page,https://www.savingplanets.com/es/Clean_Lakes_Alliance.html
 Clean Up the Lake,active,Lagos,Lake Tahoe,39.09,-120.04,page,https://www.savingplanets.com/es/Clean_Up_the_Lake.html
 Clean Up the Lake,active,Lagos,Mammoth Lakes Basin,37.63,-118.99,page,https://www.savingplanets.com/es/Clean_Up_the_Lake.html
@@ -52,8 +52,8 @@ Coral IVF (Great Barrier Reef Foundation),active,Océano,"Great Barrier Reef, Au
 Coral Reef Watch (NOAA),active,Océano,"NOAA Center for Weather and Climate Prediction, College Park, Maryland",38.972,-76.923,hq,https://www.savingplanets.com/es/Coral_Reef_Watch.html
 Coral Restoration Foundation,active,Océano,Florida Keys,25.09,-80.44,page,https://www.savingplanets.com/es/Coral_Restoration_Foundation.html
 "Coral Vita, granjas de coral en tierra",active,Océano,"Grand Bahama, The Bahamas (Coral Vita coral farm)",26.53,-78.7,page,https://www.savingplanets.com/es/Coral_Vita.html
-"CRISTAL, altímetro de hielo y nieve polares (ESA)",active,Observación de la Tierra,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/es/CRISTAL.html
-"CryoSat, misión del hielo (ESA)",active,Observación de la Tierra,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/es/CryoSat.html
+"CRISTAL, altímetro de hielo y nieve polares (ESA)",active,Polos,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/es/CRISTAL.html
+"CryoSat, misión del hielo (ESA)",active,Polos,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/es/CryoSat.html
 "Dragonfly, rotorcraft para Titán (NASA)",upcoming,Proyecto Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/es/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Observación de la Tierra,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/es/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,Observación de la Tierra,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/es/EarthCARE.html
@@ -105,7 +105,7 @@ Healthy Seas,active,Océano,Germany (country-level),54.3,10.1,page,https://www.s
 Hera,active,Defensa planetaria,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/es/Hera.html
 Hope Spots de Mission Blue,active,Océano,"Napa, California (HQ)",38.299,-122.286,hq,https://www.savingplanets.com/es/Mission_Blue_Hope_Spots.html
 HydroGNSS (ESA),active,Observación de la Tierra,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/es/HydroGNSS.html
-ICESat-2 (NASA),active,Observación de la Tierra,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/es/ICESat-2.html
+ICESat-2 (NASA),active,Polos,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/es/ICESat-2.html
 IMAP (NASA),active,Clima espacial,"Johns Hopkins APL, Laurel, Maryland (mission operations)",39.162,-76.898,hq,https://www.savingplanets.com/es/IMAP.html
 "INSAT-3DS, satélite meteorológico (ISRO)",active,Observación de la Tierra,"Satish Dhawan Space Centre, Sriharikota, India (launch site)",13.72,80.23,page,https://www.savingplanets.com/es/INSAT-3DS.html
 Juice,active,Eliminación espacial,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/es/Juice.html
@@ -165,7 +165,7 @@ Plastic Odyssey,active,Océano,"Marseille, France (expedition start)",43.3,5.37,
 Plato (ESA),upcoming,Proyecto Rawane,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/es/Plato.html
 Praderas de pastos marinos,active,Océano,Worldwide,,,,https://www.savingplanets.com/es/Seagrass.html
 Praderas de posidonia,active,Océano,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/es/Posidonia_Meadows.html
-"PREFIRE, CubeSats polares (NASA)",active,Observación de la Tierra,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/es/PREFIRE.html
+"PREFIRE, CubeSats polares (NASA)",active,Polos,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/es/PREFIRE.html
 PRELUDE (ClearSpace),upcoming,Eliminación espacial,"ClearSpace, Lausanne, Switzerland (HQ)",46.52,6.63,hq,https://www.savingplanets.com/es/PRELUDE.html
 Project Seagrass,active,Océano,"Bridgend, Wales (HQ)",51.5,-3.58,page,https://www.savingplanets.com/es/Project_Seagrass.html
 Pronóstico de floraciones de algas nocivas del lago Erie (NOAA),active,Lagos,"Maumee Bay, Toledo, Ohio",41.7,-83.45,page,https://www.savingplanets.com/es/Lake_Erie_Algal_Bloom_Forecast.html

@@ -24,7 +24,7 @@ LANGS = ['en'] + [l for l in L.BUILD if os.path.exists(d(l) + 'Play_and_Learn.ht
 PUB = ['en'] + [l for l in L.PUBLIC if l in LANGS]
 PAGES = ['Space_Passport.html', 'Myth_or_Fact_Arcade.html', 'Boarding_Pass.html']
 PAGE_STEMS = [p[:-5] for p in PAGES]
-HUB_EMOJI = {'Project-Rawane.html': '🚀', 'Earth_Observation.html': '🛰️', 'Deforestation.html': '🌳', 'Lakes.html': '🏞️', 'Oceans.html': '🌊',
+HUB_EMOJI = {'Project-Rawane.html': '🚀', 'Earth_Observation.html': '🛰️', 'Deforestation.html': '🌳', 'Lakes.html': '🏞️', 'Polar.html': '🧊', 'Oceans.html': '🌊',
              'Planetary_Defense.html': '☄️', 'Rivers.html': '🏞', 'Space.html': '🔭', 'Space_Disposal.html': '♻️', 'Space_Weather.html': '☀️'}
 PLAY_EMOJI = {'Kids_Map': '🗺️', 'Spot_the_Fire': '🔥', 'Satellite_Explorer': '🛰️', 'Amazing_Facts': '🤩', 'Myth_vs_Fact': '🕵️', 'Glossary': '📖'}
 def href(l, p): return p if l == 'en' or os.path.exists(d(l) + p) else '../' + p

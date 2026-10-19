@@ -15,9 +15,10 @@ BRAND = ' | Saving Planets'
 TWITTER_SITE = '@SISavingPlanets'
 OVR = json.load(open('i18n/seo-meta.json', encoding='utf8')) if os.path.exists('i18n/seo-meta.json') else {}
 # Oct 17: '{n}' in an override = live solution count (assets/data/solutions.json), so hand-written texts never go stale (fr Solutions said 142)
-try: _N = str(json.load(open('assets/data/solutions.json', encoding='utf8'))['site']['solutions'])
-except Exception: _N = None
-if _N: OVR = json.loads(json.dumps(OVR, ensure_ascii=False).replace('{n}', _N))
+# Oct 18: '{h}' = live hub count (Polar made it 11; fr Solutions still said '10 pôles')
+try: _SITE = json.load(open('assets/data/solutions.json', encoding='utf8'))['site']; _N, _H = str(_SITE['solutions']), str(_SITE['hubs'])
+except Exception: _N = _H = None
+if _N: OVR = json.loads(json.dumps(OVR, ensure_ascii=False).replace('{n}', _N).replace('{h}', _H))
 MAIN_TYPES = ('Article', 'WebPage', 'CollectionPage', 'LearningResource', 'Course', 'DefinedTermSet', 'FAQPage', 'AboutPage', 'ContactPage', 'SearchResultsPage')
 def page_url(lang, base):  # index.html is served at the directory URL
     return SITE + ('' if lang == 'en' else lang + '/') + ('' if base == 'index.html' else base)

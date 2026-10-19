@@ -7,7 +7,7 @@ Also replaces the old Solutions dropdown in the top nav of every English page wi
 Idempotent. Run from repo root: python3 scripts/build-solutions-index.py  (weekly-sync.sh runs it before i18n-build)."""
 import re, os, html, datetime
 HUBS = [('Earth_Observation.html', 'Earth Observation'), ('Deforestation.html', 'Forests'), ('Lakes.html', 'Lakes'),
-        ('Oceans.html', 'Ocean'), ('Planetary_Defense.html', 'Planetary Defense'), ('Rivers.html', 'Rivers'),
+        ('Oceans.html', 'Ocean'), ('Planetary_Defense.html', 'Planetary Defense'), ('Polar.html', 'Polar'), ('Rivers.html', 'Rivers'),
         ('Space.html', 'Space'), ('Space_Disposal.html', 'Space Disposal'), ('Space_Weather.html', 'Space Weather'),
         ('Project-Rawane.html', 'Project Rawane')]  # Rawane last: lists only pages not under another hub
 OUT = 'Solutions.html'

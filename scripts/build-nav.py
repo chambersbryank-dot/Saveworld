@@ -21,7 +21,7 @@ X = {
 }
 # Every link from the previous nav (build-ux GROUPS) stays reachable; About pages (were footer-only) added.
 GROUPS = [
- ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Deforestation.html', 'Earth_Observation.html', 'World_Map.html', 'Topics.html']),
+ ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'World_Map.html', 'Topics.html']),
  ('space', ['Space.html', 'Enceladus.html', 'Artemis_II.html#launches', 'Planetary_Defense.html', 'Space_Weather.html', 'Space_Disposal.html']),
  # Oct 16 6:15 PM (user): Project Rawane back as its own top-level menu right after Space; label links to the overview,
  # first tap/click opens the dropdown (second follows the link); overview pinned first, the rest alphabetical.

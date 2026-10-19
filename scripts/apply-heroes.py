@@ -71,6 +71,8 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Dragonfly': ('Titan.jpg', 'NASA'),
     # Oct 16: the hero is the page's Ryugu photo; the line under it named an EPIC Earth image
     'Hayabusa2_Torifune': ('Ryugu_Hayabusa2.jpg', 'JAXA Hayabusa2 ONC data, processed by Anonymsiy (CC BY 4.0)'),
+    # Oct 18: Polar hub (hub 11)
+    'Polar': ('Greenland_IceBridge_2015.jpg', 'NASA GSFC, Operation IceBridge (2015)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),

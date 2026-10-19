@@ -74,9 +74,9 @@ def sitemap_page(hl):
             f'<main id="main"><div class="sm-grid">{keys}{secs}</div></main>\n{footer}<script src="site.js?v={jsv}"></script></body></html>\n')
 
 GLASS_CAT = {'ocean': 'ocean', 'oceans': 'ocean', 'lakes': 'lakes', 'rivers': 'rivers', 'forests': 'forests', 'earth-observation': 'earth',
-             'space': 'space', 'project-r': 'space', 'planetary-defense': 'defense', 'space-weather': 'sun'}
+             'space': 'space', 'project-r': 'space', 'planetary-defense': 'defense', 'space-weather': 'sun', 'polar': 'earth'}
 GLASS_PAGE = {'Titan.html': 'titan', 'ExoMars_Rosalind_Franklin.html': 'mars', 'ESCAPADE.html': 'mars', 'MMX.html': 'mars',
-              'Oceans.html': 'ocean', 'Lakes.html': 'lakes', 'Rivers.html': 'rivers', 'Deforestation.html': 'forests', 'Space.html': 'space',
+              'Oceans.html': 'ocean', 'Lakes.html': 'lakes', 'Polar.html': 'earth', 'Rivers.html': 'rivers', 'Deforestation.html': 'forests', 'Space.html': 'space',
               'Earth_Observation.html': 'earth', 'Planetary_Defense.html': 'defense', 'Space_Weather.html': 'sun', 'Space_Disposal.html': 'space', 'Kids_Map.html': 'ocean', 'Lesson_Builder.html': 'earth', 'Satellite_Explorer.html': 'space'}
 def set_glass(f, s):
     m = re.search(r'<meta name="sp:category" content="([^"]+)"', s)
