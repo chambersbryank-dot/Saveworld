@@ -19,6 +19,12 @@ SI = 'Created by SI and Biological SI Partner'
 BANNER = 'images/Pacific_Clouds_Sunset_ISS.jpg'
 BANNER_OG = 'assets/top-ten/banner-2560.webp'   # local copy of the R2 2560 WebP size, used only as the share-card photo (build-og.py)
 BANNER_CREDIT = 'NASA (ISS074-E-0046371, Jan. 3, 2026)'
+# Oct 18 9:15 PM HST (owner: 'something new and exciting like Nancy Grace Roman'): banner = NASA SVS 14749 'OpenUniverse: Simulated Universe Views for Roman'
+# (4K master on R2 untouched: videos/OpenUniverseFullZoom_4k_Best.mp4). Loop = 0:19-0:42.4 (frame fills the band), 0.8x (30->24 fps, every frame once),
+# 3 s tail->head crossfade (26.25 s, seamless), 3840x900 band + 2560/1920/1280; poster = loop frame 0. Credit exactly as NASA's page.
+BANNER_POSTER = 'images/top-ten-roman-openuniverse-poster-3840x900.png'
+BANNER_VID = [(w, f'videos/top-ten-roman-openuniverse-{w}x{h}.mp4') for w, h in ((1280, 300), (1920, 450), (2560, 600), (3840, 900))]
+VIDEO_CREDIT = "NASA's Goddard Space Flight Center and M. Troxel"
 # Each string: English -> {lang: translation}. '{n}' = live solution count, '{h}' = live hub count.
 S = {
  'title': ("This Week's Saving Planets Top Ten Features", {
@@ -43,6 +49,7 @@ S = {
    'he': "עשר מנקודות הפתיחה הטובות ביותר השבוע, מ-{n} פתרונות אמיתיים ומבוססי מקורות ועד שיעורים חינמיים ומעקב חי אחר טלסקופ חלל."}),
  'shot': ("Screenshot", {'fr': "Capture d'écran", 'es': "Captura de pantalla", 'ar': "لقطة شاشة", 'it': "Schermata", 'he': "צילום מסך"}),
  'nav': ("Top Ten", {'fr': "Top 10", 'es': "Top 10", 'ar': "أفضل 10", 'it': "Top 10", 'he': "עשרת המובילים"}),
+ 'video': ("Video", {'fr': "Vidéo", 'es': "Vídeo", 'ar': "فيديو", 'it': "Video", 'he': "וידאו"}),
  'photo': ("Photo", {'fr': "Photo", 'es': "Foto", 'ar': "صورة", 'it': "Foto", 'he': "תמונה"}),
 }
 # (id, page href, screenshot, extra credit, title, synopsis, button(s))
@@ -174,6 +181,7 @@ def strings():
     out.append((f"{S['shot'][0]}: {SI}", {l: f"{S['shot'][1][l]}: " + {'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
                'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner', 'he': 'נוצר על ידי SI ושותף SI ביולוגי'}[l] for l in LANGS}))
     out.append((f"{S['photo'][0]}: {BANNER_CREDIT}", {l: f"{S['photo'][1][l]}: {BANNER_CREDIT}" for l in LANGS}))
+    out.append((f"{S['video'][0]}: {VIDEO_CREDIT}", {l: f"{S['video'][1][l]}: {VIDEO_CREDIT}" for l in LANGS}))
     out += [S['intro']]  # the pause label is already in the TMs (Project Rawane banner)
     for k, c in sorted(set(PHOTO.values())): out.append((f"{S['photo'][0]}: {c}", {l: f"{S['photo'][1][l]}: {c}" for l in LANGS}))
     return [(fill(en), {l: fill(tr[l]) for l in LANGS}) for en, tr in out]
@@ -182,8 +190,9 @@ def body():
     title), .sol-intro/.sol-bluf one-line intro, and Solutions card markup (card sol-card: photo, credit, title, one short
     description, link right after the text) in a .card-band.sol-hub .grid."""
     t = fill(S['title'][0])
-    ban = SPB.banner(MF[BANNER], "An orbital sunset over the Pacific Ocean, seen from the International Space Station", t, fill(S["sub"][0]),
-                     f'{S["photo"][0]}: {BANNER_CREDIT}', h1_id='tt-h', extra_class='sol-banner tt-banner', pause=True)
+    vids = [[w, MF[k]['url']] for w, k in BANNER_VID if k in MF]
+    ban = SPB.banner(MF[BANNER_POSTER], '', t, fill(S["sub"][0]), f'{S["video"][0]}: {VIDEO_CREDIT}', h1_id='tt-h',
+                     extra_class='sol-banner tt-banner', video=vids, video_ar=round(3840 / 900, 2))  # decorative; pause button + reduced motion = poster (sp_banner)
     cards = ''
     for i, (fid, href, shot, extra, title, syn, btns) in enumerate(F, 1):
         tt = fill(title[0]); key, cred = PHOTO[fid]
@@ -200,8 +209,8 @@ def body():
     return (f'<!-- TOPTEN:START -->{ban}<section class="sol-intro"><p class="sol-bluf">{esc(fill(S["intro"][0]))}</p></section>'
             f'<section class="card-band sol-hub tt-hub" aria-labelledby="tt-h"><div class="grid">{cards}</div></section><!-- TOPTEN:END -->')
 CSS = ('.top-ten-page main{padding:0}'
- 'html body.sol-page.top-ten-page .tt-banner .spb-media img{object-position:50% 45%}'
- 'html body.sol-page.top-ten-page .tt-banner::after{background:linear-gradient(180deg,rgba(2,6,12,.55) 0%,rgba(2,6,12,.25) 45%,rgba(2,6,12,.45) 100%)}'
+ 'html body.sol-page.top-ten-page .tt-banner .spb-media img,html body.sol-page.top-ten-page .tt-banner .spb-video{object-position:50% 50%}'
+ 'html body.sol-page.top-ten-page .tt-banner::after{background:radial-gradient(62% 75% at 50% 50%,rgba(2,6,12,.5),rgba(2,6,12,.18) 70%,rgba(2,6,12,0) 100%)}'  # soft, behind the title only (dense galaxy frames)
  'body.sol-page .tt-card .image-container{position:relative}body.sol-page .tt-card .image-container img{width:100%;object-fit:cover;display:block}'
  '.tt-num{position:absolute;z-index:2;top:.55rem;left:.55rem;min-width:2.1rem;height:2.1rem;padding:0 .45rem;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;background:#009cde;color:#fff;box-shadow:0 3px 10px rgba(0,0,0,.45)}'
  '[dir=rtl] .tt-num{left:auto;right:.55rem}'
