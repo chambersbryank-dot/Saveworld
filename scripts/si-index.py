@@ -59,8 +59,8 @@ def main():
         si_cf.call('POST', f'/accounts/{{acct}}/vectorize/v2/indexes/{INDEX}/upsert', nd.encode(), ctype='application/x-ndjson', raw=True)
         for d in b: state[d['id']] = d['h']
         if i % 1000 == 0: print(f'  {i + len(b)}/{len(todo)}'); json.dump(state, open(STATE, 'w'), sort_keys=True)
-    for i in range(0, len(gone), 500):
-        si_cf.call('POST', f'/accounts/{{acct}}/vectorize/v2/indexes/{INDEX}/delete_by_ids', {'ids': gone[i:i + 500]})
-        for g in gone[i:i + 500]: state.pop(g, None)
+    for i in range(0, len(gone), 100):
+        si_cf.call('POST', f'/accounts/{{acct}}/vectorize/v2/indexes/{INDEX}/delete_by_ids', {'ids': gone[i:i + 100]})
+        for g in gone[i:i + 100]: state.pop(g, None)
     json.dump(state, open(STATE, 'w'), sort_keys=True, indent=0); print(f'si-index: done, {len(state)} chunks indexed')
 if __name__ == '__main__': main()
