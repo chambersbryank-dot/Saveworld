@@ -634,6 +634,31 @@
    "credit": "NASA/James Blair (jsc2026e406058, Iceland)",
    "pos": "50% 60%",
    "r2": "images/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
+  },
+  "assets/Lake_Kariba_ISS_2024.jpg": {
+   "credit": "NASA (iss071e047913, Lake Kariba between Zambia and Zimbabwe, May 2, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Lake_Kariba_ISS_2024.jpg"
+  },
+  "assets/Okavango_Delta_ISS_2025.jpg": {
+   "credit": "NASA (iss073e0604445, Okavango Delta, Botswana, Aug. 30, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Okavango_Delta_ISS_2025.jpg"
+  },
+  "assets/Valles_Marineris_Viking_PIA00422.jpg": {
+   "credit": "NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)",
+   "pos": "50% 50%",
+   "r2": "images/Valles_Marineris_Viking_PIA00422.jpg"
+  },
+  "assets/Abu_Dhabi_Coast_ISS_2024.jpg": {
+   "credit": "NASA (iss071e378611, Abu Dhabi, July 23, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Abu_Dhabi_Coast_ISS_2024.jpg"
+  },
+  "assets/South_India_Sri_Lanka_ISS_2024.jpg": {
+   "credit": "NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/South_India_Sri_Lanka_ISS_2024.jpg"
   }
  },
  "pages": {
@@ -886,6 +911,11 @@
   "Zero_Debris_Charter.html": "assets/LEO_View.jpg",
   "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
   "Thwaites_Glacier_Collaboration.html": "assets/Thwaites_Glacier_Landsat8_2019.jpg",
-  "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
+  "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg",
+  "African_Parks.html": "assets/Lake_Kariba_ISS_2024.jpg",
+  "Digital_Earth_Africa.html": "assets/Okavango_Delta_ISS_2025.jpg",
+  "Hope_Mars_Mission.html": "assets/Valles_Marineris_Viking_PIA00422.jpg",
+  "Abu_Dhabi_Mangroves.html": "assets/Abu_Dhabi_Coast_ISS_2024.jpg",
+  "Gaganyaan.html": "assets/South_India_Sri_Lanka_ISS_2024.jpg"
  }
 }

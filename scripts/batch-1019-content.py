@@ -15,7 +15,7 @@ spec = importlib.util.spec_from_file_location('b18', os.path.join(ROOT, 'scripts
 b18 = importlib.util.module_from_spec(spec); spec.loader.exec_module(b18)
 src, W, see_block = b18.b17.src, b18.W, b18.see_block
 ADDED = '2026-10-19'
-SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix']
+SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix', 'African_Parks', 'Digital_Earth_Africa', 'Hope_Mars_Mission', 'Abu_Dhabi_Mangroves', 'Gaganyaan']
 
 SV = ('https://www.seedvault.no/', 'Svalbard Global Seed Vault')
 SVD = ('https://www.seedvault.no/2026/10/14/thousands-of-seeds-deposited-in-svalbard-as-global-cooperation-safeguards-food-security/', 'Svalbard Global Seed Vault, October 2026 deposit')
@@ -25,6 +25,17 @@ TGR = ('https://thwaitesglacier.org/findings', 'International Thwaites Glacier C
 BAS = ('https://www.bas.ac.uk/project/international-thwaites-glacier-collaboration/', 'British Antarctic Survey, International Thwaites Glacier Collaboration')
 CF = ('https://www.carbfix.com/our-story', 'Carbfix, Our story')
 SCI = ('https://www.science.org/doi/10.1126/science.aad8132', 'Matter et al., Science (2016)')
+
+APS = ('https://www.africanparks.org/about-us/our-story', 'African Parks, Our story')
+AP25 = ('https://www.africanparks.org/25-years', 'African Parks, 25 years')
+DEA = ('https://www.digitalearthafrica.org/en_za/about-digital-earth-africa/', 'Digital Earth Africa, About')
+DEAG = ('https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html', 'Digital Earth Africa, GeoMAD specifications')
+WAMH = ('https://www.wam.ae/en/article/bysbi4j-uae-space-agency-announces-extension-emirates-mars', 'Emirates News Agency (WAM), UAE Space Agency extends Emirates Mars Mission until 2028, 17 Feb 2026')
+EADM = ('https://www.mediaoffice.abudhabi/en/environment/environment-agency-abu-dhabi-launches-mangrove-observatory-to-advance-mangrove-restoration-efforts/', 'Abu Dhabi Media Office, EAD launches Mangrove Observatory (July 2026)')
+ISROG = ('https://www.isro.gov.in/Gaganyaan.html', 'ISRO, Gaganyaan')
+ISROG1 = ('https://www.isro.gov.in/LVM3_first_uncrewed_flight_Gaganyaan.html', 'ISRO, HLVM3 for the first uncrewed Gaganyaan flight')
+DDG = ('https://ddnews.gov.in/en/india-targets-first-uncrewed-gaganyaan-mission-with-vyommitra-in-late-2026-human-spaceflight-programme-achieves-major-milestones/', 'DD News, India targets first uncrewed Gaganyaan mission with Vyommitra in late 2026')
+CITSCI = 'https://science.nasa.gov/citizen-science/'
 
 PAGES = [
  dict(slug='Svalbard_Global_Seed_Vault', title='Svalbard Global Seed Vault', short='the Seed Vault', cat='polar',
@@ -102,11 +113,136 @@ PAGES = [
   bottom=('Want to go deeper? Carbfix explains how CO2 turns to stone.', CF[0], 'For Further Information'),
   widget=None, see=[],
   pin={'status': 'active', 'pins': [{'lat': 64.037, 'lng': -21.40, 'label': 'Hellisheiði geothermal power plant, Iceland', 'basis': 'page'}]}),
+ dict(slug='African_Parks', title='African Parks', short='African Parks', cat='forests',
+  hub=('Deforestation.html', 'Forests'), cls='nonprofit', status='active', glass='forests', label='Nonprofit solution · active',
+  img=('Lake_Kariba_ISS_2024.jpg', 1920, 1280, 'Lake Kariba on the Zambia-Zimbabwe border, with its winding shoreline and dry hills, seen from the International Space Station'),
+  credit='NASA (iss071e047913, Lake Kariba between Zambia and Zimbabwe, May 2, 2024)',
+  hook="One nonprofit now runs 24 of Africa's wild places with their governments and neighbours.",
+  wow=("Over 25 years, African Parks has moved 11,610 animals of 37 species, 18 of which had become locally extinct (nonprofit figures).", AP25),
+  lead='African Parks manages 24 protected areas in 13 countries, covering over 20 million hectares, in partnership with governments and local communities (nonprofit).',
+  eli=['Some of Africa\'s national parks were losing their animals because there was not enough money or care.',
+       'African Parks works with each country\'s government to run those parks well.',
+       'It brings back animals that had disappeared and helps the people who live nearby.'],
+  ws=[('Who', 'African Parks, a non-profit conservation organisation, working in partnership with governments and local communities.', APS),
+      ('What', 'It takes on the long-term management of protected areas, run with a clear business approach.', APS),
+      ('When', 'Founded in 2000, in response to the dramatic decline of protected areas from poor management and lack of funding.', APS),
+      ('Where', '24 protected areas in 13 countries, from Zakouma in Chad to Matusadona in Zimbabwe.', APS),
+      ('Why', 'So each park is ecologically, socially and financially sustainable for the long term. Its goal is 30 parks by 2030.', APS)],
+  impact=('African Parks reports 11,610 animals of 37 species translocated over 25 years to restore how ecosystems work (nonprofit figures).', AP25),
+  fact=('Back From Local Extinction', 'Of the 37 species African Parks has moved, 18 had disappeared from the area before they were brought back (nonprofit figures).', AP25),
+  people=('African Parks focuses on economic development and on reducing poverty in the communities around each park (African Parks).', APS),
+  nature=('Its parks cover over 20 million hectares of wild land across 13 countries (African Parks).', APS),
+  support_h='Support African Parks',
+  btns=[('Donate', 'https://www.africanparks.org/donate'), ('Learn About African Parks', APS[0])],
+  bottom=('Support African Parks directly.', 'https://www.africanparks.org/donate', 'Donate'),
+  widget=None, see=[('Forest_Elephants.html', 'Forest Elephants, Carbon Gardeners', 'Elephants that help forests store more carbon.')],
+  pin={'status': 'active', 'pins': [{'lat': -16.85, 'lng': 28.55, 'label': 'Matusadona National Park, Zimbabwe', 'basis': 'page'}, {'lat': 10.9, 'lng': 19.8, 'label': 'Zakouma National Park, Chad', 'basis': 'page'}]}),
+ dict(slug='Digital_Earth_Africa', title='Digital Earth Africa', short='Digital Earth Africa', cat='earth-observation',
+  hub=('Earth_Observation.html', 'Earth Observation'), cls='agency', status='active', glass='earth', label='Research programme solution · active',
+  img=('Okavango_Delta_ISS_2025.jpg', 1920, 1078, 'The Okavango Delta in Botswana fanning out into the Kalahari, seen from the International Space Station'),
+  credit='NASA (iss073e0604445, Okavango Delta, Botswana, Aug. 30, 2025)',
+  hook="Free satellite maps of an entire continent, for anyone who needs them.",
+  wow=("Its Landsat-based maps of Africa reach back to 1984, so users can see four decades of change (Digital Earth Africa).", DEAG),
+  lead='Digital Earth Africa turns satellite data into free and open maps of water, farmland and coasts for the whole African continent (Digital Earth Africa).',
+  eli=['Satellites take pictures of Africa all the time, but the raw data is hard to use.',
+       'Digital Earth Africa cleans it up and turns it into ready-made maps.',
+       'Anyone can use them for free to track water, crops and coastlines.'],
+  ws=[('Who', 'Digital Earth Africa, a programme of icipe, the International Centre of Insect Physiology and Ecology, built on partnerships with African institutions.', DEA),
+      ('What', 'An operational service that delivers free and open satellite data and products, such as Water Observations from Space and a cropland map.', DEA),
+      ('When', 'Running now as an operational service; its Landsat-based maps go back to 1984.', DEAG),
+      ('Where', 'The entire African continent.', DEA),
+      ('Why', 'To give planners and policy makers Earth observation information for better decisions and sustainable development.', DEA)],
+  impact=('Digital Earth Africa provides free and open data and products to all its users as a public good (Digital Earth Africa).', DEA),
+  fact=('Four Decades of Africa', 'Digital Earth Africa\'s Landsat-based maps of Africa start in 1984 (Digital Earth Africa).', DEAG),
+  people=('Earth observation data support better decisions by governments and sectors, with benefits for individuals and communities (Digital Earth Africa).', DEA),
+  nature=('Its services track water bodies, land degradation and coastal erosion across the continent (Digital Earth Africa).', DEA),
+  support_h='Use Digital Earth Africa',
+  btns=[('Explore the Map', 'https://maps.digitalearth.africa/'), ('About Digital Earth Africa', DEA[0])],
+  bottom=('Want to go deeper? Digital Earth Africa explains its data and services.', DEA[0], 'For Further Information'),
+  widget=None, see=[('Landsat_9.html', 'Landsat 9 (NASA/USGS)', 'Part of the Landsat record of Earth\'s land that began in 1972.')],
+  pin={'status': 'active', 'pins': [{'lat': -1.2216, 'lng': 36.8962, 'label': 'icipe, Nairobi, Kenya (host of the programme)', 'basis': 'hq'}], 'strip': 'orbit'}),
+ dict(slug='Hope_Mars_Mission', title='Emirates Mars Mission (Hope Probe)', short='the Hope Probe', cat='space',
+  hub=('Space.html', 'Space'), cls='agency', status='active', glass='mars', label='Agency solution · active',
+  img=('Valles_Marineris_Viking_PIA00422.jpg', 1920, 682, 'Valles Marineris, the great canyon system of Mars, in a colour mosaic from NASA\'s Viking orbiters'),
+  credit='NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)',
+  hook="The Arab world's first interplanetary mission is still sending home Martian weather.",
+  wow=("Hope set out to collect a terabyte of new data on Mars's atmosphere and has gathered ten (UAE Space Agency).", WAMH),
+  lead='The UAE\'s Hope Probe has studied the Martian atmosphere from orbit since 2021, and its mission is now extended until 2028 (UAE Space Agency).',
+  eli=['Hope is a spacecraft from the United Arab Emirates that circles Mars.',
+       'It studies the air and weather on Mars, all around the planet.',
+       'Scientists everywhere can download its data for free to learn how planets change.'],
+  ws=[('Who', 'The UAE Space Agency. The Emirates Mars Mission is the first interplanetary exploration undertaken by an Arab nation.', WAMH),
+      ('What', 'The Hope Probe, an orbiter that studies Mars\'s atmosphere and climate, and has also flown past the moon Deimos.', WAMH),
+      ('When', 'In Mars orbit since 2021. Planned for two years, the mission is now extended until 2028.', WAMH),
+      ('Where', 'In orbit around Mars. In October 2025 it also imaged the interstellar comet 3I/ATLAS.', WAMH),
+      ('Why', 'To give the world unique data on the Martian atmosphere and build experience for future deep-space missions.', WAMH)],
+  impact=('Hope\'s 10 terabytes of data have gone out in 16 releases to more than 200 academic and research institutions, and fed more than 35 peer-reviewed papers (UAE Space Agency).', WAMH),
+  fact=('A Comet From Another Star', 'In October 2025, Hope turned away from Mars to photograph Comet 3I/ATLAS, the third known interstellar object (UAE Space Agency).', WAMH),
+  people=('The UAE Space Agency says the mission helps improve understanding of climate change and has helped build the country\'s science and education ecosystem.', WAMH),
+  nature=('Hope has made pioneering observations of the Martian aurora and given a new understanding of where the moon Deimos came from (UAE Space Agency).', WAMH),
+  support_h='Learn More About Hope',
+  btns=[('Mission Extension News', WAMH[0]), ('Join NASA Citizen Science', CITSCI)],
+  bottom=('Want to go deeper? The UAE Space Agency has the latest on Hope.', WAMH[0], 'For Further Information'),
+  widget=W('Emirates Mars Mission (Hope)', 'Active in Mars orbit since 2021. The UAE Space Agency has extended the mission until 2028.', WAMH, 'UAE Space Agency',
+           milestones=[('2025-10-03', 'Comet 3I/ATLAS passes closest to Mars, and Hope images it'), ('2026-02-17', 'Mission extended until 2028')]),
+  see=[('Project-Rawane.html', 'Project Rawane', 'Our hub for missions that keep space safe and go further out.'), ('Voyager.html', 'Voyager 1 and 2 (NASA)', 'The farthest spacecraft from Earth.')],
+  pin={'status': 'active', 'pins': [{'lat': 24.45, 'lng': 54.38, 'label': 'UAE Space Agency, United Arab Emirates', 'basis': 'hq'}], 'strip': 'orbit'}),
+ dict(slug='Abu_Dhabi_Mangroves', title='Abu Dhabi Mangrove Restoration', short='Abu Dhabi\'s mangroves', cat='ocean',
+  hub=('Oceans.html', 'Ocean'), cls='government', status='active', glass='ocean', label='Government solution · active',
+  img=('Abu_Dhabi_Coast_ISS_2024.jpg', 1920, 1280, 'The shallow turquoise coast and islands of Abu Dhabi, seen from the International Space Station'),
+  credit='NASA (iss071e378611, Abu Dhabi, July 23, 2024)',
+  hook="Abu Dhabi now tracks its mangroves by how many survive, not just how many go in the ground.",
+  wow=("Across 19 active projects, more than 18.5 million mangroves have been planted, with a 46.94% average success rate (EAD figures).", EADM),
+  lead='The Environment Agency – Abu Dhabi tracks more than 18.5 million mangroves planted across over 1,775 hectares with its new Mangrove Observatory (government figures).',
+  eli=['Mangroves are trees that grow in salty water along the coast.',
+       'Abu Dhabi is planting millions of them to bring its coastal forests back.',
+       'A new website uses satellites and field checks to see how many really grow.'],
+  ws=[('Who', 'The Environment Agency – Abu Dhabi (EAD), under the Abu Dhabi Mangrove Initiative. Dolphin Energy funds the observatory.', EADM),
+      ('What', 'The ADMI Mangrove Observatory, a digital platform that brings together restoration data from 19 active projects.', EADM),
+      ('When', 'The observatory launched in July 2026. The Abu Dhabi Mangrove Initiative began in 2022.', EADM),
+      ('Where', 'Restoration sites along the coast of Abu Dhabi, United Arab Emirates.', EADM),
+      ('Why', 'EAD says restoration must be measured by ecosystem recovery and long-term impact, not by trees planted alone.', EADM)],
+  impact=('The observatory records a total growth count of more than 10.4 million mangroves across over 1,775 hectares of restored habitat (EAD figures).', EADM),
+  fact=('Counting What Survives', 'Field surveys, satellite images and partner reports feed one system, so planners can see growth and gaps (EAD).', EADM),
+  people=('Shared data help EAD and its partners coordinate restoration zones and plan using science (EAD).', EADM),
+  nature=('Restored mangrove habitat supports long-term ecosystem recovery and resilience along the coast (EAD).', EADM),
+  support_h='Learn More About the Observatory',
+  btns=[('Visit the Mangrove Observatory', 'https://admangroveobservatory.ead.ae/'), ('Read the Launch News', EADM[0])],
+  bottom=('Want to go deeper? The observatory shows the latest restoration data.', 'https://admangroveobservatory.ead.ae/', 'For Further Information'),
+  widget=None, see=[('Mangroves.html', 'Mangroves', 'Why coastal mangrove forests matter, and the teams restoring them.')],
+  pin={'status': 'active', 'pins': [{'lat': 24.45, 'lng': 54.43, 'label': 'Abu Dhabi coast, United Arab Emirates', 'basis': 'page'}]}),
+ dict(slug='Gaganyaan', title='Gaganyaan G1 Uncrewed Flight (ISRO)', short='Gaganyaan', cat='space',
+  hub=('Space.html', 'Space'), cls='agency', status='active', glass='space', label='Agency solution · in development',
+  img=('South_India_Sri_Lanka_ISS_2024.jpg', 1920, 1280, 'Southern India and Sri Lanka under scattered clouds, seen from the International Space Station'),
+  credit='NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)',
+  hook="India is testing its first crew capsule with a robot in the seat.",
+  wow=("The human-rated HLVM3 rocket stands 53 metres tall and weighs 640 tonnes, with an escape system to pull the crew module clear (ISRO).", ISROG1),
+  lead='Gaganyaan G1, ISRO\'s first uncrewed Gaganyaan flight, is targeted for late 2026 on the human-rated HLVM3 rocket (ISRO).',
+  eli=['India wants to send its own astronauts into space.',
+       'First, it will fly the crew capsule with a robot called Vyommitra instead of people.',
+       'If the test goes well, astronauts can fly on later missions.'],
+  ws=[('Who', 'The Indian Space Research Organisation (ISRO).', ISROG),
+      ('What', 'The first uncrewed flight of Gaganyaan, carrying the half-humanoid robot Vyommitra to test systems before crewed flights.', DDG),
+      ('When', 'Targeted for the last quarter of 2026. ISRO has not announced a launch date.', DDG),
+      ('Where', 'From the Satish Dhawan Space Centre (SDSC), Sriharikota, into low Earth orbit.', ISROG1),
+      ('Why', 'Gaganyaan aims to fly a crew of 3 to a 400 km orbit for 3 days and bring them back safely to Earth (ISRO).', ISROG)],
+  impact=('HLVM3 is a three-stage rocket that can carry about 10 tonnes to low Earth orbit, rebuilt from LVM3 to meet human safety requirements (ISRO).', ISROG1),
+  fact=('Stacking Began in 2024', 'On Dec. 18, 2024, ISRO began stacking the HLVM3 rocket for the G1 mission at SDSC-SHAR (ISRO).', ISROG1),
+  people=('Gaganyaan builds life support, crew escape and crew safety know-how for human spaceflight (ISRO).', ISROG),
+  nature=('ISRO lists space station building and crewed missions to the Moon and Mars among the future work Gaganyaan prepares for (ISRO).', ISROG),
+  support_h='Learn More About Gaganyaan',
+  btns=[('ISRO Gaganyaan', ISROG[0]), ('Join NASA Citizen Science', CITSCI)],
+  bottom=('Want to go deeper? ISRO has the full Gaganyaan story.', ISROG[0], 'For Further Information'),
+  widget=W('Gaganyaan G1', 'Target: late 2026 (fourth quarter). Launch date TBA; ISRO has not set a date yet.', DDG, 'ISRO',
+           milestones=[('2024-12-18', 'HLVM3 stacking begins at SDSC-SHAR')], news='Gaganyaan'),
+  see=[],
+  pin={'status': 'active', 'pins': [{'lat': 13.72, 'lng': 80.23, 'label': 'Satish Dhawan Space Centre, Sriharikota, India (launch site)', 'basis': 'launch'}], 'strip': 'orbit'}),
 ]
 
 # Existing pages that link back (idempotent XLINK1019 block). Only entries whose new page is in SHIP are written.
 XBACK = {
  'CryoSat.html': [('Thwaites_Glacier_Collaboration.html', 'International Thwaites Glacier Collaboration', 'About 100 scientists studying how fast Thwaites could raise sea levels.')],
+ 'Mangroves.html': [('Abu_Dhabi_Mangroves.html', 'Abu Dhabi Mangrove Restoration', 'Millions of mangroves planted along the Abu Dhabi coast, tracked by an observatory.')],
 }
 
 CSS = '''/* BLUF1019:START (generated by scripts/batch-1019-content.py) */

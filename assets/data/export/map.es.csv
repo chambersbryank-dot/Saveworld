@@ -5,6 +5,8 @@
 4ocean,active,Océano,Dominican Republic (country-level),18.49,-69.93,page,https://www.savingplanets.com/es/4ocean.html
 Aditya-L1 (ISRO),active,Clima espacial,"ISRO headquarters, Bengaluru, India (operating agency)",12.971,77.594,hq,https://www.savingplanets.com/es/Aditya_L1.html
 Adopt-a-Beach (Alliance for the Great Lakes),active,Lagos,"Chicago, Illinois (HQ, Lake Michigan)",41.88,-87.63,hq,https://www.savingplanets.com/es/Alliance_for_the_Great_Lakes_Adopt_a_Beach.html
+African Parks,active,Bosques,"Matusadona National Park, Zimbabwe",-16.85,28.55,page,https://www.savingplanets.com/es/African_Parks.html
+African Parks,active,Bosques,"Zakouma National Park, Chad",10.9,19.8,page,https://www.savingplanets.com/es/African_Parks.html
 "ALOS-4 ""DAICHI-4"" (JAXA)",active,Observación de la Tierra,"Launched from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/es/ALOS-4.html
 American Forests,active,Bosques,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/es/American_Forests.html
 American Rivers,active,Ríos,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/es/American_Rivers.html
@@ -56,6 +58,7 @@ Coral Restoration Foundation,active,Océano,Florida Keys,25.09,-80.44,page,https
 "Coral Vita, granjas de coral en tierra",active,Océano,"Grand Bahama, The Bahamas (Coral Vita coral farm)",26.53,-78.7,page,https://www.savingplanets.com/es/Coral_Vita.html
 "CRISTAL, altímetro de hielo y nieve polares (ESA)",active,Polos,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/es/CRISTAL.html
 "CryoSat, misión del hielo (ESA)",active,Polos,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/es/CryoSat.html
+Digital Earth Africa,active,Observación de la Tierra,"icipe, Nairobi, Kenya (host of the programme)",-1.2216,36.8962,hq,https://www.savingplanets.com/es/Digital_Earth_Africa.html
 "Dragonfly, rotorcraft para Titán (NASA)",upcoming,Proyecto Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/es/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Observación de la Tierra,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/es/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,Observación de la Tierra,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/es/EarthCARE.html
@@ -141,6 +144,7 @@ Marismas,active,Océano,Worldwide,,,,https://www.savingplanets.com/es/Salt_Marsh
 Meteosat de Tercera Generación (ESA / EUMETSAT),active,Observación de la Tierra,"MTG-I2 launched from Europe's Spaceport, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/es/Meteosat_Third_Generation.html
 MetOp-SG-A1 y Sentinel-5A (ESA / EUMETSAT),active,Observación de la Tierra,"Launched from Kourou, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/es/MetOp-SG-A1_Sentinel-5A.html
 Misión de la Constelación RADARSAT (Canadá),active,Observación de la Tierra,"CSA Satellite Operations Control Centre, Longueuil, Quebec",45.52,-73.39,hq,https://www.savingplanets.com/es/RCM.html
+Misión Emiratí a Marte (sonda Hope),active,Espacio,"UAE Space Agency, United Arab Emirates",24.45,54.38,hq,https://www.savingplanets.com/es/Hope_Mars_Mission.html
 Misión TEMPO de calidad del aire (NASA),active,Observación de la Tierra,"Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",42.381,-71.128,hq,https://www.savingplanets.com/es/TEMPO.html
 MMX,upcoming,Eliminación espacial,"Launching from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/es/MMX.html
 Mote Marine Laboratory,active,Océano,"Sarasota, Florida (HQ)",27.33,-82.58,hq,https://www.savingplanets.com/es/Mote_Marine_Laboratory.html
@@ -182,6 +186,7 @@ Ramses (ESA / JAXA),upcoming,Defensa planetaria,"ESA headquarters, Paris (operat
 Recuperación de agua en la ISS (NASA),active,Proyecto Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/es/ISS_Water_Recovery.html
 Red de flotadores oceánicos Argo,active,Océano,"Argo Program Office, Scripps Institution of Oceanography, San Diego",32.866,-117.254,hq,https://www.savingplanets.com/es/Argo.html
 Reentrada asistida de Aeolus (ESA),active,Eliminación espacial,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/es/Aeolus.html
+Restauración de manglares de Abu Dabi,active,Océano,"Abu Dhabi coast, United Arab Emirates",24.45,54.43,page,https://www.savingplanets.com/es/Abu_Dhabi_Mangroves.html
 Restauración del río Elwha,active,Ríos,"Elwha River, Washington",48.1,-123.56,page,https://www.savingplanets.com/es/Elwha_River_Restoration.html
 Restauración del río Kissimmee (Florida),active,Ríos,"Kissimmee River, central Florida",27.5,-81.05,page,https://www.savingplanets.com/es/Kissimmee_River_Restoration.html
 Restauración del río Penobscot (Maine),active,Ríos,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/es/Penobscot_River_Restoration.html
@@ -244,6 +249,7 @@ U.S. Deorbit Vehicle (NASA / SpaceX),upcoming,Eliminación espacial,"NASA Johnso
 "Veggie, el huerto espacial (NASA)",active,Proyecto Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/es/Veggie_Space_Garden.html
 Vigil (ESA),upcoming,Clima espacial,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/es/Vigil.html
 Voyager 1 y 2 (NASA),active,Proyecto Rawane,"Cape Canaveral, Florida, where both Voyagers launched in 1977",28.392,-80.605,page,https://www.savingplanets.com/es/Voyager.html
+Vuelo no tripulado G1 de Gaganyaan (ISRO),active,Espacio,"Satish Dhawan Space Centre, Sriharikota, India (launch site)",13.72,80.23,launch,https://www.savingplanets.com/es/Gaganyaan.html
 Waterkeeper Alliance,active,Ríos,New York (HQ),40.71,-74.01,hq,https://www.savingplanets.com/es/Waterkeeper_Alliance.html
 Waterkeeper Alliance,active,Ríos,Hudson River (where the movement began),41.7,-73.95,page,https://www.savingplanets.com/es/Waterkeeper_Alliance.html
 Waterkeeper Alliance,active,Ríos,"Mahanadi River, India",20.46,85.88,page,https://www.savingplanets.com/es/Waterkeeper_Alliance.html

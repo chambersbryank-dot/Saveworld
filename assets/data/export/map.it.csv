@@ -5,6 +5,8 @@
 4ocean,active,Oceano,Dominican Republic (country-level),18.49,-69.93,page,https://www.savingplanets.com/it/4ocean.html
 Aditya-L1 (ISRO),active,Meteo spaziale,"ISRO headquarters, Bengaluru, India (operating agency)",12.971,77.594,hq,https://www.savingplanets.com/it/Aditya_L1.html
 Adopt-a-Beach (Alliance for the Great Lakes),active,Laghi,"Chicago, Illinois (HQ, Lake Michigan)",41.88,-87.63,hq,https://www.savingplanets.com/it/Alliance_for_the_Great_Lakes_Adopt_a_Beach.html
+African Parks,active,Foreste,"Matusadona National Park, Zimbabwe",-16.85,28.55,page,https://www.savingplanets.com/it/African_Parks.html
+African Parks,active,Foreste,"Zakouma National Park, Chad",10.9,19.8,page,https://www.savingplanets.com/it/African_Parks.html
 "ALOS-4 ""DAICHI-4"" (JAXA)",active,Osservazione della Terra,"Launched from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/it/ALOS-4.html
 American Forests,active,Foreste,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/it/American_Forests.html
 American Rivers,active,Fiumi,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/it/American_Rivers.html
@@ -52,6 +54,7 @@ Coral Restoration Foundation,active,Oceano,Florida Keys,25.09,-80.44,page,https:
 "CryoSat, missione dei ghiacci (ESA)",active,Poli,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/it/CryoSat.html
 Data center orbitali,active,Spazio,From orbit,,,,https://www.savingplanets.com/it/Orbital_Data_Centers.html
 Deposito globale di semi delle Svalbard,active,Poli,"Svalbard Global Seed Vault, near Longyearbyen, Svalbard, Norway",78.2357,15.4913,page,https://www.savingplanets.com/it/Svalbard_Global_Seed_Vault.html
+Digital Earth Africa,active,Osservazione della Terra,"icipe, Nairobi, Kenya (host of the programme)",-1.2216,36.8962,hq,https://www.savingplanets.com/it/Digital_Earth_Africa.html
 "Dragonfly, velivolo a rotori per Titano (NASA)",upcoming,Progetto Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/it/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Osservazione della Terra,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/it/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,Osservazione della Terra,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/it/EarthCARE.html
@@ -139,6 +142,7 @@ Lucy (NASA),active,Difesa planetaria,"NASA Goddard, Greenbelt, Maryland (mission
 Meteosat di terza generazione (ESA / EUMETSAT),active,Osservazione della Terra,"MTG-I2 launched from Europe's Spaceport, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/it/Meteosat_Third_Generation.html
 MetOp-SG-A1 e Sentinel-5A (ESA / EUMETSAT),active,Osservazione della Terra,"Launched from Kourou, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/it/MetOp-SG-A1_Sentinel-5A.html
 Missione della costellazione RADARSAT (Canada),active,Osservazione della Terra,"CSA Satellite Operations Control Centre, Longueuil, Quebec",45.52,-73.39,hq,https://www.savingplanets.com/it/RCM.html
+Missione emiratina su Marte (sonda Hope),active,Spazio,"UAE Space Agency, United Arab Emirates",24.45,54.38,hq,https://www.savingplanets.com/it/Hope_Mars_Mission.html
 Missione TEMPO sulla qualità dell'aria (NASA),active,Osservazione della Terra,"Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",42.381,-71.128,hq,https://www.savingplanets.com/it/TEMPO.html
 MMX,upcoming,Smaltimento dei detriti spaziali,"Launching from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/it/MMX.html
 Mote Marine Laboratory,active,Oceano,"Sarasota, Florida (HQ)",27.33,-82.58,hq,https://www.savingplanets.com/it/Mote_Marine_Laboratory.html
@@ -190,6 +194,7 @@ Rimozione delle dighe del fiume Klamath,active,Fiumi,"Klamath River, Oregon–Ca
 Ripristino del fiume Elwha,active,Fiumi,"Elwha River, Washington",48.1,-123.56,page,https://www.savingplanets.com/it/Elwha_River_Restoration.html
 Ripristino del fiume Kissimmee (Florida),active,Fiumi,"Kissimmee River, central Florida",27.5,-81.05,page,https://www.savingplanets.com/it/Kissimmee_River_Restoration.html
 Ripristino del fiume Penobscot (Maine),active,Fiumi,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/it/Penobscot_River_Restoration.html
+Ripristino delle mangrovie di Abu Dhabi,active,Oceano,"Abu Dhabi coast, United Arab Emirates",24.45,54.43,page,https://www.savingplanets.com/it/Abu_Dhabi_Mangroves.html
 River Cleanup,active,Fiumi,"Citarum River, Indonesia",-6.95,107.6,page,https://www.savingplanets.com/it/River_Cleanup.html
 Satellite di legno LignoSat (Kyoto University),active,Smaltimento dei detriti spaziali,"Kyoto University, Japan (mission lead)",35.026,135.781,hq,https://www.savingplanets.com/it/LignoSat.html
 Satelliti di ricerca e soccorso SARSAT (NOAA),active,Osservazione della Terra,"U.S. SARSAT Mission Control Center, Suitland, Maryland (NOAA)",38.852,-76.934,hq,https://www.savingplanets.com/it/SARSAT.html
@@ -243,6 +248,7 @@ Tunnel Tideway di Londra (super fognatura),active,Fiumi,"Acton, West London (tun
 U.S. Deorbit Vehicle (NASA / SpaceX),upcoming,Smaltimento dei detriti spaziali,"NASA Johnson Space Center, Houston (ISS program)",29.559,-95.09,hq,https://www.savingplanets.com/it/US_Deorbit_Vehicle.html
 "Veggie, l'orto spaziale (NASA)",active,Progetto Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/it/Veggie_Space_Garden.html
 Vigil (ESA),upcoming,Meteo spaziale,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/it/Vigil.html
+Volo senza equipaggio G1 di Gaganyaan (ISRO),active,Spazio,"Satish Dhawan Space Centre, Sriharikota, India (launch site)",13.72,80.23,launch,https://www.savingplanets.com/it/Gaganyaan.html
 Voyager 1 e 2 (NASA),active,Progetto Rawane,"Cape Canaveral, Florida, where both Voyagers launched in 1977",28.392,-80.605,page,https://www.savingplanets.com/it/Voyager.html
 Waterkeeper Alliance,active,Fiumi,New York (HQ),40.71,-74.01,hq,https://www.savingplanets.com/it/Waterkeeper_Alliance.html
 Waterkeeper Alliance,active,Fiumi,Hudson River (where the movement began),41.7,-73.95,page,https://www.savingplanets.com/it/Waterkeeper_Alliance.html

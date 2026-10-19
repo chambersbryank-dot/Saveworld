@@ -4,6 +4,8 @@
 4ocean,active,المحيط,Guatemala (country-level),14.63,-90.51,page,https://www.savingplanets.com/ar/4ocean.html
 4ocean,active,المحيط,Dominican Republic (country-level),18.49,-69.93,page,https://www.savingplanets.com/ar/4ocean.html
 Aditya-L1 (ISRO),active,طقس الفضاء,"ISRO headquarters, Bengaluru, India (operating agency)",12.971,77.594,hq,https://www.savingplanets.com/ar/Aditya_L1.html
+African Parks,active,الغابات,"Matusadona National Park, Zimbabwe",-16.85,28.55,page,https://www.savingplanets.com/ar/African_Parks.html
+African Parks,active,الغابات,"Zakouma National Park, Chad",10.9,19.8,page,https://www.savingplanets.com/ar/African_Parks.html
 "ALOS-4 ""DAICHI-4"" (JAXA)",active,رصد الأرض,"Launched from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/ar/ALOS-4.html
 American Forests,active,الغابات,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/ar/American_Forests.html
 American Rivers,active,الأنهار,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/ar/American_Rivers.html
@@ -37,6 +39,7 @@ Coral Gardeners,active,المحيط,Thailand (country-level),9.5,99.9,page,https
 Coral IVF (مؤسسة الحاجز المرجاني العظيم),active,المحيط,"Great Barrier Reef, Australia",-18.29,147.7,page,https://www.savingplanets.com/ar/Coral_IVF.html
 Coral Vita، مزارع المرجان على اليابسة,active,المحيط,"Grand Bahama, The Bahamas (Coral Vita coral farm)",26.53,-78.7,page,https://www.savingplanets.com/ar/Coral_Vita.html
 CRISTAL، مقياس ارتفاع الجليد والثلج القطبي (ESA),active,القطبان,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/ar/CRISTAL.html
+Digital Earth Africa,active,رصد الأرض,"icipe, Nairobi, Kenya (host of the programme)",-1.2216,36.8962,hq,https://www.savingplanets.com/ar/Digital_Earth_Africa.html
 DSCOVR / EPIC (NASA–NOAA),active,رصد الأرض,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/ar/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,رصد الأرض,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/ar/EarthCARE.html
 Eden: People+Planet,active,الغابات,"Rubeho Mountains, Tanzania",-7.0,36.6,page,https://www.savingplanets.com/ar/Eden_People_Planet.html
@@ -177,6 +180,7 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 إزالة سدود نهر كلاماث,active,الأنهار,"Klamath River, Oregon–California",41.95,-122.4,page,https://www.savingplanets.com/ar/Klamath_River_Dam_Removal.html
 إنسيلادوس,active,الفضاء,From orbit,,,,https://www.savingplanets.com/ar/Enceladus.html
 استرجاع الماء في محطة الفضاء الدولية (ناسا),active,مشروع Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/ar/ISS_Water_Recovery.html
+استعادة أشجار القرم في أبوظبي,active,المحيط,"Abu Dhabi coast, United Arab Emirates",24.45,54.43,page,https://www.savingplanets.com/ar/Abu_Dhabi_Mangroves.html
 استعادة نهر إلوا,active,الأنهار,"Elwha River, Washington",48.1,-123.56,page,https://www.savingplanets.com/ar/Elwha_River_Restoration.html
 استعادة نهر بينوبسكوت (ولاية مين),active,الأنهار,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/ar/Penobscot_River_Restoration.html
 استعادة نهر كيسيمي (فلوريدا),active,الأنهار,"Kissimmee River, central Florida",27.5,-81.05,page,https://www.savingplanets.com/ar/Kissimmee_River_Restoration.html
@@ -215,6 +219,7 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 خدمة كوبرنيكوس لرصد الغلاف الجوي (CAMS),active,رصد الأرض,"ECMWF, Reading, United Kingdom",51.42,-0.95,hq,https://www.savingplanets.com/ar/CAMS.html
 دراغون فلاي، مروحية تيتان (ناسا),upcoming,مشروع Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/ar/Dragonfly.html
 ذئاب يلوستون,active,الغابات,"Yellowstone National Park, Wyoming",44.6,-110.5,page,https://www.savingplanets.com/ar/Yellowstone_Wolves.html
+رحلة غاغانيان G1 غير المأهولة (ISRO),active,الفضاء,"Satish Dhawan Space Centre, Sriharikota, India (launch site)",13.72,80.23,launch,https://www.savingplanets.com/ar/Gaganyaan.html
 سماب، رطوبة التربة (ناسا),active,رصد الأرض,"NASA Jet Propulsion Laboratory, Pasadena, California",34.2,-118.17,page,https://www.savingplanets.com/ar/SMAP.html
 سوهو، المرصد الشمسي والهيليوسفيري (وكالة الفضاء الأوروبية / ناسا),active,طقس الفضاء,"Toulouse, France, where SOHO was assembled",43.604,1.444,page,https://www.savingplanets.com/ar/SOHO.html
 شبكة عوامات المحيط Argo,active,المحيط,"Argo Program Office, Scripps Institution of Oceanography, San Diego",32.866,-117.254,hq,https://www.savingplanets.com/ar/Argo.html
@@ -241,6 +246,7 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 مروج عشب البوسيدونيا البحري,active,المحيط,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/ar/Posidonia_Meadows.html
 مسبار باركر الشمسي (ناسا),active,طقس الفضاء,"Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",39.165,-76.898,hq,https://www.savingplanets.com/ar/Parker_Solar_Probe.html
 مسح كاتالينا للسماء (Catalina Sky Survey),active,الدفاع الكوكبي,"Lunar and Planetary Laboratory, University of Arizona, Tucson",32.233,-110.95,hq,https://www.savingplanets.com/ar/Catalina_Sky_Survey.html
+مشروع الإمارات لاستكشاف المريخ (مسبار الأمل),active,الفضاء,"UAE Space Agency, United Arab Emirates",24.45,54.38,hq,https://www.savingplanets.com/ar/Hope_Mars_Mission.html
 مهمة TEMPO لجودة الهواء (ناسا),active,رصد الأرض,"Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",42.381,-71.128,hq,https://www.savingplanets.com/ar/TEMPO.html
 مهمة كوكبة RADARSAT (كندا),active,رصد الأرض,"CSA Satellite Operations Control Centre, Longueuil, Quebec",45.52,-73.39,hq,https://www.savingplanets.com/ar/RCM.html
 ميثاق صفر حطام (وكالة الفضاء الأوروبية),active,التخلص من الحطام الفضائي,"ESA headquarters, Paris (charter facilitator)",48.849,2.302,hq,https://www.savingplanets.com/ar/Zero_Debris_Charter.html

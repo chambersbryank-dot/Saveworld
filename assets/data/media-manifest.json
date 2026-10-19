@@ -4503,5 +4503,60 @@
   "height": 6000,
   "srcset": "https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-480.2dc98166d19a.webp 480w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-800.ec345882788b.webp 800w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-1280.0a4236185514.webp 1280w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-1920.914f05237fb8.webp 1920w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-2560.64d0338ccb2a.webp 2560w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-3840.44ac109696f9.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-480.253d10d0b586.avif 480w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-800.4b8d3914b239.avif 800w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-1280.fef13989bc44.avif 1280w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-1920.d0777dc19c49.avif 1920w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-2560.13db3a221ed3.avif 2560w, https://media.savingplanets.com/images/Thwaites_Glacier_Landsat8_2019-3840.ef1edbffac69.avif 3840w"
+ },
+ "images/Abu_Dhabi_Coast_ISS_2024.jpg": {
+  "url": "https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024.567a8e0d1b25.jpg",
+  "key": "images/Abu_Dhabi_Coast_ISS_2024.567a8e0d1b25.jpg",
+  "bytes": 11814342,
+  "sha256": "567a8e0d1b255488a9ba3942e1555f6eb0624a07fcb932b7c14f7dcf546c5abb",
+  "type": "image/jpeg",
+  "width": 8256,
+  "height": 5504,
+  "srcset": "https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-480.1feaa5566ab5.webp 480w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-800.0575f0a3b2e3.webp 800w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-1280.4d2dadee23b8.webp 1280w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-1920.ffbda61662ff.webp 1920w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-2560.dd0ea94db49e.webp 2560w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-3840.ddffb64e18ae.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-480.20c7459fcea0.avif 480w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-800.d2645d3471cb.avif 800w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-1280.f6e517616187.avif 1280w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-1920.cb5db5aa7867.avif 1920w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-2560.c37f7c2ad2d9.avif 2560w, https://media.savingplanets.com/images/Abu_Dhabi_Coast_ISS_2024-3840.499b5f0757de.avif 3840w"
+ },
+ "images/Lake_Kariba_ISS_2024.jpg": {
+  "url": "https://media.savingplanets.com/images/Lake_Kariba_ISS_2024.fa976f2c6eaf.jpg",
+  "key": "images/Lake_Kariba_ISS_2024.fa976f2c6eaf.jpg",
+  "bytes": 8395832,
+  "sha256": "fa976f2c6eaf7e4f9f8a98d5ea9bd10e522706f0cc3d55e7bb1ccea135bd032c",
+  "type": "image/jpeg",
+  "width": 8256,
+  "height": 5504,
+  "srcset": "https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-480.1294f3f60b5f.webp 480w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-800.2bc93a2ff422.webp 800w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-1280.90052506fa36.webp 1280w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-1920.76fadc8758be.webp 1920w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-2560.a23eb7204977.webp 2560w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-3840.58463ac82fec.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-480.4d396a275873.avif 480w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-800.4dadf1708dcb.avif 800w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-1280.2ae4b1e1d323.avif 1280w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-1920.7e3e408642f5.avif 1920w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-2560.def0193bfd4f.avif 2560w, https://media.savingplanets.com/images/Lake_Kariba_ISS_2024-3840.cf4b193fc87e.avif 3840w"
+ },
+ "images/Okavango_Delta_ISS_2025.jpg": {
+  "url": "https://media.savingplanets.com/images/Okavango_Delta_ISS_2025.24525cbf8b53.jpg",
+  "key": "images/Okavango_Delta_ISS_2025.24525cbf8b53.jpg",
+  "bytes": 766965,
+  "sha256": "24525cbf8b53ceb863fd7e7c02a335a9df39601b2a7540811ebf7f9b570f3cb4",
+  "type": "image/jpeg",
+  "width": 4928,
+  "height": 2768,
+  "srcset": "https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-480.5a21eb814a98.webp 480w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-800.472c5da5e5c6.webp 800w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-1280.b890a0e0752d.webp 1280w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-1920.99ee6c3b5c3b.webp 1920w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-2560.19df4745a971.webp 2560w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-3840.c23c88d764d6.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-480.2749569850a5.avif 480w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-800.495e38c5eef8.avif 800w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-1280.f84ac5db181e.avif 1280w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-1920.0786aa3488ea.avif 1920w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-2560.d2b937d520c0.avif 2560w, https://media.savingplanets.com/images/Okavango_Delta_ISS_2025-3840.bd876b190618.avif 3840w"
+ },
+ "images/South_India_Sri_Lanka_ISS_2024.jpg": {
+  "url": "https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024.86ef08a09313.jpg",
+  "key": "images/South_India_Sri_Lanka_ISS_2024.86ef08a09313.jpg",
+  "bytes": 6243876,
+  "sha256": "86ef08a093139b106ea6a42e2419b301d10ae9d2e5be530bf81500daa1a67f00",
+  "type": "image/jpeg",
+  "width": 8256,
+  "height": 5504,
+  "srcset": "https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-480.ac0784e44110.webp 480w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-800.e7691ad7a5d2.webp 800w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-1280.b765b4625b60.webp 1280w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-1920.5d47b9a24a2d.webp 1920w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-2560.65742a94e8ae.webp 2560w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-3840.5db867552e31.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-480.6d8f28412677.avif 480w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-800.b1c946e5f698.avif 800w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-1280.21a3271dd91d.avif 1280w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-1920.d1a5681a94c6.avif 1920w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-2560.d8fdac70bc08.avif 2560w, https://media.savingplanets.com/images/South_India_Sri_Lanka_ISS_2024-3840.6fdbf96c73ca.avif 3840w"
+ },
+ "images/Valles_Marineris_Viking_PIA00422.jpg": {
+  "url": "https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422.08b5443c135e.jpg",
+  "key": "images/Valles_Marineris_Viking_PIA00422.08b5443c135e.jpg",
+  "bytes": 3637536,
+  "sha256": "08b5443c135e5b9d06f8dbc4251d457fd702fc2f41d91f711ea8efffdbe57816",
+  "type": "image/jpeg",
+  "width": 9002,
+  "height": 3196,
+  "srcset": "https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-480.036e12c0affe.webp 480w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-800.7fb04ac55ba3.webp 800w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-1280.71dfba139b0b.webp 1280w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-1920.a804cdb296e9.webp 1920w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-2560.abedef40ff25.webp 2560w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-3840.c60c29f9d581.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-480.a24b3531e1eb.avif 480w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-800.a047bec6fa5a.avif 800w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-1280.9aca57461aca.avif 1280w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-1920.3052f6619a98.avif 1920w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-2560.216307bd672d.avif 2560w, https://media.savingplanets.com/images/Valles_Marineris_Viking_PIA00422-3840.51b811c6d0d5.avif 3840w"
  }
 }

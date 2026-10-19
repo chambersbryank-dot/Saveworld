@@ -77,6 +77,11 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Svalbard_Global_Seed_Vault': ('Svalbard_Nordaustlandet_Landsat9_2022.jpg', 'NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)'),
     'Thwaites_Glacier_Collaboration': ('Thwaites_Glacier_Landsat8_2019.jpg', 'NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)'),
     'Carbfix': ('Iceland_Volcanic_Landscape_jsc2026e406058.jpg', 'NASA/James Blair (jsc2026e406058, Iceland)'),
+    'African_Parks': ('Lake_Kariba_ISS_2024.jpg', 'NASA (iss071e047913, Lake Kariba between Zambia and Zimbabwe, May 2, 2024)'),
+    'Digital_Earth_Africa': ('Okavango_Delta_ISS_2025.jpg', 'NASA (iss073e0604445, Okavango Delta, Botswana, Aug. 30, 2025)'),
+    'Hope_Mars_Mission': ('Valles_Marineris_Viking_PIA00422.jpg', 'NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)'),
+    'Abu_Dhabi_Mangroves': ('Abu_Dhabi_Coast_ISS_2024.jpg', 'NASA (iss071e378611, Abu Dhabi, July 23, 2024)'),
+    'Gaganyaan': ('South_India_Sri_Lanka_ISS_2024.jpg', 'NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),

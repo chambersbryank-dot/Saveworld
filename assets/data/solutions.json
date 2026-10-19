@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T16:15:04.841Z",
+ "generated": "2026-10-19T16:33:17.373Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -316,6 +316,10 @@
      "name": "CryoSat Ice Mission (ESA)"
     },
     {
+     "href": "Digital_Earth_Africa.html",
+     "name": "Digital Earth Africa"
+    },
+    {
      "href": "DSCOVR_EPIC.html",
      "name": "DSCOVR / EPIC (NASA–NOAA)"
     },
@@ -466,6 +470,10 @@
    "href": "Deforestation.html",
    "items": [
     {
+     "href": "African_Parks.html",
+     "name": "African Parks"
+    },
+    {
      "href": "American_Forests.html",
      "name": "American Forests"
     },
@@ -604,6 +612,10 @@
     {
      "href": "4ocean.html",
      "name": "4ocean"
+    },
+    {
+     "href": "Abu_Dhabi_Mangroves.html",
+     "name": "Abu Dhabi Mangrove Restoration"
     },
     {
      "href": "Argo.html",
@@ -930,8 +942,16 @@
      "name": "ClearSpace"
     },
     {
+     "href": "Hope_Mars_Mission.html",
+     "name": "Emirates Mars Mission (Hope Probe)"
+    },
+    {
      "href": "Enceladus.html",
      "name": "Enceladus"
+    },
+    {
+     "href": "Gaganyaan.html",
+     "name": "Gaganyaan G1 Uncrewed Flight (ISRO)"
     },
     {
      "href": "Globe_at_Night.html",
@@ -1082,17 +1102,17 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 194,
+  "solutions": 199,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 17,
-   "agency": 105,
-   "nonprofit": 51,
-   "natural": 17,
-   "government": 4
+   "government": 5,
+   "agency": 108,
+   "nonprofit": 52,
+   "natural": 17
   },
-  "upcomingMissions": 23,
+  "upcomingMissions": 24,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1112,16 +1132,17 @@
     ]
    }
   ],
-  "taggedSolutions": 194
+  "taggedSolutions": 199
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 32,
+   "solutions": 33,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 4,
+    "government": 1,
     "agency": 4,
     "nonprofit": 18,
     "natural": 6
@@ -1176,12 +1197,12 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 22,
+   "solutions": 23,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
+    "nonprofit": 14,
     "natural": 5,
-    "nonprofit": 13,
     "agency": 3,
     "corporate": 1
    },
@@ -1198,15 +1219,16 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 6,
+   "solutions": 8,
    "horizon": 1,
    "hubs": 1,
    "byClassification": {
     "corporate": 3,
     "natural": 2,
+    "agency": 2,
     "government": 1
    },
-   "upcomingMissions": 1,
+   "upcomingMissions": 2,
    "impactTotals": []
   },
   "planetary-defense": {
@@ -1247,11 +1269,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 46,
+   "solutions": 47,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 44,
+    "agency": 45,
     "nonprofit": 1,
     "corporate": 1
    },
@@ -1290,6 +1312,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Abu_Dhabi_Mangroves.html",
+   "title": "Abu Dhabi Mangrove Restoration",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Aditya_L1.html",
@@ -1331,6 +1364,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "African_Parks.html",
+   "title": "African Parks",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
@@ -1882,6 +1926,17 @@
    "missions": []
   },
   {
+   "url": "Digital_Earth_Africa.html",
+   "title": "Digital Earth Africa",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "Dragonfly.html",
    "title": "Dragonfly Titan Rotorcraft (NASA)",
    "category": "project-r",
@@ -2193,6 +2248,23 @@
    "missions": []
   },
   {
+   "url": "Gaganyaan.html",
+   "title": "Gaganyaan G1 Uncrewed Flight (ISRO)",
+   "category": "space",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Gaganyaan G1",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-19"
+  },
+  {
    "url": "Galileo.html",
    "title": "Galileo Satellite Navigation (EU / ESA)",
    "category": "earth-observation",
@@ -2497,6 +2569,23 @@
      }
     }
    ]
+  },
+  {
+   "url": "Hope_Mars_Mission.html",
+   "title": "Emirates Mars Mission (Hope Probe)",
+   "category": "space",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Emirates Mars Mission (Hope)",
+     "upcoming": false,
+     "next": null
+    }
+   ],
+   "added": "2026-10-19"
   },
   {
    "url": "HydroGNSS.html",

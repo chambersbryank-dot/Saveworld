@@ -11,12 +11,20 @@
   "sig": "a92c85008f63",
   "date": "2026-10-19"
  },
+ "Abu_Dhabi_Mangroves.html": {
+  "sig": "16a3e8d0a46f",
+  "date": "2026-10-19"
+ },
  "Aditya_L1.html": {
   "sig": "29188cadc9ff",
   "date": "2026-10-19"
  },
  "Aeolus.html": {
   "sig": "5f47316e9070",
+  "date": "2026-10-19"
+ },
+ "African_Parks.html": {
+  "sig": "e47701ebf497",
   "date": "2026-10-19"
  },
  "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
@@ -167,6 +175,10 @@
   "sig": "7385ffb5c570",
   "date": "2026-10-18"
  },
+ "Digital_Earth_Africa.html": {
+  "sig": "c97a11b0215a",
+  "date": "2026-10-19"
+ },
  "Dragonfly.html": {
   "sig": "811a08657f49",
   "date": "2026-10-19"
@@ -271,6 +283,10 @@
   "sig": "9659c885ad1d",
   "date": "2026-10-19"
  },
+ "Gaganyaan.html": {
+  "sig": "af32c9761d51",
+  "date": "2026-10-19"
+ },
  "Galileo.html": {
   "sig": "ad9aea2be696",
   "date": "2026-10-19"
@@ -321,6 +337,10 @@
  },
  "Hera.html": {
   "sig": "292a39f6e57f",
+  "date": "2026-10-19"
+ },
+ "Hope_Mars_Mission.html": {
+  "sig": "f719af9517ba",
   "date": "2026-10-19"
  },
  "HydroGNSS.html": {

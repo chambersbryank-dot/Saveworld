@@ -3,9 +3,12 @@
 4ocean,active,Ocean,Indonesia (country-level),-6.2,106.85,page,https://www.savingplanets.com/4ocean.html
 4ocean,active,Ocean,Guatemala (country-level),14.63,-90.51,page,https://www.savingplanets.com/4ocean.html
 4ocean,active,Ocean,Dominican Republic (country-level),18.49,-69.93,page,https://www.savingplanets.com/4ocean.html
+Abu Dhabi Mangrove Restoration,active,Ocean,"Abu Dhabi coast, United Arab Emirates",24.45,54.43,page,https://www.savingplanets.com/Abu_Dhabi_Mangroves.html
 Aditya-L1 (ISRO),active,Space Weather,"ISRO headquarters, Bengaluru, India (operating agency)",12.971,77.594,hq,https://www.savingplanets.com/Aditya_L1.html
 Adopt-a-Beach (Alliance for the Great Lakes),active,Lakes,"Chicago, Illinois (HQ, Lake Michigan)",41.88,-87.63,hq,https://www.savingplanets.com/Alliance_for_the_Great_Lakes_Adopt_a_Beach.html
 Aeolus Assisted Reentry (ESA),active,Space Disposal,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Aeolus.html
+African Parks,active,Forests,"Matusadona National Park, Zimbabwe",-16.85,28.55,page,https://www.savingplanets.com/African_Parks.html
+African Parks,active,Forests,"Zakouma National Park, Chad",10.9,19.8,page,https://www.savingplanets.com/African_Parks.html
 "ALOS-4 ""DAICHI-4"" (JAXA)",active,Earth Observation,"Launched from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/ALOS-4.html
 American Forests,active,Forests,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/American_Forests.html
 American Rivers,active,Rivers,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/American_Rivers.html
@@ -55,11 +58,13 @@ Coral Restoration Foundation,active,Ocean,Florida Keys,25.09,-80.44,page,https:/
 Coral Vita Land-Based Coral Farms,active,Ocean,"Grand Bahama, The Bahamas (Coral Vita coral farm)",26.53,-78.7,page,https://www.savingplanets.com/Coral_Vita.html
 CRISTAL Polar Ice and Snow Altimeter (ESA),active,Polar,"Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",47.661,9.48,page,https://www.savingplanets.com/CRISTAL.html
 CryoSat Ice Mission (ESA),active,Polar,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,page,https://www.savingplanets.com/CryoSat.html
+Digital Earth Africa,active,Earth Observation,"icipe, Nairobi, Kenya (host of the programme)",-1.2216,36.8962,hq,https://www.savingplanets.com/Digital_Earth_Africa.html
 Dragonfly Titan Rotorcraft (NASA),upcoming,Project Rawane,"Launching from Kennedy Space Center, Florida",28.61,-80.6,launch,https://www.savingplanets.com/Dragonfly.html
 DSCOVR / EPIC (NASA–NOAA),active,Earth Observation,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/DSCOVR_EPIC.html
 EarthCARE (ESA–JAXA),active,Earth Observation,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/EarthCARE.html
 Eden: People+Planet,active,Forests,"Rubeho Mountains, Tanzania",-7.0,36.6,page,https://www.savingplanets.com/Eden_People_Planet.html
 Elwha River Restoration,active,Rivers,"Elwha River, Washington",48.1,-123.56,page,https://www.savingplanets.com/Elwha_River_Restoration.html
+Emirates Mars Mission (Hope Probe),active,Space,"UAE Space Agency, United Arab Emirates",24.45,54.38,hq,https://www.savingplanets.com/Hope_Mars_Mission.html
 EMIT (NASA),active,Earth Observation,"NASA JPL, Pasadena, California (mission management)",34.201,-118.172,hq,https://www.savingplanets.com/EMIT.html
 Enceladus,active,Space,From orbit,,,,https://www.savingplanets.com/Enceladus.html
 EnVision (ESA),upcoming,Project Rawane,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/EnVision.html
@@ -76,6 +81,7 @@ FLEX and Sentinel-3C (ESA),active,Earth Observation,"Launched from Europe's Spac
 "Forest Elephants, Carbon Gardeners",active,Forests,"Brazzaville, Republic of Congo (WCS Congo, forest elephant program)",-4.27,15.28,page,https://www.savingplanets.com/Forest_Elephants.html
 FORUM Far-Infrared Mission (ESA),active,Earth Observation,"Europe's Spaceport, Kourou, French Guiana (planned launch site)",5.236,-52.769,page,https://www.savingplanets.com/FORUM.html
 FreshWater Watch (Earthwatch Europe),active,Rivers,"Oxford, UK (Earthwatch Europe HQ)",51.75,-1.26,hq,https://www.savingplanets.com/FreshWater_Watch.html
+Gaganyaan G1 Uncrewed Flight (ISRO),active,Space,"Satish Dhawan Space Centre, Sriharikota, India (launch site)",13.72,80.23,launch,https://www.savingplanets.com/Gaganyaan.html
 Galileo Satellite Navigation (EU / ESA),active,Earth Observation,"Galileo Control Centre, Oberpfaffenhofen, Germany",48.083,11.281,page,https://www.savingplanets.com/Galileo.html
 "GCOM-C ""SHIKISAI"" (JAXA)",active,Earth Observation,"JAXA headquarters, Tokyo, Japan",35.683,139.56,hq,https://www.savingplanets.com/GCOM-C.html
 GEDI Forest Lidar (NASA),active,Forests,"University of Maryland, College Park (mission lead)",38.986,-76.943,hq,https://www.savingplanets.com/GEDI.html

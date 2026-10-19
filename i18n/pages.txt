@@ -226,3 +226,8 @@ Top_Ten.html
 Svalbard_Global_Seed_Vault.html
 Thwaites_Glacier_Collaboration.html
 Carbfix.html
+African_Parks.html
+Digital_Earth_Africa.html
+Hope_Mars_Mission.html
+Abu_Dhabi_Mangroves.html
+Gaganyaan.html

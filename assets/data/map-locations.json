@@ -2462,6 +2462,70 @@
      "basis": "page"
     }
    ]
+  },
+  "African_Parks.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -16.85,
+     "lng": 28.55,
+     "label": "Matusadona National Park, Zimbabwe",
+     "basis": "page"
+    },
+    {
+     "lat": 10.9,
+     "lng": 19.8,
+     "label": "Zakouma National Park, Chad",
+     "basis": "page"
+    }
+   ]
+  },
+  "Digital_Earth_Africa.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -1.2216,
+     "lng": 36.8962,
+     "label": "icipe, Nairobi, Kenya (host of the programme)",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Hope_Mars_Mission.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 24.45,
+     "lng": 54.38,
+     "label": "UAE Space Agency, United Arab Emirates",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Abu_Dhabi_Mangroves.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 24.45,
+     "lng": 54.43,
+     "label": "Abu Dhabi coast, United Arab Emirates",
+     "basis": "page"
+    }
+   ]
+  },
+  "Gaganyaan.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 13.72,
+     "lng": 80.23,
+     "label": "Satish Dhawan Space Centre, Sriharikota, India (launch site)",
+     "basis": "launch"
+    }
+   ],
+   "strip": "orbit"
   }
  }
 }
