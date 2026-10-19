@@ -584,11 +584,46 @@
    "credit": "NASA/Michael Hopkins (ISS065-E-009492, Spaceborne Computer-2 on the ISS, April 29, 2021)",
    "pos": "50% 50%",
    "r2": "images/Spaceborne_Computer2_iss065e009492.jpg"
+  },
+  "si:ocean": {
+   "credit": "NASA (ISS071-E-449837, July 24, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Bahamas_Atlantic_ISS071_449837.jpg"
+  },
+  "si:oceancleanup": {
+   "credit": "NASA/Shane Kimbrough (ISS065-E-144117, June 23, 2021)",
+   "pos": "50% 50%",
+   "r2": "images/Bahamas_Shallows_ISS065_144117.jpg"
+  },
+  "si:forest": {
+   "credit": "NASA AFRC/Carla Thomas (AfriSAR 2016, Gabon, AFRC2016-0054-105)",
+   "pos": "50% 45%",
+   "r2": "images/Gabon_Rainforest_AFRC2016-0054-105.jpg"
+  },
+  "si:plant": {
+   "credit": "NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006, mangrove restoration, April 12, 2023)",
+   "pos": "50% 50%",
+   "r2": "images/Mangrove_Seedling_KSC-20230412-GEB01_0006.jpg"
+  },
+  "si:rivers": {
+   "credit": "NASA (ISS073-E-0880658, Mississippi River, Oct. 15, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Mississippi_River_ISS073_0880658.jpg"
+  },
+  "si:elwha": {
+   "credit": "NASA/Landsat 8 (Olympic National Park, GSFC_20171208_Archive_e000239)",
+   "pos": "50% 55%",
+   "r2": "images/Olympic_NP_Landsat8_GSFC_e000239.jpg"
+  },
+  "si:riversea": {
+   "credit": "NASA (ISS073-E-0818427, river meeting the sea, Oct. 2, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Bassac_River_ISS073_0818427.jpg"
   }
  },
  "pages": {
   "404.html": "assets/hero/learn",
-  "4ocean.html": "assets/OceanBeach.JPG",
+  "4ocean.html": "si:ocean",
   "ALOS-4.html": "assets/Rondonia_Deforestation_STS46.jpg",
   "AP_IB_Physics.html": "assets/hero/learn",
   "ATLAS.html": "assets/Hawaii_Island_ISS_2024.jpg",
@@ -600,8 +635,8 @@
   "Aero_Math.html": "assets/hero/learn",
   "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": "assets/Great_Lakes_GSFC.jpg",
   "Amazon_Rainy_Season.html": "assets/Amazon_Clouds_ISS.jpg",
-  "American_Forests.html": "assets/Threetrees3.jpg",
-  "American_Rivers.html": "assets/StreamLog.JPG",
+  "American_Forests.html": "si:forest",
+  "American_Rivers.html": "si:rivers",
   "Arbor_Day_Foundation.html": "assets/Amazon_Clouds_ISS.jpg",
   "Argo.html": "assets/NOAA_Deep_SOLO_Float_2018.jpg",
   "Argos.html": "assets/Loggerhead_Release_MINWR.jpg",
@@ -650,7 +685,7 @@
   "Earth_Observation.html": "assets/EPIC_Earth.jpg",
   "Eden_People_Planet.html": "assets/Kilimanjaro_STS72.jpg",
   "Editorial_Policy.html": "assets/hero/learn",
-  "Elwha_River_Restoration.html": "assets/StreamLog.JPG",
+  "Elwha_River_Restoration.html": "si:elwha",
   "EnVision.html": "assets/Venus_Magellan.jpg",
   "Enceladus.html": "assets/Enceladus_Geyser_Basin.jpg",
   "Europa_Clipper.html": "assets/Europa_Clipper_Jupiter.jpg",
@@ -676,7 +711,7 @@
   "Global_Forest_Watch.html": "assets/Rondonia_Deforestation_STS46.jpg",
   "Globe_at_Night.html": "assets/Romania_City_Lights_ISS.jpg",
   "Glossary.html": "assets/hero/learn",
-  "Great_Bubble_Barrier.html": "assets/StreamLog.JPG",
+  "Great_Bubble_Barrier.html": "si:riversea",
   "Great_Green_Wall.html": "assets/Sahel_ISS.jpg",
   "Great_Lakes_Plastic_Cleanup.html": "assets/Great_Lakes_MODIS.jpg",
   "Hayabusa2_Torifune.html": "assets/Ryugu_Hayabusa2.jpg",
@@ -709,7 +744,7 @@
   "LeoLabs.html": "assets/LEO_View.jpg",
   "Lesson_Builder.html": "assets/hero/lesson",
   "Libera.html": "assets/EPIC_Earth.jpg",
-  "Life_Terra.html": "assets/Threetrees3.jpg",
+  "Life_Terra.html": "si:forest",
   "Lift_Equation_Calculator.html": "assets/hero/learn",
   "LignoSat.html": "assets/LignoSat_Wood_Panels.jpg",
   "Living_Lakes.html": "assets/Lake_Tahoe_ISS.jpg",
@@ -732,7 +767,7 @@
   "Nancy_Grace_Roman.html": "assets/Roman_Launch_FH.jpg",
   "OCO-2.html": "assets/Global_Plant_Fluorescence.jpg",
   "OSIRIS-APEX.html": "assets/OSIRIS_APEX.jpg",
-  "Ocean_Cleanup.html": "assets/theoceancleanup.jpg",
+  "Ocean_Cleanup.html": "si:oceancleanup",
   "Ocean_Voyages_Institute.html": "assets/North_Pacific_ISS.jpg",
   "Oceans.html": "assets/North_Pacific_ISS.jpg",
   "One_Tree_Planted.html": "assets/Global_Plant_Fluorescence.jpg",
@@ -756,8 +791,8 @@
   "Physics_Math.html": "assets/hero/learn",
   "Phytoplankton.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
   "Planetary_Defense.html": "assets/Hera.jpg",
-  "Plant-for-the-Planet.html": "assets/Yishan_Tree.jpg",
-  "Plastic_Bank.html": "assets/OceanBeach.JPG",
+  "Plant-for-the-Planet.html": "si:plant",
+  "Plastic_Bank.html": "si:ocean",
   "Plastic_Odyssey.html": "assets/PlasticBank_Indonesia_STS66.jpg",
   "Plato.html": "assets/Plato_Exoplanets.jpg",
   "Play_and_Learn.html": "assets/hero/kids",
@@ -806,16 +841,16 @@
   "Spot_the_Fire.html": "assets/hero/kids",
   "Stall_Speed_Calculator.html": "assets/hero/learn",
   "Starfish_Otter.html": "assets/Transporter18_Launch.jpg",
-  "Sungai_Watch.html": "assets/StreamLog.JPG",
+  "Sungai_Watch.html": "si:riversea",
   "Surfrider_Foundation.html": "assets/North_Pacific_ISS.jpg",
   "TEMPO.html": "assets/Clouds_Limb_ISS.jpg",
   "TRACERS.html": "assets/TRACERS_Launch.jpg",
   "Tanager-1.html": "assets/Tanager1_Methane_Plume.jpg",
   "Teachers.html": "assets/hero/teach",
-  "Terraformation.html": "assets/Yishan_Tree.jpg",
+  "Terraformation.html": "si:plant",
   "The_SeaCleaners.html": "assets/PlasticBank_Indonesia_STS66.jpg",
   "Three_Shields.html": "assets/SDO_Sun.jpg",
-  "Three_Trees.html": "assets/ThreeTrees2.jpg",
+  "Three_Trees.html": "si:forest",
   "Thrust_to_Weight_Calculator.html": "assets/hero/learn",
   "Titan.html": "assets/Titan.jpg",
   "Topics.html": "assets/hero/learn",

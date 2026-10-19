@@ -40,8 +40,8 @@
   "date": "2026-10-19"
  },
  "Argo.html": {
-  "sig": "98769bb6665a",
-  "date": "2026-10-16"
+  "sig": "ff5809c09658",
+  "date": "2026-10-19"
  },
  "Argos.html": {
   "sig": "2df65023d7bc",
@@ -76,8 +76,8 @@
   "date": "2026-10-19"
  },
  "Biomass.html": {
-  "sig": "b39dad23e29e",
-  "date": "2026-10-12"
+  "sig": "71a5902a233c",
+  "date": "2026-10-19"
  },
  "CAMS.html": {
   "sig": "5d754cd1cea4",
@@ -112,8 +112,8 @@
   "date": "2026-10-19"
  },
  "Clean_Lakes_Alliance.html": {
-  "sig": "7d9d147b6a52",
-  "date": "2026-10-18"
+  "sig": "e8bce3f78abc",
+  "date": "2026-10-19"
  },
  "Clean_Up_the_Lake.html": {
   "sig": "851602eaa2cf",
@@ -300,24 +300,24 @@
   "date": "2026-10-19"
  },
  "Great_Lakes_Plastic_Cleanup.html": {
-  "sig": "3b8bd7885d94",
-  "date": "2026-10-10"
+  "sig": "d3aa3a16ef20",
+  "date": "2026-10-19"
  },
  "Hayabusa2_Torifune.html": {
   "sig": "d340a9af09e6",
   "date": "2026-10-13"
  },
  "Heal_the_Bay.html": {
-  "sig": "3b04a97eba7c",
-  "date": "2026-10-15"
+  "sig": "b67436253487",
+  "date": "2026-10-19"
  },
  "Healthy_Seas.html": {
   "sig": "829f1aeb60e4",
   "date": "2026-10-19"
  },
  "Hera.html": {
-  "sig": "5c346311f843",
-  "date": "2026-10-12"
+  "sig": "292a39f6e57f",
+  "date": "2026-10-19"
  },
  "HydroGNSS.html": {
   "sig": "e498351c46e6",
@@ -356,8 +356,8 @@
   "date": "2026-10-19"
  },
  "Jupiter.html": {
-  "sig": "65b74499e934",
-  "date": "2026-10-12"
+  "sig": "7ffba20c7896",
+  "date": "2026-10-19"
  },
  "Justdiggit.html": {
   "sig": "2727b6cf996e",
@@ -384,12 +384,12 @@
   "date": "2026-10-19"
  },
  "Lake_Plastic_Recovery.html": {
-  "sig": "bb09a5b9cc03",
-  "date": "2026-10-10"
+  "sig": "0bcd1dd07ba1",
+  "date": "2026-10-19"
  },
  "Landsat_9.html": {
-  "sig": "42f539c11c82",
-  "date": "2026-10-12"
+  "sig": "082756bb4b3e",
+  "date": "2026-10-19"
  },
  "LeoLabs.html": {
   "sig": "c86bcd2b685e",
@@ -460,16 +460,16 @@
   "date": "2026-10-19"
  },
  "NISAR.html": {
-  "sig": "4659e2c7b86b",
-  "date": "2026-10-12"
+  "sig": "2b24f7750951",
+  "date": "2026-10-19"
  },
  "Namami_Gange.html": {
   "sig": "0e86303599d6",
   "date": "2026-10-19"
  },
  "Nancy_Grace_Roman.html": {
-  "sig": "55471f64271b",
-  "date": "2026-10-18"
+  "sig": "8f14ccaa0e80",
+  "date": "2026-10-19"
  },
  "OCO-2.html": {
   "sig": "70b8d3800ca7",
@@ -496,8 +496,8 @@
   "date": "2026-10-19"
  },
  "Orbital_Data_Centers.html": {
-  "sig": "203e09c63e15",
-  "date": "2026-10-17"
+  "sig": "c2ceb9812072",
+  "date": "2026-10-19"
  },
  "PACE.html": {
   "sig": "55915ef36d6c",
@@ -512,8 +512,8 @@
   "date": "2026-10-19"
  },
  "PUNCH.html": {
-  "sig": "a39d4cca5b00",
-  "date": "2026-10-12"
+  "sig": "9327c7112e0f",
+  "date": "2026-10-19"
  },
  "Pan-STARRS.html": {
   "sig": "ae458cac83fd",
@@ -636,8 +636,8 @@
   "date": "2026-10-19"
  },
  "Sentinel-2C.html": {
-  "sig": "bb1cfc6ebb2d",
-  "date": "2026-10-12"
+  "sig": "a001286c8ba9",
+  "date": "2026-10-19"
  },
  "Sentinel-3.html": {
   "sig": "90579c0b635e",
