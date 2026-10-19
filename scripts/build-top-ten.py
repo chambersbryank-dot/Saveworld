@@ -7,8 +7,9 @@ Live numbers (solutions, hubs) come from assets/data/solutions.json (same source
 writes its own strings into each i18n/<lang>.json with the CURRENT numbers on every run, so translations never go stale.
 Card visuals: real 2x screenshots of each feature page (2880x1800 PNG masters on R2, uploaded untouched by r2-upload.py
 --srcset, which also made the WebP/AVIF sizes). Banner: NASA ISS photo (R2 master + its srcset). Run before i18n-build."""
-import json, re, os, html, datetime
+import json, re, os, html, datetime, sys
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+sys.path.insert(0, 'scripts'); import sp_banner as SPB  # shared animated banner (Oct 18)
 SITE = 'https://www.savingplanets.com/'; PAGE = 'Top_Ten.html'
 MF = json.load(open('assets/data/media-manifest.json', encoding='utf-8'))
 SITED = json.load(open('assets/data/solutions.json', encoding='utf-8'))['site']
@@ -159,9 +160,8 @@ def strings():
     return [(fill(en), {l: fill(tr[l]) for l in LANGS}) for en, tr in out]
 def body():
     t = fill(S['title'][0])
-    ban = (f'<section class="tt-banner" aria-labelledby="tt-h">{pic(BANNER, "An orbital sunset over the Pacific Ocean, seen from the International Space Station", "100vw", eager=True)}'
-           f'<div class="tt-banner-text"><h1 id="tt-h">{esc(t)}</h1><p>{esc(fill(S["sub"][0]))}</p></div>'
-           f'<span class="tt-credit tt-banner-credit">{esc(S["photo"][0])}: {esc(BANNER_CREDIT)}</span></section>')
+    ban = SPB.banner(MF[BANNER], "An orbital sunset over the Pacific Ocean, seen from the International Space Station", t, fill(S["sub"][0]),
+                     f'{S["photo"][0]}: {BANNER_CREDIT}', h1_id='tt-h', extra_class='tt-banner')
     cards = ''
     for i, (fid, href, shot, extra, title, syn, btns) in enumerate(F, 1):
         tt = fill(title[0]); key = 'images/top-ten/' + shot
@@ -176,13 +176,6 @@ def body():
                   f'<h2>{esc(tt)}</h2><p>{esc(fill(syn[0]))}</p>{bh}<p class="tt-credit">{cred}</p></div></article>')
     return f'<!-- TOPTEN:START -->{ban}<div class="tt-grid">{cards}</div><!-- TOPTEN:END -->'
 CSS = ('.top-ten-page main{padding:0}'
- '.tt-banner{position:relative;min-height:min(62vh,560px);display:flex;align-items:flex-end;overflow:hidden;background:#02060c}'
- '.tt-banner picture,.tt-banner picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}'
- '.tt-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,12,0) 35%,rgba(2,6,12,.55) 70%,rgba(2,6,12,.92) 100%)}'
- '.tt-banner-text{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:7rem 1.5rem 2.6rem;text-align:center;width:100%}'
- '.tt-banner h1{margin:0;font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.08;letter-spacing:-.01em;text-shadow:0 3px 18px rgba(0,0,0,.6)}'
- '.tt-banner-text p{margin:.8rem auto 0;max-width:640px;font-size:clamp(1rem,1.6vw,1.2rem);opacity:.95}'
- '.tt-banner-credit{position:absolute;z-index:1;right:.8rem;bottom:.45rem}[dir=rtl] .tt-banner-credit{right:auto;left:.8rem}'
  '.tt-credit{font-size:.72rem;opacity:.75;margin:.6rem 0 0}'
  '.tt-grid{max-width:1180px;margin:2.2rem auto 3rem;padding:0 1.25rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem}'
  '.tt-card{position:relative;display:flex;flex-direction:column;background:#0f1b26;border:1px solid rgba(143,211,255,.18);border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.4)}'
@@ -195,7 +188,7 @@ CSS = ('.top-ten-page main{padding:0}'
  '.tt-btn{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 1.1rem;border-radius:999px;background:#009cde;color:#fff !important;font-weight:700;text-decoration:none !important}'
  '.tt-btn::after{content:"\\2192";margin-inline-start:.45rem}[dir=rtl] .tt-btn::after{content:"\\2190"}.tt-lang::after,.tt-btn2::after{content:none}'
  '.tt-btn:hover,.tt-btn:focus-visible{background:#0b7fb5}.tt-btn2,.tt-lang{background:transparent;border:1.5px solid #8fd3ff;color:#e8eef5 !important}.tt-btn2:hover,.tt-lang:hover{background:rgba(143,211,255,.15)}'
- '@media (max-width:760px){.tt-grid{grid-template-columns:1fr}.tt-banner{min-height:52vh}}')
+ '@media (max-width:760px){.tt-grid{grid-template-columns:1fr}}')
 def main():
     shell = rd('Glossary.html')
     head = shell[:shell.index('</head>')]
@@ -224,6 +217,7 @@ def main():
         if T != n0: json.dump(T, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0); ch += 1
     css = rd('styles.css'); css2 = re.sub(r'\n?/\* TOPTEN:START \*/.*?/\* TOPTEN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* TOPTEN:START */\n' + CSS + '\n/* TOPTEN:END */\n'
     ch += wr('styles.css', css2)
+    ch += SPB.write_css('styles.css')
     s = rd('sitemap.xml'); today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-10))).date().isoformat()
     for l in ['', 'fr/', 'es/', 'ar/', 'it/']:
         loc = f'{SITE}{l}{PAGE}'
