@@ -1,4 +1,48 @@
 {
+ "images/ArtemisII_Launch_KSC_Hancock.jpg": {
+  "url": "https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock.49bee3b50c9e.jpg",
+  "key": "images/ArtemisII_Launch_KSC_Hancock.49bee3b50c9e.jpg",
+  "bytes": 16901688,
+  "sha256": "49bee3b50c9e95a52c944349a64b57b81eb1989c93afea08241a3f0897ba9091",
+  "type": "image/jpeg",
+  "width": 7008,
+  "height": 4672,
+  "srcset": "https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-480.2af3428c334c.webp 480w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-800.025e3bbe289b.webp 800w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-1280.7229a5a900b0.webp 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-1920.18220af9e94f.webp 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-2560.fe59824cc4d3.webp 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-3840.c9c7448ba643.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-480.d6a6902fdfe1.avif 480w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-800.82238ba3f728.avif 800w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-1280.24e45d92ace3.avif 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-1920.d346788458b2.avif 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-2560.5c4ed4200375.avif 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_KSC_Hancock-3840.57af2727d977.avif 3840w"
+ },
+ "images/ArtemisII_Launch_banner_med.jpg": {
+  "url": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_med.04be80274a56.jpg",
+  "key": "images/ArtemisII_Launch_banner_med.04be80274a56.jpg",
+  "bytes": 1322408,
+  "sha256": "04be80274a56e26ed29d92e15c73686f8d97eb26bfa7ddb7f2c2d3e52e2c7b46",
+  "type": "image/jpeg",
+  "width": 3840,
+  "height": 1800,
+  "srcset": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-480.0ba9b557c577.webp 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-800.312cdae2f385.webp 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-1280.8363ab4bd761.webp 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-1920.daa1aeaca8e0.webp 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-2560.b07214956cb4.webp 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-3840.5a1a662ab262.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-480.2dfc8c674291.avif 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-800.cb04147ba60f.avif 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-1280.81cf045866ca.avif 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-1920.e2069f8f9553.avif 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-2560.d45f0e995c71.avif 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_med-3840.818c42fe5a42.avif 3840w"
+ },
+ "images/ArtemisII_Launch_banner_phone.jpg": {
+  "url": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone.7327ebb862a3.jpg",
+  "key": "images/ArtemisII_Launch_banner_phone.7327ebb862a3.jpg",
+  "bytes": 643545,
+  "sha256": "7327ebb862a3c63449c68a11dc63aed8f239f152721cda188425cd8df72f6b14",
+  "type": "image/jpeg",
+  "width": 2160,
+  "height": 1600,
+  "srcset": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-480.dc36d60af176.webp 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-800.c01c8e70e4ad.webp 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-1280.fc44494e6741.webp 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-1920.e414a5d5a68d.webp 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-2160.b287796b83c2.webp 2160w",
+  "srcset_avif": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-480.489933454e06.avif 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-800.aacdb644c831.avif 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-1280.3e5a6d04f085.avif 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-1920.4b244a11a73a.avif 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_phone-2160.3c7568ae0cf4.avif 2160w"
+ },
+ "images/ArtemisII_Launch_banner_wide.jpg": {
+  "url": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide.b083af3ff598.jpg",
+  "key": "images/ArtemisII_Launch_banner_wide.b083af3ff598.jpg",
+  "bytes": 467726,
+  "sha256": "b083af3ff5988ed89daaa9ad614d08d83605c7cdcb78246fd6f957de368ac044",
+  "type": "image/jpeg",
+  "width": 3840,
+  "height": 960,
+  "srcset": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-480.a862f27a66a3.webp 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-800.32f2afdd722e.webp 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-1280.8c0f2818adaa.webp 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-1920.6e1fbb903e0a.webp 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-2560.970ce986c61b.webp 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-3840.f9310262d212.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-480.68af29df9757.avif 480w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-800.1fd5f693ea69.avif 800w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-1280.3b16cd874391.avif 1280w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-1920.e72b16997ee5.avif 1920w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-2560.ce4a0ebf3faa.avif 2560w, https://media.savingplanets.com/images/ArtemisII_Launch_banner_wide-3840.c5b25b9c61aa.avif 3840w"
+ },
  "images/Asteroid_2018LA_CSS.jpg": {
   "url": "https://media.savingplanets.com/images/Asteroid_2018LA_CSS.598fcefa0bb9.jpg",
   "key": "images/Asteroid_2018LA_CSS.598fcefa0bb9.jpg",
@@ -208,6 +252,17 @@
   "srcset": "https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-480.a48a9f2c81f0.webp 480w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-800.ddb7ff1bc057.webp 800w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-1280.75bbedfb22af.webp 1280w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-1920.fcd3e4dc4e1f.webp 1920w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-2560.d53ba5ca68e3.webp 2560w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-3840.e84f51b6b700.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-480.3f2d6d8b8dc3.avif 480w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-800.885b489ab756.avif 800w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-1280.bbd0f44e4a38.avif 1280w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-1920.1c34f2bd4d26.avif 1920w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-2560.a367f4b39a5b.avif 2560w, https://media.savingplanets.com/images/Portugal_Wildfires_ISS_2018-3840.1e761feac5c2.avif 3840w"
  },
+ "images/Roman_Launch_NHQ202608300015.jpg": {
+  "url": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
+  "key": "images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
+  "bytes": 3525478,
+  "sha256": "0857285c339e3669ebca2d9c121fbc3fbdd000c526d178a0c9b95180bd478d1f",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 2194,
+  "srcset": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.7e186169eed7.webp 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.8a1fd22799a2.webp 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.452735ba9b8d.webp 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.0deed5ff27ce.webp 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.b78756c2e341.webp 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.32a4d1d7dfb9.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.9354c9c571b9.avif 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.d2cc4d0b8544.avif 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.bae8c7b502f4.avif 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.82c0dda5bf37.avif 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.0f70b3d79532.avif 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.1b40e05fb683.avif 3840w"
+ },
  "images/Sumatra_Smoke_Singapore_MODIS.jpg": {
   "url": "https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS.4aced846c5a5.jpg",
   "key": "images/Sumatra_Smoke_Singapore_MODIS.4aced846c5a5.jpg",
@@ -218,6 +273,138 @@
   "height": 5600,
   "srcset": "https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-480.7e1c6819afba.webp 480w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-800.14b30301bb68.webp 800w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-1280.174d973de914.webp 1280w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-1920.71d173c54a15.webp 1920w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-2560.d7d8cb0da93b.webp 2560w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-3840.1a8cefaaefcb.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-480.96fabb3eff4b.avif 480w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-800.3c6078440bb9.avif 800w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-1280.fb1c3033953a.avif 1280w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-1920.1acbc152ce5c.avif 1920w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-2560.eae60807e6f7.avif 2560w, https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS-3840.0392a284d2a2.avif 3840w"
+ },
+ "images/artemis-gallery/KSC-20221211-PH-KLS01-0011.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011.442458d9d607.jpg",
+  "key": "images/artemis-gallery/KSC-20221211-PH-KLS01-0011.442458d9d607.jpg",
+  "bytes": 7147641,
+  "sha256": "442458d9d6076918a42a13bfe069083e9510cf4e878f6555cab22958695ae2b7",
+  "type": "image/jpeg",
+  "width": 4480,
+  "height": 6720,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-480.d023a697f9c4.webp 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-800.da41a2711b9b.webp 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-1280.30cbf49a5207.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-1920.21d52c5c4fed.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-2560.ba306c2d8750.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-3840.25870dc8267e.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-480.4ea53725d645.avif 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-800.37b770dc59de.avif 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-1280.47756634ae99.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-1920.b69911322bd5.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-2560.359199d63d77.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-KLS01-0011-3840.6e474e87b92f.avif 3840w"
+ },
+ "images/artemis-gallery/KSC-20221211-PH-RGG01-0002.jpeg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002.78d09f3b89c4.jpeg",
+  "key": "images/artemis-gallery/KSC-20221211-PH-RGG01-0002.78d09f3b89c4.jpeg",
+  "bytes": 6502028,
+  "sha256": "78d09f3b89c4c72d887c5bf20a3b1d3f0e435e46893a7e3cd556f89262952169",
+  "type": "image/jpeg",
+  "width": 5947,
+  "height": 3902,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-480.f1f8ea8a37c7.webp 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-800.83176352f921.webp 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-1280.5df71ee58de5.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-1920.382acb45fc9b.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-2560.ad0d8e657073.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-3840.b36f791877c9.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-480.0b7a5106a1f7.avif 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-800.a84de2b7a1af.avif 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-1280.c16e4082ee3f.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-1920.bae7e3b13fc4.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-2560.e02375536b23.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20221211-PH-RGG01-0002-3840.b17c22f798c1.avif 3840w"
+ },
+ "images/artemis-gallery/KSC-20260410-PH-JMB01_0004.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004.26e0f99888e7.jpg",
+  "key": "images/artemis-gallery/KSC-20260410-PH-JMB01_0004.26e0f99888e7.jpg",
+  "bytes": 4317638,
+  "sha256": "26e0f99888e7ae7c9a4fe574f1278c62baa3584f65626236bbefb8f68539c4ee",
+  "type": "image/jpeg",
+  "width": 7024,
+  "height": 4683,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-480.85c9d2c45263.webp 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-800.3babd0c83a6f.webp 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-1280.f2330c3adecf.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-1920.166f73d1e9fc.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-2560.3e5dff8ec5ed.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-3840.4bc721853ef0.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-480.a48b6b3b98c1.avif 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-800.80eb4a8b5076.avif 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-1280.5da7196b08f0.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-1920.15d38c1ec8a2.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-2560.3d40278e337b.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JMB01_0004-3840.6485780f77c7.avif 3840w"
+ },
+ "images/artemis-gallery/KSC-20260410-PH-JNV01_0002.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002.3e1bcc848cfb.jpg",
+  "key": "images/artemis-gallery/KSC-20260410-PH-JNV01_0002.3e1bcc848cfb.jpg",
+  "bytes": 22161921,
+  "sha256": "3e1bcc848cfb50a631199591c7df48952231d9de93a9d5e8e1be13728f9efc00",
+  "type": "image/jpeg",
+  "width": 4457,
+  "height": 6686,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-480.fdeb9de2097a.webp 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-800.4fdbe8d29dc1.webp 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-1280.fdf28ec3c6e2.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-1920.60cddb0ad974.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-2560.9257c9a03ea8.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-3840.b6999f419011.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-480.af648b4c8243.avif 480w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-800.3fbce16ed3d9.avif 800w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-1280.45afcc00fd5d.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-1920.8aaeaad22cc6.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-2560.a7e7900403eb.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/KSC-20260410-PH-JNV01_0002-3840.a837909c6d4a.avif 3840w"
+ },
+ "images/artemis-gallery/NHQ202211160030.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030.77ff06be3d45.jpg",
+  "key": "images/artemis-gallery/NHQ202211160030.77ff06be3d45.jpg",
+  "bytes": 4763850,
+  "sha256": "77ff06be3d4590241db85b90e970ab94ff0120dbc7afdaf2ddd1034eb84a6a71",
+  "type": "image/jpeg",
+  "width": 2598,
+  "height": 2598,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-480.6817239f8c8e.webp 480w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-800.d413371d9395.webp 800w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-1280.fe08d187477d.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-1920.3321b530a196.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-2560.912193597a75.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-2598.96e061bf47e8.webp 2598w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-480.33f3ca1f2f91.avif 480w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-800.81feeda7cc2d.avif 800w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-1280.39f214a213f5.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-1920.abf90933614e.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-2560.7a8abbef0e89.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/NHQ202211160030-2598.d42a5d726285.avif 2598w"
+ },
+ "images/artemis-gallery/art001e000268.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art001e000268.3cad692bb4ed.jpg",
+  "key": "images/artemis-gallery/art001e000268.3cad692bb4ed.jpg",
+  "bytes": 1088281,
+  "sha256": "3cad692bb4eded127e7856130601ee073640ce1c1a770d568af2f666fd8923d1",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 3000,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art001e000268-480.6973965dc66e.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-800.c8a172988c4a.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-1280.24ebb79598a6.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-1920.b62247fff676.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-2560.2281a5b99fe5.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-3840.c17dbdaa9009.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art001e000268-480.d44707593b44.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-800.5ea4acb5d55d.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-1280.70d8d05fdd0c.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-1920.573ebf387e3e.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-2560.cda1971316e6.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e000268-3840.3d74319305b0.avif 3840w"
+ },
+ "images/artemis-gallery/art001e000673.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art001e000673.27c7ce99e007.jpg",
+  "key": "images/artemis-gallery/art001e000673.27c7ce99e007.jpg",
+  "bytes": 781919,
+  "sha256": "27c7ce99e007a70094290614241557695e5a0e37211eec340c159aaf4bb8abf0",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 3000,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art001e000673-480.47447c287529.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-800.3b418acc5da8.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-1280.185d8fd72596.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-1920.996a5314f164.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-2560.f8ac37a594dc.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-3840.9b549eaeeef1.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art001e000673-480.764bf9b0d11c.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-800.dad16a5c54fc.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-1280.136e7442439f.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-1920.b22586c01a55.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-2560.1a97aaa4ec36.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e000673-3840.cb96ded3fae9.avif 3840w"
+ },
+ "images/artemis-gallery/art001e002083.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art001e002083.32d11c959a55.jpg",
+  "key": "images/artemis-gallery/art001e002083.32d11c959a55.jpg",
+  "bytes": 1209024,
+  "sha256": "32d11c959a55dfe38f5ca22538c93707e8c0a882af7791a7358b11125429bb0e",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 3000,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art001e002083-480.899626adf42d.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-800.d0ef9ab46372.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-1280.307bfc650be5.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-1920.e6c2203b883d.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-2560.8a55471074d5.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-3840.96f0662ee14a.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art001e002083-480.0f3568305c78.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-800.6fa05c81e2ca.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-1280.d32dd09920f3.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-1920.84ee03f410a2.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-2560.69adc039d48e.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art001e002083-3840.283fe1b6b2ea.avif 3840w"
+ },
+ "images/artemis-gallery/art002e000193.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art002e000193.9b8704340514.jpg",
+  "key": "images/artemis-gallery/art002e000193.9b8704340514.jpg",
+  "bytes": 4854248,
+  "sha256": "9b8704340514ae20db9c37230517036acaf0146493a08508fecd1d8168c054e4",
+  "type": "image/jpeg",
+  "width": 5568,
+  "height": 3712,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art002e000193-480.41fb6ce7e481.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-800.126c7c2857c5.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-1280.373ece1c8236.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-1920.05d0eb51d196.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-2560.e7b19b23b690.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-3840.7825301a4a6f.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art002e000193-480.c870b438f9c3.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-800.3c45ff34810f.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-1280.f9c2db95f3c5.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-1920.f0068cf41358.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-2560.ac2b7dde5bff.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e000193-3840.f1d749479b71.avif 3840w"
+ },
+ "images/artemis-gallery/art002e014235.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art002e014235.edbb4d9b8e5e.jpg",
+  "key": "images/artemis-gallery/art002e014235.edbb4d9b8e5e.jpg",
+  "bytes": 3520273,
+  "sha256": "edbb4d9b8e5ec74397ed81cd6f38b3ff51d5e2f463e1ce1e46bf3275b1444ac2",
+  "type": "image/jpeg",
+  "width": 5568,
+  "height": 3712,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art002e014235-480.9ee7249d9a71.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-800.c7439a2e81ae.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-1280.33a36d71d53f.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-1920.8bcfe51dfaef.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-2560.306951426738.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-3840.cf661880742b.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art002e014235-480.9603973cbb60.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-800.63b484a4f548.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-1280.900be58d42fc.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-1920.496bc72dee37.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-2560.e099bd21d30b.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e014235-3840.9700bd1508d7.avif 3840w"
+ },
+ "images/artemis-gallery/art002e016324.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art002e016324.691e4000a275.jpg",
+  "key": "images/artemis-gallery/art002e016324.691e4000a275.jpg",
+  "bytes": 657266,
+  "sha256": "691e4000a27519a1f98daa90f2ceb06e7d14f245938cec281dfcf3451998cf55",
+  "type": "image/jpeg",
+  "width": 4000,
+  "height": 3000,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art002e016324-480.41821491f0a9.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-800.6ab371c99362.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-1280.14b1e0a6f0b0.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-1920.5a9dfc4e52cd.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-2560.755b20e7bd09.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-3840.7a9da9c5eec8.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art002e016324-480.ff431546b307.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-800.b15dd7184a17.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-1280.9a2a6c6c1ddd.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-1920.52dc229dd344.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-2560.6d99c6fb48f1.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e016324-3840.3bf6411d04d4.avif 3840w"
+ },
+ "images/artemis-gallery/art002e021278.jpg": {
+  "url": "https://media.savingplanets.com/images/artemis-gallery/art002e021278.22687d173e1f.jpg",
+  "key": "images/artemis-gallery/art002e021278.22687d173e1f.jpg",
+  "bytes": 1009521,
+  "sha256": "22687d173e1fcd9a334f93a3074de1470365c314e2d25e9fbcb229f4f5fb507d",
+  "type": "image/jpeg",
+  "width": 5568,
+  "height": 3712,
+  "srcset": "https://media.savingplanets.com/images/artemis-gallery/art002e021278-480.76786dbf2187.webp 480w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-800.d193b216186c.webp 800w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-1280.76bdcd7275ba.webp 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-1920.78a8489fb311.webp 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-2560.22bdbc4f97f6.webp 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-3840.725e9702d70e.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/artemis-gallery/art002e021278-480.3db6c1b51a89.avif 480w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-800.a4475d893e1f.avif 800w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-1280.8ee98aa2269b.avif 1280w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-1920.5fbee4edfa81.avif 1920w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-2560.d438d470c701.avif 2560w, https://media.savingplanets.com/images/artemis-gallery/art002e021278-3840.2209f879dca0.avif 3840w"
  },
  "images/earth-blue-marble-land-ocean-ice-cloud.jpg": {
   "url": "https://media.savingplanets.com/images/earth-blue-marble-land-ocean-ice-cloud.b47902fd6c36.jpg",
@@ -2619,6 +2806,28 @@
   "height": 630,
   "srcset": "https://media.savingplanets.com/images/og/en/Zero_Debris_Charter-480.0a7f27b8c431.webp 480w, https://media.savingplanets.com/images/og/en/Zero_Debris_Charter-800.5979d6563c3b.webp 800w, https://media.savingplanets.com/images/og/en/Zero_Debris_Charter-1200.a1725515d992.webp 1200w"
  },
+ "images/solutions-banner-earth-wide-poster-3840x900.png": {
+  "url": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
+  "key": "images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
+  "bytes": 2764963,
+  "sha256": "8be193d817c1015d7b45060f9f673038487d550172b7e52f820947d285eef2f3",
+  "type": "image/png",
+  "width": 3840,
+  "height": 900,
+  "srcset": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.0d6b8aa19fd8.webp 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.772b09a8b96d.webp 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.9221a41c4960.webp 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.00c5a5412fda.webp 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.2080b89d6dfd.webp 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.530ef069f47f.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.d4bacaf4d3d2.avif 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.9cd5c4923105.avif 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.e5cc31ac9127.avif 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.9b274b850226.avif 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.93430770df0d.avif 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.44e29704f6b1.avif 3840w"
+ },
+ "images/top-ten-roman-openuniverse-poster-3840x900.png": {
+  "url": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900.096f1069a40a.png",
+  "key": "images/top-ten-roman-openuniverse-poster-3840x900.096f1069a40a.png",
+  "bytes": 7215661,
+  "sha256": "096f1069a40a92e1b746fc7275eafa967d8236be2af4ef6d424de0759942af21",
+  "type": "image/png",
+  "width": 3840,
+  "height": 900,
+  "srcset": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-480.56b5de0b9032.webp 480w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-800.7ad4fe658406.webp 800w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1280.d33549fba1ef.webp 1280w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1920.db4756a61fdd.webp 1920w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-2560.cd240608d5a6.webp 2560w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-3840.4d1a25f1e009.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-480.5613ff40a5da.avif 480w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-800.9798520b88aa.avif 800w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1280.ce427f124eca.avif 1280w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1920.0f600707ba09.avif 1920w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-2560.e29858e20b65.avif 2560w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-3840.c841431c254f.avif 3840w"
+ },
  "images/top-ten/top10-help.png": {
   "url": "https://media.savingplanets.com/images/top-ten/top10-help.95c0b1bbc8c5.png",
   "key": "images/top-ten/top10-help.95c0b1bbc8c5.png",
@@ -2729,6 +2938,26 @@
   "srcset": "https://media.savingplanets.com/images/top-ten/top10-solutions-480.a08745984622.webp 480w, https://media.savingplanets.com/images/top-ten/top10-solutions-800.8108f8b41b6c.webp 800w, https://media.savingplanets.com/images/top-ten/top10-solutions-1280.f485b99bb7fa.webp 1280w, https://media.savingplanets.com/images/top-ten/top10-solutions-1920.9597b414cc74.webp 1920w, https://media.savingplanets.com/images/top-ten/top10-solutions-2560.db833d5c7830.webp 2560w, https://media.savingplanets.com/images/top-ten/top10-solutions-2880.33754d352503.webp 2880w",
   "srcset_avif": "https://media.savingplanets.com/images/top-ten/top10-solutions-480.8e19b4d2de7d.avif 480w, https://media.savingplanets.com/images/top-ten/top10-solutions-800.7869128a226e.avif 800w, https://media.savingplanets.com/images/top-ten/top10-solutions-1280.9d5e307b0bd7.avif 1280w, https://media.savingplanets.com/images/top-ten/top10-solutions-1920.c99ed4319f6e.avif 1920w, https://media.savingplanets.com/images/top-ten/top10-solutions-2560.db6fd1a52c2d.avif 2560w, https://media.savingplanets.com/images/top-ten/top10-solutions-2880.083e2bced2ea.avif 2880w"
  },
+ "videos/ArtemisII_Launch_KSC-04012026-C4829_segment.mp4": {
+  "url": "https://media.savingplanets.com/videos/ArtemisII_Launch_KSC-04012026-C4829_segment.2e0c1bc5b366.mp4",
+  "key": "videos/ArtemisII_Launch_KSC-04012026-C4829_segment.2e0c1bc5b366.mp4",
+  "bytes": 46473360,
+  "sha256": "2e0c1bc5b366f74b35b16f8c0d04f0fd8600c759bac961a2c34c7701996a68a5",
+  "type": "video/mp4",
+  "width": 3840,
+  "height": 2160,
+  "duration": 18.06
+ },
+ "videos/OpenUniverseFullZoom_4k_Best.mp4": {
+  "url": "https://media.savingplanets.com/videos/OpenUniverseFullZoom_4k_Best.734490c7685e.mp4",
+  "key": "videos/OpenUniverseFullZoom_4k_Best.734490c7685e.mp4",
+  "bytes": 261456021,
+  "sha256": "734490c7685efefbb7ccabdac0831e8349d0b3c7361029bf09c9b3251cdb5ea0",
+  "type": "video/mp4",
+  "width": 3840,
+  "height": 2160,
+  "duration": 42.44
+ },
  "videos/artemis-ii-farthest.mp4": {
   "url": "https://media.savingplanets.com/videos/artemis-ii-farthest.ddc8c5d0d9b8.mp4",
   "key": "videos/artemis-ii-farthest.ddc8c5d0d9b8.mp4",
@@ -2738,6 +2967,56 @@
   "width": 1280,
   "height": 548,
   "duration": 15.04
+ },
+ "videos/artemis-launch-med-1920.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-launch-med-1920.d2a0e2ce3e53.mp4",
+  "key": "videos/artemis-launch-med-1920.d2a0e2ce3e53.mp4",
+  "bytes": 9020212,
+  "sha256": "d2a0e2ce3e537db3f945b3504af2e36701dc71f383f0b038b5a0f7b98910814d",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 900,
+  "duration": 29.03
+ },
+ "videos/artemis-launch-phone-1280.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-launch-phone-1280.31860b1aeba2.mp4",
+  "key": "videos/artemis-launch-phone-1280.31860b1aeba2.mp4",
+  "bytes": 4732371,
+  "sha256": "31860b1aeba28a2faa99b393c7e6ef2d387a753fe48f91adefef0acdf93ce5d0",
+  "type": "video/mp4",
+  "width": 1280,
+  "height": 948,
+  "duration": 29.03
+ },
+ "videos/artemis-launch-wide-1920.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-launch-wide-1920.7981cb0aad9f.mp4",
+  "key": "videos/artemis-launch-wide-1920.7981cb0aad9f.mp4",
+  "bytes": 3159322,
+  "sha256": "7981cb0aad9fb145d176448a7191bbff3cbb333c901130059a8f73350adc3adf",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 480,
+  "duration": 29.03
+ },
+ "videos/artemis-launch-wide-2560.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-launch-wide-2560.93f9f2077d01.mp4",
+  "key": "videos/artemis-launch-wide-2560.93f9f2077d01.mp4",
+  "bytes": 6032078,
+  "sha256": "93f9f2077d01b90c041f82a5c10ebcb91d6a73dcea4c59efb657fc25230bf4a2",
+  "type": "video/mp4",
+  "width": 2560,
+  "height": 640,
+  "duration": 29.03
+ },
+ "videos/artemis-launch-wide-3840.mp4": {
+  "url": "https://media.savingplanets.com/videos/artemis-launch-wide-3840.ab6d3e19b214.mp4",
+  "key": "videos/artemis-launch-wide-3840.ab6d3e19b214.mp4",
+  "bytes": 13416055,
+  "sha256": "ab6d3e19b214fb174cf7b56e57e06dff9b195ba8acffb3c64620628f410c9c4f",
+  "type": "video/mp4",
+  "width": 3840,
+  "height": 960,
+  "duration": 29.03
  },
  "videos/grace-fo-satellites.mp4": {
   "url": "https://media.savingplanets.com/videos/grace-fo-satellites.64086a1767a2.mp4",
@@ -2859,27 +3138,6 @@
   "height": 1920,
   "duration": 147.9
  },
- "videos/v-solar.mp4": {
-  "url": "https://media.savingplanets.com/videos/v-solar.fec47ec4464a.mp4",
-  "key": "videos/v-solar.fec47ec4464a.mp4",
-  "bytes": 3460480,
-  "sha256": "fec47ec4464ad19582c2bc859ae2c389fabbf0bfcafee4adcfe5c9abfae0e6c6",
-  "type": "video/mp4",
-  "width": 640,
-  "height": 360,
-  "duration": 86.33
- },
- "images/solutions-banner-earth-wide-poster-3840x900.png": {
-  "url": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
-  "key": "images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
-  "bytes": 2764963,
-  "sha256": "8be193d817c1015d7b45060f9f673038487d550172b7e52f820947d285eef2f3",
-  "type": "image/png",
-  "width": 3840,
-  "height": 900,
-  "srcset": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.0d6b8aa19fd8.webp 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.772b09a8b96d.webp 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.9221a41c4960.webp 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.00c5a5412fda.webp 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.2080b89d6dfd.webp 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.530ef069f47f.webp 3840w",
-  "srcset_avif": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.d4bacaf4d3d2.avif 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.9cd5c4923105.avif 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.e5cc31ac9127.avif 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.9b274b850226.avif 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.93430770df0d.avif 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.44e29704f6b1.avif 3840w"
- },
  "videos/solutions-banner-earth-wide-1280x300.mp4": {
   "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-1280x300.157e47ff0204.mp4",
   "key": "videos/solutions-banner-earth-wide-1280x300.157e47ff0204.mp4",
@@ -2920,38 +3178,6 @@
   "height": 900,
   "duration": 90.0
  },
- "images/Roman_Launch_NHQ202608300015.jpg": {
-  "url": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
-  "key": "images/Roman_Launch_NHQ202608300015.0857285c339e.jpg",
-  "bytes": 3525478,
-  "sha256": "0857285c339e3669ebca2d9c121fbc3fbdd000c526d178a0c9b95180bd478d1f",
-  "type": "image/jpeg",
-  "width": 4000,
-  "height": 2194,
-  "srcset": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.7e186169eed7.webp 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.8a1fd22799a2.webp 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.452735ba9b8d.webp 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.0deed5ff27ce.webp 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.b78756c2e341.webp 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.32a4d1d7dfb9.webp 3840w",
-  "srcset_avif": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.9354c9c571b9.avif 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.d2cc4d0b8544.avif 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.bae8c7b502f4.avif 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.82c0dda5bf37.avif 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.0f70b3d79532.avif 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.1b40e05fb683.avif 3840w"
- },
- "images/top-ten-roman-openuniverse-poster-3840x900.png": {
-  "url": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900.096f1069a40a.png",
-  "key": "images/top-ten-roman-openuniverse-poster-3840x900.096f1069a40a.png",
-  "bytes": 7215661,
-  "sha256": "096f1069a40a92e1b746fc7275eafa967d8236be2af4ef6d424de0759942af21",
-  "type": "image/png",
-  "width": 3840,
-  "height": 900,
-  "srcset": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-480.56b5de0b9032.webp 480w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-800.7ad4fe658406.webp 800w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1280.d33549fba1ef.webp 1280w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1920.db4756a61fdd.webp 1920w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-2560.cd240608d5a6.webp 2560w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-3840.4d1a25f1e009.webp 3840w",
-  "srcset_avif": "https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-480.5613ff40a5da.avif 480w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-800.9798520b88aa.avif 800w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1280.ce427f124eca.avif 1280w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-1920.0f600707ba09.avif 1920w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-2560.e29858e20b65.avif 2560w, https://media.savingplanets.com/images/top-ten-roman-openuniverse-poster-3840x900-3840.c841431c254f.avif 3840w"
- },
- "videos/OpenUniverseFullZoom_4k_Best.mp4": {
-  "url": "https://media.savingplanets.com/videos/OpenUniverseFullZoom_4k_Best.734490c7685e.mp4",
-  "key": "videos/OpenUniverseFullZoom_4k_Best.734490c7685e.mp4",
-  "bytes": 261456021,
-  "sha256": "734490c7685efefbb7ccabdac0831e8349d0b3c7361029bf09c9b3251cdb5ea0",
-  "type": "video/mp4",
-  "width": 3840,
-  "height": 2160,
-  "duration": 42.44
- },
  "videos/top-ten-roman-openuniverse-1280x300.mp4": {
   "url": "https://media.savingplanets.com/videos/top-ten-roman-openuniverse-1280x300.3ab6f162ece0.mp4",
   "key": "videos/top-ten-roman-openuniverse-1280x300.3ab6f162ece0.mp4",
@@ -2991,5 +3217,15 @@
   "width": 3840,
   "height": 900,
   "duration": 26.25
+ },
+ "videos/v-solar.mp4": {
+  "url": "https://media.savingplanets.com/videos/v-solar.fec47ec4464a.mp4",
+  "key": "videos/v-solar.fec47ec4464a.mp4",
+  "bytes": 3460480,
+  "sha256": "fec47ec4464ad19582c2bc859ae2c389fabbf0bfcafee4adcfe5c9abfae0e6c6",
+  "type": "video/mp4",
+  "width": 640,
+  "height": 360,
+  "duration": 86.33
  }
 }

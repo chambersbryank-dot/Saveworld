@@ -80,7 +80,10 @@ def main():
         e = {'url': PUBLIC + key, 'key': key, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest(), 'type': ct, **probe(f)}
         if a.srcset and ct.startswith('image/') and ct != 'image/svg+xml':
             from PIL import Image
-            im = Image.open(f); im.load(); W = im.width; parts = []
+            from PIL import ImageOps
+            # Oct 18: honour the camera's EXIF orientation (KSC-20221211-PH-KLS01-0011 is stored sideways with Orientation=8);
+            # the master stays untouched, only the derived WebP/AVIF widths are turned upright. No-op for upright files.
+            im = Image.open(f); im.load(); im = ImageOps.exif_transpose(im) or im; W = im.width; parts = []
             if im.mode not in ('RGB', 'RGBA'): im = im.convert('RGBA' if 'A' in im.mode else 'RGB')
             for w in [x for x in WIDTHS if x < W] + [min(W, 3840)]:
                 r = im if w == W else im.resize((w, round(im.height * w / W)), Image.LANCZOS)
