@@ -29,6 +29,61 @@
    "credit": "NASA/JPL-Caltech",
    "pos": "50% 50%",
    "r2": "images/GRACE_FO_PIA22445.jpg"
+  },
+  "assets/SDO_Sun.jpg": {
+   "credit": "NASA/SDO",
+   "pos": "50% 50%",
+   "r2": "images/SDO_Sun.jpg"
+  },
+  "assets/Clouds_Limb_ISS.jpg": {
+   "credit": "NASA/Jeff Williams (ISS020-E-047807, Oct. 6, 2009)",
+   "pos": "50% 50%",
+   "r2": "images/Clouds_Limb_ISS.jpg"
+  },
+  "assets/Mississippi_River_PIA23534.jpg": {
+   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA23534)",
+   "pos": "50% 50%",
+   "r2": "images/Mississippi_River_PIA23534.jpg"
+  },
+  "assets/Amazon_Clouds_ISS.jpg": {
+   "credit": "NASA (ISS013-E-74843, Sept. 2, 2006)",
+   "pos": "50% 50%",
+   "r2": "images/Amazon_Clouds_ISS.jpg"
+  },
+  "assets/Florida_Keys_PIA03890.jpg": {
+   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03890)",
+   "pos": "50% 50%",
+   "r2": "images/Florida_Keys_PIA03890.jpg"
+  },
+  "assets/Lake_Tahoe_ISS.jpg": {
+   "credit": "NASA (ISS071-E-14284, April 20, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Lake_Tahoe_ISS.jpg"
+  },
+  "assets/North_Pacific_ISS.jpg": {
+   "credit": "NASA (ISS073-E-0257194, June 28, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/North_Pacific_ISS.jpg"
+  },
+  "assets/Kilimanjaro_STS72.jpg": {
+   "credit": "NASA (STS072-722-004, Jan. 1996)",
+   "pos": "50% 50%",
+   "r2": "images/Kilimanjaro_STS72.jpg"
+  },
+  "assets/Bahamas_Ocean_ISS.jpg": {
+   "credit": "NASA (ISS071-E-449837, July 24, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Bahamas_Ocean_ISS.jpg"
+  },
+  "assets/ISS_Flyaround_2021.jpg": {
+   "credit": "NASA (ISS066-E-080762, Nov. 8, 2021)",
+   "pos": "50% 50%",
+   "r2": "images/ISS_Flyaround_2021.jpg"
+  },
+  "assets/Klamath_River.jpg": {
+   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA26448)",
+   "pos": "50% 50%",
+   "r2": "images/Klamath_River.jpg"
   }
  },
  "pages": {

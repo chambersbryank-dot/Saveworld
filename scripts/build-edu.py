@@ -95,7 +95,7 @@ def shell(page, title, desc, body_class, glass, main, rtype='LearningResource'):
     nav = re.search(r'<nav id="topnav">.*?</nav>', t, re.S).group(0)
     nav = re.sub(r'<li class="lang-switch".*?</li>', I.switcher(page, 'en', ''), nav, flags=re.S)
     foot = t[t.index('<footer>'):t.index('</footer>') + len('</footer>')]
-    scripts = re.findall(r'<script src="site\.js[^"]*"></script>', t)[0]
+    scripts = re.findall(r'<script src="site\.js[^"]*"(?: defer)?></script>', t)[0]  # Oct 19: defer-sitejs adds defer
     return (head + '</head>\n' + f'<body class="toc-sub {body_class}" data-glass="{glass}"><a class="skip-link" href="#main">Skip to content</a>{nav}<main id="main">\n'
             + f'<section class="page-hero"><div class="page-hero-content"><h1>{esc(title)}</h1><p>{esc(desc)}</p></div></section>\n'
             + main + '</main>\n' + foot + scripts + f'<script src="edu.js?v={CSSV}" defer></script><script src="edu-extras.js?v=20261015it" defer></script>' + (f'<script src="sx-anim.js?v={CSSV}" defer></script>' if page == 'Satellite_Explorer.html' else '') + '</body></html>\n')
