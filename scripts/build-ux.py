@@ -25,7 +25,7 @@ T = {
    items={'Solutions.html':'All Solutions','World_Map.html':'World Map','Oceans.html':'Ocean','Rivers.html':'Rivers','Lakes.html':'Lakes','Polar.html':'Polar','Deforestation.html':'Forests','Earth_Observation.html':'Earth Observation','Search.html':'Search','Topics.html':'Topics A to Z',
      'Kids_Map.html':'Kids Planet Map','Amazing_Facts.html':'Amazing Facts','Satellite_Explorer.html':'Satellite Explorer','Lesson_Builder.html':'Lesson Plan Builder','Teachers.html':'Teacher Sheets','Myth_vs_Fact.html':'Myth vs Fact','Glossary.html':'Glossary',
      'Space.html':'Space','Enceladus.html':'Enceladus','Artemis_II.html#launches':'Live Launch Tracker','Planetary_Defense.html':'Planetary Defense','Space_Weather.html':'Space Weather','Space_Disposal.html':'Space Disposal','Project-Rawane.html':'Project Rawane','Rawanes_Mission_Log.html':"Rawane's Mission Log",
-     'Ways_to_Help.html':'Ways to Help','Find_a_Cleanup.html':'Find a Cleanup','index.html#newsletter':'Weekly Brief','Contact.html':'Contact',
+     'Ways_to_Help.html':'Ways to Help','Top_Ten.html':'Top Ten','Find_a_Cleanup.html':'Find a Cleanup','index.html#newsletter':'Weekly Brief','Contact.html':'Contact',
      'About.html':'About Us','Editorial_Policy.html':'Editorial Policy','Corrections.html':'Corrections','Press.html':'Press &amp; Media','Privacy.html':'Privacy'},
    cta1='Explore All Solutions', cta2='Ways to help', imp=['real, sourced solutions','solution hubs','languages','learning tools for kids and teachers'],
    dom=[('Water','Oceans, rivers and lakes'),('Land','Forests and the people who live with them'),('Space','Satellites, missions and keeping orbit clean')],
@@ -35,7 +35,7 @@ T = {
    items={'Solutions.html':'Toutes les solutions','World_Map.html':'Carte du monde','Oceans.html':'Océan','Rivers.html':'Rivières','Lakes.html':'Lacs','Polar.html':'Pôles','Deforestation.html':'Forêts','Earth_Observation.html':'Observation de la Terre','Search.html':'Recherche','Topics.html':'Sujets de A à Z',
      'Kids_Map.html':'Carte de la planète pour enfants','Amazing_Facts.html':'Faits étonnants','Satellite_Explorer.html':'Explorateur de satellites','Lesson_Builder.html':'Générateur de plans de cours','Teachers.html':'Fiches enseignants','Myth_vs_Fact.html':'Mythe ou réalité','Glossary.html':'Glossaire',
      'Space.html':'Espace','Enceladus.html':'Encelade','Artemis_II.html#launches':'Suivi des lancements en direct','Planetary_Defense.html':'Défense planétaire','Space_Weather.html':'Météo spatiale','Space_Disposal.html':'Élimination des débris spatiaux','Project-Rawane.html':'Projet Rawane','Rawanes_Mission_Log.html':'Journal de mission de Rawane',
-     'Ways_to_Help.html':'Comment aider','Find_a_Cleanup.html':'Trouver un nettoyage','index.html#newsletter':'Bulletin hebdomadaire','Contact.html':'Contact',
+     'Ways_to_Help.html':'Comment aider','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Trouver un nettoyage','index.html#newsletter':'Bulletin hebdomadaire','Contact.html':'Contact',
      'About.html':'Qui sommes-nous','Editorial_Policy.html':'Politique éditoriale','Corrections.html':'Corrections','Press.html':'Presse et médias','Privacy.html':'Confidentialité'},
    cta1='Explorer toutes les solutions', cta2='Comment aider', imp=['solutions réelles et sourcées','pôles de solutions','langues','outils pour enfants et enseignants'],
    dom=[('Eau','Océans, rivières et lacs'),('Terre','Les forêts et les personnes qui y vivent'),('Espace','Satellites, missions et une orbite plus propre')],
@@ -45,7 +45,7 @@ T = {
    items={'Solutions.html':'Todas las soluciones','World_Map.html':'Mapa mundial','Oceans.html':'Océano','Rivers.html':'Ríos','Lakes.html':'Lagos','Polar.html':'Polos','Deforestation.html':'Bosques','Earth_Observation.html':'Observación de la Tierra','Search.html':'Buscar','Topics.html':'Temas de la A a la Z',
      'Kids_Map.html':'Mapa del Planeta para niños','Amazing_Facts.html':'Datos asombrosos','Satellite_Explorer.html':'Explorador de satélites','Lesson_Builder.html':'Creador de planes de clase','Teachers.html':'Fichas para docentes','Myth_vs_Fact.html':'Mito o realidad','Glossary.html':'Glosario',
      'Space.html':'Espacio','Enceladus.html':'Encélado','Artemis_II.html#launches':'Rastreador de lanzamientos en vivo','Planetary_Defense.html':'Defensa planetaria','Space_Weather.html':'Clima espacial','Space_Disposal.html':'Retiro de basura espacial','Project-Rawane.html':'Proyecto Rawane','Rawanes_Mission_Log.html':'Bitácora de Rawane',
-     'Ways_to_Help.html':'Formas de ayudar','Find_a_Cleanup.html':'Encuentra una limpieza','index.html#newsletter':'Boletín semanal','Contact.html':'Contacto',
+     'Ways_to_Help.html':'Formas de ayudar','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Encuentra una limpieza','index.html#newsletter':'Boletín semanal','Contact.html':'Contacto',
      'About.html':'Quiénes somos','Editorial_Policy.html':'Política editorial','Corrections.html':'Correcciones','Press.html':'Prensa','Privacy.html':'Privacidad'},
    cta1='Explorar todas las soluciones', cta2='Formas de ayudar', imp=['soluciones reales y con fuentes','centros de soluciones','idiomas','herramientas para niños y docentes'],
    dom=[('Agua','Océanos, ríos y lagos'),('Tierra','Los bosques y las personas que viven en ellos'),('Espacio','Satélites, misiones y una órbita más limpia')],
@@ -55,7 +55,7 @@ T = {
    items={'Solutions.html':'كل الحلول','World_Map.html':'خريطة العالم','Oceans.html':'المحيط','Rivers.html':'الأنهار','Lakes.html':'البحيرات','Polar.html':'القطبان','Deforestation.html':'الغابات','Earth_Observation.html':'رصد الأرض','Search.html':'بحث','Topics.html':'المواضيع من الألف إلى الياء',
      'Kids_Map.html':'خريطة الكوكب للأطفال','Amazing_Facts.html':'حقائق مذهلة','Satellite_Explorer.html':'مستكشف الأقمار الصناعية','Lesson_Builder.html':'منشئ خطط الدروس','Teachers.html':'أوراق المعلمين','Myth_vs_Fact.html':'خرافة أم حقيقة','Glossary.html':'المسرد',
      'Space.html':'الفضاء','Enceladus.html':'إنسيلادوس','Artemis_II.html#launches':'متتبع الإطلاقات المباشر','Planetary_Defense.html':'الدفاع الكوكبي','Space_Weather.html':'طقس الفضاء','Space_Disposal.html':'التخلص من الحطام الفضائي','Project-Rawane.html':'مشروع Rawane','Rawanes_Mission_Log.html':'سجل مهمة Rawane',
-     'Ways_to_Help.html':'طرق المساعدة','Find_a_Cleanup.html':'ابحث عن حملة تنظيف','index.html#newsletter':'النشرة الأسبوعية','Contact.html':'اتصل بنا',
+     'Ways_to_Help.html':'طرق المساعدة','Top_Ten.html':'أفضل 10','Find_a_Cleanup.html':'ابحث عن حملة تنظيف','index.html#newsletter':'النشرة الأسبوعية','Contact.html':'اتصل بنا',
      'About.html':'من نحن','Editorial_Policy.html':'السياسة التحريرية','Corrections.html':'التصحيحات','Press.html':'الصحافة والإعلام','Privacy.html':'الخصوصية'},
    cta1='استكشف كل الحلول', cta2='طرق المساعدة', imp=['حلًا حقيقيًا موثقًا','مراكز حلول','لغات','أدوات للأطفال والمعلمين'],
    dom=[('الماء','المحيطات والأنهار والبحيرات'),('اليابسة','الغابات والناس الذين يعيشون فيها'),('الفضاء','الأقمار الصناعية والبعثات ومدار أنظف')],
@@ -65,7 +65,7 @@ T = {
    items={'Solutions.html':'Tutte le soluzioni','World_Map.html':'Mappa del mondo','Oceans.html':'Oceano','Rivers.html':'Fiumi','Lakes.html':'Laghi','Polar.html':'Poli','Deforestation.html':'Foreste','Earth_Observation.html':'Osservazione della Terra','Search.html':'Cerca','Topics.html':'Argomenti dalla A alla Z',
      'Kids_Map.html':'Mappa del pianeta per bambini','Amazing_Facts.html':'Fatti incredibili','Satellite_Explorer.html':'Esploratore di satelliti','Lesson_Builder.html':'Generatore di piani di lezione','Teachers.html':'Schede per insegnanti','Myth_vs_Fact.html':'Mito o realtà','Glossary.html':'Glossario',
      'Space.html':'Spazio','Enceladus.html':'Encelado','Artemis_II.html#launches':'Lanci in diretta','Planetary_Defense.html':'Difesa planetaria','Space_Weather.html':'Meteo spaziale','Space_Disposal.html':'Smaltimento dei detriti spaziali','Project-Rawane.html':'Progetto Rawane','Rawanes_Mission_Log.html':'Diario di missione di Rawane',
-     'Ways_to_Help.html':'Come aiutare','Find_a_Cleanup.html':'Trova un evento di pulizia','index.html#newsletter':'Notiziario settimanale','Contact.html':'Contatti',
+     'Ways_to_Help.html':'Come aiutare','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Trova un evento di pulizia','index.html#newsletter':'Notiziario settimanale','Contact.html':'Contatti',
      'About.html':'Chi siamo','Editorial_Policy.html':'Politica editoriale','Corrections.html':'Correzioni','Press.html':'Stampa e media','Privacy.html':'Privacy'},
    cta1='Esplora tutte le soluzioni', cta2='Come aiutare', imp=['soluzioni reali e con fonti','hub di soluzioni','lingue','strumenti per bambini e insegnanti'],
    dom=[('Acqua','Oceani, fiumi e laghi'),('Terra','Le foreste e le persone che ci vivono'),('Spazio','Satelliti, missioni e un’orbita più pulita')],
@@ -297,7 +297,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261018h"  # bump when styles.css changes
+STYLEV = "20261018i"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

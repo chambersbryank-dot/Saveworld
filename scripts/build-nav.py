@@ -32,7 +32,7 @@ GROUPS = [
  ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
 ]
-UTIL = ['Search.html', 'index.html#newsletter', 'Find_a_Cleanup.html', 'Contact.html']
+UTIL = ['Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Find_a_Cleanup.html', 'Contact.html']  # Oct 18: + This Week's Top Ten (one stable link for X posts)
 LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}
 SEARCH_SVG = '<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>'
