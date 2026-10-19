@@ -248,7 +248,6 @@ html.dark .dom-card{background:#13232f}
 .sol-filters button{border:1px solid #0077b6;background:#fff;color:#0077b6;border-radius:999px;padding:.45rem .9rem;font-weight:600;cursor:pointer;min-height:44px}
 .sol-filters button[aria-pressed="true"]{background:#0077b6;color:#fff}
 .sol-filters select{min-height:44px;border-radius:10px;padding:0 .6rem;font-size:1rem}
-.sol-hub.sp-collapsed .grid>.sol-card:nth-child(n+7){display:none}
 .sp-more{display:block;margin:1rem auto 0;min-height:44px;padding:.5rem 1.2rem;border-radius:999px;border:0;background:#003755;color:#fff;font-weight:600;cursor:pointer}
 /* Oct 17 quick fixes (iPad landscape review): side margins, Real Solutions row, floating buttons above the language sheet */
 #partner-teaser.five-ws,.learn-link{box-sizing:border-box;max-width:1200px;margin-inline:auto!important;padding-inline:clamp(1rem,4vw,1.5rem)!important}
@@ -274,14 +273,12 @@ JS = r"""
   var f=document.querySelector('.sol-filters');if(!f)return;
   var L=JSON.parse(f.getAttribute('data-i18n'));
   var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
-  hubs.forEach(function(h){var n=h.querySelectorAll('.sol-card').length;if(n<=6)return;h.classList.add('sp-collapsed');
-    var b=document.createElement('button');b.type='button';b.className='sp-more';b.textContent=L.more.replace('{n}',n);
-    b.onclick=function(){var c=h.classList.toggle('sp-collapsed');b.textContent=c?L.more.replace('{n}',n):L.less};h.appendChild(b)});
+  // Oct 18 (owner): no 'Show all N' collapse on Solutions; every card in every hub is always shown.
   var dom='all',hub='all',sel=f.querySelector('select');
   function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
     f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
-  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
-  sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';if(sel)sel.value='all';apply()}});
+  if(sel)sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
   var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
 })();
 (function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
@@ -332,7 +329,7 @@ def solutions_filters(l, hubs):
     i18n = html.escape(json.dumps({'more': t['more'], 'less': t['less']}, ensure_ascii=False))
     btns = f'<button type="button" value="all">{t["all"]}</button>' + ''.join(f'<button type="button" value="{k}">{dn}</button>' for k, (dn, _) in zip(['water','land','space'], t['dom']))
     opts = f'<option value="all">{t["allhubs"]}</option>' + ''.join(f'<option value="{v["id"]}">{v["name"]} ({len(v["cards"])})</option>' for v in hubs.values())
-    fb = f'<div class="sol-filters" role="group" aria-label="{t["filt"]}" data-i18n="{i18n}">{btns}<label><span class="visually-hidden">{t["hub"]}</span><select aria-label="{t["hub"]}">{opts}</select></label></div>'
+    fb = f'<div class="sol-filters" role="group" aria-label="{t["filt"]}" data-i18n="{i18n}">{btns}</div>'  # Oct 18 (owner cleanup): no hub dropdown, the hub chips below already list every hub with its count
     s = block(s, 'SOL-FILTERS', fb, r'<div [^>]*sol-jump')
     return wr(p, s)
 
@@ -348,7 +345,9 @@ def page_pass(p, l, n):
         s = s[:m.start()] + m.group(1) + inner + m.group(3) + s[m.end():]
     # Oct 15: translated pages inherit the English sticky button from i18n-build; always set this language's label.
     s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)(?:<svg class="cta-drop".*?</svg>)?[^<]*(</a>)', lambda mm: mm.group(1) + DROP + T[l]["help"] + mm.group(2), s)
-    if 'class="sticky-help"' not in s and '</main>' in s:
+    if page == 'Solutions.html':  # Oct 18 (owner): no floating Help / Donate button on Solutions (the nav keeps its Help / Donate link)
+        s = re.sub(r'<a class="sticky-help" href="Ways_to_Help.html">.*?</a>', '', s, flags=re.S)
+    elif 'class="sticky-help"' not in s and '</main>' in s:
         s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{DROP}{T[l]["help"]}</a>', 1)
     # lazy images below the hero
     def lazy(mm):

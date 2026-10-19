@@ -2868,5 +2868,56 @@
   "width": 640,
   "height": 360,
   "duration": 86.33
+ },
+ "images/solutions-banner-earth-wide-poster-3840x900.png": {
+  "url": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
+  "key": "images/solutions-banner-earth-wide-poster-3840x900.8be193d817c1.png",
+  "bytes": 2764963,
+  "sha256": "8be193d817c1015d7b45060f9f673038487d550172b7e52f820947d285eef2f3",
+  "type": "image/png",
+  "width": 3840,
+  "height": 900,
+  "srcset": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.0d6b8aa19fd8.webp 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.772b09a8b96d.webp 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.9221a41c4960.webp 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.00c5a5412fda.webp 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.2080b89d6dfd.webp 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.530ef069f47f.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-480.d4bacaf4d3d2.avif 480w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-800.9cd5c4923105.avif 800w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1280.e5cc31ac9127.avif 1280w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-1920.9b274b850226.avif 1920w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-2560.93430770df0d.avif 2560w, https://media.savingplanets.com/images/solutions-banner-earth-wide-poster-3840x900-3840.44e29704f6b1.avif 3840w"
+ },
+ "videos/solutions-banner-earth-wide-1280x300.mp4": {
+  "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-1280x300.157e47ff0204.mp4",
+  "key": "videos/solutions-banner-earth-wide-1280x300.157e47ff0204.mp4",
+  "bytes": 4674067,
+  "sha256": "157e47ff0204d50f4492dbe1caa48d21cead9ffee7b40ef032b7190e41171a2b",
+  "type": "video/mp4",
+  "width": 1280,
+  "height": 300,
+  "duration": 90.0
+ },
+ "videos/solutions-banner-earth-wide-1920x450.mp4": {
+  "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-1920x450.fd6b2067acf8.mp4",
+  "key": "videos/solutions-banner-earth-wide-1920x450.fd6b2067acf8.mp4",
+  "bytes": 9876206,
+  "sha256": "fd6b2067acf86b8d474d95397624fbcda8a9902c36f00af59b2c7b796c63ee5d",
+  "type": "video/mp4",
+  "width": 1920,
+  "height": 450,
+  "duration": 90.0
+ },
+ "videos/solutions-banner-earth-wide-2560x600.mp4": {
+  "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-2560x600.462cdc1794e4.mp4",
+  "key": "videos/solutions-banner-earth-wide-2560x600.462cdc1794e4.mp4",
+  "bytes": 15672699,
+  "sha256": "462cdc1794e45cee47fe978ba9fbc7de40f06918da8909d06535ee18000bc48e",
+  "type": "video/mp4",
+  "width": 2560,
+  "height": 600,
+  "duration": 90.0
+ },
+ "videos/solutions-banner-earth-wide-3840x900.mp4": {
+  "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-3840x900.6a825f7f191e.mp4",
+  "key": "videos/solutions-banner-earth-wide-3840x900.6a825f7f191e.mp4",
+  "bytes": 36416928,
+  "sha256": "6a825f7f191e9d8c14d93197c25a464787467289ea0497f93c46a9d4b0faeeed",
+  "type": "video/mp4",
+  "width": 3840,
+  "height": 900,
+  "duration": 90.0
  }
 }

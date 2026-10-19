@@ -27,13 +27,16 @@ def picture(e, alt, sizes='100vw'):
     return (f'<picture class="spb-media">{srcs}<img src="{src}" alt="{_e(alt)}" width="{e["width"]}" height="{e["height"]}" '
             f'fetchpriority="high" decoding="async"></picture>')
 
+# WCAG 2.2.2: moving content longer than 5 s gets a pause control (same label as the Project Rawane banner, already translated)
+PAUSE_BTN = '<button type="button" class="spb-pause" aria-pressed="false" aria-label="Pause banner animation">&#10074;&#10074;</button>'
 VIDEO_JS = ("<script>(function(){document.querySelectorAll('.sp-anim-banner video[data-srcs]').forEach(function(v){var b=v.closest('.sp-anim-banner');"
     "var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)'),c=navigator.connection;if((rm&&rm.matches)||(c&&c.saveData))return;"
     "var s=JSON.parse(v.getAttribute('data-srcs')),r=b.getBoundingClientRect(),ar=v.videoWidth&&v.videoHeight?v.videoWidth/v.videoHeight:+(v.getAttribute('data-ar')||2.34),"
     "need=Math.max(r.width,r.height*ar)*Math.min(window.devicePixelRatio||1,2),u=s[s.length-1][1];if(innerWidth<=760)need=Math.min(need,1920);"
     "for(var i=0;i<s.length;i++){if(s[i][0]>=need*0.92){u=s[i][1];break}}v.src=u;"
-    "v.addEventListener('playing',function(){b.classList.add('is-playing')},{once:true});"
-    "var p=function(){var q=v.play();q&&q.catch&&q.catch(function(){})};"
+    "v.addEventListener('playing',function(){b.classList.add('is-playing')},{once:true});var held=false,btn=b.querySelector('.spb-pause');"
+    "var p=function(){if(held)return;var q=v.play();q&&q.catch&&q.catch(function(){})};"
+    "btn&&btn.addEventListener('click',function(){held=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',held);btn.innerHTML=held?'&#9654;':'&#10074;&#10074;';held?v.pause():p()});"
     "if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?p():v.pause()}).observe(b)}else p();"
     "rm&&rm.addEventListener&&rm.addEventListener('change',function(e){if(e.matches){v.pause();b.classList.remove('is-playing')}})})})();</script>")
 
@@ -45,7 +48,8 @@ def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class='', h1_html=None,
     return (f'<section class="{cls}"' + (f' id="{sec_id}"' if sec_id else '') + f' aria-labelledby="{h1_id}">{picture(e, alt, sizes)}{vid}'
             + ('' if video else '<span class="spb-sweep" aria-hidden="true"></span>')
             + f'<div class="spb-text"><h1 id="{h1_id}">{h1_html if h1_html is not None else _e(h1)}</h1>' + (f'<p>{_e(sub)}</p>' if sub else '') + '</div>'
-            f'<span class="spb-credit">{credit_html if credit_html is not None else _e(credit)}</span></section>' + (VIDEO_JS if video else ''))
+            f'<span class="spb-credit">{credit_html if credit_html is not None else _e(credit)}</span>'
+            + (PAUSE_BTN if video else '') + '</section>' + (VIDEO_JS if video else ''))
 
 CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,560px);display:flex;align-items:flex-end;overflow:hidden;background:#02060c;contain:paint}'
  '.sp-anim-banner .spb-media,.sp-anim-banner .spb-media img{position:absolute;inset:0;width:100%;height:100%}'
@@ -67,7 +71,12 @@ CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,
  '.sp-anim-banner.is-playing .spb-video{opacity:1}'
  '.sp-anim-banner.has-video .spb-media img{animation:none;transform:none;will-change:auto}'
  '.sp-anim-banner .spb-credit span{unicode-bidi:isolate}'
- '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-video{display:none}}'
+ '.sp-anim-banner .spb-pause{position:absolute;z-index:2;left:.6rem;bottom:.4rem;width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid rgba(255,255,255,.45);'
+ 'background:rgba(2,6,12,.45);color:#fff;font-size:.8rem;line-height:1;cursor:pointer;display:none}'
+ '.sp-anim-banner.is-playing .spb-pause,.sp-anim-banner .spb-pause[aria-pressed=true]{display:block}'
+ '.sp-anim-banner .spb-pause:focus-visible{outline:2px solid #4da3ff;outline-offset:2px}'
+ '[dir=rtl] .sp-anim-banner .spb-pause{left:auto;right:.6rem}'
+ '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-video,.sp-anim-banner .spb-pause{display:none !important}}'
  '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-media img,.sp-anim-banner .spb-sweep,.sp-anim-banner h1,.sp-anim-banner .spb-text p{animation:none !important}.sp-anim-banner .spb-sweep{display:none}}')
 
 def write_css(path='styles.css'):

@@ -10,7 +10,7 @@ html body.sol-page .sol-banner h1 { font-size: clamp(1.8rem, 3.6vw, 2.9rem); lin
 html body.sol-page .sol-banner .sol-n { color: #7fd3ff; }
 html body.sol-page .sol-banner .spb-text p { margin-top: .45rem; font-size: clamp(1rem, 1.6vw, 1.2rem); font-weight: 600; color: #e9f4ff; letter-spacing: .02em; text-shadow: 0 2px 12px rgba(0,0,0,.7); }
 html body.sol-page .sol-banner .spb-credit { opacity: .85; text-shadow: 0 1px 3px rgba(0,0,0,.8); }
-@media (max-width: 760px) { html body.sol-page .sp-anim-banner.sol-banner { min-height: max(34vh, 260px); padding-bottom: 2.2rem; } html body.sol-page .sol-banner .spb-credit { left: .5rem; right: .5rem; text-align: center; font-size: .58rem; } }
+@media (max-width: 760px) { html body.sol-page .sp-anim-banner.sol-banner { min-height: max(34vh, 260px); padding-bottom: 2.2rem; } html body.sol-page .sol-banner .spb-credit { left: 3.4rem; right: 3.4rem; text-align: center; font-size: .58rem; } }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .sol-intro { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 0; text-align: center; }
 .sol-jump ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0; margin: 0; }
@@ -44,3 +44,10 @@ body.sol-page .sol-also { padding: 0 1rem; margin: -0.3rem 0 0.6rem; font-size: 
 /* Oct 18: the hub chips wrap onto a second centred row instead of a single row cut off at the right edge (iPad landscape hid Space Disposal / Space Weather) */
 html body.sol-page .sol-jump ul { flex-wrap: wrap; overflow: visible; justify-content: center; padding-bottom: 0; }
 html body.sol-page .sol-intro { padding-top: 1.4rem; }
+/* Oct 18 owner cleanup: BLUF hook, hub chips with counts, tight cards (no stretched empty space) */
+html body.sol-page .sol-bluf { max-width: 46rem; margin: 0 auto 1.1rem; font-size: clamp(1.02rem, 1.5vw, 1.15rem); line-height: 1.5; color: #dbe9f6; }
+html body.sol-page .sol-jump .sol-c { display: inline-block; min-width: 1.6em; margin-inline-start: .3rem; padding: 0 .35rem; border-radius: 999px; background: rgba(77,163,255,.18); font-size: .8em; font-weight: 700; color: #9fd0ff; }
+html body.sol-page .sol-jump a:hover .sol-c { background: rgba(255,255,255,.25); color: #fff; }
+html body.sol-page .sol-hub .grid { align-items: start; }
+html body.sol-page .sol-card .sol-desc { flex: none; }
+html body.sol-page .sol-card .sol-more { margin-top: 0; }

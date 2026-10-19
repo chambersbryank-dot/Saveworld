@@ -95,8 +95,7 @@ def card(href, name, i, missing, also=()):
     if not i['img']: missing.append(f'{href}: no image')
     if not (i['desc'] or i['what']): missing.append(f'{href}: no description')
     alt = i['alt'] or f'{name} image'
-    parts = [p for p in (i['desc'], i['what']) if p]
-    if len(parts) == 2 and parts[1].lower() in parts[0].lower(): parts = parts[:1]
+    parts = [p for p in (i['desc'], i['what']) if p][:1]  # Oct 18 (owner cleanup): one short description per card, the full 5 W's are one tap away
     desc = ' '.join(f'<span>{esc(p)}</span>' for p in parts)
     img = (f'<div class="image-container"><a class="photo-link" href="{href}"><img src="{i["img"]}" alt="{esc(alt)}" loading="lazy" decoding="async"></a></div>'
            + (f'<p class="photo-credit">{i["credit"]}</p>' if i['credit'] else '')) if i['img'] else ''
@@ -153,9 +152,9 @@ def build():
     hl = [(f, name, [(h, n) for h, n in items if primary[h][0] == f]) for f, name, items in hl]
     for f, name, items in hl:
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
-        jump.append(f'<li><a href="#{sid}">{esc(name)}</a></li>')
+        jump.append(f'<li><a href="#{sid}">{esc(name)} <span class="sol-c">{len(items)}</span></a></li>')
         cards = ''.join(card(h, n, info(h), missing, also.get(h, [])) for h, n in items); total += len(items)
-        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div>{hub_summary(f, name)}</section>')
+        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div></section>')  # Oct 18 (owner cleanup): the long Hub Summary box after every hub is gone (the hub title links to the hub's 5 W's)
     desc = f'Proof it\'s not too late: {total} real, sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily.'
     title = f'{total} Real Solutions Making a Difference Daily'
     # head: retarget Contact -> Solutions
@@ -166,11 +165,11 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "' + title + '", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261018k">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261018s">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
         + banner(total) + '\n'
-        f'<main id="directory"><section class="sol-intro"><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
+        f'<main id="directory"><section class="sol-intro"><p class="sol-bluf">Every card is a real team doing hands-on work you can check: cleanups, restoration, satellites and missions, each with sources. Pick a hub below to start.</p><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
         + '\n'.join(secs) + '\n</main>\n'
         f'{footer}<script src="site.js?v={js_v}"></script></body></html>\n')
     page = h + body_html

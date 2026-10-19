@@ -1,0 +1,44 @@
+{
+ "Real Solutions Making a Difference Daily": {
+  "fr": "vraies solutions qui font la différence chaque jour",
+  "es": "soluciones reales que marcan la diferencia cada día",
+  "ar": "حلًا حقيقيًا يُحدث فرقًا كل يوم",
+  "it": "soluzioni reali che fanno la differenza ogni giorno",
+  "he": "פתרונות אמיתיים שעושים הבדל בכל יום"
+ },
+ "{x} Real Solutions Making a Difference Daily": {
+  "fr": "{x} vraies solutions qui font la différence chaque jour",
+  "es": "{x} soluciones reales que marcan la diferencia cada día",
+  "ar": "{x} حلًا حقيقيًا يُحدث فرقًا كل يوم",
+  "it": "{x} soluzioni reali che fanno la differenza ogni giorno",
+  "he": "{x} פתרונות אמיתיים שעושים הבדל בכל יום"
+ },
+ "Proof it's not too late": {
+  "fr": "La preuve qu'il n'est pas trop tard",
+  "es": "La prueba de que no es demasiado tarde",
+  "ar": "الدليل على أن الأوان لم يفت بعد",
+  "it": "La prova che non è troppo tardi",
+  "he": "ההוכחה שעוד לא מאוחר מדי"
+ },
+ "Earth: NASA Blue Marble": {
+  "fr": "Terre : NASA Blue Marble",
+  "es": "Tierra: NASA Blue Marble",
+  "ar": "الأرض: NASA Blue Marble",
+  "it": "Terra: NASA Blue Marble",
+  "he": "כדור הארץ: NASA Blue Marble"
+ },
+ "Proof it's not too late: {x} real, sourced solutions across {y} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily.": {
+  "fr": "La preuve qu'il n'est pas trop tard : {x} solutions réelles et sourcées dans {y} pôles, du nettoyage des océans aux satellites qui observent la Terre.",
+  "es": "La prueba de que no es demasiado tarde: {x} soluciones reales y con fuentes en {y} áreas, de la limpieza oceánica a los satélites que observan la Tierra.",
+  "ar": "الدليل على أن الأوان لم يفت بعد: {x} حلًا حقيقيًا موثّق المصادر في {y} من المحاور، من تنظيف المحيطات إلى أقمار رصد الأرض.",
+  "it": "La prova che non è troppo tardi: {x} soluzioni reali e con fonti in {y} hub, dalla pulizia degli oceani ai satelliti che osservano la Terra.",
+  "he": "ההוכחה שעוד לא מאוחר מדי: {x} פתרונות אמיתיים ומבוססי מקורות ב-{y} מרכזים, מניקוי האוקיינוסים ועד לווייני תצפית על כדור הארץ."
+ },
+ "Every card is a real team doing hands-on work you can check: cleanups, restoration, satellites and missions, each with sources. Pick a hub below to start.": {
+  "fr": "Chaque fiche présente une vraie équipe qui agit concrètement, de façon vérifiable : nettoyages, restauration, satellites et missions, chacun avec ses sources. Choisissez un pôle ci-dessous pour commencer.",
+  "es": "Cada tarjeta es un equipo real que hace un trabajo práctico y verificable: limpiezas, restauración, satélites y misiones, cada uno con sus fuentes. Elige un área abajo para empezar.",
+  "ar": "كل بطاقة تعرض فريقًا حقيقيًا يقوم بعمل ميداني يمكن التحقق منه: حملات تنظيف وترميم وأقمار صناعية وبعثات، ولكل منها مصادره. اختر محورًا أدناه للبدء.",
+  "it": "Ogni scheda è una squadra reale che fa un lavoro concreto e verificabile: pulizie, ripristino, satelliti e missioni, ognuno con le sue fonti. Scegli un hub qui sotto per iniziare.",
+  "he": "כל כרטיס מציג צוות אמיתי שעושה עבודה מעשית שאפשר לבדוק: ניקיונות, שיקום, לוויינים ומשימות, כל אחד עם מקורות. בחרו מרכז למטה כדי להתחיל."
+ }
+}
