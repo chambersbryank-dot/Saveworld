@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T23:17:08.892Z",
+ "generated": "2026-10-18T23:48:08.804Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -194,6 +194,10 @@
    "href": "Project-Rawane.html",
    "items": [
     {
+     "href": "Ariel.html",
+     "name": "Ariel Exoplanet Mission (ESA)"
+    },
+    {
      "href": "Artemis_II.html",
      "name": "Artemis II (NASA / CSA)"
     },
@@ -240,6 +244,10 @@
     {
      "href": "Veggie_Space_Garden.html",
      "name": "Veggie Space Garden (NASA)"
+    },
+    {
+     "href": "Voyager.html",
+     "name": "Voyager 1 and 2 (NASA)"
     }
    ]
   },
@@ -254,6 +262,14 @@
     {
      "href": "Biomass.html",
      "name": "Biomass (ESA)"
+    },
+    {
+     "href": "CHIME.html",
+     "name": "CHIME Hyperspectral Imaging Mission (ESA)"
+    },
+    {
+     "href": "CIMR.html",
+     "name": "CIMR Copernicus Imaging Microwave Radiometer (ESA)"
     },
     {
      "href": "CAMS.html",
@@ -292,6 +308,10 @@
      "name": "Copernicus Sentinel-6B (ESA / NASA)"
     },
     {
+     "href": "CRISTAL.html",
+     "name": "CRISTAL Polar Ice and Snow Altimeter (ESA)"
+    },
+    {
      "href": "CryoSat.html",
      "name": "CryoSat Ice Mission (ESA)"
     },
@@ -324,8 +344,20 @@
      "name": "FLEX and Sentinel-3C (ESA)"
     },
     {
+     "href": "FORUM.html",
+     "name": "FORUM Far-Infrared Mission (ESA)"
+    },
+    {
+     "href": "Galileo.html",
+     "name": "Galileo Satellite Navigation (EU / ESA)"
+    },
+    {
      "href": "GCOM-C.html",
      "name": "GCOM-C &quot;SHIKISAI&quot; (JAXA)"
+    },
+    {
+     "href": "GeoXO.html",
+     "name": "GeoXO Geostationary Extended Observations (NOAA / NASA)"
     },
     {
      "href": "GOSAT-GW.html",
@@ -346,6 +378,10 @@
     {
      "href": "ICESat-2.html",
      "name": "ICESat-2 (NASA)"
+    },
+    {
+     "href": "INSAT-3DS.html",
+     "name": "INSAT-3DS Weather Satellite (ISRO)"
     },
     {
      "href": "International_Charter.html",
@@ -434,12 +470,20 @@
      "name": "American Forests"
     },
     {
+     "href": "Arbor_Day_Foundation.html",
+     "name": "Arbor Day Foundation"
+    },
+    {
      "href": "Eden_People_Planet.html",
      "name": "Eden: People+Planet"
     },
     {
      "href": "EFFIS.html",
      "name": "European Forest Fire Information System (EFFIS)"
+    },
+    {
+     "href": "Forest_Elephants.html",
+     "name": "Forest Elephants, Carbon Gardeners"
     },
     {
      "href": "GEDI.html",
@@ -504,6 +548,10 @@
     {
      "href": "WeForest.html",
      "name": "WeForest"
+    },
+    {
+     "href": "Yellowstone_Wolves.html",
+     "name": "Yellowstone Wolves"
     }
    ]
   },
@@ -514,6 +562,10 @@
     {
      "href": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
      "name": "Adopt-a-Beach (Alliance for the Great Lakes)"
+    },
+    {
+     "href": "Clean_Lakes_Alliance.html",
+     "name": "Clean Lakes Alliance (Madison, Wisconsin)"
     },
     {
      "href": "Clean_Up_the_Lake.html",
@@ -586,6 +638,10 @@
      "name": "Coral Restoration Foundation"
     },
     {
+     "href": "Coral_Vita.html",
+     "name": "Coral Vita Land-Based Coral Farms"
+    },
+    {
      "href": "Global_Fishing_Watch.html",
      "name": "Global Fishing Watch"
     },
@@ -640,6 +696,10 @@
     {
      "href": "Salt_Marshes.html",
      "name": "Salt Marshes"
+    },
+    {
+     "href": "Sea_Turtle_Conservancy.html",
+     "name": "Sea Turtle Conservancy"
     },
     {
      "href": "Seabin.html",
@@ -780,6 +840,10 @@
     {
      "href": "Mr_Trash_Wheel.html",
      "name": "Mr. Trash Wheel Family"
+    },
+    {
+     "href": "Namami_Gange.html",
+     "name": "Namami Gange (India)"
     },
     {
      "href": "OpenET.html",
@@ -976,17 +1040,17 @@
  ],
  "site": {
   "categories": 9,
-  "solutions": 175,
+  "solutions": 191,
   "horizon": 0,
   "hubs": 10,
   "byClassification": {
-   "corporate": 15,
-   "agency": 95,
-   "nonprofit": 48,
-   "natural": 15,
-   "government": 2
+   "corporate": 16,
+   "agency": 104,
+   "nonprofit": 51,
+   "natural": 17,
+   "government": 3
   },
-  "upcomingMissions": 16,
+  "upcomingMissions": 22,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1006,18 +1070,18 @@
     ]
    }
   ],
-  "taggedSolutions": 175
+  "taggedSolutions": 191
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 30,
+   "solutions": 32,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "corporate": 3,
+    "corporate": 4,
     "agency": 4,
-    "nonprofit": 17,
+    "nonprofit": 18,
     "natural": 6
    },
    "upcomingMissions": 0,
@@ -1035,11 +1099,11 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 8,
+   "solutions": 9,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 7,
+    "nonprofit": 8,
     "agency": 1
    },
    "upcomingMissions": 0,
@@ -1055,7 +1119,7 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 18,
+   "solutions": 19,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1063,19 +1127,19 @@
     "natural": 1,
     "agency": 3,
     "corporate": 2,
-    "government": 1
+    "government": 2
    },
    "upcomingMissions": 0,
    "impactTotals": []
   },
   "forests": {
    "name": "Forests",
-   "solutions": 19,
+   "solutions": 22,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "natural": 3,
-    "nonprofit": 12,
+    "natural": 5,
+    "nonprofit": 13,
     "agency": 3,
     "corporate": 1
    },
@@ -1128,28 +1192,28 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 44,
+   "solutions": 51,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 42,
+    "agency": 49,
     "nonprofit": 1,
     "corporate": 1
    },
-   "upcomingMissions": 3,
+   "upcomingMissions": 7,
    "impactTotals": []
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 24,
+   "solutions": 26,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
-    "agency": 19,
+    "agency": 21,
     "natural": 2,
     "corporate": 3
    },
-   "upcomingMissions": 7,
+   "upcomingMissions": 9,
    "impactTotals": []
   }
  },
@@ -1281,6 +1345,17 @@
    "missions": []
   },
   {
+   "url": "Arbor_Day_Foundation.html",
+   "title": "Arbor Day Foundation",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
+  },
+  {
    "url": "Argo.html",
    "title": "Argo Ocean Float Array",
    "category": "ocean",
@@ -1301,6 +1376,23 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Ariel.html",
+   "title": "Ariel Exoplanet Mission (ESA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Ariel",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
   },
   {
    "url": "Artemis_II.html",
@@ -1489,6 +1581,51 @@
    "added": "2026-10-15"
   },
   {
+   "url": "CHIME.html",
+   "title": "CHIME Hyperspectral Imaging Mission (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "CHIME",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
+  },
+  {
+   "url": "CIMR.html",
+   "title": "CIMR Copernicus Imaging Microwave Radiometer (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "CIMR",
+     "upcoming": false,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
+  },
+  {
+   "url": "Clean_Lakes_Alliance.html",
+   "title": "Clean Lakes Alliance (Madison, Wisconsin)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
+  },
+  {
    "url": "Clean_Up_the_Lake.html",
    "title": "Clean Up the Lake",
    "category": "lakes",
@@ -1629,6 +1766,34 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Coral_Vita.html",
+   "title": "Coral Vita Land-Based Coral Farms",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
+  },
+  {
+   "url": "CRISTAL.html",
+   "title": "CRISTAL Polar Ice and Snow Altimeter (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "CRISTAL",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
   },
   {
    "url": "CryoSat.html",
@@ -1916,6 +2081,34 @@
    ]
   },
   {
+   "url": "Forest_Elephants.html",
+   "title": "Forest Elephants, Carbon Gardeners",
+   "category": "forests",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
+  },
+  {
+   "url": "FORUM.html",
+   "title": "FORUM Far-Infrared Mission (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "FORUM",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
+  },
+  {
    "url": "FreshWater_Watch.html",
    "title": "FreshWater Watch (Earthwatch Europe)",
    "category": "rivers",
@@ -1932,6 +2125,23 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Galileo.html",
+   "title": "Galileo Satellite Navigation (EU / ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Galileo",
+     "upcoming": false,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
   },
   {
    "url": "GCOM-C.html",
@@ -1954,6 +2164,23 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-15"
+  },
+  {
+   "url": "GeoXO.html",
+   "title": "GeoXO Geostationary Extended Observations (NOAA / NASA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "GeoXO",
+     "upcoming": true,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
   },
   {
    "url": "Global_Fishing_Watch.html",
@@ -2241,6 +2468,23 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "INSAT-3DS.html",
+   "title": "INSAT-3DS Weather Satellite (ISRO)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "INSAT-3DS",
+     "upcoming": false,
+     "next": null
+    }
+   ],
+   "added": "2026-10-18"
   },
   {
    "url": "International_Charter.html",
@@ -2691,6 +2935,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Namami_Gange.html",
+   "title": "Namami Gange (India)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
   },
   {
    "url": "Nancy_Grace_Roman.html",
@@ -3250,6 +3505,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Sea_Turtle_Conservancy.html",
+   "title": "Sea Turtle Conservancy",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
   },
   {
    "url": "Seabin.html",
@@ -3819,6 +4085,26 @@
    ]
   },
   {
+   "url": "Voyager.html",
+   "title": "Voyager 1 and 2 (NASA)",
+   "category": "project-r",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Voyager 1",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2026-11-18T10:16:07Z"
+     }
+    }
+   ],
+   "added": "2026-10-18"
+  },
+  {
    "url": "Waterkeeper_Alliance.html",
    "title": "Waterkeeper Alliance",
    "category": "rivers",
@@ -3874,6 +4160,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Yellowstone_Wolves.html",
+   "title": "Yellowstone Wolves",
+   "category": "forests",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-18"
   },
   {
    "url": "Zero_Debris_Charter.html",

@@ -123,7 +123,13 @@ def hero_photo(url):
     if not os.path.exists(f): return None
     m = re.search(r'<body[^>]*class="[^"]*\bhp-([A-Za-z0-9_-]+)', rd(f))
     ph = _HP.get(m.group(1)) if m else None
-    return ph if ph and os.path.exists(ph) else None
+    if ph and os.path.exists(ph): return ph
+    # Oct 18: pages without an hp- hero (e.g. Artemis_II, ALOS-4) use their first large content photo, never the share card (doubled title)
+    s = rd(f); i = s.find('<main')
+    for im in re.finditer(r'<img\b[^>]*>', s[i:] if i >= 0 else ''):
+        t = im.group(0); src = re.search(r'\ssrc="(assets/[^"?#]+\.(?:jpe?g|png|webp))', t, re.I); w = re.search(r'\swidth="(\d+)"', t)
+        if src and '/og/' not in src.group(1) and (not w or int(w.group(1)) >= 400) and os.path.exists(src.group(1)): return src.group(1)
+    return None
 def mini(card):
     url = re.search(r'data-url="([^"]+)"', card).group(1)
     img = re.search(r'<img[^>]*>', card).group(0)
@@ -291,7 +297,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261018d"  # bump when styles.css changes
+STYLEV = "20261018e"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

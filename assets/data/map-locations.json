@@ -2244,6 +2244,191 @@
      "basis": "page"
     }
    ]
+  },
+  "Voyager.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 28.392,
+     "lng": -80.605,
+     "label": "Cape Canaveral, Florida, where both Voyagers launched in 1977",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "FORUM.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.236,
+     "lng": -52.769,
+     "label": "Europe's Spaceport, Kourou, French Guiana (planned launch site)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "CIMR.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 52.218,
+     "lng": 4.42,
+     "label": "ESA ESTEC, Noordwijk, Netherlands (project management)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "CRISTAL.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 47.661,
+     "lng": 9.48,
+     "label": "Airbus, Friedrichshafen, Germany, where CRISTAL-A is being assembled",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "CHIME.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.849,
+     "lng": 2.303,
+     "label": "ESA headquarters, Paris, France",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "GeoXO.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.992,
+     "lng": -77.031,
+     "label": "NOAA NESDIS, Silver Spring, Maryland",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "INSAT-3DS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 13.72,
+     "lng": 80.23,
+     "label": "Satish Dhawan Space Centre, Sriharikota, India (launch site)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Galileo.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.083,
+     "lng": 11.281,
+     "label": "Galileo Control Centre, Oberpfaffenhofen, Germany",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Ariel.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 5.236,
+     "lng": -52.769,
+     "label": "Europe's Spaceport, Kourou, French Guiana (planned launch site)",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Forest_Elephants.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -4.27,
+     "lng": 15.28,
+     "label": "Brazzaville, Republic of Congo (WCS Congo, forest elephant program)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Yellowstone_Wolves.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 44.6,
+     "lng": -110.5,
+     "label": "Yellowstone National Park, Wyoming",
+     "basis": "page"
+    }
+   ]
+  },
+  "Coral_Vita.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 26.53,
+     "lng": -78.7,
+     "label": "Grand Bahama, The Bahamas (Coral Vita coral farm)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Arbor_Day_Foundation.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 40.813,
+     "lng": -96.702,
+     "label": "Arbor Day Foundation, Lincoln, Nebraska",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Namami_Gange.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 25.317,
+     "lng": 83.006,
+     "label": "Varanasi, on the River Ganga, India",
+     "basis": "page"
+    }
+   ]
+  },
+  "Clean_Lakes_Alliance.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.074,
+     "lng": -89.384,
+     "label": "Madison, Wisconsin (Yahara lakes)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Sea_Turtle_Conservancy.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 10.54,
+     "lng": -83.5,
+     "label": "Tortuguero, Costa Rica",
+     "basis": "page"
+    }
+   ]
   }
  }
 }

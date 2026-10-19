@@ -115,7 +115,8 @@ s = put(s, 'SCOREBOARD', SB, r'<section class="impact-bar">.*?</section>')
 PW, PH = MEDIA.dims('savingplanets-promo-v3-1920x1080.mp4'); PU = MEDIA.vurl('savingplanets-promo-v3-1920x1080.mp4')
 TW, TH = MEDIA.dims('savingplanets-promo-v3-1080x1920.mp4'); TU = MEDIA.vurl('savingplanets-promo-v3-1080x1920.mp4')
 PROMO_H = "Watch: What's New on Saving Planets"
-PROMO_CAP = 'A 97-second look at the newest updates: 175 real solutions, the new homepage, five languages, the interactive World Map and Myth vs Fact.'
+# Oct 18: 191 solutions now; the promo was recorded at 175 and is not edited, so the caption says so
+PROMO_CAP = "A 97-second look at the newest updates (recorded when we had 175 solutions): the new homepage, five languages, the interactive World Map and Myth vs Fact."
 PROMO_SRC = 'Earth: NASA Blue Marble and Black Marble · Saturn: NASA/JPL-Caltech/Space Science Institute · Site screens: Saving Planets'
 try: PROMO_X = json.load(open('assets/data/promo-links.json', encoding='utf-8')).get('x_post', '')
 except Exception: PROMO_X = ''

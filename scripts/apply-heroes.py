@@ -71,6 +71,23 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Dragonfly': ('Titan.jpg', 'NASA'),
     # Oct 16: the hero is the page's Ryugu photo; the line under it named an EPIC Earth image
     'Hayabusa2_Torifune': ('Ryugu_Hayabusa2.jpg', 'JAXA Hayabusa2 ONC data, processed by Anonymsiy (CC BY 4.0)'),
+    # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
+    'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
+    'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),
+    'CIMR': ('North_Atlantic_Bloom_MODIS.jpg', 'NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team'),
+    'CRISTAL': ('Labrador_Sea_Ice_ISS.jpg', 'NASA (ISS070-E-086805, Feb. 3, 2024)'),
+    'CHIME': ('Garden_City_Kansas_Landsat.jpg', 'NASA/GSFC/Landsat (Sept. 25, 2000)'),
+    'GeoXO': ('Lightning_Storm_ISS.jpg', 'NASA (iss073e0080625, May 15, 2025)'),
+    'INSAT-3DS': ('ISS_Over_Ganges_STS102.jpg', 'NASA (STS102-357-031, March 18, 2001)'),
+    'Galileo': ('Romania_City_Lights_ISS.jpg', 'NASA (iss074e0149572, city lights trace river valleys in Romania)'),
+    'Ariel': ('Webb_Infrared.jpg', 'NASA/Sydney Rohde'),
+    'Forest_Elephants': ('Congo_River_ISS.jpg', 'NASA (ISS007-E-06305, June 6, 2003)'),
+    'Yellowstone_Wolves': ('Yellowstone_ISS.jpg', 'NASA (ISS023-E-007925, March 21, 2010)'),
+    'Coral_Vita': ('Bahama_Bank_PIA11019.jpg', 'NASA (PIA11019)'),
+    'Arbor_Day_Foundation': ('Amazon_Clouds_ISS.jpg', 'NASA (ISS013-E-74843)'),
+    'Namami_Gange': ('Sundarbans_Ganges_Delta_ISS.jpg', 'NASA (iss070e005997, Oct. 19, 2023)'),
+    'Clean_Lakes_Alliance': ('Great_Lakes_MODIS.jpg', 'NASA GSFC MODIS Land Rapid Response Team'),
+    'Sea_Turtle_Conservancy': ('Loggerhead_Release_MINWR.jpg', 'NASA (2010-5237)'),
     # Oct 17: approved batch (A, B, D, G, H, N)
     'Parker_Solar_Probe': ('SDO_Sun.jpg', 'NASA/SDO'), 'SOHO': ('SDO_Sun.jpg', 'NASA/SDO'),
     'CryoSat': ('Labrador_Sea_Ice_ISS.jpg', 'NASA (ISS070-E-086805, Feb. 3, 2024)'),
