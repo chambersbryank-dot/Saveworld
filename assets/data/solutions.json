@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T05:49:53.955Z",
+ "generated": "2026-10-19T06:10:18.830Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -199,7 +199,7 @@
     },
     {
      "href": "Artemis_II.html",
-     "name": "Artemis II (NASA / CSA)"
+     "name": "Artemis Program (NASA)"
     },
     {
      "href": "BepiColombo.html",
@@ -1437,7 +1437,7 @@
   },
   {
    "url": "Artemis_II.html",
-   "title": "Artemis II",
+   "title": "Artemis Program",
    "category": "project-r",
    "type": "solution",
    "classification": "agency",

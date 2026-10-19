@@ -121,7 +121,7 @@
    homepage keeps its static numbers. */
 (function () {
   var site = document.querySelector('[data-site-stats]');
-  var blocks = document.querySelectorAll('.page-stats[data-stats-category]');
+  var blocks = [];  /* Oct 18: 'By the Numbers' blocks removed site-wide (owner); placeholders stripped by scripts/build-rawane-cuts.py */
   var diffs = document.querySelectorAll('.diff-body');
   if (!site && !blocks.length && !diffs.length) return;
   var KEY = 'sp-solutions-v3';

@@ -1,6 +1,6 @@
 {
-  "note": "Project Rawane 'New' callout. Edit, then run scripts/weekly-sync.sh (renders into Project-Rawane.html + fr/es/ar; add new strings to i18n/<lang>.json). Set enabled false to hide. date/date_label optional.",
-  "enabled": true,
+  "note": "Project Rawane 'New' callout. Edit, then run scripts/weekly-sync.sh (renders into Project-Rawane.html + fr/es/ar; add new strings to i18n/<lang>.json). Set enabled false to hide. date/date_label optional. Oct 18: switched off on owner request (stale Oct 11 callout).",
+  "enabled": false,
   "page": "Project-Rawane.html",
   "badge": "New",
   "text": "New update on the Myth vs Fact page: {myths} doom myths checked against NASA, NOAA and ESA.",
