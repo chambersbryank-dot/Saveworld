@@ -130,9 +130,10 @@ def hero_photo(url):
         t = im.group(0); src = re.search(r'\ssrc="(assets/[^"?#]+\.(?:jpe?g|png|webp))', t, re.I); w = re.search(r'\swidth="(\d+)"', t)
         if src and '/og/' not in src.group(1) and (not w or int(w.group(1)) >= 400) and os.path.exists(src.group(1)): return src.group(1)
     return None
-def mini(card):
+def mini(card, pre_l=None):
     url = re.search(r'data-url="([^"]+)"', card).group(1)
-    img = re.search(r'<img[^>]*>', card).group(0)
+    im0 = re.search(r'<img[^>]*>', card)  # Oct 19: Solutions cards whose photo repeats elsewhere have none (the hero photo below still fills the homepage card)
+    img = im0.group(0) if im0 else '<img src="" alt="">'
     img = re.sub(r'\sloading="[^"]*"', '', img).replace('<img', '<img loading="lazy"', 1)
     # Oct 16: responsive card images (scripts/r2-cards.py puts WebP widths on R2); the repo JPEG stays the src fallback
     m = re.search(r'\ssrc="(?:\.\./)?assets/og/([a-z]{2})/([^"?]+)', img)
@@ -143,10 +144,11 @@ def mini(card):
     # Homepage cards use the page's own hero photo instead (styles.css .hp-<slug> rule); share card only as fallback.
     ph = hero_photo(url)
     if ph:
-        pre = '../' if re.search(r'\ssrc="\.\./', img) else ''
-        alt = re.search(r'\salt="([^"]*)"', img); e = MEDIA.get('images/' + os.path.basename(ph))
+        pre = '../' if re.search(r'\ssrc="\.\./', img) else ('' if im0 or pre_l is None else pre_l)
+        alt = re.search(r'\salt="([^"]+)"', img) or re.search(r'<h3><a[^>]*>(.*?)</a>', card); e = MEDIA.get('images/' + os.path.basename(ph))
         ss = f' srcset="{e["srcset"]}" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 380px"' if e and e.get('srcset') else ''
         img = f'<img loading="lazy"{ss} src="{pre}{ph}" alt="{alt.group(1) if alt else ""}" width="1200" height="630" decoding="async">'
+    elif not im0: img = ''
     h3 = re.search(r'<h3>.*?</h3>', card, re.S).group(0)
     desc = re.search(r'<p class="sol-desc"><span>(.*?)</span>', card, re.S)
     return f'<article class="dom-card"><a class="dom-img" href="{url}">{img}</a>{h3}<p>{desc.group(1) if desc else ""}</p></article>'
@@ -168,7 +170,7 @@ def home(l, n, hubs):
         cards = [c for h in hs if h in hubs for c in hubs[h]['cards']]
         if not cards: continue
         rr = [c for i in range(6) for h in hs if h in hubs and len(hubs[h]['cards']) > i for c in [hubs[h]['cards'][i]]]
-        feat = ''.join(mini(c) for c in rr[:3])
+        feat = ''.join(mini(c, pre) for c in rr[:3])
         chips = ''.join(f'<a class="dom-chip" href="Solutions.html#{hubs[h]["id"]}">{hubs[h]["name"]} ({len(hubs[h]["cards"])})</a>' for h in hs if h in hubs)
         cls = ['water', 'land', 'space'][i]
         secs.append(f'<section class="domain domain-{cls}" aria-labelledby="dom-{cls}"><div class="dom-head"><h2 id="dom-{cls}">{dn}</h2>{"" if cls == "water" else f"<p>{dd}</p>"}<div class="dom-chips">{chips}</div></div><div class="dom-grid">{feat}</div>'
@@ -293,7 +295,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261019m"  # bump when styles.css changes
+STYLEV = "20261019sa"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
@@ -333,6 +335,7 @@ def solutions_filters(l, hubs):
     s = block(s, 'SOL-FILTERS', fb, r'<div [^>]*sol-jump')
     return wr(p, s)
 
+T['he'] = dict(filt='הצגה', all='הכול', dom=[('מים', ''), ('יבשה', ''), ('חלל', '')], more='הצגת כל {n}', less='הצגת פחות', allhubs='כל המרכזים')  # Oct 19: Solutions filter row only (strings match i18n/he.json)
 COUNT_RE = re.compile(r'\b1[0-9]{2}(?=(\+)? (real|soluciones|solutions|soluzioni|حل))')
 def page_pass(p, l, n):
     s = rd(p); o = s
@@ -396,5 +399,8 @@ if __name__ == '__main__':
     for l in LANGS:
         for p in sorted(glob.glob(d(l) + '*.html')): ch += page_pass(p, l, n)
         ch += home(l, n, hubs_by[l]); ch += solutions_filters(l, hubs_by[l])
+    # Oct 19 (owner): hidden Hebrew /he/Solutions.html gets the same All / Water / Land / Space filter row as the other languages
+    # (it had none; build-ux only ran for en/fr/es/ar/it). Only the filter row: the rest of this pass stays on the 5 public languages.
+    if os.path.exists('he/Solutions.html'): ch += solutions_filters('he', sol_cards('he'))
     asset('styles.css', CSS); asset('site.js', JS); sitemap(); bump_styles(); ch += apply_tint(hubs_by['en'])
     print(f'build-ux: {n} solutions, {ch} page writes')

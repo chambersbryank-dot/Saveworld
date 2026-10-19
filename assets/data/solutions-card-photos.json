@@ -1,0 +1,120 @@
+{
+ "_about": "Solutions.html card photos (scripts/build-solutions-index.py). Owner rule Oct 19 2026: no photo appears on more than one card. 'keep' = which card keeps a photo that several solution pages share (any other card loses it); 'photos' = a different real, on-topic photo for a card that lost its shared one (master untouched on R2 under images/sol-cards/, credited with its ID); a card that lost its photo and is not listed here shows no photo. Duplicates are found by image content too (same picture under two file names).",
+ "keep": {
+  "assets/Clouds_Limb_ISS.jpg": "EarthCARE.html",
+  "assets/SDO_Sun.jpg": "SOLAR_1.html",
+  "assets/Mississippi_River_PIA23534.jpg": "Living_Lands_and_Waters.html",
+  "assets/Kilimanjaro_STS72.jpg": "Justdiggit.html",
+  "assets/Lake_Tahoe_ISS.jpg": "Keep_Tahoe_Blue.html",
+  "assets/Florida_Keys_PIA03890.jpg": "Coral_Restoration_Foundation.html",
+  "assets/LEO_View.jpg": "LeoLabs.html",
+  "assets/StreamLog.JPG": "American_Rivers.html",
+  "assets/Bahamas_Ocean_ISS.jpg": "Mission_Blue_Hope_Spots.html",
+  "assets/Mediterranean_ISS.jpg": "Posidonia_Meadows.html",
+  "assets/Global_Plant_Fluorescence.jpg": "OCO-2.html",
+  "assets/Labrador_Sea_Ice_ISS.jpg": "RCM.html",
+  "assets/Amazon_Clouds_ISS.jpg": "Amazon_Rainy_Season.html",
+  "assets/North_Pacific_ISS.jpg": "Ocean_Voyages_Institute.html",
+  "assets/Klamath_River.jpg": "Klamath_River_Dam_Removal.html",
+  "assets/ATV1_Departure_ISS.jpg": "Aeolus.html",
+  "assets/Biomass_Forest_MatoGrosso.jpg": "Biomass.html",
+  "assets/Garden_City_Kansas_Landsat.jpg": "OpenET.html",
+  "assets/EPIC_Earth.jpg": "DSCOVR_EPIC.html",
+  "assets/EMIT_Methane_Fingerprint.jpg": "EMIT.html",
+  "assets/Romania_City_Lights_ISS.jpg": "Globe_at_Night.html",
+  "assets/Pacific_Clouds_Sunset_ISS.jpg": "GCOM-C.html",
+  "assets/Lightning_Storm_ISS.jpg": "Meteosat_Third_Generation.html",
+  "assets/Danube_Delta_GSFC.jpg": "Rewilding_Europe.html",
+  "assets/GOES19_GOESU_KSC.jpg": "GOES-19.html",
+  "assets/Threetrees3.jpg": "Life_Terra.html",
+  "assets/ISS_Flyaround_2021.jpg": "US_Deorbit_Vehicle.html",
+  "assets/Sundarbans_Ganges_Delta_ISS.jpg": "Namami_Gange.html",
+  "assets/Yishan_Tree.jpg": "Terraformation.html",
+  "assets/Great_Lakes_GSFC.jpg": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
+  "assets/Great_Lakes_MODIS.jpg": "Great_Lakes_Plastic_Cleanup.html",
+  "assets/Lake_Shore_Cleanup_NPS.jpg": "Lake_Plastic_Recovery.html",
+  "assets/OceanBeach.JPG": "4ocean.html",
+  "assets/Loggerhead_Release_MINWR.jpg": "Sea_Turtle_Conservancy.html",
+  "assets/NYC_Hudson_Harbor.jpg": "Billion_Oyster_Project.html",
+  "assets/North_Atlantic_Bloom_MODIS.jpg": "Copernicus_Marine.html",
+  "assets/Phytoplankton_Bloom_Iceland.jpg": "Phytoplankton.html",
+  "assets/PlasticBank_Indonesia_STS66.jpg": "The_SeaCleaners.html",
+  "assets/Webb_Infrared.jpg": "Webb_2024_YR4.html",
+  "assets/Titan.jpg": "Titan.html",
+  "assets/Baltimore_DC_Skylab.jpg": "Chesapeake_Bay_Foundation.html",
+  "assets/Satellite_Servicing_Arm_GSFC.jpg": "SpaceLogistics.html",
+  "assets/Seagrass_Restoration_KSC.jpg": "Project_Seagrass.html"
+ },
+ "photos": {
+  "Parker_Solar_Probe.html": {
+   "r2": "images/sol-cards/Parker_Solar_Probe_Launch_NHQ201808120013.tif",
+   "alt": "A Delta IV Heavy rocket lifts off at night carrying NASA's Parker Solar Probe, Aug. 12, 2018",
+   "credit": "NASA/Bill Ingalls (NHQ201808120013)"
+  },
+  "SOHO.html": {
+   "r2": "images/sol-cards/SOHO_EIT_Prominence_PIA03149.jpg",
+   "alt": "The Sun in extreme ultraviolet light from SOHO, with a huge handle-shaped prominence rising from its edge",
+   "credit": "ESA/NASA/SOHO (PIA03149)"
+  },
+  "SMAP.html": {
+   "r2": "images/sol-cards/SMAP_Satellite_PIA19133.jpg",
+   "alt": "Artist's rendering of NASA's SMAP satellite scanning a wide strip of Earth's surface",
+   "credit": "NASA/JPL-Caltech (PIA19133, illustration)"
+  },
+  "Clean_Up_the_Lake.html": {
+   "r2": "images/sol-cards/Lake_Tahoe_Pyramid_Lake_iss064e015104.jpg",
+   "alt": "Lake Tahoe, Pyramid Lake and the snow-capped Sierra Nevada seen from the International Space Station",
+   "credit": "NASA (iss064e015104)"
+  },
+  "PREFIRE.html": {
+   "r2": "images/sol-cards/PREFIRE_CubeSat_PIA26186.jpg",
+   "alt": "One of NASA's two shoebox-size PREFIRE CubeSats with its solar panels unfolded",
+   "credit": "NASA/JPL-Caltech (PIA26186)"
+  },
+  "CRISTAL.html": {
+   "r2": "images/sol-cards/Jakobshavn_Calving_Front_IceBridge_e001754.jpg",
+   "alt": "The calving front of Jakobshavn Glacier in western Greenland, seen from NASA's Operation IceBridge aircraft",
+   "credit": "NASA/GSFC/Jefferson Beck (GSFC_20171208_Archive_e001754)"
+  },
+  "CryoSat.html": {
+   "r2": "images/sol-cards/Bellingshausen_Sea_Ice_IceBridge_e000907.jpg",
+   "alt": "Newly formed sea ice next to an iceberg in Antarctica's Bellingshausen Sea, seen from NASA's Operation IceBridge",
+   "credit": "NASA/Digital Mapping System (GSFC_20171208_Archive_e000907)"
+  },
+  "GEDI.html": {
+   "r2": "images/sol-cards/GEDI_on_ISS_iss059e088632.jpg",
+   "alt": "The GEDI forest-mapping laser instrument mounted outside Japan's Kibo module on the International Space Station",
+   "credit": "NASA (iss059e088632)"
+  },
+  "Mr_Trash_Wheel.html": {
+   "r2": "images/sol-cards/Baltimore_Harbor_STS098-716-057.jpg",
+   "alt": "Baltimore's harbor on the Patapsco River and the western shore of Chesapeake Bay, seen from Space Shuttle Atlantis",
+   "credit": "NASA (STS098-716-057)"
+  },
+  "Elwha_River_Restoration.html": {
+   "r2": "images/sol-cards/Olympic_National_Park_Landsat8_e000239.jpg",
+   "alt": "Olympic National Park on Washington's Olympic Peninsula, home of the Elwha River, seen by Landsat 8",
+   "credit": "NASA/Landsat 8 (GSFC_20171208_Archive_e000239)"
+  },
+  "Mangroves.html": {
+   "r2": "images/sol-cards/Mangrove_Seedling_KSC-20230412-PH-GEB01_0006.jpg",
+   "alt": "A young mangrove seedling growing among shoreline rocks at NASA's Kennedy Space Center",
+   "credit": "NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006)"
+  },
+  "SeaTrees.html": {
+   "r2": "images/sol-cards/Mangrove_Replanting_KSC-20230412-PH-GEB01_0152.jpg",
+   "alt": "A restoration worker places repotted mangrove seedlings in a marshy channel at Kennedy Space Center",
+   "credit": "NASA/Glenn Benson (KSC-20230412-PH-GEB01_0152)"
+  },
+  "Seagrass.html": {
+   "r2": "images/sol-cards/Seagrass_Planted_KSC-20230329-PH-KLS01_0323.jpg",
+   "alt": "Close-up of newly planted seagrass underwater in the Banana River, Florida",
+   "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0323)"
+  },
+  "Astroscale.html": {
+   "src": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
+   "alt": "Artist's illustration of Astroscale's ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
+   "credit_html": "Astroscale, via <a href=\"https://commons.wikimedia.org/wiki/File:ADRAS-J_Phase_I.png\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 4.0</a>, illustration)"
+  }
+ }
+}

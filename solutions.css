@@ -29,13 +29,10 @@ body.sol-page .sol-more a { font-weight: 700; }
 body.sol-page .photo-credit { padding: 0 1rem; }
 @media (max-width: 900px) { body.sol-page .sol-hub .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; } }
 .sol-page [hidden] { display: none !important; }
-body.sol-page .sol-hub h2 a.sol-top { font-size: 0.85rem; font-weight: 600; color: #8fb8d8; vertical-align: middle; margin-inline-start: 0.4rem; text-decoration: none; }
-body.sol-page .sol-hub h2 a.sol-top:hover { color: #4da3ff; text-decoration: underline; }
 html:has(body.sol-page) { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html:has(body.sol-page) { scroll-behavior: auto; } }
 #top { scroll-margin-top: 0; }
 body.sol-page .sol-hub > h2 { text-align: start; display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
-body.sol-page .sol-hub > h2 a.sol-top { margin-inline-start: 0.2rem; }
 body.sol-page .sol-hub-summary { margin: 1.2rem 0 0.5rem; padding: 1rem 1.2rem; border-radius: 12px; border: 1px solid rgba(77,163,255,0.4); background: rgba(21,32,51,0.55); }
 body.sol-page .sol-hub-summary h3 { margin: 0 0 0.5rem; font-size: 1.15rem; color: #4da3ff; }
 body.sol-page .sol-hub-summary p { margin: 0.4rem 0; line-height: 1.5; }
@@ -51,4 +48,12 @@ html body.sol-page .sol-jump a:hover .sol-c { background: rgba(255,255,255,.25);
 html body.sol-page .sol-hub .grid { align-items: start; }
 html body.sol-page .sol-hub .grid > .sol-card { height: auto; } /* Oct 18 9:00 PM HST: styles.css .card-band .card{height:100%} re-stretched every card to its row; flush with the text */
 html body.sol-page .sol-card .sol-desc { flex: none; }
-html body.sol-page .sol-card .sol-more { margin-top: 0; }
+html body.sol-page .sol-card .sol-more { margin-top: 0; } /* Top Ten cards (same markup); Solutions cards have no 'Read the 5 W's' link since Oct 19 */
+/* Oct 19 owner cleanup: no '(Top)' or 'Read the 5 W's' links (title + photo open the page); one photo credit style on every card:
+   one small line right under the photo, start-aligned (right in RTL), never a caption; a card without a photo stays tight. */
+html body.sol-page .sol-card .photo-credit.sol-credit { max-width: none; margin: .3rem 0 0; padding: 0 1rem; font-size: .7rem; line-height: 1.35; opacity: .75; text-align: start; overflow-wrap: anywhere; }
+html body.sol-page .sol-card .sol-credit a { color: inherit; text-decoration: underline; }
+html body.sol-page .sol-card .sol-credit bdi { unicode-bidi: isolate; }
+html body.sol-page:not(.top-ten-page) .sol-card > h3 { margin-top: .55rem; }
+html body.sol-page:not(.top-ten-page) .sol-card:not(:has(> .image-container)) > h3 { margin-top: 1rem; }
+html body.sol-page:not(.top-ten-page) .sol-hub .sol-card > :last-child { margin-bottom: 0; padding-bottom: 1rem; }

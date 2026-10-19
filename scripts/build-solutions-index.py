@@ -49,6 +49,10 @@ def info(page):
             if v and not re.match(r'(Learn more about|Support|Donate|Join)\b', v): alt = v; break
     if not alt: alt = html.unescape(m1(r'<meta property="og:image:alt" content="([^"]*)"', s))
     credit = m1(r'<p class="photo-credit">(.*?)</p>', s)
+    if not credit and img:  # Oct 19: pages without a photo-credit line credit the photo next to it (SI span) or in data-image-credit
+        q = re.escape(img)
+        if re.search(r'<img [^>]*src="' + q + r'"[^>]*><span class="si-credit">', s): credit = 'Created by SI and Biological SI Partner'
+        else: credit = m1(r'data-image="' + q + r'"[^>]*data-image-credit="([^"]+)"', s)
     desc = un(m1(r'<meta name="description" content="([^"]*)"', s))
     what = m1(r'<h3>What</h3><p>(.*?)</p>', s)
     what = re.sub(r'<span class="gl-pop"[^>]*>.*?</span></span>', '</span>', what, flags=re.S)  # Oct 15: drop glossary pop-up text ('radarA tool that...')
@@ -91,18 +95,100 @@ def hub_summary(f, name):
             f'<p class="sol-impact"><strong>Impact:</strong> {imp}</p>'
             f'<p class="sol-hub-links"><a href="{f}">Read the hub&#x27;s 5 W&#x27;s</a> <span aria-hidden="true">·</span> <a href="Ways_to_Help.html">More: Ways to Help</a></p></div>')
 
-def card(href, name, i, missing, also=()):
-    if not i['img']: missing.append(f'{href}: no image')
+# Oct 19 (owner-approved Solutions cleanup): no photo on more than one card, one credit style, no '(Top)' / 'Read the 5 W's' links.
+PHOTOS = json.load(open('assets/data/solutions-card-photos.json', encoding='utf8')) if os.path.exists('assets/data/solutions-card-photos.json') else {'keep': {}, 'photos': {}}
+_AB = (json.load(open('assets/data/anim-banners.json', encoding='utf8')).get('images', {}) if os.path.exists('assets/data/anim-banners.json') else {})
+CARD_SIZES = '(max-width:600px) 90vw, 260px'
+CREDIT_TM = {'fr': 'Image :', 'es': 'Imagen:', 'ar': 'الصورة:', 'it': 'Immagine:', 'he': 'תמונה:'}  # the only translated word in a card credit
+SI_CREDIT = 'Created by SI and Biological SI Partner'
+_MON = r'(?:Jan|Feb|Mar|March|Apr|April|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)[a-z]*\.?'
+_ID = re.compile(r'^(?:PIA\d{5}|(?:iss|ISS|sts|STS|s|SL)\d[\w-]*|STS-\d+|(?:KSC|NHQ|GSFC|jsc|JSC|GRC|AFRC)[\w-]+|\d{4}-\d{3,5}|\d{6,})$')
+
+def dhash(path):
+    """Content fingerprint (64-bit difference hash) so one picture saved under two file names still counts as a repeat."""
+    try:
+        from PIL import Image
+        im = Image.open(path).convert('L').resize((17, 16)); px = list(im.getdata())
+        return tuple(px[r * 17 + c] > px[r * 17 + c + 1] for r in range(16) for c in range(16))
+    except Exception: return None
+
+def tidy_credit(raw, img):
+    """One credit style for every card: 'Image:' + who made it + the source ID in brackets, no dates or captions. Keeps licence links
+    and data notices (e.g. 'contains Copernicus Sentinel-1 data'). SI-made media keep the standard SI credit line."""
+    if not raw and not img: return ''
+    t = un(re.sub(r'<(?!/?a\b)[^>]+>', '', raw or '')).strip()
+    if 'Created by SI' in t or 'Made from SI' in t: return SI_CREDIT
+    ab = _AB.get(img or '') or {}
+    if ab.get('credit') and (re.search(r'\d', ab['credit']) or os.path.splitext(os.path.basename(ab.get('r2', '')))[0] == os.path.splitext(os.path.basename(img or ''))[0]):
+        t = ab['credit']  # banner credits were matched to the original by image content (Oct 18-19 banner batches)
+    if not t: return ''
+    t = re.sub(r'^(?:Image|Photo|Illustration|Images|Photos)\s*:\s*', '', t)
+    if '<a ' in t:  # licence-linked credits: keep the attribution, drop the caption sentence after it
+        t = re.split(r'(?<=\))\.\s|(?<=</a>)\.\s', t)[0].rstrip('. ')
+        if 'Resized from the original' in (raw or ''): t = re.sub(r',?\s*Resized from the original\.?$', '', t).rstrip('., ') + ' (resized)'
+        return re.sub(r',\s*(<a [^>]*>CC[^<]*</a>)', r' (\1', t).replace('</a> (resized)', '</a>, resized)') if re.search(r',\s*<a [^>]*>CC', t) else t
+    ids = [x for x in re.split(r'[\s,();:]+', t) if _ID.match(x)]
+    keep = [x.strip() for x in re.findall(r'\(([^()]*)\)', t) for x in x.split(',') if re.search(r'\bdata\b|\bCC[ -]BY|illustration|artist', x, re.I)]
+    who = re.split(r'\s*\(|(?<!\b[A-Z])(?<!Univ)(?<!\bSt)\.\s+(?=[A-Z])|:\s|\.$', t)[0].strip().rstrip(',;: ')
+    if who.endswith('.') and not re.search(r'(?:\b[A-Z]|Univ|\bSt)\.$', who): who = who[:-1]
+    who = re.sub(r',\s*(?:via Wikimedia Commons|public domain).*$', '', who).strip()
+    who = re.sub(r'\s*/\s*', '/', who)
+    extra = list(dict.fromkeys([x for x in ids if x not in who] + [k for k in keep if k not in ids]))
+    return who + (f' ({", ".join(extra)})' if extra else '')
+
+def credit_html(c):
+    if not c: return ''
+    if c == SI_CREDIT: return f'<p class="photo-credit sol-credit">{SI_CREDIT}</p>'
+    return f'<p class="photo-credit sol-credit"><span>Image:</span> <bdi>{c if "<a " in c else esc(c)}</bdi></p>'
+
+def card_photo(href, i, owner_of):
+    """(img_html, credit) for one card after the no-repeat rule."""
+    new = PHOTOS['photos'].get(href)
+    if i['img'] and owner_of.get(i['img'], href) == href and not new:
+        return i['img'], i['alt'], None, tidy_credit(i['credit'], i['img'])
+    if new:
+        if new.get('r2'):
+            e = MAN.get(new['r2'])
+            if e and e.get('srcset'):
+                ws = [x.rsplit(' ', 1) for x in e['srcset'].split(', ')]
+                src = next((u for u, w in ws if w == '1280w'), ws[-1][0])
+                h = round(e['height'] * 1280 / e['width']) if e['width'] > 1280 else e['height']
+                return src, new['alt'], dict(srcset=e['srcset'], w=min(1280, e['width']), h=h), new['credit']
+        elif new.get('src') and os.path.exists(new['src']):
+            return new['src'], new['alt'], None, new.get('credit_html') or new.get('credit', '')
+    return None, None, None, ''
+
+def card(href, name, i, missing, also=(), owner_of=None):
+    src, alt, r2, cred = card_photo(href, i, owner_of or {})
+    if not src: missing.append(f'{href}: no image (photo repeated elsewhere or none on the page)')
     if not (i['desc'] or i['what']): missing.append(f'{href}: no description')
-    alt = i['alt'] or f'{name} image'
+    alt = alt or f'{name} image'
     parts = [p for p in (i['desc'], i['what']) if p][:1]  # Oct 18 (owner cleanup): one short description per card, the full 5 W's are one tap away
     desc = ' '.join(f'<span>{esc(p)}</span>' for p in parts)
-    img = (f'<div class="image-container"><a class="photo-link" href="{href}"><img src="{i["img"]}" alt="{esc(alt)}" loading="lazy" decoding="async"></a></div>'
-           + (f'<p class="photo-credit">{i["credit"]}</p>' if i['credit'] else '')) if i['img'] else ''
+    extra = f' srcset="{r2["srcset"]}" sizes="{CARD_SIZES}" width="{r2["w"]}" height="{r2["h"]}"' if r2 else ''
+    img = (f'<div class="image-container"><a class="photo-link" href="{href}"><img src="{src}"{extra} alt="{esc(alt)}" loading="lazy" decoding="async"></a></div>'
+           + credit_html(cred)) if src else ''
+    # Oct 19 (owner): 'Read the 5 W's' link removed; the title (and photo) open the solution page.
     return (f'<article class="card sol-card" data-url="{href}">{img}<h3><a href="{href}">{esc(name)}</a></h3>'
             f'<p class="sol-desc">{desc}</p>'
             + (('<p class="sol-also">Also in: ' + ', '.join(f'<a href="{f}">{esc(n)}</a>' for f, n in also) + '</p>') if also else '')
-            + f'<p class="sol-more"><a href="{href}">Read the 5 W&#x27;s</a></p></article>')
+            + '</article>')
+
+def owners(all_items):
+    """Which card keeps each repeated photo: assets/data/solutions-card-photos.json 'keep', else the first card (A-Z by hub, then title)."""
+    groups, fp = {}, {}
+    for h, i in all_items:
+        if not i['img'] or h in PHOTOS['photos']: continue
+        k = i['img']
+        if k not in fp: fp[k] = dhash(k.split('?')[0]) if os.path.exists(k.split('?')[0]) else None
+        same = next((g for g in groups if g == k or (fp[k] and fp.get(g) and sum(a != b for a, b in zip(fp[k], fp[g])) <= 6)), k)
+        groups.setdefault(same, []).append((h, k))
+    own = {}
+    for g, mem in groups.items():
+        imgs = {k for _, k in mem}; pages = [h for h, _ in mem]
+        keep = next((PHOTOS['keep'][k] for k in imgs if PHOTOS['keep'].get(k) in pages), pages[0])
+        for k in imgs: own[k] = keep
+    return own
 
 NAV_RE = re.compile(r'<li class="nav-dropdown"><a [^>]*class="dropdown-toggle"[^>]*>Solutions</a><ul class="dropdown-menu solutions-menu">[\s\S]*?<!-- SOLUTIONS-MENU:END --></ul></li>')
 NAV_RE2 = re.compile(r'<li class="nav-dropdown"><a class="dropdown-toggle" href="[^"]*">Solutions</a><ul class="dropdown-menu solutions-menu">[\s\S]*?<!-- SOLUTIONS-MENU:END --></ul></li>')
@@ -150,11 +236,14 @@ def build():
         primary[h] = next((x for x in hs if x[0] in bc_hubs), hs[0])
     also = {h: [x for x in hs if x != primary[h]] for h, hs in where.items()}
     hl = [(f, name, [(h, n) for h, n in items if primary[h][0] == f]) for f, name, items in hl]
+    INFO = {h: info(h) for _, _, items in hl for h, _ in items}
+    OWN = owners([(h, INFO[h]) for _, _, items in hl for h, _ in items])
     for f, name, items in hl:
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
         jump.append(f'<li><a href="#{sid}">{esc(name)} <span class="sol-c">{len(items)}</span></a></li>')
-        cards = ''.join(card(h, n, info(h), missing, also.get(h, [])) for h, n in items); total += len(items)
-        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div></section>')  # Oct 18 (owner cleanup): the long Hub Summary box after every hub is gone (the hub title links to the hub's 5 W's)
+        cards = ''.join(card(h, n, INFO[h], missing, also.get(h, []), OWN) for h, n in items); total += len(items)
+        # Oct 19 (owner): the '(Top)' link after each hub title is gone (the banner and hub chips are one swipe away; the browser keeps its own back-to-top).
+        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a></h2><div class="grid">{cards}</div></section>')  # Oct 18 (owner cleanup): the long Hub Summary box after every hub is gone (the hub title links to the hub's 5 W's)
     desc = f'Proof it\'s not too late: {total} real, sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily.'
     title = f'{total} Real Solutions Making a Difference Daily'
     # head: retarget Contact -> Solutions
@@ -165,7 +254,7 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "' + title + '", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261018v">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261019a">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
         + banner(total) + '\n'
@@ -182,7 +271,18 @@ def build():
         open(OUT, 'w', encoding='utf8').write(page)
     return hl, total, missing
 
+def write_tm():
+    """'Image:' is the only word in a card credit that changes with the language (who + ID stay as published)."""
+    ch = 0
+    for l, tr in CREDIT_TM.items():
+        p = f'i18n/{l}.json'
+        if not os.path.exists(p): continue
+        T = json.load(open(p, encoding='utf8'))
+        if T.get('Image:') != tr: T['Image:'] = tr; json.dump(T, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0); ch += 1
+    return ch
+
 if __name__ == '__main__':
+    write_tm()
     hl, total, missing = build()
     n = fix_nav()
     print(f'Solutions.html: {total} cards in {len(hl)} hubs ({", ".join(f"{x[1]} {len(x[2])}" for x in hl)}); nav updated on {n} pages')
