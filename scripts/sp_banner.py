@@ -5,21 +5,47 @@ Used by build-top-ten.py; any generator can import it (Solutions.html worker: sa
 - Motion: CSS only, transform/opacity on composited layers (no JS, no video, no layout work): a slow 4K drift/zoom of the
   photo plus a soft light sweep. prefers-reduced-motion: completely static. Fixed min-height, so no layout shift.
 Markup: banner(manifest_entry, alt, h1, sub, credit, h1_id) -> <section class="sp-anim-banner">...</section>
+Oct 18 (Solutions.html): optional keyword args, all backwards compatible: h1_html / credit_html (pre-escaped markup, e.g. the live
+count in its own span so translations never contain the number), sec_id, and video=[[width, url], ...] (R2 renditions of one
+loop, smallest first). With a video, the photo is its frame-0 poster: no drift/sweep (so the hand-off is seamless), and VIDEO_JS
+picks the rendition for the banner's rendered size x DPR (phones capped at 1920 w), plays only while on screen, and never
+loads under prefers-reduced-motion or Save-Data (the poster stays).
 CSS: CSS (written once into styles.css between /* SP-BANNER:START */ markers by write_css())."""
-import html, re
+import html, re, json
 
 def _e(x): return html.escape(x, quote=False).replace('"', '&quot;')
 
-def picture(e, alt):
-    srcs = ''.join(f'<source type="image/{t}" srcset="{_e(e[k])}" sizes="100vw">' for t, k in (('avif', 'srcset_avif'), ('webp', 'srcset')) if e.get(k))
-    return (f'<picture class="spb-media">{srcs}<img src="{e["url"]}" alt="{_e(alt)}" width="{e["width"]}" height="{e["height"]}" '
+def _w(srcset, w):
+    for part in (srcset or '').split(','):
+        b = part.split()
+        if len(b) == 2 and b[1] == f'{w}w': return b[0]
+    return ''
+
+def picture(e, alt, sizes='100vw'):
+    srcs = ''.join(f'<source type="image/{t}" srcset="{_e(e[k])}" sizes="{sizes}">' for t, k in (('avif', 'srcset_avif'), ('webp', 'srcset')) if e.get(k))
+    src = e['url'] if not e['url'].lower().endswith('.png') else (_w(e.get('srcset'), 1920) or e['url'])  # never the PNG master as the fallback
+    return (f'<picture class="spb-media">{srcs}<img src="{src}" alt="{_e(alt)}" width="{e["width"]}" height="{e["height"]}" '
             f'fetchpriority="high" decoding="async"></picture>')
 
-def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class=''):
-    return (f'<section class="sp-anim-banner{(" " + extra_class) if extra_class else ""}" aria-labelledby="{h1_id}">{picture(e, alt)}'
-            f'<span class="spb-sweep" aria-hidden="true"></span>'
-            f'<div class="spb-text"><h1 id="{h1_id}">{_e(h1)}</h1>' + (f'<p>{_e(sub)}</p>' if sub else '') + '</div>'
-            f'<span class="spb-credit">{_e(credit)}</span></section>')
+VIDEO_JS = ("<script>(function(){document.querySelectorAll('.sp-anim-banner video[data-srcs]').forEach(function(v){var b=v.closest('.sp-anim-banner');"
+    "var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)'),c=navigator.connection;if((rm&&rm.matches)||(c&&c.saveData))return;"
+    "var s=JSON.parse(v.getAttribute('data-srcs')),r=b.getBoundingClientRect(),ar=v.videoWidth&&v.videoHeight?v.videoWidth/v.videoHeight:+(v.getAttribute('data-ar')||2.34),"
+    "need=Math.max(r.width,r.height*ar)*Math.min(window.devicePixelRatio||1,2),u=s[s.length-1][1];if(innerWidth<=760)need=Math.min(need,1920);"
+    "for(var i=0;i<s.length;i++){if(s[i][0]>=need*0.92){u=s[i][1];break}}v.src=u;"
+    "v.addEventListener('playing',function(){b.classList.add('is-playing')},{once:true});"
+    "var p=function(){var q=v.play();q&&q.catch&&q.catch(function(){})};"
+    "if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?p():v.pause()}).observe(b)}else p();"
+    "rm&&rm.addEventListener&&rm.addEventListener('change',function(e){if(e.matches){v.pause();b.classList.remove('is-playing')}})})})();</script>")
+
+def banner(e, alt, h1, sub, credit, h1_id='spb-h', extra_class='', h1_html=None, credit_html=None, sec_id=None, video=None, video_ar=None):
+    cls = 'sp-anim-banner' + (' has-video' if video else '') + ((' ' + extra_class) if extra_class else '')
+    vid = (f'<video class="spb-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture'
+           + (f' data-ar="{video_ar}"' if video_ar else '') + f' data-srcs="{_e(json.dumps(video))}"></video>') if video else ''
+    sizes = f'(max-aspect-ratio: 1/1) {round(100 * (video_ar or 2.34) * 0.4)}vh, 100vw' if video else '100vw'
+    return (f'<section class="{cls}"' + (f' id="{sec_id}"' if sec_id else '') + f' aria-labelledby="{h1_id}">{picture(e, alt, sizes)}{vid}'
+            + ('' if video else '<span class="spb-sweep" aria-hidden="true"></span>')
+            + f'<div class="spb-text"><h1 id="{h1_id}">{h1_html if h1_html is not None else _e(h1)}</h1>' + (f'<p>{_e(sub)}</p>' if sub else '') + '</div>'
+            f'<span class="spb-credit">{credit_html if credit_html is not None else _e(credit)}</span></section>' + (VIDEO_JS if video else ''))
 
 CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,560px);display:flex;align-items:flex-end;overflow:hidden;background:#02060c;contain:paint}'
  '.sp-anim-banner .spb-media,.sp-anim-banner .spb-media img{position:absolute;inset:0;width:100%;height:100%}'
@@ -37,6 +63,11 @@ CSS = ('.sp-anim-banner{position:relative;isolation:isolate;min-height:min(62vh,
  '@keyframes spb-in{from{opacity:0;transform:translate3d(0,14px,0)}to{opacity:1;transform:none}}'
  '.sp-anim-banner .spb-credit{position:absolute;z-index:1;right:.8rem;bottom:.45rem;font-size:.72rem;opacity:.75}[dir=rtl] .sp-anim-banner .spb-credit{right:auto;left:.8rem}'
  '@media (max-width:760px){.sp-anim-banner{min-height:52vh}}'
+ '.sp-anim-banner .spb-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1.2s ease}'
+ '.sp-anim-banner.is-playing .spb-video{opacity:1}'
+ '.sp-anim-banner.has-video .spb-media img{animation:none;transform:none;will-change:auto}'
+ '.sp-anim-banner .spb-credit span{unicode-bidi:isolate}'
+ '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-video{display:none}}'
  '@media (prefers-reduced-motion:reduce){.sp-anim-banner .spb-media img,.sp-anim-banner .spb-sweep,.sp-anim-banner h1,.sp-anim-banner .spb-text p{animation:none !important}.sp-anim-banner .spb-sweep{display:none}}')
 
 def write_css(path='styles.css'):

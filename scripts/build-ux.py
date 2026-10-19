@@ -283,7 +283,6 @@ JS = r"""
   f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';sel.value='all';apply()}});
   sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
   var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
-  var inp=document.querySelector('.sol-search-form input');if(inp)inp.addEventListener('input',function(){hubs.forEach(function(h){h.classList.remove('sp-collapsed');var b=h.querySelector('.sp-more');b&&b.remove()})});
 })();
 (function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
  var fabs=[],tk=false;/* looked up on every pass: the Superpowers button is added later by the kids script */
@@ -297,7 +296,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261018r"  # bump when styles.css changes
+STYLEV = "20261018s"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)

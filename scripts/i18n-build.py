@@ -65,6 +65,9 @@ PATTERNS = [(r'^(.+) \| Saving Planets$', '{x} | Saving Planets'),
             (r'^(.+) image$', '{x} image'), (r'^Image: (.+)$', 'Image: {x}'), (r'^Photo: (.+)$', 'Photo: {x}'),  # Oct 15: generic alts/credits
             (r'^Want to go deeper\? (.+) has the full story and the latest updates\.$', 'Want to go deeper? {x} has the full story and the latest updates.'),
             (r'^Learn more about (.+)$', 'Learn more about {x}'),
+            (r'^(\d[\d,]*) Real Solutions Making a Difference Daily$', '{x} Real Solutions Making a Difference Daily'),  # Oct 18: Solutions title, live count
+            (r"^Proof it's not too late: (\d[\d,]*) real, sourced solutions across (\d+) hubs, from ocean cleanups to Earth-observation satellites, making a difference daily\.$",
+             "Proof it's not too late: {x} real, sourced solutions across {y} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily."),
             (r'^Read more about (.+)$', 'Read more about {x}'),
             (r'^(.+): Mission Status$', '{x}: Mission Status'),
             (r"^The Five W's of (.+)$", "The Five W's of {x}"),
@@ -78,7 +81,8 @@ def lookup(m, st):
     for rx, key in PATTERNS:
         g = re.match(rx, st)
         if g and key in m:
-            x = g.group(1); return m[key].replace('{x}', m.get(x, x))
+            x = g.group(1); t = m[key].replace('{x}', m.get(x, x))
+            return t.replace('{y}', g.group(2)) if g.re.groups > 1 else t  # Oct 18: second number (hub count)
     return None
 
 def tr(m, s):

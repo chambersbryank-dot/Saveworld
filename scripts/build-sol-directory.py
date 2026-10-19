@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Oct 15, 2026 (Top-10 #4): Solutions directory filters (all languages). Adds data-status / data-region / data-grades to every
 Solutions.html card (from assets/data/map-locations.json and assets/data/standards.json) and a filter row (status, region, grade,
-name filter, live count, URL state) after the existing domain/hub filters (marker SOL-DIR). Regions come only from verified map
+live count, URL state; Oct 18: the name filter box was removed with the page search, owner request) after the existing domain/hub filters (marker SOL-DIR). Regions come only from verified map
 pins: Americas, Europe & Africa, Asia & Oceania, plus 'From orbit' and 'Worldwide' for unpinned/space solutions.
 Every solution exists in all 5 languages, so language is offered as links (same filters kept), not as a filter.
 Idempotent. Run after build-standards.py and before build-ux.py."""
@@ -51,10 +51,10 @@ hubs.forEach(function(h){h.classList.toggle('sd-empty',!!on&&!h.querySelector('.
 var p=new URLSearchParams(location.search);['status','region','grade','q'].forEach(function(k){S[k]&&S[k]!=='all'?p.set(k,S[k]):p.delete(k)});history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:'')+location.hash);
 w.querySelectorAll('.sd-lang a').forEach(function(a){a.search=p.toString()?'?'+p:''})}
 w.addEventListener('change',function(e){if(e.target.name&&S.hasOwnProperty(e.target.name)){S[e.target.name]=e.target.value;run()}});
-inp.addEventListener('input',function(){S.q=inp.value.trim();run()});
-w.querySelector('.sd-reset').addEventListener('click',function(){S={status:'all',region:'all',grade:'all',q:''};w.querySelectorAll('select').forEach(function(s){s.value='all'});inp.value='';run()});
+if(inp)inp.addEventListener('input',function(){S.q=inp.value.trim();run()});
+w.querySelector('.sd-reset').addEventListener('click',function(){S={status:'all',region:'all',grade:'all',q:''};w.querySelectorAll('select').forEach(function(s){s.value='all'});if(inp)inp.value='';run()});
 document.querySelectorAll('.sol-filters button,.sol-filters select').forEach(function(b){b.addEventListener(b.tagName==='SELECT'?'change':'click',function(){setTimeout(run,0)})});
-function init(){var p=new URLSearchParams(location.search);['status','region','grade'].forEach(function(k){var v=p.get(k),s=w.querySelector('select[name='+k+']');if(v&&s&&[].some.call(s.options,function(o){return o.value===v})){s.value=v;S[k]=v}});if(p.get('q')){S.q=inp.value=p.get('q')}run()}
+function init(){var p=new URLSearchParams(location.search);['status','region','grade'].forEach(function(k){var v=p.get(k),s=w.querySelector('select[name='+k+']');if(v&&s&&[].some.call(s.options,function(o){return o.value===v})){s.value=v;S[k]=v}});if(inp&&p.get('q')){S.q=inp.value=p.get('q')}run()}
 if(document.readyState==='complete')setTimeout(init,0);else addEventListener('load',function(){setTimeout(init,0)})});</script>"""
 CSS = """/* SD:START */
 .sol-dir{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:flex-end;margin:.8rem auto 1rem;max-width:1200px;padding:0 1rem}
@@ -73,7 +73,7 @@ def ui(l):
             + sel('status', u['status'], [('active', u['active']), ('upcoming', u['upcoming'])])
             + sel('region', u['region'], [(k, u[k]) for k in ('americas', 'eurafrica', 'asiaoceania', 'orbit', 'world')])
             + sel('grade', u['grade'], [(b, b) for b in BANDS])
-            + f'<label>{esc(u["name"])}<input type="search" name="q" autocomplete="off"></label><button type="button" class="sd-reset">{esc(u["reset"])}</button>'
+            + f'<button type="button" class="sd-reset">{esc(u["reset"])}</button>'
             f'<p class="sd-meta"><span class="sd-count" role="status" aria-live="polite" data-t="{esc(u["count"])}"></span><span class="sd-lang">{esc(u["lang"])}: {langs}</span></p>'
             f'<p class="sd-none" hidden>{esc(u["none"])}</p></div>{JS}<!-- SOL-DIR:END -->')
 def main():

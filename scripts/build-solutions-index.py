@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-"""Build Solutions.html: every hub (alphabetical) with a card for each of its solutions, plus an on-page
-search that filters the cards (instant keyword match, then semantic re-rank via /search/semantic.js).
+"""Build Solutions.html: every hub (alphabetical) with a card for each of its solutions.
+Oct 18 (owner): the page's own search box is gone (site-wide search stays in the top nav). The top is an animated banner
+(SI-rendered 4K Earth loop on R2, poster first, static under prefers-reduced-motion / Save-Data) with the title
+'<live count> Real Solutions Making a Difference Daily' + 'Proof it's not too late'. The count = the cards on this page
+(same number as the homepage counter and assets/data/solutions.json). Card photos are each page's own photo (build-og.py
+source()), never the share card, which has the title baked in.
 Hub membership = <h3><a href="Page.html"> card titles on each hub page (same rule as build-stats.js).
 Card text comes only from each solution page: meta description + its "What" card. Image = og:image + its photo credit.
 Also replaces the old Solutions dropdown in the top nav of every English page with a plain link to Solutions.html.
@@ -18,9 +22,26 @@ esc = lambda s: html.escape(html.unescape(s), quote=True).replace('&#x27;', '&#x
 def m1(rx, s, d=''):
     m = re.search(rx, s, re.S); return m.group(1).strip() if m else d
 
+import importlib.util, json
+_og = importlib.util.spec_from_file_location('og', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build-og.py'))
+OG = importlib.util.module_from_spec(_og); _og.loader.exec_module(OG)
+MAN = json.load(open('assets/data/media-manifest.json', encoding='utf8')) if os.path.exists('assets/data/media-manifest.json') else {}
+
+_HP = dict(re.findall(r"\.hp-([A-Za-z0-9_-]+) \.page-hero\[class\]\{[^}]*?url\('([^']+)'\)", rd('styles.css')))
+def hero_photo(s):
+    """The page's hp- hero photo (same rule as build-ux.py hero_photo for the homepage cards)."""
+    m = re.search(r'<body[^>]*class="[^"]*\bhp-([A-Za-z0-9_-]+)', s)
+    ph = _HP.get(m.group(1)) if m else None
+    return ph if ph and os.path.exists(ph) else None
+
 def info(page):
     s = rd(page)
     img = m1(r'<meta property="og:image" content="https://www\.savingplanets\.com/([^"]+)"', s)
+    if '/og/' in img.split('?')[0] or not img:  # Oct 18: share cards carry the page title (doubled, cropped on the card)
+        s0 = re.sub(r'<!-- RELATED:START -->.*?<!-- RELATED:END -->', '', s, flags=re.S)  # never another page's Related card photo
+        src = hero_photo(s0) or OG.source(s0)
+        if src == OG.LOGO or (src and ('/og/' in src or src.startswith('assets/hero/'))): src = None  # logo, a share card or the generic section hero
+        img = src or img
     alt = ''
     if img:
         for a in re.findall(r'<img [^>]*src="' + re.escape(img) + r'"[^>]*>', s):
@@ -96,6 +117,20 @@ def fix_nav():
         if t != s: open(f, 'w', encoding='utf8').write(t); n += 1
     return n
 
+BANNER_VID = [(w, f'videos/solutions-banner-earth-wide-{w}x{h}.mp4') for w, h in ((1280, 300), (1920, 450), (2560, 600), (3840, 900))]  # 90 s loop, one full turn
+BANNER_POSTER = 'images/solutions-banner-earth-wide-poster-3840x900.png'
+import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import sp_banner as SPB  # shared animated banner (same component as Top Ten)
+
+def banner(total):
+    """Animated title banner (owner, Oct 18): SPB.banner with the 4K Earth loop. Poster = frame 0 of the loop (seamless hand-off)."""
+    po = MAN.get(BANNER_POSTER)
+    vids = [[w, MAN[k]['url']] for w, k in BANNER_VID if k in MAN]
+    if not po: return '<section class="sol-banner" id="top"><h1 id="sol-h">' + f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span></h1></section>'
+    return SPB.banner(po, '', None, "Proof it's not too late", None, h1_id='sol-h', extra_class='sol-banner', sec_id='top',
+                      h1_html=f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span>',
+                      credit_html='<span>Created by SI and Biological SI Partner</span> · <span>Earth: NASA Blue Marble</span>',
+                      video=vids or None, video_ar=4.27)
+
 def build():
     tpl = rd('Contact.html')
     head, body = tpl.split('<body', 1)
@@ -121,28 +156,23 @@ def build():
         jump.append(f'<li><a href="#{sid}">{esc(name)}</a></li>')
         cards = ''.join(card(h, n, info(h), missing, also.get(h, [])) for h, n in items); total += len(items)
         secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a> <a class="sol-top" href="#top">(Top)</a></h2><div class="grid">{cards}</div>{hub_summary(f, name)}</section>')
-    desc = f'Every Saving Planets solution in one place: {total} sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites.'
+    desc = f'Proof it\'s not too late: {total} real, sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily.'
+    title = f'{total} Real Solutions Making a Difference Daily'
     # head: retarget Contact -> Solutions
     h = head.replace('Contact.html', OUT)  # Oct 16: any Contact title (seo-meta override changed it)
-    h = re.sub(r'<title>[^<]*</title>', lambda _m: '<title>Saving Planets Solutions | Saving Planets</title>', h, count=1)
+    h = re.sub(r'<title>[^<]*</title>', lambda _m: f'<title>{title}</title>', h, count=1)
     h = re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*"', lambda m: m.group(1) + esc(desc) + '"', h)
-    h = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*"', r'\1Saving Planets Solutions | Saving Planets"', h)
+    h = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*"', lambda m: m.group(1) + title + '"', h)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
-          '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Saving Planets Solutions", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261013a">\n' + ld + '</head>')
+          '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "' + title + '", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261018k">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
-    chips = ''.join(f'<button type="button" class="sol-chip">{c}</button>' for c in
-                    ['ways to clean a river near me', 'how space tech helps farmers', 'protecting coasts from storms', 'junk satellites crowding orbit'])
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
-        '<section class="page-hero sol-hero" id="top"><div class="page-hero-content"><p class="sol-hero-title" data-pagefind-ignore>Search Saving Planets</p>'
-        '<form class="sol-search-form" role="search" action="Solutions.html" onsubmit="return false"><label class="visually-hidden" for="sol-q">Search solutions</label>'
-        '<input id="sol-q" name="q" type="search" autocomplete="off" placeholder="Try: protecting coasts from storms" aria-describedby="sol-status"></form>'
-        '<p id="sol-status" class="sol-status" aria-live="polite"></p></div></section>\n'
-        f'<main id="directory"><section class="sol-intro"><h1>Saving Planets Solutions</h1><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
-        f'<section class="sol-empty" hidden><p>No matching solutions yet. Try one of these:</p><div class="sol-chips">{chips}</div></section>\n'
+        + banner(total) + '\n'
+        f'<main id="directory"><section class="sol-intro"><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
         + '\n'.join(secs) + '\n</main>\n'
-        f'{footer}<script src="site.js?v={js_v}"></script><script type="module" src="solutions.js?v=20261012a"></script></body></html>\n')
+        f'{footer}<script src="site.js?v={js_v}"></script></body></html>\n')
     page = h + body_html
     # Write only when the generated content changed, so later post-processing (seo-fix.py, add-gtag.py) is not undone
     # each run (which would leave the fr/es/ar copies permanently stale).
