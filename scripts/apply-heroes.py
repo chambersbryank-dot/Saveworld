@@ -73,6 +73,10 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Hayabusa2_Torifune': ('Ryugu_Hayabusa2.jpg', 'JAXA Hayabusa2 ONC data, processed by Anonymsiy (CC BY 4.0)'),
     # Oct 18: Polar hub (hub 11)
     'Polar': ('Greenland_IceBridge_2015.jpg', 'NASA GSFC, Operation IceBridge (2015)'),
+    # Oct 19: approved batch 2026-10-19 (scripts/batch-1019-content.py)
+    'Svalbard_Global_Seed_Vault': ('Svalbard_Nordaustlandet_Landsat9_2022.jpg', 'NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)'),
+    'Thwaites_Glacier_Collaboration': ('Thwaites_Glacier_Landsat8_2019.jpg', 'NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)'),
+    'Carbfix': ('Iceland_Volcanic_Landscape_jsc2026e406058.jpg', 'NASA/James Blair (jsc2026e406058, Iceland)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),

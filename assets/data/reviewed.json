@@ -1,7 +1,7 @@
 {
  "4ocean.html": {
-  "sig": "5d961d3e01d3",
-  "date": "2026-10-14"
+  "sig": "c0aad62314bd",
+  "date": "2026-10-19"
  },
  "ALOS-4.html": {
   "sig": "fb0853e8c4ba",
@@ -28,12 +28,12 @@
   "date": "2026-10-19"
  },
  "American_Forests.html": {
-  "sig": "ccec4904914b",
-  "date": "2026-10-15"
+  "sig": "f5fc6c28bf98",
+  "date": "2026-10-19"
  },
  "American_Rivers.html": {
-  "sig": "a6c80227bb3a",
-  "date": "2026-10-13"
+  "sig": "0fa2fdad7b15",
+  "date": "2026-10-19"
  },
  "Arbor_Day_Foundation.html": {
   "sig": "f8a025e910a5",
@@ -97,6 +97,10 @@
  },
  "CRISTAL.html": {
   "sig": "6db42c6ff489",
+  "date": "2026-10-19"
+ },
+ "Carbfix.html": {
+  "sig": "be453ea7f2c0",
   "date": "2026-10-19"
  },
  "Carruthers.html": {
@@ -196,8 +200,8 @@
   "date": "2026-10-19"
  },
  "Elwha_River_Restoration.html": {
-  "sig": "2029fee08cdf",
-  "date": "2026-10-13"
+  "sig": "a6dfc9472f10",
+  "date": "2026-10-19"
  },
  "EnVision.html": {
   "sig": "658d4ffe6604",
@@ -292,8 +296,8 @@
   "date": "2026-10-19"
  },
  "Great_Bubble_Barrier.html": {
-  "sig": "21dbff3f690a",
-  "date": "2026-10-16"
+  "sig": "3b6ee2652af1",
+  "date": "2026-10-19"
  },
  "Great_Green_Wall.html": {
   "sig": "790fada65b4c",
@@ -400,8 +404,8 @@
   "date": "2026-10-18"
  },
  "Life_Terra.html": {
-  "sig": "da1061b4d945",
-  "date": "2026-10-13"
+  "sig": "96d0c2a77e0e",
+  "date": "2026-10-19"
  },
  "LignoSat.html": {
   "sig": "e92ae0a10dee",
@@ -480,8 +484,8 @@
   "date": "2026-10-16"
  },
  "Ocean_Cleanup.html": {
-  "sig": "a4171f2026f4",
-  "date": "2026-10-14"
+  "sig": "011d7f7a7ba9",
+  "date": "2026-10-19"
  },
  "Ocean_Voyages_Institute.html": {
   "sig": "200920cd01c5",
@@ -532,12 +536,12 @@
   "date": "2026-10-19"
  },
  "Plant-for-the-Planet.html": {
-  "sig": "44ccb63f2743",
-  "date": "2026-10-15"
+  "sig": "fbf068d3dafa",
+  "date": "2026-10-19"
  },
  "Plastic_Bank.html": {
-  "sig": "7d0a54c84f3e",
-  "date": "2026-10-14"
+  "sig": "f6dc45605509",
+  "date": "2026-10-19"
  },
  "Plastic_Odyssey.html": {
   "sig": "046f2c640ced",
@@ -668,11 +672,15 @@
   "date": "2026-10-19"
  },
  "Sungai_Watch.html": {
-  "sig": "ee6a97e35a1b",
-  "date": "2026-10-10"
+  "sig": "b7f1f2b9e1cd",
+  "date": "2026-10-19"
  },
  "Surfrider_Foundation.html": {
   "sig": "bf4201ddb705",
+  "date": "2026-10-19"
+ },
+ "Svalbard_Global_Seed_Vault.html": {
+  "sig": "7955346dd5c8",
   "date": "2026-10-19"
  },
  "TEMPO.html": {
@@ -688,8 +696,8 @@
   "date": "2026-10-19"
  },
  "Terraformation.html": {
-  "sig": "dcafbdd90d1d",
-  "date": "2026-10-13"
+  "sig": "058fe57895f8",
+  "date": "2026-10-19"
  },
  "The_SeaCleaners.html": {
   "sig": "92bfa91fdac3",
@@ -700,8 +708,12 @@
   "date": "2026-10-19"
  },
  "Three_Trees.html": {
-  "sig": "9f0ef37c0f62",
-  "date": "2026-10-10"
+  "sig": "bde88dab8ee2",
+  "date": "2026-10-19"
+ },
+ "Thwaites_Glacier_Collaboration.html": {
+  "sig": "e74ae61f7969",
+  "date": "2026-10-19"
  },
  "Titan.html": {
   "sig": "07f364217e24",

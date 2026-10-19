@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T15:44:06.526Z",
+ "generated": "2026-10-19T16:15:04.841Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -798,6 +798,10 @@
    "href": "Polar.html",
    "items": [
     {
+     "href": "Carbfix.html",
+     "name": "Carbfix: Turning CO2 Into Stone"
+    },
+    {
      "href": "CIMR.html",
      "name": "CIMR Copernicus Imaging Microwave Radiometer (ESA)"
     },
@@ -814,12 +818,20 @@
      "name": "ICESat-2 (NASA)"
     },
     {
+     "href": "Thwaites_Glacier_Collaboration.html",
+     "name": "International Thwaites Glacier Collaboration"
+    },
+    {
      "href": "PREFIRE.html",
      "name": "PREFIRE Polar CubeSats (NASA)"
     },
     {
      "href": "RCM.html",
      "name": "RADARSAT Constellation Mission (Canada)"
+    },
+    {
+     "href": "Svalbard_Global_Seed_Vault.html",
+     "name": "Svalbard Global Seed Vault"
     }
    ]
   },
@@ -1070,17 +1082,17 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 191,
+  "solutions": 194,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
-   "corporate": 16,
-   "agency": 104,
+   "corporate": 17,
+   "agency": 105,
    "nonprofit": 51,
    "natural": 17,
-   "government": 3
+   "government": 4
   },
-  "upcomingMissions": 22,
+  "upcomingMissions": 23,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1100,7 +1112,7 @@
     ]
    }
   ],
-  "taggedSolutions": 191
+  "taggedSolutions": 194
  },
  "categories": {
   "ocean": {
@@ -1210,13 +1222,15 @@
   },
   "polar": {
    "name": "Polar",
-   "solutions": 5,
+   "solutions": 8,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 5
+    "corporate": 1,
+    "agency": 6,
+    "government": 1
    },
-   "upcomingMissions": 1,
+   "upcomingMissions": 2,
    "impactTotals": []
   },
   "space-weather": {
@@ -1582,6 +1596,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Carbfix.html",
+   "title": "Carbfix: Turning CO2 Into Stone",
+   "category": "polar",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Carruthers.html",
@@ -3871,6 +3896,17 @@
    "added": "2026-10-15"
   },
   {
+   "url": "Svalbard_Global_Seed_Vault.html",
+   "title": "Svalbard Global Seed Vault",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "SWOT.html",
    "title": "SWOT (NASA–CNES)",
    "category": "earth-observation",
@@ -3956,6 +3992,26 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Thwaites_Glacier_Collaboration.html",
+   "title": "International Thwaites Glacier Collaboration",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "International Thwaites Glacier Collaboration",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2026-12-01T00:00:00Z"
+     }
+    }
+   ],
+   "added": "2026-10-19"
   },
   {
    "url": "Titan.html",

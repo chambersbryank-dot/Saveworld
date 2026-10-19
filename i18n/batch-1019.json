@@ -1,0 +1,562 @@
+{
+ "Svalbard Global Seed Vault": {
+  "fr": "Réserve mondiale de semences du Svalbard",
+  "es": "Bóveda Global de Semillas de Svalbard",
+  "ar": "قبو سفالبارد العالمي للبذور",
+  "it": "Deposito globale di semi delle Svalbard",
+  "he": "כספת הזרעים העולמית בסבאלברד"
+ },
+ "The Svalbard Global Seed Vault stores backup copies of the world's crop seeds free of charge, more than 100 metres inside an Arctic mountain (Seed Vault).": {
+  "fr": "La Réserve mondiale de semences du Svalbard conserve gratuitement des copies de sauvegarde des semences agricoles du monde, à plus de 100 mètres à l'intérieur d'une montagne arctique (Seed Vault).",
+  "es": "La Bóveda Global de Semillas de Svalbard guarda gratis copias de seguridad de las semillas de cultivos del mundo, a más de 100 metros dentro de una montaña ártica (Seed Vault).",
+  "ar": "يحفظ قبو سفالبارد العالمي للبذور مجانًا نسخًا احتياطية من بذور محاصيل العالم، على عمق يزيد على 100 متر داخل جبل في القطب الشمالي (Seed Vault).",
+  "it": "Il Deposito globale di semi delle Svalbard conserva gratuitamente copie di riserva dei semi delle colture del mondo, a oltre 100 metri dentro una montagna artica (Seed Vault).",
+  "he": "כספת הזרעים העולמית בסבאלברד שומרת בחינם עותקי גיבוי של זרעי הגידולים של העולם, יותר מ-100 מטרים בתוך הר ארקטי (Seed Vault)."
+ },
+ "Deep inside an Arctic mountain, the world keeps a spare copy of its crops.": {
+  "fr": "Au cœur d'une montagne arctique, le monde garde une copie de secours de ses cultures.",
+  "es": "En lo profundo de una montaña ártica, el mundo guarda una copia de repuesto de sus cultivos.",
+  "ar": "في أعماق جبل في القطب الشمالي، يحتفظ العالم بنسخة احتياطية من محاصيله.",
+  "it": "Nel cuore di una montagna artica, il mondo custodisce una copia di riserva delle sue colture.",
+  "he": "עמוק בתוך הר ארקטי, העולם שומר עותק רזרבי של הגידולים שלו."
+ },
+ "The Seed Vault holds 1,417,799 seed samples of 6,587 species, sent by about 135 genebanks and institutions (Seed Vault figures).": {
+  "fr": "La réserve abrite 1 417 799 échantillons de semences de 6 587 espèces, envoyés par environ 135 banques de gènes et institutions (chiffres de la Seed Vault).",
+  "es": "La bóveda guarda 1.417.799 muestras de semillas de 6.587 especies, enviadas por unos 135 bancos de germoplasma e instituciones (cifras de la Seed Vault).",
+  "ar": "يضم القبو 1,417,799 عينة بذور من 6,587 نوعًا، أرسلها نحو 135 بنكًا للجينات ومؤسسة (أرقام Seed Vault).",
+  "it": "Il deposito custodisce 1.417.799 campioni di semi di 6.587 specie, inviati da circa 135 banche del germoplasma e istituzioni (dati della Seed Vault).",
+  "he": "בכספת שמורות 1,417,799 דגימות זרעים של 6,587 מינים, שנשלחו מכ-135 בנקי גנים ומוסדות (נתוני ה-Seed Vault)."
+ },
+ "Norway, through its Ministry of Agriculture and Food, runs the vault with NordGen and the Crop Trust.": {
+  "fr": "La Norvège, par son ministère de l'Agriculture et de l'Alimentation, gère la réserve avec NordGen et le Crop Trust.",
+  "es": "Noruega, a través de su Ministerio de Agricultura y Alimentación, gestiona la bóveda con NordGen y el Crop Trust.",
+  "ar": "تدير النرويج القبو، عبر وزارة الزراعة والغذاء، بالتعاون مع NordGen وCrop Trust.",
+  "it": "La Norvegia, tramite il Ministero dell'Agricoltura e dell'Alimentazione, gestisce il deposito con NordGen e il Crop Trust.",
+  "he": "נורווגיה, באמצעות משרד החקלאות והמזון שלה, מפעילה את הכספת יחד עם NordGen ו-Crop Trust."
+ },
+ "A long-term backup store for duplicate seed samples from genebanks around the world, free of charge.": {
+  "fr": "Un stockage de sauvegarde à long terme, gratuit, pour les doubles d'échantillons de semences des banques de gènes du monde entier.",
+  "es": "Un almacén de respaldo a largo plazo, gratuito, para duplicados de muestras de semillas de bancos de germoplasma de todo el mundo.",
+  "ar": "مخزن احتياطي طويل الأمد ومجاني لنسخ مكررة من عينات البذور من بنوك الجينات حول العالم.",
+  "it": "Un archivio di riserva a lungo termine, gratuito, per i duplicati dei campioni di semi delle banche del germoplasma di tutto il mondo.",
+  "he": "מאגר גיבוי לטווח ארוך, ללא תשלום, לעותקים כפולים של דגימות זרעים מבנקי גנים ברחבי העולם."
+ },
+ "Opened on Feb. 26, 2008. On Oct. 13, 2026, it received 16,676 samples from 21 institutions.": {
+  "fr": "Ouverte le 26 février 2008. Le 13 octobre 2026, elle a reçu 16 676 échantillons de 21 institutions.",
+  "es": "Abrió el 26 de febrero de 2008. El 13 de octubre de 2026 recibió 16.676 muestras de 21 instituciones.",
+  "ar": "افتُتح في 26 فبراير 2008. وفي 13 أكتوبر 2026 استقبل 16,676 عينة من 21 مؤسسة.",
+  "it": "Aperto il 26 febbraio 2008. Il 13 ottobre 2026 ha ricevuto 16.676 campioni da 21 istituzioni.",
+  "he": "נפתחה ב-26 בפברואר 2008. ב-13 באוקטובר 2026 קיבלה 16,676 דגימות מ-21 מוסדות."
+ },
+ "More than 100 metres inside a mountain near Longyearbyen on Svalbard, Norway, in the Arctic.": {
+  "fr": "À plus de 100 mètres à l'intérieur d'une montagne près de Longyearbyen, au Svalbard (Norvège), dans l'Arctique.",
+  "es": "A más de 100 metros dentro de una montaña cerca de Longyearbyen, en Svalbard (Noruega), en el Ártico.",
+  "ar": "على عمق يزيد على 100 متر داخل جبل قرب لونغيربين في سفالبارد بالنرويج، في القطب الشمالي.",
+  "it": "A oltre 100 metri dentro una montagna vicino a Longyearbyen, nelle Svalbard (Norvegia), nell'Artico.",
+  "he": "יותר מ-100 מטרים בתוך הר ליד לונגיירבין שבסבאלברד, נורווגיה, באזור הארקטי."
+ },
+ "Genebanks can lose seeds to war, disaster or failing equipment. The vault keeps a safe copy for them.": {
+  "fr": "Les banques de gènes peuvent perdre leurs semences à cause d'une guerre, d'une catastrophe ou d'une panne. La réserve leur garde une copie en sécurité.",
+  "es": "Los bancos de germoplasma pueden perder semillas por guerras, desastres o fallos de equipos. La bóveda les guarda una copia segura.",
+  "ar": "قد تفقد بنوك الجينات بذورها بسبب الحروب أو الكوارث أو أعطال المعدات. ويحفظ القبو لها نسخة آمنة.",
+  "it": "Le banche del germoplasma possono perdere i semi per guerre, disastri o guasti. Il deposito ne conserva una copia sicura.",
+  "he": "בנקי גנים עלולים לאבד זרעים בגלל מלחמה, אסון או תקלות בציוד. הכספת שומרת עבורם עותק בטוח."
+ },
+ "Biomass Forest Mission (ESA)": {
+  "fr": "Mission forestière Biomass (ESA)",
+  "es": "Misión forestal Biomass (ESA)",
+  "ar": "بعثة Biomass للغابات (ESA)",
+  "it": "Missione forestale Biomass (ESA)",
+  "he": "משימת היערות Biomass ‏(ESA)"
+ },
+ "Measures the forests that hold much of the planet's plant life.": {
+  "fr": "Mesure les forêts qui abritent une grande part de la vie végétale de la planète.",
+  "es": "Mide los bosques que albergan gran parte de la vida vegetal del planeta.",
+  "ar": "تقيس الغابات التي تضم جزءًا كبيرًا من الحياة النباتية على الكوكب.",
+  "it": "Misura le foreste che ospitano gran parte della vita vegetale del pianeta.",
+  "he": "מודדת את היערות שמחזיקים חלק גדול מצמחיית כדור הארץ."
+ },
+ "ICARDA became the first depositor to take seeds back out, to rebuild its genebank collection (Seed Vault).": {
+  "fr": "L'ICARDA a été le premier déposant à retirer des semences, pour reconstituer la collection de sa banque de gènes (Seed Vault).",
+  "es": "ICARDA fue el primer depositante en retirar semillas, para reconstruir la colección de su banco de germoplasma (Seed Vault).",
+  "ar": "كان ICARDA أول مودِع يسحب بذورًا لإعادة بناء مجموعة بنك الجينات لديه (Seed Vault).",
+  "it": "L'ICARDA è stato il primo depositante a ritirare semi, per ricostruire la collezione della sua banca del germoplasma (Seed Vault).",
+  "he": "ICARDA היה המפקיד הראשון שהוציא זרעים בחזרה, כדי לשקם את אוסף בנק הגנים שלו (Seed Vault)."
+ },
+ "The October 2026 deposit included 773 samples from Ukraine's national genebank and 8,917 from CGIAR genebanks (Seed Vault).": {
+  "fr": "Le dépôt d'octobre 2026 comprenait 773 échantillons de la banque de gènes nationale de l'Ukraine et 8 917 des banques de gènes du CGIAR (Seed Vault).",
+  "es": "El depósito de octubre de 2026 incluyó 773 muestras del banco nacional de germoplasma de Ucrania y 8.917 de bancos del CGIAR (Seed Vault).",
+  "ar": "شمل إيداع أكتوبر 2026 عدد 773 عينة من بنك الجينات الوطني في أوكرانيا و8,917 عينة من بنوك جينات CGIAR (Seed Vault).",
+  "it": "Il deposito di ottobre 2026 comprendeva 773 campioni della banca nazionale del germoplasma dell'Ucraina e 8.917 delle banche del CGIAR (Seed Vault).",
+  "he": "ההפקדה של אוקטובר 2026 כללה 773 דגימות מבנק הגנים הלאומי של אוקראינה ו-8,917 מבנקי הגנים של CGIAR ‏(Seed Vault)."
+ },
+ "The vault is part of the global community's joint effort to ensure the world's future food supply (Seed Vault).": {
+  "fr": "La réserve fait partie de l'effort commun de la communauté mondiale pour garantir l'approvisionnement alimentaire futur du monde (Seed Vault).",
+  "es": "La bóveda forma parte del esfuerzo conjunto de la comunidad mundial para asegurar el suministro futuro de alimentos (Seed Vault).",
+  "ar": "القبو جزء من الجهد المشترك للمجتمع الدولي لضمان إمدادات الغذاء في العالم مستقبلًا (Seed Vault).",
+  "it": "Il deposito fa parte dello sforzo comune della comunità mondiale per garantire l'approvvigionamento alimentare futuro (Seed Vault).",
+  "he": "הכספת היא חלק מהמאמץ המשותף של הקהילה העולמית להבטיח את אספקת המזון העתידית של העולם (Seed Vault)."
+ },
+ "Seeds of 6,587 species are stored there, so the diversity of the world's crops has a safe backup (Seed Vault figures).": {
+  "fr": "Des semences de 6 587 espèces y sont stockées : la diversité des cultures du monde a ainsi une sauvegarde sûre (chiffres de la Seed Vault).",
+  "es": "Allí se guardan semillas de 6.587 especies, así que la diversidad de los cultivos del mundo tiene un respaldo seguro (cifras de la Seed Vault).",
+  "ar": "تُخزَّن هناك بذور 6,587 نوعًا، فيصبح لتنوع محاصيل العالم نسخة احتياطية آمنة (أرقام Seed Vault).",
+  "it": "Vi sono conservati semi di 6.587 specie, così la diversità delle colture del mondo ha una riserva sicura (dati della Seed Vault).",
+  "he": "שמורים שם זרעים של 6,587 מינים, כך שלמגוון הגידולים של העולם יש גיבוי בטוח (נתוני ה-Seed Vault)."
+ },
+ "Support the Seed Vault": {
+  "fr": "Soutenir la Réserve de semences",
+  "es": "Apoya la Bóveda de Semillas",
+  "ar": "ادعم قبو البذور",
+  "it": "Sostieni il Deposito di semi",
+  "he": "תמכו בכספת הזרעים"
+ },
+ "The Crop Trust, a partner of the vault, takes donations for crop diversity.": {
+  "fr": "Le Crop Trust, partenaire de la réserve, accepte les dons pour la diversité des cultures.",
+  "es": "El Crop Trust, socio de la bóveda, acepta donaciones para la diversidad de cultivos.",
+  "ar": "يقبل Crop Trust، شريك القبو، التبرعات لدعم تنوع المحاصيل.",
+  "it": "Il Crop Trust, partner del deposito, accetta donazioni per la diversità delle colture.",
+  "he": "ה-Crop Trust, שותף של הכספת, מקבל תרומות למען מגוון הגידולים."
+ },
+ "The bottom line": {
+  "fr": "L'essentiel",
+  "es": "Lo esencial",
+  "ar": "الخلاصة",
+  "it": "In sintesi",
+  "he": "השורה התחתונה"
+ },
+ "Ukraine's Seeds Are Safe": {
+  "fr": "Les semences de l'Ukraine à l'abri",
+  "es": "Las semillas de Ucrania, a salvo",
+  "ar": "بذور أوكرانيا في أمان",
+  "it": "I semi dell'Ucraina al sicuro",
+  "he": "הזרעים של אוקראינה בטוחים"
+ },
+ "Glaciers, sea ice and dark Arctic water around Nordaustlandet, Svalbard, seen by Landsat 9": {
+  "fr": "Glaciers, banquise et eaux sombres de l'Arctique autour de Nordaustlandet (Svalbard), vus par Landsat 9",
+  "es": "Glaciares, hielo marino y aguas oscuras del Ártico alrededor de Nordaustlandet (Svalbard), vistos por Landsat 9",
+  "ar": "أنهار جليدية وجليد بحري ومياه قطبية داكنة حول نوردأوستلاندت في سفالبارد، كما رصدها Landsat 9",
+  "it": "Ghiacciai, ghiaccio marino e acque artiche scure intorno a Nordaustlandet (Svalbard), visti da Landsat 9",
+  "he": "קרחונים, קרח ים ומים ארקטיים כהים סביב נורדאוסטלנדט שבסבאלברד, כפי שצולמו ב-Landsat 9"
+ },
+ "Donate to the Crop Trust": {
+  "fr": "Faire un don au Crop Trust",
+  "es": "Dona al Crop Trust",
+  "ar": "تبرّع لـ Crop Trust",
+  "it": "Dona al Crop Trust",
+  "he": "תרמו ל-Crop Trust"
+ },
+ "Learn About the Seed Vault": {
+  "fr": "Découvrir la Réserve de semences",
+  "es": "Conoce la Bóveda de Semillas",
+  "ar": "تعرّف على قبو البذور",
+  "it": "Scopri il Deposito di semi",
+  "he": "למדו על כספת הזרעים"
+ },
+ "Farmers and scientists keep seeds of thousands of crops in places called genebanks.": {
+  "fr": "Les agriculteurs et les scientifiques gardent des semences de milliers de cultures dans des lieux appelés banques de gènes.",
+  "es": "Agricultores y científicos guardan semillas de miles de cultivos en lugares llamados bancos de germoplasma.",
+  "ar": "يحتفظ المزارعون والعلماء ببذور آلاف المحاصيل في أماكن تُسمّى بنوك الجينات.",
+  "it": "Agricoltori e scienziati conservano i semi di migliaia di colture in luoghi chiamati banche del germoplasma.",
+  "he": "חקלאים ומדענים שומרים זרעים של אלפי גידולים במקומות שנקראים בנקי גנים."
+ },
+ "The Seed Vault on Svalbard keeps a spare copy of those seeds deep inside a frozen mountain.": {
+  "fr": "La Réserve de semences du Svalbard garde une copie de secours de ces semences au fond d'une montagne gelée.",
+  "es": "La Bóveda de Semillas de Svalbard guarda una copia de repuesto de esas semillas dentro de una montaña helada.",
+  "ar": "يحتفظ قبو البذور في سفالبارد بنسخة احتياطية من تلك البذور في أعماق جبل متجمد.",
+  "it": "Il Deposito di semi delle Svalbard conserva una copia di riserva di quei semi dentro una montagna ghiacciata.",
+  "he": "כספת הזרעים בסבאלברד שומרת עותק רזרבי של הזרעים האלה עמוק בתוך הר קפוא."
+ },
+ "If a genebank loses its seeds to war or disaster, it can take its copies back and grow them again.": {
+  "fr": "Si une banque de gènes perd ses semences à cause d'une guerre ou d'une catastrophe, elle peut reprendre ses copies et les cultiver à nouveau.",
+  "es": "Si un banco pierde sus semillas por una guerra o un desastre, puede recuperar sus copias y volver a cultivarlas.",
+  "ar": "إذا فقد بنك جينات بذوره بسبب حرب أو كارثة، يمكنه استعادة نسخه وزراعتها من جديد.",
+  "it": "Se una banca perde i suoi semi per una guerra o un disastro, può riprendere le sue copie e coltivarle di nuovo.",
+  "he": "אם בנק גנים מאבד את הזרעים שלו במלחמה או באסון, הוא יכול לקחת בחזרה את העותקים שלו ולגדל אותם מחדש."
+ },
+ "NASA Earth Observatory image by Joshua Stevens, using Landsat 9 data from the USGS (Nordaustlandet, Svalbard, July 29, 2022)": {
+  "fr": "Image NASA Earth Observatory par Joshua Stevens, d'après des données Landsat 9 de l'USGS (Nordaustlandet, Svalbard, 29 juillet 2022)",
+  "es": "Imagen de NASA Earth Observatory por Joshua Stevens, con datos Landsat 9 del USGS (Nordaustlandet, Svalbard, 29 de julio de 2022)",
+  "ar": "صورة من NASA Earth Observatory بواسطة Joshua Stevens، باستخدام بيانات Landsat 9 من USGS (نوردأوستلاندت، سفالبارد، 29 يوليو 2022)",
+  "it": "Immagine NASA Earth Observatory di Joshua Stevens, con dati Landsat 9 dell'USGS (Nordaustlandet, Svalbard, 29 luglio 2022)",
+  "he": "תמונה של NASA Earth Observatory מאת Joshua Stevens, מנתוני Landsat 9 של USGS ‏(נורדאוסטלנדט, סבאלברד, 29 ביולי 2022)"
+ },
+ "NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)": {
+  "fr": "NASA Earth Observatory/Joshua Stevens, données Landsat 9 de l'USGS (Nordaustlandet, Svalbard, 29 juillet 2022)",
+  "es": "NASA Earth Observatory/Joshua Stevens, datos Landsat 9 del USGS (Nordaustlandet, Svalbard, 29 de julio de 2022)",
+  "ar": "NASA Earth Observatory/Joshua Stevens، بيانات Landsat 9 من USGS (نوردأوستلاندت، سفالبارد، 29 يوليو 2022)",
+  "it": "NASA Earth Observatory/Joshua Stevens, dati Landsat 9 dell'USGS (Nordaustlandet, Svalbard, 29 luglio 2022)",
+  "he": "NASA Earth Observatory/Joshua Stevens, נתוני Landsat 9 של USGS ‏(נורדאוסטלנדט, סבאלברד, 29 ביולי 2022)"
+ },
+ "International Thwaites Glacier Collaboration": {
+  "fr": "Collaboration internationale sur le glacier Thwaites",
+  "es": "Colaboración Internacional del Glaciar Thwaites",
+  "ar": "التعاون الدولي لدراسة نهر ثويتس الجليدي",
+  "it": "Collaborazione internazionale sul ghiacciaio Thwaites",
+  "he": "שיתוף הפעולה הבינלאומי לחקר קרחון ת'ווייטס"
+ },
+ "About 100 scientists from the UK, US, South Korea, Germany and Sweden are working out how fast Antarctica's Thwaites Glacier could raise sea levels (ITGC).": {
+  "fr": "Une centaine de scientifiques du Royaume-Uni, des États-Unis, de Corée du Sud, d'Allemagne et de Suède cherchent à savoir à quelle vitesse le glacier Thwaites, en Antarctique, pourrait faire monter le niveau des mers (ITGC).",
+  "es": "Unos 100 científicos del Reino Unido, EE. UU., Corea del Sur, Alemania y Suecia estudian qué tan rápido el glaciar Thwaites, en la Antártida, podría elevar el nivel del mar (ITGC).",
+  "ar": "يعمل نحو 100 عالم من المملكة المتحدة والولايات المتحدة وكوريا الجنوبية وألمانيا والسويد على معرفة مدى سرعة رفع نهر ثويتس الجليدي في أنتاركتيكا لمستوى سطح البحر (ITGC).",
+  "it": "Circa 100 scienziati di Regno Unito, Stati Uniti, Corea del Sud, Germania e Svezia studiano quanto velocemente il ghiacciaio Thwaites, in Antartide, potrebbe far salire il livello del mare (ITGC).",
+  "he": "כ-100 מדענים מבריטניה, ארה\"ב, דרום קוריאה, גרמניה ושוודיה בודקים כמה מהר קרחון ת'ווייטס שבאנטארקטיקה עלול להעלות את מפלס הים (ITGC)."
+ },
+ "About 100 scientists spent years on the glacier that could change every coastline.": {
+  "fr": "Une centaine de scientifiques ont passé des années sur le glacier qui pourrait changer tous les littoraux.",
+  "es": "Unos 100 científicos pasaron años en el glaciar que podría cambiar todas las costas.",
+  "ar": "أمضى نحو 100 عالم سنوات على النهر الجليدي الذي قد يغيّر كل السواحل.",
+  "it": "Circa 100 scienziati hanno passato anni sul ghiacciaio che potrebbe cambiare ogni costa.",
+  "he": "כ-100 מדענים בילו שנים על הקרחון שעלול לשנות כל קו חוף."
+ },
+ "If Thwaites Glacier were lost completely, it would raise global sea level by 65 cm (ITGC).": {
+  "fr": "Si le glacier Thwaites disparaissait entièrement, le niveau mondial des mers monterait de 65 cm (ITGC).",
+  "es": "Si el glaciar Thwaites desapareciera por completo, el nivel global del mar subiría 65 cm (ITGC).",
+  "ar": "لو فُقد نهر ثويتس الجليدي بالكامل، لارتفع مستوى سطح البحر عالميًا 65 سم (ITGC).",
+  "it": "Se il ghiacciaio Thwaites scomparisse del tutto, il livello globale del mare salirebbe di 65 cm (ITGC).",
+  "he": "אילו קרחון ת'ווייטס היה אובד כולו, מפלס הים העולמי היה עולה ב-65 ס\"מ (ITGC)."
+ },
+ "The UK's Natural Environment Research Council (NERC) and the US National Science Foundation (NSF), with about 100 scientists.": {
+  "fr": "Le Natural Environment Research Council (NERC) du Royaume-Uni et la National Science Foundation (NSF) des États-Unis, avec une centaine de scientifiques.",
+  "es": "El Natural Environment Research Council (NERC) del Reino Unido y la National Science Foundation (NSF) de EE. UU., con unos 100 científicos.",
+  "ar": "مجلس أبحاث البيئة الطبيعية البريطاني (NERC) والمؤسسة الوطنية للعلوم الأمريكية (NSF)، مع نحو 100 عالم.",
+  "it": "Il Natural Environment Research Council (NERC) del Regno Unito e la National Science Foundation (NSF) degli Stati Uniti, con circa 100 scienziati.",
+  "he": "המועצה הבריטית לחקר הסביבה הטבעית (NERC) והקרן הלאומית למדע של ארה\"ב (NSF), עם כ-100 מדענים."
+ },
+ "The largest UK-US Antarctic research collaboration in over 70 years, studying how Thwaites is changing and what could happen next.": {
+  "fr": "La plus grande collaboration de recherche antarctique entre le Royaume-Uni et les États-Unis depuis plus de 70 ans, qui étudie comment Thwaites évolue et ce qui pourrait suivre.",
+  "es": "La mayor colaboración de investigación antártica entre el Reino Unido y EE. UU. en más de 70 años, que estudia cómo cambia Thwaites y qué podría pasar después.",
+  "ar": "أكبر تعاون بحثي بريطاني أمريكي في أنتاركتيكا منذ أكثر من 70 عامًا، يدرس كيف يتغير ثويتس وما قد يحدث لاحقًا.",
+  "it": "La più grande collaborazione di ricerca antartica tra Regno Unito e Stati Uniti da oltre 70 anni, che studia come cambia Thwaites e cosa potrebbe succedere.",
+  "he": "שיתוף הפעולה המחקרי הגדול ביותר בין בריטניה לארה\"ב באנטארקטיקה זה יותר מ-70 שנה, שבודק איך ת'ווייטס משתנה ומה עלול לקרות בהמשך."
+ },
+ "From April 2018. The programme runs until Dec. 1, 2026 (British Antarctic Survey).": {
+  "fr": "Depuis avril 2018. Le programme se poursuit jusqu'au 1er décembre 2026 (British Antarctic Survey).",
+  "es": "Desde abril de 2018. El programa dura hasta el 1 de diciembre de 2026 (British Antarctic Survey).",
+  "ar": "منذ أبريل 2018. ويستمر البرنامج حتى 1 ديسمبر 2026 (British Antarctic Survey).",
+  "it": "Da aprile 2018. Il programma prosegue fino al 1° dicembre 2026 (British Antarctic Survey).",
+  "he": "מאפריל 2018. התוכנית נמשכת עד 1 בדצמבר 2026 (British Antarctic Survey)."
+ },
+ "Thwaites Glacier in West Antarctica, about 120 km wide, draining a basin of 192,000 square kilometres.": {
+  "fr": "Le glacier Thwaites, en Antarctique de l'Ouest, large d'environ 120 km, draine un bassin de 192 000 kilomètres carrés.",
+  "es": "El glaciar Thwaites, en la Antártida Occidental, de unos 120 km de ancho, drena una cuenca de 192.000 kilómetros cuadrados.",
+  "ar": "نهر ثويتس الجليدي في غرب أنتاركتيكا، بعرض نحو 120 كم، ويصرّف حوضًا مساحته 192,000 كيلومتر مربع.",
+  "it": "Il ghiacciaio Thwaites, nell'Antartide occidentale, largo circa 120 km, drena un bacino di 192.000 chilometri quadrati.",
+  "he": "קרחון ת'ווייטס במערב אנטארקטיקה, ברוחב של כ-120 ק\"מ, מנקז אגן של 192,000 קמ\"ר."
+ },
+ "Thwaites accounts for about 4% of global sea-level rise, a rate that has trebled since the mid-1990s (British Antarctic Survey).": {
+  "fr": "Thwaites représente environ 4 % de la hausse mondiale du niveau des mers, un rythme qui a triplé depuis le milieu des années 1990 (British Antarctic Survey).",
+  "es": "Thwaites aporta cerca del 4 % del aumento global del nivel del mar, un ritmo que se ha triplicado desde mediados de los años noventa (British Antarctic Survey).",
+  "ar": "يسهم ثويتس بنحو 4% من ارتفاع مستوى سطح البحر عالميًا، وهو معدل تضاعف ثلاث مرات منذ منتصف التسعينيات (British Antarctic Survey).",
+  "it": "Thwaites contribuisce a circa il 4% dell'innalzamento globale del mare, un ritmo triplicato dalla metà degli anni Novanta (British Antarctic Survey).",
+  "he": "ת'ווייטס אחראי לכ-4% מעליית מפלס הים העולמית, קצב שגדל פי שלושה מאז אמצע שנות ה-90 (British Antarctic Survey)."
+ },
+ "Measures how the polar ice sheets are changing from orbit.": {
+  "fr": "Mesure depuis l'orbite l'évolution des calottes polaires.",
+  "es": "Mide desde la órbita cómo cambian los mantos de hielo polares.",
+  "ar": "يقيس من المدار كيف تتغير الصفائح الجليدية القطبية.",
+  "it": "Misura dall'orbita come cambiano le calotte polari.",
+  "he": "מודד ממסלול כיצד משתנים מעטות הקרח הקוטביים."
+ },
+ "ITGC findings say Thwaites will keep retreating, further and faster, through the 21st and 22nd centuries; cutting emissions is the best hope of slowing it (ITGC).": {
+  "fr": "Selon les résultats de l'ITGC, Thwaites continuera de reculer, plus loin et plus vite, aux XXIe et XXIIe siècles ; réduire les émissions est le meilleur espoir de le ralentir (ITGC).",
+  "es": "Según los hallazgos del ITGC, Thwaites seguirá retrocediendo, más lejos y más rápido, durante los siglos XXI y XXII; reducir las emisiones es la mejor esperanza para frenarlo (ITGC).",
+  "ar": "تقول نتائج ITGC إن ثويتس سيواصل التراجع، أبعد وأسرع، خلال القرنين الحادي والعشرين والثاني والعشرين، وإن خفض الانبعاثات هو أفضل أمل لإبطائه (ITGC).",
+  "it": "Secondo i risultati dell'ITGC, Thwaites continuerà a ritirarsi, più lontano e più in fretta, nei secoli XXI e XXII; ridurre le emissioni è la speranza migliore per rallentarlo (ITGC).",
+  "he": "לפי ממצאי ITGC, ת'ווייטס ימשיך לסגת, רחוק ומהר יותר, במאות ה-21 וה-22; צמצום הפליטות הוא התקווה הטובה ביותר להאט אותו (ITGC)."
+ },
+ "Each year Thwaites loses about 50 billion tonnes more ice than it gains from snowfall (ITGC).": {
+  "fr": "Chaque année, Thwaites perd environ 50 milliards de tonnes de glace de plus qu'il n'en gagne par les chutes de neige (ITGC).",
+  "es": "Cada año, Thwaites pierde unos 50.000 millones de toneladas de hielo más de lo que gana con las nevadas (ITGC).",
+  "ar": "يفقد ثويتس كل عام نحو 50 مليار طن من الجليد أكثر مما يكسبه من تساقط الثلوج (ITGC).",
+  "it": "Ogni anno Thwaites perde circa 50 miliardi di tonnellate di ghiaccio in più di quanto ne guadagni con le nevicate (ITGC).",
+  "he": "בכל שנה ת'ווייטס מאבד כ-50 מיליארד טונות קרח יותר ממה שהוא מקבל משלג (ITGC)."
+ },
+ "Understanding the glacier's future is critical for planning and adapting to climate change, including on the world's coasts (British Antarctic Survey).": {
+  "fr": "Comprendre l'avenir du glacier est essentiel pour planifier et s'adapter au changement climatique, y compris sur les côtes du monde (British Antarctic Survey).",
+  "es": "Entender el futuro del glaciar es clave para planificar y adaptarse al cambio climático, también en las costas del mundo (British Antarctic Survey).",
+  "ar": "فهم مستقبل النهر الجليدي أمر حاسم للتخطيط والتكيف مع تغير المناخ، بما في ذلك على سواحل العالم (British Antarctic Survey).",
+  "it": "Capire il futuro del ghiacciaio è fondamentale per pianificare e adattarsi ai cambiamenti climatici, anche sulle coste del mondo (British Antarctic Survey).",
+  "he": "הבנת עתידו של הקרחון חיונית לתכנון ולהסתגלות לשינויי האקלים, גם בחופי העולם (British Antarctic Survey)."
+ },
+ "Understanding Thwaites shows how Antarctic ice, the ocean beneath it and the climate are linked (ITGC).": {
+  "fr": "Comprendre Thwaites montre comment la glace antarctique, l'océan qui se trouve dessous et le climat sont liés (ITGC).",
+  "es": "Entender Thwaites muestra cómo se relacionan el hielo antártico, el océano bajo él y el clima (ITGC).",
+  "ar": "فهم ثويتس يبيّن كيف يرتبط جليد أنتاركتيكا والمحيط الذي تحته والمناخ (ITGC).",
+  "it": "Capire Thwaites mostra come sono legati il ghiaccio antartico, l'oceano sottostante e il clima (ITGC).",
+  "he": "הבנת ת'ווייטס מראה כיצד קרח אנטארקטיקה, האוקיינוס שמתחתיו והאקלים קשורים זה לזה (ITGC)."
+ },
+ "Learn More About Thwaites": {
+  "fr": "En savoir plus sur Thwaites",
+  "es": "Más sobre Thwaites",
+  "ar": "اعرف المزيد عن ثويتس",
+  "it": "Scopri di più su Thwaites",
+  "he": "למדו עוד על ת'ווייטס"
+ },
+ "Want to go deeper? The collaboration shares its findings in plain language.": {
+  "fr": "Envie d'aller plus loin ? La collaboration partage ses résultats en langage clair.",
+  "es": "¿Quieres saber más? La colaboración comparte sus hallazgos en lenguaje sencillo.",
+  "ar": "هل تريد التعمق أكثر؟ يشارك التعاون نتائجه بلغة بسيطة.",
+  "it": "Vuoi approfondire? La collaborazione condivide i risultati in parole semplici.",
+  "he": "רוצים להעמיק? שיתוף הפעולה משתף את ממצאיו בשפה פשוטה."
+ },
+ "Read the Findings": {
+  "fr": "Lire les résultats",
+  "es": "Lee los hallazgos",
+  "ar": "اقرأ النتائج",
+  "it": "Leggi i risultati",
+  "he": "קראו את הממצאים"
+ },
+ "Thwaites Facts": {
+  "fr": "Faits sur Thwaites",
+  "es": "Datos sobre Thwaites",
+  "ar": "حقائق عن ثويتس",
+  "it": "Fatti su Thwaites",
+  "he": "עובדות על ת'ווייטס"
+ },
+ "Research programme from April 2018 to Dec. 1, 2026, funded by NERC and NSF (British Antarctic Survey).": {
+  "fr": "Programme de recherche d'avril 2018 au 1er décembre 2026, financé par le NERC et la NSF (British Antarctic Survey).",
+  "es": "Programa de investigación de abril de 2018 al 1 de diciembre de 2026, financiado por NERC y NSF (British Antarctic Survey).",
+  "ar": "برنامج بحثي من أبريل 2018 حتى 1 ديسمبر 2026، بتمويل من NERC وNSF (British Antarctic Survey).",
+  "it": "Programma di ricerca da aprile 2018 al 1° dicembre 2026, finanziato da NERC e NSF (British Antarctic Survey).",
+  "he": "תוכנית מחקר מאפריל 2018 עד 1 בדצמבר 2026, במימון NERC ו-NSF ‏(British Antarctic Survey)."
+ },
+ "programme end, Dec. 1, 2026": {
+  "fr": "fin du programme, 1er déc. 2026",
+  "es": "fin del programa, 1 dic. 2026",
+  "ar": "نهاية البرنامج، 1 ديسمبر 2026",
+  "it": "fine del programma, 1 dic. 2026",
+  "he": "סיום התוכנית, 1 בדצמבר 2026"
+ },
+ "50 Billion Tonnes a Year": {
+  "fr": "50 milliards de tonnes par an",
+  "es": "50.000 millones de toneladas al año",
+  "ar": "50 مليار طن سنويًا",
+  "it": "50 miliardi di tonnellate l'anno",
+  "he": "50 מיליארד טונות בשנה"
+ },
+ "The cracked ice front of Thwaites Glacier in West Antarctica meeting the sea, seen by Landsat 8": {
+  "fr": "Le front fissuré du glacier Thwaites, en Antarctique de l'Ouest, au contact de la mer, vu par Landsat 8",
+  "es": "El frente agrietado del glaciar Thwaites, en la Antártida Occidental, junto al mar, visto por Landsat 8",
+  "ar": "الواجهة الجليدية المتشققة لنهر ثويتس في غرب أنتاركتيكا عند التقائها بالبحر، كما رصدها Landsat 8",
+  "it": "Il fronte crepacciato del ghiacciaio Thwaites, nell'Antartide occidentale, dove incontra il mare, visto da Landsat 8",
+  "he": "חזית הקרח הסדוקה של קרחון ת'ווייטס במערב אנטארקטיקה במפגש עם הים, כפי שצולמה ב-Landsat 8"
+ },
+ "Programme begins": {
+  "fr": "Début du programme",
+  "es": "Comienza el programa",
+  "ar": "بدء البرنامج",
+  "it": "Inizio del programma",
+  "he": "תחילת התוכנית"
+ },
+ "Programme ends": {
+  "fr": "Fin du programme",
+  "es": "Termina el programa",
+  "ar": "انتهاء البرنامج",
+  "it": "Fine del programma",
+  "he": "סיום התוכנית"
+ },
+ "Thwaites is a giant glacier in Antarctica, the widest on Earth.": {
+  "fr": "Thwaites est un glacier géant de l'Antarctique, le plus large de la Terre.",
+  "es": "Thwaites es un glaciar gigante de la Antártida, el más ancho de la Tierra.",
+  "ar": "ثويتس نهر جليدي عملاق في أنتاركتيكا، وهو الأعرض على الأرض.",
+  "it": "Thwaites è un ghiacciaio gigante dell'Antartide, il più largo della Terra.",
+  "he": "ת'ווייטס הוא קרחון ענק באנטארקטיקה, הרחב ביותר על פני כדור הארץ."
+ },
+ "It is melting and sliding into the sea, which makes the oceans rise a little.": {
+  "fr": "Il fond et glisse dans la mer, ce qui fait monter un peu les océans.",
+  "es": "Se derrite y se desliza hacia el mar, lo que hace subir un poco los océanos.",
+  "ar": "إنه يذوب وينزلق نحو البحر، فيرتفع مستوى المحيطات قليلًا.",
+  "it": "Si sta sciogliendo e scivola in mare, e questo fa salire un po' gli oceani.",
+  "he": "הוא נמס ומחליק אל הים, וזה מעלה מעט את האוקיינוסים."
+ },
+ "Scientists went there to find out how fast it could change, so coastal towns can plan.": {
+  "fr": "Des scientifiques y sont allés pour savoir à quelle vitesse il pourrait changer, afin que les villes côtières puissent s'y préparer.",
+  "es": "Los científicos fueron allí para saber qué tan rápido podría cambiar, para que las ciudades costeras puedan planificar.",
+  "ar": "ذهب العلماء إلى هناك لمعرفة مدى سرعة تغيره، كي تتمكن المدن الساحلية من التخطيط.",
+  "it": "Gli scienziati sono andati lì per capire quanto velocemente potrebbe cambiare, così le città costiere possono prepararsi.",
+  "he": "מדענים הגיעו לשם כדי לברר כמה מהר הוא עלול להשתנות, כדי שערי החוף יוכלו להתכונן."
+ },
+ "NASA Earth Observatory image by Lauren Dauphin, using Landsat 8 data from the USGS (Thwaites Glacier, Dec. 28, 2019)": {
+  "fr": "Image NASA Earth Observatory par Lauren Dauphin, d'après des données Landsat 8 de l'USGS (glacier Thwaites, 28 décembre 2019)",
+  "es": "Imagen de NASA Earth Observatory por Lauren Dauphin, con datos Landsat 8 del USGS (glaciar Thwaites, 28 de diciembre de 2019)",
+  "ar": "صورة من NASA Earth Observatory بواسطة Lauren Dauphin، باستخدام بيانات Landsat 8 من USGS (نهر ثويتس الجليدي، 28 ديسمبر 2019)",
+  "it": "Immagine NASA Earth Observatory di Lauren Dauphin, con dati Landsat 8 dell'USGS (ghiacciaio Thwaites, 28 dicembre 2019)",
+  "he": "תמונה של NASA Earth Observatory מאת Lauren Dauphin, מנתוני Landsat 8 של USGS ‏(קרחון ת'ווייטס, 28 בדצמבר 2019)"
+ },
+ "NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)": {
+  "fr": "NASA Earth Observatory/Lauren Dauphin, données Landsat 8 de l'USGS (glacier Thwaites, 28 décembre 2019)",
+  "es": "NASA Earth Observatory/Lauren Dauphin, datos Landsat 8 del USGS (glaciar Thwaites, 28 de diciembre de 2019)",
+  "ar": "NASA Earth Observatory/Lauren Dauphin، بيانات Landsat 8 من USGS (نهر ثويتس الجليدي، 28 ديسمبر 2019)",
+  "it": "NASA Earth Observatory/Lauren Dauphin, dati Landsat 8 dell'USGS (ghiacciaio Thwaites, 28 dicembre 2019)",
+  "he": "NASA Earth Observatory/Lauren Dauphin, נתוני Landsat 8 של USGS ‏(קרחון ת'ווייטס, 28 בדצמבר 2019)"
+ },
+ "Carbfix: Turning CO2 Into Stone": {
+  "fr": "Carbfix : transformer le CO2 en pierre",
+  "es": "Carbfix: convertir el CO2 en piedra",
+  "ar": "Carbfix: تحويل ثاني أكسيد الكربون إلى حجر",
+  "it": "Carbfix: trasformare la CO2 in pietra",
+  "he": "Carbfix: הופכים CO2 לאבן"
+ },
+ "Carbfix dissolves carbon dioxide in water and injects it into basalt rock, where it turns into stone (company).": {
+  "fr": "Carbfix dissout le dioxyde de carbone dans l'eau et l'injecte dans le basalte, où il se transforme en pierre (entreprise).",
+  "es": "Carbfix disuelve dióxido de carbono en agua y lo inyecta en roca basáltica, donde se convierte en piedra (empresa).",
+  "ar": "تذيب Carbfix ثاني أكسيد الكربون في الماء وتحقنه في صخور البازلت، حيث يتحول إلى حجر (الشركة).",
+  "it": "Carbfix scioglie l'anidride carbonica in acqua e la inietta nel basalto, dove si trasforma in pietra (azienda).",
+  "he": "Carbfix ממיסה פחמן דו-חמצני במים ומזריקה אותו לסלע בזלת, שם הוא הופך לאבן (החברה)."
+ },
+ "In Iceland, carbon dioxide is being turned into rock.": {
+  "fr": "En Islande, le dioxyde de carbone est transformé en roche.",
+  "es": "En Islandia, el dióxido de carbono se está convirtiendo en roca.",
+  "ar": "في آيسلندا، يجري تحويل ثاني أكسيد الكربون إلى صخر.",
+  "it": "In Islanda, l'anidride carbonica viene trasformata in roccia.",
+  "he": "באיסלנד הופכים פחמן דו-חמצני לסלע."
+ },
+ "In a 2012 test, over 95% of the injected CO2 turned to stone in less than two years (Science, 2016).": {
+  "fr": "Lors d'un essai en 2012, plus de 95 % du CO2 injecté s'est transformé en pierre en moins de deux ans (Science, 2016).",
+  "es": "En una prueba de 2012, más del 95 % del CO2 inyectado se convirtió en piedra en menos de dos años (Science, 2016).",
+  "ar": "في تجربة عام 2012، تحوّل أكثر من 95% من ثاني أكسيد الكربون المحقون إلى حجر في أقل من عامين (Science، 2016).",
+  "it": "In un test del 2012, oltre il 95% della CO2 iniettata è diventata pietra in meno di due anni (Science, 2016).",
+  "he": "בניסוי ב-2012, יותר מ-95% מה-CO2 שהוזרק הפך לאבן בתוך פחות משנתיים (Science, 2016)."
+ },
+ "Carbfix, a subsidiary of Reykjavík Energy (OR) that began operating as its own company on Jan. 1, 2020. It began as a project of Reykjavík Energy, the University of Iceland, CNRS and Columbia University's Earth Institute.": {
+  "fr": "Carbfix, filiale de Reykjavík Energy (OR), fonctionne comme entreprise à part entière depuis le 1er janvier 2020. Elle est née d'un projet de Reykjavík Energy, de l'Université d'Islande, du CNRS et de l'Earth Institute de l'Université Columbia.",
+  "es": "Carbfix, filial de Reykjavík Energy (OR), opera como empresa propia desde el 1 de enero de 2020. Nació como proyecto de Reykjavík Energy, la Universidad de Islandia, el CNRS y el Earth Institute de la Universidad de Columbia.",
+  "ar": "Carbfix شركة تابعة لـ Reykjavík Energy (OR) بدأت العمل كشركة مستقلة في 1 يناير 2020. وقد بدأت مشروعًا مشتركًا بين Reykjavík Energy وجامعة آيسلندا وCNRS ومعهد الأرض في جامعة كولومبيا.",
+  "it": "Carbfix, controllata di Reykjavík Energy (OR), opera come società autonoma dal 1° gennaio 2020. È nata come progetto di Reykjavík Energy, Università d'Islanda, CNRS e Earth Institute della Columbia University.",
+  "he": "Carbfix, חברת בת של Reykjavík Energy ‏(OR), פועלת כחברה עצמאית מאז 1 בינואר 2020. היא החלה כפרויקט של Reykjavík Energy, אוניברסיטת איסלנד, CNRS ומכון כדור הארץ של אוניברסיטת קולומביה."
+ },
+ "CO2 is dissolved in water and injected underground, where it reacts with basalt and turns into carbonate minerals.": {
+  "fr": "Le CO2 est dissous dans l'eau et injecté sous terre, où il réagit avec le basalte et se transforme en minéraux carbonatés.",
+  "es": "El CO2 se disuelve en agua y se inyecta bajo tierra, donde reacciona con el basalto y se convierte en minerales de carbonato.",
+  "ar": "يُذاب ثاني أكسيد الكربون في الماء ويُحقن تحت الأرض، حيث يتفاعل مع البازلت ويتحول إلى معادن كربونية.",
+  "it": "La CO2 viene sciolta in acqua e iniettata nel sottosuolo, dove reagisce con il basalto e diventa minerali carbonatici.",
+  "he": "ה-CO2 מומס במים ומוזרק אל מתחת לאדמה, שם הוא מגיב עם הבזלת והופך למינרלים קרבונטיים."
+ },
+ "Started in 2006 and formalized in 2007. Injection at industrial scale at Hellisheiði has run since 2014.": {
+  "fr": "Lancé en 2006 et officialisé en 2007. L'injection à l'échelle industrielle à Hellisheiði a lieu depuis 2014.",
+  "es": "Comenzó en 2006 y se formalizó en 2007. La inyección a escala industrial en Hellisheiði funciona desde 2014.",
+  "ar": "بدأ عام 2006 وأصبح رسميًا عام 2007. ويجري الحقن على نطاق صناعي في هيليشيدي منذ 2014.",
+  "it": "Avviato nel 2006 e formalizzato nel 2007. L'iniezione su scala industriale a Hellisheiði è attiva dal 2014.",
+  "he": "התחיל ב-2006 והוסדר רשמית ב-2007. הזרקה בקנה מידה תעשייתי בהלישהיידי פועלת מאז 2014."
+ },
+ "At the Hellisheiði geothermal power plant in Iceland, in basalt rock.": {
+  "fr": "À la centrale géothermique de Hellisheiði, en Islande, dans le basalte.",
+  "es": "En la central geotérmica de Hellisheiði, en Islandia, en roca basáltica.",
+  "ar": "في محطة هيليشيدي للطاقة الحرارية الجوفية في آيسلندا، داخل صخور البازلت.",
+  "it": "Nella centrale geotermica di Hellisheiði, in Islanda, nel basalto.",
+  "he": "בתחנת הכוח הגאותרמית הלישהיידי באיסלנד, בסלע בזלת."
+ },
+ "Rock storage keeps CO2 out of the atmosphere for good. The company's goal is to store 1 billion tonnes of CO2.": {
+  "fr": "Le stockage dans la roche tient le CO2 hors de l'atmosphère pour de bon. L'objectif de l'entreprise est de stocker 1 milliard de tonnes de CO2.",
+  "es": "Almacenarlo en roca mantiene el CO2 fuera de la atmósfera para siempre. La meta de la empresa es almacenar 1.000 millones de toneladas de CO2.",
+  "ar": "التخزين في الصخر يُبقي ثاني أكسيد الكربون خارج الغلاف الجوي نهائيًا. وهدف الشركة تخزين مليار طن منه.",
+  "it": "Lo stoccaggio nella roccia tiene la CO2 fuori dall'atmosfera per sempre. L'obiettivo dell'azienda è stoccare 1 miliardo di tonnellate di CO2.",
+  "he": "אחסון בסלע מרחיק את ה-CO2 מהאטמוספרה לתמיד. היעד של החברה הוא לאחסן מיליארד טונות CO2."
+ },
+ "In the 2012 pilot, 175 tonnes of CO2 were injected at about 500 m depth, and over 95% mineralized in less than two years (Science, 2016).": {
+  "fr": "Lors du pilote de 2012, 175 tonnes de CO2 ont été injectées à environ 500 m de profondeur, et plus de 95 % se sont minéralisées en moins de deux ans (Science, 2016).",
+  "es": "En el piloto de 2012 se inyectaron 175 toneladas de CO2 a unos 500 m de profundidad, y más del 95 % se mineralizó en menos de dos años (Science, 2016).",
+  "ar": "في التجربة الأولية عام 2012، حُقن 175 طنًا من ثاني أكسيد الكربون على عمق نحو 500 م، وتمعدن أكثر من 95% منها في أقل من عامين (Science، 2016).",
+  "it": "Nel progetto pilota del 2012 sono state iniettate 175 tonnellate di CO2 a circa 500 m di profondità, e oltre il 95% si è mineralizzato in meno di due anni (Science, 2016).",
+  "he": "בפיילוט של 2012 הוזרקו 175 טונות CO2 בעומק של כ-500 מ', ויותר מ-95% הפכו למינרלים בתוך פחות משנתיים (Science, 2016)."
+ },
+ "Carbfix puts its on-site cost at about US $24.8 per tonne of CO2 (company figure).": {
+  "fr": "Carbfix estime son coût sur site à environ 24,8 dollars US par tonne de CO2 (chiffre de l'entreprise).",
+  "es": "Carbfix calcula su costo en el sitio en unos 24,8 dólares por tonelada de CO2 (cifra de la empresa).",
+  "ar": "تقدّر Carbfix تكلفتها في الموقع بنحو 24.8 دولارًا أمريكيًا للطن من ثاني أكسيد الكربون (رقم الشركة).",
+  "it": "Carbfix stima il suo costo in loco in circa 24,8 dollari USA per tonnellata di CO2 (dato dell'azienda).",
+  "he": "Carbfix מעריכה את העלות שלה באתר בכ-24.8 דולר לטון CO2 (נתון החברה)."
+ },
+ "At Hellisheiði, CO2 and hydrogen sulphide are captured from a geothermal power plant's emissions and stored as rock (Carbfix).": {
+  "fr": "À Hellisheiði, le CO2 et le sulfure d'hydrogène sont captés dans les émissions d'une centrale géothermique et stockés sous forme de roche (Carbfix).",
+  "es": "En Hellisheiði, el CO2 y el sulfuro de hidrógeno se capturan de las emisiones de una central geotérmica y se almacenan como roca (Carbfix).",
+  "ar": "في هيليشيدي، يُلتقط ثاني أكسيد الكربون وكبريتيد الهيدروجين من انبعاثات محطة طاقة حرارية جوفية ويُخزَّنان على شكل صخر (Carbfix).",
+  "it": "A Hellisheiði, la CO2 e l'acido solfidrico vengono catturati dalle emissioni di una centrale geotermica e stoccati come roccia (Carbfix).",
+  "he": "בהלישהיידי לוכדים CO2 ומימן גופרתי מפליטות של תחנת כוח גאותרמית ומאחסנים אותם כסלע (Carbfix)."
+ },
+ "Carbfix copies a natural process: CO2 and rock form stable carbonate minerals, a permanent and environmentally benign store (Carbfix).": {
+  "fr": "Carbfix imite un processus naturel : le CO2 et la roche forment des minéraux carbonatés stables, un stockage permanent et sans danger pour l'environnement (Carbfix).",
+  "es": "Carbfix imita un proceso natural: el CO2 y la roca forman minerales de carbonato estables, un almacén permanente y benigno para el medio ambiente (Carbfix).",
+  "ar": "تحاكي Carbfix عملية طبيعية: يكوّن ثاني أكسيد الكربون والصخر معادن كربونية مستقرة، وهي مخزن دائم وغير ضار بالبيئة (Carbfix).",
+  "it": "Carbfix imita un processo naturale: CO2 e roccia formano minerali carbonatici stabili, un deposito permanente e innocuo per l'ambiente (Carbfix).",
+  "he": "Carbfix מחקה תהליך טבעי: CO2 וסלע יוצרים מינרלים קרבונטיים יציבים, מאגר קבוע ובלתי מזיק לסביבה (Carbfix)."
+ },
+ "Learn More About Carbfix": {
+  "fr": "En savoir plus sur Carbfix",
+  "es": "Más sobre Carbfix",
+  "ar": "اعرف المزيد عن Carbfix",
+  "it": "Scopri di più su Carbfix",
+  "he": "למדו עוד על Carbfix"
+ },
+ "Want to go deeper? Carbfix explains how CO2 turns to stone.": {
+  "fr": "Envie d'aller plus loin ? Carbfix explique comment le CO2 devient pierre.",
+  "es": "¿Quieres saber más? Carbfix explica cómo el CO2 se convierte en piedra.",
+  "ar": "هل تريد التعمق أكثر؟ تشرح Carbfix كيف يتحول ثاني أكسيد الكربون إلى حجر.",
+  "it": "Vuoi approfondire? Carbfix spiega come la CO2 diventa pietra.",
+  "he": "רוצים להעמיק? Carbfix מסבירה איך CO2 הופך לאבן."
+ },
+ "Carbfix's Story": {
+  "fr": "L'histoire de Carbfix",
+  "es": "La historia de Carbfix",
+  "ar": "قصة Carbfix",
+  "it": "La storia di Carbfix",
+  "he": "הסיפור של Carbfix"
+ },
+ "Read the Science Study": {
+  "fr": "Lire l'étude publiée dans Science",
+  "es": "Lee el estudio de Science",
+  "ar": "اقرأ دراسة Science",
+  "it": "Leggi lo studio su Science",
+  "he": "קראו את המחקר ב-Science"
+ },
+ "About $25 a Tonne": {
+  "fr": "Environ 25 $ la tonne",
+  "es": "Unos 25 dólares por tonelada",
+  "ar": "نحو 25 دولارًا للطن",
+  "it": "Circa 25 dollari a tonnellata",
+  "he": "כ-25 דולר לטון"
+ },
+ "Two people crossing a dark volcanic lava plain in Iceland": {
+  "fr": "Deux personnes traversant une plaine de lave volcanique sombre en Islande",
+  "es": "Dos personas cruzando una llanura de lava volcánica oscura en Islandia",
+  "ar": "شخصان يعبران سهلًا من الحمم البركانية الداكنة في آيسلندا",
+  "it": "Due persone attraversano una scura pianura di lava vulcanica in Islanda",
+  "he": "שני אנשים חוצים מישור לבה געשית כהה באיסלנד"
+ },
+ "Carbon dioxide is a gas that warms the planet.": {
+  "fr": "Le dioxyde de carbone est un gaz qui réchauffe la planète.",
+  "es": "El dióxido de carbono es un gas que calienta el planeta.",
+  "ar": "ثاني أكسيد الكربون غاز يسخّن الكوكب.",
+  "it": "L'anidride carbonica è un gas che riscalda il pianeta.",
+  "he": "פחמן דו-חמצני הוא גז שמחמם את כדור הארץ."
+ },
+ "Carbfix mixes it with water, like fizzy water, and pumps it deep into volcanic rock.": {
+  "fr": "Carbfix le mélange à de l'eau, comme de l'eau gazeuse, et le pompe en profondeur dans la roche volcanique.",
+  "es": "Carbfix lo mezcla con agua, como agua con gas, y lo bombea muy dentro de la roca volcánica.",
+  "ar": "تخلطه Carbfix بالماء، مثل الماء الفوار، وتضخه عميقًا في الصخور البركانية.",
+  "it": "Carbfix lo mescola con l'acqua, come acqua frizzante, e lo pompa in profondità nella roccia vulcanica.",
+  "he": "Carbfix מערבבת אותו עם מים, כמו מי סודה, ושואבת אותו עמוק לתוך סלע געשי."
+ },
+ "There the gas reacts with the rock and becomes solid stone that stays put.": {
+  "fr": "Là, le gaz réagit avec la roche et devient de la pierre solide qui ne bouge plus.",
+  "es": "Allí el gas reacciona con la roca y se vuelve piedra sólida que no se mueve.",
+  "ar": "هناك يتفاعل الغاز مع الصخر ويصبح حجرًا صلبًا يبقى في مكانه.",
+  "it": "Lì il gas reagisce con la roccia e diventa pietra solida che resta lì.",
+  "he": "שם הגז מגיב עם הסלע והופך לאבן מוצקה שנשארת במקומה."
+ },
+ "NASA/James Blair (jsc2026e406058, volcanic landscape in Iceland)": {
+  "fr": "NASA/James Blair (jsc2026e406058, paysage volcanique en Islande)",
+  "es": "NASA/James Blair (jsc2026e406058, paisaje volcánico en Islandia)",
+  "ar": "NASA/James Blair (jsc2026e406058، مشهد بركاني في آيسلندا)",
+  "it": "NASA/James Blair (jsc2026e406058, paesaggio vulcanico in Islanda)",
+  "he": "NASA/James Blair ‏(jsc2026e406058, נוף געשי באיסלנד)"
+ },
+ "NASA/James Blair (jsc2026e406058, Iceland)": {
+  "fr": "NASA/James Blair (jsc2026e406058, Islande)",
+  "es": "NASA/James Blair (jsc2026e406058, Islandia)",
+  "ar": "NASA/James Blair (jsc2026e406058، آيسلندا)",
+  "it": "NASA/James Blair (jsc2026e406058, Islanda)",
+  "he": "NASA/James Blair ‏(jsc2026e406058, איסלנד)"
+ }
+}

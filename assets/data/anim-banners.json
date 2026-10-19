@@ -619,6 +619,21 @@
    "credit": "NASA (ISS073-E-0818427, river meeting the sea, Oct. 2, 2025)",
    "pos": "50% 50%",
    "r2": "images/Bassac_River_ISS073_0818427.jpg"
+  },
+  "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg": {
+   "credit": "NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)",
+   "pos": "50% 50%",
+   "r2": "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
+  },
+  "assets/Thwaites_Glacier_Landsat8_2019.jpg": {
+   "credit": "NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)",
+   "pos": "50% 50%",
+   "r2": "images/Thwaites_Glacier_Landsat8_2019.jpg"
+  },
+  "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg": {
+   "credit": "NASA/James Blair (jsc2026e406058, Iceland)",
+   "pos": "50% 60%",
+   "r2": "images/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
   }
  },
  "pages": {
@@ -868,6 +883,9 @@
   "Webb_2024_YR4.html": "assets/Webb_Infrared.jpg",
   "Whales_Ocean_Gardeners.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
   "Yellowstone_Wolves.html": "assets/Yellowstone_ISS.jpg",
-  "Zero_Debris_Charter.html": "assets/LEO_View.jpg"
+  "Zero_Debris_Charter.html": "assets/LEO_View.jpg",
+  "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
+  "Thwaites_Glacier_Collaboration.html": "assets/Thwaites_Glacier_Landsat8_2019.jpg",
+  "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
  }
 }

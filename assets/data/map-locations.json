@@ -2429,6 +2429,39 @@
      "basis": "page"
     }
    ]
+  },
+  "Svalbard_Global_Seed_Vault.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 78.2357,
+     "lng": 15.4913,
+     "label": "Svalbard Global Seed Vault, near Longyearbyen, Svalbard, Norway",
+     "basis": "page"
+    }
+   ]
+  },
+  "Thwaites_Glacier_Collaboration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -75.5,
+     "lng": -106.75,
+     "label": "Thwaites Glacier, West Antarctica",
+     "basis": "page"
+    }
+   ]
+  },
+  "Carbfix.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 64.037,
+     "lng": -21.4,
+     "label": "Hellisheiði geothermal power plant, Iceland",
+     "basis": "page"
+    }
+   ]
   }
  }
 }
