@@ -30,6 +30,7 @@ Biomass (ESA),active,Earth Observation,"ESA mission control (ESOC), Darmstadt, G
 Carbfix: Turning CO2 Into Stone,active,Polar,"Hellisheiði geothermal power plant, Iceland",64.037,-21.4,page,https://www.savingplanets.com/Carbfix.html
 Carruthers Geocorona Observatory (NASA),active,Space Weather,University of Illinois Urbana-Champaign (mission lead),40.102,-88.227,hq,https://www.savingplanets.com/Carruthers.html
 Catalina Sky Survey,active,Planetary Defense,"Lunar and Planetary Laboratory, University of Arizona, Tucson",32.233,-110.95,hq,https://www.savingplanets.com/Catalina_Sky_Survey.html
+Cheonggyecheon Stream Restoration (Seoul),active,Rivers,"Cheonggyecheon, Seoul, South Korea",37.5692,126.9784,page,https://www.savingplanets.com/Cheonggyecheon.html
 Chesapeake Bay Foundation,active,Rivers,Chesapeake Bay,38.0,-76.3,page,https://www.savingplanets.com/Chesapeake_Bay_Foundation.html
 CHIME Hyperspectral Imaging Mission (ESA),active,Earth Observation,"ESA headquarters, Paris, France",48.849,2.303,hq,https://www.savingplanets.com/CHIME.html
 CIMR Copernicus Imaging Microwave Radiometer (ESA),active,Polar,"ESA ESTEC, Noordwijk, Netherlands (project management)",52.218,4.42,page,https://www.savingplanets.com/CIMR.html
@@ -157,6 +158,7 @@ Namami Gange (India),active,Rivers,"Varanasi, on the River Ganga, India",25.317,
 Nancy Grace Roman Space Telescope (NASA),active,Project Rawane,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/Nancy_Grace_Roman.html
 Near-Earth Object Coordination Centre (ESA),active,Planetary Defense,"ESA ESRIN, Frascati, Italy",41.827,12.674,hq,https://www.savingplanets.com/ESA_NEOCC.html
 NEO Surveyor,upcoming,Planetary Defense,Launching on Falcon 9 from Florida,28.49,-80.58,launch,https://www.savingplanets.com/NEO_Surveyor.html
+"NEWater, Singapore's Recycled Water (PUB)",active,Rivers,Singapore,1.3521,103.8198,page,https://www.savingplanets.com/NEWater.html
 NISAR (NASA–ISRO),active,Earth Observation,"Launched from Sriharikota, India",13.72,80.23,launch,https://www.savingplanets.com/NISAR.html
 Northrop Grumman SpaceLogistics,active,Space Disposal,"Dulles, Virginia (SpaceLogistics HQ, Northrop Grumman)",38.996,-77.448,hq,https://www.savingplanets.com/SpaceLogistics.html
 Ocean Voyages Institute,active,Ocean,North Pacific Gyre,35.0,-140.0,page,https://www.savingplanets.com/Ocean_Voyages_Institute.html
@@ -166,7 +168,10 @@ OpenET Satellite Water Data,active,Rivers,"OpenET, Salt Lake City, Utah",40.76,-
 Orbital Data Centers,active,Space,From orbit,,,,https://www.savingplanets.com/Orbital_Data_Centers.html
 OSIRIS-APEX and Apophis 2029 (NASA),active,Planetary Defense,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/OSIRIS-APEX.html
 PACE (NASA),active,Earth Observation,"Launched from Cape Canaveral, Florida",28.49,-80.58,launch,https://www.savingplanets.com/PACE.html
+Palau National Marine Sanctuary,active,Ocean,Palau,7.515,134.58,page,https://www.savingplanets.com/Palau_National_Marine_Sanctuary.html
 Pan-STARRS Near-Earth Object Search,active,Planetary Defense,"Pan-STARRS telescopes, Haleakalā, Maui",20.708,-156.257,page,https://www.savingplanets.com/Pan-STARRS.html
+Papahānaumokuākea National Marine Sanctuary,active,Ocean,"Midway Atoll, Papahānaumokuākea",28.21,-177.37,page,https://www.savingplanets.com/Papahanaumokuakea.html
+Papahānaumokuākea National Marine Sanctuary,active,Ocean,"Nihoa, Papahānaumokuākea",23.06,-161.92,page,https://www.savingplanets.com/Papahanaumokuakea.html
 Parker Solar Probe (NASA),active,Space Weather,"Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",39.165,-76.898,hq,https://www.savingplanets.com/Parker_Solar_Probe.html
 Penobscot River Restoration (Maine),active,Rivers,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/Penobscot_River_Restoration.html
 "Phytoplankton, the Ocean's Oxygen Engine",active,Ocean,Worldwide,,,,https://www.savingplanets.com/Phytoplankton.html
@@ -180,6 +185,7 @@ Plastic Bank,active,Ocean,Cameroon (country-level),4.05,9.7,page,https://www.sav
 Plastic Odyssey,active,Ocean,"Marseille, France (expedition start)",43.3,5.37,page,https://www.savingplanets.com/Plastic_Odyssey.html
 Plato (ESA),upcoming,Project Rawane,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/Plato.html
 Posidonia Seagrass Meadows,active,Ocean,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/Posidonia_Meadows.html
+Predator Free 2050 (New Zealand),active,Forests,"Wellington, New Zealand",-41.29,174.78,page,https://www.savingplanets.com/Predator_Free_2050.html
 PREFIRE Polar CubeSats (NASA),active,Polar,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/PREFIRE.html
 PRELUDE (ClearSpace),upcoming,Space Disposal,"ClearSpace, Lausanne, Switzerland (HQ)",46.52,6.63,hq,https://www.savingplanets.com/PRELUDE.html
 Project Seagrass,active,Ocean,"Bridgend, Wales (HQ)",51.5,-3.58,page,https://www.savingplanets.com/Project_Seagrass.html

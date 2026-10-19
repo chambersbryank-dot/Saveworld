@@ -2526,6 +2526,67 @@
     }
    ],
    "strip": "orbit"
+  },
+  "NEWater.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 1.3521,
+     "lng": 103.8198,
+     "label": "Singapore",
+     "basis": "page"
+    }
+   ]
+  },
+  "Cheonggyecheon.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 37.5692,
+     "lng": 126.9784,
+     "label": "Cheonggyecheon, Seoul, South Korea",
+     "basis": "page"
+    }
+   ]
+  },
+  "Palau_National_Marine_Sanctuary.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 7.515,
+     "lng": 134.58,
+     "label": "Palau",
+     "basis": "page"
+    }
+   ]
+  },
+  "Papahanaumokuakea.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 28.21,
+     "lng": -177.37,
+     "label": "Midway Atoll, Papahānaumokuākea",
+     "basis": "page"
+    },
+    {
+     "lat": 23.06,
+     "lng": -161.92,
+     "label": "Nihoa, Papahānaumokuākea",
+     "basis": "page"
+    }
+   ]
+  },
+  "Predator_Free_2050.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -41.29,
+     "lng": 174.78,
+     "label": "Wellington, New Zealand",
+     "basis": "page"
+    }
+   ]
   }
  }
 }

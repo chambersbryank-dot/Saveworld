@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T17:04:07.128Z",
+ "generated": "2026-10-19T17:04:37.927Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -526,6 +526,10 @@
      "name": "Plant-for-the-Planet"
     },
     {
+     "href": "Predator_Free_2050.html",
+     "name": "Predator Free 2050 (New Zealand)"
+    },
+    {
      "href": "Rainforest_Connection.html",
      "name": "Rainforest Connection"
     },
@@ -684,6 +688,14 @@
     {
      "href": "Ocean_Voyages_Institute.html",
      "name": "Ocean Voyages Institute"
+    },
+    {
+     "href": "Palau_National_Marine_Sanctuary.html",
+     "name": "Palau National Marine Sanctuary"
+    },
+    {
+     "href": "Papahanaumokuakea.html",
+     "name": "Papahānaumokuākea National Marine Sanctuary"
     },
     {
      "href": "Phytoplankton.html",
@@ -860,6 +872,10 @@
      "name": "Beavers, River Engineers"
     },
     {
+     "href": "Cheonggyecheon.html",
+     "name": "Cheonggyecheon Stream Restoration (Seoul)"
+    },
+    {
      "href": "Chesapeake_Bay_Foundation.html",
      "name": "Chesapeake Bay Foundation"
     },
@@ -898,6 +914,10 @@
     {
      "href": "Namami_Gange.html",
      "name": "Namami Gange (India)"
+    },
+    {
+     "href": "NEWater.html",
+     "name": "NEWater, Singapore's Recycled Water (PUB)"
     },
     {
      "href": "OpenET.html",
@@ -1102,12 +1122,12 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 199,
+  "solutions": 204,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 17,
-   "government": 5,
+   "government": 10,
    "agency": 108,
    "nonprofit": 52,
    "natural": 17
@@ -1132,17 +1152,17 @@
     ]
    }
   ],
-  "taggedSolutions": 199
+  "taggedSolutions": 204
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 33,
+   "solutions": 35,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 4,
-    "government": 1,
+    "government": 3,
     "agency": 4,
     "nonprofit": 18,
     "natural": 6
@@ -1182,28 +1202,29 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 19,
+   "solutions": 21,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 11,
     "natural": 1,
+    "government": 4,
     "agency": 3,
-    "corporate": 2,
-    "government": 2
+    "corporate": 2
    },
    "upcomingMissions": 0,
    "impactTotals": []
   },
   "forests": {
    "name": "Forests",
-   "solutions": 23,
+   "solutions": 24,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 14,
     "natural": 5,
     "agency": 3,
+    "government": 1,
     "corporate": 1
    },
    "upcomingMissions": 0,
@@ -1678,6 +1699,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Cheonggyecheon.html",
+   "title": "Cheonggyecheon Stream Restoration (Seoul)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Chesapeake_Bay_Foundation.html",
@@ -3143,6 +3175,17 @@
    ]
   },
   {
+   "url": "NEWater.html",
+   "title": "NEWater, Singapore's Recycled Water (PUB)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "NISAR.html",
    "title": "NISAR (NASA–ISRO)",
    "category": "earth-observation",
@@ -3277,6 +3320,17 @@
    "missions": []
   },
   {
+   "url": "Palau_National_Marine_Sanctuary.html",
+   "title": "Palau National Marine Sanctuary",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "Pan-STARRS.html",
    "title": "Pan-STARRS Near-Earth Object Search",
    "category": "planetary-defense",
@@ -3286,6 +3340,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Papahanaumokuakea.html",
+   "title": "Papahānaumokuākea National Marine Sanctuary",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Parker_Solar_Probe.html",
@@ -3419,6 +3484,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Predator_Free_2050.html",
+   "title": "Predator Free 2050 (New Zealand)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "PREFIRE.html",

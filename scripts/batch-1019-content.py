@@ -15,7 +15,7 @@ spec = importlib.util.spec_from_file_location('b18', os.path.join(ROOT, 'scripts
 b18 = importlib.util.module_from_spec(spec); spec.loader.exec_module(b18)
 src, W, see_block = b18.b17.src, b18.W, b18.see_block
 ADDED = '2026-10-19'
-SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix', 'African_Parks', 'Digital_Earth_Africa', 'Hope_Mars_Mission', 'Abu_Dhabi_Mangroves', 'Gaganyaan']
+SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix', 'African_Parks', 'Digital_Earth_Africa', 'Hope_Mars_Mission', 'Abu_Dhabi_Mangroves', 'Gaganyaan', 'NEWater', 'Cheonggyecheon', 'Palau_National_Marine_Sanctuary', 'Papahanaumokuakea', 'Predator_Free_2050']
 
 SV = ('https://www.seedvault.no/', 'Svalbard Global Seed Vault')
 SVD = ('https://www.seedvault.no/2026/10/14/thousands-of-seeds-deposited-in-svalbard-as-global-cooperation-safeguards-food-security/', 'Svalbard Global Seed Vault, October 2026 deposit')
@@ -36,6 +36,23 @@ ISROG = ('https://www.isro.gov.in/Gaganyaan.html', 'ISRO, Gaganyaan')
 ISROG1 = ('https://www.isro.gov.in/LVM3_first_uncrewed_flight_Gaganyaan.html', 'ISRO, HLVM3 for the first uncrewed Gaganyaan flight')
 DDG = ('https://ddnews.gov.in/en/india-targets-first-uncrewed-gaganyaan-mission-with-vyommitra-in-late-2026-human-spaceflight-programme-achieves-major-milestones/', 'DD News, India targets first uncrewed Gaganyaan mission with Vyommitra in late 2026')
 CITSCI = 'https://science.nasa.gov/citizen-science/'
+
+PUBN = ('https://www.pub.gov.sg/Public/WaterLoop/OurWaterStory/NEWater', "PUB, Singapore's National Water Agency, NEWater")
+CGM = ('https://museum.seoul.go.kr/eng/about/cheongGyeMuse.jsp', 'Seoul Museum of History, Cheonggyecheon Museum')
+CGE = ('https://encykorea.aks.ac.kr/Article/E0068490', 'Encyclopedia of Korean Culture (Academy of Korean Studies), Cheonggyecheon restoration project')
+PICRC = ('https://picrc.org/january-1-2020-pnms-act-enters-into-full-force-with-the-start-of-a-new-decade/', 'Palau International Coral Reef Center, PNMS Act enters into full force (Jan. 1, 2020)')
+LEAP = ('https://leap.unep.org/en/countries/pw/national-legislation/palau-national-marine-sanctuary-act-rppl-no-9-49-2015', 'UNEP LEAP, Palau National Marine Sanctuary Act (RPPL No. 9-49 of 2015)')
+PIT = ('https://islandtimes.org/president-whipps-outlines-progress-challenges-in-state-of-the-republic-address/', 'Island Times, President Whipps outlines progress and challenges in State of the Republic address (July 2026)')
+PINA = ('https://pina.com.fj/2026/10/01/pacific-must-balance-ocean-protection-with-economic-needs-palau-president-whipps/', 'PINA, Pacific must balance ocean protection with economic needs (Oct. 1, 2026)')
+PPL = ('https://palaupledge.com/', 'Palau Pledge')
+NMS = ('https://sanctuaries.noaa.gov/papahanaumokuakea/', 'NOAA, Papahānaumokuākea National Marine Sanctuary')
+PMA = ('https://www.papahanaumokuakea.gov/about/', 'Papahānaumokuākea Marine National Monument, About')
+FWSW = ('https://www.fws.gov/story/2026-04/midway-atoll-national-wildlife-refuge-great-monument-people-who-passed-here', 'USFWS, Midway Atoll National Wildlife Refuge (April 2026)')
+FOM = 'https://friendsofmidway.org/get-involved/donations/'
+DOCW = ('https://www.doc.govt.nz/nature/pests-and-threats/predator-free-2050/what-is-predator-free/', 'DOC, What is Predator Free 2050')
+DOCP = ('https://www.doc.govt.nz/nature/pests-and-threats/predator-free-2050/', 'DOC, Predator Free 2050')
+DOC16 = ('https://www.doc.govt.nz/news/media-releases/2016/predator-free-nz-2050-to-be-a-massive-team-effort', 'DOC, Predator Free New Zealand 2050 to be a massive team effort (July 25, 2016)')
+PFNZ = 'https://predatorfreenz.org/get-involved/'
 
 PAGES = [
  dict(slug='Svalbard_Global_Seed_Vault', title='Svalbard Global Seed Vault', short='the Seed Vault', cat='polar',
@@ -237,6 +254,126 @@ PAGES = [
            milestones=[('2024-12-18', 'HLVM3 stacking begins at SDSC-SHAR')], news='Gaganyaan'),
   see=[],
   pin={'status': 'active', 'pins': [{'lat': 13.72, 'lng': 80.23, 'label': 'Satish Dhawan Space Centre, Sriharikota, India (launch site)', 'basis': 'launch'}], 'strip': 'orbit'}),
+ dict(slug='NEWater', title="NEWater, Singapore's Recycled Water (PUB)", short='NEWater', cat='rivers',
+  hub=('Rivers.html', 'Rivers'), cls='government', status='active', glass='earth', label='Government solution · active',
+  img=('Singapore_Night_ISS_2025.jpg', 1920, 1280, 'Singapore and Johor Bahru, Malaysia, glowing at night on either side of the Johor Strait, seen from the International Space Station'),
+  credit='NASA (iss073e0763866, Singapore at night, Sept. 21, 2025)',
+  hook='Singapore cleans its used water until it is ultra-clean, then uses it again.',
+  wow=('On Aug. 9, 2002, 60,000 people at the National Day Parade toasted the nation with bottles of NEWater (PUB).', PUBN),
+  lead="NEWater is high-grade reclaimed water from PUB, Singapore's National Water Agency, made from treated used water in a three-step purification process at 4 plants (PUB).",
+  eli=['Singapore is a small island without much room to store rain.',
+       'So it takes water that has already been used, cleans it with special filters and ultraviolet light, and makes it ultra-clean.',
+       'Factories use most of it, and in dry spells some is added to reservoirs.'],
+  ws=[('Who', "PUB, Singapore's National Water Agency.", PUBN),
+      ('What', 'NEWater: treated used water purified by microfiltration or ultrafiltration, reverse osmosis and ultraviolet disinfection.', PUBN),
+      ('When', 'PUB set up a test team in 1998, built a demonstration plant in 2000 and launched NEWater to the public in 2002.', PUBN),
+      ('Where', 'Singapore, where 4 NEWater plants are in operation today.', PUBN),
+      ('Why', "To help close the water loop and strengthen Singapore's water resilience (PUB).", PUBN)],
+  impact=("Experts found NEWater's quality consistently safe and well within WHO and USEPA drinking water requirements (PUB).", PUBN),
+  fact=('Its Biggest Users Are Chip Makers', 'The biggest users are wafer fabrication plants, which need water quality even more stringent than drinking water (PUB).', PUBN),
+  people=('In dry periods, NEWater is added to reservoirs, then treated again at waterworks before it reaches homes as tap water (PUB).', PUBN),
+  nature=('By recycling treated used water, NEWater helps close the water loop (PUB).', PUBN),
+  support_h='Learn More About NEWater',
+  btns=[("PUB's NEWater Story", PUBN[0])],
+  bottom=('Want to go deeper? PUB tells the full NEWater story.', PUBN[0], 'For Further Information'),
+  widget=None, see=[],
+  pin={'status': 'active', 'pins': [{'lat': 1.3521, 'lng': 103.8198, 'label': 'Singapore', 'basis': 'page'}]}),
+ dict(slug='Cheonggyecheon', title='Cheonggyecheon Stream Restoration (Seoul)', short='Cheonggyecheon', cat='rivers',
+  hub=('Rivers.html', 'Rivers'), cls='government', status='active', glass='earth', label='Government solution · active',
+  img=('Seoul_Night_ISS_2025.jpg', 1920, 1280, 'Seoul at night, split by the dark curve of the Han River, seen from the International Space Station'),
+  credit='NASA (iss072e757318, Seoul at night, March 5, 2025)',
+  hook='Seoul tore down a motorway to let a buried stream see daylight again.',
+  wow=('In the month after it reopened on Oct. 1, 2005, about 6.27 million people visited the restored stream (Encyclopedia of Korean Culture).', CGE),
+  lead='Seoul removed an ageing road and elevated motorway that covered the Cheonggyecheon stream and restored it along a 5.84 km corridor through the city centre (Cheonggyecheon Museum).',
+  eli=['A stream in the middle of Seoul was covered with concrete and a highway was built on top.',
+       'The city took the highway down and opened the stream up again.',
+       'Now people walk beside the water in the heart of the city.'],
+  ws=[('Who', 'The Seoul Metropolitan Government.', CGM),
+      ('What', 'The Cheonggyecheon Restoration Project, which demolished the old road and elevated motorway and brought the stream back.', CGM),
+      ('When', 'From July 2003 to Oct. 1, 2005, two years and three months.', CGM),
+      ('Where', 'A 5.84 km corridor through central Seoul, South Korea.', CGM),
+      ('Why', 'The road and motorway were badly ageing, and many argued the stream should be restored rather than spending more on maintenance (Cheonggyecheon Museum).', CGM)],
+  impact=('The museum says the project changed the face of the city forever, as ecology and heritage became goals ahead of growth and development (Cheonggyecheon Museum).', CGM),
+  fact=('Down in About a Month', 'The Cheonggye elevated motorway was fully demolished by Aug. 3, 2003, about a month after work began (Encyclopedia of Korean Culture).', CGE),
+  people=('Its museum, with exhibition halls and an auditorium for cultural events, tells visitors the story of the restoration (Cheonggyecheon Museum).', CGM),
+  nature=('The Encyclopedia of Korean Culture describes the project as more than a stream restoration: a restoration of history, culture and life (Encyclopedia of Korean Culture).', CGE),
+  support_h='Learn More About Cheonggyecheon',
+  btns=[('Cheonggyecheon Museum', CGM[0])],
+  bottom=('Want to go deeper? The Cheonggyecheon Museum tells the restoration story.', CGM[0], 'For Further Information'),
+  widget=None, see=[('Elwha_River_Restoration.html', 'Elwha River Restoration', 'Two Elwha River dams came down between 2011 and 2014.')],
+  pin={'status': 'active', 'pins': [{'lat': 37.5692, 'lng': 126.9784, 'label': 'Cheonggyecheon, Seoul, South Korea', 'basis': 'page'}]}),
+ dict(slug='Palau_National_Marine_Sanctuary', title='Palau National Marine Sanctuary', short='the Palau sanctuary', cat='ocean',
+  hub=('Oceans.html', 'Ocean'), cls='government', status='active', glass='ocean', label='Government solution · active',
+  img=('Palau_Landsat8_2014.jpg', 1920, 1280, 'The green islands of Palau ringed by turquoise reefs in a deep blue Pacific, seen by Landsat 8'),
+  credit='NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)',
+  hook='A small island nation closed most of its ocean to fishing.',
+  wow=("Since Jan. 1, 2020, about 500,000 km² of Palau's ocean, 80% of its exclusive economic zone, has been closed to all fishing and extraction (PICRC).", PICRC),
+  lead="The Palau National Marine Sanctuary makes about 80% of Palau's exclusive economic zone a no-take area, with the other 20% kept as a Domestic Fishing Zone (Government of Palau law).",
+  eli=["Palau is a country made of islands in the Pacific Ocean.",
+       'It decided that most of its ocean should be a place where nobody fishes.',
+       'That gives sea life room to grow back and spill over into the areas where local people fish.'],
+  ws=[('Who', 'The Republic of Palau. The Palau International Coral Reef Center is the administrator of the sanctuary.', PPL),
+      ('What', 'A no-take marine sanctuary covering about 80% of Palau\'s exclusive economic zone, plus a 20% Domestic Fishing Zone.', LEAP),
+      ('When', 'Signed into law on Oct. 28, 2015 (RPPL No. 9-49) and in full force since Jan. 1, 2020.', PICRC),
+      ('Where', 'The waters around Palau in the western Pacific Ocean.', PICRC),
+      ('Why', 'To protect most of Palau\'s ocean from all exploitation while local fishing continues in the other 20% (UNEP LEAP).', LEAP)],
+  impact=('PICRC says the sanctuary offers better protection to nearly 800 animal species, nine of them endangered (PICRC).', PICRC),
+  fact=('Status in 2026', "No rollback has been enacted. In July 2026 President Whipps proposed \"rightsizing\" the no-take area from 80% to about 30% and sent the plan to Palau's national congress; as of October 2026 it was still under review, with critics including a former president (Island Times; PINA).", PIT),
+  people=("Palau was the first nation to change its immigration laws for the environment: visitors sign the Palau Pledge on arrival (Palau Pledge).", PPL),
+  nature=('PICRC says the no-take zone aims to improve marine biodiversity and nurture stronger pelagic fisheries for the people of Palau (PICRC).', PICRC),
+  support_h='Help Protect Palau',
+  btns=[('Learn About the Palau Pledge', PPL[0]), ('Read the PICRC Update', PICRC[0])],
+  bottom=('Visiting Palau? Learn the Palau Pledge first.', PPL[0], 'Palau Pledge'),
+  widget=None, see=[('Mission_Blue_Hope_Spots.html', 'Mission Blue Hope Spots', 'Special places in the ocean that people are working to protect.')],
+  pin={'status': 'active', 'pins': [{'lat': 7.515, 'lng': 134.58, 'label': 'Palau', 'basis': 'page'}]}),
+ dict(slug='Papahanaumokuakea', title='Papahānaumokuākea National Marine Sanctuary', short='Papahānaumokuākea', cat='ocean',
+  hub=('Oceans.html', 'Ocean'), cls='government', status='active', glass='ocean', label='Government solution · active',
+  img=('Pearl_Hermes_Atoll_ISS_2002.jpg', 1920, 1254, 'The turquoise lagoon and reef rim of Pearl and Hermes Atoll in the Northwestern Hawaiian Islands, seen from the International Space Station'),
+  credit='NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)',
+  hook="One of the world's largest protected seas sits just northwest of the main Hawaiian Islands.",
+  wow=("Wisdom, the Laysan albatross of Midway Atoll, is the oldest known wild bird, at an approximate age of 75 (USFWS).", FWSW),
+  lead="Designated in 2025 as America's 18th national marine sanctuary, Papahānaumokuākea covers 582,570 square miles of Pacific Ocean around Hawaiʻi (NOAA).",
+  eli=['Far out in the ocean past the main Hawaiian islands is a long chain of tiny islands and reefs.',
+       'The United States protects the ocean all around them.',
+       'Millions of seabirds nest there, and it is a sacred place for Native Hawaiians.'],
+  ws=[('Who', 'Three co-trustees and seven co-managing agencies, including NOAA, which runs the sanctuary.', PMA),
+      ('What', 'The largest marine protected area in the U.S. National Marine Sanctuary System, protecting nature, culture and history.', NMS),
+      ('When', 'First protected as a marine national monument on June 15, 2006, and designated a national marine sanctuary in 2025.', PMA),
+      ('Where', 'The Northwestern Hawaiian Islands, including Nihoa, Mokumanamana and Midway Atoll.', PMA),
+      ('Why', 'To protect ecosystem health and diversity and the Native Hawaiian cultural significance of the area (Papahānaumokuākea).', PMA)],
+  impact=('Its reefs are home to over 7,000 marine species, a quarter of them found only in the Hawaiian Archipelago (Papahānaumokuākea).', PMA),
+  fact=('A Long Life at Sea', 'Wisdom is estimated to have produced 50 to 60 eggs and 30 chicks that fledged in her lifetime (USFWS).', FWSW),
+  people=('It became the first mixed natural and cultural UNESCO World Heritage Site in the United States, on July 30, 2010 (Papahānaumokuākea).', PMA),
+  nature=('About 14 million seabirds of 22 species breed and nest there, along with endangered Hawaiian monk seals (Papahānaumokuākea).', PMA),
+  support_h='Support Midway Atoll',
+  btns=[('Donate to Friends of Midway Atoll', FOM), ('Learn About the Sanctuary', NMS[0])],
+  bottom=('Support Friends of Midway Atoll National Wildlife Refuge.', FOM, 'Donate'),
+  widget=None, see=[('Mission_Blue_Hope_Spots.html', 'Mission Blue Hope Spots', 'Special places in the ocean that people are working to protect.')],
+  pin={'status': 'active', 'pins': [{'lat': 28.21, 'lng': -177.37, 'label': 'Midway Atoll, Papahānaumokuākea', 'basis': 'page'}, {'lat': 23.06, 'lng': -161.92, 'label': 'Nihoa, Papahānaumokuākea', 'basis': 'page'}]}),
+ dict(slug='Predator_Free_2050', title='Predator Free 2050 (New Zealand)', short='Predator Free 2050', cat='forests',
+  hub=('Deforestation.html', 'Forests'), cls='government', status='active', glass='forests', label='Government solution · active',
+  img=('NZ_Southern_Lakes_ISS_2024.jpg', 1920, 1280, 'Lakes Tekapo, Pukaki and Ōhau, bright blue among snowy mountains near the Southern Alps of New Zealand, seen from the International Space Station'),
+  credit='NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)',
+  hook='New Zealand wants to remove its most harmful introduced predators from the whole country.',
+  wow=('Introduced rats, possums, feral cats and mustelids kill an estimated 25 million native birds in New Zealand each year (DOC).', DOCW),
+  lead='Predator Free 2050 is a nationwide goal to eradicate rats, possums, feral cats and mustelids from all of Aotearoa New Zealand by 2050, with the Department of Conservation as lead agency (DOC).',
+  eli=["New Zealand's birds grew up with no mammals that hunt them.",
+       'Then people brought rats, stoats, possums and cats, which eat birds and their eggs.',
+       'The country is working to remove those predators everywhere by 2050.'],
+  ws=[('Who', "The New Zealand Government, with the Department of Conservation (DOC) as lead agency, and iwi, hapū, NGOs, businesses, community groups and scientists.", DOCW),
+      ('What', 'A goal, a movement and a government-funded programme to eradicate the most harmful introduced predators.', DOCW),
+      ('When', 'Announced on July 25, 2016, with a target of 2050.', DOC16),
+      ('Where', 'All of Aotearoa New Zealand.', DOCW),
+      ('Why', 'Introduced predators are one of the key threats to native species, which evolved without mammals (DOC).', DOCW)],
+  impact=('DOC reports that kākā now live alongside people in Wellington and kiwi share backyards on Waiheke Island (DOC).', DOCP),
+  fact=('Eradication, Not Just Control', 'The aim is to remove every last animal and stop them from coming back, which is much harder than keeping numbers down (DOC).', DOCW),
+  people=('Anyone can help, from backyard traps to community projects across the country (DOC).', DOCP),
+  nature=('The target species were chosen as the most harmful to native wildlife and realistic to eradicate by 2050 (DOC).', DOCW),
+  support_h='Get Involved',
+  btns=[('Get Involved With Predator Free NZ', PFNZ), ('Learn About Predator Free 2050', DOCW[0])],
+  bottom=('Join the Predator Free movement.', PFNZ, 'Get Involved'),
+  widget=None, see=[('Yellowstone_Wolves.html', 'Yellowstone Wolves', 'Gray wolves returned to Yellowstone in 1995 after nearly 70 years.')],
+  pin={'status': 'active', 'pins': [{'lat': -41.29, 'lng': 174.78, 'label': 'Wellington, New Zealand', 'basis': 'page'}]}),
 ]
 
 # Existing pages that link back (idempotent XLINK1019 block). Only entries whose new page is in SHIP are written.

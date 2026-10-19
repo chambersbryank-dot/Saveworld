@@ -119,6 +119,10 @@
   "sig": "6e3ee354cfbb",
   "date": "2026-10-19"
  },
+ "Cheonggyecheon.html": {
+  "sig": "124c3d6676b9",
+  "date": "2026-10-19"
+ },
  "Chesapeake_Bay_Foundation.html": {
   "sig": "a5d8c29c8357",
   "date": "2026-10-19"
@@ -483,6 +487,10 @@
   "sig": "8b8eed02db17",
   "date": "2026-10-19"
  },
+ "NEWater.html": {
+  "sig": "1879117a8136",
+  "date": "2026-10-19"
+ },
  "NISAR.html": {
   "sig": "2b24f7750951",
   "date": "2026-10-19"
@@ -539,8 +547,16 @@
   "sig": "9327c7112e0f",
   "date": "2026-10-19"
  },
+ "Palau_National_Marine_Sanctuary.html": {
+  "sig": "56787ec02973",
+  "date": "2026-10-19"
+ },
  "Pan-STARRS.html": {
   "sig": "ae458cac83fd",
+  "date": "2026-10-19"
+ },
+ "Papahanaumokuakea.html": {
+  "sig": "2679142e4ed9",
   "date": "2026-10-19"
  },
  "Parker_Solar_Probe.html": {
@@ -573,6 +589,10 @@
  },
  "Posidonia_Meadows.html": {
   "sig": "7bcdc93ce715",
+  "date": "2026-10-19"
+ },
+ "Predator_Free_2050.html": {
+  "sig": "30576e6b87bf",
   "date": "2026-10-19"
  },
  "Project_Seagrass.html": {

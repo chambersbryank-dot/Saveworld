@@ -659,6 +659,31 @@
    "credit": "NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)",
    "pos": "50% 50%",
    "r2": "images/South_India_Sri_Lanka_ISS_2024.jpg"
+  },
+  "assets/Singapore_Night_ISS_2025.jpg": {
+   "credit": "NASA (iss073e0763866, Singapore at night, Sept. 21, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Singapore_Night_ISS_2025.jpg"
+  },
+  "assets/Seoul_Night_ISS_2025.jpg": {
+   "credit": "NASA (iss072e757318, Seoul at night, March 5, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Seoul_Night_ISS_2025.jpg"
+  },
+  "assets/Palau_Landsat8_2014.jpg": {
+   "credit": "NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)",
+   "pos": "50% 50%",
+   "r2": "images/Palau_Landsat8_2014.jpg"
+  },
+  "assets/Pearl_Hermes_Atoll_ISS_2002.jpg": {
+   "credit": "NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)",
+   "pos": "50% 50%",
+   "r2": "images/Pearl_Hermes_Atoll_ISS_2002.jpg"
+  },
+  "assets/NZ_Southern_Lakes_ISS_2024.jpg": {
+   "credit": "NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/NZ_Southern_Lakes_ISS_2024.jpg"
   }
  },
  "pages": {
@@ -916,6 +941,11 @@
   "Digital_Earth_Africa.html": "assets/Okavango_Delta_ISS_2025.jpg",
   "Hope_Mars_Mission.html": "assets/Valles_Marineris_Viking_PIA00422.jpg",
   "Abu_Dhabi_Mangroves.html": "assets/Abu_Dhabi_Coast_ISS_2024.jpg",
-  "Gaganyaan.html": "assets/South_India_Sri_Lanka_ISS_2024.jpg"
+  "Gaganyaan.html": "assets/South_India_Sri_Lanka_ISS_2024.jpg",
+  "NEWater.html": "assets/Singapore_Night_ISS_2025.jpg",
+  "Cheonggyecheon.html": "assets/Seoul_Night_ISS_2025.jpg",
+  "Palau_National_Marine_Sanctuary.html": "assets/Palau_Landsat8_2014.jpg",
+  "Papahanaumokuakea.html": "assets/Pearl_Hermes_Atoll_ISS_2002.jpg",
+  "Predator_Free_2050.html": "assets/NZ_Southern_Lakes_ISS_2024.jpg"
  }
 }

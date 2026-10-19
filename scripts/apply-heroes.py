@@ -82,6 +82,11 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Hope_Mars_Mission': ('Valles_Marineris_Viking_PIA00422.jpg', 'NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)'),
     'Abu_Dhabi_Mangroves': ('Abu_Dhabi_Coast_ISS_2024.jpg', 'NASA (iss071e378611, Abu Dhabi, July 23, 2024)'),
     'Gaganyaan': ('South_India_Sri_Lanka_ISS_2024.jpg', 'NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)'),
+    'NEWater': ('Singapore_Night_ISS_2025.jpg', 'NASA (iss073e0763866, Singapore at night, Sept. 21, 2025)'),
+    'Cheonggyecheon': ('Seoul_Night_ISS_2025.jpg', 'NASA (iss072e757318, Seoul at night, March 5, 2025)'),
+    'Palau_National_Marine_Sanctuary': ('Palau_Landsat8_2014.jpg', 'NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)'),
+    'Papahanaumokuakea': ('Pearl_Hermes_Atoll_ISS_2002.jpg', 'NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)'),
+    'Predator_Free_2050': ('NZ_Southern_Lakes_ISS_2024.jpg', 'NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),

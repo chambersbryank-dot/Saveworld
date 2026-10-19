@@ -273,3 +273,8 @@ Digital_Earth_Africa.html
 Hope_Mars_Mission.html
 Abu_Dhabi_Mangroves.html
 Gaganyaan.html
+NEWater.html
+Cheonggyecheon.html
+Palau_National_Marine_Sanctuary.html
+Papahanaumokuakea.html
+Predator_Free_2050.html
