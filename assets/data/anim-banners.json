@@ -379,6 +379,151 @@
    "credit": "NASA Earth Observatory (Aqua MODIS, June 19, 2013)",
    "pos": "50% 50%",
    "r2": "images/Sumatra_Smoke_Singapore_MODIS.jpg"
+  },
+  "assets/Carruthers_SWFO_KSC.jpg": {
+   "credit": "NASA/Frank Michaux (KSC-20250905-PH-FMX01_0037)",
+   "pos": "50% 50%",
+   "r2": "images/Carruthers_SWFO_KSC.jpg"
+  },
+  "assets/ESCAPADE_Launch_NG2.jpg": {
+   "credit": "Blue Origin via NASA (KSC-20251113-PH-BLU01_0007)",
+   "pos": "50% 50%",
+   "r2": "images/ESCAPADE_Launch_NG2.jpg"
+  },
+  "assets/Europa_Clipper_Jupiter.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA26068)",
+   "pos": "50% 50%",
+   "r2": "images/Europa_Clipper_Jupiter.jpg"
+  },
+  "assets/ExoMars_Drill_Curiosity.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA17068)",
+   "pos": "50% 50%",
+   "r2": "images/ExoMars_Drill_Curiosity.jpg"
+  },
+  "assets/GRACE_FO_Orbit.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA22431)",
+   "pos": "50% 50%",
+   "r2": "images/GRACE_FO_Orbit.jpg"
+  },
+  "assets/ICESat2_Launch.jpg": {
+   "credit": "NASA/Bill Ingalls (NHQ201809150011)",
+   "pos": "50% 50%",
+   "r2": "images/ICESat2_Launch.tif"
+  },
+  "assets/IMAP_Spacecraft_KSC.jpg": {
+   "credit": "NASA/Johns Hopkins APL/Ed Whitman (KSC-20250529-PH-EGW01_0012)",
+   "pos": "50% 50%",
+   "r2": "images/IMAP_Spacecraft_KSC.jpg"
+  },
+  "assets/ISS_Water_Recovery.jpg": {
+   "credit": "NASA/Thomas Pesquet (iss065e333421)",
+   "pos": "50% 50%",
+   "r2": "images/ISS_Water_Recovery.jpg"
+  },
+  "assets/Juice_RIME_Radar.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA24026)",
+   "pos": "50% 50%",
+   "r2": "images/Juice_RIME_Radar.jpg"
+  },
+  "assets/Kerguelen_Kelp_ISS.jpg": {
+   "credit": "NASA (ISS018-E-018110)",
+   "pos": "50% 50%",
+   "r2": "images/Kerguelen_Kelp_ISS.jpg"
+  },
+  "assets/LignoSat_Wood_Panels.jpg": {
+   "credit": "Kyoto University via NASA (jsc2024e081747)",
+   "pos": "50% 50%",
+   "r2": "images/LignoSat_Wood_Panels.jpg"
+  },
+  "assets/Mercury_MESSENGER.jpg": {
+   "credit": "NASA/JHUAPL/Carnegie Institution of Washington (MESSENGER)",
+   "pos": "50% 50%",
+   "r2": "images/Mercury_MESSENGER.png"
+  },
+  "assets/Moon_Crossing_Earth.jpg": {
+   "credit": "NASA/NOAA DSCOVR EPIC",
+   "pos": "50% 50%",
+   "r2": "images/Moon_Crossing_Earth.jpg"
+  },
+  "assets/NEO_Surveyor.jpg": {
+   "credit": "NASA/JPL-Caltech/University of Arizona (PIA25253)",
+   "pos": "50% 50%",
+   "r2": "images/NEO_Surveyor.jpg"
+  },
+  "assets/Oceansat_Winds_Irene.jpg": {
+   "credit": "ISRO/NASA/JPL-Caltech (PIA14742)",
+   "pos": "50% 50%",
+   "r2": "images/Oceansat_Winds_Irene.jpg"
+  },
+  "assets/PACE_Spacecraft_KSC.jpg": {
+   "credit": "NASA/Kim Shiflett (KSC-20231204-PH-KLS01_0024)",
+   "pos": "50% 50%",
+   "r2": "images/PACE_Spacecraft_KSC.jpg"
+  },
+  "assets/Phobos.jpg": {
+   "credit": "NASA/JPL-Caltech/University of Arizona (PIA10368)",
+   "pos": "50% 50%",
+   "r2": "images/Phobos.jpg"
+  },
+  "assets/Plato_Exoplanets.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA19333)",
+   "pos": "50% 50%",
+   "r2": "images/Plato_Exoplanets.jpg"
+  },
+  "assets/SWOT_Orbit_Illustration.jpg": {
+   "credit": "CNES (PIA25623)",
+   "pos": "50% 50%",
+   "r2": "images/SWOT_Orbit_Illustration.jpg"
+  },
+  "assets/Saharan_Dust_Amazon.jpg": {
+   "credit": "NASA's Goddard Space Flight Center",
+   "pos": "50% 50%",
+   "r2": "images/Saharan_Dust_Amazon.jpg"
+  },
+  "assets/Salt_Marsh_KSC.jpg": {
+   "credit": "NASA/KSC (KSC-99WL10)",
+   "pos": "50% 50%",
+   "r2": "images/Salt_Marsh_KSC.jpg"
+  },
+  "assets/Sentinel1_Ground_Motion.jpg": {
+   "credit": "NASA-JPL/Caltech/ESA/Copernicus (PIA21962)",
+   "pos": "50% 50%",
+   "r2": "images/Sentinel1_Ground_Motion.jpg"
+  },
+  "assets/Sentinel6B_Launch.jpg": {
+   "credit": "NASA/Carla Thomas (AFRC2025-0170-03)",
+   "pos": "50% 50%",
+   "r2": "images/Sentinel6B_Launch.jpg"
+  },
+  "assets/Solar_Orbiter_Astrotech.jpg": {
+   "credit": "ESA/U. Ragnit via NASA (KSC-20200108-PH-ESA01_0001)",
+   "pos": "50% 50%",
+   "r2": "images/Solar_Orbiter_Astrotech.jpg"
+  },
+  "assets/Sydney_ASTER.jpg": {
+   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03498)",
+   "pos": "50% 50%",
+   "r2": "images/Sydney_ASTER.jpg"
+  },
+  "assets/TRACERS_Launch.jpg": {
+   "credit": "SpaceX via NASA (KSC-20250723-PH-SPX01_0003)",
+   "pos": "50% 50%",
+   "r2": "images/TRACERS_Launch.jpg"
+  },
+  "assets/Tanager1_Methane_Plume.jpg": {
+   "credit": "Carbon Mapper/Planet Labs PBC (PIA26416)",
+   "pos": "50% 50%",
+   "r2": "images/Tanager1_Methane_Plume.jpg"
+  },
+  "assets/Transporter18_Launch.jpg": {
+   "credit": "SpaceX via NASA (KSC-20261001-PH-SPX01_0003)",
+   "pos": "50% 50%",
+   "r2": "images/Transporter18_Launch.jpg"
+  },
+  "assets/Seagrass_Planting_KSC.jpg": {
+   "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
+   "pos": "50% 50%",
+   "r2": "images/Seagrass_Restoration_KSC.jpg"
   }
  },
  "pages": {
