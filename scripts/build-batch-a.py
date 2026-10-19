@@ -72,7 +72,9 @@ def git_date(page, cur):
 
 def sources(s):
     b = s.split('<body', 1)[-1]
-    b = re.sub(r'<nav id="topnav">.*?</nav>|<footer>.*?</footer>|<section class="help-actions".*?</section>|<!-- (SHARE|RELATED|REVIEWED):START -->.*?<!-- \1:END -->', ' ', b, flags=re.S)
+    b = re.sub(r'<nav id="topnav">.*?</nav>|<footer>.*?</footer>|<section class="help-actions".*?</section>|<!-- (SHARE|RELATED|REVIEWED|STANDARDS|STDTAGS|LICENSE|ANIMBAN):START -->.*?<!-- \1:END -->', ' ', b, flags=re.S)
+    # Oct 19 numbers check: NGSS/Common Core standards links (STANDARDS/STDTAGS), the CC BY-NC licence line and banner credits are
+    # not fact sources; without this, the next run counted them and inflated 'N sources cited' on ~190 pages (e.g. Hera 7 -> 12).
     urls = set(re.findall(r'href="(https?://[^"]+)"', b)) | set(re.findall(r'data-source="(https?://[^"]+)"', b))
     urls = {u.split('#')[0].rstrip('/') for u in urls if not re.search(r'twitter\.com/intent|facebook\.com/sharer|linkedin\.com/sharing|donate', u)}
     return len(urls)
