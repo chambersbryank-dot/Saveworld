@@ -206,7 +206,7 @@ CSS = ('.top-ten-page main{padding:0}'
  '.tt-num{position:absolute;z-index:2;top:.55rem;left:.55rem;min-width:2.1rem;height:2.1rem;padding:0 .45rem;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;background:#009cde;color:#fff;box-shadow:0 3px 10px rgba(0,0,0,.45)}'
  '[dir=rtl] .tt-num{left:auto;right:.55rem}'
  'body.sol-page .tt-hub{padding-top:.4rem;padding-bottom:2.5rem}'
- 'html body.sol-page .tt-hub .grid>.sol-card{height:auto}')  # styles.css .card-band .card{height:100%} re-stretched the cards; flush with the text
+ '')
 def main():
     shell = rd('Glossary.html')
     head = shell[:shell.index('</head>')]

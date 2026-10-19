@@ -49,5 +49,6 @@ html body.sol-page .sol-bluf { max-width: 46rem; margin: 0 auto 1.1rem; font-siz
 html body.sol-page .sol-jump .sol-c { display: inline-block; min-width: 1.6em; margin-inline-start: .3rem; padding: 0 .35rem; border-radius: 999px; background: rgba(77,163,255,.18); font-size: .8em; font-weight: 700; color: #9fd0ff; }
 html body.sol-page .sol-jump a:hover .sol-c { background: rgba(255,255,255,.25); color: #fff; }
 html body.sol-page .sol-hub .grid { align-items: start; }
+html body.sol-page .sol-hub .grid > .sol-card { height: auto; } /* Oct 18 9:00 PM HST: styles.css .card-band .card{height:100%} re-stretched every card to its row; flush with the text */
 html body.sol-page .sol-card .sol-desc { flex: none; }
 html body.sol-page .sol-card .sol-more { margin-top: 0; }
