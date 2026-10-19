@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T17:16:43.453Z",
+ "generated": "2026-10-19T17:39:46.513Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -482,6 +482,10 @@
      "name": "Arbor Day Foundation"
     },
     {
+     "href": "Costa_Rica_Forest_Payments.html",
+     "name": "Costa Rica Payments for Environmental Services (FONAFIFO)"
+    },
+    {
      "href": "Eden_People_Planet.html",
      "name": "Eden: People+Planet"
     },
@@ -492,6 +496,10 @@
     {
      "href": "Forest_Elephants.html",
      "name": "Forest Elephants, Carbon Gardeners"
+    },
+    {
+     "href": "Galapagos_Giant_Tortoises.html",
+     "name": "Galápagos Giant Tortoise Rewilding"
     },
     {
      "href": "GEDI.html",
@@ -512,6 +520,10 @@
     {
      "href": "Life_Terra.html",
      "name": "Life Terra"
+    },
+    {
+     "href": "MAAP.html",
+     "name": "MAAP, Amazon Deforestation Watch"
     },
     {
      "href": "Mangroves.html",
@@ -676,6 +688,10 @@
     {
      "href": "Kelp_Forests.html",
      "name": "Kelp Forests"
+    },
+    {
+     "href": "Mesoamerican_Reef_Insurance.html",
+     "name": "Mesoamerican Reef Insurance Programme (MAR Fund)"
     },
     {
      "href": "Mission_Blue_Hope_Spots.html",
@@ -1122,14 +1138,14 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 204,
+  "solutions": 208,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 17,
-   "government": 10,
+   "government": 11,
    "agency": 108,
-   "nonprofit": 52,
+   "nonprofit": 55,
    "natural": 17
   },
   "upcomingMissions": 24,
@@ -1152,19 +1168,19 @@
     ]
    }
   ],
-  "taggedSolutions": 204
+  "taggedSolutions": 208
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 35,
+   "solutions": 36,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 4,
     "government": 3,
     "agency": 4,
-    "nonprofit": 18,
+    "nonprofit": 19,
     "natural": 6
    },
    "upcomingMissions": 0,
@@ -1217,14 +1233,14 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 24,
+   "solutions": 27,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 14,
+    "nonprofit": 16,
     "natural": 5,
+    "government": 2,
     "agency": 3,
-    "government": 1,
     "corporate": 1
    },
    "upcomingMissions": 0,
@@ -1921,6 +1937,17 @@
    "added": "2026-10-18"
   },
   {
+   "url": "Costa_Rica_Forest_Payments.html",
+   "title": "Costa Rica Payments for Environmental Services (FONAFIFO)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "CRISTAL.html",
    "title": "CRISTAL Polar Ice and Snow Altimeter (ESA)",
    "category": "polar",
@@ -2294,6 +2321,17 @@
      "next": null
     }
    ],
+   "added": "2026-10-19"
+  },
+  {
+   "url": "Galapagos_Giant_Tortoises.html",
+   "title": "Galápagos Giant Tortoise Rewilding",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
    "added": "2026-10-19"
   },
   {
@@ -3012,6 +3050,17 @@
    "missions": []
   },
   {
+   "url": "MAAP.html",
+   "title": "MAAP, Amazon Deforestation Watch",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
+  },
+  {
    "url": "Mangroves.html",
    "title": "Mangrove Forests",
    "category": "forests",
@@ -3020,6 +3069,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Mesoamerican_Reef_Insurance.html",
+   "title": "Mesoamerican Reef Insurance Programme (MAR Fund)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-19"
   },
   {
    "url": "Meteosat_Third_Generation.html",

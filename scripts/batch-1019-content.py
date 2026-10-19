@@ -15,7 +15,7 @@ spec = importlib.util.spec_from_file_location('b18', os.path.join(ROOT, 'scripts
 b18 = importlib.util.module_from_spec(spec); spec.loader.exec_module(b18)
 src, W, see_block = b18.b17.src, b18.W, b18.see_block
 ADDED = '2026-10-19'
-SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix', 'African_Parks', 'Digital_Earth_Africa', 'Hope_Mars_Mission', 'Abu_Dhabi_Mangroves', 'Gaganyaan', 'NEWater', 'Cheonggyecheon', 'Palau_National_Marine_Sanctuary', 'Papahanaumokuakea', 'Predator_Free_2050']
+SHIP = ['Svalbard_Global_Seed_Vault', 'Thwaites_Glacier_Collaboration', 'Carbfix', 'African_Parks', 'Digital_Earth_Africa', 'Hope_Mars_Mission', 'Abu_Dhabi_Mangroves', 'Gaganyaan', 'NEWater', 'Cheonggyecheon', 'Palau_National_Marine_Sanctuary', 'Papahanaumokuakea', 'Predator_Free_2050', 'Galapagos_Giant_Tortoises', 'MAAP', 'Mesoamerican_Reef_Insurance', 'Costa_Rica_Forest_Payments']
 
 SV = ('https://www.seedvault.no/', 'Svalbard Global Seed Vault')
 SVD = ('https://www.seedvault.no/2026/10/14/thousands-of-seeds-deposited-in-svalbard-as-global-cooperation-safeguards-food-security/', 'Svalbard Global Seed Vault, October 2026 deposit')
@@ -53,6 +53,17 @@ DOCW = ('https://www.doc.govt.nz/nature/pests-and-threats/predator-free-2050/wha
 DOCP = ('https://www.doc.govt.nz/nature/pests-and-threats/predator-free-2050/', 'DOC, Predator Free 2050')
 DOC16 = ('https://www.doc.govt.nz/news/media-releases/2016/predator-free-nz-2050-to-be-a-massive-team-effort', 'DOC, Predator Free New Zealand 2050 to be a massive team effort (July 25, 2016)')
 PFNZ = 'https://predatorfreenz.org/get-involved/'
+GAL = ('https://www.galapagos.org/projects/rewilding-galapagos/rewilding-giant-tortoises/', 'Galápagos Conservancy, Rewilding Giant Tortoises')
+GALR = ('https://www.galapagos.org/conservation/giant-tortoise-restoration/', 'Galápagos Conservancy, Giant Tortoise Restoration')
+GALE = ('https://www.galapagos.org/newsroom/espanola-tortoises-return-home-following-closure-of-successful-breeding-program/', 'Galápagos Conservancy, Española tortoises return home')
+GALDON = 'https://www.galapagos.org/give/'
+MAAPA = ('https://www.amazonconservation.org/what-we-do/put-science-and-tech-to-work/technology-for-conservation/about-maap/', 'Amazon Conservation, About MAAP')
+MAAPH = ('https://www.maapprogram.org/', 'MAAP, Monitoring of the Andes Amazon Program')
+ACDON = 'https://www.amazonconservation.org/donate/'
+MARL = ('https://www.marfund.org/en/hurricane-lisa-triggers-first-pay-out-of-mesoamerican-reef-insurance-programme-to-finance-immediate-reef-response-in-belize/', 'MAR Fund, Hurricane Lisa triggers first pay-out (Nov. 2022)')
+MARF = ('https://www.marfund.org/en/the-mar-insurance-programme-enters-its-fifth-year-advancing-climate-resilience-across-the-mesoamerican-reef/', 'MAR Fund, The MAR Insurance Programme enters its fifth year (Sept. 2025)')
+MARDON = 'https://www.marfund.org/en/donate-now'
+FONA = ('https://www.fonafifo.go.cr/en/servicios/pago-de-servicios-ambientales', 'FONAFIFO, Payment of Environmental Services')
 
 PAGES = [
  dict(slug='Svalbard_Global_Seed_Vault', title='Svalbard Global Seed Vault', short='the Seed Vault', cat='polar',
@@ -374,6 +385,102 @@ PAGES = [
   bottom=('Join the Predator Free movement.', PFNZ, 'Get Involved'),
   widget=None, see=[('Yellowstone_Wolves.html', 'Yellowstone Wolves', 'Gray wolves returned to Yellowstone in 1995 after nearly 70 years.')],
   pin={'status': 'active', 'pins': [{'lat': -41.29, 'lng': 174.78, 'label': 'Wellington, New Zealand', 'basis': 'page'}]}),
+ dict(slug='Galapagos_Giant_Tortoises', title='Galápagos Giant Tortoise Rewilding', short='Galápagos tortoises', cat='forests',
+  hub=('Deforestation.html', 'Forests'), cls='nonprofit', status='active', glass='forests', label='Nonprofit solution · active',
+  img=('Fernandina_Galapagos_ISS_2022.jpg', 1920, 1280, 'The cloud-wrapped peak of La Cumbre volcano on Fernandina Island in the Galápagos, seen from the International Space Station'),
+  credit='NASA (iss068e025397, La Cumbre volcano, Fernandina Island, Galápagos, Nov. 28, 2022)',
+  hook='Galápagos tortoises were nearly gone; a breeding programme has sent thousands home.',
+  wow=('Over the last 60 years, more than 9,000 giant tortoises have been reared in captivity and released to the wild in the Galápagos (Galápagos Conservancy).', GAL),
+  lead='Galápagos Conservancy and the Galápagos National Park Directorate rear giant tortoises in breeding centres and return them to their home islands (Galápagos Conservancy, nonprofit).',
+  eli=['Giant tortoises once covered the Galápagos Islands, but people and animals they brought nearly wiped them out.',
+       'Park rangers and scientists raise baby tortoises in safe centres until they are big enough to survive.',
+       'Then they carry them back to the islands where they belong.'],
+  ws=[('Who', 'Galápagos Conservancy, a nonprofit, with the Galápagos National Park Directorate.', GAL),
+      ('What', 'Rearing endangered giant tortoises in breeding centres and releasing them on their home islands.', GAL),
+      ('When', 'The programme launched in 1965 and has run for about 60 years.', GAL),
+      ('Where', 'The Galápagos Islands, Ecuador.', GAL),
+      ('Why', "Today's tortoise populations are only about 10% of their historical numbers and live in only 35% of their available habitat (Galápagos Conservancy).", GAL)],
+  impact=('Española tortoises went from 15 survivors in the 1960s to more than 2,300 living and breeding on the island (Galápagos Conservancy).', GAL),
+  fact=('The 15 Who Came Home', 'In June 2020 the 15 original Española adults were released back on their island, ending one of the most successful breeding programmes in the world (Galápagos Conservancy).', GALE),
+  people=('As "ecosystem engineers," the tortoises have restorative effects on Galápagos land and biodiversity (Galápagos Conservancy).', GAL),
+  nature=('Pinzón Island got tortoise hatchlings again after black rats were eradicated in 2012, for the first time in over 100 years (Galápagos Conservancy).', GAL),
+  support_h='Support the Tortoises',
+  btns=[('Donate to Galápagos Conservancy', GALDON), ('Learn About Tortoise Rewilding', GAL[0])],
+  bottom=('Help rewild the Galápagos giant tortoises.', GALDON, 'Donate'),
+  widget=None, see=[('Forest_Elephants.html', 'Forest Elephants, Carbon Gardeners', 'Elephants that help forests store more carbon.')],
+  pin={'status': 'active', 'pins': [{'lat': -0.7, 'lng': -90.6, 'label': 'Galápagos Islands, Ecuador', 'basis': 'page'}]}),
+ dict(slug='MAAP', title='MAAP, Amazon Deforestation Watch', short='MAAP', cat='forests',
+  hub=('Deforestation.html', 'Forests'), cls='nonprofit', status='active', glass='forests', label='Nonprofit solution · active',
+  img=('Ucayali_River_ISS_2026.jpg', 1920, 1280, 'The winding Ucayali River through the lowland Amazon rainforest of central Peru, seen from the International Space Station'),
+  credit='NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)',
+  hook='Satellites spot new clearing in the Amazon, and MAAP reports explain what is behind it.',
+  wow=('MAAP says it monitors deforestation and fires across 100% of the Amazon Basin (MAAP).', MAAPH),
+  lead='MAAP, the Monitoring of the Andes Amazon Program, is an initiative of the nonprofit Amazon Conservation that uses satellite images to report on urgent deforestation and fires in the Amazon (MAAP).',
+  eli=['The Amazon rainforest is huge, and it is hard to see where trees are being cut.',
+       'Satellites take pictures from space, and MAAP experts compare them to find new clearings.',
+       'Then they publish simple reports so governments and everyone else can act.'],
+  ws=[('Who', 'Amazon Conservation, a Washington, D.C.-based nonprofit, with partners in Peru, Colombia and Ecuador.', MAAPA),
+      ('What', 'Near-real-time monitoring that finds urgent deforestation, identifies its causes and publishes easy-to-read reports.', MAAPH),
+      ('When', 'Launched in April 2015.', MAAPA),
+      ('Where', 'It began in the Andean Amazon, with an initial emphasis on Peru, and now reports across the Amazon Basin.', MAAPA),
+      ('Why', 'To give policymakers, law enforcement, researchers and the public the facts to help drive action against illegal deforestation (MAAP).', MAAPH)],
+  impact=('MAAP combines satellite alerts built on Landsat, radar from Sentinel-1 and high-resolution imagery to verify forest loss and find its drivers (Amazon Conservation).', MAAPA),
+  fact=('Drivers, Not Just Dots', 'MAAP has documented causes of deforestation including gold mining, oil palm, cacao, small-scale agriculture, logging roads and hydroelectric dams (Amazon Conservation).', MAAPA),
+  people=('Its reports serve policymakers, law enforcement, civil society, researchers, the media and the general public (MAAP).', MAAPH),
+  nature=('MAAP looks for deforestation inside protected areas and isolated indigenous communities, and in hotspots like the gold-mining zone of Madre de Dios (Amazon Conservation).', MAAPA),
+  support_h='Support Amazon Conservation',
+  btns=[('Donate to Amazon Conservation', ACDON), ('Read MAAP Reports', MAAPH[0])],
+  bottom=('Support the team behind MAAP.', ACDON, 'Donate'),
+  widget=None, see=[('Landsat_9.html', 'Landsat 9 (NASA/USGS)', 'Part of the Landsat record of Earth\'s land that began in 1972.')],
+  pin={'status': 'active', 'pins': [{'lat': -10.5, 'lng': -73.5, 'label': 'Ucayali region, Peruvian Amazon', 'basis': 'page'}]}),
+ dict(slug='Mesoamerican_Reef_Insurance', title='Mesoamerican Reef Insurance Programme (MAR Fund)', short='the MAR Insurance Programme', cat='ocean',
+  hub=('Oceans.html', 'Ocean'), cls='nonprofit', status='active', glass='ocean', label='Nonprofit solution · active',
+  img=('Belize_Coast_ISS_2014.jpg', 1920, 1278, 'The Caribbean coast of Belize with its reef, cayes and turquoise shallows, seen from the International Space Station'),
+  credit='NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)',
+  hook='A reef now has storm insurance that pays out fast, so crews can start repairs within days.',
+  wow=('After Hurricane Lisa hit Belize\'s Turneffe Atoll in November 2022, the programme paid out US$175,000, and brigades stabilised nearly 200 coral fragments within 15 days (MAR Fund).', MARF),
+  lead='The MAR Insurance Programme, run by the nonprofit MAR Fund, uses parametric insurance to pay for fast reef repair after hurricanes along the 1,000 km Mesoamerican Reef (MAR Fund).',
+  eli=['Hurricanes can smash coral reefs, and repairs only work if they start quickly.',
+       'This insurance pays out automatically when winds reach a set speed, with no long wait.',
+       'Trained local teams then use the money to fix the reef.'],
+  ws=[('Who', 'MAR Fund, a regional environmental fund, with insurance partners and local reef groups.', MARF),
+      ('What', 'A parametric insurance programme that pays out when a hurricane\'s winds pass a trigger, funding reef response.', MARL),
+      ('When', 'Launched in 2021, and entering its fifth year in 2025.', MARF),
+      ('Where', '11 protected reef sites along the Mesoamerican Reef in Mexico, Belize, Guatemala and Honduras.', MARF),
+      ('Why', 'Hurricanes are a leading driver of coral loss in the region, and reef response is hard to fund after extreme events (MAR Fund).', MARL)],
+  impact=('The programme grew from 4 insured sites in 2021 to 11 reef sites (MAR Fund).', MARF),
+  fact=('Paid Out in Two Weeks', 'The first payout was triggered on Nov. 2, 2022, when winds of 70 knots hit Turneffe Atoll, and MAR Fund received the money within two weeks (MAR Fund).', MARF),
+  people=('The reef region provides over US$4.5 billion in environmental services each year and helps protect more than 5 million people living within 50 km of the coast (MAR Fund).', MARF),
+  nature=('Local brigades assess and clean up reef damage, then repair it, following pre-agreed response plans (MAR Fund).', MARL),
+  support_h='Support the Mesoamerican Reef',
+  btns=[('Donate to MAR Fund', MARDON), ('Read About the Insurance Programme', MARF[0])],
+  bottom=('Support reef rescue with MAR Fund.', MARDON, 'Donate'),
+  widget=None, see=[('Coral_Reef_Watch.html', 'Coral Reef Watch (NOAA)', 'Satellites that warn when reefs are heating up.')],
+  pin={'status': 'active', 'pins': [{'lat': 17.35, 'lng': -87.85, 'label': 'Turneffe Atoll, Belize', 'basis': 'page'}]}),
+ dict(slug='Costa_Rica_Forest_Payments', title='Costa Rica Payments for Environmental Services (FONAFIFO)', short='Costa Rica\'s forest payments', cat='forests',
+  hub=('Deforestation.html', 'Forests'), cls='government', status='active', glass='forests', label='Government solution · active',
+  img=('Costa_Rica_ISS_2020.jpg', 1920, 1280, 'Central Costa Rica with the Gulf of Nicoya and green mountains, seen from the International Space Station'),
+  credit='NASA (iss062e001866, Costa Rica, Feb. 8, 2020)',
+  hook='Costa Rica pays people to keep their forests standing.',
+  wow=("Costa Rica's programme changed 'subsidy' into 'economic recognition' for the services forests provide, including cutting emissions, protecting water and biodiversity (FONAFIFO).", FONA),
+  lead="Costa Rica's FONAFIFO pays the owners of forests and forest plantations for the environmental services they provide, under Forestry Law 7575 (FONAFIFO).",
+  eli=['Forests clean the air, keep water safe and give animals a home.',
+       'In Costa Rica the government pays forest owners for those services.',
+       'So keeping trees standing becomes worth it for the people who own the land.'],
+  ws=[('Who', 'Costa Rica\'s national forestry financing fund, FONAFIFO, working with SINAC and others.', FONA),
+      ('What', 'Payments to forest and plantation owners for four recognised services: reducing greenhouse gases, protecting biodiversity, protecting water and scenic beauty.', FONA),
+      ('When', "The programme is set up under Forestry Law 7575, part of Costa Rica's environmental legislation of the 1990s.", FONA),
+      ('Where', 'Costa Rica.', FONA),
+      ('Why', 'To reduce deforestation, recover forest cover and support rural development, among other aims (FONAFIFO).', FONA)],
+  impact=('FONAFIFO lists reduced deforestation, recovery of forest cover and degraded land, and rural development among the programme\'s effects (FONAFIFO).', FONA),
+  fact=('Paid by the Pump', 'Funding first came from one third of the fuel consumption tax, and now 3.5% of the single fuel tax goes to the programme (FONAFIFO).', FONA),
+  people=('The programme contributes to rural development and to national strategies to fight poverty (FONAFIFO).', FONA),
+  nature=('It recognises forests for climate, biodiversity, water and scenic value (FONAFIFO).', FONA),
+  support_h='Learn About the Programme',
+  btns=[('FONAFIFO Payments for Environmental Services', FONA[0])],
+  bottom=("Want to go deeper? FONAFIFO explains how Costa Rica's payments work.", FONA[0], 'For Further Information'),
+  widget=None, see=[('Mangroves.html', 'Mangroves', 'Why coastal mangrove forests matter, and the teams restoring them.')],
+  pin={'status': 'active', 'pins': [{'lat': 9.93, 'lng': -84.08, 'label': 'San José, Costa Rica', 'basis': 'page'}]}),
 ]
 
 # Existing pages that link back (idempotent XLINK1019 block). Only entries whose new page is in SHIP are written.

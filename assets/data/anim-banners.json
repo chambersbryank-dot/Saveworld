@@ -684,6 +684,26 @@
    "credit": "NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)",
    "pos": "50% 50%",
    "r2": "images/NZ_Southern_Lakes_ISS_2024.jpg"
+  },
+  "assets/Fernandina_Galapagos_ISS_2022.jpg": {
+   "credit": "NASA (iss068e025397, La Cumbre volcano, Fernandina Island, Galápagos, Nov. 28, 2022)",
+   "pos": "50% 50%",
+   "r2": "images/Fernandina_Galapagos_ISS_2022.jpg"
+  },
+  "assets/Ucayali_River_ISS_2026.jpg": {
+   "credit": "NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/Ucayali_River_ISS_2026.jpg"
+  },
+  "assets/Belize_Coast_ISS_2014.jpg": {
+   "credit": "NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)",
+   "pos": "50% 50%",
+   "r2": "images/Belize_Coast_ISS_2014.jpg"
+  },
+  "assets/Costa_Rica_ISS_2020.jpg": {
+   "credit": "NASA (iss062e001866, Costa Rica, Feb. 8, 2020)",
+   "pos": "50% 50%",
+   "r2": "images/Costa_Rica_ISS_2020.jpg"
   }
  },
  "pages": {
@@ -946,6 +966,10 @@
   "Cheonggyecheon.html": "assets/Seoul_Night_ISS_2025.jpg",
   "Palau_National_Marine_Sanctuary.html": "assets/Palau_Landsat8_2014.jpg",
   "Papahanaumokuakea.html": "assets/Pearl_Hermes_Atoll_ISS_2002.jpg",
-  "Predator_Free_2050.html": "assets/NZ_Southern_Lakes_ISS_2024.jpg"
+  "Predator_Free_2050.html": "assets/NZ_Southern_Lakes_ISS_2024.jpg",
+  "Galapagos_Giant_Tortoises.html": "assets/Fernandina_Galapagos_ISS_2022.jpg",
+  "MAAP.html": "assets/Ucayali_River_ISS_2026.jpg",
+  "Mesoamerican_Reef_Insurance.html": "assets/Belize_Coast_ISS_2014.jpg",
+  "Costa_Rica_Forest_Payments.html": "assets/Costa_Rica_ISS_2020.jpg"
  }
 }

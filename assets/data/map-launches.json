@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-19T17:16:48Z",
+"generated": "2026-10-19T17:39:51Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -298,15 +298,6 @@
 "provider": "Unknown",
 "rocket": "Unknown",
 "mission": "Owlet-01",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Unknown",
-"rocket": "Unknown",
-"mission": "VCLS Demo 2 Mission One",
 "pad": "Unknown Pad"
 }
 ]
@@ -684,6 +675,15 @@
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-18",
+"pad": "Space Launch Complex 4E"
+},
+{
+"net": "2026-11-01T05:11:00Z",
+"exact": true,
+"prec": "MIN",
+"provider": "SpaceX",
+"rocket": "Falcon 9 Block 5",
+"mission": "Starlink Group 15-21",
 "pad": "Space Launch Complex 4E"
 },
 {

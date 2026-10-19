@@ -12,7 +12,7 @@
   "date": "2026-10-19"
  },
  "Abu_Dhabi_Mangroves.html": {
-  "sig": "226a85df7005",
+  "sig": "16a3e8d0a46f",
   "date": "2026-10-19"
  },
  "Aditya_L1.html": {
@@ -24,7 +24,7 @@
   "date": "2026-10-19"
  },
  "African_Parks.html": {
-  "sig": "0bfd2afcc401",
+  "sig": "e47701ebf497",
   "date": "2026-10-19"
  },
  "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
@@ -108,7 +108,7 @@
   "date": "2026-10-19"
  },
  "Carbfix.html": {
-  "sig": "06d285c86f00",
+  "sig": "be453ea7f2c0",
   "date": "2026-10-19"
  },
  "Carruthers.html": {
@@ -120,7 +120,7 @@
   "date": "2026-10-19"
  },
  "Cheonggyecheon.html": {
-  "sig": "124c3d6676b9",
+  "sig": "1220ed2c9cd5",
   "date": "2026-10-19"
  },
  "Chesapeake_Bay_Foundation.html": {
@@ -171,6 +171,10 @@
   "sig": "98bf88259532",
   "date": "2026-10-19"
  },
+ "Costa_Rica_Forest_Payments.html": {
+  "sig": "50ce1dda1cfc",
+  "date": "2026-10-19"
+ },
  "CryoSat.html": {
   "sig": "66eec6e48162",
   "date": "2026-10-19"
@@ -180,7 +184,7 @@
   "date": "2026-10-18"
  },
  "Digital_Earth_Africa.html": {
-  "sig": "13d02e42a67f",
+  "sig": "c97a11b0215a",
   "date": "2026-10-19"
  },
  "Dragonfly.html": {
@@ -288,7 +292,11 @@
   "date": "2026-10-19"
  },
  "Gaganyaan.html": {
-  "sig": "50a11f22d287",
+  "sig": "af32c9761d51",
+  "date": "2026-10-19"
+ },
+ "Galapagos_Giant_Tortoises.html": {
+  "sig": "e9ce59441edb",
   "date": "2026-10-19"
  },
  "Galileo.html": {
@@ -344,7 +352,7 @@
   "date": "2026-10-19"
  },
  "Hope_Mars_Mission.html": {
-  "sig": "7dd288bb8f5b",
+  "sig": "f719af9517ba",
   "date": "2026-10-19"
  },
  "HydroGNSS.html": {
@@ -451,12 +459,20 @@
   "sig": "9ab629b96644",
   "date": "2026-10-19"
  },
+ "MAAP.html": {
+  "sig": "9df3ef6b3d41",
+  "date": "2026-10-19"
+ },
  "MMX.html": {
   "sig": "4103dc8c9df0",
   "date": "2026-10-19"
  },
  "Mangroves.html": {
   "sig": "b43361d3cb49",
+  "date": "2026-10-19"
+ },
+ "Mesoamerican_Reef_Insurance.html": {
+  "sig": "2e49b181ba3d",
   "date": "2026-10-19"
  },
  "MetOp-SG-A1_Sentinel-5A.html": {
@@ -488,7 +504,7 @@
   "date": "2026-10-19"
  },
  "NEWater.html": {
-  "sig": "1879117a8136",
+  "sig": "ff0e88c3897e",
   "date": "2026-10-19"
  },
  "NISAR.html": {
@@ -548,7 +564,7 @@
   "date": "2026-10-19"
  },
  "Palau_National_Marine_Sanctuary.html": {
-  "sig": "56787ec02973",
+  "sig": "fd61064e832e",
   "date": "2026-10-19"
  },
  "Pan-STARRS.html": {
@@ -556,7 +572,7 @@
   "date": "2026-10-19"
  },
  "Papahanaumokuakea.html": {
-  "sig": "2679142e4ed9",
+  "sig": "5b94c28782b8",
   "date": "2026-10-19"
  },
  "Parker_Solar_Probe.html": {
@@ -592,7 +608,7 @@
   "date": "2026-10-19"
  },
  "Predator_Free_2050.html": {
-  "sig": "30576e6b87bf",
+  "sig": "bbf3d84da494",
   "date": "2026-10-19"
  },
  "Project_Seagrass.html": {
@@ -720,7 +736,7 @@
   "date": "2026-10-19"
  },
  "Svalbard_Global_Seed_Vault.html": {
-  "sig": "50f8b0f0da94",
+  "sig": "7955346dd5c8",
   "date": "2026-10-19"
  },
  "TEMPO.html": {
@@ -752,7 +768,7 @@
   "date": "2026-10-19"
  },
  "Thwaites_Glacier_Collaboration.html": {
-  "sig": "733084ce7947",
+  "sig": "e74ae61f7969",
   "date": "2026-10-19"
  },
  "Titan.html": {

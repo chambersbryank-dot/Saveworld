@@ -2587,6 +2587,50 @@
      "basis": "page"
     }
    ]
+  },
+  "Galapagos_Giant_Tortoises.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -0.7,
+     "lng": -90.6,
+     "label": "Galápagos Islands, Ecuador",
+     "basis": "page"
+    }
+   ]
+  },
+  "MAAP.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -10.5,
+     "lng": -73.5,
+     "label": "Ucayali region, Peruvian Amazon",
+     "basis": "page"
+    }
+   ]
+  },
+  "Mesoamerican_Reef_Insurance.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 17.35,
+     "lng": -87.85,
+     "label": "Turneffe Atoll, Belize",
+     "basis": "page"
+    }
+   ]
+  },
+  "Costa_Rica_Forest_Payments.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 9.93,
+     "lng": -84.08,
+     "label": "San José, Costa Rica",
+     "basis": "page"
+    }
+   ]
   }
  }
 }

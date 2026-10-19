@@ -87,6 +87,10 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Palau_National_Marine_Sanctuary': ('Palau_Landsat8_2014.jpg', 'NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)'),
     'Papahanaumokuakea': ('Pearl_Hermes_Atoll_ISS_2002.jpg', 'NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)'),
     'Predator_Free_2050': ('NZ_Southern_Lakes_ISS_2024.jpg', 'NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)'),
+    'Galapagos_Giant_Tortoises': ('Fernandina_Galapagos_ISS_2022.jpg', 'NASA (iss068e025397, La Cumbre volcano, Fernandina Island, Galápagos, Nov. 28, 2022)'),
+    'MAAP': ('Ucayali_River_ISS_2026.jpg', 'NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)'),
+    'Mesoamerican_Reef_Insurance': ('Belize_Coast_ISS_2014.jpg', 'NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)'),
+    'Costa_Rica_Forest_Payments': ('Costa_Rica_ISS_2020.jpg', 'NASA (iss062e001866, Costa Rica, Feb. 8, 2020)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),
