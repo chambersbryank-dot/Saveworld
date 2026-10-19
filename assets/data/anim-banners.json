@@ -184,6 +184,201 @@
    "credit": "NASA/JPL/University of Arizona/University of Idaho (PIA20016)",
    "pos": "50% 50%",
    "r2": "images/Titan.jpg"
+  },
+  "assets/Webb_Infrared.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA25790)",
+   "pos": "50% 50%",
+   "r2": "images/Webb_Infrared.jpg"
+  },
+  "assets/Pacific_Clouds_Sunset_ISS.jpg": {
+   "credit": "NASA (ISS074-E-0046371, Jan. 3, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/Pacific_Clouds_Sunset_ISS.jpg"
+  },
+  "assets/Loggerhead_Release_MINWR.jpg": {
+   "credit": "NASA (2010-5237)",
+   "pos": "50% 50%",
+   "r2": "images/Loggerhead_Release_MINWR.jpg"
+  },
+  "assets/Garden_City_Kansas_Landsat.jpg": {
+   "credit": "NASA/GSFC/Landsat (Sept. 25, 2000)",
+   "pos": "50% 50%",
+   "r2": "images/Garden_City_Kansas_Landsat.jpg"
+  },
+  "assets/Mangrove_Delta_ISS.jpg": {
+   "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
+   "pos": "50% 50%",
+   "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
+  },
+  "assets/Asteroid_2018LA_CSS.jpg": {
+   "credit": "NASA/JPL-Caltech/CSS-Univ. of Arizona (PIA22468)",
+   "pos": "50% 50%",
+   "r2": "images/Asteroid_2018LA_CSS.jpg"
+  },
+  "assets/Bahama_Bank_PIA11019.jpg": {
+   "credit": "NASA/JPL/UCSD/JSC (PIA11019)",
+   "pos": "50% 50%",
+   "r2": "images/Bahama_Bank_PIA11019.jpg"
+  },
+  "assets/BoraBora_Reefs_STS93.jpg": {
+   "credit": "NASA (STS093-717-066, July 1999)",
+   "pos": "50% 50%",
+   "r2": "images/BoraBora_Reefs_STS93.jpg"
+  },
+  "assets/Canada_Wildfires_ISS_2025.jpg": {
+   "credit": "NASA (ISS073-E-0420604, Aug. 3, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Canada_Wildfires_ISS_2025.jpg"
+  },
+  "assets/Canada_Wildfires_ISS_2025b.jpg": {
+   "credit": "NASA (ISS073-E-0420617, Aug. 3, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Canada_Wildfires_ISS_2025b.jpg"
+  },
+  "assets/Comet_NEOWISE.jpg": {
+   "credit": "NASA/Bill Ingalls (NHQ202007120001)",
+   "pos": "50% 50%",
+   "r2": "images/Comet_NEOWISE.tif"
+  },
+  "assets/Congo_River_ISS.jpg": {
+   "credit": "NASA (ISS007-E-06305, June 6, 2003)",
+   "pos": "50% 50%",
+   "r2": "images/Congo_River_ISS.jpg"
+  },
+  "assets/EMIT_Methane_Plumes_Uzbekistan.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA26113)",
+   "pos": "50% 50%",
+   "r2": "images/EMIT_Methane_Plumes_Uzbekistan.jpg"
+  },
+  "assets/Enceladus_Geyser_Basin.jpg": {
+   "credit": "NASA/JPL/Space Science Institute (PIA11688)",
+   "pos": "50% 50%",
+   "r2": "images/Enceladus_Geyser_Basin.jpg"
+  },
+  "assets/Goldstone_Radar_2011UL21.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA26384)",
+   "pos": "50% 50%",
+   "r2": "images/Goldstone_Radar_2011UL21.jpg"
+  },
+  "assets/Greenland_IceBridge_2015.jpg": {
+   "credit": "NASA GSFC, Operation IceBridge (2015)",
+   "pos": "50% 50%",
+   "r2": "images/Greenland_IceBridge_2015.jpg"
+  },
+  "assets/London_Thames_Night_ISS.jpg": {
+   "credit": "NASA (ISS074-E-0381351, March 13, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/London_Thames_Night_ISS.jpg"
+  },
+  "assets/New_England_Coast_ISS.jpg": {
+   "credit": "NASA (ISS072-E-394484, Dec. 18, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/New_England_Coast_ISS.jpg"
+  },
+  "assets/Portugal_Wildfires_ISS_2018.jpg": {
+   "credit": "NASA (ISS056-E-127068, Aug. 6, 2018)",
+   "pos": "50% 50%",
+   "r2": "images/Portugal_Wildfires_ISS_2018.jpg"
+  },
+  "assets/Psyche_Illustration.jpg": {
+   "credit": "NASA/JPL-Caltech/ASU (PIA24473)",
+   "pos": "50% 50%",
+   "r2": "images/Psyche_Illustration.jpg"
+  },
+  "assets/Rim_Fire_MODIS.jpg": {
+   "credit": "NASA (Terra MODIS, Aug. 25, 2013)",
+   "pos": "50% 50%",
+   "r2": "images/Rim_Fire_MODIS.jpg"
+  },
+  "assets/SPHEREx_Spacecraft.jpg": {
+   "credit": "NASA/JPL-Caltech/BAE Systems (PIA26537)",
+   "pos": "50% 50%",
+   "r2": "images/SPHEREx_Spacecraft.jpg"
+  },
+  "assets/Sahel_ISS.jpg": {
+   "credit": "NASA (ISS012-E-11654, Dec. 11, 2005)",
+   "pos": "50% 50%",
+   "r2": "images/Sahel_ISS.jpg"
+  },
+  "assets/Seagrass_Restoration_KSC.jpg": {
+   "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
+   "pos": "50% 50%",
+   "r2": "images/Seagrass_Restoration_KSC.jpg"
+  },
+  "assets/Sundarbans_Ganges_Delta_ISS.jpg": {
+   "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
+   "pos": "50% 50%",
+   "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
+  },
+  "assets/Venus_Magellan.jpg": {
+   "credit": "NASA/JPL (PIA00271)",
+   "pos": "50% 50%",
+   "r2": "images/Venus_Magellan.jpg"
+  },
+  "assets/Voyager_Heliosphere_PIA22835.jpg": {
+   "credit": "NASA/JPL-Caltech (PIA22835)",
+   "pos": "50% 50%",
+   "r2": "images/Voyager_Heliosphere_PIA22835.jpg"
+  },
+  "assets/Yellowstone_ISS.jpg": {
+   "credit": "NASA (ISS023-E-007925, March 21, 2010)",
+   "pos": "50% 50%",
+   "r2": "images/Yellowstone_ISS.jpg"
+  },
+  "assets/ISS_Over_Ganges_STS102.jpg": {
+   "credit": "NASA (STS102-357-031, March 18, 2001)",
+   "pos": "50% 50%",
+   "r2": "images/ISS_Over_Ganges_STS102.jpg"
+  },
+  "assets/Lucy_KSC.jpg": {
+   "credit": "NASA/Ben Smegelsky (KSC-20210929-PH-JBS01_0051)",
+   "pos": "50% 50%",
+   "r2": "images/Lucy_KSC.jpg"
+  },
+  "assets/Veggie_KSC.jpg": {
+   "credit": "NASA (KSC-2013-3567)",
+   "pos": "50% 50%",
+   "r2": "images/Veggie_KSC.jpg"
+  },
+  "assets/Hawaii_Island_ISS_2024.jpg": {
+   "credit": "NASA (ISS072-E-421839, Dec. 28, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/Hawaii_Island_ISS_2024.jpg"
+  },
+  "assets/Great_Barrier_Reef_ISS_2022.jpg": {
+   "credit": "NASA (ISS068-E-004262, Sept. 30, 2022)",
+   "pos": "50% 50%",
+   "r2": "images/Great_Barrier_Reef_ISS_2022.jpg"
+  },
+  "assets/JPSS2_Atlas_V_Launch_Pad.jpg": {
+   "credit": "NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)",
+   "pos": "50% 50%",
+   "r2": "images/JPSS2_Atlas_V_Launch_Pad.jpg"
+  },
+  "assets/Comet_PANSTARRS_ISS_2026.jpg": {
+   "credit": "NASA (ISS074-E-0480485, April 17, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/Comet_PANSTARRS_ISS_2026.jpg"
+  },
+  "assets/GPM_Core_Observatory_GMI.jpg": {
+   "credit": "NASA/Goddard (GPM Core Observatory)",
+   "pos": "50% 50%",
+   "r2": "images/GPM_Core_Observatory_GMI.jpg"
+  },
+  "assets/Pakistan_Flood_Kheshgi_2010.jpg": {
+   "credit": "NASA Earth Observatory (ASTER on Terra, Aug. 4, 2010)",
+   "pos": "50% 50%",
+   "r2": "images/Pakistan_Flood_Kheshgi_2010.jpg"
+  },
+  "assets/Missouri_Flood_Hamburg_EO1.jpg": {
+   "credit": "NASA Earth Observatory (EO-1 ALI, July 17, 2011)",
+   "pos": "50% 50%",
+   "r2": "images/Missouri_Flood_Hamburg_EO1.jpg"
+  },
+  "assets/Sumatra_Smoke_Singapore_MODIS.jpg": {
+   "credit": "NASA Earth Observatory (Aqua MODIS, June 19, 2013)",
+   "pos": "50% 50%",
+   "r2": "images/Sumatra_Smoke_Singapore_MODIS.jpg"
   }
  },
  "pages": {

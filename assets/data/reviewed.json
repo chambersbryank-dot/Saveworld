@@ -4,8 +4,8 @@
   "date": "2026-10-14"
  },
  "ALOS-4.html": {
-  "sig": "e2e8fc059f11",
-  "date": "2026-10-16"
+  "sig": "fb0853e8c4ba",
+  "date": "2026-10-19"
  },
  "ATLAS.html": {
   "sig": "b076d0b1e10f",
@@ -16,12 +16,12 @@
   "date": "2026-10-19"
  },
  "Aeolus.html": {
-  "sig": "9b5d8535d59e",
-  "date": "2026-10-12"
+  "sig": "5f47316e9070",
+  "date": "2026-10-19"
  },
  "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": {
-  "sig": "61a64e4ef360",
-  "date": "2026-10-13"
+  "sig": "e9c7b7c9f01b",
+  "date": "2026-10-19"
  },
  "Amazon_Rainy_Season.html": {
   "sig": "53f544e6f2f4",
@@ -56,12 +56,12 @@
   "date": "2026-10-18"
  },
  "Astroscale.html": {
-  "sig": "c46ae0da2866",
-  "date": "2026-10-14"
+  "sig": "f5c725a93532",
+  "date": "2026-10-19"
  },
  "Atmospheric_Drag.html": {
-  "sig": "4d930845ba6d",
-  "date": "2026-10-12"
+  "sig": "186b212f5a95",
+  "date": "2026-10-19"
  },
  "Beavers_River_Engineers.html": {
   "sig": "9b3996cb5a75",
@@ -72,8 +72,8 @@
   "date": "2026-10-13"
  },
  "Billion_Oyster_Project.html": {
-  "sig": "d70983240f5e",
-  "date": "2026-10-11"
+  "sig": "23488607b59e",
+  "date": "2026-10-19"
  },
  "Biomass.html": {
   "sig": "b39dad23e29e",
@@ -88,16 +88,16 @@
   "date": "2026-10-18"
  },
  "CIMR.html": {
-  "sig": "edb2372bdccf",
-  "date": "2026-10-18"
+  "sig": "fd4038188c42",
+  "date": "2026-10-19"
  },
  "CO2M.html": {
   "sig": "30fdb1d26b74",
   "date": "2026-10-19"
  },
  "CRISTAL.html": {
-  "sig": "24587880a297",
-  "date": "2026-10-18"
+  "sig": "6db42c6ff489",
+  "date": "2026-10-19"
  },
  "Carruthers.html": {
   "sig": "3afd01bd7ed2",
@@ -108,8 +108,8 @@
   "date": "2026-10-16"
  },
  "Chesapeake_Bay_Foundation.html": {
-  "sig": "9eb173933471",
-  "date": "2026-10-15"
+  "sig": "a5d8c29c8357",
+  "date": "2026-10-19"
  },
  "Clean_Lakes_Alliance.html": {
   "sig": "7d9d147b6a52",
@@ -120,8 +120,8 @@
   "date": "2026-10-19"
  },
  "ClearSpace.html": {
-  "sig": "40ec4e242929",
-  "date": "2026-10-14"
+  "sig": "eef5667ce40f",
+  "date": "2026-10-19"
  },
  "Comet_Interceptor.html": {
   "sig": "c8e374ad4388",
@@ -132,8 +132,8 @@
   "date": "2026-10-16"
  },
  "Copernicus_Marine.html": {
-  "sig": "65394baf1741",
-  "date": "2026-10-16"
+  "sig": "63c2d6d2df2e",
+  "date": "2026-10-19"
  },
  "Coral_Gardeners.html": {
   "sig": "d1dec4cfb235",
@@ -156,24 +156,24 @@
   "date": "2026-10-18"
  },
  "CryoSat.html": {
-  "sig": "8417bcc41547",
-  "date": "2026-10-17"
+  "sig": "66eec6e48162",
+  "date": "2026-10-19"
  },
  "DSCOVR_EPIC.html": {
   "sig": "7385ffb5c570",
   "date": "2026-10-18"
  },
  "Dragonfly.html": {
-  "sig": "c938df91acd6",
-  "date": "2026-10-15"
+  "sig": "811a08657f49",
+  "date": "2026-10-19"
  },
  "EFFIS.html": {
   "sig": "2c1086f413de",
   "date": "2026-10-16"
  },
  "EMIT.html": {
-  "sig": "d58f065c2519",
-  "date": "2026-10-15"
+  "sig": "ab043cefd63e",
+  "date": "2026-10-19"
  },
  "EOS-06.html": {
   "sig": "66c4a5c00d23",
@@ -220,8 +220,8 @@
   "date": "2026-10-16"
  },
  "FLEX.html": {
-  "sig": "b07f551fbaef",
-  "date": "2026-10-12"
+  "sig": "647db97a8655",
+  "date": "2026-10-19"
  },
  "FORUM.html": {
   "sig": "0d7d7ac9dc27",
@@ -252,12 +252,12 @@
   "date": "2026-10-16"
  },
  "GOES-19.html": {
-  "sig": "5b66b83bc00b",
-  "date": "2026-10-13"
+  "sig": "4b18a19b8ff2",
+  "date": "2026-10-19"
  },
  "GOSAT-GW.html": {
-  "sig": "333665431e35",
-  "date": "2026-10-12"
+  "sig": "903117f44ccc",
+  "date": "2026-10-19"
  },
  "GRACE-FO.html": {
   "sig": "ea7294711c91",
@@ -268,12 +268,12 @@
   "date": "2026-10-16"
  },
  "Galileo.html": {
-  "sig": "13017cea4f86",
-  "date": "2026-10-18"
+  "sig": "ad9aea2be696",
+  "date": "2026-10-19"
  },
  "GeoXO.html": {
-  "sig": "7af724f5fe32",
-  "date": "2026-10-18"
+  "sig": "eb79fa80ff4d",
+  "date": "2026-10-19"
  },
  "GloFAS.html": {
   "sig": "97c86150c45e",
@@ -284,12 +284,12 @@
   "date": "2026-10-19"
  },
  "Global_Forest_Watch.html": {
-  "sig": "02892467c789",
-  "date": "2026-10-13"
+  "sig": "436b6e06604b",
+  "date": "2026-10-19"
  },
  "Globe_at_Night.html": {
-  "sig": "03a1b25d5f4a",
-  "date": "2026-10-14"
+  "sig": "272ee571707d",
+  "date": "2026-10-19"
  },
  "Great_Bubble_Barrier.html": {
   "sig": "21dbff3f690a",
@@ -312,16 +312,16 @@
   "date": "2026-10-15"
  },
  "Healthy_Seas.html": {
-  "sig": "6f0462c72b89",
-  "date": "2026-10-12"
+  "sig": "829f1aeb60e4",
+  "date": "2026-10-19"
  },
  "Hera.html": {
   "sig": "5c346311f843",
   "date": "2026-10-12"
  },
  "HydroGNSS.html": {
-  "sig": "e6b29cd06d53",
-  "date": "2026-10-15"
+  "sig": "e498351c46e6",
+  "date": "2026-10-19"
  },
  "ICESat-2.html": {
   "sig": "baf60a3ac0cb",
@@ -380,8 +380,8 @@
   "date": "2026-10-19"
  },
  "Lake_Erie_Algal_Bloom_Forecast.html": {
-  "sig": "3ab0ac76d2ea",
-  "date": "2026-10-13"
+  "sig": "fe7613a3ee4f",
+  "date": "2026-10-19"
  },
  "Lake_Plastic_Recovery.html": {
   "sig": "bb09a5b9cc03",
@@ -392,8 +392,8 @@
   "date": "2026-10-12"
  },
  "LeoLabs.html": {
-  "sig": "cba0c894f6af",
-  "date": "2026-10-12"
+  "sig": "c86bcd2b685e",
+  "date": "2026-10-19"
  },
  "Libera.html": {
   "sig": "4643f565404b",
@@ -436,8 +436,8 @@
   "date": "2026-10-19"
  },
  "Meteosat_Third_Generation.html": {
-  "sig": "0c2aa20b613d",
-  "date": "2026-10-17"
+  "sig": "f860c455ae8e",
+  "date": "2026-10-19"
  },
  "Mission_Blue_Hope_Spots.html": {
   "sig": "86e89cd30a23",
@@ -452,8 +452,8 @@
   "date": "2026-10-19"
  },
  "Mr_Trash_Wheel.html": {
-  "sig": "57a88d375abb",
-  "date": "2026-10-11"
+  "sig": "af0412e0d5ab",
+  "date": "2026-10-19"
  },
  "NEO_Surveyor.html": {
   "sig": "f3c94018fa58",
@@ -472,8 +472,8 @@
   "date": "2026-10-18"
  },
  "OCO-2.html": {
-  "sig": "70379cda4e0e",
-  "date": "2026-10-15"
+  "sig": "70b8d3800ca7",
+  "date": "2026-10-19"
  },
  "OSIRIS-APEX.html": {
   "sig": "73abc7891b5b",
@@ -488,8 +488,8 @@
   "date": "2026-10-19"
  },
  "One_Tree_Planted.html": {
-  "sig": "c98e5b149706",
-  "date": "2026-10-13"
+  "sig": "4c1669239fc1",
+  "date": "2026-10-19"
  },
  "OpenET.html": {
   "sig": "9f2e77953f6a",
@@ -504,12 +504,12 @@
   "date": "2026-10-12"
  },
  "PREFIRE.html": {
-  "sig": "49afc98c1f3d",
-  "date": "2026-10-15"
+  "sig": "fa5656206b15",
+  "date": "2026-10-19"
  },
  "PRELUDE.html": {
-  "sig": "7c2e8d3a235b",
-  "date": "2026-10-14"
+  "sig": "f9f385803516",
+  "date": "2026-10-19"
  },
  "PUNCH.html": {
   "sig": "a39d4cca5b00",
@@ -528,8 +528,8 @@
   "date": "2026-10-17"
  },
  "Phytoplankton.html": {
-  "sig": "aa718da5f2d6",
-  "date": "2026-10-12"
+  "sig": "ea0991909822",
+  "date": "2026-10-19"
  },
  "Plant-for-the-Planet.html": {
   "sig": "44ccb63f2743",
@@ -540,16 +540,16 @@
   "date": "2026-10-14"
  },
  "Plastic_Odyssey.html": {
-  "sig": "664303c1ee7b",
-  "date": "2026-10-15"
+  "sig": "046f2c640ced",
+  "date": "2026-10-19"
  },
  "Plato.html": {
   "sig": "27958148e123",
   "date": "2026-10-12"
  },
  "Posidonia_Meadows.html": {
-  "sig": "ee535392290f",
-  "date": "2026-10-13"
+  "sig": "7bcdc93ce715",
+  "date": "2026-10-19"
  },
  "Project_Seagrass.html": {
   "sig": "30bac81aea36",
@@ -560,8 +560,8 @@
   "date": "2026-10-13"
  },
  "RCM.html": {
-  "sig": "1b755ff48cc1",
-  "date": "2026-10-16"
+  "sig": "240f7ddb23bc",
+  "date": "2026-10-19"
  },
  "Rainforest_Connection.html": {
   "sig": "08609a1c3cd3",
@@ -576,16 +576,16 @@
   "date": "2026-10-19"
  },
  "Rewilding_Europe.html": {
-  "sig": "8452afba1408",
-  "date": "2026-10-14"
+  "sig": "85e673e181ff",
+  "date": "2026-10-19"
  },
  "River_Cleanup.html": {
   "sig": "5713f2e13e74",
   "date": "2026-10-19"
  },
  "SARSAT.html": {
-  "sig": "1c2a5292e176",
-  "date": "2026-10-13"
+  "sig": "9b2346b83e4c",
+  "date": "2026-10-19"
  },
  "SMAP.html": {
   "sig": "3029fc48c939",
@@ -644,8 +644,8 @@
   "date": "2026-10-19"
  },
  "Sentinel-4.html": {
-  "sig": "28cbe8e45251",
-  "date": "2026-10-13"
+  "sig": "6e3bbbddb711",
+  "date": "2026-10-19"
  },
  "Sentinel-5P.html": {
   "sig": "91348bf4cd41",
@@ -660,8 +660,8 @@
   "date": "2026-10-11"
  },
  "SpaceLogistics.html": {
-  "sig": "51bdca337a5a",
-  "date": "2026-10-12"
+  "sig": "96218b258958",
+  "date": "2026-10-19"
  },
  "Starfish_Otter.html": {
   "sig": "6ee073c46898",
@@ -692,8 +692,8 @@
   "date": "2026-10-13"
  },
  "The_SeaCleaners.html": {
-  "sig": "35eda34c5dbd",
-  "date": "2026-10-17"
+  "sig": "92bfa91fdac3",
+  "date": "2026-10-19"
  },
  "Three_Shields.html": {
   "sig": "61c51a18e63f",
@@ -704,8 +704,8 @@
   "date": "2026-10-10"
  },
  "Titan.html": {
-  "sig": "07b66d0f56f8",
-  "date": "2026-10-12"
+  "sig": "07f364217e24",
+  "date": "2026-10-19"
  },
  "Trees_for_the_Future.html": {
   "sig": "96227c573e6f",
@@ -740,8 +740,8 @@
   "date": "2026-10-18"
  },
  "Waterkeeper_Alliance.html": {
-  "sig": "8b6b31a42b01",
-  "date": "2026-10-15"
+  "sig": "64eea2b9a29b",
+  "date": "2026-10-19"
  },
  "WeForest.html": {
   "sig": "973dede03fe0",
@@ -752,15 +752,15 @@
   "date": "2026-10-16"
  },
  "Whales_Ocean_Gardeners.html": {
-  "sig": "285c0222c31c",
-  "date": "2026-10-13"
+  "sig": "4dc1ebcdf011",
+  "date": "2026-10-19"
  },
  "Yellowstone_Wolves.html": {
   "sig": "2350ae07bf4e",
   "date": "2026-10-18"
  },
  "Zero_Debris_Charter.html": {
-  "sig": "96a6b877dbf3",
-  "date": "2026-10-13"
+  "sig": "2b7771d1daf2",
+  "date": "2026-10-19"
  }
 }
