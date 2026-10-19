@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-19T10:46:15Z",
+"generated": "2026-10-19T15:44:10Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -358,15 +358,6 @@
 "rocket": "Miura 5",
 "mission": "Maiden Flight",
 "pad": "Diamant Launch Area"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Avio S.p.A",
-"rocket": "Vega-C",
-"mission": "IRIDE 1",
-"pad": "Ariane Launch Area 1 (ELV)"
 }
 ]
 },
@@ -684,6 +675,15 @@
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-16",
+"pad": "Space Launch Complex 4E"
+},
+{
+"net": "2026-10-28T04:31:00Z",
+"exact": true,
+"prec": "MIN",
+"provider": "SpaceX",
+"rocket": "Falcon 9 Block 5",
+"mission": "Starlink Group 15-18",
 "pad": "Space Launch Complex 4E"
 },
 {

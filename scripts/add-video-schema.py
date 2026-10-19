@@ -7,10 +7,15 @@ SITE = 'https://www.savingplanets.com/'
 def clean(s): return html.unescape(re.sub(r'<[^>]+>', ' ', s)).split() and ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', s)).split())
 def upload(mp4):
     d = subprocess.run(['git', 'log', '--diff-filter=A', '--format=%aI', '--', mp4], capture_output=True, text=True).stdout.split()
-    return d[-1] if d else R2_ONLY.get(os.path.basename(mp4))
+    return R2_ONLY.get(os.path.basename(mp4)) or (d[-1] if d else None)
 # Oct 18: videos uploaded straight to R2 (never committed under assets/videos/) have no git history; their upload dates live here
 R2_ONLY = {'savingplanets-about-v4.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-about-v4-720.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v3-1920x1080.mp4': '2026-10-18T01:00:00-10:00',
-           'savingplanets-promo-v3-1080x1920.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v4-final-1080x1920.mp4': '2026-10-18T17:10:20-10:00'}
+           'savingplanets-promo-v3-1080x1920.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v4-final-1080x1920.mp4': '2026-10-18T17:10:20-10:00',
+           # Oct 19: first-commit dates from the full git history (shallow /tmp clones can't see them, so uploadDate went missing -> seo-lint jsonld-invalid)
+           'artemis-ii-farthest.mp4': '2026-10-11T12:54:20-10:00', 'grace-fo-satellites.mp4': '2026-10-11T21:19:05-10:00', 'great-bubble-barrier.mp4': '2026-10-11T20:40:50-10:00',
+           'life-terra-trees.mp4': '2026-10-11T20:59:21-10:00', 'channel-intro.mp4': '2026-10-11T19:31:35-10:00', 'hero-loop.mp4': '2026-10-11T21:58:28-10:00',
+           'savingplanets-about-v3.mp4': '2026-10-14T21:36:20-10:00', 'savingplanets-about-v3-720.mp4': '2026-10-14T21:56:36-10:00',
+           'savingplanets-ad.mp4': '2026-10-12T10:46:02-10:00', 'savingplanets-ad-v2.mp4': '2026-10-12T11:24:31-10:00'}
 def dur(mp4):
     try:
         s = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp4], capture_output=True, text=True).stdout.strip())

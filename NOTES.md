@@ -12,6 +12,7 @@
 
 ## Last 24h (Oct 17–18 HST)
 Detail for each item is in the dated sections below.
+- Oct 19: Animated banners batch 4a — 18 more EN pages x 6 on the Lesson_Builder standard with NASA/NOAA public-domain originals (IDs in credits); VideoObject uploadDate added (seo-lint 0 errors). STYLEV 20261019m.
 - **Oct 19 animated banners batch 3 (STYLEV 20261018zg):** 29 more EN pages (x6) with originals sourced from images.nasa.gov and matched to the old 1200 px assets by image correlation (>=0.99): Carruthers, ESCAPADE, Europa Clipper, ExoMars, GRACE-FO, ICESat-2, IMAP, ISS Water Recovery, Juice, Kelp, LignoSat, BepiColombo, Moon Steadies Earth, NEO Surveyor, EOS-06, PACE, MMX, Plato, SWOT, Saharan Dust, Salt Marshes, Sentinel-1, Sentinel-6B, Solar Orbiter, Seabin, TRACERS, Tanager-1, Starfish Otter, Seagrass. Credits in /tmp/keep/b5/credits3.json. 211 EN pages converted (x6 langs). Remaining pick list: /tmp/keep/picklist.md.
 - **Oct 19 animated banners batch 2c (STYLEV 20261018zf):** 44 more EN pages (x6) from group 2 of /tmp/keep/b5/b2groups.json (Webb_Infrared, Loggerhead, Garden_City, Mangrove_Delta, Asteroid_2018LA, Bahama_Bank, BoraBora ...). 182 EN pages converted so far; next batch 3 = 29 newly sourced originals.
 - **Oct 19 animated banners batch 2b (STYLEV 20261018ze):** 45 more EN pages (x6) from group 1 of /tmp/keep/b5/b2groups.json (LEO_View, Mediterranean_ISS, ATV1, Global_Plant_Fluorescence, Labrador_Sea_Ice, Baltimore_DC_Skylab, Danube_Delta, EMIT ...). 138 EN pages converted so far.

@@ -68,8 +68,8 @@
   "date": "2026-10-19"
  },
  "BepiColombo.html": {
-  "sig": "3b283c21c4fb",
-  "date": "2026-10-13"
+  "sig": "c0f03a0fb433",
+  "date": "2026-10-19"
  },
  "Billion_Oyster_Project.html": {
   "sig": "23488607b59e",
@@ -100,8 +100,8 @@
   "date": "2026-10-19"
  },
  "Carruthers.html": {
-  "sig": "3afd01bd7ed2",
-  "date": "2026-10-11"
+  "sig": "977054d252e7",
+  "date": "2026-10-19"
  },
  "Catalina_Sky_Survey.html": {
   "sig": "6e3ee354cfbb",
@@ -176,16 +176,16 @@
   "date": "2026-10-19"
  },
  "EOS-06.html": {
-  "sig": "66c4a5c00d23",
-  "date": "2026-10-13"
+  "sig": "efa15fbc65b4",
+  "date": "2026-10-19"
  },
  "ESA_NEOCC.html": {
   "sig": "14e3b5137bd4",
   "date": "2026-10-19"
  },
  "ESCAPADE.html": {
-  "sig": "7e7be9f51fbd",
-  "date": "2026-10-12"
+  "sig": "c19e804cbd5f",
+  "date": "2026-10-19"
  },
  "EarthCARE.html": {
   "sig": "522c3a9168d1",
@@ -208,12 +208,12 @@
   "date": "2026-10-19"
  },
  "Europa_Clipper.html": {
-  "sig": "47f600e98f18",
-  "date": "2026-10-12"
+  "sig": "923327dd1b3a",
+  "date": "2026-10-19"
  },
  "ExoMars_Rosalind_Franklin.html": {
-  "sig": "3ccce36ff4c2",
-  "date": "2026-10-12"
+  "sig": "1ef7cd23b7e6",
+  "date": "2026-10-19"
  },
  "FIRMS.html": {
   "sig": "b27c76fd7ca3",
@@ -260,8 +260,8 @@
   "date": "2026-10-19"
  },
  "GRACE-FO.html": {
-  "sig": "ea7294711c91",
-  "date": "2026-10-12"
+  "sig": "07c6af03961f",
+  "date": "2026-10-19"
  },
  "GSMaP.html": {
   "sig": "9659c885ad1d",
@@ -324,20 +324,20 @@
   "date": "2026-10-19"
  },
  "ICESat-2.html": {
-  "sig": "baf60a3ac0cb",
-  "date": "2026-10-12"
+  "sig": "a98482caf9ec",
+  "date": "2026-10-19"
  },
  "IMAP.html": {
-  "sig": "f53c75b917db",
-  "date": "2026-10-12"
+  "sig": "602ce34f8192",
+  "date": "2026-10-19"
  },
  "INSAT-3DS.html": {
   "sig": "22ff1f107292",
   "date": "2026-10-19"
  },
  "ISS_Water_Recovery.html": {
-  "sig": "9ba33231f88e",
-  "date": "2026-10-12"
+  "sig": "039ad77be0df",
+  "date": "2026-10-19"
  },
  "International_Charter.html": {
   "sig": "b87ff14c5ebf",
@@ -352,8 +352,8 @@
   "date": "2026-10-19"
  },
  "Juice.html": {
-  "sig": "cd06c6c84981",
-  "date": "2026-10-12"
+  "sig": "390acfb1ef8f",
+  "date": "2026-10-19"
  },
  "Jupiter.html": {
   "sig": "65b74499e934",
@@ -368,8 +368,8 @@
   "date": "2026-10-19"
  },
  "Kelp_Forests.html": {
-  "sig": "65c779bbb3ad",
-  "date": "2026-10-12"
+  "sig": "d81c83b9f445",
+  "date": "2026-10-19"
  },
  "Kissimmee_River_Restoration.html": {
   "sig": "77c6cc2ec4ed",
@@ -404,8 +404,8 @@
   "date": "2026-10-13"
  },
  "LignoSat.html": {
-  "sig": "d368264961a8",
-  "date": "2026-10-12"
+  "sig": "e92ae0a10dee",
+  "date": "2026-10-19"
  },
  "Living_Lakes.html": {
   "sig": "9fa3a3e6b50a",
@@ -424,8 +424,8 @@
   "date": "2026-10-19"
  },
  "MMX.html": {
-  "sig": "81d9b575576d",
-  "date": "2026-10-10"
+  "sig": "4103dc8c9df0",
+  "date": "2026-10-19"
  },
  "Mangroves.html": {
   "sig": "b43361d3cb49",
@@ -444,8 +444,8 @@
   "date": "2026-10-19"
  },
  "Moon_Steadies_Earth.html": {
-  "sig": "a73e66613550",
-  "date": "2026-10-12"
+  "sig": "aafd56be14ab",
+  "date": "2026-10-19"
  },
  "Mote_Marine_Laboratory.html": {
   "sig": "23e773792abe",
@@ -456,8 +456,8 @@
   "date": "2026-10-19"
  },
  "NEO_Surveyor.html": {
-  "sig": "f3c94018fa58",
-  "date": "2026-10-16"
+  "sig": "8b8eed02db17",
+  "date": "2026-10-19"
  },
  "NISAR.html": {
   "sig": "4659e2c7b86b",
@@ -500,8 +500,8 @@
   "date": "2026-10-17"
  },
  "PACE.html": {
-  "sig": "850830e46d3b",
-  "date": "2026-10-12"
+  "sig": "55915ef36d6c",
+  "date": "2026-10-19"
  },
  "PREFIRE.html": {
   "sig": "fa5656206b15",
@@ -544,8 +544,8 @@
   "date": "2026-10-19"
  },
  "Plato.html": {
-  "sig": "27958148e123",
-  "date": "2026-10-12"
+  "sig": "586f80ec6a63",
+  "date": "2026-10-19"
  },
  "Posidonia_Meadows.html": {
   "sig": "7bcdc93ce715",
@@ -604,16 +604,16 @@
   "date": "2026-10-19"
  },
  "SWOT.html": {
-  "sig": "d41c53743c44",
-  "date": "2026-10-12"
+  "sig": "bece0ac64cf3",
+  "date": "2026-10-19"
  },
  "Saharan_Dust_Amazon.html": {
-  "sig": "0d2934af3ef6",
-  "date": "2026-10-12"
+  "sig": "247f73d5e064",
+  "date": "2026-10-19"
  },
  "Salt_Marshes.html": {
-  "sig": "8675ff37c020",
-  "date": "2026-10-13"
+  "sig": "8dd18bac30cf",
+  "date": "2026-10-19"
  },
  "SeaTrees.html": {
   "sig": "96ea38aea4db",
@@ -624,16 +624,16 @@
   "date": "2026-10-19"
  },
  "Seabin.html": {
-  "sig": "45a7dfff4404",
-  "date": "2026-10-12"
+  "sig": "ae621f396187",
+  "date": "2026-10-19"
  },
  "Seagrass.html": {
-  "sig": "6094a8206b87",
-  "date": "2026-10-12"
+  "sig": "f6256b00251c",
+  "date": "2026-10-19"
  },
  "Sentinel-1.html": {
-  "sig": "d2c6f6750098",
-  "date": "2026-10-12"
+  "sig": "a1bba0e802d8",
+  "date": "2026-10-19"
  },
  "Sentinel-2C.html": {
   "sig": "bb1cfc6ebb2d",
@@ -652,20 +652,20 @@
   "date": "2026-10-19"
  },
  "Sentinel-6B.html": {
-  "sig": "5e2faa57df4b",
-  "date": "2026-10-12"
+  "sig": "0c635acddcd8",
+  "date": "2026-10-19"
  },
  "Solar_Orbiter.html": {
-  "sig": "d24660886560",
-  "date": "2026-10-11"
+  "sig": "087898e8e46c",
+  "date": "2026-10-19"
  },
  "SpaceLogistics.html": {
   "sig": "96218b258958",
   "date": "2026-10-19"
  },
  "Starfish_Otter.html": {
-  "sig": "6ee073c46898",
-  "date": "2026-10-12"
+  "sig": "69df17999f9d",
+  "date": "2026-10-19"
  },
  "Sungai_Watch.html": {
   "sig": "ee6a97e35a1b",
@@ -680,12 +680,12 @@
   "date": "2026-10-19"
  },
  "TRACERS.html": {
-  "sig": "265d25d55e8b",
-  "date": "2026-10-12"
+  "sig": "f60b09f79dd5",
+  "date": "2026-10-19"
  },
  "Tanager-1.html": {
-  "sig": "2db17a2e57e9",
-  "date": "2026-10-12"
+  "sig": "8a73a9391f8a",
+  "date": "2026-10-19"
  },
  "Terraformation.html": {
   "sig": "dcafbdd90d1d",

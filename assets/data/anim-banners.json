@@ -524,6 +524,66 @@
    "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
    "pos": "50% 50%",
    "r2": "images/Seagrass_Restoration_KSC.jpg"
+  },
+  "assets/NOAA_Deep_SOLO_Float_2018.jpg": {
+   "credit": "NOAA (Deep SOLO float deployment from R/V Kaʻimikai-O-Kanaloa, 2018)",
+   "pos": "50% 40%",
+   "r2": "images/NOAA_Deep_SOLO_Deployment_2018.jpg"
+  },
+  "assets/Biomass_Forest_MatoGrosso.jpg": {
+   "credit": "NASA (ISS074-E-0492148, April 15, 2026)",
+   "pos": "50% 50%",
+   "r2": "images/Ucayali_Amazon_ISS074.jpg"
+  },
+  "assets/Great_Lakes_MODIS.jpg": {
+   "credit": "NASA (ISS074-E-0642367, May 30, 2026)",
+   "pos": "50% 45%",
+   "r2": "images/Great_Lakes_ISS074_0642367.jpg"
+  },
+  "assets/hero/help": {
+   "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0002)",
+   "pos": "50% 45%",
+   "r2": "images/KSC_Beach_Cleanup_2017_0002.jpg"
+  },
+  "assets/Lake_Shore_Cleanup_NPS.jpg": {
+   "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0081)",
+   "pos": "50% 40%",
+   "r2": "images/KSC_Beach_Cleanup_2017_0081.jpg"
+  },
+  "assets/Jupiter.jpg": {
+   "credit": "NASA/ESA/Goddard/UC Berkeley/JPL-Caltech/STScI (Hubble map, GSFC_20171208_Archive_e000537)",
+   "pos": "50% 60%",
+   "r2": "images/Jupiter_Hubble_Map_2017.jpg"
+  },
+  "assets/Hera.jpg": {
+   "credit": "NASA/Johns Hopkins APL/Steve Gribben (illustration, PIA25329)",
+   "pos": "50% 45%",
+   "r2": "images/DART_Didymos_PIA25329.jpg"
+  },
+  "assets/Roman_Launch_FH.jpg": {
+   "credit": "NASA/Joel Kowsky (NHQ202608300015-2, Aug. 30, 2026)",
+   "pos": "50% 55%",
+   "r2": "images/Roman_Launch_FH_NHQ202608300015-2.jpg"
+  },
+  "assets/Landsat9_Launch.jpg": {
+   "credit": "NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)",
+   "pos": "50% 45%",
+   "r2": "images/Landsat9_Launch_KLS04_0013.jpg"
+  },
+  "assets/NISAR_Orbit.jpg": {
+   "credit": "NASA/JPL-Caltech (illustration, PIA26285)",
+   "pos": "50% 50%",
+   "r2": "images/NISAR_Orbit_PIA26285.jpg"
+  },
+  "assets/PUNCH_Mission.jpg": {
+   "credit": "NASA/Jim Ross (AFRC2025-0036-22, March 11, 2025)",
+   "pos": "50% 60%",
+   "r2": "images/PUNCH_SPHEREx_Launch_AFRC2025-0036-22.jpg"
+  },
+  "assets/DataOrbitalCenters.jpg": {
+   "credit": "NASA/Michael Hopkins (ISS065-E-009492, Spaceborne Computer-2 on the ISS, April 29, 2021)",
+   "pos": "50% 50%",
+   "r2": "images/Spaceborne_Computer2_iss065e009492.jpg"
   }
  },
  "pages": {
