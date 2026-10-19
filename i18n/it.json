@@ -920,7 +920,7 @@
 "PUNCH: Mission Status": "PUNCH: Stato della missione",
 "Page not found.": "Pagina non trovata.",
 "Part of the": "Parte del",
-"Pause banner animation": "Animazione banner Pause",
+"Pause banner animation": "Metti in pausa l'animazione del banner",
 "Phytoplankton": "Fitoplancton",
 "Phytoplankton feed ocean life and help move carbon; tracking them shows how the ocean and climate are changing.": "Phytoplankton alimenta la vita dell'oceano e aiuta a spostare il carbonio; rintracciarli mostra come l'oceano e il clima stanno cambiando.",
 "Phytoplankton, drifting plants, algae and bacteria that photosynthesize near the ocean surface.": "Phytoplankton, piante alla deriva, alghe e batteri che fotoynthesize vicino alla superficie dell'oceano.",
@@ -6044,5 +6044,11 @@
 "Explore Polar": "Esplora l'hub Poli",
 "Screenshot of the New: the Polar Hub page on Saving Planets": "Schermata della pagina Novità: l'hub Poli su Saving Planets",
 "Screenshot: Created by SI and Biological SI Partner": "Schermata: Creato da SI e Biological SI Partner",
-"Photo: NASA (ISS074-E-0046371, Jan. 3, 2026)": "Foto: NASA (ISS074-E-0046371, Jan. 3, 2026)"
+"Photo: NASA (ISS074-E-0046371, Jan. 3, 2026)": "Foto: NASA (ISS074-E-0046371, Jan. 3, 2026)",
+"Earth's orbit has become a junkyard, and real teams are now cleaning it up.": "L'orbita terrestre è diventata una discarica, e squadre vere la stanno già ripulendo.",
+"More than 1.5 million pieces of debris bigger than a centimeter circle Earth (": "Più di 1,5 milioni di detriti più grandi di un centimetro orbitano intorno alla Terra (",
+"), and some reach 18,000 miles per hour, almost seven times faster than a bullet (": "), e alcuni raggiungono quasi 29.000 km/h, quasi sette volte più veloci di un proiettile (",
+"That junk threatens the satellites behind weather forecasts, GPS and the missions that watch forests, oceans and ice, so a cleaner orbit protects people and nature alike.": "Questi detriti minacciano i satelliti da cui dipendono le previsioni meteo, il GPS e le missioni che osservano foreste, oceani e ghiacci: un'orbita più pulita protegge le persone e la natura.",
+"See the fixes below: debris removal, asteroid defense, solar storm warnings and voyages outward": "Scopri le soluzioni qui sotto: rimozione dei detriti, difesa dagli asteroidi, allerte per le tempeste solari e viaggi verso lo spazio profondo",
+"Inspired by Errol Scales' work on orbital debris removal.": "Ispirato al lavoro di Errol Scales sulla rimozione dei detriti orbitali."
 }

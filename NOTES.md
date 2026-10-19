@@ -12,6 +12,7 @@
 
 ## Last 24h (Oct 17–18 HST)
 Detail for each item is in the dated sections below.
+- **Oct 18 Project Rawane clean-up (owner, iPad review; STYLEV 20261018r; scripts/build-rawane-bluf.py + apply-heroes.py):** title banner now the same size as every hub page (site-wide hero rule max(34vh,260px); was 72vh) with the Blue Marble slowly panning behind the title (seamless equirectangular tile, 160 s loop, pause button, still under reduced motion; 1920/3840 WebP, 1280/2560 under 900px). Impact Statement rewritten as a BLUF in en/fr/es/ar/it/he: bold hook, ESA (1.5 million debris objects 1-10 cm, MASTER-8) + NASA HQ Library (18,000 mph, almost 7x a bullet) WOW, why it matters to people and nature, one CTA to the cards; Errol Scales credit kept as one line. The old 4 paragraphs repeated the cards and the Five W's. Section titles centred; Five W's and Artemis cards in centred rows (no orphan card); phone banner credit clears the pause button. IT "Pause banner animation" translation fixed. Page ~780 px shorter at 1180.
 - **Learn tracks Phase 1–3** (5 langs): Orbital Mechanics, Aeronautical Engineering (blade-element theory added) and Physics. Each has a guide, a math page and a lab, KaTeX rendered at build time, and every number is computed by the build rather than typed.
 - **SI Helper pilot**: Cloudflare Worker on workers.dev only, with Turnstile, rate limits and a daily spend guard. No question text is stored. Widget on Teachers plus an SI_Helper.html explainer. **Unanswered-question log** (scrubbed, in KV) feeds the weekly sourced Student Questions pool.
 - **Header nav v2**: two rows, alphabetical dropdowns, a Project Rawane menu, +2 font steps and slide-style language switches.
@@ -42,6 +43,7 @@ Detail for each item is in the dated sections below.
 
 ## Next / Open
 **Next priorities**
+- **Project Rawane further cuts (proposed, awaiting owner OK):** stale Oct 11 "New" callout; Space Disposal Man-Made/Natural intro pair (repeats the two subheads); Jupiter listed twice; Titan card repeats Dragonfly; Europa Clipper + Juice filed under Made by Nature (belong in Voyages Outward); Artemis Program block repeats Artemis II page; Five W's trimmed to one line each.
 - (a) Interactive data visualizations: embed real climate-data tools (PhET / Fluid Earth style) on Amazing Facts or the Earth Observation hub. *Not started.*
 - (b) Adaptive learning paths by age. *Progress:* Start here pages and Learn guide/math levels are live. Next is Explorer Levels (kids Phase 2, below).
 - (c) Eco-anxiety support content after heavy topics, with "what you can actually do" reassurance. *Not started.*
