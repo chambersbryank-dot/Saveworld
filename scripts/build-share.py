@@ -37,7 +37,7 @@ T = {
 CSS = ('<style>.shr{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.6rem 0 1.2rem}.shr a.shr-cr,.shr button.shr-copy{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;'
        'border-radius:999px;font:600 .95rem Montserrat,system-ui,sans-serif;text-decoration:none;cursor:pointer;box-sizing:border-box;border:1px solid rgba(0,156,222,.6);background:rgba(0,156,222,.12);color:inherit}'
        '.shr a.shr-cr:hover,.shr button.shr-copy:hover{background:rgba(0,156,222,.25)}.shr a.shr-cr:focus-visible,.shr button.shr-copy:focus-visible{outline:2px solid #8fd3ff;outline-offset:2px}'
-       '.shr svg{width:20px;height:20px;flex:none}.shr .shr-copy.is-done{border-color:#5fe0b5}.shr-st{font-weight:600;font-size:.9rem}'
+       '.shr.shr-below{max-width:1200px;margin:1rem auto 0;padding:0 1.5rem;box-sizing:border-box;justify-content:center}.shr svg{width:20px;height:20px;flex:none}.shr .shr-copy.is-done{border-color:#5fe0b5}.shr-st{font-weight:600;font-size:.9rem}'
        '.nl-call{max-width:720px;margin:2.4rem auto 1rem;padding:0 1rem}.nl-call .nl-aud{text-align:center;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;margin:0 0 -1.6rem;position:relative;z-index:1}'
        '.nl-call .nl-aud span{display:inline-block;background:#009cde;color:#fff;border-radius:999px;padding:4px 12px}.gu-link{text-align:center;margin:1rem 0}.gu-link a{display:inline-block;min-height:44px;line-height:44px;padding:0 16px;font-weight:700}</style>')
 ICON_CR = '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.2" fill="currentColor"/><path d="M8 15c.8-1.6 2.3-2.4 4-2.4s3.2.8 4 2.4M7 21h10" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
@@ -60,7 +60,13 @@ def main():
                    f'<a class="shr-cr" href="{e(cr)}" target="_blank" rel="noopener noreferrer">{ICON_CR}<span>{e(t["cr"])}</span><span class="sr-only visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{e(t["newtab"])}</span></a>'
                    f'<button type="button" class="shr-copy" data-ok="{e(t["ok"])}">{ICON_CP}<span>{e(t["cp"])}</span></button>'
                    f'<span class="shr-st" role="status" aria-live="polite"></span></div><script src="{pre}assets/share.js?v={V}" defer></script><!-- CLSHARE:END -->')
-            if m: s2 = s2[:m.end()] + bar + s2[m.end():]
+            # Oct 18 (owner: banner = Lesson_Builder size, title centred, pages clean): when the <h1> sits in the page-hero banner,
+            # the share bar goes right below the banner instead of inside it (it made those banners 57-146 px taller).
+            hs = s2.rfind('<section class="page-hero', 0, m.start()) if m else -1
+            he = s2.find('</section>', m.end()) if hs >= 0 else -1
+            if hs >= 0 and he >= 0 and '</section>' not in s2[hs:m.start()]:
+                he += len('</section>'); s2 = s2[:he] + bar.replace('<div class="shr"', '<div class="shr shr-below"', 1) + s2[he:]
+            elif m: s2 = s2[:m.end()] + bar + s2[m.end():]
         if (k in ('learn', 'math', 'teachers', 'calc') or b in ('Careers.html', 'AP_IB_Physics.html')) and '</main>' in s2:
             call = f'<!-- NLCALL:START --><aside class="nl-call" data-pagefind-ignore="all" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
             s2 = s2.replace('</main>', call + '</main>', 1)

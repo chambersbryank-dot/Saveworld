@@ -54,6 +54,17 @@
   "srcset": "https://media.savingplanets.com/images/Asteroid_2018LA_CSS-480.3646f08ec247.webp 480w, https://media.savingplanets.com/images/Asteroid_2018LA_CSS-800.1ea0ef856436.webp 800w, https://media.savingplanets.com/images/Asteroid_2018LA_CSS-936.05842f65f3b0.webp 936w",
   "srcset_avif": "https://media.savingplanets.com/images/Asteroid_2018LA_CSS-480.a80f463bd57c.avif 480w, https://media.savingplanets.com/images/Asteroid_2018LA_CSS-800.1b7f42936097.avif 800w, https://media.savingplanets.com/images/Asteroid_2018LA_CSS-936.52dae5651d76.avif 936w"
  },
+ "images/Aurora_Borealis_ISS072-E-159172.jpg": {
+  "url": "https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172.f072bf191f5e.jpg",
+  "key": "images/Aurora_Borealis_ISS072-E-159172.f072bf191f5e.jpg",
+  "bytes": 10439603,
+  "sha256": "f072bf191f5eec9ceb9458744b828bca8d7d9e4a9fcfeb68b0c8db9bceaf82a9",
+  "type": "image/jpeg",
+  "width": 8256,
+  "height": 5504,
+  "srcset": "https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-480.907a884e00f0.webp 480w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-800.b39faf26e444.webp 800w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-1280.b606b92ad85b.webp 1280w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-1920.9b6a67e58330.webp 1920w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-2560.aa4aa4aa9374.webp 2560w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-3840.5f058135e1a6.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-480.c06126ba4b4e.avif 480w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-800.a61b41d13f0f.avif 800w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-1280.1bb2fcf22069.avif 1280w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-1920.2ba83a5c6fc3.avif 1920w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-2560.d2f16f471ad4.avif 2560w, https://media.savingplanets.com/images/Aurora_Borealis_ISS072-E-159172-3840.4546401ad253.avif 3840w"
+ },
  "images/Canada_Wildfires_ISS_2025.jpg": {
   "url": "https://media.savingplanets.com/images/Canada_Wildfires_ISS_2025.f8457855de6e.jpg",
   "key": "images/Canada_Wildfires_ISS_2025.f8457855de6e.jpg",
@@ -108,6 +119,17 @@
   "height": 5184,
   "srcset": "https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-480.661d1bded195.webp 480w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-800.121acc81bb16.webp 800w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-1280.95d150befa75.webp 1280w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-1920.d509be7f6c69.webp 1920w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-2560.df9d422a57bf.webp 2560w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-3456.aff9f99fd9d9.webp 3456w",
   "srcset_avif": "https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-480.4520d8b5e593.avif 480w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-800.cf4df9a27b4e.avif 800w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-1280.ada99a4c843b.avif 1280w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-1920.c1ebd948a499.avif 1920w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-2560.3010f9a58dce.avif 2560w, https://media.savingplanets.com/images/GPM_Core_Observatory_GMI-3456.9b7d496ddbeb.avif 3456w"
+ },
+ "images/GRACE_FO_PIA22445.jpg": {
+  "url": "https://media.savingplanets.com/images/GRACE_FO_PIA22445.03be689652ac.jpg",
+  "key": "images/GRACE_FO_PIA22445.03be689652ac.jpg",
+  "bytes": 517312,
+  "sha256": "03be689652ace320504e83ec058176838027872cc048deb74ea0e45eb8a155f8",
+  "type": "image/jpeg",
+  "width": 3840,
+  "height": 2160,
+  "srcset": "https://media.savingplanets.com/images/GRACE_FO_PIA22445-480.6ae0d757e503.webp 480w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-800.52d2de6bd51d.webp 800w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-1280.8a1a5b1aaad9.webp 1280w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-1920.fc0b01928e0c.webp 1920w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-2560.80ce291008e9.webp 2560w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-3840.d4d12d6ef907.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/GRACE_FO_PIA22445-480.a8da70d08f9d.avif 480w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-800.fefa4d1deda0.avif 800w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-1280.00fbf99cf3ad.avif 1280w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-1920.7ef091770cfa.avif 1920w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-2560.fcd88a12acce.avif 2560w, https://media.savingplanets.com/images/GRACE_FO_PIA22445-3840.247c9856e2ac.avif 3840w"
  },
  "images/Garden_City_Kansas_Landsat.jpg": {
   "url": "https://media.savingplanets.com/images/Garden_City_Kansas_Landsat.6283d55852d4.jpg",
@@ -262,6 +284,17 @@
   "height": 2194,
   "srcset": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.7e186169eed7.webp 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.8a1fd22799a2.webp 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.452735ba9b8d.webp 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.0deed5ff27ce.webp 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.b78756c2e341.webp 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.32a4d1d7dfb9.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-480.9354c9c571b9.avif 480w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-800.d2cc4d0b8544.avif 800w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1280.bae8c7b502f4.avif 1280w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-1920.82c0dda5bf37.avif 1920w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-2560.0f70b3d79532.avif 2560w, https://media.savingplanets.com/images/Roman_Launch_NHQ202608300015-3840.1b40e05fb683.avif 3840w"
+ },
+ "images/Saturn_Cassini_PIA06193.jpg": {
+  "url": "https://media.savingplanets.com/images/Saturn_Cassini_PIA06193.1095bbfe968c.jpg",
+  "key": "images/Saturn_Cassini_PIA06193.1095bbfe968c.jpg",
+  "bytes": 5667919,
+  "sha256": "1095bbfe968cbac1a5b905fac02a244ed4686ff04fb3d55ebc1a71a67b387b77",
+  "type": "image/jpeg",
+  "width": 8888,
+  "height": 4544,
+  "srcset": "https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-480.d0ecc5089511.webp 480w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-800.65ac646b8c38.webp 800w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-1280.99a44d19e920.webp 1280w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-1920.37286f0bfff6.webp 1920w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-2560.69f0a43678c9.webp 2560w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-3840.51b6ae66871e.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-480.a6c4aa3c9dc3.avif 480w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-800.9475db767eaf.avif 800w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-1280.d6800acf13a0.avif 1280w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-1920.53fc293c9b9c.avif 1920w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-2560.e02f8a863815.avif 2560w, https://media.savingplanets.com/images/Saturn_Cassini_PIA06193-3840.817000f8b6d9.avif 3840w"
  },
  "images/Sumatra_Smoke_Singapore_MODIS.jpg": {
   "url": "https://media.savingplanets.com/images/Sumatra_Smoke_Singapore_MODIS.4aced846c5a5.jpg",
