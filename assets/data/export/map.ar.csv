@@ -57,6 +57,7 @@ FLEX وSentinel-3C (ESA),active,رصد الأرض,"Launched from Europe's Spacep
 FORUM، مهمة الأشعة تحت الحمراء البعيدة (ESA),active,رصد الأرض,"Europe's Spaceport, Kourou, French Guiana (planned launch site)",5.236,-52.769,page,https://www.savingplanets.com/ar/FORUM.html
 FreshWater Watch (Earthwatch Europe),active,الأنهار,"Oxford, UK (Earthwatch Europe HQ)",51.75,-1.26,hq,https://www.savingplanets.com/ar/FreshWater_Watch.html
 GCOM-C «شيكيساي» (جاكسا),active,رصد الأرض,"JAXA headquarters, Tokyo, Japan",35.683,139.56,hq,https://www.savingplanets.com/ar/GCOM-C.html
+"GCOM-W ""SHIZUKU"" لرصد الجليد البحري (JAXA)",active,القطبان,"Tanegashima Space Center, Japan, where SHIZUKU launched in 2012",30.4,130.97,page,https://www.savingplanets.com/ar/GCOM-W_SHIZUKU.html
 GEDI، ليدار الغابات (ناسا),active,الغابات,"University of Maryland, College Park (mission lead)",38.986,-76.943,hq,https://www.savingplanets.com/ar/GEDI.html
 GeoXO، الرصد الموسّع الثابت بالنسبة إلى الأرض (NOAA / ناسا),active,رصد الأرض,"NOAA NESDIS, Silver Spring, Maryland",38.992,-77.031,hq,https://www.savingplanets.com/ar/GeoXO.html
 Global Fishing Watch,active,المحيط,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/ar/Global_Fishing_Watch.html
@@ -105,6 +106,7 @@ MMX,upcoming,التخلص من الحطام الفضائي,"Launching from Taneg
 Mote Marine Laboratory,active,المحيط,"Sarasota, Florida (HQ)",27.33,-82.58,hq,https://www.savingplanets.com/ar/Mote_Marine_Laboratory.html
 Mote Marine Laboratory,active,المحيط,"Florida's Coral Reef, Florida Keys",24.66,-81.45,page,https://www.savingplanets.com/ar/Mote_Marine_Laboratory.html
 NEO Surveyor,upcoming,الدفاع الكوكبي,Launching on Falcon 9 from Florida,28.49,-80.58,launch,https://www.savingplanets.com/ar/NEO_Surveyor.html
+NEOSSat، تلسكوب الكويكبات والحطام (كندا),active,الدفاع الكوكبي,"Canadian Space Agency headquarters, Longueuil, Quebec",45.52,-73.39,page,https://www.savingplanets.com/ar/NEOSSat.html
 NEWater، المياه المعاد تدويرها في سنغافورة (PUB),active,الأنهار,Singapore,1.3521,103.8198,page,https://www.savingplanets.com/ar/NEWater.html
 NISAR (NASA–ISRO),active,رصد الأرض,"Launched from Sriharikota, India",13.72,80.23,launch,https://www.savingplanets.com/ar/NISAR.html
 Northrop Grumman SpaceLogistics,active,التخلص من الحطام الفضائي,"Dulles, Virginia (SpaceLogistics HQ, Northrop Grumman)",38.996,-77.448,hq,https://www.savingplanets.com/ar/SpaceLogistics.html
@@ -139,6 +141,7 @@ Restoring the Lake Depths Foundation,active,البحيرات,"South shore, Lake 
 Rewilding Europe,active,الغابات,"Southern Carpathians, Romania",45.2,22.3,page,https://www.savingplanets.com/ar/Rewilding_Europe.html
 Rewilding Europe,active,الغابات,"Central Apennines, Italy",41.9,13.8,page,https://www.savingplanets.com/ar/Rewilding_Europe.html
 River Cleanup,active,الأنهار,"Citarum River, Indonesia",-6.95,107.6,page,https://www.savingplanets.com/ar/River_Cleanup.html
+SCISAT لرصد الأوزون (وكالة الفضاء الكندية),active,القطبان,"University of Waterloo, Ontario, home of the SCISAT science team",43.47,-80.54,page,https://www.savingplanets.com/ar/SCISAT.html
 Sea Turtle Conservancy,active,المحيط,"Tortuguero, Costa Rica",10.54,-83.5,page,https://www.savingplanets.com/ar/Sea_Turtle_Conservancy.html
 Seabin,active,المحيط,"Sydney Harbour, Australia",-33.85,151.21,page,https://www.savingplanets.com/ar/Seabin.html
 SeaTrees,active,المحيط,Kenya mangroves (country-level),-4.0,39.6,page,https://www.savingplanets.com/ar/SeaTrees.html
@@ -168,6 +171,7 @@ The SeaCleaners,active,المحيط,"Kota Kinabalu, Malaysia (Mobula 8.2 expedit
 The SeaCleaners,active,المحيط,"Ambon, Indonesia",-3.695,128.181,page,https://www.savingplanets.com/ar/The_SeaCleaners.html
 The SeaCleaners,active,المحيط,"Bali, Indonesia",-8.65,115.216,page,https://www.savingplanets.com/ar/The_SeaCleaners.html
 TRACERS (NASA),active,طقس الفضاء,"University of Iowa, Iowa City (mission lead)",41.661,-91.536,hq,https://www.savingplanets.com/ar/TRACERS.html
+Trees for Life: استعادة الغابة الكاليدونية,active,الغابات,"Dundreggan Rewilding Centre, Glenmoriston, Scotland",57.18,-4.77,page,https://www.savingplanets.com/ar/Trees_for_Life.html
 Trees for the Future,active,الغابات,"Silver Spring, Maryland (HQ)",38.99,-77.03,hq,https://www.savingplanets.com/ar/Trees_for_the_Future.html
 Trout Unlimited,active,الأنهار,Upper Bear River Watershed (Utah–Wyoming),41.5,-111.0,page,https://www.savingplanets.com/ar/Trout_Unlimited.html
 U.S. Deorbit Vehicle (NASA / SpaceX),upcoming,التخلص من الحطام الفضائي,"NASA Johnson Space Center, Houston (ISS program)",29.559,-95.09,hq,https://www.savingplanets.com/ar/US_Deorbit_Vehicle.html
@@ -186,7 +190,11 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 إنسيلادوس,active,الفضاء,From orbit,,,,https://www.savingplanets.com/ar/Enceladus.html
 استرجاع الماء في محطة الفضاء الدولية (ناسا),active,مشروع Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/ar/ISS_Water_Recovery.html
 استعادة أشجار القرم في أبوظبي,active,المحيط,"Abu Dhabi coast, United Arab Emirates",24.45,54.43,page,https://www.savingplanets.com/ar/Abu_Dhabi_Mangroves.html
+استعادة بحيرة شيليكا,active,البحيرات,"Chilika Lake, Odisha, India",19.72,85.32,page,https://www.savingplanets.com/ar/Chilika_Lake.html
 استعادة جدول تشونغ غيه تشون (سيول),active,الأنهار,"Cheonggyecheon, Seoul, South Korea",37.5692,126.9784,page,https://www.savingplanets.com/ar/Cheonggyecheon.html
+استعادة جزيرة ريدوندا,active,الغابات,"Redonda, Antigua and Barbuda",16.94,-62.35,page,https://www.savingplanets.com/ar/Redonda_Restoration.html
+استعادة متنزه غورونغوسا الوطني,active,الغابات,"Gorongosa National Park, Mozambique",-18.97,34.35,page,https://www.savingplanets.com/ar/Gorongosa.html
+استعادة موائل جورجيا الجنوبية,active,القطبان,"South Georgia Island, South Atlantic Ocean",-54.28,-36.51,page,https://www.savingplanets.com/ar/South_Georgia_Habitat_Restoration.html
 استعادة نهر إلوا,active,الأنهار,"Elwha River, Washington",48.1,-123.56,page,https://www.savingplanets.com/ar/Elwha_River_Restoration.html
 استعادة نهر بينوبسكوت (ولاية مين),active,الأنهار,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/ar/Penobscot_River_Restoration.html
 استعادة نهر كيسيمي (فلوريدا),active,الأنهار,"Kissimmee River, central Florida",27.5,-81.05,page,https://www.savingplanets.com/ar/Kissimmee_River_Restoration.html
@@ -201,6 +209,7 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 العوالق النباتية، محرك الأكسجين في المحيط,active,المحيط,Worldwide,,,,https://www.savingplanets.com/ar/Phytoplankton.html
 العودة الموجَّهة للقمر Aeolus (ESA),active,التخلص من الحطام الفضائي,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/ar/Aeolus.html
 القمر الصناعي الخشبي LignoSat (Kyoto University),active,التخلص من الحطام الفضائي,"Kyoto University, Japan (mission lead)",35.026,135.781,hq,https://www.savingplanets.com/ar/LignoSat.html
+القمر الصناعي للطقس في القطب الشمالي وEPS-Sterna (ESA/EUMETSAT),active,القطبان,"Tromsø, Norway, one of the Arctic Weather Satellite mission control sites",69.65,18.96,page,https://www.savingplanets.com/ar/Arctic_Weather_Satellite.html
 القمر يثبّت ميل الأرض,active,التخلص من الحطام الفضائي,From orbit,,,,https://www.savingplanets.com/ar/Moon_Steadies_Earth.html
 القنادس، مهندسو الأنهار,active,الأنهار,"Bridge Creek, Central Oregon",44.72,-120.22,page,https://www.savingplanets.com/ar/Beavers_River_Engineers.html
 المستنقعات المالحة,active,المحيط,Worldwide,,,,https://www.savingplanets.com/ar/Salt_Marshes.html
@@ -209,13 +218,18 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 النظام الأوروبي للمعلومات عن حرائق الغابات (EFFIS),active,الغابات,"European Commission Joint Research Centre, Ispra, Italy",45.81,8.63,hq,https://www.savingplanets.com/ar/EFFIS.html
 النظام العالمي للتوعية بالفيضانات (GloFAS),active,الأنهار,Worldwide,,,,https://www.savingplanets.com/ar/GloFAS.html
 النظام المشترك للأقمار الصناعية القطبية (NOAA),active,رصد الأرض,From orbit,,,,https://www.savingplanets.com/ar/JPSS.html
+بحيرة بيوا وحركة الصابون,active,البحيرات,"Lake Biwa, Shiga Prefecture, Japan",35.25,136.08,page,https://www.savingplanets.com/ar/Lake_Biwa_Soap_Movement.html
 برنامج GLOBE,active,رصد الأرض,Worldwide,,,,https://www.savingplanets.com/ar/GLOBE_Program.html
 برنامج أرتيميس (ناسا),active,مشروع Rawane,"Kennedy Space Center, Florida",28.627,-80.621,launch,https://www.savingplanets.com/ar/Artemis_II.html
 برنامج التأمين على الشعاب المرجانية في أمريكا الوسطى (MAR Fund),active,المحيط,"Turneffe Atoll, Belize",17.35,-87.85,page,https://www.savingplanets.com/ar/Mesoamerican_Reef_Insurance.html
 بقاع الأمل التابعة لـ Mission Blue,active,المحيط,"Napa, California (HQ)",38.299,-122.286,hq,https://www.savingplanets.com/ar/Mission_Blue_Hope_Spots.html
 تبنَّ شاطئًا (Alliance for the Great Lakes),active,البحيرات,"Chicago, Illinois (HQ, Lake Michigan)",41.88,-87.63,hq,https://www.savingplanets.com/ar/Alliance_for_the_Great_Lakes_Adopt_a_Beach.html
+تشاندرايان-5 / LUPEX، مركبة جوالة للجليد القمري (ISRO-JAXA),active,الفضاء,"Tanegashima Space Center, Japan, the planned H3 launch site",30.4,130.97,page,https://www.savingplanets.com/ar/Chandrayaan-5_LUPEX.html
+تعافي بحيرة كونستانس من الفوسفور,active,البحيرات,"Lake Constance (Bodensee), Germany, Austria and Switzerland",47.63,9.37,page,https://www.savingplanets.com/ar/Lake_Constance.html
+تعافي ظباء السايغا في السهوب الكازاخية (ألتين دالا),active,الغابات,"The Kazakh steppe, Altyn Dala landscape, Kazakhstan",50.0,64.0,page,https://www.savingplanets.com/ar/Altyn_Dala_Saiga.html
 تلسكوب نانسي غريس رومان الفضائي (ناسا),active,مشروع Rawane,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/ar/Nancy_Grace_Roman.html
 توقعات تكاثر الطحالب الضارة في بحيرة إيري (NOAA),active,البحيرات,"Maumee Bay, Toledo, Ohio",41.7,-83.45,page,https://www.savingplanets.com/ar/Lake_Erie_Algal_Bloom_Forecast.html
+تونلي ساب: البحيرة التي تعكس مجرى نهر,active,البحيرات,"Tonle Sap Biosphere Reserve, Cambodia",12.81,104.05,page,https://www.savingplanets.com/ar/Tonle_Sap.html
 تيتان,upcoming,التخلص من الحطام الفضائي,Dragonfly launches from Kennedy Space Center,28.57,-80.65,launch,https://www.savingplanets.com/ar/Titan.html
 ثلاث أشجار مقابل كل شجرة تُزال,active,الغابات,Worldwide,,,,https://www.savingplanets.com/ar/Three_Trees.html
 ثلاثة دروع غير مرئية,active,طقس الفضاء,From orbit,,,,https://www.savingplanets.com/ar/Three_Shields.html
@@ -237,6 +251,7 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 عائلة Mr. Trash Wheel,active,الأنهار,"Baltimore Inner Harbor, Maryland",39.285,-76.607,page,https://www.savingplanets.com/ar/Mr_Trash_Wheel.html
 علم رصد التسونامي,active,رصد الأرض,"Pacific Tsunami Warning Center, Ford Island, Hawaii (NOAA)",21.364,-157.962,hq,https://www.savingplanets.com/ar/Tsunami_Early_Warning.html
 علم رصد التسونامي,active,رصد الأرض,"National Tsunami Warning Center, Palmer, Alaska (NOAA)",61.599,-149.112,hq,https://www.savingplanets.com/ar/Tsunami_Early_Warning.html
+عودة الوشق الإيبيري,active,الغابات,"Almuradiel, Ciudad Real, Spain, in lynx country",38.48,-3.47,page,https://www.savingplanets.com/ar/Iberian_Lynx.html
 غابات المانغروف,active,الغابات,Florida mangroves (Everglades),25.3,-80.9,page,https://www.savingplanets.com/ar/Mangroves.html
 غابات عشب البحر,active,المحيط,Worldwide,,,,https://www.savingplanets.com/ar/Kelp_Forests.html
 غاليليو، الملاحة بالأقمار الصناعية (الاتحاد الأوروبي / ESA),active,رصد الأرض,"Galileo Control Centre, Oberpfaffenhofen, Germany",48.083,11.281,page,https://www.savingplanets.com/ar/Galileo.html
@@ -260,15 +275,19 @@ WeForest,active,الغابات,Ethiopia field office (Addis Ababa),9.03,38.74,pa
 مركز تنسيق الأجسام القريبة من الأرض (ESA),active,الدفاع الكوكبي,"ESA ESRIN, Frascati, Italy",41.827,12.674,hq,https://www.savingplanets.com/ar/ESA_NEOCC.html
 مروج الأعشاب البحرية,active,المحيط,Worldwide,,,,https://www.savingplanets.com/ar/Seagrass.html
 مروج عشب البوسيدونيا البحري,active,المحيط,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/ar/Posidonia_Meadows.html
+مساحة للنهر (هولندا),active,الأنهار,"Deventer, on the IJssel, one of the Room for the River sites",52.25,6.16,page,https://www.savingplanets.com/ar/Room_for_the_River.html
 مسبار باركر الشمسي (ناسا),active,طقس الفضاء,"Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",39.165,-76.898,hq,https://www.savingplanets.com/ar/Parker_Solar_Probe.html
 مسح كاتالينا للسماء (Catalina Sky Survey),active,الدفاع الكوكبي,"Lunar and Planetary Laboratory, University of Arizona, Tucson",32.233,-110.95,hq,https://www.savingplanets.com/ar/Catalina_Sky_Survey.html
 مشروع الإمارات لاستكشاف المريخ (مسبار الأمل),active,الفضاء,"UAE Space Agency, United Arab Emirates",24.45,54.38,hq,https://www.savingplanets.com/ar/Hope_Mars_Mission.html
+منتزه الشعاب الطبيعي في توباتاها,active,المحيط,"Tubbataha Reefs Natural Park, Sulu Sea, Philippines",8.95,119.92,page,https://www.savingplanets.com/ar/Tubbataha_Reefs.html
 مهمة TEMPO لجودة الهواء (ناسا),active,رصد الأرض,"Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",42.381,-71.128,hq,https://www.savingplanets.com/ar/TEMPO.html
 مهمة كوكبة RADARSAT (كندا),active,رصد الأرض,"CSA Satellite Operations Control Centre, Longueuil, Quebec",45.52,-73.39,hq,https://www.savingplanets.com/ar/RCM.html
 ميثاق صفر حطام (وكالة الفضاء الأوروبية),active,التخلص من الحطام الفضائي,"ESA headquarters, Paris (charter facilitator)",48.849,2.302,hq,https://www.savingplanets.com/ar/Zero_Debris_Charter.html
 نظام Argos للتتبع بالأقمار الصناعية,active,المحيط,"NOAA Office of Satellite and Product Operations, Suitland, Maryland",38.852,-76.934,hq,https://www.savingplanets.com/ar/Argos.html
 نظام التنبيه والاستجابة لانبعاثات الميثان (برنامج الأمم المتحدة للبيئة),active,رصد الأرض,"UNEP headquarters, Nairobi, Kenya",-1.233,36.817,hq,https://www.savingplanets.com/ar/UNEP_MARS.html
+نظام مراقبة السرجس (USF),active,المحيط,"USF College of Marine Science, St. Petersburg, Florida",27.76,-82.64,page,https://www.savingplanets.com/ar/Sargassum_Watch.html
 نفق تايدواي في لندن (المجرور العملاق),active,الأنهار,"Abbey Mills Pumping Station, East London",51.531,-0.002,page,https://www.savingplanets.com/ar/London_Tideway_Tunnel.html
 نفق تايدواي في لندن (المجرور العملاق),active,الأنهار,"Acton, West London (tunnel start)",51.508,-0.27,page,https://www.savingplanets.com/ar/London_Tideway_Tunnel.html
 نمامي غانغي (الهند),active,الأنهار,"Varanasi, on the River Ganga, India",25.317,83.006,page,https://www.savingplanets.com/ar/Namami_Gange.html
+نيبال تضاعف نمورها,active,الغابات,"Bardia National Park, Nepal",28.39,81.27,page,https://www.savingplanets.com/ar/Nepal_Tigers.html
 هيرا,active,الدفاع الكوكبي,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/ar/Hera.html
