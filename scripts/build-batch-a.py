@@ -134,7 +134,7 @@ def related_block(page, rel):
 
 # ---------- 4) difference strip ----------
 DIFF_LEAD = 'From the ocean floor to low Earth orbit, solutions minus the doom.'
-DIFF_BODY = '{n} real, sourced solutions across {h} hubs, explained the same simple way (Who, What, When, Where, Why), in English, French, Spanish, Arabic and Italian. Search by meaning, privately in your browser, powered by trusted MIT open-source tools.'
+DIFF_BODY = '{n} real, sourced solutions across {h} hubs, explained the same simple way (Who, What, When, Where, Why), in English, French, Spanish, Arabic, Italian and Hebrew. Search by meaning, privately in your browser, powered by trusted MIT open-source tools.'
 DIFF_T = {'fr': ("Du fond de l'océan à l'orbite terrestre basse, des solutions sans le catastrophisme.",
                  "{n} solutions réelles et sourcées réparties en {h} pôles, expliquées de la même façon simple (Qui, Quoi, Quand, Où, Pourquoi), en anglais, français, espagnol, arabe et italien. Recherchez par le sens, en toute confidentialité dans votre navigateur, grâce à des outils open source MIT de confiance."),
           'es': ('Desde el fondo del océano hasta la órbita terrestre baja, soluciones sin catastrofismo.',

@@ -8,8 +8,8 @@ JSON-LD vocabulary: scripts/schemaorg-vocab.json (types + properties from schema
 import glob, html, json, os, re, sys, collections
 from bs4 import BeautifulSoup
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it']
-LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
+SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
+LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
 TWITTER_SITE = '@SISavingPlanets'
 NOINDEX = {'Project-R.html', '404.html'}
 ERROR = {'title-missing', 'title-duplicate', 'desc-missing', 'desc-duplicate', 'hreflang-reciprocity', 'jsonld-invalid'}
@@ -95,7 +95,7 @@ def main():
         raw, soup = parsed[p]; lang = lang_of(p); base = os.path.basename(p); U = url_of(lang, base)
         h = soup.html
         if not h or h.get('lang') != lang: add('html-lang', p)
-        if (lang == 'ar') != bool(h and h.get('dir') == 'rtl'): add('html-dir', p)
+        if (lang in ('ar', 'he')) != bool(h and h.get('dir') == 'rtl'): add('html-dir', p)
         rob = soup.find('meta', attrs={'name': 'robots'}); rc = (rob.get('content', '') if rob else '').replace(' ', '').lower()
         stub = 'http-equiv="refresh"' in raw
         if stub or base in NOINDEX:

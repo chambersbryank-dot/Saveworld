@@ -1,4 +1,4 @@
-"""Idempotent SEO normalizer. Usage: python3 scripts/seo-fix.py [en|fr|es|ar|it ...]  (default: all)
+"""Idempotent SEO normalizer. Usage: python3 scripts/seo-fix.py [en|fr|es|ar|it|he ...]  (default: all)
 Per page: meta robots, <=60-char localized title, 120-160-char localized description (og/twitter synced),
 hand-written per-language title/description overrides from i18n/seo-meta.json (wins over generator text),
 twitter:site, og:image width/height/type/alt, hreflang only for language versions that exist,
@@ -8,9 +8,9 @@ width/height/lazy. Run after build-stats.js and after scripts/i18n-build.py (whi
 import glob, json, os, re, subprocess, sys
 from bs4 import BeautifulSoup
 import langs as L10N  # Oct 17: HE_PUBLIC — keep /he/ noindex while unlinked
-SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it']
+SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it', 'he']
 NOINDEX = {'Project-R.html', '404.html'}
-LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT'}
+LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
 BRAND = ' | Saving Planets'
 TWITTER_SITE = '@SISavingPlanets'
 OVR = json.load(open('i18n/seo-meta.json', encoding='utf8')) if os.path.exists('i18n/seo-meta.json') else {}
@@ -25,19 +25,21 @@ def page_url(lang, base):  # index.html is served at the directory URL
 def langs_of(base):  # languages that actually have this page
     return ['en'] + [l for l in LANGS if os.path.exists(f'{l}/{base}')] if os.path.exists(base) else [l for l in LANGS if os.path.exists(f'{l}/{base}')]
 # Language tag added to translated titles that would otherwise equal the English title (proper names).
-TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية', 'it': ' · Italiano'}
+TAG = {'fr': ' · Français', 'es': ' · Español', 'ar': ' · بالعربية', 'it': ' · Italiano', 'he': ' · עברית'}
 # Learning pages (lessons, labs, calculators) get a pad that is true for them (no Five W's there)
 PAD_LEARN = {'en': 'Free on Saving Planets, with no ads on learning pages.',
              'fr': 'Gratuit sur Saving Planets, sans publicité sur les pages d’apprentissage.',
              'es': 'Gratis en Saving Planets, sin anuncios en las páginas de aprendizaje.',
              'ar': 'مجاني على Saving Planets، بلا إعلانات في صفحات التعلّم.',
-             'it': 'Gratis su Saving Planets, senza pubblicità nelle pagine di apprendimento.'}
+             'it': 'Gratis su Saving Planets, senza pubblicità nelle pagine di apprendimento.',
+             'he': 'חינם ב-Saving Planets, בלי פרסומות בדפי הלמידה.'}
 UPDATED = re.compile(r'\s*(Last updated|Dernière mise à jour|Última actualización|Ultimo aggiornamento|آخر تحديث)\s*:?\s*[^.!?]*?\d{4}\.?')
 PAD = {'en': 'Sourced facts, the Five W\'s and why it matters, on Saving Planets.',
        'fr': 'Faits sourcés, les cinq W et l\'impact, sur Saving Planets.',
        'es': 'Datos con fuentes, las cinco W y su impacto, en Saving Planets.',
        'ar': 'حقائق موثّقة والأسئلة الخمسة وأهمية الحل، على Saving Planets.',
-       'it': 'Fatti con fonti, le cinque W e perché conta, su Saving Planets.'}
+       'it': 'Fatti con fonti, le cinque W e perché conta, su Saving Planets.',
+       'he': 'עובדות עם מקורות, חמשת ה-W ולמה זה חשוב, ב-Saving Planets.'}
 _END = re.compile(r'(?<=[.!?؟。])\s+')
 _ABBR = re.compile(r'(?:\b[A-Z]\.|\b(?:[A-Z]\.){2,}|\b(?:e\.g|i\.e|Dr|St|Mt|No|vs|Inc|Ltd|Jr|Sr|Prof|approx|ca|av|apr|n°|Sra?|Sto|Ste|art|EE|UU)\.)$')
 class _Splitter:

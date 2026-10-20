@@ -11,7 +11,7 @@ the sitemap, seo-fix/seo-lint, the language banner or search. English and the ot
 """
 import os
 import re
-HE_PUBLIC = False   # <<< the Hebrew launch switch (see NOTES.md 'Hebrew (/he/)')
+HE_PUBLIC = True    # <<< the Hebrew launch switch (see NOTES.md 'Hebrew (/he/)')
 
 PUBLIC = ['fr', 'es', 'ar', 'it'] + (['he'] if HE_PUBLIC else [])   # translated languages shown to visitors / search engines
 BUILD = ['fr', 'es', 'ar', 'it', 'he']                               # translated languages i18n-build writes

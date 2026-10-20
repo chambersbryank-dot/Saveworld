@@ -20,6 +20,7 @@ CSS = r"""
 .sp-lb{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:1001;padding-bottom:calc(.5rem + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;padding:.5rem .75rem;pointer-events:none}
 .sp-lb-in{pointer-events:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem .75rem;max-width:960px;width:100%;box-sizing:border-box;padding:.45rem .6rem .45rem 1rem;background:rgba(7,16,24,.96);color:#fff;border:1px solid rgba(143,211,255,.45);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.4);font:500 .95rem/1.35 "Montserrat","Segoe UI",system-ui,sans-serif;animation:sp-lb-in .35s ease-out both}
 .sp-lb[dir=rtl] .sp-lb-in{padding:.45rem 1rem .45rem .6rem;font-family:"Noto Sans Arabic","Segoe UI",Tahoma,sans-serif}
+.sp-lb[lang=he] .sp-lb-in{font-family:"Noto Sans Hebrew",Heebo,"Arial Hebrew",Arial,sans-serif}
 .sp-lb-msg{margin:0;flex:1 1 220px}
 .sp-lb-btns{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .sp-lb a.sp-lb-go,.sp-lb button{min-height:44px;min-width:44px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;padding:0 1rem;border-radius:999px;font:700 .9rem/1 inherit;font-family:inherit;cursor:pointer;text-decoration:none}
