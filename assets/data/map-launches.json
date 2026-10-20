@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-19T17:39:51Z",
+"generated": "2026-10-20T00:07:18Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -60,7 +60,7 @@
 {
 "net": "2026-10-20T10:30:00Z",
 "exact": true,
-"prec": "MIN",
+"prec": "SEC",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
@@ -395,13 +395,13 @@
 "lng": 177.865,
 "launches": [
 {
-"net": "2026-10-21T05:00:00Z",
+"net": "2026-10-21T07:00:00Z",
 "exact": true,
-"prec": "HR",
+"prec": "MIN",
 "provider": "Rocket Lab",
 "rocket": "Electron",
 "mission": "We're Not Hawking Around (3x HawkEye 360)",
-"pad": "Unknown Pad"
+"pad": "Rocket Lab Launch Complex 1A"
 },
 {
 "net": "2026-11-04T00:00:00Z",
@@ -651,9 +651,9 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-20T22:14:00Z",
+"net": "2026-10-20T23:09:23Z",
 "exact": true,
-"prec": "MIN",
+"prec": "SEC",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-15",

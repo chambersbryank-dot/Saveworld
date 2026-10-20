@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T17:39:46.513Z",
+ "generated": "2026-10-20T00:07:14.506Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1148,7 +1148,7 @@
    "nonprofit": 55,
    "natural": 17
   },
-  "upcomingMissions": 24,
+  "upcomingMissions": 23,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1327,7 +1327,7 @@
     "natural": 2,
     "corporate": 3
    },
-   "upcomingMissions": 9,
+   "upcomingMissions": 8,
    "impactTotals": []
   }
  },
@@ -3137,11 +3137,8 @@
    "missions": [
     {
      "name": "MMX",
-     "upcoming": true,
-     "next": {
-      "event": "launch",
-      "date": "2026-10-19T19:41:03Z"
-     }
+     "upcoming": false,
+     "next": null
     }
    ]
   },
