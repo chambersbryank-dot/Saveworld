@@ -38,8 +38,9 @@ await pagefind.close();
 console.log(`pagefind: indexed ${files.length} pages (en/fr/es/ar/it/he)`);
 
 // ---------- 2) Semantic index (English pages) ----------
-const decode = s => s.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;|&apos;/g, "'")
-  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&[a-z]+;/g, ' ');
+// &amp; is decoded last, so '&amp;lt;' stays the literal text '&lt;' (no double unescaping; CodeQL js/double-escaping)
+const decode = s => s.replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#x27;|&#39;|&apos;/g, "'")
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&(?!amp;)[a-z]+;/g, ' ').replace(/&amp;/g, '&');
 const text = h => decode(h.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 const HUBS = /^(Oceans|Lakes|Rivers|Deforestation|Space|Earth_Observation|Planetary_Defense|Space_Disposal|Space_Weather|Project-Rawane)\.html$/;
 
