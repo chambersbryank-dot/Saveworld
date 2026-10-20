@@ -243,7 +243,8 @@ var de=document.documentElement;function hh(){de.style.setProperty('--spn-h',n.o
    turning one on goes to that language's version of this page, keeping ?query and #hash. RTL: on = thumb left (mirrored). */
 var rtl=(document.documentElement.getAttribute('dir')||'').toLowerCase()==='rtl',rm=window.matchMedia('(prefers-reduced-motion: reduce)');
 var lss=[].slice.call(n.querySelectorAll('.spn-ls'));
-function lurl(a){return (a.getAttribute('data-href0')||a.getAttribute('href')).replace(/[?#].*$/,'')+location.search+location.hash}
+function su(u){u=String(u==null?'':u).replace(/[<>"'`\s]/g,'');return /^(javascript|data|vbscript):/i.test(u)?'#':u}
+function lurl(a){return su((a.getAttribute('data-href0')||a.getAttribute('href')).replace(/[?#].*$/,'')+location.search+location.hash)}
 function lgo(a){lss.forEach(function(x){x.setAttribute('aria-checked',x===a?'true':'false')});var u=lurl(a);setTimeout(function(){location.href=u},rm.matches?0:220)}
 window.spnLang=function(c){var a=n.querySelector('.spn-ls[data-lang="'+c+'"]');if(!a||a.getAttribute('aria-current'))return false;lgo(a);return true};
 lss.forEach(function(a,ix){var k=a.querySelector('.spn-ls-k'),st=null,moved=false,TR=16;

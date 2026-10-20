@@ -179,14 +179,14 @@
   "es": "FORUM, misión de la ESA, medirá la radiación en infrarrojo lejano que emite la Tierra, nunca medida desde el espacio, una pieza que falta en el rompecabezas del clima (ESA).",
   "ar": "ستقيس مهمة FORUM التابعة لوكالة الفضاء الأوروبية الأشعة تحت الحمراء البعيدة الصادرة عن الأرض، والتي لم تُقَس قط من الفضاء، وهي قطعة ناقصة من أحجية المناخ (ESA).",
   "it": "FORUM, missione dell'ESA, misurerà la radiazione nel lontano infrarosso emessa dalla Terra, mai misurata dallo spazio, un tassello mancante del puzzle climatico (ESA).",
-  "he": "משימת FORUM של ESA תמדוד את קרינת האינפרה-אדום הרחוק שכדור הארץ פולט, שמעולם לא נמדדה מהחלל, חלק חסר בפאזל האקלים (ESA)."
+  "he": "משימת FORUM של ESA תמדוד את קרינת התת-אדום הרחוק שכדור הארץ פולט, שמעולם לא נמדדה מהחלל, חלק חסר בפאזל האקלים (ESA)."
  },
  "FORUM Far-Infrared Mission (ESA)": {
   "fr": "FORUM, mission infrarouge lointain (ESA)",
   "es": "FORUM, misión de infrarrojo lejano (ESA)",
   "ar": "FORUM، مهمة الأشعة تحت الحمراء البعيدة (ESA)",
   "it": "FORUM, missione nel lontano infrarosso (ESA)",
-  "he": "FORUM, משימת האינפרה-אדום הרחוק (ESA)"
+  "he": "FORUM, משימת התת-אדום הרחוק (ESA)"
  },
  "The European Space Agency (ESA). FORUM is an Earth Explorer mission.": {
   "fr": "L'Agence spatiale européenne (ESA). FORUM est une mission Earth Explorer.",
@@ -207,7 +207,7 @@
   "es": "Un satélite con un espectrómetro de transformada de Fourier para medir la radiación saliente de la Tierra en el infrarrojo lejano.",
   "ar": "قمر صناعي يحمل مطيافًا بتحويل فورييه لقياس الإشعاع الصادر عن الأرض في نطاق الأشعة تحت الحمراء البعيدة.",
   "it": "Un satellite con uno spettrometro a trasformata di Fourier per misurare la radiazione uscente dalla Terra nel lontano infrarosso.",
-  "he": "לוויין הנושא ספקטרומטר התמרת פורייה למדידת הקרינה היוצאת מכדור הארץ באינפרה-אדום הרחוק."
+  "he": "לוויין הנושא ספקטרומטר התמרת פורייה למדידת הקרינה היוצאת מכדור הארץ בתת-אדום הרחוק."
  },
  "Launch is planned for 2028 on a Vega-C rocket.": {
   "fr": "Le lancement est prévu en 2028 sur une fusée Vega-C.",
@@ -249,7 +249,7 @@
   "es": "La ESA llama al infrarrojo lejano una pieza que falta en el rompecabezas del clima y que FORUM completará (ESA).",
   "ar": "تصف ESA الأشعة تحت الحمراء البعيدة بأنها قطعة ناقصة من أحجية المناخ ستسدّها FORUM (ESA).",
   "it": "L'ESA definisce il lontano infrarosso un tassello mancante del puzzle climatico che FORUM andrà a colmare (ESA).",
-  "he": "ESA מכנה את האינפרה-אדום הרחוק חלק חסר בפאזל האקלים ש-FORUM תשלים (ESA)."
+  "he": "ESA מכנה את התת-אדום הרחוק חלק חסר בפאזל האקלים ש-FORUM תשלים (ESA)."
  },
  "Better knowledge of Earth's radiation budget helps improve the climate understanding people rely on to plan ahead (ESA).": {
   "fr": "Mieux connaître le bilan radiatif de la Terre améliore la compréhension du climat sur laquelle chacun compte pour anticiper (ESA).",
@@ -753,7 +753,7 @@
   "es": "Satélites con generadores de imágenes visibles e infrarrojas y un nuevo sondeador infrarrojo hiperespectral para mejores pronósticos.",
   "ar": "أقمار صناعية تحمل أجهزة تصوير بالضوء المرئي والأشعة تحت الحمراء وجهاز سبر جديدًا فائق الطيف بالأشعة تحت الحمراء لتحسين التنبؤات.",
   "it": "Satelliti con strumenti di imaging nel visibile e nell'infrarosso e un nuovo sondatore infrarosso iperspettrale per previsioni migliori.",
-  "he": "לוויינים הנושאים מכשירי הדמיה באור נראה ובאינפרה-אדום ומשדר-חישה חדש היפר-ספקטרלי באינפרה-אדום לתחזיות טובות יותר."
+  "he": "לוויינים הנושאים מכשירי הדמיה באור נראה ובתת-אדום ומשדר-חישה חדש היפר-ספקטרלי בתת-אדום לתחזיות טובות יותר."
  },
  "The first launch is planned for 2032; further launches are planned for 2034, 2039 and 2043.": {
   "fr": "Le premier lancement est prévu en 2032 ; d'autres sont prévus en 2034, 2039 et 2043.",
