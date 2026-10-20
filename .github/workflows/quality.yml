@@ -28,7 +28,9 @@ jobs:
         timeout-minutes: 15
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --max-concurrency 32 --timeout 15 --max-retries 1 --cache --max-cache-age 7d --accept 200,202,204,206,301,302,403,429 --exclude-path node_modules --exclude 'mailto:' --exclude 'linkedin\.com' --exclude 'x\.com' --exclude 'twitter\.com' './*.html' './fr/*.html'
+          # --root-dir resolves root-relative links (/assets/vendor/katex/fonts/*) against the checkout (fonts verified 200 on the live site, Oct 19).
+          # epa.gov is excluded: its server omits the DigiCert intermediate certificate, so strict TLS clients (lychee) reject it while browsers load it fine (EPA-side config, Oct 19).
+          args: --root-dir ${{ github.workspace }} --exclude '^https://www\.epa\.gov/?$' --no-progress --max-concurrency 32 --timeout 15 --max-retries 1 --cache --max-cache-age 7d --accept 200,202,204,206,301,302,403,429 --exclude-path node_modules --exclude 'mailto:' --exclude 'linkedin\.com' --exclude 'x\.com' --exclude 'twitter\.com' './*.html' './fr/*.html'
           output: lychee.md
           fail: false
       - name: Lighthouse CI

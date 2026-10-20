@@ -76,7 +76,7 @@ data = json.load(open('assets/data/solutions.json'))
 eo = [p for p in data['pages'] if p.get('category') == 'earth-observation' and p.get('type') != 'hub' and p.get('status') == 'active']
 COUNTERS = [
   (36000000, '+', 'trees planted by Life Terra and its partners', 'Life_Terra.html',
-   'Life Terra (company figure)', 'https://pr.euractiv.com/?q=node%2F276414', 'May 2026'),
+   'Life Terra (company figure)', 'https://pr.rapporteur.com/?q=node%2F276414', 'May 2026'),
   (65000000, '+ kg', 'trash removed from rivers and the ocean by The Ocean Cleanup', 'Ocean_Cleanup.html',
    'The Ocean Cleanup (company figure)', 'https://theoceancleanup.com/', 'October 2026'),
   (252756, '', 'miles from Earth: the farthest humans have traveled, on Artemis II', 'Artemis_II.html',
