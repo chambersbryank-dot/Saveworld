@@ -17,7 +17,7 @@ const SKIP = new Set(['Search.html', '404.html', 'Project-R.html', 'Community.ht
 const isPage = f => f.endsWith('.html') && !SKIP.has(path.basename(f)) && !/^google[0-9a-f]+\.html$/.test(path.basename(f));
 
 const files = [];
-for (const dir of ['', 'fr', 'es', 'ar', 'it']) {
+for (const dir of ['', 'fr', 'es', 'ar', 'it', 'he']) {
   for (const f of fs.readdirSync(path.join(SITE, dir))) if (isPage(f)) files.push(dir ? dir + '/' + f : f);
 }
 
@@ -35,7 +35,7 @@ for (const f of files) {
 const w = await index.writeFiles({ outputPath: path.join(OUT, 'pagefind') });
 if (w.errors.length) throw new Error(w.errors.join('\n'));
 await pagefind.close();
-console.log(`pagefind: indexed ${files.length} pages (en/fr/es/ar/it)`);
+console.log(`pagefind: indexed ${files.length} pages (en/fr/es/ar/it/he)`);
 
 // ---------- 2) Semantic index (English pages) ----------
 const decode = s => s.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;|&apos;/g, "'")

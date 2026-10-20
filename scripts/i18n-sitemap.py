@@ -5,7 +5,7 @@ uncommitted). Skipped: redirect stubs (meta refresh), robots noindex pages, 404,
 index.html is listed at its directory URL. Idempotent; other generators may still append entries, this one runs last."""
 import glob, os, re, subprocess, datetime
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it']
+SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 SKIP = re.compile(r'^(google[0-9a-f]+|404)\.html$')
 def url(l, b): return SITE + ('' if l == 'en' else l + '/') + ('' if b == 'index.html' else b)
 def path(l, b): return b if l == 'en' else f'{l}/{b}'

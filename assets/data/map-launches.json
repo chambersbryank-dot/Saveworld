@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-20T03:16:15Z",
+"generated": "2026-10-20T04:05:00Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -678,9 +678,9 @@
 "pad": "Space Launch Complex 4E"
 },
 {
-"net": "2026-11-01T05:11:00Z",
+"net": "2026-11-10T00:00:00Z",
 "exact": true,
-"prec": "MIN",
+"prec": "DAY",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-21",

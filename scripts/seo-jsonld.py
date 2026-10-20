@@ -60,14 +60,14 @@ def write(s, objs):
 
 def url(lang, page): return SITE + ('' if lang == 'en' else lang + '/') + page
 
-HOME_NAME = {'en': 'Home', 'fr': 'Accueil', 'es': 'Inicio', 'ar': 'الرئيسية', 'it': 'Home'}
+HOME_NAME = {'en': 'Home', 'fr': 'Accueil', 'es': 'Inicio', 'ar': 'الرئيسية', 'it': 'Home', 'he': 'דף הבית'}
 def page_name(lang, page):
     """Visible name of a page in that language: its <h1>, else its <title> without the brand."""
     f = page if lang == 'en' else f'{lang}/{page}'
     if not os.path.exists(f): return None
     s = open(f, encoding='utf8').read()
     m = re.search(r'<h1[^>]*>(.*?)</h1>', s, re.S) or re.search(r'<title>(.*?)</title>', s, re.S)
-    return re.sub(r'\s*[|·]\s*(Saving Planets|Français|Español|بالعربية|Italiano)\s*$', '', un(m.group(1))).strip() if m else None
+    return re.sub(r'\s*[|·]\s*(Saving Planets|Français|Español|بالعربية|Italiano|עברית)\s*$', '', un(m.group(1))).strip() if m else None
 
 def fallback_crumbs(s, lang, page):
     """Home > (section hub) > page, for pages without a visible breadcrumb nav."""
@@ -200,4 +200,4 @@ def run(langs):
     return n
 
 if __name__ == '__main__':
-    print('seo-jsonld: updated', run(sys.argv[1:] or ['en', 'fr', 'es', 'ar', 'it']), 'pages')
+    print('seo-jsonld: updated', run(sys.argv[1:] or ['en', 'fr', 'es', 'ar', 'it', 'he']), 'pages')

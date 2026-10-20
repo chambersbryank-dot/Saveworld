@@ -33,8 +33,13 @@ GROUPS = [
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
 ]
 UTIL = ['Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Find_a_Cleanup.html', 'Contact.html']  # Oct 18: + This Week's Top Ten (one stable link for X posts)
-LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
-LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano'}
+LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT', 'he': 'עב'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
+LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
+# Oct 19: Hebrew public. Its header nav comes translated from the English page (i18n-build + he.json); build-nav only
+# swaps in the slide language switch on he/ pages and lists he in every switch.
+import langs as _L
+SWITCH_LANGS = list(LANGS) + [l for l in _L.PUBLIC if l not in LANGS]
+X.setdefault('he', dict(X['en'], lang='שפה'))
 SEARCH_SVG = '<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>'
 
 def hr(l, i):
@@ -79,7 +84,7 @@ def switcher(l, page):
     label-in-name holds). Keeps <li class="lang-switch"> with plain <a href> children for the older generators and Search.html."""
     pre = '' if l == 'en' else '../'
     out = []
-    for k in LANGS:
+    for k in SWITCH_LANGS:
         tgt = page if os.path.exists(d(k) + page) else 'index.html'
         href = pre + d(k) + tgt
         on = k == l
@@ -279,5 +284,10 @@ if __name__ == '__main__':
     n = 0
     for l in LANGS:
         for p in sorted(glob.glob(d(l) + '*.html')): n += page_pass(p, l)
+    for l in [x for x in SWITCH_LANGS if x not in LANGS]:  # Oct 19: he/ keeps its translated nav; only the switch is rebuilt
+        for p in sorted(glob.glob(l + '/*.html')):
+            s = rd(p); s2 = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', lambda m: switcher(l, os.path.basename(p)), s, count=1)
+            if 'class="lang-switch"' not in s2: s2 = re.sub(r'(<ul[^>]*class="spn-util"[^>]*>)', lambda m: m.group(1) + switcher(l, os.path.basename(p)), s2, count=1)
+            if s2 != s: n += wr(p, s2)
     asset('styles.css', CSS); asset('site.js', JS)
     print(f'build-nav: {n} page writes')
