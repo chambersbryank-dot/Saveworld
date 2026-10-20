@@ -335,8 +335,12 @@ def solutions_filters(l, hubs):
     s = block(s, 'SOL-FILTERS', fb, r'<div [^>]*sol-jump')
     return wr(p, s)
 
-T['he'] = dict(filt='הצגה', all='הכול', dom=[('מים', ''), ('יבשה', ''), ('חלל', '')], more='הצגת כל {n}', less='הצגת פחות', allhubs='כל המרכזים')  # Oct 19: Solutions filter row only (strings match i18n/he.json)
-COUNT_RE = re.compile(r'\b1[0-9]{2}(?=(\+)? (real|soluciones|solutions|soluzioni|حل))')
+T['he'] = dict(filt='הצגה', all='הכול', dom=[('מים', ''), ('יבשה', 'יערות והאנשים שחיים איתם'), ('חלל', 'לוויינים, משימות ושמירה על מסלול נקי')], more='הצגת כל {n}', less='הצגת פחות', allhubs='כל המרכזים',  # Oct 19: Solutions filter row (strings match i18n/he.json)
+   # Oct 20 (daily numbers check): Hebrew is public, so the homepage impact strip / domain sections / Latest Updates are built here too
+   # (he/index.html was one build behind: 212 vs 231). Strings are the existing i18n/he.json translations; nav stays i18n-built.
+   cta1='גלו את כל הפתרונות', cta2='דרכים לעזור', imp=['פתרונות אמיתיים ומבוססי מקורות', 'מרכזי פתרונות', 'שפות', 'כלי למידה לילדים ולמורים'],
+   seeall='ראו את כל {n} פתרונות ה{d}', news='עדכונים אחרונים', newsintro='מה השתנה באתר לאחרונה. הירשמו לתקציר השבועי כדי לקבל זאת כל שבוע.')
+COUNT_RE = re.compile(r'\b[1-9][0-9]{2}(?=(\+)? (real|soluciones|solutions|soluzioni|حل))')
 def page_pass(p, l, n):
     s = rd(p); o = s
     page = os.path.basename(p)
@@ -361,8 +365,8 @@ def page_pass(p, l, n):
     # auto counts in visible text (not inside dates)
     # Oct 16: video transcripts are left alone: they say what the narration says (a11y.json "pinned"), not the live count
     def _cnt(t):
-        t = re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), t)
-        return re.sub(r'(?<![\d,.])1[0-9]{2}(?=\+? (حلول|حلا))', str(n), t)
+        t = re.sub(r'(?<![\d,.])[1-9][0-9]{2}(?=\+? (real|sourced|soluciones|solutions|soluzioni|حل|حلًا))', str(n), t)  # Oct 20: any 3-digit count (was 1xx only; count is 231)
+        return re.sub(r'(?<![\d,.])[1-9][0-9]{2}(?=\+? (حلول|حلا))', str(n), t)
     # Oct 17: video captions (sp-video-cap) describe the recording ("recorded when we had 120"), so they keep their number too
     s = ''.join(x if x.startswith(('<!-- TRANSCRIPT:START -->', '<span class="sp-video-cap"')) else _cnt(x) for x in re.split(r'(<!-- TRANSCRIPT:START -->.*?<!-- TRANSCRIPT:END -->|<span class="sp-video-cap"[^>]*>.*?</span>)', s, flags=re.S))
     # canonical/og for index pages
@@ -402,5 +406,9 @@ if __name__ == '__main__':
     # Oct 19 (owner): hidden Hebrew /he/Solutions.html gets the same All / Water / Land / Space filter row as the other languages
     # (it had none; build-ux only ran for en/fr/es/ar/it). Only the filter row: the rest of this pass stays on the 5 public languages.
     if os.path.exists('he/Solutions.html'): ch += solutions_filters('he', sol_cards('he'))
+    # Oct 20 (daily numbers check): Hebrew is public (langs.HE_PUBLIC), so its homepage counts are built here like the other languages
+    # (impact strip, Water/Land/Space sections, Latest Updates). Before, he/index.html only got them via i18n-build, one sync behind.
+    import langs as _LP
+    if 'he' in _LP.PUBLIC and os.path.exists('he/index.html') and os.path.exists('he/Solutions.html'): ch += home('he', n, sol_cards('he'))
     asset('styles.css', CSS); asset('site.js', JS); sitemap(); bump_styles(); ch += apply_tint(hubs_by['en'])
     print(f'build-ux: {n} solutions, {ch} page writes')

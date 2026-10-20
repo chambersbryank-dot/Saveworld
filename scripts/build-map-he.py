@@ -26,6 +26,13 @@ for site in d['sites']: site['name'] = t(site['name'])
 json.dump(d, open('assets/data/map.he.json', 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 f = 'he/World_Map.html'; h = open(f, encoding='utf8').read()
 h2 = re.sub(r'data-src="(?:\.\./)?assets/data/map\.[a-z]+\.json', 'data-src="../assets/data/map.he.json', h)
+# Oct 20 (daily numbers check): the h1 + JSON-LD name came from i18n-build of the English page, i.e. the previous sync's count and,
+# with no exact TM entry, in English ('Our 212 solutions around the world' while the site had 231). Live count + the he template.
+n_sol = len(re.findall(r'<article class="card sol-card"', open('Solutions.html', encoding='utf8').read()))
+tpl = M.get('Our {n} solutions around the world')
+if tpl and n_sol:
+    h2 = re.sub(r'Our \d+ solutions around the world', lambda m: tpl.replace('{n}', str(n_sol)), h2)
+    h2 = re.sub(r'\d+ הפתרונות שלנו ברחבי העולם', lambda m: tpl.replace('{n}', str(n_sol)), h2)
 if not L10N.HE_PUBLIC: h2 = L10N.ensure_hidden_robots(h2)
 if h2 != h: open(f, 'w', encoding='utf8').write(h2)
 ui = d['ui']; print('build-map-he: ui', sum(1 for v in ui.values() if re.search('[\u0590-\u05ff]', v)), '/', len(ui),

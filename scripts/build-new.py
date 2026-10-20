@@ -6,12 +6,17 @@ Run after build-ux.py / build-sol-directory.py. Idempotent (NEW-STRIP markers)."
 import re, os, json, html, subprocess, datetime, importlib.util
 spec = importlib.util.spec_from_file_location('sf', 'scripts/build-spotfire.py'); sf = importlib.util.module_from_spec(spec); spec.loader.exec_module(sf)
 SITE, LANGS, d, rd, wr, esc = sf.SITE, sf.LANGS, sf.d, sf.rd, sf.wr, sf.esc
+# Oct 20 (daily numbers check): Hebrew is public, so it gets its own strip + Changelog here (he/ had been one sync behind: 212 vs 231,
+# English dates). Strings are the existing i18n/he.json translations.
+import sys as _sys; _sys.path.insert(0, 'scripts'); import langs as _LP
+if 'he' in _LP.PUBLIC and os.path.exists('he/index.html') and os.path.exists('he/Solutions.html') and 'he' not in LANGS: LANGS = list(LANGS) + ['he']
 PAGE = 'Changelog.html'; SHOW = 8
 MON = {'en': 'January February March April May June July August September October November December',
        'fr': 'janvier février mars avril mai juin juillet août septembre octobre novembre décembre',
        'es': 'enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre',
        'ar': 'يناير فبراير مارس أبريل مايو يونيو يوليو أغسطس سبتمبر أكتوبر نوفمبر ديسمبر',
-       'it': 'gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre'}
+       'it': 'gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre',
+       'he': 'בינואר בפברואר במרץ באפריל במאי ביוני ביולי באוגוסט בספטמבר באוקטובר בנובמבר בדצמבר'}  # Oct 20: '16 באוקטובר 2026' as in i18n/he.json
 T = {'en': dict(h='New this week', sum='{n} new solutions added on {a}. They are already counted in the {t} total.', early='Solutions already on the site before the changelog started', all='See the full changelog',
                 title='Changelog: what is new on Saving Planets', desc='Every solution page, with the date it was added.',
                 lead='Every solution added to Saving Planets, newest first. Each batch is dated by the day it was released.',
@@ -31,7 +36,11 @@ T = {'en': dict(h='New this week', sum='{n} new solutions added on {a}. They are
      'it': dict(h='Novità della settimana', sum='{n} nuove soluzioni aggiunte il {a}. Sono già incluse nel totale di {t}.', early='Soluzioni già presenti prima dell’inizio del registro', all='Vedi il registro completo delle modifiche',
                 title='Registro delle modifiche: le novità di Saving Planets', desc='Ogni pagina di soluzione, con la data in cui è stata aggiunta.',
                 lead='Ogni soluzione aggiunta a Saving Planets, dalla più recente. Le date sono quelle di pubblicazione di ogni pagina.',
-                sols='Soluzioni aggiunte', upd='Aggiornamenti del sito')}
+                sols='Soluzioni aggiunte', upd='Aggiornamenti del sito'),
+     'he': dict(h='חדש השבוע', sum='{n} פתרונות חדשים נוספו ב-{a}. הם כבר נכללים בסך של {t}.', early='פתרונות שכבר היו באתר לפני שיומן השינויים התחיל', all='לרשימת השינויים המלאה',
+                title='יומן שינויים: מה חדש ב-Saving Planets', desc='כל דף פתרון, עם התאריך שבו נוסף.',
+                lead='כל פתרון שנוסף ל-Saving Planets, מהחדש לישן. כל קבוצה מתוארכת לפי היום שבו פורסמה.',
+                sols='פתרונות שנוספו', upd='עדכוני האתר')}
 def fmt(l, iso, year=True):
     y, m, dd = map(int, iso.split('-')); mo = MON[l].split()[m - 1]
     s = f'{mo} {dd}' if l == 'en' else f'{dd} {mo}'
@@ -54,7 +63,7 @@ def strip(l, sols, dates, today, total, pre):
     lis = ''.join(f'<li><time datetime="{dates[u]}">{esc(fmt(l, dates[u], False))}</time> <a href="{sf.href(l, u)}">{esc(sols.get(u, u[:-5]))}</a></li>' for u in wk)
     return (f'<!-- NEW-STRIP:START --><section class="new-strip" aria-labelledby="new-h"><h2 id="new-h">🆕 {esc(t["h"])}</h2>'
             f'<p class="ns-sum">{esc(t["sum"].format(n=len(wk), a=fmt(l, a), b=fmt(l, b), t=total))}</p><ul class="ns-list">{lis}</ul>'
-            f'<p class="ns-all"><a href="{pre}{PAGE}">{esc(t["all"])} {"←" if l == "ar" else "→"}</a></p></section><!-- NEW-STRIP:END -->')
+            f'<p class="ns-all"><a href="{pre}{PAGE}">{esc(t["all"])} {"←" if l in ("ar", "he") else "→"}</a></p></section><!-- NEW-STRIP:END -->')
 def put(p, blk, anchor_re, before=True):
     if not os.path.exists(p): return 0
     s = rd(p); s = re.sub(r'<!-- NEW-STRIP:START -->.*?<!-- NEW-STRIP:END -->', '', s, flags=re.S)

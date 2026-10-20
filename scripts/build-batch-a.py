@@ -136,13 +136,17 @@ def related_block(page, rel):
 DIFF_LEAD = 'From the ocean floor to low Earth orbit, solutions minus the doom.'
 DIFF_BODY = '{n} real, sourced solutions across {h} hubs, explained the same simple way (Who, What, When, Where, Why), in English, French, Spanish, Arabic, Italian and Hebrew. Search by meaning, privately in your browser, powered by trusted MIT open-source tools.'
 DIFF_T = {'fr': ("Du fond de l'océan à l'orbite terrestre basse, des solutions sans le catastrophisme.",
-                 "{n} solutions réelles et sourcées réparties en {h} pôles, expliquées de la même façon simple (Qui, Quoi, Quand, Où, Pourquoi), en anglais, français, espagnol, arabe et italien. Recherchez par le sens, en toute confidentialité dans votre navigateur, grâce à des outils open source MIT de confiance."),
+                 "{n} solutions réelles et sourcées réparties en {h} pôles, expliquées de la même façon simple (Qui, Quoi, Quand, Où, Pourquoi), en anglais, français, espagnol, arabe, italien et hébreu. Recherchez par le sens, en toute confidentialité dans votre navigateur, grâce à des outils open source MIT de confiance."),
           'es': ('Desde el fondo del océano hasta la órbita terrestre baja, soluciones sin catastrofismo.',
-                 '{n} soluciones reales y con fuentes en {h} áreas, explicadas de la misma forma sencilla (Quién, Qué, Cuándo, Dónde, Por qué), en inglés, francés, español, árabe e italiano. Busca por significado, de forma privada en tu navegador, con herramientas de código abierto MIT de confianza.'),
+                 '{n} soluciones reales y con fuentes en {h} áreas, explicadas de la misma forma sencilla (Quién, Qué, Cuándo, Dónde, Por qué), en inglés, francés, español, árabe, italiano y hebreo. Busca por significado, de forma privada en tu navegador, con herramientas de código abierto MIT de confianza.'),
           'ar': ('من قاع المحيط إلى المدار الأرضي المنخفض، حلول بلا تهويل.',
-                 '{n} حلاً حقيقياً وموثّق المصادر في {h} محاور، مشروحة بالطريقة البسيطة نفسها (من، ماذا، متى، أين، لماذا)، بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية. ابحث بالمعنى، بخصوصية داخل متصفحك، بأدوات مفتوحة المصدر موثوقة بترخيص MIT.'),
+                 '{n} حلاً حقيقياً وموثّق المصادر في {h} محاور، مشروحة بالطريقة البسيطة نفسها (من، ماذا، متى، أين، لماذا)، بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية والعبرية. ابحث بالمعنى، بخصوصية داخل متصفحك، بأدوات مفتوحة المصدر موثوقة بترخيص MIT.'),
           'it': ('Dal fondo dell’oceano all’orbita terrestre bassa, soluzioni senza catastrofismo.',
-                 '{n} soluzioni reali e con fonti in {h} hub, spiegate nello stesso modo semplice (Chi, Cosa, Quando, Dove, Perché), in inglese, francese, spagnolo, arabo e italiano. Cerca per significato, in privato nel tuo browser, con strumenti open source MIT di fiducia.')}
+                 '{n} soluzioni reali e con fonti in {h} hub, spiegate nello stesso modo semplice (Chi, Cosa, Quando, Dove, Perché), in inglese, francese, spagnolo, arabo, italiano ed ebraico. Cerca per significato, in privato nel tuo browser, con strumenti open source MIT di fiducia.'),
+          # Oct 20 (daily numbers check): Hebrew is public; its strip fell back to English whenever the count changed (no TM key for the new number).
+          # The translations above now list Hebrew too, as the English does (they listed five languages).
+          'he': ('מקרקעית האוקיינוס ועד מסלול נמוך סביב כדור הארץ, פתרונות בלי האבדון.',
+                 '{n} פתרונות אמיתיים ומבוססי מקורות ב-{h} מרכזים, מוסברים באותה דרך פשוטה (מי, מה, מתי, איפה, למה), באנגלית, צרפתית, ספרדית, ערבית, איטלקית ועברית. חיפוש לפי משמעות, באופן פרטי בדפדפן שלכם, בעזרת כלי קוד פתוח מהימנים ברישיון MIT.')}
 UI = {'fr': {'Share this page': 'Partager cette page', 'Share': 'Partager', 'Share on X': 'Partager sur X', 'Share on Facebook': 'Partager sur Facebook',
              'Share on LinkedIn': 'Partager sur LinkedIn', 'Share by email': 'Partager par e-mail', 'Email': 'E-mail', 'Copy link': 'Copier le lien',
              'Link copied': 'Lien copié', 'Last reviewed:': 'Dernière révision :', 'Related Solutions': 'Solutions similaires',
@@ -198,7 +202,7 @@ def main():
     total, nh = len(NAME), len(HL)
     body = DIFF_BODY.replace('{n}', str(total)).replace('{h}', str(nh))
     for l in DIFF_T:
-        keys[l][DIFF_LEAD] = DIFF_T[l][0]; keys[l][body] = DIFF_T[l][1].replace('{n}', str(total)).replace('{h}', str(nh))
+        keys.setdefault(l, {}); keys[l][DIFF_LEAD] = DIFF_T[l][0]; keys[l][body] = DIFF_T[l][1].replace('{n}', str(total)).replace('{h}', str(nh))
     strip = (f'<section class="diff-strip" aria-label="What makes us different"><p class="diff-lead">{DIFF_LEAD}</p><p class="diff-body">{html.escape(body, quote=False)}</p></section>')
     for page, anchor in (('index.html', r'<section class="hero [^"]*">.*?</section>'), ('About.html', r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')):
         s = rd(page); o = s

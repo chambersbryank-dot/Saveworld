@@ -179,10 +179,12 @@ function dropStaleCount(text, n) {
   if (!n) return text;
   return text.replace(/(^|[.:]\s+)([^.:]*Saving Planets[^.]*?(\d[\d,]*)[^.]*\.)\s*$/, (m0, pre, sent, num) => +num.replace(/,/g, '') === n ? m0 : pre.replace(/\s+$/, '').replace(/:$/, '.') ).trim();
 }
+// Oct 20 (daily numbers check): the site's language count is the homepage hreflang set (6 with Hebrew), not the number of newsletter groups (5).
+function siteLanguages() { const h = rd('index.html') || ''; return new Set([...h.matchAll(/<link rel="alternate" hreflang="([a-z]{2})"/g)].map(m => m[1])).size || null; }
 function siteStats(launchList) {
   const s = (readJson('assets/data/solutions.json') || {}).site || {}, art = readJson('assets/data/artemis.json');
   const facts = factCards('en').length;
-  return { solutions: s.solutions, hubs: s.hubs, languages: Object.keys(GROUPS).length, upcomingMissions: s.upcomingMissions, facts: facts || null, launchesThisWeek: launchList ? launchList.length : null, artemisUpcoming: art ? art.missions.filter(m => m.state === 'upcoming').length : null };
+  return { solutions: s.solutions, hubs: s.hubs, languages: siteLanguages() || Object.keys(GROUPS).length, upcomingMissions: s.upcomingMissions, facts: facts || null, launchesThisWeek: launchList ? launchList.length : null, artemisUpcoming: art ? art.missions.filter(m => m.state === 'upcoming').length : null };
 }
 function kidsPick(lang) {
   const e = readJson(`assets/data/edu.${lang}.json`) || readJson('assets/data/edu.en.json'), keys = Object.keys(e.hubs);

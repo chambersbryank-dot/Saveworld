@@ -100,13 +100,13 @@ F = [
    'he': "תרמו, היו שותפים או הפשילו שרוולים: כל רשומה מקשרת לדף התרומות או ההתנדבות של הארגון עצמו."}),
   [('Ways_to_Help.html', ("Find a way to help", {'fr': "Trouver comment aider", 'es': "Encuentra cómo ayudar", 'ar': "اعثر على طريقة للمساعدة", 'it': "Trova un modo per aiutare", 'he': "מצאו דרך לעזור"}))]),
  ('languages', None, 'top10-languages.png', 'NASA/JPL-Caltech/Space Science Institute',
-  ("Read in 5 Languages", {'fr': "À lire en 5 langues", 'es': "Disponible en 5 idiomas", 'ar': "اقرأ بخمس لغات", 'it': "Da leggere in 5 lingue", 'he': "קראו ב-5 שפות"}),
-  ("Every page reads in English, French, Spanish, Arabic and Italian, with a one-tap language switch at the top of the page.", {
-   'fr': "Chaque page se lit en anglais, français, espagnol, arabe et italien, avec un sélecteur de langue en haut de la page.",
-   'es': "Cada página se lee en inglés, francés, español, árabe e italiano, con un selector de idioma en la parte superior.",
-   'ar': "كل صفحة تُقرأ بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية، مع مبدّل لغة بلمسة واحدة أعلى الصفحة.",
-   'it': "Ogni pagina si legge in inglese, francese, spagnolo, arabo e italiano, con un selettore di lingua in cima alla pagina.",
-   'he': "כל דף זמין באנגלית, צרפתית, ספרדית, ערבית ואיטלקית, עם מתג שפה בלחיצה אחת בראש הדף."}),
+  ("Read in {L} Languages", {'fr': "À lire en {L} langues", 'es': "Disponible en {L} idiomas", 'ar': "اقرأ بـ{L} لغات", 'it': "Da leggere in {L} lingue", 'he': "קראו ב-{L} שפות"}),  # Oct 20: {L} = live public language count (Hebrew made 6)
+  ("Every page reads in English, French, Spanish, Arabic, Italian and Hebrew, with a one-tap language switch at the top of the page.", {
+   'fr': "Chaque page se lit en anglais, français, espagnol, arabe, italien et hébreu, avec un sélecteur de langue en haut de la page.",
+   'es': "Cada página se lee en inglés, francés, español, árabe, italiano y hebreo, con un selector de idioma en la parte superior.",
+   'ar': "كل صفحة تُقرأ بالإنجليزية والفرنسية والإسبانية والعربية والإيطالية والعبرية، مع مبدّل لغة بلمسة واحدة أعلى الصفحة.",
+   'it': "Ogni pagina si legge in inglese, francese, spagnolo, arabo, italiano ed ebraico, con un selettore di lingua in cima alla pagina.",
+   'he': "כל דף זמין באנגלית, צרפתית, ספרדית, ערבית, איטלקית ועברית, עם מתג שפה בלחיצה אחת בראש הדף."}),
   'LANGS'),
  ('lessons', 'Lesson_Builder.html', 'top10-lessons.png', 'USFWS',
   ("Lesson Plan Builder and Teacher Sheets", {'fr': "Créateur de plans de cours et fiches enseignants", 'es': "Creador de planes de clase y fichas docentes", 'ar': "منشئ خطط الدروس وأوراق المعلمين", 'it': "Generatore di lezioni e schede per insegnanti", 'he': "בונה מערכי שיעור ודפי מורים"}),
@@ -158,10 +158,13 @@ PHOTO = {'solutions': ('images/earth-blue-marble-land-ocean-ice-cloud.jpg', 'NAS
          'roman': ('images/Roman_Launch_NHQ202608300015.jpg', 'NASA/Joel Kowsky (NHQ202608300015)'),
          'polar': ('images/Labrador_Sea_Ice_ISS.jpg', 'NASA (ISS070-E-086805, Feb. 3, 2024)')}
 LANG_LINKS = [('EN', SITE), ('FR', SITE + 'fr/'), ('ES', SITE + 'es/'), ('العربية', SITE + 'ar/'), ('IT', SITE + 'it/')]  # public languages only
+import langs as _LP  # Oct 20: Hebrew is public -> add its link; {L} = 1 + public translated languages
+if 'he' in _LP.PUBLIC: LANG_LINKS.append(('עברית', SITE + 'he/'))
+NL = 1 + len(_LP.PUBLIC)
 ALT = "Screenshot of the {t} page on Saving Planets"
 ALT_T = {'fr': "Capture d'écran de la page {t} sur Saving Planets", 'es': "Captura de pantalla de la página {t} en Saving Planets", 'ar': "لقطة شاشة لصفحة {t} على Saving Planets",
          'it': "Schermata della pagina {t} su Saving Planets", 'he': "צילום מסך של הדף {t} ב-Saving Planets"}
-def fill(x): return x.replace('{n}', str(N)).replace('{h}', str(H))
+def fill(x): return x.replace('{n}', str(N)).replace('{h}', str(H)).replace('{L}', str(NL))
 def esc(x): return html.escape(x, quote=False).replace('"', '&quot;')
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, s):
@@ -199,7 +202,7 @@ def body():
         img = pic(key, tt, '(max-width:560px) 92vw, (max-width:900px) 46vw, 300px')
         im = (f'<a class="photo-link" href="{href}" tabindex="-1" aria-hidden="true">{img}</a>' if href else img)
         if btns == 'LANGS':
-            more = ' · '.join(f'<a href="{u}" hreflang="{["en","fr","es","ar","it"][k]}" lang="{["en","fr","es","ar","it"][k]}">{esc(lab)}</a>' for k, (lab, u) in enumerate(LANG_LINKS))
+            more = ' · '.join(f'<a href="{u}" hreflang="{["en","fr","es","ar","it","he"][k]}" lang="{["en","fr","es","ar","it","he"][k]}">{esc(lab)}</a>' for k, (lab, u) in enumerate(LANG_LINKS))
         else:
             more = ' · '.join(f'<a href="{h}">{esc(fill(b[0]))}</a>' for h, b in btns)
         h3 = f'<a href="{href}">{esc(tt)}</a>' if href else esc(tt)

@@ -113,7 +113,7 @@
    "title": "Aero Lab : décrochage, stabilité et puissance du rotor"
   },
   "it": {
-   "description": "Aero Lab interattivo: velocità di stallo in atmosfera standard (ISA), autovalori del modo di corto periodo e potenza del rotore in hovering, in 5 lingue.",
+   "description": "Aero Lab interattivo: velocità di stallo in atmosfera standard (ISA), autovalori del modo di corto periodo e potenza del rotore in hovering, in 6 lingue.",
    "title": "Aero Lab: stallo, stabilità e potenza del rotore"
   }
  },
@@ -396,7 +396,7 @@
  },
  "Corrections.html": {
   "ar": {
-   "description": "هل لاحظت خطأً في Saving Planets؟ أخبرنا بما هو غير صحيح عبر النموذج القصير في هذه الصفحة، وسنصحّحه بسرعة وبكل اللغات الخمس.",
+   "description": "هل لاحظت خطأً في Saving Planets؟ أخبرنا بما هو غير صحيح عبر النموذج القصير في هذه الصفحة، وسنصحّحه بسرعة وبكل اللغات.",
    "title": "التصحيحات: أبلغنا عن خطأ"
   },
   "en": {
@@ -1050,10 +1050,10 @@
  },
  "Orbit_Math.html": {
   "ar": {
-   "description": "من أول معادلة مدارية إلى مسألة لامبرت: اشتقاقات وأمثلة محلولة وتمارين، من السنة الجامعية الأولى حتى الدكتوراه، مجانًا وبخمس لغات."
+   "description": "من أول معادلة مدارية إلى مسألة لامبرت: اشتقاقات وأمثلة محلولة وتمارين، من السنة الجامعية الأولى حتى الدكتوراه، مجانًا وبست لغات."
   },
   "en": {
-   "description": "From your first orbit equation to Lambert’s problem: derivations, worked examples and practice problems, freshman to PhD, free and in five languages."
+   "description": "From your first orbit equation to Lambert’s problem: derivations, worked examples and practice problems, freshman to PhD, free and in six languages."
   },
   "es": {
    "description": "De tu primera ecuación de órbita al problema de Lambert: deducciones, ejemplos resueltos y ejercicios, desde el primer año de universidad hasta el doctorado."

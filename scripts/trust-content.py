@@ -100,10 +100,12 @@ PAGES = {
     'Escribe a errors@savingplanets.com con la dirección de la página, qué está mal y, si puedes, una fuente. Cualquier idioma sirve.',
     'راسل errors@savingplanets.com مع رابط الصفحة وما الخطأ فيها، ومصدر إن أمكن. يمكنك الكتابة بأي لغة.')]),
   (('What Happens Next', 'Et ensuite ?', 'Qué pasa después', 'ماذا يحدث بعد ذلك'), [
-   ('We aim to reply within 5 business days. If a fact is wrong, we fix it on all five language versions and update the page’s “Last reviewed” date.',
-    'Nous visons une réponse sous 5 jours ouvrés. Si un fait est faux, nous le corrigeons dans les cinq langues et mettons à jour la date de « dernière relecture ».',
-    'Intentamos responder en 5 días hábiles. Si un dato está mal, lo corregimos en las cuatro versiones de idioma y actualizamos la fecha de «última revisión».',
-    'نسعى للرد خلال 5 أيام عمل. وإذا كانت المعلومة خاطئة، نصححها في النسخ الأربع ونحدّث تاريخ «آخر مراجعة» للصفحة.'),
+   # Oct 20 (daily numbers check): 'all five language versions' -> every language version (Hebrew made six; ar said four, it/he five)
+   ('We aim to reply within 5 business days. If a fact is wrong, we fix it in every language version and update the page’s “Last reviewed” date.',
+    'Nous visons une réponse sous 5 jours ouvrés. Si un fait est faux, nous le corrigeons dans toutes les langues et mettons à jour la date de « dernière relecture ».',
+    'Intentamos responder en 5 días hábiles. Si un dato está mal, lo corregimos en todas las versiones de idioma y actualizamos la fecha de «última revisión».',
+    'نسعى للرد خلال 5 أيام عمل. وإذا كانت المعلومة خاطئة، نصححها في جميع النسخ اللغوية ونحدّث تاريخ «آخر مراجعة» للصفحة.',
+    'Vogliamo rispondere entro 5 giorni lavorativi. Se un fatto è sbagliato, lo risolviamo in tutte le versioni linguistiche e aggiorniamo la data della pagina “Ultima recensione”.'),
    ('Significant corrections (a wrong number, date or claim) are listed below with the date of the fix.',
     'Les corrections importantes (chiffre, date ou affirmation erronés) sont listées ci-dessous avec leur date.',
     'Las correcciones importantes (una cifra, fecha o afirmación errónea) se listan abajo con la fecha del arreglo.',
