@@ -177,6 +177,7 @@ AJS = r"""(function(){var w=document.getElementById('k1a');if(!w)return;var T=JS
 var $=function(q){return w.querySelector(q)},card=$('.arc-card');
 function sh(a){for(var j=a.length-1;j>0;j--){var k=Math.floor(Math.random()*(j+1)),t=a[j];a[j]=a[k];a[k]=t}return a}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function su(u){u=String(u==null?'':u).replace(/[<>"'`\s]/g,'');return /^(javascript|data|vbscript):/i.test(u)?'#':u}
 function start(){Q=sh(A.filter(function(q){return mode==='all'||(mode==='m'?q.m:!q.m)}));i=0;sc=0;show()}
 function show(){card.innerHTML='';var q=Q[i];if(!q){card.appendChild(el('p','arc-verdict','🏆 '+T.done));card.appendChild(el('p','arc-claim',T.score.replace('{s}',sc).replace('{n}',Q.length)));
 var b=el('button','k1-btn',T.again);b.type='button';b.onclick=start;card.appendChild(b);b.focus();return}
@@ -184,10 +185,10 @@ card.appendChild(el('p','arc-step',T.claim.replace('{i}',i+1).replace('{n}',Q.le
 var g=el('div','arc-ans');[[1,'m','🙅 '+T.myth],[0,'f','✅ '+T.fact]].forEach(function(o){var b=el('button','k1-btn '+o[1],o[2]);b.type='button';b.onclick=function(){answer(o[0])};g.appendChild(b)});card.appendChild(g);c.focus()}
 function answer(m){var q=Q[i],ok=(m===q.m);ok&&sc++;card.querySelector('.arc-ans').remove();var v=el('div','arc-ev');v.setAttribute('role','status');
 v.appendChild(el('p','arc-verdict',(ok?'🎉 '+T.right:'🔎 '+T.wrong)+' '+(q.m?T.is_myth:T.is_fact)));v.appendChild(el('h3','',T.how));
-if(q.i){var im=el('img');im.src=q.i;im.alt=q.a||'';im.loading='lazy';im.decoding='async';v.appendChild(im);q.r&&v.appendChild(el('p','fact-credit',q.r))}
+if(q.i){var im=el('img');im.src=su(q.i);im.alt=q.a||'';im.loading='lazy';im.decoding='async';v.appendChild(im);q.r&&v.appendChild(el('p','fact-credit',q.r))}
 if(q.m){v.appendChild(el('p','',q.e));q.x&&v.appendChild(el('p','',q.x))}else if(q.e)v.appendChild(el('p','',q.e));
-var s=el('p','src',T.src+' ');var a=el('a','',q.s);a.href=q.u;a.target='_blank';a.rel='noopener';s.appendChild(a);v.appendChild(s);
-var r=el('p');var b2=el('a','',T.more);b2.href=q.h;r.appendChild(b2);v.appendChild(r);var n=el('button','k1-btn',T.next+' →');n.type='button';n.onclick=function(){i++;show()};v.appendChild(n);card.appendChild(v);n.focus()}
+var s=el('p','src',T.src+' ');var a=el('a','',q.s);a.href=su(q.u);a.target='_blank';a.rel='noopener';s.appendChild(a);v.appendChild(s);
+var r=el('p');var b2=el('a','',T.more);b2.href=su(q.h);r.appendChild(b2);v.appendChild(r);var n=el('button','k1-btn',T.next+' →');n.type='button';n.onclick=function(){i++;show()};v.appendChild(n);card.appendChild(v);n.focus()}
 [].forEach.call(w.querySelectorAll('.arc-filter button'),function(b){b.onclick=function(){mode=b.dataset.m;[].forEach.call(w.querySelectorAll('.arc-filter button'),function(x){x.setAttribute('aria-pressed',x===b)});start()}});
 $('.arc-go').onclick=start})();"""
 def arcade(l):

@@ -33,7 +33,7 @@ VIDEO_JS = ("<script>(function(){document.querySelectorAll('.sp-anim-banner vide
     "var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)'),c=navigator.connection;if((rm&&rm.matches)||(c&&c.saveData))return;"
     "var s=JSON.parse(v.getAttribute('data-srcs')),r=b.getBoundingClientRect(),ar=v.videoWidth&&v.videoHeight?v.videoWidth/v.videoHeight:+(v.getAttribute('data-ar')||2.34),"
     "need=Math.max(r.width,r.height*ar)*Math.min(window.devicePixelRatio||1,2),u=s[s.length-1][1];if(innerWidth<=760)need=Math.min(need,1920);"
-    "for(var i=0;i<s.length;i++){if(s[i][0]>=need*0.92){u=s[i][1];break}}v.src=u;"
+    "for(var i=0;i<s.length;i++){if(s[i][0]>=need*0.92){u=s[i][1];break}}u=String(u).replace(/[<>\x22\x27\x60\\s]/g,'');if(/^(javascript|data|vbscript):/i.test(u))return;v.src=u;"
     "v.addEventListener('playing',function(){b.classList.add('is-playing')},{once:true});var held=false,btn=b.querySelector('.spb-pause');"
     "var p=function(){if(held)return;var q=v.play();q&&q.catch&&q.catch(function(){})};"
     "btn&&btn.addEventListener('click',function(){held=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',held);btn.innerHTML=held?'&#9654;':'&#10074;&#10074;';held?v.pause():p()});"
