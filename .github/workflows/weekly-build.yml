@@ -41,7 +41,7 @@ jobs:
         if: vars.OG_AT_BUILD == 'true'
         run: python3 scripts/build-og.py
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with: { path: "." }
   deploy:
     needs: build
