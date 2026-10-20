@@ -2631,6 +2631,62 @@
      "basis": "page"
     }
    ]
+  },
+  "Gulf_of_Alaska_Keeper.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 59.95,
+     "lng": -147.45,
+     "label": "Montague Island, Prince William Sound, Alaska",
+     "basis": "page"
+    }
+   ]
+  },
+  "Alaska_Kelp_Farming.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 57.79,
+     "lng": -152.41,
+     "label": "Kodiak, Alaska (Alaska Sea Grant mariculture specialists)",
+     "basis": "page"
+    },
+    {
+     "lat": 55.54,
+     "lng": -132.4,
+     "label": "Kasaan Bay, Southeast Alaska (new kelp farm leases)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Bristol_Bay_Salmon.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 59.9,
+     "lng": -155.3,
+     "label": "Pebble deposit area, Bristol Bay watershed, Alaska",
+     "basis": "page"
+    },
+    {
+     "lat": 58.7,
+     "lng": -158.2,
+     "label": "Bristol Bay, Alaska",
+     "basis": "page"
+    }
+   ]
+  },
+  "Alaska_SeaLife_Center.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 60.0995,
+     "lng": -149.4417,
+     "label": "Alaska SeaLife Center, Seward, Alaska",
+     "basis": "page"
+    }
+   ]
   }
  }
 }

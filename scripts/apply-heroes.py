@@ -91,6 +91,11 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'MAAP': ('Ucayali_River_ISS_2026.jpg', 'NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)'),
     'Mesoamerican_Reef_Insurance': ('Belize_Coast_ISS_2014.jpg', 'NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)'),
     'Costa_Rica_Forest_Payments': ('Costa_Rica_ISS_2020.jpg', 'NASA (iss062e001866, Costa Rica, Feb. 8, 2020)'),
+    # Oct 20: Alaska batch (scripts/batch-1020-content.py)
+    'Gulf_of_Alaska_Keeper': ('Gulf_of_Alaska_Bloom_2017.jpg', 'NASA/Goddard/NPP (GSFC_20171208_Archive_e000038, Gulf of Alaska spring bloom, April 12, 2017)'),
+    'Alaska_Kelp_Farming': ('Alaska_Clear_View_Terra_2013.jpg', 'NASA (GSFC_20171208_Archive_e001460, Terra/MODIS, Alaska, June 17, 2013)'),
+    'Bristol_Bay_Salmon': ('Bristol_Bay_Terra_2017.jpg', 'NASA Earth Observatory image by Joshua Stevens, using MODIS data from LANCE/EOSDIS Rapid Response (Bristol Bay, May 14, 2017)'),
+    'Alaska_SeaLife_Center': ('Gulf_of_Alaska_Aurora_ISS_2025.jpg', 'NASA (iss072e820937, Gulf of Alaska and aurora, March 12, 2025)'),
     # Oct 18: approved batch A-P (scripts/batch-1018-content.py)
     'Voyager': ('Voyager_Heliosphere_PIA22835.jpg', 'NASA/JPL-Caltech (PIA22835)'),
     'FORUM': ('Clouds_Limb_ISS.jpg', 'NASA'),

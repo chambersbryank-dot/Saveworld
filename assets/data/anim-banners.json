@@ -704,6 +704,26 @@
    "credit": "NASA (iss062e001866, Costa Rica, Feb. 8, 2020)",
    "pos": "50% 50%",
    "r2": "images/Costa_Rica_ISS_2020.jpg"
+  },
+  "assets/Gulf_of_Alaska_Bloom_2017.jpg": {
+   "credit": "NASA/Goddard/NPP (GSFC_20171208_Archive_e000038, Gulf of Alaska spring bloom, April 12, 2017)",
+   "pos": "50% 50%",
+   "r2": "images/Gulf_of_Alaska_Bloom_2017.jpg"
+  },
+  "assets/Alaska_Clear_View_Terra_2013.jpg": {
+   "credit": "NASA (GSFC_20171208_Archive_e001460, Terra/MODIS, Alaska, June 17, 2013)",
+   "pos": "50% 50%",
+   "r2": "images/Alaska_Clear_View_Terra_2013.jpg"
+  },
+  "assets/Bristol_Bay_Terra_2017.jpg": {
+   "credit": "NASA Earth Observatory image by Joshua Stevens, using MODIS data from LANCE/EOSDIS Rapid Response (Bristol Bay, May 14, 2017)",
+   "pos": "50% 50%",
+   "r2": "images/Bristol_Bay_Terra_2017.jpg"
+  },
+  "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg": {
+   "credit": "NASA (iss072e820937, Gulf of Alaska and aurora, March 12, 2025)",
+   "pos": "50% 50%",
+   "r2": "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
   }
  },
  "pages": {
@@ -970,6 +990,10 @@
   "Galapagos_Giant_Tortoises.html": "assets/Fernandina_Galapagos_ISS_2022.jpg",
   "MAAP.html": "assets/Ucayali_River_ISS_2026.jpg",
   "Mesoamerican_Reef_Insurance.html": "assets/Belize_Coast_ISS_2014.jpg",
-  "Costa_Rica_Forest_Payments.html": "assets/Costa_Rica_ISS_2020.jpg"
+  "Costa_Rica_Forest_Payments.html": "assets/Costa_Rica_ISS_2020.jpg",
+  "Gulf_of_Alaska_Keeper.html": "assets/Gulf_of_Alaska_Bloom_2017.jpg",
+  "Alaska_Kelp_Farming.html": "assets/Alaska_Clear_View_Terra_2013.jpg",
+  "Bristol_Bay_Salmon.html": "assets/Bristol_Bay_Terra_2017.jpg",
+  "Alaska_SeaLife_Center.html": "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
  }
 }

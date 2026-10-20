@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-20T04:28:35Z",
+"generated": "2026-10-20T15:34:47Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -58,7 +58,7 @@
 "lng": -80.578,
 "launches": [
 {
-"net": "2026-10-20T10:30:00Z",
+"net": "2026-10-20T11:04:00Z",
 "exact": true,
 "prec": "SEC",
 "provider": "SpaceX",
@@ -290,15 +290,6 @@
 "rocket": "Terran R",
 "mission": "Mars Lander",
 "pad": "Launch Complex 16"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Unknown",
-"rocket": "Unknown",
-"mission": "Owlet-01",
-"pad": "Unknown Pad"
 }
 ]
 },
@@ -651,7 +642,7 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-20T23:09:23Z",
+"net": "2026-10-20T23:10:02Z",
 "exact": true,
 "prec": "SEC",
 "provider": "SpaceX",
@@ -675,6 +666,15 @@
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-18",
+"pad": "Space Launch Complex 4E"
+},
+{
+"net": "2026-11-05T22:34:00Z",
+"exact": true,
+"prec": "MIN",
+"provider": "SpaceX",
+"rocket": "Falcon 9 Block 5",
+"mission": "NROL-195",
 "pad": "Space Launch Complex 4E"
 },
 {

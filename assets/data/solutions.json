@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T04:28:31.142Z",
+ "generated": "2026-10-20T15:34:42.305Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -634,6 +634,14 @@
      "name": "Abu Dhabi Mangrove Restoration"
     },
     {
+     "href": "Alaska_Kelp_Farming.html",
+     "name": "Alaska Kelp and Seaweed Farming"
+    },
+    {
+     "href": "Alaska_SeaLife_Center.html",
+     "name": "Alaska SeaLife Center: Marine Wildlife Rescue"
+    },
+    {
      "href": "Argo.html",
      "name": "Argo Ocean Float Array"
     },
@@ -644,6 +652,10 @@
     {
      "href": "Billion_Oyster_Project.html",
      "name": "Billion Oyster Project"
+    },
+    {
+     "href": "Bristol_Bay_Salmon.html",
+     "name": "Bristol Bay Salmon Habitat Protection (EPA)"
     },
     {
      "href": "Copernicus_Marine.html",
@@ -672,6 +684,10 @@
     {
      "href": "Global_Fishing_Watch.html",
      "name": "Global Fishing Watch"
+    },
+    {
+     "href": "Gulf_of_Alaska_Keeper.html",
+     "name": "Gulf of Alaska Keeper: Marine Debris Cleanup"
     },
     {
      "href": "Heal_the_Bay.html",
@@ -1138,14 +1154,14 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 208,
+  "solutions": 212,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
-   "corporate": 17,
-   "government": 11,
+   "corporate": 18,
+   "government": 12,
    "agency": 108,
-   "nonprofit": 55,
+   "nonprofit": 57,
    "natural": 17
   },
   "upcomingMissions": 23,
@@ -1168,19 +1184,19 @@
     ]
    }
   ],
-  "taggedSolutions": 208
+  "taggedSolutions": 212
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 36,
+   "solutions": 40,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "corporate": 4,
-    "government": 3,
+    "corporate": 5,
+    "government": 4,
+    "nonprofit": 21,
     "agency": 4,
-    "nonprofit": 19,
     "natural": 6
    },
    "upcomingMissions": 0,
@@ -1412,6 +1428,28 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-19"
+  },
+  {
+   "url": "Alaska_Kelp_Farming.html",
+   "title": "Alaska Kelp and Seaweed Farming",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
+   "url": "Alaska_SeaLife_Center.html",
+   "title": "Alaska SeaLife Center: Marine Wildlife Rescue",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
@@ -1666,6 +1704,23 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Bristol_Bay_Salmon.html",
+   "title": "Bristol Bay Salmon Habitat Protection (EPA)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Pebble deposit case (Clean Water Act 404(c))",
+     "upcoming": false,
+     "next": null
+    }
+   ],
+   "added": "2026-10-20"
   },
   {
    "url": "CAMS.html",
@@ -2558,6 +2613,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Gulf_of_Alaska_Keeper.html",
+   "title": "Gulf of Alaska Keeper: Marine Debris Cleanup",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Hayabusa2_Torifune.html",
