@@ -38,7 +38,7 @@ DDG = ('https://ddnews.gov.in/en/india-targets-first-uncrewed-gaganyaan-mission-
 CITSCI = 'https://science.nasa.gov/citizen-science/'
 
 PUBN = ('https://www.pub.gov.sg/Public/WaterLoop/OurWaterStory/NEWater', "PUB, Singapore's National Water Agency, NEWater")
-CGM = ('https://museum.seoul.go.kr/eng/about/cheongGyeMuse.jsp', 'Seoul Museum of History, Cheonggyecheon Museum')
+CGM = ('https://web.archive.org/web/20250930180135/https://museum.seoul.go.kr/eng/about/cheongGyeMuse.jsp', 'Seoul Museum of History, Cheonggyecheon Museum')
 CGE = ('https://encykorea.aks.ac.kr/Article/E0068490', 'Encyclopedia of Korean Culture (Academy of Korean Studies), Cheonggyecheon restoration project')
 PICRC = ('https://picrc.org/january-1-2020-pnms-act-enters-into-full-force-with-the-start-of-a-new-decade/', 'Palau International Coral Reef Center, PNMS Act enters into full force (Jan. 1, 2020)')
 LEAP = ('https://leap.unep.org/en/countries/pw/national-legislation/palau-national-marine-sanctuary-act-rppl-no-9-49-2015', 'UNEP LEAP, Palau National Marine Sanctuary Act (RPPL No. 9-49 of 2015)')

@@ -208,6 +208,9 @@ html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:4
 html body nav.roman-jump{position:sticky !important;top:var(--spn-h,64px) !important;left:auto;right:auto;z-index:900 !important;height:auto !important;max-width:none;margin:1rem 0 0;padding:.5rem clamp(12px,2.2vw,32px);background:rgba(7,16,24,.94) !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;box-shadow:0 4px 14px rgba(0,0,0,.3) !important;border:0 !important;transition:none !important}
 body.roman-page [id]{scroll-margin-top:calc(var(--spn-h,64px) + 76px)}
 @media (max-width:760px){html body nav.roman-jump{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}html body nav.roman-jump a{flex:none;white-space:nowrap}}
+/* Oct 19 (quality report #5): Italian nav items failed axe color-contrast when scanned before the hero image painted
+   (light text over an undetermined background). Italian-only: the header gets the same dark backing it already uses once scrolled (.spn-solid), so the text is >=15:1, other locales unchanged. */
+html[lang="it"] body nav#topnav{background:#071018 !important}
 /* SPNAV:END */
 """
 JS = r"""
