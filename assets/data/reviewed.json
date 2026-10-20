@@ -39,6 +39,10 @@
   "sig": "e9c7b7c9f01b",
   "date": "2026-10-19"
  },
+ "Altyn_Dala_Saiga.html": {
+  "sig": "d11e09da7f88",
+  "date": "2026-10-20"
+ },
  "Amazon_Rainy_Season.html": {
   "sig": "53f544e6f2f4",
   "date": "2026-10-19"
@@ -54,6 +58,10 @@
  "Arbor_Day_Foundation.html": {
   "sig": "f8a025e910a5",
   "date": "2026-10-19"
+ },
+ "Arctic_Weather_Satellite.html": {
+  "sig": "b845847d7db8",
+  "date": "2026-10-20"
  },
  "Argo.html": {
   "sig": "ff5809c09658",
@@ -131,6 +139,10 @@
   "sig": "6e3ee354cfbb",
   "date": "2026-10-19"
  },
+ "Chandrayaan-5_LUPEX.html": {
+  "sig": "5fb9562e72ab",
+  "date": "2026-10-20"
+ },
  "Cheonggyecheon.html": {
   "sig": "124c3d6676b9",
   "date": "2026-10-19"
@@ -138,6 +150,10 @@
  "Chesapeake_Bay_Foundation.html": {
   "sig": "a5d8c29c8357",
   "date": "2026-10-19"
+ },
+ "Chilika_Lake.html": {
+  "sig": "9a0ccac411dd",
+  "date": "2026-10-20"
  },
  "Clean_Lakes_Alliance.html": {
   "sig": "e8bce3f78abc",
@@ -279,6 +295,10 @@
   "sig": "f252738b7080",
   "date": "2026-10-19"
  },
+ "GCOM-W_SHIZUKU.html": {
+  "sig": "d2268ab96f23",
+  "date": "2026-10-20"
+ },
  "GEDI.html": {
   "sig": "c869dad2ea30",
   "date": "2026-10-19"
@@ -334,6 +354,10 @@
  "Globe_at_Night.html": {
   "sig": "272ee571707d",
   "date": "2026-10-19"
+ },
+ "Gorongosa.html": {
+  "sig": "89f37ba699d6",
+  "date": "2026-10-20"
  },
  "Great_Bubble_Barrier.html": {
   "sig": "3b6ee2652af1",
@@ -391,6 +415,10 @@
   "sig": "039ad77be0df",
   "date": "2026-10-19"
  },
+ "Iberian_Lynx.html": {
+  "sig": "9fa10832c858",
+  "date": "2026-10-20"
+ },
  "International_Charter.html": {
   "sig": "b87ff14c5ebf",
   "date": "2026-10-19"
@@ -430,6 +458,14 @@
  "Klamath_River_Dam_Removal.html": {
   "sig": "9bb7b47bb19c",
   "date": "2026-10-19"
+ },
+ "Lake_Biwa_Soap_Movement.html": {
+  "sig": "703379b76dbe",
+  "date": "2026-10-20"
+ },
+ "Lake_Constance.html": {
+  "sig": "ae1b4e6d1c71",
+  "date": "2026-10-20"
  },
  "Lake_Erie_Algal_Bloom_Forecast.html": {
   "sig": "fe7613a3ee4f",
@@ -515,6 +551,10 @@
   "sig": "af0412e0d5ab",
   "date": "2026-10-19"
  },
+ "NEOSSat.html": {
+  "sig": "c4ea15098b9c",
+  "date": "2026-10-20"
+ },
  "NEO_Surveyor.html": {
   "sig": "8b8eed02db17",
   "date": "2026-10-19"
@@ -534,6 +574,10 @@
  "Nancy_Grace_Roman.html": {
   "sig": "8f14ccaa0e80",
   "date": "2026-10-19"
+ },
+ "Nepal_Tigers.html": {
+  "sig": "7c84f7f01c12",
+  "date": "2026-10-20"
  },
  "OCO-2.html": {
   "sig": "70b8d3800ca7",
@@ -647,6 +691,10 @@
   "sig": "8942a48adb79",
   "date": "2026-10-12"
  },
+ "Redonda_Restoration.html": {
+  "sig": "0d1121fe0b86",
+  "date": "2026-10-20"
+ },
  "Restoring_the_Lake_Depths.html": {
   "sig": "3acedc18fe86",
   "date": "2026-10-19"
@@ -659,9 +707,17 @@
   "sig": "5713f2e13e74",
   "date": "2026-10-19"
  },
+ "Room_for_the_River.html": {
+  "sig": "dd0c75e8407c",
+  "date": "2026-10-20"
+ },
  "SARSAT.html": {
   "sig": "9b2346b83e4c",
   "date": "2026-10-19"
+ },
+ "SCISAT.html": {
+  "sig": "71715c922076",
+  "date": "2026-10-20"
  },
  "SMAP.html": {
   "sig": "3029fc48c939",
@@ -690,6 +746,10 @@
  "Salt_Marshes.html": {
   "sig": "8dd18bac30cf",
   "date": "2026-10-19"
+ },
+ "Sargassum_Watch.html": {
+  "sig": "032881ca3327",
+  "date": "2026-10-20"
  },
  "SeaTrees.html": {
   "sig": "96ea38aea4db",
@@ -734,6 +794,10 @@
  "Solar_Orbiter.html": {
   "sig": "087898e8e46c",
   "date": "2026-10-19"
+ },
+ "South_Georgia_Habitat_Restoration.html": {
+  "sig": "830fb447d376",
+  "date": "2026-10-20"
  },
  "SpaceLogistics.html": {
   "sig": "96218b258958",
@@ -791,6 +855,14 @@
   "sig": "07f364217e24",
   "date": "2026-10-19"
  },
+ "Tonle_Sap.html": {
+  "sig": "b16c5d8a08f0",
+  "date": "2026-10-20"
+ },
+ "Trees_for_Life.html": {
+  "sig": "0501ad65dfd8",
+  "date": "2026-10-20"
+ },
  "Trees_for_the_Future.html": {
   "sig": "96227c573e6f",
   "date": "2026-10-19"
@@ -802,6 +874,10 @@
  "Tsunami_Early_Warning.html": {
   "sig": "1bdff9584ccf",
   "date": "2026-10-19"
+ },
+ "Tubbataha_Reefs.html": {
+  "sig": "9be6cdc7b700",
+  "date": "2026-10-20"
  },
  "UNEP_MARS.html": {
   "sig": "588f0d5cd74f",

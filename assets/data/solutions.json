@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T15:51:29.096Z",
+ "generated": "2026-10-20T16:08:15.168Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -40,6 +40,10 @@
     {
      "href": "NEO_Surveyor.html",
      "name": "NEO Surveyor"
+    },
+    {
+     "href": "NEOSSat.html",
+     "name": "NEOSSat Asteroid and Debris Telescope (Canada)"
     },
     {
      "href": "OSIRIS-APEX.html",
@@ -510,6 +514,10 @@
      "name": "Global Forest Watch (WRI)"
     },
     {
+     "href": "Gorongosa.html",
+     "name": "Gorongosa National Park Restoration"
+    },
+    {
      "href": "Great_Green_Wall.html",
      "name": "Great Green Wall (African Union / UNCCD)"
     },
@@ -530,6 +538,10 @@
      "name": "Mangrove Forests"
     },
     {
+     "href": "Nepal_Tigers.html",
+     "name": "Nepal Doubles Its Tigers"
+    },
+    {
      "href": "One_Tree_Planted.html",
      "name": "One Tree Planted"
     },
@@ -546,12 +558,20 @@
      "name": "Rainforest Connection"
     },
     {
+     "href": "Redonda_Restoration.html",
+     "name": "Redonda Island Restoration"
+    },
+    {
      "href": "Rewilding_Europe.html",
      "name": "Rewilding Europe"
     },
     {
      "href": "Saharan_Dust_Amazon.html",
      "name": "Saharan Dust Feeds the Amazon"
+    },
+    {
+     "href": "Altyn_Dala_Saiga.html",
+     "name": "Saiga Recovery on the Kazakh Steppe (Altyn Dala)"
     },
     {
      "href": "Terraformation.html",
@@ -562,8 +582,16 @@
      "name": "The Amazon Makes Its Own Rainy Season"
     },
     {
+     "href": "Iberian_Lynx.html",
+     "name": "The Iberian Lynx Comeback"
+    },
+    {
      "href": "Three_Trees.html",
      "name": "Three Trees for Every One Removed"
+    },
+    {
+     "href": "Trees_for_Life.html",
+     "name": "Trees for Life: Restoring the Caledonian Forest"
     },
     {
      "href": "Trees_for_the_Future.html",
@@ -588,6 +616,10 @@
      "name": "Adopt-a-Beach (Alliance for the Great Lakes)"
     },
     {
+     "href": "Chilika_Lake.html",
+     "name": "Chilika Lake Restoration"
+    },
+    {
      "href": "Clean_Lakes_Alliance.html",
      "name": "Clean Lakes Alliance (Madison, Wisconsin)"
     },
@@ -604,6 +636,14 @@
      "name": "Keep Tahoe Blue (League to Save Lake Tahoe)"
     },
     {
+     "href": "Lake_Biwa_Soap_Movement.html",
+     "name": "Lake Biwa and the Soap Movement"
+    },
+    {
+     "href": "Lake_Constance.html",
+     "name": "Lake Constance Phosphorus Recovery"
+    },
+    {
      "href": "Lake_Erie_Algal_Bloom_Forecast.html",
      "name": "Lake Erie Harmful Algal Bloom Forecast (NOAA)"
     },
@@ -618,6 +658,10 @@
     {
      "href": "Restoring_the_Lake_Depths.html",
      "name": "Restoring the Lake Depths Foundation"
+    },
+    {
+     "href": "Tonle_Sap.html",
+     "name": "Tonle Sap: The Lake That Reverses a River"
     }
    ]
   },
@@ -754,6 +798,10 @@
      "name": "Salt Marshes"
     },
     {
+     "href": "Sargassum_Watch.html",
+     "name": "Sargassum Watch System (USF)"
+    },
+    {
      "href": "Sea_Turtle_Conservancy.html",
      "name": "Sea Turtle Conservancy"
     },
@@ -784,6 +832,10 @@
     {
      "href": "The_SeaCleaners.html",
      "name": "The SeaCleaners"
+    },
+    {
+     "href": "Tubbataha_Reefs.html",
+     "name": "Tubbataha Reefs Natural Park"
     },
     {
      "href": "Whales_Ocean_Gardeners.html",
@@ -832,6 +884,10 @@
      "name": "NEO Surveyor"
     },
     {
+     "href": "NEOSSat.html",
+     "name": "NEOSSat Asteroid and Debris Telescope (Canada)"
+    },
+    {
      "href": "OSIRIS-APEX.html",
      "name": "OSIRIS-APEX and Apophis 2029 (NASA)"
     },
@@ -854,6 +910,10 @@
    "href": "Polar.html",
    "items": [
     {
+     "href": "Arctic_Weather_Satellite.html",
+     "name": "Arctic Weather Satellite and EPS-Sterna (ESA/EUMETSAT)"
+    },
+    {
      "href": "Carbfix.html",
      "name": "Carbfix: Turning CO2 Into Stone"
     },
@@ -870,6 +930,10 @@
      "name": "CryoSat Ice Mission (ESA)"
     },
     {
+     "href": "GCOM-W_SHIZUKU.html",
+     "name": "GCOM-W &quot;SHIZUKU&quot; Sea-Ice Watch (JAXA)"
+    },
+    {
      "href": "ICESat-2.html",
      "name": "ICESat-2 (NASA)"
     },
@@ -884,6 +948,14 @@
     {
      "href": "RCM.html",
      "name": "RADARSAT Constellation Mission (Canada)"
+    },
+    {
+     "href": "SCISAT.html",
+     "name": "SCISAT Ozone Watch (Canadian Space Agency)"
+    },
+    {
+     "href": "South_Georgia_Habitat_Restoration.html",
+     "name": "South Georgia Habitat Restoration"
     },
     {
      "href": "Svalbard_Global_Seed_Vault.html",
@@ -964,6 +1036,10 @@
      "name": "River Cleanup"
     },
     {
+     "href": "Room_for_the_River.html",
+     "name": "Room for the River (Netherlands)"
+    },
+    {
      "href": "Sungai_Watch.html",
      "name": "Sungai Watch"
     },
@@ -988,6 +1064,10 @@
     {
      "href": "Astroscale.html",
      "name": "Astroscale"
+    },
+    {
+     "href": "Chandrayaan-5_LUPEX.html",
+     "name": "Chandrayaan-5 / LUPEX Moon Ice Rover (ISRO-JAXA)"
     },
     {
      "href": "ClearSpace.html",
@@ -1154,17 +1234,17 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 212,
+  "solutions": 231,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 18,
-   "government": 12,
-   "agency": 108,
-   "nonprofit": 57,
-   "natural": 17
+   "government": 19,
+   "agency": 114,
+   "nonprofit": 62,
+   "natural": 18
   },
-  "upcomingMissions": 23,
+  "upcomingMissions": 25,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1184,19 +1264,19 @@
     ]
    }
   ],
-  "taggedSolutions": 212
+  "taggedSolutions": 231
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 40,
+   "solutions": 42,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
-    "government": 4,
+    "government": 5,
     "nonprofit": 21,
-    "agency": 4,
+    "agency": 5,
     "natural": 6
    },
    "upcomingMissions": 0,
@@ -1214,12 +1294,14 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 9,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 8,
-    "agency": 1
+    "government": 3,
+    "agency": 1,
+    "natural": 1
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -1234,13 +1316,13 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 21,
+   "solutions": 22,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 11,
     "natural": 1,
-    "government": 4,
+    "government": 5,
     "agency": 3,
     "corporate": 2
    },
@@ -1249,13 +1331,13 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 27,
+   "solutions": 33,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 16,
+    "nonprofit": 20,
     "natural": 5,
-    "government": 2,
+    "government": 4,
     "agency": 3,
     "corporate": 1
    },
@@ -1272,40 +1354,41 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 8,
+   "solutions": 9,
    "horizon": 1,
    "hubs": 1,
    "byClassification": {
     "corporate": 3,
+    "agency": 3,
     "natural": 2,
-    "agency": 2,
     "government": 1
    },
-   "upcomingMissions": 2,
+   "upcomingMissions": 3,
    "impactTotals": []
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 12,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 12
+    "agency": 13
    },
    "upcomingMissions": 4,
    "impactTotals": []
   },
   "polar": {
    "name": "Polar",
-   "solutions": 8,
+   "solutions": 12,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
+    "agency": 9,
     "corporate": 1,
-    "agency": 6,
+    "nonprofit": 1,
     "government": 1
    },
-   "upcomingMissions": 2,
+   "upcomingMissions": 3,
    "impactTotals": []
   },
   "space-weather": {
@@ -1480,6 +1563,17 @@
    "missions": []
   },
   {
+   "url": "Altyn_Dala_Saiga.html",
+   "title": "Saiga Recovery on the Kazakh Steppe (Altyn Dala)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "Amazon_Rainy_Season.html",
    "title": "The Amazon Makes Its Own Rainy Season",
    "category": "forests",
@@ -1528,6 +1622,26 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-18"
+  },
+  {
+   "url": "Arctic_Weather_Satellite.html",
+   "title": "Arctic Weather Satellite and EPS-Sterna (ESA/EUMETSAT)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "EPS-Sterna",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2029-01-01T00:00:00Z"
+     }
+    }
+   ],
+   "added": "2026-10-20"
   },
   {
    "url": "Argo.html",
@@ -1772,6 +1886,26 @@
    "added": "2026-10-16"
   },
   {
+   "url": "Chandrayaan-5_LUPEX.html",
+   "title": "Chandrayaan-5 / LUPEX Moon Ice Rover (ISRO-JAXA)",
+   "category": "space",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Chandrayaan-5 / LUPEX",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2028-01-01T00:00:00Z"
+     }
+    }
+   ],
+   "added": "2026-10-20"
+  },
+  {
    "url": "Cheonggyecheon.html",
    "title": "Cheonggyecheon Stream Restoration (Seoul)",
    "category": "rivers",
@@ -1792,6 +1926,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-15"
+  },
+  {
+   "url": "Chilika_Lake.html",
+   "title": "Chilika Lake Restoration",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "CHIME.html",
@@ -2418,6 +2563,17 @@
    "added": "2026-10-17"
   },
   {
+   "url": "GCOM-W_SHIZUKU.html",
+   "title": "GCOM-W \"SHIZUKU\" Sea-Ice Watch (JAXA)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "GEDI.html",
    "title": "GEDI Forest Lidar (NASA)",
    "category": "forests",
@@ -2530,6 +2686,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Gorongosa.html",
+   "title": "Gorongosa National Park Restoration",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "GOSAT-GW.html",
@@ -2733,6 +2900,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-15"
+  },
+  {
+   "url": "Iberian_Lynx.html",
+   "title": "The Iberian Lynx Comeback",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "ICESat-2.html",
@@ -2939,6 +3117,28 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Lake_Biwa_Soap_Movement.html",
+   "title": "Lake Biwa and the Soap Movement",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
+   "url": "Lake_Constance.html",
+   "title": "Lake Constance Phosphorus Recovery",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Lake_Erie_Algal_Bloom_Forecast.html",
@@ -3296,6 +3496,28 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "NEOSSat.html",
+   "title": "NEOSSat Asteroid and Debris Telescope (Canada)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
+   "url": "Nepal_Tigers.html",
+   "title": "Nepal Doubles Its Tigers",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "NEWater.html",
@@ -3753,6 +3975,17 @@
    "added": "2026-10-16"
   },
   {
+   "url": "Redonda_Restoration.html",
+   "title": "Redonda Island Restoration",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "Restoring_the_Lake_Depths.html",
    "title": "Restoring the Lake Depths Foundation",
    "category": "lakes",
@@ -3816,6 +4049,17 @@
    "missions": []
   },
   {
+   "url": "Room_for_the_River.html",
+   "title": "Room for the River (Netherlands)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "Saharan_Dust_Amazon.html",
    "title": "Saharan Dust Feeds the Amazon",
    "category": "forests",
@@ -3852,6 +4096,17 @@
    "missions": []
   },
   {
+   "url": "Sargassum_Watch.html",
+   "title": "Sargassum Watch System (USF)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "SARSAT.html",
    "title": "SARSAT Search and Rescue Satellites (NOAA)",
    "category": "earth-observation",
@@ -3868,6 +4123,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "SCISAT.html",
+   "title": "SCISAT Ozone Watch (Canadian Space Agency)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Sea_Turtle_Conservancy.html",
@@ -4069,6 +4335,17 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "South_Georgia_Habitat_Restoration.html",
+   "title": "South Georgia Habitat Restoration",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Space.html",
@@ -4329,6 +4606,17 @@
    ]
   },
   {
+   "url": "Tonle_Sap.html",
+   "title": "Tonle Sap: The Lake That Reverses a River",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
+  },
+  {
    "url": "TRACERS.html",
    "title": "TRACERS (NASA)",
    "category": "space-weather",
@@ -4343,6 +4631,17 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "Trees_for_Life.html",
+   "title": "Trees for Life: Restoring the Caledonian Forest",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "Trees_for_the_Future.html",
@@ -4407,6 +4706,17 @@
      "status": "horizon"
     }
    ]
+  },
+  {
+   "url": "Tubbataha_Reefs.html",
+   "title": "Tubbataha Reefs Natural Park",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-20"
   },
   {
    "url": "UNEP_MARS.html",

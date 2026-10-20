@@ -724,6 +724,101 @@
    "credit": "NASA (iss072e820937, Gulf of Alaska and aurora, March 12, 2025)",
    "pos": "50% 50%",
    "r2": "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
+  },
+  "assets/South_Georgia_ISS071_E_581850.jpg": {
+   "credit": "NASA (ISS071-E-581850, astronaut photograph of South Georgia Island, Sept. 1, 2024)",
+   "pos": "50% 50%",
+   "r2": "images/South_Georgia_ISS071_E_581850.jpg"
+  },
+  "assets/Arctic_Weather_Satellite_ESA.jpg": {
+   "credit": "ESA (Arctic Weather Satellite, CC BY-SA 3.0 IGO)",
+   "pos": "50% 50%",
+   "r2": "images/Arctic_Weather_Satellite_ESA.jpg"
+  },
+  "assets/Greenland_Sea_Ice_GSFC.jpg": {
+   "credit": "NASA Goddard Space Flight Center (MODIS on Aqua, sea ice in the Greenland Sea)",
+   "pos": "50% 50%",
+   "r2": "images/Greenland_Sea_Ice_GSFC.jpg"
+  },
+  "assets/Ozone_Hole_2024_SVS14711.jpg": {
+   "credit": "NASA Scientific Visualization Studio (2024 Ozone Hole Update, SVS 14711)",
+   "pos": "50% 50%",
+   "r2": "images/Ozone_Hole_2024_SVS14711.jpg"
+  },
+  "assets/Chilika_Lake_Mouth.jpg": {
+   "credit": "Phadke09 via Wikimedia Commons (Mouth of Chilika Lake, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Chilika_Lake_Mouth.jpg"
+  },
+  "assets/Tonle_Sap_Floating_Village.jpg": {
+   "credit": "Christophe95 via Wikimedia Commons (Floating village on the Tonlé Sap, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Tonle_Sap_Floating_Village.jpg"
+  },
+  "assets/Lake_Biwa_Shiga_NASA.jpg": {
+   "credit": "NASA (ISS007-E-17620, astronaut photograph of Lake Biwa and Shiga Prefecture)",
+   "pos": "50% 50%",
+   "r2": "images/Lake_Biwa_Shiga_NASA.jpg"
+  },
+  "assets/Lake_Constance_ISS030_E_161620.jpg": {
+   "credit": "NASA (ISS030-E-161620, astronaut photograph of Lake Constance, 2012)",
+   "pos": "50% 50%",
+   "r2": "images/Lake_Constance_ISS030_E_161620.jpg"
+  },
+  "assets/Netherlands_Rivers_ISS063_E_002730.jpg": {
+   "credit": "NASA (ISS063-E-002730, astronaut photograph of the Rhine-Meuse-Scheldt delta, April 23, 2020)",
+   "pos": "50% 50%",
+   "r2": "images/Netherlands_Rivers_ISS063_E_002730.jpg"
+  },
+  "assets/Tubbataha_Reefs_UNESCO.jpg": {
+   "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (CC BY-SA 3.0 IGO)",
+   "pos": "50% 50%",
+   "r2": "images/Tubbataha_Reefs_UNESCO.jpg"
+  },
+  "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg": {
+   "credit": "Contains modified Copernicus Sentinel-2 data, processed by ESA (sargassum off Martinique)",
+   "pos": "50% 50%",
+   "r2": "images/Sargassum_Bloom_Atlantic_Sentinel.jpg"
+  },
+  "assets/Redonda_By_Sea_2023.jpg": {
+   "credit": "Addshore via Wikimedia Commons (Redonda by sea, 2023, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Redonda_By_Sea_2023.jpg"
+  },
+  "assets/Iberian_Lynx_Almuradiel_2021.jpg": {
+   "credit": "Diego Delso via Wikimedia Commons (Iberian lynx, Almuradiel, 2021, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Iberian_Lynx_Almuradiel_2021.jpg"
+  },
+  "assets/Glen_Affric_Scots_Pine.jpg": {
+   "credit": "Chris via Wikimedia Commons (Glen Affric Scots Pine, CC BY-SA 2.0)",
+   "pos": "50% 50%",
+   "r2": "images/Glen_Affric_Scots_Pine.jpg"
+  },
+  "assets/Bengal_Tiger_Bardia_Nepal.jpg": {
+   "credit": "Ambish Kazi via Wikimedia Commons (Royal Bengal Tiger, Bardia, Nepal, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Bengal_Tiger_Bardia_Nepal.jpg"
+  },
+  "assets/Saiga_West_Kazakhstan.jpg": {
+   "credit": "Yakov Fedorov via Wikimedia Commons (Saiga in West Kazakhstan, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Saiga_West_Kazakhstan.jpg"
+  },
+  "assets/Mount_Gorongosa_Mozambique.jpg": {
+   "credit": "Judy Gallagher via Wikimedia Commons (Mount Gorongosa, CC BY 2.0)",
+   "pos": "50% 50%",
+   "r2": "images/Mount_Gorongosa_Mozambique.jpg"
+  },
+  "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg": {
+   "credit": "NASA/Bill Ingalls (NHQ202007180001, comet NEOWISE and the ISS, July 18, 2020)",
+   "pos": "50% 50%",
+   "r2": "images/Comet_NEOWISE_ISS_NHQ202007180001.jpg"
+  },
+  "assets/Lunar_South_Pole_PIA13523.jpg": {
+   "credit": "NASA/GSFC/Arizona State University (PIA13523, the lunar south pole)",
+   "pos": "50% 50%",
+   "r2": "images/Lunar_South_Pole_PIA13523.jpg"
   }
  },
  "pages": {
@@ -994,6 +1089,25 @@
   "Gulf_of_Alaska_Keeper.html": "assets/Gulf_of_Alaska_Bloom_2017.jpg",
   "Alaska_Kelp_Farming.html": "assets/Alaska_Clear_View_Terra_2013.jpg",
   "Bristol_Bay_Salmon.html": "assets/Bristol_Bay_Terra_2017.jpg",
-  "Alaska_SeaLife_Center.html": "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
+  "Alaska_SeaLife_Center.html": "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg",
+  "South_Georgia_Habitat_Restoration.html": "assets/South_Georgia_ISS071_E_581850.jpg",
+  "Arctic_Weather_Satellite.html": "assets/Arctic_Weather_Satellite_ESA.jpg",
+  "GCOM-W_SHIZUKU.html": "assets/Greenland_Sea_Ice_GSFC.jpg",
+  "SCISAT.html": "assets/Ozone_Hole_2024_SVS14711.jpg",
+  "Chilika_Lake.html": "assets/Chilika_Lake_Mouth.jpg",
+  "Tonle_Sap.html": "assets/Tonle_Sap_Floating_Village.jpg",
+  "Lake_Biwa_Soap_Movement.html": "assets/Lake_Biwa_Shiga_NASA.jpg",
+  "Lake_Constance.html": "assets/Lake_Constance_ISS030_E_161620.jpg",
+  "Room_for_the_River.html": "assets/Netherlands_Rivers_ISS063_E_002730.jpg",
+  "Tubbataha_Reefs.html": "assets/Tubbataha_Reefs_UNESCO.jpg",
+  "Sargassum_Watch.html": "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg",
+  "Redonda_Restoration.html": "assets/Redonda_By_Sea_2023.jpg",
+  "Iberian_Lynx.html": "assets/Iberian_Lynx_Almuradiel_2021.jpg",
+  "Trees_for_Life.html": "assets/Glen_Affric_Scots_Pine.jpg",
+  "Nepal_Tigers.html": "assets/Bengal_Tiger_Bardia_Nepal.jpg",
+  "Altyn_Dala_Saiga.html": "assets/Saiga_West_Kazakhstan.jpg",
+  "Gorongosa.html": "assets/Mount_Gorongosa_Mozambique.jpg",
+  "NEOSSat.html": "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
+  "Chandrayaan-5_LUPEX.html": "assets/Lunar_South_Pole_PIA13523.jpg"
  }
 }

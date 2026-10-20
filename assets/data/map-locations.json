@@ -2687,6 +2687,220 @@
      "basis": "page"
     }
    ]
+  },
+  "South_Georgia_Habitat_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -54.28,
+     "lng": -36.51,
+     "label": "South Georgia Island, South Atlantic Ocean",
+     "basis": "page"
+    }
+   ]
+  },
+  "Arctic_Weather_Satellite.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 69.65,
+     "lng": 18.96,
+     "label": "Tromsø, Norway, one of the Arctic Weather Satellite mission control sites",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "GCOM-W_SHIZUKU.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Tanegashima Space Center, Japan, where SHIZUKU launched in 2012",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "SCISAT.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.47,
+     "lng": -80.54,
+     "label": "University of Waterloo, Ontario, home of the SCISAT science team",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Chilika_Lake.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 19.72,
+     "lng": 85.32,
+     "label": "Chilika Lake, Odisha, India",
+     "basis": "page"
+    }
+   ]
+  },
+  "Tonle_Sap.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 12.81,
+     "lng": 104.05,
+     "label": "Tonle Sap Biosphere Reserve, Cambodia",
+     "basis": "page"
+    }
+   ]
+  },
+  "Lake_Biwa_Soap_Movement.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 35.25,
+     "lng": 136.08,
+     "label": "Lake Biwa, Shiga Prefecture, Japan",
+     "basis": "page"
+    }
+   ]
+  },
+  "Lake_Constance.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 47.63,
+     "lng": 9.37,
+     "label": "Lake Constance (Bodensee), Germany, Austria and Switzerland",
+     "basis": "page"
+    }
+   ]
+  },
+  "Room_for_the_River.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 52.25,
+     "lng": 6.16,
+     "label": "Deventer, on the IJssel, one of the Room for the River sites",
+     "basis": "page"
+    }
+   ]
+  },
+  "Tubbataha_Reefs.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 8.95,
+     "lng": 119.92,
+     "label": "Tubbataha Reefs Natural Park, Sulu Sea, Philippines",
+     "basis": "page"
+    }
+   ]
+  },
+  "Sargassum_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 27.76,
+     "lng": -82.64,
+     "label": "USF College of Marine Science, St. Petersburg, Florida",
+     "basis": "page"
+    }
+   ]
+  },
+  "Redonda_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 16.94,
+     "lng": -62.35,
+     "label": "Redonda, Antigua and Barbuda",
+     "basis": "page"
+    }
+   ]
+  },
+  "Iberian_Lynx.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.48,
+     "lng": -3.47,
+     "label": "Almuradiel, Ciudad Real, Spain, in lynx country",
+     "basis": "page"
+    }
+   ]
+  },
+  "Trees_for_Life.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 57.18,
+     "lng": -4.77,
+     "label": "Dundreggan Rewilding Centre, Glenmoriston, Scotland",
+     "basis": "page"
+    }
+   ]
+  },
+  "Nepal_Tigers.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 28.39,
+     "lng": 81.27,
+     "label": "Bardia National Park, Nepal",
+     "basis": "page"
+    }
+   ]
+  },
+  "Altyn_Dala_Saiga.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 50.0,
+     "lng": 64.0,
+     "label": "The Kazakh steppe, Altyn Dala landscape, Kazakhstan",
+     "basis": "page"
+    }
+   ]
+  },
+  "Gorongosa.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -18.97,
+     "lng": 34.35,
+     "label": "Gorongosa National Park, Mozambique",
+     "basis": "page"
+    }
+   ]
+  },
+  "NEOSSat.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 45.52,
+     "lng": -73.39,
+     "label": "Canadian Space Agency headquarters, Longueuil, Quebec",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Chandrayaan-5_LUPEX.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Tanegashima Space Center, Japan, the planned H3 launch site",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
   }
  }
 }
