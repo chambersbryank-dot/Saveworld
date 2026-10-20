@@ -240,3 +240,7 @@ Galapagos_Giant_Tortoises.html
 MAAP.html
 Mesoamerican_Reef_Insurance.html
 Costa_Rica_Forest_Payments.html
+Gulf_of_Alaska_Keeper.html
+Alaska_Kelp_Farming.html
+Bristol_Bay_Salmon.html
+Alaska_SeaLife_Center.html
