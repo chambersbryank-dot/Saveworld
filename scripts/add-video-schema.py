@@ -11,6 +11,7 @@ def upload(mp4):
 # Oct 18: videos uploaded straight to R2 (never committed under assets/videos/) have no git history; their upload dates live here
 R2_ONLY = {'savingplanets-about-v4.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-about-v4-720.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v3-1920x1080.mp4': '2026-10-18T01:00:00-10:00',
            'savingplanets-promo-v3-1080x1920.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v4-final-1080x1920.mp4': '2026-10-18T17:10:20-10:00',
+           'savingplanets-promo-v6-1080x1920.mp4': '2026-10-20T21:30:00-10:00', 'savingplanets-promo-v6-1080x1920-720.mp4': '2026-10-20T21:30:00-10:00',
            # Oct 19: first-commit dates from the full git history (shallow /tmp clones can't see them, so uploadDate went missing -> seo-lint jsonld-invalid)
            'artemis-ii-farthest.mp4': '2026-10-11T12:54:20-10:00', 'grace-fo-satellites.mp4': '2026-10-11T21:19:05-10:00', 'great-bubble-barrier.mp4': '2026-10-11T20:40:50-10:00',
            'life-terra-trees.mp4': '2026-10-11T20:59:21-10:00', 'channel-intro.mp4': '2026-10-11T19:31:35-10:00', 'hero-loop.mp4': '2026-10-11T21:58:28-10:00',
