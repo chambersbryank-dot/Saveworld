@@ -166,7 +166,7 @@ async function report(req, env, h) {
   if (!(await (await g.fetch('https://g/rep', { method: 'POST', body: JSON.stringify({ iph }) })).json()).ok) return out({ status: 'busy' }, 200, h);
   const path = page ? new URL(page).pathname : '(not given)';
   try {
-    await mail(env, `Correction report: ${path}`, `Page: ${page || '(not given)'}\nPage language: ${lang}\n\nWhat is wrong:\n${what}\n\nSuggested fix (optional):\n${fix || '(none)'}\n\n--\nSent from the Report a correction form on savingplanets.com. The form collects no name or email, so there is no one to reply to.\nCorrection log convention: credit fixes to "SI Partner".`);
+    await mail(env, `Correction report: ${path}`, `Page: ${page || '(not given)'}\nPage language: ${lang}\n\nWhat is wrong:\n${what}\n\nSuggested fix (optional):\n${fix || '(none)'}\n\n--\nSent from the Report a correction form on savingplanets.com. The form collects no name or email, so there is no one to reply to.\nCorrection log convention: fixes caught by the site owner are credited to "SI Partner"; reader fixes are credited as "Language Partners" only with opt-in (this form is anonymous, so use "an anonymous reader").`);
   } catch (e) { return out({ status: 'error' }, 200, h); }
   evWrite(env, 'report', lang, 'sent');
   return out({ status: 'ok' }, 200, h);
