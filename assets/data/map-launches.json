@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-21T08:23:40Z",
+"generated": "2026-10-21T17:02:45Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -57,15 +57,6 @@
 "lat": 28.489,
 "lng": -80.578,
 "launches": [
-{
-"net": "2026-10-20T11:04:00Z",
-"exact": true,
-"prec": "SEC",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
-"pad": "Space Launch Complex 40"
-},
 {
 "net": "2026-10-29T00:00:00Z",
 "exact": true,
@@ -298,6 +289,15 @@
 "provider": "Unknown",
 "rocket": "Unknown",
 "mission": "Owlet-01",
+"pad": "Unknown Pad"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "Unknown",
+"rocket": "Unknown",
+"mission": "VCLS Demo 2 Mission One",
 "pad": "Unknown Pad"
 }
 ]
