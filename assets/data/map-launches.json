@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-20T17:04:01Z",
+"generated": "2026-10-21T07:07:40Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -290,6 +290,15 @@
 "rocket": "Terran R",
 "mission": "Mars Lander",
 "pad": "Launch Complex 16"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "Unknown",
+"rocket": "Unknown",
+"mission": "Owlet-01",
+"pad": "Unknown Pad"
 }
 ]
 },
@@ -386,7 +395,7 @@
 "lng": 177.865,
 "launches": [
 {
-"net": "2026-10-21T07:00:00Z",
+"net": "2026-10-22T07:00:00Z",
 "exact": true,
 "prec": "MIN",
 "provider": "Rocket Lab",
@@ -592,15 +601,6 @@
 "lng": 130.975,
 "launches": [
 {
-"net": "2026-10-19T19:41:03Z",
-"exact": true,
-"prec": "SEC",
-"provider": "Mitsubishi Heavy Industries",
-"rocket": "H3-24",
-"mission": "Martian Moons eXploration (MMX)",
-"pad": "Yoshinobu Launch Complex LP-2"
-},
-{
 "net": "2026-12-31T00:00:00Z",
 "exact": false,
 "prec": "Y",
@@ -642,7 +642,7 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-20T23:10:02Z",
+"net": "2026-10-21T23:02:41Z",
 "exact": true,
 "prec": "SEC",
 "provider": "SpaceX",

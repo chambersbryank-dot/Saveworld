@@ -539,6 +539,13 @@
         "it": "Altre 4 nuove soluzioni: il ritorno delle tartarughe giganti delle Galápagos, il monitoraggio satellitare dell'Amazzonia di MAAP, il programma assicurativo della barriera corallina mesoamericana e i pagamenti del Costa Rica per i servizi delle foreste. Saving Planets ora presenta 208 soluzioni.",
         "he": "עוד 4 פתרונות חדשים: השבת צבי הענק לאיי גלפגוס, ניטור האמזונס בלוויין של MAAP, תוכנית הביטוח של השונית המזו-אמריקאית והתשלומים של קוסטה ריקה על שירותי היערות. ‏Saving Planets מציג כעת 208 פתרונות."
       }
+    },
+    {
+      "date": "2026-10-20",
+      "what": {
+        "en": "logo v2 icon in the header nav left of Home (RTL mirrored, bleed, drop-shadow, WebP/PNG 1x-3x), favicon.ico + 32px PNG, apple-touch 180 on navy, footer 'Logo created by SI and Biological SI Partner' (6 langs); scripts/build-logo.py in weekly-sync; R2 brand masters in manifest; STYLEV 20261020m"
+      },
+      "commit": "01ac95a0a162f7733dff8202cb1d742b3056d058"
     }
   ]
 }

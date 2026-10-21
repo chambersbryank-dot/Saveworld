@@ -1397,8 +1397,7 @@ body.toc-sub .sol-bluf-box .bluf-hook{font-size:clamp(1.15rem,2vw,1.4rem);line-h
 body.toc-sub .sol-bluf-box .bluf-wow{font-size:1.05rem}
 body.toc-sub .sol-bluf-box .impact-box p.fact-source{margin:0;font-size:.85rem}
 @media (max-width:600px){body.toc-sub .sol-bluf-box .impact-box{padding:.9rem 1rem}}
-/* BLUF1019:END */
-/* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
+/* BLUF1019:END *//* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
 html body.sol-page .sol-hero .sol-hero-title{font-size:clamp(1.5rem,3.2vw,2.2rem);margin:0 0 .4rem}
 html .sol-intro{padding-top:1rem}html .sol-intro h1{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
 html .sol-intro .sol-filters{margin:.4rem 0;justify-content:center}
