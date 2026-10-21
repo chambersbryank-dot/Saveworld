@@ -546,6 +546,14 @@
         "en": "logo v2 icon in the header nav left of Home (RTL mirrored, bleed, drop-shadow, WebP/PNG 1x-3x), favicon.ico + 32px PNG, apple-touch 180 on navy, footer 'Logo created by SI and Biological SI Partner' (6 langs); scripts/build-logo.py in weekly-sync; R2 brand masters in manifest; STYLEV 20261020m"
       },
       "commit": "01ac95a0a162f7733dff8202cb1d742b3056d058"
+    },
+    {
+      "date": "2026-10-20",
+      "page": "About.html",
+      "what": {
+        "en": "one video only, promo v6 (231 solutions, six languages) with 720p fallback + poster; about-v4 block and transcript removed; v6 transcript in 6 langs; STYLEV 20261020p"
+      },
+      "commit": "1e3a599ac1c83be160899ad4d634ad35567d5931"
     }
   ]
 }
