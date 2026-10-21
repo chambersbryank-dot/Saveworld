@@ -147,7 +147,7 @@ def do_facts(L, B):
     s = rd(f); sp = marker(s, 'HOME-MOVED')
     if sp: s = s[:sp[0]] + s[sp[1]:]
     if UNDO: wr(f, s); return
-    sb = nomark(B.get('scoreboard', '')); sb = re.sub(r'<script>.*?</script>', '', sb, flags=re.S)
+    sb = nomark(B.get('scoreboard', '')); sb = re.sub(r'<script\b[^>]*>.*?</script\b[^>]*>', '', sb, flags=re.S | re.I)  # inline data-tools JS: Amazing_Facts already has it
     sb = sb.replace('data-dt-url="https://www.savingplanets.com/"', f'data-dt-url="https://www.savingplanets.com/{L}Amazing_Facts.html#scoreboard"')
     blk = '<!-- HOME-MOVED:START -->' + nomark(B.get('impact', '')) + sb + '<!-- HOME-MOVED:END -->'
     st = sec(s, r'<section [^>]*class="impact-bar"')
