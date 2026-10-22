@@ -5,7 +5,7 @@ idempotent link blocks (<!-- SPOTFIRE-LINK -->) on Teachers, Kids_Map, FireSat a
 so translation/post-processors can't drop it. Idempotent."""
 import re, os, json, html, datetime
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261015n'
+ASSETV = '20261022a'
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
@@ -22,7 +22,7 @@ T = {
    intro='Can a satellite miss a wildfire because its “pixels” are too big? Students lay a coarse grid and a fine grid over a printed landscape with three hidden “fires” and test which fires each grid detects. Then they scale the fine grid to meters and compare it with FireSat, which can detect fires as small as 5×5 meters, about two parking spaces (Earth Fire Alliance, Sep 16, 2026).',
    h_learn='What students learn', learn=['What a pixel is in a satellite image, and why pixel size limits what can be detected.', 'How to apply a clear detection rule: a fire counts only if it fills about half or more of a grid square.', 'FireSat’s 5×5 m detection scale, and how it compares with the fine grid.', 'Why both fine detail and frequent revisits help wildfire response.'],
    h_need='What you need', need='Printed sheets (landscape, coarse grid, fine grid, exit ticket), pencils and rulers. Tracing paper or clear acetate for the grids is ideal. No lab equipment. Optional: one screen for the FireSat page and the Satellite Explorer.',
-   h_steps='How it works', h_dl='Download the activity', pdf='Teacher guide and worksheets (PDF)', docx='Editable version (Word .docx)',
+   h_steps='How it works', h_dl='Download the activity', pdf='Teacher guide and worksheets (PDF)', docx='Editable version (Word .docx)', zip='Download all sheets and images (ZIP)',
    h_more='Go further', more='See the real mission on the <a href="FireSat.html">FireSat page</a>, explore orbits in the <a href="Satellite_Explorer.html">Satellite Explorer</a>, or build a full lesson in the <a href="Lesson_Builder.html">Lesson Plan Builder</a>.',
    cap1='Coarse pixels can miss a small fire that fine (about 5 m) pixels detect.', cap2='The six steps of the activity, for teachers.',
    alt1='Diagram comparing a coarse pixel grid that misses a small fire with a fine 5-meter grid that detects it', alt2='Flow diagram of the six classroom steps of the Spot the Fire activity',
@@ -33,7 +33,7 @@ T = {
    intro='Un satellite peut-il rater un incendie parce que ses « pixels » sont trop grands ? Les élèves posent une grille grossière puis une grille fine sur un paysage imprimé où se cachent trois « feux », et testent lesquels chaque grille détecte. Ils convertissent ensuite la grille fine en mètres et la comparent à FireSat, qui peut détecter des feux de 5×5 mètres, soit environ deux places de parking (Earth Fire Alliance, 16 sept. 2026).',
    h_learn='Ce que les élèves apprennent', learn=['Ce qu’est un pixel dans une image satellite, et pourquoi sa taille limite ce que l’on peut détecter.', 'Appliquer une règle claire : un feu est détecté s’il remplit environ la moitié d’une case ou plus.', 'L’échelle de détection de FireSat (5×5 m) et sa comparaison avec la grille fine.', 'Pourquoi la finesse des détails et des passages fréquents aident à lutter contre les incendies.'],
    h_need='Matériel', need='Fiches imprimées (paysage, grille grossière, grille fine, ticket de sortie), crayons et règles. Idéalement, papier calque ou transparents pour les grilles. Aucun matériel de laboratoire. En option : un écran pour la page FireSat et l’explorateur de satellites.',
-   h_steps='Déroulement', h_dl='Télécharger l’activité', pdf='Guide de l’enseignant et fiches (PDF, en anglais)', docx='Version modifiable (Word .docx, en anglais)',
+   h_steps='Déroulement', h_dl='Télécharger l’activité', pdf='Guide de l’enseignant et fiches (PDF, en anglais)', docx='Version modifiable (Word .docx, en anglais)', zip='Télécharger toutes les fiches et images (ZIP, en anglais)',
    h_more='Pour aller plus loin', more='Découvrez la vraie mission sur la <a href="FireSat.html">page FireSat</a>, explorez les orbites avec l’<a href="Satellite_Explorer.html">explorateur de satellites</a> ou créez une leçon complète avec le <a href="Lesson_Builder.html">générateur de plans de cours</a>.',
    cap1='Des pixels grossiers peuvent rater un petit feu que des pixels fins (environ 5 m) détectent.', cap2='Les six étapes de l’activité, pour l’enseignant.',
    alt1='Schéma comparant une grille de pixels grossière qui rate un petit feu et une grille fine de 5 mètres qui le détecte', alt2='Schéma des six étapes de l’activité en classe',
@@ -44,7 +44,7 @@ T = {
    intro='¿Puede un satélite pasar por alto un incendio porque sus «píxeles» son demasiado grandes? El alumnado coloca una cuadrícula gruesa y otra fina sobre un paisaje impreso con tres «fuegos» ocultos y comprueba cuáles detecta cada una. Después pasa la cuadrícula fina a metros y la compara con FireSat, que detecta fuegos de apenas 5×5 metros, unas dos plazas de aparcamiento (Earth Fire Alliance, 16 sept. 2026).',
    h_learn='Qué aprende el alumnado', learn=['Qué es un píxel en una imagen de satélite y por qué su tamaño limita lo que se puede detectar.', 'Aplicar una regla clara: un fuego se detecta si ocupa aproximadamente la mitad de una casilla o más.', 'La escala de detección de FireSat (5×5 m) comparada con la cuadrícula fina.', 'Por qué el detalle fino y las visitas frecuentes ayudan a combatir los incendios.'],
    h_need='Materiales', need='Fichas impresas (paisaje, cuadrícula gruesa, cuadrícula fina, ticket de salida), lápices y reglas. Lo ideal es papel vegetal o acetato transparente para las cuadrículas. Sin material de laboratorio. Opcional: una pantalla para la página de FireSat y el explorador de satélites.',
-   h_steps='Cómo funciona', h_dl='Descarga la actividad', pdf='Guía docente y fichas (PDF, en inglés)', docx='Versión editable (Word .docx, en inglés)',
+   h_steps='Cómo funciona', h_dl='Descarga la actividad', pdf='Guía docente y fichas (PDF, en inglés)', docx='Versión editable (Word .docx, en inglés)', zip='Descargar todas las fichas e imágenes (ZIP, en inglés)',
    h_more='Para ir más allá', more='Conoce la misión real en la <a href="FireSat.html">página de FireSat</a>, explora órbitas en el <a href="Satellite_Explorer.html">explorador de satélites</a> o crea una clase completa con el <a href="Lesson_Builder.html">generador de planes de clase</a>.',
    cap1='Los píxeles gruesos pueden pasar por alto un fuego pequeño que los píxeles finos (unos 5 m) detectan.', cap2='Los seis pasos de la actividad, para docentes.',
    alt1='Diagrama que compara una cuadrícula de píxeles gruesa que no ve un fuego pequeño con una cuadrícula fina de 5 metros que sí lo detecta', alt2='Diagrama de los seis pasos de la actividad en el aula',
@@ -55,7 +55,7 @@ T = {
    intro='هل يمكن أن يفوت القمر الصناعي حريقًا لأن «البكسلات» كبيرة جدًا؟ يضع الطلاب شبكة كبيرة المربعات ثم شبكة دقيقة فوق منظر طبيعي مطبوع يخفي ثلاثة «حرائق»، ويختبرون أيها تكشفه كل شبكة. بعد ذلك يحوّلون الشبكة الدقيقة إلى أمتار ويقارنونها بـ FireSat الذي يرصد حرائق لا تتجاوز 5×5 أمتار، أي بحجم موقفين للسيارات تقريبًا (Earth Fire Alliance، 16 سبتمبر 2026).',
    h_learn='ماذا يتعلم الطلاب', learn=['ما البكسل في صورة القمر الصناعي، ولماذا يحدّ حجمه مما يمكن رصده.', 'تطبيق قاعدة واضحة: يُعدّ الحريق مرصودًا إذا ملأ نصف المربع تقريبًا أو أكثر.', 'مقياس الرصد في FireSat (5×5 أمتار) ومقارنته بالشبكة الدقيقة.', 'لماذا تساعد دقة التفاصيل وتكرار المرور على مواجهة الحرائق.'],
    h_need='المواد اللازمة', need='أوراق مطبوعة (المنظر الطبيعي، الشبكة الكبيرة، الشبكة الدقيقة، بطاقة الخروج)، وأقلام ومساطر. يُفضَّل ورق شفاف للشبكات. لا حاجة إلى معدات مختبر. اختياري: شاشة لعرض صفحة FireSat ومستكشف الأقمار الصناعية.',
-   h_steps='خطوات النشاط', h_dl='تنزيل النشاط', pdf='دليل المعلم وأوراق العمل (PDF، بالإنجليزية)', docx='نسخة قابلة للتعديل (Word .docx، بالإنجليزية)',
+   h_steps='خطوات النشاط', h_dl='تنزيل النشاط', pdf='دليل المعلم وأوراق العمل (PDF، بالإنجليزية)', docx='نسخة قابلة للتعديل (Word .docx، بالإنجليزية)', zip='تنزيل كل الأوراق والصور (ZIP، بالإنجليزية)',
    h_more='للمزيد', more='تعرّف على المهمة الحقيقية في <a href="FireSat.html">صفحة FireSat</a>، واستكشف المدارات في <a href="Satellite_Explorer.html">مستكشف الأقمار الصناعية</a>، أو أنشئ درسًا كاملًا في <a href="Lesson_Builder.html">منشئ خطط الدروس</a>.',
    cap1='قد تفوت البكسلات الكبيرة حريقًا صغيرًا ترصده البكسلات الدقيقة (نحو 5 أمتار).', cap2='الخطوات الست للنشاط، للمعلمين.',
    alt1='رسم يقارن شبكة بكسلات كبيرة تفوت حريقًا صغيرًا بشبكة دقيقة بحجم 5 أمتار ترصده', alt2='رسم تخطيطي للخطوات الست للنشاط الصفي',
@@ -66,7 +66,7 @@ T = {
    intro='Un satellite può non accorgersi di un incendio perché i suoi «pixel» sono troppo grandi? Gli studenti appoggiano una griglia larga e poi una griglia fitta su un paesaggio stampato con tre «incendi» nascosti e verificano quali vengono rilevati da ciascuna. Poi convertono la griglia fitta in metri e la confrontano con FireSat, che rileva incendi grandi appena 5×5 metri, più o meno due posti auto (Earth Fire Alliance, 16 set. 2026).',
    h_learn='Che cosa imparano gli studenti', learn=['Che cos’è un pixel in un’immagine satellitare e perché la sua dimensione limita ciò che si può rilevare.', 'Come applicare una regola chiara: un incendio è rilevato solo se occupa circa metà di un quadrato o più.', 'La scala di rilevamento di FireSat (5×5 m) a confronto con la griglia fitta.', 'Perché dettagli fini e passaggi frequenti aiutano a contrastare gli incendi.'],
    h_need='Materiale', need='Schede stampate (paesaggio, griglia larga, griglia fitta, biglietto d’uscita), matite e righelli. L’ideale è carta da lucido o acetato trasparente per le griglie. Nessuna attrezzatura di laboratorio. Facoltativo: uno schermo per la pagina di FireSat e l’esploratore di satelliti.',
-   h_steps='Come funziona', h_dl='Scarica l’attività', pdf='Guida per l’insegnante e schede (PDF, in inglese)', docx='Versione modificabile (Word .docx, in inglese)',
+   h_steps='Come funziona', h_dl='Scarica l’attività', pdf='Guida per l’insegnante e schede (PDF, in inglese)', docx='Versione modificabile (Word .docx, in inglese)', zip='Scarica tutte le schede e le immagini (ZIP, in inglese)',
    h_more='Per approfondire', more='Scopri la missione reale nella <a href="FireSat.html">pagina di FireSat</a>, esplora le orbite con l’<a href="Satellite_Explorer.html">esploratore di satelliti</a> o prepara una lezione completa con il <a href="Lesson_Builder.html">generatore di piani di lezione</a>.',
    cap1='I pixel larghi possono non vedere un piccolo incendio che i pixel fitti (circa 5 m) rilevano.', cap2='Le sei fasi dell’attività, per l’insegnante.',
    alt1='Schema che confronta una griglia di pixel larga, che non vede un piccolo incendio, con una griglia fitta da 5 metri che lo rileva', alt2='Schema delle sei fasi dell’attività in classe',
@@ -122,7 +122,7 @@ def page_html(l):
 <h2>{esc(t["h_steps"])}</h2>
 {fig(l, pre, "spot-fire-steps.webp", 1200, 812, t["alt2"], t["cap2"])}
 <h2 id="download">{esc(t["h_dl"])}</h2>
-<p class="sf-dl"><a class="btn" href="{pre}assets/docs/Spot_the_Fire_astroEDU.pdf" download>📄 {esc(t["pdf"])}</a> <a class="btn" href="{pre}assets/docs/Spot_the_Fire_astroEDU.docx" download>📝 {esc(t["docx"])}</a></p>
+<p class="sf-dl"><a class="btn" href="{pre}assets/docs/Spot_the_Fire_astroEDU.pdf" download>📄 {esc(t["pdf"])}</a> <a class="btn" href="{pre}assets/docs/Spot_the_Fire_astroEDU.docx" download>📝 {esc(t["docx"])}</a> <a class="btn" href="{pre}assets/astroedu/Spot_the_Fire_sheets_and_images.zip" download>🗂️ {esc(t["zip"])}</a></p>
 <h2>{esc(t["h_more"])}</h2><p>{fix_links(l, t["more"])}</p>
 <p class="sf-credit">{t["credit"]}</p>
 </div>
