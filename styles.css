@@ -1397,7 +1397,14 @@ body.toc-sub .sol-bluf-box .bluf-hook{font-size:clamp(1.15rem,2vw,1.4rem);line-h
 body.toc-sub .sol-bluf-box .bluf-wow{font-size:1.05rem}
 body.toc-sub .sol-bluf-box .impact-box p.fact-source{margin:0;font-size:.85rem}
 @media (max-width:600px){body.toc-sub .sol-bluf-box .impact-box{padding:.9rem 1rem}}
-/* BLUF1019:END *//* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
+/* BLUF1019:END *//* PROMO-STILL:START (Oct 21: promo video English-only; translated sites show one still) */
+.sp-promo-still{max-width:1100px;margin:1.5rem auto;padding:0 1rem}
+.sp-promo-still figure{margin:0}
+.sp-promo-still img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:16px}
+.sp-promo-still figcaption{margin:.5rem auto 0;max-width:820px;text-align:center;font-weight:600}
+.sp-promo-still .photo-credit{font-weight:400;opacity:.8;margin-inline-start:.4rem}
+/* PROMO-STILL:END */
+/* WOW:START (scripts/build-wow.py, Oct 17: first screen = the best content) */
 html body.sol-page .sol-hero .sol-hero-title{font-size:clamp(1.5rem,3.2vw,2.2rem);margin:0 0 .4rem}
 html .sol-intro{padding-top:1rem}html .sol-intro h1{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
 html .sol-intro .sol-filters{margin:.4rem 0;justify-content:center}

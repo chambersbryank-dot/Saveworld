@@ -95,6 +95,7 @@ python3 scripts/apply-anim-banners.py   # Oct 18: site-wide animated page banner
 python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
 python3 scripts/he-si-note.py           # Oct 19: SI-translated reader note on every /he/ page (Hebrew launch)
 python3 scripts/build-logo.py           # Oct 20: logo v2 icon in the nav (left of Home; RTL mirrored), favicons, apple-touch, footer logo credit (all langs)
+python3 scripts/build-promo-en-only.py   # Oct 21 (founder): promo videos English-only; fr/es/ar/it/he get one 4K NASA still
 python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async stylesheets (cached per template; run after every head-touching generator)
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
