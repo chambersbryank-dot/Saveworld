@@ -35,6 +35,7 @@ LABEL = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العرب
 UI = {'All facts': {'fr': 'Tous les faits', 'es': 'Todos los datos', 'ar': 'كل الحقائق', 'it': 'Tutti i fatti'}, 'Transcript': {'fr': 'Transcription', 'es': 'Transcripción', 'ar': 'النص المكتوب', 'it': 'Trascrizione'},
       'What you see:': {'fr': 'Ce que vous voyez :', 'es': 'Lo que se ve:', 'ar': 'ما تراه:', 'it': 'Cosa vedi:'},
       'What you hear:': {'fr': 'Ce que vous entendez :', 'es': 'Lo que se oye:', 'ar': 'ما تسمعه:', 'it': 'Cosa senti:'}}
+HE_UI = {'Transcript': 'תמליל', 'What you see:': 'מה רואים:', 'What you hear:': 'מה שומעים:'}
 WEAK = re.compile(r'^(.+?) image$')
 SKIP = re.compile(r'^(Learn more|Donate|Support|$)')
 rd = lambda f: open(f, encoding='utf8').read()
@@ -178,6 +179,15 @@ def main():
             for _, _, c in v['cues']: m.setdefault(c['en'], c[l])
         for k2, v2 in UI.items(): m.setdefault(k2, v2[l])
         if len(m) != n0: json.dump(m, open(f'i18n/{l}.json', 'w', encoding='utf8'), ensure_ascii=False, indent=0)
+    # Oct 20: Hebrew (hidden /he/ build via i18n/he.json) gets transcripts too, for videos whose a11y.json entry has 'he' text
+    if os.path.exists('i18n/he.json'):
+        m = json.load(open('i18n/he.json', encoding='utf8')); n0 = len(m)
+        for v in D['videos'].values():
+            if 'he' in v['visual']: m.setdefault(v['visual']['en'], v['visual']['he'])
+            for _, _, c in v['cues']:
+                if 'he' in c: m.setdefault(c['en'], c['he'])
+        for k2, v2 in HE_UI.items(): m.setdefault(k2, v2)
+        if len(m) != n0: json.dump(m, open('i18n/he.json', 'w', encoding='utf8'), ensure_ascii=False, indent=0)
     os.makedirs('assets/captions', exist_ok=True)
     for v, x in D['videos'].items():
         for l in ['en'] + LANGS: open(f'assets/captions/{v}.{l}.vtt', 'w', encoding='utf8').write(vtt(x['cues'], l))

@@ -295,7 +295,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261020c"  # bump when styles.css changes
+STYLEV = "20261021a"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
@@ -380,7 +380,7 @@ def page_pass(p, l, n):
             if 'preload=' not in tag: tag = tag.replace('<video', '<video preload="none"', 1)
             srcs = re.findall(r'<source[^>]*>', tag)
             if len(srcs) >= 2:
-                full = next((x for x in srcs if 'savingplanets-about-v' in x and '720' not in x), None)
+                full = next((x for x in srcs if ('savingplanets-about-v' in x or 'savingplanets-promo-v' in x) and '720' not in x), None)
                 small = next((x for x in srcs if '720' in x), None)
                 if full and small and tag.find(small) > tag.find(full):
                     tag = tag.replace(full, '@@FULL@@', 1).replace(small, full, 1).replace('@@FULL@@', small, 1)

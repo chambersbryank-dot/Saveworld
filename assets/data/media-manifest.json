@@ -4910,5 +4910,52 @@
   "height": 1957,
   "srcset": "https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-480.d3e024b3285e.webp 480w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-800.1aa006d3fa56.webp 800w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-1280.7b8ec8ea3b5b.webp 1280w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-1920.a540e1844666.webp 1920w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-2560.77a2d5984e04.webp 2560w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-2977.e94c76bfafae.webp 2977w",
   "srcset_avif": "https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-480.9d6fd112d7dc.avif 480w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-800.6c7e3a576d43.avif 800w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-1280.448467e48f12.avif 1280w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-1920.5108f0427f15.avif 1920w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-2560.507e2b746c64.avif 2560w, https://media.savingplanets.com/images/Tubbataha_Reefs_UNESCO-2977.dfd45f8c748f.avif 2977w"
+ },
+ "brand/logo-4096-transparent.png": {
+  "url": "https://media.savingplanets.com/brand/logo-4096-transparent.cd3d26c33a5a.png",
+  "key": "brand/logo-4096-transparent.cd3d26c33a5a.png",
+  "bytes": 21665145,
+  "sha256": "cd3d26c33a5a5c6666746846648a458a15ed3c39d19948b5711c09b4ce86ca4d",
+  "type": "image/png",
+  "width": 4096,
+  "height": 4096
+ },
+ "brand/logo-4096.jpg": {
+  "url": "https://media.savingplanets.com/brand/logo-4096.a37b4209de4c.jpg",
+  "key": "brand/logo-4096.a37b4209de4c.jpg",
+  "bytes": 3400097,
+  "sha256": "a37b4209de4cc03e88700311026bd6329427d93ae10ae9fa047c94af100ef07f",
+  "type": "image/jpeg",
+  "width": 4096,
+  "height": 4096
+ },
+ "brand/logo-4096.png": {
+  "url": "https://media.savingplanets.com/brand/logo-4096.6136524a8c26.png",
+  "key": "brand/logo-4096.6136524a8c26.png",
+  "bytes": 17356295,
+  "sha256": "6136524a8c26ff779e013bea2c0a9a364478801ea8ec1a96fe503c9701c000c9",
+  "type": "image/png",
+  "width": 4096,
+  "height": 4096
+ },
+ "videos/savingplanets-promo-v6-1080x1920-720.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920-720.2795edfdc623.mp4",
+  "key": "videos/savingplanets-promo-v6-1080x1920-720.2795edfdc623.mp4",
+  "bytes": 30248087,
+  "sha256": "2795edfdc6233a14305063dc42df44723f09fc66d4bc76bcde9ead43c4eea480",
+  "type": "video/mp4",
+  "width": 720,
+  "height": 1280,
+  "duration": 140.73
+ },
+ "videos/savingplanets-promo-v6-1080x1920.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920.f56ac95e3670.mp4",
+  "key": "videos/savingplanets-promo-v6-1080x1920.f56ac95e3670.mp4",
+  "bytes": 139105849,
+  "sha256": "f56ac95e36709a4670266d4b2a6642581fdafca258e98f119db566e969a986e2",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 140.73
  }
 }

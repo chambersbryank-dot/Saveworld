@@ -1688,3 +1688,16 @@ body:not(.pr-page):not(.artemis-page) :is(.card,.sol-card,.w-card,.rel-card,.tt-
 .ns-more{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
 .home-join .newsletter-band{margin-top:1.5rem}
 /* HOME-TRIM:END */
+/* LOGO:START */
+/* Oct 20 logo v2 (scripts/build-logo.py): icon left of 'Home' (right in RTL), bleeds a little above/below the bar; negative margins keep the row height */
+#topnav .spn-brand{gap:.55rem;overflow:visible;position:relative;z-index:2}
+#topnav .spn-logo{display:block;flex:none;line-height:0}
+#topnav .spn-logo img{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 6px rgba(0,0,0,.55));transition:transform .25s ease}
+#topnav .spn-brand:hover .spn-logo img{transform:scale(1.06) rotate(-4deg)}
+@media (min-width:1140px){#topnav .spn-logo{width:64px;height:64px;margin:-16px 0}#topnav.spn-solid .spn-logo{width:52px;height:52px;margin:-10px 0}html[lang=fr] #topnav .spn-logo,html[lang=es] #topnav .spn-logo{width:44px;height:44px;margin:-6px 0}}
+/* fr/es: the long main menu row reaches under the brand, so the icon stays in row 1 there */
+@media (max-width:1139px){#topnav .spn-logo,#topnav.spn-solid .spn-logo{width:54px;height:54px;margin:-5px 0}#topnav .spn-brand{gap:.4rem;min-width:0}}
+@media (max-width:380px){#topnav .spn-logo,#topnav.spn-solid .spn-logo{width:46px;height:46px;margin:-1px 0}#topnav .spn-brand{font-size:1rem}}
+@media (prefers-reduced-motion:reduce){#topnav .spn-logo img{transition:none}#topnav .spn-brand:hover .spn-logo img{transform:none}}
+.logo-credit{font-size:.75rem;opacity:.8;font-style:italic;margin:.4rem 0 0}
+/* LOGO:END */
