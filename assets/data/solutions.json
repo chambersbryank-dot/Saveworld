@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T05:27:35.609Z",
+ "generated": "2026-10-22T06:02:16.831Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -526,6 +526,10 @@
      "name": "Justdiggit"
     },
     {
+     "href": "Kakapo_Recovery.html",
+     "name": "Kākāpō Recovery (New Zealand)"
+    },
+    {
      "href": "Life_Terra.html",
      "name": "Life Terra"
     },
@@ -536,6 +540,10 @@
     {
      "href": "Mangroves.html",
      "name": "Mangrove Forests"
+    },
+    {
+     "href": "Mountain_Gorillas.html",
+     "name": "Mountain Gorilla Recovery"
     },
     {
      "href": "Nepal_Tigers.html",
@@ -566,6 +574,10 @@
      "name": "Rewilding Europe"
     },
     {
+     "href": "Route_of_Parks_Patagonia.html",
+     "name": "Route of Parks of Patagonia (Chile)"
+    },
+    {
      "href": "Saharan_Dust_Amazon.html",
      "name": "Saharan Dust Feeds the Amazon"
     },
@@ -580,6 +592,10 @@
     {
      "href": "Amazon_Rainy_Season.html",
      "name": "The Amazon Makes Its Own Rainy Season"
+    },
+    {
+     "href": "Arabian_Oryx.html",
+     "name": "The Arabian Oryx Comeback"
     },
     {
      "href": "Iberian_Lynx.html",
@@ -614,6 +630,10 @@
     {
      "href": "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html",
      "name": "Adopt-a-Beach (Alliance for the Great Lakes)"
+    },
+    {
+     "href": "Azraq_Wetland.html",
+     "name": "Azraq Wetland Reserve Restoration (Jordan)"
     },
     {
      "href": "Chilika_Lake.html",
@@ -818,6 +838,10 @@
      "name": "SeaTrees"
     },
     {
+     "href": "Seychelles_Marine_Spatial_Plan.html",
+     "name": "Seychelles Marine Spatial Plan and Debt-for-Nature Swap"
+    },
+    {
      "href": "Surfrider_Foundation.html",
      "name": "Surfrider Foundation"
     },
@@ -934,6 +958,10 @@
      "name": "GCOM-W &quot;SHIZUKU&quot; Sea-Ice Watch (JAXA)"
     },
     {
+     "href": "Iceland_Land_Restoration.html",
+     "name": "Iceland Land Restoration (Land and Forest Iceland)"
+    },
+    {
      "href": "ICESat-2.html",
      "name": "ICESat-2 (NASA)"
     },
@@ -946,8 +974,16 @@
      "name": "PREFIRE Polar CubeSats (NASA)"
     },
     {
+     "href": "PROMICE_GC-Net.html",
+     "name": "PROMICE and GC-Net: Greenland Ice-Sheet Weather Stations"
+    },
+    {
      "href": "RCM.html",
      "name": "RADARSAT Constellation Mission (Canada)"
+    },
+    {
+     "href": "Ross_Sea_MPA.html",
+     "name": "Ross Sea Region Marine Protected Area"
     },
     {
      "href": "SCISAT.html",
@@ -1024,6 +1060,10 @@
      "name": "NEWater, Singapore's Recycled Water (PUB)"
     },
     {
+     "href": "Okavango_Delta.html",
+     "name": "Okavango Delta: The River That Ends in a Desert"
+    },
+    {
      "href": "OpenET.html",
      "name": "OpenET Satellite Water Data"
     },
@@ -1074,8 +1114,16 @@
      "name": "ClearSpace"
     },
     {
+     "href": "Danuri_ShadowCam.html",
+     "name": "Danuri Lunar Orbiter and NASA ShadowCam (KASA)"
+    },
+    {
      "href": "Hope_Mars_Mission.html",
      "name": "Emirates Mars Mission (Hope Probe)"
+    },
+    {
+     "href": "Emirates_Mission_Asteroid_Belt.html",
+     "name": "Emirates Mission to the Asteroid Belt (MBR Explorer)"
     },
     {
      "href": "Enceladus.html",
@@ -1234,17 +1282,17 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 231,
+  "solutions": 243,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 18,
-   "government": 19,
-   "agency": 114,
-   "nonprofit": 62,
-   "natural": 18
+   "government": 25,
+   "agency": 117,
+   "nonprofit": 64,
+   "natural": 19
   },
-  "upcomingMissions": 25,
+  "upcomingMissions": 27,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1264,17 +1312,17 @@
     ]
    }
   ],
-  "taggedSolutions": 231
+  "taggedSolutions": 243
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 42,
+   "solutions": 43,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
-    "government": 5,
+    "government": 6,
     "nonprofit": 21,
     "agency": 5,
     "natural": 6
@@ -1294,11 +1342,11 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 13,
+   "solutions": 14,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 8,
+    "nonprofit": 9,
     "government": 3,
     "agency": 1,
     "natural": 1
@@ -1316,12 +1364,12 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 22,
+   "solutions": 23,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 11,
-    "natural": 1,
+    "natural": 2,
     "government": 5,
     "agency": 3,
     "corporate": 2
@@ -1331,13 +1379,13 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 33,
+   "solutions": 37,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 20,
+    "nonprofit": 21,
     "natural": 5,
-    "government": 4,
+    "government": 7,
     "agency": 3,
     "corporate": 1
    },
@@ -1354,16 +1402,16 @@
   },
   "space": {
    "name": "Space",
-   "solutions": 9,
+   "solutions": 11,
    "horizon": 1,
    "hubs": 1,
    "byClassification": {
     "corporate": 3,
-    "agency": 3,
+    "agency": 5,
     "natural": 2,
     "government": 1
    },
-   "upcomingMissions": 3,
+   "upcomingMissions": 5,
    "impactTotals": []
   },
   "planetary-defense": {
@@ -1379,14 +1427,14 @@
   },
   "polar": {
    "name": "Polar",
-   "solutions": 12,
+   "solutions": 15,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 9,
+    "agency": 10,
     "corporate": 1,
-    "nonprofit": 1,
-    "government": 1
+    "government": 3,
+    "nonprofit": 1
    },
    "upcomingMissions": 3,
    "impactTotals": []
@@ -1613,6 +1661,17 @@
    "missions": []
   },
   {
+   "url": "Arabian_Oryx.html",
+   "title": "The Arabian Oryx Comeback",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
+  },
+  {
    "url": "Arbor_Day_Foundation.html",
    "title": "Arbor Day Foundation",
    "category": "forests",
@@ -1762,6 +1821,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Azraq_Wetland.html",
+   "title": "Azraq Wetland Reserve Restoration (Jordan)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
   },
   {
    "url": "Beavers_River_Engineers.html",
@@ -2176,6 +2246,26 @@
    "added": "2026-10-17"
   },
   {
+   "url": "Danuri_ShadowCam.html",
+   "title": "Danuri Lunar Orbiter and NASA ShadowCam (KASA)",
+   "category": "space",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "Danuri",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2027-12-31T00:00:00Z"
+     }
+    }
+   ],
+   "added": "2026-10-21"
+  },
+  {
    "url": "Deforestation.html",
    "title": "Forests",
    "category": "forests",
@@ -2288,6 +2378,26 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Emirates_Mission_Asteroid_Belt.html",
+   "title": "Emirates Mission to the Asteroid Belt (MBR Explorer)",
+   "category": "space",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [
+    {
+     "name": "MBR Explorer",
+     "upcoming": true,
+     "next": {
+      "event": "arrival",
+      "date": "2028-03-01T00:00:00Z"
+     }
+    }
+   ],
+   "added": "2026-10-21"
   },
   {
    "url": "EMIT.html",
@@ -2913,6 +3023,17 @@
    "added": "2026-10-20"
   },
   {
+   "url": "Iceland_Land_Restoration.html",
+   "title": "Iceland Land Restoration (Land and Forest Iceland)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
+  },
+  {
    "url": "ICESat-2.html",
    "title": "ICESat-2 (NASA)",
    "category": "polar",
@@ -3067,6 +3188,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Kakapo_Recovery.html",
+   "title": "Kākāpō Recovery (New Zealand)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
   },
   {
    "url": "Keep_Tahoe_Blue.html",
@@ -3437,6 +3569,17 @@
    "missions": []
   },
   {
+   "url": "Mountain_Gorillas.html",
+   "title": "Mountain Gorilla Recovery",
+   "category": "forests",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
+  },
+  {
    "url": "Mr_Trash_Wheel.html",
    "title": "Mr. Trash Wheel Family",
    "category": "rivers",
@@ -3595,6 +3738,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-15"
+  },
+  {
+   "url": "Okavango_Delta.html",
+   "title": "Okavango Delta: The River That Ends in a Desert",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
   },
   {
    "url": "One_Tree_Planted.html",
@@ -3896,6 +4050,17 @@
    "missions": []
   },
   {
+   "url": "PROMICE_GC-Net.html",
+   "title": "PROMICE and GC-Net: Greenland Ice-Sheet Weather Stations",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
+  },
+  {
    "url": "Psyche.html",
    "title": "Psyche (NASA)",
    "category": "project-r",
@@ -4058,6 +4223,28 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-20"
+  },
+  {
+   "url": "Ross_Sea_MPA.html",
+   "title": "Ross Sea Region Marine Protected Area",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
+  },
+  {
+   "url": "Route_of_Parks_Patagonia.html",
+   "title": "Route of Parks of Patagonia (Chile)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
   },
   {
    "url": "Saharan_Dust_Amazon.html",
@@ -4273,6 +4460,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Seychelles_Marine_Spatial_Plan.html",
+   "title": "Seychelles Marine Spatial Plan and Debt-for-Nature Swap",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-21"
   },
   {
    "url": "SMAP.html",
