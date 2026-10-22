@@ -126,6 +126,9 @@ W4, H4 = MEDIA.dims('savingplanets-promo-v4-final-1080x1920.mp4'); U4 = MEDIA.vu
 PROMO_HOME = (PROMO.replace('class="promo-v4 promo-v6"', 'class="promo-v4"').replace('savingplanets-promo-v6-tall.jpg', 'savingplanets-promo-v4-tall.jpg')
   .replace(f'<source src="{VU7}" type="video/mp4">', '').replace(VU, U4).replace(f'width="{VW}" height="{VH}"', f'width="{W4}" height="{H4}"')
   .replace(html.escape(PROMO_CAP, quote=False), html.escape("A 2½-minute tour of Saving Planets today: 191 real solutions in 11 hubs, the new homepage, the interactive World Map and Myth vs Fact.", quote=False)))
+# Oct 21 (founder): nothing under the homepage promo video: no caption/credits figcaption, no visible Transcript toggle (screen-reader only), no X link
+PROMO_HOME = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S).replace(PX, '') if PX else re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S)
+PROMO_HOME = PROMO_HOME.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
 s = put(s, 'PROMO', PROMO_HOME, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
 open('index.html', 'w', encoding='utf-8').write(s)
 # Oct 18 (owner request): the same promo on About, directly below the 'From the ocean floor…' strip. Oct 20: it is now the ONLY About video.
