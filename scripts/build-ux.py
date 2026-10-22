@@ -178,6 +178,10 @@ def home(l, n, hubs):
     s = block(s, 'DOMAINS', ''.join(secs), r'<!-- AUDIENCE:START -->')
     try:
         ent = json.load(open('scripts/newsletter-updates.json', encoding='utf8'))['entries']
+        # Oct 22 (daily numbers check): skip raw commit-message entries that were never written up (auto-appended with a commit hash
+        # and no French text), same rule as newsletter-draft.js. They showed English build notes ('STYLEV ...', 'promo v6 (231 solutions')
+        # on every language's homepage, including a stale solution count.
+        ent = [e for e in ent if not (e.get('commit') and not (e.get('what') or {}).get('fr'))]
         ent = sorted(ent, key=lambda e: e['date'], reverse=True)[:5]
         # Oct 17 fix: entries without a page (auto-appended from commits/NOTES) are listed unlinked; one bad entry no longer empties the list.
         def _li(e):
