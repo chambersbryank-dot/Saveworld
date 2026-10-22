@@ -2901,6 +2901,140 @@
     }
    ],
    "strip": "orbit"
+  },
+  "Ross_Sea_MPA.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -77.55,
+     "lng": 166.17,
+     "label": "Cape Royds, Ross Island, Ross Sea, Antarctica",
+     "basis": "page"
+    }
+   ]
+  },
+  "PROMICE_GC-Net.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 69.22,
+     "lng": -49.8,
+     "label": "Greenland ice sheet near Jakobshavn Glacier, Greenland",
+     "basis": "page"
+    }
+   ]
+  },
+  "Iceland_Land_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 64.0,
+     "lng": -19.0,
+     "label": "Iceland's eroded highland edge",
+     "basis": "page"
+    }
+   ]
+  },
+  "Emirates_Mission_Asteroid_Belt.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 30.4,
+     "lng": 130.97,
+     "label": "Tanegashima Space Center, Japan, the planned H3 launch site",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "Arabian_Oryx.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 22.0,
+     "lng": 56.0,
+     "label": "Arabian Peninsula, home range of the Arabian oryx",
+     "basis": "page"
+    }
+   ]
+  },
+  "Azraq_Wetland.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 31.83,
+     "lng": 36.82,
+     "label": "Azraq Wetland Reserve, Jordan",
+     "basis": "page"
+    }
+   ]
+  },
+  "Okavango_Delta.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -19.28,
+     "lng": 22.9,
+     "label": "Okavango Delta, Botswana",
+     "basis": "page"
+    }
+   ]
+  },
+  "Mountain_Gorillas.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -1.05,
+     "lng": 29.68,
+     "label": "Bwindi Impenetrable National Park, Uganda",
+     "basis": "page"
+    }
+   ]
+  },
+  "Seychelles_Marine_Spatial_Plan.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -9.42,
+     "lng": 46.35,
+     "label": "Aldabra Atoll, Seychelles",
+     "basis": "page"
+    }
+   ]
+  },
+  "Kakapo_Recovery.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -46.77,
+     "lng": 167.65,
+     "label": "Whenua Hou/Codfish Island, New Zealand",
+     "basis": "page"
+    }
+   ]
+  },
+  "Route_of_Parks_Patagonia.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -47.13,
+     "lng": -72.48,
+     "label": "Patagonia National Park, Chacabuco Valley, Chile",
+     "basis": "page"
+    }
+   ]
+  },
+  "Danuri_ShadowCam.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 36.37,
+     "lng": 127.36,
+     "label": "Korea Aerospace Research Institute, Daejeon, Korea",
+     "basis": "page"
+    }
+   ],
+   "strip": "orbit"
   }
  }
 }

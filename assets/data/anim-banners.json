@@ -819,6 +819,66 @@
    "credit": "NASA/GSFC/Arizona State University (PIA13523, the lunar south pole)",
    "pos": "50% 50%",
    "r2": "images/Lunar_South_Pole_PIA13523.jpg"
+  },
+  "assets/Ross_Sea_Adelie_Cape_Royds.jpg": {
+   "credit": "U.S. Department of State (Adélie penguin at Cape Royds, Antarctica, 2016, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Ross_Sea_Adelie_Cape_Royds.jpg"
+  },
+  "assets/Greenland_Glacier_Landsat_NASA_EO.jpg": {
+   "credit": "NASA Earth Observatory / Joshua Stevens, Landsat data from USGS (Jakobshavn Glacier, Greenland, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Greenland_Glacier_Landsat_NASA_EO.jpg"
+  },
+  "assets/Iceland_Highland_Edge.jpg": {
+   "credit": "Zairon via Wikimedia Commons (Island am Rande des Hochlands, CC BY-SA 3.0)",
+   "pos": "50% 50%",
+   "r2": "images/Iceland_Highland_Edge.jpg"
+  },
+  "assets/Asteroid_269_Justitia_Orbit_JPL.jpg": {
+   "credit": "JPL Solar System Dynamics/NASA (orbit of 269 Justitia, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Asteroid_269_Justitia_Orbit_JPL.jpg"
+  },
+  "assets/Arabian_Oryx_Oryx_Leucoryx.jpg": {
+   "credit": "Charles J. Sharp via Wikimedia Commons (Arabian oryx, Dubai Desert Conservation Area, CC BY-SA 3.0)",
+   "pos": "50% 50%",
+   "r2": "images/Arabian_Oryx_Oryx_Leucoryx.jpg"
+  },
+  "assets/Azraq_Wetland_Reserve_48.jpg": {
+   "credit": "Mohammad hajeer via Wikimedia Commons (Azraq Wetland Reserve, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Azraq_Wetland_Reserve_48.jpg"
+  },
+  "assets/Okavango_Delta_Aerial_2018.jpg": {
+   "credit": "Diego Delso via Wikimedia Commons (aerial view of the Okavango Delta, 2018, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Okavango_Delta_Aerial_2018.jpg"
+  },
+  "assets/Mountain_Gorilla_Bwindi_2024.jpg": {
+   "credit": "Diego Delso via Wikimedia Commons (mountain gorilla, Bwindi, 2024, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Mountain_Gorilla_Bwindi_2024.jpg"
+  },
+  "assets/Aldabra_Atoll_Seychelles.jpg": {
+   "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (Aldabra Atoll, CC BY-SA 3.0 IGO)",
+   "pos": "50% 50%",
+   "r2": "images/Aldabra_Atoll_Seychelles.jpg"
+  },
+  "assets/Kakapo_Sirocco.jpg": {
+   "credit": "NZ Department of Conservation via Wikimedia Commons (Kākāpō Sirocco, CC BY 2.0)",
+   "pos": "50% 50%",
+   "r2": "images/Kakapo_Sirocco.jpg"
+  },
+  "assets/Chacabuco_Valley_Patagonia_Park.jpg": {
+   "credit": "Gonzalo Lastra via Wikimedia Commons (Valle de Chacabuco, Parque Patagonia, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Chacabuco_Valley_Patagonia_Park.jpg"
+  },
+  "assets/Shackleton_Crater_LROC_ShadowCam.jpg": {
+   "credit": "LROC and ShadowCam teams, NASA/KARI/ASU (Shackleton Crater mosaic, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Shackleton_Crater_LROC_ShadowCam.jpg"
   }
  },
  "pages": {
@@ -1108,6 +1168,18 @@
   "Altyn_Dala_Saiga.html": "assets/Saiga_West_Kazakhstan.jpg",
   "Gorongosa.html": "assets/Mount_Gorongosa_Mozambique.jpg",
   "NEOSSat.html": "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
-  "Chandrayaan-5_LUPEX.html": "assets/Lunar_South_Pole_PIA13523.jpg"
+  "Chandrayaan-5_LUPEX.html": "assets/Lunar_South_Pole_PIA13523.jpg",
+  "Ross_Sea_MPA.html": "assets/Ross_Sea_Adelie_Cape_Royds.jpg",
+  "PROMICE_GC-Net.html": "assets/Greenland_Glacier_Landsat_NASA_EO.jpg",
+  "Iceland_Land_Restoration.html": "assets/Iceland_Highland_Edge.jpg",
+  "Emirates_Mission_Asteroid_Belt.html": "assets/Asteroid_269_Justitia_Orbit_JPL.jpg",
+  "Arabian_Oryx.html": "assets/Arabian_Oryx_Oryx_Leucoryx.jpg",
+  "Azraq_Wetland.html": "assets/Azraq_Wetland_Reserve_48.jpg",
+  "Okavango_Delta.html": "assets/Okavango_Delta_Aerial_2018.jpg",
+  "Mountain_Gorillas.html": "assets/Mountain_Gorilla_Bwindi_2024.jpg",
+  "Seychelles_Marine_Spatial_Plan.html": "assets/Aldabra_Atoll_Seychelles.jpg",
+  "Kakapo_Recovery.html": "assets/Kakapo_Sirocco.jpg",
+  "Route_of_Parks_Patagonia.html": "assets/Chacabuco_Valley_Patagonia_Park.jpg",
+  "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg"
  }
 }
