@@ -302,9 +302,25 @@ if __name__ == '__main__':
     for l in LANGS:
         for p in sorted(glob.glob(d(l) + '*.html')): n += page_pass(p, l)
     for l in [x for x in SWITCH_LANGS if x not in LANGS]:  # Oct 19: he/ keeps its translated nav; only the switch is rebuilt
+        import json
+        HEM = json.load(open(f'i18n/{l}.json', encoding='utf8'))
+        def he_nav(p, old):
+            # Oct 22: rebuild he/ nav structure from the English nav (menu changes reach Hebrew in the same sync), labels via i18n/he.json
+            b = BRAND_RE.search(old); bh, bt = (b.group(1), b.group(2)) if b else ('index.html', 'Saving Planets')
+            pg = os.path.basename(p)
+            h = nav('en', pg, bh, bt)
+            h = re.sub(r'href="([^"#?]+)([^"]*)"', lambda m: m.group(0) if m.group(1).startswith(('http', '../', 'mailto:')) or os.path.exists(l + '/' + m.group(1)) else f'href="../{m.group(1)}{m.group(2)}"', h)
+            tx = lambda t: (lambda k: HEM.get(k, k))(html.unescape(t.strip())) if t.strip() else t
+            h = re.sub(r'>([^<>]+)<', lambda m: '>' + html.escape(tx(m.group(1)), quote=False) + '<', h)
+            h = re.sub(r'(aria-label|data-open|data-close)="([^"]*)"', lambda m: f'{m.group(1)}="{html.escape(tx(m.group(2)))}"', h)
+            h = re.sub(r'<li class="lang-switch">.*?</span></li>', lambda m: switcher(l, pg), h, count=1, flags=re.S)
+            return h
         for p in sorted(glob.glob(l + '/*.html')):
-            s = rd(p); s2 = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', lambda m: switcher(l, os.path.basename(p)), s, count=1)
-            if 'class="lang-switch"' not in s2: s2 = re.sub(r'(<ul[^>]*class="spn-util"[^>]*>)', lambda m: m.group(1) + switcher(l, os.path.basename(p)), s2, count=1)
+            s = rd(p); m0 = NAV_RE.search(s)
+            if m0 and 'class="spn"' in m0.group(0): s2 = s[:m0.start()] + he_nav(p, m0.group(0)) + s[m0.end():]
+            else:
+                s2 = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', lambda m: switcher(l, os.path.basename(p)), s, count=1)
+                if 'class="lang-switch"' not in s2: s2 = re.sub(r'(<ul[^>]*class="spn-util"[^>]*>)', lambda m: m.group(1) + switcher(l, os.path.basename(p)), s2, count=1)
             if s2 != s: n += wr(p, s2)
     asset('styles.css', CSS); asset('site.js', JS)
     print(f'build-nav: {n} page writes')
