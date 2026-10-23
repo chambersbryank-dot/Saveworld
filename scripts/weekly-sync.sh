@@ -93,6 +93,7 @@ python3 scripts/build-af-images.py       # Oct 17: Amazing Facts responsive WebP
 python3 scripts/defer-sitejs.py         # Oct 16: site.js loads with defer (skips pages whose inline scripts call window.sp*)
 python3 scripts/apply-anim-banners.py   # Oct 18: site-wide animated page banners (sp_banner, R2 originals, pause, reduced motion), all langs; after apply-heroes + build-lcp
 python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
+python3 scripts/build-home-trim.py      # Oct 20: founder-approved clutter fix #1, homepage 18 -> 6 sections (parks, never deletes; --undo restores)
 python3 scripts/he-si-note.py           # Oct 19: SI-translated reader note on every /he/ page (Hebrew launch)
 python3 scripts/build-logo.py           # Oct 20: logo v2 icon in the nav (left of Home; RTL mirrored), favicons, apple-touch, footer logo credit (all langs)
 python3 scripts/build-promo-en-only.py   # Oct 21 (founder): promo videos English-only; fr/es/ar/it/he get one 4K NASA still
