@@ -1666,6 +1666,10 @@ body.roman-page [id]{scroll-margin-top:calc(var(--spn-h,64px) + 76px)}
 /* Oct 19 (quality report #5): Italian nav items failed axe color-contrast when scanned before the hero image painted
    (light text over an undetermined background). Italian-only: the header gets the same dark backing it already uses once scrolled (.spn-solid), so the text is >=15:1, other locales unchanged. */
 html[lang="it"] body nav#topnav{background:#071018 !important}
+#topnav .spn-sub li.spn-child a{padding-inline-start:2.1rem;font-size:15px}
+#topnav .spn-sub li.spn-child a::before{content:"\2192";opacity:.55;margin-inline-end:.45rem;font-size:13px}
+html[dir=rtl] #topnav .spn-sub li.spn-child a::before{content:"\2190"}
+@media (min-width:1140px){#topnav #spn-sol{max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}}
 /* SPNAV:END */
 /* LANGBANNER:START */
 .sp-lb{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:1001;padding-bottom:calc(.5rem + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;padding:.5rem .75rem;pointer-events:none}

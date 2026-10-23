@@ -27,6 +27,7 @@ def page(slug, title, h1, sub, desc, body):
 
 # ---- Do one thing today
 D = json.load(open('assets/data/daily-actions.json', encoding='utf8'))
+CLEANUP_ON = False  # mirrors CLEANUP_ENABLED below (Oct 22)
 items = []
 for i, a in enumerate(D['actions']):
     ext = EXT if a['url'].startswith('http') else ''
@@ -35,7 +36,7 @@ for i, a in enumerate(D['actions']):
 DOT = ('<!-- DOT:START --><section class="dot" id="do-one-thing" aria-labelledby="dot-h" data-start="' + D['start'] + '"><div class="dot-card">'
        '<p class="dot-kicker">Today&#x27;s small step</p><h2 id="dot-h">Do One Thing Today</h2>'
        '<ol class="dot-list" role="list">' + ''.join(items) + '</ol>'
-       '<p class="dot-foot">A new action every day, each from an official source. <a href="Find_a_Cleanup.html">Find a cleanup near you</a> · <a href="Ways_to_Help.html">Ways to Help</a></p>'
+       '<p class="dot-foot">A new action every day, each from an official source. ' + ('<a href="Find_a_Cleanup.html">Find a cleanup near you</a> · ' if CLEANUP_ON else '') + '<a href="Ways_to_Help.html">Ways to Help</a></p>'
        '</div></section><!-- DOT:END -->')
 def put(f, block, tag, before):
     s = open(f, encoding='utf8').read()
@@ -61,6 +62,7 @@ print('dot enabled' if DOT_ENABLED else 'dot DISABLED', 'dot: index +', len(C.QU
 
 # ---- Community.html (Oct 14: paused; saved on branch archive/community-wall. Set True + see docs/community-archive.md to restore.)
 COMMUNITY_ENABLED = False
+CLEANUP_ENABLED = False  # Oct 22 (founder): Find a Cleanup paused, may return in a future revamp; scripts/disable-cleanup.py strips links late in the sync
 MAIL = 'mailto:ideas@savingplanets.com?subject=Solution%20idea%20for%20Saving%20Planets)%3A%0AWhat%20happened%3A%0A%0AI%20took%20this%20photo%2C%20I%20agree%20to%20the%20guidelines%2C%20and%20Saving%20Planets%20may%20publish%20it.'
 G = ['Send photos you took yourself. Please don&#x27;t send photos from the internet or someone else&#x27;s camera.',
      'Use your first name or an alias only. We never publish last names, emails or addresses.',
@@ -103,17 +105,19 @@ body = ('<section class="impact" id="intro"><h2>How This Works</h2><div class="i
         '<section class="five-ws" id="none-near"><h2>No Event Near You?</h2><p>Start your own small cleanup with <a href="https://oceanconservancy.org/work/plastics/cleanups-icc/start-a-cleanup/"' + EXT + '>Ocean Conservancy&#x27;s free guide</a>, and log what you find in the <a href="https://oceanconservancy.org/work/plastics/cleanups-icc/clean-swell-app/"' + EXT + '>Clean Swell app</a>.</p></section>\n'
         '<section class="five-ws" id="safety"><h2>Stay Safe</h2><ul class="comm-rules"><li>Wear gloves and closed shoes.</li><li>Don&#x27;t pick up needles, sharp metal or broken glass by hand. Tell the organizer.</li><li>Kids should always clean up with an adult.</li><li>Watch the tide, the sun and the weather.</li></ul></section>\n'
         '<section class="help-actions" id="share"><h2>Share Your Cleanup</h2>' + ('<p>Send us a photo for the Community Wall, or find more ways to give and volunteer.</p><p><a class="btn" href="Community.html">Community Wall</a> <a class="btn help-btn" href="Ways_to_Help.html">Ways to Help</a></p>' if COMMUNITY_ENABLED else '<p>Find more ways to give and volunteer.</p><p><a class="btn help-btn" href="Ways_to_Help.html">Ways to Help</a></p>') + '</section>')
-page('Find_a_Cleanup', 'Find a Cleanup Near You | Saving Planets', 'Find a Cleanup', 'Official cleanup event finders, sorted by region.',
+if CLEANUP_ENABLED: page('Find_a_Cleanup', 'Find a Cleanup Near You | Saving Planets', 'Find a Cleanup', 'Official cleanup event finders, sorted by region.',
      'Find a beach, river or lake cleanup near you. Links to official event finders from Ocean Conservancy, Surfrider, Keep America Beautiful, Alliance for the Great Lakes and more.', body)
 
 # ---- Ways to Help link
 WB = ('<!-- B4-WTH:START --><section class="help-actions" id="cleanups"><h2>Join a Cleanup</h2><p>Want to help with your own hands? Find an official cleanup near you' + (', then send us a photo for the Community Wall.' if COMMUNITY_ENABLED else '.') + '</p>'
       '<p><a class="btn" href="Find_a_Cleanup.html">Find a Cleanup</a>' + (' <a class="btn help-btn" href="Community.html">Community Wall</a>' if COMMUNITY_ENABLED else '') + '</p></section><!-- B4-WTH:END -->')
+if not CLEANUP_ENABLED: WB = '<!-- B4-WTH:START --><!-- B4-WTH:END -->'
 put('Ways_to_Help.html', WB, 'B4-WTH', ['<section class="help-actions">'])
 
 # ---- Footer + nav (English pages; translations regenerate)
 OLDF = '<a href="Rawanes_Mission_Log.html">Rawane&#x27;s Mission Log</a></p>'
 NEWF = '<a href="Rawanes_Mission_Log.html">Rawane&#x27;s Mission Log</a><span aria-hidden="true"> · </span><a href="Community.html">Community Wall</a><span aria-hidden="true"> · </span><a href="Find_a_Cleanup.html">Find a Cleanup</a></p>'
+if not CLEANUP_ENABLED: NEWF = NEWF.replace('<span aria-hidden="true"> · </span><a href="Find_a_Cleanup.html">Find a Cleanup</a>', '')
 if not COMMUNITY_ENABLED: NEWF = NEWF.replace('<a href="Community.html">Community Wall</a><span aria-hidden="true"> · </span>', '')
 NAVC = '<li><a href="Community.html">Community</a></li>' if COMMUNITY_ENABLED else ''
 NAVO = '<li><a href="Search.html">Search</a></li>'
@@ -130,14 +134,14 @@ print('footers:', nf, 'nav:', nn)
 
 # ---- sitemap, pages.txt, build-stats SKIP
 sm = open('sitemap.xml', encoding='utf8').read()
-for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + ('Find_a_Cleanup.html',):
+for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + (('Find_a_Cleanup.html',) if CLEANUP_ENABLED else ()):
     loc = f'<loc>https://www.savingplanets.com/{p}</loc>'
     if loc not in sm:
         anchor = sm.index('<url><loc>https://www.savingplanets.com/Ways_to_Help.html</loc>')
         sm = sm[:anchor] + f'<url>{loc}<lastmod>2026-10-11</lastmod></url>\n  ' + sm[anchor:]
 open('sitemap.xml', 'w', encoding='utf8').write(sm)
 pt = open('i18n/pages.txt', encoding='utf8').read()
-for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + ('Find_a_Cleanup.html',):
+for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + (('Find_a_Cleanup.html',) if CLEANUP_ENABLED else ()):
     if p not in pt.split(): pt = pt.rstrip('\n') + '\n' + p + '\n'
 open('i18n/pages.txt', 'w', encoding='utf8').write(pt)
 bs = open('build-stats.js', encoding='utf8').read()
