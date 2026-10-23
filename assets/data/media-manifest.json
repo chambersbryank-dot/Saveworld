@@ -4603,14 +4603,14 @@
   "duration": 97.0
  },
  "videos/savingplanets-promo-v4-final-1080x1920.mp4": {
-  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v4-final-1080x1920.79d504a91294.mp4",
-  "key": "videos/savingplanets-promo-v4-final-1080x1920.79d504a91294.mp4",
-  "bytes": 114421399,
-  "sha256": "79d504a91294b808ad0e6b62e3dc164e75b553b2cce908855cbe7ed8b4f51e09",
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v4-final-1080x1920.597a53a8f0cc.mp4",
+  "key": "videos/savingplanets-promo-v4-final-1080x1920.597a53a8f0cc.mp4",
+  "bytes": 139024084,
+  "sha256": "597a53a8f0ccdc455a8698fc686aeae6d9a27223ebaccf49436b711ac243b959",
   "type": "video/mp4",
   "width": 1080,
   "height": 1920,
-  "duration": 147.9
+  "duration": 147.88
  },
  "videos/solutions-banner-earth-wide-1280x300.mp4": {
   "url": "https://media.savingplanets.com/videos/solutions-banner-earth-wide-1280x300.157e47ff0204.mp4",
@@ -4939,20 +4939,20 @@
   "height": 4096
  },
  "videos/savingplanets-promo-v6-1080x1920-720.mp4": {
-  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920-720.2795edfdc623.mp4",
-  "key": "videos/savingplanets-promo-v6-1080x1920-720.2795edfdc623.mp4",
-  "bytes": 30248087,
-  "sha256": "2795edfdc6233a14305063dc42df44723f09fc66d4bc76bcde9ead43c4eea480",
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920-720.1996634cc86b.mp4",
+  "key": "videos/savingplanets-promo-v6-1080x1920-720.1996634cc86b.mp4",
+  "bytes": 31858962,
+  "sha256": "1996634cc86b001f5f7e8e958662076b00b6c7afce5be61a7da746dba383eb2b",
   "type": "video/mp4",
   "width": 720,
   "height": 1280,
   "duration": 140.73
  },
  "videos/savingplanets-promo-v6-1080x1920.mp4": {
-  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920.f56ac95e3670.mp4",
-  "key": "videos/savingplanets-promo-v6-1080x1920.f56ac95e3670.mp4",
-  "bytes": 139105849,
-  "sha256": "f56ac95e36709a4670266d4b2a6642581fdafca258e98f119db566e969a986e2",
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920.85510cc4a95f.mp4",
+  "key": "videos/savingplanets-promo-v6-1080x1920.85510cc4a95f.mp4",
+  "bytes": 139118513,
+  "sha256": "85510cc4a95fd7a818ed1eabfebace0165bbf08e8b8e3e042fba26cc3f3e1927",
   "type": "video/mp4",
   "width": 1080,
   "height": 1920,
