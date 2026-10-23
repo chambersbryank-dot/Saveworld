@@ -879,6 +879,21 @@
    "credit": "LROC and ShadowCam teams, NASA/KARI/ASU (Shackleton Crater mosaic, public domain)",
    "pos": "50% 50%",
    "r2": "images/Shackleton_Crater_LROC_ShadowCam.jpg"
+  },
+  "assets/Puerto_Bermudez_Peru_Rainforest.jpg": {
+   "credit": "Heiner Amado Cadillo via Wikimedia Commons (Puerto Bermúdez, Peru, 2016, CC BY-SA 3.0)",
+   "pos": "50% 50%",
+   "r2": "images/Puerto_Bermudez_Peru_Rainforest.jpg"
+  },
+  "assets/Andfjorden_Andoy_2023.jpg": {
+   "credit": "Ryan Hodnett via Wikimedia Commons (Andfjorden, Andøy, Norway, 2023, CC BY-SA 4.0)",
+   "pos": "50% 50%",
+   "r2": "images/Andfjorden_Andoy_2023.jpg"
+  },
+  "assets/Tetiaroa_Atoll_ISS018.jpg": {
+   "credit": "NASA Johnson Space Center, ISS crew photo ISS018-E-024351 (Tetiaroa, French Polynesia, 27 Jan. 2009, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Tetiaroa_Atoll_ISS018.jpg"
   }
  },
  "pages": {
@@ -1180,6 +1195,9 @@
   "Seychelles_Marine_Spatial_Plan.html": "assets/Aldabra_Atoll_Seychelles.jpg",
   "Kakapo_Recovery.html": "assets/Kakapo_Sirocco.jpg",
   "Route_of_Parks_Patagonia.html": "assets/Chacabuco_Valley_Patagonia_Park.jpg",
-  "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg"
+  "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg",
+  "Cool_Earth_Basic_Income.html": "assets/Puerto_Bermudez_Peru_Rainforest.jpg",
+  "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
+  "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg"
  }
 }

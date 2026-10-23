@@ -3035,6 +3035,39 @@
     }
    ],
    "strip": "orbit"
+  },
+  "Cool_Earth_Basic_Income.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -10.3,
+     "lng": -74.9,
+     "label": "Central Peruvian Amazon, Peru (approximate area of the pilot communities)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Andfjorden_MPA.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 69.25,
+     "lng": 16.5,
+     "label": "Andfjorden, between Andøya and Senja, Norway",
+     "basis": "page"
+    }
+   ]
+  },
+  "Atoll_Rewilding.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -17.01,
+     "lng": -149.56,
+     "label": "Tetiaroa atoll, French Polynesia, one of the study sites",
+     "basis": "page"
+    }
+   ]
   }
  }
 }
