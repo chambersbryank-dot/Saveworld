@@ -10,6 +10,10 @@ SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 
 # Oct 23 (founder): Saturn.jpg removed from SI_IMAGES: it is NASA's real Cassini mosaic PIA06193
 # (credit NASA/JPL/Space Science Institute, https://science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/).
 REAL_PHOTOS = {'Saturn'}  # real agency photos: never get the SI credit
+# Oct 23 (founder): hub card photos from public agencies (assets/data/hub-agency-images.json) are real photos too
+import json as _j
+REAL_PHOTOS |= {e['stem'] for e in _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'data', 'hub-agency-images.json'), encoding='utf8'))}
+SI_IMAGES -= REAL_PHOTOS
 SI_T = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
         'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner',
         'he': 'נוצר על ידי SI ושותף SI ביולוגי'}  # Oct 18: hidden he pages were skipped, so a rotated homepage card failed --check
