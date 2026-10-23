@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T15:31:54.764Z",
+ "generated": "2026-10-23T16:36:08.224Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -486,6 +486,10 @@
      "name": "Arbor Day Foundation"
     },
     {
+     "href": "Cool_Earth_Basic_Income.html",
+     "name": "Cool Earth Basic Income Pilot (Peruvian Amazon)"
+    },
+    {
      "href": "Costa_Rica_Forest_Payments.html",
      "name": "Costa Rica Payments for Environmental Services (FONAFIFO)"
     },
@@ -706,12 +710,20 @@
      "name": "Alaska SeaLife Center: Marine Wildlife Rescue"
     },
     {
+     "href": "Andfjorden_MPA.html",
+     "name": "Andfjorden Marine Protected Area (Norway)"
+    },
+    {
      "href": "Argo.html",
      "name": "Argo Ocean Float Array"
     },
     {
      "href": "Argos.html",
      "name": "Argos Satellite Tracking System"
+    },
+    {
+     "href": "Atoll_Rewilding.html",
+     "name": "Atoll Rewilding: Seabirds Against Sea-Level Rise"
     },
     {
      "href": "Billion_Oyster_Project.html",
@@ -1282,15 +1294,15 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 243,
+  "solutions": 246,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 18,
-   "government": 25,
+   "government": 26,
    "agency": 117,
-   "nonprofit": 64,
-   "natural": 19
+   "nonprofit": 65,
+   "natural": 20
   },
   "upcomingMissions": 27,
   "impactTotals": [
@@ -1312,20 +1324,20 @@
     ]
    }
   ],
-  "taggedSolutions": 243
+  "taggedSolutions": 246
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 43,
+   "solutions": 45,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
-    "government": 6,
+    "government": 7,
     "nonprofit": 21,
     "agency": 5,
-    "natural": 6
+    "natural": 7
    },
    "upcomingMissions": 0,
    "impactTotals": [
@@ -1379,11 +1391,11 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 37,
+   "solutions": 38,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 21,
+    "nonprofit": 22,
     "natural": 5,
     "government": 7,
     "agency": 3,
@@ -1661,6 +1673,17 @@
    "missions": []
   },
   {
+   "url": "Andfjorden_MPA.html",
+   "title": "Andfjorden Marine Protected Area (Norway)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-23"
+  },
+  {
    "url": "Arabian_Oryx.html",
    "title": "The Arabian Oryx Comeback",
    "category": "forests",
@@ -1821,6 +1844,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Atoll_Rewilding.html",
+   "title": "Atoll Rewilding: Seabirds Against Sea-Level Rise",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "natural",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-23"
   },
   {
    "url": "Azraq_Wetland.html",
@@ -2115,6 +2149,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Cool_Earth_Basic_Income.html",
+   "title": "Cool Earth Basic Income Pilot (Peruvian Amazon)",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-23"
   },
   {
    "url": "Copernicus_EMS.html",

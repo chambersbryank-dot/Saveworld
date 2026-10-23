@@ -54,7 +54,28 @@ def added(urls):
     # Oct 15: release batch dates come from solutions.json "added" (set by <meta name="sp:added"> via build-stats.js), not git history
     pages = json.load(open('assets/data/solutions.json', encoding='utf8'))['pages']
     return {p['url']: p['added'] for p in pages if p.get('added') and p['url'] in urls}
-def strip(l, sols, dates, today, total, pre):
+# Oct 23 (founder): dated research-news items shown inside the homepage strip for 7 days after 'added' (not solutions; not counted).
+NEWS = [dict(added='2026-10-23', links=[('https://sustainability.stanford.edu/news/stanford-scientists-discover-way-to-reverse-coral-bleaching-record-speed/', 'Stanford'),
+                                       ('https://doi.org/10.1126/sciadv.aeh1580', 'Science Advances')],
+             see=['Coral_IVF.html', 'Coral_Restoration_Foundation.html'],
+             h={'en': 'Science news', 'fr': 'Actualité scientifique', 'es': 'Noticias científicas', 'ar': 'أخبار علمية', 'it': 'Notizie dalla scienza', 'he': 'חדשות מדע'},
+             text={'en': 'Stanford scientists saw bleached corals fully recover in about seven weeks after brief contact with a healthy coral. It is lab-only so far and needs a genetically identical healthy coral for each one.',
+                   'fr': 'Des scientifiques de Stanford ont vu des coraux blanchis se rétablir complètement en sept semaines environ après un bref contact avec un corail sain. Pour l’instant, cela ne marche qu’en laboratoire et exige un corail sain génétiquement identique pour chacun.',
+                   'es': 'Científicos de Stanford vieron corales blanqueados recuperarse por completo en unas siete semanas tras un breve contacto con un coral sano. Por ahora solo funciona en laboratorio y necesita un coral sano genéticamente idéntico para cada uno.',
+                   'ar': 'شاهد علماء جامعة ستانفورد شعابًا مرجانية مبيضّة تتعافى تمامًا في نحو سبعة أسابيع بعد تلامس قصير مع مرجان سليم. النتيجة مخبرية فقط حتى الآن، وتحتاج إلى مرجان سليم مطابق وراثيًا لكل مرجان.',
+                   'it': 'Gli scienziati di Stanford hanno visto coralli sbiancati riprendersi del tutto in circa sette settimane dopo un breve contatto con un corallo sano. Per ora funziona solo in laboratorio e richiede un corallo sano geneticamente identico per ognuno.',
+                   'he': 'מדעני סטנפורד ראו אלמוגים מולבנים מחלימים לגמרי בתוך כשבעה שבועות אחרי מגע קצר עם אלמוג בריא. בינתיים זה עובד רק במעבדה, ודורש אלמוג בריא זהה גנטית לכל אלמוג.'},
+             related={'en': 'Related:', 'fr': 'À voir aussi :', 'es': 'Relacionado:', 'ar': 'ذو صلة:', 'it': 'Correlati:', 'he': 'קשור:'})]
+def news(l, sols, today):
+    start = (today - datetime.timedelta(days=6)).isoformat(); out = ''
+    for n in NEWS:
+        if n['added'] < start or n['added'] > today.isoformat(): continue
+        src = ' · '.join(f'<a href="{esc(u)}" target="_blank" rel="noreferrer">{esc(t)}</a>' for u, t in n['links'])
+        rel = ', '.join(f'<a href="{sf.href(l, u)}">{esc(sols.get(u, u[:-5]))}</a>' for u in n['see'])
+        out += (f'<div class="ns-news"><h3>{esc(n["h"][l])}</h3><p><time datetime="{n["added"]}">{esc(fmt(l, n["added"], False))}</time> {esc(n["text"][l])} '
+                f'<span class="ns-src">({src})</span></p><p class="ns-rel">{esc(n["related"][l])} {rel}</p></div>')
+    return out
+def strip(l, sols, dates, today, total, pre, home=False):
     t = T[l]; start = (today - datetime.timedelta(days=6)).isoformat()
     last = max(dates.values(), default='')
     if not last or last < start: return ''  # latest batch older than 7 days: no strip
@@ -63,7 +84,7 @@ def strip(l, sols, dates, today, total, pre):
     lis = ''.join(f'<li><time datetime="{dates[u]}">{esc(fmt(l, dates[u], False))}</time> <a href="{sf.href(l, u)}">{esc(sols.get(u, u[:-5]))}</a></li>' for u in wk)
     return (f'<!-- NEW-STRIP:START --><section class="new-strip" aria-labelledby="new-h"><h2 id="new-h">🆕 {esc(t["h"])}</h2>'
             f'<p class="ns-sum">{esc(t["sum"].format(n=len(wk), a=fmt(l, a), b=fmt(l, b), t=total))}</p><ul class="ns-list">{lis}</ul>'
-            f'<p class="ns-all"><a href="{pre}{PAGE}">{esc(t["all"])} {"←" if l in ("ar", "he") else "→"}</a></p></section><!-- NEW-STRIP:END -->')
+            + (news(l, sols, today) if home else '') + f'<p class="ns-all"><a href="{pre}{PAGE}">{esc(t["all"])} {"←" if l in ("ar", "he") else "→"}</a></p></section><!-- NEW-STRIP:END -->')
 def put(p, blk, anchor_re, before=True):
     if not os.path.exists(p): return 0
     s = rd(p); s = re.sub(r'<!-- NEW-STRIP:START -->.*?<!-- NEW-STRIP:END -->', '', s, flags=re.S)
@@ -73,7 +94,7 @@ def put(p, blk, anchor_re, before=True):
 CSS = ('.new-strip{max-width:1100px;margin:1.6rem auto;padding:1rem 1.2rem;border-radius:18px;border:1px solid rgba(143,211,255,.45);background:rgba(0,60,95,.35)}'
        '.new-strip h2{margin:.1rem 0 .3rem;font-size:1.3rem}.ns-sum{margin:.2rem 0 .7rem}.ns-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:.5rem .9rem}'
        '.ns-list li{display:flex;flex-direction:column;gap:.1rem;padding:.5rem .7rem;border-radius:12px;background:rgba(255,255,255,.06)}.ns-list time{font-size:.8rem;opacity:.85;font-weight:700}'
-       '.ns-all{margin:.7rem 0 0;font-weight:700}html:not(.dark) body:not(.toc-home):not(.toc-sub) .new-strip{background:#eef7fc;color:#10202c}'
+       '.ns-all{margin:.7rem 0 0;font-weight:700}.ns-news{margin:.8rem 0 0}.ns-news h3{font-size:1.05rem;margin:0 0 .3rem}.ns-news p{margin:.2rem 0}.ns-news time{font-weight:700;margin-inline-end:.3rem}.ns-rel{font-size:.92rem}html:not(.dark) body:not(.toc-home):not(.toc-sub) .new-strip{background:#eef7fc;color:#10202c}'
        '.cl-wrap{max-width:900px;margin:0 auto;padding:1rem 1.25rem 2rem}.cl-day{margin:1.4rem 0}.cl-day h2{font-size:1.25rem;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:.3rem}.cl-day h3{font-size:1rem;margin:.6rem 0 .3rem}')
 def changelog(l, sols, dates, ups):
     t = T[l]; shell = rd(d(l) + 'Glossary.html')
@@ -120,7 +141,7 @@ def main():
     for l in LANGS:
         sols = {**en, **cards(l)}; pre = ''
         blk = strip(l, sols, dates, today, total, pre)
-        ch += put(d(l) + 'index.html', blk, r'<section class="news-briefs"')
+        ch += put(d(l) + 'index.html', strip(l, sols, dates, today, total, pre, home=True), r'<section class="news-briefs"')
         ch += put(d(l) + 'Solutions.html', blk, r'<!-- SOL-DIR:END -->', before=False)
         ch += unstrip(d(l) + 'World_Map.html')  # Oct 17: the World Map is map-only now (user: "remove noise"); strip never goes there
         ch += wr(d(l) + PAGE, changelog(l, sols, dates, ups))
