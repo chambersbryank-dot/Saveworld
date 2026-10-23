@@ -5,8 +5,11 @@ Owner photos credited 'SI Partner' (Threetrees3, Yishan_Tree, ThreeTrees2) are N
 For every <img> of an SI image (all languages) with no SI credit right after it, a <span class="si-credit"> caption is inserted after the
 image (after </picture> when wrapped). Idempotent; run late in weekly-sync.sh (after apply-heroes/optimize-images/build-ux)."""
 import re, glob, os
-SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 'Saturn', 'Uranus',  # Oct 16: owner confirmed these 4 Project Rawane images are SI-generated
+SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 'Uranus',  # Oct 16: owner confirmed these 4 Project Rawane images are SI-generated
              'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps'}
+# Oct 23 (founder): Saturn.jpg removed from SI_IMAGES: it is NASA's real Cassini mosaic PIA06193
+# (credit NASA/JPL/Space Science Institute, https://science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/).
+REAL_PHOTOS = {'Saturn'}  # real agency photos: never get the SI credit
 SI_T = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
         'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner',
         'he': 'נוצר על ידי SI ושותף SI ביולוגי'}  # Oct 18: hidden he pages were skipped, so a rotated homepage card failed --check
