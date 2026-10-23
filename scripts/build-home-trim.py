@@ -169,6 +169,11 @@ def css_and_stylev():
 # list = 4 items like the other cards (the rest stays in the Solutions menu and on the Space hub). All languages
 # (hrefs are language-independent; the tip's first sentence is the existing translation's first sentence). Idempotent.
 SPACE_DROP = ('Orbital_Data_Centers.html', 'Jupiter.html', 'MMX.html', 'Earth_Observation.html')
+import json as _json
+def SAT_CREDIT(L):
+    x = 'NASA/JPL/Space Science Institute'  # PIA06193 credit line (science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/)
+    if not L: return 'Image: ' + x
+    return _json.load(open(f'i18n/{L[:-1]}.json', encoding='utf-8')).get('Image: {x}', 'Image: {x}').replace('{x}', x)
 def trim_space_card(L):
     f = L + 'index.html'; s = rd(f)
     m = re.search(r'<article[^>]*id="space-card"', s)
@@ -176,6 +181,10 @@ def trim_space_card(L):
     i = m.start()
     j = s.find('</article>', i); c = s[i:j]; o = c
     c = re.sub(r'(<span class="photo-tip">)(.*?)(</span>)', lambda m: m.group(1) + re.split(r'(?<=[.!?؟])\s+', m.group(2).strip(), maxsplit=1)[0] + m.group(3), c, count=1, flags=re.S)
+    # Oct 23 (founder): the Cassini photo is NASA's PIA06193, not SI-made: NASA credit instead of the SI tag
+    c = re.sub(r'<span class="si-credit">[^<]*</span>', '', c)
+    if 'class="photo-credit nasa-credit"' not in c:
+        c = c.replace('</a></div><h3>', '</a></div>' + f'<p class="photo-credit nasa-credit">{SAT_CREDIT(L)}</p><h3>', 1)
     for h in SPACE_DROP: c = re.sub(r'<li><a href="(?:\.\./)?' + re.escape(h) + r'">[^<]*</a></li>', '', c)
     if c != o: wr(f, s[:i] + c + s[j:]); print(f'{f}: Space card trimmed')
 
