@@ -13,7 +13,7 @@ import * as pagefind from 'pagefind';
 
 const SITE = path.resolve(process.argv[2] || '.');
 const OUT = path.resolve(process.argv[3] || SITE);
-const SKIP = new Set(['Search.html', '404.html', 'Project-R.html', 'Community.html']);
+const SKIP = new Set(['Search.html', '404.html', 'Project-R.html', 'Community.html', 'Find_a_Cleanup.html']);  // Oct 22: Find a Cleanup paused (stub)
 const isPage = f => f.endsWith('.html') && !SKIP.has(path.basename(f)) && !/^google[0-9a-f]+\.html$/.test(path.basename(f));
 
 const files = [];

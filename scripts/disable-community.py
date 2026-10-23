@@ -6,9 +6,9 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 COMMUNITY_ENABLED = False
 if COMMUNITY_ENABLED: raise SystemExit('community enabled: nothing to do')
 STUB = ('<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><title>Saving Planets</title>'
-        '<meta name="robots" content="noindex"><link rel="canonical" href="https://www.savingplanets.com/{pre}Find_a_Cleanup.html">'
-        '<meta http-equiv="refresh" content="0; url=Find_a_Cleanup.html"><script>location.replace("Find_a_Cleanup.html")</script></head>'
-        '<body><p><a href="Find_a_Cleanup.html">Find a Cleanup</a></p></body></html>\n')
+        '<meta name="robots" content="noindex"><link rel="canonical" href="https://www.savingplanets.com/{pre}Ways_to_Help.html">'
+        '<meta http-equiv="refresh" content="0; url=Ways_to_Help.html"><script>location.replace("Ways_to_Help.html")</script></head>'
+        '<body><p><a href="Ways_to_Help.html">Ways to Help</a></p></body></html>\n')
 SEP = r'<span aria-hidden="true"> · </span>'
 n = 0
 for d in ('', 'fr/', 'es/', 'ar/'):

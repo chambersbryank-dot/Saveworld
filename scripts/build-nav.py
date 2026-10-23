@@ -21,18 +21,20 @@ X = {
 }
 # Every link from the previous nav (build-ux GROUPS) stays reachable; About pages (were footer-only) added.
 GROUPS = [
- ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'World_Map.html', 'Topics.html']),
- ('space', ['Space.html', 'Enceladus.html', 'Artemis_II.html#launches', 'Planetary_Defense.html', 'Space_Weather.html', 'Space_Disposal.html']),
- # Oct 16 6:15 PM (user): Project Rawane back as its own top-level menu right after Space; label links to the overview,
- # first tap/click opens the dropdown (second follows the link); overview pinned first, the rest alphabetical.
- # 6:17/6:18 PM (user): Myth vs Fact listed here AND kept in Kids.
- ('pr', ['Project-Rawane.html', 'Rawanes_Mission_Log.html', 'Myth_vs_Fact.html']),
+ # Oct 22 (founder): Space (with Project Rawane) lives under Solutions. Solutions menu = All Solutions, then the hubs
+ # alphabetical by displayed label (Space included), Space's pages indented under Space, then Topics A to Z and World Map.
+ # The separate Space and Project Rawane top-level menus are gone; Rawane's Mission Log stays linked from Project Rawane,
+ # Myth vs Fact stays in Kids.
+ ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html', 'Topics.html', 'World_Map.html']),
  ('le', ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']),
  ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Glossary.html']),
  ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
 ]
-UTIL = ['Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Find_a_Cleanup.html', 'Contact.html']  # Oct 18: + This Week's Top Ten (one stable link for X posts)
+SOL_HUBS = ['Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html']
+SOL_TAIL = ['Topics.html', 'World_Map.html']
+SPACE_KIDS = ['Artemis_II.html#launches', 'Enceladus.html', 'Planetary_Defense.html', 'Project-Rawane.html', 'Space_Disposal.html', 'Space_Weather.html']
+UTIL = ['Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Contact.html']  # Oct 22: Find a Cleanup paused (disable-cleanup.py)  # Oct 18: + This Week's Top Ten (one stable link for X posts)
 LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT', 'he': 'עב'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
 # Oct 19: Hebrew public. Its header nav comes translated from the English page (i18n-build + he.json); build-nav only
@@ -101,9 +103,20 @@ def nav(l, page, brand_href, brand_txt):
         f'<li><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{SEARCH_SVG if i == "Search.html" else ""}{t["items"][i]}</a></li>' for i in UTIL)
     main = []
     for key, items in GROUPS:
-        cur = any(i.split('#')[0] == page for i in items if '#' not in i)
-        items = sort_items(l, key, items)
-        lis = ''.join(f'<li><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{label(l, key, i)}</a></li>' for i in items)
+        if key == 'sol':  # Oct 22: All Solutions, hubs A-Z (Space + its pages indented), Topics, World Map
+            kids = sorted(SPACE_KIDS, key=lambda i: sort_key(l, label(l, 'space', i)))
+            seq = [('Solutions.html', 0)]
+            for h in sorted(SOL_HUBS, key=lambda i: sort_key(l, label(l, key, i))):
+                seq.append((h, 0))
+                if h == 'Space.html': seq += [(k, 1) for k in kids]
+            seq += [(i, 0) for i in SOL_TAIL]
+            cur = any(i.split('#')[0] == page for i, _ in seq if '#' not in i)
+            items = [i for i, _ in seq]
+            lis = ''.join(f'<li{" class=\"spn-child\"" if lv else ""}><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{label(l, "space" if lv else key, i)}</a></li>' for i, lv in seq)
+        else:
+            cur = any(i.split('#')[0] == page for i in items if '#' not in i)
+            items = sort_items(l, key, items)
+            lis = ''.join(f'<li><a href="{hr(l, i)}"{" aria-current=\"page\"" if i == page else ""}>{label(l, key, i)}</a></li>' for i in items)
         trig = (f'<a class="spn-trig spn-trig-link" href="{hr(l, items[0])}" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></a>' if key == 'pr' else
                 f'<button type="button" class="spn-trig" aria-expanded="false" aria-controls="spn-{key}">{gname(l, key)}<span class="spn-chev" aria-hidden="true"></span></button>')
         main.append(f'<li class="spn-dd{" is-current" if cur else ""}">{trig}'
@@ -216,6 +229,10 @@ body.roman-page [id]{scroll-margin-top:calc(var(--spn-h,64px) + 76px)}
 /* Oct 19 (quality report #5): Italian nav items failed axe color-contrast when scanned before the hero image painted
    (light text over an undetermined background). Italian-only: the header gets the same dark backing it already uses once scrolled (.spn-solid), so the text is >=15:1, other locales unchanged. */
 html[lang="it"] body nav#topnav{background:#071018 !important}
+#topnav .spn-sub li.spn-child a{padding-inline-start:2.1rem;font-size:15px}
+#topnav .spn-sub li.spn-child a::before{content:"\2192";opacity:.55;margin-inline-end:.45rem;font-size:13px}
+html[dir=rtl] #topnav .spn-sub li.spn-child a::before{content:"\2190"}
+@media (min-width:1140px){#topnav #spn-sol{max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}}
 /* SPNAV:END */
 """
 JS = r"""

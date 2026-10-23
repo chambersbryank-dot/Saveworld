@@ -34,6 +34,8 @@ python3 scripts/build-rawane-bluf.py       # Oct 18: Project Rawane Impact State
 python3 scripts/build-rawane-cuts.py       # Oct 18: Project Rawane de-clutter (callout off, duplicates out, Artemis block + By the Numbers out, launch link, short Five W's, tight cards)
 python3 scripts/build-artemis-program.py   # Oct 18: Artemis_II.html titled 'Artemis Program' (URL unchanged) + labels site-wide + animated banner
 python3 scripts/build-artemis-gallery.py   # Oct 18: Artemis Program page "Moments in History" gallery (12 NASA originals on R2, srcset, lazy) + i18n strings
+python3 scripts/trim-impact.py          # Oct 22 (founder): Impact Statement box = 2 sentences + sources; the rest moves word for word just below (EN source)
+python3 scripts/fix-hub-dup-images.py   # Oct 22 (founder): Lakes hub had two repeated card photos; swaps + warns on other hubs (EN source)
 python3 scripts/i18n-build.py
 python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 python3 scripts/build-top-ten.py --links  # Oct 18: Top Ten card links stay in-language for generator-made pages (Learn, World_Map)
@@ -49,6 +51,7 @@ python3 scripts/link-errors.py           # Oct 14: errors@ mailto for error/bug 
 python3 scripts/dept-contacts.py         # Oct 14: department inboxes (all langs)
 python3 scripts/mailto-subjects.py        # Oct 14: purpose subject on every mailto (all langs)
 python3 scripts/disable-community.py     # Oct 14: Community Wall paused (archived; flag inside)
+python3 scripts/contact-order.py         # Oct 22 (founder): Contact Get in Touch order (Teachers, Send a Solution, Translate, Partnerships, General; errors last), all langs
 python3 scripts/i18n-sitemap.py
 node build-stats.js --data-only          # Oct 15: re-run after the sitemap lists every English page, so new solutions land in solutions.json (one entry per page)
 python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/it
@@ -105,6 +108,7 @@ python3 scripts/add-video-schema.py       # Oct 16: again after seo-fix, so Vide
 python3 scripts/build-og.py             # Oct 15 item 7: distinct 1200x630 share card per page per language (assets/og/), SI credit on the card when the photo is SI
 python3 scripts/seo-jsonld.py             # Oct 16: re-sync JSON-LD image/description after build-og bumps og:image ?v=
 python3 scripts/i18n-sitemap.py           # Oct 16: sitemap.xml rebuilt from the pages on disk (all langs, hreflang alternates, git lastmod)
+python3 scripts/disable-cleanup.py        # Oct 22 (founder): Find a Cleanup paused (may return in a future revamp): links out, noindex stubs, off sitemap/search (flag inside)
 python3 scripts/seo-lint.py --no-fail | tail -6   # gap counts (strict run at the end)
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
 node scripts/build-search.mjs
