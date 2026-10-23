@@ -165,8 +165,23 @@ def css_and_stylev():
         s2 = re.sub(r'(?<![\w-])site\.js\?v=[\w.-]+', 'site.js?v=' + v, s2)
         if s2 != s: wr(f, s2)
 
+# Oct 22 (founder): Featured solutions Space card was much longer than the others. Photo tip = its first sentence only;
+# list = 4 items like the other cards (the rest stays in the Solutions menu and on the Space hub). All languages
+# (hrefs are language-independent; the tip's first sentence is the existing translation's first sentence). Idempotent.
+SPACE_DROP = ('Orbital_Data_Centers.html', 'Jupiter.html', 'MMX.html', 'Earth_Observation.html')
+def trim_space_card(L):
+    f = L + 'index.html'; s = rd(f)
+    m = re.search(r'<article[^>]*id="space-card"', s)
+    if not m: return
+    i = m.start()
+    j = s.find('</article>', i); c = s[i:j]; o = c
+    c = re.sub(r'(<span class="photo-tip">)(.*?)(</span>)', lambda m: m.group(1) + re.split(r'(?<=[.!?؟])\s+', m.group(2).strip(), maxsplit=1)[0] + m.group(3), c, count=1, flags=re.S)
+    for h in SPACE_DROP: c = re.sub(r'<li><a href="(?:\.\./)?' + re.escape(h) + r'">[^<]*</a></li>', '', c)
+    if c != o: wr(f, s[:i] + c + s[j:]); print(f'{f}: Space card trimmed')
+
 for L in LANGS:
     if not os.path.exists(L + 'index.html'): continue
     B = do_home(L); do_facts(L, B)
+    if not UNDO: trim_space_card(L)
     print(f'{L or "en/"}index.html: {"restored" if UNDO else "6 sections"}; parked {len([k for k in PARK if k in B])} blocks')
 css_and_stylev()

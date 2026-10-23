@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-23T06:00:35Z",
+"generated": "2026-10-23T07:44:01Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -153,15 +153,6 @@
 "prec": "Y",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
-"mission": "Cygnus CRS-2 NG-22",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
 "mission": "SDA Tranche 2 Tracking Layer A",
 "pad": "Unknown Pad"
 },
@@ -172,60 +163,6 @@
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "SDA Tranche 2 Tracking Layer B",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 2",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 3",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 4",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 5",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 6",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Telesat Lightspeed 7",
 "pad": "Unknown Pad"
 },
 {
@@ -299,6 +236,33 @@
 "rocket": "Unknown",
 "mission": "VCLS Demo 2 Mission One",
 "pad": "Unknown Pad"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-109",
+"pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-56",
+"pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-64",
+"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -358,6 +322,15 @@
 "rocket": "Vega-C",
 "mission": "IRIDE 1",
 "pad": "Ariane Launch Area 1 (ELV)"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "Avio S.p.A",
+"rocket": "Vega-C",
+"mission": "IRIDE 2",
+"pad": "Ariane Launch Area 1 (ELV)"
 }
 ]
 },
@@ -404,7 +377,7 @@
 "lng": 177.865,
 "launches": [
 {
-"net": "2026-10-23T07:00:00Z",
+"net": "2026-10-23T07:11:00Z",
 "exact": true,
 "prec": "MIN",
 "provider": "Rocket Lab",
@@ -556,15 +529,6 @@
 "net": "2026-12-31T00:00:00Z",
 "exact": false,
 "prec": "Y",
-"provider": "Orbex",
-"rocket": "Orbex Prime",
-"mission": "Maiden Flight",
-"pad": "Unknown Pad"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
 "provider": "Rocket Factory Augsburg",
 "rocket": "RFA One",
 "mission": "Maiden Flight",
@@ -616,15 +580,6 @@
 "provider": "Mitsubishi Heavy Industries",
 "rocket": "H3-22",
 "mission": "ETS-9",
-"pad": "Yoshinobu Launch Complex LP-2"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "Mitsubishi Heavy Industries",
-"rocket": "H3-24",
-"mission": "Lunar Polar Exploration Mission (LUPEX)",
 "pad": "Yoshinobu Launch Complex LP-2"
 }
 ]
@@ -892,6 +847,51 @@
 "rocket": "Firefly Alpha Block 2",
 "mission": "TacSat",
 "pad": "Space Launch Complex 2W"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-100",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-73",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "NROL-83",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SDA Tranche 1 Tracking Layer B",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SDA Tranche 1 Tracking Layer D",
+"pad": "Space Launch Complex 3E"
 }
 ]
 },
