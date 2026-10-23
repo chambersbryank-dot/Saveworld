@@ -114,7 +114,8 @@ PROMO_CAP = "A 2-minute tour of Saving Planets today: 231 real solutions in 11 h
 PROMO_SRC = "Earth: NASA Blue Marble and Black Marble · Saturn: NASA/JPL-Caltech/Space Science Institute · Myth vs Fact: NOAA, NASA, NASA DART · Map: © OpenStreetMap · Launches: The Space Devs · Site screens: Saving Planets"
 try: PROMO_X = json.load(open('assets/data/promo-links.json', encoding='utf-8')).get('x_post', '')
 except Exception: PROMO_X = ''
-PX = f'<p class="promo-x"><a href="{html.escape(PROMO_X)}" target="_blank" rel="noopener">See our new milestone on X →</a></p>' if PROMO_X else ''
+PX = ''  # Oct 22 (founder): 'See our new milestone on X' link deleted everywhere (About + homepage); kept below for reference
+_PX_OLD = f'<p class="promo-x"><a href="{html.escape(PROMO_X)}" target="_blank" rel="noopener">See our new milestone on X →</a></p>' if PROMO_X else ''
 PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledby="promo-title">'
   f'<h2 id="promo-title">{html.escape(PROMO_H, quote=False)}</h2><figure class="sp-video-fig">'
   f'<video class="promo-v4 promo-v6" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v6-tall.jpg" width="{VW}" height="{VH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
@@ -141,3 +142,9 @@ s = re.sub(r'<!-- PROMO:START -->.*?<!-- PROMO:END -->', '', s, flags=re.S)
 s = put(s, 'VIDEO', PROMO_ABOUT, r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
 open('About.html', 'w', encoding='utf-8').write(s)
 print('SOTW:', e['page'], '| EO active:', len(eo))
+
+# Oct 22 (founder): delete the 'See our new milestone on X' link wherever an older build left it (About, all languages)
+import glob as _g
+for _f in _g.glob('About.html') + _g.glob('*/About.html'):
+    _s = open(_f, encoding='utf-8').read(); _s2 = re.sub(r'<p class="promo-x">.*?</p>', '', _s, flags=re.S)
+    if _s2 != _s: open(_f, 'w', encoding='utf-8').write(_s2); print('promo-x link removed:', _f)
