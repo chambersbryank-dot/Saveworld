@@ -53,6 +53,21 @@ def fix(s, l):
         if '.si-credit{' not in s: s = s.replace('</head>', f'<style>{CSS}</style>\n</head>', 1)
     return s, n
 
+# Oct 23 (founder): real agency photos that an older build tagged as SI get their agency credit instead (all languages).
+REAL_CREDIT = {'Saturn': 'NASA/JPL/Space Science Institute'}  # PIA06193, science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/
+_IMG_T = {}
+def real_credit(s, l):
+    if l not in _IMG_T:
+        import json
+        _IMG_T[l] = 'Image: {x}' if l == 'en' else json.load(open(f'i18n/{l}.json', encoding='utf8')).get('Image: {x}', 'Image: {x}')
+    def rep(m):
+        src = re.search(r'\bsrc="([^"]+)"', m.group(1))
+        stem = os.path.splitext(os.path.basename(src.group(1).split('?')[0]))[0] if src else ''
+        stem = re.sub(r'-\d+w?$|_\d+$', '', stem)
+        if stem not in REAL_CREDIT: return m.group(0)
+        return m.group(1) + f'<span class="si-credit agency-credit">{_IMG_T[l].replace("{x}", REAL_CREDIT[stem])}</span>'
+    return re.sub(r'(<img\b[^>]*>(?:</picture>)?)<span class="si-credit">[^<]*</span>', rep, s)
+
 if __name__ == '__main__':
     tot = 0; pages = 0
     for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
@@ -61,6 +76,7 @@ if __name__ == '__main__':
         s = open(f, encoding='utf8').read()
         if 'http-equiv="refresh"' in s: continue
         s2, n = fix(s, l)
+        s2 = real_credit(s2, l)
         if s2 != s: open(f, 'w', encoding='utf8').write(s2); pages += 1; tot += n
     print(f'si-credits: {tot} captions added on {pages} pages')
     import sys
