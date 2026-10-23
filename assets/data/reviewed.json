@@ -55,6 +55,10 @@
   "sig": "0fa2fdad7b15",
   "date": "2026-10-19"
  },
+ "Arabian_Oryx.html": {
+  "sig": "11db7a3c2b2c",
+  "date": "2026-10-21"
+ },
  "Arbor_Day_Foundation.html": {
   "sig": "f8a025e910a5",
   "date": "2026-10-19"
@@ -86,6 +90,10 @@
  "Atmospheric_Drag.html": {
   "sig": "186b212f5a95",
   "date": "2026-10-19"
+ },
+ "Azraq_Wetland.html": {
+  "sig": "85a7aa4959f6",
+  "date": "2026-10-21"
  },
  "Beavers_River_Engineers.html": {
   "sig": "9b3996cb5a75",
@@ -211,6 +219,10 @@
   "sig": "7385ffb5c570",
   "date": "2026-10-18"
  },
+ "Danuri_ShadowCam.html": {
+  "sig": "73993ed8a0dd",
+  "date": "2026-10-21"
+ },
  "Digital_Earth_Africa.html": {
   "sig": "13d02e42a67f",
   "date": "2026-10-19"
@@ -250,6 +262,10 @@
  "Elwha_River_Restoration.html": {
   "sig": "a6dfc9472f10",
   "date": "2026-10-19"
+ },
+ "Emirates_Mission_Asteroid_Belt.html": {
+  "sig": "541605fd5856",
+  "date": "2026-10-21"
  },
  "EnVision.html": {
   "sig": "658d4ffe6604",
@@ -419,6 +435,10 @@
   "sig": "08ade5cb6140",
   "date": "2026-10-20"
  },
+ "Iceland_Land_Restoration.html": {
+  "sig": "46f33a7d3214",
+  "date": "2026-10-21"
+ },
  "International_Charter.html": {
   "sig": "b87ff14c5ebf",
   "date": "2026-10-19"
@@ -442,6 +462,10 @@
  "Justdiggit.html": {
   "sig": "2727b6cf996e",
   "date": "2026-10-19"
+ },
+ "Kakapo_Recovery.html": {
+  "sig": "85b79a25b18d",
+  "date": "2026-10-21"
  },
  "Keep_Tahoe_Blue.html": {
   "sig": "0353fba6066b",
@@ -547,6 +571,10 @@
   "sig": "23e773792abe",
   "date": "2026-10-19"
  },
+ "Mountain_Gorillas.html": {
+  "sig": "fa0888622f2a",
+  "date": "2026-10-21"
+ },
  "Mr_Trash_Wheel.html": {
   "sig": "af0412e0d5ab",
   "date": "2026-10-19"
@@ -595,6 +623,10 @@
   "sig": "200920cd01c5",
   "date": "2026-10-19"
  },
+ "Okavango_Delta.html": {
+  "sig": "c67d99a996d6",
+  "date": "2026-10-21"
+ },
  "One_Tree_Planted.html": {
   "sig": "4c1669239fc1",
   "date": "2026-10-19"
@@ -618,6 +650,10 @@
  "PRELUDE.html": {
   "sig": "f9f385803516",
   "date": "2026-10-19"
+ },
+ "PROMICE_GC-Net.html": {
+  "sig": "9e0a15afd5c2",
+  "date": "2026-10-21"
  },
  "PUNCH.html": {
   "sig": "9327c7112e0f",
@@ -711,6 +747,14 @@
   "sig": "47da2ecd6dc4",
   "date": "2026-10-20"
  },
+ "Ross_Sea_MPA.html": {
+  "sig": "bf007055b2ff",
+  "date": "2026-10-21"
+ },
+ "Route_of_Parks_Patagonia.html": {
+  "sig": "eab0f4cde0db",
+  "date": "2026-10-21"
+ },
  "SARSAT.html": {
   "sig": "9b2346b83e4c",
   "date": "2026-10-19"
@@ -790,6 +834,10 @@
  "Sentinel-6B.html": {
   "sig": "0c635acddcd8",
   "date": "2026-10-19"
+ },
+ "Seychelles_Marine_Spatial_Plan.html": {
+  "sig": "b49f73af489f",
+  "date": "2026-10-21"
  },
  "Solar_Orbiter.html": {
   "sig": "087898e8e46c",
