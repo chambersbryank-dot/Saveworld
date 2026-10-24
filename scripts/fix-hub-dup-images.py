@@ -48,7 +48,10 @@ for L in ('fr', 'es', 'ar', 'it', 'he'):
     p = f'i18n/{L}.json'; mem = json.load(open(p, encoding='utf8')); n = 0
     tpl = mem.get('Image: {x}', 'Image: {x}')
     for e in AG:
-        for k, v in ((e['alt']['en'], e['alt'][L]), ('Image: ' + e['credit'], tpl.replace('{x}', e['credit']))):
+        # Oct 24: a credit line shared with other pages (e.g. "Image: NASA's Goddard Space Flight Center") keeps its existing
+        # hand translation; only a missing credit key is filled from the template. Alt text is always ours.
+        for k, v, keep in ((e['alt']['en'], e['alt'][L], False), ('Image: ' + e['credit'], tpl.replace('{x}', e['credit']), True)):
+            if keep and k in mem: continue
             if mem.get(k) != v: mem[k] = v; n += 1
     if n: json.dump(mem, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0); print(f'hub-agency-images: {p} +{n}')
 for hub in ('Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html'):
