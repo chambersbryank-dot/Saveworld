@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T05:23:25.554Z",
+ "generated": "2026-10-24T15:14:05.941Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1350,7 +1350,8 @@
       "Plastic_Bank.html"
      ]
     }
-   ]
+   ],
+   "horizonIncluded": true
   },
   "lakes": {
    "name": "Lakes",
@@ -1372,7 +1373,8 @@
       "Clean_Up_the_Lake.html"
      ]
     }
-   ]
+   ],
+   "horizonIncluded": true
   },
   "rivers": {
    "name": "Rivers",
@@ -1387,7 +1389,8 @@
     "corporate": 2
    },
    "upcomingMissions": 0,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "forests": {
    "name": "Forests",
@@ -1410,11 +1413,12 @@
       "Life_Terra.html"
      ]
     }
-   ]
+   ],
+   "horizonIncluded": true
   },
   "space": {
    "name": "Space",
-   "solutions": 11,
+   "solutions": 12,
    "horizon": 1,
    "hubs": 1,
    "byClassification": {
@@ -1424,7 +1428,8 @@
     "government": 1
    },
    "upcomingMissions": 5,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "planetary-defense": {
    "name": "Planetary Defense",
@@ -1435,7 +1440,8 @@
     "agency": 13
    },
    "upcomingMissions": 4,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "polar": {
    "name": "Polar",
@@ -1449,7 +1455,8 @@
     "nonprofit": 1
    },
    "upcomingMissions": 3,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "space-weather": {
    "name": "Space Weather & Shields",
@@ -1461,7 +1468,8 @@
     "natural": 1
    },
    "upcomingMissions": 1,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "earth-observation": {
    "name": "Earth Observation",
@@ -1474,11 +1482,12 @@
     "corporate": 1
    },
    "upcomingMissions": 6,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   },
   "project-r": {
    "name": "Project Rawane",
-   "solutions": 26,
+   "solutions": 27,
    "horizon": 1,
    "hubs": 2,
    "byClassification": {
@@ -1487,7 +1496,8 @@
     "corporate": 3
    },
    "upcomingMissions": 8,
-   "impactTotals": []
+   "impactTotals": [],
+   "horizonIncluded": true
   }
  },
  "pages": [

@@ -132,7 +132,7 @@
     var names = { agency: 'agency', corporate: 'corporate', nonprofit: 'nonprofit', government: 'government', natural: 'natural', other: 'other' };
     return Object.keys(names).filter(function (k) { return by[k]; }).map(function (k) { return by[k] + ' ' + spT(names[k]); }).join(' · ');
   }
-  function solLine(a) { return plural(a.solutions, 'active solution', 'active solutions') + (a.horizon ? ', ' + a.horizon + ' ' + spT('on the horizon') : ''); }
+  function solLine(a) { if (a.horizonIncluded) return plural(a.solutions, 'solution', 'solutions') + (a.horizon ? ' (' + a.horizon + ' ' + spT('on the horizon') + ')' : ''); return plural(a.solutions, 'active solution', 'active solutions') + (a.horizon ? ', ' + a.horizon + ' ' + spT('on the horizon') : ''); }
   function updated(d) { var t = new Date(d.generated); return isNaN(t) ? '' : t.toLocaleDateString(spLang === 'en' ? 'en-US' : spLang, { year: 'numeric', month: 'long', day: 'numeric' }); }
   function render(d) {
     Array.prototype.forEach.call(diffs, function (el) { var n = d.site && d.site.solutions, h = d.site && d.site.hubs; if (!n) return; el.textContent = el.textContent.replace(/^\d+/, String(n)); });
