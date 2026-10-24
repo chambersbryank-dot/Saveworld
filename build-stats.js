@@ -160,7 +160,11 @@ function build() {
       impactTotals: Object.values(impact) };
   }
   const categories = {};
-  Object.keys(CATEGORIES).forEach(c => { const l = pages.filter(p => p.category === c); if (l.length) categories[c] = Object.assign({ name: CATEGORIES[c] }, agg(l)); });
+  // Oct 24 (founder-approved): category totals must add up to the headline count, so each category's "solutions" counts every
+  // solution page in it, horizon ones included (LignoSat in Project Rawane, PRELUDE in Space). "horizon" still says how many
+  // of those are on the horizon (their label stays); horizonIncluded marks that they are inside "solutions", not on top of it.
+  Object.keys(CATEGORIES).forEach(c => { const l = pages.filter(p => p.category === c); if (!l.length) return;
+    const a = agg(l); a.solutions += a.horizon; a.horizonIncluded = true; categories[c] = Object.assign({ name: CATEGORIES[c] }, a); });
   const solutionsMenu = buildSolutionsMenu();
   const projectRMenu = PROJECT_R_HUBS.map(([f, name]) => { const g = solutionsMenu.find(x => x.href === f); return { hub: name, href: f, items: g ? g.items : [] }; });
   if (!projectRMenu.length) buildProjectRMenu(warnings);
@@ -177,6 +181,8 @@ function build() {
       if (sum !== cards) warnings.push(`byClassification sums to ${sum} but Solutions.html has ${cards} cards`); }
     if (hubs) site.hubs = hubs;
   }
+  const catSum = Object.values(categories).reduce((n, c) => n + c.solutions, 0);
+  if (catSum !== site.solutions) warnings.push(`category totals sum to ${catSum} but the headline count is ${site.solutions}`);
   const out = { generated: new Date().toISOString(), projectRMenu, solutionsMenu, site, categories, pages };
   fs.mkdirSync('assets/data', { recursive: true });
   fs.writeFileSync('assets/data/solutions.json', JSON.stringify(out, null, 1) + '\n');
