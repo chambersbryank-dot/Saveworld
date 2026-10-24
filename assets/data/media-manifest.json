@@ -4948,6 +4948,16 @@
   "height": 1280,
   "duration": 140.73
  },
+ "videos/savingplanets-promo-v4-1-1080x1920.mp4": {
+  "url": "https://media.savingplanets.com/videos/savingplanets-promo-v4-1-1080x1920.2a09b278998d.mp4",
+  "key": "videos/savingplanets-promo-v4-1-1080x1920.2a09b278998d.mp4",
+  "bytes": 135486302,
+  "sha256": "2a09b278998d3e03c53cde8ffd595d64f3d3c9915834b9e773ca8ab8b7af307e",
+  "type": "video/mp4",
+  "width": 1080,
+  "height": 1920,
+  "duration": 147.87
+ },
  "videos/savingplanets-promo-v6-1080x1920.mp4": {
   "url": "https://media.savingplanets.com/videos/savingplanets-promo-v6-1080x1920.85510cc4a95f.mp4",
   "key": "videos/savingplanets-promo-v6-1080x1920.85510cc4a95f.mp4",
