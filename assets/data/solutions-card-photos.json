@@ -115,6 +115,566 @@
    "src": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
    "alt": "Artist's illustration of Astroscale's ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
    "credit_html": "Astroscale, via <a href=\"https://commons.wikimedia.org/wiki/File:ADRAS-J_Phase_I.png\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 4.0</a>, illustration)"
+  },
+  "CHIME.html": {
+   "r2": "images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401.jpg",
+   "alt": "Patchwork of farm fields in Montana's Golden Triangle, seen by Landsat",
+   "credit": "NASA Earth Observatory/Lauren Dauphin, Landsat data from USGS (<a href=\"https://commons.wikimedia.org/wiki/File:Geometry_in_the_Golden_Triangle_(154401).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Geometry_in_the_Golden_Triangle_(154401).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Geometry_in_the_Golden_Triangle_(154401).jpg"
+  },
+  "CO2M.html": {
+   "r2": "images/hub/ESA_CO2M_Mission.jpg",
+   "alt": "Artist's view of a Copernicus CO2M satellite in orbit measuring carbon dioxide from human activity",
+   "credit": "ESA/Mlabspace (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2023/06/Copernicus_Carbon_Dioxide_Monitoring_mission",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+   "alt_i18n": {
+    "en": "Artist's view of a Copernicus CO2M satellite in orbit measuring carbon dioxide from human activity",
+    "fr": "Vue d'artiste d'un satellite Copernicus CO2M en orbite mesurant le dioxyde de carbone issu des activités humaines",
+    "es": "Recreación artística de un satélite Copernicus CO2M en órbita midiendo el dióxido de carbono de origen humano",
+    "ar": "تصور فني لقمر كوبرنيكوس CO2M في المدار وهو يقيس ثاني أكسيد الكربون الناتج عن النشاط البشري",
+    "it": "Rappresentazione artistica di un satellite Copernicus CO2M in orbita che misura l'anidride carbonica prodotta dalle attività umane",
+    "he": "הדמיה אמנותית של לוויין קופרניקוס CO2M במסלול, מודד פחמן דו-חמצני שמקורו בפעילות אנושית"
+   }
+  },
+  "Sentinel-2C.html": {
+   "r2": "images/hub/ESA_S2C_Belize_Reef.jpg",
+   "alt": "Lighthouse Reef and the Great Blue Hole off Belize in one of the first images from Copernicus Sentinel-2C",
+   "credit": "contains modified Copernicus Sentinel data (2024), processed by ESA (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2024/09/Belize_reef_from_Sentinel-2C",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+   "alt_i18n": {
+    "en": "Lighthouse Reef and the Great Blue Hole off Belize in one of the first images from Copernicus Sentinel-2C",
+    "fr": "Le récif Lighthouse et le Grand Trou bleu au large du Belize, dans l'une des premières images de Copernicus Sentinel-2C",
+    "es": "El arrecife Lighthouse y el Gran Agujero Azul frente a Belice, en una de las primeras imágenes de Copernicus Sentinel-2C",
+    "ar": "شعاب لايتهاوس والثقب الأزرق العظيم قبالة بليز في إحدى أولى صور القمر كوبرنيكوس سنتينل-2C",
+    "it": "Il Lighthouse Reef e il Great Blue Hole al largo del Belize, in una delle prime immagini di Copernicus Sentinel-2C",
+    "he": "שונית לייטהאוס והחור הכחול הגדול מול בליז, באחד התצלומים הראשונים של קופרניקוס סנטינל-2C"
+   }
+  },
+  "Sentinel-3.html": {
+   "r2": "images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA.jpg",
+   "alt": "Sunset over Antarctica captured by the Copernicus Sentinel-3B satellite",
+   "credit": "contains modified Copernicus Sentinel data (2018), processed by EUMETSAT (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2018/05/Antarctic_sunset_from_Sentinel-3B",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/"
+  },
+  "Sentinel-4.html": {
+   "r2": "images/sol-cards/Europe_North_Africa_Sentinel-4_ESA.jpg",
+   "alt": "Europe and North Africa seen by Copernicus Sentinel-4 from geostationary orbit",
+   "credit": "contains modified Copernicus Sentinel data (2025), processed by ESA (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2025/10/Europe_and_North_Africa_from_Sentinel-4",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/"
+  },
+  "Sentinel-5P.html": {
+   "r2": "images/hub/NASA_SVS_OMI_NO2_Global_2014.jpg",
+   "alt": "World map of average nitrogen dioxide pollution in 2014 measured from space by the Ozone Monitoring Instrument on NASA's Aura satellite, brightest over big cities and industrial areas",
+   "credit": "NASA's Goddard Space Flight Center (<a href=\"https://svs.gsfc.nasa.gov/4412/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://svs.gsfc.nasa.gov/4412/",
+   "license": "public domain",
+   "license_url": "https://svs.gsfc.nasa.gov/4412/",
+   "alt_i18n": {
+    "en": "World map of average nitrogen dioxide pollution in 2014 measured from space by the Ozone Monitoring Instrument on NASA's Aura satellite, brightest over big cities and industrial areas",
+    "fr": "Carte mondiale de la pollution moyenne au dioxyde d'azote en 2014, mesurée depuis l'espace par l'instrument OMI du satellite Aura de la NASA, plus forte au-dessus des grandes villes et des zones industrielles",
+    "es": "Mapa mundial de la contaminación media por dióxido de nitrógeno en 2014, medida desde el espacio por el instrumento OMI del satélite Aura de la NASA, más intensa sobre grandes ciudades y zonas industriales",
+    "ar": "خريطة عالمية لمتوسط تلوث ثاني أكسيد النيتروجين عام 2014 كما قاسه من الفضاء جهاز OMI على متن القمر الصناعي Aura التابع لناسا، ويبلغ أشده فوق المدن الكبرى والمناطق الصناعية",
+    "it": "Mappa mondiale dell'inquinamento medio da biossido di azoto nel 2014, misurato dallo spazio dallo strumento OMI del satellite Aura della NASA, più intenso sopra le grandi città e le aree industriali",
+    "he": "מפת עולם של זיהום ממוצע בחנקן דו-חמצני ב-2014, כפי שנמדד מהחלל במכשיר OMI על הלוויין Aura של נאס\"א, החזק ביותר מעל ערים גדולות ואזורי תעשייה"
+   }
+  },
+  "FLEX.html": {
+   "r2": "images/hub/NASA_JPL_OCO3_First_SIF.jpg",
+   "alt": "A strip of OCO-3 satellite measurements showing the faint fluorescence glow plants give off during photosynthesis, darker green where plants are more active, across the Caucasus region",
+   "credit": "NASA/JPL-Caltech (<a href=\"https://images.nasa.gov/details/PIA23353\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://images.nasa.gov/details/PIA23353",
+   "license": "public domain",
+   "license_url": "https://images.nasa.gov/details/PIA23353",
+   "alt_i18n": {
+    "en": "A strip of OCO-3 satellite measurements showing the faint fluorescence glow plants give off during photosynthesis, darker green where plants are more active, across the Caucasus region",
+    "fr": "Bande de mesures du satellite OCO-3 montrant la faible lueur de fluorescence émise par les plantes pendant la photosynthèse, d'un vert plus foncé là où elles sont plus actives, au-dessus de la région du Caucase",
+    "es": "Franja de mediciones del satélite OCO-3 que muestra el tenue brillo de fluorescencia que emiten las plantas durante la fotosíntesis, de un verde más oscuro donde son más activas, sobre la región del Cáucaso",
+    "ar": "شريط من قياسات القمر الصناعي OCO-3 يُظهر وهج التألق الخافت الذي تطلقه النباتات أثناء التمثيل الضوئي، بلون أخضر أغمق حيث يكون نشاطها أكبر، فوق منطقة القوقاز",
+    "it": "Una striscia di misure del satellite OCO-3 che mostra il debole bagliore di fluorescenza emesso dalle piante durante la fotosintesi, di un verde più scuro dove sono più attive, sopra la regione del Caucaso",
+    "he": "רצועת מדידות של הלוויין OCO-3 המציגה את זוהר הפלואורסצנציה החלש שצמחים פולטים בזמן פוטוסינתזה, בירוק כהה יותר היכן שהצמחים פעילים יותר, מעל אזור הקווקז"
+   }
+  },
+  "FORUM.html": {
+   "r2": "images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017.jpg",
+   "alt": "NOAA world map of the infrared (longwave) energy Earth sends back out to space",
+   "credit": "NOAA NESDIS (<a href=\"https://commons.wikimedia.org/wiki/File:Outgoing_Longwave_Energy_(NESDIS_2017-09-16).png\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Outgoing_Longwave_Energy_(NESDIS_2017-09-16).png",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Outgoing_Longwave_Energy_(NESDIS_2017-09-16).png"
+  },
+  "Galileo.html": {
+   "r2": "images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA.jpg",
+   "alt": "A Galileo navigation satellite inside ESA's acoustic test chamber in the Netherlands",
+   "credit": "ESA-Anneke Le Floc'h (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2013/08/Galileo_satellite_in_LEAF_for_acoustic_testing",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/"
+  },
+  "GeoXO.html": {
+   "r2": "images/hub/NASA_SVS_GeoXO_OCX.png",
+   "alt": "Visualization of the planned GeoXO East satellite above Earth with the scanning pattern of its ocean color instrument",
+   "credit": "NASA's Scientific Visualization Studio (<a href=\"https://svs.gsfc.nasa.gov/5417/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://svs.gsfc.nasa.gov/5417/",
+   "license": "public domain",
+   "license_url": "https://svs.gsfc.nasa.gov/5417/",
+   "alt_i18n": {
+    "en": "Visualization of the planned GeoXO East satellite above Earth with the scanning pattern of its ocean color instrument",
+    "fr": "Visualisation du futur satellite GeoXO Est au-dessus de la Terre, avec le schéma de balayage de son instrument de couleur de l'océan",
+    "es": "Visualización del futuro satélite GeoXO Este sobre la Tierra con el patrón de barrido de su instrumento de color del océano",
+    "ar": "تصوير للقمر المخطط GeoXO الشرقي فوق الأرض مع نمط المسح لجهازه الخاص بقياس لون المحيط",
+    "it": "Visualizzazione del futuro satellite GeoXO Est sopra la Terra con lo schema di scansione del suo strumento per il colore dell'oceano",
+    "he": "הדמיה של הלוויין המתוכנן GeoXO מזרח מעל כדור הארץ, עם דפוס הסריקה של מכשיר צבע האוקיינוס שלו"
+   }
+  },
+  "GOSAT-GW.html": {
+   "r2": "images/hub/NASA_OCO2_Global_CO2_2014.jpg",
+   "alt": "NASA satellite map of carbon dioxide around the world from space, the greenhouse gas Japan's IBUKI GW satellite also measures",
+   "credit": "NASA/JPL-Caltech (<a href=\"https://images.nasa.gov/details/PIA18934\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://images.nasa.gov/details/PIA18934",
+   "license": "public domain",
+   "license_url": "https://images.nasa.gov/details/PIA18934",
+   "alt_i18n": {
+    "en": "NASA satellite map of carbon dioxide around the world from space, the greenhouse gas Japan's IBUKI GW satellite also measures",
+    "fr": "Carte satellite de la NASA du dioxyde de carbone autour du monde vu depuis l'espace, le gaz à effet de serre que mesure aussi le satellite japonais IBUKI GW",
+    "es": "Mapa satelital de la NASA del dióxido de carbono en todo el mundo visto desde el espacio, el gas de efecto invernadero que también mide el satélite japonés IBUKI GW",
+    "ar": "خريطة من أقمار ناسا الصناعية لثاني أكسيد الكربون حول العالم من الفضاء، وهو غاز الدفيئة الذي يقيسه أيضًا القمر الصناعي الياباني IBUKI GW",
+    "it": "Mappa satellitare della NASA dell'anidride carbonica in tutto il mondo vista dallo spazio, il gas serra che misura anche il satellite giapponese IBUKI GW",
+    "he": "מפת לוויין של נאס\"א של פחמן דו-חמצני ברחבי העולם מהחלל, גז החממה שגם הלוויין היפני IBUKI GW מודד"
+   }
+  },
+  "HydroGNSS.html": {
+   "r2": "images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877.png",
+   "alt": "NASA SMAP world map of surface soil moisture, August 25-27, 2015",
+   "credit": "NASA/JPL-Caltech/GSFC (PIA19877) (<a href=\"https://commons.wikimedia.org/wiki/File:SMAP_Global_Map_of_Surface_Soil_Moisture,_25-27_August_2015_(PIA19877).png\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:SMAP_Global_Map_of_Surface_Soil_Moisture,_25-27_August_2015_(PIA19877).png",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:SMAP_Global_Map_of_Surface_Soil_Moisture,_25-27_August_2015_(PIA19877).png"
+  },
+  "Libera.html": {
+   "r2": "images/hub/NASA_CERES_Suomi_NPP_Shortwave.jpg",
+   "alt": "Globe map of sunlight reflected back to space over Africa and Europe, measured by NASA's CERES instrument, the Earth energy record that Libera continues",
+   "credit": "NASA Goddard Space Flight Center (<a href=\"https://www.flickr.com/photos/gsfc/8164317498/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/gsfc/8164317498/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/gsfc/8164317498/",
+   "alt_i18n": {
+    "en": "Globe map of sunlight reflected back to space over Africa and Europe, measured by NASA's CERES instrument, the Earth energy record that Libera continues",
+    "fr": "Carte du globe montrant la lumière du soleil renvoyée vers l'espace au-dessus de l'Afrique et de l'Europe, mesurée par l'instrument CERES de la NASA, le relevé de l'énergie de la Terre que Libera prolonge",
+    "es": "Mapa del globo con la luz solar reflejada al espacio sobre África y Europa, medida por el instrumento CERES de la NASA, el registro de la energía de la Tierra que Libera continúa",
+    "ar": "خريطة للكرة الأرضية تُظهر ضوء الشمس المنعكس إلى الفضاء فوق أفريقيا وأوروبا، كما قاسه جهاز CERES التابع لناسا، وهو سجل طاقة الأرض الذي يواصله Libera",
+    "it": "Mappa del globo con la luce solare riflessa nello spazio sopra l'Africa e l'Europa, misurata dallo strumento CERES della NASA, la serie di dati sull'energia della Terra che Libera prosegue",
+    "he": "מפת כדור הארץ המציגה את אור השמש המוחזר לחלל מעל אפריקה ואירופה, כפי שנמדד במכשיר CERES של נאס\"א, רצף מדידות האנרגיה של כדור הארץ ש-Libera ממשיך"
+   }
+  },
+  "MetOp-SG-A1_Sentinel-5A.html": {
+   "r2": "images/hub/ESA_MetOp-SG_Satellites.jpg",
+   "alt": "Artist's view of the MetOp-SG A-type and B-type weather satellites in orbit above Earth",
+   "credit": "ESA/ATG medialab (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2026/07/MetOp-SG_satellites",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+   "alt_i18n": {
+    "en": "Artist's view of the MetOp-SG A-type and B-type weather satellites in orbit above Earth",
+    "fr": "Vue d'artiste des satellites météo MetOp-SG de type A et de type B en orbite au-dessus de la Terre",
+    "es": "Recreación artística de los satélites meteorológicos MetOp-SG tipo A y tipo B en órbita sobre la Tierra",
+    "ar": "تصور فني لقمري الطقس MetOp-SG من النوع A والنوع B في المدار فوق الأرض",
+    "it": "Rappresentazione artistica dei satelliti meteorologici MetOp-SG di tipo A e di tipo B in orbita sopra la Terra",
+    "he": "הדמיה אמנותית של לווייני מזג האוויר MetOp-SG מסוג A ומסוג B במסלול מעל כדור הארץ"
+   }
+  },
+  "SARSAT.html": {
+   "r2": "images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532.jpg",
+   "alt": "Personal locator beacons that send distress signals to COSPAS-SARSAT satellites",
+   "credit": "NOAA (2268-532) (<a href=\"https://commons.wikimedia.org/wiki/File:Person_locator_beacon_for_use_with_COSPAS-SARSAT_(2268-532).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Person_locator_beacon_for_use_with_COSPAS-SARSAT_(2268-532).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Person_locator_beacon_for_use_with_COSPAS-SARSAT_(2268-532).jpg"
+  },
+  "TEMPO.html": {
+   "r2": "images/hub/NASA_SVS_TEMPO_NO2_North_America.jpg",
+   "alt": "NASA TEMPO map of nitrogen dioxide air pollution over North America, highest over big cities",
+   "credit": "NASA's Scientific Visualization Studio (<a href=\"https://svs.gsfc.nasa.gov/5142/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://svs.gsfc.nasa.gov/5142/",
+   "license": "public domain",
+   "license_url": "https://svs.gsfc.nasa.gov/5142/",
+   "alt_i18n": {
+    "en": "NASA TEMPO map of nitrogen dioxide air pollution over North America, highest over big cities",
+    "fr": "Carte TEMPO de la NASA de la pollution au dioxyde d'azote au-dessus de l'Amérique du Nord, plus forte au-dessus des grandes villes",
+    "es": "Mapa TEMPO de la NASA de la contaminación por dióxido de nitrógeno sobre América del Norte, más alta sobre las grandes ciudades",
+    "ar": "خريطة TEMPO من ناسا لتلوث الهواء بثاني أكسيد النيتروجين فوق أمريكا الشمالية، وهو الأعلى فوق المدن الكبرى",
+    "it": "Mappa TEMPO della NASA dell'inquinamento da biossido di azoto sopra il Nord America, più elevato sopra le grandi città",
+    "he": "מפת TEMPO של נאס\"א של זיהום אוויר בחנקן דו-חמצני מעל צפון אמריקה, הגבוה ביותר מעל ערים גדולות"
+   }
+  },
+  "American_Forests.html": {
+   "r2": "images/hub/USFS_Dixie_Forest_Replanting.jpg",
+   "alt": "Ponderosa pine seedlings being planted to restore a burned area of Dixie National Forest in Utah",
+   "credit": "Intermountain Region US Forest Service (<a href=\"https://www.flickr.com/photos/107640324@N05/26622963072\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/107640324@N05/26622963072",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/107640324@N05/26622963072",
+   "alt_i18n": {
+    "en": "Ponderosa pine seedlings being planted to restore a burned area of Dixie National Forest in Utah",
+    "fr": "Plantation de jeunes pins ponderosa pour restaurer une zone brûlée de la forêt nationale de Dixie, dans l'Utah",
+    "es": "Plantación de plántulas de pino ponderosa para restaurar una zona quemada del Bosque Nacional Dixie, en Utah",
+    "ar": "زراعة شتلات صنوبر بونديروزا لإعادة تأهيل منطقة محترقة في غابة ديكسي الوطنية بولاية يوتا",
+    "it": "Messa a dimora di giovani pini ponderosa per ripristinare un'area bruciata della foresta nazionale di Dixie, nello Utah",
+    "he": "שתילת שתילי אורן פונדרוזה לשיקום אזור שרוף ביער הלאומי דיקסי ביוטה"
+   }
+  },
+  "Arbor_Day_Foundation.html": {
+   "r2": "images/hub/USFWS_Volunteers_Carry_Trees.jpg",
+   "alt": "Volunteers carrying young red spruce trees to planting sites on Pisgah National Forest in North Carolina",
+   "credit": "Gary Peeples/USFWS (<a href=\"https://www.flickr.com/photos/usfwssoutheast/37287300136\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/usfwssoutheast/37287300136",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/usfwssoutheast/37287300136",
+   "alt_i18n": {
+    "en": "Volunteers carrying young red spruce trees to planting sites on Pisgah National Forest in North Carolina",
+    "fr": "Des bénévoles transportent de jeunes épicéas rouges vers les sites de plantation de la forêt nationale de Pisgah, en Caroline du Nord",
+    "es": "Voluntarios llevan jóvenes píceas rojas a los sitios de plantación del Bosque Nacional Pisgah, en Carolina del Norte",
+    "ar": "متطوعون يحملون أشجار تنوب أحمر صغيرة إلى مواقع الزراعة في غابة بيسغا الوطنية بولاية كارولاينا الشمالية",
+    "it": "Volontari trasportano giovani abeti rossi verso i siti di piantagione nella foresta nazionale di Pisgah, in Carolina del Nord",
+    "he": "מתנדבים נושאים עצי אשוחית אדומה צעירים לאתרי השתילה ביער הלאומי פיסגה בצפון קרוליינה"
+   }
+  },
+  "One_Tree_Planted.html": {
+   "r2": "images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991.jpg",
+   "alt": "Crew planting tree seedlings to restore a wildfire area in Utah's Dixie National Forest",
+   "credit": "USDA Forest Service Intermountain Region (<a href=\"https://commons.wikimedia.org/wiki/File:Dixie_National_Forest_Plants_98,633_Trees_Restoring_Wildfire_Areas_DSC_0231_(26650024991).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Dixie_National_Forest_Plants_98,633_Trees_Restoring_Wildfire_Areas_DSC_0231_(26650024991).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Dixie_National_Forest_Plants_98,633_Trees_Restoring_Wildfire_Areas_DSC_0231_(26650024991).jpg"
+  },
+  "Plant-for-the-Planet.html": {
+   "r2": "images/hub/USFWS_Students_Planting_Spruce.jpg",
+   "alt": "Students planting red spruce seedlings along the Cherohala Skyway in North Carolina",
+   "credit": "U.S. Fish and Wildlife Service Southeast Region (<a href=\"https://www.flickr.com/photos/usfwssoutheast/10344525523/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/usfwssoutheast/10344525523/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/usfwssoutheast/10344525523/",
+   "alt_i18n": {
+    "en": "Students planting red spruce seedlings along the Cherohala Skyway in North Carolina",
+    "fr": "Des étudiants plantent de jeunes épicéas rouges le long de la Cherohala Skyway, en Caroline du Nord",
+    "es": "Estudiantes plantan plántulas de pícea roja a lo largo de la Cherohala Skyway, en Carolina del Norte",
+    "ar": "طلاب يزرعون شتلات التنوب الأحمر على طول طريق شيروهالا سكاي وي في ولاية كارولاينا الشمالية",
+    "it": "Studenti piantano giovani abeti rossi lungo la Cherohala Skyway, in Carolina del Nord",
+    "he": "סטודנטים שותלים שתילי אשוחית אדומה לאורך כביש צ'רוהאלה סקייוויי בצפון קרוליינה"
+   }
+  },
+  "Rainforest_Connection.html": {
+   "r2": "images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012.jpg",
+   "alt": "Landsat views of the same patch of Amazon rainforest in Rondônia, Brazil: unbroken forest in 1975 (left) and the fishbone pattern of clearings along roads in 2012 (right)",
+   "credit": "NASA's Goddard Space Flight Center/Landsat (<a href=\"https://svs.gsfc.nasa.gov/11061/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://svs.gsfc.nasa.gov/11061/",
+   "license": "public domain",
+   "license_url": "https://svs.gsfc.nasa.gov/11061/",
+   "alt_i18n": {
+    "en": "Landsat views of the same patch of Amazon rainforest in Rondônia, Brazil: unbroken forest in 1975 (left) and the fishbone pattern of clearings along roads in 2012 (right)",
+    "fr": "Vues Landsat d'une même zone de forêt amazonienne au Rondônia, au Brésil : forêt intacte en 1975 (à gauche) et motif en arêtes de poisson des défrichements le long des routes en 2012 (à droite)",
+    "es": "Vistas Landsat de la misma zona de selva amazónica en Rondônia, Brasil: bosque intacto en 1975 (izquierda) y el patrón en espina de pescado de los desmontes a lo largo de las carreteras en 2012 (derecha)",
+    "ar": "صورتان من Landsat للبقعة نفسها من غابات الأمازون المطيرة في روندونيا بالبرازيل: غابة متصلة عام 1975 (يسارًا) ونمط عظم السمكة للمساحات المقطوعة على امتداد الطرق عام 2012 (يمينًا)",
+    "it": "Viste Landsat della stessa area di foresta amazzonica in Rondônia, Brasile: foresta intatta nel 1975 (a sinistra) e il disegno a lisca di pesce dei disboscamenti lungo le strade nel 2012 (a destra)",
+    "he": "תצלומי Landsat של אותו אזור ביער הגשם של האמזונס ברונדוניה, ברזיל: יער רציף ב-1975 (משמאל) ודפוס \"עצם הדג\" של כריתות לאורך כבישים ב-2012 (מימין)"
+   }
+  },
+  "Trees_for_the_Future.html": {
+   "r2": "images/hub/ESA_S2_Tana_River_Kenya.jpg",
+   "alt": "The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite",
+   "credit": "contains modified Copernicus Sentinel data (2020), processed by ESA (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2021/06/Tana_River_Kenya",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+   "alt_i18n": {
+    "en": "The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite",
+    "fr": "Le fleuve Tana serpente à travers le Kenya, vu par le satellite Copernicus Sentinel-2",
+    "es": "El río Tana serpentea por Kenia, visto por el satélite Copernicus Sentinel-2",
+    "ar": "نهر تانا يتعرج عبر أراضي كينيا كما يراه القمر الصناعي كوبرنيكوس سنتينل-2",
+    "it": "Il fiume Tana serpeggia attraverso il Kenya, visto dal satellite Copernicus Sentinel-2",
+    "he": "נהר טאנה מתפתל לרוחב קניה, כפי שנראה מהלוויין קופרניקוס סנטינל-2"
+   }
+  },
+  "WeForest.html": {
+   "r2": "images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg",
+   "alt": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
+   "credit": "USDA Forest Service (<a href=\"https://www.flickr.com/photos/fsnorthernregion/52369325376\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/fsnorthernregion/52369325376",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/fsnorthernregion/52369325376",
+   "alt_i18n": {
+    "en": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
+    "fr": "Plantation d'un jeune arbre dans le district de Sioux de la forêt nationale de Custer Gallatin",
+    "es": "Plantación de un plantón en el distrito de Sioux del Bosque Nacional Custer Gallatin",
+    "ar": "زراعة شتلة شجرة في منطقة سو التابعة لغابة كاستر غالاتين الوطنية",
+    "it": "Messa a dimora di un giovane albero nel distretto di Sioux della foresta nazionale di Custer Gallatin",
+    "he": "שתילת שתיל עץ במחוז סו של היער הלאומי קאסטר גלאטין"
+   }
+  },
+  "Lake_Erie_Algal_Bloom_Forecast.html": {
+   "r2": "images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL.jpg",
+   "alt": "Green algal bloom in western Lake Erie seen from satellite, September 20, 2017",
+   "credit": "NOAA Great Lakes Environmental Research Laboratory (<a href=\"https://commons.wikimedia.org/wiki/File:Lake_Erie_Algal_Bloom_Sept_20_2017_(37052122640).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Lake_Erie_Algal_Bloom_Sept_20_2017_(37052122640).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Lake_Erie_Algal_Bloom_Sept_20_2017_(37052122640).jpg"
+  },
+  "Argos.html": {
+   "r2": "images/hub/NOAA_False_Killer_Whale_Sat_Tag.jpg",
+   "alt": "An adult false killer whale surfacing off Guam, photographed by NOAA scientists before a satellite tag was attached",
+   "credit": "Adam U / NOAA/NMFS/Pacific Islands Fisheries Science Center (<a href=\"https://photolib.noaa.gov/Collections/NOAAs-Ark/Other/emodule/721/eitem/31081\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://photolib.noaa.gov/Collections/NOAAs-Ark/Other/emodule/721/eitem/31081",
+   "license": "public domain",
+   "license_url": "https://photolib.noaa.gov/Collections/NOAAs-Ark/Other/emodule/721/eitem/31081",
+   "alt_i18n": {
+    "en": "An adult false killer whale surfacing off Guam, photographed by NOAA scientists before a satellite tag was attached",
+    "fr": "Un faux-orque adulte fait surface au large de Guam, photographié par des scientifiques de la NOAA avant la pose d'une balise satellite",
+    "es": "Una falsa orca adulta sale a la superficie frente a Guam, fotografiada por científicos de la NOAA antes de colocarle una marca satelital",
+    "ar": "حوت قاتل كاذب بالغ يطفو قبالة غوام، صوّره علماء NOAA قبل تثبيت جهاز تتبع بالأقمار الصناعية عليه",
+    "it": "Una pseudorca adulta emerge al largo di Guam, fotografata dagli scienziati della NOAA prima dell'applicazione di un tag satellitare",
+    "he": "לוויתן קטלן מדומה בוגר עולה אל פני המים מול גואם, בצילום של מדעני NOAA לפני הצמדת משדר לוויני"
+   }
+  },
+  "Coral_IVF.html": {
+   "r2": "images/hub/NOAA_Coral_Spawning_FGB.jpg",
+   "alt": "A coral releasing a burst of eggs and sperm into the water during spawning in Flower Garden Banks National Marine Sanctuary",
+   "credit": "G.P. Schmahl/NOAA (<a href=\"https://www.flickr.com/photos/onms/32330899546/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/32330899546/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/32330899546/",
+   "alt_i18n": {
+    "en": "A coral releasing a burst of eggs and sperm into the water during spawning in Flower Garden Banks National Marine Sanctuary",
+    "fr": "Un corail libère un nuage d'ovules et de spermatozoïdes dans l'eau pendant la ponte, dans le sanctuaire marin national de Flower Garden Banks",
+    "es": "Un coral libera una nube de óvulos y esperma en el agua durante el desove, en el Santuario Marino Nacional Flower Garden Banks",
+    "ar": "مرجان يطلق دفعة من البيوض والحيوانات المنوية في الماء أثناء التكاثر في محمية فلاور غاردن بانكس البحرية الوطنية",
+    "it": "Un corallo rilascia una nube di uova e spermatozoi nell'acqua durante la deposizione, nel santuario marino nazionale di Flower Garden Banks",
+    "he": "אלמוג משחרר פרץ של ביציות וזרע למים בזמן ההטלה, בשמורה הימית הלאומית פלאוור גארדן בנקס"
+   }
+  },
+  "Global_Fishing_Watch.html": {
+   "r2": "images/hub/NOAA_Fishing_Vessel_Dory.jpg",
+   "alt": "A small dory with a high prow setting out from a commercial fishing vessel at sea",
+   "credit": "Alaska Fisheries Science Center, Marine Observer Program (<a href=\"http://www.photolib.noaa.gov/htmls/fish0335.htm\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "http://www.photolib.noaa.gov/htmls/fish0335.htm",
+   "license": "public domain",
+   "license_url": "http://www.photolib.noaa.gov/htmls/fish0335.htm",
+   "alt_i18n": {
+    "en": "A small dory with a high prow setting out from a commercial fishing vessel at sea",
+    "fr": "Une petite doris à la proue haute quitte un navire de pêche commerciale en mer",
+    "es": "Un pequeño bote dory de proa alta sale de un buque pesquero comercial en alta mar",
+    "ar": "قارب صغير ذو مقدمة عالية ينطلق من سفينة صيد تجارية في عرض البحر",
+    "it": "Una piccola dory dalla prua alta si allontana da un peschereccio commerciale in mare aperto",
+    "he": "סירת דורי קטנה עם חרטום גבוה יוצאת מספינת דיג מסחרית בלב ים"
+   }
+  },
+  "Healthy_Seas.html": {
+   "r2": "images/hub/NOAA_Hauling_Derelict_Nets.jpg",
+   "alt": "Divers in an inflatable boat hauling in derelict fishing nets removed from the reefs of Papahānaumokuākea Marine National Monument",
+   "credit": "NOAA (<a href=\"https://www.flickr.com/photos/onms/33963796612/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/33963796612/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/33963796612/",
+   "alt_i18n": {
+    "en": "Divers in an inflatable boat hauling in derelict fishing nets removed from the reefs of Papahānaumokuākea Marine National Monument",
+    "fr": "Des plongeurs dans un bateau pneumatique hissent des filets de pêche abandonnés retirés des récifs du monument national marin de Papahānaumokuākea",
+    "es": "Buzos en una lancha neumática suben redes de pesca abandonadas retiradas de los arrecifes del Monumento Nacional Marino Papahānaumokuākea",
+    "ar": "غواصون في قارب مطاطي يسحبون شباك صيد مهجورة أُزيلت من شعاب نصب باباهاناوموكواكيا البحري الوطني",
+    "it": "Sub su un gommone tirano a bordo reti da pesca abbandonate rimosse dalle barriere coralline del monumento nazionale marino di Papahānaumokuākea",
+    "he": "צוללנים בסירה מתנפחת מושכים רשתות דיג נטושות שהוסרו מהשוניות של האנדרטה הימית הלאומית פאפאהאנאומוקואקאה"
+   }
+  },
+  "International_Coastal_Cleanup.html": {
+   "r2": "images/hub/NOAA_Coastal_Cleanup_Olympic.jpg",
+   "alt": "Two volunteers picking up trash on Second Beach in Olympic Coast National Marine Sanctuary during the International Coastal Cleanup",
+   "credit": "Karlyn Langjahr/NOAA (<a href=\"https://www.flickr.com/photos/onms/37209289731/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/37209289731/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/37209289731/",
+   "alt_i18n": {
+    "en": "Two volunteers picking up trash on Second Beach in Olympic Coast National Marine Sanctuary during the International Coastal Cleanup",
+    "fr": "Deux bénévoles ramassent des déchets sur Second Beach, dans le sanctuaire marin national d'Olympic Coast, lors du International Coastal Cleanup",
+    "es": "Dos voluntarios recogen basura en Second Beach, en el Santuario Marino Nacional Olympic Coast, durante la International Coastal Cleanup",
+    "ar": "متطوعان يجمعان النفايات على شاطئ سكند بيتش في محمية أوليمبيك كوست البحرية الوطنية خلال حملة International Coastal Cleanup",
+    "it": "Due volontari raccolgono rifiuti su Second Beach, nel santuario marino nazionale di Olympic Coast, durante l'International Coastal Cleanup",
+    "he": "שני מתנדבים אוספים פסולת בחוף סקנד ביץ' בשמורה הימית הלאומית אולימפיק קוסט, במסגרת International Coastal Cleanup"
+   }
+  },
+  "Mote_Marine_Laboratory.html": {
+   "r2": "images/sol-cards/Florida_Keys_Coral_Nursery_NOAA.jpg",
+   "alt": "Underwater coral nursery trees growing young corals in the Florida Keys",
+   "credit": "NOAA Florida Keys National Marine Sanctuary (<a href=\"https://commons.wikimedia.org/wiki/File:FKNMS_-_coral_nursery_(27367671414).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:FKNMS_-_coral_nursery_(27367671414).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:FKNMS_-_coral_nursery_(27367671414).jpg"
+  },
+  "Plastic_Odyssey.html": {
+   "r2": "images/hub/NOAA_Lisianski_Debris_Removal.jpg",
+   "alt": "A team pulling a giant tangled mass of washed-up fishing nets across the beach of Lisianski Island in Papahānaumokuākea Marine National Monument",
+   "credit": "NOAA (<a href=\"https://www.flickr.com/photos/onms/27658308986/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/27658308986/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/27658308986/",
+   "alt_i18n": {
+    "en": "A team pulling a giant tangled mass of washed-up fishing nets across the beach of Lisianski Island in Papahānaumokuākea Marine National Monument",
+    "fr": "Une équipe tire une énorme masse de filets de pêche échoués sur la plage de l'île Lisianski, dans le monument national marin de Papahānaumokuākea",
+    "es": "Un equipo arrastra una enorme maraña de redes de pesca varadas por la playa de la isla Lisianski, en el Monumento Nacional Marino Papahānaumokuākea",
+    "ar": "فريق يسحب كتلة ضخمة متشابكة من شباك الصيد التي جرفتها الأمواج على شاطئ جزيرة ليسيانسكي في نصب باباهاناوموكواكيا البحري الوطني",
+    "it": "Una squadra trascina un'enorme massa aggrovigliata di reti da pesca spiaggiate sulla spiaggia dell'isola di Lisianski, nel monumento nazionale marino di Papahānaumokuākea",
+    "he": "צוות גורר גוש ענק וסבוך של רשתות דיג שנפלטו לחוף האי ליסיאנסקי, באנדרטה הימית הלאומית פאפאהאנאומוקואקאה"
+   }
+  },
+  "Surfrider_Foundation.html": {
+   "r2": "images/hub/NOAA_Surfers_Second_Beach.jpg",
+   "alt": "Two surfers at sunset among sea stacks and crashing waves at Second Beach in Olympic Coast National Marine Sanctuary",
+   "credit": "Matt McIntosh/NOAA (<a href=\"https://www.flickr.com/photos/onms/30550423453/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/30550423453/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/30550423453/",
+   "alt_i18n": {
+    "en": "Two surfers at sunset among sea stacks and crashing waves at Second Beach in Olympic Coast National Marine Sanctuary",
+    "fr": "Deux surfeurs au coucher du soleil parmi les aiguilles rocheuses et les vagues de Second Beach, dans le sanctuaire marin national d'Olympic Coast",
+    "es": "Dos surfistas al atardecer entre farallones y olas rompientes en Second Beach, en el Santuario Marino Nacional Olympic Coast",
+    "ar": "راكبا أمواج عند الغروب بين الصخور البحرية والأمواج المتلاطمة على شاطئ سكند بيتش في محمية أوليمبيك كوست البحرية الوطنية",
+    "it": "Due surfisti al tramonto tra faraglioni e onde che si infrangono a Second Beach, nel santuario marino nazionale di Olympic Coast",
+    "he": "שני גולשים בשקיעה בין עמודי סלע וגלים מתנפצים בחוף סקנד ביץ' בשמורה הימית הלאומית אולימפיק קוסט"
+   }
+  },
+  "Whales_Ocean_Gardeners.html": {
+   "r2": "images/hub/NOAA_Humpback_Stellwagen.jpg",
+   "alt": "A humpback whale surfacing with gulls riding on its nose in Stellwagen Bank National Marine Sanctuary",
+   "credit": "Elliot Hazen/NOAA Fisheries Permit #14245 (<a href=\"https://www.flickr.com/photos/onms/28181037722/\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/onms/28181037722/",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/onms/28181037722/",
+   "alt_i18n": {
+    "en": "A humpback whale surfacing with gulls riding on its nose in Stellwagen Bank National Marine Sanctuary",
+    "fr": "Une baleine à bosse fait surface avec des goélands posés sur son museau, dans le sanctuaire marin national de Stellwagen Bank",
+    "es": "Una ballena jorobada sale a la superficie con gaviotas posadas sobre su hocico en el Santuario Marino Nacional Stellwagen Bank",
+    "ar": "حوت أحدب يطفو على السطح وطيور النورس تقف على مقدمة رأسه في محمية ستيلواغن بانك البحرية الوطنية",
+    "it": "Una megattera emerge in superficie con dei gabbiani appollaiati sul muso, nel santuario marino nazionale di Stellwagen Bank",
+    "he": "לוויתן גדול-סנפיר עולה אל פני המים ושחפים עומדים על חרטומו, בשמורה הימית הלאומית סטלווגן בנק"
+   }
+  },
+  "CIMR.html": {
+   "r2": "images/sol-cards/Greenland_swirls_Sentinel-3B_ESA.jpg",
+   "alt": "Swirls of sea ice off Greenland, imaged by Copernicus Sentinel-3B",
+   "credit": "contains modified Copernicus Sentinel data (2018), processed by EUMETSAT (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2018/05/Greenland_swirls",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/"
+  },
+  "Ariel.html": {
+   "r2": "images/sol-cards/Ariel_key_visual_ESA.jpg",
+   "alt": "Artist's impression of ESA's Ariel spacecraft studying the light of distant planets",
+   "credit": "ESA (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/igo/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0 IGO</a>)",
+   "source": "https://www.esa.int/ESA_Multimedia/Images/2024/07/Ariel_key_visual",
+   "license": "CC BY-SA 3.0 IGO",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/"
+  },
+  "Dragonfly.html": {
+   "r2": "images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL.jpg",
+   "alt": "Artist's concept of NASA's Dragonfly rotorcraft flying over the dunes of Saturn's moon Titan",
+   "credit": "Steve Gribben/NASA/Johns Hopkins APL (<a href=\"https://commons.wikimedia.org/wiki/File:Dragonfly_Concept_Art_2024.webp\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Dragonfly_Concept_Art_2024.webp",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Dragonfly_Concept_Art_2024.webp"
+  },
+  "Beavers_River_Engineers.html": {
+   "r2": "images/hub/USFWS_Beaver_Dam_Minnesota.jpg",
+   "alt": "A beaver dam holding back a large wetland in St. Louis County, Minnesota, with a beaver lodge in the distance",
+   "credit": "Courtney Celley/USFWS (<a href=\"https://www.flickr.com/photos/usfwsmidwest/53718655489\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/usfwsmidwest/53718655489",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/usfwsmidwest/53718655489",
+   "alt_i18n": {
+    "en": "A beaver dam holding back a large wetland in St. Louis County, Minnesota, with a beaver lodge in the distance",
+    "fr": "Un barrage de castor retient une grande zone humide dans le comté de St. Louis, au Minnesota, avec une hutte de castor au loin",
+    "es": "Un dique de castor retiene un gran humedal en el condado de St. Louis, Minnesota, con una madriguera de castor al fondo",
+    "ar": "سد قندس يحجز أرضًا رطبة واسعة في مقاطعة سانت لويس بولاية مينيسوتا، ويظهر بيت القندس في البعيد",
+    "it": "Una diga di castori trattiene un'ampia zona umida nella contea di St. Louis, in Minnesota, con una tana di castoro in lontananza",
+    "he": "סכר בונים שיוצר אזור ביצה גדול במחוז סנט לואיס שבמינסוטה, ומאורת בונים נראית מרחוק"
+   }
+  },
+  "FreshWater_Watch.html": {
+   "r2": "images/hub/USGS_Mississippi_Water_Sample.png",
+   "alt": "A U.S. Geological Survey scientist collecting a water sample from the Mississippi River at Baton Rouge",
+   "credit": "Scott Dennis/USGS (<a href=\"https://oceanservice.noaa.gov/news/jun25/dead-zone-goa.html\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://oceanservice.noaa.gov/news/jun25/dead-zone-goa.html",
+   "license": "public domain",
+   "license_url": "https://oceanservice.noaa.gov/news/jun25/dead-zone-goa.html",
+   "alt_i18n": {
+    "en": "A U.S. Geological Survey scientist collecting a water sample from the Mississippi River at Baton Rouge",
+    "fr": "Un scientifique de l'U.S. Geological Survey prélève un échantillon d'eau du Mississippi à Baton Rouge",
+    "es": "Un científico del Servicio Geológico de EE. UU. toma una muestra de agua del río Misisipi en Baton Rouge",
+    "ar": "عالم من هيئة المسح الجيولوجي الأمريكية يأخذ عينة من مياه نهر المسيسيبي في باتون روج",
+    "it": "Uno scienziato dello U.S. Geological Survey preleva un campione d'acqua dal Mississippi a Baton Rouge",
+    "he": "מדען של הסקר הגיאולוגי של ארה\"ב אוסף דגימת מים מנהר המיסיסיפי בבאטון רוז'"
+   }
+  },
+  "Kissimmee_River_Restoration.html": {
+   "r2": "images/sol-cards/Kissimmee_River_Restoration_USACE.jpg",
+   "alt": "Aerial view of the restored, winding Kissimmee River beside a backfilled canal",
+   "credit": "U.S. Army Corps of Engineers (<a href=\"https://commons.wikimedia.org/wiki/File:Photo_by_USACE_Kissimmee_River_Restoration_backfilled_canal_and_restored_meanders.jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Photo_by_USACE_Kissimmee_River_Restoration_backfilled_canal_and_restored_meanders.jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Photo_by_USACE_Kissimmee_River_Restoration_backfilled_canal_and_restored_meanders.jpg"
+  },
+  "River_Cleanup.html": {
+   "r2": "images/hub/BLM_Trinity_River_Cleanup.jpg",
+   "alt": "Volunteers in rafts and kayaks collecting trash from the Trinity River in California",
+   "credit": "David Byers, BLM (<a href=\"https://www.flickr.com/photos/blmcalifornia/52242468817\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/blmcalifornia/52242468817",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/blmcalifornia/52242468817",
+   "alt_i18n": {
+    "en": "Volunteers in rafts and kayaks collecting trash from the Trinity River in California",
+    "fr": "Des bénévoles en radeau et en kayak ramassent des déchets dans la rivière Trinity, en Californie",
+    "es": "Voluntarios en balsas y kayaks recogen basura del río Trinity, en California",
+    "ar": "متطوعون على قوارب مطاطية وقوارب كاياك يجمعون النفايات من نهر ترينيتي في كاليفورنيا",
+    "it": "Volontari su gommoni e kayak raccolgono rifiuti dal fiume Trinity, in California",
+    "he": "מתנדבים ברפסודות ובקיאקים אוספים פסולת מנהר טריניטי בקליפורניה"
+   }
+  },
+  "Trout_Unlimited.html": {
+   "r2": "images/hub/USFWS_Coaster_Brook_Trout.jpg",
+   "alt": "A male coaster brook trout with orange belly and spotted sides, reared at Iron River National Fish Hatchery in Wisconsin",
+   "credit": "Katie Steiger-Meister/USFWS (<a href=\"https://www.flickr.com/photos/usfwsmidwest/15175365997\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://www.flickr.com/photos/usfwsmidwest/15175365997",
+   "license": "public domain",
+   "license_url": "https://www.flickr.com/photos/usfwsmidwest/15175365997",
+   "alt_i18n": {
+    "en": "A male coaster brook trout with orange belly and spotted sides, reared at Iron River National Fish Hatchery in Wisconsin",
+    "fr": "Un omble de fontaine mâle au ventre orange et aux flancs tachetés, élevé à la pisciculture nationale d'Iron River dans le Wisconsin",
+    "es": "Un salvelino macho de vientre naranja y costados moteados, criado en el criadero nacional de peces de Iron River, en Wisconsin",
+    "ar": "سمكة سلمون مرقط ذكر ذات بطن برتقالي وجوانب منقطة، رُبّيت في مفرخ أسماك آيرون ريفر الوطني في ويسكونسن",
+    "it": "Un salmerino di fontana maschio dal ventre arancione e dai fianchi maculati, allevato nell'incubatoio nazionale di Iron River, in Wisconsin",
+    "he": "שמך נחלים זכר עם בטן כתומה וצדדים מנומרים, שגודל במדגה הלאומי איירון ריבר בוויסקונסין"
+   }
+  },
+  "Aditya_L1.html": {
+   "r2": "images/sol-cards/SDO_M7.9_Solar_Flare_NASA.jpg",
+   "alt": "The Sun in extreme ultraviolet light from NASA's Solar Dynamics Observatory, with a bright solar flare",
+   "credit": "NASA/SDO (<a href=\"https://commons.wikimedia.org/wiki/File:Solar_Dynamics_Observatory_Sees_M7.9-Class_Solar_Flare.jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Solar_Dynamics_Observatory_Sees_M7.9-Class_Solar_Flare.jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Solar_Dynamics_Observatory_Sees_M7.9-Class_Solar_Flare.jpg"
+  },
+  "Three_Shields.html": {
+   "r2": "images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC.jpg",
+   "alt": "Illustration of Earth's magnetosphere shielding the planet from the solar wind",
+   "credit": "NASA/CXC/M.Weiss (<a href=\"https://commons.wikimedia.org/wiki/File:Illlustration_of_Earth%27s_Magnetosphere_and_Auroras_(2005-earth-more-3_-_earth_mag_auro_illustration_label).jpg\" target=\"_blank\" rel=\"noopener\">public domain</a>)",
+   "source": "https://commons.wikimedia.org/wiki/File:Illlustration_of_Earth%27s_Magnetosphere_and_Auroras_(2005-earth-more-3_-_earth_mag_auro_illustration_label).jpg",
+   "license": "public domain",
+   "license_url": "https://commons.wikimedia.org/wiki/File:Illlustration_of_Earth%27s_Magnetosphere_and_Auroras_(2005-earth-more-3_-_earth_mag_auro_illustration_label).jpg"
   }
  }
 }

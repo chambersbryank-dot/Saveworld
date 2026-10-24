@@ -5573,5 +5573,181 @@
   "height": 2304,
   "srcset": "https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-480.ed4583f2b232.webp 480w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-800.824756352590.webp 800w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1280.1a667bd850a6.webp 1280w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1920.bee510258a35.webp 1920w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-2560.16078f2b52a0.webp 2560w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-3840.c64459989641.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-480.11d1e7928664.avif 480w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-800.3e4909f0617a.avif 800w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1280.cf855fcfbeb8.avif 1280w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1920.04d80bb28a98.avif 1920w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-2560.51737eb0beca.avif 2560w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-3840.ed50affba0c2.avif 3840w"
+ },
+ "images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA.bea8213dcdea.jpg",
+  "key": "images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA.bea8213dcdea.jpg",
+  "bytes": 523224,
+  "sha256": "bea8213dcdea93d366ad3e79112114dc7a8664609c5f411d5485f2817ab7fba1",
+  "type": "image/jpeg",
+  "width": 2000,
+  "height": 1058,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-480.4d4dc05d0b89.webp 480w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-800.1bdfccb08a74.webp 800w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-1280.7419858516cd.webp 1280w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-1920.9a8ee7d9e226.webp 1920w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-2000.9ac6592d9421.webp 2000w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-480.c2a29246b7de.avif 480w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-800.586e540fa409.avif 800w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-1280.9e42581e33f6.avif 1280w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-1920.04c69867f09a.avif 1920w, https://media.savingplanets.com/images/sol-cards/Antarctic_sunset_Sentinel-3B_ESA-2000.2a7935a286a9.avif 2000w"
+ },
+ "images/sol-cards/Ariel_key_visual_ESA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA.738eb4bd5fe1.jpg",
+  "key": "images/sol-cards/Ariel_key_visual_ESA.738eb4bd5fe1.jpg",
+  "bytes": 13003429,
+  "sha256": "738eb4bd5fe1fdbe787017c6f28ff69eac43db494a00871f5a00fa1137f04fcd",
+  "type": "image/jpeg",
+  "width": 8000,
+  "height": 4500,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-480.2ec2f3c5caf2.webp 480w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-800.a27fb2f43b56.webp 800w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-1280.e1c8c1ee71ed.webp 1280w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-1920.f50e5eb01a1e.webp 1920w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-2560.c722025740e7.webp 2560w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-3840.71b5bbb1a028.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-480.70ef6c5f6afb.avif 480w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-800.da4c5ba86ce2.avif 800w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-1280.6aef8df1d3bb.avif 1280w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-1920.28cddf3b6760.avif 1920w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-2560.65678d6ed273.avif 2560w, https://media.savingplanets.com/images/sol-cards/Ariel_key_visual_ESA-3840.846f19477e16.avif 3840w"
+ },
+ "images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532.635ddc5466c4.jpg",
+  "key": "images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532.635ddc5466c4.jpg",
+  "bytes": 1080886,
+  "sha256": "635ddc5466c4f5d6c0b3b8cc0156bdaf303a4e64b98ec666d9475e9f96ba19cc",
+  "type": "image/jpeg",
+  "width": 2325,
+  "height": 1563,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-480.b50b8b6b12f7.webp 480w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-800.2919fd6a271a.webp 800w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-1280.4a6a70961bb2.webp 1280w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-1920.65da46333a01.webp 1920w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-2325.dcbacba9c2e8.webp 2325w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-480.1305830cf0ab.avif 480w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-800.bfd3cdb2752a.avif 800w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-1280.5a68b182df45.avif 1280w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-1920.d3a00b6f69fe.avif 1920w, https://media.savingplanets.com/images/sol-cards/COSPAS-SARSAT_Personal_Locator_Beacons_NOAA_2268-532-2325.0b65cdb1667a.avif 2325w"
+ },
+ "images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991.b75dfe929f73.jpg",
+  "key": "images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991.b75dfe929f73.jpg",
+  "bytes": 6249717,
+  "sha256": "b75dfe929f735cef72cafc2799bc1e4450a170903eb21289ce943752df9c4f39",
+  "type": "image/jpeg",
+  "width": 6016,
+  "height": 4000,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-480.37c81acf9c69.webp 480w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-800.3bd6a3d4a08b.webp 800w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-1280.13aa826ebdfc.webp 1280w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-1920.2f1c4048754f.webp 1920w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-2560.c7735b441a6d.webp 2560w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-3840.2a4e2daf8623.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-480.49ec77eb2889.avif 480w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-800.6307ad60ce8f.avif 800w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-1280.2e78daf0fb22.avif 1280w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-1920.7a8d9226b47b.avif 1920w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-2560.c3a97521cbdb.avif 2560w, https://media.savingplanets.com/images/sol-cards/Dixie_NF_Wildfire_Replanting_USFS_26650024991-3840.1c0359b84342.avif 3840w"
+ },
+ "images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL.b942dedfe054.jpg",
+  "key": "images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL.b942dedfe054.jpg",
+  "bytes": 160104,
+  "sha256": "b942dedfe054d66e583d7a6cd240641e76f521e29a221d4d79bf241f73d3d53f",
+  "type": "image/jpeg",
+  "width": 1536,
+  "height": 972,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-480.cdc1bc3c18c6.webp 480w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-800.6413e27e1982.webp 800w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-1280.d60a646a1427.webp 1280w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-1536.7450eba979dd.webp 1536w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-480.ace5b332e74f.avif 480w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-800.c4f6965ee0b2.avif 800w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-1280.29c88193761b.avif 1280w, https://media.savingplanets.com/images/sol-cards/Dragonfly_Concept_Art_2024_NASA_APL-1536.a02e68454382.avif 1536w"
+ },
+ "images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC.74c1d48cbac6.jpg",
+  "key": "images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC.74c1d48cbac6.jpg",
+  "bytes": 276468,
+  "sha256": "74c1d48cbac6dcd615b8a1b5fcd403930bce811ff23c91a155fae47c53cc81c0",
+  "type": "image/jpeg",
+  "width": 792,
+  "height": 612,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC-480.a45942e26aae.webp 480w, https://media.savingplanets.com/images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC-792.4c64deadae00.webp 792w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC-480.1578c963c759.avif 480w, https://media.savingplanets.com/images/sol-cards/Earth_Magnetosphere_Illustration_NASA_CXC-792.6063c3aaef7e.avif 792w"
+ },
+ "images/sol-cards/Europe_North_Africa_Sentinel-4_ESA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA.975d82657036.jpg",
+  "key": "images/sol-cards/Europe_North_Africa_Sentinel-4_ESA.975d82657036.jpg",
+  "bytes": 1709826,
+  "sha256": "975d8265703645ed93a8aa7dc807e002666b090f88684e65e432221a2cfaa029",
+  "type": "image/jpeg",
+  "width": 1596,
+  "height": 1094,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-480.3cc004e582f0.webp 480w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-800.1ebe55f5e4f6.webp 800w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-1280.26a8ca822429.webp 1280w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-1596.79fa29ceb508.webp 1596w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-480.3386d871368f.avif 480w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-800.612fe4e984ef.avif 800w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-1280.c0c69d40741c.avif 1280w, https://media.savingplanets.com/images/sol-cards/Europe_North_Africa_Sentinel-4_ESA-1596.56f2ea45a0aa.avif 1596w"
+ },
+ "images/sol-cards/Florida_Keys_Coral_Nursery_NOAA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA.c9590679c1b8.jpg",
+  "key": "images/sol-cards/Florida_Keys_Coral_Nursery_NOAA.c9590679c1b8.jpg",
+  "bytes": 9651072,
+  "sha256": "c9590679c1b8b5c6ec32383655de42bb9e1c9a1b31c9386198d0ae4678cbe184",
+  "type": "image/jpeg",
+  "width": 12500,
+  "height": 5434,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-480.ac84e6435630.webp 480w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-800.b01ee576f36c.webp 800w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-1280.ee93efe14c58.webp 1280w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-1920.0c1276eded89.webp 1920w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-2560.96e3adb00ede.webp 2560w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-3840.7959fc31743d.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-480.1d394b4fccb6.avif 480w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-800.b475192e8a19.avif 800w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-1280.ca2bc455d430.avif 1280w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-1920.08c89793b5e4.avif 1920w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-2560.982954d3e66f.avif 2560w, https://media.savingplanets.com/images/sol-cards/Florida_Keys_Coral_Nursery_NOAA-3840.0d8d50ec7a51.avif 3840w"
+ },
+ "images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA.ff39e6c7f93c.jpg",
+  "key": "images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA.ff39e6c7f93c.jpg",
+  "bytes": 527590,
+  "sha256": "ff39e6c7f93c96179546635028b98d232963b472e1096b44c1f16bb87ffce7ff",
+  "type": "image/jpeg",
+  "width": 3845,
+  "height": 2563,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-480.a97cca42331e.webp 480w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-800.04208d24d5b9.webp 800w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-1280.6da29182f1ea.webp 1280w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-1920.8b4a84116d4f.webp 1920w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-2560.1f7b1f61ed45.webp 2560w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-3840.97ee5b6e0d41.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-480.293ba085cb17.avif 480w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-800.4eb061936e8c.avif 800w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-1280.83287515e025.avif 1280w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-1920.1da0d270b6c2.avif 1920w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-2560.7174d266e60b.avif 2560w, https://media.savingplanets.com/images/sol-cards/Galileo_satellite_LEAF_acoustic_test_ESA-3840.7831413927e0.avif 3840w"
+ },
+ "images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401.cd044f91ad15.jpg",
+  "key": "images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401.cd044f91ad15.jpg",
+  "bytes": 11078910,
+  "sha256": "cd044f91ad15d04c477ea6658336d5207367d516a688cc61f6407d47110354a0",
+  "type": "image/jpeg",
+  "width": 9441,
+  "height": 6294,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-480.654c05d0657c.webp 480w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-800.878ee79544b4.webp 800w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-1280.928fe85d8f69.webp 1280w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-1920.384fc9c70523.webp 1920w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-2560.87a6929389d4.webp 2560w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-3840.85c2753c54ab.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-480.9c28a18d1e1b.avif 480w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-800.22fbf061dab9.avif 800w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-1280.b2c94cb2c2ae.avif 1280w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-1920.b27c51c074b8.avif 1920w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-2560.e84050d862fa.avif 2560w, https://media.savingplanets.com/images/sol-cards/Golden_Triangle_Farmland_Landsat_NASA_154401-3840.9bd6a9ae5710.avif 3840w"
+ },
+ "images/sol-cards/Greenland_swirls_Sentinel-3B_ESA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA.463c7758fa7f.jpg",
+  "key": "images/sol-cards/Greenland_swirls_Sentinel-3B_ESA.463c7758fa7f.jpg",
+  "bytes": 1473464,
+  "sha256": "463c7758fa7fa8d4df5a52a3bacbdd4121167f2a7dae6a4c730e4158afc4de4b",
+  "type": "image/jpeg",
+  "width": 2000,
+  "height": 1876,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-480.86b507773177.webp 480w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-800.1f4e27753f48.webp 800w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-1280.bdeaeae08b8f.webp 1280w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-1920.e674088ec9bb.webp 1920w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-2000.ad77aea66ad7.webp 2000w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-480.ebcc3f848d41.avif 480w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-800.263c05daa376.avif 800w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-1280.98f4ec84d2e1.avif 1280w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-1920.317c30860a89.avif 1920w, https://media.savingplanets.com/images/sol-cards/Greenland_swirls_Sentinel-3B_ESA-2000.14327fece3d8.avif 2000w"
+ },
+ "images/sol-cards/Kissimmee_River_Restoration_USACE.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE.1cbe3c75ad6d.jpg",
+  "key": "images/sol-cards/Kissimmee_River_Restoration_USACE.1cbe3c75ad6d.jpg",
+  "bytes": 2854600,
+  "sha256": "1cbe3c75ad6dc320b9498db0393d6ad1f9bc2d0b6f2f6968eff469283be18f51",
+  "type": "image/jpeg",
+  "width": 5616,
+  "height": 3744,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-480.d7be9ae375b5.webp 480w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-800.f0b83bcb2cf5.webp 800w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-1280.8e7cd7592019.webp 1280w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-1920.4637acf15e4d.webp 1920w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-2560.d37f0ecff6ea.webp 2560w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-3840.c07d007df6f4.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-480.ce27eb3edef9.avif 480w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-800.5e2bb4c84635.avif 800w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-1280.f1e5cc70a824.avif 1280w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-1920.028cdde25ba7.avif 1920w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-2560.d8b42eba6d94.avif 2560w, https://media.savingplanets.com/images/sol-cards/Kissimmee_River_Restoration_USACE-3840.cbe82c523c30.avif 3840w"
+ },
+ "images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL.712ba9fd7a94.jpg",
+  "key": "images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL.712ba9fd7a94.jpg",
+  "bytes": 540662,
+  "sha256": "712ba9fd7a947106b51d639605bd0b92f2cb3717d054b3c610f83e6b1f2edd99",
+  "type": "image/jpeg",
+  "width": 1605,
+  "height": 1217,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-480.dde63b470098.webp 480w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-800.23753855f842.webp 800w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-1280.baf37a350f5e.webp 1280w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-1605.0e096f862f76.webp 1605w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-480.f768e284f898.avif 480w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-800.65639c495383.avif 800w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-1280.643a8da9b8df.avif 1280w, https://media.savingplanets.com/images/sol-cards/Lake_Erie_Algal_Bloom_2017-09-20_NOAA_GLERL-1605.64c3544e934d.avif 1605w"
+ },
+ "images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017.e69a3ca9314b.jpg",
+  "key": "images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017.e69a3ca9314b.jpg",
+  "bytes": 1002273,
+  "sha256": "e69a3ca9314b1542a9373284f649dbf4562b23cb073c0e4ef48bcf6e6f648d94",
+  "type": "image/jpeg",
+  "width": 4096,
+  "height": 2048,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-480.583a71d2be59.webp 480w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-800.e60bf9a3b83d.webp 800w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-1280.3f0236d081d6.webp 1280w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-1920.3bcf8ecff4ab.webp 1920w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-2560.ea798d40b510.webp 2560w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-3840.a7a8b7009442.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-480.46b53fe6d4b9.avif 480w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-800.93db96deec25.avif 800w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-1280.751856157a11.avif 1280w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-1920.ecde84efb757.avif 1920w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-2560.35e0c2fcd6cb.avif 2560w, https://media.savingplanets.com/images/sol-cards/Outgoing_Longwave_Energy_NOAA_NESDIS_2017-3840.6ee206b1a60a.avif 3840w"
+ },
+ "images/sol-cards/SDO_M7.9_Solar_Flare_NASA.jpg": {
+  "url": "https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA.b306002fb3a5.jpg",
+  "key": "images/sol-cards/SDO_M7.9_Solar_Flare_NASA.b306002fb3a5.jpg",
+  "bytes": 3419962,
+  "sha256": "b306002fb3a54f962d4421a0605c5b80d676efae3892bddfb9995b51c150f582",
+  "type": "image/jpeg",
+  "width": 4096,
+  "height": 3840,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-480.eeca5501e6f4.webp 480w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-800.c14a86420c06.webp 800w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-1280.812649903a2a.webp 1280w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-1920.368a0c795366.webp 1920w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-2560.026bb91849dc.webp 2560w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-3840.be986aac42c6.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-480.315ea43bedbb.avif 480w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-800.f7447e6bfac7.avif 800w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-1280.9454cb1871d5.avif 1280w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-1920.401689ad6c54.avif 1920w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-2560.ea8580457baf.avif 2560w, https://media.savingplanets.com/images/sol-cards/SDO_M7.9_Solar_Flare_NASA-3840.9a0a0c4dff7e.avif 3840w"
+ },
+ "images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877.png": {
+  "url": "https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877.f47a9c5f8ba7.png",
+  "key": "images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877.f47a9c5f8ba7.png",
+  "bytes": 1987300,
+  "sha256": "f47a9c5f8ba7ee17f2eb5d07c988153502bb9ebe6a6ffa6fe0c70027049329be",
+  "type": "image/png",
+  "width": 7592,
+  "height": 3775,
+  "srcset": "https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-480.8f9daa404069.webp 480w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-800.9b5498ada80d.webp 800w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1280.d04ccb556fac.webp 1280w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1920.3de8cd0f5332.webp 1920w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-2560.9c0be66d33ec.webp 2560w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-3840.100ac07cf782.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-480.4a8d0fd44e95.avif 480w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-800.806dc5b44e78.avif 800w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1280.c6314f026e60.avif 1280w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1920.330b02b43c64.avif 1920w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-2560.a9eef7b3bda8.avif 2560w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-3840.f4924113a853.avif 3840w"
  }
 }
