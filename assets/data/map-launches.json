@@ -1,11 +1,10 @@
 {
-"generated": "2026-10-24T05:23:33Z",
+"generated": "2026-10-24T17:00:17Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
 "Haiyang Oriental Spaceport",
 "Jiuquan Satellite Launch Center, People's Republic of China",
-"Taiyuan Satellite Launch Center, People's Republic of China",
 "Wenchang Space Launch Site, People's Republic of China"
 ],
 "sites": [
@@ -58,15 +57,6 @@
 "lng": -80.578,
 "launches": [
 {
-"net": "2026-10-29T00:00:00Z",
-"exact": true,
-"prec": "DAY",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan VC6L",
-"mission": "Amazon Leo (LV-01)",
-"pad": "Space Launch Complex 41"
-},
-{
 "net": "2026-11-30T00:00:00Z",
 "exact": false,
 "prec": "M",
@@ -74,6 +64,15 @@
 "rocket": "Falcon 9 Block 5",
 "mission": "Cygnus CRS-2 NG-25",
 "pad": "Space Launch Complex 40"
+},
+{
+"net": "2026-11-30T00:00:00Z",
+"exact": false,
+"prec": "M",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan VC6L",
+"mission": "Amazon Leo (LV-01)",
+"pad": "Space Launch Complex 41"
 },
 {
 "net": "2026-12-31T00:00:00Z",
@@ -263,6 +262,24 @@
 "rocket": "Vulcan",
 "mission": "NROL-64",
 "pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SILENTBARKER 2/NROL-118",
+"pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "USSF-112",
+"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -367,15 +384,6 @@
 "lat": -39.261,
 "lng": 177.865,
 "launches": [
-{
-"net": "2026-10-23T07:11:00Z",
-"exact": true,
-"prec": "MIN",
-"provider": "Rocket Lab",
-"rocket": "Electron",
-"mission": "We're Not Hawking Around (3x HawkEye 360)",
-"pad": "Rocket Lab Launch Complex 1A"
-},
 {
 "net": "2026-11-03T00:00:00Z",
 "exact": true,
