@@ -29,5 +29,7 @@ for lang, (alt, cap, cred) in T.items():
                     f'<figure><img src="{URL}" width="{W}" height="{H}" alt="{html.escape(alt)}" loading="lazy" decoding="async">'
                     f'<figcaption>{html.escape(cap, quote=False)} <span class="photo-credit">{html.escape(cred, quote=False)}</span></figcaption></figure></section>')
         s2 = LD.sub('', SEC.sub(rep, s))
+        if 'savingplanets-promo' not in s2 and '<video' not in s2.split('<!-- VIDEO:START -->')[-1].split('<!-- VIDEO:END -->')[0]:
+            s2 = re.sub(r'<!-- VIDEO:(?:START|END) -->\n?', '', s2)  # Oct 23: the still is not a video; orphan markers made seo-lint expect a VideoObject
         if s2 != s: open(f, 'w', encoding='utf-8').write(s2); n += 1
 print(f'build-promo-en-only: {n} translated pages now use the still image (English keeps the video)')

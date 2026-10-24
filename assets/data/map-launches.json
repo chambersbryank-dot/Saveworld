@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-23T17:55:22Z",
+"generated": "2026-10-24T05:02:36Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -597,7 +597,7 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-23T22:28:53Z",
+"net": "2026-10-23T22:48:44Z",
 "exact": true,
 "prec": "SEC",
 "provider": "SpaceX",
