@@ -42,7 +42,9 @@ def t(lang, s): return TM.get(lang, {}).get(s) or s
 
 def strip(s):
     s = re.sub(r'<!-- ANIMBAN:START -->[\s\S]*?<!-- ANIMBAN:END -->', '', s)
-    return re.sub(r'(<section class=")([^"]*)"', lambda m: m.group(1) + ' '.join(c for c in m.group(2).split() if c not in STRIPC) + '"', s, count=0) if 'pg-anim' in s else s
+    # Oct 24 fix: only sections this pass styled (class pg-anim) lose its classes; before, every <section> on a page that merely
+    # mentioned 'pg-anim' lost 'sp-anim-banner' too, which un-centred the Solutions / Top Ten banners (their sp_banner layout).
+    return re.sub(r'(<section class=")([^"]*\bpg-anim\b[^"]*)"', lambda m: m.group(1) + ' '.join(c for c in m.group(2).split() if c not in STRIPC) + '"', s, count=0) if 'pg-anim' in s else s
 
 def apply(s, lang, img):
     m = re.search(r'<section class="(page-hero(?: [\w-]+)*)"([^>]*)>', s)
