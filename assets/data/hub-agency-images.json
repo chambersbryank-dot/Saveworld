@@ -404,19 +404,19 @@
    "Deforestation.html"
   ],
   "card": "Rainforest_Connection.html",
-  "stem": "ESA_Pesquet_Amazon_Rainforest",
-  "title": "The Amazon rainforest",
-  "agency": "ESA",
-  "source": "https://www.esa.int/ESA_Multimedia/Images/2021/11/The_Amazon_rainforest",
-  "credit": "ESA/NASA – T. Pesquet",
-  "license": "ESA Standard Licence",
+  "stem": "NASA_SVS_Rondonia_Deforestation_1975_2012",
+  "title": "Fishbone Forest: Rondônia, Brazil, 1975 and 2012 (Landsat)",
+  "agency": "NASA",
+  "source": "https://svs.gsfc.nasa.gov/11061/",
+  "credit": "NASA's Goddard Space Flight Center/Landsat",
+  "license": "Public domain (US Government, NASA/USGS Landsat)",
   "alt": {
-   "en": "Fishbone-shaped clearings cut into the Amazon rainforest along roads and rivers, photographed from the International Space Station",
-   "fr": "Des coupes en arête de poisson dans la forêt amazonienne le long des routes et des rivières, photographiées depuis la Station spatiale internationale",
-   "es": "Claros en forma de espina de pescado abiertos en la selva amazónica a lo largo de caminos y ríos, fotografiados desde la Estación Espacial Internacional",
-   "ar": "مساحات مقطوعة على شكل عظم السمكة في غابات الأمازون المطيرة على امتداد الطرق والأنهار، مصوّرة من محطة الفضاء الدولية",
-   "it": "Disboscamenti a lisca di pesce nella foresta amazzonica lungo strade e fiumi, fotografati dalla Stazione Spaziale Internazionale",
-   "he": "כריתות בצורת עצם דג ביער הגשם של האמזונס לאורך דרכים ונהרות, בצילום מתחנת החלל הבינלאומית"
+   "en": "Landsat views of the same patch of Amazon rainforest in Rondônia, Brazil: unbroken forest in 1975 (left) and the fishbone pattern of clearings along roads in 2012 (right)",
+   "fr": "Vues Landsat d'une même zone de forêt amazonienne au Rondônia, au Brésil : forêt intacte en 1975 (à gauche) et motif en arêtes de poisson des défrichements le long des routes en 2012 (à droite)",
+   "es": "Vistas Landsat de la misma zona de selva amazónica en Rondônia, Brasil: bosque intacto en 1975 (izquierda) y el patrón en espina de pescado de los desmontes a lo largo de las carreteras en 2012 (derecha)",
+   "ar": "صورتان من Landsat للبقعة نفسها من غابات الأمازون المطيرة في روندونيا بالبرازيل: غابة متصلة عام 1975 (يسارًا) ونمط عظم السمكة للمساحات المقطوعة على امتداد الطرق عام 2012 (يمينًا)",
+   "it": "Viste Landsat della stessa area di foresta amazzonica in Rondônia, Brasile: foresta intatta nel 1975 (a sinistra) e il disegno a lisca di pesce dei disboscamenti lungo le strade nel 2012 (a destra)",
+   "he": "תצלומי Landsat של אותו אזור ביער הגשם של האמזונס ברונדוניה, ברזיל: יער רציף ב-1975 (משמאל) ודפוס \"עצם הדג\" של כריתות לאורך כבישים ב-2012 (מימין)"
   }
  },
  {
@@ -506,19 +506,19 @@
    "Polar.html"
   ],
   "card": "CRISTAL.html",
-  "stem": "ESA_The_CRISTAL_Mission",
-  "title": "The CRISTAL mission",
-  "agency": "ESA",
-  "source": "https://www.esa.int/ESA_Multimedia/Images/2024/02/The_CRISTAL_mission",
-  "credit": "ESA",
-  "license": "ESA Standard Licence",
+  "stem": "NASA_IceBridge_Refrozen_Sea_Ice_Lead",
+  "title": "Refrozen lead in sea ice, Bellingshausen Sea (Operation IceBridge)",
+  "agency": "NASA",
+  "source": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001613",
+  "credit": "NASA/George Hale",
+  "license": "Public domain (US Government, NASA)",
   "alt": {
-   "en": "ESA graphic of the Copernicus CRISTAL satellite, which will measure sea-ice thickness, snow depth and ice-sheet height in the polar regions",
-   "fr": "Visuel de l'ESA sur le satellite Copernicus CRISTAL, qui mesurera l'épaisseur de la banquise, la neige et l'altitude des calottes polaires",
-   "es": "Gráfico de la ESA sobre el satélite Copernicus CRISTAL, que medirá el grosor del hielo marino, la nieve y la altura de los casquetes polares",
-   "ar": "رسم من وكالة الفضاء الأوروبية لقمر كوبرنيكوس كريستال الذي سيقيس سماكة الجليد البحري وعمق الثلوج وارتفاع الصفائح الجليدية في المناطق القطبية",
-   "it": "Grafica dell'ESA sul satellite Copernicus CRISTAL, che misurerà lo spessore del ghiaccio marino, la neve e l'altezza delle calotte polari",
-   "he": "גרפיקה של סוכנות החלל האירופית על הלוויין קופרניקוס CRISTAL, שימדוד את עובי קרח הים, עומק השלג וגובה כיפות הקרח באזורי הקוטב"
+   "en": "Thick white sea ice next to a crack of thinner, newly refrozen grey ice in Antarctica's Bellingshausen Sea, seen from a NASA Operation IceBridge plane measuring ice thickness",
+   "fr": "Banquise épaisse et blanche à côté d'une fissure de glace grise plus fine, nouvellement regelée, dans la mer de Bellingshausen en Antarctique, vue depuis un avion de l'opération IceBridge de la NASA qui mesure l'épaisseur de la glace",
+   "es": "Hielo marino grueso y blanco junto a una grieta de hielo gris más delgado y recién congelado en el mar de Bellingshausen, en la Antártida, visto desde un avión de la Operación IceBridge de la NASA que mide el grosor del hielo",
+   "ar": "جليد بحري أبيض سميك بجوار شق من جليد رمادي أرق تجمّد حديثًا في بحر بيلينغسهاوزن بالقارة القطبية الجنوبية، كما يبدو من طائرة لعملية IceBridge التابعة لناسا تقيس سماكة الجليد",
+   "it": "Spesso ghiaccio marino bianco accanto a una frattura di ghiaccio grigio più sottile, appena ricongelato, nel mare di Bellingshausen in Antartide, visto da un aereo dell'operazione IceBridge della NASA che misura lo spessore del ghiaccio",
+   "he": "קרח ים לבן ועבה לצד סדק של קרח אפור דק יותר שקפא מחדש בים בלינגסהאוזן שבאנטארקטיקה, כפי שנראה ממטוס של מבצע IceBridge של נאס\"א המודד את עובי הקרח"
   }
  },
  {
@@ -526,19 +526,19 @@
    "Earth_Observation.html"
   ],
   "card": "Sentinel-5P.html",
-  "stem": "ESA_S5P_NO2_2024",
-  "title": "Atmospheric nitrogen dioxide concentrations in 2024",
-  "agency": "ESA",
-  "source": "https://www.esa.int/ESA_Multimedia/Images/2026/06/Atmospheric_nitrogen_dioxide_concentrations_in_2024",
-  "credit": "contains modified Copernicus Sentinel data (2024), processed by ESA",
-  "license": "ESA Standard Licence",
+  "stem": "NASA_SVS_OMI_NO2_Global_2014",
+  "title": "Global nitrogen dioxide, 2014 average (Aura OMI)",
+  "agency": "NASA",
+  "source": "https://svs.gsfc.nasa.gov/4412/",
+  "credit": "NASA's Goddard Space Flight Center",
+  "license": "Public domain (US Government, NASA)",
   "alt": {
-   "en": "World map of average nitrogen dioxide pollution in 2024 measured by Sentinel-5P, brightest over big cities and industrial areas",
-   "fr": "Carte mondiale de la pollution moyenne au dioxyde d'azote en 2024 mesurée par Sentinel-5P, plus forte au-dessus des grandes villes et des zones industrielles",
-   "es": "Mapa mundial de la contaminación media por dióxido de nitrógeno en 2024 medida por Sentinel-5P, más intensa sobre grandes ciudades y zonas industriales",
-   "ar": "خريطة عالمية لمتوسط تلوث ثاني أكسيد النيتروجين في 2024 كما قاسه القمر سنتينل-5P، وهو الأشد فوق المدن الكبرى والمناطق الصناعية",
-   "it": "Mappa mondiale dell'inquinamento medio da biossido di azoto nel 2024 misurato da Sentinel-5P, più intenso sopra grandi città e aree industriali",
-   "he": "מפת עולם של זיהום ממוצע בחנקן דו-חמצני ב-2024 כפי שנמדד בסנטינל-5P, החזק ביותר מעל ערים גדולות ואזורי תעשייה"
+   "en": "World map of average nitrogen dioxide pollution in 2014 measured from space by the Ozone Monitoring Instrument on NASA's Aura satellite, brightest over big cities and industrial areas",
+   "fr": "Carte mondiale de la pollution moyenne au dioxyde d'azote en 2014, mesurée depuis l'espace par l'instrument OMI du satellite Aura de la NASA, plus forte au-dessus des grandes villes et des zones industrielles",
+   "es": "Mapa mundial de la contaminación media por dióxido de nitrógeno en 2014, medida desde el espacio por el instrumento OMI del satélite Aura de la NASA, más intensa sobre grandes ciudades y zonas industriales",
+   "ar": "خريطة عالمية لمتوسط تلوث ثاني أكسيد النيتروجين عام 2014 كما قاسه من الفضاء جهاز OMI على متن القمر الصناعي Aura التابع لناسا، ويبلغ أشده فوق المدن الكبرى والمناطق الصناعية",
+   "it": "Mappa mondiale dell'inquinamento medio da biossido di azoto nel 2014, misurato dallo spazio dallo strumento OMI del satellite Aura della NASA, più intenso sopra le grandi città e le aree industriali",
+   "he": "מפת עולם של זיהום ממוצע בחנקן דו-חמצני ב-2014, כפי שנמדד מהחלל במכשיר OMI על הלוויין Aura של נאס\"א, החזק ביותר מעל ערים גדולות ואזורי תעשייה"
   }
  },
  {
@@ -606,19 +606,19 @@
    "Earth_Observation.html"
   ],
   "card": "FLEX.html",
-  "stem": "ESA_FLEX_Plant_Stress",
-  "title": "FLEX detects plant stress from space",
-  "agency": "ESA",
-  "source": "https://www.esa.int/ESA_Multimedia/Images/2026/09/FLEX_detects_plant_stress_from_space",
-  "credit": "ESA",
-  "license": "ESA Standard Licence",
+  "stem": "NASA_JPL_OCO3_First_SIF",
+  "title": "OCO-3's first solar-induced fluorescence measurements",
+  "agency": "NASA",
+  "source": "https://images.nasa.gov/details/PIA23353",
+  "credit": "NASA/JPL-Caltech",
+  "license": "Public domain (US Government, NASA)",
   "alt": {
-   "en": "ESA graphic showing how the FLEX satellite measures the faint fluorescence glow of plants to check their health from orbit",
-   "fr": "Visuel de l'ESA montrant comment le satellite FLEX mesure la faible fluorescence des plantes pour vérifier leur santé depuis l'orbite",
-   "es": "Gráfico de la ESA que muestra cómo el satélite FLEX mide la débil fluorescencia de las plantas para comprobar su salud desde la órbita",
-   "ar": "رسم من وكالة الفضاء الأوروبية يوضح كيف يقيس القمر FLEX الوهج الخافت لتفلور النباتات للتحقق من صحتها من المدار",
-   "it": "Grafica dell'ESA che mostra come il satellite FLEX misura la debole fluorescenza delle piante per verificarne la salute dall'orbita",
-   "he": "גרפיקה של סוכנות החלל האירופית המראה כיצד הלוויין FLEX מודד את זוהר הפלואורסצנציה החלש של צמחים כדי לבדוק את בריאותם מהמסלול"
+   "en": "A strip of OCO-3 satellite measurements showing the faint fluorescence glow plants give off during photosynthesis, darker green where plants are more active, across the Caucasus region",
+   "fr": "Bande de mesures du satellite OCO-3 montrant la faible lueur de fluorescence émise par les plantes pendant la photosynthèse, d'un vert plus foncé là où elles sont plus actives, au-dessus de la région du Caucase",
+   "es": "Franja de mediciones del satélite OCO-3 que muestra el tenue brillo de fluorescencia que emiten las plantas durante la fotosíntesis, de un verde más oscuro donde son más activas, sobre la región del Cáucaso",
+   "ar": "شريط من قياسات القمر الصناعي OCO-3 يُظهر وهج التألق الخافت الذي تطلقه النباتات أثناء التمثيل الضوئي، بلون أخضر أغمق حيث يكون نشاطها أكبر، فوق منطقة القوقاز",
+   "it": "Una striscia di misure del satellite OCO-3 che mostra il debole bagliore di fluorescenza emesso dalle piante durante la fotosintesi, di un verde più scuro dove sono più attive, sopra la regione del Caucaso",
+   "he": "רצועת מדידות של הלוויין OCO-3 המציגה את זוהר הפלואורסצנציה החלש שצמחים פולטים בזמן פוטוסינתזה, בירוק כהה יותר היכן שהצמחים פעילים יותר, מעל אזור הקווקז"
   }
  },
  {
