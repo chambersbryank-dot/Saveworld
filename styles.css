@@ -1711,6 +1711,10 @@ body:not(.pr-page):not(.artemis-page) :is(.card,.sol-card,.w-card,.rel-card,.tt-
 .home-find .dom-chip{min-height:44px;display:inline-flex;align-items:center}
 .ns-more{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
 .home-join .newsletter-band{margin-top:1.5rem}
+.solution-list li.sol-more-li{margin-top:.6rem}
+.solution-list a.sol-more{display:inline-flex;align-items:center;gap:.35rem;min-height:44px;padding:.35rem .9rem;border-radius:999px;border:1px dashed currentColor;font-size:.95rem}
+.solution-list a.sol-more:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+.solution-list a.sol-more .sm-dots{font-weight:800}
 /* HOME-TRIM:END */
 /* LOGO:START */
 /* Oct 20 logo v2 (scripts/build-logo.py): icon left of 'Home' (right in RTL), bleeds a little above/below the bar; negative margins keep the row height */
