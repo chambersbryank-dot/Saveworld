@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Oct 14 2026: error/bug reports go to errors@savingplanets.com (subject "Found an error or bug, please fix").
 Post-process (all langs, after i18n-build): repoint old correction mailtos and linkify plain errors@ mentions. Idempotent.
-media@ stays for press, partners@ for partnerships, ideas@ for new solutions."""
+media@ stays for press, partner-relations@ for partnerships (partners@ bounces; replaced Oct 24), ideas@ for new solutions."""
 import re, glob, os
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 ERR = 'mailto:errors@savingplanets.com?subject=Found%20an%20error%20or%20bug%2C%20please%20fix'

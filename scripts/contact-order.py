@@ -6,7 +6,7 @@ dept-contacts.py refills <!-- DEPT:contact --> in place each sync, so the marker
 duplicate cards are dropped here. Idempotent; run after the last dept-contacts.py."""
 import os, re
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
-ORDER = ['teachers@', 'ideas@', 'translate@', 'partners@', 'hello@']
+ORDER = ['teachers@', 'ideas@', 'translate@', 'partner-relations@', 'hello@']
 LAST = 'errors@'
 SEC = re.compile(r'(<h2>[^<]*</h2><div class="ws-grid">)(.*?)(</div></section>)', re.S)
 CARD = re.compile(r'<div class="w-card"[^>]*>(?:(?!<div).)*?</div>', re.S)
