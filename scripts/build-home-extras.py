@@ -124,10 +124,11 @@ PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledb
   f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Created by SI and Biological SI Partner</span> '
   f'<span class="photo-credit">{html.escape(PROMO_SRC, quote=False)}</span></figcaption></figure>{PX}</section>')
 # Oct 20: the HOMEPAGE promo stays v4 (founder approved v6 for About only; homepage layout is under review in PR #16)
-W4, H4 = MEDIA.dims('savingplanets-promo-v4-final-1080x1920.mp4'); U4 = MEDIA.vurl('savingplanets-promo-v4-final-1080x1920.mp4')
-PROMO_HOME = (PROMO.replace('class="promo-v4 promo-v6"', 'class="promo-v4"').replace('savingplanets-promo-v6-tall.jpg', 'savingplanets-promo-v4-tall.jpg')
+# Oct 24 (founder approved): homepage promo is now v4.1 (148 s, six languages named, no counts spoken; on-screen numbers 246 / 21 / 26 / 6 / 1,000+). v4 file stays on R2, unused.
+W4, H4 = MEDIA.dims('savingplanets-promo-v4-1-1080x1920.mp4'); U4 = MEDIA.vurl('savingplanets-promo-v4-1-1080x1920.mp4')
+PROMO_HOME = (PROMO.replace('class="promo-v4 promo-v6"', 'class="promo-v4"').replace('savingplanets-promo-v6-tall.jpg', 'savingplanets-promo-v4-1-tall.jpg')
   .replace(f'<source src="{VU7}" type="video/mp4">', '').replace(VU, U4).replace(f'width="{VW}" height="{VH}"', f'width="{W4}" height="{H4}"')
-  .replace(html.escape(PROMO_CAP, quote=False), html.escape("A 2½-minute tour of Saving Planets today: 246 real solutions in 11 hubs, the new homepage, the interactive World Map and Myth vs Fact.", quote=False)))
+  .replace(html.escape(PROMO_CAP, quote=False), html.escape("A 2½-minute tour of Saving Planets today: 246 real solutions in 11 hubs, the new homepage, six languages, the interactive World Map and Myth vs Fact.", quote=False)))
 # Oct 21 (founder): nothing under the homepage promo video: no caption/credits figcaption, no visible Transcript toggle (screen-reader only), no X link
 PROMO_HOME = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S).replace(PX, '') if PX else re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S)
 PROMO_HOME = PROMO_HOME.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
