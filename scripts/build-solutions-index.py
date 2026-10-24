@@ -206,15 +206,13 @@ BANNER_VID = [(w, f'videos/solutions-banner-earth-wide-{w}x{h}.mp4') for w, h in
 BANNER_POSTER = 'images/solutions-banner-earth-wide-poster-3840x900.png'
 import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import sp_banner as SPB  # shared animated banner (same component as Top Ten)
 
+import sol_flow as SF  # Oct 24 (owner-approved): flowing code-drawn banner + back-to-top links (scripts/sol_flow.py)
+
 def banner(total):
-    """Animated title banner (owner, Oct 18): SPB.banner with the 4K Earth loop. Poster = frame 0 of the loop (seamless hand-off)."""
-    po = MAN.get(BANNER_POSTER)
-    vids = [[w, MAN[k]['url']] for w, k in BANNER_VID if k in MAN]
-    if not po: return '<section class="sol-banner" id="top"><h1 id="sol-h">' + f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span></h1></section>'
-    return SPB.banner(po, '', None, "Proof it's not too late", None, h1_id='sol-h', extra_class='sol-banner', sec_id='top',
-                      h1_html=f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span>',
-                      credit_html='<span>Created by SI and Biological SI Partner</span> · <span>Earth: NASA Blue Marble</span>',
-                      video=vids or None, video_ar=4.27)
+    """Title banner. Oct 24 (owner): the Earth video loop is replaced by the SF flowing animation (space -> ocean -> land -> forest),
+    title centred like the hub pages. (Oct 18 video/poster constants above are kept for build-top-ten.py history only.)"""
+    return SF.banner(f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span>',
+                     "Proof it's not too late", 'Created by SI and Biological SI Partner')
 
 def build():
     tpl = rd('Contact.html')
@@ -242,8 +240,8 @@ def build():
         sid = 'hub-' + re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
         jump.append(f'<li><a href="#{sid}">{esc(name)} <span class="sol-c">{len(items)}</span></a></li>')
         cards = ''.join(card(h, n, INFO[h], missing, also.get(h, []), OWN) for h, n in items); total += len(items)
-        # Oct 19 (owner): the '(Top)' link after each hub title is gone (the banner and hub chips are one swipe away; the browser keeps its own back-to-top).
-        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a></h2><div class="grid">{cards}</div></section>')  # Oct 18 (owner cleanup): the long Hub Summary box after every hub is gone (the hub title links to the hub's 5 W's)
+        # Oct 24 (owner): a small 'Back to top' link closes each hub section (smooth scroll; instant under reduced motion).
+        secs.append(f'<section class="card-band sol-hub" id="{sid}" data-hub="{f}"><h2><a href="{f}">{esc(name)}</a></h2><div class="grid">{cards}</div>{SF.toplink()}</section>')  # Oct 18 (owner cleanup): the long Hub Summary box after every hub is gone (the hub title links to the hub's 5 W's)
     desc = f'Proof it\'s not too late: {total} real, sourced solutions across {len(hl)} hubs, from ocean cleanups to Earth-observation satellites, making a difference daily.'
     title = f'{total} Real Solutions Making a Difference Daily'
     # head: retarget Contact -> Solutions
@@ -254,13 +252,13 @@ def build():
     h = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', h, flags=re.S)
     ld = ('<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savingplanets.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.savingplanets.com/Solutions.html"}]}</script>\n'
           '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "' + title + '", "description": ' + '"' + desc.replace('"', '\\"') + '", "url": "https://www.savingplanets.com/Solutions.html", "inLanguage": "en", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "isPartOf": {"@type": "WebSite", "name": "Saving Planets", "url": "https://www.savingplanets.com/"}}</script>\n')
-    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261019a">\n' + ld + '</head>')
+    h = h.replace('</head>', '<link rel="stylesheet" href="solutions.css?v=20261024c">\n' + ld + '</head>')
     nav = NAV_RE2.sub(NAV_LINK, NAV_RE.sub(NAV_LINK, nav)).replace(NAV_LINK, '<li class="nav-solutions"><a href="Solutions.html" aria-current="page">Solutions</a></li>')
     body_html = (f'<body class="toc-sub sol-page"><a class="skip-link" href="#directory">Skip to content</a>{nav}\n'
         + banner(total) + '\n'
         f'<main id="directory"><section class="sol-intro"><p class="sol-bluf">Every card is a real team doing hands-on work you can check: cleanups, restoration, satellites and missions, each with sources. Pick a hub below to start.</p><div class="sol-jump" role="navigation" aria-label="Hubs"><ul>{"".join(jump)}</ul></div></section>\n'
         + '\n'.join(secs) + '\n</main>\n'
-        f'{footer}<script src="site.js?v={js_v}"></script></body></html>\n')
+        f'{footer}<script src="site.js?v={js_v}"></script>{SF.JS}</body></html>\n')
     page = h + body_html
     # Write only when the generated content changed, so later post-processing (seo-fix.py, add-gtag.py) is not undone
     # each run (which would leave the fr/es/ar copies permanently stale).
@@ -282,7 +280,7 @@ def write_tm():
     return ch
 
 if __name__ == '__main__':
-    write_tm()
+    write_tm(); SF.write_tm(); SF.write_css()
     hl, total, missing = build()
     n = fix_nav()
     print(f'Solutions.html: {total} cards in {len(hl)} hubs ({", ".join(f"{x[1]} {len(x[2])}" for x in hl)}); nav updated on {n} pages')
