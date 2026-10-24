@@ -34,6 +34,10 @@ CSS = """/* HOME-TRIM:START (Oct 20 clutter fix #1) */
 .home-find .dom-chip{min-height:44px;display:inline-flex;align-items:center}
 .ns-more{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
 .home-join .newsletter-band{margin-top:1.5rem}
+.solution-list li.sol-more-li{margin-top:.6rem}
+.solution-list a.sol-more{display:inline-flex;align-items:center;gap:.35rem;min-height:44px;padding:.35rem .9rem;border-radius:999px;border:1px dashed currentColor;font-size:.95rem}
+.solution-list a.sol-more:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+.solution-list a.sol-more .sm-dots{font-weight:800}
 /* HOME-TRIM:END */"""
 rd = lambda f: open(f, encoding='utf-8').read()
 def wr(f, s): open(f, 'w', encoding='utf-8').write(s)
@@ -196,9 +200,56 @@ def trim_space_card(L):
     for h in SPACE_DROP: c = re.sub(r'<li><a href="(?:\.\./)?' + re.escape(h) + r'">[^<]*</a></li>', '', c)
     if c != o: wr(f, s[:i] + c + s[j:]); print(f'{f}: Space card trimmed')
 
+# Oct 24 (founder-approved): after the last solution in each homepage hub card (Ocean, Lakes, Rivers, Forests, Space) a
+# '... Click here to view the additional N' link to that hub's page. N = solutions in that hub on <lang>/Solutions.html
+# (#hub-<id> sol-card data-url) minus the ones already listed in the card, so it stays right as solutions are added.
+# Inside the <ul>, so it follows the last item in reading order in RTL too (ar/he). Idempotent (SOLMORE markers).
+HUB_MORE = {'ocean-card': 'ocean', 'lakes-card': 'lakes', 'rivers-card': 'rivers', 'forests-card': 'forests', 'space-card': 'space'}
+MORE_T = {  # (visible label, aria-label); SI-translated, flagged for native review under the corrections policy
+ '':    ('Click here to view the additional {n}', 'View the additional {n} {hub} solutions'),
+ 'fr/': ('Cliquez ici pour voir les {n} supplémentaires', 'Voir les {n} solutions supplémentaires : {hub}'),
+ 'es/': ('Haz clic aquí para ver las {n} adicionales', 'Ver las {n} soluciones adicionales: {hub}'),
+ 'ar/': ('انقر هنا لعرض الـ{n} الإضافية', 'عرض الحلول الإضافية وعددها {n}: {hub}'),
+ 'it/': ('Clicca qui per vedere le altre {n}', 'Vedi le altre {n} soluzioni: {hub}'),
+ 'he/': ('לחצו כאן לצפייה ב-{n} הנוספים', 'צפייה ב-{n} הפתרונות הנוספים: {hub}'),
+}
+def hub_urls(L, hub):
+    s = rd(L + 'Solutions.html'); i = s.find(f'id="hub-{hub}"')
+    if i < 0: return set()
+    j = s.find('id="hub-', i + 5); seg = s[i:j if j > 0 else len(s)]
+    return set(re.findall(r'<article class="card sol-card[^"]*" data-url="([^"]+)"', seg))
+HUB_MORE_COUNTS = {}
+def hub_more(L):
+    f = L + 'index.html'; s = rd(f); o = s
+    s = re.sub(r'<!-- SOLMORE:START -->.*?<!-- SOLMORE:END -->', '', s, flags=re.S)
+    for cid, hub in HUB_MORE.items():
+        m = re.search(r'<article[^>]*id="' + cid + r'"[^>]*>.*?</article>', s, flags=re.S)
+        if not m: continue
+        c = m.group(0)
+        h = re.search(r'<h3><a href="([^"]+)">([^<]+)</a></h3>', c)
+        ul = re.search(r'<ul class="solution-list">(.*?)</ul>', c, flags=re.S)
+        if not h or not ul: continue
+        allu = hub_urls(L, hub)
+        shown = {u.split('/')[-1] for u in re.findall(r'<a href="([^"]+)"', ul.group(1))}
+        n = len(allu - shown)
+        HUB_MORE_COUNTS.setdefault(hub, (len(allu & shown), n))
+        if n <= 0: continue
+        lab, aria = (x.replace('{n}', str(n)).replace('{hub}', h.group(2)) for x in MORE_T[L])
+        li = (f'<!-- SOLMORE:START --><li class="sol-more-li"><a class="sol-more" href="{h.group(1)}" aria-label="{aria}">'
+              f'<span class="sm-dots" aria-hidden="true">…</span> {lab}</a></li><!-- SOLMORE:END -->')
+        c2 = c[:ul.end(1)] + li + c[ul.end(1):]
+        s = s[:m.start()] + c2 + s[m.end():]
+    if s != o: wr(f, s); print(f'{f}: hub "view the additional" links')
+
+if '--hub-more-only' in sys.argv:
+    for L in LANGS:
+        if os.path.exists(L + 'index.html'): hub_more(L)
+    print('counts (shown, remaining):', HUB_MORE_COUNTS)
+    sys.exit(0)
+
 for L in LANGS:
     if not os.path.exists(L + 'index.html'): continue
     B = do_home(L); do_facts(L, B)
-    if not UNDO: trim_space_card(L)
+    if not UNDO: trim_space_card(L); hub_more(L)
     print(f'{L or "en/"}index.html: {"restored" if UNDO else "6 sections"}; parked {len([k for k in PARK if k in B])} blocks')
 css_and_stylev()
