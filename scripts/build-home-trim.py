@@ -95,14 +95,22 @@ def find_section(L, B):
             f'<label for="hf-q" class="visually-hidden">{t[2]}</label><input id="hf-q" name="q" type="search" enterkeyhint="search">'
             f'<button type="submit">{t[1]}</button></form>{rows}{nomark(B.get("wmap", ""))}</section><!-- HOME-FIND:END -->')
 
-def new_section(B):
+# Oct 24 (founder-approved): promo videos are English-only, translated About pages have no video section.
+# Translated homepages link to the English video and say so in their own language.
+VID_EN = {'fr/': '(vidéo en anglais)', 'es/': '(video en inglés)', 'it/': '(video in inglese)',
+          'ar/': '(فيديو بالإنجليزية)', 'he/': '(סרטון באנגלית)'}
+def vid_link(L, label):
+    if not L or L not in VID_EN: return f'<a class="btn-nav" href="About.html#whats-new-video">{label}</a>'
+    return f'<a class="btn-nav" href="../About.html#whats-new-video" hreflang="en">{label} {VID_EN[L]}</a>'
+
+def new_section(B, L=''):
     n = B.get('news', ''); m = re.search(r'<section [^>]*class="new-strip".*?</section>', n, re.S)
     if not m: return ''
     strip = m.group(0)
     vid = re.search(r'<h2 [^>]*id="promo-title"[^>]*>(.*?)</h2>', B.get('promo', ''), re.S)
     upd = re.search(r'<h2 [^>]*id="news-h"[^>]*>(.*?)</h2>', n, re.S)
     more = '<p class="ns-more">'
-    if vid: more += f'<a class="btn-nav" href="About.html#whats-new-video">{txt(vid.group(1))}</a>'
+    if vid: more += vid_link(L, txt(vid.group(1)))
     if upd: more += f'<a class="btn-nav" href="Changelog.html">{txt(upd.group(1))}</a>'
     more += '</p>'
     return '<!-- HOME-NEW:START -->' + strip[:-len('</section>')] + more + '</section><!-- HOME-NEW:END -->'
@@ -134,7 +142,7 @@ def do_home(L):
         parked = '<template id="home-parked" data-why="Oct 20 clutter fix #1: parked, not deleted; see scripts/build-home-trim.py">' + \
                  ''.join(B[k] for k in ORDER if k in PARK and k in B) + '</template>'
         new = (parked + find_section(L, B) + B.get('solutions', '') + B.get('audience', '') + B.get('edulinks', '') +
-               new_section(B) + join_section(B) + rest)
+               new_section(B, L) + join_section(B) + rest)
     s = s[:he] + new + s[me:]
     fm = marker(s, 'FOOTER-MAP')
     if fm and not UNDO: s = s[:fm[0]] + '<!-- FOOTER-MAP:START --><!-- FOOTER-MAP:END -->' + s[fm[1]:]
