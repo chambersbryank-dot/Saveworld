@@ -352,7 +352,32 @@
     }).catch(function () {});
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();/* PLAY:START */
+})();
+/* UX-OCT15:START */
+(function(){
+  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
+  var f=document.querySelector('.sol-filters');if(!f)return;
+  var L=JSON.parse(f.getAttribute('data-i18n'));
+  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
+  // Oct 18 (owner): no 'Show all N' collapse on Solutions; every card in every hub is always shown.
+  var dom='all',hub='all',sel=f.querySelector('select');
+  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
+    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
+  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';if(sel)sel.value='all';apply()}});
+  if(sel)sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
+  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
+})();
+(function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
+ var fabs=[],tk=false;/* looked up on every pass: the Superpowers button is added later by the kids script */
+ function hit(f){if(f.classList.contains('spow-b')&&f.getAttribute('aria-expanded')==='true')return false;var r=f.getBoundingClientRect();if(!r.width)return false;
+  var y0=f.classList.contains('fab-off')?window.innerHeight-r.height/2-16:r.top+r.height/2,pts=[[r.left+4,y0-r.height/2+4],[r.right-4,y0-r.height/2+4],[r.left+r.width/2,y0],[r.left+4,y0+r.height/2-4],[r.right-4,y0+r.height/2-4]];
+  for(var i=0;i<pts.length;i++){var es=document.elementsFromPoint(pts[i][0],pts[i][1]);for(var j=0;j<es.length;j++){var e=es[j];if(e===f||f.contains(e)||fabs.indexOf(e)>-1)continue;if(e.closest&&e.closest(sel))return true}}return false}
+ function run(){tk=false;fabs=[].slice.call(document.querySelectorAll('.sticky-help,.spow-b'));if(fabs.length)document.documentElement.classList.add('sp-fab');fabs.forEach(function(f){f.classList.toggle('fab-off',hit(f))})}
+ function q(){if(!tk){tk=true;requestAnimationFrame(run)}}window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);document.addEventListener('click',function(){setTimeout(q,50)});setTimeout(run,300);
+})();
+/* UX-OCT15:END */
+/* PLAY:START */
 (function(){var K='sp-play-v1',P=['Kids_Map','Spot_the_Fire','Satellite_Explorer','Amazing_Facts','Myth_vs_Fact','Glossary'];
 function get(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}}
 function put(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
@@ -522,28 +547,3 @@ function later(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(sh
 if(document.readyState==='complete')later();else window.addEventListener('load',later);
 }catch(e){}})();
 /* LANGBANNER:END */
-
-/* UX-OCT15:START */
-(function(){
-  document.addEventListener('click',function(e){document.querySelectorAll('.nav-group details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
-  document.querySelectorAll('.nav-group details').forEach(function(d){var sm=d.querySelector('summary');d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.open){d.removeAttribute('open');sm.focus()}});d.addEventListener('toggle',function(){if(sm)sm.setAttribute('aria-expanded',d.open?'true':'false');if(d.open)document.querySelectorAll('.nav-group details[open]').forEach(function(o){if(o!==d)o.removeAttribute('open')})})});
-  var f=document.querySelector('.sol-filters');if(!f)return;
-  var L=JSON.parse(f.getAttribute('data-i18n'));
-  var hubs=[].slice.call(document.querySelectorAll('.sol-hub'));
-  // Oct 18 (owner): no 'Show all N' collapse on Solutions; every card in every hub is always shown.
-  var dom='all',hub='all',sel=f.querySelector('select');
-  function apply(){hubs.forEach(function(h){var ok=(dom==='all'||h.getAttribute('data-domain')===dom)&&(hub==='all'||h.id===hub);h.style.display=ok?'':'none'});
-    f.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.value===dom)})}
-  f.querySelectorAll('button').forEach(function(b){b.onclick=function(){dom=b.value;hub='all';if(sel)sel.value='all';apply()}});
-  if(sel)sel.onchange=function(){hub=sel.value;dom='all';apply();if(hub!=='all'){var t=document.getElementById(hub);t&&t.scrollIntoView({behavior:'smooth'})}};
-  var q=new URLSearchParams(location.search).get('domain');if(q){dom=q;}apply();
-})();
-(function(){var sel='.w-card,.card,.sol-card,.rel-card,.mission-widget,canvas,video,iframe,table,fieldset,figure,input,select,textarea,button:not(.spow-b),.btn,.roman-jump';
- var fabs=[],tk=false;/* looked up on every pass: the Superpowers button is added later by the kids script */
- function hit(f){if(f.classList.contains('spow-b')&&f.getAttribute('aria-expanded')==='true')return false;var r=f.getBoundingClientRect();if(!r.width)return false;
-  var y0=f.classList.contains('fab-off')?window.innerHeight-r.height/2-16:r.top+r.height/2,pts=[[r.left+4,y0-r.height/2+4],[r.right-4,y0-r.height/2+4],[r.left+r.width/2,y0],[r.left+4,y0+r.height/2-4],[r.right-4,y0+r.height/2-4]];
-  for(var i=0;i<pts.length;i++){var es=document.elementsFromPoint(pts[i][0],pts[i][1]);for(var j=0;j<es.length;j++){var e=es[j];if(e===f||f.contains(e)||fabs.indexOf(e)>-1)continue;if(e.closest&&e.closest(sel))return true}}return false}
- function run(){tk=false;fabs=[].slice.call(document.querySelectorAll('.sticky-help,.spow-b'));if(fabs.length)document.documentElement.classList.add('sp-fab');fabs.forEach(function(f){f.classList.toggle('fab-off',hit(f))})}
- function q(){if(!tk){tk=true;requestAnimationFrame(run)}}window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);document.addEventListener('click',function(){setTimeout(q,50)});setTimeout(run,300);
-})();
-/* UX-OCT15:END */
