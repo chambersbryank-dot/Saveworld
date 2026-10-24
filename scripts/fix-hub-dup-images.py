@@ -54,6 +54,31 @@ for L in ('fr', 'es', 'ar', 'it', 'he'):
             if keep and k in mem: continue
             if mem.get(k) != v: mem[k] = v; n += 1
     if n: json.dump(mem, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=0); print(f'hub-agency-images: {p} +{n}')
+# Oct 24 (founder approved JAXA for the last 3 repeated Earth Observation pairs): JAXA's site policy and Digital Archives terms need
+# prior permission to post its images on a website or use them commercially (https://global.jaxa.jp/policy.html,
+# https://jda.jaxa.jp/service.php?lang=e), so GCOM-C, GOSAT-GW and Libera get public-domain NASA images of what each mission measures
+# instead (entries with a 'note' in hub-agency-images.json). The translated hub pages get the same card swap right here, with the
+# alt text and credit from i18n/<lang>.json, so they update without a full re-translation run. Idempotent.
+for L in ('fr', 'es', 'ar', 'it', 'he'):
+    mem = json.load(open(f'i18n/{L}.json', encoding='utf8')); tpl = mem.get('Image: {x}', 'Image: {x}')
+    for e in AG:
+        if not e.get('note'): continue
+        for hub in e['hubs']:
+            f = f'{L}/{hub}'
+            if not os.path.exists(f): continue
+            s = open(f, encoding='utf8').read(); o = s
+            from PIL import Image
+            w, h = Image.open(f"assets/hub/{e['stem']}.jpg").size; m = _master(e['stem'])
+            ss = f' sizes="{SIZES}"' if m.get('srcset') else ''
+            img = (f'<img alt="{_html.escape(e["alt"][L])}" decoding="async" height="{h}" loading="lazy"{ss} src="../assets/hub/{e["stem"]}.jpg"'
+                   + (f' srcset="{m["srcset"]}"' if m.get('srcset') else '') + f' width="{w}"/>')
+            cr = f'<p class="photo-credit agency-credit">{_html.escape(tpl.replace("{x}", e["credit"]), quote=False)}</p>'
+            rx = re.compile(r'(<div class="image-container"><a class="photo-link" href="' + re.escape(e['card']) + r'">)<img [^>]*>(?:<span class="si-credit">[^<]*</span>)?(</a></div>)(?:<p class="photo-credit agency-credit">[^<]*</p>)?')
+            s = rx.sub(lambda mm: mm.group(1) + img + mm.group(2) + cr, s, count=1)
+            if s != o:  # the English card changed the same way, so re-stamp the i18n-source hash (nothing else needs re-translating)
+                import importlib.util; sp = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); ib = importlib.util.module_from_spec(sp); sp.loader.exec_module(ib)
+                s = re.sub(r'(<meta content="' + re.escape(hub) + r' )[0-9a-f]+(" name="i18n-source"/>)', lambda mm: mm.group(1) + ib.src_hash(hub) + mm.group(2), s)
+                open(f, 'w', encoding='utf8').write(s); print('hub-agency-images:', f, e['card'], '->', e['stem'])
 for hub in ('Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html'):
     if not os.path.exists(hub): continue
     s = open(hub, encoding='utf8').read()

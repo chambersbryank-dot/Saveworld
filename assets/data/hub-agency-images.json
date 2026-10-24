@@ -680,5 +680,68 @@
    "it": "Visualizzazione del futuro satellite GeoXO Est sopra la Terra con lo schema di scansione del suo strumento per il colore dell'oceano",
    "he": "הדמיה של הלוויין המתוכנן GeoXO מזרח מעל כדור הארץ, עם דפוס הסריקה של מכשיר צבע האוקיינוס שלו"
   }
+ },
+ {
+  "hubs": [
+   "Earth_Observation.html"
+  ],
+  "card": "GCOM-C.html",
+  "stem": "NASA_Barents_Sea_Phytoplankton",
+  "title": "Phytoplankton Bloom in the Barents Sea",
+  "agency": "NASA",
+  "source": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001985",
+  "credit": "NASA Goddard Space Flight Center",
+  "license": "Public domain (US Government, NASA); https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "note": "Oct 24 (founder approved JAXA): JAXA site/Digital Archives terms need prior permission for website or commercial use (https://global.jaxa.jp/policy.html, https://jda.jaxa.jp/service.php?lang=e), so a NASA ocean-colour image of the kind GCOM-C SGLI tracks is used instead.",
+  "alt": {
+   "en": "Swirls of turquoise and green phytoplankton in the Barents Sea seen from orbit by a NASA satellite, the kind of ocean colour Japan's SHIKISAI satellite tracks",
+   "fr": "Tourbillons turquoise et verts de phytoplancton dans la mer de Barents vus depuis l'orbite par un satellite de la NASA, le type de couleur de l'océan que suit le satellite japonais SHIKISAI",
+   "es": "Remolinos turquesa y verdes de fitoplancton en el mar de Barents vistos desde la órbita por un satélite de la NASA, el tipo de color del océano que sigue el satélite japonés SHIKISAI",
+   "ar": "دوامات فيروزية وخضراء من العوالق النباتية في بحر بارنتس كما يراها قمر صناعي تابع لناسا من المدار، وهو نوع لون المحيط الذي يرصده القمر الصناعي الياباني SHIKISAI",
+   "it": "Vortici turchesi e verdi di fitoplancton nel mare di Barents visti dall'orbita da un satellite della NASA, il tipo di colore dell'oceano che segue il satellite giapponese SHIKISAI",
+   "he": "מערבולות טורקיז וירוק של פיטופלנקטון בים ברנטס, כפי שנראו ממסלול בלוויין של נאס\"א, סוג צבע האוקיינוס שהלוויין היפני SHIKISAI עוקב אחריו"
+  }
+ },
+ {
+  "hubs": [
+   "Earth_Observation.html"
+  ],
+  "card": "Libera.html",
+  "stem": "NASA_CERES_Suomi_NPP_Shortwave",
+  "title": "NPP Ceres Shortwave Radiation",
+  "agency": "NASA",
+  "source": "https://www.flickr.com/photos/gsfc/8164317498/",
+  "credit": "NASA Goddard Space Flight Center",
+  "license": "Public domain (US Government, NASA); https://commons.wikimedia.org/wiki/File:NPP_Ceres_Shortwave_Radiation_(8164317498).jpg",
+  "note": "Oct 24: no usable JAXA image of Libera exists; the NASA photo of the Libera instrument is LASP/CU Boulder copyright, so a public-domain NASA map from CERES, the instrument Libera continues, is used.",
+  "alt": {
+   "en": "Globe map of sunlight reflected back to space over Africa and Europe, measured by NASA's CERES instrument, the Earth energy record that Libera continues",
+   "fr": "Carte du globe montrant la lumière du soleil renvoyée vers l'espace au-dessus de l'Afrique et de l'Europe, mesurée par l'instrument CERES de la NASA, le relevé de l'énergie de la Terre que Libera prolonge",
+   "es": "Mapa del globo con la luz solar reflejada al espacio sobre África y Europa, medida por el instrumento CERES de la NASA, el registro de la energía de la Tierra que Libera continúa",
+   "ar": "خريطة للكرة الأرضية تُظهر ضوء الشمس المنعكس إلى الفضاء فوق أفريقيا وأوروبا، كما قاسه جهاز CERES التابع لناسا، وهو سجل طاقة الأرض الذي يواصله Libera",
+   "it": "Mappa del globo con la luce solare riflessa nello spazio sopra l'Africa e l'Europa, misurata dallo strumento CERES della NASA, la serie di dati sull'energia della Terra che Libera prosegue",
+   "he": "מפת כדור הארץ המציגה את אור השמש המוחזר לחלל מעל אפריקה ואירופה, כפי שנמדד במכשיר CERES של נאס\"א, רצף מדידות האנרגיה של כדור הארץ ש-Libera ממשיך"
+  }
+ },
+ {
+  "hubs": [
+   "Earth_Observation.html"
+  ],
+  "card": "GOSAT-GW.html",
+  "stem": "NASA_OCO2_Global_CO2_2014",
+  "title": "Global Atmospheric Carbon Dioxide (PIA18934)",
+  "agency": "NASA",
+  "source": "https://images.nasa.gov/details/PIA18934",
+  "credit": "NASA/JPL-Caltech",
+  "license": "Public domain (US Government, NASA); https://www.jpl.nasa.gov/jpl-image-use-policy/",
+  "note": "Oct 24 (founder approved JAXA): JAXA terms need prior permission for website or commercial use, so a NASA satellite map of the carbon dioxide that IBUKI GW measures is used instead.",
+  "alt": {
+   "en": "NASA satellite map of carbon dioxide around the world from space, the greenhouse gas Japan's IBUKI GW satellite also measures",
+   "fr": "Carte satellite de la NASA du dioxyde de carbone autour du monde vu depuis l'espace, le gaz à effet de serre que mesure aussi le satellite japonais IBUKI GW",
+   "es": "Mapa satelital de la NASA del dióxido de carbono en todo el mundo visto desde el espacio, el gas de efecto invernadero que también mide el satélite japonés IBUKI GW",
+   "ar": "خريطة من أقمار ناسا الصناعية لثاني أكسيد الكربون حول العالم من الفضاء، وهو غاز الدفيئة الذي يقيسه أيضًا القمر الصناعي الياباني IBUKI GW",
+   "it": "Mappa satellitare della NASA dell'anidride carbonica in tutto il mondo vista dallo spazio, il gas serra che misura anche il satellite giapponese IBUKI GW",
+   "he": "מפת לוויין של נאס\"א של פחמן דו-חמצני ברחבי העולם מהחלל, גז החממה שגם הלוויין היפני IBUKI GW מודד"
+  }
  }
 ]
