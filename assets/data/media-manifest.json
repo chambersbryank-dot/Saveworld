@@ -5540,5 +5540,38 @@
   "height": 2160,
   "srcset": "https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-480.de6f4ac6876c.webp 480w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-800.bf0cbac3cce8.webp 800w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-1280.b381b3193194.webp 1280w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-1920.9cc5ada0211e.webp 1920w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-2560.fe7e7232756c.webp 2560w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-3840.f85e46e864c0.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-480.990374cf8b8d.avif 480w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-800.4858d9af8962.avif 800w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-1280.037d597aecd4.avif 1280w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-1920.f7fe2fd78053.avif 1920w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-2560.90c0ab5a80c2.avif 2560w, https://media.savingplanets.com/images/hub/NASA_SVS_Rondonia_Deforestation_1975_2012-3840.f20a2ebac4f9.avif 3840w"
+ },
+ "images/hub/NASA_Barents_Sea_Phytoplankton.jpg": {
+  "url": "https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton.0d50fb996ab9.jpg",
+  "key": "images/hub/NASA_Barents_Sea_Phytoplankton.0d50fb996ab9.jpg",
+  "bytes": 8328833,
+  "sha256": "0d50fb996ab99a8e439fab6c8473f136a31d817fdbe0730d72a81b3f874269e6",
+  "type": "image/jpeg",
+  "width": 8054,
+  "height": 5817,
+  "srcset": "https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-480.3e0b5c2974e9.webp 480w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-800.1dce8326da6b.webp 800w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-1280.6b9b3f88b872.webp 1280w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-1920.cbfa4adcb15f.webp 1920w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-2560.973d52f01fdb.webp 2560w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-3840.fb5dfbbe9902.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-480.b6318eadd456.avif 480w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-800.201668f8f5e2.avif 800w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-1280.112a320a953d.avif 1280w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-1920.09e161c5051c.avif 1920w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-2560.2249fc473686.avif 2560w, https://media.savingplanets.com/images/hub/NASA_Barents_Sea_Phytoplankton-3840.28c12088cb77.avif 3840w"
+ },
+ "images/hub/NASA_CERES_Suomi_NPP_Shortwave.jpg": {
+  "url": "https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave.fb82919c4c5f.jpg",
+  "key": "images/hub/NASA_CERES_Suomi_NPP_Shortwave.fb82919c4c5f.jpg",
+  "bytes": 315253,
+  "sha256": "fb82919c4c5f0859224cc01bb6a8321a3eca5836518bbd08626b3c1a795050e8",
+  "type": "image/jpeg",
+  "width": 1280,
+  "height": 720,
+  "srcset": "https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-480.86f77190e093.webp 480w, https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-800.5302ee75586f.webp 800w, https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-1280.8c52e3789890.webp 1280w",
+  "srcset_avif": "https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-480.85d428935c2f.avif 480w, https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-800.375be279f5e3.avif 800w, https://media.savingplanets.com/images/hub/NASA_CERES_Suomi_NPP_Shortwave-1280.55bbad524dfa.avif 1280w"
+ },
+ "images/hub/NASA_OCO2_Global_CO2_2014.jpg": {
+  "url": "https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014.046d4b42029b.jpg",
+  "key": "images/hub/NASA_OCO2_Global_CO2_2014.046d4b42029b.jpg",
+  "bytes": 644765,
+  "sha256": "046d4b42029b48948f9f08e8ae9e80bd0ff02f6d329529f9024211bd37220930",
+  "type": "image/jpeg",
+  "width": 4096,
+  "height": 2304,
+  "srcset": "https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-480.ed4583f2b232.webp 480w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-800.824756352590.webp 800w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1280.1a667bd850a6.webp 1280w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1920.bee510258a35.webp 1920w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-2560.16078f2b52a0.webp 2560w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-3840.c64459989641.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-480.11d1e7928664.avif 480w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-800.3e4909f0617a.avif 800w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1280.cf855fcfbeb8.avif 1280w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-1920.04d80bb28a98.avif 1920w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-2560.51737eb0beca.avif 2560w, https://media.savingplanets.com/images/hub/NASA_OCO2_Global_CO2_2014-3840.ed50affba0c2.avif 3840w"
  }
 }
