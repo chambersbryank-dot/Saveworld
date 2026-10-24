@@ -11,6 +11,7 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 24: Italian Corrections page fix. it.json had 'Errori di posta elettronica@savingplanets.com' (MT slip for 'Email errors@'); now 'Scrivi a errors@savingplanets.com …', linkified by link-errors.py. Address audit: 's@' hit = '%s' in scripts/dept-contacts.py, 5 bare '@savingplanets.com' = code templates (ICS UIDs, f-strings, worker Message-ID), all intentional. partners@ untouched.
 Detail for each item is in the dated sections below.
 - Oct 24 (founder-approved): **partners@ -> partner-relations@**: partners@savingplanets.com bounces (no such address), so all 45 occurrences (homepage Become a Partner + partnership card in 6 langs, About, Contact, i18n/he.json, build-batch-b.py) now use partner-relations@savingplanets.com, same subject. contact-order.py ORDER + link-errors.py doc updated. No STYLEV change (no CSS/build-ux).
 - Oct 24 (founder-approved): **'Watch: What's New' button on translated homepages** (fr/es/ar/it/he) pointed to their own About.html#whats-new-video, which doesn't exist (promo videos are English-only). Now links to ../About.html#whats-new-video with hreflang="en" and a localized '(video in English)' suffix. Fix lives in scripts/build-home-trim.py (VID_EN, vid_link); homepages patched by hand, no full rebuild. No CSS change, STYLEV unchanged.
