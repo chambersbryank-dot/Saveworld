@@ -142,7 +142,7 @@
     var diff = netMs - Date.now();
     if (diff <= 0) { el.innerHTML = '<div class="lw-unit"><b>T-0</b><small>חלון שיגור</small></div>'; return; }
     var s = Math.floor(diff / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
-    el.innerHTML = '<div class="lw-unit"><b>' + d + '</b><small>ימים</small></div><div class="lw-unit"><b>' + pad(h) + '</b><small>שעות</small></div><div class="lw-unit"><b>' + pad(m) + '</b><small>דק'</small></div><div class="lw-unit"><b>' + pad(sec) + '</b><small>שנ'</small></div>';
+    el.innerHTML = '<div class="lw-unit"><b>' + d + '</b><small>ימים</small></div><div class="lw-unit"><b>' + pad(h) + '</b><small>שעות</small></div><div class="lw-unit"><b>' + pad(m) + '</b><small>דק׳</small></div><div class="lw-unit"><b>' + pad(sec) + '</b><small>שנ׳</small></div>';
   }
 
   function render(data) {
@@ -185,5 +185,6 @@
 })();
 </script>
 <script defer="" src="../batchb.js?v=20261015it"></script><script defer="" src="../share.js?v=20261012a"></script>
-<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}'></script><!-- CF-WA:END --></body>
+<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}'></script><!-- CF-WA:END --><script src="../assets/launch-actions.js?v=20261024a" defer></script>
+</body>
 </html>
