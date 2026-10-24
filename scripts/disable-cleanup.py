@@ -9,7 +9,7 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 CLEANUP_ENABLED = False
 if CLEANUP_ENABLED: raise SystemExit('cleanup enabled: nothing to do')
 LANGS = ('', 'fr/', 'es/', 'ar/', 'it/', 'he/')
-STUB = ('<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><title>Saving Planets</title>'
+STUB = ('<!DOCTYPE html><html lang="{lang}"{dir}><head><meta charset="utf-8"><title>Saving Planets</title>'
         '<meta name="robots" content="noindex"><link rel="canonical" href="https://www.savingplanets.com/{pre}Ways_to_Help.html">'
         '<meta http-equiv="refresh" content="0; url=Ways_to_Help.html"><script>location.replace("Ways_to_Help.html")</script></head>'
         '<body data-pagefind-ignore="all"><p><a href="Ways_to_Help.html">Ways to Help</a></p></body></html>\n')
@@ -18,7 +18,7 @@ H = r'(?:\.\./)?(?:(?:fr|es|ar|it|he)/)?Find_a_Cleanup\.html(?:#[\w-]*)?'
 n = 0
 for d in LANGS:
     p = d + 'Find_a_Cleanup.html'
-    stub = STUB.format(lang=d[:-1] or 'en', pre=d)
+    stub = STUB.format(lang=d[:-1] or 'en', pre=d, dir=' dir="rtl"' if d[:-1] in ('ar', 'he') else '')  # Oct 23: seo-lint html-dir on ar/he stubs
     if os.path.exists(p) and open(p, encoding='utf8').read() != stub: open(p, 'w', encoding='utf8').write(stub)
     for f in glob.glob(d + '*.html'):
         if f == p: continue

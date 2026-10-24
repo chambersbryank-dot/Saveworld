@@ -157,6 +157,12 @@
  "Artemis_II.html": {
   "it": {
    "description": "Il programma Artemis della NASA: Artemis I ha volato nel 2022, Artemis II ha portato quattro astronauti a 252.756 miglia dalla Terra nell'aprile 2026 e Artemis III è prevista per il 2027."
+  },
+  "fr": {
+   "description": "Le programme Artemis de la NASA : Artemis I a volé en 2022, et Artemis II a emmené quatre astronautes à 252 756 miles de la Terre en avril 2026."
+  },
+  "es": {
+   "description": "El programa Artemis de la NASA: Artemis I voló en 2022 y Artemis II llevó a cuatro astronautas a 252.756 millas de la Tierra en abril de 2026."
   }
  },
  "Astroscale.html": {
@@ -2306,6 +2312,203 @@
   },
   "it": {
    "description": "Soluzioni concrete e documentate per oceani, laghi, fiumi, foreste e spazio, e un’informatica che non prosciuga il pianeta. Azione positiva, non panico."
+  }
+ },
+ "Alaska_SeaLife_Center.html": {
+  "en": {
+   "description": "The Alaska SeaLife Center in Seward is a nonprofit aquarium and research center that rescues stranded marine animals and studies Alaska's marine ecosystems."
+  },
+  "fr": {
+   "description": "L'Alaska SeaLife Center, à Seward, est un aquarium et centre de recherche à but non lucratif qui secourt les animaux marins échoués de l'Alaska."
+  },
+  "es": {
+   "description": "El Alaska SeaLife Center, en Seward, es un acuario y centro de investigación sin fines de lucro que rescata animales marinos varados en Alaska."
+  },
+  "it": {
+   "description": "L'Alaska SeaLife Center di Seward è un acquario e centro di ricerca no profit che soccorre gli animali marini spiaggiati e studia i mari dell'Alaska."
+  }
+ },
+ "MAAP.html": {
+  "en": {
+   "description": "MAAP, an initiative of the nonprofit Amazon Conservation, uses satellite images to report on urgent deforestation and fires in the Amazon."
+  },
+  "fr": {
+   "description": "Le MAAP, initiative de l'ONG Amazon Conservation, utilise des images satellite pour signaler la déforestation et les incendies urgents en Amazonie."
+  },
+  "es": {
+   "description": "MAAP, iniciativa de la ONG Amazon Conservation, usa imágenes satelitales para informar sobre deforestación e incendios urgentes en la Amazonía."
+  },
+  "it": {
+   "description": "Il MAAP, iniziativa della non profit Amazon Conservation, usa immagini satellitari per segnalare deforestazione e incendi urgenti in Amazzonia."
+  }
+ },
+ "Predator_Free_2050.html": {
+  "en": {
+   "description": "Predator Free 2050 is a nationwide goal to eradicate rats, possums, feral cats and mustelids from Aotearoa New Zealand, led by the Department of Conservation."
+  },
+  "fr": {
+   "description": "Predator Free 2050 vise à éradiquer rats, opossums, chats harets et mustélidés de toute l'Aotearoa Nouvelle-Zélande d'ici 2050, sous la conduite du DOC."
+  },
+  "es": {
+   "description": "Predator Free 2050 es una meta nacional para erradicar ratas, zarigüeyas, gatos asilvestrados y mustélidos de toda Aotearoa Nueva Zelanda para 2050."
+  },
+  "it": {
+   "description": "Predator Free 2050 è un obiettivo nazionale per eradicare ratti, opossum, gatti selvatici e mustelidi da tutta Aotearoa Nuova Zelanda entro il 2050."
+  }
+ },
+ "Atoll_Rewilding.html": {
+  "fr": {
+   "description": "Une étude de 2026 sur 28 îles d'atolls montre qu'éliminer les rats et restaurer la végétation locale renforce oiseaux marins, récifs et sable."
+  },
+  "es": {
+   "description": "Un estudio de 2026 en 28 islas de atolones halló que eliminar las ratas y recuperar la vegetación nativa refuerza las aves marinas, los arrecifes y la arena."
+  },
+  "ar": {
+   "description": "وجدت دراسة أُجريت عام 2026 على 28 جزيرة مرجانية أن التخلص من الجرذان واستعادة النباتات المحلية يعززان الطيور البحرية والشعاب والرمال."
+  },
+  "it": {
+   "description": "Uno studio del 2026 su 28 isole di atolli ha scoperto che eliminare i ratti e ripristinare la vegetazione nativa rafforza uccelli marini, barriere e sabbia."
+  }
+ },
+ "Bristol_Bay_Salmon.html": {
+  "fr": {
+   "description": "En janvier 2023, l'EPA des États-Unis a limité le dépôt de déchets miniers près du gisement Pebble, dans les sources de la baie de Bristol."
+  },
+  "es": {
+   "description": "En enero de 2023, la EPA de EE. UU. limitó el vertido de residuos mineros en las cabeceras de la bahía de Bristol, cerca del yacimiento Pebble."
+  },
+  "it": {
+   "description": "Nel gennaio 2023 l'EPA statunitense ha limitato lo smaltimento di rifiuti minerari nelle sorgenti della baia di Bristol, vicino al giacimento Pebble."
+  }
+ },
+ "Cheonggyecheon.html": {
+  "fr": {
+   "description": "Séoul a supprimé une route et une autoroute surélevée qui recouvraient le Cheonggyecheon, et a restauré le ruisseau sur 5,84 km au cœur de la ville."
+  }
+ },
+ "Forest_Elephants.html": {
+  "fr": {
+   "description": "En éclaircissant les petits arbres, les éléphants de forêt aident les forêts d'Afrique centrale à stocker 26 à 60 tonnes de biomasse en plus par hectare."
+  },
+  "it": {
+   "description": "Sfoltendo gli alberi piccoli, gli elefanti di foresta aiutano le foreste dell'Africa centrale ad accumulare da 26 a 60 tonnellate di biomassa in più per ettaro."
+  }
+ },
+ "Galileo.html": {
+  "fr": {
+   "description": "Galileo, le système européen de navigation par satellite le plus précis au monde, sert plus de cinq milliards d'utilisateurs de smartphones et aide les secours."
+  },
+  "es": {
+   "description": "Galileo, el sistema europeo de navegación por satélite más preciso del mundo, sirve a más de cinco mil millones de usuarios de móviles y ayuda en rescates."
+  }
+ },
+ "Lake_Constance.html": {
+  "fr": {
+   "description": "Des stations d'épuration qui retirent le phosphore ont ramené le lac de Constance à l'état limpide typique des lacs alpins."
+  },
+  "es": {
+   "description": "Las plantas depuradoras que eliminan el fósforo devolvieron al lago de Constanza el estado limpio típico de los lagos alpinos."
+  },
+  "it": {
+   "description": "Gli impianti di depurazione che rimuovono il fosforo hanno riportato il lago di Costanza allo stato limpido tipico dei laghi alpini."
+  }
+ },
+ "Mesoamerican_Reef_Insurance.html": {
+  "fr": {
+   "description": "Le programme d'assurance MAR, géré par MAR Fund, finance la réparation rapide du récif mésoaméricain après les ouragans grâce à une assurance paramétrique."
+  },
+  "es": {
+   "description": "El Programa de Seguro MAR, de MAR Fund, usa un seguro paramétrico para pagar la rápida reparación del Arrecife Mesoamericano tras los huracanes."
+  },
+  "ar": {
+   "description": "يستخدم برنامج تأمين MAR، الذي تديره منظمة MAR Fund غير الربحية، تأمينًا بارامتريًا لتمويل إصلاح الشعاب المرجانية في أمريكا الوسطى بسرعة بعد الأعاصير."
+  },
+  "it": {
+   "description": "Il Programma assicurativo MAR, gestito da MAR Fund, usa un'assicurazione parametrica per riparare in fretta la Barriera mesoamericana dopo gli uragani.",
+   "title": "Assicurazione della Barriera mesoamericana (MAR Fund)"
+  }
+ },
+ "NEWater.html": {
+  "fr": {
+   "description": "NEWater est une eau recyclée de haute qualité produite par PUB, l'agence nationale de l'eau de Singapour, à partir d'eaux usées traitées dans 4 usines."
+  },
+  "es": {
+   "description": "NEWater es agua regenerada de alta calidad de PUB, la agencia nacional del agua de Singapur, producida a partir de aguas usadas tratadas en 4 plantas."
+  },
+  "it": {
+   "description": "NEWater è acqua di recupero di alta qualità prodotta da PUB, l'agenzia nazionale dell'acqua di Singapore, dalle acque usate trattate in 4 impianti."
+  }
+ },
+ "Palau_National_Marine_Sanctuary.html": {
+  "fr": {
+   "description": "Le sanctuaire marin national des Palaos interdit tout prélèvement sur environ 80 % de la zone économique exclusive ; le reste est une zone de pêche nationale."
+  },
+  "es": {
+   "description": "El Santuario Marino Nacional de Palaos prohíbe la extracción en cerca del 80 % de la zona económica exclusiva; el resto es zona de pesca nacional."
+  },
+  "it": {
+   "description": "Il Santuario marino nazionale di Palau vieta il prelievo su circa l'80% della zona economica esclusiva del paese; il resto è una Zona di pesca nazionale."
+  }
+ },
+ "Penobscot_River_Restoration.html": {
+  "fr": {
+   "description": "Après le retrait de deux barrages sur la Penobscot, 5,93 millions de harengs ont pris l'ascenseur à poissons de Milford en 2025, contre 590 000 en 2015."
+  },
+  "it": {
+   "description": "Dopo la rimozione di due dighe sul Penobscot, quasi 5,93 milioni di aringhe di fiume hanno risalito l'ascensore di Milford nel 2025, contro 590.000 nel 2015."
+  }
+ },
+ "Space_Passport.html": {
+  "fr": {
+   "description": "Un passeport spatial gratuit pour les enfants : collectionne des tampons en explorant les océans, les forêts, l'espace et plus encore."
+  }
+ },
+ "Svalbard_Global_Seed_Vault.html": {
+  "fr": {
+   "description": "La Réserve mondiale de semences du Svalbard conserve gratuitement des copies de sauvegarde des semences agricoles du monde, dans une montagne arctique."
+  }
+ },
+ "Thwaites_Glacier_Collaboration.html": {
+  "fr": {
+   "description": "Une centaine de scientifiques de cinq pays cherchent à savoir à quelle vitesse le glacier Thwaites, en Antarctique, pourrait faire monter le niveau des mers."
+  },
+  "it": {
+   "description": "Circa 100 scienziati di cinque paesi studiano quanto velocemente il ghiacciaio Thwaites, in Antartide, potrebbe far salire il livello del mare."
+  }
+ },
+ "Gulf_of_Alaska_Keeper.html": {
+  "es": {
+   "description": "Gulf of Alaska Keeper, sin fines de lucro, retira residuos marinos de las costas remotas del estrecho del Príncipe Guillermo y del golfo de Alaska."
+  }
+ },
+ "Top_Ten.html": {
+  "fr": {
+   "description": "Le top 10 de la semaine sur Saving Planets : {n} solutions réelles, Mythe ou réalité, le bulletin, des leçons, la carte du monde et Roman."
+  },
+  "it": {
+   "description": "La top ten della settimana su Saving Planets: {n} soluzioni reali, Mito o realtà, il notiziario, lezioni, la mappa del mondo e Roman."
+  }
+ },
+ "PROMICE_GC-Net.html": {
+  "fr": {
+   "title": "PROMICE et GC-Net : stations météo du Groenland"
+  },
+  "es": {
+   "title": "PROMICE y GC-Net: estaciones meteorológicas de Groenlandia"
+  },
+  "it": {
+   "title": "PROMICE e GC-Net: stazioni meteo in Groenlandia"
+  }
+ },
+ "Seychelles_Marine_Spatial_Plan.html": {
+  "fr": {
+   "title": "Seychelles : plan marin et échange dette-nature"
+  },
+  "es": {
+   "title": "Seychelles: plan marino y canje de deuda por naturaleza"
+  },
+  "it": {
+   "title": "Seychelles: piano spaziale marino e scambio debito-natura"
   }
  }
 }
