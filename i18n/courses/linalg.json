@@ -4059,6 +4059,13 @@
   "ar": "صُغ نموذج مدخلات–مخرجات لليونتيف وحلّه.",
   "he": "בנו ופתרו מודל תשומה–תפוקה של לאונטיף."
  },
+ "Set x = 1: z = 1, w = 2, y = 2.": {
+  "fr": "Posez x = 1 : z = 1, w = 2, y = 2.",
+  "es": "Haz x = 1: z = 1, w = 2, y = 2.",
+  "ar": "اجعل x = 1: z = 1، w = 2، y = 2.",
+  "it": "Poni x = 1: z = 1, w = 2, y = 2.",
+  "he": "מציבים x = 1: z = 1, w = 2, y = 2."
+ },
  "Share of 64": {
   "fr": "Part de 64",
   "es": "Parte de 64",
@@ -5094,6 +5101,20 @@
   "it": "Scrivi x₀ = c₁v₁ + … + cₙvₙ. Allora xₖ = Aᵏx₀ = c₁λ₁ᵏv₁ + … + cₙλₙᵏvₙ; il |λ| più grande domina al crescere di k.",
   "ar": "اكتب x₀ = c₁v₁ + … + cₙvₙ. عندئذ xₖ = Aᵏx₀ = c₁λ₁ᵏv₁ + … + cₙλₙᵏvₙ؛ وأكبر |λ| يهيمن مع ازدياد k.",
   "he": "כתבו x₀ = c₁v₁ + … + cₙvₙ. אז xₖ = Aᵏx₀ = c₁λ₁ᵏv₁ + … + cₙλₙᵏvₙ; ה-|λ| הגדול ביותר שולט כש-k גדל."
+ },
+ "Yes: 2 − 2 = 0.": {
+  "fr": "Oui : 2 − 2 = 0.",
+  "es": "Sí: 2 − 2 = 0.",
+  "ar": "نعم: 2 − 2 = 0.",
+  "it": "Sì: 2 − 2 = 0.",
+  "he": "כן: 2 − 2 = 0."
+ },
+ "Yes: QᵀQ = I.": {
+  "fr": "Oui : QᵀQ = I.",
+  "es": "Sí: QᵀQ = I.",
+  "ar": "نعم: QᵀQ = I.",
+  "it": "Sì: QᵀQ = I.",
+  "he": "כן: QᵀQ = I."
  },
  "Yes: eigenvalues 3 and 1 are positive.": {
   "fr": "Oui : les valeurs propres 3 et 1 sont positives.",

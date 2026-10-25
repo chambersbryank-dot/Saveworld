@@ -2001,6 +2001,13 @@
   "he": "בעיות תכנון פתורות רבות.",
   "it": "Molti problemi di progettazione risolti."
  },
+ "Max Cp = 16/27 ≈ 59.3%.": {
+  "fr": "Cp max = 16/27 ≈ 59.3%.",
+  "es": "Cp máx. = 16/27 ≈ 59.3%.",
+  "ar": "أقصى Cp = 16/27 ≈ 59.3%.",
+  "it": "Cp max = 16/27 ≈ 59.3%.",
+  "he": "Cp מרבי = 16/27 ≈ 59.3%."
+ },
  "Mean Value Theorem": {
   "ar": "مبرهنة القيمة المتوسطة",
   "es": "Teorema del valor medio",

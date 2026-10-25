@@ -762,6 +762,13 @@
   "ar": "فقاعة الترقيم",
   "he": "בלון"
  },
+ "Bar: A = 400 mm², I = 20⁴/12 = 13,333 mm⁴.": {
+  "fr": "Barre : A = 400 mm², I = 20⁴/12 = 13333 mm⁴.",
+  "es": "Barra: A = 400 mm², I = 20⁴/12 = 13333 mm⁴.",
+  "ar": "القضيب: A = 400 mm²، I = 20⁴/12 = 13333 mm⁴.",
+  "it": "Barra: A = 400 mm², I = 20⁴/12 = 13333 mm⁴.",
+  "he": "מוט: A = 400 mm², I = 20⁴/12 = 13333 mm⁴."
+ },
  "Bending stiffness depends on EI. Moving material away from the neutral axis (tubes, I-beams) raises I with less mass.": {
   "fr": "La rigidité en flexion dépend de EI. Éloigner la matière de l’axe neutre (tubes, poutres en I) augmente I avec moins de masse.",
   "es": "La rigidez a flexión depende de EI. Alejar el material del eje neutro (tubos, vigas en I) aumenta I con menos masa.",

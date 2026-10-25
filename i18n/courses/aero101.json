@@ -4451,6 +4451,13 @@
   "ar": "استخدام نظرية المقطع الرقيق: c_l ≈ 2πα.",
   "he": "להשתמש בתאוריית הפרופיל הדק: c_l ≈ 2πα."
  },
+ "Use Δv = I_sp g₀ ln(m₀/m_f).": {
+  "fr": "Utilisez Δv = I_sp g₀ ln(m₀/m_f).",
+  "es": "Usa Δv = I_sp g₀ ln(m₀/m_f).",
+  "ar": "استخدم Δv = I_sp g₀ ln(m₀/m_f).",
+  "it": "Usa Δv = I_sp g₀ ln(m₀/m_f).",
+  "he": "השתמשו ב־Δv = I_sp g₀ ln(m₀/m_f)."
+ },
  "Using c_l = 2πα, what angle gives c_l = 0.5?": {
   "fr": "Avec c_l = 2πα, quel angle donne c_l = 0.5 ?",
   "es": "Con c_l = 2πα, ¿qué ángulo da c_l = 0.5?",

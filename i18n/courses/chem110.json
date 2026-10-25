@@ -475,6 +475,13 @@
   "it": "Sommale; CO₂ si elimina.",
   "he": "חברו אותן; CO₂ מתבטל."
  },
+ "Add: 26.49 u + 8.961 u = 35.45 u.": {
+  "fr": "Additionnez : 26.49 u + 8.961 u = 35.45 u.",
+  "es": "Suma: 26.49 u + 8.961 u = 35.45 u.",
+  "ar": "اجمع: 26.49 u + 8.961 u = 35.45 u.",
+  "it": "Somma: 26.49 u + 8.961 u = 35.45 u.",
+  "he": "מחברים: 26.49 u + 8.961 u = 35.45 u."
+ },
  "Adding a solution of known concentration to find the concentration of another.": {
   "fr": "Ajouter une solution de concentration connue pour trouver la concentration d’une autre.",
   "es": "Añadir una disolución de concentración conocida para hallar la concentración de otra.",
@@ -3841,6 +3848,13 @@
   "ar": "Sentinel-6B: رصد مستوى سطح البحر",
   "it": "Sentinel-6B: monitorare il livello del mare",
   "he": "Sentinel-6B: מעקב אחר גובה פני הים"
+ },
+ "Set ΔG = 0: T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K.": {
+  "fr": "Posez ΔG = 0 : T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K.",
+  "es": "Haz ΔG = 0: T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K.",
+  "ar": "اجعل ΔG = 0: T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K.",
+  "it": "Poni ΔG = 0: T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K.",
+  "he": "מציבים ΔG = 0: T = ΔH/ΔS = 40.0 ÷ 0.120 = 333 K."
  },
  "Shape matters. CO₂ and CCl₄ have polar bonds but symmetric shapes, so they are nonpolar.": {
   "fr": "La forme compte. CO₂ et CCl₄ ont des liaisons polaires mais des formes symétriques, donc ils sont apolaires.",

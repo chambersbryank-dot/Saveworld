@@ -3772,6 +3772,13 @@
   "ar": "الزمن = 2v_y/g؛ الارتفاع = v_y²/(2g)؛ R = v₀² sin 60°/g.",
   "he": "זמן = 2v_y/g; גובה = v_y²/(2g); ‏R = v₀² sin 60°/g."
  },
+ "Top: v = 2v_G.": {
+  "fr": "En haut : v = 2v_G.",
+  "es": "Arriba: v = 2v_G.",
+  "ar": "في الأعلى: v = 2v_G.",
+  "it": "In alto: v = 2v_G.",
+  "he": "למעלה: v = 2v_G."
+ },
  "Torque and power are the same thing.": {
   "fr": "Couple et puissance, c’est la même chose.",
   "es": "Par y potencia son lo mismo.",

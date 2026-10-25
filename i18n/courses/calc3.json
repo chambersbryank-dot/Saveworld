@@ -1630,6 +1630,13 @@
   "ar": "للغاز المثالي، P = nRT/V. مع n = 1 mol وT = 300 K وV = 0.025 m³، أوجد P و∂P/∂T و∂P/∂V.",
   "he": "לגז אידיאלי, P = nRT/V. עם n = 1 mol, ‏T = 300 K ו-V = 0.025 m³, מצאו את P, ‏∂P/∂T ו-∂P/∂V."
  },
+ "For f = x²y, fₓ =": {
+  "fr": "Pour f = x²y, fₓ =",
+  "es": "Para f = x²y, fₓ =",
+  "ar": "إذا كانت f = x²y فإن fₓ =",
+  "it": "Per f = x²y, fₓ =",
+  "he": "עבור f = x²y, fₓ ="
+ },
  "For f(x, y) = x²y + y³, find fₓ and f_y at (1, 2), and use the tangent plane to estimate f(1.1, 1.9).": {
   "fr": "Pour f(x, y) = x²y + y³, calculez fₓ et f_y en (1, 2), et utilisez le plan tangent pour estimer f(1.1, 1.9).",
   "es": "Para f(x, y) = x²y + y³, halla fₓ y f_y en (1, 2), y usa el plano tangente para estimar f(1.1, 1.9).",

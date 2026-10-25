@@ -3107,6 +3107,13 @@
   "ar": "مسار واحد.",
   "he": "מסלול אחד."
  },
+ "One τ": {
+  "fr": "Une τ",
+  "es": "Una τ",
+  "ar": "ثابت زمني τ واحد",
+  "it": "Una τ",
+  "he": "קבוע זמן τ אחד"
+ },
  "One τ is 63.2%; use about 5τ for “done”.": {
   "fr": "Un τ correspond à 63.2 % ; comptez environ 5τ pour « terminé ».",
   "es": "Una τ es el 63.2 %; usa unas 5τ para «terminado».",

@@ -3506,6 +3506,13 @@
   "ar": "RC عند السقف العملي يساوي…",
   "he": "RC בתקרת השירות הוא…"
  },
+ "Set V = 100 m/s.": {
+  "fr": "Posez V = 100 m/s.",
+  "es": "Haz V = 100 m/s.",
+  "ar": "اجعل V = 100 m/s.",
+  "it": "Poni V = 100 m/s.",
+  "he": "מציבים V = 100 m/s."
+ },
  "Show how weight and density altitude lengthen takeoff.": {
   "fr": "Montrer comment le poids et l’altitude-densité allongent le décollage.",
   "es": "Mostrar cómo el peso y la altitud de densidad alargan el despegue.",
