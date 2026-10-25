@@ -216,7 +216,7 @@ def en_only(h):
 # bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
 _FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓µ‰Å\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
 _FRUN = re.compile(_FTOK + '+')
-_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\w\[|[*%]|\d\s*[-–]\s*\d|\d\s?(?:µm|nm|mm|km|kΩ|µF|µT|µC|°C|%)")
+_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\w\[|[*%]|\d\s*[-–]\s*\d|\d\s?(?:µm|nm|mm|km|kΩ|µF|µT|µC|°C|kHz|MHz|Hz|%)")
 def _wrap_run(m):
     t = m.group(0); a = len(t) - len(t.lstrip(" ,.;:")); b = len(t.rstrip(" ,.;:"))
     f = re.search(r':\.\d+[a-z%]', t)  # Python format specs (:.2f, :.1%) in prose
