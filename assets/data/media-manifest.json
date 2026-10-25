@@ -5918,5 +5918,12 @@
   "bytes": 1502441,
   "sha256": "f3cd7136ca3802e401cb8876a25e49e547a6ca864f01a4a551249df3c3c38376",
   "type": "application/pdf"
+ },
+ "courses/Aircraft_Performance_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Aircraft_Performance_Study_Guide.6b7d71902346.pdf",
+  "key": "courses/Aircraft_Performance_Study_Guide.6b7d71902346.pdf",
+  "bytes": 1488096,
+  "sha256": "6b7d719023469c70609197e85d757b73c72b2c84dcb7bb6991aaf38d67e8f493",
+  "type": "application/pdf"
  }
 }
