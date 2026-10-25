@@ -5820,7 +5820,8 @@
   "bytes": 1189982,
   "sha256": "7fc7b41069de75a7d0a351d36ed9875fd6ef8b0c6367917e2b15d7a53306757a",
   "type": "application/pdf"
- }, "courses/Calculus_III_Study_Guide.pdf": {
+ },
+ "courses/Calculus_III_Study_Guide.pdf": {
   "url": "https://media.savingplanets.com/courses/Calculus_III_Study_Guide.c63b99769191.pdf",
   "key": "courses/Calculus_III_Study_Guide.c63b99769191.pdf",
   "bytes": 1273138,
@@ -5841,7 +5842,6 @@
   "sha256": "5bf98ba3e4bd73231c4c37d82fbb86ba021ce8b91b7fbf440fff4fc2eae972d7",
   "type": "application/pdf"
  },
-
  "courses/Intro_to_Aerospace_Engineering_Study_Guide.pdf": {
   "url": "https://media.savingplanets.com/courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
   "key": "courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
@@ -5861,6 +5861,13 @@
   "key": "courses/Intro_to_Programming_Study_Guide.5cc1ddb7dd17.pdf",
   "bytes": 1402402,
   "sha256": "5cc1ddb7dd17dea8baf4c26a5f66dfee6af83e4d7ccc64910dce3ae1459aab91",
+  "type": "application/pdf"
+ },
+ "courses/Statics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Statics_Study_Guide.b32ccdd8c48c.pdf",
+  "key": "courses/Statics_Study_Guide.b32ccdd8c48c.pdf",
+  "bytes": 1478745,
+  "sha256": "b32ccdd8c48c2bc0f53267039c406c24fa8257cf9dbec00071cc2651455ba648",
   "type": "application/pdf"
  }
 }
