@@ -1230,7 +1230,8 @@
   "Calculus_III.html": "assets/EPIC_Earth.jpg",
   "Differential_Equations.html": "assets/EPIC_Earth.jpg",
   "Physics_II.html": "assets/SDO_Sun.jpg",
-  "Statics.html": "assets/ISS_Flyaround_2021.jpg"
+  "Statics.html": "assets/ISS_Flyaround_2021.jpg",
+  "Dynamics.html": "assets/Landsat9_Launch.jpg"
  },
  "slides": {
   "pools": {
@@ -1771,6 +1772,11 @@
     "images/JPSS2_Atlas_V_Launch_Pad.jpg",
     "images/ArtemisII_Launch_KSC_Hancock.jpg",
     "images/ISS_Over_Ganges_STS102.jpg"
+   ],
+   "Dynamics.html": [
+    "images/ISS_Flyaround_2021.jpg",
+    "images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "images/JPSS2_Atlas_V_Launch_Pad.jpg"
    ]
   }
  }
