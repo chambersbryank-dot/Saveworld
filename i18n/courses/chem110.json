@@ -6,6 +6,13 @@
   "it": "(b). l deve essere minore di n, quindi n = 2 ammette solo l = 0 o 1.",
   "he": "(b). l חייב להיות קטן מ־n, ולכן n = 2 מאפשר רק l = 0 או 1."
  },
+ "0 up to n − 1 (s = 0, p = 1, d = 2, f = 3).": {
+  "fr": "de 0 à n − 1 (s = 0, p = 1, d = 2, f = 3).",
+  "es": "de 0 a n − 1 (s = 0, p = 1, d = 2, f = 3).",
+  "ar": "من 0 إلى n − 1 (s = 0، p = 1، d = 2، f = 3).",
+  "it": "da 0 a n − 1 (s = 0, p = 1, d = 2, f = 3).",
+  "he": "מ-0 עד n − 1 (s = 0, p = 1, d = 2, f = 3)."
+ },
  "0.07900 M. A common mistake is to forget the 1 : 2 ratio and get 0.1580 M.": {
   "fr": "0.07900 M. Une erreur fréquente consiste à oublier le rapport 1 : 2 et à obtenir 0.1580 M.",
   "es": "0.07900 M. Un error común es olvidar la proporción 1 : 2 y obtener 0.1580 M.",

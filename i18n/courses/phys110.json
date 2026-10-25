@@ -174,6 +174,13 @@
   "he": "6,371 km (גיליון הנתונים של NASA על כדור הארץ)",
   "it": "6371 km (scheda NASA sulla Terra)"
  },
+ "62.7 m in 3.28 s.": {
+  "fr": "62.7 m en 3.28 s.",
+  "es": "62.7 m en 3.28 s.",
+  "ar": "62.7 m في 3.28 s.",
+  "it": "62.7 m in 3.28 s.",
+  "he": "62.7 m ב-3.28 s."
+ },
  "7.51 km/s and about 99 minutes per orbit, which matches the published figure.": {
   "ar": "7.51 km/s ونحو 99 دقيقة لكل مدار، وهو ما يطابق الرقم المنشور.",
   "es": "7.51 km/s y unos 99 minutos por órbita, lo que coincide con la cifra publicada.",
@@ -873,6 +880,13 @@
   "fr": "Additionner des vecteurs par composantes.",
   "he": "חברו וקטורים לפי רכיבים.",
   "it": "Somma vettori per componenti."
+ },
+ "Add: 1.0g = 5.0a, so a = 9.81 ÷ 5 = 1.96 m/s².": {
+  "fr": "On additionne : 1.0g = 5.0a, donc a = 9.81 ÷ 5 = 1.96 m/s².",
+  "es": "Sumamos: 1.0g = 5.0a, así que a = 9.81 ÷ 5 = 1.96 m/s².",
+  "ar": "بالجمع: 1.0g = 5.0a، إذن a = 9.81 ÷ 5 = 1.96 m/s².",
+  "it": "Sommando: 1.0g = 5.0a, quindi a = 9.81 ÷ 5 = 1.96 m/s².",
+  "he": "מחברים: 1.0g = 5.0a, ולכן a = 9.81 ÷ 5 = 1.96 m/s²."
  },
  "Airbags reduce injury mainly by…": {
   "ar": "تقلل الوسائد الهوائية الإصابات أساسًا عن طريق…",
@@ -2351,6 +2365,13 @@
   "he": "איך פיזיקאים מודדים, איך וקטורים מתארים כיוון, ואיך מיקום, מהירות ותאוצה מקושרים בחשבון אינפיניטסימלי.",
   "it": "Come misurano i fisici, come i vettori descrivono la direzione, e come posizione, velocità e accelerazione sono legate dall’analisi."
  },
+ "I = ½MR², so 2² = 4.": {
+  "fr": "I = ½MR², donc 2² = 4.",
+  "es": "I = ½MR², así que 2² = 4.",
+  "ar": "I = ½MR²، إذن 2² = 4.",
+  "it": "I = ½MR², quindi 2² = 4.",
+  "he": "I = ½MR², ולכן 2² = 4."
+ },
  "I resists angular acceleration just as m resists linear acceleration.": {
   "ar": "تقاوم I التسارع الزاوي كما تقاوم m التسارع الخطي.",
   "es": "I se opone a la aceleración angular igual que m a la lineal.",
@@ -2553,6 +2574,20 @@
   "fr": "JCGM : Guide pour l’expression de l’incertitude (en anglais)",
   "he": "JCGM: מדריך לביטוי אי-ודאות (באנגלית)",
   "it": "JCGM: Guida all’espressione dell’incertezza (in inglese)"
+ },
+ "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. 60% is 281 kJ.": {
+  "fr": "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. 60 % correspondent à 281 kJ.",
+  "es": "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. El 60% son 281 kJ.",
+  "ar": "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. و60% منها تساوي 281 kJ.",
+  "it": "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. Il 60% è 281 kJ.",
+  "he": "K = ½ × 1,500 × 25² = 468,750 J ≈ 469 kJ. ‏60% מזה הם 281 kJ."
+ },
+ "K = ½mv², so 2² = 4.": {
+  "fr": "K = ½mv², donc 2² = 4.",
+  "es": "K = ½mv², así que 2² = 4.",
+  "ar": "K = ½mv²، إذن 2² = 4.",
+  "it": "K = ½mv², quindi 2² = 4.",
+  "he": "K = ½mv², ולכן 2² = 4."
  },
  "K before = 24 J; after = ½ × 4.0 × 9.0 = 18 J.": {
   "ar": "K قبل = 24 J؛ بعد = ½ × 4.0 × 9.0 = 18 J.",
@@ -6166,6 +6201,13 @@
   "he": "קילוואט-שעה",
   "it": "chilowattora"
  },
+ "ln 5 = 1.609, so Δv = 4,830 m/s.": {
+  "fr": "ln 5 = 1.609, donc Δv = 4,830 m/s.",
+  "es": "ln 5 = 1.609, así que Δv = 4,830 m/s.",
+  "ar": "ln 5 = 1.609، إذن Δv = 4,830 m/s.",
+  "it": "ln 5 = 1.609, quindi Δv = 4,830 m/s.",
+  "he": "ln 5 = 1.609, ולכן Δv = 4,830 m/s."
+ },
  "longer period and higher speed": {
   "ar": "دورة أطول وسرعة أكبر",
   "es": "período más largo y mayor velocidad",
@@ -6431,6 +6473,13 @@
   "fr": "v = 2πr/T = 2π × 6.378 × 10⁶ ÷ 86164 = 465 m/s. Les fusées lancées vers l’est près de l’équateur bénéficient gratuitement de cette vitesse.",
   "he": "v = 2πr/T = 2π × 6.378 × 10⁶ ÷ 86,164 = 465 m/s. טילים ששוגרו מזרחה ליד קו המשווה מקבלים את המהירות הזו בחינם.",
   "it": "v = 2πr/T = 2π × 6.378 × 10⁶ ÷ 86164 = 465 m/s. I razzi lanciati verso est vicino all’equatore ottengono questa velocità gratis."
+ },
+ "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s.": {
+  "fr": "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s.",
+  "es": "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s.",
+  "ar": "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s.",
+  "it": "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s.",
+  "he": "v = v₀ + at = 0 + 3.0 × 8.0 = 24 m/s."
  },
  "v = ωr at the contact point; total K = ½mv² + ½Iω².": {
   "ar": "v = ωr عند نقطة التلامس؛ وK الكلية = ½mv² + ½Iω².",
