@@ -4,7 +4,7 @@ becomes one course page; scripts/courses/roadmap.py is the 4-year track on Cours
 Also: anim-banners.json entries (multi-photo banner from each module's BANNER/CREDITS), assets/courses.css + assets/courses.js.
   python3 scripts/build-courses.py           build
   python3 scripts/build-courses.py --check   arithmetic checks (module CHECKS) + every external link must load
-Course module fields: see scripts/courses/chem110.py (the template). Optional: LAB_NAME (lab heading), REF_TITLE/REF_INTRO (the reference-links section; default Periodic table). Oct 24: phys110.py = course 2. Idempotent."""
+Course module fields: see scripts/courses/chem110.py (the template). Optional: LAB_NAME (lab heading) or LAB_TITLE (whole heading), REF_TITLE/REF_INTRO (the reference-links section; default Periodic table). Oct 24: phys110.py = course 2. Idempotent."""
 import os, sys, re, json, glob, html, importlib, subprocess, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT); sys.path.insert(0, 'scripts')
 import importlib.util
@@ -121,7 +121,7 @@ def course_page(C):
              '<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">Turn on JavaScript to track progress.</p></div>'
              '<p><button type="button" class="crs-btn crs-reset" data-reset>Reset my progress</button></p>' + top() + '</section>')
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
-    o.append(f'<section id="lab"><h2>The lab ({esc(getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1]))})</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
+    o.append(f'<section id="lab"><h2>{esc(getattr(C, "LAB_TITLE", "The lab (" + getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1]) + ")"))}</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
              + f'<p class="crs-src">Safety reference: {ext(*C.SAFETY_SRC)}</p>' + ''.join(lab(C, K, L) for L in C.LABS) + top() + '</section>')
     ex = ['<section id="exam"><h2>Exam prep practice sets</h2><p>Time yourself: about 10 minutes per problem. Then compare with the full solutions.</p>']
     for t, probs in C.EXAMS:
