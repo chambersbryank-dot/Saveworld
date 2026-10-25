@@ -34,7 +34,9 @@ def _(s):
     return t
 esc = lambda s: html.escape(_(s), quote=True)
 UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
-def needs_tr(s):  # words to translate (not a URL, a site page name, or numbers + units)
+_SHORTW = re.compile(r'(?<![\w^_′])(so|to|of|in|is|or|if|by|as|at|an|on|up|no)(?![\w(′])')
+def needs_tr(s):  # words to translate (not a URL, a site page name, or numbers + units). Oct 25: a formula sentence with a short English word ("…, so a = 2") counts too
+    if isinstance(s, str) and not re.match(r'(https?:|mailto:|#)', s) and _SHORTW.search(s): return True
     return bool(re.search('[a-z]{3}', s)) and not re.match(r'(https?:|mailto:|#)', s) and not re.fullmatch(r'(\.\./)?[\w-]+\.html(#[\w-]+)?', s) and not same(s)
 def same(s):  # numbers + SI units only (e.g. "0.500 mol", "8.314 J/(mol·K)"): identical in every language
     return not re.search('[A-Za-zÀ-ÿ]{2,}', re.sub(UNITS_RX, '', s))
@@ -191,7 +193,30 @@ def course_page(C):
 def en_only(h):
     # alternates only for languages whose page exists on disk (all six once phase 2 is built)
     h = re.sub(r'\n?<link rel="alternate" hreflang="(?!en"|x-default")[^"]+" href="[^"]+">', lambda m: m.group(0) if os.path.exists(m.group(0).split('savingplanets.com/')[1].split('"')[0]) else '', h)
-    return fix_switch(he_card(h))
+    return fix_switch(he_card(bidi(h)))
+
+# RTL pages (ar, he): plain-text formulas inside RTL sentences (e.g. "f(x) = x² + 1", "∫ 2x dx") get <bdi dir="ltr"> so the
+# bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
+_FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°πΔδθλνμσωφεαβγρτΩΣ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
+_FRUN = re.compile(_FTOK + '+')
+_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½\u02b0-\u02ff]|\w\(|\d\s*-\s*\d")
+def _wrap_run(m):
+    t = m.group(0); a = len(t) - len(t.lstrip(" ,.;:")); b = len(t.rstrip(" ,.;:"))
+    core = t[a:b]
+    while core and core[-1] in '( ' : core = core[:-1]; b -= 1
+    while core.endswith(')') and core.count('(') < core.count(')'): core = core[:-1]; b -= 1
+    while core.startswith('(') and core.count('(') > core.count(')'): core = core[1:]; a += 1
+    if len(core) < 3 or not re.search(r'[A-Za-z0-9]', core) or not _FOP.search(core): return t
+    return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]
+def bidi(h):
+    if LANG not in RTL or '<div class="crs"' not in h: return h
+    i = h.index('<div class="crs"'); j = h.rindex('</main>')
+    body = h[i:j]; keep = []
+    def hold(m): keep.append(m.group(0)); return f'\x00{len(keep) - 1}\x00'
+    body = re.sub(r'<div class="crs-math">.*?</div>|<(script|style|pre|code)\b.*?</\1>|<bdi\b.*?</bdi>', hold, body, flags=re.S)
+    body = re.sub(r'>([^<\x00]+)<', lambda m: '>' + _FRUN.sub(_wrap_run, m.group(1)) + '<', body)
+    body = re.sub(r'\x00(\d+)\x00', lambda m: keep[int(m.group(1))], body)
+    return h[:i] + body + h[j:]
 
 def he_card(h):
     # he/ has no share cards of its own (build-og: fr/es/ar/it); its Kids_Map template carries en/Contact.jpg, so use this page's English card
