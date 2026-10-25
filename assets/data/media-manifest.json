@@ -5876,5 +5876,12 @@
   "bytes": 1494912,
   "sha256": "ea938dbccffaf14f974a9708d44b1225da05d8879f7e023e100bdb707e22ebfb",
   "type": "application/pdf"
+ },
+ "courses/Mechanics_of_Materials_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Mechanics_of_Materials_Study_Guide.abb1ffc8aaed.pdf",
+  "key": "courses/Mechanics_of_Materials_Study_Guide.abb1ffc8aaed.pdf",
+  "bytes": 1469799,
+  "sha256": "abb1ffc8aaed0bcc6d873a27d586ee527f0d8ce5d70abebbd4389f41f70a3601",
+  "type": "application/pdf"
  }
 }
