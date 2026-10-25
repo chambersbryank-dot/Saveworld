@@ -34,9 +34,11 @@ def _(s):
     return t
 esc = lambda s: html.escape(_(s), quote=True)
 UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
+_CAPW = re.compile(r'[A-Z][a-z]{2,}(?![\w(′.])(?=.*[=≈∇∂Α-Ωα-ω])')
 _SHORTW = re.compile(r'(?<![\w^_′])(so|to|of|in|is|or|if|by|as|at|an|on|up|no)(?![\w(′])')
 def needs_tr(s):  # words to translate (not a URL, a site page name, or numbers + units). Oct 25: a formula sentence with a short English word ("…, so a = 2") counts too
     if isinstance(s, str) and not re.match(r'(https?:|mailto:|#)', s) and _SHORTW.search(s): return True
+    if isinstance(s, str) and not re.match(r'(https?:|mailto:|#)', s) and _CAPW.match(s): return True  # Oct 25: formula sentence opening with a capitalised word ('Use Δv = …', 'Set ΔG = 0: …', 'One τ')
     return bool(re.search('[a-z]{3}', s)) and not re.match(r'(https?:|mailto:|#)', s) and not re.fullmatch(r'(\.\./)?[\w-]+\.html(#[\w-]+)?', s) and not same(s)
 def same(s):  # numbers + SI units only (e.g. "0.500 mol", "8.314 J/(mol·K)"): identical in every language
     return not re.search('[A-Za-zÀ-ÿ]{2,}', re.sub(UNITS_RX, '', s))
