@@ -75,8 +75,8 @@ def eqblock(K, tex, cap): return f'<figure class="crs-eq"><div class="crs-math">
 def _code(src, out=None):
     """Optional code listing (+ verified output) for programming courses; code is never translated. Inline style so courses.css/V need no change."""
     st = 'style="direction:ltr;text-align:left;overflow-x:auto;padding:.75em;border-radius:6px;background:rgba(127,127,127,.12);font-size:.9em"'
-    r = f'<pre class="crs-code" {st}><code>{html.escape(src)}</code></pre>' if src else ''
-    if out is not None: r += f'<p><strong>{esc("Output")}</strong></p><pre class="crs-out" {st}><code>{html.escape(out)}</code></pre>'
+    r = f'<pre class="crs-code" dir="ltr" {st}><code>{html.escape(src)}</code></pre>' if src else ''
+    if out is not None: r += f'<p><strong>{esc("Output")}</strong></p><pre class="crs-out" dir="ltr" {st}><code>{html.escape(out)}</code></pre>'
     return r
 
 def unit(C, K, i, u):
@@ -199,14 +199,21 @@ def en_only(h):
 # bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
 _FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
 _FRUN = re.compile(_FTOK + '+')
-_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\d\s*-\s*\d")
+_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\w\[|[*%]|\d\s*-\s*\d")
 def _wrap_run(m):
     t = m.group(0); a = len(t) - len(t.lstrip(" ,.;:")); b = len(t.rstrip(" ,.;:"))
+    f = re.search(r':\.\d+[a-z%]', t)  # Python format specs (:.2f, :.1%) in prose
+    if f and not t.strip(' ,.;()-').replace(f.group(0), ''): return t[:f.start()] + '<bdi dir="ltr">' + f.group(0) + '</bdi>' + t[f.end():]
     core = t[a:b]
     while core and core[-1] in '( ' : core = core[:-1]; b -= 1
     while core.endswith(')') and core.count('(') < core.count(')'): core = core[:-1]; b -= 1
     while core.startswith('(') and core.count('(') > core.count(')'): core = core[1:]; a += 1
-    if core.startswith('-−'): core = core[1:]; a += 1  # Hebrew prefix hyphen (ו-) before a minus sign stays outside
+    if core.startswith('-−'): core = core[1:]; a += 1
+    pos = m.start() + a
+    if core.startswith('-') and pos > 0 and '\u05d0' <= m.string[pos - 1] <= '\u05ea': core = core[1:]; a += 1  # Hebrew prefix ב-30%  # Hebrew prefix hyphen (ו-) before a minus sign stays outside
+    if not re.search(r'[A-Za-z0-9]', core) and re.search(r'[=!*/%^]', core):  # operators only, e.g. "//, %" in prose: wrap each one
+        return t[:a] + re.sub(r'==|!=|\+=|-=|\*\*|//|%|\*|=|(?:&lt;|&gt;)=?', lambda o: '<bdi dir="ltr">' + o.group(0) + '</bdi>', core) + t[b:]
+    if re.fullmatch(r'==|!=|\+=|-=|\*=|/=|\*\*|//|%|\*|=|(?:&lt;|&gt;)=?|\^', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # lone operators (% ** == +=) in prose
     if len(core) == 2 and re.fullmatch(r'[Ø⌀±+−][0-9]', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # Ø6, +5
     if len(core) < 3 or not re.search(r'[A-Za-z0-9]', core) or not _FOP.search(core): return t
     return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]
