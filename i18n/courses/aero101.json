@@ -13,6 +13,13 @@
   "ar": "(L/D)max ≈ 13.7 عند C_L ≈ 0.69.",
   "he": "(L/D)max ≈ 13.7 ב-C_L ≈ 0.69."
  },
+ "0.15 (stable).": {
+  "fr": "0.15 (stable).",
+  "es": "0.15 (estable).",
+  "it": "0.15 (stabile).",
+  "ar": "0.15 (مستقر).",
+  "he": "0.15 (יציב)."
+ },
  "0.15, or 15%: stable.": {
   "fr": "0.15, soit 15% : stable.",
   "es": "0.15, o sea 15%: estable.",
@@ -125,6 +132,13 @@
   "ar": "92 دقيقة",
   "he": "92 דקות"
  },
+ "A 1,100 kg airplane (S = 16.2 m², C_L,max = 1.6): find its stall speed at 5,000 m.": {
+  "fr": "Un avion de 1100 kg (S = 16.2 m², C_L,max = 1.6) : trouvez sa vitesse de décrochage à 5000 m.",
+  "es": "Un avión de 1100 kg (S = 16.2 m², C_L,max = 1.6): halla su velocidad de pérdida a 5000 m.",
+  "it": "Un aereo da 1100 kg (S = 16.2 m², C_L,max = 1.6): trova la sua velocità di stallo a 5000 m.",
+  "ar": "طائرة كتلتها 1100 kg (S = 16.2 m²، C_L,max = 1.6): أوجد سرعة انهيارها عند 5000 m.",
+  "he": "מטוס של 1100 kg (S = 16.2 m², C_L,max = 1.6): מצאו את מהירות ההזדקרות שלו בגובה 5000 m."
+ },
  "A 1,100 kg airplane with a 16.2 m² wing flies level at 55 m/s at sea level (ρ = 1.227 kg/m³). Find C_L.": {
   "fr": "Un avion de 1100 kg avec une aile de 16.2 m² vole en palier à 55 m/s au niveau de la mer (ρ = 1.227 kg/m³). Trouvez C_L.",
   "es": "Un avión de 1100 kg con un ala de 16.2 m² vuela nivelado a 55 m/s a nivel del mar (ρ = 1.227 kg/m³). Halla C_L.",
@@ -181,6 +195,13 @@
   "ar": "رحلة تحرق 20 t من الوقود. جناح جديد يرفع L/D من 17 إلى 19. قدّر الوقود وCO₂ الموفرين.",
   "he": "טיסה שורפת 20 t דלק. כנף חדשה מעלה את L/D מ-17 ל-19. העריכו את הדלק וה-CO₂ שנחסכים."
  },
+ "A flight burns 20 t of fuel. How much CO₂?": {
+  "fr": "Un vol brûle 20 t de carburant. Combien de CO₂ ?",
+  "es": "Un vuelo quema 20 t de combustible. ¿Cuánto CO₂?",
+  "it": "Un volo brucia 20 t di carburante. Quanta CO₂?",
+  "ar": "رحلة تحرق 20 t من الوقود. كم CO₂ ينتج؟",
+  "he": "טיסה שורפת 20 t דלק. כמה CO₂?"
+ },
  "A flight burns 5,000 kg of fuel. How much CO₂?": {
   "fr": "Un vol brûle 5000 kg de carburant. Combien de CO₂ ?",
   "es": "Un vuelo quema 5000 kg de combustible. ¿Cuánto CO₂ produce?",
@@ -201,6 +222,13 @@
   "it": "Un aliante ha un’ala da 50 g a x = 10 cm, una coda da 10 g a x = 40 cm e 20 g di zavorra nel muso a x = 0. Trova il CG.",
   "ar": "طائرة شراعية لها جناح كتلته 50 g عند x = 10 cm، وذيل كتلته 10 g عند x = 40 cm، وثقل في المقدمة 20 g عند x = 0. أوجد CG.",
   "he": "לדאון יש כנף של 50 g ב-x = 10 cm, זנב של 10 g ב-x = 40 cm ו-20 g משקולת אף ב-x = 0. מצאו את ה-CG."
+ },
+ "A glider with L/D = 13.7 starts 1,500 m up. How far can it glide?": {
+  "fr": "Un planeur de L/D = 13.7 part de 1500 m d’altitude. Jusqu’où peut-il planer ?",
+  "es": "Un planeador con L/D = 13.7 parte a 1500 m de altura. ¿Qué distancia puede planear?",
+  "it": "Un aliante con L/D = 13.7 parte da 1500 m di quota. Quanto lontano può planare?",
+  "ar": "طائرة شراعية L/D لها = 13.7 تبدأ على ارتفاع 1500 m. إلى أي مسافة يمكنها الانزلاق؟",
+  "he": "דאון עם L/D = 13.7 מתחיל בגובה 1500 m. כמה רחוק הוא יכול לדאות?"
  },
  "A glider with lift-to-drag ratio L/D travels L/D meters forward for every meter of height lost: tan γ = D/L.": {
   "fr": "Un planeur de finesse L/D parcourt L/D mètres vers l’avant pour chaque mètre de hauteur perdu : tan γ = D/L.",
@@ -461,6 +489,13 @@
   "ar": "محرك يولد 100 kN بينما يحرق 2.5 kg/s من الوقود. أوجد I_sp.",
   "he": "מנוע מייצר 100 kN תוך שריפת 2.5 kg/s דלק. מצאו את ה-I_sp שלו."
  },
+ "An engine moves 500 kg/s of air from 250 to 320 m/s. Find thrust and η_p.": {
+  "fr": "Un moteur accélère 500 kg/s d’air de 250 à 320 m/s. Trouvez la poussée et η_p.",
+  "es": "Un motor acelera 500 kg/s de aire de 250 a 320 m/s. Halla el empuje y η_p.",
+  "it": "Un motore accelera 500 kg/s di aria da 250 a 320 m/s. Trova la spinta e η_p.",
+  "ar": "محرك يدفع 500 kg/s من الهواء من 250 إلى 320 m/s. أوجد الدفع وη_p.",
+  "he": "מנוע מאיץ 500 kg/s של אוויר מ-250 ל-320 m/s. מצאו את הדחף ואת η_p."
+ },
  "An engine with I_sp = 450 s fires until m₀/m_f = 5. Find Δv.": {
   "fr": "Un moteur d’I_sp = 450 s fonctionne jusqu’à m₀/m_f = 5. Trouvez Δv.",
   "es": "Un motor con I_sp = 450 s funciona hasta que m₀/m_f = 5. Halla Δv.",
@@ -474,6 +509,13 @@
   "it": "Angolo tra la corda e il flusso incidente.",
   "ar": "الزاوية بين الوتر والتدفق القادم.",
   "he": "הזווית בין המיתר לזרימה הנכנסת."
+ },
+ "Angle between the chord line and the oncoming air.": {
+  "fr": "Angle entre la corde et l’air incident.",
+  "es": "Ángulo entre la línea de cuerda y el aire incidente.",
+  "it": "Angolo tra la linea di corda e l’aria incidente.",
+  "ar": "الزاوية بين خط الوتر والهواء القادم.",
+  "he": "הזווית בין קו המיתר לאוויר הנכנס."
  },
  "Angle of attack": {
   "fr": "Angle d’attaque",
@@ -566,6 +608,13 @@
   "ar": "نموذج متوسط لـ T وp وρ بدلالة الارتفاع.",
   "he": "מודל ממוצע של T, p, ρ כפונקציה של הגובה."
  },
+ "Average model of air properties versus altitude.": {
+  "fr": "Modèle moyen des propriétés de l’air en fonction de l’altitude.",
+  "es": "Modelo promedio de las propiedades del aire frente a la altitud.",
+  "it": "Modello medio delle proprietà dell’aria in funzione della quota.",
+  "ar": "نموذج متوسط لخصائص الهواء مقابل الارتفاع.",
+  "he": "מודל ממוצע של תכונות האוויר כפונקציה של הגובה."
+ },
  "Balanced, zero net moment.": {
   "fr": "Équilibré, moment résultant nul.",
   "es": "Equilibrado, momento neto nulo.",
@@ -621,6 +670,13 @@
   "it": "Autonomia di Breguet",
   "ar": "مدى بريغيه",
   "he": "טווח בריגה"
+ },
+ "Breguet range equation": {
+  "fr": "Équation de distance franchissable de Breguet",
+  "es": "Ecuación de alcance de Breguet",
+  "it": "Equazione dell’autonomia di Breguet",
+  "ar": "معادلة مدى بريغيه",
+  "he": "משוואת הטווח של ברגה"
  },
  "Breguet range equation (jet)": {
   "fr": "Équation de Breguet de la distance franchissable (réacteur)",
@@ -692,6 +748,13 @@
   "ar": "موضع CG الذي يعطي استقرارًا محايدًا في الانحدار.",
   "he": "מיקום ה-CG ליציבות ניטרלית בעלרוד."
  },
+ "CG position giving neutral pitch stability.": {
+  "fr": "Position du CG donnant une stabilité neutre en tangage.",
+  "es": "Posición del CG que da estabilidad neutra en cabeceo.",
+  "it": "Posizione del CG che dà stabilità neutra in beccheggio.",
+  "ar": "موضع CG الذي يعطي استقرارًا محايدًا في الانحدار.",
+  "he": "מיקום CG שנותן יציבות ניטרלית בעלרוד."
+ },
  "CO2M: measuring CO₂ from space": {
   "fr": "CO2M : mesurer le CO₂ depuis l’espace",
   "es": "CO2M: medir el CO₂ desde el espacio",
@@ -712,6 +775,13 @@
   "it": "CO₂ per kg di carburante",
   "ar": "CO₂ لكل kg من الوقود",
   "he": "CO₂ לכל kg דלק"
+ },
+ "C_D as a function of C_L.": {
+  "fr": "C_D en fonction de C_L.",
+  "es": "C_D en función de C_L.",
+  "it": "C_D in funzione di C_L.",
+  "ar": "C_D بدلالة C_L.",
+  "he": "C_D כפונקציה של C_L."
  },
  "Calculus I is useful for a few derivations but not required for the numbers.": {
   "fr": "L’Analyse I est utile pour quelques démonstrations mais pas nécessaire pour les calculs numériques.",
@@ -944,6 +1014,13 @@
   "ar": "تصحيح ميل منحنى الرفع لجناح محدود نسبة باعه AR.",
   "he": "לתקן את שיפוע העילוי לכנף סופית עם יחס ממדים AR."
  },
+ "Curvature of an airfoil’s mean line.": {
+  "fr": "Courbure de la ligne moyenne d’un profil.",
+  "es": "Curvatura de la línea media de un perfil.",
+  "it": "Curvatura della linea media di un profilo.",
+  "ar": "انحناء الخط الأوسط للمقطع الانسيابي.",
+  "he": "העקמומיות של קו האמצע של פרופיל."
+ },
  "Curvature of the mean line.": {
   "fr": "Courbure de la ligne moyenne.",
   "es": "Curvatura de la línea media.",
@@ -1077,6 +1154,13 @@
   "ar": "المسافة = 1000 × 20.",
   "he": "מרחק = 1000 × 20."
  },
+ "Distance from CG to neutral point in mean chords.": {
+  "fr": "Distance entre le CG et le point neutre, en cordes moyennes.",
+  "es": "Distancia del CG al punto neutro en cuerdas medias.",
+  "it": "Distanza dal CG al punto neutro in corde medie.",
+  "ar": "المسافة من CG إلى النقطة المحايدة بوحدات الوتر المتوسط.",
+  "he": "המרחק מה-CG לנקודה הניטרלית ביחידות של מיתר ממוצע."
+ },
  "Distance over height = L/D.": {
   "fr": "Distance sur hauteur = L/D.",
   "es": "Distancia entre altura = L/D.",
@@ -1111,6 +1195,13 @@
   "it": "Raddoppiare la superficie alare a parità di velocità e C_L…",
   "ar": "مضاعفة مساحة الجناح عند السرعة نفسها وC_L نفسه…",
   "he": "הכפלת שטח הכנף באותה מהירות ובאותו C_L…"
+ },
+ "Drag caused by producing lift with a finite wing.": {
+  "fr": "Traînée due à la production de portance par une aile finie.",
+  "es": "Resistencia causada por producir sustentación con un ala finita.",
+  "it": "Resistenza causata dalla produzione di portanza con un’ala finita.",
+  "ar": "السحب الناتج عن توليد الرفع بجناح محدود.",
+  "he": "גרר הנגרם מיצירת עילוי בכנף סופית."
  },
  "Drag comes from skin friction, pressure (form) drag and induced drag, the cost of making lift with a finite wing.": {
   "fr": "La traînée provient du frottement, de la traînée de pression (de forme) et de la traînée induite, le prix à payer pour produire de la portance avec une aile finie.",
@@ -1252,6 +1343,20 @@
   "ar": "تنتهي كل وحدة بقسم قصير موثق بالمصادر يبين كيف تساعد أفكارها الناس والكوكب.",
   "he": "כל יחידה מסתיימת בחלק קצר ומבוסס מקורות שמראה איך הרעיונות שלה עוזרים לאנשים ולכדור הארץ."
  },
+ "Earth’s GM": {
+  "fr": "GM de la Terre",
+  "es": "GM de la Tierra",
+  "it": "GM della Terra",
+  "ar": "GM للأرض",
+  "he": "GM של כדור הארץ"
+ },
+ "Earth’s mean radius": {
+  "fr": "Rayon moyen de la Terre",
+  "es": "Radio medio de la Tierra",
+  "it": "Raggio medio della Terra",
+  "ar": "متوسط نصف قطر الأرض",
+  "he": "הרדיוס הממוצע של כדור הארץ"
+ },
  "Efficient aircraft, SAF, operations.": {
   "fr": "Avions efficaces, SAF, opérations.",
   "es": "Aviones eficientes, SAF, operaciones.",
@@ -1321,6 +1426,13 @@
   "it": "Motori e spinta.",
   "ar": "المحركات والدفع.",
   "he": "מנועים ודחף."
+ },
+ "Equatorial orbit with a one-sidereal-day period.": {
+  "fr": "Orbite équatoriale de période égale à un jour sidéral.",
+  "es": "Órbita ecuatorial con un periodo de un día sideral.",
+  "it": "Orbita equatoriale con periodo di un giorno sidereo.",
+  "ar": "مدار استوائي دورته يوم نجمي واحد.",
+  "he": "מסלול משווני עם זמן מחזור של יום כוכבי אחד."
  },
  "Estimate first; aerospace numbers have familiar sizes (sea-level air ≈ 1.2 kg/m³, low orbit ≈ 7.7 km/s).": {
   "fr": "Estimez d’abord ; les grandeurs aérospatiales ont des ordres familiers (air au niveau de la mer ≈ 1.2 kg/m³, orbite basse ≈ 7.7 km/s).",
@@ -1455,6 +1567,13 @@
   "ar": "املأ صفوفًا لـ I_sp = 300 s و450 s عند نسب كتلة 2 و4 و8.",
   "he": "מלאו שורות עבור I_sp = 300 s ו-450 s ביחסי מסה 2, 4 ו-8."
  },
+ "Find (L/D)max for C_D0 = 0.025, e = 0.8, AR = 7.5.": {
+  "fr": "Trouvez (L/D)max pour C_D0 = 0.025, e = 0.8, AR = 7.5.",
+  "es": "Halla (L/D)max para C_D0 = 0.025, e = 0.8, AR = 7.5.",
+  "it": "Trova (L/D)max per C_D0 = 0.025, e = 0.8, AR = 7.5.",
+  "ar": "أوجد (L/D)max عندما C_D0 = 0.025، e = 0.8، AR = 7.5.",
+  "he": "מצאו את (L/D)max עבור C_D0 = 0.025, e = 0.8, AR = 7.5."
+ },
  "Find T, p and ρ at 5,000 m with NASA’s model.": {
   "fr": "Trouvez T, p et ρ à 5000 m avec le modèle de la NASA.",
   "es": "Halla T, p y ρ a 5000 m con el modelo de la NASA.",
@@ -1468,6 +1587,13 @@
   "it": "Trova il Δv di Hohmann da un’orbita circolare a 300 km al raggio geostazionario.",
   "ar": "أوجد Δv لانتقال هوهمان من مدار دائري على ارتفاع 300 km إلى نصف قطر المدار الثابت بالنسبة للأرض.",
   "he": "מצאו את ה-Δv של הוהמן ממסלול מעגלי בגובה 300 km לרדיוס הגאוסטציונרי."
+ },
+ "Find the Hohmann Δv from a 300 km orbit to geostationary radius.": {
+  "fr": "Trouvez le Δv de Hohmann d’une orbite à 300 km jusqu’au rayon géostationnaire.",
+  "es": "Halla el Δv de Hohmann desde una órbita de 300 km hasta el radio geoestacionario.",
+  "it": "Trova il Δv di Hohmann da un’orbita a 300 km al raggio geostazionario.",
+  "ar": "أوجد Δv لانتقال هوهمان من مدار على 300 km إلى نصف القطر الثابت بالنسبة للأرض.",
+  "he": "מצאו את Δv של הומן ממסלול בגובה 300 km לרדיוס הגיאוסטציונרי."
  },
  "Find the Reynolds number of a 1.5 m chord at 55 m/s at sea level (μ = 1.789 × 10⁻⁵ kg/(m·s)).": {
   "fr": "Trouvez le nombre de Reynolds d’une corde de 1.5 m à 55 m/s au niveau de la mer (μ = 1.789 × 10⁻⁵ kg/(m·s)).",
@@ -1518,6 +1644,13 @@
   "ar": "أوجد ميل الرفع لجناح فيه AR = 8 وe = 0.9.",
   "he": "מצאו את שיפוע העילוי של כנף עם AR = 8 ו-e = 0.9."
  },
+ "Find the period of a circular orbit 400 km up.": {
+  "fr": "Trouvez la période d’une orbite circulaire à 400 km d’altitude.",
+  "es": "Halla el periodo de una órbita circular a 400 km de altura.",
+  "it": "Trova il periodo di un’orbita circolare a 400 km di quota.",
+  "ar": "أوجد دورة مدار دائري على ارتفاع 400 km.",
+  "he": "מצאו את זמן המחזור של מסלול מעגלי בגובה 400 km."
+ },
  "Find the sea-level density from p = 101.40 kPa and T = 15.04 °C.": {
   "fr": "Trouvez la masse volumique au niveau de la mer à partir de p = 101.40 kPa et T = 15.04 °C.",
   "es": "Halla la densidad a nivel del mar a partir de p = 101.40 kPa y T = 15.04 °C.",
@@ -1538,6 +1671,13 @@
   "it": "Trova la velocità del suono al livello del mare (15 °C) e a 11 km (−56.5 °C).",
   "ar": "أوجد سرعة الصوت عند مستوى سطح البحر (15 °C) وعند 11 km (−56.5 °C).",
   "he": "מצאו את מהירות הקול בגובה פני הים (15 °C) ובגובה 11 km (−56.5 °C)."
+ },
+ "Find the static margin for x_np = 0.40c̄ and x_cg = 0.25c̄.": {
+  "fr": "Trouvez la marge statique pour x_np = 0.40c̄ et x_cg = 0.25c̄.",
+  "es": "Halla el margen estático para x_np = 0.40c̄ y x_cg = 0.25c̄.",
+  "it": "Trova il margine statico per x_np = 0.40c̄ e x_cg = 0.25c̄.",
+  "ar": "أوجد الهامش الساكن عندما x_np = 0.40c̄ وx_cg = 0.25c̄.",
+  "he": "מצאו את השוליים הסטטיים עבור x_np = 0.40c̄ ו-x_cg = 0.25c̄."
  },
  "Find the temperature at 1,500 m in the NASA model.": {
   "fr": "Trouvez la température à 1500 m dans le modèle de la NASA.",
@@ -1574,12 +1714,26 @@
   "ar": "أوجد Δv عندما I_sp = 311 s وm₀/m_f = 3.",
   "he": "מצאו את Δv עבור I_sp = 311 s ו-m₀/m_f = 3."
  },
+ "Find Δv for I_sp = 450 s and mass ratio 5.": {
+  "fr": "Trouvez Δv pour I_sp = 450 s et un rapport de masse de 5.",
+  "es": "Halla Δv para I_sp = 450 s y relación de masa 5.",
+  "it": "Trova Δv per I_sp = 450 s e rapporto di massa 5.",
+  "ar": "أوجد Δv عندما I_sp = 450 s ونسبة الكتلة 5.",
+  "he": "מצאו את Δv עבור I_sp = 450 s ויחס מסה 5."
+ },
  "Find η_p when v_e = v₀.": {
   "fr": "Trouvez η_p quand v_e = v₀.",
   "es": "Halla η_p cuando v_e = v₀.",
   "it": "Trova η_p quando v_e = v₀.",
   "ar": "أوجد η_p عندما v_e = v₀.",
   "he": "מצאו את η_p כאשר v_e = v₀."
+ },
+ "Find ρ at 5,000 m with NASA’s model.": {
+  "fr": "Trouvez ρ à 5000 m avec le modèle de la NASA.",
+  "es": "Halla ρ a 5000 m con el modelo de la NASA.",
+  "it": "Trova ρ a 5000 m con il modello della NASA.",
+  "ar": "أوجد ρ عند 5000 m باستخدام نموذج ناسا.",
+  "he": "מצאו את ρ בגובה 5000 m בעזרת המודל של NASA."
  },
  "Finite-wing lift slope": {
   "fr": "Pente de portance d’une aile finie",
@@ -1622,6 +1776,13 @@
   "it": "Volare più veloci dà sempre più autonomia.",
   "ar": "الطيران الأسرع يعطي دائمًا مدى أكبر.",
   "he": "טיסה מהירה יותר תמיד נותנת טווח גדול יותר."
+ },
+ "Follows worked examples but struggles to choose the right equation.": {
+  "fr": "Suit les exemples résolus mais peine à choisir la bonne équation.",
+  "es": "Sigue los ejemplos resueltos pero le cuesta elegir la ecuación correcta.",
+  "it": "Segue gli esempi svolti ma fatica a scegliere l’equazione giusta.",
+  "ar": "يتبع الأمثلة المحلولة لكنه يجد صعوبة في اختيار المعادلة الصحيحة.",
+  "he": "עוקב אחרי דוגמאות פתורות אך מתקשה לבחור את המשוואה הנכונה."
  },
  "For a jet, range follows the Breguet equation: R = (V/c)(L/D) ln(W_i/W_f). Three levers: engine efficiency (V/c), aerodynamics (L/D) and structures (weight fraction).": {
   "fr": "Pour un avion à réaction, la distance franchissable suit l’équation de Breguet : R = (V/c)(L/D) ln(W_i/W_f). Trois leviers : le rendement des moteurs (V/c), l’aérodynamique (L/D) et les structures (fraction de masse).",
@@ -1693,12 +1854,47 @@
   "ar": "تضع أربعة مختبرات المقرر موضع التطبيق: نفق رياح افتراضي باستخدام FoilSim من ناسا، وحاسبة لمعادلة الصاروخ، وطائرة شراعية تصممها وتطيرها، وجدول بيانات للغلاف الجوي وسرعة الانهيار.",
   "he": "ארבע מעבדות מיישמות את הקורס: מנהרת רוח וירטואלית עם FoilSim של NASA, מחשבון למשוואת הרקטה, דאון שאתם מתכננים ומטיסים, וגיליון אלקטרוני של אטמוספרה ומהירות הזדקרות."
  },
+ "Fraction of jet power that becomes useful thrust power.": {
+  "fr": "Fraction de la puissance du jet qui devient puissance de poussée utile.",
+  "es": "Fracción de la potencia del chorro que se convierte en potencia de empuje útil.",
+  "it": "Frazione della potenza del getto che diventa potenza di spinta utile.",
+  "ar": "نسبة قدرة النفث التي تتحول إلى قدرة دفع مفيدة.",
+  "he": "החלק מהספק הסילון שהופך להספק דחף מועיל."
+ },
  "Free FAA handbook chapters on the atmosphere and aerodynamics.": {
   "fr": "Chapitres gratuits du manuel de la FAA sur l’atmosphère et l’aérodynamique.",
   "es": "Capítulos gratuitos del manual de la FAA sobre la atmósfera y la aerodinámica.",
   "it": "Capitoli gratuiti del manuale FAA su atmosfera e aerodinamica.",
   "ar": "فصول مجانية من دليل FAA عن الغلاف الجوي والديناميكا الهوائية.",
   "he": "פרקים חינמיים מהמדריך של FAA על האטמוספרה והאווירודינמיקה."
+ },
+ "Free FAA handbook on aerodynamics, performance and stability.": {
+  "fr": "Manuel gratuit de la FAA sur l’aérodynamique, les performances et la stabilité.",
+  "es": "Manual gratuito de la FAA sobre aerodinámica, actuaciones y estabilidad.",
+  "it": "Manuale gratuito della FAA su aerodinamica, prestazioni e stabilità.",
+  "ar": "دليل FAA المجاني في الديناميكا الهوائية والأداء والاستقرار.",
+  "he": "מדריך חינמי של FAA על אווירודינמיקה, ביצועים ויציבות."
+ },
+ "Free intro to aerospace engineering: atmosphere, lift and drag, airfoils, performance, stability, propulsion, rockets, orbits, sustainable aviation.": {
+  "fr": "Introduction gratuite à l’ingénierie aérospatiale : atmosphère, portance et traînée, profils, performances, stabilité, propulsion, fusées, orbites, aviation durable.",
+  "es": "Introducción gratuita a la ingeniería aeroespacial: atmósfera, sustentación y resistencia, perfiles, actuaciones, estabilidad, propulsión, cohetes, órbitas, aviación sostenible.",
+  "it": "Introduzione gratuita all’ingegneria aerospaziale: atmosfera, portanza e resistenza, profili alari, prestazioni, stabilità, propulsione, razzi, orbite, aviazione sostenibile.",
+  "ar": "مدخل مجاني إلى هندسة الطيران والفضاء: الغلاف الجوي، والرفع والسحب، والمقاطع الانسيابية، والأداء، والاستقرار، والدفع، والصواريخ، والمدارات، والطيران المستدام.",
+  "he": "מבוא חינמי להנדסת אווירונאוטיקה וחלל: אטמוספרה, עילוי וגרר, פרופילים, ביצועים, יציבות, הנעה, רקטות, מסלולים, תעופה בת-קיימא."
+ },
+ "Free primer on orbits and missions.": {
+  "fr": "Introduction gratuite aux orbites et aux missions.",
+  "es": "Introducción gratuita a las órbitas y las misiones.",
+  "it": "Introduzione gratuita a orbite e missioni.",
+  "ar": "مدخل مجاني إلى المدارات والبعثات.",
+  "he": "מבוא חינמי למסלולים ולמשימות."
+ },
+ "Free tools and references to use alongside the course.": {
+  "fr": "Outils et références gratuits à utiliser avec le cours.",
+  "es": "Herramientas y referencias gratuitas para usar junto al curso.",
+  "it": "Strumenti e riferimenti gratuiti da usare insieme al corso.",
+  "ar": "أدوات ومراجع مجانية للاستخدام مع المقرر.",
+  "he": "כלים ומקורות חינמיים לשימוש לצד הקורס."
  },
  "From 11 to 25 km (lower stratosphere) the model’s temperature is constant at −56.46 °C, while pressure keeps falling exponentially.": {
   "fr": "De 11 à 25 km (basse stratosphère), la température du modèle est constante à −56.46 °C, tandis que la pression continue de baisser exponentiellement.",
@@ -1748,6 +1944,13 @@
   "it": "Carburante ≈ 20 × 17/19 = 17.9 t.",
   "ar": "الوقود ≈ 20 × 17/19 = 17.9 t.",
   "he": "דלק ≈ 20 × 17/19 = 17.9 t."
+ },
+ "Gas constant of air R": {
+  "fr": "Constante des gaz de l’air R",
+  "es": "Constante de los gases del aire R",
+  "it": "Costante dei gas dell’aria R",
+  "ar": "ثابت الغاز للهواء R",
+  "he": "קבוע הגזים של האוויר R"
  },
  "General Chemistry I": {
   "fr": "Chimie générale I",
@@ -2176,12 +2379,26 @@
   "ar": "JPL Basics of Space Flight",
   "he": "JPL Basics of Space Flight"
  },
+ "Jet fuel made from wastes or biomass.": {
+  "fr": "Carburéacteur fabriqué à partir de déchets ou de biomasse.",
+  "es": "Combustible de aviación hecho a partir de residuos o biomasa.",
+  "it": "Carburante per jet prodotto da rifiuti o biomassa.",
+  "ar": "وقود نفاثات يُصنع من النفايات أو الكتلة الحيوية.",
+  "he": "דלק סילוני המיוצר מפסולת או מביומסה."
+ },
  "Jets push against the air behind them.": {
   "fr": "Les réacteurs poussent sur l’air derrière eux.",
   "es": "Los reactores empujan contra el aire que tienen detrás.",
   "it": "I jet spingono contro l’aria dietro di loro.",
   "ar": "النفاثات تدفع الهواء الذي خلفها.",
   "he": "מנועי סילון דוחפים את האוויר שמאחוריהם."
+ },
+ "K = 0.0531; (L/D)max = 1/(2√(C_D0 K)).": {
+  "fr": "K = 0.0531 ; (L/D)max = 1/(2√(C_D0 K)).",
+  "es": "K = 0.0531; (L/D)max = 1/(2√(C_D0 K)).",
+  "it": "K = 0.0531; (L/D)max = 1/(2√(C_D0 K)).",
+  "ar": "K = 0.0531؛ (L/D)max = 1/(2√(C_D0 K)).",
+  "he": "K = 0.0531; (L/D)max = 1/(2√(C_D0 K))."
  },
  "K halves, so (L/D)max grows by √2 to ≈ 19.4.": {
   "fr": "K est divisé par deux, donc (L/D)max est multipliée par √2, soit ≈ 19.4.",
@@ -2351,6 +2568,13 @@
   "ar": "الأجنحة الطويلة النحيفة من أكثر الطرق مباشرة لخفض استهلاك الوقود، لأن السحب المستحث ينخفض مع ازدياد نسبة الباع. وهذا هو بالضبط مسار «تقنيات الطائرات عالية الكفاءة» في عمل ناسا على الطيران المستدام.",
   "he": "כנפיים ארוכות ודקות הן אחת הדרכים הישירות ביותר לחסוך בדלק, כי הגרר המושרה יורד ככל שיחס הממדים עולה. זה בדיוק נתיב \"טכנולוגיית המטוסים היעילה\" בעבודה של NASA על תעופה בת-קיימא."
  },
+ "Loss of lift when flow separates from the wing.": {
+  "fr": "Perte de portance quand l’écoulement décolle de l’aile.",
+  "es": "Pérdida de sustentación cuando el flujo se separa del ala.",
+  "it": "Perdita di portanza quando il flusso si separa dall’ala.",
+  "ar": "فقدان الرفع عندما ينفصل التدفق عن الجناح.",
+  "he": "אובדן עילוי כשהזרימה ניתקת מהכנף."
+ },
  "Low Earth orbit (about 400 km for the ISS), sun-synchronous polar orbits for imaging, and geostationary orbit for weather each serve different missions.": {
   "fr": "L’orbite terrestre basse (environ 400 km pour l’ISS), les orbites polaires héliosynchrones pour l’imagerie et l’orbite géostationnaire pour la météo servent chacune des missions différentes.",
   "es": "La órbita terrestre baja (unos 400 km para la ISS), las órbitas polares heliosíncronas para obtener imágenes y la órbita geoestacionaria para la meteorología sirven a misiones distintas.",
@@ -2392,6 +2616,13 @@
   "it": "Il corso introduttivo del MIT incentrato sulla progettazione.",
   "ar": "المقرر التمهيدي في MIT المتمحور حول التصميم.",
   "he": "קורס המבוא של MIT שממוקד בתכן."
+ },
+ "MIT’s first-year design course.": {
+  "fr": "Le cours de conception de première année du MIT.",
+  "es": "El curso de diseño de primer año del MIT.",
+  "it": "Il corso di progettazione del primo anno del MIT.",
+  "ar": "مقرر التصميم للسنة الأولى في MIT.",
+  "he": "קורס התכן של שנה ראשונה ב-MIT."
  },
  "MIT’s fluids lectures.": {
   "fr": "Les cours de mécanique des fluides du MIT.",
@@ -2441,6 +2672,13 @@
   "it": "Misurare la curva di portanza di un profilo in FoilSim e confrontarla con la teoria dei profili sottili.",
   "ar": "قياس منحنى الرفع لمقطع انسيابي في FoilSim ومقارنته بنظرية المقطع الرقيق.",
   "he": "למדוד את עקומת העילוי של פרופיל ב-FoilSim ולהשוות לתאוריית הפרופיל הדק."
+ },
+ "Midterm practice set (Units 1–5)": {
+  "fr": "Série d’exercices de mi-parcours (unités 1–5)",
+  "es": "Ejercicios de práctica para el parcial (unidades 1–5)",
+  "it": "Esercizi di preparazione all’esame intermedio (unità 1–5)",
+  "ar": "مجموعة تمارين منتصف الفصل (الوحدات 1–5)",
+  "he": "סט תרגול לבחינת אמצע (יחידות 1–5)"
  },
  "Minimizing C_D/C_L gives KC_L² = C_D0.": {
   "fr": "Minimiser C_D/C_L donne KC_L² = C_D0.",
@@ -2694,6 +2932,13 @@
   "ar": "ناسا: الطيران المستدام",
   "he": "NASA: תעופה בת-קיימא"
  },
+ "NASA’s free reference for every equation in this course, with simulators.": {
+  "fr": "La référence gratuite de la NASA pour chaque équation de ce cours, avec des simulateurs.",
+  "es": "La referencia gratuita de la NASA para cada ecuación de este curso, con simuladores.",
+  "it": "Il riferimento gratuito della NASA per ogni equazione di questo corso, con simulatori.",
+  "ar": "مرجع ناسا المجاني لكل معادلة في هذا المقرر، مع أجهزة محاكاة.",
+  "he": "המקור החינמי של NASA לכל משוואה בקורס הזה, עם סימולטורים."
+ },
  "NASA’s lapse rate is 0.00649 °C/m.": {
   "fr": "Le gradient de la NASA est de 0.00649 °C/m.",
   "es": "El gradiente de la NASA es 0.00649 °C/m.",
@@ -2911,6 +3156,20 @@
   "ar": "ارسم ρ/ρ₀ وV_s مقابل الارتفاع.",
   "he": "שרטטו את ρ/ρ₀ ואת V_s כפונקציה של הגובה."
  },
+ "Plugs in numbers without checking units or assumptions; revisit the unit.": {
+  "fr": "Remplace par des nombres sans vérifier les unités ni les hypothèses ; revoir l’unité.",
+  "es": "Sustituye números sin comprobar unidades ni supuestos; repasa la unidad.",
+  "it": "Inserisce numeri senza controllare unità o ipotesi; rivedi l’unità.",
+  "ar": "يعوّض بالأرقام دون التحقق من الوحدات أو الافتراضات؛ راجع الوحدة.",
+  "he": "מציב מספרים בלי לבדוק יחידות או הנחות; חזרו על היחידה."
+ },
+ "Point where the weight acts.": {
+  "fr": "Point où s’applique le poids.",
+  "es": "Punto donde actúa el peso.",
+  "it": "Punto in cui agisce il peso.",
+  "ar": "النقطة التي يؤثر فيها الوزن.",
+  "he": "הנקודה שבה פועל המשקל."
+ },
  "Positive margin.": {
   "fr": "Marge positive.",
   "es": "Margen positivo.",
@@ -3030,6 +3289,13 @@
   "ar": "المدى يعتمد على حمولة الوقود فقط.",
   "he": "הטווח תלוי רק בכמות הדלק."
  },
+ "Range of a jet from speed, fuel use, L/D and weight fraction.": {
+  "fr": "Distance franchissable d’un avion à réaction selon la vitesse, la consommation, L/D et la fraction de masse.",
+  "es": "Alcance de un reactor según velocidad, consumo de combustible, L/D y fracción de peso.",
+  "it": "Autonomia di un jet in base a velocità, consumo, L/D e frazione di peso.",
+  "ar": "مدى الطائرة النفاثة بدلالة السرعة واستهلاك الوقود وL/D وكسر الوزن.",
+  "he": "טווח של מטוס סילון לפי מהירות, צריכת דלק, L/D ושבר המשקל."
+ },
  "Range ∝ L/D: 5,235 × 20/17 ≈ 6,159 km.": {
   "fr": "Distance ∝ L/D : 5235 × 20/17 ≈ 6159 km.",
   "es": "Alcance ∝ L/D: 5235 × 20/17 ≈ 6159 km.",
@@ -3043,6 +3309,20 @@
   "it": "Rateo di salita",
   "ar": "معدل الصعود",
   "he": "קצב טיפוס"
+ },
+ "Ratio of inertial to viscous effects, ρVc/μ.": {
+  "fr": "Rapport des effets d’inertie aux effets visqueux, ρVc/μ.",
+  "es": "Cociente entre efectos inerciales y viscosos, ρVc/μ.",
+  "it": "Rapporto tra effetti inerziali e viscosi, ρVc/μ.",
+  "ar": "نسبة التأثيرات القصورية إلى اللزجة، ρVc/μ.",
+  "he": "היחס בין השפעות האינרציה לצמיגות, ρVc/μ."
+ },
+ "Ratio of specific heats γ (air)": {
+  "fr": "Rapport des chaleurs spécifiques γ (air)",
+  "es": "Razón de calores específicos γ (aire)",
+  "it": "Rapporto dei calori specifici γ (aria)",
+  "ar": "نسبة الحرارتين النوعيتين γ (الهواء)",
+  "he": "יחס החום הסגולי γ (אוויר)"
  },
  "Re ≈ 5.7 million.": {
   "fr": "Re ≈ 5.7 millions.",
@@ -3198,12 +3478,33 @@
   "ar": "حاسبة Delta-v من Saving Planets",
   "he": "מחשבון ה-Delta-v של Saving Planets"
  },
+ "Sea-level air density (NASA model)": {
+  "fr": "Masse volumique de l’air au niveau de la mer (modèle NASA)",
+  "es": "Densidad del aire a nivel del mar (modelo NASA)",
+  "it": "Densità dell’aria al livello del mare (modello NASA)",
+  "ar": "كثافة الهواء عند مستوى سطح البحر (نموذج ناسا)",
+  "he": "צפיפות האוויר בגובה פני הים (מודל NASA)"
+ },
+ "Sea-level pressure (NASA model)": {
+  "fr": "Pression au niveau de la mer (modèle NASA)",
+  "es": "Presión a nivel del mar (modelo NASA)",
+  "it": "Pressione al livello del mare (modello NASA)",
+  "ar": "الضغط عند مستوى سطح البحر (نموذج ناسا)",
+  "he": "לחץ בגובה פני הים (מודל NASA)"
+ },
  "Seconds of thrust per weight of propellant.": {
   "fr": "Secondes de poussée par poids d’ergol.",
   "es": "Segundos de empuje por peso de propulsante.",
   "it": "Secondi di spinta per peso di propellente.",
   "ar": "ثوانٍ من الدفع لكل وزن من الوقود الدافع.",
   "he": "שניות של דחף לכל משקל של חומר הנעה."
+ },
+ "Sets up problems from forces and requirements, checks units and orders of magnitude, and explains trade-offs.": {
+  "fr": "Pose les problèmes à partir des forces et des exigences, vérifie les unités et les ordres de grandeur, et explique les compromis.",
+  "es": "Plantea los problemas a partir de fuerzas y requisitos, comprueba unidades y órdenes de magnitud, y explica los compromisos.",
+  "it": "Imposta i problemi a partire da forze e requisiti, controlla unità e ordini di grandezza e spiega i compromessi.",
+  "ar": "يصوغ المسائل انطلاقًا من القوى والمتطلبات، ويتحقق من الوحدات ورتب المقادير، ويشرح المفاضلات.",
+  "he": "מנסח בעיות מתוך כוחות ודרישות, בודק יחידות וסדרי גודל, ומסביר פשרות."
  },
  "Shaving a little weight saves only that weight.": {
   "fr": "Gagner un peu de masse n’économise que cette masse.",
@@ -3261,6 +3562,13 @@
   "ar": "استدامة الفضاء تعني التخطيط للتخلص من المركبات حتى تبقى المدارات المفيدة متاحة للأقمار الصناعية التي تراقب الأرض.",
   "he": "קיימות בחלל פירושה תכנון פינוי כך שמסלולים שימושיים יישארו פתוחים ללוויינים שמנטרים את כדור הארץ."
  },
+ "Span squared divided by wing area.": {
+  "fr": "Envergure au carré divisée par la surface alaire.",
+  "es": "Envergadura al cuadrado dividida por la superficie del ala.",
+  "it": "Apertura al quadrato divisa per la superficie alare.",
+  "ar": "مربع الباع مقسومًا على مساحة الجناح.",
+  "he": "המוטה בריבוע חלקי שטח הכנף."
+ },
  "Span squared over area.": {
   "fr": "L’envergure au carré divisée par la surface.",
   "es": "La envergadura al cuadrado dividida entre la superficie.",
@@ -3309,6 +3617,13 @@
   "it": "Velocità del suono e numero di Mach",
   "ar": "سرعة الصوت وعدد ماخ",
   "he": "מהירות הקול ומספר מאך"
+ },
+ "Speed of sound, sea level (15 °C)": {
+  "fr": "Vitesse du son, niveau de la mer (15 °C)",
+  "es": "Velocidad del sonido, nivel del mar (15 °C)",
+  "it": "Velocità del suono, livello del mare (15 °C)",
+  "ar": "سرعة الصوت عند مستوى سطح البحر (15 °C)",
+  "he": "מהירות הקול בגובה פני הים (15 °C)"
  },
  "Speeding up raises your orbit and lowers your angular rate.": {
   "fr": "Accélérer élève votre orbite et diminue votre vitesse angulaire.",
@@ -3408,6 +3723,13 @@
   "ar": "الغلاف الجوي القياسي؛ سرعة الصوت",
   "he": "אטמוספרה תקנית; מהירות הקול"
  },
+ "Standard gravity g₀": {
+  "fr": "Gravité standard g₀",
+  "es": "Gravedad estándar g₀",
+  "it": "Gravità standard g₀",
+  "ar": "الجاذبية القياسية g₀",
+  "he": "כבידה תקנית g₀"
+ },
  "Standard-atmosphere physics also underlies how satellites measure the air.": {
   "fr": "La physique de l’atmosphère standard sous-tend aussi la façon dont les satellites mesurent l’air.",
   "es": "La física de la atmósfera estándar también sustenta cómo los satélites miden el aire.",
@@ -3471,6 +3793,13 @@
   "ar": "الطيران والفضاء المستدامان",
   "he": "תעופה וחלל בני-קיימא"
  },
+ "Sustainable aviation fuel": {
+  "fr": "Carburant d’aviation durable",
+  "es": "Combustible sostenible de aviación",
+  "it": "Carburante sostenibile per l’aviazione",
+  "ar": "وقود الطيران المستدام",
+  "he": "דלק תעופה בר-קיימא"
+ },
  "Sustainable aviation fuel emits no CO₂ when burned.": {
   "fr": "Le carburant d’aviation durable n’émet pas de CO₂ quand on le brûle.",
   "es": "El combustible de aviación sostenible no emite CO₂ al quemarse.",
@@ -3498,6 +3827,13 @@
   "it": "I profili simmetrici non possono generare portanza.",
   "ar": "المقاطع المتماثلة لا يمكنها توليد الرفع.",
   "he": "פרופילים סימטריים לא יכולים לייצר עילוי."
+ },
+ "T = 2π√(r³/μ) with r = 6.771 × 10⁶ m.": {
+  "fr": "T = 2π√(r³/μ) avec r = 6.771 × 10⁶ m.",
+  "es": "T = 2π√(r³/μ) con r = 6.771 × 10⁶ m.",
+  "it": "T = 2π√(r³/μ) con r = 6.771 × 10⁶ m.",
+  "ar": "T = 2π√(r³/μ) مع r = 6.771 × 10⁶ m.",
+  "he": "T = 2π√(r³/μ) עם r = 6.771 × 10⁶ m."
  },
  "T ∝ r^(3/2): 8 times longer.": {
   "fr": "T ∝ r^(3/2) : 8 fois plus longue.",
@@ -3863,6 +4199,13 @@
   "ar": "دفع محرك يتنفس الهواء ≈",
   "he": "דחף של מנוע נושם אוויר ≈"
  },
+ "Thrust per weight flow of propellant, in seconds.": {
+  "fr": "Poussée par débit de poids d’ergol, en secondes.",
+  "es": "Empuje por flujo de peso de propelente, en segundos.",
+  "it": "Spinta per portata in peso di propellente, in secondi.",
+  "ar": "الدفع لكل معدل تدفق وزني للوقود الدافع، بالثواني.",
+  "he": "דחף לכל ספיקת משקל של הדלק הרקטי, בשניות."
+ },
  "Thrust per weight flow of propellant.": {
   "fr": "Poussée par débit de poids d’ergol.",
   "es": "Empuje por flujo de peso de propulsante.",
@@ -4010,6 +4353,13 @@
   "ar": "يُقيَّم مفهومان للجناح من 10 في التكلفة (الوزن 0.3) والكفاءة (0.5) وسهولة البناء (0.2). يحصل المفهوم A على 8 و6 و9، ويحصل B على 5 و9 و6. أيهما يفوز؟",
   "he": "שני קונספטים של כנף מקבלים ציון מתוך 10 בעלות (משקל 0.3), ביעילות (0.5) ובקלות הבנייה (0.2). קונספט A מקבל 8, 6, 9; B מקבל 5, 9, 6. מי מנצח?"
  },
+ "Two-burn elliptical transfer between circular orbits.": {
+  "fr": "Transfert elliptique à deux poussées entre orbites circulaires.",
+  "es": "Transferencia elíptica de dos encendidos entre órbitas circulares.",
+  "it": "Trasferimento ellittico a due accensioni tra orbite circolari.",
+  "ar": "انتقال إهليلجي بإشعالين بين مدارين دائريين.",
+  "he": "מעבר אליפטי בשתי הצתות בין מסלולים מעגליים."
+ },
  "Two-burn elliptical transfer.": {
   "fr": "Transfert elliptique à deux poussées.",
   "es": "Transferencia elíptica de dos encendidos.",
@@ -4142,6 +4492,13 @@
   "it": "Le forze verticali si bilanciano.",
   "ar": "القوى الرأسية متوازنة.",
   "he": "הכוחות האנכיים מאוזנים."
+ },
+ "Virtual wind tunnel for airfoils (Lab A).": {
+  "fr": "Soufflerie virtuelle pour profils (TP A).",
+  "es": "Túnel de viento virtual para perfiles (práctica A).",
+  "it": "Galleria del vento virtuale per profili alari (laboratorio A).",
+  "ar": "نفق رياح افتراضي للمقاطع الانسيابية (المختبر A).",
+  "he": "מנהרת רוח וירטואלית לפרופילים (מעבדה A)."
  },
  "Vis-viva": {
   "fr": "Vis viva",
@@ -5031,6 +5388,13 @@
   "it": "≈ 9.4 km/s comprese le perdite.",
   "ar": "≈ 9.4 km/s شاملة الخسائر.",
   "he": "≈ 9.4 km/s כולל הפסדים."
+ },
+ "≈ 92.4 min.": {
+  "fr": "≈ 92.4 min.",
+  "es": "≈ 92.4 min.",
+  "it": "≈ 92.4 min.",
+  "ar": "≈ 92.4 دقيقة.",
+  "he": "≈ 92.4 דקות."
  },
  "≈ 92.4 minutes.": {
   "fr": "≈ 92.4 minutes.",
