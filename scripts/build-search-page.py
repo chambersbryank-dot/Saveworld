@@ -91,7 +91,9 @@ CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
        '.sp-tab:hover{border-color:#8fd3ff;background:rgba(0,156,222,.2)}.sp-tab[aria-selected=true]{background:#009cde;border-color:#009cde;color:#fff!important;box-shadow:0 6px 18px rgba(0,156,222,.35)}'
        '.sp-tab:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}'
        '.sp-ring .sp-q{display:none!important}html:not([data-sp-topic]) .sp-ring .sp-q[data-t=all],html[data-sp-topic=all] .sp-q[data-t=all],html[data-sp-topic=aero] .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-q[data-t=physics]{display:inline-flex!important}'
-       '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>')
+       '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
+       '.sp-gh{list-style:none;margin:1.1rem 0 .3rem}.sp-stage .sp-results .sp-gh-t{font-size:1rem!important;letter-spacing:.04em;text-transform:uppercase;opacity:.9;margin:0 0 .4rem;text-align:start}.sp-gh>ol{list-style:none;padding:0;margin:0;display:grid;gap:inherit}'
+       '.sp-stage .sp-search-form{position:relative}.sp-sugg{position:absolute;top:100%;inset-inline:0;z-index:5;list-style:none;margin:.3rem 0 0;padding:.3rem;border-radius:14px;background:#0b1620;border:1px solid rgba(143,211,255,.6);text-align:start;box-shadow:0 10px 28px rgba(0,0,0,.45)}.sp-sugg[hidden]{display:none}.sp-sugg li{padding:.55rem .8rem;border-radius:10px;cursor:pointer;color:#e8eef5}.sp-sugg li[aria-selected=true],.sp-sugg li:hover{background:rgba(0,156,222,.35)}.sp-sugg .sp-sg{font-size:.78rem;opacity:.8;margin-inline-start:.5rem}</style>')
 def build(l, s):
     i, j = s.find('<main id="main">'), s.find('</main>')
     m = s[i:j]
@@ -143,11 +145,50 @@ def tag_pages():
             s2 = re.sub(r'<!-- SPTOPIC:START -->.*?<!-- SPTOPIC:END -->', '', s, flags=re.S).replace('</head>', blk + '</head>', 1)
             if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
     print(f'build-search-page: topic tags on {n} pages')
+# Oct 25 2026 (founder, upgrade 4): result groups (Solution, Course, Fact, Mission) + as-you-type suggestions in search/search-ui.js.
+# search/result-types.json = page -> group, from existing data only: course modules (scripts/courses/*.py PAGE, live) + Courses hub;
+# fact pages; hub membership from search/hubs.json (mission hubs = satellites, telescopes and spacecraft; the other hubs = solutions).
+# Anything else is 'page' (shown last as More pages). Group labels per language live in the hidden #sp-msg list (MSG_X below).
+FACT_PAGES = ['Amazing_Facts.html', 'Myth_vs_Fact.html', 'Top_Ten.html', 'Glossary.html']
+MISSION_HUBS = {'Earth_Observation.html', 'Space.html', 'Planetary_Defense.html', 'Space_Weather.html'}
+MSG_X = {'g-solution': {'en': 'Solutions', 'fr': 'Solutions', 'es': 'Soluciones', 'ar': 'الحلول', 'it': 'Soluzioni', 'he': 'פתרונות'},
+         'g-course': {'en': 'Courses', 'fr': 'Cours', 'es': 'Cursos', 'ar': 'الدورات', 'it': 'Corsi', 'he': 'קורסים'},
+         'g-fact': {'en': 'Facts', 'fr': 'Faits', 'es': 'Datos', 'ar': 'حقائق', 'it': 'Fatti', 'he': 'עובדות'},
+         'g-mission': {'en': 'Missions', 'fr': 'Missions', 'es': 'Misiones', 'ar': 'المهمات', 'it': 'Missioni', 'he': 'משימות'},
+         'g-page': {'en': 'More pages', 'fr': 'Autres pages', 'es': 'Más páginas', 'ar': 'صفحات أخرى', 'it': 'Altre pagine', 'he': 'דפים נוספים'},
+         'sugg': {'en': 'Suggestions', 'fr': 'Suggestions', 'es': 'Sugerencias', 'ar': 'اقتراحات', 'it': 'Suggerimenti', 'he': 'הצעות'}}
+def result_types():
+    t = {}
+    hubs = json.load(open('search/hubs.json', encoding='utf8'))['hubOf']
+    for pg, hub in hubs.items(): t[pg] = 'mission' if hub in MISSION_HUBS else 'solution'
+    for pg in FACT_PAGES: t[pg] = 'fact'
+    t['Courses.html'] = 'course'
+    for f in sorted(os.listdir('scripts/courses')):
+        if not f.endswith('.py'): continue
+        src = open('scripts/courses/' + f, encoding='utf8').read()
+        pm = re.search(r"^PAGE = '([^']+)'", src, re.M)
+        if pm and re.search(r"^STATUS = 'live'", src, re.M): t[pm.group(1)] = 'course'
+    for extra in ('Artemis_II.html', 'Nancy_Grace_Roman.html'):
+        if os.path.exists(extra): t[extra] = 'mission'
+    json.dump(dict(sorted(t.items())), open('search/result-types.json', 'w', encoding='utf8'), separators=(',', ':'))
+    return len(t)
+def add_msg(l, s):  # group / suggestion labels into #sp-msg (idempotent; all 6 languages, he included)
+    def fix(m):
+        d = re.sub(r'<span data-k="(?:g-[a-z]+|sugg)">.*?</span>', '', m.group(0))
+        return d[:-6] + ''.join(f'<span data-k="{k}">{v[l]}</span>' for k, v in MSG_X.items()) + '</div>'
+    return re.sub(r'<div[^>]*id="sp-msg"[^>]*>.*?</div>', fix, s, count=1, flags=re.S)
+SUI_V = '20261025a'
 if __name__ == '__main__':
+    print('build-search-page: result types for', result_types(), 'pages')
+    for l in LANGS + ['he']:
+        f = ('' if l == 'en' else l + '/') + 'Search.html'
+        s = open(f, encoding='utf8').read()
+        s2 = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=' + SUI_V, add_msg(l, s))
+        if s2 != s: open(f, 'w', encoding='utf8').write(s2)
     tag_pages()
     n = 0
     for l in LANGS:
         f = ('' if l == 'en' else l + '/') + 'Search.html'
-        s = open(f, encoding='utf8').read(); s2 = build(l, s)
+        s = open(f, encoding='utf8').read(); s2 = add_msg(l, build(l, s))
         if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
     print(f'build-search-page: {n} pages')

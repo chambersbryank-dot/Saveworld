@@ -118,6 +118,13 @@
   "he": "ביצועי מטוסים",
   "it": "Prestazioni dei velivoli"
  },
+ "All courses": {
+  "ar": "كل الدورات",
+  "es": "Todos los cursos",
+  "fr": "Tous les cours",
+  "he": "כל הקורסים",
+  "it": "Tutti i corsi"
+ },
  "All units": {
   "ar": "كل الوحدات",
   "es": "Todas las unidades",
@@ -929,6 +936,13 @@
   "fr": "Lecture",
   "he": "קריאה",
   "it": "Lettura"
+ },
+ "Related courses": {
+  "ar": "دورات ذات صلة",
+  "es": "Cursos relacionados",
+  "fr": "Cours associés",
+  "he": "קורסים קשורים",
+  "it": "Corsi correlati"
  },
  "Reset my progress": {
   "ar": "إعادة ضبط تقدّمي",

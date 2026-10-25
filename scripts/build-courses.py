@@ -187,8 +187,25 @@ def course_page(C):
     o.append(f'<section id="rubric"><h2>{esc("Self-assessment rubric")}</h2><p>{esc("No grade or credit is given. Use this to judge honestly where you are in each unit.")}</p>'
              + table(['Level', 'What it looks like'], C.RUBRIC) + f'<h3>{esc("Suggested weighting if you want a score")}</h3>' + table(['Part', 'Weight'], C.WEIGHTS)
              + f'<p>{esc("Aim for level 3 or better in every unit before moving to the next course.")}</p>' + top() + '</section>')
+    o.append(related(C))
     o.append('</div>')
     return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=head(), ld_type='Course', tail=tail())
+
+def related(C):  # Oct 25 2026 (founder, upgrade 4): 'Related' block, 3-4 links from the roadmap (no new data):
+    # the live courses just before and after this one in roadmap order, then other live courses from the same year, then the hub.
+    order = [(yi, c) for yi, (_y, cs) in enumerate(RM.YEARS) for c, _t, _d in cs]
+    title = {c: t for _y, cs in RM.YEARS for c, t, _d in cs}
+    live = [(yi, c) for yi, c in order if c in LIVE]
+    i = next(k for k, (_yi, c) in enumerate(live) if c == C.ID); yr = live[i][0]
+    pick = [live[k][1] for k in (i - 1, i + 1) if 0 <= k < len(live)]
+    pick += [c for y, c in live if y == yr and c != C.ID and c not in pick]
+    def a(c):
+        m = LIVE[c]
+        if LANG == 'en' or LANG in DONE.get(c, ()): return f'<a href="{m.PAGE}">{esc(title[c])}</a> <span class="crs-kicker">{esc(m.CODE)}</span>'
+        return f'<a href="../{m.PAGE}" hreflang="en">{esc(title[c])}</a> <span lang="en">(English)</span>'
+    lis = [a(c) for c in pick[:3]] + [f'<a href="{HUB}">{esc("All courses")}</a>']
+    return ('<!-- CRSREL:START --><aside class="crs-related" aria-labelledby="crs-rel-h" data-pagefind-ignore><h2 id="crs-rel-h">' + esc('Related courses') + '</h2><ul>'
+            + ''.join(f'<li>{x}</li>' for x in lis) + '</ul></aside><!-- CRSREL:END -->')
 
 def en_only(h):
     # alternates only for languages whose page exists on disk (all six once phase 2 is built)
