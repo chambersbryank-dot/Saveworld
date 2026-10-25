@@ -211,6 +211,9 @@ def _wrap_run(m):
     if core.startswith('-−'): core = core[1:]; a += 1
     pos = m.start() + a
     if core.startswith('-') and pos > 0 and '\u05d0' <= m.string[pos - 1] <= '\u05ea': core = core[1:]; a += 1  # Hebrew prefix ב-30%  # Hebrew prefix hyphen (ו-) before a minus sign stays outside
+    for q in ('&#x27;', "'"):  # Hebrew geresh (פלנג'): stays with its word, then the colon after it stays outside too
+        if core.startswith(q) and pos > 0 and '\u05d0' <= m.string[pos - 1] <= '\u05ea':
+            n = len(q) + len(core[len(q):]) - len(core[len(q):].lstrip(' ,.;:')); core = core[n:]; a += n
     if not re.search(r'[A-Za-z0-9]', core) and re.search(r'[=!*/%^]', core):  # operators only, e.g. "//, %" in prose: wrap each one
         return t[:a] + re.sub(r'==|!=|\+=|-=|\*\*|//|%|\*|=|(?:&lt;|&gt;)=?', lambda o: '<bdi dir="ltr">' + o.group(0) + '</bdi>', core) + t[b:]
     if re.fullmatch(r'==|!=|\+=|-=|\*=|/=|\*\*|//|%|\*|=|(?:&lt;|&gt;)=?|\^', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # lone operators (% ** == +=) in prose
