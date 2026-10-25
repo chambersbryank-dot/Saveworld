@@ -1,0 +1,13 @@
+{
+"Topic": {"fr": "Thème", "es": "Tema", "ar": "الموضوع", "it": "Argomento", "he": "נושא"},
+"All Topics": {"fr": "Tous les thèmes", "es": "Todos los temas", "ar": "كل المواضيع", "it": "Tutti i temi", "he": "כל הנושאים"},
+"Way to Help": {"fr": "Façon d'aider", "es": "Forma de ayudar", "ar": "طريقة المساعدة", "it": "Modo di aiutare", "he": "דרך לעזור"},
+"Any Way": {"fr": "Toutes", "es": "Cualquiera", "ar": "أي طريقة", "it": "Qualsiasi", "he": "כל דרך"},
+"Give (Donate)": {"fr": "Donner (faire un don)", "es": "Dar (donar)", "ar": "العطاء (تبرّع)", "it": "Dare (donare)", "he": "לתת (תרומה)"},
+"Join (Volunteer)": {"fr": "S'engager (bénévolat)", "es": "Unirse (voluntariado)", "ar": "الانضمام (تطوّع)", "it": "Partecipare (volontariato)", "he": "להצטרף (התנדבות)"},
+"Solutions shown:": {"fr": "Solutions affichées :", "es": "Soluciones mostradas:", "ar": "الحلول المعروضة:", "it": "Soluzioni mostrate:", "he": "פתרונות מוצגים:"},
+"Clear Filters": {"fr": "Effacer les filtres", "es": "Borrar filtros", "ar": "مسح عوامل التصفية", "it": "Cancella filtri", "he": "ניקוי מסננים"},
+"No solutions match these filters.": {"fr": "Aucune solution ne correspond à ces filtres.", "es": "Ninguna solución coincide con estos filtros.", "ar": "لا توجد حلول تطابق عوامل التصفية هذه.", "it": "Nessuna soluzione corrisponde a questi filtri.", "he": "אין פתרונות שמתאימים למסננים האלה."},
+"With a donation page": {"fr": "Avec une page de dons", "es": "Con página de donaciones", "ar": "لديها صفحة تبرع", "it": "Con pagina per donazioni", "he": "עם דף תרומות"},
+"With a volunteer page": {"fr": "Avec une page de bénévolat", "es": "Con página de voluntariado", "ar": "لديها صفحة تطوع", "it": "Con pagina di volontariato", "he": "עם דף התנדבות"}
+}
