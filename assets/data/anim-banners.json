@@ -1241,7 +1241,8 @@
   "Aircraft_Performance.html": "assets/ISS_Flyaround_2021.jpg",
   "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg",
   "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg",
-  "Numerical_Methods.html": "assets/DataOrbitalCenters.jpg"
+  "Numerical_Methods.html": "assets/DataOrbitalCenters.jpg",
+  "Probability_Statistics.html": "assets/GOES19_GOESU_KSC.jpg"
  },
  "slides": {
   "pools": {
@@ -1837,6 +1838,11 @@
     "images/GOES19_GOESU_KSC.jpg",
     "images/ISS_Flyaround_2021.jpg",
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+   ],
+   "Probability_Statistics.html": [
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+    "images/ISS_Flyaround_2021.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg"
    ]
   }
  }
