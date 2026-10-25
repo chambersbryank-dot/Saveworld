@@ -15,13 +15,15 @@
   "fr": "0.74686, contre la valeur exacte 0.74682 : une erreur de seulement 0.00003 avec cinq points.",
   "es": "0.74686, frente al valor real 0.74682: un error de solo 0.00003 con cinco puntos.",
   "it": "0.74686, contro il valore vero 0.74682: un errore di soli 0.00003 con cinque punti.",
-  "ar": "0.74686، مقابل القيمة الحقيقية 0.74682: خطأ قدره 0.00003 فقط من خمس نقاط."
+  "ar": "0.74686، مقابل القيمة الحقيقية 0.74682: خطأ قدره 0.00003 فقط من خمس نقاط.",
+  "he": "0.74686, לעומת הערך האמיתי 0.74682: שגיאה של 0.00003 בלבד מחמש נקודות."
  },
  "1 (converges).": {
   "fr": "1 (converge).",
   "es": "1 (converge).",
   "it": "1 (converge).",
-  "ar": "1 (متقارب)."
+  "ar": "1 (متقارب).",
+  "he": "1 (מתכנס)."
  },
  "1 km²·m = 10⁶ m³, so V ≈ 2.11 × 10⁷ m³ (21 million cubic meters).": {
   "fr": "1 km²·m = 10⁶ m³, donc V ≈ 2.11 × 10⁷ m³ (21 millions de mètres cubes).",
@@ -45,13 +47,15 @@
   "fr": "1/(n + 1) → 0, donc elle converge.",
   "es": "1/(n + 1) → 0, así que converge.",
   "it": "1/(n + 1) → 0, quindi converge.",
-  "ar": "1/(n + 1) → 0، إذن هي متقاربة."
+  "ar": "1/(n + 1) → 0، إذن هي متقاربة.",
+  "he": "1/(n + 1) → 0, ולכן הוא מתכנס."
  },
  "1/x → 0 but ∫₁^∞ dx/x diverges.": {
   "fr": "1/x → 0 mais ∫₁^∞ dx/x diverge.",
   "es": "1/x → 0 pero ∫₁^∞ dx/x diverge.",
   "it": "1/x → 0 ma ∫₁^∞ dx/x diverge.",
-  "ar": "1/x → 0 لكن ∫₁^∞ dx/x يتباعد."
+  "ar": "1/x → 0 لكن ∫₁^∞ dx/x يتباعد.",
+  "he": "1/x → 0 אבל ∫₁^∞ dx/x מתבדר."
  },
  "149.6 million km": {
   "fr": "149.6 millions de km",
@@ -63,25 +67,29 @@
   "fr": "2.25, contre la valeur exacte e ≈ 2.718 ; diviser h par deux réduit l’erreur.",
   "es": "2.25, frente al valor exacto e ≈ 2.718; reducir h a la mitad achica el error.",
   "it": "2.25, contro il valore esatto e ≈ 2.718; dimezzare h riduce l’errore.",
-  "ar": "2.25، مقابل القيمة الدقيقة e ≈ 2.718؛ وتنصيف h يقلص الخطأ."
+  "ar": "2.25، مقابل القيمة الدقيقة e ≈ 2.718؛ وتنصيف h يقلص الخطأ.",
+  "he": "2.25, לעומת הערך המדויק e ≈ 2.718; חציית h מקטינה את השגיאה."
  },
  "50 tonnes. Cutting the yearly input in half halves the long-run level (a simplified model).": {
   "fr": "50 tonnes. Diviser par deux l’apport annuel divise par deux le niveau à long terme (modèle simplifié).",
   "es": "50 toneladas. Reducir a la mitad el aporte anual reduce a la mitad el nivel a largo plazo (un modelo simplificado).",
   "it": "50 tonnellate. Dimezzare l’apporto annuo dimezza il livello a lungo termine (un modello semplificato).",
-  "ar": "50 طنًا. خفض المدخلات السنوية إلى النصف يخفض المستوى طويل الأمد إلى النصف (نموذج مبسط)."
+  "ar": "50 طنًا. خفض المدخلات السنوية إلى النصف يخفض المستوى طويل الأمد إلى النصف (نموذج مبسط).",
+  "he": "50 טונות. חציית הקלט השנתי חוצה את הרמה לטווח ארוך (מודל מפושט)."
  },
  "8π ≈ 25.1 cubic units.": {
   "fr": "8π ≈ 25.1 unités cubes.",
   "es": "8π ≈ 25.1 unidades cúbicas.",
   "it": "8π ≈ 25.1 unità cubiche.",
-  "ar": "8π ≈ 25.1 وحدة مكعبة."
+  "ar": "8π ≈ 25.1 وحدة مكعبة.",
+  "he": "8π ≈ 25.1 יחידות מעוקבות."
  },
  "9 − 9 sin²θ = 9 cos²θ.": {
   "fr": "9 − 9 sin²θ = 9 cos²θ.",
   "es": "9 − 9 sin²θ = 9 cos²θ.",
   "it": "9 − 9 sin²θ = 9 cos²θ.",
-  "ar": "9 − 9 sin²θ = 9 cos²θ."
+  "ar": "9 − 9 sin²θ = 9 cos²θ.",
+  "he": "9 − 9 sin²θ = 9 cos²θ."
  },
  "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).": {
   "fr": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).",
@@ -99,7 +107,8 @@
   "fr": "Une ED plus une valeur de départ.",
   "es": "Una ED más un valor de partida.",
   "it": "Una ED più un valore di partenza.",
-  "ar": "معادلة تفاضلية مع قيمة بداية."
+  "ar": "معادلة تفاضلية مع قيمة بداية.",
+  "he": "משוואה דיפרנציאלית ועוד ערך התחלתי."
  },
  "A Taylor polynomial is accurate everywhere.": {
   "fr": "Un polynôme de Taylor est précis partout.",
@@ -111,37 +120,43 @@
   "fr": "Un ordinateur ou une tablette avec un tableur.",
   "es": "Una computadora o tableta con una hoja de cálculo.",
   "it": "Un computer o un tablet con un foglio di calcolo.",
-  "ar": "حاسوب أو جهاز لوحي مع جدول بيانات."
+  "ar": "حاسوب أو جهاز لوحي مع جدول بيانات.",
+  "he": "מחשב או טאבלט עם גיליון אלקטרוני."
  },
  "A cylindrical tank of radius 1 m and height 2 m is full of water. How much work does it take to pump all the water out over the top?": {
   "fr": "Un réservoir cylindrique de rayon 1 m et de hauteur 2 m est plein d’eau. Quel travail faut-il pour pomper toute l’eau par le haut ?",
   "es": "Un tanque cilíndrico de 1 m de radio y 2 m de altura está lleno de agua. ¿Cuánto trabajo cuesta bombear toda el agua por encima del borde?",
   "it": "Un serbatoio cilindrico di raggio 1 m e altezza 2 m è pieno d’acqua. Quanto lavoro serve per pompare tutta l’acqua fuori dalla sommità?",
-  "ar": "خزان أسطواني نصف قطره 1 m وارتفاعه 2 m مملوء بالماء. ما الشغل اللازم لضخ كل الماء من فوق حافته؟"
+  "ar": "خزان أسطواني نصف قطره 1 m وارتفاعه 2 m مملوء بالماء. ما الشغل اللازم لضخ كل الماء من فوق حافته؟",
+  "he": "מכל גלילי ברדיוס 1 m ובגובה 2 m מלא מים. כמה עבודה דרושה כדי לשאוב את כל המים מעל הדופן העליונה?"
  },
  "A differential equation links a function to its derivatives. Its solution is a function, usually a family fixed by an initial condition.": {
   "fr": "Une équation différentielle relie une fonction à ses dérivées. Sa solution est une fonction, généralement une famille fixée par une condition initiale.",
   "es": "Una ecuación diferencial relaciona una función con sus derivadas. Su solución es una función, normalmente una familia fijada por una condición inicial.",
   "it": "Un’equazione differenziale collega una funzione alle sue derivate. La sua soluzione è una funzione, di solito una famiglia fissata da una condizione iniziale.",
-  "ar": "المعادلة التفاضلية تربط دالة بمشتقاتها. وحلها دالة، وعادة ما يكون عائلة تحددها حالة ابتدائية."
+  "ar": "المعادلة التفاضلية تربط دالة بمشتقاتها. وحلها دالة، وعادة ما يكون عائلة تحددها حالة ابتدائية.",
+  "he": "משוואה דיפרנציאלית מקשרת בין פונקציה לנגזרותיה. הפתרון שלה הוא פונקציה, בדרך כלל משפחה שנקבעת על ידי תנאי התחלה."
  },
  "A fish stock follows P′ = 0.5P(1 − P/1,000) with P(0) = 100. Find P(4).": {
   "fr": "Un stock de poissons suit P′ = 0.5P(1 − P/1000) avec P(0) = 100. Trouvez P(4).",
   "es": "Una población de peces sigue P′ = 0.5P(1 − P/1000) con P(0) = 100. Halla P(4).",
   "it": "Uno stock ittico segue P′ = 0.5P(1 − P/1000) con P(0) = 100. Trova P(4).",
-  "ar": "تتبع مجموعة أسماك المعادلة P′ = 0.5P(1 − P/1000) مع P(0) = 100. أوجد P(4)."
+  "ar": "تتبع مجموعة أسماك المعادلة P′ = 0.5P(1 − P/1000) مع P(0) = 100. أوجد P(4).",
+  "he": "אוכלוסיית דגים מקיימת P′ = 0.5P(1 − P/1000) עם P(0) = 100. מצאו את P(4)."
  },
  "A lake section holds 1,000 m³ of water with 50 kg of a dissolved pollutant. Clean water flows in at 10 m³/day and well-mixed water flows out at the same rate. How long until half the pollutant is gone?": {
   "fr": "Une partie d’un lac contient 1000 m³ d’eau avec 50 kg d’un polluant dissous. De l’eau propre entre à 10 m³/jour et l’eau bien mélangée sort au même débit. Combien de temps faut-il pour que la moitié du polluant ait disparu ?",
   "es": "Una sección de un lago contiene 1000 m³ de agua con 50 kg de un contaminante disuelto. Entra agua limpia a 10 m³/día y sale agua bien mezclada al mismo ritmo. ¿Cuánto tarda en desaparecer la mitad del contaminante?",
   "it": "Una parte di un lago contiene 1000 m³ d’acqua con 50 kg di un inquinante disciolto. Acqua pulita entra a 10 m³/giorno e acqua ben miscelata esce alla stessa portata. Quanto tempo serve perché sparisca metà dell’inquinante?",
-  "ar": "جزء من بحيرة يحتوي على 1000 m³ من الماء فيها 50 kg من ملوث مذاب. يدخل ماء نظيف بمعدل 10 m³/يوم ويخرج ماء جيد الخلط بالمعدل نفسه. كم من الوقت حتى يزول نصف الملوث؟"
+  "ar": "جزء من بحيرة يحتوي على 1000 m³ من الماء فيها 50 kg من ملوث مذاب. يدخل ماء نظيف بمعدل 10 m³/يوم ويخرج ماء جيد الخلط بالمعدل نفسه. كم من الوقت حتى يزول نصف الملوث؟",
+  "he": "חלק מאגם מכיל 1000 m³ מים עם 50 kg של מזהם מומס. מים נקיים זורמים פנימה בקצב 10 m³/יום ומים מעורבבים היטב יוצאים באותו קצב. כמה זמן יעבור עד שמחצית המזהם תיעלם?"
  },
  "A layer at height y has volume π(1)² dy and weight 1,000 × 9.81 × π dy newtons, and is lifted 2 − y meters.": {
   "fr": "Une couche à la hauteur y a un volume π(1)² dy et un poids de 1000 × 9.81 × π dy newtons, et elle est soulevée de 2 − y mètres.",
   "es": "Una capa a la altura y tiene un volumen π(1)² dy y un peso de 1000 × 9.81 × π dy newtons, y se eleva 2 − y metros.",
   "it": "Uno strato all’altezza y ha volume π(1)² dy e peso 1000 × 9.81 × π dy newton, e viene sollevato di 2 − y metri.",
-  "ar": "طبقة على الارتفاع y حجمها π(1)² dy ووزنها 1000 × 9.81 × π dy نيوتن، وتُرفع مسافة 2 − y متر."
+  "ar": "طبقة على الارتفاع y حجمها π(1)² dy ووزنها 1000 × 9.81 × π dy نيوتن، وتُرفع مسافة 2 − y متر.",
+  "he": "לשכבה בגובה y יש נפח π(1)² dy ומשקל 1000 × 9.81 × π dy ניוטון, והיא מורמת 2 − y מטרים."
  },
  "A mixing tank’s pollutant follows S′ = −S/50 with S(0) = 20 kg. When is S = 5 kg?": {
   "fr": "Le polluant d’une cuve de mélange suit S′ = −S/50 avec S(0) = 20 kg. Quand a-t-on S = 5 kg ?",
@@ -159,7 +174,8 @@
   "fr": "Une décomposition en éléments simples",
   "es": "Una descomposición en fracciones parciales",
   "it": "Una scomposizione in fratti semplici",
-  "ar": "تحليل إلى كسور جزئية"
+  "ar": "تحليل إلى كسور جزئية",
+  "he": "פירוק לשברים חלקיים"
  },
  "A power series Σcₙ(x − a)ⁿ converges inside a radius R and diverges outside; check the endpoints separately.": {
   "fr": "Une série entière Σcₙ(x − a)ⁿ converge à l’intérieur d’un rayon R et diverge à l’extérieur ; vérifiez les bornes séparément.",
@@ -171,25 +187,29 @@
   "fr": "Une fraction rationnelle propre se décompose en éléments simples dont les intégrales sont des logarithmes et des arctangentes.",
   "es": "Una función racional propia se separa en fracciones simples cuyas integrales son logaritmos y arcotangentes.",
   "it": "Una funzione razionale propria si scompone in fratti semplici i cui integrali sono logaritmi e arcotangenti.",
-  "ar": "تنقسم الدالة النسبية الفعلية إلى كسور بسيطة تكاملاتها لوغاريتمات ودوال ظل عكسية (arctan)."
+  "ar": "تنقسم الدالة النسبية الفعلية إلى كسور بسيطة تكاملاتها لوغاريتمات ودوال ظل عكسية (arctan).",
+  "he": "פונקציה רציונלית אמיתית מתפרקת לשברים פשוטים שהאינטגרלים שלהם הם לוגריתמים וארקטנגנסים."
  },
  "A ratio-test limit of 1 means divergence.": {
   "fr": "Une limite égale à 1 dans le critère de d’Alembert signifie divergence.",
   "es": "Un límite igual a 1 en el criterio del cociente significa divergencia.",
   "it": "Un limite pari a 1 nel criterio del rapporto significa divergenza.",
-  "ar": "نهاية تساوي 1 في اختبار النسبة تعني التباعد."
+  "ar": "نهاية تساوي 1 في اختبار النسبة تعني التباعد.",
+  "he": "גבול 1 במבחן המנה פירושו התבדרות."
  },
  "A rod on [0, 2] m has density ρ(x) = 1 + x kg/m. Find its center of mass.": {
   "fr": "Une tige sur [0, 2] m a une masse linéique ρ(x) = 1 + x kg/m. Trouvez son centre de masse.",
   "es": "Una varilla en [0, 2] m tiene densidad ρ(x) = 1 + x kg/m. Halla su centro de masa.",
   "it": "Un’asta su [0, 2] m ha densità ρ(x) = 1 + x kg/m. Trova il suo centro di massa.",
-  "ar": "قضيب على [0, 2] m كثافته ρ(x) = 1 + x kg/m. أوجد مركز كتلته."
+  "ar": "قضيب على [0, 2] m كثافته ρ(x) = 1 + x kg/m. أوجد مركز كتلته.",
+  "he": "למוט על [0, 2] m צפיפות ρ(x) = 1 + x kg/m. מצאו את מרכז המסה שלו."
  },
  "A series Σaₙ converges if its partial sums approach a limit.": {
   "fr": "Une série Σaₙ converge si ses sommes partielles tendent vers une limite.",
   "es": "Una serie Σaₙ converge si sus sumas parciales se acercan a un límite.",
   "it": "Una serie Σaₙ converge se le sue somme parziali tendono a un limite.",
-  "ar": "تتقارب المتسلسلة Σaₙ إذا اقتربت مجاميعها الجزئية من نهاية."
+  "ar": "تتقارب المتسلسلة Σaₙ إذا اقتربت مجاميعها الجزئية من نهاية.",
+  "he": "טור Σaₙ מתכנס אם הסכומים החלקיים שלו שואפים לגבול."
  },
  "A spreadsheet is enough.": {
   "fr": "Un tableur suffit.",
@@ -201,13 +221,15 @@
   "fr": "Un ressort de k = 200 N/m est étiré de 0.10 m depuis sa longueur au repos. Quel travail est fourni ?",
   "es": "Un resorte con k = 200 N/m se estira 0.10 m desde su longitud en reposo. ¿Cuánto trabajo se realiza?",
   "it": "Una molla con k = 200 N/m viene allungata di 0.10 m dalla lunghezza a riposo. Quanto lavoro viene compiuto?",
-  "ar": "نابض ثابته k = 200 N/m يُمدّ 0.10 m عن طوله في السكون. ما الشغل المبذول؟"
+  "ar": "نابض ثابته k = 200 N/m يُمدّ 0.10 m عن طوله في السكون. ما الشغل المبذول؟",
+  "he": "קפיץ עם k = 200 N/m נמתח ב-0.10 m מאורכו במנוחה. כמה עבודה נעשית?"
  },
  "A vertical rectangular gate 10 m wide holds back water 5 m deep. Find the total water force on it.": {
   "fr": "Une vanne rectangulaire verticale de 10 m de large retient une eau de 5 m de profondeur. Trouvez la force totale exercée par l’eau.",
   "es": "Una compuerta rectangular vertical de 10 m de ancho contiene agua de 5 m de profundidad. Halla la fuerza total del agua sobre ella.",
   "it": "Una paratoia rettangolare verticale larga 10 m trattiene acqua profonda 5 m. Trova la forza totale dell’acqua su di essa.",
-  "ar": "بوابة مستطيلة رأسية عرضها 10 m تحجز ماءً عمقه 5 m. أوجد القوة الكلية للماء عليها."
+  "ar": "بوابة مستطيلة رأسية عرضها 10 m تحجز ماءً عمقه 5 m. أوجد القوة الكلية للماء عليها.",
+  "he": "שער מלבני אנכי ברוחב 10 m עוצר מים בעומק 5 m. מצאו את כוח המים הכולל עליו."
  },
  "About 147.1 and 152.1 million km, matching NASA’s published perihelion and aphelion.": {
   "fr": "Environ 147.1 et 152.1 millions de km, en accord avec le périhélie et l’aphélie publiés par la NASA.",
@@ -219,7 +241,8 @@
   "fr": "Environ 62.6 MJ par kilogramme, une valeur finie alors que la distance est infinie. En posant ½v² égal à cette valeur, on obtient la vitesse de libération de 11.2 km/s.",
   "es": "Unos 62.6 MJ por kilogramo, una cantidad finita aunque la distancia sea infinita. Igualando ½v² a ese valor se obtiene la velocidad de escape de 11.2 km/s.",
   "it": "Circa 62.6 MJ per chilogrammo, un valore finito anche se la distanza è infinita. Ponendo ½v² uguale a questo valore si ottiene la velocità di fuga di 11.2 km/s.",
-  "ar": "نحو 62.6 MJ لكل كيلوغرام، وهي قيمة منتهية رغم أن المسافة لانهائية. وبمساواة ½v² بها نحصل على سرعة الإفلات 11.2 km/s."
+  "ar": "نحو 62.6 MJ لكل كيلوغرام، وهي قيمة منتهية رغم أن المسافة لانهائية. وبمساواة ½v² بها نحصل على سرعة الإفلات 11.2 km/s.",
+  "he": "כ-62.6 MJ לקילוגרם, ערך סופי אף שהמרחק אינסופי. השוואת ½v² לערך זה נותנת את מהירות המילוט 11.2 km/s."
  },
  "Add a column with the exact solution and the error.": {
   "fr": "Ajoutez une colonne avec la solution exacte et l’erreur.",
@@ -231,49 +254,57 @@
   "fr": "Après de nombreuses années, la quantité vaut 5 + 5(0.9) + 5(0.9)² + …",
   "es": "Tras muchos años la cantidad es 5 + 5(0.9) + 5(0.9)² + …",
   "it": "Dopo molti anni la quantità è 5 + 5(0.9) + 5(0.9)² + …",
-  "ar": "بعد سنوات عديدة تصبح الكمية 5 + 5(0.9) + 5(0.9)² + …"
+  "ar": "بعد سنوات عديدة تصبح الكمية 5 + 5(0.9) + 5(0.9)² + …",
+  "he": "אחרי שנים רבות הכמות היא 5 + 5(0.9) + 5(0.9)² + …"
  },
  "Alternating series with terms decreasing to 0 converge; Σ(−1)ⁿ⁺¹/n = ln 2.": {
   "fr": "Les séries alternées dont les termes décroissent vers 0 convergent ; Σ(−1)ⁿ⁺¹/n = ln 2.",
   "es": "Las series alternantes con términos que decrecen a 0 convergen; Σ(−1)ⁿ⁺¹/n = ln 2.",
   "it": "Le serie a segni alterni con termini decrescenti a 0 convergono; Σ(−1)ⁿ⁺¹/n = ln 2.",
-  "ar": "المتسلسلات المتناوبة التي تتناقص حدودها إلى 0 متقاربة؛ Σ(−1)ⁿ⁺¹/n = ln 2."
+  "ar": "المتسلسلات المتناوبة التي تتناقص حدودها إلى 0 متقاربة؛ Σ(−1)ⁿ⁺¹/n = ln 2.",
+  "he": "טורים מתחלפים שאיבריהם יורדים ל-0 מתכנסים; Σ(−1)ⁿ⁺¹/n = ln 2."
  },
  "Alternating series; ratio and root tests": {
   "fr": "Séries alternées ; critères de d’Alembert et de Cauchy",
   "es": "Series alternantes; criterios del cociente y de la raíz",
   "it": "Serie a segni alterni; criteri del rapporto e della radice",
-  "ar": "المتسلسلات المتناوبة؛ اختبارا النسبة والجذر"
+  "ar": "المتسلسلات المتناوبة؛ اختبارا النسبة والجذر",
+  "he": "טורים מתחלפים; מבחני המנה והשורש"
  },
  "Always let u be the first factor you see.": {
   "fr": "Prenez toujours pour u le premier facteur que vous voyez.",
   "es": "Toma siempre como u el primer factor que veas.",
   "it": "Scegli sempre come u il primo fattore che vedi.",
-  "ar": "اجعل u دائمًا أول عامل تراه."
+  "ar": "اجعل u دائمًا أول عامل تراه.",
+  "he": "תמיד בחרו כ-u את הגורם הראשון שאתם רואים."
  },
  "An equation involving a function and its derivatives.": {
   "fr": "Une équation faisant intervenir une fonction et ses dérivées.",
   "es": "Una ecuación que relaciona una función con sus derivadas.",
   "it": "Un’equazione che coinvolge una funzione e le sue derivate.",
-  "ar": "معادلة تتضمن دالة ومشتقاتها."
+  "ar": "معادلة تتضمن دالة ومشتقاتها.",
+  "he": "משוואה הכוללת פונקציה ונגזרותיה."
  },
  "An improper integral is defined as…": {
   "fr": "Une intégrale impropre est définie comme…",
   "es": "Una integral impropia se define como…",
   "it": "Un integrale improprio è definito come…",
-  "ar": "يُعرّف التكامل المعتل بأنه…"
+  "ar": "يُعرّف التكامل المعتل بأنه…",
+  "he": "אינטגרל לא אמיתי מוגדר כ…"
  },
  "An infinite region can have finite area.": {
   "fr": "Une région infinie peut avoir une aire finie.",
   "es": "Una región infinita puede tener área finita.",
   "it": "Una regione infinita può avere area finita.",
-  "ar": "قد تكون لمنطقة لانهائية مساحة منتهية."
+  "ar": "قد تكون لمنطقة لانهائية مساحة منتهية.",
+  "he": "לתחום אינסופי יכול להיות שטח סופי."
  },
  "An infinitely long region has infinite area.": {
   "fr": "Une région infiniment longue a une aire infinie.",
   "es": "Una región infinitamente larga tiene área infinita.",
   "it": "Una regione infinitamente lunga ha area infinita.",
-  "ar": "المنطقة الممتدة إلى ما لانهاية مساحتها لانهائية."
+  "ar": "المنطقة الممتدة إلى ما لانهاية مساحتها لانهائية.",
+  "he": "לתחום ארוך אינסופית יש שטח אינסופי."
  },
  "An orbit around one focus is r = p/(1 + e cos θ), where e is the eccentricity.": {
   "fr": "Une orbite autour d’un foyer s’écrit r = p/(1 + e cos θ), où e est l’excentricité.",
@@ -285,19 +316,22 @@
   "fr": "Une liste ordonnée a₁, a₂, …",
   "es": "Una lista ordenada a₁, a₂, …",
   "it": "Un elenco ordinato a₁, a₂, …",
-  "ar": "قائمة مرتبة a₁, a₂, …"
+  "ar": "قائمة مرتبة a₁, a₂, …",
+  "he": "רשימה סדורה a₁, a₂, …"
  },
  "Antiderivative ½ ln|(x − 1)/(x + 1)|.": {
   "fr": "Primitive ½ ln|(x − 1)/(x + 1)|.",
   "es": "Antiderivada ½ ln|(x − 1)/(x + 1)|.",
   "it": "Primitiva ½ ln|(x − 1)/(x + 1)|.",
-  "ar": "الدالة الأصلية ½ ln|(x − 1)/(x + 1)|."
+  "ar": "الدالة الأصلية ½ ln|(x − 1)/(x + 1)|.",
+  "he": "פונקציה קדומה ½ ln|(x − 1)/(x + 1)|."
  },
  "Applications: Volume, Arc Length, Work & Center of Mass": {
   "fr": "Applications : volume, longueur d’arc, travail et centre de masse",
   "es": "Aplicaciones: volumen, longitud de arco, trabajo y centro de masa",
   "it": "Applicazioni: volume, lunghezza d’arco, lavoro e centro di massa",
-  "ar": "تطبيقات: الحجم وطول القوس والشغل ومركز الكتلة"
+  "ar": "تطبيقات: الحجم وطول القوس والشغل ومركز الكتلة",
+  "he": "יישומים: נפח, אורך קשת, עבודה ומרכז מסה"
  },
  "Applies formulas without checking conditions; needs to revisit the unit.": {
   "fr": "Applique les formules sans vérifier les conditions ; doit revoir l’unité.",
@@ -315,49 +349,57 @@
   "fr": "Appliquer les intégrales impropres à l’énergie de libération et aux durées de vie moyennes.",
   "es": "Aplicar integrales impropias a la energía de escape y a las vidas medias.",
   "it": "Applicare gli integrali impropri all’energia di fuga e alle vite medie.",
-  "ar": "تطبيق التكاملات المعتلة على طاقة الإفلات ومتوسط الأعمار."
+  "ar": "تطبيق التكاملات المعتلة على طاقة الإفلات ومتوسط الأعمار.",
+  "he": "ליישם אינטגרלים לא אמיתיים על אנרגיית מילוט ועל זמני חיים ממוצעים."
  },
  "Apply the divergence, integral, comparison, alternating-series, ratio and root tests.": {
   "fr": "Appliquer les critères de divergence, de l’intégrale, de comparaison, des séries alternées, de d’Alembert et de Cauchy.",
   "es": "Aplicar los criterios de divergencia, de la integral, de comparación, de series alternantes, del cociente y de la raíz.",
   "it": "Applicare i criteri di divergenza, dell’integrale, del confronto, delle serie a segni alterni, del rapporto e della radice.",
-  "ar": "تطبيق اختبارات التباعد والتكامل والمقارنة والمتسلسلات المتناوبة والنسبة والجذر."
+  "ar": "تطبيق اختبارات التباعد والتكامل والمقارنة والمتسلسلات المتناوبة والنسبة والجذر.",
+  "he": "ליישם את מבחני ההתבדרות, האינטגרל, ההשוואה, הטורים המתחלפים, המנה והשורש."
  },
  "Approximate integrals with the trapezoid rule and Simpson’s rule, and estimate the error.": {
   "fr": "Approcher des intégrales par la méthode des trapèzes et la méthode de Simpson, et estimer l’erreur.",
   "es": "Aproximar integrales con la regla del trapecio y la regla de Simpson, y estimar el error.",
   "it": "Approssimare integrali con la regola dei trapezi e la regola di Simpson, e stimare l’errore.",
-  "ar": "تقريب التكاملات بقاعدة شبه المنحرف وقاعدة سيمبسون، وتقدير الخطأ."
+  "ar": "تقريب التكاملات بقاعدة شبه المنحرف وقاعدة سيمبسون، وتقدير الخطأ.",
+  "he": "לקרב אינטגרלים בכלל הטרפז ובכלל סימפסון, ולהעריך את השגיאה."
  },
  "Arc length": {
   "fr": "Longueur d’arc",
   "es": "Longitud de arco",
   "it": "Lunghezza d’arco",
-  "ar": "طول القوس"
+  "ar": "طول القوس",
+  "he": "אורך קשת"
  },
  "Arc length adds tiny hypotenuses: L = ∫√(1 + [f′(x)]²) dx.": {
   "fr": "La longueur d’arc additionne de minuscules hypoténuses : L = ∫√(1 + [f′(x)]²) dx.",
   "es": "La longitud de arco suma hipotenusas diminutas: L = ∫√(1 + [f′(x)]²) dx.",
   "it": "La lunghezza d’arco somma minuscole ipotenuse: L = ∫√(1 + [f′(x)]²) dx.",
-  "ar": "طول القوس يجمع أوتارًا صغيرة جدًا: L = ∫√(1 + [f′(x)]²) dx."
+  "ar": "طول القوس يجمع أوتارًا صغيرة جدًا: L = ∫√(1 + [f′(x)]²) dx.",
+  "he": "אורך קשת מסכם יתרים זעירים: L = ∫√(1 + [f′(x)]²) dx."
  },
  "Arc length uses…": {
   "fr": "La longueur d’arc utilise…",
   "es": "La longitud de arco usa…",
   "it": "La lunghezza d’arco usa…",
-  "ar": "طول القوس يستخدم…"
+  "ar": "طول القوس يستخدم…",
+  "he": "אורך קשת משתמש ב…"
  },
  "Arc length, work, fluid force, centers of mass; Lab B": {
   "fr": "Longueur d’arc, travail, force exercée par un fluide, centres de masse ; TP B",
   "es": "Longitud de arco, trabajo, fuerza de un fluido, centros de masa; Práctica B",
   "it": "Lunghezza d’arco, lavoro, forza dei fluidi, centri di massa; Laboratorio B",
-  "ar": "طول القوس، والشغل، وقوة الموائع، ومراكز الكتلة؛ المختبر B"
+  "ar": "طول القوس، والشغل، وقوة الموائع، ومراكز الكتلة؛ المختبر B",
+  "he": "אורך קשת, עבודה, כוח של נוזל, מרכזי מסה; מעבדה B"
  },
  "Arc length.": {
   "fr": "Longueur d’arc.",
   "es": "Longitud de arco.",
   "it": "Lunghezza d’arco.",
-  "ar": "طول القوس."
+  "ar": "طول القوس.",
+  "he": "אורך קשת."
  },
  "Arc length: ∫√(x′² + y′²) dt.": {
   "fr": "Longueur d’arc : ∫√(x′² + y′²) dt.",
@@ -369,7 +411,8 @@
   "fr": "Aires, volumes par tranches, disques, anneaux, coquilles cylindriques",
   "es": "Áreas, volúmenes por secciones, discos, arandelas, capas cilíndricas",
   "it": "Aree, volumi per sezioni, dischi, rondelle, gusci cilindrici",
-  "ar": "المساحات، والحجوم بالشرائح، والأقراص، والحلقات، والأغلفة الأسطوانية"
+  "ar": "المساحات، والحجوم بالشرائح، والأقراص، والحلقات، والأغلفة الأسطوانية",
+  "he": "שטחים, נפחים בחתכים, דיסקות, טבעות, קליפות גליליות"
  },
  "At x = 0.5, P₅ errs by about 10⁻⁶; at x = 2 by 0.024. Accuracy falls fast away from 0.": {
   "fr": "En x = 0.5, P₅ se trompe d’environ 10⁻⁶ ; en x = 2, de 0.024. La précision chute vite quand on s’éloigne de 0.",
@@ -381,7 +424,8 @@
   "fr": "Moyenne des sommes à gauche et à droite ; erreur ∝ Δx².",
   "es": "Promedio de las sumas por la izquierda y por la derecha; error ∝ Δx².",
   "it": "Media delle somme sinistra e destra; errore ∝ Δx².",
-  "ar": "متوسط المجموعين الأيسر والأيمن؛ الخطأ ∝ Δx²."
+  "ar": "متوسط المجموعين الأيسر والأيمن؛ الخطأ ∝ Δx².",
+  "he": "ממוצע של הסכום השמאלי והימני; שגיאה ∝ Δx²."
  },
  "Balance point; moment divided by mass.": {
   "fr": "Point d’équilibre ; moment divisé par la masse.",
@@ -405,55 +449,64 @@
   "fr": "Par parties : 1/λ.",
   "es": "Por partes: 1/λ.",
   "it": "Per parti: 1/λ.",
-  "ar": "بالتجزئة: 1/λ."
+  "ar": "بالتجزئة: 1/λ.",
+  "he": "בחלקים: 1/λ."
  },
  "Calculus I, Lab D: numerical integration": {
   "fr": "Analyse I, TP D : intégration numérique",
   "es": "Cálculo I, Práctica D: integración numérica",
   "it": "Analisi I, Laboratorio D: integrazione numerica",
-  "ar": "حساب التفاضل والتكامل I، المختبر D: التكامل العددي"
+  "ar": "حساب التفاضل والتكامل I، المختبر D: التكامل العددي",
+  "he": "חדו״א I, מעבדה D: אינטגרציה נומרית"
  },
  "Calculus I: limits, derivatives, the chain rule, basic integrals and substitution, the Fundamental Theorem.": {
   "fr": "Analyse I : limites, dérivées, règle de dérivation des fonctions composées, intégrales de base et changement de variable, théorème fondamental.",
   "es": "Cálculo I: límites, derivadas, regla de la cadena, integrales básicas y sustitución, el teorema fundamental.",
   "it": "Analisi I: limiti, derivate, regola della catena, integrali di base e sostituzione, teorema fondamentale.",
-  "ar": "حساب التفاضل والتكامل I: النهايات، والمشتقات، وقاعدة السلسلة، والتكاملات الأساسية والتعويض، والمبرهنة الأساسية."
+  "ar": "حساب التفاضل والتكامل I: النهايات، والمشتقات، وقاعدة السلسلة، والتكاملات الأساسية والتعويض، والمبرهنة الأساسية.",
+  "he": "חדו״א I: גבולות, נגזרות, כלל השרשרת, אינטגרלים בסיסיים והצבה, המשפט היסודי."
  },
  "Calculus II is where calculus starts modeling the world: volumes of water in reservoirs, the work to pump it, how a pollutant flushes out of a lake, how a fish population recovers, and the elliptical orbits of satellites that watch it all.": {
   "fr": "L’Analyse II, c’est le moment où le calcul commence à modéliser le monde : le volume d’eau des réservoirs, le travail pour la pomper, la façon dont un polluant est évacué d’un lac, le rétablissement d’une population de poissons, et les orbites elliptiques des satellites qui observent tout cela.",
   "es": "Cálculo II es donde el cálculo empieza a modelar el mundo: el volumen de agua en los embalses, el trabajo para bombearla, cómo un contaminante sale de un lago, cómo se recupera una población de peces y las órbitas elípticas de los satélites que lo observan todo.",
   "it": "Analisi II è il punto in cui il calcolo comincia a modellare il mondo: i volumi d’acqua nei bacini, il lavoro per pomparla, come un inquinante viene espulso da un lago, come si riprende una popolazione di pesci e le orbite ellittiche dei satelliti che osservano tutto questo.",
-  "ar": "في حساب التفاضل والتكامل II يبدأ الحساب في نمذجة العالم: أحجام المياه في الخزانات، والشغل اللازم لضخها، وكيف يُطرد ملوث من بحيرة، وكيف تتعافى أعداد الأسماك، والمدارات الإهليلجية للأقمار الصناعية التي ترصد كل ذلك."
+  "ar": "في حساب التفاضل والتكامل II يبدأ الحساب في نمذجة العالم: أحجام المياه في الخزانات، والشغل اللازم لضخها، وكيف يُطرد ملوث من بحيرة، وكيف تتعافى أعداد الأسماك، والمدارات الإهليلجية للأقمار الصناعية التي ترصد كل ذلك.",
+  "he": "חדו״א II הוא המקום שבו החשבון מתחיל למדל את העולם: נפחי מים במאגרים, העבודה הדרושה לשאיבתם, איך מזהם נשטף מאגם, איך אוכלוסיית דגים מתאוששת, והמסלולים האליפטיים של הלוויינים שצופים בכל זה."
  },
  "Carrying capacity": {
   "fr": "Capacité de charge",
   "es": "Capacidad de carga",
   "it": "Capacità portante",
-  "ar": "السعة الاستيعابية"
+  "ar": "السعة الاستيعابية",
+  "he": "כושר נשיאה"
  },
  "Center of mass = moment ÷ mass.": {
   "fr": "Centre de masse = moment ÷ masse.",
   "es": "Centro de masa = momento ÷ masa.",
   "it": "Centro di massa = momento ÷ massa.",
-  "ar": "مركز الكتلة = العزم ÷ الكتلة."
+  "ar": "مركز الكتلة = العزم ÷ الكتلة.",
+  "he": "מרכז מסה = מומנט ÷ מסה."
  },
  "Center of mass of a rod": {
   "fr": "Centre de masse d’une tige",
   "es": "Centro de masa de una varilla",
   "it": "Centro di massa di un’asta",
-  "ar": "مركز كتلة قضيب"
+  "ar": "مركز كتلة قضيب",
+  "he": "מרכז מסה של מוט"
  },
  "Centroids.": {
   "fr": "Centroïdes.",
   "es": "Centroides.",
   "it": "Baricentri.",
-  "ar": "المراكز الهندسية."
+  "ar": "المراكز الهندسية.",
+  "he": "מרכזי כובד."
  },
  "Choose u to simplify when differentiated: logs and polynomials first, exponentials and trig as dv.": {
   "fr": "Choisissez pour u ce qui se simplifie en dérivant : logarithmes et polynômes d’abord, exponentielles et fonctions trigonométriques en dv.",
   "es": "Elige como u lo que se simplifica al derivar: primero logaritmos y polinomios; exponenciales y funciones trigonométricas como dv.",
   "it": "Scegli come u ciò che si semplifica derivando: prima logaritmi e polinomi; esponenziali e funzioni trigonometriche come dv.",
-  "ar": "اختر u مما يبسط عند الاشتقاق: اللوغاريتمات وكثيرات الحدود أولًا، والدوال الأسية والمثلثية تكون dv."
+  "ar": "اختر u مما يبسط عند الاشتقاق: اللوغاريتمات وكثيرات الحدود أولًا، والدوال الأسية والمثلثية تكون dv.",
+  "he": "בחרו u שנעשה פשוט יותר בגזירה: קודם לוגריתמים ופולינומים, ופונקציות מעריכיות וטריגונומטריות כ-dv."
  },
  "Chooses the right technique or test unprompted, justifies it, and checks results numerically.": {
   "fr": "Choisit de lui-même la bonne technique ou le bon critère, le justifie et vérifie les résultats numériquement.",
@@ -465,13 +518,15 @@
   "fr": "Circonférence 2πx × hauteur f(x) × épaisseur dx.",
   "es": "Circunferencia 2πx × altura f(x) × grosor dx.",
   "it": "Circonferenza 2πx × altezza f(x) × spessore dx.",
-  "ar": "المحيط 2πx × الارتفاع f(x) × السمك dx."
+  "ar": "المحيط 2πx × الارتفاع f(x) × السمك dx.",
+  "he": "היקף 2πx × גובה f(x) × עובי dx."
  },
  "Coffee at 90 °C cools in a 20 °C room with k = 0.1 per minute. Find its temperature after 10 minutes.": {
   "fr": "Un café à 90 °C refroidit dans une pièce à 20 °C avec k = 0.1 par minute. Trouvez sa température au bout de 10 minutes.",
   "es": "Un café a 90 °C se enfría en una habitación a 20 °C con k = 0.1 por minuto. Halla su temperatura después de 10 minutos.",
   "it": "Un caffè a 90 °C si raffredda in una stanza a 20 °C con k = 0.1 al minuto. Trova la sua temperatura dopo 10 minuti.",
-  "ar": "قهوة عند 90 °C تبرد في غرفة عند 20 °C مع k = 0.1 لكل دقيقة. أوجد درجة حرارتها بعد 10 دقائق."
+  "ar": "قهوة عند 90 °C تبرد في غرفة عند 20 °C مع k = 0.1 لكل دقيقة. أوجد درجة حرارتها بعد 10 دقائق.",
+  "he": "קפה ב-90 °C מתקרר בחדר ב-20 °C עם k = 0.1 לדקה. מצאו את הטמפרטורה שלו אחרי 10 דקות."
  },
  "Compare Taylor polynomials of sin x with the true value and with the remainder bound.": {
   "fr": "Comparer les polynômes de Taylor de sin x avec la valeur exacte et avec la majoration du reste.",
@@ -489,19 +544,22 @@
   "fr": "Critère de comparaison",
   "es": "Criterio de comparación",
   "it": "Criterio del confronto",
-  "ar": "اختبار المقارنة"
+  "ar": "اختبار المقارنة",
+  "he": "מבחן ההשוואה"
  },
  "Comparison: if 0 ≤ f ≤ g and ∫g converges, so does ∫f.": {
   "fr": "Comparaison : si 0 ≤ f ≤ g et si ∫g converge, alors ∫f converge aussi.",
   "es": "Comparación: si 0 ≤ f ≤ g y ∫g converge, también converge ∫f.",
   "it": "Confronto: se 0 ≤ f ≤ g e ∫g converge, converge anche ∫f.",
-  "ar": "المقارنة: إذا كان 0 ≤ f ≤ g وتقارب ∫g، فإن ∫f يتقارب أيضًا."
+  "ar": "المقارنة: إذا كان 0 ≤ f ≤ g وتقارب ∫g، فإن ∫f يتقارب أيضًا.",
+  "he": "השוואה: אם 0 ≤ f ≤ g ו-∫g מתכנס, אז גם ∫f מתכנס."
  },
  "Compute arc length.": {
   "fr": "Calculer une longueur d’arc.",
   "es": "Calcular la longitud de arco.",
   "it": "Calcolare la lunghezza d’arco.",
-  "ar": "حساب طول القوس."
+  "ar": "حساب طول القوس.",
+  "he": "לחשב אורך קשת."
  },
  "Compute the swept area from θ = 0 to 0.5 and from θ = π − 0.25 to π + 0.25 (same 0.5 rad wide) with Simpson’s rule.": {
   "fr": "Calculez l’aire balayée de θ = 0 à 0.5 et de θ = π − 0.25 à π + 0.25 (même largeur de 0.5 rad) par la méthode de Simpson.",
@@ -513,7 +571,8 @@
   "fr": "Calculer le travail de forces variables, y compris le pompage de liquides, et la force hydrostatique.",
   "es": "Calcular el trabajo de fuerzas variables, incluido el bombeo de líquidos, y la fuerza hidrostática.",
   "it": "Calcolare il lavoro di forze variabili, incluso il pompaggio di liquidi, e la forza idrostatica.",
-  "ar": "حساب شغل القوى المتغيرة، بما في ذلك ضخ السوائل، والقوة الهيدروستاتيكية."
+  "ar": "حساب شغل القوى المتغيرة، بما في ذلك ضخ السوائل، والقوة الهيدروستاتيكية.",
+  "he": "לחשב עבודה של כוחות משתנים, כולל שאיבת נוזלים, וכוח הידרוסטטי."
  },
  "Computed model values (not a real fishery). Exact P(4) = 450.9.": {
   "fr": "Valeurs calculées par le modèle (pas une pêcherie réelle). P(4) exact = 450.9.",
@@ -537,7 +596,8 @@
   "fr": "Convergence conditionnelle",
   "es": "Convergencia condicional",
   "it": "Convergenza condizionata",
-  "ar": "التقارب المشروط"
+  "ar": "التقارب المشروط",
+  "he": "התכנסות בתנאי"
  },
  "Conic orbit in polar form": {
   "fr": "Orbite conique sous forme polaire",
@@ -549,19 +609,22 @@
   "fr": "Converge",
   "es": "Converge",
   "it": "Converge",
-  "ar": "متقارب"
+  "ar": "متقارب",
+  "he": "מתכנס"
  },
  "Converges (its sum is 2).": {
   "fr": "Converge (sa somme vaut 2).",
   "es": "Converge (su suma es 2).",
   "it": "Converge (la somma è 2).",
-  "ar": "متقاربة (مجموعها 2)."
+  "ar": "متقاربة (مجموعها 2).",
+  "he": "מתכנס (סכומו 2)."
  },
  "Converges, but not absolutely.": {
   "fr": "Converge, mais pas absolument.",
   "es": "Converge, pero no absolutamente.",
   "it": "Converge, ma non assolutamente.",
-  "ar": "متقاربة، لكن ليس تقاربًا مطلقًا."
+  "ar": "متقاربة، لكن ليس تقاربًا مطلقًا.",
+  "he": "מתכנס, אבל לא בהחלט."
  },
  "Converges, but the absolute values diverge.": {
   "fr": "Converge, mais la série des valeurs absolues diverge.",
@@ -591,13 +654,15 @@
   "fr": "Déterminer la convergence avec le critère de Riemann et la comparaison.",
   "es": "Decidir la convergencia con el criterio p y la comparación.",
   "it": "Stabilire la convergenza con il criterio p e il confronto.",
-  "ar": "تحديد التقارب باختبار p والمقارنة."
+  "ar": "تحديد التقارب باختبار p والمقارنة.",
+  "he": "לקבוע התכנסות בעזרת מבחן p והשוואה."
  },
  "Decompose rational functions into partial fractions.": {
   "fr": "Décomposer des fractions rationnelles en éléments simples.",
   "es": "Descomponer funciones racionales en fracciones parciales.",
   "it": "Scomporre funzioni razionali in fratti semplici.",
-  "ar": "تحليل الدوال النسبية إلى كسور جزئية."
+  "ar": "تحليل الدوال النسبية إلى كسور جزئية.",
+  "he": "לפרק פונקציות רציונליות לשברים חלקיים."
  },
  "Degree-5 Maclaurin polynomial of sin x": {
   "fr": "Polynôme de Maclaurin de degré 5 de sin x",
@@ -633,37 +698,43 @@
   "fr": "Équation différentielle",
   "es": "Ecuación diferencial",
   "it": "Equazione differenziale",
-  "ar": "معادلة تفاضلية"
+  "ar": "معادلة تفاضلية",
+  "he": "משוואה דיפרנציאלית"
  },
  "Differential equations, direction fields, Euler’s method": {
   "fr": "Équations différentielles, champs de directions, méthode d’Euler",
   "es": "Ecuaciones diferenciales, campos de direcciones, método de Euler",
   "it": "Equazioni differenziali, campi di direzioni, metodo di Eulero",
-  "ar": "المعادلات التفاضلية، وحقول الاتجاهات، وطريقة أويلر"
+  "ar": "المعادلات التفاضلية، وحقول الاتجاهات، وطريقة أويلر",
+  "he": "משוואות דיפרנציאליות, שדות כיוונים, שיטת אוילר"
  },
  "Disk method": {
   "fr": "Méthode des disques",
   "es": "Método de discos",
   "it": "Metodo dei dischi",
-  "ar": "طريقة الأقراص"
+  "ar": "طريقة الأقراص",
+  "he": "שיטת הדיסקות"
  },
  "Disk method: V = ∫π[f(x)]² dx about the x-axis. Shell method: V = ∫2πx f(x) dx about the y-axis.": {
   "fr": "Méthode des disques : V = ∫π[f(x)]² dx autour de l’axe des x. Méthode des coquilles : V = ∫2πx f(x) dx autour de l’axe des y.",
   "es": "Método de discos: V = ∫π[f(x)]² dx alrededor del eje x. Método de capas: V = ∫2πx f(x) dx alrededor del eje y.",
   "it": "Metodo dei dischi: V = ∫π[f(x)]² dx attorno all’asse x. Metodo dei gusci: V = ∫2πx f(x) dx attorno all’asse y.",
-  "ar": "طريقة الأقراص: V = ∫π[f(x)]² dx حول المحور x. طريقة الأغلفة: V = ∫2πx f(x) dx حول المحور y."
+  "ar": "طريقة الأقراص: V = ∫π[f(x)]² dx حول المحور x. طريقة الأغلفة: V = ∫2πx f(x) dx حول المحور y.",
+  "he": "שיטת הדיסקות: V = ∫π[f(x)]² dx סביב ציר x. שיטת הקליפות: V = ∫2πx f(x) dx סביב ציר y."
  },
  "Disks and washers.": {
   "fr": "Disques et anneaux.",
   "es": "Discos y arandelas.",
   "it": "Dischi e rondelle.",
-  "ar": "الأقراص والحلقات."
+  "ar": "الأقراص والحلقات.",
+  "he": "דיסקות וטבעות."
  },
  "Disks of radius √x: V = ∫₀⁴ π x dx.": {
   "fr": "Disques de rayon √x : V = ∫₀⁴ π x dx.",
   "es": "Discos de radio √x: V = ∫₀⁴ π x dx.",
   "it": "Dischi di raggio √x: V = ∫₀⁴ π x dx.",
-  "ar": "أقراص نصف قطرها √x: V = ∫₀⁴ π x dx."
+  "ar": "أقراص نصف قطرها √x: V = ∫₀⁴ π x dx.",
+  "he": "דיסקות ברדיוס √x: V = ∫₀⁴ π x dx."
  },
  "Disks: ∫₀² π x⁴ dx = π × 32/5.": {
   "fr": "Disques : ∫₀² π x⁴ dx = π × 32/5.",
@@ -681,25 +752,29 @@
   "fr": "Distinguer convergence absolue et convergence conditionnelle.",
   "es": "Distinguir la convergencia absoluta de la condicional.",
   "it": "Distinguere la convergenza assoluta da quella condizionata.",
-  "ar": "التمييز بين التقارب المطلق والتقارب المشروط."
+  "ar": "التمييز بين التقارب المطلق والتقارب المشروط.",
+  "he": "להבחין בין התכנסות בהחלט להתכנסות בתנאי."
  },
  "Divergence test: if aₙ does not → 0, the series diverges. The converse is false: the harmonic series Σ1/n diverges.": {
   "fr": "Critère de divergence : si aₙ ne tend pas vers 0, la série diverge. La réciproque est fausse : la série harmonique Σ1/n diverge.",
   "es": "Criterio de divergencia: si aₙ no → 0, la serie diverge. El recíproco es falso: la serie armónica Σ1/n diverge.",
   "it": "Criterio di divergenza: se aₙ non → 0, la serie diverge. Il viceversa è falso: la serie armonica Σ1/n diverge.",
-  "ar": "اختبار التباعد: إذا لم يكن aₙ → 0 فالمتسلسلة متباعدة. والعكس غير صحيح: المتسلسلة التوافقية Σ1/n متباعدة."
+  "ar": "اختبار التباعد: إذا لم يكن aₙ → 0 فالمتسلسلة متباعدة. والعكس غير صحيح: المتسلسلة التوافقية Σ1/n متباعدة.",
+  "he": "מבחן ההתבדרות: אם aₙ אינו → 0, הטור מתבדר. הכיוון ההפוך אינו נכון: הטור ההרמוני Σ1/n מתבדר."
  },
  "Divergence, integral and comparison tests": {
   "fr": "Critères de divergence, de l’intégrale et de comparaison",
   "es": "Criterios de divergencia, de la integral y de comparación",
   "it": "Criteri di divergenza, dell’integrale e del confronto",
-  "ar": "اختبارات التباعد والتكامل والمقارنة"
+  "ar": "اختبارات التباعد والتكامل والمقارنة",
+  "he": "מבחני התבדרות, האינטגרל וההשוואה"
  },
  "Divide first if the top’s degree is not less than the bottom’s.": {
   "fr": "Divisez d’abord si le degré du numérateur n’est pas inférieur à celui du dénominateur.",
   "es": "Divide primero si el grado del numerador no es menor que el del denominador.",
   "it": "Dividi prima se il grado del numeratore non è minore di quello del denominatore.",
-  "ar": "اقسم أولًا إذا لم تكن درجة البسط أصغر من درجة المقام."
+  "ar": "اقسم أولًا إذا لم تكن درجة البسط أصغر من درجة المقام.",
+  "he": "חלקו קודם אם מעלת המונה אינה קטנה ממעלת המכנה."
  },
  "Divide: (dy/dt)/(dx/dt).": {
   "fr": "Diviser : (dy/dt)/(dx/dt).",
@@ -711,43 +786,50 @@
   "fr": "Σ (−1)ⁿ⁺¹/n converge-t-elle absolument ?",
   "es": "¿Converge absolutamente Σ (−1)ⁿ⁺¹/n?",
   "it": "Σ (−1)ⁿ⁺¹/n converge assolutamente?",
-  "ar": "هل تتقارب Σ (−1)ⁿ⁺¹/n تقاربًا مطلقًا؟"
+  "ar": "هل تتقارب Σ (−1)ⁿ⁺¹/n تقاربًا مطلقًا؟",
+  "he": "האם Σ (−1)ⁿ⁺¹/n מתכנס בהחלט?"
  },
  "Does Σ 1/n² converge?": {
   "fr": "Σ 1/n² converge-t-elle ?",
   "es": "¿Converge Σ 1/n²?",
   "it": "Σ 1/n² converge?",
-  "ar": "هل تتقارب Σ 1/n²؟"
+  "ar": "هل تتقارب Σ 1/n²؟",
+  "he": "האם Σ 1/n² מתכנס?"
  },
  "Does Σ n/(n + 1) converge?": {
   "fr": "Σ n/(n + 1) converge-t-elle ?",
   "es": "¿Converge Σ n/(n + 1)?",
   "it": "Σ n/(n + 1) converge?",
-  "ar": "هل تتقارب Σ n/(n + 1)؟"
+  "ar": "هل تتقارب Σ n/(n + 1)؟",
+  "he": "האם Σ n/(n + 1) מתכנס?"
  },
  "Does Σ n/2ⁿ converge?": {
   "fr": "Σ n/2ⁿ converge-t-elle ?",
   "es": "¿Converge Σ n/2ⁿ?",
   "it": "Σ n/2ⁿ converge?",
-  "ar": "هل تتقارب Σ n/2ⁿ؟"
+  "ar": "هل تتقارب Σ n/2ⁿ؟",
+  "he": "האם Σ n/2ⁿ מתכנס?"
  },
  "Does ∫₁^∞ dx/(x² + 1) converge?": {
   "fr": "∫₁^∞ dx/(x² + 1) converge-t-elle ?",
   "es": "¿Converge ∫₁^∞ dx/(x² + 1)?",
   "it": "∫₁^∞ dx/(x² + 1) converge?",
-  "ar": "هل يتقارب ∫₁^∞ dx/(x² + 1)؟"
+  "ar": "هل يتقارب ∫₁^∞ dx/(x² + 1)؟",
+  "he": "האם ∫₁^∞ dx/(x² + 1) מתכנס?"
  },
  "Does ∫₁^∞ dx/x converge?": {
   "fr": "∫₁^∞ dx/x converge-t-elle ?",
   "es": "¿Converge ∫₁^∞ dx/x?",
   "it": "∫₁^∞ dx/x converge?",
-  "ar": "هل يتقارب ∫₁^∞ dx/x؟"
+  "ar": "هل يتقارب ∫₁^∞ dx/x؟",
+  "he": "האם ∫₁^∞ dx/x מתכנס?"
  },
  "Each layer moves a different distance, so you must integrate.": {
   "fr": "Chaque couche se déplace d’une distance différente, il faut donc intégrer.",
   "es": "Cada capa se mueve una distancia diferente, así que hay que integrar.",
   "it": "Ogni strato si sposta di una distanza diversa, quindi bisogna integrare.",
-  "ar": "كل طبقة تتحرك مسافة مختلفة، لذا يجب التكامل."
+  "ar": "كل طبقة تتحرك مسافة مختلفة، لذا يجب التكامل.",
+  "he": "כל שכבה נעה מרחק שונה, ולכן חייבים לבצע אינטגרציה."
  },
  "Each slice is approximately a sector of area ½r² dθ.": {
   "fr": "Chaque tranche est approximativement un secteur d’aire ½r² dθ.",
@@ -759,7 +841,8 @@
   "fr": "Chaque année, un lac perd 10% d’un polluant stocké, et 5 tonnes y sont ajoutées. À quel niveau se stabilise-t-il ?",
   "es": "Cada año un lago pierde el 10% de un contaminante acumulado y recibe 5 toneladas más. ¿En qué nivel se estabiliza?",
   "it": "Ogni anno un lago perde il 10% di un inquinante accumulato e ne riceve altre 5 tonnellate. A quale livello si stabilizza?",
-  "ar": "تفقد بحيرة كل عام 10% من ملوث مخزّن، وتُضاف إليها 5 أطنان. عند أي مستوى تستقر؟"
+  "ar": "تفقد بحيرة كل عام 10% من ملوث مخزّن، وتُضاف إليها 5 أطنان. عند أي مستوى تستقر؟",
+  "he": "בכל שנה אגם מאבד 10% ממזהם אגור, ומתווספות 5 טונות. באיזו רמה הוא מתייצב?"
  },
  "Earth’s orbit has a = 149.6 million km and e = 0.0167. Find its closest and farthest distances from the Sun.": {
   "fr": "L’orbite terrestre a a = 149.6 millions de km et e = 0.0167. Trouvez ses distances minimale et maximale au Soleil.",
@@ -825,13 +908,15 @@
   "fr": "Des équations pour les taux de variation : croissance et décroissance exponentielles, refroidissement, mélange, et modèle logistique des populations.",
   "es": "Ecuaciones para tasas de cambio: crecimiento y decaimiento exponencial, enfriamiento, mezclas y el modelo logístico de poblaciones.",
   "it": "Equazioni per i tassi di variazione: crescita e decadimento esponenziale, raffreddamento, miscelazione e il modello logistico delle popolazioni.",
-  "ar": "معادلات لمعدلات التغير: النمو والاضمحلال الأسيان، والتبريد، والخلط، والنموذج اللوجستي للمجموعات السكانية."
+  "ar": "معادلات لمعدلات التغير: النمو والاضمحلال الأسيان، والتبريد، والخلط، والنموذج اللوجستي للمجموعات السكانية.",
+  "he": "משוואות לקצבי שינוי: גדילה ודעיכה מעריכיות, קירור, ערבוב, והמודל הלוגיסטי של אוכלוסיות."
  },
  "Escape energy": {
   "fr": "Énergie de libération",
   "es": "Energía de escape",
   "it": "Energia di fuga",
-  "ar": "طاقة الإفلات"
+  "ar": "طاقة الإفلات",
+  "he": "אנרגיית מילוט"
  },
  "Estimate a reservoir’s volume from surface-area measurements at different depths.": {
   "fr": "Estimer le volume d’un réservoir à partir de mesures de la surface à différentes profondeurs.",
@@ -861,7 +946,8 @@
   "fr": "Estimez ∫₀¹ e^(−x²) dx par la méthode de Simpson, n = 4.",
   "es": "Estima ∫₀¹ e^(−x²) dx con la regla de Simpson, n = 4.",
   "it": "Stima ∫₀¹ e^(−x²) dx con la regola di Simpson, n = 4.",
-  "ar": "قدّر ∫₀¹ e^(−x²) dx بقاعدة سيمبسون، n = 4."
+  "ar": "قدّر ∫₀¹ e^(−x²) dx بقاعدة سيمبسون، n = 4.",
+  "he": "העריכו את ∫₀¹ e^(−x²) dx בכלל סימפסון, n = 4."
  },
  "Euler P (h = 1)": {
   "fr": "P d’Euler (h = 1)",
@@ -879,7 +965,8 @@
   "fr": "Méthode d’Euler",
   "es": "Método de Euler",
   "it": "Metodo di Eulero",
-  "ar": "طريقة أويلر"
+  "ar": "طريقة أويلر",
+  "he": "שיטת אוילר"
  },
  "Euler’s method for the logistic equation": {
   "fr": "Méthode d’Euler pour l’équation logistique",
@@ -891,37 +978,43 @@
   "fr": "La méthode d’Euler donne la réponse exacte si l’on est soigneux.",
   "es": "El método de Euler da la respuesta exacta si tienes cuidado.",
   "it": "Il metodo di Eulero dà la risposta esatta se si è attenti.",
-  "ar": "تعطي طريقة أويلر الجواب الدقيق إذا كنت حريصًا."
+  "ar": "تعطي طريقة أويلر الجواب الدقيق إذا كنت حريصًا.",
+  "he": "שיטת אוילר נותנת את התשובה המדויקת אם נזהרים."
  },
  "Euler’s method steps along the slope: yₙ₊₁ = yₙ + h f(tₙ, yₙ). Smaller steps, smaller error.": {
   "fr": "La méthode d’Euler avance le long de la pente : yₙ₊₁ = yₙ + h f(tₙ, yₙ). Pas plus petits, erreur plus petite.",
   "es": "El método de Euler avanza siguiendo la pendiente: yₙ₊₁ = yₙ + h f(tₙ, yₙ). Pasos más pequeños, error más pequeño.",
   "it": "Il metodo di Eulero avanza lungo la pendenza: yₙ₊₁ = yₙ + h f(tₙ, yₙ). Passi più piccoli, errore più piccolo.",
-  "ar": "تتقدم طريقة أويلر على طول الميل: yₙ₊₁ = yₙ + h f(tₙ, yₙ). خطوات أصغر، خطأ أصغر."
+  "ar": "تتقدم طريقة أويلر على طول الميل: yₙ₊₁ = yₙ + h f(tₙ, yₙ). خطوات أصغر، خطأ أصغر.",
+  "he": "שיטת אוילר מתקדמת לאורך השיפוע: yₙ₊₁ = yₙ + h f(tₙ, yₙ). צעדים קטנים יותר, שגיאה קטנה יותר."
  },
  "Euler’s method.": {
   "fr": "Méthode d’Euler.",
   "es": "Método de Euler.",
   "it": "Metodo di Eulero.",
-  "ar": "طريقة أويلر."
+  "ar": "طريقة أويلر.",
+  "he": "שיטת אוילר."
  },
  "Evaluate improper integrals as limits.": {
   "fr": "Calculer des intégrales impropres comme des limites.",
   "es": "Evaluar integrales impropias como límites.",
   "it": "Calcolare integrali impropri come limiti.",
-  "ar": "حساب التكاملات المعتلة كنهايات."
+  "ar": "حساب التكاملات المعتلة كنهايات.",
+  "he": "לחשב אינטגרלים לא אמיתיים כגבולות."
  },
  "Evaluate trigonometric integrals and use trigonometric substitution.": {
   "fr": "Calculer des intégrales trigonométriques et utiliser la substitution trigonométrique.",
   "es": "Evaluar integrales trigonométricas y usar sustitución trigonométrica.",
   "it": "Calcolare integrali trigonometrici e usare la sostituzione trigonometrica.",
-  "ar": "حساب التكاملات المثلثية واستخدام التعويض المثلثي."
+  "ar": "حساب التكاملات المثلثية واستخدام التعويض المثلثي.",
+  "he": "לחשב אינטגרלים טריגונומטריים ולהשתמש בהצבה טריגונומטרית."
  },
  "Evaluate ∫₁^∞ dx/x².": {
   "fr": "Calculez ∫₁^∞ dx/x².",
   "es": "Evalúa ∫₁^∞ dx/x².",
   "it": "Calcola ∫₁^∞ dx/x².",
-  "ar": "احسب ∫₁^∞ dx/x²."
+  "ar": "احسب ∫₁^∞ dx/x².",
+  "he": "חשבו ∫₁^∞ dx/x²."
  },
  "Evaluate ∫₂^∞ dx/x³.": {
   "fr": "Calculez ∫₂^∞ dx/x³.",
@@ -939,7 +1032,8 @@
   "fr": "Chaque application suit le même schéma : approcher une tranche fine, écrire sa contribution, intégrer.",
   "es": "Toda aplicación sigue el mismo patrón: aproximar una sección delgada, escribir su contribución, integrar.",
   "it": "Ogni applicazione segue lo stesso schema: approssimare una fetta sottile, scriverne il contributo, integrare.",
-  "ar": "لكل تطبيق النمط نفسه: قرّب شريحة رقيقة، واكتب مساهمتها، ثم كامل."
+  "ar": "لكل تطبيق النمط نفسه: قرّب شريحة رقيقة، واكتب مساهمتها، ثم كامل.",
+  "he": "לכל יישום אותו דפוס: לקרב פרוסה דקה, לכתוב את תרומתה, לבצע אינטגרציה."
  },
  "Every derivative of eˣ at 0 is 1.": {
   "fr": "Toutes les dérivées de eˣ en 0 valent 1.",
@@ -963,7 +1057,8 @@
   "fr": "Croissance et décroissance exponentielles",
   "es": "Crecimiento y decaimiento exponencial",
   "it": "Crescita e decadimento esponenziale",
-  "ar": "النمو والاضمحلال الأسيان"
+  "ar": "النمو والاضمحلال الأسيان",
+  "he": "גדילה ודעיכה מעריכיות"
  },
  "Exponential series": {
   "fr": "Série exponentielle",
@@ -975,7 +1070,8 @@
   "fr": "Exponentielles et logarithmes.",
   "es": "Exponenciales y logaritmos.",
   "it": "Esponenziali e logaritmi.",
-  "ar": "الدوال الأسية واللوغاريتمات."
+  "ar": "الدوال الأسية واللوغاريتمات.",
+  "he": "פונקציות מעריכיות ולוגריתמים."
  },
  "Fill down Euler steps to t = 4.": {
   "fr": "Recopiez vers le bas les pas d’Euler jusqu’à t = 4.",
@@ -993,7 +1089,8 @@
   "fr": "Trouver les limites de suites.",
   "es": "Hallar límites de sucesiones.",
   "it": "Trovare i limiti delle successioni.",
-  "ar": "إيجاد نهايات المتتاليات."
+  "ar": "إيجاد نهايات المتتاليات.",
+  "he": "למצוא גבולות של סדרות."
  },
  "Find the Maclaurin series of 1/(1 − x).": {
   "fr": "Trouvez la série de Maclaurin de 1/(1 − x).",
@@ -1005,7 +1102,8 @@
   "fr": "Trouvez la longueur d’arc de y = (2/3)x^(3/2) de x = 0 à 3.",
   "es": "Halla la longitud de arco de y = (2/3)x^(3/2) desde x = 0 hasta 3.",
   "it": "Trova la lunghezza d’arco di y = (2/3)x^(3/2) da x = 0 a 3.",
-  "ar": "أوجد طول قوس y = (2/3)x^(3/2) من x = 0 إلى 3."
+  "ar": "أوجد طول قوس y = (2/3)x^(3/2) من x = 0 إلى 3.",
+  "he": "מצאו את אורך הקשת של y = (2/3)x^(3/2) מ-x = 0 עד 3."
  },
  "Find the area inside r = 3.": {
   "fr": "Trouvez l’aire à l’intérieur de r = 3.",
@@ -1029,7 +1127,8 @@
   "fr": "Trouver le centre de masse de tiges et de plaques minces.",
   "es": "Hallar el centro de masa de varillas y placas delgadas.",
   "it": "Trovare il centro di massa di aste e lamine sottili.",
-  "ar": "إيجاد مركز كتلة القضبان والصفائح الرقيقة."
+  "ar": "إيجاد مركز كتلة القضبان والصفائح الرقيقة.",
+  "he": "למצוא את מרכז המסה של מוטות ולוחות דקים."
  },
  "Find the interval of convergence of Σ xⁿ/3ⁿ.": {
   "fr": "Trouvez l’intervalle de convergence de Σ xⁿ/3ⁿ.",
@@ -1077,13 +1176,15 @@
   "fr": "Trouvez le volume obtenu en faisant tourner autour de l’axe des x la région sous y = √x, 0 ≤ x ≤ 4.",
   "es": "Halla el volumen que se obtiene al girar alrededor del eje x la región bajo y = √x, 0 ≤ x ≤ 4.",
   "it": "Trova il volume ottenuto ruotando attorno all’asse x la regione sotto y = √x, 0 ≤ x ≤ 4.",
-  "ar": "أوجد الحجم الناتج عن دوران المنطقة الواقعة تحت y = √x، 0 ≤ x ≤ 4، حول المحور x."
+  "ar": "أوجد الحجم الناتج عن دوران المنطقة الواقعة تحت y = √x، 0 ≤ x ≤ 4، حول المحور x.",
+  "he": "מצאו את הנפח שמתקבל מסיבוב התחום מתחת ל-y = √x, 0 ≤ x ≤ 4, סביב ציר x."
  },
  "Find volumes by slicing, disks, washers and shells.": {
   "fr": "Calculer des volumes par tranches, disques, anneaux et coquilles cylindriques.",
   "es": "Hallar volúmenes por secciones, discos, arandelas y capas cilíndricas.",
   "it": "Trovare volumi per sezioni, dischi, rondelle e gusci cilindrici.",
-  "ar": "إيجاد الحجوم بالشرائح والأقراص والحلقات والأغلفة الأسطوانية."
+  "ar": "إيجاد الحجوم بالشرائح والأقراص والحلقات والأغلفة الأسطوانية.",
+  "he": "למצוא נפחים בחתכים, דיסקות, טבעות וקליפות גליליות."
  },
  "Find where the small-angle approximation sin x ≈ x is off by 1%.": {
   "fr": "Trouvez à partir d’où l’approximation des petits angles sin x ≈ x est fausse de 1%.",
@@ -1095,7 +1196,8 @@
   "fr": "Calculez ∫₀¹ x eˣ dx.",
   "es": "Calcula ∫₀¹ x eˣ dx.",
   "it": "Calcola ∫₀¹ x eˣ dx.",
-  "ar": "أوجد ∫₀¹ x eˣ dx."
+  "ar": "أوجد ∫₀¹ x eˣ dx.",
+  "he": "חשבו ∫₀¹ x eˣ dx."
  },
  "Find ∫₀¹ x/(x + 1) dx.": {
   "fr": "Calculez ∫₀¹ x/(x + 1) dx.",
@@ -1113,7 +1215,8 @@
   "fr": "Calculez ∫₂³ dx/(x² − 1).",
   "es": "Calcula ∫₂³ dx/(x² − 1).",
   "it": "Calcola ∫₂³ dx/(x² − 1).",
-  "ar": "أوجد ∫₂³ dx/(x² − 1)."
+  "ar": "أوجد ∫₂³ dx/(x² − 1).",
+  "he": "חשבו ∫₂³ dx/(x² − 1)."
  },
  "Follows worked examples but struggles to choose a method.": {
   "fr": "Suit les exemples corrigés mais a du mal à choisir une méthode.",
@@ -1125,7 +1228,8 @@
   "fr": "Pour P′ = rP(1 − P/K), pour quelle population la croissance est-elle la plus rapide ?",
   "es": "Para P′ = rP(1 − P/K), ¿con qué población es más rápido el crecimiento?",
   "it": "Per P′ = rP(1 − P/K), con quale popolazione la crescita è più rapida?",
-  "ar": "في P′ = rP(1 − P/K)، عند أي حجم للمجموعة يكون النمو أسرع ما يمكن؟"
+  "ar": "في P′ = rP(1 − P/K)، عند أي حجم للمجموعة يكون النمو أسرع ما يمكن؟",
+  "he": "עבור P′ = rP(1 − P/K), באיזו אוכלוסייה הגדילה המהירה ביותר?"
  },
  "For an orbit r = p/(1 + e cos θ), e = 0 gives…": {
   "fr": "Pour une orbite r = p/(1 + e cos θ), e = 0 donne…",
@@ -1137,25 +1241,29 @@
   "fr": "Pour les séries semi-convergentes, cela peut la changer.",
   "es": "En las series condicionalmente convergentes, sí puede cambiarla.",
   "it": "Per le serie condizionatamente convergenti può cambiarla.",
-  "ar": "في المتسلسلات المتقاربة شرطيًا يمكن أن تغيره."
+  "ar": "في المتسلسلات المتقاربة شرطيًا يمكن أن تغيره.",
+  "he": "בטורים המתכנסים בתנאי הוא יכול לשנות."
  },
  "For exponential decay with rate λ, the mean lifetime is ∫₀^∞ t λe^(−λt) dt. Evaluate it.": {
   "fr": "Pour une décroissance exponentielle de taux λ, la durée de vie moyenne est ∫₀^∞ t λe^(−λt) dt. Calculez-la.",
   "es": "Para un decaimiento exponencial con tasa λ, la vida media es ∫₀^∞ t λe^(−λt) dt. Evalúala.",
   "it": "Per un decadimento esponenziale con tasso λ, la vita media è ∫₀^∞ t λe^(−λt) dt. Calcolala.",
-  "ar": "في الاضمحلال الأسي بمعدل λ، متوسط العمر هو ∫₀^∞ t λe^(−λt) dt. احسبه."
+  "ar": "في الاضمحلال الأسي بمعدل λ، متوسط العمر هو ∫₀^∞ t λe^(−λt) dt. احسبه.",
+  "he": "בדעיכה מעריכית בקצב λ, זמן החיים הממוצע הוא ∫₀^∞ t λe^(−λt) dt. חשבו אותו."
  },
  "For integrals, check your answer by differentiating it.": {
   "fr": "Pour les intégrales, vérifiez votre réponse en la dérivant.",
   "es": "En las integrales, comprueba tu respuesta derivándola.",
   "it": "Per gli integrali, controlla la risposta derivandola.",
-  "ar": "في التكاملات، تحقق من إجابتك باشتقاقها."
+  "ar": "في التكاملات، تحقق من إجابتك باشتقاقها.",
+  "he": "באינטגרלים, בדקו את התשובה על ידי גזירתה."
  },
  "For series, decide which test fits before computing anything.": {
   "fr": "Pour les séries, choisissez le critère adapté avant de calculer quoi que ce soit.",
   "es": "En las series, decide qué criterio conviene antes de calcular nada.",
   "it": "Per le serie, decidi quale criterio è adatto prima di calcolare qualsiasi cosa.",
-  "ar": "في المتسلسلات، حدد الاختبار المناسب قبل حساب أي شيء."
+  "ar": "في المتسلسلات، حدد الاختبار المناسب قبل حساب أي شيء.",
+  "he": "בטורים, החליטו איזה מבחן מתאים לפני שמחשבים משהו."
  },
  "For small θ, sin θ ≈…": {
   "fr": "Pour θ petit, sin θ ≈…",
@@ -1167,13 +1275,15 @@
   "fr": "Pour √(a² − x²), posez x = a sin θ ; pour √(a² + x²), x = a tan θ.",
   "es": "Para √(a² − x²), sustituye x = a sin θ; para √(a² + x²), x = a tan θ.",
   "it": "Per √(a² − x²), sostituisci x = a sin θ; per √(a² + x²), x = a tan θ.",
-  "ar": "في √(a² − x²) عوّض x = a sin θ؛ وفي √(a² + x²) عوّض x = a tan θ."
+  "ar": "في √(a² − x²) عوّض x = a sin θ؛ وفي √(a² + x²) عوّض x = a tan θ.",
+  "he": "עבור √(a² − x²) הציבו x = a sin θ; עבור √(a² + x²), x = a tan θ."
  },
  "For ∫x² eˣ dx, a good first choice of u is…": {
   "fr": "Pour ∫x² eˣ dx, un bon premier choix de u est…",
   "es": "Para ∫x² eˣ dx, una buena primera elección de u es…",
   "it": "Per ∫x² eˣ dx, una buona prima scelta di u è…",
-  "ar": "في ∫x² eˣ dx، اختيار أول جيد لـ u هو…"
+  "ar": "في ∫x² eˣ dx، اختيار أول جيد لـ u هو…",
+  "he": "עבור ∫x² eˣ dx, בחירה ראשונה טובה של u היא…"
  },
  "Four short computer labs apply the units with a spreadsheet: Euler’s method for a population model, Simpson’s rule for a reservoir volume, Taylor-series accuracy, and Kepler’s second law in polar coordinates.": {
   "fr": "Quatre courts travaux pratiques sur ordinateur appliquent les unités avec un tableur : la méthode d’Euler pour un modèle de population, la méthode de Simpson pour le volume d’un réservoir, la précision des séries de Taylor, et la deuxième loi de Kepler en coordonnées polaires.",
@@ -1197,13 +1307,15 @@
   "fr": "Section de manuel gratuite avec critères de comparaison.",
   "es": "Sección gratuita del libro de texto con criterios de comparación.",
   "it": "Sezione gratuita del libro di testo con criteri di confronto.",
-  "ar": "قسم مجاني من كتاب دراسي يتضمن اختبارات المقارنة."
+  "ar": "قسم مجاني من كتاب دراسي يتضمن اختبارات المقارنة.",
+  "he": "פרק חינמי מספר לימוד עם מבחני השוואה."
  },
  "From 0 to 1: 0 − (−1) = 1.": {
   "fr": "De 0 à 1 : 0 − (−1) = 1.",
   "es": "De 0 a 1: 0 − (−1) = 1.",
   "it": "Da 0 a 1: 0 − (−1) = 1.",
-  "ar": "من 0 إلى 1: 0 − (−1) = 1."
+  "ar": "من 0 إلى 1: 0 − (−1) = 1.",
+  "he": "מ-0 עד 1: 0 − (−1) = 1."
  },
  "From 0 to 1: e − 2.": {
   "fr": "De 0 à 1 : e − 2.",
@@ -1215,25 +1327,29 @@
   "fr": "GM/R par kg.",
   "es": "GM/R por kg.",
   "it": "GM/R per kg.",
-  "ar": "GM/R لكل kg."
+  "ar": "GM/R لكل kg.",
+  "he": "GM/R לכל kg."
  },
  "Geometric and telescoping series.": {
   "fr": "Séries géométriques et télescopiques.",
   "es": "Series geométricas y telescópicas.",
   "it": "Serie geometriche e telescopiche.",
-  "ar": "المتسلسلات الهندسية والمتداخلة."
+  "ar": "المتسلسلات الهندسية والمتداخلة.",
+  "he": "טורים הנדסיים וטלסקופיים."
  },
  "Geometric series": {
   "fr": "Série géométrique",
   "es": "Serie geométrica",
   "it": "Serie geometrica",
-  "ar": "متسلسلة هندسية"
+  "ar": "متسلسلة هندسية",
+  "he": "טור הנדסי"
  },
  "Geometric series describe anything that is partly carried over from one period to the next, as in Example 5.2. That simple model shows a key fact of pollution and of greenhouse gases: the long-run level depends on the input rate, so cutting inputs lowers where things settle.": {
   "fr": "Les séries géométriques décrivent tout ce qui est partiellement reporté d’une période à la suivante, comme dans l’exemple 5.2. Ce modèle simple montre un fait essentiel de la pollution et des gaz à effet de serre : le niveau à long terme dépend du rythme des apports, donc réduire les apports abaisse le niveau d’équilibre.",
   "es": "Las series geométricas describen todo lo que se arrastra en parte de un período al siguiente, como en el ejemplo 5.2. Ese modelo sencillo muestra un hecho clave de la contaminación y de los gases de efecto invernadero: el nivel a largo plazo depende del ritmo de aporte, así que reducir los aportes baja el nivel en que todo se estabiliza.",
   "it": "Le serie geometriche descrivono tutto ciò che viene in parte riportato da un periodo al successivo, come nell’esempio 5.2. Questo semplice modello mostra un fatto chiave dell’inquinamento e dei gas serra: il livello a lungo termine dipende dal ritmo degli apporti, quindi ridurre gli apporti abbassa il livello di equilibrio.",
-  "ar": "تصف المتسلسلات الهندسية كل ما يُرحَّل جزء منه من فترة إلى التالية، كما في المثال 5.2. ويُظهر هذا النموذج البسيط حقيقة أساسية عن التلوث وغازات الدفيئة: المستوى طويل الأمد يعتمد على معدل المدخلات، لذا فإن خفض المدخلات يخفض المستوى الذي تستقر عنده الأمور."
+  "ar": "تصف المتسلسلات الهندسية كل ما يُرحَّل جزء منه من فترة إلى التالية، كما في المثال 5.2. ويُظهر هذا النموذج البسيط حقيقة أساسية عن التلوث وغازات الدفيئة: المستوى طويل الأمد يعتمد على معدل المدخلات، لذا فإن خفض المدخلات يخفض المستوى الذي تستقر عنده الأمور.",
+  "he": "טורים הנדסיים מתארים כל דבר שחלקו עובר מתקופה אחת לבאה, כמו בדוגמה 5.2. המודל הפשוט הזה מראה עובדה מרכזית על זיהום ועל גזי חממה: הרמה לטווח ארוך תלויה בקצב הקלט, ולכן הפחתת הקלט מורידה את הרמה שבה הדברים מתייצבים."
  },
  "Geometric series.": {
   "fr": "Série géométrique.",
@@ -1245,7 +1361,8 @@
   "fr": "Géométrique avec a = 1, r = ½.",
   "es": "Geométrica con a = 1, r = ½.",
   "it": "Geometrica con a = 1, r = ½.",
-  "ar": "هندسية مع a = 1، r = ½."
+  "ar": "هندسية مع a = 1، r = ½.",
+  "he": "הנדסי עם a = 1, r = ½."
  },
  "Geometric: 3/(1 − 2/3).": {
   "fr": "Géométrique : 3/(1 − 2/3).",
@@ -1257,13 +1374,15 @@
   "fr": "Géométrique : 5/(1 − 0.9).",
   "es": "Geométrica: 5/(1 − 0.9).",
   "it": "Geometrica: 5/(1 − 0.9).",
-  "ar": "هندسية: 5/(1 − 0.9)."
+  "ar": "هندسية: 5/(1 − 0.9).",
+  "he": "הנדסי: 5/(1 − 0.9)."
  },
  "Geometric: Σ arⁿ (n ≥ 0) = a/(1 − r) when |r| < 1.": {
   "fr": "Géométrique : Σ arⁿ (n ≥ 0) = a/(1 − r) quand |r| < 1.",
   "es": "Geométrica: Σ arⁿ (n ≥ 0) = a/(1 − r) cuando |r| < 1.",
   "it": "Geometrica: Σ arⁿ (n ≥ 0) = a/(1 − r) quando |r| < 1.",
-  "ar": "الهندسية: Σ arⁿ (n ≥ 0) = a/(1 − r) عندما |r| < 1."
+  "ar": "الهندسية: Σ arⁿ (n ≥ 0) = a/(1 − r) عندما |r| < 1.",
+  "he": "הנדסי: Σ arⁿ (n ≥ 0) = a/(1 − r) כאשר |r| < 1."
  },
  "Graph parametric and polar curves, sliders and Taylor polynomials.": {
   "fr": "Tracer des courbes paramétriques et polaires, des curseurs et des polynômes de Taylor.",
@@ -1281,19 +1400,22 @@
   "fr": "La croissance est la plus rapide à K/2 et ne s’annule que lorsque P approche de K.",
   "es": "El crecimiento es máximo en K/2 y solo llega a cero cuando P se acerca a K.",
   "it": "La crescita è massima a K/2 e si annulla solo quando P si avvicina a K.",
-  "ar": "يكون النمو أسرع ما يمكن عند K/2 ولا يتباطأ إلى الصفر إلا عندما تقترب P من K."
+  "ar": "يكون النمو أسرع ما يمكن عند K/2 ولا يتباطأ إلى الصفر إلا عندما تقترب P من K.",
+  "he": "הגדילה המהירה ביותר היא ב-K/2, והיא מאטה עד אפס רק כש-P מתקרב ל-K."
  },
  "Half: e^(−t/100) = ½, so t = 100 ln 2.": {
   "fr": "Moitié : e^(−t/100) = ½, donc t = 100 ln 2.",
   "es": "Mitad: e^(−t/100) = ½, así que t = 100 ln 2.",
   "it": "Metà: e^(−t/100) = ½, quindi t = 100 ln 2.",
-  "ar": "النصف: e^(−t/100) = ½، إذن t = 100 ln 2."
+  "ar": "النصف: e^(−t/100) = ½، إذن t = 100 ln 2.",
+  "he": "מחצית: e^(−t/100) = ½, ולכן t = 100 ln 2."
  },
  "Harmonic series": {
   "fr": "Série harmonique",
   "es": "Serie armónica",
   "it": "Serie armonica",
-  "ar": "المتسلسلة التوافقية"
+  "ar": "المتسلسلة التوافقية",
+  "he": "הטור ההרמוני"
  },
  "Height h (m)": {
   "fr": "Hauteur h (m)",
@@ -1305,7 +1427,8 @@
   "fr": "Quelle énergie par kilogramme faut-il pour échapper à la gravité terrestre depuis la surface (sans tenir compte de l’air ni de la rotation) ?",
   "es": "¿Cuánta energía por kilogramo hace falta para escapar de la gravedad terrestre desde la superficie (sin contar el aire ni la rotación)?",
   "it": "Quanta energia per chilogrammo serve per sfuggire alla gravità terrestre dalla superficie (trascurando aria e rotazione)?",
-  "ar": "ما الطاقة اللازمة لكل كيلوغرام للإفلات من جاذبية الأرض من سطحها (مع إهمال الهواء والدوران)؟"
+  "ar": "ما الطاقة اللازمة لكل كيلوغرام للإفلات من جاذبية الأرض من سطحها (مع إهمال الهواء والدوران)؟",
+  "he": "כמה אנרגיה לכל קילוגרם דרושה כדי להימלט מכוח המשיכה של כדור הארץ מפני השטח (בהתעלם מהאוויר ומהסיבוב)?"
  },
  "How stretched an orbit is.": {
   "fr": "À quel point une orbite est étirée.",
@@ -1317,67 +1440,78 @@
   "fr": "La pression hydrostatique sur un barrage augmente…",
   "es": "La presión hidrostática sobre una presa crece…",
   "it": "La pressione idrostatica su una diga cresce…",
-  "ar": "الضغط الهيدروستاتيكي على السد يزداد…"
+  "ar": "الضغط الهيدروستاتيكي على السد يزداد…",
+  "he": "הלחץ ההידרוסטטי על סכר גדל…"
  },
  "If I can’t find an antiderivative, the integral has no value.": {
   "fr": "Si je ne trouve pas de primitive, l’intégrale n’a pas de valeur.",
   "es": "Si no encuentro una antiderivada, la integral no tiene valor.",
   "it": "Se non trovo una primitiva, l’integrale non ha valore.",
-  "ar": "إن لم أجد دالة أصلية، فليس للتكامل قيمة."
+  "ar": "إن لم أجد دالة أصلية، فليس للتكامل قيمة.",
+  "he": "אם אני לא מוצא פונקציה קדומה, לאינטגרל אין ערך."
  },
  "If f(x) → 0 as x → ∞, the integral converges.": {
   "fr": "Si f(x) → 0 quand x → ∞, l’intégrale converge.",
   "es": "Si f(x) → 0 cuando x → ∞, la integral converge.",
   "it": "Se f(x) → 0 per x → ∞, l’integrale converge.",
-  "ar": "إذا كان f(x) → 0 عندما x → ∞، فالتكامل متقارب."
+  "ar": "إذا كان f(x) → 0 عندما x → ∞، فالتكامل متقارب.",
+  "he": "אם f(x) → 0 כאשר x → ∞, האינטגרל מתכנס."
  },
  "If the terms go to 0, the series converges.": {
   "fr": "Si les termes tendent vers 0, la série converge.",
   "es": "Si los términos tienden a 0, la serie converge.",
   "it": "Se i termini tendono a 0, la serie converge.",
-  "ar": "إذا اقتربت الحدود من 0، فالمتسلسلة متقاربة."
+  "ar": "إذا اقتربت الحدود من 0، فالمتسلسلة متقاربة.",
+  "he": "אם האיברים שואפים ל-0, הטור מתכנס."
  },
  "Improper Integrals": {
   "fr": "Intégrales impropres",
   "es": "Integrales impropias",
   "it": "Integrali impropri",
-  "ar": "التكاملات المعتلة"
+  "ar": "التكاملات المعتلة",
+  "he": "אינטגרלים לא אמיתיים"
  },
  "Improper integral": {
   "fr": "Intégrale impropre",
   "es": "Integral impropia",
   "it": "Integrale improprio",
-  "ar": "تكامل معتل"
+  "ar": "تكامل معتل",
+  "he": "אינטגרל לא אמיתי"
  },
  "Improper integrals and comparison; midterm practice": {
   "fr": "Intégrales impropres et comparaison ; entraînement au partiel",
   "es": "Integrales impropias y comparación; práctica para el parcial",
   "it": "Integrali impropri e confronto; esercitazione per il compito intermedio",
-  "ar": "التكاملات المعتلة والمقارنة؛ تدريب على الاختبار النصفي"
+  "ar": "التكاملات المعتلة والمقارنة؛ تدريب على الاختبار النصفي",
+  "he": "אינטגרלים לא אמיתיים והשוואה; תרגול לבוחן אמצע"
  },
  "Improper integrals give the energy to leave a planet, the number behind every launch of a weather or climate satellite. It is finite, which is why spaceflight is possible at all.": {
   "fr": "Les intégrales impropres donnent l’énergie nécessaire pour quitter une planète, le chiffre derrière chaque lancement de satellite météo ou climatique. Elle est finie, et c’est pour cela que le vol spatial est possible.",
   "es": "Las integrales impropias dan la energía necesaria para salir de un planeta, la cifra detrás de cada lanzamiento de un satélite meteorológico o climático. Es finita, y por eso el vuelo espacial es posible.",
   "it": "Gli integrali impropri danno l’energia per lasciare un pianeta, il numero dietro ogni lancio di un satellite meteorologico o climatico. È finita, ed è per questo che il volo spaziale è possibile.",
-  "ar": "تعطي التكاملات المعتلة الطاقة اللازمة لمغادرة كوكب، وهي الرقم الكامن خلف كل إطلاق لقمر صناعي للطقس أو المناخ. وهي منتهية، ولهذا فإن رحلات الفضاء ممكنة أصلًا."
+  "ar": "تعطي التكاملات المعتلة الطاقة اللازمة لمغادرة كوكب، وهي الرقم الكامن خلف كل إطلاق لقمر صناعي للطقس أو المناخ. وهي منتهية، ولهذا فإن رحلات الفضاء ممكنة أصلًا.",
+  "he": "אינטגרלים לא אמיתיים נותנים את האנרגיה הדרושה כדי לעזוב כוכב לכת, המספר שמאחורי כל שיגור של לוויין מזג אוויר או אקלים. היא סופית, ולכן טיסות חלל אפשריות בכלל."
  },
  "In the logistic model, K is the…": {
   "fr": "Dans le modèle logistique, K est…",
   "es": "En el modelo logístico, K es la…",
   "it": "Nel modello logistico, K è…",
-  "ar": "في النموذج اللوجستي، K هي…"
+  "ar": "في النموذج اللوجستي، K هي…",
+  "he": "במודל הלוגיסטי, K הוא…"
  },
  "Infinite interval or infinite integrand; defined by a limit.": {
   "fr": "Intervalle infini ou intégrande infinie ; définie par une limite.",
   "es": "Intervalo infinito o integrando infinito; se define mediante un límite.",
   "it": "Intervallo infinito o integrando infinito; definito tramite un limite.",
-  "ar": "فترة لانهائية أو دالة مكاملة لانهائية؛ يُعرّف بنهاية."
+  "ar": "فترة لانهائية أو دالة مكاملة لانهائية؛ يُعرّف بنهاية.",
+  "he": "קטע אינסופי או אינטגרנד אינסופי; מוגדר בעזרת גבול."
  },
  "Initial-value problem": {
   "fr": "Problème de Cauchy (valeur initiale)",
   "es": "Problema de valor inicial",
   "it": "Problema ai valori iniziali",
-  "ar": "مسألة القيمة الابتدائية"
+  "ar": "مسألة القيمة الابتدائية",
+  "he": "בעיית התחלה"
  },
  "Integral with an infinite limit or integrand.": {
   "fr": "Intégrale avec une borne ou une intégrande infinie.",
@@ -1389,55 +1523,64 @@
   "fr": "Intégrales sur des intervalles infinis ou à travers des pics infinis : quand leur somme est un nombre fini, et quand elle ne l’est pas.",
   "es": "Integrales sobre intervalos infinitos o a través de picos infinitos: cuándo suman un número finito y cuándo no.",
   "it": "Integrali su intervalli infiniti o attraverso picchi infiniti: quando danno un numero finito e quando no.",
-  "ar": "تكاملات على فترات لانهائية أو عبر قمم لانهائية: متى يكون مجموعها عددًا منتهيًا ومتى لا يكون."
+  "ar": "تكاملات على فترات لانهائية أو عبر قمم لانهائية: متى يكون مجموعها عددًا منتهيًا ومتى لا يكون.",
+  "he": "אינטגרלים על קטעים אינסופיים או דרך שיאים אינסופיים: מתי הם מסתכמים במספר סופי ומתי לא."
  },
  "Integrate by parts, choosing u and dv well.": {
   "fr": "Intégrer par parties en choisissant bien u et dv.",
   "es": "Integrar por partes eligiendo bien u y dv.",
   "it": "Integrare per parti scegliendo bene u e dv.",
-  "ar": "إجراء التكامل بالتجزئة مع حسن اختيار u وdv."
+  "ar": "إجراء التكامل بالتجزئة مع حسن اختيار u وdv.",
+  "he": "לבצע אינטגרציה בחלקים תוך בחירה נכונה של u ו-dv."
  },
  "Integration by parts": {
   "fr": "Intégration par parties",
   "es": "Integración por partes",
   "it": "Integrazione per parti",
-  "ar": "التكامل بالتجزئة"
+  "ar": "التكامل بالتجزئة",
+  "he": "אינטגרציה בחלקים"
  },
  "Integration by parts is the product rule in reverse: ∫u dv = uv − ∫v du. Choose u to get simpler when differentiated (logs, polynomials).": {
   "fr": "L’intégration par parties est la règle du produit à l’envers : ∫u dv = uv − ∫v du. Choisissez pour u ce qui se simplifie en dérivant (logarithmes, polynômes).",
   "es": "La integración por partes es la regla del producto al revés: ∫u dv = uv − ∫v du. Elige como u lo que se simplifica al derivar (logaritmos, polinomios).",
   "it": "L’integrazione per parti è la regola del prodotto al contrario: ∫u dv = uv − ∫v du. Scegli come u ciò che si semplifica derivando (logaritmi, polinomi).",
-  "ar": "التكامل بالتجزئة هو قاعدة الضرب معكوسة: ∫u dv = uv − ∫v du. اختر u مما يصبح أبسط عند الاشتقاق (اللوغاريتمات، كثيرات الحدود)."
+  "ar": "التكامل بالتجزئة هو قاعدة الضرب معكوسة: ∫u dv = uv − ∫v du. اختر u مما يصبح أبسط عند الاشتقاق (اللوغاريتمات، كثيرات الحدود).",
+  "he": "אינטגרציה בחלקים היא כלל המכפלה בכיוון ההפוך: ∫u dv = uv − ∫v du. בחרו u שנעשה פשוט יותר בגזירה (לוגריתמים, פולינומים)."
  },
  "Integration by parts, trigonometric integrals and substitutions, partial fractions, and numerical integration when no formula exists.": {
   "fr": "Intégration par parties, intégrales trigonométriques et substitutions, fractions partielles, et intégration numérique quand aucune formule n’existe.",
   "es": "Integración por partes, integrales y sustituciones trigonométricas, fracciones parciales e integración numérica cuando no existe una fórmula.",
   "it": "Integrazione per parti, integrali e sostituzioni trigonometriche, fratti semplici e integrazione numerica quando non esiste una formula.",
-  "ar": "التكامل بالتجزئة، والتكاملات والتعويضات المثلثية، والكسور الجزئية، والتكامل العددي حين لا توجد صيغة."
+  "ar": "التكامل بالتجزئة، والتكاملات والتعويضات المثلثية، والكسور الجزئية، والتكامل العددي حين لا توجد صيغة.",
+  "he": "אינטגרציה בחלקים, אינטגרלים והצבות טריגונומטריים, שברים חלקיים, ואינטגרציה נומרית כשאין נוסחה."
  },
  "Integration techniques and applications, differential equations, Taylor series, and parametric and polar curves, with four computer labs. Free, self-paced, and tied to real planet-saving work.": {
   "fr": "Techniques et applications de l’intégration, équations différentielles, séries de Taylor, courbes paramétriques et polaires, avec quatre travaux pratiques sur ordinateur. Gratuit, à votre rythme, et relié à un travail concret pour sauver la planète.",
   "es": "Técnicas y aplicaciones de la integración, ecuaciones diferenciales, series de Taylor y curvas paramétricas y polares, con cuatro prácticas de computadora. Gratis, a tu propio ritmo y vinculado a trabajo real para salvar el planeta.",
   "it": "Tecniche e applicazioni dell’integrazione, equazioni differenziali, serie di Taylor e curve parametriche e polari, con quattro laboratori al computer. Gratuito, al tuo ritmo e collegato a un lavoro reale per salvare il pianeta.",
-  "ar": "تقنيات التكامل وتطبيقاته، والمعادلات التفاضلية، ومتسلسلات تايلور، والمنحنيات الوسيطية والقطبية، مع أربعة مختبرات حاسوبية. مجاني، بالسرعة التي تناسبك، ومرتبط بعمل حقيقي لإنقاذ الكوكب."
+  "ar": "تقنيات التكامل وتطبيقاته، والمعادلات التفاضلية، ومتسلسلات تايلور، والمنحنيات الوسيطية والقطبية، مع أربعة مختبرات حاسوبية. مجاني، بالسرعة التي تناسبك، ومرتبط بعمل حقيقي لإنقاذ الكوكب.",
+  "he": "טכניקות ויישומים של אינטגרציה, משוואות דיפרנציאליות, טורי טיילור ועקומות פרמטריות וקוטביות, עם ארבע מעבדות מחשב. חינם, בקצב שלך, ומחובר לעבודה אמיתית להצלת כדור הארץ."
  },
  "Introduction to Differential Equations": {
   "fr": "Introduction aux équations différentielles",
   "es": "Introducción a las ecuaciones diferenciales",
   "it": "Introduzione alle equazioni differenziali",
-  "ar": "مقدمة في المعادلات التفاضلية"
+  "ar": "مقدمة في المعادلات التفاضلية",
+  "he": "מבוא למשוואות דיפרנציאליות"
  },
  "It has a step-size error; it converges only as h → 0.": {
   "fr": "Elle a une erreur liée au pas ; elle ne converge que quand h → 0.",
   "es": "Tiene un error que depende del paso; solo converge cuando h → 0.",
   "it": "Ha un errore legato al passo; converge solo per h → 0.",
-  "ar": "فيها خطأ يعتمد على حجم الخطوة؛ ولا تتقارب إلا عندما h → 0."
+  "ar": "فيها خطأ يعتمد على حجم الخطوة؛ ولا تتقارب إلا عندما h → 0.",
+  "he": "יש לה שגיאה התלויה בגודל הצעד; היא מתכנסת רק כאשר h → 0."
  },
  "It is a function (or family of functions).": {
   "fr": "C’est une fonction (ou une famille de fonctions).",
   "es": "Es una función (o una familia de funciones).",
   "it": "È una funzione (o una famiglia di funzioni).",
-  "ar": "إنه دالة (أو عائلة من الدوال)."
+  "ar": "إنه دالة (أو عائلة من الدوال).",
+  "he": "הוא פונקציה (או משפחה של פונקציות)."
  },
  "It is at one focus of the ellipse.": {
   "fr": "Il est à l’un des foyers de l’ellipse.",
@@ -1461,19 +1604,22 @@
   "fr": "Elle a quand même une valeur ; estimez-la numériquement.",
   "es": "Sigue teniendo un valor; estímalo numéricamente.",
   "it": "Ha comunque un valore; stimalo numericamente.",
-  "ar": "لا تزال له قيمة؛ قدّرها عدديًا."
+  "ar": "لا تزال له قيمة؛ قدّرها عدديًا.",
+  "he": "עדיין יש לו ערך; העריכו אותו נומרית."
  },
  "Its scope follows second-semester college calculus, modeled on the topics and depth of open materials such as OpenStax Calculus Volume 2 and MIT OpenCourseWare 18.01SC (with parametric and polar ideas that lead into 18.02SC Multivariable Calculus), which we link to throughout. Those organizations do not endorse this page.": {
   "fr": "Son contenu suit le deuxième semestre de calcul différentiel et intégral universitaire, sur le modèle des thèmes et du niveau de ressources ouvertes comme OpenStax Calculus Volume 2 et MIT OpenCourseWare 18.01SC (avec des notions paramétriques et polaires qui mènent à 18.02SC Multivariable Calculus), auxquelles nous renvoyons tout au long du cours. Ces organisations ne cautionnent pas cette page.",
   "es": "Su alcance sigue el segundo semestre de cálculo universitario, tomando como modelo los temas y la profundidad de materiales abiertos como OpenStax Calculus Volume 2 y MIT OpenCourseWare 18.01SC (con ideas paramétricas y polares que conducen a 18.02SC Multivariable Calculus), a los que enlazamos a lo largo del curso. Esas organizaciones no respaldan esta página.",
   "it": "Il programma segue il secondo semestre di analisi universitaria, sul modello degli argomenti e della profondità di materiali aperti come OpenStax Calculus Volume 2 e MIT OpenCourseWare 18.01SC (con concetti parametrici e polari che portano a 18.02SC Multivariable Calculus), a cui rimandiamo in tutto il corso. Queste organizzazioni non approvano questa pagina.",
-  "ar": "يتبع نطاقه الفصل الثاني من حساب التفاضل والتكامل الجامعي، على غرار موضوعات ومستوى مواد مفتوحة مثل OpenStax Calculus Volume 2 وMIT OpenCourseWare 18.01SC (مع أفكار وسيطية وقطبية تقود إلى 18.02SC Multivariable Calculus)، ونضع روابط إليها في أنحاء المقرر. هذه المؤسسات لا تتبنى هذه الصفحة."
+  "ar": "يتبع نطاقه الفصل الثاني من حساب التفاضل والتكامل الجامعي، على غرار موضوعات ومستوى مواد مفتوحة مثل OpenStax Calculus Volume 2 وMIT OpenCourseWare 18.01SC (مع أفكار وسيطية وقطبية تقود إلى 18.02SC Multivariable Calculus)، ونضع روابط إليها في أنحاء المقرر. هذه المؤسسات لا تتبنى هذه الصفحة.",
+  "he": "היקפו תואם את הסמסטר השני של חשבון דיפרנציאלי ואינטגרלי באוניברסיטה, בהשראת הנושאים והעומק של חומרים פתוחים כמו OpenStax Calculus Volume 2 ו-MIT OpenCourseWare 18.01SC (עם רעיונות פרמטריים וקוטביים שמובילים אל 18.02SC Multivariable Calculus), שאליהם אנו מקשרים לאורך הקורס. ארגונים אלה אינם ממליצים על דף זה."
  },
  "K, the long-run limit of a logistic population.": {
   "fr": "K, la limite à long terme d’une population logistique.",
   "es": "K, el límite a largo plazo de una población logística.",
   "it": "K, il limite a lungo termine di una popolazione logistica.",
-  "ar": "K، النهاية طويلة الأمد لمجموعة لوجستية."
+  "ar": "K، النهاية طويلة الأمد لمجموعة لوجستية.",
+  "he": "K, הגבול לטווח ארוך של אוכלוסייה לוגיסטית."
  },
  "Keeping only the first term turns sin θ into θ, the small-angle approximation behind the simple pendulum formula.": {
   "fr": "Ne garder que le premier terme transforme sin θ en θ : c’est l’approximation des petits angles derrière la formule du pendule simple.",
@@ -1515,13 +1661,15 @@
   "fr": "L < 1 converge, L > 1 diverge, L = 1 on ne peut pas conclure.",
   "es": "L < 1 converge, L > 1 diverge, L = 1 no concluyente.",
   "it": "L < 1 converge, L > 1 diverge, L = 1 non conclusivo.",
-  "ar": "L < 1 متقاربة، L > 1 متباعدة، L = 1 غير حاسم."
+  "ar": "L < 1 متقاربة، L > 1 متباعدة، L = 1 غير حاسم.",
+  "he": "L < 1 מתכנס, L > 1 מתבדר, L = 1 אינו חד-משמעי."
  },
  "L = 1 is inconclusive; use another test.": {
   "fr": "L = 1 ne permet pas de conclure ; utilisez un autre critère.",
   "es": "L = 1 no es concluyente; usa otro criterio.",
   "it": "L = 1 non è conclusivo; usa un altro criterio.",
-  "ar": "L = 1 غير حاسم؛ استخدم اختبارًا آخر."
+  "ar": "L = 1 غير حاسم؛ استخدم اختبارًا آخر.",
+  "he": "L = 1 אינו חד-משמעי; השתמשו במבחן אחר."
  },
  "Lab A: Euler’s method for a recovering fish stock": {
   "fr": "TP A : méthode d’Euler pour un stock de poissons en reconstitution",
@@ -1551,7 +1699,8 @@
   "fr": "Prévision des proliférations d’algues du lac Érié",
   "es": "Pronóstico de floraciones de algas del lago Erie",
   "it": "Previsione delle fioriture algali del lago Erie",
-  "ar": "توقعات تكاثر الطحالب في بحيرة إيري"
+  "ar": "توقعات تكاثر الطحالب في بحيرة إيري",
+  "he": "תחזית פריחת אצות באגם אירי"
  },
  "Length of a curve, ∫√(1 + f′²) dx.": {
   "fr": "Longueur d’une courbe, ∫√(1 + f′²) dx.",
@@ -1563,25 +1712,29 @@
   "fr": "Équation logistique",
   "es": "Ecuación logística",
   "it": "Equazione logistica",
-  "ar": "المعادلة اللوجستية"
+  "ar": "المعادلة اللوجستية",
+  "he": "משוואה לוגיסטית"
  },
  "Logistic equation and its solution": {
   "fr": "Équation logistique et sa solution",
   "es": "Ecuación logística y su solución",
   "it": "Equazione logistica e sua soluzione",
-  "ar": "المعادلة اللوجستية وحلها"
+  "ar": "المعادلة اللوجستية وحلها",
+  "he": "המשוואה הלוגיסטית ופתרונה"
  },
  "Logistic populations stop growing at K/2.": {
   "fr": "Les populations logistiques cessent de croître à K/2.",
   "es": "Las poblaciones logísticas dejan de crecer en K/2.",
   "it": "Le popolazioni logistiche smettono di crescere a K/2.",
-  "ar": "تتوقف المجموعات اللوجستية عن النمو عند K/2."
+  "ar": "تتوقف المجموعات اللوجستية عن النمو عند K/2.",
+  "he": "אוכלוסיות לוגיסטיות מפסיקות לגדול ב-K/2."
  },
  "Logistic: P′ = rP(1 − P/K). Growth slows as P nears the carrying capacity K; it is fastest at P = K/2.": {
   "fr": "Logistique : P′ = rP(1 − P/K). La croissance ralentit quand P approche de la capacité de charge K ; elle est la plus rapide pour P = K/2.",
   "es": "Logística: P′ = rP(1 − P/K). El crecimiento se frena a medida que P se acerca a la capacidad de carga K; es máximo en P = K/2.",
   "it": "Logistica: P′ = rP(1 − P/K). La crescita rallenta quando P si avvicina alla capacità portante K; è massima per P = K/2.",
-  "ar": "اللوجستية: P′ = rP(1 − P/K). يتباطأ النمو كلما اقتربت P من السعة الاستيعابية K، ويكون أسرع ما يمكن عند P = K/2."
+  "ar": "اللوجستية: P′ = rP(1 − P/K). يتباطأ النمو كلما اقتربت P من السعة الاستيعابية K، ويكون أسرع ما يمكن عند P = K/2.",
+  "he": "לוגיסטית: P′ = rP(1 − P/K). הגדילה מאטה כש-P מתקרב לכושר הנשיאה K; היא המהירה ביותר ב-P = K/2."
  },
  "Long-run limit K of a logistic population.": {
   "fr": "Limite à long terme K d’une population logistique.",
@@ -1611,67 +1764,78 @@
   "fr": "Beaucoup d’intégrales, comme ∫e^(−x²) dx, n’ont pas de primitive élémentaire. La méthode de Simpson donne souvent de nombreux chiffres exacts avec peu de points.",
   "es": "Muchas integrales, como ∫e^(−x²) dx, no tienen antiderivada elemental. La regla de Simpson suele dar muchas cifras exactas con pocos puntos.",
   "it": "Molti integrali, come ∫e^(−x²) dx, non hanno una primitiva elementare. La regola di Simpson spesso dà molte cifre esatte con pochi punti.",
-  "ar": "كثير من التكاملات، مثل ∫e^(−x²) dx، ليس لها دالة أصلية أولية. وكثيرًا ما تعطي قاعدة سيمبسون أرقامًا دقيقة عديدة بنقاط قليلة."
+  "ar": "كثير من التكاملات، مثل ∫e^(−x²) dx، ليس لها دالة أصلية أولية. وكثيرًا ما تعطي قاعدة سيمبسون أرقامًا دقيقة عديدة بنقاط قليلة.",
+  "he": "לאינטגרלים רבים, כמו ∫e^(−x²) dx, אין פונקציה קדומה אלמנטרית. כלל סימפסון נותן לעיתים קרובות ספרות מדויקות רבות עם מעט נקודות."
  },
  "Mass: ∫₀² (1 + x) dx = 2 + 2 = 4 kg.": {
   "fr": "Masse : ∫₀² (1 + x) dx = 2 + 2 = 4 kg.",
   "es": "Masa: ∫₀² (1 + x) dx = 2 + 2 = 4 kg.",
   "it": "Massa: ∫₀² (1 + x) dx = 2 + 2 = 4 kg.",
-  "ar": "الكتلة: ∫₀² (1 + x) dx = 2 + 2 = 4 kg."
+  "ar": "الكتلة: ∫₀² (1 + x) dx = 2 + 2 = 4 kg.",
+  "he": "מסה: ∫₀² (1 + x) dx = 2 + 2 = 4 kg."
  },
  "Mean lifetimes, also improper integrals, describe how long substances stick around: how long a pollutant persists in a lake, or how long a radioactive tracer used to date ice and ocean water remains.": {
   "fr": "Les durées de vie moyennes, elles aussi des intégrales impropres, décrivent combien de temps des substances persistent : combien de temps un polluant reste dans un lac, ou combien de temps subsiste un traceur radioactif utilisé pour dater la glace et l’eau océanique.",
   "es": "Las vidas medias, también integrales impropias, describen cuánto tiempo permanecen las sustancias: cuánto persiste un contaminante en un lago o cuánto dura un trazador radiactivo usado para datar hielo y agua oceánica.",
   "it": "Le vite medie, anch’esse integrali impropri, descrivono per quanto tempo le sostanze restano: quanto persiste un inquinante in un lago, o quanto dura un tracciante radioattivo usato per datare il ghiaccio e l’acqua oceanica.",
-  "ar": "متوسطات الأعمار، وهي أيضًا تكاملات معتلة، تصف مدة بقاء المواد: كم يبقى ملوث في بحيرة، أو كم يبقى متتبع مشع يُستخدم لتأريخ الجليد ومياه المحيطات."
+  "ar": "متوسطات الأعمار، وهي أيضًا تكاملات معتلة، تصف مدة بقاء المواد: كم يبقى ملوث في بحيرة، أو كم يبقى متتبع مشع يُستخدم لتأريخ الجليد ومياه المحيطات.",
+  "he": "זמני חיים ממוצעים, שגם הם אינטגרלים לא אמיתיים, מתארים כמה זמן חומרים נשארים: כמה זמן מזהם נשאר באגם, או כמה זמן נשאר סמן רדיואקטיבי המשמש לתיארוך קרח ומי אוקיינוס."
  },
  "Methods like Simpson’s rule are how irregular measurements, such as river depths across a channel, become totals like flow or volume.": {
   "fr": "Des méthodes comme celle de Simpson permettent de transformer des mesures irrégulières, comme les profondeurs d’une rivière à travers un chenal, en totaux comme un débit ou un volume.",
   "es": "Métodos como la regla de Simpson permiten convertir mediciones irregulares, como las profundidades de un río a lo ancho de un cauce, en totales como el caudal o el volumen.",
   "it": "Metodi come la regola di Simpson trasformano misure irregolari, come le profondità di un fiume attraverso un alveo, in totali come portata o volume.",
-  "ar": "أساليب مثل قاعدة سيمبسون هي ما يحوّل القياسات غير المنتظمة، كأعماق نهر عبر مجراه، إلى مجاميع مثل التدفق أو الحجم."
+  "ar": "أساليب مثل قاعدة سيمبسون هي ما يحوّل القياسات غير المنتظمة، كأعماق نهر عبر مجراه، إلى مجاميع مثل التدفق أو الحجم.",
+  "he": "שיטות כמו כלל סימפסון הופכות מדידות לא סדירות, כמו עומקי נהר לרוחב האפיק, לסכומים כמו ספיקה או נפח."
  },
  "Mixing and cooling.": {
   "fr": "Mélange et refroidissement.",
   "es": "Mezclas y enfriamiento.",
   "it": "Miscelazione e raffreddamento.",
-  "ar": "الخلط والتبريد."
+  "ar": "الخلط والتبريد.",
+  "he": "ערבוב וקירור."
  },
  "Mixing equations like Example 4.1 are the first step in estimating how quickly a lake or estuary flushes out a pollutant once the source is stopped.": {
   "fr": "Les équations de mélange comme celle de l’exemple 4.1 sont la première étape pour estimer à quelle vitesse un lac ou un estuaire évacue un polluant une fois la source arrêtée.",
   "es": "Las ecuaciones de mezclas como la del ejemplo 4.1 son el primer paso para estimar con qué rapidez un lago o un estuario elimina un contaminante una vez que se corta la fuente.",
   "it": "Le equazioni di miscelazione come quella dell’esempio 4.1 sono il primo passo per stimare quanto rapidamente un lago o un estuario elimina un inquinante una volta fermata la fonte.",
-  "ar": "معادلات الخلط مثل المثال 4.1 هي الخطوة الأولى لتقدير مدى سرعة تخلص بحيرة أو مصب نهر من ملوث بعد إيقاف مصدره."
+  "ar": "معادلات الخلط مثل المثال 4.1 هي الخطوة الأولى لتقدير مدى سرعة تخلص بحيرة أو مصب نهر من ملوث بعد إيقاف مصدره.",
+  "he": "משוואות ערבוב כמו בדוגמה 4.1 הן הצעד הראשון בהערכה של כמה מהר אגם או שפך נהר נשטפים ממזהם לאחר שהמקור נעצר."
  },
  "Mixing: rate of change of a pollutant = rate in − rate out.": {
   "fr": "Mélange : taux de variation d’un polluant = débit entrant − débit sortant.",
   "es": "Mezclas: tasa de cambio de un contaminante = tasa de entrada − tasa de salida.",
   "it": "Miscelazione: tasso di variazione di un inquinante = tasso in entrata − tasso in uscita.",
-  "ar": "الخلط: معدل تغير الملوث = معدل الدخول − معدل الخروج."
+  "ar": "الخلط: معدل تغير الملوث = معدل الدخول − معدل الخروج.",
+  "he": "ערבוב: קצב השינוי של מזהם = קצב כניסה − קצב יציאה."
  },
  "Moment divided by mass.": {
   "fr": "Le moment divisé par la masse.",
   "es": "Momento dividido entre masa.",
   "it": "Momento diviso massa.",
-  "ar": "العزم مقسومًا على الكتلة."
+  "ar": "العزم مقسومًا على الكتلة.",
+  "he": "מומנט חלקי מסה."
  },
  "Moment: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.": {
   "fr": "Moment : ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.",
   "es": "Momento: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.",
   "it": "Momento: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.",
-  "ar": "العزم: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3."
+  "ar": "العزم: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.",
+  "he": "מומנט: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3."
  },
  "NASA: SWOT mission": {
   "fr": "NASA : mission SWOT",
   "es": "NASA: misión SWOT",
   "it": "NASA: missione SWOT",
-  "ar": "ناسا: مهمة SWOT"
+  "ar": "ناسا: مهمة SWOT",
+  "he": "NASA: משימת SWOT"
  },
  "NOAA Fisheries: population assessments": {
   "fr": "NOAA Fisheries : évaluations des populations",
   "es": "NOAA Fisheries: evaluaciones de poblaciones",
   "it": "NOAA Fisheries: valutazioni delle popolazioni",
-  "ar": "NOAA Fisheries: تقييمات المجموعات السمكية"
+  "ar": "NOAA Fisheries: تقييمات المجموعات السمكية",
+  "he": "NOAA Fisheries: הערכות אוכלוסייה"
  },
  "Near the Sun r ≈ 0.5, far side r ≈ 1.5: area ∝ r², so the far arc sweeps about 8.6 times more area (0.5513 ÷ 0.0643).": {
   "fr": "Près du Soleil r ≈ 0.5, du côté éloigné r ≈ 1.5 : l’aire ∝ r², donc l’arc éloigné balaie environ 8.6 fois plus d’aire (0.5513 ÷ 0.0643).",
@@ -1683,7 +1847,8 @@
   "fr": "Loi de refroidissement de Newton",
   "es": "Ley de enfriamiento de Newton",
   "it": "Legge di raffreddamento di Newton",
-  "ar": "قانون نيوتن للتبريد"
+  "ar": "قانون نيوتن للتبريد",
+  "he": "חוק הקירור של ניוטון"
  },
  "Next term bound: 0.5⁷/7! = 1.55 × 10⁻⁶.": {
   "fr": "Majoration par le terme suivant : 0.5⁷/7! = 1.55 × 10⁻⁶.",
@@ -1695,31 +1860,36 @@
   "fr": "Pas de primitive exprimable par une formule, p. ex. ∫e^(−x²) dx.",
   "es": "Sin antiderivada expresable por fórmula, p. ej. ∫e^(−x²) dx.",
   "it": "Nessuna primitiva esprimibile con una formula, ad es. ∫e^(−x²) dx.",
-  "ar": "لا دالة أصلية بصيغة، مثل ∫e^(−x²) dx."
+  "ar": "لا دالة أصلية بصيغة، مثل ∫e^(−x²) dx.",
+  "he": "אין פונקציה קדומה בנוסחה, למשל ∫e^(−x²) dx."
  },
  "No, it diverges, even though 1/x → 0.": {
   "fr": "Non, elle diverge, même si 1/x → 0.",
   "es": "No, diverge, aunque 1/x → 0.",
   "it": "No, diverge, anche se 1/x → 0.",
-  "ar": "لا، بل يتباعد، رغم أن 1/x → 0."
+  "ar": "لا، بل يتباعد، رغم أن 1/x → 0.",
+  "he": "לא, הוא מתבדר, אף ש-1/x → 0."
  },
  "No. It converges (to ln 2), but Σ1/n diverges, so the convergence is conditional.": {
   "fr": "Non. Elle converge (vers ln 2), mais Σ1/n diverge, donc la convergence est conditionnelle.",
   "es": "No. Converge (a ln 2), pero Σ1/n diverge, así que la convergencia es condicional.",
   "it": "No. Converge (a ln 2), ma Σ1/n diverge, quindi la convergenza è condizionata.",
-  "ar": "لا. إنها تتقارب (إلى ln 2)، لكن Σ1/n تتباعد، فالتقارب مشروط."
+  "ar": "لا. إنها تتقارب (إلى ln 2)، لكن Σ1/n تتباعد، فالتقارب مشروط.",
+  "he": "לא. הוא מתכנס (ל-ln 2), אבל Σ1/n מתבדר, ולכן ההתכנסות היא בתנאי."
  },
  "No: the terms → 1, not 0 (divergence test).": {
   "fr": "Non : les termes → 1, et non 0 (critère de divergence).",
   "es": "No: los términos → 1, no 0 (criterio de divergencia).",
   "it": "No: i termini → 1, non 0 (criterio di divergenza).",
-  "ar": "لا: الحدود → 1 وليس 0 (اختبار التباعد)."
+  "ar": "لا: الحدود → 1 وليس 0 (اختبار التباعد).",
+  "he": "לא: האיברים → 1, לא 0 (מבחן ההתבדרות)."
  },
  "Non-elementary integral": {
   "fr": "Intégrale non élémentaire",
   "es": "Integral no elemental",
   "it": "Integrale non elementare",
-  "ar": "تكامل غير أولي"
+  "ar": "تكامل غير أولي",
+  "he": "אינטגרל לא אלמנטרי"
  },
  "Not always, though it holds for eˣ, sin x and cos x everywhere.": {
   "fr": "Pas toujours, même si c’est vrai partout pour eˣ, sin x et cos x.",
@@ -1743,175 +1913,204 @@
   "fr": "Un pas d’Euler depuis (0, 2) avec y′ = y et h = 0.1 donne…",
   "es": "Un paso de Euler desde (0, 2) con y′ = y y h = 0.1 da…",
   "it": "Un passo di Eulero da (0, 2) con y′ = y e h = 0.1 dà…",
-  "ar": "خطوة أويلر واحدة من (0, 2) مع y′ = y وh = 0.1 تعطي…"
+  "ar": "خطوة أويلر واحدة من (0, 2) مع y′ = y وh = 0.1 تعطي…",
+  "he": "צעד אוילר אחד מ-(0, 2) עם y′ = y ו-h = 0.1 נותן…"
  },
  "Only for uniform density and a symmetric shape.": {
   "fr": "Seulement pour une densité uniforme et une forme symétrique.",
   "es": "Solo con densidad uniforme y forma simétrica.",
   "it": "Solo con densità uniforme e forma simmetrica.",
-  "ar": "فقط عند كثافة منتظمة وشكل متماثل."
+  "ar": "فقط عند كثافة منتظمة وشكل متماثل.",
+  "he": "רק בצפיפות אחידה ובצורה סימטרית."
  },
  "OpenStax 2.1–2.3": {
   "fr": "OpenStax 2.1–2.3",
   "es": "OpenStax 2.1–2.3",
   "it": "OpenStax 2.1–2.3",
-  "ar": "OpenStax 2.1–2.3"
+  "ar": "OpenStax 2.1–2.3",
+  "he": "OpenStax 2.1–2.3"
  },
  "OpenStax 2.4–2.6": {
   "fr": "OpenStax 2.4–2.6",
   "es": "OpenStax 2.4–2.6",
   "it": "OpenStax 2.4–2.6",
-  "ar": "OpenStax 2.4–2.6"
+  "ar": "OpenStax 2.4–2.6",
+  "he": "OpenStax 2.4–2.6"
  },
  "OpenStax 3.1": {
   "fr": "OpenStax 3.1",
   "es": "OpenStax 3.1",
   "it": "OpenStax 3.1",
-  "ar": "OpenStax 3.1"
+  "ar": "OpenStax 3.1",
+  "he": "OpenStax 3.1"
  },
  "OpenStax 3.2–3.3": {
   "fr": "OpenStax 3.2–3.3",
   "es": "OpenStax 3.2–3.3",
   "it": "OpenStax 3.2–3.3",
-  "ar": "OpenStax 3.2–3.3"
+  "ar": "OpenStax 3.2–3.3",
+  "he": "OpenStax 3.2–3.3"
  },
  "OpenStax 3.4–3.6": {
   "fr": "OpenStax 3.4–3.6",
   "es": "OpenStax 3.4–3.6",
   "it": "OpenStax 3.4–3.6",
-  "ar": "OpenStax 3.4–3.6"
+  "ar": "OpenStax 3.4–3.6",
+  "he": "OpenStax 3.4–3.6"
  },
  "OpenStax 3.7": {
   "fr": "OpenStax 3.7",
   "es": "OpenStax 3.7",
   "it": "OpenStax 3.7",
-  "ar": "OpenStax 3.7"
+  "ar": "OpenStax 3.7",
+  "he": "OpenStax 3.7"
  },
  "OpenStax 4.3–4.4": {
   "fr": "OpenStax 4.3–4.4",
   "es": "OpenStax 4.3–4.4",
   "it": "OpenStax 4.3–4.4",
-  "ar": "OpenStax 4.3–4.4"
+  "ar": "OpenStax 4.3–4.4",
+  "he": "OpenStax 4.3–4.4"
  },
  "OpenStax 5.5–5.6": {
   "fr": "OpenStax 5.5–5.6",
   "es": "OpenStax 5.5–5.6",
   "it": "OpenStax 5.5–5.6",
-  "ar": "OpenStax 5.5–5.6"
+  "ar": "OpenStax 5.5–5.6",
+  "he": "OpenStax 5.5–5.6"
  },
  "OpenStax 6.3–6.4": {
   "fr": "OpenStax 6.3–6.4",
   "es": "OpenStax 6.3–6.4",
   "it": "OpenStax 6.3–6.4",
-  "ar": "OpenStax 6.3–6.4"
+  "ar": "OpenStax 6.3–6.4",
+  "he": "OpenStax 6.3–6.4"
  },
  "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing": {
   "fr": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing",
   "es": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing",
   "it": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing",
-  "ar": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing"
+  "ar": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing",
+  "he": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing"
  },
  "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells": {
   "fr": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells",
   "es": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells",
   "it": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells",
-  "ar": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells"
+  "ar": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells",
+  "he": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells"
  },
  "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area": {
   "fr": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area",
   "es": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area",
   "it": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area",
-  "ar": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area"
+  "ar": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area",
+  "he": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area"
  },
  "OpenStax Calculus 2, 2.5 Physical Applications": {
   "fr": "OpenStax Calculus 2, 2.5 Physical Applications",
   "es": "OpenStax Calculus 2, 2.5 Physical Applications",
   "it": "OpenStax Calculus 2, 2.5 Physical Applications",
-  "ar": "OpenStax Calculus 2, 2.5 Physical Applications"
+  "ar": "OpenStax Calculus 2, 2.5 Physical Applications",
+  "he": "OpenStax Calculus 2, 2.5 Physical Applications"
  },
  "OpenStax Calculus 2, 2.6 Moments and Centers of Mass": {
   "fr": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass",
   "es": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass",
   "it": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass",
-  "ar": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass"
+  "ar": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass",
+  "he": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass"
  },
  "OpenStax Calculus 2, 3.1 Integration by Parts": {
   "fr": "OpenStax Calculus 2, 3.1 Integration by Parts",
   "es": "OpenStax Calculus 2, 3.1 Integration by Parts",
   "it": "OpenStax Calculus 2, 3.1 Integration by Parts",
-  "ar": "OpenStax Calculus 2, 3.1 Integration by Parts"
+  "ar": "OpenStax Calculus 2, 3.1 Integration by Parts",
+  "he": "OpenStax Calculus 2, 3.1 Integration by Parts"
  },
  "OpenStax Calculus 2, 3.2 Trigonometric Integrals": {
   "fr": "OpenStax Calculus 2, 3.2 Trigonometric Integrals",
   "es": "OpenStax Calculus 2, 3.2 Trigonometric Integrals",
   "it": "OpenStax Calculus 2, 3.2 Trigonometric Integrals",
-  "ar": "OpenStax Calculus 2, 3.2 Trigonometric Integrals"
+  "ar": "OpenStax Calculus 2, 3.2 Trigonometric Integrals",
+  "he": "OpenStax Calculus 2, 3.2 Trigonometric Integrals"
  },
  "OpenStax Calculus 2, 3.3 Trigonometric Substitution": {
   "fr": "OpenStax Calculus 2, 3.3 Trigonometric Substitution",
   "es": "OpenStax Calculus 2, 3.3 Trigonometric Substitution",
   "it": "OpenStax Calculus 2, 3.3 Trigonometric Substitution",
-  "ar": "OpenStax Calculus 2, 3.3 Trigonometric Substitution"
+  "ar": "OpenStax Calculus 2, 3.3 Trigonometric Substitution",
+  "he": "OpenStax Calculus 2, 3.3 Trigonometric Substitution"
  },
  "OpenStax Calculus 2, 3.4 Partial Fractions": {
   "fr": "OpenStax Calculus 2, 3.4 Partial Fractions",
   "es": "OpenStax Calculus 2, 3.4 Partial Fractions",
   "it": "OpenStax Calculus 2, 3.4 Partial Fractions",
-  "ar": "OpenStax Calculus 2, 3.4 Partial Fractions"
+  "ar": "OpenStax Calculus 2, 3.4 Partial Fractions",
+  "he": "OpenStax Calculus 2, 3.4 Partial Fractions"
  },
  "OpenStax Calculus 2, 3.6 Numerical Integration": {
   "fr": "OpenStax Calculus 2, 3.6 Numerical Integration",
   "es": "OpenStax Calculus 2, 3.6 Numerical Integration",
   "it": "OpenStax Calculus 2, 3.6 Numerical Integration",
-  "ar": "OpenStax Calculus 2, 3.6 Numerical Integration"
+  "ar": "OpenStax Calculus 2, 3.6 Numerical Integration",
+  "he": "OpenStax Calculus 2, 3.6 Numerical Integration"
  },
  "OpenStax Calculus 2, 3.7 Improper Integrals": {
   "fr": "OpenStax Calculus 2, 3.7 Improper Integrals",
   "es": "OpenStax Calculus 2, 3.7 Improper Integrals",
   "it": "OpenStax Calculus 2, 3.7 Improper Integrals",
-  "ar": "OpenStax Calculus 2, 3.7 Improper Integrals"
+  "ar": "OpenStax Calculus 2, 3.7 Improper Integrals",
+  "he": "OpenStax Calculus 2, 3.7 Improper Integrals"
  },
  "OpenStax Calculus 2, 4.1 Basics of Differential Equations": {
   "fr": "OpenStax Calculus 2, 4.1 Basics of Differential Equations",
   "es": "OpenStax Calculus 2, 4.1 Basics of Differential Equations",
   "it": "OpenStax Calculus 2, 4.1 Basics of Differential Equations",
-  "ar": "OpenStax Calculus 2, 4.1 Basics of Differential Equations"
+  "ar": "OpenStax Calculus 2, 4.1 Basics of Differential Equations",
+  "he": "OpenStax Calculus 2, 4.1 Basics of Differential Equations"
  },
  "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods": {
   "fr": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods",
   "es": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods",
   "it": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods",
-  "ar": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods"
+  "ar": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods",
+  "he": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods"
  },
  "OpenStax Calculus 2, 4.3 Separable Equations": {
   "fr": "OpenStax Calculus 2, 4.3 Separable Equations",
   "es": "OpenStax Calculus 2, 4.3 Separable Equations",
   "it": "OpenStax Calculus 2, 4.3 Separable Equations",
-  "ar": "OpenStax Calculus 2, 4.3 Separable Equations"
+  "ar": "OpenStax Calculus 2, 4.3 Separable Equations",
+  "he": "OpenStax Calculus 2, 4.3 Separable Equations"
  },
  "OpenStax Calculus 2, 4.4 The Logistic Equation": {
   "fr": "OpenStax Calculus 2, 4.4 The Logistic Equation",
   "es": "OpenStax Calculus 2, 4.4 The Logistic Equation",
   "it": "OpenStax Calculus 2, 4.4 The Logistic Equation",
-  "ar": "OpenStax Calculus 2, 4.4 The Logistic Equation"
+  "ar": "OpenStax Calculus 2, 4.4 The Logistic Equation",
+  "he": "OpenStax Calculus 2, 4.4 The Logistic Equation"
  },
  "OpenStax Calculus 2, 5.1 Sequences": {
   "fr": "OpenStax Calculus 2, 5.1 Sequences",
   "es": "OpenStax Calculus 2, 5.1 Sequences",
   "it": "OpenStax Calculus 2, 5.1 Sequences",
-  "ar": "OpenStax Calculus 2, 5.1 Sequences"
+  "ar": "OpenStax Calculus 2, 5.1 Sequences",
+  "he": "OpenStax Calculus 2, 5.1 Sequences"
  },
  "OpenStax Calculus 2, 5.2 Infinite Series": {
   "fr": "OpenStax Calculus 2, 5.2 Infinite Series",
   "es": "OpenStax Calculus 2, 5.2 Infinite Series",
   "it": "OpenStax Calculus 2, 5.2 Infinite Series",
-  "ar": "OpenStax Calculus 2, 5.2 Infinite Series"
+  "ar": "OpenStax Calculus 2, 5.2 Infinite Series",
+  "he": "OpenStax Calculus 2, 5.2 Infinite Series"
  },
  "OpenStax Calculus 2, 5.6 Ratio and Root Tests": {
   "fr": "OpenStax Calculus 2, 5.6 Ratio and Root Tests",
   "es": "OpenStax Calculus 2, 5.6 Ratio and Root Tests",
   "it": "OpenStax Calculus 2, 5.6 Ratio and Root Tests",
-  "ar": "OpenStax Calculus 2, 5.6 Ratio and Root Tests"
+  "ar": "OpenStax Calculus 2, 5.6 Ratio and Root Tests",
+  "he": "OpenStax Calculus 2, 5.6 Ratio and Root Tests"
  },
  "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series": {
   "fr": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series",
@@ -1947,7 +2146,8 @@
   "fr": "Facultatif : Python avec NumPy.",
   "es": "Opcional: Python con NumPy.",
   "it": "Facoltativo: Python con NumPy.",
-  "ar": "اختياري: Python مع NumPy."
+  "ar": "اختياري: Python مع NumPy.",
+  "he": "אופציונלי: Python עם NumPy."
  },
  "Orbit geometry decides when a satellite can see a place on Earth.": {
   "fr": "La géométrie de l’orbite détermine quand un satellite peut voir un lieu sur Terre.",
@@ -1965,25 +2165,29 @@
   "fr": "P = ρgh ; la force totale augmente alors avec le carré de la profondeur.",
   "es": "P = ρgh; la fuerza total crece entonces con el cuadrado de la profundidad.",
   "it": "P = ρgh; la forza totale cresce quindi con il quadrato della profondità.",
-  "ar": "P = ρgh؛ وبذلك تزداد القوة الكلية مع مربع العمق."
+  "ar": "P = ρgh؛ وبذلك تزداد القوة الكلية مع مربع العمق.",
+  "he": "P = ρgh; לכן הכוח הכולל גדל עם ריבוע העומק."
  },
  "Parabolas through each set of three points.": {
   "fr": "Des paraboles passant par chaque groupe de trois points.",
   "es": "Parábolas que pasan por cada grupo de tres puntos.",
   "it": "Parabole passanti per ogni gruppo di tre punti.",
-  "ar": "قطوع مكافئة تمر بكل ثلاث نقاط."
+  "ar": "قطوع مكافئة تمر بكل ثلاث نقاط.",
+  "he": "פרבולות דרך כל שלשת נקודות."
  },
  "Parabolic fit; error ∝ Δx⁴.": {
   "fr": "Ajustement parabolique ; erreur ∝ Δx⁴.",
   "es": "Ajuste parabólico; error ∝ Δx⁴.",
   "it": "Interpolazione parabolica; errore ∝ Δx⁴.",
-  "ar": "مطابقة بقطوع مكافئة؛ الخطأ ∝ Δx⁴."
+  "ar": "مطابقة بقطوع مكافئة؛ الخطأ ∝ Δx⁴.",
+  "he": "התאמה פרבולית; שגיאה ∝ Δx⁴."
  },
  "Parametric Equations & Polar Coordinates": {
   "fr": "Équations paramétriques et coordonnées polaires",
   "es": "Ecuaciones paramétricas y coordenadas polares",
   "it": "Equazioni parametriche e coordinate polari",
-  "ar": "المعادلات الوسيطية والإحداثيات القطبية"
+  "ar": "المعادلات الوسيطية والإحداثيات القطبية",
+  "he": "משוואות פרמטריות וקואורדינטות קוטביות"
  },
  "Parametric arc length": {
   "fr": "Longueur d’arc paramétrique",
@@ -2013,7 +2217,8 @@
   "fr": "Équations paramétriques ; coordonnées polaires et aires ; TP D",
   "es": "Ecuaciones paramétricas; coordenadas polares y áreas; Práctica D",
   "it": "Equazioni parametriche; coordinate polari e aree; Laboratorio D",
-  "ar": "المعادلات الوسيطية؛ الإحداثيات القطبية والمساحات؛ المختبر D"
+  "ar": "المعادلات الوسيطية؛ الإحداثيات القطبية والمساحات؛ المختبر D",
+  "he": "משוואות פרמטריות; קואורדינטות קוטביות ושטחים; מעבדה D"
  },
  "Parametric slope": {
   "fr": "Pente paramétrique",
@@ -2025,25 +2230,29 @@
   "fr": "Fractions partielles",
   "es": "Fracciones parciales",
   "it": "Fratti semplici",
-  "ar": "الكسور الجزئية"
+  "ar": "الكسور الجزئية",
+  "he": "שברים חלקיים"
  },
  "Partial fractions works on any rational function.": {
   "fr": "La décomposition en éléments simples fonctionne pour toute fraction rationnelle.",
   "es": "Las fracciones parciales funcionan con cualquier función racional.",
   "it": "I fratti semplici funzionano con qualsiasi funzione razionale.",
-  "ar": "الكسور الجزئية تصلح لأي دالة نسبية."
+  "ar": "الكسور الجزئية تصلح لأي دالة نسبية.",
+  "he": "שברים חלקיים עובדים על כל פונקציה רציונלית."
  },
  "Partial fractions: ½[1/(x − 1) − 1/(x + 1)].": {
   "fr": "Fractions partielles : ½[1/(x − 1) − 1/(x + 1)].",
   "es": "Fracciones parciales: ½[1/(x − 1) − 1/(x + 1)].",
   "it": "Fratti semplici: ½[1/(x − 1) − 1/(x + 1)].",
-  "ar": "الكسور الجزئية: ½[1/(x − 1) − 1/(x + 1)]."
+  "ar": "الكسور الجزئية: ½[1/(x − 1) − 1/(x + 1)].",
+  "he": "שברים חלקיים: ½[1/(x − 1) − 1/(x + 1)]."
  },
  "Partial fractions; numerical integration": {
   "fr": "Fractions partielles ; intégration numérique",
   "es": "Fracciones parciales; integración numérica",
   "it": "Fratti semplici; integrazione numerica",
-  "ar": "الكسور الجزئية؛ التكامل العددي"
+  "ar": "الكسور الجزئية؛ التكامل العددي",
+  "he": "שברים חלקיים; אינטגרציה נומרית"
  },
  "Parts twice: ∫x²eˣ dx = (x² − 2x + 2)eˣ.": {
   "fr": "Deux fois par parties : ∫x²eˣ dx = (x² − 2x + 2)eˣ.",
@@ -2055,25 +2264,29 @@
   "fr": "Par parties avec u = ln x, dv = dx.",
   "es": "Por partes con u = ln x, dv = dx.",
   "it": "Per parti con u = ln x, dv = dx.",
-  "ar": "بالتجزئة مع u = ln x وdv = dx."
+  "ar": "بالتجزئة مع u = ln x وdv = dx.",
+  "he": "בחלקים עם u = ln x, dv = dx."
  },
  "Parts with u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.": {
   "fr": "Par parties avec u = ln x : [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.",
   "es": "Por partes con u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.",
   "it": "Per parti con u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.",
-  "ar": "بالتجزئة مع u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097."
+  "ar": "بالتجزئة مع u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.",
+  "he": "בחלקים עם u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097."
  },
  "Parts: [−x cos x + sin x]₀^π = π.": {
   "fr": "Par parties : [−x cos x + sin x]₀^π = π.",
   "es": "Por partes: [−x cos x + sin x]₀^π = π.",
   "it": "Per parti: [−x cos x + sin x]₀^π = π.",
-  "ar": "بالتجزئة: [−x cos x + sin x]₀^π = π."
+  "ar": "بالتجزئة: [−x cos x + sin x]₀^π = π.",
+  "he": "בחלקים: [−x cos x + sin x]₀^π = π."
  },
  "Physics I, Unit 7: orbits": {
   "fr": "Physique I, unité 7 : orbites",
   "es": "Física I, Unidad 7: órbitas",
   "it": "Fisica I, Unità 7: orbite",
-  "ar": "الفيزياء I، الوحدة 7: المدارات"
+  "ar": "الفيزياء I، الوحدة 7: المدارات",
+  "he": "פיזיקה I, יחידה 7: מסלולים"
  },
  "Physics I, Unit 8: oscillations": {
   "fr": "Physique I, unité 8 : oscillations",
@@ -2139,13 +2352,15 @@
   "fr": "Les modèles de population fondés sur l’équation logistique font partie des outils avec lesquels les scientifiques halieutiques évaluent les stocks et fixent des limites de capture qui permettent aux populations de rester en bonne santé, ce qui protège les écosystèmes marins et les personnes qui en dépendent.",
   "es": "Los modelos de población basados en la ecuación logística forman parte de cómo los científicos pesqueros evalúan las poblaciones y fijan límites de captura que les permiten mantenerse sanas, lo que protege los ecosistemas oceánicos y a las personas que dependen de ellos.",
   "it": "I modelli di popolazione basati sull’equazione logistica fanno parte del modo in cui gli scienziati della pesca valutano gli stock e fissano limiti di cattura che permettono alle popolazioni di restare in salute, proteggendo gli ecosistemi marini e le persone che ne dipendono.",
-  "ar": "تُعد نماذج المجموعات السكانية المبنية على المعادلة اللوجستية جزءًا من طريقة علماء مصايد الأسماك في تقييم المخزونات وتحديد حدود صيد تسمح للمجموعات بالبقاء سليمة، مما يحمي النظم البيئية للمحيطات والناس الذين يعتمدون عليها."
+  "ar": "تُعد نماذج المجموعات السكانية المبنية على المعادلة اللوجستية جزءًا من طريقة علماء مصايد الأسماك في تقييم المخزونات وتحديد حدود صيد تسمح للمجموعات بالبقاء سليمة، مما يحمي النظم البيئية للمحيطات والناس الذين يعتمدون عليها.",
+  "he": "מודלים של אוכלוסיות המבוססים על המשוואה הלוגיסטית הם חלק מהדרך שבה מדעני דיג מעריכים מלאים וקובעים מכסות דיג שמאפשרות לאוכלוסיות להישאר בריאות, וכך מגינים על המערכות האקולוגיות באוקיינוס ועל האנשים התלויים בהן."
  },
  "Population models.": {
   "fr": "Modèles de population.",
   "es": "Modelos de población.",
   "it": "Modelli di popolazione.",
-  "ar": "نماذج المجموعات السكانية."
+  "ar": "نماذج المجموعات السكانية.",
+  "he": "מודלים של אוכלוסיות."
  },
  "Position given by distance r and angle θ.": {
   "fr": "Position donnée par une distance r et un angle θ.",
@@ -2157,13 +2372,15 @@
   "fr": "Séries entières et séries de Taylor",
   "es": "Series de potencias y series de Taylor",
   "it": "Serie di potenze e serie di Taylor",
-  "ar": "متسلسلات القوى ومتسلسلات تايلور"
+  "ar": "متسلسلات القوى ومتسلسلات تايلور",
+  "he": "טורי חזקות וטורי טיילור"
  },
  "Power reduction: ½[x − sin 2x/2]₀^(π/2) = π/4.": {
   "fr": "Réduction des puissances : ½[x − sin 2x/2]₀^(π/2) = π/4.",
   "es": "Reducción de potencias: ½[x − sin 2x/2]₀^(π/2) = π/4.",
   "it": "Riduzione delle potenze: ½[x − sin 2x/2]₀^(π/2) = π/4.",
-  "ar": "تخفيض القوى: ½[x − sin 2x/2]₀^(π/2) = π/4."
+  "ar": "تخفيض القوى: ½[x − sin 2x/2]₀^(π/2) = π/4.",
+  "he": "הורדת חזקה: ½[x − sin 2x/2]₀^(π/2) = π/4."
  },
  "Power series": {
   "fr": "Série entière",
@@ -2175,43 +2392,50 @@
   "fr": "Séries entières et leurs propriétés",
   "es": "Series de potencias y sus propiedades",
   "it": "Serie di potenze e loro proprietà",
-  "ar": "متسلسلات القوى وخصائصها"
+  "ar": "متسلسلات القوى وخصائصها",
+  "he": "טורי חזקות ותכונותיהם"
  },
  "Power-reduction identity": {
   "fr": "Identité de réduction des puissances",
   "es": "Identidad de reducción de potencias",
   "it": "Identità di riduzione delle potenze",
-  "ar": "متطابقة تخفيض القوى"
+  "ar": "متطابقة تخفيض القوى",
+  "he": "זהות הורדת חזקה"
  },
  "Powers of sine and cosine yield to identities such as sin²x = (1 − cos 2x)/2.": {
   "fr": "Les puissances de sinus et de cosinus se traitent avec des identités comme sin²x = (1 − cos 2x)/2.",
   "es": "Las potencias de seno y coseno se resuelven con identidades como sin²x = (1 − cos 2x)/2.",
   "it": "Le potenze di seno e coseno si risolvono con identità come sin²x = (1 − cos 2x)/2.",
-  "ar": "تُحلّ قوى الجيب وجيب التمام بمتطابقات مثل sin²x = (1 − cos 2x)/2."
+  "ar": "تُحلّ قوى الجيب وجيب التمام بمتطابقات مثل sin²x = (1 − cos 2x)/2.",
+  "he": "חזקות של סינוס וקוסינוס נפתרות בעזרת זהויות כמו sin²x = (1 − cos 2x)/2."
  },
  "Powers of sine and cosine.": {
   "fr": "Puissances de sinus et de cosinus.",
   "es": "Potencias de seno y coseno.",
   "it": "Potenze di seno e coseno.",
-  "ar": "قوى الجيب وجيب التمام."
+  "ar": "قوى الجيب وجيب التمام.",
+  "he": "חזקות של סינוס וקוסינוס."
  },
  "Pressure grows with depth, so the force on a dam is an integral over depth.": {
   "fr": "La pression augmente avec la profondeur, donc la force exercée sur un barrage est une intégrale sur la profondeur.",
   "es": "La presión aumenta con la profundidad, así que la fuerza sobre una presa es una integral sobre la profundidad.",
   "it": "La pressione cresce con la profondità, quindi la forza su una diga è un integrale sulla profondità.",
-  "ar": "يزداد الضغط مع العمق، لذا فإن القوة على السد تكامل على العمق."
+  "ar": "يزداد الضغط مع العمق، لذا فإن القوة على السد تكامل على العمق.",
+  "he": "הלחץ גדל עם העומק, ולכן הכוח על סכר הוא אינטגרל לפי העומק."
  },
  "Pumping work is weight × tank height.": {
   "fr": "Le travail de pompage vaut poids × hauteur du réservoir.",
   "es": "El trabajo de bombeo es peso × altura del tanque.",
   "it": "Il lavoro di pompaggio è peso × altezza del serbatoio.",
-  "ar": "شغل الضخ = الوزن × ارتفاع الخزان."
+  "ar": "شغل الضخ = الوزن × ارتفاع الخزان.",
+  "he": "עבודת השאיבה היא משקל × גובה המכל."
  },
  "Pythagoras on each tiny piece.": {
   "fr": "Pythagore sur chaque petit morceau.",
   "es": "Pitágoras en cada trocito.",
   "it": "Pitagora su ogni pezzetto.",
-  "ar": "فيثاغورس على كل قطعة صغيرة."
+  "ar": "فيثاغورس على كل قطعة صغيرة.",
+  "he": "פיתגורס על כל חתיכה זעירה."
  },
  "R = 1 (ratio n/(n + 1) → 1).": {
   "fr": "R = 1 (rapport n/(n + 1) → 1).",
@@ -2235,7 +2459,8 @@
   "fr": "Intégrandes avec radicaux.",
   "es": "Integrandos con radicales.",
   "it": "Integrandi con radicali.",
-  "ar": "دوال مكاملة تحتوي على جذور."
+  "ar": "دوال مكاملة تحتوي على جذور.",
+  "he": "אינטגרנדים עם שורשים."
  },
  "Radius of convergence": {
   "fr": "Rayon de convergence",
@@ -2247,25 +2472,29 @@
   "fr": "Critères de d’Alembert et de Cauchy.",
   "es": "Criterios del cociente y de la raíz.",
   "it": "Criteri del rapporto e della radice.",
-  "ar": "اختبارا النسبة والجذر."
+  "ar": "اختبارا النسبة والجذر.",
+  "he": "מבחני המנה והשורש."
  },
  "Ratio test": {
   "fr": "Critère de d’Alembert",
   "es": "Criterio del cociente",
   "it": "Criterio del rapporto",
-  "ar": "اختبار النسبة"
+  "ar": "اختبار النسبة",
+  "he": "מבחן המנה"
  },
  "Ratio test: if |aₙ₊₁/aₙ| → L < 1 the series converges absolutely; L > 1 diverges; L = 1 says nothing.": {
   "fr": "Critère de d’Alembert : si |aₙ₊₁/aₙ| → L < 1, la série converge absolument ; si L > 1, elle diverge ; L = 1 ne permet pas de conclure.",
   "es": "Criterio del cociente: si |aₙ₊₁/aₙ| → L < 1 la serie converge absolutamente; si L > 1 diverge; L = 1 no dice nada.",
   "it": "Criterio del rapporto: se |aₙ₊₁/aₙ| → L < 1 la serie converge assolutamente; se L > 1 diverge; L = 1 non dice nulla.",
-  "ar": "اختبار النسبة: إذا كان |aₙ₊₁/aₙ| → L < 1 فالمتسلسلة متقاربة مطلقًا؛ وإذا L > 1 فهي متباعدة؛ وL = 1 لا يقول شيئًا."
+  "ar": "اختبار النسبة: إذا كان |aₙ₊₁/aₙ| → L < 1 فالمتسلسلة متقاربة مطلقًا؛ وإذا L > 1 فهي متباعدة؛ وL = 1 لا يقول شيئًا.",
+  "he": "מבחן המנה: אם |aₙ₊₁/aₙ| → L < 1 הטור מתכנס בהחלט; אם L > 1 הוא מתבדר; L = 1 אינו אומר דבר."
  },
  "Ratio: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.": {
   "fr": "Rapport : [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.",
   "es": "Cociente: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.",
   "it": "Rapporto: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.",
-  "ar": "النسبة: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½."
+  "ar": "النسبة: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.",
+  "he": "מנה: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½."
  },
  "Ratio: |x|/3 < 1.": {
   "fr": "Rapport : |x|/3 < 1.",
@@ -2283,25 +2512,29 @@
   "fr": "Fractions rationnelles.",
   "es": "Funciones racionales.",
   "it": "Funzioni razionali.",
-  "ar": "الدوال النسبية."
+  "ar": "الدوال النسبية.",
+  "he": "פונקציות רציונליות."
  },
  "Read direction fields and use Euler’s method.": {
   "fr": "Lire des champs de directions et utiliser la méthode d’Euler.",
   "es": "Leer campos de direcciones y usar el método de Euler.",
   "it": "Leggere i campi di direzioni e usare il metodo di Eulero.",
-  "ar": "قراءة حقول الاتجاهات واستخدام طريقة أويلر."
+  "ar": "قراءة حقول الاتجاهات واستخدام طريقة أويلر.",
+  "he": "לקרוא שדות כיוונים ולהשתמש בשיטת אוילר."
  },
  "Real systems are more complex than one geometric series, and scientists use full models, but the series is the right first intuition.": {
   "fr": "Les systèmes réels sont plus complexes qu’une seule série géométrique, et les scientifiques utilisent des modèles complets, mais la série donne la bonne première intuition.",
   "es": "Los sistemas reales son más complejos que una sola serie geométrica, y los científicos usan modelos completos, pero la serie es la intuición inicial correcta.",
   "it": "I sistemi reali sono più complessi di una sola serie geometrica, e gli scienziati usano modelli completi, ma la serie è la giusta prima intuizione.",
-  "ar": "الأنظمة الحقيقية أعقد من متسلسلة هندسية واحدة، ويستخدم العلماء نماذج كاملة، لكن المتسلسلة هي الحدس الأول الصحيح."
+  "ar": "الأنظمة الحقيقية أعقد من متسلسلة هندسية واحدة، ويستخدم العلماء نماذج كاملة، لكن المتسلسلة هي الحدس الأول الصحيح.",
+  "he": "מערכות אמיתיות מורכבות יותר מטור הנדסי אחד, ומדענים משתמשים במודלים מלאים, אבל הטור הוא האינטואיציה הראשונה הנכונה."
  },
  "Rearranging terms never changes a sum.": {
   "fr": "Réordonner les termes ne change jamais une somme.",
   "es": "Reordenar los términos nunca cambia una suma.",
   "it": "Riordinare i termini non cambia mai una somma.",
-  "ar": "إعادة ترتيب الحدود لا تغير المجموع أبدًا."
+  "ar": "إعادة ترتيب الحدود لا تغير المجموع أبدًا.",
+  "he": "סידור מחדש של האיברים לעולם אינו משנה סכום."
  },
  "Remainder bound": {
   "fr": "Majoration du reste",
@@ -2319,13 +2552,15 @@
   "fr": "Page Rivières",
   "es": "Página de Ríos",
   "it": "Pagina Fiumi",
-  "ar": "صفحة الأنهار"
+  "ar": "صفحة الأنهار",
+  "he": "דף הנהרות"
  },
  "Room for the River": {
   "fr": "De la place pour la rivière",
   "es": "Espacio para el río",
   "it": "Spazio per il fiume",
-  "ar": "مساحة للنهر"
+  "ar": "مساحة للنهر",
+  "he": "מקום לנהר"
  },
  "Sample values for practice, not a real reservoir.": {
   "fr": "Valeurs d’exemple pour s’entraîner, pas un réservoir réel.",
@@ -2343,19 +2578,22 @@
   "fr": "Des satellites mesurent désormais depuis l’orbite la hauteur des rivières, des lacs et des réservoirs. La mission SWOT de la NASA et du CNES cartographie les eaux de surface afin d’estimer les variations des volumes stockés : du découpage-et-addition à l’échelle planétaire.",
   "es": "Hoy los satélites miden desde la órbita la altura de ríos, lagos y embalses. La misión SWOT de la NASA y el CNES estudia las aguas superficiales para estimar los cambios en el agua almacenada: cortar y sumar a escala planetaria.",
   "it": "Oggi i satelliti misurano dall’orbita l’altezza di fiumi, laghi e bacini. La missione SWOT di NASA e CNES rileva le acque superficiali per stimare le variazioni dell’acqua immagazzinata: affettare e sommare su scala planetaria.",
-  "ar": "تقيس الأقمار الصناعية الآن من المدار ارتفاع الأنهار والبحيرات والخزانات. تمسح مهمة SWOT التابعة لناسا والمركز الوطني الفرنسي للدراسات الفضائية (CNES) المياه السطحية لتقدير التغيرات في المياه المخزنة، وهذا تقطيع وجمع على مستوى الكوكب."
+  "ar": "تقيس الأقمار الصناعية الآن من المدار ارتفاع الأنهار والبحيرات والخزانات. تمسح مهمة SWOT التابعة لناسا والمركز الوطني الفرنسي للدراسات الفضائية (CNES) المياه السطحية لتقدير التغيرات في المياه المخزنة، وهذا تقطيع وجمع على مستوى الكوكب.",
+  "he": "לוויינים מודדים כיום ממסלול את גובה הנהרות, האגמים והמאגרים. משימת SWOT של NASA ו-CNES סוקרת את המים העיליים כדי להעריך שינויים במים האגורים: חיתוך וסכימה בקנה מידה פלנטרי."
  },
  "Separable": {
   "fr": "À variables séparables",
   "es": "Separable",
   "it": "A variabili separabili",
-  "ar": "قابلة للفصل"
+  "ar": "قابلة للفصل",
+  "he": "פרידה"
  },
  "Separable and logistic equations; Lab A": {
   "fr": "Équations à variables séparables et logistiques ; TP A",
   "es": "Ecuaciones separables y logísticas; Práctica A",
   "it": "Equazioni a variabili separabili e logistiche; Laboratorio A",
-  "ar": "المعادلات القابلة للفصل واللوجستية؛ المختبر A"
+  "ar": "المعادلات القابلة للفصل واللوجستية؛ المختبر A",
+  "he": "משוואות פרידות ולוגיסטיות; מעבדה A"
  },
  "Separable equation": {
   "fr": "Équation à variables séparables",
@@ -2367,37 +2605,43 @@
   "fr": "Équations à variables séparables : mettez tous les y d’un côté et tous les x de l’autre, puis intégrez.",
   "es": "Ecuaciones separables: pon toda la y de un lado y toda la x del otro, y luego integra.",
   "it": "Equazioni a variabili separabili: porta tutte le y da una parte e tutte le x dall’altra, poi integra.",
-  "ar": "المعادلات القابلة للفصل: ضع كل y في طرف وكل x في الطرف الآخر، ثم كامل."
+  "ar": "المعادلات القابلة للفصل: ضع كل y في طرف وكل x في الطرف الآخر، ثم كامل.",
+  "he": "משוואות פרידות: העבירו את כל ה-y לצד אחד ואת כל ה-x לצד השני, ואז בצעו אינטגרציה."
  },
  "Separate and integrate.": {
   "fr": "Séparer et intégrer.",
   "es": "Separa e integra.",
   "it": "Separa e integra.",
-  "ar": "افصل ثم كامل."
+  "ar": "افصل ثم كامل.",
+  "he": "הפרידו ובצעו אינטגרציה."
  },
  "Sequence": {
   "fr": "Suite",
   "es": "Sucesión",
   "it": "Successione",
-  "ar": "متتالية"
+  "ar": "متتالية",
+  "he": "סדרה"
  },
  "Sequences & Series": {
   "fr": "Suites et séries",
   "es": "Sucesiones y series",
   "it": "Successioni e serie",
-  "ar": "المتتاليات والمتسلسلات"
+  "ar": "المتتاليات والمتسلسلات",
+  "he": "סדרות וטורים"
  },
  "Sequences; infinite series; geometric series": {
   "fr": "Suites ; séries infinies ; séries géométriques",
   "es": "Sucesiones; series infinitas; series geométricas",
   "it": "Successioni; serie infinite; serie geometriche",
-  "ar": "المتتاليات؛ المتسلسلات اللانهائية؛ المتسلسلات الهندسية"
+  "ar": "المتتاليات؛ المتسلسلات اللانهائية؛ المتسلسلات الهندسية",
+  "he": "סדרות; טורים אינסופיים; טורים הנדסיים"
  },
  "Series": {
   "fr": "Série",
   "es": "Serie",
   "it": "Serie",
-  "ar": "متسلسلة"
+  "ar": "متسلسلة",
+  "he": "טור"
  },
  "Series lectures and problem sets.": {
   "fr": "Cours et séries d’exercices sur les séries.",
@@ -2415,19 +2659,22 @@
   "fr": "Méthode des coquilles cylindriques",
   "es": "Método de capas cilíndricas",
   "it": "Metodo dei gusci cilindrici",
-  "ar": "طريقة الأغلفة الأسطوانية"
+  "ar": "طريقة الأغلفة الأسطوانية",
+  "he": "שיטת הקליפות הגליליות"
  },
  "Shells about the y-axis use the integrand…": {
   "fr": "Les coquilles autour de l’axe des y utilisent l’intégrande…",
   "es": "Las capas alrededor del eje y usan el integrando…",
   "it": "I gusci attorno all’asse y usano l’integrando…",
-  "ar": "الأغلفة حول المحور y تستخدم الدالة المكاملة…"
+  "ar": "الأغلفة حول المحور y تستخدم الدالة المكاملة…",
+  "he": "קליפות סביב ציר y משתמשות באינטגרנד…"
  },
  "Shells.": {
   "fr": "Coquilles cylindriques.",
   "es": "Capas cilíndricas.",
   "it": "Gusci cilindrici.",
-  "ar": "الأغلفة الأسطوانية."
+  "ar": "الأغلفة الأسطوانية.",
+  "he": "קליפות גליליות."
  },
  "Show numerically that an elliptical orbit sweeps area faster near the focus in angle but at a constant rate in time.": {
   "fr": "Montrer numériquement qu’une orbite elliptique balaie l’aire plus vite par unité d’angle près du foyer, mais à un rythme constant dans le temps.",
@@ -2445,19 +2692,22 @@
   "fr": "Méthode de Simpson",
   "es": "Regla de Simpson",
   "it": "Regola di Simpson",
-  "ar": "قاعدة سيمبسون"
+  "ar": "قاعدة سيمبسون",
+  "he": "כלל סימפסון"
  },
  "Simpson’s rule (n even)": {
   "fr": "Méthode de Simpson (n pair)",
   "es": "Regla de Simpson (n par)",
   "it": "Regola di Simpson (n pari)",
-  "ar": "قاعدة سيمبسون (n زوجي)"
+  "ar": "قاعدة سيمبسون (n زوجي)",
+  "he": "כלל סימפסון (n זוגי)"
  },
  "Simpson’s rule fits the curve with…": {
   "fr": "La méthode de Simpson ajuste la courbe avec…",
   "es": "La regla de Simpson ajusta la curva con…",
   "it": "La regola di Simpson approssima la curva con…",
-  "ar": "تطابق قاعدة سيمبسون المنحنى باستخدام…"
+  "ar": "تطابق قاعدة سيمبسون المنحنى باستخدام…",
+  "he": "כלל סימפסון מתאים את העקומה בעזרת…"
  },
  "Since area grows at a constant rate in time, the planet spends about 8.6 times longer crossing the far 0.5 rad: it moves slowest at aphelion.": {
   "fr": "Comme l’aire croît à un rythme constant dans le temps, la planète met environ 8.6 fois plus longtemps à parcourir les 0.5 rad éloignés : elle se déplace le plus lentement à l’aphélie.",
@@ -2475,13 +2725,15 @@
   "fr": "Esquissez chaque région avant de poser une intégrale de volume ou d’aire.",
   "es": "Dibuja cada región antes de plantear una integral de volumen o de área.",
   "it": "Disegna ogni regione prima di impostare un integrale di volume o di area.",
-  "ar": "ارسم كل منطقة قبل إعداد تكامل الحجم أو المساحة."
+  "ar": "ارسم كل منطقة قبل إعداد تكامل الحجم أو المساحة.",
+  "he": "שרטטו כל תחום לפני שמציבים אינטגרל של נפח או שטח."
  },
  "Slice, add and take the limit: volumes of solids, lengths of curves, work against forces, fluid pressure and centers of mass.": {
   "fr": "Découper, additionner, passer à la limite : volumes de solides, longueurs de courbes, travail contre des forces, pression des fluides et centres de masse.",
   "es": "Cortar, sumar y tomar el límite: volúmenes de sólidos, longitudes de curvas, trabajo contra fuerzas, presión de fluidos y centros de masa.",
   "it": "Affettare, sommare e passare al limite: volumi di solidi, lunghezze di curve, lavoro contro forze, pressione dei fluidi e centri di massa.",
-  "ar": "قطّع، واجمع، وخذ النهاية: حجوم المجسمات، وأطوال المنحنيات، والشغل ضد القوى، وضغط الموائع، ومراكز الكتلة."
+  "ar": "قطّع، واجمع، وخذ النهاية: حجوم المجسمات، وأطوال المنحنيات، والشغل ضد القوى، وضغط الموائع، ومراكز الكتلة.",
+  "he": "לחתוך, לסכם ולקחת גבול: נפחים של גופים, אורכי עקומות, עבודה נגד כוחות, לחץ נוזלים ומרכזי מסה."
  },
  "Slope of a parametric curve": {
   "fr": "Pente d’une courbe paramétrique",
@@ -2499,13 +2751,15 @@
   "fr": "Plus petite qu’une intégrale convergente ⇒ converge.",
   "es": "Menor que una convergente ⇒ converge.",
   "it": "Minore di uno convergente ⇒ converge.",
-  "ar": "أصغر من متقارب ⇒ متقارب."
+  "ar": "أصغر من متقارب ⇒ متقارب.",
+  "he": "קטן ממתכנס ⇒ מתכנס."
  },
  "Solve separable equations, including mixing and cooling problems.": {
   "fr": "Résoudre des équations à variables séparables, y compris des problèmes de mélange et de refroidissement.",
   "es": "Resolver ecuaciones separables, incluidos problemas de mezclas y de enfriamiento.",
   "it": "Risolvere equazioni a variabili separabili, inclusi problemi di miscelazione e raffreddamento.",
-  "ar": "حل المعادلات القابلة للفصل، بما في ذلك مسائل الخلط والتبريد."
+  "ar": "حل المعادلات القابلة للفصل، بما في ذلك مسائل الخلط والتبريد.",
+  "he": "לפתור משוואות פרידות, כולל בעיות ערבוב וקירור."
  },
  "Solve the logistic equation numerically and compare with the exact solution.": {
   "fr": "Résoudre numériquement l’équation logistique et comparer avec la solution exacte.",
@@ -2517,7 +2771,8 @@
   "fr": "Résolvez y′ = xy avec y(0) = 2, et trouvez y(1).",
   "es": "Resuelve y′ = xy con y(0) = 2 y halla y(1).",
   "it": "Risolvi y′ = xy con y(0) = 2 e trova y(1).",
-  "ar": "حل y′ = xy مع y(0) = 2، وأوجد y(1)."
+  "ar": "حل y′ = xy مع y(0) = 2، وأوجد y(1).",
+  "he": "פתרו y′ = xy עם y(0) = 2, ומצאו את y(1)."
  },
  "Solve y′ = −2y, y(0) = 5, and find y(1).": {
   "fr": "Résolvez y′ = −2y, y(0) = 5, et trouvez y(1).",
@@ -2529,7 +2784,8 @@
   "fr": "Résolvez y′ = −2y, y(0) = 5. Trouvez y(1).",
   "es": "Resuelve y′ = −2y, y(0) = 5. Halla y(1).",
   "it": "Risolvi y′ = −2y, y(0) = 5. Trova y(1).",
-  "ar": "حل y′ = −2y، y(0) = 5. أوجد y(1)."
+  "ar": "حل y′ = −2y، y(0) = 5. أوجد y(1).",
+  "he": "פתרו y′ = −2y, y(0) = 5. מצאו את y(1)."
  },
  "Solves the practice problems with occasional slips.": {
   "fr": "Résout les exercices d’entraînement avec quelques erreurs occasionnelles.",
@@ -2541,7 +2797,8 @@
   "fr": "Décomposer une fraction rationnelle en éléments simples.",
   "es": "Separar una función racional en fracciones simples.",
   "it": "Scomporre una funzione razionale in fratti semplici.",
-  "ar": "تقسيم دالة نسبية إلى كسور بسيطة."
+  "ar": "تقسيم دالة نسبية إلى كسور بسيطة.",
+  "he": "פירוק פונקציה רציונלית לשברים פשוטים."
  },
  "Splitting a rational function into simpler terms.": {
   "fr": "Décomposition d’une fraction rationnelle en termes plus simples.",
@@ -2559,25 +2816,29 @@
   "fr": "Calculer la somme de séries géométriques et télescopiques.",
   "es": "Sumar series geométricas y telescópicas.",
   "it": "Sommare serie geometriche e telescopiche.",
-  "ar": "جمع المتسلسلات الهندسية والمتداخلة."
+  "ar": "جمع المتسلسلات الهندسية والمتداخلة.",
+  "he": "לסכם טורים הנדסיים וטלסקופיים."
  },
  "Sum of a sequence; limit of partial sums.": {
   "fr": "Somme d’une suite ; limite des sommes partielles.",
   "es": "Suma de una sucesión; límite de las sumas parciales.",
   "it": "Somma di una successione; limite delle somme parziali.",
-  "ar": "مجموع متتالية؛ نهاية المجاميع الجزئية."
+  "ar": "مجموع متتالية؛ نهاية المجاميع الجزئية.",
+  "he": "סכום של סדרה; גבול הסכומים החלקיים."
  },
  "Sum Σ (1/2)ⁿ from n = 0.": {
   "fr": "Calculez Σ (1/2)ⁿ à partir de n = 0.",
   "es": "Suma Σ (1/2)ⁿ desde n = 0.",
   "it": "Somma Σ (1/2)ⁿ da n = 0.",
-  "ar": "اجمع Σ (1/2)ⁿ بدءًا من n = 0."
+  "ar": "اجمع Σ (1/2)ⁿ بدءًا من n = 0.",
+  "he": "סכמו Σ (1/2)ⁿ החל מ-n = 0."
  },
  "Sum Σ 3(2/3)ⁿ from n = 0.": {
   "fr": "Calculez Σ 3(2/3)ⁿ à partir de n = 0.",
   "es": "Suma Σ 3(2/3)ⁿ desde n = 0.",
   "it": "Somma Σ 3(2/3)ⁿ da n = 0.",
-  "ar": "اجمع Σ 3(2/3)ⁿ بدءًا من n = 0."
+  "ar": "اجمع Σ 3(2/3)ⁿ بدءًا من n = 0.",
+  "he": "סכמו Σ 3(2/3)ⁿ החל מ-n = 0."
  },
  "Surface area A (km²)": {
   "fr": "Surface A (km²)",
@@ -2613,13 +2874,15 @@
   "fr": "Prendre la limite de ∫ₐᵇ.",
   "es": "Toma el límite de ∫ₐᵇ.",
   "it": "Si prende il limite di ∫ₐᵇ.",
-  "ar": "خذ نهاية ∫ₐᵇ."
+  "ar": "خذ نهاية ∫ₐᵇ.",
+  "he": "לקחת את הגבול של ∫ₐᵇ."
  },
  "Taylor and Maclaurin series; Lab C": {
   "fr": "Séries de Taylor et de Maclaurin ; TP C",
   "es": "Series de Taylor y de Maclaurin; Práctica C",
   "it": "Serie di Taylor e di Maclaurin; Laboratorio C",
-  "ar": "متسلسلات تايلور وماكلورين؛ المختبر C"
+  "ar": "متسلسلات تايلور وماكلورين؛ المختبر C",
+  "he": "טורי טיילור ומקלורן; מעבדה C"
  },
  "Taylor coefficient": {
   "fr": "Coefficient de Taylor",
@@ -2673,7 +2936,8 @@
   "fr": "Techniques d’intégration",
   "es": "Técnicas de integración",
   "it": "Tecniche di integrazione",
-  "ar": "تقنيات التكامل"
+  "ar": "تقنيات التكامل",
+  "he": "טכניקות אינטגרציה"
  },
  "The Maclaurin series of eˣ is…": {
   "fr": "La série de Maclaurin de eˣ est…",
@@ -2691,13 +2955,15 @@
   "fr": "L’intégrale de la courbe en cloche de l’exemple 1.3 n’a pas de solution sous forme de formule, et pourtant elle se cache derrière chaque barre d’erreur d’un graphique climatique et chaque incertitude d’une mesure satellitaire. L’intégration numérique est la façon dont on la calcule réellement, elle et la plupart des intégrales issues de données réelles.",
   "es": "La integral de la curva de campana del ejemplo 1.3 no tiene respuesta en forma de fórmula y, sin embargo, está detrás de cada barra de error de un gráfico climático y de cada incertidumbre de una medición satelital. La integración numérica es la forma en que se calcula realmente, ella y la mayoría de las integrales que salen de datos reales.",
   "it": "L’integrale della curva a campana dell’esempio 1.3 non ha una risposta in forma di formula, eppure è dietro ogni barra d’errore di un grafico climatico e ogni incertezza di una misura satellitare. L’integrazione numerica è il modo in cui si calcola davvero, lui e la maggior parte degli integrali che nascono da dati reali.",
-  "ar": "تكامل منحنى الجرس في المثال 1.3 ليس له جواب بصيغة، ومع ذلك فهو يقف خلف كل شريط خطأ في رسم بياني للمناخ وكل عدم يقين في قياس بالأقمار الصناعية. والتكامل العددي هو الطريقة التي يُحسب بها فعلًا، هو ومعظم التكاملات الناتجة عن بيانات حقيقية."
+  "ar": "تكامل منحنى الجرس في المثال 1.3 ليس له جواب بصيغة، ومع ذلك فهو يقف خلف كل شريط خطأ في رسم بياني للمناخ وكل عدم يقين في قياس بالأقمار الصناعية. والتكامل العددي هو الطريقة التي يُحسب بها فعلًا، هو ومعظم التكاملات الناتجة عن بيانات حقيقية.",
+  "he": "לאינטגרל של עקומת הפעמון בדוגמה 1.3 אין תשובה בנוסחה, ובכל זאת הוא עומד מאחורי כל פס שגיאה בגרף אקלים וכל אי-ודאות במדידת לוויין. אינטגרציה נומרית היא הדרך שבה מחשבים אותו בפועל, אותו ואת רוב האינטגרלים שמגיעים מנתונים אמיתיים."
  },
  "The center of mass is always the midpoint.": {
   "fr": "Le centre de masse est toujours le milieu.",
   "es": "El centro de masa es siempre el punto medio.",
   "it": "Il centro di massa è sempre il punto medio.",
-  "ar": "مركز الكتلة هو دائمًا نقطة المنتصف."
+  "ar": "مركز الكتلة هو دائمًا نقطة المنتصف.",
+  "he": "מרכז המסה הוא תמיד נקודת האמצע."
  },
  "The coefficient of x³ in the series for sin x is…": {
   "fr": "Le coefficient de x³ dans la série de sin x est…",
@@ -2715,37 +2981,43 @@
   "fr": "La solution générale de y′ = 3y est…",
   "es": "La solución general de y′ = 3y es…",
   "it": "La soluzione generale di y′ = 3y è…",
-  "ar": "الحل العام لـ y′ = 3y هو…"
+  "ar": "الحل العام لـ y′ = 3y هو…",
+  "he": "הפתרון הכללי של y′ = 3y הוא…"
  },
  "The harmonic series is the counterexample.": {
   "fr": "La série harmonique est le contre-exemple.",
   "es": "La serie armónica es el contraejemplo.",
   "it": "La serie armonica è il controesempio.",
-  "ar": "المتسلسلة التوافقية هي المثال المضاد."
+  "ar": "المتسلسلة التوافقية هي المثال المضاد.",
+  "he": "הטור ההרמוני הוא הדוגמה הנגדית."
  },
  "The harmonic series Σ1/n…": {
   "fr": "La série harmonique Σ1/n…",
   "es": "La serie armónica Σ1/n…",
   "it": "La serie armonica Σ1/n…",
-  "ar": "المتسلسلة التوافقية Σ1/n…"
+  "ar": "المتسلسلة التوافقية Σ1/n…",
+  "he": "הטור ההרמוני Σ1/n…"
  },
  "The integrand blows up at 0, so the integral is improper, and it diverges.": {
   "fr": "L’intégrande tend vers l’infini en 0, donc l’intégrale est impropre, et elle diverge.",
   "es": "El integrando se dispara en 0, así que la integral es impropia, y diverge.",
   "it": "L’integrando esplode in 0, quindi l’integrale è improprio, e diverge.",
-  "ar": "الدالة المكاملة تنفجر عند 0، لذا فالتكامل معتل، وهو متباعد."
+  "ar": "الدالة المكاملة تنفجر عند 0، لذا فالتكامل معتل، وهو متباعد.",
+  "he": "האינטגרנד מתפוצץ ב-0, ולכן האינטגרל לא אמיתי, והוא מתבדר."
  },
  "The level the population approaches.": {
   "fr": "Le niveau dont la population s’approche.",
   "es": "El nivel al que se acerca la población.",
   "it": "Il livello a cui tende la popolazione.",
-  "ar": "المستوى الذي تقترب منه المجموعة."
+  "ar": "المستوى الذي تقترب منه المجموعة.",
+  "he": "הרמה שאליה האוכלוסייה מתקרבת."
  },
  "The limit exists and is finite.": {
   "fr": "La limite existe et est finie.",
   "es": "El límite existe y es finito.",
   "it": "Il limite esiste ed è finito.",
-  "ar": "النهاية موجودة ومنتهية."
+  "ar": "النهاية موجودة ومنتهية.",
+  "he": "הגבול קיים וסופי."
  },
  "The next course: multivariable calculus.": {
   "fr": "Le cours suivant : analyse à plusieurs variables.",
@@ -2763,19 +3035,22 @@
   "fr": "Le critère de d’Alembert pour Σ 1/n! donne L =",
   "es": "El criterio del cociente para Σ 1/n! da L =",
   "it": "Il criterio del rapporto per Σ 1/n! dà L =",
-  "ar": "اختبار النسبة لـ Σ 1/n! يعطي L ="
+  "ar": "اختبار النسبة لـ Σ 1/n! يعطي L =",
+  "he": "מבחן המנה עבור Σ 1/n! נותן L ="
  },
  "The solution of a differential equation is a number.": {
   "fr": "La solution d’une équation différentielle est un nombre.",
   "es": "La solución de una ecuación diferencial es un número.",
   "it": "La soluzione di un’equazione differenziale è un numero.",
-  "ar": "حل المعادلة التفاضلية عدد."
+  "ar": "حل المعادلة التفاضلية عدد.",
+  "he": "הפתרון של משוואה דיפרנציאלית הוא מספר."
  },
  "The work to stretch a spring by x from rest is…": {
   "fr": "Le travail pour étirer un ressort de x depuis le repos vaut…",
   "es": "El trabajo para estirar un resorte una distancia x desde el reposo es…",
   "it": "Il lavoro per allungare una molla di x dalla posizione di riposo è…",
-  "ar": "الشغل اللازم لمدّ نابض مسافة x من السكون هو…"
+  "ar": "الشغل اللازم لمدّ نابض مسافة x من السكون هو…",
+  "he": "העבודה למתיחת קפיץ ב-x ממנוחה היא…"
  },
  "These are the numerical methods scientists and engineers use daily. Sample data is labeled as such; each lab links to its source.": {
   "fr": "Ce sont les méthodes numériques que les scientifiques et les ingénieurs utilisent chaque jour. Les données d’exemple sont signalées comme telles ; chaque TP renvoie à sa source.",
@@ -2787,7 +3062,8 @@
   "fr": "Méthodes des trapèzes et de Simpson avec majorations de l’erreur.",
   "es": "Reglas del trapecio y de Simpson con cotas de error.",
   "it": "Regole dei trapezi e di Simpson con stime dell’errore.",
-  "ar": "قاعدتا شبه المنحرف وسيمبسون مع حدود الخطأ."
+  "ar": "قاعدتا شبه المنحرف وسيمبسون مع حدود الخطأ.",
+  "he": "כללי הטרפז וסימפסון עם חסמי שגיאה."
  },
  "Trapezoid: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, close to Simpson.": {
   "fr": "Trapèzes : 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, proche de Simpson.",
@@ -2799,19 +3075,22 @@
   "fr": "Substitution trigonométrique",
   "es": "Sustitución trigonométrica",
   "it": "Sostituzione trigonometrica",
-  "ar": "التعويض المثلثي"
+  "ar": "التعويض المثلثي",
+  "he": "הצבה טריגונומטרית"
  },
  "Trigonometric identities, especially sin²x + cos²x = 1 and the double-angle formulas.": {
   "fr": "Identités trigonométriques, en particulier sin²x + cos²x = 1 et les formules de l’angle double.",
   "es": "Identidades trigonométricas, en especial sin²x + cos²x = 1 y las fórmulas del ángulo doble.",
   "it": "Identità trigonometriche, in particolare sin²x + cos²x = 1 e le formule di duplicazione.",
-  "ar": "المتطابقات المثلثية، وخاصة sin²x + cos²x = 1 وصيغ ضعف الزاوية."
+  "ar": "المتطابقات المثلثية، وخاصة sin²x + cos²x = 1 وصيغ ضعف الزاوية.",
+  "he": "זהויות טריגונומטריות, במיוחד sin²x + cos²x = 1 ונוסחאות הזווית הכפולה."
  },
  "Trigonometric integrals and substitution": {
   "fr": "Intégrales trigonométriques et substitution",
   "es": "Integrales trigonométricas y sustitución",
   "it": "Integrali trigonometrici e sostituzione",
-  "ar": "التكاملات المثلثية والتعويض"
+  "ar": "التكاملات المثلثية والتعويض",
+  "he": "אינטגרלים טריגונומטריים והצבה"
  },
  "Turn functions into infinite polynomials. Taylor series are how calculators compute, and how physicists make hard problems simple.": {
   "fr": "Transformer des fonctions en polynômes infinis. Les séries de Taylor sont la façon dont les calculatrices calculent, et dont les physiciens simplifient les problèmes difficiles.",
@@ -2823,7 +3102,8 @@
   "fr": "Utilisez la méthode d’Euler avec h = 0.5 pour estimer y(1) pour y′ = y, y(0) = 1.",
   "es": "Usa el método de Euler con h = 0.5 para estimar y(1) en y′ = y, y(0) = 1.",
   "it": "Usa il metodo di Eulero con h = 0.5 per stimare y(1) per y′ = y, y(0) = 1.",
-  "ar": "استخدم طريقة أويلر مع h = 0.5 لتقدير y(1) في y′ = y، y(0) = 1."
+  "ar": "استخدم طريقة أويلر مع h = 0.5 لتقدير y(1) في y′ = y، y(0) = 1.",
+  "he": "השתמשו בשיטת אוילר עם h = 0.5 כדי להעריך את y(1) עבור y′ = y, y(0) = 1."
  },
  "Use a = 1 and e = 0.5.": {
   "fr": "Prenez a = 1 et e = 0.5.",
@@ -2847,13 +3127,15 @@
   "fr": "Utilisez les coquilles cylindriques pour trouver le volume obtenu en faisant tourner autour de l’axe des y la région sous y = x², 0 ≤ x ≤ 1.",
   "es": "Usa capas cilíndricas para hallar el volumen que se obtiene al girar alrededor del eje y la región bajo y = x², 0 ≤ x ≤ 1.",
   "it": "Usa i gusci cilindrici per trovare il volume ottenuto ruotando attorno all’asse y la regione sotto y = x², 0 ≤ x ≤ 1.",
-  "ar": "استخدم الأغلفة لإيجاد الحجم الناتج عن دوران المنطقة تحت y = x²، 0 ≤ x ≤ 1، حول المحور y."
+  "ar": "استخدم الأغلفة لإيجاد الحجم الناتج عن دوران المنطقة تحت y = x²، 0 ≤ x ≤ 1، حول المحور y.",
+  "he": "השתמשו בקליפות כדי למצוא את הנפח שמתקבל מסיבוב התחום מתחת ל-y = x², 0 ≤ x ≤ 1, סביב ציר y."
  },
  "Use the logistic equation and interpret its carrying capacity.": {
   "fr": "Utiliser l’équation logistique et interpréter sa capacité de charge.",
   "es": "Usar la ecuación logística e interpretar su capacidad de carga.",
   "it": "Usare l’equazione logistica e interpretarne la capacità portante.",
-  "ar": "استخدام المعادلة اللوجستية وتفسير سعتها الاستيعابية."
+  "ar": "استخدام المعادلة اللوجستية وتفسير سعتها الاستيعابية.",
+  "he": "להשתמש במשוואה הלוגיסטית ולפרש את כושר הנשיאה שלה."
  },
  "Use these free tools alongside the course.": {
   "fr": "Utilisez ces outils gratuits en parallèle du cours.",
@@ -2865,7 +3147,8 @@
   "fr": "Vérifier des solutions et résoudre des problèmes de Cauchy (valeur initiale).",
   "es": "Verificar soluciones y resolver problemas de valor inicial.",
   "it": "Verificare le soluzioni e risolvere problemi ai valori iniziali.",
-  "ar": "التحقق من الحلول وحل مسائل القيمة الابتدائية."
+  "ar": "التحقق من الحلول وحل مسائل القيمة الابتدائية.",
+  "he": "לאמת פתרונות ולפתור בעיות התחלה."
  },
  "Volume as the integral of cross-sectional area": {
   "fr": "Le volume comme intégrale de l’aire de la section",
@@ -2877,25 +3160,29 @@
   "fr": "Volume de révolution = π × aire.",
   "es": "Volumen de revolución = π × área.",
   "it": "Volume di rotazione = π × area.",
-  "ar": "حجم الدوران = π × المساحة."
+  "ar": "حجم الدوران = π × المساحة.",
+  "he": "נפח גוף סיבוב = π × שטח."
  },
  "Washer method": {
   "fr": "Méthode des anneaux",
   "es": "Método de arandelas",
   "it": "Metodo delle rondelle",
-  "ar": "طريقة الحلقات"
+  "ar": "طريقة الحلقات",
+  "he": "שיטת הטבעות"
  },
  "Water engineers use these integrals directly: the volume of a reservoir from its shape, the energy to pump water to where it is needed, and the force a dam or flood barrier must hold back. Pumping is a significant energy cost in many water systems, so getting the integral right saves both energy and money.": {
   "fr": "Les ingénieurs de l’eau utilisent directement ces intégrales : le volume d’un réservoir d’après sa forme, l’énergie pour pomper l’eau là où on en a besoin, et la force qu’un barrage ou une digue doit retenir. Le pompage représente un coût énergétique important dans de nombreux réseaux d’eau, donc bien poser l’intégrale économise à la fois de l’énergie et de l’argent.",
   "es": "Los ingenieros hidráulicos usan estas integrales directamente: el volumen de un embalse a partir de su forma, la energía para bombear el agua adonde se necesita y la fuerza que debe contener una presa o una barrera contra inundaciones. El bombeo es un costo energético importante en muchos sistemas de agua, así que plantear bien la integral ahorra energía y dinero.",
   "it": "Gli ingegneri idraulici usano direttamente questi integrali: il volume di un bacino in base alla sua forma, l’energia per pompare l’acqua dove serve e la forza che una diga o una barriera antipiena deve trattenere. Il pompaggio è un costo energetico rilevante in molti sistemi idrici, quindi impostare bene l’integrale fa risparmiare energia e denaro.",
-  "ar": "يستخدم مهندسو المياه هذه التكاملات مباشرة: حجم الخزان من شكله، والطاقة اللازمة لضخ المياه إلى حيث تُحتاج، والقوة التي يجب أن يصمد أمامها سد أو حاجز فيضانات. والضخ تكلفة طاقة كبيرة في كثير من شبكات المياه، لذا فإن إعداد التكامل بشكل صحيح يوفر الطاقة والمال معًا."
+  "ar": "يستخدم مهندسو المياه هذه التكاملات مباشرة: حجم الخزان من شكله، والطاقة اللازمة لضخ المياه إلى حيث تُحتاج، والقوة التي يجب أن يصمد أمامها سد أو حاجز فيضانات. والضخ تكلفة طاقة كبيرة في كثير من شبكات المياه، لذا فإن إعداد التكامل بشكل صحيح يوفر الطاقة والمال معًا.",
+  "he": "מהנדסי מים משתמשים באינטגרלים האלה ישירות: נפח מאגר לפי צורתו, האנרגיה לשאיבת מים למקום שבו הם נחוצים, והכוח שסכר או מחסום הצפות חייב לעמוד בו. שאיבה היא עלות אנרגיה משמעותית במערכות מים רבות, ולכן ניסוח נכון של האינטגרל חוסך גם אנרגיה וגם כסף."
  },
  "Weather and climate models solve very large systems of differential equations with step-by-step numerical methods, descendants of Euler’s method.": {
   "fr": "Les modèles météorologiques et climatiques résolvent de très grands systèmes d’équations différentielles avec des méthodes numériques pas à pas, descendantes de la méthode d’Euler.",
   "es": "Los modelos meteorológicos y climáticos resuelven sistemas enormes de ecuaciones diferenciales con métodos numéricos paso a paso, descendientes del método de Euler.",
   "it": "I modelli meteorologici e climatici risolvono sistemi enormi di equazioni differenziali con metodi numerici passo passo, discendenti del metodo di Eulero.",
-  "ar": "تحل نماذج الطقس والمناخ أنظمة ضخمة جدًا من المعادلات التفاضلية بطرق عددية خطوة بخطوة، منحدرة من طريقة أويلر."
+  "ar": "تحل نماذج الطقس والمناخ أنظمة ضخمة جدًا من المعادلات التفاضلية بطرق عددية خطوة بخطوة، منحدرة من طريقة أويلر.",
+  "he": "מודלים של מזג אוויר ואקלים פותרים מערכות עצומות של משוואות דיפרנציאליות בשיטות נומריות צעד אחר צעד, צאצאיות של שיטת אוילר."
  },
  "Week 14": {
   "fr": "Semaine 14",
@@ -2913,49 +3200,57 @@
   "fr": "Semaines 7–8",
   "es": "Semanas 7–8",
   "it": "Settimane 7–8",
-  "ar": "الأسابيع 7–8"
+  "ar": "الأسابيع 7–8",
+  "he": "שבועות 7–8"
  },
  "Weeks 9–11": {
   "fr": "Semaines 9–11",
   "es": "Semanas 9–11",
   "it": "Settimane 9–11",
-  "ar": "الأسابيع 9–11"
+  "ar": "الأسابيع 9–11",
+  "he": "שבועות 9–11"
  },
  "What we add: every unit connects to real water, energy, ecology and spaceflight problems, every number on the page is re-computed by a checking script before it goes live, and four computer labs put the methods to work on data.": {
   "fr": "Notre apport : chaque unité est reliée à de vrais problèmes d’eau, d’énergie, d’écologie et de vol spatial, chaque nombre de la page est recalculé par un script de vérification avant sa mise en ligne, et quatre travaux pratiques sur ordinateur appliquent les méthodes à des données.",
   "es": "Lo que aportamos: cada unidad se conecta con problemas reales de agua, energía, ecología y vuelo espacial, cada número de la página se vuelve a calcular con un script de verificación antes de publicarse, y cuatro prácticas de computadora aplican los métodos a datos.",
   "it": "Cosa aggiungiamo: ogni unità è collegata a problemi reali di acqua, energia, ecologia e volo spaziale, ogni numero della pagina viene ricalcolato da uno script di verifica prima della pubblicazione, e quattro laboratori al computer applicano i metodi ai dati.",
-  "ar": "ما نضيفه: كل وحدة مرتبطة بمسائل حقيقية في المياه والطاقة والبيئة ورحلات الفضاء، وكل رقم في الصفحة يُعاد حسابه ببرنامج تحقق قبل النشر، وأربعة مختبرات حاسوبية تطبّق الأساليب على البيانات."
+  "ar": "ما نضيفه: كل وحدة مرتبطة بمسائل حقيقية في المياه والطاقة والبيئة ورحلات الفضاء، وكل رقم في الصفحة يُعاد حسابه ببرنامج تحقق قبل النشر، وأربعة مختبرات حاسوبية تطبّق الأساليب على البيانات.",
+  "he": "מה שאנחנו מוסיפים: כל יחידה מחוברת לבעיות אמיתיות של מים, אנרגיה, אקולוגיה וטיסות חלל, כל מספר בדף מחושב מחדש על ידי סקריפט בדיקה לפני הפרסום, וארבע מעבדות מחשב מיישמות את השיטות על נתונים."
  },
  "When does adding infinitely many numbers give a finite total? Geometric series, the harmonic series and the convergence tests.": {
   "fr": "Quand l’addition d’une infinité de nombres donne-t-elle un total fini ? Séries géométriques, série harmonique et critères de convergence.",
   "es": "¿Cuándo da un total finito sumar infinitos números? Series geométricas, la serie armónica y los criterios de convergencia.",
   "it": "Quando sommare infiniti numeri dà un totale finito? Serie geometriche, serie armonica e criteri di convergenza.",
-  "ar": "متى يعطي جمع عدد لانهائي من الأعداد مجموعًا منتهيًا؟ المتسلسلات الهندسية، والمتسلسلة التوافقية، واختبارات التقارب."
+  "ar": "متى يعطي جمع عدد لانهائي من الأعداد مجموعًا منتهيًا؟ المتسلسلات الهندسية، والمتسلسلة التوافقية، واختبارات التقارب.",
+  "he": "מתי חיבור של אינסוף מספרים נותן סכום סופי? טורים הנדסיים, הטור ההרמוני ומבחני ההתכנסות."
  },
  "Work = ∫F(x) dx. Pumping: each layer of liquid is lifted its own distance.": {
   "fr": "Travail = ∫F(x) dx. Pompage : chaque couche de liquide est soulevée sur sa propre distance.",
   "es": "Trabajo = ∫F(x) dx. Bombeo: cada capa de líquido se eleva su propia distancia.",
   "it": "Lavoro = ∫F(x) dx. Pompaggio: ogni strato di liquido viene sollevato di una distanza diversa.",
-  "ar": "الشغل = ∫F(x) dx. الضخ: كل طبقة من السائل تُرفع مسافتها الخاصة."
+  "ar": "الشغل = ∫F(x) dx. الضخ: كل طبقة من السائل تُرفع مسافتها الخاصة.",
+  "he": "עבודה = ∫F(x) dx. שאיבה: כל שכבת נוזל מורמת למרחק משלה."
  },
  "Work by a variable force": {
   "fr": "Travail d’une force variable",
   "es": "Trabajo de una fuerza variable",
   "it": "Lavoro di una forza variabile",
-  "ar": "شغل قوة متغيرة"
+  "ar": "شغل قوة متغيرة",
+  "he": "עבודה של כוח משתנה"
  },
  "Work to escape a planet’s gravity": {
   "fr": "Travail pour échapper à la gravité d’une planète",
   "es": "Trabajo para escapar de la gravedad de un planeta",
   "it": "Lavoro per sfuggire alla gravità di un pianeta",
-  "ar": "الشغل اللازم للإفلات من جاذبية كوكب"
+  "ar": "الشغل اللازم للإفلات من جاذبية كوكب",
+  "he": "העבודה הדרושה כדי להימלט מכוח המשיכה של כוכב לכת"
  },
  "Work, pumping and fluid force.": {
   "fr": "Travail, pompage et force exercée par un fluide.",
   "es": "Trabajo, bombeo y fuerza de fluidos.",
   "it": "Lavoro, pompaggio e forza dei fluidi.",
-  "ar": "الشغل والضخ وقوة الموائع."
+  "ar": "الشغل والضخ وقوة الموائع.",
+  "he": "עבודה, שאיבה וכוח של נוזלים."
  },
  "Write the Maclaurin polynomial of degree 4 for cos x and use it for cos 0.2.": {
   "fr": "Écrivez le polynôme de Maclaurin de degré 4 de cos x et utilisez-le pour cos 0.2.",
@@ -2967,31 +3262,36 @@
   "fr": "Oui, p = 2 > 1 (la somme vaut π²/6).",
   "es": "Sí, p = 2 > 1 (la suma es π²/6).",
   "it": "Sì, p = 2 > 1 (la somma è π²/6).",
-  "ar": "نعم، p = 2 > 1 (مجموعها π²/6)."
+  "ar": "نعم، p = 2 > 1 (مجموعها π²/6).",
+  "he": "כן, p = 2 > 1 (הסכום הוא π²/6)."
  },
  "Yes: it is less than 1/x², which converges. In fact it equals π/4.": {
   "fr": "Oui : elle est inférieure à 1/x², qui converge. En fait, elle vaut π/4.",
   "es": "Sí: es menor que 1/x², que converge. De hecho, vale π/4.",
   "it": "Sì: è minore di 1/x², che converge. Anzi, vale π/4.",
-  "ar": "نعم: فهو أصغر من 1/x² الذي يتقارب. بل إنه يساوي π/4."
+  "ar": "نعم: فهو أصغر من 1/x² الذي يتقارب. بل إنه يساوي π/4.",
+  "he": "כן: הוא קטן מ-1/x², שמתכנס. למעשה הוא שווה π/4."
  },
  "You must square the radius inside the integral: ∫π f² dx, not π(∫f dx).": {
   "fr": "Il faut élever le rayon au carré dans l’intégrale : ∫π f² dx, et non π(∫f dx).",
   "es": "Hay que elevar el radio al cuadrado dentro de la integral: ∫π f² dx, no π(∫f dx).",
   "it": "Bisogna elevare al quadrato il raggio dentro l’integrale: ∫π f² dx, non π(∫f dx).",
-  "ar": "يجب تربيع نصف القطر داخل التكامل: ∫π f² dx، وليس π(∫f dx)."
+  "ar": "يجب تربيع نصف القطر داخل التكامل: ∫π f² dx، وليس π(∫f dx).",
+  "he": "יש להעלות את הרדיוס בריבוע בתוך האינטגרל: ∫π f² dx, ולא π(∫f dx)."
  },
  "[2√x]₀¹ = 2 (converges; p = ½ < 1).": {
   "fr": "[2√x]₀¹ = 2 (converge ; p = ½ < 1).",
   "es": "[2√x]₀¹ = 2 (converge; p = ½ < 1).",
   "it": "[2√x]₀¹ = 2 (converge; p = ½ < 1).",
-  "ar": "[2√x]₀¹ = 2 (متقارب؛ p = ½ < 1)."
+  "ar": "[2√x]₀¹ = 2 (متقارب؛ p = ½ < 1).",
+  "he": "[2√x]₀¹ = 2 (מתכנס; p = ½ < 1)."
  },
  "[arctan x]₀¹ = π/4.": {
   "fr": "[arctan x]₀¹ = π/4.",
   "es": "[arctan x]₀¹ = π/4.",
   "it": "[arctan x]₀¹ = π/4.",
-  "ar": "[arctan x]₀¹ = π/4."
+  "ar": "[arctan x]₀¹ = π/4.",
+  "he": "[arctan x]₀¹ = π/4."
  },
  "a circle": {
   "fr": "un cercle",
@@ -3003,7 +3303,8 @@
   "fr": "une dérivée",
   "es": "una derivada",
   "it": "una derivata",
-  "ar": "مشتقة"
+  "ar": "مشتقة",
+  "he": "נגזרת"
  },
  "a hyperbola": {
   "fr": "une hyperbole",
@@ -3015,7 +3316,8 @@
   "fr": "une limite d’intégrales propres",
   "es": "un límite de integrales propias",
   "it": "un limite di integrali propri",
-  "ar": "نهاية لتكاملات عادية"
+  "ar": "نهاية لتكاملات عادية",
+  "he": "גבול של אינטגרלים אמיתיים"
  },
  "a line": {
   "fr": "une droite",
@@ -3033,13 +3335,15 @@
   "fr": "une somme",
   "es": "una suma",
   "it": "una somma",
-  "ar": "مجموع"
+  "ar": "مجموع",
+  "he": "סכום"
  },
  "a/(1 − r) for |r| < 1.": {
   "fr": "a/(1 − r) pour |r| < 1.",
   "es": "a/(1 − r) para |r| < 1.",
   "it": "a/(1 − r) per |r| < 1.",
-  "ar": "a/(1 − r) عندما |r| < 1."
+  "ar": "a/(1 − r) عندما |r| < 1.",
+  "he": "a/(1 − r) עבור |r| < 1."
  },
  "all x": {
   "fr": "tout x",
@@ -3051,19 +3355,22 @@
   "fr": "toujours infinie",
   "es": "siempre infinita",
   "it": "sempre infinito",
-  "ar": "لانهائي دائمًا"
+  "ar": "لانهائي دائمًا",
+  "he": "תמיד אינסופי"
  },
  "cannot be decided": {
   "fr": "on ne peut pas trancher",
   "es": "no se puede decidir",
   "it": "non si può stabilire",
-  "ar": "لا يمكن الحسم"
+  "ar": "لا يمكن الحسم",
+  "he": "לא ניתן להכריע"
  },
  "carrying capacity": {
   "fr": "la capacité de charge",
   "es": "capacidad de carga",
   "it": "la capacità portante",
-  "ar": "السعة الاستيعابية"
+  "ar": "السعة الاستيعابية",
+  "he": "כושר הנשיאה"
  },
  "constant": {
   "fr": "constant",
@@ -3075,55 +3382,64 @@
   "fr": "converge",
   "es": "converge",
   "it": "converge",
-  "ar": "متقاربة"
+  "ar": "متقاربة",
+  "he": "מתכנס"
  },
  "converges to 0": {
   "fr": "converge vers 0",
   "es": "converge a 0",
   "it": "converge a 0",
-  "ar": "يتقارب إلى 0"
+  "ar": "يتقارب إلى 0",
+  "he": "מתכנס ל-0"
  },
  "converges to 1": {
   "fr": "converge vers 1",
   "es": "converge a 1",
   "it": "converge a 1",
-  "ar": "يتقارب إلى 1"
+  "ar": "يتقارب إلى 1",
+  "he": "מתכנס ל-1"
  },
  "converges to 1.5": {
   "fr": "converge vers 1.5",
   "es": "converge a 1.5",
   "it": "converge a 1.5",
-  "ar": "يتقارب إلى 1.5"
+  "ar": "يتقارب إلى 1.5",
+  "he": "מתכנס ל-1.5"
  },
  "converges to 2": {
   "fr": "converge vers 2",
   "es": "converge a 2",
   "it": "converge a 2",
-  "ar": "يتقارب إلى 2"
+  "ar": "يتقارب إلى 2",
+  "he": "מתכנס ל-2"
  },
  "converges to e": {
   "fr": "converge vers e",
   "es": "converge a e",
   "it": "converge a e",
-  "ar": "تتقارب إلى e"
+  "ar": "تتقارب إلى e",
+  "he": "מתכנס ל-e"
  },
  "converges to ln 2": {
   "fr": "converge vers ln 2",
   "es": "converge a ln 2",
   "it": "converge a ln 2",
-  "ar": "تتقارب إلى ln 2"
+  "ar": "تتقارب إلى ln 2",
+  "he": "מתכנס ל-ln 2"
  },
  "cubics only": {
   "fr": "uniquement des cubiques",
   "es": "solo cúbicas",
   "it": "solo cubiche",
-  "ar": "دوال تكعيبية فقط"
+  "ar": "دوال تكعيبية فقط",
+  "he": "פולינומים ממעלה שלישית בלבד"
  },
  "diverges": {
   "fr": "diverge",
   "es": "diverge",
   "it": "diverge",
-  "ar": "متباعد"
+  "ar": "متباعد",
+  "he": "מתבדר"
  },
  "e = 0 circle, 0 < e < 1 ellipse.": {
   "fr": "e = 0 cercle, 0 < e < 1 ellipse.",
@@ -3141,103 +3457,120 @@
   "fr": "vaut 1",
   "es": "es igual a 1",
   "it": "è uguale a 1",
-  "ar": "تساوي 1"
+  "ar": "تساوي 1",
+  "he": "שווה 1"
  },
  "equals ln 2": {
   "fr": "vaut ln 2",
   "es": "es igual a ln 2",
   "it": "è uguale a ln 2",
-  "ar": "يساوي ln 2"
+  "ar": "يساوي ln 2",
+  "he": "שווה ln 2"
  },
  "growth rate": {
   "fr": "le taux de croissance",
   "es": "tasa de crecimiento",
   "it": "il tasso di crescita",
-  "ar": "معدل النمو"
+  "ar": "معدل النمو",
+  "he": "קצב הגדילה"
  },
  "half-life": {
   "fr": "la demi-vie",
   "es": "vida media",
   "it": "il tempo di dimezzamento",
-  "ar": "عمر النصف"
+  "ar": "عمر النصف",
+  "he": "זמן מחצית החיים"
  },
  "initial population": {
   "fr": "la population initiale",
   "es": "población inicial",
   "it": "la popolazione iniziale",
-  "ar": "المجموعة الابتدائية"
+  "ar": "المجموعة الابتدائية",
+  "he": "האוכלוסייה ההתחלתית"
  },
  "linear with constant coefficients only": {
   "fr": "linéaire à coefficients constants uniquement",
   "es": "solo lineal con coeficientes constantes",
   "it": "solo lineare a coefficienti costanti",
-  "ar": "خطية بمعاملات ثابتة فقط"
+  "ar": "خطية بمعاملات ثابتة فقط",
+  "he": "ליניארית עם מקדמים קבועים בלבד"
  },
  "linearly with depth": {
   "fr": "linéairement avec la profondeur",
   "es": "linealmente con la profundidad",
   "it": "linearmente con la profondità",
-  "ar": "خطيًا مع العمق"
+  "ar": "خطيًا مع العمق",
+  "he": "באופן ליניארי עם העומק"
  },
  "logistic": {
   "fr": "logistique",
   "es": "logística",
   "it": "logistica",
-  "ar": "لوجستية"
+  "ar": "لوجستية",
+  "he": "לוגיסטית"
  },
  "not at all": {
   "fr": "pas du tout",
   "es": "nada",
   "it": "per niente",
-  "ar": "لا يزداد إطلاقًا"
+  "ar": "لا يزداد إطلاقًا",
+  "he": "בכלל לא"
  },
  "not separable": {
   "fr": "non séparable",
   "es": "no separable",
   "it": "non separabile",
-  "ar": "غير قابلة للفصل"
+  "ar": "غير قابلة للفصل",
+  "he": "לא פרידה"
  },
  "p = 1, integral test.": {
   "fr": "p = 1, critère de l’intégrale.",
   "es": "p = 1, criterio de la integral.",
   "it": "p = 1, criterio dell’integrale.",
-  "ar": "p = 1، اختبار التكامل."
+  "ar": "p = 1، اختبار التكامل.",
+  "he": "p = 1, מבחן האינטגרל."
  },
  "p-integral": {
   "fr": "Intégrale de Riemann (p)",
   "es": "Integral p",
   "it": "Integrale p",
-  "ar": "تكامل p"
+  "ar": "تكامل p",
+  "he": "אינטגרל p"
  },
  "p-series": {
   "fr": "Série de Riemann",
   "es": "Serie p",
   "it": "Serie p",
-  "ar": "متسلسلة p"
+  "ar": "متسلسلة p",
+  "he": "טור p"
  },
  "p-series Σ1/nᵖ converges iff p > 1 (by the integral test).": {
   "fr": "La série de Riemann Σ1/nᵖ converge ssi p > 1 (par le critère de l’intégrale).",
   "es": "La serie p Σ1/nᵖ converge si y solo si p > 1 (por el criterio de la integral).",
   "it": "La serie p Σ1/nᵖ converge se e solo se p > 1 (per il criterio dell’integrale).",
-  "ar": "متسلسلة p ‏Σ1/nᵖ تتقارب إذا وفقط إذا p > 1 (باختبار التكامل)."
+  "ar": "متسلسلة p ‏Σ1/nᵖ تتقارب إذا وفقط إذا p > 1 (باختبار التكامل).",
+  "he": "טור p ‏Σ1/nᵖ מתכנס אם ורק אם p > 1 (לפי מבחן האינטגרל)."
  },
  "p-test (0)": {
   "fr": "Critère de Riemann (0)",
   "es": "Criterio p (0)",
   "it": "Criterio p (0)",
-  "ar": "اختبار p (0)"
+  "ar": "اختبار p (0)",
+  "he": "מבחן p (0)"
  },
  "p-test (∞)": {
   "fr": "Critère de Riemann (∞)",
   "es": "Criterio p (∞)",
   "it": "Criterio p (∞)",
-  "ar": "اختبار p (∞)"
+  "ar": "اختبار p (∞)",
+  "he": "מבחן p (∞)"
  },
  "parabolas": {
   "fr": "des paraboles",
   "es": "parábolas",
   "it": "parabole",
-  "ar": "قطوع مكافئة"
+  "ar": "قطوع مكافئة",
+  "he": "פרבולות"
  },
  "r = p is constant.": {
   "fr": "r = p est constant.",
@@ -3261,13 +3594,15 @@
   "fr": "rP(1 − P/K) est une parabole tournée vers le bas en P, dont le sommet est en P = K/2.",
   "es": "rP(1 − P/K) es una parábola hacia abajo en P con su vértice en P = K/2.",
   "it": "rP(1 − P/K) è una parabola rivolta verso il basso in P con il vertice in P = K/2.",
-  "ar": "rP(1 − P/K) قطع مكافئ مفتوح للأسفل في P رأسه عند P = K/2."
+  "ar": "rP(1 − P/K) قطع مكافئ مفتوح للأسفل في P رأسه عند P = K/2.",
+  "he": "rP(1 − P/K) היא פרבולה הפונה כלפי מטה ב-P, שקודקודה ב-P = K/2."
  },
  "rectangles": {
   "fr": "des rectangles",
   "es": "rectángulos",
   "it": "rettangoli",
-  "ar": "مستطيلات"
+  "ar": "مستطيلات",
+  "he": "מלבנים"
  },
  "r² = 2r cos θ gives x² + y² = 2x: a circle of radius 1 centered at (1, 0), area π.": {
   "fr": "r² = 2r cos θ donne x² + y² = 2x : un cercle de rayon 1 centré en (1, 0), d’aire π.",
@@ -3279,7 +3614,8 @@
   "fr": "à variables séparables",
   "es": "separable",
   "it": "a variabili separabili",
-  "ar": "قابلة للفصل"
+  "ar": "قابلة للفصل",
+  "he": "פרידה"
  },
  "sin x ≈ x is within 1% up to about x = 0.24 rad (14°), which is why the pendulum formula is used for small swings.": {
   "fr": "sin x ≈ x reste à moins de 1% jusqu’à environ x = 0.24 rad (14°), c’est pourquoi la formule du pendule s’utilise pour de petites oscillations.",
@@ -3297,37 +3633,43 @@
   "fr": "des trapèzes",
   "es": "trapecios",
   "it": "trapezi",
-  "ar": "أشباه منحرفات"
+  "ar": "أشباه منحرفات",
+  "he": "טרפזים"
  },
  "with the dam’s width": {
   "fr": "avec la largeur du barrage",
   "es": "con el ancho de la presa",
   "it": "con la larghezza della diga",
-  "ar": "مع عرض السد"
+  "ar": "مع عرض السد",
+  "he": "עם רוחב הסכר"
  },
  "with the square of depth": {
   "fr": "avec le carré de la profondeur",
   "es": "con el cuadrado de la profundidad",
   "it": "con il quadrato della profondità",
-  "ar": "مع مربع العمق"
+  "ar": "مع مربع العمق",
+  "he": "עם ריבוע העומק"
  },
  "x = 3 sec θ": {
   "fr": "x = 3 sec θ",
   "es": "x = 3 sec θ",
   "it": "x = 3 sec θ",
-  "ar": "x = 3 sec θ"
+  "ar": "x = 3 sec θ",
+  "he": "x = 3 sec θ"
  },
  "x = 3 sin θ": {
   "fr": "x = 3 sin θ",
   "es": "x = 3 sin θ",
   "it": "x = 3 sin θ",
-  "ar": "x = 3 sin θ"
+  "ar": "x = 3 sin θ",
+  "he": "x = 3 sin θ"
  },
  "x = 3 tan θ": {
   "fr": "x = 3 tan θ",
   "es": "x = 3 tan θ",
   "it": "x = 3 tan θ",
-  "ar": "x = 3 tan θ"
+  "ar": "x = 3 tan θ",
+  "he": "x = 3 tan θ"
  },
  "x = r cos θ, y = …": {
   "fr": "x = r cos θ, y = …",
@@ -3339,7 +3681,8 @@
   "fr": "x = sin θ donne ∫₀^(π/2) cos²θ dθ = π/4 (un quart du disque unité).",
   "es": "x = sin θ da ∫₀^(π/2) cos²θ dθ = π/4 (un cuarto del disco unitario).",
   "it": "x = sin θ dà ∫₀^(π/2) cos²θ dθ = π/4 (un quarto del disco unitario).",
-  "ar": "x = sin θ يعطي ∫₀^(π/2) cos²θ dθ = π/4 (ربع قرص الوحدة)."
+  "ar": "x = sin θ يعطي ∫₀^(π/2) cos²θ dθ = π/4 (ربع قرص الوحدة).",
+  "he": "x = sin θ נותן ∫₀^(π/2) cos²θ dθ = π/4 (רבע מעיגול היחידה)."
  },
  "x and y given as functions of t.": {
   "fr": "x et y donnés en fonction de t.",
@@ -3351,7 +3694,8 @@
   "fr": "x² se simplifie en dérivant.",
   "es": "x² se simplifica al derivar.",
   "it": "x² si semplifica derivando.",
-  "ar": "x² يبسط عند الاشتقاق."
+  "ar": "x² يبسط عند الاشتقاق.",
+  "he": "x² נעשה פשוט יותר בגזירה."
  },
  "x²/4 + y² = 1, an ellipse.": {
   "fr": "x²/4 + y² = 1, une ellipse.",
@@ -3363,31 +3707,36 @@
   "fr": "x̄ = 7/6 ≈ 1.17 m, du côté de l’extrémité la plus lourde.",
   "es": "x̄ = 7/6 ≈ 1.17 m, hacia el extremo más pesado.",
   "it": "x̄ = 7/6 ≈ 1.17 m, verso l’estremità più pesante.",
-  "ar": "x̄ = 7/6 ≈ 1.17 m، باتجاه الطرف الأثقل."
+  "ar": "x̄ = 7/6 ≈ 1.17 m، باتجاه الطرف الأثقل.",
+  "he": "x̄ = 7/6 ≈ 1.17 m, לכיוון הקצה הכבד יותר."
  },
  "y′ = ky gives y = y₀e^(kt): growth if k > 0, decay if k < 0.": {
   "fr": "y′ = ky donne y = y₀e^(kt) : croissance si k > 0, décroissance si k < 0.",
   "es": "y′ = ky da y = y₀e^(kt): crecimiento si k > 0, decaimiento si k < 0.",
   "it": "y′ = ky dà y = y₀e^(kt): crescita se k > 0, decadimento se k < 0.",
-  "ar": "y′ = ky تعطي y = y₀e^(kt): نمو إذا k > 0، واضمحلال إذا k < 0."
+  "ar": "y′ = ky تعطي y = y₀e^(kt): نمو إذا k > 0، واضمحلال إذا k < 0.",
+  "he": "y′ = ky נותן y = y₀e^(kt): גדילה אם k > 0, דעיכה אם k < 0."
  },
  "Σ (1/3)ⁿ from n = 0 =": {
   "fr": "Σ (1/3)ⁿ à partir de n = 0 =",
   "es": "Σ (1/3)ⁿ desde n = 0 =",
   "it": "Σ (1/3)ⁿ da n = 0 =",
-  "ar": "Σ (1/3)ⁿ بدءًا من n = 0 ="
+  "ar": "Σ (1/3)ⁿ بدءًا من n = 0 =",
+  "he": "Σ (1/3)ⁿ החל מ-n = 0 ="
  },
  "Σ 0.9(0.1)ⁿ from n = 0": {
   "fr": "Σ 0.9(0.1)ⁿ à partir de n = 0",
   "es": "Σ 0.9(0.1)ⁿ desde n = 0",
   "it": "Σ 0.9(0.1)ⁿ da n = 0",
-  "ar": "Σ 0.9(0.1)ⁿ بدءًا من n = 0"
+  "ar": "Σ 0.9(0.1)ⁿ بدءًا من n = 0",
+  "he": "Σ 0.9(0.1)ⁿ החל מ-n = 0"
  },
  "Σ1/n, diverges.": {
   "fr": "Σ1/n, diverge.",
   "es": "Σ1/n, diverge.",
   "it": "Σ1/n, diverge.",
-  "ar": "Σ1/n، متباعدة."
+  "ar": "Σ1/n، متباعدة.",
+  "he": "Σ1/n, מתבדר."
  },
  "Σxⁿ converges for…": {
   "fr": "Σxⁿ converge pour…",
@@ -3423,13 +3772,15 @@
   "fr": "√(9 − x²) suggère la substitution…",
   "es": "√(9 − x²) sugiere la sustitución…",
   "it": "√(9 − x²) suggerisce la sostituzione…",
-  "ar": "√(9 − x²) يوحي بالتعويض…"
+  "ar": "√(9 − x²) يوحي بالتعويض…",
+  "he": "√(9 − x²) מרמז על ההצבה…"
  },
  "√(a² − x²): x = a sin θ.": {
   "fr": "√(a² − x²) : x = a sin θ.",
   "es": "√(a² − x²): x = a sin θ.",
   "it": "√(a² − x²): x = a sin θ.",
-  "ar": "√(a² − x²): x = a sin θ."
+  "ar": "√(a² − x²): x = a sin θ.",
+  "he": "√(a² − x²): x = a sin θ."
  },
  "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. More terms approach 0.7468.": {
   "fr": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Davantage de termes s’approchent de 0.7468.",
@@ -3441,43 +3792,50 @@
   "fr": "∫₀^(π/2) sin²x dx",
   "es": "∫₀^(π/2) sin²x dx",
   "it": "∫₀^(π/2) sin²x dx",
-  "ar": "∫₀^(π/2) sin²x dx"
+  "ar": "∫₀^(π/2) sin²x dx",
+  "he": "∫₀^(π/2) sin²x dx"
  },
  "∫₀^π x sin x dx": {
   "fr": "∫₀^π x sin x dx",
   "es": "∫₀^π x sin x dx",
   "it": "∫₀^π x sin x dx",
-  "ar": "∫₀^π x sin x dx"
+  "ar": "∫₀^π x sin x dx",
+  "he": "∫₀^π x sin x dx"
  },
  "∫₀¹ x⁻ᵖ converges iff p < 1.": {
   "fr": "∫₀¹ x⁻ᵖ converge ssi p < 1.",
   "es": "∫₀¹ x⁻ᵖ converge si y solo si p < 1.",
   "it": "∫₀¹ x⁻ᵖ converge se e solo se p < 1.",
-  "ar": "∫₀¹ x⁻ᵖ يتقارب إذا وفقط إذا p < 1."
+  "ar": "∫₀¹ x⁻ᵖ يتقارب إذا وفقط إذا p < 1.",
+  "he": "∫₀¹ x⁻ᵖ מתכנס אם ורק אם p < 1."
  },
  "∫₁^∞ dx/xᵖ converges exactly when p > 1. ∫₀¹ dx/xᵖ converges exactly when p < 1.": {
   "fr": "∫₁^∞ dx/xᵖ converge exactement quand p > 1. ∫₀¹ dx/xᵖ converge exactement quand p < 1.",
   "es": "∫₁^∞ dx/xᵖ converge exactamente cuando p > 1. ∫₀¹ dx/xᵖ converge exactamente cuando p < 1.",
   "it": "∫₁^∞ dx/xᵖ converge esattamente quando p > 1. ∫₀¹ dx/xᵖ converge esattamente quando p < 1.",
-  "ar": "∫₁^∞ dx/xᵖ يتقارب تمامًا عندما p > 1. ∫₀¹ dx/xᵖ يتقارب تمامًا عندما p < 1."
+  "ar": "∫₁^∞ dx/xᵖ يتقارب تمامًا عندما p > 1. ∫₀¹ dx/xᵖ يتقارب تمامًا عندما p < 1.",
+  "he": "∫₁^∞ dx/xᵖ מתכנס בדיוק כאשר p > 1. ∫₀¹ dx/xᵖ מתכנס בדיוק כאשר p < 1."
  },
  "∫₁^∞ x⁻ᵖ converges iff p > 1.": {
   "fr": "∫₁^∞ x⁻ᵖ converge ssi p > 1.",
   "es": "∫₁^∞ x⁻ᵖ converge si y solo si p > 1.",
   "it": "∫₁^∞ x⁻ᵖ converge se e solo se p > 1.",
-  "ar": "∫₁^∞ x⁻ᵖ يتقارب إذا وفقط إذا p > 1."
+  "ar": "∫₁^∞ x⁻ᵖ يتقارب إذا وفقط إذا p > 1.",
+  "he": "∫₁^∞ x⁻ᵖ מתכנס אם ורק אם p > 1."
  },
  "∫₋₁¹ dx/x² = −2 by the usual formula.": {
   "fr": "∫₋₁¹ dx/x² = −2 avec la formule habituelle.",
   "es": "∫₋₁¹ dx/x² = −2 con la fórmula habitual.",
   "it": "∫₋₁¹ dx/x² = −2 con la formula usuale.",
-  "ar": "∫₋₁¹ dx/x² = −2 بالصيغة المعتادة."
+  "ar": "∫₋₁¹ dx/x² = −2 بالصيغة المعتادة.",
+  "he": "∫₋₁¹ dx/x² = −2 לפי הנוסחה הרגילה."
  },
  "∫ₐ^∞ f dx means the limit of ∫ₐᵇ f dx as b → ∞. If the limit is finite, the integral converges.": {
   "fr": "∫ₐ^∞ f dx désigne la limite de ∫ₐᵇ f dx quand b → ∞. Si la limite est finie, l’intégrale converge.",
   "es": "∫ₐ^∞ f dx significa el límite de ∫ₐᵇ f dx cuando b → ∞. Si el límite es finito, la integral converge.",
   "it": "∫ₐ^∞ f dx indica il limite di ∫ₐᵇ f dx per b → ∞. Se il limite è finito, l’integrale converge.",
-  "ar": "∫ₐ^∞ f dx تعني نهاية ∫ₐᵇ f dx عندما b → ∞. إذا كانت النهاية منتهية، فالتكامل متقارب."
+  "ar": "∫ₐ^∞ f dx تعني نهاية ∫ₐᵇ f dx عندما b → ∞. إذا كانت النهاية منتهية، فالتكامل متقارب.",
+  "he": "∫ₐ^∞ f dx פירושו הגבול של ∫ₐᵇ f dx כאשר b → ∞. אם הגבול סופי, האינטגרל מתכנס."
  },
  "∫√(sin²t + cos²t) dt = 2π (a circle’s circumference).": {
   "fr": "∫√(sin²t + cos²t) dt = 2π (la circonférence d’un cercle).",
@@ -3489,13 +3847,15 @@
   "fr": "≈ 451 poissons, proche du niveau de croissance la plus rapide K/2 = 500.",
   "es": "≈ 451 peces, cerca del nivel de crecimiento más rápido K/2 = 500.",
   "it": "≈ 451 pesci, vicino al livello di crescita più rapida K/2 = 500.",
-  "ar": "≈ 451 سمكة، قرب مستوى النمو الأسرع K/2 = 500."
+  "ar": "≈ 451 سمكة، قرب مستوى النمو الأسرع K/2 = 500.",
+  "he": "≈ 451 דגים, קרוב לרמת הגדילה המהירה ביותר K/2 = 500."
  },
  "≈ 69.3 days (a simplified, well-mixed model).": {
   "fr": "≈ 69.3 jours (modèle simplifié, parfaitement mélangé).",
   "es": "≈ 69.3 días (un modelo simplificado, perfectamente mezclado).",
   "it": "≈ 69.3 giorni (un modello semplificato, perfettamente miscelato).",
-  "ar": "≈ 69.3 يومًا (نموذج مبسط جيد الخلط)."
+  "ar": "≈ 69.3 يومًا (نموذج مبسط جيد الخلط).",
+  "he": "≈ 69.3 ימים (מודל מפושט של ערבוב מלא)."
  },
  "≈ 69.3 time units.": {
   "fr": "≈ 69.3 unités de temps.",
