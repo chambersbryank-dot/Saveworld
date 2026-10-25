@@ -70,6 +70,13 @@ def table(headr, rows, cap=''):
             + ''.join('<tr>' + ''.join(f'<td>{esc(c)}</td>' for c in r) + '</tr>' for r in rows) + '</tbody></table></div>')
 def eqblock(K, tex, cap): return f'<figure class="crs-eq"><div class="crs-math">{K[tex]}</div><figcaption>{esc(cap)}</figcaption></figure>'
 
+def _code(src, out=None):
+    """Optional code listing (+ verified output) for programming courses; code is never translated. Inline style so courses.css/V need no change."""
+    st = 'style="direction:ltr;text-align:left;overflow-x:auto;padding:.75em;border-radius:6px;background:rgba(127,127,127,.12);font-size:.9em"'
+    r = f'<pre class="crs-code" {st}><code>{html.escape(src)}</code></pre>' if src else ''
+    if out is not None: r += f'<p><strong>{esc("Output")}</strong></p><pre class="crs-out" {st}><code>{html.escape(out)}</code></pre>'
+    return r
+
 def unit(C, K, i, u):
     uid = u['id']; o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
          f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))} · {esc(u["weeks"])}</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
@@ -78,8 +85,8 @@ def unit(C, K, i, u):
     o.append(f'<h3>{esc("Key equations")}</h3>' + ''.join(eqblock(K, t, c) for t, c in u['eqs']))
     o.append(f'<h3>{esc("Worked examples, step by step")}</h3>')
     for j, w in enumerate(u['worked'], 1):
-        o.append(f'<div class="crs-card crs-worked"><p class="crs-q"><strong>{esc("Example {n}").replace("{n}", f"{i}.{j}")}</strong> {esc(w["q"])}</p>'
-                 f'<details><summary>{esc("Show the steps")}</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in w['steps']) + f'</ol><p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(w["a"])}</p></details></div>')
+        o.append(f'<div class="crs-card crs-worked"><p class="crs-q"><strong>{esc("Example {n}").replace("{n}", f"{i}.{j}")}</strong> {esc(w["q"])}</p>' + _code(w.get('code')) +
+                 f'<details><summary>{esc("Show the steps")}</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in w['steps']) + '</ol>' + _code(None, w.get('out')) + f'<p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(w["a"])}</p></details></div>')
     o.append(f'<h3>{esc("Practice problems")}</h3><p>{esc("Work each on paper first, then check.")}</p><ol class="crs-prac">' + ''.join(
         f'<li><p>{esc(q)}</p><details><summary>{esc("Show answer")}</summary><p>{esc(a)}</p></details></li>' for q, a in u['practice']) + '</ol>')
     o.append(f'<h3>{esc("Common misconceptions")}</h3><ul class="crs-mis">' + ''.join(
@@ -106,7 +113,7 @@ def unit(C, K, i, u):
 def lab(C, K, L):
     hd, rows = L['table']
     o = [f'<div class="crs-card crs-lab" id="{L["id"]}"><h3>{esc(L["title"])}</h3><p class="crs-kicker">{esc(L["week"])}</p><p><strong>{esc("Goal:")}</strong> {esc(L["goal"])}</p>',
-         eqblock(K, *L['eq']), f'<h4>{esc("Procedure")}</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['steps']) + '</ol>',
+         eqblock(K, *L['eq']), f'<h4>{esc("Procedure")}</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['steps']) + '</ol>' + _code(L.get('code'), L.get('out')),
          f'<h4>{esc("Data table")}</h4>' + table(hd, rows) + f'<p class="crs-note">{esc(L["note"])}</p>',
          f'<h4>{esc("Sample calculation")}</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['calc']) + '</ol>',
          f'<div class="crs-safe"><h4>{esc("Safety")}</h4>' + ul(L['safety']) + '</div>',
