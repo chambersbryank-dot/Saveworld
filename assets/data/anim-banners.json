@@ -1224,7 +1224,8 @@
   "Physics_I.html": "assets/Landsat9_Launch.jpg",
   "Calculus_I.html": "assets/EPIC_Earth.jpg",
   "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg",
-  "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg"
+  "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+  "Engineering_Graphics_CAD.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg"
  },
  "slides": {
   "pools": {
@@ -1732,6 +1733,11 @@
     "images/GRACE_FO_PIA22445.jpg"
    ],
    "Intro_to_Aerospace_Engineering.html": [
+    "images/ISS_Flyaround_2021.jpg",
+    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg"
+   ],
+   "Engineering_Graphics_CAD.html": [
     "images/ISS_Flyaround_2021.jpg",
     "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
     "images/Landsat9_Launch_KLS04_0013.jpg"

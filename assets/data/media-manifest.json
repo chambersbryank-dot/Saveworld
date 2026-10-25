@@ -5827,5 +5827,12 @@
   "bytes": 1415870,
   "sha256": "ce0fd4bda8b61abf6d5d684183ca057c25e1d9f01388ecfed697caaf575e89d0",
   "type": "application/pdf"
+ },
+ "courses/Engineering_Graphics_CAD_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Engineering_Graphics_CAD_Study_Guide.aed9dc9293a6.pdf",
+  "key": "courses/Engineering_Graphics_CAD_Study_Guide.aed9dc9293a6.pdf",
+  "bytes": 1290368,
+  "sha256": "aed9dc9293a68b1a1518eeed2800c30f30735c865dd8f5c13cd03b8c3967e3e5",
+  "type": "application/pdf"
  }
 }
