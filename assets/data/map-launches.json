@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-24T17:00:17Z",
+"generated": "2026-10-25T17:32:35Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -278,7 +278,16 @@
 "prec": "Y",
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
-"mission": "USSF-112",
+"mission": "USSF-16",
+"pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "USSF-23",
 "pad": "Space Launch Complex 41"
 }
 ]
@@ -605,15 +614,6 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-23T22:48:44Z",
-"exact": true,
-"prec": "SEC",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Starlink Group 15-15",
-"pad": "Space Launch Complex 4E"
-},
-{
 "net": "2026-10-27T04:45:00Z",
 "exact": true,
 "prec": "MIN",
@@ -682,7 +682,7 @@
 "prec": "Q4",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
-"mission": "SDA Tranche 1 Tracking Layer E",
+"mission": "SDA Tranche 1 Tracking Layer D",
 "pad": "Space Launch Complex 4E"
 },
 {
@@ -889,7 +889,7 @@
 "prec": "Y",
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
-"mission": "SDA Tranche 1 Tracking Layer D",
+"mission": "SDA Tranche 1 Tracking Layer E",
 "pad": "Space Launch Complex 3E"
 },
 {
@@ -899,6 +899,15 @@
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
 "mission": "SDA Tranche 2 Transport Layer B",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "USSF-114",
 "pad": "Space Launch Complex 3E"
 }
 ]
