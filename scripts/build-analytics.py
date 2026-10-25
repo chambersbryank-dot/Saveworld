@@ -89,7 +89,7 @@ for p in ROOT.rglob('*.html'):
     rel = p.relative_to(ROOT).parts
     if '.git' in rel or 'pagefind' in rel or 'node_modules' in rel or p.name in SKIP: continue
     s = p.read_text(encoding='utf-8'); t = GA.sub('', s); t = CONSENT.sub('', t); t = CFW.sub('', t)
-    t = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=20261016g', t)  # Oct 16: GA search events removed
+    t = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=20261025a', t)  # Oct 16: GA search events removed; Oct 25: v bump for result groups + suggestions
     if '</body>' in t: t = t.replace('</body>', BEACON + '</body>', 1)
     if p.name == 'About.html':
         la = rel[0] if len(rel) == 2 else 'en'

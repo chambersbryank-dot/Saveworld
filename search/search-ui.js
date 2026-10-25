@@ -46,6 +46,10 @@ window.SP_SEARCH_STARTED = true;
     for (const [pg, hub] of Object.entries(d.hubOf)) hubOf.set(pg, pg === hub ? msg('hub') : (names[hub] || d.hubNames.en[hub]));
   }).catch(() => {});
   function base(u) { return (u || '').replace(/[?#].*$/, '').split('/').pop(); }
+  // Oct 25 (upgrade 4): result groups. search/result-types.json (scripts/build-search-page.py): page -> solution | course | fact | mission
+  let typeOf = {};
+  const typesReady = fetch('/search/result-types.json').then(r => r.json()).then(d => { typeOf = d; }).catch(() => {});
+  const kind = u => typeOf[base(u)] || 'page';
 
   let pf;
   try { pf = await import('/pagefind/pagefind.js'); await pf.options({ baseUrl: '/', excerptLength: 22 }); pf.init(); }
@@ -93,7 +97,7 @@ window.SP_SEARCH_STARTED = true;
     if (!keepShown) shown = 0;
     if (updateUrl) { const u = new URLSearchParams(); if (topic() !== 'all') u.set('topic', topic()); if (q) u.set('q', q); const qs = u.toString(); history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '')); }
     if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = !!$('sp-float')?.children.length; return; }
-    const kwr = await keyword(q); await hubsReady;
+    const kwr = await keyword(q); await hubsReady; await typesReady;
     // topic tab: filtered Pagefind search over that topic's tagged math/Learn/calculator pages (meta data-pagefind-filter="topic")
     const tp = topic(); let topicHits = [];
     if (tp !== 'all') { try { topicHits = (await pf.search(q, { filters: { topic: tp } })).results.slice(0, 8); } catch (e) {} }
@@ -146,19 +150,57 @@ window.SP_SEARCH_STARTED = true;
   let lastItems = [], shown = 0;
   const more = $('sp-more'), refine = $('sp-refine');
   more?.addEventListener('click', () => { shown += 5; paint(); });
+  function card(it) {
+    const hub = hubOf.get(base(it.url));
+    return `<li class="sp-card"><a href="${esc(it.url)}">${hub ? `<span class="sp-hub">${esc(hub)}</span>` : ''}<span class="sp-title">${esc(it.title.split(' | ')[0])}</span><span class="sp-excerpt">${it.html || ''}</span></a></li>`;
+  }
   function paint() {
     const items = lastItems.slice(0, shown);
     if (more) more.hidden = lastItems.length <= shown;
     if (refine) refine.hidden = !lastItems.length;
-    list.innerHTML = items.map(it => {
-      const hub = hubOf.get(base(it.url));
-      return `<li class="sp-card"><a href="${esc(it.url)}">${hub ? `<span class="sp-hub">${esc(hub)}</span>` : ''}<span class="sp-title">${esc(it.title.split(' | ')[0])}</span><span class="sp-excerpt">${it.html || ''}</span></a></li>`;
-    }).join('');
+    // grouped by type; groups appear in the order of their best-ranked result, ranking kept inside each group
+    const groups = new Map();
+    items.forEach(it => { const k = kind(it.url); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(it); });
+    list.innerHTML = [...groups.entries()].map(([k, its], gi) =>
+      `<li class="sp-gh"><h2 class="sp-gh-t" id="sp-g${gi}">${esc(msg('g-' + k))}</h2><ol aria-labelledby="sp-g${gi}">${its.map(card).join('')}</ol></li>`).join('');
   }
 
   let t = 0;
-  function go() { if (!window.SP_SEARCH_ACTIVE) return; startSemantic(); clearTimeout(t); run(); }
-  // no live results while typing: search runs on Enter/Search, question/chip clicks and ?q= links
+  function go() { if (!window.SP_SEARCH_ACTIVE) return; closeSugg(); startSemantic(); clearTimeout(t); run(); }
+  // Oct 25 (upgrade 4): as-you-type suggestions (page titles from this language's Pagefind index), ARIA combobox.
+  // Arrow keys move, Enter opens the highlighted page, Escape closes; plain Enter still runs the full search.
+  const sugg = document.createElement('ul');
+  sugg.id = 'sp-sugg'; sugg.className = 'sp-sugg'; sugg.setAttribute('role', 'listbox'); sugg.setAttribute('aria-label', msg('sugg')); sugg.hidden = true;
+  input.after(sugg);
+  input.setAttribute('role', 'combobox'); input.setAttribute('aria-autocomplete', 'list'); input.setAttribute('aria-controls', 'sp-sugg'); input.setAttribute('aria-expanded', 'false');
+  let sItems = [], sIdx = -1, sSeq = 0, sT = 0;
+  function closeSugg() { sugg.hidden = true; sugg.innerHTML = ''; sItems = []; sIdx = -1; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); }
+  function mark() {
+    [...sugg.children].forEach((li, i) => li.setAttribute('aria-selected', i === sIdx ? 'true' : 'false'));
+    if (sIdx >= 0) input.setAttribute('aria-activedescendant', 'sp-s' + sIdx); else input.removeAttribute('aria-activedescendant');
+  }
+  async function suggest() {
+    const q = input.value.trim(), my = ++sSeq;
+    if (q.length < 2) return closeSugg();
+    let r; try { r = await pf.search(q); } catch (e) { return; }
+    const ds = await Promise.all(r.results.slice(0, 6).map(x => x.data())); await typesReady;
+    if (my !== sSeq || input.value.trim() !== q || document.activeElement !== input) return;
+    sItems = ds.map(d => ({ url: norm(d.url), title: (d.meta.title || d.url).split(' | ')[0] }));
+    if (!sItems.length) return closeSugg();
+    sugg.innerHTML = sItems.map((it, i) => `<li id="sp-s${i}" role="option" aria-selected="false" data-i="${i}">${esc(it.title)}<span class="sp-sg">${esc(msg('g-' + kind(it.url)))}</span></li>`).join('');
+    sIdx = -1; mark(); sugg.hidden = false; input.setAttribute('aria-expanded', 'true');
+  }
+  input.addEventListener('input', () => { if (!window.SP_SEARCH_ACTIVE) return; clearTimeout(sT); sT = setTimeout(suggest, 160); });
+  input.addEventListener('keydown', e => {
+    if (sugg.hidden) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); sIdx = (sIdx + 1) % sItems.length; mark(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); sIdx = (sIdx - 1 + sItems.length) % sItems.length; mark(); }
+    else if (e.key === 'Escape') { e.preventDefault(); closeSugg(); }
+    else if (e.key === 'Enter' && sIdx >= 0) { e.preventDefault(); location.href = sItems[sIdx].url; }
+  });
+  sugg.addEventListener('mousedown', e => { const li = e.target.closest('li[data-i]'); if (li) { e.preventDefault(); location.href = sItems[+li.dataset.i].url; } });
+  input.addEventListener('blur', () => setTimeout(closeSugg, 120));
+  // no live results while typing (suggestions only): search runs on Enter/Search, question/chip clicks and ?q= links
   input.addEventListener('focus', () => { if (window.SP_SEARCH_ACTIVE) startSemantic(); }, { once: true }); // quiet model preload
   if (input.value.trim()) go();
 })();
