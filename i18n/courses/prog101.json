@@ -1,0 +1,3362 @@
+{
+ "\"5\" + 5 gives 10.": {
+  "fr": "\"5\" + 5 donne 10.",
+  "es": "\"5\" + 5 da 10.",
+  "it": "\"5\" + 5 dà 10.",
+  "ar": "\"5\" + 5 يعطي 10.",
+  "he": "\"5\" + 5 נותן 10."
+ },
+ "\"a,b,c\".split(\",\") gives…": {
+  "fr": "\"a,b,c\".split(\",\") donne…",
+  "es": "\"a,b,c\".split(\",\") da…",
+  "it": "\"a,b,c\".split(\",\") dà…",
+  "ar": "\"a,b,c\".split(\",\") تعطي…",
+  "he": "\"a,b,c\".split(\",\") נותן…"
+ },
+ "\"abc\"": {
+  "fr": "\"abc\"",
+  "es": "\"abc\"",
+  "it": "\"abc\"",
+  "ar": "\"abc\"",
+  "he": "\"abc\""
+ },
+ "\"w\" overwrites; \"a\" appends.": {
+  "fr": "\"w\" écrase ; \"a\" ajoute à la fin.",
+  "es": "\"w\" sobrescribe; \"a\" añade al final.",
+  "it": "\"w\" sovrascrive; \"a\" aggiunge in coda.",
+  "ar": "\"w\" يكتب فوقه؛ و\"a\" يضيف إليه.",
+  "he": "\"w\" דורס; \"a\" מוסיף לסוף."
+ },
+ "(a > 0).sum() counts…": {
+  "fr": "(a > 0).sum() compte…",
+  "es": "(a > 0).sum() cuenta…",
+  "it": "(a > 0).sum() conta…",
+  "ar": "(a > 0).sum() تعدّ…",
+  "he": "(a > 0).sum() סופר…"
+ },
+ "(cfs > 20000).sum() counts True values.": {
+  "fr": "(cfs > 20000).sum() compte les valeurs True.",
+  "es": "(cfs > 20000).sum() cuenta los valores True.",
+  "it": "(cfs > 20000).sum() conta i valori True.",
+  "ar": "(cfs > 20000).sum() تعدّ قيم True.",
+  "he": "(cfs > 20000).sum() סופר ערכי True."
+ },
+ "** 0.5 is a square root.": {
+  "fr": "** 0.5 est une racine carrée.",
+  "es": "** 0.5 es una raíz cuadrada.",
+  "it": "** 0.5 è una radice quadrata.",
+  "ar": "** 0.5 جذر تربيعي.",
+  "he": "** 0.5 הוא שורש ריבועי."
+ },
+ "/ always gives a float; // is floor division; % is the remainder; ** is a power.": {
+  "fr": "/ donne toujours un float ; // est la division entière ; % est le reste ; ** est une puissance.",
+  "es": "/ siempre da un float; // es la división entera; % es el resto; ** es una potencia.",
+  "it": "/ dà sempre un float; // è la divisione intera; % è il resto; ** è una potenza.",
+  "ar": "/ يعطي دائمًا float؛ و// قسمة صحيحة؛ و% الباقي؛ و** القوة.",
+  "he": "/ תמיד נותן float; // היא חלוקה שלמה; % הוא השארית; ** הוא חזקה."
+ },
+ "0.1 + 0.2 == 0.3 is False; a tolerance test is True.": {
+  "fr": "0.1 + 0.2 == 0.3 vaut False ; un test avec tolérance vaut True.",
+  "es": "0.1 + 0.2 == 0.3 es False; una prueba con tolerancia es True.",
+  "it": "0.1 + 0.2 == 0.3 è False; un test con tolleranza è True.",
+  "ar": "0.1 + 0.2 == 0.3 يعطي False؛ واختبار بهامش تسامح يعطي True.",
+  "he": "0.1 + 0.2 == 0.3 הוא False; בדיקה עם סבולת היא True."
+ },
+ "0.1 + 0.2 == 0.3 is True.": {
+  "fr": "0.1 + 0.2 == 0.3 vaut True.",
+  "es": "0.1 + 0.2 == 0.3 es True.",
+  "it": "0.1 + 0.2 == 0.3 è True.",
+  "ar": "0.1 + 0.2 == 0.3 يعطي True.",
+  "he": "0.1 + 0.2 == 0.3 הוא True."
+ },
+ "1.28 ≥ 1.0, so the first branch runs and the rest are skipped.": {
+  "fr": "1.28 ≥ 1.0, donc la première branche s’exécute et les autres sont ignorées.",
+  "es": "1.28 ≥ 1.0, así que se ejecuta la primera rama y se omiten las demás.",
+  "it": "1.28 ≥ 1.0, quindi viene eseguito il primo ramo e gli altri vengono saltati.",
+  "ar": "1.28 ≥ 1.0، لذا يُنفَّذ الفرع الأول ويُتخطى الباقي.",
+  "he": "1.28 ≥ 1.0, לכן הענף הראשון רץ והשאר מדולגים."
+ },
+ "10,791 N, a float.": {
+  "fr": "10791 N, un float.",
+  "es": "10791 N, un float.",
+  "it": "10791 N, un float.",
+  "ar": "10791 N، من النوع float.",
+  "he": "10791 N, מטיפוס float."
+ },
+ "111.37 ppm, a 35.2% rise.": {
+  "fr": "111.37 ppm, une hausse de 35.2%.",
+  "es": "111.37 ppm, una subida del 35.2%.",
+  "it": "111.37 ppm, un aumento del 35.2%.",
+  "ar": "111.37 ppm، أي ارتفاع بنسبة 35.2%.",
+  "he": "111.37 ppm, עלייה של 35.2%."
+ },
+ "2.73 ppm per year from 2021 to 2025.": {
+  "fr": "2.73 ppm par an de 2021 à 2025.",
+  "es": "2.73 ppm al año de 2021 a 2025.",
+  "it": "2.73 ppm all’anno dal 2021 al 2025.",
+  "ar": "2.73 ppm سنويًا من 2021 إلى 2025.",
+  "he": "2.73 ppm בשנה מ-2021 עד 2025."
+ },
+ "2024, at 1.28 °C; 2023–2025 are all above 1.1 °C.": {
+  "fr": "2024, à 1.28 °C ; 2023–2025 sont toutes au-dessus de 1.1 °C.",
+  "es": "2024, con 1.28 °C; 2023–2025 están todos por encima de 1.1 °C.",
+  "it": "2024, a 1.28 °C; 2023–2025 sono tutti sopra 1.1 °C.",
+  "ar": "2024، عند 1.28 °C؛ والسنوات 2023–2025 كلها فوق 1.1 °C.",
+  "he": "2024, ב-1.28 °C; השנים 2023–2025 כולן מעל 1.1 °C."
+ },
+ "26.0 m/s at sea level and 33.6 m/s at 5,000 m, matching the aerospace course.": {
+  "fr": "26.0 m/s au niveau de la mer et 33.6 m/s à 5000 m, comme dans le cours d’aérospatiale.",
+  "es": "26.0 m/s a nivel del mar y 33.6 m/s a 5000 m, igual que en el curso aeroespacial.",
+  "it": "26.0 m/s al livello del mare e 33.6 m/s a 5000 m, come nel corso di aerospaziale.",
+  "ar": "26.0 m/s عند مستوى سطح البحر و33.6 m/s عند 5000 m، مطابقًا لمقرر الطيران والفضاء.",
+  "he": "26.0 m/s בגובה פני הים ו-33.6 m/s בגובה 5000 m, בהתאמה לקורס האווירונאוטיקה."
+ },
+ "4 times (3, 5, 7, 9).": {
+  "fr": "4 fois (3, 5, 7, 9).",
+  "es": "4 veces (3, 5, 7, 9).",
+  "it": "4 volte (3, 5, 7, 9).",
+  "ar": "4 مرات (3، 5، 7، 9).",
+  "he": "4 פעמים (3, 5, 7, 9)."
+ },
+ "44,700 cfs ≈ 1,265.8 m³/s.": {
+  "fr": "44700 cfs ≈ 1265.8 m³/s.",
+  "es": "44700 cfs ≈ 1265.8 m³/s.",
+  "it": "44700 cfs ≈ 1265.8 m³/s.",
+  "ar": "44700 cfs ≈ 1265.8 m³/s.",
+  "he": "44700 cfs ≈ 1265.8 m³/s."
+ },
+ "5,050, matching Gauss’s formula.": {
+  "fr": "5050, conforme à la formule de Gauss.",
+  "es": "5050, igual que la fórmula de Gauss.",
+  "it": "5050, in accordo con la formula di Gauss.",
+  "ar": "5050، مطابقًا لصيغة غاوس.",
+  "he": "5050, בהתאמה לנוסחה של גאוס."
+ },
+ ":=only": {
+  "fr": ":=only",
+  "es": ":=only",
+  "it": ":=only",
+  "ar": ":=only",
+  "he": ":=only"
+ },
+ "= binds a name.": {
+  "fr": "= lie un nom.",
+  "es": "= liga un nombre.",
+  "it": "= lega un nome.",
+  "ar": "= تربط اسمًا.",
+  "he": "= קושר שם."
+ },
+ "= means equals.": {
+  "fr": "= signifie « égal ».",
+  "es": "= significa «igual».",
+  "it": "= significa «uguale».",
+  "ar": "= تعني «يساوي».",
+  "he": "= פירושו «שווה»."
+ },
+ "A 1.28 °C anomaly is a 2.3 °F difference, but 1.28 °C as a temperature is 34.3 °F; units matter.": {
+  "fr": "Une anomalie de 1.28 °C correspond à un écart de 2.3 °F, mais 1.28 °C en tant que température vaut 34.3 °F ; les unités comptent.",
+  "es": "Una anomalía de 1.28 °C es una diferencia de 2.3 °F, pero 1.28 °C como temperatura son 34.3 °F; las unidades importan.",
+  "it": "Un’anomalia di 1.28 °C è una differenza di 2.3 °F, ma 1.28 °C come temperatura sono 34.3 °F; le unità contano.",
+  "ar": "شذوذ قدره 1.28 °C هو فرق 2.3 °F، لكن 1.28 °C كدرجة حرارة تساوي 34.3 °F؛ فالوحدات مهمة.",
+  "he": "חריגה של 1.28 °C היא הפרש של 2.3 °F, אבל 1.28 °C כטמפרטורה הם 34.3 °F; יחידות חשובות."
+ },
+ "A NumPy array holds numbers of one type and does math on all of them at once: cfs * 0.0283168 converts every value.": {
+  "fr": "Un tableau NumPy contient des nombres d’un même type et calcule sur tous à la fois : cfs * 0.0283168 convertit chaque valeur.",
+  "es": "Un arreglo de NumPy guarda números de un solo tipo y opera con todos a la vez: cfs * 0.0283168 convierte cada valor.",
+  "it": "Un array NumPy contiene numeri di un solo tipo e calcola su tutti insieme: cfs * 0.0283168 converte ogni valore.",
+  "ar": "مصفوفة NumPy تحمل أعدادًا من نوع واحد وتجري الحساب عليها كلها دفعة واحدة: cfs * 0.0283168 تحوّل كل قيمة.",
+  "he": "מערך NumPy מחזיק מספרים מטיפוס אחד ומחשב על כולם בבת אחת: cfs * 0.0283168 ממיר כל ערך."
+ },
+ "A comprehension filters items.": {
+  "fr": "Une compréhension filtre les éléments.",
+  "es": "Una comprensión filtra elementos.",
+  "it": "Una comprehension filtra gli elementi.",
+  "ar": "الـ comprehension تصفّي العناصر.",
+  "he": "comprehension מסנן איברים."
+ },
+ "A computer or tablet with a modern web browser.": {
+  "fr": "Un ordinateur ou une tablette avec un navigateur web récent.",
+  "es": "Una computadora o tableta con un navegador web moderno.",
+  "it": "Un computer o tablet con un browser web moderno.",
+  "ar": "حاسوب أو جهاز لوحي فيه متصفح ويب حديث.",
+  "he": "מחשב או טאבלט עם דפדפן מודרני."
+ },
+ "A dict keyed by column name, with string values.": {
+  "fr": "Un dict dont les clés sont les noms de colonnes, avec des valeurs de type chaîne.",
+  "es": "Un dict con los nombres de columna como claves y valores de tipo cadena.",
+  "it": "Un dict con chiavi pari ai nomi delle colonne e valori stringa.",
+  "ar": "dict مفاتيحه أسماء الأعمدة، وقيمه سلاسل نصية.",
+  "he": "dict שמפתחותיו שמות העמודות, עם ערכי מחרוזת."
+ },
+ "A dictionary maps keys to values: gistemp[2024] → 1.28. Lookups are fast no matter how big it is.": {
+  "fr": "Un dictionnaire associe des clés à des valeurs : gistemp[2024] → 1.28. Les recherches sont rapides quelle que soit sa taille.",
+  "es": "Un diccionario asigna claves a valores: gistemp[2024] → 1.28. Las búsquedas son rápidas sin importar su tamaño.",
+  "it": "Un dizionario associa chiavi a valori: gistemp[2024] → 1.28. Le ricerche sono rapide a prescindere dalle dimensioni.",
+  "ar": "القاموس يربط المفاتيح بالقيم: gistemp[2024] → 1.28. والبحث سريع مهما كان حجمه.",
+  "he": "מילון ממפה מפתחות לערכים: gistemp[2024] → 1.28. חיפושים מהירים לא משנה כמה הוא גדול."
+ },
+ "A docstring (the string on the first line) documents what the function does.": {
+  "fr": "Une docstring (la chaîne de la première ligne) documente ce que fait la fonction.",
+  "es": "Un docstring (la cadena de la primera línea) documenta lo que hace la función.",
+  "it": "Una docstring (la stringa sulla prima riga) documenta cosa fa la funzione.",
+  "ar": "الـ docstring (السلسلة النصية في السطر الأول) يوثّق ما تفعله الدالة.",
+  "he": "docstring (המחרוזת בשורה הראשונה) מתעד מה הפונקציה עושה."
+ },
+ "A fitted line proves a cause.": {
+  "fr": "Une droite ajustée prouve une cause.",
+  "es": "Una recta ajustada demuestra una causa.",
+  "it": "Una retta adattata dimostra una causa.",
+  "ar": "الخط المطابَق يثبت السببية.",
+  "he": "קו מותאם מוכיח סיבה."
+ },
+ "A free Google account for Colab, or JupyterLite with no account at all.": {
+  "fr": "Un compte Google gratuit pour Colab, ou JupyterLite sans aucun compte.",
+  "es": "Una cuenta gratuita de Google para Colab, o JupyterLite sin ninguna cuenta.",
+  "it": "Un account Google gratuito per Colab, oppure JupyterLite senza alcun account.",
+  "ar": "حساب Google مجاني لـ Colab، أو JupyterLite دون أي حساب.",
+  "he": "חשבון Google חינמי ל-Colab, או JupyterLite בלי חשבון בכלל."
+ },
+ "A function names a piece of logic. Write it once, test it once, use it everywhere.": {
+  "fr": "Une fonction donne un nom à un morceau de logique. Écrivez-la une fois, testez-la une fois, utilisez-la partout.",
+  "es": "Una función da nombre a un fragmento de lógica. Escríbela una vez, pruébala una vez, úsala en todas partes.",
+  "it": "Una funzione dà un nome a un pezzo di logica. Scrivila una volta, testala una volta, usala ovunque.",
+  "ar": "الدالة تسمّي جزءًا من المنطق. اكتبها مرة، واختبرها مرة، واستخدمها في كل مكان.",
+  "he": "פונקציה נותנת שם לקטע לוגיקה. כותבים אותה פעם אחת, בודקים אותה פעם אחת, ומשתמשים בה בכל מקום."
+ },
+ "A function with no return statement returns…": {
+  "fr": "Une fonction sans instruction return renvoie…",
+  "es": "Una función sin sentencia return devuelve…",
+  "it": "Una funzione senza istruzione return restituisce…",
+  "ar": "الدالة التي لا تحتوي عبارة return تعيد…",
+  "he": "פונקציה בלי משפט return מחזירה…"
+ },
+ "A good plot has labeled axes with units, a title and a cited data source.": {
+  "fr": "Un bon graphique a des axes légendés avec unités, un titre et une source de données citée.",
+  "es": "Un buen gráfico tiene ejes rotulados con unidades, un título y una fuente de datos citada.",
+  "it": "Un buon grafico ha assi etichettati con unità, un titolo e una fonte dei dati citata.",
+  "ar": "الرسم الجيد له محاور معنونة بوحداتها وعنوان ومصدر بيانات مذكور.",
+  "he": "לגרף טוב יש צירים מסומנים עם יחידות, כותרת ומקור נתונים מצוטט."
+ },
+ "A list comprehension builds the result.": {
+  "fr": "Une compréhension de liste construit le résultat.",
+  "es": "Una comprensión de listas construye el resultado.",
+  "it": "Una list comprehension costruisce il risultato.",
+  "ar": "list comprehension تبني النتيجة.",
+  "he": "list comprehension בונה את התוצאה."
+ },
+ "A list holds an ordered sequence: flows[0] is the first item, flows[-1] the last, flows[2:5] a slice.": {
+  "fr": "Une liste contient une séquence ordonnée : flows[0] est le premier élément, flows[-1] le dernier, flows[2:5] une tranche.",
+  "es": "Una lista guarda una secuencia ordenada: flows[0] es el primer elemento, flows[-1] el último, flows[2:5] una porción.",
+  "it": "Una lista contiene una sequenza ordinata: flows[0] è il primo elemento, flows[-1] l’ultimo, flows[2:5] una fetta.",
+  "ar": "القائمة تحمل تسلسلًا مرتبًا: flows[0] هو العنصر الأول، وflows[-1] الأخير، وflows[2:5] شريحة.",
+  "he": "רשימה מחזיקה רצף מסודר: flows[0] הוא האיבר הראשון, flows[-1] האחרון, flows[2:5] פרוסה."
+ },
+ "A list of strings.": {
+  "fr": "Une liste de chaînes.",
+  "es": "Una lista de cadenas.",
+  "it": "Una lista di stringhe.",
+  "ar": "قائمة من السلاسل النصية.",
+  "he": "רשימה של מחרוזות."
+ },
+ "A loop that steps a value": {
+  "fr": "Une boucle qui fait avancer une valeur",
+  "es": "Un bucle que avanza un valor",
+  "it": "Un ciclo che fa avanzare un valore",
+  "ar": "حلقة تزيد قيمة خطوة بخطوة",
+  "he": "לולאה שמקדמת ערך"
+ },
+ "A program is a sequence of instructions. A notebook lets you run them one cell at a time and see results immediately.": {
+  "fr": "Un programme est une suite d’instructions. Un notebook permet de les exécuter une cellule à la fois et de voir les résultats immédiatement.",
+  "es": "Un programa es una secuencia de instrucciones. Un notebook te permite ejecutarlas celda a celda y ver los resultados al instante.",
+  "it": "Un programma è una sequenza di istruzioni. Un notebook permette di eseguirle una cella alla volta e vedere subito i risultati.",
+  "ar": "البرنامج سلسلة من التعليمات. ويتيح لك الدفتر تشغيلها خلية بعد خلية ورؤية النتائج فورًا.",
+  "he": "תוכנית היא רצף של הוראות. מחברת מאפשרת להריץ אותן תא אחר תא ולראות תוצאות מיד."
+ },
+ "A saved line plot of 9 points; open gistemp.png to see it.": {
+  "fr": "Une courbe enregistrée de 9 points ; ouvrez gistemp.png pour la voir.",
+  "es": "Un gráfico de líneas guardado con 9 puntos; abre gistemp.png para verlo.",
+  "it": "Un grafico a linee salvato di 9 punti; apri gistemp.png per vederlo.",
+  "ar": "رسم خطي محفوظ من 9 نقاط؛ افتح gistemp.png لتراه.",
+  "he": "גרף קווי שמור של 9 נקודות; פתחו את gistemp.png כדי לראות אותו."
+ },
+ "A variable is a name bound to a value: mass_kg = 1100. Choose names that say what and in which units.": {
+  "fr": "Une variable est un nom lié à une valeur : mass_kg = 1100. Choisissez des noms qui disent quoi et dans quelles unités.",
+  "es": "Una variable es un nombre ligado a un valor: mass_kg = 1100. Elige nombres que digan qué es y en qué unidades.",
+  "it": "Una variabile è un nome legato a un valore: mass_kg = 1100. Scegli nomi che dicano cosa e in quali unità.",
+  "ar": "المتغير اسم مرتبط بقيمة: mass_kg = 1100. اختر أسماء تقول ما الشيء وبأي وحدات.",
+  "he": "משתנה הוא שם הקשור לערך: mass_kg = 1100. בחרו שמות שאומרים מה ובאילו יחידות."
+ },
+ "A while loop stops when…": {
+  "fr": "Une boucle while s’arrête quand…",
+  "es": "Un bucle while se detiene cuando…",
+  "it": "Un ciclo while si ferma quando…",
+  "ar": "تتوقف حلقة while عندما…",
+  "he": "לולאת while עוצרת כאשר…"
+ },
+ "Accumulate totals and counts.": {
+  "fr": "Accumuler des totaux et des comptes.",
+  "es": "Acumular totales y conteos.",
+  "it": "Accumulare totali e conteggi.",
+  "ar": "اجمع المجاميع والأعداد.",
+  "he": "לצבור סכומים וספירות."
+ },
+ "Accumulator": {
+  "fr": "Accumulateur",
+  "es": "Acumulador",
+  "it": "Accumulatore",
+  "ar": "المُراكِم",
+  "he": "צובר"
+ },
+ "Add the numbers 1 to 100 with a loop.": {
+  "fr": "Additionnez les nombres de 1 à 100 avec une boucle.",
+  "es": "Suma los números del 1 al 100 con un bucle.",
+  "it": "Somma i numeri da 1 a 100 con un ciclo.",
+  "ar": "اجمع الأعداد من 1 إلى 100 بحلقة.",
+  "he": "חברו את המספרים 1 עד 100 בלולאה."
+ },
+ "Algorithms & Complexity": {
+  "fr": "Algorithmes et complexité",
+  "es": "Algoritmos y complejidad",
+  "it": "Algoritmi e complessità",
+  "ar": "الخوارزميات والتعقيد",
+  "he": "אלגוריתמים וסיבוכיות"
+ },
+ "Always label units and cite the source.": {
+  "fr": "Indiquez toujours les unités et citez la source.",
+  "es": "Rotula siempre las unidades y cita la fuente.",
+  "it": "Indica sempre le unità e cita la fonte.",
+  "ar": "اذكر الوحدات دائمًا واستشهد بالمصدر.",
+  "he": "תמיד סמנו יחידות וציינו את המקור."
+ },
+ "An assert states what must be true; a failing assert stops the program at the bug.": {
+  "fr": "Un assert énonce ce qui doit être vrai ; un assert qui échoue arrête le programme à l’endroit du bogue.",
+  "es": "Un assert declara lo que debe ser cierto; un assert que falla detiene el programa en el error.",
+  "it": "Un assert dichiara ciò che deve essere vero; un assert che fallisce ferma il programma sul bug.",
+  "ar": "assert تنص على ما يجب أن يكون صحيحًا؛ وفشل assert يوقف البرنامج عند الخطأ.",
+  "he": "assert מצהיר מה חייב להיות נכון; assert שנכשל עוצר את התוכנית במקום הבאג."
+ },
+ "Append.": {
+  "fr": "Ajout.",
+  "es": "Añadir.",
+  "it": "Aggiunta.",
+  "ar": "الإضافة.",
+  "he": "הוספה."
+ },
+ "Arrays for beginners.": {
+  "fr": "Les tableaux pour débutants.",
+  "es": "Arreglos para principiantes.",
+  "it": "Array per principianti.",
+  "ar": "المصفوفات للمبتدئين.",
+  "he": "מערכים למתחילים."
+ },
+ "Assignment in Python uses…": {
+  "fr": "L’affectation en Python utilise…",
+  "es": "La asignación en Python usa…",
+  "it": "L’assegnazione in Python usa…",
+  "ar": "الإسناد في بايثون يستخدم…",
+  "he": "השמה בפייתון משתמשת ב…"
+ },
+ "Average rate of change (Example 5.1)": {
+  "fr": "Taux de variation moyen (exemple 5.1)",
+  "es": "Tasa de cambio media (ejemplo 5.1)",
+  "it": "Tasso di variazione medio (esempio 5.1)",
+  "ar": "متوسط معدل التغير (المثال 5.1)",
+  "he": "קצב שינוי ממוצע (דוגמה 5.1)"
+ },
+ "Bad conversion.": {
+  "fr": "Conversion impossible.",
+  "es": "Conversión errónea.",
+  "it": "Conversione non valida.",
+  "ar": "تحويل خاطئ.",
+  "he": "המרה פגומה."
+ },
+ "Bad rows mean the dataset is useless.": {
+  "fr": "Des lignes défectueuses rendent le jeu de données inutilisable.",
+  "es": "Las filas defectuosas hacen inútil el conjunto de datos.",
+  "it": "Le righe errate rendono inutile il dataset.",
+  "ar": "الصفوف الخاطئة تجعل مجموعة البيانات عديمة الفائدة.",
+  "he": "שורות פגומות הופכות את מערך הנתונים לחסר תועלת."
+ },
+ "Best-fit rise ≈ 2.80 ppm per year over 2021–2025.": {
+  "fr": "Hausse ajustée ≈ 2.80 ppm par an sur 2021–2025.",
+  "es": "Aumento de mejor ajuste ≈ 2.80 ppm al año en 2021–2025.",
+  "it": "Aumento stimato ≈ 2.80 ppm all’anno nel 2021–2025.",
+  "ar": "الارتفاع بأفضل مطابقة ≈ 2.80 ppm سنويًا خلال 2021–2025.",
+  "he": "עלייה בהתאמה הטובה ביותר ≈ 2.80 ppm בשנה ב-2021–2025."
+ },
+ "Bisection and numerical methods": {
+  "fr": "Dichotomie et méthodes numériques",
+  "es": "Bisección y métodos numéricos",
+  "it": "Bisezione e metodi numerici",
+  "ar": "التنصيف والطرق العددية",
+  "he": "חציה ושיטות נומריות"
+ },
+ "Boolean mask": {
+  "fr": "Masque booléen",
+  "es": "Máscara booleana",
+  "it": "Maschera booleana",
+  "ar": "القناع المنطقي",
+  "he": "מסכה בוליאנית"
+ },
+ "Both scales agree there, so the expected answer is known.": {
+  "fr": "Les deux échelles y concordent, donc la réponse attendue est connue.",
+  "es": "Ambas escalas coinciden ahí, así que la respuesta esperada es conocida.",
+  "it": "Lì le due scale coincidono, quindi la risposta attesa è nota.",
+  "ar": "يتفق المقياسان هناك، فالإجابة المتوقعة معروفة.",
+  "he": "שני הסולמות מסכימים שם, ולכן התשובה הצפויה ידועה."
+ },
+ "Branches are tested in order; only the first true one runs.": {
+  "fr": "Les branches sont testées dans l’ordre ; seule la première vraie s’exécute.",
+  "es": "Las ramas se prueban en orden; solo se ejecuta la primera verdadera.",
+  "it": "I rami sono valutati in ordine; viene eseguito solo il primo vero.",
+  "ar": "تُختبر الفروع بالترتيب؛ ولا يُنفَّذ إلا أول فرع صحيح.",
+  "he": "הענפים נבדקים לפי הסדר; רק הראשון שמתקיים רץ."
+ },
+ "Build and query dictionaries.": {
+  "fr": "Construire et interroger des dictionnaires.",
+  "es": "Construir y consultar diccionarios.",
+  "it": "Costruire e interrogare dizionari.",
+  "ar": "ابنِ القواميس واستعلم منها.",
+  "he": "לבנות מילונים ולשאול אותם."
+ },
+ "CSV (comma-separated values) is the most common format for public data. csv.DictReader turns each row into a dictionary keyed by the header.": {
+  "fr": "Le CSV (valeurs séparées par des virgules) est le format le plus courant des données publiques. csv.DictReader transforme chaque ligne en dictionnaire dont les clés sont les en-têtes.",
+  "es": "CSV (valores separados por comas) es el formato más común de los datos públicos. csv.DictReader convierte cada fila en un diccionario con las claves del encabezado.",
+  "it": "Il CSV (valori separati da virgole) è il formato più comune per i dati pubblici. csv.DictReader trasforma ogni riga in un dizionario con chiavi prese dall’intestazione.",
+  "ar": "CSV (القيم المفصولة بفواصل) هو الصيغة الأكثر شيوعًا للبيانات العامة. وcsv.DictReader تحوّل كل صف إلى قاموس مفاتيحه من سطر العناوين.",
+  "he": "CSV (ערכים מופרדים בפסיקים) הוא הפורמט הנפוץ ביותר לנתונים ציבוריים. csv.DictReader הופך כל שורה למילון שמפתחותיו לפי הכותרת."
+ },
+ "Catching it shows the message.": {
+  "fr": "L’intercepter affiche le message.",
+  "es": "Capturarlo muestra el mensaje.",
+  "it": "Intercettarlo mostra il messaggio.",
+  "ar": "التقاطه يُظهر الرسالة.",
+  "he": "תפיסתה מציגה את ההודעה."
+ },
+ "Change one thing at a time and rerun.": {
+  "fr": "Changez une seule chose à la fois et relancez.",
+  "es": "Cambia una cosa a la vez y vuelve a ejecutar.",
+  "it": "Cambia una cosa alla volta e riesegui.",
+  "ar": "غيّر شيئًا واحدًا في كل مرة وأعد التشغيل.",
+  "he": "שנו דבר אחד בכל פעם והריצו שוב."
+ },
+ "Changing a parameter changes the caller’s variable.": {
+  "fr": "Modifier un paramètre modifie la variable de l’appelant.",
+  "es": "Cambiar un parámetro cambia la variable de quien llama.",
+  "it": "Cambiare un parametro cambia la variabile del chiamante.",
+  "ar": "تغيير المعامل يغيّر متغير المستدعي.",
+  "he": "שינוי פרמטר משנה את המשתנה של הקורא."
+ },
+ "Choose one branch.": {
+  "fr": "Choisir une branche.",
+  "es": "Elegir una rama.",
+  "it": "Scegliere un ramo.",
+  "ar": "اختر فرعًا واحدًا.",
+  "he": "בחירת ענף אחד."
+ },
+ "Classify NASA’s 2024 global temperature anomaly.": {
+  "fr": "Classez l’anomalie de température mondiale 2024 de la NASA.",
+  "es": "Clasifica la anomalía de temperatura global de 2024 de la NASA.",
+  "it": "Classifica l’anomalia di temperatura globale 2024 della NASA.",
+  "ar": "صنّف شذوذ درجة الحرارة العالمية لعام 2024 من NASA.",
+  "he": "סווגו את חריגת הטמפרטורה העולמית של NASA לשנת 2024."
+ },
+ "Climate and environmental science runs on code. The CO₂ curve, global temperature records and river forecasts are all built by programs reading public data, and you can read the same files.": {
+  "fr": "Les sciences du climat et de l’environnement reposent sur le code. La courbe du CO₂, les relevés de température mondiale et les prévisions de débit des rivières sont tous produits par des programmes qui lisent des données publiques, et vous pouvez lire les mêmes fichiers.",
+  "es": "La ciencia del clima y del medio ambiente funciona con código. La curva de CO₂, los registros de temperatura global y los pronósticos de ríos los construyen programas que leen datos públicos, y tú puedes leer los mismos archivos.",
+  "it": "Le scienze del clima e dell’ambiente si basano sul codice. La curva della CO₂, le serie di temperatura globale e le previsioni dei fiumi sono tutte prodotte da programmi che leggono dati pubblici, e tu puoi leggere gli stessi file.",
+  "ar": "علوم المناخ والبيئة تعمل بالكود. منحنى CO₂ وسجلات درجات الحرارة العالمية وتوقعات الأنهار كلها تبنيها برامج تقرأ بيانات عامة، ويمكنك قراءة الملفات نفسها.",
+  "he": "מדעי האקלים והסביבה פועלים על קוד. עקומת ה-CO₂, רשומות הטמפרטורה העולמית ותחזיות הנהרות כולן נבנות על ידי תוכניות שקוראות נתונים ציבוריים, ואתם יכולים לקרוא את אותם קבצים."
+ },
+ "Climate and hydrology codes are built from small, tested functions like these, for unit conversions, rates of change and physical formulas, which is how large models stay trustworthy.": {
+  "fr": "Les codes de climatologie et d’hydrologie sont construits à partir de petites fonctions testées comme celles-ci, pour les conversions d’unités, les taux de variation et les formules physiques ; c’est ainsi que les grands modèles restent fiables.",
+  "es": "Los códigos de clima e hidrología se construyen con funciones pequeñas y probadas como estas, para conversiones de unidades, tasas de cambio y fórmulas físicas; así es como los grandes modelos siguen siendo fiables.",
+  "it": "I codici di climatologia e idrologia sono costruiti con piccole funzioni testate come queste, per conversioni di unità, tassi di variazione e formule fisiche; è così che i grandi modelli restano affidabili.",
+  "ar": "تُبنى أكواد المناخ والهيدرولوجيا من دوال صغيرة مختبرة كهذه، لتحويل الوحدات ومعدلات التغير والصيغ الفيزيائية، وبهذا تبقى النماذج الكبيرة جديرة بالثقة.",
+  "he": "קודי אקלים והידרולוגיה בנויים מפונקציות קטנות ובדוקות כמו אלה, להמרות יחידות, לקצבי שינוי ולנוסחאות פיזיקליות, וכך מודלים גדולים נשארים אמינים."
+ },
+ "Climate data on this site: CO2M": {
+  "fr": "Données climatiques sur ce site : CO2M",
+  "es": "Datos climáticos en este sitio: CO2M",
+  "it": "Dati climatici su questo sito: CO2M",
+  "ar": "بيانات المناخ على هذا الموقع: CO2M",
+  "he": "נתוני אקלים באתר הזה: CO2M"
+ },
+ "Comma-separated values.": {
+  "fr": "Valeurs séparées par des virgules.",
+  "es": "Valores separados por comas.",
+  "it": "Valori separati da virgole.",
+  "ar": "قيم مفصولة بفواصل.",
+  "he": "ערכים מופרדים בפסיקים."
+ },
+ "Comparisons (<, >=, ==, !=) produce booleans; combine with and, or, not.": {
+  "fr": "Les comparaisons (<, >=, ==, !=) produisent des booléens ; combinez-les avec and, or, not.",
+  "es": "Las comparaciones (<, >=, ==, !=) producen booleanos; combínalas con and, or, not.",
+  "it": "I confronti (<, >=, ==, !=) producono booleani; combinali con and, or, not.",
+  "ar": "المقارنات (<، >=، ==، !=) تنتج قيمًا منطقية؛ واجمعها بـ and وor وnot.",
+  "he": "השוואות (<, >=, ==, !=) מפיקות ערכים בוליאניים; שלבו אותן עם and, or, not."
+ },
+ "Comprehension": {
+  "fr": "Compréhension",
+  "es": "Comprensión",
+  "it": "Comprehension",
+  "ar": "Comprehension",
+  "he": "Comprehension"
+ },
+ "Compute on whole arrays at once with NumPy, fit trends, and make clear plots with Matplotlib.": {
+  "fr": "Calculer sur des tableaux entiers d’un coup avec NumPy, ajuster des tendances et faire des graphiques clairs avec Matplotlib.",
+  "es": "Calcular con arreglos enteros a la vez con NumPy, ajustar tendencias y hacer gráficos claros con Matplotlib.",
+  "it": "Calcolare su interi array in un colpo solo con NumPy, stimare tendenze e fare grafici chiari con Matplotlib.",
+  "ar": "احسب على مصفوفات كاملة دفعة واحدة باستخدام NumPy، وطابق الاتجاهات، وارسم رسومًا واضحة باستخدام Matplotlib.",
+  "he": "לחשב על מערכים שלמים בבת אחת עם NumPy, להתאים מגמות, וליצור גרפים ברורים עם Matplotlib."
+ },
+ "Compute the weight of a 1,100 kg aircraft and check the types.": {
+  "fr": "Calculez le poids d’un avion de 1100 kg et vérifiez les types.",
+  "es": "Calcula el peso de un avión de 1100 kg y comprueba los tipos.",
+  "it": "Calcola il peso di un aereo da 1100 kg e controlla i tipi.",
+  "ar": "احسب وزن طائرة كتلتها 1100 kg وتحقق من الأنواع.",
+  "he": "חשבו את המשקל של מטוס של 1100 kg ובדקו את הטיפוסים."
+ },
+ "Condition checked each pass.": {
+  "fr": "La condition est vérifiée à chaque tour.",
+  "es": "La condición se comprueba en cada vuelta.",
+  "it": "La condizione viene verificata a ogni giro.",
+  "ar": "يُفحص الشرط في كل دورة.",
+  "he": "התנאי נבדק בכל סיבוב."
+ },
+ "Conditions and loops": {
+  "fr": "Conditions et boucles",
+  "es": "Condiciones y bucles",
+  "it": "Condizioni e cicli",
+  "ar": "الشروط والحلقات",
+  "he": "תנאים ולולאות"
+ },
+ "Control Flow: Conditions & Loops": {
+  "fr": "Structures de contrôle : conditions et boucles",
+  "es": "Control de flujo: condiciones y bucles",
+  "it": "Controllo del flusso: condizioni e cicli",
+  "ar": "التحكم في التدفق: الشروط والحلقات",
+  "he": "בקרת זרימה: תנאים ולולאות"
+ },
+ "Convert strings to numbers and handle errors with try/except.": {
+  "fr": "Convertir des chaînes en nombres et gérer les erreurs avec try/except.",
+  "es": "Convertir cadenas en números y manejar errores con try/except.",
+  "it": "Convertire stringhe in numeri e gestire gli errori con try/except.",
+  "ar": "حوّل السلاسل النصية إلى أعداد وتعامل مع الأخطاء باستخدام try/except.",
+  "he": "להמיר מחרוזות למספרים ולטפל בשגיאות עם try/except."
+ },
+ "Convert ten days of Potomac flow to m³/s, count high-flow days and find the total volume.": {
+  "fr": "Convertissez dix jours de débit du Potomac en m³/s, comptez les jours de fort débit et trouvez le volume total.",
+  "es": "Convierte diez días de caudal del Potomac a m³/s, cuenta los días de caudal alto y halla el volumen total.",
+  "it": "Converti dieci giorni di portata del Potomac in m³/s, conta i giorni di piena e trova il volume totale.",
+  "ar": "حوّل عشرة أيام من تدفق بوتوماك إلى m³/s، وعُدّ أيام التدفق المرتفع، وأوجد الحجم الكلي.",
+  "he": "המירו עשרה ימי ספיקה של הפוטומק ל-m³/s, ספרו ימי ספיקה גבוהה ומצאו את הנפח הכולל."
+ },
+ "Convert the text fields to int and float.": {
+  "fr": "Convertissez les champs texte en int et float.",
+  "es": "Convierte los campos de texto a int y float.",
+  "it": "Converti i campi di testo in int e float.",
+  "ar": "حوّل الحقول النصية إلى int وfloat.",
+  "he": "המירו את שדות הטקסט ל-int ול-float."
+ },
+ "Converts text to a float.": {
+  "fr": "Convertit du texte en float.",
+  "es": "Convierte texto en float.",
+  "it": "Converte testo in float.",
+  "ar": "تحوّل النص إلى float.",
+  "he": "ממיר טקסט ל-float."
+ },
+ "Count words with a dictionary.": {
+  "fr": "Comptez des mots avec un dictionnaire.",
+  "es": "Cuenta palabras con un diccionario.",
+  "it": "Conta le parole con un dizionario.",
+  "ar": "عُدّ الكلمات باستخدام قاموس.",
+  "he": "ספרו מילים בעזרת מילון."
+ },
+ "Create NumPy arrays and use vectorized arithmetic.": {
+  "fr": "Créer des tableaux NumPy et utiliser l’arithmétique vectorisée.",
+  "es": "Crear arreglos de NumPy y usar aritmética vectorizada.",
+  "it": "Creare array NumPy e usare l’aritmetica vettorializzata.",
+  "ar": "أنشئ مصفوفات NumPy واستخدم الحساب المتجه.",
+  "he": "ליצור מערכי NumPy ולהשתמש באריתמטיקה וקטורית."
+ },
+ "Debug scientifically: form a hypothesis, test it with a small input, change one thing.": {
+  "fr": "Déboguez de façon scientifique : formulez une hypothèse, testez-la avec une petite entrée, changez une seule chose.",
+  "es": "Depura de forma científica: formula una hipótesis, pruébala con una entrada pequeña, cambia una sola cosa.",
+  "it": "Fai il debug in modo scientifico: formula un’ipotesi, verificala con un input piccolo, cambia una cosa sola.",
+  "ar": "صحّح الأخطاء بأسلوب علمي: كوّن فرضية، واختبرها بمدخل صغير، وغيّر شيئًا واحدًا.",
+  "he": "נפו שגיאות באופן מדעי: נסחו השערה, בדקו אותה עם קלט קטן, שנו דבר אחד."
+ },
+ "Debugging & Testing": {
+  "fr": "Débogage et tests",
+  "es": "Depuración y pruebas",
+  "it": "Debug e test",
+  "ar": "تصحيح الأخطاء والاختبار",
+  "he": "ניפוי שגיאות ובדיקות"
+ },
+ "Debugging and testing; Lab C": {
+  "fr": "Débogage et tests ; TP C",
+  "es": "Depuración y pruebas; práctica C",
+  "it": "Debug e test; laboratorio C",
+  "ar": "تصحيح الأخطاء والاختبار؛ المختبر C",
+  "he": "ניפוי שגיאות ובדיקות; מעבדה C"
+ },
+ "Default argument": {
+  "fr": "Argument par défaut",
+  "es": "Argumento por defecto",
+  "it": "Argomento predefinito",
+  "ar": "الوسيط الافتراضي",
+  "he": "ארגומנט ברירת מחדל"
+ },
+ "Default arguments (cl_max=1.6) make common cases short; keyword arguments make calls readable.": {
+  "fr": "Les arguments par défaut (cl_max=1.6) raccourcissent les cas courants ; les arguments nommés rendent les appels lisibles.",
+  "es": "Los argumentos por defecto (cl_max=1.6) acortan los casos comunes; los argumentos con nombre hacen legibles las llamadas.",
+  "it": "Gli argomenti predefiniti (cl_max=1.6) accorciano i casi comuni; gli argomenti per parola chiave rendono leggibili le chiamate.",
+  "ar": "الوسائط الافتراضية (cl_max=1.6) تختصر الحالات الشائعة؛ والوسائط المسماة تجعل الاستدعاءات مقروءة.",
+  "he": "ארגומנטים עם ברירת מחדל (cl_max=1.6) מקצרים מקרים נפוצים; ארגומנטים בשם הופכים קריאות לקריאות."
+ },
+ "Define a function with…": {
+  "fr": "On définit une fonction avec…",
+  "es": "Se define una función con…",
+  "it": "Si definisce una funzione con…",
+  "ar": "تُعرَّف الدالة باستخدام…",
+  "he": "מגדירים פונקציה עם…"
+ },
+ "Define functions with def, parameters and return.": {
+  "fr": "Définir des fonctions avec def, des paramètres et return.",
+  "es": "Definir funciones con def, parámetros y return.",
+  "it": "Definire funzioni con def, parametri e return.",
+  "ar": "عرّف الدوال باستخدام def والمعاملات وreturn.",
+  "he": "להגדיר פונקציות עם def, פרמטרים ו-return."
+ },
+ "Defines a function.": {
+  "fr": "Définit une fonction.",
+  "es": "Define una función.",
+  "it": "Definisce una funzione.",
+  "ar": "تعرّف دالة.",
+  "he": "מגדיר פונקציה."
+ },
+ "Degree-1 fit.": {
+  "fr": "Ajustement de degré 1.",
+  "es": "Ajuste de grado 1.",
+  "it": "Adattamento di grado 1.",
+  "ar": "مطابقة من الدرجة 1.",
+  "he": "התאמה ממעלה 1."
+ },
+ "Dictionary": {
+  "fr": "Dictionnaire",
+  "es": "Diccionario",
+  "it": "Dizionario",
+  "ar": "القاموس",
+  "he": "מילון"
+ },
+ "Dictionary keys can repeat.": {
+  "fr": "Les clés d’un dictionnaire peuvent se répéter.",
+  "es": "Las claves de un diccionario pueden repetirse.",
+  "it": "Le chiavi di un dizionario possono ripetersi.",
+  "ar": "مفاتيح القاموس يمكن أن تتكرر.",
+  "he": "מפתחות במילון יכולים לחזור."
+ },
+ "Dividing by len([]) = 0 raises ZeroDivisionError.": {
+  "fr": "Diviser par len([]) = 0 lève ZeroDivisionError.",
+  "es": "Dividir por len([]) = 0 lanza ZeroDivisionError.",
+  "it": "Dividere per len([]) = 0 solleva ZeroDivisionError.",
+  "ar": "القسمة على len([]) = 0 تطلق ZeroDivisionError.",
+  "he": "חלוקה ב-len([]) = 0 מעלה ZeroDivisionError."
+ },
+ "Do every practice problem before opening the answer.": {
+  "fr": "Faites chaque exercice avant d’ouvrir la réponse.",
+  "es": "Haz cada ejercicio antes de abrir la respuesta.",
+  "it": "Svolgi ogni esercizio prima di aprire la risposta.",
+  "ar": "حل كل تمرين قبل فتح الإجابة.",
+  "he": "פתרו כל תרגיל לפני שאתם פותחים את התשובה."
+ },
+ "Docstring": {
+  "fr": "Docstring",
+  "es": "Docstring",
+  "it": "Docstring",
+  "ar": "Docstring",
+  "he": "Docstring"
+ },
+ "Documentation string.": {
+  "fr": "Chaîne de documentation.",
+  "es": "Cadena de documentación.",
+  "it": "Stringa di documentazione.",
+  "ar": "سلسلة التوثيق.",
+  "he": "מחרוזת תיעוד."
+ },
+ "Download a real dataset and analyze it.": {
+  "fr": "Télécharger un vrai jeu de données et l’analyser.",
+  "es": "Descargar un conjunto de datos real y analizarlo.",
+  "it": "Scaricare un dataset reale e analizzarlo.",
+  "ar": "نزّل مجموعة بيانات حقيقية وحلّلها.",
+  "he": "להוריד מערך נתונים אמיתי ולנתח אותו."
+ },
+ "Drag and convergence; Lab D": {
+  "fr": "Traînée et convergence ; TP D",
+  "es": "Resistencia y convergencia; práctica D",
+  "it": "Resistenza e convergenza; laboratorio D",
+  "ar": "السحب والتقارب؛ المختبر D",
+  "he": "גרר והתכנסות; מעבדה D"
+ },
+ "Each key is unique; assigning again replaces the value.": {
+  "fr": "Chaque clé est unique ; une nouvelle affectation remplace la valeur.",
+  "es": "Cada clave es única; asignar de nuevo reemplaza el valor.",
+  "it": "Ogni chiave è unica; assegnarla di nuovo sostituisce il valore.",
+  "ar": "كل مفتاح فريد؛ والإسناد مرة أخرى يستبدل القيمة.",
+  "he": "כל מפתח ייחודי; השמה חוזרת מחליפה את הערך."
+ },
+ "Edge cases (empty lists, zero, negative numbers, missing data) cause most bugs.": {
+  "fr": "Les cas limites (listes vides, zéro, nombres négatifs, données manquantes) causent la plupart des bogues.",
+  "es": "Los casos límite (listas vacías, cero, números negativos, datos faltantes) causan la mayoría de los errores.",
+  "it": "I casi limite (liste vuote, zero, numeri negativi, dati mancanti) causano la maggior parte dei bug.",
+  "ar": "الحالات الحدية (القوائم الفارغة، والصفر، والأعداد السالبة، والبيانات المفقودة) تسبب معظم الأخطاء.",
+  "he": "מקרי קצה (רשימות ריקות, אפס, מספרים שליליים, נתונים חסרים) גורמים לרוב הבאגים."
+ },
+ "Empty string is not a number.": {
+  "fr": "Une chaîne vide n’est pas un nombre.",
+  "es": "Una cadena vacía no es un número.",
+  "it": "Una stringa vuota non è un numero.",
+  "ar": "السلسلة الفارغة ليست عددًا.",
+  "he": "מחרוזת ריקה אינה מספר."
+ },
+ "Every value has a type. int (whole numbers), float (decimals), str (text) and bool (True/False) are the basics; type() tells you which.": {
+  "fr": "Chaque valeur a un type. int (nombres entiers), float (décimaux), str (texte) et bool (True/False) sont les types de base ; type() vous dit lequel.",
+  "es": "Todo valor tiene un tipo. int (números enteros), float (decimales), str (texto) y bool (True/False) son los básicos; type() te dice cuál.",
+  "it": "Ogni valore ha un tipo. int (numeri interi), float (decimali), str (testo) e bool (True/False) sono i tipi di base; type() ti dice quale.",
+  "ar": "لكل قيمة نوع. int (الأعداد الصحيحة)، وfloat (الأعداد العشرية)، وstr (النص)، وbool (True/False) هي الأساسيات؛ وتخبرك type() بالنوع.",
+  "he": "לכל ערך יש טיפוס. int (מספרים שלמים), float (עשרוניים), str (טקסט) ו-bool (True/False) הם הבסיס; type() אומר לכם איזה."
+ },
+ "Everything read from a file is text: convert with int() and float().": {
+  "fr": "Tout ce qu’on lit dans un fichier est du texte : convertissez avec int() et float().",
+  "es": "Todo lo que se lee de un archivo es texto: convierte con int() y float().",
+  "it": "Tutto ciò che si legge da un file è testo: converti con int() e float().",
+  "ar": "كل ما يُقرأ من ملف هو نص: حوّل باستخدام int() وfloat().",
+  "he": "כל מה שנקרא מקובץ הוא טקסט: המירו עם int() ו-float()."
+ },
+ "Example 1.1 computes a weight": {
+  "fr": "L’exemple 1.1 calcule un poids",
+  "es": "El ejemplo 1.1 calcula un peso",
+  "it": "L’esempio 1.1 calcola un peso",
+  "ar": "المثال 1.1 يحسب وزنًا",
+  "he": "דוגמה 1.1 מחשבת משקל"
+ },
+ "Example 3.1": {
+  "fr": "Exemple 3.1",
+  "es": "Ejemplo 3.1",
+  "it": "Esempio 3.1",
+  "ar": "المثال 3.1",
+  "he": "דוגמה 3.1"
+ },
+ "Example 3.2, from Intro to Aerospace": {
+  "fr": "Exemple 3.2, tiré d’Introduction à l’aérospatiale",
+  "es": "Ejemplo 3.2, de Introducción a la ingeniería aeroespacial",
+  "it": "Esempio 3.2, da Introduzione all’ingegneria aerospaziale",
+  "ar": "المثال 3.2، من مدخل إلى هندسة الطيران والفضاء",
+  "he": "דוגמה 3.2, מתוך מבוא להנדסת אווירונאוטיקה וחלל"
+ },
+ "Explore operators and float surprises.": {
+  "fr": "Explorez les opérateurs et les surprises des floats.",
+  "es": "Explora los operadores y las sorpresas de los floats.",
+  "it": "Esplora gli operatori e le sorprese dei float.",
+  "ar": "استكشف العوامل ومفاجآت float.",
+  "he": "חקרו אופרטורים והפתעות של float."
+ },
+ "False": {
+  "fr": "False",
+  "es": "False",
+  "it": "False",
+  "ar": "False",
+  "he": "False"
+ },
+ "Fast numeric array.": {
+  "fr": "Tableau numérique rapide.",
+  "es": "Arreglo numérico rápido.",
+  "it": "Array numerico veloce.",
+  "ar": "مصفوفة عددية سريعة.",
+  "he": "מערך מספרי מהיר."
+ },
+ "Files & CSV Data": {
+  "fr": "Fichiers et données CSV",
+  "es": "Archivos y datos CSV",
+  "it": "File e dati CSV",
+  "ar": "الملفات وبيانات CSV",
+  "he": "קבצים ונתוני CSV"
+ },
+ "Files and CSV": {
+  "fr": "Fichiers et CSV",
+  "es": "Archivos y CSV",
+  "it": "File e CSV",
+  "ar": "الملفات وCSV",
+  "he": "קבצים ו-CSV"
+ },
+ "Find bugs systematically, read tracebacks, and write tests that catch mistakes before they matter.": {
+  "fr": "Trouver les bogues méthodiquement, lire les tracebacks et écrire des tests qui détectent les erreurs avant qu’elles ne comptent.",
+  "es": "Encontrar errores de forma sistemática, leer tracebacks y escribir pruebas que detecten los fallos antes de que importen.",
+  "it": "Trovare i bug in modo sistematico, leggere i traceback e scrivere test che intercettino gli errori prima che contino.",
+  "ar": "اعثر على الأخطاء البرمجية بشكل منهجي، واقرأ تتبعات الأخطاء (tracebacks)، واكتب اختبارات تلتقط الأخطاء قبل أن تصبح مهمة.",
+  "he": "למצוא באגים בשיטתיות, לקרוא tracebacks ולכתוב בדיקות שתופסות טעויות לפני שהן משנות."
+ },
+ "Find the bug in a mean function called on an empty list.": {
+  "fr": "Trouvez le bogue d’une fonction de moyenne appelée sur une liste vide.",
+  "es": "Encuentra el error de una función de media llamada con una lista vacía.",
+  "it": "Trova il bug in una funzione di media chiamata su una lista vuota.",
+  "ar": "اعثر على الخطأ في دالة متوسط تُستدعى على قائمة فارغة.",
+  "he": "מצאו את הבאג בפונקציית ממוצע שנקראת על רשימה ריקה."
+ },
+ "Find the warmest year in a dictionary of NASA GISTEMP anomalies.": {
+  "fr": "Trouvez l’année la plus chaude dans un dictionnaire d’anomalies NASA GISTEMP.",
+  "es": "Encuentra el año más cálido en un diccionario de anomalías de NASA GISTEMP.",
+  "it": "Trova l’anno più caldo in un dizionario di anomalie NASA GISTEMP.",
+  "ar": "أوجد أدفأ سنة في قاموس لشذوذات NASA GISTEMP.",
+  "he": "מצאו את השנה החמה ביותר במילון של חריגות NASA GISTEMP."
+ },
+ "First line.": {
+  "fr": "Première ligne.",
+  "es": "Primera línea.",
+  "it": "Prima riga.",
+  "ar": "السطر الأول.",
+  "he": "השורה הראשונה."
+ },
+ "Five days above 20,000 cfs; about 0.56 km³ of water passed in ten days.": {
+  "fr": "Cinq jours au-dessus de 20000 cfs ; environ 0.56 km³ d’eau sont passés en dix jours.",
+  "es": "Cinco días por encima de 20000 cfs; pasaron unos 0.56 km³ de agua en diez días.",
+  "it": "Cinque giorni sopra 20000 cfs; in dieci giorni sono passati circa 0.56 km³ d’acqua.",
+  "ar": "خمسة أيام فوق 20000 cfs؛ ومرّ نحو 0.56 km³ من الماء في عشرة أيام.",
+  "he": "חמישה ימים מעל 20000 cfs; כ-0.56 km³ של מים עברו בעשרה ימים."
+ },
+ "Floats are binary approximations: 0.1 + 0.2 is not exactly 0.3, so compare floats with a tolerance.": {
+  "fr": "Les floats sont des approximations binaires : 0.1 + 0.2 n’est pas exactement 0.3, donc comparez les floats avec une tolérance.",
+  "es": "Los floats son aproximaciones binarias: 0.1 + 0.2 no es exactamente 0.3, así que compara floats con una tolerancia.",
+  "it": "I float sono approssimazioni binarie: 0.1 + 0.2 non è esattamente 0.3, quindi confronta i float con una tolleranza.",
+  "ar": "الأعداد float تقريبات ثنائية: 0.1 + 0.2 لا يساوي 0.3 تمامًا، لذا قارن قيم float بهامش تسامح.",
+  "he": "ערכי float הם קירובים בינאריים: 0.1 + 0.2 אינו בדיוק 0.3, לכן השוו ערכי float עם סבולת."
+ },
+ "Floor division, remainder.": {
+  "fr": "Division entière, reste.",
+  "es": "División entera, resto.",
+  "it": "Divisione intera, resto.",
+  "ar": "القسمة الصحيحة، والباقي.",
+  "he": "חלוקה שלמה, שארית."
+ },
+ "Floor division.": {
+  "fr": "Division entière.",
+  "es": "División entera.",
+  "it": "Divisione intera.",
+  "ar": "القسمة الصحيحة.",
+  "he": "חלוקה שלמה."
+ },
+ "Format output with f-strings.": {
+  "fr": "Mettre en forme la sortie avec des f-strings.",
+  "es": "Dar formato a la salida con f-strings.",
+  "it": "Formattare l’output con le f-string.",
+  "ar": "نسّق الناتج باستخدام f-strings.",
+  "he": "לעצב פלט בעזרת f-strings."
+ },
+ "Free tools and references": {
+  "fr": "Outils et références gratuits",
+  "es": "Herramientas y referencias gratuitas",
+  "it": "Strumenti e riferimenti gratuiti",
+  "ar": "أدوات ومراجع مجانية",
+  "he": "כלים ומקורות חינמיים"
+ },
+ "Functions": {
+  "fr": "Fonctions",
+  "es": "Funciones",
+  "it": "Funzioni",
+  "ar": "الدوال",
+  "he": "פונקציות"
+ },
+ "Functions and variables.": {
+  "fr": "Fonctions et variables.",
+  "es": "Funciones y variables.",
+  "it": "Funzioni e variabili.",
+  "ar": "الدوال والمتغيرات.",
+  "he": "פונקציות ומשתנים."
+ },
+ "Functions should be long and do everything.": {
+  "fr": "Les fonctions doivent être longues et tout faire.",
+  "es": "Las funciones deben ser largas y hacerlo todo.",
+  "it": "Le funzioni devono essere lunghe e fare tutto.",
+  "ar": "يجب أن تكون الدوال طويلة وتفعل كل شيء.",
+  "he": "פונקציות צריכות להיות ארוכות ולעשות הכול."
+ },
+ "Gauss’s sum checks Example 2.2": {
+  "fr": "La somme de Gauss vérifie l’exemple 2.2",
+  "es": "La suma de Gauss comprueba el ejemplo 2.2",
+  "it": "La somma di Gauss verifica l’esempio 2.2",
+  "ar": "مجموع غاوس يتحقق من المثال 2.2",
+  "he": "הסכום של גאוס בודק את דוגמה 2.2"
+ },
+ "Getting Started: Variables, Types & Expressions": {
+  "fr": "Premiers pas : variables, types et expressions",
+  "es": "Primeros pasos: variables, tipos y expresiones",
+  "it": "Primi passi: variabili, tipi ed espressioni",
+  "ar": "البداية: المتغيرات والأنواع والتعابير",
+  "he": "צעדים ראשונים: משתנים, טיפוסים וביטויים"
+ },
+ "Google Colab (free notebooks)": {
+  "fr": "Google Colab (notebooks gratuits)",
+  "es": "Google Colab (notebooks gratuitos)",
+  "it": "Google Colab (notebook gratuiti)",
+  "ar": "Google Colab (دفاتر مجانية)",
+  "he": "Google Colab (מחברות חינמיות)"
+ },
+ "Handle errors.": {
+  "fr": "Gérer les erreurs.",
+  "es": "Manejar errores.",
+  "it": "Gestire gli errori.",
+  "ar": "التعامل مع الأخطاء.",
+  "he": "טיפול בשגיאות."
+ },
+ "Harvard CS50’s Introduction to Programming with Python": {
+  "fr": "Harvard CS50’s Introduction to Programming with Python",
+  "es": "Harvard CS50’s Introduction to Programming with Python",
+  "it": "Harvard CS50’s Introduction to Programming with Python",
+  "ar": "Harvard CS50’s Introduction to Programming with Python",
+  "he": "Harvard CS50’s Introduction to Programming with Python"
+ },
+ "Has a default.": {
+  "fr": "A une valeur par défaut.",
+  "es": "Tiene un valor por defecto.",
+  "it": "Ha un valore predefinito.",
+  "ar": "له قيمة افتراضية.",
+  "he": "יש לו ברירת מחדל."
+ },
+ "High-school algebra.": {
+  "fr": "Algèbre du lycée.",
+  "es": "Álgebra de bachillerato.",
+  "it": "Algebra delle superiori.",
+  "ar": "الجبر في المرحلة الثانوية.",
+  "he": "אלגברה ברמת תיכון."
+ },
+ "How do you add 2026: 1.2 to gistemp?": {
+  "fr": "Comment ajouter 2026: 1.2 à gistemp ?",
+  "es": "¿Cómo añades 2026: 1.2 a gistemp?",
+  "it": "Come aggiungi 2026: 1.2 a gistemp?",
+  "ar": "كيف تضيف 2026: 1.2 إلى gistemp؟",
+  "he": "איך מוסיפים 2026: 1.2 ל-gistemp?"
+ },
+ "How do you read the full NOAA file in Colab?": {
+  "fr": "Comment lire le fichier NOAA complet dans Colab ?",
+  "es": "¿Cómo lees el archivo completo de NOAA en Colab?",
+  "it": "Come si legge l’intero file NOAA in Colab?",
+  "ar": "كيف تقرأ ملف NOAA كاملًا في Colab؟",
+  "he": "איך קוראים את קובץ NOAA המלא ב-Colab?"
+ },
+ "How do you select values above 1.0 in an array a?": {
+  "fr": "Comment sélectionner les valeurs supérieures à 1.0 dans un tableau a ?",
+  "es": "¿Cómo seleccionas los valores mayores que 1.0 en un arreglo a?",
+  "it": "Come selezioni i valori sopra 1.0 in un array a?",
+  "ar": "كيف تختار القيم الأكبر من 1.0 في مصفوفة a؟",
+  "he": "איך בוחרים ערכים מעל 1.0 במערך a?"
+ },
+ "How many times does for i in range(3, 10, 2) run?": {
+  "fr": "Combien de fois s’exécute for i in range(3, 10, 2) ?",
+  "es": "¿Cuántas veces se ejecuta for i in range(3, 10, 2)?",
+  "it": "Quante volte viene eseguito for i in range(3, 10, 2)?",
+  "ar": "كم مرة تُنفَّذ for i in range(3, 10, 2)؟",
+  "he": "כמה פעמים רצה for i in range(3, 10, 2)?"
+ },
+ "How much has Mauna Loa CO₂ risen from the 1959 to the 2025 annual mean (NOAA)?": {
+  "fr": "De combien le CO₂ de Mauna Loa a-t-il augmenté entre la moyenne annuelle de 1959 et celle de 2025 (NOAA) ?",
+  "es": "¿Cuánto ha subido el CO₂ de Mauna Loa desde la media anual de 1959 hasta la de 2025 (NOAA)?",
+  "it": "Di quanto è aumentata la CO₂ di Mauna Loa dalla media annua del 1959 a quella del 2025 (NOAA)?",
+  "ar": "كم ارتفع CO₂ في ماونا لوا من المتوسط السنوي لعام 1959 إلى متوسط 2025 (NOAA)؟",
+  "he": "בכמה עלה ה-CO₂ במאונה לואה מהממוצע השנתי של 1959 לזה של 2025 (NOAA)?"
+ },
+ "How to request USGS data.": {
+  "fr": "Comment demander des données à l’USGS.",
+  "es": "Cómo solicitar datos al USGS.",
+  "it": "Come richiedere i dati all’USGS.",
+  "ar": "كيفية طلب بيانات USGS.",
+  "he": "איך לבקש נתונים מ-USGS."
+ },
+ "If CO₂ kept rising 2.5 ppm a year from the 2025 mean, when would it pass 450 ppm?": {
+  "fr": "Si le CO₂ continuait d’augmenter de 2.5 ppm par an à partir de la moyenne 2025, quand dépasserait-il 450 ppm ?",
+  "es": "Si el CO₂ siguiera subiendo 2.5 ppm al año desde la media de 2025, ¿cuándo superaría 450 ppm?",
+  "it": "Se la CO₂ continuasse a crescere di 2.5 ppm all’anno dalla media del 2025, quando supererebbe 450 ppm?",
+  "ar": "لو استمر CO₂ في الارتفاع 2.5 ppm سنويًا من متوسط 2025، فمتى سيتجاوز 450 ppm؟",
+  "he": "אם ה-CO₂ ימשיך לעלות ב-2.5 ppm בשנה מהממוצע של 2025, מתי הוא יעבור 450 ppm?"
+ },
+ "Immutable sequence.": {
+  "fr": "Séquence immuable.",
+  "es": "Secuencia inmutable.",
+  "it": "Sequenza immutabile.",
+  "ar": "تسلسل غير قابل للتغيير.",
+  "he": "רצף שאינו בר שינוי."
+ },
+ "Implicit None.": {
+  "fr": "None implicite.",
+  "es": "None implícito.",
+  "it": "None implicito.",
+  "ar": "None ضمنيًا.",
+  "he": "None מרומז."
+ },
+ "In 2035, at 452.35 ppm under this simple constant-rate scenario (not a forecast).": {
+  "fr": "En 2035, à 452.35 ppm dans ce scénario simple à taux constant (pas une prévision).",
+  "es": "En 2035, con 452.35 ppm en este escenario sencillo de ritmo constante (no es un pronóstico).",
+  "it": "Nel 2035, a 452.35 ppm in questo semplice scenario a tasso costante (non una previsione).",
+  "ar": "في 2035، عند 452.35 ppm في هذا السيناريو البسيط ذي المعدل الثابت (وليس توقعًا).",
+  "he": "ב-2035, ב-452.35 ppm בתרחיש פשוט זה של קצב קבוע (לא תחזית)."
+ },
+ "In Python = assigns; == compares.": {
+  "fr": "En Python, = affecte ; == compare.",
+  "es": "En Python = asigna; == compara.",
+  "it": "In Python = assegna; == confronta.",
+  "ar": "في بايثون = تُسند؛ و== تقارن.",
+  "he": "בפייתון = משייך; == משווה."
+ },
+ "In Python it defines the program’s structure.": {
+  "fr": "En Python, elle définit la structure du programme.",
+  "es": "En Python define la estructura del programa.",
+  "it": "In Python definisce la struttura del programma.",
+  "ar": "في بايثون تحدد بنية البرنامج.",
+  "he": "בפייתון היא מגדירה את מבנה התוכנית."
+ },
+ "In def f(x, k=2), k is…": {
+  "fr": "Dans def f(x, k=2), k est…",
+  "es": "En def f(x, k=2), k es…",
+  "it": "In def f(x, k=2), k è…",
+  "ar": "في def f(x, k=2)، يكون k…",
+  "he": "ב-def f(x, k=2), ‏k הוא…"
+ },
+ "Increases of 2.55, 3.53 and 2.74 ppm.": {
+  "fr": "Hausses de 2.55, 3.53 et 2.74 ppm.",
+  "es": "Aumentos de 2.55, 3.53 y 2.74 ppm.",
+  "it": "Aumenti di 2.55, 3.53 e 2.74 ppm.",
+  "ar": "زيادات قدرها 2.55 و3.53 و2.74 ppm.",
+  "he": "עליות של 2.55, 3.53 ו-2.74 ppm."
+ },
+ "Indentation defines blocks in Python. Four spaces per level is standard.": {
+  "fr": "L’indentation définit les blocs en Python. Quatre espaces par niveau est la norme.",
+  "es": "La sangría define los bloques en Python. Lo estándar son cuatro espacios por nivel.",
+  "it": "L’indentazione definisce i blocchi in Python. Lo standard è quattro spazi per livello.",
+  "ar": "المسافة البادئة تحدد الكتل في بايثون. والمعيار أربع مسافات لكل مستوى.",
+  "he": "ההזחה מגדירה בלוקים בפייתון. ארבעה רווחים לכל רמה הם התקן."
+ },
+ "Indentation is just style.": {
+  "fr": "L’indentation n’est qu’une question de style.",
+  "es": "La sangría es solo estilo.",
+  "it": "L’indentazione è solo stile.",
+  "ar": "المسافة البادئة مجرد أسلوب.",
+  "he": "הזחה היא רק עניין של סגנון."
+ },
+ "Index / slice": {
+  "fr": "Indice / tranche",
+  "es": "Índice / porción",
+  "it": "Indice / fetta",
+  "ar": "الفهرس / الشريحة",
+  "he": "אינדקס / פרוסה"
+ },
+ "Index, slice and modify lists.": {
+  "fr": "Indexer, découper et modifier des listes.",
+  "es": "Indexar, rebanar y modificar listas.",
+  "it": "Indicizzare, affettare e modificare liste.",
+  "ar": "استخدم الفهرسة والتقطيع وعدّل القوائم.",
+  "he": "לגשת לרשימות לפי אינדקס, לחתוך ולשנות אותן."
+ },
+ "Intro to Aerospace": {
+  "fr": "Introduction à l’aérospatiale",
+  "es": "Introducción a la ingeniería aeroespacial",
+  "it": "Introduzione all’ingegneria aerospaziale",
+  "ar": "مدخل إلى هندسة الطيران والفضاء",
+  "he": "מבוא להנדסת אווירונאוטיקה וחלל"
+ },
+ "Intro to Programming for Engineers": {
+  "fr": "Introduction à la programmation pour ingénieurs",
+  "es": "Introducción a la programación para ingenieros",
+  "it": "Introduzione alla programmazione per ingegneri",
+  "ar": "مدخل إلى البرمجة للمهندسين",
+  "he": "מבוא לתכנות למהנדסים"
+ },
+ "It has a decimal point.": {
+  "fr": "Il a un point décimal.",
+  "es": "Tiene punto decimal.",
+  "it": "Ha un punto decimale.",
+  "ar": "فيه فاصلة عشرية.",
+  "he": "יש בו נקודה עשרונית."
+ },
+ "It is False because of binary rounding.": {
+  "fr": "Cela vaut False à cause de l’arrondi binaire.",
+  "es": "Es False por el redondeo binario.",
+  "it": "È False a causa dell’arrotondamento binario.",
+  "ar": "يعطي False بسبب التقريب الثنائي.",
+  "he": "זה False בגלל עיגול בינארי."
+ },
+ "It is a TypeError; convert with int(\"5\").": {
+  "fr": "C’est une TypeError ; convertissez avec int(\"5\").",
+  "es": "Es un TypeError; convierte con int(\"5\").",
+  "it": "È un TypeError; converti con int(\"5\").",
+  "ar": "إنه TypeError؛ حوّل باستخدام int(\"5\").",
+  "he": "זו TypeError; המירו עם int(\"5\")."
+ },
+ "It is optional.": {
+  "fr": "Il est facultatif.",
+  "es": "Es opcional.",
+  "it": "È facoltativo.",
+  "ar": "إنها اختيارية.",
+  "he": "הוא אופציונלי."
+ },
+ "It states the quantity and its unit, preventing unit mistakes.": {
+  "fr": "Il indique la grandeur et son unité, ce qui évite les erreurs d’unités.",
+  "es": "Indica la magnitud y su unidad, lo que evita errores de unidades.",
+  "it": "Indica la grandezza e la sua unità, evitando errori di unità.",
+  "ar": "لأنه يذكر الكمية ووحدتها، فيمنع أخطاء الوحدات.",
+  "he": "הוא מציין את הגודל ואת היחידה שלו, וכך מונע טעויות יחידות."
+ },
+ "It stops at 9.": {
+  "fr": "Il s’arrête à 9.",
+  "es": "Se detiene en 9.",
+  "it": "Si ferma a 9.",
+  "ar": "تتوقف عند 9.",
+  "he": "הוא עוצר ב-9."
+ },
+ "It summarizes a trend; causes need physical understanding.": {
+  "fr": "Elle résume une tendance ; les causes demandent une compréhension physique.",
+  "es": "Resume una tendencia; las causas requieren comprensión física.",
+  "it": "Riassume una tendenza; le cause richiedono una comprensione fisica.",
+  "ar": "إنه يلخص اتجاهًا؛ والأسباب تحتاج إلى فهم فيزيائي.",
+  "he": "הוא מסכם מגמה; סיבות דורשות הבנה פיזיקלית."
+ },
+ "Its scope follows first-year programming courses such as MIT 6.100L (formerly 6.0001), Harvard’s CS50, Stanford’s CS106A and Georgia Tech’s CS 1371 for engineers. We link to free materials throughout. None of these organizations endorse this page.": {
+  "fr": "Son contenu suit les cours de programmation de première année comme MIT 6.100L (anciennement 6.0001), CS50 de Harvard, CS106A de Stanford et CS 1371 de Georgia Tech pour ingénieurs. Nous renvoyons partout à des ressources gratuites. Aucune de ces organisations ne cautionne cette page.",
+  "es": "Su alcance sigue los cursos de programación de primer año como MIT 6.100L (antes 6.0001), CS50 de Harvard, CS106A de Stanford y CS 1371 de Georgia Tech para ingenieros. Enlazamos materiales gratuitos en todo el curso. Ninguna de estas organizaciones respalda esta página.",
+  "it": "I contenuti seguono i corsi di programmazione del primo anno come MIT 6.100L (già 6.0001), CS50 di Harvard, CS106A di Stanford e CS 1371 di Georgia Tech per ingegneri. Rimandiamo ovunque a materiali gratuiti. Nessuna di queste organizzazioni approva questa pagina.",
+  "ar": "يتبع نطاقه مقررات البرمجة في السنة الأولى مثل MIT 6.100L (سابقًا 6.0001)، وCS50 في Harvard، وCS106A في Stanford، وCS 1371 في Georgia Tech للمهندسين. نضع روابط لمواد مجانية في كل مكان. لا تتبنى أي من هذه المؤسسات هذه الصفحة.",
+  "he": "היקפו תואם קורסי תכנות של שנה ראשונה כמו MIT 6.100L (לשעבר 6.0001), CS50 של Harvard, CS106A של Stanford ו-CS 1371 של Georgia Tech למהנדסים. אנו מקשרים לחומרים חינמיים לאורך כל הדרך. אף אחד מהארגונים האלה אינו תומך בדף זה."
+ },
+ "JupyterLite: Python in your browser (Pyodide)": {
+  "fr": "JupyterLite : Python dans votre navigateur (Pyodide)",
+  "es": "JupyterLite: Python en tu navegador (Pyodide)",
+  "it": "JupyterLite: Python nel browser (Pyodide)",
+  "ar": "JupyterLite: بايثون في متصفحك (Pyodide)",
+  "he": "JupyterLite: פייתון בדפדפן (Pyodide)"
+ },
+ "Key → value map.": {
+  "fr": "Association clé → valeur.",
+  "es": "Mapa clave → valor.",
+  "it": "Mappa chiave → valore.",
+  "ar": "ربط مفتاح → قيمة.",
+  "he": "מיפוי מפתח → ערך."
+ },
+ "KeyError": {
+  "fr": "KeyError",
+  "es": "KeyError",
+  "it": "KeyError",
+  "ar": "KeyError",
+  "he": "KeyError"
+ },
+ "Label axes and title; save with savefig.": {
+  "fr": "Légendez les axes et le titre ; enregistrez avec savefig.",
+  "es": "Rotula los ejes y el título; guarda con savefig.",
+  "it": "Etichetta assi e titolo; salva con savefig.",
+  "ar": "عنون المحاور والعنوان؛ واحفظ باستخدام savefig.",
+  "he": "סמנו צירים וכותרת; שמרו עם savefig."
+ },
+ "Least-squares line from np.polyfit": {
+  "fr": "Droite des moindres carrés avec np.polyfit",
+  "es": "Recta de mínimos cuadrados con np.polyfit",
+  "it": "Retta dei minimi quadrati con np.polyfit",
+  "ar": "خط المربعات الصغرى من np.polyfit",
+  "he": "קו הריבועים הפחותים מ-np.polyfit"
+ },
+ "Least-squares polynomial fit.": {
+  "fr": "Ajustement polynomial par moindres carrés.",
+  "es": "Ajuste polinómico por mínimos cuadrados.",
+  "it": "Adattamento polinomiale ai minimi quadrati.",
+  "ar": "مطابقة متعددة حدود بالمربعات الصغرى.",
+  "he": "התאמת פולינום בריבועים פחותים."
+ },
+ "Leave loop / skip to next pass.": {
+  "fr": "Sortir de la boucle / passer au tour suivant.",
+  "es": "Salir del bucle / pasar a la siguiente vuelta.",
+  "it": "Uscire dal ciclo / passare al giro successivo.",
+  "ar": "اخرج من الحلقة / انتقل إلى الدورة التالية.",
+  "he": "יציאה מהלולאה / דילוג לסיבוב הבא."
+ },
+ "Lectures on branching and iteration.": {
+  "fr": "Cours magistraux sur les branchements et l’itération.",
+  "es": "Clases sobre ramificación e iteración.",
+  "it": "Lezioni su diramazioni e iterazione.",
+  "ar": "محاضرات عن التفرع والتكرار.",
+  "he": "הרצאות על הסתעפות ואיטרציה."
+ },
+ "List": {
+  "fr": "Liste",
+  "es": "Lista",
+  "it": "Lista",
+  "ar": "القائمة",
+  "he": "רשימה"
+ },
+ "List comprehensions build lists concisely: [x * 2 for x in xs if x > 0].": {
+  "fr": "Les compréhensions de liste construisent des listes de façon concise : [x * 2 for x in xs if x > 0].",
+  "es": "Las comprensiones de listas construyen listas de forma concisa: [x * 2 for x in xs if x > 0].",
+  "it": "Le list comprehension costruiscono liste in modo conciso: [x * 2 for x in xs if x > 0].",
+  "ar": "list comprehensions تبني القوائم باختصار: [x * 2 for x in xs if x > 0].",
+  "he": "list comprehensions בונות רשימות בתמציתיות: [x * 2 for x in xs if x > 0]."
+ },
+ "Lists are mutable: append, insert, remove and sort change them in place.": {
+  "fr": "Les listes sont mutables : append, insert, remove et sort les modifient sur place.",
+  "es": "Las listas son mutables: append, insert, remove y sort las cambian en su lugar.",
+  "it": "Le liste sono mutabili: append, insert, remove e sort le modificano sul posto.",
+  "ar": "القوائم قابلة للتغيير: append وinsert وremove وsort تغيّرها في مكانها.",
+  "he": "רשימות הן ברות שינוי: append, insert, remove ו-sort משנים אותן במקום."
+ },
+ "Lists are…": {
+  "fr": "Les listes sont…",
+  "es": "Las listas son…",
+  "it": "Le liste sono…",
+  "ar": "القوائم…",
+  "he": "רשימות הן…"
+ },
+ "Lists start at index 1.": {
+  "fr": "Les listes commencent à l’indice 1.",
+  "es": "Las listas empiezan en el índice 1.",
+  "it": "Le liste partono dall’indice 1.",
+  "ar": "القوائم تبدأ من الفهرس 1.",
+  "he": "רשימות מתחילות באינדקס 1."
+ },
+ "Lists, Dictionaries & Strings": {
+  "fr": "Listes, dictionnaires et chaînes",
+  "es": "Listas, diccionarios y cadenas",
+  "it": "Liste, dizionari e stringhe",
+  "ar": "القوائم والقواميس والسلاسل النصية",
+  "he": "רשימות, מילונים ומחרוזות"
+ },
+ "Lists, dictionaries, strings": {
+  "fr": "Listes, dictionnaires, chaînes",
+  "es": "Listas, diccionarios, cadenas",
+  "it": "Liste, dizionari, stringhe",
+  "ar": "القوائم، والقواميس، والسلاسل النصية",
+  "he": "רשימות, מילונים, מחרוזות"
+ },
+ "Local scope.": {
+  "fr": "Portée locale.",
+  "es": "Ámbito local.",
+  "it": "Ambito locale.",
+  "ar": "النطاق المحلي.",
+  "he": "טווח הכרה מקומי."
+ },
+ "Loop over ranges and sequences with for.": {
+  "fr": "Parcourir des intervalles et des séquences avec for.",
+  "es": "Recorrer rangos y secuencias con for.",
+  "it": "Iterare su intervalli e sequenze con for.",
+  "ar": "كرّر على المجالات والتسلسلات باستخدام for.",
+  "he": "לעבור על טווחים ורצפים עם for."
+ },
+ "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python": {
+  "fr": "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python",
+  "es": "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python",
+  "it": "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python",
+  "ar": "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python",
+  "he": "MIT OpenCourseWare 6.100L: Introduction to CS and Programming Using Python"
+ },
+ "Make a figure and axes.": {
+  "fr": "Crée une figure et des axes.",
+  "es": "Crea una figura y ejes.",
+  "it": "Crea una figura e gli assi.",
+  "ar": "تنشئ شكلًا ومحاور.",
+  "he": "יוצר תרשים וצירים."
+ },
+ "Make programs decide with if/elif/else and repeat with for and while loops.": {
+  "fr": "Faire décider les programmes avec if/elif/else et répéter avec les boucles for et while.",
+  "es": "Hacer que los programas decidan con if/elif/else y repitan con bucles for y while.",
+  "it": "Far decidere i programmi con if/elif/else e ripetere con i cicli for e while.",
+  "ar": "اجعل البرامج تقرر باستخدام if/elif/else وتكرر باستخدام حلقات for وwhile.",
+  "he": "לגרום לתוכניות להחליט עם if/elif/else ולחזור על פעולות עם לולאות for ו-while."
+ },
+ "Math on whole arrays.": {
+  "fr": "Calcul sur des tableaux entiers.",
+  "es": "Operaciones con arreglos completos.",
+  "it": "Calcoli su interi array.",
+  "ar": "حساب على مصفوفات كاملة.",
+  "he": "חישוב על מערכים שלמים."
+ },
+ "Matplotlib pyplot": {
+  "fr": "Matplotlib pyplot",
+  "es": "Matplotlib pyplot",
+  "it": "Matplotlib pyplot",
+  "ar": "Matplotlib pyplot",
+  "he": "Matplotlib pyplot"
+ },
+ "Matplotlib: pyplot tutorial": {
+  "fr": "Matplotlib: pyplot tutorial",
+  "es": "Matplotlib: pyplot tutorial",
+  "it": "Matplotlib: pyplot tutorial",
+  "ar": "Matplotlib: pyplot tutorial",
+  "he": "Matplotlib: pyplot tutorial"
+ },
+ "Matplotlib; Lab B": {
+  "fr": "Matplotlib ; TP B",
+  "es": "Matplotlib; práctica B",
+  "it": "Matplotlib; laboratorio B",
+  "ar": "Matplotlib؛ المختبر B",
+  "he": "Matplotlib; מעבדה B"
+ },
+ "Matplotlib’s pyplot draws figures: fig, ax = plt.subplots(); ax.plot(x, y); label axes with units; fig.savefig saves the image.": {
+  "fr": "Le module pyplot de Matplotlib dessine des figures : fig, ax = plt.subplots(); ax.plot(x, y); légendez les axes avec les unités ; fig.savefig enregistre l’image.",
+  "es": "pyplot de Matplotlib dibuja figuras: fig, ax = plt.subplots(); ax.plot(x, y); rotula los ejes con unidades; fig.savefig guarda la imagen.",
+  "it": "pyplot di Matplotlib disegna figure: fig, ax = plt.subplots(); ax.plot(x, y); etichetta gli assi con le unità; fig.savefig salva l’immagine.",
+  "ar": "pyplot في Matplotlib ترسم الأشكال: fig, ax = plt.subplots(); ax.plot(x, y); عنون المحاور بوحداتها؛ وfig.savefig تحفظ الصورة.",
+  "he": "pyplot של Matplotlib מצייר תרשימים: fig, ax = plt.subplots(); ax.plot(x, y); סמנו צירים עם יחידות; fig.savefig שומר את התמונה."
+ },
+ "Mean 22,980 cfs; range 12,200–44,700 cfs.": {
+  "fr": "Moyenne 22980 cfs ; étendue 12200–44700 cfs.",
+  "es": "Media 22980 cfs; rango 12200–44700 cfs.",
+  "it": "Media 22980 cfs; intervallo 12200–44700 cfs.",
+  "ar": "المتوسط 22980 cfs؛ والمدى 12200–44700 cfs.",
+  "he": "ממוצע 22980 cfs; טווח 12200–44700 cfs."
+ },
+ "Mean of a list (Example 4.1)": {
+  "fr": "Moyenne d’une liste (exemple 4.1)",
+  "es": "Media de una lista (ejemplo 4.1)",
+  "it": "Media di una lista (esempio 4.1)",
+  "ar": "متوسط قائمة (المثال 4.1)",
+  "he": "ממוצע של רשימה (דוגמה 4.1)"
+ },
+ "Mode \"w\" / \"a\"": {
+  "fr": "Mode \"w\" / \"a\"",
+  "es": "Modo \"w\" / \"a\"",
+  "it": "Modalità \"w\" / \"a\"",
+  "ar": "الوضع \"w\" / \"a\"",
+  "he": "מצב \"w\" / \"a\""
+ },
+ "Multiply the whole array at once.": {
+  "fr": "Multipliez tout le tableau d’un coup.",
+  "es": "Multiplica todo el arreglo de una vez.",
+  "it": "Moltiplica tutto l’array in un colpo.",
+  "ar": "اضرب المصفوفة كلها دفعة واحدة.",
+  "he": "הכפילו את כל המערך בבת אחת."
+ },
+ "NASA GISS: GISTEMP v4 surface temperature analysis": {
+  "fr": "NASA GISS: GISTEMP v4 surface temperature analysis",
+  "es": "NASA GISS: GISTEMP v4 surface temperature analysis",
+  "it": "NASA GISS: GISTEMP v4 surface temperature analysis",
+  "ar": "NASA GISS: GISTEMP v4 surface temperature analysis",
+  "he": "NASA GISS: GISTEMP v4 surface temperature analysis"
+ },
+ "NASA GISTEMP v4 global means (CSV)": {
+  "fr": "NASA GISTEMP v4 global means (CSV)",
+  "es": "NASA GISTEMP v4 global means (CSV)",
+  "it": "NASA GISTEMP v4 global means (CSV)",
+  "ar": "NASA GISTEMP v4 global means (CSV)",
+  "he": "NASA GISTEMP v4 global means (CSV)"
+ },
+ "NASA’s GISTEMP analysis is published with its data so anyone can reproduce the global temperature record. Plotting it yourself, with labeled units and the source, is the honest way to share climate facts.": {
+  "fr": "L’analyse GISTEMP de la NASA est publiée avec ses données pour que chacun puisse reproduire la série de température mondiale. La tracer vous-même, avec des unités indiquées et la source, est la manière honnête de partager des faits climatiques.",
+  "es": "El análisis GISTEMP de la NASA se publica con sus datos para que cualquiera pueda reproducir el registro de temperatura global. Graficarlo tú mismo, con unidades rotuladas y la fuente, es la forma honesta de compartir datos climáticos.",
+  "it": "L’analisi GISTEMP della NASA è pubblicata con i suoi dati, così chiunque può riprodurre la serie della temperatura globale. Tracciarla da sé, con le unità indicate e la fonte, è il modo onesto di condividere i dati sul clima.",
+  "ar": "يُنشر تحليل GISTEMP من NASA مع بياناته ليتمكن أي شخص من إعادة إنتاج سجل درجات الحرارة العالمية. ورسمه بنفسك، مع الوحدات والمصدر، هو الطريقة الأمينة لمشاركة حقائق المناخ.",
+  "he": "ניתוח GISTEMP של NASA מתפרסם עם הנתונים שלו כדי שכל אחד יוכל לשחזר את רשומת הטמפרטורה העולמית. לשרטט אותו בעצמכם, עם יחידות מסומנות והמקור, זו הדרך הכנה לשתף עובדות אקלים."
+ },
+ "NOAA GML: Mauna Loa CO₂ annual means (CSV)": {
+  "fr": "NOAA GML: Mauna Loa CO₂ annual means (CSV)",
+  "es": "NOAA GML: Mauna Loa CO₂ annual means (CSV)",
+  "it": "NOAA GML: Mauna Loa CO₂ annual means (CSV)",
+  "ar": "NOAA GML: Mauna Loa CO₂ annual means (CSV)",
+  "he": "NOAA GML: Mauna Loa CO₂ annual means (CSV)"
+ },
+ "NOAA GML: Trends in atmospheric CO₂, data": {
+  "fr": "NOAA GML: Trends in atmospheric CO₂, data",
+  "es": "NOAA GML: Trends in atmospheric CO₂, data",
+  "it": "NOAA GML: Trends in atmospheric CO₂, data",
+  "ar": "NOAA GML: Trends in atmospheric CO₂, data",
+  "he": "NOAA GML: Trends in atmospheric CO₂, data"
+ },
+ "NOAA, NASA and USGS share their measurements as free CSV files. Being able to read them yourself means you can check headlines against the source data.": {
+  "fr": "La NOAA, la NASA et l’USGS partagent leurs mesures sous forme de fichiers CSV gratuits. Savoir les lire vous-même permet de confronter les gros titres aux données sources.",
+  "es": "NOAA, NASA y USGS comparten sus mediciones como archivos CSV gratuitos. Saber leerlos tú mismo te permite contrastar los titulares con los datos originales.",
+  "it": "NOAA, NASA e USGS condividono le loro misure come file CSV gratuiti. Saperli leggere da soli significa poter verificare i titoli sui dati originali.",
+  "ar": "تشارك NOAA وNASA وUSGS قياساتها كملفات CSV مجانية. وقدرتك على قراءتها بنفسك تعني أنك تستطيع مقارنة العناوين الإخبارية بالبيانات الأصلية.",
+  "he": "NOAA, NASA ו-USGS משתפים את המדידות שלהם כקובצי CSV חינמיים. היכולת לקרוא אותם בעצמכם מאפשרת לבדוק כותרות מול נתוני המקור."
+ },
+ "NOAA’s Mauna Loa annual-mean file starts with # comment lines, then year,mean,unc.": {
+  "fr": "Le fichier des moyennes annuelles de Mauna Loa de la NOAA commence par des lignes de commentaire #, puis year,mean,unc.",
+  "es": "El archivo de medias anuales de Mauna Loa de NOAA empieza con líneas de comentario #, y luego year,mean,unc.",
+  "it": "Il file delle medie annue di Mauna Loa della NOAA inizia con righe di commento #, poi year,mean,unc.",
+  "ar": "يبدأ ملف المتوسطات السنوية في ماونا لوا من NOAA بأسطر تعليق تبدأ بـ #، ثم year,mean,unc.",
+  "he": "קובץ הממוצעים השנתיים של מאונה לואה של NOAA מתחיל בשורות הערה של #, ואחריהן year,mean,unc."
+ },
+ "Name bound to a value.": {
+  "fr": "Nom lié à une valeur.",
+  "es": "Nombre ligado a un valor.",
+  "it": "Nome legato a un valore.",
+  "ar": "اسم مرتبط بقيمة.",
+  "he": "שם הקשור לערך."
+ },
+ "Name for an input.": {
+  "fr": "Nom pour une entrée.",
+  "es": "Nombre para una entrada.",
+  "it": "Nome per un input.",
+  "ar": "اسم لمُدخل.",
+  "he": "שם לקלט."
+ },
+ "Negative indices count from the end.": {
+  "fr": "Les indices négatifs comptent à partir de la fin.",
+  "es": "Los índices negativos cuentan desde el final.",
+  "it": "Gli indici negativi contano dalla fine.",
+  "ar": "الفهارس السالبة تعدّ من النهاية.",
+  "he": "אינדקסים שליליים סופרים מהסוף."
+ },
+ "No programming experience needed.": {
+  "fr": "Aucune expérience de programmation requise.",
+  "es": "No se necesita experiencia en programación.",
+  "it": "Nessuna esperienza di programmazione richiesta.",
+  "ar": "لا تلزم خبرة في البرمجة.",
+  "he": "לא נדרש ניסיון בתכנות."
+ },
+ "No-account option.": {
+  "fr": "Option sans compte.",
+  "es": "Opción sin cuenta.",
+  "it": "Opzione senza account.",
+  "ar": "خيار دون حساب.",
+  "he": "אפשרות בלי חשבון."
+ },
+ "None": {
+  "fr": "None",
+  "es": "None",
+  "it": "None",
+  "ar": "None",
+  "he": "None"
+ },
+ "None.": {
+  "fr": "None.",
+  "es": "None.",
+  "it": "None.",
+  "ar": "None.",
+  "he": "None."
+ },
+ "Notebooks, variables, types, expressions": {
+  "fr": "Notebooks, variables, types, expressions",
+  "es": "Notebooks, variables, tipos, expresiones",
+  "it": "Notebook, variabili, tipi, espressioni",
+  "ar": "الدفاتر، والمتغيرات، والأنواع، والتعابير",
+  "he": "מחברות, משתנים, טיפוסים, ביטויים"
+ },
+ "NumPy & Matplotlib": {
+  "fr": "NumPy et Matplotlib",
+  "es": "NumPy y Matplotlib",
+  "it": "NumPy e Matplotlib",
+  "ar": "NumPy وMatplotlib",
+  "he": "NumPy ו-Matplotlib"
+ },
+ "NumPy arrays and lists add the same way.": {
+  "fr": "Les tableaux NumPy et les listes s’additionnent de la même façon.",
+  "es": "Los arreglos de NumPy y las listas se suman igual.",
+  "it": "Array NumPy e liste si sommano allo stesso modo.",
+  "ar": "مصفوفات NumPy والقوائم تُجمع بالطريقة نفسها.",
+  "he": "מערכי NumPy ורשימות מתחברים באותה דרך."
+ },
+ "NumPy arrays; midterm practice": {
+  "fr": "Tableaux NumPy ; exercices de mi-parcours",
+  "es": "Arreglos de NumPy; práctica para el parcial",
+  "it": "Array NumPy; esercizi per l’esame intermedio",
+  "ar": "مصفوفات NumPy؛ تمارين منتصف الفصل",
+  "he": "מערכי NumPy; תרגול לבחינת אמצע"
+ },
+ "NumPy basics": {
+  "fr": "Bases de NumPy",
+  "es": "Fundamentos de NumPy",
+  "it": "Basi di NumPy",
+  "ar": "أساسيات NumPy",
+  "he": "יסודות NumPy"
+ },
+ "NumPy: the absolute basics for beginners": {
+  "fr": "NumPy: the absolute basics for beginners",
+  "es": "NumPy: the absolute basics for beginners",
+  "it": "NumPy: the absolute basics for beginners",
+  "ar": "NumPy: the absolute basics for beginners",
+  "he": "NumPy: the absolute basics for beginners"
+ },
+ "Numbers in a CSV are numbers.": {
+  "fr": "Les nombres d’un CSV sont des nombres.",
+  "es": "Los números de un CSV son números.",
+  "it": "I numeri in un CSV sono numeri.",
+  "ar": "الأرقام في CSV أعداد.",
+  "he": "מספרים ב-CSV הם מספרים."
+ },
+ "Numerical Simulation": {
+  "fr": "Simulation numérique",
+  "es": "Simulación numérica",
+  "it": "Simulazione numerica",
+  "ar": "المحاكاة العددية",
+  "he": "סימולציה נומרית"
+ },
+ "Only the valid row is kept; the bad ones are reported.": {
+  "fr": "Seule la ligne valide est conservée ; les mauvaises sont signalées.",
+  "es": "Solo se conserva la fila válida; las erróneas se informan.",
+  "it": "Viene tenuta solo la riga valida; quelle errate vengono segnalate.",
+  "ar": "لا يُحتفظ إلا بالصف الصالح؛ ويُبلَّغ عن الصفوف الخاطئة.",
+  "he": "רק השורה התקינה נשמרת; הפגומות מדווחות."
+ },
+ "Open a Colab or JupyterLite notebook and run cells.": {
+  "fr": "Ouvrir un notebook Colab ou JupyterLite et exécuter des cellules.",
+  "es": "Abrir un notebook de Colab o JupyterLite y ejecutar celdas.",
+  "it": "Aprire un notebook Colab o JupyterLite ed eseguire le celle.",
+  "ar": "افتح دفتر Colab أو JupyterLite وشغّل الخلايا.",
+  "he": "לפתוח מחברת Colab או JupyterLite ולהריץ תאים."
+ },
+ "Open, read and write text files with with.": {
+  "fr": "Ouvrir, lire et écrire des fichiers texte avec with.",
+  "es": "Abrir, leer y escribir archivos de texto con with.",
+  "it": "Aprire, leggere e scrivere file di testo con with.",
+  "ar": "افتح الملفات النصية واقرأها واكتبها باستخدام with.",
+  "he": "לפתוח, לקרוא ולכתוב קובצי טקסט עם with."
+ },
+ "Opening a file in \"w\" mode adds to it.": {
+  "fr": "Ouvrir un fichier en mode \"w\" ajoute à la fin.",
+  "es": "Abrir un archivo en modo \"w\" añade al final.",
+  "it": "Aprire un file in modalità \"w\" aggiunge in coda.",
+  "ar": "فتح ملف بالوضع \"w\" يضيف إليه.",
+  "he": "פתיחת קובץ במצב \"w\" מוסיפה לסופו."
+ },
+ "Opens and auto-closes a file.": {
+  "fr": "Ouvre un fichier et le ferme automatiquement.",
+  "es": "Abre un archivo y lo cierra automáticamente.",
+  "it": "Apre un file e lo chiude automaticamente.",
+  "ar": "تفتح ملفًا وتغلقه تلقائيًا.",
+  "he": "פותח קובץ וסוגר אותו אוטומטית."
+ },
+ "Optional: Python 3 installed locally with NumPy and Matplotlib.": {
+  "fr": "Facultatif : Python 3 installé localement avec NumPy et Matplotlib.",
+  "es": "Opcional: Python 3 instalado localmente con NumPy y Matplotlib.",
+  "it": "Facoltativo: Python 3 installato localmente con NumPy e Matplotlib.",
+  "ar": "اختياري: Python 3 مثبت محليًا مع NumPy وMatplotlib.",
+  "he": "אופציונלי: Python 3 מותקן מקומית עם NumPy ו-Matplotlib."
+ },
+ "Orbits and populations": {
+  "fr": "Orbites et populations",
+  "es": "Órbitas y poblaciones",
+  "it": "Orbite e popolazioni",
+  "ar": "المدارات والتجمعات السكانية",
+  "he": "מסלולים ואוכלוסיות"
+ },
+ "Ordered, mutable sequence.": {
+  "fr": "Séquence ordonnée et mutable.",
+  "es": "Secuencia ordenada y mutable.",
+  "it": "Sequenza ordinata e mutabile.",
+  "ar": "تسلسل مرتب قابل للتغيير.",
+  "he": "רצף מסודר ובר שינוי."
+ },
+ "Output": {
+  "fr": "Sortie",
+  "es": "Salida",
+  "it": "Output",
+  "ar": "الناتج",
+  "he": "פלט"
+ },
+ "Overwrite / append.": {
+  "fr": "Écraser / ajouter.",
+  "es": "Sobrescribir / añadir.",
+  "it": "Sovrascrivere / aggiungere.",
+  "ar": "الكتابة فوق / الإضافة.",
+  "he": "דריסה / הוספה."
+ },
+ "Package logic into reusable, testable functions with parameters, defaults and return values.": {
+  "fr": "Regrouper la logique dans des fonctions réutilisables et testables, avec paramètres, valeurs par défaut et valeurs de retour.",
+  "es": "Empaquetar la lógica en funciones reutilizables y comprobables, con parámetros, valores por defecto y valores de retorno.",
+  "it": "Racchiudere la logica in funzioni riutilizzabili e testabili, con parametri, valori predefiniti e valori di ritorno.",
+  "ar": "اجمع المنطق في دوال قابلة لإعادة الاستخدام والاختبار، مع معاملات وقيم افتراضية وقيم مُعادة.",
+  "he": "לארוז לוגיקה בפונקציות שניתן לעשות בהן שימוש חוזר ולבדוק אותן, עם פרמטרים, ברירות מחדל וערכי החזרה."
+ },
+ "Parameter": {
+  "fr": "Paramètre",
+  "es": "Parámetro",
+  "it": "Parametro",
+  "ar": "المعامل",
+  "he": "פרמטר"
+ },
+ "Parameters receive values; return sends a result back. A function with no return gives None.": {
+  "fr": "Les paramètres reçoivent des valeurs ; return renvoie un résultat. Une fonction sans return renvoie None.",
+  "es": "Los parámetros reciben valores; return devuelve un resultado. Una función sin return devuelve None.",
+  "it": "I parametri ricevono valori; return restituisce un risultato. Una funzione senza return restituisce None.",
+  "ar": "تستقبل المعاملات القيم؛ وreturn تعيد النتيجة. والدالة التي لا تحتوي return تعيد None.",
+  "he": "פרמטרים מקבלים ערכים; return מחזיר תוצאה. פונקציה בלי return מחזירה None."
+ },
+ "Parse CSV with the csv module.": {
+  "fr": "Analyser du CSV avec le module csv.",
+  "es": "Analizar CSV con el módulo csv.",
+  "it": "Analizzare CSV con il modulo csv.",
+  "ar": "حلّل CSV باستخدام الوحدة csv.",
+  "he": "לנתח CSV עם המודול csv."
+ },
+ "Parse the last five rows of NOAA’s Mauna Loa annual-mean CSV and find the average rate of rise.": {
+  "fr": "Analysez les cinq dernières lignes du CSV des moyennes annuelles de Mauna Loa de la NOAA et trouvez le taux moyen de hausse.",
+  "es": "Analiza las últimas cinco filas del CSV de medias anuales de Mauna Loa de NOAA y halla la tasa media de aumento.",
+  "it": "Analizza le ultime cinque righe del CSV delle medie annue di Mauna Loa della NOAA e trova il tasso medio di aumento.",
+  "ar": "حلّل الصفوف الخمسة الأخيرة من ملف CSV للمتوسطات السنوية في ماونا لوا من NOAA وأوجد متوسط معدل الارتفاع.",
+  "he": "נתחו את חמש השורות האחרונות בקובץ ה-CSV של הממוצעים השנתיים של מאונה לואה של NOAA ומצאו את קצב העלייה הממוצע."
+ },
+ "Physics I and Calculus I help for the simulation unit but are not required.": {
+  "fr": "Physique I et Analyse I aident pour l’unité de simulation, mais ne sont pas obligatoires.",
+  "es": "Física I y Cálculo I ayudan en la unidad de simulación, pero no son obligatorios.",
+  "it": "Fisica I e Analisi I aiutano per l’unità di simulazione, ma non sono obbligatori.",
+  "ar": "الفيزياء I والتفاضل والتكامل I يساعدان في وحدة المحاكاة لكنهما غير مطلوبين.",
+  "he": "פיזיקה I וחשבון אינפיניטסימלי I עוזרים ביחידת הסימולציה אבל אינם חובה."
+ },
+ "Plot data with labeled axes and titles.": {
+  "fr": "Tracer des données avec des axes légendés et des titres.",
+  "es": "Graficar datos con ejes rotulados y títulos.",
+  "it": "Tracciare dati con assi etichettati e titoli.",
+  "ar": "ارسم البيانات بمحاور معنونة وعناوين.",
+  "he": "לשרטט נתונים עם צירים מסומנים וכותרות."
+ },
+ "Plot selected NASA GISTEMP annual anomalies and save the figure.": {
+  "fr": "Tracez une sélection d’anomalies annuelles NASA GISTEMP et enregistrez la figure.",
+  "es": "Grafica una selección de anomalías anuales de NASA GISTEMP y guarda la figura.",
+  "it": "Traccia una selezione di anomalie annue NASA GISTEMP e salva la figura.",
+  "ar": "ارسم شذوذات سنوية مختارة من NASA GISTEMP واحفظ الشكل.",
+  "he": "שרטטו חריגות שנתיות נבחרות של NASA GISTEMP ושמרו את התרשים."
+ },
+ "Plots without units are fine.": {
+  "fr": "Des graphiques sans unités, ça va.",
+  "es": "Los gráficos sin unidades están bien.",
+  "it": "I grafici senza unità vanno bene.",
+  "ar": "الرسوم دون وحدات مقبولة.",
+  "he": "גרפים בלי יחידות זה בסדר."
+ },
+ "Plotting basics.": {
+  "fr": "Bases du tracé.",
+  "es": "Fundamentos de gráficos.",
+  "it": "Basi della grafica.",
+  "ar": "أساسيات الرسم.",
+  "he": "יסודות השרטוט."
+ },
+ "Power.": {
+  "fr": "Puissance.",
+  "es": "Potencia.",
+  "it": "Potenza.",
+  "ar": "القوة.",
+  "he": "חזקה."
+ },
+ "Predict the output before you run the code.": {
+  "fr": "Prédisez la sortie avant d’exécuter le code.",
+  "es": "Predice la salida antes de ejecutar el código.",
+  "it": "Prevedi l’output prima di eseguire il codice.",
+  "ar": "توقّع الناتج قبل تشغيل الكود.",
+  "he": "נחשו את הפלט לפני שאתם מריצים את הקוד."
+ },
+ "Projectile simulation": {
+  "fr": "Simulation de projectile",
+  "es": "Simulación de proyectiles",
+  "it": "Simulazione di un proiettile",
+  "ar": "محاكاة المقذوفات",
+  "he": "סימולציית קליע"
+ },
+ "Python docs: the csv module": {
+  "fr": "Documentation Python : le module csv",
+  "es": "Documentación de Python: el módulo csv",
+  "it": "Documentazione Python: il modulo csv",
+  "ar": "توثيق بايثون: الوحدة csv",
+  "he": "תיעוד פייתון: המודול csv"
+ },
+ "Python from zero to simulations: variables, loops, functions, data files, NumPy and Matplotlib, testing, algorithms, and models of projectiles, orbits and populations, using real NOAA, NASA and USGS data. Free tools, nothing to install.": {
+  "fr": "Python de zéro jusqu’aux simulations : variables, boucles, fonctions, fichiers de données, NumPy et Matplotlib, tests, algorithmes, et modèles de projectiles, d’orbites et de populations, avec de vraies données de la NOAA, de la NASA et de l’USGS. Outils gratuits, rien à installer.",
+  "es": "Python desde cero hasta simulaciones: variables, bucles, funciones, archivos de datos, NumPy y Matplotlib, pruebas, algoritmos y modelos de proyectiles, órbitas y poblaciones, con datos reales de NOAA, NASA y USGS. Herramientas gratuitas, nada que instalar.",
+  "it": "Python da zero alle simulazioni: variabili, cicli, funzioni, file di dati, NumPy e Matplotlib, test, algoritmi e modelli di proiettili, orbite e popolazioni, con dati reali di NOAA, NASA e USGS. Strumenti gratuiti, niente da installare.",
+  "ar": "بايثون من الصفر إلى المحاكاة: المتغيرات، والحلقات، والدوال، وملفات البيانات، وNumPy وMatplotlib، والاختبار، والخوارزميات، ونماذج المقذوفات والمدارات والتجمعات السكانية، باستخدام بيانات حقيقية من NOAA وNASA وUSGS. أدوات مجانية، ولا شيء للتثبيت.",
+  "he": "פייתון מאפס ועד סימולציות: משתנים, לולאות, פונקציות, קובצי נתונים, NumPy ו-Matplotlib, בדיקות, אלגוריתמים, ומודלים של קליעים, מסלולים ואוכלוסיות, עם נתונים אמיתיים של NOAA, NASA ו-USGS. כלים חינמיים, אין מה להתקין."
+ },
+ "Python tutorial §3": {
+  "fr": "Tutoriel Python §3",
+  "es": "Tutorial de Python §3",
+  "it": "Tutorial Python §3",
+  "ar": "درس بايثون التعليمي §3",
+  "he": "מדריך פייתון §3"
+ },
+ "Python tutorial §4": {
+  "fr": "Tutoriel Python §4",
+  "es": "Tutorial de Python §4",
+  "it": "Tutorial Python §4",
+  "ar": "درس بايثون التعليمي §4",
+  "he": "מדריך פייתון §4"
+ },
+ "Python tutorial §5": {
+  "fr": "Tutoriel Python §5",
+  "es": "Tutorial de Python §5",
+  "it": "Tutorial Python §5",
+  "ar": "درس بايثون التعليمي §5",
+  "he": "מדריך פייתון §5"
+ },
+ "Raise clear errors for bad input.": {
+  "fr": "Lever des erreurs claires pour les entrées invalides.",
+  "es": "Lanzar errores claros ante entradas incorrectas.",
+  "it": "Sollevare errori chiari per input non validi.",
+  "ar": "أطلق أخطاء واضحة للمدخلات السيئة.",
+  "he": "להעלות שגיאות ברורות לקלט פגום."
+ },
+ "Read a traceback and locate the failing line.": {
+  "fr": "Lire un traceback et localiser la ligne en échec.",
+  "es": "Leer un traceback y localizar la línea que falla.",
+  "it": "Leggere un traceback e individuare la riga che fallisce.",
+  "ar": "اقرأ traceback وحدد السطر الذي فشل.",
+  "he": "לקרוא traceback ולאתר את השורה שנכשלה."
+ },
+ "Read and write files, parse CSV data, and handle messy rows without crashing.": {
+  "fr": "Lire et écrire des fichiers, analyser des données CSV et gérer les lignes défectueuses sans planter.",
+  "es": "Leer y escribir archivos, analizar datos CSV y manejar filas defectuosas sin que el programa falle.",
+  "it": "Leggere e scrivere file, analizzare dati CSV e gestire righe difettose senza bloccarsi.",
+  "ar": "اقرأ الملفات واكتبها، وحلّل بيانات CSV، وتعامل مع الصفوف الفوضوية دون أن يتعطل البرنامج.",
+  "he": "לקרוא ולכתוב קבצים, לנתח נתוני CSV, ולטפל בשורות פגומות בלי לקרוס."
+ },
+ "Read error messages from the bottom: the last line names the error type, the lines above show where it happened.": {
+  "fr": "Lisez les messages d’erreur par le bas : la dernière ligne nomme le type d’erreur, les lignes au-dessus montrent où elle s’est produite.",
+  "es": "Lee los mensajes de error desde abajo: la última línea nombra el tipo de error y las de arriba muestran dónde ocurrió.",
+  "it": "Leggi i messaggi di errore dal basso: l’ultima riga indica il tipo di errore, le righe sopra mostrano dove è avvenuto.",
+  "ar": "اقرأ رسائل الخطأ من الأسفل: السطر الأخير يسمّي نوع الخطأ، والأسطر فوقه تبيّن أين حدث.",
+  "he": "קראו הודעות שגיאה מלמטה: השורה האחרונה מציינת את סוג השגיאה, והשורות מעליה מראות היכן היא קרתה."
+ },
+ "Read lines with comments and bad values without crashing.": {
+  "fr": "Lisez des lignes contenant des commentaires et de mauvaises valeurs sans planter.",
+  "es": "Lee líneas con comentarios y valores erróneos sin que el programa falle.",
+  "it": "Leggi righe con commenti e valori errati senza bloccarti.",
+  "ar": "اقرأ أسطرًا فيها تعليقات وقيم خاطئة دون أن يتعطل البرنامج.",
+  "he": "קראו שורות עם הערות וערכים פגומים בלי לקרוס."
+ },
+ "Reading and writing CSV.": {
+  "fr": "Lire et écrire du CSV.",
+  "es": "Leer y escribir CSV.",
+  "it": "Leggere e scrivere CSV.",
+  "ar": "قراءة CSV وكتابتها.",
+  "he": "קריאה וכתיבה של CSV."
+ },
+ "Real data has comments, blanks and bad values. try/except ValueError lets you skip or log them.": {
+  "fr": "Les données réelles contiennent des commentaires, des vides et de mauvaises valeurs. try/except ValueError permet de les ignorer ou de les journaliser.",
+  "es": "Los datos reales tienen comentarios, vacíos y valores erróneos. try/except ValueError te permite omitirlos o registrarlos.",
+  "it": "I dati reali hanno commenti, campi vuoti e valori errati. try/except ValueError ti permette di saltarli o registrarli.",
+  "ar": "البيانات الحقيقية فيها تعليقات وفراغات وقيم خاطئة. وtry/except ValueError تتيح لك تخطيها أو تسجيلها.",
+  "he": "בנתונים אמיתיים יש הערות, שדות ריקים וערכים פגומים. try/except ValueError מאפשר לדלג עליהם או לתעד אותם."
+ },
+ "Real data with errors; Lab A": {
+  "fr": "Données réelles avec erreurs ; TP A",
+  "es": "Datos reales con errores; práctica A",
+  "it": "Dati reali con errori; laboratorio A",
+  "ar": "بيانات حقيقية بها أخطاء؛ المختبر A",
+  "he": "נתונים אמיתיים עם שגיאות; מעבדה A"
+ },
+ "Rebinding a parameter is local (mutable objects are an exception).": {
+  "fr": "Réaffecter un paramètre reste local (les objets mutables sont une exception).",
+  "es": "Reasignar un parámetro es local (los objetos mutables son una excepción).",
+  "it": "Riassegnare un parametro è locale (gli oggetti mutabili sono un’eccezione).",
+  "ar": "إعادة ربط المعامل محلية (والكائنات القابلة للتغيير استثناء).",
+  "he": "קשירה מחדש של פרמטר היא מקומית (אובייקטים ברי שינוי הם חריג)."
+ },
+ "Relative change (Example 1.2)": {
+  "fr": "Variation relative (exemple 1.2)",
+  "es": "Cambio relativo (ejemplo 1.2)",
+  "it": "Variazione relativa (esempio 1.2)",
+  "ar": "التغير النسبي (المثال 1.2)",
+  "he": "שינוי יחסי (דוגמה 1.2)"
+ },
+ "Repeat per item.": {
+  "fr": "Répéter pour chaque élément.",
+  "es": "Repetir por elemento.",
+  "it": "Ripetere per ogni elemento.",
+  "ar": "كرّر لكل عنصر.",
+  "he": "חזרה לכל איבר."
+ },
+ "Repeat while true.": {
+  "fr": "Répéter tant que c’est vrai.",
+  "es": "Repetir mientras sea verdadero.",
+  "it": "Ripetere finché è vero.",
+  "ar": "كرّر ما دام الشرط صحيحًا.",
+  "he": "חזרה כל עוד התנאי מתקיים."
+ },
+ "Rows as dicts.": {
+  "fr": "Des lignes sous forme de dicts.",
+  "es": "Filas como dicts.",
+  "it": "Righe come dict.",
+  "ar": "الصفوف بوصفها قواميس dict.",
+  "he": "שורות כמילונים (dict)."
+ },
+ "Run your first Python in a browser notebook, store values in variables, and compute with numbers and text.": {
+  "fr": "Exécutez votre premier code Python dans un notebook de navigateur, stockez des valeurs dans des variables et calculez avec des nombres et du texte.",
+  "es": "Ejecuta tu primer código Python en un notebook del navegador, guarda valores en variables y calcula con números y texto.",
+  "it": "Esegui il tuo primo Python in un notebook nel browser, memorizza valori in variabili e calcola con numeri e testo.",
+  "ar": "شغّل أول كود بايثون لك في دفتر داخل المتصفح، وخزّن القيم في متغيرات، واحسب بالأرقام والنصوص.",
+  "he": "הריצו את קוד הפייתון הראשון שלכם במחברת בדפדפן, אחסנו ערכים במשתנים, וחשבו עם מספרים וטקסט."
+ },
+ "Save a plot.": {
+  "fr": "Enregistre un graphique.",
+  "es": "Guarda un gráfico.",
+  "it": "Salva un grafico.",
+  "ar": "تحفظ رسمًا.",
+  "he": "שומר גרף."
+ },
+ "Save figures to files.": {
+  "fr": "Enregistrer des figures dans des fichiers.",
+  "es": "Guardar figuras en archivos.",
+  "it": "Salvare figure su file.",
+  "ar": "احفظ الأشكال في ملفات.",
+  "he": "לשמור תרשימים לקבצים."
+ },
+ "Scope": {
+  "fr": "Portée",
+  "es": "Ámbito",
+  "it": "Ambito",
+  "ar": "النطاق",
+  "he": "טווח הכרה"
+ },
+ "Search and complexity": {
+  "fr": "Recherche et complexité",
+  "es": "Búsqueda y complejidad",
+  "it": "Ricerca e complessità",
+  "ar": "البحث والتعقيد",
+  "he": "חיפוש וסיבוכיות"
+ },
+ "Section 4.8: defining functions.": {
+  "fr": "Section 4.8 : définir des fonctions.",
+  "es": "Sección 4.8: definir funciones.",
+  "it": "Sezione 4.8: definire funzioni.",
+  "ar": "القسم 4.8: تعريف الدوال.",
+  "he": "סעיף 4.8: הגדרת פונקציות."
+ },
+ "Section 4: control flow.": {
+  "fr": "Section 4 : structures de contrôle.",
+  "es": "Sección 4: control de flujo.",
+  "it": "Sezione 4: controllo del flusso.",
+  "ar": "القسم 4: التحكم في التدفق.",
+  "he": "סעיף 4: בקרת זרימה."
+ },
+ "Section 5: data structures.": {
+  "fr": "Section 5 : structures de données.",
+  "es": "Sección 5: estructuras de datos.",
+  "it": "Sezione 5: strutture dati.",
+  "ar": "القسم 5: هياكل البيانات.",
+  "he": "סעיף 5: מבני נתונים."
+ },
+ "Section 7.2: files.": {
+  "fr": "Section 7.2 : fichiers.",
+  "es": "Sección 7.2: archivos.",
+  "it": "Sezione 7.2: file.",
+  "ar": "القسم 7.2: الملفات.",
+  "he": "סעיף 7.2: קבצים."
+ },
+ "Sections 3 and 4.": {
+  "fr": "Sections 3 et 4.",
+  "es": "Secciones 3 y 4.",
+  "it": "Sezioni 3 e 4.",
+  "ar": "القسمان 3 و4.",
+  "he": "סעיפים 3 ו-4."
+ },
+ "Sends a value back.": {
+  "fr": "Renvoie une valeur.",
+  "es": "Devuelve un valor.",
+  "it": "Restituisce un valore.",
+  "ar": "تعيد قيمة.",
+  "he": "מחזיר ערך."
+ },
+ "Skip and log them, then report how many.": {
+  "fr": "Ignorez-les et journalisez-les, puis indiquez combien il y en a.",
+  "es": "Omítelas y regístralas, y luego informa cuántas hay.",
+  "it": "Saltale e registrale, poi riporta quante sono.",
+  "ar": "تخطَّها وسجّلها، ثم أبلغ عن عددها.",
+  "he": "דלגו עליהן ותעדו אותן, ואז דווחו כמה היו."
+ },
+ "Small, single-purpose functions are easier to test.": {
+  "fr": "Les petites fonctions à but unique sont plus faciles à tester.",
+  "es": "Las funciones pequeñas y de un solo propósito son más fáciles de probar.",
+  "it": "Le funzioni piccole e con un solo scopo sono più facili da testare.",
+  "ar": "الدوال الصغيرة ذات الغرض الواحد أسهل في الاختبار.",
+  "he": "פונקציות קטנות בעלות מטרה אחת קלות יותר לבדיקה."
+ },
+ "Split strings and count words.": {
+  "fr": "Découper des chaînes et compter des mots.",
+  "es": "Dividir cadenas y contar palabras.",
+  "it": "Dividere stringhe e contare parole.",
+  "ar": "قسّم السلاسل النصية وعُدّ الكلمات.",
+  "he": "לפצל מחרוזות ולספור מילים."
+ },
+ "Square each number in xs with a comprehension.": {
+  "fr": "Élevez au carré chaque nombre de xs avec une compréhension.",
+  "es": "Eleva al cuadrado cada número de xs con una comprensión.",
+  "it": "Eleva al quadrato ogni numero di xs con una comprehension.",
+  "ar": "ربّع كل عدد في xs باستخدام comprehension.",
+  "he": "העלו בריבוע כל מספר ב-xs בעזרת comprehension."
+ },
+ "Start a notebook.": {
+  "fr": "Démarrez un notebook.",
+  "es": "Empieza un notebook.",
+  "it": "Avvia un notebook.",
+  "ar": "ابدأ دفترًا.",
+  "he": "התחילו מחברת."
+ },
+ "Stops before 6.": {
+  "fr": "S’arrête avant 6.",
+  "es": "Se detiene antes de 6.",
+  "it": "Si ferma prima di 6.",
+  "ar": "تتوقف قبل 6.",
+  "he": "עוצר לפני 6."
+ },
+ "Store collections of data: lists for sequences, dictionaries for lookups, and strings for text.": {
+  "fr": "Stocker des collections de données : des listes pour les séquences, des dictionnaires pour les recherches et des chaînes pour le texte.",
+  "es": "Almacenar colecciones de datos: listas para secuencias, diccionarios para búsquedas y cadenas para texto.",
+  "it": "Memorizzare raccolte di dati: liste per le sequenze, dizionari per le ricerche e stringhe per il testo.",
+  "ar": "خزّن مجموعات البيانات: القوائم للتسلسلات، والقواميس للبحث، والسلاسل النصية للنص.",
+  "he": "לאחסן אוספי נתונים: רשימות לרצפים, מילונים לחיפושים, ומחרוזות לטקסט."
+ },
+ "Strings are sequences of characters with methods like split, strip, lower and startswith.": {
+  "fr": "Les chaînes sont des séquences de caractères avec des méthodes comme split, strip, lower et startswith.",
+  "es": "Las cadenas son secuencias de caracteres con métodos como split, strip, lower y startswith.",
+  "it": "Le stringhe sono sequenze di caratteri con metodi come split, strip, lower e startswith.",
+  "ar": "السلاسل النصية تسلسلات من الأحرف لها توابع مثل split وstrip وlower وstartswith.",
+  "he": "מחרוזות הן רצפים של תווים עם מתודות כמו split, strip, lower ו-startswith."
+ },
+ "Subtract, then divide by the starting value.": {
+  "fr": "Soustrayez, puis divisez par la valeur de départ.",
+  "es": "Resta y luego divide por el valor inicial.",
+  "it": "Sottrai, poi dividi per il valore iniziale.",
+  "ar": "اطرح، ثم اقسم على القيمة الابتدائية.",
+  "he": "חסרו, ואז חלקו בערך ההתחלתי."
+ },
+ "Successive differences.": {
+  "fr": "Différences successives.",
+  "es": "Diferencias sucesivas.",
+  "it": "Differenze successive.",
+  "ar": "الفروق المتتالية.",
+  "he": "הפרשים עוקבים."
+ },
+ "Sum of m³/s × 86,400 s per day.": {
+  "fr": "Somme des m³/s × 86400 s par jour.",
+  "es": "Suma de m³/s × 86400 s por día.",
+  "it": "Somma di m³/s × 86400 s al giorno.",
+  "ar": "مجموع m³/s × 86400 s في اليوم.",
+  "he": "סכום של m³/s × 86400 s ליום."
+ },
+ "Summarize ten days of USGS daily mean flow for the Potomac at Little Falls (June 1–10, 2025, in cubic feet per second).": {
+  "fr": "Résumez dix jours de débit moyen journalier USGS du Potomac à Little Falls (1–10 juin 2025, en pieds cubes par seconde).",
+  "es": "Resume diez días de caudal medio diario del USGS para el Potomac en Little Falls (1–10 de junio de 2025, en pies cúbicos por segundo).",
+  "it": "Riassumi dieci giorni di portata media giornaliera USGS del Potomac a Little Falls (1–10 giugno 2025, in piedi cubi al secondo).",
+  "ar": "لخّص عشرة أيام من متوسط التدفق اليومي من USGS لنهر بوتوماك عند Little Falls (1–10 يونيو 2025، بالقدم المكعبة في الثانية).",
+  "he": "סכמו עשרה ימים של ספיקה יומית ממוצעת של USGS לנהר הפוטומק ב-Little Falls (‏1–10 ביוני 2025, ברגל מעוקבת לשנייה)."
+ },
+ "Tests are small functions that check known answers; pytest runs every function named test_… automatically.": {
+  "fr": "Les tests sont de petites fonctions qui vérifient des réponses connues ; pytest exécute automatiquement toute fonction nommée test_….",
+  "es": "Las pruebas son funciones pequeñas que comprueban respuestas conocidas; pytest ejecuta automáticamente toda función llamada test_….",
+  "it": "I test sono piccole funzioni che verificano risposte note; pytest esegue automaticamente ogni funzione chiamata test_….",
+  "ar": "الاختبارات دوال صغيرة تتحقق من إجابات معروفة؛ وpytest يشغّل تلقائيًا كل دالة اسمها test_….",
+  "he": "בדיקות הן פונקציות קטנות שבודקות תשובות ידועות; pytest מריץ אוטומטית כל פונקציה ששמה test_…."
+ },
+ "Text → list of pieces.": {
+  "fr": "Texte → liste de morceaux.",
+  "es": "Texto → lista de trozos.",
+  "it": "Testo → lista di pezzi.",
+  "ar": "نص → قائمة أجزاء.",
+  "he": "טקסט → רשימת חלקים."
+ },
+ "Text.": {
+  "fr": "Texte.",
+  "es": "Texto.",
+  "it": "Testo.",
+  "ar": "نص.",
+  "he": "טקסט."
+ },
+ "The \"a\" file mode…": {
+  "fr": "Le mode de fichier \"a\"…",
+  "es": "El modo de archivo \"a\"…",
+  "it": "La modalità di file \"a\"…",
+  "ar": "وضع الملف \"a\"…",
+  "he": "מצב הקובץ \"a\"…"
+ },
+ "The accumulator pattern: start a total at 0 and add inside the loop.": {
+  "fr": "Le motif de l’accumulateur : initialisez un total à 0 et ajoutez dans la boucle.",
+  "es": "El patrón acumulador: empieza un total en 0 y suma dentro del bucle.",
+  "it": "Lo schema dell’accumulatore: inizia un totale da 0 e somma dentro il ciclo.",
+  "ar": "نمط المُراكِم: ابدأ المجموع من 0 وأضف داخل الحلقة.",
+  "he": "תבנית הצובר: מתחילים סכום ב-0 ומוסיפים בתוך הלולאה."
+ },
+ "The f-string formats :.2f (2 decimals) and :.1% (percent).": {
+  "fr": "La f-string formate :.2f (2 décimales) et :.1% (pourcentage).",
+  "es": "La f-string da formato con :.2f (2 decimales) y :.1% (porcentaje).",
+  "it": "La f-string formatta con :.2f (2 decimali) e :.1% (percentuale).",
+  "ar": "تنسّق f-string القيمة بـ :.2f (منزلتان عشريتان، 2) و:.1% (نسبة مئوية).",
+  "he": "ה-f-string מעצבת :.2f (2 ספרות אחרי הנקודה) ו-:.1% (אחוזים)."
+ },
+ "The file is closed automatically, even if an error occurs.": {
+  "fr": "Le fichier est fermé automatiquement, même en cas d’erreur.",
+  "es": "El archivo se cierra automáticamente, incluso si ocurre un error.",
+  "it": "Il file viene chiuso automaticamente, anche in caso di errore.",
+  "ar": "يُغلق الملف تلقائيًا، حتى لو حدث خطأ.",
+  "he": "הקובץ נסגר אוטומטית, גם אם מתרחשת שגיאה."
+ },
+ "The loop adds 2.5 ppm and one year until ppm ≥ 450.": {
+  "fr": "La boucle ajoute 2.5 ppm et un an jusqu’à ppm ≥ 450.",
+  "es": "El bucle suma 2.5 ppm y un año hasta que ppm ≥ 450.",
+  "it": "Il ciclo aggiunge 2.5 ppm e un anno finché ppm ≥ 450.",
+  "ar": "تضيف الحلقة 2.5 ppm وسنة واحدة حتى ppm ≥ 450.",
+  "he": "הלולאה מוסיפה 2.5 ppm ושנה אחת עד ש-ppm ≥ 450."
+ },
+ "The numbers in Example 1.2 come straight from NOAA’s Global Monitoring Laboratory, which publishes the Mauna Loa CO₂ record as a free CSV file. A few lines of Python turn it into the headline facts of climate science.": {
+  "fr": "Les nombres de l’exemple 1.2 viennent directement du Global Monitoring Laboratory de la NOAA, qui publie la série de CO₂ de Mauna Loa sous forme de fichier CSV gratuit. Quelques lignes de Python en tirent les faits phares de la science du climat.",
+  "es": "Los números del ejemplo 1.2 salen directamente del Global Monitoring Laboratory de NOAA, que publica el registro de CO₂ de Mauna Loa como un archivo CSV gratuito. Unas pocas líneas de Python lo convierten en los datos clave de la ciencia del clima.",
+  "it": "I numeri dell’esempio 1.2 vengono direttamente dal Global Monitoring Laboratory della NOAA, che pubblica la serie di CO₂ di Mauna Loa come file CSV gratuito. Poche righe di Python la trasformano nei fatti chiave della scienza del clima.",
+  "ar": "الأرقام في المثال 1.2 مأخوذة مباشرة من مختبر الرصد العالمي (GML) التابع لـ NOAA، الذي ينشر سجل CO₂ في ماونا لوا كملف CSV مجاني. بضعة أسطر من بايثون تحوله إلى الحقائق الرئيسية في علم المناخ.",
+  "he": "המספרים בדוגמה 1.2 מגיעים ישירות מה-Global Monitoring Laboratory של NOAA, שמפרסמת את רשומת ה-CO₂ של מאונה לואה כקובץ CSV חינמי. כמה שורות פייתון הופכות אותה לעובדות המרכזיות של מדע האקלים."
+ },
+ "The official Python tutorial": {
+  "fr": "Le tutoriel officiel de Python",
+  "es": "El tutorial oficial de Python",
+  "it": "Il tutorial ufficiale di Python",
+  "ar": "درس بايثون التعليمي الرسمي",
+  "he": "המדריך הרשמי של פייתון"
+ },
+ "The real data.": {
+  "fr": "Les vraies données.",
+  "es": "Los datos reales.",
+  "it": "I dati reali.",
+  "ar": "البيانات الحقيقية.",
+  "he": "הנתונים האמיתיים."
+ },
+ "The real file.": {
+  "fr": "Le vrai fichier.",
+  "es": "El archivo real.",
+  "it": "Il file reale.",
+  "ar": "الملف الحقيقي.",
+  "he": "הקובץ האמיתי."
+ },
+ "They are read as strings until converted.": {
+  "fr": "Ils sont lus comme des chaînes tant qu’ils ne sont pas convertis.",
+  "es": "Se leen como cadenas hasta que se convierten.",
+  "it": "Vengono letti come stringhe finché non vengono convertiti.",
+  "ar": "تُقرأ كسلاسل نصية حتى تُحوَّل.",
+  "he": "הם נקראים כמחרוזות עד שממירים אותם."
+ },
+ "They can change in place.": {
+  "fr": "Elles peuvent changer sur place.",
+  "es": "Pueden cambiar en su lugar.",
+  "it": "Possono cambiare sul posto.",
+  "ar": "يمكن أن تتغير في مكانها.",
+  "he": "הן יכולות להשתנות במקום."
+ },
+ "They start at 0.": {
+  "fr": "Elles commencent à 0.",
+  "es": "Empiezan en 0.",
+  "it": "Partono da 0.",
+  "ar": "تبدأ من 0.",
+  "he": "הן מתחילות ב-0."
+ },
+ "Thresholds like 1.0 °C or 450 ppm are exactly what monitoring programs test with if statements, flagging records and alerts automatically as new data arrives.": {
+  "fr": "Des seuils comme 1.0 °C ou 450 ppm sont exactement ce que les programmes de surveillance testent avec des instructions if, signalant automatiquement records et alertes à l’arrivée de nouvelles données.",
+  "es": "Umbrales como 1.0 °C o 450 ppm son justo lo que los programas de monitoreo prueban con sentencias if, marcando récords y alertas automáticamente cuando llegan datos nuevos.",
+  "it": "Soglie come 1.0 °C o 450 ppm sono proprio ciò che i programmi di monitoraggio verificano con istruzioni if, segnalando automaticamente record e allarmi all’arrivo di nuovi dati.",
+  "ar": "عتبات مثل 1.0 °C أو 450 ppm هي بالضبط ما تختبره برامج الرصد بعبارات if، فتُعلِّم السجلات والتنبيهات تلقائيًا عند وصول بيانات جديدة.",
+  "he": "ספים כמו 1.0 °C או 450 ppm הם בדיוק מה שתוכניות ניטור בודקות במשפטי if, ומסמנות שיאים והתרעות באופן אוטומטי כשמגיעים נתונים חדשים."
+ },
+ "Tolerance test for floats": {
+  "fr": "Test avec tolérance pour les floats",
+  "es": "Prueba con tolerancia para floats",
+  "it": "Test con tolleranza per i float",
+  "ar": "اختبار بهامش تسامح لقيم float",
+  "he": "בדיקה עם סבולת ל-float"
+ },
+ "True": {
+  "fr": "True",
+  "es": "True",
+  "it": "True",
+  "ar": "True",
+  "he": "True"
+ },
+ "True and False is False.": {
+  "fr": "True and False vaut False.",
+  "es": "True and False es False.",
+  "it": "True and False è False.",
+  "ar": "True and False يساوي False.",
+  "he": "True and False הוא False."
+ },
+ "True counts as 1.": {
+  "fr": "True compte pour 1.",
+  "es": "True cuenta como 1.",
+  "it": "True conta come 1.",
+  "ar": "True تُحسب 1.",
+  "he": "True נספר כ-1."
+ },
+ "True or False.": {
+  "fr": "True ou False.",
+  "es": "True o False.",
+  "it": "True o False.",
+  "ar": "True أو False.",
+  "he": "True או False."
+ },
+ "Tuple": {
+  "fr": "Tuple",
+  "es": "Tupla",
+  "it": "Tupla",
+  "ar": "الصف (Tuple)",
+  "he": "Tuple"
+ },
+ "Turn the stall-speed formula into a function and use it at two densities.": {
+  "fr": "Transformez la formule de vitesse de décrochage en fonction et utilisez-la à deux masses volumiques.",
+  "es": "Convierte la fórmula de la velocidad de pérdida en una función y úsala con dos densidades.",
+  "it": "Trasforma la formula della velocità di stallo in una funzione e usala a due densità.",
+  "ar": "حوّل صيغة سرعة الانهيار إلى دالة واستخدمها عند كثافتين.",
+  "he": "הפכו את נוסחת מהירות ההזדקרות לפונקציה והשתמשו בה בשתי צפיפויות."
+ },
+ "Two keys.": {
+  "fr": "Deux clés.",
+  "es": "Dos claves.",
+  "it": "Due chiavi.",
+  "ar": "مفتاحان.",
+  "he": "שני מפתחות."
+ },
+ "Type every example yourself instead of pasting; your fingers learn syntax.": {
+  "fr": "Tapez vous-même chaque exemple au lieu de le coller ; vos doigts apprennent la syntaxe.",
+  "es": "Escribe tú mismo cada ejemplo en lugar de pegarlo; tus dedos aprenden la sintaxis.",
+  "it": "Digita tu ogni esempio invece di incollarlo; le dita imparano la sintassi.",
+  "ar": "اكتب كل مثال بنفسك بدل لصقه؛ فأصابعك تتعلم الصياغة.",
+  "he": "הקלידו כל דוגמה בעצמכם במקום להדביק; האצבעות לומדות את התחביר."
+ },
+ "TypeError": {
+  "fr": "TypeError",
+  "es": "TypeError",
+  "it": "TypeError",
+  "ar": "TypeError",
+  "he": "TypeError"
+ },
+ "USGS Water Services (data API)": {
+  "fr": "USGS Water Services (API de données)",
+  "es": "USGS Water Services (API de datos)",
+  "it": "USGS Water Services (API dei dati)",
+  "ar": "USGS Water Services (واجهة برمجة البيانات)",
+  "he": "USGS Water Services (ממשק נתונים)"
+ },
+ "USGS publishes daily streamflow for thousands of river gauges. The ten numbers in Example 4.1 are real: a high-flow pulse on the Potomac receding over a week, the kind of record used for water supply and flood planning.": {
+  "fr": "L’USGS publie le débit journalier de milliers de stations hydrométriques. Les dix nombres de l’exemple 4.1 sont réels : une crue du Potomac qui décroît sur une semaine, le genre de série utilisée pour l’approvisionnement en eau et la planification des inondations.",
+  "es": "El USGS publica el caudal diario de miles de medidores de ríos. Los diez números del ejemplo 4.1 son reales: un pulso de caudal alto en el Potomac que baja durante una semana, el tipo de registro que se usa para el abastecimiento de agua y la planificación de inundaciones.",
+  "it": "L’USGS pubblica la portata giornaliera di migliaia di idrometri. I dieci numeri dell’esempio 4.1 sono reali: un’onda di piena del Potomac che cala nell’arco di una settimana, il tipo di serie usata per l’approvvigionamento idrico e la pianificazione delle piene.",
+  "ar": "تنشر USGS التدفق اليومي لآلاف مقاييس الأنهار. الأرقام العشرة في المثال 4.1 حقيقية: نبضة تدفق مرتفع في نهر بوتوماك تنحسر على مدى أسبوع، وهو نوع السجلات المستخدم في التخطيط لإمدادات المياه والفيضانات.",
+  "he": "USGS מפרסם ספיקה יומית לאלפי מדי נהרות. עשרת המספרים בדוגמה 4.1 אמיתיים: גל ספיקה גבוהה בפוטומק שדועך במשך שבוע, סוג הרשומה שמשמשת לתכנון אספקת מים והצפות."
+ },
+ "USGS: Potomac River near Washington, DC (Little Falls), site 01646500": {
+  "fr": "USGS: Potomac River near Washington, DC (Little Falls), site 01646500",
+  "es": "USGS: Potomac River near Washington, DC (Little Falls), site 01646500",
+  "it": "USGS: Potomac River near Washington, DC (Little Falls), site 01646500",
+  "ar": "USGS: Potomac River near Washington, DC (Little Falls), site 01646500",
+  "he": "USGS: Potomac River near Washington, DC (Little Falls), site 01646500"
+ },
+ "Understand local scope.": {
+  "fr": "Comprendre la portée locale.",
+  "es": "Entender el ámbito local.",
+  "it": "Capire l’ambito locale.",
+  "ar": "افهم النطاق المحلي.",
+  "he": "להבין טווח הכרה מקומי."
+ },
+ "Unit conversion (Example 5.2)": {
+  "fr": "Conversion d’unités (exemple 5.2)",
+  "es": "Conversión de unidades (ejemplo 5.2)",
+  "it": "Conversione di unità (esempio 5.2)",
+  "ar": "تحويل الوحدات (المثال 5.2)",
+  "he": "המרת יחידות (דוגמה 5.2)"
+ },
+ "Use NumPy on Mauna Loa annual means 2021–2025: differences, mean and trend.": {
+  "fr": "Utilisez NumPy sur les moyennes annuelles de Mauna Loa 2021–2025 : différences, moyenne et tendance.",
+  "es": "Usa NumPy con las medias anuales de Mauna Loa 2021–2025: diferencias, media y tendencia.",
+  "it": "Usa NumPy sulle medie annue di Mauna Loa 2021–2025: differenze, media e tendenza.",
+  "ar": "استخدم NumPy على المتوسطات السنوية في ماونا لوا 2021–2025: الفروق والمتوسط والاتجاه.",
+  "he": "השתמשו ב-NumPy על הממוצעים השנתיים של מאונה לואה 2021–2025: הפרשים, ממוצע ומגמה."
+ },
+ "Use arithmetic operators, including //, % and **.": {
+  "fr": "Utiliser les opérateurs arithmétiques, dont //, % et **.",
+  "es": "Usar operadores aritméticos, incluidos //, % y **.",
+  "it": "Usare gli operatori aritmetici, inclusi //, % e **.",
+  "ar": "استخدم العوامل الحسابية، بما فيها // و% و**.",
+  "he": "להשתמש באופרטורים אריתמטיים, כולל //, % ו-**."
+ },
+ "Use default and keyword arguments.": {
+  "fr": "Utiliser des arguments par défaut et nommés.",
+  "es": "Usar argumentos por defecto y con nombre.",
+  "it": "Usare argomenti predefiniti e per parola chiave.",
+  "ar": "استخدم الوسائط الافتراضية والوسائط المسماة.",
+  "he": "להשתמש בארגומנטים עם ברירת מחדל ובארגומנטים בשם."
+ },
+ "Use len, sum, min, max and sorted.": {
+  "fr": "Utiliser len, sum, min, max et sorted.",
+  "es": "Usar len, sum, min, max y sorted.",
+  "it": "Usare len, sum, min, max e sorted.",
+  "ar": "استخدم len وsum وmin وmax وsorted.",
+  "he": "להשתמש ב-len, sum, min, max ו-sorted."
+ },
+ "Use mean, diff, boolean masks and polyfit.": {
+  "fr": "Utiliser mean, diff, les masques booléens et polyfit.",
+  "es": "Usar mean, diff, máscaras booleanas y polyfit.",
+  "it": "Usare mean, diff, maschere booleane e polyfit.",
+  "ar": "استخدم mean وdiff والأقنعة المنطقية وpolyfit.",
+  "he": "להשתמש ב-mean, diff, מסכות בוליאניות ו-polyfit."
+ },
+ "Use print and assertions to narrow down bugs.": {
+  "fr": "Utiliser print et des assertions pour cerner les bogues.",
+  "es": "Usar print y aserciones para acotar los errores.",
+  "it": "Usare print e asserzioni per circoscrivere i bug.",
+  "ar": "استخدم print والتأكيدات لتضييق نطاق الأخطاء.",
+  "he": "להשתמש ב-print ובהצהרות assert כדי לצמצם באגים."
+ },
+ "Use tolerances for floats and convert types on purpose.": {
+  "fr": "Utilisez des tolérances pour les floats et convertissez les types volontairement.",
+  "es": "Usa tolerancias con floats y convierte tipos a propósito.",
+  "it": "Usa tolleranze per i float e converti i tipi di proposito.",
+  "ar": "استخدم هوامش تسامح مع float وحوّل الأنواع عن قصد.",
+  "he": "השתמשו בסבולות ל-float והמירו טיפוסים במכוון."
+ },
+ "Use urllib.request.urlopen(url) or download it, then skip lines starting with #.": {
+  "fr": "Utilisez urllib.request.urlopen(url) ou téléchargez-le, puis sautez les lignes commençant par #.",
+  "es": "Usa urllib.request.urlopen(url) o descárgalo, y salta las líneas que empiezan por #.",
+  "it": "Usa urllib.request.urlopen(url) o scaricalo, poi salta le righe che iniziano con #.",
+  "ar": "استخدم urllib.request.urlopen(url) أو نزّله، ثم تخطَّ الأسطر التي تبدأ بـ #.",
+  "he": "השתמשו ב-urllib.request.urlopen(url) או הורידו אותו, ואז דלגו על שורות שמתחילות ב-#."
+ },
+ "Use variables and the types int, float, str and bool.": {
+  "fr": "Utiliser des variables et les types int, float, str et bool.",
+  "es": "Usar variables y los tipos int, float, str y bool.",
+  "it": "Usare variabili e i tipi int, float, str e bool.",
+  "ar": "استخدم المتغيرات والأنواع int وfloat وstr وbool.",
+  "he": "להשתמש במשתנים ובטיפוסים int, float, str ו-bool."
+ },
+ "Use while loops with a clear stopping condition.": {
+  "fr": "Utiliser des boucles while avec une condition d’arrêt claire.",
+  "es": "Usar bucles while con una condición de parada clara.",
+  "it": "Usare cicli while con una condizione di arresto chiara.",
+  "ar": "استخدم حلقات while بشرط توقف واضح.",
+  "he": "להשתמש בלולאות while עם תנאי עצירה ברור."
+ },
+ "Value used if omitted.": {
+  "fr": "Valeur utilisée s’il est omis.",
+  "es": "Valor usado si se omite.",
+  "it": "Valore usato se omesso.",
+  "ar": "القيمة المستخدمة عند حذفه.",
+  "he": "ערך שמשמש אם הוא הושמט."
+ },
+ "ValueError": {
+  "fr": "ValueError",
+  "es": "ValueError",
+  "it": "ValueError",
+  "ar": "ValueError",
+  "he": "ValueError"
+ },
+ "Variable": {
+  "fr": "Variable",
+  "es": "Variable",
+  "it": "Variabile",
+  "ar": "المتغير",
+  "he": "משתנה"
+ },
+ "Variables created inside a function are local and vanish when it returns.": {
+  "fr": "Les variables créées dans une fonction sont locales et disparaissent à son retour.",
+  "es": "Las variables creadas dentro de una función son locales y desaparecen cuando esta retorna.",
+  "it": "Le variabili create in una funzione sono locali e spariscono al ritorno.",
+  "ar": "المتغيرات المنشأة داخل دالة محلية وتختفي عند عودتها.",
+  "he": "משתנים שנוצרים בתוך פונקציה הם מקומיים ונעלמים כשהיא חוזרת."
+ },
+ "Variables made inside a function are…": {
+  "fr": "Les variables créées dans une fonction sont…",
+  "es": "Las variables creadas dentro de una función son…",
+  "it": "Le variabili create dentro una funzione sono…",
+  "ar": "المتغيرات المنشأة داخل دالة تكون…",
+  "he": "משתנים שנוצרים בתוך פונקציה הם…"
+ },
+ "Vectorized": {
+  "fr": "Vectorisé",
+  "es": "Vectorizado",
+  "it": "Vettorializzato",
+  "ar": "متجه",
+  "he": "וקטורי"
+ },
+ "Volume from daily flows (Example 6.2)": {
+  "fr": "Volume à partir des débits journaliers (exemple 6.2)",
+  "es": "Volumen a partir de caudales diarios (ejemplo 6.2)",
+  "it": "Volume dalle portate giornaliere (esempio 6.2)",
+  "ar": "الحجم من التدفقات اليومية (المثال 6.2)",
+  "he": "נפח מתוך ספיקות יומיות (דוגמה 6.2)"
+ },
+ "Weeks 5–6": {
+  "fr": "Semaines 5–6",
+  "es": "Semanas 5–6",
+  "it": "Settimane 5–6",
+  "ar": "الأسابيع 5–6",
+  "he": "שבועות 5–6"
+ },
+ "What does 17 % 5 give?": {
+  "fr": "Que donne 17 % 5 ?",
+  "es": "¿Qué da 17 % 5?",
+  "it": "Che cosa dà 17 % 5?",
+  "ar": "ماذا يعطي 17 % 5؟",
+  "he": "מה נותן 17 % 5?"
+ },
+ "What does a function without return give?": {
+  "fr": "Que renvoie une fonction sans return ?",
+  "es": "¿Qué devuelve una función sin return?",
+  "it": "Cosa restituisce una funzione senza return?",
+  "ar": "ماذا تعيد الدالة التي لا تحتوي return؟",
+  "he": "מה מחזירה פונקציה בלי return?"
+ },
+ "What does csv.DictReader give for each row?": {
+  "fr": "Que donne csv.DictReader pour chaque ligne ?",
+  "es": "¿Qué da csv.DictReader para cada fila?",
+  "it": "Cosa restituisce csv.DictReader per ogni riga?",
+  "ar": "ماذا تعطي csv.DictReader لكل صف؟",
+  "he": "מה נותן csv.DictReader לכל שורה?"
+ },
+ "What is [10, 20, 30, 40][1:3]?": {
+  "fr": "Que vaut [10, 20, 30, 40][1:3] ?",
+  "es": "¿Qué es [10, 20, 30, 40][1:3]?",
+  "it": "Cos’è [10, 20, 30, 40][1:3]?",
+  "ar": "ما قيمة [10, 20, 30, 40][1:3]؟",
+  "he": "מה זה [10, 20, 30, 40][1:3]?"
+ },
+ "What is wrong with: while x < 10: print(x)": {
+  "fr": "Qu’est-ce qui ne va pas dans : while x < 10: print(x)",
+  "es": "¿Qué está mal en: while x < 10: print(x)",
+  "it": "Cosa c’è di sbagliato in: while x < 10: print(x)",
+  "ar": "ما الخطأ في: while x < 10: print(x)",
+  "he": "מה שגוי ב: while x < 10: print(x)"
+ },
+ "What type is 3 * 2.0?": {
+  "fr": "De quel type est 3 * 2.0 ?",
+  "es": "¿De qué tipo es 3 * 2.0?",
+  "it": "Di che tipo è 3 * 2.0?",
+  "ar": "ما نوع 3 * 2.0؟",
+  "he": "מה הטיפוס של 3 * 2.0?"
+ },
+ "What we add: every example is real Python that our build script runs before the page goes live, and its printed output must match what you see here exactly. The data comes from real public sources: NOAA’s Mauna Loa CO₂ record, NASA’s GISTEMP temperature analysis and USGS river gauges.": {
+  "fr": "Ce que nous ajoutons : chaque exemple est du vrai Python que notre script de construction exécute avant la mise en ligne de la page, et sa sortie affichée doit correspondre exactement à ce que vous voyez ici. Les données proviennent de vraies sources publiques : la série de CO₂ de Mauna Loa de la NOAA, l’analyse de température GISTEMP de la NASA et les stations hydrométriques de l’USGS.",
+  "es": "Lo que añadimos: cada ejemplo es Python real que nuestro script de compilación ejecuta antes de publicar la página, y su salida impresa debe coincidir exactamente con lo que ves aquí. Los datos provienen de fuentes públicas reales: el registro de CO₂ de Mauna Loa de NOAA, el análisis de temperatura GISTEMP de la NASA y los medidores de ríos del USGS.",
+  "it": "Cosa aggiungiamo: ogni esempio è vero codice Python che il nostro script di build esegue prima della pubblicazione della pagina, e l’output stampato deve corrispondere esattamente a quello che vedi qui. I dati provengono da vere fonti pubbliche: la serie di CO₂ di Mauna Loa della NOAA, l’analisi delle temperature GISTEMP della NASA e gli idrometri dell’USGS.",
+  "ar": "ما نضيفه: كل مثال هو كود بايثون حقيقي يشغّله نص البناء لدينا قبل نشر الصفحة، ويجب أن يطابق ناتجه المطبوع ما تراه هنا تمامًا. تأتي البيانات من مصادر عامة حقيقية: سجل CO₂ في ماونا لوا من NOAA، وتحليل درجات الحرارة GISTEMP من NASA، ومقاييس الأنهار من USGS.",
+  "he": "מה אנחנו מוסיפים: כל דוגמה היא קוד פייתון אמיתי שסקריפט הבנייה שלנו מריץ לפני שהדף עולה, והפלט המודפס שלה חייב להתאים בדיוק למה שאתם רואים כאן. הנתונים מגיעים ממקורות ציבוריים אמיתיים: רשומת ה-CO₂ של מאונה לואה מ-NOAA, ניתוח הטמפרטורה GISTEMP של NASA ומדי נהרות של USGS."
+ },
+ "When stuck, read the error message from the bottom up.": {
+  "fr": "Quand vous êtes bloqué, lisez le message d’erreur de bas en haut.",
+  "es": "Cuando te atasques, lee el mensaje de error de abajo hacia arriba.",
+  "it": "Quando sei bloccato, leggi il messaggio di errore dal basso verso l’alto.",
+  "ar": "عندما تتعثر، اقرأ رسالة الخطأ من الأسفل إلى الأعلى.",
+  "he": "כשנתקעים, קראו את הודעת השגיאה מלמטה למעלה."
+ },
+ "Where a name is visible.": {
+  "fr": "Où un nom est visible.",
+  "es": "Dónde es visible un nombre.",
+  "it": "Dove un nome è visibile.",
+  "ar": "حيث يكون الاسم مرئيًا.",
+  "he": "היכן שם נראה."
+ },
+ "Which call adds an axis label?": {
+  "fr": "Quel appel ajoute une légende d’axe ?",
+  "es": "¿Qué llamada añade un rótulo de eje?",
+  "it": "Quale chiamata aggiunge un’etichetta all’asse?",
+  "ar": "أي استدعاء يضيف عنوانًا للمحور؟",
+  "he": "איזו קריאה מוסיפה תווית לציר?"
+ },
+ "Which keyword adds another test after if?": {
+  "fr": "Quel mot-clé ajoute un autre test après if ?",
+  "es": "¿Qué palabra clave añade otra prueba después de if?",
+  "it": "Quale parola chiave aggiunge un altro test dopo if?",
+  "ar": "أي كلمة مفتاحية تضيف اختبارًا آخر بعد if؟",
+  "he": "איזו מילת מפתח מוסיפה בדיקה נוספת אחרי if?"
+ },
+ "Whole number / decimal number.": {
+  "fr": "Nombre entier / nombre décimal.",
+  "es": "Número entero / número decimal.",
+  "it": "Numero intero / numero decimale.",
+  "ar": "عدد صحيح / عدد عشري.",
+  "he": "מספר שלם / מספר עשרוני."
+ },
+ "Why is mass_kg a better name than m?": {
+  "fr": "Pourquoi mass_kg est-il un meilleur nom que m ?",
+  "es": "¿Por qué mass_kg es mejor nombre que m?",
+  "it": "Perché mass_kg è un nome migliore di m?",
+  "ar": "لماذا mass_kg اسم أفضل من m؟",
+  "he": "למה mass_kg הוא שם טוב יותר מ-m?"
+ },
+ "Why test c_to_f at −40?": {
+  "fr": "Pourquoi tester c_to_f à −40 ?",
+  "es": "¿Por qué probar c_to_f en −40?",
+  "it": "Perché testare c_to_f a −40?",
+  "ar": "لماذا نختبر c_to_f عند −40؟",
+  "he": "למה לבדוק את c_to_f ב-−40?"
+ },
+ "Why use with open(...)?": {
+  "fr": "Pourquoi utiliser with open(...) ?",
+  "es": "¿Por qué usar with open(...)?",
+  "it": "Perché usare with open(...)?",
+  "ar": "لماذا نستخدم with open(...)؟",
+  "he": "למה להשתמש ב-with open(...)?"
+ },
+ "Write a function that returns year-to-year changes of a list (Mauna Loa annual means 2022–2025).": {
+  "fr": "Écrivez une fonction qui renvoie les variations d’une année sur l’autre d’une liste (moyennes annuelles de Mauna Loa 2022–2025).",
+  "es": "Escribe una función que devuelva los cambios interanuales de una lista (medias anuales de Mauna Loa 2022–2025).",
+  "it": "Scrivi una funzione che restituisca le variazioni anno su anno di una lista (medie annue di Mauna Loa 2022–2025).",
+  "ar": "اكتب دالة تعيد التغيرات من سنة إلى أخرى لقائمة (المتوسطات السنوية في ماونا لوا 2022–2025).",
+  "he": "כתבו פונקציה שמחזירה את השינויים משנה לשנה ברשימה (הממוצעים השנתיים במאונה לואה 2022–2025)."
+ },
+ "Write a loop that counts the odd numbers below 20.": {
+  "fr": "Écrivez une boucle qui compte les nombres impairs inférieurs à 20.",
+  "es": "Escribe un bucle que cuente los números impares menores que 20.",
+  "it": "Scrivi un ciclo che conti i numeri dispari minori di 20.",
+  "ar": "اكتب حلقة تعدّ الأعداد الفردية الأصغر من 20.",
+  "he": "כתבו לולאה שסופרת את המספרים האי-זוגיים מתחת ל-20."
+ },
+ "Write a small CSV of USGS flows, read it back and convert to m³/s.": {
+  "fr": "Écrivez un petit CSV de débits USGS, relisez-le et convertissez en m³/s.",
+  "es": "Escribe un pequeño CSV de caudales del USGS, vuelve a leerlo y conviértelo a m³/s.",
+  "it": "Scrivi un piccolo CSV di portate USGS, rileggilo e converti in m³/s.",
+  "ar": "اكتب ملف CSV صغيرًا لتدفقات USGS، ثم اقرأه وحوّل إلى m³/s.",
+  "he": "כתבו CSV קטן של ספיקות USGS, קראו אותו בחזרה והמירו ל-m³/s."
+ },
+ "Write an f-string that prints pi to 3 decimals.": {
+  "fr": "Écrivez une f-string qui affiche pi avec 3 décimales.",
+  "es": "Escribe una f-string que imprima pi con 3 decimales.",
+  "it": "Scrivi una f-string che stampi pi con 3 decimali.",
+  "ar": "اكتب f-string تطبع pi بـ 3 منازل عشرية.",
+  "he": "כתבו f-string שמדפיסה את pi עם 3 ספרות אחרי הנקודה."
+ },
+ "Write and test a Celsius-to-Fahrenheit function.": {
+  "fr": "Écrivez et testez une fonction de conversion Celsius-Fahrenheit.",
+  "es": "Escribe y prueba una función de Celsius a Fahrenheit.",
+  "it": "Scrivi e testa una funzione da Celsius a Fahrenheit.",
+  "ar": "اكتب دالة تحويل من سلسيوس إلى فهرنهايت واختبرها.",
+  "he": "כתבו ובדקו פונקציה להמרה מצלזיוס לפרנהייט."
+ },
+ "Write area_circle(r) and test it at r = 2.": {
+  "fr": "Écrivez area_circle(r) et testez-la à r = 2.",
+  "es": "Escribe area_circle(r) y pruébala con r = 2.",
+  "it": "Scrivi area_circle(r) e testala con r = 2.",
+  "ar": "اكتب area_circle(r) واختبرها عند r = 2.",
+  "he": "כתבו area_circle(r) ובדקו אותה ב-r = 2."
+ },
+ "Write docstrings.": {
+  "fr": "Écrire des docstrings.",
+  "es": "Escribir docstrings.",
+  "it": "Scrivere docstring.",
+  "ar": "اكتب docstrings.",
+  "he": "לכתוב docstrings."
+ },
+ "Write if/elif/else with comparison and boolean operators.": {
+  "fr": "Écrire des if/elif/else avec des opérateurs de comparaison et booléens.",
+  "es": "Escribir if/elif/else con operadores de comparación y booleanos.",
+  "it": "Scrivere if/elif/else con operatori di confronto e booleani.",
+  "ar": "اكتب if/elif/else مع عوامل المقارنة والعوامل المنطقية.",
+  "he": "לכתוב if/elif/else עם אופרטורי השוואה ואופרטורים בוליאניים."
+ },
+ "Write unit tests with assert and pytest.": {
+  "fr": "Écrire des tests unitaires avec assert et pytest.",
+  "es": "Escribir pruebas unitarias con assert y pytest.",
+  "it": "Scrivere test unitari con assert e pytest.",
+  "ar": "اكتب اختبارات وحدات باستخدام assert وpytest.",
+  "he": "לכתוב בדיקות יחידה עם assert ו-pytest."
+ },
+ "Writes an image file.": {
+  "fr": "Écrit un fichier image.",
+  "es": "Escribe un archivo de imagen.",
+  "it": "Scrive un file immagine.",
+  "ar": "تكتب ملف صورة.",
+  "he": "כותב קובץ תמונה."
+ },
+ "You need nothing installed: use Google Colab or JupyterLite, which runs Python inside your browser with Pyodide. Your progress is saved only in this browser.": {
+  "fr": "Vous n’avez rien à installer : utilisez Google Colab ou JupyterLite, qui exécute Python dans votre navigateur grâce à Pyodide. Votre progression n’est enregistrée que dans ce navigateur.",
+  "es": "No necesitas instalar nada: usa Google Colab o JupyterLite, que ejecuta Python dentro de tu navegador con Pyodide. Tu progreso se guarda solo en este navegador.",
+  "it": "Non serve installare nulla: usa Google Colab o JupyterLite, che esegue Python nel browser con Pyodide. I tuoi progressi sono salvati solo in questo browser.",
+  "ar": "لا تحتاج إلى تثبيت أي شيء: استخدم Google Colab أو JupyterLite، الذي يشغّل بايثون داخل متصفحك باستخدام Pyodide. يُحفظ تقدمك في هذا المتصفح فقط.",
+  "he": "אין צורך להתקין דבר: השתמשו ב-Google Colab או ב-JupyterLite, שמריץ פייתון בתוך הדפדפן בעזרת Pyodide. ההתקדמות שלכם נשמרת רק בדפדפן הזה."
+ },
+ "[1, 2] + [3, 4] concatenates; arrays add elementwise.": {
+  "fr": "[1, 2] + [3, 4] concatène ; les tableaux s’additionnent élément par élément.",
+  "es": "[1, 2] + [3, 4] concatena; los arreglos se suman elemento a elemento.",
+  "it": "[1, 2] + [3, 4] concatena; gli array si sommano elemento per elemento.",
+  "ar": "[1, 2] + [3, 4] يضم القائمتين؛ والمصفوفات تُجمع عنصرًا بعنصر.",
+  "he": "[1, 2] + [3, 4] משרשר; מערכים מתחברים איבר-איבר."
+ },
+ "[f(x) for x in xs if cond].": {
+  "fr": "[f(x) for x in xs if cond].",
+  "es": "[f(x) for x in xs if cond].",
+  "it": "[f(x) for x in xs if cond].",
+  "ar": "[f(x) for x in xs if cond].",
+  "he": "[f(x) for x in xs if cond]."
+ },
+ "[x**2 for x in xs].": {
+  "fr": "[x**2 for x in xs].",
+  "es": "[x**2 for x in xs].",
+  "it": "[x**2 for x in xs].",
+  "ar": "[x**2 for x in xs].",
+  "he": "[x**2 for x in xs]."
+ },
+ "a constant": {
+  "fr": "une constante",
+  "es": "una constante",
+  "it": "una costante",
+  "ar": "ثابت",
+  "he": "קבוע"
+ },
+ "a default argument": {
+  "fr": "un argument par défaut",
+  "es": "un argumento por defecto",
+  "it": "un argomento predefinito",
+  "ar": "وسيط افتراضي",
+  "he": "ארגומנט ברירת מחדל"
+ },
+ "a plot": {
+  "fr": "un graphique",
+  "es": "un gráfico",
+  "it": "un grafico",
+  "ar": "رسمًا",
+  "he": "גרף"
+ },
+ "a up to b−1, step s.": {
+  "fr": "De a jusqu’à b−1, avec un pas s.",
+  "es": "De a hasta b−1, con paso s.",
+  "it": "Da a fino a b−1, con passo s.",
+  "ar": "من a إلى b−1، بخطوة s.",
+  "he": "מ-a עד b−1, בצעד s."
+ },
+ "after 10 times": {
+  "fr": "après 10 tours",
+  "es": "tras 10 vueltas",
+  "it": "dopo 10 volte",
+  "ar": "بعد 10 مرات",
+  "he": "אחרי 10 פעמים"
+ },
+ "all values": {
+  "fr": "toutes les valeurs",
+  "es": "todos los valores",
+  "it": "tutti i valori",
+  "ar": "كل القيم",
+  "he": "את כל הערכים"
+ },
+ "always sorted": {
+  "fr": "toujours triées",
+  "es": "siempre ordenadas",
+  "it": "sempre ordinate",
+  "ar": "مرتبة دائمًا",
+  "he": "תמיד ממוינות"
+ },
+ "an error": {
+  "fr": "une erreur",
+  "es": "un error",
+  "it": "un errore",
+  "ar": "خطأ",
+  "he": "שגיאה"
+ },
+ "appends": {
+  "fr": "ajoute",
+  "es": "añade al final",
+  "it": "aggiunge in coda",
+  "ar": "يضيف في النهاية",
+  "he": "מוסיף לסוף"
+ },
+ "array([2, 4, 6]).": {
+  "fr": "array([2, 4, 6]).",
+  "es": "array([2, 4, 6]).",
+  "it": "array([2, 4, 6]).",
+  "ar": "array([2, 4, 6]).",
+  "he": "array([2, 4, 6])."
+ },
+ "at a print": {
+  "fr": "à un print",
+  "es": "en un print",
+  "it": "a un print",
+  "ar": "عند print",
+  "he": "ב-print"
+ },
+ "ax.set_xlabel(\"Year\").": {
+  "fr": "ax.set_xlabel(\"Year\").",
+  "es": "ax.set_xlabel(\"Year\").",
+  "it": "ax.set_xlabel(\"Year\").",
+  "ar": "ax.set_xlabel(\"Year\").",
+  "he": "ax.set_xlabel(\"Year\")."
+ },
+ "bool": {
+  "fr": "bool",
+  "es": "bool",
+  "it": "bool",
+  "ar": "bool",
+  "he": "bool"
+ },
+ "break / continue": {
+  "fr": "break / continue",
+  "es": "break / continue",
+  "it": "break / continue",
+  "ar": "break / continue",
+  "he": "break / continue"
+ },
+ "case": {
+  "fr": "case",
+  "es": "case",
+  "it": "case",
+  "ar": "case",
+  "he": "case"
+ },
+ "cl_max has a default, so callers can omit it.": {
+  "fr": "cl_max a une valeur par défaut, donc l’appelant peut l’omettre.",
+  "es": "cl_max tiene un valor por defecto, así que quien llama puede omitirlo.",
+  "it": "cl_max ha un valore predefinito, quindi chi chiama può ometterlo.",
+  "ar": "لـ cl_max قيمة افتراضية، لذا يمكن للمستدعي حذفها.",
+  "he": "ל-cl_max יש ברירת מחדל, ולכן הקוראים יכולים להשמיט אותו."
+ },
+ "continue skips comments and the header.": {
+  "fr": "continue saute les commentaires et l’en-tête.",
+  "es": "continue salta los comentarios y el encabezado.",
+  "it": "continue salta i commenti e l’intestazione.",
+  "ar": "continue تتخطى التعليقات وسطر العناوين.",
+  "he": "continue מדלג על הערות ועל הכותרת."
+ },
+ "count = sum(1 for n in range(20) if n % 2): 10.": {
+  "fr": "count = sum(1 for n in range(20) if n % 2) : 10.",
+  "es": "count = sum(1 for n in range(20) if n % 2): 10.",
+  "it": "count = sum(1 for n in range(20) if n % 2): 10.",
+  "ar": "count = sum(1 for n in range(20) if n % 2): ‏10.",
+  "he": "count = sum(1 for n in range(20) if n % 2): 10."
+ },
+ "csv module docs": {
+  "fr": "Documentation du module csv",
+  "es": "Documentación del módulo csv",
+  "it": "Documentazione del modulo csv",
+  "ar": "توثيق الوحدة csv",
+  "he": "תיעוד המודול csv"
+ },
+ "csv.DictReader": {
+  "fr": "csv.DictReader",
+  "es": "csv.DictReader",
+  "it": "csv.DictReader",
+  "ar": "csv.DictReader",
+  "he": "csv.DictReader"
+ },
+ "csv.DictReader keys come from…": {
+  "fr": "Les clés de csv.DictReader proviennent…",
+  "es": "Las claves de csv.DictReader vienen de…",
+  "it": "Le chiavi di csv.DictReader vengono da…",
+  "ar": "تأتي مفاتيح csv.DictReader من…",
+  "he": "המפתחות של csv.DictReader מגיעים מ…"
+ },
+ "def": {
+  "fr": "def",
+  "es": "def",
+  "it": "def",
+  "ar": "def",
+  "he": "def"
+ },
+ "def name(params):": {
+  "fr": "def name(params):",
+  "es": "def name(params):",
+  "it": "def name(params):",
+  "ar": "def name(params):",
+  "he": "def name(params):"
+ },
+ "deletes": {
+  "fr": "supprime",
+  "es": "borra",
+  "it": "cancella",
+  "ar": "يحذف",
+  "he": "מוחק"
+ },
+ "deletes it": {
+  "fr": "la supprime",
+  "es": "la borra",
+  "it": "la cancella",
+  "ar": "تحذفه",
+  "he": "מוחק אותו"
+ },
+ "dictionaries": {
+  "fr": "des dictionnaires",
+  "es": "diccionarios",
+  "it": "dizionari",
+  "ar": "قواميس",
+  "he": "מילונים"
+ },
+ "elif": {
+  "fr": "elif",
+  "es": "elif",
+  "it": "elif",
+  "ar": "elif",
+  "he": "elif"
+ },
+ "elif.": {
+  "fr": "elif.",
+  "es": "elif.",
+  "it": "elif.",
+  "ar": "elif.",
+  "he": "elif."
+ },
+ "else after if is required.": {
+  "fr": "else après if est obligatoire.",
+  "es": "else después de if es obligatorio.",
+  "it": "else dopo if è obbligatorio.",
+  "ar": "else بعد if إلزامية.",
+  "he": "else אחרי if הוא חובה."
+ },
+ "else if": {
+  "fr": "else if",
+  "es": "else if",
+  "it": "else if",
+  "ar": "else if",
+  "he": "else if"
+ },
+ "f\"{math.pi:.3f}\" → 3.142 (after import math).": {
+  "fr": "f\"{math.pi:.3f}\" → 3.142 (après import math).",
+  "es": "f\"{math.pi:.3f}\" → 3.142 (después de import math).",
+  "it": "f\"{math.pi:.3f}\" → 3.142 (dopo import math).",
+  "ar": "f\"{math.pi:.3f}\" → 3.142 (بعد import math).",
+  "he": "f\"{math.pi:.3f}\" → 3.142 (אחרי import math)."
+ },
+ "f\"{x:.2f}\" formatting.": {
+  "fr": "Mise en forme f\"{x:.2f}\".",
+  "es": "Formato f\"{x:.2f}\".",
+  "it": "Formattazione f\"{x:.2f}\".",
+  "ar": "التنسيق f\"{x:.2f}\".",
+  "he": "עיצוב f\"{x:.2f}\"."
+ },
+ "f-string": {
+  "fr": "f-string",
+  "es": "f-string",
+  "it": "f-string",
+  "ar": "f-string",
+  "he": "f-string"
+ },
+ "fig.savefig(\"x.png\")…": {
+  "fr": "fig.savefig(\"x.png\")…",
+  "es": "fig.savefig(\"x.png\")…",
+  "it": "fig.savefig(\"x.png\")…",
+  "ar": "fig.savefig(\"x.png\")…",
+  "he": "fig.savefig(\"x.png\")…"
+ },
+ "float": {
+  "fr": "float",
+  "es": "float",
+  "it": "float",
+  "ar": "float",
+  "he": "float"
+ },
+ "float (6.0).": {
+  "fr": "float (6.0).",
+  "es": "float (6.0).",
+  "it": "float (6.0).",
+  "ar": "float (6.0).",
+  "he": "float (6.0)."
+ },
+ "float(\"\") raises…": {
+  "fr": "float(\"\") lève…",
+  "es": "float(\"\") lanza…",
+  "it": "float(\"\") solleva…",
+  "ar": "float(\"\") تطلق…",
+  "he": "float(\"\") מעלה…"
+ },
+ "float(\"3.5\") gives…": {
+  "fr": "float(\"3.5\") donne…",
+  "es": "float(\"3.5\") da…",
+  "it": "float(\"3.5\") dà…",
+  "ar": "float(\"3.5\") تعطي…",
+  "he": "float(\"3.5\") נותן…"
+ },
+ "float(\"bad\") and float(\"\") raise ValueError, which is caught.": {
+  "fr": "float(\"bad\") et float(\"\") lèvent ValueError, qui est interceptée.",
+  "es": "float(\"bad\") y float(\"\") lanzan ValueError, que se captura.",
+  "it": "float(\"bad\") e float(\"\") sollevano ValueError, che viene intercettato.",
+  "ar": "float(\"bad\") وfloat(\"\") تطلقان ValueError، فيُلتقط.",
+  "he": "float(\"bad\") ו-float(\"\") מעלים ValueError, שנתפסת."
+ },
+ "for": {
+  "fr": "for",
+  "es": "for",
+  "it": "for",
+  "ar": "for",
+  "he": "for"
+ },
+ "for x in sequence repeats once per item; range(a, b) gives a, a+1, …, b−1.": {
+  "fr": "for x in sequence se répète une fois par élément ; range(a, b) donne a, a+1, …, b−1.",
+  "es": "for x in sequence se repite una vez por elemento; range(a, b) da a, a+1, …, b−1.",
+  "it": "for x in sequence si ripete una volta per elemento; range(a, b) dà a, a+1, …, b−1.",
+  "ar": "for x in sequence تتكرر مرة لكل عنصر؛ وrange(a, b) تعطي a، a+1، …، b−1.",
+  "he": "for x in sequence חוזרת פעם אחת לכל איבר; range(a, b) נותן a, a+1, …, b−1."
+ },
+ "func": {
+  "fr": "func",
+  "es": "func",
+  "it": "func",
+  "ar": "func",
+  "he": "func"
+ },
+ "function": {
+  "fr": "function",
+  "es": "function",
+  "it": "function",
+  "ar": "function",
+  "he": "function"
+ },
+ "get(w, 0) returns 0 for a new word.": {
+  "fr": "get(w, 0) renvoie 0 pour un nouveau mot.",
+  "es": "get(w, 0) devuelve 0 para una palabra nueva.",
+  "it": "get(w, 0) restituisce 0 per una parola nuova.",
+  "ar": "get(w, 0) تعيد 0 لكلمة جديدة.",
+  "he": "get(w, 0) מחזיר 0 למילה חדשה."
+ },
+ "gistemp[2026] = 1.2.": {
+  "fr": "gistemp[2026] = 1.2.",
+  "es": "gistemp[2026] = 1.2.",
+  "it": "gistemp[2026] = 1.2.",
+  "ar": "gistemp[2026] = 1.2.",
+  "he": "gistemp[2026] = 1.2."
+ },
+ "global": {
+  "fr": "global",
+  "es": "global",
+  "it": "globale",
+  "ar": "عام",
+  "he": "גלובלי"
+ },
+ "if / elif / else": {
+  "fr": "if / elif / else",
+  "es": "if / elif / else",
+  "it": "if / elif / else",
+  "ar": "if / elif / else",
+  "he": "if / elif / else"
+ },
+ "immutable": {
+  "fr": "immuables",
+  "es": "inmutables",
+  "it": "immutabili",
+  "ar": "غير قابلة للتغيير",
+  "he": "לא ברות שינוי"
+ },
+ "int": {
+  "fr": "int",
+  "es": "int",
+  "it": "int",
+  "ar": "int",
+  "he": "int"
+ },
+ "int / float": {
+  "fr": "int / float",
+  "es": "int / float",
+  "it": "int / float",
+  "ar": "int / float",
+  "he": "int / float"
+ },
+ "int(\"42\") converts text to a number; str(42) + \"1\" joins text.": {
+  "fr": "int(\"42\") convertit du texte en nombre ; str(42) + \"1\" concatène du texte.",
+  "es": "int(\"42\") convierte texto en número; str(42) + \"1\" une texto.",
+  "it": "int(\"42\") converte testo in numero; str(42) + \"1\" concatena testo.",
+  "ar": "int(\"42\") يحول النص إلى عدد؛ وstr(42) + \"1\" يضم النصوص.",
+  "he": "int(\"42\") ממיר טקסט למספר; str(42) + \"1\" משרשר טקסט."
+ },
+ "io.StringIO lets csv read a string as if it were a file.": {
+  "fr": "io.StringIO permet à csv de lire une chaîne comme si c’était un fichier.",
+  "es": "io.StringIO permite que csv lea una cadena como si fuera un archivo.",
+  "it": "io.StringIO permette a csv di leggere una stringa come se fosse un file.",
+  "ar": "io.StringIO تتيح لـ csv قراءة سلسلة نصية كما لو كانت ملفًا.",
+  "he": "io.StringIO מאפשר ל-csv לקרוא מחרוזת כאילו הייתה קובץ."
+ },
+ "its condition is False": {
+  "fr": "sa condition vaut False",
+  "es": "su condición es False",
+  "it": "la sua condizione è False",
+  "ar": "يصبح شرطها False",
+  "he": "התנאי שלה הוא False"
+ },
+ "lambda only": {
+  "fr": "lambda seulement",
+  "es": "solo lambda",
+  "it": "solo lambda",
+  "ar": "lambda فقط",
+  "he": "רק lambda"
+ },
+ "len({\"a\": 1, \"b\": 2}) =": {
+  "fr": "len({\"a\": 1, \"b\": 2}) =",
+  "es": "len({\"a\": 1, \"b\": 2}) =",
+  "it": "len({\"a\": 1, \"b\": 2}) =",
+  "ar": "len({\"a\": 1, \"b\": 2}) =",
+  "he": "len({\"a\": 1, \"b\": 2}) ="
+ },
+ "len, max and min work on any list.": {
+  "fr": "len, max et min fonctionnent sur n’importe quelle liste.",
+  "es": "len, max y min funcionan con cualquier lista.",
+  "it": "len, max e min funzionano su qualsiasi lista.",
+  "ar": "len وmax وmin تعمل على أي قائمة.",
+  "he": "len, max ו-min עובדים על כל רשימה."
+ },
+ "list(range(2, 6)) is…": {
+  "fr": "list(range(2, 6)) vaut…",
+  "es": "list(range(2, 6)) es…",
+  "it": "list(range(2, 6)) è…",
+  "ar": "list(range(2, 6)) يساوي…",
+  "he": "list(range(2, 6)) הוא…"
+ },
+ "local": {
+  "fr": "locales",
+  "es": "locales",
+  "it": "locali",
+  "ar": "محلية",
+  "he": "מקומיים"
+ },
+ "mass_kg is an int; multiplying by the float g gives a float.": {
+  "fr": "mass_kg est un int ; le multiplier par le float g donne un float.",
+  "es": "mass_kg es un int; multiplicarlo por el float g da un float.",
+  "it": "mass_kg è un int; moltiplicarlo per il float g dà un float.",
+  "ar": "mass_kg من النوع int؛ وضربه في g من النوع float يعطي float.",
+  "he": "mass_kg הוא int; הכפלתו ב-float g נותנת float."
+ },
+ "matplotlib.use(\"Agg\") lets code save images without a screen (Colab shows plots inline anyway).": {
+  "fr": "matplotlib.use(\"Agg\") permet au code d’enregistrer des images sans écran (Colab affiche de toute façon les graphiques en ligne).",
+  "es": "matplotlib.use(\"Agg\") permite que el código guarde imágenes sin pantalla (Colab muestra los gráficos en línea de todos modos).",
+  "it": "matplotlib.use(\"Agg\") permette al codice di salvare immagini senza schermo (Colab mostra comunque i grafici in linea).",
+  "ar": "matplotlib.use(\"Agg\") تتيح للكود حفظ الصور دون شاشة (وColab يعرض الرسوم داخل الصفحة على أي حال).",
+  "he": "matplotlib.use(\"Agg\") מאפשר לקוד לשמור תמונות בלי מסך (Colab מציג גרפים בתוך הדף בכל מקרה)."
+ },
+ "max with key=gistemp.get compares values.": {
+  "fr": "max avec key=gistemp.get compare les valeurs.",
+  "es": "max con key=gistemp.get compara valores.",
+  "it": "max con key=gistemp.get confronta i valori.",
+  "ar": "max مع key=gistemp.get تقارن القيم.",
+  "he": "max עם key=gistemp.get משווה ערכים."
+ },
+ "mutable": {
+  "fr": "mutables",
+  "es": "mutables",
+  "it": "mutabili",
+  "ar": "قابلة للتغيير",
+  "he": "ברות שינוי"
+ },
+ "never": {
+  "fr": "jamais",
+  "es": "nunca",
+  "it": "mai",
+  "ar": "أبدًا",
+  "he": "אף פעם"
+ },
+ "next(f) skips the header line.": {
+  "fr": "next(f) saute la ligne d’en-tête.",
+  "es": "next(f) salta la línea de encabezado.",
+  "it": "next(f) salta la riga di intestazione.",
+  "ar": "next(f) تتخطى سطر العناوين.",
+  "he": "next(f) מדלג על שורת הכותרת."
+ },
+ "not (True and False) is…": {
+  "fr": "not (True and False) vaut…",
+  "es": "not (True and False) es…",
+  "it": "not (True and False) è…",
+  "ar": "not (True and False) يساوي…",
+  "he": "not (True and False) הוא…"
+ },
+ "nothing": {
+  "fr": "rien",
+  "es": "nada",
+  "it": "niente",
+  "ar": "لا شيء",
+  "he": "כלום"
+ },
+ "np.array": {
+  "fr": "np.array",
+  "es": "np.array",
+  "it": "np.array",
+  "ar": "np.array",
+  "he": "np.array"
+ },
+ "np.array([1, 2, 3]) * 2 gives?": {
+  "fr": "np.array([1, 2, 3]) * 2 donne ?",
+  "es": "¿Qué da np.array([1, 2, 3]) * 2?",
+  "it": "np.array([1, 2, 3]) * 2 dà?",
+  "ar": "np.array([1, 2, 3]) * 2 تعطي؟",
+  "he": "np.array([1, 2, 3]) * 2 נותן?"
+ },
+ "np.diff gives four yearly increases.": {
+  "fr": "np.diff donne quatre hausses annuelles.",
+  "es": "np.diff da cuatro aumentos anuales.",
+  "it": "np.diff dà quattro aumenti annui.",
+  "ar": "np.diff تعطي أربع زيادات سنوية.",
+  "he": "np.diff נותן ארבע עליות שנתיות."
+ },
+ "np.diff gives successive differences; a boolean mask like cfs > 20000 selects or counts values.": {
+  "fr": "np.diff donne les différences successives ; un masque booléen comme cfs > 20000 sélectionne ou compte des valeurs.",
+  "es": "np.diff da las diferencias sucesivas; una máscara booleana como cfs > 20000 selecciona o cuenta valores.",
+  "it": "np.diff dà le differenze successive; una maschera booleana come cfs > 20000 seleziona o conta valori.",
+  "ar": "np.diff تعطي الفروق المتتالية؛ والقناع المنطقي مثل cfs > 20000 يختار القيم أو يعدّها.",
+  "he": "np.diff נותן הפרשים עוקבים; מסכה בוליאנית כמו cfs > 20000 בוחרת או סופרת ערכים."
+ },
+ "np.diff([1, 4, 9]) =": {
+  "fr": "np.diff([1, 4, 9]) =",
+  "es": "np.diff([1, 4, 9]) =",
+  "it": "np.diff([1, 4, 9]) =",
+  "ar": "np.diff([1, 4, 9]) =",
+  "he": "np.diff([1, 4, 9]) ="
+ },
+ "np.polyfit": {
+  "fr": "np.polyfit",
+  "es": "np.polyfit",
+  "it": "np.polyfit",
+  "ar": "np.polyfit",
+  "he": "np.polyfit"
+ },
+ "np.polyfit(x, y, 1) fits a straight line and returns slope and intercept.": {
+  "fr": "np.polyfit(x, y, 1) ajuste une droite et renvoie la pente et l’ordonnée à l’origine.",
+  "es": "np.polyfit(x, y, 1) ajusta una recta y devuelve la pendiente y la ordenada al origen.",
+  "it": "np.polyfit(x, y, 1) adatta una retta e restituisce pendenza e intercetta.",
+  "ar": "np.polyfit(x, y, 1) تطابق خطًا مستقيمًا وتعيد الميل والمقطع.",
+  "he": "np.polyfit(x, y, 1) מתאים קו ישר ומחזיר שיפוע וחותך."
+ },
+ "np.polyfit(x, y, 1) returns…": {
+  "fr": "np.polyfit(x, y, 1) renvoie…",
+  "es": "np.polyfit(x, y, 1) devuelve…",
+  "it": "np.polyfit(x, y, 1) restituisce…",
+  "ar": "np.polyfit(x, y, 1) تعيد…",
+  "he": "np.polyfit(x, y, 1) מחזיר…"
+ },
+ "overwrites": {
+  "fr": "écrase",
+  "es": "sobrescribe",
+  "it": "sovrascrive",
+  "ar": "يكتب فوق المحتوى",
+  "he": "דורס"
+ },
+ "permanent": {
+  "fr": "permanentes",
+  "es": "permanentes",
+  "it": "permanenti",
+  "ar": "دائمة",
+  "he": "קבועים"
+ },
+ "plt.subplots": {
+  "fr": "plt.subplots",
+  "es": "plt.subplots",
+  "it": "plt.subplots",
+  "ar": "plt.subplots",
+  "he": "plt.subplots"
+ },
+ "polyfit’s slope is the best-fit rate.": {
+  "fr": "La pente de polyfit est le taux le mieux ajusté.",
+  "es": "La pendiente de polyfit es la tasa de mejor ajuste.",
+  "it": "La pendenza di polyfit è il tasso di miglior adattamento.",
+  "ar": "ميل polyfit هو معدل أفضل مطابقة.",
+  "he": "השיפוע של polyfit הוא הקצב בהתאמה הטובה ביותר."
+ },
+ "positive values": {
+  "fr": "les valeurs positives",
+  "es": "los valores positivos",
+  "it": "i valori positivi",
+  "ar": "القيم الموجبة",
+  "he": "ערכים חיוביים"
+ },
+ "print and return are the same.": {
+  "fr": "print et return, c’est pareil.",
+  "es": "print y return son lo mismo.",
+  "it": "print e return sono la stessa cosa.",
+  "ar": "print وreturn متماثلتان.",
+  "he": "print ו-return הם אותו דבר."
+ },
+ "print shows a value; return hands it back for further use.": {
+  "fr": "print affiche une valeur ; return la renvoie pour un usage ultérieur.",
+  "es": "print muestra un valor; return lo devuelve para usarlo después.",
+  "it": "print mostra un valore; return lo restituisce per un uso successivo.",
+  "ar": "print تعرض قيمة؛ وreturn تعيدها لاستخدامها لاحقًا.",
+  "he": "print מציג ערך; return מחזיר אותו לשימוש בהמשך."
+ },
+ "prints": {
+  "fr": "affiche",
+  "es": "imprime",
+  "it": "stampa",
+  "ar": "تطبع",
+  "he": "מדפיס"
+ },
+ "pytest docs": {
+  "fr": "Documentation de pytest",
+  "es": "Documentación de pytest",
+  "it": "Documentazione di pytest",
+  "ar": "توثيق pytest",
+  "he": "תיעוד pytest"
+ },
+ "random": {
+  "fr": "du hasard",
+  "es": "al azar",
+  "it": "a caso",
+  "ar": "عشوائيًا",
+  "he": "באקראי"
+ },
+ "range(1, 10) includes 10.": {
+  "fr": "range(1, 10) inclut 10.",
+  "es": "range(1, 10) incluye 10.",
+  "it": "range(1, 10) include 10.",
+  "ar": "range(1, 10) تشمل 10.",
+  "he": "range(1, 10) כולל את 10."
+ },
+ "range(1, 101) stops before 101.": {
+  "fr": "range(1, 101) s’arrête avant 101.",
+  "es": "range(1, 101) se detiene antes de 101.",
+  "it": "range(1, 101) si ferma prima di 101.",
+  "ar": "range(1, 101) تتوقف قبل 101.",
+  "he": "range(1, 101) עוצר לפני 101."
+ },
+ "range(a, b, s)": {
+  "fr": "range(a, b, s)",
+  "es": "range(a, b, s)",
+  "it": "range(a, b, s)",
+  "ar": "range(a, b, s)",
+  "he": "range(a, b, s)"
+ },
+ "reads": {
+  "fr": "lit",
+  "es": "lee",
+  "it": "legge",
+  "ar": "يقرأ",
+  "he": "קורא"
+ },
+ "required": {
+  "fr": "obligatoire",
+  "es": "obligatorio",
+  "it": "obbligatorio",
+  "ar": "إلزامي",
+  "he": "חובה"
+ },
+ "return": {
+  "fr": "return",
+  "es": "return",
+  "it": "return",
+  "ar": "return",
+  "he": "return"
+ },
+ "return math.pi * r**2 → 12.566….": {
+  "fr": "return math.pi * r**2 → 12.566….",
+  "es": "return math.pi * r**2 → 12.566….",
+  "it": "return math.pi * r**2 → 12.566….",
+  "ar": "return math.pi * r**2 → 12.566….",
+  "he": "return math.pi * r**2 → 12.566…."
+ },
+ "round(…, 2) tidies the floats.": {
+  "fr": "round(…, 2) arrondit proprement les floats.",
+  "es": "round(…, 2) ordena los floats.",
+  "it": "round(…, 2) sistema i float.",
+  "ar": "round(…, 2) ترتّب قيم float.",
+  "he": "round(…, 2) מסדר את ערכי ה-float."
+ },
+ "row numbers": {
+  "fr": "des numéros de ligne",
+  "es": "los números de fila",
+  "it": "i numeri di riga",
+  "ar": "أرقام الصفوف",
+  "he": "מספרי השורות"
+ },
+ "savefig": {
+  "fr": "savefig",
+  "es": "savefig",
+  "it": "savefig",
+  "ar": "savefig",
+  "he": "savefig"
+ },
+ "saves the figure": {
+  "fr": "enregistre la figure",
+  "es": "guarda la figura",
+  "it": "salva la figura",
+  "ar": "تحفظ الشكل",
+  "he": "שומר את התרשים"
+ },
+ "shared": {
+  "fr": "partagées",
+  "es": "compartidas",
+  "it": "condivise",
+  "ar": "مشتركة",
+  "he": "משותפים"
+ },
+ "shows code": {
+  "fr": "montre le code",
+  "es": "muestra el código",
+  "it": "mostra il codice",
+  "ar": "تعرض الكود",
+  "he": "מציג קוד"
+ },
+ "slope and intercept": {
+  "fr": "la pente et l’ordonnée à l’origine",
+  "es": "la pendiente y la ordenada al origen",
+  "it": "pendenza e intercetta",
+  "ar": "الميل والمقطع",
+  "he": "שיפוע וחותך"
+ },
+ "sorted returns a new list; xs.sort() changes it.": {
+  "fr": "sorted renvoie une nouvelle liste ; xs.sort() la modifie.",
+  "es": "sorted devuelve una lista nueva; xs.sort() la cambia.",
+  "it": "sorted restituisce una nuova lista; xs.sort() la modifica.",
+  "ar": "sorted تعيد قائمة جديدة؛ وxs.sort() تغيّرها.",
+  "he": "sorted מחזיר רשימה חדשה; xs.sort() משנה אותה."
+ },
+ "sorted(xs) changes xs.": {
+  "fr": "sorted(xs) modifie xs.",
+  "es": "sorted(xs) cambia xs.",
+  "it": "sorted(xs) modifica xs.",
+  "ar": "sorted(xs) تغيّر xs.",
+  "he": "sorted(xs) משנה את xs."
+ },
+ "str": {
+  "fr": "str",
+  "es": "str",
+  "it": "str",
+  "ar": "str",
+  "he": "str"
+ },
+ "str.split": {
+  "fr": "str.split",
+  "es": "str.split",
+  "it": "str.split",
+  "ar": "str.split",
+  "he": "str.split"
+ },
+ "strip removes the newline; split separates fields.": {
+  "fr": "strip enlève le saut de ligne ; split sépare les champs.",
+  "es": "strip quita el salto de línea; split separa los campos.",
+  "it": "strip rimuove il ritorno a capo; split separa i campi.",
+  "ar": "strip تزيل محرف السطر الجديد؛ وsplit تفصل الحقول.",
+  "he": "strip מסיר את תו השורה החדשה; split מפריד שדות."
+ },
+ "sum/len is the mean; sorted returns a new list.": {
+  "fr": "sum/len est la moyenne ; sorted renvoie une nouvelle liste.",
+  "es": "sum/len es la media; sorted devuelve una lista nueva.",
+  "it": "sum/len è la media; sorted restituisce una nuova lista.",
+  "ar": "sum/len هو المتوسط؛ وsorted تعيد قائمة جديدة.",
+  "he": "sum/len הוא הממוצע; sorted מחזיר רשימה חדשה."
+ },
+ "the filename": {
+  "fr": "du nom du fichier",
+  "es": "el nombre del archivo",
+  "it": "il nome del file",
+  "ar": "اسم الملف",
+  "he": "שם הקובץ"
+ },
+ "the first item": {
+  "fr": "le premier élément",
+  "es": "el primer elemento",
+  "it": "il primo elemento",
+  "ar": "العنصر الأول",
+  "he": "האיבר הראשון"
+ },
+ "the header row": {
+  "fr": "de la ligne d’en-tête",
+  "es": "la fila de encabezado",
+  "it": "la riga di intestazione",
+  "ar": "صف العناوين",
+  "he": "שורת הכותרת"
+ },
+ "the last item": {
+  "fr": "le dernier élément",
+  "es": "el último elemento",
+  "it": "l’ultimo elemento",
+  "ar": "العنصر الأخير",
+  "he": "האיבר האחרון"
+ },
+ "the length": {
+  "fr": "la longueur",
+  "es": "la longitud",
+  "it": "la lunghezza",
+  "ar": "الطول",
+  "he": "האורך"
+ },
+ "the max": {
+  "fr": "le maximum",
+  "es": "el máximo",
+  "it": "il massimo",
+  "ar": "القيمة العظمى",
+  "he": "את המקסימום"
+ },
+ "the mean": {
+  "fr": "la moyenne",
+  "es": "la media",
+  "it": "la media",
+  "ar": "المتوسط",
+  "he": "את הממוצע"
+ },
+ "then": {
+  "fr": "then",
+  "es": "then",
+  "it": "then",
+  "ar": "then",
+  "he": "then"
+ },
+ "total += n adds each number.": {
+  "fr": "total += n ajoute chaque nombre.",
+  "es": "total += n suma cada número.",
+  "it": "total += n aggiunge ogni numero.",
+  "ar": "total += n تضيف كل عدد.",
+  "he": "total += n מוסיף כל מספר."
+ },
+ "total += x in a loop.": {
+  "fr": "total += x dans une boucle.",
+  "es": "total += x en un bucle.",
+  "it": "total += x in un ciclo.",
+  "ar": "total += x داخل حلقة.",
+  "he": "total += x בתוך לולאה."
+ },
+ "try / except": {
+  "fr": "try / except",
+  "es": "try / except",
+  "it": "try / except",
+  "ar": "try / except",
+  "he": "try / except"
+ },
+ "type(2.0) is…": {
+  "fr": "type(2.0) est…",
+  "es": "type(2.0) es…",
+  "it": "type(2.0) è…",
+  "ar": "type(2.0) هو…",
+  "he": "type(2.0) הוא…"
+ },
+ "while": {
+  "fr": "while",
+  "es": "while",
+  "it": "while",
+  "ar": "while",
+  "he": "while"
+ },
+ "while repeats until its condition is False. Make sure something in the loop changes it, or it never ends.": {
+  "fr": "while se répète jusqu’à ce que sa condition vaille False. Assurez-vous que quelque chose dans la boucle la modifie, sinon elle ne s’arrête jamais.",
+  "es": "while se repite hasta que su condición es False. Asegúrate de que algo dentro del bucle la cambie, o nunca terminará.",
+  "it": "while si ripete finché la sua condizione non è False. Assicurati che qualcosa nel ciclo la modifichi, altrimenti non finisce mai.",
+  "ar": "while تتكرر حتى يصبح شرطها False. تأكد أن شيئًا داخل الحلقة يغيّره، وإلا فلن تنتهي أبدًا.",
+  "he": "while חוזרת עד שהתנאי שלה הוא False. ודאו שמשהו בתוך הלולאה משנה אותו, אחרת היא לא תסתיים לעולם."
+ },
+ "with open()": {
+  "fr": "with open()",
+  "es": "with open()",
+  "it": "with open()",
+  "ar": "with open()",
+  "he": "with open()"
+ },
+ "with open(name) as f: opens a file and closes it automatically.": {
+  "fr": "with open(name) as f: ouvre un fichier et le ferme automatiquement.",
+  "es": "with open(name) as f: abre un archivo y lo cierra automáticamente.",
+  "it": "with open(name) as f: apre un file e lo chiude automaticamente.",
+  "ar": "with open(name) as f: تفتح ملفًا وتغلقه تلقائيًا.",
+  "he": "with open(name) as f: פותח קובץ וסוגר אותו אוטומטית."
+ },
+ "x never changes, so it loops forever.": {
+  "fr": "x ne change jamais, donc la boucle est infinie.",
+  "es": "x nunca cambia, así que el bucle es infinito.",
+  "it": "x non cambia mai, quindi il ciclo è infinito.",
+  "ar": "x لا تتغير أبدًا، فتدور الحلقة إلى الأبد.",
+  "he": "x אף פעם לא משתנה, אז הלולאה אינסופית."
+ },
+ "xs[-1] is…": {
+  "fr": "xs[-1] est…",
+  "es": "xs[-1] es…",
+  "it": "xs[-1] è…",
+  "ar": "xs[-1] هو…",
+  "he": "xs[-1] הוא…"
+ },
+ "zeros": {
+  "fr": "les zéros",
+  "es": "los ceros",
+  "it": "gli zeri",
+  "ar": "الأصفار",
+  "he": "אפסים"
+ },
+ "zip pairs each value with the next.": {
+  "fr": "zip associe chaque valeur à la suivante.",
+  "es": "zip empareja cada valor con el siguiente.",
+  "it": "zip accoppia ogni valore con il successivo.",
+  "ar": "zip تقرن كل قيمة بالتي تليها.",
+  "he": "zip מצמד כל ערך לערך הבא."
+ },
+ "“reduce” appears 3 times.": {
+  "fr": "« reduce » apparaît 3 fois.",
+  "es": "«reduce» aparece 3 veces.",
+  "it": "«reduce» compare 3 volte.",
+  "ar": "«reduce» تظهر 3 مرات.",
+  "he": "«reduce» מופיעה 3 פעמים."
+ },
+ "−40 is the same on both scales, a handy check.": {
+  "fr": "−40 est identique sur les deux échelles, une vérification pratique.",
+  "es": "−40 es igual en ambas escalas, una comprobación útil.",
+  "it": "−40 è uguale su entrambe le scale, un controllo comodo.",
+  "ar": "−40 متساوية في المقياسين، وهو فحص مفيد.",
+  "he": "−40 זהה בשני הסולמות, בדיקה שימושית."
+ }
+}
