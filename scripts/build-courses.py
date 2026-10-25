@@ -12,7 +12,7 @@ spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); B
 from courses import roadmap as RM
 V = '20261024h'  # > main's 20261024g (courses.css/js changed)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
-BUILD_LANGS = ['en', 'fr']  # languages built and published so far (step 1: fr). Add one at a time once i18n/courses/*.json has it.
+BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
 RTL = {'ar', 'he'}  # right-to-left languages: the course wrapper gets dir="rtl"; equations/KaTeX stay LTR (assets/courses.css)
 def dir_attr(): return ' dir="rtl"' if LANG in RTL else ''
 # Phase 2 (Oct 24): every page is built per language from the same English data. Translations: i18n/courses/_shared.json (hub, roadmap,
@@ -184,7 +184,18 @@ def course_page(C):
 def en_only(h):
     # alternates only for languages whose page exists on disk (all six once phase 2 is built)
     h = re.sub(r'\n?<link rel="alternate" hreflang="(?!en"|x-default")[^"]+" href="[^"]+">', lambda m: m.group(0) if os.path.exists(m.group(0).split('savingplanets.com/')[1].split('"')[0]) else '', h)
-    return fix_switch(h)
+    return fix_switch(he_card(h))
+
+def he_card(h):
+    # he/ has no share cards of its own (build-og: fr/es/ar/it); its Kids_Map template carries en/Contact.jpg, so use this page's English card
+    # (version hash from assets/og/manifest.json, the same ?v= build-og puts on the English page)
+    if LANG != 'he': return h
+    m = re.search(r'<link rel="canonical" href="[^"]*/he/([\w-]+)\.html"', h)
+    if not m: return h
+    k = 'assets/og/en/' + m.group(1) + '.jpg'; v = json.load(open('assets/og/manifest.json')).get(k)
+    if not v: return h
+    url = 'https://www.savingplanets.com/' + k + '?v=' + v[:8]
+    return re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"', lambda x: x.group(1) + url + '"', h)
 
 def fix_switch(h):
     # language switcher: a language whose version of this page is not built yet goes to that language's home page (never a 404)
