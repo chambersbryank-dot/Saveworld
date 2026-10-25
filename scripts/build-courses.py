@@ -4,7 +4,7 @@ becomes one course page; scripts/courses/roadmap.py is the 4-year track on Cours
 Also: anim-banners.json entries (multi-photo banner from each module's BANNER/CREDITS), assets/courses.css + assets/courses.js.
   python3 scripts/build-courses.py           build
   python3 scripts/build-courses.py --check   arithmetic checks (module CHECKS) + every external link must load
-Course module fields: see scripts/courses/chem110.py (the template). Idempotent."""
+Course module fields: see scripts/courses/chem110.py (the template). Optional: LAB_NAME (lab heading), REF_TITLE/REF_INTRO (the reference-links section; default Periodic table). Oct 24: phys110.py = course 2. Idempotent."""
 import os, sys, re, json, glob, html, importlib, subprocess, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT); sys.path.insert(0, 'scripts')
 import importlib.util
@@ -105,7 +105,7 @@ def course_page(C):
     K = katex(texs)
     toc = [('about', 'About this course'), ('start', 'Before you start'), ('schedule', '15-week schedule'), ('progress', 'Your progress')] + \
           [(u['id'], f'Unit {i}: {u["title"]}') for i, u in enumerate(C.UNITS, 1)] + \
-          [('lab', 'Lab'), ('exam', 'Exam prep'), ('formulas', 'Formula sheet'), ('ptable', 'Periodic table'), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
+          [('lab', 'Lab'), ('exam', 'Exam prep'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
     o = [hero(C.TITLE, C.TAGLINE), '<div class="crs" data-course="' + C.ID + '">',
          f'<p class="crs-crumb"><a href="{HUB}">Courses</a> › {esc(C.CODE)}</p>',
          '<div class="crs-toc" role="navigation" aria-label="On this page"><ul>' + ''.join(f'<li><a href="#{a}">{esc(b)}</a></li>' for a, b in toc) + '</ul></div>',
@@ -121,7 +121,7 @@ def course_page(C):
              '<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">Turn on JavaScript to track progress.</p></div>'
              '<p><button type="button" class="crs-btn crs-reset" data-reset>Reset my progress</button></p>' + top() + '</section>')
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
-    o.append('<section id="lab"><h2>The lab (CHEM 110L)</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
+    o.append(f'<section id="lab"><h2>The lab ({esc(getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1]))})</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
              + f'<p class="crs-src">Safety reference: {ext(*C.SAFETY_SRC)}</p>' + ''.join(lab(C, K, L) for L in C.LABS) + top() + '</section>')
     ex = ['<section id="exam"><h2>Exam prep practice sets</h2><p>Time yourself: about 10 minutes per problem. Then compare with the full solutions.</p>']
     for t, probs in C.EXAMS:
@@ -131,7 +131,7 @@ def course_page(C):
     o.append(''.join(ex) + top() + '</section>')
     o.append('<section id="formulas"><h2>Formula sheet</h2><div class="crs-fs">' + ''.join(f'<div class="crs-math">{K[t]}</div>' for t in C.FORMULAS) + '</div>'
              '<h3>Constants</h3>' + table(['Constant', 'Value'], C.CONSTANTS) + f'<p class="crs-src">Source: {ext(*C.CONST_SRC)}</p>' + top() + '</section>')
-    o.append('<section id="ptable"><h2>Periodic table</h2><p>Use one of these free interactive tables alongside the course.</p><ul class="crs-res">'
+    o.append(f'<section id="ptable"><h2>{esc(getattr(C, "REF_TITLE", "Periodic table"))}</h2><p>{esc(getattr(C, "REF_INTRO", "Use one of these free interactive tables alongside the course."))}</p><ul class="crs-res">'
              + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in C.PTABLE) + '</ul>' + top() + '</section>')
     o.append('<section id="glossary"><h2>Glossary</h2><dl class="crs-gl">' + ''.join(f'<dt>{esc(a)}</dt><dd>{esc(b)}</dd>' for a, b in C.GLOSSARY) + '</dl>' + top() + '</section>')
     o.append('<section id="rubric"><h2>Self-assessment rubric</h2><p>No grade or credit is given. Use this to judge honestly where you are in each unit.</p>'
