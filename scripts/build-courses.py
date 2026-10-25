@@ -308,7 +308,7 @@ def relink(langs, gaps):
     for l in langs[1:]:
         pages = ([HUB] if not gaps.get('_hub', {}).get(l) else []) + [m.PAGE for m in MODS if l in DONE.get(m.ID, ())]
         if not pages: continue
-        rx = re.compile(r'href="\.\./(' + '|'.join(map(re.escape, pages)) + r')([#"])')
+        rx = re.compile(r'href="\.\./(' + '|'.join(map(re.escape, pages)) + r')([#"])(?! hreflang=)')  # never the language switcher (its links carry hreflang)
         for f in glob.glob(l + '/*.html'):
             s = open(f, encoding='utf8').read(); n = rx.sub(r'href="\1\2', s)
             if n != s: open(f, 'w', encoding='utf8').write(n)
