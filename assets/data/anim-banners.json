@@ -1239,7 +1239,8 @@
   "Thermodynamics.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
   "Fluid_Mechanics.html": "assets/SWOT_Orbit_Illustration.jpg",
   "Aircraft_Performance.html": "assets/ISS_Flyaround_2021.jpg",
-  "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg"
+  "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg",
+  "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg"
  },
  "slides": {
   "pools": {
@@ -1824,6 +1825,11 @@
    "Aerospace_Structures.html": [
     "images/ISS_Flyaround_2021.jpg",
     "images/Landsat9_Launch_KLS04_0013.jpg",
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+   ],
+   "Orbital_Mechanics.html": [
+    "images/ISS_Flyaround_2021.jpg",
+    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
    ]
   }

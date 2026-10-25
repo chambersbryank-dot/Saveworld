@@ -5932,5 +5932,12 @@
   "bytes": 1469847,
   "sha256": "5822e57ec28c67aa4b73a0236c6ab1d3e6d3645320efc26f39493ae23bd8d84d",
   "type": "application/pdf"
+ },
+ "courses/Orbital_Mechanics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Orbital_Mechanics_Study_Guide.a95dea52273b.pdf",
+  "key": "courses/Orbital_Mechanics_Study_Guide.a95dea52273b.pdf",
+  "bytes": 1491991,
+  "sha256": "a95dea52273b7206ad5924aad8a41297354761b4ee153312939f7d594ace2950",
+  "type": "application/pdf"
  }
 }
