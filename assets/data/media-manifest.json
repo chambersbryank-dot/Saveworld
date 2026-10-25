@@ -5813,5 +5813,12 @@
   "bytes": 1111109,
   "sha256": "bea09ca8f0a4994474ac01821889fee7253c71d2e8f36bc29be33c4cdb27d7a7",
   "type": "application/pdf"
+ },
+ "courses/Calculus_II_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Calculus_II_Study_Guide.7fc7b41069de.pdf",
+  "key": "courses/Calculus_II_Study_Guide.7fc7b41069de.pdf",
+  "bytes": 1189982,
+  "sha256": "7fc7b41069de75a7d0a351d36ed9875fd6ef8b0c6367917e2b15d7a53306757a",
+  "type": "application/pdf"
  }
 }
