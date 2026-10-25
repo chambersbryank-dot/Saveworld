@@ -6,6 +6,27 @@
   "ar": "1000 mm²، أي 1250 × cos θ حيث cos θ = 40/50 = 0.8.",
   "he": "1000 mm², כלומר 1250 × cos θ עם cos θ = 40/50 = 0.8."
  },
+ "10% lighter → 6–8% better fuel economy.": {
+  "fr": "10% plus léger → 6–8% de meilleure économie de carburant.",
+  "es": "10% más ligero → 6–8% mejor rendimiento de combustible.",
+  "it": "10% più leggero → 6–8% di consumi migliori.",
+  "ar": "أخف بنسبة 10% → اقتصاد وقود أفضل بنسبة 6–8%.",
+  "he": "קל ב-10% → צריכת דלק טובה ב-6–8%."
+ },
+ "100% infill is strongest so always best.": {
+  "fr": "Un remplissage de 100% est le plus résistant, donc toujours le meilleur.",
+  "es": "Un relleno del 100% es el más resistente, así que siempre es mejor.",
+  "it": "Il riempimento al 100% è il più resistente, quindi sempre il migliore.",
+  "ar": "الحشو 100% هو الأمتن، لذا فهو الأفضل دائمًا.",
+  "he": "מילוי של 100% הוא החזק ביותר ולכן תמיד הטוב ביותר."
+ },
+ "120° apart (30° from horizontal)": {
+  "fr": "À 120° les uns des autres (30° par rapport à l’horizontale)",
+  "es": "A 120° entre sí (30° respecto a la horizontal)",
+  "it": "A 120° l’uno dall’altro (30° dall’orizzontale)",
+  "ar": "متباعدة 120° (30° عن الأفقي)",
+  "he": "מרוחקים 120° זה מזה (30° מהאופק)"
+ },
  "1:1 → 450 mm (too big).": {
   "fr": "1:1 → 450 mm (trop grand).",
   "es": "1:1 → 450 mm (demasiado grande).",
@@ -27,12 +48,26 @@
   "ar": "1:2، وهو أكبر مقياس يتسع، فتبقى التفاصيل مقروءة.",
   "he": "1:2, קנה המידה הגדול ביותר שנכנס, כך שהפרטים נשארים קריאים."
  },
+ "3 translations, 3 rotations.": {
+  "fr": "3 translations, 3 rotations.",
+  "es": "3 traslaciones, 3 rotaciones.",
+  "it": "3 traslazioni, 3 rotazioni.",
+  "ar": "3 انتقالات، 3 دورانات.",
+  "he": "3 העתקות, 3 סיבובים."
+ },
  "30 mm. No principal view shows it true length; you need an auxiliary view (Unit 3).": {
   "fr": "30 mm. Aucune vue principale ne la montre en vraie grandeur ; il faut une vue auxiliaire (unité 3).",
   "es": "30 mm. Ninguna vista principal la muestra en verdadera magnitud; necesitas una vista auxiliar (unidad 3).",
   "it": "30 mm. Nessuna vista principale lo mostra in vera grandezza; serve una vista ausiliaria (unità 3).",
   "ar": "30 mm. لا يُظهرها أي مسقط رئيسي بطولها الحقيقي؛ وتحتاج إلى مسقط مساعد (الوحدة 3).",
   "he": "30 mm. אף מבט ראשי אינו מראה אותו באורכו האמיתי; צריך מבט עזר (יחידה 3)."
+ },
+ "30 × 10³/12 = 2,500 mm⁴: 9 times less stiff.": {
+  "fr": "30 × 10³/12 = 2500 mm⁴ : 9 fois moins rigide.",
+  "es": "30 × 10³/12 = 2500 mm⁴: 9 veces menos rígida.",
+  "it": "30 × 10³/12 = 2500 mm⁴: 9 volte meno rigida.",
+  "ar": "30 × 10³/12 = 2500 mm⁴: أقل جساءة بـ 9 مرات.",
+  "he": "30 × 10³/12 = 2500 mm⁴: קשיח פי 9 פחות."
  },
  "3D Printing & Design for Manufacture": {
   "fr": "Impression 3D et conception pour la fabrication",
@@ -47,6 +82,13 @@
   "it": "Progettazione e stime per la stampa 3D; laboratorio C",
   "ar": "التصميم والتقديرات للطباعة ثلاثية الأبعاد (3D)؛ المختبر C",
   "he": "תכן והערכות להדפסת תלת-ממד (3D); מעבדה C"
+ },
+ "3D printing is always greener.": {
+  "fr": "L’impression 3D est toujours plus écologique.",
+  "es": "La impresión 3D siempre es más ecológica.",
+  "it": "La stampa 3D è sempre più ecologica.",
+  "ar": "الطباعة 3D أكثر مراعاة للبيئة دائمًا.",
+  "he": "הדפסת 3D תמיד ירוקה יותר."
  },
  "4 more: two dimensions plus two for position (e.g. a corner coincident with the origin).": {
   "fr": "4 de plus : deux cotes plus deux pour la position (p. ex. un sommet coïncident avec l’origine).",
@@ -97,6 +139,20 @@
   "ar": "81.6 mm في الإسقاط؛ و100 mm في الرسم المتساوي القياس.",
   "he": "81.6 mm בהיטל; 100 mm בשרטוט איזומטרי."
  },
+ "A 1,500 kg car is lightened by 10% (150 kg). It uses 8 L/100 km and drives 15,000 km a year. Using DOE’s 6–8%, estimate the fuel saved per year.": {
+  "fr": "Une voiture de 1500 kg est allégée de 10% (150 kg). Elle consomme 8 L/100 km et parcourt 15000 km par an. Avec les 6–8% du DOE, estimez le carburant économisé par an.",
+  "es": "Un coche de 1500 kg se aligera un 10% (150 kg). Consume 8 L/100 km y recorre 15000 km al año. Con el 6–8% del DOE, estima el combustible ahorrado al año.",
+  "it": "Un’auto da 1500 kg viene alleggerita del 10% (150 kg). Consuma 8 L/100 km e percorre 15000 km all’anno. Usando il 6–8% del DOE, stima il carburante risparmiato all’anno.",
+  "ar": "سيارة كتلتها 1500 kg خُفف وزنها بنسبة 10% (150 kg). تستهلك 8 L/100 km وتقطع 15000 km سنويًا. باستخدام نسبة DOE ‏6–8%، قدّر الوقود الموفَّر سنويًا.",
+  "he": "מכונית של 1500 kg מוקלת ב-10% (150 kg). היא צורכת 8 L/100 km ונוסעת 15000 km בשנה. בעזרת 6–8% של ה-DOE, העריכו את הדלק שנחסך בשנה."
+ },
+ "A 20 mm solid PLA cube weighs 9.9 g. At about 15% infill with walls, it weighs about 3.5 g. What fraction of material is saved?": {
+  "fr": "Un cube de PLA plein de 20 mm pèse 9.9 g. Avec environ 15% de remplissage et des parois, il pèse environ 3.5 g. Quelle fraction de matière est économisée ?",
+  "es": "Un cubo macizo de PLA de 20 mm pesa 9.9 g. Con un relleno de alrededor del 15% y paredes, pesa unos 3.5 g. ¿Qué fracción de material se ahorra?",
+  "it": "Un cubo pieno di PLA da 20 mm pesa 9.9 g. Con circa il 15% di riempimento e pareti, pesa circa 3.5 g. Quale frazione di materiale si risparmia?",
+  "ar": "مكعب PLA مصمت طول ضلعه 20 mm يزن 9.9 g. بحشو نحو 15% مع الجدران، يزن نحو 3.5 g. ما نسبة المادة الموفَّرة؟",
+  "he": "קוביית PLA מלאה של 20 mm שוקלת 9.9 g. במילוי של כ-15% עם דפנות היא שוקלת כ-3.5 g. איזה חלק מהחומר נחסך?"
+ },
  "A 60 mm-long face is tilted so cos θ = 0.6 in the top view. What length does the top view show?": {
   "fr": "Une face de 60 mm de long est inclinée de sorte que cos θ = 0.6 dans la vue de dessus. Quelle longueur montre la vue de dessus ?",
   "es": "Una cara de 60 mm de largo está inclinada de modo que cos θ = 0.6 en la vista superior. ¿Qué longitud muestra la vista superior?",
@@ -110,6 +166,13 @@
   "it": "Una distinta base elenca 4 × viti M5 da 1.2 g, 1 piastra da 79.5 g e 2 staffe da 15.0 g. Massa totale dell’assieme?",
   "ar": "تسرد قائمة مواد 4 × براغي M5 وزن كل منها 1.2 g، و1 لوحًا وزنه 79.5 g، و2 من الدعامات وزن كل منها 15.0 g. ما الكتلة الكلية للتجميع؟",
   "he": "רשימת חלקים כוללת 4 × ברגי M5 של 1.2 g, 1 לוח של 79.5 g ו-2 תושבות של 15.0 g. מה המסה הכוללת של ההרכבה?"
+ },
+ "A BOM lists…": {
+  "fr": "Une nomenclature liste…",
+  "es": "Una lista de materiales incluye…",
+  "it": "Una distinta base elenca…",
+  "ar": "تسرد قائمة المواد…",
+  "he": "רשימת חלקים מפרטת…"
  },
  "A PLA cube 20 mm on a side, solid (ρ = 1.24 g/cm³). Mass?": {
   "fr": "Un cube de PLA de 20 mm de côté, plein (ρ = 1.24 g/cm³). Masse ?",
@@ -132,12 +195,26 @@
   "ar": "قدمة قياس (تكفي قدمة رقمية منخفضة التكلفة).",
   "he": "קליבר (קליבר דיגיטלי זול מספיק)."
  },
+ "A car saves 72 L of gasoline a year. CO₂ saved?": {
+  "fr": "Une voiture économise 72 L d’essence par an. CO₂ économisé ?",
+  "es": "Un coche ahorra 72 L de gasolina al año. ¿CO₂ ahorrado?",
+  "it": "Un’auto risparmia 72 L di benzina all’anno. CO₂ risparmiata?",
+  "ar": "سيارة توفر 72 L من البنزين سنويًا. كم CO₂ يُوفَّر؟",
+  "he": "מכונית חוסכת 72 L בנזין בשנה. כמה CO₂ נחסך?"
+ },
  "A center line is drawn as…": {
   "fr": "Un trait d’axe se dessine…",
   "es": "Una línea de eje se dibuja…",
   "it": "Una linea d’asse si disegna…",
   "ar": "يُرسم خط المحور…",
   "he": "קו מרכז משורטט כ…"
+ },
+ "A clear assembly drawing and BOM are a repair manual. Designs that use standard fasteners and can be taken apart are easier to fix, refurbish and recycle, which is a core idea of sustainable materials management.": {
+  "fr": "Un plan d’ensemble clair et une nomenclature sont un manuel de réparation. Les conceptions qui utilisent des fixations standard et se démontent sont plus faciles à réparer, reconditionner et recycler, une idée centrale de la gestion durable des matériaux.",
+  "es": "Un plano de conjunto claro y una lista de materiales son un manual de reparación. Los diseños que usan fijaciones estándar y pueden desmontarse son más fáciles de reparar, reacondicionar y reciclar, una idea central de la gestión sostenible de materiales.",
+  "it": "Un disegno d’assieme chiaro e una distinta base sono un manuale di riparazione. I progetti che usano elementi di fissaggio standard e si possono smontare sono più facili da riparare, ricondizionare e riciclare, un’idea centrale della gestione sostenibile dei materiali.",
+  "ar": "رسم التجميع الواضح وقائمة المواد دليل إصلاح. التصاميم التي تستخدم مثبتات قياسية ويمكن تفكيكها أسهل في الإصلاح والتجديد وإعادة التدوير، وهي فكرة جوهرية في الإدارة المستدامة للمواد.",
+  "he": "שרטוט הרכבה ברור ורשימת חלקים הם מדריך תיקון. תכנים שמשתמשים במחברים תקניים וניתנים לפירוק קלים יותר לתיקון, לחידוש ולמחזור, וזה רעיון מרכזי בניהול בר-קיימא של חומרים."
  },
  "A computer with a web browser (Onshape runs in the browser; a free account is needed) or FreeCAD installed.": {
   "fr": "Un ordinateur avec un navigateur web (Onshape fonctionne dans le navigateur ; un compte gratuit est nécessaire) ou FreeCAD installé.",
@@ -160,6 +237,13 @@
   "ar": "يبيّن خط مستوى القطع بأسهمه وحروفه (A–A) مكان القطع واتجاه النظر.",
   "he": "קו מישור חיתוך עם חיצים ואותיות (A–A) מראה היכן החתך ולאיזה כיוון מסתכלים."
  },
+ "A design-for-disassembly choice is…": {
+  "fr": "Un choix de conception pour le démontage est…",
+  "es": "Una decisión de diseño para el desmontaje es…",
+  "it": "Una scelta di progettazione per lo smontaggio è…",
+  "ar": "من خيارات التصميم من أجل التفكيك…",
+  "he": "בחירת תכן לפירוק היא…"
+ },
  "A face rises 5 mm over 12 mm. True length of its edge?": {
   "fr": "Une face monte de 5 mm sur 12 mm. Vraie longueur de son arête ?",
   "es": "Una cara sube 5 mm en 12 mm. ¿Longitud real de su arista?",
@@ -174,6 +258,13 @@
   "ar": "يُقرأ إطار التحكم في المعلم هكذا: الرمز | التفاوت (مع Ø لمنطقة أسطوانية) | المعدِّل | المراجع، مثل ⌖ Ø0.1 Ⓜ A B C.",
   "he": "מסגרת בקרת מאפיין נקראת: סמל | טולרנס (עם Ø לאזור גלילי) | מתאם | מישורי ייחוס, למשל ⌖ Ø0.1 Ⓜ A B C."
  },
+ "A four-bar linkage has mobility…": {
+  "fr": "Un quadrilatère articulé a une mobilité…",
+  "es": "Un mecanismo de cuatro barras tiene movilidad…",
+  "it": "Un quadrilatero articolato ha mobilità…",
+  "ar": "حركية الآلية رباعية الوصلات تساوي…",
+  "he": "למנגנון ארבע חוליות יש ניידות…"
+ },
  "A free rigid body has 6 degrees of freedom (3 translations, 3 rotations). A revolute mate leaves 1; a slider leaves 1; a fastened mate leaves 0.": {
   "fr": "Un corps rigide libre a 6 degrés de liberté (3 translations, 3 rotations). Une liaison pivot en laisse 1 ; une glissière en laisse 1 ; une liaison fixe en laisse 0.",
   "es": "Un sólido rígido libre tiene 6 grados de libertad (3 traslaciones, 3 rotaciones). Una relación de revolución deja 1; una deslizante deja 1; una fija deja 0.",
@@ -181,12 +272,26 @@
   "ar": "للجسم الجاسئ الحر 6 درجات حرية (3 انتقالات، 3 دورانات). علاقة التزاوج الدورانية تُبقي 1؛ والانزلاقية تُبقي 1؛ والمثبتة تُبقي 0.",
   "he": "לגוף קשיח חופשי יש 6 דרגות חופש (3 העתקות, 3 סיבובים). צימוד סיבובי משאיר 1; מחליק משאיר 1; צימוד קבוע משאיר 0."
  },
+ "A free rigid body in 3D has…": {
+  "fr": "Un corps rigide libre en 3D a…",
+  "es": "Un sólido rígido libre en 3D tiene…",
+  "it": "Un corpo rigido libero in 3D ha…",
+  "ar": "للجسم الجاسئ الحر في 3D…",
+  "he": "לגוף קשיח חופשי ב-3D יש…"
+ },
  "A fully constrained sketch has…": {
   "fr": "Une esquisse entièrement contrainte a…",
   "es": "Un boceto totalmente restringido tiene…",
   "it": "Uno schizzo completamente vincolato ha…",
   "ar": "الرسم المقيد تقييدًا كاملًا ليس فيه…",
   "he": "לסקיצה מאולצת לחלוטין יש…"
+ },
+ "A gallon of gasoline burned makes about…": {
+  "fr": "Un gallon d’essence brûlé produit environ…",
+  "es": "Un galón de gasolina quemado genera unos…",
+  "it": "Un gallone di benzina bruciato produce circa…",
+  "ar": "يُنتج غالون البنزين المحروق نحو…",
+  "he": "גלון בנזין שנשרף יוצר כ…"
  },
  "A half section shows…": {
   "fr": "Une demi-coupe montre…",
@@ -201,6 +306,13 @@
   "it": "Un foro spostato di 0.03 e 0.04 ha un errore di posizione di…",
   "ar": "ثقب منحرف 0.03 و0.04 يكون خطأ موضعه…",
   "he": "לחור שסוטה ב-0.03 וב-0.04 יש שגיאת מיקום של…"
+ },
+ "A hole is 0.04 off in x and 0.03 in y. Position error?": {
+  "fr": "Un trou est décalé de 0.04 en x et de 0.03 en y. Erreur de position ?",
+  "es": "Un agujero está desviado 0.04 en x y 0.03 en y. ¿Error de posición?",
+  "it": "Un foro è spostato di 0.04 in x e di 0.03 in y. Errore di posizione?",
+  "ar": "ثقب منحرف 0.04 في x و0.03 في y. ما خطأ الموضع؟",
+  "he": "חור סוטה ב-0.04 ב-x וב-0.03 ב-y. מה שגיאת המיקום?"
  },
  "A hole is 12.000–12.018 and a shaft 11.984–11.995. Clearance range?": {
   "fr": "Un alésage fait 12.000–12.018 et un arbre 11.984–11.995. Plage de jeu ?",
@@ -222,6 +334,20 @@
   "it": "Un foro dovrebbe trovarsi in (50, 30). Si misura in (50.03, 29.98). La tolleranza di posizione è Ø0.1. È conforme?",
   "ar": "يجب أن يكون ثقب عند (50, 30). وقيس عند (50.03, 29.98). تفاوت الموضع Ø0.1. هل يُقبل؟",
   "he": "חור צריך להיות ב-(50, 30). הוא נמדד ב-(50.03, 29.98). טולרנס המיקום הוא Ø0.1. האם הוא עובר?"
+ },
+ "A key DFA rule is…": {
+  "fr": "Une règle DFA clé est de…",
+  "es": "Una regla clave de DFA es…",
+  "it": "Una regola DFA chiave è…",
+  "ar": "من قواعد DFA الأساسية…",
+  "he": "כלל DFA מרכזי הוא…"
+ },
+ "A library or makerspace printer works; or complete the slicer part only.": {
+  "fr": "Une imprimante de bibliothèque ou de makerspace convient ; sinon, faites seulement la partie trancheur.",
+  "es": "Sirve una impresora de biblioteca o makerspace; o haz solo la parte del laminador.",
+  "it": "Va bene una stampante di biblioteca o makerspace; oppure svolgi solo la parte con lo slicer.",
+  "ar": "تصلح طابعة مكتبة أو مساحة صناع؛ أو أكمل جزء برنامج التقطيع فقط.",
+  "he": "מדפסת בספרייה או במייקרספייס מתאימה; או השלימו רק את חלק תוכנת הפריסה."
  },
  "A line shows its true length only in a view parallel to it.": {
   "fr": "Une ligne n’apparaît en vraie grandeur que dans une vue qui lui est parallèle.",
@@ -265,6 +391,13 @@
   "ar": "مستطيل مرسوم بأداة المستطيل له 4 نقاط زوايا (8 درجات حرية) ويأتي مع 2 من القيود الأفقية و2 من القيود الرأسية. كم بُعدًا أو قيدًا إضافيًا يقيّده تقييدًا كاملًا؟",
   "he": "למלבן שצויר בכלי המלבן יש 4 נקודות פינה (8 דרגות חופש) והוא מגיע עם 2 אילוצים אופקיים ו-2 אנכיים. כמה מידות או אילוצים נוספים יאלצו אותו לחלוטין?"
  },
+ "A revolute mate leaves…": {
+  "fr": "Une liaison pivot laisse…",
+  "es": "Una relación de revolución deja…",
+  "it": "Un vincolo rotoidale lascia…",
+  "ar": "علاقة التزاوج الدورانية تُبقي…",
+  "he": "צימוד סיבובי משאיר…"
+ },
  "A ring is made by revolving a 10 × 4 mm rectangle whose centroid is 25 mm from the axis. Find its volume.": {
   "fr": "Un anneau est obtenu par révolution d’un rectangle de 10 × 4 mm dont le centre de gravité est à 25 mm de l’axe. Trouvez son volume.",
   "es": "Un anillo se hace revolucionando un rectángulo de 10 × 4 mm cuyo centroide está a 25 mm del eje. Halla su volumen.",
@@ -299,6 +432,20 @@
   "it": "Un manovellismo di spinta: telaio, manovella, biella, pistone; 3 cerniere e 1 coppia prismatica.",
   "ar": "آلية منزلقة-ذراع تدوير: القاعدة، والذراع، وذراع التوصيل، والمنزلقة؛ 3 مفاصل محورية و1 مفصل انزلاقي.",
   "he": "מנגנון ארכובה-מחליק: קרקע, ארכובה, טלטל, מחליק; 3 מפרקי ציר ו-1 מפרק מחליק."
+ },
+ "A solid cube is 9.9 g ≈ 3.32 m of 1.75 mm filament; slicer values at low infill will be much lower.": {
+  "fr": "Un cube plein pèse 9.9 g ≈ 3.32 m de filament de 1.75 mm ; les valeurs du trancheur à faible remplissage seront bien plus basses.",
+  "es": "Un cubo macizo pesa 9.9 g ≈ 3.32 m de filamento de 1.75 mm; los valores del laminador con poco relleno serán mucho menores.",
+  "it": "Un cubo pieno pesa 9.9 g ≈ 3.32 m di filamento da 1.75 mm; i valori dello slicer con riempimento basso saranno molto inferiori.",
+  "ar": "المكعب المصمت يزن 9.9 g ≈ 3.32 m من خيط قطره 1.75 mm؛ وستكون قيم برنامج التقطيع عند الحشو المنخفض أقل بكثير.",
+  "he": "קובייה מלאה שוקלת 9.9 g ≈ 3.32 m של פילמנט בקוטר 1.75 mm; ערכי תוכנת הפריסה במילוי נמוך יהיו נמוכים בהרבה."
+ },
+ "A spreadsheet and CAD are enough.": {
+  "fr": "Un tableur et une CAO suffisent.",
+  "es": "Basta con una hoja de cálculo y un CAD.",
+  "it": "Bastano un foglio di calcolo e un CAD.",
+  "ar": "يكفي جدول بيانات وCAD.",
+  "he": "גיליון אלקטרוני ו-CAD מספיקים."
  },
  "A steel block 50 × 50 × 20 mm (ρ = 7.85 g/cm³). Mass?": {
   "fr": "Un bloc d’acier de 50 × 50 × 20 mm (ρ = 7.85 g/cm³). Masse ?",
@@ -342,6 +489,13 @@
   "ar": "توافق Ø25 H7/p6: الثقب 25.000–25.021، والعمود 25.022–25.035. أوجد التوافق.",
   "he": "התאמה Ø25 H7/p6: חור 25.000–25.021, ציר 25.022–25.035. מצאו את ההתאמה."
  },
+ "A4 sheet": {
+  "fr": "Feuille A4",
+  "es": "Hoja A4",
+  "it": "Foglio A4",
+  "ar": "ورقة A4",
+  "he": "גיליון A4"
+ },
  "ASME Y14 conventions": {
   "fr": "Conventions ASME Y14",
   "es": "Convenciones ASME Y14",
@@ -370,12 +524,40 @@
   "ar": "اصطلاح ASME.",
   "he": "מוסכמת ASME."
  },
+ "About 72–96 L per year.": {
+  "fr": "Environ 72–96 L par an.",
+  "es": "Unos 72–96 L al año.",
+  "it": "Circa 72–96 L all’anno.",
+  "ar": "نحو 72–96 L سنويًا.",
+  "he": "כ-72–96 L בשנה."
+ },
  "Add width and height, then make one corner coincident with the origin (removes 2).": {
   "fr": "Ajoutez la largeur et la hauteur, puis rendez un sommet coïncident avec l’origine (en retire 2).",
   "es": "Añade ancho y alto, y luego haz un vértice coincidente con el origen (elimina 2).",
   "it": "Aggiungi larghezza e altezza, poi rendi un vertice coincidente con l’origine (ne toglie 2).",
   "ar": "أضف العرض والارتفاع، ثم اجعل إحدى الزوايا منطبقة على نقطة الأصل (تزيل 2).",
   "he": "הוסיפו רוחב וגובה, ואז הפכו פינה אחת למתלכדת עם הראשית (מסיר 2)."
+ },
+ "Additive manufacturing": {
+  "fr": "Fabrication additive",
+  "es": "Fabricación aditiva",
+  "it": "Produzione additiva",
+  "ar": "التصنيع بالإضافة",
+  "he": "ייצור מוסף"
+ },
+ "Additive manufacturing builds parts layer by layer; NIST works on measurement science and standards to make AM parts reliable. Machining removes material; molding and casting shape it.": {
+  "fr": "La fabrication additive construit les pièces couche par couche ; le NIST travaille sur la métrologie et les normes pour rendre fiables les pièces AM. L’usinage enlève de la matière ; le moulage et la fonderie lui donnent forme.",
+  "es": "La fabricación aditiva construye las piezas capa a capa; el NIST trabaja en metrología y normas para que las piezas AM sean fiables. El mecanizado quita material; el moldeo y la fundición le dan forma.",
+  "it": "La produzione additiva costruisce i pezzi strato per strato; il NIST lavora su metrologia e norme per rendere affidabili i pezzi AM. La lavorazione meccanica asporta materiale; stampaggio e fusione gli danno forma.",
+  "ar": "يبني التصنيع بالإضافة القطع طبقة فوق طبقة؛ ويعمل NIST على علوم القياس والمعايير لجعل قطع AM موثوقة. والتشغيل الآلي يزيل المادة؛ والقولبة والسباكة تشكّلانها.",
+  "he": "ייצור מוסף בונה חלקים שכבה אחר שכבה; NIST עובד על מדע המדידה ותקנים כדי להפוך חלקי AM לאמינים. עיבוד שבבי מסיר חומר; יציקה ויציקה בתבנית מעצבות אותו."
+ },
+ "Additive manufacturing can place material only where loads need it, enabling lighter parts; NIST’s work aims to make those parts reliable enough for demanding uses.": {
+  "fr": "La fabrication additive peut placer la matière uniquement là où les charges l’exigent, ce qui permet des pièces plus légères ; les travaux du NIST visent à rendre ces pièces assez fiables pour des usages exigeants.",
+  "es": "La fabricación aditiva puede poner material solo donde las cargas lo necesitan, lo que permite piezas más ligeras; el trabajo del NIST busca que esas piezas sean lo bastante fiables para usos exigentes.",
+  "it": "La produzione additiva può mettere materiale solo dove i carichi lo richiedono, consentendo pezzi più leggeri; il lavoro del NIST mira a rendere quei pezzi abbastanza affidabili per usi impegnativi.",
+  "ar": "يمكن للتصنيع بالإضافة أن يضع المادة فقط حيث تحتاجها الأحمال، مما يتيح قطعًا أخف؛ ويهدف عمل NIST إلى جعل هذه القطع موثوقة بما يكفي للاستخدامات الصعبة.",
+  "he": "ייצור מוסף יכול להציב חומר רק היכן שהעומסים צריכים אותו, וכך לאפשר חלקים קלים יותר; העבודה של NIST נועדה להפוך את החלקים האלה לאמינים מספיק לשימושים תובעניים."
  },
  "Allowed = 0.1 + 0.15.": {
   "fr": "Admis = 0.1 + 0.15.",
@@ -454,6 +636,20 @@
   "ar": "يميل المنظر المتساوي القياس الجسم بحيث تكون محاوره الثلاثة متباعدة بزاوية 120°. تتقاصر الحواف الموازية للمحاور بمعامل √(2/3) ≈ 0.816؛ والرسم المتساوي القياس يتجاهل ذلك ويرسمها بطولها الكامل.",
   "he": "מבט איזומטרי מטה את העצם כך ששלושת ציריו מרוחקים 120° זה מזה. מקצועות לאורך הצירים מתקצרים פי √(2/3) ≈ 0.816; שרטוט איזומטרי מתעלם מכך ומשרטט אותם באורך מלא."
  },
+ "Apply design-for-manufacture and assembly (DFM/DFA) rules.": {
+  "fr": "Appliquer les règles de conception pour la fabrication et l’assemblage (DFM/DFA).",
+  "es": "Aplicar las reglas de diseño para fabricación y ensamblaje (DFM/DFA).",
+  "it": "Applicare le regole di progettazione per la produzione e l’assemblaggio (DFM/DFA).",
+  "ar": "طبّق قواعد التصميم من أجل التصنيع والتجميع (DFM/DFA).",
+  "he": "ליישם כללי תכן לייצור ולהרכבה (DFM/DFA)."
+ },
+ "Apply design-for-repair, disassembly and recycling principles.": {
+  "fr": "Appliquer les principes de conception pour la réparation, le démontage et le recyclage.",
+  "es": "Aplicar principios de diseño para la reparación, el desmontaje y el reciclaje.",
+  "it": "Applicare i principi di progettazione per riparazione, smontaggio e riciclo.",
+  "ar": "طبّق مبادئ التصميم من أجل الإصلاح والتفكيك وإعادة التدوير.",
+  "he": "ליישם עקרונות תכן לתיקון, לפירוק ולמחזור."
+ },
  "Apply section conventions (ribs, shafts and fasteners not hatched lengthwise).": {
   "fr": "Appliquer les conventions de coupe (nervures, arbres et fixations non hachurés dans le sens de la longueur).",
   "es": "Aplicar las convenciones de corte (nervios, ejes y fijaciones sin rayar a lo largo).",
@@ -461,12 +657,33 @@
   "ar": "طبّق اصطلاحات القطاعات (لا تُهشّر الأضلاع والأعمدة والمثبتات المقطوعة طوليًا).",
   "he": "ליישם מוסכמות חתך (צלעות, צירים ומחברים אינם מקווקווים בחתך לאורכם)."
  },
+ "Area (mm²)": {
+  "fr": "Aire (mm²)",
+  "es": "Área (mm²)",
+  "it": "Area (mm²)",
+  "ar": "المساحة (mm²)",
+  "he": "שטח (mm²)"
+ },
+ "Assemble a four-bar linkage, check its motion and mobility, and produce a drawing with a title block and BOM.": {
+  "fr": "Assembler un quadrilatère articulé, vérifier son mouvement et sa mobilité, et produire un plan avec cartouche et nomenclature.",
+  "es": "Ensamblar un mecanismo de cuatro barras, comprobar su movimiento y movilidad, y producir un plano con cajetín y lista de materiales.",
+  "it": "Assemblare un quadrilatero articolato, verificarne movimento e mobilità, e produrre una tavola con cartiglio e distinta base.",
+  "ar": "جمّع آلية رباعية الوصلات، وافحص حركتها وحركيتها، وأنتج رسمًا بإطار عنوان وقائمة مواد.",
+  "he": "להרכיב מנגנון ארבע חוליות, לבדוק את תנועתו ואת ניידותו, ולהפיק שרטוט עם טבלת כותרת ורשימת חלקים."
+ },
  "Assemble parts with mates (fastened, revolute, slider) and count degrees of freedom.": {
   "fr": "Assembler des pièces avec des liaisons (fixe, pivot, glissière) et compter les degrés de liberté.",
   "es": "Ensamblar piezas con relaciones (fija, de revolución, deslizante) y contar grados de libertad.",
   "it": "Assemblare pezzi con vincoli (fisso, rotoidale, prismatico) e contare i gradi di libertà.",
   "ar": "جمّع القطع بعلاقات التزاوج (مثبتة، دورانية، انزلاقية) وعُدّ درجات الحرية.",
   "he": "להרכיב חלקים בצימודים (קבוע, סיבובי, מחליק) ולספור דרגות חופש."
+ },
+ "Assemble with pin (revolute) joints and drive the crank.": {
+  "fr": "Assemblez avec des liaisons pivot et entraînez la manivelle.",
+  "es": "Ensambla con articulaciones (de revolución) y acciona la manivela.",
+  "it": "Assembla con cerniere (rotoidali) e aziona la manovella.",
+  "ar": "جمّعها بمفاصل محورية (دورانية) وحرّك ذراع التدوير.",
+  "he": "הרכיבו במפרקי ציר (סיבוביים) והניעו את הארכובה."
  },
  "Assemblies & Drawings": {
   "fr": "Assemblages et mises en plan",
@@ -538,6 +755,41 @@
   "ar": "محاور متباعدة بزاوية 120°.",
   "he": "צירים מרוחקים 120° זה מזה."
  },
+ "Balloon": {
+  "fr": "Repère",
+  "es": "Globo",
+  "it": "Palloncino",
+  "ar": "فقاعة الترقيم",
+  "he": "בלון"
+ },
+ "Bending stiffness depends on EI. Moving material away from the neutral axis (tubes, I-beams) raises I with less mass.": {
+  "fr": "La rigidité en flexion dépend de EI. Éloigner la matière de l’axe neutre (tubes, poutres en I) augmente I avec moins de masse.",
+  "es": "La rigidez a flexión depende de EI. Alejar el material del eje neutro (tubos, vigas en I) aumenta I con menos masa.",
+  "it": "La rigidezza a flessione dipende da EI. Allontanare il materiale dall’asse neutro (tubi, travi a I) aumenta I con meno massa.",
+  "ar": "تعتمد جساءة الانحناء على EI. إبعاد المادة عن المحور المحايد (الأنابيب، والعوارض I) يرفع I بكتلة أقل.",
+  "he": "קשיחות הכפיפה תלויה ב-EI. הרחקת חומר מהציר הניטרלי (צינורות, קורות I) מגדילה את I במסה קטנה יותר."
+ },
+ "Bending stiffness depends on…": {
+  "fr": "La rigidité en flexion dépend…",
+  "es": "La rigidez a flexión depende de…",
+  "it": "La rigidezza a flessione dipende da…",
+  "ar": "تعتمد جساءة الانحناء على…",
+  "he": "קשיחות הכפיפה תלויה ב…"
+ },
+ "Bill of materials": {
+  "fr": "Nomenclature",
+  "es": "Lista de materiales",
+  "it": "Distinta base",
+  "ar": "قائمة المواد",
+  "he": "רשימת חלקים"
+ },
+ "Bill of materials.": {
+  "fr": "Nomenclature.",
+  "es": "Lista de materiales.",
+  "it": "Distinta base.",
+  "ar": "قائمة المواد.",
+  "he": "רשימת חלקים."
+ },
  "Block in the overall envelope first, then add details.": {
   "fr": "Placer d’abord l’encombrement général, puis ajouter les détails.",
   "es": "Encajar primero la envolvente general y después añadir los detalles.",
@@ -580,6 +832,13 @@
   "ar": "التجميع من الأسفل إلى الأعلى يُدرج قطعًا جاهزة؛ والتصميم من الأعلى إلى الأسفل يصمم القطع في سياق التجميع.",
   "he": "הרכבה מלמטה למעלה מכניסה חלקים גמורים; תכן מלמעלה למטה מתכנן חלקים בהקשר של ההרכבה."
  },
+ "Browser-based professional CAD, free for non-commercial, public projects.": {
+  "fr": "CAO professionnelle dans le navigateur, gratuite pour les projets publics non commerciaux.",
+  "es": "CAD profesional en el navegador, gratuito para proyectos públicos no comerciales.",
+  "it": "CAD professionale nel browser, gratuito per progetti pubblici non commerciali.",
+  "ar": "CAD احترافي في المتصفح، مجاني للمشاريع العامة غير التجارية.",
+  "he": "CAD מקצועי בדפדפן, חינמי לפרויקטים ציבוריים לא מסחריים."
+ },
  "Build solid models from constrained sketches and features in Onshape or FreeCAD, and make them easy to change.": {
   "fr": "Construire des modèles volumiques à partir d’esquisses contraintes et de fonctions dans Onshape ou FreeCAD, et les rendre faciles à modifier.",
   "es": "Construir modelos sólidos a partir de bocetos restringidos y operaciones en Onshape o FreeCAD, y hacerlos fáciles de cambiar.",
@@ -594,6 +853,20 @@
   "ar": "يحسب CAD الحجم والكتلة ومركز الكتلة وعزوم القصور الذاتي من كثافة المادة.",
   "he": "CAD מחשב נפח, מסה, מרכז מסה ומומנטי התמד מתוך צפיפות החומר."
  },
+ "CAD model driven by editable dimensions and features.": {
+  "fr": "Modèle CAO piloté par des cotes et des fonctions modifiables.",
+  "es": "Modelo CAD controlado por cotas y operaciones editables.",
+  "it": "Modello CAD pilotato da quote e feature modificabili.",
+  "ar": "نموذج CAD تتحكم فيه أبعاد وميزات قابلة للتعديل.",
+  "he": "מודל CAD המונע על ידי מידות ופיצ׳רים ניתנים לעריכה."
+ },
+ "CO₂ from gasoline saved": {
+  "fr": "CO₂ d’essence économisé",
+  "es": "CO₂ ahorrado de gasolina",
+  "it": "CO₂ da benzina risparmiata",
+  "ar": "CO₂ الموفَّر من البنزين",
+  "he": "CO₂ שנחסך מבנזין"
+ },
  "Center line": {
   "fr": "Trait d’axe",
   "es": "Línea de eje",
@@ -607,6 +880,13 @@
   "it": "Le quote in serie…",
   "ar": "الأبعاد المتسلسلة…",
   "he": "מידות משורשרות…"
+ },
+ "Check": {
+  "fr": "Vérification",
+  "es": "Comprobación",
+  "it": "Verifica",
+  "ar": "الفحص",
+  "he": "בדיקה"
  },
  "Check every drawing as if you had to make the part from it alone.": {
   "fr": "Vérifiez chaque plan comme si vous deviez fabriquer la pièce à partir de lui seul.",
@@ -629,6 +909,13 @@
   "ar": "افحص التداخل والخلوص.",
   "he": "לבדוק התנגשות ומרווח."
  },
+ "Check whether the crank turns fully (Grashof: shortest + longest ≤ sum of the other two).": {
+  "fr": "Vérifiez si la manivelle fait un tour complet (Grashof : plus court + plus long ≤ somme des deux autres).",
+  "es": "Comprueba si la manivela gira por completo (Grashof: más corta + más larga ≤ suma de las otras dos).",
+  "it": "Verifica se la manovella compie un giro completo (Grashof: più corto + più lungo ≤ somma degli altri due).",
+  "ar": "افحص هل يدور ذراع التدوير دورة كاملة (غراسهوف: الأقصر + الأطول ≤ مجموع الاثنين الآخرين).",
+  "he": "בדקו אם הארכובה מסתובבת סיבוב מלא (גרסהוף: הקצרה + הארוכה ≤ סכום שתי האחרות)."
+ },
  "Choose a fit for a function.": {
   "fr": "Choisir un ajustement selon la fonction.",
   "es": "Elegir un ajuste según la función.",
@@ -642,6 +929,13 @@
   "it": "Scegliere i riferimenti in base alla funzione.",
   "ar": "اختر المراجع بناءً على الوظيفة.",
   "he": "לבחור מישורי ייחוס לפי התפקוד."
+ },
+ "Choose materials with their whole life cycle in mind.": {
+  "fr": "Choisir les matériaux en tenant compte de tout leur cycle de vie.",
+  "es": "Elegir materiales pensando en todo su ciclo de vida.",
+  "it": "Scegliere i materiali tenendo conto dell’intero ciclo di vita.",
+  "ar": "اختر المواد مع مراعاة دورة حياتها كاملة.",
+  "he": "לבחור חומרים תוך התחשבות בכל מחזור חייהם."
  },
  "Choosing RSS where appropriate allows looser individual tolerances, which means cheaper processes and less scrap for the same assembly quality.": {
   "fr": "Choisir la RSS quand c’est approprié permet des tolérances individuelles plus larges, donc des procédés moins chers et moins de rebuts pour la même qualité d’assemblage.",
@@ -699,6 +993,48 @@
   "ar": "الارتياح لاستخدام الحاسوب والفأرة؛ والفأرة ذات الأزرار الثلاثة تساعد في العمل ثلاثي الأبعاد (3D).",
   "he": "נוחות בעבודה עם מחשב ועכבר; עכבר עם שלושה כפתורים עוזר בתלת-ממד (3D)."
  },
+ "Common filament diameter": {
+  "fr": "Diamètre de filament courant",
+  "es": "Diámetro de filamento habitual",
+  "it": "Diametro di filamento comune",
+  "ar": "قطر الخيط الشائع",
+  "he": "קוטר פילמנט נפוץ"
+ },
+ "Compare I of a solid 20 × 20 bar and a 25 × 25 × 2 tube.": {
+  "fr": "Comparez I d’une barre pleine de 20 × 20 et d’un tube de 25 × 25 × 2.",
+  "es": "Compara I de una barra maciza de 20 × 20 y un tubo de 25 × 25 × 2.",
+  "it": "Confronta I di una barra piena da 20 × 20 e di un tubo da 25 × 25 × 2.",
+  "ar": "قارن I لقضيب مصمت 20 × 20 وأنبوب 25 × 25 × 2.",
+  "he": "השוו את I של מוט מלא 20 × 20 ושל צינור 25 × 25 × 2."
+ },
+ "Compare a solid 20 × 20 mm square bar with a 25 × 25 mm square tube with 2 mm walls: area (mass) and I.": {
+  "fr": "Comparez une barre carrée pleine de 20 × 20 mm avec un tube carré de 25 × 25 mm à parois de 2 mm : aire (masse) et I.",
+  "es": "Compara una barra cuadrada maciza de 20 × 20 mm con un tubo cuadrado de 25 × 25 mm con paredes de 2 mm: área (masa) e I.",
+  "it": "Confronta una barra quadra piena da 20 × 20 mm con un tubo quadro da 25 × 25 mm con pareti da 2 mm: area (massa) e I.",
+  "ar": "قارن قضيبًا مربعًا مصمتًا 20 × 20 mm بأنبوب مربع 25 × 25 mm بجدران 2 mm: المساحة (الكتلة) وI.",
+  "he": "השוו מוט מרובע מלא של 20 × 20 mm לצינור מרובע של 25 × 25 mm עם דפנות של 2 mm: שטח (מסה) ו-I."
+ },
+ "Compare beam sections for mass and stiffness in CAD and by hand, then estimate what lightweighting is worth for a car.": {
+  "fr": "Comparer des sections de poutre selon la masse et la rigidité en CAO et à la main, puis estimer ce que vaut l’allègement pour une voiture.",
+  "es": "Comparar secciones de viga por masa y rigidez en CAD y a mano, y luego estimar cuánto vale aligerar un coche.",
+  "it": "Confrontare sezioni di trave per massa e rigidezza in CAD e a mano, poi stimare quanto vale l’alleggerimento per un’auto.",
+  "ar": "قارن مقاطع العوارض من حيث الكتلة والجساءة في CAD وباليد، ثم قدّر قيمة تخفيف الوزن لسيارة.",
+  "he": "להשוות חתכי קורה לפי מסה וקשיחות ב-CAD וביד, ואז להעריך כמה שווה הפחתת משקל במכונית."
+ },
+ "Compare sections by mass and stiffness (second moment of area).": {
+  "fr": "Comparer des sections selon la masse et la rigidité (moment quadratique).",
+  "es": "Comparar secciones por masa y rigidez (momento de inercia de área).",
+  "it": "Confrontare sezioni per massa e rigidezza (momento d’inerzia della sezione).",
+  "ar": "قارن المقاطع من حيث الكتلة والجساءة (عزم المساحة الثاني).",
+  "he": "להשוות חתכים לפי מסה וקשיחות (מומנט שטח שני)."
+ },
+ "Compute I by hand and compare.": {
+  "fr": "Calculez I à la main et comparez.",
+  "es": "Calcula I a mano y compara.",
+  "it": "Calcola I a mano e confronta.",
+  "ar": "احسب I باليد وقارن.",
+  "he": "חשבו את I ביד והשוו."
+ },
  "Compute limits, clearance and interference.": {
   "fr": "Calculer les limites, le jeu et le serrage.",
   "es": "Calcular límites, holgura e interferencia.",
@@ -719,6 +1055,27 @@
   "it": "Calcolare l’errore di posizione e la tolleranza bonus a MMC.",
   "ar": "احسب خطأ الموضع والتفاوت الإضافي عند MMC.",
   "he": "לחשב שגיאת מיקום וטולרנס בונוס ב-MMC."
+ },
+ "Compute the dimensional error and filament length.": {
+  "fr": "Calculez l’erreur dimensionnelle et la longueur de filament.",
+  "es": "Calcula el error dimensional y la longitud de filamento.",
+  "it": "Calcola l’errore dimensionale e la lunghezza del filamento.",
+  "ar": "احسب خطأ الأبعاد وطول الخيط.",
+  "he": "חשבו את שגיאת המידות ואת אורך הפילמנט."
+ },
+ "Computed values for the flat plate with four Ø6 holes; your full bracket will differ.": {
+  "fr": "Valeurs calculées pour la plaque plane avec quatre trous Ø6 ; votre équerre complète sera différente.",
+  "es": "Valores calculados para la placa plana con cuatro agujeros Ø6; tu soporte completo será distinto.",
+  "it": "Valori calcolati per la piastra piana con quattro fori Ø6; la tua staffa completa sarà diversa.",
+  "ar": "قيم محسوبة للوح المسطح بأربعة ثقوب Ø6؛ وستختلف دعامتك الكاملة.",
+  "he": "ערכים מחושבים ללוח השטוח עם ארבעה חורי Ø6; התושבת המלאה שלכם תהיה שונה."
+ },
+ "Computed values for the given link lengths.": {
+  "fr": "Valeurs calculées pour les longueurs données.",
+  "es": "Valores calculados para las longitudes dadas.",
+  "it": "Valori calcolati per le lunghezze date.",
+  "ar": "قيم محسوبة لأطوال الوصلات المعطاة.",
+  "he": "ערכים מחושבים לאורכי החוליות הנתונים."
  },
  "Constraint": {
   "fr": "Contrainte",
@@ -741,6 +1098,41 @@
   "ar": "خطوط الإنشاء",
   "he": "קווי בנייה"
  },
+ "Convert that to CO₂ with EPA’s 8,887 g per gallon.": {
+  "fr": "Convertissez cela en CO₂ avec les 8887 g par gallon de l’EPA.",
+  "es": "Convierte eso a CO₂ con los 8887 g por galón de la EPA.",
+  "it": "Converti in CO₂ con gli 8887 g per gallone dell’EPA.",
+  "ar": "حوّل ذلك إلى CO₂ باستخدام رقم EPA ‏8887 g لكل غالون.",
+  "he": "המירו זאת ל-CO₂ בעזרת 8887 g לגלון של ה-EPA."
+ },
+ "Correct work with occasional omissions.": {
+  "fr": "Travail correct avec quelques omissions.",
+  "es": "Trabajo correcto con omisiones ocasionales.",
+  "it": "Lavoro corretto con qualche omissione.",
+  "ar": "عمل صحيح مع إغفالات عرضية.",
+  "he": "עבודה נכונה עם השמטות מזדמנות."
+ },
+ "Counting parts in the BOM is also a design-for-assembly check: fewer parts usually means less material, less energy and fewer failures.": {
+  "fr": "Compter les pièces de la nomenclature est aussi un contrôle de conception pour l’assemblage : moins de pièces signifie généralement moins de matière, moins d’énergie et moins de défaillances.",
+  "es": "Contar las piezas de la lista de materiales es también una comprobación de diseño para el ensamblaje: menos piezas suele significar menos material, menos energía y menos fallos.",
+  "it": "Contare i pezzi nella distinta base è anche un controllo di progettazione per l’assemblaggio: meno pezzi di solito significano meno materiale, meno energia e meno guasti.",
+  "ar": "عدّ القطع في قائمة المواد هو أيضًا فحص للتصميم من أجل التجميع: القطع الأقل تعني عادةً مادة أقل وطاقة أقل وأعطالًا أقل.",
+  "he": "ספירת החלקים ברשימת החלקים היא גם בדיקת תכן להרכבה: פחות חלקים פירושם בדרך כלל פחות חומר, פחות אנרגיה ופחות תקלות."
+ },
+ "Crank can rotate fully?": {
+  "fr": "La manivelle peut-elle faire un tour complet ?",
+  "es": "¿Puede la manivela girar por completo?",
+  "it": "La manovella può compiere un giro completo?",
+  "ar": "هل يمكن لذراع التدوير أن يدور دورة كاملة؟",
+  "he": "האם הארכובה יכולה להסתובב סיבוב מלא?"
+ },
+ "Create a free Onshape account (Free plan) or use FreeCAD.": {
+  "fr": "Créez un compte Onshape gratuit (offre Free) ou utilisez FreeCAD.",
+  "es": "Crea una cuenta gratuita de Onshape (plan Free) o usa FreeCAD.",
+  "it": "Crea un account Onshape gratuito (piano Free) o usa FreeCAD.",
+  "ar": "أنشئ حسابًا مجانيًا في Onshape (الخطة المجانية) أو استخدم FreeCAD.",
+  "he": "צרו חשבון Onshape חינמי (תוכנית Free) או השתמשו ב-FreeCAD."
+ },
  "Create front, top and right-side views with correct alignment.": {
   "fr": "Créer des vues de face, de dessus et de droite correctement alignées.",
   "es": "Crear vistas frontal, superior y lateral derecha con la alineación correcta.",
@@ -754,6 +1146,13 @@
   "it": "Creare schizzi 2D completamente vincolati.",
   "ar": "أنشئ رسومات 2D مقيدة تقييدًا كاملًا.",
   "he": "ליצור סקיצות 2D מאולצות לחלוטין."
+ },
+ "Cross-section π(0.0875 cm)² = 0.02405 cm².": {
+  "fr": "Section π(0.0875 cm)² = 0.02405 cm².",
+  "es": "Sección π(0.0875 cm)² = 0.02405 cm².",
+  "it": "Sezione π(0.0875 cm)² = 0.02405 cm².",
+  "ar": "المقطع π(0.0875 cm)² = 0.02405 cm².",
+  "he": "חתך π(0.0875 cm)² = 0.02405 cm²."
  },
  "Cut material is hatched with thin lines, typically at 45°. Thin ribs, shafts, bolts and pins cut along their length are conventionally not hatched.": {
   "fr": "La matière coupée est hachurée de traits fins, généralement à 45°. Les nervures fines, arbres, boulons et goupilles coupés dans leur longueur ne sont, par convention, pas hachurés.",
@@ -776,12 +1175,54 @@
   "ar": "خط مستوى القطع",
   "he": "קו מישור חיתוך"
  },
+ "DFM/DFA: fewer parts, standard features and fasteners, generous radii, self-locating features, and avoiding needlessly tight tolerances.": {
+  "fr": "DFM/DFA : moins de pièces, formes et fixations standard, rayons généreux, éléments autocentreurs, et pas de tolérances inutilement serrées.",
+  "es": "DFM/DFA: menos piezas, elementos y fijaciones estándar, radios generosos, elementos autoposicionantes y evitar tolerancias innecesariamente estrictas.",
+  "it": "DFM/DFA: meno pezzi, elementi e fissaggi standard, raggi generosi, elementi autocentranti ed evitare tolleranze inutilmente strette.",
+  "ar": "DFM/DFA: قطع أقل، ومعالم ومثبتات قياسية، وأنصاف أقطار سخية، ومعالم ذاتية التموضع، وتجنب التفاوتات الضيقة بلا داعٍ.",
+  "he": "DFM/DFA: פחות חלקים, מאפיינים ומחברים תקניים, רדיוסים נדיבים, מאפייני מיקום עצמי, והימנעות מטולרנסים הדוקים ללא צורך."
+ },
+ "DOE figure.": {
+  "fr": "Chiffre du DOE.",
+  "es": "Cifra del DOE.",
+  "it": "Dato DOE.",
+  "ar": "رقم DOE.",
+  "he": "נתון DOE."
+ },
+ "DOE reports that a 10% reduction in vehicle weight can improve fuel economy by 6–8%, and that lightweight materials can reduce component weight by 10–60% in the short term.": {
+  "fr": "Le DOE indique qu’une réduction de 10% du poids d’un véhicule peut améliorer l’économie de carburant de 6–8%, et que les matériaux légers peuvent réduire le poids des composants de 10–60% à court terme.",
+  "es": "El DOE informa que una reducción del 10% del peso del vehículo puede mejorar el rendimiento de combustible un 6–8%, y que los materiales ligeros pueden reducir el peso de los componentes un 10–60% a corto plazo.",
+  "it": "Il DOE riporta che una riduzione del 10% del peso del veicolo può migliorare il consumo di carburante del 6–8%, e che i materiali leggeri possono ridurre il peso dei componenti del 10–60% nel breve termine.",
+  "ar": "تفيد DOE بأن خفض وزن المركبة بنسبة 10% يمكن أن يحسن اقتصاد الوقود بنسبة 6–8%، وأن المواد الخفيفة يمكن أن تخفض وزن المكونات بنسبة 10–60% على المدى القصير.",
+  "he": "ה-DOE מדווח שהפחתה של 10% במשקל הרכב יכולה לשפר את צריכת הדלק ב-6–8%, ושחומרים קלים יכולים להפחית את משקל הרכיבים ב-10–60% בטווח הקצר."
+ },
  "DOE reports that replacing heavy steel parts with lighter materials can cut component weight by 10–60% in the short term.": {
   "fr": "Le DOE indique que remplacer des pièces en acier lourdes par des matériaux plus légers peut réduire le poids des composants de 10–60% à court terme.",
   "es": "El DOE informa que sustituir piezas pesadas de acero por materiales más ligeros puede reducir el peso de los componentes un 10–60% a corto plazo.",
   "it": "Il DOE riporta che sostituire pesanti parti in acciaio con materiali più leggeri può ridurre il peso dei componenti del 10–60% nel breve termine.",
   "ar": "تفيد وزارة الطاقة الأمريكية (DOE) بأن استبدال قطع الفولاذ الثقيلة بمواد أخف يمكن أن يخفض وزن المكونات بنسبة 10–60% على المدى القصير.",
   "he": "ה-DOE מדווח שהחלפת חלקי פלדה כבדים בחומרים קלים יותר יכולה להפחית את משקל הרכיבים ב-10–60% בטווח הקצר."
+ },
+ "DOE rule": {
+  "fr": "Règle du DOE",
+  "es": "Regla del DOE",
+  "it": "Regola del DOE",
+  "ar": "قاعدة DOE",
+  "he": "כלל ה-DOE"
+ },
+ "DOE: 10% lighter vehicle → fuel economy improves…": {
+  "fr": "DOE : un véhicule 10% plus léger → l’économie de carburant s’améliore de…",
+  "es": "DOE: un vehículo un 10% más ligero → el rendimiento de combustible mejora…",
+  "it": "DOE: veicolo più leggero del 10% → il consumo migliora del…",
+  "ar": "DOE: مركبة أخف بنسبة 10% → يتحسن اقتصاد الوقود بنسبة…",
+  "he": "DOE: רכב קל ב-10% → צריכת הדלק משתפרת ב…"
+ },
+ "DOE: a 10% lighter vehicle can get 6–8% better fuel economy.": {
+  "fr": "DOE : un véhicule 10% plus léger peut gagner 6–8% en économie de carburant.",
+  "es": "DOE: un vehículo un 10% más ligero puede mejorar un 6–8% su rendimiento de combustible.",
+  "it": "DOE: un veicolo più leggero del 10% può migliorare i consumi del 6–8%.",
+  "ar": "DOE: المركبة الأخف بنسبة 10% قد تحقق اقتصاد وقود أفضل بنسبة 6–8%.",
+  "he": "DOE: רכב קל ב-10% יכול להשיג צריכת דלק טובה ב-6–8%."
  },
  "Datum": {
   "fr": "Référence",
@@ -790,6 +1231,20 @@
   "ar": "المرجع",
   "he": "מישור ייחוס"
  },
+ "Define variables: plate 100 × 60 mm, thickness t = 5 mm, hole Ø6, hole inset 10 mm.": {
+  "fr": "Définissez les variables : plaque 100 × 60 mm, épaisseur t = 5 mm, trou Ø6, retrait des trous 10 mm.",
+  "es": "Define las variables: placa de 100 × 60 mm, espesor t = 5 mm, agujero Ø6, distancia del agujero al borde 10 mm.",
+  "it": "Definisci le variabili: piastra 100 × 60 mm, spessore t = 5 mm, foro Ø6, distanza dei fori dal bordo 10 mm.",
+  "ar": "عرّف المتغيرات: لوح 100 × 60 mm، والسماكة t = 5 mm، وثقب Ø6، وبُعد الثقب عن الحافة 10 mm.",
+  "he": "הגדירו משתנים: לוח 100 × 60 mm, עובי t = 5 mm, חור Ø6, מרחק החור מהשפה 10 mm."
+ },
+ "Describe additive (3D printing), subtractive (machining) and forming processes.": {
+  "fr": "Décrire les procédés additifs (impression 3D), soustractifs (usinage) et de mise en forme.",
+  "es": "Describir los procesos aditivos (impresión 3D), sustractivos (mecanizado) y de conformado.",
+  "it": "Descrivere i processi additivi (stampa 3D), sottrattivi (lavorazione meccanica) e di formatura.",
+  "ar": "صف عمليات الإضافة (الطباعة 3D)، والإزالة (التشغيل الآلي)، والتشكيل.",
+  "he": "לתאר תהליכים מוספים (הדפסת 3D), גורעים (עיבוד שבבי) ועיצוב."
+ },
  "Design and manufacturing at MIT.": {
   "fr": "Conception et fabrication au MIT.",
   "es": "Diseño y fabricación en el MIT.",
@@ -797,12 +1252,54 @@
   "ar": "التصميم والتصنيع في MIT.",
   "he": "תכן וייצור ב-MIT."
  },
+ "Design for FDM printing: overhangs, supports, wall thickness, orientation.": {
+  "fr": "Concevoir pour l’impression FDM : porte-à-faux, supports, épaisseur de paroi, orientation.",
+  "es": "Diseñar para impresión FDM: voladizos, soportes, espesor de pared, orientación.",
+  "it": "Progettare per la stampa FDM: sbalzi, supporti, spessore delle pareti, orientamento.",
+  "ar": "صمّم لطباعة FDM: البروزات، والدعامات، وسماكة الجدار، والاتجاه.",
+  "he": "לתכנן להדפסת FDM: תליות, תמיכות, עובי דופן, כיוון."
+ },
  "Design for Sustainability & Lightweighting": {
   "fr": "Conception durable et allègement",
   "es": "Diseño sostenible y aligeramiento",
   "it": "Progettazione sostenibile e alleggerimento",
   "ar": "التصميم من أجل الاستدامة وتخفيف الوزن",
   "he": "תכן לקיימות והפחתת משקל"
+ },
+ "Design for assembly": {
+  "fr": "Conception pour l’assemblage",
+  "es": "Diseño para el ensamblaje",
+  "it": "Progettazione per l’assemblaggio",
+  "ar": "التصميم من أجل التجميع",
+  "he": "תכן להרכבה"
+ },
+ "Design for assembly.": {
+  "fr": "Conception pour l’assemblage.",
+  "es": "Diseño para el ensamblaje.",
+  "it": "Progettazione per l’assemblaggio.",
+  "ar": "التصميم من أجل التجميع.",
+  "he": "תכן להרכבה."
+ },
+ "Design for disassembly": {
+  "fr": "Conception pour le démontage",
+  "es": "Diseño para el desmontaje",
+  "it": "Progettazione per lo smontaggio",
+  "ar": "التصميم من أجل التفكيك",
+  "he": "תכן לפירוק"
+ },
+ "Design for disassembly: screws over glue, single materials where possible, and labeled plastics.": {
+  "fr": "Conception pour le démontage : des vis plutôt que de la colle, des matériaux uniques si possible, et des plastiques marqués.",
+  "es": "Diseño para el desmontaje: tornillos en vez de pegamento, materiales únicos cuando sea posible y plásticos etiquetados.",
+  "it": "Progettazione per lo smontaggio: viti invece di colla, materiali singoli dove possibile e plastiche etichettate.",
+  "ar": "التصميم من أجل التفكيك: البراغي بدل الغراء، ومواد أحادية حيثما أمكن، وبلاستيك موسوم.",
+  "he": "תכן לפירוק: ברגים במקום דבק, חומר יחיד היכן שאפשר, ופלסטיק מסומן."
+ },
+ "Design for manufacture.": {
+  "fr": "Conception pour la fabrication.",
+  "es": "Diseño para la fabricación.",
+  "it": "Progettazione per la produzione.",
+  "ar": "التصميم من أجل التصنيع.",
+  "he": "תכן לייצור."
  },
  "Design intent": {
   "fr": "Intention de conception",
@@ -817,6 +1314,20 @@
   "it": "Intento progettuale: quota nel modo in cui il pezzo funziona. Se i fori devono restare centrati, vincolali al punto medio, non a uno spigolo.",
   "ar": "نية التصميم: ضع الأبعاد بحسب طريقة عمل القطعة. إذا وجب أن تبقى الثقوب في المنتصف، فقيّدها بنقطة المنتصف لا بحافة.",
   "he": "כוונת תכן: תנו מידות לפי האופן שבו החלק מתפקד. אם חורים חייבים להישאר ממורכזים, אלצו אותם לנקודת האמצע ולא למקצוע."
+ },
+ "Designing for repair and recycling keeps materials in use; EPA describes sustainable materials management as a systematic approach to using and reusing materials more productively over their entire life cycles.": {
+  "fr": "Concevoir pour la réparation et le recyclage maintient les matériaux en usage ; l’EPA décrit la gestion durable des matériaux comme une approche systématique pour utiliser et réutiliser les matériaux plus efficacement sur tout leur cycle de vie.",
+  "es": "Diseñar para la reparación y el reciclaje mantiene los materiales en uso; la EPA describe la gestión sostenible de materiales como un enfoque sistemático para usar y reutilizar los materiales de forma más productiva a lo largo de todo su ciclo de vida.",
+  "it": "Progettare per riparazione e riciclo mantiene i materiali in uso; l’EPA descrive la gestione sostenibile dei materiali come un approccio sistematico per usare e riusare i materiali in modo più produttivo lungo tutto il loro ciclo di vita.",
+  "ar": "التصميم من أجل الإصلاح وإعادة التدوير يُبقي المواد قيد الاستخدام؛ وتصف EPA الإدارة المستدامة للمواد بأنها نهج منهجي لاستخدام المواد وإعادة استخدامها بإنتاجية أكبر عبر دورات حياتها كاملة.",
+  "he": "תכן לתיקון ולמחזור שומר על חומרים בשימוש; ה-EPA מתאר ניהול בר-קיימא של חומרים כגישה שיטתית לשימוש ולשימוש חוזר בחומרים בצורה יצרנית יותר לאורך כל מחזור חייהם."
+ },
+ "Designing parts to be easy to put together.": {
+  "fr": "Concevoir des pièces faciles à assembler.",
+  "es": "Diseñar piezas fáciles de unir.",
+  "it": "Progettare pezzi facili da montare.",
+  "ar": "تصميم قطع يسهل تركيبها معًا.",
+  "he": "תכנון חלקים כך שיהיה קל להרכיב אותם."
  },
  "Detail and assembly drawings, BOM; Lab B": {
   "fr": "Plans de détail et d’ensemble, nomenclature ; TP B",
@@ -909,6 +1420,13 @@
   "ar": "مقررات في الرسم والنمذجة.",
   "he": "קורסים בשרטוט ובמידול."
  },
+ "Drawing information area.": {
+  "fr": "Zone d’informations du plan.",
+  "es": "Zona de información del plano.",
+  "it": "Area delle informazioni della tavola.",
+  "ar": "منطقة معلومات الرسم.",
+  "he": "אזור המידע של השרטוט."
+ },
  "Drawing scale": {
   "fr": "Échelle du dessin",
   "es": "Escala del dibujo",
@@ -930,6 +1448,13 @@
   "ar": "الرسم: بالطول الكامل اصطلاحًا.",
   "he": "שרטוט: בגודל מלא לפי המוסכמה."
  },
+ "Drawings and models are complete, unambiguous and capture design intent; choices are justified with numbers.": {
+  "fr": "Les plans et modèles sont complets, sans ambiguïté et traduisent l’intention de conception ; les choix sont justifiés par des chiffres.",
+  "es": "Los planos y modelos son completos, inequívocos y captan la intención de diseño; las decisiones se justifican con números.",
+  "it": "Tavole e modelli sono completi, non ambigui e catturano l’intento progettuale; le scelte sono giustificate con numeri.",
+  "ar": "الرسومات والنماذج كاملة وواضحة وتجسد نية التصميم؛ والخيارات مبررة بالأرقام.",
+  "he": "השרטוטים והמודלים שלמים, חד-משמעיים ולוכדים את כוונת התכן; הבחירות מנומקות במספרים."
+ },
  "Drawings come from the model: views, sections, dimensions and notes, a title block (part, material, scale, projection symbol, units, tolerances) and, for assemblies, a bill of materials (BOM) with balloons.": {
   "fr": "Les plans découlent du modèle : vues, coupes, cotes et notes, un cartouche (pièce, matériau, échelle, symbole de projection, unités, tolérances) et, pour les assemblages, une nomenclature (BOM) avec repères.",
   "es": "Los planos salen del modelo: vistas, cortes, cotas y notas, un cajetín (pieza, material, escala, símbolo de proyección, unidades, tolerancias) y, para ensamblajes, una lista de materiales (BOM) con globos.",
@@ -937,12 +1462,61 @@
   "ar": "تأتي الرسومات من النموذج: مساقط، وقطاعات، وأبعاد وملاحظات، وإطار عنوان (القطعة، والمادة، والمقياس، ورمز الإسقاط، والوحدات، والتفاوتات)، وللتجميعات قائمة مواد (BOM) بفقاعات ترقيم.",
   "he": "השרטוטים נגזרים מהמודל: מבטים, חתכים, מידות והערות, טבלת כותרת (חלק, חומר, קנה מידה, סמל היטל, יחידות, טולרנסים), ובהרכבות גם רשימת חלקים (BOM) עם בלונים."
  },
+ "Drawings with clear BOMs make products easier to repair and maintain.": {
+  "fr": "Des plans avec des nomenclatures claires rendent les produits plus faciles à réparer et à entretenir.",
+  "es": "Los planos con listas de materiales claras hacen que los productos sean más fáciles de reparar y mantener.",
+  "it": "Tavole con distinte base chiare rendono i prodotti più facili da riparare e mantenere.",
+  "ar": "الرسومات ذات قوائم المواد الواضحة تجعل المنتجات أسهل في الإصلاح والصيانة.",
+  "he": "שרטוטים עם רשימות חלקים ברורות הופכים מוצרים לקלים יותר לתיקון ולתחזוקה."
+ },
+ "Drawing’s identity, scale, units and tolerances.": {
+  "fr": "Identité du plan, échelle, unités et tolérances.",
+  "es": "Identidad, escala, unidades y tolerancias del plano.",
+  "it": "Identità, scala, unità e tolleranze della tavola.",
+  "ar": "هوية الرسم ومقياسه ووحداته وتفاوتاته.",
+  "he": "הזהות, קנה המידה, היחידות והטולרנסים של השרטוט."
+ },
  "Drive models with variables and equations (design intent).": {
   "fr": "Piloter les modèles par des variables et des équations (intention de conception).",
   "es": "Controlar los modelos con variables y ecuaciones (intención de diseño).",
   "it": "Pilotare i modelli con variabili ed equazioni (intento progettuale).",
   "ar": "تحكّم في النماذج بالمتغيرات والمعادلات (نية التصميم).",
   "he": "להניע מודלים במשתנים ובמשוואות (כוונת תכן)."
+ },
+ "E only": {
+  "fr": "de E seulement",
+  "es": "solo E",
+  "it": "solo E",
+  "ar": "E فقط",
+  "he": "E בלבד"
+ },
+ "EPA figure.": {
+  "fr": "Chiffre de l’EPA.",
+  "es": "Cifra de la EPA.",
+  "it": "Dato EPA.",
+  "ar": "رقم EPA.",
+  "he": "נתון EPA."
+ },
+ "EPA reports that every gallon of gasoline burned creates about 8,887 g of CO₂ (about 2.35 kg per liter).": {
+  "fr": "L’EPA indique que chaque gallon d’essence brûlé produit environ 8887 g de CO₂ (environ 2.35 kg par litre).",
+  "es": "La EPA informa que cada galón de gasolina quemado genera unos 8887 g de CO₂ (unos 2.35 kg por litro).",
+  "it": "L’EPA riporta che ogni gallone di benzina bruciato produce circa 8887 g di CO₂ (circa 2.35 kg per litro).",
+  "ar": "تفيد EPA بأن كل غالون بنزين يُحرق ينتج نحو 8887 g من CO₂ (نحو 2.35 kg لكل لتر).",
+  "he": "ה-EPA מדווח שכל גלון בנזין שנשרף יוצר כ-8887 g של CO₂ (כ-2.35 kg לליטר)."
+ },
+ "EPA: Greenhouse gas emissions from a typical passenger vehicle": {
+  "fr": "EPA: Greenhouse gas emissions from a typical passenger vehicle",
+  "es": "EPA: Greenhouse gas emissions from a typical passenger vehicle",
+  "it": "EPA: Greenhouse gas emissions from a typical passenger vehicle",
+  "ar": "EPA: Greenhouse gas emissions from a typical passenger vehicle",
+  "he": "EPA: Greenhouse gas emissions from a typical passenger vehicle"
+ },
+ "EPA: Plastics, material-specific data": {
+  "fr": "EPA: Plastics, material-specific data",
+  "es": "EPA: Plastics, material-specific data",
+  "it": "EPA: Plastics, material-specific data",
+  "ar": "EPA: Plastics, material-specific data",
+  "he": "EPA: Plastics, material-specific data"
  },
  "EPA: Sustainable materials management basics": {
   "fr": "EPA: Sustainable materials management basics",
@@ -964,6 +1538,20 @@
   "it": "Ogni unità termina con una breve sezione con fonti che mostra come le sue idee aiutano le persone e il pianeta.",
   "ar": "تنتهي كل وحدة بقسم قصير موثق المصادر يبيّن كيف تساعد أفكارها الناس والكوكب.",
   "he": "כל יחידה מסתיימת בחלק קצר עם מקורות שמראה איך הרעיונות שלה עוזרים לאנשים ולכדור הארץ."
+ },
+ "Easier repair and recycling.": {
+  "fr": "Réparation et recyclage plus faciles.",
+  "es": "Reparación y reciclaje más fáciles.",
+  "it": "Riparazione e riciclo più facili.",
+  "ar": "إصلاح وإعادة تدوير أسهل.",
+  "he": "תיקון ומחזור קלים יותר."
+ },
+ "Easy to take apart for repair and recycling.": {
+  "fr": "Facile à démonter pour la réparation et le recyclage.",
+  "es": "Fácil de desmontar para reparar y reciclar.",
+  "it": "Facile da smontare per riparazione e riciclo.",
+  "ar": "سهل التفكيك للإصلاح وإعادة التدوير.",
+  "he": "קל לפירוק לתיקון ולמחזור."
  },
  "Edge appears shorter than true length.": {
   "fr": "L’arête paraît plus courte que sa vraie longueur.",
@@ -1014,6 +1602,34 @@
   "ar": "تتجمع الأخطاء على امتداد السلسلة.",
   "he": "השגיאות מצטברות לאורך השרשרת."
  },
+ "Errors: +0.12, +0.08 and −0.10 mm, i.e. +0.6%, +0.4% and −0.5%.": {
+  "fr": "Erreurs : +0.12, +0.08 et −0.10 mm, soit +0.6%, +0.4% et −0.5%.",
+  "es": "Errores: +0.12, +0.08 y −0.10 mm, es decir, +0.6%, +0.4% y −0.5%.",
+  "it": "Errori: +0.12, +0.08 e −0.10 mm, cioè +0.6%, +0.4% e −0.5%.",
+  "ar": "الأخطاء: ‎+0.12 و‎+0.08 و−0.10 mm، أي ‎+0.6% و‎+0.4% و−0.5%.",
+  "he": "שגיאות: ‎+0.12, ‎+0.08 ו-−0.10 mm, כלומר ‎+0.6%, ‎+0.4% ו-−0.5%."
+ },
+ "Estimate fuel and CO₂ savings from vehicle lightweighting.": {
+  "fr": "Estimer les économies de carburant et de CO₂ dues à l’allègement des véhicules.",
+  "es": "Estimar el ahorro de combustible y de CO₂ por aligerar vehículos.",
+  "it": "Stimare i risparmi di carburante e di CO₂ dall’alleggerimento dei veicoli.",
+  "ar": "قدّر وفورات الوقود وCO₂ الناتجة عن تخفيف وزن المركبات.",
+  "he": "להעריך חיסכון בדלק וב-CO₂ מהפחתת משקל כלי רכב."
+ },
+ "Estimate print mass, filament length and time.": {
+  "fr": "Estimer la masse, la longueur de filament et la durée d’une impression.",
+  "es": "Estimar la masa, la longitud de filamento y el tiempo de una impresión.",
+  "it": "Stimare massa, lunghezza del filamento e tempo di stampa.",
+  "ar": "قدّر كتلة الطباعة وطول الخيط والزمن.",
+  "he": "להעריך מסת הדפסה, אורך פילמנט וזמן."
+ },
+ "Estimate print time for 10 g of PLA with a 0.4 mm line, 0.2 mm layers at 50 mm/s.": {
+  "fr": "Estimez la durée d’impression de 10 g de PLA avec une ligne de 0.4 mm et des couches de 0.2 mm à 50 mm/s.",
+  "es": "Estima el tiempo de impresión de 10 g de PLA con una línea de 0.4 mm y capas de 0.2 mm a 50 mm/s.",
+  "it": "Stima il tempo di stampa per 10 g di PLA con linea da 0.4 mm e strati da 0.2 mm a 50 mm/s.",
+  "ar": "قدّر زمن طباعة 10 g من PLA بخط 0.4 mm وطبقات 0.2 mm بسرعة 50 mm/s.",
+  "he": "העריכו את זמן ההדפסה של 10 g PLA בקו של 0.4 mm ושכבות של 0.2 mm במהירות 50 mm/s."
+ },
  "Every DOF fixed.": {
   "fr": "Chaque DDL est fixé.",
   "es": "Todos los GDL fijados.",
@@ -1035,6 +1651,13 @@
   "ar": "يوضع بُعد كل معلم مرة واحدة، في المسقط الذي يُظهره على أفضل وجه، دون أبعاد مكررة أو متسلسلة تراكم الأخطاء.",
   "he": "כל מאפיין מקבל מידה פעם אחת, במבט שמראה אותו בצורה הטובה ביותר, בלי מידות כפולות או משורשרות שמצברות שגיאות."
  },
+ "Exact reference feature for measurement.": {
+  "fr": "Élément de référence exact pour la mesure.",
+  "es": "Elemento de referencia exacto para medir.",
+  "it": "Elemento di riferimento esatto per la misura.",
+  "ar": "معلم مرجعي دقيق للقياس.",
+  "he": "מאפיין ייחוס מדויק למדידה."
+ },
  "Exact reference feature.": {
   "fr": "Élément de référence exact.",
   "es": "Elemento de referencia exacto.",
@@ -1049,6 +1672,13 @@
   "ar": "اشرح دور الرسم الحر في عملية التصميم.",
   "he": "להסביר את תפקיד הסקיצה בתהליך התכן."
  },
+ "Export your cube as STL and open it in a free slicer.": {
+  "fr": "Exportez votre cube en STL et ouvrez-le dans un trancheur gratuit.",
+  "es": "Exporta tu cubo como STL y ábrelo en un laminador gratuito.",
+  "it": "Esporta il cubo in STL e aprilo in uno slicer gratuito.",
+  "ar": "صدّر المكعب بصيغة STL وافتحه في برنامج تقطيع مجاني.",
+  "he": "ייצאו את הקובייה כ-STL ופתחו אותה בתוכנת פריסה חינמית."
+ },
  "Extra tolerance as a feature departs from MMC.": {
   "fr": "Tolérance supplémentaire quand un élément s’éloigne du MMC.",
   "es": "Tolerancia extra a medida que un elemento se aleja del MMC.",
@@ -1062,6 +1692,20 @@
   "it": "Estrusione, rivoluzione, raccordo, foro, serie…",
   "ar": "بثق، دوران، تدوير، ثقب، نمط…",
   "he": "שליפה, סיבוב, עיגול פינה, חור, תבנית חוזרת…"
+ },
+ "FDM parts are weakest between layers.": {
+  "fr": "Les pièces FDM sont plus faibles entre les couches.",
+  "es": "Las piezas FDM son más débiles entre capas.",
+  "it": "I pezzi FDM sono più deboli tra gli strati.",
+  "ar": "قطع FDM أضعف ما تكون بين الطبقات.",
+  "he": "חלקי FDM החלשים ביותר בין השכבות."
+ },
+ "FDM parts are weakest…": {
+  "fr": "Les pièces FDM sont plus faibles…",
+  "es": "Las piezas FDM son más débiles…",
+  "it": "I pezzi FDM sono più deboli…",
+  "ar": "قطع FDM أضعف ما تكون…",
+  "he": "חלקי FDM החלשים ביותר…"
  },
  "Feature": {
   "fr": "Fonction",
@@ -1091,6 +1735,48 @@
   "ar": "الميزات، والمتغيرات، وخصائص الكتلة؛ المختبر A",
   "he": "פיצ׳רים, משתנים, תכונות מסה; מעבדה A"
  },
+ "Fewer parts, fewer steps.": {
+  "fr": "Moins de pièces, moins d’étapes.",
+  "es": "Menos piezas, menos pasos.",
+  "it": "Meno pezzi, meno passaggi.",
+  "ar": "قطع أقل، خطوات أقل.",
+  "he": "פחות חלקים, פחות שלבים."
+ },
+ "Filament length": {
+  "fr": "Longueur de filament",
+  "es": "Longitud de filamento",
+  "it": "Lunghezza del filamento",
+  "ar": "طول الخيط",
+  "he": "אורך פילמנט"
+ },
+ "Filament length for a 10 g PLA print (1.75 mm)?": {
+  "fr": "Longueur de filament pour une impression PLA de 10 g (1.75 mm) ?",
+  "es": "¿Longitud de filamento para una impresión de PLA de 10 g (1.75 mm)?",
+  "it": "Lunghezza del filamento per una stampa in PLA da 10 g (1.75 mm)?",
+  "ar": "طول الخيط لمطبوعة PLA كتلتها 10 g (1.75 mm)؟",
+  "he": "אורך פילמנט להדפסת PLA של 10 g (1.75 mm)?"
+ },
+ "Filament length for a print of mass m": {
+  "fr": "Longueur de filament pour une impression de masse m",
+  "es": "Longitud de filamento para una impresión de masa m",
+  "it": "Lunghezza del filamento per una stampa di massa m",
+  "ar": "طول الخيط لمطبوعة كتلتها m",
+  "he": "אורך פילמנט להדפסה במסה m"
+ },
+ "Filament length per gram = 1/(ρπr²). For 1.75 mm PLA (ρ = 1.24 g/cm³) that is about 33.5 cm per gram.": {
+  "fr": "Longueur de filament par gramme = 1/(ρπr²). Pour du PLA de 1.75 mm (ρ = 1.24 g/cm³), cela fait environ 33.5 cm par gramme.",
+  "es": "Longitud de filamento por gramo = 1/(ρπr²). Para PLA de 1.75 mm (ρ = 1.24 g/cm³) son unos 33.5 cm por gramo.",
+  "it": "Lunghezza di filamento per grammo = 1/(ρπr²). Per PLA da 1.75 mm (ρ = 1.24 g/cm³) sono circa 33.5 cm per grammo.",
+  "ar": "طول الخيط لكل غرام = 1/(ρπr²). لخيط PLA قطره 1.75 mm (ρ = 1.24 g/cm³) يبلغ ذلك نحو 33.5 cm لكل غرام.",
+  "he": "אורך פילמנט לגרם = 1/(ρπr²). ל-PLA בקוטר 1.75 mm (ρ = 1.24 g/cm³) זה כ-33.5 cm לגרם."
+ },
+ "Filament per gram for 1.75 mm PLA ≈": {
+  "fr": "Filament par gramme pour du PLA de 1.75 mm ≈",
+  "es": "Filamento por gramo para PLA de 1.75 mm ≈",
+  "it": "Filamento per grammo per PLA da 1.75 mm ≈",
+  "ar": "الخيط لكل غرام لخيط PLA قطره 1.75 mm ≈",
+  "he": "פילמנט לגרם ל-PLA בקוטר 1.75 mm ≈"
+ },
  "Find the mobility of a four-bar linkage (4 links including ground, 4 pin joints).": {
   "fr": "Trouvez la mobilité d’un quadrilatère articulé (4 solides y compris le bâti, 4 pivots).",
   "es": "Halla la movilidad de un mecanismo de cuatro barras (4 eslabones incluido el bastidor, 4 articulaciones).",
@@ -1104,6 +1790,13 @@
   "it": "Trova la lunghezza reale di uno spigolo da (0, 0, 0) a (12, 16, 0).",
   "ar": "أوجد الطول الحقيقي لحافة من (0, 0, 0) إلى (12, 16, 0).",
   "he": "מצאו את האורך האמיתי של מקצוע מ-(0, 0, 0) ל-(12, 16, 0)."
+ },
+ "Find the true length of an edge from (0, 0, 0) to (20, 20, 10).": {
+  "fr": "Trouvez la vraie longueur d’une arête de (0, 0, 0) à (20, 20, 10).",
+  "es": "Halla la longitud real de una arista de (0, 0, 0) a (20, 20, 10).",
+  "it": "Trova la lunghezza reale di uno spigolo da (0, 0, 0) a (20, 20, 10).",
+  "ar": "أوجد الطول الحقيقي لحافة من (0, 0, 0) إلى (20, 20, 10).",
+  "he": "מצאו את האורך האמיתי של מקצוע מ-(0, 0, 0) ל-(20, 20, 10)."
  },
  "Find true length and foreshortening.": {
   "fr": "Trouver la vraie grandeur et le raccourcissement.",
@@ -1133,12 +1826,33 @@
   "ar": "الزاوية الأولى",
   "he": "זווית ראשונה"
  },
+ "Fit that always leaves a gap.": {
+  "fr": "Ajustement qui laisse toujours un jeu.",
+  "es": "Ajuste que siempre deja holgura.",
+  "it": "Accoppiamento che lascia sempre gioco.",
+  "ar": "توافق يترك فجوة دائمًا.",
+  "he": "התאמה שתמיד משאירה רווח."
+ },
+ "Fit with guaranteed overlap.": {
+  "fr": "Ajustement avec chevauchement garanti.",
+  "es": "Ajuste con solape garantizado.",
+  "it": "Accoppiamento con sovrapposizione garantita.",
+  "ar": "توافق بتراكب مضمون.",
+  "he": "התאמה עם חפיפה מובטחת."
+ },
  "Fits in machine design.": {
   "fr": "Les ajustements en conception de machines.",
   "es": "Ajustes en el diseño de máquinas.",
   "it": "Accoppiamenti nella progettazione di macchine.",
   "ar": "التوافقات في تصميم الآلات.",
   "he": "התאמות בתכן מכונות."
+ },
+ "Follows tutorials but drawings are incomplete or models break when edited.": {
+  "fr": "Suit les tutoriels mais les plans sont incomplets ou les modèles cassent lors des modifications.",
+  "es": "Sigue tutoriales, pero los planos están incompletos o los modelos se rompen al editarlos.",
+  "it": "Segue i tutorial ma le tavole sono incomplete o i modelli si rompono quando vengono modificati.",
+  "ar": "يتبع الدروس التعليمية لكن الرسومات ناقصة أو تنكسر النماذج عند التعديل.",
+  "he": "עוקב אחרי מדריכים אבל השרטוטים חסרים או שהמודלים נשברים בעריכה."
  },
  "Foreshortening": {
   "fr": "Raccourcissement",
@@ -1147,12 +1861,33 @@
   "ar": "التقصير",
   "he": "קיצור"
  },
+ "Four labs take a part from paper to plastic: a parametric bracket in Onshape, an assembly and drawing in FreeCAD, a 3D-printing estimate and print, and a lightweighting study.": {
+  "fr": "Quatre TP mènent une pièce du papier au plastique : une équerre paramétrique dans Onshape, un assemblage et un plan dans FreeCAD, une estimation et une impression 3D, et une étude d’allègement.",
+  "es": "Cuatro prácticas llevan una pieza del papel al plástico: un soporte paramétrico en Onshape, un ensamblaje y un plano en FreeCAD, una estimación e impresión 3D, y un estudio de aligeramiento.",
+  "it": "Quattro laboratori portano un pezzo dalla carta alla plastica: una staffa parametrica in Onshape, un assieme e una tavola in FreeCAD, una stima e una stampa 3D, e uno studio di alleggerimento.",
+  "ar": "تنقل أربعة مختبرات قطعةً من الورق إلى البلاستيك: دعامة بارامترية في Onshape، وتجميع ورسم في FreeCAD، وتقدير للطباعة 3D وطباعة فعلية، ودراسة لتخفيف الوزن.",
+  "he": "ארבע מעבדות לוקחות חלק מהנייר לפלסטיק: תושבת פרמטרית ב-Onshape, הרכבה ושרטוט ב-FreeCAD, הערכה והדפסת 3D, ומחקר הפחתת משקל."
+ },
  "Four parts each ± 0.05: worst-case and RSS?": {
   "fr": "Quatre pièces à ± 0.05 chacune : pire des cas et RSS ?",
   "es": "Cuatro piezas de ± 0.05 cada una: ¿peor caso y RSS?",
   "it": "Quattro pezzi da ± 0.05 ciascuno: caso peggiore e RSS?",
   "ar": "أربع قطع كل منها ± 0.05: ما أسوأ حالة وما RSS؟",
   "he": "ארבעה חלקים של ± 0.05 כל אחד: מקרה גרוע ו-RSS?"
+ },
+ "Free engineering graphics and CAD course: sketching, projection, sections, GD&T, fits, Onshape and FreeCAD modeling, 3D printing, lightweighting.": {
+  "fr": "Cours gratuit de dessin technique et CAO : croquis, projection, coupes, GD&T, ajustements, modélisation Onshape et FreeCAD, impression 3D, allègement.",
+  "es": "Curso gratuito de dibujo de ingeniería y CAD: bocetos, proyección, cortes, GD&T, ajustes, modelado en Onshape y FreeCAD, impresión 3D, aligeramiento.",
+  "it": "Corso gratuito di disegno tecnico e CAD: schizzo, proiezione, sezioni, GD&T, accoppiamenti, modellazione in Onshape e FreeCAD, stampa 3D, alleggerimento.",
+  "ar": "مقرر مجاني في الرسم الهندسي وCAD: الرسم الحر، والإسقاط، والقطاعات، وGD&T، والتوافقات، والنمذجة في Onshape وFreeCAD، والطباعة 3D، وتخفيف الوزن.",
+  "he": "קורס חינמי בגרפיקה הנדסית וב-CAD: סקיצות, היטלים, חתכים, GD&T, התאמות, מידול ב-Onshape וב-FreeCAD, הדפסת 3D, הפחתת משקל."
+ },
+ "Free self-paced Onshape courses.": {
+  "fr": "Cours Onshape gratuits à votre rythme.",
+  "es": "Cursos gratuitos de Onshape a tu ritmo.",
+  "it": "Corsi Onshape gratuiti al tuo ritmo.",
+  "ar": "مقررات Onshape مجانية بالسرعة التي تناسبك.",
+  "he": "קורסי Onshape חינמיים בקצב שלכם."
  },
  "Free self-paced modeling courses.": {
   "fr": "Cours de modélisation gratuits à votre rythme.",
@@ -1167,6 +1902,13 @@
   "it": "Strumenti e riferimenti gratuiti",
   "ar": "أدوات ومراجع مجانية",
   "he": "כלים ומקורות חינמיים"
+ },
+ "Free, open-source parametric CAD for Windows, Mac and Linux.": {
+  "fr": "CAO paramétrique gratuite et open source pour Windows, Mac et Linux.",
+  "es": "CAD paramétrico gratuito y de código abierto para Windows, Mac y Linux.",
+  "it": "CAD parametrico gratuito e open source per Windows, Mac e Linux.",
+  "ar": "CAD بارامتري مجاني ومفتوح المصدر لأنظمة Windows وMac وLinux.",
+  "he": "CAD פרמטרי חינמי בקוד פתוח ל-Windows, ל-Mac ול-Linux."
  },
  "FreeCAD (free, open source)": {
   "fr": "FreeCAD (gratuit, open source)",
@@ -1196,6 +1938,20 @@
   "ar": "القطاعات في FreeCAD TechDraw.",
   "he": "חתכים ב-FreeCAD TechDraw."
  },
+ "FreeCAD assemblies and TechDraw.": {
+  "fr": "Assemblages FreeCAD et TechDraw.",
+  "es": "Ensamblajes de FreeCAD y TechDraw.",
+  "it": "Assiemi FreeCAD e TechDraw.",
+  "ar": "تجميعات FreeCAD وTechDraw.",
+  "he": "הרכבות FreeCAD ו-TechDraw."
+ },
+ "FreeCAD is free for Windows, Mac and Linux.": {
+  "fr": "FreeCAD est gratuit pour Windows, Mac et Linux.",
+  "es": "FreeCAD es gratuito para Windows, Mac y Linux.",
+  "it": "FreeCAD è gratuito per Windows, Mac e Linux.",
+  "ar": "FreeCAD مجاني لأنظمة Windows وMac وLinux.",
+  "he": "FreeCAD חינמי ל-Windows, ל-Mac ול-Linux."
+ },
  "FreeCAD wiki": {
   "fr": "Wiki FreeCAD",
   "es": "Wiki de FreeCAD",
@@ -1209,6 +1965,13 @@
   "it": "FreeCAD wiki: Getting started",
   "ar": "FreeCAD wiki: Getting started",
   "he": "FreeCAD wiki: Getting started"
+ },
+ "FreeCAD’s official beginner guide.": {
+  "fr": "Le guide officiel de FreeCAD pour débutants.",
+  "es": "La guía oficial de FreeCAD para principiantes.",
+  "it": "La guida ufficiale di FreeCAD per principianti.",
+  "ar": "دليل FreeCAD الرسمي للمبتدئين.",
+  "he": "המדריך הרשמי של FreeCAD למתחילים."
  },
  "Freehand sketching as an engineering tool: lines, circles, proportion, and seeing 3D objects in your head.": {
   "fr": "Le croquis à main levée comme outil d’ingénieur : lignes, cercles, proportions, et voir des objets 3D dans sa tête.",
@@ -1224,6 +1987,27 @@
   "ar": "يشترك المسقطان الأمامي والعلوي في…",
   "he": "מבט החזית ומבט העל חולקים…"
  },
+ "Fused-filament (FDM) printing: overhangs steeper than about 45° from vertical usually need supports; orient parts so loads do not pull layers apart, because layer bonds are the weak direction.": {
+  "fr": "Impression par dépôt de filament fondu (FDM) : les porte-à-faux de plus de 45° environ par rapport à la verticale demandent généralement des supports ; orientez les pièces pour que les charges ne séparent pas les couches, car l’adhésion entre couches est la direction faible.",
+  "es": "Impresión por filamento fundido (FDM): los voladizos de más de unos 45° respecto a la vertical suelen necesitar soportes; orienta las piezas para que las cargas no separen las capas, porque la unión entre capas es la dirección débil.",
+  "it": "Stampa a filamento fuso (FDM): gli sbalzi oltre circa 45° dalla verticale di solito richiedono supporti; orienta i pezzi in modo che i carichi non separino gli strati, perché l’adesione tra strati è la direzione debole.",
+  "ar": "الطباعة بالخيط المنصهر (FDM): البروزات الأشد ميلًا من نحو 45° عن الرأسي تحتاج عادةً إلى دعامات؛ ووجّه القطع بحيث لا تفصل الأحمال الطبقات، لأن روابط الطبقات هي الاتجاه الضعيف.",
+  "he": "הדפסת פילמנט מותך (FDM): תליות תלולות מכ-45° מהאנך דורשות בדרך כלל תמיכות; כוונו חלקים כך שעומסים לא יפרידו שכבות, כי הקשר בין השכבות הוא הכיוון החלש."
+ },
+ "Fused-filament 3D printing.": {
+  "fr": "Impression 3D par dépôt de filament fondu.",
+  "es": "Impresión 3D por filamento fundido.",
+  "it": "Stampa 3D a filamento fuso.",
+  "ar": "الطباعة 3D بالخيط المنصهر.",
+  "he": "הדפסת 3D בפילמנט מותך."
+ },
+ "GD&T callout box.": {
+  "fr": "Cadre de tolérance GD&T.",
+  "es": "Marco de control de GD&T.",
+  "it": "Riquadro di tolleranza GD&T.",
+  "ar": "إطار تحكم GD&T.",
+  "he": "מסגרת בקרה של GD&T."
+ },
  "GD&T: form, orientation, position; MMC": {
   "fr": "GD&T : forme, orientation, position ; MMC",
   "es": "GD&T: forma, orientación, posición; MMC",
@@ -1237,6 +2021,13 @@
   "it": "Spazio o sovrapposizione.",
   "ar": "فجوة أو تراكب.",
   "he": "רווח או חפיפה."
+ },
+ "Gasoline CO₂": {
+  "fr": "CO₂ de l’essence",
+  "es": "CO₂ de la gasolina",
+  "it": "CO₂ della benzina",
+  "ar": "CO₂ البنزين",
+  "he": "CO₂ מבנזין"
  },
  "Geometric dimensioning and tolerancing (GD&T), standardized in ASME Y14.5 (current edition 2018), controls form, orientation, location and profile relative to datums, the reference surfaces that mate in assembly.": {
   "fr": "Le tolérancement géométrique (GD&T), normalisé dans ASME Y14.5 (édition actuelle 2018), contrôle la forme, l’orientation, la position et le profil par rapport aux références, les surfaces de référence qui s’accouplent à l’assemblage.",
@@ -1252,12 +2043,26 @@
   "ar": "الأبعاد والتفاوتات الهندسية.",
   "he": "מתן מידות וטולרנסים גאומטריים."
  },
+ "Geometric property I that sets bending stiffness.": {
+  "fr": "Propriété géométrique I qui détermine la rigidité en flexion.",
+  "es": "Propiedad geométrica I que fija la rigidez a flexión.",
+  "it": "Proprietà geometrica I che determina la rigidezza a flessione.",
+  "ar": "الخاصية الهندسية I التي تحدد جساءة الانحناء.",
+  "he": "התכונה הגאומטרית I שקובעת את קשיחות הכפיפה."
+ },
  "Geometric relationship, e.g. tangent.": {
   "fr": "Relation géométrique, p. ex. tangence.",
   "es": "Relación geométrica, p. ej. tangente.",
   "it": "Relazione geometrica, ad es. tangenza.",
   "ar": "علاقة هندسية، مثل التماس.",
   "he": "קשר גאומטרי, למשל משיקות."
+ },
+ "Glue makes products better.": {
+  "fr": "La colle rend les produits meilleurs.",
+  "es": "El pegamento mejora los productos.",
+  "it": "La colla rende i prodotti migliori.",
+  "ar": "الغراء يجعل المنتجات أفضل.",
+  "he": "דבק משפר מוצרים."
  },
  "Good fits make products repairable: standard ISO fits let bearings, pins and bushings be replaced with off-the-shelf parts years later, keeping a machine in service instead of in a landfill.": {
   "fr": "De bons ajustements rendent les produits réparables : les ajustements ISO normalisés permettent de remplacer roulements, goupilles et bagues par des pièces du commerce des années plus tard, ce qui garde une machine en service plutôt qu’en décharge.",
@@ -1266,12 +2071,40 @@
   "ar": "التوافقات الجيدة تجعل المنتجات قابلة للإصلاح: توافقات ISO القياسية تتيح استبدال المحامل والمسامير الوتدية والجلب بقطع جاهزة بعد سنوات، فتبقى الآلة في الخدمة بدل مكب النفايات.",
   "he": "התאמות טובות הופכות מוצרים לברי תיקון: התאמות ISO תקניות מאפשרות להחליף מיסבים, פינים ותותבים בחלקי מדף גם שנים אחר כך, וכך המכונה נשארת בשירות ולא במטמנה."
  },
+ "Grashof: 40 + 120 = 160 ≤ 100 + 80 = 180, and the shortest link is the crank, so it can rotate fully.": {
+  "fr": "Grashof : 40 + 120 = 160 ≤ 100 + 80 = 180, et le solide le plus court est la manivelle, donc elle peut faire un tour complet.",
+  "es": "Grashof: 40 + 120 = 160 ≤ 100 + 80 = 180, y el eslabón más corto es la manivela, así que puede girar por completo.",
+  "it": "Grashof: 40 + 120 = 160 ≤ 100 + 80 = 180, e il membro più corto è la manovella, quindi può compiere un giro completo.",
+  "ar": "غراسهوف: 40 + 120 = 160 ≤ 100 + 80 = 180، وأقصر وصلة هي ذراع التدوير، لذا يمكنه أن يدور دورة كاملة.",
+  "he": "גרסהוף: 40 + 120 = 160 ≤ 100 + 80 = 180, והחוליה הקצרה ביותר היא הארכובה, ולכן היא יכולה להסתובב סיבוב מלא."
+ },
  "Grid or isometric paper, a pencil, an eraser and a ruler.": {
   "fr": "Papier quadrillé ou isométrique, un crayon, une gomme et une règle.",
   "es": "Papel cuadriculado o isométrico, un lápiz, una goma y una regla.",
   "it": "Carta quadrettata o isometrica, una matita, una gomma e un righello.",
   "ar": "ورق مربعات أو ورق متساوي القياس، وقلم رصاص، وممحاة، ومسطرة.",
   "he": "נייר משבצות או נייר איזומטרי, עיפרון, מחק וסרגל."
+ },
+ "Gruebler": {
+  "fr": "Grübler",
+  "es": "Grübler",
+  "it": "Grübler",
+  "ar": "غروبلر",
+  "he": "גרובלר"
+ },
+ "Gruebler.": {
+  "fr": "Grübler.",
+  "es": "Grübler.",
+  "it": "Grübler.",
+  "ar": "غروبلر.",
+  "he": "גרובלר."
+ },
+ "Gruebler’s equation": {
+  "fr": "Équation de Grübler",
+  "es": "Ecuación de Grübler",
+  "it": "Equazione di Grübler",
+  "ar": "معادلة غروبلر",
+  "he": "משוואת גרובלר"
  },
  "Gruebler’s equation (planar)": {
   "fr": "Équation de Grübler (plane)",
@@ -1357,6 +2190,13 @@
   "ar": "شجرة السجل",
   "he": "עץ היסטוריה"
  },
+ "Hole 25.000–25.021, shaft 24.980–24.993. Clearance range?": {
+  "fr": "Alésage 25.000–25.021, arbre 24.980–24.993. Plage de jeu ?",
+  "es": "Agujero 25.000–25.021, eje 24.980–24.993. ¿Rango de holgura?",
+  "it": "Foro 25.000–25.021, albero 24.980–24.993. Intervallo di gioco?",
+  "ar": "الثقب 25.000–25.021، والعمود 24.980–24.993. ما مدى الخلوص؟",
+  "he": "חור 25.000–25.021, ציר 24.980–24.993. מה טווח המרווח?"
+ },
  "Hole-basis system.": {
   "fr": "Système de l’alésage normal.",
   "es": "Sistema de agujero base.",
@@ -1364,12 +2204,61 @@
   "ar": "نظام أساس الثقب.",
   "he": "שיטת חור בסיס."
  },
+ "How a model should behave when changed.": {
+  "fr": "Comment un modèle doit se comporter lorsqu’on le modifie.",
+  "es": "Cómo debe comportarse un modelo al cambiarlo.",
+  "it": "Come deve comportarsi un modello quando viene modificato.",
+  "ar": "كيف يجب أن يتصرف النموذج عند تغييره.",
+  "he": "איך מודל צריך להתנהג כשמשנים אותו."
+ },
+ "How many grams is 1 m of 1.75 mm PLA?": {
+  "fr": "Combien de grammes pèse 1 m de PLA de 1.75 mm ?",
+  "es": "¿Cuántos gramos pesa 1 m de PLA de 1.75 mm?",
+  "it": "Quanti grammi pesa 1 m di PLA da 1.75 mm?",
+  "ar": "كم غرامًا يزن 1 m من خيط PLA قطره 1.75 mm؟",
+  "he": "כמה גרם שוקל 1 m של PLA בקוטר 1.75 mm?"
+ },
+ "How many liters of gasoline make 1 tonne of CO₂?": {
+  "fr": "Combien de litres d’essence produisent 1 tonne de CO₂ ?",
+  "es": "¿Cuántos litros de gasolina producen 1 tonelada de CO₂?",
+  "it": "Quanti litri di benzina producono 1 tonnellata di CO₂?",
+  "ar": "كم لترًا من البنزين ينتج 1 طن من CO₂؟",
+  "he": "כמה ליטרים של בנזין יוצרים 1 טונה של CO₂?"
+ },
+ "How much 1.75 mm PLA filament does a 10 g print use?": {
+  "fr": "Combien de filament PLA de 1.75 mm consomme une impression de 10 g ?",
+  "es": "¿Cuánto filamento PLA de 1.75 mm usa una impresión de 10 g?",
+  "it": "Quanto filamento PLA da 1.75 mm usa una stampa da 10 g?",
+  "ar": "كم يستهلك من خيط PLA قطره 1.75 mm لمطبوعة كتلتها 10 g؟",
+  "he": "כמה פילמנט PLA בקוטר 1.75 mm צורכת הדפסה של 10 g?"
+ },
  "How much size variation parts can have and still fit together: limits, ISO fits, and tolerance stack-ups.": {
   "fr": "De combien la taille des pièces peut varier tout en s’assemblant : limites, ajustements ISO et chaînes de cotes.",
   "es": "Cuánto puede variar el tamaño de las piezas y aun así encajar: límites, ajustes ISO y cadenas de tolerancias.",
   "it": "Di quanto può variare la dimensione dei pezzi perché si accoppino comunque: limiti, accoppiamenti ISO e catene di tolleranze.",
   "ar": "مقدار التغير المسموح في مقاس القطع مع بقائها متوافقة: الحدود، وتوافقات ISO، وتراكم التفاوتات.",
   "he": "כמה מידות החלקים יכולות להשתנות ועדיין להתאים זה לזה: גבולות, התאמות ISO ושרשראות טולרנס."
+ },
+ "How parts are actually made, and how to design them so they are easy, cheap and low-waste to make, including 3D printing.": {
+  "fr": "Comment les pièces sont réellement fabriquées, et comment les concevoir pour qu’elles soient faciles, peu coûteuses et peu gaspilleuses à produire, impression 3D comprise.",
+  "es": "Cómo se fabrican realmente las piezas y cómo diseñarlas para que sean fáciles, baratas y con poco desperdicio de fabricar, incluida la impresión 3D.",
+  "it": "Come si producono davvero i pezzi e come progettarli perché siano facili, economici e con pochi sprechi da realizzare, stampa 3D compresa.",
+  "ar": "كيف تُصنع القطع فعلًا، وكيف تصممها لتكون سهلة الصنع ورخيصة وقليلة الهدر، بما في ذلك الطباعة 3D.",
+  "he": "איך חלקים מיוצרים בפועל, ואיך לתכנן אותם כך שיהיו קלים, זולים ודלי פסולת לייצור, כולל הדפסת 3D."
+ },
+ "I of a solid 10 × 30 mm bar bending about its 10 mm-wide axis (h = 30)?": {
+  "fr": "I d’une barre pleine de 10 × 30 mm en flexion autour de son axe de 10 mm de large (h = 30) ?",
+  "es": "¿I de una barra maciza de 10 × 30 mm que flexiona respecto a su eje de 10 mm de ancho (h = 30)?",
+  "it": "I di una barra piena da 10 × 30 mm inflessa attorno al suo asse largo 10 mm (h = 30)?",
+  "ar": "ما I لقضيب مصمت 10 × 30 mm ينحني حول محوره الذي عرضه 10 mm (h = 30)؟",
+  "he": "מה ה-I של מוט מלא 10 × 30 mm שמתכופף סביב הציר שרוחבו 10 mm (h = 30)?"
+ },
+ "I; geometric bending stiffness.": {
+  "fr": "I ; rigidité géométrique en flexion.",
+  "es": "I; rigidez geométrica a flexión.",
+  "it": "I; rigidezza geometrica a flessione.",
+  "ar": "I؛ جساءة الانحناء الهندسية.",
+  "he": "I; קשיחות כפיפה גאומטרית."
  },
  "ISO 286 codes fits as hole letter/number over shaft letter/number. H holes start at the nominal size; the number is the IT grade. For sizes 18–30 mm, IT7 = 21 µm and IT6 = 13 µm.": {
   "fr": "L’ISO 286 code les ajustements par lettre/chiffre de l’alésage sur lettre/chiffre de l’arbre. Les alésages H commencent à la cote nominale ; le chiffre est la qualité IT. Pour les dimensions de 18–30 mm, IT7 = 21 µm et IT6 = 13 µm.",
@@ -1392,6 +2281,13 @@
   "ar": "ISO 286-1: ISO code system for tolerances and fits",
   "he": "ISO 286-1: ISO code system for tolerances and fits"
  },
+ "ISO A-series sheet ratio": {
+  "fr": "Rapport des formats ISO série A",
+  "es": "Proporción de los formatos ISO serie A",
+  "it": "Rapporto dei formati ISO serie A",
+  "ar": "نسبة أبعاد أوراق ISO من السلسلة A",
+  "he": "יחס הגיליונות בסדרה A של ISO"
+ },
  "IT grades map to micrometer values that depend on size.": {
   "fr": "Les qualités IT correspondent à des valeurs en micromètres qui dépendent de la dimension.",
   "es": "Los grados IT corresponden a valores en micrómetros que dependen del tamaño.",
@@ -1399,12 +2295,26 @@
   "ar": "تقابل درجات IT قيمًا بالميكرومتر تعتمد على المقاس.",
   "he": "דרגות IT ממופות לערכים במיקרומטרים שתלויים במידה."
  },
+ "IT6 tolerance, 18–30 mm sizes": {
+  "fr": "Tolérance IT6, dimensions de 18–30 mm",
+  "es": "Tolerancia IT6, tamaños de 18–30 mm",
+  "it": "Tolleranza IT6, dimensioni di 18–30 mm",
+  "ar": "تفاوت IT6، للمقاسات 18–30 mm",
+  "he": "טולרנס IT6, מידות 18–30 mm"
+ },
  "IT7 for 18–30 mm sizes is…": {
   "fr": "IT7 pour les dimensions de 18–30 mm vaut…",
   "es": "IT7 para tamaños de 18–30 mm es…",
   "it": "IT7 per dimensioni di 18–30 mm è…",
   "ar": "IT7 للمقاسات 18–30 mm يساوي…",
   "he": "IT7 למידות 18–30 mm הוא…"
+ },
+ "IT7 tolerance, 18–30 mm sizes": {
+  "fr": "Tolérance IT7, dimensions de 18–30 mm",
+  "es": "Tolerancia IT7, tamaños de 18–30 mm",
+  "it": "Tolleranza IT7, dimensioni di 18–30 mm",
+  "ar": "تفاوت IT7، للمقاسات 18–30 mm",
+  "he": "טולרנס IT7, מידות 18–30 mm"
  },
  "If the model fits, the real parts will.": {
   "fr": "Si le modèle s’assemble, les vraies pièces aussi.",
@@ -1448,6 +2358,20 @@
   "ar": "الطول المائل = √(الأفقي² + الرأسي²) في المسقط الذي يظهر فيه كحافة.",
   "he": "אורך משופע = √(אופקי² + אנכי²) במבט שבו הוא מופיע כמקצוע."
  },
+ "Infill": {
+  "fr": "Remplissage",
+  "es": "Relleno",
+  "it": "Riempimento",
+  "ar": "الحشو",
+  "he": "מילוי"
+ },
+ "Infill (often 10–20%) and a few perimeter walls make prints light; solid prints waste material and time.": {
+  "fr": "Le remplissage (souvent 10–20%) et quelques parois périphériques allègent les impressions ; les impressions pleines gaspillent matière et temps.",
+  "es": "El relleno (a menudo 10–20%) y unas pocas paredes perimetrales hacen ligeras las impresiones; las impresiones macizas desperdician material y tiempo.",
+  "it": "Il riempimento (spesso 10–20%) e poche pareti perimetrali rendono leggere le stampe; le stampe piene sprecano materiale e tempo.",
+  "ar": "الحشو (غالبًا 10–20%) وبضعة جدران محيطية تجعل المطبوعات خفيفة؛ والمطبوعات المصمتة تهدر المادة والوقت.",
+  "he": "מילוי (לרוב 10–20%) ומעט דפנות היקפיות הופכים הדפסות לקלות; הדפסות מלאות מבזבזות חומר וזמן."
+ },
  "Inner diameter = 40 − 6 = 34 mm.": {
   "fr": "Diamètre intérieur = 40 − 6 = 34 mm.",
   "es": "Diámetro interior = 40 − 6 = 34 mm.",
@@ -1490,6 +2414,20 @@
   "ar": "توافقات التداخل لا تحتاج إلى حساب.",
   "he": "התאמות הידוק לא צריכות חישוב."
  },
+ "Internal fill percentage of a 3D print.": {
+  "fr": "Pourcentage de remplissage interne d’une impression 3D.",
+  "es": "Porcentaje de relleno interno de una impresión 3D.",
+  "it": "Percentuale di riempimento interno di una stampa 3D.",
+  "ar": "نسبة الحشو الداخلي لمطبوعة 3D.",
+  "he": "אחוז המילוי הפנימי של הדפסת 3D."
+ },
+ "Internal lattice percentage.": {
+  "fr": "Pourcentage de treillis interne.",
+  "es": "Porcentaje de retícula interna.",
+  "it": "Percentuale di reticolo interno.",
+  "ar": "نسبة الشبكة الداخلية.",
+  "he": "אחוז הסריג הפנימי."
+ },
  "International standards for projection and tolerancing let one drawing be made correctly anywhere, so parts can be sourced locally and replacement parts can be made to fit.": {
   "fr": "Les normes internationales de projection et de tolérancement permettent de fabriquer correctement un même plan partout, si bien que les pièces peuvent être produites localement et les pièces de rechange s’ajuster.",
   "es": "Las normas internacionales de proyección y tolerancias permiten fabricar correctamente un mismo plano en cualquier lugar, de modo que las piezas pueden obtenerse localmente y los repuestos encajan.",
@@ -1510,6 +2448,13 @@
   "it": "Gli assi isometrici sono separati da…",
   "ar": "تفصل بين المحاور المتساوية القياس…",
   "he": "הצירים האיזומטריים מופרדים ב…"
+ },
+ "Isometric axis angles": {
+  "fr": "Angles des axes isométriques",
+  "es": "Ángulos de los ejes isométricos",
+  "it": "Angoli degli assi isometrici",
+  "ar": "زوايا المحاور المتساوية القياس",
+  "he": "זוויות הצירים האיזומטריים"
  },
  "Isometric drawing; true length": {
   "fr": "Dessin isométrique ; vraie grandeur",
@@ -1532,6 +2477,13 @@
   "ar": "الرسومات المتساوية القياس تستخدم الطول الكامل؛ والإسقاط المتساوي القياس وحده هو المقصَّر.",
   "he": "שרטוטים איזומטריים משתמשים באורך מלא; רק ההיטל האיזומטרי מקוצר."
  },
+ "Isometric foreshortening": {
+  "fr": "Raccourcissement isométrique",
+  "es": "Escorzo isométrico",
+  "it": "Scorcio isometrico",
+  "ar": "التقصير المتساوي القياس",
+  "he": "קיצור איזומטרי"
+ },
  "Isometric foreshortening factor": {
   "fr": "Facteur de raccourcissement isométrique",
   "es": "Factor de escorzo isométrico",
@@ -1553,12 +2505,26 @@
   "ar": "إنه يفترض تغيرًا مستقلًا ومتمركزًا؛ وللتوافقات الحرجة للسلامة استخدم أسوأ حالة.",
   "he": "היא מניחה שונות בלתי תלויה וממורכזת; בהתאמות קריטיות לבטיחות השתמשו במקרה הגרוע."
  },
+ "It can save material, but energy, failed prints and non-recycled waste matter; compare per part.": {
+  "fr": "Elle peut économiser de la matière, mais l’énergie, les impressions ratées et les déchets non recyclés comptent ; comparez pièce par pièce.",
+  "es": "Puede ahorrar material, pero importan la energía, las impresiones fallidas y los residuos no reciclados; compara pieza por pieza.",
+  "it": "Può risparmiare materiale, ma contano energia, stampe fallite e rifiuti non riciclati; confronta pezzo per pezzo.",
+  "ar": "قد توفر المادة، لكن الطاقة والمطبوعات الفاشلة والنفايات غير المعاد تدويرها مهمة؛ فقارن لكل قطعة.",
+  "he": "היא יכולה לחסוך חומר, אבל אנרגיה, הדפסות כושלות ופסולת שלא ממוחזרת משנות; השוו לפי חלק."
+ },
  "It is a learnable engineering skill that improves quickly with practice.": {
   "fr": "C’est une compétence d’ingénieur qui s’apprend et progresse vite avec la pratique.",
   "es": "Es una habilidad de ingeniería que se aprende y mejora rápido con la práctica.",
   "it": "È un’abilità ingegneristica che si impara e migliora rapidamente con la pratica.",
   "ar": "إنه مهارة هندسية يمكن تعلمها وتتحسن بسرعة مع الممارسة.",
   "he": "זו מיומנות הנדסית נלמדת שמשתפרת מהר בתרגול."
+ },
+ "It often blocks repair and recycling.": {
+  "fr": "Elle empêche souvent la réparation et le recyclage.",
+  "es": "A menudo impide la reparación y el reciclaje.",
+  "it": "Spesso impedisce riparazione e riciclo.",
+  "ar": "إنه غالبًا يعيق الإصلاح وإعادة التدوير.",
+  "he": "לרוב הוא חוסם תיקון ומחזור."
  },
  "Its scope follows first-year engineering graphics and design courses such as MIT 2.007 and 2.00b, Purdue’s engineering and computer graphics courses, Georgia Tech’s ME 1770 and Embry-Riddle’s engineering graphics sequence, using free tools: the Onshape Free plan and FreeCAD. We link to free materials throughout. None of these organizations endorse this page.": {
   "fr": "Son contenu suit les cours de dessin technique et de conception de première année comme MIT 2.007 et 2.00b, les cours d’ingénierie et d’infographie de Purdue, le ME 1770 de Georgia Tech et la séquence de dessin technique d’Embry-Riddle, avec des outils gratuits : l’offre Onshape Free et FreeCAD. Nous renvoyons partout à des ressources gratuites. Aucune de ces organisations ne cautionne cette page.",
@@ -1581,6 +2547,41 @@
   "ar": "اعرف رمزي الإسقاط بالزاوية الأولى والزاوية الثالثة.",
   "he": "להכיר את סמלי ההיטל בזווית ראשונה ובזווית שלישית."
  },
+ "Lab A: A parametric bracket in Onshape": {
+  "fr": "TP A : une équerre paramétrique dans Onshape",
+  "es": "Práctica A: un soporte paramétrico en Onshape",
+  "it": "Laboratorio A: una staffa parametrica in Onshape",
+  "ar": "المختبر A: دعامة بارامترية في Onshape",
+  "he": "מעבדה A: תושבת פרמטרית ב-Onshape"
+ },
+ "Lab B: Assembly and drawing in FreeCAD": {
+  "fr": "TP B : assemblage et mise en plan dans FreeCAD",
+  "es": "Práctica B: ensamblaje y plano en FreeCAD",
+  "it": "Laboratorio B: assieme e tavola in FreeCAD",
+  "ar": "المختبر B: التجميع والرسم في FreeCAD",
+  "he": "מעבדה B: הרכבה ושרטוט ב-FreeCAD"
+ },
+ "Lab C: Print it (or estimate it)": {
+  "fr": "TP C : imprimez-le (ou estimez-le)",
+  "es": "Práctica C: imprímelo (o estímalo)",
+  "it": "Laboratorio C: stampalo (o stimalo)",
+  "ar": "المختبر C: اطبعها (أو قدّرها)",
+  "he": "מעבדה C: הדפיסו אותו (או העריכו)"
+ },
+ "Lab D: Lightweighting study": {
+  "fr": "TP D : étude d’allègement",
+  "es": "Práctica D: estudio de aligeramiento",
+  "it": "Laboratorio D: studio di alleggerimento",
+  "ar": "المختبر D: دراسة تخفيف الوزن",
+  "he": "מעבדה D: מחקר הפחתת משקל"
+ },
+ "Labs": {
+  "fr": "Travaux pratiques",
+  "es": "Prácticas",
+  "it": "Laboratori",
+  "ar": "المختبرات",
+  "he": "מעבדות"
+ },
  "Largest = 25.035 − 25.000 = 0.035.": {
   "fr": "Plus grand = 25.035 − 25.000 = 0.035.",
   "es": "Máximo = 25.035 − 25.000 = 0.035.",
@@ -1595,6 +2596,48 @@
   "ar": "أكبر وأصغر مقاسين مسموحين.",
   "he": "המידות הגדולה והקטנה ביותר המותרות."
  },
+ "Layer adhesion.": {
+  "fr": "Adhésion entre couches.",
+  "es": "Adhesión entre capas.",
+  "it": "Adesione tra gli strati.",
+  "ar": "التصاق الطبقات.",
+  "he": "הידבקות בין שכבות."
+ },
+ "Layer bonds are weaker than the extruded lines.": {
+  "fr": "L’adhésion entre couches est plus faible que les lignes extrudées.",
+  "es": "La unión entre capas es más débil que las líneas extruidas.",
+  "it": "L’adesione tra gli strati è più debole delle linee estruse.",
+  "ar": "روابط الطبقات أضعف من الخطوط المبثوقة.",
+  "he": "הקשר בין השכבות חלש מהקווים המשוחלים."
+ },
+ "Layer-by-layer building.": {
+  "fr": "Construction couche par couche.",
+  "es": "Construcción capa a capa.",
+  "it": "Costruzione strato per strato.",
+  "ar": "البناء طبقة فوق طبقة.",
+  "he": "בנייה שכבה אחר שכבה."
+ },
+ "Length per gram = 1/(1.24 × 0.02405) = 33.5 cm.": {
+  "fr": "Longueur par gramme = 1/(1.24 × 0.02405) = 33.5 cm.",
+  "es": "Longitud por gramo = 1/(1.24 × 0.02405) = 33.5 cm.",
+  "it": "Lunghezza per grammo = 1/(1.24 × 0.02405) = 33.5 cm.",
+  "ar": "الطول لكل غرام = 1/(1.24 × 0.02405) = 33.5 cm.",
+  "he": "אורך לגרם = 1/(1.24 × 0.02405) = 33.5 cm."
+ },
+ "Life cycle": {
+  "fr": "Cycle de vie",
+  "es": "Ciclo de vida",
+  "it": "Ciclo di vita",
+  "ar": "دورة الحياة",
+  "he": "מחזור חיים"
+ },
+ "Life-cycle thinking.": {
+  "fr": "Pensée en cycle de vie.",
+  "es": "Pensamiento de ciclo de vida.",
+  "it": "Pensiero sul ciclo di vita.",
+  "ar": "التفكير في دورة الحياة.",
+  "he": "חשיבת מחזור חיים."
+ },
  "Light guide lines, erased or left faint.": {
   "fr": "Traits guides légers, effacés ou laissés pâles.",
   "es": "Líneas guía tenues, borradas o dejadas suaves.",
@@ -1602,12 +2645,47 @@
   "ar": "خطوط إرشادية خفيفة تُمحى أو تُترك باهتة.",
   "he": "קווי עזר בהירים, שנמחקים או נשארים חיוורים."
  },
+ "Lighter always means greener.": {
+  "fr": "Plus léger signifie toujours plus écologique.",
+  "es": "Más ligero siempre significa más ecológico.",
+  "it": "Più leggero significa sempre più ecologico.",
+  "ar": "الأخف يعني دائمًا الأكثر مراعاة للبيئة.",
+  "he": "קל יותר תמיד אומר ירוק יותר."
+ },
+ "Lightest is not always greenest: compare materials over the life cycle, including production energy and recyclability.": {
+  "fr": "Le plus léger n’est pas toujours le plus écologique : comparez les matériaux sur le cycle de vie, y compris l’énergie de production et la recyclabilité.",
+  "es": "Lo más ligero no siempre es lo más ecológico: compara los materiales a lo largo del ciclo de vida, incluida la energía de producción y la reciclabilidad.",
+  "it": "Il più leggero non è sempre il più ecologico: confronta i materiali sull’intero ciclo di vita, inclusi energia di produzione e riciclabilità.",
+  "ar": "الأخف ليس دائمًا الأكثر مراعاة للبيئة: قارن المواد عبر دورة الحياة، بما في ذلك طاقة الإنتاج وقابلية إعادة التدوير.",
+  "he": "הקל ביותר אינו תמיד הירוק ביותר: השוו חומרים לאורך מחזור החיים, כולל אנרגיית הייצור ויכולת המחזור."
+ },
+ "Lightweight materials data.": {
+  "fr": "Données sur les matériaux légers.",
+  "es": "Datos de materiales ligeros.",
+  "it": "Dati sui materiali leggeri.",
+  "ar": "بيانات المواد الخفيفة.",
+  "he": "נתוני חומרים קלים."
+ },
+ "Lightweighting": {
+  "fr": "Allègement",
+  "es": "Aligeramiento",
+  "it": "Alleggerimento",
+  "ar": "تخفيف الوزن",
+  "he": "הפחתת משקל"
+ },
  "Lightweighting and design for sustainability; Lab D": {
   "fr": "Allègement et conception durable ; TP D",
   "es": "Aligeramiento y diseño sostenible; práctica D",
   "it": "Alleggerimento e progettazione sostenibile; laboratorio D",
   "ar": "تخفيف الوزن والتصميم من أجل الاستدامة؛ المختبر D",
   "he": "הפחתת משקל ותכן לקיימות; מעבדה D"
+ },
+ "Lightweighting is one of the most direct climate tools a CAD user has. DOE reports that a 10% lighter vehicle can get 6–8% better fuel economy, and EPA puts every gallon of gasoline at about 8,887 g of CO₂.": {
+  "fr": "L’allègement est l’un des leviers climatiques les plus directs dont dispose un utilisateur de CAO. Le DOE indique qu’un véhicule 10% plus léger peut gagner 6–8% en économie de carburant, et l’EPA estime chaque gallon d’essence à environ 8887 g de CO₂.",
+  "es": "El aligeramiento es una de las herramientas climáticas más directas de quien usa CAD. El DOE informa que un vehículo un 10% más ligero puede mejorar un 6–8% su rendimiento de combustible, y la EPA cifra cada galón de gasolina en unos 8887 g de CO₂.",
+  "it": "L’alleggerimento è uno degli strumenti climatici più diretti per chi usa il CAD. Il DOE riporta che un veicolo più leggero del 10% può migliorare i consumi del 6–8%, e l’EPA stima ogni gallone di benzina in circa 8887 g di CO₂.",
+  "ar": "تخفيف الوزن من أكثر أدوات المناخ مباشرة في يد مستخدم CAD. تفيد DOE بأن المركبة الأخف بنسبة 10% قد تحقق اقتصاد وقود أفضل بنسبة 6–8%، وتقدّر EPA كل غالون بنزين بنحو 8887 g من CO₂.",
+  "he": "הפחתת משקל היא אחד מכלי האקלים הישירים ביותר שיש למשתמש CAD. ה-DOE מדווח שרכב קל ב-10% יכול להשיג צריכת דלק טובה ב-6–8%, וה-EPA מעריך כל גלון בנזין בכ-8887 g של CO₂."
  },
  "Limits": {
   "fr": "Limites",
@@ -1637,12 +2715,26 @@
   "ar": "لسماكات الخطوط معنى: خطوط مرئية سميكة، وخطوط مخفية رفيعة (متقطعة)، وخطوط محاور رفيعة (شرطة طويلة وقصيرة).",
   "he": "לעובי הקו יש משמעות: קווים נראים עבים, קווים נסתרים דקים (מקווקווים), קווי מרכז דקים (קו-נקודה ארוך-קצר)."
  },
+ "List of parts and quantities in an assembly.": {
+  "fr": "Liste des pièces et des quantités d’un assemblage.",
+  "es": "Lista de piezas y cantidades de un ensamblaje.",
+  "it": "Elenco di pezzi e quantità in un assieme.",
+  "ar": "قائمة القطع والكميات في التجميع.",
+  "he": "רשימת החלקים והכמויות בהרכבה."
+ },
  "Location tolerance, usually a diameter zone.": {
   "fr": "Tolérance de localisation, généralement une zone en diamètre.",
   "es": "Tolerancia de ubicación, normalmente una zona de diámetro.",
   "it": "Tolleranza di localizzazione, di solito una zona a diametro.",
   "ar": "تفاوت الموقع، وعادةً منطقة قطرية.",
   "he": "טולרנס מיקום, בדרך כלל אזור קוטרי."
+ },
+ "Low infill and good orientation cut plastic use and failed prints.": {
+  "fr": "Un faible remplissage et une bonne orientation réduisent la consommation de plastique et les impressions ratées.",
+  "es": "Poco relleno y una buena orientación reducen el uso de plástico y las impresiones fallidas.",
+  "it": "Riempimento basso e buon orientamento riducono l’uso di plastica e le stampe fallite.",
+  "ar": "الحشو المنخفض والاتجاه الجيد يقللان استهلاك البلاستيك والمطبوعات الفاشلة.",
+  "he": "מילוי נמוך וכיוון טוב מפחיתים שימוש בפלסטיק והדפסות כושלות."
  },
  "M = 1, as in an engine.": {
   "fr": "M = 1, comme dans un moteur.",
@@ -1679,6 +2771,13 @@
   "ar": "MIT OpenCourseWare 2.00b: Toy Product Design",
   "he": "MIT OpenCourseWare 2.00b: Toy Product Design"
  },
+ "MIT’s design and manufacturing course.": {
+  "fr": "Le cours de conception et de fabrication du MIT.",
+  "es": "El curso de diseño y fabricación del MIT.",
+  "it": "Il corso di progettazione e produzione del MIT.",
+  "ar": "مقرر MIT في التصميم والتصنيع.",
+  "he": "קורס התכן והייצור של MIT."
+ },
  "MIT’s sketch-heavy product design course.": {
   "fr": "Le cours de conception de produits du MIT, riche en croquis.",
   "es": "El curso de diseño de productos del MIT, con muchos bocetos.",
@@ -1707,6 +2806,20 @@
   "ar": "MMC للعمود هو…",
   "he": "MMC של ציר הוא…"
  },
+ "Make a drawing: views, dimensions, title block, BOM and balloons.": {
+  "fr": "Faites un plan : vues, cotes, cartouche, nomenclature et repères.",
+  "es": "Haz un plano: vistas, cotas, cajetín, lista de materiales y globos.",
+  "it": "Fai una tavola: viste, quote, cartiglio, distinta base e palloncini.",
+  "ar": "أعدّ رسمًا: مساقط، وأبعاد، وإطار عنوان، وقائمة مواد، وفقاعات ترقيم.",
+  "he": "הכינו שרטוט: מבטים, מידות, טבלת כותרת, רשימת חלקים ובלונים."
+ },
+ "Manufacturing processes.": {
+  "fr": "Procédés de fabrication.",
+  "es": "Procesos de fabricación.",
+  "it": "Processi produttivi.",
+  "ar": "عمليات التصنيع.",
+  "he": "תהליכי ייצור."
+ },
  "Manufacturing processes; DFM/DFA": {
   "fr": "Procédés de fabrication ; DFM/DFA",
   "es": "Procesos de fabricación; DFM/DFA",
@@ -1714,12 +2827,33 @@
   "ar": "عمليات التصنيع؛ DFM/DFA",
   "he": "תהליכי ייצור; DFM/DFA"
  },
+ "Mass = V × 2.70 g/cm³: 79.5 g at 5 mm. Each millimeter of thickness costs 15.9 g.": {
+  "fr": "Masse = V × 2.70 g/cm³ : 79.5 g à 5 mm. Chaque millimètre d’épaisseur coûte 15.9 g.",
+  "es": "Masa = V × 2.70 g/cm³: 79.5 g con 5 mm. Cada milímetro de espesor cuesta 15.9 g.",
+  "it": "Massa = V × 2.70 g/cm³: 79.5 g a 5 mm. Ogni millimetro di spessore costa 15.9 g.",
+  "ar": "الكتلة = V × 2.70 g/cm³: ‏79.5 g عند 5 mm. كل مليمتر من السماكة يكلف 15.9 g.",
+  "he": "מסה = V × 2.70 g/cm³: ‏79.5 g ב-5 mm. כל מילימטר עובי עולה 15.9 g."
+ },
+ "Mass = area × 500 mm × 7.85 g/cm³: 400 mm² → 1,570 g.": {
+  "fr": "Masse = aire × 500 mm × 7.85 g/cm³ : 400 mm² → 1570 g.",
+  "es": "Masa = área × 500 mm × 7.85 g/cm³: 400 mm² → 1570 g.",
+  "it": "Massa = area × 500 mm × 7.85 g/cm³: 400 mm² → 1570 g.",
+  "ar": "الكتلة = المساحة × 500 mm × 7.85 g/cm³: ‏400 mm² → 1570 g.",
+  "he": "מסה = שטח × 500 mm × 7.85 g/cm³: ‏400 mm² → 1570 g."
+ },
  "Mass from volume": {
   "fr": "Masse à partir du volume",
   "es": "Masa a partir del volumen",
   "it": "Massa dal volume",
   "ar": "الكتلة من الحجم",
   "he": "מסה מתוך נפח"
+ },
+ "Mass of a 100 × 60 × 5 mm aluminum plate with four Ø6 holes?": {
+  "fr": "Masse d’une plaque d’aluminium de 100 × 60 × 5 mm avec quatre trous Ø6 ?",
+  "es": "¿Masa de una placa de aluminio de 100 × 60 × 5 mm con cuatro agujeros Ø6?",
+  "it": "Massa di una piastra di alluminio da 100 × 60 × 5 mm con quattro fori Ø6?",
+  "ar": "كتلة لوح ألومنيوم 100 × 60 × 5 mm فيه أربعة ثقوب Ø6؟",
+  "he": "מסה של לוח אלומיניום 100 × 60 × 5 mm עם ארבעה חורי Ø6?"
  },
  "Mass properties": {
   "fr": "Propriétés de masse",
@@ -1735,6 +2869,13 @@
   "ar": "خصائص الكتلة دقيقة.",
   "he": "תכונות המסה מדויקות."
  },
+ "Mass, 500 mm steel (g)": {
+  "fr": "Masse, acier 500 mm (g)",
+  "es": "Masa, acero de 500 mm (g)",
+  "it": "Massa, acciaio 500 mm (g)",
+  "ar": "الكتلة، فولاذ 500 mm (g)",
+  "he": "מסה, פלדה 500 mm (g)"
+ },
  "Mate": {
   "fr": "Liaison",
   "es": "Relación",
@@ -1748,6 +2889,13 @@
   "it": "Il materiale attraversato dal piano di taglio.",
   "ar": "المادة التي يمر بها مستوى القطع.",
   "he": "החומר שמישור החיתוך עובר דרכו."
+ },
+ "Materials, making, use and end of life.": {
+  "fr": "Matériaux, fabrication, utilisation et fin de vie.",
+  "es": "Materiales, fabricación, uso y fin de vida.",
+  "it": "Materiali, produzione, uso e fine vita.",
+  "ar": "المواد، والصنع، والاستخدام، ونهاية العمر.",
+  "he": "חומרים, ייצור, שימוש וסוף חיים."
  },
  "Maximum material condition.": {
   "fr": "Condition du maximum de matière.",
@@ -1763,6 +2911,20 @@
   "ar": "المادة القصوى للثقب هي أصغر ثقب.",
   "he": "חומר מרבי בחור הוא החור הקטן ביותר."
  },
+ "Measured (mm)": {
+  "fr": "Mesuré (mm)",
+  "es": "Medido (mm)",
+  "it": "Misurato (mm)",
+  "ar": "المقيس (mm)",
+  "he": "נמדד (mm)"
+ },
+ "Measured axis": {
+  "fr": "Axe mesuré",
+  "es": "Eje medido",
+  "it": "Asse misurato",
+  "ar": "المحور المقيس",
+  "he": "ציר נמדד"
+ },
  "Measured position error (diameter)": {
   "fr": "Erreur de position mesurée (diamètre)",
   "es": "Error de posición medido (diámetro)",
@@ -1770,12 +2932,33 @@
   "ar": "خطأ الموضع المقيس (قطر)",
   "he": "שגיאת מיקום נמדדת (קוטר)"
  },
+ "Mechanisms in MIT 2.007.": {
+  "fr": "Les mécanismes dans MIT 2.007.",
+  "es": "Mecanismos en MIT 2.007.",
+  "it": "I meccanismi in MIT 2.007.",
+  "ar": "الآليات في MIT 2.007.",
+  "he": "מנגנונים ב-MIT 2.007."
+ },
  "Mentally rotating and slicing 3D objects.": {
   "fr": "Faire tourner et couper mentalement des objets 3D.",
   "es": "Girar y cortar mentalmente objetos 3D.",
   "it": "Ruotare e sezionare mentalmente oggetti 3D.",
   "ar": "تدوير الأجسام ثلاثية الأبعاد (3D) وتقطيعها ذهنيًا.",
   "he": "סיבוב וחיתוך של עצמים תלת-ממדיים (3D) בדמיון."
+ },
+ "Midterm practice set (Units 1–5)": {
+  "fr": "Série d’exercices de mi-parcours (unités 1–5)",
+  "es": "Ejercicios de práctica para el parcial (unidades 1–5)",
+  "it": "Esercizi di preparazione all’esame intermedio (unità 1–5)",
+  "ar": "مجموعة تمارين منتصف الفصل (الوحدات 1–5)",
+  "he": "סט תרגול לבחינת אמצע (יחידות 1–5)"
+ },
+ "Mobility M": {
+  "fr": "Mobilité M",
+  "es": "Movilidad M",
+  "it": "Mobilità M",
+  "ar": "الحركية M",
+  "he": "ניידות M"
  },
  "Mobility of 3 links, 3 pins?": {
   "fr": "Mobilité de 3 solides, 3 pivots ?",
@@ -1791,12 +2974,47 @@
   "ar": "حركية 5 وصلات و5 مفاصل محورية؟",
   "he": "ניידות של 5 חוליות ו-5 מפרקי ציר?"
  },
+ "Mobility of a planar linkage with 5 links and 5 pins?": {
+  "fr": "Mobilité d’un mécanisme plan à 5 solides et 5 pivots ?",
+  "es": "¿Movilidad de un mecanismo plano con 5 eslabones y 5 articulaciones?",
+  "it": "Mobilità di un meccanismo piano con 5 membri e 5 cerniere?",
+  "ar": "حركية آلية مستوية من 5 وصلات و5 مفاصل محورية؟",
+  "he": "ניידות של מנגנון מישורי עם 5 חוליות ו-5 מפרקי ציר?"
+ },
+ "Model 500 mm beams: a solid 20 × 20 mm bar and 25 × 25 mm tubes with 2 mm and 1.5 mm walls.": {
+  "fr": "Modélisez des poutres de 500 mm : une barre pleine de 20 × 20 mm et des tubes de 25 × 25 mm à parois de 2 mm et 1.5 mm.",
+  "es": "Modela vigas de 500 mm: una barra maciza de 20 × 20 mm y tubos de 25 × 25 mm con paredes de 2 mm y 1.5 mm.",
+  "it": "Modella travi da 500 mm: una barra piena da 20 × 20 mm e tubi da 25 × 25 mm con pareti da 2 mm e 1.5 mm.",
+  "ar": "نمذج عوارض طولها 500 mm: قضيبًا مصمتًا 20 × 20 mm وأنبوبين 25 × 25 mm بجدران 2 mm و1.5 mm.",
+  "he": "מדלו קורות של 500 mm: מוט מלא של 20 × 20 mm וצינורות של 25 × 25 mm עם דפנות של 2 mm ו-1.5 mm."
+ },
+ "Model a ground link (100 mm), crank (40 mm), coupler (120 mm) and rocker (80 mm), each 10 mm wide with Ø6 holes at the ends.": {
+  "fr": "Modélisez un bâti (100 mm), une manivelle (40 mm), une bielle (120 mm) et un balancier (80 mm), chacun de 10 mm de large avec des trous Ø6 aux extrémités.",
+  "es": "Modela un bastidor (100 mm), una manivela (40 mm), un acoplador (120 mm) y un balancín (80 mm), cada uno de 10 mm de ancho con agujeros Ø6 en los extremos.",
+  "it": "Modella un telaio (100 mm), una manovella (40 mm), una biella (120 mm) e un bilanciere (80 mm), ciascuno largo 10 mm con fori Ø6 alle estremità.",
+  "ar": "نمذج وصلة القاعدة (100 mm)، وذراع التدوير (40 mm)، وذراع الربط (120 mm)، والذراع المتأرجح (80 mm)، عرض كل منها 10 mm وفي طرفيها ثقبان Ø6.",
+  "he": "מדלו חוליית קרקע (100 mm), ארכובה (40 mm), מצמד (120 mm) ונדנד (80 mm), כל אחד ברוחב 10 mm עם חורי Ø6 בקצוות."
+ },
+ "Model an L-bracket driven by variables, then change one variable and watch the model and its mass update.": {
+  "fr": "Modéliser une équerre en L pilotée par des variables, puis changer une variable et regarder le modèle et sa masse se mettre à jour.",
+  "es": "Modelar un soporte en L controlado por variables, luego cambiar una variable y ver cómo se actualizan el modelo y su masa.",
+  "it": "Modellare una staffa a L pilotata da variabili, poi cambiare una variabile e vedere aggiornarsi il modello e la sua massa.",
+  "ar": "نمذج دعامة على شكل L تتحكم فيها المتغيرات، ثم غيّر متغيرًا واحدًا وراقب تحديث النموذج وكتلته.",
+  "he": "למדל תושבת L המונעת על ידי משתנים, ואז לשנות משתנה אחד ולראות את המודל ואת מסתו מתעדכנים."
+ },
  "Model behaves as the function requires.": {
   "fr": "Le modèle se comporte comme la fonction l’exige.",
   "es": "El modelo se comporta como exige la función.",
   "it": "Il modello si comporta come richiede la funzione.",
   "ar": "يتصرف النموذج كما تتطلب الوظيفة.",
   "he": "המודל מתנהג כפי שהתפקוד דורש."
+ },
+ "Modulus × second moment of area.": {
+  "fr": "Module × moment quadratique.",
+  "es": "Módulo × momento de inercia de área.",
+  "it": "Modulo × momento d’inerzia della sezione.",
+  "ar": "المعامل × عزم المساحة الثاني.",
+  "he": "מודול × מומנט שטח שני."
  },
  "More mates are safer.": {
   "fr": "Plus de liaisons, c’est plus sûr.",
@@ -1826,6 +3044,13 @@
   "ar": "يُحسم معظم مادة المنتج وطاقته وهدره على طاولة الرسم. المهندسون الذين يجيدون النمذجة والرسم يستطيعون إزالة المادة التي لا تؤدي عملًا، واختيار قطع تدوم ويمكن إصلاحها، وتحديد تفاوتات ليست أضيق من اللازم.",
   "he": "רוב החומר, האנרגיה והפסולת של מוצר נקבעים כבר על שולחן השרטוט. מהנדסים שממדלים ומשרטטים היטב יכולים להסיר חומר שאינו עושה עבודה, לבחור חלקים עמידים וברי תיקון, ולקבוע טולרנסים שאינם הדוקים מהנדרש."
  },
+ "Multiview drawing with perpendicular projectors.": {
+  "fr": "Dessin multivue avec des projetantes perpendiculaires.",
+  "es": "Dibujo de vistas múltiples con proyectantes perpendiculares.",
+  "it": "Disegno a viste multiple con proiettanti perpendicolari.",
+  "ar": "رسم متعدد المساقط بخطوط إسقاط عمودية.",
+  "he": "שרטוט רב-מבטי עם קרני היטל ניצבות."
+ },
  "NIST works on model-based definition, putting tolerances directly in the 3D model so they are read correctly by machines and inspectors, which reduces errors and rework.": {
   "fr": "Le NIST travaille sur la définition fondée sur le modèle, qui place les tolérances directement dans le modèle 3D pour qu’elles soient lues correctement par les machines et les contrôleurs, ce qui réduit les erreurs et les reprises.",
   "es": "El NIST trabaja en la definición basada en modelos, que pone las tolerancias directamente en el modelo 3D para que máquinas e inspectores las lean correctamente, lo que reduce errores y retrabajos.",
@@ -1833,12 +3058,26 @@
   "ar": "يعمل NIST على التعريف القائم على النموذج، الذي يضع التفاوتات مباشرة في النموذج ثلاثي الأبعاد (3D) كي تقرأها الآلات والمفتشون بشكل صحيح، مما يقلل الأخطاء وإعادة العمل.",
   "he": "NIST עובד על הגדרה מבוססת מודל, שמכניסה את הטולרנסים ישירות למודל התלת-ממדי (3D) כך שמכונות ובודקים קוראים אותם נכון, מה שמפחית שגיאות ועבודה חוזרת."
  },
+ "NIST: Additive manufacturing": {
+  "fr": "NIST: Additive manufacturing",
+  "es": "NIST: Additive manufacturing",
+  "it": "NIST: Additive manufacturing",
+  "ar": "NIST: Additive manufacturing",
+  "he": "NIST: Additive manufacturing"
+ },
  "NIST: Model-based enterprise and PMI testing": {
   "fr": "NIST: Model-based enterprise and PMI testing",
   "es": "NIST: Model-based enterprise and PMI testing",
   "it": "NIST: Model-based enterprise and PMI testing",
   "ar": "NIST: Model-based enterprise and PMI testing",
   "he": "NIST: Model-based enterprise and PMI testing"
+ },
+ "Name two DFA rules.": {
+  "fr": "Citez deux règles DFA.",
+  "es": "Nombra dos reglas DFA.",
+  "it": "Indica due regole DFA.",
+  "ar": "اذكر قاعدتين من قواعد DFA.",
+  "he": "ציינו שני כללי DFA."
  },
  "Name your sketches and features; future you will thank you.": {
   "fr": "Nommez vos esquisses et fonctions ; votre futur vous remerciera.",
@@ -1854,12 +3093,40 @@
   "ar": "لا تلزم موهبة في الرسم: الرسم الحر مهارة ستتدرب عليها.",
   "he": "לא נדרש כישרון ציור: סקיצות הן מיומנות שתתרגלו."
  },
+ "Nominal (mm)": {
+  "fr": "Nominal (mm)",
+  "es": "Nominal (mm)",
+  "it": "Nominale (mm)",
+  "ar": "الاسمي (mm)",
+  "he": "נומינלי (mm)"
+ },
  "Normally hidden lines are omitted in sections.": {
   "fr": "Normalement, les traits cachés sont omis dans les coupes.",
   "es": "Normalmente las líneas ocultas se omiten en los cortes.",
   "it": "Di norma le linee nascoste si omettono nelle sezioni.",
   "ar": "عادةً تُحذف الخطوط المخفية في القطاعات.",
   "he": "בדרך כלל קווים נסתרים מושמטים בחתכים."
+ },
+ "Nothing to print onto.": {
+  "fr": "Rien sur quoi imprimer.",
+  "es": "No hay nada sobre lo que imprimir.",
+  "it": "Non c’è nulla su cui stampare.",
+  "ar": "لا شيء يُطبع عليه.",
+  "he": "אין על מה להדפיס."
+ },
+ "Numbered callout linking a part to the BOM.": {
+  "fr": "Repère numéroté reliant une pièce à la nomenclature.",
+  "es": "Llamada numerada que vincula una pieza con la lista de materiales.",
+  "it": "Richiamo numerato che collega un pezzo alla distinta base.",
+  "ar": "إشارة مرقمة تربط القطعة بقائمة المواد.",
+  "he": "הפניה ממוספרת שמקשרת חלק לרשימת החלקים."
+ },
+ "One rotation.": {
+  "fr": "Une rotation.",
+  "es": "Una rotación.",
+  "it": "Una rotazione.",
+  "ar": "دورانًا واحدًا.",
+  "he": "סיבוב אחד."
  },
  "Only as good as the density and model you enter.": {
   "fr": "Elles ne valent que la masse volumique et le modèle que vous saisissez.",
@@ -1895,6 +3162,13 @@
   "it": "Onshape Learning Center",
   "ar": "Onshape Learning Center",
   "he": "Onshape Learning Center"
+ },
+ "Onshape assemblies and drawings.": {
+  "fr": "Assemblages et mises en plan Onshape.",
+  "es": "Ensamblajes y planos de Onshape.",
+  "it": "Assiemi e tavole Onshape.",
+  "ar": "تجميعات Onshape ورسوماته.",
+  "he": "הרכבות ושרטוטים ב-Onshape."
  },
  "Onshape drawing courses.": {
   "fr": "Cours de mise en plan Onshape.",
@@ -1959,6 +3233,27 @@
   "ar": "الإسقاط العمودي؛ الزاوية الأولى والثالثة",
   "he": "היטל אורתוגרפי; זווית ראשונה ושלישית"
  },
+ "Other two (mm)": {
+  "fr": "Les deux autres (mm)",
+  "es": "Las otras dos (mm)",
+  "it": "Gli altri due (mm)",
+  "ar": "الاثنان الآخران (mm)",
+  "he": "שתי האחרות (mm)"
+ },
+ "Overhangs beyond about 45° usually need…": {
+  "fr": "Les porte-à-faux au-delà d’environ 45° demandent généralement…",
+  "es": "Los voladizos de más de unos 45° suelen necesitar…",
+  "it": "Gli sbalzi oltre circa 45° di solito richiedono…",
+  "ar": "البروزات التي تتجاوز نحو 45° تحتاج عادةً إلى…",
+  "he": "תליות מעבר לכ-45° דורשות בדרך כלל…"
+ },
+ "PLA density (typical)": {
+  "fr": "Masse volumique du PLA (typique)",
+  "es": "Densidad del PLA (típica)",
+  "it": "Densità del PLA (tipica)",
+  "ar": "كثافة PLA (نموذجية)",
+  "he": "צפיפות PLA (טיפוסית)"
+ },
  "Pappus: volume of revolution": {
   "fr": "Pappus : volume de révolution",
   "es": "Pappus: volumen de revolución",
@@ -2001,6 +3296,13 @@
   "ar": "تجعل النماذج البارامترية تجربة نسخ أخف رخيصة: غيّر متغير سماكة الجدار فتتحدث القطعة كلها بكتلتها الجديدة. وهذا يحوّل تخفيف الوزن من تخمين إلى دراسة سريعة (المختبر D).",
   "he": "מודלים פרמטריים הופכים ניסוי של גרסאות קלות יותר לזול: משנים משתנה של עובי דופן וכל החלק מתעדכן, עם המסה החדשה שלו. כך הפחתת משקל הופכת מניחוש למחקר מהיר (מעבדה D)."
  },
+ "Parametric thickness studies are the quickest way to find the lightest part that still works.": {
+  "fr": "Les études paramétriques d’épaisseur sont le moyen le plus rapide de trouver la pièce la plus légère qui fonctionne encore.",
+  "es": "Los estudios paramétricos de espesor son la forma más rápida de encontrar la pieza más ligera que sigue funcionando.",
+  "it": "Gli studi parametrici sullo spessore sono il modo più rapido per trovare il pezzo più leggero che funziona ancora.",
+  "ar": "دراسات السماكة البارامترية أسرع طريقة لإيجاد أخف قطعة ما زالت تؤدي عملها.",
+  "he": "מחקרי עובי פרמטריים הם הדרך המהירה ביותר למצוא את החלק הקל ביותר שעדיין עובד."
+ },
  "Part name/number, material, scale, units, projection method, general tolerances, author and revision.": {
   "fr": "Nom/numéro de pièce, matériau, échelle, unités, méthode de projection, tolérances générales, auteur et indice de révision.",
   "es": "Nombre/número de pieza, material, escala, unidades, método de proyección, tolerancias generales, autor y revisión.",
@@ -2029,6 +3331,34 @@
   "ar": "الفيزياء I",
   "he": "פיזיקה I"
  },
+ "Pictorial view with axes 120° apart.": {
+  "fr": "Vue pictographique avec des axes à 120° les uns des autres.",
+  "es": "Vista pictórica con ejes a 120° entre sí.",
+  "it": "Vista assonometrica con assi a 120° l’uno dall’altro.",
+  "ar": "منظر تصويري بمحاور متباعدة 120°.",
+  "he": "מבט ציורי עם צירים מרוחקים 120° זה מזה."
+ },
+ "Pin joint; 1 rotational DOF.": {
+  "fr": "Articulation pivot ; 1 DDL en rotation.",
+  "es": "Articulación; 1 GDL de rotación.",
+  "it": "Cerniera; 1 GDL rotazionale.",
+  "ar": "مفصل محوري؛ 1 درجة حرية دورانية.",
+  "he": "מפרק ציר; 1 דרגת חופש סיבובית."
+ },
+ "Plastics are a large waste stream: EPA reports that U.S. plastics generation was 35.7 million tons in 2018, 12.2% of municipal solid waste, and only 8.7% was recycled. Designing prints with low infill, few supports and fewer failed attempts directly cuts that waste.": {
+  "fr": "Les plastiques forment un flux de déchets important : l’EPA indique que la production de plastiques aux États-Unis était de 35.7 millions de tonnes en 2018, soit 12.2% des déchets municipaux solides, et que seulement 8.7% ont été recyclés. Concevoir des impressions avec peu de remplissage, peu de supports et moins d’échecs réduit directement ces déchets.",
+  "es": "Los plásticos son un gran flujo de residuos: la EPA informa que la generación de plásticos en EE. UU. fue de 35.7 millones de toneladas en 2018, el 12.2% de los residuos sólidos urbanos, y solo se recicló el 8.7%. Diseñar impresiones con poco relleno, pocos soportes y menos intentos fallidos reduce directamente esos residuos.",
+  "it": "Le plastiche sono un grande flusso di rifiuti: l’EPA riporta che la produzione di plastica negli USA è stata di 35.7 milioni di tonnellate nel 2018, il 12.2% dei rifiuti solidi urbani, e solo l’8.7% è stato riciclato. Progettare stampe con poco riempimento, pochi supporti e meno tentativi falliti riduce direttamente quei rifiuti.",
+  "ar": "البلاستيك تيار نفايات كبير: تفيد EPA بأن إنتاج البلاستيك في الولايات المتحدة بلغ 35.7 مليون طن في 2018، أي 12.2% من النفايات البلدية الصلبة، ولم يُعد تدوير سوى 8.7%. تصميم المطبوعات بحشو منخفض ودعامات قليلة ومحاولات فاشلة أقل يقلل هذا الهدر مباشرة.",
+  "he": "פלסטיק הוא זרם פסולת גדול: ה-EPA מדווח שייצור הפלסטיק בארה״ב היה 35.7 מיליון טונות ב-2018, 12.2% מהפסולת העירונית המוצקה, ורק 8.7% מוחזרו. תכנון הדפסות עם מילוי נמוך, מעט תמיכות ופחות ניסיונות כושלים מקטין את הפסולת הזאת ישירות."
+ },
+ "Plastics data.": {
+  "fr": "Données sur les plastiques.",
+  "es": "Datos sobre plásticos.",
+  "it": "Dati sulle plastiche.",
+  "ar": "بيانات البلاستيك.",
+  "he": "נתוני פלסטיק."
+ },
  "Position": {
   "fr": "Position",
   "es": "Posición",
@@ -2049,6 +3379,41 @@
   "it": "Errore di posizione di un foro = 2√(Δx² + Δy²); deve stare nella zona di tolleranza cilindrica.",
   "ar": "خطأ موضع الثقب = 2√(Δx² + Δy²)؛ ويجب أن يقع داخل منطقة التفاوت الأسطوانية.",
   "he": "שגיאת מיקום של חור = 2√(Δx² + Δy²); היא חייבת להיות בתוך אזור הטולרנס הגלילי."
+ },
+ "Print in a ventilated room and follow the printer’s and makerspace’s rules.": {
+  "fr": "Imprimez dans une pièce aérée et suivez les règles de l’imprimante et du makerspace.",
+  "es": "Imprime en una sala ventilada y sigue las normas de la impresora y del makerspace.",
+  "it": "Stampa in una stanza ventilata e segui le regole della stampante e del makerspace.",
+  "ar": "اطبع في غرفة جيدة التهوية واتبع قواعد الطابعة ومساحة الصناع.",
+  "he": "הדפיסו בחדר מאוורר ופעלו לפי כללי המדפסת והמייקרספייס."
+ },
+ "Print one cube if you have access; measure it with a caliper in x, y and z.": {
+  "fr": "Imprimez un cube si vous en avez la possibilité ; mesurez-le au pied à coulisse en x, y et z.",
+  "es": "Imprime un cubo si tienes acceso; mídelo con un calibre en x, y y z.",
+  "it": "Stampa un cubo se ne hai la possibilità; misuralo con un calibro in x, y e z.",
+  "ar": "اطبع مكعبًا واحدًا إن أتيح لك؛ وقِسه بالقدمة في x وy وz.",
+  "he": "הדפיסו קובייה אחת אם יש לכם גישה; מדדו אותה בקליבר ב-x, ב-y וב-z."
+ },
+ "Print time from volume, line width w, layer height h and speed v": {
+  "fr": "Durée d’impression à partir du volume, de la largeur de ligne w, de la hauteur de couche h et de la vitesse v",
+  "es": "Tiempo de impresión a partir del volumen, el ancho de línea w, la altura de capa h y la velocidad v",
+  "it": "Tempo di stampa da volume, larghezza della linea w, altezza dello strato h e velocità v",
+  "ar": "زمن الطباعة من الحجم وعرض الخط w وارتفاع الطبقة h والسرعة v",
+  "he": "זמן הדפסה מתוך נפח, רוחב קו w, גובה שכבה h ומהירות v"
+ },
+ "Printer nozzles and beds are hot (often 200 °C+ and 60 °C): do not touch during or just after printing.": {
+  "fr": "Les buses et plateaux d’imprimante sont chauds (souvent 200 °C+ et 60 °C) : n’y touchez pas pendant ni juste après l’impression.",
+  "es": "Las boquillas y camas de impresora están calientes (a menudo 200 °C+ y 60 °C): no las toques durante la impresión ni justo después.",
+  "it": "Ugelli e piani delle stampanti sono caldi (spesso 200 °C+ e 60 °C): non toccarli durante la stampa né subito dopo.",
+  "ar": "فوهات الطابعات وأسرّتها ساخنة (غالبًا 200 °C+ و60 °C): لا تلمسها أثناء الطباعة أو بعدها مباشرة.",
+  "he": "פיות ומשטחי מדפסות חמים (לרוב 200 °C+ ו-60 °C): אל תיגעו בהם במהלך ההדפסה או מיד אחריה."
+ },
+ "Prints are as strong in every direction.": {
+  "fr": "Les impressions sont aussi résistantes dans toutes les directions.",
+  "es": "Las impresiones son igual de resistentes en todas las direcciones.",
+  "it": "Le stampe sono ugualmente resistenti in ogni direzione.",
+  "ar": "المطبوعات متساوية المتانة في كل الاتجاهات.",
+  "he": "הדפסות חזקות באותה מידה בכל כיוון."
  },
  "Produce detail and assembly drawings with a title block, bill of materials and balloons.": {
   "fr": "Produire des plans de détail et d’ensemble avec cartouche, nomenclature et repères.",
@@ -2106,6 +3471,20 @@
   "ar": "تراكم RSS",
   "he": "שרשרת RSS"
  },
+ "RSS stack-up": {
+  "fr": "Chaîne de cotes RSS",
+  "es": "Cadena de tolerancias RSS",
+  "it": "Catena di tolleranze RSS",
+  "ar": "تراكم RSS",
+  "he": "שרשרת RSS"
+ },
+ "Rate = 0.4 × 0.2 × 50 = 4 mm³/s.": {
+  "fr": "Débit = 0.4 × 0.2 × 50 = 4 mm³/s.",
+  "es": "Caudal = 0.4 × 0.2 × 50 = 4 mm³/s.",
+  "it": "Portata = 0.4 × 0.2 × 50 = 4 mm³/s.",
+  "ar": "المعدل = 0.4 × 0.2 × 50 = 4 mm³/s.",
+  "he": "קצב = 0.4 × 0.2 × 50 = 4 mm³/s."
+ },
  "Read ISO hole-basis fits such as H7/g6 and H7/p6.": {
   "fr": "Lire des ajustements ISO à alésage normal comme H7/g6 et H7/p6.",
   "es": "Leer ajustes ISO de agujero base como H7/g6 y H7/p6.",
@@ -2120,6 +3499,13 @@
   "ar": "اقرأ وارسم أجسامًا بسيطة في مناظر تصويرية مائلة ومتساوية القياس.",
   "he": "לקרוא ולשרטט עצמים פשוטים במבטים ציוריים אלכסוניים ואיזומטריים."
  },
+ "Read each beam’s mass (steel, 7.85 g/cm³) and section properties from CAD.": {
+  "fr": "Relevez dans la CAO la masse de chaque poutre (acier, 7.85 g/cm³) et les propriétés de section.",
+  "es": "Lee en el CAD la masa de cada viga (acero, 7.85 g/cm³) y las propiedades de la sección.",
+  "it": "Leggi dal CAD la massa di ogni trave (acciaio, 7.85 g/cm³) e le proprietà della sezione.",
+  "ar": "اقرأ كتلة كل عارضة (فولاذ، 7.85 g/cm³) وخصائص مقطعها من CAD.",
+  "he": "קראו ב-CAD את המסה של כל קורה (פלדה, 7.85 g/cm³) ואת תכונות החתך."
+ },
  "Read feature control frames for flatness, perpendicularity, position and profile.": {
   "fr": "Lire les cadres de tolérance pour la planéité, la perpendicularité, la position et le profil.",
   "es": "Leer marcos de control de tolerancias de planitud, perpendicularidad, posición y perfil.",
@@ -2133,6 +3519,34 @@
   "it": "Ricostruisci da solo in CAD ogni esempio svolto.",
   "ar": "أعد بناء كل مثال محلول في CAD بنفسك.",
   "he": "בנו מחדש בעצמכם ב-CAD כל דוגמה פתורה."
+ },
+ "Record the mass. Change t to 4 mm and record again.": {
+  "fr": "Notez la masse. Passez t à 4 mm et notez-la de nouveau.",
+  "es": "Anota la masa. Cambia t a 4 mm y anótala de nuevo.",
+  "it": "Registra la massa. Cambia t in 4 mm e registrala di nuovo.",
+  "ar": "سجّل الكتلة. غيّر t إلى 4 mm وسجّلها مرة أخرى.",
+  "he": "רשמו את המסה. שנו את t ל-4 mm ורשמו שוב."
+ },
+ "Record the slicer’s mass and time at 100%, 20% and 10% infill.": {
+  "fr": "Notez la masse et la durée données par le trancheur à 100%, 20% et 10% de remplissage.",
+  "es": "Anota la masa y el tiempo del laminador con relleno del 100%, 20% y 10%.",
+  "it": "Registra massa e tempo indicati dallo slicer con riempimento al 100%, 20% e 10%.",
+  "ar": "سجّل كتلة الطباعة وزمنها من برنامج التقطيع عند حشو 100% و20% و10%.",
+  "he": "רשמו את המסה והזמן מתוכנת הפריסה במילוי של 100%, 20% ו-10%."
+ },
+ "Reduce part count; use self-locating features and standard fasteners.": {
+  "fr": "Réduire le nombre de pièces ; utiliser des éléments autocentreurs et des fixations standard.",
+  "es": "Reducir el número de piezas; usar elementos autoposicionantes y fijaciones estándar.",
+  "it": "Ridurre il numero di pezzi; usare elementi autocentranti e fissaggi standard.",
+  "ar": "قلّل عدد القطع؛ واستخدم معالم ذاتية التموضع ومثبتات قياسية.",
+  "he": "להקטין את מספר החלקים; להשתמש במאפייני מיקום עצמי ובמחברים תקניים."
+ },
+ "Reducing mass while keeping function.": {
+  "fr": "Réduire la masse tout en conservant la fonction.",
+  "es": "Reducir masa manteniendo la función.",
+  "it": "Ridurre la massa mantenendo la funzione.",
+  "ar": "تقليل الكتلة مع الحفاظ على الوظيفة.",
+  "he": "הקטנת מסה תוך שמירה על התפקוד."
  },
  "Redundant mates over-constrain and can fail to solve or hide errors.": {
   "fr": "Les liaisons redondantes surcontraignent et peuvent empêcher la résolution ou masquer des erreurs.",
@@ -2154,6 +3568,13 @@
   "it": "GDL residui di un pezzo vincolato",
   "ar": "درجات الحرية المتبقية لقطعة مزاوَجة",
   "he": "דרגות החופש שנותרו לחלק מצומד"
+ },
+ "Removing mass without losing function.": {
+  "fr": "Retirer de la masse sans perdre de fonction.",
+  "es": "Quitar masa sin perder función.",
+  "it": "Togliere massa senza perdere funzione.",
+  "ar": "إزالة الكتلة دون فقدان الوظيفة.",
+  "he": "הסרת מסה בלי לאבד תפקוד."
  },
  "Revolute": {
   "fr": "Pivot",
@@ -2183,6 +3604,34 @@
   "ar": "تراكم الجذر التربيعي لمجموع المربعات",
   "he": "שרשרת שורש סכום הריבועים"
  },
+ "Runs in a browser.": {
+  "fr": "Fonctionne dans un navigateur web.",
+  "es": "Funciona en un navegador web.",
+  "it": "Funziona in un browser web.",
+  "ar": "يعمل في متصفح الويب.",
+  "he": "רץ בדפדפן."
+ },
+ "Same bar turned flat (h = 10, b = 30)?": {
+  "fr": "La même barre posée à plat (h = 10, b = 30) ?",
+  "es": "¿La misma barra puesta en plano (h = 10, b = 30)?",
+  "it": "La stessa barra posta di piatto (h = 10, b = 30)?",
+  "ar": "القضيب نفسه موضوعًا بشكل مسطح (h = 10، b = 30)؟",
+  "he": "אותו מוט מונח שטוח (h = 10, b = 30)?"
+ },
+ "Sample data is labeled as such. Your own measurements will differ, and explaining why is part of the lab.": {
+  "fr": "Les données d’exemple sont signalées comme telles. Vos propres mesures seront différentes, et expliquer pourquoi fait partie du TP.",
+  "es": "Los datos de ejemplo están señalados como tales. Tus propias mediciones serán distintas, y explicar por qué es parte de la práctica.",
+  "it": "I dati di esempio sono indicati come tali. Le tue misure saranno diverse, e spiegare perché fa parte del laboratorio.",
+  "ar": "البيانات النموذجية موسومة بذلك. ستختلف قياساتك، وشرح سبب الاختلاف جزء من المختبر.",
+  "he": "נתוני דוגמה מסומנים ככאלה. המדידות שלכם יהיו שונות, והסבר הסיבה הוא חלק מהמעבדה."
+ },
+ "Sample measurements for practice, not a real print.": {
+  "fr": "Mesures d’exemple pour s’entraîner, pas une vraie impression.",
+  "es": "Mediciones de ejemplo para practicar, no una impresión real.",
+  "it": "Misure di esempio per esercitarsi, non una stampa reale.",
+  "ar": "قياسات نموذجية للتدريب، وليست طباعة حقيقية.",
+  "he": "מדידות דוגמה לתרגול, לא הדפסה אמיתית."
+ },
  "Say exactly what size and shape a part must be: dimensioning rules, datums and geometric tolerances.": {
   "fr": "Dire exactement quelle taille et quelle forme une pièce doit avoir : règles de cotation, références et tolérances géométriques.",
   "es": "Decir exactamente qué tamaño y forma debe tener una pieza: reglas de acotación, referencias y tolerancias geométricas.",
@@ -2203,6 +3652,27 @@
   "it": "Scala = 60/120 = 0.5.",
   "ar": "المقياس = 60/120 = 0.5.",
   "he": "קנה מידה = 60/120 = 0.5."
+ },
+ "Second moment of area": {
+  "fr": "Moment quadratique",
+  "es": "Momento de inercia de área",
+  "it": "Momento d’inerzia della sezione",
+  "ar": "عزم المساحة الثاني",
+  "he": "מומנט שטח שני"
+ },
+ "Second moment of area: solid and square tube": {
+  "fr": "Moment quadratique : barre pleine et tube carré",
+  "es": "Momento de inercia de área: barra maciza y tubo cuadrado",
+  "it": "Momento d’inerzia della sezione: barra piena e tubo quadro",
+  "ar": "عزم المساحة الثاني: قضيب مصمت وأنبوب مربع",
+  "he": "מומנט שטח שני: מוט מלא וצינור מרובע"
+ },
+ "Section": {
+  "fr": "Section",
+  "es": "Sección",
+  "it": "Sezione",
+  "ar": "المقطع",
+  "he": "חתך"
  },
  "Section & Auxiliary Views": {
   "fr": "Coupes et vues auxiliaires",
@@ -2246,6 +3716,13 @@
   "ar": "لا يُرى إلا في مسقط موازٍ.",
   "he": "נראה רק במבט מקביל."
  },
+ "Shortest + longest (mm)": {
+  "fr": "Plus court + plus long (mm)",
+  "es": "Más corta + más larga (mm)",
+  "it": "Più corto + più lungo (mm)",
+  "ar": "الأقصر + الأطول (mm)",
+  "he": "הקצרה + הארוכה (mm)"
+ },
  "Sign up for the Free plan.": {
   "fr": "Inscrivez-vous à l’offre gratuite.",
   "es": "Regístrate en el plan gratuito.",
@@ -2273,6 +3750,13 @@
   "it": "Tracciare a mano libera rette, cerchi e archi ben proporzionati.",
   "ar": "ارسم باليد خطوطًا مستقيمة ودوائر وأقواسًا بتناسب جيد.",
   "he": "לשרטט ביד חופשית קווים ישרים, עיגולים וקשתות בפרופורציה טובה."
+ },
+ "Sketch, extrude, add four holes with a pattern, and set the material to aluminum (2.70 g/cm³).": {
+  "fr": "Esquissez, extrudez, ajoutez quatre trous par répétition, et choisissez l’aluminium comme matériau (2.70 g/cm³).",
+  "es": "Boceta, extruye, añade cuatro agujeros con un patrón y asigna aluminio como material (2.70 g/cm³).",
+  "it": "Schizza, estrudi, aggiungi quattro fori con una serie e imposta l’alluminio come materiale (2.70 g/cm³).",
+  "ar": "ارسم، وابثق، وأضف أربعة ثقوب بنمط، واضبط المادة على الألومنيوم (2.70 g/cm³).",
+  "he": "שרטטו סקיצה, שלפו, הוסיפו ארבעה חורים בתבנית חוזרת, וקבעו את החומר לאלומיניום (2.70 g/cm³)."
  },
  "Sketches, constraints, extrude and revolve": {
   "fr": "Esquisses, contraintes, extrusion et révolution",
@@ -2309,6 +3793,13 @@
   "ar": "الرسم الحر، والرسم الفني، وGD&T والتفاوتات، والنمذجة ثلاثية الأبعاد (3D) البارامترية بأدوات مجانية، والتجميعات، والطباعة ثلاثية الأبعاد (3D)، وتصميم قطع أخف وأقل هدرًا. مجاني، بالسرعة التي تناسبك، مع أربعة مختبرات عملية.",
   "he": "סקיצות, שרטוט טכני, GD&T וטולרנסים, מידול תלת-ממדי (3D) פרמטרי בכלים חינמיים, הרכבות, הדפסת תלת-ממד (3D), ותכן של חלקים קלים יותר ובזבזניים פחות. חינמי, בקצב שלכם, עם ארבע מעבדות מעשיות."
  },
+ "Slice a 20 mm calibration cube at different infill settings, compare mass and time, print one if you can, and measure it.": {
+  "fr": "Trancher un cube de calibration de 20 mm avec différents taux de remplissage, comparer masse et durée, en imprimer un si possible, et le mesurer.",
+  "es": "Laminar un cubo de calibración de 20 mm con distintos rellenos, comparar masa y tiempo, imprimir uno si puedes y medirlo.",
+  "it": "Elaborare con lo slicer un cubo di calibrazione da 20 mm con diversi riempimenti, confrontare massa e tempo, stamparne uno se possibile e misurarlo.",
+  "ar": "قطّع مكعب معايرة طول ضلعه 20 mm بإعدادات حشو مختلفة، وقارن الكتلة والزمن، واطبع واحدًا إن استطعت، ثم قِسه.",
+  "he": "לפרוס קוביית כיול של 20 mm בהגדרות מילוי שונות, להשוות מסה וזמן, להדפיס אחת אם אפשר, ולמדוד אותה."
+ },
  "Smallest overlap = 25.022 − 25.021 = 0.001.": {
   "fr": "Plus petit chevauchement = 25.022 − 25.021 = 0.001.",
   "es": "Solape mínimo = 25.022 − 25.021 = 0.001.",
@@ -2330,6 +3821,20 @@
   "ar": "ليُظهر الحجم الحقيقي.",
   "he": "כך שהוא מראה גודל אמיתי."
  },
+ "Solid 20 × 20": {
+  "fr": "Pleine 20 × 20",
+  "es": "Maciza 20 × 20",
+  "it": "Piena 20 × 20",
+  "ar": "مصمت 20 × 20",
+  "he": "מלא 20 × 20"
+ },
+ "Some light materials need much more energy to produce; judge over the life cycle.": {
+  "fr": "Certains matériaux légers demandent beaucoup plus d’énergie à produire ; jugez sur le cycle de vie.",
+  "es": "Algunos materiales ligeros necesitan mucha más energía para producirse; juzga a lo largo del ciclo de vida.",
+  "it": "Alcuni materiali leggeri richiedono molta più energia per essere prodotti; valuta sull’intero ciclo di vita.",
+  "ar": "بعض المواد الخفيفة تحتاج إلى طاقة أكبر بكثير لإنتاجها؛ فاحكم عبر دورة الحياة.",
+  "he": "חלק מהחומרים הקלים דורשים הרבה יותר אנרגיה לייצור; שפטו לאורך מחזור החיים."
+ },
  "Spatial visualization": {
   "fr": "Visualisation spatiale",
   "es": "Visualización espacial",
@@ -2344,12 +3849,33 @@
   "ar": "التصور المكاني، أي القدرة على تدوير الأجسام وتقطيعها ذهنيًا، مهارة تتحسن بالممارسة.",
   "he": "הדמיה מרחבית, היכולת לסובב ולחתוך עצמים בדמיון, היא מיומנות שמשתפרת בתרגול."
  },
+ "Square tube second moment of area": {
+  "fr": "Moment quadratique d’un tube carré",
+  "es": "Momento de inercia de área de un tubo cuadrado",
+  "it": "Momento d’inerzia della sezione di un tubo quadro",
+  "ar": "عزم المساحة الثاني لأنبوب مربع",
+  "he": "מומנט שטח שני של צינור מרובע"
+ },
+ "Stack 20 ± 0.10, 30 ± 0.05, 10 ± 0.05: worst case and RSS?": {
+  "fr": "Chaîne 20 ± 0.10, 30 ± 0.05, 10 ± 0.05 : pire des cas et RSS ?",
+  "es": "Cadena 20 ± 0.10, 30 ± 0.05, 10 ± 0.05: ¿peor caso y RSS?",
+  "it": "Catena 20 ± 0.10, 30 ± 0.05, 10 ± 0.05: caso peggiore e RSS?",
+  "ar": "التراكم 20 ± 0.10، 30 ± 0.05، 10 ± 0.05: أسوأ حالة وRSS؟",
+  "he": "שרשרת 20 ± 0.10, 30 ± 0.05, 10 ± 0.05: מקרה גרוע ו-RSS?"
+ },
  "Standard line convention.": {
   "fr": "Convention normalisée des traits.",
   "es": "Convención normalizada de líneas.",
   "it": "Convenzione normalizzata delle linee.",
   "ar": "اصطلاح الخطوط القياسي.",
   "he": "מוסכמת קווים תקנית."
+ },
+ "Standards and measurement for 3D printing.": {
+  "fr": "Normes et métrologie pour l’impression 3D.",
+  "es": "Normas y metrología para la impresión 3D.",
+  "it": "Norme e metrologia per la stampa 3D.",
+  "ar": "المعايير والقياس للطباعة 3D.",
+  "he": "תקנים ומדידה להדפסת 3D."
  },
  "Start with the details.": {
   "fr": "Commencer par les détails.",
@@ -2358,6 +3884,27 @@
   "ar": "ابدأ بالتفاصيل.",
   "he": "להתחיל בפרטים."
  },
+ "Statistical tolerance sum √Σt².": {
+  "fr": "Somme statistique des tolérances √Σt².",
+  "es": "Suma estadística de tolerancias √Σt².",
+  "it": "Somma statistica delle tolleranze √Σt².",
+  "ar": "مجموع إحصائي للتفاوتات √Σt².",
+  "he": "סכום טולרנסים סטטיסטי √Σt²."
+ },
+ "Stiffness depends only on the amount of material.": {
+  "fr": "La rigidité ne dépend que de la quantité de matière.",
+  "es": "La rigidez depende solo de la cantidad de material.",
+  "it": "La rigidezza dipende solo dalla quantità di materiale.",
+  "ar": "الجساءة تعتمد على كمية المادة فقط.",
+  "he": "הקשיחות תלויה רק בכמות החומר."
+ },
+ "Support": {
+  "fr": "Support",
+  "es": "Soporte",
+  "it": "Supporto",
+  "ar": "الدعامة",
+  "he": "תמיכה"
+ },
  "Symbol | tolerance | modifiers | datums.": {
   "fr": "Symbole | tolérance | modificateurs | références.",
   "es": "Símbolo | tolerancia | modificadores | referencias.",
@@ -2365,12 +3912,26 @@
   "ar": "الرمز | التفاوت | المعدِّلات | المراجع.",
   "he": "סמל | טולרנס | מתאמים | מישורי ייחוס."
  },
+ "Temporary structure under overhangs.": {
+  "fr": "Structure temporaire sous les porte-à-faux.",
+  "es": "Estructura temporal bajo los voladizos.",
+  "it": "Struttura temporanea sotto gli sbalzi.",
+  "ar": "بنية مؤقتة تحت البروزات.",
+  "he": "מבנה זמני מתחת לתליות."
+ },
  "That face is projected in the top view. What area does it appear to have there?": {
   "fr": "Cette face est projetée dans la vue de dessus. Quelle aire semble-t-elle y avoir ?",
   "es": "Esa cara se proyecta en la vista superior. ¿Qué área parece tener allí?",
   "it": "Quella faccia è proiettata nella vista dall’alto. Che area sembra avere lì?",
   "ar": "يُسقط هذا الوجه في المسقط العلوي. ما المساحة التي يبدو عليها هناك؟",
   "he": "פאה זו מוטלת במבט העל. מה השטח שהיא נראית בו שם?"
+ },
+ "The 1.5 mm tube is within about 2% of the solid bar’s stiffness (13,031 vs 13,333 mm⁴) at 35% of the mass.": {
+  "fr": "Le tube de 1.5 mm atteint environ 2% près la rigidité de la barre pleine (13031 contre 13333 mm⁴) pour 35% de la masse.",
+  "es": "El tubo de 1.5 mm queda a un 2% aproximado de la rigidez de la barra maciza (13031 frente a 13333 mm⁴) con el 35% de la masa.",
+  "it": "Il tubo da 1.5 mm è entro circa il 2% della rigidezza della barra piena (13031 contro 13333 mm⁴) con il 35% della massa.",
+  "ar": "الأنبوب ذو الجدار 1.5 mm في حدود نحو 2% من جساءة القضيب المصمت (13031 مقابل 13333 mm⁴) بنسبة 35% من الكتلة.",
+  "he": "הצינור עם דופן 1.5 mm נמצא בטווח של כ-2% מקשיחות המוט המלא (13031 לעומת 13333 mm⁴) ב-35% מהמסה."
  },
  "The GD&T standard.": {
   "fr": "La norme GD&T.",
@@ -2456,6 +4017,20 @@
   "ar": "منطقة التفاوت قطر، لذا الخطأ = 2 × الانحراف نصف القطري.",
   "he": "אזור הטולרנס הוא קוטר, לכן השגיאה = 2 × הסטייה הרדיאלית."
  },
+ "The tube is 23% stiffer with 54% less material.": {
+  "fr": "Le tube est 23% plus rigide avec 54% de matière en moins.",
+  "es": "El tubo es un 23% más rígido con un 54% menos de material.",
+  "it": "Il tubo è il 23% più rigido con il 54% di materiale in meno.",
+  "ar": "الأنبوب أكثر جساءة بنسبة 23% بمادة أقل بنسبة 54%.",
+  "he": "הצינור קשיח ב-23% יותר עם 54% פחות חומר."
+ },
+ "The tube uses 54% less material and is 23% stiffer in bending.": {
+  "fr": "Le tube utilise 54% de matière en moins et est 23% plus rigide en flexion.",
+  "es": "El tubo usa un 54% menos de material y es un 23% más rígido a flexión.",
+  "it": "Il tubo usa il 54% di materiale in meno ed è il 23% più rigido a flessione.",
+  "ar": "يستخدم الأنبوب مادة أقل بنسبة 54% وهو أكثر جساءة في الانحناء بنسبة 23%.",
+  "he": "הצינור משתמש ב-54% פחות חומר והוא קשיח ב-23% יותר בכפיפה."
+ },
  "They always show the real size.": {
   "fr": "Elles indiquent toujours la taille réelle.",
   "es": "Siempre muestran el tamaño real.",
@@ -2498,6 +4073,13 @@
   "ar": "سميك ومتصل.",
   "he": "עבה, רציף."
  },
+ "Thickness t (mm)": {
+  "fr": "Épaisseur t (mm)",
+  "es": "Espesor t (mm)",
+  "it": "Spessore t (mm)",
+  "ar": "السماكة t (mm)",
+  "he": "עובי t (mm)"
+ },
  "Thin dashed lines.": {
   "fr": "Des traits fins interrompus.",
   "es": "Líneas finas discontinuas.",
@@ -2533,6 +4115,13 @@
   "ar": "الزاوية الثالثة",
   "he": "זווית שלישית"
  },
+ "Third-angle projection": {
+  "fr": "Projection du troisième dièdre",
+  "es": "Proyección del tercer diedro",
+  "it": "Proiezione del terzo diedro",
+  "ar": "الإسقاط بالزاوية الثالثة",
+  "he": "היטל בזווית שלישית"
+ },
  "Third-angle projection (U.S., ASME) places the top view above the front view; first-angle (much of Europe and Asia, ISO) places it below. A symbol in the title block says which.": {
   "fr": "La projection du troisième dièdre (États-Unis, ASME) place la vue de dessus au-dessus de la vue de face ; celle du premier dièdre (une grande partie de l’Europe et de l’Asie, ISO) la place en dessous. Un symbole dans le cartouche indique laquelle.",
   "es": "La proyección del tercer diedro (EE. UU., ASME) coloca la vista superior encima de la frontal; la del primer diedro (gran parte de Europa y Asia, ISO) la coloca debajo. Un símbolo en el cajetín indica cuál.",
@@ -2553,6 +4142,13 @@
   "it": "Tolleranze più strette fanno sempre pezzi migliori.",
   "ar": "التفاوتات الأضيق تصنع دائمًا قطعًا أفضل.",
   "he": "טולרנסים הדוקים יותר תמיד יוצרים חלקים טובים יותר."
+ },
+ "Title block": {
+  "fr": "Cartouche",
+  "es": "Cajetín",
+  "it": "Cartiglio",
+  "ar": "إطار العنوان",
+  "he": "טבלת כותרת"
  },
  "To the right of the front view.": {
   "fr": "À droite de la vue de face.",
@@ -2680,6 +4276,27 @@
   "ar": "الحجم الحقيقي = 50 × 25.",
   "he": "גודל אמיתי = 50 × 25."
  },
+ "Tube 25 × 25 × 1.5": {
+  "fr": "Tube 25 × 25 × 1.5",
+  "es": "Tubo 25 × 25 × 1.5",
+  "it": "Tubo 25 × 25 × 1.5",
+  "ar": "أنبوب 25 × 25 × 1.5",
+  "he": "צינור 25 × 25 × 1.5"
+ },
+ "Tube 25 × 25 × 2": {
+  "fr": "Tube 25 × 25 × 2",
+  "es": "Tubo 25 × 25 × 2",
+  "it": "Tubo 25 × 25 × 2",
+  "ar": "أنبوب 25 × 25 × 2",
+  "he": "צינור 25 × 25 × 2"
+ },
+ "Tube: A = 625 − 441 = 184 mm², I = (25⁴ − 21⁴)/12 = 16,345 mm⁴.": {
+  "fr": "Tube : A = 625 − 441 = 184 mm², I = (25⁴ − 21⁴)/12 = 16345 mm⁴.",
+  "es": "Tubo: A = 625 − 441 = 184 mm², I = (25⁴ − 21⁴)/12 = 16345 mm⁴.",
+  "it": "Tubo: A = 625 − 441 = 184 mm², I = (25⁴ − 21⁴)/12 = 16345 mm⁴.",
+  "ar": "الأنبوب: A = 625 − 441 = 184 mm²، I = (25⁴ − 21⁴)/12 = 16345 mm⁴.",
+  "he": "צינור: A = 625 − 441 = 184 mm², I = (25⁴ − 21⁴)/12 = 16345 mm⁴."
+ },
  "Two 3 mm hatched bands, with a 34 mm open bore between them.": {
   "fr": "Deux bandes hachurées de 3 mm, avec un alésage vide de 34 mm entre elles.",
   "es": "Dos bandas rayadas de 3 mm, con un hueco abierto de 34 mm entre ellas.",
@@ -2694,12 +4311,26 @@
   "ar": "U.S. DOE: Lightweight materials for cars and trucks",
   "he": "U.S. DOE: Lightweight materials for cars and trucks"
  },
+ "U.S. convention: top view above front.": {
+  "fr": "Convention américaine : vue de dessus au-dessus de la face.",
+  "es": "Convención de EE. UU.: vista superior encima de la frontal.",
+  "it": "Convenzione USA: vista dall’alto sopra la frontale.",
+  "ar": "الاصطلاح الأمريكي: المسقط العلوي فوق الأمامي.",
+  "he": "המוסכמה האמריקאית: מבט על מעל החזית."
+ },
  "Undistorted shape and area.": {
   "fr": "Forme et aire non déformées.",
   "es": "Forma y área sin deformar.",
   "it": "Forma e area non deformate.",
   "ar": "شكل ومساحة دون تشويه.",
   "he": "צורה ושטח ללא עיוות."
+ },
+ "Use DOE’s 6–8% rule and EPA’s CO₂ figure to estimate the yearly savings for the Unit 9 car.": {
+  "fr": "Utilisez la règle des 6–8% du DOE et le chiffre de CO₂ de l’EPA pour estimer les économies annuelles pour la voiture de l’unité 9.",
+  "es": "Usa la regla del 6–8% del DOE y la cifra de CO₂ de la EPA para estimar el ahorro anual del coche de la unidad 9.",
+  "it": "Usa la regola del 6–8% del DOE e il dato CO₂ dell’EPA per stimare il risparmio annuo per l’auto dell’unità 9.",
+  "ar": "استخدم قاعدة DOE ‏6–8% ورقم EPA لـ CO₂ لتقدير الوفورات السنوية لسيارة الوحدة 9.",
+  "he": "השתמשו בכלל 6–8% של ה-DOE ובנתון ה-CO₂ של ה-EPA כדי להעריך את החיסכון השנתי למכונית מיחידה 9."
  },
  "Use Gruebler’s equation for planar mechanisms.": {
   "fr": "Utiliser l’équation de Grübler pour les mécanismes plans.",
@@ -2729,6 +4360,13 @@
   "ar": "استخدم أقل عدد من المساقط يصف القطعة وصفًا كاملًا.",
   "he": "השתמשו במספר המבטים הקטן ביותר שמתאר את החלק במלואו."
  },
+ "Use your CAD skills to make parts lighter, longer-lasting and easier to repair and recycle, and estimate the payoff.": {
+  "fr": "Utiliser vos compétences en CAO pour rendre les pièces plus légères, plus durables et plus faciles à réparer et à recycler, et estimer le gain.",
+  "es": "Usar tus habilidades de CAD para hacer piezas más ligeras, duraderas y fáciles de reparar y reciclar, y estimar el beneficio.",
+  "it": "Usare le competenze CAD per rendere i pezzi più leggeri, più durevoli e più facili da riparare e riciclare, e stimarne il vantaggio.",
+  "ar": "استخدم مهاراتك في CAD لجعل القطع أخف وأطول عمرًا وأسهل في الإصلاح وإعادة التدوير، وقدّر العائد.",
+  "he": "להשתמש בכישורי ה-CAD שלכם כדי להפוך חלקים לקלים יותר, עמידים יותר וקלים יותר לתיקון ולמחזור, ולהעריך את התועלת."
+ },
  "Variables (Onshape) and spreadsheets or expressions (FreeCAD) let one number drive many features.": {
   "fr": "Les variables (Onshape) et les feuilles de calcul ou expressions (FreeCAD) permettent à un seul nombre de piloter de nombreuses fonctions.",
   "es": "Las variables (Onshape) y las hojas de cálculo o expresiones (FreeCAD) permiten que un número controle muchas operaciones.",
@@ -2736,12 +4374,40 @@
   "ar": "المتغيرات (Onshape) وجداول البيانات أو التعابير (FreeCAD) تتيح لرقم واحد أن يتحكم في ميزات كثيرة.",
   "he": "משתנים (Onshape) וגיליונות או ביטויים (FreeCAD) מאפשרים למספר אחד להניע פיצ׳רים רבים."
  },
+ "Vehicle CO₂ figures.": {
+  "fr": "Chiffres de CO₂ des véhicules.",
+  "es": "Cifras de CO₂ de vehículos.",
+  "it": "Dati sulla CO₂ dei veicoli.",
+  "ar": "أرقام CO₂ للمركبات.",
+  "he": "נתוני CO₂ של כלי רכב."
+ },
+ "View of an imaginary cut.": {
+  "fr": "Vue d’une coupe imaginaire.",
+  "es": "Vista de un corte imaginario.",
+  "it": "Vista di un taglio immaginario.",
+  "ar": "مسقط لقطع تخيلي.",
+  "he": "מבט של חיתוך דמיוני."
+ },
  "View parallel to an inclined face.": {
   "fr": "Vue parallèle à une face inclinée.",
   "es": "Vista paralela a una cara inclinada.",
   "it": "Vista parallela a una faccia inclinata.",
   "ar": "مسقط موازٍ لوجه مائل.",
   "he": "מבט מקביל לפאה משופעת."
+ },
+ "View projected parallel to an inclined surface.": {
+  "fr": "Vue projetée parallèlement à une surface inclinée.",
+  "es": "Vista proyectada paralela a una superficie inclinada.",
+  "it": "Vista proiettata parallelamente a una superficie inclinata.",
+  "ar": "مسقط يُسقط موازيًا لسطح مائل.",
+  "he": "מבט המוטל במקביל למשטח משופע."
+ },
+ "Views misaligned or dimensions missing; revisit the unit.": {
+  "fr": "Vues mal alignées ou cotes manquantes ; revoir l’unité.",
+  "es": "Vistas desalineadas o cotas que faltan; repasa la unidad.",
+  "it": "Viste non allineate o quote mancanti; rivedi l’unità.",
+  "ar": "مساقط غير متحاذية أو أبعاد ناقصة؛ راجع الوحدة.",
+  "he": "מבטים לא מיושרים או מידות חסרות; חזרו על היחידה."
  },
  "Views stay aligned: width is shared by front and top, height by front and side, depth by top and side.": {
   "fr": "Les vues restent alignées : la largeur est commune à la face et au dessus, la hauteur à la face et au côté, la profondeur au dessus et au côté.",
@@ -2757,6 +4423,13 @@
   "ar": "الخط المرئي",
   "he": "קו נראה"
  },
+ "Volume (mm³)": {
+  "fr": "Volume (mm³)",
+  "es": "Volumen (mm³)",
+  "it": "Volume (mm³)",
+  "ar": "الحجم (mm³)",
+  "he": "נפח (mm³)"
+ },
  "Volume, mass, center of mass, inertia.": {
   "fr": "Volume, masse, centre de masse, inertie.",
   "es": "Volumen, masa, centro de masa, inercia.",
@@ -2770,6 +4443,13 @@
   "it": "Spessore di parete = 3 mm per lato.",
   "ar": "سماكة الجدار = 3 mm في كل جانب.",
   "he": "עובי דופן = 3 mm בכל צד."
+ },
+ "Walls carry most bending load; extra infill adds mass and time with little benefit.": {
+  "fr": "Les parois reprennent l’essentiel de la flexion ; plus de remplissage ajoute masse et temps pour peu de bénéfice.",
+  "es": "Las paredes soportan la mayor parte de la flexión; más relleno añade masa y tiempo con poco beneficio.",
+  "it": "Le pareti sopportano gran parte della flessione; più riempimento aggiunge massa e tempo con poco beneficio.",
+  "ar": "الجدران تحمل معظم حمل الانحناء؛ والحشو الزائد يضيف كتلة ووقتًا بفائدة قليلة.",
+  "he": "הדפנות נושאות את רוב עומס הכפיפה; מילוי נוסף מוסיף מסה וזמן בתועלת מועטה."
  },
  "Weeks 2–3": {
   "fr": "Semaines 2–3",
@@ -2813,6 +4493,13 @@
   "ar": "ما نضيفه: كل وحدة تربط قرارات التصميم بالمادة والطاقة والهدر، وكل رقم في الصفحة يعيد حسابه نص برمجي للتحقق قبل النشر، وأربعة مختبرات عملية تنقلك من رسم حر إلى قطعة مطبوعة أخف.",
   "he": "מה אנחנו מוסיפים: כל יחידה מקשרת בין החלטות תכן לחומר, לאנרגיה ולפסולת, כל מספר בדף מחושב מחדש על ידי סקריפט בדיקה לפני הפרסום, וארבע מעבדות מעשיות מובילות אתכם מסקיצה לחלק מודפס וקל יותר."
  },
+ "Where the material sits (I) matters more.": {
+  "fr": "L’emplacement de la matière (I) compte davantage.",
+  "es": "Importa más dónde está el material (I).",
+  "it": "Conta di più dove si trova il materiale (I).",
+  "ar": "موضع المادة (I) أهم.",
+  "he": "המיקום של החומר (I) חשוב יותר."
+ },
  "Which line type shows a hidden edge?": {
   "fr": "Quel type de trait représente une arête cachée ?",
   "es": "¿Qué tipo de línea muestra una arista oculta?",
@@ -2840,6 +4527,13 @@
   "it": "Perché vincolare completamente gli schizzi?",
   "ar": "لماذا نقيّد الرسومات تقييدًا كاملًا؟",
   "he": "למה לאלץ סקיצות לחלוטין?"
+ },
+ "Why print a bracket so layers run along the load path?": {
+  "fr": "Pourquoi imprimer une équerre de sorte que les couches suivent le chemin des efforts ?",
+  "es": "¿Por qué imprimir un soporte de modo que las capas sigan la trayectoria de la carga?",
+  "it": "Perché stampare una staffa in modo che gli strati seguano il percorso del carico?",
+  "ar": "لماذا تُطبع الدعامة بحيث تمتد الطبقات على مسار الحمل؟",
+  "he": "למה להדפיס תושבת כך שהשכבות לאורך מסלול העומס?"
  },
  "With Ø0.1 at MMC, a Ø10.0–10.2 hole measured at Ø10.05 is allowed what position tolerance?": {
   "fr": "Avec Ø0.1 au MMC, quelle tolérance de position est admise pour un trou Ø10.0–10.2 mesuré à Ø10.05 ?",
@@ -2869,6 +4563,13 @@
   "ar": "تراكم أسوأ حالة يجمع كل التفاوتات؛ وRSS يفترض تغيرًا عشوائيًا مستقلًا: √(Σtᵢ²)، وهو أصغر وأكثر واقعية للقطع الكثيرة.",
   "he": "שרשרת במקרה הגרוע מחברת את כל הטולרנסים; RSS מניחה שונות אקראית בלתי תלויה: √(Σtᵢ²), קטנה ומציאותית יותר כשיש חלקים רבים."
  },
+ "Yearly fuel = 15,000/100 × 8 = 1,200 L.": {
+  "fr": "Carburant annuel = 15000/100 × 8 = 1200 L.",
+  "es": "Combustible anual = 15000/100 × 8 = 1200 L.",
+  "it": "Carburante annuo = 15000/100 × 8 = 1200 L.",
+  "ar": "الوقود السنوي = 15000/100 × 8 = 1200 L.",
+  "he": "דלק שנתי = 15000/100 × 8 = 1200 L."
+ },
  "a rotated view": {
   "fr": "une vue tournée",
   "es": "una vista girada",
@@ -2897,12 +4598,40 @@
   "ar": "إضافة الأبعاد",
   "he": "להוסיף מידות"
  },
+ "add parts": {
+  "fr": "ajouter des pièces",
+  "es": "añadir piezas",
+  "it": "aggiungere pezzi",
+  "ar": "إضافة قطع",
+  "he": "להוסיף חלקים"
+ },
+ "adhesive everywhere": {
+  "fr": "de la colle partout",
+  "es": "adhesivo por todas partes",
+  "it": "adesivo ovunque",
+  "ar": "الغراء في كل مكان",
+  "he": "דבק בכל מקום"
+ },
+ "along the filament": {
+  "fr": "le long du filament",
+  "es": "a lo largo del filamento",
+  "it": "lungo il filamento",
+  "ar": "على امتداد الخيط",
+  "he": "לאורך הפילמנט"
+ },
  "are required": {
   "fr": "sont obligatoires",
   "es": "son obligatorias",
   "it": "sono obbligatorie",
   "ar": "إلزامية",
   "he": "הן חובה"
+ },
+ "at the surface": {
+  "fr": "en surface",
+  "es": "en la superficie",
+  "it": "in superficie",
+  "ar": "عند السطح",
+  "he": "על פני השטח"
  },
  "below nominal": {
   "fr": "en dessous du nominal",
@@ -2917,6 +4646,13 @@
   "it": "sotto la vista frontale",
   "ar": "تحت المسقط الأمامي",
   "he": "מתחת למבט החזית"
+ },
+ "between layers": {
+  "fr": "entre les couches",
+  "es": "entre capas",
+  "it": "tra gli strati",
+  "ar": "بين الطبقات",
+  "he": "בין השכבות"
  },
  "block in a light construction box": {
   "fr": "placer une boîte de construction légère",
@@ -2945,6 +4681,20 @@
   "it": "accoppiamento con gioco",
   "ar": "توافق خلوص",
   "he": "התאמת מרווח"
+ },
+ "color": {
+  "fr": "de la couleur",
+  "es": "el color",
+  "it": "il colore",
+  "ar": "اللون",
+  "he": "צבע"
+ },
+ "colors only": {
+  "fr": "seulement les couleurs",
+  "es": "solo colores",
+  "it": "solo colori",
+  "ar": "الألوان فقط",
+  "he": "רק צבעים"
  },
  "cut material": {
   "fr": "la matière coupée",
@@ -3002,6 +4752,13 @@
   "ar": "الاسمي تمامًا",
   "he": "בדיוק הנומינלי"
  },
+ "faster speed": {
+  "fr": "une vitesse plus élevée",
+  "es": "más velocidad",
+  "it": "velocità maggiore",
+  "ar": "سرعة أعلى",
+  "he": "מהירות גבוהה יותר"
+ },
  "g shafts are below the H hole.": {
   "fr": "Les arbres g sont en dessous de l’alésage H.",
   "es": "Los ejes g quedan por debajo del agujero H.",
@@ -3051,6 +4808,13 @@
   "ar": "يسار المسقط الأمامي",
   "he": "משמאל למבט החזית"
  },
+ "mass only": {
+  "fr": "de la masse seulement",
+  "es": "solo la masa",
+  "it": "solo la massa",
+  "ar": "الكتلة فقط",
+  "he": "מסה בלבד"
+ },
  "materials": {
   "fr": "les matériaux",
   "es": "materiales",
@@ -3064,6 +4828,27 @@
   "it": "solo i materiali",
   "ar": "المواد فقط",
   "he": "רק חומרים"
+ },
+ "mates": {
+  "fr": "les liaisons",
+  "es": "relaciones",
+  "it": "vincoli di accoppiamento",
+  "ar": "علاقات التزاوج",
+  "he": "צימודים"
+ },
+ "mixed laminated plastics": {
+  "fr": "des plastiques stratifiés mélangés",
+  "es": "plásticos laminados mezclados",
+  "it": "plastiche laminate miste",
+  "ar": "البلاستيك المصفح المختلط",
+  "he": "פלסטיק מרובד מעורב"
+ },
+ "more infill": {
+  "fr": "plus de remplissage",
+  "es": "más relleno",
+  "it": "più riempimento",
+  "ar": "حشو أكثر",
+  "he": "יותר מילוי"
  },
  "n = 4, j₁ = 4 (pins and slider are full joints).": {
   "fr": "n = 4, j₁ = 4 (pivots et glissière sont des liaisons complètes).",
@@ -3106,6 +4891,13 @@
   "it": "niente",
   "ar": "لا شيء",
   "he": "כלום"
+ },
+ "nowhere": {
+  "fr": "nulle part",
+  "es": "en ningún sitio",
+  "it": "da nessuna parte",
+  "ar": "في أي مكان",
+  "he": "בשום מקום"
  },
  "on phones only": {
   "fr": "seulement sur téléphone",
@@ -3156,6 +4948,20 @@
   "ar": "الخارج فقط",
   "he": "רק החוץ"
  },
+ "paint": {
+  "fr": "de la peinture",
+  "es": "pintura",
+  "it": "vernice",
+  "ar": "طلاء",
+  "he": "צבע"
+ },
+ "parts and quantities": {
+  "fr": "les pièces et les quantités",
+  "es": "piezas y cantidades",
+  "it": "pezzi e quantità",
+  "ar": "القطع والكميات",
+  "he": "חלקים וכמויות"
+ },
  "press fit": {
   "fr": "ajustement serré à la presse",
   "es": "ajuste a presión",
@@ -3184,6 +4990,13 @@
   "ar": "تقلل الخطأ",
   "he": "מקטינות שגיאה"
  },
+ "reduce part count": {
+  "fr": "réduire le nombre de pièces",
+  "es": "reducir el número de piezas",
+  "it": "ridurre il numero di pezzi",
+  "ar": "تقليل عدد القطع",
+  "he": "להקטין את מספר החלקים"
+ },
  "remove datums": {
   "fr": "suppriment les références",
   "es": "eliminan referencias",
@@ -3197,6 +5010,13 @@
   "it": "le impostazioni di rendering",
   "ar": "إعدادات العرض",
   "he": "הגדרות רינדור"
+ },
+ "screws and single materials": {
+  "fr": "des vis et des matériaux uniques",
+  "es": "tornillos y materiales únicos",
+  "it": "viti e materiali singoli",
+  "ar": "البراغي والمواد الأحادية",
+  "he": "ברגים וחומרים יחידים"
  },
  "shade it": {
   "fr": "l’ombrer",
@@ -3218,6 +5038,13 @@
   "it": "accumulano le tolleranze",
   "ar": "تراكم التفاوتات",
   "he": "מצברות טולרנסים"
+ },
+ "supports": {
+  "fr": "des supports",
+  "es": "soportes",
+  "it": "supporti",
+  "ar": "دعامات",
+  "he": "תמיכות"
  },
  "surface finish": {
   "fr": "l’état de surface",
@@ -3303,12 +5130,40 @@
   "ar": "اللوالب",
   "he": "הברגות"
  },
+ "tighten all tolerances": {
+  "fr": "resserrer toutes les tolérances",
+  "es": "ajustar todas las tolerancias",
+  "it": "stringere tutte le tolleranze",
+  "ar": "تضييق كل التفاوتات",
+  "he": "להדק את כל הטולרנסים"
+ },
+ "tolerances": {
+  "fr": "les tolérances",
+  "es": "tolerancias",
+  "it": "tolleranze",
+  "ar": "التفاوتات",
+  "he": "טולרנסים"
+ },
  "transition fit": {
   "fr": "ajustement incertain",
   "es": "ajuste de transición",
   "it": "accoppiamento incerto",
   "ar": "توافق انتقالي",
   "he": "התאמת מעבר"
+ },
+ "use custom screws": {
+  "fr": "utiliser des vis sur mesure",
+  "es": "usar tornillos a medida",
+  "it": "usare viti su misura",
+  "ar": "استخدام براغٍ مخصصة",
+  "he": "להשתמש בברגים מיוחדים"
+ },
+ "welded covers": {
+  "fr": "des capots soudés",
+  "es": "tapas soldadas",
+  "it": "coperchi saldati",
+  "ar": "الأغطية الملحومة",
+  "he": "מכסים מרותכים"
  },
  "welding": {
   "fr": "le soudage",
@@ -3345,6 +5200,13 @@
   "ar": "± 0.20 و± 0.10.",
   "he": "± 0.20 ו-± 0.10."
  },
+ "± 0.20 and ± 0.12 mm.": {
+  "fr": "± 0.20 et ± 0.12 mm.",
+  "es": "± 0.20 y ± 0.12 mm.",
+  "it": "± 0.20 e ± 0.12 mm.",
+  "ar": "± 0.20 و± 0.12 mm.",
+  "he": "± 0.20 ו-± 0.12 mm."
+ },
  "± 0.3 mm. Dimensioning each from one datum would hold it to ± 0.1.": {
   "fr": "± 0.3 mm. Coter chacune depuis une seule référence la limiterait à ± 0.1.",
   "es": "± 0.3 mm. Acotar cada una desde una sola referencia la mantendría en ± 0.1.",
@@ -3358,5 +5220,33 @@
   "it": "Ø0.072 ≤ Ø0.1: conforme.",
   "ar": "Ø0.072 ≤ Ø0.1: مقبول.",
   "he": "Ø0.072 ≤ Ø0.1: עובר."
+ },
+ "≈ 170–225 kg of CO₂ per car per year (a simplified estimate).": {
+  "fr": "≈ 170–225 kg de CO₂ par voiture et par an (une estimation simplifiée).",
+  "es": "≈ 170–225 kg de CO₂ por coche al año (una estimación simplificada).",
+  "it": "≈ 170–225 kg di CO₂ per auto all’anno (una stima semplificata).",
+  "ar": "≈ 170–225 kg من CO₂ لكل سيارة سنويًا (تقدير مبسط).",
+  "he": "≈ 170–225 kg של CO₂ למכונית בשנה (הערכה מפושטת)."
+ },
+ "≈ 34 minutes of extrusion (real prints take longer due to travel moves).": {
+  "fr": "≈ 34 minutes d’extrusion (les impressions réelles durent plus à cause des déplacements à vide).",
+  "es": "≈ 34 minutos de extrusión (las impresiones reales tardan más por los desplazamientos).",
+  "it": "≈ 34 minuti di estrusione (le stampe reali durano di più per i movimenti a vuoto).",
+  "ar": "≈ 34 دقيقة من البثق (المطبوعات الحقيقية تستغرق أطول بسبب حركات الانتقال).",
+  "he": "≈ 34 דקות של שיחול (הדפסות אמיתיות לוקחות יותר בגלל תנועות מעבר)."
+ },
+ "≈ 65% less plastic (sample estimate; your slicer reports the real figure).": {
+  "fr": "≈ 65% de plastique en moins (estimation d’exemple ; votre trancheur donne le chiffre réel).",
+  "es": "≈ 65% menos plástico (estimación de ejemplo; tu laminador da la cifra real).",
+  "it": "≈ 65% di plastica in meno (stima di esempio; lo slicer riporta il valore reale).",
+  "ar": "≈ 65% بلاستيك أقل (تقدير نموذجي؛ برنامج التقطيع لديك يعطي الرقم الحقيقي).",
+  "he": "≈ 65% פחות פלסטיק (הערכת דוגמה; תוכנת הפריסה שלכם מדווחת את המספר האמיתי)."
+ },
+ "≈ 8,887 g/gal ≈ 2.35 kg/L.": {
+  "fr": "≈ 8887 g/gal ≈ 2.35 kg/L.",
+  "es": "≈ 8887 g/gal ≈ 2.35 kg/L.",
+  "it": "≈ 8887 g/gal ≈ 2.35 kg/L.",
+  "ar": "≈ 8887 g/gal ≈ 2.35 kg/L.",
+  "he": "≈ 8887 g/gal ≈ 2.35 kg/L."
  }
 }
