@@ -99,6 +99,7 @@ def shell(l, page, title, desc, main, extra_head='', ld_type='LearningResource',
             head = re.sub(r'(content=")[^"]*/assets/og/' + l + '/' + re.escape(page[:-5]) + r'\.jpg[^"]*"', lambda m: m.group(1) + old.group(1) + '"', head)
     ld = {"@context": "https://schema.org", "@type": ld_type, "name": title, "description": desc, "url": f"{SITE}{d(l)}{page}", "inLanguage": l,
           "isAccessibleForFree": True, "learningResourceType": "lesson" if ld_type == 'LearningResource' else None}
+    if ld_type == 'Course': ld['provider'] = {'@type': 'Organization', 'name': 'Saving Planets', 'url': SITE}  # Oct 24: schema.org Course needs provider (the site itself, never a university)
     ld = {k: v for k, v in ld.items() if v is not None}
     head += extra_head + f'<style>{CSS}</style>\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
     body = re.sub(r'class="[^"]*"', 'class="toc-sub learn-page"', re.search(r'<body[^>]*>', s).group(0), count=1)

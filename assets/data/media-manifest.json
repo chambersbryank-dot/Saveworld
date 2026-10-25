@@ -5799,5 +5799,12 @@
   "bytes": 1155793,
   "sha256": "a56474f0e0eedf91e8f8806a9a2d56332fe97a5996e79c33bd828dbdf6b74afb",
   "type": "application/pdf"
+ },
+ "courses/Physics_I_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Physics_I_Study_Guide.1d9cf66b36b6.pdf",
+  "key": "courses/Physics_I_Study_Guide.1d9cf66b36b6.pdf",
+  "bytes": 1458684,
+  "sha256": "1d9cf66b36b635c7e9425452999656cbbb28e2c325497ed493861eabc542e9ab",
+  "type": "application/pdf"
  }
 }
