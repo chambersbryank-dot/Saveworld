@@ -1,4 +1,60 @@
 {
+ "(L/D)max = 1/(2√(0.025 × 0.0531)).": {
+  "fr": "(L/D)max = 1/(2√(0.025 × 0.0531)).",
+  "es": "(L/D)max = 1/(2√(0.025 × 0.0531)).",
+  "it": "(L/D)max = 1/(2√(0.025 × 0.0531)).",
+  "ar": "(L/D)max = 1/(2√(0.025 × 0.0531)).",
+  "he": "(L/D)max = 1/(2√(0.025 × 0.0531))."
+ },
+ "(L/D)max ≈ 13.7 at C_L ≈ 0.69.": {
+  "fr": "(L/D)max ≈ 13.7 à C_L ≈ 0.69.",
+  "es": "(L/D)max ≈ 13.7 con C_L ≈ 0.69.",
+  "it": "(L/D)max ≈ 13.7 con C_L ≈ 0.69.",
+  "ar": "(L/D)max ≈ 13.7 عند C_L ≈ 0.69.",
+  "he": "(L/D)max ≈ 13.7 ב-C_L ≈ 0.69."
+ },
+ "0.15, or 15%: stable.": {
+  "fr": "0.15, soit 15% : stable.",
+  "es": "0.15, o sea 15%: estable.",
+  "it": "0.15, cioè 15%: stabile.",
+  "ar": "0.15، أي 15%: مستقرة.",
+  "he": "0.15, כלומר 15%: יציב."
+ },
+ "1 per rad": {
+  "fr": "1 par rad",
+  "es": "1 por rad",
+  "it": "1 per rad",
+  "ar": "1 لكل rad",
+  "he": "1 לרדיאן"
+ },
+ "1.0, but the thrust is zero: efficiency and thrust trade off.": {
+  "fr": "1.0, mais la poussée est nulle : rendement et poussée s’opposent.",
+  "es": "1.0, pero el empuje es cero: rendimiento y empuje se compensan.",
+  "it": "1.0, ma la spinta è nulla: rendimento e spinta sono in compromesso.",
+  "ar": "1.0، لكن الدفع صفر: الكفاءة والدفع متعارضان.",
+  "he": "1.0, אבל הדחף אפס: יש פשרה בין נצילות לדחף."
+ },
+ "20 km, at a glide angle of about 2.9°.": {
+  "fr": "20 km, avec un angle de plané d’environ 2.9°.",
+  "es": "20 km, con un ángulo de planeo de unos 2.9°.",
+  "it": "20 km, con un angolo di planata di circa 2.9°.",
+  "ar": "20 km، بزاوية انزلاق نحو 2.9°.",
+  "he": "20 km, בזווית דאייה של כ-2.9°."
+ },
+ "2π per degree": {
+  "fr": "2π par degré",
+  "es": "2π por grado",
+  "it": "2π per grado",
+  "ar": "2π لكل درجة",
+  "he": "2π למעלה"
+ },
+ "2π per rad": {
+  "fr": "2π par rad",
+  "es": "2π por rad",
+  "it": "2π per rad",
+  "ar": "2π لكل rad",
+  "he": "2π לרדיאן"
+ },
  "3 m/s over the ground. It flew into a strong headwind, so its airspeed was much higher.": {
   "fr": "3 m/s par rapport au sol. Il volait face à un fort vent de face, donc sa vitesse air était bien plus élevée.",
   "es": "3 m/s respecto al suelo. Volaba contra un fuerte viento de frente, así que su velocidad aerodinámica era mucho mayor.",
@@ -19,6 +75,20 @@
   "it": "340 m/s e 295 m/s.",
   "ar": "340 m/s و295 m/s.",
   "he": "340 m/s ו-295 m/s."
+ },
+ "4.92 per rad ≈ 0.086 per degree, 22% below the 2D value.": {
+  "fr": "4.92 par rad ≈ 0.086 par degré, 22% sous la valeur 2D.",
+  "es": "4.92 por rad ≈ 0.086 por grado, un 22% por debajo del valor 2D.",
+  "it": "4.92 per rad ≈ 0.086 per grado, il 22% sotto il valore 2D.",
+  "ar": "4.92 لكل rad ≈ 0.086 لكل درجة، أي أقل بـ 22% من القيمة ثنائية الأبعاد (2D).",
+  "he": "4.92 לרדיאן ≈ 0.086 למעלה, 22% מתחת לערך הדו-ממדי (2D)."
+ },
+ "900/(60 + m) = 12 gives m = 15 g.": {
+  "fr": "900/(60 + m) = 12 donne m = 15 g.",
+  "es": "900/(60 + m) = 12 da m = 15 g.",
+  "it": "900/(60 + m) = 12 dà m = 15 g.",
+  "ar": "900/(60 + m) = 12 تعطي m = 15 g.",
+  "he": "900/(60 + m) = 12 נותן m = 15 g."
  },
  "A 1,100 kg airplane with a 16.2 m² wing flies level at 55 m/s at sea level (ρ = 1.227 kg/m³). Find C_L.": {
   "fr": "Un avion de 1100 kg avec une aile de 16.2 m² vole en palier à 55 m/s au niveau de la mer (ρ = 1.227 kg/m³). Trouvez C_L.",
@@ -41,12 +111,82 @@
   "ar": "حاسوب مع متصفح ويب وجدول بيانات (يعمل FoilSim في المتصفح).",
   "he": "מחשב עם דפדפן וגיליון אלקטרוני (FoilSim רץ בדפדפן)."
  },
+ "A finite wing loses lift slope to its tip vortices: a = a₀/(1 + a₀/(πeAR)), with aspect ratio AR = b²/S.": {
+  "fr": "Une aile finie perd de la pente de portance à cause de ses tourbillons marginaux : a = a₀/(1 + a₀/(πeAR)), avec l’allongement AR = b²/S.",
+  "es": "Un ala finita pierde pendiente de sustentación por sus vórtices de punta: a = a₀/(1 + a₀/(πeAR)), con alargamiento AR = b²/S.",
+  "it": "Un’ala finita perde pendenza di portanza a causa dei vortici d’estremità: a = a₀/(1 + a₀/(πeAR)), con allungamento AR = b²/S.",
+  "ar": "يفقد الجناح المحدود جزءًا من ميل الرفع بسبب دوامات أطرافه: a = a₀/(1 + a₀/(πeAR))، حيث نسبة الباع AR = b²/S.",
+  "he": "כנף סופית מאבדת שיפוע עילוי בגלל מערבולות הקצה שלה: a = a₀/(1 + a₀/(πeAR)), עם יחס ממדים AR = b²/S."
+ },
+ "A glider has a 50 g wing at x = 10 cm, a 10 g tail at x = 40 cm and 20 g of nose weight at x = 0. Find the CG.": {
+  "fr": "Un planeur a une aile de 50 g à x = 10 cm, un empennage de 10 g à x = 40 cm et 20 g de lest dans le nez à x = 0. Trouvez le CG.",
+  "es": "Un planeador tiene un ala de 50 g en x = 10 cm, una cola de 10 g en x = 40 cm y 20 g de lastre en la nariz en x = 0. Halla el CG.",
+  "it": "Un aliante ha un’ala da 50 g a x = 10 cm, una coda da 10 g a x = 40 cm e 20 g di zavorra nel muso a x = 0. Trova il CG.",
+  "ar": "طائرة شراعية لها جناح كتلته 50 g عند x = 10 cm، وذيل كتلته 10 g عند x = 40 cm، وثقل في المقدمة 20 g عند x = 0. أوجد CG.",
+  "he": "לדאון יש כנף של 50 g ב-x = 10 cm, זנב של 10 g ב-x = 40 cm ו-20 g משקולת אף ב-x = 0. מצאו את ה-CG."
+ },
+ "A glider with lift-to-drag ratio L/D travels L/D meters forward for every meter of height lost: tan γ = D/L.": {
+  "fr": "Un planeur de finesse L/D parcourt L/D mètres vers l’avant pour chaque mètre de hauteur perdu : tan γ = D/L.",
+  "es": "Un planeador con relación sustentación-resistencia L/D avanza L/D metros por cada metro de altura perdido: tan γ = D/L.",
+  "it": "Un aliante con efficienza L/D percorre L/D metri in avanti per ogni metro di quota perso: tan γ = D/L.",
+  "ar": "تقطع الطائرة الشراعية ذات نسبة الرفع إلى السحب L/D مسافة L/D مترًا إلى الأمام مقابل كل متر تفقده من الارتفاع: tan γ = D/L.",
+  "he": "דאון עם יחס עילוי לגרר L/D מתקדם L/D מטרים קדימה על כל מטר גובה שהוא מאבד: tan γ = D/L."
+ },
+ "A heavier glider glides farther.": {
+  "fr": "Un planeur plus lourd plane plus loin.",
+  "es": "Un planeador más pesado planea más lejos.",
+  "it": "Un aliante più pesante plana più lontano.",
+  "ar": "الطائرة الشراعية الأثقل تنزلق أبعد.",
+  "he": "דאון כבד יותר דואה רחוק יותר."
+ },
+ "A higher aspect ratio mainly reduces…": {
+  "fr": "Un plus grand allongement réduit surtout…",
+  "es": "Un mayor alargamiento reduce sobre todo…",
+  "it": "Un allungamento maggiore riduce soprattutto…",
+  "ar": "نسبة الباع الأعلى تقلل أساسًا…",
+  "he": "יחס ממדים גבוה יותר מקטין בעיקר…"
+ },
+ "A jet cruises at 230 m/s with L/D = 17 and thrust-specific fuel consumption c = 0.6 per hour. Burning fuel lowers its weight from W_i to W_i/1.25. Find its range.": {
+  "fr": "Un avion à réaction vole en croisière à 230 m/s avec L/D = 17 et une consommation spécifique c = 0.6 par heure. La combustion du carburant fait passer sa masse de W_i à W_i/1.25. Trouvez sa distance franchissable.",
+  "es": "Un reactor vuela en crucero a 230 m/s con L/D = 17 y un consumo específico c = 0.6 por hora. Al quemar combustible su peso baja de W_i a W_i/1.25. Halla su alcance.",
+  "it": "Un jet vola in crociera a 230 m/s con L/D = 17 e consumo specifico c = 0.6 all’ora. Bruciando carburante il suo peso scende da W_i a W_i/1.25. Trova la sua autonomia.",
+  "ar": "طائرة نفاثة تطير بسرعة 230 m/s مع L/D = 17 واستهلاك وقود نوعي للدفع c = 0.6 لكل ساعة. احتراق الوقود يخفض وزنها من W_i إلى W_i/1.25. أوجد مداها.",
+  "he": "מטוס סילון שט ב-230 m/s עם L/D = 17 וצריכת דלק סגולית לדחף c = 0.6 לשעה. שריפת הדלק מורידה את משקלו מ-W_i ל-W_i/1.25. מצאו את הטווח שלו."
+ },
+ "A paper glider has L/D = 5. Launched level from 2 m, about how far does it glide?": {
+  "fr": "Un planeur en papier a L/D = 5. Lancé à l’horizontale depuis 2 m, jusqu’où plane-t-il environ ?",
+  "es": "Un planeador de papel tiene L/D = 5. Lanzado horizontalmente desde 2 m, ¿hasta dónde planea aproximadamente?",
+  "it": "Un aliante di carta ha L/D = 5. Lanciato in orizzontale da 2 m, quanto lontano plana all’incirca?",
+  "ar": "طائرة شراعية ورقية فيها L/D = 5. أُطلقت أفقيًا من ارتفاع 2 m، فإلى أي مسافة تنزلق تقريبًا؟",
+  "he": "לדאון נייר יש L/D = 5. כשהוא משוגר אופקית מגובה 2 m, כמה רחוק הוא דואה בערך?"
+ },
+ "A sailplane with L/D = 20 is 1,000 m up. How far can it glide in still air, and at what angle?": {
+  "fr": "Un planeur de finesse L/D = 20 est à 1000 m d’altitude. Jusqu’où peut-il planer en air calme, et sous quel angle ?",
+  "es": "Un velero con L/D = 20 está a 1000 m de altura. ¿Hasta dónde puede planear en aire en calma y con qué ángulo?",
+  "it": "Un aliante con L/D = 20 si trova a 1000 m di quota. Quanto lontano può planare in aria calma, e con quale angolo?",
+  "ar": "طائرة شراعية فيها L/D = 20 على ارتفاع 1000 m. إلى أي مسافة يمكنها الانزلاق في هواء ساكن، وبأي زاوية؟",
+  "he": "דאון עם L/D = 20 נמצא בגובה 1000 m. כמה רחוק הוא יכול לדאות באוויר שקט, ובאיזו זווית?"
+ },
  "A standard atmosphere is an average model fitted to measurements. In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer.": {
   "fr": "Une atmosphère standard est un modèle moyen ajusté à des mesures. Dans le modèle de la NASA, la troposphère va du sol à 11000 m, et la température baisse d’environ 6.5 °C par kilomètre.",
   "es": "Una atmósfera estándar es un modelo promedio ajustado a mediciones. En el modelo de la NASA la troposfera va desde el suelo hasta 11000 m, y la temperatura baja unos 6.5 °C por kilómetro.",
   "it": "Un’atmosfera standard è un modello medio adattato alle misure. Nel modello della NASA la troposfera va dal suolo a 11000 m, e la temperatura scende di circa 6.5 °C per chilometro.",
   "ar": "الغلاف الجوي القياسي نموذج متوسط مطابق للقياسات. في نموذج ناسا تمتد طبقة التروبوسفير من الأرض حتى 11000 m، وتنخفض درجة الحرارة نحو 6.5 °C لكل كيلومتر.",
   "he": "אטמוספרה תקנית היא מודל ממוצע שהותאם למדידות. במודל של NASA הטרופוספרה משתרעת מהקרקע עד 11000 m, והטמפרטורה יורדת בכ-6.5 °C לכל קילומטר."
+ },
+ "A static margin of 0.15 means…": {
+  "fr": "Une marge statique de 0.15 signifie…",
+  "es": "Un margen estático de 0.15 significa…",
+  "it": "Un margine statico di 0.15 significa…",
+  "ar": "الهامش الساكن 0.15 يعني…",
+  "he": "שוליים סטטיים של 0.15 פירושם…"
+ },
+ "A tail far behind the CG works like the feathers on an arrow: a nose-up disturbance raises the tail’s lift and pushes the nose back down.": {
+  "fr": "Un empennage loin derrière le CG agit comme l’empennage d’une flèche : une perturbation à cabrer augmente la portance de l’empennage et ramène le nez vers le bas.",
+  "es": "Una cola muy detrás del CG funciona como las plumas de una flecha: una perturbación de nariz arriba aumenta la sustentación de la cola y vuelve a bajar la nariz.",
+  "it": "Una coda molto dietro il CG funziona come le penne di una freccia: una perturbazione a cabrare aumenta la portanza della coda e riporta giù il muso.",
+  "ar": "الذيل البعيد خلف CG يعمل كريش السهم: اضطراب يرفع المقدمة يزيد رفع الذيل فيدفع المقدمة إلى الأسفل من جديد.",
+  "he": "זנב רחוק מאחורי ה-CG פועל כמו הנוצות של חץ: הפרעה שמרימה את האף מגדילה את העילוי של הזנב ודוחפת את האף חזרה למטה."
  },
  "A tie at 7.2: the team should test both or revisit the weights it trusts least.": {
   "fr": "Égalité à 7.2 : l’équipe devrait tester les deux ou revoir les pondérations dont elle est le moins sûre.",
@@ -62,6 +202,20 @@
   "ar": "دراسة الموازنة…",
   "he": "ניתוח חלופות…"
  },
+ "A turbofan moves 500 kg/s of air from 250 m/s to 320 m/s. Find thrust and propulsive efficiency.": {
+  "fr": "Une turbosoufflante accélère 500 kg/s d’air de 250 m/s à 320 m/s. Trouvez la poussée et le rendement propulsif.",
+  "es": "Un turbofán mueve 500 kg/s de aire de 250 m/s a 320 m/s. Halla el empuje y el rendimiento propulsivo.",
+  "it": "Un turbofan accelera 500 kg/s d’aria da 250 m/s a 320 m/s. Trova spinta e rendimento propulsivo.",
+  "ar": "محرك مروحي توربيني يحرك 500 kg/s من الهواء من 250 m/s إلى 320 m/s. أوجد الدفع وكفاءة الدفع.",
+  "he": "טורבו-מניפה מזיזה 500 kg/s אוויר מ-250 m/s ל-320 m/s. מצאו את הדחף ואת נצילות ההנעה."
+ },
+ "A turbojet makes the same 35 kN with 100 kg/s of air at v₀ = 250 m/s. What exhaust speed does it need, and what is η_p?": {
+  "fr": "Un turboréacteur produit les mêmes 35 kN avec 100 kg/s d’air à v₀ = 250 m/s. Quelle vitesse d’éjection lui faut-il, et que vaut η_p ?",
+  "es": "Un turborreactor genera los mismos 35 kN con 100 kg/s de aire a v₀ = 250 m/s. ¿Qué velocidad de salida necesita y cuánto vale η_p?",
+  "it": "Un turbogetto produce gli stessi 35 kN con 100 kg/s d’aria a v₀ = 250 m/s. Quale velocità di scarico gli serve, e quanto vale η_p?",
+  "ar": "محرك نفاث توربيني يولد الـ 35 kN نفسها بـ 100 kg/s من الهواء عند v₀ = 250 m/s. ما سرعة العادم التي يحتاجها، وما قيمة η_p؟",
+  "he": "טורבו-סילון מייצר אותם 35 kN עם 100 kg/s אוויר ב-v₀ = 250 m/s. איזו מהירות פליטה הוא צריך, ומה ה-η_p?"
+ },
  "A wing turns the airflow downward; by Newton’s third law the air pushes the wing up. Equivalently, faster flow over the top means lower pressure there (Bernoulli). Both describe one flow.": {
   "fr": "Une aile dévie l’écoulement vers le bas ; d’après la troisième loi de Newton, l’air pousse l’aile vers le haut. De manière équivalente, un écoulement plus rapide sur l’extrados signifie une pression plus basse à cet endroit (Bernoulli). Les deux décrivent un même écoulement.",
   "es": "Un ala desvía el flujo de aire hacia abajo; por la tercera ley de Newton, el aire empuja el ala hacia arriba. De forma equivalente, un flujo más rápido por encima implica menor presión allí (Bernoulli). Ambas describen un mismo flujo.",
@@ -76,6 +230,13 @@
   "ar": "تبني هندسة الطيران والفضاء الأقمار الصناعية التي تقيس مناخ الأرض وغاباتها وجليدها ومحيطاتها، وعليها أيضًا أن تقلص بصمتها الخاصة: كل كيلوغرام من وقود الطائرات يُحرق ينتج نحو 3.16 kg من CO₂.",
   "he": "הנדסת אווירונאוטיקה וחלל בונה את הלוויינים שמודדים את האקלים, היערות, הקרח והאוקיינוסים של כדור הארץ, והיא גם צריכה לצמצם את טביעת הרגל שלה עצמה: כל קילוגרם של דלק סילוני שנשרף יוצר כ-3.16 kg של CO₂."
  },
+ "Ailerons control…": {
+  "fr": "Les ailerons contrôlent…",
+  "es": "Los alerones controlan…",
+  "it": "Gli alettoni controllano…",
+  "ar": "الجنيحات تتحكم في…",
+  "he": "המאזנות שולטות ב…"
+ },
  "Air over the top must meet air under the bottom at the trailing edge (equal transit time).": {
   "fr": "L’air passant sur l’extrados doit rejoindre l’air passant sous l’intrados au bord de fuite (temps de transit égal).",
   "es": "El aire que pasa por arriba debe encontrarse con el de abajo en el borde de salida (tiempo de tránsito igual).",
@@ -89,6 +250,13 @@
   "it": "Gli aerei volano dove si formano tempo e clima. La NASA studia le emissioni degli aerei con modelli al computer, prove di combustione in laboratorio e prove di volo, perché ciò che i motori rilasciano in quota conta per l’atmosfera.",
   "ar": "تطير الطائرات حيث يحدث الطقس والمناخ. تدرس ناسا انبعاثات الطائرات عبر النمذجة الحاسوبية واختبارات الاحتراق المخبرية واختبارات الطيران، لأن ما تطلقه المحركات على الارتفاعات العالية يهم الغلاف الجوي.",
   "he": "מטוסים טסים במקום שבו מתרחשים מזג האוויר והאקלים. NASA חוקרת פליטות של מטוסים באמצעות מידול ממוחשב, ניסויי בעירה במעבדה וניסויי טיסה, כי מה שמנועים פולטים בגובה חשוב לאטמוספרה."
+ },
+ "Aircraft performance chapter.": {
+  "fr": "Chapitre sur les performances des avions.",
+  "es": "Capítulo sobre rendimiento de aeronaves.",
+  "it": "Capitolo sulle prestazioni degli aerei.",
+  "ar": "فصل أداء الطائرات.",
+  "he": "פרק ביצועי מטוסים."
  },
  "Airfoil geometry, the lift curve, stall, and why long, slender wings make less drag.": {
   "fr": "Géométrie des profils, courbe de portance, décrochage, et pourquoi des ailes longues et fines produisent moins de traînée.",
@@ -111,6 +279,34 @@
   "ar": "المقاطع الانسيابية، ومنحنى الرفع، والأجنحة المحدودة؛ المختبر A",
   "he": "פרופילי כנף, עקומת עילוי, כנפיים סופיות; מעבדה A"
  },
+ "An aft CG makes the aircraft unstable.": {
+  "fr": "Un CG trop arrière rend l’avion instable.",
+  "es": "Un CG retrasado hace inestable al avión.",
+  "it": "Un CG arretrato rende l’aereo instabile.",
+  "ar": "CG المتأخر يجعل الطائرة غير مستقرة.",
+  "he": "CG אחורי הופך את המטוס ללא יציב."
+ },
+ "An aircraft rotates about its center of gravity: pitch (elevator), roll (ailerons), yaw (rudder).": {
+  "fr": "Un avion tourne autour de son centre de gravité : tangage (gouverne de profondeur), roulis (ailerons), lacet (gouverne de direction).",
+  "es": "Un avión gira alrededor de su centro de gravedad: cabeceo (timón de profundidad), alabeo (alerones), guiñada (timón de dirección).",
+  "it": "Un aereo ruota attorno al proprio baricentro: beccheggio (equilibratore), rollio (alettoni), imbardata (timone).",
+  "ar": "تدور الطائرة حول مركز ثقلها: الانحدار (الرافع)، والدحرجة (الجنيحات)، والانعراج (الدفة).",
+  "he": "מטוס מסתובב סביב מרכז הכובד שלו: עלרוד (הגה גובה), גלגול (מאזנות), סבסוב (הגה כיוון)."
+ },
+ "An aircraft weighing 10,800 N has 30 kW of excess power. Find its rate of climb.": {
+  "fr": "Un avion pesant 10800 N dispose de 30 kW d’excédent de puissance. Trouvez son taux de montée.",
+  "es": "Un avión que pesa 10800 N tiene 30 kW de exceso de potencia. Halla su tasa de ascenso.",
+  "it": "Un aereo che pesa 10800 N ha 30 kW di potenza in eccesso. Trova il suo rateo di salita.",
+  "ar": "طائرة وزنها 10800 N لديها قدرة فائضة قدرها 30 kW. أوجد معدل صعودها.",
+  "he": "למטוס במשקל 10800 N יש עודף הספק של 30 kW. מצאו את קצב הטיפוס שלו."
+ },
+ "An airfoil is a wing’s cross-section. Camber lets it lift at zero angle of attack; thickness adds strength and room for fuel.": {
+  "fr": "Un profil est la section d’une aile. La cambrure lui permet de porter à incidence nulle ; l’épaisseur apporte de la résistance et de la place pour le carburant.",
+  "es": "Un perfil aerodinámico es la sección transversal de un ala. La curvatura le permite generar sustentación con ángulo de ataque cero; el espesor aporta resistencia estructural y espacio para combustible.",
+  "it": "Un profilo alare è la sezione di un’ala. La curvatura le permette di generare portanza con angolo d’attacco nullo; lo spessore dà robustezza e spazio per il carburante.",
+  "ar": "المقطع الانسيابي هو المقطع العرضي للجناح. يسمح له التحدب بتوليد الرفع عند زاوية هجوم صفرية؛ وتضيف السماكة متانة ومساحة للوقود.",
+  "he": "פרופיל כנף הוא חתך הרוחב של כנף. הקמירות מאפשרת לו לייצר עילוי בזווית התקפה אפס; העובי מוסיף חוזק ומקום לדלק."
+ },
  "An airliner flies at 230 m/s true airspeed at 11 km. What is its Mach number?": {
   "fr": "Un avion de ligne vole à 230 m/s de vitesse vraie à 11 km. Quel est son nombre de Mach ?",
   "es": "Un avión de pasajeros vuela a 230 m/s de velocidad verdadera a 11 km. ¿Cuál es su número de Mach?",
@@ -124,6 +320,27 @@
   "it": "Un aereo di linea di massa 70000 kg vola in crociera livellata. Trova la sua portanza.",
   "ar": "طائرة ركاب كتلتها 70000 kg تطير في رحلة أفقية. أوجد قوة الرفع.",
   "he": "מטוס נוסעים במסה 70000 kg שט בטיסה אופקית. מצאו את העילוי שלו."
+ },
+ "An engine makes 100 kN while burning 2.5 kg/s of fuel. Find its I_sp.": {
+  "fr": "Un moteur produit 100 kN en brûlant 2.5 kg/s de carburant. Trouvez son I_sp.",
+  "es": "Un motor genera 100 kN quemando 2.5 kg/s de combustible. Halla su I_sp.",
+  "it": "Un motore produce 100 kN bruciando 2.5 kg/s di carburante. Trova il suo I_sp.",
+  "ar": "محرك يولد 100 kN بينما يحرق 2.5 kg/s من الوقود. أوجد I_sp.",
+  "he": "מנוע מייצר 100 kN תוך שריפת 2.5 kg/s דלק. מצאו את ה-I_sp שלו."
+ },
+ "Angle between chord and oncoming flow.": {
+  "fr": "Angle entre la corde et l’écoulement incident.",
+  "es": "Ángulo entre la cuerda y el flujo incidente.",
+  "it": "Angolo tra la corda e il flusso incidente.",
+  "ar": "الزاوية بين الوتر والتدفق القادم.",
+  "he": "הזווית בין המיתר לזרימה הנכנסת."
+ },
+ "Angle of attack": {
+  "fr": "Angle d’attaque",
+  "es": "Ángulo de ataque",
+  "it": "Angolo d’attacco",
+  "ar": "زاوية الهجوم",
+  "he": "זווית התקפה"
  },
  "Apply the ideal-gas law to air.": {
   "fr": "Appliquer la loi des gaz parfaits à l’air.",
@@ -139,6 +356,34 @@
   "ar": "Artemis II",
   "he": "Artemis II"
  },
+ "Aspect ratio": {
+  "fr": "Allongement",
+  "es": "Alargamiento",
+  "it": "Allungamento",
+  "ar": "نسبة الباع",
+  "he": "יחס ממדים"
+ },
+ "Aspect ratio and efficiency factor.": {
+  "fr": "Allongement et facteur d’efficacité.",
+  "es": "Alargamiento y factor de eficiencia.",
+  "it": "Allungamento e fattore di efficienza.",
+  "ar": "نسبة الباع ومعامل الكفاءة.",
+  "he": "יחס ממדים ומקדם יעילות."
+ },
+ "Aspect ratio is…": {
+  "fr": "L’allongement est…",
+  "es": "El alargamiento es…",
+  "it": "L’allungamento è…",
+  "ar": "نسبة الباع هي…",
+  "he": "יחס ממדים הוא…"
+ },
+ "At maximum L/D…": {
+  "fr": "À la finesse maximale L/D…",
+  "es": "En el L/D máximo…",
+  "it": "Al massimo L/D…",
+  "ar": "عند أعلى L/D…",
+  "he": "ב-L/D מרבי…"
+ },
  "Atmospheric drag": {
   "fr": "Traînée atmosphérique",
   "es": "Resistencia atmosférica",
@@ -152,6 +397,13 @@
   "it": "Modello medio di T, p, ρ in funzione della quota.",
   "ar": "نموذج متوسط لـ T وp وρ بدلالة الارتفاع.",
   "he": "מודל ממוצע של T, p, ρ כפונקציה של הגובה."
+ },
+ "Balanced, zero net moment.": {
+  "fr": "Équilibré, moment résultant nul.",
+  "es": "Equilibrado, momento neto nulo.",
+  "it": "Equilibrato, momento risultante nullo.",
+  "ar": "متوازنة، والعزم الصافي صفر.",
+  "he": "מאוזן, מומנט כולל אפס."
  },
  "Basic Aerodynamics: Lift & Drag": {
   "fr": "Aérodynamique de base : portance et traînée",
@@ -167,12 +419,82 @@
   "ar": "معادلة برنولي (على طول خط انسياب)",
   "he": "משוואת ברנולי (לאורך קו זרם)"
  },
+ "Best lift-to-drag ratio": {
+  "fr": "Meilleure finesse",
+  "es": "Mejor relación sustentación-resistencia",
+  "it": "Massima efficienza aerodinamica",
+  "ar": "أفضل نسبة رفع إلى سحب",
+  "he": "יחס העילוי לגרר הטוב ביותר"
+ },
+ "Best range comes at a moderate speed tied to the best L/D.": {
+  "fr": "La meilleure distance s’obtient à une vitesse modérée liée à la meilleure finesse.",
+  "es": "El mejor alcance se logra a una velocidad moderada ligada al mejor L/D.",
+  "it": "La migliore autonomia si ha a una velocità moderata legata al miglior L/D.",
+  "ar": "أفضل مدى يتحقق عند سرعة معتدلة مرتبطة بأفضل L/D.",
+  "he": "הטווח הטוב ביותר מושג במהירות מתונה הקשורה ל-L/D הטוב ביותר."
+ },
  "Both describe the same flow; pressure differences and flow turning go together.": {
   "fr": "Les deux décrivent le même écoulement ; différences de pression et déviation de l’écoulement vont ensemble.",
   "es": "Ambas describen el mismo flujo; las diferencias de presión y la desviación del flujo van juntas.",
   "it": "Entrambe descrivono lo stesso flusso; differenze di pressione e deviazione del flusso vanno insieme.",
   "ar": "كلاهما يصف التدفق نفسه؛ ففروق الضغط وانحراف التدفق متلازمان.",
   "he": "שניהם מתארים את אותה זרימה; הפרשי לחץ והטיית זרימה הולכים יחד."
+ },
+ "Breguet range": {
+  "fr": "Distance de Breguet",
+  "es": "Alcance de Breguet",
+  "it": "Autonomia di Breguet",
+  "ar": "مدى بريغيه",
+  "he": "טווח בריגה"
+ },
+ "Breguet range equation (jet)": {
+  "fr": "Équation de Breguet de la distance franchissable (réacteur)",
+  "es": "Ecuación de alcance de Breguet (reactor)",
+  "it": "Equazione di Breguet per l’autonomia (jet)",
+  "ar": "معادلة بريغيه للمدى (نفاثة)",
+  "he": "משוואת הטווח של בריגה (סילון)"
+ },
+ "Breguet range grows with…": {
+  "fr": "La distance de Breguet augmente avec…",
+  "es": "El alcance de Breguet crece con…",
+  "it": "L’autonomia di Breguet cresce con…",
+  "ar": "يزداد مدى بريغيه مع…",
+  "he": "טווח בריגה גדל עם…"
+ },
+ "Bypass air ÷ core air.": {
+  "fr": "Air secondaire ÷ air du cœur.",
+  "es": "Aire derivado ÷ aire del núcleo.",
+  "it": "Aria di by-pass ÷ aria del nucleo.",
+  "ar": "هواء التجاوز ÷ هواء القلب.",
+  "he": "אוויר עוקף ÷ אוויר ליבה."
+ },
+ "Bypass ratio": {
+  "fr": "Taux de dilution",
+  "es": "Índice de derivación",
+  "it": "Rapporto di by-pass",
+  "ar": "نسبة التجاوز",
+  "he": "יחס עקיפה"
+ },
+ "CG at 30% chord, neutral point at 28%. Stable?": {
+  "fr": "CG à 30% de la corde, point neutre à 28%. Stable ?",
+  "es": "CG al 30% de la cuerda, punto neutro al 28%. ¿Es estable?",
+  "it": "CG al 30% della corda, punto neutro al 28%. È stabile?",
+  "ar": "CG عند 30% من الوتر، والنقطة المحايدة عند 28%. هل هي مستقرة؟",
+  "he": "CG ב-30% מהמיתר, נקודה ניטרלית ב-28%. יציב?"
+ },
+ "CG location for neutral pitch stability.": {
+  "fr": "Position du CG donnant une stabilité en tangage neutre.",
+  "es": "Posición del CG para una estabilidad neutra en cabeceo.",
+  "it": "Posizione del CG per una stabilità neutra in beccheggio.",
+  "ar": "موضع CG الذي يعطي استقرارًا محايدًا في الانحدار.",
+  "he": "מיקום ה-CG ליציבות ניטרלית בעלרוד."
+ },
+ "CO2M: measuring CO₂ from space": {
+  "fr": "CO2M : mesurer le CO₂ depuis l’espace",
+  "es": "CO2M: medir el CO₂ desde el espacio",
+  "it": "CO2M: misurare la CO₂ dallo spazio",
+  "ar": "CO2M: قياس CO₂ من الفضاء",
+  "he": "CO2M: מדידת CO₂ מהחלל"
  },
  "Calculus I is useful for a few derivations but not required for the numbers.": {
   "fr": "L’Analyse I est utile pour quelques démonstrations mais pas nécessaire pour les calculs numériques.",
@@ -181,12 +503,61 @@
   "ar": "حساب التفاضل والتكامل I مفيد لبعض الاشتقاقات لكنه غير مطلوب للأرقام.",
   "he": "חדו״א I שימושי לכמה פיתוחים אבל אינו נדרש לחישובים המספריים."
  },
+ "Camber": {
+  "fr": "Cambrure",
+  "es": "Curvatura",
+  "it": "Curvatura",
+  "ar": "التحدب",
+  "he": "קמירות"
+ },
+ "Center of gravity": {
+  "fr": "Centre de gravité",
+  "es": "Centro de gravedad",
+  "it": "Baricentro",
+  "ar": "مركز الثقل",
+  "he": "מרכז כובד"
+ },
+ "Chord": {
+  "fr": "Corde",
+  "es": "Cuerda",
+  "it": "Corda",
+  "ar": "الوتر",
+  "he": "מיתר"
+ },
+ "Climb comes from…": {
+  "fr": "La montée vient…",
+  "es": "El ascenso proviene de…",
+  "it": "La salita deriva da…",
+  "ar": "ينتج الصعود عن…",
+  "he": "טיפוס נובע מ…"
+ },
+ "Compare turbojets, turbofans and propellers.": {
+  "fr": "Comparer turboréacteurs, turbosoufflantes et hélices.",
+  "es": "Comparar turborreactores, turbofanes y hélices.",
+  "it": "Confrontare turbogetti, turbofan ed eliche.",
+  "ar": "المقارنة بين المحركات النفاثة التوربينية والمراوح التوربينية والمراوح الدافعة.",
+  "he": "להשוות בין טורבו-סילון, טורבו-מניפה ומדחפים."
+ },
+ "Compute climb rate from excess power.": {
+  "fr": "Calculer le taux de montée à partir de l’excédent de puissance.",
+  "es": "Calcular la tasa de ascenso a partir del exceso de potencia.",
+  "it": "Calcolare il rateo di salita dalla potenza in eccesso.",
+  "ar": "حساب معدل الصعود من القدرة الفائضة.",
+  "he": "לחשב קצב טיפוס מתוך עודף הספק."
+ },
  "Compute dynamic pressure, stall speed and Reynolds number.": {
   "fr": "Calculer la pression dynamique, la vitesse de décrochage et le nombre de Reynolds.",
   "es": "Calcular la presión dinámica, la velocidad de pérdida y el número de Reynolds.",
   "it": "Calcolare la pressione dinamica, la velocità di stallo e il numero di Reynolds.",
   "ar": "حساب الضغط الديناميكي وسرعة الانهيار وعدد رينولدز.",
   "he": "לחשב לחץ דינמי, מהירות הזדקרות ומספר ריינולדס."
+ },
+ "Compute propulsive efficiency.": {
+  "fr": "Calculer le rendement propulsif.",
+  "es": "Calcular el rendimiento propulsivo.",
+  "it": "Calcolare il rendimento propulsivo.",
+  "ar": "حساب كفاءة الدفع.",
+  "he": "לחשב נצילות הנעה."
  },
  "Compute the speed of sound and Mach number.": {
   "fr": "Calculer la vitesse du son et le nombre de Mach.",
@@ -202,12 +573,40 @@
   "ar": "المفهوم → الأولي → التصميم التفصيلي → الاختبار → التكرار.",
   "he": "קונספט → תכן מקדמי → תכן מפורט → ניסוי → איטרציה."
  },
+ "Condition for pitch stability": {
+  "fr": "Condition de stabilité en tangage",
+  "es": "Condición de estabilidad en cabeceo",
+  "it": "Condizione di stabilità in beccheggio",
+  "ar": "شرط الاستقرار في الانحدار",
+  "he": "תנאי ליציבות בעלרוד"
+ },
+ "Correct the lift slope for a finite wing of aspect ratio AR.": {
+  "fr": "Corriger la pente de portance pour une aile finie d’allongement AR.",
+  "es": "Corregir la pendiente de sustentación para un ala finita de alargamiento AR.",
+  "it": "Correggere la pendenza della retta di portanza per un’ala finita di allungamento AR.",
+  "ar": "تصحيح ميل منحنى الرفع لجناح محدود نسبة باعه AR.",
+  "he": "לתקן את שיפוע העילוי לכנף סופית עם יחס ממדים AR."
+ },
+ "Curvature of the mean line.": {
+  "fr": "Courbure de la ligne moyenne.",
+  "es": "Curvatura de la línea media.",
+  "it": "Curvatura della linea media.",
+  "ar": "انحناء الخط المتوسط.",
+  "he": "העקמומיות של קו האמצע."
+ },
  "December 17, 1903, at Kitty Hawk.": {
   "fr": "17 décembre 1903, à Kitty Hawk.",
   "es": "17 de diciembre de 1903, en Kitty Hawk.",
   "it": "17 dicembre 1903, a Kitty Hawk.",
   "ar": "17 ديسمبر 1903، في كيتي هوك.",
   "he": "17 בדצמבר 1903, בקיטי הוק."
+ },
+ "Define specific impulse and thrust-specific fuel consumption.": {
+  "fr": "Définir l’impulsion spécifique et la consommation spécifique de carburant.",
+  "es": "Definir el impulso específico y el consumo específico de combustible.",
+  "it": "Definire l’impulso specifico e il consumo specifico di carburante.",
+  "ar": "تعريف الدفع النوعي واستهلاك الوقود النوعي للدفع.",
+  "he": "להגדיר מתקף סגולי וצריכת דלק סגולית לדחף."
  },
  "Density (p in kPa, ρ in kg/m³)": {
   "fr": "Masse volumique (p en kPa, ρ en kg/m³)",
@@ -258,12 +657,33 @@
   "ar": "تتغير أولويات التصميم بتغير الزمن. فمتطلبات الطائرات الجديدة تشمل الآن استهلاك الوقود والانبعاثات، لذا فإن أدوات دراسة الموازنة نفسها تزن المناخ إلى جانب التكلفة والأداء.",
   "he": "סדרי העדיפויות בתכן משתנים עם הזמן. הדרישות למטוסים חדשים כוללות כיום צריכת דלק ופליטות, ולכן אותם כלים של ניתוח חלופות שוקלים את האקלים לצד עלות וביצועים."
  },
+ "Distance = 1,000 × 20.": {
+  "fr": "Distance = 1000 × 20.",
+  "es": "Distancia = 1000 × 20.",
+  "it": "Distanza = 1000 × 20.",
+  "ar": "المسافة = 1000 × 20.",
+  "he": "מרחק = 1000 × 20."
+ },
+ "Distance over height = L/D.": {
+  "fr": "Distance sur hauteur = L/D.",
+  "es": "Distancia entre altura = L/D.",
+  "it": "Distanza su quota = L/D.",
+  "ar": "المسافة على الارتفاع = L/D.",
+  "he": "מרחק חלקי גובה = L/D."
+ },
  "Distinguish skin-friction, pressure and induced drag.": {
   "fr": "Distinguer traînée de frottement, traînée de pression et traînée induite.",
   "es": "Distinguir la resistencia de fricción, de presión e inducida.",
   "it": "Distinguere resistenza d’attrito, di pressione e indotta.",
   "ar": "التمييز بين سحب الاحتكاك وسحب الضغط والسحب المستحث.",
   "he": "להבחין בין גרר חיכוך, גרר לחץ וגרר מושרה."
+ },
+ "Disturbance dies out over time.": {
+  "fr": "La perturbation s’amortit au fil du temps.",
+  "es": "La perturbación se amortigua con el tiempo.",
+  "it": "La perturbazione si smorza nel tempo.",
+  "ar": "يتلاشى الاضطراب مع الوقت.",
+  "he": "ההפרעה דועכת עם הזמן."
  },
  "Doubling wing area at the same speed and C_L…": {
   "fr": "Doubler la surface alaire à même vitesse et même C_L…",
@@ -314,6 +734,20 @@
   "ar": "السحب مجرد احتكاك بالهواء.",
   "he": "גרר הוא רק חיכוך אוויר."
  },
+ "Drag polar": {
+  "fr": "Polaire de traînée",
+  "es": "Polar de resistencia",
+  "it": "Polare di resistenza",
+  "ar": "قطبية السحب",
+  "he": "פולרת גרר"
+ },
+ "Drag times speed.": {
+  "fr": "La traînée multipliée par la vitesse.",
+  "es": "La resistencia por la velocidad.",
+  "it": "La resistenza per la velocità.",
+  "ar": "السحب مضروبًا في السرعة.",
+  "he": "הגרר כפול המהירות."
+ },
  "Dynamic pressure": {
   "fr": "Pression dynamique",
   "es": "Presión dinámica",
@@ -328,12 +762,47 @@
   "ar": "الضغط الديناميكي q = ½ρV² يحدد مقياس كل قوة ديناميكية هوائية. ويعبّر معاملا الرفع والسحب C_L وC_D عن الشكل وزاوية الهجوم.",
   "he": "הלחץ הדינמי q = ½ρV² קובע את קנה המידה של כל כוח אווירודינמי. מקדמי העילוי והגרר C_L ו-C_D מבטאים את הצורה ואת זווית ההתקפה."
  },
+ "Dynamic stability": {
+  "fr": "Stabilité dynamique",
+  "es": "Estabilidad dinámica",
+  "it": "Stabilità dinamica",
+  "ar": "الاستقرار الديناميكي",
+  "he": "יציבות דינמית"
+ },
+ "Dynamic stability concerns…": {
+  "fr": "La stabilité dynamique concerne…",
+  "es": "La estabilidad dinámica se refiere a…",
+  "it": "La stabilità dinamica riguarda…",
+  "ar": "الاستقرار الديناميكي يتعلق بـ…",
+  "he": "יציבות דינמית עוסקת ב…"
+ },
  "Each unit ends with a short, sourced section showing how its ideas help people and the planet.": {
   "fr": "Chaque unité se termine par une courte section sourcée montrant comment ses idées aident les gens et la planète.",
   "es": "Cada unidad termina con una sección breve y con fuentes que muestra cómo sus ideas ayudan a las personas y al planeta.",
   "it": "Ogni unità termina con una breve sezione con fonti che mostra come le sue idee aiutano le persone e il pianeta.",
   "ar": "تنتهي كل وحدة بقسم قصير موثق بالمصادر يبين كيف تساعد أفكارها الناس والكوكب.",
   "he": "כל יחידה מסתיימת בחלק קצר ומבוסס מקורות שמראה איך הרעיונות שלה עוזרים לאנשים ולכדור הארץ."
+ },
+ "Elevator / ailerons / rudder.": {
+  "fr": "Profondeur / ailerons / direction.",
+  "es": "Profundidad / alerones / dirección.",
+  "it": "Equilibratore / alettoni / timone.",
+  "ar": "الرافع / الجنيحات / الدفة.",
+  "he": "הגה גובה / מאזנות / הגה כיוון."
+ },
+ "Endurance": {
+  "fr": "Endurance",
+  "es": "Autonomía",
+  "it": "Autonomia oraria",
+  "ar": "مدة التحليق",
+  "he": "משך שהייה באוויר"
+ },
+ "Endurance (time aloft) is maximized at a different speed than range.": {
+  "fr": "L’endurance (temps de vol) est maximale à une autre vitesse que la distance franchissable.",
+  "es": "La autonomía (tiempo en el aire) se maximiza a una velocidad distinta de la del alcance.",
+  "it": "L’autonomia oraria (tempo in volo) è massima a una velocità diversa da quella per l’autonomia di distanza.",
+  "ar": "تبلغ مدة التحليق (الزمن في الجو) أقصاها عند سرعة مختلفة عن سرعة أقصى مدى.",
+  "he": "משך השהייה באוויר מגיע למרבי במהירות שונה מזו של הטווח המרבי."
  },
  "Engineers design the aircraft first and then find a mission for it.": {
   "fr": "Les ingénieurs conçoivent d’abord l’avion, puis lui trouvent une mission.",
@@ -356,12 +825,26 @@
   "ar": "كل تصميم يبدأ بمهمة: الحمولة، والمدى أو المدار، والتكلفة، والسلامة. وتحوّل المتطلبات المهمة إلى أرقام يجب أن يحققها التصميم.",
   "he": "כל תכן מתחיל במשימה: מטען, טווח או מסלול, עלות, בטיחות. הדרישות הופכות את המשימה למספרים שהתכן חייב לעמוד בהם."
  },
+ "Every engine makes thrust by accelerating a mass flow: F = ṁ(v_e − v₀) for an air-breathing engine (ignoring fuel mass and pressure terms).": {
+  "fr": "Tout moteur produit de la poussée en accélérant un débit massique : F = ṁ(v_e − v₀) pour un moteur aérobie (en négligeant la masse du carburant et les termes de pression).",
+  "es": "Todo motor genera empuje acelerando un flujo de masa: F = ṁ(v_e − v₀) para un motor aerobio (despreciando la masa de combustible y los términos de presión).",
+  "it": "Ogni motore produce spinta accelerando una portata di massa: F = ṁ(v_e − v₀) per un motore aerobico (trascurando la massa del carburante e i termini di pressione).",
+  "ar": "كل محرك يولد الدفع بتسريع تدفق كتلي: F = ṁ(v_e − v₀) لمحرك يتنفس الهواء (مع إهمال كتلة الوقود وحدود الضغط).",
+  "he": "כל מנוע מייצר דחף על ידי האצת ספיקת מסה: F = ṁ(v_e − v₀) עבור מנוע נושם אוויר (בהזנחת מסת הדלק ואיברי הלחץ)."
+ },
  "Explain lift as the result of turning a flow, with pressure differences described by Bernoulli’s equation.": {
   "fr": "Expliquer la portance comme le résultat de la déviation d’un écoulement, avec des différences de pression décrites par l’équation de Bernoulli.",
   "es": "Explicar la sustentación como resultado de desviar un flujo, con diferencias de presión descritas por la ecuación de Bernoulli.",
   "it": "Spiegare la portanza come risultato della deviazione di un flusso, con differenze di pressione descritte dall’equazione di Bernoulli.",
   "ar": "شرح الرفع بوصفه نتيجة لتغيير اتجاه التدفق، مع فروق ضغط تصفها معادلة برنولي.",
   "he": "להסביר עילוי כתוצאה מהטיית זרימה, כשהפרשי הלחץ מתוארים במשוואת ברנולי."
+ },
+ "Explain static and dynamic stability.": {
+  "fr": "Expliquer la stabilité statique et dynamique.",
+  "es": "Explicar la estabilidad estática y dinámica.",
+  "it": "Spiegare la stabilità statica e dinamica.",
+  "ar": "شرح الاستقرار الساكن والديناميكي.",
+  "he": "להסביר יציבות סטטית ודינמית."
  },
  "Explain trade studies and why weight drives everything.": {
   "fr": "Expliquer les études de compromis et pourquoi la masse conditionne tout.",
@@ -370,12 +853,26 @@
   "ar": "شرح دراسات الموازنة ولماذا يتحكم الوزن في كل شيء.",
   "he": "להסביר ניתוחי חלופות ולמה המשקל משפיע על הכול."
  },
+ "Explain why a tail stabilizes an aircraft.": {
+  "fr": "Expliquer pourquoi un empennage stabilise un avion.",
+  "es": "Explicar por qué la cola estabiliza un avión.",
+  "it": "Spiegare perché la coda stabilizza un aereo.",
+  "ar": "شرح سبب تثبيت الذيل للطائرة.",
+  "he": "להסביר למה זנב מייצב מטוס."
+ },
  "Explain why airliners cruise near 11 km.": {
   "fr": "Expliquer pourquoi les avions de ligne volent en croisière vers 11 km.",
   "es": "Explicar por qué los aviones de pasajeros vuelan en crucero cerca de 11 km.",
   "it": "Spiegare perché gli aerei di linea volano in crociera intorno a 11 km.",
   "ar": "شرح سبب طيران طائرات الركاب في رحلاتها قرب 11 km.",
   "he": "להסביר למה מטוסי נוסעים שטים בגובה של כ-11 km."
+ },
+ "Explore camber, thickness and angle of attack.": {
+  "fr": "Explorez la cambrure, l’épaisseur et l’angle d’attaque.",
+  "es": "Explora la curvatura, el espesor y el ángulo de ataque.",
+  "it": "Esplora curvatura, spessore e angolo d’attacco.",
+  "ar": "استكشف التحدب والسماكة وزاوية الهجوم.",
+  "he": "חקרו קמירות, עובי וזווית התקפה."
  },
  "Extra weight grows the whole design.": {
   "fr": "Une masse supplémentaire fait grossir toute la conception.",
@@ -384,12 +881,33 @@
   "ar": "الوزن الإضافي يكبّر التصميم كله.",
   "he": "משקל נוסף מגדיל את כל התכן."
  },
+ "F/(ṁ g₀), in seconds.": {
+  "fr": "F/(ṁ g₀), en secondes.",
+  "es": "F/(ṁ g₀), en segundos.",
+  "it": "F/(ṁ g₀), in secondi.",
+  "ar": "F/(ṁ g₀)، بالثواني.",
+  "he": "F/(ṁ g₀), בשניות."
+ },
  "FAA Pilot’s Handbook of Aeronautical Knowledge": {
   "fr": "FAA Pilot’s Handbook of Aeronautical Knowledge",
   "es": "FAA Pilot’s Handbook of Aeronautical Knowledge",
   "it": "FAA Pilot’s Handbook of Aeronautical Knowledge",
   "ar": "FAA Pilot’s Handbook of Aeronautical Knowledge",
   "he": "FAA Pilot’s Handbook of Aeronautical Knowledge"
+ },
+ "Fan plus core; most air bypasses.": {
+  "fr": "Soufflante plus cœur ; la majeure partie de l’air contourne le cœur.",
+  "es": "Ventilador más núcleo; la mayor parte del aire lo rodea.",
+  "it": "Fan più nucleo; gran parte dell’aria lo aggira.",
+  "ar": "مروحة مع قلب؛ معظم الهواء يتجاوز القلب.",
+  "he": "מניפה ועוד ליבה; רוב האוויר עוקף."
+ },
+ "Faster exhaust always means a better engine.": {
+  "fr": "Une éjection plus rapide signifie toujours un meilleur moteur.",
+  "es": "Una salida más rápida siempre significa un motor mejor.",
+  "it": "Uno scarico più veloce significa sempre un motore migliore.",
+  "ar": "العادم الأسرع يعني دائمًا محركًا أفضل.",
+  "he": "פליטה מהירה יותר תמיד פירושה מנוע טוב יותר."
  },
  "Find T, p and ρ at 5,000 m with NASA’s model.": {
   "fr": "Trouvez T, p et ρ à 5000 m avec le modèle de la NASA.",
@@ -412,6 +930,13 @@
   "ar": "أوجد كثافة الهواء عند 11000 m بنموذج ناسا (T = −56.46 °C، p = 22.72 kPa).",
   "he": "מצאו את צפיפות האוויר בגובה 11000 m לפי מודל NASA (T = −56.46 °C, p = 22.72 kPa)."
  },
+ "Find the aspect ratio of a wing with span 11 m and area 16.2 m².": {
+  "fr": "Trouvez l’allongement d’une aile d’envergure 11 m et de surface 16.2 m².",
+  "es": "Halla el alargamiento de un ala de 11 m de envergadura y 16.2 m² de superficie.",
+  "it": "Trova l’allungamento di un’ala con apertura 11 m e superficie 16.2 m².",
+  "ar": "أوجد نسبة باع جناح باعه 11 m ومساحته 16.2 m².",
+  "he": "מצאו את יחס הממדים של כנף עם מוטה של 11 m ושטח של 16.2 m²."
+ },
  "Find the drag of the Example 3.1 airplane if C_D = 0.032.": {
   "fr": "Trouvez la traînée de l’avion de l’exemple 3.1 si C_D = 0.032.",
   "es": "Halla la resistencia del avión del ejemplo 3.1 si C_D = 0.032.",
@@ -425,6 +950,13 @@
   "it": "Trova la pressione dinamica a 230 m/s a 11 km (ρ = 0.366 kg/m³).",
   "ar": "أوجد الضغط الديناميكي عند 230 m/s على ارتفاع 11 km (ρ = 0.366 kg/m³).",
   "he": "מצאו את הלחץ הדינמי ב-230 m/s בגובה 11 km (ρ = 0.366 kg/m³)."
+ },
+ "Find the lift slope of a wing with AR = 8 and e = 0.9.": {
+  "fr": "Trouvez la pente de portance d’une aile avec AR = 8 et e = 0.9.",
+  "es": "Halla la pendiente de sustentación de un ala con AR = 8 y e = 0.9.",
+  "it": "Trova la pendenza di portanza di un’ala con AR = 8 ed e = 0.9.",
+  "ar": "أوجد ميل الرفع لجناح فيه AR = 8 وe = 0.9.",
+  "he": "מצאו את שיפוע העילוי של כנף עם AR = 8 ו-e = 0.9."
  },
  "Find the sea-level density from p = 101.40 kPa and T = 15.04 °C.": {
   "fr": "Trouvez la masse volumique au niveau de la mer à partir de p = 101.40 kPa et T = 15.04 °C.",
@@ -447,6 +979,34 @@
   "ar": "أوجد درجة الحرارة عند 1500 m في نموذج ناسا.",
   "he": "מצאו את הטמפרטורה בגובה 1500 m במודל של NASA."
  },
+ "Find the thrust for ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.": {
+  "fr": "Trouvez la poussée pour ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+  "es": "Halla el empuje para ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+  "it": "Trova la spinta per ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+  "ar": "أوجد الدفع عندما ṁ = 200 kg/s، v₀ = 200 m/s، v_e = 300 m/s.",
+  "he": "מצאו את הדחף עבור ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s."
+ },
+ "Find thrust and power required in level flight.": {
+  "fr": "Trouver la poussée et la puissance nécessaires en vol en palier.",
+  "es": "Hallar el empuje y la potencia necesarios en vuelo nivelado.",
+  "it": "Trovare spinta e potenza necessarie in volo livellato.",
+  "ar": "إيجاد الدفع والقدرة المطلوبين في الطيران الأفقي.",
+  "he": "למצוא את הדחף וההספק הנדרשים בטיסה אופקית."
+ },
+ "Find η_p when v_e = v₀.": {
+  "fr": "Trouvez η_p quand v_e = v₀.",
+  "es": "Halla η_p cuando v_e = v₀.",
+  "it": "Trova η_p quando v_e = v₀.",
+  "ar": "أوجد η_p عندما v_e = v₀.",
+  "he": "מצאו את η_p כאשר v_e = v₀."
+ },
+ "Finite-wing lift slope": {
+  "fr": "Pente de portance d’une aile finie",
+  "es": "Pendiente de sustentación del ala finita",
+  "it": "Pendenza di portanza dell’ala finita",
+  "ar": "ميل الرفع للجناح المحدود",
+  "he": "שיפוע העילוי של כנף סופית"
+ },
  "First powered, controlled airplane flights, Dec. 17, 1903.": {
   "fr": "Premiers vols motorisés et contrôlés d’un avion, 17 déc. 1903.",
   "es": "Primeros vuelos propulsados y controlados de un avión, 17 dic. 1903.",
@@ -454,12 +1014,61 @@
   "ar": "أولى رحلات طائرة بمحرك وتحكم، 17 ديسمبر 1903.",
   "he": "הטיסות הממונעות והנשלטות הראשונות של מטוס, 17 בדצמבר 1903."
  },
+ "Flow separation; lift drops.": {
+  "fr": "Décollement de l’écoulement ; la portance chute.",
+  "es": "Desprendimiento del flujo; la sustentación cae.",
+  "it": "Separazione del flusso; la portanza cala.",
+  "ar": "انفصال التدفق؛ ينخفض الرفع.",
+  "he": "ניתוק זרימה; העילוי צונח."
+ },
+ "Flying faster always gives more range.": {
+  "fr": "Voler plus vite donne toujours plus de distance.",
+  "es": "Volar más rápido siempre da más alcance.",
+  "it": "Volare più veloci dà sempre più autonomia.",
+  "ar": "الطيران الأسرع يعطي دائمًا مدى أكبر.",
+  "he": "טיסה מהירה יותר תמיד נותנת טווח גדול יותר."
+ },
+ "For a jet, range follows the Breguet equation: R = (V/c)(L/D) ln(W_i/W_f). Three levers: engine efficiency (V/c), aerodynamics (L/D) and structures (weight fraction).": {
+  "fr": "Pour un avion à réaction, la distance franchissable suit l’équation de Breguet : R = (V/c)(L/D) ln(W_i/W_f). Trois leviers : le rendement des moteurs (V/c), l’aérodynamique (L/D) et les structures (fraction de masse).",
+  "es": "Para un reactor, el alcance sigue la ecuación de Breguet: R = (V/c)(L/D) ln(W_i/W_f). Tres palancas: la eficiencia del motor (V/c), la aerodinámica (L/D) y las estructuras (fracción de peso).",
+  "it": "Per un jet l’autonomia segue l’equazione di Breguet: R = (V/c)(L/D) ln(W_i/W_f). Tre leve: efficienza del motore (V/c), aerodinamica (L/D) e strutture (frazione di peso).",
+  "ar": "في الطائرة النفاثة، يتبع المدى معادلة بريغيه: R = (V/c)(L/D) ln(W_i/W_f). ثلاث روافع: كفاءة المحرك (V/c)، والديناميكا الهوائية (L/D)، والهياكل (نسبة الوزن).",
+  "he": "במטוס סילון, הטווח נקבע לפי משוואת בריגה: R = (V/c)(L/D) ln(W_i/W_f). שלושה מנופים: יעילות המנוע (V/c), אווירודינמיקה (L/D) ומבנים (שבר המשקל)."
+ },
  "For an ideal gas it depends only on temperature.": {
   "fr": "Pour un gaz parfait, elle ne dépend que de la température.",
   "es": "En un gas ideal solo depende de la temperatura.",
   "it": "Per un gas perfetto dipende solo dalla temperatura.",
   "ar": "في الغاز المثالي تعتمد على درجة الحرارة فقط.",
   "he": "בגז אידיאלי היא תלויה רק בטמפרטורה."
+ },
+ "For efficiency, exhaust speed should be close to flight speed.": {
+  "fr": "Pour le rendement, la vitesse d’éjection doit être proche de la vitesse de vol.",
+  "es": "Para la eficiencia, la velocidad de salida debe estar cerca de la velocidad de vuelo.",
+  "it": "Per l’efficienza, la velocità di scarico dovrebbe essere vicina alla velocità di volo.",
+  "ar": "للكفاءة، يجب أن تكون سرعة العادم قريبة من سرعة الطيران.",
+  "he": "לשם נצילות, מהירות הפליטה צריכה להיות קרובה למהירות הטיסה."
+ },
+ "For pitch stability the CG must be…": {
+  "fr": "Pour la stabilité en tangage, le CG doit être…",
+  "es": "Para la estabilidad en cabeceo, el CG debe estar…",
+  "it": "Per la stabilità in beccheggio il CG deve essere…",
+  "ar": "للاستقرار في الانحدار يجب أن يكون CG…",
+  "he": "ליציבות בעלרוד ה-CG חייב להיות…"
+ },
+ "For the Example 4.3 airplane, find C_D at C_L = 0.36.": {
+  "fr": "Pour l’avion de l’exemple 4.3, trouvez C_D à C_L = 0.36.",
+  "es": "Para el avión del ejemplo 4.3, halla C_D con C_L = 0.36.",
+  "it": "Per l’aereo dell’esempio 4.3, trova C_D con C_L = 0.36.",
+  "ar": "لطائرة المثال 4.3، أوجد C_D عند C_L = 0.36.",
+  "he": "עבור המטוס מדוגמה 4.3, מצאו את C_D ב-C_L = 0.36."
+ },
+ "For the Example 6.2 glider (mean chord 8 cm), the neutral point is at 13 cm. Is it stable?": {
+  "fr": "Pour le planeur de l’exemple 6.2 (corde moyenne 8 cm), le point neutre est à 13 cm. Est-il stable ?",
+  "es": "Para el planeador del ejemplo 6.2 (cuerda media 8 cm), el punto neutro está a 13 cm. ¿Es estable?",
+  "it": "Per l’aliante dell’esempio 6.2 (corda media 8 cm) il punto neutro è a 13 cm. È stabile?",
+  "ar": "في الطائرة الشراعية في المثال 6.2 (الوتر المتوسط 8 cm)، النقطة المحايدة عند 13 cm. هل هي مستقرة؟",
+  "he": "עבור הדאון מדוגמה 6.2 (מיתר ממוצע 8 cm), הנקודה הניטרלית נמצאת ב-13 cm. האם הוא יציב?"
  },
  "For the glider lab: card stock or foam board, a ruler, scissors, modeling clay or coins for nose weight, and a tape measure.": {
   "fr": "Pour le TP planeur : du carton fin ou du carton mousse, une règle, des ciseaux, de la pâte à modeler ou des pièces pour lester le nez, et un mètre ruban.",
@@ -503,6 +1112,48 @@
   "ar": "من الأخوين رايت إلى أرتميس: كيف يحوّل مهندسو الطيران والفضاء مهمة إلى متطلبات وموازنات وتصميم يطير.",
   "he": "מהאחים רייט ועד ארטמיס: איך מהנדסי אווירונאוטיקה וחלל הופכים משימה לדרישות, לפשרות ולתכן שעף."
  },
+ "Fuel flow per unit thrust.": {
+  "fr": "Débit de carburant par unité de poussée.",
+  "es": "Flujo de combustible por unidad de empuje.",
+  "it": "Flusso di carburante per unità di spinta.",
+  "ar": "تدفق الوقود لكل وحدة دفع.",
+  "he": "ספיקת דלק ליחידת דחף."
+ },
+ "Glide angle": {
+  "fr": "Angle de plané",
+  "es": "Ángulo de planeo",
+  "it": "Angolo di planata",
+  "ar": "زاوية الانزلاق",
+  "he": "זווית דאייה"
+ },
+ "Glide ratio": {
+  "fr": "Finesse de plané",
+  "es": "Relación de planeo",
+  "it": "Rapporto di planata",
+  "ar": "نسبة الانزلاق",
+  "he": "יחס דאייה"
+ },
+ "Glide ratio depends on L/D, not weight; weight changes the best speed.": {
+  "fr": "La finesse dépend de L/D, pas de la masse ; la masse change la vitesse optimale.",
+  "es": "La relación de planeo depende de L/D, no del peso; el peso cambia la velocidad óptima.",
+  "it": "Il rapporto di planata dipende da L/D, non dal peso; il peso cambia la velocità ottimale.",
+  "ar": "نسبة الانزلاق تعتمد على L/D وليس على الوزن؛ والوزن يغير السرعة المثلى.",
+  "he": "יחס הדאייה תלוי ב-L/D, לא במשקל; המשקל משנה את המהירות האופטימלית."
+ },
+ "Glide ratio equals…": {
+  "fr": "La finesse de plané est égale…",
+  "es": "La relación de planeo es igual a…",
+  "it": "Il rapporto di planata è uguale a…",
+  "ar": "نسبة الانزلاق تساوي…",
+  "he": "יחס הדאייה שווה ל…"
+ },
+ "Gliding flight.": {
+  "fr": "Vol plané.",
+  "es": "Vuelo de planeo.",
+  "it": "Volo planato.",
+  "ar": "الطيران الانزلاقي.",
+  "he": "טיסת דאייה."
+ },
  "Gliding, power required, climb": {
   "fr": "Vol plané, puissance nécessaire, montée",
   "es": "Planeo, potencia necesaria, ascenso",
@@ -517,12 +1168,26 @@
   "ar": "من الأرض إلى ~11 km؛ تنخفض درجة الحرارة مع الارتفاع.",
   "he": "מהקרקע עד ~11 km; הטמפרטורה יורדת עם הגובה."
  },
+ "High aspect ratio (sailplanes, albatrosses, modern airliner wings) means less induced drag and higher L/D.": {
+  "fr": "Un grand allongement (planeurs, albatros, ailes des avions de ligne modernes) signifie moins de traînée induite et une finesse L/D plus élevée.",
+  "es": "Un alargamiento alto (planeadores, albatros, alas de aviones de pasajeros modernos) implica menos resistencia inducida y mayor L/D.",
+  "it": "Un grande allungamento (alianti, albatri, ali dei moderni aerei di linea) significa meno resistenza indotta e un L/D più alto.",
+  "ar": "نسبة الباع العالية (الطائرات الشراعية، والقطرس، وأجنحة طائرات الركاب الحديثة) تعني سحبًا مستحثًا أقل وL/D أعلى.",
+  "he": "יחס ממדים גבוה (דאונים, אלבטרוסים, כנפי מטוסי נוסעים מודרניים) פירושו פחות גרר מושרה ו-L/D גבוה יותר."
+ },
  "High-school algebra and trigonometry; logarithms and exponentials.": {
   "fr": "Algèbre et trigonométrie du lycée ; logarithmes et exponentielles.",
   "es": "Álgebra y trigonometría de secundaria; logaritmos y exponenciales.",
   "it": "Algebra e trigonometria delle superiori; logaritmi ed esponenziali.",
   "ar": "الجبر وحساب المثلثات في المرحلة الثانوية؛ اللوغاريتمات والدوال الأسية.",
   "he": "אלגברה וטריגונומטריה של תיכון; לוגריתמים ופונקציות מעריכיות."
+ },
+ "Higher propulsive efficiency is a direct fuel and CO₂ saving. Every kilogram of jet fuel burned produces about 3.16 kg of CO₂ (the fuel’s carbon combined with oxygen from the air; see Unit 10), so efficiency gains add up over an engine’s decades of service.": {
+  "fr": "Un meilleur rendement propulsif, c’est directement du carburant et du CO₂ économisés. Chaque kilogramme de kérosène brûlé produit environ 3.16 kg de CO₂ (le carbone du carburant combiné à l’oxygène de l’air ; voir l’unité 10), donc les gains de rendement s’additionnent sur les décennies de service d’un moteur.",
+  "es": "Un mayor rendimiento propulsivo es un ahorro directo de combustible y de CO₂. Cada kilogramo de combustible de aviación quemado produce unos 3.16 kg de CO₂ (el carbono del combustible combinado con oxígeno del aire; ver la unidad 10), así que las mejoras de eficiencia se acumulan durante las décadas de servicio de un motor.",
+  "it": "Un rendimento propulsivo più alto è un risparmio diretto di carburante e di CO₂. Ogni chilogrammo di carburante per jet bruciato produce circa 3.16 kg di CO₂ (il carbonio del carburante combinato con l’ossigeno dell’aria; vedi l’unità 10), quindi i guadagni di efficienza si sommano nei decenni di servizio di un motore.",
+  "ar": "كفاءة الدفع الأعلى توفير مباشر للوقود وCO₂. كل كيلوغرام من وقود الطائرات يُحرق ينتج نحو 3.16 kg من CO₂ (كربون الوقود متحدًا مع أكسجين الهواء؛ انظر الوحدة 10)، لذا تتراكم مكاسب الكفاءة على مدى عقود خدمة المحرك.",
+  "he": "נצילות הנעה גבוהה יותר היא חיסכון ישיר בדלק וב-CO₂. כל קילוגרם של דלק סילוני שנשרף מייצר כ-3.16 kg של CO₂ (הפחמן שבדלק מתחבר עם חמצן מהאוויר; ראו יחידה 10), ולכן שיפורי נצילות מצטברים לאורך עשרות שנות השירות של מנוע."
  },
  "History of Flight & the Design Process": {
   "fr": "Histoire du vol et processus de conception",
@@ -545,12 +1210,33 @@
   "ar": "مناورات هوهمان للانتقال وتصميم البعثات",
   "he": "מעברי הוהמן ותכנון משימות"
  },
+ "Horizontal distance per unit height = L/D.": {
+  "fr": "Distance horizontale par unité de hauteur = L/D.",
+  "es": "Distancia horizontal por unidad de altura = L/D.",
+  "it": "Distanza orizzontale per unità di quota = L/D.",
+  "ar": "المسافة الأفقية لكل وحدة ارتفاع = L/D.",
+  "he": "מרחק אופקי ליחידת גובה = L/D."
+ },
  "How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight. Free, self-paced, with four hands-on labs.": {
   "fr": "Comment les avions et les engins spatiaux sont conçus, construits et pilotés : l’atmosphère, la portance et la traînée, les performances, la stabilité, la propulsion, les fusées et les orbites, et le chemin vers un vol plus propre. Gratuit, à votre rythme, avec quatre travaux pratiques.",
   "es": "Cómo se diseñan, construyen y vuelan aviones y naves espaciales: la atmósfera, la sustentación y la resistencia, el rendimiento, la estabilidad, la propulsión, los cohetes y las órbitas, y el camino hacia un vuelo más limpio. Gratis, a tu ritmo, con cuatro prácticas.",
   "it": "Come si progettano, costruiscono e fanno volare aerei e veicoli spaziali: l’atmosfera, portanza e resistenza, prestazioni, stabilità, propulsione, razzi e orbite, e la strada verso un volo più pulito. Gratuito, al tuo ritmo, con quattro laboratori pratici.",
   "ar": "كيف تُصمَّم الطائرات والمركبات الفضائية وتُبنى وتُطيَّر: الغلاف الجوي، والرفع والسحب، والأداء، والاستقرار، والدفع، والصواريخ والمدارات، والطريق نحو طيران أنظف. مجاني، بالسرعة التي تناسبك، مع أربعة مختبرات عملية.",
   "he": "איך מתכננים, בונים ומטיסים כלי טיס וחלליות: האטמוספרה, עילוי וגרר, ביצועים, יציבות, הנעה, רקטות ומסלולים, והדרך לתעופה נקייה יותר. חינם, בקצב שלך, עם ארבע מעבדות מעשיות."
+ },
+ "How far can the Example 4.3 airplane glide from 1,500 m at its best L/D of 13.7?": {
+  "fr": "Jusqu’où l’avion de l’exemple 4.3 peut-il planer depuis 1500 m à sa meilleure finesse de 13.7 ?",
+  "es": "¿Hasta dónde puede planear el avión del ejemplo 4.3 desde 1500 m con su mejor L/D de 13.7?",
+  "it": "Quanto lontano può planare l’aereo dell’esempio 4.3 da 1500 m con la sua efficienza massima di 13.7?",
+  "ar": "إلى أي مسافة يمكن لطائرة المثال 4.3 الانزلاق من 1500 m عند أفضل L/D لها وهي 13.7؟",
+  "he": "כמה רחוק יכול המטוס מדוגמה 4.3 לדאות מגובה 1500 m ב-L/D הטוב ביותר שלו, 13.7?"
+ },
+ "How far, how long, how fast and how steep: gliding, climbing, range and endurance.": {
+  "fr": "Jusqu’où, combien de temps, à quelle vitesse et avec quelle pente : vol plané, montée, distance franchissable et endurance.",
+  "es": "Cuán lejos, cuánto tiempo, qué tan rápido y con qué pendiente: planeo, ascenso, alcance y autonomía.",
+  "it": "Quanto lontano, quanto a lungo, quanto veloce e quanto ripido: planata, salita, autonomia di distanza e di tempo.",
+  "ar": "إلى أي مدى، وإلى متى، وبأي سرعة، وبأي انحدار: الانزلاق، والصعود، والمدى، ومدة التحليق.",
+  "he": "כמה רחוק, כמה זמן, כמה מהר וכמה תלול: דאייה, טיפוס, טווח ומשך שהייה באוויר."
  },
  "How much faster is the stall speed at 1,500 m (ρ = 1.060 kg/m³) than at sea level?": {
   "fr": "De combien la vitesse de décrochage est-elle plus élevée à 1500 m (ρ = 1.060 kg/m³) qu’au niveau de la mer ?",
@@ -559,12 +1245,47 @@
   "ar": "بكم تزيد سرعة الانهيار عند 1500 m (ρ = 1.060 kg/m³) عنها عند مستوى سطح البحر؟",
   "he": "בכמה גבוהה יותר מהירות ההזדקרות בגובה 1500 m (ρ = 1.060 kg/m³) מאשר בגובה פני הים?"
  },
+ "How propellers, jets and rockets make thrust by throwing mass backward, and why bigger, slower jets are more efficient.": {
+  "fr": "Comment les hélices, les réacteurs et les fusées produisent de la poussée en projetant de la masse vers l’arrière, et pourquoi des réacteurs plus gros et plus lents sont plus efficaces.",
+  "es": "Cómo las hélices, los reactores y los cohetes generan empuje lanzando masa hacia atrás, y por qué los reactores más grandes y lentos son más eficientes.",
+  "it": "Come eliche, jet e razzi producono spinta lanciando massa all’indietro, e perché jet più grandi e lenti sono più efficienti.",
+  "ar": "كيف تولد المراوح والنفاثات والصواريخ الدفع بقذف الكتلة إلى الخلف، ولماذا تكون النفاثات الأكبر والأبطأ أكثر كفاءة.",
+  "he": "איך מדחפים, מנועי סילון ורקטות מייצרים דחף על ידי השלכת מסה לאחור, ולמה מנועי סילון גדולים ואיטיים יותר יעילים יותר."
+ },
+ "I_sp is measured in…": {
+  "fr": "I_sp se mesure en…",
+  "es": "El I_sp se mide en…",
+  "it": "L’I_sp si misura in…",
+  "ar": "يُقاس I_sp بـ…",
+  "he": "I_sp נמדד ב…"
+ },
+ "If AR rises from 7.5 to 15 (same e and C_D0), how does (L/D)max change?": {
+  "fr": "Si AR passe de 7.5 à 15 (mêmes e et C_D0), comment (L/D)max évolue-t-elle ?",
+  "es": "Si AR sube de 7.5 a 15 (mismos e y C_D0), ¿cómo cambia (L/D)max?",
+  "it": "Se AR passa da 7.5 a 15 (stessi e e C_D0), come cambia (L/D)max?",
+  "ar": "إذا ارتفعت AR من 7.5 إلى 15 (مع e وC_D0 نفسيهما)، كيف تتغير (L/D)max؟",
+  "he": "אם AR עולה מ-7.5 ל-15 (אותם e ו-C_D0), איך משתנה (L/D)max?"
+ },
  "If speed doubles at the same C_L, how does lift change?": {
   "fr": "Si la vitesse double au même C_L, comment la portance change-t-elle ?",
   "es": "Si la velocidad se duplica con el mismo C_L, ¿cómo cambia la sustentación?",
   "it": "Se la velocità raddoppia con lo stesso C_L, come cambia la portanza?",
   "ar": "إذا تضاعفت السرعة مع C_L نفسه، كيف يتغير الرفع؟",
   "he": "אם המהירות מוכפלת באותו C_L, איך משתנה העילוי?"
+ },
+ "In Example 5.2, how does range change if L/D rises from 17 to 20?": {
+  "fr": "Dans l’exemple 5.2, comment la distance franchissable change-t-elle si L/D passe de 17 à 20 ?",
+  "es": "En el ejemplo 5.2, ¿cómo cambia el alcance si L/D sube de 17 a 20?",
+  "it": "Nell’esempio 5.2, come cambia l’autonomia se L/D sale da 17 a 20?",
+  "ar": "في المثال 5.2، كيف يتغير المدى إذا ارتفعت L/D من 17 إلى 20؟",
+  "he": "בדוגמה 5.2, איך משתנה הטווח אם L/D עולה מ-17 ל-20?"
+ },
+ "In Example 6.2, how much nose weight m puts the CG at 12 cm?": {
+  "fr": "Dans l’exemple 6.2, quelle masse de lest m dans le nez place le CG à 12 cm ?",
+  "es": "En el ejemplo 6.2, ¿qué lastre m en la nariz coloca el CG a 12 cm?",
+  "it": "Nell’esempio 6.2, quale zavorra m nel muso porta il CG a 12 cm?",
+  "ar": "في المثال 6.2، ما ثقل المقدمة m الذي يضع CG عند 12 cm؟",
+  "he": "בדוגמה 6.2, איזו משקולת אף m מציבה את ה-CG ב-12 cm?"
  },
  "In level cruise an aircraft’s engines give 30 kN of thrust. What is its drag?": {
   "fr": "En croisière en palier, les moteurs d’un avion fournissent 30 kN de poussée. Quelle est sa traînée ?",
@@ -608,6 +1329,13 @@
   "ar": "ينتج السحب المستحث عن…",
   "he": "גרר מושרה נגרם על ידי…"
  },
+ "Initial tendency to return.": {
+  "fr": "Tendance initiale à revenir.",
+  "es": "Tendencia inicial a volver.",
+  "it": "Tendenza iniziale a tornare.",
+  "ar": "الميل الابتدائي للعودة.",
+  "he": "נטייה התחלתית לחזור."
+ },
  "Introduction to Aerospace Engineering": {
   "fr": "Introduction à l’ingénierie aérospatiale",
   "es": "Introducción a la ingeniería aeroespacial",
@@ -621,6 +1349,13 @@
   "it": "Riduce la resistenza ma anche la portanza e la spinta dei motori, quindi le ali devono volare più veloci o con coefficienti di portanza più alti.",
   "ar": "إنه يقلل السحب لكنه يقلل أيضًا الرفع ودفع المحرك، لذا يجب أن تطير الأجنحة أسرع أو بمعاملات رفع أعلى.",
   "he": "הוא מקטין את הגרר אבל גם את העילוי ואת דחף המנוע, ולכן הכנפיים חייבות לטוס מהר יותר או במקדמי עילוי גבוהים יותר."
+ },
+ "It depends on engine efficiency, L/D and the weight fraction (Breguet).": {
+  "fr": "Elle dépend du rendement des moteurs, de L/D et de la fraction de masse (Breguet).",
+  "es": "Depende de la eficiencia del motor, de L/D y de la fracción de peso (Breguet).",
+  "it": "Dipende da efficienza del motore, L/D e frazione di peso (Breguet).",
+  "ar": "يعتمد على كفاءة المحرك وL/D ونسبة الوزن (بريغيه).",
+  "he": "הוא תלוי ביעילות המנוע, ב-L/D ובשבר המשקל (בריגה)."
  },
  "It does not; the upper flow actually arrives first. NASA Glenn lists equal transit as an incorrect theory of lift.": {
   "fr": "C’est faux ; l’écoulement supérieur arrive en fait le premier. NASA Glenn classe le transit égal parmi les théories incorrectes de la portance.",
@@ -636,12 +1371,26 @@
   "ar": "يزداد البرد طوال الطريق إلى الأعلى.",
   "he": "נעשה קר יותר כל הדרך למעלה."
  },
+ "It is measured in seconds; I_sp × g₀ is an effective exhaust speed.": {
+  "fr": "Elle se mesure en secondes ; I_sp × g₀ est une vitesse d’éjection effective.",
+  "es": "Se mide en segundos; I_sp × g₀ es una velocidad de salida efectiva.",
+  "it": "Si misura in secondi; I_sp × g₀ è una velocità di scarico efficace.",
+  "ar": "يُقاس بالثواني؛ وI_sp × g₀ سرعة عادم فعلية.",
+  "he": "הוא נמדד בשניות; I_sp × g₀ היא מהירות פליטה אפקטיבית."
+ },
  "It ranks options systematically.": {
   "fr": "Elle classe les options de façon systématique.",
   "es": "Clasifica las opciones de forma sistemática.",
   "it": "Classifica le opzioni in modo sistematico.",
   "ar": "ترتب الخيارات بطريقة منهجية.",
   "he": "הוא מדרג אפשרויות באופן שיטתי."
+ },
+ "Its CG is too far aft, near or behind the neutral point.": {
+  "fr": "Son CG est trop en arrière, près du point neutre ou derrière lui.",
+  "es": "Su CG está demasiado atrás, cerca o detrás del punto neutro.",
+  "it": "Il suo CG è troppo arretrato, vicino o dietro al punto neutro.",
+  "ar": "مركز ثقلها متأخر جدًا، قرب النقطة المحايدة أو خلفها.",
+  "he": "ה-CG שלו אחורי מדי, ליד הנקודה הניטרלית או מאחוריה."
  },
  "Its scope follows first-year aerospace engineering introductions such as MIT 16.00 and the opening of MIT’s Unified Engineering, the introductory aeronautics and astronautics courses at Purdue, Georgia Tech and Embry-Riddle, and the classic textbook Introduction to Flight by John D. Anderson Jr. We link to free materials throughout, especially NASA Glenn’s Beginner’s Guide to Aeronautics. None of these organizations endorse this page.": {
   "fr": "Son contenu suit les cours d’introduction de première année en ingénierie aérospatiale comme MIT 16.00 et le début de l’Unified Engineering du MIT, les cours d’introduction à l’aéronautique et à l’astronautique de Purdue, Georgia Tech et Embry-Riddle, et le manuel classique Introduction to Flight de John D. Anderson Jr. Nous renvoyons partout à des ressources gratuites, en particulier le Beginner’s Guide to Aeronautics de NASA Glenn. Aucune de ces organisations ne cautionne cette page.",
@@ -657,6 +1406,20 @@
   "ar": "JPL Basics of Space Flight",
   "he": "JPL Basics of Space Flight"
  },
+ "Jets push against the air behind them.": {
+  "fr": "Les réacteurs poussent sur l’air derrière eux.",
+  "es": "Los reactores empujan contra el aire que tienen detrás.",
+  "it": "I jet spingono contro l’aria dietro di loro.",
+  "ar": "النفاثات تدفع الهواء الذي خلفها.",
+  "he": "מנועי סילון דוחפים את האוויר שמאחוריהם."
+ },
+ "K halves, so (L/D)max grows by √2 to ≈ 19.4.": {
+  "fr": "K est divisé par deux, donc (L/D)max est multipliée par √2, soit ≈ 19.4.",
+  "es": "K se reduce a la mitad, así que (L/D)max crece en √2 hasta ≈ 19.4.",
+  "it": "K si dimezza, quindi (L/D)max cresce di √2 fino a ≈ 19.4.",
+  "ar": "تنخفض K إلى النصف، فتزداد (L/D)max بمعامل √2 لتصل إلى ≈ 19.4.",
+  "he": "K נחצה, ולכן (L/D)max גדל פי √2 עד ≈ 19.4."
+ },
  "Keep units in SI throughout and write them on every line.": {
   "fr": "Gardez les unités en SI partout et écrivez-les à chaque ligne.",
   "es": "Usa unidades SI en todo momento y escríbelas en cada línea.",
@@ -670,6 +1433,13 @@
   "it": "Gradiente termico verticale",
   "ar": "معدل الانخفاض الحراري",
   "he": "קצב הירידה בטמפרטורה"
+ },
+ "Leading edge to trailing edge.": {
+  "fr": "Du bord d’attaque au bord de fuite.",
+  "es": "Del borde de ataque al borde de salida.",
+  "it": "Dal bordo d’attacco al bordo d’uscita.",
+  "ar": "من الحافة الأمامية إلى الحافة الخلفية.",
+  "he": "משפת ההתקפה ועד שפת הזרימה."
  },
  "Level flight: L = W = mg.": {
   "fr": "Vol en palier : L = W = mg.",
@@ -734,6 +1504,20 @@
   "ar": "الرفع، والوزن، والدفع، والسحب.",
   "he": "עילוי, משקל, דחף, גרר."
  },
+ "Locate the center of gravity and the neutral point; compute static margin.": {
+  "fr": "Situer le centre de gravité et le point neutre ; calculer la marge statique.",
+  "es": "Ubicar el centro de gravedad y el punto neutro; calcular el margen estático.",
+  "it": "Individuare il baricentro e il punto neutro; calcolare il margine statico.",
+  "ar": "تحديد موضع مركز الثقل والنقطة المحايدة؛ وحساب الهامش الساكن.",
+  "he": "לאתר את מרכז הכובד ואת הנקודה הניטרלית; לחשב שוליים סטטיים."
+ },
+ "Long, slender wings are one of the most direct ways to cut fuel burn, because induced drag falls as aspect ratio rises. That is exactly the “efficient aircraft technology” path in NASA’s sustainable-aviation work.": {
+  "fr": "Les ailes longues et fines sont l’un des moyens les plus directs de réduire la consommation, car la traînée induite baisse quand l’allongement augmente. C’est précisément la voie de la « technologie aéronautique efficace » dans les travaux de la NASA sur l’aviation durable.",
+  "es": "Las alas largas y esbeltas son una de las formas más directas de reducir el consumo de combustible, porque la resistencia inducida baja al aumentar el alargamiento. Esa es justamente la vía de la «tecnología aeronáutica eficiente» en el trabajo de la NASA sobre aviación sostenible.",
+  "it": "Le ali lunghe e sottili sono uno dei modi più diretti per ridurre il consumo di carburante, perché la resistenza indotta cala all’aumentare dell’allungamento. È proprio la via della «tecnologia aeronautica efficiente» nel lavoro della NASA sull’aviazione sostenibile.",
+  "ar": "الأجنحة الطويلة النحيفة من أكثر الطرق مباشرة لخفض استهلاك الوقود، لأن السحب المستحث ينخفض مع ازدياد نسبة الباع. وهذا هو بالضبط مسار «تقنيات الطائرات عالية الكفاءة» في عمل ناسا على الطيران المستدام.",
+  "he": "כנפיים ארוכות ודקות הן אחת הדרכים הישירות ביותר לחסוך בדלק, כי הגרר המושרה יורד ככל שיחס הממדים עולה. זה בדיוק נתיב \"טכנולוגיית המטוסים היעילה\" בעבודה של NASA על תעופה בת-קיימא."
+ },
  "MIT 16.00; Smithsonian": {
   "fr": "MIT 16.00 ; Smithsonian",
   "es": "MIT 16.00; Smithsonian",
@@ -748,12 +1532,26 @@
   "ar": "MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design",
   "he": "MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design"
  },
+ "MIT OpenCourseWare 16.01–16.04: Unified Engineering": {
+  "fr": "MIT OpenCourseWare 16.01–16.04: Unified Engineering",
+  "es": "MIT OpenCourseWare 16.01–16.04: Unified Engineering",
+  "it": "MIT OpenCourseWare 16.01–16.04: Unified Engineering",
+  "ar": "MIT OpenCourseWare 16.01–16.04: Unified Engineering",
+  "he": "MIT OpenCourseWare 16.01–16.04: Unified Engineering"
+ },
  "MIT’s design-centered introductory course.": {
   "fr": "Le cours d’introduction du MIT centré sur la conception.",
   "es": "El curso introductorio del MIT centrado en el diseño.",
   "it": "Il corso introduttivo del MIT incentrato sulla progettazione.",
   "ar": "المقرر التمهيدي في MIT المتمحور حول التصميم.",
   "he": "קורס המבוא של MIT שממוקד בתכן."
+ },
+ "MIT’s fluids lectures.": {
+  "fr": "Les cours de mécanique des fluides du MIT.",
+  "es": "Las clases de fluidos del MIT.",
+  "it": "Le lezioni di fluidodinamica del MIT.",
+  "ar": "محاضرات الموائع في MIT.",
+  "he": "הרצאות הזורמים של MIT."
  },
  "Mach number": {
   "fr": "Nombre de Mach",
@@ -775,6 +1573,47 @@
   "it": "Obiettivi misurabili che un progetto deve soddisfare.",
   "ar": "أهداف قابلة للقياس يجب أن يحققها التصميم.",
   "he": "יעדים מדידים שתכן חייב לעמוד בהם."
+ },
+ "Minimizing C_D/C_L gives KC_L² = C_D0.": {
+  "fr": "Minimiser C_D/C_L donne KC_L² = C_D0.",
+  "es": "Minimizar C_D/C_L da KC_L² = C_D0.",
+  "it": "Minimizzare C_D/C_L dà KC_L² = C_D0.",
+  "ar": "تقليل C_D/C_L إلى أدنى حد يعطي KC_L² = C_D0.",
+  "he": "מזעור C_D/C_L נותן KC_L² = C_D0."
+ },
+ "Momentum change per second.": {
+  "fr": "Variation de quantité de mouvement par seconde.",
+  "es": "Cambio de cantidad de movimiento por segundo.",
+  "it": "Variazione della quantità di moto al secondo.",
+  "ar": "تغير كمية الحركة في الثانية.",
+  "he": "שינוי התנע בשנייה."
+ },
+ "Momentum thrust": {
+  "fr": "Poussée par quantité de mouvement",
+  "es": "Empuje por cantidad de movimiento",
+  "it": "Spinta dalla quantità di moto",
+  "ar": "الدفع بكمية الحركة",
+  "he": "דחף לפי תנע"
+ },
+ "More angle of attack always means more lift.": {
+  "fr": "Plus d’incidence signifie toujours plus de portance.",
+  "es": "Más ángulo de ataque siempre significa más sustentación.",
+  "it": "Più angolo d’attacco significa sempre più portanza.",
+  "ar": "زيادة زاوية الهجوم تعني دائمًا رفعًا أكبر.",
+  "he": "יותר זווית התקפה תמיד פירושה יותר עילוי."
+ },
+ "More stability is always better.": {
+  "fr": "Plus de stabilité, c’est toujours mieux.",
+  "es": "Más estabilidad siempre es mejor.",
+  "it": "Più stabilità è sempre meglio.",
+  "ar": "المزيد من الاستقرار أفضل دائمًا.",
+  "he": "יותר יציבות תמיד עדיף."
+ },
+ "Most air in a high-bypass turbofan…": {
+  "fr": "Dans une turbosoufflante à grand taux de dilution, la majeure partie de l’air…",
+  "es": "En un turbofán de alto índice de derivación, la mayor parte del aire…",
+  "it": "In un turbofan ad alto by-pass, gran parte dell’aria…",
+  "ar": "في المحرك المروحي التوربيني عالي نسبة التجاوز، معظم الهواء…"
  },
  "NASA FoilSim": {
   "fr": "NASA FoilSim",
@@ -811,6 +1650,20 @@
   "ar": "NASA Glenn: Earth atmosphere model (metric)",
   "he": "NASA Glenn: Earth atmosphere model (metric)"
  },
+ "NASA Glenn: FoilSim": {
+  "fr": "NASA Glenn : FoilSim",
+  "es": "NASA Glenn: FoilSim",
+  "it": "NASA Glenn: FoilSim",
+  "ar": "NASA Glenn: FoilSim",
+  "he": "NASA Glenn: FoilSim"
+ },
+ "NASA Glenn: aircraft rotations": {
+  "fr": "NASA Glenn : rotations de l’avion",
+  "es": "NASA Glenn: rotaciones del avión",
+  "it": "NASA Glenn: rotazioni dell’aereo",
+  "ar": "NASA Glenn: دورانات الطائرة",
+  "he": "NASA Glenn: סיבובי המטוס"
+ },
  "NASA Glenn: atmosphere": {
   "fr": "NASA Glenn : atmosphère",
   "es": "NASA Glenn: atmósfera",
@@ -824,6 +1677,13 @@
   "it": "NASA Glenn: angolo di planata",
   "ar": "NASA Glenn: زاوية الانزلاق",
   "he": "NASA Glenn: זווית דאייה"
+ },
+ "NASA Glenn: induced drag coefficient": {
+  "fr": "NASA Glenn : coefficient de traînée induite",
+  "es": "NASA Glenn: coeficiente de resistencia inducida",
+  "it": "NASA Glenn: coefficiente di resistenza indotta",
+  "ar": "NASA Glenn: معامل السحب المستحث",
+  "he": "NASA Glenn: מקדם הגרר המושרה"
  },
  "NASA Glenn: lift and drag": {
   "fr": "NASA Glenn : portance et traînée",
@@ -866,6 +1726,20 @@
   "it": "NASA Glenn: l’equazione della portanza",
   "ar": "NASA Glenn: معادلة الرفع",
   "he": "NASA Glenn: משוואת העילוי"
+ },
+ "NASA Glenn: thrust-to-weight ratio": {
+  "fr": "NASA Glenn : rapport poussée/poids",
+  "es": "NASA Glenn: relación empuje-peso",
+  "it": "NASA Glenn: rapporto spinta/peso",
+  "ar": "NASA Glenn: نسبة الدفع إلى الوزن",
+  "he": "NASA Glenn: יחס דחף למשקל"
+ },
+ "NASA estimates that with today’s fleet and operations, worldwide air traffic in 2050 would need more than 620 million tonnes of fuel and emit close to 2,000 million tonnes of CO₂, which is why every term in the equation matters.": {
+  "fr": "La NASA estime qu’avec la flotte et les modes d’exploitation actuels, le trafic aérien mondial en 2050 nécessiterait plus de 620 millions de tonnes de carburant et émettrait près de 2000 millions de tonnes de CO₂ : c’est pourquoi chaque terme de l’équation compte.",
+  "es": "La NASA estima que, con la flota y las operaciones actuales, el tráfico aéreo mundial en 2050 necesitaría más de 620 millones de toneladas de combustible y emitiría cerca de 2000 millones de toneladas de CO₂; por eso importa cada término de la ecuación.",
+  "it": "La NASA stima che, con la flotta e le operazioni attuali, il traffico aereo mondiale nel 2050 richiederebbe oltre 620 milioni di tonnellate di carburante ed emetterebbe quasi 2000 milioni di tonnellate di CO₂: per questo ogni termine dell’equazione conta.",
+  "ar": "تقدّر ناسا أنه بالأسطول والعمليات الحالية، ستحتاج حركة الطيران العالمية في 2050 إلى أكثر من 620 مليون طن من الوقود وستطلق قرابة 2000 مليون طن من CO₂، ولهذا يهم كل حد في المعادلة.",
+  "he": "NASA מעריכה שעם הצי ודרכי התפעול של היום, תעבורת האוויר העולמית ב-2050 תדרוש יותר מ-620 מיליון טונות דלק ותפלוט קרוב ל-2000 מיליון טונות CO₂, ולכן כל איבר במשוואה חשוב."
  },
  "NASA lists three main ways to make aviation sustainable: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.": {
   "fr": "La NASA cite trois grandes voies pour rendre l’aviation durable : une technologie aéronautique efficace, les carburants d’aviation durables, et de meilleures opérations et infrastructures.",
@@ -916,6 +1790,20 @@
   "ar": "تسمية قوى الطيران الأربع.",
   "he": "לנקוב בארבעת כוחות הטיסה."
  },
+ "Name the three axes, pitch, roll and yaw, and their control surfaces.": {
+  "fr": "Nommer les trois axes, tangage, roulis et lacet, et leurs gouvernes.",
+  "es": "Nombrar los tres ejes, cabeceo, alabeo y guiñada, y sus superficies de control.",
+  "it": "Nominare i tre assi, beccheggio, rollio e imbardata, e le relative superfici di comando.",
+  "ar": "تسمية المحاور الثلاثة، الانحدار والدحرجة والانعراج، وأسطح التحكم الخاصة بها.",
+  "he": "לנקוב בשלושת הצירים, עלרוד, גלגול וסבסוב, ובמשטחי ההיגוי שלהם."
+ },
+ "Neutral point": {
+  "fr": "Point neutre",
+  "es": "Punto neutro",
+  "it": "Punto neutro",
+  "ar": "النقطة المحايدة",
+  "he": "נקודה ניטרלית"
+ },
  "On December 17, 1903, the Wright Flyer made a 12-second flight covering 36 m (120 ft); the best flight that day covered 260 m (852 ft) in 59 seconds. The Wrights succeeded by testing: they built gliders and their own wind tunnel before adding an engine.": {
   "fr": "Le 17 décembre 1903, le Wright Flyer a effectué un vol de 12 secondes sur 36 m (120 ft) ; le meilleur vol de la journée a couvert 260 m (852 ft) en 59 secondes. Les Wright ont réussi en testant : ils ont construit des planeurs et leur propre soufflerie avant d’ajouter un moteur.",
   "es": "El 17 de diciembre de 1903, el Wright Flyer hizo un vuelo de 12 segundos que recorrió 36 m (120 ft); el mejor vuelo de ese día recorrió 260 m (852 ft) en 59 segundos. Los Wright lo lograron probando: construyeron planeadores y su propio túnel de viento antes de añadir un motor.",
@@ -951,6 +1839,13 @@
   "ar": "عرض أبرز محطات الطيران ورحلات الفضاء.",
   "he": "לתאר את אבני הדרך המרכזיות של התעופה וטיסות החלל."
  },
+ "Past the stall angle the flow separates and lift drops.": {
+  "fr": "Au-delà de l’angle de décrochage, l’écoulement décolle et la portance chute.",
+  "es": "Pasado el ángulo de pérdida, el flujo se desprende y la sustentación cae.",
+  "it": "Oltre l’angolo di stallo il flusso si separa e la portanza cala.",
+  "ar": "بعد زاوية الانهيار ينفصل التدفق وينخفض الرفع.",
+  "he": "מעבר לזווית ההזדקרות הזרימה מתנתקת והעילוי צונח."
+ },
  "Physics I": {
   "fr": "Physique I",
   "es": "Física I",
@@ -964,6 +1859,55 @@
   "it": "La meccanica di Fisica I (forze, energia, quantità di moto, moto circolare) aiuta; seguila in parallelo se puoi.",
   "ar": "ميكانيكا الفيزياء I (القوى، والطاقة، والزخم، والحركة الدائرية) مفيدة؛ ادرسها بالتوازي إن استطعت.",
   "he": "המכניקה של פיזיקה I (כוחות, אנרגיה, תנע, תנועה מעגלית) עוזרת; למדו אותה במקביל אם אפשר."
+ },
+ "Pitch / roll / yaw": {
+  "fr": "Tangage / roulis / lacet",
+  "es": "Cabeceo / alabeo / guiñada",
+  "it": "Beccheggio / rollio / imbardata",
+  "ar": "الانحدار / الدحرجة / الانعراج",
+  "he": "עלרוד / גלגול / סבסוב"
+ },
+ "Pitch stability needs the center of gravity ahead of the neutral point. Static margin = (x_np − x_cg)/c̄ must be positive.": {
+  "fr": "La stabilité en tangage exige que le centre de gravité soit en avant du point neutre. La marge statique = (x_np − x_cg)/c̄ doit être positive.",
+  "es": "La estabilidad en cabeceo exige que el centro de gravedad esté delante del punto neutro. El margen estático = (x_np − x_cg)/c̄ debe ser positivo.",
+  "it": "La stabilità in beccheggio richiede che il baricentro sia davanti al punto neutro. Il margine statico = (x_np − x_cg)/c̄ deve essere positivo.",
+  "ar": "يتطلب الاستقرار في الانحدار أن يكون مركز الثقل أمام النقطة المحايدة. ويجب أن يكون الهامش الساكن = (x_np − x_cg)/c̄ موجبًا.",
+  "he": "יציבות בעלרוד דורשת שמרכז הכובד יהיה לפני הנקודה הניטרלית. השוליים הסטטיים = (x_np − x_cg)/c̄ חייבים להיות חיוביים."
+ },
+ "Pitch, roll and yaw.": {
+  "fr": "Tangage, roulis et lacet.",
+  "es": "Cabeceo, alabeo y guiñada.",
+  "it": "Beccheggio, rollio e imbardata.",
+  "ar": "الانحدار والدحرجة والانعراج.",
+  "he": "עלרוד, גלגול וסבסוב."
+ },
+ "Positive margin.": {
+  "fr": "Marge positive.",
+  "es": "Margen positivo.",
+  "it": "Margine positivo.",
+  "ar": "هامش موجب.",
+  "he": "שוליים חיוביים."
+ },
+ "Positive static margin.": {
+  "fr": "Marge statique positive.",
+  "es": "Margen estático positivo.",
+  "it": "Margine statico positivo.",
+  "ar": "هامش ساكن موجب.",
+  "he": "שוליים סטטיים חיוביים."
+ },
+ "Power required": {
+  "fr": "Puissance nécessaire",
+  "es": "Potencia necesaria",
+  "it": "Potenza necessaria",
+  "ar": "القدرة المطلوبة",
+  "he": "הספק נדרש"
+ },
+ "Power required in level flight is…": {
+  "fr": "La puissance nécessaire en vol en palier est…",
+  "es": "La potencia necesaria en vuelo nivelado es…",
+  "it": "La potenza necessaria in volo livellato è…",
+  "ar": "القدرة المطلوبة في الطيران الأفقي هي…",
+  "he": "ההספק הנדרש בטיסה אופקית הוא…"
  },
  "Pressure and velocity.": {
   "fr": "Pression et vitesse.",
@@ -993,12 +1937,40 @@
   "ar": "الدفع: المحركات النفاثة والمراوح والمراوح الدافعة",
   "he": "הנעה: מנועי סילון, מניפות ומדחפים"
  },
+ "Propulsive efficiency": {
+  "fr": "Rendement propulsif",
+  "es": "Rendimiento propulsivo",
+  "it": "Rendimento propulsivo",
+  "ar": "كفاءة الدفع",
+  "he": "נצילות הנעה"
+ },
+ "Propulsive efficiency is highest when v_e/v₀ is…": {
+  "fr": "Le rendement propulsif est maximal quand v_e/v₀ est…",
+  "es": "El rendimiento propulsivo es máximo cuando v_e/v₀ es…",
+  "it": "Il rendimento propulsivo è massimo quando v_e/v₀ è…",
+  "ar": "تبلغ كفاءة الدفع أقصاها عندما تكون v_e/v₀…",
+  "he": "נצילות ההנעה מרבית כאשר v_e/v₀ הוא…"
+ },
+ "Propulsive efficiency η_p = 2/(1 + v_e/v₀): moving a lot of air a little is more efficient than moving a little air a lot. That is why turbofans have huge fans.": {
+  "fr": "Rendement propulsif η_p = 2/(1 + v_e/v₀) : déplacer beaucoup d’air un peu est plus efficace que déplacer peu d’air beaucoup. C’est pourquoi les turbosoufflantes ont d’énormes soufflantes.",
+  "es": "Rendimiento propulsivo η_p = 2/(1 + v_e/v₀): mover mucho aire un poco es más eficiente que mover poco aire mucho. Por eso los turbofanes tienen ventiladores enormes.",
+  "it": "Rendimento propulsivo η_p = 2/(1 + v_e/v₀): spostare tanta aria di poco è più efficiente che spostare poca aria di molto. Per questo i turbofan hanno fan enormi.",
+  "ar": "كفاءة الدفع η_p = 2/(1 + v_e/v₀): تحريك كمية كبيرة من الهواء قليلًا أكفأ من تحريك كمية قليلة كثيرًا. لهذا تملك المحركات المروحية التوربينية مراوح ضخمة.",
+  "he": "נצילות הנעה η_p = 2/(1 + v_e/v₀): הזזת הרבה אוויר מעט יעילה יותר מהזזת מעט אוויר הרבה. לכן לטורבו-מניפות יש מניפות ענקיות."
+ },
  "Published lift data were unreliable, so they measured many wing shapes themselves: testing before building is the heart of the design process.": {
   "fr": "Les données de portance publiées n’étaient pas fiables, alors ils ont mesuré eux-mêmes de nombreuses formes d’aile : tester avant de construire est le cœur du processus de conception.",
   "es": "Los datos publicados de sustentación no eran fiables, así que midieron ellos mismos muchas formas de ala: probar antes de construir es el corazón del proceso de diseño.",
   "it": "I dati di portanza pubblicati erano inaffidabili, così misurarono da soli molte forme d’ala: provare prima di costruire è il cuore del processo di progettazione.",
   "ar": "كانت بيانات الرفع المنشورة غير موثوقة، فقاسا بنفسيهما أشكالًا كثيرة للأجنحة: الاختبار قبل البناء هو جوهر عملية التصميم.",
   "he": "נתוני העילוי שפורסמו לא היו אמינים, ולכן הם מדדו בעצמם צורות כנף רבות: ניסוי לפני בנייה הוא לב תהליך התכן."
+ },
+ "RC = excess power/W.": {
+  "fr": "RC = excédent de puissance/W.",
+  "es": "RC = exceso de potencia/W.",
+  "it": "RC = potenza in eccesso/W.",
+  "ar": "RC = القدرة الفائضة/W.",
+  "he": "RC = עודף הספק/W."
  },
  "Range and endurance; midterm practice": {
   "fr": "Distance franchissable et endurance ; entraînement au partiel",
@@ -1007,12 +1979,40 @@
   "ar": "المدى ومدة التحليق؛ تدريب على الاختبار النصفي",
   "he": "טווח ומשך שהייה באוויר; תרגול לבוחן אמצע"
  },
+ "Range depends only on the fuel load.": {
+  "fr": "La distance franchissable ne dépend que de la quantité de carburant.",
+  "es": "El alcance solo depende de la carga de combustible.",
+  "it": "L’autonomia dipende solo dal carico di carburante.",
+  "ar": "المدى يعتمد على حمولة الوقود فقط.",
+  "he": "הטווח תלוי רק בכמות הדלק."
+ },
+ "Range ∝ L/D: 5,235 × 20/17 ≈ 6,159 km.": {
+  "fr": "Distance ∝ L/D : 5235 × 20/17 ≈ 6159 km.",
+  "es": "Alcance ∝ L/D: 5235 × 20/17 ≈ 6159 km.",
+  "it": "Autonomia ∝ L/D: 5235 × 20/17 ≈ 6159 km.",
+  "ar": "المدى ∝ L/D: 5235 × 20/17 ≈ 6159 km.",
+  "he": "טווח ∝ L/D: 5235 × 20/17 ≈ 6159 km."
+ },
+ "Rate of climb": {
+  "fr": "Taux de montée",
+  "es": "Tasa de ascenso",
+  "it": "Rateo di salita",
+  "ar": "معدل الصعود",
+  "he": "קצב טיפוס"
+ },
  "Re ≈ 5.7 million.": {
   "fr": "Re ≈ 5.7 millions.",
   "es": "Re ≈ 5.7 millones.",
   "it": "Re ≈ 5.7 milioni.",
   "ar": "Re ≈ 5.7 مليون.",
   "he": "Re ≈ 5.7 מיליון."
+ },
+ "Relate glide ratio to L/D.": {
+  "fr": "Relier la finesse de plané à L/D.",
+  "es": "Relacionar la relación de planeo con L/D.",
+  "it": "Collegare il rapporto di planata a L/D.",
+  "ar": "ربط نسبة الانزلاق بـ L/D.",
+  "he": "לקשר את יחס הדאייה ל-L/D."
  },
  "Requirements": {
   "fr": "Exigences",
@@ -1070,6 +2070,20 @@
   "ar": "الصواريخ ومعادلة الصاروخ",
   "he": "רקטות ומשוואת הרקטה"
  },
+ "SM = −0.02 < 0: statically unstable.": {
+  "fr": "SM = −0.02 < 0 : statiquement instable.",
+  "es": "SM = −0.02 < 0: estáticamente inestable.",
+  "it": "SM = −0.02 < 0: staticamente instabile.",
+  "ar": "SM = −0.02 < 0: غير مستقرة استقرارًا ساكنًا.",
+  "he": "SM = −0.02 < 0: לא יציב סטטית."
+ },
+ "SM ≈ 0.22: stable. Remove nose weight and the CG moves aft toward instability.": {
+  "fr": "SM ≈ 0.22 : stable. Retirez le lest du nez et le CG recule vers l’instabilité.",
+  "es": "SM ≈ 0.22: estable. Si quitas el lastre de la nariz, el CG se desplaza hacia atrás, hacia la inestabilidad.",
+  "it": "SM ≈ 0.22: stabile. Togli la zavorra dal muso e il CG arretra verso l’instabilità.",
+  "ar": "SM ≈ 0.22: مستقرة. أزل ثقل المقدمة فيتحرك CG إلى الخلف نحو عدم الاستقرار.",
+  "he": "SM ≈ 0.22: יציב. הסירו את משקולת האף וה-CG זז אחורה לכיוון חוסר יציבות."
+ },
  "Shaving a little weight saves only that weight.": {
   "fr": "Gagner un peu de masse n’économise que cette masse.",
   "es": "Ahorrar un poco de peso solo ahorra ese peso.",
@@ -1097,6 +2111,34 @@
   "it": "Smithsonian: il Wright Flyer del 1903",
   "ar": "Smithsonian: طائرة Wright Flyer لعام 1903",
   "he": "Smithsonian: ה-Wright Flyer משנת 1903"
+ },
+ "Span squared over area.": {
+  "fr": "L’envergure au carré divisée par la surface.",
+  "es": "La envergadura al cuadrado dividida entre la superficie.",
+  "it": "L’apertura al quadrato divisa per la superficie.",
+  "ar": "مربع الباع مقسومًا على المساحة.",
+  "he": "ריבוע המוטה חלקי השטח."
+ },
+ "Specific impulse": {
+  "fr": "Impulsion spécifique",
+  "es": "Impulso específico",
+  "it": "Impulso specifico",
+  "ar": "الدفع النوعي",
+  "he": "מתקף סגולי"
+ },
+ "Specific impulse I_sp = F/(ṁ_fuel g₀) measures thrust per fuel weight flow, in seconds.": {
+  "fr": "L’impulsion spécifique I_sp = F/(ṁ_fuel g₀) mesure la poussée par débit de poids de carburant, en secondes.",
+  "es": "El impulso específico I_sp = F/(ṁ_fuel g₀) mide el empuje por flujo de peso de combustible, en segundos.",
+  "it": "L’impulso specifico I_sp = F/(ṁ_fuel g₀) misura la spinta per portata in peso di carburante, in secondi.",
+  "ar": "الدفع النوعي I_sp = F/(ṁ_fuel g₀) يقيس الدفع لكل تدفق وزني للوقود، بالثواني.",
+  "he": "המתקף הסגולי I_sp = F/(ṁ_fuel g₀) מודד דחף לכל ספיקת משקל של דלק, בשניות."
+ },
+ "Specific impulse is a speed.": {
+  "fr": "L’impulsion spécifique est une vitesse.",
+  "es": "El impulso específico es una velocidad.",
+  "it": "L’impulso specifico è una velocità.",
+  "ar": "الدفع النوعي سرعة.",
+  "he": "מתקף סגולי הוא מהירות."
  },
  "Speed divided by the local speed of sound.": {
   "fr": "La vitesse divisée par la vitesse locale du son.",
@@ -1133,12 +2175,33 @@
   "ar": "الاستقرار والتحكم؛ المختبر C",
   "he": "יציבות ושליטה; מעבדה C"
  },
+ "Stability and flight controls chapters.": {
+  "fr": "Chapitres sur la stabilité et les commandes de vol.",
+  "es": "Capítulos sobre estabilidad y mandos de vuelo.",
+  "it": "Capitoli su stabilità e comandi di volo.",
+  "ar": "فصول الاستقرار وأدوات التحكم في الطيران.",
+  "he": "פרקים על יציבות ובקרי טיסה."
+ },
+ "Stability margins cost fuel: a conventional tail usually pushes down to balance the aircraft, and the wing must make extra lift, with extra drag, to carry it. Trimming that penalty is part of the efficient-aircraft path NASA describes.": {
+  "fr": "Les marges de stabilité coûtent du carburant : un empennage classique pousse généralement vers le bas pour équilibrer l’avion, et l’aile doit produire une portance supplémentaire, avec une traînée supplémentaire, pour le compenser. Réduire cette pénalité fait partie de la voie de l’avion efficace décrite par la NASA.",
+  "es": "Los márgenes de estabilidad cuestan combustible: una cola convencional suele empujar hacia abajo para equilibrar el avión, y el ala debe generar sustentación extra, con resistencia extra, para compensarlo. Reducir esa penalización forma parte de la vía del avión eficiente que describe la NASA.",
+  "it": "I margini di stabilità costano carburante: una coda convenzionale di solito spinge verso il basso per equilibrare l’aereo, e l’ala deve generare portanza in più, con resistenza in più, per sostenerla. Ridurre questa penalità fa parte della via dell’aereo efficiente descritta dalla NASA.",
+  "ar": "هوامش الاستقرار تكلف وقودًا: الذيل التقليدي يدفع عادة إلى الأسفل لموازنة الطائرة، ويجب أن ينتج الجناح رفعًا إضافيًا، مع سحب إضافي، لحمل ذلك. وتقليص هذه الكلفة جزء من مسار الطائرة الكفؤة الذي تصفه ناسا.",
+  "he": "שולי יציבות עולים בדלק: זנב רגיל בדרך כלל דוחף כלפי מטה כדי לאזן את המטוס, והכנף חייבת לייצר עילוי נוסף, עם גרר נוסף, כדי לשאת זאת. צמצום הקנס הזה הוא חלק מנתיב המטוס היעיל ש-NASA מתארת."
+ },
  "Staging and launch vehicles; Lab B": {
   "fr": "Étagement et lanceurs ; TP B",
   "es": "Etapas y vehículos de lanzamiento; Práctica B",
   "it": "Stadi e lanciatori; Laboratorio B",
   "ar": "المراحل ومركبات الإطلاق؛ المختبر B",
   "he": "שלבים ומשגרים; מעבדה B"
+ },
+ "Stall": {
+  "fr": "Décrochage",
+  "es": "Pérdida",
+  "it": "Stallo",
+  "ar": "الانهيار",
+  "he": "הזדקרות"
  },
  "Stall speed": {
   "fr": "Vitesse de décrochage",
@@ -1168,6 +2231,34 @@
   "ar": "ابدأ من هنا في كل موضوع.",
   "he": "התחילו כאן בכל נושא."
  },
+ "Static margin": {
+  "fr": "Marge statique",
+  "es": "Margen estático",
+  "it": "Margine statico",
+  "ar": "الهامش الساكن",
+  "he": "שוליים סטטיים"
+ },
+ "Static stability": {
+  "fr": "Stabilité statique",
+  "es": "Estabilidad estática",
+  "it": "Stabilità statica",
+  "ar": "الاستقرار الساكن",
+  "he": "יציבות סטטית"
+ },
+ "Static stability: after a disturbance, the aircraft initially tends to return. Dynamic stability: the motion actually dies out over time.": {
+  "fr": "Stabilité statique : après une perturbation, l’avion tend d’abord à revenir. Stabilité dynamique : le mouvement s’amortit réellement au fil du temps.",
+  "es": "Estabilidad estática: tras una perturbación, el avión tiende inicialmente a volver. Estabilidad dinámica: el movimiento realmente se amortigua con el tiempo.",
+  "it": "Stabilità statica: dopo una perturbazione l’aereo tende inizialmente a tornare indietro. Stabilità dinamica: il moto si smorza davvero nel tempo.",
+  "ar": "الاستقرار الساكن: بعد الاضطراب تميل الطائرة مبدئيًا إلى العودة. الاستقرار الديناميكي: تتلاشى الحركة فعلًا مع الوقت.",
+  "he": "יציבות סטטית: אחרי הפרעה, המטוס נוטה בתחילה לחזור. יציבות דינמית: התנועה אכן דועכת עם הזמן."
+ },
+ "Statically stable means the oscillation dies out.": {
+  "fr": "Statiquement stable signifie que l’oscillation s’amortit.",
+  "es": "Estáticamente estable significa que la oscilación se amortigua.",
+  "it": "Staticamente stabile significa che l’oscillazione si smorza.",
+  "ar": "الاستقرار الساكن يعني أن التذبذب يتلاشى.",
+  "he": "יציב סטטית פירושו שהתנודה דועכת."
+ },
  "Steady, level, unaccelerated flight": {
   "fr": "Vol stabilisé en palier, non accéléré",
   "es": "Vuelo estable, nivelado y sin aceleración",
@@ -1189,6 +2280,13 @@
   "ar": "الطيران والفضاء المستدامان",
   "he": "תעופה וחלל בני-קיימא"
  },
+ "Symmetric airfoils cannot lift.": {
+  "fr": "Les profils symétriques ne peuvent pas porter.",
+  "es": "Los perfiles simétricos no pueden generar sustentación.",
+  "it": "I profili simmetrici non possono generare portanza.",
+  "ar": "المقاطع المتماثلة لا يمكنها توليد الرفع.",
+  "he": "פרופילים סימטריים לא יכולים לייצר עילוי."
+ },
  "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% of sea level).": {
   "fr": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% du niveau de la mer).",
   "es": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% del nivel del mar).",
@@ -1203,12 +2301,40 @@
   "ar": "تستقر درجة الحرارة فوق 11 km ثم ترتفع مجددًا في أعالي الستراتوسفير.",
   "he": "הטמפרטורה מתייצבת מעל 11 km ועולה שוב גבוה יותר בסטרטוספרה."
  },
+ "That is dynamic stability; static stability is the initial tendency.": {
+  "fr": "C’est la stabilité dynamique ; la stabilité statique est la tendance initiale.",
+  "es": "Eso es estabilidad dinámica; la estabilidad estática es la tendencia inicial.",
+  "it": "Quella è stabilità dinamica; la stabilità statica è la tendenza iniziale.",
+  "ar": "ذلك هو الاستقرار الديناميكي؛ أما الاستقرار الساكن فهو الميل الابتدائي.",
+  "he": "זו יציבות דינמית; יציבות סטטית היא הנטייה ההתחלתית."
+ },
  "The Atmosphere": {
   "fr": "L’atmosphère",
   "es": "La atmósfera",
   "it": "L’atmosfera",
   "ar": "الغلاف الجوي",
   "he": "האטמוספרה"
+ },
+ "The Breguet equation is aviation’s climate equation: for a given trip, fuel burned falls when engines get more efficient, wings get higher L/D, or structures get lighter. With the other terms fixed, range is proportional to L/D.": {
+  "fr": "L’équation de Breguet est l’équation climatique de l’aviation : pour un trajet donné, le carburant brûlé diminue quand les moteurs deviennent plus efficaces, que les ailes ont une meilleure finesse L/D ou que les structures s’allègent. Les autres termes étant fixés, la distance franchissable est proportionnelle à L/D.",
+  "es": "La ecuación de Breguet es la ecuación climática de la aviación: para un viaje dado, el combustible quemado baja cuando los motores son más eficientes, las alas tienen mayor L/D o las estructuras son más ligeras. Con los demás términos fijos, el alcance es proporcional a L/D.",
+  "it": "L’equazione di Breguet è l’equazione climatica dell’aviazione: per un dato viaggio il carburante bruciato diminuisce quando i motori diventano più efficienti, le ali hanno un L/D più alto o le strutture si alleggeriscono. A parità degli altri termini, l’autonomia è proporzionale a L/D.",
+  "ar": "معادلة بريغيه هي معادلة المناخ في الطيران: لرحلة معينة، ينخفض الوقود المحروق عندما تصبح المحركات أكفأ، أو تحصل الأجنحة على L/D أعلى، أو تصبح الهياكل أخف. ومع ثبات الحدود الأخرى، يتناسب المدى مع L/D.",
+  "he": "משוואת בריגה היא משוואת האקלים של התעופה: לנסיעה נתונה, הדלק הנשרף יורד כשהמנועים יעילים יותר, כשלכנפיים יש L/D גבוה יותר או כשהמבנים קלים יותר. כששאר האיברים קבועים, הטווח פרופורציונלי ל-L/D."
+ },
+ "The CG can be anywhere as long as the wing lifts.": {
+  "fr": "Le CG peut être n’importe où tant que l’aile porte.",
+  "es": "El CG puede estar en cualquier lugar mientras el ala sustente.",
+  "it": "Il CG può stare ovunque purché l’ala sostenga.",
+  "ar": "يمكن أن يكون CG في أي مكان ما دام الجناح يولد رفعًا.",
+  "he": "ה-CG יכול להיות בכל מקום כל עוד הכנף מייצרת עילוי."
+ },
+ "The Example 3.1 airplane, with the Example 4.3 drag polar, has about 957 N of drag at 55 m/s. What power does level flight require?": {
+  "fr": "L’avion de l’exemple 3.1, avec la polaire de l’exemple 4.3, a environ 957 N de traînée à 55 m/s. Quelle puissance le vol en palier exige-t-il ?",
+  "es": "El avión del ejemplo 3.1, con la polar del ejemplo 4.3, tiene unos 957 N de resistencia a 55 m/s. ¿Qué potencia exige el vuelo nivelado?",
+  "it": "L’aereo dell’esempio 3.1, con la polare dell’esempio 4.3, ha circa 957 N di resistenza a 55 m/s. Quale potenza richiede il volo livellato?",
+  "ar": "طائرة المثال 3.1، مع قطبية السحب في المثال 4.3، لديها سحب نحو 957 N عند 55 m/s. ما القدرة التي يتطلبها الطيران الأفقي؟",
+  "he": "למטוס מדוגמה 3.1, עם פולרת הגרר מדוגמה 4.3, יש כ-957 N גרר ב-55 m/s. איזה הספק דורשת טיסה אופקית?"
  },
  "The Wright Flyer first flew in…": {
   "fr": "Le Wright Flyer a volé pour la première fois le…",
@@ -1238,6 +2364,27 @@
   "ar": "الهواء الذي تطير فيه الطائرة: كيف تتغير درجة الحرارة والضغط والكثافة وسرعة الصوت مع الارتفاع.",
   "he": "האוויר שבו טס כלי טיס: איך הטמפרטורה, הלחץ, הצפיפות ומהירות הקול משתנים עם הגובה."
  },
+ "The albatross, which glides for hours over the ocean, uses the same physics: a long, thin wing with a high lift-to-drag ratio.": {
+  "fr": "L’albatros, qui plane des heures au-dessus de l’océan, utilise la même physique : une aile longue et fine à grande finesse.",
+  "es": "El albatros, que planea durante horas sobre el océano, usa la misma física: un ala larga y delgada con una alta relación sustentación-resistencia.",
+  "it": "L’albatro, che plana per ore sull’oceano, usa la stessa fisica: un’ala lunga e sottile con alta efficienza aerodinamica.",
+  "ar": "طائر القطرس، الذي ينزلق لساعات فوق المحيط، يستخدم الفيزياء نفسها: جناح طويل رفيع بنسبة رفع إلى سحب عالية.",
+  "he": "האלבטרוס, שדואה שעות מעל האוקיינוס, משתמש באותה פיזיקה: כנף ארוכה ודקה עם יחס עילוי לגרר גבוה."
+ },
+ "The elevator, on the horizontal tail.": {
+  "fr": "La gouverne de profondeur, sur l’empennage horizontal.",
+  "es": "El timón de profundidad, en la cola horizontal.",
+  "it": "L’equilibratore, sul piano di coda orizzontale.",
+  "ar": "الرافع، على الذيل الأفقي.",
+  "he": "הגה הגובה, בזנב האופקי."
+ },
+ "The fan stream.": {
+  "fr": "Le flux de la soufflante.",
+  "es": "El flujo del ventilador.",
+  "it": "Il flusso del fan.",
+  "ar": "تيار المروحة.",
+  "he": "זרם המניפה."
+ },
  "The first step of the design process is…": {
   "fr": "La première étape du processus de conception est…",
   "es": "El primer paso del proceso de diseño es…",
@@ -1259,12 +2406,26 @@
   "ar": "النموذج والمعادلات المستخدمة في هذه الوحدة.",
   "he": "המודל והמשוואות שבהם משתמשים ביחידה זו."
  },
+ "The neutral point is at 40% of the mean chord and the CG at 25%. Find the static margin.": {
+  "fr": "Le point neutre est à 40% de la corde moyenne et le CG à 25%. Trouvez la marge statique.",
+  "es": "El punto neutro está al 40% de la cuerda media y el CG al 25%. Halla el margen estático.",
+  "it": "Il punto neutro è al 40% della corda media e il CG al 25%. Trova il margine statico.",
+  "ar": "النقطة المحايدة عند 40% من الوتر المتوسط وCG عند 25%. أوجد الهامش الساكن.",
+  "he": "הנקודה הניטרלית נמצאת ב-40% מהמיתר הממוצע וה-CG ב-25%. מצאו את השוליים הסטטיים."
+ },
  "The same atmosphere physics underlies how satellites turn the radiation they measure into profiles of the air’s temperature.": {
   "fr": "La même physique de l’atmosphère permet aux satellites de transformer le rayonnement qu’ils mesurent en profils de température de l’air.",
   "es": "La misma física atmosférica permite que los satélites conviertan la radiación que miden en perfiles de temperatura del aire.",
   "it": "La stessa fisica dell’atmosfera permette ai satelliti di trasformare la radiazione che misurano in profili di temperatura dell’aria.",
   "ar": "الفيزياء الجوية نفسها هي ما يسمح للأقمار الصناعية بتحويل الإشعاع الذي تقيسه إلى مقاطع لدرجة حرارة الهواء.",
   "he": "אותה פיזיקה של האטמוספרה מאפשרת ללוויינים להפוך את הקרינה שהם מודדים לפרופילים של טמפרטורת האוויר."
+ },
+ "The same balance and control ideas keep Earth-observing satellites pointed steadily so their instruments can map the planet.": {
+  "fr": "Les mêmes notions d’équilibre et de contrôle maintiennent les satellites d’observation de la Terre pointés de manière stable pour que leurs instruments puissent cartographier la planète.",
+  "es": "Las mismas ideas de equilibrio y control mantienen a los satélites de observación de la Tierra apuntando de forma estable para que sus instrumentos puedan cartografiar el planeta.",
+  "it": "Le stesse idee di equilibrio e controllo mantengono puntati in modo stabile i satelliti di osservazione della Terra, così che i loro strumenti possano mappare il pianeta.",
+  "ar": "الأفكار نفسها للموازنة والتحكم تُبقي أقمار رصد الأرض موجهة بثبات حتى تتمكن أجهزتها من رسم خرائط الكوكب.",
+  "he": "אותם רעיונות של איזון ושליטה שומרים על לווייני תצפית על כדור הארץ מכוונים ביציבות כדי שהמכשירים שלהם יוכלו למפות את כדור הארץ."
  },
  "The same lift physics drives wind-turbine blades, which turn the wind’s aerodynamic force into clean electricity.": {
   "fr": "La même physique de la portance anime les pales d’éoliennes, qui transforment la force aérodynamique du vent en électricité propre.",
@@ -1294,12 +2455,75 @@
   "ar": "سرعة الصوت a = √(γRT)، لذا فهي تعتمد على درجة الحرارة فقط. عدد ماخ M = V/a.",
   "he": "מהירות הקול היא a = √(γRT), ולכן היא תלויה רק בטמפרטורה. מספר מאך M = V/a."
  },
+ "They accelerate air through the engine; the reaction to that is thrust.": {
+  "fr": "Ils accélèrent l’air à travers le moteur ; la réaction à cette accélération est la poussée.",
+  "es": "Aceleran el aire a través del motor; la reacción a eso es el empuje.",
+  "it": "Accelerano l’aria attraverso il motore; la reazione a questo è la spinta.",
+  "ar": "إنها تسرّع الهواء عبر المحرك؛ ورد الفعل على ذلك هو الدفع.",
+  "he": "הם מאיצים אוויר דרך המנוע; התגובה לכך היא הדחף."
+ },
+ "They deflect in opposite directions on each wing.": {
+  "fr": "Ils braquent en sens opposés sur chaque aile.",
+  "es": "Se deflectan en sentidos opuestos en cada ala.",
+  "it": "Si deflettono in direzioni opposte su ciascuna ala.",
+  "ar": "تنحرف في اتجاهين متعاكسين على كل جناح.",
+  "he": "הן נוטות בכיוונים מנוגדים בכל כנף."
+ },
+ "They lift at a positive angle of attack.": {
+  "fr": "Ils portent à incidence positive.",
+  "es": "La generan con un ángulo de ataque positivo.",
+  "it": "La generano con un angolo d’attacco positivo.",
+  "ar": "تولده عند زاوية هجوم موجبة.",
+  "he": "הם מייצרים עילוי בזווית התקפה חיובית."
+ },
+ "They move a large mass of air slowly, which raises propulsive efficiency and cuts fuel burn and noise.": {
+  "fr": "Elles déplacent lentement une grande masse d’air, ce qui augmente le rendement propulsif et réduit la consommation et le bruit.",
+  "es": "Mueven lentamente una gran masa de aire, lo que eleva el rendimiento propulsivo y reduce el consumo y el ruido.",
+  "it": "Spostano lentamente una grande massa d’aria, il che aumenta il rendimento propulsivo e riduce consumo e rumore.",
+  "ar": "لأنها تحرك كتلة كبيرة من الهواء ببطء، مما يرفع كفاءة الدفع ويقلل استهلاك الوقود والضجيج.",
+  "he": "הן מזיזות מסה גדולה של אוויר לאט, מה שמעלה את נצילות ההנעה ומפחית צריכת דלק ורעש."
+ },
+ "They reduce it; only an infinitely long wing would have none.": {
+  "fr": "Ils la réduisent ; seule une aile infiniment longue n’en aurait pas.",
+  "es": "La reducen; solo un ala infinitamente larga no tendría ninguna.",
+  "it": "La riducono; solo un’ala infinitamente lunga non ne avrebbe.",
+  "ar": "إنها تقلله؛ ولا يخلو منه إلا جناح لانهائي الطول.",
+  "he": "הם מקטינים אותו; רק לכנף ארוכה לאין סוף לא היה גרר מושרה."
+ },
  "Thin air means less drag at a given speed, which is why jets cruise high, but wings and engines still need enough air to work.": {
   "fr": "Un air raréfié signifie moins de traînée à vitesse donnée, c’est pourquoi les avions à réaction volent haut, mais les ailes et les moteurs ont toujours besoin d’assez d’air pour fonctionner.",
   "es": "Un aire menos denso implica menos resistencia a una velocidad dada, por eso los reactores vuelan alto, pero las alas y los motores aún necesitan suficiente aire para funcionar.",
   "it": "Aria rarefatta significa meno resistenza a una data velocità, ed è per questo che i jet volano in alto, ma ali e motori hanno comunque bisogno di aria sufficiente per funzionare.",
   "ar": "الهواء الأقل كثافة يعني سحبًا أقل عند سرعة معينة، ولهذا تطير النفاثات عاليًا، لكن الأجنحة والمحركات ما زالت تحتاج إلى ما يكفي من الهواء لتعمل.",
   "he": "אוויר דליל פירושו פחות גרר במהירות נתונה, ולכן מטוסי סילון טסים גבוה, אבל כנפיים ומנועים עדיין צריכים מספיק אוויר כדי לפעול."
+ },
+ "Thin-airfoil lift slope": {
+  "fr": "Pente de portance d’un profil mince",
+  "es": "Pendiente de sustentación del perfil delgado",
+  "it": "Pendenza di portanza del profilo sottile",
+  "ar": "ميل الرفع للمقطع الرقيق",
+  "he": "שיפוע העילוי של פרופיל דק"
+ },
+ "Thin-airfoil lift slope is…": {
+  "fr": "La pente de portance d’un profil mince vaut…",
+  "es": "La pendiente de sustentación del perfil delgado es…",
+  "it": "La pendenza di portanza del profilo sottile è…",
+  "ar": "ميل الرفع للمقطع الرقيق هو…",
+  "he": "שיפוע העילוי של פרופיל דק הוא…"
+ },
+ "Thin-airfoil theory predicts a lift slope of 2π per radian (about 0.11 per degree) until the flow separates and the wing stalls.": {
+  "fr": "La théorie des profils minces prédit une pente de portance de 2π par radian (environ 0.11 par degré) jusqu’à ce que l’écoulement décolle et que l’aile décroche.",
+  "es": "La teoría del perfil delgado predice una pendiente de sustentación de 2π por radián (unos 0.11 por grado) hasta que el flujo se desprende y el ala entra en pérdida.",
+  "it": "La teoria dei profili sottili prevede una pendenza di portanza di 2π per radiante (circa 0.11 per grado) finché il flusso non si separa e l’ala va in stallo.",
+  "ar": "تتنبأ نظرية المقطع الرقيق بميل رفع قدره 2π لكل راديان (نحو 0.11 لكل درجة) حتى ينفصل التدفق وينهار الجناح.",
+  "he": "תאוריית הפרופיל הדק חוזה שיפוע עילוי של 2π לרדיאן (כ-0.11 למעלה) עד שהזרימה מתנתקת והכנף מזדקרת."
+ },
+ "Thin-airfoil theory: find c_l at α = 5°.": {
+  "fr": "Théorie des profils minces : trouvez c_l à α = 5°.",
+  "es": "Teoría del perfil delgado: halla c_l con α = 5°.",
+  "it": "Teoria dei profili sottili: trova c_l con α = 5°.",
+  "ar": "نظرية المقطع الرقيق: أوجد c_l عند α = 5°.",
+  "he": "תאוריית הפרופיל הדק: מצאו את c_l ב-α = 5°."
  },
  "Thinner air always helps.": {
   "fr": "Un air plus raréfié aide toujours.",
@@ -1322,6 +2546,69 @@
   "ar": "الدفع يوازن السحب؛ والرفع يوازن الوزن.",
   "he": "הדחף מאזן את הגרר; העילוי מאזן את המשקל."
  },
+ "Thrust of an air-breathing engine": {
+  "fr": "Poussée d’un moteur aérobie",
+  "es": "Empuje de un motor aerobio",
+  "it": "Spinta di un motore aerobico",
+  "ar": "دفع محرك يتنفس الهواء",
+  "he": "דחף של מנוע נושם אוויר"
+ },
+ "Thrust of an air-breathing engine ≈": {
+  "fr": "Poussée d’un moteur aérobie ≈",
+  "es": "Empuje de un motor aerobio ≈",
+  "it": "Spinta di un motore aerobico ≈",
+  "ar": "دفع محرك يتنفس الهواء ≈",
+  "he": "דחף של מנוע נושם אוויר ≈"
+ },
+ "Thrust per weight flow of propellant.": {
+  "fr": "Poussée par débit de poids d’ergol.",
+  "es": "Empuje por flujo de peso de propulsante.",
+  "it": "Spinta per portata in peso di propellente.",
+  "ar": "الدفع لكل تدفق وزني للوقود الدافع.",
+  "he": "דחף לכל ספיקת משקל של חומר הנעה."
+ },
+ "Thrust required in level flight equals drag; power required is drag × speed. Excess power becomes climb: rate of climb = (P_avail − P_req)/W.": {
+  "fr": "La poussée nécessaire en palier égale la traînée ; la puissance nécessaire vaut traînée × vitesse. L’excédent de puissance devient de la montée : taux de montée = (P_avail − P_req)/W.",
+  "es": "El empuje necesario en vuelo nivelado es igual a la resistencia; la potencia necesaria es resistencia × velocidad. El exceso de potencia se convierte en ascenso: tasa de ascenso = (P_avail − P_req)/W.",
+  "it": "In volo livellato la spinta necessaria è pari alla resistenza; la potenza necessaria è resistenza × velocità. La potenza in eccesso diventa salita: rateo di salita = (P_avail − P_req)/W.",
+  "ar": "الدفع المطلوب في الطيران الأفقي يساوي السحب؛ والقدرة المطلوبة هي السحب × السرعة. وتتحول القدرة الفائضة إلى صعود: معدل الصعود = (P_avail − P_req)/W.",
+  "he": "הדחף הנדרש בטיסה אופקית שווה לגרר; ההספק הנדרש הוא גרר × מהירות. עודף הספק הופך לטיפוס: קצב טיפוס = (P_avail − P_req)/W."
+ },
+ "Thrust, weight and climb.": {
+  "fr": "Poussée, poids et montée.",
+  "es": "Empuje, peso y ascenso.",
+  "it": "Spinta, peso e salita.",
+  "ar": "الدفع والوزن والصعود.",
+  "he": "דחף, משקל וטיפוס."
+ },
+ "Time aloft.": {
+  "fr": "Temps de vol.",
+  "es": "Tiempo en el aire.",
+  "it": "Tempo in volo.",
+  "ar": "الزمن في الجو.",
+  "he": "זמן באוויר."
+ },
+ "Too much makes control heavy and wastes trim drag.": {
+  "fr": "Trop de stabilité alourdit les commandes et gaspille de la traînée d’équilibrage.",
+  "es": "Demasiada hace pesados los mandos y desperdicia resistencia de compensación.",
+  "it": "Troppa rende pesanti i comandi e spreca resistenza di trim.",
+  "ar": "الاستقرار الزائد يجعل التحكم ثقيلًا ويهدر سحب الموازنة.",
+  "he": "יותר מדי מכבידה על ההיגוי ומבזבזת גרר איזון."
+ },
+ "Too much stability makes an aircraft sluggish and costs trim drag; some modern fighters are designed unstable and flown by computer.": {
+  "fr": "Trop de stabilité rend un avion peu maniable et coûte de la traînée d’équilibrage ; certains chasseurs modernes sont conçus instables et pilotés par ordinateur.",
+  "es": "Demasiada estabilidad vuelve al avión lento de respuesta y cuesta resistencia de compensación; algunos cazas modernos se diseñan inestables y los vuela una computadora.",
+  "it": "Troppa stabilità rende l’aereo poco reattivo e costa resistenza di trim; alcuni caccia moderni sono progettati instabili e pilotati dal computer.",
+  "ar": "الاستقرار الزائد يجعل الطائرة بطيئة الاستجابة ويكلف سحب الموازنة؛ وبعض المقاتلات الحديثة تُصمم غير مستقرة وتطير بالتحكم الحاسوبي.",
+  "he": "יותר מדי יציבות הופכת מטוס לאיטי בתגובה ועולה בגרר איזון; כמה מטוסי קרב מודרניים מתוכננים לא יציבים ומוטסים על ידי מחשב."
+ },
+ "Total drag C_D = C_D0 + KC_L² with K = 1/(πeAR). Maximum L/D occurs where induced drag equals parasite drag.": {
+  "fr": "Traînée totale C_D = C_D0 + KC_L² avec K = 1/(πeAR). La finesse maximale L/D est atteinte quand la traînée induite égale la traînée parasite.",
+  "es": "Resistencia total C_D = C_D0 + KC_L² con K = 1/(πeAR). El L/D máximo se da cuando la resistencia inducida iguala a la parásita.",
+  "it": "Resistenza totale C_D = C_D0 + KC_L² con K = 1/(πeAR). Il massimo L/D si ha quando la resistenza indotta è uguale a quella parassita.",
+  "ar": "السحب الكلي C_D = C_D0 + KC_L² حيث K = 1/(πeAR). وتحدث أعلى قيمة لـ L/D عندما يساوي السحب المستحث السحب الطفيلي.",
+  "he": "גרר כולל C_D = C_D0 + KC_L² עם K = 1/(πeAR). ה-L/D המרבי מתקבל כשהגרר המושרה שווה לגרר הטפילי."
+ },
  "Trade study": {
   "fr": "Étude de compromis",
   "es": "Estudio de compromiso",
@@ -1329,12 +2616,33 @@
   "ar": "دراسة الموازنة",
   "he": "ניתוח חלופות"
  },
+ "Trim": {
+  "fr": "Équilibrage (trim)",
+  "es": "Compensación (trim)",
+  "it": "Trim",
+  "ar": "الموازنة (Trim)",
+  "he": "איזון (Trim)"
+ },
  "Troposphere": {
   "fr": "Troposphère",
   "es": "Troposfera",
   "it": "Troposfera",
   "ar": "التروبوسفير",
   "he": "טרופוספרה"
+ },
+ "Turbofan": {
+  "fr": "Turbosoufflante",
+  "es": "Turbofán",
+  "it": "Turbofan",
+  "ar": "المحرك المروحي التوربيني",
+  "he": "טורבו-מניפה"
+ },
+ "Turbojet: all air passes through the core. Turbofan: most air bypasses the core through the fan. Turboprop: a propeller driven by a gas turbine.": {
+  "fr": "Turboréacteur : tout l’air passe par le cœur. Turbosoufflante : la majeure partie de l’air contourne le cœur via la soufflante. Turbopropulseur : une hélice entraînée par une turbine à gaz.",
+  "es": "Turborreactor: todo el aire pasa por el núcleo. Turbofán: la mayor parte del aire rodea el núcleo a través del ventilador. Turbohélice: una hélice movida por una turbina de gas.",
+  "it": "Turbogetto: tutta l’aria passa nel nucleo. Turbofan: gran parte dell’aria aggira il nucleo passando per il fan. Turboelica: un’elica mossa da una turbina a gas.",
+  "ar": "المحرك النفاث التوربيني: كل الهواء يمر عبر القلب. المحرك المروحي التوربيني: معظم الهواء يتجاوز القلب عبر المروحة. المحرك التوربيني المروحي الدافع: مروحة دافعة تديرها توربينة غازية.",
+  "he": "טורבו-סילון: כל האוויר עובר בליבה. טורבו-מניפה: רוב האוויר עוקף את הליבה דרך המניפה. טורבו-פרופ: מדחף המונע בטורבינת גז."
  },
  "Two wing concepts are scored out of 10 on cost (weight 0.3), efficiency (0.5) and ease of building (0.2). Concept A scores 8, 6, 9; B scores 5, 9, 6. Which wins?": {
   "fr": "Deux concepts d’aile sont notés sur 10 pour le coût (poids 0.3), l’efficacité (0.5) et la facilité de construction (0.2). Le concept A obtient 8, 6, 9 ; B obtient 5, 9, 6. Lequel l’emporte ?",
@@ -1350,12 +2658,26 @@
   "ar": "استخدام نموذج الغلاف الجوي القياسي لإيجاد T وp وρ عند الارتفاع.",
   "he": "להשתמש במודל אטמוספרה תקנית כדי למצוא T, p ו-ρ בגובה."
  },
+ "Use the Breguet range equation.": {
+  "fr": "Utiliser l’équation de Breguet de la distance franchissable.",
+  "es": "Usar la ecuación de alcance de Breguet.",
+  "it": "Usare l’equazione di Breguet per l’autonomia di distanza.",
+  "ar": "استخدام معادلة بريغيه للمدى.",
+  "he": "להשתמש במשוואת הטווח של בריגה."
+ },
  "Use the NASA Glenn simulators to check your intuition.": {
   "fr": "Utilisez les simulateurs de NASA Glenn pour vérifier votre intuition.",
   "es": "Usa los simuladores de NASA Glenn para comprobar tu intuición.",
   "it": "Usa i simulatori di NASA Glenn per verificare la tua intuizione.",
   "ar": "استخدم محاكيات NASA Glenn لاختبار حدسك.",
   "he": "השתמשו בסימולטורים של NASA Glenn כדי לבדוק את האינטואיציה שלכם."
+ },
+ "Use the drag polar C_D = C_D0 + C_L²/(πeAR) to find the best lift-to-drag ratio.": {
+  "fr": "Utiliser la polaire de traînée C_D = C_D0 + C_L²/(πeAR) pour trouver la meilleure finesse.",
+  "es": "Usar la polar de resistencia C_D = C_D0 + C_L²/(πeAR) para hallar la mejor relación sustentación-resistencia.",
+  "it": "Usare la polare di resistenza C_D = C_D0 + C_L²/(πeAR) per trovare la massima efficienza aerodinamica.",
+  "ar": "استخدام قطبية السحب C_D = C_D0 + C_L²/(πeAR) لإيجاد أفضل نسبة رفع إلى سحب.",
+  "he": "להשתמש בפולרת הגרר C_D = C_D0 + C_L²/(πeAR) כדי למצוא את יחס העילוי לגרר הטוב ביותר."
  },
  "Use the lift and drag equations.": {
   "fr": "Utiliser les équations de portance et de traînée.",
@@ -1364,12 +2686,26 @@
   "ar": "استخدام معادلتي الرفع والسحب.",
   "he": "להשתמש במשוואות העילוי והגרר."
  },
+ "Use the momentum thrust equation.": {
+  "fr": "Utiliser l’équation de poussée par la quantité de mouvement.",
+  "es": "Usar la ecuación de empuje por cantidad de movimiento.",
+  "it": "Usare l’equazione della spinta dalla quantità di moto.",
+  "ar": "استخدام معادلة الدفع بكمية الحركة.",
+  "he": "להשתמש במשוואת הדחף לפי תנע."
+ },
  "Use thin-airfoil theory: c_l ≈ 2πα.": {
   "fr": "Utiliser la théorie des profils minces : c_l ≈ 2πα.",
   "es": "Usar la teoría del perfil delgado: c_l ≈ 2πα.",
   "it": "Usare la teoria dei profili sottili: c_l ≈ 2πα.",
   "ar": "استخدام نظرية المقطع الرقيق: c_l ≈ 2πα.",
   "he": "להשתמש בתאוריית הפרופיל הדק: c_l ≈ 2πα."
+ },
+ "Using c_l = 2πα, what angle gives c_l = 0.5?": {
+  "fr": "Avec c_l = 2πα, quel angle donne c_l = 0.5 ?",
+  "es": "Con c_l = 2πα, ¿qué ángulo da c_l = 0.5?",
+  "it": "Con c_l = 2πα, quale angolo dà c_l = 0.5?",
+  "ar": "باستخدام c_l = 2πα، ما الزاوية التي تعطي c_l = 0.5؟",
+  "he": "בעזרת c_l = 2πα, איזו זווית נותנת c_l = 0.5?"
  },
  "V_s = √(2W/(ρSC_L,max)).": {
   "fr": "V_s = √(2W/(ρSC_L,max)).",
@@ -1469,12 +2805,47 @@
   "ar": "من أين يأتي الرفع والسحب، والمعادلتان اللتان تحددان أبعاد كل جناح: L = ½ρV²SC_L وD = ½ρV²SC_D.",
   "he": "מאיפה מגיעים העילוי והגרר, ושתי המשוואות שקובעות את ממדי כל כנף: L = ½ρV²SC_L ו-D = ½ρV²SC_D."
  },
+ "Whether oscillations die out.": {
+  "fr": "Le fait que les oscillations s’amortissent ou non.",
+  "es": "Si las oscilaciones se amortiguan.",
+  "it": "Se le oscillazioni si smorzano.",
+  "ar": "ما إذا كانت التذبذبات تتلاشى.",
+  "he": "האם התנודות דועכות."
+ },
+ "Which surface controls pitch?": {
+  "fr": "Quelle gouverne contrôle le tangage ?",
+  "es": "¿Qué superficie controla el cabeceo?",
+  "it": "Quale superficie controlla il beccheggio?",
+  "ar": "أي سطح يتحكم في الانحدار؟",
+  "he": "איזה משטח שולט בעלרוד?"
+ },
+ "Why a well-designed aircraft returns to steady flight by itself, and how pilots and computers control it.": {
+  "fr": "Pourquoi un avion bien conçu revient de lui-même en vol stabilisé, et comment les pilotes et les ordinateurs le contrôlent.",
+  "es": "Por qué un avión bien diseñado vuelve solo al vuelo estable, y cómo lo controlan los pilotos y las computadoras.",
+  "it": "Perché un aereo ben progettato torna da solo al volo stazionario, e come piloti e computer lo controllano.",
+  "ar": "لماذا تعود الطائرة جيدة التصميم من تلقاء نفسها إلى الطيران المستقر، وكيف يتحكم فيها الطيارون والحواسيب.",
+  "he": "למה מטוס מתוכנן היטב חוזר מעצמו לטיסה יציבה, ואיך טייסים ומחשבים שולטים בו."
+ },
  "Why did the Wright brothers build a wind tunnel?": {
   "fr": "Pourquoi les frères Wright ont-ils construit une soufflerie ?",
   "es": "¿Por qué los hermanos Wright construyeron un túnel de viento?",
   "it": "Perché i fratelli Wright costruirono una galleria del vento?",
   "ar": "لماذا بنى الأخوان رايت نفق رياح؟",
   "he": "למה האחים רייט בנו מנהרת רוח?"
+ },
+ "Why do airliners use high-bypass turbofans?": {
+  "fr": "Pourquoi les avions de ligne utilisent-ils des turbosoufflantes à grand taux de dilution ?",
+  "es": "¿Por qué los aviones de pasajeros usan turbofanes de alto índice de derivación?",
+  "it": "Perché gli aerei di linea usano turbofan ad alto rapporto di by-pass?",
+  "ar": "لماذا تستخدم طائرات الركاب محركات مروحية توربينية عالية نسبة التجاوز؟",
+  "he": "למה מטוסי נוסעים משתמשים בטורבו-מניפות עם יחס עקיפה גבוה?"
+ },
+ "Why does a paper airplane with no nose weight pitch up and stall?": {
+  "fr": "Pourquoi un avion en papier sans lest dans le nez se cabre-t-il et décroche-t-il ?",
+  "es": "¿Por qué un avión de papel sin lastre en la nariz encabrita y entra en pérdida?",
+  "it": "Perché un aeroplanino di carta senza zavorra nel muso cabra e va in stallo?",
+  "ar": "لماذا ترتفع مقدمة الطائرة الورقية التي بلا ثقل في المقدمة ثم تنهار؟",
+  "he": "למה מטוס נייר בלי משקולת באף מרים את האף ומזדקר?"
  },
  "Why the equal-transit explanation is wrong.": {
   "fr": "Pourquoi l’explication du transit égal est fausse.",
@@ -1483,12 +2854,26 @@
   "ar": "لماذا تفسير زمن العبور المتساوي خاطئ.",
   "he": "למה ההסבר של זמן מעבר שווה שגוי."
  },
+ "Wingtip devices make induced drag zero.": {
+  "fr": "Les dispositifs de bout d’aile annulent la traînée induite.",
+  "es": "Los dispositivos de punta de ala eliminan la resistencia inducida.",
+  "it": "I dispositivi d’estremità alare annullano la resistenza indotta.",
+  "ar": "أجهزة أطراف الأجنحة تجعل السحب المستحث صفرًا.",
+  "he": "התקני קצה כנף מאפסים את הגרר המושרה."
+ },
  "Wingtip vortices tilt the lift backward.": {
   "fr": "Les tourbillons marginaux inclinent la portance vers l’arrière.",
   "es": "Los vórtices de punta de ala inclinan la sustentación hacia atrás.",
   "it": "I vortici d’estremità inclinano la portanza all’indietro.",
   "ar": "دوامات أطراف الجناح تميل الرفع إلى الخلف.",
   "he": "מערבולות קצה הכנף מטות את העילוי לאחור."
+ },
+ "With C_D0 = 0.025, e = 0.8 and AR = 7.5, find (L/D)max and the C_L where it occurs.": {
+  "fr": "Avec C_D0 = 0.025, e = 0.8 et AR = 7.5, trouvez (L/D)max et le C_L correspondant.",
+  "es": "Con C_D0 = 0.025, e = 0.8 y AR = 7.5, halla (L/D)max y el C_L en que ocurre.",
+  "it": "Con C_D0 = 0.025, e = 0.8 e AR = 7.5, trova (L/D)max e il C_L a cui si verifica.",
+  "ar": "مع C_D0 = 0.025 وe = 0.8 وAR = 7.5، أوجد (L/D)max وقيمة C_L التي تحدث عندها.",
+  "he": "עם C_D0 = 0.025, e = 0.8 ו-AR = 7.5, מצאו את (L/D)max ואת ה-C_L שבו הוא מתקבל."
  },
  "With C_L,max = 1.6, find this airplane’s stall speed at sea level.": {
   "fr": "Avec C_L,max = 1.6, trouvez la vitesse de décrochage de cet avion au niveau de la mer.",
@@ -1504,12 +2889,54 @@
   "ar": "Wright Flyer",
   "he": "Wright Flyer"
  },
+ "ahead of the neutral point": {
+  "fr": "en avant du point neutre",
+  "es": "delante del punto neutro",
+  "it": "davanti al punto neutro",
+  "ar": "أمام النقطة المحايدة",
+  "he": "לפני הנקודה הניטרלית"
+ },
+ "at the tail": {
+  "fr": "à l’empennage",
+  "es": "en la cola",
+  "it": "in coda",
+  "ar": "عند الذيل",
+  "he": "בזנב"
+ },
+ "at the wingtip": {
+  "fr": "en bout d’aile",
+  "es": "en la punta del ala",
+  "it": "all’estremità alare",
+  "ar": "عند طرف الجناح",
+  "he": "בקצה הכנף"
+ },
+ "behind the neutral point": {
+  "fr": "derrière le point neutre",
+  "es": "detrás del punto neutro",
+  "it": "dietro il punto neutro",
+  "ar": "خلف النقطة المحايدة",
+  "he": "מאחורי הנקודה הניטרלית"
+ },
+ "bypasses the core": {
+  "fr": "contourne le cœur",
+  "es": "rodea el núcleo",
+  "it": "aggira il nucleo",
+  "ar": "يتجاوز القلب",
+  "he": "עוקף את הליבה"
+ },
  "choosing an engine": {
   "fr": "le choix d’un moteur",
   "es": "elegir un motor",
   "it": "la scelta di un motore",
   "ar": "اختيار محرك",
   "he": "בחירת מנוע"
+ },
+ "close to 1": {
+  "fr": "proche de 1",
+  "es": "cercano a 1",
+  "it": "vicino a 1",
+  "ar": "قريبة من 1",
+  "he": "קרוב ל-1"
  },
  "compares options against weighted criteria": {
   "fr": "compare des options selon des critères pondérés",
@@ -1539,6 +2966,13 @@
   "ar": "السحب",
   "he": "גרר"
  },
+ "drag is zero": {
+  "fr": "la traînée est nulle",
+  "es": "la resistencia es cero",
+  "it": "la resistenza è nulla",
+  "ar": "السحب صفر",
+  "he": "הגרר אפס"
+ },
  "engine exhaust": {
   "fr": "l’échappement des moteurs",
   "es": "el escape de los motores",
@@ -1546,12 +2980,40 @@
   "ar": "عادم المحرك",
   "he": "פליטת המנוע"
  },
+ "engine thrust": {
+  "fr": "la poussée des moteurs",
+  "es": "el empuje del motor",
+  "it": "la spinta del motore",
+  "ar": "دفع المحرك",
+  "he": "דחף המנוע"
+ },
+ "excess power": {
+  "fr": "de l’excédent de puissance",
+  "es": "el exceso de potencia",
+  "it": "la potenza in eccesso",
+  "ar": "القدرة الفائضة",
+  "he": "עודף הספק"
+ },
+ "extra lift only": {
+  "fr": "d’un surplus de portance uniquement",
+  "es": "solo más sustentación",
+  "it": "solo più portanza",
+  "ar": "رفع إضافي فقط",
+  "he": "עילוי נוסף בלבד"
+ },
  "flight test": {
   "fr": "l’essai en vol",
   "es": "la prueba de vuelo",
   "it": "la prova di volo",
   "ar": "اختبار الطيران",
   "he": "ניסוי טיסה"
+ },
+ "goes through the combustor": {
+  "fr": "traverse la chambre de combustion",
+  "es": "pasa por la cámara de combustión",
+  "it": "passa nella camera di combustione",
+  "ar": "يمر عبر غرفة الاحتراق",
+  "he": "עובר דרך תא הבעירה"
  },
  "halves lift": {
   "fr": "divise la portance par deux",
@@ -1567,6 +3029,20 @@
   "ar": "ليس لها أثر",
   "he": "אינה משפיעה"
  },
+ "induced drag": {
+  "fr": "la traînée induite",
+  "es": "la resistencia inducida",
+  "it": "la resistenza indotta",
+  "ar": "السحب المستحث",
+  "he": "גרר מושרה"
+ },
+ "induced drag = parasite drag": {
+  "fr": "traînée induite = traînée parasite",
+  "es": "resistencia inducida = resistencia parásita",
+  "it": "resistenza indotta = resistenza parassita",
+  "ar": "السحب المستحث = السحب الطفيلي",
+  "he": "גרר מושרה = גרר טפילי"
+ },
  "inertial and viscous effects": {
   "fr": "les effets d’inertie et de viscosité",
   "es": "efectos inerciales y viscosos",
@@ -1581,6 +3057,27 @@
   "ar": "تُجرى بعد اختبار الطيران",
   "he": "נעשה אחרי ניסויי טיסה"
  },
+ "is heated to 2,000 K": {
+  "fr": "est chauffée à 2000 K",
+  "es": "se calienta a 2000 K",
+  "it": "viene scaldata a 2000 K",
+  "ar": "يُسخَّن إلى 2000 K",
+  "he": "מחומם ל-2000 K"
+ },
+ "is stored": {
+  "fr": "est stockée",
+  "es": "se almacena",
+  "it": "viene immagazzinata",
+  "ar": "يُخزَّن",
+  "he": "מאוחסן"
+ },
+ "large": {
+  "fr": "grand",
+  "es": "grande",
+  "it": "grande",
+  "ar": "كبيرة",
+  "he": "גדול"
+ },
  "lift and drag": {
   "fr": "la portance et la traînée",
   "es": "sustentación y resistencia",
@@ -1588,12 +3085,40 @@
   "ar": "الرفع والسحب",
   "he": "עילוי לגרר"
  },
+ "lower speed": {
+  "fr": "d’une vitesse plus faible",
+  "es": "menor velocidad",
+  "it": "una velocità più bassa",
+  "ar": "سرعة أقل",
+  "he": "מהירות נמוכה יותר"
+ },
+ "lower weight only": {
+  "fr": "d’une masse plus faible uniquement",
+  "es": "solo menos peso",
+  "it": "solo meno peso",
+  "ar": "وزن أقل فقط",
+  "he": "משקל נמוך יותר בלבד"
+ },
  "making lift with a finite wing": {
   "fr": "la production de portance avec une aile finie",
   "es": "generar sustentación con un ala finita",
   "it": "la generazione di portanza con un’ala finita",
   "ar": "توليد الرفع بجناح محدود",
   "he": "יצירת עילוי בכנף סופית"
+ },
+ "neutral": {
+  "fr": "neutre",
+  "es": "neutro",
+  "it": "neutro",
+  "ar": "محايدة",
+  "he": "ניטרלי"
+ },
+ "newtons": {
+  "fr": "newtons",
+  "es": "newtons",
+  "it": "newton",
+  "ar": "النيوتن",
+  "he": "ניוטונים"
  },
  "paint roughness": {
   "fr": "la rugosité de la peinture",
@@ -1609,12 +3134,33 @@
   "ar": "تختار القطعة الأرخص",
   "he": "בוחר את החלק הזול ביותר"
  },
+ "pitch": {
+  "fr": "le tangage",
+  "es": "el cabeceo",
+  "it": "il beccheggio",
+  "ar": "الانحدار",
+  "he": "עלרוד"
+ },
  "quadruples lift": {
   "fr": "quadruple la portance",
   "es": "cuadruplica la sustentación",
   "it": "quadruplica la portanza",
   "ar": "تضاعف الرفع أربع مرات",
   "he": "מגדילה את העילוי פי ארבעה"
+ },
+ "roll": {
+  "fr": "le roulis",
+  "es": "el alabeo",
+  "it": "il rollio",
+  "ar": "الدحرجة",
+  "he": "גלגול"
+ },
+ "seconds": {
+  "fr": "secondes",
+  "es": "segundos",
+  "it": "secondi",
+  "ar": "الثواني",
+  "he": "שניות"
  },
  "shock waves only": {
   "fr": "uniquement les ondes de choc",
@@ -1623,12 +3169,40 @@
   "ar": "موجات الصدمة فقط",
   "he": "גלי הלם בלבד"
  },
+ "skin friction": {
+  "fr": "le frottement",
+  "es": "la fricción superficial",
+  "it": "l’attrito superficiale",
+  "ar": "احتكاك السطح",
+  "he": "חיכוך פני שטח"
+ },
  "speed and sound speed": {
   "fr": "la vitesse et la vitesse du son",
   "es": "la velocidad y la velocidad del sonido",
   "it": "velocità e velocità del suono",
   "ar": "السرعة وسرعة الصوت",
   "he": "מהירות למהירות הקול"
+ },
+ "stable": {
+  "fr": "stable",
+  "es": "estable",
+  "it": "stabile",
+  "ar": "مستقرة",
+  "he": "יציב"
+ },
+ "stalled": {
+  "fr": "décroché",
+  "es": "en pérdida",
+  "it": "in stallo",
+  "ar": "في حالة انهيار",
+  "he": "בהזדקרות"
+ },
+ "structure weight": {
+  "fr": "la masse de la structure",
+  "es": "el peso de la estructura",
+  "it": "il peso della struttura",
+  "ar": "وزن الهيكل",
+  "he": "משקל המבנה"
  },
  "tests a prototype to failure": {
   "fr": "teste un prototype jusqu’à la rupture",
@@ -1637,12 +3211,33 @@
   "ar": "تختبر نموذجًا أوليًا حتى الانهيار",
   "he": "בודק אב-טיפוס עד כשל"
  },
+ "the initial tendency": {
+  "fr": "la tendance initiale",
+  "es": "la tendencia inicial",
+  "it": "la tendenza iniziale",
+  "ar": "الميل الابتدائي",
+  "he": "הנטייה ההתחלתית"
+ },
  "the mission and requirements": {
   "fr": "la mission et les exigences",
   "es": "la misión y los requisitos",
   "it": "la missione e i requisiti",
   "ar": "المهمة والمتطلبات",
   "he": "המשימה והדרישות"
+ },
+ "the motion over time": {
+  "fr": "le mouvement au fil du temps",
+  "es": "el movimiento a lo largo del tiempo",
+  "it": "il moto nel tempo",
+  "ar": "الحركة مع الوقت",
+  "he": "התנועה לאורך זמן"
+ },
+ "the wing is stalled": {
+  "fr": "l’aile est décrochée",
+  "es": "el ala está en pérdida",
+  "it": "l’ala è in stallo",
+  "ar": "الجناح في حالة انهيار",
+  "he": "הכנף בהזדקרות"
  },
  "thrust": {
   "fr": "à la poussée",
@@ -1658,6 +3253,27 @@
   "ar": "الدفع والوزن",
   "he": "דחף למשקל"
  },
+ "unstable": {
+  "fr": "instable",
+  "es": "inestable",
+  "it": "instabile",
+  "ar": "غير مستقرة",
+  "he": "לא יציב"
+ },
+ "v_e = 600 m/s, η_p ≈ 0.59: much less efficient.": {
+  "fr": "v_e = 600 m/s, η_p ≈ 0.59 : bien moins efficace.",
+  "es": "v_e = 600 m/s, η_p ≈ 0.59: mucho menos eficiente.",
+  "it": "v_e = 600 m/s, η_p ≈ 0.59: molto meno efficiente.",
+  "ar": "v_e = 600 m/s، η_p ≈ 0.59: أقل كفاءة بكثير.",
+  "he": "v_e = 600 m/s, η_p ≈ 0.59: יעיל הרבה פחות."
+ },
+ "wave drag": {
+  "fr": "la traînée d’onde",
+  "es": "la resistencia de onda",
+  "it": "la resistenza d’onda",
+  "ar": "السحب الموجي",
+  "he": "גרר גלים"
+ },
  "weight": {
   "fr": "au poids",
   "es": "el peso",
@@ -1665,12 +3281,75 @@
   "ar": "الوزن",
   "he": "משקל"
  },
+ "weight only": {
+  "fr": "la masse uniquement",
+  "es": "solo el peso",
+  "it": "solo il peso",
+  "ar": "الوزن فقط",
+  "he": "המשקל בלבד"
+ },
+ "x_cg = 11.25 cm from the nose.": {
+  "fr": "x_cg = 11.25 cm depuis le nez.",
+  "es": "x_cg = 11.25 cm desde la nariz.",
+  "it": "x_cg = 11.25 cm dal muso.",
+  "ar": "x_cg = 11.25 cm من المقدمة.",
+  "he": "x_cg = 11.25 cm מהאף."
+ },
+ "yaw": {
+  "fr": "le lacet",
+  "es": "la guiñada",
+  "it": "l’imbardata",
+  "ar": "الانعراج",
+  "he": "סבסוב"
+ },
+ "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.": {
+  "fr": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+  "es": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+  "it": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+  "ar": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+  "he": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+ },
+ "α = 5π/180 = 0.0873 rad.": {
+  "fr": "α = 5π/180 = 0.0873 rad.",
+  "es": "α = 5π/180 = 0.0873 rad.",
+  "it": "α = 5π/180 = 0.0873 rad.",
+  "ar": "α = 5π/180 = 0.0873 rad.",
+  "he": "α = 5π/180 = 0.0873 rad."
+ },
+ "γ = arctan(1/20).": {
+  "fr": "γ = arctan(1/20).",
+  "es": "γ = arctan(1/20).",
+  "it": "γ = arctan(1/20).",
+  "ar": "γ = arctan(1/20).",
+  "he": "γ = arctan(1/20)."
+ },
+ "π per rad": {
+  "fr": "π par rad",
+  "es": "π por rad",
+  "it": "π per rad",
+  "ar": "π لكل rad",
+  "he": "π לרדיאן"
+ },
  "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, about 30% of sea level.": {
   "fr": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, environ 30% du niveau de la mer.",
   "es": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, cerca del 30% del nivel del mar.",
   "it": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, circa il 30% del livello del mare.",
   "ar": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³، أي نحو 30% من مستوى سطح البحر.",
   "he": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, כ-30% מגובה פני הים."
+ },
+ "≈ 4,079 s. Air-breathers beat rockets on this measure because they do not carry their oxidizer.": {
+  "fr": "≈ 4079 s. Les moteurs aérobies battent les fusées sur ce critère car ils n’emportent pas leur comburant.",
+  "es": "≈ 4079 s. Los motores aerobios superan a los cohetes en esta medida porque no llevan su oxidante.",
+  "it": "≈ 4079 s. I motori aerobici battono i razzi su questa misura perché non trasportano il proprio ossidante.",
+  "ar": "≈ 4079 s. تتفوق المحركات التي تتنفس الهواء على الصواريخ في هذا المقياس لأنها لا تحمل المؤكسد معها.",
+  "he": "≈ 4079 s. מנועים נושמי אוויר עדיפים על רקטות במדד הזה כי הם אינם נושאים את המחמצן שלהם."
+ },
+ "≈ 52.6 kW (about 71 hp).": {
+  "fr": "≈ 52.6 kW (environ 71 ch).",
+  "es": "≈ 52.6 kW (unos 71 hp).",
+  "it": "≈ 52.6 kW (circa 71 CV).",
+  "ar": "≈ 52.6 kW (نحو 71 حصانًا).",
+  "he": "≈ 52.6 kW (כ-71 כוח סוס)."
  },
  "≈ 6.5 °C per km in the troposphere.": {
   "fr": "≈ 6.5 °C par km dans la troposphère.",
