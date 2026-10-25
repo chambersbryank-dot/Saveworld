@@ -5869,5 +5869,12 @@
   "bytes": 1478745,
   "sha256": "b32ccdd8c48c2bc0f53267039c406c24fa8257cf9dbec00071cc2651455ba648",
   "type": "application/pdf"
+ },
+ "courses/Dynamics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Dynamics_Study_Guide.ea938dbccffa.pdf",
+  "key": "courses/Dynamics_Study_Guide.ea938dbccffa.pdf",
+  "bytes": 1494912,
+  "sha256": "ea938dbccffaf14f974a9708d44b1225da05d8879f7e023e100bdb707e22ebfb",
+  "type": "application/pdf"
  }
 }
