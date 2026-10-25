@@ -1228,7 +1228,8 @@
   "Engineering_Graphics_CAD.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
   "Intro_to_Programming.html": "assets/ISS_Flyaround_2021.jpg",
   "Calculus_III.html": "assets/EPIC_Earth.jpg",
-  "Differential_Equations.html": "assets/EPIC_Earth.jpg"
+  "Differential_Equations.html": "assets/EPIC_Earth.jpg",
+  "Physics_II.html": "assets/SDO_Sun.jpg"
  },
  "slides": {
   "pools": {
@@ -1759,6 +1760,11 @@
     "images/GRACE_FO_PIA22445.jpg",
     "images/Sentinel6B_Launch.jpg",
     "images/SWOT_Orbit_Illustration.jpg"
+   ],
+   "Physics_II.html": [
+    "images/Aurora_Borealis_ISS072-E-159172.jpg",
+    "images/GOES19_GOESU_KSC.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg"
    ]
   }
  }
