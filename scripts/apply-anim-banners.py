@@ -13,6 +13,7 @@ import os, re, glob, json, sys, html
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, 'scripts')
 import sp_banner as SPB
+import sp_slides as SPX
 
 SKIP = {'index.html', 'Artemis_II.html', 'Project-Rawane.html', 'Solutions.html', 'Top_Ten.html', 'Amazing_Facts.html'}
 CFG = json.load(open('assets/data/anim-banners.json', encoding='utf8'))
@@ -21,7 +22,7 @@ TM = {l: json.load(open(f'i18n/{l}.json', encoding='utf8')) for l in ('fr', 'es'
 PAUSE_LABEL = 'Pause banner animation'
 MK = lambda x: f'<!-- ANIMBAN:START -->{x}<!-- ANIMBAN:END -->'
 ADD = ['sp-anim-banner', 'has-pause', 'pg-anim']
-STRIPC = ADD + ['pg-long', 'pg-xlong']
+STRIPC = ADD + ['pg-long', 'pg-xlong'] + [f'spx-n{i}' for i in range(2, SPX.NMAX + 1)]
 
 CSS = (# one size everywhere (the Lesson_Builder standard), also over the compact Oct 17 hero-about / hero-help first-screen rule
        'html body.toc-sub[class] .page-hero[class].pg-anim{height:auto!important;min-height:max(34vh,260px)!important;padding:calc(var(--nav-height,88px) + 1.5rem) 1.25rem 3.4rem!important;box-sizing:border-box}'  # bottom room for pause + credit
@@ -38,6 +39,18 @@ CSS = (# one size everywhere (the Lesson_Builder standard), also over the compac
        'html body.toc-sub .page-hero.pg-anim .hero-credit{z-index:2}'
        '@media (prefers-reduced-motion:reduce){html body.toc-sub .page-hero.pg-anim .page-hero-content p{animation:none!important}}')
 
+# Oct 24 2026 (owner standard): several topic-matched photos per title banner. anim-banners.json "slides":
+#   "pools": topic -> [R2 manifest keys]; "pages": EN file -> topic. Credits come from the "images" entries with the same R2 key
+#   (every photo is already licensed + credited there; no ESA non-commercial, no JAXA, no RU/CN/KP/IR-led sources).
+SL = CFG.get('slides', {})
+CREDIT = {}
+for _a, _i in CFG['images'].items(): CREDIT.setdefault(_i['r2'], _i)
+CUR = {'page': None}
+def extra_slides(img):
+    pool = SL.get('pools', {}).get(SL.get('pages', {}).get(CUR['page'] or '', ''), [])
+    out = [CREDIT[k] for k in pool if k != img['r2'] and k in CREDIT and k in MF]
+    return out[:SPX.NMAX - 1]
+
 def t(lang, s): return TM.get(lang, {}).get(s) or s
 
 def strip(s):
@@ -51,15 +64,23 @@ def apply(s, lang, img):
     if not m: return s
     end = s.find('</section>', m.end())
     if end < 0: return s
-    e = MF[img['r2']]
-    pic = SPB.picture(e, '').replace('<img ', f'<img style="object-position:{img.get("pos", "50% 50%")}" ', 1)
+    slides = [img] + extra_slides(img)
+    pics, creds = [], []
+    for i, sl in enumerate(slides):
+        p = SPB.picture(MF[sl['r2']], '').replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
+        if i: p = p.replace('fetchpriority="high"', 'fetchpriority="low" loading="lazy"')
+        pics.append(f'<div class="spx-slide spx-{i}" aria-hidden="true">{p}</div>' if len(slides) > 1 else p)
+        creds.append(f'<span class="hero-credit spx-cred spx-c{i}">{SPB._e(t(lang, sl["credit"]))}</span>' if len(slides) > 1 else
+                     f'<span class="hero-credit">{SPB._e(t(lang, sl["credit"]))}</span>')
+    pic = ''.join(pics)
+    nslide = f' spx-n{len(slides)}' if len(slides) > 1 else ''
     body = re.sub(r'<span class="hero-credit">[\s\S]*?</span>', '', s[m.end():end])
     # Oct 18: long titles step down so the h1 stays on one line and the band keeps the Lesson_Builder height (279/261/306)
     hm = re.search(r'<h1[^>]*>([\s\S]*?)</h1>', body); n = len(html.unescape(re.sub(r'<[^>]+>', '', hm.group(1))).strip()) if hm else 0
     size = ' pg-xlong' if n > 44 else ' pg-long' if n > 26 else ''
     btn = SPB.PAUSE_BTN.replace(PAUSE_LABEL, t(lang, PAUSE_LABEL))
-    cred = f'<span class="hero-credit">{SPB._e(t(lang, img["credit"]))}</span>'
-    return (s[:m.start()] + f'<section class="{m.group(1)} {" ".join(ADD)}{size}"{m.group(2)}>' + MK(pic + '<span class="spb-sweep" aria-hidden="true"></span>')
+    cred = ''.join(creds)
+    return (s[:m.start()] + f'<section class="{m.group(1)} {" ".join(ADD)}{size}{nslide}"{m.group(2)}>' + MK(pic + '<span class="spb-sweep" aria-hidden="true"></span>')
             + body + MK(cred + btn) + '</section>' + MK(SPB.PAUSE_JS) + s[end + len('</section>'):])
 
 n = 0
@@ -71,11 +92,11 @@ for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
     img = CFG['images'].get(asset) if asset else None
     if base not in SKIP and img and img['r2'] in MF and re.search(r'<section class="page-hero', s2):
         s2 = re.sub(r'<!-- LCPPRE:START -->[\s\S]*?<!-- LCPPRE:END -->', '', s2)  # the CSS background is no longer used
-        s2 = apply(s2, lang, img)
+        CUR['page'] = base; s2 = apply(s2, lang, img)
     if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
 
 css = open('styles.css', encoding='utf8').read()
-css2 = re.sub(r'\n?/\* ANIMBAN:START \*/.*?/\* ANIMBAN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* ANIMBAN:START */\n' + CSS + '\n/* ANIMBAN:END */\n'
+css2 = re.sub(r'\n?/\* ANIMBAN:START \*/.*?/\* ANIMBAN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* ANIMBAN:START */\n' + CSS + SPX.css() + '\n/* ANIMBAN:END */\n'
 if css2 != css: open('styles.css', 'w', encoding='utf8').write(css2)
 SPB.write_css('styles.css')
 print('apply-anim-banners:', n, 'pages updated,', sum(1 for p, a in CFG['pages'].items() if a in CFG['images']), 'EN pages mapped')
