@@ -1233,7 +1233,8 @@
   "Statics.html": "assets/ISS_Flyaround_2021.jpg",
   "Dynamics.html": "assets/Landsat9_Launch.jpg",
   "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-  "Linear_Algebra.html": "assets/Landsat9_Launch.jpg"
+  "Linear_Algebra.html": "assets/Landsat9_Launch.jpg",
+  "Circuits.html": "assets/ISS_Flyaround_2021.jpg"
  },
  "slides": {
   "pools": {
@@ -1789,6 +1790,11 @@
     "images/GRACE_FO_Orbit.jpg",
     "images/SWOT_Orbit_Illustration.jpg",
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+   ],
+   "Circuits.html": [
+    "images/SDO_Sun.jpg",
+    "images/Aurora_Borealis_ISS072-E-159172.jpg",
+    "images/GOES19_GOESU_KSC.jpg"
    ]
   }
  }
