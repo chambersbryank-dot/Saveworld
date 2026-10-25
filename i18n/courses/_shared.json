@@ -1,0 +1,1437 @@
+{
+ " (answered {a})": {
+  "ar": " (تمت الإجابة عن {a})",
+  "es": " (respondidas: {a})",
+  "fr": " (réponses : {a})",
+  "he": " (נענו {a})",
+  "it": " (risposte: {a})"
+ },
+ " Best quiz scores: {q}.": {
+  "ar": " أفضل نتائج الاختبارات: {q}.",
+  "es": " Mejores puntuaciones en los cuestionarios: {q}.",
+  "fr": " Meilleurs scores aux quiz : {q}.",
+  "he": " הציונים הטובים ביותר בבחנים: {q}.",
+  "it": " Migliori punteggi nei quiz: {q}."
+ },
+ ". Activate to flip.": {
+  "ar": ". فعّلها لقلب البطاقة.",
+  "es": ". Actívala para darle la vuelta.",
+  "fr": ". Activez pour retourner la carte.",
+  "he": ". הפעילו כדי להפוך את הכרטיס.",
+  "it": ". Attiva per girare la carta."
+ },
+ "1 · Beginning": {
+  "ar": "1 · مبتدئ",
+  "es": "1 · Inicial",
+  "fr": "1 · Débutant",
+  "he": "1 · מתחיל",
+  "it": "1 · Principiante"
+ },
+ "15-week schedule": {
+  "ar": "جدول من 15 أسبوعًا",
+  "es": "Calendario de 15 semanas",
+  "fr": "Programme sur 15 semaines",
+  "he": "לוח זמנים ל־15 שבועות",
+  "it": "Programma di 15 settimane"
+ },
+ "2 · Developing": {
+  "ar": "2 · قيد التطور",
+  "es": "2 · En desarrollo",
+  "fr": "2 · En progression",
+  "he": "2 · מתפתח",
+  "it": "2 · In sviluppo"
+ },
+ "3 · Proficient": {
+  "ar": "3 · متمكن",
+  "es": "3 · Competente",
+  "fr": "3 · Compétent",
+  "he": "3 · מיומן",
+  "it": "3 · Competente"
+ },
+ "4 · Mastery": {
+  "ar": "4 · إتقان",
+  "es": "4 · Dominio",
+  "fr": "4 · Maîtrise",
+  "he": "4 · שליטה מלאה",
+  "it": "4 · Padronanza"
+ },
+ "A free four-year aerospace and STEM study track, built one course at a time.": {
+  "ar": "مسار دراسي مجاني لأربع سنوات في هندسة الطيران والفضاء والعلوم والتكنولوجيا، يُبنى دورةً بعد دورة.",
+  "es": "Un itinerario gratuito de cuatro años de ingeniería aeroespacial y STEM, construido curso a curso.",
+  "fr": "Un parcours gratuit de quatre ans en aérospatiale et STEM, construit un cours à la fois.",
+  "he": "מסלול לימודים חינמי של ארבע שנים בהנדסת אווירונאוטיקה וחלל ומדעים, שנבנה קורס אחר קורס.",
+  "it": "Un percorso gratuito di quattro anni in ingegneria aerospaziale e STEM, costruito un corso alla volta."
+ },
+ "A full design project from requirements to review.": {
+  "ar": "مشروع تصميم كامل من المتطلبات إلى المراجعة.",
+  "es": "Un proyecto de diseño completo, de los requisitos a la revisión.",
+  "fr": "Un projet de conception complet, des exigences à la revue finale.",
+  "he": "פרויקט תכנון מלא, מהדרישות ועד הסקירה.",
+  "it": "Un progetto di progettazione completo, dai requisiti alla revisione."
+ },
+ "About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.": {
+  "ar": "نحو 6 إلى 9 ساعات أسبوعيًا: قراءة وتمارين، وفي أسابيع المختبر، المختبر.",
+  "es": "Unas 6 a 9 horas por semana: lectura, problemas de práctica y, en las semanas de laboratorio, el laboratorio.",
+  "fr": "Environ 6 à 9 heures par semaine : lecture, exercices et, les semaines de TP, le TP.",
+  "he": "כ־6 עד 9 שעות בשבוע: קריאה, תרגילים, ובשבועות המעבדה גם המעבדה.",
+  "it": "Circa 6-9 ore a settimana: lettura, esercizi e, nelle settimane di laboratorio, il laboratorio."
+ },
+ "About this course": {
+  "ar": "عن هذه الدورة",
+  "es": "Sobre este curso",
+  "fr": "À propos de ce cours",
+  "he": "על הקורס",
+  "it": "Informazioni sul corso"
+ },
+ "Actually:": {
+  "ar": "في الحقيقة:",
+  "es": "En realidad:",
+  "fr": "En réalité :",
+  "he": "בפועל:",
+  "it": "In realtà:"
+ },
+ "Aerodynamics I": {
+  "ar": "الديناميكا الهوائية 1",
+  "es": "Aerodinámica I",
+  "fr": "Aérodynamique I",
+  "he": "אווירודינמיקה 1",
+  "it": "Aerodinamica I"
+ },
+ "Aerospace Structures": {
+  "ar": "هياكل الطيران والفضاء",
+  "es": "Estructuras aeroespaciales",
+  "fr": "Structures aérospatiales",
+  "he": "מבנים אווירונאוטיים וחלליים",
+  "it": "Strutture aerospaziali"
+ },
+ "Aim for level 3 or better in every unit before moving to the next course.": {
+  "ar": "استهدف المستوى 3 أو أعلى في كل وحدة قبل الانتقال إلى الدورة التالية.",
+  "es": "Apunta al nivel 3 o superior en cada unidad antes de pasar al siguiente curso.",
+  "fr": "Visez le niveau 3 ou mieux dans chaque unité avant de passer au cours suivant.",
+  "he": "שאפו לרמה 3 ומעלה בכל יחידה לפני שעוברים לקורס הבא.",
+  "it": "Punta al livello 3 o superiore in ogni unità prima di passare al corso successivo."
+ },
+ "Aircraft Performance": {
+  "ar": "أداء الطائرات",
+  "es": "Actuaciones de aeronaves",
+  "fr": "Performances des avions",
+  "he": "ביצועי מטוסים",
+  "it": "Prestazioni dei velivoli"
+ },
+ "All units": {
+  "ar": "كل الوحدات",
+  "es": "Todas las unidades",
+  "fr": "Toutes les unités",
+  "he": "כל היחידות",
+  "it": "Tutte le unità"
+ },
+ "Answer:": {
+  "ar": "الإجابة:",
+  "es": "Respuesta:",
+  "fr": "Réponse :",
+  "he": "תשובה:",
+  "it": "Risposta:"
+ },
+ "Answer: ": {
+  "ar": "الإجابة: ",
+  "es": "Respuesta: ",
+  "fr": "Réponse : ",
+  "he": "תשובה: ",
+  "it": "Risposta: "
+ },
+ "Atoms, reactions, bonding, gases and energy, with three labs.": {
+  "ar": "الذرات والتفاعلات والروابط والغازات والطاقة، مع ثلاثة مختبرات.",
+  "es": "Átomos, reacciones, enlaces, gases y energía, con tres laboratorios.",
+  "fr": "Atomes, réactions, liaisons, gaz et énergie, avec trois TP.",
+  "he": "אטומים, תגובות, קשרים, גזים ואנרגיה, עם שלוש מעבדות.",
+  "it": "Atomi, reazioni, legami, gas ed energia, con tre laboratori."
+ },
+ "Avionics & Systems Engineering": {
+  "ar": "إلكترونيات الطيران وهندسة النظم",
+  "es": "Aviónica e ingeniería de sistemas",
+  "fr": "Avionique et ingénierie des systèmes",
+  "he": "אוויוניקה והנדסת מערכות",
+  "it": "Avionica e ingegneria dei sistemi"
+ },
+ "Back to top": {
+  "ar": "العودة إلى الأعلى",
+  "es": "Volver arriba",
+  "fr": "Haut de page",
+  "he": "חזרה למעלה",
+  "it": "Torna su"
+ },
+ "Before you start": {
+  "ar": "قبل أن تبدأ",
+  "es": "Antes de empezar",
+  "fr": "Avant de commencer",
+  "he": "לפני שמתחילים",
+  "it": "Prima di iniziare"
+ },
+ "Betz limit": {
+  "ar": "حدّ بيتز",
+  "es": "Límite de Betz",
+  "fr": "Limite de Betz",
+  "he": "גבול בץ",
+  "it": "Limite di Betz"
+ },
+ "By the end of this unit you can:": {
+  "ar": "في نهاية هذه الوحدة ستستطيع أن:",
+  "es": "Al terminar esta unidad podrás:",
+  "fr": "À la fin de cette unité, vous saurez :",
+  "he": "בסוף היחידה הזו תוכלו:",
+  "it": "Alla fine di questa unità saprai:"
+ },
+ "Calculators": {
+  "ar": "الحاسبات",
+  "es": "Calculadoras",
+  "fr": "Calculateurs",
+  "he": "מחשבונים",
+  "it": "Calcolatori"
+ },
+ "Calculus I": {
+  "ar": "التفاضل والتكامل 1",
+  "es": "Cálculo I",
+  "fr": "Analyse I",
+  "he": "חשבון אינפיניטסימלי 1",
+  "it": "Analisi I"
+ },
+ "Calculus II": {
+  "ar": "التفاضل والتكامل 2",
+  "es": "Cálculo II",
+  "fr": "Analyse II",
+  "he": "חשבון אינפיניטסימלי 2",
+  "it": "Analisi II"
+ },
+ "Calculus III": {
+  "ar": "التفاضل والتكامل 3",
+  "es": "Cálculo III",
+  "fr": "Analyse III",
+  "he": "חשבון אינפיניטסימלי 3",
+  "it": "Analisi III"
+ },
+ "Capstone (aircraft or CubeSat)": {
+  "ar": "مشروع التخرج (طائرة أو CubeSat)",
+  "es": "Proyecto final (aeronave o CubeSat)",
+  "fr": "Projet de synthèse (avion ou CubeSat)",
+  "he": "פרויקט גמר (מטוס או CubeSat)",
+  "it": "Progetto finale (velivolo o CubeSat)"
+ },
+ "Card {i} of {n}: ": {
+  "ar": "البطاقة {i} من {n}: ",
+  "es": "Tarjeta {i} de {n}: ",
+  "fr": "Carte {i} sur {n} : ",
+  "he": "כרטיס {i} מתוך {n}: ",
+  "it": "Carta {i} di {n}: "
+ },
+ "Circuits": {
+  "ar": "الدوائر الكهربائية",
+  "es": "Circuitos",
+  "fr": "Circuits",
+  "he": "מעגלים חשמליים",
+  "it": "Circuiti"
+ },
+ "Cleaner fuels, efficient aircraft and lower emissions.": {
+  "ar": "وقود أنظف وطائرات أكفأ وانبعاثات أقل.",
+  "es": "Combustibles más limpios, aeronaves eficientes y menos emisiones.",
+  "fr": "Carburants plus propres, avions efficaces et émissions réduites.",
+  "he": "דלקים נקיים יותר, מטוסים יעילים ופליטות נמוכות יותר.",
+  "it": "Combustibili più puliti, velivoli efficienti ed emissioni più basse."
+ },
+ "Clear your saved progress and quiz scores for this course?": {
+  "ar": "هل تريد مسح تقدّمك ونتائج اختباراتك المحفوظة لهذه الدورة؟",
+  "es": "¿Borrar tu progreso y tus puntuaciones guardadas de este curso?",
+  "fr": "Effacer votre progression et vos scores de quiz enregistrés pour ce cours ?",
+  "he": "למחוק את ההתקדמות והציונים השמורים שלכם בקורס הזה?",
+  "it": "Cancellare i progressi e i punteggi dei quiz salvati per questo corso?"
+ },
+ "Coming soon": {
+  "ar": "قريبًا",
+  "es": "Próximamente",
+  "fr": "Bientôt disponible",
+  "he": "בקרוב",
+  "it": "Prossimamente"
+ },
+ "Common misconceptions": {
+  "ar": "مفاهيم خاطئة شائعة",
+  "es": "Ideas erróneas comunes",
+  "fr": "Idées reçues fréquentes",
+  "he": "תפיסות שגויות נפוצות",
+  "it": "Errori concettuali comuni"
+ },
+ "Conduction, convection and radiation.": {
+  "ar": "التوصيل والحمل والإشعاع.",
+  "es": "Conducción, convección y radiación.",
+  "fr": "Conduction, convection et rayonnement.",
+  "he": "הולכה, הסעה וקרינה.",
+  "it": "Conduzione, convezione e irraggiamento."
+ },
+ "Constant": {
+  "ar": "الثابت",
+  "es": "Constante",
+  "fr": "Constante",
+  "he": "קבוע",
+  "it": "Costante"
+ },
+ "Constants": {
+  "ar": "الثوابت",
+  "es": "Constantes",
+  "fr": "Constantes",
+  "he": "קבועים",
+  "it": "Costanti"
+ },
+ "Correct. ": {
+  "ar": "صحيح. ",
+  "es": "Correcto. ",
+  "fr": "Correct. ",
+  "he": "נכון. ",
+  "it": "Corretto. "
+ },
+ "Courses": {
+  "ar": "الدورات",
+  "es": "Cursos",
+  "fr": "Cours",
+  "he": "קורסים",
+  "it": "Corsi"
+ },
+ "Courses: free aerospace and STEM study track": {
+  "ar": "الدورات: مسار مجاني في هندسة الطيران والفضاء والعلوم",
+  "es": "Cursos: itinerario gratuito de ingeniería aeroespacial y STEM",
+  "fr": "Cours : parcours gratuit en aérospatiale et STEM",
+  "he": "קורסים: מסלול חינמי בהנדסת אווירונאוטיקה וחלל ומדעים",
+  "it": "Corsi: percorso gratuito in ingegneria aerospaziale e STEM"
+ },
+ "DC and AC circuit analysis.": {
+  "ar": "تحليل دوائر التيار المستمر والمتردد.",
+  "es": "Análisis de circuitos de corriente continua y alterna.",
+  "fr": "Analyse des circuits en courant continu et alternatif.",
+  "he": "ניתוח מעגלים בזרם ישר ובזרם חילופין.",
+  "it": "Analisi dei circuiti in corrente continua e alternata."
+ },
+ "Data table": {
+  "ar": "جدول البيانات",
+  "es": "Tabla de datos",
+  "fr": "Tableau de données",
+  "he": "טבלת נתונים",
+  "it": "Tabella dei dati"
+ },
+ "Differential Equations": {
+  "ar": "المعادلات التفاضلية",
+  "es": "Ecuaciones diferenciales",
+  "fr": "Équations différentielles",
+  "he": "משוואות דיפרנציאליות",
+  "it": "Equazioni differenziali"
+ },
+ "Do every practice problem on paper before opening the answer. Getting it wrong first and fixing it is how the method sticks.": {
+  "ar": "حلّ كل تمرين على الورق قبل فتح الإجابة. الخطأ أولًا ثم تصحيحه هو ما يرسّخ الطريقة.",
+  "es": "Haz cada problema en papel antes de abrir la respuesta. Equivocarte primero y corregirlo es lo que fija el método.",
+  "fr": "Faites chaque exercice sur papier avant d’ouvrir la réponse. Se tromper d’abord puis corriger, c’est ainsi que la méthode s’ancre.",
+  "he": "פתרו כל תרגיל על נייר לפני שפותחים את התשובה. לטעות קודם ולתקן זה מה שמקבע את השיטה.",
+  "it": "Svolgi ogni esercizio su carta prima di aprire la risposta. Sbagliare e poi correggersi è ciò che fissa il metodo."
+ },
+ "Download the PDF study guide": {
+  "ar": "تنزيل دليل الدراسة بصيغة PDF",
+  "es": "Descargar la guía de estudio en PDF",
+  "fr": "Télécharger le guide d’étude en PDF",
+  "he": "הורדת מדריך הלימוד כ־PDF",
+  "it": "Scarica la guida di studio in PDF"
+ },
+ "Dynamics": {
+  "ar": "الديناميكا",
+  "es": "Dinámica",
+  "fr": "Dynamique",
+  "he": "דינמיקה",
+  "it": "Dinamica"
+ },
+ "Each unit ends with a short, sourced section showing how its ideas help both people and nature.": {
+  "ar": "تنتهي كل وحدة بقسم قصير موثّق بالمصادر يبيّن كيف تساعد أفكارها الناس والطبيعة معًا.",
+  "es": "Cada unidad termina con una breve sección con fuentes que muestra cómo sus ideas ayudan a las personas y a la naturaleza.",
+  "fr": "Chaque unité se termine par une courte section sourcée qui montre comment ses idées aident à la fois les gens et la nature.",
+  "he": "כל יחידה מסתיימת בקטע קצר עם מקורות שמראה איך הרעיונות שלה עוזרים גם לאנשים וגם לטבע.",
+  "it": "Ogni unità si chiude con una breve sezione con fonti che mostra come le sue idee aiutano persone e natura."
+ },
+ "Earth observation": {
+  "ar": "رصد الأرض",
+  "es": "Observación de la Tierra",
+  "fr": "Observation de la Terre",
+  "he": "תצפית על כדור הארץ",
+  "it": "Osservazione della Terra"
+ },
+ "Electricity, magnetism, waves and optics.": {
+  "ar": "الكهرباء والمغناطيسية والموجات والبصريات.",
+  "es": "Electricidad, magnetismo, ondas y óptica.",
+  "fr": "Électricité, magnétisme, ondes et optique.",
+  "he": "חשמל, מגנטיות, גלים ואופטיקה.",
+  "it": "Elettricità, magnetismo, onde e ottica."
+ },
+ "Energy, entropy, cycles and engines.": {
+  "ar": "الطاقة والإنتروبيا والدورات والمحركات.",
+  "es": "Energía, entropía, ciclos y motores.",
+  "fr": "Énergie, entropie, cycles et moteurs.",
+  "he": "אנרגיה, אנטרופיה, מחזורים ומנועים.",
+  "it": "Energia, entropia, cicli e motori."
+ },
+ "Engineering Graphics / CAD": {
+  "ar": "الرسم الهندسي / التصميم بالحاسوب",
+  "es": "Dibujo técnico / CAD",
+  "fr": "Dessin technique / CAO",
+  "he": "שרטוט הנדסי / CAD",
+  "it": "Disegno tecnico / CAD"
+ },
+ "English": {
+  "ar": "بالإنجليزية",
+  "es": "inglés",
+  "fr": "anglais",
+  "he": "באנגלית",
+  "it": "inglese"
+ },
+ "Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.": {
+  "ar": "تربط كل دورة موضوعها بعمل حقيقي يساعد الناس والطبيعة، وتحيل إلى مصادر مجانية موثوقة.",
+  "es": "Cada curso conecta su tema con trabajo real que ayuda a las personas y a la naturaleza, y enlaza recursos gratuitos y fiables.",
+  "fr": "Chaque cours relie son sujet à des actions réelles qui aident les gens et la nature, et renvoie à des ressources gratuites et fiables.",
+  "he": "כל קורס מקשר את הנושא שלו לעבודה אמיתית שעוזרת לאנשים ולטבע, ומפנה למקורות חינמיים ואמינים.",
+  "it": "Ogni corso collega la sua materia a progetti reali che aiutano persone e natura, e rimanda a risorse gratuite e affidabili."
+ },
+ "Exam prep": {
+  "ar": "التحضير للامتحان",
+  "es": "Preparación de exámenes",
+  "fr": "Préparation aux examens",
+  "he": "הכנה למבחן",
+  "it": "Preparazione agli esami"
+ },
+ "Exam prep practice sets": {
+  "ar": "مجموعات تدريب للامتحان",
+  "es": "Series de práctica para exámenes",
+  "fr": "Séries d’entraînement aux examens",
+  "he": "מערכי תרגול למבחן",
+  "it": "Serie di esercizi per gli esami"
+ },
+ "Example {n}": {
+  "ar": "مثال {n}",
+  "es": "Ejemplo {n}",
+  "fr": "Exemple {n}",
+  "he": "דוגמה {n}",
+  "it": "Esempio {n}"
+ },
+ "Final practice set": {
+  "ar": "مجموعة التدريب النهائية",
+  "es": "Serie de práctica final",
+  "fr": "Série d’entraînement finale",
+  "he": "מערך תרגול מסכם",
+  "it": "Serie di esercizi finale"
+ },
+ "Final practice set (all units)": {
+  "ar": "مجموعة التدريب النهائية (كل الوحدات)",
+  "es": "Serie de práctica final (todas las unidades)",
+  "fr": "Série d’entraînement finale (toutes les unités)",
+  "he": "מערך תרגול מסכם (כל היחידות)",
+  "it": "Serie di esercizi finale (tutte le unità)"
+ },
+ "Flashcards": {
+  "ar": "بطاقات تعليمية",
+  "es": "Tarjetas de estudio",
+  "fr": "Cartes mémoire",
+  "he": "כרטיסיות",
+  "it": "Flashcard"
+ },
+ "Flight Dynamics & Controls": {
+  "ar": "ديناميكا الطيران والتحكم",
+  "es": "Dinámica de vuelo y control",
+  "fr": "Dynamique du vol et commandes",
+  "he": "דינמיקת טיסה ובקרה",
+  "it": "Dinamica del volo e controlli"
+ },
+ "Flight electronics and managing complex systems.": {
+  "ar": "إلكترونيات الطيران وإدارة النظم المعقدة.",
+  "es": "Electrónica de vuelo y gestión de sistemas complejos.",
+  "fr": "L’électronique de vol et la gestion des systèmes complexes.",
+  "he": "אלקטרוניקת טיסה וניהול מערכות מורכבות.",
+  "it": "Elettronica di volo e gestione di sistemi complessi."
+ },
+ "Flip": {
+  "ar": "اقلب",
+  "es": "Dar la vuelta",
+  "fr": "Retourner",
+  "he": "הפיכה",
+  "it": "Gira"
+ },
+ "Fluid Mechanics": {
+  "ar": "ميكانيكا الموائع",
+  "es": "Mecánica de fluidos",
+  "fr": "Mécanique des fluides",
+  "he": "מכניקת זורמים",
+  "it": "Meccanica dei fluidi"
+ },
+ "Forces and moments on structures at rest.": {
+  "ar": "القوى والعزوم على المنشآت الساكنة.",
+  "es": "Fuerzas y momentos en estructuras en reposo.",
+  "fr": "Forces et moments sur des structures au repos.",
+  "he": "כוחות ומומנטים על מבנים במנוחה.",
+  "it": "Forze e momenti su strutture in quiete."
+ },
+ "Formula sheet": {
+  "ar": "ورقة الصيغ",
+  "es": "Hoja de fórmulas",
+  "fr": "Fiche de formules",
+  "he": "דף נוסחאות",
+  "it": "Formulario"
+ },
+ "Free learning resources": {
+  "ar": "مصادر تعلّم مجانية",
+  "es": "Recursos de aprendizaje gratuitos",
+  "fr": "Ressources d’apprentissage gratuites",
+  "he": "מקורות לימוד חינמיים",
+  "it": "Risorse di apprendimento gratuite"
+ },
+ "Free self-study courses on Saving Planets: a four-year aerospace and STEM track with labs, quizzes and study guides. No credit, no cost.": {
+  "ar": "دورات مجانية للتعلّم الذاتي على Saving Planets: مسار لأربع سنوات في هندسة الطيران والفضاء والعلوم مع مختبرات واختبارات وأدلة دراسة. بلا ساعات معتمدة وبلا تكلفة.",
+  "es": "Cursos gratuitos de autoestudio en Saving Planets: un itinerario de cuatro años de ingeniería aeroespacial y STEM con laboratorios, cuestionarios y guías de estudio. Sin créditos ni costo.",
+  "fr": "Cours gratuits en autonomie sur Saving Planets : un parcours de quatre ans en aérospatiale et STEM avec TP, quiz et guides d’étude. Sans crédit, sans frais.",
+  "he": "קורסים חינמיים ללימוד עצמי ב־Saving Planets: מסלול של ארבע שנים בהנדסת אווירונאוטיקה וחלל ומדעים, עם מעבדות, בחנים ומדריכי לימוד. בלי נקודות זכות, בלי עלות.",
+  "it": "Corsi gratuiti di autoapprendimento su Saving Planets: un percorso di quattro anni in ingegneria aerospaziale e STEM con laboratori, quiz e guide di studio. Nessun credito, nessun costo."
+ },
+ "Free textbook section.": {
+  "ar": "قسم من كتاب مدرسي مجاني.",
+  "es": "Sección de libro de texto gratuita.",
+  "fr": "Section de manuel gratuite.",
+  "he": "פרק מספר לימוד חינמי.",
+  "it": "Sezione di un manuale gratuito."
+ },
+ "General Chemistry I + Lab": {
+  "ar": "الكيمياء العامة 1 + المختبر",
+  "es": "Química General I + Laboratorio",
+  "fr": "Chimie générale I + TP",
+  "he": "כימיה כללית 1 + מעבדה",
+  "it": "Chimica generale I + Laboratorio"
+ },
+ "Glossary": {
+  "ar": "مسرد المصطلحات",
+  "es": "Glosario",
+  "fr": "Glossaire",
+  "he": "מילון מונחים",
+  "it": "Glossario"
+ },
+ "Goal:": {
+  "ar": "الهدف:",
+  "es": "Objetivo:",
+  "fr": "Objectif :",
+  "he": "מטרה:",
+  "it": "Obiettivo:"
+ },
+ "Heat Transfer": {
+  "ar": "انتقال الحرارة",
+  "es": "Transferencia de calor",
+  "fr": "Transferts thermiques",
+  "he": "מעבר חום",
+  "it": "Trasmissione del calore"
+ },
+ "Hohmann transfer calculator": {
+  "ar": "حاسبة مناورة هوهمان",
+  "es": "Calculadora de transferencia de Hohmann",
+  "fr": "Calculateur de transfert de Hohmann",
+  "he": "מחשבון מעבר הוהמן",
+  "it": "Calcolatore del trasferimento di Hohmann"
+ },
+ "Home or virtual alternative": {
+  "ar": "بديل منزلي أو افتراضي",
+  "es": "Alternativa en casa o virtual",
+  "fr": "Alternative à la maison ou virtuelle",
+  "he": "חלופה ביתית או וירטואלית",
+  "it": "Alternativa a casa o virtuale"
+ },
+ "How aircraft and spacecraft are designed, built and flown.": {
+  "ar": "كيف تُصمَّم الطائرات والمركبات الفضائية وتُبنى وتُطيَّر.",
+  "es": "Cómo se diseñan, construyen y vuelan aeronaves y naves espaciales.",
+  "fr": "Comment les avions et les engins spatiaux sont conçus, construits et pilotés.",
+  "he": "איך מתכננים, בונים ומטיסים מטוסים וחלליות.",
+  "it": "Come si progettano, costruiscono e fanno volare aerei e veicoli spaziali."
+ },
+ "How liquids and gases flow.": {
+  "ar": "كيف تتدفق السوائل والغازات.",
+  "es": "Cómo fluyen los líquidos y los gases.",
+  "fr": "Comment s’écoulent les liquides et les gaz.",
+  "he": "איך נוזלים וגזים זורמים.",
+  "it": "Come scorrono liquidi e gas."
+ },
+ "How this course helps save the planet": {
+  "ar": "كيف تساعد هذه الدورة في إنقاذ الكوكب",
+  "es": "Cómo ayuda este curso a salvar el planeta",
+  "fr": "Comment ce cours aide à sauver la planète",
+  "he": "איך הקורס הזה עוזר להציל את כדור הארץ",
+  "it": "Come questo corso aiuta a salvare il pianeta"
+ },
+ "How this helps save the planet": {
+  "ar": "كيف يساعد هذا في إنقاذ الكوكب",
+  "es": "Cómo ayuda esto a salvar el planeta",
+  "fr": "Comment cela aide à sauver la planète",
+  "he": "איך זה עוזר להציל את כדור הארץ",
+  "it": "Come questo aiuta a salvare il pianeta"
+ },
+ "How to study": {
+  "ar": "كيف تذاكر",
+  "es": "Cómo estudiar",
+  "fr": "Comment étudier",
+  "he": "איך ללמוד",
+  "it": "Come studiare"
+ },
+ "I completed this lab (wet or virtual)": {
+  "ar": "أكملت هذا المختبر (عمليًا أو افتراضيًا)",
+  "es": "Completé este laboratorio (real o virtual)",
+  "fr": "J’ai terminé ce TP (réel ou virtuel)",
+  "he": "השלמתי את המעבדה הזו (רטובה או וירטואלית)",
+  "it": "Ho completato questo laboratorio (reale o virtuale)"
+ },
+ "I finished this unit": {
+  "ar": "أنهيت هذه الوحدة",
+  "es": "Terminé esta unidad",
+  "fr": "J’ai terminé cette unité",
+  "he": "סיימתי את היחידה הזו",
+  "it": "Ho finito questa unità"
+ },
+ "Integration methods, sequences and series.": {
+  "ar": "طرق التكامل والمتتاليات والمتسلسلات.",
+  "es": "Métodos de integración, sucesiones y series.",
+  "fr": "Méthodes d’intégration, suites et séries.",
+  "he": "שיטות אינטגרציה, סדרות וטורים.",
+  "it": "Metodi di integrazione, successioni e serie."
+ },
+ "Intro Programming": {
+  "ar": "مقدمة في البرمجة",
+  "es": "Introducción a la programación",
+  "fr": "Introduction à la programmation",
+  "he": "מבוא לתכנות",
+  "it": "Introduzione alla programmazione"
+ },
+ "Intro to Aerospace Engineering": {
+  "ar": "مقدمة في هندسة الطيران والفضاء",
+  "es": "Introducción a la ingeniería aeroespacial",
+  "fr": "Introduction à l’ingénierie aérospatiale",
+  "he": "מבוא להנדסת אווירונאוטיקה וחלל",
+  "it": "Introduzione all’ingegneria aerospaziale"
+ },
+ "Jet engines and rockets.": {
+  "ar": "المحركات النفاثة والصواريخ.",
+  "es": "Motores a reacción y cohetes.",
+  "fr": "Moteurs à réaction et fusées.",
+  "he": "מנועי סילון ורקטות.",
+  "it": "Motori a reazione e razzi."
+ },
+ "Key concepts": {
+  "ar": "المفاهيم الأساسية",
+  "es": "Conceptos clave",
+  "fr": "Notions clés",
+  "he": "מושגי מפתח",
+  "it": "Concetti chiave"
+ },
+ "Key equations": {
+  "ar": "المعادلات الأساسية",
+  "es": "Ecuaciones clave",
+  "fr": "Équations clés",
+  "he": "משוואות מפתח",
+  "it": "Equazioni chiave"
+ },
+ "Lab equipment (for the wet labs)": {
+  "ar": "معدات المختبر (للمختبرات العملية)",
+  "es": "Material de laboratorio (para los laboratorios presenciales)",
+  "fr": "Matériel de TP (pour les TP en laboratoire)",
+  "he": "ציוד מעבדה (למעבדות הרטובות)",
+  "it": "Attrezzatura di laboratorio (per i laboratori reali)"
+ },
+ "Lab write-ups (or virtual labs)": {
+  "ar": "تقارير المختبر (أو المختبرات الافتراضية)",
+  "es": "Informes de laboratorio (o laboratorios virtuales)",
+  "fr": "Comptes rendus de TP (ou TP virtuels)",
+  "he": "דוחות מעבדה (או מעבדות וירטואליות)",
+  "it": "Relazioni di laboratorio (o laboratori virtuali)"
+ },
+ "Learning objectives": {
+  "ar": "أهداف التعلّم",
+  "es": "Objetivos de aprendizaje",
+  "fr": "Objectifs d’apprentissage",
+  "he": "מטרות הלמידה",
+  "it": "Obiettivi di apprendimento"
+ },
+ "Level": {
+  "ar": "المستوى",
+  "es": "Nivel",
+  "fr": "Niveau",
+  "he": "רמה",
+  "it": "Livello"
+ },
+ "Lift, drag and airflow over wings.": {
+  "ar": "الرفع والسحب وتدفق الهواء فوق الأجنحة.",
+  "es": "Sustentación, resistencia y flujo de aire sobre las alas.",
+  "fr": "Portance, traînée et écoulement de l’air sur les ailes.",
+  "he": "עילוי, גרר וזרימת אוויר על כנפיים.",
+  "it": "Portanza, resistenza e flusso d’aria sulle ali."
+ },
+ "Light, strong structures for flight.": {
+  "ar": "هياكل خفيفة وقوية للطيران.",
+  "es": "Estructuras ligeras y resistentes para el vuelo.",
+  "fr": "Des structures légères et résistantes pour le vol.",
+  "he": "מבנים קלים וחזקים לטיסה.",
+  "it": "Strutture leggere e resistenti per il volo."
+ },
+ "Limits, derivatives and an introduction to integrals.": {
+  "ar": "النهايات والمشتقات ومقدمة في التكاملات.",
+  "es": "Límites, derivadas e introducción a las integrales.",
+  "fr": "Limites, dérivées et introduction aux intégrales.",
+  "he": "גבולות, נגזרות ומבוא לאינטגרלים.",
+  "it": "Limiti, derivate e introduzione agli integrali."
+ },
+ "Linear Algebra": {
+  "ar": "الجبر الخطي",
+  "es": "Álgebra lineal",
+  "fr": "Algèbre linéaire",
+  "he": "אלגברה לינארית",
+  "it": "Algebra lineare"
+ },
+ "Live": {
+  "ar": "متاح",
+  "es": "Disponible",
+  "fr": "En ligne",
+  "he": "זמין",
+  "it": "Disponibile"
+ },
+ "Mechanics of Materials": {
+  "ar": "ميكانيكا المواد",
+  "es": "Mecánica de materiales",
+  "fr": "Résistance des matériaux",
+  "he": "חוזק חומרים",
+  "it": "Scienza delle costruzioni"
+ },
+ "Midterm practice set": {
+  "ar": "مجموعة تدريب منتصف الفصل",
+  "es": "Serie de práctica de mitad de curso",
+  "fr": "Série d’entraînement de mi-parcours",
+  "he": "מערך תרגול לאמצע הקורס",
+  "it": "Serie di esercizi di metà corso"
+ },
+ "Midterm practice set (Units 1–3)": {
+  "ar": "مجموعة تدريب منتصف الفصل (الوحدات 1–3)",
+  "es": "Serie de práctica de mitad de curso (unidades 1–3)",
+  "fr": "Série d’entraînement de mi-parcours (unités 1–3)",
+  "he": "מערך תרגול לאמצע הקורס (יחידות 1–3)",
+  "it": "Serie di esercizi di metà corso (unità 1–3)"
+ },
+ "Modeling change: ODEs and their solutions.": {
+  "ar": "نمذجة التغير: المعادلات التفاضلية العادية وحلولها.",
+  "es": "Modelar el cambio: EDO y sus soluciones.",
+  "fr": "Modéliser le changement : les EDO et leurs solutions.",
+  "he": "מידול שינוי: משוואות דיפרנציאליות רגילות ופתרונותיהן.",
+  "it": "Modellare il cambiamento: le EDO e le loro soluzioni."
+ },
+ "Motion of particles and rigid bodies.": {
+  "ar": "حركة الجسيمات والأجسام الصلبة.",
+  "es": "Movimiento de partículas y cuerpos rígidos.",
+  "fr": "Mouvement des particules et des solides indéformables.",
+  "he": "תנועה של חלקיקים וגופים קשיחים.",
+  "it": "Moto di particelle e corpi rigidi."
+ },
+ "Motion, forces, energy and momentum, with labs.": {
+  "ar": "الحركة والقوى والطاقة والزخم، مع مختبرات.",
+  "es": "Movimiento, fuerzas, energía y cantidad de movimiento, con laboratorios.",
+  "fr": "Mouvement, forces, énergie et quantité de mouvement, avec TP.",
+  "he": "תנועה, כוחות, אנרגיה ותנע, עם מעבדות.",
+  "it": "Moto, forze, energia e quantità di moto, con laboratori."
+ },
+ "Multivariable calculus and vector fields.": {
+  "ar": "حساب التفاضل والتكامل متعدد المتغيرات والحقول المتجهة.",
+  "es": "Cálculo multivariable y campos vectoriales.",
+  "fr": "Analyse à plusieurs variables et champs de vecteurs.",
+  "he": "חשבון רב־משתני ושדות וקטוריים.",
+  "it": "Analisi in più variabili e campi vettoriali."
+ },
+ "Myth:": {
+  "ar": "خرافة:",
+  "es": "Mito:",
+  "fr": "Idée reçue :",
+  "he": "מיתוס:",
+  "it": "Mito:"
+ },
+ "NIST: Fundamental physical constants": {
+  "ar": "NIST: الثوابت الفيزيائية الأساسية (بالإنجليزية)",
+  "es": "NIST: constantes físicas fundamentales (en inglés)",
+  "fr": "NIST : constantes physiques fondamentales (en anglais)",
+  "he": "NIST: קבועים פיזיקליים יסודיים (באנגלית)",
+  "it": "NIST: costanti fisiche fondamentali (in inglese)"
+ },
+ "Next": {
+  "ar": "التالي",
+  "es": "Siguiente",
+  "fr": "Suivante",
+  "he": "הבא",
+  "it": "Avanti"
+ },
+ "No grade or credit is given. Use this to judge honestly where you are in each unit.": {
+  "ar": "لا تُمنح درجة ولا ساعات معتمدة. استخدم هذا لتقيّم بصدق أين أنت في كل وحدة.",
+  "es": "No se otorga nota ni crédito. Úsala para valorar con honestidad dónde estás en cada unidad.",
+  "fr": "Aucune note ni aucun crédit ne sont attribués. Utilisez cette grille pour juger honnêtement où vous en êtes dans chaque unité.",
+  "he": "לא ניתנים ציון או נקודות זכות. השתמשו בזה כדי להעריך בכנות איפה אתם עומדים בכל יחידה.",
+  "it": "Non si assegnano voti né crediti. Usala per valutare onestamente a che punto sei in ogni unità."
+ },
+ "Not quite. The answer is: {x}. ": {
+  "ar": "ليس تمامًا. الإجابة هي: {x}. ",
+  "es": "No exactamente. La respuesta es: {x}. ",
+  "fr": "Pas tout à fait. La réponse est : {x}. ",
+  "he": "לא בדיוק. התשובה היא: {x}. ",
+  "it": "Non proprio. La risposta è: {x}. "
+ },
+ "Numerical Methods": {
+  "ar": "الطرق العددية",
+  "es": "Métodos numéricos",
+  "fr": "Méthodes numériques",
+  "he": "שיטות נומריות",
+  "it": "Metodi numerici"
+ },
+ "On Saving Planets:": {
+  "ar": "على Saving Planets:",
+  "es": "En Saving Planets:",
+  "fr": "Sur Saving Planets :",
+  "he": "ב־Saving Planets:",
+  "it": "Su Saving Planets:"
+ },
+ "On this page": {
+  "ar": "في هذه الصفحة",
+  "es": "En esta página",
+  "fr": "Sur cette page",
+  "he": "בדף הזה",
+  "it": "In questa pagina"
+ },
+ "OpenStax 5.1–5.2": {
+  "ar": "OpenStax 5.1–5.2",
+  "es": "OpenStax 5.1–5.2",
+  "fr": "OpenStax 5.1–5.2",
+  "he": "OpenStax 5.1–5.2",
+  "it": "OpenStax 5.1–5.2"
+ },
+ "OpenStax 7.1–7.4": {
+  "ar": "OpenStax 7.1–7.4",
+  "es": "OpenStax 7.1–7.4",
+  "fr": "OpenStax 7.1–7.4",
+  "he": "OpenStax 7.1–7.4",
+  "it": "OpenStax 7.1–7.4"
+ },
+ "Orbital Mechanics": {
+  "ar": "ميكانيكا المدارات",
+  "es": "Mecánica orbital",
+  "fr": "Mécanique orbitale",
+  "he": "מכניקה מסלולית",
+  "it": "Meccanica orbitale"
+ },
+ "Orbits guide": {
+  "ar": "دليل المدارات",
+  "es": "Guía de órbitas",
+  "fr": "Guide des orbites",
+  "he": "מדריך מסלולים",
+  "it": "Guida alle orbite"
+ },
+ "Orbits, transfers and mission design.": {
+  "ar": "المدارات والانتقالات وتصميم البعثات.",
+  "es": "Órbitas, transferencias y diseño de misiones.",
+  "fr": "Orbites, transferts et conception de missions.",
+  "he": "מסלולים, מעברים ותכנון משימות.",
+  "it": "Orbite, trasferimenti e progettazione di missioni."
+ },
+ "Part": {
+  "ar": "الجزء",
+  "es": "Parte",
+  "fr": "Partie",
+  "he": "חלק",
+  "it": "Parte"
+ },
+ "Physics I + Lab": {
+  "ar": "الفيزياء 1 + المختبر",
+  "es": "Física I + Laboratorio",
+  "fr": "Physique I + TP",
+  "he": "פיזיקה 1 + מעבדה",
+  "it": "Fisica I + Laboratorio"
+ },
+ "Physics II": {
+  "ar": "الفيزياء 2",
+  "es": "Física II",
+  "fr": "Physique II",
+  "he": "פיזיקה 2",
+  "it": "Fisica II"
+ },
+ "Planet link:": {
+  "ar": "الصلة بالكوكب:",
+  "es": "Vínculo con el planeta:",
+  "fr": "Lien avec la planète :",
+  "he": "הקשר לכדור הארץ:",
+  "it": "Legame con il pianeta:"
+ },
+ "Practice problems": {
+  "ar": "تمارين",
+  "es": "Problemas de práctica",
+  "fr": "Exercices",
+  "he": "תרגילים",
+  "it": "Esercizi"
+ },
+ "Prerequisites": {
+  "ar": "المتطلبات السابقة",
+  "es": "Requisitos previos",
+  "fr": "Prérequis",
+  "he": "ידע מוקדם",
+  "it": "Prerequisiti"
+ },
+ "Previous": {
+  "ar": "السابق",
+  "es": "Anterior",
+  "fr": "Précédente",
+  "he": "הקודם",
+  "it": "Indietro"
+ },
+ "Print this page": {
+  "ar": "اطبع هذه الصفحة",
+  "es": "Imprimir esta página",
+  "fr": "Imprimer cette page",
+  "he": "הדפסת הדף",
+  "it": "Stampa questa pagina"
+ },
+ "Probability & Statistics": {
+  "ar": "الاحتمالات والإحصاء",
+  "es": "Probabilidad y estadística",
+  "fr": "Probabilités et statistiques",
+  "he": "הסתברות וסטטיסטיקה",
+  "it": "Probabilità e statistica"
+ },
+ "Procedure": {
+  "ar": "الإجراء",
+  "es": "Procedimiento",
+  "fr": "Mode opératoire",
+  "he": "מהלך הניסוי",
+  "it": "Procedimento"
+ },
+ "Propulsion": {
+  "ar": "الدفع",
+  "es": "Propulsión",
+  "fr": "Propulsion",
+  "he": "הנעה",
+  "it": "Propulsione"
+ },
+ "Range, endurance, climb and takeoff.": {
+  "ar": "المدى والتحمّل والصعود والإقلاع.",
+  "es": "Alcance, autonomía, ascenso y despegue.",
+  "fr": "Distance franchissable, endurance, montée et décollage.",
+  "he": "טווח, משך שהייה, טיפוס והמראה.",
+  "it": "Autonomia, durata, salita e decollo."
+ },
+ "Read the unit, then close it and try the worked examples yourself before checking each step.": {
+  "ar": "اقرأ الوحدة، ثم أغلقها وجرّب الأمثلة المحلولة بنفسك قبل التحقق من كل خطوة.",
+  "es": "Lee la unidad, ciérrala e intenta los ejemplos resueltos por tu cuenta antes de comprobar cada paso.",
+  "fr": "Lisez l’unité, puis refermez-la et essayez vous-même les exemples résolus avant de vérifier chaque étape.",
+  "he": "קראו את היחידה, סגרו אותה ונסו לפתור לבד את הדוגמאות הפתורות לפני שבודקים כל שלב.",
+  "it": "Leggi l’unità, poi chiudila e prova da solo gli esempi svolti prima di controllare ogni passaggio."
+ },
+ "Reading": {
+  "ar": "القراءة",
+  "es": "Lectura",
+  "fr": "Lecture",
+  "he": "קריאה",
+  "it": "Lettura"
+ },
+ "Reset my progress": {
+  "ar": "إعادة ضبط تقدّمي",
+  "es": "Restablecer mi progreso",
+  "fr": "Réinitialiser ma progression",
+  "he": "איפוס ההתקדמות שלי",
+  "it": "Azzera i miei progressi"
+ },
+ "Retake the quizzes a few days later. Spaced practice beats one long session.": {
+  "ar": "أعد الاختبارات القصيرة بعد بضعة أيام. التدرّب المتباعد أفضل من جلسة طويلة واحدة.",
+  "es": "Repite los cuestionarios unos días después. La práctica espaciada es mejor que una sesión larga.",
+  "fr": "Refaites les quiz quelques jours plus tard. La pratique espacée vaut mieux qu’une longue séance.",
+  "he": "עשו שוב את הבחנים כעבור כמה ימים. תרגול מרווח עדיף על מפגש ארוך אחד.",
+  "it": "Rifai i quiz qualche giorno dopo. La pratica distribuita batte una lunga sessione unica."
+ },
+ "Review": {
+  "ar": "المراجعة",
+  "es": "Repaso",
+  "fr": "Révision",
+  "he": "חזרה",
+  "it": "Ripasso"
+ },
+ "Review and final practice set": {
+  "ar": "مراجعة ومجموعة تمارين نهائية",
+  "es": "Repaso y serie de práctica final",
+  "fr": "Révision et série d’exercices finale",
+  "he": "חזרה וסדרת תרגול מסכמת",
+  "it": "Ripasso ed esercitazione finale"
+ },
+ "Safety": {
+  "ar": "السلامة",
+  "es": "Seguridad",
+  "fr": "Sécurité",
+  "he": "בטיחות",
+  "it": "Sicurezza"
+ },
+ "Safety reference:": {
+  "ar": "مرجع السلامة:",
+  "es": "Referencia de seguridad:",
+  "fr": "Référence de sécurité :",
+  "he": "מקור בטיחות:",
+  "it": "Riferimento per la sicurezza:"
+ },
+ "Sample calculation": {
+  "ar": "مثال حسابي",
+  "es": "Cálculo de ejemplo",
+  "fr": "Exemple de calcul",
+  "he": "חישוב לדוגמה",
+  "it": "Calcolo di esempio"
+ },
+ "Sample data for practice only.": {
+  "ar": "بيانات نموذجية للتدريب فقط.",
+  "es": "Datos de ejemplo solo para practicar.",
+  "fr": "Données d’exemple pour s’entraîner uniquement.",
+  "he": "נתונים לדוגמה לתרגול בלבד.",
+  "it": "Dati di esempio solo per esercitarsi."
+ },
+ "Score: {r} of {n}": {
+  "ar": "النتيجة: {r} من {n}",
+  "es": "Puntuación: {r} de {n}",
+  "fr": "Score : {r} sur {n}",
+  "he": "ציון: {r} מתוך {n}",
+  "it": "Punteggio: {r} su {n}"
+ },
+ "Self-assessment": {
+  "ar": "التقييم الذاتي",
+  "es": "Autoevaluación",
+  "fr": "Autoévaluation",
+  "he": "הערכה עצמית",
+  "it": "Autovalutazione"
+ },
+ "Self-assessment rubric": {
+  "ar": "معايير التقييم الذاتي",
+  "es": "Rúbrica de autoevaluación",
+  "fr": "Grille d’autoévaluation",
+  "he": "מחוון להערכה עצמית",
+  "it": "Griglia di autovalutazione"
+ },
+ "Self-check quiz": {
+  "ar": "اختبار ذاتي",
+  "es": "Cuestionario de autoevaluación",
+  "fr": "Quiz d’autocontrôle",
+  "he": "בוחן לבדיקה עצמית",
+  "it": "Quiz di autoverifica"
+ },
+ "Show all": {
+  "ar": "عرض الكل",
+  "es": "Mostrar todas",
+  "fr": "Tout afficher",
+  "he": "הצג הכול",
+  "it": "Mostra tutte"
+ },
+ "Show answer": {
+  "ar": "اعرض الإجابة",
+  "es": "Ver la respuesta",
+  "fr": "Afficher la réponse",
+  "he": "הצג תשובה",
+  "it": "Mostra la risposta"
+ },
+ "Show full solution": {
+  "ar": "اعرض الحل الكامل",
+  "es": "Ver la solución completa",
+  "fr": "Afficher la solution complète",
+  "he": "הצג פתרון מלא",
+  "it": "Mostra la soluzione completa"
+ },
+ "Show the steps": {
+  "ar": "اعرض الخطوات",
+  "es": "Ver los pasos",
+  "fr": "Afficher les étapes",
+  "he": "הצג את השלבים",
+  "it": "Mostra i passaggi"
+ },
+ "Shuffle": {
+  "ar": "اخلط",
+  "es": "Barajar",
+  "fr": "Mélanger",
+  "he": "ערבוב",
+  "it": "Mescola"
+ },
+ "Solving engineering math on a computer.": {
+  "ar": "حل مسائل الرياضيات الهندسية بالحاسوب.",
+  "es": "Resolver matemáticas de ingeniería con el ordenador.",
+  "fr": "Résoudre des problèmes mathématiques d’ingénierie sur ordinateur.",
+  "he": "פתרון מתמטיקה הנדסית במחשב.",
+  "it": "Risolvere problemi matematici di ingegneria al computer."
+ },
+ "Source:": {
+  "ar": "المصدر:",
+  "es": "Fuente:",
+  "fr": "Source :",
+  "he": "מקור:",
+  "it": "Fonte:"
+ },
+ "Sources:": {
+  "ar": "المصادر:",
+  "es": "Fuentes:",
+  "fr": "Sources :",
+  "he": "מקורות:",
+  "it": "Fonti:"
+ },
+ "Spacecraft Design": {
+  "ar": "تصميم المركبات الفضائية",
+  "es": "Diseño de naves espaciales",
+  "fr": "Conception d’engins spatiaux",
+  "he": "תכנון חלליות",
+  "it": "Progettazione di veicoli spaziali"
+ },
+ "Stability and control of aircraft and spacecraft.": {
+  "ar": "استقرار الطائرات والمركبات الفضائية والتحكم فيها.",
+  "es": "Estabilidad y control de aeronaves y naves espaciales.",
+  "fr": "Stabilité et commande des avions et des engins spatiaux.",
+  "he": "יציבות ובקרה של מטוסים וחלליות.",
+  "it": "Stabilità e controllo di velivoli e veicoli spaziali."
+ },
+ "Statics": {
+  "ar": "الاستاتيكا",
+  "es": "Estática",
+  "fr": "Statique",
+  "he": "סטטיקה",
+  "it": "Statica"
+ },
+ "Stress, strain and how parts bend, twist and fail.": {
+  "ar": "الإجهاد والانفعال وكيف تنثني الأجزاء وتلتوي وتنهار.",
+  "es": "Esfuerzo, deformación y cómo las piezas se doblan, se tuercen y fallan.",
+  "fr": "Contraintes, déformations, et façon dont les pièces fléchissent, se tordent et cèdent.",
+  "he": "מאמץ, עיבור ואיך חלקים מתכופפים, מתפתלים ונכשלים.",
+  "it": "Sforzo, deformazione e come i pezzi si flettono, si torcono e cedono."
+ },
+ "Subsystems, power, thermal and mission requirements.": {
+  "ar": "الأنظمة الفرعية والطاقة والتحكم الحراري ومتطلبات البعثة.",
+  "es": "Subsistemas, energía, control térmico y requisitos de misión.",
+  "fr": "Sous-systèmes, énergie, thermique et exigences de mission.",
+  "he": "תת־מערכות, הספק, בקרה תרמית ודרישות משימה.",
+  "it": "Sottosistemi, potenza, controllo termico e requisiti di missione."
+ },
+ "Suggested 15-week schedule": {
+  "ar": "جدول مقترح من 15 أسبوعًا",
+  "es": "Calendario sugerido de 15 semanas",
+  "fr": "Programme suggéré sur 15 semaines",
+  "he": "לוח זמנים מוצע ל־15 שבועות",
+  "it": "Programma suggerito di 15 settimane"
+ },
+ "Suggested weighting if you want a score": {
+  "ar": "الأوزان المقترحة إذا أردت درجة",
+  "es": "Ponderación sugerida si quieres una nota",
+  "fr": "Pondération suggérée si vous voulez une note",
+  "he": "שקלול מוצע אם רוצים ציון",
+  "it": "Pesi suggeriti se vuoi un punteggio"
+ },
+ "Sustainable Aviation": {
+  "ar": "الطيران المستدام",
+  "es": "Aviación sostenible",
+  "fr": "Aviation durable",
+  "he": "תעופה בת־קיימא",
+  "it": "Aviazione sostenibile"
+ },
+ "Technical drawing and 3D computer-aided design.": {
+  "ar": "الرسم الفني والتصميم ثلاثي الأبعاد 3D بمساعدة الحاسوب.",
+  "es": "Dibujo técnico y diseño asistido por ordenador en 3D.",
+  "fr": "Dessin technique et conception assistée par ordinateur en 3D.",
+  "he": "שרטוט טכני ותכנון בעזרת מחשב ב־3D.",
+  "it": "Disegno tecnico e progettazione assistita al computer in 3D."
+ },
+ "The lab ({code})": {
+  "ar": "المختبر ({code})",
+  "es": "El laboratorio ({code})",
+  "fr": "Le laboratoire ({code})",
+  "he": "המעבדה ({code})",
+  "it": "Il laboratorio ({code})"
+ },
+ "The lab is the hands-on part of the course, a 1-credit component in a typical college schedule. Here it is free and for practice only.": {
+  "ar": "المختبر هو الجزء العملي من الدورة، ويعادل ساعة معتمدة واحدة (1) في الجدول الجامعي المعتاد. وهو هنا مجاني وللتدريب فقط.",
+  "es": "El laboratorio es la parte práctica del curso, un componente de 1 crédito en un plan universitario típico. Aquí es gratuito y solo para practicar.",
+  "fr": "Les TP sont la partie pratique du cours, qui vaut 1 crédit dans un cursus universitaire typique. Ici, ils sont gratuits et uniquement pour s’entraîner.",
+  "he": "המעבדה היא החלק המעשי של הקורס, רכיב של נקודת זכות 1 בתוכנית לימודים טיפוסית במכללה. כאן היא חינמית ולתרגול בלבד.",
+  "it": "Il laboratorio è la parte pratica del corso, che vale 1 credito in un tipico piano universitario. Qui è gratuito e solo per esercitarsi."
+ },
+ "Thermodynamics": {
+  "ar": "الديناميكا الحرارية",
+  "es": "Termodinámica",
+  "fr": "Thermodynamique",
+  "he": "תרמודינמיקה",
+  "it": "Termodinamica"
+ },
+ "These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.": {
+  "ar": "هذه دورات مجانية للتعلّم الذاتي كتبتها Saving Planets. وهي تتبع نطاق المقررات الجامعية من السنة الأولى إلى الرابعة باستخدام مواد مفتوحة، لكنها ليست مقررات جامعية، ولا تمنح ساعات معتمدة، ولا تشارك فيها أي مؤسسة تعليمية.",
+  "es": "Son cursos gratuitos de autoestudio escritos por Saving Planets. Siguen el alcance de cursos universitarios de primero a cuarto año con materiales abiertos, pero no son cursos universitarios, no otorgan créditos académicos y ninguna institución participa.",
+  "fr": "Ce sont des cours gratuits en autonomie rédigés par Saving Planets. Ils suivent le contenu des cours universitaires de la première à la quatrième année à l’aide de ressources ouvertes, mais ce ne sont pas des cours universitaires : ils ne donnent aucun crédit académique et aucun établissement n’y participe.",
+  "he": "אלה קורסים חינמיים ללימוד עצמי שנכתבו על ידי Saving Planets. הם עוקבים אחרי ההיקף של קורסים במכללה משנה ראשונה עד רביעית בעזרת חומרים פתוחים, אבל הם אינם קורסים אוניברסיטאיים, אינם מעניקים נקודות זכות אקדמיות, ואף מוסד לימודים אינו מעורב בהם.",
+  "it": "Sono corsi gratuiti di autoapprendimento scritti da Saving Planets. Seguono i programmi dei corsi universitari dal primo al quarto anno con materiali aperti, ma non sono corsi universitari, non danno crediti accademici e nessuna scuola è coinvolta."
+ },
+ "This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.": {
+  "ar": "هذا مخطط دورة مجانية للتعلّم الذاتي كتبته Saving Planets. وهو ليس مقررًا جامعيًا، ولا يمنح ساعات معتمدة، ولا تشارك فيه أي مؤسسة تعليمية.",
+  "es": "Este es el esquema de un curso gratuito de autoestudio escrito por Saving Planets. No es un curso universitario, no otorga créditos académicos y ninguna institución participa.",
+  "fr": "Ceci est le plan d’un cours gratuit en autonomie rédigé par Saving Planets. Ce n’est pas un cours universitaire : il ne donne aucun crédit académique et aucun établissement n’y participe.",
+  "he": "זהו מתווה של קורס חינמי ללימוד עצמי שנכתב על ידי Saving Planets. הוא אינו קורס אוניברסיטאי, אינו מעניק נקודות זכות אקדמיות, ואף מוסד לימודים אינו מעורב בו.",
+  "it": "Questo è lo schema di un corso gratuito di autoapprendimento scritto da Saving Planets. Non è un corso universitario, non dà crediti accademici e nessuna scuola è coinvolta."
+ },
+ "Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.": {
+  "ar": "ضع علامة على الوحدات والمختبرات عند إنهائها، وخض الاختبارات. يُحفظ التقدم ونتائج الاختبارات في هذا المتصفح فقط، ولا تُرسل إلينا أبدًا.",
+  "es": "Marca las unidades y los laboratorios al terminarlos y haz los cuestionarios. El progreso y las puntuaciones se guardan solo en este navegador y nunca se nos envían.",
+  "fr": "Cochez les unités et les TP à mesure que vous les terminez, et faites les quiz. La progression et les scores sont enregistrés uniquement dans ce navigateur et ne nous sont jamais envoyés.",
+  "he": "סמנו יחידות ומעבדות כשאתם מסיימים אותן, ועשו את הבחנים. ההתקדמות והציונים נשמרים רק בדפדפן הזה ולעולם לא נשלחים אלינו.",
+  "it": "Spunta unità e laboratori man mano che li finisci, e fai i quiz. Progressi e punteggi sono salvati solo in questo browser e non ci vengono mai inviati."
+ },
+ "Time yourself: about 10 minutes per problem. Then compare with the full solutions.": {
+  "ar": "وقّت نفسك: نحو 10 دقائق لكل مسألة. ثم قارن بالحلول الكاملة.",
+  "es": "Cronométrate: unos 10 minutos por problema. Luego compara con las soluciones completas.",
+  "fr": "Chronométrez-vous : environ 10 minutes par problème. Comparez ensuite avec les solutions complètes.",
+  "he": "מדדו זמן: כ־10 דקות לבעיה. אחר כך השוו לפתרונות המלאים.",
+  "it": "Cronometrati: circa 10 minuti per problema. Poi confronta con le soluzioni complete."
+ },
+ "Topics": {
+  "ar": "الموضوعات",
+  "es": "Temas",
+  "fr": "Thèmes",
+  "he": "נושאים",
+  "it": "Argomenti"
+ },
+ "Trial": {
+  "ar": "المحاولة",
+  "es": "Ensayo",
+  "fr": "Essai",
+  "he": "ניסיון",
+  "it": "Prova"
+ },
+ "Try this quiz again": {
+  "ar": "أعد هذا الاختبار",
+  "es": "Repetir este cuestionario",
+  "fr": "Refaire ce quiz",
+  "he": "לנסות שוב את הבוחן",
+  "it": "Rifai questo quiz"
+ },
+ "Turn on JavaScript to track progress.": {
+  "ar": "فعّل JavaScript لتتبّع تقدّمك.",
+  "es": "Activa JavaScript para seguir tu progreso.",
+  "fr": "Activez JavaScript pour suivre votre progression.",
+  "he": "הפעילו JavaScript כדי לעקוב אחר ההתקדמות.",
+  "it": "Attiva JavaScript per seguire i tuoi progressi."
+ },
+ "U.S. DOE: How do wind turbines work?": {
+  "ar": "وزارة الطاقة الأمريكية: كيف تعمل توربينات الرياح؟ (بالإنجليزية)",
+  "es": "DOE de EE. UU.: ¿cómo funcionan los aerogeneradores? (en inglés)",
+  "fr": "DOE des États-Unis : comment fonctionnent les éoliennes ? (en anglais)",
+  "he": "משרד האנרגיה האמריקאי: איך פועלות טורבינות רוח? (באנגלית)",
+  "it": "DOE degli Stati Uniti: come funzionano le turbine eoliche? (in inglese)"
+ },
+ "Uncertainty, data and reliability.": {
+  "ar": "عدم اليقين والبيانات والموثوقية.",
+  "es": "Incertidumbre, datos y fiabilidad.",
+  "fr": "Incertitude, données et fiabilité.",
+  "he": "אי־ודאות, נתונים ואמינות.",
+  "it": "Incertezza, dati e affidabilità."
+ },
+ "Unit": {
+  "ar": "الوحدة",
+  "es": "Unidad",
+  "fr": "Unité",
+  "he": "יחידה",
+  "it": "Unità"
+ },
+ "Unit {n}": {
+  "ar": "الوحدة {n}",
+  "es": "Unidad {n}",
+  "fr": "Unité {n}",
+  "he": "יחידה {n}",
+  "it": "Unità {n}"
+ },
+ "Value": {
+  "ar": "القيمة",
+  "es": "Valor",
+  "fr": "Valeur",
+  "he": "ערך",
+  "it": "Valore"
+ },
+ "Vectors, matrices and systems of equations.": {
+  "ar": "المتجهات والمصفوفات وأنظمة المعادلات.",
+  "es": "Vectores, matrices y sistemas de ecuaciones.",
+  "fr": "Vecteurs, matrices et systèmes d’équations.",
+  "he": "וקטורים, מטריצות ומערכות משוואות.",
+  "it": "Vettori, matrici e sistemi di equazioni."
+ },
+ "Week": {
+  "ar": "الأسبوع",
+  "es": "Semana",
+  "fr": "Semaine",
+  "he": "שבוע",
+  "it": "Settimana"
+ },
+ "Week 13": {
+  "ar": "الأسبوع 13",
+  "es": "Semana 13",
+  "fr": "Semaine 13",
+  "he": "שבוע 13",
+  "it": "Settimana 13"
+ },
+ "Week 5": {
+  "ar": "الأسبوع 5",
+  "es": "Semana 5",
+  "fr": "Semaine 5",
+  "he": "שבוע 5",
+  "it": "Settimana 5"
+ },
+ "Weeks 13–14": {
+  "ar": "الأسابيع 13–14",
+  "es": "Semanas 13–14",
+  "fr": "Semaines 13–14",
+  "he": "שבועות 13–14",
+  "it": "Settimane 13–14"
+ },
+ "Weeks 1–3": {
+  "ar": "الأسابيع 1–3",
+  "es": "Semanas 1–3",
+  "fr": "Semaines 1–3",
+  "he": "שבועות 1–3",
+  "it": "Settimane 1–3"
+ },
+ "Weight": {
+  "ar": "الوزن",
+  "es": "Peso",
+  "fr": "Poids",
+  "he": "משקל",
+  "it": "Peso"
+ },
+ "What it looks like": {
+  "ar": "كيف يبدو",
+  "es": "Cómo se ve",
+  "fr": "À quoi cela ressemble",
+  "he": "איך זה נראה",
+  "it": "Come si presenta"
+ },
+ "Work each on paper first, then check.": {
+  "ar": "حلّ كلًّا منها على الورق أولًا، ثم تحقق.",
+  "es": "Resuelve cada uno primero en papel y luego comprueba.",
+  "fr": "Faites chacun d’abord sur papier, puis vérifiez.",
+  "he": "פתרו כל אחד קודם על נייר, ואז בדקו.",
+  "it": "Svolgi ciascuno prima su carta, poi controlla."
+ },
+ "Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.": {
+  "ar": "تابعها بالترتيب. في كل وحدة أهداف وأفكار أساسية ومعادلات وأمثلة خطوة بخطوة وتمارين بإجابات كاملة وأخطاء شائعة وبطاقات تعليمية واختبار قصير. يُحفظ تقدّمك في هذا المتصفح فقط.",
+  "es": "Síguelo en orden. Cada unidad tiene objetivos, ideas clave, ecuaciones, ejemplos paso a paso, práctica con respuestas completas, errores comunes, tarjetas de estudio y un cuestionario. Tu progreso se guarda solo en este navegador.",
+  "fr": "Suivez-le dans l’ordre. Chaque unité comporte des objectifs, des notions clés, des équations, des exemples pas à pas, des exercices corrigés en détail, des erreurs fréquentes, des cartes mémoire et un quiz. Votre progression est enregistrée uniquement dans ce navigateur.",
+  "he": "עברו עליו לפי הסדר. בכל יחידה יש מטרות, רעיונות מרכזיים, משוואות, דוגמאות צעד אחר צעד, תרגול עם תשובות מלאות, טעויות נפוצות, כרטיסיות ובוחן. ההתקדמות שלכם נשמרת רק בדפדפן הזה.",
+  "it": "Seguilo in ordine. Ogni unità ha obiettivi, idee chiave, equazioni, esempi passo per passo, esercizi con soluzioni complete, errori comuni, flashcard e un quiz. I tuoi progressi sono salvati solo in questo browser."
+ },
+ "Worked examples, step by step": {
+  "ar": "أمثلة محلولة خطوة بخطوة",
+  "es": "Ejemplos resueltos paso a paso",
+  "fr": "Exemples résolus pas à pas",
+  "he": "דוגמאות פתורות שלב אחר שלב",
+  "it": "Esempi svolti passo passo"
+ },
+ "Writing programs to solve engineering problems.": {
+  "ar": "كتابة برامج لحل المسائل الهندسية.",
+  "es": "Escribir programas para resolver problemas de ingeniería.",
+  "fr": "Écrire des programmes pour résoudre des problèmes d’ingénierie.",
+  "he": "כתיבת תוכניות לפתרון בעיות הנדסיות.",
+  "it": "Scrivere programmi per risolvere problemi di ingegneria."
+ },
+ "Year 1 · Freshman": {
+  "ar": "السنة 1 · السنة الأولى",
+  "es": "Año 1 · Primer año",
+  "fr": "Année 1 · Première année",
+  "he": "שנה 1 · שנה ראשונה",
+  "it": "Anno 1 · Primo anno"
+ },
+ "Year 2 · Sophomore": {
+  "ar": "السنة 2 · السنة الثانية",
+  "es": "Año 2 · Segundo año",
+  "fr": "Année 2 · Deuxième année",
+  "he": "שנה 2 · שנה שנייה",
+  "it": "Anno 2 · Secondo anno"
+ },
+ "Year 3 · Junior": {
+  "ar": "السنة 3 · السنة الثالثة",
+  "es": "Año 3 · Tercer año",
+  "fr": "Année 3 · Troisième année",
+  "he": "שנה 3 · שנה שלישית",
+  "it": "Anno 3 · Terzo anno"
+ },
+ "Year 4 · Senior": {
+  "ar": "السنة 4 · السنة الرابعة",
+  "es": "Año 4 · Cuarto año",
+  "fr": "Année 4 · Quatrième année",
+  "he": "שנה 4 · שנה רביעית",
+  "it": "Anno 4 · Quarto anno"
+ },
+ "Years": {
+  "ar": "السنوات",
+  "es": "Años",
+  "fr": "Années",
+  "he": "שנים",
+  "it": "Anni"
+ },
+ "Your progress": {
+  "ar": "تقدّمك",
+  "es": "Tu progreso",
+  "fr": "Votre progression",
+  "he": "ההתקדמות שלכם",
+  "it": "I tuoi progressi"
+ },
+ "doubles": {
+  "ar": "يتضاعف",
+  "es": "se duplica",
+  "fr": "double",
+  "he": "מוכפל",
+  "it": "raddoppia"
+ },
+ "halves": {
+  "ar": "ينخفض إلى النصف",
+  "es": "se reduce a la mitad",
+  "fr": "est divisé par deux",
+  "he": "קטן בחצי",
+  "it": "si dimezza"
+ },
+ "increases": {
+  "ar": "يزداد",
+  "es": "aumenta",
+  "fr": "augmente",
+  "he": "עולה",
+  "it": "aumenta"
+ },
+ "negative": {
+  "ar": "سالبة",
+  "es": "negativo",
+  "fr": "négatif",
+  "he": "שלילי",
+  "it": "negativo"
+ },
+ "positive": {
+  "ar": "موجبة",
+  "es": "positivo",
+  "fr": "positif",
+  "he": "חיובי",
+  "it": "positivo"
+ },
+ "quadruples": {
+  "ar": "يتضاعف أربع مرات",
+  "es": "se cuadruplica",
+  "fr": "quadruple",
+  "he": "גדל פי ארבעה",
+  "it": "quadruplica"
+ },
+ "stays the same": {
+  "ar": "يبقى كما هو",
+  "es": "no cambia",
+  "fr": "reste le même",
+  "he": "נשאר אותו דבר",
+  "it": "resta uguale"
+ },
+ "zero": {
+  "ar": "صفر",
+  "es": "cero",
+  "fr": "zéro",
+  "he": "אפס",
+  "it": "zero"
+ },
+ "{d} of {n} units and labs done ({p}%).": {
+  "ar": "أُنجز {d} من {n} من الوحدات والمختبرات ({p}%).",
+  "es": "{d} de {n} unidades y laboratorios terminados ({p}%).",
+  "fr": "{d} sur {n} unités et TP terminés ({p} %).",
+  "he": "הושלמו {d} מתוך {n} יחידות ומעבדות ({p}%).",
+  "it": "{d} di {n} unità e laboratori completati ({p}%)."
+ }
+}

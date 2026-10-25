@@ -47,3 +47,6 @@
 @media print{html body.toc-sub[class]>#main:not(#crs-x){display:block!important}html,body,main{height:auto!important;max-height:none!important;overflow:visible!important;position:static!important;contain:none!important}main *{content-visibility:visible!important}#topnav,nav,footer,.shr,.nl-call,.crs-tools,.crs-toc,.crs-top,.crs-reset,.crs-prog,.crs-fc-bar,.crs-quiz input,.share-bar,.sticky-help,.page-hero,.spb-pause{display:none!important}
  body{background:#fff!important;color:#000!important}.crs a{color:#000}.crs-card,.crs-planet,.crs-tbl th,.crs-tbl td,.crs-quiz fieldset{border-color:#000!important;background:none!important}
  .crs details>summary{display:none}.crs-unit,.crs-lab{break-before:page}.crs-x,.crs-ok,.crs-fb{color:#000!important}.crs-nojs{display:block!important}.crs-fc-one{display:none}.crs-fc-list{display:grid!important}.crs,.crs *{color:#000!important}.crs-eq,.crs-fs .crs-math,.crs-disc,.crs-safe,.crs-mis li{background:none!important;border-color:#000!important}.crs a[href^=http]::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}}
+
+/* Oct 24 phase 2: RTL pages (ar, he) - equations and formula cards stay left-to-right */
+.crs-math,.crs-fs .crs-math,.katex{direction:ltr;unicode-bidi:isolate}
