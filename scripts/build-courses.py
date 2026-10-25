@@ -10,8 +10,39 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROO
 import importlib.util
 spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); BL = importlib.util.module_from_spec(spec); spec.loader.exec_module(BL)
 from courses import roadmap as RM
-V = '20261024g'
-esc = lambda s: html.escape(s, quote=True)
+V = '20261024h'  # > main's 20261024g (courses.css/js changed)
+LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
+BUILD_LANGS = ['en', 'fr']  # languages built and published so far (step 1: fr). Add one at a time once i18n/courses/*.json has it.
+RTL = {'ar', 'he'}  # right-to-left languages: the course wrapper gets dir="rtl"; equations/KaTeX stay LTR (assets/courses.css)
+def dir_attr(): return ' dir="rtl"' if LANG in RTL else ''
+# Phase 2 (Oct 24): every page is built per language from the same English data. Translations: i18n/courses/_shared.json (hub, roadmap,
+# section headings, quiz UI) + i18n/courses/<course ID>.json (that course's text), each {English: {fr, es, ar, it, he}}. A course is built in a
+# language only when every one of its strings is translated there (no half-English pages); otherwise that language links the English page
+# and the build prints what is missing. New course: add scripts/courses/<id>.py, build (English goes live), then
+#   python3 scripts/build-courses.py --missing <ID>   -> /tmp/courses-missing-<ID>.tsv (English + one column per language) to translate
+#   python3 scripts/build-courses.py --import <file.tsv> <ID>   -> merges into i18n/courses/<ID>.json (checks numbers + {placeholders})
+TR = {}
+for _f in sorted(glob.glob('i18n/courses/*.json')):
+    for _k, _v in json.load(open(_f, encoding='utf8')).items(): TR.setdefault(_k, {}).update(_v)
+LANG = 'en'; MISSING = {}
+def _(s):
+    if LANG == 'en' or not isinstance(s, str): return s
+    t = TR.get(s, {}).get(LANG)
+    if t is None:
+        if needs_tr(s): MISSING.setdefault(s, None)
+        return s
+    return t
+esc = lambda s: html.escape(_(s), quote=True)
+UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
+def needs_tr(s):  # words to translate (not a URL, a site page name, or numbers + units)
+    return bool(re.search('[a-z]{3}', s)) and not re.match(r'(https?:|mailto:|#)', s) and not re.fullmatch(r'(\.\./)?[\w-]+\.html(#[\w-]+)?', s) and not same(s)
+def same(s):  # numbers + SI units only (e.g. "0.500 mol", "8.314 J/(mol·K)"): identical in every language
+    return not re.search('[A-Za-zÀ-ÿ]{2,}', re.sub(UNITS_RX, '', s))
+def pre(): return '' if LANG == 'en' else '../'
+def loc(p):  # site page link from a course page: stay in the language folder when that page exists there
+    if LANG == 'en' or re.match(r'(https?:|mailto:|#)', p): return p
+    return p if os.path.exists(LANG + '/' + p.split('#')[0]) or p.split('#')[0] in (HUB,) + tuple(m.PAGE for m in MODS if LANG in DONE.get(m.ID, ())) else '../' + p
+def out(p): return p if LANG == 'en' else LANG + '/' + p
 HUB = 'Courses.html'
 MODS = []
 for f in sorted(glob.glob('scripts/courses/*.py')):
@@ -20,6 +51,7 @@ for f in sorted(glob.glob('scripts/courses/*.py')):
     m = importlib.import_module('courses.' + n)
     if getattr(m, 'STATUS', '') == 'live': MODS.append(m)
 LIVE = {m.ID: m for m in MODS}
+DONE = {}  # course ID -> languages it is fully translated (and built) in
 
 def katex(texs):
     texs = list(dict.fromkeys(texs))
@@ -27,11 +59,11 @@ def katex(texs):
     return dict(zip(texs, out))
 
 def ext(label, url): return f'<a href="{esc(url)}" rel="noopener">{esc(label)}</a>'
-def top(): return '<p class="crs-top"><a href="#top"><span aria-hidden="true">&#8593;</span> Back to top</a></p>'
+def top(): return f'<p class="crs-top"><a href="#top"><span aria-hidden="true">&#8593;</span> {esc("Back to top")}</a></p>'
 def ul(items, cls=''): return f'<ul{" class=" + chr(34) + cls + chr(34) if cls else ""}>' + ''.join(f'<li>{esc(x)}</li>' for x in items) + '</ul>'
 def hero(t, k): return f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content"><h1>{esc(t)}</h1><p>{esc(k)}</p></div></section>\n'
-def head(): return BL.katex_head('en') + f'<link rel="stylesheet" href="assets/courses.css?v={V}">\n'
-def tail(): return f'<script src="assets/courses.js?v={V}" defer></script>\n'
+def head(): return BL.katex_head(LANG) + f'<link rel="stylesheet" href="{pre()}assets/courses.css?v={V}">\n'
+def tail(): return f'<script src="{pre()}assets/courses.js?v={V}" defer></script>\n'
 def table(headr, rows, cap=''):
     th = ''.join(f'<th scope="col">{esc(x)}</th>' for x in headr)
     return (f'<div class="crs-tw"><table class="crs-tbl">{"<caption>" + esc(cap) + "</caption>" if cap else ""}<thead><tr>{th}</tr></thead><tbody>'
@@ -40,57 +72,61 @@ def eqblock(K, tex, cap): return f'<figure class="crs-eq"><div class="crs-math">
 
 def unit(C, K, i, u):
     uid = u['id']; o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
-         f'<p class="crs-kicker">Unit {i} · {esc(u["weeks"])}</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
-    o.append('<h3>Learning objectives</h3><p>By the end of this unit you can:</p>' + ul(u['objectives'], 'crs-obj'))
-    o.append('<h3>Key concepts</h3>' + ul(u['concepts'], 'crs-key'))
-    o.append('<h3>Key equations</h3>' + ''.join(eqblock(K, t, c) for t, c in u['eqs']))
-    o.append('<h3>Worked examples, step by step</h3>')
+         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))} · {esc(u["weeks"])}</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
+    o.append(f'<h3>{esc("Learning objectives")}</h3><p>{esc("By the end of this unit you can:")}</p>' + ul(u['objectives'], 'crs-obj'))
+    o.append(f'<h3>{esc("Key concepts")}</h3>' + ul(u['concepts'], 'crs-key'))
+    o.append(f'<h3>{esc("Key equations")}</h3>' + ''.join(eqblock(K, t, c) for t, c in u['eqs']))
+    o.append(f'<h3>{esc("Worked examples, step by step")}</h3>')
     for j, w in enumerate(u['worked'], 1):
-        o.append(f'<div class="crs-card crs-worked"><p class="crs-q"><strong>Example {i}.{j}</strong> {esc(w["q"])}</p>'
-                 f'<details><summary>Show the steps</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in w['steps']) + f'</ol><p class="crs-ans"><strong>Answer:</strong> {esc(w["a"])}</p></details></div>')
-    o.append('<h3>Practice problems</h3><p>Work each on paper first, then check.</p><ol class="crs-prac">' + ''.join(
-        f'<li><p>{esc(q)}</p><details><summary>Show answer</summary><p>{esc(a)}</p></details></li>' for q, a in u['practice']) + '</ol>')
-    o.append('<h3>Common misconceptions</h3><ul class="crs-mis">' + ''.join(
-        f'<li><p><span class="crs-x">Myth:</span> {esc(m)}</p><p><span class="crs-ok">Actually:</span> {esc(f)}</p></li>' for m, f in u['misc']) + '</ul>')
-    o.append(f'<h3>Flashcards</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">' + ''.join(
+        o.append(f'<div class="crs-card crs-worked"><p class="crs-q"><strong>{esc("Example {n}").replace("{n}", f"{i}.{j}")}</strong> {esc(w["q"])}</p>'
+                 f'<details><summary>{esc("Show the steps")}</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in w['steps']) + f'</ol><p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(w["a"])}</p></details></div>')
+    o.append(f'<h3>{esc("Practice problems")}</h3><p>{esc("Work each on paper first, then check.")}</p><ol class="crs-prac">' + ''.join(
+        f'<li><p>{esc(q)}</p><details><summary>{esc("Show answer")}</summary><p>{esc(a)}</p></details></li>' for q, a in u['practice']) + '</ol>')
+    o.append(f'<h3>{esc("Common misconceptions")}</h3><ul class="crs-mis">' + ''.join(
+        f'<li><p><span class="crs-x">{esc("Myth:")}</span> {esc(m)}</p><p><span class="crs-ok">{esc("Actually:")}</span> {esc(f)}</p></li>' for m, f in u['misc']) + '</ul>')
+    o.append(f'<h3>{esc("Flashcards")}</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">' + ''.join(
         f'<li><p class="crs-fc-f">{esc(a)}</p><p class="crs-fc-b">{esc(b)}</p></li>' for a, b in u['cards']) + '</ul></div>')
-    o.append(f'<h3>Self-check quiz</h3><form class="crs-quiz" data-quiz="{uid}" onsubmit="return false"><p class="crs-qs" aria-live="polite"></p>')
+    o.append(f'<h3>{esc("Self-check quiz")}</h3><form class="crs-quiz" data-quiz="{uid}" onsubmit="return false"><p class="crs-qs" aria-live="polite"></p>')
     for j, q in enumerate(u['quiz']):
         nm = f'{uid}q{j}'
         o.append(f'<fieldset data-ok="{q["ok"]}"><legend>{j + 1}. {esc(q["q"])}</legend>' + ''.join(
             f'<label><input type="radio" name="{nm}" value="{k}"> {esc(x)}</label>' for k, x in enumerate(q['opts']))
-            + f'<p class="crs-fb" aria-live="polite"></p><details class="crs-nojs"><summary>Show answer</summary><p>{esc(q["opts"][q["ok"]])}. {esc(q["why"])}</p></details>'
+            + f'<p class="crs-fb" aria-live="polite"></p><details class="crs-nojs"><summary>{esc("Show answer")}</summary><p>{esc(q["opts"][q["ok"]])}. {esc(q["why"])}</p></details>'
             + f'<p class="crs-why" hidden>{esc(q["why"])}</p></fieldset>')
     o.append('</form>')
     p = u['planet']
-    o.append('<div class="crs-planet"><h3>How this helps save the planet</h3>' + ''.join(f'<p>{esc(t)}</p>' for t in p['text'])
-             + '<p class="crs-src">On Saving Planets: ' + ' · '.join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in p['site'])
-             + '</p><p class="crs-src">Sources: ' + ' · '.join(ext(t, h) for t, h in p['src']) + '</p></div>')
-    o.append('<h3>Free learning resources</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
-    o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> I finished this unit</label></p>')
+    o.append(f'<div class="crs-planet"><h3>{esc("How this helps save the planet")}</h3>' + ''.join(f'<p>{esc(t)}</p>' for t in p['text'])
+             + f'<p class="crs-src">{esc("On Saving Planets:")} ' + ' · '.join(f'<a href="{esc(loc(h))}">{esc(t)}</a>' for t, h in p['site'])
+             + f'</p><p class="crs-src">{esc("Sources:")} ' + ' · '.join(ext(t, h) for t, h in p['src']) + '</p></div>')
+    o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
+    o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> {esc("I finished this unit")}</label></p>')
     o.append(top() + '</section>')
     return ''.join(o)
 
 def lab(C, K, L):
     hd, rows = L['table']
-    o = [f'<div class="crs-card crs-lab" id="{L["id"]}"><h3>{esc(L["title"])}</h3><p class="crs-kicker">{esc(L["week"])}</p><p><strong>Goal:</strong> {esc(L["goal"])}</p>',
-         eqblock(K, *L['eq']), '<h4>Procedure</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['steps']) + '</ol>',
-         '<h4>Data table</h4>' + table(hd, rows) + f'<p class="crs-note">{esc(L["note"])}</p>',
-         '<h4>Sample calculation</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['calc']) + '</ol>',
-         '<div class="crs-safe"><h4>Safety</h4>' + ul(L['safety']) + '</div>',
-         '<h4>Home or virtual alternative</h4>' + ul(L['home']) + '<p>' + ' · '.join(ext(t, h) for t, h in L['sims']) + '</p>',
-         f'<p class="crs-planet-s"><strong>Planet link:</strong> {esc(L["planet"])}' + (' ' + ' · '.join(ext(t, h) for t, h in L['planet_src']) if L['planet_src'] else '') + '</p>',
-         f'<p class="crs-done"><label><input type="checkbox" data-done="{L["id"]}"> I completed this lab (wet or virtual)</label></p></div>']
+    o = [f'<div class="crs-card crs-lab" id="{L["id"]}"><h3>{esc(L["title"])}</h3><p class="crs-kicker">{esc(L["week"])}</p><p><strong>{esc("Goal:")}</strong> {esc(L["goal"])}</p>',
+         eqblock(K, *L['eq']), f'<h4>{esc("Procedure")}</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['steps']) + '</ol>',
+         f'<h4>{esc("Data table")}</h4>' + table(hd, rows) + f'<p class="crs-note">{esc(L["note"])}</p>',
+         f'<h4>{esc("Sample calculation")}</h4><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in L['calc']) + '</ol>',
+         f'<div class="crs-safe"><h4>{esc("Safety")}</h4>' + ul(L['safety']) + '</div>',
+         f'<h4>{esc("Home or virtual alternative")}</h4>' + ul(L['home']) + '<p>' + ' · '.join(ext(t, h) for t, h in L['sims']) + '</p>',
+         f'<p class="crs-planet-s"><strong>{esc("Planet link:")}</strong> {esc(L["planet"])}' + (' ' + ' · '.join(ext(t, h) for t, h in L['planet_src']) if L['planet_src'] else '') + '</p>',
+         f'<p class="crs-done"><label><input type="checkbox" data-done="{L["id"]}"> {esc("I completed this lab (wet or virtual)")}</label></p></div>']
     return ''.join(o)
 
+def pdf_key(C, l): return 'courses/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l == 'en' else '_' + l) + '.pdf'
 def pdf_link(C):
-    # PDF study guide on R2 (made with --pdf: every answer open, print styles). Key = courses/<PAGE stem>_Study_Guide.pdf
-    MF = json.load(open('assets/data/media-manifest.json')); k = 'courses/' + C.PAGE[:-5] + '_Study_Guide.pdf'
-    return f' <a class="crs-btn" href="{MF[k]["url"]}" download>Download the PDF study guide</a>' if k in MF else ''
+    # PDF study guide on R2 (made with --pdf: every answer open, print styles). Key = courses/<PAGE stem>_Study_Guide[_<lang>].pdf; English PDF as fallback
+    MF = json.load(open('assets/data/media-manifest.json')); k = pdf_key(C, LANG)
+    if k in MF: return f' <a class="crs-btn" href="{MF[k]["url"]}" download>{esc("Download the PDF study guide")}</a>'
+    k = pdf_key(C, 'en')
+    return f' <a class="crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' if k in MF else ''
 
-def make_pdf(C):
-    out = '/tmp/' + C.PAGE[:-5] + '_Study_Guide.pdf'; tmp = '_pdf_' + C.PAGE
-    open(tmp, 'w', encoding='utf8').write(open(C.PAGE, encoding='utf8').read().replace('<details', '<details open'))
+def make_pdf(C, l='en'):
+    out = '/tmp/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l == 'en' else '_' + l) + '.pdf'; src = (l + '/' if l != 'en' else '') + C.PAGE
+    tmp = os.path.join(os.path.dirname(src), '_pdf_' + C.PAGE)
+    open(tmp, 'w', encoding='utf8').write(open(src, encoding='utf8').read().replace('<details', '<details open'))
     srv = subprocess.Popen([sys.executable, '-m', 'http.server', '8799'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         import time; time.sleep(1)
@@ -100,65 +136,82 @@ def make_pdf(C):
         srv.kill(); os.remove(tmp)
     return out
 
+UI = ['Score: {r} of {n}', ' (answered {a})', 'Correct. ', 'Not quite. The answer is: {x}. ', 'Try this quiz again', 'Answer: ', 'Card {i} of {n}: ', '. Activate to flip.',
+      'Previous', 'Flip', 'Next', 'Shuffle', 'Show all', 'Clear your saved progress and quiz scores for this course?', '{d} of {n} units and labs done ({p}%).', ' Best quiz scores: {q}.']
+def ui_attr(): return '' if LANG == 'en' else ' data-ui="' + html.escape(json.dumps({k: _(k) for k in UI}, ensure_ascii=False), quote=True) + '"'
+
 def course_page(C):
-    texs = [t for u in C.UNITS for t, _ in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
+    texs = [t for u in C.UNITS for t, _c in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
     K = katex(texs)
     toc = [('about', 'About this course'), ('start', 'Before you start'), ('schedule', '15-week schedule'), ('progress', 'Your progress')] + \
-          [(u['id'], f'Unit {i}: {u["title"]}') for i, u in enumerate(C.UNITS, 1)] + \
+          [(u['id'], _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])) for i, u in enumerate(C.UNITS, 1)] + \
           [('lab', 'Lab'), ('exam', 'Exam prep'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
-    o = [hero(C.TITLE, C.TAGLINE), '<div class="crs" data-course="' + C.ID + '">',
-         f'<p class="crs-crumb"><a href="{HUB}">Courses</a> › {esc(C.CODE)}</p>',
-         '<div class="crs-toc" role="navigation" aria-label="On this page"><ul>' + ''.join(f'<li><a href="#{a}">{esc(b)}</a></li>' for a, b in toc) + '</ul></div>',
-         '<p class="crs-tools"><button type="button" class="crs-btn" data-print>Print this page</button>' + pdf_link(C) + '</p>']
-    o.append('<section id="about"><h2>About this course</h2><div class="crs-disc">' + ''.join(f'<p>{esc(x)}</p>' for x in C.ABOUT) + '</div>'
-             '<div class="crs-planet"><h3>How this course helps save the planet</h3>' + ''.join(f'<p>{esc(x)}</p>' for x in C.COURSE_PLANET) + '</div>' + top() + '</section>')
-    o.append('<section id="start"><h2>Before you start</h2><h3>Prerequisites</h3>' + ul(C.PREREQS) + '<h3>How to study</h3>' + ul(C.STUDY)
-             + '<h3>Lab equipment (for the wet labs)</h3>' + ul(C.LAB_GEAR) + top() + '</section>')
+    names0 = {u['id'] for u in C.UNITS}
+    o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
+         f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
+         f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
+         f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
+    o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{esc(x)}</p>' for x in C.ABOUT) + '</div>'
+             f'<div class="crs-planet"><h3>{esc("How this course helps save the planet")}</h3>' + ''.join(f'<p>{esc(x)}</p>' for x in C.COURSE_PLANET) + '</div>' + top() + '</section>')
+    o.append(f'<section id="start"><h2>{esc("Before you start")}</h2><h3>{esc("Prerequisites")}</h3>' + ul(C.PREREQS) + f'<h3>{esc("How to study")}</h3>' + ul(C.STUDY)
+             + f'<h3>{esc("Lab equipment (for the wet labs)")}</h3>' + ul(C.LAB_GEAR) + top() + '</section>')
     names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
-    o.append('<section id="schedule"><h2>Suggested 15-week schedule</h2><p>About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.</p>'
+    o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2><p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p>'
              + table(['Week', 'Unit', 'Topics', 'Reading'], [[str(w), names[u], t, r] for w, u, t, r in C.SCHEDULE]) + top() + '</section>')
-    o.append('<section id="progress"><h2>Your progress</h2><p>Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.</p>'
-             '<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">Turn on JavaScript to track progress.</p></div>'
-             '<p><button type="button" class="crs-btn crs-reset" data-reset>Reset my progress</button></p>' + top() + '</section>')
+    o.append(f'<section id="progress"><h2>{esc("Your progress")}</h2><p>{esc("Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.")}</p>'
+             f'<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">{esc("Turn on JavaScript to track progress.")}</p></div>'
+             f'<p><button type="button" class="crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
-    o.append(f'<section id="lab"><h2>{esc(getattr(C, "LAB_TITLE", "The lab (" + getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1]) + ")"))}</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
-             + f'<p class="crs-src">Safety reference: {ext(*C.SAFETY_SRC)}</p>' + ''.join(lab(C, K, L) for L in C.LABS) + top() + '</section>')
-    ex = ['<section id="exam"><h2>Exam prep practice sets</h2><p>Time yourself: about 10 minutes per problem. Then compare with the full solutions.</p>']
+    o.append(f'<section id="lab"><h2>{esc(C.LAB_TITLE) if getattr(C, "LAB_TITLE", None) else html.escape(_("The lab ({code})").replace("{code}", getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1])))}</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
+             + f'<p class="crs-src">{esc("Safety reference:")} {ext(*C.SAFETY_SRC)}</p>' + ''.join(lab(C, K, L) for L in C.LABS) + top() + '</section>')
+    ex = [f'<section id="exam"><h2>{esc("Exam prep practice sets")}</h2><p>{esc("Time yourself: about 10 minutes per problem. Then compare with the full solutions.")}</p>']
     for t, probs in C.EXAMS:
         ex.append(f'<h3>{esc(t)}</h3><ol class="crs-prac">' + ''.join(
-            f'<li><p>{esc(q)}</p><details><summary>Show full solution</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in st) + f'</ol><p class="crs-ans"><strong>Answer:</strong> {esc(a)}</p></details></li>'
+            f'<li><p>{esc(q)}</p><details><summary>{esc("Show full solution")}</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in st) + f'</ol><p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(a)}</p></details></li>'
             for q, st, a in probs) + '</ol>')
     o.append(''.join(ex) + top() + '</section>')
-    o.append('<section id="formulas"><h2>Formula sheet</h2><div class="crs-fs">' + ''.join(f'<div class="crs-math">{K[t]}</div>' for t in C.FORMULAS) + '</div>'
-             '<h3>Constants</h3>' + table(['Constant', 'Value'], C.CONSTANTS) + f'<p class="crs-src">Source: {ext(*C.CONST_SRC)}</p>' + top() + '</section>')
+    o.append(f'<section id="formulas"><h2>{esc("Formula sheet")}</h2><div class="crs-fs">' + ''.join(f'<div class="crs-math">{K[t]}</div>' for t in C.FORMULAS) + '</div>'
+             f'<h3>{esc("Constants")}</h3>' + table(['Constant', 'Value'], C.CONSTANTS) + f'<p class="crs-src">{esc("Source:")} {ext(*C.CONST_SRC)}</p>' + top() + '</section>')
     o.append(f'<section id="ptable"><h2>{esc(getattr(C, "REF_TITLE", "Periodic table"))}</h2><p>{esc(getattr(C, "REF_INTRO", "Use one of these free interactive tables alongside the course."))}</p><ul class="crs-res">'
              + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in C.PTABLE) + '</ul>' + top() + '</section>')
-    o.append('<section id="glossary"><h2>Glossary</h2><dl class="crs-gl">' + ''.join(f'<dt>{esc(a)}</dt><dd>{esc(b)}</dd>' for a, b in C.GLOSSARY) + '</dl>' + top() + '</section>')
-    o.append('<section id="rubric"><h2>Self-assessment rubric</h2><p>No grade or credit is given. Use this to judge honestly where you are in each unit.</p>'
-             + table(['Level', 'What it looks like'], C.RUBRIC) + '<h3>Suggested weighting if you want a score</h3>' + table(['Part', 'Weight'], C.WEIGHTS)
-             + '<p>Aim for level 3 or better in every unit before moving to the next course.</p>' + top() + '</section>')
+    o.append(f'<section id="glossary"><h2>{esc("Glossary")}</h2><dl class="crs-gl">' + ''.join(f'<dt>{esc(a)}</dt><dd>{esc(b)}</dd>' for a, b in C.GLOSSARY) + '</dl>' + top() + '</section>')
+    o.append(f'<section id="rubric"><h2>{esc("Self-assessment rubric")}</h2><p>{esc("No grade or credit is given. Use this to judge honestly where you are in each unit.")}</p>'
+             + table(['Level', 'What it looks like'], C.RUBRIC) + f'<h3>{esc("Suggested weighting if you want a score")}</h3>' + table(['Part', 'Weight'], C.WEIGHTS)
+             + f'<p>{esc("Aim for level 3 or better in every unit before moving to the next course.")}</p>' + top() + '</section>')
     o.append('</div>')
-    return BL.shell('en', C.PAGE, C.TITLE + ' (' + C.CODE + ')', C.DESC, ''.join(o), extra_head=head(), ld_type='Course', tail=tail())
+    return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=head(), ld_type='Course', tail=tail())
 
 def en_only(h):
-    # Phase 1: English only, so no fr/es/ar/it/he alternates until the translated pages exist
-    return re.sub(r'\n?<link rel="alternate" hreflang="(?!en"|x-default")[^"]+" href="[^"]+">', lambda m: m.group(0) if os.path.exists(m.group(0).split('savingplanets.com/')[1].split('"')[0]) else '', h)
+    # alternates only for languages whose page exists on disk (all six once phase 2 is built)
+    h = re.sub(r'\n?<link rel="alternate" hreflang="(?!en"|x-default")[^"]+" href="[^"]+">', lambda m: m.group(0) if os.path.exists(m.group(0).split('savingplanets.com/')[1].split('"')[0]) else '', h)
+    return fix_switch(h)
+
+def fix_switch(h):
+    # language switcher: a language whose version of this page is not built yet goes to that language's home page (never a 404)
+    def one(m):
+        href, lg = m.group(1), m.group(2)
+        f = re.sub(r'^(\.\./)+', '', href.split('#')[0])
+        if os.path.exists(f): return m.group(0)
+        home = ('../' if LANG != 'en' else '') + ('' if lg == 'en' else lg + '/') + 'index.html'
+        return m.group(0).replace(f'href="{href}"', f'href="{home}"')
+    return re.sub(r'<li class="lang-switch".*?</li>', lambda b: re.sub(r'<a class="spn-ls"[^>]*?href="([^"]+)" hreflang="(\w+)"', one, b.group(0)), h, flags=re.S)
 
 def hub_page():
-    o = [hero('Courses', 'A free four-year aerospace and STEM study track, built one course at a time.'), '<div class="crs">',
-         '<div class="crs-disc"><p>These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.</p>'
-         '<p>Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.</p></div>',
-         '<div class="crs-toc" role="navigation" aria-label="Years"><ul>' + ''.join(f'<li><a href="#y{i}">{esc(y.split(" · ")[0])}</a></li>' for i, (y, _) in enumerate(RM.YEARS, 1)) + '</ul></div>']
+    o = [hero('Courses', 'A free four-year aerospace and STEM study track, built one course at a time.'), f'<div class="crs"{dir_attr()}>',
+         f'<div class="crs-disc"><p>{esc("These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.")}</p>'
+         f'<p>{esc("Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.")}</p></div>',
+         f'<div class="crs-toc" role="navigation" aria-label="{esc("Years")}"><ul>' + ''.join(f'<li><a href="#y{i}">{html.escape(_(y).split(" · ")[0])}</a></li>' for i, (y, _c) in enumerate(RM.YEARS, 1)) + '</ul></div>']
     for i, (y, cs) in enumerate(RM.YEARS, 1):
         o.append(f'<section id="y{i}"><h2>{esc(y)}</h2><ul class="crs-grid">')
         for cid, t, d in cs:
             m = LIVE.get(cid)
-            if m: o.append(f'<li class="crs-c live"><span class="crs-badge">Live</span><h3><a href="{m.PAGE}">{esc(t)}</a></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
-            else: o.append(f'<li class="crs-c"><span class="crs-badge soon">Coming soon</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>')
+            if m and (LANG == 'en' or LANG in DONE.get(cid, ())): o.append(f'<li class="crs-c live"><span class="crs-badge">{esc("Live")}</span><h3><a href="{m.PAGE}">{esc(t)}</a></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
+            elif m: o.append(f'<li class="crs-c live"><span class="crs-badge">{esc("Live")}</span><h3><a href="../{m.PAGE}" hreflang="en">{esc(t)}</a> <span lang="en">(English)</span></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
+            else: o.append(f'<li class="crs-c"><span class="crs-badge soon">{esc("Coming soon")}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>')
         o.append('</ul>' + top() + '</section>')
     o.append('</div>')
-    return BL.shell('en', HUB, 'Courses: free aerospace and STEM study track', 'Free self-study courses on Saving Planets: a four-year aerospace and STEM track with labs, quizzes and study guides. No credit, no cost.',
-                    ''.join(o), extra_head=head(), ld_type='ItemList', tail='')
+    return BL.shell(LANG, HUB, _('Courses: free aerospace and STEM study track'), _('Free self-study courses on Saving Planets: a four-year aerospace and STEM track with labs, quizzes and study guides. No credit, no cost.'),
+                    ''.join(o), extra_head=head(), ld_type='CollectionPage', tail='')
 
 def banners():
     p = 'assets/data/anim-banners.json'; cfg = json.load(open(p, encoding='utf8')); MF = json.load(open('assets/data/media-manifest.json'))
@@ -186,9 +239,15 @@ def teachers_links():
         if not os.path.exists(f): continue
         s = open(f, encoding='utf8').read(); pre = '' if l == 'en' else '../'
         s = re.sub(r'<!-- COURSELINK:START -->[\s\S]*?<!-- COURSELINK:END -->', '', s)
-        first = MODS[0]
-        blk = (f'<!-- COURSELINK:START --><aside class="learn-link card-band" aria-label="{esc(h)}"><h2>{esc(h)}</h2><p>{esc(t)} '
-               f'<a href="{pre}{first.PAGE}" hreflang="en">{esc(first.TITLE)}</a> (English) · <a href="{pre}{HUB}" hreflang="en">{esc(a)}</a></p></aside><!-- COURSELINK:END -->')
+        first = next((LIVE[c] for _y, cs in RM.YEARS for c, _t, _d in cs if c in LIVE), MODS[0])  # first live course in roadmap order (not file order)
+        global LANG; LANG = l
+        if l == 'en' or l in DONE.get(first.ID, ()):  # phase 2: the translated course pages exist, link them in this language
+            lk = f'<a href="{first.PAGE}">{esc(first.TITLE)}</a> · <a href="{HUB}">{html.escape(a)}</a>'
+        else:
+            lk = f'<a href="{pre}{first.PAGE}" hreflang="en">{html.escape(first.TITLE)}</a> (English) · <a href="{pre}{HUB}" hreflang="en">{html.escape(a)}</a>'
+        LANG = 'en'
+        blk = (f'<!-- COURSELINK:START --><aside class="learn-link card-band" aria-label="{html.escape(h)}"><h2>{html.escape(h)}</h2><p>{html.escape(t)} '
+               + lk + '</p></aside><!-- COURSELINK:END -->')
         if '<!-- LEARNLINK:START -->' in s: s = s.replace('<!-- LEARNLINK:START -->', blk + '<!-- LEARNLINK:START -->', 1)
         else: s = s.replace('</main>', blk + '</main>', 1)
         open(f, 'w', encoding='utf8').write(s)
@@ -209,13 +268,81 @@ def check():
     print('links:', len(urls), 'checked;', 'not 200 from this box (check by browser):', fail)
     return not bad
 
+def strings_of(cid):  # English strings a course (or '_shared' = hub + headings + UI) looks up, in page order
+    global LANG; seen = {}; old = _orig = globals()['_']
+    def rec(x):
+        if isinstance(x, str) and needs_tr(x): seen.setdefault(x, None)
+        return _orig(x)
+    LANG = 'fr'; globals()['_'] = rec
+    try:
+        hub_page(); [_orig and rec(k) for k in UI]; sh = dict(seen)
+        if cid == '_shared': return list(sh)
+        seen.clear(); course_page(LIVE[cid]); return [k for k in seen if k not in sh]
+    finally: globals()['_'] = _orig; LANG = 'en'
+
+NUM_RX = r'\d+(?:[.,]\d+)*'
+def nums(x): return sorted(n.replace(',', '') for n in re.findall(NUM_RX, x))
+def export_missing(cid):
+    ks = [k for k in strings_of(cid) if any(l not in TR.get(k, {}) for l in LANGS[1:])]
+    f = f'/tmp/courses-missing-{cid}.tsv'
+    with open(f, 'w', encoding='utf8') as o:
+        o.write('en\t' + '\t'.join(LANGS[1:]) + '\n')
+        for k in ks: o.write(k.replace('\t', ' ') + '\t' + '\t'.join(TR.get(k, {}).get(l, '') for l in LANGS[1:]) + '\n')
+    print(f, len(ks), 'strings')
+
+def import_tsv(path, cid):
+    p = f'i18n/courses/{cid}.json'; d = json.load(open(p, encoding='utf8')) if os.path.exists(p) else {}
+    rows = [r.rstrip('\n').split('\t') for r in open(path, encoding='utf8')]; hdr = rows[0]; bad = []
+    for r in rows[1:]:
+        en = r[0]
+        for l, t in zip(hdr[1:], r[1:]):
+            if not t: continue
+            if nums(en) != nums(t) or sorted(re.findall(r'\{\w+\}', en)) != sorted(re.findall(r'\{\w+\}', t)): bad.append((l, en[:60], t[:60])); continue
+            d.setdefault(en, {})[l] = t
+    json.dump(dict(sorted(d.items())), open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=1); open(p, 'a').write('\n')
+    print(p, len(d), 'strings;', len(bad), 'rejected (numbers or {placeholders} differ):', *bad[:20], sep='\n')
+
+def relink(langs, gaps):
+    # every page of a translated language links its own copy of the hub/course (nav "Courses" item, Teachers, Learn...) instead of ../English.
+    # Same result build-nav.py gives on the next full weekly-sync; done here so a course language goes live in one step.
+    for l in langs[1:]:
+        pages = ([HUB] if not gaps.get('_hub', {}).get(l) else []) + [m.PAGE for m in MODS if l in DONE.get(m.ID, ())]
+        if not pages: continue
+        rx = re.compile(r'href="\.\./(' + '|'.join(map(re.escape, pages)) + r')([#"])')
+        for f in glob.glob(l + '/*.html'):
+            s = open(f, encoding='utf8').read(); n = rx.sub(r'href="\1\2', s)
+            if n != s: open(f, 'w', encoding='utf8').write(n)
+
 if __name__ == '__main__':
     if '--check' in sys.argv: sys.exit(0 if check() else 1)
     if '--pdf' in sys.argv:
-        for m in MODS: print(make_pdf(m))
+        for m in MODS:
+            for l in [x for x in LANGS if x == 'en' or os.path.exists(x + '/' + m.PAGE)]: print(make_pdf(m, l))
         sys.exit(0)
+    if '--pdf' in sys.argv: pass
+    if '--missing' in sys.argv: export_missing(sys.argv[sys.argv.index('--missing') + 1]); sys.exit(0)
+    if '--import' in sys.argv: a = sys.argv.index('--import'); import_tsv(sys.argv[a + 1], sys.argv[a + 2]); sys.exit(0)
     banners()
-    for m in MODS: open(m.PAGE, 'w', encoding='utf8').write(en_only(course_page(m)))
-    open(HUB, 'w', encoding='utf8').write(en_only(hub_page()))
+    langs = [l for l in LANGS if l in BUILD_LANGS and (l == 'en' or os.path.exists(l + '/Kids_Map.html'))]
+    gaps = {}
+    for l in langs[1:]:  # which courses are complete in which language (shared strings count for every course)
+        LANG = l; MISSING.clear(); hub_page(); shared = set(MISSING)
+        if shared: gaps.setdefault('_hub', {})[l] = sorted(shared)
+        for m in MODS:
+            MISSING.clear(); course_page(m); miss = set(MISSING) | shared
+            if miss: gaps.setdefault(m.ID, {})[l] = sorted(miss)
+            else: DONE.setdefault(m.ID, set()).add(l)
+    for _pass in (1, 2):  # second pass: hreflang alternates see every language's file
+        for LANG in langs:
+            for m in MODS:
+                f = out(m.PAGE)
+                if LANG == 'en' or LANG in DONE.get(m.ID, ()): open(f, 'w', encoding='utf8').write(en_only(course_page(m)))
+                elif os.path.exists(f): os.remove(f)  # never leave a stale half-translated page
+            if LANG == 'en' or not gaps.get('_hub', {}).get(LANG): open(out(HUB), 'w', encoding='utf8').write(en_only(hub_page()))
+    LANG = 'en'
+    for cid, g in gaps.items():
+        print(f'build-courses: {cid} not translated yet in', {l: len(v) for l, v in g.items()}, f'(English only there; run --missing {cid})')
+    if '--strict' in sys.argv and gaps: raise SystemExit(1)
     teachers_links()
+    relink(langs, gaps)
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])
