@@ -1,0 +1,1123 @@
+{
+ "_note": "Ways to Help data (Oct 24 2026, founder: every solution gets its solution page + official Donate + Offer to Help link). orgs: key -> [name, donate, help, contact]; null = none. Pages: solution slug -> org key. Every URL checked (no 404s) before adding. Fallback when no donate/help page: the org's official contact page, noted in the row. Rendered by scripts/build-ways-to-help.py.",
+ "orgs": {
+  "sp": [
+   "Saving Planets",
+   null,
+   "Contact.html",
+   null
+  ],
+  "nasa": [
+   "NASA",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "esa": [
+   "ESA",
+   null,
+   "https://www.esa.int/About_Us/Careers_at_ESA",
+   "https://www.esa.int/Services/Contacts"
+  ],
+  "jaxa": [
+   "JAXA",
+   null,
+   "https://global.jaxa.jp/about/employ/",
+   "https://global.jaxa.jp/activity/pr/inquiries/"
+  ],
+  "isro": [
+   "ISRO",
+   null,
+   "https://www.isro.gov.in/Careers.html",
+   "https://www.isro.gov.in/contact.html"
+  ],
+  "noaa": [
+   "NOAA",
+   null,
+   "https://www.noaa.gov/work-with-us/volunteer-opportunities-citizen-scientists",
+   "https://www.noaa.gov/contact-us"
+  ],
+  "eumetsat": [
+   "EUMETSAT",
+   null,
+   "https://www.eumetsat.int/work-us/careers-eumetsat",
+   "https://www.eumetsat.int/contact-us"
+  ],
+  "copernicus": [
+   "Copernicus (EU)",
+   null,
+   "https://www.copernicus.eu/en/opportunities",
+   "https://www.copernicus.eu/en/eu-space-support-office-eusso"
+  ],
+  "ecmwf": [
+   "ECMWF (Copernicus)",
+   null,
+   "https://www.ecmwf.int/en/about/jobs",
+   "https://www.ecmwf.int/en/about/contact-us"
+  ],
+  "jrc": [
+   "European Commission JRC (Copernicus)",
+   null,
+   null,
+   "https://joint-research-centre.ec.europa.eu/index_en"
+  ],
+  "csa": [
+   "Canadian Space Agency",
+   null,
+   "https://www.asc-csa.gc.ca/eng/jobs/",
+   "https://www.asc-csa.gc.ca/eng/contact.asp"
+  ],
+  "unep": [
+   "UNEP",
+   null,
+   "https://www.unep.org/en/whats-new/get-involved",
+   "https://www.unep.org/en/who-we-are/contact-us"
+  ],
+  "unccd": [
+   "UNCCD / African Union",
+   null,
+   null,
+   "https://www.unccd.int/about-us/contacts"
+  ],
+  "unesco": [
+   "UNESCO",
+   null,
+   "https://www.unesco.org/en/careers",
+   null
+  ],
+  "dea": [
+   "Digital Earth Africa",
+   null,
+   "https://digitalearthafrica.org/en_za/support/",
+   "https://digitalearthafrica.org/en_za/contact/"
+  ],
+  "charter": [
+   "International Charter: Space and Major Disasters",
+   null,
+   null,
+   "https://disasterscharter.org/contact"
+  ],
+  "globe": [
+   "The GLOBE Program",
+   null,
+   "https://observer.globe.gov/",
+   "https://www.globe.gov/support/contact"
+  ],
+  "noirlab": [
+   "NSF NOIRLab",
+   null,
+   "https://globeatnight.org/",
+   "https://noirlab.edu/public/about/contacts/"
+  ],
+  "cnes": [
+   "NASA / CNES",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "usgs": [
+   "NASA / USGS",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "lasp": [
+   "NASA / LASP",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "efa": [
+   "Earth Fire Alliance",
+   "https://www.earthfirealliance.org/",
+   "https://earthfirealliance.org/careers/",
+   "https://earthfirealliance.org/contact/"
+  ],
+  "carbonmapper": [
+   "Carbon Mapper",
+   "https://carbonmapper.org/donate",
+   "https://carbonmapper.org/about/get-involved",
+   null
+  ],
+  "africanparks": [
+   "African Parks",
+   "https://www.africanparks.org/donate",
+   "https://www.africanparks.org/join",
+   null
+  ],
+  "americanforests": [
+   "American Forests",
+   "https://www.americanforests.org/ways-to-give/",
+   "https://www.americanforests.org/job-opportunities",
+   "https://www.americanforests.org/contact/"
+  ],
+  "arborday": [
+   "Arbor Day Foundation",
+   "https://www.arborday.org/donate",
+   "https://www.arborday.org/get-involved",
+   "https://www.arborday.org/contact"
+  ],
+  "coolearth": [
+   "Cool Earth",
+   "https://www.coolearth.org/donate/",
+   "https://www.coolearth.org/act-now/",
+   "https://www.coolearth.org/contact-us/"
+  ],
+  "fonafifo": [
+   "FONAFIFO (Costa Rica)",
+   null,
+   null,
+   "https://www.fonafifo.go.cr/en/contacto/"
+  ],
+  "eden": [
+   "Eden: People+Planet",
+   "https://www.edenprojects.org/donate",
+   "https://eden-plus.org/partner/",
+   "https://eden-plus.org/about/contact/"
+  ],
+  "wcs": [
+   "Wildlife Conservation Society",
+   "https://www.wcs.org/support",
+   "https://www.wcs.org/get-involved",
+   "https://www.wcs.org/about-us/careers"
+  ],
+  "galapagos": [
+   "Galápagos Conservancy",
+   "https://www.galapagos.org/give/",
+   "https://www.galapagos.org/careers/",
+   "https://www.galapagos.org/contact-us/"
+  ],
+  "umd": [
+   "NASA / University of Maryland",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "wri": [
+   "World Resources Institute (Global Forest Watch)",
+   "https://www.wri.org/donate",
+   "https://www.wri.org/join-us",
+   "https://www.wri.org/about/contact"
+  ],
+  "gorongosa": [
+   "Gorongosa Project",
+   "https://gorongosa.org/donate/",
+   null,
+   "https://gorongosa.org/contact/"
+  ],
+  "justdiggit": [
+   "Justdiggit",
+   "https://justdiggit.org/donate/",
+   "https://justdiggit.org/about-us/jobs/",
+   "https://justdiggit.org/contact/"
+  ],
+  "doc": [
+   "New Zealand Department of Conservation",
+   null,
+   "https://www.doc.govt.nz/our-work/kakapo-recovery/get-involved/",
+   "https://www.doc.govt.nz/footer-links/contact-us/"
+  ],
+  "lifeterra": [
+   "Life Terra",
+   "https://www.lifeterra.eu/en/support-us",
+   "https://www.lifeterra.eu/en/join-in",
+   null
+  ],
+  "aca": [
+   "Amazon Conservation (MAAP)",
+   "https://www.amazonconservation.org/donate/",
+   null,
+   "https://www.amazonconservation.org/"
+  ],
+  "igcp": [
+   "International Gorilla Conservation Programme",
+   "https://igcp.org/support-us/",
+   null,
+   "https://igcp.org/contact-us/"
+  ],
+  "ntnc": [
+   "National Trust for Nature Conservation (Nepal)",
+   null,
+   null,
+   "https://ntnc.org.np/contact"
+  ],
+  "otp": [
+   "One Tree Planted",
+   "https://onetreeplanted.org/products/plant-trees",
+   "https://onetreeplanted.org/pages/careers",
+   "https://onetreeplanted.org/pages/contact-us"
+  ],
+  "pftp": [
+   "Plant-for-the-Planet",
+   "https://donate.plant-for-the-planet.org/",
+   "https://www.plant-for-the-planet.org/career/",
+   "https://www.plant-for-the-planet.org/contact/"
+  ],
+  "pfnz": [
+   "Predator Free NZ Trust",
+   null,
+   "https://predatorfreenz.org/get-involved/",
+   "https://predatorfreenz.org/about-us/contact-us/"
+  ],
+  "rfcx": [
+   "Rainforest Connection",
+   "https://rfcx.org/donate",
+   "https://rfcx.org/get-involved",
+   null
+  ],
+  "eag": [
+   "Environmental Awareness Group (Antigua)",
+   "https://4agc.com/donation_pages/c68ec3bb-41da-4d34-8211-53f90f59fd83",
+   "https://eagantigua.net/volunteer/",
+   "https://eagantigua.net/"
+  ],
+  "rewild": [
+   "Rewilding Europe",
+   "https://rewildingeurope.com/get-involved/donate/",
+   "https://rewildingeurope.com/get-involved/",
+   null
+  ],
+  "tompkins": [
+   "Tompkins Conservation",
+   "https://www.tompkinsconservation.org/donate/",
+   null,
+   null
+  ],
+  "altyndala": [
+   "Altyn Dala Conservation Initiative",
+   null,
+   null,
+   "https://altyndala.org/contact-us/"
+  ],
+  "terraformation": [
+   "Terraformation",
+   "https://www.terraformation.com/work-with-us",
+   "https://www.terraformation.com/careers",
+   null
+  ],
+  "iucn": [
+   "IUCN",
+   "https://iucn.org/donate",
+   "https://iucn.org/get-involved",
+   "https://iucn.org/contact"
+  ],
+  "miteco": [
+   "MITECO (Spain)",
+   null,
+   null,
+   "https://www.miteco.gob.es/es/ministerio/atencion-a-la-ciudadania.html"
+  ],
+  "tfl": [
+   "Trees for Life",
+   "https://treesforlife.org.uk/support/donate/",
+   "https://treesforlife.org.uk/volunteer/",
+   "https://treesforlife.org.uk/contact-us/"
+  ],
+  "tftf": [
+   "Trees for the Future",
+   "https://trees.org/support/personal-ways-to-give",
+   "https://trees.org/careers",
+   "https://trees.org/contact/"
+  ],
+  "weforest": [
+   "WeForest",
+   "https://www.weforest.org/donate/",
+   "https://www.weforest.org/partner-with-us/",
+   "https://www.weforest.org/contact/"
+  ],
+  "yf": [
+   "Yellowstone Forever",
+   "https://www.yellowstone.org/ways-to-give/",
+   "https://www.yellowstone.org/who-we-are/jobs/",
+   "https://www.yellowstone.org/who-we-are/contact/"
+  ],
+  "agl": [
+   "Alliance for the Great Lakes",
+   "https://greatlakes.org/donate/",
+   "https://greatlakes.org/get-involved/adopt-a-beach/",
+   null
+  ],
+  "rscn": [
+   "Royal Society for the Conservation of Nature (Jordan)",
+   "https://www.rscn.org.jo/donation",
+   "https://www.rscn.org.jo/career",
+   "https://www.rscn.org.jo/contact-us"
+  ],
+  "cda": [
+   "Chilika Development Authority",
+   null,
+   null,
+   "https://www.chilika.com/contact.php"
+  ],
+  "cla": [
+   "Clean Lakes Alliance",
+   "https://www.cleanlakesalliance.org/donate/",
+   "https://www.cleanlakesalliance.org/volunteer/",
+   "https://www.cleanlakesalliance.org/contact/"
+  ],
+  "cutl": [
+   "Clean Up the Lake",
+   "https://cleanupthelake.org/donate/",
+   "https://cleanupthelake.org/volunteer/",
+   null
+  ],
+  "glpc": [
+   "Great Lakes Plastic Cleanup",
+   "https://www.greatlakesplasticcleanup.org/get-involved",
+   "https://www.greatlakesplasticcleanup.org/get-involved",
+   null
+  ],
+  "ktb": [
+   "Keep Tahoe Blue",
+   "https://www.keeptahoeblue.org/give/",
+   "https://www.keeptahoeblue.org/volunteer/",
+   "https://www.keeptahoeblue.org/contact/"
+  ],
+  "shiga": [
+   "Shiga Prefecture (Japan)",
+   null,
+   null,
+   "https://www.pref.shiga.lg.jp/"
+  ],
+  "igkb": [
+   "IGKB (Lake Constance Commission)",
+   null,
+   null,
+   "https://www.igkb.org/kontakt"
+  ],
+  "gnf": [
+   "Global Nature Fund",
+   "https://globalnature.org/en/donate-help/",
+   null,
+   "https://globalnature.org/en/contact-us/"
+  ],
+  "rld": [
+   "Restoring the Lake Depths Foundation",
+   "https://www.restoremylake.org/donate",
+   null,
+   "https://www.restoremylake.org/m-donate"
+  ],
+  "4ocean": [
+   "4ocean",
+   "https://4oceanfoundation.org/donate",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/70d8b9a8-65c4-48f4-8af9-f2014dd5cf2d/4Ocean-Public-Benefit-Company",
+   "https://www.4ocean.com/pages/contact-4ocean"
+  ],
+  "ead": [
+   "Environment Agency Abu Dhabi",
+   null,
+   null,
+   "https://www.ead.gov.ae/en/contact-us"
+  ],
+  "asg": [
+   "Alaska Sea Grant",
+   null,
+   "https://alaskaseagrant.org/our-work/aquaculture/",
+   "https://alaskaseagrant.org/contact/"
+  ],
+  "aslc": [
+   "Alaska SeaLife Center",
+   "https://www.alaskasealife.org/donate",
+   "https://www.alaskasealife.org/volunteer",
+   "https://www.alaskasealife.org/contact"
+  ],
+  "norway": [
+   "Government of Norway",
+   null,
+   null,
+   "https://www.regjeringen.no/en/id4/"
+  ],
+  "argo": [
+   "Argo",
+   null,
+   "https://argo.ucsd.edu/outreach/adopt-a-float/",
+   null
+  ],
+  "argos": [
+   "Argos (CLS / NOAA / CNES)",
+   null,
+   "https://www.argos-system.org/solutions/wildlife-monitoring/",
+   "https://www.argos-system.org/contact/"
+  ],
+  "lancaster": [
+   "Lancaster University",
+   null,
+   null,
+   "https://www.lancaster.ac.uk/about-us/contact-us/"
+  ],
+  "bop": [
+   "Billion Oyster Project",
+   "https://www.billionoysterproject.org/donate",
+   "https://www.billionoysterproject.org/volunteering",
+   null
+  ],
+  "epa": [
+   "U.S. EPA",
+   null,
+   null,
+   "https://www.epa.gov/aboutepa/forms/contact-epa"
+  ],
+  "mercator": [
+   "Copernicus Marine Service (Mercator Ocean)",
+   null,
+   "https://www.mercator-ocean.eu/about-us/work-with-us/careers/",
+   "https://marine.copernicus.eu/contact"
+  ],
+  "cg": [
+   "Coral Gardeners",
+   "https://coralgardeners.org/donate",
+   "https://coralgardeners.org/adopt",
+   null
+  ],
+  "gbrf": [
+   "Great Barrier Reef Foundation",
+   "https://www.barrierreef.org/donate",
+   "https://www.barrierreef.org/you-can-help",
+   "https://www.barrierreef.org/resources/contact"
+  ],
+  "crf": [
+   "Coral Restoration Foundation",
+   "https://coralrestoration.org/one-time-donation/",
+   "https://coralrestoration.org/get-involved/",
+   null
+  ],
+  "coralvita": [
+   "Coral Vita",
+   null,
+   "https://coralvita.co/adopt-a-coral-program/",
+   "https://coralvita.co/contact/"
+  ],
+  "gfw": [
+   "Global Fishing Watch",
+   "https://globalfishingwatch.org/support-us/",
+   "https://globalfishingwatch.org/careers/",
+   "https://globalfishingwatch.org/contact-us/"
+  ],
+  "goak": [
+   "Gulf of Alaska Keeper",
+   "https://goak.org/short-code/",
+   null,
+   "https://goak.org/contact/"
+  ],
+  "htb": [
+   "Heal the Bay",
+   "https://healthebay.org/donate/",
+   "https://healthebay.org/take-part/",
+   null
+  ],
+  "hs": [
+   "Healthy Seas",
+   "https://www.healthyseas.org/donate/",
+   null,
+   "https://www.healthyseas.org/contact-us/"
+  ],
+  "oc": [
+   "Ocean Conservancy",
+   "https://donate.oceanconservancy.org/page/177540/donate/1",
+   "https://oceanconservancy.org/work/plastics/cleanups-icc/",
+   null
+  ],
+  "marfund": [
+   "MAR Fund",
+   "https://marfund.org/en/donate-now/",
+   null,
+   "https://marfund.org/en/contact-us/"
+  ],
+  "mb": [
+   "Mission Blue",
+   "https://missionblue.org/ways-to-give/",
+   "https://missionblue.org/get-involved/",
+   "https://missionblue.org/contact/"
+  ],
+  "mote": [
+   "Mote Marine Laboratory",
+   "https://mote.org/support",
+   "https://mote.org/support/volunteer/",
+   null
+  ],
+  "ovi": [
+   "Ocean Voyages Institute",
+   "https://www.oceanvoyagesinstitute.org/donate",
+   null,
+   "https://www.oceanvoyagesinstitute.org/contact"
+  ],
+  "palau": [
+   "Palau National Marine Sanctuary (Palau Pledge)",
+   null,
+   "https://palaupledge.com/",
+   "https://picrc.org/"
+  ],
+  "fom": [
+   "Friends of Midway Atoll",
+   "https://friendsofmidway.org/get-involved/donations/",
+   "https://friendsofmidway.org/get-involved/",
+   null
+  ],
+  "pb": [
+   "Plastic Bank",
+   null,
+   "https://plasticbank.com/careers",
+   "https://plasticbank.com/contact/"
+  ],
+  "po": [
+   "Plastic Odyssey",
+   "https://plasticodyssey.org/en/donate/",
+   "https://plasticodyssey.org/en/get-involved/",
+   "https://plasticodyssey.org/en/contact/"
+  ],
+  "csic": [
+   "CEAB-CSIC (Spain)",
+   null,
+   null,
+   "https://www.ceab.csic.es/en/contact/"
+  ],
+  "ps": [
+   "Project Seagrass",
+   "https://www.projectseagrass.org/donate/",
+   "https://www.projectseagrass.org/volunteer/",
+   null
+  ],
+  "usf": [
+   "University of South Florida",
+   null,
+   null,
+   "https://www.usf.edu/about-usf/contact-usf.aspx"
+  ],
+  "stc": [
+   "Sea Turtle Conservancy",
+   "https://conserveturtles.org/donate/",
+   "https://conserveturtles.org/careers/",
+   "https://conserveturtles.org/"
+  ],
+  "seabin": [
+   "Seabin",
+   null,
+   "https://seabin.io/get-involved",
+   "https://seabin.io/contact"
+  ],
+  "seatrees": [
+   "SeaTrees",
+   "https://seatrees.org/",
+   "https://seatrees.org/products/plant-mangroves-in-marereni-kenya",
+   "https://seatrees.org/pages/contact"
+  ],
+  "tnc": [
+   "The Nature Conservancy",
+   "https://www.nature.org/en-us/membership-and-giving/donate-to-our-mission/",
+   "https://www.nature.org/en-us/get-involved/how-to-help/volunteer/",
+   null
+  ],
+  "surf": [
+   "Surfrider Foundation",
+   "https://www.surfrider.org/donate",
+   "https://www.surfrider.org/chapters",
+   null
+  ],
+  "toc": [
+   "The Ocean Cleanup",
+   "https://theoceancleanup.com/donate/",
+   "https://theoceancleanup.com/careers/",
+   null
+  ],
+  "tsc": [
+   "The SeaCleaners",
+   "https://www.theseacleaners.org/en/donate/",
+   "https://www.theseacleaners.org/en/news/join-the-seacleaners-wave/",
+   null
+  ],
+  "tubbataha": [
+   "Tubbataha Management Office",
+   null,
+   "https://tubbatahareefs.org/get-involved",
+   "https://tubbatahareefs.org/contact"
+  ],
+  "uh": [
+   "NASA / University of Hawaiʻi",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.ifa.hawaii.edu/"
+  ],
+  "ua": [
+   "NASA / University of Arizona",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.lpl.arizona.edu/about/contact"
+  ],
+  "carbfix": [
+   "Carbfix",
+   null,
+   "https://www.carbfix.com/careers",
+   "https://www.carbfix.com/contact"
+  ],
+  "lfi": [
+   "Land and Forest Iceland",
+   null,
+   null,
+   "https://island.is/en/o/land-and-forest-iceland"
+  ],
+  "itgc": [
+   "International Thwaites Glacier Collaboration",
+   null,
+   null,
+   "https://thwaitesglacier.org/"
+  ],
+  "geus": [
+   "GEUS (PROMICE and GC-Net)",
+   null,
+   null,
+   "https://eng.geus.dk/about/contact"
+  ],
+  "mfat": [
+   "New Zealand MFAT",
+   null,
+   null,
+   "https://www.mfat.govt.nz/en/about-us/contact-us/"
+  ],
+  "sght": [
+   "South Georgia Heritage Trust",
+   "https://sght.org/donate-now/",
+   "https://sght.org/support-sght/",
+   "https://sght.org/contact-us/"
+  ],
+  "croptrust": [
+   "Crop Trust",
+   "https://donate.croptrust.org/",
+   "https://www.croptrust.org/join-us/",
+   "https://www.croptrust.org/contact/"
+  ],
+  "americanrivers": [
+   "American Rivers",
+   "https://www.americanrivers.org/donate/",
+   "https://www.americanrivers.org/take-action/",
+   null
+  ],
+  "seoul": [
+   "Seoul Metropolitan Government",
+   null,
+   null,
+   "https://english.seoul.go.kr/"
+  ],
+  "cbf": [
+   "Chesapeake Bay Foundation",
+   "https://www.cbf.org/donate/",
+   "https://www.cbf.org/programs/volunteer/",
+   null
+  ],
+  "nps": [
+   "U.S. National Park Service",
+   null,
+   "https://www.nps.gov/getinvolved/volunteer.htm",
+   "https://www.nps.gov/olym/contacts.htm"
+  ],
+  "ew": [
+   "Earthwatch Europe (FreshWater Watch)",
+   "https://earthwatch.org.uk/getinvolved/donate/",
+   "https://www.freshwaterwatch.org/pages/as-an-individual",
+   null
+  ],
+  "sfwmd": [
+   "South Florida Water Management District",
+   null,
+   "https://www.sfwmd.gov/community-residents/volunteering",
+   "https://www.sfwmd.gov/contact"
+  ],
+  "llw": [
+   "Living Lands & Waters",
+   "https://www.livinglandsandwaters.org/how-to-help/donate.html",
+   "https://www.livinglandsandwaters.org/how-to-help/volunteer.html",
+   null
+  ],
+  "tideway": [
+   "Tideway",
+   null,
+   null,
+   "https://www.tideway.london/contact-us/"
+  ],
+  "mtw": [
+   "Mr. Trash Wheel (Waterfront Partnership of Baltimore)",
+   "https://www.classy.org/give/546227/",
+   "https://www.mrtrashwheel.com/volunteer-opportunities",
+   null
+  ],
+  "nmcg": [
+   "National Mission for Clean Ganga",
+   "https://nmcg.nic.in/donation_form.aspx",
+   null,
+   "https://nmcg.nic.in/contact_us.aspx"
+  ],
+  "pub": [
+   "PUB, Singapore's National Water Agency",
+   null,
+   "https://www.pub.gov.sg/Public/Get-Involved",
+   "https://www.pub.gov.sg/contact-us"
+  ],
+  "openet": [
+   "OpenET",
+   null,
+   "https://etdata.org/",
+   "https://etdata.org/contact-us/"
+  ],
+  "prrt": [
+   "Penobscot River Restoration Trust (Natural Resources Council of Maine)",
+   "https://act.nrcm.org/a/donate",
+   "https://www.nrcm.org/get-involved/",
+   null
+  ],
+  "rc": [
+   "River Cleanup",
+   "https://www.river-cleanup.org/en/donate",
+   "https://www.river-cleanup.org/en/jobs",
+   null
+  ],
+  "rws": [
+   "Rijkswaterstaat (Netherlands)",
+   null,
+   null,
+   "https://www.rijkswaterstaat.nl/en/about-us/contact"
+  ],
+  "sw": [
+   "Sungai Watch",
+   "https://sungai.watch/products/donate",
+   "https://sungai.watch/pages/cleanups",
+   null
+  ],
+  "gbb": [
+   "The Great Bubble Barrier",
+   "https://thegreatbubblebarrier.com/donate/",
+   "https://thegreatbubblebarrier.com/careers/",
+   null
+  ],
+  "tu": [
+   "Trout Unlimited",
+   "https://www.tu.org/donate/",
+   "https://www.tu.org/get-involved/",
+   null
+  ],
+  "wka": [
+   "Waterkeeper Alliance",
+   "https://waterkeeper.org/donate",
+   "https://waterkeeper.org/findyourwaterkeeper/",
+   null
+  ],
+  "astroscale": [
+   "Astroscale",
+   null,
+   "https://www.astroscale.com/en/careers",
+   "https://www.astroscale.com/en/contact"
+  ],
+  "isrojaxa": [
+   "ISRO / JAXA",
+   null,
+   "https://www.isro.gov.in/Careers.html",
+   "https://global.jaxa.jp/activity/pr/inquiries/"
+  ],
+  "clearspace": [
+   "ClearSpace",
+   null,
+   "https://clearspace.today/joinclearspace",
+   "https://clearspace.today/contactclearspace"
+  ],
+  "kasa": [
+   "KASA (Korea AeroSpace Administration)",
+   null,
+   null,
+   "https://www.kasa.go.kr/eng/sub04_07.do"
+  ],
+  "uaesa": [
+   "UAE Space Agency",
+   null,
+   null,
+   "https://space.gov.ae/en/contact-us"
+  ],
+  "starcloud": [
+   "Starcloud",
+   null,
+   "https://starcloud.octbr.ai/",
+   "https://www.starcloud.com/"
+  ],
+  "leolabs": [
+   "LeoLabs",
+   null,
+   "https://leolabs.space/careers/",
+   "https://leolabs.space/launch-support/"
+  ],
+  "kyoto": [
+   "Kyoto University / Sumitomo Forestry",
+   null,
+   null,
+   "https://www.kyoto-u.ac.jp/en/contact"
+  ],
+  "ng": [
+   "Northrop Grumman SpaceLogistics",
+   null,
+   "https://www.northropgrumman.com/careers",
+   "https://www.northropgrumman.com/who-we-are/contact-us-northrop-grumman"
+  ],
+  "starfish": [
+   "Starfish Space",
+   null,
+   "https://www.starfishspace.com/careers",
+   "https://www.starfishspace.com/contact"
+  ],
+  "nasaspacex": [
+   "NASA / SpaceX",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ],
+  "dlr": [
+   "NASA / Germany (GFZ)",
+   null,
+   "https://science.nasa.gov/citizen-science/",
+   "https://www.nasa.gov/contact-2/"
+  ]
+ },
+ "pages": {
+  "ALOS-4": "jaxa",
+  "Biomass": "esa",
+  "CHIME": "esa",
+  "CAMS": "ecmwf",
+  "CO2M": "esa",
+  "Copernicus_EMS": "jrc",
+  "Sentinel-1": "esa",
+  "Sentinel-2C": "esa",
+  "Sentinel-3": "esa",
+  "Sentinel-4": "esa",
+  "Sentinel-5P": "esa",
+  "Sentinel-6B": "esa",
+  "Digital_Earth_Africa": "dea",
+  "DSCOVR_EPIC": "nasa",
+  "EarthCARE": "esa",
+  "EMIT": "nasa",
+  "EOS-06": "isro",
+  "FireSat": "efa",
+  "FIRMS": "nasa",
+  "FLEX": "esa",
+  "FORUM": "esa",
+  "Galileo": "esa",
+  "GCOM-C": "jaxa",
+  "GeoXO": "noaa",
+  "GOSAT-GW": "jaxa",
+  "GRACE-FO": "dlr",
+  "GSMaP": "jaxa",
+  "HydroGNSS": "esa",
+  "INSAT-3DS": "isro",
+  "International_Charter": "charter",
+  "JPSS": "noaa",
+  "Landsat_9": "usgs",
+  "Libera": "lasp",
+  "Meteosat_Third_Generation": "eumetsat",
+  "UNEP_MARS": "unep",
+  "MetOp-SG-A1_Sentinel-5A": "eumetsat",
+  "NISAR": "nasa",
+  "OCO-2": "nasa",
+  "PACE": "nasa",
+  "RCM": "csa",
+  "SARSAT": "noaa",
+  "SMAP": "nasa",
+  "SWOT": "cnes",
+  "Tanager-1": "carbonmapper",
+  "TEMPO": "nasa",
+  "GLOBE_Program": "globe",
+  "Tsunami_Early_Warning": "noaa",
+  "African_Parks": "africanparks",
+  "American_Forests": "americanforests",
+  "Arbor_Day_Foundation": "arborday",
+  "Cool_Earth_Basic_Income": "coolearth",
+  "Costa_Rica_Forest_Payments": "fonafifo",
+  "Eden_People_Planet": "eden",
+  "EFFIS": "jrc",
+  "Forest_Elephants": "wcs",
+  "Galapagos_Giant_Tortoises": "galapagos",
+  "GEDI": "umd",
+  "Global_Forest_Watch": "wri",
+  "Gorongosa": "gorongosa",
+  "Great_Green_Wall": "unccd",
+  "Justdiggit": "justdiggit",
+  "Kakapo_Recovery": "doc",
+  "Life_Terra": "lifeterra",
+  "MAAP": "aca",
+  "Mangroves": "noaa",
+  "Mountain_Gorillas": "igcp",
+  "Nepal_Tigers": "ntnc",
+  "One_Tree_Planted": "otp",
+  "Plant-for-the-Planet": "pftp",
+  "Predator_Free_2050": "pfnz",
+  "Rainforest_Connection": "rfcx",
+  "Redonda_Restoration": "eag",
+  "Rewilding_Europe": "rewild",
+  "Route_of_Parks_Patagonia": "tompkins",
+  "Saharan_Dust_Amazon": "nasa",
+  "Altyn_Dala_Saiga": "altyndala",
+  "Terraformation": "terraformation",
+  "Amazon_Rainy_Season": "nasa",
+  "Arabian_Oryx": "iucn",
+  "Iberian_Lynx": "miteco",
+  "Three_Trees": "sp",
+  "Trees_for_Life": "tfl",
+  "Trees_for_the_Future": "tftf",
+  "WeForest": "weforest",
+  "Yellowstone_Wolves": "yf",
+  "Alliance_for_the_Great_Lakes_Adopt_a_Beach": "agl",
+  "Azraq_Wetland": "rscn",
+  "Chilika_Lake": "cda",
+  "Clean_Lakes_Alliance": "cla",
+  "Clean_Up_the_Lake": "cutl",
+  "Great_Lakes_Plastic_Cleanup": "glpc",
+  "Keep_Tahoe_Blue": "ktb",
+  "Lake_Biwa_Soap_Movement": "shiga",
+  "Lake_Constance": "igkb",
+  "Lake_Erie_Algal_Bloom_Forecast": "noaa",
+  "Lake_Plastic_Recovery": "sp",
+  "Living_Lakes": "gnf",
+  "Restoring_the_Lake_Depths": "rld",
+  "Tonle_Sap": "unesco",
+  "4ocean": "4ocean",
+  "Abu_Dhabi_Mangroves": "ead",
+  "Alaska_Kelp_Farming": "asg",
+  "Alaska_SeaLife_Center": "aslc",
+  "Andfjorden_MPA": "norway",
+  "Argo": "argo",
+  "Argos": "argos",
+  "Atoll_Rewilding": "lancaster",
+  "Billion_Oyster_Project": "bop",
+  "Bristol_Bay_Salmon": "epa",
+  "Copernicus_Marine": "mercator",
+  "Coral_Gardeners": "cg",
+  "Coral_IVF": "gbrf",
+  "Coral_Reef_Watch": "noaa",
+  "Coral_Restoration_Foundation": "crf",
+  "Coral_Vita": "coralvita",
+  "Global_Fishing_Watch": "gfw",
+  "Gulf_of_Alaska_Keeper": "goak",
+  "Heal_the_Bay": "htb",
+  "Healthy_Seas": "hs",
+  "International_Coastal_Cleanup": "oc",
+  "Kelp_Forests": "noaa",
+  "Mesoamerican_Reef_Insurance": "marfund",
+  "Mission_Blue_Hope_Spots": "mb",
+  "Mote_Marine_Laboratory": "mote",
+  "Ocean_Voyages_Institute": "ovi",
+  "Palau_National_Marine_Sanctuary": "palau",
+  "Papahanaumokuakea": "fom",
+  "Phytoplankton": "noaa",
+  "Plastic_Bank": "pb",
+  "Plastic_Odyssey": "po",
+  "Posidonia_Meadows": "csic",
+  "Project_Seagrass": "ps",
+  "Salt_Marshes": "noaa",
+  "Sargassum_Watch": "usf",
+  "Sea_Turtle_Conservancy": "stc",
+  "Seabin": "seabin",
+  "Seagrass": "noaa",
+  "SeaTrees": "seatrees",
+  "Seychelles_Marine_Spatial_Plan": "tnc",
+  "Surfrider_Foundation": "surf",
+  "Ocean_Cleanup": "toc",
+  "The_SeaCleaners": "tsc",
+  "Tubbataha_Reefs": "tubbataha",
+  "Whales_Ocean_Gardeners": "noaa",
+  "ATLAS": "uh",
+  "Catalina_Sky_Survey": "ua",
+  "Comet_Interceptor": "esa",
+  "Hayabusa2_Torifune": "jaxa",
+  "Hera": "esa",
+  "Lucy": "nasa",
+  "ESA_NEOCC": "esa",
+  "NEO_Surveyor": "nasa",
+  "NEOSSat": "csa",
+  "OSIRIS-APEX": "nasa",
+  "Pan-STARRS": "uh",
+  "Ramses": "esa",
+  "Webb_2024_YR4": "nasa",
+  "Arctic_Weather_Satellite": "esa",
+  "Carbfix": "carbfix",
+  "CIMR": "esa",
+  "CRISTAL": "esa",
+  "CryoSat": "esa",
+  "GCOM-W_SHIZUKU": "jaxa",
+  "Iceland_Land_Restoration": "lfi",
+  "ICESat-2": "nasa",
+  "Thwaites_Glacier_Collaboration": "itgc",
+  "PREFIRE": "nasa",
+  "PROMICE_GC-Net": "geus",
+  "Ross_Sea_MPA": "mfat",
+  "SCISAT": "csa",
+  "South_Georgia_Habitat_Restoration": "sght",
+  "Svalbard_Global_Seed_Vault": "croptrust",
+  "Ariel": "esa",
+  "Artemis_II": "nasa",
+  "BepiColombo": "esa",
+  "Dragonfly": "nasa",
+  "EnVision": "esa",
+  "ESCAPADE": "nasa",
+  "ExoMars_Rosalind_Franklin": "esa",
+  "ISS_Water_Recovery": "nasa",
+  "Nancy_Grace_Roman": "nasa",
+  "Plato": "esa",
+  "Psyche": "nasa",
+  "SPHEREx": "nasa",
+  "Veggie_Space_Garden": "nasa",
+  "Voyager": "nasa",
+  "American_Rivers": "americanrivers",
+  "Beavers_River_Engineers": "noaa",
+  "Cheonggyecheon": "seoul",
+  "Chesapeake_Bay_Foundation": "cbf",
+  "Elwha_River_Restoration": "nps",
+  "FreshWater_Watch": "ew",
+  "GloFAS": "ecmwf",
+  "Kissimmee_River_Restoration": "sfwmd",
+  "Klamath_River_Dam_Removal": "noaa",
+  "Living_Lands_and_Waters": "llw",
+  "London_Tideway_Tunnel": "tideway",
+  "Mr_Trash_Wheel": "mtw",
+  "Namami_Gange": "nmcg",
+  "NEWater": "pub",
+  "Okavango_Delta": "unesco",
+  "OpenET": "openet",
+  "Penobscot_River_Restoration": "prrt",
+  "River_Cleanup": "rc",
+  "Room_for_the_River": "rws",
+  "Sungai_Watch": "sw",
+  "Great_Bubble_Barrier": "gbb",
+  "Trout_Unlimited": "tu",
+  "Waterkeeper_Alliance": "wka",
+  "Astroscale": "astroscale",
+  "Chandrayaan-5_LUPEX": "isrojaxa",
+  "ClearSpace": "clearspace",
+  "Danuri_ShadowCam": "kasa",
+  "Hope_Mars_Mission": "uaesa",
+  "Emirates_Mission_Asteroid_Belt": "uaesa",
+  "Enceladus": "nasa",
+  "Gaganyaan": "isro",
+  "Globe_at_Night": "noirlab",
+  "Jupiter": "nasa",
+  "Orbital_Data_Centers": "starcloud",
+  "Aeolus": "esa",
+  "Atmospheric_Drag": "nasa",
+  "Europa_Clipper": "nasa",
+  "Juice": "esa",
+  "LeoLabs": "leolabs",
+  "LignoSat": "kyoto",
+  "MMX": "jaxa",
+  "SpaceLogistics": "ng",
+  "PRELUDE": "clearspace",
+  "Starfish_Otter": "starfish",
+  "Moon_Steadies_Earth": "nasa",
+  "Titan": "nasa",
+  "US_Deorbit_Vehicle": "nasaspacex",
+  "Zero_Debris_Charter": "esa",
+  "Aditya_L1": "isro",
+  "Carruthers": "nasa",
+  "GOES-19": "noaa",
+  "IMAP": "nasa",
+  "Parker_Solar_Probe": "nasa",
+  "PUNCH": "nasa",
+  "SOHO": "esa",
+  "Solar_Orbiter": "esa",
+  "SOLAR_1": "noaa",
+  "Three_Shields": "nasa",
+  "TRACERS": "nasa",
+  "Vigil": "esa"
+ }
+}
