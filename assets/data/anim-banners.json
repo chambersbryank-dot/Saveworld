@@ -1199,5 +1199,19 @@
   "Cool_Earth_Basic_Income.html": "assets/Puerto_Bermudez_Peru_Rainforest.jpg",
   "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
   "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg"
+ },
+ "slides": {
+  "pools": {
+   "polar": [
+    "images/Greenland_IceBridge_2015.jpg",
+    "images/Thwaites_Glacier_Landsat8_2019.jpg",
+    "images/Labrador_Sea_Ice_ISS.jpg",
+    "images/Ross_Sea_Adelie_Cape_Royds.jpg",
+    "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
+   ]
+  },
+  "pages": {
+   "Polar.html": "polar"
+  }
  }
 }
