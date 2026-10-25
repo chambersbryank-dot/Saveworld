@@ -197,15 +197,17 @@ def en_only(h):
 
 # RTL pages (ar, he): plain-text formulas inside RTL sentences (e.g. "f(x) = x² + 1", "∫ 2x dx") get <bdi dir="ltr"> so the
 # bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
-_FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
+_FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
 _FRUN = re.compile(_FTOK + '+')
-_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½\u02b0-\u02ff]|\w\(|\d\s*-\s*\d")
+_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\d\s*-\s*\d")
 def _wrap_run(m):
     t = m.group(0); a = len(t) - len(t.lstrip(" ,.;:")); b = len(t.rstrip(" ,.;:"))
     core = t[a:b]
     while core and core[-1] in '( ' : core = core[:-1]; b -= 1
     while core.endswith(')') and core.count('(') < core.count(')'): core = core[:-1]; b -= 1
     while core.startswith('(') and core.count('(') > core.count(')'): core = core[1:]; a += 1
+    if core.startswith('-−'): core = core[1:]; a += 1  # Hebrew prefix hyphen (ו-) before a minus sign stays outside
+    if len(core) == 2 and re.fullmatch(r'[Ø⌀±+−][0-9]', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # Ø6, +5
     if len(core) < 3 or not re.search(r'[A-Za-z0-9]', core) or not _FOP.search(core): return t
     return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]
 def bidi(h):
