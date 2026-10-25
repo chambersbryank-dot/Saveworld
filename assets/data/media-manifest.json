@@ -5911,5 +5911,12 @@
   "bytes": 1509381,
   "sha256": "ef5b12582ec82944cbc64a1ff38d28a9ca78113ba028bec749ea293cdb3e223a",
   "type": "application/pdf"
+ },
+ "courses/Fluid_Mechanics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Fluid_Mechanics_Study_Guide.f3cd7136ca38.pdf",
+  "key": "courses/Fluid_Mechanics_Study_Guide.f3cd7136ca38.pdf",
+  "bytes": 1502441,
+  "sha256": "f3cd7136ca3802e401cb8876a25e49e547a6ca864f01a4a551249df3c3c38376",
+  "type": "application/pdf"
  }
 }
