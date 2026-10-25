@@ -1227,7 +1227,8 @@
   "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
   "Engineering_Graphics_CAD.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
   "Intro_to_Programming.html": "assets/ISS_Flyaround_2021.jpg",
-  "Calculus_III.html": "assets/EPIC_Earth.jpg"
+  "Calculus_III.html": "assets/EPIC_Earth.jpg",
+  "Differential_Equations.html": "assets/EPIC_Earth.jpg"
  },
  "slides": {
   "pools": {
@@ -1753,6 +1754,11 @@
     "images/SWOT_Orbit_Illustration.jpg",
     "images/GRACE_FO_PIA22445.jpg",
     "images/Landsat9_Launch_KLS04_0013.jpg"
+   ],
+   "Differential_Equations.html": [
+    "images/GRACE_FO_PIA22445.jpg",
+    "images/Sentinel6B_Launch.jpg",
+    "images/SWOT_Orbit_Illustration.jpg"
    ]
   }
  }
