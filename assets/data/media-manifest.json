@@ -5834,5 +5834,12 @@
   "bytes": 1290368,
   "sha256": "aed9dc9293a68b1a1518eeed2800c30f30735c865dd8f5c13cd03b8c3967e3e5",
   "type": "application/pdf"
+ },
+ "courses/Intro_to_Programming_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Intro_to_Programming_Study_Guide.5cc1ddb7dd17.pdf",
+  "key": "courses/Intro_to_Programming_Study_Guide.5cc1ddb7dd17.pdf",
+  "bytes": 1402402,
+  "sha256": "5cc1ddb7dd17dea8baf4c26a5f66dfee6af83e4d7ccc64910dce3ae1459aab91",
+  "type": "application/pdf"
  }
 }
