@@ -233,9 +233,9 @@ def _balanced(core):
     if not bad: return '<bdi dir="ltr">' + core + '</bdi>'
     out, piece = [], ''
     def flush(x):
-        y = x.strip()
+        y = x.strip(' ,;:')  # punctuation left over next to an unpaired bracket stays outside the isolate
         if not y: return x
-        lead, trail = x[:len(x) - len(x.lstrip())], x[len(x.rstrip()):]
+        lead, trail = x[:len(x) - len(x.lstrip(' ,;:'))], x[len(x.rstrip(' ,;:')):]
         return lead + ('<bdi dir="ltr">' + y + '</bdi>' if re.search(r'[A-Za-z0-9\u0370-\u03ff]', y) else y) + trail
     for k, ch in enumerate(core):
         if k in bad: out.append(flush(piece)); out.append(ch); piece = ''
