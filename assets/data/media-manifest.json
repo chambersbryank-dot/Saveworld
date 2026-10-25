@@ -5820,7 +5820,14 @@
   "bytes": 1189982,
   "sha256": "7fc7b41069de75a7d0a351d36ed9875fd6ef8b0c6367917e2b15d7a53306757a",
   "type": "application/pdf"
+ }, "courses/Calculus_III_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Calculus_III_Study_Guide.c63b99769191.pdf",
+  "key": "courses/Calculus_III_Study_Guide.c63b99769191.pdf",
+  "bytes": 1273138,
+  "sha256": "c63b99769191cc0a2fe98a3b31baccff223bcca6e34d8486bfb8720cb84b2bd8",
+  "type": "application/pdf"
  },
+
  "courses/Intro_to_Aerospace_Engineering_Study_Guide.pdf": {
   "url": "https://media.savingplanets.com/courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
   "key": "courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
