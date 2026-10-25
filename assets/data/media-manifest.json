@@ -5883,5 +5883,12 @@
   "bytes": 1469799,
   "sha256": "abb1ffc8aaed0bcc6d873a27d586ee527f0d8ce5d70abebbd4389f41f70a3601",
   "type": "application/pdf"
+ },
+ "courses/Linear_Algebra_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Linear_Algebra_Study_Guide.40fa3b8eeb0a.pdf",
+  "key": "courses/Linear_Algebra_Study_Guide.40fa3b8eeb0a.pdf",
+  "bytes": 1582394,
+  "sha256": "40fa3b8eeb0a5079e936e8dcf4a0a3e24e573aecc9c7ca010ef104d8767a445e",
+  "type": "application/pdf"
  }
 }
