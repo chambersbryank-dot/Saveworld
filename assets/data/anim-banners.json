@@ -1215,8 +1215,9 @@
   "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
   "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
   "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-  "Courses.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-  "Physics_I.html": "assets/Landsat9_Launch.jpg"
+  "Courses.html": "assets/EPIC_Earth.jpg",
+  "Physics_I.html": "assets/Landsat9_Launch.jpg",
+  "Calculus_I.html": "assets/EPIC_Earth.jpg"
  },
  "slides": {
   "pools": {
@@ -1712,6 +1713,11 @@
     "images/GRACE_FO_Orbit.jpg",
     "images/ISS_Flyaround_2021.jpg",
     "images/Sentinel6B_Launch.jpg"
+   ],
+   "Calculus_I.html": [
+    "images/GRACE_FO_Orbit.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg",
+    "images/ISS_Flyaround_2021.jpg"
    ]
   }
  }

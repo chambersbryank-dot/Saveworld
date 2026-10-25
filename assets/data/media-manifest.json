@@ -5801,10 +5801,17 @@
   "type": "application/pdf"
  },
  "courses/Physics_I_Study_Guide.pdf": {
-  "url": "https://media.savingplanets.com/courses/Physics_I_Study_Guide.1d9cf66b36b6.pdf",
-  "key": "courses/Physics_I_Study_Guide.1d9cf66b36b6.pdf",
-  "bytes": 1458684,
-  "sha256": "1d9cf66b36b635c7e9425452999656cbbb28e2c325497ed493861eabc542e9ab",
+  "url": "https://media.savingplanets.com/courses/Physics_I_Study_Guide.ca763f1bb208.pdf",
+  "key": "courses/Physics_I_Study_Guide.ca763f1bb208.pdf",
+  "bytes": 1458502,
+  "sha256": "ca763f1bb20853db90e41018eeb03fb8911b4dbc4d2fc93ef70aee153c4d4f1f",
+  "type": "application/pdf"
+ },
+ "courses/Calculus_I_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Calculus_I_Study_Guide.bea09ca8f0a4.pdf",
+  "key": "courses/Calculus_I_Study_Guide.bea09ca8f0a4.pdf",
+  "bytes": 1111109,
+  "sha256": "bea09ca8f0a4994474ac01821889fee7253c71d2e8f36bc29be33c4cdb27d7a7",
   "type": "application/pdf"
  }
 }
