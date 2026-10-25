@@ -188,11 +188,14 @@ def en_only(h):
 
 def he_card(h):
     # he/ has no share cards of its own (build-og: fr/es/ar/it); its Kids_Map template carries en/Contact.jpg, so use this page's English card
+    # (version hash from assets/og/manifest.json, the same ?v= build-og puts on the English page)
     if LANG != 'he': return h
-    m = re.search(r'<link rel="canonical" href="[^"]*/he/([\w-]+\.html)"', h)
-    if not m or not os.path.exists(m.group(1)): return h
-    en = re.search(r'<meta property="og:image" content="([^"]+)"', open(m.group(1), encoding='utf8').read())
-    return re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"', lambda x: x.group(1) + en.group(1) + '"', h) if en else h
+    m = re.search(r'<link rel="canonical" href="[^"]*/he/([\w-]+)\.html"', h)
+    if not m: return h
+    k = 'assets/og/en/' + m.group(1) + '.jpg'; v = json.load(open('assets/og/manifest.json')).get(k)
+    if not v: return h
+    url = 'https://www.savingplanets.com/' + k + '?v=' + v[:8]
+    return re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"', lambda x: x.group(1) + url + '"', h)
 
 def fix_switch(h):
     # language switcher: a language whose version of this page is not built yet goes to that language's home page (never a 404)
