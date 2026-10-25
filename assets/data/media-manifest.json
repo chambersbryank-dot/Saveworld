@@ -5834,6 +5834,13 @@
   "sha256": "59f8cb75d9344d931d26022cdfb980e26de1d0c826808869b983c546c19d74e6",
   "type": "application/pdf"
  },
+ "courses/Physics_II_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Physics_II_Study_Guide.5bf98ba3e4bd.pdf",
+  "key": "courses/Physics_II_Study_Guide.5bf98ba3e4bd.pdf",
+  "bytes": 1593258,
+  "sha256": "5bf98ba3e4bd73231c4c37d82fbb86ba021ce8b91b7fbf440fff4fc2eae972d7",
+  "type": "application/pdf"
+ },
 
  "courses/Intro_to_Aerospace_Engineering_Study_Guide.pdf": {
   "url": "https://media.savingplanets.com/courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
