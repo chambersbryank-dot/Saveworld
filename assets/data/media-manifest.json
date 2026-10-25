@@ -5939,5 +5939,12 @@
   "bytes": 1491991,
   "sha256": "a95dea52273b7206ad5924aad8a41297354761b4ee153312939f7d594ace2950",
   "type": "application/pdf"
+ },
+ "courses/Numerical_Methods_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Numerical_Methods_Study_Guide.8d8c11b4b9b7.pdf",
+  "key": "courses/Numerical_Methods_Study_Guide.8d8c11b4b9b7.pdf",
+  "bytes": 1480314,
+  "sha256": "8d8c11b4b9b76ac6e80393d3b3c7f657bfdb283555e7f6938855a547a4f932cd",
+  "type": "application/pdf"
  }
 }
