@@ -1,0 +1,1262 @@
+{
+ "0.479427, error under 1.6 × 10⁻⁶ (true value 0.479426).": {
+  "fr": "0.479427, erreur inférieure à 1.6 × 10⁻⁶ (valeur exacte 0.479426)."
+ },
+ "0.74686, versus the true 0.74682: an error of only 0.00003 from five points.": {
+  "fr": "0.74686, contre la valeur exacte 0.74682 : une erreur de seulement 0.00003 avec cinq points."
+ },
+ "1 (converges).": {
+  "fr": "1 (converge)."
+ },
+ "1 − x²/2 + x⁴/24; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (true 0.980067).": {
+  "fr": "1 − x²/2 + x⁴/24 ; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (valeur exacte 0.980067)."
+ },
+ "1.105167, versus the true 1.105171.": {
+  "fr": "1.105167, contre la valeur exacte 1.105171."
+ },
+ "1/(n + 1) → 0, so it converges.": {
+  "fr": "1/(n + 1) → 0, donc elle converge."
+ },
+ "1/x → 0 but ∫₁^∞ dx/x diverges.": {
+  "fr": "1/x → 0 mais ∫₁^∞ dx/x diverge."
+ },
+ "2.25, versus the exact e ≈ 2.718; halving h shrinks the error.": {
+  "fr": "2.25, contre la valeur exacte e ≈ 2.718 ; diviser h par deux réduit l’erreur."
+ },
+ "50 tonnes. Cutting the yearly input in half halves the long-run level (a simplified model).": {
+  "fr": "50 tonnes. Diviser par deux l’apport annuel divise par deux le niveau à long terme (modèle simplifié)."
+ },
+ "8π ≈ 25.1 cubic units.": {
+  "fr": "8π ≈ 25.1 unités cubes."
+ },
+ "9 − 9 sin²θ = 9 cos²θ.": {
+  "fr": "9 − 9 sin²θ = 9 cos²θ."
+ },
+ "A DE plus a starting value.": {
+  "fr": "Une ED plus une valeur de départ."
+ },
+ "A Taylor polynomial is accurate everywhere.": {
+  "fr": "Un polynôme de Taylor est précis partout."
+ },
+ "A computer or tablet with a spreadsheet.": {
+  "fr": "Un ordinateur ou une tablette avec un tableur."
+ },
+ "A cylindrical tank of radius 1 m and height 2 m is full of water. How much work does it take to pump all the water out over the top?": {
+  "fr": "Un réservoir cylindrique de rayon 1 m et de hauteur 2 m est plein d’eau. Quel travail faut-il pour pomper toute l’eau par le haut ?"
+ },
+ "A differential equation links a function to its derivatives. Its solution is a function, usually a family fixed by an initial condition.": {
+  "fr": "Une équation différentielle relie une fonction à ses dérivées. Sa solution est une fonction, généralement une famille fixée par une condition initiale."
+ },
+ "A fish stock follows P′ = 0.5P(1 − P/1,000) with P(0) = 100. Find P(4).": {
+  "fr": "Un stock de poissons suit P′ = 0.5P(1 − P/1000) avec P(0) = 100. Trouvez P(4)."
+ },
+ "A lake section holds 1,000 m³ of water with 50 kg of a dissolved pollutant. Clean water flows in at 10 m³/day and well-mixed water flows out at the same rate. How long until half the pollutant is gone?": {
+  "fr": "Une partie d’un lac contient 1000 m³ d’eau avec 50 kg d’un polluant dissous. De l’eau propre entre à 10 m³/jour et l’eau bien mélangée sort au même débit. Combien de temps faut-il pour que la moitié du polluant ait disparu ?"
+ },
+ "A layer at height y has volume π(1)² dy and weight 1,000 × 9.81 × π dy newtons, and is lifted 2 − y meters.": {
+  "fr": "Une couche à la hauteur y a un volume π(1)² dy et un poids de 1000 × 9.81 × π dy newtons, et elle est soulevée de 2 − y mètres."
+ },
+ "A partial-fraction decomposition": {
+  "fr": "Une décomposition en éléments simples"
+ },
+ "A power series Σcₙ(x − a)ⁿ converges inside a radius R and diverges outside; check the endpoints separately.": {
+  "fr": "Une série entière Σcₙ(x − a)ⁿ converge à l’intérieur d’un rayon R et diverge à l’extérieur ; vérifiez les bornes séparément."
+ },
+ "A proper rational function splits into simple fractions whose integrals are logs and arctangents.": {
+  "fr": "Une fraction rationnelle propre se décompose en éléments simples dont les intégrales sont des logarithmes et des arctangentes."
+ },
+ "A ratio-test limit of 1 means divergence.": {
+  "fr": "Une limite égale à 1 dans le critère de d’Alembert signifie divergence."
+ },
+ "A rod on [0, 2] m has density ρ(x) = 1 + x kg/m. Find its center of mass.": {
+  "fr": "Une tige sur [0, 2] m a une masse linéique ρ(x) = 1 + x kg/m. Trouvez son centre de masse."
+ },
+ "A series Σaₙ converges if its partial sums approach a limit.": {
+  "fr": "Une série Σaₙ converge si ses sommes partielles tendent vers une limite."
+ },
+ "A spring with k = 200 N/m is stretched from rest length by 0.10 m. How much work is done?": {
+  "fr": "Un ressort de k = 200 N/m est étiré de 0.10 m depuis sa longueur au repos. Quel travail est fourni ?"
+ },
+ "A vertical rectangular gate 10 m wide holds back water 5 m deep. Find the total water force on it.": {
+  "fr": "Une vanne rectangulaire verticale de 10 m de large retient une eau de 5 m de profondeur. Trouvez la force totale exercée par l’eau."
+ },
+ "About 62.6 MJ per kilogram, finite even though the distance is infinite. Setting ½v² equal to it gives the 11.2 km/s escape speed.": {
+  "fr": "Environ 62.6 MJ par kilogramme, une valeur finie alors que la distance est infinie. En posant ½v² égal à cette valeur, on obtient la vitesse de libération de 11.2 km/s."
+ },
+ "After many years the amount is 5 + 5(0.9) + 5(0.9)² + …": {
+  "fr": "Après de nombreuses années, la quantité vaut 5 + 5(0.9) + 5(0.9)² + …"
+ },
+ "Alternating series with terms decreasing to 0 converge; Σ(−1)ⁿ⁺¹/n = ln 2.": {
+  "fr": "Les séries alternées dont les termes décroissent vers 0 convergent ; Σ(−1)ⁿ⁺¹/n = ln 2."
+ },
+ "Alternating series; ratio and root tests": {
+  "fr": "Séries alternées ; critères de d’Alembert et de Cauchy"
+ },
+ "Always let u be the first factor you see.": {
+  "fr": "Prenez toujours pour u le premier facteur que vous voyez."
+ },
+ "An equation involving a function and its derivatives.": {
+  "fr": "Une équation faisant intervenir une fonction et ses dérivées."
+ },
+ "An improper integral is defined as…": {
+  "fr": "Une intégrale impropre est définie comme…"
+ },
+ "An infinite region can have finite area.": {
+  "fr": "Une région infinie peut avoir une aire finie."
+ },
+ "An infinitely long region has infinite area.": {
+  "fr": "Une région infiniment longue a une aire infinie."
+ },
+ "An ordered list a₁, a₂, …": {
+  "fr": "Une liste ordonnée a₁, a₂, …"
+ },
+ "Antiderivative ½ ln|(x − 1)/(x + 1)|.": {
+  "fr": "Primitive ½ ln|(x − 1)/(x + 1)|."
+ },
+ "Applications: Volume, Arc Length, Work & Center of Mass": {
+  "fr": "Applications : volume, longueur d’arc, travail et centre de masse"
+ },
+ "Apply improper integrals to escape energy and to average lifetimes.": {
+  "fr": "Appliquer les intégrales impropres à l’énergie de libération et aux durées de vie moyennes."
+ },
+ "Apply the divergence, integral, comparison, alternating-series, ratio and root tests.": {
+  "fr": "Appliquer les critères de divergence, de l’intégrale, de comparaison, des séries alternées, de d’Alembert et de Cauchy."
+ },
+ "Approximate integrals with the trapezoid rule and Simpson’s rule, and estimate the error.": {
+  "fr": "Approcher des intégrales par la méthode des trapèzes et la méthode de Simpson, et estimer l’erreur."
+ },
+ "Arc length": {
+  "fr": "Longueur d’arc"
+ },
+ "Arc length adds tiny hypotenuses: L = ∫√(1 + [f′(x)]²) dx.": {
+  "fr": "La longueur d’arc additionne de minuscules hypoténuses : L = ∫√(1 + [f′(x)]²) dx."
+ },
+ "Arc length uses…": {
+  "fr": "La longueur d’arc utilise…"
+ },
+ "Arc length, work, fluid force, centers of mass; Lab B": {
+  "fr": "Longueur d’arc, travail, force exercée par un fluide, centres de masse ; TP B"
+ },
+ "Arc length.": {
+  "fr": "Longueur d’arc."
+ },
+ "Areas, volumes by slicing, disks, washers, shells": {
+  "fr": "Aires, volumes par tranches, disques, anneaux, coquilles cylindriques"
+ },
+ "Average of left and right sums; error ∝ Δx².": {
+  "fr": "Moyenne des sommes à gauche et à droite ; erreur ∝ Δx²."
+ },
+ "Bound the error of a Taylor approximation.": {
+  "fr": "Majorer l’erreur d’une approximation de Taylor."
+ },
+ "Build Taylor and Maclaurin series and polynomials.": {
+  "fr": "Construire des séries et des polynômes de Taylor et de Maclaurin."
+ },
+ "By parts: 1/λ.": {
+  "fr": "Par parties : 1/λ."
+ },
+ "Calculus I, Lab D: numerical integration": {
+  "fr": "Analyse I, TP D : intégration numérique"
+ },
+ "Calculus I: limits, derivatives, the chain rule, basic integrals and substitution, the Fundamental Theorem.": {
+  "fr": "Analyse I : limites, dérivées, règle de dérivation des fonctions composées, intégrales de base et changement de variable, théorème fondamental."
+ },
+ "Calculus II is where calculus starts modeling the world: volumes of water in reservoirs, the work to pump it, how a pollutant flushes out of a lake, how a fish population recovers, and the elliptical orbits of satellites that watch it all.": {
+  "fr": "L’Analyse II, c’est le moment où le calcul commence à modéliser le monde : le volume d’eau des réservoirs, le travail pour la pomper, la façon dont un polluant est évacué d’un lac, le rétablissement d’une population de poissons, et les orbites elliptiques des satellites qui observent tout cela."
+ },
+ "Carrying capacity": {
+  "fr": "Capacité de charge"
+ },
+ "Center of mass = moment ÷ mass.": {
+  "fr": "Centre de masse = moment ÷ masse."
+ },
+ "Center of mass of a rod": {
+  "fr": "Centre de masse d’une tige"
+ },
+ "Centroids.": {
+  "fr": "Centroïdes."
+ },
+ "Choose u to simplify when differentiated: logs and polynomials first, exponentials and trig as dv.": {
+  "fr": "Choisissez pour u ce qui se simplifie en dérivant : logarithmes et polynômes d’abord, exponentielles et fonctions trigonométriques en dv."
+ },
+ "Circumference 2πx × height f(x) × thickness dx.": {
+  "fr": "Circonférence 2πx × hauteur f(x) × épaisseur dx."
+ },
+ "Coffee at 90 °C cools in a 20 °C room with k = 0.1 per minute. Find its temperature after 10 minutes.": {
+  "fr": "Un café à 90 °C refroidit dans une pièce à 20 °C avec k = 0.1 par minute. Trouvez sa température au bout de 10 minutes."
+ },
+ "Comparison test": {
+  "fr": "Critère de comparaison"
+ },
+ "Comparison: if 0 ≤ f ≤ g and ∫g converges, so does ∫f.": {
+  "fr": "Comparaison : si 0 ≤ f ≤ g et si ∫g converge, alors ∫f converge aussi."
+ },
+ "Compute arc length.": {
+  "fr": "Calculer une longueur d’arc."
+ },
+ "Compute work done by variable forces, including pumping liquids, and hydrostatic force.": {
+  "fr": "Calculer le travail de forces variables, y compris le pompage de liquides, et la force hydrostatique."
+ },
+ "Conditional convergence": {
+  "fr": "Convergence conditionnelle"
+ },
+ "Converges": {
+  "fr": "Converge"
+ },
+ "Converges (its sum is 2).": {
+  "fr": "Converge (sa somme vaut 2)."
+ },
+ "Converges, but not absolutely.": {
+  "fr": "Converge, mais pas absolument."
+ },
+ "Decide convergence with the p-test and comparison.": {
+  "fr": "Déterminer la convergence avec le critère de Riemann et la comparaison."
+ },
+ "Decompose rational functions into partial fractions.": {
+  "fr": "Décomposer des fractions rationnelles en éléments simples."
+ },
+ "Differential equation": {
+  "fr": "Équation différentielle"
+ },
+ "Differential equations, direction fields, Euler’s method": {
+  "fr": "Équations différentielles, champs de directions, méthode d’Euler"
+ },
+ "Disk method": {
+  "fr": "Méthode des disques"
+ },
+ "Disk method: V = ∫π[f(x)]² dx about the x-axis. Shell method: V = ∫2πx f(x) dx about the y-axis.": {
+  "fr": "Méthode des disques : V = ∫π[f(x)]² dx autour de l’axe des x. Méthode des coquilles : V = ∫2πx f(x) dx autour de l’axe des y."
+ },
+ "Disks and washers.": {
+  "fr": "Disques et anneaux."
+ },
+ "Disks of radius √x: V = ∫₀⁴ π x dx.": {
+  "fr": "Disques de rayon √x : V = ∫₀⁴ π x dx."
+ },
+ "Distinguish absolute from conditional convergence.": {
+  "fr": "Distinguer convergence absolue et convergence conditionnelle."
+ },
+ "Divergence test: if aₙ does not → 0, the series diverges. The converse is false: the harmonic series Σ1/n diverges.": {
+  "fr": "Critère de divergence : si aₙ ne tend pas vers 0, la série diverge. La réciproque est fausse : la série harmonique Σ1/n diverge."
+ },
+ "Divergence, integral and comparison tests": {
+  "fr": "Critères de divergence, de l’intégrale et de comparaison"
+ },
+ "Divide first if the top’s degree is not less than the bottom’s.": {
+  "fr": "Divisez d’abord si le degré du numérateur n’est pas inférieur à celui du dénominateur."
+ },
+ "Does Σ (−1)ⁿ⁺¹/n converge absolutely?": {
+  "fr": "Σ (−1)ⁿ⁺¹/n converge-t-elle absolument ?"
+ },
+ "Does Σ 1/n² converge?": {
+  "fr": "Σ 1/n² converge-t-elle ?"
+ },
+ "Does Σ n/(n + 1) converge?": {
+  "fr": "Σ n/(n + 1) converge-t-elle ?"
+ },
+ "Does Σ n/2ⁿ converge?": {
+  "fr": "Σ n/2ⁿ converge-t-elle ?"
+ },
+ "Does ∫₁^∞ dx/(x² + 1) converge?": {
+  "fr": "∫₁^∞ dx/(x² + 1) converge-t-elle ?"
+ },
+ "Does ∫₁^∞ dx/x converge?": {
+  "fr": "∫₁^∞ dx/x converge-t-elle ?"
+ },
+ "Each layer moves a different distance, so you must integrate.": {
+  "fr": "Chaque couche se déplace d’une distance différente, il faut donc intégrer."
+ },
+ "Each year a lake loses 10% of a stored pollutant, and 5 tonnes are added. What level does it settle at?": {
+  "fr": "Chaque année, un lac perd 10% d’un polluant stocké, et 5 tonnes y sont ajoutées. À quel niveau se stabilise-t-il ?"
+ },
+ "Endpoints must be checked separately.": {
+  "fr": "Les bornes doivent être vérifiées séparément."
+ },
+ "Endpoints x = ±3 give terms ±1, which do not → 0.": {
+  "fr": "Les bornes x = ±3 donnent des termes ±1, qui ne tendent pas vers 0."
+ },
+ "Equations for rates of change: exponential growth and decay, cooling, mixing, and the logistic model of populations.": {
+  "fr": "Des équations pour les taux de variation : croissance et décroissance exponentielles, refroidissement, mélange, et modèle logistique des populations."
+ },
+ "Escape energy": {
+  "fr": "Énergie de libération"
+ },
+ "Estimate e^0.1 with the first four terms of its series.": {
+  "fr": "Estimez e^0.1 avec les quatre premiers termes de sa série."
+ },
+ "Estimate sin 0.5 with three terms and bound the error.": {
+  "fr": "Estimez sin 0.5 avec trois termes et majorez l’erreur."
+ },
+ "Estimate ∫₀¹ e^(−x²) dx with Simpson’s rule, n = 4.": {
+  "fr": "Estimez ∫₀¹ e^(−x²) dx par la méthode de Simpson, n = 4."
+ },
+ "Euler’s method": {
+  "fr": "Méthode d’Euler"
+ },
+ "Euler’s method gives the exact answer if you are careful.": {
+  "fr": "La méthode d’Euler donne la réponse exacte si l’on est soigneux."
+ },
+ "Euler’s method steps along the slope: yₙ₊₁ = yₙ + h f(tₙ, yₙ). Smaller steps, smaller error.": {
+  "fr": "La méthode d’Euler avance le long de la pente : yₙ₊₁ = yₙ + h f(tₙ, yₙ). Pas plus petits, erreur plus petite."
+ },
+ "Euler’s method.": {
+  "fr": "Méthode d’Euler."
+ },
+ "Evaluate improper integrals as limits.": {
+  "fr": "Calculer des intégrales impropres comme des limites."
+ },
+ "Evaluate trigonometric integrals and use trigonometric substitution.": {
+  "fr": "Calculer des intégrales trigonométriques et utiliser la substitution trigonométrique."
+ },
+ "Evaluate ∫₁^∞ dx/x².": {
+  "fr": "Calculez ∫₁^∞ dx/x²."
+ },
+ "Every application has the same pattern: approximate one thin slice, write its contribution, integrate.": {
+  "fr": "Chaque application suit le même schéma : approcher une tranche fine, écrire sa contribution, intégrer."
+ },
+ "Every derivative of eˣ at 0 is 1.": {
+  "fr": "Toutes les dérivées de eˣ en 0 valent 1."
+ },
+ "Every smooth function equals its Taylor series.": {
+  "fr": "Toute fonction lisse est égale à sa série de Taylor."
+ },
+ "Exponential growth and decay": {
+  "fr": "Croissance et décroissance exponentielles"
+ },
+ "Exponential series": {
+  "fr": "Série exponentielle"
+ },
+ "Exponentials and logarithms.": {
+  "fr": "Exponentielles et logarithmes."
+ },
+ "Find limits of sequences.": {
+  "fr": "Trouver les limites de suites."
+ },
+ "Find the Maclaurin series of 1/(1 − x).": {
+  "fr": "Trouvez la série de Maclaurin de 1/(1 − x)."
+ },
+ "Find the arc length of y = (2/3)x^(3/2) from x = 0 to 3.": {
+  "fr": "Trouvez la longueur d’arc de y = (2/3)x^(3/2) de x = 0 à 3."
+ },
+ "Find the center of mass of rods and thin plates.": {
+  "fr": "Trouver le centre de masse de tiges et de plaques minces."
+ },
+ "Find the radius and interval of convergence of a power series.": {
+  "fr": "Trouver le rayon et l’intervalle de convergence d’une série entière."
+ },
+ "Find the radius of convergence of Σ xⁿ/3ⁿ.": {
+  "fr": "Trouvez le rayon de convergence de Σ xⁿ/3ⁿ."
+ },
+ "Find the radius of convergence of Σ xⁿ/n.": {
+  "fr": "Trouvez le rayon de convergence de Σ xⁿ/n."
+ },
+ "Find the volume when the region under y = √x, 0 ≤ x ≤ 4, is spun about the x-axis.": {
+  "fr": "Trouvez le volume obtenu en faisant tourner autour de l’axe des x la région sous y = √x, 0 ≤ x ≤ 4."
+ },
+ "Find volumes by slicing, disks, washers and shells.": {
+  "fr": "Calculer des volumes par tranches, disques, anneaux et coquilles cylindriques."
+ },
+ "Find ∫₀¹ x eˣ dx.": {
+  "fr": "Calculez ∫₀¹ x eˣ dx."
+ },
+ "Find ∫₂³ dx/(x² − 1).": {
+  "fr": "Calculez ∫₂³ dx/(x² − 1)."
+ },
+ "For P′ = rP(1 − P/K), at what population is growth fastest?": {
+  "fr": "Pour P′ = rP(1 − P/K), pour quelle population la croissance est-elle la plus rapide ?"
+ },
+ "For conditionally convergent series it can.": {
+  "fr": "Pour les séries semi-convergentes, cela peut la changer."
+ },
+ "For exponential decay with rate λ, the mean lifetime is ∫₀^∞ t λe^(−λt) dt. Evaluate it.": {
+  "fr": "Pour une décroissance exponentielle de taux λ, la durée de vie moyenne est ∫₀^∞ t λe^(−λt) dt. Calculez-la."
+ },
+ "For integrals, check your answer by differentiating it.": {
+  "fr": "Pour les intégrales, vérifiez votre réponse en la dérivant."
+ },
+ "For series, decide which test fits before computing anything.": {
+  "fr": "Pour les séries, choisissez le critère adapté avant de calculer quoi que ce soit."
+ },
+ "For small θ, sin θ ≈…": {
+  "fr": "Pour θ petit, sin θ ≈…"
+ },
+ "For √(a² − x²), substitute x = a sin θ; for √(a² + x²), x = a tan θ.": {
+  "fr": "Pour √(a² − x²), posez x = a sin θ ; pour √(a² + x²), x = a tan θ."
+ },
+ "For ∫x² eˣ dx, a good first choice of u is…": {
+  "fr": "Pour ∫x² eˣ dx, un bon premier choix de u est…"
+ },
+ "Free textbook section with comparison tests.": {
+  "fr": "Section de manuel gratuite avec critères de comparaison."
+ },
+ "From 0 to 1: 0 − (−1) = 1.": {
+  "fr": "De 0 à 1 : 0 − (−1) = 1."
+ },
+ "GM/R per kg.": {
+  "fr": "GM/R par kg."
+ },
+ "Geometric and telescoping series.": {
+  "fr": "Séries géométriques et télescopiques."
+ },
+ "Geometric series": {
+  "fr": "Série géométrique"
+ },
+ "Geometric series describe anything that is partly carried over from one period to the next, as in Example 5.2. That simple model shows a key fact of pollution and of greenhouse gases: the long-run level depends on the input rate, so cutting inputs lowers where things settle.": {
+  "fr": "Les séries géométriques décrivent tout ce qui est partiellement reporté d’une période à la suivante, comme dans l’exemple 5.2. Ce modèle simple montre un fait essentiel de la pollution et des gaz à effet de serre : le niveau à long terme dépend du rythme des apports, donc réduire les apports abaisse le niveau d’équilibre."
+ },
+ "Geometric series.": {
+  "fr": "Série géométrique."
+ },
+ "Geometric with a = 1, r = ½.": {
+  "fr": "Géométrique avec a = 1, r = ½."
+ },
+ "Geometric: 5/(1 − 0.9).": {
+  "fr": "Géométrique : 5/(1 − 0.9)."
+ },
+ "Geometric: Σ arⁿ (n ≥ 0) = a/(1 − r) when |r| < 1.": {
+  "fr": "Géométrique : Σ arⁿ (n ≥ 0) = a/(1 − r) quand |r| < 1."
+ },
+ "Growth is fastest at K/2 and slows to zero only as P approaches K.": {
+  "fr": "La croissance est la plus rapide à K/2 et ne s’annule que lorsque P approche de K."
+ },
+ "Half: e^(−t/100) = ½, so t = 100 ln 2.": {
+  "fr": "Moitié : e^(−t/100) = ½, donc t = 100 ln 2."
+ },
+ "Harmonic series": {
+  "fr": "Série harmonique"
+ },
+ "How much energy per kilogram does it take to escape Earth’s gravity from its surface (ignoring air and rotation)?": {
+  "fr": "Quelle énergie par kilogramme faut-il pour échapper à la gravité terrestre depuis la surface (sans tenir compte de l’air ni de la rotation) ?"
+ },
+ "Hydrostatic pressure on a dam grows…": {
+  "fr": "La pression hydrostatique sur un barrage augmente…"
+ },
+ "If I can’t find an antiderivative, the integral has no value.": {
+  "fr": "Si je ne trouve pas de primitive, l’intégrale n’a pas de valeur."
+ },
+ "If f(x) → 0 as x → ∞, the integral converges.": {
+  "fr": "Si f(x) → 0 quand x → ∞, l’intégrale converge."
+ },
+ "If the terms go to 0, the series converges.": {
+  "fr": "Si les termes tendent vers 0, la série converge."
+ },
+ "Improper Integrals": {
+  "fr": "Intégrales impropres"
+ },
+ "Improper integral": {
+  "fr": "Intégrale impropre"
+ },
+ "Improper integrals and comparison; midterm practice": {
+  "fr": "Intégrales impropres et comparaison ; entraînement au partiel"
+ },
+ "Improper integrals give the energy to leave a planet, the number behind every launch of a weather or climate satellite. It is finite, which is why spaceflight is possible at all.": {
+  "fr": "Les intégrales impropres donnent l’énergie nécessaire pour quitter une planète, le chiffre derrière chaque lancement de satellite météo ou climatique. Elle est finie, et c’est pour cela que le vol spatial est possible."
+ },
+ "In the logistic model, K is the…": {
+  "fr": "Dans le modèle logistique, K est…"
+ },
+ "Infinite interval or infinite integrand; defined by a limit.": {
+  "fr": "Intervalle infini ou intégrande infinie ; définie par une limite."
+ },
+ "Initial-value problem": {
+  "fr": "Problème de Cauchy (valeur initiale)"
+ },
+ "Integrals over infinite intervals or across infinite spikes: when they add up to a finite number, and when they do not.": {
+  "fr": "Intégrales sur des intervalles infinis ou à travers des pics infinis : quand leur somme est un nombre fini, et quand elle ne l’est pas."
+ },
+ "Integrate by parts, choosing u and dv well.": {
+  "fr": "Intégrer par parties en choisissant bien u et dv."
+ },
+ "Integration by parts": {
+  "fr": "Intégration par parties"
+ },
+ "Integration by parts is the product rule in reverse: ∫u dv = uv − ∫v du. Choose u to get simpler when differentiated (logs, polynomials).": {
+  "fr": "L’intégration par parties est la règle du produit à l’envers : ∫u dv = uv − ∫v du. Choisissez pour u ce qui se simplifie en dérivant (logarithmes, polynômes)."
+ },
+ "Integration by parts, trigonometric integrals and substitutions, partial fractions, and numerical integration when no formula exists.": {
+  "fr": "Intégration par parties, intégrales trigonométriques et substitutions, fractions partielles, et intégration numérique quand aucune formule n’existe."
+ },
+ "Integration techniques and applications, differential equations, Taylor series, and parametric and polar curves, with four computer labs. Free, self-paced, and tied to real planet-saving work.": {
+  "fr": "Techniques et applications de l’intégration, équations différentielles, séries de Taylor, courbes paramétriques et polaires, avec quatre travaux pratiques sur ordinateur. Gratuit, à votre rythme, et relié à un travail concret pour sauver la planète."
+ },
+ "Introduction to Differential Equations": {
+  "fr": "Introduction aux équations différentielles"
+ },
+ "It has a step-size error; it converges only as h → 0.": {
+  "fr": "Elle a une erreur liée au pas ; elle ne converge que quand h → 0."
+ },
+ "It is a function (or family of functions).": {
+  "fr": "C’est une fonction (ou une famille de fonctions)."
+ },
+ "It is best near the center a and can be terrible far away or outside the radius of convergence.": {
+  "fr": "Il est meilleur près du centre a et peut être très mauvais loin de celui-ci ou hors du rayon de convergence."
+ },
+ "It still has a value; estimate it numerically.": {
+  "fr": "Elle a quand même une valeur ; estimez-la numériquement."
+ },
+ "Its scope follows second-semester college calculus, modeled on the topics and depth of open materials such as OpenStax Calculus Volume 2 and MIT OpenCourseWare 18.01SC (with parametric and polar ideas that lead into 18.02SC Multivariable Calculus), which we link to throughout. Those organizations do not endorse this page.": {
+  "fr": "Son contenu suit le deuxième semestre de calcul différentiel et intégral universitaire, sur le modèle des thèmes et du niveau de ressources ouvertes comme OpenStax Calculus Volume 2 et MIT OpenCourseWare 18.01SC (avec des notions paramétriques et polaires qui mènent à 18.02SC Multivariable Calculus), auxquelles nous renvoyons tout au long du cours. Ces organisations ne cautionnent pas cette page."
+ },
+ "K, the long-run limit of a logistic population.": {
+  "fr": "K, la limite à long terme d’une population logistique."
+ },
+ "Keeping only the first term turns sin θ into θ, the small-angle approximation behind the simple pendulum formula.": {
+  "fr": "Ne garder que le premier terme transforme sin θ en θ : c’est l’approximation des petits angles derrière la formule du pendule simple."
+ },
+ "Key series: eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1).": {
+  "fr": "Séries clés : eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1)."
+ },
+ "L < 1 converges, L > 1 diverges, L = 1 inconclusive.": {
+  "fr": "L < 1 converge, L > 1 diverge, L = 1 on ne peut pas conclure."
+ },
+ "L = 1 is inconclusive; use another test.": {
+  "fr": "L = 1 ne permet pas de conclure ; utilisez un autre critère."
+ },
+ "Lake Erie algal bloom forecast": {
+  "fr": "Prévision des proliférations d’algues du lac Érié"
+ },
+ "Logistic equation": {
+  "fr": "Équation logistique"
+ },
+ "Logistic equation and its solution": {
+  "fr": "Équation logistique et sa solution"
+ },
+ "Logistic populations stop growing at K/2.": {
+  "fr": "Les populations logistiques cessent de croître à K/2."
+ },
+ "Logistic: P′ = rP(1 − P/K). Growth slows as P nears the carrying capacity K; it is fastest at P = K/2.": {
+  "fr": "Logistique : P′ = rP(1 − P/K). La croissance ralentit quand P approche de la capacité de charge K ; elle est la plus rapide pour P = K/2."
+ },
+ "MIT OpenCourseWare 18.01SC": {
+  "fr": "MIT OpenCourseWare 18.01SC"
+ },
+ "Maclaurin series": {
+  "fr": "Série de Maclaurin"
+ },
+ "Many integrals, such as ∫e^(−x²) dx, have no elementary antiderivative. Simpson’s rule is often accurate to many digits with few points.": {
+  "fr": "Beaucoup d’intégrales, comme ∫e^(−x²) dx, n’ont pas de primitive élémentaire. La méthode de Simpson donne souvent de nombreux chiffres exacts avec peu de points."
+ },
+ "Mass: ∫₀² (1 + x) dx = 2 + 2 = 4 kg.": {
+  "fr": "Masse : ∫₀² (1 + x) dx = 2 + 2 = 4 kg."
+ },
+ "Mean lifetimes, also improper integrals, describe how long substances stick around: how long a pollutant persists in a lake, or how long a radioactive tracer used to date ice and ocean water remains.": {
+  "fr": "Les durées de vie moyennes, elles aussi des intégrales impropres, décrivent combien de temps des substances persistent : combien de temps un polluant reste dans un lac, ou combien de temps subsiste un traceur radioactif utilisé pour dater la glace et l’eau océanique."
+ },
+ "Methods like Simpson’s rule are how irregular measurements, such as river depths across a channel, become totals like flow or volume.": {
+  "fr": "Des méthodes comme celle de Simpson permettent de transformer des mesures irrégulières, comme les profondeurs d’une rivière à travers un chenal, en totaux comme un débit ou un volume."
+ },
+ "Mixing and cooling.": {
+  "fr": "Mélange et refroidissement."
+ },
+ "Mixing equations like Example 4.1 are the first step in estimating how quickly a lake or estuary flushes out a pollutant once the source is stopped.": {
+  "fr": "Les équations de mélange comme celle de l’exemple 4.1 sont la première étape pour estimer à quelle vitesse un lac ou un estuaire évacue un polluant une fois la source arrêtée."
+ },
+ "Mixing: rate of change of a pollutant = rate in − rate out.": {
+  "fr": "Mélange : taux de variation d’un polluant = débit entrant − débit sortant."
+ },
+ "Moment divided by mass.": {
+  "fr": "Le moment divisé par la masse."
+ },
+ "Moment: ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3.": {
+  "fr": "Moment : ∫₀² x(1 + x) dx = 2 + 8/3 = 14/3."
+ },
+ "NASA: SWOT mission": {
+  "fr": "NASA : mission SWOT"
+ },
+ "NOAA Fisheries: population assessments": {
+  "fr": "NOAA Fisheries : évaluations des populations"
+ },
+ "Newton’s law of cooling": {
+  "fr": "Loi de refroidissement de Newton"
+ },
+ "Next term bound: 0.5⁷/7! = 1.55 × 10⁻⁶.": {
+  "fr": "Majoration par le terme suivant : 0.5⁷/7! = 1.55 × 10⁻⁶."
+ },
+ "No formula antiderivative, e.g. ∫e^(−x²) dx.": {
+  "fr": "Pas de primitive exprimable par une formule, p. ex. ∫e^(−x²) dx."
+ },
+ "No, it diverges, even though 1/x → 0.": {
+  "fr": "Non, elle diverge, même si 1/x → 0."
+ },
+ "No. It converges (to ln 2), but Σ1/n diverges, so the convergence is conditional.": {
+  "fr": "Non. Elle converge (vers ln 2), mais Σ1/n diverge, donc la convergence est conditionnelle."
+ },
+ "No: the terms → 1, not 0 (divergence test).": {
+  "fr": "Non : les termes → 1, et non 0 (critère de divergence)."
+ },
+ "Non-elementary integral": {
+  "fr": "Intégrale non élémentaire"
+ },
+ "Not always, though it holds for eˣ, sin x and cos x everywhere.": {
+  "fr": "Pas toujours, même si c’est vrai partout pour eˣ, sin x et cos x."
+ },
+ "One Euler step from (0, 2) with y′ = y and h = 0.1 gives…": {
+  "fr": "Un pas d’Euler depuis (0, 2) avec y′ = y et h = 0.1 donne…"
+ },
+ "Only for uniform density and a symmetric shape.": {
+  "fr": "Seulement pour une densité uniforme et une forme symétrique."
+ },
+ "OpenStax 2.1–2.3": {
+  "fr": "OpenStax 2.1–2.3"
+ },
+ "OpenStax 2.4–2.6": {
+  "fr": "OpenStax 2.4–2.6"
+ },
+ "OpenStax 3.1": {
+  "fr": "OpenStax 3.1"
+ },
+ "OpenStax 3.2–3.3": {
+  "fr": "OpenStax 3.2–3.3"
+ },
+ "OpenStax 3.4–3.6": {
+  "fr": "OpenStax 3.4–3.6"
+ },
+ "OpenStax 3.7": {
+  "fr": "OpenStax 3.7"
+ },
+ "OpenStax 4.3–4.4": {
+  "fr": "OpenStax 4.3–4.4"
+ },
+ "OpenStax 5.5–5.6": {
+  "fr": "OpenStax 5.5–5.6"
+ },
+ "OpenStax 6.3–6.4": {
+  "fr": "OpenStax 6.3–6.4"
+ },
+ "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing": {
+  "fr": "OpenStax Calculus 2, 2.2 Determining Volumes by Slicing"
+ },
+ "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells": {
+  "fr": "OpenStax Calculus 2, 2.3 Volumes of Revolution: Cylindrical Shells"
+ },
+ "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area": {
+  "fr": "OpenStax Calculus 2, 2.4 Arc Length of a Curve and Surface Area"
+ },
+ "OpenStax Calculus 2, 2.5 Physical Applications": {
+  "fr": "OpenStax Calculus 2, 2.5 Physical Applications"
+ },
+ "OpenStax Calculus 2, 2.6 Moments and Centers of Mass": {
+  "fr": "OpenStax Calculus 2, 2.6 Moments and Centers of Mass"
+ },
+ "OpenStax Calculus 2, 3.1 Integration by Parts": {
+  "fr": "OpenStax Calculus 2, 3.1 Integration by Parts"
+ },
+ "OpenStax Calculus 2, 3.2 Trigonometric Integrals": {
+  "fr": "OpenStax Calculus 2, 3.2 Trigonometric Integrals"
+ },
+ "OpenStax Calculus 2, 3.3 Trigonometric Substitution": {
+  "fr": "OpenStax Calculus 2, 3.3 Trigonometric Substitution"
+ },
+ "OpenStax Calculus 2, 3.4 Partial Fractions": {
+  "fr": "OpenStax Calculus 2, 3.4 Partial Fractions"
+ },
+ "OpenStax Calculus 2, 3.6 Numerical Integration": {
+  "fr": "OpenStax Calculus 2, 3.6 Numerical Integration"
+ },
+ "OpenStax Calculus 2, 3.7 Improper Integrals": {
+  "fr": "OpenStax Calculus 2, 3.7 Improper Integrals"
+ },
+ "OpenStax Calculus 2, 4.1 Basics of Differential Equations": {
+  "fr": "OpenStax Calculus 2, 4.1 Basics of Differential Equations"
+ },
+ "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods": {
+  "fr": "OpenStax Calculus 2, 4.2 Direction Fields and Numerical Methods"
+ },
+ "OpenStax Calculus 2, 4.3 Separable Equations": {
+  "fr": "OpenStax Calculus 2, 4.3 Separable Equations"
+ },
+ "OpenStax Calculus 2, 4.4 The Logistic Equation": {
+  "fr": "OpenStax Calculus 2, 4.4 The Logistic Equation"
+ },
+ "OpenStax Calculus 2, 5.1 Sequences": {
+  "fr": "OpenStax Calculus 2, 5.1 Sequences"
+ },
+ "OpenStax Calculus 2, 5.2 Infinite Series": {
+  "fr": "OpenStax Calculus 2, 5.2 Infinite Series"
+ },
+ "OpenStax Calculus 2, 5.6 Ratio and Root Tests": {
+  "fr": "OpenStax Calculus 2, 5.6 Ratio and Root Tests"
+ },
+ "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series": {
+  "fr": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series"
+ },
+ "Optional: Python with NumPy.": {
+  "fr": "Facultatif : Python avec NumPy."
+ },
+ "P = ρgh; the total force then grows with depth squared.": {
+  "fr": "P = ρgh ; la force totale augmente alors avec le carré de la profondeur."
+ },
+ "Parabolas through each set of three points.": {
+  "fr": "Des paraboles passant par chaque groupe de trois points."
+ },
+ "Parabolic fit; error ∝ Δx⁴.": {
+  "fr": "Ajustement parabolique ; erreur ∝ Δx⁴."
+ },
+ "Parametric Equations & Polar Coordinates": {
+  "fr": "Équations paramétriques et coordonnées polaires"
+ },
+ "Parametric equations; polar coordinates and areas; Lab D": {
+  "fr": "Équations paramétriques ; coordonnées polaires et aires ; TP D"
+ },
+ "Partial fractions": {
+  "fr": "Fractions partielles"
+ },
+ "Partial fractions works on any rational function.": {
+  "fr": "La décomposition en éléments simples fonctionne pour toute fraction rationnelle."
+ },
+ "Partial fractions: ½[1/(x − 1) − 1/(x + 1)].": {
+  "fr": "Fractions partielles : ½[1/(x − 1) − 1/(x + 1)]."
+ },
+ "Partial fractions; numerical integration": {
+  "fr": "Fractions partielles ; intégration numérique"
+ },
+ "Parts with u = ln x, dv = dx.": {
+  "fr": "Par parties avec u = ln x, dv = dx."
+ },
+ "Parts with u = ln x: [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097.": {
+  "fr": "Par parties avec u = ln x : [x² ln x/2 − x²/4]₁ᵉ = (e² + 1)/4 ≈ 2.097."
+ },
+ "Parts: [−x cos x + sin x]₀^π = π.": {
+  "fr": "Par parties : [−x cos x + sin x]₀^π = π."
+ },
+ "Physics I, Unit 7: orbits": {
+  "fr": "Physique I, unité 7 : orbites"
+ },
+ "Physics I, Unit 8: oscillations": {
+  "fr": "Physique I, unité 8 : oscillations"
+ },
+ "Population models built on the logistic equation are part of how fishery scientists assess stocks and set catch limits that let populations stay healthy, which protects ocean ecosystems and the people who depend on them.": {
+  "fr": "Les modèles de population fondés sur l’équation logistique font partie des outils avec lesquels les scientifiques halieutiques évaluent les stocks et fixent des limites de capture qui permettent aux populations de rester en bonne santé, ce qui protège les écosystèmes marins et les personnes qui en dépendent."
+ },
+ "Population models.": {
+  "fr": "Modèles de population."
+ },
+ "Power Series & Taylor Series": {
+  "fr": "Séries entières et séries de Taylor"
+ },
+ "Power reduction: ½[x − sin 2x/2]₀^(π/2) = π/4.": {
+  "fr": "Réduction des puissances : ½[x − sin 2x/2]₀^(π/2) = π/4."
+ },
+ "Power series": {
+  "fr": "Série entière"
+ },
+ "Power series and their properties": {
+  "fr": "Séries entières et leurs propriétés"
+ },
+ "Power-reduction identity": {
+  "fr": "Identité de réduction des puissances"
+ },
+ "Powers of sine and cosine yield to identities such as sin²x = (1 − cos 2x)/2.": {
+  "fr": "Les puissances de sinus et de cosinus se traitent avec des identités comme sin²x = (1 − cos 2x)/2."
+ },
+ "Powers of sine and cosine.": {
+  "fr": "Puissances de sinus et de cosinus."
+ },
+ "Pressure grows with depth, so the force on a dam is an integral over depth.": {
+  "fr": "La pression augmente avec la profondeur, donc la force exercée sur un barrage est une intégrale sur la profondeur."
+ },
+ "Pumping work is weight × tank height.": {
+  "fr": "Le travail de pompage vaut poids × hauteur du réservoir."
+ },
+ "Pythagoras on each tiny piece.": {
+  "fr": "Pythagore sur chaque petit morceau."
+ },
+ "R = 1 (ratio n/(n + 1) → 1).": {
+  "fr": "R = 1 (rapport n/(n + 1) → 1)."
+ },
+ "R = 3; it converges for −3 < x < 3.": {
+  "fr": "R = 3 ; elle converge pour −3 < x < 3."
+ },
+ "R such that the series converges for |x − a| < R.": {
+  "fr": "R tel que la série converge pour |x − a| < R."
+ },
+ "Radical integrands.": {
+  "fr": "Intégrandes avec radicaux."
+ },
+ "Radius of convergence": {
+  "fr": "Rayon de convergence"
+ },
+ "Ratio and root tests.": {
+  "fr": "Critères de d’Alembert et de Cauchy."
+ },
+ "Ratio test": {
+  "fr": "Critère de d’Alembert"
+ },
+ "Ratio test: if |aₙ₊₁/aₙ| → L < 1 the series converges absolutely; L > 1 diverges; L = 1 says nothing.": {
+  "fr": "Critère de d’Alembert : si |aₙ₊₁/aₙ| → L < 1, la série converge absolument ; si L > 1, elle diverge ; L = 1 ne permet pas de conclure."
+ },
+ "Ratio: [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½.": {
+  "fr": "Rapport : [(n + 1)/2ⁿ⁺¹]/[n/2ⁿ] = (n + 1)/(2n) → ½."
+ },
+ "Ratio: |x|/3 < 1.": {
+  "fr": "Rapport : |x|/3 < 1."
+ },
+ "Rational functions.": {
+  "fr": "Fractions rationnelles."
+ },
+ "Read direction fields and use Euler’s method.": {
+  "fr": "Lire des champs de directions et utiliser la méthode d’Euler."
+ },
+ "Real systems are more complex than one geometric series, and scientists use full models, but the series is the right first intuition.": {
+  "fr": "Les systèmes réels sont plus complexes qu’une seule série géométrique, et les scientifiques utilisent des modèles complets, mais la série donne la bonne première intuition."
+ },
+ "Rearranging terms never changes a sum.": {
+  "fr": "Réordonner les termes ne change jamais une somme."
+ },
+ "Remainder bound": {
+  "fr": "Majoration du reste"
+ },
+ "Rivers hub": {
+  "fr": "Page Rivières"
+ },
+ "Room for the River": {
+  "fr": "De la place pour la rivière"
+ },
+ "Satellite orbit and climate models expand complicated effects into series and keep the terms that matter. Knowing the error bound tells you when an approximation is good enough to trust.": {
+  "fr": "Les modèles d’orbites de satellites et de climat développent des effets compliqués en séries et gardent les termes qui comptent. Connaître la majoration de l’erreur indique quand une approximation est assez bonne pour qu’on s’y fie."
+ },
+ "Satellites now measure the height of rivers, lakes and reservoirs from orbit. NASA and CNES’s SWOT mission surveys surface water so that changes in stored water can be estimated, which is slicing-and-adding on a planetary scale.": {
+  "fr": "Des satellites mesurent désormais depuis l’orbite la hauteur des rivières, des lacs et des réservoirs. La mission SWOT de la NASA et du CNES cartographie les eaux de surface afin d’estimer les variations des volumes stockés : du découpage-et-addition à l’échelle planétaire."
+ },
+ "Separable": {
+  "fr": "À variables séparables"
+ },
+ "Separable and logistic equations; Lab A": {
+  "fr": "Équations à variables séparables et logistiques ; TP A"
+ },
+ "Separable equations: put all y on one side and all x on the other, then integrate.": {
+  "fr": "Équations à variables séparables : mettez tous les y d’un côté et tous les x de l’autre, puis intégrez."
+ },
+ "Separate and integrate.": {
+  "fr": "Séparer et intégrer."
+ },
+ "Sequence": {
+  "fr": "Suite"
+ },
+ "Sequences & Series": {
+  "fr": "Suites et séries"
+ },
+ "Sequences; infinite series; geometric series": {
+  "fr": "Suites ; séries infinies ; séries géométriques"
+ },
+ "Series": {
+  "fr": "Série"
+ },
+ "Shell method": {
+  "fr": "Méthode des coquilles cylindriques"
+ },
+ "Shells about the y-axis use the integrand…": {
+  "fr": "Les coquilles autour de l’axe des y utilisent l’intégrande…"
+ },
+ "Shells.": {
+  "fr": "Coquilles cylindriques."
+ },
+ "Simpson’s rule": {
+  "fr": "Méthode de Simpson"
+ },
+ "Simpson’s rule (n even)": {
+  "fr": "Méthode de Simpson (n pair)"
+ },
+ "Simpson’s rule fits the curve with…": {
+  "fr": "La méthode de Simpson ajuste la courbe avec…"
+ },
+ "Sine series": {
+  "fr": "Série du sinus"
+ },
+ "Sketch every region before setting up a volume or area integral.": {
+  "fr": "Esquissez chaque région avant de poser une intégrale de volume ou d’aire."
+ },
+ "Slice, add and take the limit: volumes of solids, lengths of curves, work against forces, fluid pressure and centers of mass.": {
+  "fr": "Découper, additionner, passer à la limite : volumes de solides, longueurs de courbes, travail contre des forces, pression des fluides et centres de masse."
+ },
+ "Small-angle approximation": {
+  "fr": "Approximation des petits angles"
+ },
+ "Smaller than convergent ⇒ converges.": {
+  "fr": "Plus petite qu’une intégrale convergente ⇒ converge."
+ },
+ "Solve separable equations, including mixing and cooling problems.": {
+  "fr": "Résoudre des équations à variables séparables, y compris des problèmes de mélange et de refroidissement."
+ },
+ "Solve y′ = xy with y(0) = 2, and find y(1).": {
+  "fr": "Résolvez y′ = xy avec y(0) = 2, et trouvez y(1)."
+ },
+ "Solve y′ = −2y, y(0) = 5. Find y(1).": {
+  "fr": "Résolvez y′ = −2y, y(0) = 5. Trouvez y(1)."
+ },
+ "Split a rational function into simple fractions.": {
+  "fr": "Décomposer une fraction rationnelle en éléments simples."
+ },
+ "Sum geometric and telescoping series.": {
+  "fr": "Calculer la somme de séries géométriques et télescopiques."
+ },
+ "Sum of a sequence; limit of partial sums.": {
+  "fr": "Somme d’une suite ; limite des sommes partielles."
+ },
+ "Sum Σ (1/2)ⁿ from n = 0.": {
+  "fr": "Calculez Σ (1/2)ⁿ à partir de n = 0."
+ },
+ "Sum Σ 3(2/3)ⁿ from n = 0.": {
+  "fr": "Calculez Σ 3(2/3)ⁿ à partir de n = 0."
+ },
+ "Take the limit of ∫ₐᵇ.": {
+  "fr": "Prendre la limite de ∫ₐᵇ."
+ },
+ "Taylor and Maclaurin series; Lab C": {
+  "fr": "Séries de Taylor et de Maclaurin ; TP C"
+ },
+ "Taylor coefficient": {
+  "fr": "Coefficient de Taylor"
+ },
+ "Taylor remainder bound": {
+  "fr": "Majoration du reste de Taylor"
+ },
+ "Taylor series": {
+  "fr": "Série de Taylor"
+ },
+ "Taylor series are how physicists turn hard equations into usable ones. The pendulum period T = 2π√(L/g) in Physics I relies on sin θ ≈ θ, and the same kind of linearization underlies much of how engineers analyze vibrations in wind turbines, bridges and aircraft.": {
+  "fr": "Les séries de Taylor permettent aux physiciens de transformer des équations difficiles en équations utilisables. La période du pendule T = 2π√(L/g) en Physique I repose sur sin θ ≈ θ, et le même type de linéarisation sous-tend une grande partie de l’analyse des vibrations des éoliennes, des ponts et des avions par les ingénieurs."
+ },
+ "Taylor series at a = 0.": {
+  "fr": "Série de Taylor en a = 0."
+ },
+ "Taylor series: cₙ = f⁽ⁿ⁾(a)/n!. Around a = 0 it is called a Maclaurin series.": {
+  "fr": "Série de Taylor : cₙ = f⁽ⁿ⁾(a)/n!. Autour de a = 0, on l’appelle série de Maclaurin."
+ },
+ "Taylor’s remainder: the error is at most M|x − a|ⁿ⁺¹/(n + 1)!, where M bounds the next derivative.": {
+  "fr": "Reste de Taylor : l’erreur est au plus M|x − a|ⁿ⁺¹/(n + 1)!, où M majore la dérivée suivante."
+ },
+ "Techniques of Integration": {
+  "fr": "Techniques d’intégration"
+ },
+ "The Maclaurin series of eˣ is…": {
+  "fr": "La série de Maclaurin de eˣ est…"
+ },
+ "The bell-curve integral in Example 1.3 has no formula answer, yet it sits behind every error bar on a climate graph and every uncertainty in a satellite measurement. Numerical integration is how it, and most integrals from real data, actually get computed.": {
+  "fr": "L’intégrale de la courbe en cloche de l’exemple 1.3 n’a pas de solution sous forme de formule, et pourtant elle se cache derrière chaque barre d’erreur d’un graphique climatique et chaque incertitude d’une mesure satellitaire. L’intégration numérique est la façon dont on la calcule réellement, elle et la plupart des intégrales issues de données réelles."
+ },
+ "The center of mass is always the midpoint.": {
+  "fr": "Le centre de masse est toujours le milieu."
+ },
+ "The coefficient of x³ in the series for sin x is…": {
+  "fr": "Le coefficient de x³ dans la série de sin x est…"
+ },
+ "The first term of the series.": {
+  "fr": "Le premier terme de la série."
+ },
+ "The general solution of y′ = 3y is…": {
+  "fr": "La solution générale de y′ = 3y est…"
+ },
+ "The harmonic series is the counterexample.": {
+  "fr": "La série harmonique est le contre-exemple."
+ },
+ "The harmonic series Σ1/n…": {
+  "fr": "La série harmonique Σ1/n…"
+ },
+ "The integrand blows up at 0, so the integral is improper, and it diverges.": {
+  "fr": "L’intégrande tend vers l’infini en 0, donc l’intégrale est impropre, et elle diverge."
+ },
+ "The level the population approaches.": {
+  "fr": "Le niveau dont la population s’approche."
+ },
+ "The limit exists and is finite.": {
+  "fr": "La limite existe et est finie."
+ },
+ "The radius of convergence decides the endpoints too.": {
+  "fr": "Le rayon de convergence décide aussi des bornes."
+ },
+ "The ratio test for Σ 1/n! gives L =": {
+  "fr": "Le critère de d’Alembert pour Σ 1/n! donne L ="
+ },
+ "The solution of a differential equation is a number.": {
+  "fr": "La solution d’une équation différentielle est un nombre."
+ },
+ "The work to stretch a spring by x from rest is…": {
+  "fr": "Le travail pour étirer un ressort de x depuis le repos vaut…"
+ },
+ "Trapezoid and Simpson rules with error bounds.": {
+  "fr": "Méthodes des trapèzes et de Simpson avec majorations de l’erreur."
+ },
+ "Trig substitution": {
+  "fr": "Substitution trigonométrique"
+ },
+ "Trigonometric identities, especially sin²x + cos²x = 1 and the double-angle formulas.": {
+  "fr": "Identités trigonométriques, en particulier sin²x + cos²x = 1 et les formules de l’angle double."
+ },
+ "Trigonometric integrals and substitution": {
+  "fr": "Intégrales trigonométriques et substitution"
+ },
+ "Turn functions into infinite polynomials. Taylor series are how calculators compute, and how physicists make hard problems simple.": {
+  "fr": "Transformer des fonctions en polynômes infinis. Les séries de Taylor sont la façon dont les calculatrices calculent, et dont les physiciens simplifient les problèmes difficiles."
+ },
+ "Use Euler’s method with h = 0.5 to estimate y(1) for y′ = y, y(0) = 1.": {
+  "fr": "Utilisez la méthode d’Euler avec h = 0.5 pour estimer y(1) pour y′ = y, y(0) = 1."
+ },
+ "Use a series to estimate ∫₀¹ e^(−x²) dx with three terms.": {
+  "fr": "Utilisez une série pour estimer ∫₀¹ e^(−x²) dx avec trois termes."
+ },
+ "Use series to approximate integrals and to justify small-angle approximations.": {
+  "fr": "Utiliser des séries pour approcher des intégrales et pour justifier les approximations des petits angles."
+ },
+ "Use shells to find the volume when the region under y = x², 0 ≤ x ≤ 1, is spun about the y-axis.": {
+  "fr": "Utilisez les coquilles cylindriques pour trouver le volume obtenu en faisant tourner autour de l’axe des y la région sous y = x², 0 ≤ x ≤ 1."
+ },
+ "Use the logistic equation and interpret its carrying capacity.": {
+  "fr": "Utiliser l’équation logistique et interpréter sa capacité de charge."
+ },
+ "Verify solutions and solve initial-value problems.": {
+  "fr": "Vérifier des solutions et résoudre des problèmes de Cauchy (valeur initiale)."
+ },
+ "Volume of revolution = π × area.": {
+  "fr": "Volume de révolution = π × aire."
+ },
+ "Washer method": {
+  "fr": "Méthode des anneaux"
+ },
+ "Water engineers use these integrals directly: the volume of a reservoir from its shape, the energy to pump water to where it is needed, and the force a dam or flood barrier must hold back. Pumping is a significant energy cost in many water systems, so getting the integral right saves both energy and money.": {
+  "fr": "Les ingénieurs de l’eau utilisent directement ces intégrales : le volume d’un réservoir d’après sa forme, l’énergie pour pomper l’eau là où on en a besoin, et la force qu’un barrage ou une digue doit retenir. Le pompage représente un coût énergétique important dans de nombreux réseaux d’eau, donc bien poser l’intégrale économise à la fois de l’énergie et de l’argent."
+ },
+ "Weather and climate models solve very large systems of differential equations with step-by-step numerical methods, descendants of Euler’s method.": {
+  "fr": "Les modèles météorologiques et climatiques résolvent de très grands systèmes d’équations différentielles avec des méthodes numériques pas à pas, descendantes de la méthode d’Euler."
+ },
+ "Weeks 12–13": {
+  "fr": "Semaines 12–13"
+ },
+ "Weeks 7–8": {
+  "fr": "Semaines 7–8"
+ },
+ "Weeks 9–11": {
+  "fr": "Semaines 9–11"
+ },
+ "What we add: every unit connects to real water, energy, ecology and spaceflight problems, every number on the page is re-computed by a checking script before it goes live, and four computer labs put the methods to work on data.": {
+  "fr": "Notre apport : chaque unité est reliée à de vrais problèmes d’eau, d’énergie, d’écologie et de vol spatial, chaque nombre de la page est recalculé par un script de vérification avant sa mise en ligne, et quatre travaux pratiques sur ordinateur appliquent les méthodes à des données."
+ },
+ "When does adding infinitely many numbers give a finite total? Geometric series, the harmonic series and the convergence tests.": {
+  "fr": "Quand l’addition d’une infinité de nombres donne-t-elle un total fini ? Séries géométriques, série harmonique et critères de convergence."
+ },
+ "Work = ∫F(x) dx. Pumping: each layer of liquid is lifted its own distance.": {
+  "fr": "Travail = ∫F(x) dx. Pompage : chaque couche de liquide est soulevée sur sa propre distance."
+ },
+ "Work by a variable force": {
+  "fr": "Travail d’une force variable"
+ },
+ "Work to escape a planet’s gravity": {
+  "fr": "Travail pour échapper à la gravité d’une planète"
+ },
+ "Work, pumping and fluid force.": {
+  "fr": "Travail, pompage et force exercée par un fluide."
+ },
+ "Write the Maclaurin polynomial of degree 4 for cos x and use it for cos 0.2.": {
+  "fr": "Écrivez le polynôme de Maclaurin de degré 4 de cos x et utilisez-le pour cos 0.2."
+ },
+ "Yes, p = 2 > 1 (the sum is π²/6).": {
+  "fr": "Oui, p = 2 > 1 (la somme vaut π²/6)."
+ },
+ "Yes: it is less than 1/x², which converges. In fact it equals π/4.": {
+  "fr": "Oui : elle est inférieure à 1/x², qui converge. En fait, elle vaut π/4."
+ },
+ "You must square the radius inside the integral: ∫π f² dx, not π(∫f dx).": {
+  "fr": "Il faut élever le rayon au carré dans l’intégrale : ∫π f² dx, et non π(∫f dx)."
+ },
+ "[2√x]₀¹ = 2 (converges; p = ½ < 1).": {
+  "fr": "[2√x]₀¹ = 2 (converge ; p = ½ < 1)."
+ },
+ "[arctan x]₀¹ = π/4.": {
+  "fr": "[arctan x]₀¹ = π/4."
+ },
+ "a derivative": {
+  "fr": "une dérivée"
+ },
+ "a limit of proper integrals": {
+  "fr": "une limite d’intégrales propres"
+ },
+ "a sum": {
+  "fr": "une somme"
+ },
+ "a/(1 − r) for |r| < 1.": {
+  "fr": "a/(1 − r) pour |r| < 1."
+ },
+ "all x": {
+  "fr": "tout x"
+ },
+ "always infinite": {
+  "fr": "toujours infinie"
+ },
+ "cannot be decided": {
+  "fr": "on ne peut pas trancher"
+ },
+ "carrying capacity": {
+  "fr": "la capacité de charge"
+ },
+ "converges": {
+  "fr": "converge"
+ },
+ "converges to 0": {
+  "fr": "converge vers 0"
+ },
+ "converges to 1": {
+  "fr": "converge vers 1"
+ },
+ "converges to 1.5": {
+  "fr": "converge vers 1.5"
+ },
+ "converges to 2": {
+  "fr": "converge vers 2"
+ },
+ "converges to e": {
+  "fr": "converge vers e"
+ },
+ "converges to ln 2": {
+  "fr": "converge vers ln 2"
+ },
+ "cubics only": {
+  "fr": "uniquement des cubiques"
+ },
+ "diverges": {
+  "fr": "diverge"
+ },
+ "equals 1": {
+  "fr": "vaut 1"
+ },
+ "equals ln 2": {
+  "fr": "vaut ln 2"
+ },
+ "growth rate": {
+  "fr": "le taux de croissance"
+ },
+ "half-life": {
+  "fr": "la demi-vie"
+ },
+ "initial population": {
+  "fr": "la population initiale"
+ },
+ "linear with constant coefficients only": {
+  "fr": "linéaire à coefficients constants uniquement"
+ },
+ "linearly with depth": {
+  "fr": "linéairement avec la profondeur"
+ },
+ "logistic": {
+  "fr": "logistique"
+ },
+ "not at all": {
+  "fr": "pas du tout"
+ },
+ "not separable": {
+  "fr": "non séparable"
+ },
+ "p = 1, integral test.": {
+  "fr": "p = 1, critère de l’intégrale."
+ },
+ "p-integral": {
+  "fr": "Intégrale de Riemann (p)"
+ },
+ "p-series": {
+  "fr": "Série de Riemann"
+ },
+ "p-series Σ1/nᵖ converges iff p > 1 (by the integral test).": {
+  "fr": "La série de Riemann Σ1/nᵖ converge ssi p > 1 (par le critère de l’intégrale)."
+ },
+ "p-test (0)": {
+  "fr": "Critère de Riemann (0)"
+ },
+ "p-test (∞)": {
+  "fr": "Critère de Riemann (∞)"
+ },
+ "parabolas": {
+  "fr": "des paraboles"
+ },
+ "rP(1 − P/K) is a downward parabola in P with its peak at P = K/2.": {
+  "fr": "rP(1 − P/K) est une parabole tournée vers le bas en P, dont le sommet est en P = K/2."
+ },
+ "rectangles": {
+  "fr": "des rectangles"
+ },
+ "separable": {
+  "fr": "à variables séparables"
+ },
+ "sin θ ≈ θ, cos θ ≈ 1 − θ²/2.": {
+  "fr": "sin θ ≈ θ, cos θ ≈ 1 − θ²/2."
+ },
+ "trapezoids": {
+  "fr": "des trapèzes"
+ },
+ "with the dam’s width": {
+  "fr": "avec la largeur du barrage"
+ },
+ "with the square of depth": {
+  "fr": "avec le carré de la profondeur"
+ },
+ "x = 3 sec θ": {
+  "fr": "x = 3 sec θ"
+ },
+ "x = 3 sin θ": {
+  "fr": "x = 3 sin θ"
+ },
+ "x = 3 tan θ": {
+  "fr": "x = 3 tan θ"
+ },
+ "x = sin θ gives ∫₀^(π/2) cos²θ dθ = π/4 (a quarter of the unit disk).": {
+  "fr": "x = sin θ donne ∫₀^(π/2) cos²θ dθ = π/4 (un quart du disque unité)."
+ },
+ "x² gets simpler when differentiated.": {
+  "fr": "x² se simplifie en dérivant."
+ },
+ "x̄ = 7/6 ≈ 1.17 m, toward the heavier end.": {
+  "fr": "x̄ = 7/6 ≈ 1.17 m, du côté de l’extrémité la plus lourde."
+ },
+ "y′ = ky gives y = y₀e^(kt): growth if k > 0, decay if k < 0.": {
+  "fr": "y′ = ky donne y = y₀e^(kt) : croissance si k > 0, décroissance si k < 0."
+ },
+ "Σ (1/3)ⁿ from n = 0 =": {
+  "fr": "Σ (1/3)ⁿ à partir de n = 0 ="
+ },
+ "Σ 0.9(0.1)ⁿ from n = 0": {
+  "fr": "Σ 0.9(0.1)ⁿ à partir de n = 0"
+ },
+ "Σ1/n, diverges.": {
+  "fr": "Σ1/n, diverge."
+ },
+ "Σxⁿ converges for…": {
+  "fr": "Σxⁿ converge pour…"
+ },
+ "Σxⁿ for |x| < 1 (geometric).": {
+  "fr": "Σxⁿ pour |x| < 1 (géométrique)."
+ },
+ "√(9 − x²) suggests the substitution…": {
+  "fr": "√(9 − x²) suggère la substitution…"
+ },
+ "√(a² − x²): x = a sin θ.": {
+  "fr": "√(a² − x²) : x = a sin θ."
+ },
+ "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. More terms approach 0.7468.": {
+  "fr": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Davantage de termes s’approchent de 0.7468."
+ },
+ "∫₀^(π/2) sin²x dx": {
+  "fr": "∫₀^(π/2) sin²x dx"
+ },
+ "∫₀^π x sin x dx": {
+  "fr": "∫₀^π x sin x dx"
+ },
+ "∫₀¹ x⁻ᵖ converges iff p < 1.": {
+  "fr": "∫₀¹ x⁻ᵖ converge ssi p < 1."
+ },
+ "∫₁^∞ dx/xᵖ converges exactly when p > 1. ∫₀¹ dx/xᵖ converges exactly when p < 1.": {
+  "fr": "∫₁^∞ dx/xᵖ converge exactement quand p > 1. ∫₀¹ dx/xᵖ converge exactement quand p < 1."
+ },
+ "∫₁^∞ x⁻ᵖ converges iff p > 1.": {
+  "fr": "∫₁^∞ x⁻ᵖ converge ssi p > 1."
+ },
+ "∫₋₁¹ dx/x² = −2 by the usual formula.": {
+  "fr": "∫₋₁¹ dx/x² = −2 avec la formule habituelle."
+ },
+ "∫ₐ^∞ f dx means the limit of ∫ₐᵇ f dx as b → ∞. If the limit is finite, the integral converges.": {
+  "fr": "∫ₐ^∞ f dx désigne la limite de ∫ₐᵇ f dx quand b → ∞. Si la limite est finie, l’intégrale converge."
+ },
+ "≈ 451 fish, near the fastest-growth level K/2 = 500.": {
+  "fr": "≈ 451 poissons, proche du niveau de croissance la plus rapide K/2 = 500."
+ },
+ "≈ 69.3 days (a simplified, well-mixed model).": {
+  "fr": "≈ 69.3 jours (modèle simplifié, parfaitement mélangé)."
+ }
+}
