@@ -894,6 +894,21 @@
    "credit": "NASA Johnson Space Center, ISS crew photo ISS018-E-024351 (Tetiaroa, French Polynesia, 27 Jan. 2009, public domain)",
    "pos": "50% 50%",
    "r2": "images/Tetiaroa_Atoll_ISS018.jpg"
+  },
+  "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg": {
+   "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0146)",
+   "pos": "50% 40%",
+   "r2": "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg"
+  },
+  "r2:images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg": {
+   "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0262)",
+   "pos": "50% 40%",
+   "r2": "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
+  },
+  "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg": {
+   "credit": "NASA/Michael DeMocker (MAF20210116_GR0006)",
+   "pos": "50% 40%",
+   "r2": "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
   }
  },
  "pages": {
@@ -1198,7 +1213,9 @@
   "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg",
   "Cool_Earth_Basic_Income.html": "assets/Puerto_Bermudez_Peru_Rainforest.jpg",
   "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
-  "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg"
+  "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
+  "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
+  "Courses.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg"
  },
  "slides": {
   "pools": {
@@ -1679,6 +1696,16 @@
     "images/Labrador_Sea_Ice_ISS.jpg",
     "images/Ross_Sea_Adelie_Cape_Royds.jpg",
     "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
+   ],
+   "General_Chemistry_I.html": [
+    "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg",
+    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "images/North_Atlantic_Bloom_MODIS.jpg"
+   ],
+   "Courses.html": [
+    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+    "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
    ]
   }
  }

@@ -1,0 +1,49 @@
+/* Oct 24 2026: Courses section (scripts/build-courses.py). Mobile/iPad first; 44px touch targets; print = study guide. */
+.crs{max-width:980px;margin:0 auto;padding:1rem 1.25rem 2.5rem;line-height:1.65}
+.crs h2{margin-top:2.4rem;scroll-margin-top:6rem}.crs h3{margin:1.4rem 0 .45rem;font-size:1.12rem}.crs h4{margin:1rem 0 .3rem}
+.crs section{scroll-margin-top:6rem}
+.crs a{text-underline-offset:2px}
+.crs-crumb{font-size:.9rem;opacity:.9}
+.crs-kicker{font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;opacity:.85;margin:.2rem 0}
+.crs-lead{font-size:1.08rem}
+.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}
+.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}
+.crs-toc a:focus-visible,.crs-btn:focus-visible,.crs summary:focus-visible,.crs label:focus-within{outline:3px solid #ffd54a;outline-offset:2px}
+.crs-btn{min-height:44px;padding:8px 18px;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;border:1px solid #ffd54a;background:transparent;color:inherit}
+.crs-btn[aria-pressed=true]{background:#ffd54a;color:#071018}
+.crs-disc{border-inline-start:4px solid #ffd54a;padding:.6rem 1rem;background:rgba(255,213,74,.08);border-radius:8px}
+.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}
+.crs-planet{border:1px solid rgba(76,201,140,.55);background:rgba(76,201,140,.09);border-radius:16px;padding:.9rem 1.2rem;margin:1.4rem 0}
+.crs-planet h3{margin-top:.2rem}.crs-src{font-size:.92rem}
+.crs details{margin:.4rem 0}.crs summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}
+.crs-ans{border-top:1px dashed rgba(255,255,255,.3);padding-top:.4rem}
+.crs-eq{margin:.8rem 0;padding:.5rem .8rem;background:rgba(0,0,0,.22);border-radius:12px;overflow-x:auto}.crs-eq figcaption{font-size:.9rem;opacity:.9}
+.crs-math{overflow-x:auto;overflow-y:hidden}
+.crs-fs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:.4rem}.crs-fs .crs-math{background:rgba(0,0,0,.22);border-radius:10px;padding:.2rem .5rem}
+.crs-mis{list-style:none;padding:0}.crs-mis li{border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:.4rem .9rem;margin:.5rem 0}.crs-mis p{margin:.3rem 0}
+.crs-x{font-weight:800;color:#ff9a8a}.crs-ok{font-weight:800;color:#7ee2a8}
+.crs-tw{overflow-x:auto}.crs-tbl{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}.crs-tbl th,.crs-tbl td{border:1px solid rgba(255,255,255,.25);padding:.45rem .6rem;text-align:start;vertical-align:top}.crs-tbl th{background:rgba(255,255,255,.08)}
+.crs-note{font-size:.9rem;font-style:italic}
+.crs-safe{border-inline-start:4px solid #ff9a8a;padding:.2rem 1rem;background:rgba(255,154,138,.08);border-radius:8px}
+.crs-quiz fieldset{border:1px solid rgba(255,255,255,.22);border-radius:12px;margin:.7rem 0;padding:.5rem 1rem}
+.crs-quiz legend{font-weight:700;padding:0 .3rem}
+.crs-quiz label{display:flex;align-items:center;gap:.6rem;min-height:44px;cursor:pointer;border-radius:8px;padding:0 .4rem}
+.crs-quiz input{width:22px;height:22px;flex:none}
+.crs-fb.ok{color:#7ee2a8;font-weight:700}.crs-fb.no{color:#ff9a8a;font-weight:700}
+.crs-js .crs-nojs{display:none}
+.crs-fc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:.6rem;list-style:none;padding:0}
+.crs-fc-list li{border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:.5rem .9rem}.crs-fc-f{font-weight:800}
+.crs-fc-one{border:1px solid rgba(255,255,255,.3);border-radius:16px;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.2rem;font-size:1.15rem;background:rgba(255,255,255,.06);width:100%;color:inherit;font:inherit;cursor:pointer}
+.crs-fc-one.back{background:rgba(76,201,140,.12)}
+.crs-fc-bar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.6rem 0}
+.crs-done label{display:inline-flex;gap:.6rem;align-items:center;min-height:44px;font-weight:700;cursor:pointer}.crs-done input{width:22px;height:22px}
+.crs-prog progress{width:100%;height:18px}
+.crs-gl dt{font-weight:800;margin-top:.6rem}.crs-gl dd{margin:0 0 .2rem}
+.crs-top{text-align:end;margin:1.2rem 0 0}.crs-top a{display:inline-flex;align-items:center;min-height:44px;gap:.3rem}
+.crs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:.8rem;list-style:none;padding:0;align-items:start}
+.crs-c{border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:.8rem 1rem;background:rgba(255,255,255,.04)}.crs-c h3{margin:.4rem 0}.crs-c.live{border-color:#7ee2a8}
+.crs-badge{display:inline-block;font-size:.78rem;font-weight:800;padding:.1rem .6rem;border-radius:999px;background:#7ee2a8;color:#071018}.crs-badge.soon{background:rgba(255,255,255,.18);color:inherit}
+@media (prefers-reduced-motion:reduce){.crs *{scroll-behavior:auto!important;transition:none!important}}
+@media print{html body.toc-sub[class]>#main:not(#crs-x){display:block!important}html,body,main{height:auto!important;max-height:none!important;overflow:visible!important;position:static!important;contain:none!important}main *{content-visibility:visible!important}#topnav,nav,footer,.shr,.nl-call,.crs-tools,.crs-toc,.crs-top,.crs-reset,.crs-prog,.crs-fc-bar,.crs-quiz input,.share-bar,.sticky-help,.page-hero,.spb-pause{display:none!important}
+ body{background:#fff!important;color:#000!important}.crs a{color:#000}.crs-card,.crs-planet,.crs-tbl th,.crs-tbl td,.crs-quiz fieldset{border-color:#000!important;background:none!important}
+ .crs details>summary{display:none}.crs-unit,.crs-lab{break-before:page}.crs-x,.crs-ok,.crs-fb{color:#000!important}.crs-nojs{display:block!important}.crs-fc-one{display:none}.crs-fc-list{display:grid!important}.crs,.crs *{color:#000!important}.crs-eq,.crs-fs .crs-math,.crs-disc,.crs-safe,.crs-mis li{background:none!important;border-color:#000!important}.crs a[href^=http]::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}}

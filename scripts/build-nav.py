@@ -26,7 +26,7 @@ GROUPS = [
  # The separate Space and Project Rawane top-level menus are gone; Rawane's Mission Log stays linked from Project Rawane,
  # Myth vs Fact stays in Kids.
  ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html', 'Topics.html', 'World_Map.html']),
- ('le', ['Learn.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']),
+ ('le', ['Learn.html', 'Courses.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']),
  ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Glossary.html']),
  ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
@@ -59,7 +59,7 @@ def label(l, key, i):
 # top of their dropdown as a group, in this order. Collation without ICU (weekly sync has no extra deps): leading emoji and
 # punctuation ignored, accents folded (primary-strength, like fr/it/es/ar locale collation), Spanish ñ after n, Arabic
 # hamza/alef forms folded. Articles are not stripped (raw label).
-PINNED = ['Project-Rawane.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
+PINNED = ['Project-Rawane.html', 'Courses.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
 def sort_key(l, lab):
     import unicodedata
     t = html.unescape(re.sub('<[^>]+>', '', lab))

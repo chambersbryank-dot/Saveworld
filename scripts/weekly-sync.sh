@@ -38,6 +38,7 @@ python3 scripts/build-artemis-gallery.py   # Oct 18: Artemis Program page "Momen
 python3 scripts/trim-impact.py          # Oct 22 (founder): Impact Statement box = 2 sentences + sources; the rest moves word for word just below (EN source)
 python3 scripts/fix-hub-dup-images.py   # Oct 22 (founder): Lakes hub had two repeated card photos; swaps + warns on other hubs (EN source)
 python3 scripts/i18n-build.py
+python3 scripts/build-courses.py          # Oct 24 (founder): Courses hub + course pages (EN, scripts/courses/*.py) + Teachers COURSELINK block (all langs, after i18n-build)
 python3 scripts/build-launch-actions.py   # Oct 24: launch tracker Ask/Calendar buttons script tag on #lw-next pages (all langs)
 python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 python3 scripts/build-top-ten.py --links  # Oct 18: Top Ten card links stay in-language for generator-made pages (Learn, World_Map)

@@ -153,3 +153,4 @@ import learn_phys as _LP
 NAV_ITEMS.update(_LP.NAV_ITEMS)
 import paths_text as _PT  # Oct 16: Calculators + Start-here + Careers
 NAV_ITEMS.update(_PT.NAV)
+NAV_ITEMS['Courses.html'] = T('📚 Courses (free study track)', '📚 Cours (parcours gratuit)', '📚 Cursos (itinerario gratuito)', '📚 الدورات (مسار مجاني)', '📚 Corsi (percorso gratuito)')  # Oct 24: scripts/build-courses.py
