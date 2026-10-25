@@ -115,6 +115,14 @@ def main():
             else: render(src, t, l, si, out); man[out] = vis; man['vis:' + out] = vis; nimg += 1
             url = f'{SITE}{out}?v={man[out][:8]}'; n = setmeta(s, url)
             if n != s: open(p, 'w', encoding='utf8').write(n); npg += 1
+    # Oct 24: he/ has no cards of its own; i18n-built he pages could carry another page's card (he/Kids_Map showed en/Contact.jpg). Use the page's English card.
+    for p in sorted(glob.glob('he/*.html')):
+        b = os.path.basename(p); k = f'assets/og/en/{b[:-5]}.jpg'
+        if SKIP.match(b) or k not in man: continue
+        s = open(p, encoding='utf8').read()
+        if '<meta property="og:image"' not in s: continue
+        n = setmeta(s, f'{SITE}{k}?v={man[k][:8]}')
+        if n != s: open(p, 'w', encoding='utf8').write(n); npg += 1
     for k, v in srcs.items(): man['src:' + k] = v
     json.dump(man, open(mf, 'w'), indent=0, sort_keys=True)
     print(f'build-og: {nimg} cards rendered, {npg} pages updated')
