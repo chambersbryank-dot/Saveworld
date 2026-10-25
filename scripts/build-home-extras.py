@@ -136,7 +136,10 @@ s = put(s, 'PROMO', PROMO_HOME, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
 open('index.html', 'w', encoding='utf-8').write(s)
 # Oct 18 (owner request): the same promo on About, directly below the 'From the ocean floor…' strip. Oct 20: it is now the ONLY About video.
 s = open('About.html', encoding='utf-8').read()
-PROMO_ABOUT = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), flags=re.S)
+# Oct 24 7:31 PM HST (founder approved): About promo switches from v6 (said 231) to v4.1, same R2 file as the homepage
+PROMO41 = (PROMO.replace('savingplanets-promo-v6-tall.jpg', 'savingplanets-promo-v4-1-tall.jpg').replace(f'<source src="{VU7}" type="video/mp4">', '')
+  .replace(VU, U4).replace(f'width="{VW}" height="{VH}"', f'width="{W4}" height="{H4}"').replace('class="promo-v4 promo-v6"', 'class="promo-v4"'))
+PROMO_ABOUT = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO41.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), flags=re.S)
 # Oct 20: keep the visible SI credit under the About video (founder); transcript stays screen-reader text (data-transcript="sr")
 PROMO_ABOUT = PROMO_ABOUT.replace('</video>', '</video><figcaption class="photo-credit">Created by SI and Biological SI Partner</figcaption>', 1)
 PROMO_ABOUT = PROMO_ABOUT.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
