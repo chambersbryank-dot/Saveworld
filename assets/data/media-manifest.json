@@ -5759,5 +5759,45 @@
   "height": 3775,
   "srcset": "https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-480.8f9daa404069.webp 480w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-800.9b5498ada80d.webp 800w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1280.d04ccb556fac.webp 1280w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1920.3de8cd0f5332.webp 1920w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-2560.9c0be66d33ec.webp 2560w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-3840.100ac07cf782.webp 3840w",
   "srcset_avif": "https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-480.4a8d0fd44e95.avif 480w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-800.806dc5b44e78.avif 800w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1280.c6314f026e60.avif 1280w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-1920.330b02b43c64.avif 1920w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-2560.a9eef7b3bda8.avif 2560w, https://media.savingplanets.com/images/sol-cards/SMAP_Global_Soil_Moisture_PIA19877-3840.f4924113a853.avif 3840w"
+ },
+ "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg": {
+  "url": "https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.38a042ce3cde.jpg",
+  "key": "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.38a042ce3cde.jpg",
+  "bytes": 48294798,
+  "sha256": "38a042ce3cde0e95f500bc1d968a8038d767e5f1df8ce53ac72ce0304e647b92",
+  "type": "image/jpeg",
+  "width": 8192,
+  "height": 5464,
+  "srcset": "https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-480.0a6ca38cf7a8.webp 480w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-800.7052814156df.webp 800w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-1280.f12ea97c0534.webp 1280w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-1920.f18a2fbfb251.webp 1920w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-2560.0ceb6275cf5f.webp 2560w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-3840.58737ee1c6da.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-480.bade562f7e8a.avif 480w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-800.1c804b290f2d.avif 800w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-1280.24b2ca641143.avif 1280w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-1920.9fb44692bb8b.avif 1920w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-2560.ca665ab99764.avif 2560w, https://media.savingplanets.com/images/Chem_GCMS_KSC-20210707-PH-FMX01_0262-3840.892c569270d2.avif 3840w"
+ },
+ "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg": {
+  "url": "https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146.e0dde06b44f2.jpg",
+  "key": "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.e0dde06b44f2.jpg",
+  "bytes": 33962721,
+  "sha256": "e0dde06b44f233d00f47a99b5b1da30e105d2b7c6f57d1f41f17da55a1bcf68c",
+  "type": "image/jpeg",
+  "width": 8192,
+  "height": 5464,
+  "srcset": "https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-480.4b4e8c4093de.webp 480w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-800.13b2bbc6de28.webp 800w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-1280.33849a792fd4.webp 1280w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-1920.7c3951530689.webp 1920w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-2560.e70eada2fe20.webp 2560w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-3840.0abe6ad656e1.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-480.f05536bb512d.avif 480w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-800.02fcec9f1e41.avif 800w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-1280.441fbfd7d0ad.avif 1280w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-1920.1fd0a82af58e.avif 1920w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-2560.df8ae1918b2e.avif 2560w, https://media.savingplanets.com/images/Chem_Lab_KSC-20210707-PH-FMX01_0146-3840.79dd7bb669b6.avif 3840w"
+ },
+ "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg": {
+  "url": "https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.459691949c56.jpg",
+  "key": "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.459691949c56.jpg",
+  "bytes": 2232168,
+  "sha256": "459691949c5616731e6e2581076797594dc3824dd6eb1397e28d279840df6f3a",
+  "type": "image/jpeg",
+  "width": 5400,
+  "height": 3600,
+  "srcset": "https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-480.bc6c88f7476b.webp 480w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-800.f4ced8a25e67.webp 800w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-1280.5a441bba4168.webp 1280w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-1920.22a6112d02d2.webp 1920w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-2560.cbfcb2908f69.webp 2560w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-3840.b2ff89ee9822.webp 3840w",
+  "srcset_avif": "https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-480.b19880c71502.avif 480w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-800.7f82877ebc04.avif 800w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-1280.0136d9fa4d15.avif 1280w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-1920.1ef60189522c.avif 1920w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-2560.c275f2192c71.avif 2560w, https://media.savingplanets.com/images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006-3840.78321be7139a.avif 3840w"
+ },
+ "courses/General_Chemistry_I_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/General_Chemistry_I_Study_Guide.a56474f0e0ee.pdf",
+  "key": "courses/General_Chemistry_I_Study_Guide.a56474f0e0ee.pdf",
+  "bytes": 1155793,
+  "sha256": "a56474f0e0eedf91e8f8806a9a2d56332fe97a5996e79c33bd828dbdf6b74afb",
+  "type": "application/pdf"
  }
 }
