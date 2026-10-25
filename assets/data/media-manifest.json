@@ -5904,5 +5904,12 @@
   "bytes": 1547024,
   "sha256": "051a7a4bb62ef9f852a63cd8391e9b31dff57da64f921266c186ad0158dd1072",
   "type": "application/pdf"
+ },
+ "courses/Thermodynamics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Thermodynamics_Study_Guide.ef5b12582ec8.pdf",
+  "key": "courses/Thermodynamics_Study_Guide.ef5b12582ec8.pdf",
+  "bytes": 1509381,
+  "sha256": "ef5b12582ec82944cbc64a1ff38d28a9ca78113ba028bec749ea293cdb3e223a",
+  "type": "application/pdf"
  }
 }

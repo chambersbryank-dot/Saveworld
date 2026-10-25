@@ -1235,7 +1235,8 @@
   "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
   "Linear_Algebra.html": "assets/Landsat9_Launch.jpg",
   "Circuits.html": "assets/ISS_Flyaround_2021.jpg",
-  "Aerodynamics_I.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg"
+  "Aerodynamics_I.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+  "Thermodynamics.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
  },
  "slides": {
   "pools": {
@@ -1800,6 +1801,11 @@
    "Aerodynamics_I.html": [
     "images/ISS_Over_Ganges_STS102.jpg",
     "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+   ],
+   "Thermodynamics.html": [
+    "images/SDO_Sun.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg",
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
    ]
   }
