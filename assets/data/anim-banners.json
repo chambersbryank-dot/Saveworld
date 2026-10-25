@@ -1232,7 +1232,8 @@
   "Physics_II.html": "assets/SDO_Sun.jpg",
   "Statics.html": "assets/ISS_Flyaround_2021.jpg",
   "Dynamics.html": "assets/Landsat9_Launch.jpg",
-  "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
+  "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+  "Linear_Algebra.html": "assets/Landsat9_Launch.jpg"
  },
  "slides": {
   "pools": {
@@ -1783,6 +1784,11 @@
     "images/GOES19_GOESU_KSC.jpg",
     "images/Sentinel6B_Launch.jpg",
     "images/ISS_Over_Ganges_STS102.jpg"
+   ],
+   "Linear_Algebra.html": [
+    "images/GRACE_FO_Orbit.jpg",
+    "images/SWOT_Orbit_Illustration.jpg",
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
    ]
   }
  }
