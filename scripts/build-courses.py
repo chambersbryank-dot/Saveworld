@@ -197,9 +197,9 @@ def en_only(h):
 
 # RTL pages (ar, he): plain-text formulas inside RTL sentences (e.g. "f(x) = x² + 1", "∫ 2x dx") get <bdi dir="ltr"> so the
 # bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
-_FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
+_FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓µ‰Å\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
 _FRUN = re.compile(_FTOK + '+')
-_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\w\[|[*%]|\d\s*-\s*\d")
+_FOP = re.compile(r"&lt;|&gt;|[=+−×÷/^<>≤≥≈≠√∫∑∏∂∞→⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉ₙₓᵢ′½±⌀∓Ø\u02b0-\u02ff]|\w\(|\w\[|[*%]|\d\s*[-–]\s*\d|\d\s?(?:µm|nm|mm|km|kΩ|µF|µT|µC|°C|%)")
 def _wrap_run(m):
     t = m.group(0); a = len(t) - len(t.lstrip(" ,.;:")); b = len(t.rstrip(" ,.;:"))
     f = re.search(r':\.\d+[a-z%]', t)  # Python format specs (:.2f, :.1%) in prose
@@ -216,7 +216,29 @@ def _wrap_run(m):
     if re.fullmatch(r'==|!=|\+=|-=|\*=|/=|\*\*|//|%|\*|=|(?:&lt;|&gt;)=?|\^', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # lone operators (% ** == +=) in prose
     if len(core) == 2 and re.fullmatch(r'[Ø⌀±+−][0-9]', core): return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]  # Ø6, +5
     if len(core) < 3 or not re.search(r'[A-Za-z0-9]', core) or not _FOP.search(core): return t
-    return t[:a] + '<bdi dir="ltr">' + core + '</bdi>' + t[b:]
+    return t[:a] + _balanced(core) + t[b:]
+def _balanced(core):
+    # Oct 25: a run cut by RTL text can hold an unmatched "(" or ")" (e.g. "T = 20 + 0.1x (°C" + Arabic). Leave unmatched brackets outside
+    # the isolate so they pair with their partner across the RTL text, and wrap each piece on its own.
+    st, bad = [], set()
+    for k, ch in enumerate(core):
+        if ch == '(': st.append(k)
+        elif ch == ')':
+            if st: st.pop()
+            else: bad.add(k)
+    bad |= set(st)
+    if not bad: return '<bdi dir="ltr">' + core + '</bdi>'
+    out, piece = [], ''
+    def flush(x):
+        y = x.strip()
+        if not y: return x
+        lead, trail = x[:len(x) - len(x.lstrip())], x[len(x.rstrip()):]
+        return lead + ('<bdi dir="ltr">' + y + '</bdi>' if re.search(r'[A-Za-z0-9\u0370-\u03ff]', y) else y) + trail
+    for k, ch in enumerate(core):
+        if k in bad: out.append(flush(piece)); out.append(ch); piece = ''
+        else: piece += ch
+    out.append(flush(piece))
+    return ''.join(out)
 def bidi(h):
     if LANG not in RTL or '<div class="crs"' not in h: return h
     i = h.index('<div class="crs"'); j = h.rindex('</main>')
