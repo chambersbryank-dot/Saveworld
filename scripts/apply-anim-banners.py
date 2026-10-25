@@ -9,7 +9,7 @@ All languages (en fr es ar it + hidden he); pause label and SI credit come from 
 ANIMBAN markers (ignored by the i18n hash), so the pass is idempotent. Skips: index (homepage hero locked), Artemis_II (own
 worker), Project-Rawane (page-scoped), Solutions / Top_Ten (already sp_banner), Amazing_Facts (af-hero already animated).
 Run late in weekly-sync.sh (after apply-heroes and build-lcp, before build-tight-cards / build-critical)."""
-import os, re, glob, json, sys, html
+import os, re, glob, json, sys, html, zlib
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, 'scripts')
 import sp_banner as SPB
@@ -46,10 +46,17 @@ SL = CFG.get('slides', {})
 CREDIT = {}
 for _a, _i in CFG['images'].items(): CREDIT.setdefault(_i['r2'], _i)
 CUR = {'page': None}
+#   "curated": EN file -> exact photo list (wins); otherwise the page's topic pool is rotated by a stable per-page offset so
+#   neighbouring pages in a hub do not all show the same photos. "per_page": photos per banner (incl. the page's own photo).
 def extra_slides(img):
-    pool = SL.get('pools', {}).get(SL.get('pages', {}).get(CUR['page'] or '', ''), [])
-    out = [CREDIT[k] for k in pool if k != img['r2'] and k in CREDIT and k in MF]
-    return out[:SPX.NMAX - 1]
+    pg = CUR['page'] or ''
+    cur = SL.get('curated', {}).get(pg)
+    pool = cur or SL.get('pools', {}).get(SL.get('pages', {}).get(pg, ''), [])
+    pool = [k for k in pool if k != img['r2'] and k in CREDIT and k in MF]
+    want = (len(pool) if cur else SL.get('per_page', 4) - 1)
+    if not cur and pool:
+        o = zlib.crc32(pg.encode()) % len(pool); pool = pool[o:] + pool[:o]
+    return [CREDIT[k] for k in pool[:min(want, SPX.NMAX - 1)]]
 
 def t(lang, s): return TM.get(lang, {}).get(s) or s
 
