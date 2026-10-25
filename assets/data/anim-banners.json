@@ -1217,7 +1217,8 @@
   "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
   "Courses.html": "assets/EPIC_Earth.jpg",
   "Physics_I.html": "assets/Landsat9_Launch.jpg",
-  "Calculus_I.html": "assets/EPIC_Earth.jpg"
+  "Calculus_I.html": "assets/EPIC_Earth.jpg",
+  "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg"
  },
  "slides": {
   "pools": {
@@ -1718,6 +1719,11 @@
     "images/GRACE_FO_Orbit.jpg",
     "images/Landsat9_Launch_KLS04_0013.jpg",
     "images/ISS_Flyaround_2021.jpg"
+   ],
+   "Calculus_II.html": [
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+    "images/Sentinel6B_Launch.jpg",
+    "images/GRACE_FO_PIA22445.jpg"
    ]
   }
  }
