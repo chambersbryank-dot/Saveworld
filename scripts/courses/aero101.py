@@ -1,0 +1,471 @@
+"""Introduction to Aerospace Engineering (AERO 101): history and design, the atmosphere, lift and drag, airfoils and wings, performance, stability, propulsion, the rocket equation, orbits and missions, sustainable aviation.
+Oct 24 2026, founder-approved four-year track. Same module fields as chem110.py. Every number is re-computed in CHECKS() (build-courses.py --check)."""
+from math import sqrt, pi, exp, log, atan, degrees, radians
+ID = 'aero101'
+STATUS = 'live'
+YEAR = 1
+PAGE = 'Intro_to_Aerospace_Engineering.html'
+CODE = 'AERO 101'
+TITLE = 'Introduction to Aerospace Engineering'
+TAGLINE = 'How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight. Free, self-paced, with four hands-on labs.'
+DESC = 'Free intro to aerospace engineering: atmosphere, lift and drag, airfoils, performance, stability, propulsion, rockets, orbits, sustainable aviation.'
+ALT = 'NASA rocket launch'
+_G = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
+OS = _G
+_ATM = ('NASA Glenn: Earth atmosphere model (metric)', _G + 'earth-atmosphere-equation-metric/')
+_LIFT = ('NASA Glenn: the lift equation', _G + 'lift-equation/')
+_DRAG = ('NASA Glenn: the drag equation', _G + 'drag-equation/')
+_ROCK = ('NASA Glenn: ideal rocket equation', _G + 'ideal-rocket-equation/')
+_FOIL = ('NASA Glenn: FoilSim', _G + 'foilsim/')
+_SUS = ('NASA: Sustainable aviation', 'https://www.nasa.gov/aeronautics/sustainable-aviation/')
+_EPA = ('EPA: greenhouse gas emissions from aircraft', 'https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft')
+_PHAK = ('FAA Pilot’s Handbook of Aeronautical Knowledge', 'https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak')
+_SF = ('NASA JPL: Basics of Space Flight', 'https://science.nasa.gov/learn/basics-of-space-flight/')
+_WF = ('Smithsonian: 1903 Wright Flyer', 'https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000')
+_MIT = ('MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design', 'https://ocw.mit.edu/courses/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/')
+_UE = ('MIT OpenCourseWare 16.01–16.04: Unified Engineering', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
+_DOE = ('U.S. DOE: Sustainable aviation fuels', 'https://www.energy.gov/eere/bioenergy/sustainable-aviation-fuels')
+BANNER = ['images/ArtemisII_Launch_KSC_Hancock.jpg', 'images/ISS_Flyaround_2021.jpg', 'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg', 'images/Landsat9_Launch_KLS04_0013.jpg']
+CREDITS = {'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)',
+           'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg': 'NASA/Michael DeMocker (MAF20210116_GR0006)', 'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)'}
+ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
+         'Its scope follows first-year aerospace engineering introductions such as MIT 16.00 and the opening of MIT’s Unified Engineering, the introductory aeronautics and astronautics courses at Purdue, Georgia Tech and Embry-Riddle, and the classic textbook Introduction to Flight by John D. Anderson Jr. We link to free materials throughout, especially NASA Glenn’s Beginner’s Guide to Aeronautics. None of these organizations endorse this page.',
+         'What we add: every unit connects to cleaner flight and to the spacecraft that watch our planet, every number on the page is re-computed by a checking script before it goes live, and four labs, including a virtual wind tunnel and a glider you build, make the equations real.',
+         'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
+COURSE_PLANET = ['Aerospace engineering builds the satellites that measure Earth’s climate, forests, ice and oceans, and it also has to shrink its own footprint: every kilogram of jet fuel burned makes about 3.16 kg of CO₂.',
+                 'Each unit ends with a short, sourced section showing how its ideas help people and the planet.']
+PREREQS = ['High-school algebra and trigonometry; logarithms and exponentials.', 'Physics I mechanics (forces, energy, momentum, circular motion) helps; take it alongside if you can.', 'Calculus I is useful for a few derivations but not required for the numbers.']
+STUDY = ['Keep units in SI throughout and write them on every line.', 'Sketch the forces (lift, weight, thrust, drag) before writing any equation.', 'Estimate first; aerospace numbers have familiar sizes (sea-level air ≈ 1.2 kg/m³, low orbit ≈ 7.7 km/s).',
+         'Do every practice problem on paper before opening the answer.', 'Use the NASA Glenn simulators to check your intuition.', 'Retake the quizzes a few days later. Spaced practice beats one long session.']
+LAB_GEAR = ['A computer with a web browser and a spreadsheet (FoilSim runs in the browser).', 'For the glider lab: card stock or foam board, a ruler, scissors, modeling clay or coins for nose weight, and a tape measure.', 'Optional: a smartphone stopwatch.']
+LAB_TITLE = 'Labs'
+LAB_INTRO = ['Four labs put the course to work: a virtual wind tunnel with NASA’s FoilSim, a rocket-equation calculator, a glider you design and fly, and an atmosphere and stall-speed spreadsheet.',
+             'Sample data is labeled as such. Your own measurements will differ, and explaining why is part of the lab.']
+SAFETY_SRC = _PHAK
+CONST_SRC = _ATM
+CONSTANTS = [('Standard gravity g₀', '9.80665 m/s²'), ('Sea-level air density (NASA model)', '1.23 kg/m³'), ('Sea-level pressure (NASA model)', '101.3 kPa'), ('Speed of sound, sea level (15 °C)', '340 m/s'),
+             ('Gas constant of air R', '287 J/(kg·K)'), ('Ratio of specific heats γ (air)', '1.4'), ('Earth’s GM', '3.986 × 10¹⁴ m³/s²'), ('Earth’s mean radius', '6,371 km')]
+REF_TITLE = 'Simulators and references'
+REF_INTRO = 'Free tools and references to use alongside the course.'
+PTABLE = [('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'NASA’s free reference for every equation in this course, with simulators.'), (_FOIL[0], _FOIL[1], 'Virtual wind tunnel for airfoils (Lab A).'),
+          (_MIT[0], _MIT[1], 'MIT’s first-year design course.'), (_PHAK[0], _PHAK[1], 'Free FAA handbook on aerodynamics, performance and stability.'), (_SF[0], _SF[1], 'Free primer on orbits and missions.')]
+UNITS = [
+{'id': 'u1', 'title': 'History of Flight & the Design Process', 'weeks': 'Week 1',
+ 'summary': 'From the Wright brothers to Artemis: how aerospace engineers turn a mission into requirements, trade-offs and a design that flies.',
+ 'objectives': ['Outline key milestones of aviation and spaceflight.', 'Describe the design cycle: requirements, concept, preliminary and detailed design, test.', 'Explain trade studies and why weight drives everything.', 'Name the four forces of flight.'],
+ 'concepts': ['On December 17, 1903, the Wright Flyer made a 12-second flight covering 36 m (120 ft); the best flight that day covered 260 m (852 ft) in 59 seconds. The Wrights succeeded by testing: they built gliders and their own wind tunnel before adding an engine.',
+              'Every design starts with a mission: payload, range or orbit, cost, safety. Requirements turn the mission into numbers the design must meet.',
+              'Design is iterative: concept sketch, sizing, analysis, test, redesign. A trade study compares options against weighted criteria.',
+              'Four forces act on an aircraft: lift, weight, thrust and drag. In steady level flight, lift = weight and thrust = drag.',
+              'Weight compounds: extra structure needs more lift, a bigger wing, more drag, more fuel, and more weight again.'],
+ 'eqs': [('L=W,\\quad T=D', 'Steady, level, unaccelerated flight'), ('W=mg', 'Weight'), ('\\text{Score}=\\sum_i w_i\\,s_i', 'Weighted trade-study score')],
+ 'worked': [
+  {'q': 'A 1,100 kg light airplane cruises level. How much lift must its wing produce?', 'steps': ['Level flight: L = W = mg.', 'L = 1,100 × 9.81.'], 'a': '10,791 N ≈ 10.8 kN.'},
+  {'q': 'Two wing concepts are scored out of 10 on cost (weight 0.3), efficiency (0.5) and ease of building (0.2). Concept A scores 8, 6, 9; B scores 5, 9, 6. Which wins?', 'steps': ['A: 0.3(8) + 0.5(6) + 0.2(9) = 7.2.', 'B: 0.3(5) + 0.5(9) + 0.2(6) = 7.2.'], 'a': 'A tie at 7.2: the team should test both or revisit the weights it trusts least.'},
+  {'q': 'The Wright Flyer’s first flight covered 36 m in 12 s. What was its average ground speed?', 'steps': ['v = 36/12.'], 'a': '3 m/s over the ground. It flew into a strong headwind, so its airspeed was much higher.'}],
+ 'practice': [('An airliner of mass 70,000 kg cruises level. Find its lift.', 'L = 70,000 × 9.81 = 686,700 N ≈ 687 kN.'),
+              ('In level cruise an aircraft’s engines give 30 kN of thrust. What is its drag?', '30 kN, since thrust balances drag in steady flight.'),
+              ('Why did the Wright brothers build a wind tunnel?', 'Published lift data were unreliable, so they measured many wing shapes themselves: testing before building is the heart of the design process.')],
+ 'misc': [('Engineers design the aircraft first and then find a mission for it.', 'The mission and its requirements come first.'),
+          ('In level flight thrust must balance weight.', 'Thrust balances drag; lift balances weight.'),
+          ('Shaving a little weight saves only that weight.', 'Weight savings compound through wing size, drag and fuel.')],
+ 'quiz': [{'q': 'In steady level flight, lift equals…', 'opts': ['thrust', 'drag', 'weight', 'zero'], 'ok': 2, 'why': 'Vertical forces balance.'},
+          {'q': 'The Wright Flyer first flew in…', 'opts': ['1899', '1903', '1911', '1927'], 'ok': 1, 'why': 'December 17, 1903, at Kitty Hawk.'},
+          {'q': 'A trade study…', 'opts': ['picks the cheapest part', 'compares options against weighted criteria', 'tests a prototype to failure', 'is done after flight test'], 'ok': 1, 'why': 'It ranks options systematically.'},
+          {'q': 'The first step of the design process is…', 'opts': ['detailed drawings', 'the mission and requirements', 'flight test', 'choosing an engine'], 'ok': 1, 'why': 'Requirements drive everything after.'}],
+ 'cards': [('Four forces', 'Lift, weight, thrust, drag.'), ('Requirements', 'Measurable targets a design must meet.'), ('Trade study', 'Weighted comparison of design options.'),
+           ('Design cycle', 'Concept → preliminary → detailed design → test → iterate.'), ('Wright Flyer', 'First powered, controlled airplane flights, Dec. 17, 1903.'), ('Weight spiral', 'Extra weight grows the whole design.')],
+ 'planet': {'text': ['Design priorities change with the times. Requirements for new aircraft now include fuel burn and emissions, so the same trade-study tools weigh climate alongside cost and performance.',
+                     'NASA lists three main ways to make aviation sustainable: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.'],
+            'site': [('Artemis II', 'Artemis_II.html')],
+            'src': [_WF, _SUS]},
+ 'res': [(_WF[0], _WF[1], 'The Wright Flyer’s story and specifications.'), (_MIT[0], _MIT[1], 'MIT’s design-centered introductory course.'), ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Start here for every topic.')]},
+
+{'id': 'u2', 'title': 'The Atmosphere', 'weeks': 'Week 2',
+ 'summary': 'The air an aircraft flies through: how temperature, pressure, density and the speed of sound change with altitude.',
+ 'objectives': ['Use a standard atmosphere model to find T, p and ρ at altitude.', 'Apply the ideal-gas law to air.', 'Compute the speed of sound and Mach number.', 'Explain why airliners cruise near 11 km.'],
+ 'concepts': ['A standard atmosphere is an average model fitted to measurements. In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer.',
+              'From 11 to 25 km (lower stratosphere) the model’s temperature is constant at −56.46 °C, while pressure keeps falling exponentially.',
+              'Density follows from the ideal-gas law, ρ = p/(RT). At 11 km air is about 30% as dense as at sea level.',
+              'The speed of sound is a = √(γRT), so it depends only on temperature. Mach number M = V/a.',
+              'Thin air means less drag at a given speed, which is why jets cruise high, but wings and engines still need enough air to work.'],
+ 'eqs': [('T=15.04-0.00649\\,h\\ \\ (^\\circ\\text{C},\\ h\\text{ in m})', 'NASA troposphere temperature fit'), ('p=101.29\\left(\\frac{T+273.1}{288.08}\\right)^{5.256}\\text{ kPa}', 'NASA troposphere pressure fit'),
+         ('\\rho=\\frac{p}{0.2869\\,(T+273.1)}', 'Density (p in kPa, ρ in kg/m³)'), ('a=\\sqrt{\\gamma RT},\\quad M=\\frac Va', 'Speed of sound and Mach number')],
+ 'worked': [
+  {'q': 'Find T, p and ρ at 5,000 m with NASA’s model.', 'steps': ['T = 15.04 − 0.00649 × 5,000 = −17.41 °C.', 'p = 101.29 × (255.69/288.08)^5.256 = 54.11 kPa.', 'ρ = 54.11/(0.2869 × 255.69).'], 'a': 'T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% of sea level).'},
+  {'q': 'Find the speed of sound at sea level (15 °C) and at 11 km (−56.5 °C).', 'steps': ['a = √(1.4 × 287 × 288.15) = 340.3 m/s.', 'a = √(1.4 × 287 × 216.65) = 295.0 m/s.'], 'a': '340 m/s and 295 m/s.'},
+  {'q': 'An airliner flies at 230 m/s true airspeed at 11 km. What is its Mach number?', 'steps': ['M = 230/295.0.'], 'a': 'M ≈ 0.78.'}],
+ 'practice': [('Find the air density at 11,000 m with the NASA model (T = −56.46 °C, p = 22.72 kPa).', 'ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, about 30% of sea level.'),
+              ('Find the temperature at 1,500 m in the NASA model.', 'T = 15.04 − 9.74 = 5.3 °C.'),
+              ('What is Mach 2 at sea level in m/s?', '2 × 340 = 680 m/s.'),
+              ('Find the sea-level density from p = 101.40 kPa and T = 15.04 °C.', 'ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³.')],
+ 'misc': [('The speed of sound depends on pressure.', 'For an ideal gas it depends only on temperature.'), ('It gets colder all the way up.', 'Temperature levels off above 11 km and rises again higher in the stratosphere.'),
+          ('Thinner air always helps.', 'It cuts drag but also lift and engine thrust, so wings must fly faster or at higher lift coefficients.')],
+ 'quiz': [{'q': 'In the troposphere temperature falls about…', 'opts': ['1 °C/km', '6.5 °C/km', '15 °C/km', '0 °C/km'], 'ok': 1, 'why': 'NASA’s lapse rate is 0.00649 °C/m.'},
+          {'q': 'The speed of sound at sea level is about…', 'opts': ['100 m/s', '340 m/s', '1,000 m/s', '3,000 m/s'], 'ok': 1, 'why': '√(1.4 × 287 × 288).'},
+          {'q': 'Density at 11 km is about what fraction of sea level?', 'opts': ['90%', '60%', '30%', '5%'], 'ok': 2, 'why': '0.366/1.227.'},
+          {'q': 'Mach number is…', 'opts': ['V × a', 'V/a', 'a/V', 'V²/a'], 'ok': 1, 'why': 'Speed divided by the local speed of sound.'}],
+ 'cards': [('Standard atmosphere', 'Average model of T, p, ρ versus altitude.'), ('Troposphere', 'Ground to ~11 km; temperature falls with height.'), ('Lapse rate', '≈ 6.5 °C per km in the troposphere.'),
+           ('Ideal gas law', 'p = ρRT.'), ('Speed of sound', 'a = √(γRT).'), ('Mach number', 'M = V/a.')],
+ 'planet': {'text': ['Aircraft fly where weather and climate happen. NASA studies aircraft emissions through computer modeling, combustion laboratory testing and flight testing, because what engines release at altitude matters for the atmosphere.',
+                     'The same atmosphere physics underlies how satellites turn the radiation they measure into profiles of the air’s temperature.'],
+            'site': [('Atmospheric drag', 'Atmospheric_Drag.html')],
+            'src': [_ATM, _SUS]},
+ 'res': [(_ATM[0], _ATM[1], 'The model and equations used in this unit.'), (_PHAK[0], _PHAK[1], 'Free FAA handbook chapters on the atmosphere and aerodynamics.')]},
+
+{'id': 'u3', 'title': 'Basic Aerodynamics: Lift & Drag', 'weeks': 'Weeks 3–4',
+ 'summary': 'Where lift and drag come from, and the two equations that size every wing: L = ½ρV²SC_L and D = ½ρV²SC_D.',
+ 'objectives': ['Explain lift as the result of turning a flow, with pressure differences described by Bernoulli’s equation.', 'Use the lift and drag equations.', 'Compute dynamic pressure, stall speed and Reynolds number.', 'Distinguish skin-friction, pressure and induced drag.'],
+ 'concepts': ['A wing turns the airflow downward; by Newton’s third law the air pushes the wing up. Equivalently, faster flow over the top means lower pressure there (Bernoulli). Both describe one flow.',
+              'Dynamic pressure q = ½ρV² sets the scale of every aerodynamic force. Lift and drag coefficients C_L and C_D capture shape and angle of attack.',
+              'Lift grows with V², so halving speed needs four times the lift coefficient or wing area.',
+              'Drag comes from skin friction, pressure (form) drag and induced drag, the cost of making lift with a finite wing.',
+              'Reynolds number Re = ρVc/μ compares inertial and viscous effects; wind-tunnel models must account for it to predict full-size behavior.'],
+ 'eqs': [('L=\\tfrac12\\rho V^2SC_L', 'Lift equation'), ('D=\\tfrac12\\rho V^2SC_D', 'Drag equation'), ('p+\\tfrac12\\rho V^2=\\text{const}', 'Bernoulli’s equation (along a streamline)'), ('Re=\\frac{\\rho Vc}{\\mu}', 'Reynolds number')],
+ 'worked': [
+  {'q': 'A 1,100 kg airplane with a 16.2 m² wing flies level at 55 m/s at sea level (ρ = 1.227 kg/m³). Find C_L.', 'steps': ['L = W = 10,791 N.', 'q = ½ × 1.227 × 55² = 1,855 Pa.', 'C_L = 10,791/(1,855 × 16.2).'], 'a': 'C_L ≈ 0.36.'},
+  {'q': 'With C_L,max = 1.6, find this airplane’s stall speed at sea level.', 'steps': ['V_s = √(2W/(ρSC_L,max)).', '= √(2 × 10,791/(1.227 × 16.2 × 1.6)).'], 'a': 'V_s ≈ 26.1 m/s (about 51 knots).'},
+  {'q': 'Find the Reynolds number of a 1.5 m chord at 55 m/s at sea level (μ = 1.789 × 10⁻⁵ kg/(m·s)).', 'steps': ['Re = 1.227 × 55 × 1.5/(1.789 × 10⁻⁵).'], 'a': 'Re ≈ 5.7 million.'}],
+ 'practice': [('If speed doubles at the same C_L, how does lift change?', 'Lift ∝ V², so it quadruples.'),
+              ('Find the dynamic pressure at 230 m/s at 11 km (ρ = 0.366 kg/m³).', 'q = ½ × 0.366 × 230² ≈ 9,680 Pa.'),
+              ('Find the drag of the Example 3.1 airplane if C_D = 0.032.', 'D = 1,855 × 16.2 × 0.032 ≈ 962 N.'),
+              ('How much faster is the stall speed at 1,500 m (ρ = 1.060 kg/m³) than at sea level?', 'V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, so about 7.6% faster (≈ 28.0 m/s true airspeed).')],
+ 'misc': [('Air over the top must meet air under the bottom at the trailing edge (equal transit time).', 'It does not; the upper flow actually arrives first. NASA Glenn lists equal transit as an incorrect theory of lift.'),
+          ('Lift is only Bernoulli, or only Newton.', 'Both describe the same flow; pressure differences and flow turning go together.'), ('Drag is just air friction.', 'Pressure drag and induced drag are often larger.')],
+ 'quiz': [{'q': 'Lift is proportional to…', 'opts': ['V', 'V²', '√V', '1/V'], 'ok': 1, 'why': 'Through dynamic pressure ½ρV².'},
+          {'q': 'Doubling wing area at the same speed and C_L…', 'opts': ['halves lift', 'doubles lift', 'quadruples lift', 'has no effect'], 'ok': 1, 'why': 'L ∝ S.'},
+          {'q': 'Reynolds number compares…', 'opts': ['lift and drag', 'inertial and viscous effects', 'speed and sound speed', 'thrust and weight'], 'ok': 1, 'why': 'ρVc/μ.'},
+          {'q': 'Induced drag is caused by…', 'opts': ['paint roughness', 'making lift with a finite wing', 'engine exhaust', 'shock waves only'], 'ok': 1, 'why': 'Wingtip vortices tilt the lift backward.'}],
+ 'cards': [('Dynamic pressure', 'q = ½ρV².'), ('Lift equation', 'L = qSC_L.'), ('Drag equation', 'D = qSC_D.'), ('Stall speed', 'V_s = √(2W/(ρSC_L,max)).'),
+           ('Reynolds number', 'ρVc/μ.'), ('Induced drag', 'Drag due to lift on a finite wing.')],
+ 'planet': {'text': ['Drag is fuel. In cruise, engine thrust equals drag, so every newton of drag removed is fuel not burned and CO₂ not emitted. Needing less energy to fly is the first of NASA’s three paths to sustainable aviation.',
+                     'The same lift physics drives wind-turbine blades, which turn the wind’s aerodynamic force into clean electricity.'],
+            'site': [('Physics I', 'Physics_I.html')],
+            'src': [_DRAG, _SUS]},
+ 'res': [(_LIFT[0], _LIFT[1], 'Lift equation and coefficients.'), (_DRAG[0], _DRAG[1], 'Drag equation.'), ('NASA Glenn: Bernoulli’s equation', _G + 'bernoullis-equation/', 'Pressure and velocity.'), ('NASA Glenn: Bernoulli and Newton', _G + 'bernoulli-and-newton/', 'Why the equal-transit explanation is wrong.')]},
+
+{'id': 'u4', 'title': 'Airfoils & Wings', 'weeks': 'Week 5',
+ 'summary': 'Airfoil geometry, the lift curve, stall, and why long, slender wings make less drag.',
+ 'objectives': ['Name airfoil geometry: chord, camber, thickness, angle of attack.', 'Use thin-airfoil theory: c_l ≈ 2πα.', 'Correct the lift slope for a finite wing of aspect ratio AR.', 'Use the drag polar C_D = C_D0 + C_L²/(πeAR) to find the best lift-to-drag ratio.'],
+ 'concepts': ['An airfoil is a wing’s cross-section. Camber lets it lift at zero angle of attack; thickness adds strength and room for fuel.',
+              'Thin-airfoil theory predicts a lift slope of 2π per radian (about 0.11 per degree) until the flow separates and the wing stalls.',
+              'A finite wing loses lift slope to its tip vortices: a = a₀/(1 + a₀/(πeAR)), with aspect ratio AR = b²/S.',
+              'Total drag C_D = C_D0 + KC_L² with K = 1/(πeAR). Maximum L/D occurs where induced drag equals parasite drag.',
+              'High aspect ratio (sailplanes, albatrosses, modern airliner wings) means less induced drag and higher L/D.'],
+ 'eqs': [('c_l=2\\pi\\alpha\\ (\\alpha\\text{ in rad})', 'Thin-airfoil lift slope'), ('a=\\frac{a_0}{1+a_0/(\\pi eAR)},\\quad AR=\\frac{b^2}S', 'Finite-wing lift slope'),
+         ('C_D=C_{D0}+\\frac{C_L^2}{\\pi eAR}', 'Drag polar'), ('\\left(\\frac LD\\right)_{\\max}=\\frac1{2\\sqrt{C_{D0}K}},\\ \\ C_L^*=\\sqrt{\\frac{C_{D0}}K}', 'Best lift-to-drag ratio')],
+ 'worked': [
+  {'q': 'Thin-airfoil theory: find c_l at α = 5°.', 'steps': ['α = 5π/180 = 0.0873 rad.', 'c_l = 2π × 0.0873.'], 'a': 'c_l ≈ 0.548.'},
+  {'q': 'Find the lift slope of a wing with AR = 8 and e = 0.9.', 'steps': ['a = 2π/(1 + 2π/(π × 0.9 × 8)) = 6.283/1.278.'], 'a': '4.92 per rad ≈ 0.086 per degree, 22% below the 2D value.'},
+  {'q': 'With C_D0 = 0.025, e = 0.8 and AR = 7.5, find (L/D)max and the C_L where it occurs.', 'steps': ['K = 1/(π × 0.8 × 7.5) = 0.0531.', '(L/D)max = 1/(2√(0.025 × 0.0531)).', 'C_L* = √(0.025/0.0531).'], 'a': '(L/D)max ≈ 13.7 at C_L ≈ 0.69.'}],
+ 'practice': [('Find the aspect ratio of a wing with span 11 m and area 16.2 m².', 'AR = 121/16.2 ≈ 7.5.'),
+              ('Using c_l = 2πα, what angle gives c_l = 0.5?', 'α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.'),
+              ('For the Example 4.3 airplane, find C_D at C_L = 0.36.', 'C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.'),
+              ('If AR rises from 7.5 to 15 (same e and C_D0), how does (L/D)max change?', 'K halves, so (L/D)max grows by √2 to ≈ 19.4.')],
+ 'misc': [('More angle of attack always means more lift.', 'Past the stall angle the flow separates and lift drops.'), ('Symmetric airfoils cannot lift.', 'They lift at a positive angle of attack.'),
+          ('Wingtip devices make induced drag zero.', 'They reduce it; only an infinitely long wing would have none.')],
+ 'quiz': [{'q': 'Thin-airfoil lift slope is…', 'opts': ['π per rad', '2π per rad', '2π per degree', '1 per rad'], 'ok': 1, 'why': 'c_l = 2πα.'},
+          {'q': 'Aspect ratio is…', 'opts': ['b/S', 'b²/S', 'S/b', 'c/b'], 'ok': 1, 'why': 'Span squared over area.'},
+          {'q': 'At maximum L/D…', 'opts': ['induced drag = parasite drag', 'drag is zero', 'C_L = 0', 'the wing is stalled'], 'ok': 0, 'why': 'Minimizing C_D/C_L gives KC_L² = C_D0.'},
+          {'q': 'A higher aspect ratio mainly reduces…', 'opts': ['skin friction', 'induced drag', 'weight', 'wave drag'], 'ok': 1, 'why': 'K = 1/(πeAR).'}],
+ 'cards': [('Chord', 'Leading edge to trailing edge.'), ('Camber', 'Curvature of the mean line.'), ('Angle of attack', 'Angle between chord and oncoming flow.'), ('Stall', 'Flow separation; lift drops.'),
+           ('Aspect ratio', 'b²/S.'), ('Drag polar', 'C_D = C_D0 + KC_L².')],
+ 'planet': {'text': ['Long, slender wings are one of the most direct ways to cut fuel burn, because induced drag falls as aspect ratio rises. That is exactly the “efficient aircraft technology” path in NASA’s sustainable-aviation work.',
+                     'The albatross, which glides for hours over the ocean, uses the same physics: a long, thin wing with a high lift-to-drag ratio.'],
+            'site': [('Calculus II', 'Calculus_II.html')],
+            'src': [('NASA Glenn: induced drag coefficient', _G + 'induced-drag-coefficient/'), _SUS]},
+ 'res': [(_FOIL[0], _FOIL[1], 'Explore camber, thickness and angle of attack.'), ('NASA Glenn: induced drag coefficient', _G + 'induced-drag-coefficient/', 'Aspect ratio and efficiency factor.'), (_UE[0], _UE[1], 'MIT’s fluids lectures.')]},
+
+{'id': 'u5', 'title': 'Aircraft Performance', 'weeks': 'Weeks 6–7',
+ 'summary': 'How far, how long, how fast and how steep: gliding, climbing, range and endurance.',
+ 'objectives': ['Relate glide ratio to L/D.', 'Find thrust and power required in level flight.', 'Compute climb rate from excess power.', 'Use the Breguet range equation.'],
+ 'concepts': ['A glider with lift-to-drag ratio L/D travels L/D meters forward for every meter of height lost: tan γ = D/L.',
+              'Thrust required in level flight equals drag; power required is drag × speed. Excess power becomes climb: rate of climb = (P_avail − P_req)/W.',
+              'For a jet, range follows the Breguet equation: R = (V/c)(L/D) ln(W_i/W_f). Three levers: engine efficiency (V/c), aerodynamics (L/D) and structures (weight fraction).',
+              'Endurance (time aloft) is maximized at a different speed than range.'],
+ 'eqs': [('\\tan\\gamma=\\frac{D}{L}=\\frac1{L/D}', 'Glide angle'), ('P_R=DV', 'Power required'), ('RC=\\frac{P_A-P_R}{W}', 'Rate of climb'),
+         ('R=\\frac Vc\\,\\frac LD\\,\\ln\\frac{W_i}{W_f}', 'Breguet range equation (jet)')],
+ 'worked': [
+  {'q': 'A sailplane with L/D = 20 is 1,000 m up. How far can it glide in still air, and at what angle?', 'steps': ['Distance = 1,000 × 20.', 'γ = arctan(1/20).'], 'a': '20 km, at a glide angle of about 2.9°.'},
+  {'q': 'A jet cruises at 230 m/s with L/D = 17 and thrust-specific fuel consumption c = 0.6 per hour. Burning fuel lowers its weight from W_i to W_i/1.25. Find its range.', 'steps': ['c = 0.6/3,600 = 1.667 × 10⁻⁴ s⁻¹.', 'R = (230/1.667 × 10⁻⁴) × 17 × ln 1.25.'], 'a': '≈ 5,235 km.'},
+  {'q': 'The Example 3.1 airplane, with the Example 4.3 drag polar, has about 957 N of drag at 55 m/s. What power does level flight require?', 'steps': ['P = DV = 957 × 55.'], 'a': '≈ 52.6 kW (about 71 hp).'}],
+ 'practice': [('A paper glider has L/D = 5. Launched level from 2 m, about how far does it glide?', '10 m.'),
+              ('An aircraft weighing 10,800 N has 30 kW of excess power. Find its rate of climb.', '30,000/10,800 ≈ 2.8 m/s.'),
+              ('In Example 5.2, how does range change if L/D rises from 17 to 20?', 'Range ∝ L/D: 5,235 × 20/17 ≈ 6,159 km.'),
+              ('How far can the Example 4.3 airplane glide from 1,500 m at its best L/D of 13.7?', '1,500 × 13.7 ≈ 20.6 km.')],
+ 'misc': [('A heavier glider glides farther.', 'Glide ratio depends on L/D, not weight; weight changes the best speed.'), ('Range depends only on the fuel load.', 'It depends on engine efficiency, L/D and the weight fraction (Breguet).'),
+          ('Flying faster always gives more range.', 'Best range comes at a moderate speed tied to the best L/D.')],
+ 'quiz': [{'q': 'Glide ratio equals…', 'opts': ['W/D', 'L/D', 'T/W', 'V/a'], 'ok': 1, 'why': 'Distance over height = L/D.'},
+          {'q': 'Power required in level flight is…', 'opts': ['L × V', 'D × V', 'W/V', 'T/V'], 'ok': 1, 'why': 'Drag times speed.'},
+          {'q': 'Breguet range grows with…', 'opts': ['c', 'L/D', 'structure weight', 'drag'], 'ok': 1, 'why': 'R ∝ L/D.'},
+          {'q': 'Climb comes from…', 'opts': ['excess power', 'extra lift only', 'lower weight only', 'lower speed'], 'ok': 0, 'why': 'RC = excess power/W.'}],
+ 'cards': [('Glide ratio', 'Horizontal distance per unit height = L/D.'), ('Power required', 'P_R = DV.'), ('Rate of climb', '(P_A − P_R)/W.'), ('Breguet range', 'R = (V/c)(L/D) ln(W_i/W_f).'),
+           ('TSFC', 'Fuel flow per unit thrust.'), ('Endurance', 'Time aloft.')],
+ 'planet': {'text': ['The Breguet equation is aviation’s climate equation: for a given trip, fuel burned falls when engines get more efficient, wings get higher L/D, or structures get lighter. With the other terms fixed, range is proportional to L/D.',
+                     'NASA estimates that with today’s fleet and operations, worldwide air traffic in 2050 would need more than 620 million tonnes of fuel and emit close to 2,000 million tonnes of CO₂, which is why every term in the equation matters.'],
+            'site': [('CO2M: measuring CO₂ from space', 'CO2M.html')],
+            'src': [_SUS, _PHAK]},
+ 'res': [('NASA Glenn: glide angle', _G + 'glide-angle/', 'Gliding flight.'), (_PHAK[0], _PHAK[1], 'Aircraft performance chapter.'), ('NASA Glenn: thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Thrust, weight and climb.')]},
+
+{'id': 'u6', 'title': 'Stability & Control', 'weeks': 'Week 8',
+ 'summary': 'Why a well-designed aircraft returns to steady flight by itself, and how pilots and computers control it.',
+ 'objectives': ['Name the three axes, pitch, roll and yaw, and their control surfaces.', 'Explain static and dynamic stability.', 'Locate the center of gravity and the neutral point; compute static margin.', 'Explain why a tail stabilizes an aircraft.'],
+ 'concepts': ['An aircraft rotates about its center of gravity: pitch (elevator), roll (ailerons), yaw (rudder).',
+              'Static stability: after a disturbance, the aircraft initially tends to return. Dynamic stability: the motion actually dies out over time.',
+              'Pitch stability needs the center of gravity ahead of the neutral point. Static margin = (x_np − x_cg)/c̄ must be positive.',
+              'A tail far behind the CG works like the feathers on an arrow: a nose-up disturbance raises the tail’s lift and pushes the nose back down.',
+              'Too much stability makes an aircraft sluggish and costs trim drag; some modern fighters are designed unstable and flown by computer.'],
+ 'eqs': [('\\text{SM}=\\frac{x_{np}-x_{cg}}{\\bar c}', 'Static margin'), ('x_{cg}=\\frac{\\sum m_ix_i}{\\sum m_i}', 'Center of gravity'), ('\\frac{dC_m}{d\\alpha}<0', 'Condition for pitch stability')],
+ 'worked': [
+  {'q': 'The neutral point is at 40% of the mean chord and the CG at 25%. Find the static margin.', 'steps': ['SM = 0.40 − 0.25.'], 'a': '0.15, or 15%: stable.'},
+  {'q': 'A glider has a 50 g wing at x = 10 cm, a 10 g tail at x = 40 cm and 20 g of nose weight at x = 0. Find the CG.', 'steps': ['Σmx = 50(10) + 10(40) + 20(0) = 900 g·cm.', 'Σm = 80 g.'], 'a': 'x_cg = 11.25 cm from the nose.'},
+  {'q': 'For the Example 6.2 glider (mean chord 8 cm), the neutral point is at 13 cm. Is it stable?', 'steps': ['SM = (13 − 11.25)/8.'], 'a': 'SM ≈ 0.22: stable. Remove nose weight and the CG moves aft toward instability.'}],
+ 'practice': [('Which surface controls pitch?', 'The elevator, on the horizontal tail.'), ('CG at 30% chord, neutral point at 28%. Stable?', 'SM = −0.02 < 0: statically unstable.'),
+              ('In Example 6.2, how much nose weight m puts the CG at 12 cm?', '900/(60 + m) = 12 gives m = 15 g.'),
+              ('Why does a paper airplane with no nose weight pitch up and stall?', 'Its CG is too far aft, near or behind the neutral point.')],
+ 'misc': [('Statically stable means the oscillation dies out.', 'That is dynamic stability; static stability is the initial tendency.'), ('More stability is always better.', 'Too much makes control heavy and wastes trim drag.'),
+          ('The CG can be anywhere as long as the wing lifts.', 'An aft CG makes the aircraft unstable.')],
+ 'quiz': [{'q': 'Ailerons control…', 'opts': ['pitch', 'roll', 'yaw', 'thrust'], 'ok': 1, 'why': 'They deflect in opposite directions on each wing.'},
+          {'q': 'For pitch stability the CG must be…', 'opts': ['behind the neutral point', 'ahead of the neutral point', 'at the tail', 'at the wingtip'], 'ok': 1, 'why': 'Positive static margin.'},
+          {'q': 'A static margin of 0.15 means…', 'opts': ['unstable', 'stable', 'neutral', 'stalled'], 'ok': 1, 'why': 'Positive margin.'},
+          {'q': 'Dynamic stability concerns…', 'opts': ['the initial tendency', 'the motion over time', 'engine thrust', 'weight only'], 'ok': 1, 'why': 'Whether oscillations die out.'}],
+ 'cards': [('Pitch / roll / yaw', 'Elevator / ailerons / rudder.'), ('Static stability', 'Initial tendency to return.'), ('Dynamic stability', 'Disturbance dies out over time.'), ('Neutral point', 'CG location for neutral pitch stability.'),
+           ('Static margin', '(x_np − x_cg)/c̄.'), ('Trim', 'Balanced, zero net moment.')],
+ 'planet': {'text': ['Stability margins cost fuel: a conventional tail usually pushes down to balance the aircraft, and the wing must make extra lift, with extra drag, to carry it. Trimming that penalty is part of the efficient-aircraft path NASA describes.',
+                     'The same balance and control ideas keep Earth-observing satellites pointed steadily so their instruments can map the planet.'],
+            'site': [('Orbits guide', 'Orbits_Guide.html')],
+            'src': [('NASA Glenn: aircraft rotations', _G + 'aircraft-rotations/'), _SUS]},
+ 'res': [('NASA Glenn: aircraft rotations', _G + 'aircraft-rotations/', 'Pitch, roll and yaw.'), (_PHAK[0], _PHAK[1], 'Stability and flight controls chapters.')]},
+
+{'id': 'u7', 'title': 'Propulsion Basics', 'weeks': 'Week 9',
+ 'summary': 'How propellers, jets and rockets make thrust by throwing mass backward, and why bigger, slower jets are more efficient.',
+ 'objectives': ['Use the momentum thrust equation.', 'Compute propulsive efficiency.', 'Compare turbojets, turbofans and propellers.', 'Define specific impulse and thrust-specific fuel consumption.'],
+ 'concepts': ['Every engine makes thrust by accelerating a mass flow: F = ṁ(v_e − v₀) for an air-breathing engine (ignoring fuel mass and pressure terms).',
+              'Propulsive efficiency η_p = 2/(1 + v_e/v₀): moving a lot of air a little is more efficient than moving a little air a lot. That is why turbofans have huge fans.',
+              'Turbojet: all air passes through the core. Turbofan: most air bypasses the core through the fan. Turboprop: a propeller driven by a gas turbine.',
+              'Specific impulse I_sp = F/(ṁ_fuel g₀) measures thrust per fuel weight flow, in seconds.'],
+ 'eqs': [('F=\\dot m(v_e-v_0)', 'Thrust of an air-breathing engine'), ('\\eta_p=\\frac{2}{1+v_e/v_0}', 'Propulsive efficiency'), ('I_{sp}=\\frac{F}{\\dot m_fg_0}', 'Specific impulse')],
+ 'worked': [
+  {'q': 'A turbofan moves 500 kg/s of air from 250 m/s to 320 m/s. Find thrust and propulsive efficiency.', 'steps': ['F = 500 × 70 = 35,000 N.', 'η_p = 2/(1 + 320/250) = 2/2.28.'], 'a': 'F = 35 kN, η_p ≈ 0.88.'},
+  {'q': 'A turbojet makes the same 35 kN with 100 kg/s of air at v₀ = 250 m/s. What exhaust speed does it need, and what is η_p?', 'steps': ['v_e = 250 + 35,000/100 = 600 m/s.', 'η_p = 2/(1 + 2.4).'], 'a': 'v_e = 600 m/s, η_p ≈ 0.59: much less efficient.'},
+  {'q': 'An engine makes 100 kN while burning 2.5 kg/s of fuel. Find its I_sp.', 'steps': ['I_sp = 100,000/(2.5 × 9.80665).'], 'a': '≈ 4,079 s. Air-breathers beat rockets on this measure because they do not carry their oxidizer.'}],
+ 'practice': [('Find the thrust for ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.', '20 kN.'), ('Find η_p when v_e = v₀.', '1.0, but the thrust is zero: efficiency and thrust trade off.'),
+              ('Why do airliners use high-bypass turbofans?', 'They move a large mass of air slowly, which raises propulsive efficiency and cuts fuel burn and noise.')],
+ 'misc': [('Jets push against the air behind them.', 'They accelerate air through the engine; the reaction to that is thrust.'), ('Faster exhaust always means a better engine.', 'For efficiency, exhaust speed should be close to flight speed.'),
+          ('Specific impulse is a speed.', 'It is measured in seconds; I_sp × g₀ is an effective exhaust speed.')],
+ 'quiz': [{'q': 'Thrust of an air-breathing engine ≈', 'opts': ['ṁv₀', 'ṁ(v_e − v₀)', 'ṁv_e²', 'ρV²'], 'ok': 1, 'why': 'Momentum change per second.'},
+          {'q': 'Propulsive efficiency is highest when v_e/v₀ is…', 'opts': ['large', 'close to 1', 'zero', 'negative'], 'ok': 1, 'why': 'η_p = 2/(1 + v_e/v₀).'},
+          {'q': 'Most air in a high-bypass turbofan…', 'opts': ['goes through the combustor', 'bypasses the core', 'is stored', 'is heated to 2,000 K'], 'ok': 1, 'why': 'The fan stream.'},
+          {'q': 'I_sp is measured in…', 'opts': ['m/s', 'seconds', 'newtons', 'kg'], 'ok': 1, 'why': 'Thrust per weight flow of propellant.'}],
+ 'cards': [('Momentum thrust', 'F = ṁ(v_e − v₀).'), ('Propulsive efficiency', '2/(1 + v_e/v₀).'), ('Turbofan', 'Fan plus core; most air bypasses.'), ('Bypass ratio', 'Bypass air ÷ core air.'),
+           ('Specific impulse', 'F/(ṁ g₀), in seconds.'), ('TSFC', 'Fuel flow per unit thrust.')],
+ 'planet': {'text': ['Higher propulsive efficiency is a direct fuel and CO₂ saving. Every kilogram of jet fuel burned produces about 3.16 kg of CO₂ (the fuel’s carbon combined with oxygen from the air; see Unit 10), so efficiency gains add up over an engine’s decades of service.',
+                     'Sustainable aviation fuel, made from wastes and biomass, is blended to match conventional jet fuel’s properties for safe operation. NASA notes that SAF does not release new CO₂ into the environment.'],
+            'site': [('General Chemistry I', 'General_Chemistry_I.html')],
+            'src': [_SUS, _DOE]},
+ 'res': [('NASA Glenn: thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Engines and thrust.'), ('NASA Glenn: specific impulse', _G + 'specific-impulse/', 'Rocket and jet efficiency.'), (_UE[0], _UE[1], 'MIT propulsion lectures.')]},
+
+{'id': 'u8', 'title': 'Rockets & the Rocket Equation', 'weeks': 'Weeks 10–11',
+ 'summary': 'Why reaching orbit is so hard: Tsiolkovsky’s rocket equation, mass ratios and staging.',
+ 'objectives': ['Use Δv = I_sp g₀ ln(m₀/m_f).', 'Compute required mass ratios.', 'Explain why staging works.', 'Compute rocket thrust-to-weight ratio.'],
+ 'concepts': ['A rocket carries all its propellant, fuel and oxidizer. Its thrust is F = ṁv_e + (p_e − p_a)A_e.',
+              'The ideal rocket equation: Δv = v_e ln(m₀/m_f), with v_e = I_sp g₀. Speed grows only with the logarithm of the mass ratio.',
+              'Reaching low Earth orbit takes roughly 9.4 km/s of Δv once gravity and drag losses are included, so most of a launch vehicle’s mass is propellant.',
+              'Staging drops empty tanks and engines so later stages do not carry dead weight.',
+              'Thrust-to-weight ratio must exceed 1 to lift off.'],
+ 'eqs': [('\\Delta v=I_{sp}\\,g_0\\ln\\frac{m_0}{m_f}', 'Ideal rocket (Tsiolkovsky) equation'), ('F=\\dot m v_e+(p_e-p_a)A_e', 'Rocket thrust'), ('\\frac{m_0}{m_f}=e^{\\Delta v/(I_{sp}g_0)}', 'Required mass ratio')],
+ 'worked': [
+  {'q': 'An engine with I_sp = 450 s fires until m₀/m_f = 5. Find Δv.', 'steps': ['v_e = 450 × 9.80665 = 4,413 m/s.', 'Δv = 4,413 × ln 5.'], 'a': '≈ 7,102 m/s.'},
+  {'q': 'What mass ratio does a single stage need for 9.4 km/s with I_sp = 300 s? With 450 s?', 'steps': ['300 s: e^(9,400/2,942) = e^3.195.', '450 s: e^(9,400/4,413) = e^2.130.'], 'a': '≈ 24.4 versus ≈ 8.4: about 96% versus 88% of the rocket must be propellant.'},
+  {'q': 'A two-stage rocket: each stage has I_sp = 300 s and mass ratio 4. Find the total Δv.', 'steps': ['Each stage: 2,942 × ln 4 = 4,078 m/s.', 'Add the stages.'], 'a': '≈ 8,157 m/s, twice what one stage with mass ratio 4 gives.'}],
+ 'practice': [('Find Δv for I_sp = 311 s and m₀/m_f = 3.', '311 × 9.80665 × ln 3 ≈ 3,351 m/s.'), ('A 500,000 kg rocket has 7.5 MN of thrust. Find T/W at liftoff.', '7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.'),
+              ('What I_sp gives Δv = 3,000 m/s with mass ratio 2?', '3,000/(9.80665 × ln 2) ≈ 441 s.')],
+ 'misc': [('Rockets push against the air.', 'They work best in vacuum; they push on their own exhaust.'), ('Double the propellant, double the Δv.', 'Δv grows with the logarithm of the mass ratio.'),
+          ('Orbit needs only 7.7 km/s of Δv.', 'Gravity and drag losses push the total to roughly 9.4 km/s.')],
+ 'quiz': [{'q': 'Δv depends on the mass ratio through…', 'opts': ['a square', 'a logarithm', 'a square root', 'a straight line'], 'ok': 1, 'why': 'ln(m₀/m_f).'},
+          {'q': 'Staging helps because…', 'opts': ['it raises I_sp', 'it drops dead mass', 'it adds air', 'it lowers gravity'], 'ok': 1, 'why': 'Empty tanks no longer need accelerating.'},
+          {'q': 'To lift off, thrust-to-weight must be…', 'opts': ['< 1', '> 1', '= 0', 'exactly 1'], 'ok': 1, 'why': 'Thrust must exceed weight.'},
+          {'q': 'The effective exhaust speed for I_sp = 300 s is about…', 'opts': ['300 m/s', '2,940 m/s', '30 km/s', '9.8 m/s'], 'ok': 1, 'why': 'I_sp × g₀.'}],
+ 'cards': [('Rocket equation', 'Δv = I_sp g₀ ln(m₀/m_f).'), ('Mass ratio', 'm₀/m_f.'), ('Staging', 'Dropping spent stages.'), ('Thrust-to-weight', 'Must exceed 1 at liftoff.'),
+           ('Δv to LEO', '≈ 9.4 km/s including losses.'), ('I_sp', 'Seconds of thrust per weight of propellant.')],
+ 'planet': {'text': ['Every Earth-observing satellite, from Landsat to the missions that track sea level and greenhouse gases, rides a rocket sized with this equation. It is why each kilogram of instrument is precious and why satellites are built to be light.',
+                     'Our Delta-v calculator lets you run the same numbers for real missions.'],
+            'site': [('Delta-v calculator', 'Delta_V_Calculator.html'), ('Landsat 9', 'Landsat_9.html')],
+            'src': [_ROCK, ('NASA Glenn: rocket thrust equation', _G + 'rocket-thrust-equation/')]},
+ 'res': [(_ROCK[0], _ROCK[1], 'Derivation and use.'), ('NASA Glenn: rocket thrust equation', _G + 'rocket-thrust-equation/', 'Pressure and momentum thrust.'), ('NASA Glenn: specific impulse', _G + 'specific-impulse/', 'Comparing propellants.')]},
+
+{'id': 'u9', 'title': 'Orbits & Space Missions', 'weeks': 'Weeks 12–13',
+ 'summary': 'Circular and elliptical orbits, periods, geostationary orbit and the Hohmann transfer, plus how Earth-observing missions choose their orbits.',
+ 'objectives': ['Compute circular orbital speed and period.', 'Find the geostationary radius.', 'Compute a Hohmann transfer Δv and transfer time.', 'Describe common Earth orbits and their uses.'],
+ 'concepts': ['In a circular orbit gravity supplies the centripetal force: v = √(μ/r), with μ = GM.',
+              'Kepler’s third law: T = 2π√(a³/μ). Higher orbits are slower and take longer.',
+              'A geostationary orbit has a period of one sidereal day (86,164 s) and sits over the equator at a radius of about 42,164 km.',
+              'A Hohmann transfer uses two burns along an ellipse that touches both circular orbits; it is the most efficient two-burn transfer between coplanar circular orbits.',
+              'Low Earth orbit (about 400 km for the ISS), sun-synchronous polar orbits for imaging, and geostationary orbit for weather each serve different missions.'],
+ 'eqs': [('v=\\sqrt{\\mu/r}', 'Circular orbit speed'), ('T=2\\pi\\sqrt{a^3/\\mu}', 'Orbital period'), ('v=\\sqrt{\\mu\\left(\\frac2r-\\frac1a\\right)}', 'Vis-viva equation'),
+         ('\\Delta v_1=\\sqrt{\\tfrac{\\mu}{r_1}}\\left(\\sqrt{\\tfrac{2r_2}{r_1+r_2}}-1\\right)', 'First Hohmann burn')],
+ 'worked': [
+  {'q': 'Find the speed and period of a circular orbit 400 km up.', 'steps': ['r = 6,771 km.', 'v = √(3.986 × 10¹⁴/6.771 × 10⁶) = 7,673 m/s.', 'T = 2π√(r³/μ) = 5,545 s.'], 'a': '7.67 km/s and ≈ 92.4 minutes.'},
+  {'q': 'Find the geostationary radius.', 'steps': ['r = (μT²/4π²)^(1/3) with T = 86,164 s.'], 'a': '≈ 42,164 km from Earth’s center (about 35,786 km above the equator).'},
+  {'q': 'Find the Hohmann Δv from a 300 km circular orbit to geostationary radius.', 'steps': ['r₁ = 6,671 km, r₂ = 42,164 km.', 'Δv₁ = 2,428 m/s; Δv₂ = 1,468 m/s.', 'Transfer time = half the transfer ellipse’s period.'], 'a': 'Total ≈ 3.90 km/s; transfer ≈ 5.27 hours (ignoring any plane change).'}],
+ 'practice': [('Find v for a circular orbit at r = 7,000 km.', '√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s.'), ('If the orbit radius quadruples, how does the period change?', 'T ∝ r^(3/2): 8 times longer.'),
+              ('Why are many weather satellites geostationary?', 'They stay over one spot and can image the same hemisphere continuously.')],
+ 'misc': [('Astronauts float because there is no gravity in orbit.', 'At 400 km gravity is about 89% of its surface value; they are in free fall.'), ('To catch a spacecraft ahead of you, just speed up.', 'Speeding up raises your orbit and lowers your angular rate.'),
+          ('Higher orbits need more speed.', 'Circular speed falls with height, though reaching higher orbits takes more total Δv.')],
+ 'quiz': [{'q': 'Circular orbital speed is…', 'opts': ['√(μr)', '√(μ/r)', 'μ/r²', '2πr'], 'ok': 1, 'why': 'Gravity supplies the centripetal force.'},
+          {'q': 'At 400 km a spacecraft orbits Earth about every…', 'opts': ['24 h', '92 min', '10 min', '1 week'], 'ok': 1, 'why': '≈ 92.4 minutes.'},
+          {'q': 'A Hohmann transfer uses…', 'opts': ['one burn', 'two burns', 'continuous thrust only', 'aerobraking only'], 'ok': 1, 'why': 'One at each end of the transfer ellipse.'},
+          {'q': 'Geostationary radius ≈', 'opts': ['6,771 km', '42,164 km', '384,400 km', '20,000 km'], 'ok': 1, 'why': 'Kepler’s third law with one sidereal day.'}],
+ 'cards': [('Circular speed', '√(μ/r).'), ('Kepler’s third law', 'T = 2π√(a³/μ).'), ('Vis-viva', 'v² = μ(2/r − 1/a).'), ('Hohmann transfer', 'Two-burn elliptical transfer.'),
+           ('GEO', 'Period = 1 sidereal day; r ≈ 42,164 km.'), ('Sun-synchronous orbit', 'Near-polar orbit that passes over each place at about the same local time.')],
+ 'planet': {'text': ['Climate monitoring depends on orbit choice. Sun-synchronous orbits let Landsat image the same place under similar lighting, so changes in forests, crops and ice stand out, while geostationary weather satellites watch storms develop continuously.',
+                     'Orbits also need care: debris threatens these missions, so spacecraft are increasingly designed to be disposed of at the end of their lives.'],
+            'site': [('Orbits guide', 'Orbits_Guide.html'), ('Orbital velocity calculator', 'Orbital_Velocity_Calculator.html'), ('Orbital period calculator', 'Orbital_Period_Calculator.html')],
+            'src': [_SF, ('NASA Earth fact sheet', 'https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html')]},
+ 'res': [(_SF[0], _SF[1], 'NASA JPL’s free primer on orbits and missions.'), ('Physics I, Unit 7: gravitation and orbits', 'Physics_I.html#u7', 'Our orbits unit.')]},
+
+{'id': 'u10', 'title': 'Sustainable Aviation & Space', 'weeks': 'Week 14',
+ 'summary': 'Putting it together: the physics of cutting aviation’s climate impact, from efficient aircraft to sustainable fuels and new energy sources, and keeping space usable.',
+ 'objectives': ['Compute CO₂ from fuel burned.', 'Use the Breguet equation to compare efficiency improvements.', 'Explain the roles and limits of sustainable aviation fuel, batteries and hydrogen.', 'Describe space sustainability: debris and disposal.'],
+ 'concepts': ['Burning one kilogram of kerosene-type jet fuel produces about 3.16 kg of CO₂, fixed by chemistry. The only ways to cut it are to burn less fuel or to use fuel whose carbon came recently from the air.',
+              'EPA reports that the aircraft covered by its greenhouse gas rule account for 10% of U.S. transportation greenhouse gas emissions and 3% of the U.S. total.',
+              'NASA’s three paths: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.',
+              'Today’s batteries store far less energy per kilogram than jet fuel, so electric aircraft suit short, small flights; hydrogen stores a lot of energy per kilogram but needs large tanks.',
+              'Space sustainability means planning disposal so useful orbits stay open for the satellites that monitor Earth.'],
+ 'eqs': [('m_{\\mathrm{CO_2}}\\approx3.16\\,m_{\\text{fuel}}', 'CO₂ from burning jet fuel'), ('\\frac{\\text{fuel}_2}{\\text{fuel}_1}\\approx\\frac{(L/D)_1}{(L/D)_2}', 'Fuel scales inversely with L/D (same trip, modest changes)')],
+ 'worked': [
+  {'q': 'Where does 3.16 come from? Model jet fuel as C₁₂H₂₃ and find kg of CO₂ per kg of fuel.', 'steps': ['Molar mass: 12(12.011) + 23(1.008) = 167.3 g/mol.', '12 CO₂ per molecule: 12 × 44.01 = 528.1 g.', '528.1/167.3.'], 'a': '≈ 3.16 kg of CO₂ per kg of fuel.'},
+  {'q': 'NASA estimates 620 million tonnes of fuel in 2050 at today’s efficiency. How much CO₂ is that?', 'steps': ['620 × 3.16.'], 'a': '≈ 1,959 million tonnes, matching NASA’s “close to 2,000 megatons.”'},
+  {'q': 'A flight burns 20 t of fuel. A new wing raises L/D from 17 to 19. Estimate the fuel and CO₂ saved.', 'steps': ['Fuel ≈ 20 × 17/19 = 17.9 t.', 'Fuel saved ≈ 2.1 t; × 3.16.'], 'a': '≈ 2.1 t of fuel and ≈ 6.7 t of CO₂ per flight (a simplified estimate).'}],
+ 'practice': [('A flight burns 5,000 kg of fuel. How much CO₂?', '≈ 15,800 kg.'), ('If engines become 15% more fuel-efficient, by about how much do CO₂ emissions per trip fall?', 'About 15%, since CO₂ is proportional to fuel burned.'),
+              ('Why can’t today’s batteries power long-haul airliners?', 'Their energy per kilogram is far below jet fuel, and the Breguet trade makes extra weight very costly.')],
+ 'misc': [('Sustainable aviation fuel emits no CO₂ when burned.', 'It emits CO₂ like jet fuel; the benefit is that its carbon came recently from the air, so lifecycle emissions are lower.'),
+          ('Electric airplanes will soon replace all jets.', 'Battery energy density limits them to short, small flights for now.'), ('Space is too big to pollute.', 'Debris in popular orbits is a real hazard.')],
+ 'quiz': [{'q': 'Burning 1 kg of jet fuel makes about…', 'opts': ['1 kg CO₂', '3.16 kg CO₂', '0.3 kg CO₂', '10 kg CO₂'], 'ok': 1, 'why': 'The fuel’s carbon combines with oxygen from the air.'},
+          {'q': 'NASA’s three paths to sustainable aviation are…', 'opts': ['bigger fuel tanks', 'efficient aircraft, SAF, operations and infrastructure', 'flying lower only', 'slower climbs only'], 'ok': 1, 'why': 'As listed by NASA.'},
+          {'q': 'If L/D rises 10%, fuel for the same trip falls roughly…', 'opts': ['1%', '9–10%', '50%', '0%'], 'ok': 1, 'why': 'Fuel ∝ 1/(L/D).'},
+          {'q': 'U.S. aircraft covered by EPA’s rule emit what share of total U.S. greenhouse gases?', 'opts': ['0.3%', '3%', '30%', '50%'], 'ok': 1, 'why': 'EPA: 3% of the national total.'}],
+ 'cards': [('CO₂ per kg fuel', '≈ 3.16 kg.'), ('SAF', 'Sustainable aviation fuel from wastes and biomass.'), ('Three paths', 'Efficient aircraft, SAF, operations.'), ('Energy density', 'Energy per kg; batteries ≪ jet fuel.'),
+           ('Space debris', 'Defunct objects that threaten useful orbits.'), ('Lifecycle emissions', 'All emissions from fuel production to use.')],
+ 'planet': {'text': ['This unit is the course’s planet tie-in in full: each equation from Units 3–7 is a lever on fuel burn, and fuel burn is CO₂. Engineers who can run these numbers design the cleaner aircraft that NASA and industry are working toward.',
+                     'EPA reports that the aircraft covered by its rule produce 10% of U.S. transportation greenhouse gas emissions, and NASA notes the U.S. committed in 2021 to net-zero aviation greenhouse gas emissions by 2050.'],
+            'site': [('CO2M: measuring CO₂ from space', 'CO2M.html'), ('Delta-v calculator', 'Delta_V_Calculator.html')],
+            'src': [_SUS, _EPA]},
+ 'res': [(_SUS[0], _SUS[1], 'NASA’s overview and goals.'), (_EPA[0], _EPA[1], 'U.S. emissions standards and data.'), (_DOE[0], _DOE[1], 'How SAF is made.')]},
+]
+LABS = [
+{'id': 'labA', 'title': 'Lab A: Virtual wind tunnel with NASA FoilSim', 'week': 'Week 5',
+ 'goal': 'Measure an airfoil’s lift curve in FoilSim and compare it with thin-airfoil theory.',
+ 'eq': ('c_l\\approx2\\pi\\alpha', 'Thin-airfoil theory (α in radians)'),
+ 'steps': ['Open FoilSim and choose a symmetric airfoil (zero camber) about 12% thick.', 'Record the lift coefficient at α = 0°, 2°, 4°, 6° and 8°.', 'Add a column with 2πα and compare. Then add camber and repeat.', 'Increase α until FoilSim warns of stall; note the angle.'],
+ 'table': (['α (deg)', 'Theory c_l = 2πα'], [['0', '0.000'], ['2', '0.219'], ['4', '0.439'], ['6', '0.658'], ['8', '0.877']]),
+ 'note': 'Computed theory values. Your FoilSim readings will differ somewhat; explain why (thickness, model assumptions).',
+ 'calc': ['2π × (4π/180) = 0.439.', 'Theory slope: 0.110 per degree. A finite wing with AR = 8 and e = 0.9 would show only about 0.086 per degree (Unit 4).'],
+ 'safety': ['None beyond normal computer use.'], 'home': ['Runs in a web browser.'],
+ 'sims': [_FOIL],
+ 'planet': 'Wind-tunnel testing, real and virtual, is how designers find low-drag wings that burn less fuel.', 'planet_src': [_SUS]},
+{'id': 'labB', 'title': 'Lab B: Rocket-equation calculator', 'week': 'Week 11',
+ 'goal': 'Build a spreadsheet that gives Δv from I_sp and mass ratio, and use it to size a two-stage rocket.',
+ 'eq': ('\\Delta v=I_{sp}\\,g_0\\ln(m_0/m_f)', 'Ideal rocket equation'),
+ 'steps': ['Columns: I_sp, m₀, m_f, mass ratio, Δv.', 'Fill rows for I_sp = 300 s and 450 s at mass ratios 2, 4 and 8.', 'Add a two-stage sheet: total Δv = sum of the stages. Find stage mass ratios that reach 9.4 km/s.', 'Check one result against our Delta-v calculator.'],
+ 'table': (['I_sp (s)', 'Mass ratio', 'Δv (m/s)'], [['300', '2', '2,039'], ['300', '4', '4,078'], ['300', '8', '6,118'], ['450', '4', '6,118'], ['450', '8', '9,177']]),
+ 'note': 'Computed values (ideal: no gravity or drag losses).',
+ 'calc': ['300 × 9.80665 × ln 2 = 2,039 m/s.', 'Each doubling of the mass ratio adds the same 2,039 m/s at 300 s: the logarithm at work.', 'Two stages at 300 s, each with mass ratio 5, give 2 × 4,735 = 9,470 m/s, just above 9.4 km/s.'],
+ 'safety': ['None beyond normal computer use. Do not build or fly rocket motors without trained supervision and local permission.'], 'home': ['A spreadsheet is enough.'],
+ 'sims': [('Saving Planets Delta-v calculator', 'Delta_V_Calculator.html'), _ROCK],
+ 'planet': 'Every kilogram saved on a climate satellite shrinks the rocket needed to launch it.', 'planet_src': [_ROCK]},
+{'id': 'labC', 'title': 'Lab C: Design, build and fly a glider', 'week': 'Week 8',
+ 'goal': 'Design a card-stock or foam glider, set its CG for a positive static margin, then measure its glide ratio.',
+ 'eq': ('L/D\\approx\\frac{\\text{glide distance}}{\\text{launch height}}', 'Glide ratio from a steady glide'),
+ 'steps': ['Sketch a design: pick a wing span and chord for an aspect ratio between 5 and 8, a tail about 20% of the wing area, and a fuselage stick.', 'Build it. Find the CG by balancing it on a finger; add nose weight until the CG is about 25% of the wing chord behind the wing’s leading edge.', 'Launch gently and level from a measured height in still air, at least five times; record each distance.', 'Compute L/D. Then move the CG aft in small steps and record what happens.'],
+ 'table': (['Trial', 'Height (m)', 'Distance (m)'], [['1', '2.0', '9.6'], ['2', '2.0', '10.4'], ['3', '2.0', '10.0'], ['Mean', '2.0', '10.0']]),
+ 'note': 'Sample data for practice, not a measured result.',
+ 'calc': ['Mean L/D ≈ 10.0/2.0 = 5.0.', 'Glide angle = arctan(1/5) ≈ 11.3°.', 'Typical finding: with the CG too far aft the glider pitches up and stalls (negative static margin); too far forward, it dives.'],
+ 'safety': ['Cut away from your body; an adult should handle any craft knife.', 'Fly away from people’s faces, in an open space.'], 'home': ['Card stock, tape and a coin for nose weight work well.'],
+ 'sims': [('NASA Glenn: glide angle', _G + 'glide-angle/')],
+ 'planet': 'Gliders show how far good aerodynamics alone can take you, with no fuel at all.', 'planet_src': []},
+{'id': 'labD', 'title': 'Lab D: Atmosphere and stall-speed spreadsheet', 'week': 'Week 4',
+ 'goal': 'Implement NASA’s atmosphere model and see how altitude changes density, the speed of sound and stall speed.',
+ 'eq': ('V_s=\\sqrt{\\frac{2W}{\\rho SC_{L,\\max}}}', 'Stall speed (true airspeed)'),
+ 'steps': ['Implement NASA’s troposphere and lower-stratosphere fits from 0 to 12 km in 1 km steps.', 'Compute ρ, a and V_s for W = 10,791 N, S = 16.2 m², C_L,max = 1.6.', 'Plot ρ/ρ₀ and V_s against altitude.'],
+ 'table': (['Altitude (m)', 'ρ (kg/m³)', 'V_s (m/s)'], [['0', '1.227', '26.1'], ['5,000', '0.738', '33.6'], ['10,000', '0.414', '44.8']]),
+ 'note': 'Computed from NASA’s model.',
+ 'calc': ['At 5,000 m: √(2 × 10,791/(0.738 × 16.2 × 1.6)) = 33.6 m/s.', 'V_s grows as 1/√ρ: at 10 km it is 1.72 times its sea-level value.'],
+ 'safety': ['None beyond normal computer use.'], 'home': ['A spreadsheet is enough.'],
+ 'sims': [_ATM],
+ 'planet': 'Standard-atmosphere physics also underlies how satellites measure the air.', 'planet_src': []},
+]
+SCHEDULE = [(1, 'u1', 'History of flight; the design process; four forces', 'MIT 16.00; Smithsonian'), (2, 'u2', 'Standard atmosphere; speed of sound', 'NASA Glenn: atmosphere'),
+            (3, 'u3', 'Lift and drag equations; Bernoulli', 'NASA Glenn: lift and drag'), (4, 'u3', 'Reynolds number and stall speed; Lab D', 'FAA PHAK'),
+            (5, 'u4', 'Airfoils, lift curve, finite wings; Lab A', 'NASA FoilSim'), (6, 'u5', 'Gliding, power required, climb', 'NASA Glenn: glide angle'),
+            (7, 'u5', 'Range and endurance; midterm practice', 'FAA PHAK'), (8, 'u6', 'Stability and control; Lab C', 'NASA Glenn: rotations'),
+            (9, 'u7', 'Propulsion: jets, fans and propellers', 'NASA Glenn: propulsion'), (10, 'u8', 'Rocket thrust and the rocket equation', 'NASA Glenn: rockets'),
+            (11, 'u8', 'Staging and launch vehicles; Lab B', 'NASA Glenn: rockets'), (12, 'u9', 'Orbits, Kepler’s laws, geostationary orbit', 'JPL Basics of Space Flight'),
+            (13, 'u9', 'Hohmann transfers and mission design', 'JPL Basics of Space Flight'), (14, 'u10', 'Sustainable aviation and space', 'NASA; EPA; DOE'), (15, 'exam', 'Review and final practice set', 'All units')]
+EXAMS = [('Midterm practice set (Units 1–5)', [
+  ('Find ρ at 5,000 m with NASA’s model.', ['T = −17.41 °C; p = 54.11 kPa.', 'ρ = 54.11/(0.2869 × 255.69).'], '≈ 0.738 kg/m³.'),
+  ('A 1,100 kg airplane (S = 16.2 m², C_L,max = 1.6): find its stall speed at 5,000 m.', ['V_s = √(2 × 10,791/(0.738 × 16.2 × 1.6)).'], '≈ 33.6 m/s.'),
+  ('Find (L/D)max for C_D0 = 0.025, e = 0.8, AR = 7.5.', ['K = 0.0531; (L/D)max = 1/(2√(C_D0 K)).'], '≈ 13.7.'),
+  ('A glider with L/D = 13.7 starts 1,500 m up. How far can it glide?', ['1,500 × 13.7.'], '≈ 20.6 km.')]),
+ ('Final practice set (all units)', [
+  ('Find the static margin for x_np = 0.40c̄ and x_cg = 0.25c̄.', ['0.40 − 0.25.'], '0.15 (stable).'),
+  ('An engine moves 500 kg/s of air from 250 to 320 m/s. Find thrust and η_p.', ['F = 500 × 70; η_p = 2/(1 + 1.28).'], '35 kN; ≈ 0.88.'),
+  ('Find Δv for I_sp = 450 s and mass ratio 5.', ['4,413 × ln 5.'], '≈ 7,102 m/s.'),
+  ('Find the period of a circular orbit 400 km up.', ['T = 2π√(r³/μ) with r = 6.771 × 10⁶ m.'], '≈ 92.4 min.'),
+  ('Find the Hohmann Δv from a 300 km orbit to geostationary radius.', ['Δv₁ = 2,428 m/s; Δv₂ = 1,468 m/s.'], '≈ 3.90 km/s.'),
+  ('A flight burns 20 t of fuel. How much CO₂?', ['20 × 3.16.'], '≈ 63 t.')])]
+FORMULAS = ['L=W,\\ T=D', 'T=15.04-0.00649h,\\ p=101.29\\left(\\tfrac{T+273.1}{288.08}\\right)^{5.256}', '\\rho=p/(RT),\\ a=\\sqrt{\\gamma RT},\\ M=V/a', 'L=\\tfrac12\\rho V^2SC_L,\\ D=\\tfrac12\\rho V^2SC_D',
+            'V_s=\\sqrt{2W/(\\rho SC_{L,\\max})}', 'Re=\\rho Vc/\\mu', 'c_l=2\\pi\\alpha', 'a=a_0/(1+a_0/(\\pi eAR))', 'C_D=C_{D0}+C_L^2/(\\pi eAR)', '(L/D)_{\\max}=1/(2\\sqrt{C_{D0}K})',
+            '\\tan\\gamma=1/(L/D)', 'R=(V/c)(L/D)\\ln(W_i/W_f)', '\\text{SM}=(x_{np}-x_{cg})/\\bar c', 'F=\\dot m(v_e-v_0),\\ \\eta_p=2/(1+v_e/v_0)', '\\Delta v=I_{sp}g_0\\ln(m_0/m_f)',
+            'v=\\sqrt{\\mu/r},\\ T=2\\pi\\sqrt{a^3/\\mu}', 'v^2=\\mu(2/r-1/a)', 'm_{CO_2}\\approx3.16\\,m_{fuel}']
+GLOSSARY = sorted([('Angle of attack', 'Angle between the chord line and the oncoming air.'), ('Aspect ratio', 'Span squared divided by wing area.'), ('Breguet range equation', 'Range of a jet from speed, fuel use, L/D and weight fraction.'),
+    ('Camber', 'Curvature of an airfoil’s mean line.'), ('Center of gravity', 'Point where the weight acts.'), ('Drag polar', 'C_D as a function of C_L.'), ('Dynamic pressure', '½ρV².'),
+    ('Geostationary orbit', 'Equatorial orbit with a one-sidereal-day period.'), ('Hohmann transfer', 'Two-burn elliptical transfer between circular orbits.'), ('Induced drag', 'Drag caused by producing lift with a finite wing.'),
+    ('Mach number', 'Speed divided by the local speed of sound.'), ('Neutral point', 'CG position giving neutral pitch stability.'), ('Propulsive efficiency', 'Fraction of jet power that becomes useful thrust power.'),
+    ('Reynolds number', 'Ratio of inertial to viscous effects, ρVc/μ.'), ('Rocket equation', 'Δv = I_sp g₀ ln(m₀/m_f).'), ('Specific impulse', 'Thrust per weight flow of propellant, in seconds.'),
+    ('Stall', 'Loss of lift when flow separates from the wing.'), ('Static margin', 'Distance from CG to neutral point in mean chords.'), ('Sustainable aviation fuel', 'Jet fuel made from wastes or biomass.'),
+    ('Standard atmosphere', 'Average model of air properties versus altitude.')])
+RUBRIC = [('4 · Mastery', 'Sets up problems from forces and requirements, checks units and orders of magnitude, and explains trade-offs.'), ('3 · Proficient', 'Solves the practice problems with occasional slips.'),
+          ('2 · Developing', 'Follows worked examples but struggles to choose the right equation.'), ('1 · Beginning', 'Plugs in numbers without checking units or assumptions; revisit the unit.')]
+WEIGHTS = [('Practice problems', '25%'), ('Labs', '20%'), ('Midterm practice set', '25%'), ('Final practice set', '30%')]
+
+def CHECKS():
+    """(label, computed, value printed on the page). build-courses.py --check fails if any differ by more than 0.6%."""
+    g0 = 9.80665; mu = 3.986e14; R = 6.371e6
+    def atm(h):
+        if h < 11000: T = 15.04 - .00649 * h; p = 101.29 * ((T + 273.1) / 288.08)**5.256
+        else: T = -56.46; p = 22.65 * exp(1.73 - .000157 * h)
+        return T, p, p / (.2869 * (T + 273.1))
+    W = 1100 * 9.81; r0 = atm(0)[2]; q = .5 * r0 * 55**2
+    Vs = lambda rho: sqrt(2 * W / (rho * 16.2 * 1.6))
+    K = 1 / (pi * .8 * 7.5); LD = 1 / (2 * sqrt(.025 * K))
+    a3 = 2 * pi / (1 + 2 * pi / (pi * .9 * 8))
+    a0, a11 = sqrt(1.4 * 287 * 288.15), sqrt(1.4 * 287 * 216.65)
+    rng = 230 / (.6 / 3600) * 17 * log(1.25) / 1000
+    co2 = 12 * 44.01 / (12 * 12.011 + 23 * 1.008)
+    dv = lambda isp, mr: isp * g0 * log(mr)
+    r4 = R + 400e3; r1 = R + 300e3; r2 = 42164e3
+    d1 = sqrt(mu / r1) * (sqrt(2 * r2 / (r1 + r2)) - 1); d2 = sqrt(mu / r2) * (1 - sqrt(2 * r1 / (r1 + r2)))
+    rgeo = (mu * (86164 / (2 * pi))**2)**(1 / 3) / 1000
+    return [('W', W, 10791), ('trade A', .3 * 8 + .5 * 6 + .2 * 9, 7.2), ('trade B', .3 * 5 + .5 * 9 + .2 * 6, 7.2), ('wright', 36 / 12, 3), ('liner', 70000 * 9.81, 686700), ('wright ft', 36 / .3048, 118),
+            ('T5k', atm(5000)[0], -17.41), ('p5k', atm(5000)[1], 54.11), ('rho5k', atm(5000)[2], .738), ('a0', a0, 340.3), ('a11', a11, 295.0), ('M', 230 / a11, .78),
+            ('rho11', atm(11000)[2], .366), ('frac11', round(atm(11000)[2] / r0, 2), .30), ('T1500', atm(1500)[0], 5.3), ('rho0', r0, 1.227), ('p0', atm(0)[1], 101.40), ('M2', 2 * 340, 680), ('frac5k', atm(5000)[2] / r0, .60),
+            ('q', q, 1855), ('CL', W / (q * 16.2), .36), ('Vs', Vs(r0), 26.1), ('Vs kt', round(Vs(r0) / .514444), 51), ('Re', round(r0 * 55 * 1.5 / 1.789e-5, -5), 5.7e6), ('q11', .5 * .366 * 230**2, 9680),
+            ('D', q * 16.2 * .032, 962), ('vs1500', sqrt(r0 / atm(1500)[2]), 1.076), ('vs1500v', Vs(atm(1500)[2]), 28.0), ('rho1500', atm(1500)[2], 1.060),
+            ('cl5', 2 * pi * radians(5), .548), ('a3', a3, 4.92), ('a3deg', a3 * pi / 180, .086), ('a3 drop', round(1 - a3 / (2 * pi), 2), .22), ('K', K, .0531), ('LD', LD, 13.7), ('CL*', sqrt(.025 / K), .69),
+            ('AR', 121 / 16.2, 7.5), ('alpha', round(degrees(.5 / (2 * pi)), 1), 4.6), ('CD', .025 + K * .36**2, .0319), ('LD15', 1 / (2 * sqrt(.025 / (pi * .8 * 15))), 19.4),
+            ('glide', 1000 * 20, 20000), ('gamma', round(degrees(atan(1 / 20)), 1), 2.9), ('range', rng, 5235), ('P', 957 * 55, 52600), ('hp', round(957 * 55 / 745.7), 71), ('drag ex', q * 16.2 * (.025 + K * (W / (q * 16.2))**2), 957),
+            ('RC', round(30000 / 10800, 1), 2.8), ('range20', rng * 20 / 17, 6159), ('glide13', 1500 * LD, 20600),
+            ('SM', .40 - .25, .15), ('cg', 900 / 80, 11.25), ('SM2', (13 - 11.25) / 8, .22), ('nose', 900 / 12 - 60, 15),
+            ('F', 500 * 70, 35000), ('etap', 2 / (1 + 320 / 250), .88), ('ve', 250 + 35000 / 100, 600), ('etap2', 2 / (1 + 600 / 250), .59), ('isp', 100000 / (2.5 * g0), 4079), ('F2', 200 * 100, 20000),
+            ('dv450', dv(450, 5), 7102), ('ve450', 450 * g0, 4413), ('mr300', exp(9400 / (300 * g0)), 24.4), ('mr450', exp(9400 / (450 * g0)), 8.4), ('pf300', 1 - 1 / exp(9400 / (300 * g0)), .96), ('pf450', 1 - 1 / exp(9400 / (450 * g0)), .88),
+            ('stage', dv(300, 4), 4078), ('2stage', 2 * dv(300, 4), 8157), ('dv311', dv(311, 3), 3351), ('tw', 7.5e6 / (500000 * 9.81), 1.53), ('isp441', 3000 / (g0 * log(2)), 441),
+            ('vLEO', sqrt(mu / r4), 7673), ('TLEO', 2 * pi * sqrt(r4**3 / mu), 5545), ('TLEO min', 2 * pi * sqrt(r4**3 / mu) / 60, 92.4), ('rGEO', rgeo, 42164),
+            ('alt GEO', rgeo - 6378, 35786), ('d1', d1, 2428), ('d2', d2, 1468), ('dvH', d1 + d2, 3900), ('tof', pi * sqrt(((r1 + r2) / 2)**3 / mu) / 3600, 5.27),
+            ('v7000', sqrt(mu / 7e6), 7546), ('g400', (R / r4)**2, .89),
+            ('co2', co2, 3.16), ('molar', 12 * 12.011 + 23 * 1.008, 167.3), ('co2 mass', 12 * 44.01, 528.1), ('nasa', 620 * 3.16, 1959), ('fuelLD', 20 * 17 / 19, 17.9), ('saved', 20 - 20 * 17 / 19, 2.1), ('saved co2', round((20 - 20 * 17 / 19) * 3.16, 1), 6.7),
+            ('5000kg', 5000 * 3.16, 15800), ('20t', 20 * 3.16, 63.2),
+            ('labA2', 2 * pi * radians(2), .219), ('labA4', 2 * pi * radians(4), .439), ('labA6', 2 * pi * radians(6), .658), ('labA8', 2 * pi * radians(8), .877), ('labA slope', 2 * pi * pi / 180, .110),
+            ('labB1', dv(300, 2), 2039), ('labB3', dv(300, 8), 6118), ('labB4', dv(450, 4), 6118), ('labB5', dv(450, 8), 9177), ('labB st', dv(300, 5), 4735), ('labB2st', 2 * dv(300, 5), 9470),
+            ('labC', 10 / 2, 5), ('labC ang', degrees(atan(1 / 5)), 11.3), ('labC mean', (9.6 + 10.4 + 10) / 3, 10),
+            ('labD5', Vs(atm(5000)[2]), 33.6), ('labD10', Vs(atm(10000)[2]), 44.8), ('rho10', atm(10000)[2], .414), ('labD ratio', Vs(atm(10000)[2]) / Vs(r0), 1.72)]

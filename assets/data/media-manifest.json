@@ -5820,5 +5820,12 @@
   "bytes": 1189982,
   "sha256": "7fc7b41069de75a7d0a351d36ed9875fd6ef8b0c6367917e2b15d7a53306757a",
   "type": "application/pdf"
+ },
+ "courses/Intro_to_Aerospace_Engineering_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
+  "key": "courses/Intro_to_Aerospace_Engineering_Study_Guide.ce0fd4bda8b6.pdf",
+  "bytes": 1415870,
+  "sha256": "ce0fd4bda8b61abf6d5d684183ca057c25e1d9f01388ecfed697caaf575e89d0",
+  "type": "application/pdf"
  }
 }

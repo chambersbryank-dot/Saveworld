@@ -909,6 +909,11 @@
    "credit": "NASA/Michael DeMocker (MAF20210116_GR0006)",
    "pos": "50% 40%",
    "r2": "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
+  },
+  "r2:images/ArtemisII_Launch_KSC_Hancock.jpg": {
+   "credit": "NASA",
+   "pos": "50% 40%",
+   "r2": "images/ArtemisII_Launch_KSC_Hancock.jpg"
   }
  },
  "pages": {
@@ -1215,10 +1220,11 @@
   "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
   "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
   "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-  "Courses.html": "assets/EPIC_Earth.jpg",
+  "Courses.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
   "Physics_I.html": "assets/Landsat9_Launch.jpg",
   "Calculus_I.html": "assets/EPIC_Earth.jpg",
-  "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg"
+  "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg",
+  "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg"
  },
  "slides": {
   "pools": {
@@ -1724,6 +1730,11 @@
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
     "images/Sentinel6B_Launch.jpg",
     "images/GRACE_FO_PIA22445.jpg"
+   ],
+   "Intro_to_Aerospace_Engineering.html": [
+    "images/ISS_Flyaround_2021.jpg",
+    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "images/Landsat9_Launch_KLS04_0013.jpg"
    ]
   }
  }
