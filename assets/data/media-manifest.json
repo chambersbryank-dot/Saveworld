@@ -5890,5 +5890,12 @@
   "bytes": 1582394,
   "sha256": "40fa3b8eeb0a5079e936e8dcf4a0a3e24e573aecc9c7ca010ef104d8767a445e",
   "type": "application/pdf"
+ },
+ "courses/Circuits_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Circuits_Study_Guide.aa23ba369136.pdf",
+  "key": "courses/Circuits_Study_Guide.aa23ba369136.pdf",
+  "bytes": 1565899,
+  "sha256": "aa23ba36913672e4aff5beeaef72e71652f37374f2ffd2e7caab7d43b30b8060",
+  "type": "application/pdf"
  }
 }
