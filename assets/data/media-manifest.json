@@ -5946,5 +5946,12 @@
   "bytes": 1480314,
   "sha256": "8d8c11b4b9b76ac6e80393d3b3c7f657bfdb283555e7f6938855a547a4f932cd",
   "type": "application/pdf"
+ },
+ "courses/Probability_Statistics_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Probability_Statistics_Study_Guide.a82aedbdd423.pdf",
+  "key": "courses/Probability_Statistics_Study_Guide.a82aedbdd423.pdf",
+  "bytes": 1447001,
+  "sha256": "a82aedbdd4234b614b24b6d8dd56258660b3ff2492353903709a11b11122055b",
+  "type": "application/pdf"
  }
 }
