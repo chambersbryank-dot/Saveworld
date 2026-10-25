@@ -1240,7 +1240,8 @@
   "Fluid_Mechanics.html": "assets/SWOT_Orbit_Illustration.jpg",
   "Aircraft_Performance.html": "assets/ISS_Flyaround_2021.jpg",
   "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg",
-  "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg"
+  "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg",
+  "Numerical_Methods.html": "assets/DataOrbitalCenters.jpg"
  },
  "slides": {
   "pools": {
@@ -1830,6 +1831,11 @@
    "Orbital_Mechanics.html": [
     "images/ISS_Flyaround_2021.jpg",
     "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+   ],
+   "Numerical_Methods.html": [
+    "images/GOES19_GOESU_KSC.jpg",
+    "images/ISS_Flyaround_2021.jpg",
     "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
    ]
   }
