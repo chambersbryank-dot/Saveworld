@@ -1,0 +1,8 @@
+{
+"_note": "Oct 25 2026 (founder, upgrade 5): homepage numbers strip below the hero. Only figures published by the organization itself, read on its own page on as_of. Re-check by hand before changing as_of; if a figure can't be confirmed, remove the entry (never estimate).",
+"items": [
+ {"id": "toc", "page": "Ocean_Cleanup.html", "value": 65, "unit": "million", "plus": true, "source_name": "The Ocean Cleanup", "source_url": "https://theoceancleanup.com/", "source_quote": "65M+ kilograms of trash removed from the environment", "as_of": "2026-10-25"},
+ {"id": "seabin", "page": "Seabin.html", "value": 33.2, "unit": "million", "plus": false, "source_name": "Seabin", "source_url": "https://seabin.io/", "source_quote": "33.2M Items captured (Live, Sydney Harbour)", "as_of": "2026-10-25"},
+ {"id": "gan", "page": "Globe_at_Night.html", "value": 331157, "unit": "", "plus": false, "source_name": "Globe at Night (NSF NOIRLab)", "source_url": "https://globeatnight.org/", "source_quote": "331157 Total Observations", "as_of": "2026-10-25"}
+]
+}
