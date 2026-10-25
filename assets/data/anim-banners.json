@@ -1229,7 +1229,8 @@
   "Intro_to_Programming.html": "assets/ISS_Flyaround_2021.jpg",
   "Calculus_III.html": "assets/EPIC_Earth.jpg",
   "Differential_Equations.html": "assets/EPIC_Earth.jpg",
-  "Physics_II.html": "assets/SDO_Sun.jpg"
+  "Physics_II.html": "assets/SDO_Sun.jpg",
+  "Statics.html": "assets/ISS_Flyaround_2021.jpg"
  },
  "slides": {
   "pools": {
@@ -1765,6 +1766,11 @@
     "images/Aurora_Borealis_ISS072-E-159172.jpg",
     "images/GOES19_GOESU_KSC.jpg",
     "images/Landsat9_Launch_KLS04_0013.jpg"
+   ],
+   "Statics.html": [
+    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+    "images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "images/ISS_Over_Ganges_STS102.jpg"
    ]
   }
  }
