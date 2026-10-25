@@ -2,12 +2,14 @@
  "(r, θ); x = r cos θ, y = r sin θ.": {
   "fr": "(r, θ) ; x = r cos θ, y = r sin θ.",
   "es": "(r, θ); x = r cos θ, y = r sin θ.",
-  "it": "(r, θ); x = r cos θ, y = r sin θ."
+  "it": "(r, θ); x = r cos θ, y = r sin θ.",
+  "ar": "(r, θ)؛ x = r cos θ، y = r sin θ."
  },
  "0.479427, error under 1.6 × 10⁻⁶ (true value 0.479426).": {
   "fr": "0.479427, erreur inférieure à 1.6 × 10⁻⁶ (valeur exacte 0.479426).",
   "es": "0.479427, con error menor que 1.6 × 10⁻⁶ (valor real 0.479426).",
-  "it": "0.479427, errore inferiore a 1.6 × 10⁻⁶ (valore vero 0.479426)."
+  "it": "0.479427, errore inferiore a 1.6 × 10⁻⁶ (valore vero 0.479426).",
+  "ar": "0.479427، والخطأ أقل من 1.6 × 10⁻⁶ (القيمة الحقيقية 0.479426)."
  },
  "0.74686, versus the true 0.74682: an error of only 0.00003 from five points.": {
   "fr": "0.74686, contre la valeur exacte 0.74682 : une erreur de seulement 0.00003 avec cinq points.",
@@ -24,17 +26,20 @@
  "1 km²·m = 10⁶ m³, so V ≈ 2.11 × 10⁷ m³ (21 million cubic meters).": {
   "fr": "1 km²·m = 10⁶ m³, donc V ≈ 2.11 × 10⁷ m³ (21 millions de mètres cubes).",
   "es": "1 km²·m = 10⁶ m³, así que V ≈ 2.11 × 10⁷ m³ (21 millones de metros cúbicos).",
-  "it": "1 km²·m = 10⁶ m³, quindi V ≈ 2.11 × 10⁷ m³ (21 milioni di metri cubi)."
+  "it": "1 km²·m = 10⁶ m³, quindi V ≈ 2.11 × 10⁷ m³ (21 milioni di metri cubi).",
+  "ar": "1 km²·m = 10⁶ m³، إذن V ≈ 2.11 × 10⁷ m³ (21 مليون متر مكعب)."
  },
  "1 − x²/2 + x⁴/24; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (true 0.980067).": {
   "fr": "1 − x²/2 + x⁴/24 ; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (valeur exacte 0.980067).",
   "es": "1 − x²/2 + x⁴/24; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (valor real 0.980067).",
-  "it": "1 − x²/2 + x⁴/24; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (valore vero 0.980067)."
+  "it": "1 − x²/2 + x⁴/24; cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (valore vero 0.980067).",
+  "ar": "1 − x²/2 + x⁴/24؛ cos 0.2 ≈ 1 − 0.02 + 0.0000667 = 0.980067 (القيمة الحقيقية 0.980067)."
  },
  "1.105167, versus the true 1.105171.": {
   "fr": "1.105167, contre la valeur exacte 1.105171.",
   "es": "1.105167, frente al valor real 1.105171.",
-  "it": "1.105167, contro il valore vero 1.105171."
+  "it": "1.105167, contro il valore vero 1.105171.",
+  "ar": "1.105167، مقابل القيمة الحقيقية 1.105171."
  },
  "1/(n + 1) → 0, so it converges.": {
   "fr": "1/(n + 1) → 0, donc elle converge.",
@@ -51,7 +56,8 @@
  "149.6 million km": {
   "fr": "149.6 millions de km",
   "es": "149.6 millones de km",
-  "it": "149.6 milioni di km"
+  "it": "149.6 milioni di km",
+  "ar": "149.6 مليون km"
  },
  "2.25, versus the exact e ≈ 2.718; halving h shrinks the error.": {
   "fr": "2.25, contre la valeur exacte e ≈ 2.718 ; diviser h par deux réduit l’erreur.",
@@ -80,12 +86,14 @@
  "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).": {
   "fr": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).",
   "es": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).",
-  "it": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π)."
+  "it": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π).",
+  "ar": "= ½∫(1 + 2cos θ + cos²θ) dθ = ½(2π + 0 + π)."
  },
  "A = ½∫₀^(2π) (1 + cos θ)² dθ.": {
   "fr": "A = ½∫₀^(2π) (1 + cos θ)² dθ.",
   "es": "A = ½∫₀^(2π) (1 + cos θ)² dθ.",
-  "it": "A = ½∫₀^(2π) (1 + cos θ)² dθ."
+  "it": "A = ½∫₀^(2π) (1 + cos θ)² dθ.",
+  "ar": "A = ½∫₀^(2π) (1 + cos θ)² dθ."
  },
  "A DE plus a starting value.": {
   "fr": "Une ED plus une valeur de départ.",
@@ -96,7 +104,8 @@
  "A Taylor polynomial is accurate everywhere.": {
   "fr": "Un polynôme de Taylor est précis partout.",
   "es": "Un polinomio de Taylor es preciso en todas partes.",
-  "it": "Un polinomio di Taylor è preciso ovunque."
+  "it": "Un polinomio di Taylor è preciso ovunque.",
+  "ar": "كثيرة حدود تايلور دقيقة في كل مكان."
  },
  "A computer or tablet with a spreadsheet.": {
   "fr": "Un ordinateur ou une tablette avec un tableur.",
@@ -137,12 +146,14 @@
  "A mixing tank’s pollutant follows S′ = −S/50 with S(0) = 20 kg. When is S = 5 kg?": {
   "fr": "Le polluant d’une cuve de mélange suit S′ = −S/50 avec S(0) = 20 kg. Quand a-t-on S = 5 kg ?",
   "es": "El contaminante de un tanque de mezcla sigue S′ = −S/50 con S(0) = 20 kg. ¿Cuándo es S = 5 kg?",
-  "it": "L’inquinante di una vasca di miscelazione segue S′ = −S/50 con S(0) = 20 kg. Quando S = 5 kg?"
+  "it": "L’inquinante di una vasca di miscelazione segue S′ = −S/50 con S(0) = 20 kg. Quando S = 5 kg?",
+  "ar": "يتبع الملوث في خزان خلط المعادلة S′ = −S/50 مع S(0) = 20 kg. متى تكون S = 5 kg؟"
  },
  "A parametric curve gives x(t) and y(t); dy/dx = (dy/dt)/(dx/dt).": {
   "fr": "Une courbe paramétrique donne x(t) et y(t) ; dy/dx = (dy/dt)/(dx/dt).",
   "es": "Una curva paramétrica da x(t) e y(t); dy/dx = (dy/dt)/(dx/dt).",
-  "it": "Una curva parametrica dà x(t) e y(t); dy/dx = (dy/dt)/(dx/dt)."
+  "it": "Una curva parametrica dà x(t) e y(t); dy/dx = (dy/dt)/(dx/dt).",
+  "ar": "المنحنى الوسيطي يعطي x(t) وy(t)؛ dy/dx = (dy/dt)/(dx/dt)."
  },
  "A partial-fraction decomposition": {
   "fr": "Une décomposition en éléments simples",
@@ -153,7 +164,8 @@
  "A power series Σcₙ(x − a)ⁿ converges inside a radius R and diverges outside; check the endpoints separately.": {
   "fr": "Une série entière Σcₙ(x − a)ⁿ converge à l’intérieur d’un rayon R et diverge à l’extérieur ; vérifiez les bornes séparément.",
   "es": "Una serie de potencias Σcₙ(x − a)ⁿ converge dentro de un radio R y diverge fuera; revisa los extremos por separado.",
-  "it": "Una serie di potenze Σcₙ(x − a)ⁿ converge all’interno di un raggio R e diverge all’esterno; controlla gli estremi separatamente."
+  "it": "Una serie di potenze Σcₙ(x − a)ⁿ converge all’interno di un raggio R e diverge all’esterno; controlla gli estremi separatamente.",
+  "ar": "متسلسلة القوى Σcₙ(x − a)ⁿ تتقارب داخل نصف قطر R وتتباعد خارجه؛ افحص طرفي الفترة كلًا على حدة."
  },
  "A proper rational function splits into simple fractions whose integrals are logs and arctangents.": {
   "fr": "Une fraction rationnelle propre se décompose en éléments simples dont les intégrales sont des logarithmes et des arctangentes.",
@@ -182,7 +194,8 @@
  "A spreadsheet is enough.": {
   "fr": "Un tableur suffit.",
   "es": "Basta con una hoja de cálculo.",
-  "it": "Basta un foglio di calcolo."
+  "it": "Basta un foglio di calcolo.",
+  "ar": "يكفي جدول بيانات."
  },
  "A spring with k = 200 N/m is stretched from rest length by 0.10 m. How much work is done?": {
   "fr": "Un ressort de k = 200 N/m est étiré de 0.10 m depuis sa longueur au repos. Quel travail est fourni ?",
@@ -199,7 +212,8 @@
  "About 147.1 and 152.1 million km, matching NASA’s published perihelion and aphelion.": {
   "fr": "Environ 147.1 et 152.1 millions de km, en accord avec le périhélie et l’aphélie publiés par la NASA.",
   "es": "Unos 147.1 y 152.1 millones de km, que coinciden con el perihelio y el afelio publicados por la NASA.",
-  "it": "Circa 147.1 e 152.1 milioni di km, in accordo con il perielio e l’afelio pubblicati dalla NASA."
+  "it": "Circa 147.1 e 152.1 milioni di km, in accordo con il perielio e l’afelio pubblicati dalla NASA.",
+  "ar": "نحو 147.1 و152.1 مليون km، بما يطابق الحضيض والأوج اللذين نشرتهما ناسا."
  },
  "About 62.6 MJ per kilogram, finite even though the distance is infinite. Setting ½v² equal to it gives the 11.2 km/s escape speed.": {
   "fr": "Environ 62.6 MJ par kilogramme, une valeur finie alors que la distance est infinie. En posant ½v² égal à cette valeur, on obtient la vitesse de libération de 11.2 km/s.",
@@ -210,7 +224,8 @@
  "Add a column with the exact solution and the error.": {
   "fr": "Ajoutez une colonne avec la solution exacte et l’erreur.",
   "es": "Añade una columna con la solución exacta y el error.",
-  "it": "Aggiungi una colonna con la soluzione esatta e l’errore."
+  "it": "Aggiungi una colonna con la soluzione esatta e l’errore.",
+  "ar": "أضف عمودًا للحل الدقيق وعمودًا للخطأ."
  },
  "After many years the amount is 5 + 5(0.9) + 5(0.9)² + …": {
   "fr": "Après de nombreuses années, la quantité vaut 5 + 5(0.9) + 5(0.9)² + …",
@@ -263,7 +278,8 @@
  "An orbit around one focus is r = p/(1 + e cos θ), where e is the eccentricity.": {
   "fr": "Une orbite autour d’un foyer s’écrit r = p/(1 + e cos θ), où e est l’excentricité.",
   "es": "Una órbita alrededor de un foco es r = p/(1 + e cos θ), donde e es la excentricidad.",
-  "it": "Un’orbita attorno a un fuoco è r = p/(1 + e cos θ), dove e è l’eccentricità."
+  "it": "Un’orbita attorno a un fuoco è r = p/(1 + e cos θ), dove e è l’eccentricità.",
+  "ar": "المدار حول بؤرة واحدة هو r = p/(1 + e cos θ)، حيث e الاختلاف المركزي."
  },
  "An ordered list a₁, a₂, …": {
   "fr": "Une liste ordonnée a₁, a₂, …",
@@ -286,12 +302,14 @@
  "Applies formulas without checking conditions; needs to revisit the unit.": {
   "fr": "Applique les formules sans vérifier les conditions ; doit revoir l’unité.",
   "es": "Aplica fórmulas sin comprobar las condiciones; necesita repasar la unidad.",
-  "it": "Applica le formule senza verificare le condizioni; deve ripassare l’unità."
+  "it": "Applica le formule senza verificare le condizioni; deve ripassare l’unità.",
+  "ar": "يطبق الصيغ دون التحقق من الشروط؛ ويحتاج إلى مراجعة الوحدة."
  },
  "Apply Simpson’s rule with Δh = 2 m.": {
   "fr": "Appliquez la méthode de Simpson avec Δh = 2 m.",
   "es": "Aplica la regla de Simpson con Δh = 2 m.",
-  "it": "Applica la regola di Simpson con Δh = 2 m."
+  "it": "Applica la regola di Simpson con Δh = 2 m.",
+  "ar": "طبّق قاعدة سيمبسون مع Δh = 2 m."
  },
  "Apply improper integrals to escape energy and to average lifetimes.": {
   "fr": "Appliquer les intégrales impropres à l’énergie de libération et aux durées de vie moyennes.",
@@ -344,7 +362,8 @@
  "Arc length: ∫√(x′² + y′²) dt.": {
   "fr": "Longueur d’arc : ∫√(x′² + y′²) dt.",
   "es": "Longitud de arco: ∫√(x′² + y′²) dt.",
-  "it": "Lunghezza d’arco: ∫√(x′² + y′²) dt."
+  "it": "Lunghezza d’arco: ∫√(x′² + y′²) dt.",
+  "ar": "طول القوس: ∫√(x′² + y′²) dt."
  },
  "Areas, volumes by slicing, disks, washers, shells": {
   "fr": "Aires, volumes par tranches, disques, anneaux, coquilles cylindriques",
@@ -355,7 +374,8 @@
  "At x = 0.5, P₅ errs by about 10⁻⁶; at x = 2 by 0.024. Accuracy falls fast away from 0.": {
   "fr": "En x = 0.5, P₅ se trompe d’environ 10⁻⁶ ; en x = 2, de 0.024. La précision chute vite quand on s’éloigne de 0.",
   "es": "En x = 0.5, P₅ se equivoca en unos 10⁻⁶; en x = 2, en 0.024. La precisión cae rápido al alejarse de 0.",
-  "it": "In x = 0.5, P₅ sbaglia di circa 10⁻⁶; in x = 2 di 0.024. La precisione cala in fretta allontanandosi da 0."
+  "it": "In x = 0.5, P₅ sbaglia di circa 10⁻⁶; in x = 2 di 0.024. La precisione cala in fretta allontanandosi da 0.",
+  "ar": "عند x = 0.5 يخطئ P₅ بنحو 10⁻⁶؛ وعند x = 2 بمقدار 0.024. تنخفض الدقة بسرعة بالابتعاد عن 0."
  },
  "Average of left and right sums; error ∝ Δx².": {
   "fr": "Moyenne des sommes à gauche et à droite ; erreur ∝ Δx².",
@@ -366,17 +386,20 @@
  "Balance point; moment divided by mass.": {
   "fr": "Point d’équilibre ; moment divisé par la masse.",
   "es": "Punto de equilibrio; momento dividido entre masa.",
-  "it": "Punto di equilibrio; momento diviso massa."
+  "it": "Punto di equilibrio; momento diviso massa.",
+  "ar": "نقطة الاتزان؛ العزم مقسومًا على الكتلة."
  },
  "Bound the error of a Taylor approximation.": {
   "fr": "Majorer l’erreur d’une approximation de Taylor.",
   "es": "Acotar el error de una aproximación de Taylor.",
-  "it": "Stimare l’errore di un’approssimazione di Taylor."
+  "it": "Stimare l’errore di un’approssimazione di Taylor.",
+  "ar": "إيجاد حد لخطأ تقريب تايلور."
  },
  "Build Taylor and Maclaurin series and polynomials.": {
   "fr": "Construire des séries et des polynômes de Taylor et de Maclaurin.",
   "es": "Construir series y polinomios de Taylor y de Maclaurin.",
-  "it": "Costruire serie e polinomi di Taylor e di Maclaurin."
+  "it": "Costruire serie e polinomi di Taylor e di Maclaurin.",
+  "ar": "بناء متسلسلات وكثيرات حدود تايلور وماكلورين."
  },
  "By parts: 1/λ.": {
   "fr": "Par parties : 1/λ.",
@@ -435,7 +458,8 @@
  "Chooses the right technique or test unprompted, justifies it, and checks results numerically.": {
   "fr": "Choisit de lui-même la bonne technique ou le bon critère, le justifie et vérifie les résultats numériquement.",
   "es": "Elige por su cuenta la técnica o el criterio adecuado, lo justifica y comprueba los resultados numéricamente.",
-  "it": "Sceglie da solo la tecnica o il criterio giusto, lo giustifica e verifica i risultati numericamente."
+  "it": "Sceglie da solo la tecnica o il criterio giusto, lo giustifica e verifica i risultati numericamente.",
+  "ar": "يختار التقنية أو الاختبار الصحيح دون توجيه، ويبرره، ويتحقق من النتائج عدديًا."
  },
  "Circumference 2πx × height f(x) × thickness dx.": {
   "fr": "Circonférence 2πx × hauteur f(x) × épaisseur dx.",
@@ -452,12 +476,14 @@
  "Compare Taylor polynomials of sin x with the true value and with the remainder bound.": {
   "fr": "Comparer les polynômes de Taylor de sin x avec la valeur exacte et avec la majoration du reste.",
   "es": "Comparar polinomios de Taylor de sin x con el valor real y con la cota del resto.",
-  "it": "Confrontare i polinomi di Taylor di sin x con il valore vero e con la stima del resto."
+  "it": "Confrontare i polinomi di Taylor di sin x con il valore vero e con la stima del resto.",
+  "ar": "مقارنة كثيرات حدود تايلور لـ sin x بالقيمة الحقيقية وبحد الباقي."
  },
  "Compare with the trapezoid rule.": {
   "fr": "Comparez avec la méthode des trapèzes.",
   "es": "Compara con la regla del trapecio.",
-  "it": "Confronta con la regola dei trapezi."
+  "it": "Confronta con la regola dei trapezi.",
+  "ar": "قارن بقاعدة شبه المنحرف."
  },
  "Comparison test": {
   "fr": "Critère de comparaison",
@@ -480,7 +506,8 @@
  "Compute the swept area from θ = 0 to 0.5 and from θ = π − 0.25 to π + 0.25 (same 0.5 rad wide) with Simpson’s rule.": {
   "fr": "Calculez l’aire balayée de θ = 0 à 0.5 et de θ = π − 0.25 à π + 0.25 (même largeur de 0.5 rad) par la méthode de Simpson.",
   "es": "Calcula con la regla de Simpson el área barrida de θ = 0 a 0.5 y de θ = π − 0.25 a π + 0.25 (el mismo ancho de 0.5 rad).",
-  "it": "Calcola con la regola di Simpson l’area spazzata da θ = 0 a 0.5 e da θ = π − 0.25 a π + 0.25 (stessa ampiezza di 0.5 rad)."
+  "it": "Calcola con la regola di Simpson l’area spazzata da θ = 0 a 0.5 e da θ = π − 0.25 a π + 0.25 (stessa ampiezza di 0.5 rad).",
+  "ar": "احسب بقاعدة سيمبسون المساحة الممسوحة من θ = 0 إلى 0.5 ومن θ = π − 0.25 إلى π + 0.25 (بالعرض نفسه 0.5 rad)."
  },
  "Compute work done by variable forces, including pumping liquids, and hydrostatic force.": {
   "fr": "Calculer le travail de forces variables, y compris le pompage de liquides, et la force hydrostatique.",
@@ -491,17 +518,20 @@
  "Computed model values (not a real fishery). Exact P(4) = 450.9.": {
   "fr": "Valeurs calculées par le modèle (pas une pêcherie réelle). P(4) exact = 450.9.",
   "es": "Valores calculados por el modelo (no es una pesquería real). P(4) exacto = 450.9.",
-  "it": "Valori calcolati dal modello (non una vera attività di pesca). P(4) esatto = 450.9."
+  "it": "Valori calcolati dal modello (non una vera attività di pesca). P(4) esatto = 450.9.",
+  "ar": "قيم محسوبة من النموذج (ليست مصيدة حقيقية). P(4) الدقيقة = 450.9."
  },
  "Computed values for a = 1, e = 0.5.": {
   "fr": "Valeurs calculées pour a = 1, e = 0.5.",
   "es": "Valores calculados para a = 1, e = 0.5.",
-  "it": "Valori calcolati per a = 1, e = 0.5."
+  "it": "Valori calcolati per a = 1, e = 0.5.",
+  "ar": "قيم محسوبة لـ a = 1، e = 0.5."
  },
  "Computed values.": {
   "fr": "Valeurs calculées.",
   "es": "Valores calculados.",
-  "it": "Valori calcolati."
+  "it": "Valori calcolati.",
+  "ar": "قيم محسوبة."
  },
  "Conditional convergence": {
   "fr": "Convergence conditionnelle",
@@ -512,7 +542,8 @@
  "Conic orbit in polar form": {
   "fr": "Orbite conique sous forme polaire",
   "es": "Órbita cónica en forma polar",
-  "it": "Orbita conica in forma polare"
+  "it": "Orbita conica in forma polare",
+  "ar": "مدار مخروطي بالصيغة القطبية"
  },
  "Converges": {
   "fr": "Converge",
@@ -535,22 +566,26 @@
  "Converges, but the absolute values diverge.": {
   "fr": "Converge, mais la série des valeurs absolues diverge.",
   "es": "Converge, pero los valores absolutos divergen.",
-  "it": "Converge, ma i valori assoluti divergono."
+  "it": "Converge, ma i valori assoluti divergono.",
+  "ar": "متقاربة، لكن القيم المطلقة متباعدة."
  },
  "Convert between polar and Cartesian coordinates.": {
   "fr": "Passer des coordonnées polaires aux coordonnées cartésiennes et inversement.",
   "es": "Convertir entre coordenadas polares y cartesianas.",
-  "it": "Passare tra coordinate polari e cartesiane."
+  "it": "Passare tra coordinate polari e cartesiane.",
+  "ar": "التحويل بين الإحداثيات القطبية والديكارتية."
  },
  "Convert r = 2 cos θ to Cartesian form.": {
   "fr": "Convertissez r = 2 cos θ en forme cartésienne.",
   "es": "Convierte r = 2 cos θ a forma cartesiana.",
-  "it": "Converti r = 2 cos θ in forma cartesiana."
+  "it": "Converti r = 2 cos θ in forma cartesiana.",
+  "ar": "حوّل r = 2 cos θ إلى الصيغة الديكارتية."
  },
  "DE that can be written g(y) dy = h(x) dx.": {
   "fr": "ED pouvant s’écrire g(y) dy = h(x) dx.",
   "es": "ED que puede escribirse g(y) dy = h(x) dx.",
-  "it": "ED che si può scrivere g(y) dy = h(x) dx."
+  "it": "ED che si può scrivere g(y) dy = h(x) dx.",
+  "ar": "معادلة تفاضلية يمكن كتابتها g(y) dy = h(x) dx."
  },
  "Decide convergence with the p-test and comparison.": {
   "fr": "Déterminer la convergence avec le critère de Riemann et la comparaison.",
@@ -567,27 +602,32 @@
  "Degree-5 Maclaurin polynomial of sin x": {
   "fr": "Polynôme de Maclaurin de degré 5 de sin x",
   "es": "Polinomio de Maclaurin de grado 5 de sin x",
-  "it": "Polinomio di Maclaurin di grado 5 di sin x"
+  "it": "Polinomio di Maclaurin di grado 5 di sin x",
+  "ar": "كثيرة حدود ماكلورين من الدرجة 5 لـ sin x"
  },
  "Density of water": {
   "fr": "Masse volumique de l’eau",
   "es": "Densidad del agua",
-  "it": "Densità dell’acqua"
+  "it": "Densità dell’acqua",
+  "ar": "كثافة الماء"
  },
  "Describe a Kepler orbit in polar form.": {
   "fr": "Décrire une orbite képlérienne sous forme polaire.",
   "es": "Describir una órbita de Kepler en forma polar.",
-  "it": "Descrivere un’orbita kepleriana in forma polare."
+  "it": "Descrivere un’orbita kepleriana in forma polare.",
+  "ar": "وصف مدار كبلري بالصيغة القطبية."
  },
  "Describe paths by time and curves by angle, including the ellipse every satellite and planet follows.": {
   "fr": "Décrire des trajectoires en fonction du temps et des courbes en fonction d’un angle, y compris l’ellipse que suivent chaque satellite et chaque planète.",
   "es": "Describir trayectorias en función del tiempo y curvas en función de un ángulo, incluida la elipse que sigue cada satélite y cada planeta.",
-  "it": "Descrivere traiettorie in funzione del tempo e curve in funzione di un angolo, inclusa l’ellisse che segue ogni satellite e ogni pianeta."
+  "it": "Descrivere traiettorie in funzione del tempo e curve in funzione di un angolo, inclusa l’ellisse che segue ogni satellite e ogni pianeta.",
+  "ar": "وصف المسارات بدلالة الزمن والمنحنيات بدلالة الزاوية، بما في ذلك القطع الناقص الذي يتبعه كل قمر صناعي وكل كوكب."
  },
  "Desmos sliders work well.": {
   "fr": "Les curseurs de Desmos fonctionnent bien.",
   "es": "Los deslizadores de Desmos funcionan bien.",
-  "it": "I cursori di Desmos funzionano bene."
+  "it": "I cursori di Desmos funzionano bene.",
+  "ar": "منزلقات Desmos مناسبة جدًا."
  },
  "Differential equation": {
   "fr": "Équation différentielle",
@@ -628,12 +668,14 @@
  "Disks: ∫₀² π x⁴ dx = π × 32/5.": {
   "fr": "Disques : ∫₀² π x⁴ dx = π × 32/5.",
   "es": "Discos: ∫₀² π x⁴ dx = π × 32/5.",
-  "it": "Dischi: ∫₀² π x⁴ dx = π × 32/5."
+  "it": "Dischi: ∫₀² π x⁴ dx = π × 32/5.",
+  "ar": "الأقراص: ∫₀² π x⁴ dx = π × 32/5."
  },
  "Distance from the center within which a power series converges.": {
   "fr": "Distance au centre à l’intérieur de laquelle une série entière converge.",
   "es": "Distancia al centro dentro de la cual converge una serie de potencias.",
-  "it": "Distanza dal centro entro la quale una serie di potenze converge."
+  "it": "Distanza dal centro entro la quale una serie di potenze converge.",
+  "ar": "المسافة من المركز التي تتقارب داخلها متسلسلة القوى."
  },
  "Distinguish absolute from conditional convergence.": {
   "fr": "Distinguer convergence absolue et convergence conditionnelle.",
@@ -662,7 +704,8 @@
  "Divide: (dy/dt)/(dx/dt).": {
   "fr": "Diviser : (dy/dt)/(dx/dt).",
   "es": "Divide: (dy/dt)/(dx/dt).",
-  "it": "Dividi: (dy/dt)/(dx/dt)."
+  "it": "Dividi: (dy/dt)/(dx/dt).",
+  "ar": "اقسم: (dy/dt)/(dx/dt)."
  },
  "Does Σ (−1)ⁿ⁺¹/n converge absolutely?": {
   "fr": "Σ (−1)ⁿ⁺¹/n converge-t-elle absolument ?",
@@ -709,7 +752,8 @@
  "Each slice is approximately a sector of area ½r² dθ.": {
   "fr": "Chaque tranche est approximativement un secteur d’aire ½r² dθ.",
   "es": "Cada porción es aproximadamente un sector de área ½r² dθ.",
-  "it": "Ogni fetta è approssimativamente un settore di area ½r² dθ."
+  "it": "Ogni fetta è approssimativamente un settore di area ½r² dθ.",
+  "ar": "كل شريحة هي تقريبًا قطاع مساحته ½r² dθ."
  },
  "Each year a lake loses 10% of a stored pollutant, and 5 tonnes are added. What level does it settle at?": {
   "fr": "Chaque année, un lac perd 10% d’un polluant stocké, et 5 tonnes y sont ajoutées. À quel niveau se stabilise-t-il ?",
@@ -720,52 +764,62 @@
  "Earth’s orbit has a = 149.6 million km and e = 0.0167. Find its closest and farthest distances from the Sun.": {
   "fr": "L’orbite terrestre a a = 149.6 millions de km et e = 0.0167. Trouvez ses distances minimale et maximale au Soleil.",
   "es": "La órbita terrestre tiene a = 149.6 millones de km y e = 0.0167. Halla sus distancias mínima y máxima al Sol.",
-  "it": "L’orbita terrestre ha a = 149.6 milioni di km ed e = 0.0167. Trova le sue distanze minima e massima dal Sole."
+  "it": "L’orbita terrestre ha a = 149.6 milioni di km ed e = 0.0167. Trova le sue distanze minima e massima dal Sole.",
+  "ar": "لمدار الأرض a = 149.6 مليون km وe = 0.0167. أوجد أقرب وأبعد مسافة لها عن الشمس."
  },
  "Earth’s orbital eccentricity": {
   "fr": "Excentricité de l’orbite terrestre",
   "es": "Excentricidad orbital de la Tierra",
-  "it": "Eccentricità orbitale della Terra"
+  "it": "Eccentricità orbitale della Terra",
+  "ar": "الاختلاف المركزي لمدار الأرض"
  },
  "Earth’s semi-major axis": {
   "fr": "Demi-grand axe de la Terre",
   "es": "Semieje mayor de la Tierra",
-  "it": "Semiasse maggiore della Terra"
+  "it": "Semiasse maggiore della Terra",
+  "ar": "نصف المحور الأكبر للأرض"
  },
  "Eccentricity": {
   "fr": "Excentricité",
   "es": "Excentricidad",
-  "it": "Eccentricità"
+  "it": "Eccentricità",
+  "ar": "الاختلاف المركزي"
  },
  "Eliminate t from x = 2 cos t, y = sin t.": {
   "fr": "Éliminez t de x = 2 cos t, y = sin t.",
   "es": "Elimina t de x = 2 cos t, y = sin t.",
-  "it": "Elimina t da x = 2 cos t, y = sin t."
+  "it": "Elimina t da x = 2 cos t, y = sin t.",
+  "ar": "احذف t من x = 2 cos t، y = sin t."
  },
  "Endpoints must be checked separately.": {
   "fr": "Les bornes doivent être vérifiées séparément.",
   "es": "Los extremos deben revisarse por separado.",
-  "it": "Gli estremi vanno controllati separatamente."
+  "it": "Gli estremi vanno controllati separatamente.",
+  "ar": "يجب فحص الطرفين كلًا على حدة."
  },
  "Endpoints x = ±3 give terms ±1, which do not → 0.": {
   "fr": "Les bornes x = ±3 donnent des termes ±1, qui ne tendent pas vers 0.",
   "es": "Los extremos x = ±3 dan términos ±1, que no → 0.",
-  "it": "Gli estremi x = ±3 danno termini ±1, che non → 0."
+  "it": "Gli estremi x = ±3 danno termini ±1, che non → 0.",
+  "ar": "الطرفان x = ±3 يعطيان حدودًا ±1 لا تقترب من 0."
  },
  "Enter the sample areas at 0, 2, 4, 6 and 8 m above the bottom.": {
   "fr": "Saisissez les aires d’exemple à 0, 2, 4, 6 et 8 m au-dessus du fond.",
   "es": "Introduce las áreas de ejemplo a 0, 2, 4, 6 y 8 m sobre el fondo.",
-  "it": "Inserisci le aree di esempio a 0, 2, 4, 6 e 8 m sopra il fondo."
+  "it": "Inserisci le aree di esempio a 0, 2, 4, 6 e 8 m sopra il fondo.",
+  "ar": "أدخل المساحات النموذجية عند 0 و2 و4 و6 و8 m فوق القاع."
  },
  "Equal areas in equal times.": {
   "fr": "Des aires égales en des temps égaux.",
   "es": "Áreas iguales en tiempos iguales.",
-  "it": "Aree uguali in tempi uguali."
+  "it": "Aree uguali in tempi uguali.",
+  "ar": "مساحات متساوية في أزمنة متساوية."
  },
  "Equation involving derivatives of an unknown function.": {
   "fr": "Équation faisant intervenir les dérivées d’une fonction inconnue.",
   "es": "Ecuación con derivadas de una función desconocida.",
-  "it": "Equazione che coinvolge le derivate di una funzione incognita."
+  "it": "Equazione che coinvolge le derivate di una funzione incognita.",
+  "ar": "معادلة تتضمن مشتقات دالة مجهولة."
  },
  "Equations for rates of change: exponential growth and decay, cooling, mixing, and the logistic model of populations.": {
   "fr": "Des équations pour les taux de variation : croissance et décroissance exponentielles, refroidissement, mélange, et modèle logistique des populations.",
@@ -782,22 +836,26 @@
  "Estimate a reservoir’s volume from surface-area measurements at different depths.": {
   "fr": "Estimer le volume d’un réservoir à partir de mesures de la surface à différentes profondeurs.",
   "es": "Estimar el volumen de un embalse a partir de mediciones del área de la superficie a distintas profundidades.",
-  "it": "Stimare il volume di un bacino da misure dell’area della superficie a diverse profondità."
+  "it": "Stimare il volume di un bacino da misure dell’area della superficie a diverse profondità.",
+  "ar": "تقدير حجم خزان من قياسات مساحة السطح عند أعماق مختلفة."
  },
  "Estimate cos 0.2 with the degree-4 Maclaurin polynomial.": {
   "fr": "Estimez cos 0.2 avec le polynôme de Maclaurin de degré 4.",
   "es": "Estima cos 0.2 con el polinomio de Maclaurin de grado 4.",
-  "it": "Stima cos 0.2 con il polinomio di Maclaurin di grado 4."
+  "it": "Stima cos 0.2 con il polinomio di Maclaurin di grado 4.",
+  "ar": "قدّر cos 0.2 بكثيرة حدود ماكلورين من الدرجة 4."
  },
  "Estimate e^0.1 with the first four terms of its series.": {
   "fr": "Estimez e^0.1 avec les quatre premiers termes de sa série.",
   "es": "Estima e^0.1 con los cuatro primeros términos de su serie.",
-  "it": "Stima e^0.1 con i primi quattro termini della sua serie."
+  "it": "Stima e^0.1 con i primi quattro termini della sua serie.",
+  "ar": "قدّر e^0.1 بالحدود الأربعة الأولى من متسلسلتها."
  },
  "Estimate sin 0.5 with three terms and bound the error.": {
   "fr": "Estimez sin 0.5 avec trois termes et majorez l’erreur.",
   "es": "Estima sin 0.5 con tres términos y acota el error.",
-  "it": "Stima sin 0.5 con tre termini e maggiora l’errore."
+  "it": "Stima sin 0.5 con tre termini e maggiora l’errore.",
+  "ar": "قدّر sin 0.5 بثلاثة حدود وأوجد حدًا للخطأ."
  },
  "Estimate ∫₀¹ e^(−x²) dx with Simpson’s rule, n = 4.": {
   "fr": "Estimez ∫₀¹ e^(−x²) dx par la méthode de Simpson, n = 4.",
@@ -808,12 +866,14 @@
  "Euler P (h = 1)": {
   "fr": "P d’Euler (h = 1)",
   "es": "P de Euler (h = 1)",
-  "it": "P di Eulero (h = 1)"
+  "it": "P di Eulero (h = 1)",
+  "ar": "P بطريقة أويلر (h = 1)"
  },
  "Euler underestimates here (391.9 vs 450.9) because the curve bends upward during early growth; halving h roughly halves the error.": {
   "fr": "Ici, Euler sous-estime (391.9 contre 450.9) car la courbe s’incurve vers le haut au début de la croissance ; diviser h par deux divise à peu près l’erreur par deux.",
   "es": "Aquí Euler subestima (391.9 frente a 450.9) porque la curva se curva hacia arriba al principio del crecimiento; reducir h a la mitad reduce el error más o menos a la mitad.",
-  "it": "Qui Eulero sottostima (391.9 contro 450.9) perché la curva si piega verso l’alto all’inizio della crescita; dimezzare h dimezza circa l’errore."
+  "it": "Qui Eulero sottostima (391.9 contro 450.9) perché la curva si piega verso l’alto all’inizio della crescita; dimezzare h dimezza circa l’errore.",
+  "ar": "هنا تقلل طريقة أويلر التقدير (391.9 مقابل 450.9) لأن المنحنى ينحني إلى الأعلى في بداية النمو؛ وتنصيف h ينصّف الخطأ تقريبًا."
  },
  "Euler’s method": {
   "fr": "Méthode d’Euler",
@@ -824,7 +884,8 @@
  "Euler’s method for the logistic equation": {
   "fr": "Méthode d’Euler pour l’équation logistique",
   "es": "Método de Euler para la ecuación logística",
-  "it": "Metodo di Eulero per l’equazione logistica"
+  "it": "Metodo di Eulero per l’equazione logistica",
+  "ar": "طريقة أويلر للمعادلة اللوجستية"
  },
  "Euler’s method gives the exact answer if you are careful.": {
   "fr": "La méthode d’Euler donne la réponse exacte si l’on est soigneux.",
@@ -865,12 +926,14 @@
  "Evaluate ∫₂^∞ dx/x³.": {
   "fr": "Calculez ∫₂^∞ dx/x³.",
   "es": "Evalúa ∫₂^∞ dx/x³.",
-  "it": "Calcola ∫₂^∞ dx/x³."
+  "it": "Calcola ∫₂^∞ dx/x³.",
+  "ar": "احسب ∫₂^∞ dx/x³."
  },
  "Every Earth-observing satellite follows a path described by the polar orbit equation in this unit. Mission designers choose the orbit’s shape and tilt so instruments revisit the same places under similar lighting, which makes changes on the ground easier to detect.": {
   "fr": "Chaque satellite d’observation de la Terre suit une trajectoire décrite par l’équation polaire de l’orbite de cette unité. Les concepteurs de missions choisissent la forme et l’inclinaison de l’orbite pour que les instruments repassent aux mêmes endroits sous un éclairage similaire, ce qui facilite la détection des changements au sol.",
   "es": "Cada satélite de observación de la Tierra sigue una trayectoria descrita por la ecuación polar de la órbita de esta unidad. Los diseñadores de misiones eligen la forma y la inclinación de la órbita para que los instrumentos vuelvan a pasar por los mismos lugares con una iluminación parecida, lo que facilita detectar cambios en el terreno.",
-  "it": "Ogni satellite di osservazione della Terra segue una traiettoria descritta dall’equazione polare dell’orbita di questa unità. I progettisti di missione scelgono forma e inclinazione dell’orbita in modo che gli strumenti ripassino sugli stessi luoghi con un’illuminazione simile, il che rende più facile rilevare i cambiamenti al suolo."
+  "it": "Ogni satellite di osservazione della Terra segue una traiettoria descritta dall’equazione polare dell’orbita di questa unità. I progettisti di missione scelgono forma e inclinazione dell’orbita in modo che gli strumenti ripassino sugli stessi luoghi con un’illuminazione simile, il che rende più facile rilevare i cambiamenti al suolo.",
+  "ar": "كل قمر صناعي لرصد الأرض يتبع مسارًا تصفه معادلة المدار القطبية في هذه الوحدة. ويختار مصممو البعثات شكل المدار وميله بحيث تعود الأجهزة إلى الأماكن نفسها في ظروف إضاءة متشابهة، مما يسهّل رصد التغيرات على الأرض."
  },
  "Every application has the same pattern: approximate one thin slice, write its contribution, integrate.": {
   "fr": "Chaque application suit le même schéma : approcher une tranche fine, écrire sa contribution, intégrer.",
@@ -881,17 +944,20 @@
  "Every derivative of eˣ at 0 is 1.": {
   "fr": "Toutes les dérivées de eˣ en 0 valent 1.",
   "es": "Todas las derivadas de eˣ en 0 valen 1.",
-  "it": "Tutte le derivate di eˣ in 0 valgono 1."
+  "it": "Tutte le derivate di eˣ in 0 valgono 1.",
+  "ar": "كل مشتقات eˣ عند 0 تساوي 1."
  },
  "Every smooth function equals its Taylor series.": {
   "fr": "Toute fonction lisse est égale à sa série de Taylor.",
   "es": "Toda función suave es igual a su serie de Taylor.",
-  "it": "Ogni funzione liscia è uguale alla sua serie di Taylor."
+  "it": "Ogni funzione liscia è uguale alla sua serie di Taylor.",
+  "ar": "كل دالة ملساء تساوي متسلسلة تايلور الخاصة بها."
  },
  "Explain why equal angles do not give equal areas, and so take unequal times.": {
   "fr": "Expliquez pourquoi des angles égaux ne donnent pas des aires égales, et prennent donc des temps inégaux.",
   "es": "Explica por qué ángulos iguales no dan áreas iguales y, por tanto, llevan tiempos distintos.",
-  "it": "Spiega perché angoli uguali non danno aree uguali, e quindi richiedono tempi diversi."
+  "it": "Spiega perché angoli uguali non danno aree uguali, e quindi richiedono tempi diversi.",
+  "ar": "اشرح لماذا لا تعطي الزوايا المتساوية مساحات متساوية، وبالتالي تستغرق أزمنة غير متساوية."
  },
  "Exponential growth and decay": {
   "fr": "Croissance et décroissance exponentielles",
@@ -902,7 +968,8 @@
  "Exponential series": {
   "fr": "Série exponentielle",
   "es": "Serie exponencial",
-  "it": "Serie esponenziale"
+  "it": "Serie esponenziale",
+  "ar": "المتسلسلة الأسية"
  },
  "Exponentials and logarithms.": {
   "fr": "Exponentielles et logarithmes.",
@@ -913,12 +980,14 @@
  "Fill down Euler steps to t = 4.": {
   "fr": "Recopiez vers le bas les pas d’Euler jusqu’à t = 4.",
   "es": "Copia hacia abajo los pasos de Euler hasta t = 4.",
-  "it": "Trascina verso il basso i passi di Eulero fino a t = 4."
+  "it": "Trascina verso il basso i passi di Eulero fino a t = 4.",
+  "ar": "املأ خطوات أويلر نزولًا حتى t = 4."
  },
  "Find areas and arc lengths in polar coordinates.": {
   "fr": "Trouver des aires et des longueurs d’arc en coordonnées polaires.",
   "es": "Hallar áreas y longitudes de arco en coordenadas polares.",
-  "it": "Trovare aree e lunghezze d’arco in coordinate polari."
+  "it": "Trovare aree e lunghezze d’arco in coordinate polari.",
+  "ar": "إيجاد المساحات وأطوال الأقواس في الإحداثيات القطبية."
  },
  "Find limits of sequences.": {
   "fr": "Trouver les limites de suites.",
@@ -929,7 +998,8 @@
  "Find the Maclaurin series of 1/(1 − x).": {
   "fr": "Trouvez la série de Maclaurin de 1/(1 − x).",
   "es": "Halla la serie de Maclaurin de 1/(1 − x).",
-  "it": "Trova la serie di Maclaurin di 1/(1 − x)."
+  "it": "Trova la serie di Maclaurin di 1/(1 − x).",
+  "ar": "أوجد متسلسلة ماكلورين لـ 1/(1 − x)."
  },
  "Find the arc length of y = (2/3)x^(3/2) from x = 0 to 3.": {
   "fr": "Trouvez la longueur d’arc de y = (2/3)x^(3/2) de x = 0 à 3.",
@@ -940,17 +1010,20 @@
  "Find the area inside r = 3.": {
   "fr": "Trouvez l’aire à l’intérieur de r = 3.",
   "es": "Halla el área dentro de r = 3.",
-  "it": "Trova l’area all’interno di r = 3."
+  "it": "Trova l’area all’interno di r = 3.",
+  "ar": "أوجد المساحة داخل r = 3."
  },
  "Find the area inside the cardioid r = 1 + cos θ.": {
   "fr": "Trouvez l’aire à l’intérieur de la cardioïde r = 1 + cos θ.",
   "es": "Halla el área dentro de la cardioide r = 1 + cos θ.",
-  "it": "Trova l’area all’interno della cardioide r = 1 + cos θ."
+  "it": "Trova l’area all’interno della cardioide r = 1 + cos θ.",
+  "ar": "أوجد المساحة داخل منحنى القلب r = 1 + cos θ."
  },
  "Find the area of the circle r = 3.": {
   "fr": "Trouvez l’aire du cercle r = 3.",
   "es": "Halla el área del círculo r = 3.",
-  "it": "Trova l’area del cerchio r = 3."
+  "it": "Trova l’area del cerchio r = 3.",
+  "ar": "أوجد مساحة الدائرة r = 3."
  },
  "Find the center of mass of rods and thin plates.": {
   "fr": "Trouver le centre de masse de tiges et de plaques minces.",
@@ -961,37 +1034,44 @@
  "Find the interval of convergence of Σ xⁿ/3ⁿ.": {
   "fr": "Trouvez l’intervalle de convergence de Σ xⁿ/3ⁿ.",
   "es": "Halla el intervalo de convergencia de Σ xⁿ/3ⁿ.",
-  "it": "Trova l’intervallo di convergenza di Σ xⁿ/3ⁿ."
+  "it": "Trova l’intervallo di convergenza di Σ xⁿ/3ⁿ.",
+  "ar": "أوجد فترة تقارب Σ xⁿ/3ⁿ."
  },
  "Find the length of x = cos t, y = sin t for 0 ≤ t ≤ 2π.": {
   "fr": "Trouvez la longueur de x = cos t, y = sin t pour 0 ≤ t ≤ 2π.",
   "es": "Halla la longitud de x = cos t, y = sin t para 0 ≤ t ≤ 2π.",
-  "it": "Trova la lunghezza di x = cos t, y = sin t per 0 ≤ t ≤ 2π."
+  "it": "Trova la lunghezza di x = cos t, y = sin t per 0 ≤ t ≤ 2π.",
+  "ar": "أوجد طول x = cos t، y = sin t عندما 0 ≤ t ≤ 2π."
  },
  "Find the radius and interval of convergence of a power series.": {
   "fr": "Trouver le rayon et l’intervalle de convergence d’une série entière.",
   "es": "Hallar el radio y el intervalo de convergencia de una serie de potencias.",
-  "it": "Trovare il raggio e l’intervallo di convergenza di una serie di potenze."
+  "it": "Trovare il raggio e l’intervallo di convergenza di una serie di potenze.",
+  "ar": "إيجاد نصف قطر التقارب وفترة التقارب لمتسلسلة قوى."
  },
  "Find the radius of convergence of Σ xⁿ/3ⁿ.": {
   "fr": "Trouvez le rayon de convergence de Σ xⁿ/3ⁿ.",
   "es": "Halla el radio de convergencia de Σ xⁿ/3ⁿ.",
-  "it": "Trova il raggio di convergenza di Σ xⁿ/3ⁿ."
+  "it": "Trova il raggio di convergenza di Σ xⁿ/3ⁿ.",
+  "ar": "أوجد نصف قطر تقارب Σ xⁿ/3ⁿ."
  },
  "Find the radius of convergence of Σ xⁿ/n.": {
   "fr": "Trouvez le rayon de convergence de Σ xⁿ/n.",
   "es": "Halla el radio de convergencia de Σ xⁿ/n.",
-  "it": "Trova il raggio di convergenza di Σ xⁿ/n."
+  "it": "Trova il raggio di convergenza di Σ xⁿ/n.",
+  "ar": "أوجد نصف قطر تقارب Σ xⁿ/n."
  },
  "Find the slope of x = t², y = t³ at t = 1.": {
   "fr": "Trouvez la pente de x = t², y = t³ en t = 1.",
   "es": "Halla la pendiente de x = t², y = t³ en t = 1.",
-  "it": "Trova la pendenza di x = t², y = t³ in t = 1."
+  "it": "Trova la pendenza di x = t², y = t³ in t = 1.",
+  "ar": "أوجد ميل x = t²، y = t³ عند t = 1."
  },
  "Find the volume when the region under y = x², 0 ≤ x ≤ 2, is spun about the x-axis.": {
   "fr": "Trouvez le volume obtenu en faisant tourner autour de l’axe des x la région sous y = x², 0 ≤ x ≤ 2.",
   "es": "Halla el volumen que se obtiene al girar alrededor del eje x la región bajo y = x², 0 ≤ x ≤ 2.",
-  "it": "Trova il volume ottenuto ruotando attorno all’asse x la regione sotto y = x², 0 ≤ x ≤ 2."
+  "it": "Trova il volume ottenuto ruotando attorno all’asse x la regione sotto y = x², 0 ≤ x ≤ 2.",
+  "ar": "أوجد الحجم الناتج عن دوران المنطقة تحت y = x²، 0 ≤ x ≤ 2، حول المحور x."
  },
  "Find the volume when the region under y = √x, 0 ≤ x ≤ 4, is spun about the x-axis.": {
   "fr": "Trouvez le volume obtenu en faisant tourner autour de l’axe des x la région sous y = √x, 0 ≤ x ≤ 4.",
@@ -1008,7 +1088,8 @@
  "Find where the small-angle approximation sin x ≈ x is off by 1%.": {
   "fr": "Trouvez à partir d’où l’approximation des petits angles sin x ≈ x est fausse de 1%.",
   "es": "Halla dónde la aproximación de ángulo pequeño sin x ≈ x se desvía un 1%.",
-  "it": "Trova dove l’approssimazione per piccoli angoli sin x ≈ x sbaglia dell’1%."
+  "it": "Trova dove l’approssimazione per piccoli angoli sin x ≈ x sbaglia dell’1%.",
+  "ar": "أوجد أين يخطئ تقريب الزاوية الصغيرة sin x ≈ x بنسبة 1%."
  },
  "Find ∫₀¹ x eˣ dx.": {
   "fr": "Calculez ∫₀¹ x eˣ dx.",
@@ -1019,12 +1100,14 @@
  "Find ∫₀¹ x/(x + 1) dx.": {
   "fr": "Calculez ∫₀¹ x/(x + 1) dx.",
   "es": "Halla ∫₀¹ x/(x + 1) dx.",
-  "it": "Trova ∫₀¹ x/(x + 1) dx."
+  "it": "Trova ∫₀¹ x/(x + 1) dx.",
+  "ar": "أوجد ∫₀¹ x/(x + 1) dx."
  },
  "Find ∫₀¹ x² eˣ dx.": {
   "fr": "Calculez ∫₀¹ x² eˣ dx.",
   "es": "Halla ∫₀¹ x² eˣ dx.",
-  "it": "Trova ∫₀¹ x² eˣ dx."
+  "it": "Trova ∫₀¹ x² eˣ dx.",
+  "ar": "أوجد ∫₀¹ x² eˣ dx."
  },
  "Find ∫₂³ dx/(x² − 1).": {
   "fr": "Calculez ∫₂³ dx/(x² − 1).",
@@ -1035,7 +1118,8 @@
  "Follows worked examples but struggles to choose a method.": {
   "fr": "Suit les exemples corrigés mais a du mal à choisir une méthode.",
   "es": "Sigue los ejemplos resueltos pero le cuesta elegir un método.",
-  "it": "Segue gli esempi svolti ma fatica a scegliere un metodo."
+  "it": "Segue gli esempi svolti ma fatica a scegliere un metodo.",
+  "ar": "يتابع الأمثلة المحلولة لكنه يجد صعوبة في اختيار الطريقة."
  },
  "For P′ = rP(1 − P/K), at what population is growth fastest?": {
   "fr": "Pour P′ = rP(1 − P/K), pour quelle population la croissance est-elle la plus rapide ?",
@@ -1046,7 +1130,8 @@
  "For an orbit r = p/(1 + e cos θ), e = 0 gives…": {
   "fr": "Pour une orbite r = p/(1 + e cos θ), e = 0 donne…",
   "es": "Para una órbita r = p/(1 + e cos θ), e = 0 da…",
-  "it": "Per un’orbita r = p/(1 + e cos θ), e = 0 dà…"
+  "it": "Per un’orbita r = p/(1 + e cos θ), e = 0 dà…",
+  "ar": "في المدار r = p/(1 + e cos θ)، تعطي e = 0…"
  },
  "For conditionally convergent series it can.": {
   "fr": "Pour les séries semi-convergentes, cela peut la changer.",
@@ -1075,7 +1160,8 @@
  "For small θ, sin θ ≈…": {
   "fr": "Pour θ petit, sin θ ≈…",
   "es": "Para θ pequeño, sin θ ≈…",
-  "it": "Per θ piccolo, sin θ ≈…"
+  "it": "Per θ piccolo, sin θ ≈…",
+  "ar": "عندما تكون θ صغيرة، sin θ ≈…"
  },
  "For √(a² − x²), substitute x = a sin θ; for √(a² + x²), x = a tan θ.": {
   "fr": "Pour √(a² − x²), posez x = a sin θ ; pour √(a² + x²), x = a tan θ.",
@@ -1092,17 +1178,20 @@
  "Four short computer labs apply the units with a spreadsheet: Euler’s method for a population model, Simpson’s rule for a reservoir volume, Taylor-series accuracy, and Kepler’s second law in polar coordinates.": {
   "fr": "Quatre courts travaux pratiques sur ordinateur appliquent les unités avec un tableur : la méthode d’Euler pour un modèle de population, la méthode de Simpson pour le volume d’un réservoir, la précision des séries de Taylor, et la deuxième loi de Kepler en coordonnées polaires.",
   "es": "Cuatro prácticas cortas de computadora aplican las unidades con una hoja de cálculo: el método de Euler para un modelo de población, la regla de Simpson para el volumen de un embalse, la precisión de las series de Taylor y la segunda ley de Kepler en coordenadas polares.",
-  "it": "Quattro brevi laboratori al computer applicano le unità con un foglio di calcolo: il metodo di Eulero per un modello di popolazione, la regola di Simpson per il volume di un bacino, la precisione delle serie di Taylor e la seconda legge di Keplero in coordinate polari."
+  "it": "Quattro brevi laboratori al computer applicano le unità con un foglio di calcolo: il metodo di Eulero per un modello di popolazione, la regola di Simpson per il volume di un bacino, la precisione delle serie di Taylor e la seconda legge di Keplero in coordinate polari.",
+  "ar": "أربعة مختبرات حاسوبية قصيرة تطبّق الوحدات باستخدام جدول بيانات: طريقة أويلر لنموذج مجموعة سكانية، وقاعدة سيمبسون لحجم خزان، ودقة متسلسلات تايلور، وقانون كبلر الثاني في الإحداثيات القطبية."
  },
  "Free MIT lectures and problem sets for integration and series.": {
   "fr": "Cours et séries d’exercices gratuits du MIT sur l’intégration et les séries.",
   "es": "Clases y listas de problemas gratuitas del MIT sobre integración y series.",
-  "it": "Lezioni ed esercizi gratuiti del MIT su integrazione e serie."
+  "it": "Lezioni ed esercizi gratuiti del MIT su integrazione e serie.",
+  "ar": "محاضرات ومجموعات مسائل مجانية من MIT في التكامل والمتسلسلات."
  },
  "Free self-study Calculus II: integration, applications, improper integrals, differential equations, series, polar curves, with labs and exam prep.": {
   "fr": "Analyse II gratuite en autoformation : intégration, applications, intégrales impropres, équations différentielles, séries, courbes polaires, avec TP et préparation aux examens.",
   "es": "Cálculo II gratuito para estudiar por tu cuenta: integración, aplicaciones, integrales impropias, ecuaciones diferenciales, series y curvas polares, con prácticas y preparación para exámenes.",
-  "it": "Analisi II gratuita in autoapprendimento: integrazione, applicazioni, integrali impropri, equazioni differenziali, serie, curve polari, con laboratori e preparazione agli esami."
+  "it": "Analisi II gratuita in autoapprendimento: integrazione, applicazioni, integrali impropri, equazioni differenziali, serie, curve polari, con laboratori e preparazione agli esami.",
+  "ar": "مقرر حساب التفاضل والتكامل II المجاني للدراسة الذاتية: التكامل، والتطبيقات، والتكاملات المعتلة، والمعادلات التفاضلية، والمتسلسلات، والمنحنيات القطبية، مع مختبرات وتحضير للاختبارات."
  },
  "Free textbook section with comparison tests.": {
   "fr": "Section de manuel gratuite avec critères de comparaison.",
@@ -1119,7 +1208,8 @@
  "From 0 to 1: e − 2.": {
   "fr": "De 0 à 1 : e − 2.",
   "es": "De 0 a 1: e − 2.",
-  "it": "Da 0 a 1: e − 2."
+  "it": "Da 0 a 1: e − 2.",
+  "ar": "من 0 إلى 1: e − 2."
  },
  "GM/R per kg.": {
   "fr": "GM/R par kg.",
@@ -1148,7 +1238,8 @@
  "Geometric series.": {
   "fr": "Série géométrique.",
   "es": "Serie geométrica.",
-  "it": "Serie geometrica."
+  "it": "Serie geometrica.",
+  "ar": "متسلسلة هندسية."
  },
  "Geometric with a = 1, r = ½.": {
   "fr": "Géométrique avec a = 1, r = ½.",
@@ -1159,7 +1250,8 @@
  "Geometric: 3/(1 − 2/3).": {
   "fr": "Géométrique : 3/(1 − 2/3).",
   "es": "Geométrica: 3/(1 − 2/3).",
-  "it": "Geometrica: 3/(1 − 2/3)."
+  "it": "Geometrica: 3/(1 − 2/3).",
+  "ar": "هندسية: 3/(1 − 2/3)."
  },
  "Geometric: 5/(1 − 0.9).": {
   "fr": "Géométrique : 5/(1 − 0.9).",
@@ -1176,12 +1268,14 @@
  "Graph parametric and polar curves, sliders and Taylor polynomials.": {
   "fr": "Tracer des courbes paramétriques et polaires, des curseurs et des polynômes de Taylor.",
   "es": "Graficar curvas paramétricas y polares, deslizadores y polinomios de Taylor.",
-  "it": "Tracciare curve parametriche e polari, cursori e polinomi di Taylor."
+  "it": "Tracciare curve parametriche e polari, cursori e polinomi di Taylor.",
+  "ar": "رسم المنحنيات الوسيطية والقطبية، والمنزلقات، وكثيرات حدود تايلور."
  },
  "Graph parametric curves, find dy/dx and arc length.": {
   "fr": "Tracer des courbes paramétriques, trouver dy/dx et la longueur d’arc.",
   "es": "Graficar curvas paramétricas, hallar dy/dx y la longitud de arco.",
-  "it": "Tracciare curve parametriche, trovare dy/dx e la lunghezza d’arco."
+  "it": "Tracciare curve parametriche, trovare dy/dx e la lunghezza d’arco.",
+  "ar": "رسم المنحنيات الوسيطية وإيجاد dy/dx وطول القوس."
  },
  "Growth is fastest at K/2 and slows to zero only as P approaches K.": {
   "fr": "La croissance est la plus rapide à K/2 et ne s’annule que lorsque P approche de K.",
@@ -1204,7 +1298,8 @@
  "Height h (m)": {
   "fr": "Hauteur h (m)",
   "es": "Altura h (m)",
-  "it": "Altezza h (m)"
+  "it": "Altezza h (m)",
+  "ar": "الارتفاع h (m)"
  },
  "How much energy per kilogram does it take to escape Earth’s gravity from its surface (ignoring air and rotation)?": {
   "fr": "Quelle énergie par kilogramme faut-il pour échapper à la gravité terrestre depuis la surface (sans tenir compte de l’air ni de la rotation) ?",
@@ -1215,7 +1310,8 @@
  "How stretched an orbit is.": {
   "fr": "À quel point une orbite est étirée.",
   "es": "Cuán alargada es una órbita.",
-  "it": "Quanto è allungata un’orbita."
+  "it": "Quanto è allungata un’orbita.",
+  "ar": "مدى استطالة المدار."
  },
  "Hydrostatic pressure on a dam grows…": {
   "fr": "La pression hydrostatique sur un barrage augmente…",
@@ -1286,7 +1382,8 @@
  "Integral with an infinite limit or integrand.": {
   "fr": "Intégrale avec une borne ou une intégrande infinie.",
   "es": "Integral con un límite o un integrando infinito.",
-  "it": "Integrale con un estremo o un integrando infinito."
+  "it": "Integrale con un estremo o un integrando infinito.",
+  "ar": "تكامل بحد أو دالة مكاملة لانهائية."
  },
  "Integrals over infinite intervals or across infinite spikes: when they add up to a finite number, and when they do not.": {
   "fr": "Intégrales sur des intervalles infinis ou à travers des pics infinis : quand leur somme est un nombre fini, et quand elle ne l’est pas.",
@@ -1345,17 +1442,20 @@
  "It is at one focus of the ellipse.": {
   "fr": "Il est à l’un des foyers de l’ellipse.",
   "es": "Está en uno de los focos de la elipse.",
-  "it": "È in uno dei fuochi dell’ellisse."
+  "it": "È in uno dei fuochi dell’ellisse.",
+  "ar": "إنها في إحدى بؤرتي القطع الناقص."
  },
  "It is best near the center a and can be terrible far away or outside the radius of convergence.": {
   "fr": "Il est meilleur près du centre a et peut être très mauvais loin de celui-ci ou hors du rayon de convergence.",
   "es": "Es mejor cerca del centro a y puede ser pésimo lejos de él o fuera del radio de convergencia.",
-  "it": "È migliore vicino al centro a e può essere pessimo lontano da esso o fuori dal raggio di convergenza."
+  "it": "È migliore vicino al centro a e può essere pessimo lontano da esso o fuori dal raggio di convergenza.",
+  "ar": "تكون أفضل قرب المركز a وقد تكون سيئة جدًا بعيدًا عنه أو خارج نصف قطر التقارب."
  },
  "It is ½∫r² dθ, from thin pie slices.": {
   "fr": "Elle vaut ½∫r² dθ, à partir de fines parts de tarte.",
   "es": "Es ½∫r² dθ, a partir de finas porciones de pastel.",
-  "it": "È ½∫r² dθ, da sottili fette di torta."
+  "it": "È ½∫r² dθ, da sottili fette di torta.",
+  "ar": "إنها ½∫r² dθ، من شرائح رقيقة كشرائح الفطيرة."
  },
  "It still has a value; estimate it numerically.": {
   "fr": "Elle a quand même une valeur ; estimez-la numériquement.",
@@ -1378,32 +1478,38 @@
  "Keeping only the first term turns sin θ into θ, the small-angle approximation behind the simple pendulum formula.": {
   "fr": "Ne garder que le premier terme transforme sin θ en θ : c’est l’approximation des petits angles derrière la formule du pendule simple.",
   "es": "Quedarse solo con el primer término convierte sin θ en θ, la aproximación de ángulo pequeño detrás de la fórmula del péndulo simple.",
-  "it": "Tenere solo il primo termine trasforma sin θ in θ, l’approssimazione per piccoli angoli dietro la formula del pendolo semplice."
+  "it": "Tenere solo il primo termine trasforma sin θ in θ, l’approssimazione per piccoli angoli dietro la formula del pendolo semplice.",
+  "ar": "الاحتفاظ بالحد الأول فقط يحوّل sin θ إلى θ، وهو تقريب الزاوية الصغيرة الذي تقوم عليه صيغة البندول البسيط."
  },
  "Kepler’s second law": {
   "fr": "Deuxième loi de Kepler",
   "es": "Segunda ley de Kepler",
-  "it": "Seconda legge di Keplero"
+  "it": "Seconda legge di Keplero",
+  "ar": "قانون كبلر الثاني"
  },
  "Kepler’s second law (equal areas in equal times) is the statement that ½r² dθ/dt is constant.": {
   "fr": "La deuxième loi de Kepler (des aires égales en des temps égaux) revient à dire que ½r² dθ/dt est constant.",
   "es": "La segunda ley de Kepler (áreas iguales en tiempos iguales) equivale a decir que ½r² dθ/dt es constante.",
-  "it": "La seconda legge di Keplero (aree uguali in tempi uguali) equivale a dire che ½r² dθ/dt è costante."
+  "it": "La seconda legge di Keplero (aree uguali in tempi uguali) equivale a dire che ½r² dθ/dt è costante.",
+  "ar": "قانون كبلر الثاني (مساحات متساوية في أزمنة متساوية) يعني أن ½r² dθ/dt ثابت."
  },
  "Kepler’s second law says r² dθ/dt is…": {
   "fr": "La deuxième loi de Kepler dit que r² dθ/dt est…",
   "es": "La segunda ley de Kepler dice que r² dθ/dt es…",
-  "it": "La seconda legge di Keplero dice che r² dθ/dt è…"
+  "it": "La seconda legge di Keplero dice che r² dθ/dt è…",
+  "ar": "ينص قانون كبلر الثاني على أن r² dθ/dt…"
  },
  "Key series: eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1).": {
   "fr": "Séries clés : eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1).",
   "es": "Series clave: eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1).",
-  "it": "Serie fondamentali: eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1)."
+  "it": "Serie fondamentali: eˣ = Σxⁿ/n!, sin x = x − x³/3! + x⁵/5! − …, cos x = 1 − x²/2! + x⁴/4! − …, ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1).",
+  "ar": "متسلسلات أساسية: eˣ = Σxⁿ/n!، sin x = x − x³/3! + x⁵/5! − …، cos x = 1 − x²/2! + x⁴/4! − …، ln(1 + x) = x − x²/2 + x³/3 − … (|x| < 1)."
  },
  "Knowing an approximation’s error is how engineers decide which simplified model to trust.": {
   "fr": "Connaître l’erreur d’une approximation, c’est ce qui permet aux ingénieurs de décider à quel modèle simplifié se fier.",
   "es": "Conocer el error de una aproximación es como los ingenieros deciden en qué modelo simplificado confiar.",
-  "it": "Conoscere l’errore di un’approssimazione è il modo in cui gli ingegneri decidono di quale modello semplificato fidarsi."
+  "it": "Conoscere l’errore di un’approssimazione è il modo in cui gli ingegneri decidono di quale modello semplificato fidarsi.",
+  "ar": "معرفة خطأ التقريب هي الطريقة التي يقرر بها المهندسون أي نموذج مبسط يمكن الوثوق به."
  },
  "L < 1 converges, L > 1 diverges, L = 1 inconclusive.": {
   "fr": "L < 1 converge, L > 1 diverge, L = 1 on ne peut pas conclure.",
@@ -1420,22 +1526,26 @@
  "Lab A: Euler’s method for a recovering fish stock": {
   "fr": "TP A : méthode d’Euler pour un stock de poissons en reconstitution",
   "es": "Práctica A: método de Euler para una población de peces en recuperación",
-  "it": "Laboratorio A: metodo di Eulero per uno stock ittico in ripresa"
+  "it": "Laboratorio A: metodo di Eulero per uno stock ittico in ripresa",
+  "ar": "المختبر A: طريقة أويلر لمخزون سمكي يتعافى"
  },
  "Lab B: Reservoir volume with Simpson’s rule": {
   "fr": "TP B : volume d’un réservoir par la méthode de Simpson",
   "es": "Práctica B: volumen de un embalse con la regla de Simpson",
-  "it": "Laboratorio B: volume di un bacino con la regola di Simpson"
+  "it": "Laboratorio B: volume di un bacino con la regola di Simpson",
+  "ar": "المختبر B: حجم خزان بقاعدة سيمبسون"
  },
  "Lab C: How good is a Taylor polynomial?": {
   "fr": "TP C : quelle est la qualité d’un polynôme de Taylor ?",
   "es": "Práctica C: ¿qué tan bueno es un polinomio de Taylor?",
-  "it": "Laboratorio C: quanto è buono un polinomio di Taylor?"
+  "it": "Laboratorio C: quanto è buono un polinomio di Taylor?",
+  "ar": "المختبر C: ما مدى جودة كثيرة حدود تايلور؟"
  },
  "Lab D: Kepler’s second law in polar coordinates": {
   "fr": "TP D : deuxième loi de Kepler en coordonnées polaires",
   "es": "Práctica D: segunda ley de Kepler en coordenadas polares",
-  "it": "Laboratorio D: seconda legge di Keplero in coordinate polari"
+  "it": "Laboratorio D: seconda legge di Keplero in coordinate polari",
+  "ar": "المختبر D: قانون كبلر الثاني في الإحداثيات القطبية"
  },
  "Lake Erie algal bloom forecast": {
   "fr": "Prévision des proliférations d’algues du lac Érié",
@@ -1446,7 +1556,8 @@
  "Length of a curve, ∫√(1 + f′²) dx.": {
   "fr": "Longueur d’une courbe, ∫√(1 + f′²) dx.",
   "es": "Longitud de una curva, ∫√(1 + f′²) dx.",
-  "it": "Lunghezza di una curva, ∫√(1 + f′²) dx."
+  "it": "Lunghezza di una curva, ∫√(1 + f′²) dx.",
+  "ar": "طول منحنى، ∫√(1 + f′²) dx."
  },
  "Logistic equation": {
   "fr": "Équation logistique",
@@ -1475,22 +1586,26 @@
  "Long-run limit K of a logistic population.": {
   "fr": "Limite à long terme K d’une population logistique.",
   "es": "Límite a largo plazo K de una población logística.",
-  "it": "Limite a lungo termine K di una popolazione logistica."
+  "it": "Limite a lungo termine K di una popolazione logistica.",
+  "ar": "النهاية طويلة الأمد K لمجموعة لوجستية."
  },
  "MIT OpenCourseWare 18.01SC": {
   "fr": "MIT OpenCourseWare 18.01SC",
   "es": "MIT OpenCourseWare 18.01SC",
-  "it": "MIT OpenCourseWare 18.01SC"
+  "it": "MIT OpenCourseWare 18.01SC",
+  "ar": "MIT OpenCourseWare 18.01SC"
  },
  "MIT OpenCourseWare 18.02SC": {
   "fr": "MIT OpenCourseWare 18.02SC",
   "es": "MIT OpenCourseWare 18.02SC",
-  "it": "MIT OpenCourseWare 18.02SC"
+  "it": "MIT OpenCourseWare 18.02SC",
+  "ar": "MIT OpenCourseWare 18.02SC"
  },
  "Maclaurin series": {
   "fr": "Série de Maclaurin",
   "es": "Serie de Maclaurin",
-  "it": "Serie di Maclaurin"
+  "it": "Serie di Maclaurin",
+  "ar": "متسلسلة ماكلورين"
  },
  "Many integrals, such as ∫e^(−x²) dx, have no elementary antiderivative. Simpson’s rule is often accurate to many digits with few points.": {
   "fr": "Beaucoup d’intégrales, comme ∫e^(−x²) dx, n’ont pas de primitive élémentaire. La méthode de Simpson donne souvent de nombreux chiffres exacts avec peu de points.",
@@ -1561,7 +1676,8 @@
  "Near the Sun r ≈ 0.5, far side r ≈ 1.5: area ∝ r², so the far arc sweeps about 8.6 times more area (0.5513 ÷ 0.0643).": {
   "fr": "Près du Soleil r ≈ 0.5, du côté éloigné r ≈ 1.5 : l’aire ∝ r², donc l’arc éloigné balaie environ 8.6 fois plus d’aire (0.5513 ÷ 0.0643).",
   "es": "Cerca del Sol r ≈ 0.5, en el lado lejano r ≈ 1.5: el área ∝ r², así que el arco lejano barre unas 8.6 veces más área (0.5513 ÷ 0.0643).",
-  "it": "Vicino al Sole r ≈ 0.5, sul lato lontano r ≈ 1.5: area ∝ r², quindi l’arco lontano spazza circa 8.6 volte più area (0.5513 ÷ 0.0643)."
+  "it": "Vicino al Sole r ≈ 0.5, sul lato lontano r ≈ 1.5: area ∝ r², quindi l’arco lontano spazza circa 8.6 volte più area (0.5513 ÷ 0.0643).",
+  "ar": "قرب الشمس r ≈ 0.5، وفي الجانب البعيد r ≈ 1.5: المساحة ∝ r²، لذا يمسح القوس البعيد مساحة أكبر بنحو 8.6 مرة (0.5513 ÷ 0.0643)."
  },
  "Newton’s law of cooling": {
   "fr": "Loi de refroidissement de Newton",
@@ -1572,7 +1688,8 @@
  "Next term bound: 0.5⁷/7! = 1.55 × 10⁻⁶.": {
   "fr": "Majoration par le terme suivant : 0.5⁷/7! = 1.55 × 10⁻⁶.",
   "es": "Cota del siguiente término: 0.5⁷/7! = 1.55 × 10⁻⁶.",
-  "it": "Stima con il termine successivo: 0.5⁷/7! = 1.55 × 10⁻⁶."
+  "it": "Stima con il termine successivo: 0.5⁷/7! = 1.55 × 10⁻⁶.",
+  "ar": "حد الحد التالي: 0.5⁷/7! = 1.55 × 10⁻⁶."
  },
  "No formula antiderivative, e.g. ∫e^(−x²) dx.": {
   "fr": "Pas de primitive exprimable par une formule, p. ex. ∫e^(−x²) dx.",
@@ -1607,17 +1724,20 @@
  "Not always, though it holds for eˣ, sin x and cos x everywhere.": {
   "fr": "Pas toujours, même si c’est vrai partout pour eˣ, sin x et cos x.",
   "es": "No siempre, aunque se cumple en todas partes para eˣ, sin x y cos x.",
-  "it": "Non sempre, anche se vale ovunque per eˣ, sin x e cos x."
+  "it": "Non sempre, anche se vale ovunque per eˣ, sin x e cos x.",
+  "ar": "ليس دائمًا، وإن كان ذلك صحيحًا في كل مكان لـ eˣ وsin x وcos x."
  },
  "Numerical integration with parabolas.": {
   "fr": "Intégration numérique avec des paraboles.",
   "es": "Integración numérica con parábolas.",
-  "it": "Integrazione numerica con parabole."
+  "it": "Integrazione numerica con parabole.",
+  "ar": "تكامل عددي باستخدام القطوع المكافئة."
  },
  "Numerical population models support fishery management.": {
   "fr": "Les modèles numériques de population aident à la gestion des pêches.",
   "es": "Los modelos numéricos de población apoyan la gestión pesquera.",
-  "it": "I modelli numerici di popolazione supportano la gestione della pesca."
+  "it": "I modelli numerici di popolazione supportano la gestione della pesca.",
+  "ar": "تدعم النماذج العددية للمجموعات السكانية إدارة مصايد الأسماك."
  },
  "One Euler step from (0, 2) with y′ = y and h = 0.1 gives…": {
   "fr": "Un pas d’Euler depuis (0, 2) avec y′ = y et h = 0.1 donne…",
@@ -1796,27 +1916,32 @@
  "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series": {
   "fr": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series",
   "es": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series",
-  "it": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series"
+  "it": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series",
+  "ar": "OpenStax Calculus 2, 6.3 Taylor and Maclaurin Series"
  },
  "OpenStax Calculus 2, 7.1 Parametric Equations": {
   "fr": "OpenStax Calculus 2, 7.1 Parametric Equations",
   "es": "OpenStax Calculus 2, 7.1 Parametric Equations",
-  "it": "OpenStax Calculus 2, 7.1 Parametric Equations"
+  "it": "OpenStax Calculus 2, 7.1 Parametric Equations",
+  "ar": "OpenStax Calculus 2, 7.1 Parametric Equations"
  },
  "OpenStax Calculus 2, 7.3 Polar Coordinates": {
   "fr": "OpenStax Calculus 2, 7.3 Polar Coordinates",
   "es": "OpenStax Calculus 2, 7.3 Polar Coordinates",
-  "it": "OpenStax Calculus 2, 7.3 Polar Coordinates"
+  "it": "OpenStax Calculus 2, 7.3 Polar Coordinates",
+  "ar": "OpenStax Calculus 2, 7.3 Polar Coordinates"
  },
  "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates": {
   "fr": "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates",
   "es": "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates",
-  "it": "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates"
+  "it": "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates",
+  "ar": "OpenStax Calculus 2, 7.4 Area and Arc Length in Polar Coordinates"
  },
  "OpenStax Calculus Volume 2 (free textbook)": {
   "fr": "OpenStax Calculus Volume 2 (manuel gratuit)",
   "es": "OpenStax Calculus Volume 2 (libro de texto gratuito)",
-  "it": "OpenStax Calculus Volume 2 (libro di testo gratuito)"
+  "it": "OpenStax Calculus Volume 2 (libro di testo gratuito)",
+  "ar": "OpenStax Calculus Volume 2 (كتاب دراسي مجاني)"
  },
  "Optional: Python with NumPy.": {
   "fr": "Facultatif : Python avec NumPy.",
@@ -1827,12 +1952,14 @@
  "Orbit geometry decides when a satellite can see a place on Earth.": {
   "fr": "La géométrie de l’orbite détermine quand un satellite peut voir un lieu sur Terre.",
   "es": "La geometría de la órbita decide cuándo un satélite puede ver un lugar de la Tierra.",
-  "it": "La geometria dell’orbita decide quando un satellite può vedere un luogo sulla Terra."
+  "it": "La geometria dell’orbita decide quando un satellite può vedere un luogo sulla Terra.",
+  "ar": "هندسة المدار تحدد متى يستطيع القمر الصناعي رؤية مكان على الأرض."
  },
  "Orbits, areas and periods.": {
   "fr": "Orbites, aires et périodes.",
   "es": "Órbitas, áreas y períodos.",
-  "it": "Orbite, aree e periodi."
+  "it": "Orbite, aree e periodi.",
+  "ar": "المدارات والمساحات والأدوار."
  },
  "P = ρgh; the total force then grows with depth squared.": {
   "fr": "P = ρgh ; la force totale augmente alors avec le carré de la profondeur.",
@@ -1861,22 +1988,26 @@
  "Parametric arc length": {
   "fr": "Longueur d’arc paramétrique",
   "es": "Longitud de arco paramétrica",
-  "it": "Lunghezza d’arco parametrica"
+  "it": "Lunghezza d’arco parametrica",
+  "ar": "طول القوس الوسيطي"
  },
  "Parametric curve": {
   "fr": "Courbe paramétrique",
   "es": "Curva paramétrica",
-  "it": "Curva parametrica"
+  "it": "Curva parametrica",
+  "ar": "منحنى وسيطي"
  },
  "Parametric equations": {
   "fr": "Équations paramétriques",
   "es": "Ecuaciones paramétricas",
-  "it": "Equazioni parametriche"
+  "it": "Equazioni parametriche",
+  "ar": "المعادلات الوسيطية"
  },
  "Parametric equations describe the ground track a satellite traces over Earth, which decides which forests, coasts and ice sheets it can see and when.": {
   "fr": "Les équations paramétriques décrivent la trace au sol qu’un satellite dessine sur la Terre, ce qui détermine quelles forêts, quelles côtes et quelles calottes glaciaires il peut voir, et quand.",
   "es": "Las ecuaciones paramétricas describen la traza en tierra que un satélite dibuja sobre la Tierra, lo que decide qué bosques, costas y capas de hielo puede ver y cuándo.",
-  "it": "Le equazioni parametriche descrivono la traccia al suolo che un satellite disegna sulla Terra, che decide quali foreste, coste e calotte glaciali può vedere e quando."
+  "it": "Le equazioni parametriche descrivono la traccia al suolo che un satellite disegna sulla Terra, che decide quali foreste, coste e calotte glaciali può vedere e quando.",
+  "ar": "تصف المعادلات الوسيطية المسار الأرضي الذي يرسمه القمر الصناعي فوق الأرض، وهو ما يحدد أي الغابات والسواحل والصفائح الجليدية يمكنه رؤيتها ومتى."
  },
  "Parametric equations; polar coordinates and areas; Lab D": {
   "fr": "Équations paramétriques ; coordonnées polaires et aires ; TP D",
@@ -1887,7 +2018,8 @@
  "Parametric slope": {
   "fr": "Pente paramétrique",
   "es": "Pendiente paramétrica",
-  "it": "Pendenza parametrica"
+  "it": "Pendenza parametrica",
+  "ar": "الميل الوسيطي"
  },
  "Partial fractions": {
   "fr": "Fractions partielles",
@@ -1916,7 +2048,8 @@
  "Parts twice: ∫x²eˣ dx = (x² − 2x + 2)eˣ.": {
   "fr": "Deux fois par parties : ∫x²eˣ dx = (x² − 2x + 2)eˣ.",
   "es": "Dos veces por partes: ∫x²eˣ dx = (x² − 2x + 2)eˣ.",
-  "it": "Due volte per parti: ∫x²eˣ dx = (x² − 2x + 2)eˣ."
+  "it": "Due volte per parti: ∫x²eˣ dx = (x² − 2x + 2)eˣ.",
+  "ar": "بالتجزئة مرتين: ∫x²eˣ dx = (x² − 2x + 2)eˣ."
  },
  "Parts with u = ln x, dv = dx.": {
   "fr": "Par parties avec u = ln x, dv = dx.",
@@ -1945,52 +2078,62 @@
  "Physics I, Unit 8: oscillations": {
   "fr": "Physique I, unité 8 : oscillations",
   "es": "Física I, Unidad 8: oscilaciones",
-  "it": "Fisica I, Unità 8: oscillazioni"
+  "it": "Fisica I, Unità 8: oscillazioni",
+  "ar": "الفيزياء I، الوحدة 8: الاهتزازات"
  },
  "Plot the errors.": {
   "fr": "Tracez les erreurs.",
   "es": "Grafica los errores.",
-  "it": "Traccia gli errori."
+  "it": "Traccia gli errori.",
+  "ar": "ارسم الأخطاء."
  },
  "Polar area": {
   "fr": "Aire en polaires",
   "es": "Área en polares",
-  "it": "Area in polari"
+  "it": "Area in polari",
+  "ar": "المساحة القطبية"
  },
  "Polar area and length.": {
   "fr": "Aire et longueur en polaires.",
   "es": "Área y longitud en polares.",
-  "it": "Area e lunghezza in polari."
+  "it": "Area e lunghezza in polari.",
+  "ar": "المساحة والطول في الإحداثيات القطبية."
  },
  "Polar area is ∫r dθ.": {
   "fr": "L’aire en polaires vaut ∫r dθ.",
   "es": "El área en polares es ∫r dθ.",
-  "it": "L’area in polari è ∫r dθ."
+  "it": "L’area in polari è ∫r dθ.",
+  "ar": "المساحة القطبية هي ∫r dθ."
  },
  "Polar area uses…": {
   "fr": "L’aire en polaires utilise…",
   "es": "El área en polares usa…",
-  "it": "L’area in polari usa…"
+  "it": "L’area in polari usa…",
+  "ar": "المساحة القطبية تستخدم…"
  },
  "Polar coordinates": {
   "fr": "Coordonnées polaires",
   "es": "Coordenadas polares",
-  "it": "Coordinate polari"
+  "it": "Coordinate polari",
+  "ar": "الإحداثيات القطبية"
  },
  "Polar graphs.": {
   "fr": "Graphes polaires.",
   "es": "Gráficas polares.",
-  "it": "Grafici polari."
+  "it": "Grafici polari.",
+  "ar": "الرسوم البيانية القطبية."
  },
  "Polar to Cartesian.": {
   "fr": "Des polaires aux cartésiennes.",
   "es": "De polares a cartesianas.",
-  "it": "Da polari a cartesiane."
+  "it": "Da polari a cartesiane.",
+  "ar": "من القطبية إلى الديكارتية."
  },
  "Polar: x = r cos θ, y = r sin θ. Area of a polar region: ½∫r² dθ.": {
   "fr": "Polaires : x = r cos θ, y = r sin θ. Aire d’une région polaire : ½∫r² dθ.",
   "es": "Polares: x = r cos θ, y = r sin θ. Área de una región polar: ½∫r² dθ.",
-  "it": "Polari: x = r cos θ, y = r sin θ. Area di una regione polare: ½∫r² dθ."
+  "it": "Polari: x = r cos θ, y = r sin θ. Area di una regione polare: ½∫r² dθ.",
+  "ar": "القطبية: x = r cos θ، y = r sin θ. مساحة منطقة قطبية: ½∫r² dθ."
  },
  "Population models built on the logistic equation are part of how fishery scientists assess stocks and set catch limits that let populations stay healthy, which protects ocean ecosystems and the people who depend on them.": {
   "fr": "Les modèles de population fondés sur l’équation logistique font partie des outils avec lesquels les scientifiques halieutiques évaluent les stocks et fixent des limites de capture qui permettent aux populations de rester en bonne santé, ce qui protège les écosystèmes marins et les personnes qui en dépendent.",
@@ -2007,7 +2150,8 @@
  "Position given by distance r and angle θ.": {
   "fr": "Position donnée par une distance r et un angle θ.",
   "es": "Posición dada por una distancia r y un ángulo θ.",
-  "it": "Posizione data da una distanza r e da un angolo θ."
+  "it": "Posizione data da una distanza r e da un angolo θ.",
+  "ar": "موضع يُعطى بمسافة r وزاوية θ."
  },
  "Power Series & Taylor Series": {
   "fr": "Séries entières et séries de Taylor",
@@ -2024,7 +2168,8 @@
  "Power series": {
   "fr": "Série entière",
   "es": "Serie de potencias",
-  "it": "Serie di potenze"
+  "it": "Serie di potenze",
+  "ar": "متسلسلة قوى"
  },
  "Power series and their properties": {
   "fr": "Séries entières et leurs propriétés",
@@ -2071,17 +2216,20 @@
  "R = 1 (ratio n/(n + 1) → 1).": {
   "fr": "R = 1 (rapport n/(n + 1) → 1).",
   "es": "R = 1 (cociente n/(n + 1) → 1).",
-  "it": "R = 1 (rapporto n/(n + 1) → 1)."
+  "it": "R = 1 (rapporto n/(n + 1) → 1).",
+  "ar": "R = 1 (النسبة n/(n + 1) → 1)."
  },
  "R = 3; it converges for −3 < x < 3.": {
   "fr": "R = 3 ; elle converge pour −3 < x < 3.",
   "es": "R = 3; converge para −3 < x < 3.",
-  "it": "R = 3; converge per −3 < x < 3."
+  "it": "R = 3; converge per −3 < x < 3.",
+  "ar": "R = 3؛ تتقارب عندما −3 < x < 3."
  },
  "R such that the series converges for |x − a| < R.": {
   "fr": "R tel que la série converge pour |x − a| < R.",
   "es": "R tal que la serie converge para |x − a| < R.",
-  "it": "R tale che la serie converge per |x − a| < R."
+  "it": "R tale che la serie converge per |x − a| < R.",
+  "ar": "R بحيث تتقارب المتسلسلة عندما |x − a| < R."
  },
  "Radical integrands.": {
   "fr": "Intégrandes avec radicaux.",
@@ -2092,7 +2240,8 @@
  "Radius of convergence": {
   "fr": "Rayon de convergence",
   "es": "Radio de convergencia",
-  "it": "Raggio di convergenza"
+  "it": "Raggio di convergenza",
+  "ar": "نصف قطر التقارب"
  },
  "Ratio and root tests.": {
   "fr": "Critères de d’Alembert et de Cauchy.",
@@ -2121,12 +2270,14 @@
  "Ratio: |x|/3 < 1.": {
   "fr": "Rapport : |x|/3 < 1.",
   "es": "Cociente: |x|/3 < 1.",
-  "it": "Rapporto: |x|/3 < 1."
+  "it": "Rapporto: |x|/3 < 1.",
+  "ar": "النسبة: |x|/3 < 1."
  },
  "Ratio: |x|/3 < 1; endpoints diverge.": {
   "fr": "Rapport : |x|/3 < 1 ; les bornes divergent.",
   "es": "Cociente: |x|/3 < 1; los extremos divergen.",
-  "it": "Rapporto: |x|/3 < 1; gli estremi divergono."
+  "it": "Rapporto: |x|/3 < 1; gli estremi divergono.",
+  "ar": "النسبة: |x|/3 < 1؛ والطرفان متباعدان."
  },
  "Rational functions.": {
   "fr": "Fractions rationnelles.",
@@ -2155,12 +2306,14 @@
  "Remainder bound": {
   "fr": "Majoration du reste",
   "es": "Cota del resto",
-  "it": "Stima del resto"
+  "it": "Stima del resto",
+  "ar": "حد الباقي"
  },
  "Repeat with h = 0.5 and h = 0.25; how does the error change?": {
   "fr": "Recommencez avec h = 0.5 et h = 0.25 ; comment l’erreur évolue-t-elle ?",
   "es": "Repite con h = 0.5 y h = 0.25; ¿cómo cambia el error?",
-  "it": "Ripeti con h = 0.5 e h = 0.25; come cambia l’errore?"
+  "it": "Ripeti con h = 0.5 e h = 0.25; come cambia l’errore?",
+  "ar": "كرر مع h = 0.5 وh = 0.25؛ كيف يتغير الخطأ؟"
  },
  "Rivers hub": {
   "fr": "Page Rivières",
@@ -2177,12 +2330,14 @@
  "Sample values for practice, not a real reservoir.": {
   "fr": "Valeurs d’exemple pour s’entraîner, pas un réservoir réel.",
   "es": "Valores de ejemplo para practicar, no un embalse real.",
-  "it": "Valori di esempio per esercitarsi, non un bacino reale."
+  "it": "Valori di esempio per esercitarsi, non un bacino reale.",
+  "ar": "قيم نموذجية للتدريب، وليست خزانًا حقيقيًا."
  },
  "Satellite orbit and climate models expand complicated effects into series and keep the terms that matter. Knowing the error bound tells you when an approximation is good enough to trust.": {
   "fr": "Les modèles d’orbites de satellites et de climat développent des effets compliqués en séries et gardent les termes qui comptent. Connaître la majoration de l’erreur indique quand une approximation est assez bonne pour qu’on s’y fie.",
   "es": "Los modelos de órbitas de satélites y del clima desarrollan efectos complicados en series y se quedan con los términos que importan. Conocer la cota del error indica cuándo una aproximación es lo bastante buena como para confiar en ella.",
-  "it": "I modelli delle orbite dei satelliti e del clima sviluppano effetti complicati in serie e tengono i termini che contano. Conoscere la stima dell’errore dice quando un’approssimazione è abbastanza buona da fidarsene."
+  "it": "I modelli delle orbite dei satelliti e del clima sviluppano effetti complicati in serie e tengono i termini che contano. Conoscere la stima dell’errore dice quando un’approssimazione è abbastanza buona da fidarsene.",
+  "ar": "تفكك نماذج مدارات الأقمار الصناعية والمناخ التأثيرات المعقدة إلى متسلسلات وتحتفظ بالحدود المهمة. ومعرفة حد الخطأ تخبرك متى يكون التقريب جيدًا بما يكفي للوثوق به."
  },
  "Satellites now measure the height of rivers, lakes and reservoirs from orbit. NASA and CNES’s SWOT mission surveys surface water so that changes in stored water can be estimated, which is slicing-and-adding on a planetary scale.": {
   "fr": "Des satellites mesurent désormais depuis l’orbite la hauteur des rivières, des lacs et des réservoirs. La mission SWOT de la NASA et du CNES cartographie les eaux de surface afin d’estimer les variations des volumes stockés : du découpage-et-addition à l’échelle planétaire.",
@@ -2205,7 +2360,8 @@
  "Separable equation": {
   "fr": "Équation à variables séparables",
   "es": "Ecuación separable",
-  "it": "Equazione a variabili separabili"
+  "it": "Equazione a variabili separabili",
+  "ar": "معادلة قابلة للفصل"
  },
  "Separable equations: put all y on one side and all x on the other, then integrate.": {
   "fr": "Équations à variables séparables : mettez tous les y d’un côté et tous les x de l’autre, puis intégrez.",
@@ -2246,12 +2402,14 @@
  "Series lectures and problem sets.": {
   "fr": "Cours et séries d’exercices sur les séries.",
   "es": "Clases y listas de problemas sobre series.",
-  "it": "Lezioni ed esercizi sulle serie."
+  "it": "Lezioni ed esercizi sulle serie.",
+  "ar": "محاضرات ومجموعات مسائل عن المتسلسلات."
  },
  "Set r = 0.5, K = 1,000, P₀ = 100 and h = 1 in a spreadsheet.": {
   "fr": "Fixez r = 0.5, K = 1000, P₀ = 100 et h = 1 dans un tableur.",
   "es": "Fija r = 0.5, K = 1000, P₀ = 100 y h = 1 en una hoja de cálculo.",
-  "it": "Imposta r = 0.5, K = 1000, P₀ = 100 e h = 1 in un foglio di calcolo."
+  "it": "Imposta r = 0.5, K = 1000, P₀ = 100 e h = 1 in un foglio di calcolo.",
+  "ar": "اضبط r = 0.5 وK = 1000 وP₀ = 100 وh = 1 في جدول بيانات."
  },
  "Shell method": {
   "fr": "Méthode des coquilles cylindriques",
@@ -2274,12 +2432,14 @@
  "Show numerically that an elliptical orbit sweeps area faster near the focus in angle but at a constant rate in time.": {
   "fr": "Montrer numériquement qu’une orbite elliptique balaie l’aire plus vite par unité d’angle près du foyer, mais à un rythme constant dans le temps.",
   "es": "Mostrar numéricamente que una órbita elíptica barre área más rápido por ángulo cerca del foco, pero a un ritmo constante en el tiempo.",
-  "it": "Mostrare numericamente che un’orbita ellittica spazza area più velocemente per angolo vicino al fuoco, ma a un ritmo costante nel tempo."
+  "it": "Mostrare numericamente che un’orbita ellittica spazza area più velocemente per angolo vicino al fuoco, ma a un ritmo costante nel tempo.",
+  "ar": "إثبات عددي أن المدار الإهليلجي يمسح المساحة أسرع بالنسبة للزاوية قرب البؤرة، لكن بمعدل ثابت بالنسبة للزمن."
  },
  "Simpson: (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m.": {
   "fr": "Simpson : (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m.",
   "es": "Simpson: (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m.",
-  "it": "Simpson: (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m."
+  "it": "Simpson: (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m.",
+  "ar": "سيمبسون: (2/3)[0 + 4(1.2) + 2(2.6) + 4(4.0) + 5.6] = (2/3)(31.6) = 21.07 km²·m."
  },
  "Simpson’s rule": {
   "fr": "Méthode de Simpson",
@@ -2302,12 +2462,14 @@
  "Since area grows at a constant rate in time, the planet spends about 8.6 times longer crossing the far 0.5 rad: it moves slowest at aphelion.": {
   "fr": "Comme l’aire croît à un rythme constant dans le temps, la planète met environ 8.6 fois plus longtemps à parcourir les 0.5 rad éloignés : elle se déplace le plus lentement à l’aphélie.",
   "es": "Como el área crece a ritmo constante en el tiempo, el planeta tarda unas 8.6 veces más en recorrer los 0.5 rad lejanos: se mueve más despacio en el afelio.",
-  "it": "Poiché l’area cresce a ritmo costante nel tempo, il pianeta impiega circa 8.6 volte di più a percorrere gli 0.5 rad lontani: si muove più lentamente all’afelio."
+  "it": "Poiché l’area cresce a ritmo costante nel tempo, il pianeta impiega circa 8.6 volte di più a percorrere gli 0.5 rad lontani: si muove più lentamente all’afelio.",
+  "ar": "بما أن المساحة تنمو بمعدل ثابت مع الزمن، يستغرق الكوكب نحو 8.6 مرة أطول لعبور الـ 0.5 rad البعيدة: فهو يتحرك أبطأ ما يكون عند الأوج."
  },
  "Sine series": {
   "fr": "Série du sinus",
   "es": "Serie del seno",
-  "it": "Serie del seno"
+  "it": "Serie del seno",
+  "ar": "متسلسلة الجيب"
  },
  "Sketch every region before setting up a volume or area integral.": {
   "fr": "Esquissez chaque région avant de poser une intégrale de volume ou d’aire.",
@@ -2324,12 +2486,14 @@
  "Slope of a parametric curve": {
   "fr": "Pente d’une courbe paramétrique",
   "es": "Pendiente de una curva paramétrica",
-  "it": "Pendenza di una curva parametrica"
+  "it": "Pendenza di una curva parametrica",
+  "ar": "ميل منحنى وسيطي"
  },
  "Small-angle approximation": {
   "fr": "Approximation des petits angles",
   "es": "Aproximación de ángulo pequeño",
-  "it": "Approssimazione per piccoli angoli"
+  "it": "Approssimazione per piccoli angoli",
+  "ar": "تقريب الزاوية الصغيرة"
  },
  "Smaller than convergent ⇒ converges.": {
   "fr": "Plus petite qu’une intégrale convergente ⇒ converge.",
@@ -2346,7 +2510,8 @@
  "Solve the logistic equation numerically and compare with the exact solution.": {
   "fr": "Résoudre numériquement l’équation logistique et comparer avec la solution exacte.",
   "es": "Resolver numéricamente la ecuación logística y compararla con la solución exacta.",
-  "it": "Risolvere numericamente l’equazione logistica e confrontarla con la soluzione esatta."
+  "it": "Risolvere numericamente l’equazione logistica e confrontarla con la soluzione esatta.",
+  "ar": "حل المعادلة اللوجستية عدديًا ومقارنتها بالحل الدقيق."
  },
  "Solve y′ = xy with y(0) = 2, and find y(1).": {
   "fr": "Résolvez y′ = xy avec y(0) = 2, et trouvez y(1).",
@@ -2357,7 +2522,8 @@
  "Solve y′ = −2y, y(0) = 5, and find y(1).": {
   "fr": "Résolvez y′ = −2y, y(0) = 5, et trouvez y(1).",
   "es": "Resuelve y′ = −2y, y(0) = 5, y halla y(1).",
-  "it": "Risolvi y′ = −2y, y(0) = 5, e trova y(1)."
+  "it": "Risolvi y′ = −2y, y(0) = 5, e trova y(1).",
+  "ar": "حل y′ = −2y، y(0) = 5، وأوجد y(1)."
  },
  "Solve y′ = −2y, y(0) = 5. Find y(1).": {
   "fr": "Résolvez y′ = −2y, y(0) = 5. Trouvez y(1).",
@@ -2368,7 +2534,8 @@
  "Solves the practice problems with occasional slips.": {
   "fr": "Résout les exercices d’entraînement avec quelques erreurs occasionnelles.",
   "es": "Resuelve los problemas de práctica con algún error ocasional.",
-  "it": "Risolve gli esercizi con qualche errore occasionale."
+  "it": "Risolve gli esercizi con qualche errore occasionale.",
+  "ar": "يحل مسائل التدريب مع أخطاء عرضية."
  },
  "Split a rational function into simple fractions.": {
   "fr": "Décomposer une fraction rationnelle en éléments simples.",
@@ -2379,12 +2546,14 @@
  "Splitting a rational function into simpler terms.": {
   "fr": "Décomposition d’une fraction rationnelle en termes plus simples.",
   "es": "Separar una función racional en términos más simples.",
-  "it": "Scomposizione di una funzione razionale in termini più semplici."
+  "it": "Scomposizione di una funzione razionale in termini più semplici.",
+  "ar": "تقسيم دالة نسبية إلى حدود أبسط."
  },
  "Step-by-step numerical solution of a DE.": {
   "fr": "Résolution numérique pas à pas d’une ED.",
   "es": "Solución numérica paso a paso de una ED.",
-  "it": "Soluzione numerica passo passo di una ED."
+  "it": "Soluzione numerica passo passo di una ED.",
+  "ar": "حل عددي خطوة بخطوة لمعادلة تفاضلية."
  },
  "Sum geometric and telescoping series.": {
   "fr": "Calculer la somme de séries géométriques et télescopiques.",
@@ -2413,27 +2582,32 @@
  "Surface area A (km²)": {
   "fr": "Surface A (km²)",
   "es": "Área de la superficie A (km²)",
-  "it": "Area della superficie A (km²)"
+  "it": "Area della superficie A (km²)",
+  "ar": "مساحة السطح A (km²)"
  },
  "Surface-water satellites such as SWOT help estimate changes in water stored in lakes and reservoirs.": {
   "fr": "Les satellites dédiés aux eaux de surface, comme SWOT, aident à estimer les variations de l’eau stockée dans les lacs et les réservoirs.",
   "es": "Los satélites de aguas superficiales como SWOT ayudan a estimar los cambios del agua almacenada en lagos y embalses.",
-  "it": "I satelliti per le acque superficiali come SWOT aiutano a stimare le variazioni dell’acqua immagazzinata in laghi e bacini."
+  "it": "I satelliti per le acque superficiali come SWOT aiutano a stimare le variazioni dell’acqua immagazzinata in laghi e bacini.",
+  "ar": "تساعد أقمار المياه السطحية مثل SWOT في تقدير التغيرات في المياه المخزنة في البحيرات والخزانات."
  },
  "Swept area": {
   "fr": "Aire balayée",
   "es": "Área barrida",
-  "it": "Area spazzata"
+  "it": "Area spazzata",
+  "ar": "المساحة الممسوحة"
  },
  "Swept area of an orbit": {
   "fr": "Aire balayée par une orbite",
   "es": "Área barrida por una órbita",
-  "it": "Area spazzata da un’orbita"
+  "it": "Area spazzata da un’orbita",
+  "ar": "المساحة التي يمسحها المدار"
  },
  "Tabulate sin x, P₁ = x, P₃ and P₅ for x from 0 to π in steps of 0.25.": {
   "fr": "Tabulez sin x, P₁ = x, P₃ et P₅ pour x de 0 à π par pas de 0.25.",
   "es": "Tabula sin x, P₁ = x, P₃ y P₅ para x de 0 a π en pasos de 0.25.",
-  "it": "Tabula sin x, P₁ = x, P₃ e P₅ per x da 0 a π con passo 0.25."
+  "it": "Tabula sin x, P₁ = x, P₃ e P₅ per x da 0 a π con passo 0.25.",
+  "ar": "اجدول sin x وP₁ = x وP₃ وP₅ لقيم x من 0 إلى π بخطوات 0.25."
  },
  "Take the limit of ∫ₐᵇ.": {
   "fr": "Prendre la limite de ∫ₐᵇ.",
@@ -2450,42 +2624,50 @@
  "Taylor coefficient": {
   "fr": "Coefficient de Taylor",
   "es": "Coeficiente de Taylor",
-  "it": "Coefficiente di Taylor"
+  "it": "Coefficiente di Taylor",
+  "ar": "معامل تايلور"
  },
  "Taylor remainder bound": {
   "fr": "Majoration du reste de Taylor",
   "es": "Cota del resto de Taylor",
-  "it": "Stima del resto di Taylor"
+  "it": "Stima del resto di Taylor",
+  "ar": "حد باقي تايلور"
  },
  "Taylor series": {
   "fr": "Série de Taylor",
   "es": "Serie de Taylor",
-  "it": "Serie di Taylor"
+  "it": "Serie di Taylor",
+  "ar": "متسلسلة تايلور"
  },
  "Taylor series are how physicists turn hard equations into usable ones. The pendulum period T = 2π√(L/g) in Physics I relies on sin θ ≈ θ, and the same kind of linearization underlies much of how engineers analyze vibrations in wind turbines, bridges and aircraft.": {
   "fr": "Les séries de Taylor permettent aux physiciens de transformer des équations difficiles en équations utilisables. La période du pendule T = 2π√(L/g) en Physique I repose sur sin θ ≈ θ, et le même type de linéarisation sous-tend une grande partie de l’analyse des vibrations des éoliennes, des ponts et des avions par les ingénieurs.",
   "es": "Las series de Taylor permiten a los físicos convertir ecuaciones difíciles en ecuaciones útiles. El período del péndulo T = 2π√(L/g) de Física I se basa en sin θ ≈ θ, y el mismo tipo de linealización está detrás de gran parte del análisis que hacen los ingenieros de las vibraciones en aerogeneradores, puentes y aviones.",
-  "it": "Le serie di Taylor permettono ai fisici di trasformare equazioni difficili in equazioni utilizzabili. Il periodo del pendolo T = 2π√(L/g) di Fisica I si basa su sin θ ≈ θ, e lo stesso tipo di linearizzazione è alla base di gran parte dell’analisi delle vibrazioni di turbine eoliche, ponti e aerei da parte degli ingegneri."
+  "it": "Le serie di Taylor permettono ai fisici di trasformare equazioni difficili in equazioni utilizzabili. Il periodo del pendolo T = 2π√(L/g) di Fisica I si basa su sin θ ≈ θ, e lo stesso tipo di linearizzazione è alla base di gran parte dell’analisi delle vibrazioni di turbine eoliche, ponti e aerei da parte degli ingegneri.",
+  "ar": "متسلسلات تايلور هي طريقة الفيزيائيين في تحويل المعادلات الصعبة إلى معادلات قابلة للاستخدام. فدور البندول T = 2π√(L/g) في الفيزياء I يعتمد على sin θ ≈ θ، والنوع نفسه من التخطيط الخطي يقوم عليه جزء كبير من تحليل المهندسين للاهتزازات في توربينات الرياح والجسور والطائرات."
  },
  "Taylor series at 0.": {
   "fr": "Série de Taylor en 0.",
   "es": "Serie de Taylor en 0.",
-  "it": "Serie di Taylor in 0."
+  "it": "Serie di Taylor in 0.",
+  "ar": "متسلسلة تايلور عند 0."
  },
  "Taylor series at a = 0.": {
   "fr": "Série de Taylor en a = 0.",
   "es": "Serie de Taylor en a = 0.",
-  "it": "Serie di Taylor in a = 0."
+  "it": "Serie di Taylor in a = 0.",
+  "ar": "متسلسلة تايلور عند a = 0."
  },
  "Taylor series: cₙ = f⁽ⁿ⁾(a)/n!. Around a = 0 it is called a Maclaurin series.": {
   "fr": "Série de Taylor : cₙ = f⁽ⁿ⁾(a)/n!. Autour de a = 0, on l’appelle série de Maclaurin.",
   "es": "Serie de Taylor: cₙ = f⁽ⁿ⁾(a)/n!. Alrededor de a = 0 se llama serie de Maclaurin.",
-  "it": "Serie di Taylor: cₙ = f⁽ⁿ⁾(a)/n!. Attorno ad a = 0 si chiama serie di Maclaurin."
+  "it": "Serie di Taylor: cₙ = f⁽ⁿ⁾(a)/n!. Attorno ad a = 0 si chiama serie di Maclaurin.",
+  "ar": "متسلسلة تايلور: cₙ = f⁽ⁿ⁾(a)/n!. وحول a = 0 تُسمى متسلسلة ماكلورين."
  },
  "Taylor’s remainder: the error is at most M|x − a|ⁿ⁺¹/(n + 1)!, where M bounds the next derivative.": {
   "fr": "Reste de Taylor : l’erreur est au plus M|x − a|ⁿ⁺¹/(n + 1)!, où M majore la dérivée suivante.",
   "es": "Resto de Taylor: el error es como máximo M|x − a|ⁿ⁺¹/(n + 1)!, donde M acota la siguiente derivada.",
-  "it": "Resto di Taylor: l’errore è al massimo M|x − a|ⁿ⁺¹/(n + 1)!, dove M maggiora la derivata successiva."
+  "it": "Resto di Taylor: l’errore è al massimo M|x − a|ⁿ⁺¹/(n + 1)!, dove M maggiora la derivata successiva.",
+  "ar": "باقي تايلور: الخطأ لا يتجاوز M|x − a|ⁿ⁺¹/(n + 1)!، حيث M حد للمشتقة التالية."
  },
  "Techniques of Integration": {
   "fr": "Techniques d’intégration",
@@ -2496,12 +2678,14 @@
  "The Maclaurin series of eˣ is…": {
   "fr": "La série de Maclaurin de eˣ est…",
   "es": "La serie de Maclaurin de eˣ es…",
-  "it": "La serie di Maclaurin di eˣ è…"
+  "it": "La serie di Maclaurin di eˣ è…",
+  "ar": "متسلسلة ماكلورين لـ eˣ هي…"
  },
  "The Sun is at the center of Earth’s orbit.": {
   "fr": "Le Soleil est au centre de l’orbite terrestre.",
   "es": "El Sol está en el centro de la órbita terrestre.",
-  "it": "Il Sole è al centro dell’orbita terrestre."
+  "it": "Il Sole è al centro dell’orbita terrestre.",
+  "ar": "الشمس في مركز مدار الأرض."
  },
  "The bell-curve integral in Example 1.3 has no formula answer, yet it sits behind every error bar on a climate graph and every uncertainty in a satellite measurement. Numerical integration is how it, and most integrals from real data, actually get computed.": {
   "fr": "L’intégrale de la courbe en cloche de l’exemple 1.3 n’a pas de solution sous forme de formule, et pourtant elle se cache derrière chaque barre d’erreur d’un graphique climatique et chaque incertitude d’une mesure satellitaire. L’intégration numérique est la façon dont on la calcule réellement, elle et la plupart des intégrales issues de données réelles.",
@@ -2518,12 +2702,14 @@
  "The coefficient of x³ in the series for sin x is…": {
   "fr": "Le coefficient de x³ dans la série de sin x est…",
   "es": "El coeficiente de x³ en la serie de sin x es…",
-  "it": "Il coefficiente di x³ nella serie di sin x è…"
+  "it": "Il coefficiente di x³ nella serie di sin x è…",
+  "ar": "معامل x³ في متسلسلة sin x هو…"
  },
  "The first term of the series.": {
   "fr": "Le premier terme de la série.",
   "es": "El primer término de la serie.",
-  "it": "Il primo termine della serie."
+  "it": "Il primo termine della serie.",
+  "ar": "الحد الأول من المتسلسلة."
  },
  "The general solution of y′ = 3y is…": {
   "fr": "La solution générale de y′ = 3y est…",
@@ -2564,12 +2750,14 @@
  "The next course: multivariable calculus.": {
   "fr": "Le cours suivant : analyse à plusieurs variables.",
   "es": "El siguiente curso: cálculo multivariable.",
-  "it": "Il corso successivo: analisi in più variabili."
+  "it": "Il corso successivo: analisi in più variabili.",
+  "ar": "المقرر التالي: حساب التفاضل والتكامل متعدد المتغيرات."
  },
  "The radius of convergence decides the endpoints too.": {
   "fr": "Le rayon de convergence décide aussi des bornes.",
   "es": "El radio de convergencia también decide los extremos.",
-  "it": "Il raggio di convergenza decide anche gli estremi."
+  "it": "Il raggio di convergenza decide anche gli estremi.",
+  "ar": "نصف قطر التقارب يحسم الطرفين أيضًا."
  },
  "The ratio test for Σ 1/n! gives L =": {
   "fr": "Le critère de d’Alembert pour Σ 1/n! donne L =",
@@ -2592,7 +2780,8 @@
  "These are the numerical methods scientists and engineers use daily. Sample data is labeled as such; each lab links to its source.": {
   "fr": "Ce sont les méthodes numériques que les scientifiques et les ingénieurs utilisent chaque jour. Les données d’exemple sont signalées comme telles ; chaque TP renvoie à sa source.",
   "es": "Son los métodos numéricos que científicos e ingenieros usan a diario. Los datos de ejemplo están señalados como tales; cada práctica enlaza a su fuente.",
-  "it": "Sono i metodi numerici che scienziati e ingegneri usano ogni giorno. I dati di esempio sono indicati come tali; ogni laboratorio rimanda alla sua fonte."
+  "it": "Sono i metodi numerici che scienziati e ingegneri usano ogni giorno. I dati di esempio sono indicati come tali; ogni laboratorio rimanda alla sua fonte.",
+  "ar": "هذه هي الطرق العددية التي يستخدمها العلماء والمهندسون يوميًا. البيانات النموذجية موسومة بذلك؛ وكل مختبر يربط إلى مصدره."
  },
  "Trapezoid and Simpson rules with error bounds.": {
   "fr": "Méthodes des trapèzes et de Simpson avec majorations de l’erreur.",
@@ -2603,7 +2792,8 @@
  "Trapezoid: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, close to Simpson.": {
   "fr": "Trapèzes : 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, proche de Simpson.",
   "es": "Trapecio: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, cerca de Simpson.",
-  "it": "Trapezi: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, vicino a Simpson."
+  "it": "Trapezi: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m, vicino a Simpson.",
+  "ar": "شبه المنحرف: 2[0/2 + 1.2 + 2.6 + 4.0 + 5.6/2] = 21.2 km²·m، قريب من سيمبسون."
  },
  "Trig substitution": {
   "fr": "Substitution trigonométrique",
@@ -2626,7 +2816,8 @@
  "Turn functions into infinite polynomials. Taylor series are how calculators compute, and how physicists make hard problems simple.": {
   "fr": "Transformer des fonctions en polynômes infinis. Les séries de Taylor sont la façon dont les calculatrices calculent, et dont les physiciens simplifient les problèmes difficiles.",
   "es": "Convertir funciones en polinomios infinitos. Las series de Taylor son la forma en que calculan las calculadoras y en que los físicos simplifican problemas difíciles.",
-  "it": "Trasformare funzioni in polinomi infiniti. Le serie di Taylor sono il modo in cui calcolano le calcolatrici e in cui i fisici semplificano problemi difficili."
+  "it": "Trasformare funzioni in polinomi infiniti. Le serie di Taylor sono il modo in cui calcolano le calcolatrici e in cui i fisici semplificano problemi difficili.",
+  "ar": "تحويل الدوال إلى كثيرات حدود لانهائية. متسلسلات تايلور هي طريقة الآلات الحاسبة في الحساب، وطريقة الفيزيائيين في تبسيط المسائل الصعبة."
  },
  "Use Euler’s method with h = 0.5 to estimate y(1) for y′ = y, y(0) = 1.": {
   "fr": "Utilisez la méthode d’Euler avec h = 0.5 pour estimer y(1) pour y′ = y, y(0) = 1.",
@@ -2637,17 +2828,20 @@
  "Use a = 1 and e = 0.5.": {
   "fr": "Prenez a = 1 et e = 0.5.",
   "es": "Usa a = 1 y e = 0.5.",
-  "it": "Usa a = 1 ed e = 0.5."
+  "it": "Usa a = 1 ed e = 0.5.",
+  "ar": "استخدم a = 1 وe = 0.5."
  },
  "Use a series to estimate ∫₀¹ e^(−x²) dx with three terms.": {
   "fr": "Utilisez une série pour estimer ∫₀¹ e^(−x²) dx avec trois termes.",
   "es": "Usa una serie para estimar ∫₀¹ e^(−x²) dx con tres términos.",
-  "it": "Usa una serie per stimare ∫₀¹ e^(−x²) dx con tre termini."
+  "it": "Usa una serie per stimare ∫₀¹ e^(−x²) dx con tre termini.",
+  "ar": "استخدم متسلسلة لتقدير ∫₀¹ e^(−x²) dx بثلاثة حدود."
  },
  "Use series to approximate integrals and to justify small-angle approximations.": {
   "fr": "Utiliser des séries pour approcher des intégrales et pour justifier les approximations des petits angles.",
   "es": "Usar series para aproximar integrales y justificar las aproximaciones de ángulo pequeño.",
-  "it": "Usare le serie per approssimare integrali e giustificare le approssimazioni per piccoli angoli."
+  "it": "Usare le serie per approssimare integrali e giustificare le approssimazioni per piccoli angoli.",
+  "ar": "استخدام المتسلسلات لتقريب التكاملات وتبرير تقريبات الزوايا الصغيرة."
  },
  "Use shells to find the volume when the region under y = x², 0 ≤ x ≤ 1, is spun about the y-axis.": {
   "fr": "Utilisez les coquilles cylindriques pour trouver le volume obtenu en faisant tourner autour de l’axe des y la région sous y = x², 0 ≤ x ≤ 1.",
@@ -2664,7 +2858,8 @@
  "Use these free tools alongside the course.": {
   "fr": "Utilisez ces outils gratuits en parallèle du cours.",
   "es": "Usa estas herramientas gratuitas junto con el curso.",
-  "it": "Usa questi strumenti gratuiti insieme al corso."
+  "it": "Usa questi strumenti gratuiti insieme al corso.",
+  "ar": "استخدم هذه الأدوات المجانية إلى جانب المقرر."
  },
  "Verify solutions and solve initial-value problems.": {
   "fr": "Vérifier des solutions et résoudre des problèmes de Cauchy (valeur initiale).",
@@ -2675,7 +2870,8 @@
  "Volume as the integral of cross-sectional area": {
   "fr": "Le volume comme intégrale de l’aire de la section",
   "es": "El volumen como integral del área de la sección transversal",
-  "it": "Il volume come integrale dell’area della sezione"
+  "it": "Il volume come integrale dell’area della sezione",
+  "ar": "الحجم بوصفه تكامل مساحة المقطع العرضي"
  },
  "Volume of revolution = π × area.": {
   "fr": "Volume de révolution = π × aire.",
@@ -2704,12 +2900,14 @@
  "Week 14": {
   "fr": "Semaine 14",
   "es": "Semana 14",
-  "it": "Settimana 14"
+  "it": "Settimana 14",
+  "ar": "الأسبوع 14"
  },
  "Weeks 12–13": {
   "fr": "Semaines 12–13",
   "es": "Semanas 12–13",
-  "it": "Settimane 12–13"
+  "it": "Settimane 12–13",
+  "ar": "الأسابيع 12–13"
  },
  "Weeks 7–8": {
   "fr": "Semaines 7–8",
@@ -2762,7 +2960,8 @@
  "Write the Maclaurin polynomial of degree 4 for cos x and use it for cos 0.2.": {
   "fr": "Écrivez le polynôme de Maclaurin de degré 4 de cos x et utilisez-le pour cos 0.2.",
   "es": "Escribe el polinomio de Maclaurin de grado 4 de cos x y úsalo para cos 0.2.",
-  "it": "Scrivi il polinomio di Maclaurin di grado 4 di cos x e usalo per cos 0.2."
+  "it": "Scrivi il polinomio di Maclaurin di grado 4 di cos x e usalo per cos 0.2.",
+  "ar": "اكتب كثيرة حدود ماكلورين من الدرجة 4 لـ cos x واستخدمها لحساب cos 0.2."
  },
  "Yes, p = 2 > 1 (the sum is π²/6).": {
   "fr": "Oui, p = 2 > 1 (la somme vaut π²/6).",
@@ -2797,7 +2996,8 @@
  "a circle": {
   "fr": "un cercle",
   "es": "un círculo",
-  "it": "un cerchio"
+  "it": "un cerchio",
+  "ar": "دائرة"
  },
  "a derivative": {
   "fr": "une dérivée",
@@ -2808,7 +3008,8 @@
  "a hyperbola": {
   "fr": "une hyperbole",
   "es": "una hipérbola",
-  "it": "un’iperbole"
+  "it": "un’iperbole",
+  "ar": "قطعًا زائدًا"
  },
  "a limit of proper integrals": {
   "fr": "une limite d’intégrales propres",
@@ -2819,12 +3020,14 @@
  "a line": {
   "fr": "une droite",
   "es": "una recta",
-  "it": "una retta"
+  "it": "una retta",
+  "ar": "خطًا مستقيمًا"
  },
  "a parabola": {
   "fr": "une parabole",
   "es": "una parábola",
-  "it": "una parabola"
+  "it": "una parabola",
+  "ar": "قطعًا مكافئًا"
  },
  "a sum": {
   "fr": "une somme",
@@ -2841,7 +3044,8 @@
  "all x": {
   "fr": "tout x",
   "es": "todo x",
-  "it": "ogni x"
+  "it": "ogni x",
+  "ar": "كل x"
  },
  "always infinite": {
   "fr": "toujours infinie",
@@ -2864,7 +3068,8 @@
  "constant": {
   "fr": "constant",
   "es": "constante",
-  "it": "costante"
+  "it": "costante",
+  "ar": "ثابت"
  },
  "converges": {
   "fr": "converge",
@@ -2923,12 +3128,14 @@
  "e = 0 circle, 0 < e < 1 ellipse.": {
   "fr": "e = 0 cercle, 0 < e < 1 ellipse.",
   "es": "e = 0 círculo, 0 < e < 1 elipse.",
-  "it": "e = 0 cerchio, 0 < e < 1 ellisse."
+  "it": "e = 0 cerchio, 0 < e < 1 ellisse.",
+  "ar": "e = 0 دائرة، 0 < e < 1 قطع ناقص."
  },
  "equal to e": {
   "fr": "égal à e",
   "es": "igual a e",
-  "it": "uguale a e"
+  "it": "uguale a e",
+  "ar": "يساوي e"
  },
  "equals 1": {
   "fr": "vaut 1",
@@ -3035,17 +3242,20 @@
  "r = p is constant.": {
   "fr": "r = p est constant.",
   "es": "r = p es constante.",
-  "it": "r = p è costante."
+  "it": "r = p è costante.",
+  "ar": "r = p ثابت."
  },
  "r sin θ": {
   "fr": "r sin θ",
   "es": "r sin θ",
-  "it": "r sin θ"
+  "it": "r sin θ",
+  "ar": "r sin θ"
  },
  "r tan θ": {
   "fr": "r tan θ",
   "es": "r tan θ",
-  "it": "r tan θ"
+  "it": "r tan θ",
+  "ar": "r tan θ"
  },
  "rP(1 − P/K) is a downward parabola in P with its peak at P = K/2.": {
   "fr": "rP(1 − P/K) est une parabole tournée vers le bas en P, dont le sommet est en P = K/2.",
@@ -3062,7 +3272,8 @@
  "r² = 2r cos θ gives x² + y² = 2x: a circle of radius 1 centered at (1, 0), area π.": {
   "fr": "r² = 2r cos θ donne x² + y² = 2x : un cercle de rayon 1 centré en (1, 0), d’aire π.",
   "es": "r² = 2r cos θ da x² + y² = 2x: un círculo de radio 1 centrado en (1, 0), de área π.",
-  "it": "r² = 2r cos θ dà x² + y² = 2x: un cerchio di raggio 1 centrato in (1, 0), di area π."
+  "it": "r² = 2r cos θ dà x² + y² = 2x: un cerchio di raggio 1 centrato in (1, 0), di area π.",
+  "ar": "r² = 2r cos θ تعطي x² + y² = 2x: دائرة نصف قطرها 1 مركزها (1, 0)، ومساحتها π."
  },
  "separable": {
   "fr": "à variables séparables",
@@ -3073,12 +3284,14 @@
  "sin x ≈ x is within 1% up to about x = 0.24 rad (14°), which is why the pendulum formula is used for small swings.": {
   "fr": "sin x ≈ x reste à moins de 1% jusqu’à environ x = 0.24 rad (14°), c’est pourquoi la formule du pendule s’utilise pour de petites oscillations.",
   "es": "sin x ≈ x está dentro del 1% hasta aproximadamente x = 0.24 rad (14°), por eso la fórmula del péndulo se usa para oscilaciones pequeñas.",
-  "it": "sin x ≈ x resta entro l’1% fino a circa x = 0.24 rad (14°), ed è per questo che la formula del pendolo si usa per piccole oscillazioni."
+  "it": "sin x ≈ x resta entro l’1% fino a circa x = 0.24 rad (14°), ed è per questo che la formula del pendolo si usa per piccole oscillazioni.",
+  "ar": "يبقى sin x ≈ x ضمن 1% حتى نحو x = 0.24 rad (14°)، ولهذا تُستخدم صيغة البندول للتأرجحات الصغيرة."
  },
  "sin θ ≈ θ, cos θ ≈ 1 − θ²/2.": {
   "fr": "sin θ ≈ θ, cos θ ≈ 1 − θ²/2.",
   "es": "sin θ ≈ θ, cos θ ≈ 1 − θ²/2.",
-  "it": "sin θ ≈ θ, cos θ ≈ 1 − θ²/2."
+  "it": "sin θ ≈ θ, cos θ ≈ 1 − θ²/2.",
+  "ar": "sin θ ≈ θ، cos θ ≈ 1 − θ²/2."
  },
  "trapezoids": {
   "fr": "des trapèzes",
@@ -3119,7 +3332,8 @@
  "x = r cos θ, y = …": {
   "fr": "x = r cos θ, y = …",
   "es": "x = r cos θ, y = …",
-  "it": "x = r cos θ, y = …"
+  "it": "x = r cos θ, y = …",
+  "ar": "x = r cos θ، y = …"
  },
  "x = sin θ gives ∫₀^(π/2) cos²θ dθ = π/4 (a quarter of the unit disk).": {
   "fr": "x = sin θ donne ∫₀^(π/2) cos²θ dθ = π/4 (un quart du disque unité).",
@@ -3130,7 +3344,8 @@
  "x and y given as functions of t.": {
   "fr": "x et y donnés en fonction de t.",
   "es": "x e y dados como funciones de t.",
-  "it": "x e y date come funzioni di t."
+  "it": "x e y date come funzioni di t.",
+  "ar": "x وy معطاتان كدالتين في t."
  },
  "x² gets simpler when differentiated.": {
   "fr": "x² se simplifie en dérivant.",
@@ -3141,7 +3356,8 @@
  "x²/4 + y² = 1, an ellipse.": {
   "fr": "x²/4 + y² = 1, une ellipse.",
   "es": "x²/4 + y² = 1, una elipse.",
-  "it": "x²/4 + y² = 1, un’ellisse."
+  "it": "x²/4 + y² = 1, un’ellisse.",
+  "ar": "x²/4 + y² = 1، قطع ناقص."
  },
  "x̄ = 7/6 ≈ 1.17 m, toward the heavier end.": {
   "fr": "x̄ = 7/6 ≈ 1.17 m, du côté de l’extrémité la plus lourde.",
@@ -3176,27 +3392,32 @@
  "Σxⁿ converges for…": {
   "fr": "Σxⁿ converge pour…",
   "es": "Σxⁿ converge para…",
-  "it": "Σxⁿ converge per…"
+  "it": "Σxⁿ converge per…",
+  "ar": "Σxⁿ تتقارب عندما…"
  },
  "Σxⁿ for |x| < 1 (geometric).": {
   "fr": "Σxⁿ pour |x| < 1 (géométrique).",
   "es": "Σxⁿ para |x| < 1 (geométrica).",
-  "it": "Σxⁿ per |x| < 1 (geometrica)."
+  "it": "Σxⁿ per |x| < 1 (geometrica).",
+  "ar": "Σxⁿ عندما |x| < 1 (هندسية)."
  },
  "θ = 0 to 0.5 (near the Sun)": {
   "fr": "θ = 0 à 0.5 (près du Soleil)",
   "es": "θ = 0 a 0.5 (cerca del Sol)",
-  "it": "θ = 0 a 0.5 (vicino al Sole)"
+  "it": "θ = 0 a 0.5 (vicino al Sole)",
+  "ar": "θ = 0 إلى 0.5 (قرب الشمس)"
  },
  "θ = π ± 0.25 (far side)": {
   "fr": "θ = π ± 0.25 (côté éloigné)",
   "es": "θ = π ± 0.25 (lado lejano)",
-  "it": "θ = π ± 0.25 (lato lontano)"
+  "it": "θ = π ± 0.25 (lato lontano)",
+  "ar": "θ = π ± 0.25 (الجانب البعيد)"
  },
  "θ sin r": {
   "fr": "θ sin r",
   "es": "θ sin r",
-  "it": "θ sin r"
+  "it": "θ sin r",
+  "ar": "θ sin r"
  },
  "√(9 − x²) suggests the substitution…": {
   "fr": "√(9 − x²) suggère la substitution…",
@@ -3213,7 +3434,8 @@
  "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. More terms approach 0.7468.": {
   "fr": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Davantage de termes s’approchent de 0.7468.",
   "es": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Con más términos se acerca a 0.7468.",
-  "it": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Con più termini ci si avvicina a 0.7468."
+  "it": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. Con più termini ci si avvicina a 0.7468.",
+  "ar": "∫(1 − x² + x⁴/2) dx = 1 − 1/3 + 1/10 = 0.7667. ومع مزيد من الحدود تقترب من 0.7468."
  },
  "∫₀^(π/2) sin²x dx": {
   "fr": "∫₀^(π/2) sin²x dx",
@@ -3260,7 +3482,8 @@
  "∫√(sin²t + cos²t) dt = 2π (a circle’s circumference).": {
   "fr": "∫√(sin²t + cos²t) dt = 2π (la circonférence d’un cercle).",
   "es": "∫√(sin²t + cos²t) dt = 2π (la circunferencia de un círculo).",
-  "it": "∫√(sin²t + cos²t) dt = 2π (la circonferenza di un cerchio)."
+  "it": "∫√(sin²t + cos²t) dt = 2π (la circonferenza di un cerchio).",
+  "ar": "∫√(sin²t + cos²t) dt = 2π (محيط دائرة)."
  },
  "≈ 451 fish, near the fastest-growth level K/2 = 500.": {
   "fr": "≈ 451 poissons, proche du niveau de croissance la plus rapide K/2 = 500.",
@@ -3277,6 +3500,7 @@
  "≈ 69.3 time units.": {
   "fr": "≈ 69.3 unités de temps.",
   "es": "≈ 69.3 unidades de tiempo.",
-  "it": "≈ 69.3 unità di tempo."
+  "it": "≈ 69.3 unità di tempo.",
+  "ar": "≈ 69.3 وحدة زمنية."
  }
 }
