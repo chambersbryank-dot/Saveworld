@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-25T17:32:35Z",
+"generated": "2026-10-26T16:59:58Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -289,6 +289,15 @@
 "rocket": "Vulcan",
 "mission": "USSF-23",
 "pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "USSF-43",
+"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -473,9 +482,9 @@
 "lng": 80.23,
 "launches": [
 {
-"net": "2026-10-30T17:00:00Z",
+"net": "2026-10-30T18:21:00Z",
 "exact": true,
-"prec": "HR",
+"prec": "MIN",
 "provider": "Indian Space Research Organization",
 "rocket": "GSLV Mk II",
 "mission": "IRNSS-1L (NVS-03)",
