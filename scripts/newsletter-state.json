@@ -5,7 +5,9 @@
     "GOES-19.html|assets/GOES19_GOESU_KSC.jpg",
     "ICESat-2.html|assets/ICESat2_Launch.jpg",
     "Nancy_Grace_Roman.html|assets/Roman_Launch_FH.jpg",
-    "Saharan_Dust_Amazon.html|assets/Saharan_Dust_Amazon.jpg"
+    "Saharan_Dust_Amazon.html|assets/Saharan_Dust_Amazon.jpg",
+    "Amazon_Rainy_Season.html|assets/Amazon_Clouds_ISS.jpg",
+    "IMAP.html|assets/IMAP_Spacecraft_KSC.jpg"
   ],
   "issues": {
     "2026-10-11": {
@@ -43,11 +45,30 @@
         "launchesThisWeek": 9,
         "artemisUpcoming": 3
       }
+    },
+    "2026-10-26": {
+      "joke": 3,
+      "facts": [
+        "Amazon_Rainy_Season.html|assets/Amazon_Clouds_ISS.jpg",
+        "IMAP.html|assets/IMAP_Spacecraft_KSC.jpg"
+      ],
+      "solutions": 38,
+      "launches": 3,
+      "stats": {
+        "solutions": 246,
+        "hubs": 11,
+        "languages": 6,
+        "upcomingMissions": 27,
+        "facts": 27,
+        "launchesThisWeek": 3,
+        "artemisUpcoming": 3
+      }
     }
   },
   "usedJokes": [
     0,
     1,
-    2
+    2,
+    3
   ]
 }

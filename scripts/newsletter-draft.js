@@ -64,7 +64,11 @@ const loadState = () => { try { return JSON.parse(fs.readFileSync(STATE, 'utf8')
 function meta(html) {
   const t = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
   const d = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
-  return { title: dec(t.replace(/\s*[|·–-]\s*(Saving Planets|Français|Español|بالعربية|Italiano).*$/, '').trim()), desc: dec(d) };
+  let title = dec(t.replace(/\s*[|·–-]\s*(Saving Planets|Français|Español|بالعربية|Italiano).*$/, '').trim());
+  // 2026-10-26: some <title>s carry a trailing hub label ("The Arabian Oryx Comeback – Forests"); use the plain <h1> when the title is "<h1> – <hub>".
+  const h1 = dec(((html.match(/<h1[^>]*>([^<]*)<\/h1>/) || [])[1] || '').trim());
+  if (h1 && title.startsWith(h1 + ' – ')) title = h1;
+  return { title, desc: dec(d) };
 }
 // Hub membership from the Solutions menu on each language's homepage (first hub that lists the page wins).
 function hubMap(lang) {
