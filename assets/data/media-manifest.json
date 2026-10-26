@@ -5974,5 +5974,12 @@
   "bytes": 1403122,
   "sha256": "cef4d0bde346071c530b2ff14295d6c5158cceda234daa42069c0d87cc3cbf8d",
   "type": "application/pdf"
+ },
+ "courses/Heat_Transfer_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Heat_Transfer_Study_Guide.dc433462a2b1.pdf",
+  "key": "courses/Heat_Transfer_Study_Guide.dc433462a2b1.pdf",
+  "bytes": 1401442,
+  "sha256": "dc433462a2b1577ee840d6c0ef4178b0f69ec72fcaaa81aad2665208ad7beb9d",
+  "type": "application/pdf"
  }
 }
