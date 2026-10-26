@@ -11,6 +11,7 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 25 (~6:45 PM HST): **Sustainable Aviation live in fr/es/ar/it/he** (i18n/courses/sustain.json from i18n-sustainable-aviation 2fe5ca9; 626 strings, 0 missing, numbers checked). Capstone Design and the lang Courses hubs link to it (local links, no (English) tag); ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Oct 25 (~6:23 PM HST): **Capstone Design live in fr/es/ar/it/he** (i18n/courses/capstone.json from i18n-capstone 894d891; 619 strings, 0 missing, numbers checked). Avionics & Systems Engineering and the lang Courses hubs link to it (local links, no (English) tag); ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Courses: Sustainable Aviation (AERO 470) live in English — 10 units, 6 labs, 172 checks, PDF study guide on R2; final course in the track.
 - Oct 25 (~5:56 PM HST): **Fix: Hebrew 'Stay in undefined' language banner** — build-langbanner.py language-name map N had no he entry, so on /he/ pages the en/fr/es/it banner said 'Stay in undefined'. Added Hebrew/hébreu/hebreo/ebraico plus a fallback (code in capitals, never 'undefined'); ar/he banners use a generic 'stay on this page' and were fine. site.js regenerated; STYLEV 20261024f → 20261025a so cached site.js refreshes (only the ?v= refs changed in pages; styles.css untouched).
