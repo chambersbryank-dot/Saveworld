@@ -1123,3 +1123,7 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - No repo page changes, no STYLEV bump. Fixed outside the repo: cohost-1016/drafts/09.txt facts note 1,963 -> 2,094 sitemap pages.
 - Flagged, not changed: Arabic Learn hub labels use plural دورات for 30/2/7/9 (Arabic grammar: 2 = دورتان, 11+ = دورة); it/Amazing_Facts.html h1 "Incredibile fatti che la materia" is a mistranslation (since Oct 15, not a count). Earlier flags unchanged (Latest Updates lacks Oct 20/21 entries, v4 promo transcript, Scoreboard "As of October 11" label, Amazing Facts 26 vs tagged pages, About "Cited on N pages", "3 learning tools" unsourced, Arabic plural in New this week, solution-tag-map at 191).
 - Milestones: **2,000 sitemap pages crossed** (2,094); 340+ pages per language. 250 solutions not yet (246).
+
+## Oct 26 2026 (HST): daily translation sync
+- weekly-sync.sh ran clean at 8d1677a1a, pushed as f9b69aa04 (All translations current, SEO 350 checked / 0 errors / 350 warnings (desc/title length), sitemap 2,100 URLs, SI credits 258 captions on 233 pages, pagefind 2,107 pages). 2,541 files: routine churn (critical CSS re-inlined, OG cards for 95 pages, JSON-LD, KaTeX markup on course pages, launch feed, pagefind/semantic index). styles.css: TIGHT-CARDS and LOGO blocks moved below SP-BANNER / HOME-TRIM by their generators, content unchanged. No STYLEV bump.
+- he-attr-i18n reports 21 strings missing in he.json (non-blocking; left in English).
