@@ -40,7 +40,7 @@ jobs:
       - name: Render share cards at build time (only if OG_AT_BUILD)
         if: vars.OG_AT_BUILD == 'true'
         run: python3 scripts/build-og.py
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with: { path: "." }
   deploy:
