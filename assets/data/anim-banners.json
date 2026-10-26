@@ -1247,7 +1247,8 @@
   "Flight_Dynamics_Controls.html": "assets/ISS_Flyaround_2021.jpg",
   "Spacecraft_Design.html": "assets/Landsat9_Launch.jpg",
   "Heat_Transfer.html": "assets/EPIC_Earth.jpg",
-  "Avionics_Systems_Engineering.html": "assets/ISS_Flyaround_2021.jpg"
+  "Avionics_Systems_Engineering.html": "assets/ISS_Flyaround_2021.jpg",
+  "Capstone_Design.html": "assets/ISS_Flyaround_2021.jpg"
  },
  "slides": {
   "pools": {
@@ -1873,6 +1874,11 @@
     "images/Landsat9_Launch_KLS04_0013.jpg",
     "images/ArtemisII_Launch_KSC_Hancock.jpg",
     "images/JPSS2_Atlas_V_Launch_Pad.jpg"
+   ],
+   "Capstone_Design.html": [
+    "images/Landsat9_Launch_KLS04_0013.jpg",
+    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
    ]
   }
  }

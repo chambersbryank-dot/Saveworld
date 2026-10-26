@@ -5988,5 +5988,12 @@
   "bytes": 1394801,
   "sha256": "886b6d3ed482ac1f120702ebe6aa7957213d5e296c9a4bcace0c6dba0bea4f7c",
   "type": "application/pdf"
+ },
+ "courses/Capstone_Design_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Capstone_Design_Study_Guide.6995424e93b7.pdf",
+  "key": "courses/Capstone_Design_Study_Guide.6995424e93b7.pdf",
+  "bytes": 1379790,
+  "sha256": "6995424e93b77634384b2a4e379d54c49bfd4224a45afc152a582c9a433367da",
+  "type": "application/pdf"
  }
 }
