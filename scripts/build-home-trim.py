@@ -29,9 +29,16 @@ CSS = """/* HOME-TRIM:START (Oct 20 clutter fix #1) */
 .home-find form{display:flex;gap:.5rem;justify-content:center;max-width:640px;margin:1rem auto}
 .home-find input{flex:1;min-width:0;padding:.75rem 1rem;border-radius:999px;border:1px solid #9fb3c8;font:inherit}
 .home-find button{padding:.75rem 1.25rem;border-radius:999px;border:0;background:#0b3d91;color:#fff;font:inherit;font-weight:700;cursor:pointer}
-.home-find .hf-row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;margin:.5rem 0}
-.home-find .hf-lab{font-weight:800;margin-inline-end:.25rem}
+.home-find{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:1rem;max-width:960px;margin:2rem auto .25rem}
+.home-find>h2,.home-find>form,.home-find>.wm-cta{grid-column:1/-1}
+.home-find>form{width:100%;margin:.5rem auto .25rem}
+.home-find .hf-row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-content:flex-start;margin:0;padding:1rem;border-radius:14px;border:1px solid rgba(127,160,200,.35);background:rgba(127,160,200,.08)}
+.home-find .hf-row:nth-of-type(3){grid-column:1/-1}
+.home-find .hf-lab{flex:0 0 100%;font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .35rem;padding-bottom:.45rem;border-bottom:1px solid rgba(127,160,200,.3)}
 .home-find .dom-chip{min-height:44px;display:inline-flex;align-items:center}
+.home-find>.wm-cta{margin:.5rem 0 0}
+body.toc-home .home-find+#solutions.card-band,.home-find+#solutions.card-band{padding-top:1.25rem}
+@media (max-width:640px){.home-find{grid-template-columns:1fr;gap:.75rem}.home-find .hf-row{padding:.85rem .6rem}}
 .ns-more{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
 .home-join .newsletter-band{margin-top:1.5rem}
 .solution-list li.sol-more-li{margin-top:.6rem}
