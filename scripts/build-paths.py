@@ -109,7 +109,7 @@ def homeschool(l):
             f'<h2>{esc(H["more"][l])}</h2><p>{md(H["more_t"][l], l)}</p></div>\n')
     return BL.shell(l, 'Homeschool.html', H['title'][l], H['desc'][l], main, extra_head=CSS, ld_type='CollectionPage')
 PAGES = {'Careers.html': careers, 'Cadets.html': cadets, 'AP_IB_Physics.html': apib, 'Homeschool.html': homeschool}
-START = ['Calculators.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html', 'Careers.html']
+START = ['Cadets.html', 'AP_IB_Physics.html', 'Careers.html']  # Oct 26: Homeschool + Calculators links removed (pages stay reachable by URL)
 def hub_block(l):  # injected into Learn.html (marker block, stripped by i18n tools)
     lis = ''.join(f'<li><a href="{h(l, p)}">{esc(P.NAV[p][l])}</a></li>' for p in START)
     return (f'<!-- STARTHERE:START --><h2 id="start-here">{esc(P.HUB["start"][l])}</h2><p>{esc(P.HUB["start_t"][l])}</p>'
@@ -120,7 +120,7 @@ if __name__ == '__main__':
     for l in LANGS:
         for p, fn in PAGES.items(): ch += wr(d(l) + p, fn(l))
         f = d(l) + 'Learn.html'; s = rd(f); s2 = re.sub(r'<!-- STARTHERE:START -->.*?<!-- STARTHERE:END -->', '', s, flags=re.S)
-        s2 = s2.replace('<div class="lw">', '<div class="lw">' + hub_block(l), 1); ch += wr(f, s2)
+        ch += wr(f, s2)  # Oct 26: Learn.html landing is now built by build-learn-hubs.py (no Start-here block)
         f = d(l) + 'Teachers.html'  # Oct 16 (A): Start-here links on Teachers too
         if os.path.exists(f):
             s = rd(f); s2 = re.sub(r'<!-- STARTHERE:START -->.*?<!-- STARTHERE:END -->', '', s, flags=re.S)

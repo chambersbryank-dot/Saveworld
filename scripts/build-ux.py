@@ -76,7 +76,7 @@ T = {
 # Education has its own Kids & Teachers door; About folded into Get Involved (policy pages stay in the footer).
 GROUPS = [('sol', ['Solutions.html','Oceans.html','Rivers.html','Lakes.html','Polar.html','Deforestation.html','Earth_Observation.html','Search.html','Topics.html']),
   ('kt', ['Play_and_Learn.html','Kids_Map.html','Amazing_Facts.html','Satellite_Explorer.html','Lesson_Builder.html','Teachers.html','Myth_vs_Fact.html','Glossary.html']),
-  ('le', ['Learn.html','Courses.html','Orbits_Guide.html','Orbit_Math.html','Orbit_Lab.html','Aero_Guide.html','Aero_Math.html','Aero_Lab.html','Physics_Guide.html','Physics_Math.html','Physics_Lab.html','Calculators.html','Cadets.html','Homeschool.html','AP_IB_Physics.html','Careers.html']),  # Oct 16: Learn door (3 tracks; labels from learn_text.py)
+  ('le', ['Learn.html','Courses.html','Orbits_Guide.html','Orbit_Math.html','Orbit_Lab.html','Aero_Guide.html','Aero_Math.html','Aero_Lab.html','Physics_Guide.html','Physics_Math.html','Physics_Lab.html','Cadets.html','AP_IB_Physics.html','Careers.html']),  # Oct 16: Learn door (3 tracks; labels from learn_text.py)
   ('sl', ['Space.html','Artemis_II.html#launches','Planetary_Defense.html','Space_Weather.html','Space_Disposal.html']),
   ('pr', ['Project-Rawane.html','Rawanes_Mission_Log.html','World_Map.html']),
   ('gi', ['Ways_to_Help.html','index.html#newsletter','Contact.html','About.html'])]
@@ -299,7 +299,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261026a"  # bump when styles.css changes
+STYLEV = "20261025a"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
