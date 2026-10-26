@@ -5995,5 +5995,12 @@
   "bytes": 1379790,
   "sha256": "6995424e93b77634384b2a4e379d54c49bfd4224a45afc152a582c9a433367da",
   "type": "application/pdf"
+ },
+ "courses/Sustainable_Aviation_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Sustainable_Aviation_Study_Guide.11e4f240bc27.pdf",
+  "key": "courses/Sustainable_Aviation_Study_Guide.11e4f240bc27.pdf",
+  "bytes": 1372420,
+  "sha256": "11e4f240bc27d30cd4488c03e2b933e09a02be6f4037cfeb1c8b3a26e102d801",
+  "type": "application/pdf"
  }
 }
