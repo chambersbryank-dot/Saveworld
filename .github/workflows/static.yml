@@ -10,6 +10,11 @@ permissions:
   pages: write
   id-token: write
 
+# Serialize Pages deploys: back-to-back pushes otherwise collide ("in progress deployment" 400).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
     environment:
