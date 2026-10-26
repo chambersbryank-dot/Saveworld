@@ -11,6 +11,7 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 25 (~2:00 PM HST): **Probability & Statistics live in fr/es/ar/it/he** (i18n/courses/probstat.json from i18n-probstat b6061d0f0; 740 strings, 0 missing, numbers checked). Numerical Methods and the lang Courses hubs link to it (hub cards point at local pages); ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Oct 25 (~1:29 PM HST): **Numerical Methods live in fr/es/ar/it/he** (new i18n/courses/numerics.json; 784 strings, 0 missing, numbers and KaTeX checked, code not translated). Orbital Mechanics and the lang Courses hubs link to it; ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Courses: Probability & Statistics (MATH 350) live in English — last junior course; 10 units (descriptive stats, probability rules, Bayes, binomial/Poisson, normal/exponential, CLT, confidence intervals, tests, regression, reliability), tied to USGS flood/earthquake probabilities, NOAA hurricane cone and outlook, Mauna Loa CO₂; 6 computer labs, 172 checks, PDF study guide on R2; Courses card Live in all 6 languages + sitemap.
 - Oct 25 (~1:05 PM HST): **Orbital Mechanics live in fr/es/ar/it/he** (i18n/courses/orbit.json from i18n-orbital 9d5fe2e3e; 758 strings, numbers checked). Aerospace Structures links to it; ar/he rewrapped. Sitemap +5 URLs.
