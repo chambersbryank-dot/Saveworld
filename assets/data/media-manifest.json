@@ -5953,5 +5953,12 @@
   "bytes": 1447001,
   "sha256": "a82aedbdd4234b614b24b6d8dd56258660b3ff2492353903709a11b11122055b",
   "type": "application/pdf"
+ },
+ "courses/Propulsion_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Propulsion_Study_Guide.14c22446c9eb.pdf",
+  "key": "courses/Propulsion_Study_Guide.14c22446c9eb.pdf",
+  "bytes": 1429273,
+  "sha256": "14c22446c9eb8bb9f2059cc04c022fe1d182482bfe3fa59728b01a497c948691",
+  "type": "application/pdf"
  }
 }
