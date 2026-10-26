@@ -522,7 +522,8 @@ var K='sp-langbanner-v1',st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')|
 if(st[cur+'>'+tgt]==='stay')return;
 /* Oct 17: never suggest when the visitor already picked this page's language (nav switch, banner or earlier choice) */
 var CH='';try{CH=localStorage.getItem('sp-lang-chosen')||''}catch(e){}if(CH===cur)return;
-var N={en:{en:'English',fr:'French',es:'Spanish',ar:'Arabic',it:'Italian'},fr:{en:'anglais',fr:'français',es:'espagnol',ar:'arabe',it:'italien'},es:{en:'inglés',fr:'francés',es:'español',ar:'árabe',it:'italiano'},it:{en:'inglese',fr:'francese',es:'spagnolo',ar:'arabo',it:'italiano'}};
+var N={en:{en:'English',fr:'French',es:'Spanish',ar:'Arabic',it:'Italian',he:'Hebrew'},fr:{en:'anglais',fr:'français',es:'espagnol',ar:'arabe',it:'italien',he:'hébreu'},es:{en:'inglés',fr:'francés',es:'español',ar:'árabe',it:'italiano',he:'hebreo'},it:{en:'inglese',fr:'francese',es:'spagnolo',ar:'arabo',it:'italiano',he:'ebraico'}};/* Oct 25: he was missing here, so a /he/ page showed 'Stay in undefined' */
+for(var k in N)if(!N[k][cur])N[k][cur]=cur.toUpperCase();/* never 'undefined' if a new page language is added later */
 var T={en:['This page is available in English.','View in English','Stay in '+N.en[cur],'Close'],
 fr:['Cette page est disponible en français.','Voir en français','Rester en '+N.fr[cur],'Fermer'],
 es:['Esta página está disponible en español.','Ver en español','Seguir en '+N.es[cur],'Cerrar'],
