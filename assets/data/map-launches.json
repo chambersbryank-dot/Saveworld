@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-26T16:59:58Z",
+"generated": "2026-10-26T18:16:11Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -288,15 +288,6 @@
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
 "mission": "USSF-23",
-"pad": "Space Launch Complex 41"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan",
-"mission": "USSF-43",
 "pad": "Space Launch Complex 41"
 }
 ]
@@ -641,6 +632,15 @@
 "pad": "Space Launch Complex 4E"
 },
 {
+"net": "2026-11-02T01:56:00Z",
+"exact": true,
+"prec": "MIN",
+"provider": "SpaceX",
+"rocket": "Falcon 9 Block 5",
+"mission": "USSF-432",
+"pad": "Space Launch Complex 4E"
+},
+{
 "net": "2026-11-05T05:14:00Z",
 "exact": true,
 "prec": "MIN",
@@ -650,9 +650,9 @@
 "pad": "Space Launch Complex 4E"
 },
 {
-"net": "2026-11-05T22:34:00Z",
-"exact": true,
-"prec": "MIN",
+"net": "2026-11-30T00:00:00Z",
+"exact": false,
+"prec": "M",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "NROL-195",

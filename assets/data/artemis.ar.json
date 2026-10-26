@@ -1,6 +1,6 @@
 {
- "asOf": "2026-10-11",
- "updated": "2026-10-11",
+ "asOf": "2026-10-26",
+ "updated": "2026-10-26",
  "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
  "program": {
   "url": "https://www.nasa.gov/humans-in-space/artemis/",
@@ -11,7 +11,7 @@
    "id": "artemis-i",
    "name": "Artemis I",
    "state": "flown",
-   "target": "Nov. 16, 2022",
+   "target": "16 نوفمبر 2022",
    "missionType": "رحلة اختبار قمرية غير مأهولة",
    "synopsis": "أول رحلة اختبار من NASA لـ SLS وOrion والأنظمة الأرضية: رحلة غير مأهولة لمدة 25 يومًا إلى ما بعد القمر، أُطلقت في 16 نوفمبر وهبطت في البحر في 11 ديسمبر 2022.",
    "status": "نُفّذت. رحلة اختبار غير مأهولة، من 16 نوفمبر إلى 11 ديسمبر 2022.",
@@ -102,7 +102,7 @@
    "target": "2027",
    "targetLabel": "هدف NASA: 2027",
    "missionType": "عرض مأهول",
-   "status": "رحلة اختبار مأهولة في المدار الأرضي المنخفض: ستتدرب Orion على الالتقاء والالتحام بمركبة هبوط قمرية تجارية أو بكلتيهما وتختبر الأنظمة الحرجة قبل أي هبوط. لم يُحدَّد موعد للإطلاق بعد، لذا لا يوجد عد تنازلي.",
+   "status": "رحلة اختبار مأهولة في المدار الأرضي المنخفض، مخطط لها أن تستمر 14 يومًا: ستلتحم Orion أولًا بنسخة اختبارية من مركبة الهبوط Blue Moon من Blue Origin، ثم بنسخة اختبارية من Starship من SpaceX، وتختبر الأنظمة الحرجة قبل أي هبوط. لم يُحدَّد موعد للإطلاق بعد، لذا لا يوجد عد تنازلي.",
    "objective": "إثبات الأنظمة الحرجة للهبوط على القمر",
    "crew": [
     {
@@ -126,7 +126,7 @@
      "agency": "NASA"
     }
    ],
-   "hardware": "SLS وOrion ونظام هبوط بشري واحد أو كلاهما: SpaceX Starship وBlue Origin Blue Moon (تبنيهما شركات بعقود مع NASA).",
+   "hardware": "SLS وOrion ونسخ اختبارية من نظامَي الهبوط البشري كليهما: Blue Origin Blue Moon Mark 2 وSpaceX Starship (تبنيهما شركات بعقود مع NASA).",
    "milestones": [
     {
      "date": "2026-02-27",
@@ -135,12 +135,20 @@
     {
      "date": "2026-06-09",
      "label": "تسمية الطاقم: Bresnik وParmitano (ESA) وDouglas وRubio"
+    },
+    {
+     "date": "2026-10-23",
+     "label": "NASA تكشف تفاصيل الخطة: مهمة مدتها 14 يومًا تلتحم فيها بنسختين اختباريتين من Blue Moon وStarship"
     }
    ],
    "sources": [
     {
      "url": "https://www.nasa.gov/mission/artemis-iii/",
      "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+     "label": "NASA, Artemis III mission plan (Oct 2026)"
     },
     {
      "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
@@ -152,7 +160,7 @@
     }
    ],
    "watch": "https://www.nasa.gov/mission/artemis-iii/",
-   "synopsis": "اختبار مأهول في المدار الأرضي المنخفض: تتدرب Orion على الالتحام بمركبات هبوط قمرية تجارية قبل أي هبوط."
+   "synopsis": "اختبار مأهول في المدار الأرضي المنخفض: تتدرب Orion على الالتحام بنسخ اختبارية من مركبتَي الهبوط القمريتين التجاريتين قبل أي هبوط."
   },
   {
    "id": "artemis-iv",

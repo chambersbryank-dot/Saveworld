@@ -1,0 +1,224 @@
+{
+ "asOf": "2026-10-26",
+ "updated": "2026-10-26",
+ "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
+ "program": {
+  "url": "https://www.nasa.gov/humans-in-space/artemis/",
+  "label": "NASA, Artemis program"
+ },
+ "missions": [
+  {
+   "id": "artemis-i",
+   "name": "Artemis I",
+   "state": "flown",
+   "target": "16 nov. 2022",
+   "missionType": "Prova di volo lunare non bloccata",
+   "synopsis": "Il primo test di volo della NASA su sistemi SLS, Orion e terra: un viaggio di 25 giorni senza equipaggio oltre la Luna, ha lanciato Nov. 16 e sbattuto giù Dec. 11, 2022.",
+   "status": "Flusso. Prova di volo non trainata, Nov. 16 a Dec. 11, 2022.",
+   "objective": "Testare il razzo, l'astronave e i sistemi di terra senza equipaggio.",
+   "crew": [],
+   "hardware": "Razzo SLS e veicolo spaziale Orion (non cucito).",
+   "milestones": [
+    {
+     "date": "2022-11-16",
+     "label": "Lancio da Kennedy Space Center"
+    },
+    {
+     "date": "2022-12-11",
+     "label": "Ammaraggio"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-i/",
+     "label": "NASA, Artemis I"
+    }
+   ],
+   "watch": null
+  },
+  {
+   "id": "artemis-ii",
+   "name": "Artemis II",
+   "state": "flown",
+   "target": "April 1–10, 2026",
+   "launch": "2026-04-01T00:00:00Z",
+   "missionType": "Sorvolo lunare con equipaggio",
+   "status": "Flusso. Quattro astronauti volarono intorno alla Luna, raggiunsero 252.756 miglia dalla Terra il 6 aprile 2026, e sprofondarono a San Diego dopo un viaggio di quasi 10 giorni, 695.081 miglia.",
+   "objective": "Prove Orion e SLS con un equipaggio a bordo.",
+   "crew": [
+    {
+     "name": "Reid Wiseman",
+     "role": "Comandante",
+     "agency": "NASA"
+    },
+    {
+     "name": "Victor Glover",
+     "role": "Pilota",
+     "agency": "NASA"
+    },
+    {
+     "name": "Christina Koch",
+     "role": "Specialista di missione",
+     "agency": "NASA"
+    },
+    {
+     "name": "Jeremy Hansen",
+     "role": "Specialista di missione",
+     "agency": "CSA"
+    }
+   ],
+   "hardware": "Razzo SLS e veicolo spaziale Orion.",
+   "milestones": [
+    {
+     "date": "2026-04-01",
+     "label": "Avviare su SLS e Orion dal Kennedy Space Center"
+    },
+    {
+     "date": "2026-04-06",
+     "label": "Nuovo record: 252,756 miglia da Terra"
+    },
+    {
+     "date": "2026-04-10",
+     "label": "Splashdown su San Diego"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-welcomes-record-setting-artemis-ii-moonfarers-back-to-earth/",
+     "label": "NASA, Artemis II crew back on Earth"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasas-artemis-ii-crew-eclipses-record-for-farthest-human-spaceflight/",
+     "label": "NASA, Artemis II distance record"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-ii/",
+   "synopsis": "Quattro astronauti volarono intorno alla Luna nell'aprile del 2026 e raggiunsero 252.756 miglia dalla Terra, più di qualsiasi essere umano prima."
+  },
+  {
+   "id": "artemis-iii",
+   "name": "Artemis III",
+   "state": "upcoming",
+   "target": "2027",
+   "targetLabel": "Obiettivo della NASA: 2027",
+   "missionType": "Dimostrazione ammassata",
+   "status": "Un volo di prova con equipaggio in orbita terrestre bassa, previsto di 14 giorni: Orion si aggancerà prima a una versione di prova del lander Blue Moon di Blue Origin, poi a una versione di prova della Starship di SpaceX, e testerà i sistemi critici prima di qualsiasi allunaggio. La data di lancio non è ancora fissata, quindi niente conto alla rovescia.",
+   "objective": "Dimostrare i sistemi critici per l'atterraggio lunare",
+   "crew": [
+    {
+     "name": "Randy Bresnik",
+     "role": "Comandante",
+     "agency": "NASA"
+    },
+    {
+     "name": "Luca Parmitano",
+     "role": "Pilota",
+     "agency": "ESA"
+    },
+    {
+     "name": "Andre Douglas",
+     "role": "Specialista di missione",
+     "agency": "NASA"
+    },
+    {
+     "name": "Frank Rubio",
+     "role": "Specialista di missione",
+     "agency": "NASA"
+    }
+   ],
+   "hardware": "SLS, Orion e versioni di prova di entrambi i sistemi di atterraggio con equipaggio: Blue Origin Blue Moon Mark 2 e SpaceX Starship (costruiti da aziende, con contratti NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "La NASA rende Artemis III un test di orbita terrestre; il primo atterraggio si sposta verso Artemis IV"
+    },
+    {
+     "date": "2026-06-09",
+     "label": "Crew di nome: Bresnik, Parmitano (ESA), Douglas, Rubio"
+    },
+    {
+     "date": "2026-10-23",
+     "label": "La NASA illustra il piano: una missione di 14 giorni con aggancio alle versioni di prova di Blue Moon e Starship"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iii/",
+     "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+     "label": "NASA, Artemis III mission plan (Oct 2026)"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
+     "label": "NASA, Artemis III crew"
+    },
+    {
+     "url": "https://www.nasa.gov/news-release/nasa-adds-mission-to-artemis-lunar-program-updates-architecture/",
+     "label": "NASA, Artemis architecture update"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iii/",
+   "synopsis": "Un test con equipaggio in orbita terrestre bassa: Orion si esercita ad agganciarsi a versioni di prova di entrambi i lander lunari commerciali prima di qualsiasi allunaggio."
+  },
+  {
+   "id": "artemis-iv",
+   "name": "Artemis IV",
+   "state": "upcoming",
+   "target": "Inizio 2028",
+   "targetLabel": "Obiettivo della NASA: inizio 2028",
+   "missionType": "Appaltimenti di superficie rettificati",
+   "status": "Il ritorno dell'umanità alla superficie lunare: due di quattro uomini scenderanno vicino al Polo Sud della Luna e trascorreranno circa una settimana lì. Crew non ha ancora annunciato.",
+   "objective": "Terra due astronauti vicino al Polo Sud lunare per circa una settimana di scienza.",
+   "crew": [],
+   "hardware": "SLS (configurazione standardizzata da Artemis IV), Orion docking con un sistema di atterraggio umano commerciale in orbita lunare. Gateway non è elencato nell'aggiornamento del piano della NASA nel febbraio 2026.",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "La NASA chiama Artemis IV il primo atterraggio equipaggiato, mirato per il 2028"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/mission/artemis-iv/",
+     "label": "NASA, Artemis IV"
+    },
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-iv/",
+   "synopsis": "Il ritorno dell'umanità alla superficie lunare: due astronauti trascorrono circa una settimana vicino al Polo Sud della Luna."
+  },
+  {
+   "id": "artemis-v",
+   "name": "Artemis V",
+   "state": "upcoming",
+   "target": "Fine 2028",
+   "targetLabel": "Obiettivo della NASA: fine 2028",
+   "missionType": "Approfondimento",
+   "synopsis": "Un secondo astronauta che atterra nel piano della NASA del febbraio 2026.",
+   "status": "Il piano della NASA del febbraio 2026 elenca Artemis V come atterraggio supplementare dell'astronauta, puntando verso la fine del 2028. Non c'è ancora nessuna pagina di missione o squadra.",
+   "objective": "Un altro astronauta che atterra sulla Luna.",
+   "crew": [],
+   "hardware": "SLS, Orion e un sistema commerciale di atterraggio umano (per il piano della NASA).",
+   "milestones": [
+    {
+     "date": "2026-02-27",
+     "label": "Aggiunto al piano Artemis aggiornato della NASA"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2026/03/going-back-to-the-moon.pdf",
+     "label": "NASA, Return to the lunar surface plan (Mar 2026)"
+    }
+   ],
+   "watch": "https://www.nasa.gov/mission/artemis-v/",
+   "watchOptional": true
+  }
+ ],
+ "lang": "it"
+}

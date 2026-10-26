@@ -1,6 +1,6 @@
 {
- "asOf": "2026-10-11",
- "updated": "2026-10-11",
+ "asOf": "2026-10-26",
+ "updated": "2026-10-26",
  "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
  "program": {
   "url": "https://www.nasa.gov/humans-in-space/artemis/",
@@ -11,7 +11,7 @@
    "id": "artemis-i",
    "name": "Artemis I",
    "state": "flown",
-   "target": "Nov. 16, 2022",
+   "target": "16 nov. 2022",
    "missionType": "Vol d'essai lunaire sans équipage",
    "synopsis": "Premier vol d'essai de la NASA pour SLS, Orion et les systèmes au sol : un voyage sans équipage de 25 jours au-delà de la Lune, lancé le 16 novembre et amerri le 11 décembre 2022.",
    "status": "Effectuée. Vol d'essai sans équipage, du 16 novembre au 11 décembre 2022.",
@@ -102,7 +102,7 @@
    "target": "2027",
    "targetLabel": "Objectif NASA : 2027",
    "missionType": "Démonstration habitée",
-   "status": "Un vol d'essai habité en orbite terrestre basse : Orion s'exercera au rendez-vous et à l'amarrage avec un ou deux atterrisseurs lunaires commerciaux et testera des systèmes critiques avant tout atterrissage. Aucune date de lancement fixée, donc pas de compte à rebours.",
+   "status": "Un vol d'essai habité en orbite terrestre basse, prévu pour 14 jours : Orion s'amarrera d'abord à une version d'essai de l'atterrisseur Blue Moon de Blue Origin, puis à une version d'essai du Starship de SpaceX, et testera des systèmes critiques avant tout atterrissage. Aucune date de lancement n'est encore fixée, donc pas de compte à rebours.",
    "objective": "Démontrer les systèmes critiques pour l'atterrissage lunaire",
    "crew": [
     {
@@ -126,7 +126,7 @@
      "agency": "NASA"
     }
    ],
-   "hardware": "SLS, Orion et un ou deux systèmes d'atterrissage habité : SpaceX Starship et Blue Origin Blue Moon (construits par des entreprises, sous contrat NASA).",
+   "hardware": "SLS, Orion et des versions d'essai des deux systèmes d'atterrissage habité : Blue Origin Blue Moon Mark 2 et SpaceX Starship (construits par des entreprises, sous contrat NASA).",
    "milestones": [
     {
      "date": "2026-02-27",
@@ -135,12 +135,20 @@
     {
      "date": "2026-06-09",
      "label": "Équipage désigné : Bresnik, Parmitano (ESA), Douglas, Rubio"
+    },
+    {
+     "date": "2026-10-23",
+     "label": "La NASA détaille le plan : une mission de 14 jours avec amarrage aux versions d'essai de Blue Moon et de Starship"
     }
    ],
    "sources": [
     {
      "url": "https://www.nasa.gov/mission/artemis-iii/",
      "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+     "label": "NASA, Artemis III mission plan (Oct 2026)"
     },
     {
      "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
@@ -152,7 +160,7 @@
     }
    ],
    "watch": "https://www.nasa.gov/mission/artemis-iii/",
-   "synopsis": "Un essai habité en orbite terrestre basse : Orion s'exerce à l'amarrage avec des atterrisseurs lunaires commerciaux avant tout atterrissage."
+   "synopsis": "Un essai habité en orbite terrestre basse : Orion s'exerce à l'amarrage avec des versions d'essai des deux atterrisseurs lunaires commerciaux avant tout atterrissage."
   },
   {
    "id": "artemis-iv",

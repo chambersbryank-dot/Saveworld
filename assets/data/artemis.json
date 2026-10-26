@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-11",
-  "updated": "2026-10-11",
+  "asOf": "2026-10-26",
+  "updated": "2026-10-26",
   "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
   "program": {
     "url": "https://www.nasa.gov/humans-in-space/artemis/",
@@ -102,7 +102,7 @@
       "target": "2027",
       "targetLabel": "NASA target: 2027",
       "missionType": "Crewed Demonstration",
-      "status": "A crewed test flight in low Earth orbit: Orion will practice rendezvous and docking with one or both commercial lunar landers and test critical systems before any landing. No launch date set yet, so no countdown.",
+      "status": "A crewed test flight in low Earth orbit, planned for 14 days: Orion will dock first with a test version of Blue Origin's Blue Moon lander, then with a test version of SpaceX's Starship, and test critical systems before any landing. No launch date set yet, so no countdown.",
       "objective": "Demonstrate Critical Systems for Lunar Landing",
       "crew": [
         {
@@ -126,7 +126,7 @@
           "agency": "NASA"
         }
       ],
-      "hardware": "SLS, Orion, and one or both human landing systems: SpaceX Starship and Blue Origin Blue Moon (company-built, NASA contracts).",
+      "hardware": "SLS, Orion, and test versions of both human landing systems: Blue Origin Blue Moon Mark 2 and SpaceX Starship (company-built, NASA contracts).",
       "milestones": [
         {
           "date": "2026-02-27",
@@ -135,12 +135,20 @@
         {
           "date": "2026-06-09",
           "label": "Crew named: Bresnik, Parmitano (ESA), Douglas, Rubio"
+        },
+        {
+          "date": "2026-10-23",
+          "label": "NASA details the plan: a 14-day mission docking with Blue Moon and Starship test versions"
         }
       ],
       "sources": [
         {
           "url": "https://www.nasa.gov/mission/artemis-iii/",
           "label": "NASA, Artemis III mission"
+        },
+        {
+          "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+          "label": "NASA, Artemis III mission plan (Oct 2026)"
         },
         {
           "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
@@ -152,7 +160,7 @@
         }
       ],
       "watch": "https://www.nasa.gov/mission/artemis-iii/",
-      "synopsis": "A crewed test in low Earth orbit: Orion practices docking with commercial lunar landers before any landing."
+      "synopsis": "A crewed test in low Earth orbit: Orion practices docking with test versions of both commercial lunar landers before any landing."
     },
     {
       "id": "artemis-iv",

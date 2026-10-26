@@ -1,6 +1,6 @@
 {
- "asOf": "2026-10-11",
- "updated": "2026-10-11",
+ "asOf": "2026-10-26",
+ "updated": "2026-10-26",
  "note": "All dates are NASA figures; future dates are NASA targets and shift. Updated by scripts/update-artemis.js (flags changes; never invents data).",
  "program": {
   "url": "https://www.nasa.gov/humans-in-space/artemis/",
@@ -11,7 +11,7 @@
    "id": "artemis-i",
    "name": "Artemis I",
    "state": "flown",
-   "target": "Nov. 16, 2022",
+   "target": "16 nov. 2022",
    "missionType": "Vuelo de prueba lunar sin tripulación",
    "synopsis": "El primer vuelo de prueba de la NASA de SLS, Orion y los sistemas de tierra: un viaje sin tripulación de 25 días más allá de la Luna, lanzado el 16 de noviembre y amerizado el 11 de diciembre de 2022.",
    "status": "Realizada. Vuelo de prueba sin tripulación, del 16 de noviembre al 11 de diciembre de 2022.",
@@ -102,7 +102,7 @@
    "target": "2027",
    "targetLabel": "Objetivo de la NASA: 2027",
    "missionType": "Demostración tripulada",
-   "status": "Un vuelo de prueba tripulado en órbita terrestre baja: Orion practicará el encuentro y acoplamiento con uno o ambos módulos lunares comerciales y probará sistemas críticos antes de cualquier alunizaje. Aún no hay fecha de lanzamiento, así que no hay cuenta atrás.",
+   "status": "Un vuelo de prueba tripulado en órbita terrestre baja, previsto para 14 días: Orion se acoplará primero a una versión de prueba del módulo Blue Moon de Blue Origin y luego a una versión de prueba de la Starship de SpaceX, y probará sistemas críticos antes de cualquier alunizaje. Aún no hay fecha de lanzamiento, así que no hay cuenta regresiva.",
    "objective": "Demostrar sistemas críticos para el alunizaje",
    "crew": [
     {
@@ -126,7 +126,7 @@
      "agency": "NASA"
     }
    ],
-   "hardware": "SLS, Orion y uno o ambos sistemas de aterrizaje tripulado: SpaceX Starship y Blue Origin Blue Moon (construidos por empresas, con contratos de la NASA).",
+   "hardware": "SLS, Orion y versiones de prueba de ambos sistemas de aterrizaje tripulado: Blue Origin Blue Moon Mark 2 y SpaceX Starship (construidos por empresas, con contratos de la NASA).",
    "milestones": [
     {
      "date": "2026-02-27",
@@ -135,12 +135,20 @@
     {
      "date": "2026-06-09",
      "label": "Tripulación designada: Bresnik, Parmitano (ESA), Douglas, Rubio"
+    },
+    {
+     "date": "2026-10-23",
+     "label": "La NASA detalla el plan: una misión de 14 días con acoplamiento a versiones de prueba de Blue Moon y Starship"
     }
    ],
    "sources": [
     {
      "url": "https://www.nasa.gov/mission/artemis-iii/",
      "label": "NASA, Artemis III mission"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+     "label": "NASA, Artemis III mission plan (Oct 2026)"
     },
     {
      "url": "https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members/",
@@ -152,7 +160,7 @@
     }
    ],
    "watch": "https://www.nasa.gov/mission/artemis-iii/",
-   "synopsis": "Una prueba tripulada en órbita terrestre baja: Orion practica el acoplamiento con módulos lunares comerciales antes de cualquier alunizaje."
+   "synopsis": "Una prueba tripulada en órbita terrestre baja: Orion practica el acoplamiento con versiones de prueba de ambos módulos lunares comerciales antes de cualquier alunizaje."
   },
   {
    "id": "artemis-iv",
