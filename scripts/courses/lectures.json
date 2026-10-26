@@ -1,0 +1,676 @@
+{
+ "aero1": {
+  "1": {
+   "title": "Fluid Dynamics and Statics and Bernoulli's Equation",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-20",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "2": {
+   "title": "Work-Energy Theorem and Law of Conservation of Energy",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-5",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "9": {
+   "title": "Lecture 12: Aircraft Performance",
+   "url": "https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/lecture-12-aircraft-performance/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.687 Private Pilot Ground School (IAP 2019)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "aero101": {
+  "4": {
+   "title": "Lecture 12: Aircraft Performance",
+   "url": "https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/lecture-12-aircraft-performance/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.687 Private Pilot Ground School (IAP 2019)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "avionics": {
+  "0": {
+   "title": "Lecture 21: Systems Engineering for Space Shuttle Payloads",
+   "url": "https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-21/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.885J Aircraft Systems Engineering (Fall 2005)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "1": {
+   "title": "Session 8: Systems Integration and Interface Management",
+   "url": "https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/resources/session-8-systems-integration-and-interface-management/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.842 Fundamentals of Systems Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "calc1": {
+  "1": {
+   "title": "Clip 4: Physical Interpretation of Derivatives, Continued",
+   "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-4-physical-interpretation-of-derivatives-continued/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01SC Single Variable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Clip 2: Introduction to General Rules for Differentiation",
+   "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-introduction-to-general-rules-for-differentiation/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01SC Single Variable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Lecture 12: Related Rates",
+   "url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lecture-12-related-rates/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01 Single Variable Calculus (Fall 2006)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Clip 1: Proof of the Second Fundamental Theorem of Calculus",
+   "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-proof-of-the-second-fundamental-theorem-of-calculus/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01SC Single Variable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "calc2": {
+  "1": {
+   "title": "Clip 1: Introduction to Arc Length",
+   "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-1-introduction-to-arc-length/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01SC Single Variable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Lecture 36: Improper Integrals",
+   "url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lecture-36-improper-integrals/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01 Single Variable Calculus (Fall 2006)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Lecture 16: Differential Equations",
+   "url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lecture-16-differential-equations/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01 Single Variable Calculus (Fall 2006)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Lecture 38: Taylor's Series",
+   "url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lecture-38-taylors-series/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01 Single Variable Calculus (Fall 2006)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Lecture 31: Parametric Equations",
+   "url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lecture-31-parametric-equations/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.01 Single Variable Calculus (Fall 2006)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "calc3": {
+  "0": {
+   "title": "Session 79 Clip: Vector Fields in Space",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-vector-fields-in-space/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "1": {
+   "title": "Session 79 Clip: Vector Fields in Space",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-vector-fields-in-space/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Session 26 Clip: Partial Derivatives",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-partial-derivatives/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Session 47 Clip: Definition of Double Integration",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-definition-of-double-integration/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Session 53 Clip: Change of Variables",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-change-of-variables/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Session 56 Clip: Vector Fields",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-vector-fields/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "Session 95 Clip: Stokes' Theorem and Surface Independence",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/resources/clip-stokes-theorem-and-surface-independence/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.02SC Multivariable Calculus (Fall 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "capstone": {
+  "1": {
+   "title": "Session 4: System Architecture and Concept Generation",
+   "url": "https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/resources/session-4-system-architecture-and-concept-generation/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.842 Fundamentals of Systems Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Lecture 5: Orbiter Structure + Thermal Protection System",
+   "url": "https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-5/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.885J Aircraft Systems Engineering (Fall 2005)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "circuits": {
+  "0": {
+   "title": "Lecture 22: Energy and Power",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-22/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Lecture 2: Basic Circuit Analysis Method",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-2/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Lecture 3: Superposition, Thévenin and Norton",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-3/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Lecture 19: The Operational Amplifier Abstraction",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-19/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Lecture 12: Capacitors and First-Order Systems",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-12/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "Lecture 15: Second-Order Systems (part 1)",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-15-part-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "Lecture 16: Sinusoidal Steady State",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/lecture-16/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.002 Circuits and Electronics (Spring 2007)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "diffeq": {
+  "0": {
+   "title": "First Order Autonomous Equations",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/first-order-autonomous-equations/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "1": {
+   "title": "First Order Autonomous Equations",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/first-order-autonomous-equations/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Constant Coefficient Second Order Homogeneous DE's",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/constant-coefficient-second-order-homogeneous-des/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Laplace Transform",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/laplace-transform/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "The Relation Between Nonlinear Systems and First-order ODE's",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/the-relation-between-nonlinear-systems-and-first-order-odes/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "Convergence of Fourier Series",
+   "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/resources/convergence-of-fourier-series/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.03SC Differential Equations (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "dynamics": {
+  "0": {
+   "title": "Kinematics: describing the motion of particles and rigid bodies",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/kinematics-describing-the-motion-of-particles-and-rigid-bodies/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "1": {
+   "title": "Definition of normal and tangential coordinates",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/definition-of-normal-and-tangential-coordinates/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Lecture 2: Newton's Laws and Describing the Kinematics of Particles",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-2-newtons-laws-and-describing-the-kinematics-of-particles-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Example 2b-work done equals the change in kinetic energy",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/example-2b-work-done-equals-the-change-in-kinetic-energy/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "A review of the principle of linear momentum and impulse",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/a-review-of-the-principle-of-linear-momentum-and-impulse/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Damped response of spring-mass-dashpot system to initial conditions",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/damped-response-of-spring-mass-dashpot-system-to-initial-conditions/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Kinematics: describing the motion of particles and rigid bodies",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/kinematics-describing-the-motion-of-particles-and-rigid-bodies/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "Angular momentum for rigid bodies and the mass moment of inertia matrix, [I]",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/angular-momentum-for-rigid-bodies-and-the-mass-moment-of-inertia-matrix-i/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "Angular momentum for rigid bodies and the mass moment of inertia matrix, [I]",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/angular-momentum-for-rigid-bodies-and-the-mass-moment-of-inertia-matrix-i/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "9": {
+   "title": "Lecture 19: Introduction to Mechanical Vibration",
+   "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-19-introduction-to-mechanical-vibration-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 2.003SC Engineering Dynamics (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "fdc": {
+  "5": {
+   "title": "Lecture 6 laplace transform",
+   "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/lecture-6-laplace-transform/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.003 Signals and Systems (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Lecture 11 continuous time ct frequency response and bode plot",
+   "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/lecture-11-continuous-time-ct-frequency-response-and-bode-plot/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.003 Signals and Systems (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "Lecture 10 feedback and control",
+   "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/lecture-10-feedback-and-control/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.003 Signals and Systems (Fall 2011)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "fluids": {
+  "1": {
+   "title": "Fluid Dynamics and Statics and Bernoulli's Equation",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-20",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "2": {
+   "title": "Fluid Dynamics and Statics and Bernoulli's Equation",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-20",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  }
+ },
+ "linalg": {
+  "1": {
+   "title": "Lecture 1: The geometry of linear equations",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-1-the-geometry-of-linear-equations/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Lecture 3: Multiplication and inverse matrices",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-3-multiplication-and-inverse-matrices/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Lecture 10: The four fundamental subspaces",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-10-the-four-fundamental-subspaces/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Lecture 16: Projection matrices and least squares",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-16-projection-matrices-and-least-squares/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Lecture 20: Cramer's rule, inverse matrix, and volume",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-20-cramers-rule-inverse-matrix-and-volume/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "Lecture 22: Diagonalization and powers of A",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-22-diagonalization-and-powers-of-a/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "9": {
+   "title": "Lecture 25: Symmetric matrices and positive definiteness",
+   "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/lecture-25-symmetric-matrices-and-positive-definiteness/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.06 Linear Algebra (Spring 2010)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "numerics": {
+  "1": {
+   "title": "Session 7: Solutions of Nonlinear Equations; Newton-Raphson Method",
+   "url": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2015/resources/session-7-solutions-of-nonlinear-equations-newton-raphson-method/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 10.34 Numerical Methods Applied to Chemical Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Lecture 3: Solving a Linear System",
+   "url": "https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/resources/lecture-3-solving-a-linear-system/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.085 Computational Science and Engineering I (Fall 2008)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Lecture 11: Least Squares (part 2)",
+   "url": "https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/resources/lecture-11-least-squares-part-2/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 18.085 Computational Science and Engineering I (Fall 2008)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "6": {
+   "title": "Session 13: ODE-IVP and Numerical Integration 1",
+   "url": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2015/resources/session-13-ode-ivp-and-numerical-integration-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 10.34 Numerical Methods Applied to Chemical Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "Session 18: Differential Algebraic Equations 2",
+   "url": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2015/resources/session-18-differential-algebraic-equations-2/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 10.34 Numerical Methods Applied to Chemical Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "Session 22: Partial Differential Equations 1",
+   "url": "https://ocw.mit.edu/courses/10-34-numerical-methods-applied-to-chemical-engineering-fall-2015/resources/session-22-partial-differential-equations-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 10.34 Numerical Methods Applied to Chemical Engineering (Fall 2015)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "perf": {
+  "9": {
+   "title": "Lecture 12: Aircraft Performance",
+   "url": "https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/lecture-12-aircraft-performance/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.687 Private Pilot Ground School (IAP 2019)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "phys110": {
+  "0": {
+   "title": "Vectors in Multiple Dimensions",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-2",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "1": {
+   "title": "3.4 Projectile Motion",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/3-3/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "2": {
+   "title": "Newton's Laws of Motion",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-3",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "3": {
+   "title": "Work-Energy Theorem and Law of Conservation of Energy",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-5",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "4": {
+   "title": "19.2 Rocket Problem 2 - Momentum Diagrams",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/19-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "34.1 Torque Causes Angular Momentum to Change - Point Particle",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/34/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "phys2": {
+  "0": {
+   "title": "Electric Fields",
+   "url": "https://oyc.yale.edu/physics/phys-201/lecture-2",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 201 Fundamentals of Physics II",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "1": {
+   "title": "Gauss's Law I",
+   "url": "https://oyc.yale.edu/physics/phys-201/lecture-3",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 201 Fundamentals of Physics II",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "2": {
+   "title": "The Electric Potential and Conservation of Energy",
+   "url": "https://oyc.yale.edu/physics/phys-201/lecture-5",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 201 Fundamentals of Physics II",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "6": {
+   "title": "Lenz's and Faraday's Laws",
+   "url": "https://oyc.yale.edu/physics/phys-201/lecture-11",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 201 Fundamentals of Physics II",
+   "license": "CC BY-NC-SA 3.0 US"
+  },
+  "9": {
+   "title": "Maxwell's Equations and Electromagnetic Waves I",
+   "url": "https://oyc.yale.edu/physics/phys-201/lecture-14",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 201 Fundamentals of Physics II",
+   "license": "CC BY-NC-SA 3.0 US"
+  }
+ },
+ "probstat": {
+  "2": {
+   "title": "Lecture 2: Conditioning and Bayes' Rule2",
+   "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-2-video-2/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.041SC Probabilistic Systems Analysis and Applied Probability (Fall 2013)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Lecture 5: Discrete Random Variables; Probability Mass Functions; Expectations Video",
+   "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-5-video/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.041SC Probabilistic Systems Analysis and Applied Probability (Fall 2013)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Lecture 10: Continuous Bayes' Rule Derived Distributions",
+   "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-10-video-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.041SC Probabilistic Systems Analysis and Applied Probability (Fall 2013)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "Lecture 20: Central Limit Theorem",
+   "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-20-video-2/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.041SC Probabilistic Systems Analysis and Applied Probability (Fall 2013)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "prog101": {
+  "6": {
+   "title": "Lecture 7 testing debugging exceptions and assertions",
+   "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/lecture-7-testing-debugging-exceptions-and-assertions/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 6.0001 Introduction to Computer Science and Programming in Python (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "scdesign": {
+  "0": {
+   "title": "Lecture 21: Systems Engineering for Space Shuttle Payloads",
+   "url": "https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-21/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 16.885J Aircraft Systems Engineering (Fall 2005)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "statics": {
+  "2": {
+   "title": "15.4 Momentum of a System of Point Particles",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/15-3/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "7": {
+   "title": "29.2 Moment of Inertia of a Rod",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/29-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "8": {
+   "title": "16.2 Momentum Diagrams",
+   "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/resources/16-1/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 8.01SC Classical Mechanics (Fall 2016)",
+   "license": "CC BY-NC-SA 4.0"
+  }
+ },
+ "thermo": {
+  "2": {
+   "title": "Lecture 2: Work, heat, first law",
+   "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/lecture-2-work-heat-first-law/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 5.60 Thermodynamics & Kinetics (Spring 2008)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "3": {
+   "title": "Lecture 1: State of a system, 0th law, equation of state",
+   "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/lecture-1-state-of-a-system-0th-law-equation-of-state/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 5.60 Thermodynamics & Kinetics (Spring 2008)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "4": {
+   "title": "Lecture 2: Work, heat, first law",
+   "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/lecture-2-work-heat-first-law/",
+   "provider": "MIT OpenCourseWare",
+   "course": "MIT 5.60 Thermodynamics & Kinetics (Spring 2008)",
+   "license": "CC BY-NC-SA 4.0"
+  },
+  "5": {
+   "title": "The Second Law of Thermodynamics and Carnot's Engine",
+   "url": "https://oyc.yale.edu/physics/phys-200/lecture-23",
+   "provider": "Open Yale Courses",
+   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
+   "license": "CC BY-NC-SA 3.0 US"
+  }
+ }
+}

@@ -22,6 +22,7 @@ def dir_attr(): return ' dir="rtl"' if LANG in RTL else ''
 #   python3 scripts/build-courses.py --missing <ID>   -> /tmp/courses-missing-<ID>.tsv (English + one column per language) to translate
 #   python3 scripts/build-courses.py --import <file.tsv> <ID>   -> merges into i18n/courses/<ID>.json (checks numbers + {placeholders})
 TR = {}
+LECTURES = json.load(open('scripts/courses/lectures.json', encoding='utf8'))  # course id -> unit index -> official lecture (scripts/courses/lectures.json)
 for _f in sorted(glob.glob('i18n/courses/*.json')):
     for _k, _v in json.load(open(_f, encoding='utf8')).items(): TR.setdefault(_k, {}).update(_v)
 LANG = 'en'; MISSING = {}
@@ -110,6 +111,13 @@ def unit(C, K, i, u):
              + f'<p class="crs-src">{esc("On Saving Planets:")} ' + ' · '.join(f'<a href="{esc(loc(h))}">{esc(t)}</a>' for t, h in p['site'])
              + f'</p><p class="crs-src">{esc("Sources:")} ' + ' · '.join(ext(t, h) for t, h in p['src']) + '</p></div>')
     o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
+    lec = LECTURES.get(C.ID, {}).get(str(i - 1))  # Oct 26 (founder): plain link to the official free lecture, strong keyword matches only; no embeds/mirrors until Bryan decides
+    if lec:
+        lic = {'CC BY-NC-SA 4.0': ('https://creativecommons.org/licenses/by-nc-sa/4.0/', 'https://ocw.mit.edu/pages/privacy-and-terms-of-use/'),
+               'CC BY-NC-SA 3.0 US': ('https://creativecommons.org/licenses/by-nc-sa/3.0/us/', 'https://oyc.yale.edu/terms')}[lec['license']]
+        o.append(f'<div class="crs-lec"><h3>{esc("Watch the lecture")}</h3><p><a href="{html.escape(lec["url"])}" rel="noopener" lang="en">{html.escape(lec["title"])}</a> ({esc("in English")})</p>'
+                 f'<p class="crs-src"><span lang="en">{html.escape(lec["course"])}, {html.escape(lec["provider"])}</span>. {esc("License:")} <a href="{lic[0]}" rel="noopener license">{lec["license"]}</a> · <a href="{lic[1]}" rel="noopener">{esc("Terms of use")}</a>. '
+                 f'{esc("Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.")}</p></div>')
     o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> {esc("I finished this unit")}</label></p>')
     o.append(top() + '</section>')
     return ''.join(o)
