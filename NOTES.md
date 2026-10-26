@@ -11,6 +11,7 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 26 (~6:15 AM HST): **Homepage Find-a-solution tidy** (scripts/build-home-trim.py CSS): Water/Land/Space are now centered nested cards (Water+Land row, Space full width; 1 column under 640px), and the gap between the World Map button and Real Solutions in Action is tighter. Content/links unchanged. STYLEV 20261026a. Note: re-running build-home-trim.py drops the 'whats-new-video' link from fr/es/ar/it/he homepages (pre-existing); restored by hand this time.
 - Oct 25 (~6:45 PM HST): **Sustainable Aviation live in fr/es/ar/it/he** (i18n/courses/sustain.json from i18n-sustainable-aviation 2fe5ca9; 626 strings, 0 missing, numbers checked). Capstone Design and the lang Courses hubs link to it (local links, no (English) tag); ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Oct 25 (~6:23 PM HST): **Capstone Design live in fr/es/ar/it/he** (i18n/courses/capstone.json from i18n-capstone 894d891; 619 strings, 0 missing, numbers checked). Avionics & Systems Engineering and the lang Courses hubs link to it (local links, no (English) tag); ar/he rewrapped with <bdi>. Sitemap +5 URLs.
 - Courses: Sustainable Aviation (AERO 470) live in English — 10 units, 6 labs, 172 checks, PDF study guide on R2; final course in the track.
