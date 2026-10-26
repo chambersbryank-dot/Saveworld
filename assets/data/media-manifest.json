@@ -5967,5 +5967,12 @@
   "bytes": 1431376,
   "sha256": "4aaa2e4a91526014eba47f2c25928970ae1d950f6c5300082dde9086dd168445",
   "type": "application/pdf"
+ },
+ "courses/Spacecraft_Design_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Spacecraft_Design_Study_Guide.cef4d0bde346.pdf",
+  "key": "courses/Spacecraft_Design_Study_Guide.cef4d0bde346.pdf",
+  "bytes": 1403122,
+  "sha256": "cef4d0bde346071c530b2ff14295d6c5158cceda234daa42069c0d87cc3cbf8d",
+  "type": "application/pdf"
  }
 }
