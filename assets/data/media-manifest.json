@@ -5981,5 +5981,12 @@
   "bytes": 1401442,
   "sha256": "dc433462a2b1577ee840d6c0ef4178b0f69ec72fcaaa81aad2665208ad7beb9d",
   "type": "application/pdf"
+ },
+ "courses/Avionics_Systems_Engineering_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Avionics_Systems_Engineering_Study_Guide.886b6d3ed482.pdf",
+  "key": "courses/Avionics_Systems_Engineering_Study_Guide.886b6d3ed482.pdf",
+  "bytes": 1394801,
+  "sha256": "886b6d3ed482ac1f120702ebe6aa7957213d5e296c9a4bcace0c6dba0bea4f7c",
+  "type": "application/pdf"
  }
 }
