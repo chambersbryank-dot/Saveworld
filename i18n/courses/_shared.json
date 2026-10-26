@@ -1447,5 +1447,40 @@
   "fr": "{d} sur {n} unités et TP terminés ({p} %).",
   "he": "הושלמו {d} מתוך {n} יחידות ומעבדות ({p}%).",
   "it": "{d} di {n} unità e laboratori completati ({p}%)."
+ },
+ "Watch the lecture": {
+  "fr": "Regarder le cours magistral",
+  "es": "Ver la clase",
+  "ar": "شاهد المحاضرة",
+  "it": "Guarda la lezione",
+  "he": "צפו בהרצאה"
+ },
+ "in English": {
+  "fr": "en anglais",
+  "es": "en inglés",
+  "ar": "باللغة الإنجليزية",
+  "it": "in inglese",
+  "he": "באנגלית"
+ },
+ "License:": {
+  "fr": "Licence :",
+  "es": "Licencia:",
+  "ar": "الترخيص:",
+  "it": "Licenza:",
+  "he": "רישיון:"
+ },
+ "Terms of use": {
+  "fr": "Conditions d’utilisation",
+  "es": "Condiciones de uso",
+  "ar": "شروط الاستخدام",
+  "it": "Condizioni d’uso",
+  "he": "תנאי שימוש"
+ },
+ "Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.": {
+  "fr": "Lien fourni uniquement pour l’étude gratuite ; Saving Planets n’est ni affilié à cette université ni soutenu par elle.",
+  "es": "Enlace solo para estudio gratuito; Saving Planets no está afiliado a esta universidad ni cuenta con su respaldo.",
+  "ar": "الرابط للدراسة المجانية فقط؛ Saving Planets غير تابع لهذه الجامعة ولا يحظى بتأييدها.",
+  "it": "Link fornito solo per lo studio gratuito; Saving Planets non è affiliato a questa università né approvato da essa.",
+  "he": "הקישור מיועד ללימוד חינמי בלבד; Saving Planets אינו קשור לאוניברסיטה זו ואינו נתמך על ידה."
  }
 }
