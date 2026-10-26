@@ -5960,5 +5960,12 @@
   "bytes": 1429273,
   "sha256": "14c22446c9eb8bb9f2059cc04c022fe1d182482bfe3fa59728b01a497c948691",
   "type": "application/pdf"
+ },
+ "courses/Flight_Dynamics_Controls_Study_Guide.pdf": {
+  "url": "https://media.savingplanets.com/courses/Flight_Dynamics_Controls_Study_Guide.4aaa2e4a9152.pdf",
+  "key": "courses/Flight_Dynamics_Controls_Study_Guide.4aaa2e4a9152.pdf",
+  "bytes": 1431376,
+  "sha256": "4aaa2e4a91526014eba47f2c25928970ae1d950f6c5300082dde9086dd168445",
+  "type": "application/pdf"
  }
 }
