@@ -105,7 +105,8 @@ python3 scripts/build-lcp.py            # Oct 16: preload the page-hero backgrou
 python3 scripts/r2-cards.py             # Oct 16: again after i18n-build so translated pages keep the card srcset
 python3 scripts/build-af-images.py       # Oct 17: Amazing Facts responsive WebP srcset + lazy (all langs)
 python3 scripts/defer-sitejs.py         # Oct 16: site.js loads with defer (skips pages whose inline scripts call window.sp*)
-python3 scripts/apply-anim-banners.py   # Oct 18: site-wide animated page banners (sp_banner, R2 originals, pause, reduced motion), all langs; after apply-heroes + build-lcp
+python3 scripts/apply-anim-banners.py   # Oct 18: site-wide animated page banners
+python3 scripts/hub-image-srcset.py     # Oct 26: responsive srcset on Earth_Observation hub content images (manifest WebP) (sp_banner, R2 originals, pause, reduced motion), all langs; after apply-heroes + build-lcp
 python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
 python3 scripts/build-home-trim.py      # Oct 20: founder-approved clutter fix #1, homepage 18 -> 6 sections (parks, never deletes; --undo restores)
 python3 scripts/build-home-numbers.py   # Oct 25 (founder, upgrade 5): sourced numbers strip below the homepage hero (assets/data/home-numbers.json), all langs

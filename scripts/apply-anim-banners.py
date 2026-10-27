@@ -74,7 +74,9 @@ def apply(s, lang, img):
     slides = [img] + extra_slides(img)
     pics, creds = [], []
     for i, sl in enumerate(slides):
-        p = SPB.picture(MF[sl['r2']], '').replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
+        # Oct 26: descriptive alt from credit (was empty; hurts Image Search + a11y). Credit tags stay in .hero-credit.
+        alt = sl.get('alt') or sl.get('credit') or ''
+        p = SPB.picture(MF[sl['r2']], alt).replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
         if i: p = p.replace('fetchpriority="high"', 'fetchpriority="low" loading="lazy"')
         pics.append(f'<div class="spx-slide spx-{i}" aria-hidden="true">{p}</div>' if len(slides) > 1 else p)
         creds.append(f'<span class="hero-credit spx-cred spx-c{i}">{SPB._e(t(lang, sl["credit"]))}</span>' if len(slides) > 1 else

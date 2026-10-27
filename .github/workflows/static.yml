@@ -33,3 +33,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Oct 26: IndexNow after every Pages deploy (key file aa19429b…txt already on site root).
+  # Does not change Cloudflare DNS/proxy/settings. post-deploy.sh never fails the workflow.
+  ping:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: IndexNow + SEO lint (post-deploy)
+        run: bash scripts/post-deploy.sh || true
