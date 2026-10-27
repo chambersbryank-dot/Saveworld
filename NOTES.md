@@ -11,6 +11,8 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 27 (~12:55 AM HST): **Upcoming Launches hero cache-bust** — fr/es/ar/it/he script tags → `launch-hub-hero.js?v=20261027a` (shared JS already live from #137; EN was the only page bumped). Generator now syncs the version on all langs after build.
+
 - Oct 27 (~12:40 AM HST): **Hebrew Big Questions parity + rocket contrast + translation cross-check tooling** — he Learn standards block + hero VISION refresh; he Teachers STARTHERE/SIHELPER/T-BROWSE/LEARNLINK (`scripts/he-edu-parity.py`); question-bank mines this checkout (286 rows/lang); Big_Questions FAQPage **74/74** in he (was 67). Upcoming Launches rocket brighter (glow/trail/flame; `launch-hub-hero.js` v20261027a). Preview: `/workspace/launch-hub-preview-v2.png|.gif|.mp4`. Cross-check: `tools/translation-crosscheck.py` + `/workspace/seo/translation-glossary.csv` + report `/workspace/seo/translation-crosscheck-2026-10-27.md`.
 
 - Oct 26 (~7:55 PM HST, founder): **Upcoming Launches hub** (`Upcoming_Launches.html`, 6 langs). Same hub chrome as Lakes/Polar (nav/footer/credits). WoW canvas hero (rocket arc → orbit over rotating Earth; prefers-reduced-motion + Pause). Section “How each launch saves the world…” (direct / indirect / none / restricted). Live tracker + PR #129 blurbs live here; Artemis_II.html#launches handoff link; nav “Upcoming Launches”. Generator: scripts/build-upcoming-launches-hub.py. PR open — do not merge until approved.

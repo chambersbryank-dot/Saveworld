@@ -438,6 +438,25 @@ def notes():
     p.write_text(''.join(lines), encoding='utf-8')
     print('NOTES updated')
 
+def sync_hero_script_version():
+    """Keep launch-hub-hero.js?v= in sync on every language hub (i18n copies lag build_en)."""
+    rx = re.compile(r'launch-hub-hero\.js\?v=[^"\']+')
+    n = 0
+    for lang in LANGS:
+        path = ROOT / ('Upcoming_Launches.html' if lang == 'en' else f'{lang}/Upcoming_Launches.html')
+        if not path.exists():
+            continue
+        raw = path.read_text(encoding='utf-8')
+        new = rx.sub(f'launch-hub-hero.js?v={HERO_V}', raw)
+        # also ensure relative prefix for non-en
+        if lang != 'en':
+            new = new.replace('src="assets/launch-hub-hero.js', 'src="../assets/launch-hub-hero.js')
+            new = new.replace("src='assets/launch-hub-hero.js", "src='../assets/launch-hub-hero.js")
+        if new != raw:
+            path.write_text(new, encoding='utf-8')
+            n += 1
+    print(f'sync_hero_script_version: {n} pages')
+
 def main():
     build_en()
     patch_nav_labels()
