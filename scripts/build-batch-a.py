@@ -122,13 +122,28 @@ def apply_overrides(rel):
         if picks: rel[page] = picks
     return rel
 
+# Oct 27 (founder-approved, item #7): visible credits on Related card photos, opt-in per page.
+# Each source verified before adding: ISS photos via NASA Images API (iss063e002730, iss074e0381351);
+# MODIS = Commons "Great Lakes (MODIS 2020-07-04).jpg" (NASA GSFC MODIS Land Rapid Response Team);
+# NPS = Commons "Collecting trash along the lake shore (1746e871-...)" (NPS photo, NPGallery). Unverified images get no credit.
+REL_CREDIT_PAGES = {'Great_Bubble_Barrier.html'}
+REL_CREDIT = {'Netherlands_Rivers_ISS063_E_002730.jpg': 'Image: NASA (ISS)', 'London_Thames_Night_ISS.jpg': 'Image: NASA (ISS)',
+              'Great_Lakes_MODIS.jpg': 'Image: NASA MODIS', 'Lake_Shore_Cleanup_NPS.jpg': 'Image: National Park Service'}
+REL_CREDIT_T = {'fr': ('Image : NASA (ISS)', 'Image : NASA MODIS', 'Image : National Park Service'),
+                'es': ('Imagen: NASA (ISS)', 'Imagen: NASA MODIS', 'Imagen: National Park Service'),
+                'ar': ('الصورة: NASA (ISS)', 'الصورة: NASA MODIS', 'الصورة: National Park Service'),
+                'it': ('Immagine: NASA (ISS)', 'Immagine: NASA MODIS', 'Immagine: National Park Service'),
+                'he': ('תמונה: NASA (ISS)', 'תמונה: NASA MODIS', 'תמונה: National Park Service')}
+
 def related_block(page, rel):
     cards = []
     for g in rel:
         i = sol.info(g)  # decorative: the card's visible name is the link text
         img = f'<img src="{i["img"]}" alt="" loading="lazy" decoding="async">' if i['img'] else ''
         hub, name = (HUB[g], NAME[g]) if g in NAME else ('Hub', HUBNAME.get(g, g[:-5].replace('_', ' ')))
-        cards.append(f'<li class="rel-card"><a href="{g}">{img}<span class="rel-hub">{sol.esc(hub)}</span><span class="rel-name">{sol.esc(name)}</span></a></li>')
+        c = REL_CREDIT.get(os.path.basename(i['img'] or '')) if page in REL_CREDIT_PAGES else None
+        cr = f'<span class="si-credit rel-credit">{c}</span>' if c else ''
+        cards.append(f'<li class="rel-card"><a href="{g}">{img}<span class="rel-hub">{sol.esc(hub)}</span><span class="rel-name">{sol.esc(name)}</span></a>{cr}</li>')
     return ('<section class="related-solutions" aria-labelledby="rel-title" data-pagefind-ignore><h2 id="rel-title">Related Solutions</h2>'
             '<p class="rel-intro">More solutions like this one, matched by meaning.</p><ul class="rel-grid">' + ''.join(cards) + '</ul></section>')
 
@@ -170,6 +185,8 @@ UI = {'fr': {'Share this page': 'Partager cette page', 'Share': 'Partager', 'Sha
 
 def main():
     keys = {l: dict(UI[l]) for l in UI}
+    for l, t in REL_CREDIT_T.items():
+        keys.setdefault(l, {}).update(zip(('Image: NASA (ISS)', 'Image: NASA MODIS', 'Image: National Park Service'), t))
     today = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=10)).date().isoformat()
     store_f = 'assets/data/reviewed.json'
     store = json.load(open(store_f)) if os.path.exists(store_f) else {}
