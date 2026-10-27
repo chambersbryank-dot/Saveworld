@@ -57,6 +57,8 @@ const T2 = {
 };
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const dec = s => String(s).replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+// Plain text from trusted Amazing_Facts HTML: escape first (neutralizes <script), then drop escaped tags.
+const htmlPlain = s => esc(s).replace(/&lt;\/?[a-zA-Z][\s\S]*?&gt;/g, '').replace(/&(?:lt|gt);/g, '').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
 const rd = f => { try { return fs.readFileSync(path.join(ROOT, f), 'utf8'); } catch (e) { return null; } };
 const pageFile = (lang, f) => lang === 'en' ? f : `${lang}/${f}`;
 const pre = lang => lang === 'en' ? '' : lang + '/';
@@ -107,7 +109,7 @@ function factCards(lang) {
   const html = rd(pageFile(lang, 'Amazing_Facts.html')) || rd('Amazing_Facts.html');
   return (html.match(/<div class="w-card"[^>]*data-fact-origin[\s\S]*?<\/div>/g) || []).map(c => {
     const g = re => (c.match(re) || [])[1];
-    const img = origImg(g(/<img[^>]*src="([^"]+)"/)), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => m[1].replace(/<[^>]*>?/g, '').replace(/</g, ''));
+    const img = origImg(g(/<img[^>]*src="([^"]+)"/)), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => htmlPlain(m[1]));
     return { key: g(/data-fact-page="([^"]+)"/) + '|' + (img || ''), h: dec(g(/<h3>([\s\S]*?)<\/h3>/) || ''), img: img && SITE + img.replace(/^\.\.\//, ''), alt: dec(g(/alt="([^"]*)"/) || ''), text: dec(ps[0] || ''),
       page: g(/data-fact-page="([^"]+)"/), srcUrl: g(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a href="([^"]+)"/), srcLabel: dec((c.match(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a [^>]*>([^<]+)</) || [])[1] || '') };
   });
