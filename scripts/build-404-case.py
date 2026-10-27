@@ -2,7 +2,7 @@
 """Oct 25 2026 (founder, upgrade 1): 404 pages send mistyped-case and old addresses to the right page.
 /courses.html, /courses, /solutions.html, /COURSES, /ways-to-help ... -> the real page (match ignores case, '-', '_' and .html),
 inside the visitor's language folder when that page exists there, else the English page. Aliases cover addresses with no page
-of their own (launch schedule -> Artemis_II.html#launches, the Live Launch Tracker). Only a single unambiguous match redirects;
+of their own (launch schedule -> Upcoming_Launches.html, the Live Launch Tracker). Only a single unambiguous match redirects;
 anything else keeps the normal Page Not Found. No server, DNS or Cloudflare change. Writes the block between
 <!-- CASE404:START/END --> in 404.html of every language (after i18n-build). Idempotent. Run from repo root."""
 import os, re, json
@@ -15,8 +15,8 @@ ks = {}
 for f in en: ks.setdefault(key(f), []).append(f)
 pages = {k: v[0] for k, v in ks.items() if len(v) == 1}          # ambiguous keys never redirect
 missing = {l: sorted(f for f in en if not os.path.exists(f'{l}/{f}')) for l in LANGS}
-ALIAS = {'launchschedule': 'Artemis_II.html#launches', 'launches': 'Artemis_II.html#launches',
-         'launchtracker': 'Artemis_II.html#launches', 'home': 'index.html'}
+ALIAS = {'launchschedule': 'Upcoming_Launches.html', 'launches': 'Upcoming_Launches.html',
+         'launchtracker': 'Upcoming_Launches.html', 'home': 'index.html'}
 DATA = json.dumps({'p': pages, 'a': ALIAS, 'm': missing, 'l': LANGS}, separators=(',', ':'), sort_keys=True)
 JS = ('(function(){var D=' + DATA + ';var s=location.pathname.split("/").filter(Boolean),l="";'
       'if(s.length>1&&D.l.indexOf(s[0])>=0)l=s.shift();if(s.length!==1)return;var k;'

@@ -34,7 +34,7 @@ GROUPS = [
 ]
 SOL_HUBS = ['Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html']
 SOL_TAIL = ['Topics.html', 'World_Map.html']
-SPACE_KIDS = ['Artemis_II.html#launches', 'Enceladus.html', 'Planetary_Defense.html', 'Project-Rawane.html', 'Space_Disposal.html', 'Space_Weather.html']
+SPACE_KIDS = ['Upcoming_Launches.html', 'Enceladus.html', 'Planetary_Defense.html', 'Project-Rawane.html', 'Space_Disposal.html', 'Space_Weather.html']
 UTIL = ['Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Contact.html']  # Oct 22: Find a Cleanup paused (disable-cleanup.py)  # Oct 18: + This Week's Top Ten (one stable link for X posts)
 LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT', 'he': 'עב'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
