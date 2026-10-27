@@ -107,7 +107,7 @@ function factCards(lang) {
   const html = rd(pageFile(lang, 'Amazing_Facts.html')) || rd('Amazing_Facts.html');
   return (html.match(/<div class="w-card"[^>]*data-fact-origin[\s\S]*?<\/div>/g) || []).map(c => {
     const g = re => (c.match(re) || [])[1];
-    const img = origImg(g(/<img[^>]*src="([^"]+)"/)), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => m[1].replace(/<[^>]+>/g, ''));
+    const img = origImg(g(/<img[^>]*src="([^"]+)"/)), ps = [...c.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => m[1].replace(/<[^>]*>?/g, '').replace(/</g, ''));
     return { key: g(/data-fact-page="([^"]+)"/) + '|' + (img || ''), h: dec(g(/<h3>([\s\S]*?)<\/h3>/) || ''), img: img && SITE + img.replace(/^\.\.\//, ''), alt: dec(g(/alt="([^"]*)"/) || ''), text: dec(ps[0] || ''),
       page: g(/data-fact-page="([^"]+)"/), srcUrl: g(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a href="([^"]+)"/), srcLabel: dec((c.match(/(?:Sources?|Fuentes?|Fonti|Fonte|المصدر|المصادر)\s*:\s*<a [^>]*>([^<]+)</) || [])[1] || '') };
   });
