@@ -35,7 +35,11 @@
     document.head.appendChild(st);
   }
 
-  /* RU/CN/KP/IR-led: listed, never given a solution tie-in (same spirit as map/alerts). */
+  /* RU/CN/KP/IR-led (founder Oct 26):
+     - When relevant: link our Saving Planets solution page (tight Earth / solar-system benefit wording).
+     - Never outbound to their agency/operator sites (no links, embeds, images, scripts, APIs, or data feeds).
+     - We never invite or enable access by connecting our site to theirs.
+     - Facts from LL2 / neutral notes only (code comments / plain source line, not their domains). */
   var EXCL = /roscosmos|russia|china|chinese|baikonur|plesetsk|vostochny|jiuquan|wenchang|xichang|taiyuan|haiyang|dongfeng|sohae|tonghae|korean committee|nada|korean people.?s|landspace|galactic energy|i-space|orienspace|deep blue aero|space pioneer|cas space|expace|casc|casic|khrunichev|progress rocket|kazakhstan|iran|islamic republic|iranian|ministry of defence of the russian|cnsa|calt/i;
 
   /* Exact solution pages when the mission name clearly matches a published SP page. */
@@ -94,7 +98,7 @@
         secret: 'Public information is limited (government / classified). That is not enough to claim a Saving Planets connection.',
         other: 'Its published purpose is not Earth observation, planetary science or space weather tied to our solutions.'
       },
-      exclNote: 'Saving Planets does not tie launches led by Russia, China, North Korea or Iran to our solutions.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'Open the solution page',
       seeHub: 'See related solutions'
     },
@@ -126,7 +130,7 @@
         secret: 'Les informations publiques sont limitées (gouvernement / classifié). Insuffisant pour un lien Saving Planets.',
         other: 'Son objectif publié n’est pas l’observation de la Terre, la science planétaire ou la météo spatiale liées à nos solutions.'
       },
-      exclNote: 'Saving Planets ne rattache pas les lancements menés par la Russie, la Chine, la Corée du Nord ou l’Iran à nos solutions.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'Ouvrir la page de la solution',
       seeHub: 'Voir les solutions liées'
     },
@@ -158,7 +162,7 @@
         secret: 'La información pública es limitada (gobierno / clasificado). No basta para un vínculo Saving Planets.',
         other: 'Su propósito publicado no es observación de la Tierra, ciencia planetaria o clima espacial ligado a nuestras soluciones.'
       },
-      exclNote: 'Saving Planets no vincula lanzamientos liderados por Rusia, China, Corea del Norte o Irán a nuestras soluciones.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'Abrir la página de la solución',
       seeHub: 'Ver soluciones relacionadas'
     },
@@ -190,7 +194,7 @@
         secret: 'Le informazioni pubbliche sono limitate (governo / classificato). Non bastano per un legame Saving Planets.',
         other: 'Lo scopo pubblicato non è osservazione della Terra, scienza planetaria o meteo spaziale legato alle nostre soluzioni.'
       },
-      exclNote: 'Saving Planets non collega lanci guidati da Russia, Cina, Corea del Nord o Iran alle nostre soluzioni.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'Apri la pagina della soluzione',
       seeHub: 'Vedi soluzioni correlate'
     },
@@ -222,7 +226,7 @@
         secret: 'المعلومات العامة محدودة (حكومية / سرية). لا تكفي لصلة Saving Planets.',
         other: 'غرضها المنشور ليس رصد الأرض أو العلوم الكوكبية أو طقس الفضاء المرتبط بحلولنا.'
       },
-      exclNote: 'لا تربط Saving Planets الإطلاقات التي تقودها روسيا أو الصين أو كوريا الشمالية أو إيران بحلولنا.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'افتح صفحة الحل',
       seeHub: 'اطّلع على الحلول ذات الصلة'
     },
@@ -254,7 +258,7 @@
         secret: 'המידע הציבורי מוגבל (ממשלתי / מסווג). אין די בו לקשר Saving Planets.',
         other: 'המטרה שפורסמה אינה תצפית כדור הארץ, מדע פלנטרי או מזג אוויר בחלל הקשורים לפתרונות שלנו.'
       },
-      exclNote: 'Saving Planets אינה מקשרת שיגורים בהובלת רוסיה, סין, צפון קוריאה או איראן לפתרונות שלנו.',
+      exclNote: 'When relevant we link our solution page; we never link Russia-, China-, North Korea- or Iran-led operator sites.',
       seeSolution: 'פתחו את עמוד הפתרון',
       seeHub: 'ראו פתרונות קשורים'
     }
@@ -302,18 +306,34 @@
   }
   function pad(n) { return n < 10 ? '0' + n : String(n); }
 
-  function excluded(l) {
+  function isRestricted(l) {
     var loc = (l.pad && l.pad.location && l.pad.location.name) || '';
     var cc = (l.pad && l.pad.country && l.pad.country.alpha_3_code) || '';
     if (cc === 'RUS' || cc === 'CHN' || cc === 'PRK' || cc === 'IRN') return true;
     return EXCL.test(loc + ' | ' + provider(l));
   }
 
+  /* Hosts we never link to or fetch from (RU/CN/KP/IR-led agencies / state space entities). */
+  var BLOCKED_HOST = /(?:^|\.)(?:roscosmos\.ru|gov\.ru|mil\.ru|cnsa\.gov\.cn|cmse\.gov\.cn|calt\.com\.cn|casc\.com\.cn|casic\.com\.cn|spacechina\.com|clep\.org\.cn|nssc\.ac\.cn|irna\.ir|isa\.ir|isa\.gov\.ir|nksa\.go\.kr|kcnawatch\.org)$/i;
+
+  function blockedUrl(u) {
+    if (!u || !/^https?:\/\//i.test(u)) return true;
+    try {
+      var h = (new URL(u)).hostname.replace(/^www\./i, '');
+      if (BLOCKED_HOST.test(h)) return true;
+      /* Broad country-code / state space cut: never invite access via their TLDs when restricted. */
+      if (/\.(?:ru|xn--p1ai|cn|xn--fiqs8s|ir|kp)$/i.test(h)) return true;
+    } catch (e) { return true; }
+    return false;
+  }
+
   function agencyUrl(l) {
+    /* Policy: never return an outbound URL for RU/CN/KP/IR-led launches. */
+    if (isRestricted(l)) return null;
     var urls = l.infoURLs || l.info_urls || [];
     for (var i = 0; i < urls.length; i++) {
       var u = typeof urls[i] === 'string' ? urls[i] : (urls[i] && urls[i].url);
-      if (u && /^https?:\/\//i.test(u)) return u;
+      if (u && /^https?:\/\//i.test(u) && !blockedUrl(u)) return u;
     }
     var name = missionName(l);
     var prov = provider(l);
@@ -373,12 +393,46 @@
     return null;
   }
 
-  function classify(l) {
-    if (excluded(l)) {
-      return { kind: 'skip', label: t.skip, text: t.exclNote, page: null, out: agencyUrl(l) };
+
+  /* Tight Earth / solar-system benefit lines for restricted-led launches that still map to a solution. */
+  var RESTRICTED_WHY = {
+    earth: 'Earth-observation knowledge that helps everyone understand and care for our shared planet.',
+    ocean: 'Ocean-monitoring knowledge that helps everyone understand and care for our shared seas.',
+    polar: 'Polar and ice knowledge that helps everyone understand and care for our shared climate system.',
+    forest: 'Forest-monitoring knowledge that helps everyone understand and care for our shared living lands.',
+    weather: 'Space-weather knowledge that helps everyone protect people and systems on our shared planet.',
+    defense: 'Planetary-defense knowledge that helps everyone protect our shared home in the solar system.',
+    space: 'Space-science knowledge that helps everyone understand Earth and our shared solar system.'
+  };
+
+  function finalize(c, restricted) {
+    if (!c) return c;
+    if (!restricted) return c;
+    /* No outbound operator links, embeds, or their-domain sources — ever. */
+    c.out = null;
+    if (c.srcHtml) c.srcHtml = null;
+    if (c.kind === 'yes') {
+      var w = c._why || 'earth';
+      c.text = RESTRICTED_WHY[w] || RESTRICTED_WHY.earth;
+      /* Keep c.page (our solution only). */
+    } else {
+      /* Not relevant: plain text only, no link of any kind. */
+      c.page = null;
+      c.hub = null;
+      c.out = null;
+      if (c.kind === 'skip') {
+        c.kind = 'no';
+        c.label = t.no;
+      }
+      c.text = c.text || t.noSpin.other;
     }
+    return c;
+  }
+
+  function classify(l) {
+    var restricted = isRestricted(l);
     var spec = specialClassify(l);
-    if (spec) return spec;
+    if (spec) return finalize(spec, restricted);
     var name = missionName(l);
     var typ = mtype(l);
     var desc = ((l.mission && l.mission.description) || '') + ' ' + name + ' ' + typ;
@@ -387,10 +441,10 @@
     for (var i = 0; i < PAGE_MATCH.length; i++) {
       var m = PAGE_MATCH[i];
       if (m.re.test(name) || m.re.test(desc)) {
-        return {
+        return finalize({
           kind: 'yes', label: t.yes, text: t.why[m.why] || t.why.earth,
-          page: m.page, hub: m.hub, out: null
-        };
+          page: m.page, hub: m.hub, out: null, _why: m.why
+        }, restricted);
       }
     }
 
@@ -402,20 +456,20 @@
       if (/ocean|sea level|marine|altimeter|swot/i.test(desc)) { why = 'ocean'; hub = 'Oceans.html'; }
       else if (/ice|polar|cryo|glacier|snow/i.test(desc)) { why = 'polar'; hub = 'Polar.html'; }
       else if (/forest|fire|biomass|deforestation/i.test(desc)) { why = 'forest'; hub = 'Deforestation.html'; }
-      return { kind: 'yes', label: t.yes, text: t.why[why], page: hub, hub: hub, out: null };
+      return finalize({ kind: 'yes', label: t.yes, text: t.why[why], page: hub, hub: hub, out: null, _why: why }, restricted);
     }
     if (/planetary science|planetary defence|planetary defense|asteroid|heliophysics|solar|astronomy|astrophysics|lunar science/i.test(typ + ' ' + desc)) {
       var w = /asteroid|defence|defense|neo|impactor/i.test(desc + typ) ? 'defense'
         : /solar|helio|space weather|coronal/i.test(desc + typ) ? 'weather' : 'space';
       var hub2 = w === 'defense' ? 'Planetary_Defense.html' : w === 'weather' ? 'Space_Weather.html' : 'Space.html';
-      return { kind: 'yes', label: t.yes, text: t.why[w], page: hub2, hub: hub2, out: null };
+      return finalize({ kind: 'yes', label: t.yes, text: t.why[w], page: hub2, hub: hub2, out: null, _why: w }, restricted);
     }
 
     if (/top secret|government\/top secret|classified/i.test(typ + ' ' + desc) || (!purpose && /government/i.test(typ))) {
-      return { kind: 'unk', label: t.unk, text: t.noSpin.secret + ' ' + t.detailsMissing, page: null, out: agencyUrl(l) };
+      return finalize({ kind: 'unk', label: t.unk, text: t.noSpin.secret + ' ' + t.detailsMissing, page: null, out: agencyUrl(l) }, restricted);
     }
     if (!purpose && !typ) {
-      return { kind: 'unk', label: t.unk, text: t.detailsMissing, page: null, out: agencyUrl(l) };
+      return finalize({ kind: 'unk', label: t.unk, text: t.detailsMissing, page: null, out: agencyUrl(l) }, restricted);
     }
 
     var spinKey = 'other';
@@ -424,13 +478,13 @@
     else if (/resupply|cargo|iss|cygnus|progress|dragon/i.test(typ + name) && !/science/i.test(typ)) spinKey = 'resupply';
     else if (/human|crew|crew dragon|starliner|shenzhou|gaganyaan/i.test(typ + name)) spinKey = 'human';
 
-    return { kind: 'no', label: t.no, text: t.noSpin[spinKey] || t.noSpin.other, page: null, out: agencyUrl(l) };
+    return finalize({ kind: 'no', label: t.no, text: t.noSpin[spinKey] || t.noSpin.other, page: null, out: agencyUrl(l) }, restricted);
   }
 
   function blurbHtml(l) {
     var purpose = purposeText(l);
     var c = classify(l);
-    var srcLine = (c && c.srcHtml) ? c.srcHtml : esc(t.srcLL2);
+    var srcLine = (isRestricted(l) || !(c && c.srcHtml)) ? esc(t.srcLL2) : c.srcHtml;
     var purposeBlock = '<div class="lw-blurb-block"><p class="lw-blurb-k">' + esc(t.purpose) + '</p><p class="lw-blurb-t">' +
       esc(purpose || t.detailsMissing) + '</p>' +
       '<p class="lw-blurb-src">' + srcLine + '</p></div>';
@@ -438,7 +492,7 @@
     var link = '';
     if (c.kind === 'yes' && c.page) {
       link = '<p class="lw-blurb-link"><a class="lw-sol" href="' + esc(prefix + c.page) + '">' + esc(t.seeSolution) + '</a></p>';
-    } else if (c.out) {
+    } else if (c.out && !isRestricted(l) && !blockedUrl(c.out)) {
       link = '<p class="lw-blurb-link"><a class="lw-out" href="' + esc(c.out) + '" target="_blank" rel="noopener noreferrer">' + esc(t.moreAgency) + '</a></p>';
     }
 

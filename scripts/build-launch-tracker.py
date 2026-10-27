@@ -9,7 +9,7 @@ via scripts/i18n-build.py.
 import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = "20261026c"  # bump with launch-tracker.js
+V = "20261026d"  # bump with launch-tracker.js
 LANGS = ["", "fr", "es", "ar", "it", "he"]
 
 NOTE_EN = (
