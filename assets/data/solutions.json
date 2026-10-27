@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T18:15:59.090Z",
+ "generated": "2026-10-27T17:24:30.877Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1420,7 +1420,7 @@
    "name": "Space",
    "solutions": 12,
    "horizon": 1,
-   "hubs": 1,
+   "hubs": 2,
    "byClassification": {
     "corporate": 3,
     "agency": 5,
@@ -4981,6 +4981,15 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "Upcoming_Launches.html",
+   "title": "Upcoming Launches",
+   "category": "space",
+   "type": "hub",
+   "status": "active",
+   "stats": [],
+   "missions": []
   },
   {
    "url": "US_Deorbit_Vehicle.html",
