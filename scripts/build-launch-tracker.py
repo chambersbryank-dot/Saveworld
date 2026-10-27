@@ -3,11 +3,15 @@
 
 After PR #132 the Live Launch Tracker list (<ul class="lw-list" id="lw-list">)
 lives on Upcoming_Launches.html, not Artemis_II.html. Idempotent: refreshes the
-English chrome note and assets/launch-tracker.js tag. Translations come from
-i18n/<lang>.json via scripts/i18n-build.py.
+English chrome note and assets/launch-tracker.js tag only when needed.
+Translations come from i18n/<lang>.json via scripts/i18n-build.py.
 
 Artemis_II.html keeps only a handoff link (no #lw-list); this script skips it
 and any other page that no longer hosts the list.
+
+Important: this runs after i18n-build and before i18n-check in weekly-sync.sh,
+so EN edits must be byte-stable when the note is already correct — otherwise
+translated Upcoming_Launches pages go STALE every sync.
 """
 import pathlib, re
 
@@ -23,10 +27,14 @@ NOTE_EN = (
     "others link to the operator&#x27;s official page. "
     "If details are not public yet, we say so."
 )
+LW_NOTE = "Note: Launches shift left and right all the time - stay updated."
 
 BOX_RE = re.compile(
     r'(<div class="lw-box">.*?<ul class="lw-list" id="lw-list"></ul>)'
-    r'.*?(<p class="lw-more">)',
+    r'(\s*)'
+    r'(?:<p class="lw-note">.*?</p>\s*)?'
+    r'(?:<p class="lw-blurb-note">.*?</p>\s*)?'
+    r'(<p class="lw-more">)',
     re.S,
 )
 
@@ -34,13 +42,9 @@ SCRIPT_RE = re.compile(
     r"<script>\s*\(function \(\) \{\s*var API = 'https://ll\.thespacedevs\.com[\s\S]*?</script>",
     re.S,
 )
-# Also match already-external tag (idempotent refresh)
 EXT_RE = re.compile(
-    r'<script src="(?:\.\./)?assets/launch-tracker\.js\?v=[^"]*" defer></script>',
-)
-# i18n-build sometimes rewrites attribute order on translated pages
-EXT_RE_ALT = re.compile(
-    r'<script defer="" src="(?:\.\./)?assets/launch-tracker\.js\?v=[^"]*"></script>',
+    r'<script(?:\s+defer(?:="")?)?\s+src="((?:\.\./)?assets/launch-tracker\.js)\?v=[^"]*"'
+    r'(?:\s+defer(?:="")?)?\s*></script>',
 )
 
 
@@ -49,29 +53,46 @@ def has_tracker_list(html: str) -> bool:
 
 
 def patch_en_box(html: str) -> str:
-    """Insert / refresh the blurb explainer note before lw-more (English source)."""
-    def repl(m):
-        return (
-            m.group(1)
-            + '<p class="lw-note">Note: Launches shift left and right all the time - stay updated.</p>'
-            + f'<p class="lw-blurb-note">{NOTE_EN}</p>'
-            + m.group(2)
-        )
-    out, n = BOX_RE.subn(repl, html, count=1)
-    if n != 1:
-        raise SystemExit(f"lw-box note block not found or ambiguous ({n})")
-    return out
+    """Insert / refresh the blurb explainer note before lw-more (English source).
+
+    Preserves existing whitespace between </ul> and the notes so a no-op run
+    does not churn the EN file (and invalidate i18n-check hashes).
+    """
+    m = BOX_RE.search(html)
+    if not m:
+        raise SystemExit("lw-box note block not found or ambiguous (0)")
+    # Already correct?
+    if (
+        f'<p class="lw-note">{LW_NOTE}</p>' in html
+        and f'<p class="lw-blurb-note">{NOTE_EN}</p>' in html
+    ):
+        return html
+    gap = m.group(2) or "\n"
+    replacement = (
+        m.group(1)
+        + gap
+        + f'<p class="lw-note">{LW_NOTE}</p>'
+        + gap
+        + f'<p class="lw-blurb-note">{NOTE_EN}</p>'
+        + gap
+        + m.group(3)
+    )
+    return html[: m.start()] + replacement + html[m.end() :]
+
+
+def desired_tag(pre: str) -> str:
+    return f'<script src="{pre}assets/launch-tracker.js?v={V}" defer></script>'
 
 
 def patch_script(html: str, pre: str) -> str:
-    tag = f'<script src="{pre}assets/launch-tracker.js?v={V}" defer></script>'
-    if SCRIPT_RE.search(html):
-        return SCRIPT_RE.sub(tag, html, count=1)
+    tag = desired_tag(pre)
+    if tag in html:
+        return html
+    # Normalize any existing tracker tag (attribute order / version) to tag
     if EXT_RE.search(html):
         return EXT_RE.sub(tag, html, count=1)
-    if EXT_RE_ALT.search(html):
-        return EXT_RE_ALT.sub(tag, html, count=1)
-    # Fallback: insert before launch-actions if present
+    if SCRIPT_RE.search(html):
+        return SCRIPT_RE.sub(tag, html, count=1)
     if "launch-actions.js" in html:
         m = re.search(
             rf'<script[^>]*src="{re.escape(pre)}assets/launch-actions\.js[^"]*"[^>]*></script>',
@@ -95,7 +116,6 @@ def hub_path(lang: str) -> pathlib.Path:
 
 n = 0
 
-# Artemis_II no longer hosts the list (PR #132). Skip quietly if the list is gone.
 for lg in LANGS:
     art = ROOT / "Artemis_II.html" if not lg else ROOT / lg / "Artemis_II.html"
     if art.exists():
@@ -109,7 +129,6 @@ for lg in LANGS:
         else:
             print("skip", art.relative_to(ROOT), "(no #lw-list; handoff only)")
 
-# Canonical host: Upcoming_Launches.html in all six languages
 for lg in LANGS:
     p = hub_path(lg)
     if not p.exists():
@@ -124,7 +143,6 @@ for lg in LANGS:
     if not lg:
         s2 = patch_en_box(s2)
     s2 = patch_script(s2, pre)
-    # Ensure blurb-note exists after translation (English note may still be present until i18n-build)
     if lg and 'class="lw-blurb-note"' not in s2 and 'class="lw-note"' in s2:
         s2 = re.sub(
             r'(<p class="lw-note">.*?</p>)',
