@@ -92,8 +92,12 @@ def fit_desc(base, extra, lang, learn=False):
     norm = lambda x: re.sub(r'\s+', ' ', UPDATED.sub('', x or '')).strip()
     pad = (PAD_LEARN if learn else PAD)[lang]
     base = norm(base.replace(PAD[lang], '') if learn else base)
-    if base.endswith('…') and len(base) <= 160: return base  # earlier cut whose full text is no longer on the page: keep it
     pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
+    # Oct 26: rebuild ellipsis-truncated descriptions from page copy when we have sentences to work with.
+    # Only keep a prior '…' cut when the page no longer has usable copy to rebuild from.
+    if base.endswith('…') and len(base) <= 160 and not pool: return base
+    if base.endswith('…'):
+        base = base.rstrip('…').rsplit(' ', 1)[0].rstrip(' ,:;–-')  # drop the cut fragment; rebuild below
     sents = [x for x in END.split(base) if x] if base else []
     sents = [x for i, x in enumerate(sents) if i == 0 or not (len(_words(x)) >= 3 and len(_words(x) & _words(' '.join(sents[:i]))) / len(_words(x)) >= 0.6)]  # Oct 16: drop a repeated sentence
     if not sents and pool: sents = [pool.pop(0)]
