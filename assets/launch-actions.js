@@ -1,5 +1,5 @@
 /* Launch tracker actions: "Ask about this launch" (mailto) + "Add to my calendar" (.ics / Google).
-   Enhances the inline Launch Library 2 widget (#lw-next, #lw-list) without touching it:
+   Enhances the Launch Library 2 widget (#lw-next, #lw-list; assets/launch-tracker.js) without replacing blurbs:
    reads the same sessionStorage cache (sp-ll2-upcoming) and re-attaches on every re-render. */
 (function () {
   var nextEl = document.getElementById('lw-next');
@@ -96,7 +96,7 @@
         var cd = nextEl.querySelector('.lw-countdown'), a = actions(r[0]);
         cd && cd.parentNode === nextEl ? nextEl.insertBefore(a, cd.nextSibling) : nextEl.appendChild(a);
       }
-      var lis = listEl.children, rest = r.slice(1, 5);
+      var lis = listEl.children, rest = r.slice(1, 20);
       if (lis.length && !listEl.querySelector('.la-acts')) {
         urls.forEach(function (u) { if (!document.querySelector('a[href="' + u + '"]')) URL.revokeObjectURL(u); });
         for (var i = 0; i < lis.length && i < rest.length; i++) { lis[i].classList.add('la-row'); lis[i].appendChild(actions(rest[i])); }
