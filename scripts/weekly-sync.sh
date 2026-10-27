@@ -78,6 +78,9 @@ node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails 
 if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
 python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teachers), SI_Helper.html, Privacy section (all langs)
 python3 scripts/build-big-questions.py  # Oct 26: Big Questions FAQ (6 langs, FAQPage)
+python3 scripts/build-question-bank.py  # Oct 26: SEO question bank CSV
+python3 scripts/build-big-questions-clusters.py  # Oct 26: Big Questions cluster sections
+python3 scripts/build-hub-faq.py  # Oct 26: hub People-also-ask + FAQPage
 python3 scripts/build-student-qa.py     # Oct 16: Student_Questions.html Q&A pool from approved assets/data/student-qa.json (all langs, sitemap, search/student-qa.json; Vectorize via si-index.py)
 node scripts/test-phys-lab.js >/dev/null   # Physics Lab unit test (Phase 3): JS vs phys_calc.py
 python3 scripts/calc_check.py >/dev/null && node scripts/test-calcs.js >/dev/null  # Oct 16: calculator textbook checks + calc.js vs Python vectors (fails the sync on error)
