@@ -13,6 +13,7 @@ Text: scripts/learn_hubs_text.py. Course names/codes come from each language's C
 import re, os, sys, html, datetime
 sys.path.insert(0, 'scripts')
 import learn_hubs_text as X
+import jet_path_text as J  # Oct 27 (founder): parallel Jet Propulsion Track page + planet tie-in on both paths
 from courses import roadmap as RM
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 SITE = 'https://www.savingplanets.com/'
@@ -67,7 +68,7 @@ CSS = ('<style>.lhv{font-size:1.12rem;max-width:46rem}.lht{display:grid;grid-tem
        '.lhn{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem}.lhn>div{padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}.lhn ul{margin:.3rem 0;padding-inline-start:1.1rem}'
        '.lhr button{min-height:44px;border-radius:999px;padding:.3rem 1rem;font:inherit;cursor:pointer}.lhyt{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}.lhyt a{display:inline-flex;min-height:44px;align-items:center;padding:.2rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-weight:700;text-decoration:none;color:inherit}</style>')
 def nav_block(l, NL, cur=None):
-    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS] + [(p, NL[p]) for p in ('Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
+    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[:1]] + [(J.PAGE, '🔥 ' + J.SHORT[l])] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[1:]] + [(p, NL[p]) for p in ('Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
     return ''.join(f'<li><a href="{p}"' + (' aria-current="page"' if p == cur else '') + f'>{t if "&" in t else esc(t)}</a></li>' for p, t in items)
 def set_nav(s, l, NL, cur):
     return re.sub(r'(<ul class="spn-sub" id="spn-le">).*?(</ul>)', lambda m: m.group(1) + nav_block(l, NL, cur) + m.group(2), s, count=1, flags=re.S)
@@ -113,7 +114,7 @@ def hub(l, key, C, years, NL):
     k, page, emo, name, line, guides, subj = TOP[key]
     mine = [r for r in X.ROAD if r[3] == key]
     inner = ''
-    if key == 'aero': inner += roadmap(l, C, years)
+    if key == 'aero': inner += roadmap(l, C, years) + planet_block(l, J.AERO_PINTRO[l]) + f'<p><a href="{J.PAGE}">🔥 {esc(J.UI["to_jet"][l])}</a></p>'
     else:
         n = len(mine)
         inner += f'<h2>{esc(u("courses", l))}</h2><ul class="lht">' + ''.join(
@@ -125,12 +126,43 @@ def hub(l, key, C, years, NL):
     inner += calc_widget(l, subj, NL)
     inner += f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS if t[0] != key) + '</ul>'
     return page_from_learn(l, page, name[l], line[l], inner, NL)
+def links(l, txt):  # {Page.html|label} -> link, only if the page exists in this language
+    def f(m):
+        p, lab = m.group(1), m.group(2)
+        return f'<a href="{p}">{esc(lab)}</a>' if os.path.exists(d(l) + p.split('#')[0]) else esc(lab)
+    parts = re.split(r'(\{[\w_.#-]+\|[^}]*\})', txt)
+    return ''.join(re.sub(r'\{([\w_.#-]+)\|([^}]*)\}', f, x) if x.startswith('{') else esc(x) for x in parts)
+def planet_block(l, intro):
+    rows = ''.join(f'<li><strong>{esc(u("year", l, n=y))}:</strong> {links(l, J.PNOTE[y][l])}</li>' for y in range(1, 5))
+    return f'<section class="lhy" id="planet"><h2>🌍 {esc(J.UI["planet_h"][l])}</h2><p>{esc(intro)}</p><ul>{rows}</ul></section>'
+def jet_page(l, C, NL):
+    U = lambda k: esc(J.UI[k][l])
+    cl = lambda cid: f'<a href="{C[cid]["page"]}">{C[cid]["name"]}</a>'
+    li = lambda xs: '<ul>' + ''.join('<li>' + (esc(x.rstrip('*')) + f' <small>({U("grad")})</small>' if x.endswith('*') else esc(x)) + '</li>' for x in xs) + '</ul>'
+    o = [f'<section class="lhy" id="notice" role="note"><h2>ℹ️ {U("notice_h")}</h2><p>{U("notice")}</p></section>',
+         f'<h2>🧭 {U("both_h")}</h2><p>{U("both")}</p><p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a></p>',
+         f'<h2 id="why">🏛️ {U("why_h")}</h2>' + ''.join(f'<p>{esc(p[l])}</p>' for p in J.UI['why']),
+         f'<h2 id="roadmap">🗺️ {U("plan_h")}</h2><p>{U("plan_t")}</p><ul class="lhyt">' + ''.join(f'<li><a href="#y{y}">{esc(u("year", l, n=y))}</a></li>' for y in range(1, 5)) + '</ul>']
+    for y in range(1, 5):
+        o.append(f'<section class="lhy" id="y{y}"><h3>{esc(u("year", l, n=y))}</h3><div class="lhs">')
+        for sem in ('fall', 'spring'):
+            ours, mit, pu = J.PLAN[y][sem]
+            o.append(f'<div><h4>{esc(u(sem, l))}</h4><p><strong>{U("ours")}:</strong> ' + ', '.join(cl(c) for c in ours) + '</p>'
+                     f'<p><strong>{U("mit")}:</strong></p>{li(mit)}<p><strong>{U("pu")}:</strong></p>{li(pu)}</div>')
+        tl = ' · '.join(f'<a href="{p}">{NL.get(p, p.replace(".html", "").replace("_", " ")) if "#" not in p else '🧮 ' + NL.get(CALCPAGE[p.split("#calc-")[1]][1], p.split("#calc-")[1])}</a>' for p in J.TRAINLINKS[y])
+        o.append(f'</div><p><strong>🛠️ {U("train")}:</strong> {esc(J.TRAIN[y][l])} {tl}</p><p><strong>🌍 {U("planet")}:</strong> {links(l, J.PNOTE[y][l])}</p></section>')
+    o.append(planet_block(l, J.PINTRO[l]))
+    rows = ''.join(f'<tr><th scope="row">{esc(J.TOPIC[t][l])}</th><td>{esc(e)}</td><td>{esc(m)}</td><td>{esc(p)}</td><td><a href="{pg}">{NL.get(pg, pg.replace(".html", "").replace("_", " "))}</a></td></tr>' for t, e, m, p, pg in J.CROSS)
+    o.append(f'<h2 id="erau">🎓 {U("erau_h")}</h2><p>{U("erau_t")}</p><div style="overflow-x:auto"><table class="jp-x"><thead><tr><th scope="col">{U("topic")}</th><th scope="col">Embry-Riddle (Daytona Beach)</th><th scope="col">MIT</th><th scope="col">Princeton</th><th scope="col">{U("ours")}</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    o.append(f'<h2 id="sources">📚 {U("src_h")}</h2><p>{U("src_t")}</p><ul>' + ''.join(f'<li><a href="{h}" rel="noopener" target="_blank">{esc(n)}</a></li>' for n, h in J.SRC) + '</ul>')
+    o.append('<style>.jp-x{border-collapse:collapse;width:100%;min-width:640px}.jp-x th,.jp-x td{border:1px solid rgba(255,255,255,.22);padding:.45rem .6rem;text-align:start;vertical-align:top;font-size:.92rem}.lhs ul{margin:.2rem 0 .6rem;padding-inline-start:1.1rem}</style>')
+    return page_from_learn(l, J.PAGE, J.NAME[l], J.LINE[l], ''.join(o), NL)
 def landing(l, NL):
     f = d(l) + 'Learn.html'; s = rd(f)
     s = re.sub(r'(<div class="page-hero-content"><h1>[^<]*</h1>)<p[^>]*>.*?</p>', lambda m: m.group(1) + f'<p class="lhv">{esc(X.VISION[l])}</p>', s, count=1, flags=re.S)
     cnt = lambda k: 30 if k == 'aero' else sum(1 for r in X.ROAD if r[3] == k)  # the aero roadmap holds all 30 courses
     cards = ''.join(f'<li{" class=\"lht-main\"" if t[0] == "aero" else ""}><a href="{t[1]}"><b>{t[2]} {esc(t[3][l])}</b><small>{esc(t[4][l])}</small><small>{esc(u("ncourses", l, n=cnt(t[0])) if cnt(t[0]) != 1 else u("ncourse1", l))}</small></a></li>' for t in X.TOPICS)
-    more = [('Courses.html', NL.get('Courses.html')), ('Play_and_Learn.html', NL.get('Play_and_Learn.html')), ('Teachers.html', NL.get('Teachers.html')), ('Lesson_Builder.html', NL.get('Lesson_Builder.html')),
+    more = [(J.PAGE, esc(J.SHORT[l])), ('Courses.html', NL.get('Courses.html')), ('Play_and_Learn.html', NL.get('Play_and_Learn.html')), ('Teachers.html', NL.get('Teachers.html')), ('Lesson_Builder.html', NL.get('Lesson_Builder.html')),
             ('Cadets.html', NL.get('Cadets.html')), ('AP_IB_Physics.html', NL.get('AP_IB_Physics.html')), ('Careers.html', NL.get('Careers.html'))]
     blk = (f'<!-- LEARNHUB:START -->{CSS}<h2 id="topics">{esc(u("topics", l))}</h2><ul class="lht">{cards}</ul>'
            f'<h2>{esc(u("more", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{p}">{t}</a></li>' for p, t in more if t) + '</ul><!-- LEARNHUB:END -->')
@@ -171,14 +203,15 @@ def main():
             if not f.endswith('.html'): continue
             p = d(l) + f; s = rd(p)
             if 'id="spn-le"' not in s: continue
-            cur = f if f in [t[1] for t in X.TOPICS] + ['Learn.html', 'Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
+            cur = f if f in [t[1] for t in X.TOPICS] + [J.PAGE, 'Learn.html', 'Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
             s2 = set_nav(s, l, NL, cur)
             s2 = re.sub(r'<li><a href="(?:\.\./)?Homeschool\.html"[^>]*>.*?</a></li>', '', s2) if f != 'Homeschool.html' else s2
             ch += wr(p, s2)
         for t in X.TOPICS: ch += wr(d(l) + t[1], hub(l, t[0], C, years, NL))
+        ch += wr(d(l) + J.PAGE, jet_page(l, C, NL))
     sm = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:
-        for t in X.TOPICS:
+        for t in X.TOPICS + [(None, J.PAGE)]:
             loc = f'{SITE}{d(l)}{t[1]}'
             if f'<loc>{loc}</loc>' not in sm: sm = sm.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
     ch += wr('sitemap.xml', sm)
