@@ -11,6 +11,8 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 26 (~7:45 PM HST, founder): **Big Questions** search landing (`Big_Questions.html`, 6 langs). 13 sourced FAQ answers (NASA/NOAA/IPCC/ESA/UN) with FAQPage JSON-LD, hreflang, internal links to Solutions / Ways to Help / hubs. Generator `scripts/build-big-questions.py` (weekly-sync before student-qa); nav under Kids next to Myth vs Fact. No RU/CN/KP/IR orgs as helpers. PR open — do not merge until wording approved.
+
 - Oct 26 (~7:30 PM HST): **PR #129 squash-merged** (2703101418) and GitHub Pages deploy succeeded (actions/40455625319). Live check on Artemis_II.html#launches in en/fr/es/ar/it/he: 20 launches render with purpose + Saving Planets connection blurbs; EO missions link Earth_Observation.html; Starlink outbound to SpaceX only; RU/CN/KP/IR cards have no agency outbound; nextspaceflight footer kept; no JS errors in headless render.
 
 - Oct 26 (~7:25 PM HST, founder): **RU/CN/KP/IR launch blurbs** — when relevant, say so and link our solution page (tight Earth / solar-system benefit wording). Never link their agency/operator sites; never embeds, APIs, data feeds or anything that connects our site to theirs (no invite/enable access). Irrelevant = plain text only. Facts from LL2 / neutral notes. assets/launch-tracker.js v20261026d; PR #129.
