@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Oct 15, 2026 (Top-10 #1): curriculum standards + grade/subject browsing. Data: assets/data/standards.json (real NGSS and
-Common Core codes, official English text, tagged per hub with page overrides). Renders, in en/fr/es/ar/it:
+Common Core codes, official English text, tagged per hub with page overrides). Renders, in en/fr/es/ar/it/he:
   - a 'Standards Alignment' block inside every solution page's For Teachers box (marker STANDARDS)
   - grade/subject filter chips + data attributes on Teachers.html (marker T-BROWSE)
   - a 'Standards by hub' table on Lesson_Builder.html (marker LB-STD)
@@ -12,7 +12,7 @@ def wr(p, s):
     open(p, 'w', encoding='utf8').write(s); return 1
 esc = lambda s: html.escape(s, quote=True)
 D = json.load(open('assets/data/standards.json', encoding='utf8'))
-LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it'] if os.path.isdir(l)]
+LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it', 'he'] if os.path.isdir(l)]
 d = lambda l: '' if l == 'en' else l + '/'
 U = {
  'en': dict(h='Standards Alignment', note='U.S. Next Generation Science Standards (NGSS) and Common Core. Official text, in English.', grade='Grade', subject='Subject', all='All',
@@ -25,6 +25,8 @@ U = {
    subj=dict(earth='الأرض والنشاط البشري', life='علوم الحياة', space='علوم الفضاء', literacy='القراءة (Common Core)'), browse='تصفح حسب الصف والمادة', none='لا توجد أوراق تطابق هذا التصفية.', lb='المعايير حسب المركز', hub='المركز', codes='المعايير'),
  'it': dict(h='Allineamento agli standard', note='Standard statunitensi: Next Generation Science Standards (NGSS) e Common Core. Testo ufficiale, in inglese.', grade='Classe', subject='Materia', all='Tutto',
    subj=dict(earth="La Terra e l'attività umana", life='Scienze della vita', space='Scienze dello spazio', literacy='Lettura (Common Core)'), browse='Sfoglia per classe e materia', none='Nessuna scheda corrisponde a questo filtro.', lb='Standard per hub', hub='Hub', codes='Standard'),
+ 'he': dict(h='התאמה לתקנים', note='תקני ארה״ב: Next Generation Science Standards (NGSS) ו-Common Core. הטקסט הרשמי באנגלית.', grade='כיתה', subject='מקצוע', all='הכול',
+   subj=dict(earth='כדור הארץ ופעילות האדם', life='מדעי החיים', space='מדעי החלל', literacy='קריאה (Common Core)'), browse='עיון לפי כיתה ומקצוע', none='אין דפים שתואמים לסינון הזה.', lb='תקנים לפי מרכז', hub='מרכז', codes='תקנים'),
 }
 BANDS = ['K-2', '3-5', '6-8', '9-12']
 def primary_hubs():

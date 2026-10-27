@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Oct 16 2026: standards tags on Learn guides, math pages, labs and calculators (5 languages).
+"""Oct 16 2026: standards tags on Learn guides, math pages, labs and calculators (6 languages).
 Chips under the page hero + schema.org educationalAlignment (AlignmentObject) in the page's LearningResource JSON-LD, and a
 filter-by-standard block on Learn.html. Alignments are our editorial judgement and are listed only where the page genuinely
 practises the performance expectation / standard / unit; AP and IB codes only where the official course description lists the
@@ -7,7 +7,7 @@ topic (see paths_text2.py). Not reviewed or endorsed by NGSS Lead States, CCSSO/
 import re, os, json, html, sys
 sys.path.insert(0, 'scripts')
 import calc_text as CT
-LANGS = ['en', 'fr', 'es', 'ar', 'it']; E = lambda x: html.escape(x, quote=True)
+LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']; E = lambda x: html.escape(x, quote=True)
 NGSS_URL = 'https://www.nextgenscience.org/'
 AP1 = 'https://apcentral.collegeboard.org/media/pdf/ap-physics-1-course-and-exam-description.pdf'
 AP2 = 'https://apcentral.collegeboard.org/media/pdf/ap-physics-2-course-at-a-glance.pdf'
@@ -38,7 +38,8 @@ L = {'en': dict(h='Standards', note='Our alignment; not reviewed by the standard
      'fr': dict(h='Programmes', note='Correspondance établie par nous ; non vérifiée par les organismes de normes.', f='Filtrer par norme', all='Toutes les normes', fh='Trouver des pages par norme'),
      'es': dict(h='Estándares', note='Alineación nuestra; no revisada por los organismos de estándares.', f='Filtrar por estándar', all='Todos los estándares', fh='Buscar páginas por estándar'),
      'ar': dict(h='المعايير', note='مواءمة من إعدادنا؛ لم تراجعها جهات المعايير.', f='التصفية حسب المعيار', all='كل المعايير', fh='ابحث عن الصفحات حسب المعيار'),
-     'it': dict(h='Standard', note='Allineamento nostro; non verificato dagli enti degli standard.', f='Filtra per standard', all='Tutti gli standard', fh='Trova pagine per standard')}
+     'it': dict(h='Standard', note='Allineamento nostro; non verificato dagli enti degli standard.', f='Filtra per standard', all='Tutti gli standard', fh='Trova pagine per standard'),
+     'he': dict(h='תקנים', note='ההתאמה שלנו; לא נבדקה על ידי גופי התקנים.', f='סינון לפי תקן', all='כל התקנים', fh='מצאו דפים לפי תקן')}
 def short(code): return code[5:] if code.startswith('CCSS.') else code
 def chips(l, codes):
     u = L[l]

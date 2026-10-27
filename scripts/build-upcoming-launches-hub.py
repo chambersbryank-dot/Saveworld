@@ -12,7 +12,7 @@ os.chdir(ROOT)
 E = lambda s, quote=False: html.escape(s, quote=quote)
 
 HUB = 'Upcoming_Launches.html'
-HERO_V = '20261026e'
+HERO_V = '20261027a'
 TRACK_V = '20261026d'  # keep in sync with build-launch-tracker.py
 IMG = 'RocketLaunch.jpg'  # existing asset; OG card only
 HERO_CREDIT = 'Illustration: Saving Planets (canvas animation; no third-party feed)'
@@ -387,11 +387,8 @@ def seed_i18n():
                 # keep existing unless we want to force — skip force to avoid churn
                 pass
         if added:
-            k = raw.index('
-') + 1
-            raw = raw[:k] + '
-'.join(added) + '
-' + raw[k:]
+            k = raw.index('\n') + 1
+            raw = raw[:k] + '\n'.join(added) + '\n' + raw[k:]
             json.loads(raw)
             jp.write_text(raw, encoding='utf-8')
             print('i18n', lang, '+', len(added))

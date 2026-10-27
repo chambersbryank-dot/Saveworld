@@ -66,6 +66,7 @@ python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-loca
 python3 scripts/build-map-he.py        # Oct 17: assets/data/map.he.json + he/World_Map.html data-src (needs map.en.json and the i18n-built he page)
 python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Embed) on Amazing Facts, Myth vs Fact, World Map, homepage Scoreboard; per-item Cite (all langs)
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
+python3 scripts/he-edu-parity.py       # Oct 27: HE Teachers STARTHERE/SIHELPER/LEARNLINK parity for Big Questions
 python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, region (map pins), grade (standards), name; URL state (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
 python3 scripts/r2-cards.py && python3 scripts/build-ux.py   # Oct 16: card images (home + Related Solutions) get R2 WebP srcset (uploads only new ones), then re-run build-ux
