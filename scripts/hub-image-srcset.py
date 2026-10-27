@@ -12,6 +12,7 @@ Run after apply-anim-banners / r2-cards in weekly-sync.
 from __future__ import annotations
 import html as H
 import json, os, re, sys
+from urllib.parse import urlparse
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 os.chdir(ROOT)
@@ -133,13 +134,14 @@ def process(path: str) -> int:
             if 'sp-logo' in attrs or 'brand/' in attrs or 'spb-media' in attrs:
                 return m.group(0)
             # already a picture child handled? skip if parent context — we only see img tag
-            if 'srcset=' in attrs and 'media.savingplanets.com' in attrs:
+            if 'srcset=' in attrs:
                 return m.group(0)
             sm = re.search(r'\ssrc="([^"]+)"', attrs)
             if not sm:
                 return m.group(0)
             src = sm.group(1)
-            if 'media.savingplanets.com' not in src and not src.startswith('assets/'):
+            host = (urlparse(src).hostname or '') if src.startswith(('http://', 'https://')) else ''
+            if host not in ('media.savingplanets.com', 'www.media.savingplanets.com') and not src.startswith('assets/'):
                 return m.group(0)
             e = lookup(src)
             if not e or not e.get('srcset'):
