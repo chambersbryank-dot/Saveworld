@@ -137,9 +137,10 @@
         y: u1 * u1 * p0y + 2 * u1 * u * p1y + u * u * p2y
       };
     }
-    ctx.strokeStyle = 'rgba(143,211,255,0.45)';
-    ctx.lineWidth = 1.5;
-    ctx.setLineDash([4, 6]);
+    // brighter dashed trail so the arc stays readable over Earth
+    ctx.strokeStyle = 'rgba(200,230,255,0.85)';
+    ctx.lineWidth = 2.25;
+    ctx.setLineDash([5, 5]);
     ctx.beginPath();
     for (var u = 0; u <= prog; u += 0.02) {
       var pt = bez(u);
@@ -154,27 +155,57 @@
     ctx.save();
     ctx.translate(rk.x, rk.y);
     ctx.rotate(angR);
-    // body
-    ctx.fillStyle = '#f4f7fb';
-    ctx.fillRect(-10, -3, 18, 6);
-    ctx.fillStyle = '#009cde';
+    // soft glow behind the rocket so it stays visible in every frame
+    ctx.shadowColor = 'rgba(255,230,160,0.95)';
+    ctx.shadowBlur = 16;
+    // body (slightly larger + high-contrast outline)
+    ctx.fillStyle = '#ffffff';
+    ctx.strokeStyle = 'rgba(0,20,40,0.55)';
+    ctx.lineWidth = 1;
+    ctx.fillRect(-12, -4, 22, 8);
+    ctx.strokeRect(-12, -4, 22, 8);
+    ctx.fillStyle = '#3db7ff';
     ctx.beginPath();
-    ctx.moveTo(8, 0);
-    ctx.lineTo(14, -4);
-    ctx.lineTo(14, 4);
+    ctx.moveTo(10, 0);
+    ctx.lineTo(18, -5);
+    ctx.lineTo(18, 5);
     ctx.closePath();
     ctx.fill();
-    // flame
-    if (!reduce && prog < 1) {
-      var flick = 0.7 + 0.3 * Math.sin(t * 30);
-      ctx.fillStyle = 'rgba(255,160,40,' + flick + ')';
+    // fins
+    ctx.fillStyle = '#ffd166';
+    ctx.beginPath();
+    ctx.moveTo(-8, -4);
+    ctx.lineTo(-14, -9);
+    ctx.lineTo(-4, -4);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(-8, 4);
+    ctx.lineTo(-14, 9);
+    ctx.lineTo(-4, 4);
+    ctx.closePath();
+    ctx.fill();
+    // flame (always at least mid opacity; brighter when moving)
+    if (prog < 1) {
+      var flick = reduce ? 0.85 : (0.85 + 0.15 * Math.sin(t * 30));
+      ctx.shadowColor = 'rgba(255,140,40,0.95)';
+      ctx.shadowBlur = 18;
+      ctx.fillStyle = 'rgba(255,190,60,' + flick + ')';
       ctx.beginPath();
-      ctx.moveTo(-10, -2);
-      ctx.lineTo(-18 - 4 * flick, 0);
-      ctx.lineTo(-10, 2);
+      ctx.moveTo(-12, -3);
+      ctx.lineTo(-22 - 5 * flick, 0);
+      ctx.lineTo(-12, 3);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,220,' + (0.7 * flick) + ')';
+      ctx.beginPath();
+      ctx.moveTo(-12, -1.5);
+      ctx.lineTo(-17 - 2 * flick, 0);
+      ctx.lineTo(-12, 1.5);
       ctx.closePath();
       ctx.fill();
     }
+    ctx.shadowBlur = 0;
     ctx.restore();
 
     // vignette for title contrast

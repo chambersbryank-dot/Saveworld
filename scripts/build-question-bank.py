@@ -13,8 +13,8 @@ except ImportError:
     sys.exit('need beautifulsoup4')
 
 ROOT = Path(__file__).resolve().parent.parent
-# Prefer fuller workspace tree for mining if present
-MINE = Path('/workspace/Saveworld') if Path('/workspace/Saveworld/Myth_vs_Fact.html').exists() else ROOT
+# Mine the checkout that contains this script (never a stale sibling tree).
+MINE = ROOT
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 OUT = ROOT / 'assets' / 'data' / 'question-bank.csv'
 OUT_WS = Path('/workspace/seo/question-bank.csv')
