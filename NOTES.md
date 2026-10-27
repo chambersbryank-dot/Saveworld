@@ -11,6 +11,8 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
-- Oct 26 (~8:05 PM HST, founder): **SEO question bank + hub FAQ** — `assets/data/question-bank.csv` (~1.7k rows, 6 langs) mined from Myth vs Fact, solutions, hubs, Learn/Teachers/Kids, Ways to Help, Artemis launches. `build-hub-faq.py` adds People-also-ask (max 6) + FAQPage on hubs; `build-big-questions-clusters.py` expands Big_Questions. No merge until review. Avoids launch-tracker.js edits (Upcoming Launches work).
+- Oct 26 (~8:10 PM HST, founder): **Big Questions polish (same PR)** — searchable chips + accordion UI via `build-big-questions-ui.py` (topic filters, search, crisp lead + Go deeper + source, Did you know, Myth vs Fact tie-in, shareable anchors, related Qs, Ways to Help CTA). ~67–74 Qs/lang from question-bank; FAQPage JSON-LD kept. Awaiting CI then squash-merge per founder.
+
+- Oct 26 (~8:05 PM HST, founder): **SEO question bank + hub FAQ** — `assets/data/question-bank.csv` (~1.7k rows, 6 langs) mined from Myth vs Fact, solutions, hubs, Learn/Teachers/Kids, Ways to Help, Artemis launches. `build-hub-faq.py` adds People-also-ask (max 6) + FAQPage on hubs; `build-big-questions-clusters.py` then superseded by polished UI builder. Merging with polish. Avoids launch-tracker.js edits (Upcoming Launches work).
 
 -
