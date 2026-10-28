@@ -13,7 +13,7 @@ Text: scripts/learn_hubs_text.py. Course names/codes come from each language's C
 import re, os, sys, html, datetime
 sys.path.insert(0, 'scripts')
 import learn_hubs_text as X
-import jet_path_text as J  # Oct 27 (founder): parallel Jet Propulsion Track page + planet tie-in on both paths
+import jet_path_text as J  # Oct 27/28 (founder): separate Aerospace (Jet Propulsion) track page + planet tie-in on both paths
 from courses import roadmap as RM
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 SITE = 'https://www.savingplanets.com/'
@@ -135,28 +135,44 @@ def links(l, txt):  # {Page.html|label} -> link, only if the page exists in this
 def planet_block(l, intro):
     rows = ''.join(f'<li><strong>{esc(u("year", l, n=y))}:</strong> {links(l, J.PNOTE[y][l])}</li>' for y in range(1, 5))
     return f'<section class="lhy" id="planet"><h2>🌍 {esc(J.UI["planet_h"][l])}</h2><p>{esc(intro)}</p><ul>{rows}</ul></section>'
+JET_SVG = ('<svg class="jpa" viewBox="0 0 640 120" role="img" aria-label="{lab}" xmlns="http://www.w3.org/2000/svg">'
+    '<defs><linearGradient id="jpg" x1="0" x2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset=".35" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></linearGradient></defs>'
+    '<g class="jpa-x"><ellipse class="jpa-f" cx="330" cy="60" rx="70" ry="13" fill="url(#jpg)"/>'
+    '<circle class="jpa-p p1" cx="300" cy="60" r="9"/><circle class="jpa-p p2" cx="300" cy="56" r="7"/><circle class="jpa-p p3" cx="300" cy="64" r="8"/><circle class="jpa-p p4" cx="300" cy="60" r="6"/></g>'
+    '<path d="M40 38 L230 30 Q262 30 268 44 L282 50 L282 70 L268 76 Q262 90 230 90 L40 82 Q24 60 40 38Z" fill="#c9d6e3" stroke="#0b1620" stroke-width="2"/>'
+    '<ellipse cx="44" cy="60" rx="12" ry="22" fill="#2a3a4a"/><g class="jpa-fan"><path d="M44 40 L48 60 L40 60Z M44 80 L40 60 L48 60Z M26 60 L44 56 L44 64Z M62 60 L44 64 L44 56Z" fill="#8fd3ff"/></g>'
+    '<path d="M90 36 V84 M140 34 V86 M190 32 V88" stroke="#7d8fa3" stroke-width="2"/></svg>')
+JET_CSS = ('<style>.jpa{display:block;width:min(100%,560px);height:auto;margin:.8rem auto 0}.jpa-p{fill:rgba(230,236,245,.55)}'
+    '@media (prefers-reduced-motion:no-preference){.jpa-f{transform-origin:290px 60px;animation:jpf .18s ease-in-out infinite alternate}'
+    '.jpa-p{animation:jpp 1.6s linear infinite}.p2{animation-delay:.4s}.p3{animation-delay:.8s}.p4{animation-delay:1.2s}'
+    '.jpa-fan{transform-origin:44px 60px;animation:jps .5s linear infinite}}'
+    '@keyframes jpf{from{transform:scaleX(.85)}to{transform:scaleX(1.08)}}@keyframes jps{to{transform:rotate(360deg)}}'
+    '@keyframes jpp{0%{transform:translateX(0) scale(.6);opacity:.9}100%{transform:translateX(330px) scale(2.6);opacity:0}}'
+    '[dir=rtl] .jpa{transform:scaleX(-1)}.lhs li.jp-m{border-inline-start-color:#ffd54a}</style>')
 def jet_page(l, C, NL):
     U = lambda k: esc(J.UI[k][l])
-    cl = lambda cid: f'<a href="{C[cid]["page"]}">{C[cid]["name"]}</a>'
-    li = lambda xs: '<ul>' + ''.join('<li>' + (esc(x.rstrip('*')) + f' <small>({U("grad")})</small>' if x.endswith('*') else esc(x)) + '</li>' for x in xs) + '</ul>'
-    o = [f'<section class="lhy" id="notice" role="note"><h2>ℹ️ {U("notice_h")}</h2><p>{U("notice")}</p></section>',
-         f'<h2>🧭 {U("both_h")}</h2><p>{U("both")}</p><p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a></p>',
-         f'<h2 id="why">🏛️ {U("why_h")}</h2>' + ''.join(f'<p>{esc(p[l])}</p>' for p in J.UI['why']),
-         f'<h2 id="roadmap">🗺️ {U("plan_h")}</h2><p>{U("plan_t")}</p><ul class="lhyt">' + ''.join(f'<li><a href="#y{y}">{esc(u("year", l, n=y))}</a></li>' for y in range(1, 5)) + '</ul>']
+    def item(x):
+        if x.startswith('mod:'):
+            n, t = J.MOD[x[4:]]
+            return f'<li class="jp-m"><b>{esc(n[l])}</b><span class="k">{U("mod")}</span><span class="k">{esc(t[l])}</span></li>'
+        cid, part = (x.split(':') + [None])[:2]
+        c = C[cid]; extra = f'<span class="k">{esc(J.UI["part"][l].replace("{n}", part))}</span>' if part else ''
+        return f'<li><a href="{c["page"]}">{c["name"]}</a><span class="k">{c["code"]}</span>{extra}</li>'
+    yt = ''.join(f'<li><a href="#y{y}">{esc(u("year", l, n=y))}</a></li>' for y in range(1, 5))
+    o = [JET_CSS, f'<h2 id="roadmap">🗺️ {U("plan_h")}</h2><p>{U("plan_t")}</p><ul class="lhyt" aria-label="{esc(u("yeartabs", l))}">{yt}</ul>']
     for y in range(1, 5):
         o.append(f'<section class="lhy" id="y{y}"><h3>{esc(u("year", l, n=y))}</h3><div class="lhs">')
         for sem in ('fall', 'spring'):
-            ours, mit, pu = J.PLAN[y][sem]
-            o.append(f'<div><h4>{esc(u(sem, l))}</h4><p><strong>{U("ours")}:</strong> ' + ', '.join(cl(c) for c in ours) + '</p>'
-                     f'<p><strong>{U("mit")}:</strong></p>{li(mit)}<p><strong>{U("pu")}:</strong></p>{li(pu)}</div>')
-        tl = ' · '.join(f'<a href="{p}">{NL.get(p, p.replace(".html", "").replace("_", " ")) if "#" not in p else '🧮 ' + NL.get(CALCPAGE[p.split("#calc-")[1]][1], p.split("#calc-")[1])}</a>' for p in J.TRAINLINKS[y])
-        o.append(f'</div><p><strong>🛠️ {U("train")}:</strong> {esc(J.TRAIN[y][l])} {tl}</p><p><strong>🌍 {U("planet")}:</strong> {links(l, J.PNOTE[y][l])}</p></section>')
+            o.append(f'<div><h4>{esc(u(sem, l))}</h4><ol>' + ''.join(item(x) for x in J.PLAN[y][sem]) + '</ol></div>')
+        o.append('</div></section>')
+    o.append(f'<p class="lnote" role="note">🧪 <strong>{U("labs_h")}:</strong> {U("labs")}</p>')
     o.append(planet_block(l, J.PINTRO[l]))
-    rows = ''.join(f'<tr><th scope="row">{esc(J.TOPIC[t][l])}</th><td>{esc(e)}</td><td>{esc(m)}</td><td>{esc(p)}</td><td><a href="{pg}">{NL.get(pg, pg.replace(".html", "").replace("_", " "))}</a></td></tr>' for t, e, m, p, pg in J.CROSS)
-    o.append(f'<h2 id="erau">🎓 {U("erau_h")}</h2><p>{U("erau_t")}</p><div style="overflow-x:auto"><table class="jp-x"><thead><tr><th scope="col">{U("topic")}</th><th scope="col">Embry-Riddle (Daytona Beach)</th><th scope="col">MIT</th><th scope="col">Princeton</th><th scope="col">{U("ours")}</th></tr></thead><tbody>{rows}</tbody></table></div>')
-    o.append(f'<h2 id="sources">📚 {U("src_h")}</h2><p>{U("src_t")}</p><ul>' + ''.join(f'<li><a href="{h}" rel="noopener" target="_blank">{esc(n)}</a></li>' for n, h in J.SRC) + '</ul>')
-    o.append('<style>.jp-x{border-collapse:collapse;width:100%;min-width:640px}.jp-x th,.jp-x td{border:1px solid rgba(255,255,255,.22);padding:.45rem .6rem;text-align:start;vertical-align:top;font-size:.92rem}.lhs ul{margin:.2rem 0 .6rem;padding-inline-start:1.1rem}</style>')
-    return page_from_learn(l, J.PAGE, J.NAME[l], J.LINE[l], ''.join(o), NL)
+    o.append(calc_widget(l, 'aero', NL))
+    o.append(f'<p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a></p>')
+    o.append(f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS) + '</ul>')
+    o.append(f'<p class="lnote"><small>{U("credit")}</small></p>')
+    s = page_from_learn(l, J.PAGE, J.NAME[l], J.LINE[l], ''.join(o), NL)
+    return s.replace('</p></div>', '</p>' + JET_SVG.replace('{lab}', U('anim')) + '</div>', 1)
 def landing(l, NL):
     f = d(l) + 'Learn.html'; s = rd(f)
     s = re.sub(r'(<div class="page-hero-content"><h1>[^<]*</h1>)<p[^>]*>.*?</p>', lambda m: m.group(1) + f'<p class="lhv">{esc(X.VISION[l])}</p>', s, count=1, flags=re.S)
