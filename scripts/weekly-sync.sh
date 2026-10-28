@@ -20,6 +20,7 @@ python3 scripts/i18n-wth-1025.py >/dev/null   # Oct 25: Ways to Help filter/summ
 node scripts/newsletter-updates-sync.js || true  # Oct 14: 'feat(Page.html): ...' commits and NOTES.md '## Newsletter' bullets -> scripts/newsletter-updates.json (What's New)
 node build-stats.js --data-only          # Oct 14: live solution/hub counts (assets/data/solutions.json) from Solutions.html
 python3 scripts/build-trust.py             # Oct 14: Privacy, Editorial_Policy, Corrections, Topics A-Z (+ i18n strings)
+python3 scripts/build-a11y-terms.py        # Oct 28 (founder): Accessibility + Terms pages + footer links (+ i18n strings, he too)
 python3 scripts/build-batch-b.py           # ELI10 / teacher / cite boxes, Glossary + Teachers pages, homepage audience row (Oct 12)
 python3 scripts/build-site-extras.py        # footer site map, Sitemap.html, <main> landmark, video labels, extras.css (Oct 13)
 python3 scripts/build-batch-a.py   # Batch A (Oct 12): share bar, Last reviewed + sources, Related Solutions (from last semantic index), difference strip
@@ -43,6 +44,7 @@ python3 scripts/build-courses.py          # Oct 24 (founder): Courses hub + cour
 python3 scripts/build-launch-tracker.py  # Oct 26: Live Launch Tracker blurbs (purpose + SP connection)
 python3 scripts/build-launch-actions.py   # Oct 24: launch tracker Ask/Calendar buttons script tag on #lw-next pages (all langs)
 python3 scripts/build-404-case.py         # Oct 25 (founder, upgrade 1): 404 pages redirect wrong-case / old addresses (all langs, after i18n-build)
+python3 scripts/build-a11y-terms.py --home # Oct 28 (founder): home Standards Alignment block + educationalAlignment (all langs)
 python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 python3 scripts/build-top-ten.py --links  # Oct 18: Top Ten card links stay in-language for generator-made pages (Learn, World_Map)
 # Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors

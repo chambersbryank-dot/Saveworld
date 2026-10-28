@@ -14,7 +14,7 @@ CSS = f'<link rel="stylesheet" href="extras.css?v={V}">'
 spec = importlib.util.spec_from_file_location('sol', 'scripts/build-solutions-index.py'); SOL = importlib.util.module_from_spec(spec); spec.loader.exec_module(SOL)
 KEY = [('Solutions.html', 'All Solutions'), ('Search.html', 'Search'), ('Glossary.html', 'Glossary'), ('Teachers.html', 'Teacher Sheets'),
        ('Amazing_Facts.html', 'Amazing Facts'), ('Kids_Map.html', 'Kids Planet Map'), ('World_Map.html', 'World Solutions Map'), ('Lesson_Builder.html', 'Lesson Plan Builder'), ('Satellite_Explorer.html', 'Satellite Explorer'), ('Ways_to_Help.html', 'Ways to Help'), ('About.html', 'About'), ('Press.html', 'Press &amp; media'),
-       ('Contact.html', 'Contact'), ('Topics.html', 'Topics A to Z'), ('Privacy.html', 'Privacy'), ('Editorial_Policy.html', 'Editorial Policy'), ('Corrections.html', 'Corrections'), ('Sitemap.html', 'Site Map')]
+       ('Contact.html', 'Contact'), ('Topics.html', 'Topics A to Z'), ('Privacy.html', 'Privacy'), ('Terms.html', 'Terms of Use'), ('Accessibility.html', 'Accessibility'), ('Editorial_Policy.html', 'Editorial Policy'), ('Corrections.html', 'Corrections'), ('Sitemap.html', 'Site Map')]
 UI = {'Topics A to Z': ('Sujets de A à Z', 'Temas de la A a la Z', 'الموضوعات من الألف إلى الياء'), 'Privacy': ('Confidentialité', 'Privacidad', 'الخصوصية'), 'Editorial Policy': ('Politique éditoriale', 'Política editorial', 'السياسة التحريرية'), 'Corrections': ('Corrections', 'Correcciones', 'التصحيحات'),
       'Site map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'), 'Site Map': ('Plan du site', 'Mapa del sitio', 'خريطة الموقع'),
       'Hubs': ('Pôles', 'Centros', 'المحاور'), 'Explore': ('Explorer', 'Explorar', 'استكشف'), 'All Solutions': ('Toutes les solutions', 'Todas las soluciones', 'كل الحلول'),
@@ -54,10 +54,22 @@ def footer_map(hl):
     return ('<!-- FOOTER-MAP:START --><div class="footer-map" role="navigation" aria-label="Site map"><div class="fm-col"><h2 class="fm-h">Hubs</h2><ul>' + hub_links +
             '</ul></div><div class="fm-col"><h2 class="fm-h">Explore</h2><ul>' + key_links + '</ul></div></div><!-- FOOTER-MAP:END -->')
 
+def strip_empty_scripts(s):
+    """Drop empty <script ...></script> tags (src-only scripts) without a regex HTML filter."""
+    out, i, low = [], 0, s.lower()
+    while True:
+        j = low.find('<script', i)
+        if j < 0: out.append(s[i:]); return ''.join(out)
+        k = low.find('>', j); e = low.find('</script', k) if k >= 0 else -1; z = low.find('>', e) if e >= 0 else -1
+        if z < 0: out.append(s[i:]); return ''.join(out)
+        out.append(s[i:j])
+        if s[k + 1:e].strip(): out.append(s[j:z + 1])
+        i = z + 1
+
 def sitemap_page(hl):
     tpl = rd('Contact.html'); head, b = tpl.split('<body', 1)
     nav = re.search(r'(<nav id="topnav">.*?</nav>)', b, re.S).group(1)
-    footer = re.sub(r'<script[^>]*></script>', '', re.search(r'(<footer>.*?</footer>)', b, re.S).group(1))
+    footer = strip_empty_scripts(re.search(r'(<footer>.*?</footer>)', b, re.S).group(1))
     jsv = re.search(r'site\.js\?v=([0-9a-z]+)', b).group(1)
     desc = 'Every hub and solution on Saving Planets, in one list.'
     h = head.replace('Contact.html', 'Sitemap.html')  # Oct 16: any Contact title (seo-meta override changed it)

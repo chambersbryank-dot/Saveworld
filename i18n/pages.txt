@@ -279,3 +279,5 @@ Cool_Earth_Basic_Income.html
 Andfjorden_MPA.html
 Atoll_Rewilding.html
 Big_Questions.html
+Accessibility.html
+Terms.html
