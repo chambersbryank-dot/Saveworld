@@ -1,0 +1,66 @@
+{
+ "name": "Saving Planets",
+ "short_name": "Saving Planets",
+ "id": "/",
+ "description": "Real solutions that help people and nature: map, solutions, ways to help, learning and glossary.",
+ "start_url": "/?source=app",
+ "scope": "/",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#0b3a5b",
+ "theme_color": "#0b3a5b",
+ "lang": "en",
+ "dir": "ltr",
+ "categories": [
+  "education",
+  "news"
+ ],
+ "icons": [
+  {
+   "src": "/assets/app/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/assets/app/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/assets/app/icon-maskable-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/assets/app/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Map",
+   "url": "/World_Map.html"
+  },
+  {
+   "name": "Solutions",
+   "url": "/Solutions.html"
+  },
+  {
+   "name": "Ways to Help",
+   "url": "/Ways_to_Help.html"
+  },
+  {
+   "name": "Learn",
+   "url": "/Learn.html"
+  },
+  {
+   "name": "Glossary",
+   "url": "/Glossary.html"
+  }
+ ]
+}
