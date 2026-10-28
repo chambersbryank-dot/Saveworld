@@ -54,10 +54,22 @@ def footer_map(hl):
     return ('<!-- FOOTER-MAP:START --><div class="footer-map" role="navigation" aria-label="Site map"><div class="fm-col"><h2 class="fm-h">Hubs</h2><ul>' + hub_links +
             '</ul></div><div class="fm-col"><h2 class="fm-h">Explore</h2><ul>' + key_links + '</ul></div></div><!-- FOOTER-MAP:END -->')
 
+def strip_empty_scripts(s):
+    """Drop empty <script ...></script> tags (src-only scripts) without a regex HTML filter."""
+    out, i, low = [], 0, s.lower()
+    while True:
+        j = low.find('<script', i)
+        if j < 0: out.append(s[i:]); return ''.join(out)
+        k = low.find('>', j); e = low.find('</script', k) if k >= 0 else -1; z = low.find('>', e) if e >= 0 else -1
+        if z < 0: out.append(s[i:]); return ''.join(out)
+        out.append(s[i:j])
+        if s[k + 1:e].strip(): out.append(s[j:z + 1])
+        i = z + 1
+
 def sitemap_page(hl):
     tpl = rd('Contact.html'); head, b = tpl.split('<body', 1)
     nav = re.search(r'(<nav id="topnav">.*?</nav>)', b, re.S).group(1)
-    footer = re.sub(r'<script\b[^>]*>\s*</script[^>]*>', '', re.search(r'(<footer>.*?</footer>)', b, re.S).group(1), flags=re.I | re.S)
+    footer = strip_empty_scripts(re.search(r'(<footer>.*?</footer>)', b, re.S).group(1))
     jsv = re.search(r'site\.js\?v=([0-9a-z]+)', b).group(1)
     desc = 'Every hub and solution on Saving Planets, in one list.'
     h = head.replace('Contact.html', 'Sitemap.html')  # Oct 16: any Contact title (seo-meta override changed it)
