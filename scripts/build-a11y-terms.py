@@ -99,5 +99,23 @@ def footer_links():
             s = s[:k] + add + s[k:]; open(f, 'w', encoding='utf8').write(s); n += 1
     print('footer links on', n, 'translated pages')
 
-if '--home' in sys.argv: home()
-else: pages(); footer_links()
+def footer_fallback():
+    """Pages whose footer has no site map (home after build-home-trim, Search mini-footer, etc.): add a marked Terms + Accessibility line before </footer>. Idempotent."""
+    import glob
+    n = 0
+    for i, l in enumerate(LANGS):
+        for f in glob.glob(('' if i == 0 else l + '/') + '*.html'):
+            s = open(f, encoding='utf8').read()
+            s0 = re.sub(r'<!-- A11YTERMS-FOOT -->.*?<!-- /A11YTERMS-FOOT -->', '', s, flags=re.S)
+            a = s0.rfind('<footer'); b = s0.find('</footer>', a)
+            if a < 0 or b < 0: continue
+            if 'href="Terms.html"' in s0[a:b] and 'href="Accessibility.html"' in s0[a:b]: s2 = s0
+            else:
+                add = (f'<!-- A11YTERMS-FOOT --><p class="footer-legal"><a href="Terms.html">{E(C.FOOT[1][i])}</a> · '
+                       f'<a href="Accessibility.html">{E(C.FOOT[0][i])}</a></p><!-- /A11YTERMS-FOOT -->')
+                s2 = s0[:b] + add + s0[b:]
+            if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
+    print('footer fallback on', n, 'pages')
+
+if '--home' in sys.argv: home(); footer_fallback()
+else: pages(); footer_links(); footer_fallback()
