@@ -57,7 +57,7 @@ def footer_map(hl):
 def sitemap_page(hl):
     tpl = rd('Contact.html'); head, b = tpl.split('<body', 1)
     nav = re.search(r'(<nav id="topnav">.*?</nav>)', b, re.S).group(1)
-    footer = re.sub(r'<script\b[^>]*>\s*</script[^>]*>', '', re.search(r'(<footer>.*?</footer>)', b, re.S).group(1))
+    footer = re.sub(r'<script\b[^>]*>[^<]*</script[^>]*>', '', re.search(r'(<footer>.*?</footer>)', b, re.S).group(1), flags=re.I | re.S)
     jsv = re.search(r'site\.js\?v=([0-9a-z]+)', b).group(1)
     desc = 'Every hub and solution on Saving Planets, in one list.'
     h = head.replace('Contact.html', 'Sitemap.html')  # Oct 16: any Contact title (seo-meta override changed it)
