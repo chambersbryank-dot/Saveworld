@@ -2125,7 +2125,7 @@
 "Sources are listed with each fact in the Five W's above.": "המקורות מופיעים ליד כל עובדה בחמשת ה-W שלמעלה.",
 "Print a one-page teacher sheet": "הדפיסו דף מורה בעמוד אחד",
 "All teacher sheets": "כל דפי המורים",
-"Standards Alignment": "התאמה לתוכניות לימודים",
+"Standards Alignment": "התאמה לתקנים",
 "U.S. Next Generation Science Standards (NGSS) and Common Core. Official text, in English.": "תקני המדע של הדור הבא בארה\"ב (NGSS) ו-Common Core. נוסח רשמי, באנגלית.",
 "(Grade 6-8)": "(כיתות 6-8)",
 "Cite This Page": "ציטוט הדף",
@@ -8773,5 +8773,12 @@
 "We check every fact against its source, but the site is provided as is, for learning only. Numbers and missions change, so confirm important details with the original source. Saving Planets is not liable for decisions made using the site.": "אנו בודקים כל עובדה מול המקור שלה, אך האתר מסופק כפי שהוא, ללמידה בלבד. מספרים ומשימות משתנים, לכן אמתו פרטים חשובים מול המקור. Saving Planets אינו אחראי להחלטות שהתקבלו על סמך האתר.",
 "Changes and Contact": "שינויים ויצירת קשר",
 "We may update these terms; the date at the top shows the latest version. Questions or a correction? Email hello@savingplanets.com.": "אנו עשויים לעדכן תנאים אלה; התאריך בראש העמוד מציין את הגרסה האחרונה. שאלה או תיקון? כתבו אל hello@savingplanets.com.",
-"Plain-language rules for using Saving Planets. Short version: learn freely, credit your sources, and check the original data.": "כללים פשוטים לשימוש ב-Saving Planets. בקצרה: למדו בחופשיות, ציינו מקורות ובדקו את הנתונים המקוריים."
+"Plain-language rules for using Saving Planets. Short version: learn freely, credit your sources, and check the original data.": "כללים פשוטים לשימוש ב-Saving Planets. בקצרה: למדו בחופשיות, ציינו מקורות ובדקו את הנתונים המקוריים.",
+"Teacher sheets are tagged to specific NGSS and Common Core codes. Main areas:": "דפי המורים מתויגים בקודים מסוימים של NGSS ו-Common Core. תחומים עיקריים:",
+"NGSS ESS3: Earth and Human Activity": "NGSS ESS3: כדור הארץ ופעילות האדם",
+"NGSS ESS1: Earth’s Place in the Universe": "NGSS ESS1: מקומו של כדור הארץ ביקום",
+"NGSS LS2: Ecosystems": "NGSS LS2: מערכות אקולוגיות",
+"Common Core literacy in science (RI, RST)": "אוריינות Common Core במדעים (RI, RST)",
+"Grade bands: K-2, 3-5, 6-8, 9-12": "שכבות גיל: K-2, 3-5, 6-8, 9-12",
+"See codes on Teacher Sheets": "ראו את הקודים בדפי המורים"
 }
