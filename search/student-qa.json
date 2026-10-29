@@ -368,5 +368,79 @@
 "q": "Come posso studiare la propulsione a razzo, e quali carriere la usano?",
 "url": "it/Student_Questions.html#rp-study"
 }
+],
+"he": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "איך רקטה יוצרת דחף, גם בחלל?",
+"url": "he/Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "מהו דחף סגולי, ולמה מודדים אותו בשניות?",
+"url": "he/Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "מה ההבדל בין רקטות דלק נוזלי, מוצק והיברידי?",
+"url": "he/Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "מה משוואת הרקטה מלמדת אותנו?",
+"url": "he/Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "איך נחיר הרקטה מאיץ את גזי הפליטה?",
+"url": "he/Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "למה רקטות בנויות משלבים?",
+"url": "he/Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "למה מימן וחמצן נוזליים נשמרים קרים כל כך?",
+"url": "he/Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "איך פועלים מנועי יונים ומנועי הול, ולמה הדחף שלהם עדין כל כך?",
+"url": "he/Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "איזה יחס דחף למשקל רקטה צריכה כדי להמריא?",
+"url": "he/Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "האם אפשר לעשות שימוש חוזר במנועי רקטה?",
+"url": "he/Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "במה מנוע רקטי שונה ממנוע סילון?",
+"url": "he/Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "איך לומדים הנעה רקטית, ואילו קריירות משתמשות בה?",
+"url": "he/Student_Questions.html#rp-study"
+}
 ]
 }

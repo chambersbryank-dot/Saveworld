@@ -37,6 +37,15 @@ ASK = T('Ask SI Helper', 'Demander à SI Helper', 'Pregunta a SI Helper', 'اس�
 CSS = ('.sq-top{margin:1.4rem 0 .4rem}.sq{margin:.7rem 0;padding:.8rem 1rem;border-radius:14px;border:1px solid rgba(124,170,255,.45);background:rgba(124,170,255,.07)}'
        '.sq h3{margin:.1rem 0 .4rem;font-size:1.05rem}.sq p{margin:.3rem 0;line-height:1.55}.sq ol{margin:.2rem 0;padding-inline-start:1.3rem;font-size:.92rem}'
        '.sq a{word-break:break-word}.sq .sq-meta{font-size:.82rem;opacity:.85}')
+# Oct 28 2026 (founder): Hebrew Student_Questions.html (RTL via he chrome), machine-drafted. Entries need q/a in he to appear there.
+LANGS = LANGS + ['he']
+_HE = {'TITLE': 'שאלות של תלמידים, עם תשובות',
+       'DESC': 'תשובות עם מקורות לשאלות שתלמידים שאלו את SI Helper ושהאתר עדיין לא כיסה, לפי נושא: הנעה רקטית, הנדסת אווירונאוטיקה, מכניקה מסלולית, פיזיקה ומדע כללי.',
+       'SRC': 'מקורות', 'CREDIT': 'נוצר על ידי SI ו-Biological SI Partner, ונבדק מול המקורות המצוינים.',
+       'INTRO': 'כש-SI Helper לא מוצא תשובה באתר, השאלה נשמרת בעילום שם. בכל שבוע אנחנו חוקרים אותה ומוסיפים כאן תשובה עם מקורות.',
+       'ADDED': 'נוסף ב-', 'ASK': 'לשאול את SI Helper', 'MT': 'הטקסט בעברית הוא תרגום מכונה וממתין לבדיקה של דובר/ת עברית.'}
+for _k in ('TITLE', 'DESC', 'SRC', 'CREDIT', 'INTRO', 'ADDED', 'ASK'): globals()[_k]['he'] = _HE[_k]
+for _k, _v in {'rocket': 'הנדסת אווירונאוטיקה וחלל והנעה רקטית', 'aero': 'הנדסת אווירונאוטיקה', 'orbit': 'מכניקה מסלולית', 'phys': 'פיזיקה', 'all': 'מדע כללי'}.items(): TOP[_k]['he'] = _v
 def load():
     doc = json.load(open(DATA, encoding='utf8')); ok, seen = [], set()
     for e in doc.get('entries', []):
@@ -44,12 +53,13 @@ def load():
         assert re.fullmatch(r'[a-z0-9-]{3,60}', i) and i not in seen, f'bad/duplicate id {i}'; seen.add(i)
         assert e.get('topic') in TOPICS, f'{i}: topic must be one of {TOPICS}'
         for k in ('q', 'a'):
-            assert all(str(e.get(k, {}).get(l, '')).strip() for l in LANGS), f'{i}: {k} needs all 5 languages'
+            assert all(str(e.get(k, {}).get(l, '')).strip() for l in LANGS if l != 'he'), f'{i}: {k} needs all 5 languages'
         assert e.get('sources') and all(re.match(r'^https://', s.get('url', '')) and s.get('title') for s in e['sources']), f'{i}: needs https sources with titles'
         assert re.fullmatch(r'\d{4}-\d{2}-\d{2}', e.get('added', '')), f'{i}: added YYYY-MM-DD'
         if e.get('approved') is True: ok.append(e)
     return ok
 def page(l, es):
+    es = [e for e in es if str(e['q'].get(l, '')).strip() and str(e['a'].get(l, '')).strip()]
     secs = ''
     for t in TOPICS:
         xs = [e for e in es if e['topic'] == t]
@@ -62,7 +72,7 @@ def page(l, es):
                      + f'<p class="sq-meta">{esc(SRC[l])}:</p><ol>{src}</ol><p class="sq-meta">{esc(CREDIT[l])} {esc(ADDED[l])} {e["added"]}.</p></article>')
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": l, "url": f'{SITE}{d(l)}{PAGE}',
            "mainEntity": [{"@type": "Question", "name": e['q'][l], "acceptedAnswer": {"@type": "Answer", "text": e['a'][l]}} for e in es]}
-    main = (BL.hero(TITLE[l], DESC[l]) + f'<style>{CSS}</style><div class="lw"><p>{esc(INTRO[l])} <a href="{href(l, "Teachers.html")}#ask-si">{esc(ASK[l])}</a></p>{secs}</div>\n')
+    main = (BL.hero(TITLE[l], DESC[l]) + f'<style>{CSS}</style><div class="lw">' + (f'<p class="lnote" role="note"><small>🤖 {esc(_HE["MT"])}</small></p>' if l == 'he' else '') + f'<p>{esc(INTRO[l])} <a href="{href(l, "Teachers.html")}#ask-si">{esc(ASK[l])}</a></p>{secs}</div>\n')
     head = f'<script type="application/ld+json">{json.dumps(faq, ensure_ascii=False)}</script>\n'
     return BL.shell(l, PAGE, TITLE[l], DESC[l], main, extra_head=head, ld_type='WebPage')
 if __name__ == '__main__':
@@ -70,7 +80,7 @@ if __name__ == '__main__':
     if '--check' in sys.argv: print(f'build-student-qa: {len(es)} approved entries, JSON ok'); sys.exit(0)
     if not es: print('build-student-qa: no approved entries yet, nothing to build'); sys.exit(0)
     ch = sum(wr(d(l) + PAGE, page(l, es)) for l in LANGS)
-    idx = {l: [{'id': e['id'], 'topic': e['topic'], 'q': e['q'][l], 'url': f'{d(l)}{PAGE}#{e["id"]}'} for e in es] for l in LANGS}
+    idx = {l: [{'id': e['id'], 'topic': e['topic'], 'q': e['q'][l], 'url': f'{d(l)}{PAGE}#{e["id"]}'} for e in es if e['q'].get(l)] for l in LANGS}
     ch += wr('search/student-qa.json', json.dumps(idx, ensure_ascii=False, indent=0) + '\n')
     s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:
