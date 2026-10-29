@@ -67,6 +67,7 @@ python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/i
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)
 python3 scripts/build-map-he.py        # Oct 17: assets/data/map.he.json + he/World_Map.html data-src (needs map.en.json and the i18n-built he page)
+python3 scripts/build-polar-mascots.py   # Oct 28 (founder): polar bear + penguin mascots on World_Map + Kids_Map (all langs, after map builds)
 python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Embed) on Amazing Facts, Myth vs Fact, World Map, homepage Scoreboard; per-item Cite (all langs)
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
 python3 scripts/he-edu-parity.py       # Oct 27: HE Teachers STARTHERE/SIHELPER/LEARNLINK parity for Big Questions

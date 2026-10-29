@@ -22,6 +22,7 @@
   function boot(D) {
     var ui = D.ui || {}, lang = D.lang || 'en';
     var map = L.map(mapEl, { scrollWheelZoom: false, tapTolerance: 20, worldCopyJump: true, minZoom: 1, zoomSnap: 0.25, zoomControl: false, attributionControl: false });
+    window.wmMap = map; // Oct 28: polar-mascots.js pans to the poles
     // controls away from the floating Help button (bottom inline-end) and the map key (top inline-end)
     L.control.zoom({ position: rtl ? 'topright' : 'topleft' }).addTo(map);
     L.control.attribution({ position: rtl ? 'bottomright' : 'bottomleft', prefix: false }).addTo(map);
