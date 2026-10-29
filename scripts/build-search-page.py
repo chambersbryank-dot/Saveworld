@@ -90,7 +90,7 @@ CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
        '.sp-tab{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.1rem;border-radius:999px;border:1px solid rgba(143,211,255,.5);background:rgba(11,22,32,.7);color:#cfe9ff!important;font:600 .92rem/1.2 Montserrat,system-ui,sans-serif;text-decoration:none!important;white-space:nowrap;transition:background-color .2s,border-color .2s}'
        '.sp-tab:hover{border-color:#8fd3ff;background:rgba(0,156,222,.2)}.sp-tab[aria-selected=true]{background:#009cde;border-color:#009cde;color:#fff!important;box-shadow:0 6px 18px rgba(0,156,222,.35)}'
        '.sp-tab:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}'
-       '.sp-ring .sp-q{display:none!important}html:not([data-sp-topic]) .sp-ring .sp-q[data-t=all],html[data-sp-topic=all] .sp-q[data-t=all],html[data-sp-topic=aero] .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-q[data-t=physics]{display:inline-flex!important}'
+       '.sp-ring .sp-q{display:none!important}html:not([data-sp-topic]) .sp-ring .sp-q[data-t=all],html[data-sp-topic=all] .sp-q[data-t=all],html[data-sp-topic=aero] .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-q[data-t=physics],html[data-sp-topic=rocket] .sp-q[data-t=rocket]{display:inline-flex!important}'
        '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
        '.sp-gh{list-style:none;margin:1.1rem 0 .3rem}.sp-stage .sp-results .sp-gh-t{font-size:1rem!important;letter-spacing:.04em;text-transform:uppercase;opacity:.9;margin:0 0 .4rem;text-align:start}.sp-gh>ol{list-style:none;padding:0;margin:0;display:grid;gap:inherit}'
        '.sp-stage .sp-search-form{position:relative}.sp-sugg{position:absolute;top:100%;inset-inline:0;z-index:5;list-style:none;margin:.3rem 0 0;padding:.3rem;border-radius:14px;background:#0b1620;border:1px solid rgba(143,211,255,.6);text-align:start;box-shadow:0 10px 28px rgba(0,0,0,.45)}.sp-sugg[hidden]{display:none}.sp-sugg li{padding:.55rem .8rem;border-radius:10px;cursor:pointer;color:#e8eef5}.sp-sugg li[aria-selected=true],.sp-sugg li:hover{background:rgba(0,156,222,.35)}.sp-sugg .sp-sg{font-size:.78rem;opacity:.8;margin-inline-start:.5rem}</style>')
@@ -177,7 +177,7 @@ def add_msg(l, s):  # group / suggestion labels into #sp-msg (idempotent; all 6 
         d = re.sub(r'<span data-k="(?:g-[a-z]+|sugg)">.*?</span>', '', m.group(0))
         return d[:-6] + ''.join(f'<span data-k="{k}">{v[l]}</span>' for k, v in MSG_X.items()) + '</div>'
     return re.sub(r'<div[^>]*id="sp-msg"[^>]*>.*?</div>', fix, s, count=1, flags=re.S)
-SUI_V = '20261025a'
+SUI_V = '20261028r'
 if __name__ == '__main__':
     print('build-search-page: result types for', result_types(), 'pages')
     for l in LANGS + ['he']:

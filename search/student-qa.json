@@ -1,0 +1,372 @@
+{
+"en": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "How does a rocket make thrust, even in space?",
+"url": "Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "What is specific impulse, and why is it measured in seconds?",
+"url": "Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "What is the difference between liquid, solid and hybrid rockets?",
+"url": "Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "What does the rocket equation tell us?",
+"url": "Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "How does a rocket nozzle speed up the exhaust?",
+"url": "Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "Why do rockets use stages?",
+"url": "Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "Why are liquid hydrogen and liquid oxygen kept so cold?",
+"url": "Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "How do ion and Hall thrusters work, and why is their push so gentle?",
+"url": "Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "What thrust-to-weight ratio does a rocket need to lift off?",
+"url": "Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "Can rocket engines be reused?",
+"url": "Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "How is a rocket engine different from a jet engine?",
+"url": "Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "How can I study rocket propulsion, and what careers use it?",
+"url": "Student_Questions.html#rp-study"
+}
+],
+"fr": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "Comment une fusée crée-t-elle de la poussée, même dans l'espace ?",
+"url": "fr/Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "Qu'est-ce que l'impulsion spécifique, et pourquoi se mesure-t-elle en secondes ?",
+"url": "fr/Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "Quelle est la différence entre les fusées à ergols liquides, solides et hybrides ?",
+"url": "fr/Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "Que nous apprend l'équation de la fusée ?",
+"url": "fr/Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "Comment la tuyère d'une fusée accélère-t-elle les gaz ?",
+"url": "fr/Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "Pourquoi les fusées ont-elles plusieurs étages ?",
+"url": "fr/Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "Pourquoi l'hydrogène et l'oxygène liquides sont-ils gardés si froids ?",
+"url": "fr/Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "Comment fonctionnent les propulseurs ioniques et à effet Hall, et pourquoi poussent-ils si doucement ?",
+"url": "fr/Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "Quel rapport poussée/poids faut-il à une fusée pour décoller ?",
+"url": "fr/Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "Les moteurs de fusée peuvent-ils être réutilisés ?",
+"url": "fr/Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "En quoi un moteur-fusée diffère-t-il d'un réacteur ?",
+"url": "fr/Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "Comment étudier la propulsion des fusées, et quels métiers l'utilisent ?",
+"url": "fr/Student_Questions.html#rp-study"
+}
+],
+"es": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "¿Cómo genera empuje un cohete, incluso en el espacio?",
+"url": "es/Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "¿Qué es el impulso específico y por qué se mide en segundos?",
+"url": "es/Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "¿Qué diferencia hay entre los cohetes líquidos, sólidos e híbridos?",
+"url": "es/Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "¿Qué nos dice la ecuación del cohete?",
+"url": "es/Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "¿Cómo acelera los gases la tobera de un cohete?",
+"url": "es/Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "¿Por qué los cohetes usan etapas?",
+"url": "es/Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "¿Por qué el hidrógeno y el oxígeno líquidos se mantienen tan fríos?",
+"url": "es/Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "¿Cómo funcionan los propulsores iónicos y Hall, y por qué empujan tan suave?",
+"url": "es/Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "¿Qué relación empuje/peso necesita un cohete para despegar?",
+"url": "es/Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "¿Se pueden reutilizar los motores de cohete?",
+"url": "es/Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "¿En qué se diferencia un motor cohete de un motor a reacción?",
+"url": "es/Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "¿Cómo puedo estudiar propulsión de cohetes y qué carreras la usan?",
+"url": "es/Student_Questions.html#rp-study"
+}
+],
+"ar": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "كيف يولّد الصاروخ قوة الدفع، حتى في الفضاء؟",
+"url": "ar/Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "ما الدفع النوعي، ولماذا يُقاس بالثواني؟",
+"url": "ar/Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "ما الفرق بين صواريخ الوقود السائل والصلب والهجين؟",
+"url": "ar/Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "ماذا تخبرنا معادلة الصاروخ؟",
+"url": "ar/Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "كيف تُسرّع فوهة الصاروخ غازات العادم؟",
+"url": "ar/Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "لماذا تُبنى الصواريخ على مراحل؟",
+"url": "ar/Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "لماذا يُحفظ الهيدروجين والأكسجين السائلان باردين جدًا؟",
+"url": "ar/Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "كيف تعمل الدوافع الأيونية ودوافع هول، ولماذا دفعها ضعيف جدًا؟",
+"url": "ar/Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "ما نسبة الدفع إلى الوزن التي يحتاجها الصاروخ للإقلاع؟",
+"url": "ar/Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "هل يمكن إعادة استخدام محركات الصواريخ؟",
+"url": "ar/Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "ما الفرق بين محرك الصاروخ والمحرك النفاث؟",
+"url": "ar/Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "كيف أدرس دفع الصواريخ، وما المهن التي تستخدمه؟",
+"url": "ar/Student_Questions.html#rp-study"
+}
+],
+"it": [
+{
+"id": "rp-thrust",
+"topic": "rocket",
+"q": "Come fa un razzo a produrre spinta, anche nello spazio?",
+"url": "it/Student_Questions.html#rp-thrust"
+},
+{
+"id": "rp-isp",
+"topic": "rocket",
+"q": "Che cos'è l'impulso specifico e perché si misura in secondi?",
+"url": "it/Student_Questions.html#rp-isp"
+},
+{
+"id": "rp-types",
+"topic": "rocket",
+"q": "Che differenza c'è tra razzi a propellente liquido, solido e ibrido?",
+"url": "it/Student_Questions.html#rp-types"
+},
+{
+"id": "rp-equation",
+"topic": "rocket",
+"q": "Che cosa ci dice l'equazione del razzo?",
+"url": "it/Student_Questions.html#rp-equation"
+},
+{
+"id": "rp-nozzle",
+"topic": "rocket",
+"q": "Come fa l'ugello di un razzo ad accelerare i gas di scarico?",
+"url": "it/Student_Questions.html#rp-nozzle"
+},
+{
+"id": "rp-staging",
+"topic": "rocket",
+"q": "Perché i razzi usano più stadi?",
+"url": "it/Student_Questions.html#rp-staging"
+},
+{
+"id": "rp-cryo",
+"topic": "rocket",
+"q": "Perché idrogeno e ossigeno liquidi vengono tenuti così freddi?",
+"url": "it/Student_Questions.html#rp-cryo"
+},
+{
+"id": "rp-electric",
+"topic": "rocket",
+"q": "Come funzionano i propulsori ionici e a effetto Hall, e perché spingono così poco?",
+"url": "it/Student_Questions.html#rp-electric"
+},
+{
+"id": "rp-twr",
+"topic": "rocket",
+"q": "Quale rapporto spinta/peso serve a un razzo per decollare?",
+"url": "it/Student_Questions.html#rp-twr"
+},
+{
+"id": "rp-reuse",
+"topic": "rocket",
+"q": "I motori a razzo si possono riutilizzare?",
+"url": "it/Student_Questions.html#rp-reuse"
+},
+{
+"id": "rp-vs-jet",
+"topic": "rocket",
+"q": "In che cosa un motore a razzo è diverso da un motore a reazione?",
+"url": "it/Student_Questions.html#rp-vs-jet"
+},
+{
+"id": "rp-study",
+"topic": "rocket",
+"q": "Come posso studiare la propulsione a razzo, e quali carriere la usano?",
+"url": "it/Student_Questions.html#rp-study"
+}
+]
+}
