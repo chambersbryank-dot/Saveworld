@@ -39,6 +39,7 @@ python3 scripts/build-artemis-program.py   # Oct 18: Artemis_II.html titled 'Art
 python3 scripts/build-artemis-gallery.py   # Oct 18: Artemis Program page "Moments in History" gallery (12 NASA originals on R2, srcset, lazy) + i18n strings
 python3 scripts/trim-impact.py          # Oct 22 (founder): Impact Statement box = 2 sentences + sources; the rest moves word for word just below (EN source)
 python3 scripts/fix-hub-dup-images.py   # Oct 22 (founder): Lakes hub had two repeated card photos; swaps + warns on other hubs (EN source)
+python3 scripts/build-feature-policy.py      # Oct 28 (founder): About feature policy + hub link line (EN), before i18n-build
 python3 scripts/i18n-build.py
 python3 scripts/build-courses.py          # Oct 24 (founder): Courses hub + course pages (EN, scripts/courses/*.py) + Teachers COURSELINK block (all langs, after i18n-build)
 python3 scripts/build-launch-tracker.py  # Oct 26: Live Launch Tracker blurbs (purpose + SP connection)

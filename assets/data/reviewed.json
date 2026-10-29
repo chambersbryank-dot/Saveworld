@@ -7,6 +7,10 @@
   "sig": "12fdfff51f3b",
   "date": "2026-10-25"
  },
+ "ASOC_Antarctic_Coalition.html": {
+  "sig": "4fc04823234e",
+  "date": "2026-10-28"
+ },
  "ATLAS.html": {
   "sig": "7cded070924d",
   "date": "2026-10-25"
@@ -29,7 +33,7 @@
  },
  "Alaska_Kelp_Farming.html": {
   "sig": "0f6be7ac5f1e",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Alaska_SeaLife_Center.html": {
   "sig": "fd72413d08c5",
@@ -66,6 +70,10 @@
  "Arbor_Day_Foundation.html": {
   "sig": "ab61124e6382",
   "date": "2026-10-25"
+ },
+ "Arctic_Basecamp.html": {
+  "sig": "a11af41d5146",
+  "date": "2026-10-28"
  },
  "Arctic_Weather_Satellite.html": {
   "sig": "3750fd3d7649",
@@ -111,6 +119,10 @@
   "sig": "fab0eef971a0",
   "date": "2026-10-25"
  },
+ "Beyond_EPICA_Oldest_Ice.html": {
+  "sig": "066e211b2a7d",
+  "date": "2026-10-28"
+ },
  "Billion_Oyster_Project.html": {
   "sig": "96e61929f88d",
   "date": "2026-10-25"
@@ -123,9 +135,17 @@
   "sig": "d8ab5099aa21",
   "date": "2026-10-25"
  },
+ "CAFF_Arctic_Biodiversity.html": {
+  "sig": "792e7612fc7e",
+  "date": "2026-10-28"
+ },
  "CAMS.html": {
   "sig": "8eb68fd547da",
   "date": "2026-10-25"
+ },
+ "CCAMLR.html": {
+  "sig": "08a899c7755e",
+  "date": "2026-10-28"
  },
  "CHIME.html": {
   "sig": "fe2647069bb7",
@@ -141,11 +161,11 @@
  },
  "CRISTAL.html": {
   "sig": "f3d1f4f902e0",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Carbfix.html": {
   "sig": "275c17a71aac",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Carruthers.html": {
   "sig": "6e5cfc03d29c",
@@ -225,7 +245,7 @@
  },
  "CryoSat.html": {
   "sig": "a0ffcff0972b",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "DSCOVR_EPIC.html": {
   "sig": "ea5fbedd5c3c",
@@ -325,7 +345,7 @@
  },
  "GCOM-W_SHIZUKU.html": {
   "sig": "8c6c9a9df8cd",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "GEDI.html": {
   "sig": "6600ac4d895a",
@@ -387,6 +407,10 @@
   "sig": "46e2e05a4f33",
   "date": "2026-10-25"
  },
+ "Gough_Island_Restoration.html": {
+  "sig": "aca3d38911aa",
+  "date": "2026-10-28"
+ },
  "Great_Bubble_Barrier.html": {
   "sig": "d38b42490bb8",
   "date": "2026-10-25"
@@ -427,6 +451,10 @@
   "sig": "fa08387ac381",
   "date": "2026-10-25"
  },
+ "IAATO.html": {
+  "sig": "285dc4f4b085",
+  "date": "2026-10-28"
+ },
  "ICESat-2.html": {
   "sig": "26494010a7a2",
   "date": "2026-10-25"
@@ -449,7 +477,7 @@
  },
  "Iceland_Land_Restoration.html": {
   "sig": "fa2394abe794",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "International_Charter.html": {
   "sig": "390dd7b09193",
@@ -458,6 +486,10 @@
  "International_Coastal_Cleanup.html": {
   "sig": "2c41ceb67e7c",
   "date": "2026-10-25"
+ },
+ "Inuit_Circumpolar_Council.html": {
+  "sig": "5e0e5183d2fd",
+  "date": "2026-10-28"
  },
  "JPSS.html": {
   "sig": "bfc5f230427c",
@@ -555,6 +587,10 @@
   "sig": "613e9f20f99c",
   "date": "2026-10-25"
  },
+ "MOSAiC_Expedition.html": {
+  "sig": "b0085da8fe94",
+  "date": "2026-10-28"
+ },
  "Mangroves.html": {
   "sig": "a252bc1ec1dd",
   "date": "2026-10-25"
@@ -613,7 +649,7 @@
  },
  "Nancy_Grace_Roman.html": {
   "sig": "455550874834",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Nepal_Tigers.html": {
   "sig": "b3a25d081870",
@@ -635,6 +671,10 @@
   "sig": "041be8e7cfe2",
   "date": "2026-10-25"
  },
+ "Oceanites_Penguin_Census.html": {
+  "sig": "c7919cd6ab71",
+  "date": "2026-10-28"
+ },
  "Okavango_Delta.html": {
   "sig": "551eb6f9f317",
   "date": "2026-10-25"
@@ -654,6 +694,10 @@
  "PACE.html": {
   "sig": "d8285315c1cc",
   "date": "2026-10-25"
+ },
+ "PAME_Arctic_Council.html": {
+  "sig": "cfce30d4bb31",
+  "date": "2026-10-28"
  },
  "PREFIRE.html": {
   "sig": "b2b16f720e66",
@@ -687,9 +731,17 @@
   "sig": "87da1cdc06d1",
   "date": "2026-10-25"
  },
+ "Penguin_Watch.html": {
+  "sig": "b5cf9361ca24",
+  "date": "2026-10-28"
+ },
  "Penobscot_River_Restoration.html": {
   "sig": "7bf743af4644",
   "date": "2026-10-25"
+ },
+ "Permafrost_Pathways.html": {
+  "sig": "0c70477a18d8",
+  "date": "2026-10-28"
  },
  "Phytoplankton.html": {
   "sig": "3b3707f3883d",
@@ -711,6 +763,10 @@
   "sig": "834574cb0342",
   "date": "2026-10-25"
  },
+ "Polar_Bears_International.html": {
+  "sig": "f62430dd5502",
+  "date": "2026-10-28"
+ },
  "Posidonia_Meadows.html": {
   "sig": "f13dd05a405c",
   "date": "2026-10-25"
@@ -729,7 +785,7 @@
  },
  "RCM.html": {
   "sig": "fac8ff9e0b10",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Rainforest_Connection.html": {
   "sig": "8e384230c626",
@@ -761,7 +817,7 @@
  },
  "Ross_Sea_MPA.html": {
   "sig": "b72b17d61911",
-  "date": "2026-10-25"
+  "date": "2026-10-28"
  },
  "Route_of_Parks_Patagonia.html": {
   "sig": "27c9c55177ac",
@@ -771,6 +827,10 @@
   "sig": "22ff0a0e5e45",
   "date": "2026-10-25"
  },
+ "SCAR_Antarctic_Research.html": {
+  "sig": "1753c43b1d4b",
+  "date": "2026-10-28"
+ },
  "SCISAT.html": {
   "sig": "076f0cd1dc4b",
   "date": "2026-10-25"
@@ -779,6 +839,10 @@
   "sig": "0235bc94157e",
   "date": "2026-10-25"
  },
+ "SOCCOM.html": {
+  "sig": "b3c112317d7c",
+  "date": "2026-10-28"
+ },
  "SOHO.html": {
   "sig": "50eaceea0fa7",
   "date": "2026-10-25"
@@ -786,6 +850,10 @@
  "SOLAR_1.html": {
   "sig": "264d21ae1fe3",
   "date": "2026-10-25"
+ },
+ "SOOS.html": {
+  "sig": "681449d41746",
+  "date": "2026-10-28"
  },
  "SPHEREx.html": {
   "sig": "a98da100f904",
@@ -851,6 +919,10 @@
   "sig": "1e5bcce358c9",
   "date": "2026-10-25"
  },
+ "SmartICE.html": {
+  "sig": "8afa4ff4d85b",
+  "date": "2026-10-28"
+ },
  "Solar_Orbiter.html": {
   "sig": "73d4290384dc",
   "date": "2026-10-25"
@@ -886,6 +958,10 @@
  "TRACERS.html": {
   "sig": "bfba3cc9f8ce",
   "date": "2026-10-25"
+ },
+ "Tallurutiup_Imanga_NMCA.html": {
+  "sig": "6bef32574e25",
+  "date": "2026-10-28"
  },
  "Tanager-1.html": {
   "sig": "f655e5ec34b4",
@@ -933,7 +1009,7 @@
  },
  "Tsunami_Early_Warning.html": {
   "sig": "1bdff9584ccf",
-  "date": "2026-10-19"
+  "date": "2026-10-28"
  },
  "Tubbataha_Reefs.html": {
   "sig": "75ec06dcf65d",
@@ -958,6 +1034,10 @@
  "Voyager.html": {
   "sig": "8c5e7cb8b7c9",
   "date": "2026-10-25"
+ },
+ "WWF_Arctic_Programme.html": {
+  "sig": "73f22e1d32cf",
+  "date": "2026-10-28"
  },
  "Waterkeeper_Alliance.html": {
   "sig": "4413848e4d20",

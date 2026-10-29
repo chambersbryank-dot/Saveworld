@@ -3068,6 +3068,226 @@
      "basis": "page"
     }
    ]
+  },
+  "Polar_Bears_International.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 58.77,
+     "lng": -94.17,
+     "label": "Churchill, Manitoba, Canada (polar bear area; approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "SmartICE.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 56.54,
+     "lng": -61.69,
+     "label": "Nain, Nunatsiavut, Canada (a SmartICE community)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Permafrost_Pathways.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 64.84,
+     "lng": -147.72,
+     "label": "Interior Alaska, United States (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Tallurutiup_Imanga_NMCA.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 74.3,
+     "lng": -84.0,
+     "label": "Tallurutiup Imanga (Lancaster Sound), Nunavut, Canada (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "PAME_Arctic_Council.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 65.68,
+     "lng": -18.09,
+     "label": "Akureyri, Iceland (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "CAFF_Arctic_Biodiversity.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 65.7,
+     "lng": -18.1,
+     "label": "Akureyri, Iceland (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "MOSAiC_Expedition.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 88.0,
+     "lng": 30.0,
+     "label": "Central Arctic Ocean (approximate drift area)",
+     "basis": "page"
+    }
+   ]
+  },
+  "WWF_Arctic_Programme.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 80.0,
+     "lng": -70.0,
+     "label": "Last Ice Area, between northern Canada and Greenland (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Inuit_Circumpolar_Council.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 63.75,
+     "lng": -68.52,
+     "label": "Iqaluit, Nunavut, Canada (2026 ICC General Assembly)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Arctic_Basecamp.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 46.8,
+     "lng": 9.84,
+     "label": "Davos, Switzerland (Arctic Basecamp events)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Gough_Island_Restoration.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -40.32,
+     "lng": -9.94,
+     "label": "Gough Island, South Atlantic",
+     "basis": "page"
+    }
+   ]
+  },
+  "Penguin_Watch.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -64.8,
+     "lng": -63.5,
+     "label": "Antarctic Peninsula (camera region; approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Oceanites_Penguin_Census.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -64.1,
+     "lng": -57.8,
+     "label": "James Ross Island area, Antarctic Peninsula (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "SOCCOM.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -55.0,
+     "lng": -80.0,
+     "label": "Southern Ocean (float deployment area; approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "SOOS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -42.88,
+     "lng": 147.33,
+     "label": "Hobart, Tasmania, Australia (SOOS office at IMAS)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Beyond_EPICA_Oldest_Ice.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -76.0,
+     "lng": 122.0,
+     "label": "East Antarctic Plateau (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "ASOC_Antarctic_Coalition.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.91,
+     "lng": -77.04,
+     "label": "Washington, DC, United States (ASOC office)",
+     "basis": "page"
+    }
+   ]
+  },
+  "CCAMLR.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -42.88,
+     "lng": 147.33,
+     "label": "Hobart, Tasmania, Australia (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "SCAR_Antarctic_Research.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 52.2,
+     "lng": 0.12,
+     "label": "Cambridge, United Kingdom (approximate)",
+     "basis": "page"
+    }
+   ]
+  },
+  "IAATO.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -64.82,
+     "lng": -63.4,
+     "label": "Antarctic Peninsula (approximate)",
+     "basis": "page"
+    }
+   ]
   }
  }
 }
