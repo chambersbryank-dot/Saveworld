@@ -58,6 +58,7 @@ LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # Oct 17: he = Hebrew (built, unli
 HERO_OFFSET = '4vh'
 ROTATION = ['space', 'earth']          # index 0 = ISO week 2026-W42
 ANCHOR_UTC = 'Date.UTC(2026,9,12,10)'  # Mon 12 Oct 2026 00:00 HST
+IJSV = hashlib.sha1(open('assets/hero-saturn-intro.js', 'rb').read()).hexdigest()[:8]
 JSV = hashlib.sha1(open('assets/hero-themes.js', 'rb').read()).hexdigest()[:8]  # cache version follows the file
 
 # Scene captions (space theme). Facts: NASA Science "Enceladus" (science.nasa.gov/saturn/moons/enceladus/: geyser-like
@@ -139,6 +140,38 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
        '@media (max-width:480px){.hero .hero-video-credit{max-width:calc(100% - 12.5rem);border-radius:12px}}'  # Oct 18: was 100%-16rem (134px on a 390px phone): 5 lines squeezed into a pill, text spilled past its rounded edge
        '@media (prefers-reduced-motion:reduce){.hs-ground,.hs-cap,.hs-cap.on{transition:none;transform:none}}</style>')
 
+# Oct 28 2026 (founder: "Saturn is a real image. Make sure it rises up behind the title and zoom in as close as possible, maybe even
+# using an additional image to zoom into the amazing ring"). Intro layer inside .hero-space (z 7: above poster/canvases, under the
+# scrim at z 8 and the title outside .hero-space). Saturn = Cassini PIA11141 (R2, same files as the scene); ring close-up = Cassini
+# PIA06175 natural-color ring mosaic, cropped (assets/hero/saturn-rings-pia06175-*.webp). Both NASA/JPL-Caltech/Space Science
+# Institute, public domain; the hero credit line already names them. Timeline 24 s: backdrop in, Saturn rises 0-4 s, zoom into
+# the right ring arm 4.5-11.5 s, crossfade to rings 10-12.5 s, slow ring zoom to 24 s, whole layer fades out 21.5-24 s.
+INTRO_CSS = ('.hs-intro{display:none}.hero[data-hero=space] .hs-intro{display:block;position:absolute;inset:0;z-index:7;opacity:0;pointer-events:none;background:#000;overflow:hidden}'
+    '.hero[data-hero=space] .hero-space::after{z-index:8}'
+    '.hs-intro img{position:absolute;display:block;max-width:none;opacity:0;will-change:transform,opacity;backface-visibility:hidden}'
+    '.hs-i-sat{left:50%;top:50%;width:min(118vw,190svh);height:auto;aspect-ratio:1920/798;margin-left:calc(min(118vw,190svh)/-2);'
+    'margin-top:calc(min(118vw,190svh)*-.2078);transform-origin:89% 47%}'
+    '.hs-i-ring{inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%;transform-origin:40% 52%}'
+    '.hs-intro.run{animation:hsI 24s linear forwards}.hs-intro.run .hs-i-sat{animation:hsIs 12.5s forwards}.hs-intro.run .hs-i-ring{animation:hsIr 24s forwards}'
+    '@keyframes hsI{0%{opacity:0}5%{opacity:1}89.5%{opacity:1}100%{opacity:0}}'
+    '@keyframes hsIs{0%{opacity:0;transform:translateY(75svh) scale(.9);animation-timing-function:cubic-bezier(.2,.7,.25,1)}'
+    '8%{opacity:1}32%{opacity:1;transform:translateY(0) scale(1);animation-timing-function:linear}36%{transform:translateY(0) scale(1);animation-timing-function:cubic-bezier(.55,0,.35,1)}'
+    '80%{opacity:1}92%{transform:translateY(0) scale(7.5)}100%{opacity:0;transform:translateY(0) scale(9)}}'
+    '@keyframes hsIr{0%,41.6%{opacity:0;transform:scale(1.25)}52%{opacity:1}100%{opacity:1;transform:scale(1.6)}}'
+    '.hero[data-hero=space] .hs-caps{transition:opacity .8s ease}.hero.hs-introing .hs-caps{opacity:0}'
+    '.hero.hs-introing .hero-content{background:radial-gradient(closest-side,rgba(0,6,16,.62),rgba(0,6,16,.3) 70%,rgba(0,6,16,0))}'
+    '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hs-intro:not(.run){display:none}}')
+def INTRO():
+    sat = []
+    for w in (960, 1280, 1920, 2560):
+        e = MAN.get('images/hero-space/saturn-cassini-%d.webp' % w)
+        if e and e.get('url'): sat.append('%s %dw' % (e['url'], w))
+    if not sat: return ''
+    return ('<div class="hs-intro" aria-hidden="true">'
+            f'<img class="hs-i-sat" alt="" decoding="async" data-srcset="{",".join(sat)}" data-sizes="min(118vw,190svh)" width="1920" height="798">'
+            '<img class="hs-i-ring" alt="" decoding="async" data-srcset="{p}assets/hero/saturn-rings-pia06175-1000.webp 1000w,{p}assets/hero/saturn-rings-pia06175-1900.webp 1900w" data-sizes="100vw" width="1900" height="1000">'
+            '</div>')
+
 def chooser():
     rot = ','.join(f"'{t}'" for t in ROTATION)
     return ('<script>(function(){var h=document.currentScript&&document.currentScript.closest(".hero");if(!h)return;'
@@ -158,8 +191,8 @@ def caps(l):
     return f'<div class="hs-caps">{a}</div>'
 
 def block(pre, l):
-    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}{SATATTR()}></div>{caps(l)}{chooser()}'
-            f'<script src="{pre}assets/hero-themes.js?v={JSV}" defer></script><!-- HEROTHEME:END -->')
+    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + INTRO_CSS + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}{SATATTR()}>{INTRO().replace("{p}", pre)}</div>{caps(l)}{chooser()}'
+            f'<script src="{pre}assets/hero-themes.js?v={JSV}" defer></script><script src="{pre}assets/hero-saturn-intro.js?v={IJSV}" defer></script><!-- HEROTHEME:END -->')
 
 # Oct 16 2026 (Lighthouse): the hero video (1.1 MB, HERO-VIDEO block from build-batch2.py) used to start downloading
 # at parse time even in weeks when the space theme hides it. Ship it inert; chooser() activates it for the video theme.
