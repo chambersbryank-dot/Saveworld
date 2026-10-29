@@ -6,7 +6,7 @@ below after a search, and the small credits at the bottom (Pagefind/model licenc
 the "how to frame an SI question" note stay for screen readers only. Strings are read back from each language's page (the
 i18n-build translations), so the generator is idempotent. Run after i18n-build.py and build-nav.py."""
 import re, os, html, json
-LANGS = ['en', 'fr', 'es', 'ar', 'it']; V = '20261016q'
+LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']; V = '20261016q'
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import search_topics as ST
 # Oct 16 7:12 PM (user): topic tabs (All / Aero / Orbital / Physics, ?topic=), chips placed at build time (no layout shift).
 TOPIC_HEAD = ('<script>(function(){var t=(new URLSearchParams(location.search).get("topic")||"all").toLowerCase();'
@@ -28,7 +28,7 @@ window.addEventListener('popstate',function(){set((new URLSearchParams(location.
 window.SP_TOPIC_BOOST=JSON.parse(tl.getAttribute('data-boost'));set(d.getAttribute('data-sp-topic')||'all',false,false)})();</script>"""
 FEAT = json.load(open('search/featured-questions.json', encoding='utf8'))
 def topic_sets(l):
-    allq = FEAT.get(l) or (ST.IT_ALL if l == 'it' else FEAT['en'])
+    allq = FEAT.get(l) or (ST.IT_ALL if l == 'it' else ST.HE_ALL if l == 'he' else FEAT['en'])
     return [('all', ST.ALL[l], allq[:12])] + [(t['id'], t['label'][l], t['q'][l]) for t in ST.TOPICS]
 def chip(t, q, i):
     pre = '' if t == 'all' else f'topic={t}&amp;'
@@ -91,6 +91,7 @@ CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
        '.sp-tab:hover{border-color:#8fd3ff;background:rgba(0,156,222,.2)}.sp-tab[aria-selected=true]{background:#009cde;border-color:#009cde;color:#fff!important;box-shadow:0 6px 18px rgba(0,156,222,.35)}'
        '.sp-tab:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}'
        '.sp-ring .sp-q{display:none!important}html:not([data-sp-topic]) .sp-ring .sp-q[data-t=all],html[data-sp-topic=all] .sp-q[data-t=all],html[data-sp-topic=aero] .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-q[data-t=physics],html[data-sp-topic=rocket] .sp-q[data-t=rocket]{display:inline-flex!important}'
+       '.sp-tlink{display:none;min-height:44px;align-items:center;padding:0 1rem;border-radius:999px;border:1px solid #ffd54a;color:#ffd54a;font-weight:700;text-decoration:none}html[data-sp-topic=rocket] .sp-tlink[data-t=rocket]{display:inline-flex}'
        '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
        '.sp-gh{list-style:none;margin:1.1rem 0 .3rem}.sp-stage .sp-results .sp-gh-t{font-size:1rem!important;letter-spacing:.04em;text-transform:uppercase;opacity:.9;margin:0 0 .4rem;text-align:start}.sp-gh>ol{list-style:none;padding:0;margin:0;display:grid;gap:inherit}'
        '.sp-stage .sp-search-form{position:relative}.sp-sugg{position:absolute;top:100%;inset-inline:0;z-index:5;list-style:none;margin:.3rem 0 0;padding:.3rem;border-radius:14px;background:#0b1620;border:1px solid rgba(143,211,255,.6);text-align:start;box-shadow:0 10px 28px rgba(0,0,0,.45)}.sp-sugg[hidden]{display:none}.sp-sugg li{padding:.55rem .8rem;border-radius:10px;cursor:pointer;color:#e8eef5}.sp-sugg li[aria-selected=true],.sp-sugg li:hover{background:rgba(0,156,222,.35)}.sp-sugg .sp-sg{font-size:.78rem;opacity:.8;margin-inline-start:.5rem}</style>')
@@ -115,6 +116,7 @@ def build(l, s):
             f'<input id="q" name="q" type="search" placeholder="{ph}" autocomplete="off" enterkeyhint="search" aria-describedby="status sp-note">'
             f'<button type="submit" class="sp-search-btn">{btn}</button></form>'
             '<div class="sp-z sp-zr" role="group" aria-label="' + fl + '">' + Z[2] + '</div><div class="sp-z sp-zb" role="group" aria-label="' + fl + '">' + Z[3] + '</div></div>'
+            f'<a class="sp-tlink" data-t="rocket" href="Learn_Rocket_Propulsion.html">🚀 {html.escape(ST.ROCKET_PAGE[l])} →</a>'  # Oct 28: rocket tab -> its Learn page
             f'<p id="sp-note" class="sr-only-x">{note}</p>' + TOPIC_JS +
             f'<div class="sp-results-wrap"><p id="status" class="sp-status" aria-live="polite"></p><p id="search-mode" class="search-mode" aria-live="polite"></p>'
             f'<div id="sp-empty" class="sp-empty" hidden>{ex}</div><ol id="results" class="sp-results"></ol>'
@@ -180,7 +182,7 @@ def add_msg(l, s):  # group / suggestion labels into #sp-msg (idempotent; all 6 
 SUI_V = '20261028r'
 if __name__ == '__main__':
     print('build-search-page: result types for', result_types(), 'pages')
-    for l in LANGS + ['he']:
+    for l in LANGS:
         f = ('' if l == 'en' else l + '/') + 'Search.html'
         s = open(f, encoding='utf8').read()
         s2 = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=' + SUI_V, add_msg(l, s))

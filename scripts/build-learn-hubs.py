@@ -13,6 +13,7 @@ Text: scripts/learn_hubs_text.py. Course names/codes come from each language's C
 import re, os, sys, html, datetime
 sys.path.insert(0, 'scripts')
 import learn_hubs_text as X
+import rocket_path_text as R  # Oct 28 2026 (founder): Rocket Propulsion track page (+ 'Learn from the best' on both tracks)
 import jet_path_text as J  # Oct 27/28 (founder): separate Aerospace (Jet Propulsion) track page + planet tie-in on both paths
 from courses import roadmap as RM
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
@@ -68,7 +69,7 @@ CSS = ('<style>.lhv{font-size:1.12rem;max-width:46rem}.lht{display:grid;grid-tem
        '.lhn{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem}.lhn>div{padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}.lhn ul{margin:.3rem 0;padding-inline-start:1.1rem}'
        '.lhr button{min-height:44px;border-radius:999px;padding:.3rem 1rem;font:inherit;cursor:pointer}.lhyt{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}.lhyt a{display:inline-flex;min-height:44px;align-items:center;padding:.2rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-weight:700;text-decoration:none;color:inherit}</style>')
 def nav_block(l, NL, cur=None):
-    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[:1]] + [(J.PAGE, '🔥 ' + J.SHORT[l])] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[1:]] + [(p, NL[p]) for p in ('Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
+    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[:1]] + [(J.PAGE, '🔥 ' + J.SHORT[l]), (R.PAGE, '🚀 ' + R.SHORT[l])] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[1:]] + [(p, NL[p]) for p in ('Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
     return ''.join(f'<li><a href="{p}"' + (' aria-current="page"' if p == cur else '') + f'>{t if "&" in t else esc(t)}</a></li>' for p, t in items)
 def set_nav(s, l, NL, cur):
     return re.sub(r'(<ul class="spn-sub" id="spn-le">).*?(</ul>)', lambda m: m.group(1) + nav_block(l, NL, cur) + m.group(2), s, count=1, flags=re.S)
@@ -168,17 +169,98 @@ def jet_page(l, C, NL):
     o.append(f'<p class="lnote" role="note">🧪 <strong>{U("labs_h")}:</strong> {U("labs")}</p>')
     o.append(planet_block(l, J.PINTRO[l]))
     o.append(calc_widget(l, 'aero', NL))
-    o.append(f'<p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a></p>')
+    o.append(best_block(l, [b for b in R.BEST if b[1] in R.JET_BEST_IDS]))
+    o.append(f'<p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a> · <a href="{R.PAGE}">🚀 {esc(R.UI["to_rocket"][l])}</a></p>')
     o.append(f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS) + '</ul>')
     o.append(f'<p class="lnote"><small>{U("credit")}</small></p>')
     s = page_from_learn(l, J.PAGE, J.NAME[l], J.LINE[l], ''.join(o), NL)
     return s.replace('</p></div>', '</p>' + JET_SVG.replace('{lab}', U('anim')) + '</div>', 1)
+BEST_CSS = ('<style>.lfb{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem}.lfb>div{padding:.6rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}'
+    '.lfb h3{margin:.3rem 0 .4rem;font-size:1rem}.lfb ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}.lfb a{font-weight:800}.lfb small{display:block;opacity:.88}</style>')
+def best_block(l, items):  # Oct 28 (founder): "Learn from the best" (links checked with curl; one line each, no rankings)
+    UR = lambda k: esc(R.UI[k][l]); out = ''
+    for g in ('g_free', 'g_uni', 'g_nasa', 'g_job'):
+        xs = [b for b in items if b[0] == g]
+        if xs: out += f'<div><h3>{UR(g)}</h3><ul>' + ''.join(f'<li><a href="{esc(u_)}" rel="noopener" lang="en">{esc(n)}</a> ↗<small>{esc(w[l])}</small></li>' for _, n, u_, w in xs) + '</ul></div>'
+    return BEST_CSS + f'<section class="lhy" id="learn-from-the-best"><h2>🏆 {UR("best_h")}</h2><p>{UR("best_t")}</p><div class="lfb">{out}</div></section>'
+ROCKET_SVG = ('<svg class="rpa" viewBox="0 0 640 150" role="img" aria-label="{lab}" xmlns="http://www.w3.org/2000/svg">'
+    '<defs><linearGradient id="rpg" x1="0" x2="1"><stop offset="0" stop-color="#fff6d0"/><stop offset=".25" stop-color="#ffb347"/><stop offset=".7" stop-color="#ff6a3d" stop-opacity=".6"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></linearGradient>'
+    '<radialGradient id="rpd"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#9fd8ff"/><stop offset="1" stop-color="#9fd8ff" stop-opacity="0"/></radialGradient></defs>'
+    '<g class="rpa-x"><path class="rpa-f" d="M150 52 L600 70 Q620 75 600 80 L150 98 Z" fill="url(#rpg)"/>'
+    '<ellipse class="rpa-d d1" cx="215" cy="75" rx="15" ry="11" fill="url(#rpd)"/><ellipse class="rpa-d d2" cx="285" cy="75" rx="13" ry="10" fill="url(#rpd)"/>'
+    '<ellipse class="rpa-d d3" cx="350" cy="75" rx="11" ry="8" fill="url(#rpd)"/><ellipse class="rpa-d d4" cx="410" cy="75" rx="9" ry="7" fill="url(#rpd)"/><ellipse class="rpa-d d5" cx="465" cy="75" rx="7" ry="5" fill="url(#rpd)"/></g>'
+    '<path d="M150 46 Q100 58 70 66 L70 84 Q100 92 150 104 Z" fill="#b9c6d3" stroke="#0b1620" stroke-width="2"/>'
+    '<rect x="30" y="62" width="40" height="26" rx="4" fill="#7d8fa3" stroke="#0b1620" stroke-width="2"/><path d="M84 64 Q118 56 148 50 M84 86 Q118 94 148 100" stroke="#8a99a9" stroke-width="2" fill="none"/></svg>')
+ROCKET_CSS = ('<style>.rpa{display:block;width:min(100%,560px);height:auto;margin:.8rem auto 0}'
+    '@media (prefers-reduced-motion:no-preference){.rpa-f{transform-origin:150px 75px;animation:rpf .12s ease-in-out infinite alternate}.rpa-d{animation:rpd .9s ease-in-out infinite alternate}'
+    '.d2{animation-delay:.15s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}.d5{animation-delay:.6s}}'
+    '@keyframes rpf{from{transform:scaleX(.94);opacity:.9}to{transform:scaleX(1.04);opacity:1}}@keyframes rpd{from{opacity:.55}to{opacity:1}}[dir=rtl] .rpa{transform:scaleX(-1)}'
+    '.rfc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1rem;list-style:none;padding:0}.rfc li{padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.05);border-inline-start:4px solid #ff8a3d}'
+    '.rfc b{font-size:1.05rem}.rfc code{display:block;margin:.4rem 0;font-size:1rem;direction:ltr;unicode-bidi:isolate}.rtb{overflow-x:auto}.rtb table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem}'
+    '.rtb th,.rtb td{border:1px solid rgba(255,255,255,.2);padding:.45rem .55rem;text-align:start;vertical-align:top}.rtb th{background:rgba(255,255,255,.08)}.rtb .pl{font-style:italic;color:#ffd54a}'
+    '.rsrc{font-size:.82rem;opacity:.9}.rclips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem;list-style:none;padding:0}'
+    '.rclips li{border-radius:14px;background:rgba(0,0,0,.25);padding:.6rem}.rclips video,.rclips iframe,.rclips .ytf{width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000;display:block}'
+    '.ytf{display:flex!important;align-items:center;justify-content:center;font:700 1rem inherit;color:#fff;cursor:pointer;background:radial-gradient(circle,#26384a,#000)!important;min-height:44px}'
+    '.rclips h3{font-size:.98rem;margin:.5rem 0 .2rem}.rclips small{display:block;opacity:.85}.rbar{list-style:none;padding:0;display:grid;gap:.45rem}.rbar li{display:grid;grid-template-columns:minmax(9rem,12rem) 1fr;gap:.6rem;align-items:center}'
+    '.rbar span.b{display:block;height:20px;border-radius:6px;background:linear-gradient(90deg,#ff8a3d,#ffd54a);color:#1a1300;font-size:.78rem;font-weight:800;padding-inline-start:.4rem;line-height:20px;white-space:nowrap}'
+    '.rbar span.b.pl{background:rgba(255,213,74,.12);color:#ffd54a;border:2px dashed #ffd54a;line-height:16px}</style>')
+YT_JS = ("<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ytf');if(!b)return;var f=document.createElement('iframe');"
+         "f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title=b.getAttribute('data-title');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.loading='lazy';b.replaceWith(f)});</script>")
+def srcs(xs): return '<span class="rsrc">' + ' · '.join(f'<a href="{esc(u_)}" rel="noopener" lang="en">{esc(t)}</a>' for t, u_ in xs) + '</span>'
+def rocket_page(l, NL):
+    UR = lambda k: esc(R.UI[k][l]); dash = '—'
+    o = [ROCKET_CSS]
+    if R.UI['mt'][l]: o.append(f'<p class="lnote" role="note"><small>🤖 {UR("mt")}</small></p>')
+    # fundamentals
+    def lk(h, k): return f'<a href="{h}">{UR("unit")} {R.UNITLAB[k]}</a>' if k in R.UNITLAB else f'<a href="{h}">🧮 {UR("calc")}</a>'
+    cards = ''.join(f'<li><b>{e} {esc(t[l])}</b><p>{esc(d_[l])}</p>' + (f'<code>{esc(f)}</code>' if f else '') + ' · '.join(lk(h, k) for h, k in ls) + '</li>' for e, t, d_, f, ls in R.FUND)
+    cyc = ''.join(f'<li><b>{esc(n[l])}</b><p>{esc(d_[l])}</p></li>' for n, d_ in R.CYC)
+    o.append(f'<section id="fundamentals"><h2>⚙️ {UR("fund_h")}</h2><ul class="rfc">{cards}</ul><h3>{esc(R.CYC_H[l])}</h3><ul class="rfc">{cyc}</ul>'
+             f'<p><a href="Propulsion.html#u8">{UR("unit")} 8</a> · {srcs(R.CYC_SRC)}</p></section>')
+    # Raptor
+    st = {'flown': UR('flown'), 'flying': UR('flying'), 'planned': f'<span class="pl">{UR("planned")}</span>'}
+    rows = ''.join(f'<tr><th scope="row">{v}</th><td dir="ltr">{sl}</td><td dir="ltr">{vac or dash}</td><td>{UR("same") if m == "same" else m}</td><td>{st[k]}</td><td>{srcs(ss)}</td></tr>' for v, sl, vac, m, k, ss in R.RAPTOR)
+    notes = ''.join(f'<li>{esc(n[l])} {srcs(ss)}</li>' for n, ss in zip(R.NOTES, R.NOTE_SRC))
+    o.append(f'<section class="lhy" id="raptor"><h2>🔥 {UR("new_h")}</h2><p>{UR("new_t")}</p><div class="rtb"><table><thead><tr><th scope="col">{UR("ver")}</th><th scope="col">{UR("sl")}</th>'
+             f'<th scope="col">{UR("vac")}</th><th scope="col">{UR("mass")}</th><th scope="col">{UR("status")}</th><th scope="col">{UR("src")}</th></tr></thead><tbody>{rows}</tbody></table></div>'
+             f'<h3>{UR("notes_h")}</h3><ul>{notes}</ul></section>')
+    # 30 years of raw power
+    clips = ''
+    for c in R.CLIPS:
+        title = esc(c['t'][l]); cr = 'Video: ' + c['cr']
+        if c['kind'] == 'nasa':
+            base = R.NASA_V + c['id'].replace(' ', '%20') + '/' + c['id'].replace(' ', '%20')
+            det = 'https://images.nasa.gov/details/' + c['id'].replace(' ', '%20')
+            media = f'<video controls preload="none" playsinline poster="{base}~thumb.jpg" aria-label="{title}"><source src="{base}~mobile.mp4" type="video/mp4"></video>'
+            more = f'<a href="{det}" rel="noopener" lang="en">images.nasa.gov</a> · {esc(cr)} (public domain)'
+        elif c['kind'] == 'yt':
+            media = f'<button type="button" class="ytf" data-yt="{c["id"]}" data-title="{title}">▶ {UR("play")}</button>'
+            more = f'<a href="https://www.youtube.com/watch?v={c["id"]}" rel="noopener">YouTube · SpaceX</a> · {esc(cr)}'
+        else:
+            media = ''; more = f'<a href="{c["id"]}" rel="noopener">{UR("watch")} ↗</a> · {esc(cr)}'
+        clips += f'<li>{media}<h3>{title}</h3><small dir="ltr">{c["date"]}</small><small>{more}</small></li>'
+    brow = ''.join(f'<tr><th scope="row" lang="en">{esc(v)}</th><td dir="ltr">{dt}</td><td lang="en">{esc(e)}</td><td dir="ltr">{esc(p)}</td><td dir="ltr">{esc(t or dash)}</td><td dir="ltr">{esc(pc or dash)}</td>'
+                   f'<td>{esc(i or dash)}</td><td dir="ltr">{esc(pr)}</td><td>{srcs(ss)}</td></tr>' for v, dt, e, p, t, pc, i, pr, ss in R.BENCH)
+    mx = max(k for _, k, _ in R.CHART)
+    bars = ''.join(f'<li><span lang="en">{esc(n)}</span><span class="b{" pl" if pl else ""}" style="width:{round(100 * k / mx)}%">{k:,} kN{" · " + UR("planned") if pl else ""}</span></li>' for n, k, pl in R.CHART)
+    o.append(f'<section class="lhy" id="raw-power"><h2>📽️ {UR("bench_h")}</h2><p>{UR("bench_t")}</p><ul class="rclips">{clips}</ul>'
+             f'<div class="rtb"><table><thead><tr><th scope="col">{UR("rocket")}</th><th scope="col">{UR("date")}</th><th scope="col">{UR("eng")}</th><th scope="col">{UR("per")}</th><th scope="col">{UR("tot")}</th>'
+             f'<th scope="col">{UR("pc")}</th><th scope="col">{UR("isp")}</th><th scope="col">{UR("prop")}</th><th scope="col">{UR("src")}</th></tr></thead><tbody>{brow}</tbody></table></div>'
+             f'<p><small>{UR("pc_n")}</small></p><h3 id="rbar-h">{UR("chart_h")}</h3><ul class="rbar" aria-labelledby="rbar-h">{bars}</ul><p><small>{UR("chart_n")}</small></p></section>')
+    o.append(best_block(l, R.BEST))
+    o.append(planet_block(l, J.PINTRO[l]))
+    o.append(calc_widget(l, 'orbits', NL))
+    o.append(f'<p><a href="{J.PAGE}">🔥 {UR("to_jet")}</a> · <a href="Propulsion.html">Propulsion</a> · <a href="Search.html?topic=rocket">🔎</a></p>')
+    o.append(f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS) + '</ul>')
+    o.append(f'<p class="lnote"><small>{UR("credit")}</small></p>' + YT_JS)
+    s_ = page_from_learn(l, R.PAGE, R.NAME[l], R.LINE[l], ''.join(o), NL)
+    return s_.replace('</p></div>', '</p>' + ROCKET_SVG.replace('{lab}', UR('anim')) + '</div>', 1)
 def landing(l, NL):
     f = d(l) + 'Learn.html'; s = rd(f)
     s = re.sub(r'(<div class="page-hero-content"><h1>[^<]*</h1>)<p[^>]*>.*?</p>', lambda m: m.group(1) + f'<p class="lhv">{esc(X.VISION[l])}</p>', s, count=1, flags=re.S)
     cnt = lambda k: 30 if k == 'aero' else sum(1 for r in X.ROAD if r[3] == k)  # the aero roadmap holds all 30 courses
     cards = ''.join(f'<li{" class=\"lht-main\"" if t[0] == "aero" else ""}><a href="{t[1]}"><b>{t[2]} {esc(t[3][l])}</b><small>{esc(t[4][l])}</small><small>{esc(u("ncourses", l, n=cnt(t[0])) if cnt(t[0]) != 1 else u("ncourse1", l))}</small></a></li>' for t in X.TOPICS)
-    more = [(J.PAGE, esc(J.SHORT[l])), ('Courses.html', NL.get('Courses.html')), ('Play_and_Learn.html', NL.get('Play_and_Learn.html')), ('Teachers.html', NL.get('Teachers.html')), ('Lesson_Builder.html', NL.get('Lesson_Builder.html')),
+    more = [(J.PAGE, esc(J.SHORT[l])), (R.PAGE, esc(R.SHORT[l])), ('Courses.html', NL.get('Courses.html')), ('Play_and_Learn.html', NL.get('Play_and_Learn.html')), ('Teachers.html', NL.get('Teachers.html')), ('Lesson_Builder.html', NL.get('Lesson_Builder.html')),
             ('Cadets.html', NL.get('Cadets.html')), ('AP_IB_Physics.html', NL.get('AP_IB_Physics.html')), ('Careers.html', NL.get('Careers.html'))]
     blk = (f'<!-- LEARNHUB:START -->{CSS}<h2 id="topics">{esc(u("topics", l))}</h2><ul class="lht">{cards}</ul>'
            f'<h2>{esc(u("more", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{p}">{t}</a></li>' for p, t in more if t) + '</ul><!-- LEARNHUB:END -->')
@@ -219,15 +301,16 @@ def main():
             if not f.endswith('.html'): continue
             p = d(l) + f; s = rd(p)
             if 'id="spn-le"' not in s: continue
-            cur = f if f in [t[1] for t in X.TOPICS] + [J.PAGE, 'Learn.html', 'Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
+            cur = f if f in [t[1] for t in X.TOPICS] + [J.PAGE, R.PAGE, 'Learn.html', 'Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
             s2 = set_nav(s, l, NL, cur)
             s2 = re.sub(r'<li><a href="(?:\.\./)?Homeschool\.html"[^>]*>.*?</a></li>', '', s2) if f != 'Homeschool.html' else s2
             ch += wr(p, s2)
         for t in X.TOPICS: ch += wr(d(l) + t[1], hub(l, t[0], C, years, NL))
         ch += wr(d(l) + J.PAGE, jet_page(l, C, NL))
+        ch += wr(d(l) + R.PAGE, rocket_page(l, NL))
     sm = rd('sitemap.xml'); today = datetime.date.today().isoformat()
     for l in LANGS:
-        for t in X.TOPICS + [(None, J.PAGE)]:
+        for t in X.TOPICS + [(None, J.PAGE), (None, R.PAGE)]:
             loc = f'{SITE}{d(l)}{t[1]}'
             if f'<loc>{loc}</loc>' not in sm: sm = sm.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
     ch += wr('sitemap.xml', sm)
