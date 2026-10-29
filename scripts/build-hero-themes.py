@@ -148,16 +148,19 @@ CSS = ('<style>.hero .hero-space,.hero .hs-caps{display:none}.hero[data-hero=spa
 # the right ring arm 4.5-11.5 s, crossfade to rings 10-12.5 s, slow ring zoom to 24 s, whole layer fades out 21.5-24 s.
 INTRO_CSS = ('.hs-intro{display:none}.hero[data-hero=space] .hs-intro{display:block;position:absolute;inset:0;z-index:7;opacity:0;pointer-events:none;background:#000;overflow:hidden}'
     '.hero[data-hero=space] .hero-space::after{z-index:8}'
-    '.hs-intro img{position:absolute;display:block;max-width:none;opacity:0;will-change:transform,opacity;backface-visibility:hidden}'
+    '.hs-intro{will-change:opacity;contain:strict}.hs-intro img{position:absolute;display:block;max-width:none;opacity:0;will-change:transform,opacity;backface-visibility:hidden;transform:translate3d(0,0,0)}'
     '.hs-i-sat{left:50%;top:50%;width:min(118vw,190svh);height:auto;aspect-ratio:1920/798;margin-left:calc(min(118vw,190svh)/-2);'
     'margin-top:calc(min(118vw,190svh)*-.2078);transform-origin:89% 47%}'
     '.hs-i-ring{inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%;transform-origin:40% 52%}'
-    '.hs-intro.run{animation:hsI 24s linear forwards}.hs-intro.run .hs-i-sat{animation:hsIs 12.5s forwards}.hs-intro.run .hs-i-ring{animation:hsIr 24s forwards}'
-    '@keyframes hsI{0%{opacity:0}5%{opacity:1}89.5%{opacity:1}100%{opacity:0}}'
-    '@keyframes hsIs{0%{opacity:0;transform:translateY(75svh) scale(.9);animation-timing-function:cubic-bezier(.2,.7,.25,1)}'
-    '8%{opacity:1}32%{opacity:1;transform:translateY(0) scale(1);animation-timing-function:linear}36%{transform:translateY(0) scale(1);animation-timing-function:cubic-bezier(.55,0,.35,1)}'
-    '80%{opacity:1}92%{transform:translateY(0) scale(7.5)}100%{opacity:0;transform:translateY(0) scale(9)}}'
-    '@keyframes hsIr{0%,41.6%{opacity:0;transform:scale(1.25)}52%{opacity:1}100%{opacity:1;transform:scale(1.6)}}'
+    # Oct 28 2026 (founder: 'smooth it out'): one 24 s clock for every layer, ease-in-out segments, translate3d/scale only,
+    # 4 s Saturn->rings crossfade (9-13 s) and 3.4 s fade back to Enceladus (20.6-24 s). Saturn zoom capped at 5x and the ring
+    # close-up at 1.15x (1900px asset via srcset on large screens) so neither goes soft past native detail.
+    '.hs-intro.run{animation:hsI 24s linear forwards}.hs-intro.run .hs-i-sat{animation:hsIs 24s linear forwards}.hs-intro.run .hs-i-ring{animation:hsIr 24s linear forwards}'
+    '@keyframes hsI{0%{opacity:0;animation-timing-function:cubic-bezier(.45,0,.55,1)}6%{opacity:1}85.8%{opacity:1;animation-timing-function:cubic-bezier(.45,0,.55,1)}100%{opacity:0}}'
+    '@keyframes hsIs{0%{opacity:0;transform:translate3d(0,75svh,0) scale(.9);animation-timing-function:cubic-bezier(.33,0,.2,1)}'
+    '17%{opacity:1;transform:translate3d(0,0,0) scale(1)}19%{transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.45,0,.55,1)}'
+    '37.5%{opacity:1;animation-timing-function:cubic-bezier(.45,0,.55,1)}54%{opacity:0}56%{transform:translate3d(0,0,0) scale(5)}100%{opacity:0;transform:translate3d(0,0,0) scale(5)}}'
+    '@keyframes hsIr{0%,37.5%{opacity:0;transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.45,0,.55,1)}54%{opacity:1;transform:translate3d(0,0,0) scale(1.05);animation-timing-function:cubic-bezier(.25,0,.55,1)}100%{opacity:1;transform:translate3d(0,0,0) scale(1.15)}}'
     '.hero[data-hero=space] .hs-caps{transition:opacity .8s ease}.hero.hs-introing .hs-caps{opacity:0}'
     '.hero.hs-introing .hero-content{background:radial-gradient(closest-side,rgba(0,6,16,.62),rgba(0,6,16,.3) 70%,rgba(0,6,16,0))}'
     '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hs-intro:not(.run){display:none}}')
