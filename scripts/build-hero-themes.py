@@ -168,6 +168,18 @@ INTRO_CSS = ('.hs-intro{display:none}.hero[data-hero=space] .hs-intro{display:bl
     '.hero[data-hero=space] .hs-caps{transition:opacity .8s ease}.hero.hs-introing .hs-caps{opacity:0}'
     '.hero.hs-introing .hero-content{background:radial-gradient(closest-side,rgba(0,6,16,.62),rgba(0,6,16,.3) 70%,rgba(0,6,16,0))}'
     '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hs-intro:not(.run){display:none}}')
+# Oct 29 2026 (founder): 'WHERE IT ALL BEGINS' fades in at the start of the Saturn intro; the title block stays hidden
+# (hs-introing / hs-titlewait) until the live scene's Earthrise crossfade has fully revealed Earth, then fades in.
+BEGINS = {'en': 'WHERE IT ALL BEGINS', 'fr': 'LÀ OÙ TOUT COMMENCE', 'es': 'DONDE TODO COMIENZA',
+          'ar': 'حيث يبدأ كل شيء', 'it': 'DOVE TUTTO HA INIZIO', 'he': 'איפה שהכול מתחיל'}
+INTRO_CSS += ('.hs-begins{position:absolute;left:0;right:0;top:22%;margin:0;text-align:center;z-index:3;opacity:0;color:#f4d58d;'
+    'font-weight:700;letter-spacing:.32em;font-size:clamp(1rem,2.6vw,1.9rem);text-shadow:0 2px 22px rgba(0,0,0,.9);will-change:opacity}'
+    '[dir=rtl] .hs-begins{letter-spacing:0}'
+    '.hs-intro.run .hs-begins{animation:hsB 24s linear forwards}'
+    '@keyframes hsB{0%,2%{opacity:0;animation-timing-function:cubic-bezier(.4,0,.6,1)}12%{opacity:1}74%{opacity:1;animation-timing-function:cubic-bezier(.4,0,.6,1)}84%,100%{opacity:0}}'
+    '.hero[data-hero=space] .hero-content{transition:opacity 2s cubic-bezier(.4,0,.2,1) .3s}'
+    '.hero.hs-introing .hero-content,.hero.hs-titlewait .hero-content{opacity:0;transition:none}'
+    '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hero-content{transition:none}}')
 def INTRO():
     sat = []
     for w in (960, 1280, 1920, 2560):
@@ -198,7 +210,7 @@ def caps(l):
     return f'<div class="hs-caps">{a}</div>'
 
 def block(pre, l):
-    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + INTRO_CSS + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}{SATATTR()}>{INTRO().replace("{p}", pre)}</div>{caps(l)}{chooser()}'
+    return (f'<!-- HEROTHEME:START -->{CSS.replace("</style>", POSTER() + INTRO_CSS + "</style>")}<div class="hero-space" aria-hidden="true" data-bm="{BM}"{TEXATTR()}{SATATTR()}>{INTRO().replace("{p}", pre).replace("</div>", f'<p class="hs-begins">{BEGINS.get(l, BEGINS["en"])}</p></div>') if INTRO() else ""}</div>{caps(l)}{chooser()}'
             f'<script src="{pre}assets/hero-themes.js?v={JSV}" defer></script><script src="{pre}assets/hero-saturn-intro.js?v={IJSV}" defer></script><!-- HEROTHEME:END -->')
 
 # Oct 16 2026 (Lighthouse): the hero video (1.1 MB, HERO-VIDEO block from build-batch2.py) used to start downloading
