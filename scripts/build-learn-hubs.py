@@ -204,8 +204,8 @@ ROCKET_CSS = ('<style>.rpa{display:block;width:min(100%,560px);height:auto;margi
     '.rclips h3{font-size:.98rem;margin:.5rem 0 .2rem}.rclips small{display:block;opacity:.85}.rbar{list-style:none;padding:0;display:grid;gap:.45rem}.rbar li{display:grid;grid-template-columns:minmax(9rem,12rem) 1fr;gap:.6rem;align-items:center}'
     '.rbar span.b{display:block;height:20px;border-radius:6px;background:linear-gradient(90deg,#ff8a3d,#ffd54a);color:#1a1300;font-size:.78rem;font-weight:800;padding-inline-start:.4rem;line-height:20px;white-space:nowrap}'
     '.rbar span.b.pl{background:rgba(255,213,74,.12);color:#ffd54a;border:2px dashed #ffd54a;line-height:16px}</style>')
-YT_JS = ("<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ytf');if(!b)return;var f=document.createElement('iframe');"
-         "f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title=b.getAttribute('data-title');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.loading='lazy';b.replaceWith(f)});</script>")
+YT_JS = ("<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ytf');if(!b)return;var id=b.getAttribute('data-yt');if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;var f=document.createElement('iframe');"
+         "f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0';f.title=b.getAttribute('data-title');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.loading='lazy';b.replaceWith(f)});</script>")
 def srcs(xs): return '<span class="rsrc">' + ' · '.join(f'<a href="{esc(u_)}" rel="noopener" lang="en">{esc(t)}</a>' for t, u_ in xs) + '</span>'
 def rocket_page(l, NL):
     UR = lambda k: esc(R.UI[k][l]); dash = '—'
