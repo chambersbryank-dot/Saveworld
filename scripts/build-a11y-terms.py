@@ -117,5 +117,23 @@ def footer_fallback():
             if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
     print('footer fallback on', n, 'pages')
 
-if '--home' in sys.argv: home(); footer_fallback()
-else: pages(); footer_links(); footer_fallback()
+def footer_tagline():
+    """Oct 29 2026: one-line "Built on your ideas" tagline at the top of every page footer (6 langs). Marked block, idempotent. Prints pages with no <footer>."""
+    import glob
+    n = 0; miss = []
+    for i, l in enumerate(LANGS):
+        for f in sorted(glob.glob(('' if i == 0 else l + '/') + '*.html')):
+            s = open(f, encoding='utf8').read()
+            s0 = re.sub(r'<!-- TAGLINE-FOOT -->.*?<!-- /TAGLINE-FOOT -->', '', s, flags=re.S)
+            a = s0.rfind('<footer'); 
+            if a < 0: miss.append(f); continue
+            a = s0.index('>', a) + 1
+            add = ('<!-- TAGLINE-FOOT --><p class="footer-tagline" style="max-width:720px;margin:0 auto .9rem;text-align:center;font-style:italic;opacity:.9">'
+                   f'{E(C.TAGLINE[i], quote=False)}</p><!-- /TAGLINE-FOOT -->')
+            s2 = s0[:a] + add + s0[a:]
+            if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
+    print('footer tagline on', n, 'pages; no <footer>:', len(miss), miss)
+
+if '--tagline' in sys.argv: footer_tagline()
+elif '--home' in sys.argv: home(); footer_fallback(); footer_tagline()
+else: pages(); footer_links(); footer_fallback(); footer_tagline()
