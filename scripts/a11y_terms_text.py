@@ -125,3 +125,23 @@ HOME = {
  'bands': ('Grade bands: K-2, 3-5, 6-8, 9-12', 'Niveaux : K-2, 3-5, 6-8, 9-12', 'Niveles: K-2, 3-5, 6-8, 9-12', 'المراحل: K-2، 3-5، 6-8، 9-12', 'Fasce: K-2, 3-5, 6-8, 9-12', 'שכבות גיל: K-2, 3-5, 6-8, 9-12'),
  'link': ('See codes on Teacher Sheets', 'Voir les codes dans les fiches enseignants', 'Ver los códigos en las fichas docentes', 'اطّلع على الرموز في أوراق المعلمين', 'Vedi i codici nelle schede per insegnanti', 'ראו את הקודים בדפי המורים'),
 }
+
+# Oct 29 2026 (founder-approved): one-line footer tagline on every page, en/fr/es/ar/it/he.
+TAGLINE = (
+    'Built on your ideas — so every lesson, search, and discovery here stays free, clear, sourced, and world-class for every classroom and family.',
+    'Construit à partir de vos idées — pour que chaque leçon, recherche et découverte reste gratuite, claire, sourcée et de classe mondiale pour chaque classe et chaque famille.',
+    'Creado a partir de sus ideas, para que cada lección, búsqueda y descubrimiento siga siendo gratuito, claro, con fuentes y de nivel mundial para cada aula y cada familia.',
+    'مبني على أفكاركم — ليبقى كل درس وبحث واكتشاف هنا مجانيًا وواضحًا وموثّق المصادر وبمستوى عالمي لكل صف دراسي ولكل أسرة.',
+    'Costruito sulle vostre idee, perché ogni lezione, ricerca e scoperta resti gratuita, chiara, documentata e di livello mondiale per ogni classe e ogni famiglia.',
+    'נבנה על בסיס הרעיונות שלכם — כדי שכל שיעור, חיפוש וגילוי כאן יישארו חינמיים, ברורים, מבוססי מקורות וברמה עולמית לכל כיתה ולכל משפחה.',
+)
+# Oct 29 2026: "why these sources" line under the tagline (links Editorial_Policy.html).
+SOURCES = (
+    'Why trust it: every page is cross-checked against NASA, Yale, Harvard, MIT, and other leading universities and scholars.',
+    'Pourquoi nous faire confiance : chaque page est vérifiée en croisant NASA, Yale, Harvard, MIT et d’autres grandes universités et chercheurs.',
+    'Por qué confiar: cada página se contrasta con la NASA, Yale, Harvard, el MIT y otras grandes universidades y académicos.',
+    'لماذا تثق بنا: كل صفحة تُراجَع بالمقارنة مع ناسا وييل وهارفارد ومعهد MIT وغيرها من كبرى الجامعات والعلماء.',
+    'Perché fidarsi: ogni pagina è verificata incrociando NASA, Yale, Harvard, MIT e altre grandi università e studiosi.',
+    'למה לסמוך עלינו: כל עמוד נבדק מול נאס"א, ייל, הרווארד, MIT ואוניברסיטאות וחוקרים מובילים נוספים.',
+)
+SOURCES_LINK = ('Our sources', 'Nos sources', 'Nuestras fuentes', 'مصادرنا', 'Le nostre fonti', 'המקורות שלנו')
