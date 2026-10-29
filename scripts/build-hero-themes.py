@@ -156,11 +156,15 @@ INTRO_CSS = ('.hs-intro{display:none}.hero[data-hero=space] .hs-intro{display:bl
     # 4 s Saturn->rings crossfade (9-13 s) and 3.4 s fade back to Enceladus (20.6-24 s). Saturn zoom capped at 5x and the ring
     # close-up at 1.15x (1900px asset via srcset on large screens) so neither goes soft past native detail.
     '.hs-intro.run{animation:hsI 24s linear forwards}.hs-intro.run .hs-i-sat{animation:hsIs 24s linear forwards}.hs-intro.run .hs-i-ring{animation:hsIr 24s linear forwards}'
-    '@keyframes hsI{0%{opacity:0;animation-timing-function:cubic-bezier(.45,0,.55,1)}6%{opacity:1}85.8%{opacity:1;animation-timing-function:cubic-bezier(.45,0,.55,1)}100%{opacity:0}}'
-    '@keyframes hsIs{0%{opacity:0;transform:translate3d(0,75svh,0) scale(.9);animation-timing-function:cubic-bezier(.33,0,.2,1)}'
-    '17%{opacity:1;transform:translate3d(0,0,0) scale(1)}19%{transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.45,0,.55,1)}'
-    '37.5%{opacity:1;animation-timing-function:cubic-bezier(.45,0,.55,1)}54%{opacity:0}56%{transform:translate3d(0,0,0) scale(5)}100%{opacity:0;transform:translate3d(0,0,0) scale(5)}}'
-    '@keyframes hsIr{0%,37.5%{opacity:0;transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.45,0,.55,1)}54%{opacity:1;transform:translate3d(0,0,0) scale(1.05);animation-timing-function:cubic-bezier(.25,0,.55,1)}100%{opacity:1;transform:translate3d(0,0,0) scale(1.15)}}'
+    # Oct 29 2026 (founder: 'start is choppy'): backdrop and Saturn fade in together (no dip to black over the scene), Saturn
+    # stays fully opaque UNDER the rings until they cover it (no see-through black frame mid-crossfade), Saturn zoom accelerates
+    # into the rings and the ring zoom decelerates out of it with one continuous curve (no velocity stop at the hand-off).
+    '@keyframes hsI{0%{opacity:0;animation-timing-function:cubic-bezier(.4,0,.6,1)}11%{opacity:1}86%{opacity:1;animation-timing-function:cubic-bezier(.4,0,.6,1)}100%{opacity:0}}'
+    '@keyframes hsIs{0%{opacity:0;transform:translate3d(0,60svh,0) scale(.92);animation-timing-function:cubic-bezier(.22,.61,.36,1)}'
+    '13%{opacity:1}18%{transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.5,0,.9,.55)}'
+    '54%{opacity:1;transform:translate3d(0,0,0) scale(4.6)}54.5%,100%{opacity:0;transform:translate3d(0,0,0) scale(4.6)}}'
+    '@keyframes hsIr{0%,38%{opacity:0;transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.25,.4,.45,1)}'
+    '53%{opacity:1}100%{opacity:1;transform:translate3d(0,0,0) scale(1.15)}}'
     '.hero[data-hero=space] .hs-caps{transition:opacity .8s ease}.hero.hs-introing .hs-caps{opacity:0}'
     '.hero.hs-introing .hero-content{background:radial-gradient(closest-side,rgba(0,6,16,.62),rgba(0,6,16,.3) 70%,rgba(0,6,16,0))}'
     '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hs-intro:not(.run){display:none}}')
