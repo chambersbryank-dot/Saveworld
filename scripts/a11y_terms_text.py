@@ -135,3 +135,13 @@ TAGLINE = (
     'Costruito sulle vostre idee, perché ogni lezione, ricerca e scoperta resti gratuita, chiara, documentata e di livello mondiale per ogni classe e ogni famiglia.',
     'נבנה על בסיס הרעיונות שלכם — כדי שכל שיעור, חיפוש וגילוי כאן יישארו חינמיים, ברורים, מבוססי מקורות וברמה עולמית לכל כיתה ולכל משפחה.',
 )
+# Oct 29 2026: "why these sources" line under the tagline (links Editorial_Policy.html).
+SOURCES = (
+    'Why trust it: every page is cross-checked against NASA, Yale, Harvard, MIT, and other leading universities and scholars.',
+    'Pourquoi nous faire confiance : chaque page est vérifiée en croisant NASA, Yale, Harvard, MIT et d’autres grandes universités et chercheurs.',
+    'Por qué confiar: cada página se contrasta con la NASA, Yale, Harvard, el MIT y otras grandes universidades y académicos.',
+    'لماذا تثق بنا: كل صفحة تُراجَع بالمقارنة مع ناسا وييل وهارفارد ومعهد MIT وغيرها من كبرى الجامعات والعلماء.',
+    'Perché fidarsi: ogni pagina è verificata incrociando NASA, Yale, Harvard, MIT e altre grandi università e studiosi.',
+    'למה לסמוך עלינו: כל עמוד נבדק מול נאס"א, ייל, הרווארד, MIT ואוניברסיטאות וחוקרים מובילים נוספים.',
+)
+SOURCES_LINK = ('Our sources', 'Nos sources', 'Nuestras fuentes', 'مصادرنا', 'Le nostre fonti', 'המקורות שלנו')

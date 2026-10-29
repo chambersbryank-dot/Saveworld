@@ -129,7 +129,7 @@ def footer_tagline():
             if a < 0: miss.append(f); continue
             a = s0.index('>', a) + 1
             add = ('<!-- TAGLINE-FOOT --><p class="footer-tagline" style="max-width:720px;margin:0 auto .9rem;text-align:center;font-style:italic;opacity:.9">'
-                   f'{E(C.TAGLINE[i], quote=False)}</p><!-- /TAGLINE-FOOT -->')
+                   f'{E(C.TAGLINE[i], quote=False)}<br><span style="font-style:normal;font-size:.9em">{E(C.SOURCES[i], quote=False)} <a href="Editorial_Policy.html">{E(C.SOURCES_LINK[i])}</a></span></p><!-- /TAGLINE-FOOT -->')
             s2 = s0[:a] + add + s0[a:]
             if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
     print('footer tagline on', n, 'pages; no <footer>:', len(miss), miss)
