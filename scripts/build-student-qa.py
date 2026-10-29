@@ -13,14 +13,15 @@ sys.path.insert(0, 'scripts')
 spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); BL = importlib.util.module_from_spec(spec); spec.loader.exec_module(BL)
 from learn_orbit_math import T
 LANGS, d, rd, wr, esc, SITE, href = BL.LANGS, BL.d, BL.rd, BL.wr, BL.esc, BL.SITE, BL.sf.href
-DATA, PAGE, TOPICS = 'assets/data/student-qa.json', 'Student_Questions.html', ['aero', 'orbit', 'phys', 'all']
+DATA, PAGE, TOPICS = 'assets/data/student-qa.json', 'Student_Questions.html', ['rocket', 'aero', 'orbit', 'phys', 'all']
 TITLE = T('Student questions, answered', 'Questions d’élèves, avec réponses', 'Preguntas de estudiantes, respondidas', 'أسئلة الطلاب وإجاباتها', 'Domande degli studenti, con risposta')
 DESC = T('Sourced answers to questions students asked SI Helper that the site did not cover yet, by topic: aeronautical engineering, orbital mechanics, physics and general science.',
          'Réponses sourcées aux questions que des élèves ont posées à SI Helper et que le site ne traitait pas encore, par sujet : ingénierie aéronautique, mécanique orbitale, physique et sciences générales.',
          'Respuestas con fuentes a preguntas que los estudiantes hicieron a SI Helper y que el sitio aún no cubría, por tema: ingeniería aeronáutica, mecánica orbital, física y ciencia general.',
          'إجابات موثّقة بالمصادر عن أسئلة طرحها الطلاب على SI Helper ولم يكن الموقع يتناولها بعد، حسب الموضوع: هندسة الطيران والميكانيكا المدارية والفيزياء والعلوم العامة.',
          'Risposte con fonti alle domande che gli studenti hanno fatto a SI Helper e che il sito non trattava ancora, per argomento: ingegneria aeronautica, meccanica orbitale, fisica e scienze generali.')
-TOP = {'aero': T('Aeronautical Engineering', 'Ingénierie aéronautique', 'Ingeniería aeronáutica', 'هندسة الطيران', 'Ingegneria aeronautica'),
+TOP = {'rocket': T('Aerospace Engineering with Rocket Propulsion', 'Ingénierie aérospatiale et propulsion des fusées', 'Ingeniería aeroespacial con propulsión de cohetes', 'هندسة الطيران والفضاء ودفع الصواريخ', 'Ingegneria aerospaziale e propulsione a razzo'),
+       'aero': T('Aeronautical Engineering', 'Ingénierie aéronautique', 'Ingeniería aeronáutica', 'هندسة الطيران', 'Ingegneria aeronautica'),
        'orbit': T('Orbital Mechanics', 'Mécanique orbitale', 'Mecánica orbital', 'الميكانيكا المدارية', 'Meccanica orbitale'),
        'phys': T('Physics', 'Physique', 'Física', 'الفيزياء', 'Fisica'),
        'all': T('General science', 'Sciences générales', 'Ciencia general', 'العلوم العامة', 'Scienze generali')}
