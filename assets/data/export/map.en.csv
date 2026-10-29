@@ -17,11 +17,13 @@ American Forests,active,Forests,"Washington, DC (HQ)",38.9,-77.04,hq,https://www
 American Rivers,active,Rivers,"Washington, DC (HQ)",38.9,-77.04,hq,https://www.savingplanets.com/American_Rivers.html
 Andfjorden Marine Protected Area (Norway),active,Ocean,"Andfjorden, between Andøya and Senja, Norway",69.25,16.5,page,https://www.savingplanets.com/Andfjorden_MPA.html
 Arbor Day Foundation,active,Forests,"Arbor Day Foundation, Lincoln, Nebraska",40.813,-96.702,hq,https://www.savingplanets.com/Arbor_Day_Foundation.html
+Arctic Basecamp,active,Polar,"Davos, Switzerland (Arctic Basecamp events)",46.8,9.84,page,https://www.savingplanets.com/Arctic_Basecamp.html
 Arctic Weather Satellite and EPS-Sterna (ESA/EUMETSAT),active,Polar,"Tromsø, Norway, one of the Arctic Weather Satellite mission control sites",69.65,18.96,page,https://www.savingplanets.com/Arctic_Weather_Satellite.html
 Argo Ocean Float Array,active,Ocean,"Argo Program Office, Scripps Institution of Oceanography, San Diego",32.866,-117.254,hq,https://www.savingplanets.com/Argo.html
 Argos Satellite Tracking System,active,Ocean,"NOAA Office of Satellite and Product Operations, Suitland, Maryland",38.852,-76.934,hq,https://www.savingplanets.com/Argos.html
 Ariel Exoplanet Mission (ESA),active,Project Rawane,"Europe's Spaceport, Kourou, French Guiana (planned launch site)",5.236,-52.769,page,https://www.savingplanets.com/Ariel.html
 Artemis Program (NASA),active,Project Rawane,"Kennedy Space Center, Florida",28.627,-80.621,launch,https://www.savingplanets.com/Artemis_II.html
+ASOC: Antarctic and Southern Ocean Coalition,active,Polar,"Washington, DC, United States (ASOC office)",38.91,-77.04,page,https://www.savingplanets.com/ASOC_Antarctic_Coalition.html
 Astroscale,active,Space,"Tokyo, Japan (HQ)",35.68,139.76,hq,https://www.savingplanets.com/Astroscale.html
 ATLAS Asteroid Terrestrial-impact Last Alert System,active,Planetary Defense,"ATLAS telescope, Haleakalā, Maui",20.708,-156.257,page,https://www.savingplanets.com/ATLAS.html
 ATLAS Asteroid Terrestrial-impact Last Alert System,active,Planetary Defense,"ATLAS telescope, Mauna Loa, Hawaiʻi Island",19.536,-155.576,page,https://www.savingplanets.com/ATLAS.html
@@ -32,13 +34,16 @@ Atoll Rewilding: Seabirds Against Sea-Level Rise,active,Ocean,"Tetiaroa atoll, F
 Azraq Wetland Reserve Restoration (Jordan),active,Lakes,"Azraq Wetland Reserve, Jordan",31.83,36.82,page,https://www.savingplanets.com/Azraq_Wetland.html
 "Beavers, River Engineers",active,Rivers,"Bridge Creek, Central Oregon",44.72,-120.22,page,https://www.savingplanets.com/Beavers_River_Engineers.html
 BepiColombo (ESA / JAXA),active,Project Rawane,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/BepiColombo.html
+Beyond EPICA – Oldest Ice,active,Polar,East Antarctic Plateau (approximate),-76.0,122.0,page,https://www.savingplanets.com/Beyond_EPICA_Oldest_Ice.html
 Billion Oyster Project,active,Ocean,New York Harbor,40.689,-74.016,page,https://www.savingplanets.com/Billion_Oyster_Project.html
 Biomass (ESA),active,Earth Observation,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Biomass.html
 Bristol Bay Salmon Habitat Protection (EPA),active,Ocean,"Pebble deposit area, Bristol Bay watershed, Alaska",59.9,-155.3,page,https://www.savingplanets.com/Bristol_Bay_Salmon.html
 Bristol Bay Salmon Habitat Protection (EPA),active,Ocean,"Bristol Bay, Alaska",58.7,-158.2,page,https://www.savingplanets.com/Bristol_Bay_Salmon.html
+CAFF: Conservation of Arctic Flora and Fauna,active,Polar,"Akureyri, Iceland (approximate)",65.7,-18.1,page,https://www.savingplanets.com/CAFF_Arctic_Biodiversity.html
 Carbfix: Turning CO2 Into Stone,active,Polar,"Hellisheiði geothermal power plant, Iceland",64.037,-21.4,page,https://www.savingplanets.com/Carbfix.html
 Carruthers Geocorona Observatory (NASA),active,Space Weather,University of Illinois Urbana-Champaign (mission lead),40.102,-88.227,hq,https://www.savingplanets.com/Carruthers.html
 Catalina Sky Survey,active,Planetary Defense,"Lunar and Planetary Laboratory, University of Arizona, Tucson",32.233,-110.95,hq,https://www.savingplanets.com/Catalina_Sky_Survey.html
+CCAMLR: Conserving Antarctic Marine Life,active,Polar,"Hobart, Tasmania, Australia (approximate)",-42.88,147.33,page,https://www.savingplanets.com/CCAMLR.html
 Chandrayaan-5 / LUPEX Moon Ice Rover (ISRO-JAXA),active,Space,"Tanegashima Space Center, Japan, the planned H3 launch site",30.4,130.97,page,https://www.savingplanets.com/Chandrayaan-5_LUPEX.html
 Cheonggyecheon Stream Restoration (Seoul),active,Rivers,"Cheonggyecheon, Seoul, South Korea",37.5692,126.9784,page,https://www.savingplanets.com/Cheonggyecheon.html
 Chesapeake Bay Foundation,active,Rivers,Chesapeake Bay,38.0,-76.3,page,https://www.savingplanets.com/Chesapeake_Bay_Foundation.html
@@ -111,6 +116,7 @@ Globe at Night (NSF NOIRLab),active,Space,"Tucson, Arizona (NSF NOIRLab HQ)",32.
 GOES-19 and CCOR-1 (NOAA),active,Space Weather,"NOAA Satellite Operations Facility, Suitland, Maryland (mission control)",38.852,-76.934,hq,https://www.savingplanets.com/GOES-19.html
 Gorongosa National Park Restoration,active,Forests,"Gorongosa National Park, Mozambique",-18.97,34.35,page,https://www.savingplanets.com/Gorongosa.html
 "GOSAT-GW ""IBUKI GW"" (JAXA)",active,Earth Observation,"Launched from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/GOSAT-GW.html
+Gough Island Restoration Programme,active,Polar,"Gough Island, South Atlantic",-40.32,-9.94,page,https://www.savingplanets.com/Gough_Island_Restoration.html
 GRACE-FO (NASA / Germany),active,Earth Observation,"NASA JPL, Pasadena, California (mission management)",34.201,-118.172,hq,https://www.savingplanets.com/GRACE-FO.html
 Great Green Wall (African Union / UNCCD),active,Forests,Sahel – Senegal (western end),14.7,-17.4,page,https://www.savingplanets.com/Great_Green_Wall.html
 Great Green Wall (African Union / UNCCD),active,Forests,Sahel – Niger,13.5,2.1,page,https://www.savingplanets.com/Great_Green_Wall.html
@@ -130,6 +136,7 @@ Healthy Seas,active,Ocean,Poland (country-level),54.4,18.6,page,https://www.savi
 Healthy Seas,active,Ocean,Germany (country-level),54.3,10.1,page,https://www.savingplanets.com/Healthy_Seas.html
 Hera,active,Planetary Defense,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Hera.html
 HydroGNSS (ESA),active,Earth Observation,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/HydroGNSS.html
+IAATO: Responsible Antarctic Tourism,active,Polar,Antarctic Peninsula (approximate),-64.82,-63.4,page,https://www.savingplanets.com/IAATO.html
 Iceland Land Restoration (Land and Forest Iceland),active,Polar,Iceland's eroded highland edge,64.0,-19.0,page,https://www.savingplanets.com/Iceland_Land_Restoration.html
 ICESat-2 (NASA),active,Polar,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/ICESat-2.html
 IMAP (NASA),active,Space Weather,"Johns Hopkins APL, Laurel, Maryland (mission operations)",39.162,-76.898,hq,https://www.savingplanets.com/IMAP.html
@@ -137,6 +144,7 @@ INSAT-3DS Weather Satellite (ISRO),active,Earth Observation,"Satish Dhawan Space
 International Charter: Space and Major Disasters,active,Earth Observation,From orbit,,,,https://www.savingplanets.com/International_Charter.html
 International Coastal Cleanup (Ocean Conservancy),active,Ocean,"Texas coast, where the first Cleanup was held in 1986",29.3,-94.8,page,https://www.savingplanets.com/International_Coastal_Cleanup.html
 International Thwaites Glacier Collaboration,active,Polar,"Thwaites Glacier, West Antarctica",-75.5,-106.75,page,https://www.savingplanets.com/Thwaites_Glacier_Collaboration.html
+Inuit Circumpolar Council,active,Polar,"Iqaluit, Nunavut, Canada (2026 ICC General Assembly)",63.75,-68.52,page,https://www.savingplanets.com/Inuit_Circumpolar_Council.html
 ISS Water Recovery (NASA),active,Project Rawane,"NASA Johnson Space Center, Houston (ISS mission control)",29.559,-95.09,hq,https://www.savingplanets.com/ISS_Water_Recovery.html
 Joint Polar Satellite System (NOAA),active,Earth Observation,From orbit,,,,https://www.savingplanets.com/JPSS.html
 Juice,active,Space Disposal,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Juice.html
@@ -176,6 +184,7 @@ Methane Alert and Response System (UNEP),active,Earth Observation,"UNEP headquar
 MetOp-SG-A1 and Sentinel-5A (ESA / EUMETSAT),active,Earth Observation,"Launched from Kourou, French Guiana",5.24,-52.77,launch,https://www.savingplanets.com/MetOp-SG-A1_Sentinel-5A.html
 Mission Blue Hope Spots,active,Ocean,"Napa, California (HQ)",38.299,-122.286,hq,https://www.savingplanets.com/Mission_Blue_Hope_Spots.html
 MMX,upcoming,Space Disposal,"Launching from Tanegashima, Japan",30.4,130.97,launch,https://www.savingplanets.com/MMX.html
+MOSAiC Expedition: A Year Frozen in the Arctic Ice,active,Polar,Central Arctic Ocean (approximate drift area),88.0,30.0,page,https://www.savingplanets.com/MOSAiC_Expedition.html
 Mote Marine Laboratory,active,Ocean,"Sarasota, Florida (HQ)",27.33,-82.58,hq,https://www.savingplanets.com/Mote_Marine_Laboratory.html
 Mote Marine Laboratory,active,Ocean,"Florida's Coral Reef, Florida Keys",24.66,-81.45,page,https://www.savingplanets.com/Mote_Marine_Laboratory.html
 Mountain Gorilla Recovery,active,Forests,"Bwindi Impenetrable National Park, Uganda",-1.05,29.68,page,https://www.savingplanets.com/Mountain_Gorillas.html
@@ -190,6 +199,7 @@ Nepal Doubles Its Tigers,active,Forests,"Bardia National Park, Nepal",28.39,81.2
 NISAR (NASA–ISRO),active,Earth Observation,"Launched from Sriharikota, India",13.72,80.23,launch,https://www.savingplanets.com/NISAR.html
 Northrop Grumman SpaceLogistics,active,Space Disposal,"Dulles, Virginia (SpaceLogistics HQ, Northrop Grumman)",38.996,-77.448,hq,https://www.savingplanets.com/SpaceLogistics.html
 Ocean Voyages Institute,active,Ocean,North Pacific Gyre,35.0,-140.0,page,https://www.savingplanets.com/Ocean_Voyages_Institute.html
+Oceanites: Antarctic Penguin Census,active,Polar,"James Ross Island area, Antarctic Peninsula (approximate)",-64.1,-57.8,page,https://www.savingplanets.com/Oceanites_Penguin_Census.html
 OCO-2 Orbiting Carbon Observatory (NASA),active,Earth Observation,"Launched from Vandenberg, California",34.63,-120.61,launch,https://www.savingplanets.com/OCO-2.html
 Okavango Delta: The River That Ends in a Desert,active,Rivers,"Okavango Delta, Botswana",-19.28,22.9,page,https://www.savingplanets.com/Okavango_Delta.html
 One Tree Planted,active,Forests,"Shelburne, Vermont (HQ)",44.38,-73.23,hq,https://www.savingplanets.com/One_Tree_Planted.html
@@ -198,11 +208,14 @@ Orbital Data Centers,active,Space,From orbit,,,,https://www.savingplanets.com/Or
 OSIRIS-APEX and Apophis 2029 (NASA),active,Planetary Defense,"NASA Goddard, Greenbelt, Maryland (mission management)",38.991,-76.852,hq,https://www.savingplanets.com/OSIRIS-APEX.html
 PACE (NASA),active,Earth Observation,"Launched from Cape Canaveral, Florida",28.49,-80.58,launch,https://www.savingplanets.com/PACE.html
 Palau National Marine Sanctuary,active,Ocean,Palau,7.515,134.58,page,https://www.savingplanets.com/Palau_National_Marine_Sanctuary.html
+PAME: Protecting the Arctic Marine Environment,active,Polar,"Akureyri, Iceland (approximate)",65.68,-18.09,page,https://www.savingplanets.com/PAME_Arctic_Council.html
 Pan-STARRS Near-Earth Object Search,active,Planetary Defense,"Pan-STARRS telescopes, Haleakalā, Maui",20.708,-156.257,page,https://www.savingplanets.com/Pan-STARRS.html
 Papahānaumokuākea National Marine Sanctuary,active,Ocean,"Midway Atoll, Papahānaumokuākea",28.21,-177.37,page,https://www.savingplanets.com/Papahanaumokuakea.html
 Papahānaumokuākea National Marine Sanctuary,active,Ocean,"Nihoa, Papahānaumokuākea",23.06,-161.92,page,https://www.savingplanets.com/Papahanaumokuakea.html
 Parker Solar Probe (NASA),active,Space Weather,"Johns Hopkins Applied Physics Laboratory, Laurel, Maryland (mission partner)",39.165,-76.898,hq,https://www.savingplanets.com/Parker_Solar_Probe.html
+Penguin Watch: Count Penguins from Home,active,Polar,Antarctic Peninsula (camera region; approximate),-64.8,-63.5,page,https://www.savingplanets.com/Penguin_Watch.html
 Penobscot River Restoration (Maine),active,Rivers,"Milford Dam fish lift, Penobscot River, Maine",44.94,-68.65,page,https://www.savingplanets.com/Penobscot_River_Restoration.html
+Permafrost Pathways,active,Polar,"Interior Alaska, United States (approximate)",64.84,-147.72,page,https://www.savingplanets.com/Permafrost_Pathways.html
 "Phytoplankton, the Ocean's Oxygen Engine",active,Ocean,Worldwide,,,,https://www.savingplanets.com/Phytoplankton.html
 Plant-for-the-Planet,active,Forests,"Mayan forests, Yucatán Peninsula, Mexico",18.6,-89.4,page,https://www.savingplanets.com/Plant-for-the-Planet.html
 Plastic Bank,active,Ocean,Indonesia (country-level),-6.2,106.85,page,https://www.savingplanets.com/Plastic_Bank.html
@@ -213,6 +226,7 @@ Plastic Bank,active,Ocean,Thailand (country-level),13.75,100.5,page,https://www.
 Plastic Bank,active,Ocean,Cameroon (country-level),4.05,9.7,page,https://www.savingplanets.com/Plastic_Bank.html
 Plastic Odyssey,active,Ocean,"Marseille, France (expedition start)",43.3,5.37,page,https://www.savingplanets.com/Plastic_Odyssey.html
 Plato (ESA),upcoming,Project Rawane,"ESA headquarters, Paris (operating agency)",48.849,2.302,hq,https://www.savingplanets.com/Plato.html
+Polar Bears International,active,Polar,"Churchill, Manitoba, Canada (polar bear area; approximate)",58.77,-94.17,page,https://www.savingplanets.com/Polar_Bears_International.html
 Posidonia Seagrass Meadows,active,Ocean,"Balearic Islands, Spain",39.57,2.65,page,https://www.savingplanets.com/Posidonia_Meadows.html
 Predator Free 2050 (New Zealand),active,Forests,"Wellington, New Zealand",-41.29,174.78,page,https://www.savingplanets.com/Predator_Free_2050.html
 PREFIRE Polar CubeSats (NASA),active,Polar,"Launched from Rocket Lab Launch Complex 1, New Zealand",-39.26,177.86,launch,https://www.savingplanets.com/PREFIRE.html
@@ -241,6 +255,7 @@ Saiga Recovery on the Kazakh Steppe (Altyn Dala),active,Forests,"The Kazakh step
 Salt Marshes,active,Ocean,Worldwide,,,,https://www.savingplanets.com/Salt_Marshes.html
 Sargassum Watch System (USF),active,Ocean,"USF College of Marine Science, St. Petersburg, Florida",27.76,-82.64,page,https://www.savingplanets.com/Sargassum_Watch.html
 SARSAT Search and Rescue Satellites (NOAA),active,Earth Observation,"U.S. SARSAT Mission Control Center, Suitland, Maryland (NOAA)",38.852,-76.934,hq,https://www.savingplanets.com/SARSAT.html
+SCAR: Scientific Committee on Antarctic Research,active,Polar,"Cambridge, United Kingdom (approximate)",52.2,0.12,page,https://www.savingplanets.com/SCAR_Antarctic_Research.html
 SCISAT Ozone Watch (Canadian Space Agency),active,Polar,"University of Waterloo, Ontario, home of the SCISAT science team",43.47,-80.54,page,https://www.savingplanets.com/SCISAT.html
 Sea Turtle Conservancy,active,Ocean,"Tortuguero, Costa Rica",10.54,-83.5,page,https://www.savingplanets.com/Sea_Turtle_Conservancy.html
 Seabin,active,Ocean,"Sydney Harbour, Australia",-33.85,151.21,page,https://www.savingplanets.com/Seabin.html
@@ -253,9 +268,12 @@ SeaTrees,active,Ocean,Portugal kelp (country-level),38.7,-9.1,page,https://www.s
 SeaTrees,active,Ocean,California kelp (state-level),34.0,-118.5,page,https://www.savingplanets.com/SeaTrees.html
 Seychelles Marine Spatial Plan and Debt-for-Nature Swap,active,Ocean,"Aldabra Atoll, Seychelles",-9.42,46.35,page,https://www.savingplanets.com/Seychelles_Marine_Spatial_Plan.html
 SMAP Soil Moisture Active Passive (NASA),active,Earth Observation,"NASA Jet Propulsion Laboratory, Pasadena, California",34.2,-118.17,page,https://www.savingplanets.com/SMAP.html
+SmartICE: Sea-Ice Safety for Northern Communities,active,Polar,"Nain, Nunatsiavut, Canada (a SmartICE community)",56.54,-61.69,page,https://www.savingplanets.com/SmartICE.html
+SOCCOM: Robot Floats in the Southern Ocean,active,Polar,Southern Ocean (float deployment area; approximate),-55.0,-80.0,page,https://www.savingplanets.com/SOCCOM.html
 SOHO Solar and Heliospheric Observatory (ESA / NASA),active,Space Weather,"Toulouse, France, where SOHO was assembled",43.604,1.444,page,https://www.savingplanets.com/SOHO.html
 Solar Orbiter (ESA / NASA),active,Space Weather,"ESA mission control (ESOC), Darmstadt, Germany",49.871,8.622,hq,https://www.savingplanets.com/Solar_Orbiter.html
 SOLAR-1 (NOAA),active,Space Weather,"NOAA headquarters, Silver Spring, Maryland (operating agency)",38.992,-77.031,hq,https://www.savingplanets.com/SOLAR_1.html
+SOOS: Southern Ocean Observing System,active,Polar,"Hobart, Tasmania, Australia (SOOS office at IMAS)",-42.88,147.33,page,https://www.savingplanets.com/SOOS.html
 South Georgia Habitat Restoration,active,Polar,"South Georgia Island, South Atlantic Ocean",-54.28,-36.51,page,https://www.savingplanets.com/South_Georgia_Habitat_Restoration.html
 SPHEREx (NASA),active,Project Rawane,"NASA JPL, Pasadena, California (mission management)",34.201,-118.172,hq,https://www.savingplanets.com/SPHEREx.html
 Starfish Space Otter,active,Space Disposal,"Tukwila, Washington (Starfish Space HQ)",47.459,-122.254,hq,https://www.savingplanets.com/Starfish_Otter.html
@@ -265,6 +283,7 @@ Surfrider Foundation,active,Ocean,"San Clemente, California (HQ)",33.427,-117.61
 Svalbard Global Seed Vault,active,Polar,"Svalbard Global Seed Vault, near Longyearbyen, Svalbard, Norway",78.2357,15.4913,page,https://www.savingplanets.com/Svalbard_Global_Seed_Vault.html
 SWOT (NASA–CNES),active,Earth Observation,"NASA JPL, Pasadena, California (mission management)",34.201,-118.172,hq,https://www.savingplanets.com/SWOT.html
 SWOT (NASA–CNES),active,Earth Observation,"CNES, Toulouse, France (mission partner)",43.562,1.481,hq,https://www.savingplanets.com/SWOT.html
+Tallurutiup Imanga National Marine Conservation Area,active,Polar,"Tallurutiup Imanga (Lancaster Sound), Nunavut, Canada (approximate)",74.3,-84.0,page,https://www.savingplanets.com/Tallurutiup_Imanga_NMCA.html
 Tanager-1 (Carbon Mapper / Planet),active,Earth Observation,"First published plume: Karachi, Pakistan",24.86,67.0,page,https://www.savingplanets.com/Tanager-1.html
 TEMPO Air Quality Mission (NASA),active,Earth Observation,"Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (mission lead)",42.381,-71.128,hq,https://www.savingplanets.com/TEMPO.html
 Terraformation,active,Forests,"'Iole, North Kohala, Hawaii",20.23,-155.8,page,https://www.savingplanets.com/Terraformation.html
@@ -304,5 +323,6 @@ Webb and 2024 YR4,active,Planetary Defense,"Space Telescope Science Institute, B
 WeForest,active,Forests,Zambia field office (Lusaka),-15.417,28.283,page,https://www.savingplanets.com/WeForest.html
 WeForest,active,Forests,Ethiopia field office (Addis Ababa),9.03,38.74,page,https://www.savingplanets.com/WeForest.html
 "Whales, Ocean Gardeners",active,Ocean,Worldwide,,,,https://www.savingplanets.com/Whales_Ocean_Gardeners.html
+WWF Arctic Programme,active,Polar,"Last Ice Area, between northern Canada and Greenland (approximate)",80.0,-70.0,page,https://www.savingplanets.com/WWF_Arctic_Programme.html
 Yellowstone Wolves,active,Forests,"Yellowstone National Park, Wyoming",44.6,-110.5,page,https://www.savingplanets.com/Yellowstone_Wolves.html
 Zero Debris Charter (ESA),active,Space Disposal,"ESA headquarters, Paris (charter facilitator)",48.849,2.302,hq,https://www.savingplanets.com/Zero_Debris_Charter.html

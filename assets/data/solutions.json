@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T17:24:30.877Z",
+ "generated": "2026-10-29T04:46:26.708Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -946,12 +946,32 @@
    "href": "Polar.html",
    "items": [
     {
+     "href": "Arctic_Basecamp.html",
+     "name": "Arctic Basecamp"
+    },
+    {
      "href": "Arctic_Weather_Satellite.html",
      "name": "Arctic Weather Satellite and EPS-Sterna (ESA/EUMETSAT)"
     },
     {
+     "href": "ASOC_Antarctic_Coalition.html",
+     "name": "ASOC: Antarctic and Southern Ocean Coalition"
+    },
+    {
+     "href": "Beyond_EPICA_Oldest_Ice.html",
+     "name": "Beyond EPICA – Oldest Ice"
+    },
+    {
+     "href": "CAFF_Arctic_Biodiversity.html",
+     "name": "CAFF: Conservation of Arctic Flora and Fauna"
+    },
+    {
      "href": "Carbfix.html",
      "name": "Carbfix: Turning CO2 Into Stone"
+    },
+    {
+     "href": "CCAMLR.html",
+     "name": "CCAMLR: Conserving Antarctic Marine Life"
     },
     {
      "href": "CIMR.html",
@@ -970,6 +990,14 @@
      "name": "GCOM-W &quot;SHIZUKU&quot; Sea-Ice Watch (JAXA)"
     },
     {
+     "href": "Gough_Island_Restoration.html",
+     "name": "Gough Island Restoration Programme"
+    },
+    {
+     "href": "IAATO.html",
+     "name": "IAATO: Responsible Antarctic Tourism"
+    },
+    {
      "href": "Iceland_Land_Restoration.html",
      "name": "Iceland Land Restoration (Land and Forest Iceland)"
     },
@@ -980,6 +1008,34 @@
     {
      "href": "Thwaites_Glacier_Collaboration.html",
      "name": "International Thwaites Glacier Collaboration"
+    },
+    {
+     "href": "Inuit_Circumpolar_Council.html",
+     "name": "Inuit Circumpolar Council"
+    },
+    {
+     "href": "MOSAiC_Expedition.html",
+     "name": "MOSAiC Expedition: A Year Frozen in the Arctic Ice"
+    },
+    {
+     "href": "Oceanites_Penguin_Census.html",
+     "name": "Oceanites: Antarctic Penguin Census"
+    },
+    {
+     "href": "PAME_Arctic_Council.html",
+     "name": "PAME: Protecting the Arctic Marine Environment"
+    },
+    {
+     "href": "Penguin_Watch.html",
+     "name": "Penguin Watch: Count Penguins from Home"
+    },
+    {
+     "href": "Permafrost_Pathways.html",
+     "name": "Permafrost Pathways"
+    },
+    {
+     "href": "Polar_Bears_International.html",
+     "name": "Polar Bears International"
     },
     {
      "href": "PREFIRE.html",
@@ -998,8 +1054,24 @@
      "name": "Ross Sea Region Marine Protected Area"
     },
     {
+     "href": "SCAR_Antarctic_Research.html",
+     "name": "SCAR: Scientific Committee on Antarctic Research"
+    },
+    {
      "href": "SCISAT.html",
      "name": "SCISAT Ozone Watch (Canadian Space Agency)"
+    },
+    {
+     "href": "SmartICE.html",
+     "name": "SmartICE: Sea-Ice Safety for Northern Communities"
+    },
+    {
+     "href": "SOCCOM.html",
+     "name": "SOCCOM: Robot Floats in the Southern Ocean"
+    },
+    {
+     "href": "SOOS.html",
+     "name": "SOOS: Southern Ocean Observing System"
     },
     {
      "href": "South_Georgia_Habitat_Restoration.html",
@@ -1008,6 +1080,14 @@
     {
      "href": "Svalbard_Global_Seed_Vault.html",
      "name": "Svalbard Global Seed Vault"
+    },
+    {
+     "href": "Tallurutiup_Imanga_NMCA.html",
+     "name": "Tallurutiup Imanga National Marine Conservation Area"
+    },
+    {
+     "href": "WWF_Arctic_Programme.html",
+     "name": "WWF Arctic Programme"
     }
    ]
   },
@@ -1294,14 +1374,14 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 246,
+  "solutions": 266,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
-   "corporate": 18,
-   "government": 26,
-   "agency": 117,
-   "nonprofit": 65,
+   "corporate": 19,
+   "government": 30,
+   "agency": 121,
+   "nonprofit": 76,
    "natural": 20
   },
   "upcomingMissions": 27,
@@ -1324,7 +1404,7 @@
     ]
    }
   ],
-  "taggedSolutions": 246
+  "taggedSolutions": 266
  },
  "categories": {
   "ocean": {
@@ -1445,14 +1525,14 @@
   },
   "polar": {
    "name": "Polar",
-   "solutions": 15,
+   "solutions": 35,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 10,
-    "corporate": 1,
-    "government": 3,
-    "nonprofit": 1
+    "nonprofit": 12,
+    "agency": 14,
+    "government": 7,
+    "corporate": 2
    },
    "upcomingMissions": 3,
    "impactTotals": [],
@@ -1716,6 +1796,17 @@
    "added": "2026-10-18"
   },
   {
+   "url": "Arctic_Basecamp.html",
+   "title": "Arctic Basecamp",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Arctic_Weather_Satellite.html",
    "title": "Arctic Weather Satellite and EPS-Sterna (ESA/EUMETSAT)",
    "category": "polar",
@@ -1791,6 +1882,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "ASOC_Antarctic_Coalition.html",
+   "title": "ASOC: Antarctic and Southern Ocean Coalition",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Astroscale.html",
@@ -1914,6 +2016,17 @@
    "missions": []
   },
   {
+   "url": "Beyond_EPICA_Oldest_Ice.html",
+   "title": "Beyond EPICA – Oldest Ice",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Billion_Oyster_Project.html",
    "title": "Billion Oyster Project",
    "category": "ocean",
@@ -1949,6 +2062,17 @@
     }
    ],
    "added": "2026-10-20"
+  },
+  {
+   "url": "CAFF_Arctic_Biodiversity.html",
+   "title": "CAFF: Conservation of Arctic Flora and Fauna",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "CAMS.html",
@@ -1998,6 +2122,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-16"
+  },
+  {
+   "url": "CCAMLR.html",
+   "title": "CCAMLR: Conserving Antarctic Marine Life",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Chandrayaan-5_LUPEX.html",
@@ -2874,6 +3009,17 @@
    "missions": []
   },
   {
+   "url": "Gough_Island_Restoration.html",
+   "title": "Gough Island Restoration Programme",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "GRACE-FO.html",
    "title": "GRACE-FO (NASA / Germany)",
    "category": "earth-observation",
@@ -3067,6 +3213,17 @@
    "added": "2026-10-15"
   },
   {
+   "url": "IAATO.html",
+   "title": "IAATO: Responsible Antarctic Tourism",
+   "category": "polar",
+   "type": "solution",
+   "classification": "corporate",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Iberian_Lynx.html",
    "title": "The Iberian Lynx Comeback",
    "category": "forests",
@@ -3152,6 +3309,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-17"
+  },
+  {
+   "url": "Inuit_Circumpolar_Council.html",
+   "title": "Inuit Circumpolar Council",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "ISS_Water_Recovery.html",
@@ -3606,6 +3774,17 @@
    "missions": []
   },
   {
+   "url": "MOSAiC_Expedition.html",
+   "title": "MOSAiC Expedition: A Year Frozen in the Arctic Ice",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Mote_Marine_Laboratory.html",
    "title": "Mote Marine Laboratory",
    "category": "ocean",
@@ -3775,6 +3954,17 @@
    "missions": []
   },
   {
+   "url": "Oceanites_Penguin_Census.html",
+   "title": "Oceanites: Antarctic Penguin Census",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Oceans.html",
    "title": "Oceans",
    "category": "ocean",
@@ -3885,6 +4075,17 @@
    "added": "2026-10-19"
   },
   {
+   "url": "PAME_Arctic_Council.html",
+   "title": "PAME: Protecting the Arctic Marine Environment",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Pan-STARRS.html",
    "title": "Pan-STARRS Near-Earth Object Search",
    "category": "planetary-defense",
@@ -3918,6 +4119,17 @@
    "added": "2026-10-17"
   },
   {
+   "url": "Penguin_Watch.html",
+   "title": "Penguin Watch: Count Penguins from Home",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "Penobscot_River_Restoration.html",
    "title": "Penobscot River Restoration (Maine)",
    "category": "rivers",
@@ -3927,6 +4139,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-17"
+  },
+  {
+   "url": "Permafrost_Pathways.html",
+   "title": "Permafrost Pathways",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Phytoplankton.html",
@@ -4020,6 +4243,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Polar_Bears_International.html",
+   "title": "Polar Bears International",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Posidonia_Meadows.html",
@@ -4367,6 +4601,17 @@
    "missions": []
   },
   {
+   "url": "SCAR_Antarctic_Research.html",
+   "title": "SCAR: Scientific Committee on Antarctic Research",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "SCISAT.html",
    "title": "SCISAT Ozone Watch (Canadian Space Agency)",
    "category": "polar",
@@ -4539,6 +4784,28 @@
    "added": "2026-10-17"
   },
   {
+   "url": "SmartICE.html",
+   "title": "SmartICE: Sea-Ice Safety for Northern Communities",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
+   "url": "SOCCOM.html",
+   "title": "SOCCOM: Robot Floats in the Southern Ocean",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
+  },
+  {
    "url": "SOHO.html",
    "title": "SOHO Solar and Heliospheric Observatory (ESA / NASA)",
    "category": "space-weather",
@@ -4588,6 +4855,17 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "SOOS.html",
+   "title": "SOOS: Southern Ocean Observing System",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "South_Georgia_Habitat_Restoration.html",
@@ -4733,6 +5011,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Tallurutiup_Imanga_NMCA.html",
+   "title": "Tallurutiup Imanga National Marine Conservation Area",
+   "category": "polar",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Tanager-1.html",
@@ -5126,6 +5415,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "WWF_Arctic_Programme.html",
+   "title": "WWF Arctic Programme",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-10-28"
   },
   {
    "url": "Yellowstone_Wolves.html",

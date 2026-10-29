@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-27T17:24:37Z",
+"generated": "2026-10-29T04:46:33Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -57,6 +57,15 @@
 "lng": -80.578,
 "launches": [
 {
+"net": "2026-11-13T00:00:00Z",
+"exact": true,
+"prec": "DAY",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan VC6L",
+"mission": "Amazon Leo (LV-01)",
+"pad": "Space Launch Complex 41"
+},
+{
 "net": "2026-11-30T00:00:00Z",
 "exact": false,
 "prec": "M",
@@ -64,15 +73,6 @@
 "rocket": "Falcon 9 Block 5",
 "mission": "Cygnus CRS-2 NG-25",
 "pad": "Space Launch Complex 40"
-},
-{
-"net": "2026-11-30T00:00:00Z",
-"exact": false,
-"prec": "M",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan VC6L",
-"mission": "Amazon Leo (LV-01)",
-"pad": "Space Launch Complex 41"
 },
 {
 "net": "2026-12-31T00:00:00Z",
@@ -271,15 +271,6 @@
 "rocket": "Vulcan",
 "mission": "SILENTBARKER 2/NROL-118",
 "pad": "Space Launch Complex 41"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan",
-"mission": "USSF-16",
-"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -385,9 +376,9 @@
 "lng": 177.865,
 "launches": [
 {
-"net": "2026-11-03T00:00:00Z",
+"net": "2026-11-02T08:45:00Z",
 "exact": true,
-"prec": "DAY",
+"prec": "HR",
 "provider": "Rocket Lab",
 "rocket": "Electron",
 "mission": "The Sea God Surveys (iQPS Launch 9)",
@@ -541,9 +532,9 @@
 "lng": 126.366667,
 "launches": [
 {
-"net": "2026-11-30T00:00:00Z",
-"exact": false,
-"prec": "M",
+"net": "2026-11-04T05:00:00Z",
+"exact": true,
+"prec": "HR",
 "provider": "Agency for Defense Development",
 "rocket": "Mir",
 "mission": "Demo Flight",
@@ -557,9 +548,9 @@
 "lng": -97.157,
 "launches": [
 {
-"net": "2026-12-31T00:00:00Z",
+"net": "2026-11-30T00:00:00Z",
 "exact": false,
-"prec": "Q4",
+"prec": "M",
 "provider": "SpaceX",
 "rocket": "Starship",
 "mission": "Flight 15",
@@ -605,16 +596,7 @@
 "lng": -120.572,
 "launches": [
 {
-"net": "2026-10-27T07:25:51Z",
-"exact": true,
-"prec": "SEC",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Starlink Group 15-16",
-"pad": "Space Launch Complex 4E"
-},
-{
-"net": "2026-10-30T04:02:00Z",
+"net": "2026-10-31T03:48:00Z",
 "exact": true,
 "prec": "MIN",
 "provider": "SpaceX",
@@ -623,7 +605,7 @@
 "pad": "Space Launch Complex 4E"
 },
 {
-"net": "2026-11-02T01:56:00Z",
+"net": "2026-11-03T01:42:00Z",
 "exact": true,
 "prec": "MIN",
 "provider": "SpaceX",
@@ -632,12 +614,21 @@
 "pad": "Space Launch Complex 4E"
 },
 {
-"net": "2026-11-05T05:14:00Z",
+"net": "2026-11-06T02:21:00Z",
 "exact": true,
 "prec": "MIN",
 "provider": "SpaceX",
 "rocket": "Falcon 9 Block 5",
 "mission": "Starlink Group 15-21",
+"pad": "Space Launch Complex 4E"
+},
+{
+"net": "2026-11-10T03:03:00Z",
+"exact": true,
+"prec": "MIN",
+"provider": "SpaceX",
+"rocket": "Falcon 9 Block 5",
+"mission": "USSF-xxx (\"R-5\")",
 "pad": "Space Launch Complex 4E"
 },
 {
@@ -899,15 +890,6 @@
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
 "mission": "SDA Tranche 2 Transport Layer B",
-"pad": "Space Launch Complex 3E"
-},
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "Y",
-"provider": "United Launch Alliance",
-"rocket": "Vulcan",
-"mission": "USSF-114",
 "pad": "Space Launch Complex 3E"
 }
 ]
