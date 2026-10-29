@@ -22,7 +22,7 @@
     // Oct 29 2026: the live scene (hero-themes.js) stays frozen during the intro; it builds itself at 13.2 s, when the ring
     // close-up fully covers the hero, and resumes on sp-intro-end.
     var idleT = setTimeout(function () { fire('sp-intro-idle'); }, 13200);
-    var end = function () { if (ended) return; ended = true; clearTimeout(idleT); box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; fire('sp-intro-end'); };
+    var end = function () { if (ended) return; ended = true; clearTimeout(idleT); hero.classList.add('hs-titlewait'); setTimeout(function () { hero.classList.remove('hs-titlewait'); }, 9000); box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; fire('sp-intro-end'); };
     box.addEventListener('animationend', function (ev) { if (ev.target === box) end(); });
     setTimeout(end, 26000); // safety net if animationend never fires
   }

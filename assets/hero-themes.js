@@ -476,7 +476,7 @@
     if (slowT >= 3) { QL++; slowT = 0; ema = 0;
       sizeCanvas(cGround, W, H - gTop, 0, gTop); sizeCanvas(cFx, W, H); if (glOk) gl.viewport(0, 0, cGround.width, cGround.height); } }
   function loop(now) { raf = 0; nFrames++; var raw = (now - last) / 1000, dt = Math.min(0.1, raw); last = now; tGlide += dt; quality(Math.min(raw, 0.25));
-    var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += dt; frame(false); if (running()) raf = requestAnimationFrame(loop); }
+    var m = sceneMix(tScene); if (m > 0.98 && hero.classList.contains('hs-titlewait')) hero.classList.remove('hs-titlewait'); if (!hold || (m > 0 && m < 1)) tScene += dt; frame(false); if (running()) raf = requestAnimationFrame(loop); }
   function running() { return !reduced && onScreen && !document.hidden && !intro(); }
   // Oct 29 2026 (founder: Saturn intro start choppy): while the Saturn intro covers the hero the live scene is frozen (no frame
   // loop, scene clock held at the Saturn/Enceladus start) and its heavy setup waits until the intro's ring close-up is fully
@@ -508,7 +508,9 @@
       var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
       var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
   var introIdle = false;
-  window.addEventListener('sp-intro-idle', function () { introIdle = true; if (deferred) { deferred = false; start(); } introIdle = false; });
+  window.addEventListener('sp-intro-idle', function () { introIdle = true; if (deferred) { deferred = false; start(); }
+    // Oct 29 2026 (founder): after the intro, Earth rises first, then the title fades in (hs-titlewait cleared in loop()).
+    tScene = tGlide = A_LEN - 1.5; if (started && !box.classList.contains('hs-static')) frame(true); introIdle = false; });
   window.addEventListener('sp-intro-end', function () { if (deferred) { deferred = false; start(); } kick(); });
   var deferred = false;
   function start() { if (started) return; if (hero.classList.contains('hs-introing') && !introIdle) { deferred = true; return; } started = true;
