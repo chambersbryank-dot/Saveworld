@@ -477,7 +477,11 @@
       sizeCanvas(cGround, W, H - gTop, 0, gTop); sizeCanvas(cFx, W, H); if (glOk) gl.viewport(0, 0, cGround.width, cGround.height); } }
   function loop(now) { raf = 0; nFrames++; var raw = (now - last) / 1000, dt = Math.min(0.1, raw); last = now; tGlide += dt; quality(Math.min(raw, 0.25));
     var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += dt; frame(false); if (running()) raf = requestAnimationFrame(loop); }
-  function running() { return !reduced && onScreen && !document.hidden; }
+  function running() { return !reduced && onScreen && !document.hidden && !intro(); }
+  // Oct 29 2026 (founder: Saturn intro start choppy): while the Saturn intro covers the hero the live scene is frozen (no frame
+  // loop, scene clock held at the Saturn/Enceladus start) and its heavy setup waits until the intro's ring close-up is fully
+  // opaque (event sp-intro-idle), so WebGL/texture work never competes with the opening rise; sp-intro-end resumes the loop.
+  function intro() { return hero.classList.contains('hs-introing') && !introIdle; }
   function kick() { if (running() && !raf) { last = performance.now(); warm = 0; slowT = 0; ema = 0; raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
   // Keep the current scene (and its caption) while a caption is hovered or focused, so it never vanishes under the pointer or focus.
   caps.forEach(function (c) { ['mouseenter', 'focus'].forEach(function (e) { c.addEventListener(e, function () { hold = true; }); });
@@ -503,7 +507,11 @@
       var di = g.getExtension('WEBGL_debug_renderer_info'), rn = di ? String(g.getParameter(di.UNMASKED_RENDERER_WEBGL)) : '';
       var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
       var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
-  function start() { if (started) return; started = true;
+  var introIdle = false;
+  window.addEventListener('sp-intro-idle', function () { introIdle = true; if (deferred) { deferred = false; start(); } introIdle = false; });
+  window.addEventListener('sp-intro-end', function () { if (deferred) { deferred = false; start(); } kick(); });
+  var deferred = false;
+  function start() { if (started) return; if (hero.classList.contains('hs-introing') && !introIdle) { deferred = true; return; } started = true;
     if ((navigator.connection && navigator.connection.saveData) || !hwGL()) { box.classList.add('hs-static'); return; }
     setup(); frame(true); kick();
     setTimeout(loadBM, 2500); // Earth texture after first paint (it is first seen ~20 s into the loop)

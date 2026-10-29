@@ -18,16 +18,20 @@
     if (done) return; done = true;
     try { sessionStorage.setItem('spSatIntro', '1'); } catch (e) {}
     hero.classList.add('hs-introing'); box.classList.add('run');
-    var end = function () { box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; };
+    var ended = false, fire = function (n) { try { window.dispatchEvent(new Event(n)); } catch (e) {} };
+    // Oct 29 2026: the live scene (hero-themes.js) stays frozen during the intro; it builds itself at 13.2 s, when the ring
+    // close-up fully covers the hero, and resumes on sp-intro-end.
+    var idleT = setTimeout(function () { fire('sp-intro-idle'); }, 13200);
+    var end = function () { if (ended) return; ended = true; clearTimeout(idleT); box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; fire('sp-intro-end'); };
     box.addEventListener('animationend', function (ev) { if (ev.target === box) end(); });
     setTimeout(end, 26000); // safety net if animationend never fires
   }
   function one() { if (--left <= 0) go(); }
   imgs.forEach(function (im) {
     im.onload = function () { (im.decode ? im.decode() : Promise.resolve()).then(one, one); };
-    im.onerror = function () { done = true; box.hidden = true; };
+    im.onerror = function () { if (done) return; done = true; box.hidden = true; try { window.dispatchEvent(new Event('sp-intro-end')); } catch (e) {} };
     im.sizes = im.getAttribute('data-sizes') || '100vw';
     im.srcset = im.getAttribute('data-srcset');
   });
-  if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) { box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; } });
+  if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) { box.classList.remove('run'); hero.classList.remove('hs-introing'); box.hidden = true; try { window.dispatchEvent(new Event('sp-intro-end')); } catch (e) {} } });
 })();
