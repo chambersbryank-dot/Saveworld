@@ -11,6 +11,7 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+- Oct 30 (GLOBE Program help desk): **GLOBE_Program.html feedback is live** (PR #164). Overview OK; title "Earth Science for All Ages" (all 6 langs); both app buttons point at the official download page; Oct 16, 2026 figure dates unchanged. Pending: Bryan sends the step-two reply from partner-relations@. Detail: "Oct 30 2026 (HST): GLOBE Program help-desk feedback".
 - Oct 30 (Matisse Bloem, Justdiggit, clarification via info@justdiggit.org): **32.3 million is trees; 525,000 hectares is grass.** WHEN: "It brought back grass and vegetation — 525,000 hectares in total — and retained 10.5 billion liters of water in 2025." IMPACT: "Justdiggit reports 525,000 hectares under restoration, more than 800,000 water bunds dug, and 32.3 million trees recovered in all (organization figures)." Summary, hub/Solutions cards, map + edu JSON, and search desc again say 32.3 million trees. Kids explainer left grass-only (already correct, #158). fr/es/ar/it/he light machine-draft. Map cache `20261030jt`.
 - Oct 30 (founder-approved): **Homepage Vision**. Vision section directly under the hero on index.html (en/fr/es/ar/it/he): founder English (266 solutions, BeforeSavingPlanets chip https://www.beforesavingplanets.com/ plus Explore solutions). fr/es/ar/it/he machine-drafted with the same 🤖 note as Learn_Rocket_Propulsion. Generator: scripts/build-home-vision.py (after build-home-numbers in weekly-sync); build-home-trim keeps the VISION block visible under the hero; strings also in i18n/<lang>.json. An earlier same-day Justdiggit edit had tied 32.3 million to grass and vegetation; Matisse's clarification above corrects that. Kids explainer was already grass-only (#158).
 - Oct 29 (~6 AM HST, founder): **Home Saturn hero timing**: 'WHERE IT ALL BEGINS' (gold, 6 langs, `BEGINS` in scripts/build-hero-themes.py) fades in 0.5-2.9 s over the rising Saturn and out at ~18-20 s; title block hidden through the intro, live scene jumps to just before the Earthrise crossfade at the ring close-up (13.2 s), and the title fades in (2 s) once Earth is fully in (~29 s); 9 s fallback if no live scene. Builds on #160, no other motion changes. Reduced motion/repeat visits: unchanged (no intro, title visible).
@@ -247,6 +248,7 @@ Detail for each item is in the dated sections below.
 - (l) **Remaining Learn items**: per-language glossary review against ESA/CNES/ASI terms, SI diagrams, Hebrew Careers BLS link titles (still English), Space Passport QR export, and the hard-coded "3 learning tools" count (no source).
 
 **User to-dos**
+- [ ] GLOBE help desk: Bryan to approve/send the step-two "that's fixed, please review" reply from partner-relations@ in the same thread (step-one already sent; the ticket-system echo is not a separate action). See "Oct 30 2026 (HST): GLOBE Program help-desk feedback".
 - [x] ~~GA4 `search_term` custom dimension~~: obsolete, GA4 was removed Oct 16 (Cloudflare Web Analytics).
 - [ ] Old GA property G-M5L2259Z68: already off the site; decide whether to delete the property.
 - [ ] **Roll the Cloudflare token.**
@@ -1210,6 +1212,12 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - No repo page changes, no STYLEV bump. Outside copy (cohost-1016, partner_outreach, linkedin plans, translated-scripts) already says 266; drafts/09 sitemap note 2,263 matches.
 - Earlier flags unchanged (promo transcripts say 246 as recorded, Big Questions per-language counts, "three tracks" kicker, Scoreboard "As of October 11" label, About "Cited on N pages", "3 learning tools" unsourced, Arabic plurals, it/Amazing_Facts h1, solution-tag-map at 191).
 - Milestones: none new (250 solutions already reported Oct 29).
+
+## Oct 30 2026 (HST): GLOBE Program help-desk feedback
+- Partner thread (partner-relations@ → help@nasaglobe.org), subject about GLOBE_Program.html.
+- Their feedback (msg ~1a18db88732d6270): overview OK; retitle "Student Earth Science" (all ages); keep Oct 16, 2026 figure dates; point "Get the GLOBE Observer App" to https://www.globe.gov/about/ready-to-join/download-the-app.
+- Our step-one acknowledgment sent; PR #164 merged and live: title "Earth Science for All Ages" (all 6 langs), both app buttons → official app page, Oct 16 dates unchanged. observer.globe.gov remains only as a citation source.
+- Pending: Bryan to approve/send the step-two "that's fixed, please review" reply from partner-relations@ in the same thread. Ticket-system echo of our step-one (msg ~1a18dc4bbaef8ea5) is not a separate GLOBE action item.
 
 ## Oct 26 2026 (HST): daily translation sync
 - weekly-sync.sh ran clean at 8d1677a1a, pushed as f9b69aa04 (All translations current, SEO 350 checked / 0 errors / 350 warnings (desc/title length), sitemap 2,100 URLs, SI credits 258 captions on 233 pages, pagefind 2,107 pages). 2,541 files: routine churn (critical CSS re-inlined, OG cards for 95 pages, JSON-LD, KaTeX markup on course pages, launch feed, pagefind/semantic index). styles.css: TIGHT-CARDS and LOGO blocks moved below SP-BANNER / HOME-TRIM by their generators, content unchanged. No STYLEV bump.
