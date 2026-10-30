@@ -73,6 +73,7 @@ def grab(region):
     def take(name, span):
         nonlocal region
         if span: B[name] = region[span[0]:span[1]]; region = region[:span[0]] + region[span[1]:]
+    take('vision', marker(region, 'VISION'))  # Oct 30: stays visible, directly under the hero (scripts/build-home-vision.py)
     take('impact', marker(region, 'IMPACT'))
     take('promo', marker(region, 'PROMO'))
     take('wmap', marker(region, 'WMAP-LINK'))
@@ -92,7 +93,7 @@ def grab(region):
     take('mission', sec(region, r'<section [^>]*class="mission-block"'))
     return B, region
 
-ORDER = ['impact', 'promo', 'mission', 'wmap', 'domains', 'audience', 'edulinks', 'sotw', 'partner', 'solutions', 'stats', 'scoreboard', 'news', 'newsletter', 'actions']
+ORDER = ['vision', 'impact', 'promo', 'mission', 'wmap', 'domains', 'audience', 'edulinks', 'sotw', 'partner', 'solutions', 'stats', 'scoreboard', 'news', 'newsletter', 'actions']
 PARK = ['impact', 'promo', 'mission', 'wmap', 'domains', 'sotw', 'partner', 'stats', 'scoreboard', 'news', 'newsletter', 'actions']
 nomark = lambda h: re.sub(r'<!-- [A-Z0-9-]+:(?:START|END) -->', '', h)
 txt = lambda h: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', h)).strip()
@@ -152,7 +153,7 @@ def do_home(L):
         if txt(rest): print(f'  {f}: unknown content kept visible: {txt(rest)[:80]!r}')
         parked = '<template id="home-parked" data-why="Oct 20 clutter fix #1: parked, not deleted; see scripts/build-home-trim.py">' + \
                  ''.join(B[k] for k in ORDER if k in PARK and k in B) + '</template>'
-        new = (parked + find_section(L, B) + B.get('solutions', '') + B.get('audience', '') + B.get('edulinks', '') +
+        new = (B.get('vision', '') + parked + find_section(L, B) + B.get('solutions', '') + B.get('audience', '') + B.get('edulinks', '') +
                new_section(B, L) + join_section(B) + rest)
     s = s[:he] + new + s[me:]
     fm = marker(s, 'FOOTER-MAP')
