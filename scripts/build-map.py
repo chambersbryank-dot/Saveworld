@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261030gv'  # Oct 30: Justdiggit blurb (grass and vegetation, not trees) so cached map JSON refreshes
+ASSETV = '20261030jt'  # Oct 30: Justdiggit blurb is 32.3 million trees again (Matisse Bloem); When line is 525,000 hectares
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
