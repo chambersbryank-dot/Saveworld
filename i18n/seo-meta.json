@@ -1797,24 +1797,27 @@
   },
   "GLOBE_Program.html": {
     "en": {
-      "title": "The GLOBE Program: Student Earth Science",
+      "title": "The GLOBE Program: Earth Science for All Ages",
       "description": "A worldwide science program where students and citizen scientists collect real environmental data: more than 293 million measurements from 127 countries."
     },
     "fr": {
-      "title": "Le programme GLOBE : science de la Terre à l'école",
+      "title": "Le programme GLOBE : science de la Terre pour tous les âges",
       "description": "Un programme scientifique mondial où élèves et citoyens recueillent de vraies données sur l'environnement : plus de 293 millions de mesures dans 127 pays."
     },
     "es": {
-      "title": "El programa GLOBE: ciencia de la Tierra escolar",
+      "title": "El programa GLOBE: ciencia de la Tierra para todas las edades",
       "description": "Un programa científico mundial en el que estudiantes y ciudadanos recogen datos ambientales reales: más de 293 millones de mediciones de 127 países."
     },
     "ar": {
-      "title": "برنامج GLOBE: علوم الأرض للطلاب",
+      "title": "برنامج GLOBE: علوم الأرض لكل الأعمار",
       "description": "برنامج علمي عالمي يجمع فيه الطلاب والعلماء المواطنون بيانات بيئية حقيقية: أكثر من 293 مليون قياس من 127 بلدًا، متاحة مجانًا للجميع."
     },
     "it": {
-      "title": "Il programma GLOBE: scienze della Terra a scuola",
+      "title": "Il programma GLOBE: scienze della Terra per tutte le età",
       "description": "Un programma scientifico mondiale in cui studenti e cittadini raccolgono veri dati ambientali: oltre 293 milioni di misurazioni da 127 paesi."
+    },
+    "he": {
+      "title": "תוכנית GLOBE: מדעי כדור הארץ לכל הגילאים"
     }
   },
   "Argo.html": {
