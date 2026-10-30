@@ -1205,6 +1205,12 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Earlier flags unchanged (promo video transcripts on home/About say 246 because that is what the recorded video shows, Big Questions per-language counts, "three tracks" kicker, Scoreboard "As of October 11" label, Amazing Facts 26 vs tagged pages, About "Cited on N pages", "3 learning tools" unsourced, Arabic plurals, it/Amazing_Facts h1, solution-tag-map at 191).
 - Milestones: **250 solutions crossed (266)**; 2,200 sitemap pages crossed (2,263); 370+ pages per language.
 
+## Oct 30 2026 (HST): daily numbers check
+- Verified at c739cea67 (after 7b9050a7f home counts and PRs #162-#163: homepage Vision, Justdiggit corrections): **266 solutions** (Solutions.html cards = 266 in en/fr/es/ar/it/he), homepage counter 266 / 11 hubs / 6 languages / 3 tools in every language, Polar (35), Water 117 / Land 38 / Space 111, new Vision line "266 solutions across 11 hubs in six languages" (6 langs), Top Ten meta, World Map and Ways to Help all 266. 21 myths, 26 Amazing Facts, Big Questions 77 en. Sitemap 2,263 unchanged. Oct 29 home-counter mismatch is resolved.
+- No repo page changes, no STYLEV bump. Outside copy (cohost-1016, partner_outreach, linkedin plans, translated-scripts) already says 266; drafts/09 sitemap note 2,263 matches.
+- Earlier flags unchanged (promo transcripts say 246 as recorded, Big Questions per-language counts, "three tracks" kicker, Scoreboard "As of October 11" label, About "Cited on N pages", "3 learning tools" unsourced, Arabic plurals, it/Amazing_Facts h1, solution-tag-map at 191).
+- Milestones: none new (250 solutions already reported Oct 29).
+
 ## Oct 26 2026 (HST): daily translation sync
 - weekly-sync.sh ran clean at 8d1677a1a, pushed as f9b69aa04 (All translations current, SEO 350 checked / 0 errors / 350 warnings (desc/title length), sitemap 2,100 URLs, SI credits 258 captions on 233 pages, pagefind 2,107 pages). 2,541 files: routine churn (critical CSS re-inlined, OG cards for 95 pages, JSON-LD, KaTeX markup on course pages, launch feed, pagefind/semantic index). styles.css: TIGHT-CARDS and LOGO blocks moved below SP-BANNER / HOME-TRIM by their generators, content unchanged. No STYLEV bump.
 - he-attr-i18n reports 21 strings missing in he.json (non-blocking; left in English).
