@@ -221,7 +221,14 @@ def main():
     for l in DIFF_T:
         keys.setdefault(l, {}); keys[l][DIFF_LEAD] = DIFF_T[l][0]; keys[l][body] = DIFF_T[l][1].replace('{n}', str(total)).replace('{h}', str(nh))
     strip = (f'<section class="diff-strip" aria-label="What makes us different"><p class="diff-lead">{DIFF_LEAD}</p><p class="diff-body">{html.escape(body, quote=False)}</p></section>')
-    for page, anchor in (('index.html', r'<section class="hero [^"]*">.*?</section>'), ('About.html', r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?')):
+    # Oct 31: do not put this strip on the homepage. The trimmed home (build-home-trim.py) does not
+    # show it, and inserting it made weekly-sync keep "What makes us different" as visible churn
+    # and stall the translation check. About.html still carries the strip. Drop a leftover on index.
+    s = rd('index.html'); o = s
+    s = re.sub(r'<!-- DIFF:START -->.*?<!-- DIFF:END -->\n?', '', s, flags=re.S)
+    s = re.sub(r'<section class="diff-strip"[^>]*>.*?</section>\n?', '', s, flags=re.S)
+    if s != o: open('index.html', 'w', encoding='utf8').write(s)
+    for page, anchor in (('About.html', r'<section class="page-hero[^"]*">.*?</section>(\s*<p class="photo-credit">[^<]*</p>)?(\s*<nav aria-label="Breadcrumb".*?</nav>)?'),):
         s = rd(page); o = s
         s = put(s, 'DIFF', strip, anchor); s = assets(s)
         if s != o: open(page, 'w', encoding='utf8').write(s)
