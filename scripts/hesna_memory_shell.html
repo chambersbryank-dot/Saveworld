@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+<meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Memory Drills | تمارين الذاكرة</title>
+<link rel="stylesheet" href="/styles.css?v=20261026b">
+<!-- PWA:START --><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0b3a5b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Saving Planets"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- PWA:END -->
+<style>
+body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
+.sp-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+#sp-toggle{padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);background:transparent;color:inherit;font:inherit;cursor:pointer}
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
+.sp-btn{margin-top:.5rem;padding:.35rem .8rem;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;font:inherit;cursor:pointer}.sp-phase{margin:1.5rem 0}.sp-day h3{margin:0 0 .5rem}.sp-ph{opacity:.7;font-style:italic;margin:0}
+.md-opt{display:block;padding:.3rem 0;cursor:pointer}.md-qs{padding-inline-start:1.2rem}.md-qs li{margin:.6rem 0}.md-ok{border-color:#2e7d32!important}.md-bad{border-color:#d32f2f!important}.md-timer{font-size:1.4rem;font-weight:bold}html[lang=en] [data-ar],html[lang=ar] [data-en]{display:none}
+.sp-nav{position:sticky;top:0;z-index:50;display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 0;margin-bottom:.5rem;background:#0b1622;border-bottom:1px solid rgba(255,255,255,.15)}.sp-nav a{padding:.45rem 1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);color:inherit;text-decoration:none;font-weight:600}.sp-nav a[aria-current]{background:var(--brand-blue,#2b7bd6);color:#fff}
+</style>
+</head>
+<body>
+<main data-pagefind-ignore="all">
+<nav class="sp-nav" aria-label="Study pages / صفحات الدراسة"><a href="hesna-6abec5.html"><span data-en>📘 Study Guide</span><span data-ar>📘 دليل الدراسة</span></a><a href="hesna-6abec5-memory.html" aria-current="page"><span data-en>🧠 Memory Drills</span><span data-ar>🧠 تمارين الذاكرة</span></a></nav>
+<div class="sp-top"><h1><span data-en>Observation &amp; Memory Drills</span><span data-ar>تمارين الملاحظة والذاكرة</span></h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
+<p><a href="hesna-6abec5.html"><span data-en>← Back to the study plan</span><span data-ar>→ العودة إلى خطة الدراسة</span></a></p>
+<p class="sp-ph"><span data-en>Original practice scenes and questions, not real HPD exam content. Study each scene for 2 minutes. It then disappears and you answer 45 questions. Score 80% or higher on any exercise to unlock the next level. Progress is saved in this browser.</span><span data-ar>مشاهد وأسئلة تدريبية من إعدادنا، وليست من امتحان شرطة هونولولو الحقيقي. تأمّلي كل مشهد لمدة دقيقتين، ثم يختفي وتجيبين عن 45 سؤالًا. احصلي على 80% أو أكثر في أي تمرين لفتح المستوى التالي. يُحفظ تقدّمك في هذا المتصفح.</span></p>
+<div id="md-app"></div>
+<script>window.MD_DATA={};</script>
+<script>(function(){var D=window.MD_DATA,K='hesnaMemory',st={};
+try{st=JSON.parse(localStorage.getItem(K))||{}}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+var HX={red:'#d32f2f',blue:'#1e5bd8',green:'#2e7d32',yellow:'#fbc02d',orange:'#fb8c00',purple:'#7b1fa2',pink:'#f48fb1',white:'#f5f5f5',black:'#222',gray:'#888',brown:'#6d4c41',blonde:'#e8c66a'};
+function bi(e,a){return '<span data-en>'+esc(e)+'</span><span data-ar>'+esc(a)+'</span>'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function T(x,y,t,sz,f,w){return '<text x="'+x+'" y="'+y+'" font-size="'+(sz||12)+'" text-anchor="middle" fill="'+(f||'#111')+'"'+(w?' font-weight="bold"':'')+'>'+esc(t)+'</text>'}
+function scene(s){if(s.svg)return s.svg;var o='<svg viewBox="0 0 800 460" role="img" aria-label="Practice scene" style="width:100%;height:auto;background:#bfe3ff;border-radius:12px;font-family:sans-serif">';
+o+='<circle cx="400" cy="34" r="22" fill="#ffd34d"/>';
+o+='<rect x="14" y="10" width="120" height="44" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><circle cx="36" cy="32" r="12" fill="none" stroke="#333" stroke-width="2"/><path d="M36 32V24M36 32h6" stroke="#333" stroke-width="2"/>'+T(90,38,s.tm,15,'#111',1);
+o+='<rect x="640" y="10" width="150" height="22" fill="#185"/>'+T(715,26,s.st,13,'#fff')+'<rect x="640" y="34" width="150" height="22" fill="#185"/>'+T(715,50,s.cr,13,'#fff');
+var nb=s.b.length,bw=760/nb;s.b.forEach(function(b,i){var x=20+i*bw;o+='<rect x="'+(x+6)+'" y="80" width="'+(bw-12)+'" height="240" fill="'+D.BC[b.c]+'" stroke="#555" stroke-width="2"/><rect x="'+(x+14)+'" y="90" width="'+(bw-28)+'" height="30" fill="#0b3a5b"/>'+T(x+bw/2,111,b.n,Math.min(16,(bw-30)/b.n.length*1.6),'#fff',1)+T(x+bw/2,150,b.no,22,'#111',1)+'<rect x="'+(x+bw/2-22)+'" y="230" width="44" height="90" fill="#6b4a2a"/><rect x="'+(x+20)+'" y="170" width="'+(bw/2-50)+'" height="50" fill="#9cd" stroke="#333"/>'});
+o+='<rect x="0" y="320" width="800" height="32" fill="#ccc"/><rect x="0" y="352" width="800" height="108" fill="#555"/><path d="M0 406H800" stroke="#fff" stroke-width="4" stroke-dasharray="30 20"/>';
+var np=s.p.length;s.p.forEach(function(p,i){var x=60+i*(680/Math.max(1,np-1)),h=HX[p.h],c=HX[p.ic];
+o+='<rect x="'+(x-8)+'" y="318" width="7" height="28" fill="'+HX[p.p]+'"/><rect x="'+(x+1)+'" y="318" width="7" height="28" fill="'+HX[p.p]+'"/><rect x="'+(x-12)+'" y="286" width="24" height="34" rx="4" fill="'+HX[p.s]+'" stroke="#333"/><circle cx="'+x+'" cy="274" r="11" fill="#c8956b"/>';
+o+=p.hat?'<rect x="'+(x-12)+'" y="260" width="24" height="7" fill="'+HX[p.hat]+'" stroke="#333"/><rect x="'+(x-8)+'" y="254" width="16" height="8" fill="'+HX[p.hat]+'"/>':'<path d="M'+(x-11)+' 272q11-18 22 0" fill="'+h+'"/>';
+var ix=x+20;if(p.i=='bag')o+='<rect x="'+(ix-6)+'" y="300" width="16" height="18" rx="3" fill="'+c+'" stroke="#333"/>';
+else if(p.i=='umbrella')o+='<path d="M'+(ix-16)+' 262q16-24 32 0z" fill="'+c+'" stroke="#333"/><line x1="'+ix+'" y1="262" x2="'+ix+'" y2="300" stroke="#333" stroke-width="2"/>';
+else if(p.i=='phone')o+='<rect x="'+(ix-6)+'" y="284" width="9" height="15" rx="2" fill="'+c+'" stroke="#333"/>';
+else if(p.i=='balloon')o+='<line x1="'+(ix-6)+'" y1="300" x2="'+ix+'" y2="250" stroke="#333"/><circle cx="'+ix+'" cy="242" r="10" fill="'+c+'" stroke="#333"/>';
+else if(p.i=='box')o+='<rect x="'+(ix-8)+'" y="296" width="18" height="16" fill="'+c+'" stroke="#333"/>';
+else o+='<rect x="'+(ix-6)+'" y="292" width="10" height="13" fill="'+c+'" stroke="#333"/>'});
+var nv=s.v.length;s.v.forEach(function(v,i){var x=20+i*(760/nv),w=Math.min(170,760/nv-20),y=i%2?400:360,c=HX[v.c],q='';
+if(v.t=='van')q='<rect x="'+x+'" y="'+(y-22)+'" width="'+w+'" height="62" rx="8" fill="'+c+'" stroke="#333"/>';
+else if(v.t=='pickup')q='<rect x="'+x+'" y="'+(y+6)+'" width="'+w+'" height="34" rx="6" fill="'+c+'" stroke="#333"/><rect x="'+(x+w*.55)+'" y="'+(y-14)+'" width="'+(w*.4)+'" height="24" rx="5" fill="'+c+'" stroke="#333"/>';
+else{q='<rect x="'+x+'" y="'+(y+6)+'" width="'+w+'" height="34" rx="10" fill="'+c+'" stroke="#333"/><rect x="'+(x+w*.25)+'" y="'+(y-12)+'" width="'+(w*.5)+'" height="22" rx="7" fill="'+c+'" stroke="#333"/>';if(v.t=='taxi')q+='<rect x="'+(x+w/2-18)+'" y="'+(y-24)+'" width="36" height="12" fill="#222"/>'+T(x+w/2,y-14,'TAXI',9,'#fc0')}
+q+='<rect x="'+(x+w/2-34)+'" y="'+(y+20)+'" width="68" height="16" fill="#ffd" stroke="#333"/>'+T(x+w/2,y+33,v.pl,12,'#111',1)+'<circle cx="'+(x+22)+'" cy="'+(y+42)+'" r="10" fill="#222"/><circle cx="'+(x+w-22)+'" cy="'+(y+42)+'" r="10" fill="#222"/>'+T(v.d=='E'?x+w+10:x-10,y+20,v.d=='E'?'→':'←',22,'#fff',1);o+=q});
+return o+'</svg>'}
+var app=document.getElementById('md-app'),timer=null;
+function passed(lv){return D.S.some(function(s){return s.lv==lv&&(st[s.id]||0)>=80})}
+function unlocked(lv){return lv==1||passed(lv-1)}
+function home(){clearInterval(timer);var lvs=[];D.S.forEach(function(s){if(lvs.indexOf(s.lv)<0)lvs.push(s.lv)});var o='';
+lvs.forEach(function(lv){var u=unlocked(lv);o+='<section class="sp-phase"><h2>'+bi('Level '+lv,'المستوى '+lv)+'</h2>'+(u?'':'<p class="sp-ph">'+bi('Locked: score 80% or higher on any Level '+(lv-1)+' exercise.','مقفل: احصلي على 80% أو أكثر في أي تمرين من المستوى '+(lv-1)+'.')+'</p>')+'<div class="sp-grid">';
+D.S.forEach(function(s,i){if(s.lv!=lv)return;o+='<div class="sp-day"><h3>'+bi('Exercise '+s.id,'التمرين '+s.id)+'</h3><p>'+bi('45 questions · 2-minute view','45 سؤالًا · مشاهدة لمدة دقيقتين')+(st[s.id]!=null?'<br>'+bi('Best: '+st[s.id]+'%','أفضل نتيجة: '+st[s.id]+'%'):'')+'</p>'+(u?'<button type="button" class="sp-btn" data-go="'+i+'">'+bi('Start','ابدئي')+'</button>':'')+'</div>'});o+='</div></section>'});
+app.innerHTML=o;scrollTo(0,0)}
+function view(i){var s=D.S[i],left=s.secs;app.innerHTML='<p class="md-timer" aria-live="polite"></p><div>'+scene(s)+'</div>'+(s.desc?'<p>'+bi(s.desc[0],s.desc[1])+'</p>':'')+'<button type="button" class="sp-btn" data-q="'+i+'">'+bi("I'm ready, hide it now",'أنا جاهزة، أخفيه الآن')+'</button>';
+var el=app.querySelector('.md-timer');function tick(){el.innerHTML=bi('Time left: ','الوقت المتبقي: ')+Math.floor(left/60)+':'+('0'+left%60).slice(-2);if(left--<=0){quiz(i)}}tick();timer=setInterval(tick,1000);scrollTo(0,0)}
+function quiz(i){clearInterval(timer);var s=D.S[i],o='<p class="sp-ph">'+bi('The scene is hidden. Answer from memory.','المشهد مخفي. أجيبي من الذاكرة.')+'</p><ol class="md-qs">';
+s.q.forEach(function(q,j){o+='<li class="sp-day"><p>'+bi(q[0],q[1])+'</p>';q[2].forEach(function(e,k){o+='<label class="md-opt"><input type="radio" name="q'+j+'" value="'+k+'"> '+bi(e,q[3][k])+'</label>'});o+='</li>'});
+app.innerHTML=o+'</ol><button type="button" class="sp-btn" data-r="'+i+'">'+bi('Submit answers','إرسال الإجابات')+'</button>';scrollTo(0,0)}
+function result(i){var s=D.S[i],ok=0,rv='';s.q.forEach(function(q,j){var c=app.querySelector('input[name=q'+j+']:checked'),a=c?+c.value:-1,g=a==q[4];if(g)ok++;
+rv+='<li class="sp-day '+(g?'md-ok':'md-bad')+'"><p>'+bi(q[0],q[1])+'</p><p>'+(g?'✅ ':'❌ ')+bi('Your answer: ','إجابتك: ')+(a<0?bi('(none)','(لا شيء)'):bi(q[2][a],q[3][a]))+'</p>'+(g?'':'<p><strong>'+bi('Correct: ','الصحيح: ')+bi(q[2][q[4]],q[3][q[4]])+'</strong></p>')+'</li>'});
+var p=Math.round(100*ok/s.q.length);st[s.id]=Math.max(st[s.id]||0,p);save();
+app.innerHTML='<h2>'+bi('Score: '+ok+'/'+s.q.length+' ('+p+'%)','النتيجة: '+ok+'/'+s.q.length+' ('+p+'%)')+'</h2><p>'+(p>=80?bi('Passed! The next level is unlocked if there is one.','نجحتِ! يُفتح المستوى التالي إن وُجد.'):bi('Not yet 80%. Review below and try again.','لم تصلي إلى 80% بعد. راجعي الإجابات أدناه وحاولي مرة أخرى.'))+'</p><button type="button" class="sp-btn" data-home="1">'+bi('Back to levels','العودة إلى المستويات')+'</button><div>'+scene(s)+'</div><ol class="md-qs">'+rv+'</ol><button type="button" class="sp-btn" data-home="1">'+bi('Back to levels','العودة إلى المستويات')+'</button>';scrollTo(0,0)}
+app.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var d=b.dataset;if(d.go!=null)view(+d.go);else if(d.q!=null)quiz(+d.q);else if(d.r!=null)result(+d.r);else if(d.home)home()});home()})();
+</script>
+</main>
+<script>
+(function(){var K='hesnaStudyLang',h=document.documentElement;
+function set(l){h.lang=l;h.dir=l==='ar'?'rtl':'ltr';try{localStorage.setItem(K,l)}catch(e){}}
+var s=null;try{s=localStorage.getItem(K)}catch(e){}set(s==='ar'?'ar':'en');
+document.getElementById('sp-toggle').addEventListener('click',function(){set(h.lang==='ar'?'en':'ar')});})();
+</script>
+<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}'></script><!-- CF-WA:END -->
+</body>
+</html>
