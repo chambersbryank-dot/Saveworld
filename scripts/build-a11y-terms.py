@@ -18,7 +18,6 @@ def home():
     for i, l in enumerate(LANGS):
         f = ('' if l == 'en' else l + '/') + 'index.html'
         s = open(f, encoding='utf8').read()
-        s2 = re.sub(r'<!-- HOMESTD:START -->.*?<!-- HOMESTD:END -->', '', s, flags=re.S)
         H = {k: E(v[i]) for k, v in C.HOME.items()}
         lis = ''.join(f'<li>{H[k]}</li>' for k in ('ESS3', 'ESS1', 'LS2', 'CCSS'))
         block = ('<!-- HOMESTD:START --><style>.home-std{max-width:960px;margin:2rem auto;padding:0 1rem}.home-std ul{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:.75rem 0}'
@@ -28,9 +27,15 @@ def home():
         ld = {'@context': 'https://schema.org', '@type': 'WebPage', 'url': 'https://www.savingplanets.com/' + ('' if l == 'en' else l + '/'), 'inLanguage': l,
               'audience': {'@type': 'EducationalAudience', 'educationalRole': 'teacher'}, 'educationalAlignment': align}
         block += '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script><!-- HOMESTD:END -->'
-        a = s2.find('<!-- AUDIENCE:END -->')
-        if a < 0: print('skip (no AUDIENCE:END)', f); continue
-        a += len('<!-- AUDIENCE:END -->'); s2 = s2[:a] + block + s2[a:]
+        # Oct 31: replace in place. Moving the block to sit right after AUDIENCE changed the English
+        # homepage hash after i18n-build and failed the translation check (fr/es/ar/it/he index.html STALE).
+        pat = re.compile(r'<!-- HOMESTD:START -->.*?<!-- HOMESTD:END -->', re.S)
+        if pat.search(s):
+            s2 = pat.sub(lambda m: block, s, count=1)
+        else:
+            a = s.find('<!-- AUDIENCE:END -->')
+            if a < 0: print('skip (no AUDIENCE:END)', f); continue
+            a += len('<!-- AUDIENCE:END -->'); s2 = s[:a] + block + s[a:]
         if s2 != s: open(f, 'w', encoding='utf8').write(s2); print('home std', f)
 
 def pages():

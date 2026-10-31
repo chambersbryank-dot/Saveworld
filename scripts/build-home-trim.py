@@ -91,6 +91,8 @@ def grab(region):
     take('newsletter', sec(region, r'<section (?=[^>]*id="newsletter")[^>]*>'))
     take('actions', sec(region, r'<section (?=[^>]*id="actions")[^>]*>'))
     take('mission', sec(region, r'<section [^>]*class="mission-block"'))
+    take('homstd', marker(region, 'HOMESTD'))
+    take('homenum', marker(region, 'HOMENUM'))
     return B, region
 
 ORDER = ['vision', 'impact', 'promo', 'mission', 'wmap', 'domains', 'audience', 'edulinks', 'sotw', 'partner', 'solutions', 'stats', 'scoreboard', 'news', 'newsletter', 'actions']
@@ -128,18 +130,24 @@ def new_section(B, L=''):
     return '<!-- HOME-NEW:START -->' + strip[:-len('</section>')] + more + '</section><!-- HOME-NEW:END -->'
 
 def join_section(B):
-    a = B.get('actions', ''); nl = B.get('newsletter', '')
-    inner = re.sub(r'^<section[^>]*>|</section>$', '', a)
-    nlin = re.sub(r'^<section[^>]*>|</section>$', '', nl)
-    return ('<!-- HOME-JOIN:START --><section id="actions" class="home-join">' + inner +
+    # Oct 31: "Be Part of the Fix" (the actions block) stays parked, not copied into the visible
+    # homepage. Weekly sync was surfacing that join block as English churn and stalling i18n.
+    # The newsletter signup stays visible (index.html#newsletter).
+    nl = B.get('newsletter', '')
+    nlin = re.sub(r'^<section[^>]*>|</section>$', '', nl).strip()
+    if not nlin: return ''
+    return ('<!-- HOME-JOIN:START --><section class="home-join" aria-label="Newsletter">'
             f'<div id="newsletter" class="newsletter-band" aria-label="Newsletter">{nlin}</div></section><!-- HOME-JOIN:END -->')
 
 def strip_ours(region):
     for n in ['HOME-FIND', 'HOME-NEW', 'HOME-JOIN']:
         sp = marker(region, n)
         if sp: region = region[:sp[0]] + region[sp[1]:]
-    m = re.search(r'<template id="home-parked"[^>]*>(.*?)</template>', region, re.S)
-    if m: region = region[:m.start()] + m.group(1) + region[m.end():]
+    # Attribute order differs after BeautifulSoup (id first on English, data-why first on translations).
+    region = re.sub(r'<template\b[^>]*\bid="home-parked"[^>]*>(.*?)</template>', r'\1', region, flags=re.S)
+    # Oct 31: "What makes us different" is not a homepage section. Drop it so it cannot stay visible as unknown content.
+    region = re.sub(r'<!-- DIFF:START -->.*?<!-- DIFF:END -->', '', region, flags=re.S)
+    region = re.sub(r'<section class="diff-strip"[^>]*>.*?</section>', '', region, flags=re.S)
     return region
 
 def do_home(L):
@@ -154,7 +162,7 @@ def do_home(L):
         parked = '<template id="home-parked" data-why="Oct 20 clutter fix #1: parked, not deleted; see scripts/build-home-trim.py">' + \
                  ''.join(B[k] for k in ORDER if k in PARK and k in B) + '</template>'
         new = (B.get('vision', '') + parked + find_section(L, B) + B.get('solutions', '') + B.get('audience', '') + B.get('edulinks', '') +
-               new_section(B, L) + join_section(B) + rest)
+               new_section(B, L) + join_section(B) + B.get('homstd', '') + B.get('homenum', '') + rest)
     s = s[:he] + new + s[me:]
     fm = marker(s, 'FOOTER-MAP')
     if fm and not UNDO: s = s[:fm[0]] + '<!-- FOOTER-MAP:START --><!-- FOOTER-MAP:END -->' + s[fm[1]:]
@@ -167,7 +175,12 @@ def do_facts(L, B):
     s = rd(f); sp = marker(s, 'HOME-MOVED')
     if sp: s = s[:sp[0]] + s[sp[1]:]
     if UNDO: wr(f, s); return
-    sb = nomark(B.get('scoreboard', '')); sb = re.sub(r'<script\b[^>]*>.*?</script\b[^>]*>', '', sb, flags=re.S | re.I)  # inline data-tools JS: Amazing_Facts already has it
+    # The homepage parked scoreboard keeps its APA/MLA cite + embed script (B is not modified).
+    # Drop a second copy on Amazing Facts only when that page already has the handler.
+    # Oct 31: never strip the script unless a copy remains, or Cite/Embed buttons do nothing.
+    sb = nomark(B.get('scoreboard', ''))
+    if 'function cites' in s:
+        sb = re.sub(r'<script\b[^>]*>.*?</script>', '', sb, count=1, flags=re.S | re.I)
     sb = sb.replace('data-dt-url="https://www.savingplanets.com/"', f'data-dt-url="https://www.savingplanets.com/{L}Amazing_Facts.html#scoreboard"')
     blk = '<!-- HOME-MOVED:START -->' + nomark(B.get('impact', '')) + sb + '<!-- HOME-MOVED:END -->'
     st = sec(s, r'<section [^>]*class="impact-bar"')

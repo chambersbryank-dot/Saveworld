@@ -30,7 +30,7 @@ def normalize(src):
     src = unglossary(src)
     src = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?', '', src)
     src = re.sub(r'<!-- PROJECT-R-MENU:START -->[\s\S]*?<!-- PROJECT-R-MENU:END -->', '', src)
-    src = re.sub(r'<!-- (LEARNLINK|SIHELPER|REPORTFORM|LICENSE|LICABOUT|CLSHARE|NLCALL|GROWNUPS|STARTHERE|EMBED|EMBEDMODE|STDTAGS|STDMAP|HEROTHEME|SPTOPIC|LCPPRE|KIDSP1|ANIMBAN|COURSELINK):START -->[\s\S]*?<!-- \1:END -->', '', src)  # Oct 16: build-learn.py adds this per language
+    src = re.sub(r'<!-- (LEARNLINK|SIHELPER|REPORTFORM|LICENSE|LICABOUT|CLSHARE|NLCALL|GROWNUPS|STARTHERE|EMBED|EMBEDMODE|STDTAGS|STDMAP|HEROTHEME|SPTOPIC|LCPPRE|KIDSP1|ANIMBAN|COURSELINK|HOMESTD):START -->[\s\S]*?<!-- \1:END -->', '', src)  # Oct 16: build-learn.py adds this per language; Oct 31: HOMESTD is rewritten in every language by build-a11y-terms.py --home after the stamp
     src = re.sub(r'<!-- SOLUTIONS-MENU:START -->[\s\S]*?<!-- SOLUTIONS-MENU:END -->', '', src)
     src = re.sub(r'<nav id="topnav">[\s\S]*?</nav>', '', src)  # Oct 16: header nav regenerated per language by build-nav.py
     src = re.sub(r'<li class="lang-switch"[\s\S]*?</li>', '', src)
@@ -117,7 +117,7 @@ def localize_search(js, m):
     return js.replace('return p.text.indexOf(q)', 'return p.text.toLowerCase().indexOf(q)')
 
 def build(page, lang, m):
-    raw = re.sub(r'<!-- (LEARNLINK|SIHELPER|REPORTFORM|LICENSE|LICABOUT|CLSHARE|NLCALL|GROWNUPS|STARTHERE|EMBED|EMBEDMODE|STDTAGS|STDMAP|HEROTHEME|SPTOPIC|LCPPRE|KIDSP1|ANIMBAN|COURSELINK):START -->[\s\S]*?<!-- \1:END -->', '', unglossary(open(page, encoding='utf8').read()))  # Oct 16: re-added per language by build-learn.py
+    raw = re.sub(r'<!-- (LEARNLINK|SIHELPER|REPORTFORM|LICENSE|LICABOUT|CLSHARE|NLCALL|GROWNUPS|STARTHERE|EMBED|EMBEDMODE|STDTAGS|STDMAP|HEROTHEME|SPTOPIC|LCPPRE|KIDSP1|ANIMBAN|COURSELINK|HOMESTD):START -->[\s\S]*?<!-- \1:END -->', '', unglossary(open(page, encoding='utf8').read()))  # Oct 16: re-added per language by build-learn.py; HOMESTD by build-a11y-terms.py --home
     soup = BeautifulSoup(raw, 'html.parser')
     html = soup.html
     html['lang'] = lang
@@ -202,9 +202,41 @@ def missing(lang):
             if v and re.search('[A-Za-z]{3}', v) and lookup(m, v) is None and v not in seen:
                 seen.add(v); print(f'{page}\t{v}')
 
+def restamp_stale():
+    """Rebuild translations whose English hash moved after i18n-build.
+    Oct 31: build-a11y-terms.py --home rewrites the English homepage footer/standards
+    after the stamp, so the translation check saw fr/es/ar/it/he index.html as stale
+    and weekly-sync stopped before the Saturn hero and the rest of the generators.
+    Does not run seo-fix (that pass already ran, and running it again can move English)."""
+    stale = []
+    for page in PAGES:
+        if not os.path.exists(page): continue
+        h = src_hash(page)
+        for lang in LANGS:
+            t = os.path.join(lang, page)
+            if not os.path.exists(t): continue
+            txt = open(t, encoding='utf8').read()
+            m = re.search(r'name="i18n-source" content="[^ ]+ ([0-9a-f]+)"|content="[^ ]+ ([0-9a-f]+)" name="i18n-source"', txt)
+            th = (m.group(1) or m.group(2)) if m else None
+            if th != h:
+                stale.append(page); break
+    if not stale:
+        print('restamp: none'); return
+    print('restamp:', ', '.join(stale))
+    for lang in LANGS:
+        m = json.load(open(f'i18n/{lang}.json', encoding='utf8'))
+        global CUR_PAGES
+        CUR_PAGES = L10N.pages_for(lang, PAGES)
+        for page in stale:
+            if page in CUR_PAGES: build(page, lang, m)
+    CUR_PAGES = None
+    print('restamp: rebuilt', len(stale), 'page(s)')
+
 if __name__ == '__main__':
     if sys.argv[1:2] == ['--missing']:
         missing(sys.argv[2] if len(sys.argv) > 2 else 'fr'); sys.exit(0)
+    if sys.argv[1:2] == ['--restamp']:
+        restamp_stale(); sys.exit(0)
     langs = sys.argv[1:] or LANGS
     for page in PAGES: english_head(page)
     import importlib.util  # SEO pass on translations (titles/descriptions per language, og/hreflang/JSON-LD)
