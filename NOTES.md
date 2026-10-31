@@ -1228,3 +1228,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 ## Oct 26 2026 (HST): daily translation sync
 - weekly-sync.sh ran clean at 8d1677a1a, pushed as f9b69aa04 (All translations current, SEO 350 checked / 0 errors / 350 warnings (desc/title length), sitemap 2,100 URLs, SI credits 258 captions on 233 pages, pagefind 2,107 pages). 2,541 files: routine churn (critical CSS re-inlined, OG cards for 95 pages, JSON-LD, KaTeX markup on course pages, launch feed, pagefind/semantic index). styles.css: TIGHT-CARDS and LOGO blocks moved below SP-BANNER / HOME-TRIM by their generators, content unchanged. No STYLEV bump.
 - he-attr-i18n reports 21 strings missing in he.json (non-blocking; left in English).
+
+## Oct 31 2026 (HST): daily numbers check
+- Verified at 40aef3c93 (only change since Oct 30 check: #164 GLOBE title/app link, no counts): **266 solutions** (Solutions.html cards = solutions.json site.solutions = 266 in en/fr/es/ar/it/he), 11 hubs, homepage counter 266 in every language, sitemap 2,263 unchanged. All counts match.
+- No repo page changes, no STYLEV bump. Earlier flags unchanged (promo transcripts say 246 as recorded, etc.).
+- Milestones: none new.
