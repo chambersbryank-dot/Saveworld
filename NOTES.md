@@ -1233,3 +1233,6 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Verified at 40aef3c93 (only change since Oct 30 check: #164 GLOBE title/app link, no counts): **266 solutions** (Solutions.html cards = solutions.json site.solutions = 266 in en/fr/es/ar/it/he), 11 hubs, homepage counter 266 in every language, sitemap 2,263 unchanged. All counts match.
 - No repo page changes, no STYLEV bump. Earlier flags unchanged (promo transcripts say 246 as recorded, etc.).
 - Milestones: none new.
+
+## Oct 31 2026 (HST): daily translation sync (not pushed)
+- weekly-sync.sh at b303bd614 exited 1 on the translation check: fr/es/ar/it/he index.html STALE (English homepage changed since translation). The run's English homepage diff also added a "What makes us different" strip, a Be Part of the Fix join block, Kids card -> Amazing_Facts, hero video autoplay, and dropped the cite/embed script, so it needs a look before publishing. Nothing committed or pushed; checkout reset to clean. Full output saved at /tmp/sync1031-unpushed.patch, log /tmp/sync1031.log.
