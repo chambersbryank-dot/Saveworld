@@ -74,6 +74,43 @@
   }
   var WEEK_DAYS = { 1: [1, 2, 3, 4, 5, 6, 7], 2: [8, 9, 10, 11, 12, 13, 14] };
   function weekOf(n) { return n <= 7 ? 1 : 2; }
+  function week1Core(state) {
+    var sum = 0, n = 0;
+    WEEK_DAYS[1].forEach(function (d) {
+      var r = state && state.days && state.days[String(d)];
+      if (!r || (r.corePct == null && r.pct == null)) return;
+      var c = r.corePct != null ? r.corePct : r.pct;
+      if (r.extraPct != null && c >= 95) c = r.extraPct;
+      sum += c;
+      n += 1;
+    });
+    return n ? Math.round(sum / n) : null;
+  }
+  /** Week 1 pictures pass at 80. Week 2 pictures are harder when Week 1 was strong. */
+  function memPassBar(state, id) {
+    var key = String(id || "");
+    if (key.indexOf("qstop") !== 0 && key.indexOf("corner") !== 0) return 80;
+    var overall = week1Core(state);
+    var bar = 80;
+    if (overall != null && overall >= 95) bar = 90;
+    else if (overall != null && overall >= 85) bar = 85;
+    ["b7426-1", "b7426-2", "b7426-3"].forEach(function (k) {
+      var s = state && state.mem && state.mem[k];
+      if (s != null && s < 85) bar = Math.max(bar, 85);
+    });
+    return Math.min(90, bar);
+  }
+  function memDone(state, row) {
+    var ids = (row && row.memNeed) || [];
+    return ids.every(function (id) {
+      return ((state.mem && state.mem[id]) || 0) >= memPassBar(state, id);
+    });
+  }
+  function markMastered(state, row) {
+    if (!row) return false;
+    row.mastered = judgeMastered(row) && memDone(state, row);
+    return row.mastered;
+  }
   /** 80% on the core masters a period. At 95% the harder set is the one that counts. */
   function judgeMastered(row) {
     if (!row || row.pct == null) return false;
@@ -174,10 +211,12 @@
     for (var i = 0; i < ids.length; i++) {
       var row = state.days && state.days[String(ids[i])];
       if (rowMastered(row)) continue;
-      next = ids[i];
       if (!row || row.pct == null) need = "fresh";
       else if (hot(row) && !(row.extraPct >= 80)) need = "extra";
-      else need = "retry";
+      else if (!judgeMastered(row)) need = "retry";
+      else if (!memDone(state, row)) need = "mem";
+      else continue;
+      next = ids[i];
       break;
     }
     var cleared = weekCleared(state, week);
@@ -593,8 +632,9 @@
       n: result.n,
       at: Date.now()
     };
-    row.mastered = judgeMastered(row);
+    row.memNeed = day.mem || row.memNeed || [];
     state.days[String(day.n)] = row;
+    markMastered(state, row);
     sealWeeks(state);
     return row;
   }
@@ -673,6 +713,17 @@
     }
     var day = findDay(data, status.next);
     if (!day) return { empty: true, status: status, week: week };
+    if (status.need === "mem") {
+      var row = state.days && state.days[String(day.n)] || {};
+      var ids = row.memNeed || day.mem || [];
+      var id = null;
+      for (var mi = 0; mi < ids.length; mi++) {
+        if (((state.mem && state.mem[ids[mi]]) || 0) < memPassBar(state, ids[mi])) { id = ids[mi]; break; }
+      }
+      var drill = id && data.mem && data.mem[id];
+      if (!drill) return { empty: true, status: status, week: week, day: day };
+      return { memory: drill, day: day, status: status, week: week };
+    }
     var session = planSession(day, data, state);
     session.kind = status.need === "extra" ? "extra" : "period";
     session.week = week;
@@ -713,8 +764,31 @@
       var row = state.days && state.days[String(dayN)];
       if (!row) return;
       row.extraPct = pct;
-      row.mastered = judgeMastered(row);
+      markMastered(state, row);
       sealWeeks(state);
+    },
+    memPassBar: memPassBar,
+    noteMem: function (state, day, id, pct) {
+      state.mem = state.mem || {};
+      var prev = state.mem[id] || 0;
+      if (pct > prev) state.mem[id] = pct;
+      var row = state.days && state.days[String(day.n)];
+      if (row) {
+        row.memNeed = day.mem || row.memNeed || [];
+        markMastered(state, row);
+      }
+      sealWeeks(state);
+    },
+    resync: function (state, data) {
+      state.mem = state.mem || {};
+      ((data && data.days) || []).forEach(function (day) {
+        var row = state.days && state.days[String(day.n)];
+        if (!row || row.pct == null) return;
+        row.memNeed = day.mem || [];
+        markMastered(state, row);
+      });
+      sealWeeks(state);
+      return state;
     }
   };
 });
