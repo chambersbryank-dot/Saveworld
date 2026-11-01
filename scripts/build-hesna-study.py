@@ -441,7 +441,7 @@ def study_html(payload):
 <body>
 <main data-pagefind-ignore="all">
 {NAV.format(g=' aria-current="page"', m='')}
-<div class="sp-top"><h1>{bi("Hesna's Two-Week HPD Study Plan", "خطة حسنة الدراسية لامتحان شرطة هونولولو (أسبوعان)")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
+<div class="sp-top"><h1>{bi("Hassnaa's Two-Week HPD Study Plan", "خطة حسنة الدراسية لامتحان شرطة هونولولو (أسبوعان)")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
 {week_section(1, w1,
 "Every lesson and quiz for Days 1–7 is in this pack. It opens on Day 1. Master each period at 80% on the core before the next. At 95% the harder set is the one that counts. Weak spots are repaired here before Week 2 opens.",
 "كل دروس الأيام 1–7 واختباراتها في هذه الحزمة. تُفتح على اليوم 1. أتقني كل فترة عند 80% في الجوهر قبل التالية. عند 95% المجموعة الأصعب هي التي تُحسب. تُصلَح مواضع الضعف هنا قبل أن يُفتح الأسبوع الثاني.")}
