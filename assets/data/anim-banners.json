@@ -106,7 +106,7 @@
    "r2": "images/Global_Plant_Fluorescence.jpg"
   },
   "assets/Labrador_Sea_Ice_ISS.jpg": {
-   "credit": "NASA (ISS070-E-086805, Feb. 3, 2024)",
+   "credit": "NASA astronaut Loral O'Hara (iss070e086805, Labrador coast, Feb. 3, 2024, public domain)",
    "pos": "50% 50%",
    "r2": "images/Labrador_Sea_Ice_ISS.jpg"
   },
@@ -914,6 +914,111 @@
    "credit": "NASA",
    "pos": "50% 40%",
    "r2": "images/ArtemisII_Launch_KSC_Hancock.jpg"
+  },
+  "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg": {
+   "credit": "NASA/Operation IceBridge (GSFC_20171208_Archive_e000266, Arctic sea ice melt ponds, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/PBI_Arctic_Melt_Ponds_IceBridge.jpg"
+  },
+  "assets/Alaska_ABoVE_Flight.jpg": {
+   "credit": "NASA/Peter Griffith (GSFC_20171208_Archive_e000002, ABoVE flight over Alaska, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Alaska_ABoVE_Flight.jpg"
+  },
+  "assets/Nunavut_ASTER.jpg": {
+   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA13963, Nunavut, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Nunavut_ASTER.jpg"
+  },
+  "assets/Greenland_Sea_Ice_MODIS_2015.jpg": {
+   "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000643, July 16, 2015, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Greenland_Sea_Ice_MODIS_2015.jpg"
+  },
+  "assets/SW_Greenland_Fjord_IceBridge.jpg": {
+   "credit": "NASA/GSFC/Michael Studinger (GSFC_20171208_Archive_e001911, April 8, 2011, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/SW_Greenland_Fjord_IceBridge.jpg"
+  },
+  "assets/Healy_Ice_Station_ICESCAPE.jpg": {
+   "credit": "NASA/Kathryn Hansen (GSFC_20171208_Archive_e001722, ICESCAPE mission, Chukchi Sea, 2011, public domain; not the MOSAiC ship)",
+   "pos": "50% 50%",
+   "r2": "images/Healy_Ice_Station_ICESCAPE.jpg"
+  },
+  "assets/Wolstenholme_Fjord_IceBridge.jpg": {
+   "credit": "NASA/Michael Studinger (GSFC_20171208_Archive_e001514, April 2013, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Wolstenholme_Fjord_IceBridge.jpg"
+  },
+  "assets/Cape_Farewell_Greenland_ISS.jpg": {
+   "credit": "NASA (ISS017-E-012583, Cape Farewell, Greenland, Aug. 4, 2008, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Cape_Farewell_Greenland_ISS.jpg"
+  },
+  "assets/Arctic_Sea_Ice_Minimum_2015.jpg": {
+   "credit": "NASA Scientific Visualization Studio (GSFC_20171208_Archive_e000613, 2015, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Arctic_Sea_Ice_Minimum_2015.jpg"
+  },
+  "assets/Tristan_da_Cunha_ASTER.jpg": {
+   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA22506, Tristan da Cunha, public domain; not Gough itself)",
+   "pos": "50% 50%",
+   "r2": "images/Tristan_da_Cunha_ASTER.jpg"
+  },
+  "assets/Ross_Sea_Icebergs_MISR.jpg": {
+   "credit": "NASA/GSFC/JPL, MISR Team (PIA02639, Ross Sea icebergs, Dec. 10, 2000, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Ross_Sea_Icebergs_MISR.jpg"
+  },
+  "assets/James_Ross_Island_AirSAR.jpg": {
+   "credit": "NASA/Jim Ross (ED04-0056-137, AirSAR 2004, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/James_Ross_Island_AirSAR.jpg"
+  },
+  "assets/Southern_Ocean_Eddies_VIIRS.jpg": {
+   "credit": "NASA OceanColor/Suomi NPP/VIIRS (GSFC_20171208_Archive_e000750, Jan. 1, 2015, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Southern_Ocean_Eddies_VIIRS.jpg"
+  },
+  "assets/Southern_Ocean_Cyclone_MISR.jpg": {
+   "credit": "NASA/GSFC/LaRC/JPL, MISR Team (PIA03430, Oct. 11, 2001, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Southern_Ocean_Cyclone_MISR.jpg"
+  },
+  "assets/Larsen_C_Iceberg_Landsat.jpg": {
+   "credit": "NASA Earth Observatory image by Joshua Stevens, Landsat data from USGS (GSFC_20171208_Archive_e000021, 2017, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Larsen_C_Iceberg_Landsat.jpg"
+  },
+  "assets/Ross_Sea_Bloom_2011.jpg": {
+   "credit": "NASA (GSFC_20171208_Archive_e001951, Ross Sea bloom, Jan. 22, 2011, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Ross_Sea_Bloom_2011.jpg"
+  },
+  "assets/Amundsen_Sea_Iceberg_IceBridge.jpg": {
+   "credit": "NASA/Jane Peterson (200910220009HQ, Operation IceBridge, Oct. 21, 2009, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Amundsen_Sea_Iceberg_IceBridge.jpg"
+  },
+  "assets/AirSAR_Scientists_Antarctica.jpg": {
+   "credit": "NASA/Jim Ross (ED04-0056-126, AirSAR 2004, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/AirSAR_Scientists_Antarctica.jpg"
+  },
+  "assets/Larsen_Ice_Shelf_AirSAR.jpg": {
+   "credit": "NASA/Jim Ross (ED04-0056-110, AirSAR 2004, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Larsen_Ice_Shelf_AirSAR.jpg"
+  },
+  "assets/Hudson_Bay_Ice_Skylab.jpg": {
+   "credit": "NASA (SL4-141-4316, Hudson Bay from Skylab 4, Jan. 20, 1974, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Hudson_Bay_Ice_Skylab.jpg"
+  },
+  "assets/Western_Alaska_Sea_Ice_MODIS.jpg": {
+   "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000769, Feb. 4, 2014, public domain)",
+   "pos": "50% 50%",
+   "r2": "images/Western_Alaska_Sea_Ice_MODIS.jpg"
   }
  },
  "pages": {
@@ -1249,7 +1354,27 @@
   "Heat_Transfer.html": "assets/EPIC_Earth.jpg",
   "Avionics_Systems_Engineering.html": "assets/ISS_Flyaround_2021.jpg",
   "Capstone_Design.html": "assets/ISS_Flyaround_2021.jpg",
-  "Sustainable_Aviation.html": "assets/EPIC_Earth.jpg"
+  "Sustainable_Aviation.html": "assets/EPIC_Earth.jpg",
+  "Polar_Bears_International.html": "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg",
+  "SmartICE.html": "assets/Hudson_Bay_Ice_Skylab.jpg",
+  "Permafrost_Pathways.html": "assets/Alaska_ABoVE_Flight.jpg",
+  "Tallurutiup_Imanga_NMCA.html": "assets/Nunavut_ASTER.jpg",
+  "PAME_Arctic_Council.html": "assets/Western_Alaska_Sea_Ice_MODIS.jpg",
+  "CAFF_Arctic_Biodiversity.html": "assets/SW_Greenland_Fjord_IceBridge.jpg",
+  "MOSAiC_Expedition.html": "assets/Healy_Ice_Station_ICESCAPE.jpg",
+  "WWF_Arctic_Programme.html": "assets/Wolstenholme_Fjord_IceBridge.jpg",
+  "Inuit_Circumpolar_Council.html": "assets/Cape_Farewell_Greenland_ISS.jpg",
+  "Arctic_Basecamp.html": "assets/Arctic_Sea_Ice_Minimum_2015.jpg",
+  "Gough_Island_Restoration.html": "assets/Tristan_da_Cunha_ASTER.jpg",
+  "Penguin_Watch.html": "assets/Ross_Sea_Icebergs_MISR.jpg",
+  "Oceanites_Penguin_Census.html": "assets/James_Ross_Island_AirSAR.jpg",
+  "SOCCOM.html": "assets/Southern_Ocean_Eddies_VIIRS.jpg",
+  "SOOS.html": "assets/Southern_Ocean_Cyclone_MISR.jpg",
+  "Beyond_EPICA_Oldest_Ice.html": "assets/Larsen_C_Iceberg_Landsat.jpg",
+  "ASOC_Antarctic_Coalition.html": "assets/Ross_Sea_Bloom_2011.jpg",
+  "CCAMLR.html": "assets/Amundsen_Sea_Iceberg_IceBridge.jpg",
+  "SCAR_Antarctic_Research.html": "assets/AirSAR_Scientists_Antarctica.jpg",
+  "IAATO.html": "assets/Larsen_Ice_Shelf_AirSAR.jpg"
  },
  "slides": {
   "pools": {

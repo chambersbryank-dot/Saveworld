@@ -13,13 +13,15 @@ def wr(p, s):
 esc = lambda s: html.escape(s, quote=True)
 txt = lambda s: re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', s))).strip()
 SITE = 'https://www.savingplanets.com/'
-LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it'] if os.path.isdir(l)]
+LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it', 'he'] if os.path.isdir(l)]
 d = lambda l: '' if l == 'en' else l + '/'
 U = {'en': dict(use='Use this data', csv='Download CSV', cite='Cite', embed='Embed', copy='Copy', copied='Copied', apa='APA', mla='MLA', note='Free to reuse with a link back. Each row keeps its original source.'),
      'fr': dict(use='Utiliser ces données', csv='Télécharger le CSV', cite='Citer', embed='Intégrer', copy='Copier', copied='Copié', apa='APA', mla='MLA', note='Réutilisation libre avec un lien vers nous. Chaque ligne garde sa source d’origine.'),
      'es': dict(use='Usar estos datos', csv='Descargar CSV', cite='Citar', embed='Insertar', copy='Copiar', copied='Copiado', apa='APA', mla='MLA', note='Libre de reutilizar con un enlace a nosotros. Cada fila conserva su fuente original.'),
      'ar': dict(use='استخدم هذه البيانات', csv='تنزيل CSV', cite='استشهد', embed='تضمين', copy='نسخ', copied='تم النسخ', apa='APA', mla='MLA', note='يمكن إعادة الاستخدام مجانًا مع رابط إلينا. يحتفظ كل صف بمصدره الأصلي.'),
-     'it': dict(use='Usa questi dati', csv='Scarica CSV', cite='Cita', embed='Incorpora', copy='Copia', copied='Copiato', apa='APA', mla='MLA', note='Riutilizzo libero con un link a noi. Ogni riga mantiene la sua fonte originale.')}
+     'it': dict(use='Usa questi dati', csv='Scarica CSV', cite='Cita', embed='Incorpora', copy='Copia', copied='Copiato', apa='APA', mla='MLA', note='Riutilizzo libero con un link a noi. Ogni riga mantiene la sua fonte originale.'),
+     # Oct 31: Hebrew was skipped, so weekly-sync dropped the APA/MLA cite + embed script from he/index.html and never put it back.
+     'he': dict(use='השתמשו בנתונים האלה', csv='הורדת CSV', cite='ציטוט', embed='הטמעה', copy='העתקה', copied='הועתק', apa='APA', mla='MLA', note='אפשר לשימוש חוזר עם קישור אלינו. כל שורה שומרת על המקור שלה.')}
 def slug(s): return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')[:60] or 'item'
 def to_csv(rows):
     b = io.StringIO(); w = csv.writer(b, lineterminator='\n'); [w.writerow(r) for r in rows]; return '\ufeff' + b.getvalue()

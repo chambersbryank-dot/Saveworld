@@ -185,7 +185,7 @@ def teachers_page():
                  'Teacher Sheets', "A printable one-page sheet for every solution: the Five W&#x27;s, a kid-friendly summary, sources and three discussion questions.", body, 'teachers-page')
 
 AUD = ('<!-- AUDIENCE:START --><section class="audience" aria-labelledby="aud-h"><h2 id="aud-h">Start Here</h2><div class="aud-grid">'
-       '<a class="aud-card" href="Amazing_Facts.html"><span class="aud-icon" aria-hidden="true">🧒</span><span class="aud-title">Kids</span><span class="aud-text">Amazing facts and simple explanations.</span></a>'
+       '<a class="aud-card" href="Play_and_Learn.html"><span class="aud-icon" aria-hidden="true">🧒</span><span class="aud-title">Kids</span><span class="aud-text">Games, maps and amazing facts.</span></a>'
        '<a class="aud-card" href="Teachers.html"><span class="aud-icon" aria-hidden="true">🎓</span><span class="aud-title">Students &amp; Teachers</span><span class="aud-text">Printable sheets, a glossary and citations.</span></a>'
        '<a class="aud-card" href="Solutions.html"><span class="aud-icon" aria-hidden="true">🔭</span><span class="aud-title">Curious Adults</span><span class="aud-text">Every solution, searchable in one place.</span></a>'
        '<a class="aud-card" href="mailto:partner-relations@savingplanets.com?subject=Creating%20Partnership%20Starts%20Here"><span class="aud-icon" aria-hidden="true">🤝</span><span class="aud-title">Partners</span><span class="aud-text">Sponsor or work with Saving Planets.</span></a>'

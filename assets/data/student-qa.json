@@ -1,4 +1,473 @@
 {
- "_about": "Approved answers to SI Helper questions the site could not answer (Oct 16 2026 workflow, see NOTES.md 'Unanswered-question log'). Each entry: id (a-z0-9-), topic (all|aero|orbit|phys), approved (true to publish), added (YYYY-MM-DD), from_keys (KV keys from scripts/unanswered-pull.py, so they are not exported again), q and a in en/fr/es/ar/it (plain text), sources [{title, url}] (https, at least one). Built by scripts/build-student-qa.py into Student_Questions.html (5 langs), search/student-qa.json, sitemap, and Vectorize via scripts/si-index.py.",
- "entries": []
+ "_about": "Approved answers to SI Helper questions the site could not answer (Oct 16 2026 workflow, see NOTES.md 'Unanswered-question log'). Each entry: id (a-z0-9-), topic (all|rocket|aero|orbit|phys), approved (true to publish), added (YYYY-MM-DD), from_keys (KV keys from scripts/unanswered-pull.py, so they are not exported again), q and a in en/fr/es/ar/it (plain text), sources [{title, url}] (https, at least one). Built by scripts/build-student-qa.py into Student_Questions.html (5 langs), search/student-qa.json, sitemap, and Vectorize via scripts/si-index.py. Oct 28 2026: 12 'rocket' entries seeded for the Search rocket propulsion track (founder request); answers written fresh from the cited pages; fr/es/ar/it/he machine-drafted (he stored for later; page builds 5 langs).",
+ "entries": [
+  {
+   "id": "rp-thrust",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "How does a rocket make thrust, even in space?",
+    "fr": "Comment une fusée crée-t-elle de la poussée, même dans l'espace ?",
+    "es": "¿Cómo genera empuje un cohete, incluso en el espacio?",
+    "ar": "كيف يولّد الصاروخ قوة الدفع، حتى في الفضاء؟",
+    "it": "Come fa un razzo a produrre spinta, anche nello spazio?",
+    "he": "איך רקטה יוצרת דחף, גם בחלל?"
+   },
+   "a": {
+    "en": "A rocket burns propellant and throws hot gas out of its nozzle very fast. Pushing that gas backward pushes the rocket forward (Newton's third law). It carries its own oxidizer, so it needs no air and works in a vacuum.",
+    "fr": "Une fusée brûle ses ergols et éjecte des gaz chauds très vite par sa tuyère. En poussant ces gaz vers l'arrière, elle est poussée vers l'avant (troisième loi de Newton). Elle emporte son propre comburant : elle n'a pas besoin d'air et fonctionne dans le vide.",
+    "es": "Un cohete quema propelente y expulsa gas caliente muy rápido por su tobera. Al empujar ese gas hacia atrás, el cohete es empujado hacia delante (tercera ley de Newton). Lleva su propio oxidante, así que no necesita aire y funciona en el vacío.",
+    "ar": "يحرق الصاروخ الوقود ويقذف الغاز الساخن من فوهته بسرعة كبيرة. دفع هذا الغاز إلى الخلف يدفع الصاروخ إلى الأمام (قانون نيوتن الثالث). ويحمل الصاروخ المؤكسد معه، لذا لا يحتاج إلى الهواء ويعمل في الفراغ.",
+    "it": "Un razzo brucia propellente ed espelle gas caldo molto velocemente dall'ugello. Spingendo quel gas all'indietro, il razzo viene spinto in avanti (terza legge di Newton). Porta con sé il proprio ossidante, quindi non ha bisogno d'aria e funziona nel vuoto.",
+    "he": "רקטה שורפת דלק ופולטת גז חם במהירות רבה דרך הנחיר. דחיפת הגז לאחור דוחפת את הרקטה קדימה (החוק השלישי של ניוטון). היא נושאת מחמצן משלה, ולכן אינה צריכה אוויר ופועלת בריק."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 7",
+     "url": "https://www.savingplanets.com/Propulsion.html#u7"
+    },
+    {
+     "title": "NASA Glenn: Liquid Rocket Engine",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/liquid-rocket-engine/"
+    }
+   ]
+  },
+  {
+   "id": "rp-isp",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "What is specific impulse, and why is it measured in seconds?",
+    "fr": "Qu'est-ce que l'impulsion spécifique, et pourquoi se mesure-t-elle en secondes ?",
+    "es": "¿Qué es el impulso específico y por qué se mide en segundos?",
+    "ar": "ما الدفع النوعي، ولماذا يُقاس بالثواني؟",
+    "it": "Che cos'è l'impulso specifico e perché si misura in secondi?",
+    "he": "מהו דחף סגולי, ולמה מודדים אותו בשניות?"
+   },
+   "a": {
+    "en": "Specific impulse (Isp) is thrust divided by the weight of propellant used each second: Isp = F/(ṁg₀). Newtons divided by newtons per second leaves seconds. It is not a burn time. Higher Isp means less propellant for the same push.",
+    "fr": "L'impulsion spécifique (Isp) est la poussée divisée par le poids d'ergols consommé chaque seconde : Isp = F/(ṁg₀). Des newtons divisés par des newtons par seconde donnent des secondes. Ce n'est pas une durée de combustion. Une Isp plus élevée signifie moins d'ergols pour la même poussée.",
+    "es": "El impulso específico (Isp) es el empuje dividido entre el peso de propelente usado cada segundo: Isp = F/(ṁg₀). Newtons divididos entre newtons por segundo dan segundos. No es un tiempo de encendido. Más Isp significa menos propelente para el mismo empuje.",
+    "ar": "الدفع النوعي (Isp) هو قوة الدفع مقسومة على وزن الوقود المستهلك في كل ثانية: Isp = F/(ṁg₀). النيوتن مقسوم على نيوتن لكل ثانية يعطي ثواني. وهو ليس زمن احتراق. كلما ارتفع Isp قلّ الوقود اللازم للدفع نفسه.",
+    "it": "L'impulso specifico (Isp) è la spinta divisa per il peso di propellente usato ogni secondo: Isp = F/(ṁg₀). Newton diviso newton al secondo dà secondi. Non è un tempo di accensione. Un Isp più alto significa meno propellente per la stessa spinta.",
+    "he": "דחף סגולי (Isp) הוא הדחף חלקי משקל הדלק הנצרך בכל שנייה: Isp = F/(ṁg₀). ניוטון חלקי ניוטון לשנייה נותן שניות. זה לא זמן בעירה. Isp גבוה יותר פירושו פחות דלק לאותו דחף."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 7",
+     "url": "https://www.savingplanets.com/Propulsion.html#u7"
+    },
+    {
+     "title": "NASA Glenn: Specific Impulse",
+     "url": "https://www.grc.nasa.gov/www/k-12/airplane/specimp.html"
+    }
+   ]
+  },
+  {
+   "id": "rp-types",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "What is the difference between liquid, solid and hybrid rockets?",
+    "fr": "Quelle est la différence entre les fusées à ergols liquides, solides et hybrides ?",
+    "es": "¿Qué diferencia hay entre los cohetes líquidos, sólidos e híbridos?",
+    "ar": "ما الفرق بين صواريخ الوقود السائل والصلب والهجين؟",
+    "it": "Che differenza c'è tra razzi a propellente liquido, solido e ibrido?",
+    "he": "מה ההבדל בין רקטות דלק נוזלי, מוצק והיברידי?"
+   },
+   "a": {
+    "en": "Liquid: fuel and oxidizer sit in separate tanks and are pumped into a chamber. They give higher Isp and can be throttled. Solid: fuel and oxidizer are premixed into one solid block that burns from its surface. Simple and ready on demand. Hybrid: a solid fuel with a liquid or gas oxidizer, so it can be throttled, shut down and restarted.",
+    "fr": "Liquide : carburant et comburant sont dans des réservoirs séparés et pompés vers une chambre. Isp plus élevée et poussée réglable. Solide : carburant et comburant sont mélangés en un bloc solide qui brûle depuis sa surface. Simple et prêt à l'emploi. Hybride : un carburant solide avec un comburant liquide ou gazeux, qu'on peut moduler, éteindre et rallumer.",
+    "es": "Líquido: combustible y oxidante van en tanques separados y se bombean a una cámara. Dan más Isp y se pueden regular. Sólido: combustible y oxidante van premezclados en un bloque sólido que arde desde su superficie. Simple y listo al instante. Híbrido: combustible sólido con oxidante líquido o gaseoso, que se puede regular, apagar y volver a encender.",
+    "ar": "السائل: يوضع الوقود والمؤكسد في خزانين منفصلين ويُضخّان إلى غرفة الاحتراق، ويعطي Isp أعلى ويمكن التحكم في قوته. الصلب: يُخلط الوقود والمؤكسد مسبقًا في كتلة صلبة تحترق من سطحها، وهو بسيط وجاهز عند الطلب. الهجين: وقود صلب مع مؤكسد سائل أو غازي، فيمكن التحكم فيه وإطفاؤه وإعادة تشغيله.",
+    "it": "Liquido: combustibile e ossidante stanno in serbatoi separati e vengono pompati in una camera. Danno Isp più alto e si possono regolare. Solido: combustibile e ossidante sono premiscelati in un blocco solido che brucia dalla superficie. Semplice e pronto all'uso. Ibrido: combustibile solido con ossidante liquido o gassoso, che si può regolare, spegnere e riaccendere.",
+    "he": "נוזלי: הדלק והמחמצן נמצאים במכלים נפרדים ונשאבים לתא בעירה. Isp גבוה יותר ואפשר לווסת. מוצק: הדלק והמחמצן מעורבבים מראש בגוש מוצק שבוער מפניו. פשוט ומוכן מיד. היברידי: דלק מוצק עם מחמצן נוזלי או גזי, ולכן אפשר לווסת, לכבות ולהדליק מחדש."
+   },
+   "sources": [
+    {
+     "title": "NASA Glenn: Liquid Rocket Engine",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/liquid-rocket-engine/"
+    },
+    {
+     "title": "NASA Glenn: Solid Rocket Engine",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/solid-rocket-engine/"
+    },
+    {
+     "title": "NASA Technical Reports Server: hybrid rocket study (20030068416)",
+     "url": "https://ntrs.nasa.gov/citations/20030068416"
+    },
+    {
+     "title": "MIT OpenCourseWare 16.512 Rocket Propulsion",
+     "url": "https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/"
+    }
+   ]
+  },
+  {
+   "id": "rp-equation",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "What does the rocket equation tell us?",
+    "fr": "Que nous apprend l'équation de la fusée ?",
+    "es": "¿Qué nos dice la ecuación del cohete?",
+    "ar": "ماذا تخبرنا معادلة الصاروخ؟",
+    "it": "Che cosa ci dice l'equazione del razzo?",
+    "he": "מה משוואת הרקטה מלמדת אותנו?"
+   },
+   "a": {
+    "en": "Tsiolkovsky's equation, Δv = Vₑ ln(m₀/m_f), gives how much a rocket can change its speed. It depends only on exhaust speed and on how much of the starting mass is propellant. Because of the logarithm, doubling propellant does not double Δv.",
+    "fr": "L'équation de Tsiolkovski, Δv = Vₑ ln(m₀/m_f), donne de combien une fusée peut changer sa vitesse. Elle dépend seulement de la vitesse d'éjection et de la part d'ergols dans la masse de départ. À cause du logarithme, doubler les ergols ne double pas le Δv.",
+    "es": "La ecuación de Tsiolkovski, Δv = Vₑ ln(m₀/m_f), da cuánto puede cambiar un cohete su velocidad. Solo depende de la velocidad de escape y de qué parte de la masa inicial es propelente. Por el logaritmo, duplicar el propelente no duplica el Δv.",
+    "ar": "معادلة تسيولكوفسكي، Δv = Vₑ ln(m₀/m_f)، تحدد مقدار ما يستطيع الصاروخ تغييره من سرعته. وتعتمد فقط على سرعة العادم وعلى نسبة الوقود من الكتلة الابتدائية. وبسبب اللوغاريتم، مضاعفة الوقود لا تضاعف Δv.",
+    "it": "L'equazione di Ciolkovskij, Δv = Vₑ ln(m₀/m_f), dice di quanto un razzo può cambiare la sua velocità. Dipende solo dalla velocità di scarico e da quanta parte della massa iniziale è propellente. Per via del logaritmo, raddoppiare il propellente non raddoppia il Δv.",
+    "he": "משוואת ציולקובסקי, Δv = Vₑ ln(m₀/m_f), קובעת בכמה רקטה יכולה לשנות את מהירותה. היא תלויה רק במהירות הפליטה ובחלק הדלק מתוך המסה ההתחלתית. בגלל הלוגריתם, הכפלת הדלק אינה מכפילה את Δv."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 9",
+     "url": "https://www.savingplanets.com/Propulsion.html#u9"
+    },
+    {
+     "title": "Saving Planets: Delta-v Calculator",
+     "url": "https://www.savingplanets.com/Delta_V_Calculator.html"
+    }
+   ]
+  },
+  {
+   "id": "rp-nozzle",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "How does a rocket nozzle speed up the exhaust?",
+    "fr": "Comment la tuyère d'une fusée accélère-t-elle les gaz ?",
+    "es": "¿Cómo acelera los gases la tobera de un cohete?",
+    "ar": "كيف تُسرّع فوهة الصاروخ غازات العادم؟",
+    "it": "Come fa l'ugello di un razzo ad accelerare i gas di scarico?",
+    "he": "איך נחיר הרקטה מאיץ את גזי הפליטה?"
+   },
+   "a": {
+    "en": "The nozzle narrows to a throat, where the flow reaches the speed of sound, then widens so the gas keeps expanding and speeding up. A bigger exit-to-throat area ratio gives faster exhaust, but a nozzle sized for vacuum overexpands at sea level and loses thrust.",
+    "fr": "La tuyère se resserre jusqu'à un col, où l'écoulement atteint la vitesse du son, puis s'élargit pour que le gaz continue à se détendre et à accélérer. Un plus grand rapport de sections sortie/col donne des gaz plus rapides, mais une tuyère conçue pour le vide est surdétendue au niveau de la mer et perd de la poussée.",
+    "es": "La tobera se estrecha hasta una garganta, donde el flujo alcanza la velocidad del sonido, y luego se ensancha para que el gas siga expandiéndose y acelerando. Una mayor relación de áreas salida/garganta da gases más rápidos, pero una tobera diseñada para el vacío se sobreexpande al nivel del mar y pierde empuje.",
+    "ar": "تضيق الفوهة حتى عنق تبلغ فيه سرعة التدفق سرعة الصوت، ثم تتسع ليواصل الغاز التمدد والتسارع. نسبة مساحة أكبر بين المخرج والعنق تعطي عادمًا أسرع، لكن الفوهة المصممة للفراغ تفرط في التمدد عند مستوى سطح البحر وتفقد جزءًا من الدفع.",
+    "it": "L'ugello si restringe fino a una gola, dove il flusso raggiunge la velocità del suono, poi si allarga così il gas continua a espandersi e ad accelerare. Un rapporto d'area uscita/gola più grande dà scarico più veloce, ma un ugello progettato per il vuoto è sovraespanso al livello del mare e perde spinta.",
+    "he": "הנחיר מצטמצם עד צוואר, שבו הזרימה מגיעה למהירות הקול, ואז מתרחב כדי שהגז ימשיך להתפשט ולהאיץ. יחס שטחים גדול יותר בין היציאה לצוואר נותן פליטה מהירה יותר, אבל נחיר שתוכנן לריק מתפשט יתר על המידה בגובה פני הים ומאבד דחף."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 8",
+     "url": "https://www.savingplanets.com/Propulsion.html#u8"
+    },
+    {
+     "title": "NASA Glenn: Liquid Rocket Engine",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/liquid-rocket-engine/"
+    }
+   ]
+  },
+  {
+   "id": "rp-staging",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "Why do rockets use stages?",
+    "fr": "Pourquoi les fusées ont-elles plusieurs étages ?",
+    "es": "¿Por qué los cohetes usan etapas?",
+    "ar": "لماذا تُبنى الصواريخ على مراحل؟",
+    "it": "Perché i razzi usano più stadi?",
+    "he": "למה רקטות בנויות משלבים?"
+   },
+   "a": {
+    "en": "Empty tanks and engines are dead weight. Dropping each stage when its propellant runs out lets the next stage start with a better mass ratio, so the whole rocket reaches more Δv than one big stage could.",
+    "fr": "Les réservoirs vides et les moteurs sont du poids mort. Larguer chaque étage quand ses ergols sont épuisés permet à l'étage suivant de partir avec un meilleur rapport de masse, et la fusée atteint plus de Δv qu'un seul gros étage.",
+    "es": "Los tanques vacíos y los motores son peso muerto. Soltar cada etapa al agotar su propelente deja a la siguiente empezar con mejor relación de masa, así el cohete logra más Δv que una sola etapa grande.",
+    "ar": "الخزانات الفارغة والمحركات وزن ميت. التخلص من كل مرحلة عند نفاد وقودها يجعل المرحلة التالية تبدأ بنسبة كتلة أفضل، فيبلغ الصاروخ Δv أكبر مما تبلغه مرحلة واحدة كبيرة.",
+    "it": "Serbatoi vuoti e motori sono peso morto. Sganciare ogni stadio quando finisce il propellente fa partire il successivo con un rapporto di massa migliore, così il razzo raggiunge più Δv di un unico grande stadio.",
+    "he": "מכלים ריקים ומנועים הם משקל מת. השלכת כל שלב כשהדלק שלו נגמר מאפשרת לשלב הבא להתחיל עם יחס מסה טוב יותר, וכך הרקטה כולה מגיעה ל-Δv גבוה יותר משלב גדול אחד."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 9",
+     "url": "https://www.savingplanets.com/Propulsion.html#u9"
+    }
+   ]
+  },
+  {
+   "id": "rp-cryo",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "Why are liquid hydrogen and liquid oxygen kept so cold?",
+    "fr": "Pourquoi l'hydrogène et l'oxygène liquides sont-ils gardés si froids ?",
+    "es": "¿Por qué el hidrógeno y el oxígeno líquidos se mantienen tan fríos?",
+    "ar": "لماذا يُحفظ الهيدروجين والأكسجين السائلان باردين جدًا؟",
+    "it": "Perché idrogeno e ossigeno liquidi vengono tenuti così freddi?",
+    "he": "למה מימן וחמצן נוזליים נשמרים קרים כל כך?"
+   },
+   "a": {
+    "en": "They are gases at room temperature. To store them densely as liquids, NASA keeps oxygen at about −297 °F and hydrogen at about −423 °F. The payoff: hydrogen–oxygen engines have the highest chemical Isp. The cost: heat leaks make them boil off, so tanks need heavy insulation.",
+    "fr": "Ce sont des gaz à température ambiante. Pour les stocker sous forme liquide dense, la NASA garde l'oxygène vers −297 °F (−183 °C) et l'hydrogène vers −423 °F (−253 °C). L'avantage : les moteurs hydrogène–oxygène ont la meilleure Isp chimique. Le prix : la chaleur les fait s'évaporer, donc les réservoirs exigent une forte isolation.",
+    "es": "Son gases a temperatura ambiente. Para guardarlos densos como líquidos, la NASA mantiene el oxígeno a unos −297 °F (−183 °C) y el hidrógeno a unos −423 °F (−253 °C). La ventaja: los motores de hidrógeno y oxígeno tienen el mayor Isp químico. El costo: el calor los evapora, así que los tanques necesitan mucho aislamiento.",
+    "ar": "هما غازان في درجة حرارة الغرفة. ولتخزينهما سائلين بكثافة، تحفظ ناسا الأكسجين عند نحو ‎−297 °F (‏−183 °C) والهيدروجين عند نحو ‎−423 °F (‏−253 °C). الفائدة: محركات الهيدروجين والأكسجين لها أعلى Isp كيميائي. الثمن: تسرّب الحرارة يجعلهما يتبخران، لذا تحتاج الخزانات إلى عزل كبير.",
+    "it": "A temperatura ambiente sono gas. Per conservarli densi come liquidi, la NASA tiene l'ossigeno a circa −297 °F (−183 °C) e l'idrogeno a circa −423 °F (−253 °C). Il vantaggio: i motori a idrogeno e ossigeno hanno l'Isp chimico più alto. Il costo: il calore li fa evaporare, quindi i serbatoi richiedono un forte isolamento.",
+    "he": "בטמפרטורת החדר הם גזים. כדי לאחסן אותם בצפיפות כנוזלים, נאס\"א שומרת חמצן בכ־‎−297°F (‏−183°C) ומימן בכ־‎−423°F (‏−253°C). היתרון: למנועי מימן–חמצן יש את ה-Isp הכימי הגבוה ביותר. המחיר: חום שחודר גורם להם להתאדות, ולכן המכלים צריכים בידוד כבד."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 8",
+     "url": "https://www.savingplanets.com/Propulsion.html#u8"
+    },
+    {
+     "title": "NASA: Innovative Liquid Hydrogen Storage to Support SLS",
+     "url": "https://www.nasa.gov/missions/artemis/innovative-liquid-hydrogen-storage-to-support-space-launch-system/"
+    },
+    {
+     "title": "NASA Glenn: NASA's cryo efforts beyond the atmosphere",
+     "url": "https://www.nasa.gov/centers-and-facilities/glenn/brr-its-cold-in-here-nasas-cryo-efforts-beyond-the-atmosphere/"
+    }
+   ]
+  },
+  {
+   "id": "rp-electric",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "How do ion and Hall thrusters work, and why is their push so gentle?",
+    "fr": "Comment fonctionnent les propulseurs ioniques et à effet Hall, et pourquoi poussent-ils si doucement ?",
+    "es": "¿Cómo funcionan los propulsores iónicos y Hall, y por qué empujan tan suave?",
+    "ar": "كيف تعمل الدوافع الأيونية ودوافع هول، ولماذا دفعها ضعيف جدًا؟",
+    "it": "Come funzionano i propulsori ionici e a effetto Hall, e perché spingono così poco?",
+    "he": "איך פועלים מנועי יונים ומנועי הול, ולמה הדחף שלהם עדין כל כך?"
+   },
+   "a": {
+    "en": "They use electric power to shoot propellant out extremely fast, giving very high Isp. But thrust is limited by power (F = 2ηP/Vₑ): faster exhaust means less thrust for the same power. They suit long, patient missions, not launch.",
+    "fr": "Ils utilisent l'énergie électrique pour éjecter les ergols très vite, d'où une Isp très élevée. Mais la poussée est limitée par la puissance (F = 2ηP/Vₑ) : plus les gaz sont rapides, moins il y a de poussée pour la même puissance. Ils conviennent aux longues missions patientes, pas au lancement.",
+    "es": "Usan energía eléctrica para expulsar el propelente muy rápido, con un Isp muy alto. Pero el empuje está limitado por la potencia (F = 2ηP/Vₑ): a mayor velocidad de escape, menos empuje con la misma potencia. Sirven para misiones largas y pacientes, no para despegar.",
+    "ar": "تستخدم الطاقة الكهربائية لقذف الوقود بسرعة عالية جدًا، فتعطي Isp مرتفعًا جدًا. لكن الدفع محدود بالقدرة (F = 2ηP/Vₑ): كلما زادت سرعة العادم قلّ الدفع للقدرة نفسها. لذا تناسب المهام الطويلة الصبورة، لا الإطلاق.",
+    "it": "Usano energia elettrica per espellere il propellente velocissimo, con Isp molto alto. Ma la spinta è limitata dalla potenza (F = 2ηP/Vₑ): scarico più veloce significa meno spinta a parità di potenza. Sono adatti a missioni lunghe e pazienti, non al lancio.",
+    "he": "הם משתמשים בחשמל כדי לפלוט דלק במהירות עצומה, ולכן ה-Isp שלהם גבוה מאוד. אבל הדחף מוגבל בהספק (F = 2ηP/Vₑ): פליטה מהירה יותר פירושה פחות דחף לאותו הספק. הם מתאימים למשימות ארוכות וסבלניות, לא לשיגור."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 9",
+     "url": "https://www.savingplanets.com/Propulsion.html#u9"
+    }
+   ]
+  },
+  {
+   "id": "rp-twr",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "What thrust-to-weight ratio does a rocket need to lift off?",
+    "fr": "Quel rapport poussée/poids faut-il à une fusée pour décoller ?",
+    "es": "¿Qué relación empuje/peso necesita un cohete para despegar?",
+    "ar": "ما نسبة الدفع إلى الوزن التي يحتاجها الصاروخ للإقلاع؟",
+    "it": "Quale rapporto spinta/peso serve a un razzo per decollare?",
+    "he": "איזה יחס דחף למשקל רקטה צריכה כדי להמריא?"
+   },
+   "a": {
+    "en": "Above 1. At exactly 1 the rocket just hovers. The extra above 1 sets its starting acceleration: a₀ = F/m − g.",
+    "fr": "Plus de 1. À exactement 1, la fusée fait du surplace. L'excédent au-dessus de 1 fixe son accélération de départ : a₀ = F/m − g.",
+    "es": "Más de 1. Con exactamente 1, el cohete solo flota. Lo que sobra por encima de 1 fija su aceleración inicial: a₀ = F/m − g.",
+    "ar": "أكثر من 1. عند 1 تمامًا يحوم الصاروخ في مكانه فقط. والزيادة فوق 1 تحدد تسارعه الابتدائي: a₀ = F/m − g.",
+    "it": "Più di 1. A esattamente 1 il razzo resta sospeso. L'eccesso sopra 1 fissa l'accelerazione iniziale: a₀ = F/m − g.",
+    "he": "יותר מ-1. ביחס של בדיוק 1 הרקטה רק מרחפת. העודף מעל 1 קובע את התאוצה ההתחלתית: a₀ = F/m − g."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Thrust-to-Weight Ratio Calculator",
+     "url": "https://www.savingplanets.com/Thrust_to_Weight_Calculator.html"
+    }
+   ]
+  },
+  {
+   "id": "rp-reuse",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "Can rocket engines be reused?",
+    "fr": "Les moteurs de fusée peuvent-ils être réutilisés ?",
+    "es": "¿Se pueden reutilizar los motores de cohete?",
+    "ar": "هل يمكن إعادة استخدام محركات الصواريخ؟",
+    "it": "I motori a razzo si possono riutilizzare?",
+    "he": "האם אפשר לעשות שימוש חוזר במנועי רקטה?"
+   },
+   "a": {
+    "en": "Yes. NASA reports its RS-25 engines flew 135 Space Shuttle missions, with more than 3,000 starts. Four RS-25s now power the SLS core stage. Reusing proven hardware saves building new engines for every flight.",
+    "fr": "Oui. La NASA indique que ses moteurs RS-25 ont volé sur 135 missions de la navette spatiale, avec plus de 3 000 allumages. Quatre RS-25 propulsent aujourd'hui l'étage central du SLS. Réutiliser du matériel éprouvé évite de construire de nouveaux moteurs à chaque vol.",
+    "es": "Sí. La NASA informa que sus motores RS-25 volaron en 135 misiones del transbordador espacial, con más de 3.000 encendidos. Hoy cuatro RS-25 impulsan la etapa central del SLS. Reutilizar equipo probado evita construir motores nuevos para cada vuelo.",
+    "ar": "نعم. تذكر ناسا أن محركات RS-25 طارت في 135 مهمة لمكوك الفضاء، مع أكثر من 3000 تشغيل. واليوم تدفع أربعة محركات RS-25 المرحلة المركزية لصاروخ SLS. إعادة استخدام معدات مجرّبة توفّر بناء محركات جديدة لكل رحلة.",
+    "it": "Sì. La NASA riferisce che i suoi motori RS-25 hanno volato in 135 missioni dello Space Shuttle, con oltre 3.000 accensioni. Oggi quattro RS-25 spingono lo stadio centrale dell'SLS. Riutilizzare hardware collaudato evita di costruire motori nuovi per ogni volo.",
+    "he": "כן. נאס\"א מדווחת שמנועי RS-25 שלה טסו ב-135 משימות של מעבורת החלל, עם יותר מ-3,000 הפעלות. כיום ארבעה מנועי RS-25 מניעים את השלב המרכזי של SLS. שימוש חוזר בחומרה מוכחת חוסך בניית מנועים חדשים לכל טיסה."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Unit 7",
+     "url": "https://www.savingplanets.com/Propulsion.html#u7"
+    }
+   ]
+  },
+  {
+   "id": "rp-vs-jet",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "How is a rocket engine different from a jet engine?",
+    "fr": "En quoi un moteur-fusée diffère-t-il d'un réacteur ?",
+    "es": "¿En qué se diferencia un motor cohete de un motor a reacción?",
+    "ar": "ما الفرق بين محرك الصاروخ والمحرك النفاث؟",
+    "it": "In che cosa un motore a razzo è diverso da un motore a reazione?",
+    "he": "במה מנוע רקטי שונה ממנוע סילון?"
+   },
+   "a": {
+    "en": "A jet engine breathes air: it takes in oxygen and uses the air itself as its working gas. A rocket carries all its propellant, oxidizer included, so it works in space where a jet cannot. Jets are efficient by moving lots of air a little; rockets rely on very fast exhaust.",
+    "fr": "Un réacteur respire l'air : il y prend l'oxygène et utilise l'air comme gaz de travail. Une fusée emporte tous ses ergols, comburant compris, et fonctionne donc dans l'espace, où un réacteur ne marche pas. Les réacteurs sont efficaces en accélérant beaucoup d'air un peu ; les fusées misent sur des gaz très rapides.",
+    "es": "Un motor a reacción respira aire: toma oxígeno y usa el propio aire como gas de trabajo. Un cohete lleva todo su propelente, oxidante incluido, así que funciona en el espacio, donde un reactor no puede. Los reactores son eficientes moviendo mucho aire un poco; los cohetes dependen de gases muy rápidos.",
+    "ar": "المحرك النفاث يتنفس الهواء: يأخذ منه الأكسجين ويستخدم الهواء نفسه غازًا عاملًا. أما الصاروخ فيحمل كل وقوده بما فيه المؤكسد، لذا يعمل في الفضاء حيث لا يعمل النفاث. النفاثات فعّالة لأنها تحرّك هواءً كثيرًا قليلًا؛ والصواريخ تعتمد على عادم سريع جدًا.",
+    "it": "Un motore a reazione respira aria: ne prende l'ossigeno e usa l'aria stessa come gas di lavoro. Un razzo porta tutto il propellente, ossidante compreso, quindi funziona nello spazio dove un reattore non può. I reattori sono efficienti muovendo molta aria di poco; i razzi puntano su uno scarico velocissimo.",
+    "he": "מנוע סילון נושם אוויר: הוא לוקח ממנו חמצן ומשתמש באוויר עצמו כגז העבודה. רקטה נושאת את כל הדלק שלה, כולל המחמצן, ולכן פועלת בחלל, שם מנוע סילון לא יכול. מנועי סילון יעילים כי הם מזיזים הרבה אוויר מעט; רקטות נשענות על פליטה מהירה מאוד."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Propulsion (AERO 410), Units 1 and 7",
+     "url": "https://www.savingplanets.com/Propulsion.html#u1"
+    },
+    {
+     "title": "NASA Glenn: Liquid Rocket Engine",
+     "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/liquid-rocket-engine/"
+    }
+   ]
+  },
+  {
+   "id": "rp-study",
+   "topic": "rocket",
+   "approved": true,
+   "added": "2026-10-28",
+   "machine_drafted": [
+    "fr",
+    "es",
+    "ar",
+    "it",
+    "he"
+   ],
+   "q": {
+    "en": "How can I study rocket propulsion, and what careers use it?",
+    "fr": "Comment étudier la propulsion des fusées, et quels métiers l'utilisent ?",
+    "es": "¿Cómo puedo estudiar propulsión de cohetes y qué carreras la usan?",
+    "ar": "كيف أدرس دفع الصواريخ، وما المهن التي تستخدمه؟",
+    "it": "Come posso studiare la propulsione a razzo, e quali carriere la usano?",
+    "he": "איך לומדים הנעה רקטית, ואילו קריירות משתמשות בה?"
+   },
+   "a": {
+    "en": "Build the base first: calculus, physics, chemistry, thermodynamics, fluids and heat transfer, then a propulsion course. Our free four-year path does this in order, and MIT's free 16.512 covers solid, liquid and hybrid rockets in depth. Propulsion work sits inside aerospace engineering careers.",
+    "fr": "Construis d'abord la base : calcul, physique, chimie, thermodynamique, mécanique des fluides et transferts thermiques, puis un cours de propulsion. Notre parcours gratuit sur quatre ans suit cet ordre, et le cours gratuit 16.512 du MIT traite en profondeur les fusées solides, liquides et hybrides. Les métiers de la propulsion font partie de l'ingénierie aérospatiale.",
+    "es": "Primero la base: cálculo, física, química, termodinámica, fluidos y transferencia de calor, y luego un curso de propulsión. Nuestra ruta gratuita de cuatro años sigue ese orden, y el curso gratuito 16.512 del MIT cubre a fondo cohetes sólidos, líquidos e híbridos. El trabajo en propulsión forma parte de las carreras de ingeniería aeroespacial.",
+    "ar": "ابنِ الأساس أولًا: التفاضل والتكامل والفيزياء والكيمياء والديناميكا الحرارية وميكانيكا الموائع وانتقال الحرارة، ثم مقرر في الدفع. مسارنا المجاني لأربع سنوات يسير بهذا الترتيب، ومقرر MIT المجاني 16.512 يتناول بعمق الصواريخ الصلبة والسائلة والهجينة. وأعمال الدفع جزء من مهن هندسة الطيران والفضاء.",
+    "it": "Prima le basi: analisi, fisica, chimica, termodinamica, fluidi e trasmissione del calore, poi un corso di propulsione. Il nostro percorso gratuito di quattro anni segue quest'ordine, e il corso gratuito 16.512 del MIT approfondisce razzi solidi, liquidi e ibridi. Il lavoro sulla propulsione rientra nelle carriere di ingegneria aerospaziale.",
+    "he": "קודם בונים בסיס: חשבון אינפיניטסימלי, פיזיקה, כימיה, תרמודינמיקה, זורמים ומעבר חום, ואז קורס הנעה. המסלול החינמי שלנו לארבע שנים עובר לפי הסדר הזה, והקורס החינמי 16.512 של MIT מעמיק ברקטות מוצקות, נוזליות והיברידיות. עבודת הנעה היא חלק מקריירות בהנדסת אווירונאוטיקה וחלל."
+   },
+   "sources": [
+    {
+     "title": "Saving Planets: Aerospace Studies (Jet Propulsion) track",
+     "url": "https://www.savingplanets.com/Learn_Jet_Propulsion.html"
+    },
+    {
+     "title": "Saving Planets: Careers",
+     "url": "https://www.savingplanets.com/Careers.html"
+    },
+    {
+     "title": "MIT OpenCourseWare 16.512 Rocket Propulsion",
+     "url": "https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/"
+    }
+   ]
+  }
+ ]
 }

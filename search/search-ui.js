@@ -33,7 +33,7 @@ window.SP_SEARCH_STARTED = true;
     $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   }));
   // approved SI Helper Q&A (search/student-qa.json from scripts/build-student-qa.py; absent until the first answer is approved)
-  const QA_T = { aero: 'aero', orbit: 'orbital', phys: 'physics', all: 'all' };
+  const QA_T = { rocket: 'rocket', aero: 'aero', orbit: 'orbital', phys: 'physics', all: 'all' };
   let qa = [];
   fetch('/search/student-qa.json').then(r => r.ok ? r.json() : {}).then(d => { qa = (d[lang.slice(0, 2)] || []).map(e => ({ ...e, tab: QA_T[e.topic] || 'all' })); }).catch(() => {});
   const topic = () => document.documentElement.getAttribute('data-sp-topic') || 'all';

@@ -20,6 +20,7 @@ python3 scripts/i18n-wth-1025.py >/dev/null   # Oct 25: Ways to Help filter/summ
 node scripts/newsletter-updates-sync.js || true  # Oct 14: 'feat(Page.html): ...' commits and NOTES.md '## Newsletter' bullets -> scripts/newsletter-updates.json (What's New)
 node build-stats.js --data-only          # Oct 14: live solution/hub counts (assets/data/solutions.json) from Solutions.html
 python3 scripts/build-trust.py             # Oct 14: Privacy, Editorial_Policy, Corrections, Topics A-Z (+ i18n strings)
+python3 scripts/build-a11y-terms.py        # Oct 28 (founder): Accessibility + Terms pages + footer links (+ i18n strings, he too)
 python3 scripts/build-batch-b.py           # ELI10 / teacher / cite boxes, Glossary + Teachers pages, homepage audience row (Oct 12)
 python3 scripts/build-site-extras.py        # footer site map, Sitemap.html, <main> landmark, video labels, extras.css (Oct 13)
 python3 scripts/build-batch-a.py   # Batch A (Oct 12): share bar, Last reviewed + sources, Related Solutions (from last semantic index), difference strip
@@ -38,13 +39,18 @@ python3 scripts/build-artemis-program.py   # Oct 18: Artemis_II.html titled 'Art
 python3 scripts/build-artemis-gallery.py   # Oct 18: Artemis Program page "Moments in History" gallery (12 NASA originals on R2, srcset, lazy) + i18n strings
 python3 scripts/trim-impact.py          # Oct 22 (founder): Impact Statement box = 2 sentences + sources; the rest moves word for word just below (EN source)
 python3 scripts/fix-hub-dup-images.py   # Oct 22 (founder): Lakes hub had two repeated card photos; swaps + warns on other hubs (EN source)
+python3 scripts/build-feature-policy.py      # Oct 28 (founder): About feature policy + hub link line (EN), before i18n-build
 python3 scripts/i18n-build.py
 python3 scripts/build-courses.py          # Oct 24 (founder): Courses hub + course pages (EN, scripts/courses/*.py) + Teachers COURSELINK block (all langs, after i18n-build)
 python3 scripts/build-launch-tracker.py  # Oct 26: Live Launch Tracker blurbs (purpose + SP connection)
 python3 scripts/build-launch-actions.py   # Oct 24: launch tracker Ask/Calendar buttons script tag on #lw-next pages (all langs)
 python3 scripts/build-404-case.py         # Oct 25 (founder, upgrade 1): 404 pages redirect wrong-case / old addresses (all langs, after i18n-build)
+python3 scripts/build-a11y-terms.py --home # Oct 28 (founder): home Standards Alignment block + educationalAlignment (all langs). Oct 31: replaces HOMESTD in place (moving it stale'd index.html). The i18n hash ignores that block.
 python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 python3 scripts/build-top-ten.py --links  # Oct 18: Top Ten card links stay in-language for generator-made pages (Learn, World_Map)
+# Oct 31: --home rewrites the English homepage after the stamp (footer tagline). Restamp those
+# pages before the check so weekly-sync does not abort and leave the hero half-built.
+python3 scripts/i18n-build.py --restamp
 # Translation freshness is checked right after i18n-build stamps hashes: later all-language post-processors
 # (heroes, mailto, dept-contacts, a11y, video schema...) edit English too and would always read as stale.
 node scripts/i18n-check.js | tail -3
@@ -64,6 +70,7 @@ python3 scripts/build-edu.py --translated   # satellite part names in fr/es/ar/i
 python3 scripts/build-batch-b.py --glossary  # tap/hover glossary definitions in en/fr/es/ar/it (after translation)
 python3 scripts/build-map.py           # Oct 15: World Map (assets/data/map-locations.json pins + Launch Library 2 rocket sites, RU/CN/KP excluded) -> map.<lang>.json + World_Map.html (all langs)
 python3 scripts/build-map-he.py        # Oct 17: assets/data/map.he.json + he/World_Map.html data-src (needs map.en.json and the i18n-built he page)
+python3 scripts/build-polar-mascots.py   # Oct 28 (founder): polar bear + penguin mascots on World_Map + Kids_Map (all langs, after map builds)
 python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Embed) on Amazing Facts, Myth vs Fact, World Map, homepage Scoreboard; per-item Cite (all langs)
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
 python3 scripts/he-edu-parity.py       # Oct 27: HE Teachers STARTHERE/SIHELPER/LEARNLINK parity for Big Questions
@@ -93,6 +100,7 @@ python3 scripts/build-learn-hubs.py     # Oct 26 (founder): Learn topic hubs + a
 python3 scripts/build-kids-p1.py       # Oct 17 Phase 1: Space Passport, Myth or Fact? Arcade, Boarding Pass (all langs + he), Superpowers panel (site.js SPOW), Play & Learn New row
 python3 scripts/build-events.py         # Oct 16: privacy-safe aggregate event counter block in site.js (Analytics Engine via si-helper /e)
 python3 scripts/build-analytics.py      # Oct 16: again after the late generators (Cloudflare beacon on every page, no GA, Privacy/About analytics text)
+python3 scripts/build-pwa.py           # Oct 28 (founder): installable web app: manifest + iOS meta + sw.js/pwa.js on every page (after analytics)
 python3 scripts/build-report-link.py    # Oct 16: Report a correction footer link (all langs) -> on-site form (Corrections.html#report)
 python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=license, JSON-LD license, About "Use & licence" (all langs)
 python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link
@@ -111,6 +119,7 @@ python3 scripts/hub-image-srcset.py     # Oct 26: responsive srcset on Earth_Obs
 python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
 python3 scripts/build-home-trim.py      # Oct 20: founder-approved clutter fix #1, homepage 18 -> 6 sections (parks, never deletes; --undo restores)
 python3 scripts/build-home-numbers.py   # Oct 25 (founder, upgrade 5): sourced numbers strip below the homepage hero (assets/data/home-numbers.json), all langs
+python3 scripts/build-home-vision.py    # Oct 30 (founder): Vision strip under the homepage hero, 6 langs (machine-draft note on fr/es/ar/it/he)
 python3 scripts/build-corrections-policy.py  # Oct 20/26: SI reader note fr/es/ar/it/he + Corrections_Policy (all langs); mailbox translators@
 python3 scripts/build-logo.py           # Oct 20: logo v2 icon in the nav (left of Home; RTL mirrored), favicons, apple-touch, footer logo credit (all langs)
 python3 scripts/build-promo-en-only.py   # Oct 21 (founder): promo videos English-only; fr/es/ar/it/he get one 4K NASA still

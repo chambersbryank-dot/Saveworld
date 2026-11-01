@@ -870,6 +870,126 @@
    null,
    "https://science.nasa.gov/citizen-science/",
    "https://www.nasa.gov/contact-2/"
+  ],
+  "pbi": [
+   "Polar Bears International",
+   "https://polarbearsinternational.org/donate/",
+   "https://polarbearsinternational.org/news-media/events/polar-bear-week/",
+   null
+  ],
+  "smartice": [
+   "SmartICE",
+   null,
+   "https://smartice.org",
+   null
+  ],
+  "permafrostpathways": [
+   "Permafrost Pathways (Woodwell Climate)",
+   "https://permafrost.woodwellclimate.org/support/",
+   "https://permafrost.woodwellclimate.org/about/",
+   null
+  ],
+  "parkscanada": [
+   "Parks Canada",
+   null,
+   "https://parks.canada.ca/agence-agency/benevolat-volunteering",
+   null
+  ],
+  "pame": [
+   "PAME (Arctic Council)",
+   null,
+   "https://pame.is/ourwork/arctic-marine-litter/plastic-in-a-bottle/",
+   null
+  ],
+  "caff": [
+   "CAFF (Arctic Council)",
+   null,
+   "https://www.caff.is/work/projects/arctic-biodiversity-data-service/",
+   null
+  ],
+  "mosaic": [
+   "MOSAiC (AWI)",
+   null,
+   "https://mosaic-expedition.org/expedition/",
+   null
+  ],
+  "wwfarctic": [
+   "WWF Arctic Programme",
+   null,
+   "https://www.arcticwwf.org/our-priorities/last-ice-area/",
+   null
+  ],
+  "icc": [
+   "Inuit Circumpolar Council",
+   null,
+   "https://www.inuitcircumpolar.com",
+   null
+  ],
+  "arcticbasecamp": [
+   "Arctic Basecamp",
+   null,
+   "https://arcticbasecamp.org/join-us/",
+   null
+  ],
+  "gough": [
+   "Gough Island Restoration Programme (RSPB)",
+   null,
+   "https://www.goughisland.com/get-in-touch",
+   null
+  ],
+  "penguinwatch": [
+   "Penguin Watch (Zooniverse)",
+   null,
+   "https://www.zooniverse.org/projects/penguintom79/penguin-watch",
+   null
+  ],
+  "oceanites": [
+   "Oceanites",
+   "https://www.oceanites.org/donate",
+   "https://www.oceanites.org/get-involved",
+   null
+  ],
+  "soccom": [
+   "SOCCOM",
+   null,
+   "https://soccom.princeton.edu/broader-impacts/adopt-float-program",
+   null
+  ],
+  "soos": [
+   "SOOS",
+   null,
+   "https://soos.aq/community/get-involved",
+   null
+  ],
+  "beyondepica": [
+   "Beyond EPICA",
+   null,
+   "https://www.beyondepica.eu/en/news-events/press-releases/",
+   null
+  ],
+  "asoc": [
+   "ASOC",
+   "https://www.asoc.org/give-now/",
+   "https://www.asoc.org/take-action/",
+   null
+  ],
+  "ccamlr": [
+   "CCAMLR",
+   null,
+   "https://spatial.ccamlr.org/",
+   null
+  ],
+  "scar": [
+   "SCAR",
+   "https://scar.org/donate",
+   "https://scar.org/about-us/administration/opportunities",
+   null
+  ],
+  "iaato": [
+   "IAATO",
+   null,
+   "https://www.iaato.org/supporting-science/citizen-science",
+   null
   ]
  },
  "pages": {
@@ -1118,6 +1238,26 @@
   "SOLAR_1": "noaa",
   "Three_Shields": "nasa",
   "TRACERS": "nasa",
-  "Vigil": "esa"
+  "Vigil": "esa",
+  "Polar_Bears_International": "pbi",
+  "SmartICE": "smartice",
+  "Permafrost_Pathways": "permafrostpathways",
+  "Tallurutiup_Imanga_NMCA": "parkscanada",
+  "PAME_Arctic_Council": "pame",
+  "CAFF_Arctic_Biodiversity": "caff",
+  "MOSAiC_Expedition": "mosaic",
+  "WWF_Arctic_Programme": "wwfarctic",
+  "Inuit_Circumpolar_Council": "icc",
+  "Arctic_Basecamp": "arcticbasecamp",
+  "Gough_Island_Restoration": "gough",
+  "Penguin_Watch": "penguinwatch",
+  "Oceanites_Penguin_Census": "oceanites",
+  "SOCCOM": "soccom",
+  "SOOS": "soos",
+  "Beyond_EPICA_Oldest_Ice": "beyondepica",
+  "ASOC_Antarctic_Coalition": "asoc",
+  "CCAMLR": "ccamlr",
+  "SCAR_Antarctic_Research": "scar",
+  "IAATO": "iaato"
  }
 }

@@ -1,0 +1,22 @@
+/* Oct 28 (founder): polar mascots on World_Map + Kids_Map. Bear walks down from the north, penguin waddles up from the south. */
+.pm-wrap{position:relative;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;max-width:900px;margin:.6rem auto;pointer-events:none}
+.pm{pointer-events:auto;display:flex;align-items:center;gap:.5rem;background:rgba(10,30,60,.85);color:#fff;border-radius:18px;padding:.45rem .8rem;box-shadow:0 6px 18px rgb(0 0 0/.3);text-decoration:none;font:inherit;border:2px solid #8fd3ff;cursor:pointer}
+.pm:hover,.pm:focus-visible{background:#0d3b66;outline:3px solid #ffcc4d}
+.pm-ch{font-size:2.2rem;line-height:1;display:inline-block}
+.pm-hand{font-size:1.4rem;display:inline-block}
+.pm-say{display:flex;flex-direction:column;text-align:start}.pm-say b{font-size:.98rem}.pm-say small{opacity:.9}
+.pm-n{animation:pm-down 2.4s ease-out both}.pm-s{animation:pm-up 2.4s ease-out .6s both}
+.pm-n .pm-ch,.pm-s .pm-ch{animation:pm-walk .45s ease-in-out 5 alternate}
+.pm-n .pm-hand{animation:pm-pt-up 1s ease-in-out 2.4s infinite alternate}
+.pm-s .pm-hand{animation:pm-pt-dn 1s ease-in-out 3s infinite alternate}
+@keyframes pm-down{from{transform:translateY(-60px);opacity:0}to{transform:none;opacity:1}}
+@keyframes pm-up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+@keyframes pm-walk{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+@keyframes pm-pt-up{to{transform:translateY(-6px)}}
+@keyframes pm-pt-dn{to{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.pm,.pm *{animation:none!important;transition:none!important}}
+.wm-stage .pm-wrap{position:absolute;inset:0;z-index:650;display:block;margin:0;max-width:none}
+.wm-stage .pm{position:absolute;left:50%;margin-inline-start:-150px;width:300px;padding:.3rem .6rem}
+.wm-stage .pm-n{top:10px}.wm-stage .pm-s{bottom:30px}
+.wm-stage .pm-ch{font-size:1.8rem}.wm-stage .pm-say b{font-size:.88rem}
+@media (max-width:640px){.wm-stage .pm{width:auto;max-width:46%;left:auto;margin:0;inset-inline-start:56px}.wm-stage .pm-n{top:auto;bottom:30px}.wm-stage .pm-s{inset-inline-start:auto;inset-inline-end:8px}.wm-stage .pm-hand{display:none}.wm-stage .pm-say small{display:none}}
