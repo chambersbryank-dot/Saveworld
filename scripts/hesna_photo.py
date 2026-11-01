@@ -41,6 +41,7 @@ def quiz(qid, scene, band, img, alt, title, blurb, rows):
         "alt": alt,
         "title": title,
         "blurb": blurb,
+        "week": 1 if scene == "b7426" else 2,
         "q": rows,
     }
 

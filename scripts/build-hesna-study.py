@@ -27,12 +27,16 @@ body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
 .sp-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
 #sp-toggle{padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);background:transparent;color:inherit;font:inherit;cursor:pointer}
 .sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.sp-week{border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:1rem 1rem 1.25rem;margin:1.25rem 0}
+.hs-pack{margin:.5rem 0 1rem}
+.hs-lesson{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:.9rem 1rem;margin:.7rem 0;background:rgba(255,255,255,.04)}
+.hs-lesson h3{margin:0 0 .4rem}
 .sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
 .sp-btn{margin-top:.5rem;padding:.45rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;font:inherit;cursor:pointer;min-height:44px}
 .sp-phase{margin:1.5rem 0}.sp-day h3{margin:0 0 .5rem}.sp-ph{opacity:.85;font-style:italic;margin:0}
 html{scroll-behavior:auto!important}
 html[lang=en] [data-ar],html[lang=ar] [data-en]{display:none}
-#week-1,#day-1{scroll-margin-top:4.75rem}
+#week-1,#week-2,#day-1{scroll-margin-top:4.75rem}
 .sp-nav{position:sticky;top:0;z-index:50;display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 0;margin-bottom:.5rem;background:#0b1622;border-bottom:1px solid rgba(255,255,255,.15)}.sp-nav a{padding:.45rem 1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);color:inherit;text-decoration:none;font-weight:600}.sp-nav a[aria-current]{background:var(--brand-blue,#2b7bd6);color:#fff}
 .hs-ladder{display:flex;flex-wrap:wrap;gap:.35rem;margin:1rem 0}
 .hs-ladder span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:.2rem .55rem;font-size:.85rem}
@@ -162,8 +166,8 @@ DAYS = [
 def delpoe_block():
     return f'''<section><h2>{bi("How the four sections are practiced", "كيف تُدرَّب الأقسام الأربعة")}</h2>
 <ol>
-<li>{bi("Recall of visual details — 40 scored questions. One picture, 2 minutes, no notes, then it hides. Statements are true or false. Other items ask whether something was in the picture. On the memory page: three 45-question quizzes on the 7426 burglary, broad then attributes then fine detail. 80% unlocks the next. 95% raises the bar. Then Quick Stop, then the corner crash, each with the same three quizzes.",
-"استرجاع التفاصيل البصرية — 40 سؤالًا محسوبًا. صورة واحدة، دقيقتان، بلا ملاحظات، ثم تختفي. العبارات صحيحة أو خطأ. وبنود أخرى تسأل هل كان الشيء في الصورة. في صفحة الذاكرة: ثلاثة اختبارات من 45 على سطو 7426، من الصورة الكبيرة إلى الصفات إلى التفاصيل الدقيقة. 80% تفتح التالي. 95% ترفع المستوى. ثم كويك ستوب، ثم حادث الزاوية، كل منها بالاختبارات الثلاثة نفسها.")}</li>
+<li>{bi("Recall of visual details — 40 scored questions. One picture, 2 minutes, no notes, then it hides. Statements are true or false. Other items ask whether something was in the picture. On the memory page the pictures are two weekly packs. Week 1 is the 7426 burglary: three 45-question quizzes, broad then attributes then fine detail. 80% unlocks the next. 95% means that quiz was too easy and the harder one counts. Week 2 is Quick Stop, then the corner crash. Its pass bar rises when Week 1 was strong, and a soft band from Week 1 has to be cleared again.",
+"استرجاع التفاصيل البصرية — 40 سؤالًا محسوبًا. صورة واحدة، دقيقتان، بلا ملاحظات، ثم تختفي. العبارات صحيحة أو خطأ. وبنود أخرى تسأل هل كان الشيء في الصورة. في صفحة الذاكرة الصور حزمتان أسبوعيتان. الأسبوع الأول سطو 7426: ثلاثة اختبارات من 45، من الصورة الكبيرة إلى الصفات إلى التفاصيل الدقيقة. 80% تفتح التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية. عتبة نجاحه ترتفع إذا كان الأسبوع الأول قويًا، والنطاق اللين من الأسبوع الأول يجب أن يُحسَم مرة أخرى.")}</li>
 <li>{bi("Written communication — 40 scored questions. A means the sentence is grammatically correct. B means it is not. Judge structure, grammar, and word usage. Ignore spelling, punctuation, and capitalization. A wrong homophone still counts. The four-choice “which sentence is correct” drills stay, beside the A/B key.",
 "التواصل الكتابي — 40 سؤالًا محسوبًا. A تعني أن الجملة صحيحة نحويًا. B تعني أنها ليست كذلك. احكمي على البناء والقواعد واستعمال الكلمة. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة اللفظ إذا غُلِط فيها تُحسب. تمارين «أي جملة صحيحة» من أربعة خيارات تبقى، بجانب مفتاح A/B.")}</li>
 <li>{bi("Reading with understanding — 35 scored questions. The passage stays visible. Answer only from it. Do not import outside knowledge. Radio calls on this page hide on purpose. They are extra practice, not this section.",
@@ -247,34 +251,57 @@ def biodata_block():
 </section>'''
 
 
+def lesson(d):
+    period = d["n"] if d["n"] <= 7 else d["n"] - 7
+    meta_en = (
+        f"Period {period} of 7 in this pack. Mastery is 80% on the core before the next period. "
+        f"Target {d['target']}. Budget {d['budgetMin']} min. Too fast: under {d['tooFastMin']} min with a high core score."
+    )
+    meta_ar = (
+        f"الفترة {period} من 7 في هذه الحزمة. الإتقان 80% في الجوهر قبل الفترة التالية. "
+        f"الهدف {d['target']}. الميزانية {d['budgetMin']} د. سريع أكثر من اللازم: أقل من {d['tooFastMin']} د مع جوهر مرتفع."
+    )
+    return (
+        f'<article class="hs-lesson" id="day-{d["n"]}"><h3>{bi(d["en"], d["ar"])}</h3>'
+        f'<p>{bi(d["body_en"], d["body_ar"])}</p><p class="sp-ph">{bi(meta_en, meta_ar)}</p></article>'
+    )
+
+
+def week_section(num, lessons, blurb_en, blurb_ar):
+    name_en = f"Week {num} pack"
+    name_ar = "حزمة الأسبوع الأول" if num == 1 else "حزمة الأسبوع الثاني"
+    btn_en = f"Start the Week {num} pack"
+    btn_ar = "ابدئي حزمة الأسبوع الأول" if num == 1 else "ابدئي حزمة الأسبوع الثاني"
+    return (
+        f'<section class="sp-week" id="week-{num}"><h2>{bi(name_en, name_ar)}</h2>'
+        f'<p>{bi(blurb_en, blurb_ar)}</p>'
+        f'<div class="hs-pack">{"".join(lessons)}</div>'
+        f'<p id="hs-pack-note-{num}" class="sp-ph"></p>'
+        f'<button type="button" class="sp-btn" data-week="{num}" id="hs-pack-btn-{num}">{bi(btn_en, btn_ar)}</button>'
+        f'</section>'
+    )
+
+
 def study_html(payload):
-    w1, w2 = [], []
-    for d in DAYS:
-        jump = bi(
-            f"If too easy → jump tier. Target {d['target']}. Budget {d['budgetMin']} min. Too fast: under {d['tooFastMin']} min with a high core score.",
-            f"إذا كان أسهل مما ينبغي → اقفزي مستوى. الهدف {d['target']}. الميزانية {d['budgetMin']} د. سريع أكثر من اللازم: أقل من {d['tooFastMin']} د مع جوهر مرتفع.",
-        )
-        c = (
-            f'<article class="sp-day" id="day-{d["n"]}"><h3>{bi(d["en"], d["ar"])}</h3>'
-            f'<p>{bi(d["body_en"], d["body_ar"])}</p><p class="sp-ph">{jump}</p>'
-            f'<button type="button" class="sp-btn" data-day="{d["n"]}">{bi("Start this day", "ابدئي هذا اليوم")}</button></article>'
-        )
-        (w1 if d["n"] <= 7 else w2).append(c)
+    w1 = [lesson(d) for d in DAYS if d["n"] <= 7]
+    w2 = [lesson(d) for d in DAYS if d["n"] > 7]
     ladder = "".join(
         f'<span>{bi("D"+str(d["n"])+" · t"+str(d["tier"]), "ي"+str(d["n"])+" · م"+str(d["tier"]))}</span>'
         for d in DAYS
     )
     rules = f'''<section><h2>{bi("How the bar moves", "كيف يتحرك المستوى")}</h2>
-<p>{bi("Overachievement is a failure of this plan. The next demand is always past today's, and a sitting that is too easy raises the tier before you close the laptop.",
-"التفوّق الزائد فشل لهذه الخطة. الطلب التالي يتجاوز اليوم دائمًا، والجلسة السهلة أكثر من اللازم ترفع المستوى قبل أن تغلقي الحاسوب.")}</p>
+<p>{bi("Each week is one pack: every lesson and every quiz for that week, in order. You master a period before the next one opens, and you master the week before the next week opens. Overachievement is a failure of this plan. The next week is always harder than the last, and a sitting that is too easy raises the tier before you close the laptop.",
+"كل أسبوع حزمة واحدة: كل درس وكل اختبار لذلك الأسبوع، بالترتيب. تتقنين فترة قبل أن تُفتح التالية، وتتقنين الأسبوع قبل أن يُفتح الأسبوع التالي. التفوّق الزائد فشل لهذه الخطة. الأسبوع التالي أصعب من السابق دائمًا، والجلسة السهلة أكثر من اللازم ترفع المستوى قبل أن تغلقي الحاسوب.")}</p>
 <ul>
+<li>{bi("Week 1 opens on Day 1, the photograph. The pack then walks periods 1 through 7. Week 2 stays closed until every Week 1 period is mastered, the weak spots are at 80% or better, and a stretch that was too easy has been mastered too.", "الأسبوع الأول يُفتح على اليوم 1، الصورة. ثم تسير الحزمة في الفترات من 1 إلى 7. الأسبوع الثاني يبقى مغلقًا حتى تُتقن كل فترة في الأسبوع الأول، وتصير مواضع الضعف عند 80% أو أفضل، ويُتقن التمدد إذا كان الأسبوع أسهل مما ينبغي.")}</li>
+<li>{bi("Week 2 is harder from Week 1's results. The planned work is already past Week 1. A Week 1 core under 85% still moves up, and the pack opens with a bridge. 85% or higher adds a tier. 95% or higher, or three raised sets that stuck, adds two. Anything still under 80% is repaired before that pack opens.", "الأسبوع الثاني أصعب بناءً على نتائج الأسبوع الأول. العمل المخطط أصلًا بعد الأسبوع الأول. جوهر تحت 85% يصعد رغم ذلك، والحزمة تُفتح بجسر. 85% أو أكثر يضيف مستوى. و95% أو أكثر، أو ثلاث مجموعات مرفوعة ثبتت، يضيف مستويين. وما يزال تحت 80% يُصلَح قبل أن تُفتح تلك الحزمة.")}</li>
+<li>{bi("A period is mastered at 80% on the core. Core 95% or higher, or core 90%+ finished under the too-fast time: too easy. The harder set opens in that sitting, and it is the one that counts. You do not advance until it sticks at 80% or higher.", "تُتقن الفترة عند 80% في الجوهر. جوهر 95% أو أكثر، أو جوهر 90% أو أكثر في زمن أقصر من حد السرعة: أسهل مما ينبغي. تُفتح مجموعة أصعب في تلك الجلسة، وهي التي تُحسب. لا تتقدمين حتى تثبت عند 80% أو أكثر.")}</li>
 <li>{bi("The official exam has four sections, below. On this page the core that moves the tier is reading, listening, comprehension, observation, and the extra logic drills. Written A/B and four-choice grammar are a separate track. Biodata is honest practice, not a key.", "للامتحان الرسمي أربعة أقسام، في الأسفل. في هذه الصفحة الجوهر الذي يحرّك المستوى هو القراءة والاستماع والفهم والملاحظة وتدريبات المنطق الإضافية. الكتابة A/B وقواعد الأربع خيارات مسار منفصل. والبيانات الشخصية تدريب صادق، لا مفتاح.")}</li>
-<li>{bi("Core under 70%: the next day still changes the work, and it opens with a short bridge so a miss is not a wall.", "جوهر تحت 70%: اليوم التالي يغيّر العمل رغم ذلك، ويبدأ بجسر قصير حتى لا يصير التعثّر جدارًا.")}</li>
-<li>{bi("Core 70–94%: you are on the day's pace. Tomorrow is already a higher demand, even when today felt fair.", "جوهر 70–94%: أنتِ على إيقاع اليوم. وغدًا أصلًا طلب أعلى، حتى لو بدا اليوم عادلًا.")}</li>
-<li>{bi("Core 95% or higher, or core 90%+ finished under the too-fast time: too easy. A harder set opens in this sitting. If that set sticks (80%+), tomorrow jumps an extra tier.", "جوهر 95% أو أكثر، أو جوهر 90% أو أكثر في زمن أقصر من حد السرعة: أسهل مما ينبغي. تُفتح مجموعة أصعب في هذه الجلسة. إذا ثبتت (80% أو أكثر) فغدًا يقفز مستوى إضافيًا.")}</li>
-<li>{bi("Day 1 probes: 3 of 4 harder probes right, with the ordinary core at 85%+, already counts as too easy. The grammar traps may still be soft. That is allowed.", "مجسّات اليوم 1: ثلاثة من أربعة مجسّات أصعب صحيحة، مع جوهر عادي عند 85% أو أكثر، تُحسب أصلًا أسهل مما ينبغي. فخاخ القواعد قد تبقى لينة. وهذا مسموح.")}</li>
-<li>{bi("Grammar drills the families under 80%. A family at 95% across 4 or more items is retired. Day 3 rescores Day 1's soft families on new sentences, so the rise is visible.", "القواعد تدرّب العائلات تحت 80%. والعائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف. واليوم 3 يعيد قياس عائلات اليوم 1 اللينة بجمل جديدة، فيظهر الارتفاع.")}</li>
-<li>{bi("Pictures: 80% unlocks the next quiz on that picture, then the next picture. 95% means that quiz was too easy and the harder one is the one that counts.", "الصور: 80% تفتح الاختبار التالي على تلك الصورة، ثم الصورة التالية. و95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب.")}</li>
+<li>{bi("Core under 70% inside a pack: the next period still changes the work, and it opens with a short bridge so a miss is not a wall.", "جوهر تحت 70% داخل الحزمة: الفترة التالية تغيّر العمل رغم ذلك، وتبدأ بجسر قصير حتى لا يصير التعثّر جدارًا.")}</li>
+<li>{bi("Core 70–94%: you are on that period's pace. The next period is already a higher demand, even when this one felt fair.", "جوهر 70–94%: أنتِ على إيقاع تلك الفترة. والفترة التالية أصلًا طلب أعلى، حتى لو بدت هذه عادلة.")}</li>
+<li>{bi("Day 1 probes: 3 of 4 harder probes right, with the ordinary core at 85%+, already counts as too easy. The grammar traps may still be soft. That is allowed. They are repaired before Week 2 opens.", "مجسّات اليوم 1: ثلاثة من أربعة مجسّات أصعب صحيحة، مع جوهر عادي عند 85% أو أكثر، تُحسب أصلًا أسهل مما ينبغي. فخاخ القواعد قد تبقى لينة. وهذا مسموح. وتُصلَح قبل أن يُفتح الأسبوع الثاني.")}</li>
+<li>{bi("Grammar drills the families under 80%. A family at 95% across 4 or more items is retired. The Week 1 retest rescores Day 1's soft families on new sentences, so the rise is visible. A family still under 80% keeps the next week closed.", "القواعد تدرّب العائلات تحت 80%. والعائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف. وإعادة القياس في الأسبوع الأول تعيد قياس عائلات اليوم 1 اللينة بجمل جديدة، فيظهر الارتفاع. والعائلة التي تبقى تحت 80% تبقي الأسبوع التالي مغلقًا.")}</li>
+<li>{bi("Pictures: Week 1 is the 7426 burglary. 80% unlocks the next quiz on that picture. 95% means that quiz was too easy and the harder one is the one that counts. Week 2 is Quick Stop, then the corner crash, with a higher bar when Week 1 was strong.", "الصور: الأسبوع الأول هو سطو 7426. 80% تفتح الاختبار التالي على تلك الصورة. و95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية، بعتبة أعلى إذا كان الأسبوع الأول قويًا.")}</li>
 <li>{bi("End state for the two weeks: about 98% on this kind of page. Harder items, not a softer key.", "حالة نهاية الأسبوعين: نحو 98% على صفحة من هذا النوع. بنود أصعب، لا مفتاح أسهل.")}</li>
 </ul></section>'''
     about = f'''<section><h2>{bi("The exam this plan follows", "الامتحان الذي تتبعه هذه الخطة")}</h2>
@@ -325,9 +352,13 @@ def study_html(payload):
 <main data-pagefind-ignore="all">
 {NAV.format(g=' aria-current="page"', m='')}
 <div class="sp-top"><h1>{bi("Hesna's Two-Week HPD Study Plan", "خطة حسنة الدراسية لامتحان شرطة هونولولو (أسبوعان)")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
-<section class="sp-week" id="week-1"><h2>{bi("Week 1", "الأسبوع الأول")}</h2><div class="sp-grid">{''.join(w1)}</div></section>
-<section class="sp-week" id="week-2"><h2>{bi("Week 2", "الأسبوع الثاني")}</h2><div class="sp-grid">{''.join(w2)}</div></section>
-<p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("Visual drills: 2 minutes, then the picture hides. Start with the 7426 burglary.", "تمارين بصرية: دقيقتان ثم تختفي الصورة. ابدئي بسطو 7426.")}</a></p>
+{week_section(1, w1,
+"Every lesson and quiz for Days 1–7 is in this pack. It opens on Day 1. Master each period at 80% on the core before the next. At 95% the harder set is the one that counts. Weak spots are repaired here before Week 2 opens.",
+"كل دروس الأيام 1–7 واختباراتها في هذه الحزمة. تُفتح على اليوم 1. أتقني كل فترة عند 80% في الجوهر قبل التالية. عند 95% المجموعة الأصعب هي التي تُحسب. تُصلَح مواضع الضعف هنا قبل أن يُفتح الأسبوع الثاني.")}
+{week_section(2, w2,
+"Every lesson and quiz for Days 8–14 is in this pack. It stays closed until Week 1 is mastered. When it opens, it is harder: a bridge if Week 1's core was under 85%, one extra tier at 85% or higher, two at 95% or higher.",
+"كل دروس الأيام 8–14 واختباراتها في هذه الحزمة. تبقى مغلقة حتى يُتقن الأسبوع الأول. حين تُفتح تكون أصعب: جسر إذا كان جوهر الأسبوع الأول تحت 85%، ومستوى إضافي عند 85% أو أكثر، ومستويان عند 95% أو أكثر.")}
+<p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("Visual packs: 2 minutes, then the picture hides. Week 1 starts with the 7426 burglary.", "حزم بصرية: دقيقتان ثم تختفي الصورة. الأسبوع الأول يبدأ بسطو 7426.")}</a></p>
 {delpoe_block()}
 {biodata_block()}
 <div id="hs-board"></div>
@@ -336,8 +367,8 @@ def study_html(payload):
 {facts}
 {sources}
 <p class="sp-ph">{bi("Private study page. Practice questions are original and are not real exam items.", "صفحة دراسة خاصة. أسئلة التدريب من إعدادنا وليست أسئلة امتحان حقيقية.")}</p>
-<p>{bi("Day 1 is a photograph of how you reason, and of where English sits beside Arabic and French. Day 14 should make that photograph look like a different test-taker. The work gets harder every day on purpose, and it gets harder again the moment a day is too easy. The aim, walking into the Honolulu exam, is about 98% on this kind of page.",
-"اليوم 1 صورة لطريقة استدلالكِ، ولموقع الإنجليزية بجانب العربية والفرنسية. واليوم 14 يُفترض أن يجعل تلك الصورة تبدو لشخص آخر يدخل الاختبار. العمل يصعب كل يوم عن قصد، ويصعب مرة أخرى لحظة يكون اليوم أسهل مما ينبغي. الهدف، وأنتِ داخلة إلى امتحان هونولولو، نحو 98% على صفحة من هذا النوع.")}</p>
+<p>{bi("Week 1 opens on Day 1: a photograph of how you reason, and of where English sits beside Arabic and French. The week is one pack, and you master each period before the next. Week 2 is the harder pack, built from that photograph's weak spots and from the week's overall score. Day 14 should make the photograph look like a different test-taker. The aim, walking into the Honolulu exam, is about 98% on this kind of page.",
+"الأسبوع الأول يُفتح على اليوم 1: صورة لطريقة استدلالكِ، ولموقع الإنجليزية بجانب العربية والفرنسية. الأسبوع حزمة واحدة، وتتقنين كل فترة قبل التالية. الأسبوع الثاني هو الحزمة الأصعب، مبنية من مواضع ضعف تلك الصورة ومن النتيجة الإجمالية للأسبوع. واليوم 14 يُفترض أن يجعل الصورة تبدو لشخص آخر يدخل الاختبار. الهدف، وأنتِ داخلة إلى امتحان هونولولو، نحو 98% على صفحة من هذا النوع.")}</p>
 <div class="hs-ladder" aria-hidden="true">{ladder}</div>
 {rules}
 {about}
@@ -389,6 +420,10 @@ def main():
     days = []
     for d in DAYS:
         row = {k: d[k] for k in ("n", "tier", "depth", "budgetMin", "tooFastMin", "take") if k in d}
+        row["title_en"] = d["en"]
+        row["title_ar"] = d["ar"]
+        row["body_en"] = d["body_en"]
+        row["body_ar"] = d["body_ar"]
         if d.get("mode"):
             row["mode"] = d["mode"]
         if d.get("stretchTake"):
