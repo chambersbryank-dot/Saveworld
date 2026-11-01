@@ -393,6 +393,27 @@ def narrative_scenes():
 <g><rect x="280" y="368" width="170" height="44" rx="8" fill="#d32f2f" stroke="#333"/>
 <rect x="330" y="394" width="70" height="14" fill="#ffd"/><text x="365" y="406" font-size="12" text-anchor="middle">KXM 218</text>
 <text x="365" y="390" font-size="12" text-anchor="middle">empty</text></g>
+<text x="40" y="28" font-size="16" font-weight="bold">Tuesday</text>
+<text x="90" y="392" font-size="12" fill="#333">SILVER</text>
+<circle cx="78" cy="378" r="8" fill="#c9956b"/>
+<path d="M70 384 q8 8 16 0" fill="#6d4c41"/>
+<rect x="72" y="374" width="5" height="3" fill="#111"/>
+<rect x="79" y="374" width="5" height="3" fill="#111"/>
+<text x="78" y="368" font-size="9" text-anchor="middle">beard sunglasses</text>
+<rect x="430" y="130" width="70" height="90" fill="#e8e8e8" stroke="#333"/>
+<text x="465" y="160" font-size="12" text-anchor="middle">STAIRS</text>
+<line x1="70" y1="290" x2="450" y2="200" stroke="#1565c0" stroke-width="2"/>
+<text x="200" y="250" font-size="11" fill="#0b3a5b">NOE points at the stairwell</text>
+<path d="M508 228 q12 -18 24 8 v10 h-28 z" fill="#9e9e9e" stroke="#333"/>
+<text x="520" y="220" font-size="11" text-anchor="middle">HOOD</text>
+<rect x="360" y="248" width="90" height="4" fill="#888"/>
+<text x="405" y="244" font-size="10" text-anchor="middle">RAIL</text>
+<rect x="230" y="292" width="54" height="16" fill="#efe6d6" stroke="#333"/>
+<circle cx="236" cy="300" r="5" fill="#1565c0"/>
+<path d="M242 300 h16 l4 4 h6" fill="none" stroke="#333" stroke-width="2"/>
+<text x="257" y="288" font-size="10" text-anchor="middle">KEYS blue fob</text>
+<rect x="16" y="318" width="210" height="22" rx="6" fill="#fff" stroke="#1565c0"/>
+<text x="121" y="333" font-size="11" text-anchor="middle">NOE: backpack blue, then black</text>
 </svg>"""
     lobby_desc = (
         "Tuesday, 4:20 PM, lobby of 1427 16th Avenue at Kilauea. Study the picture and this paragraph together. A resident in a white blouse, black slacks, and a red scarf (unit 3B) walks in with a brown grocery bag. A man in a green polo, khaki shorts, and a white cap (unit 12A) stands at the mailboxes on a phone. A teenager in a gray hoodie, ripped blue jeans, and red sneakers runs west with a black backpack; the hood hides the face. A package marked 4C — DO NOT BEND was by the door and is gone. Manager NOE, in a blue vest, points at the stairwell. He first says the backpack was blue, then corrects himself: black. A small white dog with no leash is by the elevator, which shows 2. A yellow bicycle is against the rail. Keys with a blue fob are on the counter. Outside: silver SUV plate HNL 640, bearded driver in sunglasses waiting; red compact plate KXM 218, empty. A brick props the fire door.",
@@ -458,7 +479,7 @@ def narrative_scenes():
 <g><rect x="180" y="330" width="180" height="46" rx="10" fill="#222"/>
 <rect x="210" y="312" width="90" height="24" rx="6" fill="#222"/>
 <rect x="230" y="360" width="78" height="14" fill="#ffd"/><text x="269" y="372" font-size="12" text-anchor="middle">NRP 441</text>
-<text x="300" y="324" font-size="12" fill="#fdd835">DENT</text>
+<text x="200" y="324" font-size="12" fill="#fdd835">DENT</text>
 <text x="360" y="300" font-size="18" fill="#fff">→</text></g>
 <g><rect x="400" y="360" width="170" height="42" rx="10" fill="#222"/>
 <rect x="440" y="386" width="78" height="14" fill="#ffd"/><text x="479" y="398" font-size="12" text-anchor="middle">NRP 414</text>
@@ -470,8 +491,6 @@ def narrative_scenes():
 <text x="595" y="274" font-size="12" text-anchor="middle">ATTENDANT</text>
 <rect x="640" y="300" width="40" height="18" fill="#111"/>
 <text x="660" y="294" font-size="11" text-anchor="middle">M 28</text>
-<ellipse cx="150" cy="300" rx="22" ry="8" fill="#5d4037"/>
-<text x="150" y="286" font-size="11" text-anchor="middle">OIL</text>
 <rect x="200" y="230" width="36" height="28" fill="#43a047"/>
 <text x="218" y="222" font-size="11" text-anchor="middle">BAG</text>
 <rect x="250" y="210" width="30" height="20" fill="#90caf9" stroke="#333"/>
@@ -486,6 +505,22 @@ def narrative_scenes():
 <circle cx="330" cy="250" r="9" fill="#c9956b"/>
 <rect x="318" y="258" width="24" height="22" fill="#757575"/>
 <text x="360" y="250" font-size="16">→</text>
+<text x="40" y="28" font-size="16" font-weight="bold">Wednesday</text>
+<text x="250" y="348" font-size="12" fill="#fff">ENGINE ON</text>
+<text x="200" y="336" font-size="11" fill="#fdd835">LEFT REAR</text>
+<text x="470" y="348" font-size="12" fill="#fff">ENGINE OFF</text>
+<rect x="188" y="198" width="110" height="78" fill="none" stroke="#333" stroke-width="2"/>
+<text x="243" y="194" font-size="12" text-anchor="middle">CART by pillar C</text>
+<rect x="520" y="220" width="120" height="28" fill="#fff" stroke="#333"/>
+<text x="580" y="239" font-size="13" text-anchor="middle">BOOTH</text>
+<circle cx="648" cy="318" r="9" fill="#222"/>
+<circle cx="674" cy="318" r="9" fill="#222"/>
+<text x="660" y="332" font-size="11" text-anchor="middle" fill="#fff">STALL 20</text>
+<text x="115" y="392" font-size="12" fill="#333">VAN</text>
+<ellipse cx="250" cy="392" rx="26" ry="8" fill="#5d4037"/>
+<text x="250" y="386" font-size="11" text-anchor="middle" fill="#fff">OIL under 441</text>
+<rect x="430" y="120" width="250" height="28" rx="6" fill="#fff" stroke="#333"/>
+<text x="555" y="138" font-size="12" text-anchor="middle">RADIO: disregard 414, keep 441</text>
 </svg>"""
     garage_desc = (
         "Wednesday, 11:06 AM, parking level P2, yellow pillar C, stall 18. Study the picture and this paragraph together. Black sedan A: plate NRP 441, a dent on the left rear door, driver a woman with a braid and a yellow top, engine running, pointed east. Black sedan B: plate NRP 414, no dent, a man in a blue shirt, parked, engine off. The radio says: disregard 414, the plate is 441. A green shopping bag and a child seat are in a cart by pillar C. An attendant in an orange vest is at the booth. A black motorcycle, plate M 28, is in stall 20. A white van, plate PLB 902, blocks part of the west exit; its driver is not the attendant. An oil spot is in stall 18 under sedan A. A ticket on the ground reads 10:41 AM. The reporting person, in a gray hoodie, points at sedan A.",

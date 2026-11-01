@@ -151,6 +151,7 @@
     else if (st.needsStretch) { en = "Master the stretch"; ar = "أتقني التمدد"; }
     else if (st.need === "retry") { en = "Retry this period. It is not mastered yet."; ar = "أعيدي هذه الفترة. لم تُتقن بعد."; }
     else if (st.need === "extra") { en = "The harder set is the one that counts"; ar = "المجموعة الأصعب هي التي تُحسب"; }
+    else if (st.need === "mem") { en = "The picture quiz in this period"; ar = "اختبار الصورة في هذه الفترة"; }
     return '<button type="button" class="sp-btn" data-week="' + week + '">' + bi(en, ar) + "</button>";
   }
 
@@ -183,8 +184,8 @@
     clearInterval(timer);
     var b = bannerText(session.banner);
     var memNote = bi(
-      "Visual pack: open Memory Drills. Week 1 is the 7426 burglary, three quizzes, 2 minutes each, then the picture hides. 80% unlocks the next quiz. 95% means that quiz was too easy and the harder one is the one that counts. Week 2 is Quick Stop, then the corner crash, and the pass bar rises when Week 1 was strong. Street sketches sit inside the same weekly packs.",
-      "الحزمة البصرية: افتحي تمارين الذاكرة. الأسبوع الأول سطو 7426، ثلاثة اختبارات، دقيقتان لكل منها، ثم تختفي الصورة. 80% تفتح الاختبار التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية، وعتبة النجاح ترتفع إذا كان الأسبوع الأول قويًا. رسوم الشوارع داخل حزم الأسابيع نفسها.");
+      "The picture for this period is in this pack: 2 minutes, then it hides, then its questions. Nothing is asked that the picture does not show. Week 1 holds the 7426 burglary and the street sketches. 80% masters a picture. 95% means it was too easy and the harder picture counts. Week 2 Day 1 is Quick Stop. It stays shut until every Week 1 period is mastered, and its bar is higher when Week 1 was strong.",
+      "صورة هذه الفترة داخل هذه الحزمة: دقيقتان، ثم تختفي، ثم أسئلتها. لا سؤال إلا عما تُظهره الصورة. الأسبوع الأول فيه سطو 7426 ورسوم الشوارع. 80% تُتقن الصورة. 95% تعني أنها كانت أسهل مما ينبغي والصورة الأصعب هي التي تُحسب. اليوم 1 من الأسبوع الثاني هو كويك ستوب. يبقى مغلقًا حتى تُتقن كل فترة في الأسبوع الأول، وعتبته أعلى إذا كان الأسبوع الأول قويًا.");
     var period = day.n ? ((day.n - 1) % 7) + 1 : 0;
     var where = (session.kind === "repair" || session.kind === "stretch" || session.kind === "extra")
       ? bi("Week " + session.week + " pack", "حزمة الأسبوع " + weekAr(session.week))
@@ -222,7 +223,11 @@
   function renderScript(step) {
     var left = step.set.secs || 40;
     var body, note;
-    if (step.set.img) {
+    if (step.set.mem && typeof hesnaScene === "function") {
+      body = hesnaScene(step.set) + '<p>' + bi(step.set.en, step.set.ar) + '</p>';
+      note = bi("No notes. When the time ends, the picture hides and it does not come back until you submit. Every question is answered by what the picture shows.",
+        "بلا ملاحظات. حين ينتهي الوقت تختفي الصورة ولا تعود حتى تُرسلي الإجابات. كل سؤال يُجاب مما تُظهره الصورة.");
+    } else if (step.set.img) {
       body = '<figure class="hs-script"><img src="' + esc(step.set.img) + '" alt="' + esc(step.set.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px"><figcaption class="si-credit">'
         + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + '</figcaption></figure><p>'
         + bi(step.set.en, step.set.ar) + '</p>';
@@ -291,6 +296,7 @@
   }
 
   function finishMain() {
+    if (session && session.kind === "mem") return finishMem();
     clearInterval(timer);
     var sec = Math.round((Date.now() - t0) / 1000);
     if (mode === "extra") return finishExtra(A.grade(session.extraBlocks, answers));
@@ -423,6 +429,9 @@
         ar = p.masteredN + " من " + p.total + " فترات مُتقنة" + (p.overall == null ? "" : " · الجوهر " + p.overall + "%") + (st.needsRepair ? " · مواضع لينة ما زالت مفتوحة" : "") + (st.needsStretch ? " · التمدد ما زال مفتوحًا" : "") + ".";
         ben = "Continue the Week " + w + " pack";
         bar = "تابعي حزمة الأسبوع " + weekAr(w);
+      } else if (st.need === "mem") {
+        ben = "Picture quiz in this period";
+        bar = "اختبار الصورة في هذه الفترة";
       } else {
         en = w === 1
           ? "Opens on Day 1. Master each period before the next. Week 2 stays closed until this pack is mastered."
@@ -430,8 +439,8 @@
         ar = w === 1
           ? "تُفتح على اليوم 1. أتقني كل فترة قبل التالية. الأسبوع الثاني يبقى مغلقًا حتى تُتقن هذه الحزمة."
           : "أصعب من الأسبوع الأول، من مواضع ضعفه ونتيجته الإجمالية. أتقني كل فترة قبل التالية.";
-        ben = "Start the Week " + w + " pack";
-        bar = "ابدئي حزمة الأسبوع " + weekAr(w);
+        ben = w === 2 ? "Start Week 2 Day 1" : "Start Week " + w + " Pack";
+        bar = w === 2 ? "ابدئي اليوم 1 من الأسبوع الثاني" : "ابدئي حزمة الأسبوع " + weekAr(w);
       }
       if (note) note.innerHTML = bi(en, ar);
       if (btn) {
@@ -442,11 +451,89 @@
     });
   }
 
+  function beginMemory(step) {
+    var drill = step.memory;
+    var qs = (drill.qs || []).map(function (q) {
+      return { en: q.en, ar: q.ar, opts: q.opts, ans: q.ans, why: q.why || ["It is in the picture.", "هذا في الصورة."], pillar: "mem" };
+    });
+    var set = {
+      mem: 1,
+      id: drill.id,
+      pillar: "mem",
+      secs: drill.secs || 120,
+      img: drill.img,
+      alt: drill.alt,
+      svg: drill.svg,
+      tm: drill.tm,
+      st: drill.st,
+      cr: drill.cr,
+      b: drill.b,
+      p: drill.p,
+      v: drill.v,
+      en: drill.blurb_en || drill.title_en,
+      ar: drill.blurb_ar || drill.title_ar,
+      qs: qs
+    };
+    session = {
+      kind: "mem",
+      week: step.week,
+      day: step.day,
+      memId: drill.id,
+      blocks: [{ kind: "obs", set: set }],
+      tier: step.day.tier || 1,
+      tooFastSec: (step.day.tooFastMin || 20) * 60,
+      nQ: qs.length,
+      banner: null
+    };
+    steps = flatten(session.blocks);
+    cursor = 0;
+    answers = [];
+    mode = "mem";
+    t0 = Date.now();
+    clearInterval(timer);
+    renderStep();
+  }
+  function finishMem() {
+    clearInterval(timer);
+    var qs = session.blocks[0].set.qs;
+    var ok = 0;
+    qs.forEach(function (q, i) { if (answers[i] === q.ans) ok += 1; });
+    var pct = qs.length ? Math.round(100 * ok / qs.length) : 0;
+    var bar = A.memPassBar(state, session.memId);
+    A.noteMem(state, session.day, session.memId, pct);
+    save();
+    var passed = pct >= bar;
+    var hot = pct >= 95;
+    var head = bi("Picture quiz: " + ok + "/" + qs.length + " (" + pct + "%)", "اختبار الصورة: " + ok + "/" + qs.length + " (" + pct + "%)");
+    var msg = hot
+      ? bi("95% or higher: this picture was too easy. The harder picture is the one that counts. This one still counts as mastered.", "95% أو أكثر: هذه الصورة كانت أسهل مما ينبغي. الصورة الأصعب هي التي تُحسب. وهذه تُحسب مُتقنة رغم ذلك.")
+      : (passed
+        ? bi("Passed. The bar for this picture was " + bar + "%. It stays in this period until the period is mastered.", "نجحتِ. عتبة هذه الصورة كانت " + bar + "%. تبقى في هذه الفترة حتى تُتقن الفترة.")
+        : bi("Not yet " + bar + "%. The picture is visible again below. Retry this quiz. Nothing outside the picture is required.", "لم تصلي إلى " + bar + "% بعد. الصورة ظاهرة من جديد في الأسفل. أعيدي هذا الاختبار. لا شيء خارج الصورة مطلوب."));
+    var rv = "";
+    qs.forEach(function (q, i) {
+      var good = answers[i] === q.ans;
+      rv += '<li class="sp-day ' + (good ? "md-ok" : "md-bad") + '"><p>' + bi(q.en, q.ar) + '</p><p>'
+        + (good ? "✅ " : "❌ ") + bi("Your answer: ", "إجابتك: ") + optLabel(q, answers[i] < 0 || answers[i] == null ? 0 : answers[i]) + '</p>'
+        + (good ? "" : '<p><strong>' + bi("Correct: ", "الصحيح: ") + optLabel(q, q.ans) + '</strong></p>')
+        + '</li>';
+    });
+    app.innerHTML = '<h2>' + head + '</h2><p>' + msg + '</p>'
+      + nextControls(session.week)
+      + '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>'
+      + hesnaScene(session.blocks[0].set)
+      + '<ol class="md-qs">' + rv + '</ol>';
+    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; window.scrollTo(0, 0); };
+    renderBoard();
+    refreshPackNotes();
+    window.scrollTo(0, 0);
+  }
   function startWeek(week) {
     load();
     var step = A.planPackStep(week, D, state);
     save();
     refreshPackNotes();
+    if (step.memory) { beginMemory(step); return; }
     if (step.blocked) {
       app.innerHTML = '<p class="hs-banner">' + bi(
         "Week " + (week - 1) + " is not mastered yet. Finish that pack, including the weak spots, before this one opens. The next week is harder, and it waits.",
@@ -488,6 +575,8 @@
     board = document.getElementById("hs-board");
     if (!app || !D) return;
     load();
+    if (A.resync) A.resync(state, D);
+    save();
     renderBoard();
     refreshPackNotes();
     document.body.addEventListener("click", function (e) {

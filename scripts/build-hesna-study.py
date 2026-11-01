@@ -29,6 +29,9 @@ body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
 .sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
 .sp-week{border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:1rem 1rem 1.25rem;margin:1.25rem 0}
 .hs-pack{margin:.5rem 0 1rem}
+.hs-pack-head{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;margin:0 0 .7rem;font-size:1.45rem;line-height:1.3}
+.hs-pack-cue{font-size:1rem;font-weight:600;line-height:1.4}
+.hs-pack-head .hs-pack-start{margin:0 .2rem;font-size:1rem;font-weight:600;vertical-align:middle}
 .hs-lesson{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:.9rem 1rem;margin:.7rem 0;background:rgba(255,255,255,.04)}
 .hs-lesson h3{margin:0 0 .4rem}
 .sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
@@ -115,14 +118,14 @@ DAYS = [
          take=dict(logic=12, grammar=4, reading=1, listen=1, comp=1),
          en="Day 7 — Look back at Monday",
          ar="اليوم 7 — انظري إلى الاثنين",
-         body_en="One mixed sitting at this week's top band. Then open the scoreboard: Day 1 beside today. That gap is the first half of the change. Fitness, on your own: push-ups, sit-ups, and the 1.5-mile run. The quiz does not grade those.",
-         body_ar="جلسة مختلطة واحدة في أعلى نطاق هذا الأسبوع. ثم افتحي لوحة النتائج: اليوم 1 بجانب اليوم. هذه الفجوة هي النصف الأول من التغيّر. اللياقة، لحسابكِ: تمارين الضغط، والبطن، وجري 1.5 ميل. الاختبار لا يقيّمها."),
+         body_en="One mixed sitting at this week's top band. Then the fine 7426 quiz is in this period: same picture, the small print, 2 minutes, then it hides. Master it at 80%. At 95% the harder picture is the one that counts. Then open the scoreboard: Day 1 beside today. Fitness, on your own: push-ups, sit-ups, and the 1.5-mile run. The quiz does not grade those.",
+         body_ar="جلسة مختلطة واحدة في أعلى نطاق هذا الأسبوع. ثم اختبار التفاصيل لصورة 7426 في هذه الفترة: الصورة نفسها، الحرف الصغير، دقيقتان ثم تختفي. أتقنيه عند 80%. عند 95% الصورة الأصعب هي التي تُحسب. ثم افتحي لوحة النتائج: اليوم 1 بجانب اليوم. اللياقة، لحسابكِ: تمارين الضغط، والبطن، وجري 1.5 ميل. الاختبار لا يقيّمها."),
     dict(n=8, tier=5, depth=3, budgetMin=50, tooFastMin=26, target="87%",
-         take=dict(logic=8, grammar=2, listen=1, obs=1),
+         take=dict(logic=8, grammar=2, listen=1),
          en="Day 8 — Eyes",
          ar="اليوم 8 — العينان",
-         body_en="Visual section, fine pass: quiz 3 on the same 7426 picture. Still 2 minutes, then it hides. The detail is denser. The clock is not shorter. 95% opens the next picture. A short logic hold sits beside it so memory does not crowd the other skills. That logic is extra practice, not a fifth exam section.",
-         body_ar="القسم البصري، الجولة الدقيقة: الاختبار 3 على صورة 7426 نفسها. ما زالت دقيقتين ثم تختفي. التفاصيل أكثف. الساعة ليست أقصر. 95% تفتح الصورة التالية. إمساك قصير بالمنطق بجانبه حتى لا تزاحم الذاكرة المهارات الأخرى. وذلك المنطق تدريب إضافي، لا قسم امتحان خامس."),
+         body_en="Week 2 Day 1. It stays shut until every Week 1 period is mastered. It is harder than Week 1: the Quick Stop picture, 2 minutes then it hides, and the pass bar rises when Week 1 was strong. The other work sits higher and aims at what was still soft. That logic is extra practice, not a fifth exam section.",
+         body_ar="اليوم 1 من الأسبوع الثاني. يبقى مغلقًا حتى تُتقن كل فترة في الأسبوع الأول. وهو أصعب من الأسبوع الأول: صورة كويك ستوب، دقيقتان ثم تختفي، وعتبة النجاح ترتفع إذا كان الأسبوع الأول قويًا. وبقية العمل أعلى وتستهدف ما بقي لينًا. وذلك المنطق تدريب إضافي، لا قسم امتحان خامس."),
     dict(n=9, tier=6, depth=1, budgetMin=50, tooFastMin=28, target="88%",
          take=dict(logic=10, grammar=4, reading=2, comp=1),
          en="Day 9 — Read at exam pace",
@@ -166,8 +169,8 @@ DAYS = [
 def delpoe_block():
     return f'''<section><h2>{bi("How the four sections are practiced", "كيف تُدرَّب الأقسام الأربعة")}</h2>
 <ol>
-<li>{bi("Recall of visual details — 40 scored questions. One picture, 2 minutes, no notes, then it hides. Statements are true or false. Other items ask whether something was in the picture. On the memory page the pictures are two weekly packs. Week 1 is the 7426 burglary: three 45-question quizzes, broad then attributes then fine detail. 80% unlocks the next. 95% means that quiz was too easy and the harder one counts. Week 2 is Quick Stop, then the corner crash. Its pass bar rises when Week 1 was strong, and a soft band from Week 1 has to be cleared again.",
-"استرجاع التفاصيل البصرية — 40 سؤالًا محسوبًا. صورة واحدة، دقيقتان، بلا ملاحظات، ثم تختفي. العبارات صحيحة أو خطأ. وبنود أخرى تسأل هل كان الشيء في الصورة. في صفحة الذاكرة الصور حزمتان أسبوعيتان. الأسبوع الأول سطو 7426: ثلاثة اختبارات من 45، من الصورة الكبيرة إلى الصفات إلى التفاصيل الدقيقة. 80% تفتح التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية. عتبة نجاحه ترتفع إذا كان الأسبوع الأول قويًا، والنطاق اللين من الأسبوع الأول يجب أن يُحسَم مرة أخرى.")}</li>
+<li>{bi("Recall of visual details — 40 scored questions. One picture, 2 minutes, no notes, then it hides. Statements are true or false. Other items ask whether something was in the picture. Week 1's 7426 quizzes and street sketches, questions included, sit inside the Week 1 periods. The picture shows every fact a question asks. 80% masters that picture. 95% means it was too easy and the harder one counts. Week 2 Day 1 is Quick Stop. It opens only after every Week 1 period is mastered, and it is harder.",
+"استرجاع التفاصيل البصرية — 40 سؤالًا محسوبًا. صورة واحدة، دقيقتان، بلا ملاحظات، ثم تختفي. العبارات صحيحة أو خطأ. وبنود أخرى تسأل هل كان الشيء في الصورة. اختبارات 7426 ورسوم الشوارع للأسبوع الأول، مع أسئلتها، داخل فترات الأسبوع الأول. الصورة تُظهر كل حقيقة يسأل عنها سؤال. 80% تُتقن تلك الصورة. 95% تعني أنها كانت أسهل مما ينبغي والأصعب هو الذي يُحسب. اليوم 1 من الأسبوع الثاني هو كويك ستوب. يُفتح فقط بعد إتقان كل فترة في الأسبوع الأول، وهو أصعب.")}</li>
 <li>{bi("Written communication — 40 scored questions. A means the sentence is grammatically correct. B means it is not. Judge structure, grammar, and word usage. Ignore spelling, punctuation, and capitalization. A wrong homophone still counts. The four-choice “which sentence is correct” drills stay, beside the A/B key.",
 "التواصل الكتابي — 40 سؤالًا محسوبًا. A تعني أن الجملة صحيحة نحويًا. B تعني أنها ليست كذلك. احكمي على البناء والقواعد واستعمال الكلمة. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة اللفظ إذا غُلِط فيها تُحسب. تمارين «أي جملة صحيحة» من أربعة خيارات تبقى، بجانب مفتاح A/B.")}</li>
 <li>{bi("Reading with understanding — 35 scored questions. The passage stays visible. Answer only from it. Do not import outside knowledge. Radio calls on this page hide on purpose. They are extra practice, not this section.",
@@ -251,6 +254,78 @@ def biodata_block():
 </section>'''
 
 
+MEM_BY_DAY = {
+    1: ["b7426-1"],
+    2: ["L1-1", "L1-2"],
+    3: ["L1-3", "L2-1"],
+    4: ["L2-2", "L2-3"],
+    5: ["b7426-2"],
+    6: ["L3-1", "L3-2"],
+    7: ["L3-3", "b7426-3"],
+    8: ["qstop-1"],
+}
+MEM_TITLES = {}
+
+
+def _qpack(rows):
+    out = []
+    for en, ar, oe, oa, ans in rows:
+        out.append({
+            "en": en,
+            "ar": ar,
+            "opts": [[a, b] for a, b in zip(oe, oa)],
+            "ans": ans,
+            "why": ["It is in the picture.", "هذا في الصورة."],
+        })
+    return out
+
+
+def load_memory():
+    """Week 1 drills, plus Week 2 Day 1, with the questions that match each scene."""
+    photos = {q["id"]: q for q in hesna_photo.quizzes()}
+    base = json.loads((ROOT / "scripts" / "hesna_memory_base.json").read_text())
+    sketches = {s["id"]: s for s in base["S"] if s.get("p")}
+    mem = {}
+    titles = {}
+    for ids in MEM_BY_DAY.values():
+        for mid in ids:
+            if mid in photos:
+                src = photos[mid]
+                titles[mid] = (src["title"][0], src["title"][1])
+                mem[mid] = {
+                    "id": mid,
+                    "secs": src["secs"],
+                    "img": src["img"],
+                    "alt": src["alt"],
+                    "title_en": src["title"][0],
+                    "title_ar": src["title"][1],
+                    "blurb_en": src["blurb"][0],
+                    "blurb_ar": src["blurb"][1],
+                    "qs": _qpack(src["q"]),
+                }
+            else:
+                src = sketches[mid]
+                titles[mid] = (f"Street sketch {mid}", f"رسم الشارع {mid}")
+                mem[mid] = {
+                    "id": mid,
+                    "secs": src.get("secs", 120),
+                    "tm": src["tm"],
+                    "st": src["st"],
+                    "cr": src["cr"],
+                    "b": src["b"],
+                    "p": src["p"],
+                    "v": src["v"],
+                    "title_en": titles[mid][0],
+                    "title_ar": titles[mid][1],
+                    "blurb_en": "This corner, 2 minutes. Every question is something the drawing shows.",
+                    "blurb_ar": "هذه الزاوية، دقيقتان. كل سؤال عن شيء يُظهره الرسم.",
+                    "qs": _qpack(src["q"]),
+                }
+            if len(mem[mid]["qs"]) != 45:
+                raise SystemExit(f"{mid} has {len(mem[mid]['qs'])} questions")
+    return mem, titles
+
+
 def lesson(d):
     period = d["n"] if d["n"] <= 7 else d["n"] - 7
     meta_en = (
@@ -261,23 +336,37 @@ def lesson(d):
         f"الفترة {period} من 7 في هذه الحزمة. الإتقان 80% في الجوهر قبل الفترة التالية. "
         f"الهدف {d['target']}. الميزانية {d['budgetMin']} د. سريع أكثر من اللازم: أقل من {d['tooFastMin']} د مع جوهر مرتفع."
     )
+    drills = MEM_BY_DAY.get(d["n"], [])
+    drill_en = "; ".join(MEM_TITLES[i][0] for i in drills)
+    drill_ar = "؛ ".join(MEM_TITLES[i][1] for i in drills)
+    drill = (
+        f'<p class="sp-ph">{bi("In this period, after the lesson: " + drill_en + ". Same scene, same questions. 2 minutes, then the picture hides.", "في هذه الفترة، بعد الدرس: " + drill_ar + ". المشهد نفسه والأسئلة نفسها. دقيقتان، ثم تختفي الصورة.")}</p>'
+        if drills else ""
+    )
     return (
         f'<article class="hs-lesson" id="day-{d["n"]}"><h3>{bi(d["en"], d["ar"])}</h3>'
-        f'<p>{bi(d["body_en"], d["body_ar"])}</p><p class="sp-ph">{bi(meta_en, meta_ar)}</p></article>'
+        f'<p>{bi(d["body_en"], d["body_ar"])}</p><p class="sp-ph">{bi(meta_en, meta_ar)}</p>{drill}</article>'
     )
 
 
 def week_section(num, lessons, blurb_en, blurb_ar):
     name_en = f"Week {num} pack"
     name_ar = "حزمة الأسبوع الأول" if num == 1 else "حزمة الأسبوع الثاني"
-    btn_en = f"Start the Week {num} pack"
-    btn_ar = "ابدئي حزمة الأسبوع الأول" if num == 1 else "ابدئي حزمة الأسبوع الثاني"
+    btn_en = "Start Week 1 Pack" if num == 1 else "Start Week 2 Day 1"
+    btn_ar = "ابدئي حزمة الأسبوع الأول" if num == 1 else "ابدئي اليوم 1 من الأسبوع الثاني"
+    cue = (
+        f'<span class="hs-pack-cue">('
+        f'{bi("review below and ", "راجعي أدناه و")}'
+        f'<button type="button" class="sp-btn hs-pack-start" data-week="{num}" id="hs-pack-btn-{num}">{bi(btn_en, btn_ar)}</button>'
+        f'{bi(" here", " هنا")}'
+        f')</span>'
+    )
     return (
-        f'<section class="sp-week" id="week-{num}"><h2>{bi(name_en, name_ar)}</h2>'
+        f'<section class="sp-week" id="week-{num}">'
+        f'<h2 class="hs-pack-head"><span class="hs-pack-title">{bi(name_en, name_ar)}</span> {cue}</h2>'
+        f'<p id="hs-pack-note-{num}" class="sp-ph"></p>'
         f'<p>{bi(blurb_en, blurb_ar)}</p>'
         f'<div class="hs-pack">{"".join(lessons)}</div>'
-        f'<p id="hs-pack-note-{num}" class="sp-ph"></p>'
-        f'<button type="button" class="sp-btn" data-week="{num}" id="hs-pack-btn-{num}">{bi(btn_en, btn_ar)}</button>'
         f'</section>'
     )
 
@@ -301,7 +390,7 @@ def study_html(payload):
 <li>{bi("Core 70–94%: you are on that period's pace. The next period is already a higher demand, even when this one felt fair.", "جوهر 70–94%: أنتِ على إيقاع تلك الفترة. والفترة التالية أصلًا طلب أعلى، حتى لو بدت هذه عادلة.")}</li>
 <li>{bi("Day 1 probes: 3 of 4 harder probes right, with the ordinary core at 85%+, already counts as too easy. The grammar traps may still be soft. That is allowed. They are repaired before Week 2 opens.", "مجسّات اليوم 1: ثلاثة من أربعة مجسّات أصعب صحيحة، مع جوهر عادي عند 85% أو أكثر، تُحسب أصلًا أسهل مما ينبغي. فخاخ القواعد قد تبقى لينة. وهذا مسموح. وتُصلَح قبل أن يُفتح الأسبوع الثاني.")}</li>
 <li>{bi("Grammar drills the families under 80%. A family at 95% across 4 or more items is retired. The Week 1 retest rescores Day 1's soft families on new sentences, so the rise is visible. A family still under 80% keeps the next week closed.", "القواعد تدرّب العائلات تحت 80%. والعائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف. وإعادة القياس في الأسبوع الأول تعيد قياس عائلات اليوم 1 اللينة بجمل جديدة، فيظهر الارتفاع. والعائلة التي تبقى تحت 80% تبقي الأسبوع التالي مغلقًا.")}</li>
-<li>{bi("Pictures: Week 1 is the 7426 burglary. 80% unlocks the next quiz on that picture. 95% means that quiz was too easy and the harder one is the one that counts. Week 2 is Quick Stop, then the corner crash, with a higher bar when Week 1 was strong.", "الصور: الأسبوع الأول هو سطو 7426. 80% تفتح الاختبار التالي على تلك الصورة. و95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية، بعتبة أعلى إذا كان الأسبوع الأول قويًا.")}</li>
+<li>{bi("Pictures live in the pack, not on a second track. Week 1 periods hold the 7426 quizzes and the street sketches, the same scenes and the same questions. 80% masters a picture. 95% means that picture was too easy and the harder one counts. Week 2 Day 1 stays shut until every Week 1 period is mastered, then opens harder: Quick Stop, and the bar rises when Week 1 was strong.", "الصور داخل الحزمة، لا في مسار ثان. فترات الأسبوع الأول فيها اختبارات 7426 ورسوم الشوارع، المشاهد نفسها والأسئلة نفسها. 80% تُتقن صورة. 95% تعني أن الصورة كانت أسهل مما ينبغي والأصعب هو الذي يُحسب. اليوم 1 من الأسبوع الثاني يبقى مغلقًا حتى تُتقن كل فترة في الأسبوع الأول، ثم يُفتح أصعب: كويك ستوب، والعتبة ترتفع إذا كان الأسبوع الأول قويًا.")}</li>
 <li>{bi("End state for the two weeks: about 98% on this kind of page. Harder items, not a softer key.", "حالة نهاية الأسبوعين: نحو 98% على صفحة من هذا النوع. بنود أصعب، لا مفتاح أسهل.")}</li>
 </ul></section>'''
     about = f'''<section><h2>{bi("The exam this plan follows", "الامتحان الذي تتبعه هذه الخطة")}</h2>
@@ -336,6 +425,7 @@ def study_html(payload):
 <li><a href="https://post.ca.gov/LE-entry-level-test-battery-agency-faqs-2026" rel="noopener nofollow">California POST: PELLETB FAQs</a></li>
 <li><a href="https://www.joinlapd.com/step-2-multiple-choice-test" rel="noopener nofollow">LAPD: Step 2 Multiple Choice Test</a></li>
 </ul><p class="sp-ph"><span data-en>DELPOE structure checked against Darany's guide on Nov 1, 2026. City passing score and the PRA checked Oct 28, 2026. Always confirm details with HPD before the exam.</span><span data-ar>بُنية DELPOE رُوجعت على دليل داراني في 1 نوفمبر 2026. ودرجة النجاح المدينة والجاهزية البدنية رُوجعتا في 28 أكتوبر 2026. تأكّدي دائمًا من التفاصيل مع الشرطة قبل الامتحان.</span></p></section>'''
+    draw = (ROOT / "scripts" / "hesna_draw.js").read_text()
     adapt = (ROOT / "scripts" / "hesna_adapt.js").read_text()
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
     return f'''<!DOCTYPE html>
@@ -358,7 +448,7 @@ def study_html(payload):
 {week_section(2, w2,
 "Every lesson and quiz for Days 8–14 is in this pack. It stays closed until Week 1 is mastered. When it opens, it is harder: a bridge if Week 1's core was under 85%, one extra tier at 85% or higher, two at 95% or higher.",
 "كل دروس الأيام 8–14 واختباراتها في هذه الحزمة. تبقى مغلقة حتى يُتقن الأسبوع الأول. حين تُفتح تكون أصعب: جسر إذا كان جوهر الأسبوع الأول تحت 85%، ومستوى إضافي عند 85% أو أكثر، ومستويان عند 95% أو أكثر.")}
-<p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("Visual packs: 2 minutes, then the picture hides. Week 1 starts with the 7426 burglary.", "حزم بصرية: دقيقتان ثم تختفي الصورة. الأسبوع الأول يبدأ بسطو 7426.")}</a></p>
+<p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("Week 2 pictures, after every Week 1 period is mastered: Quick Stop, then the corner. 2 minutes, then the picture hides.", "صور الأسبوع الثاني، بعد إتقان كل فترة في الأسبوع الأول: كويك ستوب، ثم الزاوية. دقيقتان، ثم تختفي الصورة.")}</a></p>
 {delpoe_block()}
 {biodata_block()}
 <div id="hs-board"></div>
@@ -384,6 +474,7 @@ def study_html(payload):
 }})();
 </script>
 <script>window.HS={payload};</script>
+<script>{draw}</script>
 <script>{adapt}</script>
 <script>{run}</script>
 <script>{LANG}</script>
@@ -407,10 +498,42 @@ def memory_html():
     needle = "window.MD_DATA={};"
     if needle not in raw:
         raise SystemExit("MD_DATA placeholder missing")
-    return raw.replace(needle, "window.MD_DATA=" + js(data) + ";", 1)
+    raw = raw.replace(needle, "window.MD_DATA=" + js(data) + ";", 1)
+    anchor = "<script>(function(){var D=window.MD_DATA"
+    draw = (ROOT / "scripts" / "hesna_draw.js").read_text()
+    if anchor not in raw:
+        raise SystemExit("memory shell anchor missing")
+    if "function hesnaScene" not in raw:
+        raw = raw.replace(anchor, "<script>\n" + draw + "\n</script>\n" + anchor, 1)
+    return raw
+
+
+def audit_scenes():
+    """Every pictured fact a Week 1 or Week 2 question asks has to be on the scene."""
+    base = json.loads((ROOT / "scripts" / "hesna_memory_base.json").read_text())
+    l44 = next(s for s in base["S"] if s["id"] == "L4-4")
+    if l44["q"][-1][2][l44["q"][-1][4]] != "7":
+        raise SystemExit("L4-4 still hides the drawn driver")
+    for tok in ("WALLET", "DOG", "SKATE", "CANE", "PHONE", "HYDRANT", "UMBRELLA", "BRAID", "DRIVER"):
+        if tok not in l44["svg"]:
+            raise SystemExit("L4-4 scene missing " + tok)
+    extra = hesna_scenes.new_scenes({"C": hesna_scenes.C, "I": hesna_scenes.I, "V": hesna_scenes.V})
+    by_id = {s["id"]: s.get("svg") or "" for s in extra}
+    need = {
+        "L6-1": ["Tuesday", "KEYS", "blue fob", "STAIRS", "HOOD", "RAIL", "SILVER", "beard", "sunglasses", "backpack blue, then black"],
+        "L6-2": ["Wednesday", "ENGINE ON", "ENGINE OFF", "LEFT REAR", "DENT", "CART by pillar C", "BOOTH", "STALL 20", "disregard 414", "keep 441", "OIL under 441"],
+    }
+    for sid, toks in need.items():
+        for tok in toks:
+            if tok not in by_id[sid]:
+                raise SystemExit(f"{sid} scene missing {tok}")
+    draw = (ROOT / "scripts" / "hesna_draw.js").read_text()
+    if 'p.i === "cup"' not in draw or "q0 11 -7 11" not in draw:
+        raise SystemExit("street cup is not drawn")
 
 
 def main():
+    audit_scenes()
     photo_stats = hesna_photo.check()
     stats = hesna_banks.check_banks()
     stats["photos"] = photo_stats
@@ -428,7 +551,14 @@ def main():
             row["mode"] = d["mode"]
         if d.get("stretchTake"):
             row["stretchTake"] = d["stretchTake"]
+        row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
         days.append(row)
+    mem, titles = load_memory()
+    global MEM_TITLES
+    MEM_TITLES = titles
+    missing = [i for ids in MEM_BY_DAY.values() for i in ids if i not in mem]
+    if missing:
+        raise SystemExit("missing memory drills " + ",".join(missing))
     payload = js({
         "days": days,
         "items": items,
@@ -436,6 +566,7 @@ def main():
         "comps": comps,
         "listens": listens,
         "obs": obs,
+        "mem": mem,
     })
     STUDY.write_text(study_html(payload), encoding="utf-8")
     MEM.write_text(memory_html(), encoding="utf-8")
