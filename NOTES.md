@@ -1247,3 +1247,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - Big Questions: fr/es/ar/it now 77 like en (was 76); he 71 (was 70). Each page's "N questions" matches its entries and FAQPage JSON-LD; he parity still lags (existing flag).
 - Promo transcript and Latest Updates history lines (246, 204, 208) are dated/recorded text, not live counts. No repo page changes, no STYLEV bump. Earlier flags unchanged.
 - Milestones: none new.
+
+## Nov 1 2026 (HST): daily translation sync
+- weekly-sync.sh ran clean at 9e62f9aed, pushed as 94930477c (All translations current; SEO lint 397 warnings / 0 errors; sitemap 2,263 URLs; pagefind 2,270 pages). Solution of the Week rotated GRACE-FO -> Artemis Program. 2,612 files: routine churn (seo-fix, OG/JSON-LD, pagefind, translations). Hidden Hesna study pages got only glass-tint/beacon placement; still not in sitemap. No STYLEV bump.
+- si-index (semantic search embeddings) failed non-fatally: Cloudflare Workers AI bge-m3 call returned 401 Authentication error, so the semantic vector index was not refreshed. Needs the Cloudflare API token checked.
+- he-attr-i18n still reports 21 strings missing in he.json (non-blocking).
