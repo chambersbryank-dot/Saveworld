@@ -1241,3 +1241,9 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 
 ## Oct 31 2026 (HST): daily translation sync (not pushed)
 - weekly-sync.sh at b303bd614 exited 1 on the translation check: fr/es/ar/it/he index.html STALE (English homepage changed since translation). The run's English homepage diff also added a "What makes us different" strip, a Be Part of the Fix join block, Kids card -> Amazing_Facts, hero video autoplay, and dropped the cite/embed script, so it needs a look before publishing. Nothing committed or pushed; checkout reset to clean. Full output saved at /tmp/sync1031-unpushed.patch, log /tmp/sync1031.log.
+
+## Nov 1 2026 (HST): daily numbers check
+- Verified at 3504655be (after #167 translation sync, #168-#172 hidden Hesna study page, #173 Big Questions links): **266 solutions** (Solutions.html cards = 266 in en/fr/es/ar/it/he), homepage impact strip 266 / 11 hubs, Vision line and New this week total 266 in every language, 21 myths and 26 facts on home/About, Scoreboard 47, sitemap 2,263 unchanged (Hesna page is hidden, not in sitemap). All counts match.
+- Big Questions: fr/es/ar/it now 77 like en (was 76); he 71 (was 70). Each page's "N questions" matches its entries and FAQPage JSON-LD; he parity still lags (existing flag).
+- Promo transcript and Latest Updates history lines (246, 204, 208) are dated/recorded text, not live counts. No repo page changes, no STYLEV bump. Earlier flags unchanged.
+- Milestones: none new.
