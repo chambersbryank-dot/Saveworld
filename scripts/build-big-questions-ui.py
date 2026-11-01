@@ -91,6 +91,20 @@ UI = {
     'he':'«דרכים לעזור» מוביל לתרומה או הצטרפות לקבוצות שעושות את העבודה. Saving Planets לא לוקח עמלה.'},
   'help_btn': {'en':'Ways to Help','fr':'Comment aider','es':'Formas de ayudar','ar':'طرق المساعدة','it':'Come aiutare','he':'דרכים לעזור'},
   'count': {'en':'{n} questions','fr':'{n} questions','es':'{n} preguntas','ar':'{n} سؤالًا','it':'{n} domande','he':'{n} שאלות'},
+  # Nov 1 2026: clear links at the top of the page. Myth page is Myth_vs_Fact.html
+  # (Myth_vs_Facts.html and Myths.html 404). Solutions.html is the index of every
+  # planet solution ("making a difference daily") and returns 200 in all 6 langs.
+  'top_nav': {'en':'Explore','fr':'Explorer','es':'Explorar','ar':'استكشف','it':'Esplora','he':'גלו עוד'},
+  'top_myth': {
+    'en':'Myth vs Fact','fr':'Mythe ou réalité','es':'Mito o realidad',
+    'ar':'خرافة أم حقيقة','it':'Mito o realtà','he':'מיתוס מול עובדה'},
+  'top_sol': {
+    'en':'Visit every day Planet solutions here',
+    'fr':'Visitez chaque jour les solutions pour la planète ici',
+    'es':'Visita cada día las soluciones del planeta aquí',
+    'ar':'زوروا حلول الكوكب كل يوم من هنا',
+    'it':'Visita ogni giorno le soluzioni per il pianeta qui',
+    'he':'בקרו בכל יום בפתרונות לכדור הארץ כאן'},
   'empty': {'en':'No questions match. Try another word or topic.','fr':'Aucune question ne correspond. Essayez un autre mot ou thème.','es':'Ninguna pregunta coincide. Prueba otra palabra o tema.','ar':'لا أسئلة مطابقة. جرّب كلمة أو موضوعًا آخر.','it':'Nessuna domanda corrisponde. Prova un’altra parola o argomento.','he':'אין שאלות תואמות. נסו מילה או נושא אחר.'},
   'credit': {'en':'Created by SI and Biological SI Partner','fr':'Créé par SI et Biological SI Partner','es':'Creado por SI y Biological SI Partner','ar':'من إعداد SI وBiological SI Partner','it':'Creato da SI e Biological SI Partner','he':'נוצר על ידי SI ו-Biological SI Partner'},
   'results': {'en':'Questions','fr':'Questions','es':'Preguntas','ar':'الأسئلة','it':'Domande','he':'שאלות'},
@@ -199,6 +213,9 @@ def related_map(items):
 CSS = r'''
 .bq{--bq-accent:#8fd3ff;--bq-line:rgba(124,170,255,.35);--bq-bg:rgba(124,170,255,.07);max-width:880px;margin:0 auto;padding:0 clamp(12px,3vw,1.25rem) 3rem}
 .bq-hero-purpose{font-size:1.15rem;line-height:1.45;margin:.35rem 0 0;opacity:.95}
+.bq-top{display:flex;flex-direction:column;gap:.55rem;margin:.85rem 0 1.1rem}
+.bq-top a{display:flex;align-items:center;min-height:48px;padding:.7rem 1rem;border-radius:14px;border:1px solid var(--bq-line);background:rgba(0,156,222,.2);color:#fff;font-weight:700;font-size:1.05rem;line-height:1.35;text-align:start;text-decoration:none}
+.bq-top a:hover,.bq-top a:focus-visible{background:rgba(0,156,222,.38);outline:2px solid var(--bq-accent);outline-offset:2px}
 .bq-toolbar{position:sticky;top:64px;z-index:5;padding:.65rem 0 .5rem;background:linear-gradient(180deg,rgba(7,16,24,.97),rgba(7,16,24,.92));backdrop-filter:blur(8px);margin:0 -4px;padding-inline:4px}
 .bq-search{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.65rem}
 .bq-search input{width:100%;box-sizing:border-box;min-height:48px;border-radius:12px;border:1px solid var(--bq-line);background:rgba(0,20,40,.55);color:#e8eef5;padding:.65rem .9rem;font-size:1rem}
@@ -338,8 +355,16 @@ def build_body(lang, items, dyk):
     )
 
     count0 = u['count'][lang].replace('{n}', str(len(items)))
+    top = (
+        # div, not <nav>: body.toc-sub nav is position:fixed and would cover the site header
+        f'<div class="bq-top" role="navigation" aria-label="{escq(u["top_nav"][lang])}">'
+        f'<a href="Myth_vs_Fact.html">{esc(u["top_myth"][lang])}</a>'
+        f'<a href="Solutions.html">{esc(u["top_sol"][lang])}</a>'
+        f'</div>'
+    )
     return f'''
 <div class="bq" id="bq-app" data-count-tpl="{escq(u['count'][lang])}">
+  {top}
   <p class="bq-hero-purpose">{esc(u['purpose'][lang])}</p>
   <div class="bq-toolbar">
     <div class="bq-search">
