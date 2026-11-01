@@ -120,7 +120,7 @@ python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (
 python3 scripts/build-home-trim.py      # Oct 20: founder-approved clutter fix #1, homepage 18 -> 6 sections (parks, never deletes; --undo restores)
 python3 scripts/build-home-numbers.py   # Oct 25 (founder, upgrade 5): sourced numbers strip below the homepage hero (assets/data/home-numbers.json), all langs
 python3 scripts/build-home-vision.py    # Oct 30 (founder): Vision strip under the homepage hero, 6 langs (machine-draft note on fr/es/ar/it/he)
-python3 scripts/he-si-note.py           # Oct 19: SI-translated reader note on every /he/ page (Hebrew launch)
+python3 scripts/build-corrections-policy.py  # Oct 20/26: SI reader note fr/es/ar/it/he + Corrections_Policy (all langs); mailbox translators@
 python3 scripts/build-logo.py           # Oct 20: logo v2 icon in the nav (left of Home; RTL mirrored), favicons, apple-touch, footer logo credit (all langs)
 python3 scripts/build-promo-en-only.py   # Oct 21 (founder): promo videos English-only; fr/es/ar/it/he get one 4K NASA still
 python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async stylesheets (cached per template; run after every head-touching generator)

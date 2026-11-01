@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Oct 14 2026: department inboxes. Contact cards (teachers@, privacy@, translate@), grown-ups/teacher notes on Teachers,
-Lesson_Builder and Kids_Map, About translate@ note, footer hello@ line, and a 'Help translate' line in fr/es/ar footers.
+"""Oct 14 2026: department inboxes. Contact cards (teachers@, privacy@, translators@), grown-ups/teacher notes on Teachers,
+Lesson_Builder and Kids_Map, About translators@ note, footer hello@ line, and a 'Help translate' line in fr/es/ar footers.
 Writes EN blocks (marker comments) + i18n strings; run before i18n-build and again after it (fixes translated footers). Idempotent."""
 import re, glob, os, json
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 S = 'mailto:%s@savingplanets.com?subject=%s'
 M = {'teachers': S % ('teachers', 'Teacher%20question%20or%20lesson%20plan%20request'), 'privacy': S % ('privacy', 'Privacy%20or%20data%20request'),
-     'translate': S % ('translate', 'I%20can%20help%20translate'), 'hello': S % ('hello', 'Hello%20from%20a%20Saving%20Planets%20visitor')}
+     'translators': S % ('translators', 'I%20can%20help%20translate'), 'hello': S % ('hello', 'Hello%20from%20a%20Saving%20Planets%20visitor')}
 TR = {
  'Teachers & Schools': ('Enseignants et écoles', 'Docentes y escuelas', 'المعلمون والمدارس'),
  'Classroom questions, lesson-plan requests and school partnerships.': ('Questions de classe, demandes de plans de cours et partenariats scolaires.', 'Preguntas de clase, solicitudes de planes de clase y alianzas escolares.', 'أسئلة الصف وطلبات خطط الدروس والشراكات المدرسية.'),
@@ -40,17 +40,17 @@ for lang in ('', 'fr/', 'es/', 'ar/', 'it/'):
             if base == 'Contact.html':
                 s = put(s, 'contact', card('Teachers & Schools', TR['Teachers & Schools'] and 'Classroom questions, lesson-plan requests and school partnerships.', 'teachers') +
                         card('Privacy & Data Requests', 'Questions about your data, or a deletion request.', 'privacy') +
-                        card('Help Translate', 'Volunteer translators and language corrections for French, Spanish, Arabic, Italian and Hebrew.', 'translate'), '<div class="w-card"><h3>General Questions</h3>')
+                        card('Help Translate', 'Volunteer translators and language corrections for French, Spanish, Arabic, Italian and Hebrew.', 'translators'), '<div class="w-card"><h3>General Questions</h3>')
             if base in ('Teachers.html', 'Lesson_Builder.html', 'Kids_Map.html'):
                 s = put(s, 'teachers', '<section class="help-actions dept-note" id="grown-ups"><p>For grown-ups and teachers: classroom questions, lesson-plan requests or school partnerships?</p><p>' + a('teachers') + '</p></section>', '</main>')
             if base == 'About.html':
-                s = put(s, 'translate', '<section class="help-actions dept-note" id="translate"><p>Speak French, Spanish, Arabic, Italian or Hebrew? Volunteer translators and language corrections are welcome.</p><p>' + a('translate') + '</p></section>', '</main>')
+                s = put(s, 'translate', '<section class="help-actions dept-note" id="translate"><p>Speak French, Spanish, Arabic, Italian or Hebrew? Volunteer translators and language corrections are welcome.</p><p>' + a('translators') + '</p></section>', '</main>')
         if '<footer>' in s and not base.startswith('google') and base not in ('ways_to_help.html', 'ways-to-help.html'):
             ln = lang.rstrip('/')
             extra = f'<p class="dept-foot">Questions? Write to {a("hello")}</p>'
             if ln:
                 q = {'fr': 'Des questions ? Écrivez à', 'es': '¿Preguntas? Escribe a', 'ar': 'أسئلة؟ راسل', 'it': 'Domande? Scrivi a'}[ln]
-                extra = f'<p class="dept-foot">{q} {a("hello")}</p><p class="dept-foot">{HELP[ln]} {a("translate")}</p>'
+                extra = f'<p class="dept-foot">{q} {a("hello")}</p><p class="dept-foot">{HELP[ln]} {a("translators")}</p>'
             s = put(s, 'foot', extra, '</footer>')
         if s != o: open(f, 'w', encoding='utf-8').write(s); n += 1
 print(f'dept-contacts: {n} pages updated')
