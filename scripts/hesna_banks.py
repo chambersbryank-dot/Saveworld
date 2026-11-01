@@ -1055,16 +1055,20 @@ def scenario_logic():
     return rows
 
 
-def passage(iid, tier, depth, pillar, secs, en, ar, qs):
+def passage(iid, tier, depth, pillar, secs, en, ar, qs, img=None, alt=None):
     if pillar in ("listen", "obs") and not secs:
         raise SystemExit(iid)
     for q in qs:
         if len(q["opts"]) != 4 or len(set(o[0] for o in q["opts"])) != 4:
             raise SystemExit(f"bad q in {iid}")
-    return {
+    row = {
         "id": iid, "tier": tier, "depth": depth, "pillar": pillar,
         "secs": secs or 0, "en": en, "ar": ar, "qs": qs,
     }
+    if img:
+        row["img"] = img
+        row["alt"] = alt or ""
+    return row
 
 
 def qq(qid, en, ar, opts, ans, why_en, why_ar):
@@ -1477,45 +1481,46 @@ def passages():
           0, "The pickup is stated as not part of the call.", "البيك أب مذكور على أنه ليس جزءًا من البلاغ.")])
 
     obs.append(passage(
-        "o1", 5, 1, "obs", 55,
-        "Tuesday, 4:20 PM, lobby of 1427 16th Avenue at Kilauea. A resident in a white blouse and black slacks, red scarf, unit 3B, walks in with a brown grocery bag. A man in a green polo, khaki shorts, and a white cap, unit 12A, stands at the mailboxes on a phone. A teenager in a gray hoodie, ripped blue jeans, and red sneakers runs toward the west alley with a black backpack; the hood hides the face. A package marked \"4C — DO NOT BEND\" had been by the door and is gone. The manager, blue vest, name tag NOE, points at the stairwell and first says the backpack was blue, then corrects: black. A small white dog with no leash is by the elevator, which shows 2. A yellow bicycle is against the rail. Keys with a blue fob are on the counter. Outside: a silver SUV, plate HNL 640, driver with a beard and sunglasses waiting; a red compact, plate KXM 218, empty. A brick props the side fire door.",
-        "الثلاثاء، 4:20 مساءً، ردهة 1427 الجادة 16 عند كيلوا. مقيمة ببلوزة بيضاء وبنطال أسود ووشاح أحمر، الوحدة 3B، تدخل بكيس بقالة بني. رجل بقميص بولو أخضر وشورت كاكي وقبعة بيضاء، الوحدة 12A، يقف عند صناديق البريد على الهاتف. مراهق بقلنسوة رمادية وجينز أزرق ممزق وحذاء أحمر يجري نحو الزقاق الغربي بحقيبة ظهر سوداء؛ القلنسوة تخفي الوجه. طرد مكتوب عليه «4C — DO NOT BEND» كان عند الباب واختفى. المدير، سترة زرقاء، بطاقة NOE، يشير إلى الدرج ويقول أولًا إن الحقيبة زرقاء ثم يصحّح: سوداء. كلب أبيض صغير بلا مقود عند المصعد، والمصعد يُظهر 2. دراجة صفراء على السياج. مفاتيح بحلقة زرقاء على المنضدة. في الخارج: دفع رباعي فضي، لوحة HNL 640، سائق بلحية ونظارة ينتظر؛ سيارة صغيرة حمراء، لوحة KXM 218، فارغة. طوبة تسند باب الحريق الجانبي.",
-        [qq("o1a", "After the manager's correction, what color is the backpack?", "بعد تصحيح المدير، ما لون حقيبة الظهر؟",
-            [("Black", "أسود"), ("Blue", "أزرق"), ("Gray", "رمادي"), ("Red", "أحمر")],
-            0, "He corrected blue to black. The hoodie is gray. The sneakers are red.", "صحّح الأزرق إلى الأسود. القلنسوة رمادية. والحذاء أحمر."),
-         qq("o1b", "Which unit is the woman with the red scarf?", "أي وحدة للمرأة ذات الوشاح الأحمر؟",
-            [("3B", "3B"), ("12A", "12A"), ("4C", "4C"), ("2", "2")],
-            0, "3B is her unit. 12A is the man at the mailboxes. 4C is the package. 2 is the elevator.", "3B وحدتها. 12A الرجل عند البريد. 4C الطرد. 2 المصعد."),
-         qq("o1c", "Which plate is on the empty red car?", "أي لوحة على السيارة الحمراء الفارغة؟",
-            [("KXM 218", "KXM 218"), ("HNL 640", "HNL 640"), ("4C", "4C"), ("No plate was given", "لم تُعطَ لوحة")],
-            0, "HNL 640 is the silver SUV with the driver waiting.", "HNL 640 هي الدفع الرباعي الفضي وسائقها ينتظر."),
-         qq("o1d", "What is holding the fire door?", "ما الذي يسند باب الحريق؟",
-            [("A brick", "طوبة"), ("The yellow bicycle", "الدراجة الصفراء"),
-             ("The white dog", "الكلب الأبيض"), ("The package", "الطرد")],
-            0, "The brick props the door. The bicycle is on the rail. The package is gone.", "الطوبة تسند الباب. والدراجة على السياج. والطرد اختفى.")]),
-    )
+        "o1", 5, 1, "obs", 120,
+        "Study this picture for 2 minutes. 7426 burglary. No notes. Then it hides.",
+        "ادراسي هذه الصورة لدقيقتين. سطو 7426. بلا ملاحظات. ثم تختفي.",
+        [qq("o1a", "What number is on the mailbox?", "ما الرقم على صندوق البريد؟",
+            [("7426", "7426"), ("7462", "7462"), ("7246", "7246"), ("4267", "4267")],
+            0, "The mailbox on the white post reads 7426.", "صندوق البريد على العمود الأبيض يُقرأ 7426."),
+         qq("o1b", "How many blue hard-shell suitcases are in the open SUV?", "كم حقيبة صلبة زرقاء في الدفع الرباعي المفتوح؟",
+            [("One", "واحدة"), ("Two", "اثنتان"), ("Three", "ثلاث"), ("None", "لا شيء")],
+            0, "One blue hard-shell suitcase. The other bags are tan and green.", "حقيبة صلبة زرقاء واحدة. والحقيبتان الأخريان بنية فاتحة وخضراء."),
+         qq("o1c", "What is the person leaving the garage carrying?", "ماذا يحمل الشخص الخارج من المرآب؟",
+            [("A flat television", "تلفاز مسطح"), ("The bicycle", "الدراجة"),
+             ("The red tool chest", "صندوق العدة الأحمر"), ("The green trash cart", "حاوية النفايات الخضراء")],
+            0, "He carries a flat television toward the SUV. The bicycle and the red chest stay in the garage.", "هو يحمل تلفازًا مسطحًا نحو الدفع الرباعي. والدراجة والصندوق الأحمر يبقيان في المرآب."),
+         qq("o1d", "Where is the dog?", "أين الكلب؟",
+            [("On the grass by the wooden fence, not in the pool", "على العشب بجانب السياج الخشبي، لا في المسبح"),
+             ("In the pool", "في المسبح"), ("In the SUV", "في الدفع الرباعي"), ("At the mailbox", "عند صندوق البريد")],
+            0, "The golden-brown dog is on the near side of the fence. Nobody is in the pool.", "الكلب البني الذهبي في الجهة القريبة من السياج. لا أحد في المسبح.")],
+        img="hesna-7426-recall.jpg",
+        alt="Daytime burglary at a house numbered 7426",
+    ))
     obs.append(passage(
-        "o2", 6, 1, "obs", 55,
-        "Wednesday, 11:06 AM, parking level P2, yellow pillar C, stall 18. Black sedan A: plate NRP 441, dent on the left rear door, driver a woman with a braid and a yellow top, engine running, pointed east. Black sedan B: plate NRP 414, no dent, driver a man in a blue shirt, parked, engine off. The radio says, \"Disregard 414. The plate is 441.\" A green shopping bag with a child seat in the cart sits by pillar C. An attendant in an orange vest stands at the booth. A black motorcycle, plate M 28, is in stall 20. A white van, plate PLB 902, blocks part of the west exit ramp; its driver is not the attendant. An oil spot is in stall 18, under sedan A. A ticket on the ground reads 10:41 AM. The reporting person, gray hoodie, points at sedan A.",
-        "الأربعاء، 11:06 صباحًا، مستوى الموقف P2، العمود الأصفر C، الموقف 18. سيدان سوداء أ: لوحة NRP 441، انبعاج في الباب الخلفي الأيسر، سائقة بضفيرة وقميص أصفر، المحرك يعمل، متجهة شرقًا. سيدان سوداء ب: لوحة NRP 414، بلا انبعاج، سائق بقميص أزرق، متوقفة، المحرك مطفأ. اللاسلكي يقول: «تجاهلوا 414. اللوحة 441.» كيس تسوق أخضر ومقعد طفل في العربة بجانب العمود C. موظف بسترة برتقالية عند الكشك. دراجة نارية سوداء، لوحة M 28، في الموقف 20. شاحنة بيضاء، لوحة PLB 902، تسد جزءًا من منحدر الخروج الغربي؛ سائقها ليس الموظف. بقعة زيت في الموقف 18 تحت السيدان أ. تذكرة على الأرض مكتوب فيها 10:41 صباحًا. والمبلّغ، قلنسوة رمادية، يشير إلى السيدان أ.",
-        [qq("o2a", "Which plate do you keep after the radio correction?", "أي لوحة تبقين بعد تصحيح اللاسلكي؟",
-            [("NRP 441", "NRP 441"), ("NRP 414", "NRP 414"), ("PLB 902", "PLB 902"), ("M 28", "M 28")],
-            0, "The radio drops 414 and keeps 441, which is also the car the reporting person points at.", "اللاسلكي يسقط 414 ويبقي 441، وهي أيضًا السيارة التي يشير إليها المبلّغ."),
-         qq("o2b", "What color is the reporting person's hoodie, and whom do they indicate?", "ما لون قلنسوة المبلّغ، وإلى من يشير؟",
-            [("Gray, sedan A", "رمادي، السيدان أ"), ("Yellow, sedan B", "أصفر، السيدان ب"),
-             ("Orange, the van", "برتقالي، الشاحنة"), ("Blue, the motorcycle", "أزرق، الدراجة النارية")],
-            0, "Gray hoodie, pointing at sedan A. Orange is the attendant. Yellow is the driver's top.", "قلنسوة رمادية، يشير إلى السيدان أ. البرتقالي الموظف. والأصفر قميص السائقة."),
-         qq("o2c", "What time is on the ticket, and what time is the scene?", "ما الوقت على التذكرة، وما وقت المشهد؟",
-            [("Ticket 10:41 AM, scene 11:06 AM", "التذكرة 10:41 صباحًا، المشهد 11:06 صباحًا"),
-             ("Both 11:06", "كلاهما 11:06"),
-             ("Ticket 11:06, scene 10:41", "التذكرة 11:06، المشهد 10:41"),
-             ("Neither time was given", "لم يُعطَ أي وقت")],
-            0, "The scene clock and the ticket are different on purpose.", "ساعة المشهد والتذكرة مختلفتان عمدًا."),
-         qq("o2d", "Which vehicle blocks part of the west exit?", "أي مركبة تسد جزءًا من مخرج الغرب؟",
-            [("White van PLB 902", "الشاحنة البيضاء PLB 902"),
-             ("Sedan A", "السيدان أ"), ("The motorcycle", "الدراجة النارية"), ("Sedan B", "السيدان ب")],
-            0, "The van is the one on the ramp. The sedans are at stall 18's area and parked.", "الشاحنة هي التي على المنحدر. والسيدان عند منطقة الموقف 18 ومتوقفة.")]),
-    )
+        "o2", 6, 1, "obs", 120,
+        "Study this picture for 2 minutes. Quick Stop. No notes. Then it hides.",
+        "ادراسي هذه الصورة لدقيقتين. كويك ستوب. بلا ملاحظات. ثم تختفي.",
+        [qq("o2a", "What do the words on the store say?", "ماذا تقول كلمات المتجر؟",
+            [("QUICK STOP", "QUICK STOP"), ("HALE MART", "HALE MART"), ("STOP QUICK", "STOP QUICK"), ("7426", "7426")],
+            0, "The sign above the door reads QUICK STOP.", "اللافتة فوق الباب تقول QUICK STOP."),
+         qq("o2b", "What emblem is on the silver sedan?", "ما الشعار على السيدان الفضية؟",
+            [("Toyota", "تويوتا"), ("Mazda", "مازدا"), ("Tesla", "تسلا"), ("Honda", "هوندا")],
+            0, "The grille mark is Toyota.", "علامة الشبكة تويوتا."),
+         qq("o2c", "What color are the child's shoes?", "ما لون حذاء الطفل؟",
+            [("Dark, with light soles", "داكن بنعل فاتح"), ("White", "أبيض"), ("Red", "أحمر"), ("Yellow", "أصفر")],
+            0, "The shoes are dark with light soles, not white.", "الحذاء داكن بنعل فاتح، لا أبيض."),
+         qq("o2d", "What is the person in the yellow jacket carrying?", "ماذا يحمل الشخص بالسترة الصفراء؟",
+            [("A red bag", "حقيبة حمراء"), ("The pineapple", "الأناناس"),
+             ("The white jug", "الإبريق الأبيض"), ("The orange cone", "المخروط البرتقالي")],
+            0, "The pineapple and the white jug are in the cart. The runner has a red bag.", "الأناناس والإبريق الأبيض في العربة. والعدّاء معه حقيبة حمراء.")],
+        img="hesna-quickstop-recall.jpg",
+        alt="Daytime grab-and-run outside a Quick Stop store",
+    ))
     return reads, comps, listens, obs
 
 

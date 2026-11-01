@@ -30,7 +30,9 @@ body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
 .sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
 .sp-btn{margin-top:.5rem;padding:.45rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;font:inherit;cursor:pointer;min-height:44px}
 .sp-phase{margin:1.5rem 0}.sp-day h3{margin:0 0 .5rem}.sp-ph{opacity:.85;font-style:italic;margin:0}
+html{scroll-behavior:auto!important}
 html[lang=en] [data-ar],html[lang=ar] [data-en]{display:none}
+#week-1,#day-1{scroll-margin-top:4.75rem}
 .sp-nav{position:sticky;top:0;z-index:50;display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 0;margin-bottom:.5rem;background:#0b1622;border-bottom:1px solid rgba(255,255,255,.15)}.sp-nav a{padding:.45rem 1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);color:inherit;text-decoration:none;font-weight:600}.sp-nav a[aria-current]{background:var(--brand-blue,#2b7bd6);color:#fff}
 .hs-ladder{display:flex;flex-wrap:wrap;gap:.35rem;margin:1rem 0}
 .hs-ladder span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:.2rem .55rem;font-size:.85rem}
@@ -323,14 +325,8 @@ def study_html(payload):
 <main data-pagefind-ignore="all">
 {NAV.format(g=' aria-current="page"', m='')}
 <div class="sp-top"><h1>{bi("Hesna's Two-Week HPD Study Plan", "خطة حسنة الدراسية لامتحان شرطة هونولولو (أسبوعان)")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
-<p class="sp-ph">{bi("Private study page. Practice questions are original and are not real exam items.", "صفحة دراسة خاصة. أسئلة التدريب من إعدادنا وليست أسئلة امتحان حقيقية.")}</p>
-<p>{bi("Day 1 is a photograph of how you reason, and of where English sits beside Arabic and French. Day 14 should make that photograph look like a different test-taker. The work gets harder every day on purpose, and it gets harder again the moment a day is too easy. The aim, walking into the Honolulu exam, is about 98% on this kind of page.",
-"اليوم 1 صورة لطريقة استدلالكِ، ولموقع الإنجليزية بجانب العربية والفرنسية. واليوم 14 يُفترض أن يجعل تلك الصورة تبدو لشخص آخر يدخل الاختبار. العمل يصعب كل يوم عن قصد، ويصعب مرة أخرى لحظة يكون اليوم أسهل مما ينبغي. الهدف، وأنتِ داخلة إلى امتحان هونولولو، نحو 98% على صفحة من هذا النوع.")}</p>
-<div class="hs-ladder" aria-hidden="true">{ladder}</div>
-{rules}
-{about}
-<section class="sp-week"><h2>{bi("Week 1", "الأسبوع الأول")}</h2><div class="sp-grid">{''.join(w1)}</div></section>
-<section class="sp-week"><h2>{bi("Week 2", "الأسبوع الثاني")}</h2><div class="sp-grid">{''.join(w2)}</div></section>
+<section class="sp-week" id="week-1"><h2>{bi("Week 1", "الأسبوع الأول")}</h2><div class="sp-grid">{''.join(w1)}</div></section>
+<section class="sp-week" id="week-2"><h2>{bi("Week 2", "الأسبوع الثاني")}</h2><div class="sp-grid">{''.join(w2)}</div></section>
 <p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("Visual drills: 2 minutes, then the picture hides. Start with the 7426 burglary.", "تمارين بصرية: دقيقتان ثم تختفي الصورة. ابدئي بسطو 7426.")}</a></p>
 {delpoe_block()}
 {biodata_block()}
@@ -339,7 +335,23 @@ def study_html(payload):
 <p><button type="button" class="sp-btn" id="hs-reset">{bi("Reset saved plan progress", "امسحي تقدّم الخطة المحفوظ")}</button></p>
 {facts}
 {sources}
+<p class="sp-ph">{bi("Private study page. Practice questions are original and are not real exam items.", "صفحة دراسة خاصة. أسئلة التدريب من إعدادنا وليست أسئلة امتحان حقيقية.")}</p>
+<p>{bi("Day 1 is a photograph of how you reason, and of where English sits beside Arabic and French. Day 14 should make that photograph look like a different test-taker. The work gets harder every day on purpose, and it gets harder again the moment a day is too easy. The aim, walking into the Honolulu exam, is about 98% on this kind of page.",
+"اليوم 1 صورة لطريقة استدلالكِ، ولموقع الإنجليزية بجانب العربية والفرنسية. واليوم 14 يُفترض أن يجعل تلك الصورة تبدو لشخص آخر يدخل الاختبار. العمل يصعب كل يوم عن قصد، ويصعب مرة أخرى لحظة يكون اليوم أسهل مما ينبغي. الهدف، وأنتِ داخلة إلى امتحان هونولولو، نحو 98% على صفحة من هذا النوع.")}</p>
+<div class="hs-ladder" aria-hidden="true">{ladder}</div>
+{rules}
+{about}
 </main>
+<script>
+(function(){{
+  if (location.hash && location.hash !== '#week-1' && location.hash !== '#day-1') return;
+  var el = document.getElementById('week-1');
+  if (!el) return;
+  function go(){{ el.scrollIntoView({{block:'start', behavior:'auto'}}); }}
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go);
+  else go();
+}})();
+</script>
 <script>window.HS={payload};</script>
 <script>{adapt}</script>
 <script>{run}</script>

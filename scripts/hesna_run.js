@@ -147,9 +147,20 @@
 
   function renderScript(step) {
     var left = step.set.secs || 40;
-    app.innerHTML = '<p class="md-timer" id="hs-script-t"></p><p class="hs-script">' + esc(step.set.en) + '</p>'
-      + '<p class="sp-ph">' + bi(step.kind === "obs" ? "Observation. Read once. It will hide." : "Radio call. Read once. It will hide.",
-        step.kind === "obs" ? "ملاحظة. اقرئي مرة واحدة. سيختفي." : "نداء لاسلكي. اقرئي مرة واحدة. سيختفي.") + '</p>'
+    var body, note;
+    if (step.set.img) {
+      body = '<figure class="hs-script"><img src="' + esc(step.set.img) + '" alt="' + esc(step.set.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px"><figcaption class="si-credit">'
+        + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + '</figcaption></figure><p>'
+        + bi(step.set.en, step.set.ar) + '</p>';
+      note = bi("Observation. Study this picture. It will hide. Every question is about this picture only.",
+        "ملاحظة. ادراسي هذه الصورة. ستختفي. كل سؤال عن هذه الصورة فقط.");
+    } else {
+      body = '<p class="hs-script">' + esc(step.set.en) + '</p>';
+      note = bi(step.kind === "obs" ? "Observation. Read once. It will hide." : "Radio call. Read once. It will hide.",
+        step.kind === "obs" ? "ملاحظة. اقرئي مرة واحدة. سيختفي." : "نداء لاسلكي. اقرئي مرة واحدة. سيختفي.");
+    }
+    app.innerHTML = '<p class="md-timer" id="hs-script-t"></p>' + body
+      + '<p class="sp-ph">' + note + '</p>'
       + '<p id="hs-clock"></p>'
       + '<button type="button" class="sp-btn" id="hs-ready">' + bi("I'm ready, hide it", "أنا جاهزة، أخفيه") + '</button>';
     var el = document.getElementById("hs-script-t");
