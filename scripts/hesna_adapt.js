@@ -1,7 +1,8 @@
 /* Adaptive session builder for Hesna's HPD study pages.
-   Overachievement raises the tier immediately. A family she already
-   commands is not drilled again. Day N+1 is a higher demand than day N
-   unless a bridge is required after a score under 70. */
+   Each week is one pack. A period is mastered before the next one opens.
+   Week 2 stays shut until Week 1 is mastered, then starts harder from
+   Week 1's weak spots and overall score. Overachievement raises the tier
+   inside the sitting. A family she already commands is not drilled again. */
 (function (root, factory) {
   var api = factory();
   if (typeof module !== "undefined" && module.exports) module.exports = api;
@@ -35,6 +36,10 @@
   function seen(state, id) {
     return state.seen && state.seen[id];
   }
+  function missed(state, id) {
+    var s = seen(state, id);
+    return !!(s && !s.ok);
+  }
   function coreOf(prev) {
     if (!prev) return 0;
     if (prev.corePct != null) return prev.corePct;
@@ -66,6 +71,134 @@
   function needsBridge(prev) {
     if (!prev || prev.pct == null || hot(prev)) return false;
     return baseOf(prev) < 70;
+  }
+  var WEEK_DAYS = { 1: [1, 2, 3, 4, 5, 6, 7], 2: [8, 9, 10, 11, 12, 13, 14] };
+  function weekOf(n) { return n <= 7 ? 1 : 2; }
+  /** 80% on the core masters a period. At 95% the harder set is the one that counts. */
+  function judgeMastered(row) {
+    if (!row || row.pct == null) return false;
+    if (hot(row)) return row.extraPct != null && row.extraPct >= 80;
+    if (row.corePct == null) return row.pct >= 80;
+    return row.corePct >= 80;
+  }
+  function rowMastered(row) {
+    if (!row || row.pct == null) return false;
+    if (typeof row.mastered === "boolean") return row.mastered;
+    return judgeMastered(row);
+  }
+  function weakFamilies(state) {
+    var out = [];
+    Object.keys((state && state.fam) || {}).forEach(function (f) {
+      if (weak(state, f)) out.push(f);
+    });
+    return out.sort();
+  }
+  function weakPillars(state) {
+    var out = [];
+    ["logic", "reading", "comp", "listen", "obs"].forEach(function (p) {
+      var r = state && state.pillar && state.pillar[p];
+      if (r && r.n >= 3 && r.ok / r.n < 0.8) out.push(p);
+    });
+    return out;
+  }
+  function weekPerformance(state, week) {
+    var ids = WEEK_DAYS[week] || [];
+    var coreSum = 0, coreN = 0, hotN = 0, extraStuck = 0, masteredN = 0, scored = 0;
+    ids.forEach(function (n) {
+      var r = state && state.days && state.days[String(n)];
+      if (!r || r.pct == null) return;
+      scored += 1;
+      var c = coreOf(r);
+      if (c != null) { coreSum += c; coreN += 1; }
+      if (hot(r)) hotN += 1;
+      if (hot(r) && r.extraPct != null && r.extraPct >= 80) extraStuck += 1;
+      if (rowMastered(r)) masteredN += 1;
+    });
+    return {
+      n: scored,
+      total: ids.length,
+      overall: coreN ? Math.round(coreSum / coreN) : null,
+      hotN: hotN,
+      extraStuck: extraStuck,
+      masteredN: masteredN,
+      complete: ids.length > 0 && masteredN === ids.length
+    };
+  }
+  /** Extra tiers for Week 2 once Week 1 is mastered. 0 still uses the higher week-2 plan. */
+  function weekLift(state) {
+    var p = weekPerformance(state, 1);
+    if (!p.complete || p.overall == null) return 0;
+    if (p.overall >= 95 || p.extraStuck >= 3) return 2;
+    if (p.overall >= 85 || p.extraStuck >= 1) return 1;
+    return 0;
+  }
+  function liveCleared(state, week) {
+    var perf = weekPerformance(state, week);
+    if (!perf.complete) return false;
+    if (weakFamilies(state).length || weakPillars(state).length) return false;
+    if (perf.overall != null && perf.overall >= 95) {
+      var stretch = state.weeks && state.weeks[String(week)] && state.weeks[String(week)].stretchPct;
+      if (perf.extraStuck < 1 && !(stretch >= 80)) return false;
+    }
+    return true;
+  }
+  /** Once a week is mastered, later misses do not lock it again. */
+  function sealWeeks(state) {
+    [1, 2].forEach(function (week) {
+      var slot = state.weeks && state.weeks[String(week)];
+      if (slot && slot.cleared) return;
+      if (!liveCleared(state, week)) return;
+      state.weeks = state.weeks || {};
+      state.weeks[String(week)] = state.weeks[String(week)] || {};
+      state.weeks[String(week)].cleared = true;
+    });
+  }
+  function weekCleared(state, week) {
+    var slot = state && state.weeks && state.weeks[String(week)];
+    if (slot && slot.cleared) return true;
+    return liveCleared(state, week);
+  }
+  function packDetail(state, week) {
+    var prev = week > 1 ? weekPerformance(state, week - 1) : weekPerformance(state, week);
+    return {
+      overall: prev.overall,
+      lift: week === 2 ? weekLift(state) : 0,
+      fams: weakFamilies(state),
+      pillars: weakPillars(state)
+    };
+  }
+  function packStatus(state, week) {
+    state = state || {};
+    var ids = WEEK_DAYS[week] || [];
+    var next = null, need = null;
+    for (var i = 0; i < ids.length; i++) {
+      var row = state.days && state.days[String(ids[i])];
+      if (rowMastered(row)) continue;
+      next = ids[i];
+      if (!row || row.pct == null) need = "fresh";
+      else if (hot(row) && !(row.extraPct >= 80)) need = "extra";
+      else need = "retry";
+      break;
+    }
+    var cleared = weekCleared(state, week);
+    var blocked = week > 1 && !weekCleared(state, week - 1);
+    var soft = weakFamilies(state).length || weakPillars(state).length;
+    var needsRepair = !blocked && next == null && !cleared && !!soft;
+    var needsStretch = !blocked && next == null && !cleared && !needsRepair;
+    return {
+      week: week,
+      next: next,
+      need: need,
+      cleared: cleared,
+      blocked: blocked,
+      needsRepair: needsRepair,
+      needsStretch: needsStretch,
+      perf: weekPerformance(state, week),
+      prev: week > 1 ? weekPerformance(state, week - 1) : null,
+      lift: week === 2 ? weekLift(state) : 0,
+      weakFams: weakFamilies(state),
+      weakPillars: weakPillars(state)
+    };
   }
   function pool(items, pred) {
     return (items || []).filter(pred);
@@ -104,6 +237,15 @@
       if (t === tier && startD > 1) {
         for (d = 1; d < startD && out.length < n; d++) grab(byTierDepth(t, d));
       }
+    }
+    if (out.length < n) {
+      pool(items, function (it) {
+        if (!missed(state, it.id)) return false;
+        if (extraPred && !extraPred(it)) return false;
+        return !out.some(function (x) { return x.id === it.id; });
+      }).forEach(function (it) {
+        if (out.length < n) out.push(it);
+      });
     }
     return out;
   }
@@ -200,15 +342,22 @@
   function planSession(day, data, state) {
     state = state || {};
     var prev = state.days && state.days[String(day.n - 1)];
-    var b = bonus(prev);
+    var dayBonus = bonus(prev);
+    var lift = weekOf(day.n) === 2 ? weekLift(state) : 0;
+    var b = Math.max(dayBonus, lift);
     var tier = Math.min(6, day.tier + b);
     if ((state.logicTier || 0) > tier) tier = Math.min(6, state.logicTier);
     var depth = b ? 1 : day.depth;
     var stretch = tier === 6 && (b > 0 || day.depth >= 3);
-    var bridge = needsBridge(prev) && b === 0;
+    var perfPrev = weekOf(day.n) === 2 ? weekPerformance(state, 1) : null;
+    var weekSoft = !!(perfPrev && perfPrev.complete && perfPrev.overall != null && perfPrev.overall < 85 && lift === 0);
+    var bridge = (needsBridge(prev) && dayBonus === 0 && lift === 0) || (weekSoft && day.n === 8);
     var banner = null;
-    if (b >= 2) banner = "jump2";
-    else if (b === 1) banner = "jump";
+    if (weekSoft && day.n === 8) banner = "weekSoft";
+    else if (lift >= 2 && lift >= dayBonus) banner = "weekJump2";
+    else if (lift === 1 && lift >= dayBonus) banner = "weekJump";
+    else if (dayBonus >= 2) banner = "jump2";
+    else if (dayBonus === 1) banner = "jump";
     else if (bridge) banner = "bridge";
     else if (stretch && day.tier === 6) banner = "stretch";
     var blocks = [];
@@ -267,7 +416,37 @@
     pickWrapped(data.obs, "obs", counts.obs || 0, state, tier, depth).forEach(function (set) {
       blocks.push({ kind: "obs", set: set });
     });
+    if (weekOf(day.n) === 2) blocks = aimWeak(blocks, data, state, tier, depth);
     return finish(day, tier, depth, b, bridge, stretch, banner, blocks);
+  }
+  function aimWeak(blocks, data, state, tier, depth) {
+    weakPillars(state).forEach(function (p) {
+      var have = 0;
+      blocks.forEach(function (b) {
+        if (b.kind === "q" && b.item && b.item.pillar === p) have += 1;
+        else if (b.set && b.set.pillar === p) have += (b.set.qs ? b.set.qs.length : 1);
+      });
+      if (have >= 3) return;
+      if (p === "logic") {
+        var list = pickPillar(data.items, "logic", 3 - have, state, tier, depth, function (it) { return !it.probe; });
+        var head = [];
+        list.forEach(function (it) {
+          if (!blocks.some(function (b) { return b.kind === "q" && b.item && b.item.id === it.id; }) && !head.some(function (b) { return b.item.id === it.id; })) {
+            head.push({ kind: "q", item: it, weak: true });
+          }
+        });
+        blocks = head.concat(blocks);
+      } else {
+        var src = p === "reading" ? data.reads : p === "comp" ? data.comps : p === "listen" ? data.listens : data.obs;
+        var kind = p === "reading" ? "read" : p === "comp" ? "comp" : p;
+        pickWrapped(src, p, 1, state, tier, depth).forEach(function (set) {
+          if (!blocks.some(function (b) { return b.set && b.set.id === set.id; })) {
+            blocks.unshift({ kind: kind, set: set, weak: true });
+          }
+        });
+      }
+    });
+    return blocks;
   }
   function listenCount(day, counts) {
     return counts.listen || 0;
@@ -298,7 +477,10 @@
   function repairBlocks(data, state) {
     var blocks = [];
     var gramm = pool(data.items, function (it) {
-      return (it.pillar === "grammar" || it.pillar === "written") && it.family && !seen(state, it.id) && !mastered(state, it.family) && weak(state, it.family) && famStat(state, it.family).n > 0;
+      return (it.pillar === "grammar" || it.pillar === "written") && it.family && weak(state, it.family) && !mastered(state, it.family);
+    });
+    gramm.sort(function (a, b) {
+      return (seen(state, a.id) ? 1 : 0) - (seen(state, b.id) ? 1 : 0);
     });
     gramm.slice(0, 10).forEach(function (it) { blocks.push({ kind: "q", item: it }); });
     ["logic", "reading", "comp", "listen", "obs"].forEach(function (p) {
@@ -411,8 +593,97 @@
       n: result.n,
       at: Date.now()
     };
+    row.mastered = judgeMastered(row);
     state.days[String(day.n)] = row;
+    sealWeeks(state);
     return row;
+  }
+  function applyPackGrade(state, week, kind, blocks, result) {
+    state.weeks = state.weeks || {};
+    var slot = state.weeks[String(week)] || {};
+    absorb(state, blocks, result.answers, week === 1 ? 7 : 14);
+    if (kind === "repair") slot.repairPct = result.pct;
+    if (kind === "stretch") slot.stretchPct = result.corePct == null ? result.pct : result.corePct;
+    slot.at = Date.now();
+    state.weeks[String(week)] = slot;
+    sealWeeks(state);
+    return slot;
+  }
+  function stretchBlocks(data, state) {
+    var blocks = [];
+    takeTier(pool(data.items, function (it) {
+      return it.pillar === "logic" && !it.probe && (it.stretch || (it.tier || 0) >= 6);
+    }), 8, state, 6, 3).forEach(function (it) { blocks.push({ kind: "q", item: it }); });
+    if (blocks.length < 4) {
+      takeTier(pool(data.items, function (it) { return it.pillar === "logic" && !it.probe; }), 8 - blocks.length, state, 6, 1).forEach(function (it) {
+        if (!blocks.some(function (b) { return b.item && b.item.id === it.id; })) blocks.push({ kind: "q", item: it });
+      });
+    }
+    pickWrapped(data.obs, "obs", 1, state, 6, 1).forEach(function (set) { blocks.push({ kind: "obs", set: set }); });
+    return blocks;
+  }
+  function findDay(data, n) {
+    var days = (data && data.days) || [];
+    for (var i = 0; i < days.length; i++) if (days[i].n === n) return days[i];
+    return null;
+  }
+  function synthetic(week, kind) {
+    var repair = kind === "repair";
+    var ord = week === 1 ? "الأول" : "الثاني";
+    return {
+      n: week === 1 ? 7 : 14,
+      tier: 6,
+      depth: 3,
+      budgetMin: repair ? 40 : 35,
+      tooFastMin: repair ? 18 : 16,
+      mode: kind,
+      title_en: repair ? "Week " + week + " — weak spots" : "Week " + week + " — the stretch",
+      title_ar: repair ? "الأسبوع " + ord + " — المواضع اللينة" : "الأسبوع " + ord + " — التمدد",
+      body_en: repair
+        ? "This sitting is only what is still under 80%. The next week stays closed until these spots are mastered."
+        : "This week was too easy. The stretch is the one that counts. Master it before the next week opens.",
+      body_ar: repair
+        ? "هذه الجلسة لما يزال تحت 80% فقط. الأسبوع التالي يبقى مغلقًا حتى تُتقن هذه المواضع."
+        : "كان هذا الأسبوع أسهل مما ينبغي. التمدد هو الذي يُحسب. أتقنيه قبل أن يُفتح الأسبوع التالي."
+    };
+  }
+  function planPackStep(week, data, state) {
+    state = state || {};
+    var status = packStatus(state, week);
+    if (status.blocked) return { blocked: true, status: status, week: week };
+    if (status.cleared) return { done: true, status: status, week: week };
+    if (status.needsStretch) {
+      var stretch = stretchBlocks(data, state);
+      if (!stretch.length) {
+        state.weeks = state.weeks || {};
+        state.weeks[String(week)] = state.weeks[String(week)] || {};
+        state.weeks[String(week)].stretchPct = 80;
+        return planPackStep(week, data, state);
+      }
+    }
+    if (status.needsRepair || status.needsStretch) {
+      var kind = status.needsRepair ? "repair" : "stretch";
+      var synth = synthetic(week, kind);
+      var blocks = kind === "repair" ? repairBlocks(data, state) : stretchBlocks(data, state);
+      var session = finish(synth, 6, 3, 0, false, kind === "stretch", kind, blocks);
+      session.kind = kind;
+      session.week = week;
+      session.bannerDetail = packDetail(state, week);
+      return { session: session, day: synth, status: status, week: week };
+    }
+    var day = findDay(data, status.next);
+    if (!day) return { empty: true, status: status, week: week };
+    var session = planSession(day, data, state);
+    session.kind = status.need === "extra" ? "extra" : "period";
+    session.week = week;
+    session.bannerDetail = packDetail(state, week);
+    return {
+      session: session,
+      day: day,
+      status: status,
+      week: week,
+      retryExtra: status.need === "extra"
+    };
   }
   function extraTier(session) {
     return Math.min(6, session.tier + 1);
@@ -424,13 +695,26 @@
     hot: hot,
     bonus: bonus,
     planSession: planSession,
+    planPackStep: planPackStep,
+    packStatus: packStatus,
+    weekCleared: weekCleared,
+    weekLift: weekLift,
+    weekPerformance: weekPerformance,
+    rowMastered: rowMastered,
+    weakFamilies: weakFamilies,
+    weakPillars: weakPillars,
     grade: grade,
     applyGrade: applyGrade,
+    applyPackGrade: applyPackGrade,
     absorb: absorb,
     extraTier: extraTier,
     countQ: countQ,
     noteExtra: function (state, dayN, pct) {
-      if (state.days && state.days[String(dayN)]) state.days[String(dayN)].extraPct = pct;
+      var row = state.days && state.days[String(dayN)];
+      if (!row) return;
+      row.extraPct = pct;
+      row.mastered = judgeMastered(row);
+      sealWeeks(state);
     }
   };
 });

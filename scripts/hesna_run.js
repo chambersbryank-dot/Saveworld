@@ -34,6 +34,19 @@
   function isGrammar(item) {
     return item.pillar === "grammar";
   }
+  var FAM_AR = {
+    articles: "أدوات التعريف", adjectives: "الصفات", agreement: "المطابقة", tense: "الأزمنة",
+    prepositions: "حروف الجر", pronouns: "الضمائر", negatives: "النفي", questions: "الأسئلة",
+    count: "المعدود", complements: "المتممات", phrasing: "الصياغة", calques: "النقل الحرفي",
+    "ab-agree": "المطابقة في الجملة", "ab-fragment": "الجملة الناقصة", "ab-homo": "الكلمات المتشابهة", "ab-well": "well و good"
+  };
+  var PIL_AR = { logic: "المنطق", reading: "القراءة", comp: "الفهم", listen: "الاستماع", obs: "الملاحظة", grammar: "القواعد", written: "الكتابة" };
+  function weekAr(n) { return n === 1 ? "الأول" : n === 2 ? "الثاني" : String(n); }
+  function listBi(enList, arMap) {
+    var en = enList.join(", ");
+    var ar = enList.map(function (x) { return arMap[x] || x; }).join("، ");
+    return [en, ar];
+  }
 
   function renderBoard() {
     if (!board) return;
@@ -60,11 +73,25 @@
       if (!r || !r.n) return;
       pillar += '<li>' + esc(p) + ': ' + Math.round(100 * r.ok / r.n) + '% (' + r.ok + '/' + r.n + ')</li>';
     });
+    var weeks = "";
+    [1, 2].forEach(function (w) {
+      var st = A.packStatus(state, w);
+      var p = st.perf;
+      var statusEn, statusAr;
+      if (st.blocked) { statusEn = "locked until the previous week is mastered"; statusAr = "مقفلة حتى يُتقن الأسبوع السابق"; }
+      else if (st.cleared) { statusEn = "mastered"; statusAr = "مُتقنة"; }
+      else if (st.needsRepair) { statusEn = p.masteredN + "/" + p.total + " periods mastered · weak spots still open"; statusAr = p.masteredN + "/" + p.total + " فترات مُتقنة · مواضع لينة ما زالت مفتوحة"; }
+      else if (st.needsStretch) { statusEn = p.masteredN + "/" + p.total + " periods mastered · stretch still open"; statusAr = p.masteredN + "/" + p.total + " فترات مُتقنة · التمدد ما زال مفتوحًا"; }
+      else { statusEn = p.masteredN + "/" + p.total + " periods mastered"; statusAr = p.masteredN + "/" + p.total + " فترات مُتقنة"; }
+      var core = p.overall == null ? "—" : p.overall + "%";
+      weeks += "<li>" + bi("Week " + w + " pack: " + statusEn + " · core " + core, "حزمة الأسبوع " + weekAr(w) + ": " + statusAr + " · الجوهر " + core) + "</li>";
+    });
     board.innerHTML = '<h2>' + bi("Scoreboard", "لوحة النتائج") + '</h2>'
-      + '<p>' + bi("Day 1 is the photograph. The latest column is who you are on these items now. A family at 95% over 4 or more items is retired.",
-        "اليوم 1 هو الصورة. العمود الأخير هو مستواكِ على هذه البنود الآن. العائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف.") + '</p>'
-      + (last ? '<p>' + bi("Latest sitting: Day " + lastN + " · " + last.pct + "% overall · core " + (last.corePct == null ? "—" : last.corePct + "%") + " · tier " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " min.",
-        "آخر جلسة: اليوم " + lastN + " · " + last.pct + "% إجمالًا · الجوهر " + (last.corePct == null ? "—" : last.corePct + "%") + " · المستوى " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " د.") + '</p>'
+      + '<p>' + bi("Each week is one pack. A period is mastered at 80% on the core before the next period. At 95% the harder set is the one that counts. Week 2 opens only after Week 1 is mastered, and it is harder from that week's weak spots and overall score. Day 1 is still the photograph. A family at 95% over 4 or more items is retired.",
+        "كل أسبوع حزمة واحدة. تُتقن الفترة عند 80% في الجوهر قبل الفترة التالية. عند 95% المجموعة الأصعب هي التي تُحسب. الأسبوع الثاني يُفتح فقط بعد إتقان الأسبوع الأول، وهو أصعب بناءً على مواضع الضعف والنتيجة الإجمالية. اليوم 1 ما زال الصورة. العائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف.") + '</p>'
+      + "<ul>" + weeks + "</ul>"
+      + (last ? '<p>' + bi("Latest sitting: period " + lastN + " · " + last.pct + "% overall · core " + (last.corePct == null ? "—" : last.corePct + "%") + " · tier " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " min.",
+        "آخر جلسة: الفترة " + lastN + " · " + last.pct + "% إجمالًا · الجوهر " + (last.corePct == null ? "—" : last.corePct + "%") + " · المستوى " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " د.") + '</p>'
         : '<p class="sp-ph">' + bi("No sitting has been scored in this browser yet.", "لا جلسة مسجّلة في هذا المتصفح بعد.") + '</p>')
       + (famRows ? '<table class="hs-board-table"><thead><tr><th>' + bi("Grammar family", "عائلة القواعد") + '</th><th>' + bi("Day 1", "اليوم 1") + '</th><th>' + bi("Now", "الآن") + '</th><th></th></tr></thead><tbody>' + famRows + '</tbody></table>' : '')
       + (pillar ? '<ul>' + pillar + '</ul>' : '');
@@ -84,9 +111,47 @@
       "Today is only what is still soft. Anything at 95% stays retired.",
       "اليوم لما يزال لينًا فقط. ما بلغ 95% يبقى موقوفًا.");
     if (kind === "stretch") return bi(
-      "You are already on the top tier. The stretch bank is the raise: tighter corrections, no victory lap.",
-      "أنتِ أصلًا في أعلى مستوى. بنك التمدد هو رفع المستوى: تصحيحات أدق، بلا جولة نصر.");
+      "You are already on the top tier. The stretch bank is the raise: tighter corrections, no victory lap. Master it before the next week opens.",
+      "أنتِ أصلًا في أعلى مستوى. بنك التمدد هو رفع المستوى: تصحيحات أدق، بلا جولة نصر. أتقنيه قبل أن يُفتح الأسبوع التالي.");
+    if (kind === "weekJump") return bi(
+      "Week 1 was strong. This week starts one tier higher, and it aims at whatever was still soft.",
+      "الأسبوع الأول كان قويًا. هذا الأسبوع يبدأ من مستوى أعلى، ويستهدف ما بقي لينًا.");
+    if (kind === "weekJump2") return bi(
+      "Week 1 was too easy. This week jumps two tiers, and the weak spots still come first.",
+      "الأسبوع الأول كان أسهل مما ينبغي. هذا الأسبوع يقفز مستويين، ومواضع الضعف تبقى أولًا.");
+    if (kind === "weekSoft") return bi(
+      "Week 1 was mastered, and the core was under 85%. This week is still harder than last week. It opens with a bridge, then the new work.",
+      "أُتقن الأسبوع الأول، والجوهر كان تحت 85%. هذا الأسبوع أصعب من السابق رغم ذلك. يبدأ بجسر، ثم العمل الجديد.");
     return "";
+  }
+  function detailLine() {
+    var d = session && session.bannerDetail;
+    if (!d) return "";
+    var bits = [];
+    if (session.week === 2 && d.overall != null) bits.push(bi("Week 1 core " + d.overall + "%.", "جوهر الأسبوع الأول " + d.overall + "%."));
+    if (d.fams && d.fams.length) {
+      var fam = listBi(d.fams, FAM_AR);
+      bits.push(bi("Weak spots: " + fam[0] + ".", "مواضع لينة: " + fam[1] + "."));
+    }
+    if (d.pillars && d.pillars.length) {
+      var pil = listBi(d.pillars, PIL_AR);
+      bits.push(bi("Soft skills: " + pil[0] + ".", "مهارات لينة: " + pil[1] + "."));
+    }
+    return bits.length ? "<p>" + bits.join(" ") + "</p>" : "";
+  }
+  function nextControls(week) {
+    var st = A.packStatus(state, week);
+    if (st.blocked) return "";
+    if (st.cleared) {
+      if (week < 2) return '<p>' + bi("Week 1 is mastered. Week 2 is open, and it is harder.", "أُتقن الأسبوع الأول. الأسبوع الثاني مفتوح، وهو أصعب.") + '</p><button type="button" class="sp-btn" data-week="2">' + bi("Start the Week 2 pack", "ابدئي حزمة الأسبوع الثاني") + "</button>";
+      return "<p>" + bi("Both weekly packs are mastered. The end state for these two weeks is about 98% on this kind of page.", "أُتقنت حزمتا الأسبوعين. حالة نهاية هذين الأسبوعين نحو 98% على صفحة من هذا النوع.") + "</p>";
+    }
+    var en = "Next period in this pack", ar = "الفترة التالية في هذه الحزمة";
+    if (st.needsRepair) { en = "Repair the weak spots"; ar = "أصلحي المواضع اللينة"; }
+    else if (st.needsStretch) { en = "Master the stretch"; ar = "أتقني التمدد"; }
+    else if (st.need === "retry") { en = "Retry this period. It is not mastered yet."; ar = "أعيدي هذه الفترة. لم تُتقن بعد."; }
+    else if (st.need === "extra") { en = "The harder set is the one that counts"; ar = "المجموعة الأصعب هي التي تُحسب"; }
+    return '<button type="button" class="sp-btn" data-week="' + week + '">' + bi(en, ar) + "</button>";
   }
 
   function flatten(blocks) {
@@ -118,15 +183,24 @@
     clearInterval(timer);
     var b = bannerText(session.banner);
     var memNote = bi(
-      "Visual section: open Memory Drills. Study the picture for 2 minutes, then it hides. Three quizzes of 45 get finer on that same picture. 80% unlocks the next quiz. 95% means that quiz was too easy and the harder one is the one that counts. A new picture opens after the third. Street sketches below the pictures are extra, and they also use 2 minutes.",
-      "قسم البصري: افتحي تمارين الذاكرة. ادراسي الصورة دقيقتين ثم تختفي. ثلاثة اختبارات من 45 تزداد دقة على الصورة نفسها. 80% تفتح الاختبار التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. صورة جديدة تُفتح بعد الثالث. رسوم الشوارع تحت الصور إضافية، وهي أيضًا دقيقتان.");
-    app.innerHTML = '<h2>' + bi(day.title_en, day.title_ar) + '</h2>'
+      "Visual pack: open Memory Drills. Week 1 is the 7426 burglary, three quizzes, 2 minutes each, then the picture hides. 80% unlocks the next quiz. 95% means that quiz was too easy and the harder one is the one that counts. Week 2 is Quick Stop, then the corner crash, and the pass bar rises when Week 1 was strong. Street sketches sit inside the same weekly packs.",
+      "الحزمة البصرية: افتحي تمارين الذاكرة. الأسبوع الأول سطو 7426، ثلاثة اختبارات، دقيقتان لكل منها، ثم تختفي الصورة. 80% تفتح الاختبار التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. الأسبوع الثاني كويك ستوب ثم حادث الزاوية، وعتبة النجاح ترتفع إذا كان الأسبوع الأول قويًا. رسوم الشوارع داخل حزم الأسابيع نفسها.");
+    var period = day.n ? ((day.n - 1) % 7) + 1 : 0;
+    var where = (session.kind === "repair" || session.kind === "stretch" || session.kind === "extra")
+      ? bi("Week " + session.week + " pack", "حزمة الأسبوع " + weekAr(session.week))
+      : bi("Week " + session.week + " pack · period " + period + " of 7", "حزمة الأسبوع " + weekAr(session.week) + " · الفترة " + period + " من 7");
+    var lesson = (day.body_en && day.body_ar) ? "<p>" + bi(day.body_en, day.body_ar) + "</p>" : "";
+    app.innerHTML = '<p class="sp-ph">' + where + '</p><h2>' + bi(day.title_en, day.title_ar) + '</h2>'
       + (b ? '<p class="hs-banner">' + b + '</p>' : '')
-      + '<p>' + bi("Tier " + session.tier + " · " + session.nQ + " questions · budget " + day.budgetMin + " min. Too easy: core 95%+, or core 90%+ in under " + day.tooFastMin + " min. Grammar misses do not freeze the tier. Grammar mastery does not get more drills.",
-        "المستوى " + session.tier + " · " + session.nQ + " سؤالًا · الميزانية " + day.budgetMin + " د. سهل أكثر من اللازم: جوهر 95% أو أكثر، أو جوهر 90% أو أكثر في أقل من " + day.tooFastMin + " د. أخطاء القواعد لا تجمّد المستوى. وإتقان القواعد لا يجلب تمارين إضافية.") + '</p>'
+      + detailLine()
+      + lesson
+      + '<p>' + bi("Tier " + session.tier + " · " + session.nQ + " questions · budget " + day.budgetMin + " min. A period is mastered at 80% on the core. Too easy: core 95%+, or core 90%+ in under " + day.tooFastMin + " min, and then the harder set is the one that counts. You do not skip ahead inside the pack. Grammar misses do not freeze the tier. Grammar mastery does not get more drills.",
+        "المستوى " + session.tier + " · " + session.nQ + " سؤالًا · الميزانية " + day.budgetMin + " د. تُتقن الفترة عند 80% في الجوهر. أسهل مما ينبغي: جوهر 95% أو أكثر، أو جوهر 90% أو أكثر في أقل من " + day.tooFastMin + " د، وعندها المجموعة الأصعب هي التي تُحسب. لا قفز داخل الحزمة. أخطاء القواعد لا تجمّد المستوى. وإتقان القواعد لا يجلب تمارين إضافية.") + '</p>'
       + '<p>' + memNote + '</p>'
-      + (day.n > 1 && !(state.day1 && state.day1.fam) ? '<p class="hs-banner">' + bi("Day 1 has not been scored in this browser. The grammar baseline is not in yet, so this sitting cannot aim extra drills at your weak families. Start Day 1 first if you have not.", "اليوم 1 لم يُسجَّل في هذا المتصفح. خط أساس القواعد غير موجود بعد، فلا تستطيع هذه الجلسة توجيه تمارين إضافية إلى عائلاتكِ الضعيفة. ابدئي باليوم 1 إذا لم تفعلي.") + '</p>' : '')
-      + '<button type="button" class="sp-btn" id="hs-begin">' + bi("Begin", "ابدئي") + '</button>';
+      + (session.week > 1 && !(state.day1 && state.day1.fam) ? '<p class="hs-banner">' + bi("Week 1 has not been scored in this browser. The grammar baseline is not in yet, so this pack cannot aim extra drills at your weak families.", "الأسبوع الأول لم يُسجَّل في هذا المتصفح. خط أساس القواعد غير موجود بعد، فلا تستطيع هذه الحزمة توجيه تمارين إضافية إلى عائلاتكِ الضعيفة.") + '</p>' : '')
+      + '<button type="button" class="sp-btn" id="hs-begin">' + (session.kind === "extra"
+        ? bi("Begin the harder set", "ابدئي المجموعة الأصعب")
+        : bi("Begin this period", "ابدئي هذه الفترة")) + '</button>';
     document.getElementById("hs-begin").onclick = function () {
       t0 = Date.now();
       cursor = 0;
@@ -221,12 +295,19 @@
     var sec = Math.round((Date.now() - t0) / 1000);
     if (mode === "extra") return finishExtra(A.grade(session.extraBlocks, answers));
     var g = A.grade(session.blocks, answers);
-    A.applyGrade(state, session.day, session, g, sec);
+    var row = null;
+    if (session.kind === "repair" || session.kind === "stretch") A.applyPackGrade(state, session.week, session.kind, session.blocks, g);
+    else row = A.applyGrade(state, session.day, session, g, sec);
     save();
-    var row = state.days[String(session.day.n)];
+    if (!row) row = { tooFastSec: session.tooFastSec, sec: sec };
     var fast = row.tooFastSec && sec < row.tooFastSec;
-    var raised = A.hot(row);
-    var html = '<h2>' + bi("Day " + session.day.n + ": " + g.pct + "%", "اليوم " + session.day.n + ": " + g.pct + "%") + '</h2>'
+    var raised = session.kind !== "repair" && session.kind !== "stretch" && A.hot(row);
+    var periodN = session.day && session.day.n ? ((session.day.n - 1) % 7) + 1 : 0;
+    var headEn = "Week " + session.week + " · period " + periodN + ": " + g.pct + "%";
+    var headAr = "الأسبوع " + weekAr(session.week) + " · الفترة " + periodN + ": " + g.pct + "%";
+    if (session.kind === "repair") { headEn = "Weak spots: " + g.pct + "%"; headAr = "المواضع اللينة: " + g.pct + "%"; }
+    if (session.kind === "stretch") { headEn = "Stretch: " + g.pct + "%"; headAr = "التمدد: " + g.pct + "%"; }
+    var html = '<h2>' + bi(headEn, headAr) + '</h2>'
       + '<p>' + bi("Core (reading, listening, comprehension, observation, and the extra logic drills): " + (g.corePct == null ? "—" : g.corePct + "%") + ". Written A/B and the four-choice grammar are tracked by family and do not hold the tier. Biodata, on the plan page, is not right-or-wrong.",
         "الجوهر (قراءة، استماع، فهم، ملاحظة، وتدريبات المنطق الإضافية): " + (g.corePct == null ? "—" : g.corePct + "%") + ". الكتابة A/B وقواعد الاختيار من أربع تُتابَع حسب العائلة ولا تحبس المستوى. والبيانات الشخصية في صفحة الخطة ليست صح أو خطأ.") + '</p>'
       + '<p>' + bi(Math.round(sec / 60) + " min " + (sec % 60) + " sec. Budget " + session.day.budgetMin + " min. Too-fast line: " + session.day.tooFastMin + " min.",
@@ -240,12 +321,14 @@
         "كان ذلك سريعًا، والجوهر لم يبلغ حد «أسهل مما ينبغي». السرعة بلا النتيجة لا تقفز بكِ.") + '</p>';
     }
     html += review(session.blocks, answers);
+    if (!raised) html += nextControls(session.week);
     html += '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>';
     app.innerHTML = html;
     var extraBtn = document.getElementById("hs-extra");
     if (extraBtn) extraBtn.onclick = startExtra;
-    document.getElementById("hs-home").onclick = function () { renderBoard(); app.innerHTML = ""; window.scrollTo(0, 0); };
+    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; window.scrollTo(0, 0); };
     renderBoard();
+    refreshPackNotes();
     window.scrollTo(0, 0);
   }
 
@@ -254,13 +337,18 @@
     var tier = A.extraTier(session);
     if (row.probeN >= 3 && row.probePct >= 75) tier = Math.min(6, Math.max(tier, 3));
     var items = (D.items || []).filter(function (it) {
-      return it.pillar === "logic" && !it.probe && it.tier >= tier && !state.seen[it.id];
+      var seen = state.seen[it.id];
+      return it.pillar === "logic" && !it.probe && it.tier >= tier && (!seen || !seen.ok);
     }).slice(0, 8);
     if (!items.length) {
       A.noteExtra(state, session.day.n, 80);
       save();
-      app.querySelector(".hs-banner").insertAdjacentHTML("afterend", '<p>' + bi("No unseen items sit above this tier. Tomorrow still starts higher.",
-        "لا بنود غير محلولة فوق هذا المستوى. وغدًا يبدأ أعلى رغم ذلك.") + '</p>');
+      var box = app.querySelector(".hs-banner");
+      var note = '<p>' + bi("No unseen items sit above this tier. This period counts as mastered, and the pack moves on.",
+        "لا بنود غير محلولة فوق هذا المستوى. تُحسب هذه الفترة مُتقنة، والحزمة تتابع.") + '</p>' + nextControls(session.week);
+      if (box) box.insertAdjacentHTML("afterend", note);
+      else app.insertAdjacentHTML("afterbegin", note);
+      refreshPackNotes();
       return;
     }
     session.extraBlocks = items.map(function (it) { return { kind: "q", item: it }; });
@@ -282,12 +370,14 @@
     var stuck = pct >= 80;
     app.innerHTML = '<h2>' + bi("Raised set: " + pct + "%", "المجموعة المرفوعة: " + pct + "%") + '</h2>'
       + '<p>' + (stuck
-        ? bi("That stuck. The next day jumps an extra tier.", "ثبت. اليوم التالي يقفز مستوى إضافيًا.")
-        : bi("The raise did not stick yet. Tomorrow goes up one tier, not two.", "الرفع لم يثبت بعد. غدًا يصعد مستوى واحدًا لا اثنين.")) + '</p>'
+        ? bi("That stuck. This period is mastered, and the next one in the pack starts higher.", "ثبت. أُتقنت هذه الفترة، والتالية في الحزمة تبدأ أعلى.")
+        : bi("The raise did not stick. This period is not mastered yet. The harder set is the one that counts.", "الرفع لم يثبت. هذه الفترة لم تُتقن بعد. المجموعة الأصعب هي التي تُحسب.")) + '</p>'
       + review(session.extraBlocks, g.answers)
+      + nextControls(session.week)
       + '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>';
-    document.getElementById("hs-home").onclick = function () { renderBoard(); app.innerHTML = ""; };
+    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; };
     renderBoard();
+    refreshPackNotes();
   }
 
   function review(blocks, ans) {
@@ -310,19 +400,86 @@
     return html + '</ol>';
   }
 
-  function startDay(n) {
-    var day = D.days.filter(function (d) { return d.n === n; })[0];
-    if (!day) return;
+  function refreshPackNotes() {
+    [1, 2].forEach(function (w) {
+      var note = document.getElementById("hs-pack-note-" + w);
+      var btn = document.getElementById("hs-pack-btn-" + w);
+      if (!note && !btn) return;
+      var st = A.packStatus(state, w);
+      var p = st.perf;
+      var en, ar, ben, bar;
+      if (st.blocked) {
+        en = "Locked. Master Week " + (w - 1) + " first, including its weak spots. This pack will be harder when it opens.";
+        ar = "مقفلة. أتقني الأسبوع " + weekAr(w - 1) + " أولًا، بما فيه مواضع الضعف. هذه الحزمة ستكون أصعب حين تُفتح.";
+        ben = "Week " + w + " pack is locked";
+        bar = "حزمة الأسبوع " + weekAr(w) + " مقفلة";
+      } else if (st.cleared) {
+        en = "Mastered. Core " + (p.overall == null ? "—" : p.overall + "%") + ".";
+        ar = "مُتقنة. الجوهر " + (p.overall == null ? "—" : p.overall + "%") + ".";
+        ben = "Review the Week " + w + " pack";
+        bar = "راجعي حزمة الأسبوع " + weekAr(w);
+      } else if (p.masteredN > 0 || st.needsRepair || st.needsStretch) {
+        en = p.masteredN + " of " + p.total + " periods mastered" + (p.overall == null ? "" : " · core " + p.overall + "%") + (st.needsRepair ? " · weak spots still open" : "") + (st.needsStretch ? " · stretch still open" : "") + ".";
+        ar = p.masteredN + " من " + p.total + " فترات مُتقنة" + (p.overall == null ? "" : " · الجوهر " + p.overall + "%") + (st.needsRepair ? " · مواضع لينة ما زالت مفتوحة" : "") + (st.needsStretch ? " · التمدد ما زال مفتوحًا" : "") + ".";
+        ben = "Continue the Week " + w + " pack";
+        bar = "تابعي حزمة الأسبوع " + weekAr(w);
+      } else {
+        en = w === 1
+          ? "Opens on Day 1. Master each period before the next. Week 2 stays closed until this pack is mastered."
+          : "Harder than Week 1, from that week's weak spots and overall score. Master each period before the next.";
+        ar = w === 1
+          ? "تُفتح على اليوم 1. أتقني كل فترة قبل التالية. الأسبوع الثاني يبقى مغلقًا حتى تُتقن هذه الحزمة."
+          : "أصعب من الأسبوع الأول، من مواضع ضعفه ونتيجته الإجمالية. أتقني كل فترة قبل التالية.";
+        ben = "Start the Week " + w + " pack";
+        bar = "ابدئي حزمة الأسبوع " + weekAr(w);
+      }
+      if (note) note.innerHTML = bi(en, ar);
+      if (btn) {
+        btn.innerHTML = bi(ben, bar);
+        if (st.blocked) btn.setAttribute("aria-disabled", "true");
+        else btn.removeAttribute("aria-disabled");
+      }
+    });
+  }
+
+  function startWeek(week) {
     load();
-    session = A.planSession(day, D, state);
-    session.day = day;
+    var step = A.planPackStep(week, D, state);
+    save();
+    refreshPackNotes();
+    if (step.blocked) {
+      app.innerHTML = '<p class="hs-banner">' + bi(
+        "Week " + (week - 1) + " is not mastered yet. Finish that pack, including the weak spots, before this one opens. The next week is harder, and it waits.",
+        "الأسبوع " + weekAr(week - 1) + " لم يُتقن بعد. أكملي تلك الحزمة، بما فيها مواضع الضعف، قبل أن تُفتح هذه. الأسبوع التالي أصعب، وهو ينتظر.") + '</p>';
+      window.scrollTo(0, 0);
+      return;
+    }
+    if (step.done) {
+      app.innerHTML = '<h2>' + bi("Week " + week + " is mastered.", "أُتقن الأسبوع " + weekAr(week) + ".") + '</h2>' + nextControls(week);
+      window.scrollTo(0, 0);
+      return;
+    }
+    if (!step.session) {
+      app.innerHTML = '<p>' + bi("Nothing new is left in this pack. Reset the saved progress if you want the photograph again.",
+        "لم يبقَ جديد في هذه الحزمة. أعيدي التقدّم المحفوظ إذا أردتِ الصورة من جديد.") + '</p>';
+      return;
+    }
+    session = step.session;
+    session.day = step.day;
+    if (step.retryExtra) {
+      showIntro(step.day);
+      var begin = document.getElementById("hs-begin");
+      if (begin) begin.onclick = function () { startExtra(); };
+      window.scrollTo(0, 0);
+      return;
+    }
     if (!session.nQ) {
-      app.innerHTML = '<p>' + bi("Nothing new is left at this tier. Reset the saved progress if you want the photograph again, or go to the next day.",
-        "لم يبقَ جديد في هذا المستوى. أعيدي التقدّم المحفوظ إذا أردتِ الصورة من جديد، أو انتقلي إلى اليوم التالي.") + '</p>';
+      app.innerHTML = '<p>' + bi("Nothing new is left at this tier. Reset the saved progress if you want the photograph again, or continue the pack.",
+        "لم يبقَ جديد في هذا المستوى. أعيدي التقدّم المحفوظ إذا أردتِ الصورة من جديد، أو تابعي الحزمة.") + '</p>' + nextControls(week);
       return;
     }
     steps = flatten(session.blocks);
-    showIntro(day);
+    showIntro(step.day);
     window.scrollTo(0, 0);
   }
 
@@ -332,19 +489,21 @@
     if (!app || !D) return;
     load();
     renderBoard();
+    refreshPackNotes();
     document.body.addEventListener("click", function (e) {
-      var b = e.target.closest("[data-day]");
+      var b = e.target.closest("[data-week]");
       if (!b) return;
-      startDay(+b.getAttribute("data-day"));
+      startWeek(+b.getAttribute("data-week"));
     });
     var reset = document.getElementById("hs-reset");
     if (reset) reset.onclick = function () {
       if (!confirm(document.documentElement.lang === "ar"
         ? "مسح تقدّم الخطة في هذا المتصفح؟"
         : "Clear this plan's saved progress in this browser?")) return;
-      state = { seen: {}, fam: {}, pillar: {}, days: {} };
+      state = { seen: {}, fam: {}, pillar: {}, days: {}, weeks: {} };
       save();
       renderBoard();
+      refreshPackNotes();
       app.innerHTML = "";
     };
   }
