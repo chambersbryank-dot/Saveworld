@@ -267,7 +267,7 @@ def _b(n, no, c):
 def street_specs():
     return [
         {
-            "id": "L5-1", "lv": 5, "secs": 90,
+            "id": "L5-1", "lv": 5, "secs": 120,
             "tm": "7:15 AM", "st": "Kalakaua Ave", "cr": "Seaside Ave",
             "b": [_b("REEF SURF", "2190", "blue"), _b("PALM BOOKS", "2196", "yellow"),
                   _b("HONU CAFE", "2204", "green"), _b("TIDE HOTEL", "2212", "pink")],
@@ -286,7 +286,7 @@ def street_specs():
                   _veh("car", "black", "NRP 663", "E")],
         },
         {
-            "id": "L5-2", "lv": 5, "secs": 90,
+            "id": "L5-2", "lv": 5, "secs": 120,
             "tm": "6:40 PM", "st": "Ward Ave", "cr": "Auahi St",
             "b": [_b("LANI FISH", "450", "orange"), _b("KOA BANK", "460", "white"),
                   _b("MILO GIFTS", "472", "pink"), _b("NALU GYM", "488", "green")],
@@ -305,7 +305,7 @@ def street_specs():
                   _veh("car", "blue", "LPL 808", "E")],
         },
         {
-            "id": "L5-3", "lv": 5, "secs": 90,
+            "id": "L5-3", "lv": 5, "secs": 120,
             "tm": "11:05 AM", "st": "King St", "cr": "Punchbowl St",
             "b": [_b("ALOHA BAKE", "1018", "yellow"), _b("HALE BOOKS", "1026", "blue"),
                   _b("PONO CAFE", "1034", "white"), _b("KIHEI RX", "1042", "orange")],
@@ -568,8 +568,8 @@ BLURBS = {
           "ثلاث واجهات وستة أشخاص. الازدحام مقصود."],
     "4": ["A full curb, then one incident you read and see together.",
           "رصيف ممتلئ، ثم حادثة تقرئينها وترينها معًا."],
-    "5": ["New corners. Four storefronts, eight people, five vehicles, and only 90 seconds. Count, compare, and do not linger on what you already know how to see.",
-          "زوايا جديدة. أربع واجهات، ثمانية أشخاص، خمس مركبات، و90 ثانية فقط. عُدّي وقارني، ولا تتأخري عند ما صرتِ ترينه بسهولة."],
+    "5": ["New corners. Four storefronts, eight people, five vehicles. Still two minutes: the page is denser, not shorter. Count, compare, and do not linger on what you already know how to see.",
+          "زوايا جديدة. أربع واجهات، ثمانية أشخاص، خمس مركبات. ما زالت دقيقتين: الصفحة أكثف، لا أقصر. عُدّي وقارني، ولا تتأخري عند ما صرتِ ترينه بسهولة."],
     "6": ["Incidents with a correction. A detail that was said first is not the detail you keep. This is the observation bar for the last days.",
           "حوادث فيها تصحيح. التفصيل الذي قيل أولًا ليس التفصيل الذي تبقينه. هذا مستوى الملاحظة في الأيام الأخيرة."],
 }

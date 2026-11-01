@@ -6,7 +6,9 @@ For every <img> of an SI image (all languages) with no SI credit right after it,
 image (after </picture> when wrapped). Idempotent; run late in weekly-sync.sh (after apply-heroes/optimize-images/build-ux)."""
 import re, glob, os
 SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 'Uranus',  # Oct 16: owner confirmed these 4 Project Rawane images are SI-generated
-             'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps'}
+             'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps',
+             # Nov 1: Hesna DELPOE picture drills. study/ pages are outside the lang scan, so the credit is also written next to each image.
+             'hesna-7426-recall', 'hesna-quickstop-recall', 'hesna-corner-recall'}
 # Oct 23 (founder): Saturn.jpg removed from SI_IMAGES: it is NASA's real Cassini mosaic PIA06193
 # (credit NASA/JPL/Space Science Institute, https://science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/).
 REAL_PHOTOS = {'Saturn'}  # real agency photos: never get the SI credit

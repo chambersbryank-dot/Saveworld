@@ -55,7 +55,7 @@
       famRows += '<tr><td>' + esc(f) + '</td><td>' + (ap == null ? "—" : ap + "%") + '</td><td>' + (bp == null ? "—" : bp + "%") + '</td><td>' + (retired ? bi("retired", "أُوقف") : bi("in play", "ما زال")) + '</td></tr>';
     });
     var pillar = "";
-    ["logic", "grammar", "reading", "comp", "listen", "obs"].forEach(function (p) {
+    ["logic", "grammar", "written", "reading", "comp", "listen", "obs"].forEach(function (p) {
       var r = state.pillar[p];
       if (!r || !r.n) return;
       pillar += '<li>' + esc(p) + ': ' + Math.round(100 * r.ok / r.n) + '% (' + r.ok + '/' + r.n + ')</li>';
@@ -117,12 +117,9 @@
   function showIntro(day) {
     clearInterval(timer);
     var b = bannerText(session.banner);
-    var memLv = day.n <= 2 ? 1 : day.n <= 3 ? 2 : day.n <= 4 ? 3 : day.n <= 6 ? 4 : day.n <= 8 ? 5 : 6;
-    var memNote = session.nQ < 12
-      ? bi("Only " + session.nQ + " written items are left at this tier, because earlier sittings cleared the bank. Also do Memory Level " + memLv + " (45 questions). That scene is what keeps today from being a snack.",
-        "لم يبقَ إلا " + session.nQ + " بندًا مكتوبًا في هذا المستوى، لأن الجلسات السابقة أفرغت البنك. اعملي أيضًا مستوى الذاكرة " + memLv + " (45 سؤالًا). ذلك المشهد هو ما يمنع اليوم من أن يكون وجبة خفيفة.")
-      : bi("When this sitting is done, Memory Level " + memLv + " is the scene for today if you have not already cleared it at 95%.",
-        "بعد هذه الجلسة، مستوى الذاكرة " + memLv + " هو مشهد اليوم إذا لم تكوني قد أنجزتيه بنسبة 95%.");
+    var memNote = bi(
+      "Visual section: open Memory Drills. Study the picture for 2 minutes, then it hides. Three quizzes of 45 get finer on that same picture. 80% unlocks the next quiz. 95% means that quiz was too easy and the harder one is the one that counts. A new picture opens after the third. Street sketches below the pictures are extra, and they also use 2 minutes.",
+      "قسم البصري: افتحي تمارين الذاكرة. ادراسي الصورة دقيقتين ثم تختفي. ثلاثة اختبارات من 45 تزداد دقة على الصورة نفسها. 80% تفتح الاختبار التالي. 95% تعني أن الاختبار كان أسهل مما ينبغي والأصعب هو الذي يُحسب. صورة جديدة تُفتح بعد الثالث. رسوم الشوارع تحت الصور إضافية، وهي أيضًا دقيقتان.");
     app.innerHTML = '<h2>' + bi(day.title_en, day.title_ar) + '</h2>'
       + (b ? '<p class="hs-banner">' + b + '</p>' : '')
       + '<p>' + bi("Tier " + session.tier + " · " + session.nQ + " questions · budget " + day.budgetMin + " min. Too easy: core 95%+, or core 90%+ in under " + day.tooFastMin + " min. Grammar misses do not freeze the tier. Grammar mastery does not get more drills.",
@@ -175,14 +172,22 @@
     var sofar = answers.length + 1;
     var passage = "";
     if (step.passage) {
-      passage = '<div class="hs-passage"><p>' + esc(step.passage.en) + '</p><p class="sp-ph">' + esc(step.passage.ar) + '</p></div>';
+      var stay = step.passage.pillar === "reading" || step.passage.pillar === "comp";
+      passage = (stay
+        ? '<p class="sp-ph">' + bi("The passage stays on screen. This is not a memory test. Answer only from the passage.", "المقطع يبقى على الشاشة. هذا ليس اختبار ذاكرة. أجيبي من المقطع فقط.") + '</p>'
+        : '')
+        + '<div class="hs-passage"><p>' + esc(step.passage.en) + '</p><p class="sp-ph">' + esc(step.passage.ar) + '</p></div>';
     }
+    var writtenKey = item.pillar === "written"
+      ? '<p class="hs-key">' + bi("A = grammatically correct. B = grammatically incorrect. Judge sentence structure, grammar, and word usage. Ignore spelling, punctuation, and capitalization. A wrong homophone is still a word-usage error.", "A = صحيحة نحويًا. B = غير صحيحة نحويًا. احكمي على بناء الجملة والقواعد واستعمال الكلمة. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة اللفظ إذا استُعملت غلطًا تبقى خطأ استعمال.") + '</p>'
+      : '';
     var opts = "";
     item.opts.forEach(function (o, i) {
       opts += '<button type="button" class="hs-opt" data-i="' + i + '">' + optLabel(item, i) + '</button>';
     });
     app.innerHTML = '<p class="sp-ph">' + bi("Question " + sofar + " of " + nQ, "السؤال " + sofar + " من " + nQ) + ' · <span id="hs-clock"></span></p>'
       + passage
+      + writtenKey
       + '<p class="hs-stem">' + (isGrammar(item) ? bi(item.en, item.ar) : bi(item.en, item.ar)) + '</p>'
       + opts;
     app.querySelectorAll(".hs-opt").forEach(function (btn) {
@@ -211,8 +216,8 @@
     var fast = row.tooFastSec && sec < row.tooFastSec;
     var raised = A.hot(row);
     var html = '<h2>' + bi("Day " + session.day.n + ": " + g.pct + "%", "اليوم " + session.day.n + ": " + g.pct + "%") + '</h2>'
-      + '<p>' + bi("Core (logic, reading, listening, comprehension, observation): " + (g.corePct == null ? "—" : g.corePct + "%") + ". Grammar is tracked by family and does not hold the tier.",
-        "الجوهر (منطق، قراءة، استماع، فهم، ملاحظة): " + (g.corePct == null ? "—" : g.corePct + "%") + ". القواعد تُتابَع حسب العائلة ولا تحبس المستوى.") + '</p>'
+      + '<p>' + bi("Core (reading, listening, comprehension, observation, and the extra logic drills): " + (g.corePct == null ? "—" : g.corePct + "%") + ". Written A/B and the four-choice grammar are tracked by family and do not hold the tier. Biodata, on the plan page, is not right-or-wrong.",
+        "الجوهر (قراءة، استماع، فهم، ملاحظة، وتدريبات المنطق الإضافية): " + (g.corePct == null ? "—" : g.corePct + "%") + ". الكتابة A/B وقواعد الاختيار من أربع تُتابَع حسب العائلة ولا تحبس المستوى. والبيانات الشخصية في صفحة الخطة ليست صح أو خطأ.") + '</p>'
       + '<p>' + bi(Math.round(sec / 60) + " min " + (sec % 60) + " sec. Budget " + session.day.budgetMin + " min. Too-fast line: " + session.day.tooFastMin + " min.",
         Math.round(sec / 60) + " د " + (sec % 60) + " ث. الميزانية " + session.day.budgetMin + " د. حد السرعة الزائدة: " + session.day.tooFastMin + " د.") + '</p>';
     if (raised) {

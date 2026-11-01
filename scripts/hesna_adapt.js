@@ -152,6 +152,36 @@
     }
     return out.slice(0, n + 1);
   }
+  function pickWritten(items, day, state, tier, depth, n) {
+    var list = pool(items, function (it) { return it.pillar === "written"; });
+    if (!n) return [];
+    if (day.n === 1) return takeFrom(list, n, state, function (it) { return !!it.diag; });
+    var out = [];
+    if (day.n === 3) {
+      var d1 = day1WeakFamilies(state);
+      out = takeFrom(list, n, state, function (it) {
+        return it.retest && it.family && d1[it.family] && !mastered(state, it.family);
+      });
+    }
+    if (out.length < n) {
+      var more = takeTier(list, n - out.length, state, tier, depth, function (it) {
+        if (!it.family || mastered(state, it.family) || it.diag) return false;
+        if (it.retest && day.n < 3) return false;
+        if (day.n > 1 && it.family && !weak(state, it.family) && famStat(state, it.family).n) return false;
+        return true;
+      });
+      more.forEach(function (it) {
+        if (out.length < n && !out.some(function (x) { return x.id === it.id; })) out.push(it);
+      });
+    }
+    if (out.length < n) {
+      var fill = takeTier(list, n - out.length, state, tier, depth, function (it) {
+        return it.family && !mastered(state, it.family) && !out.some(function (x) { return x.id === it.id; });
+      });
+      out = out.concat(fill);
+    }
+    return out.slice(0, n);
+  }
   function pickPillar(items, pillar, n, state, tier, depth, pred) {
     var list = pool(items, function (it) {
       return it.pillar === pillar && (!pred || pred(it));
@@ -224,6 +254,7 @@
       }
       pushQs(pickGrammar(data.items, day, state, tier, depth, counts.grammar || 0));
     }
+    pushQs(pickWritten(data.items, day, state, tier, depth, counts.ab || 0));
     pickWrapped(data.listens, "listen", listenCount(day, counts), state, tier, depth).forEach(function (set) {
       blocks.push({ kind: "listen", set: set });
     });
@@ -267,7 +298,7 @@
   function repairBlocks(data, state) {
     var blocks = [];
     var gramm = pool(data.items, function (it) {
-      return it.pillar === "grammar" && it.family && !seen(state, it.id) && !mastered(state, it.family) && weak(state, it.family) && famStat(state, it.family).n > 0;
+      return (it.pillar === "grammar" || it.pillar === "written") && it.family && !seen(state, it.id) && !mastered(state, it.family) && weak(state, it.family) && famStat(state, it.family).n > 0;
     });
     gramm.slice(0, 10).forEach(function (it) { blocks.push({ kind: "q", item: it }); });
     ["logic", "reading", "comp", "listen", "obs"].forEach(function (p) {
@@ -298,7 +329,7 @@
         fam[f].n += 1;
         if (good) fam[f].ok += 1;
       }
-      if (p !== "grammar") {
+      if (p !== "grammar" && p !== "written") {
         core.n += 1;
         if (good) core.ok += 1;
         if (!isProbe) {

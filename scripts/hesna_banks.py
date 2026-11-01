@@ -20,12 +20,12 @@ def opt(en, ar):
 
 
 def item(iid, tier, pillar, en, ar, opts, ans, why_en, why_ar, **kw):
-    if len(opts) != 4:
-        raise SystemExit(f"{iid}: need 4 options")
-    if not (0 <= ans < 4):
+    if len(opts) not in (2, 4):
+        raise SystemExit(f"{iid}: need 2 or 4 options")
+    if not (0 <= ans < len(opts)):
         raise SystemExit(f"{iid}: bad ans")
     ens = [o[0] for o in opts]
-    if len(set(ens)) != 4:
+    if len(set(ens)) != len(ens):
         raise SystemExit(f"{iid}: duplicate option {ens}")
     if not en or not ar or not why_en or not why_ar:
         raise SystemExit(f"{iid}: empty text")
@@ -422,6 +422,162 @@ def grammar_items():
           'A report correction stays a normal clause: "was black, not blue".',
           "تصحيح التقرير يبقى جملة عادية: was black, not blue.",
           stretch=True))
+    return out
+
+
+def ab(iid, tier, family, sentence, correct, why_en, why_ar, **kw):
+    """Darany written key: A correct, B incorrect. Spelling and punctuation are not the error."""
+    opts = [
+        opt("A. The sentence is grammatically correct.", "A. الجملة صحيحة نحويًا."),
+        opt("B. The sentence is grammatically incorrect.", "B. الجملة غير صحيحة نحويًا."),
+    ]
+    row = item(
+        iid, tier, "written", sentence, sentence, opts, 0 if correct else 1, why_en, why_ar,
+        family=family, **kw,
+    )
+    row["ab"] = True
+    return row
+
+
+def written_items():
+    """A/B sentences. Original. Judge structure, grammar, and word usage only."""
+    out = []
+    add = out.append
+    add(ab("ab-agree-1", 1, "ab-agree",
+           "The sergeant and the recruit was the first unit on the block.",
+           False,
+           'Two people joined by "and" take "were", not "was".',
+           "شخصان مربوطان بـ and يأخذان were لا was.",
+           diag=True))
+    add(ab("ab-agree-2", 1, "ab-agree",
+           "The sergeant and the recruit were the first unit on the block.",
+           True,
+           'The compound subject is plural, so "were" agrees.',
+           "الفاعل المركب جمع، لذا were توافقه.",
+           diag=True))
+    add(ab("ab-agree-3", 3, "ab-agree",
+           "Each of the witnesses have a different hat color.",
+           False,
+           '"Each" is singular, so the verb is "has".',
+           "Each مفرد، فالفعل has.",
+           retest=True))
+    add(ab("ab-agree-4", 2, "ab-agree",
+           "The bag of plates is on the rear seat.",
+           True,
+           'The subject is "bag", singular. "Plates" is only the object of "of".',
+           "الفاعل bag مفرد. plates مجرد مجرور بـ of."))
+    add(ab("ab-agree-5", 4, "ab-agree",
+           "Neither the clerk nor the child were in the pickup.",
+           False,
+           'With "neither...nor", the verb agrees with the nearer subject, "child", so "was".',
+           "مع neither...nor يوافق الفعل الفاعل الأقرب child، فيكون was."))
+    add(ab("ab-agree-6", 5, "ab-agree",
+           "The list of plate numbers was copied once.",
+           True,
+           'The subject is "list", singular.',
+           "الفاعل list مفرد."))
+
+    add(ab("ab-frag-1", 1, "ab-fragment",
+           "The driver who left the blue pickup in the lot.",
+           False,
+           "This is a fragment. The \"who\" clause never gets a main verb for \"driver\".",
+           "هذه جملة ناقصة. جملة who لا تصل إلى فعل أساسي لـ driver.",
+           diag=True))
+    add(ab("ab-frag-2", 1, "ab-fragment",
+           "The driver who left the blue pickup in the lot came back for the child.",
+           True,
+           "\"Came back\" finishes the sentence.",
+           "Came back يُتم الجملة.",
+           diag=True))
+    add(ab("ab-frag-3", 3, "ab-fragment",
+           "Because the rear hatch was already open.",
+           False,
+           "\"Because\" leaves a dependent clause with no main clause.",
+           "Because تترك جملة تابعة بلا جملة أساسية.",
+           retest=True))
+    add(ab("ab-frag-4", 2, "ab-fragment",
+           "Because the rear hatch was already open, the bags were in plain view.",
+           True,
+           "The \"because\" clause is attached to a complete main clause.",
+           "جملة because مربوطة بجملة أساسية كاملة."))
+    add(ab("ab-frag-5", 4, "ab-fragment",
+           "Running across the lot with the red bag.",
+           False,
+           "A participle phrase is not a sentence. There is no subject and no finite verb.",
+           "عبارة اسم الفاعل ليست جملة. لا فاعل ولا فعل مصرّف."))
+    add(ab("ab-frag-6", 6, "ab-fragment",
+           "The clerk pointed, and the runner kept the red bag.",
+           True,
+           "Two independent clauses joined by \"and\" are a complete sentence.",
+           "جملتان مستقلتان مربوطتان بـ and جملة كاملة."))
+
+    add(ab("ab-well-1", 1, "ab-well",
+           "Both rookies performed good on the timed report.",
+           False,
+           '"Good" does not modify the verb "performed". The adverb is "well".',
+           "good لا تصف الفعل performed. الظرف هو well.",
+           diag=True))
+    add(ab("ab-well-2", 1, "ab-well",
+           "Both rookies performed well on the timed report.",
+           True,
+           '"Well" modifies "performed".',
+           "well تصف performed.",
+           diag=True))
+    add(ab("ab-well-3", 3, "ab-well",
+           "She writes good when the radio is busy.",
+           False,
+           'The verb "writes" needs "well".',
+           "الفعل writes يحتاج well.",
+           retest=True))
+    add(ab("ab-well-4", 2, "ab-well",
+           "She writes well when the radio is busy.",
+           True,
+           '"Well" is the adverb.',
+           "well هو الظرف."))
+    add(ab("ab-well-5", 5, "ab-well",
+           "A good report is short enough to read once.",
+           True,
+           'Here "good" modifies the noun "report", so the adjective is right.',
+           "هنا good تصف الاسم report، فالصفة في محلها."))
+    add(ab("ab-well-6", 4, "ab-well",
+           "He felt well was the wrong word, so he wrote good instead.",
+           False,
+           'The second clause uses "good" to modify "wrote". That still wants "well".',
+           "الجملة الثانية تستخدم good لوصف wrote. والصحيح well."))
+
+    add(ab("ab-homo-1", 1, "ab-homo",
+           "The plate was still on they're car.",
+           False,
+           '"They\'re" means "they are". The possessive is "their". This is word usage, not a spelling nit.',
+           "they're تعني they are. الملكية their. هذا استعمال كلمة لا تدقيق إملاء.",
+           diag=True))
+    add(ab("ab-homo-2", 1, "ab-homo",
+           "The plate was still on their car.",
+           True,
+           '"Their" is the possessive that the sentence needs.',
+           "their هي الملكية التي تحتاجها الجملة.",
+           diag=True))
+    add(ab("ab-homo-3", 3, "ab-homo",
+           "Park the unit over their, beside the hydrant.",
+           False,
+           'A place needs "there", not the possessive "their".',
+           "المكان يحتاج there لا الملكية their.",
+           retest=True))
+    add(ab("ab-homo-4", 2, "ab-homo",
+           "Two officers signed the log, not one.",
+           True,
+           '"Two" is the number. Nothing in the sentence misuses a homophone.',
+           "two هو العدد. لا سوء استعمال لمتشابهات اللفظ."))
+    add(ab("ab-homo-5", 4, "ab-homo",
+           "The suspect brake the window and climbed through.",
+           False,
+           'The verb is "broke". "Brake" is the wrong word, not a harmless misspelling of the same word.',
+           "الفعل broke. brake كلمة أخرى لا مجرد خطأ إملائي للكلمة نفسها."))
+    add(ab("ab-homo-6", 5, "ab-homo",
+           "The witness could not see who was there.",
+           True,
+           '"There" is the place word, and the sentence is otherwise intact.',
+           "there كلمة المكان، والجملة سليمة فيما عدا ذلك."))
     return out
 
 
@@ -1366,20 +1522,24 @@ def passages():
 def all_items():
     logic = logic_items()
     grammar = grammar_items()
+    written = written_items()
     # probes already flagged inside logic
-    return logic + grammar
+    return logic + grammar + written
 
 
 def check_banks():
     logic = logic_items()
     grammar = grammar_items()
+    written = written_items()
     reads, comps, listens, obs = passages()
     ids = []
-    for group in (logic, grammar):
+    for group in (logic, grammar, written):
         for it in group:
             ids.append(it["id"])
             if it["ans"] != 0 and it["pillar"] == "grammar":
                 raise SystemExit("grammar ans drifted " + it["id"])
+            if it["pillar"] == "written" and (len(it["opts"]) != 2 or it["ans"] not in (0, 1)):
+                raise SystemExit("written shape " + it["id"])
     for group in (reads, comps, listens, obs):
         for p in group:
             ids.append(p["id"])
@@ -1395,7 +1555,7 @@ def check_banks():
         by_tier.setdefault(it["tier"], 0)
         by_tier[it["tier"]] += 1
     gfam = {}
-    for it in grammar:
+    for it in grammar + written:
         gfam.setdefault(it["family"], 0)
         gfam[it["family"]] += 1
     return {
@@ -1403,6 +1563,7 @@ def check_banks():
         "logic_tiers": by_tier,
         "probes": sum(1 for it in logic if it.get("probe")),
         "grammar": len(grammar),
+        "written": len(written),
         "families": gfam,
         "reads": len(reads),
         "comps": len(comps),
