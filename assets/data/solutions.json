@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T17:42:56.020Z",
+ "generated": "2026-11-01T17:06:07.351Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1384,7 +1384,7 @@
    "nonprofit": 76,
    "natural": 20
   },
-  "upcomingMissions": 27,
+  "upcomingMissions": 26,
   "impactTotals": [
    {
     "unit": "kg",
@@ -1519,7 +1519,7 @@
    "byClassification": {
     "agency": 13
    },
-   "upcomingMissions": 4,
+   "upcomingMissions": 3,
    "impactTotals": [],
    "horizonIncluded": true
   },
@@ -3176,11 +3176,8 @@
    "missions": [
     {
      "name": "Hera",
-     "upcoming": true,
-     "next": {
-      "event": "arrival",
-      "date": "2026-11-01T00:00:00Z"
-     }
+     "upcoming": false,
+     "next": null
     }
    ]
   },

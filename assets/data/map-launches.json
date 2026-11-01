@@ -1,5 +1,5 @@
 {
-"generated": "2026-10-31T17:43:03Z",
+"generated": "2026-11-01T17:06:14Z",
 "source": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/",
 "excluded_sites": [
 "Baikonur Cosmodrome, Republic of Kazakhstan",
@@ -254,6 +254,15 @@
 "rocket": "Vulcan",
 "mission": "NROL-64",
 "pad": "Space Launch Complex 41"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SILENTBARKER 2/NROL-118",
+"pad": "Space Launch Complex 41"
 }
 ]
 },
@@ -321,15 +330,6 @@
 "lat": 28.573,
 "lng": -80.649,
 "launches": [
-{
-"net": "2026-12-31T00:00:00Z",
-"exact": false,
-"prec": "M",
-"provider": "SpaceX",
-"rocket": "Falcon Heavy",
-"mission": "Griffin Mission One",
-"pad": "Launch Complex 39A"
-},
 {
 "net": "2026-12-31T00:00:00Z",
 "exact": false,
@@ -437,15 +437,6 @@
 "lat": 13.72,
 "lng": 80.23,
 "launches": [
-{
-"net": "2026-10-30T18:21:00Z",
-"exact": true,
-"prec": "MIN",
-"provider": "Indian Space Research Organization",
-"rocket": "GSLV Mk II",
-"mission": "IRNSS-1L (NVS-03)",
-"pad": "Satish Dhawan Space Centre Second Launch Pad"
-},
 {
 "net": "2026-11-30T00:00:00Z",
 "exact": false,
@@ -578,15 +569,6 @@
 "lat": 34.742,
 "lng": -120.572,
 "launches": [
-{
-"net": "2026-10-31T04:04:34Z",
-"exact": true,
-"prec": "SEC",
-"provider": "SpaceX",
-"rocket": "Falcon 9 Block 5",
-"mission": "Starlink Group 15-18",
-"pad": "Space Launch Complex 4E"
-},
 {
 "net": "2026-11-03T01:42:00Z",
 "exact": true,
@@ -864,6 +846,24 @@
 "provider": "United Launch Alliance",
 "rocket": "Vulcan",
 "mission": "SDA Tranche 1 Tracking Layer B",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SDA Tranche 1 Tracking Layer E",
+"pad": "Space Launch Complex 3E"
+},
+{
+"net": "2026-12-31T00:00:00Z",
+"exact": false,
+"prec": "Y",
+"provider": "United Launch Alliance",
+"rocket": "Vulcan",
+"mission": "SDA Tranche 2 Transport Layer B",
 "pad": "Space Launch Complex 3E"
 }
 ]
