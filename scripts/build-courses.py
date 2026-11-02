@@ -160,16 +160,39 @@ def pdf_link(C):
     return f' <a class="crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' if k in MF else ''
 
 def make_pdf(C, l='en'):
-    out = '/tmp/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l == 'en' else '_' + l) + '.pdf'; src = (l + '/' if l != 'en' else '') + C.PAGE
-    tmp = os.path.join(os.path.dirname(src), '_pdf_' + C.PAGE)
-    open(tmp, 'w', encoding='utf8').write(open(src, encoding='utf8').read().replace('<details', '<details open'))
-    srv = subprocess.Popen([sys.executable, '-m', 'http.server', '8799'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    """Print the course page to a tagged PDF. Equation text (.crs-eqtext) stays selectable.
+    Arabic and Hebrew pages already set dir=rtl and lang, so Chrome writes /Lang and right-to-left text.
+    Chrome 156 writes a structure tree (tagged). Headless Chrome often does not exit after the file
+    is written, so we stop it once the PDF is on disk."""
+    import time, tempfile, shutil
+    out = '/tmp/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l == 'en' else '_' + l) + '.pdf'
+    src = (l + '/' if l != 'en' else '') + C.PAGE
+    folder = os.path.dirname(src) or '.'
+    tmp = os.path.join(folder, '_pdf_' + C.PAGE)
+    html = open(src, encoding='utf8').read().replace('<details', '<details open')
+    # Keep the plain equation line in the print (it is the selectable text layer).
+    html = html.replace('</head>', '<style>@media print{.crs-eqtext{display:block!important;visibility:visible!important}}</style></head>', 1)
+    open(tmp, 'w', encoding='utf8').write(html)
+    if os.path.exists(out): os.remove(out)
+    ud = tempfile.mkdtemp(prefix='chrome-pdf-')
+    cmd = ['google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage',
+           '--no-first-run', f'--user-data-dir={ud}', '--no-pdf-header-footer', '--virtual-time-budget=12000',
+           f'--print-to-pdf={os.path.abspath(out)}', 'file://' + os.path.abspath(tmp)]
+    proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
-        import time; time.sleep(1)
-        subprocess.run(['google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--no-pdf-header-footer', '--virtual-time-budget=8000',
-                        f'--print-to-pdf={out}', f'http://localhost:8799/{tmp}'], check=True, capture_output=True)
+        for _ in range(80):
+            if os.path.exists(out) and os.path.getsize(out) > 2000:
+                time.sleep(0.4)
+                break
+            if proc.poll() is not None:
+                break
+            time.sleep(0.25)
     finally:
-        srv.kill(); os.remove(tmp)
+        proc.kill(); proc.wait(timeout=5)
+        shutil.rmtree(ud, ignore_errors=True)
+        os.remove(tmp)
+    if not os.path.exists(out) or os.path.getsize(out) < 2000:
+        raise SystemExit(f'PDF failed for {src}')
     return out
 
 UI = ['Score: {r} of {n}', ' (answered {a})', 'Correct. ', 'Not quite. The answer is: {x}. ', 'Try this quiz again', 'Answer: ', 'Card {i} of {n}: ', '. Activate to flip.',
