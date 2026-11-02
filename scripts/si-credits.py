@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Oct 15: standing rule: every SI-generated image shows the visible credit 'Created by SI and Biological SI Partner' next to that image
+"""Oct 15: standing rule: every SI-generated image shows the visible credit 'Made from SI and Biological SI Partner' next to that image
 (not one banner per page). SI_IMAGES lists the SI-generated stills (any extension/size variant, e.g. WebP srcset copies).
 Threetrees3, Yishan_Tree and ThreeTrees2 are SI-generated and use the same credit (Nov 1).
 For every <img> of an SI image (all languages) with no SI credit right after it, a <span class="si-credit"> caption is inserted after the
@@ -18,9 +18,9 @@ REAL_PHOTOS = {'Saturn'}  # real agency photos: never get the SI credit
 import json as _j
 REAL_PHOTOS |= {e['stem'] for e in _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'data', 'hub-agency-images.json'), encoding='utf8'))}
 SI_IMAGES -= REAL_PHOTOS
-SI_T = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
-        'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner',
-        'he': 'נוצר על ידי SI ושותף SI ביולוגי'}  # Oct 18: hidden he pages were skipped, so a rotated homepage card failed --check
+SI_T = {'en': 'Made from SI and Biological SI Partner', 'fr': 'Réalisé à partir de SI et Biological SI Partner', 'es': 'Hecho a partir de SI y Biological SI Partner',
+        'ar': 'صُنع من SI وBiological SI Partner', 'it': 'Realizzato a partire da SI e Biological SI Partner',
+        'he': 'עשוי מ-SI ושותף SI ביולוגי'}  # Oct 18: hidden he pages were skipped, so a rotated homepage card failed --check
 MARK = re.compile(r'SI Partner|SI وBiological|שותף SI ביולוגי|שותף Biological SI')  # Oct 17: hidden he pages carry the Hebrew credit
 CSS = '.si-credit{display:block;font-size:.75rem;line-height:1.3;opacity:.85;font-style:italic;margin:.25rem 0 0}'
 
@@ -29,7 +29,7 @@ def is_si(src):
     stem = re.sub(r'-\d+w$|_\d+$', '', stem)
     return stem in SI_IMAGES
 
-EN_CREDIT = 'Created by SI and Biological SI Partner'
+EN_CREDIT = 'Made from SI and Biological SI Partner'
 def localize(s, l):
     # Oct 15 item 8: translated pages inherited the English caption from the EN source; show it in the page language
     if l == 'en': return s

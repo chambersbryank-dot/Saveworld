@@ -26,7 +26,7 @@ TOP = {'rocket': T('Aerospace Engineering with Rocket Propulsion', 'Ingénierie 
        'phys': T('Physics', 'Physique', 'Física', 'الفيزياء', 'Fisica'),
        'all': T('General science', 'Sciences générales', 'Ciencia general', 'العلوم العامة', 'Scienze generali')}
 SRC = T('Sources', 'Sources', 'Fuentes', 'المصادر', 'Fonti')
-CREDIT = T('Created by SI and Biological SI Partner, checked against the sources listed.', 'Créé par SI et Biological SI Partner, vérifié avec les sources indiquées.', 'Creado por SI y Biological SI Partner, comprobado con las fuentes indicadas.', 'من إعداد SI وBiological SI Partner، وتم التحقق منه بالمصادر المذكورة.', 'Creato da SI e Biological SI Partner, verificato con le fonti indicate.')
+CREDIT = T('Made from SI and Biological SI Partner, checked against the sources listed.', 'Réalisé à partir de SI et Biological SI Partner, vérifié avec les sources indiquées.', 'Hecho a partir de SI y Biological SI Partner, comprobado con las fuentes indicadas.', 'من إعداد SI وBiological SI Partner، وتم التحقق منه بالمصادر المذكورة.', 'Realizzato a partire da SI e Biological SI Partner, verificato con le fonti indicate.')
 INTRO = T('When SI Helper can’t answer a question from this site, the question is saved anonymously. Each week we research it and add a sourced answer here.',
           'Quand SI Helper ne peut pas répondre à une question à partir du site, la question est enregistrée anonymement. Chaque semaine, nous faisons des recherches et ajoutons ici une réponse sourcée.',
           'Cuando SI Helper no puede responder una pregunta con este sitio, la pregunta se guarda de forma anónima. Cada semana la investigamos y añadimos aquí una respuesta con fuentes.',
@@ -41,7 +41,7 @@ CSS = ('.sq-top{margin:1.4rem 0 .4rem}.sq{margin:.7rem 0;padding:.8rem 1rem;bord
 LANGS = LANGS + ['he']
 _HE = {'TITLE': 'שאלות של תלמידים, עם תשובות',
        'DESC': 'תשובות עם מקורות לשאלות שתלמידים שאלו את SI Helper ושהאתר עדיין לא כיסה, לפי נושא: הנעה רקטית, הנדסת אווירונאוטיקה, מכניקה מסלולית, פיזיקה ומדע כללי.',
-       'SRC': 'מקורות', 'CREDIT': 'נוצר על ידי SI ו-Biological SI Partner, ונבדק מול המקורות המצוינים.',
+       'SRC': 'מקורות', 'CREDIT': 'עשוי מ-SI ו-Biological SI Partner, ונבדק מול המקורות המצוינים.',
        'INTRO': 'כש-SI Helper לא מוצא תשובה באתר, השאלה נשמרת בעילום שם. בכל שבוע אנחנו חוקרים אותה ומוסיפים כאן תשובה עם מקורות.',
        'ADDED': 'נוסף ב-', 'ASK': 'לשאול את SI Helper', 'MT': 'הטקסט בעברית הוא תרגום מכונה וממתין לבדיקה של דובר/ת עברית.'}
 for _k in ('TITLE', 'DESC', 'SRC', 'CREDIT', 'INTRO', 'ADDED', 'ASK'): globals()[_k]['he'] = _HE[_k]

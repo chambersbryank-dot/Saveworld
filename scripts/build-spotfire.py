@@ -14,8 +14,8 @@ esc = lambda s: html.escape(s, quote=True)
 LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it'] if os.path.exists(f'{l}/Kids_Map.html')]
 d = lambda l: '' if l == 'en' else l + '/'
 PAGE = 'Spot_the_Fire.html'
-SI = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
-      'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner'}
+SI = {'en': 'Made from SI and Biological SI Partner', 'fr': 'Réalisé à partir de SI et Biological SI Partner', 'es': 'Hecho a partir de SI y Biological SI Partner',
+      'ar': 'صُنع من SI وBiological SI Partner', 'it': 'Realizzato a partire da SI e Biological SI Partner'}
 T = {
  'en': dict(title='Spot the Fire from Space: How big is a pixel?', kicker='Free classroom activity · ages 10–14 · about 60 minutes',
    desc='A free astroEDU-format classroom activity: students overlay coarse and fine grids on a paper landscape to learn why satellite pixel size matters for spotting wildfires, then compare with FireSat’s real 5×5 m detection scale.',
