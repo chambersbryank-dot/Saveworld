@@ -230,9 +230,22 @@ def street_questions(scene, vocab, seed):
         "How many vehicles were heading",
         "Which building had the highest",
     )
+    last_ord = ORD_EN[len(people) - 1]
+    last_veh = f"vehicle {len(scene['v'])}"
+    last_name = blds[-1]["n"]
+    def is_added(item):
+        t = item[0]
+        return (
+            f"the {last_ord} person" in t
+            or t.startswith(f"What type was {last_veh}")
+            or t.startswith(f"What color was {last_veh}")
+            or t.startswith(f"What was the plate of {last_veh}")
+            or t.startswith(f"Which way was {last_veh}")
+            or last_name in t
+        )
     must, hard, rest = [], [], []
     for item in out:
-        if item[0].startswith(must_prefix):
+        if item[0].startswith(must_prefix) or is_added(item):
             must.append(item)
         elif item[0].startswith(("Who was carrying", "What color shirt was the person carrying")):
             hard.append(item)

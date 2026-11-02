@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Picture quizzes for Hesna's DELPOE visual section.
 
-Same picture, three 45-question passes, each finer than the last.
-Then a new picture with the same 3×45 pattern.
+Each picture is two tests. Test 2 is the same photo plus details drawn on it.
+Both tests are 45 questions about what that version shows.
 Official shape: statements are true/false; later items are presence.
 Study time is always 2 minutes. Original practice, not exam items.
 """
@@ -22,7 +22,7 @@ def pr(en, ar, yes):
     return [en, ar, PR_EN, PR_AR, 0 if yes else 1]
 
 
-def quiz(qid, scene, band, img, alt, title, blurb, rows):
+def quiz(qid, scene, band, img, alt, title, blurb, rows, overlay=None):
     if len(rows) != 45:
         raise SystemExit(f"{qid}: {len(rows)} questions, need 45")
     stems = [r[0] for r in rows]
@@ -31,7 +31,7 @@ def quiz(qid, scene, band, img, alt, title, blurb, rows):
     trues = sum(1 for r in rows if r[4] == 0)
     if trues < 16 or trues > 30:
         raise SystemExit(f"{qid}: true-count {trues} is lopsided")
-    return {
+    row = {
         "id": qid,
         "pic": 1,
         "scene": scene,
@@ -44,6 +44,14 @@ def quiz(qid, scene, band, img, alt, title, blurb, rows):
         "week": 1 if scene == "b7426" else 2,
         "q": rows,
     }
+    if overlay:
+        row["overlay"] = overlay
+    return row
+
+
+def _pack(pairs):
+    rows = [tf(en, ar, yes) for en, ar, yes in pairs]
+    return rows
 
 
 def burglary():
@@ -203,10 +211,13 @@ def burglary():
         ["Same picture, the small print: digits, badges, counts, and what is absent.",
          "الصورة نفسها، الحرف الصغير: الأرقام والشارات والعدد وما هو غائب."],
     ]
-    out = []
-    for band, rows, t, b in zip((1, 2, 3), (q1, q2, q3), title, blurb):
-        out.append(quiz(f"b7426-{band}", "b7426", band, img, alt, t, b, rows))
-    return out
+    first = quiz(
+        "b7426-1", "b7426", 1, img, alt,
+        ["7426 burglary · test 1 of 2", "سطو 7426 · الاختبار 1 من 2"],
+        ["The house as it is. 2 minutes, then it hides.", "البيت كما هو. دقيقتان ثم يختفي."],
+        q1,
+    )
+    return [first, _burglary_more(img, alt)]
 
 
 def quickstop():
@@ -366,10 +377,13 @@ def quickstop():
         ["Same picture. Readable words, emblems, and the objects that are not there.",
          "الصورة نفسها. الكلمات المقروءة والشعارات والأغراض غير الموجودة."],
     ]
-    out = []
-    for band, rows, t, b in zip((1, 2, 3), (q1, q2, q3), title, blurb):
-        out.append(quiz(f"qstop-{band}", "qstop", band, img, alt, t, b, rows))
-    return out
+    first = quiz(
+        "qstop-1", "qstop", 1, img, alt,
+        ["Quick Stop · test 1 of 2", "كويك ستوب · الاختبار 1 من 2"],
+        ["The store as it is. 2 minutes, then it hides.", "المتجر كما هو. دقيقتان ثم يختفي."],
+        q1,
+    )
+    return [first, _quickstop_more(img, alt)]
 
 
 def corner():
@@ -529,10 +543,13 @@ def corner():
         ["Same corner. Signs, small counts, and the look-alike details from the earlier pictures.",
          "الزاوية نفسها. اللافتات والأعداد الصغيرة والتفاصيل التي تشبه الصور السابقة."],
     ]
-    out = []
-    for band, rows, t, b in zip((1, 2, 3), (q1, q2, q3), title, blurb):
-        out.append(quiz(f"corner-{band}", "corner", band, img, alt, t, b, rows))
-    return out
+    first = quiz(
+        "corner-1", "corner", 1, img, alt,
+        ["Corner crash · test 1 of 2", "حادث الزاوية · الاختبار 1 من 2"],
+        ["The corner as it is. 2 minutes, then it hides.", "الزاوية كما هي. دقيقتان ثم تختفي."],
+        q1,
+    )
+    return [first, _corner_more(img, alt)]
 
 
 def quizzes():
@@ -543,16 +560,211 @@ def quizzes():
     return rows
 
 
+def _burglary_more(img, alt):
+    overlay = [
+        {"k": "sign", "x": 22, "y": 68, "t": "KEEP OUT"},
+        {"k": "cone", "x": 30, "y": 74, "fill": "#fb8c00"},
+        {"k": "box", "x": 58, "y": 52, "t": "TOOLS", "fill": "#fbc02d"},
+        {"k": "person", "x": 93, "y": 40, "shirt": "#f48fb1", "pants": "#1e5bd8"},
+        {"k": "bag", "x": 94, "y": 78, "t": "7426", "fill": "#1e5bd8"},
+    ]
+    rows = _pack([
+        ("A white sign on the lawn reads KEEP OUT.", "لافتة بيضاء على العشب مكتوب عليها KEEP OUT.", True),
+        ("An orange cone stands by the mailbox, at the edge of the lawn.", "مخروط برتقالي بجانب صندوق البريد، عند حافة العشب.", True),
+        ("A yellow box on the driveway reads TOOLS.", "صندوق أصفر على الممر مكتوب عليه TOOLS.", True),
+        ("A person in a pink shirt and blue pants stands at the right side of the SUV.", "شخص بقميص وردي وبنطال أزرق يقف عند الجانب الأيمن للدفع الرباعي.", True),
+        ("A blue bag beside the green trash cart is marked 7426.", "حقيبة زرقاء بجانب حاوية النفايات الخضراء عليها 7426.", True),
+        ("The cone is by the mailbox, not in the pool.", "المخروط بجانب صندوق البريد لا في المسبح.", True),
+        ("The KEEP OUT sign is on the lawn, not on the garage door.", "لافتة KEEP OUT على العشب لا على باب المرآب.", True),
+        ("The TOOLS box is yellow.", "صندوق TOOLS أصفر.", True),
+        ("The person at the right side of the SUV is wearing blue pants.", "الشخص عند الجانب الأيمن للدفع الرباعي يلبس بنطالًا أزرق.", True),
+        ("The bag by the trash cart is blue.", "الحقيبة بجانب الحاوية زرقاء.", True),
+        ("The mailbox number is still 7426.", "رقم صندوق البريد ما زال 7426.", True),
+        ("The garage door is open.", "باب المرآب مفتوح.", True),
+        ("The front door is open.", "الباب الأمامي مفتوح.", True),
+        ("A dark SUV has its rear hatch open.", "دفع رباعي داكن وبابه الخلفي مفتوح.", True),
+        ("A gray sedan is at the curb in the foreground.", "سيدان رمادية عند الرصيف في المقدمة.", True),
+        ("The picture is in daylight.", "الصورة في وضح النهار.", True),
+        ("There is a swimming pool.", "يوجد مسبح.", True),
+        ("A dog is near the pool.", "كلب قرب المسبح.", True),
+        ("Broken glass is by the broken front window.", "زجاج مكسور بجانب النافذة الأمامية المكسورة.", True),
+        ("The person at the window is wearing a backpack.", "الشخص عند النافذة يلبس حقيبة ظهر.", True),
+        ("Bags are in the open cargo area of the SUV.", "حقائب في صندوق الدفع الرباعي المفتوح.", True),
+        ("A green trash cart is at the lower right.", "حاوية نفايات خضراء في أسفل اليمين.", True),
+        ("The cone by the mailbox is green.", "المخروط بجانب صندوق البريد أخضر.", False),
+        ("The lawn sign reads COME IN.", "لافتة العشب مكتوب عليها COME IN.", False),
+        ("The driveway box reads GUNS.", "صندوق الممر مكتوب عليه GUNS.", False),
+        ("The person at the right side of the SUV wears a black shirt.", "الشخص عند الجانب الأيمن للدفع الرباعي يلبس قميصًا أسود.", False),
+        ("The bag by the cart is marked 7462.", "الحقيبة بجانب الحاوية عليها 7462.", False),
+        ("The cone is in the swimming pool.", "المخروط داخل المسبح.", False),
+        ("The KEEP OUT sign is on the garage door.", "لافتة KEEP OUT على باب المرآب.", False),
+        ("The TOOLS box is red.", "صندوق TOOLS أحمر.", False),
+        ("The bag by the cart is on the roof.", "الحقيبة بجانب الحاوية على السطح.", False),
+        ("There is no orange cone in the picture.", "لا مخروط برتقالي في الصورة.", False),
+        ("The mailbox number is 7462.", "رقم صندوق البريد 7462.", False),
+        ("The garage door is closed.", "باب المرآب مغلق.", False),
+        ("This is a night scene.", "هذا مشهد ليلي.", False),
+        ("There is no swimming pool.", "لا يوجد مسبح.", False),
+        ("A marked police car is in the driveway.", "سيارة شرطة معلّمة في الممر.", False),
+        ("The dog is swimming in the pool.", "الكلب يسبح في المسبح.", False),
+        ("The front window is intact.", "النافذة الأمامية سليمة.", False),
+        ("The gray sedan is inside the garage.", "السيدان الرمادية داخل المرآب.", False),
+        ("The SUV's rear hatch is shut.", "الباب الخلفي للدفع الرباعي مغلق.", False),
+        ("The lawn sign is blank.", "لافتة العشب فارغة.", False),
+        ("The person in the pink shirt is the one carrying the television.", "الشخص بالقميص الوردي هو الذي يحمل التلفاز.", False),
+        ("The TOOLS box is in the pool.", "صندوق TOOLS داخل المسبح.", False),
+        ("The blue bag is marked 7246.", "الحقيبة الزرقاء عليها 7246.", False),
+    ])
+    return quiz(
+        "b7426-b", "b7426", 2, img, alt,
+        ["7426 burglary · test 2 of 2", "سطو 7426 · الاختبار 2 من 2"],
+        ["The same house, with more details added. 2 minutes, then it hides.", "البيت نفسه، مع تفاصيل إضافية. دقيقتان ثم يختفي."],
+        rows, overlay,
+    )
+
+
+def _quickstop_more(img, alt):
+    overlay = [
+        {"k": "sign", "x": 16, "y": 34, "t": "OPEN"},
+        {"k": "box", "x": 18, "y": 86, "t": "MILK", "fill": "#2e7d32"},
+        {"k": "person", "x": 28, "y": 78, "shirt": "#7b1fa2", "pants": "#fff"},
+        {"k": "bag", "x": 90, "y": 62, "t": "ICE", "fill": "#d32f2f"},
+    ]
+    rows = _pack([
+        ("A white sign on the store wall reads OPEN.", "لافتة بيضاء على جدار المتجر مكتوب عليها OPEN.", True),
+        ("A green box in the foreground reads MILK.", "صندوق أخضر في المقدمة مكتوب عليه MILK.", True),
+        ("A person in a purple shirt and white pants stands in the foreground.", "شخص بقميص بنفسجي وبنطال أبيض يقف في المقدمة.", True),
+        ("A red bag by the blue truck reads ICE.", "حقيبة حمراء بجانب الشاحنة الزرقاء مكتوب عليها ICE.", True),
+        ("The OPEN sign is on the wall, not on the silver car.", "لافتة OPEN على الجدار لا على السيارة الفضية.", True),
+        ("The MILK box is green.", "صندوق MILK أخضر.", True),
+        ("The added person's shirt is purple.", "قميص الشخص المضاف بنفسجي.", True),
+        ("The ICE bag is red.", "حقيبة ICE حمراء.", True),
+        ("The store sign still reads QUICK STOP.", "لافتة المتجر ما زالت QUICK STOP.", True),
+        ("A clerk in a green apron is in the doorway.", "موظف بمئزر أخضر عند المدخل.", True),
+        ("A child in a green shirt stands by a shopping cart.", "طفل بقميص أخضر يقف بجانب عربة تسوق.", True),
+        ("A pineapple and a water jug are in the cart.", "أناناس وإبريق ماء في العربة.", True),
+        ("A silver car has its driver door open.", "سيارة فضية وباب السائق مفتوح.", True),
+        ("A woman in a yellow jacket and red cap carries a red bag.", "امرأة بسترة صفراء وقبعة حمراء تحمل حقيبة حمراء.", True),
+        ("A blue pickup is parked behind the silver car.", "بيك أب أزرق متوقف خلف السيارة الفضية.", True),
+        ("A black dog sits by an orange cone.", "كلب أسود جالس بجانب مخروط برتقالي.", True),
+        ("The scene is in daylight under a blue sky.", "المشهد في وضح النهار تحت سماء زرقاء.", True),
+        ("The OPEN sign reads CLOSED.", "لافتة OPEN مكتوب عليها CLOSED.", False),
+        ("The foreground box reads BREAD.", "صندوق المقدمة مكتوب عليه BREAD.", False),
+        ("The added person wears a yellow shirt.", "الشخص المضاف يلبس قميصًا أصفر.", False),
+        ("The bag by the truck reads HOT.", "الحقيبة بجانب الشاحنة مكتوب عليها HOT.", False),
+        ("The ICE bag is blue.", "حقيبة ICE زرقاء.", False),
+        ("The MILK box is on the roof.", "صندوق MILK على السطح.", False),
+        ("There is no OPEN sign.", "لا توجد لافتة OPEN.", False),
+        ("The store sign reads SLOW STOP.", "لافتة المتجر مكتوب عليها SLOW STOP.", False),
+        ("The clerk's apron is red.", "مئزر الموظف أحمر.", False),
+        ("The silver car's doors are all shut.", "أبواب السيارة الفضية كلها مغلقة.", False),
+        ("The pickup is red.", "البيك أب أحمر.", False),
+        ("The dog is white.", "الكلب أبيض.", False),
+        ("There is no shopping cart.", "لا توجد عربة تسوق.", False),
+        ("The woman in yellow is standing still in the doorway.", "المرأة بالأصفر واقفة بلا حركة عند المدخل.", False),
+        ("The cone by the dog is blue.", "المخروط بجانب الكلب أزرق.", False),
+        ("The scene is at night.", "المشهد في الليل.", False),
+        ("The OPEN sign is on the blue truck.", "لافتة OPEN على الشاحنة الزرقاء.", False),
+        ("The added person is the clerk.", "الشخص المضاف هو الموظف.", False),
+        ("The MILK box is red.", "صندوق MILK أحمر.", False),
+        ("The ICE bag is in the shopping cart.", "حقيبة ICE داخل عربة التسوق.", False),
+        ("A fire truck is parked in front of the store.", "سيارة إطفاء متوقفة أمام المتجر.", False),
+        ("The child is wearing a red dress.", "الطفل يلبس فستانًا أحمر.", False),
+        ("The pineapple is on the roof.", "الأناناس على السطح.", False),
+        ("The added person's pants are black.", "بنطال الشخص المضاف أسود.", False),
+        ("The store wall sign reads HELP.", "لافتة جدار المتجر مكتوب عليها HELP.", False),
+        ("The green box reads JUICE.", "الصندوق الأخضر مكتوب عليه JUICE.", False),
+        ("The red ICE bag is on the silver car's roof.", "حقيبة ICE الحمراء على سقف السيارة الفضية.", False),
+        ("There is no dog.", "لا يوجد كلب.", False),
+    ])
+    return quiz(
+        "qstop-b", "qstop", 2, img, alt,
+        ["Quick Stop · test 2 of 2", "كويك ستوب · الاختبار 2 من 2"],
+        ["The same store, with more details added. 2 minutes, then it hides.", "المتجر نفسه، مع تفاصيل إضافية. دقيقتان ثم يختفي."],
+        rows, overlay,
+    )
+
+
+def _corner_more(img, alt):
+    overlay = [
+        {"k": "sign", "x": 8, "y": 58, "t": "DETOUR"},
+        {"k": "bag", "x": 42, "y": 80, "t": "CASE", "fill": "#222"},
+        {"k": "cone", "x": 90, "y": 78, "fill": "#fb8c00"},
+        {"k": "box", "x": 64, "y": 40, "t": "UNIT 4", "fill": "#ffd34d"},
+    ]
+    rows = _pack([
+        ("A white sign on the left sidewalk reads DETOUR.", "لافتة بيضاء على الرصيف الأيسر مكتوب عليها DETOUR.", True),
+        ("A black bag on the crosswalk reads CASE.", "حقيبة سوداء على ممر المشاة مكتوب عليها CASE.", True),
+        ("An orange cone stands near the yellow hydrant.", "مخروط برتقالي بجانب الصنبور الأصفر.", True),
+        ("A yellow box on the white van reads UNIT 4.", "صندوق أصفر على الفان الأبيض مكتوب عليه UNIT 4.", True),
+        ("The DETOUR sign is on the sidewalk, not on the red car.", "لافتة DETOUR على الرصيف لا على السيارة الحمراء.", True),
+        ("The CASE bag is black.", "حقيبة CASE سوداء.", True),
+        ("The cone by the hydrant is orange.", "المخروط بجانب الصنبور برتقالي.", True),
+        ("The UNIT 4 box is yellow.", "صندوق UNIT 4 أصفر.", True),
+        ("A red car and a white van have hit each other.", "سيارة حمراء وفان أبيض اصطدما.", True),
+        ("A woman in a purple shirt stands by the red car.", "امرأة بقميص بنفسجي تقف بجانب السيارة الحمراء.", True),
+        ("A man in an orange vest and white cap stands by the van.", "رجل بسترة برتقالية وقبعة بيضاء يقف بجانب الفان.", True),
+        ("Two cups are on the hood of the red car.", "كوبان على غطاء السيارة الحمراء.", True),
+        ("The crosswalk bars are green.", "قضبان ممر المشاة خضراء.", True),
+        ("A blue bicycle is by a yellow hydrant.", "دراجة زرقاء بجانب صنبور أصفر.", True),
+        ("A yellow pedestrian sign is on the right.", "لافتة مشاة صفراء على اليمين.", True),
+        ("A person in pink is on the far sidewalk with a dog.", "شخص بالوردي على الرصيف البعيد مع كلب.", True),
+        ("The scene is in daylight.", "المشهد في وضح النهار.", True),
+        ("The sidewalk sign reads ENTER.", "لافتة الرصيف مكتوب عليها ENTER.", False),
+        ("The crosswalk bag reads BOOK.", "حقيبة الممر مكتوب عليها BOOK.", False),
+        ("The cone by the hydrant is blue.", "المخروط بجانب الصنبور أزرق.", False),
+        ("The box on the van reads UNIT 9.", "الصندوق على الفان مكتوب عليه UNIT 9.", False),
+        ("The CASE bag is white.", "حقيبة CASE بيضاء.", False),
+        ("The DETOUR sign is on the white van.", "لافتة DETOUR على الفان الأبيض.", False),
+        ("There is no cone near the hydrant.", "لا مخروط قرب الصنبور.", False),
+        ("The UNIT 4 box is red.", "صندوق UNIT 4 أحمر.", False),
+        ("The crashed car is blue.", "السيارة المصطدمة زرقاء.", False),
+        ("The van is black.", "الفان أسود.", False),
+        ("The crosswalk bars are red.", "قضبان ممر المشاة حمراء.", False),
+        ("The bicycle is red.", "الدراجة حمراء.", False),
+        ("The hydrant is green.", "الصنبور أخضر.", False),
+        ("There is no dog on the far sidewalk.", "لا كلب على الرصيف البعيد.", False),
+        ("The scene is at night.", "المشهد في الليل.", False),
+        ("Three cups are on the red hood.", "ثلاثة أكواب على الغطاء الأحمر.", False),
+        ("The woman by the red car wears an orange vest.", "المرأة بجانب السيارة الحمراء تلبس سترة برتقالية.", False),
+        ("The DETOUR sign is blank.", "لافتة DETOUR فارغة.", False),
+        ("The CASE bag is in the white van.", "حقيبة CASE داخل الفان الأبيض.", False),
+        ("The cone is on the roof of the red car.", "المخروط على سقف السيارة الحمراء.", False),
+        ("An ambulance is in the crosswalk.", "سيارة إسعاف في ممر المشاة.", False),
+        ("The pedestrian sign is green.", "لافتة المشاة خضراء.", False),
+        ("The man's cap is black.", "قبعة الرجل سوداء.", False),
+        ("The UNIT 4 box is on the bicycle.", "صندوق UNIT 4 على الدراجة.", False),
+        ("The black bag reads CASEY.", "الحقيبة السوداء مكتوب عليها CASEY.", False),
+        ("The sidewalk sign reads STOP.", "لافتة الرصيف مكتوب عليها STOP.", False),
+        ("The orange cone is in the left tree.", "المخروط البرتقالي في الشجرة اليسرى.", False),
+        ("There is no white van.", "لا يوجد فان أبيض.", False),
+    ])
+    return quiz(
+        "corner-b", "corner", 2, img, alt,
+        ["Corner crash · test 2 of 2", "حادث الزاوية · الاختبار 2 من 2"],
+        ["The same corner, with more details added. 2 minutes, then it hides.", "الزاوية نفسها، مع تفاصيل إضافية. دقيقتان ثم تختفي."],
+        rows, overlay,
+    )
+
+
 def check():
     rows = quizzes()
     scenes = []
+    bands = []
     for r in rows:
         if r["scene"] not in scenes:
             scenes.append(r["scene"])
+        bands.append((r["scene"], r["band"]))
         if r["secs"] != 120 or len(r["q"]) != 45:
             raise SystemExit("bad quiz " + r["id"])
+        if r["band"] == 2 and not r.get("overlay"):
+            raise SystemExit("test 2 has no added details " + r["id"])
+        if r["band"] == 1 and r.get("overlay"):
+            raise SystemExit("test 1 should be the plain scene " + r["id"])
     if scenes != ["b7426", "qstop", "corner"]:
         raise SystemExit(scenes)
+    if bands != [("b7426", 1), ("b7426", 2), ("qstop", 1), ("qstop", 2), ("corner", 1), ("corner", 2)]:
+        raise SystemExit(bands)
     return {"quizzes": len(rows), "scenes": scenes, "questions": len(rows) * 45}
 
 

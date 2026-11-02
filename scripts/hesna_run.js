@@ -465,6 +465,7 @@
       secs: drill.secs || 120,
       img: drill.img,
       alt: drill.alt,
+      overlay: drill.overlay,
       svg: drill.svg,
       tm: drill.tm,
       st: drill.st,

@@ -15,7 +15,26 @@ function hesnaScene(s) {
   }
   var credit = '<figcaption class="si-credit">' + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + "</figcaption>";
   if (s.img) {
-    return '<figure class="md-fig"><img src="' + esc(s.img) + '" alt="' + esc(s.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px">' + credit + "</figure>";
+    var over = "";
+    if (s.overlay && s.overlay.length) {
+      over = '<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none">';
+      s.overlay.forEach(function (m) {
+        var x = m.x, y = m.y;
+        if (m.k === "cone") {
+          over += '<polygon points="' + (x - 1.6) + "," + (y + 4) + " " + x + "," + (y - 4) + " " + (x + 1.6) + "," + (y + 4) + '" fill="' + (m.fill || "#fb8c00") + '" stroke="#222" stroke-width="0.4"/>';
+        } else if (m.k === "sign") {
+          over += '<rect x="' + (x - 8) + '" y="' + (y - 3.2) + '" width="16" height="6.4" rx="0.4" fill="#fff" stroke="#222" stroke-width="0.35"/>' + T(x, y + 1.1, m.t, Math.min(2.8, 28 / Math.max(4, String(m.t).length)), "#111", 1);
+        } else if (m.k === "box") {
+          over += '<rect x="' + (x - 4.5) + '" y="' + (y - 3) + '" width="9" height="6" rx="0.3" fill="' + (m.fill || "#fbc02d") + '" stroke="#222" stroke-width="0.35"/>' + T(x, y + 1, m.t, 2.6, "#111", 1);
+        } else if (m.k === "bag") {
+          over += '<rect x="' + (x - 4) + '" y="' + (y - 2.6) + '" width="8" height="5.2" rx="0.8" fill="' + (m.fill || "#1e5bd8") + '" stroke="#222" stroke-width="0.35"/>' + T(x, y + 0.8, m.t, 2.4, "#fff", 1);
+        } else if (m.k === "person") {
+          over += '<rect x="' + (x - 1.8) + '" y="' + (y + 1.5) + '" width="1.2" height="5" fill="' + (m.pants || "#1e5bd8") + '"/><rect x="' + (x + 0.6) + '" y="' + (y + 1.5) + '" width="1.2" height="5" fill="' + (m.pants || "#1e5bd8") + '"/><rect x="' + (x - 2.6) + '" y="' + (y - 2.4) + '" width="5.2" height="4.2" rx="0.4" fill="' + (m.shirt || "#f48fb1") + '" stroke="#222" stroke-width="0.25"/><circle cx="' + x + '" cy="' + (y - 4) + '" r="2" fill="#c8956b" stroke="#222" stroke-width="0.25"/>';
+        }
+      });
+      over += "</svg>";
+    }
+    return '<figure class="md-fig" style="margin:0"><div style="position:relative"><img src="' + esc(s.img) + '" alt="' + esc(s.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px;display:block">' + over + "</div>" + credit + "</figure>";
   }
   if (s.svg) return s.svg + credit;
   var HX = { red: "#d32f2f", blue: "#1e5bd8", green: "#2e7d32", yellow: "#fbc02d", orange: "#fb8c00", purple: "#7b1fa2", pink: "#f48fb1", white: "#f5f5f5", black: "#222", gray: "#888", brown: "#6d4c41", blonde: "#e8c66a" };
