@@ -19,7 +19,29 @@
   var box = hero.querySelector('.hero-space');
   if (!box || !window.HTMLCanvasElement) return;
   var credit = hero.querySelector('.hero-video-credit');
-  if (credit) credit.textContent = 'Created by SI and Biological SI Partner · Saturn: NASA/JPL-Caltech/Space Science Institute';
+  if (credit) {
+    var madeMap = {
+      en: 'Made from SI and Biological SI Partner',
+      fr: 'Réalisé à partir de SI et Biological SI Partner',
+      es: 'Hecho a partir de SI y Biological SI Partner',
+      ar: 'صُنع من SI وBiological SI Partner',
+      it: 'Realizzato a partire da SI e Biological SI Partner',
+      he: 'עשוי מ-SI ושותף SI ביולוגי'
+    };
+    var lang = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
+    var a = document.createElement('a');
+    a.href = 'https://photojournal.jpl.nasa.gov/catalog/PIA11141';
+    a.rel = 'noopener';
+    a.textContent = 'Saturn: NASA/JPL-Caltech/Space Science Institute';
+    var b = document.createElement('a');
+    b.href = 'https://photojournal.jpl.nasa.gov/catalog/PIA06175';
+    b.rel = 'noopener';
+    b.textContent = 'Rings: NASA/JPL-Caltech/Space Science Institute';
+    credit.textContent = (madeMap[lang] || madeMap.en) + ' · ';
+    credit.appendChild(a);
+    credit.appendChild(document.createTextNode(' · '));
+    credit.appendChild(b);
+  }
   var caps = [].slice.call(hero.querySelectorAll('.hs-cap'));
   var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
   var reduced = mq.matches;
