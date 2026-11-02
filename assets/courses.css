@@ -50,5 +50,14 @@
  body{background:#fff!important;color:#000!important}.crs a{color:#000}.crs-card,.crs-planet,.crs-tbl th,.crs-tbl td,.crs-quiz fieldset{border-color:#000!important;background:none!important}
  .crs details>summary{display:none}.crs-unit,.crs-lab{break-before:page}.crs-x,.crs-ok,.crs-fb{color:#000!important}.crs-nojs{display:block!important}.crs-fc-one{display:none}.crs-fc-list{display:grid!important}.crs,.crs *{color:#000!important}.crs-eq,.crs-fs .crs-math,.crs-disc,.crs-safe,.crs-mis li{background:none!important;border-color:#000!important}.crs a[href^=http]::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}}
 
+/* Nov 2: OCW-style section tabs (scripts/build-course-ocw.py). Sticky jump bar; sections stay in the page. */
+.crs-ocw{display:flex;flex-wrap:wrap;gap:.35rem;position:sticky;top:5.2rem;z-index:4;margin:.2rem 0 1rem;padding:.45rem 0;background:rgba(7,16,24,.94)}
+.crs-ocw a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.28);text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}
+.crs-ocw a[aria-current="page"]{background:#ffd54a;color:#071018;border-color:#ffd54a}
+.crs-ocw-sec,.crs-ocw-h{scroll-margin-top:8.5rem}
+.crs-pset{margin:1rem 0 1.4rem}
+.crs-pset ol{padding-inline-start:1.2rem}
+@media print{.crs-ocw{display:none!important}}
+
 /* Oct 24 phase 2: RTL pages (ar, he) - equations and formula cards stay left-to-right */
 .crs-math,.crs-fs .crs-math,.katex{direction:ltr;unicode-bidi:isolate}

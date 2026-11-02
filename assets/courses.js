@@ -31,5 +31,10 @@ root.querySelectorAll('.crs-fc').forEach(function(w){var items=[].map.call(w.que
  bar.appendChild(pos);w.insertBefore(card,list);w.insertBefore(bar,list);show()});
 var rs=root.querySelector('[data-reset]');if(rs)rs.addEventListener('click',function(){if(!confirm(t('Clear your saved progress and quiz scores for this course?')))return;S={done:{},quiz:{}};boxes.forEach(function(b){b.checked=false});save()});
 var pr=root.querySelector('[data-print]');if(pr)pr.addEventListener('click',function(){window.print()});
+var ocw=root.querySelector('.crs-ocw');
+if(ocw){var links=[].slice.call(ocw.querySelectorAll('a'));
+ function mark(){var h=location.hash;links.forEach(function(a){var on=h?a.getAttribute('href')===h:a.getAttribute('href')==='#syllabus';a.setAttribute('aria-current',on?'page':'false')})}
+ links.forEach(function(a){a.addEventListener('click',function(){links.forEach(function(x){x.setAttribute('aria-current','false')});a.setAttribute('aria-current','page')})});
+ window.addEventListener('hashchange',mark);mark()}
 var opened=[];window.addEventListener('beforeprint',function(){root.querySelectorAll('details:not([open])').forEach(function(d){d.open=true;opened.push(d)})});
 window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[]});prog()})();

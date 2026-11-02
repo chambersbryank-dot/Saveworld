@@ -10,7 +10,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROO
 import importlib.util
 spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); BL = importlib.util.module_from_spec(spec); spec.loader.exec_module(BL)
 from courses import roadmap as RM
-V = '20261024h'  # > main's 20261024g (courses.css/js changed)
+V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
 RTL = {'ar', 'he'}  # right-to-left languages: the course wrapper gets dir="rtl"; equations/KaTeX stay LTR (assets/courses.css)
@@ -496,4 +496,7 @@ if __name__ == '__main__':
     _tg = _iu.spec_from_file_location('teacher_guide', 'scripts/build-teacher-guide.py')
     _tgm = _iu.module_from_spec(_tg); _tg.loader.exec_module(_tgm)
     _tgm.apply()
+    _oc = _iu.spec_from_file_location('course_ocw', 'scripts/build-course-ocw.py')
+    _ocm = _iu.module_from_spec(_oc); _oc.loader.exec_module(_ocm)
+    _ocm.apply()
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])
