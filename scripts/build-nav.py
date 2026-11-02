@@ -324,4 +324,8 @@ if __name__ == '__main__':
                 if 'class="lang-switch"' not in s2: s2 = re.sub(r'(<ul[^>]*class="spn-util"[^>]*>)', lambda m: m.group(1) + switcher(l, os.path.basename(p)), s2, count=1)
             if s2 != s: n += wr(p, s2)
     asset('styles.css', CSS); asset('site.js', JS)
+    import importlib.util as _iu
+    _hn = _iu.spec_from_file_location('home_nav', 'scripts/build-home-nav.py')
+    _hnm = _iu.module_from_spec(_hn); _hn.loader.exec_module(_hnm)
+    _hnm.apply()
     print(f'build-nav: {n} page writes')
