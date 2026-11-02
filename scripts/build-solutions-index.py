@@ -136,10 +136,22 @@ def tidy_credit(raw, img):
     extra = list(dict.fromkeys([x for x in ids if x not in who] + [k for k in keep if k not in ids]))
     return who + (f' ({", ".join(extra)})' if extra else '')
 
+def link_pia(text):
+    """Catalog link for a Cassini/JPL photo id already printed in the credit. Other text stays escaped."""
+    parts = re.split(r'(PIA\d{5})', text)
+    out = []
+    for i, part in enumerate(parts):
+        if i % 2 == 0:
+            out.append(part)
+        else:
+            out.append(f'<a href="https://photojournal.jpl.nasa.gov/catalog/{part}" rel="noopener">{part}</a>')
+    return ''.join(out)
+
 def credit_html(c):
     if not c: return ''
     if c == SI_CREDIT: return f'<p class="photo-credit sol-credit">{SI_CREDIT}</p>'
-    return f'<p class="photo-credit sol-credit"><span>Image:</span> <bdi>{c if "<a " in c else esc(c)}</bdi></p>'
+    inner = c if '<a ' in c else link_pia(esc(c))
+    return f'<p class="photo-credit sol-credit"><span>Image:</span> <bdi>{inner}</bdi></p>'
 
 def card_photo(href, i, owner_of):
     """(img_html, credit) for one card after the no-repeat rule."""

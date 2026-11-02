@@ -182,7 +182,7 @@ INTRO_CSS += ('.hs-begins{position:absolute;left:0;right:0;top:22%;margin:0;text
     '@media (prefers-reduced-motion:reduce){.hero[data-hero=space] .hero-content{transition:none}}')
 def INTRO():
     sat = []
-    for w in (960, 1280, 1920, 2560):
+    for w in (960, 1280, 1920, 2560, 3840):
         e = MAN.get('images/hero-space/saturn-cassini-%d.webp' % w)
         if e and e.get('url'): sat.append('%s %dw' % (e['url'], w))
     if not sat: return ''
