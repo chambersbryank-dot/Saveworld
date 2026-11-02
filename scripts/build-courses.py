@@ -499,4 +499,7 @@ if __name__ == '__main__':
     _oc = _iu.spec_from_file_location('course_ocw', 'scripts/build-course-ocw.py')
     _ocm = _iu.module_from_spec(_oc); _oc.loader.exec_module(_ocm)
     _ocm.apply()
+    _cat = _iu.spec_from_file_location('course_catalog', 'scripts/build-course-catalog.py')
+    _catm = _iu.module_from_spec(_cat); _cat.loader.exec_module(_catm)
+    _catm.apply()
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])
