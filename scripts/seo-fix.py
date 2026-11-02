@@ -1,5 +1,5 @@
 """Idempotent SEO normalizer. Usage: python3 scripts/seo-fix.py [en|fr|es|ar|it|he ...]  (default: all)
-Per page: meta robots, <=60-char localized title, 120-160-char localized description (og/twitter synced),
+Per page: meta robots, <=60-char localized title, 120-155-char localized description (og/twitter synced),
 hand-written per-language title/description overrides from i18n/seo-meta.json (wins over generator text),
 twitter:site, og:image width/height/type/alt, hreflang only for language versions that exist,
 redirect stubs: html lang/dir + noindex (Oct 16 SEO pass; scripts/seo-lint.py checks the result).
@@ -88,16 +88,16 @@ def _dup(x, text):
     return len(a & b) / len(a) >= 0.5
 
 def fit_desc(base, extra, lang, learn=False):
-    """Whole sentences, 120-160 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
+    """Whole sentences, 120-155 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
     then the language pad. A description we truncated earlier (ends with an ellipsis) is rebuilt from the page copy.
-    Ellipsis only when the first sentence alone is longer than 160."""
+    Ellipsis only when the first sentence alone is longer than 155. Bing and Google both truncate snippets to the device width."""
     norm = lambda x: re.sub(r'\s+', ' ', UPDATED.sub('', x or '')).strip()
     pad = (PAD_LEARN if learn else PAD)[lang]
     base = norm(base.replace(PAD[lang], '') if learn else base)
     pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
     # Oct 26: rebuild ellipsis-truncated descriptions from page copy when we have sentences to work with.
     # Only keep a prior '…' cut when the page no longer has usable copy to rebuild from.
-    if base.endswith('…') and len(base) <= 160 and not pool: return base
+    if base.endswith('…') and len(base) <= 155 and not pool: return base
     if base.endswith('…'):
         base = base.rstrip('…').rsplit(' ', 1)[0].rstrip(' ,:;–-')  # drop the cut fragment; rebuild below
     sents = [x for x in END.split(base) if x] if base else []
@@ -105,35 +105,35 @@ def fit_desc(base, extra, lang, learn=False):
     if not sents and pool: sents = [pool.pop(0)]
     text = ''
     for x in sents:
-        if len((text + ' ' + x).strip()) <= 160 or not text: text = (text + ' ' + x).strip()
+        if len((text + ' ' + x).strip()) <= 155 or not text: text = (text + ' ' + x).strip()
         else: break
-    if len(text) > 160:  # drop a trailing source attribution "(NASA)." before cutting
+    if len(text) > 155:  # drop a trailing source attribution "(NASA)." before cutting
         t2 = re.sub(r'\s*\([^()]{2,60}\)(?=[.!?؟]?$)', '', text)
-        if len(t2) <= 160: text = t2
-        elif len(t2) <= 175 and len(sents) == 1 and t2[-1:] in '.!?؟': return t2  # one whole sentence a little over 160 (French/Spanish/Italian run longer) beats an ellipsis cut
-    if len(text) > 160:  # a semicolon joins whole clauses: keep the clauses that fit, end with a full stop, re-pad
+        if len(t2) <= 155: text = t2
+        elif False and len(t2) <= 155 and len(sents) == 1 and t2[-1:] in '.!?؟': return t2
+    if len(text) > 155:  # a semicolon joins whole clauses: keep the clauses that fit, end with a full stop, re-pad
         parts = re.split(r'\s*[;؛]\s+', text)
         if len(parts) > 1:
             keep = ''
             for x in parts:
                 cand = (keep + '; ' + x) if keep else x
-                if len(cand) + 1 <= 160: keep = cand
+                if len(cand) + 1 <= 155: keep = cand
                 else: break
             if len(keep) >= 80:
                 text = keep.rstrip(' ,.') + ('.' if lang != 'ar' else '.')
                 for x in pool + [pad]:
                     if len(text) >= 120: break
-                    if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+                    if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 155: text = (text + ' ' + x).strip()
                 return text
-    if len(text) > 160:  # one long sentence: cut at a clause boundary, then a word boundary
-        cut = text[:159]
+    if len(text) > 155:  # one long sentence: cut at a clause boundary, then a word boundary
+        cut = text[:154]
         for sep in ('; ', ', ', ' – ', ' — ', ' ('):
             i = cut.rfind(sep)
             if i >= 110: return cut[:i].rstrip(' ,;:–—(') + '…'
         return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…'
     for x in pool + [pad]:
         if len(text) >= 120: break
-        if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
+        if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 155: text = (text + ' ' + x).strip()
     return text
 
 def ptext(el):

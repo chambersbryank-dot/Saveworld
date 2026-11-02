@@ -36,9 +36,24 @@ for l in LANGS:
         ls = [x for x in LANGS if b in have[x]]
         alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{url(x, b)}"/>' for x in ls)
         if 'en' in ls: alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url("en", b)}"/>'
-        rows.append(f'  <url><loc>{url(l, b)}</loc>{alts}<lastmod>{dates.get(path(l, b)) or today}</lastmod></url>\n')
-out = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-       + ''.join(rows) + '</urlset>\n')
+        rows.append((l, f'  <url><loc>{url(l, b)}</loc>{alts}<lastmod>{dates.get(path(l, b)) or today}</lastmod></url>\n'))
+# One sitemap per language, plus a sitemap index at sitemap.xml.
+# Google: https://developers.google.com/search/docs/crawling-indexing/sitemaps/large-sitemaps
+# Bing reads the same sitemap index and lastmod: https://www.bing.com/webmasters/help/sitemaps-3b5cf6ed
+head = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+index = ['<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n']
+n = 0
+for l in LANGS:
+    body = ''.join(row for lang, row in rows if lang == l)
+    name = f'sitemap-{l}.xml'
+    doc = head + body + '</urlset>\n'
+    old = open(name, encoding='utf8').read() if os.path.exists(name) else ''
+    if doc != old: open(name, 'w', encoding='utf8').write(doc)
+    last = max((dates.get(path(l, b)) or today for b in sorted(have[l])), default=today)
+    index.append(f'  <sitemap><loc>{SITE}{name}</loc><lastmod>{last}</lastmod></sitemap>\n')
+    n += body.count('<loc>')
+index.append('</sitemapindex>\n')
+idx = ''.join(index)
 old = open('sitemap.xml', encoding='utf8').read() if os.path.exists('sitemap.xml') else ''
-if out != old: open('sitemap.xml', 'w', encoding='utf8').write(out)
-print(f'i18n-sitemap: {len(rows)} URLs, {len(out)//1024} KB' + ('' if out != old else ' (unchanged)'))
+if idx != old: open('sitemap.xml', 'w', encoding='utf8').write(idx)
+print(f'i18n-sitemap: {n} URLs in {len(LANGS)} language sitemaps')

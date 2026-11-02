@@ -81,6 +81,12 @@ def main():
     def add(k, p, msg=''): issues[k].append(f'{p} {msg}'.strip())
     titles, descs, heads = collections.defaultdict(list), collections.defaultdict(list), {}
     sm = open('sitemap.xml', encoding='utf8').read() if os.path.exists('sitemap.xml') else ''
+    if '<sitemapindex' in sm:  # per-language sitemaps; lint the page URLs inside them
+        parts = []
+        for loc in re.findall(r'<loc>([^<]+)</loc>', sm):
+            rel = loc.split('savingplanets.com/')[-1]
+            if os.path.exists(rel): parts.append(open(rel, encoding='utf8').read())
+        sm = '\n'.join(parts)
     sm_urls = {}
     for u in re.findall(r'<url>(.*?)</url>', sm, re.S):
         loc = re.search(r'<loc>([^<]+)</loc>', u).group(1).strip()
@@ -121,7 +127,7 @@ def main():
         else:
             descs[d].append(p)
             if 160 < len(d) <= 175 and not d.endswith('…'): add('desc-slightly-long', p, f'{len(d)} (one whole sentence; search engines trim the display)')
-            elif not 120 <= len(d) <= 160: add('desc-length', p, f'{len(d)}')
+            elif not 120 <= len(d) <= 155: add('desc-length', p, f'{len(d)}')
             if d.endswith('…'): add('desc-truncated', p, d[-40:])
         if lang == 'en': en_meta[base] = (t, d)
         c = soup.find_all('link', rel='canonical')

@@ -34,7 +34,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
-  # Oct 26: IndexNow after every Pages deploy (key file aa19429b…txt already on site root).
+  # Oct 26: IndexNow after every push to main (key file aa19429b…txt at the site root).
+  # One POST to api.indexnow.org is shared with Bing, Yandex, Naver, and Seznam. Google is not a participant.
   # Does not change Cloudflare DNS/proxy/settings. post-deploy.sh never fails the workflow.
   ping:
     needs: deploy

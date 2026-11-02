@@ -9,4 +9,5 @@ Disallow: /node_modules/
 Disallow: /scripts/
 Disallow: /.cache/
 
+# Sitemap index. Each language has its own file with lastmod (Google and Bing both read a sitemap index).
 Sitemap: https://www.savingplanets.com/sitemap.xml

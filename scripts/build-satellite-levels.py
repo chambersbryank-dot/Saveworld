@@ -191,7 +191,7 @@ def record(lang, page):
     return {'u': page, 'n': name, 'img': ph.get('img') or '', 'alt': ph.get('alt') or '', 'w': ph.get('w') or 0, 'h': ph.get('h') or 0,
             'credit': ph.get('credit') or '', 'k3': eli(soup), 'what': w.get('What') or [], 'why': w.get('Why') or [], 'impact': impact(soup)}
 
-DESC = "Pick a level, then pick a real Earth-observation satellite that already has a Saving Planets page. K-3 shows that page's Explain Like I'm 10 note. Grades 4-12 show What and Why. University also shows the impact statement. Photos keep the credit from the page."
+DESC = next(k for k in T if k.startswith('Pick a level'))  # same string as the i18n key, so translated pages are not left in English
 MAIN_HEAD = '''<section class="page-hero hero-space"><div class="page-hero-content"><h1>Earth Satellite Explorer</h1><p>''' + esc(DESC) + '''</p></div></section>
 <div class="se-wrap" id="se">
 <p class="se-lead">''' + esc(DESC) + '''</p>
