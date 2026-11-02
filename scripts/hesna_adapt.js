@@ -426,35 +426,93 @@
     function pushQs(list) {
       list.forEach(function (it) { blocks.push({ kind: "q", item: it }); });
     }
-    if (!only || only === "written") {
-      var wantW = counts.ab || 8;
-      var written = pickWritten(data.items, day, state, tier, depth, wantW);
-      if (written.length < wantW) {
-        pool(data.items, function (it) { return it.pillar === "written"; }).forEach(function (it) {
-          if (written.length < wantW && !written.some(function (x) { return x.id === it.id; })) written.push(it);
-        });
-      }
-      pushQs(written);
+    function on(name) { return !only || only === name; }
+    function nOf(key, fallback) {
+      var planned = counts[key] || 0;
+      if (!only) return planned;
+      return planned || fallback || 0;
     }
-    if (!only || only === "reading") {
-      var wantR = counts.reading || 1;
-      var reads = pickWrapped(data.reads, "reading", wantR, state, tier, depth);
-      if (reads.length < wantR) {
-        (data.reads || []).forEach(function (set) {
-          if (reads.length < wantR && !reads.some(function (x) { return x.id === set.id; })) reads.push(set);
+    if (on("grammar")) {
+      var ng = nOf("grammar", 8);
+      if (ng) {
+        var gramm = pickGrammar(data.items, day, state, tier, depth, ng);
+        if (gramm.length < ng) {
+          pool(data.items, function (it) { return it.pillar === "grammar"; }).forEach(function (it) {
+            if (gramm.length < ng && !gramm.some(function (x) { return x.id === it.id; })) gramm.push(it);
+          });
+        }
+        pushQs(gramm);
+      }
+    }
+    if (on("logic")) {
+      var nl = nOf("logic", 6);
+      if (nl) {
+        if (day.n === 1 && !only) {
+          pushQs(pickPillar(data.items, "logic", nl, state, 1, 1, function (it) { return !it.probe; }));
+          pushQs(pickPillar(data.items, "logic", 99, state, 3, 1, function (it) { return !!it.probe; }));
+        } else {
+          var logic = pickPillar(data.items, "logic", nl, state, tier, depth, function (it) { return !it.probe; });
+          if (logic.length < nl) {
+            pool(data.items, function (it) { return it.pillar === "logic" && !it.probe; }).forEach(function (it) {
+              if (logic.length < nl && !logic.some(function (x) { return x.id === it.id; })) logic.push(it);
+            });
+          }
+          pushQs(logic);
+        }
+      }
+    }
+    if (on("written")) {
+      var wantW = nOf("ab", 8);
+      if (wantW) {
+        var written = pickWritten(data.items, day, state, tier, depth, wantW);
+        if (written.length < wantW) {
+          pool(data.items, function (it) { return it.pillar === "written"; }).forEach(function (it) {
+            if (written.length < wantW && !written.some(function (x) { return x.id === it.id; })) written.push(it);
+          });
+        }
+        pushQs(written);
+      }
+    }
+    function fillSets(picked, src, n) {
+      (src || []).forEach(function (set) {
+        if (picked.length < n && !picked.some(function (x) { return x.id === set.id; })) picked.push(set);
+      });
+      return picked;
+    }
+    if (on("listen")) {
+      var nListen = nOf("listen", 1);
+      if (nListen) {
+        fillSets(pickWrapped(data.listens, "listen", nListen, state, tier, depth), data.listens, nListen).forEach(function (set) {
+          blocks.push({ kind: "listen", set: set });
         });
       }
-      reads.forEach(function (set) { blocks.push({ kind: "read", set: set }); });
-      var still = wantR - reads.length;
-      if (still > 0) {
+    }
+    if (on("reading")) {
+      var wantR = nOf("reading", 1);
+      if (wantR) {
+        var reads = fillSets(pickWrapped(data.reads, "reading", wantR, state, tier, depth), data.reads, wantR);
+        reads.forEach(function (set) { blocks.push({ kind: "read", set: set }); });
+      }
+    }
+    if (on("comp")) {
+      var nc = nOf("comp", 1);
+      if (nc) {
         var comps = (data.comps || []).filter(function (s) {
-          return !s.secs && String(s.en || "").indexOf("it is covered") < 0;
+          return String(s.en || "").indexOf("it is covered") < 0;
         });
-        pickWrapped(comps, "comp", still, state, tier, depth).forEach(function (set) {
-          blocks.push({ kind: "comp", set: set });
+        var picked = fillSets(pickWrapped(comps, "comp", nc, state, tier, depth), comps, nc);
+        picked.forEach(function (set) { blocks.push({ kind: "comp", set: set }); });
+      }
+    }
+    if (on("obs")) {
+      var no = nOf("obs", 1);
+      if (no) {
+        fillSets(pickWrapped(data.obs, "obs", no, state, tier, depth), data.obs, no).forEach(function (set) {
+          blocks.push({ kind: "obs", set: set });
         });
       }
     }
+    if (!only && weekOf(day.n) > 1) blocks = aimWeak(blocks, data, state, tier, depth);
     return finish(day, tier, depth, b, bridge, stretch, banner, blocks);
   }
   function aimWeak(blocks, data, state, tier, depth) {
