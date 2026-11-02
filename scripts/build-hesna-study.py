@@ -900,7 +900,8 @@ def study_html(payload):
 <meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>Hassnaa's Four-Week HPD Study Plan | خطة حسناء الدراسية</title>
-<link rel="stylesheet" href="/styles.css?v=20261026b">
+<link rel="stylesheet" href="/styles.css?v=20261102d">
+<!-- hs-why:20261102d -->
 {PWA}
 <style>{CSS}</style>
 </head>

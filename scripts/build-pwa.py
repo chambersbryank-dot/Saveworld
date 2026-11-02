@@ -9,7 +9,7 @@ import pathlib, re, json
 from PIL import Image, ImageDraw
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LANGS = ['fr', 'es', 'ar', 'it', 'he']
-VER = '20261028a'
+VER = '20261102d'
 BG, GREEN, TEAL, THEME = (11, 58, 91), (46, 139, 87), (31, 111, 139), '#0b3a5b'
 SKIP = {'googlea5d3cc0c785fec04.html'}
 
@@ -51,6 +51,7 @@ async function trim(c) { const ks = await c.keys(); for (let i = 0; i < ks.lengt
 self.addEventListener('fetch', e => {
   const r = e.request, u = new URL(r.url);
   if (r.method !== 'GET' || u.origin !== location.origin) return;           // off-site (analytics, media, donate) untouched
+  if (u.pathname === '/sw.js' || u.pathname === '/pwa.js') return;          // never pin the worker; a cached copy blocks the next update
   if (r.mode === 'navigate' || (r.headers.get('accept') || '').includes('text/html')) {
     e.respondWith(fetch(r).then(res => { if (res.ok) { const cp = res.clone(); caches.open(V).then(c => c.put(r, cp).then(() => trim(c))); } return res; })
       .catch(() => caches.match(r, {ignoreSearch: true}).then(m => m || caches.match('/offline.html'))));
