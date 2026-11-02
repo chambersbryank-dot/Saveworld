@@ -718,7 +718,7 @@ body.toc-sub.salt-marshes-page .page-hero.space-hero { background: linear-gradie
 body.toc-sub.ocean-voyages-institute-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/North_Pacific_ISS.jpg') center/cover no-repeat; }
 body.toc-sub.healthy-seas-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Mediterranean_ISS.jpg') center/cover no-repeat; }
 body.toc-sub.mote-marine-laboratory-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Florida_Keys_PIA03890.jpg') center/cover no-repeat; }
-body.toc-sub.trees-for-the-future-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Kilimanjaro_STS72.jpg') center/cover no-repeat; }
+body.toc-sub.trees-for-the-future-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/hub/ESA_S2_Tana_River_Kenya.jpg') center/cover no-repeat; }
 body.toc-sub.seabin-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Sydney_ASTER.jpg') center/cover no-repeat; }
 body.toc-sub.flex-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Global_Plant_Fluorescence.jpg') center/cover no-repeat; }
 body.toc-sub.eos-06-page .page-hero.space-hero { background: linear-gradient(180deg, rgba(0,20,40,0.35) 0%, rgba(0,20,40,0.6) 100%), url('assets/Oceansat_Winds_Irene.jpg') center/cover no-repeat; }
@@ -1227,7 +1227,7 @@ body.toc-sub[class].hp-international-charter .page-hero[class]{background:linear
 body.toc-sub[class].hp-international-coastal-cleanup .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Bahamas_Ocean_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-inuit-circumpolar-council .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Cape_Farewell_Greenland_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-jpss .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/JPSS2_Atlas_V_Launch_Pad.jpg') center/cover no-repeat}
-body.toc-sub[class].hp-justdiggit .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Kilimanjaro_STS72.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-justdiggit .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/hub/ESA_S2_Southeast_Kenya.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-kakapo-recovery .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Kakapo_Sirocco.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-keep-tahoe-blue .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Lake_Tahoe_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-kissimmee-river-restoration .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Florida_Keys_PIA03890.jpg') center/cover no-repeat}
@@ -1336,7 +1336,7 @@ body.toc-sub[class].hp-veggie-space-garden .page-hero[class]{background:linear-g
 body.toc-sub[class].hp-voyager .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Voyager_Heliosphere_PIA22835.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-wwf-arctic-programme .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Wolstenholme_Fjord_IceBridge.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-waterkeeper-alliance .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/NYC_Hudson_Harbor.jpg') center/cover no-repeat}
-body.toc-sub[class].hp-weforest .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Kilimanjaro_STS72.jpg') center/cover no-repeat}
+body.toc-sub[class].hp-weforest .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-whales-ocean-gardeners .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Phytoplankton_Bloom_Iceland.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-yellowstone-wolves .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/Yellowstone_ISS.jpg') center/cover no-repeat}
 body.toc-sub[class].hp-zero-debris-charter .page-hero[class]{background:linear-gradient(180deg,rgba(0,20,40,.35),rgba(0,20,40,.6)),url('assets/LEO_View.jpg') center/cover no-repeat}

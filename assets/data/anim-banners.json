@@ -68,7 +68,8 @@
   "assets/Kilimanjaro_STS72.jpg": {
    "credit": "NASA (STS072-722-004, Jan. 1996)",
    "pos": "50% 50%",
-   "r2": "images/Kilimanjaro_STS72.jpg"
+   "r2": "images/Kilimanjaro_STS72.jpg",
+   "alt": "Mount Kilimanjaro and the surrounding highlands in Tanzania, seen from the Space Shuttle"
   },
   "assets/Bahamas_Ocean_ISS.jpg": {
    "credit": "NASA (ISS071-E-449837, July 24, 2024)",
@@ -1037,6 +1038,24 @@
    "alt": "The GEDI forest-mapping laser mounted outside the Kibo module on the International Space Station",
    "pos": "50% 50%",
    "r2": "images/sol-cards/GEDI_on_ISS_iss059e088632.jpg"
+  },
+  "assets/hub/ESA_S2_Southeast_Kenya.jpg": {
+   "credit": "contains modified Copernicus Sentinel data (2023), processed by ESA",
+   "alt": "Southeast Kenya seen by the Copernicus Sentinel-2 satellite, with green vegetated land along the coast and drier land inland",
+   "pos": "50% 50%",
+   "r2": "images/hub/ESA_S2_Southeast_Kenya.jpg"
+  },
+  "assets/hub/ESA_S2_Tana_River_Kenya.jpg": {
+   "credit": "contains modified Copernicus Sentinel data (2020), processed by ESA",
+   "alt": "The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite",
+   "pos": "50% 50%",
+   "r2": "images/hub/ESA_S2_Tana_River_Kenya.jpg"
+  },
+  "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg": {
+   "credit": "U.S. Forest Service",
+   "alt": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
+   "pos": "50% 40%",
+   "r2": "images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg"
   }
  },
  "pages": {
@@ -1148,7 +1167,7 @@
   "JPSS.html": "assets/JPSS2_Atlas_V_Launch_Pad.jpg",
   "Juice.html": "assets/Juice_RIME_Radar.jpg",
   "Jupiter.html": "assets/Jupiter.jpg",
-  "Justdiggit.html": "assets/Kilimanjaro_STS72.jpg",
+  "Justdiggit.html": "assets/hub/ESA_S2_Southeast_Kenya.jpg",
   "Keep_Tahoe_Blue.html": "assets/Lake_Tahoe_ISS.jpg",
   "Kelp_Forests.html": "assets/Kerguelen_Kelp_ISS.jpg",
   "Kids_Map.html": "assets/hero/kids",
@@ -1272,7 +1291,7 @@
   "Thrust_to_Weight_Calculator.html": "assets/hero/learn",
   "Titan.html": "assets/Titan.jpg",
   "Topics.html": "assets/hero/learn",
-  "Trees_for_the_Future.html": "assets/Kilimanjaro_STS72.jpg",
+  "Trees_for_the_Future.html": "assets/hub/ESA_S2_Tana_River_Kenya.jpg",
   "Trout_Unlimited.html": "assets/Klamath_River.jpg",
   "Tsunami_Early_Warning.html": "assets/tsunami-hero.jpg",
   "UNEP_MARS.html": "assets/EMIT_Methane_Plumes_Uzbekistan.jpg",
@@ -1282,7 +1301,7 @@
   "Voyager.html": "assets/Voyager_Heliosphere_PIA22835.jpg",
   "Waterkeeper_Alliance.html": "assets/NYC_Hudson_Harbor.jpg",
   "Ways_to_Help.html": "assets/hero/help",
-  "WeForest.html": "assets/Kilimanjaro_STS72.jpg",
+  "WeForest.html": "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg",
   "Webb_2024_YR4.html": "assets/Webb_Infrared.jpg",
   "Whales_Ocean_Gardeners.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
   "Yellowstone_Wolves.html": "assets/Yellowstone_ISS.jpg",
@@ -2032,7 +2051,10 @@
    "Astroscale.html": [],
    "ALOS-4.html": [],
    "GEDI.html": [],
-   "Eden_People_Planet.html": []
+   "Eden_People_Planet.html": [],
+   "Justdiggit.html": [],
+   "Trees_for_the_Future.html": [],
+   "WeForest.html": []
   }
  }
 }

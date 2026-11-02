@@ -115,9 +115,13 @@ def apply(s, lang, img):
     return (s[:m.start()] + f'<section class="{m.group(1)} {" ".join(ADD)}{size}{nslide}"{m.group(2)}>' + MK(pic + '<span class="spb-sweep" aria-hidden="true"></span>')
             + body + MK(cred + btn) + '</section>' + MK(SPB.PAUSE_JS) + s[end + len('</section>'):])
 
+# Optional page names (Astroscale.html …) limit the rewrite. Weekly sync passes no args.
+ONLY = {a for a in sys.argv[1:] if a.endswith('.html')}
 n = 0
 for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
     base, lang = os.path.basename(f), (f.split('/')[0] if '/' in f else 'en')
+    if ONLY and base not in ONLY:
+        continue
     s = open(f, encoding='utf8').read()
     s2 = strip(s) if 'ANIMBAN' in s or 'pg-anim' in s else s
     asset = CFG['pages'].get(base)
@@ -127,8 +131,9 @@ for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
         CUR['page'] = base; s2 = apply(s2, lang, img)
     if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
 
-css = open('styles.css', encoding='utf8').read()
-css2 = re.sub(r'\n?/\* ANIMBAN:START \*/.*?/\* ANIMBAN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* ANIMBAN:START */\n' + CSS + SPX.css() + '\n/* ANIMBAN:END */\n'
-if css2 != css: open('styles.css', 'w', encoding='utf8').write(css2)
-SPB.write_css('styles.css')
+if not ONLY:
+    css = open('styles.css', encoding='utf8').read()
+    css2 = re.sub(r'\n?/\* ANIMBAN:START \*/.*?/\* ANIMBAN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* ANIMBAN:START */\n' + CSS + SPX.css() + '\n/* ANIMBAN:END */\n'
+    if css2 != css: open('styles.css', 'w', encoding='utf8').write(css2)
+    SPB.write_css('styles.css')
 print('apply-anim-banners:', n, 'pages updated,', sum(1 for p, a in CFG['pages'].items() if a in CFG['images']), 'EN pages mapped')

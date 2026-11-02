@@ -31,9 +31,35 @@ cfg['images']['assets/GEDI_on_ISS.jpg'] = {
 cfg['pages']['Astroscale.html'] = 'assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg'
 cfg['pages']['ALOS-4.html'] = 'assets/ALOS-4_Model_Tsukuba.jpg'
 cfg['pages']['GEDI.html'] = 'assets/GEDI_on_ISS.jpg'
+# Kilimanjaro is Eden's photo (Tanzania). The same file was also the hero, the further-info
+# picture, and the related card for Justdiggit, Trees for the Future, and WeForest.
+kili = cfg['images'].setdefault('assets/Kilimanjaro_STS72.jpg', {})
+kili['alt'] = 'Mount Kilimanjaro and the surrounding highlands in Tanzania, seen from the Space Shuttle'
+cfg['images']['assets/hub/ESA_S2_Southeast_Kenya.jpg'] = {
+    'credit': 'contains modified Copernicus Sentinel data (2023), processed by ESA',
+    'alt': 'Southeast Kenya seen by the Copernicus Sentinel-2 satellite, with green vegetated land along the coast and drier land inland',
+    'pos': '50% 50%',
+    'r2': 'images/hub/ESA_S2_Southeast_Kenya.jpg',
+}
+cfg['images']['assets/hub/ESA_S2_Tana_River_Kenya.jpg'] = {
+    'credit': 'contains modified Copernicus Sentinel data (2020), processed by ESA',
+    'alt': 'The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite',
+    'pos': '50% 50%',
+    'r2': 'images/hub/ESA_S2_Tana_River_Kenya.jpg',
+}
+cfg['images']['assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg'] = {
+    'credit': 'U.S. Forest Service',
+    'alt': 'A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest',
+    'pos': '50% 40%',
+    'r2': 'images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg',
+}
+cfg['pages']['Justdiggit.html'] = 'assets/hub/ESA_S2_Southeast_Kenya.jpg'
+cfg['pages']['Trees_for_the_Future.html'] = 'assets/hub/ESA_S2_Tana_River_Kenya.jpg'
+cfg['pages']['WeForest.html'] = 'assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg'
 # Empty curated list: only the page photo. A shared forest/orbit pool was putting a shuttle
 # clearing on ALOS-4 and Eden, and the whole station on GEDI.
-for page in ('Astroscale.html', 'ALOS-4.html', 'GEDI.html', 'Eden_People_Planet.html'):
+for page in ('Astroscale.html', 'ALOS-4.html', 'GEDI.html', 'Eden_People_Planet.html',
+             'Justdiggit.html', 'Trees_for_the_Future.html', 'WeForest.html'):
     cfg['slides'].setdefault('curated', {})[page] = []
 json.dump(cfg, open(CFG, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
 open(CFG, 'a').write('\n')
