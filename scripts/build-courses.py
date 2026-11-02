@@ -525,4 +525,7 @@ if __name__ == '__main__':
     _cat = _iu.spec_from_file_location('course_catalog', 'scripts/build-course-catalog.py')
     _catm = _iu.module_from_spec(_cat); _cat.loader.exec_module(_catm)
     _catm.apply()
+    _ex = _iu.spec_from_file_location('course_exports', 'scripts/build-course-exports.py')
+    _exm = _iu.module_from_spec(_ex); _ex.loader.exec_module(_exm)
+    _exm.apply()
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])
