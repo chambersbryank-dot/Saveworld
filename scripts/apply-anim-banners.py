@@ -44,17 +44,25 @@ CSS = (# one size everywhere (the Lesson_Builder standard), also over the compac
 #   (every photo is already licensed + credited there; no ESA non-commercial, no JAXA, no RU/CN/KP/IR-led sources).
 SL = CFG.get('slides', {})
 CREDIT = {}
-for _a, _i in CFG['images'].items(): CREDIT.setdefault(_i['r2'], _i)
+for _a, _i in CFG['images'].items():
+    if _i.get('r2'): CREDIT.setdefault(_i['r2'], _i)
 CUR = {'page': None}
 #   "curated": EN file -> exact photo list (wins); otherwise the page's topic pool is rotated by a stable per-page offset so
 #   neighbouring pages in a hub do not all show the same photos. "per_page": photos per banner (incl. the page's own photo).
 def extra_slides(img):
     pg = CUR['page'] or ''
-    cur = SL.get('curated', {}).get(pg)
-    pool = cur or SL.get('pools', {}).get(SL.get('pages', {}).get(pg, ''), [])
-    pool = [k for k in pool if k != img['r2'] and k in CREDIT and k in MF]
-    want = (len(pool) if cur else SL.get('per_page', 4) - 1)
-    if not cur and pool:
+    curated = SL.get('curated', {})
+    # An explicit curated list (even empty) wins. Empty means this page shows only its own photo,
+    # so a forest or orbit pool cannot put a shuttle or the ISS on ALOS-4, Eden, Astroscale or GEDI.
+    if pg in curated:
+        pool = curated[pg]
+    else:
+        pool = SL.get('pools', {}).get(SL.get('pages', {}).get(pg, ''), [])
+    own = img.get('r2') or ''
+    pool = [k for k in pool if k != own and k in CREDIT and k in MF]
+    picked = pg in curated
+    want = len(pool) if picked else SL.get('per_page', 4) - 1
+    if not picked and pool:
         o = zlib.crc32(pg.encode()) % len(pool); pool = pool[o:] + pool[:o]
     return [CREDIT[k] for k in pool[:min(want, SPX.NMAX - 1)]]
 
@@ -66,6 +74,18 @@ def strip(s):
     # mentioned 'pg-anim' lost 'sp-anim-banner' too, which un-centred the Solutions / Top Ten banners (their sp_banner layout).
     return re.sub(r'(<section class=")([^"]*\bpg-anim\b[^"]*)"', lambda m: m.group(1) + ' '.join(c for c in m.group(2).split() if c not in STRIPC) + '"', s, count=0) if 'pg-anim' in s else s
 
+def media_for(sl, lang):
+    """R2 manifest entry, or a local file when the right photo is not on R2 (ADRAS-J, ALOS-4 model)."""
+    if sl.get('r2') and sl['r2'] in MF:
+        return MF[sl['r2']]
+    path = sl.get('local')
+    if not path or not os.path.exists(path):
+        return None
+    from PIL import Image
+    w, h = Image.open(path).size
+    pre = '' if lang == 'en' else '../'
+    return {'url': pre + path, 'width': w, 'height': h}
+
 def apply(s, lang, img):
     m = re.search(r'<section class="(page-hero(?: [\w-]+)*)"([^>]*)>', s)
     if not m: return s
@@ -76,7 +96,10 @@ def apply(s, lang, img):
     for i, sl in enumerate(slides):
         # Oct 26: descriptive alt from credit (was empty; hurts Image Search + a11y). Credit tags stay in .hero-credit.
         alt = sl.get('alt') or sl.get('credit') or ''
-        p = SPB.picture(MF[sl['r2']], alt).replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
+        media = media_for(sl, lang)
+        if not media:
+            continue
+        p = SPB.picture(media, alt).replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
         if i: p = p.replace('fetchpriority="high"', 'fetchpriority="low" loading="lazy"')
         pics.append(f'<div class="spx-slide spx-{i}" aria-hidden="true">{p}</div>' if len(slides) > 1 else p)
         creds.append(f'<span class="hero-credit spx-cred spx-c{i}">{SPB._e(t(lang, sl["credit"]))}</span>' if len(slides) > 1 else
@@ -99,7 +122,7 @@ for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
     s2 = strip(s) if 'ANIMBAN' in s or 'pg-anim' in s else s
     asset = CFG['pages'].get(base)
     img = CFG['images'].get(asset) if asset else None
-    if base not in SKIP and img and img['r2'] in MF and re.search(r'<section class="page-hero', s2):
+    if base not in SKIP and img and media_for(img, lang) and re.search(r'<section class="page-hero', s2):
         s2 = re.sub(r'<!-- LCPPRE:START -->[\s\S]*?<!-- LCPPRE:END -->', '', s2)  # the CSS background is no longer used
         CUR['page'] = base; s2 = apply(s2, lang, img)
     if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1

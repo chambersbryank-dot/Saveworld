@@ -73,7 +73,24 @@ def table(headr, rows, cap=''):
     th = ''.join(f'<th scope="col">{esc(x)}</th>' for x in headr)
     return (f'<div class="crs-tw"><table class="crs-tbl">{"<caption>" + esc(cap) + "</caption>" if cap else ""}<thead><tr>{th}</tr></thead><tbody>'
             + ''.join('<tr>' + ''.join(f'<td>{esc(c)}</td>' for c in r) + '</tr>' for r in rows) + '</tbody></table></div>')
-def eqblock(K, tex, cap): return f'<figure class="crs-eq"><div class="crs-math">{K[tex]}</div><figcaption>{esc(cap)}</figcaption></figure>'
+_TEX = [('\\tau', 'τ'), ('\\mu', 'μ'), ('\\rho', 'ρ'), ('\\nu', 'ν'), ('\\theta', 'θ'), ('\\Delta', 'Δ'),
+        ('\\pi', 'π'), ('\\sigma', 'σ'), ('\\omega', 'ω'), ('\\alpha', 'α'), ('\\beta', 'β'), ('\\gamma', 'γ'),
+        ('\\cdot', '·'), ('\\times', '×'), ('\\leq', '≤'), ('\\geq', '≥'), ('\\approx', '≈'), ('\\infty', '∞'),
+        ('\\,', ' '), ('\\ ', ' ')]
+def tex_plain(tex):
+    """Readable equation text for copy and read-aloud. KaTeX's visual layer copies as broken glyphs."""
+    s = tex
+    s = re.sub(r'\\frac\{([^{}]+)\}\{([^{}]+)\}', r'(\1)/(\2)', s)
+    s = re.sub(r'\\text\{([^{}]*)\}', r'\1', s)
+    for a, b in _TEX:
+        s = s.replace(a, b)
+    s = s.replace('{', '').replace('}', '')
+    s = re.sub(r'\\[a-zA-Z]+', '', s)
+    return re.sub(r'\s+', ' ', s).strip()
+def eqblock(K, tex, cap):
+    plain = html.escape(tex_plain(tex))
+    return (f'<figure class="crs-eq"><div class="crs-math">{K[tex]}</div>'
+            f'<p class="crs-eqtext" dir="ltr">{plain}</p><figcaption>{esc(cap)}</figcaption></figure>')
 
 def _code(src, out=None):
     """Optional code listing (+ verified output) for programming courses; code is never translated. Inline style so courses.css/V need no change."""
@@ -159,6 +176,28 @@ UI = ['Score: {r} of {n}', ' (answered {a})', 'Correct. ', 'Not quite. The answe
       'Previous', 'Flip', 'Next', 'Shuffle', 'Show all', 'Clear your saved progress and quiz scores for this course?', '{d} of {n} units and labs done ({p}%).', ' Best quiz scores: {q}.']
 def ui_attr(): return '' if LANG == 'en' else ' data-ui="' + html.escape(json.dumps({k: _(k) for k in UI}, ensure_ascii=False), quote=True) + '"'
 
+WET_IDS = {'chem110', 'phys110'}  # only these lists real wet-lab glassware; every other course is a computer or home lab
+GEAR_T = {'en': 'What you need', 'fr': 'Ce qu’il vous faut', 'es': 'Qué necesitas', 'ar': 'ماذا تحتاج', 'it': 'Che cosa ti serve', 'he': 'מה צריך'}
+UPD_T = {'en': 'Last updated', 'fr': 'Dernière mise à jour', 'es': 'Última actualización', 'ar': 'آخر تحديث', 'it': 'Ultimo aggiornamento', 'he': 'עודכן לאחרונה'}
+CHK_T = {
+ 'en': 'A check is one number or code result on a course page that a script recomputes before the page is published. The printed number and the recomputed number have to match.',
+ 'fr': 'Un contrôle est un nombre ou un résultat de code sur une page de cours qu’un script recalcule avant publication. Le nombre affiché et le nombre recalculé doivent correspondre.',
+ 'es': 'Una comprobación es un número o un resultado de código en una página de curso que un script vuelve a calcular antes de publicar. El número impreso y el recalculado tienen que coincidir.',
+ 'ar': 'التحقق هو رقم أو نتيجة برمجية في صفحة مقرر يعيد سكربت حسابها قبل النشر. يجب أن يطابق الرقم المعروض الرقم المعاد حسابه.',
+ 'it': 'Un controllo è un numero o un risultato di codice in una pagina del corso che uno script ricalcola prima della pubblicazione. Il numero stampato e quello ricalcolato devono coincidere.',
+ 'he': 'בדיקה היא מספר או תוצאת קוד בעמוד קורס שסקריפט מחשב מחדש לפני הפרסום. המספר המודפס והמספר שחושב מחדש חייבים להתאים.',
+}
+SCOPE_T = {
+ 'en': 'This free course has {n} units and {m} labs. Those are the real counts, not a longer syllabus cut short.',
+ 'fr': 'Ce cours gratuit compte {n} unités et {m} travaux pratiques. Ce sont les vrais totaux, pas un programme plus long raccourci.',
+ 'es': 'Este curso gratuito tiene {n} unidades y {m} laboratorios. Son los totales reales, no un programa más largo recortado.',
+ 'ar': 'يتضمن هذا المقرر المجاني {n} وحدات و{m} مختبرات. هذه الأعداد الحقيقية وليست منهجًا أطول جرى اختصاره.',
+ 'it': 'Questo corso gratuito ha {n} unità e {m} laboratori. Sono i totali reali, non un programma più lungo accorciato.',
+ 'he': 'לקורס החינמי הזה יש {n} יחידות ו-{m} מעבדות. אלה המספרים האמיתיים, לא תוכנית ארוכה יותר שקוצרה.',
+}
+UPDATED = '2026-11-01'
+def gear_heading(C):
+    return 'Lab equipment (for the wet labs)' if C.ID in WET_IDS else None
 def course_page(C):
     texs = [t for u in C.UNITS for t, _c in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
     K = katex(texs)
@@ -168,12 +207,16 @@ def course_page(C):
     names0 = {u['id'] for u in C.UNITS}
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
+         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{UPDATED}">November 1, 2026</time></p>',
          f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
-    o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{esc(x)}</p>' for x in C.ABOUT) + '</div>'
+    scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
+    o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{esc(x)}</p>' for x in C.ABOUT)
+             + f'<p class="crs-scope">{html.escape(scope)}</p><p class="crs-check">{html.escape(CHK_T[LANG])}</p></div>'
              f'<div class="crs-planet"><h3>{esc("How this course helps save the planet")}</h3>' + ''.join(f'<p>{esc(x)}</p>' for x in C.COURSE_PLANET) + '</div>' + top() + '</section>')
     o.append(f'<section id="start"><h2>{esc("Before you start")}</h2><h3>{esc("Prerequisites")}</h3>' + ul(C.PREREQS) + f'<h3>{esc("How to study")}</h3>' + ul(C.STUDY)
-             + f'<h3>{esc("Lab equipment (for the wet labs)")}</h3>' + ul(C.LAB_GEAR) + top() + '</section>')
+             + (f'<h3>{esc(gear_heading(C))}</h3>' if gear_heading(C) else f'<h3>{html.escape(GEAR_T[LANG])}</h3>')
+             + ul(C.LAB_GEAR) + top() + '</section>')
     names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
     o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2><p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p>'
              + table(['Week', 'Unit', 'Topics', 'Reading'], [[str(w), names[u], t, r] for w, u, t, r in C.SCHEDULE]) + top() + '</section>')

@@ -38,7 +38,7 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Planetary_Defense': ('Hera.jpg', 'ESA – Science Office'),
     'Space_Weather': ('SDO_Sun.jpg', 'NASA/SDO'),
     'Space_Disposal': ('Progress_Reentry.jpg', 'NASA, ISS Expedition 29 (iss029e034092)'),
-    'Astroscale': ('Satellite_Servicing_Arm_GSFC.jpg', NASA),
+    'Astroscale': ('Astroscale_ADRAS-J_H-IIA_Stage.jpg', 'Astroscale, via Wikimedia Commons (CC BY-SA 4.0, illustration)'),
     'ClearSpace': ('ATV1_Departure_ISS.jpg', NASA),
     'PRELUDE': ('ATV1_Departure_ISS.jpg', NASA),
     'Ocean_Cleanup': ('theoceancleanup.jpg', 'Created by SI and Biological SI Partner'),
@@ -53,7 +53,7 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Living_Lakes': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
     # Oct 15 (batch 2): 17 new solutions
     'EMIT': ('EMIT_Methane_Fingerprint.jpg', 'NASA/JPL-Caltech'),
-    'GEDI': ('ISS_Flyaround_2021.jpg', 'NASA'),
+    'GEDI': ('GEDI_on_ISS_iss059e088632.jpg', 'NASA (iss059e088632, GEDI on the Kibo module)'),
     'OCO-2': ('Global_Plant_Fluorescence.jpg', 'NASA/JPL-Caltech'),
     'Sentinel-5P': ('Clouds_Limb_ISS.jpg', 'NASA'),
     'PREFIRE': ('LEO_View.jpg', 'NASA, ISS Expedition 23 crew (iss023e057948)'),

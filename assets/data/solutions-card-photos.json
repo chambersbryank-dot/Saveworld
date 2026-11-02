@@ -4,7 +4,7 @@
   "assets/Clouds_Limb_ISS.jpg": "EarthCARE.html",
   "assets/SDO_Sun.jpg": "SOLAR_1.html",
   "assets/Mississippi_River_PIA23534.jpg": "Living_Lands_and_Waters.html",
-  "assets/Kilimanjaro_STS72.jpg": "Justdiggit.html",
+  "assets/Kilimanjaro_STS72.jpg": "Eden_People_Planet.html",
   "assets/Lake_Tahoe_ISS.jpg": "Keep_Tahoe_Blue.html",
   "assets/Florida_Keys_PIA03890.jpg": "Coral_Restoration_Foundation.html",
   "assets/LEO_View.jpg": "LeoLabs.html",
@@ -675,6 +675,16 @@
    "source": "https://commons.wikimedia.org/wiki/File:Illlustration_of_Earth%27s_Magnetosphere_and_Auroras_(2005-earth-more-3_-_earth_mag_auro_illustration_label).jpg",
    "license": "public domain",
    "license_url": "https://commons.wikimedia.org/wiki/File:Illlustration_of_Earth%27s_Magnetosphere_and_Auroras_(2005-earth-more-3_-_earth_mag_auro_illustration_label).jpg"
+  },
+  "Eden_People_Planet.html": {
+   "src": "assets/Kilimanjaro_STS72.jpg",
+   "alt": "Mount Kilimanjaro and the surrounding highlands in Tanzania, seen from the Space Shuttle",
+   "credit": "NASA (STS-72)"
+  },
+  "Justdiggit.html": {
+   "src": "assets/hub/ESA_S2_Southeast_Kenya.jpg",
+   "alt": "Southeast Kenya seen by the Copernicus Sentinel-2 satellite, with green vegetated land along the coast and drier land inland",
+   "credit": "contains modified Copernicus Sentinel data (2023), processed by ESA"
   }
  }
 }

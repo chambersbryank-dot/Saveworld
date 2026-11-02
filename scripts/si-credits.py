@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Oct 15: standing rule: every SI-generated image shows the visible credit 'Created by SI and Biological SI Partner' next to that image
 (not one banner per page). SI_IMAGES lists the SI-generated stills (any extension/size variant, e.g. WebP srcset copies).
-Owner photos credited 'SI Partner' (Threetrees3, Yishan_Tree, ThreeTrees2) are NOT SI-generated and are left alone.
+Threetrees3, Yishan_Tree and ThreeTrees2 are SI-generated and use the same credit (Nov 1).
 For every <img> of an SI image (all languages) with no SI credit right after it, a <span class="si-credit"> caption is inserted after the
 image (after </picture> when wrapped). Idempotent; run late in weekly-sync.sh (after apply-heroes/optimize-images/build-ux)."""
 import re, glob, os
 SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 'Uranus',  # Oct 16: owner confirmed these 4 Project Rawane images are SI-generated
              'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps',
              # Nov 1: Hesna DELPOE picture drills. study/ pages are outside the lang scan, so the credit is also written next to each image.
-             'hesna-7426-recall', 'hesna-quickstop-recall', 'hesna-corner-recall'}
+             'hesna-7426-recall', 'hesna-quickstop-recall', 'hesna-corner-recall',
+             # Nov 1 (Site Assessor): these stills are SI-generated. The short "Photo: SI Partner" line was the wrong credit.
+             'Threetrees3', 'Yishan_Tree', 'ThreeTrees2'}
 # Oct 23 (founder): Saturn.jpg removed from SI_IMAGES: it is NASA's real Cassini mosaic PIA06193
 # (credit NASA/JPL/Space Science Institute, https://science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/).
 REAL_PHOTOS = {'Saturn'}  # real agency photos: never get the SI credit
