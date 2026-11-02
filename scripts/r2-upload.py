@@ -27,7 +27,7 @@ TYPES = {'.mp4': 'video/mp4', '.m4v': 'video/mp4', '.webm': 'video/webm', '.mov'
          '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.gif': 'image/gif', '.svg': 'image/svg+xml', '.vtt': 'text/vtt; charset=utf-8',
          '.json': 'application/json', '.pdf': 'application/pdf', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4'}
 
-def _tok(): return open('/home/box/.cloudflare_token').read().strip()
+def _tok(): return (os.environ.get('CLOUDFLARE_R2_TOKEN') or open('/home/box/.cloudflare_token').read()).strip()
 def _acc(): return open('/home/box/.cloudflare_account_id').read().strip()
 
 def api(method, key, data=None, headers=None):

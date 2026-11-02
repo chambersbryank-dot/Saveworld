@@ -174,9 +174,8 @@ def make_pdf(C, l='en'):
     html = html.replace('</head>', '<style>@media print{.crs-eqtext{display:block!important;visibility:visible!important}}</style></head>', 1)
     open(tmp, 'w', encoding='utf8').write(html)
     if os.path.exists(out): os.remove(out)
-    ud = tempfile.mkdtemp(prefix='chrome-pdf-')
     cmd = ['google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage',
-           '--no-first-run', f'--user-data-dir={ud}', '--no-pdf-header-footer', '--virtual-time-budget=12000',
+           '--no-first-run', '--no-pdf-header-footer',  # --user-data-dir and --virtual-time-budget made Chrome hang (Nov 1)
            f'--print-to-pdf={os.path.abspath(out)}', 'file://' + os.path.abspath(tmp)]
     proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
@@ -189,7 +188,6 @@ def make_pdf(C, l='en'):
             time.sleep(0.25)
     finally:
         proc.kill(); proc.wait(timeout=5)
-        shutil.rmtree(ud, ignore_errors=True)
         os.remove(tmp)
     if not os.path.exists(out) or os.path.getsize(out) < 2000:
         raise SystemExit(f'PDF failed for {src}')
@@ -489,7 +487,6 @@ if __name__ == '__main__':
         for m in MODS:
             for l in [x for x in LANGS if x == 'en' or os.path.exists(x + '/' + m.PAGE)]: print(make_pdf(m, l))
         sys.exit(0)
-    if '--pdf' in sys.argv: pass
     if '--missing' in sys.argv: export_missing(sys.argv[sys.argv.index('--missing') + 1]); sys.exit(0)
     if '--import' in sys.argv: a = sys.argv.index('--import'); import_tsv(sys.argv[a + 1], sys.argv[a + 2]); sys.exit(0)
     banners()
