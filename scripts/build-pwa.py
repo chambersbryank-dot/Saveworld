@@ -9,7 +9,7 @@ import pathlib, re, json
 from PIL import Image, ImageDraw
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LANGS = ['fr', 'es', 'ar', 'it', 'he']
-VER = '20261102d'
+VER = '20261102e'
 BG, GREEN, TEAL, THEME = (11, 58, 91), (46, 139, 87), (31, 111, 139), '#0b3a5b'
 SKIP = {'googlea5d3cc0c785fec04.html'}
 

@@ -900,8 +900,8 @@ def study_html(payload):
 <meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>Hassnaa's Four-Week HPD Study Plan | خطة حسناء الدراسية</title>
-<link rel="stylesheet" href="/styles.css?v=20261102d">
-<!-- hs-why:20261102d -->
+<link rel="stylesheet" href="/styles.css?v=20261102e">
+<!-- hs-areas:20261102e -->
 {PWA}
 <style>{CSS}</style>
 </head>
@@ -993,73 +993,130 @@ def audit_scenes():
         raise SystemExit("street cup is not drawn")
 
 
-def _cover(rows, days=28, every_day=False):
-    """Place every quiz once. Earlier days get the easier items. Empty days
-    repeat the nearest earlier item only when the section has to run every day."""
-    rows = sorted(rows, key=lambda r: (r.get("tier", 1), r.get("depth", 1), r["id"]))
-    buckets = [[] for _ in range(days)]
+# DELPOE section titles, in the guide's order. Memory is section 1.
+# Post-memory rotates sections 2–4. Two sections a day, then shown in this order.
+_GUIDE_POST = ("written", "reading", "bio")
+_GUIDE_LABELS = {
+    "written": ("Written Communication Skills", "مهارات التواصل الكتابي"),
+    "reading": ("Reading with Understanding", "القراءة بفهم"),
+    "bio": ("Biodata", "البيانات الشخصية"),
+}
+_GUIDE_NOTES = {
+    "written": (
+        "Sentence structure, grammar, and word usage. A is correct. B is incorrect.",
+        "بنية الجملة، والقواعد، واستخدام الكلمات. A صحيحة. B غير صحيحة.",
+    ),
+    "reading": (
+        "The passage stays. Answer only from it.",
+        "المقطع يبقى. أجيبي منه فقط.",
+    ),
+    "bio": (
+        "About you. One honest choice. A blank or two marks get no credit.",
+        "عنكِ. خيار صادق واحد. الفراغ أو العلامتان بلا رصيد.",
+    ),
+}
+# Written Communication Skills tests these three, in this order.
+_STRUCTURE = {"ab-fragment", "complements"}
+_USAGE = {"ab-well", "ab-homo", "prepositions", "calques", "phrasing"}
+
+
+def _focus_rank(row):
+    fam = row.get("family") or ""
+    if fam in _STRUCTURE:
+        return 0
+    if fam in _USAGE:
+        return 2
+    return 1
+
+
+def _areas_for_day(n):
+    """Day n (1–28) takes two guide sections, rotating the start, then restores guide order."""
+    start = (n - 1) % 3
+    picked = {_GUIDE_POST[start], _GUIDE_POST[(start + 1) % 3]}
+    return [area for area in _GUIDE_POST if area in picked]
+
+
+def _spread(rows, day_list):
+    """Easier rows land on earlier appearances. Later empty days repeat the hardest row."""
+    rows = sorted(rows, key=lambda r: (r.get("tier", 1), r.get("depth", 1), str(r.get("id"))))
+    buckets = {d: [] for d in day_list}
+    k = len(day_list)
     n = len(rows)
-    if not n:
+    if not k or not n:
         return buckets
-    for i, row in enumerate(rows):
-        d = min(days - 1, (i * days) // n)
-        buckets[d].append(row["id"])
-    if every_day:
-        for d in range(days):
-            if buckets[d]:
-                continue
-            src = None
-            for j in range(d, -1, -1):
-                if buckets[j]:
-                    src = buckets[j][-1]
-                    break
-            buckets[d] = [src or rows[0]["id"]]
+    if n >= k:
+        for i, row in enumerate(rows):
+            slot = min(k - 1, (i * k) // n)
+            buckets[day_list[slot]].append(row)
+    else:
+        for i, row in enumerate(rows):
+            buckets[day_list[i]].append(row)
+        hard = rows[-1]
+        for d in day_list:
+            if not buckets[d]:
+                buckets[d] = [hard]
+    prev = -1
+    for d in day_list:
+        tiers = [r.get("tier", 1) for r in buckets[d]]
+        if not tiers:
+            raise SystemExit("empty guide section on a scheduled day")
+        if min(tiers) < prev:
+            raise SystemExit("difficulty dropped")
+        prev = min(tiers)
     return buckets
 
 
-_AFTER_LABELS = {
-    "written": ("Written expression", "التعبير الكتابي"),
-    "grammar": ("Grammar, word usage, and vocabulary", "القواعد واستخدام الكلمات والمفردات"),
-    "reading": ("Reading with Understanding", "القراءة بفهم"),
-    "logic": ("Reasoning and judgment", "الاستدلال والحكم"),
-    "comp": ("Reading comprehension", "فهم المقروء"),
-    "listen": ("Radio call", "نداء لاسلكي"),
-    "obs": ("Observation scenario", "سيناريو الملاحظة"),
-}
-_AFTER_ORDER = ("written", "grammar", "reading", "logic", "comp", "listen", "obs")
-_EVERY_DAY = {"written", "grammar", "reading", "logic"}
-
-
-def _day_after(items, reads, comps, listens, obs):
+def _day_after(items, reads, comps, bio_n):
+    """Post-memory quizzes: the guide's sections, in the guide's order, rotating across 28 days."""
+    days_for = {area: [] for area in _GUIDE_POST}
+    for n in range(1, 29):
+        for area in _areas_for_day(n):
+            days_for[area].append(n)
+    written_rows = [it for it in items if it["pillar"] in ("written", "grammar")]
+    reading_rows = list(reads) + list(comps)
+    bio_rows = [{"id": i, "tier": i + 1} for i in range(bio_n)]
     banks = {
-        "written": _cover([it for it in items if it["pillar"] == "written"], every_day=True),
-        "grammar": _cover([it for it in items if it["pillar"] == "grammar"], every_day=True),
-        "logic": _cover([it for it in items if it["pillar"] == "logic"], every_day=True),
-        "reading": _cover(reads, every_day=True),
-        "comp": _cover(comps, every_day=False),
-        "listen": _cover(listens, every_day=False),
-        "obs": _cover(obs, every_day=False),
+        "written": _spread(written_rows, days_for["written"]),
+        "reading": _spread(reading_rows, days_for["reading"]),
+        "bio": _spread(bio_rows, days_for["bio"]),
     }
+    for day, rows in banks["written"].items():
+        rows.sort(key=lambda r: (_focus_rank(r), r.get("tier", 1), r["id"]))
     out = []
-    for n in range(28):
+    bio_plan = []
+    for n in range(1, 29):
         steps = []
-        for area in _AFTER_ORDER:
-            ids = banks[area][n]
-            if not ids:
+        bio = None
+        for area in _areas_for_day(n):
+            rows = banks[area][n]
+            if area == "bio":
+                ids = [r["id"] for r in rows]
+                if ids != list(range(ids[0], ids[0] + len(ids))):
+                    raise SystemExit(f"day {n} biodata slice is not contiguous")
+                bio = (ids[0], len(ids))
                 continue
-            en, ar = _AFTER_LABELS[area]
-            steps.append({"area": area, "en": en, "ar": ar, "ids": ids})
+            en, ar = _GUIDE_LABELS[area]
+            note_en, note_ar = _GUIDE_NOTES[area]
+            steps.append({
+                "area": area,
+                "en": en,
+                "ar": ar,
+                "note_en": note_en,
+                "note_ar": note_ar,
+                "ids": [r["id"] for r in rows],
+            })
         out.append(steps)
-    used = {i for steps in out for step in steps for i in step["ids"]}
-    need = {it["id"] for it in items} | {p["id"] for p in reads + comps + listens + obs}
-    missing = sorted(need - used)
-    if missing:
-        raise SystemExit("quiz not on any day: " + ",".join(missing[:12]))
-    for n, steps in enumerate(out, 1):
-        got = {s["area"] for s in steps}
-        if not _EVERY_DAY <= got:
-            raise SystemExit(f"day {n} missing {sorted(_EVERY_DAY - got)}")
-    return out
+        bio_plan.append(bio)
+    used_w = {i for rows in banks["written"].values() for r in rows for i in [r["id"]]}
+    used_r = {i for rows in banks["reading"].values() for r in rows for i in [r["id"]]}
+    need_w = {it["id"] for it in written_rows}
+    need_r = {p["id"] for p in reading_rows}
+    if need_w - used_w or need_r - used_r:
+        raise SystemExit("guide quiz missing from the rotation")
+    for area, label in (("written", "Written Communication Skills"), ("reading", "Reading with Understanding"), ("bio", "Biodata")):
+        if len(days_for[area]) < 8:
+            raise SystemExit(label + " is not repeated across the four weeks")
+    return out, bio_plan, days_for
 
 
 def main():
@@ -1101,7 +1158,8 @@ def main():
         return out
 
     reads, comps, listens, obs = (_fix_group(g) for g in (reads, comps, listens, obs))
-    after_plan = _day_after(items, reads, comps, listens, obs)
+    bio_bank = bio_items()
+    after_plan, bio_plan, guide_days = _day_after(items, reads, comps, len(bio_bank))
     # Drop callables; items are plain dicts.
     if [d["n"] for d in DAYS] != list(range(1, 29)):
         raise SystemExit("the plan must be days 1 through 28")
@@ -1123,12 +1181,9 @@ def main():
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
         row["after"] = list(after_plan[d["n"] - 1])
-        # Keep the day's original quiz counts (grammar, logic, reading, radio,
-        # observation, written A/B). Overwriting them with only A/B + reading
-        # hid every other HPD area behind the memory drill.
-        if d["n"] % 7 == 0:
-            row["bio"] = 6
-            row["bioStart"] = (d["n"] // 7 - 1) * 6
+        bio = bio_plan[d["n"] - 1]
+        if bio:
+            row["bioStart"], row["bio"] = bio
         days.append(row)
     flat = [mid for day in range(1, 29) for mid in MEM_BY_DAY[day]]
     if len(flat) != 28 * 6:
@@ -1158,7 +1213,7 @@ def main():
         "listens": listens,
         "obs": obs,
         "mem": mem,
-        "bio": bio_items(),
+        "bio": bio_bank,
     })
     STUDY.write_text(study_html(payload), encoding="utf-8")
     MEM.write_text(memory_html(), encoding="utf-8")
