@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 
 import hesna_banks
+import hesna_more
 import hesna_photo
 import hesna_scenes
 
@@ -343,36 +344,30 @@ def biodata_block():
 </section>'''
 
 
-MEM_BY_DAY = {
-    1: ["b7426-1"],
-    2: ["L1-1", "L1-2"],
-    3: ["L1-3", "L2-1"],
-    4: ["L2-2", "L2-3"],
-    5: ["b7426-2"],
-    6: ["L3-1", "L3-2"],
-    7: ["L3-3", "b7426-3"],
-    8: ["qstop-1"],
-    9: ["qstop-2"],
-    10: ["qstop-3"],
-    11: ["L4-1"],
-    12: ["L4-2"],
-    13: ["L4-3"],
-    14: ["L4-4"],
-    15: ["corner-1"],
-    16: ["corner-2"],
-    17: ["corner-3"],
-    18: ["L5-1"],
-    19: ["L5-2"],
-    20: ["L5-3"],
-    21: ["L6-1"],
-    22: ["L6-2"],
-    23: ["qstop-3"],
-    24: ["corner-2"],
-    25: ["corner-3"],
-    26: ["L6-1"],
-    27: ["L6-2"],
-    28: ["b7426-3"],
-}
+def _scenario_tests(sid):
+    if sid in ("b7426", "qstop", "corner"):
+        return [sid + "-1", sid + "-b"]
+    return [sid, sid + "-b"]
+
+
+_SCENARIOS = [
+    "L1-1", "L1-2", "L1-3", "L2-1", "L2-2", "L2-3", "L3-1",
+    "L3-2", "L3-3", "L4-1", "L4-2", "L4-3", "b7426", "qstop",
+    "L4-4", "corner", "L5-1", "L5-2", "L5-3", "L6-1", "L6-2",
+]
+_QUEUE = [tid for sid in _SCENARIOS for tid in _scenario_tests(sid)]
+if len(_QUEUE) != 42:
+    raise SystemExit("expected 42 memory tests")
+MEM_BY_DAY = {}
+_i = 0
+for _day in range(1, 15):
+    MEM_BY_DAY[_day] = [_QUEUE[_i], _QUEUE[_i + 1]]
+    _i += 2
+for _day in range(15, 29):
+    MEM_BY_DAY[_day] = [_QUEUE[_i]]
+    _i += 1
+if _i != 42:
+    raise SystemExit("memory tests were not scheduled")
 MEM_TITLES = {}
 
 
@@ -394,12 +389,18 @@ def load_memory():
     photos = {q["id"]: q for q in hesna_photo.quizzes()}
     base = json.loads((ROOT / "scripts" / "hesna_memory_base.json").read_text())
     sketches = {s["id"]: s for s in base["S"]}
-    extra = {s["id"]: s for s in hesna_scenes.new_scenes({"C": base["C"], "I": base["I"], "V": base["V"]})}
-    known = set(photos) | set(sketches) | set(extra)
+    vocab = {"C": base["C"], "I": base["I"], "V": base["V"]}
+    extra_list = hesna_scenes.new_scenes(vocab)
+    extra = {s["id"]: s for s in extra_list}
+    seconds = hesna_more.second_scenes(list(base["S"]), extra_list, vocab)
+    known = set(photos) | set(sketches) | set(extra) | set(seconds)
     assigned = {mid for ids in MEM_BY_DAY.values() for mid in ids}
     missing = sorted(known - assigned)
     if missing:
         raise SystemExit("memory drills not on a day: " + ",".join(missing))
+    extra_assigned = sorted(assigned - known)
+    if extra_assigned:
+        raise SystemExit("scheduled drill has no scene: " + ",".join(extra_assigned))
     mem = {}
     titles = {}
     for ids in MEM_BY_DAY.values():
@@ -420,11 +421,16 @@ def load_memory():
                     "blurb_ar": src["blurb"][1],
                     "qs": _qpack(src["q"]),
                 }
+                if src.get("overlay"):
+                    mem[mid]["overlay"] = src["overlay"]
             else:
-                src = sketches.get(mid) or extra.get(mid)
+                src = seconds.get(mid) or sketches.get(mid) or extra.get(mid)
                 if not src:
                     raise SystemExit("missing memory drill " + mid)
-                titles[mid] = (f"Street sketch {mid}", f"رسم الشارع {mid}")
+                if src.get("title_en"):
+                    titles[mid] = (src["title_en"], src["title_ar"])
+                else:
+                    titles[mid] = (f"{mid} · test 1 of 2", f"{mid} · الاختبار 1 من 2")
                 desc = src.get("desc") or [
                     "This scene, 2 minutes. Every question is something the picture shows.",
                     "هذا المشهد، دقيقتان. كل سؤال عن شيء تُظهره الصورة.",
@@ -569,8 +575,15 @@ def study_html(payload):
     draw = (ROOT / "scripts" / "hesna_draw.js").read_text()
     adapt = (ROOT / "scripts" / "hesna_adapt.js").read_text()
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
+    def _day_label(d):
+        ids = MEM_BY_DAY[d["n"]]
+        if len(ids) == 2:
+            return (f"Day {d['n']} — {ids[0]}, then more details", f"اليوم {d['n']} — {ids[0]}، ثم تفاصيل أكثر")
+        if ids[0].endswith("-b"):
+            return (f"Day {d['n']} — {ids[0][:-2]}, more details", f"اليوم {d['n']} — {ids[0][:-2]}، تفاصيل أكثر")
+        return (f"Day {d['n']} — {ids[0]}", f"اليوم {d['n']} — {ids[0]}")
     day_opts = "".join(
-        f'<option value="{d["n"]}" data-en="{E(d["en"])}" data-ar="{E(d["ar"])}"></option>'
+        f'<option value="{d["n"]}" data-en="{E(_day_label(d)[0])}" data-ar="{E(_day_label(d)[1])}"></option>'
         for d in DAYS
     )
     return f'''<!DOCTYPE html>
@@ -611,7 +624,11 @@ def memory_html():
     vocab = {"C": base["C"], "I": base["I"], "V": base["V"]}
     extra = hesna_scenes.new_scenes(vocab)
     photos = hesna_photo.quizzes()
-    scenes = photos + base["S"] + extra
+    seconds = list(hesna_more.second_scenes(base["S"], extra, vocab).values())
+    scenes = photos + base["S"] + extra + seconds
+    for scene in scenes:
+        if not scene.get("title"):
+            scene["title"] = [f"{scene['id']} · test 1 of 2", f"{scene['id']} · الاختبار 1 من 2"]
     first_week = {}
     order = {}
     n = 0
@@ -696,6 +713,19 @@ def main():
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
         days.append(row)
+    flat = [mid for day in range(1, 29) for mid in MEM_BY_DAY[day]]
+    if len(flat) != 42 or len(flat) % 2:
+        raise SystemExit("memory tests must come in pairs")
+    def _base(mid):
+        if mid.endswith("-b"):
+            return mid[:-2]
+        if mid.endswith("-1") and mid.split("-")[0] in ("b7426", "qstop", "corner"):
+            return mid[:-2]
+        return mid
+    for i in range(0, 42, 2):
+        a, b = flat[i], flat[i + 1]
+        if _base(a) != _base(b) or not b.endswith("-b") or a.endswith("-b"):
+            raise SystemExit(f"pair broken at {a}, {b}")
     mem, titles = load_memory()
     global MEM_TITLES
     MEM_TITLES = titles

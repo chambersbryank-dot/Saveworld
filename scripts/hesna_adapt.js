@@ -98,7 +98,7 @@
     var bar = 80;
     if (overall != null && overall >= 95) bar = 90;
     else if (overall != null && overall >= 85) bar = 85;
-    ["b7426-1", "b7426-2", "b7426-3"].forEach(function (k) {
+    ["b7426-1", "b7426-b"].forEach(function (k) {
       var s = state && state.mem && state.mem[k];
       if (s != null && s < 85) bar = Math.max(bar, 85);
     });
