@@ -61,12 +61,17 @@
   function areaOf(item) {
     if (!item) return ["This quiz", "هذا الاختبار"];
     if (item.pillar === "mem") return memArea(item.en);
-    if (item.pillar === "grammar" || item.pillar === "written") {
-      var fam = item.family && FAM_EN[item.family];
-      if (fam) return ["Grammar: " + fam, "القواعد: " + (FAM_AR[item.family] || fam)];
-      return ["Grammar", "القواعد"];
+    if (item.pillar === "written") {
+      var wfam = item.family && FAM_EN[item.family];
+      if (wfam) return ["Written expression: " + wfam, "التعبير الكتابي: " + (FAM_AR[item.family] || wfam)];
+      return ["Written expression", "التعبير الكتابي"];
     }
-    if (item.pillar === "logic") return ["Logic: rules and order", "المنطق: القواعد والترتيب"];
+    if (item.pillar === "grammar") {
+      var fam = item.family && FAM_EN[item.family];
+      if (fam) return ["Grammar and word usage: " + fam, "القواعد واستخدام الكلمات: " + (FAM_AR[item.family] || fam)];
+      return ["Grammar and word usage", "القواعد واستخدام الكلمات"];
+    }
+    if (item.pillar === "logic") return ["Reasoning and judgment", "الاستدلال والحكم"];
     if (item.pillar === "reading" || item.pillar === "comp") return ["Reading: the passage", "القراءة: المقطع"];
     if (item.pillar === "listen") return ["Listening: radio calls", "الاستماع: النداءات"];
     if (item.pillar === "obs") return ["Observation: the scene", "الملاحظة: المشهد"];
@@ -74,11 +79,11 @@
   }
   var PIL_AR = { logic: "المنطق", reading: "القراءة", comp: "الفهم", listen: "الاستماع", obs: "الملاحظة", grammar: "القواعد", written: "الكتابة" };
   var EXAM_NAME = {
-    written: ["Written Communication", "التواصل الكتابي"],
-    grammar: ["Grammar: which sentence is correct", "القواعد: أي جملة صحيحة"],
+    written: ["Written expression", "التعبير الكتابي"],
+    grammar: ["Grammar, word usage, and vocabulary", "القواعد واستخدام الكلمات والمفردات"],
     reading: ["Reading with Understanding", "القراءة بفهم"],
     comp: ["Reading comprehension", "فهم المقروء"],
-    logic: ["Logic", "المنطق"],
+    logic: ["Reasoning and judgment", "الاستدلال والحكم"],
     listen: ["Radio call", "نداء لاسلكي"],
     obs: ["Observation scenario", "سيناريو الملاحظة"]
   };
@@ -342,8 +347,12 @@
         : '<p class="hs-key">' + bi("Recall of Visual Details. A = the statement is true. B = the statement is false.", "استرجاع التفاصيل البصرية. A = العبارة صحيحة. B = العبارة خطأ.") + '</p>';
     }
     var writtenKey = item.pillar === "written"
-      ? '<p class="hs-key">' + bi("Written Communication. A = grammatically correct. B = grammatically incorrect. Ignore spelling, punctuation, and capitalization. A wrong homophone still counts.", "التواصل الكتابي. A = صحيحة نحويًا. B = غير صحيحة نحويًا. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
-      : '';
+      ? '<p class="hs-key">' + bi("Written expression. A = grammatically correct. B = grammatically incorrect. Spelling, punctuation, and capitalization are not scored. A wrong homophone still counts.", "التعبير الكتابي. A = صحيحة نحويًا. B = غير صحيحة نحويًا. الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
+      : (item.pillar === "grammar"
+        ? '<p class="hs-key">' + bi("Grammar, word usage, and vocabulary. Pick the sentence that is correct. On the exam, spelling, punctuation, and capitalization are not scored. A wrong homophone still counts.", "القواعد واستخدام الكلمات والمفردات. اختاري الجملة الصحيحة. في الامتحان، الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
+        : (item.pillar === "logic"
+          ? '<p class="hs-key">' + bi("Reasoning and judgment. Use only what the question states.", "الاستدلال والحكم. استخدمي ما يقوله السؤال فقط.") + '</p>'
+          : ''));
     var opts = "";
     item.opts.forEach(function (o, i) {
       opts += '<button type="button" class="hs-opt" data-i="' + i + '">' + optLabel(item, i) + '</button>';
@@ -391,10 +400,7 @@
     if (!row) row = { tooFastSec: session.tooFastSec, sec: sec };
     var raised = session.kind !== "repair" && session.kind !== "stretch" && A.hot(row);
     var html = panel.html;
-    if (session.day) {
-      html += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-phase="board">' + bi("Back to today's quizzes", "العودة إلى اختبارات اليوم") + "</button>";
-    }
-    html += nextControls(session.week, session.day && session.day.n);
+    if (session.day) html += nextQuizButton(session.day, (session.quizIndex || 0) + 1);
     app.innerHTML = html;
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
@@ -536,7 +542,7 @@
       return { item: q, given: answers[i], good: answers[i] === q.ans };
     });
     var title = (session.blocks[0].set.en || "Picture");
-    var panel = resultsPanel("Score", "النتيجة", lines);
+    var panel = resultsPanel("Recall of Visual Details", "استرجاع التفاصيل البصرية", lines);
     rememberQuiz(session.day.n, {
       key: "mem:" + session.memId,
       label_en: title,
@@ -546,12 +552,9 @@
     save();
     var idx = (session.memIndex || 0) + 1;
     var ids = (session.day && session.day.mem) || [];
-    var go = idx < ids.length
-      ? '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + idx + '" data-phase="mem">' + bi("Next picture", "الصورة التالية") + "</button>"
-      : "";
-    go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-phase="board">' + bi("Today's other quizzes", "اختبارات اليوم الأخرى") + "</button>";
+    var go = nextAfterMemory(session.day, idx);
     go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + (session.memIndex || 0) + '">' + bi("Retry", "أعيدي") + "</button>";
-    app.innerHTML = panel.html + go + nextControls(session.week, session.day && session.day.n);
+    app.innerHTML = panel.html + go;
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
   }
@@ -589,7 +592,8 @@
         });
         save();
         app.innerHTML = "<p>" + bi("Biodata saved. One choice each. Not scored right or wrong.", "حُفظت البيانات الشخصية. خيار واحد لكل سؤال. بلا صح أو خطأ.") + "</p>"
-          + '<button type="button" class="sp-btn" data-day="' + day.n + '" data-phase="board">' + bi("Back to today's quizzes", "العودة إلى اختبارات اليوم") + "</button>";
+          + '<p>' + bi("Day " + day.n + " is complete. The other days stay open.", "اكتمل اليوم " + day.n + ". الأيام الأخرى تبقى مفتوحة.") + "</p>"
+          + nextControls(A.weekOf(day.n), day.n);
         renderSummary(day.n);
         window.scrollTo(0, 0);
         return;
@@ -618,48 +622,72 @@
     (D.days || []).forEach(function (d) { if (d.n === n) day = d; });
     return day;
   }
-  function showDayBoard(day) {
-    clearInterval(timer);
-    var ids = day.mem || [];
-    var mem = ids.map(function (id, i) {
-      var drill = D.mem && D.mem[id];
-      var title = drill ? bi(drill.title_en || id, drill.title_ar || id) : esc(id);
-      return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="' + i + '" data-phase="mem">'
-        + bi("Memory test " + (i + 1) + " of " + ids.length, "اختبار الذاكرة " + (i + 1) + " من " + ids.length)
-        + " — " + title + "</button><p class=\"sp-ph\">"
-        + bi("Official exam area. 2 minutes, then the picture hides, then 45 questions.", "قسم الامتحان الرسمي. دقيقتان، ثم تختفي الصورة، ثم 45 سؤالًا.")
-        + "</p></li>";
-    }).join("");
-    var take = day.take || {};
-    var areas = AREA_META.filter(function (a) { return take[a.key]; }).map(function (a) {
-      return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-area="' + a.id + '">'
-        + bi(a.en + " (" + take[a.key] + ")", a.ar + " (" + take[a.key] + ")")
-        + '</button><p class="sp-ph">' + bi(a.note, a.noteAr || a.note) + "</p></li>";
-    }).join("");
-    var bio = day.bio
-      ? '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-area="bio">'
-        + bi("Biodata (" + day.bio + ", not scored)", "البيانات الشخصية (" + day.bio + "، بلا درجة)")
-        + '</button><p class="sp-ph">' + bi("Official exam area. One honest choice. A blank or two marks get no credit.", "قسم الامتحان الرسمي. خيار صادق واحد. الفراغ أو العلامتان بلا رصيد.") + "</p></li>"
-      : "";
-    app.innerHTML = '<p class="sp-ph">' + bi("Week " + A.weekOf(day.n) + " · Day " + day.n + " of 28. Nothing is locked.", "الأسبوع " + weekAr(A.weekOf(day.n)) + " · اليوم " + day.n + " من 28. لا شيء مقفل.") + "</p>"
-      + "<h2>" + bi(day.title_en, day.title_ar) + "</h2>"
-      + "<h3>" + bi("1. Memory drills", "١. تمارين الذاكرة") + "</h3><ul class=\"hs-menu\">" + mem + "</ul>"
-      + "<h3>" + bi("2. Other HPD areas", "٢. مجالات الامتحان الأخرى") + "</h3><ul class=\"hs-menu\">" + areas + bio + "</ul>";
-    window.scrollTo(0, 0);
+  function byId(list) {
+    var map = {};
+    (list || []).forEach(function (row) { map[row.id] = row; });
+    return map;
   }
-  function startArea(n, area) {
+  function blocksFor(area, ids) {
+    if (area === "written" || area === "grammar" || area === "logic") {
+      var items = byId(D.items);
+      return ids.map(function (id) { return items[id] ? { kind: "q", item: items[id] } : null; }).filter(Boolean);
+    }
+    var src = area === "reading" ? D.reads : area === "comp" ? D.comps : area === "listen" ? D.listens : D.obs;
+    var sets = byId(src);
+    var kind = area === "reading" ? "read" : area === "comp" ? "comp" : area;
+    return ids.map(function (id) { return sets[id] ? { kind: kind, set: sets[id] } : null; }).filter(Boolean);
+  }
+  function nextQuizButton(day, qi) {
+    var after = day.after || [];
+    if (qi < after.length) {
+      var step = after[qi];
+      return '<button type="button" class="sp-btn" data-day="' + day.n + '" data-quiz="' + qi + '" data-phase="quiz">'
+        + bi("Next: " + step.en, "التالي: " + step.ar) + "</button>";
+    }
+    if (day.bio) {
+      return '<button type="button" class="sp-btn" data-day="' + day.n + '" data-area="bio">'
+        + bi("Next: Biodata", "التالي: البيانات الشخصية") + "</button>";
+    }
+    return '<p>' + bi("Day " + day.n + " is complete. The other days stay open.", "اكتمل اليوم " + day.n + ". الأيام الأخرى تبقى مفتوحة.") + "</p>"
+      + nextControls(A.weekOf(day.n), day.n);
+  }
+  function nextAfterMemory(day, memIndex) {
+    var ids = day.mem || [];
+    if (memIndex < ids.length) {
+      return '<button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="' + memIndex + '" data-phase="mem">'
+        + bi("Next: memory test " + (memIndex + 1) + " of " + ids.length, "التالي: اختبار الذاكرة " + (memIndex + 1) + " من " + ids.length)
+        + "</button>";
+    }
+    return nextQuizButton(day, 0);
+  }
+  function startQuiz(n, qi) {
     load();
     var day = findDay(n);
     if (!day) return;
-    if (area === "bio") { startBio(day); return; }
-    var built = A.planSession(day, D, state, area);
-    built.kind = "period";
-    built.week = A.weekOf(day.n);
-    session = built;
-    session.day = day;
-    session.exam = area;
-    if (!session.nQ) { showDayBoard(day); return; }
-    steps = flatten(session.blocks);
+    var step = (day.after || [])[qi];
+    if (!step) {
+      if (day.bio) startBio(day);
+      else {
+        app.innerHTML = '<p>' + bi("Day " + day.n + " is complete. The other days stay open.", "اكتمل اليوم " + day.n + ". الأيام الأخرى تبقى مفتوحة.") + "</p>"
+          + nextControls(A.weekOf(day.n), day.n);
+      }
+      return;
+    }
+    var blocks = blocksFor(step.area, step.ids || []);
+    if (!blocks.length) { startQuiz(n, qi + 1); return; }
+    session = {
+      kind: "period",
+      week: A.weekOf(day.n),
+      day: day,
+      exam: step.area,
+      quizIndex: qi,
+      blocks: blocks,
+      tier: day.tier || 1,
+      tooFastSec: (day.tooFastMin || 20) * 60,
+      nQ: A.countQ(blocks),
+      banner: null
+    };
+    steps = flatten(blocks);
     t0 = Date.now();
     cursor = 0;
     answers = [];
@@ -682,12 +710,12 @@
     renderSummary(day.n);
     var ids = day.mem || [];
     var i = memIndex || 0;
-    if (phase === "mem" && i < ids.length && D.mem && D.mem[ids[i]]) {
+    if (i < ids.length && D.mem && D.mem[ids[i]]) {
       beginMemory({ memory: D.mem[ids[i]], day: day, week: A.weekOf(day.n), memIndex: i });
       window.scrollTo(0, 0);
       return;
     }
-    showDayBoard(day);
+    startQuiz(day.n, 0);
   }
 
   function paintDays() {
@@ -709,22 +737,27 @@
     if (jump && jump[1]) openDay = +jump[1];
     else if (jump && jump[2]) openDay = (+jump[2] - 1) * 7 + 1;
     var sel = document.getElementById("hs-day");
-    if (sel) sel.addEventListener("change", function () { startDay(+sel.value, 0, "board"); });
+    if (sel) sel.addEventListener("change", function () { startDay(+sel.value, 0, "mem"); });
     var toggle = document.getElementById("sp-toggle");
     if (toggle) toggle.addEventListener("click", function () { setTimeout(paintDays, 0); });
-    startDay(openDay, 0, "board");
+    startDay(openDay, 0, "mem");
     document.body.addEventListener("click", function (e) {
       var b = e.target.closest("[data-day],[data-week],[data-area]");
       if (!b) return;
-      if (b.hasAttribute("data-area")) {
-        startArea(+b.getAttribute("data-day"), b.getAttribute("data-area"));
+      if (b.getAttribute("data-phase") === "quiz") {
+        startQuiz(+b.getAttribute("data-day"), +(b.getAttribute("data-quiz") || 0));
+        return;
+      }
+      if (b.getAttribute("data-area") === "bio") {
+        var bioDay = findDay(+b.getAttribute("data-day"));
+        if (bioDay) startBio(bioDay);
         return;
       }
       if (b.hasAttribute("data-day")) {
-        startDay(+b.getAttribute("data-day"), +(b.getAttribute("data-mem") || 0), b.getAttribute("data-phase") || "board");
+        startDay(+b.getAttribute("data-day"), +(b.getAttribute("data-mem") || 0), "mem");
         return;
       }
-      startDay((+b.getAttribute("data-week") - 1) * 7 + 1, 0, "board");
+      startDay((+b.getAttribute("data-week") - 1) * 7 + 1, 0, "mem");
     });
     var reset = document.getElementById("hs-reset");
     if (reset) reset.onclick = function () {
@@ -734,7 +767,7 @@
       state = { seen: {}, fam: {}, pillar: {}, days: {}, weeks: {} };
       save();
       renderSummary(1);
-      startDay(1, 0, "board");
+      startDay(1, 0, "mem");
     };
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

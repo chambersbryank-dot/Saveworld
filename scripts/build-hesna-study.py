@@ -919,6 +919,75 @@ def audit_scenes():
         raise SystemExit("street cup is not drawn")
 
 
+def _cover(rows, days=28, every_day=False):
+    """Place every quiz once. Earlier days get the easier items. Empty days
+    repeat the nearest earlier item only when the section has to run every day."""
+    rows = sorted(rows, key=lambda r: (r.get("tier", 1), r.get("depth", 1), r["id"]))
+    buckets = [[] for _ in range(days)]
+    n = len(rows)
+    if not n:
+        return buckets
+    for i, row in enumerate(rows):
+        d = min(days - 1, (i * days) // n)
+        buckets[d].append(row["id"])
+    if every_day:
+        for d in range(days):
+            if buckets[d]:
+                continue
+            src = None
+            for j in range(d, -1, -1):
+                if buckets[j]:
+                    src = buckets[j][-1]
+                    break
+            buckets[d] = [src or rows[0]["id"]]
+    return buckets
+
+
+_AFTER_LABELS = {
+    "written": ("Written expression", "التعبير الكتابي"),
+    "grammar": ("Grammar, word usage, and vocabulary", "القواعد واستخدام الكلمات والمفردات"),
+    "reading": ("Reading with Understanding", "القراءة بفهم"),
+    "logic": ("Reasoning and judgment", "الاستدلال والحكم"),
+    "comp": ("Reading comprehension", "فهم المقروء"),
+    "listen": ("Radio call", "نداء لاسلكي"),
+    "obs": ("Observation scenario", "سيناريو الملاحظة"),
+}
+_AFTER_ORDER = ("written", "grammar", "reading", "logic", "comp", "listen", "obs")
+_EVERY_DAY = {"written", "grammar", "reading", "logic"}
+
+
+def _day_after(items, reads, comps, listens, obs):
+    banks = {
+        "written": _cover([it for it in items if it["pillar"] == "written"], every_day=True),
+        "grammar": _cover([it for it in items if it["pillar"] == "grammar"], every_day=True),
+        "logic": _cover([it for it in items if it["pillar"] == "logic"], every_day=True),
+        "reading": _cover(reads, every_day=True),
+        "comp": _cover(comps, every_day=False),
+        "listen": _cover(listens, every_day=False),
+        "obs": _cover(obs, every_day=False),
+    }
+    out = []
+    for n in range(28):
+        steps = []
+        for area in _AFTER_ORDER:
+            ids = banks[area][n]
+            if not ids:
+                continue
+            en, ar = _AFTER_LABELS[area]
+            steps.append({"area": area, "en": en, "ar": ar, "ids": ids})
+        out.append(steps)
+    used = {i for steps in out for step in steps for i in step["ids"]}
+    need = {it["id"] for it in items} | {p["id"] for p in reads + comps + listens + obs}
+    missing = sorted(need - used)
+    if missing:
+        raise SystemExit("quiz not on any day: " + ",".join(missing[:12]))
+    for n, steps in enumerate(out, 1):
+        got = {s["area"] for s in steps}
+        if not _EVERY_DAY <= got:
+            raise SystemExit(f"day {n} missing {sorted(_EVERY_DAY - got)}")
+    return out
+
+
 def main():
     audit_scenes()
     photo_stats = hesna_photo.check()
@@ -926,6 +995,7 @@ def main():
     stats["photos"] = photo_stats
     reads, comps, listens, obs = hesna_banks.passages()
     items = hesna_banks.all_items()
+    after_plan = _day_after(items, reads, comps, listens, obs)
     # Drop callables; items are plain dicts.
     if [d["n"] for d in DAYS] != list(range(1, 29)):
         raise SystemExit("the plan must be days 1 through 28")
@@ -946,6 +1016,7 @@ def main():
         if d.get("stretchTake"):
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
+        row["after"] = list(after_plan[d["n"] - 1])
         # Keep the day's original quiz counts (grammar, logic, reading, radio,
         # observation, written A/B). Overwriting them with only A/B + reading
         # hid every other HPD area behind the memory drill.
