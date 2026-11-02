@@ -58,34 +58,51 @@
     if (/how many|count/.test(s)) return ["Memory: counts", "الذاكرة: الأعداد"];
     return ["Memory: scene details", "الذاكرة: تفاصيل المشهد"];
   }
+  var GUIDE_SECTIONS = [
+    { key: "visual", en: "Recall of Visual Details", ar: "استرجاع التفاصيل البصرية" },
+    { key: "written", en: "Written Communication Skills", ar: "مهارات التواصل الكتابي" },
+    { key: "reading", en: "Reading with Understanding", ar: "القراءة بفهم" },
+    { key: "bio", en: "Biodata", ar: "البيانات الشخصية" }
+  ];
+  var FOCUS_ORDER = ["structure", "grammar", "usage"];
+  var FOCUS_NAME = {
+    structure: ["sentence structure", "بنية الجملة"],
+    grammar: ["grammar", "القواعد"],
+    usage: ["word usage", "استخدام الكلمات"]
+  };
+  var STRUCTURE_FAM = { "ab-fragment": 1, complements: 1 };
+  var USAGE_FAM = { "ab-well": 1, "ab-homo": 1, prepositions: 1, calques: 1, phrasing: 1 };
+  function writtenFocus(item) {
+    var fam = item && item.family;
+    if (STRUCTURE_FAM[fam]) return "structure";
+    if (USAGE_FAM[fam]) return "usage";
+    return "grammar";
+  }
+  function sectionOf(item) {
+    if (!item || item.pillar === "mem") return "visual";
+    if (item.pillar === "written" || item.pillar === "grammar") return "written";
+    if (item.pillar === "reading" || item.pillar === "comp") return "reading";
+    return "reading";
+  }
   function areaOf(item) {
-    if (!item) return ["This quiz", "هذا الاختبار"];
-    if (item.pillar === "mem") return memArea(item.en);
-    if (item.pillar === "written") {
-      var wfam = item.family && FAM_EN[item.family];
-      if (wfam) return ["Written expression: " + wfam, "التعبير الكتابي: " + (FAM_AR[item.family] || wfam)];
-      return ["Written expression", "التعبير الكتابي"];
+    var key = sectionOf(item);
+    var sec = GUIDE_SECTIONS.filter(function (s) { return s.key === key; })[0] || GUIDE_SECTIONS[0];
+    if (key === "written") {
+      var focus = FOCUS_NAME[writtenFocus(item)];
+      return [sec.en + ": " + focus[0], sec.ar + ": " + focus[1]];
     }
-    if (item.pillar === "grammar") {
-      var fam = item.family && FAM_EN[item.family];
-      if (fam) return ["Grammar and word usage: " + fam, "القواعد واستخدام الكلمات: " + (FAM_AR[item.family] || fam)];
-      return ["Grammar and word usage", "القواعد واستخدام الكلمات"];
-    }
-    if (item.pillar === "logic") return ["Reasoning and judgment", "الاستدلال والحكم"];
-    if (item.pillar === "reading" || item.pillar === "comp") return ["Reading: the passage", "القراءة: المقطع"];
-    if (item.pillar === "listen") return ["Listening: radio calls", "الاستماع: النداءات"];
-    if (item.pillar === "obs") return ["Observation: the scene", "الملاحظة: المشهد"];
-    return ["This quiz", "هذا الاختبار"];
+    if (key === "visual") return memArea(item && item.en);
+    return [sec.en, sec.ar];
   }
   var PIL_AR = { logic: "المنطق", reading: "القراءة", comp: "الفهم", listen: "الاستماع", obs: "الملاحظة", grammar: "القواعد", written: "الكتابة" };
   var EXAM_NAME = {
-    written: ["Written expression", "التعبير الكتابي"],
-    grammar: ["Grammar, word usage, and vocabulary", "القواعد واستخدام الكلمات والمفردات"],
+    written: ["Written Communication Skills", "مهارات التواصل الكتابي"],
+    grammar: ["Written Communication Skills", "مهارات التواصل الكتابي"],
     reading: ["Reading with Understanding", "القراءة بفهم"],
-    comp: ["Reading comprehension", "فهم المقروء"],
-    logic: ["Reasoning and judgment", "الاستدلال والحكم"],
-    listen: ["Radio call", "نداء لاسلكي"],
-    obs: ["Observation scenario", "سيناريو الملاحظة"]
+    comp: ["Reading with Understanding", "القراءة بفهم"],
+    logic: ["Written Communication Skills", "مهارات التواصل الكتابي"],
+    listen: ["Reading with Understanding", "القراءة بفهم"],
+    obs: ["Recall of Visual Details", "استرجاع التفاصيل البصرية"]
   };
   var AREA_META = [
     { id: "written", key: "ab", en: "Written Communication", ar: "التواصل الكتابي", note: "Official exam area. A means the sentence is correct. B means it is not.", noteAr: "قسم الامتحان الرسمي. A تعني الجملة صحيحة. B تعني أنها ليست كذلك." },
@@ -111,11 +128,18 @@
     var row = state.days && state.days[String(dayN)];
     var list = (row && row.quizzes) || [];
     if (!list.length) { el.innerHTML = ""; return; }
-    el.innerHTML = "<h2>" + bi("Today", "هذا اليوم") + "</h2><ul>"
-      + list.map(function (q) {
+    var html = "<h2>" + bi("Today", "هذا اليوم") + "</h2>";
+    GUIDE_SECTIONS.forEach(function (sec) {
+      var rows = list.filter(function (q) { return (q.guide || "written") === sec.key; });
+      if (!rows.length) return;
+      html += "<h3>" + bi(sec.en, sec.ar) + "</h3><ul>" + rows.map(function (q) {
         if (q.key === "bio") return "<li>" + bi(q.label_en, q.label_ar) + "</li>";
-        return "<li>" + bi(q.label_en + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")", q.label_ar + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")") + "</li>";
+        var lineEn = q.guide === "visual" ? q.label_en + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")" : q.pct + "% (" + q.ok + "/" + q.n + ")";
+        var lineAr = q.guide === "visual" ? q.label_ar + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")" : q.pct + "% (" + q.ok + "/" + q.n + ")";
+        return "<li>" + bi(lineEn, lineAr) + "</li>";
       }).join("") + "</ul>";
+    });
+    el.innerHTML = html;
   }
   function rememberQuiz(dayN, rec) {
     state.days = state.days || {};
@@ -144,17 +168,38 @@
     var ok = lines.filter(function (l) { return l.good; }).length;
     var n = lines.length;
     var pct = n ? Math.round(100 * ok / n) : 0;
-    var seen = {};
-    var areas = [];
+    var buckets = {};
     lines.forEach(function (ln) {
       if (ln.good) return;
+      var key = sectionOf(ln.item);
+      if (!buckets[key]) buckets[key] = {};
       var area = areaOf(ln.item);
-      if (seen[area[0]]) return;
-      seen[area[0]] = true;
-      areas.push(area);
+      buckets[key][area[0]] = area;
     });
-    var study = areas.length
-      ? "<ul>" + areas.map(function (a) { return "<li>" + bi(a[0], a[1]) + "</li>"; }).join("") + "</ul>"
+    var studyBits = GUIDE_SECTIONS.filter(function (sec) { return buckets[sec.key]; }).map(function (sec) {
+      var subs = Object.keys(buckets[sec.key]).map(function (name) { return buckets[sec.key][name]; });
+      if (sec.key === "written") {
+        subs.sort(function (a, b) {
+          function rank(label) {
+            var found = FOCUS_ORDER.length;
+            FOCUS_ORDER.forEach(function (f, n) {
+              if (label.indexOf(": " + FOCUS_NAME[f][0]) >= 0) found = n;
+            });
+            return found;
+          }
+          return rank(a[0]) - rank(b[0]);
+        });
+      }
+      var inner = subs.map(function (a) {
+        var label = sec.key === "written" ? a : (sec.key === "visual" ? a : null);
+        if (!label || label[0] === sec.en) return "";
+        var text = sec.key === "written" ? [a[0].split(": ").slice(1).join(": "), a[1].split(": ").slice(1).join(": ")] : a;
+        return "<li>" + bi(text[0], text[1]) + "</li>";
+      }).filter(Boolean).join("");
+      return "<li>" + bi(sec.en, sec.ar) + (inner ? "<ul>" + inner + "</ul>" : "") + "</li>";
+    });
+    var study = studyBits.length
+      ? "<ul>" + studyBits.join("") + "</ul>"
       : "<p>" + bi("Nothing to review on this quiz.", "لا شيء للمراجعة في هذا الاختبار.") + "</p>";
     var misses = lines.filter(function (l) { return !l.good; });
     var missHtml = misses.length
@@ -353,12 +398,10 @@
         : '<p class="hs-key">' + bi("Recall of Visual Details. A = the statement is true. B = the statement is false.", "استرجاع التفاصيل البصرية. A = العبارة صحيحة. B = العبارة خطأ.") + '</p>';
     }
     var writtenKey = item.pillar === "written"
-      ? '<p class="hs-key">' + bi("Written expression. A = grammatically correct. B = grammatically incorrect. Spelling, punctuation, and capitalization are not scored. A wrong homophone still counts.", "التعبير الكتابي. A = صحيحة نحويًا. B = غير صحيحة نحويًا. الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
+      ? '<p class="hs-key">' + bi("Written Communication Skills. A = grammatically correct. B = grammatically incorrect. This section tests sentence structure, grammar, and word usage. Spelling, punctuation, and capitalization are not scored. A wrong homophone is a word usage error.", "مهارات التواصل الكتابي. A = صحيحة نحويًا. B = غير صحيحة نحويًا. هذا القسم يختبر بنية الجملة والقواعد واستخدام الكلمات. الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب. والكلمة المتشابهة إذا غُلِط فيها خطأ في استخدام الكلمات.") + '</p>'
       : (item.pillar === "grammar"
-        ? '<p class="hs-key">' + bi("Grammar, word usage, and vocabulary. Pick the sentence that is correct. On the exam, spelling, punctuation, and capitalization are not scored. A wrong homophone still counts.", "القواعد واستخدام الكلمات والمفردات. اختاري الجملة الصحيحة. في الامتحان، الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
-        : (item.pillar === "logic"
-          ? '<p class="hs-key">' + bi("Reasoning and judgment. Use only what the question states.", "الاستدلال والحكم. استخدمي ما يقوله السؤال فقط.") + '</p>'
-          : ''));
+        ? '<p class="hs-key">' + bi("Written Communication Skills. Sentence structure, grammar, and word usage. Pick the sentence that is correct. Spelling, punctuation, and capitalization are not scored.", "مهارات التواصل الكتابي. بنية الجملة والقواعد واستخدام الكلمات. اختاري الجملة الصحيحة. الإملاء وعلامات الترقيم وحالة الحرف لا تُحسب.") + '</p>'
+        : '');
     var opts = "";
     item.opts.forEach(function (o, i) {
       opts += '<button type="button" class="hs-opt" data-i="' + i + '">' + optLabel(item, i) + '</button>';
@@ -398,6 +441,7 @@
     var panel = resultsPanel(examName[0], examName[1], lines);
     rememberQuiz(session.day.n, {
       key: session.exam || "written",
+      guide: session.exam === "reading" || session.exam === "comp" ? "reading" : "written",
       label_en: examName[0],
       label_ar: examName[1],
       pct: panel.pct, ok: panel.ok, n: panel.n
@@ -554,6 +598,7 @@
     var panel = resultsPanel("Recall of Visual Details", "استرجاع التفاصيل البصرية", lines);
     rememberQuiz(session.day.n, {
       key: "mem:" + session.memId,
+      guide: "visual",
       label_en: title,
       label_ar: session.blocks[0].set.ar || title,
       pct: panel.pct, ok: panel.ok, n: panel.n
@@ -596,8 +641,9 @@
       if (i >= items.length) {
         rememberQuiz(day.n, {
           key: "bio",
-          label_en: "Biodata: " + picks.length + " answered, not scored",
-          label_ar: "البيانات الشخصية: " + picks.length + " إجابة، بلا درجة"
+          guide: "bio",
+          label_en: picks.length + " answered, not scored",
+          label_ar: picks.length + " إجابة، بلا درجة"
         });
         save();
         app.innerHTML = "<p>" + bi("Biodata saved. One choice each. Not scored right or wrong.", "حُفظت البيانات الشخصية. خيار واحد لكل سؤال. بلا صح أو خطأ.") + "</p>"
@@ -642,10 +688,17 @@
       var items = byId(D.items);
       return ids.map(function (id) { return items[id] ? { kind: "q", item: items[id] } : null; }).filter(Boolean);
     }
-    var src = area === "reading" ? D.reads : area === "comp" ? D.comps : area === "listen" ? D.listens : D.obs;
-    var sets = byId(src);
-    var kind = area === "reading" ? "read" : area === "comp" ? "comp" : area;
-    return ids.map(function (id) { return sets[id] ? { kind: kind, set: sets[id] } : null; }).filter(Boolean);
+    if (area === "reading") {
+      var sets = byId((D.reads || []).concat(D.comps || []));
+      return ids.map(function (id) {
+        var set = sets[id];
+        return set ? { kind: set.pillar === "comp" ? "comp" : "read", set: set } : null;
+      }).filter(Boolean);
+    }
+    var src = area === "comp" ? D.comps : area === "listen" ? D.listens : D.obs;
+    var kind = area === "comp" ? "comp" : area;
+    var only = byId(src);
+    return ids.map(function (id) { return only[id] ? { kind: kind, set: only[id] } : null; }).filter(Boolean);
   }
   function dayBoardButton(day) {
     return '<button type="button" class="sp-btn" data-day="' + day.n + '" data-phase="board">'
@@ -658,24 +711,25 @@
       var drill = D.mem && D.mem[id];
       var title = drill ? bi(drill.title_en || id, drill.title_ar || id) : esc(id);
       return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="' + i + '" data-phase="mem">'
-        + bi("Memory test " + (i + 1) + " of " + ids.length, "اختبار الذاكرة " + (i + 1) + " من " + ids.length)
+        + bi("Recall of Visual Details · test " + (i + 1) + " of " + ids.length, "استرجاع التفاصيل البصرية · الاختبار " + (i + 1) + " من " + ids.length)
         + " — " + title + "</button></li>";
     }).join("");
     var areas = (day.after || []).map(function (step, qi) {
+      var note = step.note_en ? '<p class="sp-ph">' + bi(step.note_en, step.note_ar || step.note_en) + "</p>" : "";
       return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-quiz="' + qi + '" data-phase="quiz">'
-        + bi(step.en, step.ar) + "</button></li>";
+        + bi(step.en, step.ar) + "</button>" + note + "</li>";
     }).join("");
     var bio = day.bio
       ? '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-area="bio">'
-        + bi("Biodata (" + day.bio + ", not scored)", "البيانات الشخصية (" + day.bio + "، بلا درجة)")
-        + "</button></li>"
+        + bi("Biodata", "البيانات الشخصية")
+        + '</button><p class="sp-ph">' + bi("About you. One honest choice. A blank or two marks get no credit.", "عنكِ. خيار صادق واحد. الفراغ أو العلامتان بلا رصيد.") + "</p></li>"
       : "";
     app.innerHTML = '<p class="sp-ph">' + bi(
       "Week " + A.weekOf(day.n) + " · Day " + day.n + " of 28. Nothing is locked.",
       "الأسبوع " + weekAr(A.weekOf(day.n)) + " · اليوم " + day.n + " من 28. لا شيء مقفل.") + "</p>"
       + "<h2>" + bi(day.title_en, day.title_ar) + "</h2>"
-      + "<h3>" + bi("1. Memory drills", "١. تمارين الذاكرة") + "</h3><ul class=\"hs-menu\">" + mem + "</ul>"
-      + "<h3>" + bi("2. Other HPD areas", "٢. مجالات الامتحان الأخرى") + "</h3><ul class=\"hs-menu\">" + areas + bio + "</ul>";
+      + "<h3>" + bi("1. Recall of Visual Details", "١. استرجاع التفاصيل البصرية") + "</h3><ul class=\"hs-menu\">" + mem + "</ul>"
+      + "<h3>" + bi("2. The other guide sections", "٢. أقسام الدليل الأخرى") + "</h3><ul class=\"hs-menu\">" + areas + bio + "</ul>";
     window.scrollTo(0, 0);
   }
   function nextQuizButton(day, qi) {
