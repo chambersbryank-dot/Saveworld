@@ -200,6 +200,7 @@ def ui_attr(): return '' if LANG == 'en' else ' data-ui="' + html.escape(json.du
 WET_IDS = {'chem110', 'phys110'}  # only these lists real wet-lab glassware; every other course is a computer or home lab
 GEAR_T = {'en': 'What you need', 'fr': 'Ce qu’il vous faut', 'es': 'Qué necesitas', 'ar': 'ماذا تحتاج', 'it': 'Che cosa ti serve', 'he': 'מה צריך'}
 UPD_T = {'en': 'Last updated', 'fr': 'Dernière mise à jour', 'es': 'Última actualización', 'ar': 'آخر تحديث', 'it': 'Ultimo aggiornamento', 'he': 'עודכן לאחרונה'}
+VER_T = {'en': 'Version', 'fr': 'Version', 'es': 'Versión', 'ar': 'الإصدار', 'it': 'Versione', 'he': 'גרסה'}
 CHK_T = {
  'en': 'A check is one number or code result on a course page that a script recomputes before the page is published. The printed number and the recomputed number have to match.',
  'fr': 'Un contrôle est un nombre ou un résultat de code sur une page de cours qu’un script recalcule avant publication. Le nombre affiché et le nombre recalculé doivent correspondre.',
@@ -217,6 +218,7 @@ SCOPE_T = {
  'he': 'לקורס החינמי הזה יש {n} יחידות ו-{m} מעבדות. אלה המספרים האמיתיים, לא תוכנית ארוכה יותר שקוצרה.',
 }
 UPDATED = '2026-11-01'
+VERSION = '2026.11.01'
 def gear_heading(C):
     return 'Lab equipment (for the wet labs)' if C.ID in WET_IDS else None
 def course_page(C):
@@ -228,7 +230,7 @@ def course_page(C):
     names0 = {u['id'] for u in C.UNITS}
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
-         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{UPDATED}">November 1, 2026</time></p>',
+         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{UPDATED}">November 1, 2026</time> · {html.escape(VER_T[LANG])} {VERSION}</p>',
          f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
