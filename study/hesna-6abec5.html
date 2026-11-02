@@ -4,7 +4,8 @@
 <meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>Hassnaa's Four-Week HPD Study Plan | خطة حسناء الدراسية</title>
-<link rel="stylesheet" href="/styles.css?v=20261026b">
+<link rel="stylesheet" href="/styles.css?v=20261102c">
+<!-- hs-day-menu:20261102c -->
 <!-- PWA:START --><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0b3a5b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Saving Planets"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- PWA:END -->
 <style>
 body{max-width:1100px;margin:0 auto;padding:1rem 1rem 3rem}
@@ -1402,7 +1403,10 @@ function hesnaScene(s) {
     if (!row) row = { tooFastSec: session.tooFastSec, sec: sec };
     var raised = session.kind !== "repair" && session.kind !== "stretch" && A.hot(row);
     var html = panel.html;
-    if (session.day) html += nextQuizButton(session.day, (session.quizIndex || 0) + 1);
+    if (session.day) {
+      html += nextQuizButton(session.day, (session.quizIndex || 0) + 1);
+      html += dayBoardButton(session.day);
+    }
     app.innerHTML = html;
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
@@ -1553,9 +1557,9 @@ function hesnaScene(s) {
     });
     save();
     var idx = (session.memIndex || 0) + 1;
-    var ids = (session.day && session.day.mem) || [];
     var go = nextAfterMemory(session.day, idx);
-    go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + (session.memIndex || 0) + '">' + bi("Retry", "أعيدي") + "</button>";
+    go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + (session.memIndex || 0) + '" data-phase="mem">' + bi("Retry", "أعيدي") + "</button>";
+    go += dayBoardButton(session.day);
     app.innerHTML = panel.html + go;
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
@@ -1595,6 +1599,7 @@ function hesnaScene(s) {
         save();
         app.innerHTML = "<p>" + bi("Biodata saved. One choice each. Not scored right or wrong.", "حُفظت البيانات الشخصية. خيار واحد لكل سؤال. بلا صح أو خطأ.") + "</p>"
           + '<p>' + bi("Day " + day.n + " is complete. The other days stay open.", "اكتمل اليوم " + day.n + ". الأيام الأخرى تبقى مفتوحة.") + "</p>"
+          + dayBoardButton(day)
           + nextControls(A.weekOf(day.n), day.n);
         renderSummary(day.n);
         window.scrollTo(0, 0);
@@ -1638,6 +1643,37 @@ function hesnaScene(s) {
     var sets = byId(src);
     var kind = area === "reading" ? "read" : area === "comp" ? "comp" : area;
     return ids.map(function (id) { return sets[id] ? { kind: kind, set: sets[id] } : null; }).filter(Boolean);
+  }
+  function dayBoardButton(day) {
+    return '<button type="button" class="sp-btn" data-day="' + day.n + '" data-phase="board">'
+      + bi("Today's quiz list", "قائمة اختبارات اليوم") + "</button>";
+  }
+  function showDayBoard(day) {
+    clearInterval(timer);
+    var ids = day.mem || [];
+    var mem = ids.map(function (id, i) {
+      var drill = D.mem && D.mem[id];
+      var title = drill ? bi(drill.title_en || id, drill.title_ar || id) : esc(id);
+      return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="' + i + '" data-phase="mem">'
+        + bi("Memory test " + (i + 1) + " of " + ids.length, "اختبار الذاكرة " + (i + 1) + " من " + ids.length)
+        + " — " + title + "</button></li>";
+    }).join("");
+    var areas = (day.after || []).map(function (step, qi) {
+      return '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-quiz="' + qi + '" data-phase="quiz">'
+        + bi(step.en, step.ar) + "</button></li>";
+    }).join("");
+    var bio = day.bio
+      ? '<li><button type="button" class="sp-btn" data-day="' + day.n + '" data-area="bio">'
+        + bi("Biodata (" + day.bio + ", not scored)", "البيانات الشخصية (" + day.bio + "، بلا درجة)")
+        + "</button></li>"
+      : "";
+    app.innerHTML = '<p class="sp-ph">' + bi(
+      "Week " + A.weekOf(day.n) + " · Day " + day.n + " of 28. Nothing is locked.",
+      "الأسبوع " + weekAr(A.weekOf(day.n)) + " · اليوم " + day.n + " من 28. لا شيء مقفل.") + "</p>"
+      + "<h2>" + bi(day.title_en, day.title_ar) + "</h2>"
+      + "<h3>" + bi("1. Memory drills", "١. تمارين الذاكرة") + "</h3><ul class=\"hs-menu\">" + mem + "</ul>"
+      + "<h3>" + bi("2. Other HPD areas", "٢. مجالات الامتحان الأخرى") + "</h3><ul class=\"hs-menu\">" + areas + bio + "</ul>";
+    window.scrollTo(0, 0);
   }
   function nextQuizButton(day, qi) {
     var after = day.after || [];
@@ -1712,12 +1748,12 @@ function hesnaScene(s) {
     renderSummary(day.n);
     var ids = day.mem || [];
     var i = memIndex || 0;
-    if (i < ids.length && D.mem && D.mem[ids[i]]) {
+    if (phase === "mem" && i < ids.length && D.mem && D.mem[ids[i]]) {
       beginMemory({ memory: D.mem[ids[i]], day: day, week: A.weekOf(day.n), memIndex: i });
       window.scrollTo(0, 0);
       return;
     }
-    startQuiz(day.n, 0);
+    showDayBoard(day);
   }
 
   function paintDays() {
@@ -1739,13 +1775,13 @@ function hesnaScene(s) {
     if (jump && jump[1]) openDay = +jump[1];
     else if (jump && jump[2]) openDay = (+jump[2] - 1) * 7 + 1;
     var sel = document.getElementById("hs-day");
-    if (sel) sel.addEventListener("change", function () { startDay(+sel.value, 0, "mem"); });
+    if (sel) sel.addEventListener("change", function () { startDay(+sel.value, 0, "board"); });
     var toggle = document.getElementById("sp-toggle");
     if (toggle) toggle.addEventListener("click", function () { setTimeout(paintDays, 0); });
-    startDay(openDay, 0, "mem");
+    startDay(openDay, 0, "board");
     document.body.addEventListener("click", function (e) {
       var b = e.target.closest("[data-day],[data-week],[data-area]");
-      if (!b) return;
+      if (!b || b.disabled) return;
       if (b.getAttribute("data-phase") === "quiz") {
         startQuiz(+b.getAttribute("data-day"), +(b.getAttribute("data-quiz") || 0));
         return;
@@ -1756,10 +1792,10 @@ function hesnaScene(s) {
         return;
       }
       if (b.hasAttribute("data-day")) {
-        startDay(+b.getAttribute("data-day"), +(b.getAttribute("data-mem") || 0), "mem");
+        startDay(+b.getAttribute("data-day"), +(b.getAttribute("data-mem") || 0), b.getAttribute("data-phase") || "board");
         return;
       }
-      startDay((+b.getAttribute("data-week") - 1) * 7 + 1, 0, "mem");
+      startDay((+b.getAttribute("data-week") - 1) * 7 + 1, 0, "board");
     });
     var reset = document.getElementById("hs-reset");
     if (reset) reset.onclick = function () {
@@ -1769,7 +1805,7 @@ function hesnaScene(s) {
       state = { seen: {}, fam: {}, pillar: {}, days: {}, weeks: {} };
       save();
       renderSummary(1);
-      startDay(1, 0, "mem");
+      startDay(1, 0, "board");
     };
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
