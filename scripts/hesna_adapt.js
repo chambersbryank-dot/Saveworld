@@ -404,15 +404,10 @@
     else if (bridge) banner = "bridge";
     else if (stretch && day.tier === 6) banner = "stretch";
     var blocks = [];
-    if (bridge && prev) {
-      var bridgeItems = pickPillar(data.items, "logic", 4, state, prev.tier, 1, function (it) {
-        return !it.probe;
-      });
-      bridgeItems.forEach(function (it) { blocks.push({ kind: "q", item: it, bridge: true }); });
-    }
     var counts = day.take || {};
+    var only = arguments.length > 3 ? arguments[3] : "";
     // Day 13: only soft spots, unless she is already at the end-state bar.
-    if (day.mode === "repair") {
+    if (!only && day.mode === "repair") {
       var soft = repairBlocks(data, state);
       if (soft.length) {
         return finish(day, tier, depth, b, false, true, "repair", soft);
@@ -431,35 +426,35 @@
     function pushQs(list) {
       list.forEach(function (it) { blocks.push({ kind: "q", item: it }); });
     }
-    if (day.n === 1) {
-      pushQs(pickGrammar(data.items, day, state, tier, depth, counts.grammar || 0));
-      pushQs(pickPillar(data.items, "logic", counts.logic || 0, state, 1, 1, function (it) { return !it.probe; }));
-      pushQs(pickPillar(data.items, "logic", 99, state, 3, 1, function (it) { return !!it.probe; }));
-    } else {
-      pushQs(pickPillar(data.items, "logic", counts.logic || 0, state, tier, depth, function (it) {
-        return !it.probe && (!stretch || tier < 6 || it.stretch || it.depth >= depth);
-      }));
-      // If stretch filter starved the set, fill from the tier without it.
-      var logicN = blocks.filter(function (x) { return x.kind === "q" && x.item.pillar === "logic" && !x.bridge; }).length;
-      if ((counts.logic || 0) && logicN < counts.logic) {
-        pushQs(pickPillar(data.items, "logic", counts.logic - logicN, state, tier, depth, function (it) { return !it.probe; }));
+    if (!only || only === "written") {
+      var wantW = counts.ab || 8;
+      var written = pickWritten(data.items, day, state, tier, depth, wantW);
+      if (written.length < wantW) {
+        pool(data.items, function (it) { return it.pillar === "written"; }).forEach(function (it) {
+          if (written.length < wantW && !written.some(function (x) { return x.id === it.id; })) written.push(it);
+        });
       }
-      pushQs(pickGrammar(data.items, day, state, tier, depth, counts.grammar || 0));
+      pushQs(written);
     }
-    pushQs(pickWritten(data.items, day, state, tier, depth, counts.ab || 0));
-    pickWrapped(data.listens, "listen", listenCount(day, counts), state, tier, depth).forEach(function (set) {
-      blocks.push({ kind: "listen", set: set });
-    });
-    pickWrapped(data.reads, "reading", counts.reading || 0, state, tier, depth).forEach(function (set) {
-      blocks.push({ kind: "read", set: set });
-    });
-    pickWrapped(data.comps, "comp", counts.comp || 0, state, tier, depth).forEach(function (set) {
-      blocks.push({ kind: "comp", set: set });
-    });
-    pickWrapped(data.obs, "obs", counts.obs || 0, state, tier, depth).forEach(function (set) {
-      blocks.push({ kind: "obs", set: set });
-    });
-    if (weekOf(day.n) > 1) blocks = aimWeak(blocks, data, state, tier, depth);
+    if (!only || only === "reading") {
+      var wantR = counts.reading || 1;
+      var reads = pickWrapped(data.reads, "reading", wantR, state, tier, depth);
+      if (reads.length < wantR) {
+        (data.reads || []).forEach(function (set) {
+          if (reads.length < wantR && !reads.some(function (x) { return x.id === set.id; })) reads.push(set);
+        });
+      }
+      reads.forEach(function (set) { blocks.push({ kind: "read", set: set }); });
+      var still = wantR - reads.length;
+      if (still > 0) {
+        var comps = (data.comps || []).filter(function (s) {
+          return !s.secs && String(s.en || "").indexOf("it is covered") < 0;
+        });
+        pickWrapped(comps, "comp", still, state, tier, depth).forEach(function (set) {
+          blocks.push({ kind: "comp", set: set });
+        });
+      }
+    }
     return finish(day, tier, depth, b, bridge, stretch, banner, blocks);
   }
   function aimWeak(blocks, data, state, tier, depth) {
@@ -525,8 +520,8 @@
     gramm.sort(function (a, b) {
       return (seen(state, a.id) ? 1 : 0) - (seen(state, b.id) ? 1 : 0);
     });
-    gramm.slice(0, 10).forEach(function (it) { blocks.push({ kind: "q", item: it }); });
-    ["logic", "reading", "comp", "listen", "obs"].forEach(function (p) {
+    gramm.filter(function (it) { return it.pillar === "written"; }).slice(0, 10).forEach(function (it) { blocks.push({ kind: "q", item: it }); });
+    ["reading"].forEach(function (p) {
       var rec = (state.pillar && state.pillar[p]) || { ok: 0, n: 0 };
       if (rec.n >= 3 && rec.ok / rec.n < 0.95) {
         var src = p === "logic" ? data.items : p === "reading" ? data.reads : p === "comp" ? data.comps : p === "listen" ? data.listens : data.obs;
