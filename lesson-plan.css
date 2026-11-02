@@ -1,0 +1,28 @@
+/* Printable lesson plan. No tracking scripts. */
+.lp-wrap{max-width:980px;margin:0 auto;padding:1rem 1.1rem 2.5rem}
+.lp-lead{font-size:1.08rem;line-height:1.55;max-width:68ch}
+.lp-form{display:grid;gap:.8rem;margin:1rem 0;padding:1rem;border:1px solid rgba(255,255,255,.2);border-radius:16px}
+.lp-form label,.lp-field{display:flex;flex-direction:column;gap:.3rem;font-weight:700}
+.lp-form select,.lp-form button{font:inherit;min-height:48px;border-radius:12px}
+.lp-form select{padding:.4rem .7rem;background:rgba(255,255,255,.08);color:inherit;border:1px solid rgba(255,255,255,.3)}
+.lp-form select option{color:#003755}
+.lp-sols{max-height:340px;overflow:auto;border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:.4rem .8rem;font-weight:500}
+.lp-sols label{flex-direction:row;align-items:flex-start;gap:.6rem;min-height:44px;padding:.4rem 0}
+.lp-sols input{width:1.2rem;height:1.2rem;margin-top:.25rem;flex:none}
+.lp-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+.lp-actions button{min-height:48px;padding:.5rem 1rem;border-radius:999px;border:2px solid rgba(255,255,255,.4);background:#0b6fa4;color:#fff;font:700 1rem Montserrat,system-ui,sans-serif;cursor:pointer}
+.lp-actions button[hidden]{display:none}
+.lp-plan{margin-top:1.2rem}
+.lp-plan h2{margin-bottom:.3rem}
+.lp-meta{font-weight:700}
+.lp-std{font-size:.95rem}
+.lp-std li{margin:.4rem 0}
+.lp-note{font-size:.92rem;opacity:.9}
+.lp-teach{max-width:900px;margin:.4rem auto 1rem;padding:0 1.2rem;font-size:1.05rem}
+@media print{
+  .lp-form,.lp-actions,.lp-lead,.kw-teach,.lp-teach{display:none !important}
+  .lp-plan,.lp-plan h2,.lp-plan h3,.lp-plan p,.lp-plan li{color:#000 !important}
+  .lp-plan a{color:#000 !important;text-decoration:underline}
+  .lp-plan{break-inside:auto}
+  .lp-plan li{break-inside:avoid}
+}

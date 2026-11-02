@@ -8407,5 +8407,16 @@
 "This map needs JavaScript. You can still browse solutions by region on the Solutions page.": "Cette carte a besoin de JavaScript. Tu peux quand même parcourir les solutions par région sur la page Solutions.",
 "Every simple note on this map is copied from that solution's Explain Like I'm 10 section.": "Chaque note simple de cette carte est copiée depuis la partie « Explique-moi comme si j'avais 10 ans » de cette solution.",
 "Photos use the credit already printed on the Solutions card.": "Les photos gardent le crédit déjà imprimé sur la fiche Solutions.",
-"Place names are the pins on the": "Les noms de lieux sont les épingles de la"
+"Place names are the pins on the": "Les noms de lieux sont les épingles de la",
+"Printable Lesson Plan": "Plan de cours imprimable",
+"Teachers pick a grade, a subject, a lesson length, and one or more Saving Planets solutions. The page assembles a printable plan from those pages: objectives from the tagged standards, an activity, the discussion questions, and an assessment.": "L'enseignant choisit un niveau, une matière, une durée et une ou plusieurs solutions Saving Planets. La page assemble un plan imprimable à partir de ces pages : objectifs tirés des normes déjà indiquées, une activité, les questions de discussion et une évaluation.",
+"Pick a grade, a subject, and how long the lesson is. Then tick the solutions you want. The plan uses only text already on those pages and the standards already tagged to them.": "Choisissez un niveau, une matière et la durée. Cochez ensuite les solutions. Le plan n’utilise que le texte déjà présent sur ces pages et les normes déjà indiquées.",
+"Choose the solutions for this lesson": "Choisissez les solutions pour ce cours",
+"No solutions on Saving Planets are tagged for this grade and subject.": "Aucune solution Saving Planets n’est indiquée pour ce niveau et cette matière.",
+"The plan is built in your browser from the pages you pick. It is not sent to Saving Planets.": "Le plan est créé dans votre navigateur à partir des pages choisies. Il n’est pas envoyé à Saving Planets.",
+"This builder needs JavaScript. You can still open Teacher Sheets and print any solution page.": "Ce générateur a besoin de JavaScript. Vous pouvez quand même ouvrir les fiches enseignants et imprimer chaque page de solution.",
+"Earth & Human Activity": "La Terre et les activités humaines",
+"Life Science": "Sciences de la vie",
+"Space Science": "Sciences de l'espace",
+"Reading (Common Core)": "Lecture (Common Core)"
 }
