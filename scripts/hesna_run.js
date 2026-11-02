@@ -161,7 +161,8 @@
       ? '<ol class="md-qs">' + misses.map(function (ln) {
         return '<li class="sp-day md-bad"><p>' + bi(ln.item.en, ln.item.ar) + "</p><p>"
           + bi("Your answer: ", "إجابتك: ") + answerText(ln.item, ln.given) + "</p><p><strong>"
-          + bi("Correct: ", "الصحيح: ") + answerText(ln.item, ln.item.ans) + "</strong></p></li>";
+          + bi("Correct: ", "الصحيح: ") + answerText(ln.item, ln.item.ans) + "</strong></p>"
+          + whyLine(ln.item) + "</li>";
       }).join("") + "</ol>"
       : "<p>" + bi("No misses.", "لا أخطاء.") + "</p>";
     return {
@@ -170,6 +171,11 @@
         + "<h3>" + bi("Study up on", "ذاكري") + "</h3>" + study
         + "<h3>" + bi("Missed", "ما فات") + "</h3>" + missHtml + "</section>"
     };
+  }
+  function whyLine(item) {
+    var w = item && item.why;
+    if (!w || !w[0]) return "";
+    return "<p><strong>" + bi("Why: ", "لماذا: ") + "</strong>" + bi(w[0], w[1] || w[0]) + "</p>";
   }
   function answerText(item, idx) {
     if (idx == null || idx < 0 || !item.opts || !item.opts[idx]) return bi("(none)", "(لا شيء)");
