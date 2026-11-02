@@ -11,7 +11,11 @@
 > Archives: full history to Oct 12 midday → docs/notes-archive-2026-10-12.md (restored; 8987d81 had wiped NOTES to 28 bytes). Search/IA/hero detail + test tables → docs/search-and-ia-notes.md. Discovery research → docs/organic-discovery-plan.md.
 
 ## Last 24h (Oct 20–21 HST)
+<<<<<<< HEAD
 - Nov 2 (Bryan): **Course rebuild keeps the page head.** `scripts/build-courses.py` puts back the page's critical CSS, the Hebrew hreflang, and the share-card alt (the course title, not the Kids Map alt) after it rebuilds a course from the Kids Map template.
+=======
+- Nov 2 (Bryan): **Homepage space card.** The Space card fallback is now the 800px WebP, same as the other four cards. The Saturn hero video and its CSS background stay on Saturn.jpg.
+>>>>>>> origin/main
 - Nov 2 (Bryan): **SI credit tag.** Visible SI credits now say Made from SI and Biological SI Partner (fr Réalisé à partir de, es Hecho a partir de, ar صُنع من, it Realizzato a partire da, he עשוי מ). The Saturn hero credit stays Created by SI and Biological SI Partner. `scripts/fix-si-credit-tag.py`.
 - Nov 2 (Bryan): **Homepage install banner.** iOS Safari gets a How to install button: Share icon, Add to Home Screen, Add, with the Share button in the bottom bar on iPhone and the top right on iPad. iOS Chrome and Firefox say to open the page in Safari first. Chrome, Edge, and Android wait for the install choice, clear the prompt, and hide the banner on accept and on appinstalled. Not now lasts 14 days. `scripts/build-pwa.py`, `pwa.js?v=20261102f`, service worker `sp-20261102f`. Six languages.
 - Nov 2 (Bryan): **Hassnaa days follow the guide's section names.** After the memory tests, each day rotates Written Communication Skills, Reading with Understanding, and Biodata — the DELPOE sections, in that order. Each section comes back across the four weeks, and later days use harder items. Quiz buttons, the study-up list, and the daily summary use those names. Written study-up splits into sentence structure, grammar, and word usage. Cache `sp-20261102e`.
