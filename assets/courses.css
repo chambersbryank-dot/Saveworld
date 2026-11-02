@@ -57,6 +57,13 @@
 .crs-ocw-sec,.crs-ocw-h{scroll-margin-top:8.5rem}
 .crs-pset{margin:1rem 0 1.4rem}
 .crs-pset ol{padding-inline-start:1.2rem}
+.crs-filters{border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:.8rem 1rem;margin:1rem 0}
+.crs-frow{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin:.35rem 0}
+.crs-fl{font-weight:800;margin-inline-end:.35rem}
+.crs-frow button{min-height:44px;font:inherit;padding:0 .8rem;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.crs-frow button[aria-pressed="true"]{background:#ffd54a;color:#071018;border-color:#ffd54a}
+.crs-flag{display:block;margin-top:.35rem;font-size:.85rem;border-inline-start:3px solid #ffd54a;padding-inline-start:.5rem}
+.crs-rule{font-size:.95rem}
 @media print{.crs-ocw{display:none!important}}
 
 /* Oct 24 phase 2: RTL pages (ar, he) - equations and formula cards stay left-to-right */
