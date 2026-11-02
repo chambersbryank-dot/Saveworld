@@ -8403,5 +8403,16 @@
 "This map needs JavaScript. You can still browse solutions by region on the Solutions page.": "تحتاج هذه الخريطة إلى جافاسكربت. ما زال بإمكانك تصفح الحلول حسب المنطقة في صفحة الحلول.",
 "Every simple note on this map is copied from that solution's Explain Like I'm 10 section.": "كل ملاحظة بسيطة في هذه الخريطة منسوخة من قسم «اشرحها لي كأن عمري 10 سنوات» في صفحة ذلك الحل.",
 "Photos use the credit already printed on the Solutions card.": "الصور تستخدم اسم المصدر المطبوع أصلًا على بطاقة الحلول.",
-"Place names are the pins on the": "أسماء الأماكن هي دبابيس"
+"Place names are the pins on the": "أسماء الأماكن هي دبابيس",
+"Printable Lesson Plan": "خطة درس قابلة للطباعة",
+"Teachers pick a grade, a subject, a lesson length, and one or more Saving Planets solutions. The page assembles a printable plan from those pages: objectives from the tagged standards, an activity, the discussion questions, and an assessment.": "يختار المعلم صفًا ومادة ومدة وحلًا أو أكثر من حلول Saving Planets. تجمع الصفحة خطة قابلة للطباعة من تلك الصفحات: أهداف من المعايير الموسومة أصلًا، ونشاط، وأسئلة نقاش، وتقويم.",
+"Pick a grade, a subject, and how long the lesson is. Then tick the solutions you want. The plan uses only text already on those pages and the standards already tagged to them.": "اختر الصف والمادة والمدة، ثم حدّد الحلول. لا تستخدم الخطة إلا النص الموجود أصلًا في تلك الصفحات والمعايير الموسومة بها.",
+"Choose the solutions for this lesson": "اختر الحلول لهذا الدرس",
+"No solutions on Saving Planets are tagged for this grade and subject.": "لا يوجد حل على Saving Planets موسوم لهذا الصف وهذه المادة.",
+"The plan is built in your browser from the pages you pick. It is not sent to Saving Planets.": "تُنشأ الخطة في متصفحك من الصفحات التي تختارها، ولا تُرسل إلى Saving Planets.",
+"This builder needs JavaScript. You can still open Teacher Sheets and print any solution page.": "يحتاج هذا المنشئ إلى جافاسكربت. ما زال بإمكانك فتح أوراق المعلمين وطباعة أي صفحة حل.",
+"Earth & Human Activity": "الأرض والنشاط البشري",
+"Life Science": "علوم الحياة",
+"Space Science": "علوم الفضاء",
+"Reading (Common Core)": "القراءة (Common Core)"
 }
