@@ -1,8 +1,7 @@
-/* Adaptive session builder for Hesna's HPD study pages.
-   Each week is one pack. A period is mastered before the next one opens.
-   Week 2 stays shut until Week 1 is mastered, then starts harder from
-   Week 1's weak spots and overall score. Overachievement raises the tier
-   inside the sitting. A family she already commands is not drilled again. */
+/* Adaptive session builder for Hassnaa's HPD study pages.
+   Four weeks, every day open. Scores are saved. Nothing is locked.
+   A high score can still raise the tier inside a sitting.
+   A family she already commands is not drilled again. */
 (function (root, factory) {
   var api = factory();
   if (typeof module !== "undefined" && module.exports) module.exports = api;
@@ -72,8 +71,13 @@
     if (!prev || prev.pct == null || hot(prev)) return false;
     return baseOf(prev) < 70;
   }
-  var WEEK_DAYS = { 1: [1, 2, 3, 4, 5, 6, 7], 2: [8, 9, 10, 11, 12, 13, 14] };
-  function weekOf(n) { return n <= 7 ? 1 : 2; }
+  var WEEK_DAYS = {
+    1: [1, 2, 3, 4, 5, 6, 7],
+    2: [8, 9, 10, 11, 12, 13, 14],
+    3: [15, 16, 17, 18, 19, 20, 21],
+    4: [22, 23, 24, 25, 26, 27, 28]
+  };
+  function weekOf(n) { return Math.min(4, Math.floor((n - 1) / 7) + 1); }
   function week1Core(state) {
     var sum = 0, n = 0;
     WEEK_DAYS[1].forEach(function (d) {
@@ -181,7 +185,7 @@
   }
   /** Once a week is mastered, later misses do not lock it again. */
   function sealWeeks(state) {
-    [1, 2].forEach(function (week) {
+    [1, 2, 3, 4].forEach(function (week) {
       var slot = state.weeks && state.weeks[String(week)];
       if (slot && slot.cleared) return;
       if (!liveCleared(state, week)) return;
@@ -220,10 +224,10 @@
       break;
     }
     var cleared = weekCleared(state, week);
-    var blocked = week > 1 && !weekCleared(state, week - 1);
+    var blocked = false;
     var soft = weakFamilies(state).length || weakPillars(state).length;
-    var needsRepair = !blocked && next == null && !cleared && !!soft;
-    var needsStretch = !blocked && next == null && !cleared && !needsRepair;
+    var needsRepair = next == null && !cleared && !!soft;
+    var needsStretch = next == null && !cleared && !needsRepair;
     return {
       week: week,
       next: next,
@@ -455,7 +459,7 @@
     pickWrapped(data.obs, "obs", counts.obs || 0, state, tier, depth).forEach(function (set) {
       blocks.push({ kind: "obs", set: set });
     });
-    if (weekOf(day.n) === 2) blocks = aimWeak(blocks, data, state, tier, depth);
+    if (weekOf(day.n) > 1) blocks = aimWeak(blocks, data, state, tier, depth);
     return finish(day, tier, depth, b, bridge, stretch, banner, blocks);
   }
   function aimWeak(blocks, data, state, tier, depth) {
@@ -641,7 +645,7 @@
   function applyPackGrade(state, week, kind, blocks, result) {
     state.weeks = state.weeks || {};
     var slot = state.weeks[String(week)] || {};
-    absorb(state, blocks, result.answers, week === 1 ? 7 : 14);
+    absorb(state, blocks, result.answers, week * 7);
     if (kind === "repair") slot.repairPct = result.pct;
     if (kind === "stretch") slot.stretchPct = result.corePct == null ? result.pct : result.corePct;
     slot.at = Date.now();
@@ -669,9 +673,10 @@
   }
   function synthetic(week, kind) {
     var repair = kind === "repair";
-    var ord = week === 1 ? "الأول" : "الثاني";
+    var ords = ["", "الأول", "الثاني", "الثالث", "الرابع"];
+    var ord = ords[week] || String(week);
     return {
-      n: week === 1 ? 7 : 14,
+      n: week * 7,
       tier: 6,
       depth: 3,
       budgetMin: repair ? 40 : 35,
@@ -680,17 +685,16 @@
       title_en: repair ? "Week " + week + " — weak spots" : "Week " + week + " — the stretch",
       title_ar: repair ? "الأسبوع " + ord + " — المواضع اللينة" : "الأسبوع " + ord + " — التمدد",
       body_en: repair
-        ? "This sitting is only what is still under 80%. The next week stays closed until these spots are mastered."
-        : "This week was too easy. The stretch is the one that counts. Master it before the next week opens.",
+        ? "This sitting is only what is still under 80%. The score is saved. Every other day stays open."
+        : "This week was too easy. The stretch is the one that counts on the scoreboard. Every other day stays open.",
       body_ar: repair
-        ? "هذه الجلسة لما يزال تحت 80% فقط. الأسبوع التالي يبقى مغلقًا حتى تُتقن هذه المواضع."
-        : "كان هذا الأسبوع أسهل مما ينبغي. التمدد هو الذي يُحسب. أتقنيه قبل أن يُفتح الأسبوع التالي."
+        ? "هذه الجلسة لما يزال تحت 80% فقط. النتيجة تُحفظ. كل يوم آخر يبقى مفتوحًا."
+        : "كان هذا الأسبوع أسهل مما ينبغي. التمدد هو الذي يُحسب على لوحة النتائج. كل يوم آخر يبقى مفتوحًا."
     };
   }
   function planPackStep(week, data, state) {
     state = state || {};
     var status = packStatus(state, week);
-    if (status.blocked) return { blocked: true, status: status, week: week };
     if (status.cleared) return { done: true, status: status, week: week };
     if (status.needsStretch) {
       var stretch = stretchBlocks(data, state);
@@ -748,6 +752,7 @@
     planSession: planSession,
     planPackStep: planPackStep,
     packStatus: packStatus,
+    weekOf: weekOf,
     weekCleared: weekCleared,
     weekLift: weekLift,
     weekPerformance: weekPerformance,

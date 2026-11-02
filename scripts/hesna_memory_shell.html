@@ -27,7 +27,7 @@ body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
 <nav class="sp-nav" aria-label="Study pages / صفحات الدراسة"><a href="hesna-6abec5.html"><span data-en>📘 Study Guide</span><span data-ar>📘 دليل الدراسة</span></a><a href="hesna-6abec5-memory.html" aria-current="page"><span data-en>🧠 Memory Drills</span><span data-ar>🧠 تمارين الذاكرة</span></a></nav>
 <div class="sp-top"><h1><span data-en>Observation &amp; Memory Drills</span><span data-ar>تمارين الملاحظة والذاكرة</span></h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
 <p><a href="hesna-6abec5.html"><span data-en>← Back to the study plan</span><span data-ar>→ العودة إلى خطة الدراسة</span></a></p>
-<p class="sp-ph"><span data-en>DELPOE visual practice, not real exam items. Week 1 pictures and street sketches, questions included, are inside the study pack on each period. This page is Week 2: Quick Stop, then the corner, then the later sketches. It opens only after every Week 1 period is mastered, and it is harder. Study each picture for 2 minutes. No notes. Then it hides. Every question is answered by what that picture shows. You cannot look back during the questions.</span><span data-ar>تدريب بصري على نمط DELPOE، وليس أسئلة امتحان حقيقية. صور الأسبوع الأول ورسوم شوارعه، مع الأسئلة، داخل حزمة الدراسة في كل فترة. هذه الصفحة للأسبوع الثاني: كويك ستوب، ثم الزاوية، ثم الرسوم اللاحقة. تُفتح فقط بعد إتقان كل فترة في الأسبوع الأول، وهي أصعب. ادراسي كل صورة دقيقتين. بلا ملاحظات. ثم تختفي. كل سؤال يُجاب مما تُظهره تلك الصورة. لا رجوع إلى الصورة أثناء الأسئلة.</span></p>
+<p class="sp-ph"><span data-en>DELPOE visual practice, not real exam items. Every drill on this page is open, in the same order as the four-week plan. Week 1 is the 7426 burglary and the first street sketches. Week 2 is Quick Stop and the Level 4 sketches. Week 3 is the corner crash, the denser streets, and the lobby correction. Week 4 is the garage correction. Study each scene for 2 minutes. No notes. Then it hides. Every question is answered by what that scene shows. You cannot look back during the questions. A score is saved. It does not close the next drill.</span><span data-ar>تدريب بصري على نمط DELPOE، وليس أسئلة امتحان حقيقية. كل تمرين في هذه الصفحة مفتوح، بالترتيب نفسه لخطة الأسابيع الأربعة. الأسبوع الأول هو سطو 7426 ورسوم الشوارع الأولى. الأسبوع الثاني هو كويك ستوب ورسوم المستوى 4. الأسبوع الثالث هو حادث الزاوية والشوارع الأكثف وتصحيح الردهة. الأسبوع الرابع هو تصحيح المرآب. ادرسي كل مشهد دقيقتين. بلا ملاحظات. ثم يختفي. كل سؤال يُجاب مما يُظهره ذلك المشهد. لا رجوع إلى الصورة أثناء الأسئلة. النتيجة تُحفظ. وهي لا تغلق التمرين التالي.</span></p>
 <div id="md-app"></div>
 <script>window.MD_DATA={};</script>
 <script>(function(){var D=window.MD_DATA,K='hesnaMemory',st={};
@@ -49,35 +49,32 @@ function passBarFor(s){if(!s||!s.pic||sceneWeek(s)===1)return 80;var bar=week2Ba
 function bandOptional(s){return !!(s&&s.pic&&sceneWeek(s)===2&&s.band===1&&(adaptMem('b7426-1')||0)>=95&&(adaptMem('b7426-3')||0)>=90)}
 function weakBands(){var rows=[[1,'broad scene','الصورة الكبيرة'],[2,'attributes','الصفات'],[3,'fine detail','التفاصيل الدقيقة']],en=[],ar=[];rows.forEach(function(n){var sc=adaptMem('b7426-'+n[0]);if(sc!=null&&sc<85){en.push(n[1]+' '+sc+'%');ar.push(n[2]+' '+sc+'%')}});return en.length?[en.join(', '),ar.join('، ')]:null}
 function photoPack(){var names=[],groups={};D.S.forEach(function(s,i){if(!s.pic)return;if(!groups[s.scene]){groups[s.scene]=[];names.push(s.scene)}groups[s.scene].push(i)});return {names:names,groups:groups}}
-function sceneUnlocked(scene){var ps=photoPack(),si=ps.names.indexOf(scene);if(si<=0)return true;var prev=ps.groups[ps.names[si-1]],last=D.S[prev[prev.length-1]];if(sceneWeek(last)===1)return studyCleared();return (st[last.id]||0)>=passBarFor(last)}
-function picUnlocked(i){var s=D.S[i],ps=photoPack(),g=ps.groups[s.scene],pos=g.indexOf(i);
-if(pos>0){var prev=D.S[g[pos-1]];if(bandOptional(prev)&&(st[prev.id]==null))return sceneUnlocked(s.scene);return (st[prev.id]||0)>=passBarFor(prev)}
-return sceneUnlocked(s.scene)}
+function sceneUnlocked(){return true}
+function picUnlocked(){return true}
 function focusPic(){var ps=photoPack(),hit=-1;ps.names.forEach(function(name){ps.groups[name].forEach(function(i){var s=D.S[i];if(bandOptional(s)&&(st[s.id]==null))return;if(picUnlocked(i)&&(st[s.id]||0)<95)hit=i})});return hit}
 var app=document.getElementById('md-app'),timer=null;
 function passed(lv){var bar=lv>=3?week2Bar():80;return D.S.some(function(s){return !s.pic&&s.lv==lv&&(st[s.id]||0)>=bar})}
 function hotLevel(lv){return D.S.some(function(s){return !s.pic&&s.lv==lv&&(st[s.id]||0)>=95})}
-function unlocked(lv){if(lv==1)return true;if(lv===4)return studyCleared();if(lv>4)return studyCleared()&&passed(lv-1);return passed(lv-1)}
+function unlocked(){return true}
 function mins(s){var m=Math.round((s.secs||120)/60);return bi(m+'-minute view', m===2?'مشاهدة لمدة دقيقتين':'مشاهدة لمدة '+m+' دقائق')}
-function home(){clearInterval(timer);var ps=photoPack(),focus=focusPic(),o='';
-[1,2].forEach(function(week){
-o+='<section class="sp-week" id="week-'+week+'"><h2>'+bi(week===1?'Week 1 pack':'Week 2 pack', week===1?'حزمة الأسبوع الأول':'حزمة الأسبوع الثاني')+'</h2>';
-if(week===1){o+='<p>'+bi('The 7426 burglary and the Week 1 street sketches, with their questions, are inside the study pack on each period. This page is not a second Week 1 track. The picture shows every fact a question asks.','سطو 7426 ورسوم شوارع الأسبوع الأول، مع أسئلتها، داخل حزمة الدراسة في كل فترة. هذه الصفحة ليست مسارًا ثانيًا للأسبوع الأول. الصورة تُظهر كل حقيقة يسأل عنها سؤال.')+'</p><p><a class="sp-btn" href="hesna-6abec5.html#week-1">'+bi('Open the Week 1 pack','افتحي حزمة الأسبوع الأول')+'</a></p></section>';return}
-var bar=week2Bar(),study=studyWeek1(),weak=weakBands();
-o+='<p>'+bi('Week 2 Day 1 is Quick Stop, then the corner crash. Same 2 minutes. It opens only after every Week 1 period is mastered, and it is harder: pass bar '+bar+'%'+ (study==null?'':' (study-pack core '+study+'%)')+(weak?'. Soft bands to clear again: '+weak[0]:'.')+' Master each quiz before the next picture.','اليوم 1 من الأسبوع الثاني هو كويك ستوب، ثم حادث الزاوية. الدقيقتان نفسيهما. يُفتح فقط بعد إتقان كل فترة في الأسبوع الأول، وهو أصعب: عتبة النجاح '+bar+'%'+ (study==null?'':' (جوهر حزمة الدراسة '+study+'%)')+(weak?'. نطاقات لينة تُحسم مرة أخرى: '+weak[1]:'.')+' أتقني كل اختبار قبل الصورة التالية.')+'</p>';
-if(!studyCleared())o+='<p class="sp-ph">'+bi('Locked until every Week 1 period is mastered, including its pictures. Then Week 2 Day 1 opens, and it is harder.','مقفلة حتى تُتقن كل فترة في الأسبوع الأول، بما فيها صورها. ثم يُفتح اليوم 1 من الأسبوع الثاني، وهو أصعب.')+'</p>';
-ps.names.forEach(function(name){var ids=ps.groups[name].filter(function(i){return sceneWeek(D.S[i])===week});if(!ids.length)return;o+='<div class="sp-grid">';
-ids.forEach(function(i){var s=D.S[i],u=picUnlocked(i),hot=(st[s.id]||0)>=95,now=i===focus,bar=passBarFor(s),soft=sceneWeek(s)===2&&adaptMem('b7426-'+s.band)!=null&&adaptMem('b7426-'+s.band)<85;
-o+='<div class="sp-day'+(now?' md-now':'')+'"><h3>'+bi(s.title[0],s.title[1])+'</h3><p>'+bi(s.blurb[0],s.blurb[1])+'</p><p>'+s.q.length+' '+bi('questions','سؤالًا')+' · '+mins(s)+(st[s.id]!=null?'<br>'+bi('Best: '+st[s.id]+'%','أفضل نتيجة: '+st[s.id]+'%'):'')+'</p>'+(soft?'<p class="sp-ph">'+bi('Week 1 was soft on this band ('+(adaptMem('b7426-'+s.band))+'%). This quiz has to move. Pass bar '+bar+'%.','الأسبوع الأول كان لينًا في هذا النطاق ('+(adaptMem('b7426-'+s.band))+'%). هذا الاختبار يجب أن يتحرك. عتبة النجاح '+bar+'%.')+'</p>':'')+(hot?'<p class="sp-ph">'+bi('95% or higher: optional review. The harder quiz is the one that counts.','95% أو أكثر: مراجعة اختيارية. الاختبار الأصعب هو الذي يُحسب.')+'</p>':'')+(now?'<p>'+bi('This is the quiz that counts now.','هذا الاختبار الذي يُحسب الآن.')+'</p>':'')+(u?'<button type="button" class="sp-btn" data-go="'+i+'">'+bi(hot?'Review':'Start', hot?'راجعي':'ابدئي')+'</button>':'<p class="sp-ph">'+bi('Locked until the earlier quiz in this pack is mastered.','مقفل حتى يُتقن الاختبار السابق في هذه الحزمة.')+'</p>')+'</div>'});
-o+='</div>'});
-o+='<h3>'+bi('Week 2 street sketches','رسوم شوارع الأسبوع الثاني')+'</h3><p class="sp-ph">'+bi('Cartoon streets, still 2 minutes, then hidden. They do not replace the pictures. Every question is on the drawing. 95% makes the rest of a level optional.','شوارع مرسومة، دقيقتان أيضًا، ثم تختفي. لا تغني عن الصور. كل سؤال عن الرسم. 95% تجعل بقية المستوى اختيارية.')+'</p>';
-var lvs=[];D.S.forEach(function(s){if(s.pic||s.lv<4)return;if(lvs.indexOf(s.lv)<0)lvs.push(s.lv)});
-lvs.forEach(function(lv){var u=unlocked(lv),bl=D.BLURB&&D.BLURB[String(lv)],bar=lv>=4?week2Bar():80;
-o+='<h3>'+bi('Level '+lv,'المستوى '+lv)+'</h3>'+(bl?'<p>'+bi(bl[0],bl[1])+'</p>':'')+(u?'':'<p class="sp-ph">'+bi(lv===4?'Locked until every Week 1 period is mastered. Week 2 is harder.':'Locked until a Level '+(lv-1)+' sketch is '+bar+'%.', lv===4?'مقفلة حتى تُتقن كل فترة في الأسبوع الأول. الأسبوع الثاني أصعب.':'مقفل حتى يبلغ رسم من المستوى '+(lv-1)+' نسبة '+bar+'%.')+'</p>')+(hotLevel(lv)?'<p class="sp-ph">'+bi('95% or higher on this level: the rest is optional review.','95% أو أكثر في هذا المستوى: الباقي مراجعة اختيارية.')+'</p>':'')+'<div class="sp-grid">';
-D.S.forEach(function(s,i){if(s.pic||s.lv!=lv)return;o+='<div class="sp-day"><h3>'+bi('Exercise '+s.id,'التمرين '+s.id)+'</h3><p>'+s.q.length+' '+bi('questions','سؤالًا')+' · '+mins(s)+(st[s.id]!=null?'<br>'+bi('Best: '+st[s.id]+'%','أفضل نتيجة: '+st[s.id]+'%'):'')+'</p>'+(u?'<button type="button" class="sp-btn" data-go="'+i+'">'+bi('Start','ابدئي')+'</button>':'')+'</div>'});
-o+='</div>'});
-o+='</section>'});
+function weekName(n){return {1:'الأول',2:'الثاني',3:'الثالث',4:'الرابع'}[n]||String(n)}
+function home(){clearInterval(timer);var buckets={};
+D.S.forEach(function(s,i){var w=s.week||1;if(!buckets[w])buckets[w]=[];buckets[w].push(i)});
+var o='';
+[1,2,3,4].forEach(function(week){
+  var ids=buckets[week]||[];
+  o+='<section class="sp-week" id="mem-week-'+week+'"><h2>'+bi('Week '+week,'الأسبوع '+weekName(week))+'</h2><div class="sp-grid">';
+  ids.forEach(function(i){
+    var s=D.S[i];
+    var title=s.title?bi(s.title[0],s.title[1]):bi('Exercise '+s.id,'التمرين '+s.id);
+    var blurb=s.blurb?('<p>'+bi(s.blurb[0],s.blurb[1])+'</p>'):(s.desc?('<p>'+bi(s.desc[0],s.desc[1])+'</p>'):'');
+    var best=st[s.id]!=null?'<br>'+bi('Best: '+st[s.id]+'%','أفضل نتيجة: '+st[s.id]+'%'):'';
+    o+='<div class="sp-day"><h3>'+title+'</h3>'+blurb+'<p>'+s.q.length+' '+bi('questions','سؤالًا')+' · '+mins(s)+best+'</p><button type="button" class="sp-btn" data-go="'+i+'">'+bi('Start','ابدئي')+'</button></div>';
+  });
+  o+='</div></section>';
+});
 app.innerHTML=o;scrollTo(0,0)}
+
 function view(i){var s=D.S[i],left=s.secs||120;app.innerHTML='<p class="md-timer" aria-live="polite"></p><div>'+scene(s)+'</div>'+(s.desc?'<p>'+bi(s.desc[0],s.desc[1])+'</p>':'')+(s.pic?'<p>'+bi('No notes. When the time ends, the picture hides and it does not come back until you submit.','بلا ملاحظات. حين ينتهي الوقت تختفي الصورة ولا تعود حتى تُرسلي الإجابات.')+'</p>':'')+'<button type="button" class="sp-btn" data-q="'+i+'">'+bi("I'm ready, hide it now",'أنا جاهزة، أخفيه الآن')+'</button>';
 var el=app.querySelector('.md-timer');function tick(){el.innerHTML=bi('Time left: ','الوقت المتبقي: ')+Math.floor(left/60)+':'+('0'+left%60).slice(-2);if(left--<=0){quiz(i)}}tick();timer=setInterval(tick,1000);scrollTo(0,0)}
 function quiz(i){clearInterval(timer);var s=D.S[i],ab=s.q[0]&&s.q[0][2].length===2,o='<p class="sp-ph">'+bi('The picture is hidden. Answer from memory.','الصورة مخفية. أجيبي من الذاكرة.')+'</p>'+(ab?'<p class="hs-key">'+bi('Statements: A true, B false. Objects: A yes it was in the picture, B no. If only part of an object was shown, it was present.','العبارات: A صحيحة، B خطأ. الأغراض: A نعم كان في الصورة، B لا. إذا ظهر جزء من الغرض فهو موجود.')+'</p>':'')+'<ol class="md-qs">';
@@ -87,10 +84,9 @@ function result(i){var s=D.S[i],ok=0,rv='';s.q.forEach(function(q,j){var c=app.q
 rv+='<li class="sp-day '+(g?'md-ok':'md-bad')+'"><p>'+bi(q[0],q[1])+'</p><p>'+(g?'✅ ':'❌ ')+bi('Your answer: ','إجابتك: ')+(a<0?bi('(none)','(لا شيء)'):bi(q[2][a],q[3][a]))+'</p>'+(g?'':'<p><strong>'+bi('Correct: ','الصحيح: ')+bi(q[2][q[4]],q[3][q[4]])+'</strong></p>')+'</li>'});
 var p=Math.round(100*ok/s.q.length);st[s.id]=Math.max(st[s.id]||0,p);save();
 var bar=s.pic?passBarFor(s):(s.lv>=3?week2Bar():80);
-var nxt=-1;if(s.pic){for(var n=i+1;n<D.S.length;n++){if(!D.S[n].pic)continue;if(bandOptional(D.S[n])&&st[D.S[n].id]==null)continue;if(picUnlocked(n)){nxt=n;break}}}
-else {for(var m=0;m<D.S.length;m++){if(!D.S[m].pic&&D.S[m].lv===s.lv+1&&unlocked(s.lv+1)){nxt=m;break}}}
-var msg=p>=95?bi('95% or higher: this one was too easy. The next harder quiz is the one that counts. Repeating this one is optional.','95% أو أكثر: هذا كان أسهل مما ينبغي. الاختبار الأصعب التالي هو الذي يُحسب. تكرار هذا اختياري.'):(p>=bar?bi('Passed. The bar for this quiz was '+bar+'%. The next one is unlocked if there is one.','نجحتِ. عتبة هذا الاختبار كانت '+bar+'%. يُفتح التالي إن وُجد.'):bi('Not yet '+bar+'%. The picture is visible again. Review, then retry this quiz.','لم تصلي إلى '+bar+'% بعد. الصورة ظاهرة من جديد. راجعي ثم أعيدي هذا الاختبار.'));
-app.innerHTML='<h2>'+bi('Score: '+ok+'/'+s.q.length+' ('+p+'%)','النتيجة: '+ok+'/'+s.q.length+' ('+p+'%)')+'</h2><p>'+msg+'</p>'+(p>=bar&&nxt>=0?'<button type="button" class="sp-btn" data-go="'+nxt+'">'+bi(p>=95?'Start the harder quiz':'Start the next quiz', p>=95?'ابدئي الاختبار الأصعب':'ابدئي الاختبار التالي')+'</button>':'')+'<button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button><div>'+scene(s)+'</div><ol class="md-qs">'+rv+'</ol><button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button>';scrollTo(0,0)}
+var nxt=i+1<D.S.length?i+1:-1;
+var msg=p>=95?bi('95% or higher. Saved. The scoreboard treats this one as easy. The next drill is open either way.','95% أو أكثر. حُفظت. لوحة النتائج تعامل هذا على أنه سهل. التمرين التالي مفتوح في الحالين.'):(p>=bar?bi('Saved. The mastery mark for this drill was '+bar+'%. The next drill is open.','حُفظت. علامة الإتقان لهذا التمرين كانت '+bar+'%. التمرين التالي مفتوح.'):bi('Saved at '+p+'%. The mastery mark is '+bar+'%. The picture is visible again. You can retry, or open any other drill.','حُفظت عند '+p+'%. علامة الإتقان '+bar+'%. الصورة ظاهرة من جديد. يمكنك الإعادة، أو فتح أي تمرين آخر.'));
+app.innerHTML='<h2>'+bi('Score: '+ok+'/'+s.q.length+' ('+p+'%)','النتيجة: '+ok+'/'+s.q.length+' ('+p+'%)')+'</h2><p>'+msg+'</p>'+'<button type="button" class="sp-btn" data-go="'+i+'">'+bi('Retry this drill','أعيدي هذا التمرين')+'</button>'+(nxt>=0?'<button type="button" class="sp-btn" data-go="'+nxt+'">'+bi('Open the next drill','افتحي التمرين التالي')+'</button>':'')+'<button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button><div>'+scene(s)+'</div><ol class="md-qs">'+rv+'</ol><button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button>';scrollTo(0,0)}
 app.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var d=b.dataset;if(d.go!=null)view(+d.go);else if(d.q!=null)quiz(+d.q);else if(d.r!=null)result(+d.r);else if(d.home)home()});home()})();
 </script>
 </main>
