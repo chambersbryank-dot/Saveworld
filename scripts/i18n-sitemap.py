@@ -35,8 +35,7 @@ for l in LANGS:
         if b not in have[l]: continue
         ls = [x for x in LANGS if b in have[x]]
         alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{url(x, b)}"/>' for x in ls)
-        if 'en' in ls and len(ls) > 1: alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url("en", b)}"/>'
-        if len(ls) == 1: alts = ''
+        if 'en' in ls: alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url("en", b)}"/>'
         rows.append(f'  <url><loc>{url(l, b)}</loc>{alts}<lastmod>{dates.get(path(l, b)) or today}</lastmod></url>\n')
 out = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
        + ''.join(rows) + '</urlset>\n')

@@ -12,7 +12,8 @@ LANGS = ('', 'fr/', 'es/', 'ar/', 'it/', 'he/')
 STUB = ('<!DOCTYPE html><html lang="{lang}"{dir}><head><meta charset="utf-8"><title>Saving Planets</title>'
         '<meta name="robots" content="noindex"><link rel="canonical" href="https://www.savingplanets.com/{pre}Ways_to_Help.html">'
         '<meta http-equiv="refresh" content="0; url=Ways_to_Help.html"><script>location.replace("Ways_to_Help.html")</script></head>'
-        '<body data-pagefind-ignore="all"><p><a href="Ways_to_Help.html">Ways to Help</a></p></body></html>\n')
+        '<body data-pagefind-ignore="all"><p><a href="Ways_to_Help.html">Ways to Help</a></p>'
+        '<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}\'></script><!-- CF-WA:END --></body></html>\n')
 SEP = r'<span aria-hidden="true">\s*·\s*</span>'
 H = r'(?:\.\./)?(?:(?:fr|es|ar|it|he)/)?Find_a_Cleanup\.html(?:#[\w-]*)?'
 n = 0
