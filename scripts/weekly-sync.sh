@@ -103,6 +103,7 @@ python3 scripts/build-analytics.py      # Oct 16: again after the late generator
 python3 scripts/build-pwa.py           # Oct 28 (founder): installable web app: manifest + iOS meta + sw.js/pwa.js on every page (after analytics)
 python3 scripts/build-kids-world.py    # K-5 Kids World Map (after nav, kids hub, and pwa so the shell and links stay)
 python3 scripts/build-lesson-plan.py   # Printable lesson plan: grade, subject, time, solutions (after the kids map link)
+python3 scripts/build-satellite-levels.py # Earth satellite explorer by level (after the lesson-plan link)
 python3 scripts/build-report-link.py    # Oct 16: Report a correction footer link (all langs) -> on-site form (Corrections.html#report)
 python3 scripts/build-license.py       # Oct 16: CC BY-NC 4.0 footer line, rel=license, JSON-LD license, About "Use & licence" (all langs)
 python3 scripts/build-share.py         # Oct 16: Classroom share + copy link (Learn/Teachers), Weekly Brief callout (13+ pages), kids pages: no signup, grown-ups link

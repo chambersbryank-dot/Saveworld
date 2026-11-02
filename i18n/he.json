@@ -9305,5 +9305,12 @@
 "Choose the solutions for this lesson": "בחרו את הפתרונות לשיעור הזה",
 "No solutions on Saving Planets are tagged for this grade and subject.": "אין פתרון ב-Saving Planets שמסומן לכיתה ולמקצוע האלה.",
 "The plan is built in your browser from the pages you pick. It is not sent to Saving Planets.": "המערך נוצר בדפדפן מהדפים שבחרתם. הוא לא נשלח אל Saving Planets.",
-"This builder needs JavaScript. You can still open Teacher Sheets and print any solution page.": "הכלי הזה צריך JavaScript. עדיין אפשר לפתוח את דפי המורים ולהדפיס כל דף פתרון."
+"This builder needs JavaScript. You can still open Teacher Sheets and print any solution page.": "הכלי הזה צריך JavaScript. עדיין אפשר לפתוח את דפי המורים ולהדפיס כל דף פתרון.",
+"Earth Satellite Explorer": "סייר לווייני תצפית על כדור הארץ",
+"Pick a level, then pick a real Earth-observation satellite that already has a Saving Planets page. K-3 shows that page’s Explain Like I’m 10 note. Grades 4-12 show What and Why. University also shows the impact statement. Photos keep the credit from the page.": "בחרו רמה ואז לוויין אמיתי לתצפית על כדור הארץ שכבר יש לו דף ב-Saving Planets. גן עד כיתה ג' מציג את ההערה «הסבירו לי כאילו אני בן 10». כיתות ד'–י״ב מציגות מה ולמה. האוניברסיטה מוסיפה גם את הצהרת ההשפעה. התמונות שומרות על הקרדיט מהדף.",
+"K-3": "גן–כיתה ג'",
+"Grades 4-12": "כיתות ד'–י״ב",
+"Choose a satellite": "בחרו לוויין",
+"This explorer needs JavaScript. You can still open each satellite page below.": "הסייר הזה צריך JavaScript. עדיין אפשר לפתוח כל דף לוויין למטה.",
+"Sorry, the satellite explorer could not load. Please refresh the page.": "מצטערים, הסייר לא נטען. רעננו את הדף."
 }
