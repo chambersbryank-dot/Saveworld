@@ -51,7 +51,7 @@ UI = {
   'אנשים שואלים שאלות קשות על כדור הארץ. אנחנו עונים עם מקורות של NASA, NOAA, IPCC ו-ESA — בתקווה במקום שהראיות תומכות, ובכנות במקום שהעבודה עדיין לא הושלמה.'),
  'src': T('Sources', 'Sources', 'Fuentes', 'المصادر', 'Fonti', 'מקורות'),
  'more': T('On Saving Planets', 'Sur Saving Planets', 'En Saving Planets', 'على Saving Planets', 'Su Saving Planets', 'ב-Saving Planets'),
- 'credit': T('Created by SI and Biological SI Partner', 'Créé par SI et Biological SI Partner', 'Creado por SI y Biological SI Partner', 'من إعداد SI وBiological SI Partner', 'Creato da SI e Biological SI Partner', 'נוצר על ידי SI ו-Biological SI Partner'),
+ 'credit': T('Made from SI and Biological SI Partner', 'Réalisé à partir de SI et Biological SI Partner', 'Hecho a partir de SI y Biological SI Partner', 'من إعداد SI وBiological SI Partner', 'Realizzato a partire da SI e Biological SI Partner', 'נוצר על ידי SI ו-Biological SI Partner'),
  'updated': T(f'Last checked against sources: {TODAY}', f'Dernière vérification des sources : {TODAY}', f'Última comprobación de fuentes: {TODAY}', f'آخر تحقق من المصادر: {TODAY}', f'Ultimo controllo delle fonti: {TODAY}', f'בדיקת מקורות אחרונה: {TODAY}'),
  'nav': T('Big Questions', 'Grandes questions', 'Grandes preguntas', 'أسئلة كبيرة', 'Grandi domande', 'שאלות גדולות'),
 }

@@ -42,6 +42,10 @@ details.hs-ref{margin:1.5rem 0}
 .hs-lesson h3{margin:0 0 .4rem}
 .sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
 .sp-btn{margin-top:.5rem;padding:.45rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;font:inherit;cursor:pointer;min-height:44px}
+.hs-menu{list-style:none;padding:0;margin:.4rem 0 1rem}
+.hs-menu li{margin:.55rem 0}
+.hs-menu .sp-btn{display:block;width:100%;text-align:start}
+.hs-menu .sp-ph{margin:.2rem 0 0}
 .sp-phase{margin:1.5rem 0}.sp-day h3{margin:0 0 .5rem}.sp-ph{opacity:.85;font-style:italic;margin:0}
 html{scroll-behavior:auto!important}
 html[lang=en] [data-ar],html[lang=ar] [data-en]{display:none}
@@ -514,18 +518,20 @@ _SCENARIOS = [
     "L4-4", "corner", "L5-1", "L5-2", "L5-3", "L6-1", "L6-2",
 ]
 _QUEUE = [tid for sid in _SCENARIOS for tid in _scenario_tests(sid)]
-if len(_QUEUE) != 42:
-    raise SystemExit("expected 42 memory tests")
+if len(_QUEUE) != 42 or len(_SCENARIOS) != 21:
+    raise SystemExit("expected 21 scenarios and 42 memory tests")
+# Each day opens with 3 scenarios, two tests each (2 minutes, 45 questions).
+# The 21 scenarios fill one week. Weeks 2–4 repeat that week while the other
+# quizzes stay on the rising day tier.
 MEM_BY_DAY = {}
-_i = 0
-for _day in range(1, 15):
-    MEM_BY_DAY[_day] = [_QUEUE[_i], _QUEUE[_i + 1]]
-    _i += 2
-for _day in range(15, 29):
-    MEM_BY_DAY[_day] = [_QUEUE[_i]]
-    _i += 1
-if _i != 42:
-    raise SystemExit("memory tests were not scheduled")
+for _day in range(1, 29):
+    _start = ((_day - 1) % 7) * 3
+    _ids = []
+    for _sid in _SCENARIOS[_start:_start + 3]:
+        _ids.extend(_scenario_tests(_sid))
+    if len(_ids) != 6:
+        raise SystemExit(f"day {_day} does not have 3 scenarios")
+    MEM_BY_DAY[_day] = _ids
 MEM_TITLES = {}
 
 
@@ -543,15 +549,64 @@ def _is_pr(oe):
     return bool(oe) and str(oe[0]).startswith("A. Yes")
 
 
+def _why_pair(en, ar):
+    en = en.strip()
+    ar = ar.strip()
+    if not en.endswith("."):
+        en += "."
+    if ar and not ar.endswith(".") and not ar.endswith("۔"):
+        ar += "."
+    return en, ar
+
+
+def _visual_why(en, ar, ans, presence, right_e=None, right_a=None, wrong_e=None, wrong_a=None):
+    """1–2 sentences. Cite the visible detail, the wrong mark, and the right one."""
+    if right_e and wrong_e and ans == 1:
+        en_w, ar_w = _why_pair(
+            f"The scene shows {right_e}, not {wrong_e}. Look at that detail in the picture — the statement is false",
+            f"المشهد يُظهر {right_a or right_e}، لا {wrong_a or wrong_e}. انظري إلى هذا التفصيل في الصورة — العبارة خطأ",
+        )
+    elif right_e and ans == 0:
+        en_w, ar_w = _why_pair(
+            f"The scene shows {right_e}. See it in the picture: {en.rstrip('.')}. The statement is true",
+            f"المشهد يُظهر {right_a or right_e}. هذا ظاهر في الصورة: {ar.rstrip('.')}. العبارة صحيحة",
+        )
+    elif presence and ans == 0:
+        en_w, ar_w = _why_pair(
+            f"Yes. This detail is drawn in the scene: {en.rstrip('.')}. Marking no would skip something visible",
+            f"نعم. هذا التفصيل مرسوم في المشهد: {ar.rstrip('.')}. اختيار لا يتجاهل شيئًا ظاهرًا",
+        )
+    elif presence and ans == 1:
+        en_w, ar_w = _why_pair(
+            f"No. The scene does not show this: {en.rstrip('.')}. Marking yes would add a detail that is not drawn",
+            f"لا. المشهد لا يُظهر هذا: {ar.rstrip('.')}. اختيار نعم يضيف تفصيلًا غير مرسوم",
+        )
+    elif ans == 0:
+        en_w, ar_w = _why_pair(
+            f"The statement matches the scene: {en.rstrip('.')}. The picture shows that detail, so the correct mark is true",
+            f"العبارة تطابق المشهد: {ar.rstrip('.')}. الصورة تُظهر هذا التفصيل، فالإجابة الصحيحة أنها صحيحة",
+        )
+    else:
+        en_w, ar_w = _why_pair(
+            f"The statement does not match the scene: {en.rstrip('.')}. The picture shows a different detail, so the correct mark is false",
+            f"العبارة لا تطابق المشهد: {ar.rstrip('.')}. الصورة تُظهر تفصيلًا مختلفًا، فالإجابة الصحيحة أنها خطأ",
+        )
+    return en_w, ar_w
+
+
 def exam_visual(rows):
-    """Official visual order: true/false statements, then was-it-in-the-picture."""
+    """Official visual order: true/false statements, then was-it-in-the-picture.
+    Each row is [en, ar, oe, oa, ans, why_en, why_ar]."""
     tf, pr, other = [], [], []
     for row in rows:
         oe = row[2]
+        en, ar, oa, ans = row[0], row[1], row[3], row[4]
         if _is_tf(oe):
-            tf.append(list(row))
+            why = _visual_why(en, ar, ans, False)
+            tf.append([en, ar, list(oe), list(oa), ans, why[0], why[1]])
         elif _is_pr(oe):
-            pr.append(list(row))
+            why = _visual_why(en, ar, ans, True)
+            pr.append([en, ar, list(oe), list(oa), ans, why[0], why[1]])
         else:
             other.append(row)
     for i, (en, ar, oe, oa, ans) in enumerate(other):
@@ -561,16 +616,16 @@ def exam_visual(rows):
         choice_e, choice_a = (wrong_e, wrong_a) if use_false else (right_e, right_a)
         stem = en.rstrip("?")
         stem_ar = ar.rstrip("؟?")
-        statement = [
-            f"{choice_e} — {stem}.",
-            f"{choice_a} — {stem_ar}.",
-            TF_EN, TF_AR, 1 if use_false else 0,
-        ]
-        presence = [
-            f"{choice_e} — {stem}",
-            f"{choice_a} — {stem_ar}",
-            PR_EN, PR_AR, 1 if use_false else 0,
-        ]
+        statement_en = f"{choice_e} — {stem}."
+        statement_ar = f"{choice_a} — {stem_ar}."
+        why = _visual_why(
+            statement_en, statement_ar, 1 if use_false else 0, False,
+            right_e, right_a, choice_e if use_false else None, choice_a if use_false else None,
+        )
+        statement = [statement_en, statement_ar, TF_EN, TF_AR, 1 if use_false else 0, why[0], why[1]]
+        presence = [f"{choice_e} — {stem}", f"{choice_a} — {stem_ar}", PR_EN, PR_AR, 1 if use_false else 0]
+        presence_why = _visual_why(presence[0], presence[1], presence[4], True, right_e, right_a, choice_e if use_false else None, choice_a if use_false else None)
+        presence.extend(presence_why)
         if i < max(0, len(other) - 15):
             tf.append(statement)
         else:
@@ -578,8 +633,8 @@ def exam_visual(rows):
     if len(pr) < 12 and len(tf) > 24:
         moved = tf[-12:]
         tf = tf[:-12]
-        for en, ar, oe, oa, ans in moved:
-            pr.append([en, ar, PR_EN, PR_AR, 0 if ans == 0 else 1])
+        for en, ar, oe, oa, ans, why_en, why_ar in moved:
+            pr.append([en, ar, PR_EN, PR_AR, 0 if ans == 0 else 1, why_en, why_ar])
     out, seen = [], set()
     for row in tf + pr:
         if row[0] in seen:
@@ -590,7 +645,7 @@ def exam_visual(rows):
     while len(out) < 45 and n < 45:
         n += 1
         stem = f"Extra pictured detail {n}"
-        row = [stem, f"تفصيل إضافي ظاهر {n}", PR_EN, PR_AR, 1]
+        row = [stem, f"تفصيل إضافي ظاهر {n}", PR_EN, PR_AR, 1, "", ""]
         if stem not in seen:
             seen.add(stem)
             out.append(row)
@@ -605,15 +660,39 @@ def _qpack(rows):
     if len(shaped) != 45:
         raise SystemExit(f"visual set became {len(shaped)}")
     out = []
-    for en, ar, oe, oa, ans in shaped:
+    for en, ar, oe, oa, ans, why_en, why_ar in shaped:
+        if not why_en or not why_ar:
+            raise SystemExit("memory question missing why: " + en[:80])
         out.append({
             "en": en,
             "ar": ar,
             "opts": [[a, b] for a, b in zip(oe, oa)],
             "ans": ans,
-            "why": ["It is in the picture.", "هذا في الصورة."],
+            "why": [why_en, why_ar],
         })
     return out
+
+
+def _explain(why, correct_en, correct_ar, kind):
+    """Turn a short bank note into 1–2 sentences that name the rule and the right answer."""
+    en, ar = (why or ["", ""])[:2]
+    en, ar = (en or "").strip(), (ar or "").strip()
+    if en.count(".") >= 2 and len(en) >= 90 and len(ar) >= 40:
+        return [en, ar]
+    if kind in ("reading", "comp"):
+        en2 = en.rstrip(".") + f". The passage is the source, and the line that fits is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". المقطع هو المصدر، والسطر الذي يوافقه هو: {correct_ar}"
+    elif kind == "logic":
+        en2 = en.rstrip(".") + f". A different choice breaks that pattern. The correct answer is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". خيار آخر يخالف هذا النمط. الإجابة الصحيحة: {correct_ar}"
+    else:
+        en2 = en.rstrip(".") + f". The other wording breaks that rule. The correct answer is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". الصياغة الأخرى تخالف هذه القاعدة. الإجابة الصحيحة: {correct_ar}"
+    if not en2.endswith("."):
+        en2 += "."
+    if ar2 and not ar2.endswith("."):
+        ar2 += "."
+    return [en2, ar2]
 
 
 def load_memory():
@@ -808,14 +887,9 @@ def study_html(payload):
     adapt = (ROOT / "scripts" / "hesna_adapt.js").read_text()
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
     def _day_label(d):
-        ids = MEM_BY_DAY[d["n"]]
         bio = " + biodata" if d["n"] % 7 == 0 else ""
         bio_ar = " + بيانات" if d["n"] % 7 == 0 else ""
-        if len(ids) == 2:
-            return (f"Day {d['n']} — {ids[0]}, then more details{bio}", f"اليوم {d['n']} — {ids[0]}، ثم تفاصيل أكثر{bio_ar}")
-        if ids[0].endswith("-b"):
-            return (f"Day {d['n']} — {ids[0][:-2]}, more details{bio}", f"اليوم {d['n']} — {ids[0][:-2]}، تفاصيل أكثر{bio_ar}")
-        return (f"Day {d['n']} — {ids[0]}{bio}", f"اليوم {d['n']} — {ids[0]}{bio_ar}")
+        return (f"Day {d['n']} — 3 scenes, two tests each{bio}", f"اليوم {d['n']} — 3 مشاهد، اختباران لكل مشهد{bio_ar}")
     day_opts = "".join(
         f'<option value="{d["n"]}" data-en="{E(_day_label(d)[0])}" data-ar="{E(_day_label(d)[1])}"></option>'
         for d in DAYS
@@ -826,7 +900,8 @@ def study_html(payload):
 <meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>Hassnaa's Four-Week HPD Study Plan | خطة حسناء الدراسية</title>
-<link rel="stylesheet" href="/styles.css?v=20261026b">
+<link rel="stylesheet" href="/styles.css?v=20261102e">
+<!-- hs-areas:20261102e -->
 {PWA}
 <style>{CSS}</style>
 </head>
@@ -918,6 +993,132 @@ def audit_scenes():
         raise SystemExit("street cup is not drawn")
 
 
+# DELPOE section titles, in the guide's order. Memory is section 1.
+# Post-memory rotates sections 2–4. Two sections a day, then shown in this order.
+_GUIDE_POST = ("written", "reading", "bio")
+_GUIDE_LABELS = {
+    "written": ("Written Communication Skills", "مهارات التواصل الكتابي"),
+    "reading": ("Reading with Understanding", "القراءة بفهم"),
+    "bio": ("Biodata", "البيانات الشخصية"),
+}
+_GUIDE_NOTES = {
+    "written": (
+        "Sentence structure, grammar, and word usage. A is correct. B is incorrect.",
+        "بنية الجملة، والقواعد، واستخدام الكلمات. A صحيحة. B غير صحيحة.",
+    ),
+    "reading": (
+        "The passage stays. Answer only from it.",
+        "المقطع يبقى. أجيبي منه فقط.",
+    ),
+    "bio": (
+        "About you. One honest choice. A blank or two marks get no credit.",
+        "عنكِ. خيار صادق واحد. الفراغ أو العلامتان بلا رصيد.",
+    ),
+}
+# Written Communication Skills tests these three, in this order.
+_STRUCTURE = {"ab-fragment", "complements"}
+_USAGE = {"ab-well", "ab-homo", "prepositions", "calques", "phrasing"}
+
+
+def _focus_rank(row):
+    fam = row.get("family") or ""
+    if fam in _STRUCTURE:
+        return 0
+    if fam in _USAGE:
+        return 2
+    return 1
+
+
+def _areas_for_day(n):
+    """Day n (1–28) takes two guide sections, rotating the start, then restores guide order."""
+    start = (n - 1) % 3
+    picked = {_GUIDE_POST[start], _GUIDE_POST[(start + 1) % 3]}
+    return [area for area in _GUIDE_POST if area in picked]
+
+
+def _spread(rows, day_list):
+    """Easier rows land on earlier appearances. Later empty days repeat the hardest row."""
+    rows = sorted(rows, key=lambda r: (r.get("tier", 1), r.get("depth", 1), str(r.get("id"))))
+    buckets = {d: [] for d in day_list}
+    k = len(day_list)
+    n = len(rows)
+    if not k or not n:
+        return buckets
+    if n >= k:
+        for i, row in enumerate(rows):
+            slot = min(k - 1, (i * k) // n)
+            buckets[day_list[slot]].append(row)
+    else:
+        for i, row in enumerate(rows):
+            buckets[day_list[i]].append(row)
+        hard = rows[-1]
+        for d in day_list:
+            if not buckets[d]:
+                buckets[d] = [hard]
+    prev = -1
+    for d in day_list:
+        tiers = [r.get("tier", 1) for r in buckets[d]]
+        if not tiers:
+            raise SystemExit("empty guide section on a scheduled day")
+        if min(tiers) < prev:
+            raise SystemExit("difficulty dropped")
+        prev = min(tiers)
+    return buckets
+
+
+def _day_after(items, reads, comps, bio_n):
+    """Post-memory quizzes: the guide's sections, in the guide's order, rotating across 28 days."""
+    days_for = {area: [] for area in _GUIDE_POST}
+    for n in range(1, 29):
+        for area in _areas_for_day(n):
+            days_for[area].append(n)
+    written_rows = [it for it in items if it["pillar"] in ("written", "grammar")]
+    reading_rows = list(reads) + list(comps)
+    bio_rows = [{"id": i, "tier": i + 1} for i in range(bio_n)]
+    banks = {
+        "written": _spread(written_rows, days_for["written"]),
+        "reading": _spread(reading_rows, days_for["reading"]),
+        "bio": _spread(bio_rows, days_for["bio"]),
+    }
+    for day, rows in banks["written"].items():
+        rows.sort(key=lambda r: (_focus_rank(r), r.get("tier", 1), r["id"]))
+    out = []
+    bio_plan = []
+    for n in range(1, 29):
+        steps = []
+        bio = None
+        for area in _areas_for_day(n):
+            rows = banks[area][n]
+            if area == "bio":
+                ids = [r["id"] for r in rows]
+                if ids != list(range(ids[0], ids[0] + len(ids))):
+                    raise SystemExit(f"day {n} biodata slice is not contiguous")
+                bio = (ids[0], len(ids))
+                continue
+            en, ar = _GUIDE_LABELS[area]
+            note_en, note_ar = _GUIDE_NOTES[area]
+            steps.append({
+                "area": area,
+                "en": en,
+                "ar": ar,
+                "note_en": note_en,
+                "note_ar": note_ar,
+                "ids": [r["id"] for r in rows],
+            })
+        out.append(steps)
+        bio_plan.append(bio)
+    used_w = {i for rows in banks["written"].values() for r in rows for i in [r["id"]]}
+    used_r = {i for rows in banks["reading"].values() for r in rows for i in [r["id"]]}
+    need_w = {it["id"] for it in written_rows}
+    need_r = {p["id"] for p in reading_rows}
+    if need_w - used_w or need_r - used_r:
+        raise SystemExit("guide quiz missing from the rotation")
+    for area, label in (("written", "Written Communication Skills"), ("reading", "Reading with Understanding"), ("bio", "Biodata")):
+        if len(days_for[area]) < 8:
+            raise SystemExit(label + " is not repeated across the four weeks")
+    return out, bio_plan, days_for
+
+
 def main():
     audit_scenes()
     photo_stats = hesna_photo.check()
@@ -925,6 +1126,40 @@ def main():
     stats["photos"] = photo_stats
     reads, comps, listens, obs = hesna_banks.passages()
     items = hesna_banks.all_items()
+
+    def _opt(it):
+        opts = it.get("opts") or []
+        ans = it.get("ans", 0)
+        if not opts or ans >= len(opts):
+            return "", ""
+        pair = opts[ans]
+        return pair[0], pair[1] if len(pair) > 1 else pair[0]
+
+    def _fix_item(it, kind):
+        ce, ca = _opt(it)
+        it = dict(it)
+        it["why"] = _explain(it.get("why"), ce, ca, kind)
+        return it
+
+    items = [_fix_item(it, it["pillar"]) for it in items]
+
+    def _fix_group(group):
+        out = []
+        for p in group:
+            p = dict(p)
+            qs = []
+            for q in p["qs"]:
+                q = dict(q)
+                ce, ca = _opt(q)
+                q["why"] = _explain(q.get("why"), ce, ca, p["pillar"])
+                qs.append(q)
+            p["qs"] = qs
+            out.append(p)
+        return out
+
+    reads, comps, listens, obs = (_fix_group(g) for g in (reads, comps, listens, obs))
+    bio_bank = bio_items()
+    after_plan, bio_plan, guide_days = _day_after(items, reads, comps, len(bio_bank))
     # Drop callables; items are plain dicts.
     if [d["n"] for d in DAYS] != list(range(1, 29)):
         raise SystemExit("the plan must be days 1 through 28")
@@ -945,25 +1180,25 @@ def main():
         if d.get("stretchTake"):
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
-        week = (d["n"] - 1) // 7 + 1
-        row["take"] = {"ab": 6 + 2 * week, "reading": 1 if week <= 2 else 2}
-        if d["n"] % 7 == 0:
-            row["bio"] = 6
-            row["bioStart"] = (d["n"] // 7 - 1) * 6
+        row["after"] = list(after_plan[d["n"] - 1])
+        bio = bio_plan[d["n"] - 1]
+        if bio:
+            row["bioStart"], row["bio"] = bio
         days.append(row)
     flat = [mid for day in range(1, 29) for mid in MEM_BY_DAY[day]]
-    if len(flat) != 42 or len(flat) % 2:
-        raise SystemExit("memory tests must come in pairs")
+    if len(flat) != 28 * 6:
+        raise SystemExit("each day needs 3 scenarios x 2 tests")
     def _base(mid):
         if mid.endswith("-b"):
             return mid[:-2]
         if mid.endswith("-1") and mid.split("-")[0] in ("b7426", "qstop", "corner"):
             return mid[:-2]
         return mid
-    for i in range(0, 42, 2):
-        a, b = flat[i], flat[i + 1]
-        if _base(a) != _base(b) or not b.endswith("-b") or a.endswith("-b"):
-            raise SystemExit(f"pair broken at {a}, {b}")
+    for ids in MEM_BY_DAY.values():
+        for i in range(0, 6, 2):
+            a, b = ids[i], ids[i + 1]
+            if _base(a) != _base(b) or not b.endswith("-b") or a.endswith("-b"):
+                raise SystemExit(f"pair broken at {a}, {b}")
     mem, titles = load_memory()
     global MEM_TITLES
     MEM_TITLES = titles
@@ -978,7 +1213,7 @@ def main():
         "listens": listens,
         "obs": obs,
         "mem": mem,
-        "bio": bio_items(),
+        "bio": bio_bank,
     })
     STUDY.write_text(study_html(payload), encoding="utf-8")
     MEM.write_text(memory_html(), encoding="utf-8")

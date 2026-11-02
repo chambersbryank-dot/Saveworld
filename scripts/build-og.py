@@ -2,7 +2,7 @@
 """Oct 15 item 7: a distinct og:image (1200x630 share card) for every page in all 5 languages.
 Card = the page's own photo (its existing og:image, else the first content photo, else the logo) + the page title in that
 page's language + savingplanets.com. If the photo is SI-generated (si-credits.py SI_IMAGES), the card itself carries the visible
-credit 'Created by SI and Biological SI Partner' next to the image (never in meta tags). Writes assets/og/<lang>/<Page>.jpg and
+credit 'Made from SI and Biological SI Partner' next to the image (never in meta tags). Writes assets/og/<lang>/<Page>.jpg and
 points og:image / twitter:image (+ width/height) at it. Re-renders only when the visible card changes: photo, drawn title lines or SI credit (assets/og/manifest.json)."""
 import re, os, json, glob, hashlib, html, importlib.util
 from PIL import Image, ImageDraw, ImageFont, ImageFilter

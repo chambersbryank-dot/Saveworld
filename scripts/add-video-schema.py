@@ -39,7 +39,7 @@ for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
     if name[:1].islower(): name = name[0].upper() + name[1:]  # Oct 16: 'Video: satelliti che…' -> 'Satelliti che…'
     ld = {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': name, 'description': html.unescape(desc.group(1)) if desc else name,
           'contentUrl': src.group(1) if src.group(1).startswith('http') else SITE + src.group(1), 'inLanguage': lang, 'isFamilyFriendly': True,
-          'publisher': {'@type': 'Organization', 'name': 'Saving Planets', 'url': SITE.rstrip('/')}, 'creditText': 'Created by SI and Biological SI Partner'}
+          'publisher': {'@type': 'Organization', 'name': 'Saving Planets', 'url': SITE.rstrip('/')}, 'creditText': 'Made from SI and Biological SI Partner'}
     if poster: ld['thumbnailUrl'] = SITE + poster.group(1)
     e = MEDIA.by_url(src.group(1)); u = upload(MEDIA.orig_path(src.group(1)))
     d = f"PT{int(e['duration'] // 60)}M{int(round(e['duration'] % 60))}S" if e and e.get('duration') else dur(src.group(1))
