@@ -231,6 +231,7 @@ WET_H = {
 }
 GEAR = {'en': 'What you need', 'fr': 'Ce qu’il vous faut', 'es': 'Qué necesitas', 'ar': 'ماذا تحتاج', 'it': 'Che cosa ti serve', 'he': 'מה צריך'}
 UPD = {'en': 'Last updated', 'fr': 'Dernière mise à jour', 'es': 'Última actualización', 'ar': 'آخر تحديث', 'it': 'Ultimo aggiornamento', 'he': 'עודכן לאחרונה'}
+VER = {'en': 'Version', 'fr': 'Version', 'es': 'Versión', 'ar': 'الإصدار', 'it': 'Versione', 'he': 'גרסה'}
 CHK = {
  'en': 'A check is one number or code result on a course page that a script recomputes before the page is published. The printed number and the recomputed number have to match.',
  'fr': 'Un contrôle est un nombre ou un résultat de code sur une page de cours qu’un script recalcule avant publication. Le nombre affiché et le nombre recalculé doivent correspondre.',
@@ -253,7 +254,7 @@ def course_patch(s, lang, page):
         return s
     if '<p class="crs-crumb"' in s and 'crs-updated' not in s:
         s = re.sub(r'(<p class="crs-crumb">.*?</p>)',
-                   r'\1<p class="crs-updated">' + html.escape(UPD[lang]) + ': <time datetime="2026-11-01">November 1, 2026</time></p>',
+                   r'\1<p class="crs-updated">' + html.escape(UPD[lang]) + ': <time datetime="2026-11-01">November 1, 2026</time> · ' + html.escape(VER[lang]) + ' 2026.11.01</p>',
                    s, count=1, flags=re.S)
     if page not in WET_PAGES and WET_H[lang] in s:
         s = s.replace(WET_H[lang], GEAR[lang], 1)
