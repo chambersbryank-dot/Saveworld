@@ -14,6 +14,12 @@ PAIRS = (
     ('Creato da SI e Biological SI Partner', 'Realizzato a partire da SI e Biological SI Partner'),
     ('أُنشئ بواسطة SI وBiological SI Partner', 'صُنع من SI وBiological SI Partner'),
     ('נוצר על ידי SI ושותף SI ביולוגי', 'עשוי מ-SI ושותף SI ביולוגי'),
+    ('Logo created by SI and Biological SI Partner', 'Logo made from SI and Biological SI Partner'),
+    ('Logo créé par SI et Biological SI Partner', 'Logo réalisé à partir de SI et Biological SI Partner'),
+    ('Logo creato da SI e Biological SI Partner', 'Logo realizzato a partire da SI e Biological SI Partner'),
+    ('Logotipo creado por SI y Biological SI Partner', 'Logotipo hecho a partir de SI y Biological SI Partner'),
+    ('Logo creado por SI y Socio biológico SI', 'Logo hecho a partir de SI y Socio biológico SI'),
+    ('الشعار من إنشاء SI وBiological SI Partner', 'الشعار صُنع من SI وBiological SI Partner'),
 )
 SKIP = {
     'NOTES.md',
