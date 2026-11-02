@@ -288,6 +288,27 @@ def en_only(h):
     h = re.sub(r'\n?<link rel="alternate" hreflang="(?!en"|x-default")[^"]+" href="[^"]+">', lambda m: m.group(0) if os.path.exists(m.group(0).split('savingplanets.com/')[1].split('"')[0]) else '', h)
     return fix_switch(he_card(bidi(h)))
 
+def keep_head(new, path, alt, page):
+    """A rebuild starts from the Kids Map head. Put back this page's critical CSS, Hebrew alternate, and share-card alt."""
+    old = open(path, encoding='utf8').read() if os.path.exists(path) else ''
+    crit = re.search(r'<!-- CRIT:START -->.*?<!-- CRIT:END -->', old, re.S)
+    if crit:
+        if '<!-- CRIT:START -->' in new:
+            new = re.sub(r'<!-- CRIT:START -->.*?<!-- CRIT:END -->', lambda _m: crit.group(0), new, count=1, flags=re.S)
+        else:
+            new = new.replace('</head>', crit.group(0) + '\n</head>', 1)
+    head, sep, rest = new.partition('</head>')
+    if sep and 'hreflang="he"' not in head and (LANG == 'he' or os.path.exists('he/' + page)):
+        link = f'\n<link rel="alternate" hreflang="he" href="https://www.savingplanets.com/he/{page}">'
+        head = head.replace('<link rel="alternate" hreflang="x-default"', link + '\n<link rel="alternate" hreflang="x-default"', 1)
+        new = head + sep + rest
+    alt_esc = html.escape(alt, quote=True)
+    if 'property="og:image:alt"' in new:
+        new = re.sub(r'(<meta property="og:image:alt" content=")[^"]*"', lambda m: m.group(1) + alt_esc + '"', new, count=1)
+    else:
+        new = re.sub(r'(<meta property="og:image" content="[^"]*">)', lambda m: m.group(1) + '\n<meta property="og:image:alt" content="' + alt_esc + '">', new, count=1)
+    return new
+
 # RTL pages (ar, he): plain-text formulas inside RTL sentences (e.g. "f(x) = x² + 1", "∫ 2x dx") get <bdi dir="ltr"> so the
 # bidi algorithm cannot reorder their operators. Text nodes only, inside the course/hub body; KaTeX blocks (.crs-math), script/style/pre/code skipped.
 _FTOK = r"(?:&(?:lt|gt|amp|#x27|quot);|[A-Za-z0-9()\[\]{}+\-−–×÷·*/=<>≤≥≈≠^_.,:;′'|!√∫∑∏∂∞→←↔∈≡%°\u0370-\u03ff\u00c0-\u00ff\u0100-\u024f\u1e00-\u1eff⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋ₙₓᵢₘₖₐₑₒₗₛ±⌀∓µ‰Å\u02b0-\u02ff\u1d2c-\u1dbf\u2070-\u209f½¼¾⅓⅔⅛ ])"
@@ -505,9 +526,13 @@ if __name__ == '__main__':
         for LANG in langs:
             for m in MODS:
                 f = out(m.PAGE)
-                if LANG == 'en' or LANG in DONE.get(m.ID, ()): open(f, 'w', encoding='utf8').write(en_only(course_page(m)))
+                if LANG == 'en' or LANG in DONE.get(m.ID, ()):
+                    title = _(m.TITLE) + ' (' + m.CODE + ')'
+                    open(f, 'w', encoding='utf8').write(keep_head(en_only(course_page(m)), f, title, m.PAGE))
                 elif os.path.exists(f): os.remove(f)  # never leave a stale half-translated page
-            if LANG == 'en' or not gaps.get('_hub', {}).get(LANG): open(out(HUB), 'w', encoding='utf8').write(en_only(hub_page()))
+            if LANG == 'en' or not gaps.get('_hub', {}).get(LANG):
+                hf = out(HUB)
+                open(hf, 'w', encoding='utf8').write(keep_head(en_only(hub_page()), hf, _('Courses'), HUB))
     LANG = 'en'
     for cid, g in gaps.items():
         print(f'build-courses: {cid} not translated yet in', {l: len(v) for l, v in g.items()}, f'(English only there; run --missing {cid})')
