@@ -7,7 +7,9 @@
     "Nancy_Grace_Roman.html|assets/Roman_Launch_FH.jpg",
     "Saharan_Dust_Amazon.html|assets/Saharan_Dust_Amazon.jpg",
     "Amazon_Rainy_Season.html|assets/Amazon_Clouds_ISS.jpg",
-    "IMAP.html|assets/IMAP_Spacecraft_KSC.jpg"
+    "IMAP.html|assets/IMAP_Spacecraft_KSC.jpg",
+    "SWOT.html|assets/SWOT_Orbit_Illustration.jpg",
+    "Coral_Restoration_Foundation.html|assets/Florida_Keys_PIA03890.jpg"
   ],
   "issues": {
     "2026-10-11": {
@@ -63,12 +65,31 @@
         "launchesThisWeek": 3,
         "artemisUpcoming": 3
       }
+    },
+    "2026-11-02": {
+      "joke": 4,
+      "facts": [
+        "SWOT.html|assets/SWOT_Orbit_Illustration.jpg",
+        "Coral_Restoration_Foundation.html|assets/Florida_Keys_PIA03890.jpg"
+      ],
+      "solutions": 20,
+      "launches": 5,
+      "stats": {
+        "solutions": 266,
+        "hubs": 11,
+        "languages": 6,
+        "upcomingMissions": 26,
+        "facts": 27,
+        "launchesThisWeek": 5,
+        "artemisUpcoming": 3
+      }
     }
   },
   "usedJokes": [
     0,
     1,
     2,
-    3
+    3,
+    4
   ]
 }

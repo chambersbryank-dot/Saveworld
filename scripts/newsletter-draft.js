@@ -77,7 +77,7 @@ function hubMap(lang) {
   const html = rd(pageFile(lang, 'index.html')) || rd('index.html'), map = {}, order = [];
   const menu = (html.match(/<!-- SOLUTIONS-MENU:START -->([\s\S]*?)<!-- SOLUTIONS-MENU:END -->/) || [])[1] || '';
   if (!menu) { // Oct 12: the nav dropdown was removed; hub membership now comes from solutions.json (build-stats.js)
-    try { for (const g of JSON.parse(rd('assets/data/solutions.json')).solutionsMenu || []) { order.push({ url: g.href, name: g.hub }); for (const i of g.items) if (!map[i.href]) map[i.href] = g.href; } } catch (e) {}
+    try { for (const g of JSON.parse(rd('assets/data/solutions.json')).solutionsMenu || []) { order.push({ url: g.href, name: (lang !== 'en' && dec(((rd(pageFile(lang, g.href)) || '').match(/<h1[^>]*>([^<]+)<\/h1>/) || [])[1] || '').trim()) || g.hub }); /* 2026-11-02: localized hub name from the hub page's <h1> */ for (const i of g.items) if (!map[i.href]) map[i.href] = g.href; } } catch (e) {}
     return { map, order };
   }
   for (const g of menu.split('<li class="menu-group">').slice(1)) {
@@ -133,7 +133,8 @@ async function launches() {
   const r = await fetch(`https://ll.thespacedevs.com/2.3.0/launches/?net__gte=${start.toISOString()}&net__lt=${end.toISOString()}&limit=30&mode=normal&ordering=net`, { headers: { Accept: 'application/json' } });
   if (!r.ok) throw new Error('Launch Library ' + r.status);
   const nowMs = Date.now();
-  return (await r.json()).results.filter(l => Date.parse(l.net) >= nowMs).map(l => ({ date: l.net, vehicle: (l.rocket && l.rocket.configuration && l.rocket.configuration.name) || l.name.split('|')[0].trim(), mission: (l.mission && l.mission.name) || l.name.split('|').pop().trim(), provider: l.launch_service_provider && l.launch_service_provider.name }));
+  // 2026-11-02: drop launches whose mission is unidentified ("Unknown Payload") and tidy LL2's "Group TBD?" placeholders.
+  return (await r.json()).results.filter(l => Date.parse(l.net) >= nowMs && !/unknown payload/i.test((l.mission && l.mission.name) || l.name)).map(l => ({ date: l.net, vehicle: (l.rocket && l.rocket.configuration && l.rocket.configuration.name) || l.name.split('|')[0].trim(), mission: ((l.mission && l.mission.name) || l.name.split('|').pop().trim()).replace(/\s+TBD\?$/, ''), provider: l.launch_service_provider && l.launch_service_provider.name }));
 }
 function fmtDate(d, lang) { return new Date(d).toLocaleDateString(T[lang].dateLoc, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Pacific/Honolulu' }); }
 function fmtDay(d, lang) { return new Date(d).toLocaleString(T[lang].dateLoc, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Pacific/Honolulu' }) + ' HST'; }
@@ -166,7 +167,7 @@ const prevIssue = state => Object.keys(state.issues || {}).filter(k => k < iso).
 const weekIdx = () => Math.floor((Date.parse(iso + 'T00:00:00Z') - Date.parse('2026-01-05T00:00:00Z')) / (7 * 864e5));
 const readJson = f => { try { return JSON.parse(rd(f)); } catch (e) { return null; } };
 // New non-solution pages (education features, trust pages, tools) first added since the previous issue, plus curated entries in scripts/newsletter-updates.json.
-const SKIP_PAGES = /^(404|Sitemap|index|ways[-_]to[-_]help|Community)\.html$/;
+const SKIP_PAGES = /^(404|Sitemap|index|ways[-_]to[-_]help|Community|offline)\.html$/; // 2026-11-02: offline.html is the PWA fallback, not a reader page
 function whatsNew(state) {
   const prev = prevIssue(state), since = prev || new Date(Date.now() - DAYS * 864e5).toISOString().slice(0, 10);
   const sol = new Set((readJson('assets/data/solutions.json') || { pages: [] }).pages.map(p => p.url)), out = [];
@@ -229,6 +230,7 @@ function build(lang, sols, factKeys, launchList, joke, corr = [], extra = {}) {
     solsHtml += `<h3 style="margin:18px 0 8px;font-size:16px;color:#003755;text-transform:uppercase;letter-spacing:.5px">${hub.url === '_other' ? '' : a(P + hub.url, hub.name, true)}</h3>`;
     const more = list.length > CAP && hub.url !== '_other' ? `<p style="margin:0 0 12px;font-size:14px">${a(P + hub.url, t.seeAll(list.length, hub.name) + ' →', true)}</p>` : '';
     solsHtml += list.slice(0, CAP).map(s => { const m = meta(rd(pageFile(lang, s.url)) || rd(s.url));
+      { const h1 = dec((((rd(pageFile(lang, s.url)) || '').match(/<h1[^>]*>([^<]+)<\/h1>/) || [])[1] || '').trim()); if (h1 && h1.length <= 120) m.title = h1; } // 2026-11-02: <title> can still carry an English name + hub label ("Beyond EPICA – Oldest Ice – Pôles"); the page <h1> is the translated name
       const badge = s.horizon ? `<br><span style="display:inline-block;margin:4px 0;background:#fff4e0;color:#8a5a00;border:1px solid #f0c36d;border-radius:12px;padding:1px 9px;font-size:12px;font-weight:700">${esc(t.horizon)}</span> <span style="font-size:12px;color:#5b7486">${esc(t.horizonNote)}</span>` : '';
       return `<p style="margin:0 0 12px">${a(P + s.url, m.title, true)}${badge}<br><span style="font-size:14px">${esc(m.desc)}</span></p>`; }).join('') + more;
   }
