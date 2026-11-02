@@ -42,6 +42,10 @@ details.hs-ref{margin:1.5rem 0}
 .hs-lesson h3{margin:0 0 .4rem}
 .sp-day{border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem;background:rgba(255,255,255,.04)}
 .sp-btn{margin-top:.5rem;padding:.45rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:transparent;color:inherit;font:inherit;cursor:pointer;min-height:44px}
+.hs-menu{list-style:none;padding:0;margin:.4rem 0 1rem}
+.hs-menu li{margin:.55rem 0}
+.hs-menu .sp-btn{display:block;width:100%;text-align:start}
+.hs-menu .sp-ph{margin:.2rem 0 0}
 .sp-phase{margin:1.5rem 0}.sp-day h3{margin:0 0 .5rem}.sp-ph{opacity:.85;font-style:italic;margin:0}
 html{scroll-behavior:auto!important}
 html[lang=en] [data-ar],html[lang=ar] [data-en]{display:none}
@@ -945,8 +949,9 @@ def main():
         if d.get("stretchTake"):
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
-        week = (d["n"] - 1) // 7 + 1
-        row["take"] = {"ab": 6 + 2 * week, "reading": 1 if week <= 2 else 2}
+        # Keep the day's original quiz counts (grammar, logic, reading, radio,
+        # observation, written A/B). Overwriting them with only A/B + reading
+        # hid every other HPD area behind the memory drill.
         if d["n"] % 7 == 0:
             row["bio"] = 6
             row["bioStart"] = (d["n"] // 7 - 1) * 6
