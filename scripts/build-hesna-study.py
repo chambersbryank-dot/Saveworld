@@ -549,15 +549,64 @@ def _is_pr(oe):
     return bool(oe) and str(oe[0]).startswith("A. Yes")
 
 
+def _why_pair(en, ar):
+    en = en.strip()
+    ar = ar.strip()
+    if not en.endswith("."):
+        en += "."
+    if ar and not ar.endswith(".") and not ar.endswith("۔"):
+        ar += "."
+    return en, ar
+
+
+def _visual_why(en, ar, ans, presence, right_e=None, right_a=None, wrong_e=None, wrong_a=None):
+    """1–2 sentences. Cite the visible detail, the wrong mark, and the right one."""
+    if right_e and wrong_e and ans == 1:
+        en_w, ar_w = _why_pair(
+            f"The scene shows {right_e}, not {wrong_e}. Look at that detail in the picture — the statement is false",
+            f"المشهد يُظهر {right_a or right_e}، لا {wrong_a or wrong_e}. انظري إلى هذا التفصيل في الصورة — العبارة خطأ",
+        )
+    elif right_e and ans == 0:
+        en_w, ar_w = _why_pair(
+            f"The scene shows {right_e}. See it in the picture: {en.rstrip('.')}. The statement is true",
+            f"المشهد يُظهر {right_a or right_e}. هذا ظاهر في الصورة: {ar.rstrip('.')}. العبارة صحيحة",
+        )
+    elif presence and ans == 0:
+        en_w, ar_w = _why_pair(
+            f"Yes. This detail is drawn in the scene: {en.rstrip('.')}. Marking no would skip something visible",
+            f"نعم. هذا التفصيل مرسوم في المشهد: {ar.rstrip('.')}. اختيار لا يتجاهل شيئًا ظاهرًا",
+        )
+    elif presence and ans == 1:
+        en_w, ar_w = _why_pair(
+            f"No. The scene does not show this: {en.rstrip('.')}. Marking yes would add a detail that is not drawn",
+            f"لا. المشهد لا يُظهر هذا: {ar.rstrip('.')}. اختيار نعم يضيف تفصيلًا غير مرسوم",
+        )
+    elif ans == 0:
+        en_w, ar_w = _why_pair(
+            f"The statement matches the scene: {en.rstrip('.')}. The picture shows that detail, so the correct mark is true",
+            f"العبارة تطابق المشهد: {ar.rstrip('.')}. الصورة تُظهر هذا التفصيل، فالإجابة الصحيحة أنها صحيحة",
+        )
+    else:
+        en_w, ar_w = _why_pair(
+            f"The statement does not match the scene: {en.rstrip('.')}. The picture shows a different detail, so the correct mark is false",
+            f"العبارة لا تطابق المشهد: {ar.rstrip('.')}. الصورة تُظهر تفصيلًا مختلفًا، فالإجابة الصحيحة أنها خطأ",
+        )
+    return en_w, ar_w
+
+
 def exam_visual(rows):
-    """Official visual order: true/false statements, then was-it-in-the-picture."""
+    """Official visual order: true/false statements, then was-it-in-the-picture.
+    Each row is [en, ar, oe, oa, ans, why_en, why_ar]."""
     tf, pr, other = [], [], []
     for row in rows:
         oe = row[2]
+        en, ar, oa, ans = row[0], row[1], row[3], row[4]
         if _is_tf(oe):
-            tf.append(list(row))
+            why = _visual_why(en, ar, ans, False)
+            tf.append([en, ar, list(oe), list(oa), ans, why[0], why[1]])
         elif _is_pr(oe):
-            pr.append(list(row))
+            why = _visual_why(en, ar, ans, True)
+            pr.append([en, ar, list(oe), list(oa), ans, why[0], why[1]])
         else:
             other.append(row)
     for i, (en, ar, oe, oa, ans) in enumerate(other):
@@ -567,16 +616,16 @@ def exam_visual(rows):
         choice_e, choice_a = (wrong_e, wrong_a) if use_false else (right_e, right_a)
         stem = en.rstrip("?")
         stem_ar = ar.rstrip("؟?")
-        statement = [
-            f"{choice_e} — {stem}.",
-            f"{choice_a} — {stem_ar}.",
-            TF_EN, TF_AR, 1 if use_false else 0,
-        ]
-        presence = [
-            f"{choice_e} — {stem}",
-            f"{choice_a} — {stem_ar}",
-            PR_EN, PR_AR, 1 if use_false else 0,
-        ]
+        statement_en = f"{choice_e} — {stem}."
+        statement_ar = f"{choice_a} — {stem_ar}."
+        why = _visual_why(
+            statement_en, statement_ar, 1 if use_false else 0, False,
+            right_e, right_a, choice_e if use_false else None, choice_a if use_false else None,
+        )
+        statement = [statement_en, statement_ar, TF_EN, TF_AR, 1 if use_false else 0, why[0], why[1]]
+        presence = [f"{choice_e} — {stem}", f"{choice_a} — {stem_ar}", PR_EN, PR_AR, 1 if use_false else 0]
+        presence_why = _visual_why(presence[0], presence[1], presence[4], True, right_e, right_a, choice_e if use_false else None, choice_a if use_false else None)
+        presence.extend(presence_why)
         if i < max(0, len(other) - 15):
             tf.append(statement)
         else:
@@ -584,8 +633,8 @@ def exam_visual(rows):
     if len(pr) < 12 and len(tf) > 24:
         moved = tf[-12:]
         tf = tf[:-12]
-        for en, ar, oe, oa, ans in moved:
-            pr.append([en, ar, PR_EN, PR_AR, 0 if ans == 0 else 1])
+        for en, ar, oe, oa, ans, why_en, why_ar in moved:
+            pr.append([en, ar, PR_EN, PR_AR, 0 if ans == 0 else 1, why_en, why_ar])
     out, seen = [], set()
     for row in tf + pr:
         if row[0] in seen:
@@ -596,7 +645,7 @@ def exam_visual(rows):
     while len(out) < 45 and n < 45:
         n += 1
         stem = f"Extra pictured detail {n}"
-        row = [stem, f"تفصيل إضافي ظاهر {n}", PR_EN, PR_AR, 1]
+        row = [stem, f"تفصيل إضافي ظاهر {n}", PR_EN, PR_AR, 1, "", ""]
         if stem not in seen:
             seen.add(stem)
             out.append(row)
@@ -611,15 +660,39 @@ def _qpack(rows):
     if len(shaped) != 45:
         raise SystemExit(f"visual set became {len(shaped)}")
     out = []
-    for en, ar, oe, oa, ans in shaped:
+    for en, ar, oe, oa, ans, why_en, why_ar in shaped:
+        if not why_en or not why_ar:
+            raise SystemExit("memory question missing why: " + en[:80])
         out.append({
             "en": en,
             "ar": ar,
             "opts": [[a, b] for a, b in zip(oe, oa)],
             "ans": ans,
-            "why": ["It is in the picture.", "هذا في الصورة."],
+            "why": [why_en, why_ar],
         })
     return out
+
+
+def _explain(why, correct_en, correct_ar, kind):
+    """Turn a short bank note into 1–2 sentences that name the rule and the right answer."""
+    en, ar = (why or ["", ""])[:2]
+    en, ar = (en or "").strip(), (ar or "").strip()
+    if en.count(".") >= 2 and len(en) >= 90 and len(ar) >= 40:
+        return [en, ar]
+    if kind in ("reading", "comp"):
+        en2 = en.rstrip(".") + f". The passage is the source, and the line that fits is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". المقطع هو المصدر، والسطر الذي يوافقه هو: {correct_ar}"
+    elif kind == "logic":
+        en2 = en.rstrip(".") + f". A different choice breaks that pattern. The correct answer is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". خيار آخر يخالف هذا النمط. الإجابة الصحيحة: {correct_ar}"
+    else:
+        en2 = en.rstrip(".") + f". The other wording breaks that rule. The correct answer is: {correct_en}"
+        ar2 = ar.rstrip(".") + f". الصياغة الأخرى تخالف هذه القاعدة. الإجابة الصحيحة: {correct_ar}"
+    if not en2.endswith("."):
+        en2 += "."
+    if ar2 and not ar2.endswith("."):
+        ar2 += "."
+    return [en2, ar2]
 
 
 def load_memory():
@@ -827,8 +900,8 @@ def study_html(payload):
 <meta charset="UTF-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>Hassnaa's Four-Week HPD Study Plan | خطة حسناء الدراسية</title>
-<link rel="stylesheet" href="/styles.css?v=20261102c">
-<!-- hs-day-menu:20261102c -->
+<link rel="stylesheet" href="/styles.css?v=20261102d">
+<!-- hs-why:20261102d -->
 {PWA}
 <style>{CSS}</style>
 </head>
@@ -996,6 +1069,38 @@ def main():
     stats["photos"] = photo_stats
     reads, comps, listens, obs = hesna_banks.passages()
     items = hesna_banks.all_items()
+
+    def _opt(it):
+        opts = it.get("opts") or []
+        ans = it.get("ans", 0)
+        if not opts or ans >= len(opts):
+            return "", ""
+        pair = opts[ans]
+        return pair[0], pair[1] if len(pair) > 1 else pair[0]
+
+    def _fix_item(it, kind):
+        ce, ca = _opt(it)
+        it = dict(it)
+        it["why"] = _explain(it.get("why"), ce, ca, kind)
+        return it
+
+    items = [_fix_item(it, it["pillar"]) for it in items]
+
+    def _fix_group(group):
+        out = []
+        for p in group:
+            p = dict(p)
+            qs = []
+            for q in p["qs"]:
+                q = dict(q)
+                ce, ca = _opt(q)
+                q["why"] = _explain(q.get("why"), ce, ca, p["pillar"])
+                qs.append(q)
+            p["qs"] = qs
+            out.append(p)
+        return out
+
+    reads, comps, listens, obs = (_fix_group(g) for g in (reads, comps, listens, obs))
     after_plan = _day_after(items, reads, comps, listens, obs)
     # Drop callables; items are plain dicts.
     if [d["n"] for d in DAYS] != list(range(1, 29)):
