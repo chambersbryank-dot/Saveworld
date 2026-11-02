@@ -637,6 +637,8 @@
       at: Date.now()
     };
     row.memNeed = day.mem || row.memNeed || [];
+    var prev = state.days[String(day.n)];
+    if (prev && prev.quizzes) row.quizzes = prev.quizzes;
     state.days[String(day.n)] = row;
     markMastered(state, row);
     sealWeeks(state);

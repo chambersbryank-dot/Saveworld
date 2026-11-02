@@ -23,7 +23,12 @@ BEACON = '<!-- CF-WA:START --><script defer src="https://static.cloudflareinsigh
 PWA = '''<!-- PWA:START --><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0b3a5b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Saving Planets"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- PWA:END -->'''
 
 CSS = r'''
-body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
+body{max-width:1100px;margin:0 auto;padding:1rem 1rem 3rem}
+h1{font-size:1.35rem;margin:.2rem 0}
+.hs-dayline{margin:.35rem 0 .6rem}
+.hs-dayline select{font:inherit;color:inherit;background:#0b1622;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:.4rem .6rem;min-height:44px;max-width:100%}
+.hs-results h2,.hs-results h3{margin:.35rem 0}
+details.hs-ref{margin:1.5rem 0}
 .sp-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
 #sp-toggle{padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--brand-blue,#2b7bd6);background:transparent;color:inherit;font:inherit;cursor:pointer}
 .sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
@@ -564,6 +569,10 @@ def study_html(payload):
     draw = (ROOT / "scripts" / "hesna_draw.js").read_text()
     adapt = (ROOT / "scripts" / "hesna_adapt.js").read_text()
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
+    day_opts = "".join(
+        f'<option value="{d["n"]}" data-en="{E(d["en"])}" data-ar="{E(d["ar"])}"></option>'
+        for d in DAYS
+    )
     return f'''<!DOCTYPE html>
 <html lang="en" dir="ltr" class="dark">
 <head>
@@ -577,44 +586,15 @@ def study_html(payload):
 <body>
 <main data-pagefind-ignore="all">
 {NAV.format(g=' aria-current="page"', m='')}
-<div class="sp-top"><h1>{bi("Hassnaa's Four-Week HPD Study Plan", "خطة حسناء الدراسية لامتحان شرطة هونولولو (أربعة أسابيع)")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
-{week_section(1, weeks[0],
-"Days 1–7. Open now. Each day starts with a memory drill, then written communication, reading, logic, and the other quizzes. This week is the baseline: the 7426 burglary and the first street sketches.",
-"الأيام 1–7. مفتوحة الآن. كل يوم يبدأ بتمرين ذاكرة، ثم التواصل الكتابي والقراءة والمنطق وبقية الاختبارات. هذا الأسبوع خط الأساس: سطو 7426 ورسوم الشوارع الأولى.")}
-{week_section(2, weeks[1],
-"Days 8–14. Open now, and harder than Week 1. Memory first: Quick Stop, then the Level 4 sketches. Then the same exam sections, at a higher tier.",
-"الأيام 8–14. مفتوحة الآن، وأصعب من الأسبوع الأول. الذاكرة أولًا: كويك ستوب، ثم رسوم المستوى 4. ثم أقسام الامتحان نفسها، في مستوى أعلى.")}
-{week_section(3, weeks[2],
-"Days 15–21. Open now, and harder than Week 2. Memory first: the corner crash, the denser streets, then the lobby correction. Then the written, reading, and logic quizzes.",
-"الأيام 15–21. مفتوحة الآن، وأصعب من الأسبوع الثاني. الذاكرة أولًا: حادث الزاوية، والشوارع الأكثف، ثم تصحيح الردهة. ثم اختبارات الكتابة والقراءة والمنطق.")}
-{week_section(4, weeks[3],
-"Days 22–28. Open now. This is the hardest week. Memory first: the garage correction, then a second pass on the hardest scenes. The other quizzes stay at the top tier.",
-"الأيام 22–28. مفتوحة الآن. هذا أصعب أسبوع. الذاكرة أولًا: تصحيح المرآب، ثم مرور ثانٍ على أصعب المشاهد. وبقية الاختبارات تبقى في أعلى مستوى.")}
-<p><a class="sp-btn" href="hesna-6abec5-memory.html">{bi("All memory drills are also listed on their own page. Every one is open. 2 minutes, then the picture hides.", "كل تمارين الذاكرة مذكورة أيضًا في صفحتها. كل واحد مفتوح. دقيقتان، ثم تختفي الصورة.")}</a></p>
-{delpoe_block()}
-{biodata_block()}
-<div id="hs-board"></div>
+<div class="sp-top"><h1>{bi("Hassnaa's HPD Study Plan", "خطة حسناء")}</h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
+<p class="hs-dayline"><select id="hs-day" aria-label="Day">{day_opts}</select></p>
 <div id="hs-app"></div>
-<p><button type="button" class="sp-btn" id="hs-reset">{bi("Reset saved plan progress", "امسحي تقدّم الخطة المحفوظ")}</button></p>
-{facts}
-{sources}
-<p class="sp-ph">{bi("Private study page. Practice questions are original and are not real exam items.", "صفحة دراسة خاصة. أسئلة التدريب من إعدادنا وليست أسئلة امتحان حقيقية.")}</p>
-<p>{bi("Week 1 Day 1 starts with the photograph: how you see a scene, and where English sits beside Arabic and French. The other quizzes follow. Weeks 2, 3, and 4 are already open, and each one is harder than the last. Day 28 should make Day 1 look like a different test-taker. The aim, walking into the Honolulu exam, is about 98% on this kind of page.",
-"اليوم 1 من الأسبوع الأول يبدأ بالصورة: كيف ترين مشهدًا، وأين تقع الإنجليزية بجانب العربية والفرنسية. والاختبارات الأخرى تتبع. الأسابيع 2 و3 و4 مفتوحة أصلًا، وكل واحد أصعب من الذي قبله. واليوم 28 يُفترض أن يجعل اليوم 1 يبدو لشخص آخر يدخل الاختبار. الهدف، وأنتِ داخلة إلى امتحان هونولولو، نحو 98% على صفحة من هذا النوع.")}</p>
-<div class="hs-ladder" aria-hidden="true">{ladder}</div>
-{rules}
-{about}
+<div id="hs-summary"></div>
+<details class="hs-ref"><summary>{bi("Biodata", "البيانات الشخصية")}</summary>
+{biodata_block()}
+</details>
+<p><button type="button" class="sp-btn" id="hs-reset">{bi("Reset saved scores", "امسحي النتائج المحفوظة")}</button></p>
 </main>
-<script>
-(function(){{
-  if (location.hash && location.hash !== '#week-1' && location.hash !== '#day-1') return;
-  var el = document.getElementById('week-1');
-  if (!el) return;
-  function go(){{ el.scrollIntoView({{block:'start', behavior:'auto'}}); }}
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go);
-  else go();
-}})();
-</script>
 <script>window.HS={payload};</script>
 <script>{draw}</script>
 <script>{adapt}</script>
