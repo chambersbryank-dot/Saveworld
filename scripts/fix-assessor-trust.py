@@ -64,14 +64,14 @@ json.dump(photos, open('assets/data/solutions-card-photos.json', 'w', encoding='
 open('assets/data/solutions-card-photos.json', 'a').write('\n')
 
 SI = {
-    'en': 'Created by SI and Biological SI Partner',
-    'fr': 'Créé par SI et Biological SI Partner',
-    'es': 'Creado por SI y Biological SI Partner',
-    'ar': 'أُنشئ بواسطة SI وBiological SI Partner',
+    'en': 'Made from SI and Biological SI Partner',
+    'fr': 'Réalisé à partir de SI et Biological SI Partner',
+    'es': 'Hecho a partir de SI y Biological SI Partner',
+    'ar': 'صُنع من SI وBiological SI Partner',
     'it': 'Creato da SI et Biological SI Partner'.replace(' et ', ' e '),
-    'he': 'נוצר על ידי SI ושותף SI ביולוגי',
+    'he': 'עשוי מ-SI ושותף SI ביולוגי',
 }
-SI['it'] = 'Creato da SI e Biological SI Partner'
+SI['it'] = 'Realizzato a partire da SI e Biological SI Partner'
 SHORT = re.compile(
     r'(?:Photo|Image|Imagen|Immagine|Foto|Illustration)\s*:\s*SI Partner\.?|'
     r'الصورة:\s*SI Partner\.?|תמונה:\s*SI Partner\.?'

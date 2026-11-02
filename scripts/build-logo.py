@@ -15,7 +15,7 @@ ALT = {'en': 'Saving Planets logo', 'fr': 'Logo de Saving Planets', 'es': 'Logot
        'it': 'Logo di Saving Planets', 'he': 'הלוגו של Saving Planets'}
 CREDIT = {'en': 'Logo created by SI and Biological SI Partner', 'fr': 'Logo créé par SI et Biological SI Partner',
           'es': 'Logotipo creado por SI y Biological SI Partner', 'ar': 'الشعار من إنشاء SI وBiological SI Partner',
-          'it': 'Logo creato da SI e Biological SI Partner', 'he': 'הלוגו נוצר על ידי SI ושותף SI ביולוגי'}
+          'it': 'Logo creato da SI e Biological SI Partner', 'he': 'הלוגו עשוי מ-SI ושותף SI ביולוגי'}
 V = '20261020'
 CSS = r"""
 /* LOGO:START */

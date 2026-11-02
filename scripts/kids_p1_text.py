@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Oct 17 2026 Phase 1 (P-07, P-08, P-16, P-18): UI strings for scripts/build-kids-p1.py, en/fr/es/ar/it/he.
 Hebrew: SI = "SI (בינה סינתטית)" on first mention. No facts live here: arcade/passport content is read from the built pages."""
-CREDIT = {'en': 'Created by SI and Biological SI Partner', 'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
-          'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner', 'he': 'נוצר על ידי SI (בינה סינתטית) ושותף SI ביולוגי'}
+CREDIT = {'en': 'Made from SI and Biological SI Partner', 'fr': 'Réalisé à partir de SI et Biological SI Partner', 'es': 'Hecho a partir de SI y Biological SI Partner',
+          'ar': 'صُنع من SI وBiological SI Partner', 'it': 'Realizzato a partire da SI e Biological SI Partner', 'he': 'נוצר על ידי SI (בינה סינתטית) ושותף SI ביולוגי'}
 PASS = {
  'en': dict(title='Space Passport', kicker='Collect a stamp for every part of Saving Planets you explore. No account, no streaks, and stamps are never lost.',
    desc='A free Space Passport for kids: collect stamps for exploring oceans, forests, space weather, planetary defense and more. Saved only on your device.',

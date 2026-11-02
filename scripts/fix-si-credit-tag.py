@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""One credit tag for SI-made media: 'Made from SI and Biological SI Partner' (and the same line in each language).
+
+Does not edit the Saturn hero (assets/hero-themes.js, or the HERO-VIDEO block). Idempotent.
+"""
+import os, re
+
+os.chdir(os.path.join(os.path.dirname(__file__), '..'))
+
+PAIRS = (
+    ('Created by SI and Biological SI Partner', 'Made from SI and Biological SI Partner'),
+    ('Créé par SI et Biological SI Partner', 'Réalisé à partir de SI et Biological SI Partner'),
+    ('Creado por SI y Biological SI Partner', 'Hecho a partir de SI y Biological SI Partner'),
+    ('Creato da SI e Biological SI Partner', 'Realizzato a partire da SI e Biological SI Partner'),
+    ('أُنشئ بواسطة SI وBiological SI Partner', 'صُنع من SI وBiological SI Partner'),
+    ('נוצר על ידי SI ושותף SI ביולוגי', 'עשוי מ-SI ושותף SI ביולוגי'),
+)
+SKIP = {
+    'NOTES.md',
+    'assets/hero-themes.js',
+    'scripts/fix-si-credit-tag.py',
+}
+EXTS = {'.html', '.py', '.js', '.json', '.vtt', '.csv', '.css', '.md', '.sh'}
+HERO = re.compile(r'<!-- HERO-VIDEO:START -->.*?<!-- HERO-VIDEO:END -->', re.S)
+
+def convert(text):
+    for old, new in PAIRS:
+        text = text.replace(old, new)
+    return text
+
+def convert_file(text, path):
+    if path.endswith('.html') and 'HERO-VIDEO:START' in text:
+        parts = HERO.split(text)
+        heroes = HERO.findall(text)
+        out = []
+        for i, part in enumerate(parts):
+            out.append(convert(part))
+            if i < len(heroes):
+                out.append(heroes[i])
+        return ''.join(out)
+    return convert(text)
+
+n = 0
+for root, dirs, files in os.walk('.'):
+    dirs[:] = [d for d in dirs if d not in ('.git', 'node_modules', '.venv')]
+    for name in files:
+        path = os.path.join(root, name)[2:]
+        if path in SKIP or os.path.splitext(name)[1] not in EXTS:
+            continue
+        raw = open(path, encoding='utf8').read()
+        nxt = convert_file(raw, path)
+        if nxt != raw:
+            open(path, 'w', encoding='utf8').write(nxt)
+            n += 1
+print('si credit tag updated in', n, 'files')

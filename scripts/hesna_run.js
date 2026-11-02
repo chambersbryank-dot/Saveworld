@@ -274,7 +274,7 @@
       note = bi("Recall of Visual Details. Two minutes. No notes.", "استرجاع التفاصيل البصرية. دقيقتان. بلا ملاحظات.");
     } else if (step.set.img) {
       body = '<figure class="hs-script"><img src="' + esc(step.set.img) + '" alt="' + esc(step.set.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px"><figcaption class="si-credit">'
-        + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + '</figcaption></figure><p>'
+        + bi("Made from SI and Biological SI Partner", "صُنع من SI وBiological SI Partner") + '</figcaption></figure><p>'
         + bi(step.set.en, step.set.ar) + '</p>';
       note = bi("Observation. Study this picture. It will hide. Every question is about this picture only.",
         "ملاحظة. ادراسي هذه الصورة. ستختفي. كل سؤال عن هذه الصورة فقط.");

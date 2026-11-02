@@ -70,7 +70,7 @@ def lab3d():
             '<p class="sx3d-fallback">The 3D lab needs WebGL. The 2D builder above and the photos below work everywhere.</p></div>'
             '<p class="sx-cap sx3d-cap" role="status" aria-live="polite"></p>'
             f'<div class="sx-ctrl">{btn}</div>'
-            '<p class="sx-credit">Created by SI and Biological SI Partner</p>'
+            '<p class="sx-credit">Made from SI and Biological SI Partner</p>'
             '<p class="sx-cite">Real satellite model: Landsat 8 by NASA/Christopher R. Meaney, <a href="https://science.nasa.gov/3d-resources/landsat-8/" rel="noopener">NASA 3D Resources</a>. Earth maps: <a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry" rel="noopener">NASA Blue Marble</a> and <a href="https://visibleearth.nasa.gov/images/79765/night-lights-2012-map" rel="noopener">NASA Black Marble</a>. Credit: NASA.</p></section>')
 
 def nasa_plus(stage):

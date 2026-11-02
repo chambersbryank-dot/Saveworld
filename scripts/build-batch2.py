@@ -21,7 +21,7 @@ def put(src, name, inner, after_re):
 # assets/hero-saturn-intro.js + the HEROTHEME block, not this video.
 HERO = ('<div class="hero-media" aria-hidden="true"><video class="hero-video" muted loop playsinline preload="none" '
         'data-poster="assets/videos/hero-loop.jpg" width="1280" height="546"><source data-src="https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4" type="video/mp4"></video>'
-        '<div class="hero-overlay"></div></div><p class="hero-video-credit">Created by SI and Biological SI Partner.</p>')
+        '<div class="hero-overlay"></div></div><p class="hero-video-credit">Made from SI and Biological SI Partner.</p>')
 s = open('index.html', encoding='utf8').read()
 s = put(s, 'HERO-VIDEO', HERO, r'<section class="hero space-hero">')
 s = s.replace('<section class="hero space-hero">', '<section class="hero space-hero has-video">', 1) if 'has-video' not in s else s

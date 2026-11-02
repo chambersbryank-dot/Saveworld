@@ -128,6 +128,7 @@ python3 scripts/build-logo.py           # Oct 20: logo v2 icon in the nav (left 
 python3 scripts/build-promo-en-only.py   # Oct 21 (founder): promo videos English-only; fr/es/ar/it/he get one 4K NASA still
 python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async stylesheets (cached per template; run after every head-touching generator)
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
+python3 scripts/fix-si-credit-tag.py      # Nov 2: one SI credit line, "Made from SI and Biological SI Partner" (Saturn hero left as-is)
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
 python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
 python3 scripts/add-video-schema.py       # Oct 16: again after seo-fix, so VideoObject descriptions match the final meta descriptions

@@ -26,7 +26,7 @@ TOP = {'rocket': T('Aerospace Engineering with Rocket Propulsion', 'Ingénierie 
        'phys': T('Physics', 'Physique', 'Física', 'الفيزياء', 'Fisica'),
        'all': T('General science', 'Sciences générales', 'Ciencia general', 'العلوم العامة', 'Scienze generali')}
 SRC = T('Sources', 'Sources', 'Fuentes', 'المصادر', 'Fonti')
-CREDIT = T('Created by SI and Biological SI Partner, checked against the sources listed.', 'Créé par SI et Biological SI Partner, vérifié avec les sources indiquées.', 'Creado por SI y Biological SI Partner, comprobado con las fuentes indicadas.', 'من إعداد SI وBiological SI Partner، وتم التحقق منه بالمصادر المذكورة.', 'Creato da SI e Biological SI Partner, verificato con le fonti indicate.')
+CREDIT = T('Made from SI and Biological SI Partner, checked against the sources listed.', 'Réalisé à partir de SI et Biological SI Partner, vérifié avec les sources indiquées.', 'Hecho a partir de SI y Biological SI Partner, comprobado con las fuentes indicadas.', 'من إعداد SI وBiological SI Partner، وتم التحقق منه بالمصادر المذكورة.', 'Realizzato a partire da SI e Biological SI Partner, verificato con le fonti indicate.')
 INTRO = T('When SI Helper can’t answer a question from this site, the question is saved anonymously. Each week we research it and add a sourced answer here.',
           'Quand SI Helper ne peut pas répondre à une question à partir du site, la question est enregistrée anonymement. Chaque semaine, nous faisons des recherches et ajoutons ici une réponse sourcée.',
           'Cuando SI Helper no puede responder una pregunta con este sitio, la pregunta se guarda de forma anónima. Cada semana la investigamos y añadimos aquí una respuesta con fuentes.',

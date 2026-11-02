@@ -15,7 +15,7 @@ MF = json.load(open('assets/data/media-manifest.json', encoding='utf-8'))
 SITED = json.load(open('assets/data/solutions.json', encoding='utf-8'))['site']
 N, H = SITED['solutions'], SITED['hubs']
 LANGS = ['fr', 'es', 'ar', 'it', 'he']
-SI = 'Created by SI and Biological SI Partner'
+SI = 'Made from SI and Biological SI Partner'
 BANNER = 'images/Pacific_Clouds_Sunset_ISS.jpg'
 BANNER_OG = 'assets/top-ten/banner-2560.webp'   # local copy of the R2 2560 WebP size, used only as the share-card photo (build-og.py)
 BANNER_CREDIT = 'NASA (ISS074-E-0046371, Jan. 3, 2026)'
@@ -181,8 +181,8 @@ def strings():
     for f in F:
         out += [f[4], f[5]] + ([b[1] for b in f[6]] if f[6] != 'LANGS' else [])
         t_en = fill(f[4][0]); out.append((ALT.format(t=t_en), {l: ALT_T[l].format(t=fill(f[4][1][l])) for l in LANGS}))
-    out.append((f"{S['shot'][0]}: {SI}", {l: f"{S['shot'][1][l]}: " + {'fr': 'Créé par SI et Biological SI Partner', 'es': 'Creado por SI y Biological SI Partner',
-               'ar': 'أُنشئ بواسطة SI وBiological SI Partner', 'it': 'Creato da SI e Biological SI Partner', 'he': 'נוצר על ידי SI ושותף SI ביולוגי'}[l] for l in LANGS}))
+    out.append((f"{S['shot'][0]}: {SI}", {l: f"{S['shot'][1][l]}: " + {'fr': 'Réalisé à partir de SI et Biological SI Partner', 'es': 'Hecho a partir de SI y Biological SI Partner',
+               'ar': 'صُنع من SI وBiological SI Partner', 'it': 'Realizzato a partire da SI e Biological SI Partner', 'he': 'עשוי מ-SI ושותף SI ביולוגי'}[l] for l in LANGS}))
     out.append((f"{S['photo'][0]}: {BANNER_CREDIT}", {l: f"{S['photo'][1][l]}: {BANNER_CREDIT}" for l in LANGS}))
     out.append((f"{S['video'][0]}: {VIDEO_CREDIT}", {l: f"{S['video'][1][l]}: {VIDEO_CREDIT}" for l in LANGS}))
     out += [S['intro']]  # the pause label is already in the TMs (Project Rawane banner)
