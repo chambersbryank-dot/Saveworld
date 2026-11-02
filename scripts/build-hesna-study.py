@@ -518,18 +518,20 @@ _SCENARIOS = [
     "L4-4", "corner", "L5-1", "L5-2", "L5-3", "L6-1", "L6-2",
 ]
 _QUEUE = [tid for sid in _SCENARIOS for tid in _scenario_tests(sid)]
-if len(_QUEUE) != 42:
-    raise SystemExit("expected 42 memory tests")
+if len(_QUEUE) != 42 or len(_SCENARIOS) != 21:
+    raise SystemExit("expected 21 scenarios and 42 memory tests")
+# Each day opens with 3 scenarios, two tests each (2 minutes, 45 questions).
+# The 21 scenarios fill one week. Weeks 2–4 repeat that week while the other
+# quizzes stay on the rising day tier.
 MEM_BY_DAY = {}
-_i = 0
-for _day in range(1, 15):
-    MEM_BY_DAY[_day] = [_QUEUE[_i], _QUEUE[_i + 1]]
-    _i += 2
-for _day in range(15, 29):
-    MEM_BY_DAY[_day] = [_QUEUE[_i]]
-    _i += 1
-if _i != 42:
-    raise SystemExit("memory tests were not scheduled")
+for _day in range(1, 29):
+    _start = ((_day - 1) % 7) * 3
+    _ids = []
+    for _sid in _SCENARIOS[_start:_start + 3]:
+        _ids.extend(_scenario_tests(_sid))
+    if len(_ids) != 6:
+        raise SystemExit(f"day {_day} does not have 3 scenarios")
+    MEM_BY_DAY[_day] = _ids
 MEM_TITLES = {}
 
 
@@ -812,14 +814,9 @@ def study_html(payload):
     adapt = (ROOT / "scripts" / "hesna_adapt.js").read_text()
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
     def _day_label(d):
-        ids = MEM_BY_DAY[d["n"]]
         bio = " + biodata" if d["n"] % 7 == 0 else ""
         bio_ar = " + بيانات" if d["n"] % 7 == 0 else ""
-        if len(ids) == 2:
-            return (f"Day {d['n']} — {ids[0]}, then more details{bio}", f"اليوم {d['n']} — {ids[0]}، ثم تفاصيل أكثر{bio_ar}")
-        if ids[0].endswith("-b"):
-            return (f"Day {d['n']} — {ids[0][:-2]}, more details{bio}", f"اليوم {d['n']} — {ids[0][:-2]}، تفاصيل أكثر{bio_ar}")
-        return (f"Day {d['n']} — {ids[0]}{bio}", f"اليوم {d['n']} — {ids[0]}{bio_ar}")
+        return (f"Day {d['n']} — 3 scenes, two tests each{bio}", f"اليوم {d['n']} — 3 مشاهد، اختباران لكل مشهد{bio_ar}")
     day_opts = "".join(
         f'<option value="{d["n"]}" data-en="{E(_day_label(d)[0])}" data-ar="{E(_day_label(d)[1])}"></option>'
         for d in DAYS
@@ -957,18 +954,19 @@ def main():
             row["bioStart"] = (d["n"] // 7 - 1) * 6
         days.append(row)
     flat = [mid for day in range(1, 29) for mid in MEM_BY_DAY[day]]
-    if len(flat) != 42 or len(flat) % 2:
-        raise SystemExit("memory tests must come in pairs")
+    if len(flat) != 28 * 6:
+        raise SystemExit("each day needs 3 scenarios x 2 tests")
     def _base(mid):
         if mid.endswith("-b"):
             return mid[:-2]
         if mid.endswith("-1") and mid.split("-")[0] in ("b7426", "qstop", "corner"):
             return mid[:-2]
         return mid
-    for i in range(0, 42, 2):
-        a, b = flat[i], flat[i + 1]
-        if _base(a) != _base(b) or not b.endswith("-b") or a.endswith("-b"):
-            raise SystemExit(f"pair broken at {a}, {b}")
+    for ids in MEM_BY_DAY.values():
+        for i in range(0, 6, 2):
+            a, b = ids[i], ids[i + 1]
+            if _base(a) != _base(b) or not b.endswith("-b") or a.endswith("-b"):
+                raise SystemExit(f"pair broken at {a}, {b}")
     mem, titles = load_memory()
     global MEM_TITLES
     MEM_TITLES = titles
