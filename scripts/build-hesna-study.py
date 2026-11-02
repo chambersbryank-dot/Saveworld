@@ -273,6 +273,164 @@ def delpoe_block():
 </section>'''
 
 
+def bio_items():
+    """Original biodata practice in the guide's shapes: five choices, or two. Not scored."""
+    def row(en, ar, oe, oa):
+        return {"en": en, "ar": ar, "opts": [[a, b] for a, b in zip(oe, oa)]}
+    five = [
+        ("When you had done your best at a task, where did the result usually land?",
+         "حين بذلتِ أفضل ما عندك في عمل، أين كانت النتيجة عادة؟",
+         ["At the top", "Near the top", "Above average", "Average", "Below average"],
+         ["في القمة", "قرب القمة", "فوق المتوسط", "متوسطة", "تحت المتوسط"]),
+        ("How often do you want someone to tell you how the work is going?",
+         "كم مرة تريدين أن يخبرك أحد كيف يسير العمل؟",
+         ["About once a week", "About once a month", "About once a quarter", "Only at a set review", "Only when a big job is done"],
+         ["نحو مرة في الأسبوع", "نحو مرة في الشهر", "نحو مرة في ربع السنة", "فقط في مراجعة محددة", "فقط حين ينتهي عمل كبير"]),
+        ("On a first job, where was the hardest part?",
+         "في أول عمل، أين كان الجزء الأصعب؟",
+         ["Supervisors", "Coworkers", "The public", "The work itself", "None of these"],
+         ["المشرفون", "زملاء العمل", "الجمهور", "العمل نفسه", "لا شيء من هذا"]),
+        ("What has been your main effort outside of paid work?",
+         "ما جهدكِ الرئيسي خارج العمل المدفوع؟",
+         ["Family", "Learning a skill", "A community task", "Friends", "Something else"],
+         ["الأسرة", "تعلّم مهارة", "عمل مجتمعي", "الأصدقاء", "شيء آخر"]),
+        ("A written rule and what you expected do not match. What is closest?",
+         "قاعدة مكتوبة لا تطابق ما توقعتِ. ما الأقرب؟",
+         ["Follow the written rule", "Follow what you expected", "Ask, then follow the answer", "Skip that part", "Do both halfway"],
+         ["أتبع القاعدة المكتوبة", "أتبع ما توقعت", "أسأل ثم أتبع الجواب", "أتجاوز ذلك الجزء", "أفعل الاثنين نصفًا"]),
+        ("When a group task went badly, what did you do first?",
+         "حين ساء عمل جماعي، ماذا فعلتِ أولًا؟",
+         ["Say what I saw", "Wait to be asked", "Quietly redo my part", "Leave it", "Blame the plan"],
+         ["أقول ما رأيت", "أنتظر أن أُسأل", "أعيد جزئي بهدوء", "أتركه", "ألوم الخطة"]),
+    ]
+    two = [
+        ("Were your school marks about as good as you could do?",
+         "هل كانت درجاتكِ قريبة مما تستطيعين؟",
+         ["Yes, about as good as I could do", "No, they were poorer than I could do"],
+         ["نعم، قريبة مما أستطيع", "لا، كانت أضعف مما أستطيع"]),
+        ("Have you left a regular commitment without notice?",
+         "هل تركتِ التزامًا منتظمًا بلا إشعار؟",
+         ["No", "Yes"],
+         ["لا", "نعم"]),
+    ]
+    out = []
+    # Four weeks, six items each: five five-choice and one two-choice, rotating.
+    for w in range(4):
+        for spec in five:
+            en, ar, oe, oa = spec
+            out.append(row(en, ar, oe, oa))
+        en, ar, oe, oa = two[w % 2]
+        out.append(row(en, ar, oe, oa))
+    # The loop above repeats the same six stems four times. Make week text differ.
+    return out[:24] if False else _bio_unique()
+
+
+def _bio_unique():
+    def row(en, ar, oe, oa):
+        return {"en": en, "ar": ar, "opts": [[a, b] for a, b in zip(oe, oa)]}
+    items = [
+        ("When you had done your best at schoolwork, where did the result usually land?",
+         "حين بذلتِ أفضل ما عندك في الدراسة، أين كانت النتيجة عادة؟",
+         ["At the top", "Near the top", "Above average", "Average", "Below average"],
+         ["في القمة", "قرب القمة", "فوق المتوسط", "متوسطة", "تحت المتوسط"]),
+        ("How often do you want to be told how a job is going?",
+         "كم مرة تريدين أن تُخبَري كيف يسير عمل؟",
+         ["About once a week", "About once a month", "About once a quarter", "Only at a set review", "Only when a big job is done"],
+         ["نحو مرة في الأسبوع", "نحو مرة في الشهر", "نحو مرة في ربع السنة", "فقط في مراجعة محددة", "فقط حين ينتهي عمل كبير"]),
+        ("Were your school marks about as good as you could do?",
+         "هل كانت درجاتكِ قريبة مما تستطيعين؟",
+         ["Yes, about as good as I could do", "No, they were poorer than I could do"],
+         ["نعم، قريبة مما أستطيع", "لا، كانت أضعف مما أستطيع"]),
+        ("On a first job, where was the hardest part?",
+         "في أول عمل، أين كان الجزء الأصعب؟",
+         ["Supervisors", "Coworkers", "The public", "The work itself", "None of these"],
+         ["المشرفون", "زملاء العمل", "الجمهور", "العمل نفسه", "لا شيء من هذا"]),
+        ("What has been your main effort outside paid work?",
+         "ما جهدكِ الرئيسي خارج العمل المدفوع؟",
+         ["Family", "Learning a skill", "A community task", "Friends", "Something else"],
+         ["الأسرة", "تعلّم مهارة", "عمل مجتمعي", "الأصدقاء", "شيء آخر"]),
+        ("Have you left a regular commitment with no notice?",
+         "هل تركتِ التزامًا منتظمًا بلا إشعار؟",
+         ["No", "Yes"],
+         ["لا", "نعم"]),
+        ("A written rule and what you expected do not match. What is closest?",
+         "قاعدة مكتوبة لا تطابق ما توقعتِ. ما الأقرب؟",
+         ["Follow the written rule", "Follow what you expected", "Ask, then follow the answer", "Skip that part", "Do both halfway"],
+         ["أتبع القاعدة المكتوبة", "أتبع ما توقعت", "أسأل ثم أتبع الجواب", "أتجاوز ذلك الجزء", "أفعل الاثنين نصفًا"]),
+        ("When a group task went badly, what did you usually do first?",
+         "حين ساء عمل جماعي، ماذا كنتِ تفعلين أولًا عادة؟",
+         ["Say what I saw", "Wait to be asked", "Quietly redo my part", "Leave it", "Blame the plan"],
+         ["أقول ما رأيت", "أنتظر أن أُسأل", "أعيد جزئي بهدوء", "أتركه", "ألوم الخطة"]),
+        ("How do you keep a date you must not miss?",
+         "كيف تحفظين موعدًا لا يجوز أن تفوتيه؟",
+         ["A written list I check", "A reminder on my phone", "I remember it", "Someone usually reminds me", "I often miss it"],
+         ["قائمة مكتوبة أراجعها", "تذكير في هاتفي", "أتذكره", "عادة يذكّرني أحد", "كثيرًا ما أفوتُه"]),
+        ("In the past year, how often were you late to something you had agreed to do?",
+         "في السنة الماضية، كم مرة تأخرتِ عن شيء وافقتِ على فعله؟",
+         ["Never", "Once or twice", "Several times", "Often", "I do not keep track"],
+         ["أبدًا", "مرة أو مرتين", "عدة مرات", "غالبًا", "لا أتابع ذلك"]),
+        ("A supervisor corrects a sentence in your report. What is closest?",
+         "مشرف يصحّح جملة في تقريركِ. ما الأقرب؟",
+         ["I change it and ask if I still missed the point", "I change it and move on", "I argue if I think I was right", "I leave the original", "I wait and see if anyone notices"],
+         ["أغيّرها وأسأل إن كنت ما زلت أخطأت المقصود", "أغيّرها وأكمل", "أجادل إذا ظننت أني محقة", "أترك الأصل", "أنتظر لأرى إن لاحظ أحد"]),
+        ("Do you check a finished report against the notes before you hand it in?",
+         "هل تراجعين تقريرًا منتهيًا على الملاحظات قبل تسليمه؟",
+         ["Yes, every time", "No, I send it as I wrote it"],
+         ["نعم، كل مرة", "لا، أرسله كما كتبته"]),
+        ("Which is closest to how you answer questions about yourself?",
+         "ما الأقرب لطريقة إجابتكِ عن أسئلة عن نفسكِ؟",
+         ["The closest honest choice", "What sounds impressive", "I leave hard ones blank", "I mark two if both fit", "I pick the first one"],
+         ["الخيار الصادق الأقرب", "ما يبدو مبهرًا", "أترك الصعب فارغًا", "أعلّم اثنين إذا انطبقا", "أختار الأول"]),
+        ("How many jobs or regular commitments have you left without notice?",
+         "كم عملًا أو التزامًا منتظمًا تركته بلا إشعار؟",
+         ["None", "One", "Two", "More than two", "I am not sure"],
+         ["لا شيء", "واحد", "اثنان", "أكثر من اثنين", "لست متأكدة"]),
+        ("When you are learning a new procedure, what do you do first?",
+         "حين تتعلمين إجراءً جديدًا، ماذا تفعلين أولًا؟",
+         ["Read the written steps", "Watch someone once and copy them", "Try it and fix mistakes later", "Ask for the short version", "Wait until I have to use it"],
+         ["أقرأ الخطوات المكتوبة", "أشاهد أحدًا مرة وأقلّده", "أجربه وأصحّح لاحقًا", "أطلب النسخة القصيرة", "أنتظر حتى أُضطر لاستعماله"]),
+        ("A teammate is late and the work is yours to finish. What is closest?",
+         "زميل يتأخر والعمل عليكِ أن تُنهيِه. ما الأقرب؟",
+         ["Finish it and say what happened", "Wait for them", "Do only my original part", "Leave it for a supervisor", "Tell the others it was not my job"],
+         ["أنهيه وأقول ما حدث", "أنتظرهم", "أفعل جزئي الأصلي فقط", "أتركه لمشرف", "أقول للآخرين إنه ليس عملي"]),
+        ("How often do you arrive early enough to be ready, not just on time?",
+         "كم مرة تصلين مبكرًا بما يكفي لتكوني جاهزة، لا في الوقت فقط؟",
+         ["Almost always", "Often", "Sometimes", "Rarely", "Almost never"],
+         ["تقريبًا دائمًا", "غالبًا", "أحيانًا", "نادرًا", "تقريبًا أبدًا"]),
+        ("Did you keep the commitments you made last month?",
+         "هل حفظتِ الالتزامات التي قطعتِها الشهر الماضي؟",
+         ["Yes", "No"],
+         ["نعم", "لا"]),
+        ("Which feedback is most useful to you?",
+         "أي ملاحظة أنفع لكِ؟",
+         ["A specific correction", "General praise", "A score with no comment", "Silence, if nothing is wrong", "Criticism in front of others"],
+         ["تصحيح محدد", "مديح عام", "درجة بلا تعليق", "صمت إذا لم يكن خطأ", "نقد أمام الآخرين"]),
+        ("A form asks for a date you are not sure of. What do you do?",
+         "استمارة تطلب تاريخًا لستِ متأكدة منه. ماذا تفعلين؟",
+         ["Look it up before I answer", "Guess a close date", "Leave it blank", "Ask someone to fill it", "Put today's date"],
+         ["أبحث عنه قبل أن أجيب", "أخمّن تاريخًا قريبًا", "أتركه فارغًا", "أطلب من أحد أن يملأه", "أضع تاريخ اليوم"]),
+        ("How do you treat a rule you think is minor?",
+         "كيف تعاملين قاعدة تظنينها صغيرة؟",
+         ["I follow it anyway", "I follow it if someone is watching", "I skip it", "I follow it only the first time", "I ask a friend to decide"],
+         ["أتبعها رغم ذلك", "أتبعها إذا كان أحد يراقب", "أتجاوزها", "أتبعها في المرة الأولى فقط", "أطلب من صديق أن يقرر"]),
+        ("What is closest to last year of being on time?",
+         "ما الأقرب للسنة الماضية في الالتزام بالوقت؟",
+         ["I was almost never late", "I was late a few times", "Someone mentioned my lateness", "I was often late", "I do not remember"],
+         ["لم أتأخر تقريبًا", "تأخرت بضع مرات", "أحد ذكر تأخري", "كنت أتأخر غالبًا", "لا أتذكر"]),
+        ("When two honest answers both seem to fit, what do you mark?",
+         "حين يبدو جوابان صادقان منطبقين، ماذا تعلّمين؟",
+         ["The one closer fit, and only that one", "Both", "Neither", "The one that sounds better", "I leave it blank"],
+         ["الأقرب، وواحد فقط", "الاثنين", "لا هذا ولا ذاك", "الذي يبدو أفضل", "أتركه فارغًا"]),
+        ("Have you turned in work you had not checked?",
+         "هل سلّمتِ عملًا لم تراجعيه؟",
+         ["No", "Yes"],
+         ["لا", "نعم"]),
+    ]
+    if len(items) != 24:
+        raise SystemExit(len(items))
+    return [row(*spec) for spec in items]
+
+
 def biodata_block():
     qs = [
         ("In the past year, how often were you late to something you had agreed to do?",
@@ -371,9 +529,83 @@ if _i != 42:
 MEM_TITLES = {}
 
 
+TF_EN = ["A. The statement is true.", "B. The statement is false."]
+TF_AR = ["A. العبارة صحيحة.", "B. العبارة خطأ."]
+PR_EN = ["A. Yes, it was in the picture.", "B. No, it was not in the picture."]
+PR_AR = ["A. نعم، كان في الصورة.", "B. لا، لم يكن في الصورة."]
+
+
+def _is_tf(oe):
+    return bool(oe) and str(oe[0]).startswith("A. The statement")
+
+
+def _is_pr(oe):
+    return bool(oe) and str(oe[0]).startswith("A. Yes")
+
+
+def exam_visual(rows):
+    """Official visual order: true/false statements, then was-it-in-the-picture."""
+    tf, pr, other = [], [], []
+    for row in rows:
+        oe = row[2]
+        if _is_tf(oe):
+            tf.append(list(row))
+        elif _is_pr(oe):
+            pr.append(list(row))
+        else:
+            other.append(row)
+    for i, (en, ar, oe, oa, ans) in enumerate(other):
+        right_e, right_a = oe[ans], oa[ans]
+        wrong_e, wrong_a = oe[(ans + 1) % len(oe)], oa[(ans + 1) % len(oa)]
+        use_false = (i % 4 == 3)
+        choice_e, choice_a = (wrong_e, wrong_a) if use_false else (right_e, right_a)
+        stem = en.rstrip("?")
+        stem_ar = ar.rstrip("؟?")
+        statement = [
+            f"{choice_e} — {stem}.",
+            f"{choice_a} — {stem_ar}.",
+            TF_EN, TF_AR, 1 if use_false else 0,
+        ]
+        presence = [
+            f"{choice_e} — {stem}",
+            f"{choice_a} — {stem_ar}",
+            PR_EN, PR_AR, 1 if use_false else 0,
+        ]
+        if i < max(0, len(other) - 15):
+            tf.append(statement)
+        else:
+            pr.append(presence)
+    if len(pr) < 12 and len(tf) > 24:
+        moved = tf[-12:]
+        tf = tf[:-12]
+        for en, ar, oe, oa, ans in moved:
+            pr.append([en, ar, PR_EN, PR_AR, 0 if ans == 0 else 1])
+    out, seen = [], set()
+    for row in tf + pr:
+        if row[0] in seen:
+            continue
+        seen.add(row[0])
+        out.append(row)
+    n = 0
+    while len(out) < 45 and n < 45:
+        n += 1
+        stem = f"Extra pictured detail {n}"
+        row = [stem, f"تفصيل إضافي ظاهر {n}", PR_EN, PR_AR, 1]
+        if stem not in seen:
+            seen.add(stem)
+            out.append(row)
+    bad = [row[0] for row in out if str(row[0]).startswith("Extra pictured detail")]
+    if bad:
+        raise SystemExit("visual questions lost a real detail")
+    return out[:45]
+
+
 def _qpack(rows):
+    shaped = exam_visual(rows)
+    if len(shaped) != 45:
+        raise SystemExit(f"visual set became {len(shaped)}")
     out = []
-    for en, ar, oe, oa, ans in rows:
+    for en, ar, oe, oa, ans in shaped:
         out.append({
             "en": en,
             "ar": ar,
@@ -577,11 +809,13 @@ def study_html(payload):
     run = (ROOT / "scripts" / "hesna_run.js").read_text()
     def _day_label(d):
         ids = MEM_BY_DAY[d["n"]]
+        bio = " + biodata" if d["n"] % 7 == 0 else ""
+        bio_ar = " + بيانات" if d["n"] % 7 == 0 else ""
         if len(ids) == 2:
-            return (f"Day {d['n']} — {ids[0]}, then more details", f"اليوم {d['n']} — {ids[0]}، ثم تفاصيل أكثر")
+            return (f"Day {d['n']} — {ids[0]}, then more details{bio}", f"اليوم {d['n']} — {ids[0]}، ثم تفاصيل أكثر{bio_ar}")
         if ids[0].endswith("-b"):
-            return (f"Day {d['n']} — {ids[0][:-2]}, more details", f"اليوم {d['n']} — {ids[0][:-2]}، تفاصيل أكثر")
-        return (f"Day {d['n']} — {ids[0]}", f"اليوم {d['n']} — {ids[0]}")
+            return (f"Day {d['n']} — {ids[0][:-2]}, more details{bio}", f"اليوم {d['n']} — {ids[0][:-2]}، تفاصيل أكثر{bio_ar}")
+        return (f"Day {d['n']} — {ids[0]}{bio}", f"اليوم {d['n']} — {ids[0]}{bio_ar}")
     day_opts = "".join(
         f'<option value="{d["n"]}" data-en="{E(_day_label(d)[0])}" data-ar="{E(_day_label(d)[1])}"></option>'
         for d in DAYS
@@ -603,9 +837,6 @@ def study_html(payload):
 <p class="hs-dayline"><select id="hs-day" aria-label="Day">{day_opts}</select></p>
 <div id="hs-app"></div>
 <div id="hs-summary"></div>
-<details class="hs-ref"><summary>{bi("Biodata", "البيانات الشخصية")}</summary>
-{biodata_block()}
-</details>
 <p><button type="button" class="sp-btn" id="hs-reset">{bi("Reset saved scores", "امسحي النتائج المحفوظة")}</button></p>
 </main>
 <script>window.HS={payload};</script>
@@ -627,6 +858,8 @@ def memory_html():
     seconds = list(hesna_more.second_scenes(base["S"], extra, vocab).values())
     scenes = photos + base["S"] + extra + seconds
     for scene in scenes:
+        if scene.get("q"):
+            scene["q"] = exam_visual(scene["q"])
         if not scene.get("title"):
             scene["title"] = [f"{scene['id']} · test 1 of 2", f"{scene['id']} · الاختبار 1 من 2"]
     first_week = {}
@@ -712,6 +945,11 @@ def main():
         if d.get("stretchTake"):
             row["stretchTake"] = d["stretchTake"]
         row["mem"] = list(MEM_BY_DAY.get(d["n"], []))
+        week = (d["n"] - 1) // 7 + 1
+        row["take"] = {"ab": 6 + 2 * week, "reading": 1 if week <= 2 else 2}
+        if d["n"] % 7 == 0:
+            row["bio"] = 6
+            row["bioStart"] = (d["n"] // 7 - 1) * 6
         days.append(row)
     flat = [mid for day in range(1, 29) for mid in MEM_BY_DAY[day]]
     if len(flat) != 42 or len(flat) % 2:
@@ -740,6 +978,7 @@ def main():
         "listens": listens,
         "obs": obs,
         "mem": mem,
+        "bio": bio_items(),
     })
     STUDY.write_text(study_html(payload), encoding="utf-8")
     MEM.write_text(memory_html(), encoding="utf-8")

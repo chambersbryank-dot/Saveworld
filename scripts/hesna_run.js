@@ -90,6 +90,7 @@
     if (!list.length) { el.innerHTML = ""; return; }
     el.innerHTML = "<h2>" + bi("Today", "هذا اليوم") + "</h2><ul>"
       + list.map(function (q) {
+        if (q.key === "bio") return "<li>" + bi(q.label_en, q.label_ar) + "</li>";
         return "<li>" + bi(q.label_en + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")", q.label_ar + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")") + "</li>";
       }).join("") + "</ul>";
   }
@@ -270,7 +271,7 @@
     var body, note;
     if (step.set.mem && typeof hesnaScene === "function") {
       body = hesnaScene(step.set);
-      note = "";
+      note = bi("Recall of Visual Details. Two minutes. No notes.", "استرجاع التفاصيل البصرية. دقيقتان. بلا ملاحظات.");
     } else if (step.set.img) {
       body = '<figure class="hs-script"><img src="' + esc(step.set.img) + '" alt="' + esc(step.set.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px"><figcaption class="si-credit">'
         + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + '</figcaption></figure><p>'
@@ -311,12 +312,19 @@
     if (step.passage) {
       var stay = step.passage.pillar === "reading" || step.passage.pillar === "comp";
       passage = (stay
-        ? '<p class="sp-ph">' + bi("The passage stays on screen. This is not a memory test. Answer only from the passage.", "المقطع يبقى على الشاشة. هذا ليس اختبار ذاكرة. أجيبي من المقطع فقط.") + '</p>'
+        ? '<p class="sp-ph">' + bi("Reading with Understanding. The passage stays. This is not a memory test. Answer only from it.", "القراءة بفهم. المقطع يبقى. هذا ليس اختبار ذاكرة. أجيبي منه فقط.") + '</p>'
         : '')
         + '<div class="hs-passage"><p>' + esc(step.passage.en) + '</p><p class="sp-ph">' + esc(step.passage.ar) + '</p></div>';
     }
+    var visKey = "";
+    if (item.pillar === "mem" && item.opts && item.opts[0]) {
+      var head = String(item.opts[0][0] || "");
+      visKey = head.indexOf("Yes") >= 0
+        ? '<p class="hs-key">' + bi("Recall of Visual Details. A = yes, it was in the picture. B = no. If only part was shown, it was present.", "استرجاع التفاصيل البصرية. A = نعم كان في الصورة. B = لا. إذا ظهر جزء منه فهو موجود.") + '</p>'
+        : '<p class="hs-key">' + bi("Recall of Visual Details. A = the statement is true. B = the statement is false.", "استرجاع التفاصيل البصرية. A = العبارة صحيحة. B = العبارة خطأ.") + '</p>';
+    }
     var writtenKey = item.pillar === "written"
-      ? '<p class="hs-key">' + bi("A = grammatically correct. B = not. Ignore spelling and punctuation.", "A = صحيحة نحويًا. B = ليست كذلك. تجاهلي الإملاء وعلامات الترقيم.") + '</p>'
+      ? '<p class="hs-key">' + bi("Written Communication. A = grammatically correct. B = grammatically incorrect. Ignore spelling, punctuation, and capitalization. A wrong homophone still counts.", "التواصل الكتابي. A = صحيحة نحويًا. B = غير صحيحة نحويًا. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة إذا غُلِط فيها تُحسب.") + '</p>'
       : '';
     var opts = "";
     item.opts.forEach(function (o, i) {
@@ -324,6 +332,7 @@
     });
     app.innerHTML = '<p class="sp-ph">' + bi("Question " + sofar + " of " + nQ, "السؤال " + sofar + " من " + nQ) + ' · <span id="hs-clock"></span></p>'
       + passage
+      + visKey
       + writtenKey
       + '<p class="hs-stem">' + (isGrammar(item) ? bi(item.en, item.ar) : bi(item.en, item.ar)) + '</p>'
       + opts;
@@ -352,22 +361,31 @@
     if (session.kind === "repair" || session.kind === "stretch") A.applyPackGrade(state, session.week, session.kind, session.blocks, g);
     else row = A.applyGrade(state, session.day, session, g, sec);
     var lines = collectLines(session.blocks, answers);
-    var panel = resultsPanel("Score", "النتيجة", lines);
+    var examName = session.exam === "reading"
+      ? ["Reading with Understanding", "القراءة بفهم"]
+      : ["Written Communication", "التواصل الكتابي"];
+    var panel = resultsPanel(examName[0], examName[1], lines);
     rememberQuiz(session.day.n, {
-      key: "mixed",
-      label_en: "Written, reading, and logic",
-      label_ar: "الكتابة والقراءة والمنطق",
+      key: session.exam || "written",
+      label_en: examName[0],
+      label_ar: examName[1],
       pct: panel.pct, ok: panel.ok, n: panel.n
     });
     save();
     if (!row) row = { tooFastSec: session.tooFastSec, sec: sec };
     var raised = session.kind !== "repair" && session.kind !== "stretch" && A.hot(row);
     var html = panel.html;
-    if (raised) html += '<button type="button" class="sp-btn" id="hs-extra">' + bi("Harder questions", "أسئلة أصعب") + "</button>";
+    if (session.exam !== "reading" && session.day && (session.day.take || {}).reading) {
+      html += '<button type="button" class="sp-btn" id="hs-read">' + bi("Reading with Understanding", "القراءة بفهم") + "</button>";
+    } else if (session.day && session.day.bio) {
+      html += '<button type="button" class="sp-btn" id="hs-bio">' + bi("Biodata", "البيانات الشخصية") + "</button>";
+    }
     html += nextControls(session.week, session.day && session.day.n);
     app.innerHTML = html;
-    var extraBtn = document.getElementById("hs-extra");
-    if (extraBtn) extraBtn.onclick = startExtra;
+    var readBtn = document.getElementById("hs-read");
+    if (readBtn) readBtn.onclick = function () { startReading(session.day); };
+    var bioBtn = document.getElementById("hs-bio");
+    if (bioBtn) bioBtn.onclick = function () { startBio(session.day); };
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
   }
@@ -526,6 +544,63 @@
     renderSummary(session.day.n);
     window.scrollTo(0, 0);
   }
+  function startReading(day) {
+    var built = A.planSession(day, D, state, "reading");
+    built.kind = "period";
+    built.week = A.weekOf(day.n);
+    session = built;
+    session.day = day;
+    session.exam = "reading";
+    if (!session.nQ) {
+      if (day.bio) startBio(day);
+      return;
+    }
+    steps = flatten(session.blocks);
+    t0 = Date.now();
+    cursor = 0;
+    answers = [];
+    mode = "main";
+    clearInterval(timer);
+    timer = setInterval(clock, 500);
+    renderStep();
+    window.scrollTo(0, 0);
+  }
+  function startBio(day) {
+    var items = (D.bio || []).slice(day.bioStart || 0, (day.bioStart || 0) + (day.bio || 0));
+    var i = 0;
+    var picks = [];
+    function show() {
+      if (i >= items.length) {
+        rememberQuiz(day.n, {
+          key: "bio",
+          label_en: "Biodata: " + picks.length + " answered, not scored",
+          label_ar: "البيانات الشخصية: " + picks.length + " إجابة، بلا درجة"
+        });
+        save();
+        app.innerHTML = "<p>" + bi("Biodata saved. One choice each. Not scored right or wrong.", "حُفظت البيانات الشخصية. خيار واحد لكل سؤال. بلا صح أو خطأ.") + "</p>";
+        renderSummary(day.n);
+        window.scrollTo(0, 0);
+        return;
+      }
+      var q = items[i];
+      var opts = "";
+      (q.opts || []).forEach(function (o, k) {
+        opts += '<button type="button" class="hs-opt" data-i="' + k + '">' + bi(o[0], o[1]) + "</button>";
+      });
+      app.innerHTML = '<p class="hs-key">' + bi("Biodata. Not right or wrong. Mark one choice, the closest honest fit. A blank gets no credit. Two marks get no credit.", "البيانات الشخصية. ليست صحًا أو خطأ. علّمي خيارًا واحدًا، الأقرب الصادق. الفراغ بلا رصيد. والعلامتان بلا رصيد.") + "</p>"
+        + "<p class=\"sp-ph\">" + bi("Question " + (i + 1) + " of " + items.length, "السؤال " + (i + 1) + " من " + items.length) + "</p>"
+        + "<p class=\"hs-stem\">" + bi(q.en, q.ar) + "</p>" + opts;
+      app.querySelectorAll(".hs-opt").forEach(function (btn) {
+        btn.onclick = function () {
+          picks.push(+btn.getAttribute("data-i"));
+          i += 1;
+          show();
+        };
+      });
+      window.scrollTo(0, 0);
+    }
+    show();
+  }
   function findDay(n) {
     var day = null;
     (D.days || []).forEach(function (d) { if (d.n === n) day = d; });
@@ -549,17 +624,16 @@
       window.scrollTo(0, 0);
       return;
     }
-    var built = A.planSession(day, D, state);
+    var built = A.planSession(day, D, state, "written");
     built.kind = "period";
     built.week = A.weekOf(day.n);
     session = built;
     session.day = day;
+    session.exam = "written";
     save();
     refreshPackNotes();
     if (!session.nQ) {
-      app.innerHTML = '<p>' + bi("No new questions in this set.", "لا أسئلة جديدة في هذه المجموعة.") + '</p>'
-        + '<button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="0">' + bi("Picture again", "الصورة مرة أخرى") + '</button>';
-      window.scrollTo(0, 0);
+      startReading(day);
       return;
     }
     steps = flatten(session.blocks);
