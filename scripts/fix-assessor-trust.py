@@ -199,8 +199,12 @@ def homepage_webp(s, lang):
             return tag
         path = src.group(1).split('?')[0]
         local = path[3:] if path.startswith('../') else path
+        # The space card's fallback was the full Saturn JPEG. The hero video and the hero
+        # CSS background are not <img> tags, so they stay. The card already has a WebP srcset.
+        if local.endswith('Saturn.jpg') and os.path.exists('assets/Saturn-800.webp'):
+            return tag.replace(src.group(1), pre + 'assets/Saturn-800.webp', 1)
         if not local.startswith('assets/') or 'Saturn' in local:
-            return tag  # Saturn hero path stays
+            return tag
         if local.endswith('.webp'):
             return tag
         if os.path.getsize(local) < 80_000 if os.path.exists(local) else True:
