@@ -180,7 +180,7 @@ def make_pdf(C, l='en'):
            f'--print-to-pdf={os.path.abspath(out)}', 'file://' + os.path.abspath(tmp)]
     proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
-        for _ in range(80):
+        for _ in range(200):
             if os.path.exists(out) and os.path.getsize(out) > 2000:
                 time.sleep(0.4)
                 break
