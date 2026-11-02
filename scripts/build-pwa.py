@@ -57,7 +57,7 @@ self.addEventListener('fetch', e => {
       .catch(() => caches.match(r, {ignoreSearch: true}).then(m => m || caches.match('/offline.html'))));
     return;
   }
-  if (/\.(css|js|png|jpe?g|webp|svg|ico|woff2?)$/.test(u.pathname)) {
+  if (/\.(css|js|png|jpe?g|webp|avif|svg|ico|woff2?)$/.test(u.pathname)) {
     e.respondWith(caches.match(r).then(m => m || fetch(r).then(res => { if (res.ok) { const cp = res.clone(); caches.open(V).then(c => c.put(r, cp)); } return res; })));
   }
 });

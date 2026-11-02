@@ -841,6 +841,8 @@ body #actions .mission-block::before { top: 12px; }
 .hero-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,20,40,0.55) 0%, rgba(0,20,40,0.45) 45%, rgba(0,20,40,0.7) 100%); }
 .hero-video-credit { position: absolute; right: 0.8rem; bottom: 0.6rem; margin: 0; font-size: 0.72rem; color: rgba(255,255,255,0.7); text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+.image-container picture { display: block; width: 100%; }
+.hero-video-credit a, .photo-credit a, .agency-credit a, .si-credit a, .sol-credit a { color: inherit; text-decoration: underline; text-underline-offset: 0.12em; }
 @media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
 .sol-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.7rem 0 0.2rem; }
 .status-badge, .hub-tag { display: inline-block; padding: 0.15rem 0.65rem; border-radius: 999px; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.5; }

@@ -187,7 +187,7 @@ def webp_fallback(src_path):
         im = Image.open(src_path).convert('RGB')
         w = 800 if im.width > 800 else im.width
         im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS) if im.width != w else im
-        im.save(out, quality=68, method=6)
+        im.save(out, quality=95, method=6)
     return out
 
 def homepage_webp(s, lang):
@@ -199,11 +199,11 @@ def homepage_webp(s, lang):
             return tag
         path = src.group(1).split('?')[0]
         local = path[3:] if path.startswith('../') else path
-        # The space card's fallback was the full Saturn JPEG. The hero video and the hero
-        # CSS background are not <img> tags, so they stay. The card already has a WebP srcset.
-        if local.endswith('Saturn.jpg') and os.path.exists('assets/Saturn-800.webp'):
-            return tag.replace(src.group(1), pre + 'assets/Saturn-800.webp', 1)
-        if not local.startswith('assets/') or 'Saturn' in local:
+        # The Saturn hero CSS background is not an <img>. Do not swap a Saturn master,
+        # or any card that already has a srcset, for an 800px-only file.
+        if 'Saturn' in local or 'srcset=' in tag:
+            return tag
+        if not local.startswith('assets/'):
             return tag
         if local.endswith('.webp'):
             return tag
@@ -218,7 +218,7 @@ def homepage_webp(s, lang):
             w480 = os.path.splitext(local)[0] + '-480.webp'
             if not os.path.exists(w480):
                 im = Image.open(local).convert('RGB')
-                im.resize((480, round(im.height * 480 / im.width)), Image.LANCZOS).save(w480, quality=68, method=6)
+                im.resize((480, round(im.height * 480 / im.width)), Image.LANCZOS).save(w480, quality=95, method=6)
             tag = tag.replace('<img', f'<img srcset="{pre}{w480} 480w, {new} 800w" sizes="(max-width:700px) 92vw, 400px"', 1)
         return tag
     return re.sub(r'<img\b[^>]*>', one, s)

@@ -36,11 +36,16 @@ def _img(e):
     f = f"assets/hub/{e['stem']}.jpg"; w, h = Image.open(f).size
     m = _master(e['stem']); ss = f' srcset="{m["srcset"]}" sizes="{SIZES}"' if m.get('srcset') else ''
     return f'<img src="{f}"{ss} alt="{_html.escape(e["alt"]["en"])}" width="{w}" height="{h}" loading="lazy" decoding="async">'
-def _credit(e): return f'<p class="photo-credit agency-credit">Image: {_html.escape(e["credit"], quote=False)}</p>'
+def _credit(e):
+    who = _html.escape(e['credit'], quote=False)
+    url = _html.escape(e.get('source') or '', quote=True)
+    if url:
+        who = f'<a href="{url}" rel="noopener">{who}</a>'
+    return f'<p class="photo-credit agency-credit">Image: {who}</p>'
 for e in AG:
     for hub in e['hubs']:
         s = open(hub, encoding='utf8').read(); o = s
-        rx = re.compile(r'(<div class="image-container"><a class="photo-link" href="' + re.escape(e['card']) + r'">)<img [^>]*>(?:<span class="si-credit">[^<]*</span>)?(</a></div>)(?:<p class="photo-credit agency-credit">[^<]*</p>)?')
+        rx = re.compile(r'(<div class="image-container"><a class="photo-link" href="' + re.escape(e['card']) + r'">)<img [^>]*>(?:<span class="si-credit">[^<]*</span>)?(</a></div>)(?:<p class="photo-credit agency-credit">.*?</p>)?')
         s = rx.sub(lambda m: m.group(1) + _img(e) + m.group(2) + _credit(e), s, count=1)
         if s != o: open(hub, 'w', encoding='utf8').write(s); print('hub-agency-images:', hub, e['card'], '->', e['stem'])
 # translation memory: alt text + localized credit line
@@ -72,8 +77,13 @@ for L in ('fr', 'es', 'ar', 'it', 'he'):
             ss = f' sizes="{SIZES}"' if m.get('srcset') else ''
             img = (f'<img alt="{_html.escape(e["alt"][L])}" decoding="async" height="{h}" loading="lazy"{ss} src="../assets/hub/{e["stem"]}.jpg"'
                    + (f' srcset="{m["srcset"]}"' if m.get('srcset') else '') + f' width="{w}"/>')
-            cr = f'<p class="photo-credit agency-credit">{_html.escape(tpl.replace("{x}", e["credit"]), quote=False)}</p>'
-            rx = re.compile(r'(<div class="image-container"><a class="photo-link" href="' + re.escape(e['card']) + r'">)<img [^>]*>(?:<span class="si-credit">[^<]*</span>)?(</a></div>)(?:<p class="photo-credit agency-credit">[^<]*</p>)?')
+            who = _html.escape(e['credit'], quote=False)
+            url = _html.escape(e.get('source') or '', quote=True)
+            linked = f'<a href="{url}" rel="noopener">{who}</a>' if url else who
+            pre_t, post_t = (tpl.split('{x}', 1) + [''])[:2]
+            cr = ('<p class="photo-credit agency-credit">' + _html.escape(pre_t, quote=False) + linked
+                  + _html.escape(post_t, quote=False) + '</p>')
+            rx = re.compile(r'(<div class="image-container"><a class="photo-link" href="' + re.escape(e['card']) + r'">)<img [^>]*>(?:<span class="si-credit">[^<]*</span>)?(</a></div>)(?:<p class="photo-credit agency-credit">.*?</p>)?')
             s = rx.sub(lambda mm: mm.group(1) + img + mm.group(2) + cr, s, count=1)
             if s != o:  # the English card changed the same way, so re-stamp the i18n-source hash (nothing else needs re-translating)
                 import importlib.util; sp = importlib.util.spec_from_file_location('i18nb', 'scripts/i18n-build.py'); ib = importlib.util.module_from_spec(sp); sp.loader.exec_module(ib)

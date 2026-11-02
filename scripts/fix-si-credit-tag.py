@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One credit tag for SI-made media: 'Made from SI and Biological SI Partner' (and the same line in each language).
 
-Does not edit the Saturn hero (assets/hero-themes.js, or the HERO-VIDEO block). Idempotent.
+Also converts that phrase inside the Saturn hero, including assets/hero-themes.js. Idempotent.
 """
 import os, re
 
@@ -23,11 +23,9 @@ PAIRS = (
 )
 SKIP = {
     'NOTES.md',
-    'assets/hero-themes.js',
     'scripts/fix-si-credit-tag.py',
 }
 EXTS = {'.html', '.py', '.js', '.json', '.vtt', '.csv', '.css', '.md', '.sh'}
-HERO = re.compile(r'<!-- HERO-VIDEO:START -->.*?<!-- HERO-VIDEO:END -->', re.S)
 
 def convert(text):
     for old, new in PAIRS:
@@ -35,15 +33,6 @@ def convert(text):
     return text
 
 def convert_file(text, path):
-    if path.endswith('.html') and 'HERO-VIDEO:START' in text:
-        parts = HERO.split(text)
-        heroes = HERO.findall(text)
-        out = []
-        for i, part in enumerate(parts):
-            out.append(convert(part))
-            if i < len(heroes):
-                out.append(heroes[i])
-        return ''.join(out)
     return convert(text)
 
 n = 0
