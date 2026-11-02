@@ -339,16 +339,37 @@ def write_templates():
         if not os.path.exists(dest) or open(dest, encoding='utf-8').read() != html_page:
             open(dest, 'w', encoding='utf-8').write(html_page)
 
-def sitemap():
+def _sitemap_files():
+    """sitemap.xml is a <sitemapindex> of per-language sitemaps since PR #206;
+    fall back to the legacy single urlset if that is what is on disk."""
     sm = open('sitemap.xml', encoding='utf-8').read()
-    if 'Teacher_Guide.html' in sm: return
-    def repl(m):
-        block = m.group(0)
-        return block + block.replace('Teachers.html', PAGE)
-    sm2, n = re.subn(r'  <url><loc>https://www\.savingplanets\.com/(?:[a-z]{2}/)?Teachers\.html</loc>.*?</url>\n', repl, sm)
-    if n < 6: raise SystemExit(f'sitemap Teachers.html entries: {n}')
-    if sm2.count(PAGE) < 6: raise SystemExit('sitemap did not gain Teacher_Guide entries')
-    open('sitemap.xml', 'w', encoding='utf-8').write(sm2)
+    if '<sitemapindex' in sm:
+        files = [os.path.basename(u) for u in re.findall(r'<loc>https://www\.savingplanets\.com/(sitemap-[a-z]{2}\.xml)</loc>', sm)]
+        if not files: raise SystemExit('sitemap index lists no per-language sitemaps')
+        return files, True
+    return ['sitemap.xml'], False
+
+def sitemap():
+    files, indexed = _sitemap_files()
+    total_teachers = total_guide = 0
+    for fn in files:
+        if not os.path.exists(fn): raise SystemExit(f'sitemap missing: {fn}')
+        sm = open(fn, encoding='utf-8').read()
+        pat = r'  <url><loc>https://www\.savingplanets\.com/(?:[a-z]{2}/)?Teachers\.html</loc>.*?</url>\n'
+        n_t = len(re.findall(pat, sm))
+        total_teachers += n_t
+        if PAGE in sm:
+            total_guide += sm.count(f'{PAGE}</loc>')
+            continue
+        def repl(m):
+            block = m.group(0)
+            return block + block.replace('Teachers.html', PAGE)
+        sm2, n = re.subn(pat, repl, sm)
+        if n == 0: raise SystemExit(f'{fn} Teachers.html entries: 0')
+        total_guide += sm2.count(f'{PAGE}</loc>')
+        open(fn, 'w', encoding='utf-8').write(sm2)
+    if total_teachers < 6: raise SystemExit(f'sitemap Teachers.html entries: {total_teachers} across {len(files)} file(s)')
+    if total_guide < 6: raise SystemExit(f'sitemap {PAGE} entries: {total_guide} across {len(files)} file(s)')
 
 def apply():
     courses = live_courses()
