@@ -35,11 +35,43 @@
     return item.pillar === "grammar";
   }
   var FAM_AR = {
-    articles: "أدوات التعريف", adjectives: "الصفات", agreement: "المطابقة", tense: "الأزمنة",
+    articles: "أدوات التعريف", adjectives: "الصفات", agreement: "مطابقة الفعل والفاعل", tense: "الأزمنة",
     prepositions: "حروف الجر", pronouns: "الضمائر", negatives: "النفي", questions: "الأسئلة",
     count: "المعدود", complements: "المتممات", phrasing: "الصياغة", calques: "النقل الحرفي",
-    "ab-agree": "المطابقة في الجملة", "ab-fragment": "الجملة الناقصة", "ab-homo": "الكلمات المتشابهة", "ab-well": "well و good"
+    "ab-agree": "مطابقة الفعل والفاعل", "ab-fragment": "الجملة الناقصة", "ab-homo": "الكلمات المتشابهة", "ab-well": "well و good"
   };
+  var FAM_EN = {
+    articles: "articles", adjectives: "adjectives", agreement: "subject-verb agreement", tense: "verb tense",
+    prepositions: "prepositions", pronouns: "pronouns", negatives: "negatives", questions: "question form",
+    count: "count and plurals", complements: "complements", phrasing: "phrasing", calques: "word-for-word transfer",
+    "ab-agree": "subject-verb agreement", "ab-fragment": "sentence fragments", "ab-homo": "homophones", "ab-well": "well and good"
+  };
+  function memArea(en) {
+    var s = String(en || "").toLowerCase();
+    if (/shirt|pants|hat|hair|jacket|shoe|dress|vest|clothing|wore|wearing|backpack|umbrella|braid/.test(s)) return ["Memory: clothing details", "الذاكرة: تفاصيل الملابس"];
+    if (/carried|carrying|phone|cup|bag|box/.test(s)) return ["Memory: what people carried", "الذاكرة: ما يحمله الأشخاص"];
+    if (/plate|license|badge|number/.test(s)) return ["Memory: numbers and plates", "الذاكرة: الأرقام واللوحات"];
+    if (/time|clock/.test(s)) return ["Memory: the time", "الذاكرة: الوقت"];
+    if (/street|sign|cafe|gym/.test(s)) return ["Memory: signs and names", "الذاكرة: اللافتات والأسماء"];
+    if (/car|van|truck|sedan|vehicle|bike|bicycle|bus/.test(s)) return ["Memory: vehicles", "الذاكرة: المركبات"];
+    if (/color/.test(s)) return ["Memory: colors", "الذاكرة: الألوان"];
+    if (/how many|count/.test(s)) return ["Memory: counts", "الذاكرة: الأعداد"];
+    return ["Memory: scene details", "الذاكرة: تفاصيل المشهد"];
+  }
+  function areaOf(item) {
+    if (!item) return ["This quiz", "هذا الاختبار"];
+    if (item.pillar === "mem") return memArea(item.en);
+    if (item.pillar === "grammar" || item.pillar === "written") {
+      var fam = item.family && FAM_EN[item.family];
+      if (fam) return ["Grammar: " + fam, "القواعد: " + (FAM_AR[item.family] || fam)];
+      return ["Grammar", "القواعد"];
+    }
+    if (item.pillar === "logic") return ["Logic: rules and order", "المنطق: القواعد والترتيب"];
+    if (item.pillar === "reading" || item.pillar === "comp") return ["Reading: the passage", "القراءة: المقطع"];
+    if (item.pillar === "listen") return ["Listening: radio calls", "الاستماع: النداءات"];
+    if (item.pillar === "obs") return ["Observation: the scene", "الملاحظة: المشهد"];
+    return ["This quiz", "هذا الاختبار"];
+  }
   var PIL_AR = { logic: "المنطق", reading: "القراءة", comp: "الفهم", listen: "الاستماع", obs: "الملاحظة", grammar: "القواعد", written: "الكتابة" };
   function weekAr(n) {
     return { 1: "الأول", 2: "الثاني", 3: "الثالث", 4: "الرابع" }[n] || String(n);
@@ -50,52 +82,74 @@
     return [en, ar];
   }
 
-  function renderBoard() {
-    if (!board) return;
-    var d1 = state.day1;
-    var days = state.days || {};
-    var nums = Object.keys(days).map(Number).filter(function (n) { return days[n] && days[n].pct != null; });
-    var lastN = nums.length ? Math.max.apply(null, nums) : 0;
-    var last = lastN ? days[String(lastN)] : null;
-    var famRows = "";
-    var fams = {};
-    if (d1 && d1.fam) Object.keys(d1.fam).forEach(function (f) { fams[f] = true; });
-    Object.keys(state.fam || {}).forEach(function (f) { fams[f] = true; });
-    Object.keys(fams).sort().forEach(function (f) {
-      var a = d1 && d1.fam && d1.fam[f];
-      var b = state.fam[f];
-      var ap = a && a.n ? Math.round(100 * a.ok / a.n) : null;
-      var bp = b && b.n ? Math.round(100 * b.ok / b.n) : null;
-      var retired = A.mastered(state, f);
-      famRows += '<tr><td>' + esc(f) + '</td><td>' + (ap == null ? "—" : ap + "%") + '</td><td>' + (bp == null ? "—" : bp + "%") + '</td><td>' + (retired ? bi("retired", "أُوقف") : bi("in play", "ما زال")) + '</td></tr>';
+  function renderSummary(dayN) {
+    var el = document.getElementById("hs-summary");
+    if (!el) return;
+    var row = state.days && state.days[String(dayN)];
+    var list = (row && row.quizzes) || [];
+    if (!list.length) { el.innerHTML = ""; return; }
+    el.innerHTML = "<h2>" + bi("Today", "هذا اليوم") + "</h2><ul>"
+      + list.map(function (q) {
+        return "<li>" + bi(q.label_en + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")", q.label_ar + ": " + q.pct + "% (" + q.ok + "/" + q.n + ")") + "</li>";
+      }).join("") + "</ul>";
+  }
+  function rememberQuiz(dayN, rec) {
+    state.days = state.days || {};
+    var row = state.days[String(dayN)] || {};
+    var list = (row.quizzes || []).filter(function (q) { return q.key !== rec.key; });
+    list.push(rec);
+    row.quizzes = list;
+    state.days[String(dayN)] = row;
+  }
+  function collectLines(blocks, ans) {
+    var lines = [];
+    var i = 0;
+    function push(item, given) {
+      lines.push({ item: item, given: given, good: given === item.ans });
+    }
+    (blocks || []).forEach(function (b) {
+      if (b.kind === "q") { push(b.item, ans[i]); i += 1; }
+      else (b.set.qs || []).forEach(function (q) {
+        push(Object.assign({ pillar: b.set.pillar, family: q.family, why: q.why, opts: q.opts, ans: q.ans, en: q.en, ar: q.ar }, q), ans[i]);
+        i += 1;
+      });
     });
-    var pillar = "";
-    ["logic", "grammar", "written", "reading", "comp", "listen", "obs"].forEach(function (p) {
-      var r = state.pillar[p];
-      if (!r || !r.n) return;
-      pillar += '<li>' + esc(p) + ': ' + Math.round(100 * r.ok / r.n) + '% (' + r.ok + '/' + r.n + ')</li>';
+    return lines;
+  }
+  function resultsPanel(titleEn, titleAr, lines) {
+    var ok = lines.filter(function (l) { return l.good; }).length;
+    var n = lines.length;
+    var pct = n ? Math.round(100 * ok / n) : 0;
+    var seen = {};
+    var areas = [];
+    lines.forEach(function (ln) {
+      if (ln.good) return;
+      var area = areaOf(ln.item);
+      if (seen[area[0]]) return;
+      seen[area[0]] = true;
+      areas.push(area);
     });
-    var weeks = "";
-    [1, 2, 3, 4].forEach(function (w) {
-      var st = A.packStatus(state, w);
-      var p = st.perf;
-      var statusEn, statusAr;
-      if (st.cleared) { statusEn = "mastery mark reached"; statusAr = "بُلغت علامة الإتقان"; }
-      else if (st.needsRepair) { statusEn = p.masteredN + "/" + p.total + " at the mastery mark · weak spots still on the board"; statusAr = p.masteredN + "/" + p.total + " عند علامة الإتقان · مواضع لينة ما زالت على اللوحة"; }
-      else if (st.needsStretch) { statusEn = p.masteredN + "/" + p.total + " at the mastery mark · stretch still on the board"; statusAr = p.masteredN + "/" + p.total + " عند علامة الإتقان · التمدد ما زال على اللوحة"; }
-      else { statusEn = p.masteredN + "/" + p.total + " at the mastery mark"; statusAr = p.masteredN + "/" + p.total + " عند علامة الإتقان"; }
-      var core = p.overall == null ? "—" : p.overall + "%";
-      weeks += "<li>" + bi("Week " + w + ": " + statusEn + " · core " + core + " · open", "الأسبوع " + weekAr(w) + ": " + statusAr + " · الجوهر " + core + " · مفتوح") + "</li>";
-    });
-    board.innerHTML = '<h2>' + bi("Scoreboard", "لوحة النتائج") + '</h2>'
-      + '<p>' + bi("Scores are saved. 80% on the core is the mastery mark. At 95% the harder set is the one the board counts. Every week and every day can be opened. Day 1 still starts with the photograph. A family at 95% over 4 or more items is retired.",
-        "النتائج تُحفظ. 80% في الجوهر علامة الإتقان. عند 95% المجموعة الأصعب هي التي تحسبها اللوحة. كل أسبوع وكل يوم يمكن فتحه. اليوم 1 ما زال يبدأ بالصورة. العائلة التي تبلغ 95% في 4 بنود أو أكثر تُوقف.") + '</p>'
-      + "<ul>" + weeks + "</ul>"
-      + (last ? '<p>' + bi("Latest sitting: period " + lastN + " · " + last.pct + "% overall · core " + (last.corePct == null ? "—" : last.corePct + "%") + " · tier " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " min.",
-        "آخر جلسة: الفترة " + lastN + " · " + last.pct + "% إجمالًا · الجوهر " + (last.corePct == null ? "—" : last.corePct + "%") + " · المستوى " + last.tier + " · " + Math.round((last.sec || 0) / 60) + " د.") + '</p>'
-        : '<p class="sp-ph">' + bi("No sitting has been scored in this browser yet.", "لا جلسة مسجّلة في هذا المتصفح بعد.") + '</p>')
-      + (famRows ? '<table class="hs-board-table"><thead><tr><th>' + bi("Grammar family", "عائلة القواعد") + '</th><th>' + bi("Day 1", "اليوم 1") + '</th><th>' + bi("Now", "الآن") + '</th><th></th></tr></thead><tbody>' + famRows + '</tbody></table>' : '')
-      + (pillar ? '<ul>' + pillar + '</ul>' : '');
+    var study = areas.length
+      ? "<ul>" + areas.map(function (a) { return "<li>" + bi(a[0], a[1]) + "</li>"; }).join("") + "</ul>"
+      : "<p>" + bi("Nothing to review on this quiz.", "لا شيء للمراجعة في هذا الاختبار.") + "</p>";
+    var misses = lines.filter(function (l) { return !l.good; });
+    var missHtml = misses.length
+      ? '<ol class="md-qs">' + misses.map(function (ln) {
+        return '<li class="sp-day md-bad"><p>' + bi(ln.item.en, ln.item.ar) + "</p><p>"
+          + bi("Your answer: ", "إجابتك: ") + answerText(ln.item, ln.given) + "</p><p><strong>"
+          + bi("Correct: ", "الصحيح: ") + answerText(ln.item, ln.item.ans) + "</strong></p></li>";
+      }).join("") + "</ol>"
+      : "<p>" + bi("No misses.", "لا أخطاء.") + "</p>";
+    return {
+      pct: pct, ok: ok, n: n,
+      html: '<section class="hs-results"><h2>' + bi(titleEn + ": " + ok + "/" + n + " (" + pct + "%)", titleAr + ": " + ok + "/" + n + " (" + pct + "%)") + "</h2>"
+        + "<h3>" + bi("Study up on", "ذاكري") + "</h3>" + study
+        + "<h3>" + bi("Missed", "ما فات") + "</h3>" + missHtml + "</section>"
+    };
+  }
+  function answerText(item, idx) {
+    if (idx == null || idx < 0 || !item.opts || !item.opts[idx]) return bi("(none)", "(لا شيء)");
+    return optLabel(item, idx);
   }
 
   function bannerText(kind) {
@@ -142,9 +196,8 @@
   }
   function nextControls(week, dayN) {
     var next = dayN ? dayN + 1 : week * 7 + 1;
-    var html = '<p class="sp-ph">' + bi("Every week and every day stays open. The score is saved either way.", "كل أسبوع وكل يوم يبقى مفتوحًا. النتيجة تُحفظ في الحالين.") + '</p>';
-    if (next <= 28) html += '<button type="button" class="sp-btn" data-day="' + next + '">' + bi("Open day " + next, "افتحي اليوم " + next) + "</button>";
-    return html;
+    if (next > 28) return "";
+    return '<button type="button" class="sp-btn" data-day="' + next + '">' + bi("Next day", "اليوم التالي") + "</button>";
   }
 
   function flatten(blocks) {
@@ -216,9 +269,8 @@
     var left = step.set.secs || 40;
     var body, note;
     if (step.set.mem && typeof hesnaScene === "function") {
-      body = hesnaScene(step.set) + '<p>' + bi(step.set.en, step.set.ar) + '</p>';
-      note = bi("No notes. When the time ends, the picture hides and it does not come back until you submit. Every question is answered by what the picture shows.",
-        "بلا ملاحظات. حين ينتهي الوقت تختفي الصورة ولا تعود حتى تُرسلي الإجابات. كل سؤال يُجاب مما تُظهره الصورة.");
+      body = hesnaScene(step.set);
+      note = "";
     } else if (step.set.img) {
       body = '<figure class="hs-script"><img src="' + esc(step.set.img) + '" alt="' + esc(step.set.alt || "Practice scene") + '" style="width:100%;height:auto;border-radius:12px"><figcaption class="si-credit">'
         + bi("Created by SI and Biological SI Partner", "أُنشئ بواسطة SI وBiological SI Partner") + '</figcaption></figure><p>'
@@ -231,7 +283,7 @@
         step.kind === "obs" ? "ملاحظة. اقرئي مرة واحدة. سيختفي." : "نداء لاسلكي. اقرئي مرة واحدة. سيختفي.");
     }
     app.innerHTML = '<p class="md-timer" id="hs-script-t"></p>' + body
-      + '<p class="sp-ph">' + note + '</p>'
+      + (note ? '<p class="sp-ph">' + note + '</p>' : '')
       + '<p id="hs-clock"></p>'
       + '<button type="button" class="sp-btn" id="hs-ready">' + bi("I'm ready, hide it", "أنا جاهزة، أخفيه") + '</button>';
     var el = document.getElementById("hs-script-t");
@@ -264,7 +316,7 @@
         + '<div class="hs-passage"><p>' + esc(step.passage.en) + '</p><p class="sp-ph">' + esc(step.passage.ar) + '</p></div>';
     }
     var writtenKey = item.pillar === "written"
-      ? '<p class="hs-key">' + bi("A = grammatically correct. B = grammatically incorrect. Judge sentence structure, grammar, and word usage. Ignore spelling, punctuation, and capitalization. A wrong homophone is still a word-usage error.", "A = صحيحة نحويًا. B = غير صحيحة نحويًا. احكمي على بناء الجملة والقواعد واستعمال الكلمة. تجاهلي الإملاء وعلامات الترقيم وحالة الحرف. والكلمة المتشابهة اللفظ إذا استُعملت غلطًا تبقى خطأ استعمال.") + '</p>'
+      ? '<p class="hs-key">' + bi("A = grammatically correct. B = not. Ignore spelling and punctuation.", "A = صحيحة نحويًا. B = ليست كذلك. تجاهلي الإملاء وعلامات الترقيم.") + '</p>'
       : '';
     var opts = "";
     item.opts.forEach(function (o, i) {
@@ -299,37 +351,24 @@
     var row = null;
     if (session.kind === "repair" || session.kind === "stretch") A.applyPackGrade(state, session.week, session.kind, session.blocks, g);
     else row = A.applyGrade(state, session.day, session, g, sec);
+    var lines = collectLines(session.blocks, answers);
+    var panel = resultsPanel("Score", "النتيجة", lines);
+    rememberQuiz(session.day.n, {
+      key: "mixed",
+      label_en: "Written, reading, and logic",
+      label_ar: "الكتابة والقراءة والمنطق",
+      pct: panel.pct, ok: panel.ok, n: panel.n
+    });
     save();
     if (!row) row = { tooFastSec: session.tooFastSec, sec: sec };
-    var fast = row.tooFastSec && sec < row.tooFastSec;
     var raised = session.kind !== "repair" && session.kind !== "stretch" && A.hot(row);
-    var periodN = session.day && session.day.n ? ((session.day.n - 1) % 7) + 1 : 0;
-    var headEn = "Week " + session.week + " · period " + periodN + ": " + g.pct + "%";
-    var headAr = "الأسبوع " + weekAr(session.week) + " · الفترة " + periodN + ": " + g.pct + "%";
-    if (session.kind === "repair") { headEn = "Weak spots: " + g.pct + "%"; headAr = "المواضع اللينة: " + g.pct + "%"; }
-    if (session.kind === "stretch") { headEn = "Stretch: " + g.pct + "%"; headAr = "التمدد: " + g.pct + "%"; }
-    var html = '<h2>' + bi(headEn, headAr) + '</h2>'
-      + '<p>' + bi("Core (reading, listening, comprehension, observation, and the extra logic drills): " + (g.corePct == null ? "—" : g.corePct + "%") + ". Written A/B and the four-choice grammar are tracked by family and do not hold the tier. Biodata, on the plan page, is not right-or-wrong.",
-        "الجوهر (قراءة، استماع، فهم، ملاحظة، وتدريبات المنطق الإضافية): " + (g.corePct == null ? "—" : g.corePct + "%") + ". الكتابة A/B وقواعد الاختيار من أربع تُتابَع حسب العائلة ولا تحبس المستوى. والبيانات الشخصية في صفحة الخطة ليست صح أو خطأ.") + '</p>'
-      + '<p>' + bi(Math.round(sec / 60) + " min " + (sec % 60) + " sec. Budget " + session.day.budgetMin + " min. Too-fast line: " + session.day.tooFastMin + " min.",
-        Math.round(sec / 60) + " د " + (sec % 60) + " ث. الميزانية " + session.day.budgetMin + " د. حد السرعة الزائدة: " + session.day.tooFastMin + " د.") + '</p>';
-    if (raised) {
-      html += '<p class="hs-banner">' + bi("Too easy. A harder set opens now, before you close this sitting.",
-        "أسهل مما ينبغي. مجموعة أصعب تُفتح الآن، قبل أن تغلقي هذه الجلسة.") + '</p>'
-        + '<button type="button" class="sp-btn" id="hs-extra">' + bi("Raise the bar", "ارفعي المستوى") + '</button>';
-    } else if (fast && (g.corePct || 0) < 90) {
-      html += '<p>' + bi("That was fast, and the core was not high enough to call it too easy. Speed without the score does not jump you.",
-        "كان ذلك سريعًا، والجوهر لم يبلغ حد «أسهل مما ينبغي». السرعة بلا النتيجة لا تقفز بكِ.") + '</p>';
-    }
-    html += review(session.blocks, answers);
-    if (!raised) html += nextControls(session.week, session.day && session.day.n);
-    html += '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>';
+    var html = panel.html;
+    if (raised) html += '<button type="button" class="sp-btn" id="hs-extra">' + bi("Harder questions", "أسئلة أصعب") + "</button>";
+    html += nextControls(session.week, session.day && session.day.n);
     app.innerHTML = html;
     var extraBtn = document.getElementById("hs-extra");
     if (extraBtn) extraBtn.onclick = startExtra;
-    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; window.scrollTo(0, 0); };
-    renderBoard();
-    refreshPackNotes();
+    renderSummary(session.day.n);
     window.scrollTo(0, 0);
   }
 
@@ -344,12 +383,7 @@
     if (!items.length) {
       A.noteExtra(state, session.day.n, 80);
       save();
-      var box = app.querySelector(".hs-banner");
-      var note = '<p>' + bi("No unseen items sit above this tier. This period counts as mastered, and the pack moves on.",
-        "لا بنود غير محلولة فوق هذا المستوى. تُحسب هذه الفترة على لوحة النتائج، وكل يوم آخر يبقى مفتوحًا.") + '</p>' + nextControls(session.week, session.day && session.day.n);
-      if (box) box.insertAdjacentHTML("afterend", note);
-      else app.insertAdjacentHTML("afterbegin", note);
-      refreshPackNotes();
+      renderSummary(session.day.n);
       return;
     }
     session.extraBlocks = items.map(function (it) { return { kind: "q", item: it }; });
@@ -367,18 +401,18 @@
     A.absorb(state, session.extraBlocks, g.answers, session.day.n);
     var pct = g.corePct == null ? g.pct : g.corePct;
     A.noteExtra(state, session.day.n, pct);
+    var lines = collectLines(session.extraBlocks, g.answers);
+    var panel = resultsPanel("Harder set", "المجموعة الأصعب", lines);
+    rememberQuiz(session.day.n, {
+      key: "extra",
+      label_en: "Harder set",
+      label_ar: "المجموعة الأصعب",
+      pct: panel.pct, ok: panel.ok, n: panel.n
+    });
     save();
-    var stuck = pct >= 80;
-    app.innerHTML = '<h2>' + bi("Raised set: " + pct + "%", "المجموعة المرفوعة: " + pct + "%") + '</h2>'
-      + '<p>' + (stuck
-        ? bi("That stuck. This period is mastered, and the next one in the pack starts higher.", "ثبت. أُتقنت هذه الفترة، والتالية في الحزمة تبدأ أعلى.")
-        : bi("The raise did not stick. This period is not mastered yet. The harder set is the one that counts.", "الرفع لم يثبت. هذه الفترة لم تُتقن بعد. المجموعة الأصعب هي التي تُحسب.")) + '</p>'
-      + review(session.extraBlocks, g.answers)
-      + nextControls(session.week, session.day && session.day.n)
-      + '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>';
-    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; };
-    renderBoard();
-    refreshPackNotes();
+    app.innerHTML = panel.html + nextControls(session.week, session.day && session.day.n);
+    renderSummary(session.day.n);
+    window.scrollTo(0, 0);
   }
 
   function review(blocks, ans) {
@@ -438,8 +472,8 @@
       b: drill.b,
       p: drill.p,
       v: drill.v,
-      en: drill.blurb_en || drill.title_en,
-      ar: drill.blurb_ar || drill.title_ar,
+      en: drill.title_en,
+      ar: drill.title_ar,
       qs: qs
     };
     session = {
@@ -468,37 +502,27 @@
     var ok = 0;
     qs.forEach(function (q, i) { if (answers[i] === q.ans) ok += 1; });
     var pct = qs.length ? Math.round(100 * ok / qs.length) : 0;
-    var bar = A.memPassBar(state, session.memId);
     A.noteMem(state, session.day, session.memId, pct);
+    var lines = qs.map(function (q, i) {
+      return { item: q, given: answers[i], good: answers[i] === q.ans };
+    });
+    var title = (session.blocks[0].set.en || "Picture");
+    var panel = resultsPanel("Score", "النتيجة", lines);
+    rememberQuiz(session.day.n, {
+      key: "mem:" + session.memId,
+      label_en: title,
+      label_ar: session.blocks[0].set.ar || title,
+      pct: panel.pct, ok: panel.ok, n: panel.n
+    });
     save();
-    var hot = pct >= 95;
-    var head = bi("Picture quiz: " + ok + "/" + qs.length + " (" + pct + "%)", "اختبار الصورة: " + ok + "/" + qs.length + " (" + pct + "%)");
-    var msg = hot
-      ? bi("95% or higher. Saved. The scoreboard treats this picture as easy. You can continue, retry, or open any other day.", "95% أو أكثر. حُفظت. لوحة النتائج تعامل هذه الصورة على أنها سهلة. يمكنك المتابعة أو الإعادة أو فتح أي يوم آخر.")
-      : bi("Saved. The mastery mark for this picture is " + bar + "%. You can continue, retry, or open any other day. Nothing outside the picture is required.", "حُفظت. علامة الإتقان لهذه الصورة " + bar + "%. يمكنك المتابعة أو الإعادة أو فتح أي يوم آخر. لا شيء خارج الصورة مطلوب.");
     var idx = (session.memIndex || 0) + 1;
     var ids = (session.day && session.day.mem) || [];
     var go = idx < ids.length
-      ? '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + idx + '">' + bi("Next picture in this day", "الصورة التالية في هذا اليوم") + "</button>"
-      : '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-phase="quiz">' + bi("Continue to the other quizzes", "تابعي إلى الاختبارات الأخرى") + "</button>";
-    go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + (session.memIndex || 0) + '">' + bi("Retry this picture", "أعيدي هذه الصورة") + "</button>";
-    var rv = "";
-    qs.forEach(function (q, i) {
-      var good = answers[i] === q.ans;
-      rv += '<li class="sp-day ' + (good ? "md-ok" : "md-bad") + '"><p>' + bi(q.en, q.ar) + '</p><p>'
-        + (good ? "✅ " : "❌ ") + bi("Your answer: ", "إجابتك: ") + optLabel(q, answers[i] < 0 || answers[i] == null ? 0 : answers[i]) + '</p>'
-        + (good ? "" : '<p><strong>' + bi("Correct: ", "الصحيح: ") + optLabel(q, q.ans) + '</strong></p>')
-        + '</li>';
-    });
-    app.innerHTML = '<h2>' + head + '</h2><p>' + msg + '</p>'
-      + go
-      + nextControls(session.week, session.day && session.day.n)
-      + '<button type="button" class="sp-btn" id="hs-home">' + bi("Back to the plan", "العودة إلى الخطة") + '</button>'
-      + hesnaScene(session.blocks[0].set)
-      + '<ol class="md-qs">' + rv + '</ol>';
-    document.getElementById("hs-home").onclick = function () { renderBoard(); refreshPackNotes(); app.innerHTML = ""; window.scrollTo(0, 0); };
-    renderBoard();
-    refreshPackNotes();
+      ? '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + idx + '">' + bi("Next picture", "الصورة التالية") + "</button>"
+      : '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-phase="quiz">' + bi("Other quizzes", "الاختبارات الأخرى") + "</button>";
+    go += '<button type="button" class="sp-btn" data-day="' + session.day.n + '" data-mem="' + (session.memIndex || 0) + '">' + bi("Retry", "أعيدي") + "</button>";
+    app.innerHTML = panel.html + go + nextControls(session.week, session.day && session.day.n);
+    renderSummary(session.day.n);
     window.scrollTo(0, 0);
   }
   function findDay(n) {
@@ -514,6 +538,9 @@
       window.scrollTo(0, 0);
       return;
     }
+    var sel = document.getElementById("hs-day");
+    if (sel) sel.value = String(day.n);
+    renderSummary(day.n);
     var ids = day.mem || [];
     var i = memIndex || 0;
     if (phase !== "quiz" && i < ids.length && D.mem && D.mem[ids[i]]) {
@@ -529,18 +556,27 @@
     save();
     refreshPackNotes();
     if (!session.nQ) {
-      app.innerHTML = '<h2>' + bi(day.title_en, day.title_ar) + '</h2><p>' + bi(
-        "The question bank has no unseen items left at this tier. Scores already saved still stand. You can open any other day, or study this day's picture again.",
-        "بنك الأسئلة لم يبقَ فيه بنود غير محلولة في هذا المستوى. النتائج المحفوظة تبقى. يمكنك فتح أي يوم آخر، أو دراسة صورة هذا اليوم من جديد.") + '</p>'
-        + '<button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="0">' + bi("Study this day's picture again", "ادرسي صورة هذا اليوم من جديد") + '</button>';
+      app.innerHTML = '<p>' + bi("No new questions in this set.", "لا أسئلة جديدة في هذه المجموعة.") + '</p>'
+        + '<button type="button" class="sp-btn" data-day="' + day.n + '" data-mem="0">' + bi("Picture again", "الصورة مرة أخرى") + '</button>';
       window.scrollTo(0, 0);
       return;
     }
     steps = flatten(session.blocks);
-    showIntro(day);
+    t0 = Date.now();
+    cursor = 0;
+    answers = [];
+    mode = "main";
+    timer = setInterval(clock, 500);
+    renderStep();
     window.scrollTo(0, 0);
   }
 
+  function paintDays() {
+    var lang = document.documentElement.lang === "ar" ? "ar" : "en";
+    document.querySelectorAll("#hs-day option").forEach(function (o) {
+      o.textContent = o.getAttribute(lang === "ar" ? "data-ar" : "data-en") || o.value;
+    });
+  }
   function boot() {
     app = document.getElementById("hs-app");
     board = document.getElementById("hs-board");
@@ -548,8 +584,16 @@
     load();
     if (A.resync) A.resync(state, D);
     save();
-    renderBoard();
-    refreshPackNotes();
+    paintDays();
+    var jump = (location.hash || "").match(/^#(?:day-(\d+)|week-(\d+))/);
+    var openDay = 1;
+    if (jump && jump[1]) openDay = +jump[1];
+    else if (jump && jump[2]) openDay = (+jump[2] - 1) * 7 + 1;
+    var sel = document.getElementById("hs-day");
+    if (sel) sel.addEventListener("change", function () { startDay(+sel.value, 0, ""); });
+    var toggle = document.getElementById("sp-toggle");
+    if (toggle) toggle.addEventListener("click", function () { setTimeout(paintDays, 0); });
+    startDay(openDay, 0, "");
     document.body.addEventListener("click", function (e) {
       var b = e.target.closest("[data-day],[data-week]");
       if (!b) return;
@@ -566,9 +610,8 @@
         : "Clear this plan's saved progress in this browser?")) return;
       state = { seen: {}, fam: {}, pillar: {}, days: {}, weeks: {} };
       save();
-      renderBoard();
-      refreshPackNotes();
-      app.innerHTML = "";
+      renderSummary(1);
+      startDay(1, 0, "");
     };
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

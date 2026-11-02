@@ -26,8 +26,6 @@ body{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 3rem}
 <main data-pagefind-ignore="all">
 <nav class="sp-nav" aria-label="Study pages / صفحات الدراسة"><a href="hesna-6abec5.html"><span data-en>📘 Study Guide</span><span data-ar>📘 دليل الدراسة</span></a><a href="hesna-6abec5-memory.html" aria-current="page"><span data-en>🧠 Memory Drills</span><span data-ar>🧠 تمارين الذاكرة</span></a></nav>
 <div class="sp-top"><h1><span data-en>Observation &amp; Memory Drills</span><span data-ar>تمارين الملاحظة والذاكرة</span></h1><button id="sp-toggle" type="button" aria-label="Switch language / تغيير اللغة"><span data-en>العربية</span><span data-ar>English</span></button></div>
-<p><a href="hesna-6abec5.html"><span data-en>← Back to the study plan</span><span data-ar>→ العودة إلى خطة الدراسة</span></a></p>
-<p class="sp-ph"><span data-en>DELPOE visual practice, not real exam items. Every drill on this page is open, in the same order as the four-week plan. Week 1 is the 7426 burglary and the first street sketches. Week 2 is Quick Stop and the Level 4 sketches. Week 3 is the corner crash, the denser streets, and the lobby correction. Week 4 is the garage correction. Study each scene for 2 minutes. No notes. Then it hides. Every question is answered by what that scene shows. You cannot look back during the questions. A score is saved. It does not close the next drill.</span><span data-ar>تدريب بصري على نمط DELPOE، وليس أسئلة امتحان حقيقية. كل تمرين في هذه الصفحة مفتوح، بالترتيب نفسه لخطة الأسابيع الأربعة. الأسبوع الأول هو سطو 7426 ورسوم الشوارع الأولى. الأسبوع الثاني هو كويك ستوب ورسوم المستوى 4. الأسبوع الثالث هو حادث الزاوية والشوارع الأكثف وتصحيح الردهة. الأسبوع الرابع هو تصحيح المرآب. ادرسي كل مشهد دقيقتين. بلا ملاحظات. ثم يختفي. كل سؤال يُجاب مما يُظهره ذلك المشهد. لا رجوع إلى الصورة أثناء الأسئلة. النتيجة تُحفظ. وهي لا تغلق التمرين التالي.</span></p>
 <div id="md-app"></div>
 <script>window.MD_DATA={};</script>
 <script>(function(){var D=window.MD_DATA,K='hesnaMemory',st={};
@@ -67,26 +65,34 @@ var o='';
   ids.forEach(function(i){
     var s=D.S[i];
     var title=s.title?bi(s.title[0],s.title[1]):bi('Exercise '+s.id,'التمرين '+s.id);
-    var blurb=s.blurb?('<p>'+bi(s.blurb[0],s.blurb[1])+'</p>'):(s.desc?('<p>'+bi(s.desc[0],s.desc[1])+'</p>'):'');
-    var best=st[s.id]!=null?'<br>'+bi('Best: '+st[s.id]+'%','أفضل نتيجة: '+st[s.id]+'%'):'';
-    o+='<div class="sp-day"><h3>'+title+'</h3>'+blurb+'<p>'+s.q.length+' '+bi('questions','سؤالًا')+' · '+mins(s)+best+'</p><button type="button" class="sp-btn" data-go="'+i+'">'+bi('Start','ابدئي')+'</button></div>';
+    var best=st[s.id]!=null?' · '+st[s.id]+'%':'';
+    o+='<div class="sp-day"><h3>'+title+'</h3><p>'+s.q.length+' '+bi('questions','سؤالًا')+best+'</p><button type="button" class="sp-btn" data-go="'+i+'">'+bi('Start','ابدئي')+'</button></div>';
   });
   o+='</div></section>';
 });
 app.innerHTML=o;scrollTo(0,0)}
 
-function view(i){var s=D.S[i],left=s.secs||120;app.innerHTML='<p class="md-timer" aria-live="polite"></p><div>'+scene(s)+'</div>'+(s.desc?'<p>'+bi(s.desc[0],s.desc[1])+'</p>':'')+(s.pic?'<p>'+bi('No notes. When the time ends, the picture hides and it does not come back until you submit.','بلا ملاحظات. حين ينتهي الوقت تختفي الصورة ولا تعود حتى تُرسلي الإجابات.')+'</p>':'')+'<button type="button" class="sp-btn" data-q="'+i+'">'+bi("I'm ready, hide it now",'أنا جاهزة، أخفيه الآن')+'</button>';
+function memArea(en){var s=String(en||'').toLowerCase();
+if(/shirt|pants|hat|hair|jacket|shoe|dress|vest|clothing|wore|wearing|backpack|umbrella|braid/.test(s))return ['Memory: clothing details','الذاكرة: تفاصيل الملابس'];
+if(/carried|carrying|phone|cup|bag|box/.test(s))return ['Memory: what people carried','الذاكرة: ما يحمله الأشخاص'];
+if(/plate|license|badge|number/.test(s))return ['Memory: numbers and plates','الذاكرة: الأرقام واللوحات'];
+if(/time|clock/.test(s))return ['Memory: the time','الذاكرة: الوقت'];
+if(/street|sign|cafe|gym/.test(s))return ['Memory: signs and names','الذاكرة: اللافتات والأسماء'];
+if(/car|van|truck|sedan|vehicle|bike|bicycle|bus/.test(s))return ['Memory: vehicles','الذاكرة: المركبات'];
+if(/color/.test(s))return ['Memory: colors','الذاكرة: الألوان'];
+if(/how many|count/.test(s))return ['Memory: counts','الذاكرة: الأعداد'];
+return ['Memory: scene details','الذاكرة: تفاصيل المشهد']}
+function view(i){var s=D.S[i],left=s.secs||120;app.innerHTML='<p class="md-timer" aria-live="polite"></p><div>'+scene(s)+'</div><button type="button" class="sp-btn" data-q="'+i+'">'+bi("I'm ready, hide it",'أنا جاهزة، أخفيه')+'</button>';
 var el=app.querySelector('.md-timer');function tick(){el.innerHTML=bi('Time left: ','الوقت المتبقي: ')+Math.floor(left/60)+':'+('0'+left%60).slice(-2);if(left--<=0){quiz(i)}}tick();timer=setInterval(tick,1000);scrollTo(0,0)}
 function quiz(i){clearInterval(timer);var s=D.S[i],ab=s.q[0]&&s.q[0][2].length===2,o='<p class="sp-ph">'+bi('The picture is hidden. Answer from memory.','الصورة مخفية. أجيبي من الذاكرة.')+'</p>'+(ab?'<p class="hs-key">'+bi('Statements: A true, B false. Objects: A yes it was in the picture, B no. If only part of an object was shown, it was present.','العبارات: A صحيحة، B خطأ. الأغراض: A نعم كان في الصورة، B لا. إذا ظهر جزء من الغرض فهو موجود.')+'</p>':'')+'<ol class="md-qs">';
 s.q.forEach(function(q,j){o+='<li class="sp-day"><p>'+bi(q[0],q[1])+'</p>';q[2].forEach(function(e,k){o+='<label class="md-opt"><input type="radio" name="q'+j+'" value="'+k+'"> '+bi(e,q[3][k])+'</label>'});o+='</li>'});
 app.innerHTML=o+'</ol><button type="button" class="sp-btn" data-r="'+i+'">'+bi('Submit answers','إرسال الإجابات')+'</button>';scrollTo(0,0)}
-function result(i){var s=D.S[i],ok=0,rv='';s.q.forEach(function(q,j){var c=app.querySelector('input[name=q'+j+']:checked'),a=c?+c.value:-1,g=a==q[4];if(g)ok++;
-rv+='<li class="sp-day '+(g?'md-ok':'md-bad')+'"><p>'+bi(q[0],q[1])+'</p><p>'+(g?'✅ ':'❌ ')+bi('Your answer: ','إجابتك: ')+(a<0?bi('(none)','(لا شيء)'):bi(q[2][a],q[3][a]))+'</p>'+(g?'':'<p><strong>'+bi('Correct: ','الصحيح: ')+bi(q[2][q[4]],q[3][q[4]])+'</strong></p>')+'</li>'});
+function result(i){var s=D.S[i],ok=0,miss=[],areas={};s.q.forEach(function(q,j){var c=app.querySelector('input[name=q'+j+']:checked'),a=c?+c.value:-1,g=a==q[4];if(g){ok++;return}miss.push({q:q,a:a});var area=memArea(q[0]);areas[area[0]]=area});
 var p=Math.round(100*ok/s.q.length);st[s.id]=Math.max(st[s.id]||0,p);save();
-var bar=s.pic?passBarFor(s):(s.lv>=3?week2Bar():80);
 var nxt=i+1<D.S.length?i+1:-1;
-var msg=p>=95?bi('95% or higher. Saved. The scoreboard treats this one as easy. The next drill is open either way.','95% أو أكثر. حُفظت. لوحة النتائج تعامل هذا على أنه سهل. التمرين التالي مفتوح في الحالين.'):(p>=bar?bi('Saved. The mastery mark for this drill was '+bar+'%. The next drill is open.','حُفظت. علامة الإتقان لهذا التمرين كانت '+bar+'%. التمرين التالي مفتوح.'):bi('Saved at '+p+'%. The mastery mark is '+bar+'%. The picture is visible again. You can retry, or open any other drill.','حُفظت عند '+p+'%. علامة الإتقان '+bar+'%. الصورة ظاهرة من جديد. يمكنك الإعادة، أو فتح أي تمرين آخر.'));
-app.innerHTML='<h2>'+bi('Score: '+ok+'/'+s.q.length+' ('+p+'%)','النتيجة: '+ok+'/'+s.q.length+' ('+p+'%)')+'</h2><p>'+msg+'</p>'+'<button type="button" class="sp-btn" data-go="'+i+'">'+bi('Retry this drill','أعيدي هذا التمرين')+'</button>'+(nxt>=0?'<button type="button" class="sp-btn" data-go="'+nxt+'">'+bi('Open the next drill','افتحي التمرين التالي')+'</button>':'')+'<button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button><div>'+scene(s)+'</div><ol class="md-qs">'+rv+'</ol><button type="button" class="sp-btn" data-home="1">'+bi('Back to the packs','العودة إلى الحزم')+'</button>';scrollTo(0,0)}
+var study=Object.keys(areas).length?'<ul>'+Object.keys(areas).map(function(k){return '<li>'+bi(areas[k][0],areas[k][1])+'</li>'}).join('')+'</ul>':'<p>'+bi('Nothing to review on this quiz.','لا شيء للمراجعة في هذا الاختبار.')+'</p>';
+var rv=miss.length?'<ol class="md-qs">'+miss.map(function(m){var q=m.q,a=m.a;return '<li class="sp-day md-bad"><p>'+bi(q[0],q[1])+'</p><p>'+bi('Your answer: ','إجابتك: ')+(a<0?bi('(none)','(لا شيء)'):bi(q[2][a],q[3][a]))+'</p><p><strong>'+bi('Correct: ','الصحيح: ')+bi(q[2][q[4]],q[3][q[4]])+'</strong></p></li>'}).join('')+'</ol>':'<p>'+bi('No misses.','لا أخطاء.')+'</p>';
+app.innerHTML='<section class="hs-results"><h2>'+bi('Score: '+ok+'/'+s.q.length+' ('+p+'%)','النتيجة: '+ok+'/'+s.q.length+' ('+p+'%)')+'</h2><h3>'+bi('Study up on','ذاكري')+'</h3>'+study+'<h3>'+bi('Missed','ما فات')+'</h3>'+rv+'</section><button type="button" class="sp-btn" data-go="'+i+'">'+bi('Retry','أعيدي')+'</button>'+(nxt>=0?'<button type="button" class="sp-btn" data-go="'+nxt+'">'+bi('Next drill','التمرين التالي')+'</button>':'')+'<button type="button" class="sp-btn" data-home="1">'+bi('All drills','كل التمارين')+'</button>';scrollTo(0,0)}
 app.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var d=b.dataset;if(d.go!=null)view(+d.go);else if(d.q!=null)quiz(+d.q);else if(d.r!=null)result(+d.r);else if(d.home)home()});home()})();
 </script>
 </main>
