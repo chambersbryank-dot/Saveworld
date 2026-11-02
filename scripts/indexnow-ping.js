@@ -4,7 +4,10 @@
 // Usage:
 //   node scripts/indexnow-ping.js                 dry run: URLs changed since last successful ping (.indexnow-last) or HEAD~1
 //   node scripts/indexnow-ping.js --since <ref>   changed since a git ref
-//   node scripts/indexnow-ping.js --all           every <loc> in sitemap.xml (en/fr/es/ar)
+//   node scripts/indexnow-ping.js --all           every <loc> in the per-language sitemaps (en/fr/es/ar/it/he)
+// One POST to https://api.indexnow.org/indexnow is shared with Bing, Yandex, Naver, and Seznam
+// (https://www.indexnow.org/documentation). Google does not participate. DuckDuckGo, Yahoo, and Ecosia
+// use Bing's index, so they see the same URLs after Bing crawls them.
 //   node scripts/indexnow-ping.js --send          submit
 //   --wait                                        before sending, poll the live key file (cache-busted) up to 10 min
 // Fallback: if the last-ping ref is unknown (shallow/fresh clone), all sitemap URLs are sent.
@@ -21,7 +24,18 @@ const args = process.argv.slice(2), send = args.includes('--send');
 const i = args.indexOf('--since');
 const sh = c => execSync(c, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
 const NOINDEX = new Set(['Project-R.html', '404.html', 'Community.html']);
-const sitemap = () => fs.existsSync('sitemap.xml') ? [...new Set([...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()))] : [];
+const locs = xml => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
+const sitemap = () => {
+  if (!fs.existsSync('sitemap.xml')) return [];
+  const xml = fs.readFileSync('sitemap.xml', 'utf8');
+  if (xml.includes('<sitemapindex')) {
+    return [...new Set(locs(xml).flatMap(u => {
+      const rel = u.replace(SITE, '');
+      return fs.existsSync(rel) ? locs(fs.readFileSync(rel, 'utf8')) : [];
+    }))];
+  }
+  return [...new Set(locs(xml))];
+};
 let since = i >= 0 ? args[i + 1] : (fs.existsSync(STATE) ? fs.readFileSync(STATE, 'utf8').trim() : 'HEAD~1');
 let urls;
 if (args.includes('--all')) urls = sitemap();
