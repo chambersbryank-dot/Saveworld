@@ -86,7 +86,8 @@ def redirects():
         page = (f'<!DOCTYPE html>\n<html lang="{l}" dir="{"rtl" if l == "ar" else "ltr"}"><head><meta charset="utf-8"><title>{title} | Saving Planets</title>'
                 f'<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, follow">'
                 f'<link rel="canonical" href="{target}"><meta http-equiv="refresh" content="0; url=Play_and_Learn.html"></head>'
-                f'<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center"><p><a href="Play_and_Learn.html" style="display:inline-block;min-height:44px;line-height:44px;font-size:1.2rem">{go}</a></p></body></html>\n')
+                f'<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center"><p><a href="Play_and_Learn.html" style="display:inline-block;min-height:44px;line-height:44px;font-size:1.2rem">{go}</a></p>'
+                '<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}\'></script><!-- CF-WA:END --></body></html>\n')
         p = d + 'Kids.html'
         if not os.path.exists(p) or open(p, encoding='utf8').read() != page: open(p, 'w', encoding='utf8').write(page)
 

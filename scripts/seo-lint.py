@@ -98,6 +98,8 @@ def main():
         if (lang in ('ar', 'he')) != bool(h and h.get('dir') == 'rtl'): add('html-dir', p)
         rob = soup.find('meta', attrs={'name': 'robots'}); rc = (rob.get('content', '') if rob else '').replace(' ', '').lower()
         stub = 'http-equiv="refresh"' in raw
+        if '9d4cc1c099e74c1e8b66eb937aa58186' not in raw:
+            add('beacon-missing', p)
         if stub or base in NOINDEX:
             stats['noindex/redirect'] += 1
             if 'noindex' not in rc: add('robots', p, 'redirect/noindex page should carry noindex')
@@ -114,6 +116,8 @@ def main():
             if not 30 <= len(t) <= 60: add('title-length', p, f'{len(t)}: {t}')
             if t.endswith('…'): add('title-truncated', p, t)
         if not d: add('desc-missing', p)
+        kwm = soup.find('meta', attrs={'name': 'keywords'})
+        if not kwm or not (kwm.get('content') or '').strip(): add('keywords-missing', p)
         else:
             descs[d].append(p)
             if 160 < len(d) <= 175 and not d.endswith('…'): add('desc-slightly-long', p, f'{len(d)} (one whole sentence; search engines trim the display)')

@@ -5,8 +5,10 @@ twitter:site, og:image width/height/type/alt, hreflang only for language version
 redirect stubs: html lang/dir + noindex (Oct 16 SEO pass; scripts/seo-lint.py checks the result).
 canonical/og:url, hreflang set incl. x-default, og:locale(+alternates), JSON-LD dates/inLanguage, image
 width/height/lazy. Run after build-stats.js and after scripts/i18n-build.py (which calls it for translations)."""
-import glob, json, os, re, subprocess, sys
+import glob, json, os, re, subprocess, sys, importlib.util
 from bs4 import BeautifulSoup
+_kwspec = importlib.util.spec_from_file_location('seokw', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'seo-keywords.py'))
+_kwm = importlib.util.module_from_spec(_kwspec); _kwspec.loader.exec_module(_kwm)
 import langs as L10N  # Oct 17: HE_PUBLIC — keep /he/ noindex while unlinked
 SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it', 'he']
 NOINDEX = {'Project-R.html', '404.html'}
@@ -153,7 +155,7 @@ def hub_name(soup):
 
 def esc(v): return v.replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
 HEAD_RX = [r'<meta name="robots"[^>]*>', r'<link rel="canonical"[^>]*>', r'<link rel="alternate" hreflang="[^"]*"[^>]*>',
-           r'<title>.*?</title>', r'<meta name="description"[^>]*>', r'<meta property="og:[^"]*"[^>]*>', r'<meta name="twitter:[^"]*"[^>]*>',
+           r'<title>.*?</title>', r'<meta name="description"[^>]*>', r'<meta name="keywords"[^>]*>', r'<meta property="og:[^"]*"[^>]*>', r'<meta name="twitter:[^"]*"[^>]*>',
            r'<link href="[^"]*" rel="canonical"/?>', r'<link href="[^"]*" hreflang="[^"]*" rel="alternate"/?>', r'<meta content="[^"]*" name="(?:robots|description|twitter:[^"]*)"/?>',
            r'<meta content="[^"]*" property="og:[^"]*"/?>', r'<link rel="alternate"[^>]*hreflang[^>]*>']
 
@@ -174,12 +176,19 @@ def fix(p):
     block = []
     if base in NOINDEX:
         t = soup.title.get_text() if soup.title else 'Saving Planets'
+        dm = soup.find('meta', attrs={'name': 'description'}); d = dm.get('content', '') if dm else ''
+        kw = _kwm.keywords_from(t, '', d or t, lang)
         block = [f'<title>{esc(t)}</title>', '<meta name="robots" content="noindex">']
         c = soup.find('link', rel='canonical')
         if c: block.append(f'<link rel="canonical" href="{c["href"]}">')
+        if d:
+            block += [f'<meta name="description" content="{esc(d)}">', f'<meta property="og:description" content="{esc(d)}">',
+                      f'<meta name="twitter:description" content="{esc(d)}">']
+        if kw: block.append(f'<meta name="keywords" content="{esc(kw)}">')
         img = (soup.find('meta', property='og:image') or {}).get('content') or SITE + 'assets/SavePlanetLogo.jpg'  # Batch A: share card even on noindex pages
         block += [f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:image" content="{esc(img)}">',
-                  '<meta name="twitter:card" content="summary_large_image">', f'<meta name="twitter:image" content="{esc(img)}">']
+                  '<meta name="twitter:card" content="summary_large_image">', f'<meta name="twitter:title" content="{esc(t)}">',
+                  f'<meta name="twitter:image" content="{esc(img)}">']
     else:
         url = page_url(lang, base)
         have_l = langs_of(base)
@@ -244,8 +253,11 @@ def fix(p):
                 from PIL import Image
                 with Image.open(lf) as I: iw, ih = I.width, I.height
             except Exception: pass
-        block += [f'<title>{esc(t)}</title>', f'<meta name="description" content="{esc(d)}">',
-                  f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:description" content="{esc(d)}">',
+        h1e = soup.find('h1'); h1 = re.sub(r'\s+', ' ', h1e.get_text(' ', strip=True)) if h1e else ''
+        kw = _kwm.keywords_from(t, h1, d, lang)
+        block += [f'<title>{esc(t)}</title>', f'<meta name="description" content="{esc(d)}">']
+        if kw: block.append(f'<meta name="keywords" content="{esc(kw)}">')
+        block += [f'<meta property="og:title" content="{esc(t)}">', f'<meta property="og:description" content="{esc(d)}">',
                   f'<meta property="og:image" content="{esc(img)}">']
         if iw: block += [f'<meta property="og:image:width" content="{iw}">', f'<meta property="og:image:height" content="{ih}">',
                          f'<meta property="og:image:type" content="image/{"png" if lf.endswith(".png") else "webp" if lf.endswith(".webp") else "jpeg"}">']

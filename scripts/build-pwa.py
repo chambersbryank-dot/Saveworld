@@ -203,7 +203,8 @@ def offline():
             '<link rel="icon" href="/favicon.svg"><style>body{margin:0;font:16px/1.5 system-ui,sans-serif;background:#07121c;color:#e8f1f7;padding:24px}'
             'main{max-width:640px;margin:auto}img{display:block;margin:0 auto 12px}section{border-top:1px solid #1f3a50;padding:8px 0}h1{font-size:1.25rem;margin:.4em 0}'
             'button{background:#2e8b57;color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}a{color:#8fd3ff}</style></head>'
-            '<body><main><img src="/assets/app/icon-192.png" width="96" height="96" alt="Saving Planets">' + sec + '</main></body></html>\n')
+            '<body><main><img src="/assets/app/icon-192.png" width="96" height="96" alt="Saving Planets">' + sec + '</main>'
+            '<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}\'></script><!-- CF-WA:END --></body></html>\n')
 
 PWA = re.compile(r'<!-- PWA:START -->.*?<!-- PWA:END -->\n?', re.S)
 PWAJ = re.compile(r'<!-- PWA-JS:START -->.*?<!-- PWA-JS:END -->', re.S)

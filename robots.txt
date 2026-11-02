@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+# Every HTML page is allowed, including /fr/ /es/ /ar/ /it/ /he/ and /study/.
+# Pages marked noindex (404, redirects, the private study guide) stay out of the sitemap.
 # Build artifacts and binary search blobs (not pages; the browser still loads them for search)
 Disallow: /search/semantic-vectors.bin
 Disallow: /search/semantic-index.json

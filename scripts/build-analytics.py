@@ -5,7 +5,7 @@ storage, no cross-site profile). Replaces the old add-gtag.py. Idempotent; run a
 - adds the Cloudflare beacon before </body> between CF-WA markers (site token is public by design: it ships in HTML)
 - updates the Privacy page analytics / children / browser-storage text in en, fr, es, ar, it
 The consent banner (consent.js) is gone: with no cookies or identifiers there is nothing to consent to (logged in NOTES.md)."""
-import pathlib, re, html
+import pathlib, re, html, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP = {"googlea5d3cc0c785fec04.html"}
 CF_TOKEN = '9d4cc1c099e74c1e8b66eb937aa58186'  # Cloudflare Web Analytics site for savingplanets.com (created in the dashboard Oct 8)
@@ -84,13 +84,19 @@ ABOUT = {'en': 'We count visits with Cloudflare Web Analytics, which sets no coo
  'ar': 'نحسب الزيارات باستخدام Cloudflare Web Analytics، وهي لا تضع ملفات تعريف ارتباط ولا تحتفظ بملف شخصي. لا يوجد شريط موافقة لأنه لا حاجة إليه. التفاصيل: الخصوصية.',
  'it': 'Contiamo le visite con Cloudflare Web Analytics, che non usa cookie e non conserva profili personali. Non c’è un banner di consenso perché non serve. Dettagli: Privacy.'}
 GA_P = re.compile(r'<p>(?:(?!</p>).)*Google Analytics(?:(?!</p>).)*</p>', re.S)
+BEACON_ONLY = '--beacon-only' in sys.argv
 n = 0
 for p in ROOT.rglob('*.html'):
     rel = p.relative_to(ROOT).parts
     if '.git' in rel or 'pagefind' in rel or 'node_modules' in rel or p.name in SKIP: continue
-    s = p.read_text(encoding='utf-8'); t = GA.sub('', s); t = CONSENT.sub('', t); t = CFW.sub('', t)
-    t = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=20261025a', t)  # Oct 16: GA search events removed; Oct 25: v bump for result groups + suggestions
+    s = p.read_text(encoding='utf-8'); t = CFW.sub('', s)
+    if not BEACON_ONLY:
+        t = GA.sub('', t); t = CONSENT.sub('', t)
+        t = re.sub(r'search-ui\.js\?v=[\w.-]+', 'search-ui.js?v=20261025a', t)  # Oct 16: GA search events removed; Oct 25: v bump for result groups + suggestions
     if '</body>' in t: t = t.replace('</body>', BEACON + '</body>', 1)
+    if BEACON_ONLY:
+        if t != s: p.write_text(t, encoding='utf-8'); n += 1
+        continue
     if p.name == 'About.html':
         la = rel[0] if len(rel) == 2 else 'en'
         if la in ABOUT: t = GA_P.sub(lambda m: '<p>' + E(ABOUT[la]) + '</p>', t, count=1)
