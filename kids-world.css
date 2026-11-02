@@ -1,0 +1,41 @@
+/* Kids World Map (K-5). No tracking scripts. */
+.kw-wrap{max-width:1100px;margin:0 auto;padding:1rem 1.1rem 2.5rem}
+.kw-lead,.kw-note{font-size:1.08rem;line-height:1.55;max-width:68ch}
+.kw-note{font-size:.95rem;opacity:.9}
+.kw-stage{position:relative;max-width:980px;margin:1rem auto .6rem;background:radial-gradient(circle at 30% 20%,#2f6fbf,#0d3b66 70%);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.28)}
+.kw-stage svg{display:block;width:100%;height:auto}
+.kw-stage path{cursor:pointer;stroke:#fff;stroke-width:3;transition:filter .15s}
+.kw-stage path:focus{outline:none}
+.kw-stage path:focus-visible{stroke:#ffd54a;stroke-width:6}
+.kw-stage path[aria-pressed="true"]{stroke:#ffd54a;stroke-width:7;filter:brightness(1.12)}
+.kw-space{position:absolute;top:8px;left:50%;transform:translateX(-50%);min-height:48px;padding:.45rem .9rem;border-radius:999px;border:2px solid #fff;background:#33297a;color:#fff;font:700 1rem/1.2 Montserrat,system-ui,sans-serif;cursor:pointer}
+.kw-space[aria-pressed="true"]{outline:3px solid #ffd54a;outline-offset:2px}
+.kw-pins{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:.4rem 0 1rem}
+.kw-pin{min-height:48px;min-width:44px;padding:.55rem 1rem;border-radius:999px;border:2px solid transparent;color:#fff;font:700 1.02rem/1.2 Montserrat,system-ui,sans-serif;cursor:pointer}
+.kw-pin[data-region="americas"]{background:#2e7d32}
+.kw-pin[data-region="eurafrica"]{background:#1565c0}
+.kw-pin[data-region="asiaoceania"]{background:#ef6c00}
+.kw-pin[data-region="orbit"]{background:#33297a}
+.kw-pin[data-region="world"]{background:#00838f}
+.kw-pin[aria-pressed="true"],.kw-space[aria-pressed="true"]{box-shadow:0 0 0 3px #ffd54a}
+.kw-pin:focus-visible,.kw-space:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}
+.kw-panel{scroll-margin-top:96px}
+.kw-count{font-weight:700;margin:.2rem 0 .8rem}
+.kw-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media (min-width:840px){.kw-grid{grid-template-columns:1fr 1fr}}
+.kw-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:.9rem 1rem 1rem;margin:0}
+.kw-card h3{margin:.4rem 0 .3rem;font-size:1.25rem}
+.kw-card img{width:100%;height:auto;border-radius:12px;background:#0b1a24}
+.kw-credit,.kw-where,.kw-src{font-size:.9rem;line-height:1.4;margin:.35rem 0}
+.kw-credit{opacity:.9}
+.kw-card ul{margin:.4rem 0 .2rem;padding-inline-start:1.2rem}
+.kw-card li{margin:.25rem 0}
+.kw-more{min-height:48px;margin:.8rem 0;padding:.5rem 1rem;border-radius:999px;border:2px solid rgba(255,255,255,.45);background:transparent;color:inherit;font:700 1rem Montserrat,system-ui,sans-serif;cursor:pointer}
+.kw-jump{margin:0 0 1.2rem}
+.kw-jump .pl-tile{max-width:420px}
+.kw-teach{max-width:900px;margin:.4rem auto 1rem;padding:0 1.2rem;font-size:1.05rem}
+@media (prefers-reduced-motion:reduce){.kw-stage path{transition:none}}
+@media print{
+  .kw-stage,.kw-pins,.kw-more,.kw-space{display:none !important}
+  .kw-card{break-inside:avoid;border:1px solid #ccc}
+}
