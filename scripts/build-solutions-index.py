@@ -219,7 +219,7 @@ def build():
     head, body = tpl.split('<body', 1)
     nav = m1(r'(<nav id="topnav">.*?</nav>)', body)
     footer = m1(r'(<footer>.*?</footer>)', body)
-    footer = re.sub(r'<script[^>]*></script>', '', footer)
+    footer = re.sub(r'<script\b[^>]*>\s*</script\s*>', '', footer)
     js_v = m1(r'site\.js\?v=([0-9a-z]+)', body, '1')
     missing, secs, jump, total = [], [], [], 0
     hl = hubs()
