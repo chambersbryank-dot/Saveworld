@@ -1280,3 +1280,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 - weekly-sync.sh ran clean at 9e62f9aed, pushed as 94930477c (All translations current; SEO lint 397 warnings / 0 errors; sitemap 2,263 URLs; pagefind 2,270 pages). Solution of the Week rotated GRACE-FO -> Artemis Program. 2,612 files: routine churn (seo-fix, OG/JSON-LD, pagefind, translations). Hidden Hesna study pages got only glass-tint/beacon placement; still not in sitemap. No STYLEV bump.
 - si-index (semantic search embeddings) failed non-fatally: Cloudflare Workers AI bge-m3 call returned 401 Authentication error, so the semantic vector index was not refreshed. Needs the Cloudflare API token checked.
 - he-attr-i18n still reports 21 strings missing in he.json (non-blocking).
+
+## Nov 2 2026 (HST): daily numbers check
+- Verified at f40ff1d3b (after #174-#206: Earth Satellite Explorer, Kids Map, Lesson Plan, How We Evaluate, Hesna pages, SEO keywords/beacon, per-language sitemaps): **266 solutions** (Solutions.html cards = solutions.json site.solutions = 266 in en/fr/es/ar/it/he), 11 hubs, 21 myths and 26 Amazing Facts in every language, homepage counters 266 / 21 / 26 / 6 languages in every language. Sitemap now **2,298 = 384 en / 383 per other language** (was 2,263); "1,000+" and "more than 300 pages in each of six languages" hold. New pages state no site-wide counts; the Earth Satellite Explorer lists 29 satellites per language and states no total. All counts match.
+- No repo page changes, no STYLEV bump. Earlier flags unchanged.
+- Milestones: none new (next would be 2,300 sitemap pages or 300 solutions).
