@@ -224,7 +224,7 @@ html.dark .nav-sub{background:#0f1b26}@supports ((backdrop-filter:blur(1px)) or 
 .hero-ctas .hero-cta:hover,.wm-cta .btn:hover,.nav-help a:hover,.sticky-help:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint) !important}
 .hero-ctas .hero-cta:focus-visible,.wm-cta .btn:focus-visible,.nav-help a:focus-visible,.sticky-help:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-ctas .hero-cta,.wm-cta .btn,.nav-help a,.sticky-help{background:var(--lg-solid) !important}}
-body{--lg-tint:rgba(12,28,56,.55);--lg-solid:#1d3f73}body[data-glass-tint=water]{--lg-tint:rgba(0,95,150,.55);--lg-solid:#005f96}body[data-glass-tint=land]{--lg-tint:rgba(38,110,42,.55);--lg-solid:#26702a}body[data-glass-tint=space]{--lg-tint:rgba(74,58,168,.55);--lg-solid:#4a3aa8}body[data-glass-tint=help]{--lg-tint:rgba(30,110,70,.55);--lg-solid:#1e6e46}
+body{--lg-tint:rgba(12,28,56,.72);--lg-solid:#0b3a5b}body[data-glass-tint=water]{--lg-tint:rgba(0,70,110,.78);--lg-solid:#0a4f78}body[data-glass-tint=land]{--lg-tint:rgba(20,80,28,.78);--lg-solid:#1b5c22}body[data-glass-tint=space]{--lg-tint:rgba(36,20,96,.78);--lg-solid:#2c1f78}body[data-glass-tint=help]{--lg-tint:rgba(16,80,50,.78);--lg-solid:#14643a}
 /* Ways to Help: Donate / Join buttons in Liquid Glass (Donate = page tint, Join = teal tint) */
 .help-btns .help-btn,.help-table .help-btn,.help-actions .help-btn,a.help-btn{border-radius:999px !important;color:#fff !important;text-decoration:none !important;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--lg-tint) !important;border:1px solid rgba(255,255,255,.35) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(0,0,0,.25) !important;-webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}
 a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
@@ -236,7 +236,7 @@ a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px so
 .imp-label{font-size:.95rem}
 .domain{max-width:1150px;margin:2.5rem auto;padding:0 1rem}
 .dom-head h2{margin:0 0 .2rem;font-size:2rem}
-.domain-water .dom-head h2{color:#0077b6}.domain-land .dom-head h2{color:#2e7d32}.domain-space .dom-head h2{color:#4a3aa8}
+.domain-water .dom-head h2{color:#0077b6}.domain-land .dom-head h2{color:#2e7d32}.domain-space .dom-head h2{color:#2c1f78}html.dark .domain-space .dom-head h2{color:#d4c8ff}
 .dom-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}
 .dom-chip{border:1px solid #9cc;border-radius:999px;padding:.35rem .8rem;text-decoration:none;font-size:.95rem}
 .dom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}

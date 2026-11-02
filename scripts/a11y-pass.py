@@ -51,8 +51,42 @@ def strip_prefix(v):
     d2 = re.sub(r'^(?:[^:"]{1,80}?: )+', '', v)
     return d2 if len(d2) > 15 else v
 def collapse(v):
-    p = v.split(': ')
-    if len(p) >= 3 and p[0] == p[1]: return p[0] + ': ' + p[-1]
+    """Stop name stacking. '4ocean: 4ocean: 4ocean: beach' and 'GFW: ALOS-4: GFW: GFW: fishbone…'
+    both become one picture description (plus a single title only when just one title was prefixed).
+    Leaves real multi-part credits alone (several long segments, no repeated title)."""
+    if not isinstance(v, str) or ': ' not in v:
+        return v
+    # Credits and footer lines use colons too. Only alt-style name stacks are in scope.
+    if any(mark in v for mark in ('©', '•', 'Page verified', 'http', 'Wikimedia')):
+        return v
+    parts = [p.strip() for p in v.split(': ') if p.strip()]
+    if len(parts) < 3:
+        return v
+    repeats = any(parts.count(p) >= 2 for p in parts)
+    desc = max(parts, key=len)
+    titles = [p for p in parts if p != desc]
+    # Titles are short names ("4ocean", "ALOS-4 \"DAICHI-4\" (JAXA)"). A real credit line
+    # has periods or agency names in several segments and must be left whole.
+    def titleish(p):
+        return len(p) < 90 and '.' not in p and 'NASA' not in p and 'http' not in p.lower()
+    stacked = (len(desc) >= 40 and len(titles) >= 2 and all(titleish(p) for p in titles)
+               and parts.count(desc) == 1)
+    if not repeats and not stacked:
+        return v
+    uniq = []
+    for p in parts:
+        if p not in uniq:
+            uniq.append(p)
+    desc = max(uniq, key=len)
+    titles = [p for p in uniq if p != desc]
+    if len(desc) >= 40 and len(titles) >= 2:
+        return desc
+    if len(desc) >= 40 and len(titles) == 1:
+        return titles[0] + ': ' + desc
+    if len(uniq) == 1:
+        return uniq[0]
+    if len(uniq) < len(parts):
+        return ': '.join(uniq)
     return v
 def collapse_attrs(s):
     def f(m):
@@ -129,13 +163,22 @@ def alts(s, desc, l, mem):
         if fx: new = fx[l]
         elif l == 'en':
             w = WEAK.match(old)
-            if w and k in desc: new = f'{w.group(1)}: {strip_prefix(desc[k])}'
+            if w and k in desc:
+                bare = strip_prefix(collapse(desc[k]))
+                # Never prefix a description that already starts with this name (that is how
+                # '4ocean: 4ocean: 4ocean…' was built, one extra name on every run).
+                if bare.lower().startswith(w.group(1).lower() + ':'):
+                    new = collapse(bare)
+                else:
+                    new = collapse(f'{w.group(1)}: {bare}')
         if new is None or new == old: return t
         n += 1; return t.replace(a.group(0), f'alt="{esc(new)}"')
     return re.sub(r'<img\b[^>]*>', fix, s), n
 
 def main():
     print(f'a11y-pass: repeated-alt cleanup touched {cleanup_all()} files')
+    if '--collapse-only' in sys.argv:
+        return
     en = [f for f in sorted(glob.glob('*.html')) if not f.startswith('google')]
     if '--translated' in sys.argv:
         n = 0

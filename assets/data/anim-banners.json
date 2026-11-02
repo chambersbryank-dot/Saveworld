@@ -1019,12 +1019,30 @@
    "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000769, Feb. 4, 2014, public domain)",
    "pos": "50% 50%",
    "r2": "images/Western_Alaska_Sea_Ice_MODIS.jpg"
+  },
+  "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg": {
+   "credit": "Astroscale, via Wikimedia Commons (CC BY-SA 4.0, illustration)",
+   "alt": "Artist's illustration of Astroscale's ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
+   "local": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
+   "pos": "50% 40%"
+  },
+  "assets/ALOS-4_Model_Tsukuba.jpg": {
+   "credit": "Syced, via Wikimedia Commons (CC0). A 1/50 scale model of ALOS-4 at JAXA's Tsukuba Space Center.",
+   "alt": "JAXA's 1/50 scale model of ALOS-4, with its PALSAR-3 radar antenna and solar arrays, at Tsukuba Space Center",
+   "local": "assets/ALOS-4_Model_Tsukuba.jpg",
+   "pos": "50% 45%"
+  },
+  "assets/GEDI_on_ISS.jpg": {
+   "credit": "NASA (iss059e088632)",
+   "alt": "The GEDI forest-mapping laser mounted outside the Kibo module on the International Space Station",
+   "pos": "50% 50%",
+   "r2": "images/sol-cards/GEDI_on_ISS_iss059e088632.jpg"
   }
  },
  "pages": {
   "404.html": "assets/hero/learn",
   "4ocean.html": "si:ocean",
-  "ALOS-4.html": "assets/Rondonia_Deforestation_STS46.jpg",
+  "ALOS-4.html": "assets/ALOS-4_Model_Tsukuba.jpg",
   "AP_IB_Physics.html": "assets/hero/learn",
   "ATLAS.html": "assets/Hawaii_Island_ISS_2024.jpg",
   "About.html": "assets/hero/about",
@@ -1041,7 +1059,7 @@
   "Argo.html": "assets/NOAA_Deep_SOLO_Float_2018.jpg",
   "Argos.html": "assets/Loggerhead_Release_MINWR.jpg",
   "Ariel.html": "assets/Webb_Infrared.jpg",
-  "Astroscale.html": "assets/Satellite_Servicing_Arm_GSFC.jpg",
+  "Astroscale.html": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
   "Atmospheric_Drag.html": "assets/Progress_Reentry.jpg",
   "Beavers_River_Engineers.html": "assets/Klamath_River.jpg",
   "BepiColombo.html": "assets/Mercury_MESSENGER.jpg",
@@ -1098,7 +1116,7 @@
   "Forest_Elephants.html": "assets/Congo_River_ISS.jpg",
   "FreshWater_Watch.html": "assets/Mississippi_River_PIA23534.jpg",
   "GCOM-C.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
-  "GEDI.html": "assets/ISS_Flyaround_2021.jpg",
+  "GEDI.html": "assets/GEDI_on_ISS.jpg",
   "GLOBE_Program.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
   "GOES-19.html": "assets/GOES19_GOESU_KSC.jpg",
   "GOSAT-GW.html": "assets/EMIT_Methane_Fingerprint.jpg",
@@ -2010,7 +2028,11 @@
     "images/ISS_Flyaround_2021.jpg",
     "images/Pacific_Clouds_Sunset_ISS.jpg",
     "images/GOES19_GOESU_KSC.jpg"
-   ]
+   ],
+   "Astroscale.html": [],
+   "ALOS-4.html": [],
+   "GEDI.html": [],
+   "Eden_People_Planet.html": []
   }
  }
 }

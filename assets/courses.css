@@ -18,6 +18,8 @@
 .crs details{margin:.4rem 0}.crs summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}
 .crs-ans{border-top:1px dashed rgba(255,255,255,.3);padding-top:.4rem}
 .crs-eq{margin:.8rem 0;padding:.5rem .8rem;background:rgba(0,0,0,.22);border-radius:12px;overflow-x:auto}.crs-eq figcaption{font-size:.9rem;opacity:.9}
+.crs-eqtext{font-family:ui-monospace,Consolas,monospace;font-size:.95rem;margin:.15rem 0 .35rem;direction:ltr;unicode-bidi:isolate}
+.crs-updated,.crs-scope,.crs-check{font-size:.95rem}.crs-check{opacity:.9}
 .crs-math{overflow-x:auto;overflow-y:hidden}
 .crs-fs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:.4rem}.crs-fs .crs-math{background:rgba(0,0,0,.22);border-radius:10px;padding:.2rem .5rem}
 .crs-mis{list-style:none;padding:0}.crs-mis li{border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:.4rem .9rem;margin:.5rem 0}.crs-mis p{margin:.3rem 0}
