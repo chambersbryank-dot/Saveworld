@@ -492,4 +492,8 @@ if __name__ == '__main__':
     if '--strict' in sys.argv and gaps: raise SystemExit(1)
     teachers_links()
     relink(langs, gaps)
+    import importlib.util as _iu
+    _tg = _iu.spec_from_file_location('teacher_guide', 'scripts/build-teacher-guide.py')
+    _tgm = _iu.module_from_spec(_tg); _tg.loader.exec_module(_tgm)
+    _tgm.apply()
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])
