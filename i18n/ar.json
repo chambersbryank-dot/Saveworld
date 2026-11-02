@@ -8414,5 +8414,12 @@
 "Earth & Human Activity": "الأرض والنشاط البشري",
 "Life Science": "علوم الحياة",
 "Space Science": "علوم الفضاء",
-"Reading (Common Core)": "القراءة (Common Core)"
+"Reading (Common Core)": "القراءة (Common Core)",
+"Earth Satellite Explorer": "مستكشف أقمار رصد الأرض",
+"Pick a level, then pick a real Earth-observation satellite that already has a Saving Planets page. K-3 shows that page’s Explain Like I’m 10 note. Grades 4-12 show What and Why. University also shows the impact statement. Photos keep the credit from the page.": "اختر مستوى ثم قمرًا حقيقيًا لرصد الأرض له صفحة أصلًا في Saving Planets. مستوى الروضة حتى الثالث يعرض ملاحظة «اشرحها لي كأن عمري 10 سنوات». الصفوف 4–12 تعرض ماذا ولماذا. الجامعة تضيف أيضًا بيان الأثر. الصور تحتفظ باسم المصدر الموجود في الصفحة.",
+"K-3": "الروضة حتى الصف الثالث",
+"Grades 4-12": "الصف الرابع حتى الثاني عشر",
+"Choose a satellite": "اختر قمرًا صناعيًا",
+"This explorer needs JavaScript. You can still open each satellite page below.": "يحتاج هذا المستكشف إلى جافاسكربت. ما زال بإمكانك فتح صفحة كل قمر في الأسفل.",
+"Sorry, the satellite explorer could not load. Please refresh the page.": "عذرًا، تعذّر تحميل المستكشف. يرجى تحديث الصفحة."
 }

@@ -8418,5 +8418,12 @@
 "Earth & Human Activity": "La Terre et les activités humaines",
 "Life Science": "Sciences de la vie",
 "Space Science": "Sciences de l'espace",
-"Reading (Common Core)": "Lecture (Common Core)"
+"Reading (Common Core)": "Lecture (Common Core)",
+"Earth Satellite Explorer": "Explorateur de satellites d’observation de la Terre",
+"Pick a level, then pick a real Earth-observation satellite that already has a Saving Planets page. K-3 shows that page’s Explain Like I’m 10 note. Grades 4-12 show What and Why. University also shows the impact statement. Photos keep the credit from the page.": "Choisis un niveau, puis un vrai satellite d’observation de la Terre qui a déjà une page Saving Planets. Le niveau K-3 montre la note « Explique-moi comme si j'avais 10 ans ». Les classes 4 à 12 montrent Quoi et Pourquoi. L’université ajoute aussi l’énoncé d’impact. Les photos gardent le crédit de la page.",
+"K-3": "Maternelle à CE2",
+"Grades 4-12": "CM1 à Terminale",
+"Choose a satellite": "Choisis un satellite",
+"This explorer needs JavaScript. You can still open each satellite page below.": "Cet explorateur a besoin de JavaScript. Tu peux quand même ouvrir chaque page de satellite ci-dessous.",
+"Sorry, the satellite explorer could not load. Please refresh the page.": "Désolé, l’explorateur n’a pas pu se charger. Actualise la page."
 }
