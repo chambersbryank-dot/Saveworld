@@ -132,6 +132,7 @@ python3 scripts/build-critical.py       # Oct 16: critical CSS inline + async st
 python3 scripts/build-hero-themes.py    # Oct 16: homepage hero weekly theme rotation (space W42 / earth video, ?hero=), all langs
 python3 scripts/fix-si-credit-tag.py      # Nov 2: one SI credit line, "Created by the Founder and SI" (Saturn hero left as-is)
 python3 scripts/si-credits.py --check        # Oct 15: visible SI credit caption next to every SI-generated image (all langs)
+python3 scripts/hide-breadcrumbs.py      # Nov 3 (founder): breadcrumb trail hidden on every page (JSON-LD kept)
 python3 scripts/seo-fix.py               # Oct 16 SEO pass: late pass after every page generator (titles/descriptions + i18n/seo-meta.json overrides, hreflang, OG/Twitter, JSON-LD) in all 5 langs
 python3 scripts/seo-keywords.py          # keywords from each page's own title, heading, and description (no invented terms)
 python3 scripts/add-video-schema.py       # Oct 16: again after seo-fix, so VideoObject descriptions match the final meta descriptions
@@ -142,6 +143,7 @@ python3 scripts/disable-cleanup.py        # Oct 22 (founder): Find a Cleanup pau
 python3 scripts/build-analytics.py --beacon-only  # beacon again after stubs and offline.html are rewritten
 python3 scripts/seo-lint.py --no-fail | tail -6   # gap counts (strict run at the end)
 # Search (Oct 12): rebuild the committed Pagefind + semantic indexes from the final HTML (both layers in one step).
+python3 scripts/hide-breadcrumbs.py
 node scripts/build-search.mjs
 # Oct 16: SI Helper pilot retrieval index (Workers AI bge-m3 -> Vectorize si-helper-site). Incremental; only runs on the box
 # where the Cloudflare token file exists; never fails the sync.
