@@ -1,6 +1,6 @@
 footer.fv2{padding:2rem 1rem 1.2rem;text-align:start}
 .fv2 .fv2-lead{max-width:720px;margin:0 auto 1.2rem;text-align:center;font-style:italic;opacity:.9}
-.fv2 .fv2-cols{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.4rem 1.5rem}
+.fv2 .fv2-cols{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.4rem 1.5rem}
 .fv2 details.fv2-col{border-bottom:1px solid rgba(143,211,255,.2)}
 .fv2 summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center;justify-content:space-between;list-style:none;text-transform:uppercase;letter-spacing:.05em;font-size:.82rem;color:#8fd3ff}
 .fv2 summary::-webkit-details-marker{display:none}
@@ -18,3 +18,7 @@ footer.fv2{padding:2rem 1rem 1.2rem;text-align:start}
 .fv2 details.fv2-old summary{text-transform:none;letter-spacing:0;font-weight:600;justify-content:center;gap:.5rem;color:inherit;font-size:.82rem}
 .fv2 details.fv2-old p{text-align:center}
 @media (min-width:760px){.fv2 details.fv2-col{border:0}.fv2 details.fv2-col>summary{pointer-events:none}.fv2 details.fv2-col>summary::after{content:none}}
+.fv2 .fv2-cols,.fv2 ul,.fv2 li{text-align:start}
+.fv2 li a{justify-content:flex-start;overflow-wrap:anywhere}
+.fv2 .fv2-lang{display:flex!important;visibility:visible!important}
+@media (max-width:759px){.fv2 .fv2-cols{grid-template-columns:1fr}}
