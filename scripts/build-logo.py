@@ -6,16 +6,16 @@ he-si-note, before build-critical, which inlines the LOGO CSS for the first pain
   taller than the bar and bleeds above/below via negative margins (layout height unchanged, so the nav text never moves).
   RTL (ar/he): flex order puts it on the 'Home' side automatically. Alt text translated.
 - Head: favicon.ico (16/32/48) + 32px PNG replace favicon.svg (old logo); apple-touch-icon.png = icon on #071018 (iOS fills alpha black).
-- Footer: visible 'Logo made from SI and Biological SI Partner' line (standing SI credit rule), translated.
+- Footer: visible 'Logo created by the Founder and SI' line (standing SI credit rule), translated.
 Web sizes live in assets/brand/ (made from the founder's 512 px master); 2048/4096 Real-ESRGAN masters are on R2 (media-manifest:
 brand/sp-logo-*). The homepage hero is not touched."""
 import re, glob, os
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 ALT = {'en': 'Saving Planets logo', 'fr': 'Logo de Saving Planets', 'es': 'Logotipo de Saving Planets', 'ar': 'شعار Saving Planets',
        'it': 'Logo di Saving Planets', 'he': 'הלוגו של Saving Planets'}
-CREDIT = {'en': 'Logo made from SI and Biological SI Partner', 'fr': 'Logo réalisé à partir de SI et Biological SI Partner',
-          'es': 'Logotipo hecho a partir de SI y Biological SI Partner', 'ar': 'الشعار صُنع من SI وBiological SI Partner',
-          'it': 'Logo realizzato a partire da SI e Biological SI Partner', 'he': 'הלוגו עשוי מ-SI ושותף SI ביולוגי'}
+CREDIT = {'en': 'Logo created by the Founder and SI', 'fr': 'Logo créé par le fondateur et SI',
+          'es': 'Logotipo creado por el fundador y SI', 'ar': 'الشعار من إعداد المؤسس وSI',
+          'it': 'Logo creato dal fondatore e da SI', 'he': 'הלוגו נוצר על ידי המייסד ו-SI'}
 V = '20261020'
 CSS = r"""
 /* LOGO:START */

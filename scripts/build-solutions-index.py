@@ -51,7 +51,7 @@ def info(page):
     credit = m1(r'<p class="photo-credit">(.*?)</p>', s)
     if not credit and img:  # Oct 19: pages without a photo-credit line credit the photo next to it (SI span) or in data-image-credit
         q = re.escape(img)
-        if re.search(r'<img [^>]*src="' + q + r'"[^>]*><span class="si-credit">', s): credit = 'Made from SI and Biological SI Partner'
+        if re.search(r'<img [^>]*src="' + q + r'"[^>]*><span class="si-credit">', s): credit = 'Created by the Founder and SI'
         else: credit = m1(r'data-image="' + q + r'"[^>]*data-image-credit="([^"]+)"', s)
     desc = un(m1(r'<meta name="description" content="([^"]*)"', s))
     what = m1(r'<h3>What</h3><p>(.*?)</p>', s)
@@ -100,7 +100,7 @@ PHOTOS = json.load(open('assets/data/solutions-card-photos.json', encoding='utf8
 _AB = (json.load(open('assets/data/anim-banners.json', encoding='utf8')).get('images', {}) if os.path.exists('assets/data/anim-banners.json') else {})
 CARD_SIZES = '(max-width:600px) 90vw, 260px'
 CREDIT_TM = {'fr': 'Image :', 'es': 'Imagen:', 'ar': 'الصورة:', 'it': 'Immagine:', 'he': 'תמונה:'}  # the only translated word in a card credit
-SI_CREDIT = 'Made from SI and Biological SI Partner'
+SI_CREDIT = 'Created by the Founder and SI'
 _MON = r'(?:Jan|Feb|Mar|March|Apr|April|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)[a-z]*\.?'
 _ID = re.compile(r'^(?:PIA\d{5}|(?:iss|ISS|sts|STS|s|SL)\d[\w-]*|STS-\d+|(?:KSC|NHQ|GSFC|jsc|JSC|GRC|AFRC)[\w-]+|\d{4}-\d{3,5}|\d{6,})$')
 
@@ -224,7 +224,7 @@ def banner(total):
     """Title banner. Oct 24 (owner): the Earth video loop is replaced by the SF flowing animation (space -> ocean -> land -> forest),
     title centred like the hub pages. (Oct 18 video/poster constants above are kept for build-top-ten.py history only.)"""
     return SF.banner(f'<span class="sol-n">{total}</span> <span class="sol-t">Real Solutions Making a Difference Daily</span>',
-                     "Proof it's not too late", 'Made from SI and Biological SI Partner')
+                     "Proof it's not too late", 'Created by the Founder and SI')
 
 def build():
     tpl = rd('Contact.html')

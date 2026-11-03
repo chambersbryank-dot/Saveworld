@@ -41,9 +41,9 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Astroscale': ('Astroscale_ADRAS-J_H-IIA_Stage.jpg', 'Astroscale, via Wikimedia Commons (CC BY-SA 4.0, illustration)'),
     'ClearSpace': ('ATV1_Departure_ISS.jpg', NASA),
     'PRELUDE': ('ATV1_Departure_ISS.jpg', NASA),
-    'Ocean_Cleanup': ('theoceancleanup.jpg', 'Made from SI and Biological SI Partner'),
-    '4ocean': ('OceanBeach.JPG', 'Made from SI and Biological SI Partner'), 'Plastic_Bank': ('OceanBeach.JPG', 'Made from SI and Biological SI Partner'),
-    'Project-Rawane': ('Moon_Crossing_Earth.jpg', 'Made from SI and Biological SI Partner · Earth: NASA Blue Marble'),
+    'Ocean_Cleanup': ('theoceancleanup.jpg', 'Created by the Founder and SI'),
+    '4ocean': ('OceanBeach.JPG', 'Created by the Founder and SI'), 'Plastic_Bank': ('OceanBeach.JPG', 'Created by the Founder and SI'),
+    'Project-Rawane': ('Moon_Crossing_Earth.jpg', 'Created by the Founder and SI · Earth: NASA Blue Marble'),
     'Space': ('ISS_Flyaround_2021.jpg', 'NASA'),
     'Restoring_the_Lake_Depths': ('Lake_Tahoe_ISS.jpg', 'NASA (ISS071-E-14284)'),
     'Terraformation': ('Yishan_Tree.jpg', None), 'Three_Trees': ('ThreeTrees2.jpg', None),
@@ -142,14 +142,14 @@ PAGE_HERO = {  # page: (asset, credit shown only if the page has no photo-credit
     'Copernicus_Marine': ('North_Atlantic_Bloom_MODIS.jpg', 'NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team'),
     'OpenET': ('Garden_City_Kansas_Landsat.jpg', 'NASA/GSFC/Landsat (Sept. 25, 2000)'),
 }
-SI_T = {'': 'Made from SI and Biological SI Partner', 'fr/': 'Réalisé à partir de SI et Biological SI Partner', 'es/': 'Hecho a partir de SI y Biological SI Partner', 'ar/': 'صُنع من SI وBiological SI Partner', 'it/': 'Realizzato a partire da SI e Biological SI Partner', 'he/': 'נוצר על ידי SI ושותף Biological SI'}
+SI_T = {'': 'Created by the Founder and SI', 'fr/': 'Créé par le fondateur et SI', 'es/': 'Creado por el fundador y SI', 'ar/': 'من إعداد المؤسس وSI', 'it/': 'Creato dal fondatore e da SI', 'he/': 'נוצר על ידי המייסד ו-SI'}
 PR_CREDIT = {  # Oct 17: Project Rawane Blue Marble hero (composed + NASA Earth)
-    '': 'Made from SI and Biological SI Partner · Earth: NASA Blue Marble',
-    'fr/': 'Réalisé à partir de SI et Biological SI Partner · Terre : NASA Blue Marble',
-    'es/': 'Hecho a partir de SI y Biological SI Partner · Tierra: NASA Blue Marble',
-    'ar/': 'صُنع من SI وBiological SI Partner · الأرض: NASA Blue Marble',
-    'it/': 'Realizzato a partire da SI e Biological SI Partner · Terra: NASA Blue Marble',
-    'he/': 'נוצר על ידי SI ושותף Biological SI · כדור הארץ: NASA Blue Marble',
+    '': 'Created by the Founder and SI · Earth: NASA Blue Marble',
+    'fr/': 'Créé par le fondateur et SI · Terre : NASA Blue Marble',
+    'es/': 'Creado por el fundador y SI · Tierra: NASA Blue Marble',
+    'ar/': 'من إعداد المؤسس وSI · الأرض: NASA Blue Marble',
+    'it/': 'Creato dal fondatore e da SI · Terra: NASA Blue Marble',
+    'he/': 'נוצר על ידי המייסד ו-SI · כדור הארץ: NASA Blue Marble',
 }
 IMG_T = {'': 'Image', 'fr/': 'Image', 'es/': 'Imagen', 'ar/': 'الصورة', 'it/': 'Immagine', 'he/': 'תמונה'}
 def _slug(p): return re.sub(r'[^a-z0-9]+', '-', p.lower()).strip('-')
@@ -233,7 +233,7 @@ for lang in ('', 'fr/', 'es/', 'ar/', 'it/', 'he/'):
         if credit and not re.search(r'<section class="page-hero[^"]*"[^>]*>.*?</section>\s*<p class="photo-credit">', s2, flags=re.S) and 'class="hero-credit"' not in s2:
             _hc = PR_CREDIT.get(lang, PR_CREDIT['']) if p == 'Project-Rawane' else (SI_T[lang] if credit.startswith('Created by SI') else credit)
             s2 = re.sub(r'(<section class="page-hero[^"]*"[^>]*>.*?)(</section>)', lambda mm: mm.group(1) + f'<span class="hero-credit">{_hc}</span>' + mm.group(2), s2, count=1, flags=re.S)
-        if lang: s2 = s2.replace('<span class="hero-credit">Made from SI and Biological SI Partner</span>', f'<span class="hero-credit">{SI_T[lang]}</span>')
+        if lang: s2 = s2.replace('<span class="hero-credit">Created by the Founder and SI</span>', f'<span class="hero-credit">{SI_T[lang]}</span>')
         if s2 != s: open(f, 'w', encoding='utf-8').write(s2); m += 1
 print(f'apply-heroes: {len(chosen)} per-page photo heroes, {m} files updated')
 # Oct 16 (user): the credit right under a banner must name what the banner actually shows. A page left on the shared

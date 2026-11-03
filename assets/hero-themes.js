@@ -21,12 +21,12 @@
   var credit = hero.querySelector('.hero-video-credit');
   if (credit) {
     var madeMap = {
-      en: 'Made from SI and Biological SI Partner',
-      fr: 'Réalisé à partir de SI et Biological SI Partner',
-      es: 'Hecho a partir de SI y Biological SI Partner',
-      ar: 'صُنع من SI وBiological SI Partner',
-      it: 'Realizzato a partire da SI e Biological SI Partner',
-      he: 'עשוי מ-SI ושותף SI ביולוגי'
+      en: 'Created by the Founder and SI',
+      fr: 'Créé par le fondateur et SI',
+      es: 'Creado por el fundador y SI',
+      ar: 'من إعداد المؤسس وSI',
+      it: 'Creato dal fondatore e da SI',
+      he: 'נוצר על ידי המייסד ו-SI'
     };
     var lang = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
     var a = document.createElement('a');

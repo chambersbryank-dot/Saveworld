@@ -3,7 +3,7 @@
 
 Hub cards use the source URL stored in assets/data/hub-agency-images.json.
 A credit that already prints a PIA id links to that NASA photojournal page.
-SI stills keep the visible line "Made from SI and Biological SI Partner" (no invented URL).
+SI stills keep the visible line "Created by the Founder and SI" (no invented URL).
 Idempotent. Does not change the Saturn hero image files.
 """
 import os, re, json, glob, html

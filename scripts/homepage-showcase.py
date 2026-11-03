@@ -5,7 +5,7 @@ WebP and AVIF srcsets are encoded at high quality (no 800px cap, no heavy compre
 Smaller widths are only for narrow screens. The Saturn hero CSS file (assets/Saturn.jpg)
 and the R2 hero srcsets are left alone. Below-the-fold cards keep loading=lazy.
 
-Also writes the Saturn hero credit ("Made from SI and Biological SI Partner" in the page
+Also writes the Saturn hero credit ("Created by the Founder and SI" in the page
 language) with the Cassini source links, and the homepage Space-card link for PIA06193.
 """
 import os, re, glob
@@ -20,12 +20,12 @@ RINGS = 'https://photojournal.jpl.nasa.gov/catalog/PIA06175'
 CARD = 'https://photojournal.jpl.nasa.gov/catalog/PIA06193'
 HERO3840 = 'https://media.savingplanets.com/images/hero-space/saturn-cassini-3840.5c1a15f7e10c.webp 3840w'
 MADE = {
-    'en': 'Made from SI and Biological SI Partner',
-    'fr': 'Réalisé à partir de SI et Biological SI Partner',
-    'es': 'Hecho a partir de SI y Biological SI Partner',
-    'ar': 'صُنع من SI وBiological SI Partner',
-    'it': 'Realizzato a partire da SI e Biological SI Partner',
-    'he': 'עשוי מ-SI ושותף SI ביולוגי',
+    'en': 'Created by the Founder and SI',
+    'fr': 'Créé par le fondateur et SI',
+    'es': 'Creado por el fundador y SI',
+    'ar': 'من إعداد المؤسس وSI',
+    'it': 'Creato dal fondatore e da SI',
+    'he': 'נוצר על ידי המייסד ו-SI',
 }
 
 def widths_for(w):

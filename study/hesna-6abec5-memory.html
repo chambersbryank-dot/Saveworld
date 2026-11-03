@@ -45,7 +45,7 @@ function hesnaScene(s) {
   function T(x, y, t, sz, f, w) {
     return '<text x="' + x + '" y="' + y + '" font-size="' + (sz || 12) + '" text-anchor="middle" fill="' + (f || "#111") + '"' + (w ? ' font-weight="bold"' : "") + ">" + esc(t) + "</text>";
   }
-  var credit = '<figcaption class="si-credit">' + bi("Made from SI and Biological SI Partner", "صُنع من SI وBiological SI Partner") + "</figcaption>";
+  var credit = '<figcaption class="si-credit">' + bi("Created by the Founder and SI", "من إعداد المؤسس وSI") + "</figcaption>";
   if (s.img) {
     var over = "";
     if (s.overlay && s.overlay.length) {
@@ -125,7 +125,7 @@ var HX={red:'#d32f2f',blue:'#1e5bd8',green:'#2e7d32',yellow:'#fbc02d',orange:'#f
 function bi(e,a){return '<span data-en>'+esc(e)+'</span><span data-ar>'+esc(a)+'</span>'}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function T(x,y,t,sz,f,w){return '<text x="'+x+'" y="'+y+'" font-size="'+(sz||12)+'" text-anchor="middle" fill="'+(f||'#111')+'"'+(w?' font-weight="bold"':'')+'>'+esc(t)+'</text>'}
-function credit(){return '<figcaption class="si-credit">'+bi('Made from SI and Biological SI Partner','صُنع من SI وBiological SI Partner')+'</figcaption>'}
+function credit(){return '<figcaption class="si-credit">'+bi('Created by the Founder and SI','من إعداد المؤسس وSI')+'</figcaption>'}
 function scene(s){return hesnaScene(s)}
 function sceneWeek(s){return s.week||(s.scene==='b7426'?1:2)}
 function studyWeek1(){try{var a=JSON.parse(localStorage.getItem('hesnaAdapt')||'null');if(!a||!a.days)return null;var sum=0,n=0;for(var d=1;d<=7;d++){var r=a.days[String(d)];if(!r||r.pct==null)continue;var c=r.corePct!=null?r.corePct:r.pct;if(r.extraPct!=null&&c>=95)c=r.extraPct;sum+=c;n++}if(n<4)return null;return Math.round(sum/n)}catch(err){return null}}

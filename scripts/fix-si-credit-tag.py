@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One credit tag for SI-made media: 'Made from SI and Biological SI Partner' (and the same line in each language).
+"""One credit tag for SI-made media: 'Created by the Founder and SI' (and the same line in each language).
 
 Also converts that phrase inside the Saturn hero, including assets/hero-themes.js. Idempotent.
 """
@@ -8,18 +8,18 @@ import os, re
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
 PAIRS = (
-    ('Created by SI and Biological SI Partner', 'Made from SI and Biological SI Partner'),
-    ('Créé par SI et Biological SI Partner', 'Réalisé à partir de SI et Biological SI Partner'),
-    ('Creado por SI y Biological SI Partner', 'Hecho a partir de SI y Biological SI Partner'),
-    ('Creato da SI e Biological SI Partner', 'Realizzato a partire da SI e Biological SI Partner'),
-    ('أُنشئ بواسطة SI وBiological SI Partner', 'صُنع من SI وBiological SI Partner'),
-    ('נוצר על ידי SI ושותף SI ביולוגי', 'עשוי מ-SI ושותף SI ביולוגי'),
-    ('Logo created by SI and Biological SI Partner', 'Logo made from SI and Biological SI Partner'),
-    ('Logo créé par SI et Biological SI Partner', 'Logo réalisé à partir de SI et Biological SI Partner'),
-    ('Logo creato da SI e Biological SI Partner', 'Logo realizzato a partire da SI e Biological SI Partner'),
-    ('Logotipo creado por SI y Biological SI Partner', 'Logotipo hecho a partir de SI y Biological SI Partner'),
+    ('Created by the Founder and SI', 'Created by the Founder and SI'),
+    ('Créé par SI et Biological SI Partner', 'Créé par le fondateur et SI'),
+    ('Creado por SI y Biological SI Partner', 'Creado por el fundador y SI'),
+    ('Creato da SI e Biological SI Partner', 'Creato dal fondatore e da SI'),
+    ('أُنشئ بواسطة SI وBiological SI Partner', 'من إعداد المؤسس وSI'),
+    ('נוצר על ידי SI ושותף SI ביולוגי', 'נוצר על ידי המייסד ו-SI'),
+    ('Logo created by the Founder and SI', 'Logo created by the Founder and SI'),
+    ('Logo créé par SI et Biological SI Partner', 'Logo créé par le fondateur et SI'),
+    ('Logo creato da SI e Biological SI Partner', 'Logo creato dal fondatore e da SI'),
+    ('Logotipo creado por el fundador y SI', 'Logotipo creado por el fundador y SI'),
     ('Logo creado por SI y Socio biológico SI', 'Logo hecho a partir de SI y Socio biológico SI'),
-    ('الشعار من إنشاء SI وBiological SI Partner', 'الشعار صُنع من SI وBiological SI Partner'),
+    ('الشعار من إعداد المؤسس وSI', 'الشعار من إعداد المؤسس وSI'),
 )
 SKIP = {
     'NOTES.md',

@@ -106,7 +106,7 @@ UI = {
     'it':'Visita ogni giorno le soluzioni per il pianeta qui',
     'he':'בקרו בכל יום בפתרונות לכדור הארץ כאן'},
   'empty': {'en':'No questions match. Try another word or topic.','fr':'Aucune question ne correspond. Essayez un autre mot ou thème.','es':'Ninguna pregunta coincide. Prueba otra palabra o tema.','ar':'لا أسئلة مطابقة. جرّب كلمة أو موضوعًا آخر.','it':'Nessuna domanda corrisponde. Prova un’altra parola o argomento.','he':'אין שאלות תואמות. נסו מילה או נושא אחר.'},
-  'credit': {'en':'Made from SI and Biological SI Partner','fr':'Réalisé à partir de SI et Biological SI Partner','es':'Hecho a partir de SI y Biological SI Partner','ar':'من إعداد SI وBiological SI Partner','it':'Realizzato a partire da SI e Biological SI Partner','he':'נוצר על ידי SI ו-Biological SI Partner'},
+  'credit': {'en':'Created by the Founder and SI','fr':'Créé par le fondateur et SI','es':'Creado por el fundador y SI','ar':'من إعداد المؤسس وSI','it':'Creato dal fondatore e da SI','he':'נוצר על ידי המייסד ו-SI'},
   'results': {'en':'Questions','fr':'Questions','es':'Preguntas','ar':'الأسئلة','it':'Domande','he':'שאלות'},
 }
 

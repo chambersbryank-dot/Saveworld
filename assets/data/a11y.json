@@ -99,7 +99,7 @@
  "videos": {
   "artemis-ii-farthest": {
    "visual": {
-    "en": "SI-generated visuals: the words 252,756 miles over stars, Earth through a spacecraft window, a spacecraft passing Earth, then the savingplanets.com end card.",
+    "en": "Visuals created by the Founder and SI: the words 252,756 miles over stars, Earth through a spacecraft window, a spacecraft passing Earth, then the savingplanets.com end card.",
     "fr": "Images générées par SI : les mots « 252 756 miles » sur fond d'étoiles, la Terre vue par un hublot, un vaisseau passant devant la Terre, puis la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: las palabras «252.756 millas» sobre estrellas, la Tierra vista por una ventanilla, una nave pasando frente a la Tierra y la tarjeta final de savingplanets.com.",
     "ar": "مشاهد مولّدة بالذكاء الاصطناعي: عبارة «252,756 ميلاً» فوق النجوم، والأرض من نافذة مركبة فضائية، ومركبة تمر بجوار الأرض، ثم بطاقة الختام savingplanets.com.",
@@ -154,7 +154,7 @@
   },
   "grace-fo-satellites": {
    "visual": {
-    "en": "SI-generated visuals: twin satellites orbiting Earth, farmland and a drying river, melting ice, Earth from space, then the savingplanets.com end card.",
+    "en": "Visuals created by the Founder and SI: twin satellites orbiting Earth, farmland and a drying river, melting ice, Earth from space, then the savingplanets.com end card.",
     "fr": "Images générées par SI : deux satellites jumeaux autour de la Terre, des terres agricoles et une rivière qui s'assèche, de la glace qui fond, la Terre vue de l'espace, puis la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: dos satélites gemelos orbitando la Tierra, tierras de cultivo y un río que se seca, hielo derritiéndose, la Tierra desde el espacio y la tarjeta final de savingplanets.com.",
     "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قمران صناعيان توأمان يدوران حول الأرض، وأراضٍ زراعية ونهر يجف، وجليد يذوب، والأرض من الفضاء، ثم بطاقة الختام savingplanets.com.",
@@ -209,7 +209,7 @@
   },
   "great-bubble-barrier": {
    "visual": {
-    "en": "SI-generated visuals: an Amsterdam canal at sunset, a curtain of bubbles pushing plastic bottles aside, a catchment full of plastic, then the canal again.",
+    "en": "Visuals created by the Founder and SI: an Amsterdam canal at sunset, a curtain of bubbles pushing plastic bottles aside, a catchment full of plastic, then the canal again.",
     "fr": "Images générées par SI : un canal d'Amsterdam au coucher du soleil, un rideau de bulles qui pousse des bouteilles en plastique sur le côté, un bac de collecte rempli de plastique, puis de nouveau le canal.",
     "es": "Imágenes generadas por SI: un canal de Ámsterdam al atardecer, una cortina de burbujas que empuja botellas de plástico a un lado, un recolector lleno de plástico y de nuevo el canal.",
     "ar": "مشاهد مولّدة بالذكاء الاصطناعي: قناة في أمستردام عند الغروب، وستارة من الفقاعات تدفع الزجاجات البلاستيكية جانبًا، وحاوية تجميع مليئة بالبلاستيك، ثم القناة مجددًا.",
@@ -286,7 +286,7 @@
   },
   "life-terra-trees": {
    "visual": {
-    "en": "SI-generated visuals: sunlit forest with a deer, a seedling in soil, rows of young trees, forest again, then sprouts and the savingplanets.com end card.",
+    "en": "Visuals created by the Founder and SI: sunlit forest with a deer, a seedling in soil, rows of young trees, forest again, then sprouts and the savingplanets.com end card.",
     "fr": "Images générées par SI : forêt ensoleillée avec un cerf, une jeune pousse dans la terre, des rangées de jeunes arbres, de nouveau la forêt, puis des pousses et la carte de fin savingplanets.com.",
     "es": "Imágenes generadas por SI: un bosque soleado con un ciervo, un brote en la tierra, hileras de árboles jóvenes, de nuevo el bosque y luego brotes y la tarjeta final de savingplanets.com.",
     "ar": "مشاهد مولّدة بالذكاء الاصطناعي: غابة مشمسة فيها غزال، وشتلة في التربة، وصفوف من الأشجار الصغيرة، ثم الغابة مجددًا، ثم براعم وبطاقة الختام savingplanets.com.",
@@ -353,7 +353,7 @@
   "savingplanets-ad-v2": {
    "pinned": "Cues are the narration as recorded (verified against the audio Oct 16, 2026); never rewritten to the live solution count.",
    "visual": {
-    "en": "SI-generated visuals: Earth above clouds, scrolling pages of the Saving Planets site (solutions, Amazing Facts, a Lagrange point explainer, the live launch tracker, Ways to Help), a whale under the northern lights, rocket launches, and a sunlit forest.",
+    "en": "Visuals created by the Founder and SI: Earth above clouds, scrolling pages of the Saving Planets site (solutions, Amazing Facts, a Lagrange point explainer, the live launch tracker, Ways to Help), a whale under the northern lights, rocket launches, and a sunlit forest.",
     "fr": "Images générées par SI : la Terre au-dessus des nuages, des pages du site Saving Planets qui défilent (solutions, Faits étonnants, explication des points de Lagrange, suivi des lancements en direct, Comment aider), une baleine sous une aurore boréale, des lancements de fusées et une forêt ensoleillée.",
     "es": "Imágenes generadas por SI: la Tierra sobre las nubes, páginas del sitio Saving Planets desplazándose (soluciones, Datos asombrosos, una explicación de los puntos de Lagrange, el seguimiento de lanzamientos en vivo, Formas de ayudar), una ballena bajo la aurora boreal, lanzamientos de cohetes y un bosque soleado.",
     "ar": "مشاهد مولّدة بالذكاء الاصطناعي: الأرض فوق السحب، وصفحات من موقع Saving Planets تتمرر (الحلول، حقائق مذهلة، شرح نقاط لاغرانج، متتبع الإطلاقات المباشر، طرق المساعدة)، وحوت تحت الشفق القطبي، وإطلاقات صواريخ، وغابة مشمسة.",

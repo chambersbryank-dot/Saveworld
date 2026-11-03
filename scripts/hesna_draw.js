@@ -13,7 +13,7 @@ function hesnaScene(s) {
   function T(x, y, t, sz, f, w) {
     return '<text x="' + x + '" y="' + y + '" font-size="' + (sz || 12) + '" text-anchor="middle" fill="' + (f || "#111") + '"' + (w ? ' font-weight="bold"' : "") + ">" + esc(t) + "</text>";
   }
-  var credit = '<figcaption class="si-credit">' + bi("Made from SI and Biological SI Partner", "صُنع من SI وBiological SI Partner") + "</figcaption>";
+  var credit = '<figcaption class="si-credit">' + bi("Created by the Founder and SI", "من إعداد المؤسس وSI") + "</figcaption>";
   if (s.img) {
     var over = "";
     if (s.overlay && s.overlay.length) {

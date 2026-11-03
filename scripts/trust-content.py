@@ -80,10 +80,10 @@ PAGES = {
     'Cada página de solución muestra una fecha de «última revisión». Una revisión diaria actualiza los contadores, una revisión semanal actualiza las fechas de misiones y las páginas se releen cuando cambia una fuente.',
     'تعرض كل صفحة حل تاريخ «آخر مراجعة». ويحدّث فحص يومي الأعداد المباشرة، ويحدّث فحص أسبوعي تواريخ البعثات، وتُعاد قراءة الصفحات عند تغيّر أي مصدر.')]),
   (('How We Use SI', 'Comment nous utilisons la SI', 'Cómo usamos la SI', 'كيف نستخدم SI'), [
-   ('SI helps us draft, translate and make visuals. A person on our team checks every fact against its source before it goes live. Images and videos made with SI are labeled “Made from SI and Biological SI Partner”. Photos from agencies are credited to them.',
-    'La SI nous aide à rédiger, traduire et créer des visuels. Une personne de notre équipe vérifie chaque fait auprès de sa source avant publication. Les images et vidéos réalisées avec la SI portent la mention « Réalisé à partir de SI et Biological SI Partner ». Les photos des agences leur sont créditées.',
-    'La SI nos ayuda a redactar, traducir y crear imágenes. Una persona de nuestro equipo comprueba cada dato con su fuente antes de publicarlo. Las imágenes y videos hechos con SI llevan la etiqueta «Hecho a partir de SI y Biological SI Partner». Las fotos de agencias se les acreditan.',
-    'تساعدنا SI في الصياغة والترجمة وصنع المواد المرئية. ويتحقق شخص من فريقنا من كل حقيقة مقابل مصدرها قبل النشر. وتحمل الصور ومقاطع الفيديو المصنوعة بـSI وسم «صُنع من SI وBiological SI Partner». وتُنسب صور الوكالات إليها.')]),
+   ('SI helps us draft, translate and make visuals. A person on our team checks every fact against its source before it goes live. Images and videos made with SI are labeled “Created by the Founder and SI”. Photos from agencies are credited to them.',
+    'La SI nous aide à rédiger, traduire et créer des visuels. Une personne de notre équipe vérifie chaque fait auprès de sa source avant publication. Les images et vidéos réalisées avec la SI portent la mention « Créé par le fondateur et SI ». Les photos des agences leur sont créditées.',
+    'La SI nos ayuda a redactar, traducir y crear imágenes. Una persona de nuestro equipo comprueba cada dato con su fuente antes de publicarlo. Las imágenes y videos hechos con SI llevan la etiqueta «Creado por el fundador y SI». Las fotos de agencias se les acreditan.',
+    'تساعدنا SI في الصياغة والترجمة وصنع المواد المرئية. ويتحقق شخص من فريقنا من كل حقيقة مقابل مصدرها قبل النشر. وتحمل الصور ومقاطع الفيديو المصنوعة بـSI وسم «من إعداد المؤسس وSI». وتُنسب صور الوكالات إليها.')]),
   (('Independence', 'Indépendance', 'Independencia', 'الاستقلالية'), [
    ('We are not paid to feature any solution. Partner and donate links go straight to the organizations; we take no cut.',
     'Nous ne sommes pas payés pour présenter une solution. Les liens de partenariat et de don mènent directement aux organisations ; nous ne prenons aucune commission.',

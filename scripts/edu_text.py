@@ -359,7 +359,7 @@ T.update({
   'رسوم متحركة: شريحة SI على القمر تحذف الصور الغائمة وترسل الصافية إلى الأرض. وفي الأسفل قطرتا ماء تقارنان استهلاك مراكز البيانات الأمريكية للمياه، نحو 21 مليار لتر في 2014 ونحو 66 مليار لتر في 2023، بجانب مشعّ فضائي يتخلص من الحرارة دون مياه تبريد'),
 })
 
-T['Made from SI and Biological SI Partner'] = ('Made from SI and Biological SI Partner',) * 3
+T['Created by the Founder and SI'] = ('Created by the Founder and SI',) * 3
 
 # ---- Italian (Oct 15 2026): strings live in assets/data/edu-it.json (ui, lesson, kid blurbs, T tuple values).
 import json as _json, os as _os

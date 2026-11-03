@@ -6,7 +6,7 @@ Run weekly (or any time) to refresh the Solution of the Week static fallback."""
 import json, re, subprocess, html, datetime, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-CAP = 'Made from SI and Biological SI Partner.'
+CAP = 'Created by the Founder and SI.'
 sys.path.insert(0, os.path.join(ROOT, 'scripts')); import media as MEDIA  # Oct 16: videos served from R2 (media.savingplanets.com)
 
 VIDEOS = {  # page: (file, heading, anchor regex to insert AFTER)
@@ -98,7 +98,7 @@ SW = (f'<section class="sotw" id="solution-of-the-week" aria-labelledby="sotw-ti
       f'<a class="sotw-img" href="{href}"><img src="{e["image"]}" alt="{html.escape(e["imageAlt"])}" width="{dims_img(e["image"])[0]}" height="{dims_img(e["image"])[1]}" loading="lazy" decoding="async"></a>'
       f'<div class="sotw-body"><p class="sotw-kicker">Solution of the Week</p><h2 id="sotw-title"><a href="{e["page"]}">{html.escape(e["title"])}</a></h2>'
       f'<p class="sotw-blurb">{html.escape(e["blurb"])}</p><p class="sotw-actions"><a class="btn" href="{href}">{"Watch and Learn More" if e.get("video") else "Learn More"}</a></p>'
-      f'<p class="photo-credit">Made from SI and Biological SI Partner.</p></div></div></section>')
+      f'<p class="photo-credit">Created by the Founder and SI.</p></div></div></section>')
 
 s = open('index.html', encoding='utf-8').read()
 s = put(s, 'SOTW', SW, r'<section class="mission-block">.*?</section>')
@@ -121,7 +121,7 @@ PROMO = ('<section class="sp-video sp-promo" id="whats-new-video" aria-labelledb
   f'<h2 id="promo-title">{html.escape(PROMO_H, quote=False)}</h2><figure class="sp-video-fig">'
   f'<video class="promo-v4 promo-v6" controls playsinline preload="metadata" poster="assets/videos/savingplanets-promo-v6-tall.jpg" width="{VW}" height="{VH}" aria-label="{html.escape(PROMO_H, quote=False)}">'
   f'<source src="{VU}" type="video/mp4"><source src="{VU7}" type="video/mp4"><a href="{VU}">Download the video</a></video>'
-  f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Made from SI and Biological SI Partner</span> '
+  f'<figcaption><span class="sp-video-cap">{html.escape(PROMO_CAP, quote=False)}</span><span class="photo-credit">Created by the Founder and SI</span> '
   f'<span class="photo-credit">{html.escape(PROMO_SRC, quote=False)}</span></figcaption></figure>{PX}</section>')
 # Oct 20: the HOMEPAGE promo stays v4 (founder approved v6 for About only; homepage layout is under review in PR #16)
 # Oct 24 (founder approved): homepage promo is now v4.1 (148 s, six languages named, no counts spoken; on-screen numbers 246 / 21 / 26 / 6 / 1,000+). v4 file stays on R2, unused.
@@ -141,7 +141,7 @@ PROMO41 = (PROMO.replace('savingplanets-promo-v6-tall.jpg', 'savingplanets-promo
   .replace(VU, U4).replace(f'width="{VW}" height="{VH}"', f'width="{W4}" height="{H4}"').replace('class="promo-v4 promo-v6"', 'class="promo-v4"'))
 PROMO_ABOUT = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO41.replace('class="sp-video sp-promo"', 'class="sp-video sp-promo sp-promo-about"', 1), flags=re.S)
 # Oct 20: keep the visible SI credit under the About video (founder); transcript stays screen-reader text (data-transcript="sr")
-PROMO_ABOUT = PROMO_ABOUT.replace('</video>', '</video><figcaption class="photo-credit">Made from SI and Biological SI Partner</figcaption>', 1)
+PROMO_ABOUT = PROMO_ABOUT.replace('</video>', '</video><figcaption class="photo-credit">Created by the Founder and SI</figcaption>', 1)
 PROMO_ABOUT = PROMO_ABOUT.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
 s = re.sub(r'<!-- PROMO:START -->.*?<!-- PROMO:END -->', '', s, flags=re.S)
 s = put(s, 'VIDEO', PROMO_ABOUT, r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
