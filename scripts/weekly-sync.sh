@@ -45,6 +45,7 @@ python3 scripts/build-courses.py          # Oct 24 (founder): Courses hub + cour
 python3 scripts/build-launch-tracker.py  # Oct 26: Live Launch Tracker blurbs (purpose + SP connection)
 python3 scripts/build-launch-actions.py   # Oct 24: launch tracker Ask/Calendar buttons script tag on #lw-next pages (all langs)
 python3 scripts/build-404-case.py         # Oct 25 (founder, upgrade 1): 404 pages redirect wrong-case / old addresses (all langs, after i18n-build)
+python3 scripts/build-bsp-crosslink.py   # Nov 2 (Bryan): cross-site donate/volunteer totals + BSP find links on Ways_to_Help (all langs, after i18n-build)
 python3 scripts/build-a11y-terms.py --home # Oct 28 (founder): home Standards Alignment block + educationalAlignment (all langs). Oct 31: replaces HOMESTD in place (moving it stale'd index.html). The i18n hash ignores that block.
 python3 scripts/he-attr-i18n.py             # Oct 17: he/ UI strings in data-t JSON / data-* messages via i18n/he.json
 python3 scripts/build-top-ten.py --links  # Oct 18: Top Ten card links stay in-language for generator-made pages (Learn, World_Map)
