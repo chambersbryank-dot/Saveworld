@@ -1,0 +1,20 @@
+/* NEW-STRIP visual: icon cards in a swipeable carousel (founder Nov 3) */
+.new-strip.nsx{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 0% 0%,rgba(80,170,255,.22),transparent 55%),radial-gradient(120% 140% at 100% 100%,rgba(120,255,220,.14),transparent 55%),rgba(4,24,44,.85)}
+.nsx .nsx-head{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.nsx .nsx-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:4.6rem;height:4.6rem;border-radius:50%;background:conic-gradient(#5fd1ff,#7cf5c8,#5fd1ff);color:#04182c;font-weight:800;line-height:1;box-shadow:0 0 24px rgba(95,209,255,.45)}
+.nsx .nsx-badge b{font-size:1.7rem}.nsx .nsx-badge small{font-size:.62rem;text-transform:uppercase;letter-spacing:.04em}
+.nsx .nsx-head>div{flex:1 1 14rem}
+.nsx .ns-list{display:flex!important;grid-template-columns:none!important;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 .2rem;padding:.4rem .2rem 1rem;margin:.6rem 0 0;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.nsx .ns-list li{flex:0 0 min(78%,15rem);scroll-snap-align:start;position:relative;border-radius:16px;padding:0!important;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(143,211,255,.28);transition:transform .25s,border-color .25s}
+.nsx .ns-list li:hover,.nsx .ns-list li:focus-within{transform:translateY(-4px);border-color:#7cf5c8}
+.nsx .ns-list a{display:flex;flex-direction:column;gap:.55rem;height:100%;min-height:9.5rem;padding:1rem;color:inherit;text-decoration:none;font-weight:600;line-height:1.3}
+.nsx .ns-list a:focus-visible{outline:3px solid #ffd166;outline-offset:2px;border-radius:16px}
+.nsx .nsx-ic{font-size:2.3rem;line-height:1;width:3.4rem;height:3.4rem;display:grid;place-items:center;border-radius:14px;background:rgba(95,209,255,.15)}
+.nsx .nsx-go{margin-top:auto;font-size:.8rem;opacity:.8;font-weight:500}
+.nsx .ns-list time{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nsx .nsx-nav{display:flex;gap:.5rem;justify-content:flex-end}
+.nsx .nsx-nav button{width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid rgba(143,211,255,.5);background:rgba(0,0,0,.3);color:#fff;font-size:1.2rem;cursor:pointer}
+.nsx .nsx-nav button:focus-visible{outline:3px solid #ffd166}
+[dir=rtl] .nsx .nsx-nav{justify-content:flex-start}
+@media (prefers-reduced-motion:reduce){.nsx .ns-list{scroll-behavior:auto}.nsx .ns-list li{transition:none}.nsx .ns-list li:hover{transform:none}}
+.new-strip.nsx,.new-strip.nsx a{color:#eaf6ff}
