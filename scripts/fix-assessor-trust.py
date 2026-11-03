@@ -94,7 +94,7 @@ SI = {
     'fr': 'Créé par le fondateur et SI',
     'es': 'Creado por el fundador y SI',
     'ar': 'من إعداد المؤسس وSI',
-    'it': 'Creato da SI et Biological SI Partner'.replace(' et ', ' e '),
+    'it': 'Creato dal fondatore e da SI',
     'he': 'נוצר על ידי המייסד ו-SI',
 }
 SI['it'] = 'Creato dal fondatore e da SI'

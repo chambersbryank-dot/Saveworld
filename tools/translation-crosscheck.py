@@ -180,7 +180,7 @@ def check_page(en, tr, lang, gloss):
         if not en or en_term not in en['text'] and en_term not in en.get('title', ''):
             continue
         want = row.get(lang) or en_term
-        if en_term in ('SI', 'NASA', 'NOAA', 'ESA', 'Saving Planets', 'Biological SI Partner'):
+        if en_term in ('SI', 'NASA', 'NOAA', 'ESA', 'Saving Planets', 'the Founder'):
             if en_term not in text and en_term not in tr['raw']:
                 issues.append(('glossary', f'missing locked term {en_term!r}'))
         elif want and want not in text and want not in tr['raw']:
