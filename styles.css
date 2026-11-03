@@ -1761,3 +1761,5 @@ html body.toc-sub[class] .page-hero[class].pg-anim{height:auto!important;min-hei
 
 /* Nov 3 (founder): no visible breadcrumb trail */
 .breadcrumb{display:none!important}
+/* Nov 3 root fix: the legacy body.toc-sub/toc-home nav{position:fixed;top:0} rules caught EVERY <nav>, so in-page chip bars (wth-jump on Ways to Help, az-nav on Topics) were pinned over the site header. Only #topnav is fixed now; secondary navs flow in the page unless a page opts in with its own !important rule (e.g. roman-jump sticky). */
+html body :where(nav:not(#topnav)){position:static !important;top:auto !important;left:auto !important;right:auto !important;z-index:auto !important;border-bottom:0;box-shadow:none}
