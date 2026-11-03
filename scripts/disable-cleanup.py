@@ -4,7 +4,7 @@ While CLEANUP_ENABLED is False: strip every link/card/menu entry to Find_a_Clean
 page into a noindex redirect stub to Ways_to_Help.html, drop it from sitemap.xml, i18n/pages.txt and the Search
 fallback list. Generator kept (build-batch4.py) so it can come back by flipping the flag. Idempotent; run late in
 weekly-sync (after build-nav and the final i18n-sitemap, before build-search)."""
-import os, re, glob
+import os, re, glob, importlib.util
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 CLEANUP_ENABLED = False
 if CLEANUP_ENABLED: raise SystemExit('cleanup enabled: nothing to do')
@@ -14,12 +14,17 @@ STUB = ('<!DOCTYPE html><html lang="{lang}"{dir}><head><meta charset="utf-8"><ti
         '<meta http-equiv="refresh" content="0; url=Ways_to_Help.html"><script>location.replace("Ways_to_Help.html")</script></head>'
         '<body data-pagefind-ignore="all"><p><a href="Ways_to_Help.html">Ways to Help</a></p>'
         '<!-- CF-WA:START --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "9d4cc1c099e74c1e8b66eb937aa58186"}}\'></script><!-- CF-WA:END --></body></html>\n')
+_spec = importlib.util.spec_from_file_location('build_pwa', os.path.join('scripts', 'build-pwa.py'))
+_pwa = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_pwa)  # HEAD/JS/VER only (main() not run)
 SEP = r'<span aria-hidden="true">\s*·\s*</span>'
 H = r'(?:\.\./)?(?:(?:fr|es|ar|it|he)/)?Find_a_Cleanup\.html(?:#[\w-]*)?'
 n = 0
 for d in LANGS:
     p = d + 'Find_a_Cleanup.html'
     stub = STUB.format(lang=d[:-1] or 'en', pre=d, dir=' dir="rtl"' if d[:-1] in ('ar', 'he') else '')  # Oct 23: seo-lint html-dir on ar/he stubs
+    # Nov 2: seo-keywords, seo-fix (twitter:title) and build-pwa run earlier in weekly-sync, so add their tags here
+    stub = stub.replace('</title>', '</title><meta name="keywords" content="Ways to Help"><meta name="twitter:title" content="Saving Planets">', 1)
+    stub = stub.replace('</head>', _pwa.HEAD + '</head>', 1).replace('<!-- CF-WA:START -->', _pwa.JS + '<!-- CF-WA:START -->', 1)
     if os.path.exists(p) and open(p, encoding='utf8').read() != stub: open(p, 'w', encoding='utf8').write(stub)
     for f in glob.glob(d + '*.html'):
         if f == p: continue
