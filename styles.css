@@ -1762,3 +1762,8 @@ body.toc-home .home-find+#solutions.card-band,.home-find+#solutions.card-band{pa
 @media (prefers-reduced-motion:reduce){#topnav .spn-logo img{transition:none}#topnav .spn-brand:hover .spn-logo img{transform:none}}
 .logo-credit{font-size:.75rem;opacity:.8;font-style:italic;margin:.4rem 0 0}
 /* LOGO:END */
+
+/* a11y fixes 2026-11-04: contrast + tap targets (Lighthouse) */
+#ask-si .si-form button,#ask-si form button[type=submit]{background:#ffd54a!important;color:#1a1300!important}
+.nl-call .nl-aud span{background:#00699c!important;color:#fff!important}
+.t-print,.t-actions a{display:inline-flex;align-items:center;min-height:24px;min-width:24px;padding:2px 6px}

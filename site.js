@@ -548,3 +548,93 @@ function later(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(sh
 if(document.readyState==='complete')later();else window.addEventListener('load',later);
 }catch(e){}})();
 /* LANGBANNER:END */
+/* HOWTOCITE:START — one-line "How to cite" in every footer (2026-11-04) */
+(function(){try{
+var f=document.querySelector('footer');if(!f||f.querySelector('.cite-foot'))return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var T={en:'How to cite',fr:'Comment citer',es:'Cómo citar',ar:'كيفية الاستشهاد',it:'Come citare',he:'איך לצטט'};
+var A={en:'Accessed',fr:'Consulté le',es:'Consultado el',ar:'تاريخ الاطلاع',it:'Consultato il',he:'נצפה ב-'};
+var c=document.querySelector('link[rel=canonical]');var u=(c&&c.href)||location.href.split('#')[0].split('?')[0];
+var t=(document.title||'').split(/\s[|–—-]\s/)[0].trim();
+var d=new Date().toLocaleDateString(L,{year:'numeric',month:'long',day:'numeric'});
+var p=document.createElement('p');p.className='cite-foot';p.style.cssText='font-size:.82rem;opacity:.9;margin:.4rem auto;max-width:720px';
+p.innerHTML='<strong>'+(T[L]||T.en)+':</strong> <span class="cite-txt"></span>';
+p.querySelector('.cite-txt').textContent='Saving Planets. "'+t+'." '+u+'. '+(A[L]||A.en)+' '+d+'.';
+f.insertBefore(p,f.querySelector('.lic-foot')||null);
+}catch(e){}})();
+/* HOWTOCITE:END */
+/* STDFILTER:START — filter Teachers lesson lists by NGSS/CCSS code (2026-11-04) */
+(function(){try{
+var lists=[].slice.call(document.querySelectorAll('ul.t-list')).filter(function(u){return u.querySelector('.t-print')});
+if(!lists.length||!window.fetch)return;
+var base=(document.querySelector('link[rel=canonical]')||{}).href||'';
+fetch('/standards-index.json').then(function(r){return r.json()}).then(function(idx){
+ var all={};lists.forEach(function(u){[].forEach.call(u.children,function(li){var a=li.querySelector('a');if(!a)return;var p=(a.getAttribute('href')||'').split(/[?#]/)[0].split('/').pop();var c=idx[p]||[];li.dataset.std=' '+c.join(' ')+' ';c.forEach(function(k){all[k]=(all[k]||0)+1})})});
+ var keys=Object.keys(all).sort();if(!keys.length)return;
+ var w=document.createElement('div');w.className='std-filter';w.style.cssText='display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.6rem 0 1rem';
+ w.innerHTML='<label for="std-sel" style="font-weight:700">Standard</label><select id="std-sel" style="min-height:44px;padding:.3rem .6rem;border-radius:10px;font:inherit"><option value="">All standards</option></select><span class="std-n" aria-live="polite" style="font-size:.9rem"></span>';
+ var sel=w.querySelector('select');keys.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k+' ('+all[k]+')';sel.appendChild(o)});
+ lists[0].parentNode.insertBefore(w,lists[0]);
+ sel.addEventListener('change',function(){var v=sel.value,n=0;lists.forEach(function(u){[].forEach.call(u.children,function(li){var ok=!v||(li.dataset.std||'').indexOf(' '+v+' ')>-1;li.hidden=!ok;if(ok)n++});u.hidden=![].some.call(u.children,function(li){return !li.hidden})});w.querySelector('.std-n').textContent=v?n+' lessons':''});
+});
+}catch(e){}})();
+/* STDFILTER:END */
+/* SOLFACETS:START — Subject / Type / Grade / Language filters on Solutions (2026-11-04) */
+(function(){try{
+var f=document.querySelector('.sol-filters');var cards=[].slice.call(document.querySelectorAll('article.sol-card[data-url]'));
+if(!f||!cards.length||!window.fetch)return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var W={en:['Subject','Type','Grade','Language','All','results'],fr:['Sujet','Type','Niveau','Langue','Tous','résultats'],es:['Tema','Tipo','Grado','Idioma','Todos','resultados'],ar:['الموضوع','النوع','الصف','اللغة','الكل','نتيجة'],it:['Tema','Tipo','Classe','Lingua','Tutti','risultati'],he:['נושא','סוג','כיתה','שפה','הכל','תוצאות']}[L]||null;W=W||['Subject','Type','Grade','Language','All','results'];
+var TY={agency:'Space/science agency',nonprofit:'Nonprofit',government:'Government',natural:'Natural wonder',corporate:'Company'};
+var LG={en:'English',fr:'Français',es:'Español',ar:'العربية',it:'Italiano',he:'עברית'};
+fetch('/assets/data/solutions.json').then(function(r){return r.json()}).then(function(d){
+ var meta={};(d.pages||[]).forEach(function(p){meta[p.url]=p});
+ var hubName={};[].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var t=h.querySelector('h2');hubName[h.id]=t?t.textContent.trim():h.id});
+ var S={},T={},G={};
+ cards.forEach(function(c){var m=meta[c.dataset.url]||{};var h=c.closest('.sol-hub');c.dataset.sub=h?h.id:'';c.dataset.type=m.classification||'';if(h)S[h.id]=1;if(m.classification)T[m.classification]=1;(c.dataset.grades||'').split(' ').forEach(function(g){if(g)G[g]=1})});
+ function mk(id,lab,opts){var s='<label for="'+id+'" style="font-weight:700">'+lab+'</label><select id="'+id+'" style="min-height:44px;padding:.3rem .5rem;border-radius:10px;font:inherit"><option value="">'+W[4]+'</option>';opts.forEach(function(o){s+='<option value="'+o[0]+'">'+o[1]+'</option>'});return '<span style="display:inline-flex;gap:.35rem;align-items:center">'+s+'</select></span>'}
+ var bar=document.createElement('div');bar.className='sol-facets';bar.style.cssText='display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:center;margin:.7rem 0';
+ var here=location.pathname.replace(/^\/(fr|es|ar|it|he)\//,'/');
+ bar.innerHTML=mk('sf-sub',W[0],Object.keys(S).map(function(k){return[k,hubName[k]]}))+mk('sf-type',W[1],Object.keys(T).sort().map(function(k){return[k,TY[k]||k]}))+mk('sf-grade',W[2],Object.keys(G).sort().map(function(k){return[k,k]}))
+  +'<span style="display:inline-flex;gap:.35rem;align-items:center"><label for="sf-lang" style="font-weight:700">'+W[3]+'</label><select id="sf-lang" style="min-height:44px;padding:.3rem .5rem;border-radius:10px;font:inherit">'+Object.keys(LG).map(function(k){return '<option value="'+k+'"'+(k===L?' selected':'')+'>'+LG[k]+'</option>'}).join('')+'</select></span><span class="sf-n" aria-live="polite" style="font-size:.9rem"></span>';
+ f.parentNode.insertBefore(bar,f.nextSibling);
+ var g=function(i){return bar.querySelector('#'+i).value};
+ function apply(){var s=g('sf-sub'),t=g('sf-type'),gr=g('sf-grade'),n=0;cards.forEach(function(c){var ok=(!s||c.dataset.sub===s)&&(!t||c.dataset.type===t)&&(!gr||(' '+c.dataset.grades+' ').indexOf(' '+gr+' ')>-1);c.hidden=!ok;if(ok)n++});
+  [].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var any=h.querySelector('article.sol-card:not([hidden])');if(s||t||gr)h.style.display=any?'':'none';else h.style.display=''});
+  bar.querySelector('.sf-n').textContent=(s||t||gr)?n+' '+W[5]:''}
+ ['sf-sub','sf-type','sf-grade'].forEach(function(i){bar.querySelector('#'+i).onchange=apply});
+ bar.querySelector('#sf-lang').onchange=function(){var v=this.value;location.href=(v==='en'?'':'/'+v)+here};
+});
+}catch(e){}})();
+/* SOLFACETS:END */
+/* CRSSOURCES:START — compact "Sources cited" list on course pages, built from the page's own links (2026-11-04) */
+(function(){try{
+var up=document.querySelector('.crs-updated');var main=document.getElementById('main');if(!up||!main||document.getElementById('crs-sources'))return;
+var N={'openstax.org':'OpenStax','ocw.mit.edu':'MIT OpenCourseWare','phet.colorado.edu':'PhET (CU Boulder)','oyc.yale.edu':'Open Yale Courses','science.nasa.gov':'NASA Science','www.nasa.gov':'NASA','gml.noaa.gov':'NOAA GML','www.noaa.gov':'NOAA','www.epa.gov':'US EPA','www.energy.gov':'US DOE','landsat.gsfc.nasa.gov':'NASA Landsat'};
+var m={};[].forEach.call(main.querySelectorAll('a[href^="http"]'),function(a){var h=a.hostname;if(/savingplanets\.com|creativecommons\.org/.test(h))return;(m[h]=m[h]||[]).push(a)});
+var hs=Object.keys(m).sort(function(a,b){return m[b].length-m[a].length});if(!hs.length)return;
+var s=document.createElement('section');s.id='crs-sources';s.className='card';s.style.cssText='margin:1.2rem auto;max-width:900px;padding:1rem';
+var L=(document.documentElement.lang||'en').slice(0,2);var H={en:'Sources cited',fr:'Sources citées',es:'Fuentes citadas',ar:'المصادر',it:'Fonti citate',he:'מקורות'};
+s.innerHTML='<h2 style="margin-top:0">'+(H[L]||H.en)+'</h2><ul style="display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0"></ul>';
+var ul=s.querySelector('ul');hs.forEach(function(h){var li=document.createElement('li');var a=document.createElement('a');a.href=m[h][0].href.split('#')[0].replace(/^(https?:\/\/[^\/]+).*/,'$1/');a.rel='noopener';a.textContent=(N[h]||h.replace(/^www\./,''))+' · '+m[h].length;a.style.cssText='display:inline-flex;min-height:36px;align-items:center;padding:.2rem .7rem;border:1px solid rgba(127,127,127,.4);border-radius:999px';li.appendChild(a);ul.appendChild(li)});
+var rel=document.getElementById('crs-rel-h');var anchor=rel?rel.closest('section')||rel:null;
+if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(s,anchor);else main.appendChild(s);
+}catch(e){}})();
+/* CRSSOURCES:END */
+/* NEWBADGE:START — "New this week" badge on solution cards added in the last 7 days (real git add dates; auto-expires) (2026-11-04) */
+(function(){try{
+var cards=document.querySelectorAll('article.card');if(!cards.length||!window.fetch)return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var T={en:'New this week',fr:'Nouveau cette semaine',es:'Nuevo esta semana',ar:'جديد هذا الأسبوع',it:'Novità della settimana',he:'חדש השבוע'};
+fetch('/assets/data/solution-added.json').then(function(r){return r.json()}).then(function(d){
+ var st=document.createElement('style');st.textContent='.new-badge{position:relative;overflow:hidden;display:inline-block;margin:.45rem .6rem 0;padding:.18rem .65rem;border-radius:999px;font-weight:800;font-size:.78rem;line-height:1.4;color:#fff;text-shadow:0 1px 1px rgba(0,40,70,.55);background:linear-gradient(135deg,rgba(0,119,176,.88),rgba(0,95,143,.92));-webkit-backdrop-filter:blur(8px) saturate(160%);backdrop-filter:blur(8px) saturate(160%);border:1px solid rgba(160,225,255,.55);box-shadow:0 0 10px rgba(0,156,222,.45),inset 0 1px 0 rgba(255,255,255,.45),inset 0 -6px 10px rgba(0,60,100,.35)}.new-badge::before{content:"";position:absolute;inset:0 0 50% 0;border-radius:999px 999px 40% 40%;background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0));pointer-events:none}.new-badge::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);pointer-events:none;animation:nbShim 4.5s ease-in-out infinite}@keyframes nbShim{0%,60%{left:-60%}100%{left:130%}}@media (prefers-reduced-motion:reduce){.new-badge::after{animation:none;display:none}}';document.head.appendChild(st);
+ var now=Date.now();
+ [].forEach.call(cards,function(c){var a=c.querySelector('a[href$=".html"]');if(!a||c.querySelector('.new-badge'))return;
+  var p=(c.dataset.url||a.getAttribute('href')).split(/[?#]/)[0].split('/').pop();var dt=d[p];if(!dt)return;
+  var today=new Date(now-36e6).toISOString().slice(0,10);var age=(Date.parse(today)-Date.parse(dt))/864e5;if(age<0||age>7)return;
+  var b=document.createElement('span');b.className='new-badge';b.textContent='✨ '+(T[L]||T.en);b.title=dt;
+  
+  c.insertBefore(b,c.firstChild)});
+});
+}catch(e){}})();
+/* NEWBADGE:END */
