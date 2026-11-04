@@ -579,3 +579,45 @@ fetch('/standards-index.json').then(function(r){return r.json()}).then(function(
 });
 }catch(e){}})();
 /* STDFILTER:END */
+/* SOLFACETS:START — Subject / Type / Grade / Language filters on Solutions (2026-11-04) */
+(function(){try{
+var f=document.querySelector('.sol-filters');var cards=[].slice.call(document.querySelectorAll('article.sol-card[data-url]'));
+if(!f||!cards.length||!window.fetch)return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var W={en:['Subject','Type','Grade','Language','All','results'],fr:['Sujet','Type','Niveau','Langue','Tous','résultats'],es:['Tema','Tipo','Grado','Idioma','Todos','resultados'],ar:['الموضوع','النوع','الصف','اللغة','الكل','نتيجة'],it:['Tema','Tipo','Classe','Lingua','Tutti','risultati'],he:['נושא','סוג','כיתה','שפה','הכל','תוצאות']}[L]||null;W=W||['Subject','Type','Grade','Language','All','results'];
+var TY={agency:'Space/science agency',nonprofit:'Nonprofit',government:'Government',natural:'Natural wonder',corporate:'Company'};
+var LG={en:'English',fr:'Français',es:'Español',ar:'العربية',it:'Italiano',he:'עברית'};
+fetch('/assets/data/solutions.json').then(function(r){return r.json()}).then(function(d){
+ var meta={};(d.pages||[]).forEach(function(p){meta[p.url]=p});
+ var hubName={};[].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var t=h.querySelector('h2');hubName[h.id]=t?t.textContent.trim():h.id});
+ var S={},T={},G={};
+ cards.forEach(function(c){var m=meta[c.dataset.url]||{};var h=c.closest('.sol-hub');c.dataset.sub=h?h.id:'';c.dataset.type=m.classification||'';if(h)S[h.id]=1;if(m.classification)T[m.classification]=1;(c.dataset.grades||'').split(' ').forEach(function(g){if(g)G[g]=1})});
+ function mk(id,lab,opts){var s='<label for="'+id+'" style="font-weight:700">'+lab+'</label><select id="'+id+'" style="min-height:44px;padding:.3rem .5rem;border-radius:10px;font:inherit"><option value="">'+W[4]+'</option>';opts.forEach(function(o){s+='<option value="'+o[0]+'">'+o[1]+'</option>'});return '<span style="display:inline-flex;gap:.35rem;align-items:center">'+s+'</select></span>'}
+ var bar=document.createElement('div');bar.className='sol-facets';bar.style.cssText='display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:center;margin:.7rem 0';
+ var here=location.pathname.replace(/^\/(fr|es|ar|it|he)\//,'/');
+ bar.innerHTML=mk('sf-sub',W[0],Object.keys(S).map(function(k){return[k,hubName[k]]}))+mk('sf-type',W[1],Object.keys(T).sort().map(function(k){return[k,TY[k]||k]}))+mk('sf-grade',W[2],Object.keys(G).sort().map(function(k){return[k,k]}))
+  +'<span style="display:inline-flex;gap:.35rem;align-items:center"><label for="sf-lang" style="font-weight:700">'+W[3]+'</label><select id="sf-lang" style="min-height:44px;padding:.3rem .5rem;border-radius:10px;font:inherit">'+Object.keys(LG).map(function(k){return '<option value="'+k+'"'+(k===L?' selected':'')+'>'+LG[k]+'</option>'}).join('')+'</select></span><span class="sf-n" aria-live="polite" style="font-size:.9rem"></span>';
+ f.parentNode.insertBefore(bar,f.nextSibling);
+ var g=function(i){return bar.querySelector('#'+i).value};
+ function apply(){var s=g('sf-sub'),t=g('sf-type'),gr=g('sf-grade'),n=0;cards.forEach(function(c){var ok=(!s||c.dataset.sub===s)&&(!t||c.dataset.type===t)&&(!gr||(' '+c.dataset.grades+' ').indexOf(' '+gr+' ')>-1);c.hidden=!ok;if(ok)n++});
+  [].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var any=h.querySelector('article.sol-card:not([hidden])');if(s||t||gr)h.style.display=any?'':'none';else h.style.display=''});
+  bar.querySelector('.sf-n').textContent=(s||t||gr)?n+' '+W[5]:''}
+ ['sf-sub','sf-type','sf-grade'].forEach(function(i){bar.querySelector('#'+i).onchange=apply});
+ bar.querySelector('#sf-lang').onchange=function(){var v=this.value;location.href=(v==='en'?'':'/'+v)+here};
+});
+}catch(e){}})();
+/* SOLFACETS:END */
+/* CRSSOURCES:START — compact "Sources cited" list on course pages, built from the page's own links (2026-11-04) */
+(function(){try{
+var up=document.querySelector('.crs-updated');var main=document.getElementById('main');if(!up||!main||document.getElementById('crs-sources'))return;
+var N={'openstax.org':'OpenStax','ocw.mit.edu':'MIT OpenCourseWare','phet.colorado.edu':'PhET (CU Boulder)','oyc.yale.edu':'Open Yale Courses','science.nasa.gov':'NASA Science','www.nasa.gov':'NASA','gml.noaa.gov':'NOAA GML','www.noaa.gov':'NOAA','www.epa.gov':'US EPA','www.energy.gov':'US DOE','landsat.gsfc.nasa.gov':'NASA Landsat'};
+var m={};[].forEach.call(main.querySelectorAll('a[href^="http"]'),function(a){var h=a.hostname;if(/savingplanets\.com|creativecommons\.org/.test(h))return;(m[h]=m[h]||[]).push(a)});
+var hs=Object.keys(m).sort(function(a,b){return m[b].length-m[a].length});if(!hs.length)return;
+var s=document.createElement('section');s.id='crs-sources';s.className='card';s.style.cssText='margin:1.2rem auto;max-width:900px;padding:1rem';
+var L=(document.documentElement.lang||'en').slice(0,2);var H={en:'Sources cited',fr:'Sources citées',es:'Fuentes citadas',ar:'المصادر',it:'Fonti citate',he:'מקורות'};
+s.innerHTML='<h2 style="margin-top:0">'+(H[L]||H.en)+'</h2><ul style="display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0"></ul>';
+var ul=s.querySelector('ul');hs.forEach(function(h){var li=document.createElement('li');var a=document.createElement('a');a.href=m[h][0].href.split('#')[0].replace(/^(https?:\/\/[^\/]+).*/,'$1/');a.rel='noopener';a.textContent=(N[h]||h.replace(/^www\./,''))+' · '+m[h].length;a.style.cssText='display:inline-flex;min-height:36px;align-items:center;padding:.2rem .7rem;border:1px solid rgba(127,127,127,.4);border-radius:999px';li.appendChild(a);ul.appendChild(li)});
+var rel=document.getElementById('crs-rel-h');var anchor=rel?rel.closest('section')||rel:null;
+if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(s,anchor);else main.appendChild(s);
+}catch(e){}})();
+/* CRSSOURCES:END */
