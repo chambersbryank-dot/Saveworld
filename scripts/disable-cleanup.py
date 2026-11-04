@@ -39,10 +39,8 @@ for d in LANGS:
         s = re.sub(rf"\n[^\n]*url: '{H}'[^\n]*", '', s)                                       # Search.html fallback list
         s = re.sub(rf'<a href="{H}"[^>]*>(.*?)</a>', r'\1', s, flags=re.S)                     # any remaining in-text link: keep words, drop link
         if s != o: open(f, 'w', encoding='utf8').write(s); n += 1
-sm = open('sitemap.xml', encoding='utf8').read()
-sm2 = re.sub(r'\s*<url>\s*<loc>https://www\.savingplanets\.com/(?:(?:fr|es|ar|it|he)/)?Find_a_Cleanup\.html</loc>.*?</url>', '', sm, flags=re.S)
-sm2 = re.sub(r'\s*<xhtml:link [^>]*href="https://www\.savingplanets\.com/(?:(?:fr|es|ar|it|he)/)?Find_a_Cleanup\.html"\s*/>', '', sm2)
-if sm2 != sm: open('sitemap.xml', 'w', encoding='utf8').write(sm2)
+import sitemap_pages
+sitemap_pages.strip_page('Find_a_Cleanup.html')
 pt = open('i18n/pages.txt', encoding='utf8').read()
 pt2 = ''.join(l for l in pt.splitlines(True) if l.strip() != 'Find_a_Cleanup.html')
 if pt2 != pt: open('i18n/pages.txt', 'w', encoding='utf8').write(pt2)

@@ -133,13 +133,9 @@ for f in sorted(os.listdir('.')):
 print('footers:', nf, 'nav:', nn)
 
 # ---- sitemap, pages.txt, build-stats SKIP
-sm = open('sitemap.xml', encoding='utf8').read()
+import sitemap_pages
 for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + (('Find_a_Cleanup.html',) if CLEANUP_ENABLED else ()):
-    loc = f'<loc>https://www.savingplanets.com/{p}</loc>'
-    if loc not in sm:
-        anchor = sm.index('<url><loc>https://www.savingplanets.com/Ways_to_Help.html</loc>')
-        sm = sm[:anchor] + f'<url>{loc}<lastmod>2026-10-11</lastmod></url>\n  ' + sm[anchor:]
-open('sitemap.xml', 'w', encoding='utf8').write(sm)
+    sitemap_pages.ensure_url(f'https://www.savingplanets.com/{p}', '2026-10-11')
 pt = open('i18n/pages.txt', encoding='utf8').read()
 for p in (('Community.html',) if COMMUNITY_ENABLED else ()) + (('Find_a_Cleanup.html',) if CLEANUP_ENABLED else ()):
     if p not in pt.split(): pt = pt.rstrip('\n') + '\n' + p + '\n'

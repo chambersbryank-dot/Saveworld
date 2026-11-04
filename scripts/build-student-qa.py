@@ -82,8 +82,8 @@ if __name__ == '__main__':
     ch = sum(wr(d(l) + PAGE, page(l, es)) for l in LANGS)
     idx = {l: [{'id': e['id'], 'topic': e['topic'], 'q': e['q'][l], 'url': f'{d(l)}{PAGE}#{e["id"]}'} for e in es if e['q'].get(l)] for l in LANGS}
     ch += wr('search/student-qa.json', json.dumps(idx, ensure_ascii=False, indent=0) + '\n')
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
-        loc = f'{SITE}{d(l)}{PAGE}'
-        if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s); print(f'build-student-qa: {len(es)} entries, writes={ch}')
+        ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{PAGE}', today, 'weekly', '0.6')
+    print(f'build-student-qa: {len(es)} entries, writes={ch}')

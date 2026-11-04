@@ -1,7 +1,7 @@
 // Regenerate the facts list on Amazing_Facts.html (between <!-- FACTS:START --> and <!-- FACTS:END -->).
 // Run via: node build-search-index.js (it calls this file), or directly: node build-facts.js
 //
-// Convention: any page in sitemap.xml can mark a fact with
+// Convention: any page in sitemap-en.xml can mark a fact with
 //   <p class="amazing-fact" data-source="URL" data-source-name="NASA" data-title="Short heading">Fact text.</p>
 // Optional: data-image, data-image-alt, data-image-credit add a card image.
 // (add `hidden` to keep it off the page itself). data-title is optional (defaults to the first words).
@@ -10,6 +10,7 @@
 // All cards are sorted alphabetically by heading; page facts link back to their page and the source.
 const fs = require('fs');
 const path = require('path');
+const { readEnglishSitemap } = require('./scripts/sitemap-pages.js');
 const FILE = 'Amazing_Facts.html', START = '<!-- FACTS:START -->', END = '<!-- FACTS:END -->';
 
 function buildFacts() {
@@ -27,7 +28,7 @@ function buildFacts() {
     cards.push({ title, key: strip(m[0]).toLowerCase(), html: m[0] });
   }
 
-  const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
+  const pages = [...readEnglishSitemap().matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it|he)\//.test(m[1])) // translations (i18n) are not re-collected
    
     .map(m => path.basename(m[1].trim())).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && f !== FILE && fs.existsSync(f));
   const seen = new Set();

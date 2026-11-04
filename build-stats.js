@@ -1,4 +1,5 @@
-// Build assets/data/solutions.json from sitemap.xml + per-page <meta name="sp:..."> tags.
+// Build assets/data/solutions.json from sitemap-en.xml + per-page <meta name="sp:..."> tags.
+// sitemap.xml is a sitemap index (PR #206); page URLs are in sitemap-en.xml.
 // Run via: node build-search-index.js   (it calls this file), or directly: node build-stats.js
 //
 // Per-page metadata (in <head>):
@@ -14,6 +15,7 @@
 const fs = require('fs');
 const decodeEnt = s => s.replace(/&quot;/g,'"').replace(/&#0?39;|&#x27;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&');
 const path = require('path');
+const { readEnglishSitemap } = require('./scripts/sitemap-pages.js');
 
 const CATEGORIES = { ocean: 'Ocean', lakes: 'Lakes', rivers: 'Rivers', forests: 'Forests', space: 'Space',
   'planetary-defense': 'Planetary Defense', 'polar': 'Polar', 'space-weather': 'Space Weather & Shields',
@@ -106,8 +108,8 @@ function writeSolutionsMenu(menu) {
 }
 
 function build() {
-  const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
+  const sitemap = readEnglishSitemap();
+  const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it|he)\//.test(m[1])) // translations (i18n) are not re-collected
    .map(m => path.basename(m[1].trim()))
     .filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f) && !SKIP.includes(f) && fs.existsSync(f));
   const now = Date.now();

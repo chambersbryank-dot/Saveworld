@@ -314,10 +314,9 @@ if __name__ == '__main__':
         ch += wr(d(l) + 'Aero_Guide.html', aero_guide(l)); ch += wr(d(l) + 'Aero_Math.html', math_page(l, K, 'aero')); ch += wr(d(l) + 'Aero_Lab.html', aero_lab(l, K))
         ch += wr(d(l) + 'Physics_Guide.html', aero_guide(l, LP, 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html')); ch += wr(d(l) + 'Physics_Math.html', math_page(l, K, 'phys')); ch += wr(d(l) + 'Physics_Lab.html', phys_lab(l, K))
     for l in LANGS: ch += xlinks(l)
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         for p in PAGES:
-            loc = f'{SITE}{d(l)}{p}'
-            if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+            ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{p}', today, 'monthly', '0.8')
     print(f'build-learn: writes={ch}')

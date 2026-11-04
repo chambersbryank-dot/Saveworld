@@ -1,18 +1,20 @@
-// Build the keyword search index in Search.html from sitemap.xml.
+// Build the keyword search index in Search.html from sitemap-en.xml.
+// sitemap.xml is a sitemap index (PR #206); English page URLs are in sitemap-en.xml.
 // Run locally: node build-search-index.js
 // GitHub Pages is static-only, so this must run before pushing.
 //
 // Search.html holds a hand-curated list:  var pages = [ { title: '...', url: '...', text: '...' }, ... ];
 // Existing entries are kept exactly as written (their keywords are curated).
-// Pages in sitemap.xml that are missing from the list are appended, with a
+// Pages in sitemap-en.xml that are missing from the list are appended, with a
 // title and keywords taken from the page itself. Entries whose page no longer
-// exists in sitemap.xml are reported but not removed.
+// exists in sitemap-en.xml are reported but not removed.
 
 const fs = require('fs');
 const path = require('path');
+const { readEnglishSitemap } = require('./scripts/sitemap-pages.js');
 
-const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it)\//.test(m[1])) // translations (i18n) are not re-collected
+const sitemap = readEnglishSitemap();
+const files = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter(m => !/\/(fr|es|ar|it|he)\//.test(m[1])) // translations (i18n) are not re-collected
    
   .map(m => path.basename(m[1].trim()))
   .filter(f => f.endsWith('.html') && !/^google[0-9a-f]+.html$/.test(f))
@@ -65,7 +67,7 @@ fs.writeFileSync('Search.html', search);
 
 console.log(`Search.html: ${existing.length} pages (${added.length} added${added.length ? ': ' + added.join(', ') : ''}).`);
 const stale = existing.filter(e => !files.includes(e.url)).map(e => e.url);
-if (stale.length) console.log('Note: in Search.html but not in sitemap.xml (kept):', stale.join(', '));
+if (stale.length) console.log('Note: in Search.html but not in sitemap-en.xml (kept):', stale.join(', '));
 
 // Also regenerate assets/data/solutions.json (stats engine).
 require("./build-stats.js")();

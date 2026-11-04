@@ -209,11 +209,9 @@ def pre():
     for p in ('Glossary.html', 'Teachers.html'):
         if p not in pl.split(): pl = pl.rstrip('\n') + '\n' + p + '\n'
     wr('i18n/pages.txt', pl)
-    sm = rd('sitemap.xml')
+    import sitemap_pages
     for p in ('Glossary.html', 'Teachers.html'):
-        if f'savingplanets.com/{p}<' not in sm:
-            sm = sm.replace('  <url><loc>https://www.savingplanets.com/Contact.html</loc>', f'  <url><loc>https://www.savingplanets.com/{p}</loc><lastmod>2026-10-12</lastmod></url>\n  <url><loc>https://www.savingplanets.com/Contact.html</loc>', 1)
-    wr('sitemap.xml', sm)
+        sitemap_pages.ensure_url(f'https://www.savingplanets.com/{p}', '2026-10-12')
     print(f'batch-b: {len(solution_pages())} solution pages ({n} changed); Glossary {len(GL)} terms; Teachers.html; homepage audience row')
 
 # ---------- post-i18n glossary tooltips ----------

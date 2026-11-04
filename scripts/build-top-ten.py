@@ -250,11 +250,10 @@ def main():
     css = rd('styles.css'); css2 = re.sub(r'\n?/\* TOPTEN:START \*/.*?/\* TOPTEN:END \*/\n?', '\n', css, flags=re.S).rstrip('\n') + '\n/* TOPTEN:START */\n' + CSS + '\n/* TOPTEN:END */\n'
     ch += wr('styles.css', css2)
     ch += SPB.write_css('styles.css')
-    s = rd('sitemap.xml'); today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-10))).date().isoformat()
+    import sitemap_pages
+    today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-10))).date().isoformat()
     for l in ['', 'fr/', 'es/', 'ar/', 'it/']:
-        loc = f'{SITE}{l}{PAGE}'
-        if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+        ch += sitemap_pages.ensure_url(f'{SITE}{l}{PAGE}', today, 'weekly', '0.8')
     print(f'build-top-ten: {N} solutions / {H} hubs, writes={ch}')
 def links():
     """After i18n-build: card links to pages that exist in this language folder but are made by their own generators

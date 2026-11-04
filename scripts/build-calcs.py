@@ -76,10 +76,9 @@ if __name__ == '__main__':
     for l in LANGS:
         ch += wr(d(l) + 'Calculators.html', index_page(l))
         for c in CT.C: ch += wr(d(l) + c['page'], calc_page(c, l, K))
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         for p in PAGES:
-            loc = f'{SITE}{d(l)}{p}'
-            if f'<loc>{loc}</loc>' not in s and f'href="{loc}"' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+            ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{p}', today, 'monthly', '0.7')
     print(f'build-calcs: writes={ch}')

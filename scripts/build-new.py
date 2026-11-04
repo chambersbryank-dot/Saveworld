@@ -147,10 +147,8 @@ def main():
         ch += wr(d(l) + PAGE, changelog(l, sols, dates, ups))
     css = rd('styles.css'); css2 = re.sub(r'\n?/\* NEWS:START \*/.*?/\* NEWS:END \*/', '', css, flags=re.S).rstrip('\n') + '\n/* NEWS:START */\n' + CSS + '\n/* NEWS:END */\n'
     ch += wr('styles.css', css2)
-    s = rd('sitemap.xml')
+    import sitemap_pages
     for l in LANGS:
-        loc = f'{SITE}{d(l)}{PAGE}'
-        if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today.isoformat()}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+        ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{PAGE}', today.isoformat(), 'weekly', '0.6')
     print(f'build-new: {len(dates)} dated solutions, writes={ch}')
 if __name__ == '__main__': main()

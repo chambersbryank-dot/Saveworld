@@ -84,11 +84,9 @@ def pages():
     for pf in ('i18n/pages.txt', 'i18n/he-pages.txt'):
         pl = open(pf, encoding='utf8').read().split('\n'); add = [s + '.html' for s in ('Accessibility', 'Terms') if s + '.html' not in pl]
         if add: open(pf, 'a', encoding='utf8').write(('' if pl[-1] == '' else '\n') + '\n'.join(add) + '\n'); print(pf, '+', add)
-    sm = open('sitemap.xml', encoding='utf8').read()
+    import sitemap_pages
     for slug in ('Accessibility', 'Terms'):
-        loc = f'<loc>https://www.savingplanets.com/{slug}.html</loc>'
-        if loc not in sm: sm = sm.replace('</urlset>', f'  <url>{loc}<lastmod>2026-10-28</lastmod></url>\n</urlset>', 1)
-    open('sitemap.xml', 'w', encoding='utf8').write(sm)
+        sitemap_pages.ensure_url(f'https://www.savingplanets.com/{slug}.html', '2026-10-28')
 
 def footer_links():
     """Footer map on every page (6 langs): add Terms + Accessibility after Privacy (same order as build-site-extras KEY, so a later full sync is a no-op)."""

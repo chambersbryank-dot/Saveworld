@@ -129,10 +129,9 @@ if __name__ == '__main__':
                 blk = hub_block(l).replace('<!-- STARTHERE:START -->', '<!-- STARTHERE:START --><div style="max-width:1100px;margin:1.5rem auto;padding:0 1rem">', 1).replace('<!-- STARTHERE:END -->', '</div><!-- STARTHERE:END -->')
                 s2 = s2[:m.end()] + blk + s2[m.end():]
             ch += wr(f, s2)
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         for p in PAGES:
-            loc = f'{SITE}{d(l)}{p}'
-            if f'<loc>{loc}</loc>' not in s and f'href="{loc}"' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+            ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{p}', today, 'monthly', '0.7')
     print(f'build-paths: writes={ch}')

@@ -155,3 +155,6 @@ if [ -f /home/box/.cloudflare_token ]; then python3 scripts/si-index.py || echo 
 if [ "${WEEKLY_SYNC_POST_DEPLOY:-0}" = 1 ]; then bash scripts/post-deploy.sh || true; fi
 # Oct 16 SEO lint (strict): fails the sync on missing/duplicate titles or descriptions, broken hreflang reciprocity or invalid JSON-LD.
 python3 scripts/seo-lint.py > /tmp/seo-lint.log || { tail -12 /tmp/seo-lint.log; echo 'seo-lint: ERRORS (see python3 scripts/seo-lint.py --list)'; exit 1; }
+# Abort before any commit if pages, categories, or the question bank fell sharply versus main
+# (sitemap index readers used to write 0 pages and ~259 question-bank rows).
+python3 scripts/sync-count-guard.py

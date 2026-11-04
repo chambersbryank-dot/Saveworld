@@ -80,13 +80,8 @@ def main():
     issues = collections.defaultdict(list)
     def add(k, p, msg=''): issues[k].append(f'{p} {msg}'.strip())
     titles, descs, heads = collections.defaultdict(list), collections.defaultdict(list), {}
-    sm = open('sitemap.xml', encoding='utf8').read() if os.path.exists('sitemap.xml') else ''
-    if '<sitemapindex' in sm:  # per-language sitemaps; lint the page URLs inside them
-        parts = []
-        for loc in re.findall(r'<loc>([^<]+)</loc>', sm):
-            rel = loc.split('savingplanets.com/')[-1]
-            if os.path.exists(rel): parts.append(open(rel, encoding='utf8').read())
-        sm = '\n'.join(parts)
+    import sitemap_pages
+    sm = sitemap_pages.joined_urlsets()  # page URLs, not the sitemap.xml index
     sm_urls = {}
     for u in re.findall(r'<url>(.*?)</url>', sm, re.S):
         loc = re.search(r'<loc>([^<]+)</loc>', u).group(1).strip()

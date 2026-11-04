@@ -106,9 +106,9 @@ def sitejs():
 if __name__ == '__main__':
     ch = sitejs()
     for l in LANGS: ch += wr(d(l) + PAGE, page_html(l)); ch += home(l)
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         loc = f'{SITE}{d(l)}{PAGE}'
-        if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+        ch += sitemap_pages.ensure_url(loc, today, 'monthly', '0.8')
     print(f'build-play: writes={ch}')

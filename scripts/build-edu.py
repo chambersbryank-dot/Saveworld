@@ -314,11 +314,9 @@ def main():
         json.dump(data_for(l, hubs, PL), open(f'assets/data/edu.{l}.json', 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
     w = write_generated('Kids_Map.html', kids_map(hubs)) + write_generated('Lesson_Builder.html', lesson_builder(hubs)) + write_generated('Satellite_Explorer.html', sat_explorer())
     k = inject()
-    sm = rd('sitemap.xml'); sm0 = sm
+    import sitemap_pages
     for p in PAGES_NEW:
-        if f'savingplanets.com/{p}<' not in sm:
-            sm = sm.replace('  <url><loc>https://www.savingplanets.com/Teachers.html</loc>', f'  <url><loc>https://www.savingplanets.com/{p}</loc><lastmod>2026-10-14</lastmod></url>\n  <url><loc>https://www.savingplanets.com/Teachers.html</loc>', 1)
-    if sm != sm0: open('sitemap.xml', 'w', encoding='utf8').write(sm)
+        sitemap_pages.ensure_url(f'https://www.savingplanets.com/{p}', '2026-10-14')
     print(f'edu: {w} pages written, {k} pages linked, {len(hubs)} hubs, {sum(len(h["sols"]) for h in hubs.values())} solutions, {sum(len(h["facts"]) for h in hubs.values())} facts')
 
 def post_translate():

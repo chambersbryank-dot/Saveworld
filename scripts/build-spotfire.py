@@ -144,12 +144,10 @@ def link_in(l):
     return n
 
 def sitemap():
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
-        loc = f'{SITE}{d(l)}{PAGE}'
-        if f'<loc>{loc}</loc>' not in s:
-            s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
-    wr('sitemap.xml', s)
+        sitemap_pages.ensure_url(f'{SITE}{d(l)}{PAGE}', today, 'monthly', '0.7')
 
 if __name__ == '__main__':
     ch = 0

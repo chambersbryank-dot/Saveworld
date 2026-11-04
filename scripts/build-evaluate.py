@@ -163,13 +163,16 @@ def link_about():
         open(f, 'w', encoding='utf-8').write(s)
 
 def sitemap():
-    sm = open('sitemap.xml', encoding='utf-8').read()
-    if PAGE in sm: return
-    def repl(m):
-        return m.group(0) + m.group(0).replace('About.html', PAGE)
-    sm2, n = re.subn(r'  <url><loc>https://www\.savingplanets\.com/(?:[a-z]{2}/)?About\.html</loc>.*?</url>\n', repl, sm)
-    if n < 6: raise SystemExit(f'sitemap About entries: {n}')
-    open('sitemap.xml', 'w', encoding='utf-8').write(sm2)
+    import sitemap_pages
+    pat = re.compile(r'  <url><loc>https://www\.savingplanets\.com/(?:[a-z]{2}/)?About\.html</loc>.*?</url>\n')
+    for lang in sitemap_pages.LANGS:
+        sm = sitemap_pages.read_lang(lang)
+        if not sm or PAGE in sm: continue
+        def repl(m):
+            return m.group(0) + m.group(0).replace('About.html', PAGE)
+        sm2, n = pat.subn(repl, sm)
+        if n != 1: raise SystemExit(f'sitemap-{lang}.xml About.html entries: {n}')
+        sitemap_pages.write_lang(lang, sm2)
 
 def apply():
     write_pages()

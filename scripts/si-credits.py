@@ -21,7 +21,8 @@ SI_IMAGES -= REAL_PHOTOS
 SI_T = {'en': 'Created by the Founder and SI', 'fr': 'Créé par le fondateur et SI', 'es': 'Creado por el fundador y SI',
         'ar': 'من إعداد المؤسس وSI', 'it': 'Creato dal fondatore e da SI',
         'he': 'נוצר על ידי המייסד ו-SI'}  # Oct 18: hidden he pages were skipped, so a rotated homepage card failed --check
-MARK = re.compile(r'SI Partner|SI وBiological|שותף SI ביולוגי|שותף Biological SI')  # Oct 17: hidden he pages carry the Hebrew credit
+# Nov 3 credit line. The check must accept the caption this file inserts.
+MARK = re.compile('|'.join(re.escape(v) for v in SI_T.values()))
 CSS = '.si-credit{display:block;font-size:.75rem;line-height:1.3;opacity:.85;font-style:italic;margin:.25rem 0 0}'
 
 def is_si(src):
