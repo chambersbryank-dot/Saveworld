@@ -1302,3 +1302,8 @@ Owner: "So close. If you went 4 down, then move equal two up" (title block sat a
 
 ## Nov 3 2026 — "Biological SI Partner" retired
 Founder request: say "the Founder" (fr le fondateur, es el fundador, it il fondatore, ar المؤسس, he המייסד). Never display "Biological SI Partner" or translations. Always "SI", never "AI". biosipartner@ alias stays as an address only.
+
+## Nov 4 2026 (HST): daily numbers check
+- Verified at 92594b37de (after app banner removal, Founder/SI credits, breadcrumb hide, nav fix, Ways to Help preview redesign): **266 solutions** (Solutions.html cards = assets/data/solutions.json site.solutions = 266 in en/fr/es/ar/it/he), 11 hubs, 21 myths and 26 Amazing Facts, homepage counters 266 / 11 / 6 unchanged in every language. Sitemap 384 en + 383 x 5 = 2,299 URLs, unchanged (earlier entries wrote 2,298; the per-language files have not changed).
+- New Ways to Help layout: every hub's "N organizations" matches its cards in all 6 languages (17 hub groups, 78 donation cards + 266 roll-up-your-sleeves cards); the "82 donation pages and 230 volunteer programs" cross-site line still holds (78+4, 227+3 from yesterday's check; 230 Volunteer buttons in the roll-up section).
+- No repo page changes, no STYLEV bump. Earlier flags unchanged. Milestones: none (next: 2,300 sitemap pages or 300 solutions).
