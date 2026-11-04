@@ -621,3 +621,19 @@ var rel=document.getElementById('crs-rel-h');var anchor=rel?rel.closest('section
 if(anchor&&anchor.parentNode)anchor.parentNode.insertBefore(s,anchor);else main.appendChild(s);
 }catch(e){}})();
 /* CRSSOURCES:END */
+/* NEWBADGE:START — "New this week" badge on solution cards added in the last 7 days (real git add dates; auto-expires) (2026-11-04) */
+(function(){try{
+var cards=document.querySelectorAll('article.card');if(!cards.length||!window.fetch)return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var T={en:'New this week',fr:'Nouveau cette semaine',es:'Nuevo esta semana',ar:'جديد هذا الأسبوع',it:'Novità della settimana',he:'חדש השבוע'};
+fetch('/assets/data/solution-added.json').then(function(r){return r.json()}).then(function(d){
+ var now=Date.now();
+ [].forEach.call(cards,function(c){var a=c.querySelector('a[href$=".html"]');if(!a||c.querySelector('.new-badge'))return;
+  var p=(c.dataset.url||a.getAttribute('href')).split(/[?#]/)[0].split('/').pop();var dt=d[p];if(!dt)return;
+  var today=new Date(now-36e6).toISOString().slice(0,10);var age=(Date.parse(today)-Date.parse(dt))/864e5;if(age<0||age>7)return;
+  var b=document.createElement('span');b.className='new-badge';b.textContent='✨ '+(T[L]||T.en);b.title=dt;
+  b.style.cssText='display:inline-block;margin:.45rem .6rem 0;padding:.15rem .55rem;border-radius:999px;background:#ffd54a;color:#1a1300;font-weight:800;font-size:.78rem;line-height:1.4';
+  c.insertBefore(b,c.firstChild)});
+});
+}catch(e){}})();
+/* NEWBADGE:END */

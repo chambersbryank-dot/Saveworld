@@ -97,6 +97,8 @@ python3 scripts/calc_check.py >/dev/null && node scripts/test-calcs.js >/dev/nul
 python3 scripts/build-calcs.py          # Oct 16: 11 search-named calculator pages + Calculators.html (all langs, sitemap)
 python3 scripts/build-paths.py          # Oct 16: Careers, Cadets (JROTC+CAP), AP_IB_Physics, Homeschool + Learn hub Start-here block (all langs, sitemap)
 python3 scripts/build-new.py            # Oct 15 item 10: dated New this week strip (home x5, Solutions, World_Map) + Changelog.html from git first-publish dates
+python3 scripts/build-added-dates.py      # Nov 4: real first-commit dates -> assets/data/solution-added.json (auto-expiring New badge)
+python3 scripts/build-standards-index.py  # Nov 4: NGSS/CCSS codes per page -> standards-index.json (Teachers filter)
 python3 scripts/build-nav.py            # Oct 16: header nav v2 (two rows, dropdowns, mobile accordion); LAST page generator so copied pages get correct nav
 python3 scripts/build-learn-hubs.py     # Oct 26 (founder): Learn topic hubs + aero 4-year roadmap + Learn dropdown + course breadcrumbs (6 langs), after build-nav
 python3 scripts/build-kids-p1.py       # Oct 17 Phase 1: Space Passport, Myth or Fact? Arcade, Boarding Pass (all langs + he), Superpowers panel (site.js SPOW), Play & Learn New row
