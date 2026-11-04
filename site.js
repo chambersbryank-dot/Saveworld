@@ -549,7 +549,7 @@ if(document.readyState==='complete')later();else window.addEventListener('load',
 }catch(e){}})();
 /* LANGBANNER:END */
 /* HOWTOCITE:START — one-line "How to cite" in every footer (2026-11-04) */
-(function(){try{
+(function(){function go(){try{
 var f=document.querySelector('footer');if(!f||f.querySelector('.cite-foot'))return;
 var L=(document.documentElement.lang||'en').slice(0,2);
 var T={en:'How to cite',fr:'Comment citer',es:'Cómo citar',ar:'كيفية الاستشهاد',it:'Come citare',he:'איך לצטט'};
@@ -560,8 +560,9 @@ var d=new Date().toLocaleDateString(L,{year:'numeric',month:'long',day:'numeric'
 var p=document.createElement('p');p.className='cite-foot';p.style.cssText='font-size:.82rem;opacity:.9;margin:.4rem auto;max-width:720px';
 p.innerHTML='<strong>'+(T[L]||T.en)+':</strong> <span class="cite-txt"></span>';
 p.querySelector('.cite-txt').textContent='Saving Planets. "'+t+'." '+u+'. '+(A[L]||A.en)+' '+d+'.';
-f.insertBefore(p,f.querySelector('.lic-foot')||null);
-}catch(e){}})();
+var old=f.querySelector('.fv2-old');if(old)f.insertBefore(p,old);else f.insertBefore(p,f.querySelector('.lic-foot')||null);
+}catch(e){}}
+if(document.readyState==='complete')go();else window.addEventListener('load',go);})();
 /* HOWTOCITE:END */
 /* STDFILTER:START — filter Teachers lesson lists by NGSS/CCSS code (2026-11-04) */
 (function(){try{
