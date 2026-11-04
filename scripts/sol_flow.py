@@ -10,7 +10,7 @@
 CSS lives in solutions.css between /* SOL-FLOW:START */ markers (write_css()), scoped to .sol-flow / .sol-top."""
 import re
 
-TOP_TEXT, TOP_ARIA = 'Back to top', 'Back to the top of the page'
+TOP_TEXT, TOP_ARIA = 'Back to top', 'Back to top of the page'
 TOP_TM = {
     'fr': {TOP_TEXT: 'Haut de page', TOP_ARIA: 'Revenir en haut de la page'},
     'es': {TOP_TEXT: 'Volver arriba', TOP_ARIA: 'Volver al principio de la página'},
