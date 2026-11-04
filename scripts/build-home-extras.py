@@ -132,7 +132,8 @@ PROMO_HOME = (PROMO.replace('class="promo-v4 promo-v6"', 'class="promo-v4"').rep
 # Oct 21 (founder): nothing under the homepage promo video: no caption/credits figcaption, no visible Transcript toggle (screen-reader only), no X link
 PROMO_HOME = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S).replace(PX, '') if PX else re.sub(r'<figcaption>.*?</figcaption>', '', PROMO_HOME, flags=re.S)
 PROMO_HOME = PROMO_HOME.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
-s = put(s, 'PROMO', PROMO_HOME, r'<!-- IMPACT:START -->.*?<!-- IMPACT:END -->')
+# Nov 4 2026 (founder): promo videos taken down from both sites; homepage promo block removed, not rebuilt
+s = re.sub(r'\n?<!-- PROMO:START -->.*?<!-- PROMO:END -->', '', s, flags=re.S)
 open('index.html', 'w', encoding='utf-8').write(s)
 # Oct 18 (owner request): the same promo on About, directly below the 'From the ocean floor…' strip. Oct 20: it is now the ONLY About video.
 s = open('About.html', encoding='utf-8').read()
@@ -144,7 +145,8 @@ PROMO_ABOUT = re.sub(r'<figcaption>.*?</figcaption>', '', PROMO41.replace('class
 PROMO_ABOUT = PROMO_ABOUT.replace('</video>', '</video><figcaption class="photo-credit">Created by the Founder and SI</figcaption>', 1)
 PROMO_ABOUT = PROMO_ABOUT.replace('<figure class="sp-video-fig">', '<figure class="sp-video-fig" data-transcript="sr">', 1)
 s = re.sub(r'<!-- PROMO:START -->.*?<!-- PROMO:END -->', '', s, flags=re.S)
-s = put(s, 'VIDEO', PROMO_ABOUT, r'<!-- DIFF:START -->.*?<!-- DIFF:END -->')
+# Nov 4 2026 (founder): About promo video removed; VIDEO block no longer rebuilt
+s = re.sub(r'\n?<!-- VIDEO:START -->.*?<!-- VIDEO:END -->', '', s, flags=re.S)
 open('About.html', 'w', encoding='utf-8').write(s)
 print('SOTW:', e['page'], '| EO active:', len(eo))
 

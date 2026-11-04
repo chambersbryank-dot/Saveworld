@@ -9,10 +9,7 @@ def upload(mp4):
     d = subprocess.run(['git', 'log', '--diff-filter=A', '--format=%aI', '--', mp4], capture_output=True, text=True).stdout.split()
     return R2_ONLY.get(os.path.basename(mp4)) or (d[-1] if d else None)
 # Oct 18: videos uploaded straight to R2 (never committed under assets/videos/) have no git history; their upload dates live here
-R2_ONLY = {'savingplanets-about-v4.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-about-v4-720.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v3-1920x1080.mp4': '2026-10-18T01:00:00-10:00',
-           'savingplanets-promo-v3-1080x1920.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-promo-v4-final-1080x1920.mp4': '2026-10-18T17:10:20-10:00', 'savingplanets-promo-v4-1-1080x1920.mp4': '2026-10-24T06:00:00-10:00',
-           'savingplanets-promo-v6-1080x1920.mp4': '2026-10-20T21:30:00-10:00', 'savingplanets-promo-v6-1080x1920-720.mp4': '2026-10-20T21:30:00-10:00',
-           # Oct 19: first-commit dates from the full git history (shallow /tmp clones can't see them, so uploadDate went missing -> seo-lint jsonld-invalid)
+R2_ONLY = {'savingplanets-about-v4.mp4': '2026-10-18T01:00:00-10:00', 'savingplanets-about-v4-720.mp4': '2026-10-18T01:00:00-10:00', # Oct 19: first-commit dates from the full git history (shallow /tmp clones can't see them, so uploadDate went missing -> seo-lint jsonld-invalid)
            'artemis-ii-farthest.mp4': '2026-10-11T12:54:20-10:00', 'grace-fo-satellites.mp4': '2026-10-11T21:19:05-10:00', 'great-bubble-barrier.mp4': '2026-10-11T20:40:50-10:00',
            'life-terra-trees.mp4': '2026-10-11T20:59:21-10:00', 'channel-intro.mp4': '2026-10-11T19:31:35-10:00', 'hero-loop.mp4': '2026-10-11T21:58:28-10:00',
            'savingplanets-about-v3.mp4': '2026-10-14T21:36:20-10:00', 'savingplanets-about-v3-720.mp4': '2026-10-14T21:56:36-10:00',
@@ -27,7 +24,11 @@ for f in sorted(glob.glob('*.html') + glob.glob('*/*.html')):
     if f.startswith('pagefind'): continue
     s = open(f, encoding='utf-8').read()
     m = re.search(r'<!-- VIDEO:START -->(.*?)<!-- VIDEO:END -->', s, re.S)
-    if not m: continue
+    if not m:
+        # Nov 4 2026: drop a stale VideoObject tag when the page no longer has a video (promo takedown)
+        t = re.sub(r'\n?<script (?:type="application/ld\+json" id="sp-video-ld"|id="sp-video-ld" type="application/ld\+json")>.*?</script>', '', s, flags=re.S)
+        if t != s: open(f, 'w', encoding='utf-8').write(t); n += 1
+        continue
     b = m.group(1)
     src = re.search(r'<source[^>]*src="(?:\.\./)?([^"]+\.mp4)"', b); poster = re.search(r'poster="(?:\.\./)?([^"]+)"', b)
     h2 = re.search(r'<h2[^>]*>(.*?)</h2>', b, re.S)
