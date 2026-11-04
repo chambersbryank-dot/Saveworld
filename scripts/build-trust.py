@@ -74,8 +74,6 @@ pl = open('i18n/pages.txt', encoding='utf8').read().split('\n')
 add = [s + '.html' for s in ('Privacy', 'Editorial_Policy', 'Corrections', 'Topics') if s + '.html' not in pl]
 if add: open('i18n/pages.txt', 'a', encoding='utf8').write(('' if pl[-1] == '' else '\n') + '\n'.join(add) + '\n'); print('pages.txt +', add)
 # ---- English sitemap entries (i18n-sitemap.py adds the fr/es/ar URLs and alternates)
-sm = open('sitemap.xml', encoding='utf8').read()
+import sitemap_pages
 for slug in ('Privacy', 'Editorial_Policy', 'Corrections', 'Topics'):
-    loc = f'<loc>https://www.savingplanets.com/{slug}.html</loc>'
-    if loc not in sm: sm = sm.replace('</urlset>', f'  <url>{loc}<lastmod>2026-10-14</lastmod></url>\n</urlset>', 1)
-open('sitemap.xml', 'w', encoding='utf8').write(sm)
+    sitemap_pages.ensure_url(f'https://www.savingplanets.com/{slug}.html', '2026-10-14')

@@ -52,6 +52,15 @@ def main():
     if '--dry' in sys.argv: return
     if not os.path.exists('/home/box/.cloudflare_token'): print('si-index: no Cloudflare token on this machine, skipped'); return
     import si_cf
+    try:
+        _embed(todo, gone, state, si_cf)
+    except RuntimeError as e:
+        if '-> 401:' in str(e) or 'Authentication error' in str(e):
+            print('si-index: Cloudflare 401 authentication error; skipped (non-fatal)')
+            return
+        raise
+
+def _embed(todo, gone, state, si_cf):
     for i in range(0, len(todo), 50):
         b = todo[i:i + 50]
         emb = si_cf.call('POST', '/accounts/{acct}/ai/run/@cf/baai/bge-m3', {'text': [d['title'] + '\n' + d['text'] for d in b]})['result']['data']

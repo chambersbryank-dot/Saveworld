@@ -24,10 +24,8 @@ for d in ('', 'fr/', 'es/', 'ar/'):
         s = re.sub(r'\s*<a class="btn[^"]*" href="Community\.html">[^<]*</a>', '', s)            # buttons
         s = re.sub(r"\n[^\n]*url: 'Community\.html'[^\n]*", '', s)                     # Search.html fallback list
         if s != o: open(f, 'w', encoding='utf8').write(s); n += 1
-sm = open('sitemap.xml', encoding='utf8').read()
-sm2 = re.sub(r'\s*<url><loc>https://www\.savingplanets\.com/(?:(?:fr|es|ar|it)/)?Community\.html</loc>.*?</url>', '', sm, flags=re.S)
-sm2 = re.sub(r'<xhtml:link [^>]*href="https://www\.savingplanets\.com/(?:(?:fr|es|ar|it)/)?Community\.html"/>', '', sm2)
-if sm2 != sm: open('sitemap.xml', 'w', encoding='utf8').write(sm2)
+import sitemap_pages
+sitemap_pages.strip_page('Community.html')
 pt = open('i18n/pages.txt', encoding='utf8').read()
 pt2 = ''.join(l for l in pt.splitlines(True) if l.strip() != 'Community.html')
 if pt2 != pt: open('i18n/pages.txt', 'w', encoding='utf8').write(pt2)

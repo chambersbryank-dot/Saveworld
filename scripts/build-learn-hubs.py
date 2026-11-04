@@ -308,11 +308,10 @@ def main():
         for t in X.TOPICS: ch += wr(d(l) + t[1], hub(l, t[0], C, years, NL))
         ch += wr(d(l) + J.PAGE, jet_page(l, C, NL))
         ch += wr(d(l) + R.PAGE, rocket_page(l, NL))
-    sm = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         for t in X.TOPICS + [(None, J.PAGE), (None, R.PAGE)]:
-            loc = f'{SITE}{d(l)}{t[1]}'
-            if f'<loc>{loc}</loc>' not in sm: sm = sm.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', sm)
+            ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{t[1]}', today, 'monthly', '0.7')
     print(f'build-learn-hubs: writes={ch}')
 if __name__ == '__main__': main(); main()  # second pass: hubs copy Learn.html chrome, so one more pass converges (second prints writes=0)

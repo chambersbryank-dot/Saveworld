@@ -396,10 +396,12 @@ def page_pass(p, l, n):
     return wr(p, s)
 
 def sitemap():
-    s = rd('sitemap.xml'); o = s
-    s = re.sub(r'\s*<url><loc>[^<]*404\.html</loc>.*?</url>', '', s, flags=re.S)
-    s = re.sub(r'(%s(?:(?:fr|es|ar|it)/)?)index\.html' % re.escape(SITE), r'\1', s)
-    wr('sitemap.xml', s)
+    import sitemap_pages
+    def fix(s):
+        s = re.sub(r'\s*<url><loc>[^<]*404\.html</loc>.*?</url>', '', s, flags=re.S)
+        s = re.sub(r'(%s(?:(?:fr|es|ar|it|he)/)?)index\.html' % re.escape(SITE), r'\1', s)
+        return s
+    sitemap_pages.rewrite(fix)
 
 if __name__ == '__main__':
     n = count_solutions(); ch = 0

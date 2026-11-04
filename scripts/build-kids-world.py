@@ -322,8 +322,8 @@ def links():
     return n
 
 def sitemap():
-    sm = rd('sitemap.xml') if os.path.exists('sitemap.xml') else ''
-    if f'savingplanets.com/{PAGE}' in sm: return
+    import sitemap_pages
+    if sitemap_pages.english_has(PAGE): return
     import subprocess
     subprocess.check_call(['python3', 'scripts/i18n-sitemap.py'])
 

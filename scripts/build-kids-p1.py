@@ -321,10 +321,9 @@ if __name__ == '__main__':
         ch += wr(d(l) + 'Space_Passport.html', passport(l))
         a, n = arcade(l); counts[l] = n; ch += wr(d(l) + 'Myth_or_Fact_Arcade.html', a)
         ch += wr(d(l) + 'Boarding_Pass.html', boarding(l))
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in PUB:
         for P in PAGES:
-            loc = f'{SITE}{d(l)}{P}'
-            if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s)
+            ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{P}', today, 'monthly', '0.8')
     print(f'build-kids-p1: langs={LANGS} arcade claims={counts} writes={ch}')

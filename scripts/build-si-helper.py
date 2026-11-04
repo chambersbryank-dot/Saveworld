@@ -56,8 +56,9 @@ def page(l):
 if __name__ == '__main__':
     ch = 0
     for l in LANGS: ch += teachers(l) + privacy(l) + wr(d(l) + 'SI_Helper.html', page(l))
-    s = rd('sitemap.xml'); today = datetime.date.today().isoformat()
+    import sitemap_pages
+    today = datetime.date.today().isoformat()
     for l in LANGS:
         loc = f'{SITE}{d(l)}SI_Helper.html'
-        if f'<loc>{loc}</loc>' not in s: s = s.replace('</urlset>', f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n</urlset>')
-    ch += wr('sitemap.xml', s); print(f'build-si-helper: writes={ch}')
+        ch += sitemap_pages.ensure_url(loc, today, 'monthly', '0.5')
+    print(f'build-si-helper: writes={ch}')

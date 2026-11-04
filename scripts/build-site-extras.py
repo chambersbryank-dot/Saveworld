@@ -137,9 +137,8 @@ def main():
     n = sum(fix(f, fm) for f in sorted(os.listdir('.')) if f.endswith('.html') and not f.startswith('google'))
     pl = rd('i18n/pages.txt')
     if 'Sitemap.html' not in pl.split(): open('i18n/pages.txt', 'w', encoding='utf8').write(pl.rstrip('\n') + '\nSitemap.html\n')
-    sm = rd('sitemap.xml')
-    if 'savingplanets.com/Sitemap.html<' not in sm:
-        open('sitemap.xml', 'w', encoding='utf8').write(sm.replace('  <url><loc>https://www.savingplanets.com/Contact.html</loc>', '  <url><loc>https://www.savingplanets.com/Sitemap.html</loc><lastmod>2026-10-13</lastmod></url>\n  <url><loc>https://www.savingplanets.com/Contact.html</loc>', 1))
+    import sitemap_pages
+    sitemap_pages.ensure_url('https://www.savingplanets.com/Sitemap.html', '2026-10-13')
     print(f'site-extras: footer map + main landmark on {n} changed pages; Sitemap.html ({sum(len(x[2]) for x in hl)} solutions in {len(hl)} hubs)')
 
 if __name__ == '__main__':
