@@ -548,3 +548,18 @@ function later(){(window.requestIdleCallback||function(f){setTimeout(f,200)})(sh
 if(document.readyState==='complete')later();else window.addEventListener('load',later);
 }catch(e){}})();
 /* LANGBANNER:END */
+/* HOWTOCITE:START — one-line "How to cite" in every footer (2026-11-04) */
+(function(){try{
+var f=document.querySelector('footer');if(!f||f.querySelector('.cite-foot'))return;
+var L=(document.documentElement.lang||'en').slice(0,2);
+var T={en:'How to cite',fr:'Comment citer',es:'Cómo citar',ar:'كيفية الاستشهاد',it:'Come citare',he:'איך לצטט'};
+var A={en:'Accessed',fr:'Consulté le',es:'Consultado el',ar:'تاريخ الاطلاع',it:'Consultato il',he:'נצפה ב-'};
+var c=document.querySelector('link[rel=canonical]');var u=(c&&c.href)||location.href.split('#')[0].split('?')[0];
+var t=(document.title||'').split(/\s[|–—-]\s/)[0].trim();
+var d=new Date().toLocaleDateString(L,{year:'numeric',month:'long',day:'numeric'});
+var p=document.createElement('p');p.className='cite-foot';p.style.cssText='font-size:.82rem;opacity:.9;margin:.4rem auto;max-width:720px';
+p.innerHTML='<strong>'+(T[L]||T.en)+':</strong> <span class="cite-txt"></span>';
+p.querySelector('.cite-txt').textContent='Saving Planets. "'+t+'." '+u+'. '+(A[L]||A.en)+' '+d+'.';
+f.insertBefore(p,f.querySelector('.lic-foot')||null);
+}catch(e){}})();
+/* HOWTOCITE:END */
