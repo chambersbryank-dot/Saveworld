@@ -563,3 +563,19 @@ p.querySelector('.cite-txt').textContent='Saving Planets. "'+t+'." '+u+'. '+(A[L
 f.insertBefore(p,f.querySelector('.lic-foot')||null);
 }catch(e){}})();
 /* HOWTOCITE:END */
+/* STDFILTER:START — filter Teachers lesson lists by NGSS/CCSS code (2026-11-04) */
+(function(){try{
+var lists=[].slice.call(document.querySelectorAll('ul.t-list')).filter(function(u){return u.querySelector('.t-print')});
+if(!lists.length||!window.fetch)return;
+var base=(document.querySelector('link[rel=canonical]')||{}).href||'';
+fetch('/standards-index.json').then(function(r){return r.json()}).then(function(idx){
+ var all={};lists.forEach(function(u){[].forEach.call(u.children,function(li){var a=li.querySelector('a');if(!a)return;var p=(a.getAttribute('href')||'').split(/[?#]/)[0].split('/').pop();var c=idx[p]||[];li.dataset.std=' '+c.join(' ')+' ';c.forEach(function(k){all[k]=(all[k]||0)+1})})});
+ var keys=Object.keys(all).sort();if(!keys.length)return;
+ var w=document.createElement('div');w.className='std-filter';w.style.cssText='display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.6rem 0 1rem';
+ w.innerHTML='<label for="std-sel" style="font-weight:700">Standard</label><select id="std-sel" style="min-height:44px;padding:.3rem .6rem;border-radius:10px;font:inherit"><option value="">All standards</option></select><span class="std-n" aria-live="polite" style="font-size:.9rem"></span>';
+ var sel=w.querySelector('select');keys.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k+' ('+all[k]+')';sel.appendChild(o)});
+ lists[0].parentNode.insertBefore(w,lists[0]);
+ sel.addEventListener('change',function(){var v=sel.value,n=0;lists.forEach(function(u){[].forEach.call(u.children,function(li){var ok=!v||(li.dataset.std||'').indexOf(' '+v+' ')>-1;li.hidden=!ok;if(ok)n++});u.hidden=![].some.call(u.children,function(li){return !li.hidden})});w.querySelector('.std-n').textContent=v?n+' lessons':''});
+});
+}catch(e){}})();
+/* STDFILTER:END */
