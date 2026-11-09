@@ -225,8 +225,10 @@ def fix(p):
         # Oct 15: never pad descriptions with image/video credits (the SI credit leaked into the Arabic homepage description)
         cands = [x for x in ([hero] if hero else []) + soup.select('.impact-box p, main p, section p')
                  if not any(SKIP_P.search(c) for c in (x.get('class') or [])) and not x.find_parent(class_=SKIP_P)
-                 and not x.find_parent(['nav', 'footer', 'figure', 'aside', 'details'])][:6]
+                 and not x.find_parent(['nav', 'footer', 'figure', 'aside', 'details', 'template'])][:6]
         extra = [tidy(ptext(x), lang) for x in cands]
+        # Hidden lesson-builder failure copy is not a page summary. It once padded Lesson_Plan.html.
+        extra = [e for e in extra if 'Sorry, the lesson builder could not load' not in e]
         extra = [e for e in extra if 'Biological SI' not in e and 'SI Partner' not in e]
         extra = [e for e in extra if e and not e.startswith(('Image', 'Source', 'Image :', 'Imagen', 'الصورة'))]
         if lang != 'en' and (not d or d.strip() == en_d.strip()): d = extra[0] if extra else PAD[lang]

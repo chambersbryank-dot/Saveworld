@@ -177,6 +177,8 @@ def collect(lang):
     return {'ui': UI[lang], 'subjects': SUBJ[lang], 'solutions': sols}
 
 DESC = "Teachers pick a grade, a subject, a lesson length, and one or more Saving Planets solutions. The page assembles a printable plan from those pages: objectives from the tagged standards, an activity, the discussion questions, and an assessment."
+# Meta only. The visible hero stays DESC. This stays inside the 120-155 description window so seo-fix does not pad it.
+META = "Teachers pick a grade, subject, lesson length, and solutions. The printable plan has objectives, an activity, discussion questions, and an assessment."
 LEAD = "Pick a grade, a subject, and how long the lesson is. Then tick the solutions you want. The plan uses only text already on those pages and the standards already tagged to them."
 OPTS_G = ''.join(f'<option value="{g}">{g}</option>' for g in GRADES)
 OPTS_S = ''.join(f'<option value="{s}">{esc(SUBJ["en"][s])}</option>' for s in SUBJECTS)
@@ -206,7 +208,7 @@ def shell():
     s = rd('Teachers.html')
     s = re.sub(r'<main id="main">.*?</main>', '<main id="main">\n' + MAIN + '\n</main>', s, count=1, flags=re.S)
     s = re.sub(r'<title>.*?</title>', '<title>Printable Lesson Plan | Saving Planets</title>', s, count=1, flags=re.S)
-    desc = esc(DESC)
+    desc = esc(META)
     for attr in ('name="description"', 'property="og:description"', 'name="twitter:description"'):
         s = re.sub(rf'(<meta {attr} content=")[^"]*"', lambda m: m.group(1) + desc + '"', s, count=1)
     for attr in ('property="og:title"', 'name="twitter:title"'):
