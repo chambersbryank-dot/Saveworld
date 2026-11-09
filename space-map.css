@@ -1,0 +1,71 @@
+/* Space Map draft. Dark shell matches the World Map; solution cards stay the white site cards. */
+body.space-map-page{background:#001428;color:#e8eef5}
+.sm-main{color:#e8eef5;background:#001428;margin-top:var(--spn-h,92px);padding:0 0 2.5rem}
+.sm-soon{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem .9rem;margin:0;padding:.75rem clamp(.8rem,2vw,1.4rem);background:#f5c518;color:#1a1200}
+.sm-soon-badge{display:inline-block;padding:.2rem .55rem;border-radius:999px;background:#1a1200;color:#f5c518;font-weight:800;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase}
+.sm-soon p{margin:0;font-weight:650;line-height:1.35}
+.sm-screen{box-sizing:border-box;padding:.8rem clamp(.6rem,2vw,1.4rem) 0;max-width:1280px;margin:0 auto}
+.sm-title{margin:.2rem 0 .35rem;text-align:center;color:#fff;font-size:clamp(1.35rem,1rem + 1.4vw,2rem);line-height:1.2}
+.sm-lead{max-width:46rem;margin:0 auto .8rem;text-align:center;line-height:1.45}
+.sm-view{position:relative;height:min(72vh,760px);min-height:340px;border-radius:16px;overflow:hidden;background:#02060c;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.sm-canvas{display:block;width:100%;height:100%;touch-action:none}
+.sm-markers{position:absolute;inset:0;pointer-events:none}
+.sm-pin{position:absolute;left:0;top:0;width:46px;height:46px;padding:0;border-radius:50%;border:3px solid var(--c,#4cc3ff);overflow:hidden;background:#041018;cursor:pointer;pointer-events:auto;box-shadow:0 2px 8px rgba(0,0,0,.45)}
+.sm-pin img{width:100%;height:100%;object-fit:cover;display:block}
+.sm-pin .sm-tip{position:absolute;left:50%;top:calc(100% + 4px);transform:translateX(-50%);background:#071018;color:#fff;font-size:.75rem;font-weight:700;line-height:1.2;padding:.2rem .45rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none}
+.sm-pin:hover .sm-tip,.sm-pin:focus-visible .sm-tip{opacity:1}
+.sm-approx{position:absolute;right:-2px;bottom:-2px;width:16px;height:16px;border-radius:50%;background:#1a1200;color:#f5c518;font-size:11px;font-weight:800;line-height:16px;text-align:center}
+.sm-ctrl{position:absolute;top:10px;inset-inline-start:10px;display:flex;gap:.35rem;z-index:2}
+.sm-ctrl button{min-width:44px;min-height:44px;padding:0 .7rem;border:0;border-radius:10px;background:rgba(255,255,255,.94);color:#10202c;font:inherit;font-weight:750;cursor:pointer}
+.sm-credit{position:absolute;bottom:8px;inset-inline-end:8px;margin:0;max-width:min(36rem,calc(100% - 16px));font-size:.75rem;line-height:1.3;color:#fff;background:rgba(0,0,0,.45);padding:.25rem .45rem;border-radius:6px}
+.sm-credit a{color:#fff}
+.sm-status{position:absolute;top:10px;inset-inline-end:10px;margin:0;max-width:16rem;font-size:.75rem;background:rgba(0,0,0,.45);color:#fff;padding:.3rem .5rem;border-radius:8px}
+.sm-hint{margin:.45rem 0 0;text-align:center;font-size:.9rem;opacity:.9}
+.sm-still{display:none;max-width:960px;margin:0 auto}
+.sm-still img{width:100%;height:auto;border-radius:16px}
+.sm-still p{font-size:.95rem}
+.sm-legend{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.6rem;margin:1rem 0 0;padding:0}
+.sm-legend button{display:flex;gap:.55rem;align-items:flex-start;width:100%;text-align:start;min-height:44px;padding:.55rem .7rem;border-radius:12px;border:2px solid transparent;background:rgba(255,255,255,.06);color:#e8eef5;font:inherit;cursor:pointer}
+.sm-legend button[aria-pressed="false"]{opacity:.45}
+.sm-legend button.is-on{border-color:var(--c)}
+.sm-swatch{flex:none;width:.9rem;height:.9rem;margin-top:.2rem;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+.sm-legend strong{display:block}
+.sm-legend span{display:block;font-size:.86rem;line-height:1.35;font-weight:500}
+.sm-scale{max-width:46rem;margin:.8rem auto 0;font-size:.9rem;text-align:center}
+.sm-list{max-width:1100px;margin:0 auto;padding:1.2rem clamp(.7rem,2vw,1.2rem) 0}
+.sm-list h2{color:#fff;font-size:1.25rem}
+.sm-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sm-table{width:100%;border-collapse:collapse;font-size:.95rem}
+.sm-table th,.sm-table td{text-align:start;padding:.45rem .5rem;border-bottom:1px solid rgba(255,255,255,.14);vertical-align:top}
+.sm-table th{font-weight:750}
+.sm-table a{color:#8fd3ff}
+.sm-table button{min-height:44px;padding:.3rem .6rem;border-radius:8px;border:0;background:#e8f4fb;color:#003755;font:inherit;font-weight:700;cursor:pointer}
+.sm-err{padding:1rem;background:#3a1212;color:#fff;border-radius:10px}
+#sm-dialog{border:0;padding:0;background:transparent;max-width:min(440px,calc(100vw - 1.2rem));color:#10202c}
+#sm-dialog::backdrop{background:rgba(0,8,16,.72)}
+.sm-cardwrap{position:relative;background:#0f1b26;color:#e8eef5;border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+html.dark body.space-map-page .sm-cardwrap .card{height:auto;box-shadow:none;margin:0;background:#0f1b26;color:#e8eef5}
+html.dark body.space-map-page .sm-cardwrap h3,
+html.dark body.space-map-page .sm-cardwrap h3 a{color:#fff}
+.sm-cardwrap .image-container img{width:100%;height:220px;object-fit:cover;display:block}
+.sm-cardwrap .photo-credit{margin:0;padding:.45rem 1rem 0;font-size:.75rem;line-height:1.35;color:#c5d4e4}
+.sm-cardwrap .photo-credit a{color:inherit}
+.sm-cardwrap h3{margin:.45rem 0 .2rem;padding:0 1rem;font-size:1.2rem;color:#fff}
+.sm-cardwrap h3 a{color:#fff;text-decoration:none}
+.sm-cardwrap .sol-desc,.sm-cardwrap .sol-desc span{margin:0;padding:0 1rem;line-height:1.4;color:#e8eef5}
+.sm-cardwrap .sm-orbit{margin:0;padding:.55rem 1rem 1rem;font-size:.88rem;line-height:1.4;color:#d5e4f2}
+.sm-cardwrap .sm-more{margin:0;padding:0 1rem 1rem}
+.sm-cardwrap .sm-more a{color:#8fd3ff;font-weight:750}
+.sm-close{position:absolute;top:8px;inset-inline-end:8px;min-width:44px;min-height:44px;border:0;border-radius:999px;background:rgba(7,16,24,.82);color:#fff;font:inherit;font-weight:750;cursor:pointer}
+@media (max-width:700px){
+  .sm-view{height:68vh;min-height:300px;border-radius:12px}
+  .sm-pin{width:44px;height:44px}
+  .sm-status{position:static;max-width:none;border-radius:0}
+  .sm-credit{font-size:.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .sm-view{display:none}
+  .sm-still{display:block}
+  .sm-hint{display:none}
+  .sm-pin,.sm-canvas{transition:none}
+}
