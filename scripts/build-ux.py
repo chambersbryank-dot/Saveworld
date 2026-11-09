@@ -27,7 +27,7 @@ T = {
      'Space.html':'Space','Enceladus.html':'Enceladus','Upcoming_Launches.html':'Upcoming Launches','Planetary_Defense.html':'Planetary Defense','Space_Weather.html':'Space Weather','Space_Disposal.html':'Space Disposal','Project-Rawane.html':'Project Rawane','Rawanes_Mission_Log.html':"Rawane's Mission Log",
      'Ways_to_Help.html':'Ways to Help','Top_Ten.html':'Top Ten','Find_a_Cleanup.html':'Find a Cleanup','index.html#newsletter':'Weekly Brief','Contact.html':'Contact',
      'About.html':'About Us','Editorial_Policy.html':'Editorial Policy','Corrections.html':'Corrections','Press.html':'Press &amp; Media','Privacy.html':'Privacy'},
-   cta1='Explore All Solutions', cta2='Ways to help', imp=['real, sourced solutions','solution hubs','languages','learning tools for kids and teachers'],
+   cta1='Explore All Solutions', cta2='Ways to help', cta3='Match me to a solution', imp=['real, sourced solutions','solution hubs','languages','learning tools for kids and teachers'],
    dom=[('Water','Oceans, rivers and lakes'),('Land','Forests and the people who live with them'),('Space','Satellites, missions and keeping orbit clean')],
    seeall='See all {n} {d} solutions', news='Latest Updates', newsintro='What changed on the site recently. Sign up for the Weekly Brief to get it every week.',
    kidsh='Kids &amp; Teachers', filt='Show', all='All', more='Show all {n}', less='Show fewer', hub='Hub', allhubs='All hubs', menu='Menu'),
@@ -37,7 +37,7 @@ T = {
      'Space.html':'Espace','Enceladus.html':'Encelade','Upcoming_Launches.html':'Prochains lancements','Planetary_Defense.html':'Défense planétaire','Space_Weather.html':'Météo spatiale','Space_Disposal.html':'Élimination des débris spatiaux','Project-Rawane.html':'Projet Rawane','Rawanes_Mission_Log.html':'Journal de mission de Rawane',
      'Ways_to_Help.html':'Comment aider','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Trouver un nettoyage','index.html#newsletter':'Bulletin hebdomadaire','Contact.html':'Contact',
      'About.html':'Qui sommes-nous','Editorial_Policy.html':'Politique éditoriale','Corrections.html':'Corrections','Press.html':'Presse et médias','Privacy.html':'Confidentialité'},
-   cta1='Explorer toutes les solutions', cta2='Comment aider', imp=['solutions réelles et sourcées','pôles de solutions','langues','outils pour enfants et enseignants'],
+   cta1='Explorer toutes les solutions', cta2='Comment aider', cta3='Trouvez-moi une solution', imp=['solutions réelles et sourcées','pôles de solutions','langues','outils pour enfants et enseignants'],
    dom=[('Eau','Océans, rivières et lacs'),('Terre','Les forêts et les personnes qui y vivent'),('Espace','Satellites, missions et une orbite plus propre')],
    seeall='Voir les {n} solutions : {d}', news='Dernières nouveautés', newsintro='Ce qui a changé récemment sur le site. Abonnez-vous au bulletin hebdomadaire pour le recevoir chaque semaine.',
    kidsh='Enfants et enseignants', filt='Afficher', all='Tout', more='Tout afficher ({n})', less='Afficher moins', hub='Pôle', allhubs='Tous les pôles', menu='Menu'),
@@ -47,7 +47,7 @@ T = {
      'Space.html':'Espacio','Enceladus.html':'Encélado','Upcoming_Launches.html':'Próximos lanzamientos','Planetary_Defense.html':'Defensa planetaria','Space_Weather.html':'Clima espacial','Space_Disposal.html':'Retiro de basura espacial','Project-Rawane.html':'Proyecto Rawane','Rawanes_Mission_Log.html':'Bitácora de Rawane',
      'Ways_to_Help.html':'Formas de ayudar','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Encuentra una limpieza','index.html#newsletter':'Boletín semanal','Contact.html':'Contacto',
      'About.html':'Quiénes somos','Editorial_Policy.html':'Política editorial','Corrections.html':'Correcciones','Press.html':'Prensa','Privacy.html':'Privacidad'},
-   cta1='Explorar todas las soluciones', cta2='Formas de ayudar', imp=['soluciones reales y con fuentes','centros de soluciones','idiomas','herramientas para niños y docentes'],
+   cta1='Explorar todas las soluciones', cta2='Formas de ayudar', cta3='Encuéntrame una solución', imp=['soluciones reales y con fuentes','centros de soluciones','idiomas','herramientas para niños y docentes'],
    dom=[('Agua','Océanos, ríos y lagos'),('Tierra','Los bosques y las personas que viven en ellos'),('Espacio','Satélites, misiones y una órbita más limpia')],
    seeall='Ver las {n} soluciones de {d}', news='Últimas novedades', newsintro='Lo que cambió recientemente en el sitio. Suscríbete al boletín semanal para recibirlo cada semana.',
    kidsh='Niños y docentes', filt='Mostrar', all='Todo', more='Ver todas ({n})', less='Ver menos', hub='Centro', allhubs='Todos los centros', menu='Menú'),
@@ -57,7 +57,7 @@ T = {
      'Space.html':'الفضاء','Enceladus.html':'إنسيلادوس','Upcoming_Launches.html':'عمليات الإطلاق القادمة','Planetary_Defense.html':'الدفاع الكوكبي','Space_Weather.html':'طقس الفضاء','Space_Disposal.html':'التخلص من الحطام الفضائي','Project-Rawane.html':'مشروع Rawane','Rawanes_Mission_Log.html':'سجل مهمة Rawane',
      'Ways_to_Help.html':'طرق المساعدة','Top_Ten.html':'أفضل 10','Find_a_Cleanup.html':'ابحث عن حملة تنظيف','index.html#newsletter':'النشرة الأسبوعية','Contact.html':'اتصل بنا',
      'About.html':'من نحن','Editorial_Policy.html':'السياسة التحريرية','Corrections.html':'التصحيحات','Press.html':'الصحافة والإعلام','Privacy.html':'الخصوصية'},
-   cta1='استكشف كل الحلول', cta2='طرق المساعدة', imp=['حلًا حقيقيًا موثقًا','مراكز حلول','لغات','أدوات للأطفال والمعلمين'],
+   cta1='استكشف كل الحلول', cta2='طرق المساعدة', cta3='طابقني مع حل', imp=['حلًا حقيقيًا موثقًا','مراكز حلول','لغات','أدوات للأطفال والمعلمين'],
    dom=[('الماء','المحيطات والأنهار والبحيرات'),('اليابسة','الغابات والناس الذين يعيشون فيها'),('الفضاء','الأقمار الصناعية والبعثات ومدار أنظف')],
    seeall='عرض كل الحلول ({n}): {d}', news='آخر المستجدات', newsintro='ما تغيّر مؤخرًا في الموقع. اشترك في النشرة الأسبوعية لتصلك كل أسبوع.',
    kidsh='الأطفال والمعلمون', filt='عرض', all='الكل', more='عرض الكل ({n})', less='عرض أقل', hub='المركز', allhubs='كل المراكز', menu='القائمة'),
@@ -67,7 +67,7 @@ T = {
      'Space.html':'Spazio','Enceladus.html':'Encelado','Upcoming_Launches.html':'Prossimi lanci','Planetary_Defense.html':'Difesa planetaria','Space_Weather.html':'Meteo spaziale','Space_Disposal.html':'Smaltimento dei detriti spaziali','Project-Rawane.html':'Progetto Rawane','Rawanes_Mission_Log.html':'Diario di missione di Rawane',
      'Ways_to_Help.html':'Come aiutare','Top_Ten.html':'Top 10','Find_a_Cleanup.html':'Trova un evento di pulizia','index.html#newsletter':'Notiziario settimanale','Contact.html':'Contatti',
      'About.html':'Chi siamo','Editorial_Policy.html':'Politica editoriale','Corrections.html':'Correzioni','Press.html':'Stampa e media','Privacy.html':'Privacy'},
-   cta1='Esplora tutte le soluzioni', cta2='Come aiutare', imp=['soluzioni reali e con fonti','hub di soluzioni','lingue','strumenti per bambini e insegnanti'],
+   cta1='Esplora tutte le soluzioni', cta2='Come aiutare', cta3='Abbinami a una soluzione', imp=['soluzioni reali e con fonti','hub di soluzioni','lingue','strumenti per bambini e insegnanti'],
    dom=[('Acqua','Oceani, fiumi e laghi'),('Terra','Le foreste e le persone che ci vivono'),('Spazio','Satelliti, missioni e un’orbita più pulita')],
    seeall='Vedi tutte le {n} soluzioni: {d}', news='Ultime novità', newsintro='Cosa è cambiato di recente sul sito. Iscriviti al Notiziario settimanale per riceverle ogni settimana.',
    kidsh='Bambini e insegnanti', filt='Mostra', all='Tutto', more='Mostra tutte ({n})', less='Mostra meno', hub='Hub', allhubs='Tutti gli hub', menu='Menu'),
@@ -163,7 +163,7 @@ def home(l, n, hubs):
         f'<div class="imp-item"><span class="imp-num">{v}</span><span class="imp-label">{lab}</span></div>' for v, lab in zip(imp, t['imp'])) + '</section>'
     s = block(s, 'IMPACT', strip, r'<!-- DIFF:START -->')
     s = re.sub(r'<!-- DIFF:START -->.*?<!-- DIFF:END -->\n?', '', s, flags=re.S)  # replaced by the impact strip (hard-coded count)
-    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{DROP}{t["cta1"]}</a><a class="btn hero-cta2" href="Ways_to_Help.html">{t["cta2"]}</a></p>'
+    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{DROP}{t["cta1"]}</a><a class="btn hero-cta2" href="Ways_to_Help.html">{t["cta2"]}</a><a class="btn hero-cta2" href="Match.html">{t["cta3"]}</a></p>'
     s = block(s, 'HERO-CTA', cta, r'<p class="hero-email">')
     secs = []
     for i, (hs, (dn, dd)) in enumerate(zip(DOMAINS, t['dom'])):

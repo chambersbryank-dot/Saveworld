@@ -1,0 +1,24 @@
+{
+  "checked": "2026-11-09",
+  "note": "Official pages that returned HTTP 200. Used where an agency button only opened careers or contact.",
+  "actions": [
+    {
+      "name": "GLOBE Observer",
+      "where": "local",
+      "href": "https://observer.globe.gov/",
+      "quote": "A citizen science app allowing volunteers in GLOBE countries to take observations and contribute to the Global Learning and Observations to Benefit the Environment (GLOBE) community."
+    },
+    {
+      "name": "Globe at Night",
+      "where": "remote",
+      "href": "https://globeatnight.org/",
+      "quote": "Globe at Night is an international citizen-science campaign to raise public awareness of the impact of light pollution by inviting citizen-scientists to measure and submit their night sky brightness observations."
+    },
+    {
+      "name": "NASA citizen science",
+      "where": "remote",
+      "href": "https://science.nasa.gov/citizen-science/",
+      "quote": "Through these projects, sometimes called citizen science or participatory science projects, volunteers and amateurs have helped make thousands of important scientific discoveries."
+    }
+  ]
+}

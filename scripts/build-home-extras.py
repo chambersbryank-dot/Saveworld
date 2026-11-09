@@ -94,10 +94,14 @@ start = datetime.date.fromisoformat(sw['start'])
 today = (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) - datetime.timedelta(hours=10)).date()  # HST
 e = sw['rotation'][((today - start).days // 7) % len(sw['rotation'])]
 href = e['page'] + ('#video' if e.get('video') else '')
+act = e.get('action') or {'kind': 'learn', 'href': e['page'], 'note': 'Opens the solution page on Saving Planets.'}
+act_label = {'donate': 'Donate', 'volunteer': 'Volunteer', 'learn': 'Learn'}[act['kind']]
+act_ext = ' target="_blank" rel="noopener"' if str(act['href']).startswith('http') else ''
 SW = (f'<section class="sotw" id="solution-of-the-week" aria-labelledby="sotw-title" data-sotw-page="{e["page"]}"><div class="sotw-card">'
       f'<a class="sotw-img" href="{href}"><img src="{e["image"]}" alt="{html.escape(e["imageAlt"])}" width="{dims_img(e["image"])[0]}" height="{dims_img(e["image"])[1]}" loading="lazy" decoding="async"></a>'
       f'<div class="sotw-body"><p class="sotw-kicker">Solution of the Week</p><h2 id="sotw-title"><a href="{e["page"]}">{html.escape(e["title"])}</a></h2>'
-      f'<p class="sotw-blurb">{html.escape(e["blurb"])}</p><p class="sotw-actions"><a class="btn" href="{href}">{"Watch and Learn More" if e.get("video") else "Learn More"}</a></p>'
+      f'<p class="sotw-blurb">{html.escape(e["blurb"])}</p><p class="sotw-actions"><a class="btn" href="{html.escape(act["href"])}"{act_ext}>{act_label}</a></p>'
+      f'<p class="sotw-note">{html.escape(act.get("note") or "")}</p>'
       f'<p class="photo-credit">Created by the Founder and SI.</p></div></div></section>')
 
 s = open('index.html', encoding='utf-8').read()

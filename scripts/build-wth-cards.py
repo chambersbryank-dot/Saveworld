@@ -12,27 +12,27 @@ EMOJI = {'earth-observation':'🛰️','forests':'🌳','lakes':'🏞️','ocean
 T = {
  '': dict(h='Ways to Help', intro='Two ways to help: give to an organization, or roll up your sleeves. Every button opens the organization’s own official page. Saving Planets never receives the money.',
    don='Donations', don_s='Official donation pages, grouped by hub.', vol='Roll up your sleeves', vol_s='Volunteer, citizen science and hands-on work, grouped by hub.',
-   search='Search organizations or solutions', all='All hubs', b_don='Donate', b_vol='Volunteer', b_con='Contact', orgs='organizations', none='Nothing matches. Try another word or hub.',
+   search='Search organizations or solutions', all='All hubs', b_don='Donate', b_vol='Volunteer', b_car='Careers', b_con='Contact', orgs='organizations', none='Nothing matches. Try another word or hub.',
    sol='Solution page', how='How this works', jump='Jump to'),
  'es/': dict(h='Formas de ayudar', intro='Dos formas de ayudar: donar a una organización o arremangarse. Cada botón abre la página oficial de la organización. Saving Planets nunca recibe el dinero.',
    don='Donaciones', don_s='Páginas oficiales de donación, por tema.', vol='Manos a la obra', vol_s='Voluntariado, ciencia ciudadana y trabajo práctico, por tema.',
-   search='Busca organizaciones o soluciones', all='Todos los temas', b_don='Donar', b_vol='Voluntariado', b_con='Contacto', orgs='organizaciones', none='No hay resultados. Prueba otra palabra u otro tema.',
+   search='Busca organizaciones o soluciones', all='Todos los temas', b_don='Donar', b_vol='Voluntariado', b_car='Empleo', b_con='Contacto', orgs='organizaciones', none='No hay resultados. Prueba otra palabra u otro tema.',
    sol='Página de la solución', how='Cómo funciona', jump='Ir a'),
  'fr/': dict(h='Comment aider', intro='Deux façons d’aider : donner à une organisation ou retrousser ses manches. Chaque bouton ouvre la page officielle de l’organisation. Saving Planets ne reçoit jamais l’argent.',
    don='Dons', don_s='Pages de dons officielles, par thème.', vol='Retroussez vos manches', vol_s='Bénévolat, science participative et travail de terrain, par thème.',
-   search='Rechercher une organisation ou une solution', all='Tous les thèmes', b_don='Faire un don', b_vol='Bénévolat', b_con='Contact', orgs='organisations', none='Aucun résultat. Essayez un autre mot ou thème.',
+   search='Rechercher une organisation ou une solution', all='Tous les thèmes', b_don='Faire un don', b_vol='Bénévolat', b_car='Carrières', b_con='Contact', orgs='organisations', none='Aucun résultat. Essayez un autre mot ou thème.',
    sol='Page de la solution', how='Comment ça marche', jump='Aller à'),
  'ar/': dict(h='طرق المساعدة', intro='طريقتان للمساعدة: التبرع لمنظمة، أو المشاركة بنفسك. كل زر يفتح الصفحة الرسمية للمنظمة. لا تتلقى Saving Planets أي أموال.',
    don='التبرعات', don_s='صفحات التبرع الرسمية، حسب المحور.', vol='شارك بنفسك', vol_s='التطوع وعلوم المواطن والعمل الميداني، حسب المحور.',
-   search='ابحث عن منظمة أو حل', all='كل المحاور', b_don='تبرّع', b_vol='تطوّع', b_con='تواصل', orgs='منظمة', none='لا نتائج. جرّب كلمة أو محورًا آخر.',
+   search='ابحث عن منظمة أو حل', all='كل المحاور', b_don='تبرّع', b_vol='تطوّع', b_car='وظائف', b_con='تواصل', orgs='منظمة', none='لا نتائج. جرّب كلمة أو محورًا آخر.',
    sol='صفحة الحل', how='كيف يعمل هذا', jump='انتقل إلى'),
  'he/': dict(h='דרכים לעזור', intro='שתי דרכים לעזור: לתרום לארגון, או להפשיל שרוולים. כל כפתור פותח את העמוד הרשמי של הארגון. Saving Planets אינו מקבל את הכסף.',
    don='תרומות', don_s='עמודי תרומה רשמיים, לפי נושא.', vol='מפשילים שרוולים', vol_s='התנדבות, מדע אזרחי ועבודה בשטח, לפי נושא.',
-   search='חיפוש ארגון או פתרון', all='כל הנושאים', b_don='לתרומה', b_vol='להתנדבות', b_con='יצירת קשר', orgs='ארגונים', none='אין תוצאות. נסו מילה או נושא אחרים.',
+   search='חיפוש ארגון או פתרון', all='כל הנושאים', b_don='לתרומה', b_vol='להתנדבות', b_car='קריירה', b_con='יצירת קשר', orgs='ארגונים', none='אין תוצאות. נסו מילה או נושא אחרים.',
    sol='עמוד הפתרון', how='איך זה עובד', jump='מעבר אל'),
  'it/': dict(h='Come aiutare', intro='Due modi per aiutare: donare a un’organizzazione o rimboccarsi le maniche. Ogni pulsante apre la pagina ufficiale dell’organizzazione. Saving Planets non riceve mai il denaro.',
    don='Donazioni', don_s='Pagine ufficiali per donare, per tema.', vol='Rimbocchiamoci le maniche', vol_s='Volontariato, citizen science e lavoro sul campo, per tema.',
-   search='Cerca organizzazioni o soluzioni', all='Tutti i temi', b_don='Dona', b_vol='Volontariato', b_con='Contatti', orgs='organizzazioni', none='Nessun risultato. Prova un’altra parola o un altro tema.',
+   search='Cerca organizzazioni o soluzioni', all='Tutti i temi', b_don='Dona', b_vol='Volontariato', b_car='Carriere', b_con='Contatti', orgs='organizzazioni', none='Nessun risultato. Prova un’altra parola o un altro tema.',
    sol='Pagina della soluzione', how='Come funziona', jump='Vai a'),
 }
 E = lambda s: html.escape(s, quote=True)
@@ -81,7 +81,8 @@ def build(lang):
             td = tr.find_all('td'); sa = td[0].a
             don = td[2].a; vol = td[3].a
             rows.append(dict(sol=sa.get_text(strip=True), sh=sa['href'], org=td[1].get_text(strip=True),
-                give=tr.get('data-give') == '1', join=tr.get('data-join') == '1', dh=don['href'] if don else '', vh=(vol or don)['href'] if (vol or don) else ''))
+                give=tr.get('data-give') == '1', join=tr.get('data-join') == '1', hk=tr.get('data-help') or '',
+                dh=don['href'] if don else '', vh=(vol or don)['href'] if (vol or don) else ''))
         hubs.append((hid, name, hub_href, rows))
     def section(kind):
         v = kind == 'vol'; key = 'help' if v else 'donate-list'
@@ -95,7 +96,11 @@ def build(lang):
             out.append(f'<button type="button" class="wh-chip" data-hub="{hid}" aria-pressed="false">{EMOJI.get(hid[4:],"")} {E(name)}</button>')
             cards = []
             for r in rs:
-                if v: url, lab, cls = (r['vh'], t['b_vol'], '') if r['join'] else (r['vh'], t['b_con'], ' wh-c')
+                if v:
+                    hk = r.get('hk') or ('volunteer' if r['join'] else 'contact')
+                    if hk == 'volunteer': url, lab, cls = r['vh'], t['b_vol'], ''
+                    elif hk == 'careers': url, lab, cls = r['vh'], t['b_car'], ' wh-c'
+                    else: url, lab, cls = r['vh'], t['b_con'], ' wh-c'
                 else: url, lab, cls = r['dh'], t['b_don'], ''
                 sen = sentence(lang, r['sh'])
                 cards.append(f'<li class="wh-card"><h3>{E(r["org"])}</h3>' + (f'<p>{E(sen)}</p>' if sen else '') +

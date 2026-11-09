@@ -1,0 +1,35 @@
+{
+  "checked": "2026-11-09",
+  "note": "Only sentences read on the organization's own page. No dollar amount was calculated from another figure.",
+  "claims": [
+    {
+      "page": "Terraformation.html",
+      "org": "Terraformation",
+      "heading": "What $10 a month does",
+      "quote": "For as little as $10 per month, you can fund a native tree in Hawaiʻi, taking it from seed to nursery, followed by planting and long-term stewardship.",
+      "source": "https://www.terraformation.com/work-with-us",
+      "sourceName": "Terraformation, work with us"
+    },
+    {
+      "page": "4ocean.html",
+      "org": "4ocean",
+      "heading": "What one bracelet does",
+      "quote": "By purchasing a 4ocean bracelet, you will remove one pound of trash from the ocean and coastlines.",
+      "source": "https://www.4ocean.com/",
+      "sourceName": "4ocean"
+    },
+    {
+      "page": "One_Tree_Planted.html",
+      "org": "One Tree Planted",
+      "heading": "What one dollar does",
+      "quote": "Plant a Tree for One Dollar",
+      "source": "https://onetreeplanted.org/pages/about-us",
+      "sourceName": "One Tree Planted, about us"
+    }
+  ],
+  "omitted": [
+    {"org": "Trees for the Future", "why": "trees.org says a gift may be $1 or $10,000. It does not say what $10 does."},
+    {"org": "Plastic Bank", "why": "plasticbank.com says fifty bottles are gathered on them when someone joins. That is not a published per-gift price."},
+    {"org": "Other solution pages", "why": "No per-gift sentence from the organization was found in the repo or on a page checked for this feature."}
+  ]
+}
