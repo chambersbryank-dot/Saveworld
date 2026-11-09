@@ -25,7 +25,7 @@ MT = {
 T = {
  'h': {'en': 'Vision', 'fr': 'Vision', 'es': 'Visión', 'ar': 'الرؤية', 'it': 'Visione', 'he': 'חזון'},
  'p': {
-  'en': 'A world where every learner can see that people are already healing the planet \u2014 and know exactly how to join in. From Earth\u2019s deep-time story on BeforeSavingPlanets to today\u2019s working solutions here, we turn wonder into clear next steps: learning tracks, teacher and kids\u2019 tools, a world map of real projects, and 266 solutions across 11 hubs in six languages. No doom. Just free, sourced education that showcases what works and points families, classrooms, and communities to trusted ways to help.',
+  'en': 'A world where every learner can see that people are already healing the planet \u2014 and know exactly how to join in. From Earth\u2019s deep-time story on BeforeSavingPlanets to today\u2019s working solutions here, we turn wonder into clear next steps: learning tracks, teacher and kids\u2019 tools, a world map of real projects, and 276 solutions across 11 hubs in six languages. No doom. Just free, sourced education that showcases what works and points families, classrooms, and communities to trusted ways to help.',
   'fr': 'Un monde où chaque personne qui apprend voit que des gens guérissent déjà la planète \u2014 et sait exactement comment s\u2019y joindre. De l\u2019histoire de la Terre sur le temps long, sur BeforeSavingPlanets, aux solutions qui marchent ici aujourd\u2019hui, nous changeons l\u2019émerveillement en prochaines étapes claires : parcours d\u2019apprentissage, outils pour les enseignants et les enfants, une carte mondiale de projets réels, et 266 solutions dans 11 pôles en six langues. Pas de catastrophisme. Juste une éducation gratuite et sourcée qui montre ce qui fonctionne et oriente les familles, les classes et les communautés vers des façons fiables d\u2019aider.',
   'es': 'Un mundo en el que cada persona que aprende vea que la gente ya está sanando el planeta, y sepa exactamente cómo sumarse. De la historia de la Tierra en el tiempo profundo, en BeforeSavingPlanets, a las soluciones que funcionan hoy aquí, convertimos el asombro en pasos claros: rutas de aprendizaje, herramientas para docentes y niños, un mapa mundial de proyectos reales y 266 soluciones en 11 centros en seis idiomas. Sin fatalismo. Solo educación gratuita y con fuentes, que muestra lo que funciona y señala a familias, aulas y comunidades formas de ayuda de confianza.',
   'ar': 'عالم يرى فيه كل متعلّم أن الناس يشفون الكوكب بالفعل \u2014 ويعرف تمامًا كيف ينضم. من قصة الأرض في الزمن العميق على BeforeSavingPlanets إلى الحلول العاملة هنا اليوم، نحوّل الدهشة إلى خطوات تالية واضحة: مسارات تعلّم، وأدوات للمعلمين والأطفال، وخريطة عالمية لمشاريع حقيقية، و266 حلًا في 11 مركزًا بست لغات. بلا سوداوية. فقط تعليم مجاني وموثّق المصادر يعرض ما ينجح ويوجّه الأسر والصفوف والمجتمعات إلى طرق موثوقة للمساعدة.',
@@ -128,7 +128,7 @@ for l in ('fr', 'es', 'ar', 'it', 'he'):
     open(f, 'w', encoding='utf8').write(s)
 upsert_i18n()
 # English paragraph must stay the founder string, including 266.
-assert '266 solutions across 11 hubs' in open('index.html', encoding='utf8').read()
+assert '276 solutions across 11 hubs' in open('index.html', encoding='utf8').read()
 assert 'https://www.beforesavingplanets.com/' in open('index.html', encoding='utf8').read()
 assert '246 solutions across 11 hubs' not in T['p']['en']
 print('home vision: 6 languages, i18n-source', H)
