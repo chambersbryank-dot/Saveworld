@@ -869,6 +869,11 @@
       "description": "Plans de cours imprimables gratuits, de la maternelle à l’université, tirés de vraies solutions pour l’environnement et l’espace."
     }
   },
+  "Lesson_Plan.html": {
+    "en": {
+      "description": "Teachers pick a grade, subject, lesson length, and solutions. The printable plan has objectives, an activity, discussion questions, and an assessment."
+    }
+  },
   "Libera.html": {
     "es": {
       "description": "Libera medirá cada día cuánta energía sale de la Tierra y mantendrá un registro climático iniciado en 2000: si entra más de la que sale, la Tierra se calienta."
