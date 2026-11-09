@@ -159,4 +159,5 @@ if [ "${WEEKLY_SYNC_POST_DEPLOY:-0}" = 1 ]; then bash scripts/post-deploy.sh || 
 python3 scripts/seo-lint.py > /tmp/seo-lint.log || { tail -12 /tmp/seo-lint.log; echo 'seo-lint: ERRORS (see python3 scripts/seo-lint.py --list)'; exit 1; }
 # Abort before any commit if pages, categories, or the question bank fell sharply versus main
 # (sitemap index readers used to write 0 pages and ~259 question-bank rows).
+python3 scripts/build-competitive.py       # Nov 9 2026: nine approved recommendations (vet line, match, volunteer labels, positioning, adopt, gift claims, badge, one action, draft challenge)
 python3 scripts/sync-count-guard.py

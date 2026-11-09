@@ -15,6 +15,12 @@ hubs = [(m.start(), m.group(1), html.unescape(m.group(2))) for m in re.finditer(
 cards = [(m.start(), m.group(1), html.unescape(m.group(2))) for m in
          re.finditer(r'<article class="card sol-card" data-url="([^"]+)".*?<h3><a href="[^"]+">(.*?)</a></h3>', sol, re.S)]
 EXT = ' target="_blank" rel="noopener"'
+def help_kind(url):
+    """A careers, jobs, or contact URL is not a volunteer action."""
+    u = url or ''
+    if re.search(r'career|/(jobs|employ)(/|$|\.)|recruiting/jobs', u, re.I): return 'careers'
+    if re.search(r'/(contact|inquiries|enquiry)(/|$|\.)|contact\.html|contact-us|contact-2', u, re.I): return 'contact'
+    return 'volunteer' if u else 'none'
 def btn(url, label, join=False):
     ext = EXT if url.startswith('http') else ''
     return f'<a class="btn help-btn{" help-btn-join" if join else ""}" href="{E_(url)}"{ext}>{label}</a>'
@@ -31,13 +37,15 @@ for pos, page, title in cards:
     elif don: dc = btn(don, 'Donate')
     elif con: dc = btn(con, 'Contact') + note('No Donation Page'); stats['no_donate'].append(page)
     else: dc = note('No Donation Page'); stats['no_donate'].append(page)
-    if hlp: hc = btn(hlp, 'Offer to Help', True)
-    elif con: hc = btn(con, 'Contact', True) + note('No Volunteer Page'); stats['no_help'].append(page)
+    kind = help_kind(hlp) if hlp else ('contact' if con else 'none')
+    if kind == 'volunteer': hc = btn(hlp, 'Offer to Help', True)
+    elif kind == 'careers': hc = btn(hlp, 'Careers', True); stats['no_help'].append(page)
+    elif hlp or con: hc = btn(hlp or con, 'Contact', True) + note('No Volunteer Page'); stats['no_help'].append(page)
     else: hc = note('No Volunteer Page'); stats['no_help'].append(page)
-    give, join = int(bool(don) and key != 'sp'), int(bool(hlp))
+    give, join = int(bool(don) and key != 'sp'), int(kind == 'volunteer')
     hs = slug(hub[2])
     groups.setdefault((hub[1], hub[2]), []).append(
-        f'<tr data-hub="{hs}" data-give="{give}" data-join="{join}"><td><a href="{E_(page)}">{E_(title)}</a></td><td>{E_(name)}</td><td>{dc}</td><td>{hc}</td></tr>')
+        f'<tr data-hub="{hs}" data-give="{give}" data-join="{join}" data-help="{kind}"><td><a href="{E_(page)}">{E_(title)}</a></td><td>{E_(name)}</td><td>{dc}</td><td>{hc}</td></tr>')
     stats['total'] += 1
 if missing: sys.exit('ways-to-help.json has no organization for: ' + ', '.join(missing))
 jump = ''.join(f'<li><a href="#{slug(h)}">{E_(h)}</a></li>' for (_, h) in groups)
