@@ -990,6 +990,54 @@
    null,
    "https://www.iaato.org/supporting-science/citizen-science",
    null
+  ],
+  "rubin": [
+   "NSF–DOE Rubin Observatory",
+   null,
+   null,
+   "https://rubinobservatory.org/about"
+  ],
+  "icememory": [
+   "Ice Memory Foundation",
+   null,
+   null,
+   "https://www.ice-memory.org/en/"
+  ],
+  "blueventures": [
+   "Blue Ventures",
+   "https://blueventures.org/donate/",
+   null,
+   "https://blueventures.org/contact/"
+  ],
+  "worldbank": [
+   "World Bank",
+   null,
+   null,
+   "https://www.worldbank.org/en/country/kazakhstan"
+  ],
+  "monolake": [
+   "Mono Lake Committee",
+   "https://save.monolake.org/page/202088/donate/1",
+   "https://www.monolake.org/connect/volunteer/",
+   "https://www.monolake.org/"
+  ],
+  "mrc": [
+   "Mekong River Commission",
+   null,
+   null,
+   "https://www.mrcmekong.org/about/mrc/"
+  ],
+  "sosma": [
+   "SOS Mata Atlântica",
+   null,
+   null,
+   "https://www.sosma.org.br/en/"
+  ],
+  "cnesfr": [
+   "CNES",
+   null,
+   null,
+   "https://cnes.fr/en/projects/microcarb"
   ]
  },
  "pages": {
@@ -1258,6 +1306,16 @@
   "ASOC_Antarctic_Coalition": "asoc",
   "CCAMLR": "ccamlr",
   "SCAR_Antarctic_Research": "scar",
-  "IAATO": "iaato"
+  "IAATO": "iaato",
+  "Hawaiian_Monk_Seal_Recovery": "noaa",
+  "Vera_C_Rubin_Observatory": "rubin",
+  "Ice_Memory_Sanctuary": "icememory",
+  "Blue_Ventures": "blueventures",
+  "North_Aral_Sea": "worldbank",
+  "Mono_Lake_Committee": "monolake",
+  "Mekong_River_Commission": "mrc",
+  "SOS_Mata_Atlantica": "sosma",
+  "Proba-3": "esa",
+  "MicroCarb": "cnesfr"
  }
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T20:00:44.595Z",
+ "generated": "2026-11-09T15:58:58.666Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -56,6 +56,10 @@
     {
      "href": "Ramses.html",
      "name": "Ramses (ESA / JAXA)"
+    },
+    {
+     "href": "Vera_C_Rubin_Observatory.html",
+     "name": "Vera C. Rubin Observatory"
     },
     {
      "href": "Webb_2024_YR4.html",
@@ -160,6 +164,10 @@
     {
      "href": "Parker_Solar_Probe.html",
      "name": "Parker Solar Probe (NASA)"
+    },
+    {
+     "href": "Proba-3.html",
+     "name": "Proba-3"
     },
     {
      "href": "PUNCH.html",
@@ -420,6 +428,10 @@
      "name": "MetOp-SG-A1 and Sentinel-5A (ESA / EUMETSAT)"
     },
     {
+     "href": "MicroCarb.html",
+     "name": "MicroCarb"
+    },
+    {
      "href": "NISAR.html",
      "name": "NISAR (NASA–ISRO)"
     },
@@ -590,6 +602,10 @@
      "name": "Saiga Recovery on the Kazakh Steppe (Altyn Dala)"
     },
     {
+     "href": "SOS_Mata_Atlantica.html",
+     "name": "SOS Mata Atlântica"
+    },
+    {
      "href": "Terraformation.html",
      "name": "Terraformation"
     },
@@ -680,6 +696,14 @@
      "name": "Living Lakes (Global Nature Fund)"
     },
     {
+     "href": "Mono_Lake_Committee.html",
+     "name": "Mono Lake Committee"
+    },
+    {
+     "href": "North_Aral_Sea.html",
+     "name": "North Aral Sea and the Kok-Aral Dam"
+    },
+    {
      "href": "Restoring_the_Lake_Depths.html",
      "name": "Restoring the Lake Depths Foundation"
     },
@@ -730,6 +754,10 @@
      "name": "Billion Oyster Project"
     },
     {
+     "href": "Blue_Ventures.html",
+     "name": "Blue Ventures"
+    },
+    {
      "href": "Bristol_Bay_Salmon.html",
      "name": "Bristol Bay Salmon Habitat Protection (EPA)"
     },
@@ -764,6 +792,10 @@
     {
      "href": "Gulf_of_Alaska_Keeper.html",
      "name": "Gulf of Alaska Keeper: Marine Debris Cleanup"
+    },
+    {
+     "href": "Hawaiian_Monk_Seal_Recovery.html",
+     "name": "Hawaiian Monk Seal Recovery"
     },
     {
      "href": "Heal_the_Bay.html",
@@ -936,6 +968,10 @@
      "name": "Ramses (ESA / JAXA)"
     },
     {
+     "href": "Vera_C_Rubin_Observatory.html",
+     "name": "Vera C. Rubin Observatory"
+    },
+    {
      "href": "Webb_2024_YR4.html",
      "name": "Webb and 2024 YR4"
     }
@@ -996,6 +1032,10 @@
     {
      "href": "IAATO.html",
      "name": "IAATO: Responsible Antarctic Tourism"
+    },
+    {
+     "href": "Ice_Memory_Sanctuary.html",
+     "name": "Ice Memory Sanctuary"
     },
     {
      "href": "Iceland_Land_Restoration.html",
@@ -1138,6 +1178,10 @@
     {
      "href": "London_Tideway_Tunnel.html",
      "name": "London Tideway Tunnel (Super Sewer)"
+    },
+    {
+     "href": "Mekong_River_Commission.html",
+     "name": "Mekong River Commission"
     },
     {
      "href": "Mr_Trash_Wheel.html",
@@ -1342,6 +1386,10 @@
      "name": "Parker Solar Probe (NASA)"
     },
     {
+     "href": "Proba-3.html",
+     "name": "Proba-3"
+    },
+    {
      "href": "PUNCH.html",
      "name": "PUNCH (NASA)"
     },
@@ -1374,14 +1422,14 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 266,
+  "solutions": 276,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 19,
    "government": 30,
-   "agency": 121,
-   "nonprofit": 76,
+   "agency": 127,
+   "nonprofit": 80,
    "natural": 20
   },
   "upcomingMissions": 26,
@@ -1404,19 +1452,19 @@
     ]
    }
   ],
-  "taggedSolutions": 266
+  "taggedSolutions": 276
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 45,
+   "solutions": 47,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
     "government": 7,
-    "nonprofit": 21,
-    "agency": 5,
+    "nonprofit": 22,
+    "agency": 6,
     "natural": 7
    },
    "upcomingMissions": 0,
@@ -1435,13 +1483,13 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 14,
+   "solutions": 16,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 9,
+    "nonprofit": 10,
     "government": 3,
-    "agency": 1,
+    "agency": 2,
     "natural": 1
    },
    "upcomingMissions": 0,
@@ -1458,14 +1506,14 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 23,
+   "solutions": 24,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 11,
     "natural": 2,
     "government": 5,
-    "agency": 3,
+    "agency": 4,
     "corporate": 2
    },
    "upcomingMissions": 0,
@@ -1474,11 +1522,11 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 38,
+   "solutions": 39,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 22,
+    "nonprofit": 23,
     "natural": 5,
     "government": 7,
     "agency": 3,
@@ -1513,11 +1561,11 @@
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 13,
+   "solutions": 14,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 13
+    "agency": 14
    },
    "upcomingMissions": 3,
    "impactTotals": [],
@@ -1525,11 +1573,11 @@
   },
   "polar": {
    "name": "Polar",
-   "solutions": 35,
+   "solutions": 36,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 12,
+    "nonprofit": 13,
     "agency": 14,
     "government": 7,
     "corporate": 2
@@ -1540,11 +1588,11 @@
   },
   "space-weather": {
    "name": "Space Weather & Shields",
-   "solutions": 12,
+   "solutions": 13,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 11,
+    "agency": 12,
     "natural": 1
    },
    "upcomingMissions": 1,
@@ -1553,11 +1601,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 47,
+   "solutions": 48,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 45,
+    "agency": 46,
     "nonprofit": 1,
     "corporate": 1
    },
@@ -2045,6 +2093,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "Blue_Ventures.html",
+   "title": "Blue Ventures",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Bristol_Bay_Salmon.html",
@@ -3104,6 +3163,17 @@
    "added": "2026-10-20"
   },
   {
+   "url": "Hawaiian_Monk_Seal_Recovery.html",
+   "title": "Hawaiian Monk Seal Recovery",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
+  },
+  {
    "url": "Hayabusa2_Torifune.html",
    "title": "Hayabusa2 Torifune Flyby (JAXA)",
    "category": "planetary-defense",
@@ -3230,6 +3300,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-20"
+  },
+  {
+   "url": "Ice_Memory_Sanctuary.html",
+   "title": "Ice Memory Sanctuary",
+   "category": "polar",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Iceland_Land_Restoration.html",
@@ -3689,6 +3770,17 @@
    "missions": []
   },
   {
+   "url": "Mekong_River_Commission.html",
+   "title": "Mekong River Commission",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
+  },
+  {
    "url": "Mesoamerican_Reef_Insurance.html",
    "title": "Mesoamerican Reef Insurance Programme (MAR Fund)",
    "category": "ocean",
@@ -3727,6 +3819,17 @@
    ]
   },
   {
+   "url": "MicroCarb.html",
+   "title": "MicroCarb",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
+  },
+  {
    "url": "Mission_Blue_Hope_Spots.html",
    "title": "Mission Blue Hope Spots",
    "category": "ocean",
@@ -3759,6 +3862,17 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "Mono_Lake_Committee.html",
+   "title": "Mono Lake Committee",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Moon_Steadies_Earth.html",
@@ -3913,6 +4027,17 @@
    "status": "active",
    "stats": [],
    "missions": []
+  },
+  {
+   "url": "North_Aral_Sea.html",
+   "title": "North Aral Sea and the Kok-Aral Dam",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Ocean_Cleanup.html",
@@ -4307,6 +4432,17 @@
      "next": null
     }
    ]
+  },
+  {
+   "url": "Proba-3.html",
+   "title": "Proba-3",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Project-Rawane.html",
@@ -4865,6 +5001,17 @@
    "added": "2026-10-28"
   },
   {
+   "url": "SOS_Mata_Atlantica.html",
+   "title": "SOS Mata Atlântica",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
+  },
+  {
    "url": "South_Georgia_Habitat_Restoration.html",
    "title": "South Georgia Habitat Restoration",
    "category": "polar",
@@ -5304,6 +5451,17 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Vera_C_Rubin_Observatory.html",
+   "title": "Vera C. Rubin Observatory",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-09"
   },
   {
    "url": "Vigil.html",

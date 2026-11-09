@@ -3288,6 +3288,142 @@
      "basis": "page"
     }
    ]
+  },
+  "Hawaiian_Monk_Seal_Recovery.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 25.0,
+     "lng": -171.0,
+     "label": "Papahānaumokuākea Marine National Monument",
+     "basis": "page"
+    },
+    {
+     "lat": 20.8,
+     "lng": -156.5,
+     "label": "Main Hawaiian Islands",
+     "basis": "page"
+    }
+   ]
+  },
+  "Vera_C_Rubin_Observatory.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -30.24,
+     "lng": -70.74,
+     "label": "Vera C. Rubin Observatory, Cerro Pachón, Chile",
+     "basis": "page"
+    }
+   ]
+  },
+  "Ice_Memory_Sanctuary.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -75.1,
+     "lng": 123.35,
+     "label": "Concordia Station, Dome C, Antarctica",
+     "basis": "page"
+    }
+   ]
+  },
+  "Blue_Ventures.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -22.07,
+     "lng": 43.24,
+     "label": "Andavadoaka, southwest Madagascar",
+     "basis": "page"
+    }
+   ]
+  },
+  "North_Aral_Sea.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 46.15,
+     "lng": 60.78,
+     "label": "Kok-Aral Dam, North Aral Sea, Kazakhstan",
+     "basis": "page"
+    }
+   ]
+  },
+  "Mono_Lake_Committee.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 38.0,
+     "lng": -119.0,
+     "label": "Mono Lake, California",
+     "basis": "page"
+    }
+   ]
+  },
+  "Mekong_River_Commission.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 12.57,
+     "lng": 104.99,
+     "label": "Cambodia (Mekong Agreement member)",
+     "basis": "page"
+    },
+    {
+     "lat": 19.86,
+     "lng": 102.5,
+     "label": "Lao PDR (Mekong Agreement member)",
+     "basis": "page"
+    },
+    {
+     "lat": 15.87,
+     "lng": 100.99,
+     "label": "Thailand (Mekong Agreement member)",
+     "basis": "page"
+    },
+    {
+     "lat": 14.06,
+     "lng": 108.28,
+     "label": "Viet Nam (Mekong Agreement member)",
+     "basis": "page"
+    }
+   ]
+  },
+  "SOS_Mata_Atlantica.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -23.4,
+     "lng": -45.1,
+     "label": "Atlantic Forest, southeastern Brazil",
+     "basis": "page"
+    }
+   ]
+  },
+  "Proba-3.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.85,
+     "lng": 2.3,
+     "label": "ESA headquarters, Paris",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
+  },
+  "MicroCarb.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.84,
+     "lng": 2.27,
+     "label": "CNES headquarters, Paris",
+     "basis": "hq"
+    }
+   ],
+   "strip": "orbit"
   }
  }
 }
