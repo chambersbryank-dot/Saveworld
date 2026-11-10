@@ -4597,15 +4597,7 @@
    "type": "solution",
    "classification": "nonprofit",
    "status": "active",
-   "stats": [
-    {
-     "label": "Wild European bison",
-     "value": 7000,
-     "unit": "bison",
-     "kind": "fact",
-     "sourceUrl": "https://rewildingeurope.com/"
-    }
-   ],
+   "stats": [],
    "missions": []
   },
   {
