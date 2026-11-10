@@ -3021,7 +3021,57 @@
    "type": "solution",
    "classification": "agency",
    "status": "active",
-   "stats": [],
+   "stats": [
+    {
+     "label": "Total measurements, GLOBE figures, November 10, 2026",
+     "value": 294844966,
+     "unit": "measurements",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Measurements this month, GLOBE figures, November 10, 2026",
+     "value": 285881,
+     "unit": "measurements",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Citizen scientists, GLOBE figures, November 10, 2026",
+     "value": 975003,
+     "unit": "citizen scientists",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Educators, GLOBE figures, November 10, 2026",
+     "value": 55888,
+     "unit": "educators",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Students, GLOBE figures, November 10, 2026",
+     "value": 919115,
+     "unit": "students",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Schools and non-school organizations, GLOBE figures, November 10, 2026",
+     "value": 43351,
+     "unit": "organizations",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    },
+    {
+     "label": "Countries, GLOBE figures, November 10, 2026",
+     "value": 127,
+     "unit": "countries",
+     "kind": "fact",
+     "sourceUrl": "https://www.globe.gov/"
+    }
+   ],
    "missions": [],
    "added": "2026-10-16"
   },
