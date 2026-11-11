@@ -123,14 +123,8 @@ def build(l, s):
             f'<button type="button" id="sp-more" class="sp-more" hidden>{more}</button><p id="sp-refine" class="sp-refine" hidden>{refine}</p>{msg}</div></section>\n'
             )
     out = s[:i] + main + s[j:]
-    # Oct 16 6:07 PM (user): no footer on Search pages; keep one tiny legal line (licence + privacy).
-    fm = re.search(r'<footer\b.*?</footer>', out, re.S)
-    foot = fm.group(0)
-    priv = grab(foot, r'<a[^>]*href="(?:\.\./)?Privacy\.html"[^>]*>(.*?)</a>') or grab(s, r'<p class="sp-mini-foot-p">.*?Privacy\.html"[^>]*>(.*?)</a>', 'Privacy')
-    pre = '' if l == 'en' else '../'
-    mini = (f'<footer class="sp-mini-foot" data-pagefind-ignore="all"><p class="sp-mini-foot-p">© 2026 Saving Planets · '
-            f'<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> · <a href="{"Privacy.html" if l == "en" or os.path.exists(l + "/Privacy.html") else "../Privacy.html"}">{priv}</a></p></footer>')
-    return out[:fm.start()] + mini + out[fm.end():]
+    # The shared homepage footer (scripts/build-site-extras.py) stays on Search, same as every other page.
+    return out
 def tag_pages():
     # Pagefind filter "topic" on every math/Learn/calculator page of a topic (all languages), so a topic tab can pull
     # them to the top (search-ui.js runs a filtered search first). Marker is stripped by i18n-build/i18n-check normalize.

@@ -103,22 +103,18 @@ def footer_links():
     print('footer links on', n, 'translated pages')
 
 def footer_fallback():
-    """Pages whose footer has no site map (home after build-home-trim, Search mini-footer, etc.): add a marked Terms + Accessibility line before </footer>. Idempotent."""
+    """The live homepage footer has no extra Terms / Accessibility line. Those pages stay on Sitemap.html,
+    which footer-v2.js links under About. An empty FOOTER-MAP is the homepage policy (scripts/build-site-extras.py);
+    do not invent a second legal line when the map is empty. Drop a stale A11YTERMS block if one is present."""
     import glob
     n = 0
+    rx = re.compile(r'<!-- A11YTERMS-FOOT -->.*?<!-- /A11YTERMS-FOOT -->', re.S)
     for i, l in enumerate(LANGS):
         for f in glob.glob(('' if i == 0 else l + '/') + '*.html'):
             s = open(f, encoding='utf8').read()
-            s0 = re.sub(r'<!-- A11YTERMS-FOOT -->.*?<!-- /A11YTERMS-FOOT -->', '', s, flags=re.S)
-            a = s0.rfind('<footer'); b = s0.find('</footer>', a)
-            if a < 0 or b < 0: continue
-            if 'href="Terms.html"' in s0[a:b] and 'href="Accessibility.html"' in s0[a:b]: s2 = s0
-            else:
-                add = (f'<!-- A11YTERMS-FOOT --><p class="footer-legal"><a href="Terms.html">{E(C.FOOT[1][i])}</a> · '
-                       f'<a href="Accessibility.html">{E(C.FOOT[0][i])}</a></p><!-- /A11YTERMS-FOOT -->')
-                s2 = s0[:b] + add + s0[b:]
+            s2 = rx.sub('', s)
             if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
-    print('footer fallback on', n, 'pages')
+    print('footer fallback: homepage footer has no extra Terms line;', n, 'stale blocks removed')
 
 def footer_tagline():
     """Oct 29 2026: one-line "Built on your ideas" tagline at the top of every page footer (6 langs). Marked block, idempotent. Prints pages with no <footer>."""
