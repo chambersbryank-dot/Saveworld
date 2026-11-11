@@ -17,8 +17,8 @@ def put(src, name, inner, after_re):
 
 # 1) Hero video (index only). Oct 16: video served from R2 (see assets/data/media-manifest.json); poster stays local.
 # Oct 31: ship it inert (no autoplay attribute, preload=none, data-src). build-hero-themes.py starts playback
-# only on the earth-video week. Saturn weeks must not download or play this loop; the Saturn intro is
-# assets/hero-saturn-intro.js + the HEROTHEME block, not this video.
+# only on the earth-video week. Space weeks must not download or play this loop; that theme is the
+# canvas in assets/hero-themes.js (the rings zoom intro is retired).
 HERO = ('<div class="hero-media" aria-hidden="true"><video class="hero-video" muted loop playsinline preload="none" '
         'data-poster="assets/videos/hero-loop.jpg" width="1280" height="546"><source data-src="https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4" type="video/mp4"></video>'
         '<div class="hero-overlay"></div></div><p class="hero-video-credit">Created by the Founder and SI.</p>')

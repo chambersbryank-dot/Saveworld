@@ -1519,7 +1519,6 @@ body{--lg-tint:rgba(12,28,56,.72);--lg-solid:#0b3a5b}body[data-glass-tint=water]
 a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
 a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){a.help-btn{background:var(--lg-solid) !important}a.help-btn.help-btn-join{background:#00695c !important}}
-.hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
 .imp-label{font-size:.95rem}
