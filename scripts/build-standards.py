@@ -69,6 +69,9 @@ def teachers(l):
     p = d(l) + 'Teachers.html'
     if not os.path.exists(p): return 0
     s = rd(p); u = U[l]
+    # Nov 11: the Teachers catalog is owned by scripts/build-teachers-home.py (collapsed hubs, no repeated code strings).
+    if '<!-- TEACHHOME:START -->' in s:
+        return 0
     def li(m):
         t = m.group(0); href = re.search(r'<a href="([^"#]+)#teachers"', t)
         t = re.sub(r'^<li[^>]*>', '<li>', t); t = re.sub(r'<span class="t-codes">.*?</span>', '', t)
@@ -95,6 +98,8 @@ def lesson(l):
                    for h, cs in sorted(D['hubs'].items(), key=lambda x: names.get(x[0], x[0]).lower()))
     blk = (f'<!-- LB-STD:START --><section class="five-ws lb-std" aria-labelledby="lbs-h"><h2 id="lbs-h">{esc(u["lb"])}</h2><p class="std-note">{esc(u["note"])}</p>'
            f'<table><thead><tr><th scope="col">{esc(u["hub"])}</th><th scope="col">{esc(u["codes"])}</th></tr></thead><tbody>{rows}</tbody></table></section><!-- LB-STD:END -->')
+    if '<!-- LB-STD:START -->' in s:
+        return wr(p, re.sub(r'<!-- LB-STD:START -->.*?<!-- LB-STD:END -->', lambda m: blk, s, count=1, flags=re.S))
     return wr(p, put(s, 'LB-STD', blk, '</main>'))
 def main():
     n = 0
@@ -106,8 +111,15 @@ def main():
             s2 = put(s, 'STANDARDS', block(l, page), '</section><!-- TEACHER:END -->')
             n += wr(p, s2)
         n += teachers(l) + lesson(l)
-    css = rd('styles.css'); css = re.sub(r'\n?/\* STD:START \*/.*?/\* STD:END \*/', '', css, flags=re.S).rstrip('\n') + '\n' + CSS + '\n'
-    if css != rd('styles.css'): open('styles.css', 'w', encoding='utf8').write(css)
+    css = rd('styles.css')
+    new_css = CSS.strip('\n')
+    found = re.search(r'/\* STD:START \*/.*?/\* STD:END \*/', css, re.S)
+    if found:
+        if found.group(0) != new_css:
+            css = css[:found.start()] + new_css + css[found.end():]
+            open('styles.css', 'w', encoding='utf8').write(css)
+    else:
+        open('styles.css', 'w', encoding='utf8').write(css.rstrip('\n') + '\n' + new_css + '\n')
     tagged = sum(1 for u in PH if codes_for(u))
     print(f'build-standards: {n} page writes; {tagged}/{len(PH)} solutions tagged')
 if __name__ == '__main__': main()

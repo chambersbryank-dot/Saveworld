@@ -13,10 +13,7 @@ esc = lambda s: html.escape(s, quote=False)
 escq = lambda s: html.escape(s, quote=True)
 
 START = [
-    ('Cadets.html', '🎖️ התחילו כאן: JROTC ו-CAP'),
-    ('Homeschool.html', '🏡 התחילו כאן: חינוך ביתי'),
-    ('AP_IB_Physics.html', '📘 התחילו כאן: פיזיקה AP ו-IB'),
-    ('Careers.html', '🚀 קריירה ומסלולים'),
+    ('AP_IB_Physics.html', '📘 פיזיקה AP ו-IB'),
 ]
 
 STARTHERE = (
@@ -80,8 +77,10 @@ def main():
     s = open(f, encoding='utf-8').read()
     o = s
     # Order similar to EN: STARTHERE early, SI after EDU-LINKS, LEARNLINK before footer FAQ
-    s = put(s, 'STARTHERE', STARTHERE, '<!-- EDU-LINKS:START -->')
-    s = put(s, 'SIHELPER', SIHELPER, '<!-- COURSELINK:START -->')
+    # Nov 11: Teachers home owns the path strip, and SI Helper is retired on this page.
+    if '<!-- TEACHHOME:START -->' not in s:
+        s = put(s, 'STARTHERE', STARTHERE, '<!-- EDU-LINKS:START -->')
+        s = put(s, 'SIHELPER', SIHELPER, '<!-- COURSELINK:START -->')
     s = put(s, 'LEARNLINK', LEARNLINK, '<!-- SP-HUBFAQ:START -->')
     # T-BROWSE comes from build-standards.py once he is in LANGS
     if s != o:

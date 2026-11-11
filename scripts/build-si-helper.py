@@ -33,10 +33,11 @@ def widget(l):
             f'<p class="si-warn">{t("warn", l)} <a href="{href(l, "SI_Helper.html")}">{t("how", l)}</a></p></section>'
             f'<script src="{pre}assets/si-helper.js?v={V}" defer></script><!-- SIHELPER:END -->')
 def teachers(l):
-    p = d(l) + 'Teachers.html'; s = MARK.sub('', rd(p))
-    anchor = '<!-- EDU-LINKS:END -->'
-    s = s.replace(anchor, anchor + widget(l), 1) if anchor in s else re.sub(r'(</section>\n)', lambda m: m.group(1) + widget(l), s, count=1)
-    assert s.count('SIHELPER:START') == 1, p
+    # Nov 11: SI Helper is retired on Teachers.html. The widget stays off that page.
+    # Privacy.html and SI_Helper.html still explain what the pilot kept.
+    p = d(l) + 'Teachers.html'
+    if not os.path.exists(p): return 0
+    s = MARK.sub('', rd(p))
     return wr(p, s)
 def privacy(l):
     p = d(l) + 'Privacy.html'
