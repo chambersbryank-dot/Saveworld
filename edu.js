@@ -43,7 +43,7 @@
   if (lb) load(function (d) {
     var U = d.ui, L = d.lesson, out = document.getElementById('lb-plan');
     var q = new URLSearchParams(location.search);
-    ['band', 'hub', 'min'].forEach(function (k) { var v = q.get(k), el = lb.elements[k]; if (v && el && [].some.call(el.options, function (o) { return o.value === v; })) el.value = v; });
+    ['band', 'hub', 'min'].forEach(function (k) { var v = q.get(k), el = lb.elements[k]; if (v && el && [].some.call(el.options, function (o) { return o.value === v; })) { el.value = v; if (k === 'hub') el.dispatchEvent(new Event('change')); } });
 
     /* Oct 15 (Top-10 #2): Lesson Builder 2.0: permanent link (?band&hub&min&seed), Google Classroom share (official share URL),
        Copy link, printable handout and client-side slides. No accounts, no backend. */

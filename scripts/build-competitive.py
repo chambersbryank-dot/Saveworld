@@ -426,7 +426,7 @@ def patch_index(path, lang):
         val = u['desc'] if 'description' in key else u['title']
         src = re.sub(r'(<meta %s="%s" content=")[^"]*"' % (attr, key), r'\1' + E(val) + '"', src, count=1)
     if 'href="Match.html"' not in src.split('id="newsletter"')[0]:
-        src = src.replace('</p><!-- HERO-CTA:END -->', '<a class="btn hero-cta2" href="Match.html">' + E(u['match']) + '</a></p><!-- HERO-CTA:END -->', 1)
+        src = src.replace('</p><!-- HERO-CTA:END -->', '<a class="btn hero-cta" href="Match.html">' + E(u['match']) + '</a></p><!-- HERO-CTA:END -->', 1)
     sw = json.load(open('assets/data/solution-of-week.json', encoding='utf8'))
     m = re.search(r'data-sotw-page="([^"]+)"', src)
     page = m.group(1) if m else sw['rotation'][0]['page']

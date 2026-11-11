@@ -163,7 +163,7 @@ def home(l, n, hubs):
         f'<div class="imp-item"><span class="imp-num">{v}</span><span class="imp-label">{lab}</span></div>' for v, lab in zip(imp, t['imp'])) + '</section>'
     s = block(s, 'IMPACT', strip, r'<!-- DIFF:START -->')
     s = re.sub(r'<!-- DIFF:START -->.*?<!-- DIFF:END -->\n?', '', s, flags=re.S)  # replaced by the impact strip (hard-coded count)
-    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{DROP}{t["cta1"]}</a><a class="btn hero-cta2" href="Ways_to_Help.html">{t["cta2"]}</a><a class="btn hero-cta2" href="Match.html">{t["cta3"]}</a></p>'
+    cta = f'<p class="hero-ctas"><a class="btn hero-cta" href="Solutions.html">{DROP}{t["cta1"]}</a><a class="btn hero-cta" href="Ways_to_Help.html">{t["cta2"]}</a><a class="btn hero-cta" href="Match.html">{t["cta3"]}</a></p>'
     s = block(s, 'HERO-CTA', cta, r'<p class="hero-email">')
     secs = []
     for i, (hs, (dn, dd)) in enumerate(zip(DOMAINS, t['dom'])):
@@ -230,7 +230,6 @@ body{--lg-tint:rgba(12,28,56,.72);--lg-solid:#0b3a5b}body[data-glass-tint=water]
 a.help-btn.help-btn-join{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,120,105,.6) !important}
 a.help-btn:hover{filter:brightness(1.15)}a.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){a.help-btn{background:var(--lg-solid) !important}a.help-btn.help-btn-join{background:#00695c !important}}
-.hero-cta2{background:transparent !important;border:2px solid #fff;color:#fff !important}
 .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:1.5rem auto;padding:1.2rem;background:#003755;color:#fff;border-radius:16px;text-align:center}
 .imp-num{display:block;font-size:2.4rem;font-weight:800;color:#7fd3ff}
 .imp-label{font-size:.95rem}
@@ -299,7 +298,7 @@ JS = r"""
 """
 # Oct 15: Liquid Glass buttons (CSS below): Explore All Solutions, See Solutions on the World Map, nav Help/Donate
 DROP = ''  # Oct 15: teardrop reverted (user asked for Liquid Glass styling instead)
-STYLEV = "20261102q"  # bump when styles.css changes
+STYLEV = "20261111a"  # bump when styles.css changes
 def bump_styles():
     for f in glob.glob('*.html') + glob.glob('*/*.html'):
         s = rd(f); s2 = re.sub(r'styles\.css\?v=[\w.-]+', 'styles.css?v=' + STYLEV, s)
@@ -356,7 +355,9 @@ def page_pass(p, l, n):
         s = s[:m.start()] + m.group(1) + inner + m.group(3) + s[m.end():]
     # Oct 15: translated pages inherit the English sticky button from i18n-build; always set this language's label.
     s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)(?:<svg class="cta-drop".*?</svg>)?[^<]*(</a>)', lambda mm: mm.group(1) + DROP + T[l]["help"] + mm.group(2), s)
-    if page == 'Solutions.html':  # Oct 18 (owner): no floating Help / Donate button on Solutions (the nav keeps its Help / Donate link)
+    # Solutions (Oct 18) and Ways to Help (Nov 11): no floating Help / Donate button.
+    # The top-nav Help / Donate link stays, and in-page donate links stay.
+    if page in ('Solutions.html', 'Ways_to_Help.html'):
         s = re.sub(r'<a class="sticky-help" href="Ways_to_Help.html">.*?</a>', '', s, flags=re.S)
     elif 'class="sticky-help"' not in s and '</main>' in s:
         s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{DROP}{T[l]["help"]}</a>', 1)

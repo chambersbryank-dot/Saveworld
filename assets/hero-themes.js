@@ -165,7 +165,13 @@
   var QL = 0, QS = [1, 0.7, 0.5], QN = [1, 0.6, 0.4];
   function ED() { return Math.min(window.devicePixelRatio || 1, 3); } // small sprites (Earth): always full DPR, never budget-capped
   function qd() { return Math.max(0.75, D * QS[QL]); }
-  function sizeCanvas(c, w, h, x, y) { var k = (c === cGround || c === cFx) ? qd() : c === cEarth ? ED() : D; c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.width = w + 'px'; c.style.height = h + 'px';
+  function sizeCanvas(c, w, h, x, y) {
+    // Nov 11 2026: jets are soft sprites composited with 'lighter'. A full-DPR fx canvas (often 2x
+    // on a 1080p desktop or iPad) clears and redraws well over a thousand images every frame and
+    // misses vsync, so the constant-speed glide stutters. Cap that layer near CSS pixels. The
+    // WebGL ground stays at full qd() so the ice and regolith stay sharp.
+    var k = c === cFx ? Math.min(qd(), 1.15) : (c === cGround ? qd() : (c === cEarth ? ED() : D));
+    c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.width = w + 'px'; c.style.height = h + 'px';
     c.style.left = (x || 0) + 'px'; c.style.top = (y || 0) + 'px'; if (c === cGround) return null; var g = c.getContext('2d'); g.setTransform(k, 0, 0, k, 0, 0); return g; }
   function sprite(r, rgb) { var key = r + rgb; if (sprites[key]) return sprites[key];
     var s = Math.ceil(r * 4) * 2 + 2, c = document.createElement('canvas'); c.width = c.height = s;
@@ -190,14 +196,17 @@
     if (satTried) return; satTried = true;
     var raw = (box.getAttribute('data-sat-meta') || '').split(',');
     if (raw.length >= 3) { satMeta.gx = +raw[0] || satMeta.gx; satMeta.gy = +raw[1] || satMeta.gy; satMeta.gr = +raw[2] || satMeta.gr; }
-    var need = (2 * SAT.R / Math.max(0.05, satMeta.gr)) * Math.min(window.devicePixelRatio || 1, 3);
+    // Fetch as soon as the script runs (SAT.R may still be 0) so the Cassini disk is decoded before
+    // the poster fades. A late swap from the procedural globe reads as a pop.
+    var rad = SAT.R || Math.max(90, Math.min((window.innerWidth || 1280) * 0.15, (window.innerHeight || 800) * 0.27));
+    var need = (2 * rad / Math.max(0.05, satMeta.gr)) * Math.min(window.devicePixelRatio || 1, 3);
     var set = (box.getAttribute('data-sat') || '').split(',').map(function (t) {
       var p = t.trim().split(/\s+/); return { u: p[0], w: parseInt(p[1], 10) || 0 };
     }).filter(function (e) { return e.u && e.w >= 640; }).sort(function (a, b) { return a.w - b.w; });
     if (!set.length) return;
     var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need) { pick = set[k]; break; }
     var im = new Image(); im.crossOrigin = 'anonymous'; im.decoding = 'async';
-    im.onload = function () { SATIMG = im; drawSaturn(); }; im.onerror = function () { SATIMG = null; }; im.src = pick.u;
+    im.onload = function () { SATIMG = im; if (W) drawSaturn(); }; im.onerror = function () { SATIMG = null; }; im.src = pick.u;
   }
   function drawSaturn() {
     var x = sizeCanvas(cSkyA, W, H), R = SAT.R, cx = SAT.x, cy = SAT.y, roll = -0.1, flat = 0.902;
@@ -344,18 +353,25 @@
     hero.style.setProperty('--hero-block-top', Math.round(top) + 'px');
   }
 
+  // Oct 17 ~7:10 PM: FREEZE horizon/Saturn/Enceladus/Earth to the viewport so raising the title never moves the moons.
+  // layoutCb matches the 4vh title-bottom fractions (iPad-L 605/820, iPad-P 680/1180). Title is then recentered in JS
+  // between the nav and this fixed horizon (equal gaps). Plumes grow upward to meet the title.
+  function measureScene() {
+    var r = hero.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return r;
+    W = Math.max(320, Math.round(r.width)); H = Math.max(480, Math.round(r.height));
+    var port0 = W < H, layoutCb = Math.round(H * (port0 ? 0.576 : 0.738));
+    hY = Math.round(Math.min(H * 0.8, Math.max(H * 0.5, layoutCb + Math.max(36, H * (port0 ? 0.17 : 0.05)))));
+    placeTitleBlock(r);
+    return r;
+  }
+
   function setup() {
     tok++; sprites = {};
-    var r = hero.getBoundingClientRect(); W = Math.max(320, Math.round(r.width)); H = Math.max(480, Math.round(r.height));
+    var r = measureScene();
     var big = /[?&]hero-poster=1/.test(location.search); // poster builder only: native 6K stills
     var dpr = Math.min(window.devicePixelRatio || 1, big ? 6 : 3); D = Math.min(dpr, Math.sqrt((big ? 40e6 : 21e6) / (W * H))); // full DPR up to ~6K-wide backing (6016x3384 = 6K Retina @2x); slow devices step down via QL
-    // Oct 17 ~7:10 PM: FREEZE horizon/Saturn/Enceladus/Earth to the viewport so raising the title never moves the moons.
-    // layoutCb matches the 4vh title-bottom fractions (iPad-L 605/820, iPad-P 680/1180). Title is then recentered in JS
-    // between the nav and this fixed horizon (equal gaps). Plumes grow upward to meet the title.
-    var port0 = W < H, last = hero.querySelector('.hero-email') || hero.querySelector('.hero-ctas');
-    var layoutCb = Math.round(H * (port0 ? 0.576 : 0.738));
-    hY = Math.round(Math.min(H * 0.8, Math.max(H * 0.5, layoutCb + Math.max(36, H * (port0 ? 0.17 : 0.05)))));
-    placeTitleBlock(r); // sets --hero-block-top so the text sits centered between nav bottom and hY
+    var last = hero.querySelector('.hero-email') || hero.querySelector('.hero-ctas');
     var cb = last ? last.getBoundingClientRect().bottom - r.top : H * 0.6;
     hero.classList.toggle('hs-lowsky', cb > hY - 8); // short screens: the last text line overlaps the horizon -> give it a backdrop
     FOC = Math.max(W, H) * 0.9; curvA = (H * 0.045) / Math.pow(W / 2, 2); curvB = (H * 0.022) / Math.pow(W / 2, 2);
@@ -403,9 +419,9 @@
     if (!glOk) glOk = initGL();
     if (glOk) { gl.viewport(0, 0, cGround.width, cGround.height);
       if (!texReady) { texReady = true; // pre-rendered 1024^2 textures (scripts/build-hero-assets.py); procedural only as a fallback
-        texFile('data-tex-a', enceladusTex, function (img) { safeTex(texA, img, enceladusTex); box.classList.add('hs-ready'); if (!running()) frame(true);
+        texFile('data-tex-a', enceladusTex, function (img) { safeTex(texA, img, enceladusTex); box.classList.add('hs-ready'); clockOn = true; if (!running()) frame(true);
           texFile('data-tex-b', moonTex, function (img2) { safeTex(texB, img2, moonTex); if (!running()) frame(true); }); }); } }
-    else box.classList.add('hs-ready', 'hs-nogl');
+    else { box.classList.add('hs-ready', 'hs-nogl'); clockOn = true; }
   }
   var texReady = false;
   function safeTex(t, img, gen) { try { upTex(t, img); } catch (e) { gen(function (c) { upTex(t, c); }); } } // CORS/decode failure -> procedural
@@ -417,9 +433,14 @@
   var A_LEN = 20, X_LEN = 4, B_LEN = 20, LOOP = A_LEN + X_LEN + B_LEN + X_LEN; // 48 s
   function sceneMix(t) { t %= LOOP; if (t < A_LEN) return 0; if (t < A_LEN + X_LEN) return sstep(0, 1, (t - A_LEN) / X_LEN);
     if (t < A_LEN + X_LEN + B_LEN) return 1; return 1 - sstep(0, 1, (t - A_LEN - X_LEN - B_LEN) / X_LEN); }
+  // Pull-up during the crossfade. A raised cosine matches the old sine arch (same peak) but the
+  // slope is zero at both ends, so the camera and sky do not kick when a scene change starts or ends.
   function lift(t) { t %= LOOP; var p = -1; if (t >= A_LEN && t < A_LEN + X_LEN) p = (t - A_LEN) / X_LEN; else if (t >= LOOP - X_LEN) p = (t - LOOP + X_LEN) / X_LEN;
-    return p < 0 ? 0 : Math.sin(Math.PI * p); }
-  function earthRise(t) { t %= LOOP; var s = A_LEN, e = A_LEN + X_LEN + B_LEN + X_LEN * 0.5, p = (t - s) / (e - s); if (t < s) p = 0; return Math.min(1, Math.max(0, p)); }
+    if (p < 0) return 0; return 0.5 - 0.5 * Math.cos(2 * Math.PI * p); }
+  // Same rise window and the same peak (EAR.peak, Earth diameter untouched). Smoothstep removes the
+  // velocity step where Earth leaves the horizon and where it settles.
+  function earthRise(t) { t %= LOOP; var s = A_LEN, e = A_LEN + X_LEN + B_LEN + X_LEN * 0.5, p = (t - s) / (e - s); if (t < s) p = 0;
+    p = Math.min(1, Math.max(0, p)); return p * p * (3 - 2 * p); }
 
   var SPEED = 1.15; // world units per second (camera height = 1)
   var jetSprite = null, glint = null, haze = null, TXT = [0, 0, 0, 0], TXH = [0, 0, 0, 0];
@@ -468,7 +489,7 @@
   }
 
 
-  var tScene = 0, tGlide = 0, last = 0, hold = false;
+  var tScene = 0, tGlide = 0, last = 0, hold = false, fxDirty = false;
   function frame(still) {
     var mixT = sceneMix(tScene), lf = lift(tScene), camH = 1 + 2.6 * lf, scroll = (tGlide * SPEED) % (TILE * 1e3);
     cSkyA.style.opacity = (1 - mixT).toFixed(3); cSkyB.style.opacity = mixT.toFixed(3); cStars.style.opacity = (1 - 0.55 * mixT).toFixed(3);
@@ -485,39 +506,48 @@
       gl.uniform1f(U.tile, TILE); gl.uniform1f(U.dpr, G); gl.uniform1f(U.top, gTop * G);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     }
-    var x = cFx.getContext('2d'), F = cFx.width / W; x.setTransform(F, 0, 0, F, 0, 0); x.clearRect(0, 0, W, H);
-    drawJets(x, scroll, camH, (1 - mixT) * (glOk ? 1 : 0), tGlide);
+    var jetA = (1 - mixT) * (glOk ? 1 : 0);
+    if (jetA > 0.01 || fxDirty) { var x = cFx.getContext('2d'), F = cFx.width / W; x.setTransform(F, 0, 0, F, 0, 0); x.clearRect(0, 0, W, H);
+      if (jetA > 0.01) drawJets(x, scroll, camH, jetA, tGlide); fxDirty = jetA > 0.01; }
     var sc = mixT < 0.5 ? 0 : 1;
     caps.forEach(function (c, i) { var on = i === sc; if (c.classList.contains('on') !== on) c.classList.toggle('on', on); });
   }
 
   var raf = 0, onScreen = true, nFrames = 0, ema = 0, slowT = 0, warm = 0;
+  // clockOn: the Enceladus texture is on the GPU (or there is no GL). Until then the poster is the
+  // hero and the scene clock stays on the poster pose, so the ice field does not slide under the still.
+  var clockOn = false, revealT = 0;
   function quality(rawDt) { // rawDt in s; skip the first 2 s after (re)start (texture build, tab resume)
     if ((warm += rawDt) < 2 || QL >= 2 || /[?&]hero-poster=1/.test(location.search)) return; ema = ema ? ema * 0.9 + rawDt * 0.1 : rawDt;
     slowT = ema > 0.04 ? slowT + rawDt : 0;
     if (slowT >= 3) { QL++; slowT = 0; ema = 0;
       sizeCanvas(cGround, W, H - gTop, 0, gTop); sizeCanvas(cFx, W, H); if (glOk) gl.viewport(0, 0, cGround.width, cGround.height); } }
-  function loop(now) { raf = 0; nFrames++; var raw = (now - last) / 1000, dt = Math.min(0.1, raw); last = now; tGlide += dt; quality(Math.min(raw, 0.25));
-    var m = sceneMix(tScene); if (m > 0.98 && hero.classList.contains('hs-titlewait')) hero.classList.remove('hs-titlewait'); if (!hold || (m > 0 && m < 1)) tScene += dt; frame(false); if (running()) raf = requestAnimationFrame(loop); }
-  function running() { return !reduced && onScreen && !document.hidden && !intro(); }
-  // Oct 29 2026 (founder: Saturn intro start choppy): while the Saturn intro covers the hero the live scene is frozen (no frame
-  // loop, scene clock held at the Saturn/Enceladus start) and its heavy setup waits until the intro's ring close-up is fully
-  // opaque (event sp-intro-idle), so WebGL/texture work never competes with the opening rise; sp-intro-end resumes the loop.
-  function intro() { return hero.classList.contains('hs-introing') && !introIdle; }
+  function loop(now) { raf = 0; nFrames++; var raw = (now - last) / 1000, dt = Math.min(0.1, raw); last = now; quality(Math.min(raw, 0.25));
+    // rAF timestamps, not a fixed step: motion stays continuous when the display is 60 Hz or 120 Hz.
+    // A dropped frame is capped at 0.1 s so a stall does not sling the camera forward.
+    var advance = 0;
+    if (clockOn) { revealT += dt;
+      if (scrub) advance = dt;
+      else if (revealT > 0.45) { var u = Math.min(1, (revealT - 0.45) / 0.7); u = u * u * (3 - 2 * u); advance = dt * u; } }
+    tGlide += advance; var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += advance; frame(false); if (running()) raf = requestAnimationFrame(loop); }
+  function running() { return !reduced && onScreen && !document.hidden; }
   function kick() { if (running() && !raf) { last = performance.now(); warm = 0; slowT = 0; ema = 0; raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
   // Keep the current scene (and its caption) while a caption is hovered or focused, so it never vanishes under the pointer or focus.
   caps.forEach(function (c) { ['mouseenter', 'focus'].forEach(function (e) { c.addEventListener(e, function () { hold = true; }); });
     ['mouseleave', 'blur'].forEach(function (e) { c.addEventListener(e, function () { hold = false; }); }); });
   document.addEventListener('visibilitychange', kick);
   if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(hero);
-  if (mq.addEventListener) mq.addEventListener('change', function () { reduced = mq.matches; if (reduced) { tScene = 8; frame(true); } kick(); });
+  if (mq.addEventListener) mq.addEventListener('change', function () { reduced = mq.matches; if (reduced) { tScene = tGlide = 9; frame(true); } kick(); });
   var rt = 0, lastW = 0;
   window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () {
     var b = hero.getBoundingClientRect(); if (Math.abs(b.width - lastW) < 2 && Math.abs(b.height - H) < 80) return; // ignore iOS URL-bar jitter
     lastW = b.width; setup(); frame(true); kick(); }, 180); }, { passive: true });
   lastW = hero.getBoundingClientRect().width;
-  var q = /[?&]hero-t=(\d+(?:\.\d+)?)/.exec(location.search); // preview a moment of the loop, e.g. ?hero=space&hero-t=30
-  tScene = q ? +q[1] : (reduced ? 8 : 0); tGlide = tScene;
+  var scrub = /[?&]hero-t=(\d+(?:\.\d+)?)/.exec(location.search); // preview a moment of the loop, e.g. ?hero=space&hero-t=30
+  // Posters (scripts/build-hero-assets.py) are the Enceladus glide at t=9. The live clock used to
+  // start at 0, so the poster crossfade jumped the ice by about a tile. Reduced motion stays one still frame.
+  var POSTER_T = 9;
+  tScene = scrub ? +scrub[1] : POSTER_T; tGlide = tScene;
   // Oct 16 8:16 PM (Lighthouse): nothing runs before the page has loaded and the main thread is idle; until then the
   // pre-rendered poster (CSS, .hero-space::before) is the hero background, and it fades out once the live ground is ready.
   var started = false;
@@ -529,19 +559,17 @@
       var di = g.getExtension('WEBGL_debug_renderer_info'), rn = di ? String(g.getParameter(di.UNMASKED_RENDERER_WEBGL)) : '';
       var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
       var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
-  var introIdle = false;
-  window.addEventListener('sp-intro-idle', function () { introIdle = true; if (deferred) { deferred = false; start(); }
-    // Oct 29 2026 (founder): after the intro, Earth rises first, then the title fades in (hs-titlewait cleared in loop()).
-    tScene = tGlide = A_LEN - 1.5; if (started && !box.classList.contains('hs-static')) frame(true); introIdle = false; });
-  window.addEventListener('sp-intro-end', function () { if (deferred) { deferred = false; start(); } kick(); });
-  var deferred = false;
-  function start() { if (started) return; if (hero.classList.contains('hs-introing') && !introIdle) { deferred = true; return; } started = true;
+  function start() { if (started) return; started = true;
     if ((navigator.connection && navigator.connection.saveData) || !hwGL()) { box.classList.add('hs-static'); return; }
     setup(); frame(true); kick();
     setTimeout(loadBM, 2500); // Earth texture after first paint (it is first seen ~20 s into the loop)
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { var o = hY; setup(); if (hY !== o || !running()) frame(true); }); }
   function idle() { (window.requestIdleCallback || function (f) { return setTimeout(f, 50); })(start, { timeout: 2500 }); }
   if (document.readyState === 'complete') setTimeout(idle, 200); else window.addEventListener('load', function () { setTimeout(idle, 200); });
+  measureScene(); // lock the title between nav and horizon before the fade-in is visible
+  loadSat(); // start the Cassini download now, not after load+idle
+  document.addEventListener('DOMContentLoaded', measureScene);
+  requestAnimationFrame(measureScene);
   window.addEventListener('sp-lb', function () { setTimeout(placeCaption, 50); }); // language banner shown/closed
   setTimeout(placeCaption, 1500);
   window.__heroSpace = { start: start, procTex: function (name, size, cb) { var o = T; T = size; (name === 'moon' ? moonTex : enceladusTex)(function (img) { T = o; cb(img); }); }, frames: function () { return nFrames; }, quality: function () { return { level: QL, ground: cGround.width + "x" + cGround.height, fx: cFx.width + "x" + cFx.height }; }, size: function () { return { W: W, H: H, D: D, hY: hY, gl: glOk }; },
