@@ -17,7 +17,7 @@ E = lambda s: html.escape(s if s is not None else '', quote=True)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BANDS = ['K-2', '3-5', '6-8', '9-12']
 SUBJ_ORDER = ['earth', 'life', 'space', 'literacy']
-ASSET = '20261111c'
+ASSET = '20261111e'
 
 # Codes already defined in standards.json. Nothing new is invented here.
 RI = 'CCSS.ELA-LITERACY.RI.5.9'
@@ -220,6 +220,44 @@ SECONDARY_LABELS = {
 HUB_LEAD = ['Oceans.html', 'Rivers.html', 'Lakes.html', 'Deforestation.html', 'Polar.html', 'Earth_Observation.html',
             'Planetary_Defense.html', 'Space_Weather.html', 'Space.html', 'Space_Disposal.html', 'Project-Rawane.html']
 PRINT_LABEL = {'en': 'Print', 'fr': 'Imprimer', 'es': 'Imprimir', 'ar': 'اطبع', 'it': 'Stampa', 'he': 'הדפסה'}
+# Homepage Earth / beach / forest loop. Same file the live homepage and Match page already play.
+HERO_VIDEO = 'https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4'
+HERO_CREDIT = {
+ 'en': 'Created by the Founder and SI',
+ 'fr': 'Créé par le fondateur et SI',
+ 'es': 'Creado por el fundador y SI',
+ 'ar': 'من إعداد المؤسس وSI',
+ 'it': 'Creato dal fondatore e da SI',
+ 'he': 'נוצר על ידי המייסד ו-SI',
+}
+def dress_hero(s, lang):
+    poster = ('../' if lang != 'en' else '') + 'assets/videos/hero-loop.jpg'
+    media = (
+        f'<div class="t-hero-media" aria-hidden="true"><img class="t-hero-still" src="{poster}" alt="" width="1280" height="546">'
+        f'<video class="t-hero-video" muted loop playsinline autoplay preload="none" poster="{poster}" width="1280" height="546">'
+        f'<source data-src="{HERO_VIDEO}" type="video/mp4"></video><div class="t-hero-shade"></div></div>'
+    )
+    script = (
+        '<script>(function(){var v=document.querySelector(".t-hero-video");if(!v)return;'
+        'var mq=window.matchMedia("(prefers-reduced-motion: reduce)");'
+        'function arm(){if(mq.matches){v.pause();v.removeAttribute("autoplay");v.preload="none";return;}'
+        'var s=v.querySelector("source");if(s&&!s.getAttribute("src")){s.src=s.getAttribute("data-src");v.load();}'
+        'var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){});}'
+        'arm();if(mq.addEventListener)mq.addEventListener("change",arm);})();</script>'
+    )
+    def repl(m):
+        content = re.search(r'<div class="page-hero-content">.*?</div>', m.group(0), re.S)
+        if not content:
+            return m.group(0)
+        return (f'<section class="page-hero hero-teach has-video">{media}{content.group(0)}'
+                f'<span class="hero-credit">{E(HERO_CREDIT[lang])}</span></section>{script}')
+    s2, n = re.subn(
+        r'<section class="page-hero hero-teach[^"]*">.*?</section>(?:<script>\(function\(\)\{var v=document\.querySelector\("\.t-hero-video"\).*?</script>)?',
+        repl, s, count=1, flags=re.S)
+    if n != 1 or 't-hero-video' not in s2:
+        raise SystemExit(f'{lang}: could not place the title video')
+    s2 = s2.replace('data-glass-tint="site"', 'data-glass-tint="water"', 1)
+    return s2
 TYPE_KEY = {'sheet': 'sheet', 'lesson': 'lesson_b', 'course': 'course_b', 'lab': 'lab', 'activity': 'activity', 'map': 'map'}
 # The course block was left in English on every translated Teachers page. These strings
 # are the ones build-teacher-guide.py already uses for each language.
@@ -630,6 +668,7 @@ def apply_lang(lang, D, PH):
     if 'teachers-home.js' not in s2:
         s2 = s2.replace('</body>', f'<script src="{js}" defer></script>\n</body>', 1)
     s2 = re.sub(r'teachers-home\.(css|js)\?v=[0-9a-z]+', lambda m: f'teachers-home.{m.group(1)}?v={ASSET}', s2)
+    s2 = dress_hero(s2, lang)
     footer2 = foot(s2)
     if footer2 != footer:
         raise SystemExit(f'{path}: footer changed')
