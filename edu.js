@@ -8,7 +8,7 @@
   var D = null;
   function load(cb) {
     if (D) return cb(D);
-    fetch(root + 'assets/data/edu.' + lang + '.json?v=20261014f').then(function (r) { return r.json(); }).then(function (d) { D = d; cb(d); })
+    fetch(root + 'assets/data/edu.' + lang + '.json?v=20261110a').then(function (r) { return r.json(); }).then(function (d) { D = d; cb(d); })
       .catch(function () { var t = document.querySelector('.edu-error-tpl'), e = document.querySelector('.edu-error'); if (t && !e) { t.parentNode.insertBefore(t.content.cloneNode(true), t); } else if (e) e.hidden = false; });
   }
   /* ---------------- Kids map ---------------- */
@@ -97,6 +97,18 @@
       document.addEventListener('keydown', key); document.body.appendChild(ov); document.body.classList.add('lb-deck-on'); go(0); ov.querySelector('[data-d="1"]').focus();
     }
     function pick(arr, n, seed) { var a = arr.slice(), r = []; seed = seed || 1; while (a.length && r.length < n) { seed = (seed * 9301 + 49297) % 233280; r.push(a.splice(Math.floor(seed / 233280 * a.length), 1)[0]); } return r; }
+    function globeOutside(sols, band) {
+      var g = L.go;
+      if (!g || !sols.some(function (s) { return /GLOBE_Program\.html(?:$|[?#])/.test(s.u); })) return '';
+      var young = band === 'k3' || band === 'g45';
+      var app = 'https://www.globe.gov/get-involved/join-globe/get-the-app';
+      var over = 'https://scool.larc.nasa.gov/GLOBE/globe_overpass-en.html';
+      var match = 'https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data';
+      var body = young
+        ? '<p>' + esc(g.k5) + ' <a href="' + app + '" target="_blank" rel="noopener">' + esc(g.app) + '</a>.</p>'
+        : '<p>' + esc(g.older) + ' <a href="' + over + '" target="_blank" rel="noopener">' + esc(g.over) + '</a>. <a href="' + match + '" target="_blank" rel="noopener">' + esc(g.emailPage) + '</a>.</p>';
+      return '<h3>' + esc(g.h) + '</h3><p class="lb-small">' + esc(g.note) + ' ' + esc(g.credit) + '</p>' + body;
+    }
     function build(e) {
       if (e) e.preventDefault();
       var band = lb.elements.band.value, hub = lb.elements.hub.value, min = +lb.elements.min.value, B = L.bands[band], h = d.hubs[hub];
@@ -117,6 +129,7 @@
           '<li><b>' + esc(fmt(L.step.explore, { n: tm[1] })) + '</b> ' + esc(L.step.exploreText) + ' ' + solLinks + '.</li>' +
           '<li><b>' + esc(fmt(L.step.activity, { n: tm[2] })) + '</b> ' + esc(fmt(B.activity, T)) + '</li>' +
           '<li><b>' + esc(fmt(L.step.wrap, { n: tm[3] })) + '</b> ' + esc(L.step.wrapText) + '</li></ol>' +
+        globeOutside(sols, band) +
         (facts.length ? '<h3>' + esc(L.h.facts) + '</h3>' + facts.map(function (f) { return '<p class="lb-fact">' + esc(f.x) + ' <span class="lb-small">(' + esc(U.source) + ' <a href="' + esc(f.src) + '">' + esc(f.sn) + '</a>)</span></p>'; }).join('') : '') +
         '<h3>' + esc(L.h.solutions) + '</h3><ul>' + sols.map(function (s) { return '<li><a href="' + esc(s.u) + '">' + esc(s.t) + '</a>: ' + esc(s.d) + '</li>'; }).join('') + '</ul>' +
         (terms.length ? '<h3>' + esc(L.h.vocab) + '</h3><ul>' + terms.map(function (t) { return '<li><b><a href="' + esc(t.u) + '">' + esc(t.t) + '</a></b>: ' + esc(t.d) + '</li>'; }).join('') + '</ul>' : '') +

@@ -40,7 +40,8 @@
    "creditHtml": "Image: NASA (Landsat 9 Spacecraft (Observatory) Move from High Bay into Cell ). <a href=\"https://images.nasa.gov/details/KSC-20210720-PH-RNB01_0022\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/KSC-20210720-PH-RNB01_0022",
-   "imageTitle": "Landsat 9 Spacecraft (Observatory) Move from High Bay into Cell "
+   "imageTitle": "Landsat 9 Spacecraft (Observatory) Move from High Bay into Cell ",
+   "globeHtml": "GLOBE ground link: GLOBE Land Cover observations are matched to Landsat 8 and 9. Volunteers who submit land cover data are emailed the closest-in-time Landsat and Sentinel-2 observation. Sources: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a> · <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "s2c",
@@ -75,7 +76,8 @@
    "creditHtml": "Photo: Rama, via Wikimedia Commons (CC BY-SA 2.0 fr). <a href=\"https://commons.wikimedia.org/wiki/File:Sentinel_2-IMG_5873-white_(crop).jpg\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://commons.wikimedia.org/wiki/File:Sentinel_2-IMG_5873-white_(crop).jpg",
-   "imageTitle": "File:Sentinel 2-IMG 5873-white (crop).jpg"
+   "imageTitle": "File:Sentinel 2-IMG 5873-white (crop).jpg",
+   "globeHtml": "GLOBE ground link: GLOBE Land Cover observations are matched to Sentinel-2. Source: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a>"
   },
   {
    "id": "s1c",
@@ -320,7 +322,8 @@
    "creditHtml": "Image: NASA (OCI Crane Lift off the Tilt Mechanism). <a href=\"https://images.nasa.gov/details/GSFC_20220805_PACE_064859\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/GSFC_20220805_PACE_064859",
-   "imageTitle": "OCI Crane Lift off the Tilt Mechanism"
+   "imageTitle": "OCI Crane Lift off the Tilt Mechanism",
+   "globeHtml": "GLOBE ground link: GLOBE Clouds observations are matched to this satellite. GLOBE volunteers can support PACE science by observing clouds when PACE is overhead. Sources: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a> · <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "swot",
@@ -355,7 +358,8 @@
    "creditHtml": "Image: NASA (Deployment of SWOT&#x27;s Solar Arrays). <a href=\"https://images.nasa.gov/details/PIA25563\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/PIA25563",
-   "imageTitle": "Deployment of SWOT's Solar Arrays"
+   "imageTitle": "Deployment of SWOT's Solar Arrays",
+   "globeHtml": "GLOBE ground link: GLOBE volunteers can participate in SWOT science by observing land cover and lake levels. Source: <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "icesat2",
@@ -460,7 +464,8 @@
    "creditHtml": "Image: NASA (NISAR Satellite&#x27;s Major Components Come Together). <a href=\"https://images.nasa.gov/details/PIA25866\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/PIA25866",
-   "imageTitle": "NISAR Satellite's Major Components Come Together"
+   "imageTitle": "NISAR Satellite's Major Components Come Together",
+   "globeHtml": "GLOBE ground link: GLOBE volunteers can contribute to NISAR studies of agriculture and snow through the Land Cover protocol. Source: <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "earthcare",
@@ -530,7 +535,8 @@
    "creditHtml": "Image: NASA (JPSS-2 Fairing Encapsulation). <a href=\"https://images.nasa.gov/details/KSC-20221012-PH-SLG01_0155\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/KSC-20221012-PH-SLG01_0155",
-   "imageTitle": "JPSS-2 Fairing Encapsulation"
+   "imageTitle": "JPSS-2 Fairing Encapsulation",
+   "globeHtml": "GLOBE ground link: GLOBE matches Clouds observations to NOAA-20, part of the Joint Polar Satellite System. This card shows NOAA-21, which stands in for that system on this map. Sources: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a> · <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "gcomw",
@@ -1055,7 +1061,8 @@
    "creditHtml": "Photo: NASA (PIA25148). EMIT being loaded into a Falcon 9 trunk. <a href=\"https://images.nasa.gov/details/PIA25148\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://images.nasa.gov/details/PIA25148",
-   "imageTitle": "EMIT loaded into a Falcon 9 trunk"
+   "imageTitle": "EMIT loaded into a Falcon 9 trunk",
+   "globeHtml": "GLOBE ground link: GLOBE volunteers can support EMIT science by documenting snow color using the Land Cover protocol. Observations of agriculture using that protocol may also be useful. Source: <a href=\"https://www.globe.gov/ground-to-satellite/nasa-mission-connections\" rel=\"noopener\" target=\"_blank\">NASA Mission Connections</a>"
   },
   {
    "id": "galileo",
@@ -1127,7 +1134,8 @@
    "creditHtml": "Photo: NOAASatellites, via Wikimedia Commons (Public domain). <a href=\"https://commons.wikimedia.org/wiki/File:GOES-U_Satellite_EMI-EMC_Testing_(53187216386).jpg\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://commons.wikimedia.org/wiki/File:GOES-U_Satellite_EMI-EMC_Testing_(53187216386).jpg",
-   "imageTitle": "File:GOES-U Satellite EMI-EMC Testing (53187216386).jpg"
+   "imageTitle": "File:GOES-U Satellite EMI-EMC Testing (53187216386).jpg",
+   "globeHtml": "GLOBE ground link: GLOBE Clouds observations are matched to GOES. This card is GOES-19. Source: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a>"
   },
   {
    "id": "insat",
@@ -1201,7 +1209,8 @@
    "creditHtml": "Photo: ESA/Mlabspace, via Wikimedia Commons (CC BY-SA 3.0 igo). <a href=\"https://commons.wikimedia.org/wiki/File%3AMTG-I_solar_arrays_deploy_ESA24625310.png\" rel=\"noopener\" target=\"_blank\">Source</a>",
    "imageKind": "photo",
    "imagePage": "https://commons.wikimedia.org/wiki/File%3AMTG-I_solar_arrays_deploy_ESA24625310.png",
-   "imageTitle": "File:MTG-I solar arrays deploy ESA24625310.png"
+   "imageTitle": "File:MTG-I solar arrays deploy ESA24625310.png",
+   "globeHtml": "GLOBE ground link: GLOBE Clouds observations are matched to Meteosat. This card is MTG-I1, a Meteosat Third Generation satellite. Source: <a href=\"https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data\" rel=\"noopener\" target=\"_blank\">Connecting GLOBE to Satellite Data</a>"
   },
   {
    "id": "mtgs",

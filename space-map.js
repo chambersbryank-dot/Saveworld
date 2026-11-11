@@ -26,6 +26,7 @@
       '<h3><a href="' + esc(s.page) + '">' + esc(s.pageName) + '</a></h3>' +
       '<p class="sol-desc"><span>' + esc(s.desc) + '</span></p>' +
       '<p class="sm-orbit">' + esc(s.source) + '</p>' +
+      (s.globeHtml ? '<p class="sm-globe">' + s.globeHtml + '</p>' : '') +
       '<p class="sm-more"><a href="' + esc(s.page) + '">Read the solution page</a></p>' +
       '</article></div>';
   }
