@@ -26,24 +26,39 @@ window.SP_SEARCH_STARTED = true;
   const track = () => {};  // Oct 16: GA removed; search text is never sent anywhere (COPPA)
   input.closest('form')?.addEventListener('submit', e => { e.preventDefault(); input.blur(); track(input.value.trim()); go(); });
 
-  // floating example questions: placed at build time by scripts/build-search-page.py (all topics; CSS shows the active one).
-  // Oct 16: no client-side rendering any more, so the ring never shifts the search bar (CLS).
-  document.querySelectorAll('.sp-ring .sp-q').forEach(a => a.addEventListener('click', e => {
-    e.preventDefault(); input.value = a.textContent; go();
+  // Starter chips sit on the arc (build-search-page.py). After a search they become follow-up questions
+  // built only from the query and the top results' titles and hubs. Clicking one runs that question.
+  const arc = $('sp-float');
+  const starterHTML = arc ? arc.innerHTML : '';
+  arc?.addEventListener('click', e => {
+    const a = e.target.closest('.sp-q');
+    if (!a) return;
+    e.preventDefault();
+    input.value = a.textContent.trim();
+    go();
     $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-  }));
+  });
   // approved student-question answers (search/student-qa.json from scripts/build-student-qa.py)
   const QA_T = { rocket: 'rocket', aero: 'aero', orbit: 'orbital', phys: 'physics', all: 'all' };
   let qa = [];
   fetch('/search/student-qa.json').then(r => r.ok ? r.json() : {}).then(d => { qa = (d[lang.slice(0, 2)] || []).map(e => ({ ...e, tab: QA_T[e.topic] || 'all' })); }).catch(() => {});
   const topic = () => document.documentElement.getAttribute('data-sp-topic') || 'all';
-  document.addEventListener('sp-topic', () => { if (input.value.trim() && window.SP_SEARCH_ACTIVE) run(false, true); });
+  document.addEventListener('sp-topic', () => {
+    if (!arc?.classList.contains('is-live')) placeArc();
+    if (input.value.trim() && window.SP_SEARCH_ACTIVE) run(false, true);
+  });
 
   // hub/category label for each result card (search/hubs.json, built from page breadcrumbs by scripts/build-search.mjs)
-  const hubOf = new Map();
+  const hubOf = new Map(), hubFileOf = new Map(), hubName = new Map();
   const hubsReady = fetch('/search/hubs.json').then(r => r.json()).then(d => {
-    const names = d.hubNames[lang.slice(0, 2)] || d.hubNames.en;
-    for (const [pg, hub] of Object.entries(d.hubOf)) hubOf.set(pg, pg === hub ? msg('hub') : (names[hub] || d.hubNames.en[hub]));
+    const names = d.hubNames[lang.slice(0, 2)] || d.hubNames.en || {};
+    const en = d.hubNames.en || {};
+    for (const [pg, hub] of Object.entries(d.hubOf)) {
+      hubFileOf.set(pg, hub);
+      const label = names[hub] || en[hub] || '';
+      hubName.set(pg, label);
+      hubOf.set(pg, pg === hub ? msg('hub') : (label || msg('hub')));
+    }
   }).catch(() => {});
   function base(u) { return (u || '').replace(/[?#].*$/, '').split('/').pop(); }
   // Oct 25 (upgrade 4): result groups. search/result-types.json (scripts/build-search-page.py): page -> solution | course | fact | mission
@@ -96,7 +111,7 @@ window.SP_SEARCH_STARTED = true;
     const q = input.value.trim(), my = ++seq;
     if (!keepShown) shown = 0;
     if (updateUrl) { const u = new URLSearchParams(); if (topic() !== 'all') u.set('topic', topic()); if (q) u.set('q', q); const qs = u.toString(); history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '')); }
-    if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; if (empty) empty.hidden = !!$('sp-float')?.children.length; return; }
+    if (!q) { lastItems = []; paint(); list.innerHTML = ''; status.textContent = ''; showStarters(); syncTeach('', []); if (empty) empty.hidden = true; return; }
     const kwr = await keyword(q); await hubsReady; await typesReady;
     // topic tab: filtered Pagefind search over that topic's tagged math/Learn/calculator pages (meta data-pagefind-filter="topic")
     const tp = topic(); let topicHits = [];
@@ -158,6 +173,12 @@ window.SP_SEARCH_STARTED = true;
     const items = lastItems.slice(0, shown);
     if (more) more.hidden = lastItems.length <= shown;
     if (refine) refine.hidden = !lastItems.length;
+    const qNow = input.value.trim();
+    if (qNow && lastItems.length) {
+      const qs = followUps(qNow, lastItems);
+      if (qs.length) showFollowUps(qs); else showStarters();
+    }
+    syncTeach(qNow, lastItems);
     // grouped by type; groups appear in the order of their best-ranked result, ranking kept inside each group
     const groups = new Map();
     items.forEach(it => { const k = kind(it.url); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(it); });
@@ -202,5 +223,167 @@ window.SP_SEARCH_STARTED = true;
   input.addEventListener('blur', () => setTimeout(closeSugg, 120));
   // no live results while typing (suggestions only): search runs on Enter/Search, question/chip clicks and ?q= links
   input.addEventListener('focus', () => { if (window.SP_SEARCH_ACTIVE) startSemantic(); }, { once: true }); // quiet model preload
-  if (input.value.trim()) go();
+  if (input.value.trim()) { syncTeach(input.value.trim(), []); go(); }
+  else syncTeach('', []);
+  placeArc();
+  let placeT = 0;
+  window.addEventListener('resize', () => { clearTimeout(placeT); placeT = setTimeout(placeArc, 80); });
+
+function placeArc() {
+  const box = document.getElementById('sp-float');
+  if (!box) return;
+  const chips = [...box.querySelectorAll('.sp-q')].filter(el => getComputedStyle(el).display !== 'none');
+  const narrow = matchMedia('(max-width: 760px)').matches;
+  const rtl = document.documentElement.dir === 'rtl';
+  const n = chips.length;
+  chips.forEach((c, i) => {
+    if (narrow || !n) return;
+    const u = n === 1 ? 0.5 : i / (n - 1);
+    const t = rtl ? 1 - u : u;
+    const x = (0.14 + t * 0.72) * 100;
+    const y = (0.78 - Math.sin(t * Math.PI) * 0.66) * 100;
+    c.style.setProperty('--x', x.toFixed(1) + '%');
+    c.style.setProperty('--y', y.toFixed(1) + '%');
+  });
+}
+function showStarters() {
+  const box = document.getElementById('sp-float');
+  if (!box || !box.classList.contains('is-live')) { placeArc(); return; }
+  box.classList.remove('is-live');
+  box.innerHTML = starterHTML;
+  placeArc();
+}
+function showFollowUps(qs) {
+  const box = document.getElementById('sp-float');
+  if (!box) return;
+  const topic = document.documentElement.getAttribute('data-sp-topic') || 'all';
+  const pre = topic === 'all' ? '' : 'topic=' + encodeURIComponent(topic) + '&';
+  box.classList.add('is-live');
+  box.innerHTML = qs.map((q, i) => '<a class="sp-q sp-crystal" data-t="' + topic + '" href="?' + pre + 'q=' + encodeURIComponent(q) + '" style="--i:' + i + '">' + esc(q) + '</a>').join('');
+  placeArc();
+}
+function dominantHub(items) {
+  const counts = new Map();
+  items.slice(0, 5).forEach(it => {
+    const h = hubFileOf.get(base(it.url));
+    if (!h) return;
+    counts.set(h, (counts.get(h) || 0) + 1);
+  });
+  let best = '', n = 0;
+  counts.forEach((c, h) => { if (c > n) { n = c; best = h; } });
+  return best;
+}
+function syncTeach(q, items) {
+  const lesson = document.getElementById('sp-lesson');
+  const sheet = document.getElementById('sp-sheet');
+  const hub = dominantHub(items || []);
+  if (lesson) {
+    const p = new URLSearchParams();
+    if (q) p.set('q', q.slice(0, 180));
+    if (hub) p.set('hub', hub);
+    lesson.href = 'Lesson_Builder.html' + (p.toString() ? '?' + p : '');
+  }
+  if (sheet) {
+    let heads = {};
+    try { heads = JSON.parse(document.getElementById('sp-sheet-hubs').textContent); } catch (e) {}
+    const name = hub && heads[hub];
+    sheet.href = name ? 'Teachers.html#:~:text=' + encodeURIComponent(name) : 'Teachers.html';
+  }
+}
+const PURPOSE = {
+  en: /\bto\s+(.{8,90})$/i,
+  fr: /\bpour\s+(.{8,90})$/i,
+  es: /\bpara\s+(.{8,90})$/i,
+  it: /\bper\s+(.{8,90})$/i,
+  ar: /(?:لكي|من أجل)\s+(.{6,90})$/,
+  he: /(?:כדי|על מנת)\s+(.{6,90})$/
+};
+const LEAD_Q = /^(what|how|which|who|why|when|where|can|could|should|do|does|que|quoi|comment|pourquoi|cómo|como|qué|cual|cuál|come|cosa|perché|perche|ما|ماذا|كيف|لماذا|هل|מה|איך|למה|אילו)\b/i;
+function focusPhrase(q) {
+  const langKey = (document.documentElement.lang || 'en').slice(0, 2);
+  let s = String(q || '').replace(/[?؟]+/g, '').replace(/\s+/g, ' ').trim();
+  if (langKey === 'ar') {
+    const ar = s.match(/(?:^|\s)(ل[إأا]\S+(?:\s+\S+){0,5})/);
+    if (ar) return ar[1].trim();
+  }
+  const m = s.match(PURPOSE[langKey] || PURPOSE.en);
+  if (m) return m[1].trim();
+  let guard = 0;
+  while (LEAD_Q.test(s) && guard++ < 4) s = s.replace(LEAD_Q, '').trim();
+  const words = s.split(' ').filter(Boolean);
+  if (words.length > 10) s = words.slice(-8).join(' ');
+  return s.trim();
+}
+function cleanTitle(t) {
+  return String(t || '').split(' | ')[0].split(' – ')[0].replace(/\s+/g, ' ').trim();
+}
+const FOLLOW = {
+  en: [
+    c => c.title ? 'What does ' + c.title + ' add to this question?' : '',
+    c => c.hub && c.focus ? 'Which ' + c.hub + ' pages should we open next for “' + c.focus + '”?' : '',
+    c => c.title && c.focus ? 'How does ' + c.title + ' connect with “' + c.focus + '”?' : '',
+    c => c.hub && c.focus ? 'Which other ' + c.hub + ' pages fit “' + c.focus + '”?' : '',
+    c => c.focus ? 'What should we ask next about “' + c.focus + '”?' : ''
+  ],
+  fr: [
+    c => c.title ? 'Qu’ajoute ' + c.title + ' à cette question ?' : '',
+    c => c.hub && c.focus ? 'Quelles pages ' + c.hub + ' ouvrir ensuite pour « ' + c.focus + ' » ?' : '',
+    c => c.title && c.focus ? 'Comment ' + c.title + ' se relie-t-il à « ' + c.focus + ' » ?' : '',
+    c => c.hub && c.focus ? 'Quelles autres pages ' + c.hub + ' vont avec « ' + c.focus + ' » ?' : '',
+    c => c.focus ? 'Que demander ensuite à propos de « ' + c.focus + ' » ?' : ''
+  ],
+  es: [
+    c => c.title ? '¿Qué añade ' + c.title + ' a esta pregunta?' : '',
+    c => c.hub && c.focus ? '¿Qué páginas de ' + c.hub + ' abrimos después sobre «' + c.focus + '»?' : '',
+    c => c.title && c.focus ? '¿Cómo se conecta ' + c.title + ' con «' + c.focus + '»?' : '',
+    c => c.hub && c.focus ? '¿Qué otras páginas de ' + c.hub + ' encajan con «' + c.focus + '»?' : '',
+    c => c.focus ? '¿Qué más conviene preguntar sobre «' + c.focus + '»?' : ''
+  ],
+  ar: [
+    c => c.title ? 'ماذا تضيف ' + c.title + ' إلى هذا السؤال؟' : '',
+    c => c.hub && c.focus ? 'أي صفحات ' + c.hub + ' نفتح بعد ذلك عن «' + c.focus + '»؟' : '',
+    c => c.title && c.focus ? 'كيف تتصل ' + c.title + ' بـ«' + c.focus + '»؟' : '',
+    c => c.hub && c.focus ? 'أي صفحات أخرى في ' + c.hub + ' تناسب «' + c.focus + '»؟' : '',
+    c => c.focus ? 'ماذا نسأل بعد ذلك عن «' + c.focus + '»؟' : ''
+  ],
+  it: [
+    c => c.title ? 'Che cosa aggiunge ' + c.title + ' a questa domanda?' : '',
+    c => c.hub && c.focus ? 'Quali pagine di ' + c.hub + ' apriamo dopo su «' + c.focus + '»?' : '',
+    c => c.title && c.focus ? 'Come si collega ' + c.title + ' a «' + c.focus + '»?' : '',
+    c => c.hub && c.focus ? 'Quali altre pagine di ' + c.hub + ' c’entrano con «' + c.focus + '»?' : '',
+    c => c.focus ? 'Che cosa chiedere dopo su «' + c.focus + '»?' : ''
+  ],
+  he: [
+    c => c.title ? 'מה מוסיף ' + c.title + ' לשאלה הזו?' : '',
+    c => c.hub && c.focus ? 'אילו עמודים ב' + c.hub + ' לפתוח אחר כך על „' + c.focus + '”?' : '',
+    c => c.title && c.focus ? 'איך ' + c.title + ' מתקשר ל„' + c.focus + '”?' : '',
+    c => c.hub && c.focus ? 'אילו עמודים נוספים ב' + c.hub + ' מתאימים ל„' + c.focus + '”?' : '',
+    c => c.focus ? 'מה כדאי לשאול אחר כך על „' + c.focus + '”?' : ''
+  ]
+};
+function followUps(q, items) {
+  const langKey = (document.documentElement.lang || 'en').slice(0, 2);
+  const frames = FOLLOW[langKey] || FOLLOW.en;
+  const focus = focusPhrase(q);
+  const out = [], seen = new Set([q.trim().toLowerCase()]);
+  function add(s) {
+    s = String(s || '').replace(/\s+/g, ' ').trim();
+    if (!s) return;
+    if (!/[?؟]$/.test(s)) s += '?';
+    const k = s.toLowerCase();
+    if (k === q.trim().toLowerCase() || seen.has(k) || s.length > 180) return;
+    seen.add(k);
+    out.push(s);
+  }
+  items.slice(0, 4).forEach((it, i) => {
+    const ctx = { title: cleanTitle(it.title), hub: hubName.get(base(it.url)) || '', focus: focus };
+    for (let k = 0; k < frames.length && out.length < 5; k++) {
+      const before = out.length;
+      add(frames[(i + k) % frames.length](ctx));
+      if (out.length > before) break;
+    }
+  });
+  if (out.length < 3) add(frames[frames.length - 1]({ title: '', hub: '', focus: focus }));
+  return out.slice(0, 5);
+}
 })();
