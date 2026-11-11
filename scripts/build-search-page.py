@@ -30,24 +30,54 @@ FEAT = json.load(open('search/featured-questions.json', encoding='utf8'))
 def topic_sets(l):
     allq = FEAT.get(l) or (ST.IT_ALL if l == 'it' else ST.HE_ALL if l == 'he' else FEAT['en'])
     return [('all', ST.ALL[l], allq[:12])] + [(t['id'], t['label'][l], t['q'][l]) for t in ST.TOPICS]
-def chip(t, q, i):
-    pre = '' if t == 'all' else f'topic={t}&amp;'
-    return f'<a class="sp-q" data-t="{t}" href="?{pre}q={html.escape(__import__("urllib.parse").parse.quote(q))}" style="--i:{i}">{html.escape(q)}</a>'
-def zones(l):
-    z = ['', '', '', '']
+import math
+# Upper arc, 9 o'clock over 12 to 3 o'clock. ar/he mirror so the first chip starts on the right.
+def arc_style(i, n, rtl):
+    u = 0.5 if n <= 1 else i / (n - 1)
+    t = (1 - u) if rtl else u
+    # Evenly spaced along a high arc so wide chips do not cover each other.
+    x = (0.14 + t * 0.72) * 100
+    y = (0.78 - math.sin(t * math.pi) * 0.66) * 100
+    return f'--x:{x:.1f}%;--y:{y:.1f}%;--i:{i}'
+def arc_chips(l):
+    rtl = l in ('ar', 'he')
+    parts = []
     for t, _, qs in topic_sets(l):
-        for i, q in enumerate(qs): z[i // 3] += chip(t, q, i)
-    return z
+        show = qs[:5]
+        for i, q in enumerate(show):
+            pre = '' if t == 'all' else f'topic={t}&amp;'
+            href = f'?{pre}q={html.escape(__import__("urllib.parse").parse.quote(q))}'
+            parts.append(f'<a class="sp-q sp-crystal" data-t="{t}" href="{href}" style="{arc_style(i, len(show), rtl)}">{html.escape(q)}</a>')
+    return ''.join(parts)
+ACT = {
+ 'lesson': {'en': 'Build Lesson Plan', 'fr': 'Créer un plan de cours', 'es': 'Crear un plan de clase', 'ar': 'إنشاء خطة درس', 'it': 'Crea un piano di lezione', 'he': 'בניית מערך שיעור'},
+ 'sheet': {'en': 'Create Teacher Sheet', 'fr': 'Créer une fiche enseignant', 'es': 'Crear una ficha docente', 'ar': 'إنشاء ورقة للمعلم', 'it': 'Crea una scheda docente', 'he': 'יצירת דף למורה'},
+ 'group': {'en': 'For teachers', 'fr': 'Pour les enseignants', 'es': 'Para docentes', 'ar': 'للمعلمين', 'it': 'Per gli insegnanti', 'he': 'למורים'},
+ 'si': {'en': 'SI suggestions', 'fr': 'Suggestions SI', 'es': 'Sugerencias SI', 'ar': 'اقتراحات SI', 'it': 'Suggerimenti SI', 'he': 'הצעות SI'},
+}
+def teacher_heads(l):
+    # Visible hub names on Teachers.html, used as text fragments. The Nov 11 redesign
+    # lists hubs as <details class="t-topic" data-hub="Rivers.html">. JROTC and Careers are not hubs.
+    f = ('' if l == 'en' else l + '/') + 'Teachers.html'
+    if not os.path.exists(f): return {}
+    raw = open(f, encoding='utf8').read()
+    out = {}
+    for m in re.finditer(r'<details class="t-topic"[^>]*data-hub="([^"]+\.html)"[^>]*>(.*?)</details>', raw, re.S):
+        name = re.search(r'<span class="t-topic-name">([^<]*)</span>', m.group(2))
+        if name: out[html.unescape(m.group(1))] = html.unescape(name.group(1)).strip()
+    if out: return out
+    pairs = re.findall(r'<section class="five-ws t-hub"><h2><a href="([^"]+\.html)">([^<]*)</a>', raw)
+    return {href: html.unescape(name).strip() for href, name in pairs}
 def tabs(l):
     pre = '' 
-    items = ''.join(f'<a role="tab" class="sp-tab" data-t="{t}" href="Search.html{"" if t == "all" else "?topic=" + t}" aria-selected="{"true" if t == "all" else "false"}" tabindex="{0 if t == "all" else -1}" aria-controls="sp-ring">{html.escape(lab)}</a>'
+    items = ''.join(f'<a role="tab" class="sp-tab" data-t="{t}" href="Search.html{"" if t == "all" else "?topic=" + t}" aria-selected="{"true" if t == "all" else "false"}" tabindex="{0 if t == "all" else -1}" aria-controls="sp-float">{html.escape(lab)}</a>'
                     for t, lab, _ in topic_sets(l))
     boost = html.escape(json.dumps({t['id']: t['boost'] for t in ST.TOPICS}, separators=(',', ':')))
     return f'<div class="sp-tabs" role="tablist" aria-label="{html.escape(ST.TAB_LABEL[l])}" data-boost="{boost}">{items}</div>'
 def grab(s, pat, default=''):
     m = re.search(pat, s, re.S); return m.group(1).strip() if m else default
 CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
-       '.sp-stage{min-height:calc(100svh - 120px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;padding:2rem 1rem 1.5rem;box-sizing:border-box;text-align:center;position:relative;z-index:0;isolation:isolate;overflow:hidden;padding-top:calc(var(--nav-height,96px) + 32px);'
+       '.sp-stage{min-height:calc(100svh - 120px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;padding:2rem 1rem 1.5rem;box-sizing:border-box;text-align:center;position:relative;z-index:0;isolation:isolate;overflow:visible;padding-top:calc(var(--nav-height,96px) + 32px);'
        'background:radial-gradient(ellipse at 50% 35%,rgba(0,156,222,.18),transparent 60%)}'
        '.sp-stage:has(#results li){justify-content:flex-start;padding-top:1rem;gap:1.15rem;overflow:visible;min-height:0}'
        '.sp-stage .sp-search-form{display:flex;gap:.6rem;width:min(720px,100%);margin:0;position:static}'
@@ -94,33 +124,65 @@ CSS = ('<style>/* SPSTAGE */body.sp-search-page main#main{display:block}'
        '.sp-tlink{display:none;min-height:44px;align-items:center;padding:0 1rem;border-radius:999px;border:1px solid #ffd54a;color:#ffd54a;font-weight:700;text-decoration:none}html[data-sp-topic=rocket] .sp-tlink[data-t=rocket]{display:inline-flex}'
        '.sr-only-x{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
        '.sp-gh{list-style:none;margin:1.1rem 0 .3rem}.sp-stage .sp-results .sp-gh-t{font-size:1rem!important;letter-spacing:.04em;text-transform:uppercase;opacity:.9;margin:0 0 .4rem;text-align:start}.sp-gh>ol{list-style:none;padding:0;margin:0;display:grid;gap:inherit}'
-       '.sp-stage .sp-search-form{position:relative}.sp-sugg{position:absolute;top:100%;inset-inline:0;z-index:5;list-style:none;margin:.3rem 0 0;padding:.3rem;border-radius:14px;background:#0b1620;border:1px solid rgba(143,211,255,.6);text-align:start;box-shadow:0 10px 28px rgba(0,0,0,.45)}.sp-sugg[hidden]{display:none}.sp-sugg li{padding:.55rem .8rem;border-radius:10px;cursor:pointer;color:#e8eef5}.sp-sugg li[aria-selected=true],.sp-sugg li:hover{background:rgba(0,156,222,.35)}.sp-sugg .sp-sg{font-size:.78rem;opacity:.8;margin-inline-start:.5rem}html:has(body.sp-search-page){scroll-padding-top:calc(var(--spn-h,96px) + 16px)}body.sp-search-page :is(#status,#search-mode,.sp-results,.sp-gh-t,.sp-card,.sp-more,.sp-refine,.sp-tabs,.sp-search-form){scroll-margin-top:calc(var(--spn-h,96px) + 16px)}.sp-stage:has(#results li) .sp-ring{width:min(860px,100%)}.sp-stage:has(#results li) .sp-ring .sp-search-form{width:100%}body.sp-search-page .sp-status{margin:.2rem 0 0;font-size:1.02rem;font-weight:700;color:#e8eef5;letter-spacing:.01em}body.sp-search-page .search-mode{margin:.25rem 0 0;font-size:.85rem;line-height:1.45;color:#9fb3c4;opacity:1}body.sp-search-page .sp-results{margin:.95rem 0 0;gap:.7rem}body.sp-search-page .sp-gh{margin:0}body.sp-search-page .sp-gh+.sp-gh{margin-top:1rem}body.sp-search-page .sp-stage .sp-results .sp-gh-t{font-size:.75rem!important;font-weight:700;letter-spacing:.08em;color:#8fd3ff;opacity:1;margin:0 0 .55rem}body.sp-search-page .sp-gh>ol{gap:.7rem}body.sp-search-page .sp-card a{display:block;padding:.95rem 1.15rem;border-radius:16px;border:1px solid rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05)),linear-gradient(135deg,rgba(143,211,255,.34),rgba(14,52,78,.96) 46%,#102838);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px rgba(0,8,20,.32);color:#e8eef5;text-decoration:none}body.sp-search-page .sp-card a:hover,body.sp-search-page .sp-card a:focus-visible{border-color:rgba(143,211,255,.9);background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08)),linear-gradient(135deg,rgba(143,211,255,.42),rgba(16,64,96,.98) 46%,#14344c)}body.sp-search-page .sp-hub{color:#00b894;font-size:.72rem;letter-spacing:.07em;margin:0 0 .28rem}body.sp-search-page .sp-title{display:block;color:#8fd3ff;font-size:1.08rem;line-height:1.35;font-weight:700}body.sp-search-page .sp-excerpt{color:#e8eef5;font-size:.92rem;line-height:1.5;margin-top:.35rem}body.sp-search-page .sp-excerpt mark,body.sp-search-page #results .match mark{background:rgba(0,156,222,.32);color:inherit;padding:0 .12em;border-radius:3px}body.sp-search-page .sp-more{display:block;width:fit-content;margin:1.15rem auto 0;min-height:44px;padding:0 1.4rem;border:0;border-radius:999px;background:#009cde;color:#fff;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(0,156,222,.28)}body.sp-search-page .sp-more:hover{background:#0086c0}body.sp-search-page .sp-more:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}body.sp-search-page .sp-more[hidden],body.sp-search-page .sp-refine[hidden]{display:none}body.sp-search-page .sp-refine{margin:.85rem auto 0;max-width:40rem;text-align:center;font-size:.9rem;font-style:normal;line-height:1.45;color:#9fb3c4;opacity:1}body.sp-search-page .sp-empty-title{color:#e8eef5;opacity:1}body.sp-search-page .sp-examples{justify-content:center}body.sp-search-page .sp-examples a{color:#cfe9ff;border:1px solid rgba(143,211,255,.5);background:rgba(11,22,32,.65);border-radius:999px}body.sp-search-page .sp-examples a:hover{background:rgba(0,156,222,.22);color:#fff}@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){body.sp-search-page .sp-card a{background:#123044}}body.sp-search-page nav#topnav.spn-solid{background:#071018!important}html:has(body.sp-search-page:has(#results li)){height:100%;overflow:hidden}body.sp-search-page:has(#results li){height:100vh;height:100dvh;overflow:hidden;box-sizing:border-box;padding-top:calc(var(--spn-h,96px) + 20px);background:#0b1220}body.sp-search-page:has(#results li) .sp-scroll{height:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;position:relative;z-index:0;scroll-padding-top:12px}body.sp-search-page:has(#results li) nav#topnav{background:#071018!important;background-color:#071018!important;z-index:1200!important;isolation:isolate;border-bottom:1px solid rgba(143,211,255,.55)!important;transition:none!important}body.sp-search-page:has(#results li) nav#topnav::before{opacity:0!important}</style>')
+       '.sp-stage .sp-search-form{position:relative}.sp-sugg{position:absolute;top:100%;inset-inline:0;z-index:5;list-style:none;margin:.3rem 0 0;padding:.3rem;border-radius:14px;background:#0b1620;border:1px solid rgba(143,211,255,.6);text-align:start;box-shadow:0 10px 28px rgba(0,0,0,.45)}.sp-sugg[hidden]{display:none}.sp-sugg li{padding:.55rem .8rem;border-radius:10px;cursor:pointer;color:#e8eef5}.sp-sugg li[aria-selected=true],.sp-sugg li:hover{background:rgba(0,156,222,.35)}.sp-sugg .sp-sg{font-size:.78rem;opacity:.8;margin-inline-start:.5rem}html:has(body.sp-search-page){scroll-padding-top:calc(var(--spn-h,96px) + 16px)}body.sp-search-page :is(#status,#search-mode,.sp-results,.sp-gh-t,.sp-card,.sp-more,.sp-refine,.sp-tabs,.sp-search-form){scroll-margin-top:calc(var(--spn-h,96px) + 16px)}.sp-stage:has(#results li) .sp-ring{width:min(860px,100%)}.sp-stage:has(#results li) .sp-ring .sp-search-form{width:100%}body.sp-search-page .sp-status{margin:.2rem 0 0;font-size:1.02rem;font-weight:700;color:#e8eef5;letter-spacing:.01em}body.sp-search-page .search-mode{margin:.25rem 0 0;font-size:.85rem;line-height:1.45;color:#9fb3c4;opacity:1}body.sp-search-page .sp-results{margin:.95rem 0 0;gap:.7rem}body.sp-search-page .sp-gh{margin:0}body.sp-search-page .sp-gh+.sp-gh{margin-top:1rem}body.sp-search-page .sp-stage .sp-results .sp-gh-t{font-size:.75rem!important;font-weight:700;letter-spacing:.08em;color:#8fd3ff;opacity:1;margin:0 0 .55rem}body.sp-search-page .sp-gh>ol{gap:.7rem}body.sp-search-page .sp-card a{display:block;padding:.95rem 1.15rem;border-radius:16px;border:1px solid rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05)),linear-gradient(135deg,rgba(143,211,255,.34),rgba(14,52,78,.96) 46%,#102838);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px rgba(0,8,20,.32);color:#e8eef5;text-decoration:none}body.sp-search-page .sp-card a:hover,body.sp-search-page .sp-card a:focus-visible{border-color:rgba(143,211,255,.9);background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08)),linear-gradient(135deg,rgba(143,211,255,.42),rgba(16,64,96,.98) 46%,#14344c)}body.sp-search-page .sp-hub{color:#00b894;font-size:.72rem;letter-spacing:.07em;margin:0 0 .28rem}body.sp-search-page .sp-title{display:block;color:#8fd3ff;font-size:1.08rem;line-height:1.35;font-weight:700}body.sp-search-page .sp-excerpt{color:#e8eef5;font-size:.92rem;line-height:1.5;margin-top:.35rem}body.sp-search-page .sp-excerpt mark,body.sp-search-page #results .match mark{background:rgba(0,156,222,.32);color:inherit;padding:0 .12em;border-radius:3px}body.sp-search-page .sp-more{display:block;width:fit-content;margin:1.15rem auto 0;min-height:44px;padding:0 1.4rem;border:0;border-radius:999px;background:#009cde;color:#fff;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(0,156,222,.28)}body.sp-search-page .sp-more:hover{background:#0086c0}body.sp-search-page .sp-more:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}body.sp-search-page .sp-more[hidden],body.sp-search-page .sp-refine[hidden]{display:none}body.sp-search-page .sp-refine{margin:.85rem auto 0;max-width:40rem;text-align:center;font-size:.9rem;font-style:normal;line-height:1.45;color:#9fb3c4;opacity:1}body.sp-search-page .sp-empty-title{color:#e8eef5;opacity:1}body.sp-search-page .sp-examples{justify-content:center}body.sp-search-page .sp-examples a{color:#cfe9ff;border:1px solid rgba(143,211,255,.5);background:rgba(11,22,32,.65);border-radius:999px}body.sp-search-page .sp-examples a:hover{background:rgba(0,156,222,.22);color:#fff}@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){body.sp-search-page .sp-card a{background:#123044}}body.sp-search-page nav#topnav.spn-solid{background:#071018!important}html:has(body.sp-search-page:has(#results li)){height:100%;overflow:hidden}body.sp-search-page:has(#results li){height:100vh;height:100dvh;overflow:hidden;box-sizing:border-box;padding-top:calc(var(--spn-h,96px) + 20px);background:#0b1220}body.sp-search-page:has(#results li) .sp-scroll{height:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;position:relative;z-index:0;scroll-padding-top:12px}body.sp-search-page:has(#results li) nav#topnav{background:#071018!important;background-color:#071018!important;z-index:1200!important;isolation:isolate;border-bottom:1px solid rgba(143,211,255,.55)!important;transition:none!important}body.sp-search-page:has(#results li) nav#topnav::before{opacity:0!important}'
+       '/* SPARC: question arc (9 o’clock over 12 to 3 o’clock) and crystal-water controls, one color #0a4f78 */'
+       '.sp-orbit{position:relative;width:min(1040px,100%);display:flex;flex-direction:column;align-items:center;padding-top:270px;overflow:visible}'
+       '.sp-si{position:absolute;left:50%;top:214px;transform:translateX(-50%);margin:0;z-index:2;pointer-events:none;font:700 .75rem/1.2 Montserrat,"Noto Sans Arabic","Noto Sans Hebrew",system-ui,sans-serif;letter-spacing:.04em;color:#cfe9ff;text-align:center;white-space:nowrap}'
+       '.sp-arc{position:absolute;inset:0 0 auto 0;height:250px;pointer-events:none}'
+       '.sp-arc .sp-q{display:none;position:absolute;left:var(--x,50%);top:var(--y,40%);width:min(176px,30vw);max-width:176px;min-height:44px;box-sizing:border-box;align-items:center;justify-content:center;padding:.5rem .7rem;border-radius:18px;text-align:center;text-decoration:none;font:600 .78rem/1.3 Montserrat,"Noto Sans Arabic","Noto Sans Hebrew",system-ui,sans-serif;z-index:1;transform:translate(-50%,-50%);animation:sp-arc-float 7s ease-in-out infinite;animation-delay:calc(var(--i,0) * -0.85s)}'
+       'html:not([data-sp-topic]) .sp-arc:not(.is-live) .sp-q[data-t=all],html[data-sp-topic=all] .sp-arc:not(.is-live) .sp-q[data-t=all],html[data-sp-topic=aero] .sp-arc:not(.is-live) .sp-q[data-t=aero],html[data-sp-topic=orbital] .sp-arc:not(.is-live) .sp-q[data-t=orbital],html[data-sp-topic=physics] .sp-arc:not(.is-live) .sp-q[data-t=physics],html[data-sp-topic=rocket] .sp-arc:not(.is-live) .sp-q[data-t=rocket],.sp-arc.is-live .sp-q{display:flex!important;pointer-events:auto}'
+       '.sp-arc .sp-q:hover,.sp-arc .sp-q:focus-visible{animation-play-state:paused}'
+       '@keyframes sp-arc-float{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-6px)}}'
+       '@keyframes sp-arc-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}'
+       '.sp-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;width:min(720px,100%)}'
+       '.sp-act{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.25rem;border-radius:999px;font:800 .98rem/1.2 Montserrat,"Noto Sans Arabic","Noto Sans Hebrew",system-ui,sans-serif;text-align:center}'
+       '.sp-crystal{color:#fff!important;text-decoration:none;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),#0a4f78!important;border:1px solid rgba(160,225,255,.55)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35)!important;-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);text-shadow:0 1px 2px rgba(0,0,0,.45)}'
+       '.sp-crystal:hover{background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.08)),#0a4f78!important}'
+       '.sp-crystal:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}'
+       'body.sp-search-page .sp-orbit .sp-search-form{width:min(840px,100%)}'
+       'body.sp-search-page .sp-stage button.sp-search-btn[type=submit]{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),#0a4f78!important;color:#fff!important;border:1px solid rgba(160,225,255,.55)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 6px 20px rgba(0,40,70,.28)!important}'
+       'body.sp-search-page .sp-more{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),#0a4f78!important;border:1px solid rgba(160,225,255,.55)!important;color:#fff!important}'
+       'body.sp-search-page .sp-tab{background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05)),#0a4f78;border-color:rgba(160,225,255,.45);color:#fff!important}'
+       'body.sp-search-page .sp-tab[aria-selected=true]{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),#0a4f78;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 0 0 2px rgba(255,213,74,.9)}'
+       '@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.sp-crystal,body.sp-search-page .sp-stage button.sp-search-btn[type=submit],body.sp-search-page .sp-more,body.sp-search-page .sp-tab{background:#0a4f78!important}}'
+       '@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){.sp-crystal,body.sp-search-page .sp-stage button.sp-search-btn[type=submit],body.sp-search-page .sp-more,body.sp-search-page .sp-tab{background:#0a4f78!important;background-image:none!important;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none!important}}'
+       '@media (prefers-contrast:more){.sp-crystal,body.sp-search-page .sp-tab{border:2px solid #fff!important}}'
+       '@media (forced-colors:active){.sp-crystal{border:1px solid ButtonText;forced-color-adjust:auto}}'
+       '@media (prefers-reduced-motion:reduce){.sp-arc .sp-q{animation:none!important;transform:translate(-50%,-50%)!important}}'
+       '@media (max-height:820px){.sp-stage{justify-content:flex-start}}'
+       '@media (max-width:760px){.sp-orbit{padding-top:0;width:100%}.sp-si{position:static;left:auto;top:auto;transform:none;margin:0 0 .4rem;white-space:normal}.sp-arc{position:static;height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:0 0 .2rem;pointer-events:auto}.sp-arc .sp-q{position:static;left:auto;top:auto;width:auto;max-width:100%;flex:1 1 16rem;font-size:.95rem;line-height:1.35;animation-name:sp-arc-bob}.sp-stage{justify-content:flex-start;min-height:0;padding-top:calc(var(--spn-h,96px) + 12px)}.sp-stage .sp-search-form,.sp-orbit .sp-search-form{flex-direction:column;width:100%}.sp-stage .sp-search-btn{width:100%}@media (prefers-reduced-motion:reduce){.sp-arc .sp-q{transform:none!important}}}'
+       '@media (max-width:760px) and (prefers-reduced-motion:reduce){.sp-arc .sp-q{transform:none!important}}'
+       '</style>')
 def build(l, s):
     i, j = s.find('<main id="main">'), s.find('</main>')
     m = s[i:j]
     h1 = grab(m, r'<h1[^>]*data-base="([^"]*)"') or grab(m, r'<h1[^>]*>(.*?)</h1>'); lab = grab(m, r'<label[^>]*for="q"[^>]*>(.*?)</label>', h1)
-    ph = grab(m, r'<input[^>]*placeholder="([^"]*)"'); btn = grab(m, r'<button[^>]*class="sp-search-btn"[^>]*>(.*?)</button>')
+    ph = grab(m, r'<input[^>]*placeholder="([^"]*)"'); btn = grab(m, r'<button[^>]*class="[^"]*sp-search-btn[^"]*"[^>]*>(.*?)</button>')
     fl = grab(m, r'id="sp-float"[^>]*aria-label="([^"]*)"') or grab(m, r'aria-label="([^"]*)"[^>]*id="sp-float"')
     note = grab(m, r'<p[^>]*(?:sp-float-note|id="sp-note")[^>]*>(.*?)</p>')
     more = grab(m, r'<button[^>]*id="sp-more"[^>]*>(.*?)</button>'); refine = grab(m, r'<p[^>]*id="sp-refine"[^>]*>(.*?)</p>')
     msg = grab(m, r'(<div[^>]*id="sp-msg"[^>]*>.*?</div>)'); credits = re.findall(r'<p class="search-credit[^"]*">.*?</p>', m, re.S)
     ex = grab(m, r'(<p class="sp-empty-title">.*?</ul>)')
     assert h1 and ph and btn and msg, (l, 'missing strings')
-    h1 = re.sub(r' · .*$', '', h1); Z = zones(l)
+    h1 = re.sub(r' · .*$', '', h1)
+    heads = json.dumps(teacher_heads(l), ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
     main = ('<main id="main">\n' + CSS +
             f'<section class="sp-stage" id="solution" aria-labelledby="sp-h1"><h1 id="sp-h1" class="sr-only-x" data-base="{h1}">{h1}</h1>'
-            + tabs(l) + TOPIC_HEAD +
-            f'<div class="sp-ring" id="sp-ring"><div id="sp-float" class="spx-float sp-z sp-zt" role="group" aria-label="{fl}" aria-describedby="sp-note">{Z[0]}</div>'
-            '<div class="sp-z sp-zl" role="group" aria-label="' + fl + '">' + Z[1] + '</div>'
+            f'<div class="sp-orbit"><p class="sp-si" id="sp-si">{html.escape(ACT["si"][l])}</p>'
+            f'<div id="sp-float" class="sp-arc" role="group" aria-labelledby="sp-si" aria-describedby="sp-note">{arc_chips(l)}</div>'
             f'<form class="sp-search-form" role="search" action="Search.html" method="get"><label for="q" class="sr-only-x">{lab}</label>'
             f'<input id="q" name="q" type="search" placeholder="{ph}" autocomplete="off" enterkeyhint="search" aria-describedby="status sp-note">'
-            f'<button type="submit" class="sp-search-btn">{btn}</button></form>'
-            '<div class="sp-z sp-zr" role="group" aria-label="' + fl + '">' + Z[2] + '</div><div class="sp-z sp-zb" role="group" aria-label="' + fl + '">' + Z[3] + '</div></div>'
-            f'<a class="sp-tlink" data-t="rocket" href="Learn_Rocket_Propulsion.html">🚀 {html.escape(ST.ROCKET_PAGE[l])} →</a>'  # Oct 28: rocket tab -> its Learn page
-            f'<p id="sp-note" class="sr-only-x">{note}</p>' + TOPIC_JS +
+            f'<button type="submit" class="sp-search-btn sp-crystal">{btn}</button></form></div>'
+            f'<div class="sp-actions" role="group" aria-label="{html.escape(ACT["group"][l])}">'
+            f'<a class="sp-act sp-crystal" id="sp-lesson" href="Lesson_Builder.html">{html.escape(ACT["lesson"][l])}</a>'
+            f'<a class="sp-act sp-crystal" id="sp-sheet" href="Teachers.html">{html.escape(ACT["sheet"][l])}</a></div>'
+            + tabs(l) + TOPIC_HEAD +
+            f'<a class="sp-tlink" data-t="rocket" href="Learn_Rocket_Propulsion.html">{html.escape(ST.ROCKET_PAGE[l])} →</a>'
+            f'<p id="sp-note" class="sr-only-x">{note}</p>'
+            f'<script type="application/json" id="sp-sheet-hubs">{heads}</script>' + TOPIC_JS +
             f'<div class="sp-results-wrap"><p id="status" class="sp-status" aria-live="polite"></p><p id="search-mode" class="search-mode" aria-live="polite"></p>'
             f'<div id="sp-empty" class="sp-empty" hidden>{ex}</div><ol id="results" class="sp-results"></ol>'
-            f'<button type="button" id="sp-more" class="sp-more" hidden>{more}</button><p id="sp-refine" class="sp-refine" hidden>{refine}</p>{msg}</div></section>\n'
+            f'<button type="button" id="sp-more" class="sp-more sp-crystal" hidden>{more}</button><p id="sp-refine" class="sp-refine" hidden>{refine}</p>{msg}</div></section>\n'
             )
     out = s[:i] + main + s[j:]
     # The shared homepage footer (scripts/build-site-extras.py) stays on Search, same as every other page.
@@ -179,7 +241,7 @@ def add_msg(l, s):  # group / suggestion labels into #sp-msg (idempotent; all 6 
         d = re.sub(r'<span data-k="(?:g-[a-z]+|sugg)">.*?</span>', '', m.group(0))
         return d[:-6] + ''.join(f'<span data-k="{k}">{v[l]}</span>' for k, v in MSG_X.items()) + '</div>'
     return re.sub(r'<div[^>]*id="sp-msg"[^>]*>.*?</div>', fix, s, count=1, flags=re.S)
-SUI_V = '20261028r'
+SUI_V = '20261111b'
 if __name__ == '__main__':
     print('build-search-page: result types for', result_types(), 'pages')
     for l in LANGS:

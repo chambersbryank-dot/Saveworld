@@ -44,6 +44,31 @@
     var U = d.ui, L = d.lesson, out = document.getElementById('lb-plan');
     var q = new URLSearchParams(location.search);
     ['band', 'hub', 'min'].forEach(function (k) { var v = q.get(k), el = lb.elements[k]; if (v && el && [].some.call(el.options, function (o) { return o.value === v; })) { el.value = v; if (k === 'hub') el.dispatchEvent(new Event('change')); } });
+    var queryText = (q.get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 180);
+    var qLab = { en: 'Class question', fr: 'Question de la classe', es: 'Pregunta para la clase', ar: 'سؤال الصف', it: 'Domanda per la classe', he: 'שאלת הכיתה' }[lang] || 'Class question';
+    var matched = false;
+    function pickHub(text) {
+      var words = text.toLowerCase().split(/\s+/).map(function (w) { return w.replace(/[?؟!"“”«»„.,;:()]/g, ''); }).filter(function (w) { return w.length > 3; });
+      var best = '', bestN = 0;
+      [].forEach.call(lb.elements.hub.options, function (o) {
+        var hay = (o.textContent + ' ' + o.value.replace(/[_.]/g, ' ')).toLowerCase();
+        var n = 0;
+        words.forEach(function (w) { if (hay.indexOf(w) !== -1) n++; });
+        if (n > bestN) { bestN = n; best = o.value; }
+      });
+      return bestN ? best : '';
+    }
+    if (queryText && !q.get('hub')) {
+      var bestHub = pickHub(queryText);
+      if (bestHub) { lb.elements.hub.value = bestHub; matched = true; }
+    }
+    if (queryText) {
+      var qn = document.createElement('p');
+      qn.className = 'edu-lead';
+      qn.id = 'lb-qnote';
+      qn.textContent = qLab + ': ' + queryText;
+      lb.parentNode.insertBefore(qn, lb);
+    }
 
     /* Oct 15 (Top-10 #2): Lesson Builder 2.0: permanent link (?band&hub&min&seed), Google Classroom share (official share URL),
        Copy link, printable handout and client-side slides. No accounts, no backend. */
@@ -55,7 +80,7 @@
       it: { copy: 'Copia link', copied: 'Link copiato', gc: 'Condividi su Google Classroom', handout: 'Stampa la scheda', slides: 'Diapositive', exit: 'Esci', prev: 'Precedente', next: 'Successiva', std: 'Standard', slide: 'Diapositiva {i} di {n}' }
     }[lang] || {};
     var STD = null;
-    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && q.get('hub')) build(); }).catch(function () {});
+    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && (q.get('hub') || matched)) build(); }).catch(function () {});
     function stdHtml(hub) {
       if (!STD || !STD.hubs[hub]) return '';
       return '<h3>' + esc(X.std) + '</h3><ul class="lb-small">' + STD.hubs[hub].map(function (c) { var o = STD.codes[c]; return '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(c.replace('CCSS.ELA-LITERACY.', 'CCSS ')) + '</a> (' + esc(o.band) + '): <span lang="en">' + esc(o.text) + '</span></li>'; }).join('') + '</ul>';
@@ -119,7 +144,9 @@
       var tm = [0.15, 0.3, 0.4, 0.15].map(function (p) { return Math.max(5, Math.round(min * p / 5) * 5); });
       tm[2] = Math.max(5, min - tm[0] - tm[1] - tm[3]);
       var solLinks = sols.map(function (s) { return '<a href="' + esc(s.u) + '">' + esc(s.t) + '</a>'; }).join(', ');
-      var html = '<h2>' + esc(fmt(L.title, T)) + '</h2><p class="lb-meta">' + esc(B.label) + ' · ' + esc(fmt(L.minutes, { n: min })) + '</p>' +
+      var qt = (new URLSearchParams(location.search).get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 180);
+      var qHtml = qt ? '<p class="lb-meta">' + esc(qLab) + ': ' + esc(qt) + '</p>' : '';
+      var html = '<h2>' + esc(fmt(L.title, T)) + '</h2>' + qHtml + '<p class="lb-meta">' + esc(B.label) + ' · ' + esc(fmt(L.minutes, { n: min })) + '</p>' +
         '<p>' + esc(h.blurb) + '</p>' +
         '<h3>' + esc(L.h.objectives) + '</h3><ul>' + B.objectives.map(function (o) { return '<li>' + esc(fmt(o, T)) + '</li>'; }).join('') + '</ul>' +
         '<h3>' + esc(L.h.materials) + '</h3><ul>' + B.materials.map(function (o) { return '<li>' + esc(o) + '</li>'; }).join('') +
@@ -147,7 +174,7 @@
     }
     lb.addEventListener('submit', build);
     document.getElementById('lb-print').addEventListener('click', function () { window.print(); });
-    if (q.get('hub')) build();
+    if (q.get('hub') || matched) build();
   });
   /* ---------------- Satellite explorer ---------------- */
   var sx = document.getElementById('sx');
