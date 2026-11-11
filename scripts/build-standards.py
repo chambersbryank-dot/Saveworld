@@ -75,6 +75,9 @@ def teachers(l):
     p = d(l) + 'Teachers.html'
     if not os.path.exists(p): return 0
     s = rd(p); u = U[l]
+    # Nov 11: the Teachers catalog is owned by scripts/build-teachers-home.py (collapsed hubs, no repeated code strings).
+    if '<!-- TEACHHOME:START -->' in s:
+        return 0
     def li(m):
         t = m.group(0); href = re.search(r'<a href="([^"#]+)#teachers"', t)
         t = re.sub(r'^<li[^>]*>', '<li>', t); t = re.sub(r'<span class="t-codes">.*?</span>', '', t)
