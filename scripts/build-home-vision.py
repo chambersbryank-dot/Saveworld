@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Oct 30 2026 (founder-approved): Vision strip on the homepage, directly under the locked hero
-(before the parked template / numbers strip). English copy is founder text (266 solutions, not 246).
+(before the parked template / numbers strip). English copy is founder text (276 solutions, not 246).
 fr/es/ar/it/he are machine-drafted and carry the same reader note as Learn_Rocket_Propulsion
 (scripts/rocket_path_text.py UI['mt']).
+
+The Before Saving Planets chip is not rendered (founder: take that control off). Explore solutions
+stays, as a crystal-water liquid-glass pill (same recipe as the homepage, Ways to Help, and Match
+buttons) using the water solid #0a4f78 so the label stays readable on the light Vision band.
 
 Writes <!-- VISION:START/END --> on index.html in all 6 languages, mirrors the new strings into
 i18n/<lang>.json (so i18n-build can translate the block), then re-stamps each translation's
@@ -49,13 +53,24 @@ T = {
   'he': 'לחקור פתרונות',
  },
 }
+# Water solid is body[data-glass-tint=water] --lg-solid. The 22% top highlight matches the
+# liquid-glass buttons and still clears 4.5:1 for white type on #0a4f78 (hover stops at 24%).
 CSS = ('<style>.home-vision{max-width:860px;margin:1.25rem auto 0;padding:0 1rem 1.25rem;text-align:center}'
        '.home-vision h2{margin:0 0 .55rem}.home-vision .hv-p{margin:.35rem auto 0;line-height:1.55;max-width:46rem}'
        '.hv-chips{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:.9rem 0 0;padding:0}'
-       '.hv-chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.4rem 1rem;border-radius:999px;border:2px solid #0b3d91;font-weight:700;text-decoration:none}'
-       '.hv-chip-ext{background:#0b3d91;color:#fff}.hv-chip-ext:hover{background:#009cde;border-color:#009cde}'
+       '.hv-chip{position:relative;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:44px;min-width:44px;padding:.7rem 1.35rem;border-radius:999px;font-weight:800;text-decoration:none;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45);'
+       'background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),#0a4f78;border:1px solid rgba(160,225,255,.55);'
+       'box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35);'
+       '-webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%)}'
+       '.hv-chip:hover{background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08)),#0a4f78}'
+       '.hv-chip:focus-visible{outline:3px solid #003755;outline-offset:3px}'
+       'html.dark .hv-chip:focus-visible{outline-color:#8fd3ff}'
        '.hv-mt{font-size:.85rem;opacity:.8;margin:.75rem 0 0}'
-       '.hv-chip:focus-visible{outline:3px solid #009cde;outline-offset:2px}</style>')
+       '@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hv-chip{background:#0a4f78}}'
+       '@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){.hv-chip{background:#0a4f78;background-image:none;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}}'
+       '@media (prefers-contrast:more){.hv-chip{border:2px solid #fff}}'
+       '@media (forced-colors:active){.hv-chip{border:1px solid ButtonText;forced-color-adjust:auto}}'
+       '</style>')
 R = re.compile(r'<!-- VISION:START -->.*?<!-- VISION:END -->', re.S)
 
 def section_end(s, i):
@@ -73,8 +88,7 @@ def block(l):
     return ('<!-- VISION:START -->' + CSS +
             f'<section class="home-vision" id="vision" aria-labelledby="vision-h"><h2 id="vision-h">{E(T["h"][l])}</h2>'
             f'<p class="hv-p">{E(T["p"][l])}</p>'
-            f'<p class="hv-chips"><a class="hv-chip hv-chip-ext" href="https://www.beforesavingplanets.com/" target="_blank" rel="noopener noreferrer">{E(T["story"][l])}</a>'
-            f'<a class="hv-chip" href="Solutions.html">{E(T["explore"][l])}</a></p>{note}</section><!-- VISION:END -->')
+            f'<p class="hv-chips"><a class="hv-chip" href="Solutions.html">{E(T["explore"][l])}</a></p>{note}</section><!-- VISION:END -->')
 
 def put(s, l):
     b = block(l)
@@ -128,7 +142,10 @@ for l in ('fr', 'es', 'ar', 'it', 'he'):
     open(f, 'w', encoding='utf8').write(s)
 upsert_i18n()
 # English paragraph must stay the founder string, including 266.
-assert '276 solutions across 11 hubs' in open('index.html', encoding='utf8').read()
-assert 'https://www.beforesavingplanets.com/' in open('index.html', encoding='utf8').read()
+page = open('index.html', encoding='utf8').read()
+assert '276 solutions across 11 hubs' in page
+assert 'beforesavingplanets.com' not in page
+assert 'hv-chip-ext' not in page
+assert '>Explore solutions</a>' in page
 assert '246 solutions across 11 hubs' not in T['p']['en']
 print('home vision: 6 languages, i18n-source', H)

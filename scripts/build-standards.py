@@ -3,7 +3,7 @@
 Common Core codes, official English text, tagged per hub with page overrides). Renders, in en/fr/es/ar/it/he:
   - a 'Standards Alignment' block inside every solution page's For Teachers box (marker STANDARDS)
   - grade/subject filter chips + data attributes on Teachers.html (marker T-BROWSE)
-  - a 'Standards by hub' table on Lesson_Builder.html (marker LB-STD)
+  - a 'Standards by hub' picker on Lesson_Builder.html (marker LB-STD): one hub at a time, plus a Search prompt
 Idempotent. Run after i18n-build (all languages), before build-ux.py."""
 import re, os, json, html, glob
 rd = lambda f: open(f, encoding='utf8').read()
@@ -16,17 +16,17 @@ LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it', 'he'] if os.path.isdir(l)]
 d = lambda l: '' if l == 'en' else l + '/'
 U = {
  'en': dict(h='Standards Alignment', note='U.S. Next Generation Science Standards (NGSS) and Common Core. Official text, in English.', grade='Grade', subject='Subject', all='All',
-   subj=dict(earth='Earth & Human Activity', life='Life Science', space='Space Science', literacy='Reading (Common Core)'), browse='Browse by grade and subject', none='No sheets match this filter.', lb='Standards by hub', hub='Hub', codes='Standards'),
+   subj=dict(earth='Earth & Human Activity', life='Life Science', space='Space Science', literacy='Reading (Common Core)'), browse='Browse by grade and subject', none='No sheets match this filter.', lb='Standards by hub', hub='Hub', codes='Standards', pick='Show standards for', search='Search the site', searchNote='Another tool while you build a plan. Use it to discover a related page, or a connection you did not expect across topics and solutions.', empty='No standards are listed for {name}.'),
  'fr': dict(h='Alignement sur les programmes', note='Normes américaines NGSS (Next Generation Science Standards) et Common Core. Texte officiel, en anglais.', grade='Niveau', subject='Matière', all='Tout',
-   subj=dict(earth='La Terre et les activités humaines', life='Sciences de la vie', space="Sciences de l'espace", literacy='Lecture (Common Core)'), browse='Parcourir par niveau et matière', none='Aucune fiche ne correspond à ce filtre.', lb='Normes par pôle', hub='Pôle', codes='Normes'),
+   subj=dict(earth='La Terre et les activités humaines', life='Sciences de la vie', space="Sciences de l'espace", literacy='Lecture (Common Core)'), browse='Parcourir par niveau et matière', none='Aucune fiche ne correspond à ce filtre.', lb='Normes par pôle', hub='Pôle', codes='Normes', pick='Afficher les normes pour', search='Rechercher dans le site', searchNote='Un autre outil pendant que vous préparez un plan. Servez-vous-en pour découvrir une page liée, ou un lien inattendu entre des thèmes et des solutions.', empty="Aucune norme n'est indiquée pour {name}."),
  'es': dict(h='Alineación con estándares', note='Estándares de EE. UU.: Next Generation Science Standards (NGSS) y Common Core. Texto oficial, en inglés.', grade='Grado', subject='Materia', all='Todo',
-   subj=dict(earth='La Tierra y la actividad humana', life='Ciencias de la vida', space='Ciencias del espacio', literacy='Lectura (Common Core)'), browse='Explorar por grado y materia', none='Ninguna ficha coincide con este filtro.', lb='Estándares por centro', hub='Centro', codes='Estándares'),
+   subj=dict(earth='La Tierra y la actividad humana', life='Ciencias de la vida', space='Ciencias del espacio', literacy='Lectura (Common Core)'), browse='Explorar por grado y materia', none='Ninguna ficha coincide con este filtro.', lb='Estándares por centro', hub='Centro', codes='Estándares', pick='Ver los estándares de', search='Buscar en el sitio', searchNote='Otra herramienta mientras preparas un plan. Úsala para descubrir una página relacionada, o una conexión inesperada entre temas y soluciones.', empty='No hay estándares listados para {name}.'),
  'ar': dict(h='التوافق مع المعايير', note='معايير أمريكية: معايير العلوم للجيل القادم (NGSS) وCommon Core. النص الرسمي باللغة الإنجليزية.', grade='الصف', subject='المادة', all='الكل',
-   subj=dict(earth='الأرض والنشاط البشري', life='علوم الحياة', space='علوم الفضاء', literacy='القراءة (Common Core)'), browse='تصفح حسب الصف والمادة', none='لا توجد أوراق تطابق هذا التصفية.', lb='المعايير حسب المركز', hub='المركز', codes='المعايير'),
+   subj=dict(earth='الأرض والنشاط البشري', life='علوم الحياة', space='علوم الفضاء', literacy='القراءة (Common Core)'), browse='تصفح حسب الصف والمادة', none='لا توجد أوراق تطابق هذا التصفية.', lb='المعايير حسب المركز', hub='المركز', codes='المعايير', pick='اختر المركز', search='ابحث في الموقع', searchNote='أداة أخرى أثناء إعداد الخطة. استخدمها لاكتشاف صفحة ذات صلة، أو صلة لم تكن تتوقعها بين المواضيع والحلول.', empty='{name}: لا توجد معايير مدرجة.'),
  'it': dict(h='Allineamento agli standard', note='Standard statunitensi: Next Generation Science Standards (NGSS) e Common Core. Testo ufficiale, in inglese.', grade='Classe', subject='Materia', all='Tutto',
-   subj=dict(earth="La Terra e l'attività umana", life='Scienze della vita', space='Scienze dello spazio', literacy='Lettura (Common Core)'), browse='Sfoglia per classe e materia', none='Nessuna scheda corrisponde a questo filtro.', lb='Standard per hub', hub='Hub', codes='Standard'),
+   subj=dict(earth="La Terra e l'attività umana", life='Scienze della vita', space='Scienze dello spazio', literacy='Lettura (Common Core)'), browse='Sfoglia per classe e materia', none='Nessuna scheda corrisponde a questo filtro.', lb='Standard per hub', hub='Hub', codes='Standard', pick='Mostra gli standard per', search='Cerca nel sito', searchNote='Un altro strumento mentre prepari un piano. Usala per scoprire una pagina collegata, o un collegamento inatteso tra argomenti e soluzioni.', empty='Nessuno standard è indicato per {name}.'),
  'he': dict(h='התאמה לתקנים', note='תקני ארה״ב: Next Generation Science Standards (NGSS) ו-Common Core. הטקסט הרשמי באנגלית.', grade='כיתה', subject='מקצוע', all='הכול',
-   subj=dict(earth='כדור הארץ ופעילות האדם', life='מדעי החיים', space='מדעי החלל', literacy='קריאה (Common Core)'), browse='עיון לפי כיתה ומקצוע', none='אין דפים שתואמים לסינון הזה.', lb='תקנים לפי מרכז', hub='מרכז', codes='תקנים'),
+   subj=dict(earth='כדור הארץ ופעילות האדם', life='מדעי החיים', space='מדעי החלל', literacy='קריאה (Common Core)'), browse='עיון לפי כיתה ומקצוע', none='אין דפים שתואמים לסינון הזה.', lb='תקנים לפי מרכז', hub='מרכז', codes='תקנים', pick='הצגת תקנים עבור', search='חיפוש באתר', searchNote='כלי נוסף בזמן בניית תוכנית. השתמשו בו כדי לגלות עמוד קשור, או קשר לא צפוי בין נושאים לפתרונות.', empty='אין תקנים רשומים עבור {name}.'),
 }
 BANDS = ['K-2', '3-5', '6-8', '9-12']
 def primary_hubs():
@@ -57,6 +57,12 @@ CSS = """/* STD:START */
 .t-chip{border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:inherit;padding:.4rem .85rem;font:inherit;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .t-chip[aria-pressed=true]{background:#0b6fa4;border-color:#7fd0ff;color:#fff}.t-codes{display:block;font-size:.8rem;opacity:.8}.t-none{font-style:italic}
 .lb-std table{width:100%;border-collapse:collapse}.lb-std th,.lb-std td{border-bottom:1px solid rgba(255,255,255,.15);padding:.45rem;text-align:start;vertical-align:top}
+.lb-std-pick{box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;gap:.35rem;max-width:28rem;margin:.75rem 0 .9rem;padding:1rem 1.1rem;border-radius:20px}
+.lb-std-pick label{font-weight:700}.lb-std-pick select{width:100%;min-height:44px;font:inherit;font-size:1rem;border-radius:12px;padding:.4rem .6rem;border:1px solid #9bb;background:#fff;color:#10243a}
+.lb-std-pick select:focus-visible,.lb-std a:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}
+.lb-std-search{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;margin:.15rem 0 1rem;max-width:72ch;line-height:1.5}.lb-std-search span{flex:1 1 18rem}
+.lb-std-panel h3{margin:.15rem 0 .4rem}.lb-std-panel .std-list{margin:.2rem 0 0}.lb-std-panel .std-list li{margin:.5rem 0;line-height:1.45}.lb-std-panel .std-list a{font-weight:700;text-decoration:underline}.std-line{unicode-bidi:isolate}
+.lb-std-empty{font-style:italic;margin:.3rem 0}
 @media print{.t-browse{display:none}}
 /* STD:END */"""
 JS = """<script>(function(){var b=document.querySelector('.t-browse');if(!b)return;var g='all',s='all';
@@ -87,20 +93,77 @@ def teachers(l):
           f'<p class="std-note">{esc(u["note"])}</p><p class="t-none" hidden>{esc(u["none"])}</p></section>{JS}<!-- T-BROWSE:END -->')
     s = put(s, 'T-BROWSE', ui, '<section class="five-ws t-hub">')
     return wr(p, s)
+def swap(s, name, new, before):
+    """Replace a marker block where it already sits. Fall back to inserting before `before`."""
+    pat = re.compile(r'<!-- %s:START -->.*?<!-- %s:END -->' % (name, name), re.S)
+    if pat.search(s): return pat.sub(lambda m: new, s, count=1)
+    return put(s, name, new, before)
+def form_hubs(s):
+    m = re.search(r'<select id="lb-hub" name="hub">(.*?)</select>', s, re.S)
+    out, sel = [], None
+    if not m: return out, 'Oceans.html'
+    for attrs, text in re.findall(r'<option([^>]*)>([^<]*)</option>', m.group(1)):
+        vm = re.search(r'value="([^"]+)"', attrs)
+        if not vm: continue
+        out.append((vm.group(1), html.unescape(text)))
+        if re.search(r'(^|\s)selected(?:=|\s|$)', attrs): sel = vm.group(1)
+    return out, sel or (out[0][0] if out else 'Oceans.html')
+def sol_names(l):
+    names = {}
+    p = d(l) + 'Solutions.html'
+    if not os.path.exists(p): return names
+    for m in re.finditer(r'<section ([^>]*class="card-band sol-hub"[^>]*)>.*?<h2><a[^>]*>(.*?)</a>', rd(p), re.S):
+        hm = re.search(r'data-hub="([^"]+)"', m.group(1))
+        if hm: names[hm.group(1)] = re.sub('<[^>]+>', '', m.group(2))
+    return names
+LB_JS = """<script>(function(){var sel=document.getElementById('lb-std-hub'),topic=document.getElementById('lb-hub'),box=document.getElementById('lb-std-panels');if(!sel||!box)return;
+var panels=[].slice.call(box.querySelectorAll('.lb-std-panel'));
+function has(v){return [].some.call(sel.options,function(o){return o.value===v})}
+function show(v){if(!has(v))return;sel.value=v;panels.forEach(function(p){p.hidden=p.getAttribute('data-hub')!==v})}
+function fromTopic(){if(topic&&has(topic.value))show(topic.value)}
+var q=new URLSearchParams(location.search).get('hub');
+if(q&&has(q))show(q);else fromTopic();
+sel.addEventListener('change',function(){show(sel.value)});
+if(topic)topic.addEventListener('change',fromTopic);
+})();</script>"""
 def lesson(l):
     p = d(l) + 'Lesson_Builder.html'
     if not os.path.exists(p): return 0
     s = rd(p); u = U[l]
-    names = {}
-    for m in re.finditer(r'<section ([^>]*class="card-band sol-hub"[^>]*)>.*?<h2><a[^>]*>(.*?)</a>', rd(d(l) + 'Solutions.html'), re.S):
-        names[re.search(r'data-hub="([^"]+)"', m.group(1)).group(1)] = re.sub('<[^>]+>', '', m.group(2))
+    names = sol_names(l)
+    form, selected = form_hubs(s)
+    seen = {h for h, _ in form}
+    labels = list(form)
+    for h in D['hubs']:
+        if h not in seen: labels.append((h, names.get(h, h)))
+    if not any(h == selected for h, _ in labels):
+        selected = 'Oceans.html' if any(h == 'Oceans.html' for h, _ in labels) else labels[0][0]
+    def pid(h): return 'lbs-' + re.sub(r'[^A-Za-z0-9]+', '-', h).strip('-')
+    def empty_p(name): return f'<p class="lb-std-empty">{esc(u["empty"].replace("{name}", name))}</p>'
+    def code_bits(c):
+        o = D['codes'][c]
+        return (f'<a href="{o["url"]}" dir="ltr" target="_blank" rel="noopener" title="{esc(o["text"])}">{esc(short(c))}</a>'
+                f' <span class="std-official" lang="en" dir="ltr">{esc(o["text"])}</span>')
+    def panel(h, name):
+        cs = D['hubs'].get(h) or []
+        body = f'<ul class="std-list">{"".join(f"<li><span class=\"std-line\" dir=\"ltr\">{code_bits(c)}</span></li>" for c in cs)}</ul>' if cs else empty_p(name)
+        hidden = '' if h == selected else ' hidden'
+        return (f'<div class="lb-std-panel" data-hub="{esc(h)}" role="region" aria-labelledby="{pid(h)}"{hidden}>'
+                f'<h3 id="{pid(h)}">{esc(name)}</h3>{body}</div>')
+    opts = ''.join(f'<option value="{esc(h)}"' + (' selected' if h == selected else '') + f'>{esc(name)}</option>' for h, name in labels)
     rows = ''.join(f'<tr><td><a href="{h}">{names.get(h, h)}</a></td><td>' + ', '.join(f'<a href="{D["codes"][c]["url"]}" target="_blank" rel="noopener" title="{esc(D["codes"][c]["text"])}">{esc(short(c))}</a>' for c in cs) + '</td></tr>'
                    for h, cs in sorted(D['hubs'].items(), key=lambda x: names.get(x[0], x[0]).lower()))
-    blk = (f'<!-- LB-STD:START --><section class="five-ws lb-std" aria-labelledby="lbs-h"><h2 id="lbs-h">{esc(u["lb"])}</h2><p class="std-note">{esc(u["note"])}</p>'
-           f'<table><thead><tr><th scope="col">{esc(u["hub"])}</th><th scope="col">{esc(u["codes"])}</th></tr></thead><tbody>{rows}</tbody></table></section><!-- LB-STD:END -->')
-    if '<!-- LB-STD:START -->' in s:
-        return wr(p, re.sub(r'<!-- LB-STD:START -->.*?<!-- LB-STD:END -->', lambda m: blk, s, count=1, flags=re.S))
-    return wr(p, put(s, 'LB-STD', blk, '</main>'))
+    missing = ''.join(empty_p(name) for h, name in labels if not D['hubs'].get(h))
+    search = (f'<p class="lb-std-search"><a class="edu-bubble glass" data-tint="ocean" href="Search.html">{esc(u["search"])}</a> '
+              f'<span>{esc(u["searchNote"])}</span></p>')
+    blk = (f'<!-- LB-STD:START --><section class="five-ws lb-std" aria-labelledby="lbs-h"><h2 id="lbs-h">{esc(u["lb"])}</h2><p class="std-note" id="lbs-note">{esc(u["note"])}</p>'
+           f'<div id="lb-std-app"><div class="lb-std-pick glass" data-tint="earth"><label for="lb-std-hub">{esc(u["pick"])}</label>'
+           f'<select id="lb-std-hub" aria-describedby="lbs-note">{opts}</select></div>{search}'
+           f'<div id="lb-std-panels" aria-live="polite" aria-atomic="true">{"".join(panel(h, n) for h, n in labels)}</div></div>'
+           f'<noscript><style>#lb-std-app{{display:none !important}}</style>{search}'
+           f'<table><thead><tr><th scope="col">{esc(u["hub"])}</th><th scope="col">{esc(u["codes"])}</th></tr></thead><tbody>{rows}</tbody></table>{missing}</noscript>'
+           f'{LB_JS}</section><!-- LB-STD:END -->')
+    return wr(p, swap(s, 'LB-STD', blk, '</main>'))
 def main():
     n = 0
     for l in LANGS:
@@ -111,15 +174,9 @@ def main():
             s2 = put(s, 'STANDARDS', block(l, page), '</section><!-- TEACHER:END -->')
             n += wr(p, s2)
         n += teachers(l) + lesson(l)
-    css = rd('styles.css')
-    new_css = CSS.strip('\n')
-    found = re.search(r'/\* STD:START \*/.*?/\* STD:END \*/', css, re.S)
-    if found:
-        if found.group(0) != new_css:
-            css = css[:found.start()] + new_css + css[found.end():]
-            open('styles.css', 'w', encoding='utf8').write(css)
-    else:
-        open('styles.css', 'w', encoding='utf8').write(css.rstrip('\n') + '\n' + new_css + '\n')
+    css = rd('styles.css'); pat = re.compile(r'/\* STD:START \*/.*?/\* STD:END \*/', re.S); block_css = CSS.strip('\n')
+    css2 = pat.sub(lambda m: block_css, css, count=1) if pat.search(css) else css.rstrip('\n') + '\n' + CSS + '\n'
+    if css2 != css: open('styles.css', 'w', encoding='utf8').write(css2)
     tagged = sum(1 for u in PH if codes_for(u))
     print(f'build-standards: {n} page writes; {tagged}/{len(PH)} solutions tagged')
 if __name__ == '__main__': main()

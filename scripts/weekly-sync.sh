@@ -86,7 +86,7 @@ python3 scripts/build-play.py           # Oct 15 item 9: Kids Play & Learn hub (
 python3 scripts/build-learn.py           # Oct 16 Phase 1 education: Learn hub (3 tracks), Orbits_Guide, Orbit_Math (KaTeX at build), Orbit_Lab (all langs)
 node scripts/test-orbit-lab.js >/dev/null  # Orbit Lab physics unit test (fails the sync on error)
 if [ -f scripts/test-aero-lab.js ]; then node scripts/test-aero-lab.js >/dev/null; fi   # Aero Lab physics unit test (Phase 2)
-python3 scripts/build-si-helper.py      # Oct 16: SI Helper pilot widget (Teachers), SI_Helper.html, Privacy section (all langs)
+python3 scripts/build-si-helper.py      # SI Helper retired: strip Teachers widget, Privacy note, SI_Helper.html -> Teachers redirect
 python3 scripts/build-big-questions.py  # Oct 26: Big Questions FAQ (6 langs, FAQPage)
 python3 scripts/build-question-bank.py  # Oct 26: SEO question bank CSV
 python3 scripts/build-big-questions-ui.py  # Oct 26: polished Big Questions UI

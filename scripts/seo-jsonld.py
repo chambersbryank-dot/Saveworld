@@ -23,7 +23,7 @@ NOINDEX = {'Project-R.html', '404.html'}
 # Section hub for pages that have no visible breadcrumb (BreadcrumbList = Home > hub > page)
 SECTION = {}
 for _f in ('Orbits_Guide', 'Orbit_Math', 'Orbit_Lab', 'Aero_Guide', 'Aero_Math', 'Aero_Lab', 'Physics_Guide', 'Physics_Math', 'Physics_Lab',
-           'AP_IB_Physics', 'Cadets', 'Careers', 'Homeschool', 'Calculators', 'Glossary', 'Satellite_Explorer', 'Lesson_Builder', 'SI_Helper'):
+           'AP_IB_Physics', 'Cadets', 'Careers', 'Homeschool', 'Calculators', 'Glossary', 'Satellite_Explorer', 'Lesson_Builder'):
     SECTION[_f + '.html'] = 'Learn.html'
 for _f in ('Kids_Map', 'Spot_the_Fire'): SECTION[_f + '.html'] = 'Play_and_Learn.html'
 def website(lang):
