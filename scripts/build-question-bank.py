@@ -220,8 +220,8 @@ def mine_list_headings(rows, page, cluster, prefix_templates, limit=8):
             if n >= limit:
                 break
             title = h.get_text(' ', strip=True)
-            if not title or len(title) < 3:
-                continue
+            if not title or len(title) < 3 or 'SI Helper' in title:
+                continue  # retired Teachers-page pilot: do not mine it into FAQ/PAA
             # skip nav chrome
             if title.lower() in ('hubs', 'explore', 'explore another solution'):
                 continue
