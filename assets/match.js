@@ -164,7 +164,13 @@
     return typeof url === 'string' && /^(\.\.\/)?assets\/[A-Za-z0-9_./-]+$/.test(url) ? url : '';
   }
   function decodeAttr(s) {
-    return String(s).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    return String(s).replace(/&(?:amp|quot|lt|gt|#x27|#39);/g, function (ent) {
+      if (ent === '&quot;') return '"';
+      if (ent === '&lt;') return '<';
+      if (ent === '&gt;') return '>';
+      if (ent === '&amp;') return '&';
+      return "'";
+    });
   }
   function addCredit(parent, html) {
     var re = /<(\/?)(span|bdi|a)\b([^>]*)>|([^<]+)/g;
