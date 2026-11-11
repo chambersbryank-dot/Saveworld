@@ -80,7 +80,7 @@ def careers(l):
     main = (BL.hero(C['title'][l], C['kicker'][l]) + f'<div class="lw">{checked(l)}<p class="pw-disc">{esc(C["bls_date"][l])}</p>{toc}{out}'
             f'<h2 id="community-college">{esc(C["cc"][l])}</h2><p>{md(P.CC[l], l)}</p><h2 id="veterans">{esc(C["vet"][l])}</h2>{vet}'
             f'<h2 id="scholarships">{esc(C["sch"][l])}</h2><p class="lnote">{esc(C["sch_note"][l])}</p>{sch}<h2>{esc(P.COMMON["src"][l])}</h2>{srcs(src)}</div>\n')
-    return BL.shell(l, 'Careers.html', C['title'][l], C['desc'][l], main, extra_head=CSS, ld_type='CollectionPage')
+    return archive_page(BL.shell(l, 'Careers.html', C['title'][l], C['desc'][l], main, extra_head=CSS, ld_type='CollectionPage'))
 def cadets(l):
     C = P2.CD; hd = [P.COMMON['prog'][l], P.COMMON['topic'][l], P.COMMON['ours'][l]]
     steps = '<ol>' + ''.join(f'<li>{esc(x[l])}</li>' for x in C['inst_steps']) + '</ol>'
@@ -91,7 +91,7 @@ def cadets(l):
             f'<h2 id="cap">{esc(C["cap"][l])}</h2><p>{esc(C["cap_t"][l])}</p>{table(l, hd, P2.CAP_ROWS)}<p>{md(C["ace"][l], l)}</p><p>{md(C["aex"][l], l)}</p>'
             f'<h2 id="instructors">{esc(C["inst"][l])}</h2>{steps}<h3 id="topic-map">{esc(C["map"][l])}</h3>{printbtn(l)}{table(l, hd, P2.AF_ROWS + P2.NV_ROWS + P2.CAP_ROWS)}'
             f'<h2>{esc(P.COMMON["src"][l])}</h2>{srcs(P2.CD_SRC)}<p class="pw-disc">{esc(C["disc"][l])}</p></div>\n')
-    return BL.shell(l, 'Cadets.html', C['title'][l], C['desc'][l], main, extra_head=CSS)
+    return archive_page(BL.shell(l, 'Cadets.html', C['title'][l], C['desc'][l], main, extra_head=CSS))
 def apib(l):
     A = P2.AP; hd = [P.COMMON['unit'][l], P.COMMON['topic'][l], P.COMMON['ours'][l]]
     def rows(rs, pre): return [(P.S(pre + a['en']), b, c) for a, b, c in rs]
@@ -108,8 +108,17 @@ def homeschool(l):
     main = (BL.hero(H['title'][l], H['kicker'][l]) + f'<div class="lw"><h2 id="ages">{esc(H["ages"][l])}</h2>{ages}<h2 id="plan">{esc(H["plan"][l])}</h2><p>{esc(H["plan_t"][l])}</p>{printbtn(l)}{wk}'
             f'<h2>{esc(H["more"][l])}</h2><p>{md(H["more_t"][l], l)}</p></div>\n')
     return BL.shell(l, 'Homeschool.html', H['title'][l], H['desc'][l], main, extra_head=CSS, ld_type='CollectionPage')
+def archive_page(html):
+    """Nov 11: JROTC and Careers stay on disk so old links work, but they are not indexed."""
+    html = html.replace('name="robots" content="index,follow"', 'name="robots" content="noindex, nofollow"', 1)
+    if 'data-pagefind-ignore="all"' not in html.split('<body', 1)[-1][:800]:
+        html = html.replace('<body ', '<body data-pagefind-ignore="all" ', 1)
+    note = '<!-- ARCHIVED: JROTC/Careers is outside the Teachers page. noindex. Not in the sitemap or search index. -->\n'
+    if 'ARCHIVED: JROTC/Careers' not in html:
+        html = html.replace('<!DOCTYPE html>', '<!DOCTYPE html>\n' + note, 1)
+    return html
 PAGES = {'Careers.html': careers, 'Cadets.html': cadets, 'AP_IB_Physics.html': apib, 'Homeschool.html': homeschool}
-START = ['Cadets.html', 'AP_IB_Physics.html', 'Careers.html']  # Oct 26: Homeschool + Calculators links removed (pages stay reachable by URL)
+START = ['AP_IB_Physics.html']  # Nov 11: JROTC (Cadets) and Careers are archived off Teachers. Homeschool + Calculators stay reachable by URL.
 def hub_block(l):  # injected into Learn.html (marker block, stripped by i18n tools)
     lis = ''.join(f'<li><a href="{h(l, p)}">{esc(P.NAV[p][l])}</a></li>' for p in START)
     return (f'<!-- STARTHERE:START --><h2 id="start-here">{esc(P.HUB["start"][l])}</h2><p>{esc(P.HUB["start_t"][l])}</p>'
@@ -122,7 +131,7 @@ if __name__ == '__main__':
         f = d(l) + 'Learn.html'; s = rd(f); s2 = re.sub(r'<!-- STARTHERE:START -->.*?<!-- STARTHERE:END -->', '', s, flags=re.S)
         ch += wr(f, s2)  # Oct 26: Learn.html landing is now built by build-learn-hubs.py (no Start-here block)
         f = d(l) + 'Teachers.html'  # Oct 16 (A): Start-here links on Teachers too
-        if os.path.exists(f):
+        if os.path.exists(f) and '<!-- TEACHHOME:START -->' not in rd(f):
             s = rd(f); s2 = re.sub(r'<!-- STARTHERE:START -->.*?<!-- STARTHERE:END -->', '', s, flags=re.S)
             m = re.search(r'<section class="page-hero.*?</section>', s2, re.S)
             if m:

@@ -13,7 +13,7 @@ import * as pagefind from 'pagefind';
 
 const SITE = path.resolve(process.argv[2] || '.');
 const OUT = path.resolve(process.argv[3] || SITE);
-const SKIP = new Set(['Search.html', '404.html', 'Project-R.html', 'Community.html', 'Find_a_Cleanup.html', 'SI_Helper.html']);  // Oct 22: Find a Cleanup paused (stub). SI_Helper.html is a noindex redirect to Teachers.
+const SKIP = new Set(['Search.html', '404.html', 'Project-R.html', 'Community.html', 'Find_a_Cleanup.html', 'SI_Helper.html', 'Cadets.html', 'Careers.html']);  // SI Helper retired. JROTC and Careers archived (noindex, off Teachers).
 const isPage = f => f.endsWith('.html') && !SKIP.has(path.basename(f)) && !/^google[0-9a-f]+\.html$/.test(path.basename(f));
 
 const files = [];

@@ -301,6 +301,9 @@ def teachers_html(lang, courses):
 def splice_teachers(lang, courses):
     p = path(lang, 'Teachers.html')
     s = open(p, encoding='utf-8').read()
+    # Nov 11: build-teachers-home.py owns the collapsed course accordion inside TEACHHOME.
+    if '<!-- TEACHHOME:START -->' in s:
+        return
     s2 = re.sub(r'<!-- TEACHCRS:START -->.*?<!-- TEACHCRS:END -->\n?', '', s, flags=re.S)
     blk = teachers_html(lang, courses)
     anchor = '<section class="five-ws t-hub">'

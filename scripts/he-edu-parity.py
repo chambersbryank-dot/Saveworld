@@ -14,10 +14,7 @@ esc = lambda s: html.escape(s, quote=False)
 escq = lambda s: html.escape(s, quote=True)
 
 START = [
-    ('Cadets.html', '🎖️ התחילו כאן: JROTC ו-CAP'),
-    ('Homeschool.html', '🏡 התחילו כאן: חינוך ביתי'),
-    ('AP_IB_Physics.html', '📘 התחילו כאן: פיזיקה AP ו-IB'),
-    ('Careers.html', '🚀 קריירה ומסלולים'),
+    ('AP_IB_Physics.html', '📘 פיזיקה AP ו-IB'),
 ]
 
 STARTHERE = (
@@ -59,8 +56,9 @@ def main():
     f = 'he/Teachers.html'
     s = open(f, encoding='utf-8').read()
     o = s
-    # STARTHERE early, LEARNLINK before the footer FAQ. SI Helper is not re-added.
-    s = put(s, 'STARTHERE', STARTHERE, '<!-- EDU-LINKS:START -->')
+    # The Teachers home owns its own start strip. Do not put the old Start-here block back.
+    if '<!-- TEACHHOME:START -->' not in s:
+        s = put(s, 'STARTHERE', STARTHERE, '<!-- EDU-LINKS:START -->')
     s = re.sub(r'<!-- SIHELPER:START -->.*?<!-- SIHELPER:END -->', '', s, flags=re.S)
     s = put(s, 'LEARNLINK', LEARNLINK, '<!-- SP-HUBFAQ:START -->')
     # T-BROWSE comes from build-standards.py once he is in LANGS

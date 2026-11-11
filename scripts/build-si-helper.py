@@ -63,6 +63,7 @@ def privacy_block(l):
             f'<p>{esc(p)}</p></section><!-- SIHELPER:END -->')
 
 def teachers(l):
+    # SI Helper stays off Teachers.html. The redesigned page is left otherwise untouched.
     p = d(l) + 'Teachers.html'
     if not os.path.exists(p):
         return 0

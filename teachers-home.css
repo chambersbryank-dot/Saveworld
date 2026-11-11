@@ -1,0 +1,150 @@
+/* Teachers home (Nov 11). Uses the same crystal chips as .t-chip in styles.css.
+   Logical properties only, so Arabic and Hebrew keep the correct start/end. */
+.t-home{max-width:1120px;margin:0 auto;padding:.2rem 1.15rem 1.6rem}
+.t-home h2{font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.2;margin:0 0 .4rem;letter-spacing:-.02em}
+.t-home h3{margin:0 0 .45rem}
+.t-lead{margin:0 0 1rem;max-width:68ch;line-height:1.5;color:#e7f3fa}
+.t-kicker{font-size:.78rem;font-weight:800;letter-spacing:.04em;color:#9fd6ff;margin:0}
+.t-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:0 0 1.1rem}
+.t-path{display:flex;flex-direction:column;gap:.35rem;min-height:9.2rem;padding:1rem 1.05rem;border-radius:18px;text-decoration:none;color:#fff}
+.t-path strong{font-size:1.15rem;line-height:1.25}
+.t-path span{color:#d7ebf7;font-weight:500;line-height:1.4}
+.t-path:hover,.t-path:focus-visible{border-color:#7fd0ff;background:rgba(0,156,222,.18)}
+.t-subh{font-size:1rem;margin:1rem 0 .45rem}
+.t-row{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
+.t-row a.t-chip{text-decoration:none;display:inline-flex;align-items:center}
+.t-feature,.t-cat,.t-kit-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;list-style:none;margin:0;padding:0}
+.t-card{display:flex;flex-direction:column;gap:.55rem;min-width:0;padding:.85rem .9rem;border-radius:16px;color:#fff;content-visibility:auto;contain-intrinsic-size:auto 148px}
+.t-card-main{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;flex:1;min-width:0;color:inherit;text-decoration:none}
+.t-card-main:hover .t-card-title,.t-card-main:focus-visible .t-card-title{text-decoration:underline}
+.t-card-title{font-weight:800;font-size:1.05rem;line-height:1.3}
+.t-hook,.t-time{margin:0;color:#e7f3fa;font-weight:500;line-height:1.4;font-size:.92rem}
+.t-type{display:inline-block;padding:.12rem .55rem;border-radius:999px;font-size:.75rem;font-weight:800;color:#fff}
+.t-pills{display:flex;flex-wrap:wrap;gap:.3rem}
+.t-pill,.t-code{display:inline-block;padding:.08rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:.78rem;font-weight:700}
+.t-card .t-chip{align-self:flex-start;text-decoration:none}
+.t-kits{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.t-kit{padding:1rem 1rem .9rem;border-radius:18px}
+.t-kit h3{font-size:1.45rem;margin:0 0 .35rem}
+.t-kit h4{margin:.85rem 0 .4rem;font-size:.95rem}
+.t-kit-note{margin:.35rem 0 0;color:#d7ebf7;font-size:.9rem}
+.t-topic-grid{display:flex;flex-wrap:wrap;gap:.75rem;align-items:stretch}
+.t-topic{flex:1 1 220px;min-width:0;border-radius:18px}
+.t-topic[open]{flex:1 1 100%}
+.t-topic>summary,.t-courses>summary,.t-year>summary{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding:.85rem 1rem;cursor:pointer;list-style:none;font-weight:800;min-height:48px}
+.t-topic>summary::-webkit-details-marker,.t-courses>summary::-webkit-details-marker,.t-year>summary::-webkit-details-marker{display:none}
+.t-topic>summary::after,.t-courses>summary::after,.t-year>summary::after{content:"▾";width:auto;height:auto;border:0;font-size:.85rem;line-height:1;flex:0 0 auto}
+.t-topic[open]>summary::after,.t-courses[open]>summary::after,.t-year[open]>summary::after{content:"▴";transform:none;margin:0}
+#pick-a-path,#grade-kits,#t-topics,#courses,.t-topic{scroll-margin-top:calc(var(--nav-height, 96px) + .75rem)}
+.t-topic-name{font-size:1.05rem}
+.t-topic-meta{font-weight:650;color:#d7ebf7;white-space:nowrap}
+.t-topic[open]>summary{border-block-end:1px solid rgba(255,255,255,.18)}
+.t-topic .t-cat{padding:.85rem}
+.t-browse-in{margin:0 0 1rem;padding-inline:0;max-width:none}
+.t-std-label{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.35rem 0 .2rem;font-weight:700}
+.t-std{min-height:44px;border-radius:999px;padding:0 .9rem;font:inherit;color:#fff}
+.t-live{min-height:1.2em;margin:.2rem 0 .6rem;font-weight:700}
+.t-all{margin:1rem 0 0}
+.t-courses{margin-top:.4rem;border-radius:18px}
+.t-courses-body{padding:0 1rem 1rem}
+.t-years{display:grid;gap:.55rem}
+.t-year{border-radius:14px}
+.t-year .t-cat{padding:0 .8rem .8rem}
+.t-more-all{margin-top:.8rem}
+@media (max-width:980px){
+  .t-paths,.t-kits{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .t-home{padding-inline:.85rem}
+  .t-topic{flex-basis:100%}
+  .t-feature,.t-cat,.t-kit-list{grid-template-columns:1fr}
+}
+@media (forced-colors:active){
+  .t-path,.t-card,.t-topic,.t-kit,.t-courses,.t-year{border:1px solid ButtonText;forced-color-adjust:auto}
+}
+/* Same crystal-water fill as .hero-cta / .sticky-help, locked to the water tint. */
+body.teachers-page{
+  --cw:rgba(0,70,110,.78);
+  --cw-solid:#0a4f78;
+}
+body.teachers-page .t-path,
+body.teachers-page .t-card,
+body.teachers-page .t-kit,
+body.teachers-page .t-topic,
+body.teachers-page .t-courses,
+body.teachers-page .t-year,
+body.teachers-page .t-type,
+body.teachers-page .t-pill,
+body.teachers-page .t-code,
+body.teachers-page .t-std,
+body.teachers-page .t-chip,
+body.teachers-page .edu-bubble.glass,
+body.teachers-page .sp9-adopt .btn,
+body.teachers-page .shr a,
+body.teachers-page .shr button{
+  color:#fff !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),var(--cw) !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(var(--cw),var(--cw)) !important;
+  border:1px solid rgba(255,255,255,.35) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,0,0,.28) !important;
+  -webkit-backdrop-filter:blur(14px) saturate(180%);
+  backdrop-filter:blur(14px) saturate(180%);
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+}
+body.teachers-page .t-chip[aria-pressed=true]{
+  background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.16)),var(--cw-solid) !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.16)),linear-gradient(var(--cw-solid),var(--cw-solid)) !important;
+  color:#fff !important;
+  border-color:#fff !important;
+}
+body.teachers-page .t-path:hover,
+body.teachers-page .t-card:hover,
+body.teachers-page .t-chip:hover,
+body.teachers-page .edu-bubble.glass:hover{
+  filter:brightness(1.08);
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  body.teachers-page .t-path,
+  body.teachers-page .t-card,
+  body.teachers-page .t-kit,
+  body.teachers-page .t-topic,
+  body.teachers-page .t-chip,
+  body.teachers-page .t-type{
+    background:var(--cw-solid) !important;
+    background-image:none !important;
+  }
+}
+/* Title video: homepage Earth / beach / forest loop. Poster stays if motion is reduced. */
+body.teachers-page .page-hero.hero-teach{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:#021018 url("assets/videos/hero-loop.jpg") center / cover no-repeat !important;
+}
+body.teachers-page .t-hero-media{position:absolute;inset:0;z-index:0}
+body.teachers-page .t-hero-still,
+body.teachers-page .t-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+body.teachers-page .t-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,20,40,.42),rgba(0,20,40,.62))}
+body.teachers-page .page-hero.hero-teach .page-hero-content,
+body.teachers-page .page-hero.hero-teach .hero-credit{position:relative;z-index:1}
+body.teachers-page .page-hero.hero-teach .hero-credit{
+  position:absolute;
+  inset-inline-end:.6rem;
+  inset-inline-start:auto;
+  left:auto;
+  right:auto;
+  bottom:.4rem;
+  width:max-content;
+  max-width:calc(100% - 1.2rem);
+  text-align:end;
+  line-height:1.3;
+}
+body.teachers-page .page-hero.hero-teach h1,
+body.teachers-page .page-hero.hero-teach .page-hero-content p{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+@media (prefers-reduced-motion:reduce){
+  body.teachers-page .t-hero-video{display:none}
+}
+@media print{
+  .t-browse-in,.t-all,.t-more-all{display:none !important}
+  .t-topic,.t-courses,.t-year{break-inside:avoid}
+}
