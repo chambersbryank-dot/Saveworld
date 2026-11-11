@@ -1,18 +1,4 @@
 (function (root) {
-  function modes(helps) {
-    var m = helps.filter(function (h) { return h !== 'email'; });
-    return m.length ? m : ['learn'];
-  }
-  function placeExact(s, where, helps) {
-    var near = !!(s.local || s.where === 'local');
-    if (where === 'near') return near;
-    return modes(helps).some(function (h) {
-      if (h === 'money' || h === 'learn') return true;
-      if (s.where === 'remote') return true;
-      if (s.where === 'local') return false;
-      return !!s.remote;
-    });
-  }
   function helpOk(s, helps) {
     var m = helps.filter(function (h) { return h !== 'email'; });
     if (!m.length) return true;
@@ -21,23 +7,20 @@
     if (m.indexOf('time') !== -1 && s.time) return true;
     return false;
   }
-  function score(s, where, helps) {
-    var n = placeExact(s, where, helps) ? 4 : 0;
+  function score(s, helps) {
+    var n = 0;
     if (helps.indexOf('money') !== -1 && s.give) n += 3;
     if (helps.indexOf('time') !== -1 && s.time) n += 3;
     if (helps.indexOf('learn') !== -1) n += 1;
     return n;
   }
-  function rank(all, causes, helps, where, lang) {
-    var pool = all.filter(function (s) {
+  function rank(all, causes, helps, lang) {
+    var list = all.filter(function (s) {
       return causes.indexOf(s.theme) !== -1 && helpOk(s, helps);
     });
-    var exact = pool.filter(function (s) { return placeExact(s, where, helps); });
-    var relaxed = exact.length < 10 && pool.length > exact.length;
-    var list = exact.length >= 10 ? exact : pool;
     var bands = {};
     list.forEach(function (s) {
-      var n = score(s, where, helps);
+      var n = score(s, helps);
       (bands[n] = bands[n] || []).push(s);
     });
     var levels = Object.keys(bands).map(Number).sort(function (a, b) { return b - a; });
@@ -60,7 +43,7 @@
         order = next;
       }
     });
-    return { list: ordered.slice(0, 10), matched: ordered.length, relaxed: relaxed };
+    return { list: ordered.slice(0, 10), matched: ordered.length };
   }
   root.SP9rank = rank;
   if (!root.document) return;
@@ -71,43 +54,6 @@
   var pre = location.pathname.indexOf('/' + lang + '/') > -1 ? '../' : '';
   var T = root.SP9MATCH || {};
   var last = [];
-
-  var video = document.querySelector('.match-video');
-  if (video) {
-    var reduce = root.matchMedia && root.matchMedia('(prefers-reduced-motion: reduce)');
-    var saveData = navigator.connection && navigator.connection.saveData;
-    var pauseBtn = document.querySelector('.match-pause');
-    var held = false;
-    function arm() {
-      if ((reduce && reduce.matches) || saveData) {
-        video.pause();
-        video.removeAttribute('autoplay');
-        video.preload = 'none';
-        return;
-      }
-      var src = video.querySelector('source');
-      var loop = 'https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4';
-      if (src && !src.getAttribute('src')) {
-        src.src = loop;
-        video.load();
-      }
-      if (!held) {
-        var p = video.play && video.play();
-        if (p && p.catch) p.catch(function () {});
-      }
-    }
-    arm();
-    if (reduce && reduce.addEventListener) reduce.addEventListener('change', arm);
-    if (pauseBtn) {
-      pauseBtn.addEventListener('click', function () {
-        held = pauseBtn.getAttribute('aria-pressed') !== 'true';
-        pauseBtn.setAttribute('aria-pressed', held ? 'true' : 'false');
-        pauseBtn.setAttribute('aria-label', held ? (pauseBtn.getAttribute('data-play') || 'Play') : (pauseBtn.getAttribute('data-pause') || 'Pause'));
-        if (held) video.pause();
-        else arm();
-      });
-    }
-  }
 
   function vals(name) {
     return [].filter.call(form.querySelectorAll('input[name="' + name + '"]'), function (el) { return el.checked; })
@@ -156,6 +102,22 @@
     if (helps[0]) helps[0].setCustomValidity(hOk ? '' : (T.need || 'Choose at least one cause and one way to help.'));
   }
   form.addEventListener('change', function () { syncValidity(); syncMail(); });
+  form.addEventListener('reset', function () {
+    setTimeout(function () {
+      last = [];
+      var out = document.getElementById('match-out');
+      var note = document.getElementById('match-note');
+      var grid = document.getElementById('match-list');
+      var causes = form.querySelectorAll('input[name="cause"]');
+      var helps = form.querySelectorAll('input[name="help"]');
+      [].forEach.call(causes, function (el) { el.setCustomValidity(''); });
+      [].forEach.call(helps, function (el) { el.setCustomValidity(''); });
+      if (grid) grid.textContent = '';
+      if (note) note.textContent = '';
+      if (out) out.hidden = true;
+      syncMail();
+    }, 0);
+  });
 
   function safePage(url) {
     return typeof url === 'string' && /^[A-Za-z0-9_./-]+\.html$/.test(url) ? url : '';
@@ -276,8 +238,8 @@
   function show() {
     syncValidity();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    var causes = vals('cause'), helps = vals('help'), where = (form.querySelector('input[name="where"]:checked') || {}).value;
-    var ranked = rank(model.all, causes, helps, where, lang);
+    var causes = vals('cause'), helps = vals('help');
+    var ranked = rank(model.all, causes, helps, lang);
     last = ranked.list;
     var out = document.getElementById('match-out');
     var note = document.getElementById('match-note');
@@ -286,7 +248,6 @@
     var n = ranked.list.length;
     var msg;
     if (!n) msg = T.none;
-    else if (ranked.relaxed) msg = fill(T.relaxed, n);
     else if (n < 10) msg = fill(T.short, n);
     else msg = fill(T.exact, n);
     if (h2) h2.textContent = T.out || h2.textContent;
