@@ -837,6 +837,19 @@ body #actions .mission-block::before { top: 12px; }
 .sb-num { direction: ltr; unicode-bidi: isolate; }
 /* Batch 2: hero video, solution badges, press kit, calendar (2026-10-11) */
 .hero.has-video { overflow: hidden; isolation: isolate; }
+/* Title videos on ad landings: the still stays until the clip plays; reduced motion keeps the still. */
+.page-hero.has-video{overflow:hidden;isolation:isolate}
+.lb-actions [hidden]{display:none !important}
+.page-hero.hero-lesson.has-video .hero-media{background-image:url('assets/hero/lesson-800.webp')}
+@media (min-width:801px){.page-hero.hero-lesson.has-video .hero-media{background-image:url('assets/hero/lesson-1600.webp')}}
+.page-hero.has-video .hero-video-credit{display:none;z-index:2}
+.page-hero.has-video.is-playing .hero-video-credit{display:block}
+.page-hero.hero-lesson.has-video.is-playing > .hero-credit{display:none}
+[dir=rtl] .page-hero.has-video .hero-video-credit{right:auto;left:.8rem}
+@media (prefers-reduced-motion:reduce){.page-hero.has-video .hero-video-credit{display:none !important}}
+.sp-anim-banner .spb-video-credit{display:none}
+.sp-anim-banner.is-playing .spx-cred{display:none}
+.sp-anim-banner.is-playing .spb-video-credit{display:block}
 .hero-media { position: absolute; inset: 0; z-index: -1; background: #00141f url('assets/videos/hero-loop.jpg') center/cover no-repeat; }
 .hero-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,20,40,0.55) 0%, rgba(0,20,40,0.45) 45%, rgba(0,20,40,0.7) 100%); }
