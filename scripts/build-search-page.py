@@ -56,9 +56,16 @@ ACT = {
  'si': {'en': 'SI suggestions', 'fr': 'Suggestions SI', 'es': 'Sugerencias SI', 'ar': 'اقتراحات SI', 'it': 'Suggerimenti SI', 'he': 'הצעות SI'},
 }
 def teacher_heads(l):
+    # Visible hub names on Teachers.html, used as text fragments. The Nov 11 redesign
+    # lists hubs as <details class="t-topic" data-hub="Rivers.html">. JROTC and Careers are not hubs.
     f = ('' if l == 'en' else l + '/') + 'Teachers.html'
     if not os.path.exists(f): return {}
     raw = open(f, encoding='utf8').read()
+    out = {}
+    for m in re.finditer(r'<details class="t-topic"[^>]*data-hub="([^"]+\.html)"[^>]*>(.*?)</details>', raw, re.S):
+        name = re.search(r'<span class="t-topic-name">([^<]*)</span>', m.group(2))
+        if name: out[html.unescape(m.group(1))] = html.unescape(name.group(1)).strip()
+    if out: return out
     pairs = re.findall(r'<section class="five-ws t-hub"><h2><a href="([^"]+\.html)">([^<]*)</a>', raw)
     return {href: html.unescape(name).strip() for href, name in pairs}
 def tabs(l):
