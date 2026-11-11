@@ -66,7 +66,8 @@
     var dir = location.pathname.replace(/[^/]*$/, '');
     return origin + dir + url;
   }
-  function mailHref(list) {
+  var URL_MAX = 1900;
+  function buildBody(list) {
     var lines = [];
     lines.push(T.intro_mail || 'I was on Saving Planets and thought of you.');
     lines.push('');
@@ -84,14 +85,58 @@
     }
     lines.push('');
     lines.push(T.privacy || 'Saving Planets does not ask for a name, a school, or a location, and it does not save these answers.');
-    return 'mailto:?subject=' + encodeURIComponent(T.subject || 'A Saving Planets page to look at together') + '&body=' + encodeURIComponent(lines.join('\n'));
+    return lines.join('\n');
+  }
+  function composeUrls(subject, body) {
+    var su = encodeURIComponent(subject);
+    var bo = encodeURIComponent(body);
+    return {
+      gmail: 'https://mail.google.com/mail/?view=cm&fs=1&su=' + su + '&body=' + bo,
+      outlook: 'https://outlook.live.com/mail/0/deeplink/compose?subject=' + su + '&body=' + bo,
+      mailto: 'mailto:?subject=' + su + '&body=' + bo
+    };
+  }
+  function mailPack(list) {
+    var subject = T.subject || 'A Saving Planets page to look at together';
+    var full = (list || []).slice();
+    var use = full.slice();
+    var body = buildBody(use);
+    var urls = composeUrls(subject, body);
+    while (use.length && (urls.gmail.length > URL_MAX || urls.outlook.length > URL_MAX || urls.mailto.length > URL_MAX)) {
+      use.pop();
+      body = buildBody(use);
+      urls = composeUrls(subject, body);
+    }
+    var fullBody = buildBody(full);
+    return { subject: subject, body: fullBody, urls: urls, text: subject + '\n\n' + fullBody };
+  }
+  function emailOn() {
+    return !!form.querySelector('input[name="help"][value="email"]:checked');
+  }
+  function applyMail(pack) {
+    var g = document.getElementById('match-gmail');
+    var o = document.getElementById('match-outlook');
+    var a = document.getElementById('match-mailto');
+    if (g) g.href = pack.urls.gmail;
+    if (o) o.href = pack.urls.outlook;
+    if (a) a.href = pack.urls.mailto;
   }
   function syncMail() {
-    var on = !!form.querySelector('input[name="help"][value="email"]:checked');
+    var on = emailOn();
     var box = document.getElementById('match-mail');
-    var a = document.getElementById('match-mailto');
+    var toggle = document.getElementById('help-email');
     if (box) box.hidden = !on;
-    if (a) a.href = mailHref(on ? last : []);
+    if (toggle) toggle.setAttribute('aria-expanded', on ? 'true' : 'false');
+    applyMail(mailPack(on ? last : []));
+    if (!on) {
+      var status = document.getElementById('match-copied');
+      var ta = document.getElementById('match-mail-text');
+      var copyBtn = document.getElementById('match-copy');
+      if (copiedTimer) { clearTimeout(copiedTimer); copiedTimer = 0; }
+      if (status) status.hidden = true;
+      if (ta) ta.hidden = true;
+      if (copyBtn && copyBtn.getAttribute('data-label')) copyBtn.textContent = copyBtn.getAttribute('data-label');
+    }
   }
   function syncValidity() {
     var causes = form.querySelectorAll('input[name="cause"]');
@@ -118,6 +163,64 @@
       syncMail();
     }, 0);
   });
+
+  var copyBtn = document.getElementById('match-copy');
+  var copiedNode = document.getElementById('match-copied');
+  var copiedLabel = copiedNode ? copiedNode.textContent : 'Copied';
+  if (copyBtn) copyBtn.setAttribute('data-label', copyBtn.textContent);
+  var copiedTimer = 0;
+  function showCopied(ok) {
+    if (copiedNode) copiedNode.hidden = !ok;
+    if (!copyBtn) return;
+    var label = copyBtn.getAttribute('data-label') || '';
+    if (copiedTimer) clearTimeout(copiedTimer);
+    copyBtn.textContent = ok ? copiedLabel : label;
+    if (ok) copiedTimer = setTimeout(function () { copyBtn.textContent = label; }, 4000);
+  }
+  function copyMail(text) {
+    var ta = document.getElementById('match-mail-text');
+    function legacy() {
+      if (ta) {
+        ta.hidden = false;
+        ta.value = text;
+        ta.focus();
+        ta.select();
+      }
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+      showCopied(!!ok);
+      if (ok && ta) ta.hidden = true;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        if (ta) ta.hidden = true;
+        showCopied(true);
+      }, legacy);
+    } else legacy();
+  }
+  function shareMail(pack) {
+    if (typeof navigator.share !== 'function') return;
+    navigator.share({ title: pack.subject, text: pack.text, url: absUrl('Match.html') }).catch(function () {});
+  }
+  var shareBtn = document.getElementById('match-share');
+  if (shareBtn && typeof navigator.share === 'function') shareBtn.hidden = false;
+  var mailBox = document.getElementById('match-mail');
+  if (mailBox) {
+    mailBox.addEventListener('click', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('a, button') : null;
+      if (!el || !mailBox.contains(el)) return;
+      var pack = mailPack(emailOn() ? last : []);
+      applyMail(pack);
+      if (el.id === 'match-copy') {
+        e.preventDefault();
+        copyMail(pack.text);
+      } else if (el.id === 'match-share') {
+        e.preventDefault();
+        shareMail(pack);
+      }
+    });
+  }
+  syncMail();
 
   function safePage(url) {
     return typeof url === 'string' && /^[A-Za-z0-9_./-]+\.html$/.test(url) ? url : '';
