@@ -13,11 +13,11 @@ spec = importlib.util.spec_from_file_location('ux', 'scripts/build-ux.py'); UX =
 import learn_text as LT
 LANGS = UX.LANGS; T = UX.T; d = UX.d; rd = UX.rd; wr = UX.wr
 X = {
- 'en': dict(kids='Kids', teachers='Teachers', si='SI Helper (pilot)', open='Open menu', close='Close menu', util='Site links', main='Main menu', lang='Language'),
- 'fr': dict(kids='Enfants', teachers='Enseignants', si='SI Helper (pilote)', open='Ouvrir le menu', close='Fermer le menu', util='Liens du site', main='Menu principal', lang='Langue'),
- 'es': dict(kids='Niños', teachers='Docentes', si='SI Helper (piloto)', open='Abrir el menú', close='Cerrar el menú', util='Enlaces del sitio', main='Menú principal', lang='Idioma'),
- 'ar': dict(kids='الأطفال', teachers='المعلمون', si='SI Helper (تجريبي)', open='فتح القائمة', close='إغلاق القائمة', util='روابط الموقع', main='القائمة الرئيسية', lang='اللغة'),
- 'it': dict(kids='Bambini', teachers='Insegnanti', si='SI Helper (pilota)', open='Apri il menu', close='Chiudi il menu', util='Link del sito', main='Menu principale', lang='Lingua'),
+ 'en': dict(kids='Kids', teachers='Teachers', open='Open menu', close='Close menu', util='Site links', main='Main menu', lang='Language'),
+ 'fr': dict(kids='Enfants', teachers='Enseignants', open='Ouvrir le menu', close='Fermer le menu', util='Liens du site', main='Menu principal', lang='Langue'),
+ 'es': dict(kids='Niños', teachers='Docentes', open='Abrir el menú', close='Cerrar el menú', util='Enlaces del sitio', main='Menú principal', lang='Idioma'),
+ 'ar': dict(kids='الأطفال', teachers='المعلمون', open='فتح القائمة', close='إغلاق القائمة', util='روابط الموقع', main='القائمة الرئيسية', lang='اللغة'),
+ 'it': dict(kids='Bambini', teachers='Insegnanti', open='Apri il menu', close='Chiudi il menu', util='Link del sito', main='Menu principale', lang='Lingua'),
 }
 # Every link from the previous nav (build-ux GROUPS) stays reachable; About pages (were footer-only) added.
 # Oct 26: Homeschool + Calculators out of the Learn menu; build-learn-hubs.py (runs next) writes the final topic-hub dropdown.
@@ -29,7 +29,7 @@ GROUPS = [
  ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html', 'Topics.html', 'World_Map.html']),
  ('le', ['Learn.html', 'Courses.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html']),
  ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Big_Questions.html', 'Glossary.html']),
- ('teach', ['Teachers.html', 'Lesson_Builder.html', 'SI_Helper.html']),
+ ('teach', ['Teachers.html', 'Lesson_Builder.html']),  # SI Helper pilot retired: no public nav link
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
 ]
 SOL_HUBS = ['Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html']
@@ -53,7 +53,6 @@ def label(l, key, i):
     if key == 'le': return LT.NAV_ITEMS[i][l]
     if i == 'Play_and_Learn.html': return UX.PLAYL[l]
     if i == 'Project-Rawane.html': return UX.PR[l][1][0]
-    if i == 'SI_Helper.html': return X[l]['si']
     return t['items'][i]
 
 # Oct 16 (user): sub-items alphabetical by displayed label in each language; Start-here entries + Careers stay pinned at the

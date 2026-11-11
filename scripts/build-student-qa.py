@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Oct 16: Student questions, answered (the SI Helper Q&A / math pool). Source: assets/data/student-qa.json (approved entries only).
-Writes, for each of en/fr/es/ar/it:
-  - Student_Questions.html: entries grouped by topic tab (#aero, #orbit, #phys, #all), each with its sources and the SI credit,
+"""Student questions, answered. Source: assets/data/student-qa.json (approved entries only).
+The Teachers-page SI Helper pilot is retired: this page keeps the sourced answers and says the pilot is no longer offered. It does not link to an ask box.
+Writes, for each of en/fr/es/ar/it/he:
+  - Student_Questions.html: entries grouped by topic tab (#rocket, #aero, #orbit, #phys, #all), each with its sources and the SI credit,
     FAQPage JSON-LD. Pagefind + the semantic search index pick the page up in scripts/build-search.mjs.
   - search/student-qa.json: {lang: [{id, topic, q, url}]} for the Search topic tabs (boost / floating questions by topic).
-  - sitemap.xml entries (only once at least one entry is approved).
-Vectorize: scripts/si-index.py embeds one chunk per entry (question + answer + sources) from the same JSON, so SI Helper can
-answer the question next time. Run after build-si-helper.py (weekly-sync.sh); later generators fix nav/footer.
+  - sitemap entries (only once at least one entry is approved).
+Vectorize: scripts/si-index.py can still embed entries for the worker index. That index is not offered on the public site.
+Run after build-si-helper.py (weekly-sync.sh); later generators fix nav/footer.
 Usage: python3 scripts/build-student-qa.py [--check]   (--check: validate the JSON only)"""
 import re, os, sys, json, datetime, importlib.util
 sys.path.insert(0, 'scripts')
@@ -27,13 +28,12 @@ TOP = {'rocket': T('Aerospace Engineering with Rocket Propulsion', 'Ingénierie 
        'all': T('General science', 'Sciences générales', 'Ciencia general', 'العلوم العامة', 'Scienze generali')}
 SRC = T('Sources', 'Sources', 'Fuentes', 'المصادر', 'Fonti')
 CREDIT = T('Created by the Founder and SI, checked against the sources listed.', 'Créé par le fondateur et SI, vérifié avec les sources indiquées.', 'Creado por el fundador y SI, comprobado con las fuentes indicadas.', 'من إعداد المؤسس وSI، وتم التحقق منه بالمصادر المذكورة.', 'Creato dal fondatore e da SI, verificato con le fonti indicate.')
-INTRO = T('When SI Helper can’t answer a question from this site, the question is saved anonymously. Each week we research it and add a sourced answer here.',
-          'Quand SI Helper ne peut pas répondre à une question à partir du site, la question est enregistrée anonymement. Chaque semaine, nous faisons des recherches et ajoutons ici une réponse sourcée.',
-          'Cuando SI Helper no puede responder una pregunta con este sitio, la pregunta se guarda de forma anónima. Cada semana la investigamos y añadimos aquí una respuesta con fuentes.',
-          'عندما لا يستطيع SI Helper الإجابة عن سؤال من هذا الموقع، يُحفظ السؤال دون الكشف عن الهوية. وكل أسبوع نبحث فيه ونضيف هنا إجابة موثّقة بالمصادر.',
-          'Quando SI Helper non sa rispondere a una domanda con questo sito, la domanda viene salvata in forma anonima. Ogni settimana facciamo ricerche e aggiungiamo qui una risposta con fonti.')
+INTRO = T('These sourced answers were added while the Teachers-page SI Helper pilot was offered. That pilot has been retired and is no longer offered.',
+          'Ces réponses sourcées ont été ajoutées pendant que le pilote SI Helper de la page Enseignants était proposé. Ce pilote a été retiré et n’est plus proposé.',
+          'Estas respuestas con fuentes se añadieron mientras se ofrecía el piloto SI Helper de la página para docentes. Ese piloto se ha retirado y ya no se ofrece.',
+          'أُضيفت هذه الإجابات الموثّقة بالمصادر عندما كان الإصدار التجريبي من SI Helper في صفحة المعلمين متاحًا. وقد أُوقف ذلك الإصدار ولم يعد متاحًا.',
+          'Queste risposte con fonti sono state aggiunte mentre il pilota SI Helper della pagina Insegnanti era offerto. Quel pilota è stato ritirato e non è più offerto.')
 ADDED = T('Added', 'Ajouté le', 'Añadido el', 'أضيف في', 'Aggiunto il')
-ASK = T('Ask SI Helper', 'Demander à SI Helper', 'Pregunta a SI Helper', 'اسأل SI Helper', 'Chiedi a SI Helper')
 CSS = ('.sq-top{margin:1.4rem 0 .4rem}.sq{margin:.7rem 0;padding:.8rem 1rem;border-radius:14px;border:1px solid rgba(124,170,255,.45);background:rgba(124,170,255,.07)}'
        '.sq h3{margin:.1rem 0 .4rem;font-size:1.05rem}.sq p{margin:.3rem 0;line-height:1.55}.sq ol{margin:.2rem 0;padding-inline-start:1.3rem;font-size:.92rem}'
        '.sq a{word-break:break-word}.sq .sq-meta{font-size:.82rem;opacity:.85}')
@@ -42,9 +42,9 @@ LANGS = LANGS + ['he']
 _HE = {'TITLE': 'שאלות של תלמידים, עם תשובות',
        'DESC': 'תשובות עם מקורות לשאלות שתלמידים שאלו את SI Helper ושהאתר עדיין לא כיסה, לפי נושא: הנעה רקטית, הנדסת אווירונאוטיקה, מכניקה מסלולית, פיזיקה ומדע כללי.',
        'SRC': 'מקורות', 'CREDIT': 'נוצר על ידי המייסד ו-SI, ונבדק מול המקורות המצוינים.',
-       'INTRO': 'כש-SI Helper לא מוצא תשובה באתר, השאלה נשמרת בעילום שם. בכל שבוע אנחנו חוקרים אותה ומוסיפים כאן תשובה עם מקורות.',
-       'ADDED': 'נוסף ב-', 'ASK': 'לשאול את SI Helper', 'MT': 'הטקסט בעברית הוא תרגום מכונה וממתין לבדיקה של דובר/ת עברית.'}
-for _k in ('TITLE', 'DESC', 'SRC', 'CREDIT', 'INTRO', 'ADDED', 'ASK'): globals()[_k]['he'] = _HE[_k]
+       'INTRO': 'התשובות האלה עם מקורות נוספו בזמן שפיילוט SI Helper בדף המורים הוצע. הפיילוט הזה הוצא משימוש ואינו מוצע עוד.',
+       'ADDED': 'נוסף ב-', 'MT': 'הטקסט בעברית הוא תרגום מכונה וממתין לבדיקה של דובר/ת עברית.'}
+for _k in ('TITLE', 'DESC', 'SRC', 'CREDIT', 'INTRO', 'ADDED'): globals()[_k]['he'] = _HE[_k]
 for _k, _v in {'rocket': 'הנדסת אווירונאוטיקה וחלל והנעה רקטית', 'aero': 'הנדסת אווירונאוטיקה', 'orbit': 'מכניקה מסלולית', 'phys': 'פיזיקה', 'all': 'מדע כללי'}.items(): TOP[_k]['he'] = _v
 def load():
     doc = json.load(open(DATA, encoding='utf8')); ok, seen = [], set()
@@ -72,7 +72,7 @@ def page(l, es):
                      + f'<p class="sq-meta">{esc(SRC[l])}:</p><ol>{src}</ol><p class="sq-meta">{esc(CREDIT[l])} {esc(ADDED[l])} {e["added"]}.</p></article>')
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": l, "url": f'{SITE}{d(l)}{PAGE}',
            "mainEntity": [{"@type": "Question", "name": e['q'][l], "acceptedAnswer": {"@type": "Answer", "text": e['a'][l]}} for e in es]}
-    main = (BL.hero(TITLE[l], DESC[l]) + f'<style>{CSS}</style><div class="lw">' + (f'<p class="lnote" role="note"><small>🤖 {esc(_HE["MT"])}</small></p>' if l == 'he' else '') + f'<p>{esc(INTRO[l])} <a href="{href(l, "Teachers.html")}#ask-si">{esc(ASK[l])}</a></p>{secs}</div>\n')
+    main = (BL.hero(TITLE[l], DESC[l]) + f'<style>{CSS}</style><div class="lw">' + (f'<p class="lnote" role="note"><small>🤖 {esc(_HE["MT"])}</small></p>' if l == 'he' else '') + f'<p>{esc(INTRO[l])}</p>{secs}</div>\n')
     head = f'<script type="application/ld+json">{json.dumps(faq, ensure_ascii=False)}</script>\n'
     return BL.shell(l, PAGE, TITLE[l], DESC[l], main, extra_head=head, ld_type='WebPage')
 if __name__ == '__main__':
