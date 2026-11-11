@@ -96,6 +96,54 @@ def set_glass(f, s):
     s = re.sub(r'(<body[^>]*?) data-glass="[^"]*"', r'\1', s, count=1)
     return re.sub(r'<body\b', f'<body data-glass="{t}"', s, count=1) if t else s
 
+# English Learn / Courses / Teachers / kids education pages. Their footer matches the homepage
+# (empty site map, Pexels copyright line, no donate/idea pitch). Solution pages and translations stay as they are.
+# Homepage itself is emptied later by build-home-trim.py. This script only walks the repo root.
+EDU_FOOTER = {
+    'AP_IB_Physics.html', 'Aero_Guide.html', 'Aero_Lab.html', 'Aero_Math.html', 'Aerodynamics_I.html',
+    'Aerospace_Structures.html', 'Aircraft_Performance.html', 'Amazing_Facts.html', 'Avionics_Systems_Engineering.html',
+    'Big_Questions.html', 'Boarding_Pass.html', 'Cadets.html', 'Calculators.html', 'Calculus_I.html', 'Calculus_II.html',
+    'Calculus_III.html', 'Capstone_Design.html', 'Careers.html', 'Circuits.html', 'Courses.html',
+    'Delta_V_Calculator.html', 'Differential_Equations.html', 'Dynamics.html', 'Earth_Satellite_Explorer.html',
+    'Engineering_Graphics_CAD.html', 'Flight_Dynamics_Controls.html', 'Fluid_Mechanics.html', 'General_Chemistry_I.html',
+    'Glossary.html', 'Heat_Transfer.html', 'Hohmann_Transfer_Calculator.html', 'Homeschool.html',
+    'Intro_to_Aerospace_Engineering.html', 'Intro_to_Programming.html', 'Kids_Map.html', 'Kids_World.html',
+    'Learn.html', 'Learn_Aero.html', 'Learn_Chemistry.html', 'Learn_Engineering.html', 'Learn_Jet_Propulsion.html',
+    'Learn_Math.html', 'Learn_Orbits.html', 'Learn_Physics.html', 'Learn_Rocket_Propulsion.html', 'Lesson_Builder.html',
+    'Lesson_Plan.html', 'Lift_Equation_Calculator.html', 'Linear_Algebra.html', 'Mach_Number_Calculator.html',
+    'Mechanics_of_Materials.html', 'Myth_or_Fact_Arcade.html', 'Myth_vs_Fact.html', 'Numerical_Methods.html',
+    'Orbit_Lab.html', 'Orbit_Math.html', 'Orbital_Mechanics.html', 'Orbital_Period_Calculator.html',
+    'Orbital_Velocity_Calculator.html', 'Orbits_Guide.html', 'Pendulum_Period_Calculator.html', 'Physics_Guide.html',
+    'Physics_I.html', 'Physics_II.html', 'Physics_Lab.html', 'Physics_Math.html', 'Play_and_Learn.html',
+    'Probability_Statistics.html', 'Projectile_Motion_Drag_Calculator.html', 'Propulsion.html',
+    'Rotor_Hover_Power_Calculator.html', 'SI_Helper.html', 'Satellite_Explorer.html', 'Space_Passport.html',
+    'Spacecraft_Design.html', 'Spot_the_Fire.html', 'Stall_Speed_Calculator.html', 'Statics.html', 'Student_Questions.html',
+    'Sustainable_Aviation.html', 'Teacher_Guide.html', 'Teachers.html', 'Thermodynamics.html',
+    'Thrust_to_Weight_Calculator.html',
+}
+EMPTY_FOOTER_MAP = '<!-- FOOTER-MAP:START --><!-- FOOTER-MAP:END -->'
+_OLD_COPY = '<p>&copy; 2026 Saving Planets • Positive action for a thriving Earth • Page verified October 2026</p>'
+_NEW_COPY = ('<p>&copy; 2026 Saving Planets • Positive action for a thriving Earth • Page verified October 2026. '
+             'Lake and river photos: Pexels. <a href="sitemap.xml">Site map</a> • <a href="Contact.html">Contact</a></p>')
+_PITCH = re.compile(
+    r'<p>Plastic, forests, and energy are problems we can tackle together\. '
+    r'<a href="mailto:ideas@savingplanets.com\?subject=Solution%20idea%20for%20Saving%20Planets">Send an idea</a> '
+    r'or share a solution you know\.</p>\s*'
+    r'<p>If your solution meets our <a href="About.html#criteria">solutions criteria</a>, we will add it to our solutions site\. '
+    r"If you'd like to donate, visit our <a href=\"index.html#solutions\">Solutions page</a> and pick one that matches your interest\.</p>")
+
+def education_footer(name, s):
+    """Match the homepage footer on English education pages only. Other pages are unchanged."""
+    if os.path.basename(name) not in EDU_FOOTER: return s
+    m = re.search(r'<footer\b.*?</footer>', s, re.S)
+    if not m: return s
+    foot = m.group(0)
+    rx = re.compile(r'<!-- FOOTER-MAP:START -->[\s\S]*?<!-- FOOTER-MAP:END -->')
+    new = rx.sub(EMPTY_FOOTER_MAP, foot, count=1) if rx.search(foot) else foot
+    new = new.replace(_OLD_COPY, _NEW_COPY, 1)
+    new = _PITCH.sub('', new, count=1)
+    return s if new == foot else s[:m.start()] + new + s[m.end():]
+
 def fix(f, fm):
     s = rd(f)
     if '<nav id="topnav">' not in s or '<footer>' not in s: return 0
@@ -121,9 +169,10 @@ def fix(f, fm):
     # video labels
     h1 = re.sub(r'<[^>]+>', '', (re.search(r'<h1[^>]*>(.*?)</h1>', s, re.S) or re.search(r'<title>([^|<]*)', s)).group(1)).strip()
     s = re.sub(r'<video (?![^>]*aria-label)(?![^>]*class="hero-video")', lambda _: f'<video aria-label="{esc(html.unescape(h1))} video" ', s)
-    # footer site map
+    # footer site map (education pages then match the homepage: empty map, no donate pitch)
     rx = re.compile(r'<!-- FOOTER-MAP:START -->[\s\S]*?<!-- FOOTER-MAP:END -->')
     s = rx.sub(fm, s) if rx.search(s) else s.replace('<footer>', '<footer>' + fm, 1)
+    s = education_footer(f, s)
     return wr(f, s)
 
 def main():
