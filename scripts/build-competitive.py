@@ -322,6 +322,15 @@ def gift_html(lang, claims):
         )
     return '<!-- GIFT:START --><section class="sp9-gifts" id="what-a-gift-does" aria-labelledby="gift-h"><h2 id="gift-h">' + E(u['gift_h']) + '</h2><p>' + E(u['gift_p']) + '</p>' + ''.join(cards) + '</section><!-- GIFT:END -->'
 
+def gift_details_html(lang, claims):
+    """Ways to Help only: same gift copy, collapsed <details> instead of an always-open section."""
+    block = gift_html(lang, claims)
+    block = block.replace(
+        '<section class="sp9-gifts" id="what-a-gift-does" aria-labelledby="gift-h"><h2 id="gift-h">',
+        '<details class="sp9-gifts" id="what-a-gift-does"><summary id="gift-h">', 1)
+    block = block.replace('</h2>', '</summary>', 1)
+    return block.replace('</section><!-- GIFT:END -->', '</details><!-- GIFT:END -->', 1)
+
 def upsert(src, name, inner):
     pat = re.compile(r'<!-- %s:START -->.*?<!-- %s:END -->' % (name, name), re.S)
     block = '<!-- %s:START -->%s<!-- %s:END -->' % (name, inner, name)
@@ -349,8 +358,10 @@ def patch_wth(path, lang):
     src = re.sub(r'<!-- WHWHERE:START -->.*?<!-- WHWHERE:END -->', '', src, flags=re.S)
     src = re.sub(r'<!-- CITSCI:START -->.*?<!-- CITSCI:END -->', '', src, flags=re.S)
     src = re.sub(r'<p class="sp9-citsci-note">.*?</p>', '', src, flags=re.S)
-    gift = gift_html(lang, list(GIFTS['claims']))
-    if 'class="wh-intro"' in src:
+    gift = gift_details_html(lang, list(GIFTS['claims']))
+    if '<p class="wh-jump">' in src:
+        src = re.sub(r'(<p class="wh-jump">.*?</p>)', r'\1' + gift, src, count=1, flags=re.S)
+    elif 'class="wh-intro"' in src:
         src = re.sub(r'(<p class="wh-intro">.*?</p>)', r'\1' + gift, src, count=1, flags=re.S)
     filt = ('<!-- WHWHERE:START --><div class="sp9-where" id="wh-where"><div role="group" aria-labelledby="wh-where-l">'
             '<span id="wh-where-l">' + E(u['where']) + '</span>'
@@ -389,7 +400,10 @@ def patch_wth(path, lang):
         src = src.replace('</body>', WHERE_JS + '</body>', 1)
     match = '<p class="sp9-match"><a href="Match.html">' + E(u['wth_match']) + ' ' + E(u['match']) + '</a></p>'
     if 'href="Match.html"' not in src:
-        src = re.sub(r'(<p class="wh-intro">.*?</p>)', r'\1' + match, src, count=1, flags=re.S)
+        if '<!-- GIFT:END -->' in src:
+            src = src.replace('<!-- GIFT:END -->', '<!-- GIFT:END -->' + match, 1)
+        else:
+            src = re.sub(r'(<p class="wh-jump">.*?</p>|<p class="wh-intro">.*?</p>)', r'\1' + match, src, count=1, flags=re.S)
     return src
 
 WHERE_JS = '''<script id="wh-where-js">(function(){var bar=document.getElementById("wh-where");var sec=document.getElementById("roll-up-your-sleeves");if(!bar||!sec)return;

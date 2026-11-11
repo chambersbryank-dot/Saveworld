@@ -37,10 +37,10 @@ T = {
 }
 E = lambda s: html.escape(s, quote=True)
 EXT = ' target="_blank" rel="noopener"'
-CSS = ('<style>.wh{max-width:1100px;margin:0 auto;padding:0 1.25rem}.wh-intro{font-size:1.1rem;max-width:46rem}.wh-jump{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0 1.5rem}'
- '.wh-jump a{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.4rem 1rem;border-radius:999px;font-weight:700;text-decoration:none;background:#1b6e4b;color:#fff}.wh-jump a.v{background:#0b5c8a}'
- '.wh-sec{scroll-margin-top:90px;margin:2rem 0}.wh-sec>h2{display:flex;align-items:center;gap:.5rem;margin:0 0 .2rem}.wh-sub{margin:0 0 .8rem;opacity:.85}'
- '.wh-bar{position:sticky;top:var(--spn-h,64px);z-index:5;background:rgba(7,16,24,.96);padding:.6rem 0;margin:0 0 .6rem}html:not(.dark) .wh-bar{background:rgba(255,255,255,.97)}'
+CSS = ('<style>.wh{max-width:1100px;margin:0 auto;padding:0 1.25rem}.wh-intro{font-size:1.1rem;max-width:46rem;margin:.2rem auto 0;text-align:center;unicode-bidi:plaintext}.wh-jump{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin:.9rem auto 1.4rem;--lg-tint:rgba(0,70,110,.78);--lg-solid:#0a4f78}'
+ '.wh .wh-jump a.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;margin:0;min-height:44px;padding:.55rem 1.2rem;text-align:center}'
+ '.wh-sec,#what-a-gift-does{scroll-margin-top:calc(var(--spn-h,108px) + 16px)}.wh-sec{margin:2rem 0}.wh-sec>h2{display:flex;align-items:center;gap:.5rem;margin:0 0 .2rem}.wh-sub{margin:0 0 .8rem;opacity:.85}'
+ '.wh-bar{position:sticky;top:var(--spn-h,108px);z-index:5;background:rgba(7,16,24,.96);padding:.6rem 0;margin:0 0 .6rem}html:not(.dark) .wh-bar{background:rgba(255,255,255,.97)}'
  '.wh-q{width:100%;box-sizing:border-box;font:inherit;padding:.6rem .9rem;min-height:44px;border-radius:10px;border:1px solid rgba(127,127,127,.5);background:transparent;color:inherit}'
  '.wh-chips{display:flex;gap:.4rem;overflow-x:auto;padding:.5rem 0 .2rem;scrollbar-width:thin}.wh-chip{flex:none;font:inherit;font-size:.9rem;min-height:40px;padding:.3rem .8rem;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;white-space:nowrap}'
  '.wh-chip[aria-pressed=true]{background:#1b6e4b;border-color:#1b6e4b;color:#fff}.wh-sec.v .wh-chip[aria-pressed=true]{background:#0b5c8a;border-color:#0b5c8a}'
@@ -51,7 +51,14 @@ CSS = ('<style>.wh{max-width:1100px;margin:0 auto;padding:0 1.25rem}.wh-intro{fo
  '.wh-card .wh-s{font-size:.82rem;opacity:.8}.wh-card .btn{margin-top:auto;align-self:flex-start;min-height:40px;display:inline-flex;align-items:center}.wh-card .wh-c{background:transparent;border:1px solid currentColor;color:inherit}'
  '.wh-none{padding:1rem;opacity:.85}.wh [hidden]{display:none!important}.wh-chip:focus-visible,.wh-q:focus-visible,.wh-hub>summary:focus-visible,.wh-jump a:focus-visible{outline:3px solid #f5b400;outline-offset:2px}'
  '.wh-how{margin:2rem 0}.wh-how summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}'
- '@media (prefers-reduced-motion:no-preference){.wh-hub[open] .wh-grid{animation:whf .2s ease}}@keyframes whf{from{opacity:0}to{opacity:1}}</style>')
+ '@media (prefers-reduced-motion:no-preference){.wh-hub[open] .wh-grid{animation:whf .2s ease}}@keyframes whf{from{opacity:0}to{opacity:1}}'
+ 'details.sp9-gifts{border:1px solid rgba(127,127,127,.35);border-radius:12px;padding:.15rem 1rem .35rem}'
+ 'details.sp9-gifts>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.7rem;min-height:44px;padding:.55rem 0;font-weight:700;font-size:1.45rem;line-height:1.3;text-align:start}'
+ 'details.sp9-gifts>summary::-webkit-details-marker{display:none}'
+ 'details.sp9-gifts>summary::before{content:"";flex:none;width:.55rem;height:.55rem;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:translateY(-.15rem) rotate(45deg);transition:transform .15s ease}'
+ 'details.sp9-gifts[open]>summary::before{transform:translateY(.15rem) rotate(225deg)}'
+ 'details.sp9-gifts>summary:focus-visible{outline:3px solid #f5b400;outline-offset:3px}'
+ '@media (prefers-reduced-motion:reduce){details.sp9-gifts>summary::before{transition:none}}</style>')
 JS = ('<script>(function(){[].forEach.call(document.querySelectorAll(".wh-sec"),function(sec){var q=sec.querySelector(".wh-q"),chips=sec.querySelectorAll(".wh-chip"),hubs=[].slice.call(sec.querySelectorAll(".wh-hub")),none=sec.querySelector(".wh-none"),hub="all";'
  'function run(){var t=(q.value||"").trim().toLowerCase(),any=0;hubs.forEach(function(h){var ok=hub=="all"||h.getAttribute("data-hub")==hub,n=0;[].forEach.call(h.querySelectorAll(".wh-card"),function(c){var m=!t||c.textContent.toLowerCase().indexOf(t)>-1;c.hidden=!m;if(m)n++;});'
  'h.hidden=!ok||!n;if(ok&&n){any=1;if(t||hub!="all")h.open=true;}});none.hidden=!!any;}'
@@ -111,7 +118,7 @@ def build(lang):
         out.append(f'<p class="wh-none" hidden>{E(t["none"])}</p></section>')
         return ''.join(out)
     new = (CSS + f'<section class="five-ws wh" id="donate" aria-label="{E(t["h"])}"><p class="wh-intro">{E(t["intro"])}</p>'
-           f'<p class="wh-jump"><a href="#donations">💚 {E(t["don"])}</a><a class="v" href="#roll-up-your-sleeves">🧤 {E(t["vol"])}</a></p>'
+           f'<p class="wh-jump"><a class="btn help-btn" href="#donations">💚 {E(t["don"])}</a><a class="btn help-btn" href="#roll-up-your-sleeves">🧤 {E(t["vol"])}</a></p>'
            + section('don') + section('vol') +
            (f'<details class="wh-how" id="solution"><summary>{E(t["how"])}</summary>{how.decode_contents()}</details>' if how else '') + JS + '</section>')
     s = s[:a] + new + s[b:]
