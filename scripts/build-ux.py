@@ -355,7 +355,9 @@ def page_pass(p, l, n):
         s = s[:m.start()] + m.group(1) + inner + m.group(3) + s[m.end():]
     # Oct 15: translated pages inherit the English sticky button from i18n-build; always set this language's label.
     s = re.sub(r'(<a class="sticky-help" href="Ways_to_Help.html">)(?:<svg class="cta-drop".*?</svg>)?[^<]*(</a>)', lambda mm: mm.group(1) + DROP + T[l]["help"] + mm.group(2), s)
-    if page == 'Solutions.html':  # Oct 18 (owner): no floating Help / Donate button on Solutions (the nav keeps its Help / Donate link)
+    # Solutions (Oct 18) and Ways to Help (Nov 11): no floating Help / Donate button.
+    # The top-nav Help / Donate link stays, and in-page donate links stay.
+    if page in ('Solutions.html', 'Ways_to_Help.html'):
         s = re.sub(r'<a class="sticky-help" href="Ways_to_Help.html">.*?</a>', '', s, flags=re.S)
     elif 'class="sticky-help"' not in s and '</main>' in s:
         s = s.replace('</main>', f'</main><a class="sticky-help" href="Ways_to_Help.html">{DROP}{T[l]["help"]}</a>', 1)

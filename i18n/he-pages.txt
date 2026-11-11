@@ -224,7 +224,6 @@ Aero_Lab.html
 Calculators.html
 Homeschool.html
 Physics_Lab.html
-SI_Helper.html
 Spot_the_Fire.html
 AP_IB_Physics.html
 Aero_Guide.html

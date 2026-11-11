@@ -32,7 +32,7 @@ window.SP_SEARCH_STARTED = true;
     e.preventDefault(); input.value = a.textContent; go();
     $('status')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   }));
-  // approved SI Helper Q&A (search/student-qa.json from scripts/build-student-qa.py; absent until the first answer is approved)
+  // approved student-question answers (search/student-qa.json from scripts/build-student-qa.py)
   const QA_T = { rocket: 'rocket', aero: 'aero', orbit: 'orbital', phys: 'physics', all: 'all' };
   let qa = [];
   fetch('/search/student-qa.json').then(r => r.ok ? r.json() : {}).then(d => { qa = (d[lang.slice(0, 2)] || []).map(e => ({ ...e, tab: QA_T[e.topic] || 'all' })); }).catch(() => {});
