@@ -12,12 +12,22 @@ Does not edit footer-v2, the Cloudflare beacon, or solution pages (build-standar
 writes the standards block on a sheet when --tags-only has updated the JSON).
 """
 import html, json, os, re, sys
+from PIL import Image
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-E = lambda s: html.escape(s if s is not None else '', quote=True)
+def clean(s):
+    """Undo repeated HTML escaping. Labels were parsed out of the page and escaped again on each rebuild."""
+    s = '' if s is None else str(s)
+    for _ in range(8):
+        nxt = html.unescape(s)
+        if nxt == s:
+            return s
+        s = nxt
+    return s
+E = lambda s: html.escape(clean(s), quote=True)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BANDS = ['K-2', '3-5', '6-8', '9-12']
 SUBJ_ORDER = ['earth', 'life', 'space', 'literacy']
-ASSET = '20261111e'
+ASSET = '20261111f'
 
 # Codes already defined in standards.json. Nothing new is invented here.
 RI = 'CCSS.ELA-LITERACY.RI.5.9'
@@ -439,6 +449,146 @@ def parse(s):
                 browse_h=html.unescape(bh.group(1)) if bh else '', print_label=print_label,
                 secondary=secondary, search=search)
 
+SKIP_IMG = re.compile(r'illustrative|cartoon|logo|favicon|/og/|sp-logo', re.I)
+CARD_DIR = 'assets/teachers/cards'
+_PHOTO = {}
+_WEBP = {}
+
+def webp_pair(src):
+    """480 and 800 WebP derivatives of a local photo. Both stay under 400 KB."""
+    if src in _WEBP:
+        return _WEBP[src]
+    os.makedirs(CARD_DIR, exist_ok=True)
+    stem = re.sub(r'[^A-Za-z0-9._-]+', '-', os.path.splitext(os.path.basename(src))[0])
+    with Image.open(src) as im:
+        im = im.convert('RGB')
+        ow, oh = im.size
+        made = {}
+        for width in (480, 800):
+            dest = f'{CARD_DIR}/{stem}-{width}.webp'
+            nw = min(width, ow)
+            nh = max(1, round(oh * nw / ow))
+            frame = im if (nw, nh) == (ow, oh) else im.resize((nw, nh), Image.Resampling.LANCZOS)
+            quality = 72
+            frame.save(dest, 'WEBP', quality=quality, method=6)
+            while os.path.getsize(dest) > 400_000 and quality > 40:
+                quality -= 8
+                frame.save(dest, 'WEBP', quality=quality, method=6)
+            if os.path.getsize(dest) > 400_000:
+                raise SystemExit(f'{dest} is still over 400 KB')
+            made[width] = (dest, nw, nh)
+    _WEBP[src] = made
+    return made
+
+def picture_from(block):
+    srcs = {}
+    wm = re.search(r'type="image/webp" srcset="([^"]+)"', block)
+    if wm:
+        for part in wm.group(1).split(','):
+            bits = part.strip().split()
+            if len(bits) >= 2 and bits[1].endswith('w') and bits[1][:-1].isdigit():
+                srcs[int(bits[1][:-1])] = bits[0]
+    im = re.search(r'<img\b[^>]*>', block)
+    alt, src, w, h = '', '', 0, 0
+    if im:
+        tag = im.group(0)
+        am = re.search(r'\balt="([^"]*)"', tag)
+        sm = re.search(r'\bsrc="([^"]+)"', tag)
+        alt = clean(am.group(1)) if am else ''
+        src = sm.group(1) if sm else ''
+        wm_ = re.search(r'\bwidth="(\d+)"', tag)
+        hm_ = re.search(r'\bheight="(\d+)"', tag)
+        w = int(wm_.group(1)) if wm_ else 0
+        h = int(hm_.group(1)) if hm_ else 0
+    return srcs, src, alt, w, h
+
+def credit_dir(text):
+    if re.search(r'[\u0590-\u05FF\u0600-\u06FF]', text or ''):
+        return ''
+    return ' dir="ltr"'
+
+def photo_markup(lang, href, title):
+    """The sheet's own photo: existing 480/800 WebP, or a WebP made from the page's local photo."""
+    page = href.split('#')[0].split('?')[0]
+    key = (lang, page)
+    if key not in _PHOTO:
+        _PHOTO[key] = find_photo(lang, page)
+    photo = _PHOTO[key]
+    if not photo:
+        return ''
+    prefix = '../' if lang != 'en' else ''
+    def url(p):
+        return p if p.startswith('http') else prefix + p
+    bits = []
+    for width in (480, 800):
+        if width in photo['src']:
+            bits.append(f'{url(photo["src"][width])} {width}w')
+    if not bits:
+        return ''
+    src = url(photo['src'].get(800) or photo['src'].get(480))
+    alt = title or photo.get('credit') or page
+    cap = ''
+    credit = photo.get('credit') or ''
+    if credit and clean(credit) != clean(alt):
+        cap = f'<figcaption class="t-credit"{credit_dir(credit)}>{E(credit)}</figcaption>'
+    return (f'<figure class="t-shot"><picture><source type="image/webp" srcset="{", ".join(bits)}" sizes="(max-width:720px) 92vw, 280px">'
+            f'<img src="{E(src)}" alt="{E(alt)}" width="{photo["w"]}" height="{photo["h"]}" loading="lazy" decoding="async"></picture>{cap}</figure>')
+
+def find_photo(lang, page):
+    path = folder(lang) + page
+    if not os.path.exists(path):
+        path = page
+    if not os.path.exists(path):
+        return None
+    s = re.sub(r'<!-- RELATED:START -->.*?<!-- RELATED:END -->', '', read(path), flags=re.S)
+    credit = ''
+    cm = re.search(r'<p class="photo-credit">(.*?)</p>', s, re.S)
+    if cm:
+        credit = plain(cm.group(1))
+    for block in re.findall(r'<picture\b[^>]*>(.*?)</picture>', s, re.S):
+        srcs, src, alt, w, h = picture_from(block)
+        blob = ' '.join(srcs.values()) + ' ' + src + ' ' + alt
+        if SKIP_IMG.search(blob):
+            continue
+        keep = {k: v for k, v in srcs.items() if k in (480, 800)}
+        if not keep and re.search(r'-800\.[0-9a-f]+\.webp$', src):
+            keep = {800: src}
+        if not keep:
+            continue
+        if not credit:
+            credit = alt
+        if 800 in keep and w and h:
+            ih = max(1, round(800 * h / w))
+            iw = 800
+        elif 480 in keep and w and h:
+            ih = max(1, round(480 * h / w))
+            iw = 480
+        else:
+            iw, ih = 800, 533
+        return {'src': keep, 'w': iw, 'h': ih, 'credit': credit}
+    main = s[s.find('<main'):] if '<main' in s else s
+    for tag in re.findall(r'<img\b[^>]*>', main):
+        sm = re.search(r'\bsrc="([^"]+)"', tag)
+        if not sm:
+            continue
+        src = sm.group(1).split('?')[0]
+        if SKIP_IMG.search(src):
+            continue
+        if src.startswith('http'):
+            if re.search(r'-800\.[0-9a-f]+\.webp$', src):
+                am = re.search(r'\balt="([^"]*)"', tag)
+                return {'src': {800: src}, 'w': 800, 'h': 533, 'credit': credit or (clean(am.group(1)) if am else '')}
+            continue
+        local = src[3:] if src.startswith('../') else src
+        if not os.path.exists(local):
+            continue
+        made = webp_pair(local)
+        am = re.search(r'\balt="([^"]*)"', tag)
+        return {'src': {w: made[w][0] for w in made}, 'w': made[800][1] if 800 in made else made[480][1],
+                'h': made[800][2] if 800 in made else made[480][2],
+                'credit': credit or (clean(am.group(1)) if am else '')}
+    return None
+
 def card(lang, u, href, title, kind, grades, codes, hook, time, print_label, extra=''):
     pills = ''.join(f'<span class="t-pill" dir="ltr">{E(g)}</span>' for g in grades)
     code = f'<span class="t-code" dir="ltr" lang="en">{E(codes)}</span>' if isinstance(codes, str) and codes else ''
@@ -452,9 +602,10 @@ def card(lang, u, href, title, kind, grades, codes, hook, time, print_label, ext
     print_a = ''
     if kind == 'sheet' and print_label:
         print_a = f'<a class="t-print t-chip" href="{E(href.split("#")[0])}?print=1" rel="nofollow">{E(print_label)}</a>'
-    return (f'<li class="t-card" data-type="{kind}"{data}><a class="t-card-main" href="{E(href)}">'
-            f'<span class="t-type">{E(badge)}</span><span class="t-card-title">{E(title)}</span>{hook_h}{code}{time_h}'
-            f'<span class="t-pills">{pills}</span></a>{print_a}</li>')
+    shot = photo_markup(lang, href, title)
+    return (f'<li class="t-card" data-type="{kind}"{data}><a class="t-card-main" href="{E(href)}">{shot}'
+            f'<span class="t-card-body"><span class="t-type">{E(badge)}</span><span class="t-card-title">{E(title)}</span>{hook_h}{code}{time_h}'
+            f'<span class="t-pills">{pills}</span></span></a>{print_a}</li>')
 
 def render(lang, data, D, PH, hooks):
     u = UI[lang]
@@ -575,7 +726,7 @@ def render(lang, data, D, PH, hooks):
             years.append(card(lang, u, href, title, 'course', [], [], '', time, ''))
             # course code is the third field; card() puts codes only for sheets. Add code inside by a dedicated snippet.
             if code:
-                years[-1] = years[-1].replace('</span></a>', f'</span><span class="t-code" dir="ltr" lang="en">{E(code)}</span></a>', 1)
+                years[-1] = years[-1].replace('</span></span></a>', f'</span><span class="t-code" dir="ltr" lang="en">{E(code)}</span></span></a>', 1)
         years.append('</ul></details>')
     years.append('</div>')
     courses = (f'<!-- TEACHCRS:START --><details class="t-courses" id="courses"><summary aria-expanded="false">'
@@ -584,7 +735,7 @@ def render(lang, data, D, PH, hooks):
                + ''.join(years) + '</div></details><!-- TEACHCRS:END -->')
     # n_sheets for courses says "sheets" which is wrong. Use the course title count as a number plus the existing course word.
     # Fix below in a cleaner courses header.
-    return ('<!-- TEACHHOME:START --><div id="t-home">' + paths + ''.join(feat) + ''.join(kits) + ''.join(topics)
+    return ('<!-- TEACHHOME:START --><div id="t-home">' + ''.join(topics) + paths + ''.join(feat) + ''.join(kits)
             + f'<section class="t-home">{courses}</section>'
             + '<noscript><style>.t-more-all{display:none}</style></noscript></div><!-- TEACHHOME:END -->', total, ncourse)
 
@@ -675,8 +826,13 @@ def apply_lang(lang, D, PH):
     cf2 = re.search(r'<!-- CF-WA:START -->.*?<!-- CF-WA:END -->', s2, re.S)
     if (cf and cf.group(0)) != (cf2 and cf2.group(0)):
         raise SystemExit(f'{path}: cloudflare beacon changed')
-    if 'SIHELPER' in s2 or 'class="t-codes"' in s2.split('<!-- TEACHHOME:START -->', 1)[-1].split('<!-- TEACHHOME:END -->', 1)[0]:
+    home_now = s2.split('<!-- TEACHHOME:START -->', 1)[-1].split('<!-- TEACHHOME:END -->', 1)[0]
+    if 'SIHELPER' in s2 or 'class="t-codes"' in home_now:
         raise SystemExit(f'{path}: SI Helper or repeated standards codes still in the new home')
+    if '&amp;amp' in home_now or '&amp;#' in home_now:
+        raise SystemExit(f'{path}: a label is still escaped more than once')
+    if not home_now.startswith('<div id="t-home"><section class="t-home" id="t-topics"'):
+        raise SystemExit(f'{path}: topics are not the first block under the hero')
     open(path, 'w', encoding='utf-8').write(s2)
     empty_hooks = sum(1 for hub in data['hubs'] for page, _t in hub['items'] if not what_hook(lang, page, hooks))
     return total, ncourse, empty_hooks
