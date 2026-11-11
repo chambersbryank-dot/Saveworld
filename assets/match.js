@@ -85,9 +85,10 @@
         video.preload = 'none';
         return;
       }
-      var src = video.querySelector('source[data-src]');
+      var src = video.querySelector('source');
+      var loop = 'https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4';
       if (src && !src.getAttribute('src')) {
-        src.src = src.getAttribute('data-src');
+        src.src = loop;
         video.load();
       }
       if (!held) {
@@ -156,22 +157,60 @@
   }
   form.addEventListener('change', function () { syncValidity(); syncMail(); });
 
+  function safePage(url) {
+    return typeof url === 'string' && /^[A-Za-z0-9_./-]+\.html$/.test(url) ? url : '';
+  }
+  function safeImage(url) {
+    return typeof url === 'string' && /^(\.\.\/)?assets\/[A-Za-z0-9_./-]+$/.test(url) ? url : '';
+  }
+  function decodeAttr(s) {
+    return String(s).replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+  }
+  function addCredit(parent, html) {
+    var re = /<(\/?)(span|bdi|a)\b([^>]*)>|([^<]+)/g;
+    var stack = [parent];
+    var m;
+    while ((m = re.exec(html))) {
+      if (m[4] != null) {
+        stack[stack.length - 1].appendChild(document.createTextNode(decodeAttr(m[4])));
+        continue;
+      }
+      var tag = m[2];
+      if (m[1] === '/') {
+        if (stack.length > 1 && stack[stack.length - 1].tagName.toLowerCase() === tag) stack.pop();
+        continue;
+      }
+      var el = document.createElement(tag);
+      if (tag === 'a') {
+        var href = /href="([^"]*)"/.exec(m[3] || '');
+        var url = href ? decodeAttr(href[1]) : '';
+        if (url.indexOf('https://') !== 0) continue;
+        el.setAttribute('href', url);
+        el.rel = 'noopener';
+        if ((m[3] || '').indexOf('target="_blank"') !== -1) el.target = '_blank';
+      }
+      stack[stack.length - 1].appendChild(el);
+      stack.push(el);
+    }
+  }
   function card(s, i, cards) {
     var info = cards[s.url] || {};
+    var page = safePage(s.url);
+    var image = safeImage(info.src);
     var art = document.createElement('article');
-    art.className = 'card sol-card tt-card' + (info.src ? '' : ' no-photo');
+    art.className = 'card sol-card tt-card' + (image ? '' : ' no-photo');
     var num = document.createElement('span');
     num.className = 'tt-num';
     num.setAttribute('aria-hidden', 'true');
     num.textContent = String(i + 1);
-    if (info.src) {
+    if (image) {
       var wrap = document.createElement('div');
       wrap.className = 'image-container';
       var link = document.createElement('a');
       link.className = 'photo-link';
-      link.href = s.url;
+      link.href = page || '#';
       var img = document.createElement('img');
-      img.src = info.src;
+      img.src = image;
       img.alt = info.alt || '';
       if (info.w) img.width = info.w;
       if (info.h) img.height = info.h;
@@ -187,12 +226,12 @@
     if (info.credit) {
       var credit = document.createElement('p');
       credit.className = 'photo-credit sol-credit';
-      credit.innerHTML = info.credit;
+      addCredit(credit, info.credit);
       art.appendChild(credit);
     }
     var h = document.createElement('h3');
     var a = document.createElement('a');
-    a.href = s.url;
+    a.href = page || '#';
     a.textContent = s.title;
     h.appendChild(a);
     art.appendChild(h);
