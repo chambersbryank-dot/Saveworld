@@ -53,7 +53,11 @@ html.dark body.space-map-page .sm-cardwrap h3 a{color:#fff}
 .sm-cardwrap h3{margin:.45rem 0 .2rem;padding:0 1rem;font-size:1.2rem;color:#fff}
 .sm-cardwrap h3 a{color:#fff;text-decoration:none}
 .sm-cardwrap .sol-desc,.sm-cardwrap .sol-desc span{margin:0;padding:0 1rem;line-height:1.4;color:#e8eef5}
-.sm-cardwrap .sm-orbit{margin:0;padding:.55rem 1rem 1rem;font-size:.88rem;line-height:1.4;color:#d5e4f2}
+.sm-cardwrap .sm-orbit{margin:0;padding:.55rem 1rem .4rem;font-size:.88rem;line-height:1.4;color:#d5e4f2}
+.sm-cardwrap .sm-globe{margin:0;padding:0 1rem .9rem;font-size:.88rem;line-height:1.45;color:#d5e4f2}
+.sm-cardwrap .sm-globe a{color:#8fd3ff}
+.sm-ground{max-width:46rem;margin:0 auto 1rem;text-align:center;line-height:1.5}
+.sm-ground a{color:#8fd3ff}
 .sm-cardwrap .sm-more{margin:0;padding:0 1rem 1rem}
 .sm-cardwrap .sm-more a{color:#8fd3ff;font-weight:750}
 .sm-close{position:absolute;top:8px;inset-inline-end:8px;min-width:44px;min-height:44px;border:0;border-radius:999px;background:rgba(7,16,24,.82);color:#fff;font:inherit;font-weight:750;cursor:pointer}

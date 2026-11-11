@@ -650,6 +650,53 @@ def earth():
     print('earth', path.stat().st_size, im.size)
 
 
+MATCH_URL = 'https://www.globe.gov/ground-to-satellite/connecting-globe-to-satellite-data'
+MISSION_URL = 'https://www.globe.gov/ground-to-satellite/nasa-mission-connections'
+
+def globe_note(text, links):
+    bits = ' · '.join(f'<a href="{href}" rel="noopener" target="_blank">{html.escape(label)}</a>' for href, label in links)
+    label = 'Sources: ' if len(links) > 1 else 'Source: '
+    return 'GLOBE ground link: ' + html.escape(text) + ' ' + label + bits
+
+# Official GLOBE wording only (satellite match page and NASA Mission Connections), checked 10 Nov 2026.
+GLOBE_NOTES = {
+    'pace': globe_note(
+        'GLOBE Clouds observations are matched to this satellite. GLOBE volunteers can support PACE science by observing clouds when PACE is overhead.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data'), (MISSION_URL, 'NASA Mission Connections')]),
+    'goes19': globe_note(
+        'GLOBE Clouds observations are matched to GOES. This card is GOES-19.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data')]),
+    'mtgi': globe_note(
+        'GLOBE Clouds observations are matched to Meteosat. This card is MTG-I1, a Meteosat Third Generation satellite.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data')]),
+    'landsat9': globe_note(
+        'GLOBE Land Cover observations are matched to Landsat 8 and 9. Volunteers who submit land cover data are emailed the closest-in-time Landsat and Sentinel-2 observation.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data'), (MISSION_URL, 'NASA Mission Connections')]),
+    's2c': globe_note(
+        'GLOBE Land Cover observations are matched to Sentinel-2.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data')]),
+    'noaa21': globe_note(
+        'GLOBE matches Clouds observations to NOAA-20, part of the Joint Polar Satellite System. This card shows NOAA-21, which stands in for that system on this map.',
+        [(MATCH_URL, 'Connecting GLOBE to Satellite Data'), (MISSION_URL, 'NASA Mission Connections')]),
+    'nisar': globe_note(
+        'GLOBE volunteers can contribute to NISAR studies of agriculture and snow through the Land Cover protocol.',
+        [(MISSION_URL, 'NASA Mission Connections')]),
+    'swot': globe_note(
+        'GLOBE volunteers can participate in SWOT science by observing land cover and lake levels.',
+        [(MISSION_URL, 'NASA Mission Connections')]),
+    'emit': globe_note(
+        'GLOBE volunteers can support EMIT science by documenting snow color using the Land Cover protocol. Observations of agriculture using that protocol may also be useful.',
+        [(MISSION_URL, 'NASA Mission Connections')]),
+}
+
+def with_globe(entry, sat_id):
+    note = GLOBE_NOTES.get(sat_id)
+    if not note:
+        return entry
+    entry = dict(entry)
+    entry['globeHtml'] = note
+    return entry
+
 def main():
     global SATS
     dropped_pages = sorted(DROP.values())
@@ -672,7 +719,7 @@ def main():
     for i, sat in enumerate(SATS):
         print('---', sat['id'], flush=True)
         if sat['id'] in cache and (out_dir / f"{sat['id']}-thumb.webp").exists():
-            sats_json.append(cache[sat['id']])
+            sats_json.append(with_globe(cache[sat['id']], sat['id']))
             sheet.append((Image.open(out_dir / f"{sat['id']}-thumb.webp"), sat['id']))
             print(' cached')
             continue
@@ -705,6 +752,7 @@ def main():
                 alt=alt, credit=img['credit'], creditHtml=credit_html(img['credit'], img.get('page')),
                 imageKind=img['kind'], imagePage=img.get('page'), imageTitle=img.get('title'),
             )
+            entry = with_globe(entry, sat['id'])
             cache[sat['id']] = entry
             cache_path.write_text(json.dumps(cache, ensure_ascii=False), encoding='utf8')
             sats_json.append(entry)
