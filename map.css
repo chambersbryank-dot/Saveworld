@@ -7,14 +7,28 @@ body.world-map-page{background:#001428}
 .wm-screen{box-sizing:border-box;height:calc(100vh - var(--wm-navh));height:calc(100svh - var(--wm-navh));min-height:420px;margin-top:var(--wm-navh);
   padding:.7rem clamp(.6rem,2vw,1.5rem) clamp(.7rem,2vh,1.4rem);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem}
 .wm-title{flex:none;margin:0;max-width:100%;text-align:center;color:#fff;font-size:clamp(1.05rem,.8rem + 1vw,1.5rem);line-height:1.25;font-weight:700;letter-spacing:.01em}
-.wm-stage{position:relative;flex:1 1 auto;min-height:0;width:100%;max-width:2400px;max-height:calc(100vw * .82)}
+.wm-stage{position:relative;flex:1 1 auto;min-height:0;width:100%;max-width:2400px;max-height:calc(100vw * .82);overflow:hidden}
 /* portrait: a world map is wider than tall, so cap the height (no empty polar bands) and keep the box centred */
-.wm-map{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.35);z-index:1;background:#aad3df}
-.wm-key{position:absolute;top:10px;inset-inline-end:10px;z-index:500;display:flex;flex-direction:column;gap:.15rem;padding:.4rem .6rem;border-radius:12px;
-  background:rgba(255,255,255,.94);color:#10202c;box-shadow:0 2px 10px rgba(0,0,0,.25);font-size:.88rem;max-width:calc(100% - 70px)}
-.wm-tog{display:flex;align-items:center;gap:.4rem;cursor:pointer;font-weight:600;min-height:32px}
+.wm-map{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.35);z-index:1;background:#041525}
+.wm-earth{image-rendering:auto}
+.wm-key{position:static;z-index:2;display:flex;flex-flow:row wrap;align-items:center;justify-content:center;gap:.35rem .5rem;width:100%;max-width:2400px;padding:0;background:transparent;color:#fff;box-shadow:none;font-size:.88rem}
+.wm-cats{display:flex;flex-flow:row wrap;justify-content:center;gap:.35rem}
+.wm-cat{appearance:none;font:inherit;font-weight:700;color:#fff;min-height:36px;padding:.28rem .75rem;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;
+  background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(0,40,70,.28);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.wm-cat[aria-pressed="true"]{background-image:linear-gradient(180deg,rgba(255,255,255,.40),rgba(255,255,255,.12));box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 0 0 2px #fff}
+.wm-cat:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.wm-swatch{display:inline-block;flex:none;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 55%);border:1.5px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.wm-swatch.wm-river{width:1.15rem;height:.62rem;border-radius:999px}
+.wm-swatch.wm-lake{width:.78rem;height:.78rem;border-radius:50%}
+.wm-swatch.wm-ocean{width:1.05rem;height:.72rem;border-radius:40% 40% 48% 48%}
+.wm-swatch.wm-land{width:.78rem;height:.78rem;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.wm-tog{display:flex;align-items:center;gap:.4rem;cursor:pointer;font-weight:600;min-height:32px;color:#fff}
 .wm-tog input{width:1.05rem;height:1.05rem;margin:0}
-.wm-hubsel select{font:inherit;font-size:.85rem;padding:.25rem .4rem;border-radius:8px;border:1px solid #9bb;min-height:32px;max-width:100%;background:#fff;color:#10202c}
+.wm-hubsel select{font:inherit;font-size:.85rem;font-weight:700;padding:.25rem .55rem;border-radius:999px;min-height:36px;max-width:100%;color:#fff;cursor:pointer;
+  background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55)}
+.wm-credit{flex:none;margin:0;width:100%;max-width:2400px;text-align:center;font-size:.8rem;line-height:1.35;color:#d5e6f2}
+.wm-credit a{color:#8fd3ff}
 .wm-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wm-dot{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.3);flex:none}
 .wm-active{background:#2e9e4f}.wm-upcoming{background:#2f7fd1}
@@ -31,7 +45,14 @@ body.world-map-page{background:#001428}
 .wm-cta{margin:1rem 0;text-align:center}
 .wm-pin{background:none;border:0}
 .wm-m{display:flex;align-items:center;justify-content:center;width:22px;height:22px;margin:0 2px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--c);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.4)}
-.wm-m i{transform:rotate(45deg);font-style:normal;font-size:13px;line-height:1}
+.wm-m i{transform:rotate(45deg);font-style:normal;font-size:13px;line-height:1;display:flex}
+.wm-m.wm-c{transform:none;margin:0;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 48%);border:2px solid rgba(255,255,255,.92)}
+.wm-m.wm-c i{transform:none}
+.wm-m.wm-c svg{display:block;width:70%;height:70%}
+.wm-m.wm-river{width:28px;height:16px;border-radius:999px}
+.wm-m.wm-lake{width:22px;height:22px;border-radius:50%}
+.wm-m.wm-ocean{width:26px;height:18px;border-radius:42% 42% 48% 48%}
+.wm-m.wm-land{width:22px;height:22px;border-radius:2px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
 .leaflet-popup-content{margin:.7rem .9rem;font-size:.95rem;line-height:1.4;min-width:210px;color:#10202c}
 .leaflet-popup-content .wm-pop p{margin:.25rem 0}
 .wm-pop-h{font-weight:700;font-size:1.05rem}
@@ -39,5 +60,11 @@ body.world-map-page{background:#001428}
 .wm-pop ul{margin:.3rem 0 0;padding-inline-start:1.1rem}
 .leaflet-container a{color:#0a6aa1}
 .wm-err{padding:1rem;color:#10202c}
-@media (max-width:700px){.wm-map{border-radius:12px}.wm-key{font-size:.8rem;padding:.3rem .45rem}.wm-tog{min-height:28px}}
+@media (max-width:700px){
+  .wm-screen{height:auto;min-height:0}
+  .wm-stage{flex:none;height:58vw;min-height:210px;max-height:none}
+  .wm-map{border-radius:12px}.wm-key{font-size:.8rem}.wm-cat,.wm-hubsel select{min-height:40px}.wm-tog{min-height:36px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.wm-cat,.wm-hubsel select,.wm-m.wm-c{background-image:none;background-color:#0a4f78}}
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){.wm-cat,.wm-hubsel select,.wm-m.wm-c,.wm-swatch{background-image:none;background-color:#0a4f78;text-shadow:none}}
 @media (max-height:500px){.wm-screen{min-height:320px}}
