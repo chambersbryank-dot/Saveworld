@@ -20,6 +20,9 @@
     var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = 'near', cat = 'all', lastBtn = null;
     sats.forEach(function (s) { byId[s.id] = s; });
     var earth = root.getAttribute('data-earth');
+    var earthLg = root.getAttribute('data-earth-lg') || earth;
+    var moon = root.getAttribute('data-moon') || '';
+    var pre = (root.getAttribute('data-src') || '').indexOf('../') === 0 ? '../' : '';
     function show(s) {
       if (cat === 'all') return true;
       if (cat === 'lagrange') return s.regime === 'l1' || s.regime === 'l2' || s.regime === 'l5';
@@ -67,20 +70,35 @@
           '<text x="640" y="400" fill="#ffe3a3" font-size="13">' + esc(ui.heo) + '</text>' +
           '</svg>';
       } else {
-        onEllipse(groups.leo.concat(groups.meo, groups.geo, groups.heo), 150, 270, 78, 34);
-        stack(groups.l1, 310, 230, 34);
-        stack(groups.l2, 470, 230, 34);
-        stack(groups.l5, 310, 430, 30);
-        stack(groups.cruise, 700, 270, 38);
-        stack(groups.note, 150, 470, 26);
+        W = 1000; H = 640;
+        var EX = 620, EY = 330, ER = 108;
+        onEllipse(groups.leo.concat(groups.meo, groups.geo, groups.heo), EX, EY, 150, 58);
+        stack(groups.l1, 250, 155, 28);
+        stack(groups.l2, 900, 155, 28);
+        stack(groups.cruise, 900, 470, 30);
+        function lab(x, y, title, dist) {
+          return '<text x="' + x + '" y="' + y + '" fill="#fff" font-size="15" font-weight="700">' + esc(title) + '</text>' +
+            '<text x="' + x + '" y="' + (y + 16) + '" fill="#d7ecff" font-size="11">' + esc(dist) + '</text>';
+        }
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.farDiagram || '') + '">' +
-          '<defs><clipPath id="earth-far"><circle cx="150" cy="270" r="36"/></clipPath></defs>' +
-          '<image href="' + esc(earth) + '" x="114" y="234" width="72" height="72" clip-path="url(#earth-far)"/>' +
-          '<ellipse cx="150" cy="270" rx="78" ry="34" fill="none" stroke="rgba(186,224,255,.6)"/>' +
-          '<text x="270" y="120" fill="#d7ecff" font-size="14">' + esc(ui.l1) + '</text>' +
-          '<text x="430" y="120" fill="#d7ecff" font-size="14">' + esc(ui.l2) + '</text>' +
-          (groups.cruise.length ? '<text x="640" y="120" fill="#d7ecff" font-size="14">' + esc(ui.cruise) + '</text>' : '') +
-          (groups.l5.length ? '<text x="270" y="390" fill="#d7ecff" font-size="13">' + esc(ui.l5) + '</text>' : '') +
+          '<defs>' +
+          '<radialGradient id="atmo" cx="50%" cy="50%" r="50%"><stop offset="68%" stop-color="rgba(150,200,255,0)"/><stop offset="80%" stop-color="rgba(150,205,255,.55)"/><stop offset="100%" stop-color="rgba(80,150,255,0)"/></radialGradient>' +
+          '<radialGradient id="sunball" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#fff6d0"/><stop offset="55%" stop-color="#ffb020"/><stop offset="100%" stop-color="#c45a00"/></radialGradient>' +
+          '<clipPath id="earth-far"><circle cx="' + EX + '" cy="' + EY + '" r="' + ER + '"/></clipPath>' +
+          '<clipPath id="moon-far"><circle cx="790" cy="230" r="18"/></clipPath>' +
+          '</defs>' +
+          '<circle cx="' + EX + '" cy="' + EY + '" r="138" fill="url(#atmo)"/>' +
+          '<path d="M120 80 Q 400 40 620 330 Q 400 600 120 560" fill="none" stroke="rgba(186,224,255,.28)" stroke-dasharray="3 6"/>' +
+          '<circle cx="78" cy="330" r="26" fill="url(#sunball)"/>' +
+          '<text x="78" y="372" text-anchor="middle" fill="#ffe3a3" font-size="12">' + esc(ui.sunNote) + '</text>' +
+          '<image href="' + esc(earthLg) + '" x="' + (EX - ER) + '" y="' + (EY - ER) + '" width="' + (ER * 2) + '" height="' + (ER * 2) + '" clip-path="url(#earth-far)"/>' +
+          (moon ? '<image href="' + esc(moon) + '" x="772" y="212" width="36" height="36" clip-path="url(#moon-far)"/><text x="790" y="206" text-anchor="middle" fill="#d7ecff" font-size="11">' + esc(ui.moonNote) + '</text>' : '') +
+          lab(300, 400, ui.l1, ui.dL12) +
+          lab(760, 400, ui.l2, ui.dL12) +
+          lab(78, 120, ui.l3, ui.dL3) +
+          lab(400, 70, ui.l4, ui.dL4) +
+          lab(400, 590, ui.l5, ui.dL5) +
+          '<text x="500" y="24" text-anchor="middle" fill="#9fb8cc" font-size="12">' + esc(ui.notScale) + '</text>' +
           '</svg>';
       }
       stage.innerHTML = svg;
@@ -92,6 +110,8 @@
         b.style.left = (p.x / W * 100) + '%';
         b.style.top = (p.y / H * 100) + '%';
         b.innerHTML = SAT;
+        b.setAttribute('data-id', p.s.id);
+        b.id = 'sat-' + p.s.id;
         b.setAttribute('aria-label', p.s.name + '. ' + (ui.rep || ''));
         b.addEventListener('click', function () { openCard(p.s, b); });
         stage.appendChild(b);
@@ -109,13 +129,22 @@
       var dsn = s.dsn ? '<p><a href="https://eyes.nasa.gov/apps/dsn-now/" rel="noopener">' + esc(ui.dsn) + '</a> ' + esc(ui.dsnNote) + '</p>' : '';
       var plus = s.nasaPlus ? '<p><a href="https://plus.nasa.gov/" rel="noopener">' + esc(ui.plus) + '</a> ' + esc(ui.plusNote) + '</p>' : '';
       var on = mem[s.id] && mem[s.id].on;
+      var photo = '';
+      if (s.photo) {
+        var b = pre + s.photo;
+        photo = '<picture><source type="image/webp" srcset="' + esc(b) + '-480.webp 480w, ' + esc(b) + '-800.webp 800w" sizes="(max-width: 800px) 92vw, 300px">' +
+          '<img src="' + esc(b) + '-800.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"></picture>' +
+          '<p class="sat-photo-credit">' + esc(s.credit || '') + '</p>';
+      }
       card.innerHTML = '<button type="button" class="sat-close">' + esc(ui.close) + '</button>' +
+        photo +
         '<h3 id="sat-card-title">' + esc(s.name) + '</h3>' +
         '<p>' + esc(ui.rep) + '</p>' +
         (s.agency ? '<p><span class="sat-k">' + esc(ui.agency) + '</span> ' + esc(s.agency) + '</p>' : '') +
         (s.orbit ? '<p><span class="sat-k">' + esc(ui.orbit) + '</span> ' + esc(s.orbit) + (s.when ? ' · ' + esc(s.when) : '') + '</p>' : '') +
         '<p><span class="sat-k">' + esc(ui.does) + '</span> ' + esc(s.does) + '</p>' +
         '<p><span class="sat-k">' + esc(ui.helps) + '</span> ' + esc(s.helps) + '</p>' +
+        '<p><a class="wm-orbit-link" href="#sat-' + esc(s.id) + '">' + esc(ui.viewOrbit) + '</a></p>' +
         '<p class="sat-src">' + esc(s.source || '') + '</p>' +
         '<p class="sat-latest">' + esc(ui.latestWait) + '</p>' +
         '<p>' + [site, official, feed].filter(Boolean).join(' · ') + '</p>' + dsn + plus +
@@ -203,6 +232,27 @@
           draw();
         }).catch(function () {});
     });
+    function satFromHash() {
+      var h = (location.hash || '').replace(/^#/, '');
+      return h.indexOf('sat-') === 0 ? h.slice(4) : '';
+    }
+    function focusFromHash() {
+      var id = satFromHash();
+      var s = id && byId[id];
+      if (!s) return;
+      var next = 'all';
+      if (s.regime === 'l1' || s.regime === 'l2' || s.regime === 'l5') next = 'lagrange';
+      else if (s.regime === 'cruise') next = 'beyond';
+      else if (s.fn && s.fn !== 'nav') next = s.fn;
+      setCat(next);
+      var btn = stage.querySelector('.orb-btn[data-id="' + id + '"]');
+      if (btn) btn.classList.add('is-focus');
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (root.scrollIntoView) root.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      openCard(s, btn || null);
+    }
+    window.addEventListener('hashchange', focusFromHash);
     draw();
+    focusFromHash();
   }
 })();

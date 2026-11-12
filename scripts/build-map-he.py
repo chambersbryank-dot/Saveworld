@@ -22,6 +22,8 @@ d['ui'].update({
     'polar': 'הקטבים', 'defense': 'הגנה פלנטרית', 'observe': 'תצפית על כדור הארץ', 'weather': 'מזג אוויר בחלל',
     'disposal': 'סילוק פסולת חלל', 'rawane': 'Project Rawane', 'space': 'חלל',
     'byline': 'נוצר על ידי המייסד ו-SI.',
+    'zoomIn': 'הגדלה', 'zoomOut': 'הקטנה', 'zoomFit': 'התאמה לכוכב',
+    'smallerMap': 'מפה קטנה יותר', 'largerMap': 'מפה גדולה יותר', 'mapControls': 'גודל המפה',
     'earthAlt': 'מפה שטוחה ופוטוריאליסטית של כדור הארץ, NASA Blue Marble Next Generation',
 })
 for h in d['hubs']: h['n'] = t(h['n'])
