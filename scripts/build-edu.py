@@ -155,7 +155,7 @@ def lesson_builder(hubs):
             '<article class="lb-plan" id="lb-plan" aria-live="polite" hidden></article>'
             '<noscript><style>#lb,.lb-small{display:none}</style><div class="km-noscript lb-noscript"><p>The Lesson Plan Builder needs JavaScript to build a custom plan. You can still teach with these free, ready-to-use resources:</p><ul>'
             '<li><a href="Teachers.html">Teacher sheets for every solution (discussion questions and sources)</a></li>'
-            '<li><a href="Spot_the_Fire.html">Classroom activity: Spot the Fire from Space (printable PDF)</a></li>'
+            ''
             '<li><a href="Glossary.html">Glossary of key words</a></li>'
             '<li><a href="Amazing_Facts.html">Amazing Facts with sources</a></li></ul><p>Or start from a topic:</p><ul>' + ''.join(f'<li><a href="{h}">{esc(n)}</a></li>' for h, n in hub_opts) + '</ul></div></noscript>'
             '<p class="no-print"><a href="Teachers.html">Teacher Sheets</a> · <a href="Glossary.html">Glossary</a> · <a href="Kids_Map.html">Kids Planet Map</a> · <a href="Satellite_Explorer.html">Satellite Explorer</a></p></div>\n')

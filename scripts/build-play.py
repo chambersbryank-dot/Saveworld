@@ -7,39 +7,39 @@ import re, os, json, html, datetime, importlib.util
 spec = importlib.util.spec_from_file_location('sf', 'scripts/build-spotfire.py'); sf = importlib.util.module_from_spec(spec); spec.loader.exec_module(sf)
 SITE, LANGS, d, rd, wr, esc = sf.SITE, sf.LANGS, sf.d, sf.rd, sf.wr, sf.esc
 PAGE = 'Play_and_Learn.html'
-TILES = [('Kids_Map.html', '🗺️'), ('Spot_the_Fire.html', '🔥'), ('Satellite_Explorer.html', '🛰️'), ('Amazing_Facts.html', '🤩'), ('Myth_vs_Fact.html', '🕵️'), ('Glossary.html', '📖')]
+TILES = [('Kids_Map.html', '🗺️'), ('Satellite_Explorer.html', '🛰️'), ('Amazing_Facts.html', '🤩'), ('Myth_vs_Fact.html', '🕵️'), ('Glossary.html', '📖')]
 T = {
  'en': dict(title='Play & Learn', nav='Play & Learn', kicker='Games, maps and facts about our planet. Tap a tile to start.',
    desc='Kids games and activities about our planet: Kids Planet Map, Spot the Fire from Space, Satellite Explorer, Amazing Facts, Myth vs Fact and the Glossary.',
-   tiles=[('Kids Planet Map', 'Tap a bubble, get a wow fact.'), ('Spot the Fire', 'Printable classroom activity, ages 10–14: how big is a satellite pixel?'),
+   tiles=[('Kids Planet Map', 'Tap a bubble, get a wow fact.'),
           ('Satellite Explorer', 'Drag the parts, build a satellite.'), ('Amazing Facts', 'Real facts that will surprise you.'),
           ('Myth vs Fact', 'Bust scary myths with real evidence.'), ('Glossary', 'Big words, made simple.')],
    done='Explored', todo='Not yet', prog='You have explored {n} of {t}.', levels=['Start exploring!', 'Explorer badge', 'Ranger badge', 'Planet Hero badge'],
    note='Your badges are saved only on this device. Nothing is sent to us.', reset='Start over', kids='Games, maps and amazing facts.'),
  'fr': dict(title='Jouer et apprendre', nav='Jouer et apprendre', kicker='Des jeux, des cartes et des faits sur notre planète. Touche une tuile pour commencer.',
    desc='Jeux et activités pour enfants sur notre planète : carte de la planète, Repère le feu depuis l’espace, Explorateur de satellites, Faits étonnants, Mythe ou réalité et Glossaire.',
-   tiles=[('Carte de la planète', 'Touche une bulle, découvre un fait étonnant.'), ('Repère le feu', 'Activité de classe à imprimer, 10–14 ans : quelle taille fait un pixel de satellite ?'),
+   tiles=[('Carte de la planète', 'Touche une bulle, découvre un fait étonnant.'),
           ('Explorateur de satellites', 'Fais glisser les pièces, construis un satellite.'), ('Faits étonnants', 'Des faits réels qui vont te surprendre.'),
           ('Mythe ou réalité', 'Démonte les mythes effrayants avec des preuves.'), ('Glossaire', 'Les mots difficiles, expliqués simplement.')],
    done='Exploré', todo='Pas encore', prog='Tu as exploré {n} sur {t}.', levels=['Commence l’exploration !', 'Badge Explorateur', 'Badge Ranger', 'Badge Héros de la planète'],
    note='Tes badges sont enregistrés seulement sur cet appareil. Rien ne nous est envoyé.', reset='Recommencer', kids='Jeux, cartes et faits étonnants.'),
  'es': dict(title='Juega y aprende', nav='Juega y aprende', kicker='Juegos, mapas y datos sobre nuestro planeta. Toca una tarjeta para empezar.',
    desc='Juegos y actividades para niños sobre nuestro planeta: Mapa del Planeta, Encuentra el fuego desde el espacio, Explorador de satélites, Datos asombrosos, Mito o realidad y Glosario.',
-   tiles=[('Mapa del Planeta', 'Toca una burbuja y descubre un dato asombroso.'), ('Encuentra el fuego', 'Actividad de clase para imprimir, 10–14 años: ¿qué tamaño tiene un píxel de satélite?'),
+   tiles=[('Mapa del Planeta', 'Toca una burbuja y descubre un dato asombroso.'),
           ('Explorador de satélites', 'Arrastra las piezas y construye un satélite.'), ('Datos asombrosos', 'Datos reales que te sorprenderán.'),
           ('Mito o realidad', 'Desmonta mitos que dan miedo con pruebas reales.'), ('Glosario', 'Palabras difíciles, explicadas fácil.')],
    done='Explorado', todo='Todavía no', prog='Has explorado {n} de {t}.', levels=['¡Empieza a explorar!', 'Insignia de Explorador', 'Insignia de Guardabosques', 'Insignia de Héroe del Planeta'],
    note='Tus insignias se guardan solo en este dispositivo. No se nos envía nada.', reset='Empezar de nuevo', kids='Juegos, mapas y datos asombrosos.'),
  'ar': dict(title='العب وتعلّم', nav='العب وتعلّم', kicker='ألعاب وخرائط وحقائق عن كوكبنا. المس بطاقة للبدء.',
    desc='ألعاب وأنشطة للأطفال عن كوكبنا: خريطة الكوكب، اكتشف الحريق من الفضاء، مستكشف الأقمار الصناعية، حقائق مذهلة، خرافة أم حقيقة، والمسرد.',
-   tiles=[('خريطة الكوكب', 'المس فقاعة واكتشف حقيقة مدهشة.'), ('اكتشف الحريق', 'نشاط صفي قابل للطباعة، للأعمار 10–14: ما حجم بكسل القمر الصناعي؟'),
+   tiles=[('خريطة الكوكب', 'المس فقاعة واكتشف حقيقة مدهشة.'),
           ('مستكشف الأقمار الصناعية', 'اسحب القطع وابنِ قمرًا صناعيًا.'), ('حقائق مذهلة', 'حقائق حقيقية ستدهشك.'),
           ('خرافة أم حقيقة', 'افضح الخرافات المخيفة بالأدلة.'), ('المسرد', 'كلمات صعبة بشرح بسيط.')],
    done='تم الاستكشاف', todo='ليس بعد', prog='استكشفت {n} من {t}.', levels=['ابدأ الاستكشاف!', 'شارة المستكشف', 'شارة الحارس', 'شارة بطل الكوكب'],
    note='تُحفظ شاراتك على هذا الجهاز فقط. لا يُرسل إلينا أي شيء.', reset='ابدأ من جديد', kids='ألعاب وخرائط وحقائق مذهلة.'),
  'it': dict(title='Gioca e impara', nav='Gioca e impara', kicker='Giochi, mappe e fatti sul nostro pianeta. Tocca una tessera per iniziare.',
    desc='Giochi e attività per bambini sul nostro pianeta: Mappa del pianeta, Trova l’incendio dallo spazio, Esploratore di satelliti, Fatti incredibili, Mito o realtà e Glossario.',
-   tiles=[('Mappa del pianeta', 'Tocca una bolla, scopri un fatto incredibile.'), ('Trova l’incendio', 'Attività di classe da stampare, 10–14 anni: quanto è grande un pixel di satellite?'),
+   tiles=[('Mappa del pianeta', 'Tocca una bolla, scopri un fatto incredibile.'),
           ('Esploratore di satelliti', 'Trascina i pezzi, costruisci un satellite.'), ('Fatti incredibili', 'Fatti veri che ti sorprenderanno.'),
           ('Mito o realtà', 'Smonta i miti che fanno paura con prove vere.'), ('Glossario', 'Parole difficili, spiegate in modo semplice.')],
    done='Esplorato', todo='Non ancora', prog='Hai esplorato {n} su {t}.', levels=['Inizia a esplorare!', 'Distintivo Esploratore', 'Distintivo Ranger', 'Distintivo Eroe del pianeta'],
@@ -55,7 +55,7 @@ CSS = ('.pl-wrap{max-width:1100px;margin:0 auto;padding:1rem 1.25rem 2rem}.pl-pr
        '.pl-tile.is-done .pl-badge{background:#ffd54a;color:#1a1300}.pl-note{font-size:.88rem;opacity:.85}.pl-reset{min-height:44px;border-radius:999px;padding:.4rem 1rem;font:inherit;cursor:pointer}'
        '@media (prefers-reduced-motion:reduce){.pl-tile{transition:none}.pl-tile:hover{transform:none}}')
 JS = """/* PLAY:START */
-(function(){var K='sp-play-v1',P=['Kids_Map','Spot_the_Fire','Satellite_Explorer','Amazing_Facts','Myth_vs_Fact','Glossary'];
+(function(){var K='sp-play-v1',P=['Kids_Map','Satellite_Explorer','Amazing_Facts','Myth_vs_Fact','Glossary'];
 function get(){try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}}
 function put(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
 var pg=(location.pathname.split('/').pop()||'').replace(/\\.html$/,'');if(P.indexOf(pg)>-1){var o=get();if(!o[pg]){o[pg]=Date.now();put(o)}}

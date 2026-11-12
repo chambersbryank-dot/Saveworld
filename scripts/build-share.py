@@ -21,7 +21,7 @@ def kind(b):
     return None
 PATHS = {'Careers.html', 'Cadets.html', 'Homeschool.html', 'AP_IB_Physics.html'}
 NOSIGNUP = {'Cadets.html', 'Homeschool.html'}  # kid-facing (CAP cadets can be 12; homeschool plans are used by children)
-KIDS = {'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Spot_the_Fire.html', 'Myth_vs_Fact.html', 'Play_and_Learn.html', 'Glossary.html'}
+KIDS = {'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Play_and_Learn.html', 'Glossary.html'}
 T = {
  'en': dict(grp='Share this page', cr='Share to Google Classroom', cp='Copy link', ok='Link copied', aud='For teachers, parents and students 13+',
             gu='Grown-ups: get the Weekly Brief', newtab='(opens in a new tab)'),

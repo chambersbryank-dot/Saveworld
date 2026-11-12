@@ -1,4 +1,5 @@
 {
+"Satellite Launch Tracker": "متتبع إطلاق الأقمار الصناعية",
 "Direct — Earth observation or planetary / space science that feeds a published solution (oceans, forests, ice, space weather, planetary defense…). We link that exact solution page.": "مباشر — رصد الأرض أو علوم كوكبية / فضائية تغذي حلاً منشورًا. نربط بصفحة ذلك الحل تحديدًا.",
 "Indirect — Capacity, communications, emergency alerts, or lower-cost access (for example Starship) that can help the work without being a solution itself. We say so plainly.": "غير مباشر — قدرة أو اتصالات أو تنبيهات طوارئ أو وصول أقل تكلفة (مثل Starship) قد يساعد دون أن يكون حلاً بذاته. نقول ذلك بوضوح.",
 "None — Missions that do not support a Saving Planets solution. We note the difference and link the operator when that is allowed.": "لا يوجد — مهام لا تدعم حلاً من Saving Planets. نذكر الفرق ونربط بالمشغّل عندما يُسمح بذلك.",

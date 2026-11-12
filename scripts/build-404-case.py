@@ -17,7 +17,8 @@ pages = {k: v[0] for k, v in ks.items() if len(v) == 1}          # ambiguous key
 missing = {l: sorted(f for f in en if not os.path.exists(f'{l}/{f}')) for l in LANGS}
 ALIAS = {'launchschedule': 'Upcoming_Launches.html', 'launches': 'Upcoming_Launches.html',
          'launchtracker': 'Upcoming_Launches.html', 'home': 'index.html',
-         'sihelper': 'Teachers.html'}  # retired pilot; SI_Helper.html itself is a meta-refresh stub (not a case-map target)
+         'sihelper': 'Teachers.html',
+         'spotthefire': 'Lesson_Builder.html'}  # classroom activity retired; Spot_the_Fire.html is a refresh stub
 DATA = json.dumps({'p': pages, 'a': ALIAS, 'm': missing, 'l': LANGS}, separators=(',', ':'), sort_keys=True)
 JS = ('(function(){var D=' + DATA + ';var s=location.pathname.split("/").filter(Boolean),l="";'
       'if(s.length>1&&D.l.indexOf(s[0])>=0)l=s.shift();if(s.length!==1)return;var k;'
