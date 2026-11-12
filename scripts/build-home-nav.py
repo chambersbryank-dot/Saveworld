@@ -14,12 +14,12 @@ os.chdir(ROOT)
 E = lambda s: html.escape(s, quote=False)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 LBL = {
- 'en': dict(main='Main menu', util='Site links', sol='Solutions', courses='Courses', map='World Map', teach='Teachers', about='About', news='Newsletter', donate='Donate'),
- 'fr': dict(main='Menu principal', util='Liens du site', sol='Solutions', courses='Cours', map='Carte du monde', teach='Enseignants', about='À propos', news='Infolettre', donate='Faire un don'),
- 'es': dict(main='Menú principal', util='Enlaces del sitio', sol='Soluciones', courses='Cursos', map='Mapa del mundo', teach='Docentes', about='Acerca de', news='Boletín', donate='Donar'),
- 'ar': dict(main='القائمة الرئيسية', util='روابط الموقع', sol='الحلول', courses='المقررات', map='خريطة العالم', teach='المعلمون', about='من نحن', news='النشرة', donate='تبرع'),
- 'it': dict(main='Menu principale', util='Link del sito', sol='Soluzioni', courses='Corsi', map='Mappa del mondo', teach='Insegnanti', about='Chi siamo', news='Newsletter', donate='Dona'),
- 'he': dict(main='תפריט ראשי', util='קישורי האתר', sol='פתרונות', courses='קורסים', map='מפת העולם', teach='מורים', about='אודות', news='ניוזלטר', donate='תרומה'),
+ 'en': dict(main='Main menu', util='Site links', sol='Solutions', courses='Courses', map='World Map', teach='Teachers', about='About', news='Newsletter', donate='Donate / Help'),
+ 'fr': dict(main='Menu principal', util='Liens du site', sol='Solutions', courses='Cours', map='Carte du monde', teach='Enseignants', about='À propos', news='Infolettre', donate='Faire un don / Aider'),
+ 'es': dict(main='Menú principal', util='Enlaces del sitio', sol='Soluciones', courses='Cursos', map='Mapa del mundo', teach='Docentes', about='Acerca de', news='Boletín', donate='Donar / Ayudar'),
+ 'ar': dict(main='القائمة الرئيسية', util='روابط الموقع', sol='الحلول', courses='المقررات', map='خريطة العالم', teach='المعلمون', about='من نحن', news='النشرة', donate='تبرّع / ساعد'),
+ 'it': dict(main='Menu principale', util='Link del sito', sol='Soluzioni', courses='Corsi', map='Mappa del mondo', teach='Insegnanti', about='Chi siamo', news='Newsletter', donate='Dona / Aiuta'),
+ 'he': dict(main='תפריט ראשי', util='קישורי האתר', sol='פתרונות', courses='קורסים', map='מפת העולם', teach='מורים', about='אודות', news='ניוזלטר', donate='תרומה / עזרה'),
 }
 LINKS = [('Solutions.html', 'sol'), ('Courses.html', 'courses'), ('World_Map.html', 'map'), ('Teachers.html', 'teach'), ('About.html', 'about')]
 

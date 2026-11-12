@@ -107,6 +107,12 @@ MAP_POS = {  # hub: (label, x, y, mobile x, mobile y)
  'Deforestation.html': ('Forests', 56, 56, 72, 56), 'Oceans.html': ('Oceans', 24, 66, 28, 65),
  'Lakes.html': ('Lakes', 78, 72, 72, 75), 'Polar.html': ('Polar Ice', 44, 42, 72, 46), 'Rivers.html': ('Rivers', 46, 85, 28, 86)}
 
+def earth_photo(prefix):
+    """Real DSCOVR EPIC disk. The cartoon globe is not used."""
+    srcs = ', '.join(f'{prefix}assets/kids/earth-epic-{s}.webp {s}w' for s in (480, 800, 1280, 1920, 3840))
+    return ('<picture class="km-earth"><source type="image/webp" srcset="' + srcs + '" sizes="(max-width:700px) 78vw, 700px">'
+            f'<img src="{prefix}assets/kids/earth-epic-1280.jpg" alt="The sunlit Earth, photographed by the NASA and NOAA DSCOVR EPIC satellite" width="3840" height="3840" decoding="async"></picture>')
+
 def kids_map(hubs):
     svg = ('<svg viewBox="0 0 160 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">'
            + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="#fff" opacity=".7"/>' for x, y, r in [(8,6,.5),(30,4,.4),(45,18,.5),(70,5,.4),(100,20,.5),(120,8,.4),(150,30,.5),(5,60,.4),(140,55,.4),(20,30,.3),(110,40,.3),(90,8,.3)])
@@ -114,10 +120,7 @@ def kids_map(hubs):
            + '<circle cx="96" cy="11" r="3" fill="#8a7a6a"/><circle cx="95" cy="10" r=".8" fill="#6d5f52"/>'
            + '<circle cx="18" cy="52" r="5" fill="#d9d9e3"/><circle cx="17" cy="51" r="1" fill="#b9b9c8"/>'
            + '<g transform="translate(128 52) rotate(-20)"><rect x="-2" y="-1.5" width="4" height="3" fill="#cfd8dc"/><rect x="-8" y="-1" width="5" height="2" fill="#4f7fd8"/><rect x="3" y="-1" width="5" height="2" fill="#4f7fd8"/></g>'
-           + '<circle cx="80" cy="128" r="62" fill="#1e88e5"/><circle cx="80" cy="128" r="64" fill="none" stroke="#8fd3ff" stroke-width="1.5" opacity=".5"/>'
-           + '<path d="M50 80c8-6 20-4 24 2s-2 12-10 12-8 6-16 4-6-12 2-18z" fill="#43a047"/><path d="M88 74c10-4 22 0 24 8s-8 10-14 8-16-10-10-16z" fill="#2e7d32"/>'
-           + '<path d="M100 96c6-2 12 2 12 6s-8 6-12 2z" fill="#66bb6a"/><ellipse cx="116" cy="104" rx="4" ry="2.4" fill="#4dd0e1"/>'
-           + '<path d="M58 112c6-8 14-6 22-10" stroke="#4dd0e1" stroke-width="1.6" fill="none"/></svg>')
+           + '<circle cx="80" cy="128" r="64" fill="none" stroke="#8fd3ff" stroke-width="1.5" opacity=".55"/></svg>')
     btns = ''.join(f'<button type="button" class="edu-bubble glass" data-tint="{X.BLURB[h][1]}" data-hub="{h}" aria-pressed="false" '
                    f'style="left:{x}%;top:{y}%;--mx:{mx}%;--my:{my}%"><span class="em" aria-hidden="true">{X.BLURB[h][0]}</span>{lab}</button>'
                    for h, (lab, x, y, mx, my) in MAP_POS.items() if h in hubs)
@@ -125,7 +128,8 @@ def kids_map(hubs):
     main = ('<div class="edu-wrap">'
             '<p class="edu-lead">Tap a bubble to explore a part of our planet. Every bubble has a wow fact and real solutions that help both people and nature.</p>'
             '<p class="km-tools"><button type="button" class="edu-bubble glass" data-tint="sun" id="km-surprise"><span class="em" aria-hidden="true">🎲</span>Surprise me!</button></p>'
-            f'<div class="km-stage" id="km" role="group" aria-label="Map of our planet with bubbles to tap">{svg}{btns}</div>'
+            f'<div class="km-stage" id="km" role="group" aria-label="Map of our planet with bubbles to tap">{earth_photo("")}{svg}{btns}</div>'
+            '<p class="km-earth-credit">Photo: <a href="https://images.nasa.gov/details/PIA18033">NASA/NOAA DSCOVR EPIC (PIA18033)</a>. Public domain.</p>'
             '<template class="edu-error-tpl"><p class="edu-error" role="alert">Sorry, the map could not load. Please refresh the page.</p></template>'
             '<noscript><div class="km-noscript"><p>The map needs JavaScript. You can still visit every part of the planet here:</p><ul>' + nos + '</ul></div></noscript>'
             '<section class="km-panel" id="km-panel" aria-live="polite" hidden></section>'

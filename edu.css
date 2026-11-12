@@ -16,6 +16,10 @@
 /* ---- Kids map ---- */
 .km-stage{position:relative;aspect-ratio:16/11;max-width:900px;margin:1rem auto;border-radius:24px;overflow:hidden;background:radial-gradient(circle at 20% 15%,#2a2f7a,#0b0f2e 70%);box-shadow:0 10px 30px rgb(0 0 0/.35)}
 .km-stage svg{position:absolute;inset:0;width:100%;height:100%}
+.km-stage .km-earth{position:absolute;left:11.25%;top:60%;width:77.5%;aspect-ratio:1;border-radius:50%;overflow:hidden;pointer-events:none;box-shadow:0 0 0 2px rgba(143,211,255,.55),0 0 22px rgba(80,170,255,.35)}
+.km-stage .km-earth img{display:block;width:100%;height:100%;object-fit:cover}
+.km-earth-credit{max-width:900px;margin:.45rem auto 0;padding:0 1rem;text-align:center;font-size:.8rem;font-weight:650;line-height:1.45}
+.km-earth-credit a{font-weight:750}
 .km-stage .edu-bubble{position:absolute;transform:translate(-50%,-50%);animation:km-float 5s ease-in-out infinite;white-space:nowrap;font-size:.95rem}
 .km-stage .edu-bubble:nth-child(2n){animation-delay:-2.5s}
 .km-stage .edu-bubble[aria-pressed="true"]{box-shadow:0 0 0 3px #ffd54a,0 6px 18px rgb(0 0 0/.35)}

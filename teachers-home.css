@@ -1,5 +1,6 @@
 /* Teachers home. Logical properties only, so Arabic and Hebrew keep the correct start/end.
-   Cards are white. Buttons and type badges use the shared crystal-water solid #0a4f78.
+   Cards are white. Buttons, chips, and type badges use the site crystal-water liquid glass
+   (same recipe as the homepage Vision chip and Match actions: white highlight over #0a4f78).
    Photos carry the color. */
 .t-home{max-width:1120px;margin:0 auto;padding:.2rem 1.15rem 1.6rem}
 .t-home h2{font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.2;margin:0 0 .4rem;letter-spacing:-.02em;color:#16324a}
@@ -69,26 +70,111 @@
 @media (forced-colors:active){
   .t-path,.t-card,.t-topic,.t-kit,.t-courses,.t-year{border:1px solid ButtonText;forced-color-adjust:auto}
 }
-/* Buttons and badges: the same crystal-water solid as body[data-glass-tint=water] --lg-solid. */
+/* Crystal-water liquid glass. Same fill as .hv-chip and Match .btn: a 22% white
+   highlight over the water solid #0a4f78 (hover stops at 24% so white type stays 4.5:1).
+   Beats the flat .t-chip / .edu-bubble rules in styles.css. */
 body.teachers-page .t-chip,
 body.teachers-page .t-type,
+body.teachers-page .t-kicker,
 body.teachers-page .edu-bubble.glass,
 body.teachers-page .sp9-adopt .btn,
-body.teachers-page .shr a,
-body.teachers-page .shr button{
+body.teachers-page .shr a.shr-cr,
+body.teachers-page .shr button.shr-copy{
   color:#fff !important;
-  background:#0a4f78 !important;
-  background-image:none !important;
-  border:1px solid #0a4f78 !important;
-  box-shadow:none !important;
-  -webkit-backdrop-filter:none;
-  backdrop-filter:none;
+  background-color:#0a4f78 !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;
+  border:1px solid rgba(160,225,255,.55) !important;
+  border-radius:999px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35) !important;
+  -webkit-backdrop-filter:blur(14px) saturate(180%) !important;
+  backdrop-filter:blur(14px) saturate(180%) !important;
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+  text-decoration:none !important;
+}
+body.teachers-page .t-type,
+body.teachers-page .t-kicker{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 2px 8px rgba(0,40,70,.22) !important;
   text-shadow:none;
+}
+body.teachers-page .t-kicker{font-weight:800 !important}
+body.teachers-page .t-chip:hover,
+body.teachers-page .edu-bubble.glass:hover,
+body.teachers-page .sp9-adopt .btn:hover,
+body.teachers-page .shr a.shr-cr:hover,
+body.teachers-page .shr button.shr-copy:hover{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08)),linear-gradient(#0a4f78,#0a4f78) !important;
+  filter:none !important;
 }
 body.teachers-page .t-chip[aria-pressed=true]{
   background:#fff !important;
+  background-image:none !important;
   color:#0a4f78 !important;
-  border-color:#0a4f78 !important;
+  border:2px solid #0a4f78 !important;
+  box-shadow:none !important;
+  text-shadow:none;
+  -webkit-backdrop-filter:none !important;
+  backdrop-filter:none !important;
+  font-weight:800;
+}
+body.teachers-page .t-chip:focus-visible,
+body.teachers-page .edu-bubble.glass:focus-visible,
+body.teachers-page .sp9-adopt .btn:focus-visible,
+body.teachers-page .shr a.shr-cr:focus-visible,
+body.teachers-page .shr button.shr-copy:focus-visible,
+body.teachers-page .t-path:focus-visible{
+  outline:3px solid #ffd54a !important;
+  outline-offset:3px;
+}
+body.teachers-page .shr .shr-copy.is-done{border-color:#5fe0b5 !important}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  body.teachers-page .t-chip,
+  body.teachers-page .t-type,
+  body.teachers-page .t-kicker,
+  body.teachers-page .edu-bubble.glass,
+  body.teachers-page .sp9-adopt .btn,
+  body.teachers-page .shr a.shr-cr,
+  body.teachers-page .shr button.shr-copy{
+    background:#0a4f78 !important;
+    background-image:none !important;
+  }
+}
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  body.teachers-page .t-chip,
+  body.teachers-page .t-type,
+  body.teachers-page .t-kicker,
+  body.teachers-page .edu-bubble.glass,
+  body.teachers-page .sp9-adopt .btn,
+  body.teachers-page .shr a.shr-cr,
+  body.teachers-page .shr button.shr-copy{
+    background:#0a4f78 !important;
+    background-image:none !important;
+    box-shadow:none !important;
+    text-shadow:none;
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+  }
+  body.teachers-page .t-chip[aria-pressed=true]{
+    background:#fff !important;
+    color:#0a4f78 !important;
+  }
+}
+@media (prefers-contrast:more){
+  body.teachers-page .t-chip,
+  body.teachers-page .t-type,
+  body.teachers-page .edu-bubble.glass,
+  body.teachers-page .sp9-adopt .btn,
+  body.teachers-page .shr a.shr-cr,
+  body.teachers-page .shr button.shr-copy{border:2px solid #fff !important}
+  body.teachers-page .t-chip[aria-pressed=true]{border:2px solid #0a4f78 !important}
+}
+@media (forced-colors:active){
+  body.teachers-page .t-chip,
+  body.teachers-page .t-type,
+  body.teachers-page .t-kicker,
+  body.teachers-page .edu-bubble.glass,
+  body.teachers-page .sp9-adopt .btn,
+  body.teachers-page .shr a.shr-cr,
+  body.teachers-page .shr button.shr-copy{border:1px solid ButtonText !important;forced-color-adjust:auto}
 }
 body.teachers-page .t-path,
 body.teachers-page .t-card,
@@ -107,8 +193,7 @@ body.teachers-page .t-year{
 }
 body.teachers-page .t-topic[open]{background:#f7f8fa !important}
 body.teachers-page .t-card:hover,
-body.teachers-page .t-path:hover,
-body.teachers-page .t-chip:hover{filter:none;border-color:#0a4f78 !important}
+body.teachers-page .t-path:hover{filter:none;border-color:#0a4f78 !important}
 html.dark body.teachers-page .t-home h2,
 html.dark body.teachers-page .t-home>.t-lead,
 html.dark body.teachers-page .t-subh,
