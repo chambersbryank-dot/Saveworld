@@ -27,7 +27,7 @@ E = lambda s: html.escape(clean(s), quote=True)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BANDS = ['K-2', '3-5', '6-8', '9-12']
 SUBJ_ORDER = ['earth', 'life', 'space', 'literacy']
-ASSET = '20261111f'
+ASSET = '20261112a'
 
 # Codes already defined in standards.json. Nothing new is invented here.
 RI = 'CCSS.ELA-LITERACY.RI.5.9'

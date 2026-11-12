@@ -1785,3 +1785,41 @@ body.toc-home .home-find+#solutions.card-band,.home-find+#solutions.card-band{pa
 #ask-si .si-form button,#ask-si form button[type=submit]{background:#ffd54a!important;color:#1a1300!important}
 .nl-call .nl-aud span{background:#00699c!important;color:#fff!important}
 .t-print,.t-actions a{display:inline-flex;align-items:center;min-height:24px;min-width:24px;padding:2px 6px}
+/* CRYSTAL-WATER-CTA:START */
+/* Shared Donate / Help control (nav pill and floating button). One crystal-water color,
+   the same liquid-glass recipe as the homepage Vision chip and Match actions. */
+html body .nav-help a,
+html body a.sticky-help{
+  color:#fff !important;
+  background-color:#0a4f78 !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;
+  border:1px solid rgba(160,225,255,.55) !important;
+  border-radius:999px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35) !important;
+  -webkit-backdrop-filter:blur(14px) saturate(180%) !important;
+  backdrop-filter:blur(14px) saturate(180%) !important;
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+}
+html body .nav-help a:hover,
+html body a.sticky-help:hover{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08)),linear-gradient(#0a4f78,#0a4f78) !important;
+}
+html body .nav-help a:focus-visible,
+html body a.sticky-help:focus-visible{outline:3px solid #fff !important;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  html body .nav-help a,html body a.sticky-help{background:#0a4f78 !important;background-image:none !important}
+}
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  html body .nav-help a,html body a.sticky-help{
+    background:#0a4f78 !important;background-image:none !important;box-shadow:none !important;text-shadow:none;
+    -webkit-backdrop-filter:none !important;backdrop-filter:none !important;
+  }
+}
+@media (prefers-contrast:more){
+  html body .nav-help a,html body a.sticky-help{border:2px solid #fff !important}
+}
+@media (prefers-reduced-motion:reduce){html body a.sticky-help{transition:none}}
+@media (forced-colors:active){
+  html body .nav-help a,html body a.sticky-help{border:1px solid ButtonText !important;forced-color-adjust:auto}
+}
+/* CRYSTAL-WATER-CTA:END */
