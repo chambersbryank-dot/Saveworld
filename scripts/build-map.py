@@ -7,7 +7,7 @@ Russia, China and North Korea excluded (sites and launches). Writes assets/data/
 Idempotent. Run after i18n-build/post-processors and before build-ux.py (weekly-sync.sh). --no-fetch skips the launch refresh."""
 import re, os, json, html, sys, glob, datetime, urllib.request
 SITE = 'https://www.savingplanets.com/'
-ASSETV = '20261112wm'  # Nov 12: Blue Marble base, river/lake/ocean/land filters
+ASSETV = '20261112sv'  # Nov 12: more legend hubs, title video, satellite view link
 rd = lambda f: open(f, encoding='utf8').read()
 def wr(p, s):
     if os.path.exists(p) and rd(p) == s: return 0
@@ -28,6 +28,7 @@ U = {
    basis_hq='headquarters', basis_launch='launch site', pins='{t} solutions: {g} active · {b} coming soon · {r} launch sites', label='Interactive world map of solutions and launch sites',
    h1='Our {n} solutions around the world', key='Map key', csv='Download the map data (CSV)', listmore='Every solution as a list, including the ones in orbit and worldwide', live='Live Launch Tracker',
    allcat='All', rivers='Rivers', lakes='Lakes', oceans='Oceans', land='Land',
+   polar='Polar', defense='Planetary Defense', observe='Earth Observation', weather='Space Weather', disposal='Space Disposal', rawane='Project Rawane', space='Space',
    byline='Created by the Founder and SI.', earthAlt='Photorealistic flat map of Earth, NASA Blue Marble Next Generation'),
  'fr': dict(title='Carte mondiale des solutions', desc="Une carte interactive de toutes les solutions de Saving Planets : épingles vertes pour celles qui agissent déjà, bleues pour celles à venir, et fusées pour les prochains lancements.",
    lead="Touchez une épingle pour voir une solution, où elle agit et un lien vers sa page. Vert : active ; bleu : bientôt ; fusée : prochains lancements depuis ce site.",
@@ -39,6 +40,7 @@ U = {
    basis_hq='siège', basis_launch='site de lancement', pins='{t} solutions : {g} actives · {b} bientôt · {r} sites de lancement', label='Carte mondiale interactive des solutions et des sites de lancement',
    h1='Nos {n} solutions à travers le monde', key='Légende', csv='Télécharger les données de la carte (CSV)', listmore="Toutes les solutions sous forme de liste, y compris celles en orbite et partout dans le monde", live='Suivi des lancements en direct',
    allcat='Tout', rivers='Rivières', lakes='Lacs', oceans='Océans', land='Terres',
+   polar='Pôles', defense='Défense planétaire', observe='Observation de la Terre', weather='Météo spatiale', disposal='Élimination spatiale', rawane='Projet Rawane', space='Espace',
    byline='Créé par le fondateur et SI.', earthAlt='Carte plate et photoréaliste de la Terre, NASA Blue Marble Next Generation'),
  'es': dict(title='Mapa mundial de soluciones', desc='Un mapa interactivo de todas las soluciones de Saving Planets: pines verdes para las que ya funcionan, azules para las que llegan pronto y cohetes para los próximos lanzamientos.',
    lead='Toca un pin para ver una solución, dónde actúa y un enlace a su página. Verde: activa; azul: próximamente; cohete: próximos lanzamientos desde ese sitio.',
@@ -50,6 +52,7 @@ U = {
    basis_hq='sede', basis_launch='sitio de lanzamiento', pins='{t} soluciones: {g} activas · {b} próximamente · {r} sitios de lanzamiento', label='Mapa mundial interactivo de soluciones y sitios de lanzamiento',
    h1='Nuestras {n} soluciones en todo el mundo', key='Leyenda', csv='Descargar los datos del mapa (CSV)', listmore='Todas las soluciones en una lista, incluidas las que están en órbita y en todo el mundo', live='Rastreador de lanzamientos en vivo',
    allcat='Todo', rivers='Ríos', lakes='Lagos', oceans='Océanos', land='Tierra',
+   polar='Polos', defense='Defensa planetaria', observe='Observación de la Tierra', weather='Clima espacial', disposal='Eliminación espacial', rawane='Proyecto Rawane', space='Espacio',
    byline='Creado por el fundador y SI.', earthAlt='Mapa plano y fotorrealista de la Tierra, NASA Blue Marble Next Generation'),
  'ar': dict(title='خريطة الحلول حول العالم', desc='خريطة تفاعلية لكل حلول Saving Planets: الدبابيس الخضراء لحلول تعمل الآن، والزرقاء لحلول قادمة قريبًا، والصواريخ لعمليات الإطلاق القادمة.',
    lead='اضغط على دبوس لترى الحل ومكان عمله ورابط صفحته. الأخضر: يعمل الآن، الأزرق: قريبًا، الصاروخ: الإطلاقات القادمة من ذلك الموقع.',
@@ -61,6 +64,7 @@ U = {
    basis_hq='المقر', basis_launch='موقع الإطلاق', pins='{t} حلًا: {g} يعمل الآن · {b} قريبًا · {r} مواقع إطلاق', label='خريطة عالمية تفاعلية للحلول ومواقع الإطلاق',
    h1='حلولنا الـ{n} حول العالم', key='مفتاح الخريطة', csv='تنزيل بيانات الخريطة (CSV)', listmore='كل الحلول على شكل قائمة، بما فيها الحلول في المدار وحول العالم', live='متتبع الإطلاقات المباشر',
    allcat='الكل', rivers='الأنهار', lakes='البحيرات', oceans='المحيطات', land='اليابسة',
+   polar='القطبان', defense='الدفاع الكوكبي', observe='رصد الأرض', weather='طقس الفضاء', disposal='التخلص من الحطام الفضائي', rawane='مشروع Rawane', space='الفضاء',
    byline='من إعداد المؤسس وSI.', earthAlt='خريطة مسطحة واقعية للأرض، NASA Blue Marble Next Generation'),
  'it': dict(title='Mappa mondiale delle soluzioni', desc='Una mappa interattiva di tutte le soluzioni di Saving Planets: spilli verdi per quelle già attive, blu per quelle in arrivo e razzi per i prossimi lanci.',
    lead='Tocca uno spillo per vedere una soluzione, dove opera e il link alla sua pagina. Verde: attiva; blu: in arrivo; razzo: prossimi lanci da quel sito.',
@@ -72,6 +76,7 @@ U = {
    basis_hq='sede', basis_launch='sito di lancio', pins='{t} soluzioni: {g} attive · {b} in arrivo · {r} siti di lancio', label='Mappa mondiale interattiva di soluzioni e siti di lancio',
    h1='Le nostre {n} soluzioni nel mondo', key='Legenda', csv='Scarica i dati della mappa (CSV)', listmore="Tutte le soluzioni in un elenco, comprese quelle in orbita e in tutto il mondo", live='Tracker dei lanci in diretta',
    allcat='Tutte', rivers='Fiumi', lakes='Laghi', oceans='Oceani', land='Terre',
+   polar='Poli', defense='Difesa planetaria', observe='Osservazione della Terra', weather='Meteo spaziale', disposal='Smaltimento dei detriti spaziali', rawane='Progetto Rawane', space='Spazio',
    byline='Creato dal fondatore e da SI.', earthAlt='Mappa piatta e fotorealistica della Terra, NASA Blue Marble Next Generation'),
 }
 
@@ -135,7 +140,9 @@ def summary(l, page):
     return s
 
 # Earth categories use the hub the solution already belongs to. Land is the Forests hub (data-domain="land").
-CATS = {'Rivers.html': 'river', 'Lakes.html': 'lake', 'Oceans.html': 'ocean', 'Deforestation.html': 'land'}
+CATS = {'Rivers.html': 'river', 'Lakes.html': 'lake', 'Oceans.html': 'ocean', 'Deforestation.html': 'land',
+        'Polar.html': 'polar', 'Planetary_Defense.html': 'defense', 'Earth_Observation.html': 'observe',
+        'Space_Weather.html': 'weather', 'Space_Disposal.html': 'disposal', 'Project-Rawane.html': 'rawane', 'Space.html': 'space'}
 def build_data(l, LOC, launches):
     sols = lang_solutions(l); items = []
     for u, v in sols.items():
@@ -180,7 +187,10 @@ def page_html(l, data, n_by):
         sw = '' if key == 'all' else f'<span class="wm-swatch wm-{key}" aria-hidden="true"></span>'
         pressed = 'true' if key == 'all' else 'false'
         return f'<button type="button" class="wm-cat" data-cat="{key}" aria-pressed="{pressed}">{sw}{esc(u[name])}</button>'
-    cat_btns = ''.join(cat_btn(k, n) for k, n in (('all', 'allcat'), ('river', 'rivers'), ('lake', 'lakes'), ('ocean', 'oceans'), ('land', 'land')))
+    cat_btns = ''.join(cat_btn(k, n) for k, n in (
+        ('all', 'allcat'), ('river', 'rivers'), ('lake', 'lakes'), ('ocean', 'oceans'), ('land', 'land'),
+        ('polar', 'polar'), ('observe', 'observe'), ('weather', 'weather'), ('defense', 'defense'),
+        ('disposal', 'disposal'), ('rawane', 'rawane'))) + f'<a class="wm-cat wm-cat-link" href="Space.html#satmap"><span class="wm-swatch wm-space" aria-hidden="true"></span>{esc(u["space"])}</a>'
     def li(s):
         places = '; '.join(p['label'] for p in s['p'])
         badge = u['active'] if s['st'] == 'active' else u['upcoming']
@@ -199,7 +209,12 @@ def page_html(l, data, n_by):
     main = f'''<main id="main" class="wm-main">
 <div class="wm-wrap" data-lang="{l}" data-src="{pre}assets/data/map.{l}.json?v={ASSETV}">
 <div class="wm-screen">
-<h1 class="wm-title">{esc(u["h1"].format(n=n_sol))}</h1>
+<section class="wm-hero has-video">
+<div class="wm-hero-media" aria-hidden="true"><img class="wm-hero-still" src="{pre}assets/earth/world-map-hero.jpg" alt="" width="1280" height="640"><video class="wm-hero-video" muted loop playsinline poster="{pre}assets/earth/world-map-hero.jpg" width="1280" height="640" preload="none"><source data-src="{pre}assets/earth/world-map-hero.webm" type="video/webm"><source data-src="{pre}assets/earth/world-map-hero.mp4" type="video/mp4"></video><div class="wm-hero-shade"></div></div>
+<div class="wm-hero-content"><h1 class="wm-title">{esc(u["h1"].format(n=n_sol))}</h1></div>
+<p class="hero-video-credit"><a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth / Blue Marble</a>. {esc(u["byline"])}</p>
+</section>
+<script>(function(){{var v=document.querySelector(".wm-hero-video");if(!v)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");if((rm&&rm.matches)||(navigator.connection&&navigator.connection.saveData))return;[].forEach.call(v.querySelectorAll("source"),function(s){{if(!s.getAttribute("src")&&s.dataset.src)s.src=s.dataset.src;}});v.preload="auto";var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){{}});}})();</script>
 <div class="wm-key" role="group" aria-label="{esc(u["key"])}">
 <div class="wm-cats" role="group" aria-label="{esc(u["show"])}">{cat_btns}</div>
 <label class="wm-tog"><input type="checkbox" id="wm-a" checked> <span class="wm-dot wm-active" aria-hidden="true"></span>{esc(u["active"])}</label>

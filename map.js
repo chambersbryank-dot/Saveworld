@@ -21,16 +21,26 @@
     river: '<svg viewBox="0 0 24 12" aria-hidden="true"><path d="M1 7c2-3 3.2-3 5.2 0s3.2 3 5.2 0 3.2-3 5.2 0 3.4 3 6.4 0" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>',
     lake: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="#fff"/></svg>',
     ocean: '<svg viewBox="0 0 24 16" aria-hidden="true"><path d="M1 5.5c1.6-1.6 2.6-1.6 4.2 0s2.6 1.6 4.2 0 2.6-1.6 4.2 0 2.6 1.6 4.2 0 2.8-1.6 4.2 0M1 10.5c1.6-1.6 2.6-1.6 4.2 0s2.6 1.6 4.2 0 2.6-1.6 4.2 0 2.6 1.6 4.2 0 2.8-1.6 4.2 0" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>',
-    land: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.2 13.2 13.2H2.8z" fill="#fff"/></svg>'
+    land: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.2 13.2 13.2H2.8z" fill="#fff"/></svg>',
+    polar: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 9.2 6.2 14 6.2 10.2 9.1 11.5 14 8 11.2 4.5 14 5.8 9.1 2 6.2 6.8 6.2z" fill="#fff"/></svg>',
+    defense: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6 13.2 4.2 12 12.2 8 14.4 4 12.2 2.8 4.2z" fill="#fff"/></svg>',
+    observe: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M8 2.2v2.2M8 11.6v2.2M2.2 8h2.2M11.6 8h2.2" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    weather: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.2 11.2a2.6 2.6 0 0 1 .2-5.1 3.2 3.2 0 0 1 6.2.8 2.3 2.3 0 0 1 .2 4.3z" fill="#fff"/></svg>',
+    disposal: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3.2h10l-1.2 2.2H4.2zM4.4 6.6h7.2L8 13.2z" fill="#fff"/></svg>',
+    rawane: '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="4.2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="8" cy="8" r="1.3" fill="#fff"/></svg>',
+    space: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h3.2L8 5.2 10.8 8H14M6.2 8 8 10.8 9.8 8" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    fire: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8c.4 2.2-1.2 3-1.2 4.6a2.6 2.6 0 0 0 5.2.6c0-2-1.6-3.2-1.2-5.2-2 .6-2.2 2.4-2.8 0z" fill="#fff"/></svg>',
+    ice: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5v13M2.2 4.6l11.6 6.8M13.8 4.6 2.2 11.4" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>'
   };
-  var CATBOX = { river: [28, 16, 14, 8], lake: [22, 22, 11, 11], ocean: [26, 18, 13, 9], land: [22, 22, 11, 11] };
+  var CATBOX = { river: [28, 16, 14, 8], lake: [22, 22, 11, 11], ocean: [26, 18, 13, 9], land: [22, 22, 11, 11], polar: [22, 22, 11, 11], defense: [22, 22, 11, 11], observe: [22, 22, 11, 11], weather: [24, 20, 12, 10], disposal: [22, 22, 11, 11], rawane: [22, 22, 11, 11], space: [26, 18, 13, 9], fire: [20, 22, 10, 11], ice: [22, 22, 11, 11] };
   function catIcon(cat) {
     var b = CATBOX[cat];
     return L.divIcon({ className: 'wm-pin', html: '<span class="wm-m wm-c wm-' + cat + '"><i>' + GLYPH[cat] + '</i></span>', iconSize: [b[0], b[1]], iconAnchor: [b[2], b[3]], popupAnchor: [0, -b[3]] });
   }
   var I = { a: icon('#2e9e4f'), u: icon('#2f7fd1'), r: icon('#ffffff', '🚀') };
-  var IC = { river: catIcon('river'), lake: catIcon('lake'), ocean: catIcon('ocean'), land: catIcon('land') };
-  var CN = { river: 'rivers', lake: 'lakes', ocean: 'oceans', land: 'land' };
+  var IC = {};
+  ['river','lake','ocean','land','polar','defense','observe','weather','disposal','rawane','space','fire','ice'].forEach(function (k) { IC[k] = catIcon(k); });
+  var CN = { river: 'rivers', lake: 'lakes', ocean: 'oceans', land: 'land', polar: 'polar', defense: 'defense', observe: 'observe', weather: 'weather', disposal: 'disposal', rawane: 'rawane', space: 'space', fire: 'fire', ice: 'ice' };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function boot(D) {
     var ui = D.ui || {}, lang = D.lang || 'en';
@@ -131,7 +141,7 @@
         li.hidden = !(hubOk && catOk);
       });
     }
-    var catBtns = [].slice.call(document.querySelectorAll('.wm-cat'));
+    var catBtns = [].slice.call(document.querySelectorAll('button.wm-cat'));
     function setCat(next) {
       cat = next;
       catBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-cat') === next ? 'true' : 'false'); });

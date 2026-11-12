@@ -19,6 +19,8 @@ d['lang'] = 'he'
 d['ui'] = {k: t(v) for k, v in d['ui'].items()}
 d['ui'].update({
     'allcat': 'הכל', 'rivers': 'נהרות', 'lakes': 'אגמים', 'oceans': 'אוקיינוסים', 'land': 'יבשה',
+    'polar': 'הקטבים', 'defense': 'הגנה פלנטרית', 'observe': 'תצפית על כדור הארץ', 'weather': 'מזג אוויר בחלל',
+    'disposal': 'סילוק פסולת חלל', 'rawane': 'Project Rawane', 'space': 'חלל',
     'byline': 'נוצר על ידי המייסד ו-SI.',
     'earthAlt': 'מפה שטוחה ופוטוריאליסטית של כדור הארץ, NASA Blue Marble Next Generation',
 })
