@@ -28,14 +28,14 @@ GROUPS = [
  # Myth vs Fact stays in Kids.
  ('sol', ['Solutions.html', 'Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html', 'Topics.html', 'World_Map.html']),
  ('le', ['Learn.html', 'Courses.html', 'Orbits_Guide.html', 'Orbit_Math.html', 'Orbit_Lab.html', 'Aero_Guide.html', 'Aero_Math.html', 'Aero_Lab.html', 'Physics_Guide.html', 'Physics_Math.html', 'Physics_Lab.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html']),
- ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Big_Questions.html', 'Glossary.html']),
+ ('kids', ['Play_and_Learn.html', 'Kids_Map.html', 'Amazing_Facts.html', 'Satellite_Explorer.html', 'Myth_vs_Fact.html', 'Big_Questions.html', 'Glossary.html', 'Top_Ten.html']),
  ('teach', ['Teachers.html', 'Lesson_Builder.html']),  # SI Helper pilot retired: no public nav link
  ('ab', ['About.html', 'Editorial_Policy.html', 'Corrections.html', 'Press.html', 'Privacy.html']),
 ]
 SOL_HUBS = ['Oceans.html', 'Rivers.html', 'Lakes.html', 'Polar.html', 'Deforestation.html', 'Earth_Observation.html', 'Space.html']
 SOL_TAIL = ['Topics.html', 'World_Map.html']
 SPACE_KIDS = ['Upcoming_Launches.html', 'Enceladus.html', 'Planetary_Defense.html', 'Project-Rawane.html', 'Space_Disposal.html', 'Space_Weather.html']
-UTIL = ['Upcoming_Launches.html', 'Top_Ten.html', 'Search.html', 'index.html#newsletter', 'Contact.html']  # Satellite Launch Tracker sits immediately before Top Ten
+UTIL = ['Upcoming_Launches.html', 'Search.html', 'index.html#newsletter', 'Contact.html']  # Top Ten lives in the Kids menu
 LABEL = {'en': 'EN', 'fr': 'FR', 'es': 'ES', 'ar': 'عربي', 'it': 'IT', 'he': 'עב'}  # ar: 'عربي' is inside 'العربية' (label-in-name)
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
 # Oct 19: Hebrew public. Its header nav comes translated from the English page (i18n-build + he.json); build-nav only

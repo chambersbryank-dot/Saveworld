@@ -1653,7 +1653,7 @@ html body nav#topnav.spn-solid::before,html body nav#topnav.spn-open::before{opa
 @media (min-width:1140px){#topnav .spn{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:1rem;row-gap:0}#topnav .spn-panel{display:contents}#topnav .spn-brand{grid-column:1;grid-row:1;min-height:32px}#topnav .spn-util{grid-column:2;grid-row:1;justify-self:end}#topnav .spn-main{grid-column:1/-1;grid-row:2;justify-self:end}}
 @media (min-width:1140px) and (pointer:coarse){#topnav .spn-brand{min-height:44px}}
 #topnav .spn-panel{display:flex;flex-direction:column;align-items:flex-end}
-#topnav .spn-util{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.2rem 1.1rem;min-width:0;max-width:100%;font-size:14px;font-weight:600}
+#topnav .spn-util{display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:0 1.1rem;min-width:0;max-width:100%;font-size:14px;font-weight:600}
 #topnav .spn-util a{color:#e8eef5;display:inline-flex;align-items:center;gap:.35rem;min-height:32px;white-space:nowrap}
 #topnav .spn-util a:hover{color:#8fd3ff}
 #topnav .spn-util a[aria-current]{color:#8fd3ff}
