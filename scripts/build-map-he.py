@@ -43,6 +43,9 @@ if tpl and n_sol:
     h2 = re.sub(r'Our \d+ solutions around the world', lambda m: tpl.replace('{n}', str(n_sol)), h2)
     h2 = re.sub(r'\d+ הפתרונות שלנו ברחבי העולם', lambda m: tpl.replace('{n}', str(n_sol)), h2)
 HE_H1 = 'פתרונות ברחבי העולם ובחלל שמשפרים את בריאות כוכב הלכת שלנו בכל יום'
+HE_NOTE = 'אנחנו בונים תצוגה טובה יותר של המפה הזו בטלפון. בינתיים, הכי נוח לצפות בה ב-iPad או במחשב.'
+h2 = h2.replace("We're building a better phone view of this map. For now, it's best viewed on an iPad or computer.", HE_NOTE)
+h2 = h2.replace('aria-label="Close"', 'aria-label="סגירה"')
 h2 = re.sub(r'<h1 class="wm-title">.*?</h1>', '<h1 class="wm-title">' + HE_H1 + '</h1>', h2, count=1)
 if not L10N.HE_PUBLIC: h2 = L10N.ensure_hidden_robots(h2)
 if h2 != h: open(f, 'w', encoding='utf8').write(h2)

@@ -29,7 +29,7 @@ U = {
    h1="Solutions Around the World and in Space Enhancing Our Planet's Health Every Day", spaceJump='Space, Earth-Protecting Satellites', key='Map key', csv='Download the map data (CSV)', listmore='Every solution as a list, including the ones in orbit and worldwide', live='Live Launch Tracker',
    allcat='All', rivers='Rivers', lakes='Lakes', oceans='Oceans', land='Land',
    polar='Polar', defense='Planetary Defense', observe='Earth Observation', weather='Space Weather', disposal='Space Disposal', rawane='Project Rawane', space='Space',
-   byline='Created by the Founder and SI.', earthAlt='Photorealistic flat map of Earth, NASA Blue Marble Next Generation',
+   byline='Created by the Founder and SI.', phoneNote="We're building a better phone view of this map. For now, it's best viewed on an iPad or computer.", phoneClose='Close', earthAlt='Photorealistic flat map of Earth, NASA Blue Marble Next Generation',
    zoomIn='Zoom in', zoomOut='Zoom out', zoomFit='Fit the planet', smallerMap='Smaller map', largerMap='Larger map', mapControls='Map size'),
  'fr': dict(title='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour', desc='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour',
    lead="Touchez une épingle pour voir une solution, où elle agit et un lien vers sa page. Vert : active ; bleu : bientôt ; fusée : prochains lancements depuis ce site.",
@@ -42,7 +42,7 @@ U = {
    h1='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour', spaceJump='Espace, Satellites qui protègent la Terre', key='Légende', csv='Télécharger les données de la carte (CSV)', listmore="Toutes les solutions sous forme de liste, y compris celles en orbite et partout dans le monde", live='Suivi des lancements en direct',
    allcat='Tout', rivers='Rivières', lakes='Lacs', oceans='Océans', land='Terres',
    polar='Pôles', defense='Défense planétaire', observe='Observation de la Terre', weather='Météo spatiale', disposal='Élimination spatiale', rawane='Projet Rawane', space='Espace',
-   byline='Créé par le fondateur et SI.', earthAlt='Carte plate et photoréaliste de la Terre, NASA Blue Marble Next Generation',
+   byline='Créé par le fondateur et SI.', phoneNote="Nous préparons une meilleure vue de cette carte sur téléphone. Pour l'instant, elle se consulte mieux sur un iPad ou un ordinateur.", phoneClose='Fermer', earthAlt='Carte plate et photoréaliste de la Terre, NASA Blue Marble Next Generation',
    zoomIn='Agrandir', zoomOut='Réduire', zoomFit='Ajuster la planète', smallerMap='Carte plus petite', largerMap='Carte plus grande', mapControls='Taille de la carte'),
  'es': dict(title='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día', desc='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día',
    lead='Toca un pin para ver una solución, dónde actúa y un enlace a su página. Verde: activa; azul: próximamente; cohete: próximos lanzamientos desde ese sitio.',
@@ -55,7 +55,7 @@ U = {
    h1='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día', spaceJump='Espacio, Satélites que protegen la Tierra', key='Leyenda', csv='Descargar los datos del mapa (CSV)', listmore='Todas las soluciones en una lista, incluidas las que están en órbita y en todo el mundo', live='Rastreador de lanzamientos en vivo',
    allcat='Todo', rivers='Ríos', lakes='Lagos', oceans='Océanos', land='Tierra',
    polar='Polos', defense='Defensa planetaria', observe='Observación de la Tierra', weather='Clima espacial', disposal='Eliminación espacial', rawane='Proyecto Rawane', space='Espacio',
-   byline='Creado por el fundador y SI.', earthAlt='Mapa plano y fotorrealista de la Tierra, NASA Blue Marble Next Generation',
+   byline='Creado por el fundador y SI.', phoneNote='Estamos preparando una mejor vista de este mapa en el teléfono. Por ahora, se ve mejor en un iPad o en una computadora.', phoneClose='Cerrar', earthAlt='Mapa plano y fotorrealista de la Tierra, NASA Blue Marble Next Generation',
    zoomIn='Acercar', zoomOut='Alejar', zoomFit='Ajustar el planeta', smallerMap='Mapa más pequeño', largerMap='Mapa más grande', mapControls='Tamaño del mapa'),
  'ar': dict(title='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم', desc='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم',
    lead='اضغط على دبوس لترى الحل ومكان عمله ورابط صفحته. الأخضر: يعمل الآن، الأزرق: قريبًا، الصاروخ: الإطلاقات القادمة من ذلك الموقع.',
@@ -68,7 +68,7 @@ U = {
    h1='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم', spaceJump='الفضاء، أقمار تحمي الأرض', key='مفتاح الخريطة', csv='تنزيل بيانات الخريطة (CSV)', listmore='كل الحلول على شكل قائمة، بما فيها الحلول في المدار وحول العالم', live='متتبع الإطلاقات المباشر',
    allcat='الكل', rivers='الأنهار', lakes='البحيرات', oceans='المحيطات', land='اليابسة',
    polar='القطبان', defense='الدفاع الكوكبي', observe='رصد الأرض', weather='طقس الفضاء', disposal='التخلص من الحطام الفضائي', rawane='مشروع Rawane', space='الفضاء',
-   byline='من إعداد المؤسس وSI.', earthAlt='خريطة مسطحة واقعية للأرض، NASA Blue Marble Next Generation',
+   byline='من إعداد المؤسس وSI.', phoneNote='نعمل على عرض أفضل لهذه الخريطة على الهاتف. إلى ذلك الحين، الأفضل مشاهدتها على iPad أو حاسوب.', phoneClose='إغلاق', earthAlt='خريطة مسطحة واقعية للأرض، NASA Blue Marble Next Generation',
    zoomIn='تكبير', zoomOut='تصغير', zoomFit='ملاءمة الكوكب', smallerMap='خريطة أصغر', largerMap='خريطة أكبر', mapControls='حجم الخريطة'),
  'it': dict(title='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta', desc='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta',
    lead='Tocca uno spillo per vedere una soluzione, dove opera e il link alla sua pagina. Verde: attiva; blu: in arrivo; razzo: prossimi lanci da quel sito.',
@@ -81,7 +81,7 @@ U = {
    h1='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta', spaceJump='Spazio, Satelliti che proteggono la Terra', key='Legenda', csv='Scarica i dati della mappa (CSV)', listmore="Tutte le soluzioni in un elenco, comprese quelle in orbita e in tutto il mondo", live='Tracker dei lanci in diretta',
    allcat='Tutte', rivers='Fiumi', lakes='Laghi', oceans='Oceani', land='Terre',
    polar='Poli', defense='Difesa planetaria', observe='Osservazione della Terra', weather='Meteo spaziale', disposal='Smaltimento dei detriti spaziali', rawane='Progetto Rawane', space='Spazio',
-   byline='Creato dal fondatore e da SI.', earthAlt='Mappa piatta e fotorealistica della Terra, NASA Blue Marble Next Generation',
+   byline='Creato dal fondatore e da SI.', phoneNote='Stiamo preparando una vista migliore di questa mappa sul telefono. Per ora si consulta meglio su un iPad o un computer.', phoneClose='Chiudi', earthAlt='Mappa piatta e fotorealistica della Terra, NASA Blue Marble Next Generation',
    zoomIn='Ingrandisci', zoomOut='Riduci', zoomFit='Adatta il pianeta', smallerMap='Mappa più piccola', largerMap='Mappa più grande', mapControls='Dimensione della mappa'),
 }
 
@@ -250,6 +250,8 @@ def page_html(l, data, n_by):
 <label class="wm-tog"><input type="checkbox" id="wm-r" checked> <span class="wm-rk" aria-hidden="true">🚀</span>{esc(u["launches"])}</label>
 <label class="wm-hubsel"><span class="wm-vh">{esc(u["hub"])}</span><select id="wm-hub">{opts}</select></label>
 </div>
+<aside class="wm-phone-note" role="note"><p>{esc(u["phoneNote"])}</p><button type="button" aria-label="{esc(u["phoneClose"])}">×</button></aside>
+<script>(function(){{var n=document.querySelector(".wm-phone-note");if(!n)return;try{{if(localStorage.getItem("sp-wm-phone-note")==="1")n.hidden=true}}catch(e){{}}n.querySelector("button").addEventListener("click",function(){{n.hidden=true;try{{localStorage.setItem("sp-wm-phone-note","1")}}catch(e){{}}}});}})();</script>
 <div class="wm-stage">
 <div id="wm" class="wm-map" dir="ltr" role="region" aria-label="{esc(u["label"])}"></div>
 </div>
