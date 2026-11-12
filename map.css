@@ -95,10 +95,11 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 .wm-m.wm-ice{width:22px;height:22px;border-radius:2px;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 .wm-hero{position:relative;flex:none;height:clamp(320px,48vh,620px);min-height:300px;display:flex;align-items:stretch;justify-content:center;overflow:hidden;color:#fff;border-radius:0}
 .wm-hero-media,.wm-hero-shade{position:absolute;inset:0}
-.wm-hero-media img,.wm-hero-media video{width:100%;height:100%;object-fit:cover;display:block}
+.wm-hero-media img,.wm-hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .wm-hero-shade{background:radial-gradient(ellipse at 50% 58%,rgba(0,8,18,.42),rgba(0,8,18,.18) 55%,rgba(0,8,18,.5)),linear-gradient(180deg,rgba(0,10,22,.35),rgba(0,10,22,.28) 40%,rgba(0,10,22,.55));z-index:1}
 .wm-hero-content{position:relative;z-index:2;padding:calc(var(--wm-navh) + .4rem) 1rem 1.8rem;text-align:center;height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
-.wm-hero .wm-title{font-size:clamp(1.35rem,2.2vw,2.15rem);text-shadow:0 2px 14px rgba(0,0,0,.75)}
+.wm-hero .wm-title{flex:0 1 auto;min-width:0;width:min(18em,100%);max-width:100%;margin-inline:auto;text-align:center;text-wrap:balance;font-size:clamp(1.35rem,2.2vw,2.15rem);line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.75)}
+[dir=rtl] .wm-hero .wm-title,[dir=rtl] .wm-hero-content{text-align:center}
 .wm-hero .hero-video-credit{position:absolute;z-index:2;bottom:.35rem;inset-inline-start:.55rem;margin:0;max-width:min(36rem,calc(100% - 1.2rem));font-size:.75rem;line-height:1.3;color:#f4fbff;text-shadow:0 1px 4px rgba(0,0,0,.8)}
 .wm-hero .hero-video-credit a{color:#fff}
 @media (prefers-reduced-motion:reduce){.wm-hero-media video.wm-hero-video{display:none !important}}
@@ -134,7 +135,14 @@ a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .sat-list button{background:none;border:0;color:#9fd4ff;font:inherit;text-align:start;cursor:pointer;padding:.15rem 0}
 @media (max-width:800px){.sat-layout.has-card{grid-template-columns:1fr}.sat-stage{height:72vw;min-height:280px}}
 @media (prefers-reduced-motion:reduce){.orb-svg *{animation:none!important}}
-.leaflet-popup-content{margin:.7rem .9rem;font-size:.95rem;line-height:1.4;min-width:210px;color:#10202c}
+.wm-pop-host{position:fixed;inset:0;z-index:1102;pointer-events:none;overflow:visible}
+.wm-pop-host .leaflet-popup{position:fixed;margin:0;pointer-events:auto;transform:none !important}
+.wm-pop-host .leaflet-popup-content-wrapper{max-height:min(70vh,480px);overflow:auto}
+.wm-pop-host .leaflet-popup-tip-container{display:none}
+.wm-pop-host .wm-pop-sheet{left:10px !important;right:10px !important;bottom:10px !important;top:auto !important;width:auto !important;max-width:none !important}
+.wm-pop-host .wm-pop-sheet .leaflet-popup-content-wrapper{max-height:min(54vh,440px)}
+[dir=rtl] .wm-pop-host .leaflet-popup-close-button,.wm-pop-host[dir=rtl] .leaflet-popup-close-button{right:auto;left:0}
+.leaflet-popup-content{margin:.7rem .9rem;font-size:.95rem;line-height:1.4;min-width:0;max-width:min(300px,calc(100vw - 36px));color:#10202c}
 .leaflet-popup-content .wm-pop p{margin:.25rem 0}
 .wm-pop-h{font-weight:700;font-size:1.05rem}
 .wm-pop-hub,.wm-pop-loc{font-size:.88rem;opacity:.85}
