@@ -14,7 +14,7 @@
    canvases sized by devicePixelRatio. Pauses when hidden/offscreen; prefers-reduced-motion = one still frame. */
 (function () {
   'use strict';
-  var hero = document.querySelector('.hero[data-hero]');
+  var hero = document.querySelector('.wm-hero[data-hero]') || document.querySelector('.hero[data-hero]');
   if (!hero || hero.getAttribute('data-hero') !== 'space') return;
   var box = hero.querySelector('.hero-space');
   if (!box || !window.HTMLCanvasElement) return;
