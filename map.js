@@ -46,6 +46,93 @@
     var ui = D.ui || {}, lang = D.lang || 'en';
     var map = L.map(mapEl, { crs: L.CRS.EPSG4326, scrollWheelZoom: true, touchZoom: true, tapTolerance: 20, worldCopyJump: false, minZoom: -2, maxZoom: 5, zoomSnap: 0.25, zoomControl: false, attributionControl: false, maxBounds: [[-90, -180], [90, 180]], maxBoundsViscosity: 0.9 });
     window.wmMap = map; // Oct 28: polar-mascots.js pans to the poles
+    var popHost = document.createElement('div');
+    popHost.className = 'wm-pop-host';
+    popHost.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+    document.body.appendChild(popHost);
+    var POP = { autoPan: false, keepInView: false, maxWidth: 300, minWidth: 180, className: 'wm-pop-card' };
+    function placeCard(popup) {
+      var el = popup && popup.getElement && popup.getElement();
+      if (!el || !popup.isOpen()) return;
+      if (el.parentNode !== popHost) popHost.appendChild(el);
+      var ll = popup.getLatLng();
+      var pt = map.latLngToContainerPoint(ll);
+      var mapRect = map.getContainer().getBoundingClientRect();
+      var ax = mapRect.left + pt.x, ay = mapRect.top + pt.y;
+      var pad = 12, vw = window.innerWidth, vh = window.innerHeight;
+      var navEl = document.getElementById('topnav');
+      var navBottom = navEl ? navEl.getBoundingClientRect().bottom : 0;
+      el.style.position = 'fixed';
+      el.style.margin = '0';
+      el.style.transform = 'none';
+      if (vw < 720) {
+        el.classList.add('wm-pop-sheet');
+        el.style.left = pad + 'px';
+        el.style.right = pad + 'px';
+        el.style.bottom = pad + 'px';
+        el.style.top = 'auto';
+        el.style.width = 'auto';
+        return;
+      }
+      el.classList.remove('wm-pop-sheet');
+      el.style.right = 'auto';
+      el.style.bottom = 'auto';
+      el.style.width = '';
+      el.style.left = '0px';
+      el.style.top = '0px';
+      var w = el.offsetWidth, h = el.offsetHeight;
+      var view = { l: pad, t: Math.max(pad, navBottom + 8), r: vw - pad, b: vh - pad };
+      var mapBox = {
+        l: Math.max(view.l, mapRect.left + pad),
+        t: Math.max(view.t, mapRect.top + pad),
+        r: Math.min(view.r, mapRect.right - pad),
+        b: Math.min(view.b, mapRect.bottom - pad)
+      };
+      var box = (w <= mapBox.r - mapBox.l && h <= mapBox.b - mapBox.t) ? mapBox : view;
+      var gap = 16;
+      var spots = [
+        { x: ax - w / 2, y: ay - h - gap },
+        { x: ax - w / 2, y: ay + gap },
+        { x: ax - w - gap, y: ay - h / 2 },
+        { x: ax + gap, y: ay - h / 2 }
+      ];
+      function spill(c) {
+        var o = 0;
+        if (c.x < box.l) o += box.l - c.x;
+        if (c.y < box.t) o += box.t - c.y;
+        if (c.x + w > box.r) o += c.x + w - box.r;
+        if (c.y + h > box.b) o += c.y + h - box.b;
+        return o;
+      }
+      var best = spots[0], bestO = spill(spots[0]);
+      for (var i = 1; i < spots.length; i++) {
+        var o = spill(spots[i]);
+        if (o < bestO) { best = spots[i]; bestO = o; }
+      }
+      var x = best.x, y = best.y;
+      if (x < box.l) x = box.l;
+      if (y < box.t) y = box.t;
+      if (x + w > box.r) x = Math.max(box.l, box.r - w);
+      if (y + h > box.b) y = Math.max(box.t, box.b - h);
+      el.style.left = Math.round(x) + 'px';
+      el.style.top = Math.round(y) + 'px';
+    }
+    function ownPopup(popup) {
+      if (!popup || popup._wmPlace) return;
+      popup._wmPlace = true;
+      popup._updatePosition = function () { placeCard(popup); };
+    }
+    map.on('popupopen', function (e) {
+      ownPopup(e.popup);
+      placeCard(e.popup);
+      requestAnimationFrame(function () { if (e.popup.isOpen()) placeCard(e.popup); });
+    });
+    map.on('move zoom resize', function () {
+      if (map._popup && map._popup.isOpen()) placeCard(map._popup);
+    });
+    window.addEventListener('resize', function () {
+      if (map._popup && map._popup.isOpen()) placeCard(map._popup);
+    });
     L.control.attribution({ position: rtl ? 'bottomright' : 'bottomleft', prefix: false })
       .addAttribution('<a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth / Blue Marble</a>').addTo(map);
     var WORLD = L.latLngBounds([-90, -180], [90, 180]), moved = false;
@@ -156,7 +243,7 @@
             orbit = '<p><span class="sat-k">' + esc(satUi.helps || '') + '</span> ' + esc(hit.helps || '') + '</p><p><a class="wm-orbit-link" href="' + esc(pre) + 'Space.html#sat-' + esc(hit.id) + '">' + esc(satUi.viewOrbit) + '</a></p>';
           }
           return '<div class="wm-pop"><p class="wm-pop-h">' + esc(s.n) + '</p><p class="wm-pop-hub"><span class="wm-badge wm-' + (k === 'a' ? 'active' : 'upcoming') + '">' + esc(k === 'a' ? ui.active : ui.upcoming) + '</span> ' + esc(s.hn) + '</p>' + catLine + '<p>' + esc(s.s) + '</p><p class="wm-pop-loc">📍 ' + esc(p.label) + esc(basis) + '</p><p><a href="' + esc(s.u) + '">' + esc(ui.read || 'Read more') + ' →</a></p>' + orbit + '</div>';
-        });
+        }, POP);
         m._k = k; m._h = s.h; m._c = s.c || ''; all.push(m); groups[k].addLayer(m);
       });
     });
@@ -165,7 +252,7 @@
       rmk.forEach(function (m) { groups.r.removeLayer(m); }); rmk = [];
       sites.forEach(function (st) {
         var m = L.marker([st.lat, st.lng], { icon: I.r, title: st.name, alt: st.name, zIndexOffset: 500 });
-        m.bindPopup(function () { return rocketHtml(st); }); m._k = 'r'; rmk.push(m); groups.r.addLayer(m);
+        m.bindPopup(function () { return rocketHtml(st); }, POP); m._k = 'r'; rmk.push(m); groups.r.addLayer(m);
       });
     }
     function rocketHtml(st) {
