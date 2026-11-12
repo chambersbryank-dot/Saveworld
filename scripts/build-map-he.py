@@ -42,6 +42,8 @@ tpl = M.get('Our {n} solutions around the world')
 if tpl and n_sol:
     h2 = re.sub(r'Our \d+ solutions around the world', lambda m: tpl.replace('{n}', str(n_sol)), h2)
     h2 = re.sub(r'\d+ הפתרונות שלנו ברחבי העולם', lambda m: tpl.replace('{n}', str(n_sol)), h2)
+HE_H1 = 'פתרונות ברחבי העולם ובחלל שמשפרים את בריאות כוכב הלכת שלנו בכל יום'
+h2 = re.sub(r'<h1 class="wm-title">.*?</h1>', '<h1 class="wm-title">' + HE_H1 + '</h1>', h2, count=1)
 if not L10N.HE_PUBLIC: h2 = L10N.ensure_hidden_robots(h2)
 if h2 != h: open(f, 'w', encoding='utf8').write(h2)
 ui = d['ui']; print('build-map-he: ui', sum(1 for v in ui.values() if re.search('[\u0590-\u05ff]', v)), '/', len(ui),
