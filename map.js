@@ -44,10 +44,8 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function boot(D) {
     var ui = D.ui || {}, lang = D.lang || 'en';
-    var map = L.map(mapEl, { crs: L.CRS.EPSG4326, scrollWheelZoom: false, tapTolerance: 20, worldCopyJump: false, minZoom: -2, maxZoom: 5, zoomSnap: 0.25, zoomControl: false, attributionControl: false, maxBounds: [[-90, -180], [90, 180]], maxBoundsViscosity: 0.9 });
+    var map = L.map(mapEl, { crs: L.CRS.EPSG4326, scrollWheelZoom: true, touchZoom: true, tapTolerance: 20, worldCopyJump: false, minZoom: -2, maxZoom: 5, zoomSnap: 0.25, zoomControl: false, attributionControl: false, maxBounds: [[-90, -180], [90, 180]], maxBoundsViscosity: 0.9 });
     window.wmMap = map; // Oct 28: polar-mascots.js pans to the poles
-    // controls away from the floating Help button (bottom inline-end)
-    L.control.zoom({ position: rtl ? 'topright' : 'topleft' }).addTo(map);
     L.control.attribution({ position: rtl ? 'bottomright' : 'bottomleft', prefix: false })
       .addAttribution('<a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth / Blue Marble</a>').addTo(map);
     var WORLD = L.latLngBounds([-90, -180], [90, 180]), moved = false;
@@ -65,25 +63,100 @@
     function tuneEarth() {
       var img = earth.getElement(); if (!img) return;
       var ext = webpOk ? 'webp' : 'jpg';
+      var cssW = mapEl.clientWidth || 800;
+      var scale = 1;
+      try {
+        var fitZ = map.getBoundsZoom(pinBounds(), false);
+        scale = Math.pow(2, map.getZoom() - fitZ);
+      } catch (e) {}
+      var need = cssW * Math.min(window.devicePixelRatio || 1, 2) * Math.max(1, scale);
+      var pick = 4096;
+      for (var i = 0; i < SIZES.length; i++) if (SIZES[i] >= need) { pick = SIZES[i]; break; }
+      if (cssW >= 1000 || scale > 1.05) pick = 4096;
       img.setAttribute('srcset', SIZES.map(function (n) { return earthFile(ext, n) + ' ' + n + 'w'; }).join(', '));
-      img.setAttribute('sizes', Math.max(1, Math.round(mapEl.clientWidth || 800)) + 'px');
+      img.setAttribute('sizes', (pick >= 1920 ? 4096 : Math.round(cssW * Math.max(1, scale))) + 'px');
+      if (pick >= 1920) img.src = earthFile(ext, 4096);
       img.decoding = 'async';
-      img.loading = 'lazy';
       if (ui.earthAlt) img.alt = ui.earthAlt;
     }
     earth.on('add', tuneEarth);
     tuneEarth();
-    map.on('resize', tuneEarth);
-    mapEl.addEventListener('click', function () { map.scrollWheelZoom.enable(); });
-    mapEl.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
+    map.on('resize zoomend', tuneEarth);
+    function pinBounds() {
+      var b = L.latLngBounds([]);
+      all.forEach(function (m) { b.extend(m.getLatLng()); });
+      rmk.forEach(function (m) { b.extend(m.getLatLng()); });
+      return b.isValid() ? b : WORLD;
+    }
+    function fitPlanet() {
+      fitting = true;
+      map.invalidateSize();
+      map.fitBounds(pinBounds(), { padding: [18, 18], animate: false, maxZoom: 4 });
+      moved = false;
+      fitting = false;
+      tuneEarth();
+    }
+    var zbar = document.createElement('div');
+    zbar.className = 'wm-zoom';
+    zbar.setAttribute('role', 'group');
+    zbar.setAttribute('aria-label', ui.mapControls || 'Map size');
+    function zbtn(label, cls) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = cls || '';
+      b.textContent = label;
+      return b;
+    }
+    var zin = zbtn(ui.zoomIn || 'Zoom in');
+    var zout = zbtn(ui.zoomOut || 'Zoom out');
+    var zfit = zbtn(ui.zoomFit || 'Fit the planet');
+    var zsize = zbtn(ui.smallerMap || 'Smaller map', 'wm-zsize');
+    zin.setAttribute('aria-label', ui.zoomIn || 'Zoom in');
+    zout.setAttribute('aria-label', ui.zoomOut || 'Zoom out');
+    zfit.setAttribute('aria-label', ui.zoomFit || 'Fit the planet');
+    zsize.setAttribute('aria-pressed', 'false');
+    zsize.setAttribute('aria-label', ui.smallerMap || 'Smaller map');
+    zin.textContent = '+';
+    zout.textContent = '−';
+    zfit.textContent = '⌂';
+    [zin, zout, zfit, zsize].forEach(function (b) { zbar.appendChild(b); });
+    mapEl.parentElement.appendChild(zbar);
+    zin.addEventListener('click', function () { map.zoomIn(); });
+    zout.addEventListener('click', function () { map.zoomOut(); });
+    zfit.addEventListener('click', function () { fitPlanet(); });
+    zsize.addEventListener('click', function () {
+      var screen = document.querySelector('.wm-screen');
+      var on = !screen.classList.contains('is-compact');
+      screen.classList.toggle('is-compact', on);
+      var label = on ? (ui.largerMap || 'Larger map') : (ui.smallerMap || 'Smaller map');
+      zsize.setAttribute('aria-pressed', on ? 'true' : 'false');
+      zsize.textContent = label;
+      zsize.setAttribute('aria-label', label);
+      setTimeout(fitPlanet, 40);
+    });
     var groups = { a: L.layerGroup().addTo(map), u: L.layerGroup().addTo(map), r: L.layerGroup().addTo(map) }, all = [];
+    var satByPage = {}, satUi = {};
+    var satSrc = (wrap.getAttribute('data-src') || '').replace(/map\.([a-z]+)\.json[^"']*/, 'sat-view.$1.json');
+    fetch(satSrc, { credentials: 'omit' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (S) {
+      if (!S) return;
+      satUi = S.ui || {};
+      (S.sats || []).forEach(function (s) { if (s.page) satByPage[String(s.page).split('/').pop()] = s; });
+    }).catch(function () {});
     (D.sols || []).forEach(function (s) {
       var k = s.st === 'upcoming' ? 'u' : 'a';
       (s.p || []).forEach(function (p) {
         var basis = p.basis === 'hq' ? ' (' + (ui.basis_hq || 'HQ') + ')' : '';
         var m = L.marker([p.lat, p.lng], { icon: (s.c && IC[s.c]) || I[k], title: s.n, alt: s.n });
         var catLine = s.c && ui[CN[s.c]] ? '<p class="wm-pop-cat">' + esc(ui[CN[s.c]]) + '</p>' : '';
-        m.bindPopup('<div class="wm-pop"><p class="wm-pop-h">' + esc(s.n) + '</p><p class="wm-pop-hub"><span class="wm-badge wm-' + (k === 'a' ? 'active' : 'upcoming') + '">' + esc(k === 'a' ? ui.active : ui.upcoming) + '</span> ' + esc(s.hn) + '</p>' + catLine + '<p>' + esc(s.s) + '</p><p class="wm-pop-loc">📍 ' + esc(p.label) + esc(basis) + '</p><p><a href="' + esc(s.u) + '">' + esc(ui.read || 'Read more') + ' →</a></p></div>');
+        m.bindPopup(function () {
+          var page = String(s.u || '').split('/').pop();
+          var hit = satByPage[page];
+          var orbit = '';
+          if (hit && satUi.viewOrbit) {
+            orbit = '<p><span class="sat-k">' + esc(satUi.helps || '') + '</span> ' + esc(hit.helps || '') + '</p><p><a class="wm-orbit-link" href="' + esc(pre) + 'Space.html#sat-' + esc(hit.id) + '">' + esc(satUi.viewOrbit) + '</a></p>';
+          }
+          return '<div class="wm-pop"><p class="wm-pop-h">' + esc(s.n) + '</p><p class="wm-pop-hub"><span class="wm-badge wm-' + (k === 'a' ? 'active' : 'upcoming') + '">' + esc(k === 'a' ? ui.active : ui.upcoming) + '</span> ' + esc(s.hn) + '</p>' + catLine + '<p>' + esc(s.s) + '</p><p class="wm-pop-loc">📍 ' + esc(p.label) + esc(basis) + '</p><p><a href="' + esc(s.u) + '">' + esc(ui.read || 'Read more') + ' →</a></p>' + orbit + '</div>';
+        });
         m._k = k; m._h = s.h; m._c = s.c || ''; all.push(m); groups[k].addLayer(m);
       });
     });
@@ -164,6 +237,6 @@
     });
     ['wm-hub', 'wm-a', 'wm-u', 'wm-r'].forEach(function (id) { document.getElementById(id).addEventListener('change', apply); });
     window.spWorldMap = { map: map, count: function () { var c = { a: 0, u: 0, r: 0 }; ['a', 'u', 'r'].forEach(function (k) { c[k] = groups[k].getLayers().length; }); return c; } };
-    setTimeout(function () { fitting = true; fit(); fitting = false; }, 250);
+    setTimeout(fitPlanet, 250);
   }
 })();
