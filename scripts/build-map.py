@@ -18,7 +18,7 @@ LANGS = ['en'] + [l for l in ['fr', 'es', 'ar', 'it'] if os.path.exists(f'{l}/So
 d = lambda l: '' if l == 'en' else l + '/'
 
 U = {
- 'en': dict(title='World Solutions Map', desc='An interactive world map of every Saving Planets solution: green pins are working now, blue pins are coming soon, and rocket pins show upcoming launches.',
+ 'en': dict(title="Solutions Around the World and in Space Enhancing Our Planet's Health Every Day", desc="Solutions Around the World and in Space Enhancing Our Planet's Health Every Day",
    lead='Tap a pin to see a solution, where it works and a link to its page. Green pins are active now, blue pins are coming soon, and rocket pins list the next launches from that site.',
    active='Active now', upcoming='Coming soon', rocket='Launch site', hub='Hub', allhubs='All hubs', launches='Launches', show='Show',
    orbit='From Orbit', orbitintro='These solutions work in space, so they have no single place on Earth. Pins mark a launch site only when the solution page names it.',
@@ -26,12 +26,12 @@ U = {
    list='Map as a list', listintro='The same information as the map, for screen readers and keyboards.', read='Read more',
    next='Upcoming launches', none='No launches scheduled', tbd='date to be confirmed', src='Launch data: The Space Devs Launch Library 2 (same feed as our Live Launch Tracker). Launches by Russia, China and North Korea are not shown.',
    basis_hq='headquarters', basis_launch='launch site', pins='{t} solutions: {g} active · {b} coming soon · {r} launch sites', label='Interactive world map of solutions and launch sites',
-   h1='Our {n} solutions around the world', key='Map key', csv='Download the map data (CSV)', listmore='Every solution as a list, including the ones in orbit and worldwide', live='Live Launch Tracker',
+   h1="Solutions Around the World and in Space Enhancing Our Planet's Health Every Day", spaceJump='Space, Earth-Protecting Satellites', key='Map key', csv='Download the map data (CSV)', listmore='Every solution as a list, including the ones in orbit and worldwide', live='Live Launch Tracker',
    allcat='All', rivers='Rivers', lakes='Lakes', oceans='Oceans', land='Land',
    polar='Polar', defense='Planetary Defense', observe='Earth Observation', weather='Space Weather', disposal='Space Disposal', rawane='Project Rawane', space='Space',
    byline='Created by the Founder and SI.', earthAlt='Photorealistic flat map of Earth, NASA Blue Marble Next Generation',
    zoomIn='Zoom in', zoomOut='Zoom out', zoomFit='Fit the planet', smallerMap='Smaller map', largerMap='Larger map', mapControls='Map size'),
- 'fr': dict(title='Carte mondiale des solutions', desc="Une carte interactive de toutes les solutions de Saving Planets : épingles vertes pour celles qui agissent déjà, bleues pour celles à venir, et fusées pour les prochains lancements.",
+ 'fr': dict(title='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour', desc='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour',
    lead="Touchez une épingle pour voir une solution, où elle agit et un lien vers sa page. Vert : active ; bleu : bientôt ; fusée : prochains lancements depuis ce site.",
    active='Active', upcoming='Bientôt', rocket='Site de lancement', hub='Pôle', allhubs='Tous les pôles', launches='Lancements', show='Afficher',
    orbit="Depuis l'orbite", orbitintro="Ces solutions agissent dans l'espace et n'ont pas de lieu unique sur Terre. Une épingle marque le site de lancement seulement quand la page le nomme.",
@@ -39,12 +39,12 @@ U = {
    list='La carte sous forme de liste', listintro="Les mêmes informations que la carte, pour les lecteurs d'écran et le clavier.", read='En savoir plus',
    next='Prochains lancements', none='Aucun lancement prévu', tbd='date à confirmer', src="Données de lancement : The Space Devs Launch Library 2 (la même source que notre suivi des lancements). Les lancements de la Russie, de la Chine et de la Corée du Nord ne sont pas affichés.",
    basis_hq='siège', basis_launch='site de lancement', pins='{t} solutions : {g} actives · {b} bientôt · {r} sites de lancement', label='Carte mondiale interactive des solutions et des sites de lancement',
-   h1='Nos {n} solutions à travers le monde', key='Légende', csv='Télécharger les données de la carte (CSV)', listmore="Toutes les solutions sous forme de liste, y compris celles en orbite et partout dans le monde", live='Suivi des lancements en direct',
+   h1='Des solutions dans le monde et dans l’espace qui améliorent la santé de notre planète chaque jour', spaceJump='Espace, Satellites qui protègent la Terre', key='Légende', csv='Télécharger les données de la carte (CSV)', listmore="Toutes les solutions sous forme de liste, y compris celles en orbite et partout dans le monde", live='Suivi des lancements en direct',
    allcat='Tout', rivers='Rivières', lakes='Lacs', oceans='Océans', land='Terres',
    polar='Pôles', defense='Défense planétaire', observe='Observation de la Terre', weather='Météo spatiale', disposal='Élimination spatiale', rawane='Projet Rawane', space='Espace',
    byline='Créé par le fondateur et SI.', earthAlt='Carte plate et photoréaliste de la Terre, NASA Blue Marble Next Generation',
    zoomIn='Agrandir', zoomOut='Réduire', zoomFit='Ajuster la planète', smallerMap='Carte plus petite', largerMap='Carte plus grande', mapControls='Taille de la carte'),
- 'es': dict(title='Mapa mundial de soluciones', desc='Un mapa interactivo de todas las soluciones de Saving Planets: pines verdes para las que ya funcionan, azules para las que llegan pronto y cohetes para los próximos lanzamientos.',
+ 'es': dict(title='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día', desc='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día',
    lead='Toca un pin para ver una solución, dónde actúa y un enlace a su página. Verde: activa; azul: próximamente; cohete: próximos lanzamientos desde ese sitio.',
    active='Activa', upcoming='Próximamente', rocket='Sitio de lanzamiento', hub='Centro', allhubs='Todos los centros', launches='Lanzamientos', show='Mostrar',
    orbit='Desde la órbita', orbitintro='Estas soluciones actúan en el espacio y no tienen un único lugar en la Tierra. Un pin marca el sitio de lanzamiento solo cuando la página lo nombra.',
@@ -52,12 +52,12 @@ U = {
    list='El mapa como lista', listintro='La misma información que el mapa, para lectores de pantalla y teclado.', read='Leer más',
    next='Próximos lanzamientos', none='No hay lanzamientos programados', tbd='fecha por confirmar', src='Datos de lanzamientos: The Space Devs Launch Library 2 (la misma fuente que nuestro rastreador de lanzamientos). No se muestran lanzamientos de Rusia, China ni Corea del Norte.',
    basis_hq='sede', basis_launch='sitio de lanzamiento', pins='{t} soluciones: {g} activas · {b} próximamente · {r} sitios de lanzamiento', label='Mapa mundial interactivo de soluciones y sitios de lanzamiento',
-   h1='Nuestras {n} soluciones en todo el mundo', key='Leyenda', csv='Descargar los datos del mapa (CSV)', listmore='Todas las soluciones en una lista, incluidas las que están en órbita y en todo el mundo', live='Rastreador de lanzamientos en vivo',
+   h1='Soluciones en todo el mundo y en el espacio que mejoran la salud de nuestro planeta cada día', spaceJump='Espacio, Satélites que protegen la Tierra', key='Leyenda', csv='Descargar los datos del mapa (CSV)', listmore='Todas las soluciones en una lista, incluidas las que están en órbita y en todo el mundo', live='Rastreador de lanzamientos en vivo',
    allcat='Todo', rivers='Ríos', lakes='Lagos', oceans='Océanos', land='Tierra',
    polar='Polos', defense='Defensa planetaria', observe='Observación de la Tierra', weather='Clima espacial', disposal='Eliminación espacial', rawane='Proyecto Rawane', space='Espacio',
    byline='Creado por el fundador y SI.', earthAlt='Mapa plano y fotorrealista de la Tierra, NASA Blue Marble Next Generation',
    zoomIn='Acercar', zoomOut='Alejar', zoomFit='Ajustar el planeta', smallerMap='Mapa más pequeño', largerMap='Mapa más grande', mapControls='Tamaño del mapa'),
- 'ar': dict(title='خريطة الحلول حول العالم', desc='خريطة تفاعلية لكل حلول Saving Planets: الدبابيس الخضراء لحلول تعمل الآن، والزرقاء لحلول قادمة قريبًا، والصواريخ لعمليات الإطلاق القادمة.',
+ 'ar': dict(title='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم', desc='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم',
    lead='اضغط على دبوس لترى الحل ومكان عمله ورابط صفحته. الأخضر: يعمل الآن، الأزرق: قريبًا، الصاروخ: الإطلاقات القادمة من ذلك الموقع.',
    active='يعمل الآن', upcoming='قريبًا', rocket='موقع إطلاق', hub='المركز', allhubs='كل المراكز', launches='الإطلاقات', show='عرض',
    orbit='من المدار', orbitintro='تعمل هذه الحلول في الفضاء، فليس لها مكان واحد على الأرض. يظهر دبوس موقع الإطلاق فقط عندما تذكره صفحة الحل.',
@@ -65,12 +65,12 @@ U = {
    list='الخريطة على شكل قائمة', listintro='المعلومات نفسها الموجودة في الخريطة، لقارئات الشاشة ولوحة المفاتيح.', read='اقرأ المزيد',
    next='الإطلاقات القادمة', none='لا توجد إطلاقات مجدولة', tbd='الموعد لم يتأكد بعد', src='بيانات الإطلاق: The Space Devs Launch Library 2 (المصدر نفسه لمتتبع الإطلاقات لدينا). لا تُعرض إطلاقات روسيا والصين وكوريا الشمالية.',
    basis_hq='المقر', basis_launch='موقع الإطلاق', pins='{t} حلًا: {g} يعمل الآن · {b} قريبًا · {r} مواقع إطلاق', label='خريطة عالمية تفاعلية للحلول ومواقع الإطلاق',
-   h1='حلولنا الـ{n} حول العالم', key='مفتاح الخريطة', csv='تنزيل بيانات الخريطة (CSV)', listmore='كل الحلول على شكل قائمة، بما فيها الحلول في المدار وحول العالم', live='متتبع الإطلاقات المباشر',
+   h1='حلول حول العالم وفي الفضاء تعزز صحة كوكبنا كل يوم', spaceJump='الفضاء، أقمار تحمي الأرض', key='مفتاح الخريطة', csv='تنزيل بيانات الخريطة (CSV)', listmore='كل الحلول على شكل قائمة، بما فيها الحلول في المدار وحول العالم', live='متتبع الإطلاقات المباشر',
    allcat='الكل', rivers='الأنهار', lakes='البحيرات', oceans='المحيطات', land='اليابسة',
    polar='القطبان', defense='الدفاع الكوكبي', observe='رصد الأرض', weather='طقس الفضاء', disposal='التخلص من الحطام الفضائي', rawane='مشروع Rawane', space='الفضاء',
    byline='من إعداد المؤسس وSI.', earthAlt='خريطة مسطحة واقعية للأرض، NASA Blue Marble Next Generation',
    zoomIn='تكبير', zoomOut='تصغير', zoomFit='ملاءمة الكوكب', smallerMap='خريطة أصغر', largerMap='خريطة أكبر', mapControls='حجم الخريطة'),
- 'it': dict(title='Mappa mondiale delle soluzioni', desc='Una mappa interattiva di tutte le soluzioni di Saving Planets: spilli verdi per quelle già attive, blu per quelle in arrivo e razzi per i prossimi lanci.',
+ 'it': dict(title='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta', desc='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta',
    lead='Tocca uno spillo per vedere una soluzione, dove opera e il link alla sua pagina. Verde: attiva; blu: in arrivo; razzo: prossimi lanci da quel sito.',
    active='Attiva', upcoming='In arrivo', rocket='Sito di lancio', hub='Polo', allhubs='Tutti i poli', launches='Lanci', show='Mostra',
    orbit="Dall'orbita", orbitintro="Queste soluzioni operano nello spazio e non hanno un unico luogo sulla Terra. Uno spillo indica il sito di lancio solo quando la pagina lo nomina.",
@@ -78,7 +78,7 @@ U = {
    list='La mappa come elenco', listintro='Le stesse informazioni della mappa, per lettori di schermo e tastiera.', read='Scopri di più',
    next='Prossimi lanci', none='Nessun lancio in programma', tbd='data da confermare', src='Dati sui lanci: The Space Devs Launch Library 2 (la stessa fonte del nostro tracker dei lanci). I lanci di Russia, Cina e Corea del Nord non sono mostrati.',
    basis_hq='sede', basis_launch='sito di lancio', pins='{t} soluzioni: {g} attive · {b} in arrivo · {r} siti di lancio', label='Mappa mondiale interattiva di soluzioni e siti di lancio',
-   h1='Le nostre {n} soluzioni nel mondo', key='Legenda', csv='Scarica i dati della mappa (CSV)', listmore="Tutte le soluzioni in un elenco, comprese quelle in orbita e in tutto il mondo", live='Tracker dei lanci in diretta',
+   h1='Soluzioni in tutto il mondo e nello spazio che migliorano ogni giorno la salute del nostro pianeta', spaceJump='Spazio, Satelliti che proteggono la Terra', key='Legenda', csv='Scarica i dati della mappa (CSV)', listmore="Tutte le soluzioni in un elenco, comprese quelle in orbita e in tutto il mondo", live='Tracker dei lanci in diretta',
    allcat='Tutte', rivers='Fiumi', lakes='Laghi', oceans='Oceani', land='Terre',
    polar='Poli', defense='Difesa planetaria', observe='Osservazione della Terra', weather='Meteo spaziale', disposal='Smaltimento dei detriti spaziali', rawane='Progetto Rawane', space='Spazio',
    byline='Creato dal fondatore e da SI.', earthAlt='Mappa piatta e fotorealistica della Terra, NASA Blue Marble Next Generation',
@@ -215,11 +215,12 @@ def page_html(l, data, n_by):
 <div class="wm-wrap" data-lang="{l}" data-src="{pre}assets/data/map.{l}.json?v={ASSETV}">
 <div class="wm-screen">
 <section class="wm-hero has-video">
-<div class="wm-hero-media" aria-hidden="true"><img class="wm-hero-still" src="{pre}assets/earth/world-map-hero.jpg" alt="" width="1280" height="640"><video class="wm-hero-video" muted loop playsinline poster="{pre}assets/earth/world-map-hero.jpg" width="1280" height="640" preload="none"><source data-src="{pre}assets/earth/world-map-hero.webm" type="video/webm"><source data-src="{pre}assets/earth/world-map-hero.mp4" type="video/mp4"></video><div class="wm-hero-shade"></div></div>
+<div class="wm-hero-media" aria-hidden="true"><img class="wm-hero-still" src="{pre}assets/earth/world-map-hero.jpg" alt="" width="1920" height="1080"><video class="wm-hero-video" muted loop playsinline poster="{pre}assets/earth/world-map-hero.jpg" width="1920" height="1080" preload="none"><source data-src="{pre}assets/earth/world-map-hero-2560.webm" type="video/webm" media="(min-width: 1600px)"><source data-src="{pre}assets/earth/world-map-hero-1920.webm" type="video/webm"><source data-src="{pre}assets/earth/world-map-hero-2560.mp4" type="video/mp4" media="(min-width: 1600px)"><source data-src="{pre}assets/earth/world-map-hero-1920.mp4" type="video/mp4"></video><div class="wm-hero-shade"></div></div>
 <div class="wm-hero-content"><h1 class="wm-title">{esc(u["h1"].format(n=n_sol))}</h1></div>
-<p class="hero-video-credit"><a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth / Blue Marble</a>. {esc(u["byline"])}</p>
+<p class="hero-video-credit"><a href="https://sdo.gsfc.nasa.gov/">NASA/SDO</a> / <a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth</a> / <a href="https://svs.gsfc.nasa.gov/4720/">NASA LRO-SVS</a>; {esc(u["byline"])}</p>
 </section>
-<script>(function(){{var v=document.querySelector(".wm-hero-video");if(!v)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");if((rm&&rm.matches)||(navigator.connection&&navigator.connection.saveData))return;[].forEach.call(v.querySelectorAll("source"),function(s){{if(!s.getAttribute("src")&&s.dataset.src)s.src=s.dataset.src;}});v.preload="auto";var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){{}});}})();</script>
+<p class="wm-space-jump-wrap"><a class="wm-space-jump" href="Space.html#satmap" aria-label="{esc(u["spaceJump"])}">{esc(u["space"])}</a></p>
+<script>(function(){{var root=document.documentElement;var cols=[[70,170,255],[255,118,36],[190,208,232]];var keys=[[0,0],[0.35,0],[1.5,1],[2.55,1],[3.4,0],[3.65,0],[4.3,2],[4.65,2],[5,0]];function sm(a,b,t){{var u=(t-a)/(b-a);if(u<0)u=0;else if(u>1)u=1;return u*u*(3-2*u);}}function glow(t){{t=((t%5)+5)%5;var i=0;for(var k=0;k<keys.length-1;k++)if(t>=keys[k][0])i=k;var a=keys[i],b=keys[Math.min(i+1,keys.length-1)],u=sm(a[0],b[0],t),c1=cols[a[1]],c2=cols[b[1]];root.style.setProperty("--wm-glow","rgba("+Math.round(c1[0]+(c2[0]-c1[0])*u)+","+Math.round(c1[1]+(c2[1]-c1[1])*u)+","+Math.round(c1[2]+(c2[2]-c1[2])*u)+",.78)");}}glow(0);var v=document.querySelector(".wm-hero-video");if(!v)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");if((rm&&rm.matches)||(navigator.connection&&navigator.connection.saveData))return;[].forEach.call(v.querySelectorAll("source"),function(s){{if(!s.getAttribute("src")&&s.dataset.src)s.src=s.dataset.src;}});v.load();v.preload="auto";v.addEventListener("timeupdate",function(){{glow(v.currentTime);}});v.addEventListener("seeked",function(){{glow(v.currentTime);}});v.addEventListener("playing",function(){{var s=document.querySelector(".wm-hero-still");if(s)s.style.visibility="hidden";}});var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){{}});}})();</script>
 <div class="wm-key" role="group" aria-label="{esc(u["key"])}">
 <div class="wm-cats" role="group" aria-label="{esc(u["show"])}">{cat_btns}</div>
 <label class="wm-tog"><input type="checkbox" id="wm-a" checked> <span class="wm-dot wm-active" aria-hidden="true"></span>{esc(u["active"])}</label>

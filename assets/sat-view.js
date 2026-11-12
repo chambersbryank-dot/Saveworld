@@ -143,8 +143,6 @@
         (s.agency ? '<p><span class="sat-k">' + esc(ui.agency) + '</span> ' + esc(s.agency) + '</p>' : '') +
         (s.orbit ? '<p><span class="sat-k">' + esc(ui.orbit) + '</span> ' + esc(s.orbit) + (s.when ? ' · ' + esc(s.when) : '') + '</p>' : '') +
         '<p><span class="sat-k">' + esc(ui.does) + '</span> ' + esc(s.does) + '</p>' +
-        '<p><span class="sat-k">' + esc(ui.helps) + '</span> ' + esc(s.helps) + '</p>' +
-        '<p><a class="wm-orbit-link" href="#sat-' + esc(s.id) + '">' + esc(ui.viewOrbit) + '</a></p>' +
         '<p class="sat-src">' + esc(s.source || '') + '</p>' +
         '<p class="sat-latest">' + esc(ui.latestWait) + '</p>' +
         '<p>' + [site, official, feed].filter(Boolean).join(' · ') + '</p>' + dsn + plus +

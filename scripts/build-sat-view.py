@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261112lg'
+V = '20261112tt'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -319,8 +319,6 @@ def section(lang, ui):
                '<a href="https://ntrs.nasa.gov/citations/20220012121">NASA, 30-day transfer</a></p>')
     return (
       f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/blue-marble-disc.webp" data-earth-lg="{pre}assets/earth/blue-marble-disc-lg.webp" data-moon="{pre}assets/earth/moon-disc.webp" aria-labelledby="satmap-title">'
-      f'<h2 id="satmap-title">{html.escape(ui["title"])}</h2>'
-      f'<p class="sat-lead">{html.escape(ui["lead"])}</p>'
       f'<div class="wm-cats" role="group" aria-label="{html.escape(ui["all"])}">' + ''.join(btns) + '</div>'
       '<div class="sat-layout"><div class="sat-stage" id="sat-stage"></div>'
       '<div class="sat-card" id="sat-card" role="region" aria-labelledby="sat-card-title" hidden></div></div>'
