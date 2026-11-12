@@ -1,2058 +1,2056 @@
 {
- "images": {
-  "assets/EPIC_Earth.jpg": {
-   "credit": "NASA Blue Marble",
-   "pos": "50% 50%",
-   "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-  },
-  "assets/hero/about": {
-   "credit": "NASA (ISS074-E-0046371, Jan. 3, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Pacific_Clouds_Sunset_ISS.jpg"
-  },
-  "assets/hero/kids": {
-   "credit": "NASA Blue Marble",
-   "pos": "50% 50%",
-   "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-  },
-  "assets/hero/learn": {
-   "credit": "NASA Blue Marble",
-   "pos": "50% 50%",
-   "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-  },
-  "assets/hero/mission": {
-   "credit": "NASA (ISS072-E-159172, Oct. 30, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Aurora_Borealis_ISS072-E-159172.jpg"
-  },
-  "assets/hero/satx": {
-   "credit": "NASA/JPL-Caltech",
-   "pos": "50% 50%",
-   "r2": "images/GRACE_FO_PIA22445.jpg"
-  },
-  "assets/SDO_Sun.jpg": {
-   "credit": "NASA/SDO",
-   "pos": "50% 50%",
-   "r2": "images/SDO_Sun.jpg"
-  },
-  "assets/Clouds_Limb_ISS.jpg": {
-   "credit": "NASA/Jeff Williams (ISS020-E-047807, Oct. 6, 2009)",
-   "pos": "50% 50%",
-   "r2": "images/Clouds_Limb_ISS.jpg"
-  },
-  "assets/Mississippi_River_PIA23534.jpg": {
-   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA23534)",
-   "pos": "50% 50%",
-   "r2": "images/Mississippi_River_PIA23534.jpg"
-  },
-  "assets/Amazon_Clouds_ISS.jpg": {
-   "credit": "NASA (ISS013-E-74843, Sept. 2, 2006)",
-   "pos": "50% 50%",
-   "r2": "images/Amazon_Clouds_ISS.jpg"
-  },
-  "assets/Florida_Keys_PIA03890.jpg": {
-   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03890)",
-   "pos": "50% 50%",
-   "r2": "images/Florida_Keys_PIA03890.jpg"
-  },
-  "assets/Lake_Tahoe_ISS.jpg": {
-   "credit": "NASA (ISS071-E-14284, April 20, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Lake_Tahoe_ISS.jpg"
-  },
-  "assets/North_Pacific_ISS.jpg": {
-   "credit": "NASA (ISS073-E-0257194, June 28, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/North_Pacific_ISS.jpg"
-  },
-  "assets/Kilimanjaro_STS72.jpg": {
-   "credit": "NASA (STS072-722-004, Jan. 1996)",
-   "pos": "50% 50%",
-   "r2": "images/Kilimanjaro_STS72.jpg",
-   "alt": "Mount Kilimanjaro and the surrounding highlands in Tanzania, seen from the Space Shuttle"
-  },
-  "assets/Bahamas_Ocean_ISS.jpg": {
-   "credit": "NASA (ISS071-E-449837, July 24, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Bahamas_Ocean_ISS.jpg"
-  },
-  "assets/ISS_Flyaround_2021.jpg": {
-   "credit": "NASA (ISS066-E-080762, Nov. 8, 2021)",
-   "pos": "50% 50%",
-   "r2": "images/ISS_Flyaround_2021.jpg"
-  },
-  "assets/Klamath_River.jpg": {
-   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA26448)",
-   "pos": "50% 50%",
-   "r2": "images/Klamath_River.jpg"
-  },
-  "assets/LEO_View.jpg": {
-   "credit": "NASA (ISS023-E-057948, May 25, 2010)",
-   "pos": "50% 50%",
-   "r2": "images/LEO_View.jpg"
-  },
-  "assets/Mediterranean_ISS.jpg": {
-   "credit": "NASA (ISS071-E-207494, June 24, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Mediterranean_ISS.jpg"
-  },
-  "assets/ATV1_Departure_ISS.jpg": {
-   "credit": "NASA (ISS017-E-015496, Sept. 5, 2008)",
-   "pos": "50% 50%",
-   "r2": "images/ATV1_Departure_ISS.jpg"
-  },
-  "assets/Global_Plant_Fluorescence.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA18935)",
-   "pos": "50% 50%",
-   "r2": "images/Global_Plant_Fluorescence.jpg"
-  },
-  "assets/Labrador_Sea_Ice_ISS.jpg": {
-   "credit": "NASA astronaut Loral O'Hara (iss070e086805, Labrador coast, Feb. 3, 2024, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Labrador_Sea_Ice_ISS.jpg"
-  },
-  "assets/Baltimore_DC_Skylab.jpg": {
-   "credit": "NASA (SL3-83-166, Skylab, 1973)",
-   "pos": "50% 50%",
-   "r2": "images/Baltimore_DC_Skylab.jpg"
-  },
-  "assets/Danube_Delta_GSFC.jpg": {
-   "credit": "NASA/Goddard (Feb. 5, 2013)",
-   "pos": "50% 50%",
-   "r2": "images/Danube_Delta_GSFC.jpg"
-  },
-  "assets/EMIT_Methane_Fingerprint.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA25593)",
-   "pos": "50% 50%",
-   "r2": "images/EMIT_Methane_Fingerprint.jpg"
-  },
-  "assets/Great_Lakes_GSFC.jpg": {
-   "credit": "NASA/Goddard (Aug. 28, 2010)",
-   "pos": "50% 50%",
-   "r2": "images/Great_Lakes_GSFC.jpg"
-  },
-  "assets/Lightning_Storm_ISS.jpg": {
-   "credit": "NASA (ISS073-E-0080625, May 15, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Lightning_Storm_ISS.jpg"
-  },
-  "assets/North_Atlantic_Bloom_MODIS.jpg": {
-   "credit": "NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team",
-   "pos": "50% 50%",
-   "r2": "images/North_Atlantic_Bloom_MODIS.jpg"
-  },
-  "assets/Phytoplankton_Bloom_Iceland.jpg": {
-   "credit": "NASA/Goddard",
-   "pos": "50% 50%",
-   "r2": "images/Phytoplankton_Bloom_Iceland.jpg"
-  },
-  "assets/PlasticBank_Indonesia_STS66.jpg": {
-   "credit": "NASA (STS066-154-157, Nov. 1994)",
-   "pos": "50% 50%",
-   "r2": "images/PlasticBank_Indonesia_STS66.jpg"
-  },
-  "assets/Progress_Reentry.jpg": {
-   "credit": "NASA (ISS029-E-034092, Oct. 29, 2011)",
-   "pos": "50% 50%",
-   "r2": "images/Progress_Reentry.jpg"
-  },
-  "assets/Romania_City_Lights_ISS.jpg": {
-   "credit": "NASA (ISS074-E-0149572, Jan. 18, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Romania_City_Lights_ISS.jpg"
-  },
-  "assets/Rondonia_Deforestation_STS46.jpg": {
-   "credit": "NASA (STS046-103-053, Aug. 1992)",
-   "pos": "50% 50%",
-   "r2": "images/Rondonia_Deforestation_STS46.jpg"
-  },
-  "assets/Satellite_Servicing_Arm_GSFC.jpg": {
-   "credit": "NASA/Debora McCallum",
-   "pos": "50% 50%",
-   "r2": "images/Satellite_Servicing_Arm_GSFC.tif"
-  },
-  "assets/GOES19_GOESU_KSC.jpg": {
-   "credit": "NASA/Ben Smegelsky (KSC-20240124-PH-JBS01_0071)",
-   "pos": "50% 50%",
-   "r2": "images/GOES19_GOESU_KSC.jpg"
-  },
-  "assets/NYC_Hudson_Harbor.jpg": {
-   "credit": "NASA (STS039-88-054, 1991)",
-   "pos": "50% 50%",
-   "r2": "images/NYC_Hudson_Harbor.jpg"
-  },
-  "assets/Titan.jpg": {
-   "credit": "NASA/JPL/University of Arizona/University of Idaho (PIA20016)",
-   "pos": "50% 50%",
-   "r2": "images/Titan.jpg"
-  },
-  "assets/Webb_Infrared.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA25790)",
-   "pos": "50% 50%",
-   "r2": "images/Webb_Infrared.jpg"
-  },
-  "assets/Pacific_Clouds_Sunset_ISS.jpg": {
-   "credit": "NASA (ISS074-E-0046371, Jan. 3, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Pacific_Clouds_Sunset_ISS.jpg"
-  },
-  "assets/Loggerhead_Release_MINWR.jpg": {
-   "credit": "NASA (2010-5237)",
-   "pos": "50% 50%",
-   "r2": "images/Loggerhead_Release_MINWR.jpg"
-  },
-  "assets/Garden_City_Kansas_Landsat.jpg": {
-   "credit": "NASA/GSFC/Landsat (Sept. 25, 2000)",
-   "pos": "50% 50%",
-   "r2": "images/Garden_City_Kansas_Landsat.jpg"
-  },
-  "assets/Mangrove_Delta_ISS.jpg": {
-   "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
-   "pos": "50% 50%",
-   "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
-  },
-  "assets/Asteroid_2018LA_CSS.jpg": {
-   "credit": "NASA/JPL-Caltech/CSS-Univ. of Arizona (PIA22468)",
-   "pos": "50% 50%",
-   "r2": "images/Asteroid_2018LA_CSS.jpg"
-  },
-  "assets/Bahama_Bank_PIA11019.jpg": {
-   "credit": "NASA/JPL/UCSD/JSC (PIA11019)",
-   "pos": "50% 50%",
-   "r2": "images/Bahama_Bank_PIA11019.jpg"
-  },
-  "assets/BoraBora_Reefs_STS93.jpg": {
-   "credit": "NASA (STS093-717-066, July 1999)",
-   "pos": "50% 50%",
-   "r2": "images/BoraBora_Reefs_STS93.jpg"
-  },
-  "assets/Canada_Wildfires_ISS_2025.jpg": {
-   "credit": "NASA (ISS073-E-0420604, Aug. 3, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Canada_Wildfires_ISS_2025.jpg"
-  },
-  "assets/Canada_Wildfires_ISS_2025b.jpg": {
-   "credit": "NASA (ISS073-E-0420617, Aug. 3, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Canada_Wildfires_ISS_2025b.jpg"
-  },
-  "assets/Comet_NEOWISE.jpg": {
-   "credit": "NASA/Bill Ingalls (NHQ202007120001)",
-   "pos": "50% 50%",
-   "r2": "images/Comet_NEOWISE.tif"
-  },
-  "assets/Congo_River_ISS.jpg": {
-   "credit": "NASA (ISS007-E-06305, June 6, 2003)",
-   "pos": "50% 50%",
-   "r2": "images/Congo_River_ISS.jpg"
-  },
-  "assets/EMIT_Methane_Plumes_Uzbekistan.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA26113)",
-   "pos": "50% 50%",
-   "r2": "images/EMIT_Methane_Plumes_Uzbekistan.jpg"
-  },
-  "assets/Enceladus_Geyser_Basin.jpg": {
-   "credit": "NASA/JPL/Space Science Institute (PIA11688)",
-   "pos": "50% 50%",
-   "r2": "images/Enceladus_Geyser_Basin.jpg"
-  },
-  "assets/Goldstone_Radar_2011UL21.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA26384)",
-   "pos": "50% 50%",
-   "r2": "images/Goldstone_Radar_2011UL21.jpg"
-  },
-  "assets/Greenland_IceBridge_2015.jpg": {
-   "credit": "NASA GSFC, Operation IceBridge (2015)",
-   "pos": "50% 50%",
-   "r2": "images/Greenland_IceBridge_2015.jpg"
-  },
-  "assets/London_Thames_Night_ISS.jpg": {
-   "credit": "NASA (ISS074-E-0381351, March 13, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/London_Thames_Night_ISS.jpg"
-  },
-  "assets/New_England_Coast_ISS.jpg": {
-   "credit": "NASA (ISS072-E-394484, Dec. 18, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/New_England_Coast_ISS.jpg"
-  },
-  "assets/Portugal_Wildfires_ISS_2018.jpg": {
-   "credit": "NASA (ISS056-E-127068, Aug. 6, 2018)",
-   "pos": "50% 50%",
-   "r2": "images/Portugal_Wildfires_ISS_2018.jpg"
-  },
-  "assets/Psyche_Illustration.jpg": {
-   "credit": "NASA/JPL-Caltech/ASU (PIA24473)",
-   "pos": "50% 50%",
-   "r2": "images/Psyche_Illustration.jpg"
-  },
-  "assets/Rim_Fire_MODIS.jpg": {
-   "credit": "NASA (Terra MODIS, Aug. 25, 2013)",
-   "pos": "50% 50%",
-   "r2": "images/Rim_Fire_MODIS.jpg"
-  },
-  "assets/SPHEREx_Spacecraft.jpg": {
-   "credit": "NASA/JPL-Caltech/BAE Systems (PIA26537)",
-   "pos": "50% 50%",
-   "r2": "images/SPHEREx_Spacecraft.jpg"
-  },
-  "assets/Sahel_ISS.jpg": {
-   "credit": "NASA (ISS012-E-11654, Dec. 11, 2005)",
-   "pos": "50% 50%",
-   "r2": "images/Sahel_ISS.jpg"
-  },
-  "assets/Seagrass_Restoration_KSC.jpg": {
-   "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
-   "pos": "50% 50%",
-   "r2": "images/Seagrass_Restoration_KSC.jpg"
-  },
-  "assets/Sundarbans_Ganges_Delta_ISS.jpg": {
-   "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
-   "pos": "50% 50%",
-   "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
-  },
-  "assets/Venus_Magellan.jpg": {
-   "credit": "NASA/JPL (PIA00271)",
-   "pos": "50% 50%",
-   "r2": "images/Venus_Magellan.jpg"
-  },
-  "assets/Voyager_Heliosphere_PIA22835.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA22835)",
-   "pos": "50% 50%",
-   "r2": "images/Voyager_Heliosphere_PIA22835.jpg"
-  },
-  "assets/Yellowstone_ISS.jpg": {
-   "credit": "NASA (ISS023-E-007925, March 21, 2010)",
-   "pos": "50% 50%",
-   "r2": "images/Yellowstone_ISS.jpg"
-  },
-  "assets/ISS_Over_Ganges_STS102.jpg": {
-   "credit": "NASA (STS102-357-031, March 18, 2001)",
-   "pos": "50% 50%",
-   "r2": "images/ISS_Over_Ganges_STS102.jpg"
-  },
-  "assets/Lucy_KSC.jpg": {
-   "credit": "NASA/Ben Smegelsky (KSC-20210929-PH-JBS01_0051)",
-   "pos": "50% 50%",
-   "r2": "images/Lucy_KSC.jpg"
-  },
-  "assets/Veggie_KSC.jpg": {
-   "credit": "NASA (KSC-2013-3567)",
-   "pos": "50% 50%",
-   "r2": "images/Veggie_KSC.jpg"
-  },
-  "assets/Hawaii_Island_ISS_2024.jpg": {
-   "credit": "NASA (ISS072-E-421839, Dec. 28, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Hawaii_Island_ISS_2024.jpg"
-  },
-  "assets/Great_Barrier_Reef_ISS_2022.jpg": {
-   "credit": "NASA (ISS068-E-004262, Sept. 30, 2022)",
-   "pos": "50% 50%",
-   "r2": "images/Great_Barrier_Reef_ISS_2022.jpg"
-  },
-  "assets/JPSS2_Atlas_V_Launch_Pad.jpg": {
-   "credit": "NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)",
-   "pos": "50% 50%",
-   "r2": "images/JPSS2_Atlas_V_Launch_Pad.jpg"
-  },
-  "assets/Comet_PANSTARRS_ISS_2026.jpg": {
-   "credit": "NASA (ISS074-E-0480485, April 17, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Comet_PANSTARRS_ISS_2026.jpg"
-  },
-  "assets/GPM_Core_Observatory_GMI.jpg": {
-   "credit": "NASA/Goddard (GPM Core Observatory)",
-   "pos": "50% 50%",
-   "r2": "images/GPM_Core_Observatory_GMI.jpg"
-  },
-  "assets/Pakistan_Flood_Kheshgi_2010.jpg": {
-   "credit": "NASA Earth Observatory (ASTER on Terra, Aug. 4, 2010)",
-   "pos": "50% 50%",
-   "r2": "images/Pakistan_Flood_Kheshgi_2010.jpg"
-  },
-  "assets/Missouri_Flood_Hamburg_EO1.jpg": {
-   "credit": "NASA Earth Observatory (EO-1 ALI, July 17, 2011)",
-   "pos": "50% 50%",
-   "r2": "images/Missouri_Flood_Hamburg_EO1.jpg"
-  },
-  "assets/Sumatra_Smoke_Singapore_MODIS.jpg": {
-   "credit": "NASA Earth Observatory (Aqua MODIS, June 19, 2013)",
-   "pos": "50% 50%",
-   "r2": "images/Sumatra_Smoke_Singapore_MODIS.jpg"
-  },
-  "assets/Carruthers_SWFO_KSC.jpg": {
-   "credit": "NASA/Frank Michaux (KSC-20250905-PH-FMX01_0037)",
-   "pos": "50% 50%",
-   "r2": "images/Carruthers_SWFO_KSC.jpg"
-  },
-  "assets/ESCAPADE_Launch_NG2.jpg": {
-   "credit": "Blue Origin via NASA (KSC-20251113-PH-BLU01_0007)",
-   "pos": "50% 50%",
-   "r2": "images/ESCAPADE_Launch_NG2.jpg"
-  },
-  "assets/Europa_Clipper_Jupiter.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA26068)",
-   "pos": "50% 50%",
-   "r2": "images/Europa_Clipper_Jupiter.jpg"
-  },
-  "assets/ExoMars_Drill_Curiosity.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA17068)",
-   "pos": "50% 50%",
-   "r2": "images/ExoMars_Drill_Curiosity.jpg"
-  },
-  "assets/GRACE_FO_Orbit.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA22431)",
-   "pos": "50% 50%",
-   "r2": "images/GRACE_FO_Orbit.jpg"
-  },
-  "assets/ICESat2_Launch.jpg": {
-   "credit": "NASA/Bill Ingalls (NHQ201809150011)",
-   "pos": "50% 50%",
-   "r2": "images/ICESat2_Launch.tif"
-  },
-  "assets/IMAP_Spacecraft_KSC.jpg": {
-   "credit": "NASA/Johns Hopkins APL/Ed Whitman (KSC-20250529-PH-EGW01_0012)",
-   "pos": "50% 50%",
-   "r2": "images/IMAP_Spacecraft_KSC.jpg"
-  },
-  "assets/ISS_Water_Recovery.jpg": {
-   "credit": "NASA/Thomas Pesquet (iss065e333421)",
-   "pos": "50% 50%",
-   "r2": "images/ISS_Water_Recovery.jpg"
-  },
-  "assets/Juice_RIME_Radar.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA24026)",
-   "pos": "50% 50%",
-   "r2": "images/Juice_RIME_Radar.jpg"
-  },
-  "assets/Kerguelen_Kelp_ISS.jpg": {
-   "credit": "NASA (ISS018-E-018110)",
-   "pos": "50% 50%",
-   "r2": "images/Kerguelen_Kelp_ISS.jpg"
-  },
-  "assets/LignoSat_Wood_Panels.jpg": {
-   "credit": "Kyoto University via NASA (jsc2024e081747)",
-   "pos": "50% 50%",
-   "r2": "images/LignoSat_Wood_Panels.jpg"
-  },
-  "assets/Mercury_MESSENGER.jpg": {
-   "credit": "NASA/JHUAPL/Carnegie Institution of Washington (MESSENGER)",
-   "pos": "50% 50%",
-   "r2": "images/Mercury_MESSENGER.png"
-  },
-  "assets/Moon_Crossing_Earth.jpg": {
-   "credit": "NASA/NOAA DSCOVR EPIC",
-   "pos": "50% 50%",
-   "r2": "images/Moon_Crossing_Earth.jpg"
-  },
-  "assets/NEO_Surveyor.jpg": {
-   "credit": "NASA/JPL-Caltech/University of Arizona (PIA25253)",
-   "pos": "50% 50%",
-   "r2": "images/NEO_Surveyor.jpg"
-  },
-  "assets/Oceansat_Winds_Irene.jpg": {
-   "credit": "ISRO/NASA/JPL-Caltech (PIA14742)",
-   "pos": "50% 50%",
-   "r2": "images/Oceansat_Winds_Irene.jpg"
-  },
-  "assets/PACE_Spacecraft_KSC.jpg": {
-   "credit": "NASA/Kim Shiflett (KSC-20231204-PH-KLS01_0024)",
-   "pos": "50% 50%",
-   "r2": "images/PACE_Spacecraft_KSC.jpg"
-  },
-  "assets/Phobos.jpg": {
-   "credit": "NASA/JPL-Caltech/University of Arizona (PIA10368)",
-   "pos": "50% 50%",
-   "r2": "images/Phobos.jpg"
-  },
-  "assets/Plato_Exoplanets.jpg": {
-   "credit": "NASA/JPL-Caltech (PIA19333)",
-   "pos": "50% 50%",
-   "r2": "images/Plato_Exoplanets.jpg"
-  },
-  "assets/SWOT_Orbit_Illustration.jpg": {
-   "credit": "CNES (PIA25623)",
-   "pos": "50% 50%",
-   "r2": "images/SWOT_Orbit_Illustration.jpg"
-  },
-  "assets/Saharan_Dust_Amazon.jpg": {
-   "credit": "NASA's Goddard Space Flight Center",
-   "pos": "50% 50%",
-   "r2": "images/Saharan_Dust_Amazon.jpg"
-  },
-  "assets/Salt_Marsh_KSC.jpg": {
-   "credit": "NASA/KSC (KSC-99WL10)",
-   "pos": "50% 50%",
-   "r2": "images/Salt_Marsh_KSC.jpg"
-  },
-  "assets/Sentinel1_Ground_Motion.jpg": {
-   "credit": "NASA-JPL/Caltech/ESA/Copernicus (PIA21962)",
-   "pos": "50% 50%",
-   "r2": "images/Sentinel1_Ground_Motion.jpg"
-  },
-  "assets/Sentinel6B_Launch.jpg": {
-   "credit": "NASA/Carla Thomas (AFRC2025-0170-03)",
-   "pos": "50% 50%",
-   "r2": "images/Sentinel6B_Launch.jpg"
-  },
-  "assets/Solar_Orbiter_Astrotech.jpg": {
-   "credit": "ESA/U. Ragnit via NASA (KSC-20200108-PH-ESA01_0001)",
-   "pos": "50% 50%",
-   "r2": "images/Solar_Orbiter_Astrotech.jpg"
-  },
-  "assets/Sydney_ASTER.jpg": {
-   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03498)",
-   "pos": "50% 50%",
-   "r2": "images/Sydney_ASTER.jpg"
-  },
-  "assets/TRACERS_Launch.jpg": {
-   "credit": "SpaceX via NASA (KSC-20250723-PH-SPX01_0003)",
-   "pos": "50% 50%",
-   "r2": "images/TRACERS_Launch.jpg"
-  },
-  "assets/Tanager1_Methane_Plume.jpg": {
-   "credit": "Carbon Mapper/Planet Labs PBC (PIA26416)",
-   "pos": "50% 50%",
-   "r2": "images/Tanager1_Methane_Plume.jpg"
-  },
-  "assets/Transporter18_Launch.jpg": {
-   "credit": "SpaceX via NASA (KSC-20261001-PH-SPX01_0003)",
-   "pos": "50% 50%",
-   "r2": "images/Transporter18_Launch.jpg"
-  },
-  "assets/Seagrass_Planting_KSC.jpg": {
-   "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
-   "pos": "50% 50%",
-   "r2": "images/Seagrass_Restoration_KSC.jpg"
-  },
-  "assets/NOAA_Deep_SOLO_Float_2018.jpg": {
-   "credit": "NOAA (Deep SOLO float deployment from R/V Kaʻimikai-O-Kanaloa, 2018)",
-   "pos": "50% 40%",
-   "r2": "images/NOAA_Deep_SOLO_Deployment_2018.jpg"
-  },
-  "assets/Biomass_Forest_MatoGrosso.jpg": {
-   "credit": "NASA (ISS074-E-0492148, April 15, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Ucayali_Amazon_ISS074.jpg"
-  },
-  "assets/Great_Lakes_MODIS.jpg": {
-   "credit": "NASA (ISS074-E-0642367, May 30, 2026)",
-   "pos": "50% 45%",
-   "r2": "images/Great_Lakes_ISS074_0642367.jpg"
-  },
-  "assets/hero/help": {
-   "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0002)",
-   "pos": "50% 45%",
-   "r2": "images/KSC_Beach_Cleanup_2017_0002.jpg"
-  },
-  "assets/Lake_Shore_Cleanup_NPS.jpg": {
-   "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0081)",
-   "pos": "50% 40%",
-   "r2": "images/KSC_Beach_Cleanup_2017_0081.jpg"
-  },
-  "assets/Jupiter.jpg": {
-   "credit": "NASA/ESA/Goddard/UC Berkeley/JPL-Caltech/STScI (Hubble map, GSFC_20171208_Archive_e000537)",
-   "pos": "50% 60%",
-   "r2": "images/Jupiter_Hubble_Map_2017.jpg"
-  },
-  "assets/Hera.jpg": {
-   "credit": "NASA/Johns Hopkins APL/Steve Gribben (illustration, PIA25329)",
-   "pos": "50% 45%",
-   "r2": "images/DART_Didymos_PIA25329.jpg"
-  },
-  "assets/Roman_Launch_FH.jpg": {
-   "credit": "NASA/Joel Kowsky (NHQ202608300015-2, Aug. 30, 2026)",
-   "pos": "50% 55%",
-   "r2": "images/Roman_Launch_FH_NHQ202608300015-2.jpg"
-  },
-  "assets/Landsat9_Launch.jpg": {
-   "credit": "NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)",
-   "pos": "50% 45%",
-   "r2": "images/Landsat9_Launch_KLS04_0013.jpg"
-  },
-  "assets/NISAR_Orbit.jpg": {
-   "credit": "NASA/JPL-Caltech (illustration, PIA26285)",
-   "pos": "50% 50%",
-   "r2": "images/NISAR_Orbit_PIA26285.jpg"
-  },
-  "assets/PUNCH_Mission.jpg": {
-   "credit": "NASA/Jim Ross (AFRC2025-0036-22, March 11, 2025)",
-   "pos": "50% 60%",
-   "r2": "images/PUNCH_SPHEREx_Launch_AFRC2025-0036-22.jpg"
-  },
-  "assets/DataOrbitalCenters.jpg": {
-   "credit": "NASA/Michael Hopkins (ISS065-E-009492, Spaceborne Computer-2 on the ISS, April 29, 2021)",
-   "pos": "50% 50%",
-   "r2": "images/Spaceborne_Computer2_iss065e009492.jpg"
-  },
-  "si:ocean": {
-   "credit": "NASA (ISS071-E-449837, July 24, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Bahamas_Atlantic_ISS071_449837.jpg"
-  },
-  "si:oceancleanup": {
-   "credit": "NASA/Shane Kimbrough (ISS065-E-144117, June 23, 2021)",
-   "pos": "50% 50%",
-   "r2": "images/Bahamas_Shallows_ISS065_144117.jpg"
-  },
-  "si:forest": {
-   "credit": "NASA AFRC/Carla Thomas (AfriSAR 2016, Gabon, AFRC2016-0054-105)",
-   "pos": "50% 45%",
-   "r2": "images/Gabon_Rainforest_AFRC2016-0054-105.jpg"
-  },
-  "si:plant": {
-   "credit": "NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006, mangrove restoration, April 12, 2023)",
-   "pos": "50% 50%",
-   "r2": "images/Mangrove_Seedling_KSC-20230412-GEB01_0006.jpg"
-  },
-  "si:rivers": {
-   "credit": "NASA (ISS073-E-0880658, Mississippi River, Oct. 15, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Mississippi_River_ISS073_0880658.jpg"
-  },
-  "si:elwha": {
-   "credit": "NASA/Landsat 8 (Olympic National Park, GSFC_20171208_Archive_e000239)",
-   "pos": "50% 55%",
-   "r2": "images/Olympic_NP_Landsat8_GSFC_e000239.jpg"
-  },
-  "si:riversea": {
-   "credit": "NASA (ISS073-E-0818427, river meeting the sea, Oct. 2, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Bassac_River_ISS073_0818427.jpg"
-  },
-  "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg": {
-   "credit": "NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)",
-   "pos": "50% 50%",
-   "r2": "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
-  },
-  "assets/Thwaites_Glacier_Landsat8_2019.jpg": {
-   "credit": "NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)",
-   "pos": "50% 50%",
-   "r2": "images/Thwaites_Glacier_Landsat8_2019.jpg"
-  },
-  "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg": {
-   "credit": "NASA/James Blair (jsc2026e406058, Iceland)",
-   "pos": "50% 60%",
-   "r2": "images/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
-  },
-  "assets/Lake_Kariba_ISS_2024.jpg": {
-   "credit": "NASA (iss071e047913, Lake Kariba between Zambia and Zimbabwe, May 2, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Lake_Kariba_ISS_2024.jpg"
-  },
-  "assets/Okavango_Delta_ISS_2025.jpg": {
-   "credit": "NASA (iss073e0604445, Okavango Delta, Botswana, Aug. 30, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Okavango_Delta_ISS_2025.jpg"
-  },
-  "assets/Valles_Marineris_Viking_PIA00422.jpg": {
-   "credit": "NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)",
-   "pos": "50% 50%",
-   "r2": "images/Valles_Marineris_Viking_PIA00422.jpg"
-  },
-  "assets/Abu_Dhabi_Coast_ISS_2024.jpg": {
-   "credit": "NASA (iss071e378611, Abu Dhabi, July 23, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/Abu_Dhabi_Coast_ISS_2024.jpg"
-  },
-  "assets/South_India_Sri_Lanka_ISS_2024.jpg": {
-   "credit": "NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/South_India_Sri_Lanka_ISS_2024.jpg"
-  },
-  "assets/Singapore_Night_ISS_2025.jpg": {
-   "credit": "NASA (iss073e0763866, Singapore at night, Sept. 21, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Singapore_Night_ISS_2025.jpg"
-  },
-  "assets/Seoul_Night_ISS_2025.jpg": {
-   "credit": "NASA (iss072e757318, Seoul at night, March 5, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Seoul_Night_ISS_2025.jpg"
-  },
-  "assets/Palau_Landsat8_2014.jpg": {
-   "credit": "NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)",
-   "pos": "50% 50%",
-   "r2": "images/Palau_Landsat8_2014.jpg"
-  },
-  "assets/Pearl_Hermes_Atoll_ISS_2002.jpg": {
-   "credit": "NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)",
-   "pos": "50% 50%",
-   "r2": "images/Pearl_Hermes_Atoll_ISS_2002.jpg"
-  },
-  "assets/NZ_Southern_Lakes_ISS_2024.jpg": {
-   "credit": "NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/NZ_Southern_Lakes_ISS_2024.jpg"
-  },
-  "assets/Fernandina_Galapagos_ISS_2022.jpg": {
-   "credit": "NASA (iss068e025397, La Cumbre volcano, Fernandina Island, Galápagos, Nov. 28, 2022)",
-   "pos": "50% 50%",
-   "r2": "images/Fernandina_Galapagos_ISS_2022.jpg"
-  },
-  "assets/Ucayali_River_ISS_2026.jpg": {
-   "credit": "NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)",
-   "pos": "50% 50%",
-   "r2": "images/Ucayali_River_ISS_2026.jpg"
-  },
-  "assets/Belize_Coast_ISS_2014.jpg": {
-   "credit": "NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)",
-   "pos": "50% 50%",
-   "r2": "images/Belize_Coast_ISS_2014.jpg"
-  },
-  "assets/Costa_Rica_ISS_2020.jpg": {
-   "credit": "NASA (iss062e001866, Costa Rica, Feb. 8, 2020)",
-   "pos": "50% 50%",
-   "r2": "images/Costa_Rica_ISS_2020.jpg"
-  },
-  "assets/Gulf_of_Alaska_Bloom_2017.jpg": {
-   "credit": "NASA/Goddard/NPP (GSFC_20171208_Archive_e000038, Gulf of Alaska spring bloom, April 12, 2017)",
-   "pos": "50% 50%",
-   "r2": "images/Gulf_of_Alaska_Bloom_2017.jpg"
-  },
-  "assets/Alaska_Clear_View_Terra_2013.jpg": {
-   "credit": "NASA (GSFC_20171208_Archive_e001460, Terra/MODIS, Alaska, June 17, 2013)",
-   "pos": "50% 50%",
-   "r2": "images/Alaska_Clear_View_Terra_2013.jpg"
-  },
-  "assets/Bristol_Bay_Terra_2017.jpg": {
-   "credit": "NASA Earth Observatory image by Joshua Stevens, using MODIS data from LANCE/EOSDIS Rapid Response (Bristol Bay, May 14, 2017)",
-   "pos": "50% 50%",
-   "r2": "images/Bristol_Bay_Terra_2017.jpg"
-  },
-  "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg": {
-   "credit": "NASA (iss072e820937, Gulf of Alaska and aurora, March 12, 2025)",
-   "pos": "50% 50%",
-   "r2": "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
-  },
-  "assets/South_Georgia_ISS071_E_581850.jpg": {
-   "credit": "NASA (ISS071-E-581850, astronaut photograph of South Georgia Island, Sept. 1, 2024)",
-   "pos": "50% 50%",
-   "r2": "images/South_Georgia_ISS071_E_581850.jpg"
-  },
-  "assets/Arctic_Weather_Satellite_ESA.jpg": {
-   "credit": "ESA (Arctic Weather Satellite, CC BY-SA 3.0 IGO)",
-   "pos": "50% 50%",
-   "r2": "images/Arctic_Weather_Satellite_ESA.jpg"
-  },
-  "assets/Greenland_Sea_Ice_GSFC.jpg": {
-   "credit": "NASA Goddard Space Flight Center (MODIS on Aqua, sea ice in the Greenland Sea)",
-   "pos": "50% 50%",
-   "r2": "images/Greenland_Sea_Ice_GSFC.jpg"
-  },
-  "assets/Ozone_Hole_2024_SVS14711.jpg": {
-   "credit": "NASA Scientific Visualization Studio (2024 Ozone Hole Update, SVS 14711)",
-   "pos": "50% 50%",
-   "r2": "images/Ozone_Hole_2024_SVS14711.jpg"
-  },
-  "assets/Chilika_Lake_Mouth.jpg": {
-   "credit": "Phadke09 via Wikimedia Commons (Mouth of Chilika Lake, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Chilika_Lake_Mouth.jpg"
-  },
-  "assets/Tonle_Sap_Floating_Village.jpg": {
-   "credit": "Christophe95 via Wikimedia Commons (Floating village on the Tonlé Sap, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Tonle_Sap_Floating_Village.jpg"
-  },
-  "assets/Lake_Biwa_Shiga_NASA.jpg": {
-   "credit": "NASA (ISS007-E-17620, astronaut photograph of Lake Biwa and Shiga Prefecture)",
-   "pos": "50% 50%",
-   "r2": "images/Lake_Biwa_Shiga_NASA.jpg"
-  },
-  "assets/Lake_Constance_ISS030_E_161620.jpg": {
-   "credit": "NASA (ISS030-E-161620, astronaut photograph of Lake Constance, 2012)",
-   "pos": "50% 50%",
-   "r2": "images/Lake_Constance_ISS030_E_161620.jpg"
-  },
-  "assets/Netherlands_Rivers_ISS063_E_002730.jpg": {
-   "credit": "NASA (ISS063-E-002730, astronaut photograph of the Rhine-Meuse-Scheldt delta, April 23, 2020)",
-   "pos": "50% 50%",
-   "r2": "images/Netherlands_Rivers_ISS063_E_002730.jpg"
-  },
-  "assets/Tubbataha_Reefs_UNESCO.jpg": {
-   "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (CC BY-SA 3.0 IGO)",
-   "pos": "50% 50%",
-   "r2": "images/Tubbataha_Reefs_UNESCO.jpg"
-  },
-  "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg": {
-   "credit": "Contains modified Copernicus Sentinel-2 data, processed by ESA (sargassum off Martinique)",
-   "pos": "50% 50%",
-   "r2": "images/Sargassum_Bloom_Atlantic_Sentinel.jpg"
-  },
-  "assets/Redonda_By_Sea_2023.jpg": {
-   "credit": "Addshore via Wikimedia Commons (Redonda by sea, 2023, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Redonda_By_Sea_2023.jpg"
-  },
-  "assets/Iberian_Lynx_Almuradiel_2021.jpg": {
-   "credit": "Diego Delso via Wikimedia Commons (Iberian lynx, Almuradiel, 2021, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Iberian_Lynx_Almuradiel_2021.jpg"
-  },
-  "assets/Glen_Affric_Scots_Pine.jpg": {
-   "credit": "Chris via Wikimedia Commons (Glen Affric Scots Pine, CC BY-SA 2.0)",
-   "pos": "50% 50%",
-   "r2": "images/Glen_Affric_Scots_Pine.jpg"
-  },
-  "assets/Bengal_Tiger_Bardia_Nepal.jpg": {
-   "credit": "Ambish Kazi via Wikimedia Commons (Royal Bengal Tiger, Bardia, Nepal, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Bengal_Tiger_Bardia_Nepal.jpg"
-  },
-  "assets/Saiga_West_Kazakhstan.jpg": {
-   "credit": "Yakov Fedorov via Wikimedia Commons (Saiga in West Kazakhstan, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Saiga_West_Kazakhstan.jpg"
-  },
-  "assets/Mount_Gorongosa_Mozambique.jpg": {
-   "credit": "Judy Gallagher via Wikimedia Commons (Mount Gorongosa, CC BY 2.0)",
-   "pos": "50% 50%",
-   "r2": "images/Mount_Gorongosa_Mozambique.jpg"
-  },
-  "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg": {
-   "credit": "NASA/Bill Ingalls (NHQ202007180001, comet NEOWISE and the ISS, July 18, 2020)",
-   "pos": "50% 50%",
-   "r2": "images/Comet_NEOWISE_ISS_NHQ202007180001.jpg"
-  },
-  "assets/Lunar_South_Pole_PIA13523.jpg": {
-   "credit": "NASA/GSFC/Arizona State University (PIA13523, the lunar south pole)",
-   "pos": "50% 50%",
-   "r2": "images/Lunar_South_Pole_PIA13523.jpg"
-  },
-  "assets/Ross_Sea_Adelie_Cape_Royds.jpg": {
-   "credit": "U.S. Department of State (Adélie penguin at Cape Royds, Antarctica, 2016, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Ross_Sea_Adelie_Cape_Royds.jpg"
-  },
-  "assets/Greenland_Glacier_Landsat_NASA_EO.jpg": {
-   "credit": "NASA Earth Observatory / Joshua Stevens, Landsat data from USGS (Jakobshavn Glacier, Greenland, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Greenland_Glacier_Landsat_NASA_EO.jpg"
-  },
-  "assets/Iceland_Highland_Edge.jpg": {
-   "credit": "Zairon via Wikimedia Commons (Island am Rande des Hochlands, CC BY-SA 3.0)",
-   "pos": "50% 50%",
-   "r2": "images/Iceland_Highland_Edge.jpg"
-  },
-  "assets/Asteroid_269_Justitia_Orbit_JPL.jpg": {
-   "credit": "JPL Solar System Dynamics/NASA (orbit of 269 Justitia, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Asteroid_269_Justitia_Orbit_JPL.jpg"
-  },
-  "assets/Arabian_Oryx_Oryx_Leucoryx.jpg": {
-   "credit": "Charles J. Sharp via Wikimedia Commons (Arabian oryx, Dubai Desert Conservation Area, CC BY-SA 3.0)",
-   "pos": "50% 50%",
-   "r2": "images/Arabian_Oryx_Oryx_Leucoryx.jpg"
-  },
-  "assets/Azraq_Wetland_Reserve_48.jpg": {
-   "credit": "Mohammad hajeer via Wikimedia Commons (Azraq Wetland Reserve, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Azraq_Wetland_Reserve_48.jpg"
-  },
-  "assets/Okavango_Delta_Aerial_2018.jpg": {
-   "credit": "Diego Delso via Wikimedia Commons (aerial view of the Okavango Delta, 2018, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Okavango_Delta_Aerial_2018.jpg"
-  },
-  "assets/Mountain_Gorilla_Bwindi_2024.jpg": {
-   "credit": "Diego Delso via Wikimedia Commons (mountain gorilla, Bwindi, 2024, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Mountain_Gorilla_Bwindi_2024.jpg"
-  },
-  "assets/Aldabra_Atoll_Seychelles.jpg": {
-   "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (Aldabra Atoll, CC BY-SA 3.0 IGO)",
-   "pos": "50% 50%",
-   "r2": "images/Aldabra_Atoll_Seychelles.jpg"
-  },
-  "assets/Kakapo_Sirocco.jpg": {
-   "credit": "NZ Department of Conservation via Wikimedia Commons (Kākāpō Sirocco, CC BY 2.0)",
-   "pos": "50% 50%",
-   "r2": "images/Kakapo_Sirocco.jpg"
-  },
-  "assets/Chacabuco_Valley_Patagonia_Park.jpg": {
-   "credit": "Gonzalo Lastra via Wikimedia Commons (Valle de Chacabuco, Parque Patagonia, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Chacabuco_Valley_Patagonia_Park.jpg"
-  },
-  "assets/Shackleton_Crater_LROC_ShadowCam.jpg": {
-   "credit": "LROC and ShadowCam teams, NASA/KARI/ASU (Shackleton Crater mosaic, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Shackleton_Crater_LROC_ShadowCam.jpg"
-  },
-  "assets/Puerto_Bermudez_Peru_Rainforest.jpg": {
-   "credit": "Heiner Amado Cadillo via Wikimedia Commons (Puerto Bermúdez, Peru, 2016, CC BY-SA 3.0)",
-   "pos": "50% 50%",
-   "r2": "images/Puerto_Bermudez_Peru_Rainforest.jpg"
-  },
-  "assets/Andfjorden_Andoy_2023.jpg": {
-   "credit": "Ryan Hodnett via Wikimedia Commons (Andfjorden, Andøy, Norway, 2023, CC BY-SA 4.0)",
-   "pos": "50% 50%",
-   "r2": "images/Andfjorden_Andoy_2023.jpg"
-  },
-  "assets/Tetiaroa_Atoll_ISS018.jpg": {
-   "credit": "NASA Johnson Space Center, ISS crew photo ISS018-E-024351 (Tetiaroa, French Polynesia, 27 Jan. 2009, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Tetiaroa_Atoll_ISS018.jpg"
-  },
-  "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg": {
-   "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0146)",
-   "pos": "50% 40%",
-   "r2": "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg"
-  },
-  "r2:images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg": {
-   "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0262)",
-   "pos": "50% 40%",
-   "r2": "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
-  },
-  "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg": {
-   "credit": "NASA/Michael DeMocker (MAF20210116_GR0006)",
-   "pos": "50% 40%",
-   "r2": "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
-  },
-  "r2:images/ArtemisII_Launch_KSC_Hancock.jpg": {
-   "credit": "NASA",
-   "pos": "50% 40%",
-   "r2": "images/ArtemisII_Launch_KSC_Hancock.jpg"
-  },
-  "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg": {
-   "credit": "NASA/Operation IceBridge (GSFC_20171208_Archive_e000266, Arctic sea ice melt ponds, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/PBI_Arctic_Melt_Ponds_IceBridge.jpg"
-  },
-  "assets/Alaska_ABoVE_Flight.jpg": {
-   "credit": "NASA/Peter Griffith (GSFC_20171208_Archive_e000002, ABoVE flight over Alaska, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Alaska_ABoVE_Flight.jpg"
-  },
-  "assets/Nunavut_ASTER.jpg": {
-   "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA13963, Nunavut, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Nunavut_ASTER.jpg"
-  },
-  "assets/Greenland_Sea_Ice_MODIS_2015.jpg": {
-   "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000643, July 16, 2015, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Greenland_Sea_Ice_MODIS_2015.jpg"
-  },
-  "assets/SW_Greenland_Fjord_IceBridge.jpg": {
-   "credit": "NASA/GSFC/Michael Studinger (GSFC_20171208_Archive_e001911, April 8, 2011, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/SW_Greenland_Fjord_IceBridge.jpg"
-  },
-  "assets/Healy_Ice_Station_ICESCAPE.jpg": {
-   "credit": "NASA/Kathryn Hansen (GSFC_20171208_Archive_e001722, ICESCAPE mission, Chukchi Sea, 2011, public domain; not the MOSAiC ship)",
-   "pos": "50% 50%",
-   "r2": "images/Healy_Ice_Station_ICESCAPE.jpg"
-  },
-  "assets/Wolstenholme_Fjord_IceBridge.jpg": {
-   "credit": "NASA/Michael Studinger (GSFC_20171208_Archive_e001514, April 2013, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Wolstenholme_Fjord_IceBridge.jpg"
-  },
-  "assets/Cape_Farewell_Greenland_ISS.jpg": {
-   "credit": "NASA (ISS017-E-012583, Cape Farewell, Greenland, Aug. 4, 2008, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Cape_Farewell_Greenland_ISS.jpg"
-  },
-  "assets/Arctic_Sea_Ice_Minimum_2015.jpg": {
-   "credit": "NASA Scientific Visualization Studio (GSFC_20171208_Archive_e000613, 2015, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Arctic_Sea_Ice_Minimum_2015.jpg"
-  },
-  "assets/Tristan_da_Cunha_ASTER.jpg": {
-   "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA22506, Tristan da Cunha, public domain; not Gough itself)",
-   "pos": "50% 50%",
-   "r2": "images/Tristan_da_Cunha_ASTER.jpg"
-  },
-  "assets/Ross_Sea_Icebergs_MISR.jpg": {
-   "credit": "NASA/GSFC/JPL, MISR Team (PIA02639, Ross Sea icebergs, Dec. 10, 2000, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Ross_Sea_Icebergs_MISR.jpg"
-  },
-  "assets/James_Ross_Island_AirSAR.jpg": {
-   "credit": "NASA/Jim Ross (ED04-0056-137, AirSAR 2004, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/James_Ross_Island_AirSAR.jpg"
-  },
-  "assets/Southern_Ocean_Eddies_VIIRS.jpg": {
-   "credit": "NASA OceanColor/Suomi NPP/VIIRS (GSFC_20171208_Archive_e000750, Jan. 1, 2015, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Southern_Ocean_Eddies_VIIRS.jpg"
-  },
-  "assets/Southern_Ocean_Cyclone_MISR.jpg": {
-   "credit": "NASA/GSFC/LaRC/JPL, MISR Team (PIA03430, Oct. 11, 2001, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Southern_Ocean_Cyclone_MISR.jpg"
-  },
-  "assets/Larsen_C_Iceberg_Landsat.jpg": {
-   "credit": "NASA Earth Observatory image by Joshua Stevens, Landsat data from USGS (GSFC_20171208_Archive_e000021, 2017, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Larsen_C_Iceberg_Landsat.jpg"
-  },
-  "assets/Ross_Sea_Bloom_2011.jpg": {
-   "credit": "NASA (GSFC_20171208_Archive_e001951, Ross Sea bloom, Jan. 22, 2011, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Ross_Sea_Bloom_2011.jpg"
-  },
-  "assets/Amundsen_Sea_Iceberg_IceBridge.jpg": {
-   "credit": "NASA/Jane Peterson (200910220009HQ, Operation IceBridge, Oct. 21, 2009, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Amundsen_Sea_Iceberg_IceBridge.jpg"
-  },
-  "assets/AirSAR_Scientists_Antarctica.jpg": {
-   "credit": "NASA/Jim Ross (ED04-0056-126, AirSAR 2004, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/AirSAR_Scientists_Antarctica.jpg"
-  },
-  "assets/Larsen_Ice_Shelf_AirSAR.jpg": {
-   "credit": "NASA/Jim Ross (ED04-0056-110, AirSAR 2004, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Larsen_Ice_Shelf_AirSAR.jpg"
-  },
-  "assets/Hudson_Bay_Ice_Skylab.jpg": {
-   "credit": "NASA (SL4-141-4316, Hudson Bay from Skylab 4, Jan. 20, 1974, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Hudson_Bay_Ice_Skylab.jpg"
-  },
-  "assets/Western_Alaska_Sea_Ice_MODIS.jpg": {
-   "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000769, Feb. 4, 2014, public domain)",
-   "pos": "50% 50%",
-   "r2": "images/Western_Alaska_Sea_Ice_MODIS.jpg"
-  },
-  "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg": {
-   "credit": "Astroscale, via Wikimedia Commons (CC BY-SA 4.0, illustration)",
-   "alt": "Artist's illustration of Astroscale's ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
-   "local": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
-   "pos": "50% 40%"
-  },
-  "assets/ALOS-4_Model_Tsukuba.jpg": {
-   "credit": "Syced, via Wikimedia Commons (CC0). A 1/50 scale model of ALOS-4 at JAXA's Tsukuba Space Center.",
-   "alt": "JAXA's 1/50 scale model of ALOS-4, with its PALSAR-3 radar antenna and solar arrays, at Tsukuba Space Center",
-   "local": "assets/ALOS-4_Model_Tsukuba.jpg",
-   "pos": "50% 45%"
-  },
-  "assets/GEDI_on_ISS.jpg": {
-   "credit": "NASA (iss059e088632)",
-   "alt": "The GEDI forest-mapping laser mounted outside the Kibo module on the International Space Station",
-   "pos": "50% 50%",
-   "r2": "images/sol-cards/GEDI_on_ISS_iss059e088632.jpg"
-  },
-  "assets/hub/ESA_S2_Southeast_Kenya.jpg": {
-   "credit": "contains modified Copernicus Sentinel data (2023), processed by ESA",
-   "alt": "Southeast Kenya seen by the Copernicus Sentinel-2 satellite, with green vegetated land along the coast and drier land inland",
-   "pos": "50% 50%",
-   "r2": "images/hub/ESA_S2_Southeast_Kenya.jpg"
-  },
-  "assets/hub/ESA_S2_Tana_River_Kenya.jpg": {
-   "credit": "contains modified Copernicus Sentinel data (2020), processed by ESA",
-   "alt": "The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite",
-   "pos": "50% 50%",
-   "r2": "images/hub/ESA_S2_Tana_River_Kenya.jpg"
-  },
-  "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg": {
-   "credit": "U.S. Forest Service",
-   "alt": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
-   "pos": "50% 40%",
-   "r2": "images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg"
-  }
- },
- "pages": {
-  "404.html": "assets/hero/learn",
-  "4ocean.html": "si:ocean",
-  "ALOS-4.html": "assets/ALOS-4_Model_Tsukuba.jpg",
-  "AP_IB_Physics.html": "assets/hero/learn",
-  "ATLAS.html": "assets/Hawaii_Island_ISS_2024.jpg",
-  "About.html": "assets/hero/about",
-  "Aditya_L1.html": "assets/SDO_Sun.jpg",
-  "Aeolus.html": "assets/ATV1_Departure_ISS.jpg",
-  "Aero_Guide.html": "assets/hero/learn",
-  "Aero_Lab.html": "assets/hero/learn",
-  "Aero_Math.html": "assets/hero/learn",
-  "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": "assets/Great_Lakes_GSFC.jpg",
-  "Amazon_Rainy_Season.html": "assets/Amazon_Clouds_ISS.jpg",
-  "American_Forests.html": "si:forest",
-  "American_Rivers.html": "si:rivers",
-  "Arbor_Day_Foundation.html": "assets/Amazon_Clouds_ISS.jpg",
-  "Argo.html": "assets/NOAA_Deep_SOLO_Float_2018.jpg",
-  "Argos.html": "assets/Loggerhead_Release_MINWR.jpg",
-  "Ariel.html": "assets/Webb_Infrared.jpg",
-  "Astroscale.html": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
-  "Atmospheric_Drag.html": "assets/Progress_Reentry.jpg",
-  "Beavers_River_Engineers.html": "assets/Klamath_River.jpg",
-  "BepiColombo.html": "assets/Mercury_MESSENGER.jpg",
-  "Billion_Oyster_Project.html": "assets/NYC_Hudson_Harbor.jpg",
-  "Biomass.html": "assets/Biomass_Forest_MatoGrosso.jpg",
-  "CAMS.html": "assets/Sumatra_Smoke_Singapore_MODIS.jpg",
-  "CHIME.html": "assets/Garden_City_Kansas_Landsat.jpg",
-  "CIMR.html": "assets/North_Atlantic_Bloom_MODIS.jpg",
-  "CO2M.html": "assets/Clouds_Limb_ISS.jpg",
-  "CRISTAL.html": "assets/Labrador_Sea_Ice_ISS.jpg",
-  "Cadets.html": "assets/hero/learn",
-  "Calculators.html": "assets/hero/learn",
-  "Careers.html": "assets/hero/learn",
-  "Carruthers.html": "assets/Carruthers_SWFO_KSC.jpg",
-  "Catalina_Sky_Survey.html": "assets/Asteroid_2018LA_CSS.jpg",
-  "Chesapeake_Bay_Foundation.html": "assets/Baltimore_DC_Skylab.jpg",
-  "Clean_Lakes_Alliance.html": "assets/Great_Lakes_MODIS.jpg",
-  "Clean_Up_the_Lake.html": "assets/Lake_Tahoe_ISS.jpg",
-  "ClearSpace.html": "assets/ATV1_Departure_ISS.jpg",
-  "Comet_Interceptor.html": "assets/Comet_NEOWISE.jpg",
-  "Contact.html": "assets/hero/about",
-  "Copernicus_EMS.html": "assets/Canada_Wildfires_ISS_2025b.jpg",
-  "Copernicus_Marine.html": "assets/North_Atlantic_Bloom_MODIS.jpg",
-  "Coral_Gardeners.html": "assets/BoraBora_Reefs_STS93.jpg",
-  "Coral_IVF.html": "assets/Florida_Keys_PIA03890.jpg",
-  "Coral_Reef_Watch.html": "assets/Great_Barrier_Reef_ISS_2022.jpg",
-  "Coral_Restoration_Foundation.html": "assets/Florida_Keys_PIA03890.jpg",
-  "Coral_Vita.html": "assets/Bahama_Bank_PIA11019.jpg",
-  "Corrections.html": "assets/hero/learn",
-  "CryoSat.html": "assets/Labrador_Sea_Ice_ISS.jpg",
-  "DSCOVR_EPIC.html": "assets/EPIC_Earth.jpg",
-  "Deforestation.html": "assets/Amazon_Clouds_ISS.jpg",
-  "Delta_V_Calculator.html": "assets/hero/learn",
-  "Dragonfly.html": "assets/Titan.jpg",
-  "EFFIS.html": "assets/Portugal_Wildfires_ISS_2018.jpg",
-  "EMIT.html": "assets/EMIT_Methane_Fingerprint.jpg",
-  "EOS-06.html": "assets/Oceansat_Winds_Irene.jpg",
-  "ESA_NEOCC.html": "assets/Goldstone_Radar_2011UL21.jpg",
-  "ESCAPADE.html": "assets/ESCAPADE_Launch_NG2.jpg",
-  "EarthCARE.html": "assets/Clouds_Limb_ISS.jpg",
-  "Earth_Observation.html": "assets/EPIC_Earth.jpg",
-  "Eden_People_Planet.html": "assets/Kilimanjaro_STS72.jpg",
-  "Editorial_Policy.html": "assets/hero/learn",
-  "Elwha_River_Restoration.html": "si:elwha",
-  "EnVision.html": "assets/Venus_Magellan.jpg",
-  "Enceladus.html": "assets/Enceladus_Geyser_Basin.jpg",
-  "Europa_Clipper.html": "assets/Europa_Clipper_Jupiter.jpg",
-  "ExoMars_Rosalind_Franklin.html": "assets/ExoMars_Drill_Curiosity.jpg",
-  "FIRMS.html": "assets/Canada_Wildfires_ISS_2025.jpg",
-  "FLEX.html": "assets/Global_Plant_Fluorescence.jpg",
-  "FORUM.html": "assets/Clouds_Limb_ISS.jpg",
-  "Find_a_Cleanup.html": "assets/hero/help",
-  "FireSat.html": "assets/Rim_Fire_MODIS.jpg",
-  "Forest_Elephants.html": "assets/Congo_River_ISS.jpg",
-  "FreshWater_Watch.html": "assets/Mississippi_River_PIA23534.jpg",
-  "GCOM-C.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
-  "GEDI.html": "assets/GEDI_on_ISS.jpg",
-  "GLOBE_Program.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
-  "GOES-19.html": "assets/GOES19_GOESU_KSC.jpg",
-  "GOSAT-GW.html": "assets/EMIT_Methane_Fingerprint.jpg",
-  "GRACE-FO.html": "assets/GRACE_FO_Orbit.jpg",
-  "GSMaP.html": "assets/GPM_Core_Observatory_GMI.jpg",
-  "Galileo.html": "assets/Romania_City_Lights_ISS.jpg",
-  "GeoXO.html": "assets/Lightning_Storm_ISS.jpg",
-  "GloFAS.html": "assets/Pakistan_Flood_Kheshgi_2010.jpg",
-  "Global_Fishing_Watch.html": "assets/North_Pacific_ISS.jpg",
-  "Global_Forest_Watch.html": "assets/Rondonia_Deforestation_STS46.jpg",
-  "Globe_at_Night.html": "assets/Romania_City_Lights_ISS.jpg",
-  "Glossary.html": "assets/hero/learn",
-  "Great_Bubble_Barrier.html": "si:riversea",
-  "Great_Green_Wall.html": "assets/Sahel_ISS.jpg",
-  "Great_Lakes_Plastic_Cleanup.html": "assets/Great_Lakes_MODIS.jpg",
-  "Hayabusa2_Torifune.html": "assets/Ryugu_Hayabusa2.jpg",
-  "Heal_the_Bay.html": "assets/Lake_Shore_Cleanup_NPS.jpg",
-  "Healthy_Seas.html": "assets/Mediterranean_ISS.jpg",
-  "Hera.html": "assets/Hera.jpg",
-  "Hohmann_Transfer_Calculator.html": "assets/hero/learn",
-  "Homeschool.html": "assets/hero/learn",
-  "HydroGNSS.html": "assets/Danube_Delta_GSFC.jpg",
-  "ICESat-2.html": "assets/ICESat2_Launch.jpg",
-  "IMAP.html": "assets/IMAP_Spacecraft_KSC.jpg",
-  "INSAT-3DS.html": "assets/ISS_Over_Ganges_STS102.jpg",
-  "ISS_Water_Recovery.html": "assets/ISS_Water_Recovery.jpg",
-  "International_Charter.html": "assets/Missouri_Flood_Hamburg_EO1.jpg",
-  "International_Coastal_Cleanup.html": "assets/Bahamas_Ocean_ISS.jpg",
-  "JPSS.html": "assets/JPSS2_Atlas_V_Launch_Pad.jpg",
-  "Juice.html": "assets/Juice_RIME_Radar.jpg",
-  "Jupiter.html": "assets/Jupiter.jpg",
-  "Justdiggit.html": "assets/hub/ESA_S2_Southeast_Kenya.jpg",
-  "Keep_Tahoe_Blue.html": "assets/Lake_Tahoe_ISS.jpg",
-  "Kelp_Forests.html": "assets/Kerguelen_Kelp_ISS.jpg",
-  "Kids_Map.html": "assets/hero/kids",
-  "Kissimmee_River_Restoration.html": "assets/Florida_Keys_PIA03890.jpg",
-  "Klamath_River_Dam_Removal.html": "assets/Klamath_River.jpg",
-  "Lake_Erie_Algal_Bloom_Forecast.html": "assets/Great_Lakes_GSFC.jpg",
-  "Lake_Plastic_Recovery.html": "assets/Lake_Shore_Cleanup_NPS.jpg",
-  "Lakes.html": "assets/Great_Lakes_MODIS.jpg",
-  "Landsat_9.html": "assets/Landsat9_Launch.jpg",
-  "Learn.html": "assets/hero/learn",
-  "LeoLabs.html": "assets/LEO_View.jpg",
-  "Lesson_Builder.html": "assets/hero/lesson",
-  "Libera.html": "assets/EPIC_Earth.jpg",
-  "Life_Terra.html": "si:forest",
-  "Lift_Equation_Calculator.html": "assets/hero/learn",
-  "LignoSat.html": "assets/LignoSat_Wood_Panels.jpg",
-  "Living_Lakes.html": "assets/Lake_Tahoe_ISS.jpg",
-  "Living_Lands_and_Waters.html": "assets/Mississippi_River_PIA23534.jpg",
-  "London_Tideway_Tunnel.html": "assets/London_Thames_Night_ISS.jpg",
-  "Lucy.html": "assets/Lucy_KSC.jpg",
-  "MMX.html": "assets/Phobos.jpg",
-  "Mach_Number_Calculator.html": "assets/hero/learn",
-  "Mangroves.html": "assets/Mangrove_Delta_ISS.jpg",
-  "MetOp-SG-A1_Sentinel-5A.html": "assets/Clouds_Limb_ISS.jpg",
-  "Meteosat_Third_Generation.html": "assets/Lightning_Storm_ISS.jpg",
-  "Mission_Blue_Hope_Spots.html": "assets/Bahamas_Ocean_ISS.jpg",
-  "Moon_Steadies_Earth.html": "assets/Moon_Crossing_Earth.jpg",
-  "Mote_Marine_Laboratory.html": "assets/Florida_Keys_PIA03890.jpg",
-  "Mr_Trash_Wheel.html": "assets/Baltimore_DC_Skylab.jpg",
-  "Myth_vs_Fact.html": "assets/hero/learn",
-  "NEO_Surveyor.html": "assets/NEO_Surveyor.jpg",
-  "NISAR.html": "assets/NISAR_Orbit.jpg",
-  "Namami_Gange.html": "assets/Sundarbans_Ganges_Delta_ISS.jpg",
-  "Nancy_Grace_Roman.html": "assets/Roman_Launch_FH.jpg",
-  "OCO-2.html": "assets/Global_Plant_Fluorescence.jpg",
-  "OSIRIS-APEX.html": "assets/OSIRIS_APEX.jpg",
-  "Ocean_Cleanup.html": "si:oceancleanup",
-  "Ocean_Voyages_Institute.html": "assets/North_Pacific_ISS.jpg",
-  "Oceans.html": "assets/North_Pacific_ISS.jpg",
-  "One_Tree_Planted.html": "assets/Global_Plant_Fluorescence.jpg",
-  "OpenET.html": "assets/Garden_City_Kansas_Landsat.jpg",
-  "Orbit_Lab.html": "assets/hero/learn",
-  "Orbit_Math.html": "assets/hero/learn",
-  "Orbital_Data_Centers.html": "assets/DataOrbitalCenters.jpg",
-  "Orbital_Period_Calculator.html": "assets/hero/learn",
-  "Orbital_Velocity_Calculator.html": "assets/hero/learn",
-  "Orbits_Guide.html": "assets/hero/learn",
-  "PACE.html": "assets/PACE_Spacecraft_KSC.jpg",
-  "PREFIRE.html": "assets/LEO_View.jpg",
-  "PRELUDE.html": "assets/ATV1_Departure_ISS.jpg",
-  "PUNCH.html": "assets/PUNCH_Mission.jpg",
-  "Pan-STARRS.html": "assets/Comet_PANSTARRS_ISS_2026.jpg",
-  "Parker_Solar_Probe.html": "assets/SDO_Sun.jpg",
-  "Pendulum_Period_Calculator.html": "assets/hero/learn",
-  "Penobscot_River_Restoration.html": "assets/New_England_Coast_ISS.jpg",
-  "Physics_Guide.html": "assets/hero/learn",
-  "Physics_Lab.html": "assets/hero/learn",
-  "Physics_Math.html": "assets/hero/learn",
-  "Phytoplankton.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
-  "Planetary_Defense.html": "assets/Hera.jpg",
-  "Plant-for-the-Planet.html": "si:plant",
-  "Plastic_Bank.html": "si:ocean",
-  "Plastic_Odyssey.html": "assets/PlasticBank_Indonesia_STS66.jpg",
-  "Plato.html": "assets/Plato_Exoplanets.jpg",
-  "Play_and_Learn.html": "assets/hero/kids",
-  "Polar.html": "assets/Greenland_IceBridge_2015.jpg",
-  "Posidonia_Meadows.html": "assets/Mediterranean_ISS.jpg",
-  "Press.html": "assets/hero/about",
-  "Privacy.html": "assets/hero/about",
-  "Project_Seagrass.html": "assets/Seagrass_Restoration_KSC.jpg",
-  "Projectile_Motion_Drag_Calculator.html": "assets/hero/learn",
-  "Psyche.html": "assets/Psyche_Illustration.jpg",
-  "RCM.html": "assets/Labrador_Sea_Ice_ISS.jpg",
-  "Rainforest_Connection.html": "assets/Amazon_Clouds_ISS.jpg",
-  "Ramses.html": "assets/Ramses_Switch_On.jpg",
-  "Rawanes_Mission_Log.html": "assets/hero/mission",
-  "Restoring_the_Lake_Depths.html": "assets/Lake_Tahoe_ISS.jpg",
-  "Rewilding_Europe.html": "assets/Danube_Delta_GSFC.jpg",
-  "River_Cleanup.html": "assets/Mississippi_River_PIA23534.jpg",
-  "Rivers.html": "assets/Mississippi_River_PIA23534.jpg",
-  "Rotor_Hover_Power_Calculator.html": "assets/hero/learn",
-  "SARSAT.html": "assets/GOES19_GOESU_KSC.jpg",
-  "SMAP.html": "assets/Mississippi_River_PIA23534.jpg",
-  "SOHO.html": "assets/SDO_Sun.jpg",
-  "SOLAR_1.html": "assets/SDO_Sun.jpg",
-  "SPHEREx.html": "assets/SPHEREx_Spacecraft.jpg",
-  "SWOT.html": "assets/SWOT_Orbit_Illustration.jpg",
-  "Saharan_Dust_Amazon.html": "assets/Saharan_Dust_Amazon.jpg",
-  "Salt_Marshes.html": "assets/Salt_Marsh_KSC.jpg",
-  "Satellite_Explorer.html": "assets/hero/satx",
-  "SeaTrees.html": "assets/Mangrove_Delta_ISS.jpg",
-  "Sea_Turtle_Conservancy.html": "assets/Loggerhead_Release_MINWR.jpg",
-  "Seabin.html": "assets/Sydney_ASTER.jpg",
-  "Seagrass.html": "assets/Seagrass_Planting_KSC.jpg",
-  "Sentinel-1.html": "assets/Sentinel1_Ground_Motion.jpg",
-  "Sentinel-2C.html": "assets/Biomass_Forest_MatoGrosso.jpg",
-  "Sentinel-3.html": "assets/Bahamas_Ocean_ISS.jpg",
-  "Sentinel-4.html": "assets/Mediterranean_ISS.jpg",
-  "Sentinel-5P.html": "assets/Clouds_Limb_ISS.jpg",
-  "Sentinel-6B.html": "assets/Sentinel6B_Launch.jpg",
-  "Sitemap.html": "assets/hero/learn",
-  "Solar_Orbiter.html": "assets/Solar_Orbiter_Astrotech.jpg",
-  "Space.html": "assets/ISS_Flyaround_2021.jpg",
-  "SpaceLogistics.html": "assets/Satellite_Servicing_Arm_GSFC.jpg",
-  "Space_Disposal.html": "assets/Progress_Reentry.jpg",
-  "Space_Weather.html": "assets/SDO_Sun.jpg",
-  "Spot_the_Fire.html": "assets/hero/kids",
-  "Stall_Speed_Calculator.html": "assets/hero/learn",
-  "Starfish_Otter.html": "assets/Transporter18_Launch.jpg",
-  "Sungai_Watch.html": "si:riversea",
-  "Surfrider_Foundation.html": "assets/North_Pacific_ISS.jpg",
-  "TEMPO.html": "assets/Clouds_Limb_ISS.jpg",
-  "TRACERS.html": "assets/TRACERS_Launch.jpg",
-  "Tanager-1.html": "assets/Tanager1_Methane_Plume.jpg",
-  "Teachers.html": "assets/hero/teach",
-  "Terraformation.html": "si:plant",
-  "The_SeaCleaners.html": "assets/PlasticBank_Indonesia_STS66.jpg",
-  "Three_Shields.html": "assets/SDO_Sun.jpg",
-  "Three_Trees.html": "si:forest",
-  "Thrust_to_Weight_Calculator.html": "assets/hero/learn",
-  "Titan.html": "assets/Titan.jpg",
-  "Topics.html": "assets/hero/learn",
-  "Trees_for_the_Future.html": "assets/hub/ESA_S2_Tana_River_Kenya.jpg",
-  "Trout_Unlimited.html": "assets/Klamath_River.jpg",
-  "Tsunami_Early_Warning.html": "assets/tsunami-hero.jpg",
-  "UNEP_MARS.html": "assets/EMIT_Methane_Plumes_Uzbekistan.jpg",
-  "US_Deorbit_Vehicle.html": "assets/ISS_Flyaround_2021.jpg",
-  "Veggie_Space_Garden.html": "assets/Veggie_KSC.jpg",
-  "Vigil.html": "assets/SDO_Sun.jpg",
-  "Voyager.html": "assets/Voyager_Heliosphere_PIA22835.jpg",
-  "Waterkeeper_Alliance.html": "assets/NYC_Hudson_Harbor.jpg",
-  "Ways_to_Help.html": "assets/hero/help",
-  "WeForest.html": "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg",
-  "Webb_2024_YR4.html": "assets/Webb_Infrared.jpg",
-  "Whales_Ocean_Gardeners.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
-  "Yellowstone_Wolves.html": "assets/Yellowstone_ISS.jpg",
-  "Zero_Debris_Charter.html": "assets/LEO_View.jpg",
-  "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
-  "Thwaites_Glacier_Collaboration.html": "assets/Thwaites_Glacier_Landsat8_2019.jpg",
-  "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg",
-  "African_Parks.html": "assets/Lake_Kariba_ISS_2024.jpg",
-  "Digital_Earth_Africa.html": "assets/Okavango_Delta_ISS_2025.jpg",
-  "Hope_Mars_Mission.html": "assets/Valles_Marineris_Viking_PIA00422.jpg",
-  "Abu_Dhabi_Mangroves.html": "assets/Abu_Dhabi_Coast_ISS_2024.jpg",
-  "Gaganyaan.html": "assets/South_India_Sri_Lanka_ISS_2024.jpg",
-  "NEWater.html": "assets/Singapore_Night_ISS_2025.jpg",
-  "Cheonggyecheon.html": "assets/Seoul_Night_ISS_2025.jpg",
-  "Palau_National_Marine_Sanctuary.html": "assets/Palau_Landsat8_2014.jpg",
-  "Papahanaumokuakea.html": "assets/Pearl_Hermes_Atoll_ISS_2002.jpg",
-  "Predator_Free_2050.html": "assets/NZ_Southern_Lakes_ISS_2024.jpg",
-  "Galapagos_Giant_Tortoises.html": "assets/Fernandina_Galapagos_ISS_2022.jpg",
-  "MAAP.html": "assets/Ucayali_River_ISS_2026.jpg",
-  "Mesoamerican_Reef_Insurance.html": "assets/Belize_Coast_ISS_2014.jpg",
-  "Costa_Rica_Forest_Payments.html": "assets/Costa_Rica_ISS_2020.jpg",
-  "Gulf_of_Alaska_Keeper.html": "assets/Gulf_of_Alaska_Bloom_2017.jpg",
-  "Alaska_Kelp_Farming.html": "assets/Alaska_Clear_View_Terra_2013.jpg",
-  "Bristol_Bay_Salmon.html": "assets/Bristol_Bay_Terra_2017.jpg",
-  "Alaska_SeaLife_Center.html": "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg",
-  "South_Georgia_Habitat_Restoration.html": "assets/South_Georgia_ISS071_E_581850.jpg",
-  "Arctic_Weather_Satellite.html": "assets/Arctic_Weather_Satellite_ESA.jpg",
-  "GCOM-W_SHIZUKU.html": "assets/Greenland_Sea_Ice_GSFC.jpg",
-  "SCISAT.html": "assets/Ozone_Hole_2024_SVS14711.jpg",
-  "Chilika_Lake.html": "assets/Chilika_Lake_Mouth.jpg",
-  "Tonle_Sap.html": "assets/Tonle_Sap_Floating_Village.jpg",
-  "Lake_Biwa_Soap_Movement.html": "assets/Lake_Biwa_Shiga_NASA.jpg",
-  "Lake_Constance.html": "assets/Lake_Constance_ISS030_E_161620.jpg",
-  "Room_for_the_River.html": "assets/Netherlands_Rivers_ISS063_E_002730.jpg",
-  "Tubbataha_Reefs.html": "assets/Tubbataha_Reefs_UNESCO.jpg",
-  "Sargassum_Watch.html": "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg",
-  "Redonda_Restoration.html": "assets/Redonda_By_Sea_2023.jpg",
-  "Iberian_Lynx.html": "assets/Iberian_Lynx_Almuradiel_2021.jpg",
-  "Trees_for_Life.html": "assets/Glen_Affric_Scots_Pine.jpg",
-  "Nepal_Tigers.html": "assets/Bengal_Tiger_Bardia_Nepal.jpg",
-  "Altyn_Dala_Saiga.html": "assets/Saiga_West_Kazakhstan.jpg",
-  "Gorongosa.html": "assets/Mount_Gorongosa_Mozambique.jpg",
-  "NEOSSat.html": "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
-  "Chandrayaan-5_LUPEX.html": "assets/Lunar_South_Pole_PIA13523.jpg",
-  "Ross_Sea_MPA.html": "assets/Ross_Sea_Adelie_Cape_Royds.jpg",
-  "PROMICE_GC-Net.html": "assets/Greenland_Glacier_Landsat_NASA_EO.jpg",
-  "Iceland_Land_Restoration.html": "assets/Iceland_Highland_Edge.jpg",
-  "Emirates_Mission_Asteroid_Belt.html": "assets/Asteroid_269_Justitia_Orbit_JPL.jpg",
-  "Arabian_Oryx.html": "assets/Arabian_Oryx_Oryx_Leucoryx.jpg",
-  "Azraq_Wetland.html": "assets/Azraq_Wetland_Reserve_48.jpg",
-  "Okavango_Delta.html": "assets/Okavango_Delta_Aerial_2018.jpg",
-  "Mountain_Gorillas.html": "assets/Mountain_Gorilla_Bwindi_2024.jpg",
-  "Seychelles_Marine_Spatial_Plan.html": "assets/Aldabra_Atoll_Seychelles.jpg",
-  "Kakapo_Recovery.html": "assets/Kakapo_Sirocco.jpg",
-  "Route_of_Parks_Patagonia.html": "assets/Chacabuco_Valley_Patagonia_Park.jpg",
-  "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg",
-  "Cool_Earth_Basic_Income.html": "assets/Puerto_Bermudez_Peru_Rainforest.jpg",
-  "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
-  "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
-  "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-  "Courses.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
-  "Physics_I.html": "assets/Landsat9_Launch.jpg",
-  "Calculus_I.html": "assets/EPIC_Earth.jpg",
-  "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg",
-  "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
-  "Engineering_Graphics_CAD.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-  "Intro_to_Programming.html": "assets/ISS_Flyaround_2021.jpg",
-  "Calculus_III.html": "assets/EPIC_Earth.jpg",
-  "Differential_Equations.html": "assets/EPIC_Earth.jpg",
-  "Physics_II.html": "assets/SDO_Sun.jpg",
-  "Statics.html": "assets/ISS_Flyaround_2021.jpg",
-  "Dynamics.html": "assets/Landsat9_Launch.jpg",
-  "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-  "Linear_Algebra.html": "assets/Landsat9_Launch.jpg",
-  "Circuits.html": "assets/ISS_Flyaround_2021.jpg",
-  "Aerodynamics_I.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
-  "Thermodynamics.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-  "Fluid_Mechanics.html": "assets/SWOT_Orbit_Illustration.jpg",
-  "Aircraft_Performance.html": "assets/ISS_Flyaround_2021.jpg",
-  "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg",
-  "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg",
-  "Numerical_Methods.html": "assets/DataOrbitalCenters.jpg",
-  "Probability_Statistics.html": "assets/GOES19_GOESU_KSC.jpg",
-  "Propulsion.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-  "Flight_Dynamics_Controls.html": "assets/ISS_Flyaround_2021.jpg",
-  "Spacecraft_Design.html": "assets/Landsat9_Launch.jpg",
-  "Heat_Transfer.html": "assets/EPIC_Earth.jpg",
-  "Avionics_Systems_Engineering.html": "assets/ISS_Flyaround_2021.jpg",
-  "Capstone_Design.html": "assets/ISS_Flyaround_2021.jpg",
-  "Sustainable_Aviation.html": "assets/EPIC_Earth.jpg",
-  "Polar_Bears_International.html": "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg",
-  "SmartICE.html": "assets/Hudson_Bay_Ice_Skylab.jpg",
-  "Permafrost_Pathways.html": "assets/Alaska_ABoVE_Flight.jpg",
-  "Tallurutiup_Imanga_NMCA.html": "assets/Nunavut_ASTER.jpg",
-  "PAME_Arctic_Council.html": "assets/Western_Alaska_Sea_Ice_MODIS.jpg",
-  "CAFF_Arctic_Biodiversity.html": "assets/SW_Greenland_Fjord_IceBridge.jpg",
-  "MOSAiC_Expedition.html": "assets/Healy_Ice_Station_ICESCAPE.jpg",
-  "WWF_Arctic_Programme.html": "assets/Wolstenholme_Fjord_IceBridge.jpg",
-  "Inuit_Circumpolar_Council.html": "assets/Cape_Farewell_Greenland_ISS.jpg",
-  "Arctic_Basecamp.html": "assets/Arctic_Sea_Ice_Minimum_2015.jpg",
-  "Gough_Island_Restoration.html": "assets/Tristan_da_Cunha_ASTER.jpg",
-  "Penguin_Watch.html": "assets/Ross_Sea_Icebergs_MISR.jpg",
-  "Oceanites_Penguin_Census.html": "assets/James_Ross_Island_AirSAR.jpg",
-  "SOCCOM.html": "assets/Southern_Ocean_Eddies_VIIRS.jpg",
-  "SOOS.html": "assets/Southern_Ocean_Cyclone_MISR.jpg",
-  "Beyond_EPICA_Oldest_Ice.html": "assets/Larsen_C_Iceberg_Landsat.jpg",
-  "ASOC_Antarctic_Coalition.html": "assets/Ross_Sea_Bloom_2011.jpg",
-  "CCAMLR.html": "assets/Amundsen_Sea_Iceberg_IceBridge.jpg",
-  "SCAR_Antarctic_Research.html": "assets/AirSAR_Scientists_Antarctica.jpg",
-  "IAATO.html": "assets/Larsen_Ice_Shelf_AirSAR.jpg"
- },
- "slides": {
-  "pools": {
-   "earth": [
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
-    "images/GRACE_FO_PIA22445.jpg",
-    "images/Clouds_Limb_ISS.jpg",
-    "images/Baltimore_DC_Skylab.jpg",
-    "images/EMIT_Methane_Fingerprint.jpg",
-    "images/Lightning_Storm_ISS.jpg",
-    "images/Garden_City_Kansas_Landsat.jpg",
-    "images/EMIT_Methane_Plumes_Uzbekistan.jpg",
-    "images/GPM_Core_Observatory_GMI.jpg",
-    "images/GRACE_FO_Orbit.jpg",
-    "images/NISAR_Orbit_PIA26285.jpg",
-    "images/South_India_Sri_Lanka_ISS_2024.jpg",
-    "images/Singapore_Night_ISS_2025.jpg",
-    "images/Seoul_Night_ISS_2025.jpg",
-    "images/Romania_City_Lights_ISS.jpg"
-   ],
-   "ocean": [
-    "images/Pacific_Clouds_Sunset_ISS.jpg",
-    "images/Florida_Keys_PIA03890.jpg",
-    "images/North_Pacific_ISS.jpg",
-    "images/Bahamas_Ocean_ISS.jpg",
-    "images/Mediterranean_ISS.jpg",
-    "images/North_Atlantic_Bloom_MODIS.jpg",
-    "images/PlasticBank_Indonesia_STS66.jpg",
-    "images/Loggerhead_Release_MINWR.jpg",
-    "images/Bahama_Bank_PIA11019.jpg",
-    "images/BoraBora_Reefs_STS93.jpg",
-    "images/New_England_Coast_ISS.jpg",
-    "images/Hawaii_Island_ISS_2024.jpg",
-    "images/Great_Barrier_Reef_ISS_2022.jpg",
-    "images/Kerguelen_Kelp_ISS.jpg",
-    "images/Sydney_ASTER.jpg",
-    "images/NOAA_Deep_SOLO_Deployment_2018.jpg",
-    "images/KSC_Beach_Cleanup_2017_0002.jpg",
-    "images/KSC_Beach_Cleanup_2017_0081.jpg",
-    "images/Bahamas_Atlantic_ISS071_449837.jpg",
-    "images/Bahamas_Shallows_ISS065_144117.jpg",
-    "images/Mangrove_Seedling_KSC-20230412-GEB01_0006.jpg",
-    "images/Abu_Dhabi_Coast_ISS_2024.jpg",
-    "images/Palau_Landsat8_2014.jpg",
-    "images/Pearl_Hermes_Atoll_ISS_2002.jpg",
-    "images/Fernandina_Galapagos_ISS_2022.jpg",
-    "images/Belize_Coast_ISS_2014.jpg",
-    "images/Gulf_of_Alaska_Bloom_2017.jpg",
-    "images/Tubbataha_Reefs_UNESCO.jpg",
-    "images/Redonda_By_Sea_2023.jpg",
-    "images/Aldabra_Atoll_Seychelles.jpg",
-    "images/Andfjorden_Andoy_2023.jpg",
-    "images/Tetiaroa_Atoll_ISS018.jpg",
-    "images/Seagrass_Restoration_KSC.jpg",
-    "images/Salt_Marsh_KSC.jpg"
-   ],
-   "sun": [
-    "images/Aurora_Borealis_ISS072-E-159172.jpg",
-    "images/SDO_Sun.jpg",
-    "images/Voyager_Heliosphere_PIA22835.jpg",
-    "images/Carruthers_SWFO_KSC.jpg",
-    "images/IMAP_Spacecraft_KSC.jpg",
-    "images/PUNCH_SPHEREx_Launch_AFRC2025-0036-22.jpg",
-    "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
-   ],
-   "rivers": [
-    "images/Mississippi_River_PIA23534.jpg",
-    "images/Klamath_River.jpg",
-    "images/Danube_Delta_GSFC.jpg",
-    "images/NYC_Hudson_Harbor.jpg",
-    "images/Sundarbans_Ganges_Delta_ISS.jpg",
-    "images/Congo_River_ISS.jpg",
-    "images/London_Thames_Night_ISS.jpg",
-    "images/ISS_Over_Ganges_STS102.jpg",
-    "images/Pakistan_Flood_Kheshgi_2010.jpg",
-    "images/Missouri_Flood_Hamburg_EO1.jpg",
-    "images/Mississippi_River_ISS073_0880658.jpg",
-    "images/Bassac_River_ISS073_0818427.jpg",
-    "images/Ucayali_River_ISS_2026.jpg",
-    "images/Bristol_Bay_Terra_2017.jpg",
-    "images/Netherlands_Rivers_ISS063_E_002730.jpg"
-   ],
-   "forest": [
-    "images/Amazon_Clouds_ISS.jpg",
-    "images/Kilimanjaro_STS72.jpg",
-    "images/Global_Plant_Fluorescence.jpg",
-    "images/Rondonia_Deforestation_STS46.jpg",
-    "images/Canada_Wildfires_ISS_2025.jpg",
-    "images/Canada_Wildfires_ISS_2025b.jpg",
-    "images/Portugal_Wildfires_ISS_2018.jpg",
-    "images/Rim_Fire_MODIS.jpg",
-    "images/Sahel_ISS.jpg",
-    "images/Sumatra_Smoke_Singapore_MODIS.jpg",
-    "images/Saharan_Dust_Amazon.jpg",
-    "images/Ucayali_Amazon_ISS074.jpg",
-    "images/Gabon_Rainforest_AFRC2016-0054-105.jpg",
-    "images/Olympic_NP_Landsat8_GSFC_e000239.jpg",
-    "images/Costa_Rica_ISS_2020.jpg",
-    "images/Iberian_Lynx_Almuradiel_2021.jpg",
-    "images/Glen_Affric_Scots_Pine.jpg",
-    "images/Bengal_Tiger_Bardia_Nepal.jpg",
-    "images/Mount_Gorongosa_Mozambique.jpg",
-    "images/Mountain_Gorilla_Bwindi_2024.jpg",
-    "images/Kakapo_Sirocco.jpg",
-    "images/Chacabuco_Valley_Patagonia_Park.jpg",
-    "images/Puerto_Bermudez_Peru_Rainforest.jpg"
-   ],
-   "lakes": [
-    "images/Lake_Tahoe_ISS.jpg",
-    "images/Great_Lakes_GSFC.jpg",
-    "images/Yellowstone_ISS.jpg",
-    "images/Great_Lakes_ISS074_0642367.jpg",
-    "images/Okavango_Delta_ISS_2025.jpg",
-    "images/NZ_Southern_Lakes_ISS_2024.jpg",
-    "images/Chilika_Lake_Mouth.jpg",
-    "images/Tonle_Sap_Floating_Village.jpg",
-    "images/Lake_Biwa_Shiga_NASA.jpg",
-    "images/Lake_Constance_ISS030_E_161620.jpg",
-    "images/Azraq_Wetland_Reserve_48.jpg",
-    "images/Okavango_Delta_Aerial_2018.jpg"
-   ],
-   "orbit": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/LEO_View.jpg",
-    "images/ATV1_Departure_ISS.jpg",
-    "images/Progress_Reentry.jpg",
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/Veggie_KSC.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/ISS_Water_Recovery.jpg",
-    "images/PACE_Spacecraft_KSC.jpg",
-    "images/Sentinel6B_Launch.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/Spaceborne_Computer2_iss065e009492.jpg"
-   ],
-   "polar": [
-    "images/Greenland_IceBridge_2015.jpg",
-    "images/Thwaites_Glacier_Landsat8_2019.jpg",
-    "images/Labrador_Sea_Ice_ISS.jpg",
-    "images/Ross_Sea_Adelie_Cape_Royds.jpg",
-    "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
-    "images/South_Georgia_ISS071_E_581850.jpg",
-    "images/Greenland_Sea_Ice_GSFC.jpg",
-    "images/Ozone_Hole_2024_SVS14711.jpg",
-    "images/Greenland_Glacier_Landsat_NASA_EO.jpg"
-   ],
-   "planets": [
-    "images/Titan.jpg",
-    "images/Webb_Infrared.jpg",
-    "images/Enceladus_Geyser_Basin.jpg",
-    "images/SPHEREx_Spacecraft.jpg",
-    "images/Venus_Magellan.jpg",
-    "images/Europa_Clipper_Jupiter.jpg",
-    "images/ExoMars_Drill_Curiosity.jpg",
-    "images/Juice_RIME_Radar.jpg",
-    "images/Moon_Crossing_Earth.jpg",
-    "images/Phobos.jpg",
-    "images/Plato_Exoplanets.jpg",
-    "images/Roman_Launch_FH_NHQ202608300015-2.jpg",
-    "images/Valles_Marineris_Viking_PIA00422.jpg",
-    "images/Lunar_South_Pole_PIA13523.jpg"
-   ],
-   "defense": [
-    "images/Asteroid_2018LA_CSS.jpg",
-    "images/Goldstone_Radar_2011UL21.jpg",
-    "images/Psyche_Illustration.jpg",
-    "images/Lucy_KSC.jpg",
-    "images/Comet_PANSTARRS_ISS_2026.jpg",
-    "images/NEO_Surveyor.jpg",
-    "images/DART_Didymos_PIA25329.jpg",
-    "images/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
-    "images/Asteroid_269_Justitia_Orbit_JPL.jpg"
-   ]
+  "images": {
+    "assets/EPIC_Earth.jpg": {
+      "credit": "NASA Blue Marble",
+      "pos": "50% 50%",
+      "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+    },
+    "assets/hero/about": {
+      "credit": "NASA (ISS074-E-0046371, Jan. 3, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Pacific_Clouds_Sunset_ISS.jpg"
+    },
+    "assets/hero/kids": {
+      "credit": "NASA Blue Marble",
+      "pos": "50% 50%",
+      "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+    },
+    "assets/hero/learn": {
+      "credit": "NASA Blue Marble",
+      "pos": "50% 50%",
+      "r2": "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+    },
+    "assets/hero/mission": {
+      "credit": "NASA (ISS072-E-159172, Oct. 30, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Aurora_Borealis_ISS072-E-159172.jpg"
+    },
+    "assets/hero/satx": {
+      "credit": "NASA/JPL-Caltech",
+      "pos": "50% 50%",
+      "r2": "images/GRACE_FO_PIA22445.jpg"
+    },
+    "assets/SDO_Sun.jpg": {
+      "credit": "NASA/SDO",
+      "pos": "50% 50%",
+      "r2": "images/SDO_Sun.jpg"
+    },
+    "assets/Clouds_Limb_ISS.jpg": {
+      "credit": "NASA/Jeff Williams (ISS020-E-047807, Oct. 6, 2009)",
+      "pos": "50% 50%",
+      "r2": "images/Clouds_Limb_ISS.jpg"
+    },
+    "assets/Mississippi_River_PIA23534.jpg": {
+      "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA23534)",
+      "pos": "50% 50%",
+      "r2": "images/Mississippi_River_PIA23534.jpg"
+    },
+    "assets/Amazon_Clouds_ISS.jpg": {
+      "credit": "NASA (ISS013-E-74843, Sept. 2, 2006)",
+      "pos": "50% 50%",
+      "r2": "images/Amazon_Clouds_ISS.jpg"
+    },
+    "assets/Florida_Keys_PIA03890.jpg": {
+      "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03890)",
+      "pos": "50% 50%",
+      "r2": "images/Florida_Keys_PIA03890.jpg"
+    },
+    "assets/Lake_Tahoe_ISS.jpg": {
+      "credit": "NASA (ISS071-E-14284, April 20, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Lake_Tahoe_ISS.jpg"
+    },
+    "assets/North_Pacific_ISS.jpg": {
+      "credit": "NASA (ISS073-E-0257194, June 28, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/North_Pacific_ISS.jpg"
+    },
+    "assets/Kilimanjaro_STS72.jpg": {
+      "credit": "NASA (STS072-722-004, Jan. 1996)",
+      "pos": "50% 50%",
+      "r2": "images/Kilimanjaro_STS72.jpg",
+      "alt": "Mount Kilimanjaro and the surrounding highlands in Tanzania, seen from the Space Shuttle"
+    },
+    "assets/Bahamas_Ocean_ISS.jpg": {
+      "credit": "NASA (ISS071-E-449837, July 24, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Bahamas_Ocean_ISS.jpg"
+    },
+    "assets/ISS_Flyaround_2021.jpg": {
+      "credit": "NASA (ISS066-E-080762, Nov. 8, 2021)",
+      "pos": "50% 50%",
+      "r2": "images/ISS_Flyaround_2021.jpg"
+    },
+    "assets/Klamath_River.jpg": {
+      "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA26448)",
+      "pos": "50% 50%",
+      "r2": "images/Klamath_River.jpg"
+    },
+    "assets/LEO_View.jpg": {
+      "credit": "NASA (ISS023-E-057948, May 25, 2010)",
+      "pos": "50% 50%",
+      "r2": "images/LEO_View.jpg"
+    },
+    "assets/Mediterranean_ISS.jpg": {
+      "credit": "NASA (ISS071-E-207494, June 24, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Mediterranean_ISS.jpg"
+    },
+    "assets/ATV1_Departure_ISS.jpg": {
+      "credit": "NASA (ISS017-E-015496, Sept. 5, 2008)",
+      "pos": "50% 50%",
+      "r2": "images/ATV1_Departure_ISS.jpg"
+    },
+    "assets/Global_Plant_Fluorescence.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA18935)",
+      "pos": "50% 50%",
+      "r2": "images/Global_Plant_Fluorescence.jpg"
+    },
+    "assets/Labrador_Sea_Ice_ISS.jpg": {
+      "credit": "NASA astronaut Loral O'Hara (iss070e086805, Labrador coast, Feb. 3, 2024, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Labrador_Sea_Ice_ISS.jpg"
+    },
+    "assets/Baltimore_DC_Skylab.jpg": {
+      "credit": "NASA (SL3-83-166, Skylab, 1973)",
+      "pos": "50% 50%",
+      "r2": "images/Baltimore_DC_Skylab.jpg"
+    },
+    "assets/Danube_Delta_GSFC.jpg": {
+      "credit": "NASA/Goddard (Feb. 5, 2013)",
+      "pos": "50% 50%",
+      "r2": "images/Danube_Delta_GSFC.jpg"
+    },
+    "assets/EMIT_Methane_Fingerprint.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA25593)",
+      "pos": "50% 50%",
+      "r2": "images/EMIT_Methane_Fingerprint.jpg"
+    },
+    "assets/Great_Lakes_GSFC.jpg": {
+      "credit": "NASA/Goddard (Aug. 28, 2010)",
+      "pos": "50% 50%",
+      "r2": "images/Great_Lakes_GSFC.jpg"
+    },
+    "assets/Lightning_Storm_ISS.jpg": {
+      "credit": "NASA (ISS073-E-0080625, May 15, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Lightning_Storm_ISS.jpg"
+    },
+    "assets/North_Atlantic_Bloom_MODIS.jpg": {
+      "credit": "NASA/GSFC/Jeff Schmaltz/MODIS Land Rapid Response Team",
+      "pos": "50% 50%",
+      "r2": "images/North_Atlantic_Bloom_MODIS.jpg"
+    },
+    "assets/Phytoplankton_Bloom_Iceland.jpg": {
+      "credit": "NASA/Goddard",
+      "pos": "50% 50%",
+      "r2": "images/Phytoplankton_Bloom_Iceland.jpg"
+    },
+    "assets/PlasticBank_Indonesia_STS66.jpg": {
+      "credit": "NASA (STS066-154-157, Nov. 1994)",
+      "pos": "50% 50%",
+      "r2": "images/PlasticBank_Indonesia_STS66.jpg"
+    },
+    "assets/Progress_Reentry.jpg": {
+      "credit": "NASA (ISS029-E-034092, Oct. 29, 2011)",
+      "pos": "50% 50%",
+      "r2": "images/Progress_Reentry.jpg"
+    },
+    "assets/Romania_City_Lights_ISS.jpg": {
+      "credit": "NASA (ISS074-E-0149572, Jan. 18, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Romania_City_Lights_ISS.jpg"
+    },
+    "assets/Rondonia_Deforestation_STS46.jpg": {
+      "credit": "NASA (STS046-103-053, Aug. 1992)",
+      "pos": "50% 50%",
+      "r2": "images/Rondonia_Deforestation_STS46.jpg"
+    },
+    "assets/Satellite_Servicing_Arm_GSFC.jpg": {
+      "credit": "NASA/Debora McCallum",
+      "pos": "50% 50%",
+      "r2": "images/Satellite_Servicing_Arm_GSFC.tif"
+    },
+    "assets/GOES19_GOESU_KSC.jpg": {
+      "credit": "NASA/Ben Smegelsky (KSC-20240124-PH-JBS01_0071)",
+      "pos": "50% 50%",
+      "r2": "images/GOES19_GOESU_KSC.jpg"
+    },
+    "assets/NYC_Hudson_Harbor.jpg": {
+      "credit": "NASA (STS039-88-054, 1991)",
+      "pos": "50% 50%",
+      "r2": "images/NYC_Hudson_Harbor.jpg"
+    },
+    "assets/Titan.jpg": {
+      "credit": "NASA/JPL/University of Arizona/University of Idaho (PIA20016)",
+      "pos": "50% 50%",
+      "r2": "images/Titan.jpg"
+    },
+    "assets/Webb_Infrared.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA25790)",
+      "pos": "50% 50%",
+      "r2": "images/Webb_Infrared.jpg"
+    },
+    "assets/Pacific_Clouds_Sunset_ISS.jpg": {
+      "credit": "NASA (ISS074-E-0046371, Jan. 3, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Pacific_Clouds_Sunset_ISS.jpg"
+    },
+    "assets/Loggerhead_Release_MINWR.jpg": {
+      "credit": "NASA (2010-5237)",
+      "pos": "50% 50%",
+      "r2": "images/Loggerhead_Release_MINWR.jpg"
+    },
+    "assets/Garden_City_Kansas_Landsat.jpg": {
+      "credit": "NASA/GSFC/Landsat (Sept. 25, 2000)",
+      "pos": "50% 50%",
+      "r2": "images/Garden_City_Kansas_Landsat.jpg"
+    },
+    "assets/Mangrove_Delta_ISS.jpg": {
+      "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
+      "pos": "50% 50%",
+      "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
+    },
+    "assets/Asteroid_2018LA_CSS.jpg": {
+      "credit": "NASA/JPL-Caltech/CSS-Univ. of Arizona (PIA22468)",
+      "pos": "50% 50%",
+      "r2": "images/Asteroid_2018LA_CSS.jpg"
+    },
+    "assets/Bahama_Bank_PIA11019.jpg": {
+      "credit": "NASA/JPL/UCSD/JSC (PIA11019)",
+      "pos": "50% 50%",
+      "r2": "images/Bahama_Bank_PIA11019.jpg"
+    },
+    "assets/BoraBora_Reefs_STS93.jpg": {
+      "credit": "NASA (STS093-717-066, July 1999)",
+      "pos": "50% 50%",
+      "r2": "images/BoraBora_Reefs_STS93.jpg"
+    },
+    "assets/Canada_Wildfires_ISS_2025.jpg": {
+      "credit": "NASA (ISS073-E-0420604, Aug. 3, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Canada_Wildfires_ISS_2025.jpg"
+    },
+    "assets/Canada_Wildfires_ISS_2025b.jpg": {
+      "credit": "NASA (ISS073-E-0420617, Aug. 3, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Canada_Wildfires_ISS_2025b.jpg"
+    },
+    "assets/Comet_NEOWISE.jpg": {
+      "credit": "NASA/Bill Ingalls (NHQ202007120001)",
+      "pos": "50% 50%",
+      "r2": "images/Comet_NEOWISE.tif"
+    },
+    "assets/Congo_River_ISS.jpg": {
+      "credit": "NASA (ISS007-E-06305, June 6, 2003)",
+      "pos": "50% 50%",
+      "r2": "images/Congo_River_ISS.jpg"
+    },
+    "assets/EMIT_Methane_Plumes_Uzbekistan.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA26113)",
+      "pos": "50% 50%",
+      "r2": "images/EMIT_Methane_Plumes_Uzbekistan.jpg"
+    },
+    "assets/Enceladus_Geyser_Basin.jpg": {
+      "credit": "NASA/JPL/Space Science Institute (PIA11688)",
+      "pos": "50% 50%",
+      "r2": "images/Enceladus_Geyser_Basin.jpg"
+    },
+    "assets/Goldstone_Radar_2011UL21.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA26384)",
+      "pos": "50% 50%",
+      "r2": "images/Goldstone_Radar_2011UL21.jpg"
+    },
+    "assets/Greenland_IceBridge_2015.jpg": {
+      "credit": "NASA GSFC, Operation IceBridge (2015)",
+      "pos": "50% 50%",
+      "r2": "images/Greenland_IceBridge_2015.jpg"
+    },
+    "assets/London_Thames_Night_ISS.jpg": {
+      "credit": "NASA (ISS074-E-0381351, March 13, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/London_Thames_Night_ISS.jpg"
+    },
+    "assets/New_England_Coast_ISS.jpg": {
+      "credit": "NASA (ISS072-E-394484, Dec. 18, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/New_England_Coast_ISS.jpg"
+    },
+    "assets/Portugal_Wildfires_ISS_2018.jpg": {
+      "credit": "NASA (ISS056-E-127068, Aug. 6, 2018)",
+      "pos": "50% 50%",
+      "r2": "images/Portugal_Wildfires_ISS_2018.jpg"
+    },
+    "assets/Psyche_Illustration.jpg": {
+      "credit": "NASA/JPL-Caltech/ASU (PIA24473)",
+      "pos": "50% 50%",
+      "r2": "images/Psyche_Illustration.jpg"
+    },
+    "assets/Rim_Fire_MODIS.jpg": {
+      "credit": "NASA (Terra MODIS, Aug. 25, 2013)",
+      "pos": "50% 50%",
+      "r2": "images/Rim_Fire_MODIS.jpg"
+    },
+    "assets/SPHEREx_Spacecraft.jpg": {
+      "credit": "NASA/JPL-Caltech/BAE Systems (PIA26537)",
+      "pos": "50% 50%",
+      "r2": "images/SPHEREx_Spacecraft.jpg"
+    },
+    "assets/Sahel_ISS.jpg": {
+      "credit": "NASA (ISS012-E-11654, Dec. 11, 2005)",
+      "pos": "50% 50%",
+      "r2": "images/Sahel_ISS.jpg"
+    },
+    "assets/Seagrass_Restoration_KSC.jpg": {
+      "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
+      "pos": "50% 50%",
+      "r2": "images/Seagrass_Restoration_KSC.jpg"
+    },
+    "assets/Sundarbans_Ganges_Delta_ISS.jpg": {
+      "credit": "NASA (ISS070-E-005997, Oct. 19, 2023)",
+      "pos": "50% 50%",
+      "r2": "images/Sundarbans_Ganges_Delta_ISS.jpg"
+    },
+    "assets/Venus_Magellan.jpg": {
+      "credit": "NASA/JPL (PIA00271)",
+      "pos": "50% 50%",
+      "r2": "images/Venus_Magellan.jpg"
+    },
+    "assets/Voyager_Heliosphere_PIA22835.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA22835)",
+      "pos": "50% 50%",
+      "r2": "images/Voyager_Heliosphere_PIA22835.jpg"
+    },
+    "assets/Yellowstone_ISS.jpg": {
+      "credit": "NASA (ISS023-E-007925, March 21, 2010)",
+      "pos": "50% 50%",
+      "r2": "images/Yellowstone_ISS.jpg"
+    },
+    "assets/ISS_Over_Ganges_STS102.jpg": {
+      "credit": "NASA (STS102-357-031, March 18, 2001)",
+      "pos": "50% 50%",
+      "r2": "images/ISS_Over_Ganges_STS102.jpg"
+    },
+    "assets/Lucy_KSC.jpg": {
+      "credit": "NASA/Ben Smegelsky (KSC-20210929-PH-JBS01_0051)",
+      "pos": "50% 50%",
+      "r2": "images/Lucy_KSC.jpg"
+    },
+    "assets/Veggie_KSC.jpg": {
+      "credit": "NASA (KSC-2013-3567)",
+      "pos": "50% 50%",
+      "r2": "images/Veggie_KSC.jpg"
+    },
+    "assets/Hawaii_Island_ISS_2024.jpg": {
+      "credit": "NASA (ISS072-E-421839, Dec. 28, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Hawaii_Island_ISS_2024.jpg"
+    },
+    "assets/Great_Barrier_Reef_ISS_2022.jpg": {
+      "credit": "NASA (ISS068-E-004262, Sept. 30, 2022)",
+      "pos": "50% 50%",
+      "r2": "images/Great_Barrier_Reef_ISS_2022.jpg"
+    },
+    "assets/JPSS2_Atlas_V_Launch_Pad.jpg": {
+      "credit": "NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)",
+      "pos": "50% 50%",
+      "r2": "images/JPSS2_Atlas_V_Launch_Pad.jpg"
+    },
+    "assets/Comet_PANSTARRS_ISS_2026.jpg": {
+      "credit": "NASA (ISS074-E-0480485, April 17, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Comet_PANSTARRS_ISS_2026.jpg"
+    },
+    "assets/GPM_Core_Observatory_GMI.jpg": {
+      "credit": "NASA/Goddard (GPM Core Observatory)",
+      "pos": "50% 50%",
+      "r2": "images/GPM_Core_Observatory_GMI.jpg"
+    },
+    "assets/Pakistan_Flood_Kheshgi_2010.jpg": {
+      "credit": "NASA Earth Observatory (ASTER on Terra, Aug. 4, 2010)",
+      "pos": "50% 50%",
+      "r2": "images/Pakistan_Flood_Kheshgi_2010.jpg"
+    },
+    "assets/Missouri_Flood_Hamburg_EO1.jpg": {
+      "credit": "NASA Earth Observatory (EO-1 ALI, July 17, 2011)",
+      "pos": "50% 50%",
+      "r2": "images/Missouri_Flood_Hamburg_EO1.jpg"
+    },
+    "assets/Sumatra_Smoke_Singapore_MODIS.jpg": {
+      "credit": "NASA Earth Observatory (Aqua MODIS, June 19, 2013)",
+      "pos": "50% 50%",
+      "r2": "images/Sumatra_Smoke_Singapore_MODIS.jpg"
+    },
+    "assets/Carruthers_SWFO_KSC.jpg": {
+      "credit": "NASA/Frank Michaux (KSC-20250905-PH-FMX01_0037)",
+      "pos": "50% 50%",
+      "r2": "images/Carruthers_SWFO_KSC.jpg"
+    },
+    "assets/ESCAPADE_Launch_NG2.jpg": {
+      "credit": "Blue Origin via NASA (KSC-20251113-PH-BLU01_0007)",
+      "pos": "50% 50%",
+      "r2": "images/ESCAPADE_Launch_NG2.jpg"
+    },
+    "assets/Europa_Clipper_Jupiter.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA26068)",
+      "pos": "50% 50%",
+      "r2": "images/Europa_Clipper_Jupiter.jpg"
+    },
+    "assets/ExoMars_Drill_Curiosity.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA17068)",
+      "pos": "50% 50%",
+      "r2": "images/ExoMars_Drill_Curiosity.jpg"
+    },
+    "assets/GRACE_FO_Orbit.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA22431)",
+      "pos": "50% 50%",
+      "r2": "images/GRACE_FO_Orbit.jpg"
+    },
+    "assets/ICESat2_Launch.jpg": {
+      "credit": "NASA/Bill Ingalls (NHQ201809150011)",
+      "pos": "50% 50%",
+      "r2": "images/ICESat2_Launch.tif"
+    },
+    "assets/IMAP_Spacecraft_KSC.jpg": {
+      "credit": "NASA/Johns Hopkins APL/Ed Whitman (KSC-20250529-PH-EGW01_0012)",
+      "pos": "50% 50%",
+      "r2": "images/IMAP_Spacecraft_KSC.jpg"
+    },
+    "assets/ISS_Water_Recovery.jpg": {
+      "credit": "NASA/Thomas Pesquet (iss065e333421)",
+      "pos": "50% 50%",
+      "r2": "images/ISS_Water_Recovery.jpg"
+    },
+    "assets/Juice_RIME_Radar.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA24026)",
+      "pos": "50% 50%",
+      "r2": "images/Juice_RIME_Radar.jpg"
+    },
+    "assets/Kerguelen_Kelp_ISS.jpg": {
+      "credit": "NASA (ISS018-E-018110)",
+      "pos": "50% 50%",
+      "r2": "images/Kerguelen_Kelp_ISS.jpg"
+    },
+    "assets/LignoSat_Wood_Panels.jpg": {
+      "credit": "Kyoto University via NASA (jsc2024e081747)",
+      "pos": "50% 50%",
+      "r2": "images/LignoSat_Wood_Panels.jpg"
+    },
+    "assets/Mercury_MESSENGER.jpg": {
+      "credit": "NASA/JHUAPL/Carnegie Institution of Washington (MESSENGER)",
+      "pos": "50% 50%",
+      "r2": "images/Mercury_MESSENGER.png"
+    },
+    "assets/Moon_Crossing_Earth.jpg": {
+      "credit": "NASA/NOAA DSCOVR EPIC",
+      "pos": "50% 50%",
+      "r2": "images/Moon_Crossing_Earth.jpg"
+    },
+    "assets/NEO_Surveyor.jpg": {
+      "credit": "NASA/JPL-Caltech/University of Arizona (PIA25253)",
+      "pos": "50% 50%",
+      "r2": "images/NEO_Surveyor.jpg"
+    },
+    "assets/Oceansat_Winds_Irene.jpg": {
+      "credit": "ISRO/NASA/JPL-Caltech (PIA14742)",
+      "pos": "50% 50%",
+      "r2": "images/Oceansat_Winds_Irene.jpg"
+    },
+    "assets/PACE_Spacecraft_KSC.jpg": {
+      "credit": "NASA/Kim Shiflett (KSC-20231204-PH-KLS01_0024)",
+      "pos": "50% 50%",
+      "r2": "images/PACE_Spacecraft_KSC.jpg"
+    },
+    "assets/Phobos.jpg": {
+      "credit": "NASA/JPL-Caltech/University of Arizona (PIA10368)",
+      "pos": "50% 50%",
+      "r2": "images/Phobos.jpg"
+    },
+    "assets/Plato_Exoplanets.jpg": {
+      "credit": "NASA/JPL-Caltech (PIA19333)",
+      "pos": "50% 50%",
+      "r2": "images/Plato_Exoplanets.jpg"
+    },
+    "assets/SWOT_Orbit_Illustration.jpg": {
+      "credit": "CNES (PIA25623)",
+      "pos": "50% 50%",
+      "r2": "images/SWOT_Orbit_Illustration.jpg"
+    },
+    "assets/Saharan_Dust_Amazon.jpg": {
+      "credit": "NASA's Goddard Space Flight Center",
+      "pos": "50% 50%",
+      "r2": "images/Saharan_Dust_Amazon.jpg"
+    },
+    "assets/Salt_Marsh_KSC.jpg": {
+      "credit": "NASA/KSC (KSC-99WL10)",
+      "pos": "50% 50%",
+      "r2": "images/Salt_Marsh_KSC.jpg"
+    },
+    "assets/Sentinel1_Ground_Motion.jpg": {
+      "credit": "NASA-JPL/Caltech/ESA/Copernicus (PIA21962)",
+      "pos": "50% 50%",
+      "r2": "images/Sentinel1_Ground_Motion.jpg"
+    },
+    "assets/Sentinel6B_Launch.jpg": {
+      "credit": "NASA/Carla Thomas (AFRC2025-0170-03)",
+      "pos": "50% 50%",
+      "r2": "images/Sentinel6B_Launch.jpg"
+    },
+    "assets/Solar_Orbiter_Astrotech.jpg": {
+      "credit": "ESA/U. Ragnit via NASA (KSC-20200108-PH-ESA01_0001)",
+      "pos": "50% 50%",
+      "r2": "images/Solar_Orbiter_Astrotech.jpg"
+    },
+    "assets/Sydney_ASTER.jpg": {
+      "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA03498)",
+      "pos": "50% 50%",
+      "r2": "images/Sydney_ASTER.jpg"
+    },
+    "assets/TRACERS_Launch.jpg": {
+      "credit": "SpaceX via NASA (KSC-20250723-PH-SPX01_0003)",
+      "pos": "50% 50%",
+      "r2": "images/TRACERS_Launch.jpg"
+    },
+    "assets/Tanager1_Methane_Plume.jpg": {
+      "credit": "Carbon Mapper/Planet Labs PBC (PIA26416)",
+      "pos": "50% 50%",
+      "r2": "images/Tanager1_Methane_Plume.jpg"
+    },
+    "assets/Transporter18_Launch.jpg": {
+      "credit": "SpaceX via NASA (KSC-20261001-PH-SPX01_0003)",
+      "pos": "50% 50%",
+      "r2": "images/Transporter18_Launch.jpg"
+    },
+    "assets/Seagrass_Planting_KSC.jpg": {
+      "credit": "NASA/Kim Shiflett (KSC-20230329-PH-KLS01_0304)",
+      "pos": "50% 50%",
+      "r2": "images/Seagrass_Restoration_KSC.jpg"
+    },
+    "assets/NOAA_Deep_SOLO_Float_2018.jpg": {
+      "credit": "NOAA (Deep SOLO float deployment from R/V Kaʻimikai-O-Kanaloa, 2018)",
+      "pos": "50% 40%",
+      "r2": "images/NOAA_Deep_SOLO_Deployment_2018.jpg"
+    },
+    "assets/Biomass_Forest_MatoGrosso.jpg": {
+      "credit": "NASA (ISS074-E-0492148, April 15, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Ucayali_Amazon_ISS074.jpg"
+    },
+    "assets/Great_Lakes_MODIS.jpg": {
+      "credit": "NASA (ISS074-E-0642367, May 30, 2026)",
+      "pos": "50% 45%",
+      "r2": "images/Great_Lakes_ISS074_0642367.jpg"
+    },
+    "assets/hero/help": {
+      "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0002)",
+      "pos": "50% 45%",
+      "r2": "images/KSC_Beach_Cleanup_2017_0002.jpg"
+    },
+    "assets/Lake_Shore_Cleanup_NPS.jpg": {
+      "credit": "NASA/Bill White (KSC-20170412-PH_SWW01_0081)",
+      "pos": "50% 40%",
+      "r2": "images/KSC_Beach_Cleanup_2017_0081.jpg"
+    },
+    "assets/Jupiter.jpg": {
+      "credit": "NASA/ESA/Goddard/UC Berkeley/JPL-Caltech/STScI (Hubble map, GSFC_20171208_Archive_e000537)",
+      "pos": "50% 60%",
+      "r2": "images/Jupiter_Hubble_Map_2017.jpg"
+    },
+    "assets/Hera.jpg": {
+      "credit": "NASA/Johns Hopkins APL/Steve Gribben (illustration, PIA25329)",
+      "pos": "50% 45%",
+      "r2": "images/DART_Didymos_PIA25329.jpg"
+    },
+    "assets/Roman_Launch_FH.jpg": {
+      "credit": "NASA/Joel Kowsky (NHQ202608300015-2, Aug. 30, 2026)",
+      "pos": "50% 55%",
+      "r2": "images/Roman_Launch_FH_NHQ202608300015-2.jpg"
+    },
+    "assets/Landsat9_Launch.jpg": {
+      "credit": "NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)",
+      "pos": "50% 45%",
+      "r2": "images/Landsat9_Launch_KLS04_0013.jpg"
+    },
+    "assets/NISAR_Orbit.jpg": {
+      "credit": "NASA/JPL-Caltech (illustration, PIA26285)",
+      "pos": "50% 50%",
+      "r2": "images/NISAR_Orbit_PIA26285.jpg"
+    },
+    "assets/PUNCH_Mission.jpg": {
+      "credit": "NASA/Jim Ross (AFRC2025-0036-22, March 11, 2025)",
+      "pos": "50% 60%",
+      "r2": "images/PUNCH_SPHEREx_Launch_AFRC2025-0036-22.jpg"
+    },
+    "assets/DataOrbitalCenters.jpg": {
+      "credit": "NASA/Michael Hopkins (ISS065-E-009492, Spaceborne Computer-2 on the ISS, April 29, 2021)",
+      "pos": "50% 50%",
+      "r2": "images/Spaceborne_Computer2_iss065e009492.jpg"
+    },
+    "si:ocean": {
+      "credit": "NASA (ISS071-E-449837, July 24, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Bahamas_Atlantic_ISS071_449837.jpg"
+    },
+    "si:oceancleanup": {
+      "credit": "NASA/Shane Kimbrough (ISS065-E-144117, June 23, 2021)",
+      "pos": "50% 50%",
+      "r2": "images/Bahamas_Shallows_ISS065_144117.jpg"
+    },
+    "si:forest": {
+      "credit": "NASA AFRC/Carla Thomas (AfriSAR 2016, Gabon, AFRC2016-0054-105)",
+      "pos": "50% 45%",
+      "r2": "images/Gabon_Rainforest_AFRC2016-0054-105.jpg"
+    },
+    "si:plant": {
+      "credit": "NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006, mangrove restoration, April 12, 2023)",
+      "pos": "50% 50%",
+      "r2": "images/Mangrove_Seedling_KSC-20230412-GEB01_0006.jpg"
+    },
+    "si:rivers": {
+      "credit": "NASA (ISS073-E-0880658, Mississippi River, Oct. 15, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Mississippi_River_ISS073_0880658.jpg"
+    },
+    "si:elwha": {
+      "credit": "NASA/Landsat 8 (Olympic National Park, GSFC_20171208_Archive_e000239)",
+      "pos": "50% 55%",
+      "r2": "images/Olympic_NP_Landsat8_GSFC_e000239.jpg"
+    },
+    "si:riversea": {
+      "credit": "NASA (ISS073-E-0818427, river meeting the sea, Oct. 2, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Bassac_River_ISS073_0818427.jpg"
+    },
+    "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg": {
+      "credit": "NASA Earth Observatory/Joshua Stevens, Landsat 9 data from USGS (Nordaustlandet, Svalbard, July 29, 2022)",
+      "pos": "50% 50%",
+      "r2": "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
+    },
+    "assets/Thwaites_Glacier_Landsat8_2019.jpg": {
+      "credit": "NASA Earth Observatory/Lauren Dauphin, Landsat 8 data from USGS (Thwaites Glacier, Dec. 28, 2019)",
+      "pos": "50% 50%",
+      "r2": "images/Thwaites_Glacier_Landsat8_2019.jpg"
+    },
+    "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg": {
+      "credit": "NASA/James Blair (jsc2026e406058, Iceland)",
+      "pos": "50% 60%",
+      "r2": "images/Iceland_Volcanic_Landscape_jsc2026e406058.jpg"
+    },
+    "assets/Lake_Kariba_ISS_2024.jpg": {
+      "credit": "NASA (iss071e047913, Lake Kariba between Zambia and Zimbabwe, May 2, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Lake_Kariba_ISS_2024.jpg"
+    },
+    "assets/Okavango_Delta_ISS_2025.jpg": {
+      "credit": "NASA (iss073e0604445, Okavango Delta, Botswana, Aug. 30, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Okavango_Delta_ISS_2025.jpg"
+    },
+    "assets/Valles_Marineris_Viking_PIA00422.jpg": {
+      "credit": "NASA/JPL/USGS (PIA00422, Valles Marineris, Viking orbiter mosaic)",
+      "pos": "50% 50%",
+      "r2": "images/Valles_Marineris_Viking_PIA00422.jpg"
+    },
+    "assets/Abu_Dhabi_Coast_ISS_2024.jpg": {
+      "credit": "NASA (iss071e378611, Abu Dhabi, July 23, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/Abu_Dhabi_Coast_ISS_2024.jpg"
+    },
+    "assets/South_India_Sri_Lanka_ISS_2024.jpg": {
+      "credit": "NASA (iss071e014023, Sri Lanka and southern India, April 20, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/South_India_Sri_Lanka_ISS_2024.jpg"
+    },
+    "assets/Singapore_Night_ISS_2025.jpg": {
+      "credit": "NASA (iss073e0763866, Singapore at night, Sept. 21, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Singapore_Night_ISS_2025.jpg"
+    },
+    "assets/Seoul_Night_ISS_2025.jpg": {
+      "credit": "NASA (iss072e757318, Seoul at night, March 5, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Seoul_Night_ISS_2025.jpg"
+    },
+    "assets/Palau_Landsat8_2014.jpg": {
+      "credit": "NASA Earth Observatory/Jesse Allen, Landsat 8 data from USGS (Palau, March 21, 2014)",
+      "pos": "50% 50%",
+      "r2": "images/Palau_Landsat8_2014.jpg"
+    },
+    "assets/Pearl_Hermes_Atoll_ISS_2002.jpg": {
+      "credit": "NASA (ISS005-E-13929, Pearl and Hermes Atoll, Sept. 12, 2002)",
+      "pos": "50% 50%",
+      "r2": "images/Pearl_Hermes_Atoll_ISS_2002.jpg"
+    },
+    "assets/NZ_Southern_Lakes_ISS_2024.jpg": {
+      "credit": "NASA (iss071e073568, Lakes Tekapo, Pukaki and Ōhau, New Zealand, May 11, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/NZ_Southern_Lakes_ISS_2024.jpg"
+    },
+    "assets/Fernandina_Galapagos_ISS_2022.jpg": {
+      "credit": "NASA (iss068e025397, La Cumbre volcano, Fernandina Island, Galápagos, Nov. 28, 2022)",
+      "pos": "50% 50%",
+      "r2": "images/Fernandina_Galapagos_ISS_2022.jpg"
+    },
+    "assets/Ucayali_River_ISS_2026.jpg": {
+      "credit": "NASA/Jessica Meir (iss074e0492148, Ucayali River, Peru, April 15, 2026)",
+      "pos": "50% 50%",
+      "r2": "images/Ucayali_River_ISS_2026.jpg"
+    },
+    "assets/Belize_Coast_ISS_2014.jpg": {
+      "credit": "NASA (ISS040-E-018752, Caribbean coast of Belize, June 24, 2014)",
+      "pos": "50% 50%",
+      "r2": "images/Belize_Coast_ISS_2014.jpg"
+    },
+    "assets/Costa_Rica_ISS_2020.jpg": {
+      "credit": "NASA (iss062e001866, Costa Rica, Feb. 8, 2020)",
+      "pos": "50% 50%",
+      "r2": "images/Costa_Rica_ISS_2020.jpg"
+    },
+    "assets/Gulf_of_Alaska_Bloom_2017.jpg": {
+      "credit": "NASA/Goddard/NPP (GSFC_20171208_Archive_e000038, Gulf of Alaska spring bloom, April 12, 2017)",
+      "pos": "50% 50%",
+      "r2": "images/Gulf_of_Alaska_Bloom_2017.jpg"
+    },
+    "assets/Alaska_Clear_View_Terra_2013.jpg": {
+      "credit": "NASA (GSFC_20171208_Archive_e001460, Terra/MODIS, Alaska, June 17, 2013)",
+      "pos": "50% 50%",
+      "r2": "images/Alaska_Clear_View_Terra_2013.jpg"
+    },
+    "assets/Bristol_Bay_Terra_2017.jpg": {
+      "credit": "NASA Earth Observatory image by Joshua Stevens, using MODIS data from LANCE/EOSDIS Rapid Response (Bristol Bay, May 14, 2017)",
+      "pos": "50% 50%",
+      "r2": "images/Bristol_Bay_Terra_2017.jpg"
+    },
+    "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg": {
+      "credit": "NASA (iss072e820937, Gulf of Alaska and aurora, March 12, 2025)",
+      "pos": "50% 50%",
+      "r2": "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
+    },
+    "assets/South_Georgia_ISS071_E_581850.jpg": {
+      "credit": "NASA (ISS071-E-581850, astronaut photograph of South Georgia Island, Sept. 1, 2024)",
+      "pos": "50% 50%",
+      "r2": "images/South_Georgia_ISS071_E_581850.jpg"
+    },
+    "assets/Arctic_Weather_Satellite_ESA.jpg": {
+      "credit": "ESA (Arctic Weather Satellite, CC BY-SA 3.0 IGO)",
+      "pos": "50% 50%",
+      "r2": "images/Arctic_Weather_Satellite_ESA.jpg"
+    },
+    "assets/Greenland_Sea_Ice_GSFC.jpg": {
+      "credit": "NASA Goddard Space Flight Center (MODIS on Aqua, sea ice in the Greenland Sea)",
+      "pos": "50% 50%",
+      "r2": "images/Greenland_Sea_Ice_GSFC.jpg"
+    },
+    "assets/Ozone_Hole_2024_SVS14711.jpg": {
+      "credit": "NASA Scientific Visualization Studio (2024 Ozone Hole Update, SVS 14711)",
+      "pos": "50% 50%",
+      "r2": "images/Ozone_Hole_2024_SVS14711.jpg"
+    },
+    "assets/Chilika_Lake_Mouth.jpg": {
+      "credit": "Phadke09 via Wikimedia Commons (Mouth of Chilika Lake, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Chilika_Lake_Mouth.jpg"
+    },
+    "assets/Tonle_Sap_Floating_Village.jpg": {
+      "credit": "Christophe95 via Wikimedia Commons (Floating village on the Tonlé Sap, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Tonle_Sap_Floating_Village.jpg"
+    },
+    "assets/Lake_Biwa_Shiga_NASA.jpg": {
+      "credit": "NASA (ISS007-E-17620, astronaut photograph of Lake Biwa and Shiga Prefecture)",
+      "pos": "50% 50%",
+      "r2": "images/Lake_Biwa_Shiga_NASA.jpg"
+    },
+    "assets/Lake_Constance_ISS030_E_161620.jpg": {
+      "credit": "NASA (ISS030-E-161620, astronaut photograph of Lake Constance, 2012)",
+      "pos": "50% 50%",
+      "r2": "images/Lake_Constance_ISS030_E_161620.jpg"
+    },
+    "assets/Netherlands_Rivers_ISS063_E_002730.jpg": {
+      "credit": "NASA (ISS063-E-002730, astronaut photograph of the Rhine-Meuse-Scheldt delta, April 23, 2020)",
+      "pos": "50% 50%",
+      "r2": "images/Netherlands_Rivers_ISS063_E_002730.jpg"
+    },
+    "assets/Tubbataha_Reefs_UNESCO.jpg": {
+      "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (CC BY-SA 3.0 IGO)",
+      "pos": "50% 50%",
+      "r2": "images/Tubbataha_Reefs_UNESCO.jpg"
+    },
+    "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg": {
+      "credit": "Contains modified Copernicus Sentinel-2 data, processed by ESA (sargassum off Martinique)",
+      "pos": "50% 50%",
+      "r2": "images/Sargassum_Bloom_Atlantic_Sentinel.jpg"
+    },
+    "assets/Redonda_By_Sea_2023.jpg": {
+      "credit": "Addshore via Wikimedia Commons (Redonda by sea, 2023, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Redonda_By_Sea_2023.jpg"
+    },
+    "assets/Iberian_Lynx_Almuradiel_2021.jpg": {
+      "credit": "Diego Delso via Wikimedia Commons (Iberian lynx, Almuradiel, 2021, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Iberian_Lynx_Almuradiel_2021.jpg"
+    },
+    "assets/Glen_Affric_Scots_Pine.jpg": {
+      "credit": "Chris via Wikimedia Commons (Glen Affric Scots Pine, CC BY-SA 2.0)",
+      "pos": "50% 50%",
+      "r2": "images/Glen_Affric_Scots_Pine.jpg"
+    },
+    "assets/Bengal_Tiger_Bardia_Nepal.jpg": {
+      "credit": "Ambish Kazi via Wikimedia Commons (Royal Bengal Tiger, Bardia, Nepal, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Bengal_Tiger_Bardia_Nepal.jpg"
+    },
+    "assets/Saiga_West_Kazakhstan.jpg": {
+      "credit": "Yakov Fedorov via Wikimedia Commons (Saiga in West Kazakhstan, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Saiga_West_Kazakhstan.jpg"
+    },
+    "assets/Mount_Gorongosa_Mozambique.jpg": {
+      "credit": "Judy Gallagher via Wikimedia Commons (Mount Gorongosa, CC BY 2.0)",
+      "pos": "50% 50%",
+      "r2": "images/Mount_Gorongosa_Mozambique.jpg"
+    },
+    "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg": {
+      "credit": "NASA/Bill Ingalls (NHQ202007180001, comet NEOWISE and the ISS, July 18, 2020)",
+      "pos": "50% 50%",
+      "r2": "images/Comet_NEOWISE_ISS_NHQ202007180001.jpg"
+    },
+    "assets/Lunar_South_Pole_PIA13523.jpg": {
+      "credit": "NASA/GSFC/Arizona State University (PIA13523, the lunar south pole)",
+      "pos": "50% 50%",
+      "r2": "images/Lunar_South_Pole_PIA13523.jpg"
+    },
+    "assets/Ross_Sea_Adelie_Cape_Royds.jpg": {
+      "credit": "U.S. Department of State (Adélie penguin at Cape Royds, Antarctica, 2016, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Ross_Sea_Adelie_Cape_Royds.jpg"
+    },
+    "assets/Greenland_Glacier_Landsat_NASA_EO.jpg": {
+      "credit": "NASA Earth Observatory / Joshua Stevens, Landsat data from USGS (Jakobshavn Glacier, Greenland, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Greenland_Glacier_Landsat_NASA_EO.jpg"
+    },
+    "assets/Iceland_Highland_Edge.jpg": {
+      "credit": "Zairon via Wikimedia Commons (Island am Rande des Hochlands, CC BY-SA 3.0)",
+      "pos": "50% 50%",
+      "r2": "images/Iceland_Highland_Edge.jpg"
+    },
+    "assets/Asteroid_269_Justitia_Orbit_JPL.jpg": {
+      "credit": "JPL Solar System Dynamics/NASA (orbit of 269 Justitia, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Asteroid_269_Justitia_Orbit_JPL.jpg"
+    },
+    "assets/Arabian_Oryx_Oryx_Leucoryx.jpg": {
+      "credit": "Charles J. Sharp via Wikimedia Commons (Arabian oryx, Dubai Desert Conservation Area, CC BY-SA 3.0)",
+      "pos": "50% 50%",
+      "r2": "images/Arabian_Oryx_Oryx_Leucoryx.jpg"
+    },
+    "assets/Azraq_Wetland_Reserve_48.jpg": {
+      "credit": "Mohammad hajeer via Wikimedia Commons (Azraq Wetland Reserve, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Azraq_Wetland_Reserve_48.jpg"
+    },
+    "assets/Okavango_Delta_Aerial_2018.jpg": {
+      "credit": "Diego Delso via Wikimedia Commons (aerial view of the Okavango Delta, 2018, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Okavango_Delta_Aerial_2018.jpg"
+    },
+    "assets/Mountain_Gorilla_Bwindi_2024.jpg": {
+      "credit": "Diego Delso via Wikimedia Commons (mountain gorilla, Bwindi, 2024, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Mountain_Gorilla_Bwindi_2024.jpg"
+    },
+    "assets/Aldabra_Atoll_Seychelles.jpg": {
+      "credit": "Ron Van Oers / UNESCO via Wikimedia Commons (Aldabra Atoll, CC BY-SA 3.0 IGO)",
+      "pos": "50% 50%",
+      "r2": "images/Aldabra_Atoll_Seychelles.jpg"
+    },
+    "assets/Kakapo_Sirocco.jpg": {
+      "credit": "NZ Department of Conservation via Wikimedia Commons (Kākāpō Sirocco, CC BY 2.0)",
+      "pos": "50% 50%",
+      "r2": "images/Kakapo_Sirocco.jpg"
+    },
+    "assets/Chacabuco_Valley_Patagonia_Park.jpg": {
+      "credit": "Gonzalo Lastra via Wikimedia Commons (Valle de Chacabuco, Parque Patagonia, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Chacabuco_Valley_Patagonia_Park.jpg"
+    },
+    "assets/Shackleton_Crater_LROC_ShadowCam.jpg": {
+      "credit": "LROC and ShadowCam teams, NASA/KARI/ASU (Shackleton Crater mosaic, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Shackleton_Crater_LROC_ShadowCam.jpg"
+    },
+    "assets/Puerto_Bermudez_Peru_Rainforest.jpg": {
+      "credit": "Heiner Amado Cadillo via Wikimedia Commons (Puerto Bermúdez, Peru, 2016, CC BY-SA 3.0)",
+      "pos": "50% 50%",
+      "r2": "images/Puerto_Bermudez_Peru_Rainforest.jpg"
+    },
+    "assets/Andfjorden_Andoy_2023.jpg": {
+      "credit": "Ryan Hodnett via Wikimedia Commons (Andfjorden, Andøy, Norway, 2023, CC BY-SA 4.0)",
+      "pos": "50% 50%",
+      "r2": "images/Andfjorden_Andoy_2023.jpg"
+    },
+    "assets/Tetiaroa_Atoll_ISS018.jpg": {
+      "credit": "NASA Johnson Space Center, ISS crew photo ISS018-E-024351 (Tetiaroa, French Polynesia, 27 Jan. 2009, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Tetiaroa_Atoll_ISS018.jpg"
+    },
+    "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg": {
+      "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0146)",
+      "pos": "50% 40%",
+      "r2": "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg"
+    },
+    "r2:images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg": {
+      "credit": "NASA/Frank Michaux (KSC-20210707-PH-FMX01_0262)",
+      "pos": "50% 40%",
+      "r2": "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
+    },
+    "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg": {
+      "credit": "NASA/Michael DeMocker (MAF20210116_GR0006)",
+      "pos": "50% 40%",
+      "r2": "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
+    },
+    "r2:images/ArtemisII_Launch_KSC_Hancock.jpg": {
+      "credit": "NASA",
+      "pos": "50% 40%",
+      "r2": "images/ArtemisII_Launch_KSC_Hancock.jpg"
+    },
+    "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg": {
+      "credit": "NASA/Operation IceBridge (GSFC_20171208_Archive_e000266, Arctic sea ice melt ponds, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/PBI_Arctic_Melt_Ponds_IceBridge.jpg"
+    },
+    "assets/Alaska_ABoVE_Flight.jpg": {
+      "credit": "NASA/Peter Griffith (GSFC_20171208_Archive_e000002, ABoVE flight over Alaska, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Alaska_ABoVE_Flight.jpg"
+    },
+    "assets/Nunavut_ASTER.jpg": {
+      "credit": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team (PIA13963, Nunavut, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Nunavut_ASTER.jpg"
+    },
+    "assets/Greenland_Sea_Ice_MODIS_2015.jpg": {
+      "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000643, July 16, 2015, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Greenland_Sea_Ice_MODIS_2015.jpg"
+    },
+    "assets/SW_Greenland_Fjord_IceBridge.jpg": {
+      "credit": "NASA/GSFC/Michael Studinger (GSFC_20171208_Archive_e001911, April 8, 2011, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/SW_Greenland_Fjord_IceBridge.jpg"
+    },
+    "assets/Healy_Ice_Station_ICESCAPE.jpg": {
+      "credit": "NASA/Kathryn Hansen (GSFC_20171208_Archive_e001722, ICESCAPE mission, Chukchi Sea, 2011, public domain; not the MOSAiC ship)",
+      "pos": "50% 50%",
+      "r2": "images/Healy_Ice_Station_ICESCAPE.jpg"
+    },
+    "assets/Wolstenholme_Fjord_IceBridge.jpg": {
+      "credit": "NASA/Michael Studinger (GSFC_20171208_Archive_e001514, April 2013, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Wolstenholme_Fjord_IceBridge.jpg"
+    },
+    "assets/Cape_Farewell_Greenland_ISS.jpg": {
+      "credit": "NASA (ISS017-E-012583, Cape Farewell, Greenland, Aug. 4, 2008, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Cape_Farewell_Greenland_ISS.jpg"
+    },
+    "assets/Arctic_Sea_Ice_Minimum_2015.jpg": {
+      "credit": "NASA Scientific Visualization Studio (GSFC_20171208_Archive_e000613, 2015, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Arctic_Sea_Ice_Minimum_2015.jpg"
+    },
+    "assets/Tristan_da_Cunha_ASTER.jpg": {
+      "credit": "NASA/METI/AIST/Japan Space Systems and U.S./Japan ASTER Science Team (PIA22506, Tristan da Cunha, public domain; not Gough itself)",
+      "pos": "50% 50%",
+      "r2": "images/Tristan_da_Cunha_ASTER.jpg"
+    },
+    "assets/Ross_Sea_Icebergs_MISR.jpg": {
+      "credit": "NASA/GSFC/JPL, MISR Team (PIA02639, Ross Sea icebergs, Dec. 10, 2000, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Ross_Sea_Icebergs_MISR.jpg"
+    },
+    "assets/James_Ross_Island_AirSAR.jpg": {
+      "credit": "NASA/Jim Ross (ED04-0056-137, AirSAR 2004, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/James_Ross_Island_AirSAR.jpg"
+    },
+    "assets/Southern_Ocean_Eddies_VIIRS.jpg": {
+      "credit": "NASA OceanColor/Suomi NPP/VIIRS (GSFC_20171208_Archive_e000750, Jan. 1, 2015, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Southern_Ocean_Eddies_VIIRS.jpg"
+    },
+    "assets/Southern_Ocean_Cyclone_MISR.jpg": {
+      "credit": "NASA/GSFC/LaRC/JPL, MISR Team (PIA03430, Oct. 11, 2001, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Southern_Ocean_Cyclone_MISR.jpg"
+    },
+    "assets/Larsen_C_Iceberg_Landsat.jpg": {
+      "credit": "NASA Earth Observatory image by Joshua Stevens, Landsat data from USGS (GSFC_20171208_Archive_e000021, 2017, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Larsen_C_Iceberg_Landsat.jpg"
+    },
+    "assets/Ross_Sea_Bloom_2011.jpg": {
+      "credit": "NASA (GSFC_20171208_Archive_e001951, Ross Sea bloom, Jan. 22, 2011, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Ross_Sea_Bloom_2011.jpg"
+    },
+    "assets/Amundsen_Sea_Iceberg_IceBridge.jpg": {
+      "credit": "NASA/Jane Peterson (200910220009HQ, Operation IceBridge, Oct. 21, 2009, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Amundsen_Sea_Iceberg_IceBridge.jpg"
+    },
+    "assets/AirSAR_Scientists_Antarctica.jpg": {
+      "credit": "NASA/Jim Ross (ED04-0056-126, AirSAR 2004, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/AirSAR_Scientists_Antarctica.jpg"
+    },
+    "assets/Larsen_Ice_Shelf_AirSAR.jpg": {
+      "credit": "NASA/Jim Ross (ED04-0056-110, AirSAR 2004, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Larsen_Ice_Shelf_AirSAR.jpg"
+    },
+    "assets/Hudson_Bay_Ice_Skylab.jpg": {
+      "credit": "NASA (SL4-141-4316, Hudson Bay from Skylab 4, Jan. 20, 1974, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Hudson_Bay_Ice_Skylab.jpg"
+    },
+    "assets/Western_Alaska_Sea_Ice_MODIS.jpg": {
+      "credit": "NASA/GSFC/Jeff Schmaltz, MODIS Land Rapid Response Team (GSFC_20171208_Archive_e000769, Feb. 4, 2014, public domain)",
+      "pos": "50% 50%",
+      "r2": "images/Western_Alaska_Sea_Ice_MODIS.jpg"
+    },
+    "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg": {
+      "credit": "Astroscale, via Wikimedia Commons (CC BY-SA 4.0, illustration)",
+      "alt": "Artist's illustration of Astroscale's ADRAS-J spacecraft approaching a spent H-IIA rocket upper stage in orbit",
+      "local": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
+      "pos": "50% 40%"
+    },
+    "assets/ALOS-4_Model_Tsukuba.jpg": {
+      "credit": "Syced, via Wikimedia Commons (CC0). A 1/50 scale model of ALOS-4 at JAXA's Tsukuba Space Center.",
+      "alt": "JAXA's 1/50 scale model of ALOS-4, with its PALSAR-3 radar antenna and solar arrays, at Tsukuba Space Center",
+      "local": "assets/ALOS-4_Model_Tsukuba.jpg",
+      "pos": "50% 45%"
+    },
+    "assets/GEDI_on_ISS.jpg": {
+      "credit": "NASA (iss059e088632)",
+      "alt": "The GEDI forest-mapping laser mounted outside the Kibo module on the International Space Station",
+      "pos": "50% 50%",
+      "r2": "images/sol-cards/GEDI_on_ISS_iss059e088632.jpg"
+    },
+    "assets/hub/ESA_S2_Southeast_Kenya.jpg": {
+      "credit": "contains modified Copernicus Sentinel data (2023), processed by ESA",
+      "alt": "Southeast Kenya seen by the Copernicus Sentinel-2 satellite, with green vegetated land along the coast and drier land inland",
+      "pos": "50% 50%",
+      "r2": "images/hub/ESA_S2_Southeast_Kenya.jpg"
+    },
+    "assets/hub/ESA_S2_Tana_River_Kenya.jpg": {
+      "credit": "contains modified Copernicus Sentinel data (2020), processed by ESA",
+      "alt": "The Tana River winding across the land in Kenya, seen by the Copernicus Sentinel-2 satellite",
+      "pos": "50% 50%",
+      "r2": "images/hub/ESA_S2_Tana_River_Kenya.jpg"
+    },
+    "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg": {
+      "credit": "U.S. Forest Service",
+      "alt": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
+      "pos": "50% 40%",
+      "r2": "images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg"
+    }
   },
   "pages": {
-   "404.html": "earth",
-   "4ocean.html": "ocean",
-   "ALOS-4.html": "forest",
-   "AP_IB_Physics.html": "earth",
-   "ATLAS.html": "ocean",
-   "About.html": "ocean",
-   "Aditya_L1.html": "sun",
-   "Aeolus.html": "orbit",
-   "Aero_Guide.html": "earth",
-   "Aero_Lab.html": "earth",
-   "Aero_Math.html": "earth",
-   "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": "lakes",
-   "Amazon_Rainy_Season.html": "forest",
-   "American_Forests.html": "forest",
-   "American_Rivers.html": "rivers",
-   "Arbor_Day_Foundation.html": "forest",
-   "Argo.html": "ocean",
-   "Argos.html": "ocean",
-   "Ariel.html": "planets",
-   "Astroscale.html": "orbit",
-   "Atmospheric_Drag.html": "orbit",
-   "Beavers_River_Engineers.html": "rivers",
-   "BepiColombo.html": "planets",
-   "Billion_Oyster_Project.html": "rivers",
-   "Biomass.html": "forest",
-   "CAMS.html": "forest",
-   "CHIME.html": "earth",
-   "CIMR.html": "ocean",
-   "CO2M.html": "earth",
-   "CRISTAL.html": "polar",
-   "Cadets.html": "earth",
-   "Calculators.html": "earth",
-   "Careers.html": "earth",
-   "Carruthers.html": "sun",
-   "Catalina_Sky_Survey.html": "defense",
-   "Chesapeake_Bay_Foundation.html": "earth",
-   "Clean_Lakes_Alliance.html": "lakes",
-   "Clean_Up_the_Lake.html": "lakes",
-   "ClearSpace.html": "orbit",
-   "Comet_Interceptor.html": "defense",
-   "Contact.html": "ocean",
-   "Copernicus_EMS.html": "forest",
-   "Copernicus_Marine.html": "ocean",
-   "Coral_Gardeners.html": "ocean",
-   "Coral_IVF.html": "ocean",
-   "Coral_Reef_Watch.html": "ocean",
-   "Coral_Restoration_Foundation.html": "ocean",
-   "Coral_Vita.html": "ocean",
-   "Corrections.html": "earth",
-   "CryoSat.html": "polar",
-   "DSCOVR_EPIC.html": "earth",
-   "Deforestation.html": "forest",
-   "Delta_V_Calculator.html": "earth",
-   "Dragonfly.html": "planets",
-   "EFFIS.html": "forest",
-   "EMIT.html": "earth",
-   "EOS-06.html": "ocean",
-   "ESA_NEOCC.html": "defense",
-   "ESCAPADE.html": "orbit",
-   "EarthCARE.html": "earth",
-   "Earth_Observation.html": "earth",
-   "Eden_People_Planet.html": "forest",
-   "Editorial_Policy.html": "earth",
-   "Elwha_River_Restoration.html": "forest",
-   "EnVision.html": "planets",
-   "Enceladus.html": "planets",
-   "Europa_Clipper.html": "planets",
-   "ExoMars_Rosalind_Franklin.html": "planets",
-   "FIRMS.html": "forest",
-   "FLEX.html": "forest",
-   "FORUM.html": "earth",
-   "Find_a_Cleanup.html": "ocean",
-   "FireSat.html": "forest",
-   "Forest_Elephants.html": "rivers",
-   "FreshWater_Watch.html": "rivers",
-   "GCOM-C.html": "ocean",
-   "GEDI.html": "orbit",
-   "GLOBE_Program.html": "ocean",
-   "GOES-19.html": "orbit",
-   "GOSAT-GW.html": "earth",
-   "GRACE-FO.html": "earth",
-   "GSMaP.html": "earth",
-   "Galileo.html": "planets",
-   "GeoXO.html": "earth",
-   "GloFAS.html": "rivers",
-   "Global_Fishing_Watch.html": "ocean",
-   "Global_Forest_Watch.html": "forest",
-   "Globe_at_Night.html": "planets",
-   "Glossary.html": "earth",
-   "Great_Bubble_Barrier.html": "rivers",
-   "Great_Green_Wall.html": "forest",
-   "Great_Lakes_Plastic_Cleanup.html": "lakes",
-   "Heal_the_Bay.html": "ocean",
-   "Healthy_Seas.html": "ocean",
-   "Hera.html": "defense",
-   "Hohmann_Transfer_Calculator.html": "earth",
-   "Homeschool.html": "earth",
-   "HydroGNSS.html": "rivers",
-   "ICESat-2.html": "orbit",
-   "IMAP.html": "sun",
-   "INSAT-3DS.html": "rivers",
-   "ISS_Water_Recovery.html": "orbit",
-   "International_Charter.html": "rivers",
-   "International_Coastal_Cleanup.html": "ocean",
-   "JPSS.html": "orbit",
-   "Juice.html": "planets",
-   "Jupiter.html": "planets",
-   "Justdiggit.html": "forest",
-   "Keep_Tahoe_Blue.html": "lakes",
-   "Kelp_Forests.html": "ocean",
-   "Kids_Map.html": "earth",
-   "Kissimmee_River_Restoration.html": "ocean",
-   "Klamath_River_Dam_Removal.html": "rivers",
-   "Lake_Erie_Algal_Bloom_Forecast.html": "lakes",
-   "Lake_Plastic_Recovery.html": "ocean",
-   "Lakes.html": "lakes",
-   "Landsat_9.html": "orbit",
-   "Learn.html": "earth",
-   "LeoLabs.html": "orbit",
-   "Libera.html": "earth",
-   "Life_Terra.html": "forest",
-   "Lift_Equation_Calculator.html": "earth",
-   "LignoSat.html": "orbit",
-   "Living_Lakes.html": "lakes",
-   "Living_Lands_and_Waters.html": "rivers",
-   "London_Tideway_Tunnel.html": "rivers",
-   "Lucy.html": "defense",
-   "MMX.html": "planets",
-   "Mach_Number_Calculator.html": "earth",
-   "Mangroves.html": "rivers",
-   "MetOp-SG-A1_Sentinel-5A.html": "earth",
-   "Meteosat_Third_Generation.html": "earth",
-   "Mission_Blue_Hope_Spots.html": "ocean",
-   "Moon_Steadies_Earth.html": "planets",
-   "Mote_Marine_Laboratory.html": "ocean",
-   "Mr_Trash_Wheel.html": "earth",
-   "Myth_vs_Fact.html": "earth",
-   "NEO_Surveyor.html": "defense",
-   "NISAR.html": "earth",
-   "Namami_Gange.html": "rivers",
-   "Nancy_Grace_Roman.html": "planets",
-   "OCO-2.html": "forest",
-   "Ocean_Cleanup.html": "ocean",
-   "Ocean_Voyages_Institute.html": "ocean",
-   "Oceans.html": "ocean",
-   "One_Tree_Planted.html": "forest",
-   "OpenET.html": "earth",
-   "Orbit_Lab.html": "earth",
-   "Orbit_Math.html": "earth",
-   "Orbital_Data_Centers.html": "orbit",
-   "Orbital_Period_Calculator.html": "earth",
-   "Orbital_Velocity_Calculator.html": "earth",
-   "Orbits_Guide.html": "earth",
-   "PACE.html": "orbit",
-   "PREFIRE.html": "orbit",
-   "PRELUDE.html": "orbit",
-   "PUNCH.html": "sun",
-   "Pan-STARRS.html": "defense",
-   "Parker_Solar_Probe.html": "sun",
-   "Pendulum_Period_Calculator.html": "earth",
-   "Penobscot_River_Restoration.html": "ocean",
-   "Physics_Guide.html": "earth",
-   "Physics_Lab.html": "earth",
-   "Physics_Math.html": "earth",
-   "Phytoplankton.html": "polar",
-   "Planetary_Defense.html": "defense",
-   "Plant-for-the-Planet.html": "ocean",
-   "Plastic_Bank.html": "ocean",
-   "Plastic_Odyssey.html": "ocean",
-   "Plato.html": "planets",
-   "Play_and_Learn.html": "earth",
-   "Polar.html": "polar",
-   "Posidonia_Meadows.html": "ocean",
-   "Press.html": "ocean",
-   "Privacy.html": "ocean",
-   "Project_Seagrass.html": "orbit",
-   "Projectile_Motion_Drag_Calculator.html": "earth",
-   "Psyche.html": "defense",
-   "RCM.html": "polar",
-   "Rainforest_Connection.html": "forest",
-   "Rawanes_Mission_Log.html": "sun",
-   "Restoring_the_Lake_Depths.html": "lakes",
-   "Rewilding_Europe.html": "rivers",
-   "River_Cleanup.html": "rivers",
-   "Rivers.html": "rivers",
-   "Rotor_Hover_Power_Calculator.html": "earth",
-   "SARSAT.html": "orbit",
-   "SMAP.html": "rivers",
-   "SOHO.html": "sun",
-   "SOLAR_1.html": "sun",
-   "SPHEREx.html": "planets",
-   "SWOT.html": "earth",
-   "Saharan_Dust_Amazon.html": "forest",
-   "Salt_Marshes.html": "orbit",
-   "Satellite_Explorer.html": "earth",
-   "SeaTrees.html": "rivers",
-   "Sea_Turtle_Conservancy.html": "ocean",
-   "Seabin.html": "ocean",
-   "Seagrass.html": "orbit",
-   "Sentinel-1.html": "earth",
-   "Sentinel-2C.html": "forest",
-   "Sentinel-3.html": "ocean",
-   "Sentinel-4.html": "ocean",
-   "Sentinel-5P.html": "earth",
-   "Sentinel-6B.html": "orbit",
-   "Sitemap.html": "earth",
-   "Solar_Orbiter.html": "sun",
-   "Space.html": "orbit",
-   "SpaceLogistics.html": "orbit",
-   "Space_Disposal.html": "orbit",
-   "Space_Weather.html": "sun",
-   "Spot_the_Fire.html": "earth",
-   "Stall_Speed_Calculator.html": "earth",
-   "Starfish_Otter.html": "orbit",
-   "Sungai_Watch.html": "rivers",
-   "Surfrider_Foundation.html": "ocean",
-   "TEMPO.html": "earth",
-   "TRACERS.html": "sun",
-   "Tanager-1.html": "earth",
-   "Terraformation.html": "ocean",
-   "The_SeaCleaners.html": "ocean",
-   "Three_Shields.html": "sun",
-   "Three_Trees.html": "forest",
-   "Thrust_to_Weight_Calculator.html": "earth",
-   "Titan.html": "planets",
-   "Topics.html": "earth",
-   "Trees_for_the_Future.html": "forest",
-   "Trout_Unlimited.html": "rivers",
-   "UNEP_MARS.html": "earth",
-   "US_Deorbit_Vehicle.html": "orbit",
-   "Veggie_Space_Garden.html": "orbit",
-   "Vigil.html": "sun",
-   "Voyager.html": "sun",
-   "Waterkeeper_Alliance.html": "rivers",
-   "Ways_to_Help.html": "ocean",
-   "WeForest.html": "forest",
-   "Webb_2024_YR4.html": "planets",
-   "Whales_Ocean_Gardeners.html": "polar",
-   "Yellowstone_Wolves.html": "lakes",
-   "Zero_Debris_Charter.html": "orbit",
-   "Svalbard_Global_Seed_Vault.html": "polar",
-   "Thwaites_Glacier_Collaboration.html": "polar",
-   "Carbfix.html": "polar",
-   "African_Parks.html": "lakes",
-   "Digital_Earth_Africa.html": "lakes",
-   "Hope_Mars_Mission.html": "planets",
-   "Abu_Dhabi_Mangroves.html": "ocean",
-   "Gaganyaan.html": "earth",
-   "NEWater.html": "earth",
-   "Cheonggyecheon.html": "earth",
-   "Palau_National_Marine_Sanctuary.html": "ocean",
-   "Papahanaumokuakea.html": "ocean",
-   "Predator_Free_2050.html": "lakes",
-   "Galapagos_Giant_Tortoises.html": "ocean",
-   "MAAP.html": "rivers",
-   "Mesoamerican_Reef_Insurance.html": "ocean",
-   "Costa_Rica_Forest_Payments.html": "forest",
-   "Gulf_of_Alaska_Keeper.html": "ocean",
-   "Alaska_Kelp_Farming.html": "polar",
-   "Bristol_Bay_Salmon.html": "rivers",
-   "Alaska_SeaLife_Center.html": "sun",
-   "South_Georgia_Habitat_Restoration.html": "polar",
-   "Arctic_Weather_Satellite.html": "polar",
-   "GCOM-W_SHIZUKU.html": "polar",
-   "SCISAT.html": "polar",
-   "Chilika_Lake.html": "lakes",
-   "Tonle_Sap.html": "lakes",
-   "Lake_Biwa_Soap_Movement.html": "lakes",
-   "Lake_Constance.html": "lakes",
-   "Room_for_the_River.html": "rivers",
-   "Tubbataha_Reefs.html": "ocean",
-   "Sargassum_Watch.html": "ocean",
-   "Redonda_Restoration.html": "ocean",
-   "Iberian_Lynx.html": "forest",
-   "Trees_for_Life.html": "forest",
-   "Nepal_Tigers.html": "forest",
-   "Altyn_Dala_Saiga.html": "earth",
-   "Gorongosa.html": "forest",
-   "NEOSSat.html": "defense",
-   "Chandrayaan-5_LUPEX.html": "planets",
-   "Ross_Sea_MPA.html": "polar",
-   "PROMICE_GC-Net.html": "polar",
-   "Iceland_Land_Restoration.html": "polar",
-   "Emirates_Mission_Asteroid_Belt.html": "defense",
-   "Arabian_Oryx.html": "earth",
-   "Azraq_Wetland.html": "lakes",
-   "Okavango_Delta.html": "lakes",
-   "Mountain_Gorillas.html": "forest",
-   "Seychelles_Marine_Spatial_Plan.html": "ocean",
-   "Kakapo_Recovery.html": "forest",
-   "Route_of_Parks_Patagonia.html": "forest",
-   "Danuri_ShadowCam.html": "planets",
-   "Cool_Earth_Basic_Income.html": "forest",
-   "Andfjorden_MPA.html": "ocean",
-   "Atoll_Rewilding.html": "ocean"
+    "404.html": "assets/hero/learn",
+    "4ocean.html": "si:ocean",
+    "ALOS-4.html": "assets/ALOS-4_Model_Tsukuba.jpg",
+    "AP_IB_Physics.html": "assets/hero/learn",
+    "ATLAS.html": "assets/Hawaii_Island_ISS_2024.jpg",
+    "About.html": "assets/hero/about",
+    "Aditya_L1.html": "assets/SDO_Sun.jpg",
+    "Aeolus.html": "assets/ATV1_Departure_ISS.jpg",
+    "Aero_Guide.html": "assets/hero/learn",
+    "Aero_Lab.html": "assets/hero/learn",
+    "Aero_Math.html": "assets/hero/learn",
+    "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": "assets/Great_Lakes_GSFC.jpg",
+    "Amazon_Rainy_Season.html": "assets/Amazon_Clouds_ISS.jpg",
+    "American_Forests.html": "si:forest",
+    "American_Rivers.html": "si:rivers",
+    "Arbor_Day_Foundation.html": "assets/Amazon_Clouds_ISS.jpg",
+    "Argo.html": "assets/NOAA_Deep_SOLO_Float_2018.jpg",
+    "Argos.html": "assets/Loggerhead_Release_MINWR.jpg",
+    "Ariel.html": "assets/Webb_Infrared.jpg",
+    "Astroscale.html": "assets/Astroscale_ADRAS-J_H-IIA_Stage.jpg",
+    "Atmospheric_Drag.html": "assets/Progress_Reentry.jpg",
+    "Beavers_River_Engineers.html": "assets/Klamath_River.jpg",
+    "BepiColombo.html": "assets/Mercury_MESSENGER.jpg",
+    "Billion_Oyster_Project.html": "assets/NYC_Hudson_Harbor.jpg",
+    "Biomass.html": "assets/Biomass_Forest_MatoGrosso.jpg",
+    "CAMS.html": "assets/Sumatra_Smoke_Singapore_MODIS.jpg",
+    "CHIME.html": "assets/Garden_City_Kansas_Landsat.jpg",
+    "CIMR.html": "assets/North_Atlantic_Bloom_MODIS.jpg",
+    "CO2M.html": "assets/Clouds_Limb_ISS.jpg",
+    "CRISTAL.html": "assets/Labrador_Sea_Ice_ISS.jpg",
+    "Cadets.html": "assets/hero/learn",
+    "Calculators.html": "assets/hero/learn",
+    "Careers.html": "assets/hero/learn",
+    "Carruthers.html": "assets/Carruthers_SWFO_KSC.jpg",
+    "Catalina_Sky_Survey.html": "assets/Asteroid_2018LA_CSS.jpg",
+    "Chesapeake_Bay_Foundation.html": "assets/Baltimore_DC_Skylab.jpg",
+    "Clean_Lakes_Alliance.html": "assets/Great_Lakes_MODIS.jpg",
+    "Clean_Up_the_Lake.html": "assets/Lake_Tahoe_ISS.jpg",
+    "ClearSpace.html": "assets/ATV1_Departure_ISS.jpg",
+    "Comet_Interceptor.html": "assets/Comet_NEOWISE.jpg",
+    "Contact.html": "assets/hero/about",
+    "Copernicus_EMS.html": "assets/Canada_Wildfires_ISS_2025b.jpg",
+    "Copernicus_Marine.html": "assets/North_Atlantic_Bloom_MODIS.jpg",
+    "Coral_Gardeners.html": "assets/BoraBora_Reefs_STS93.jpg",
+    "Coral_IVF.html": "assets/Florida_Keys_PIA03890.jpg",
+    "Coral_Reef_Watch.html": "assets/Great_Barrier_Reef_ISS_2022.jpg",
+    "Coral_Restoration_Foundation.html": "assets/Florida_Keys_PIA03890.jpg",
+    "Coral_Vita.html": "assets/Bahama_Bank_PIA11019.jpg",
+    "Corrections.html": "assets/hero/learn",
+    "CryoSat.html": "assets/Labrador_Sea_Ice_ISS.jpg",
+    "DSCOVR_EPIC.html": "assets/EPIC_Earth.jpg",
+    "Deforestation.html": "assets/Amazon_Clouds_ISS.jpg",
+    "Delta_V_Calculator.html": "assets/hero/learn",
+    "Dragonfly.html": "assets/Titan.jpg",
+    "EFFIS.html": "assets/Portugal_Wildfires_ISS_2018.jpg",
+    "EMIT.html": "assets/EMIT_Methane_Fingerprint.jpg",
+    "EOS-06.html": "assets/Oceansat_Winds_Irene.jpg",
+    "ESA_NEOCC.html": "assets/Goldstone_Radar_2011UL21.jpg",
+    "ESCAPADE.html": "assets/ESCAPADE_Launch_NG2.jpg",
+    "EarthCARE.html": "assets/Clouds_Limb_ISS.jpg",
+    "Earth_Observation.html": "assets/EPIC_Earth.jpg",
+    "Eden_People_Planet.html": "assets/Kilimanjaro_STS72.jpg",
+    "Editorial_Policy.html": "assets/hero/learn",
+    "Elwha_River_Restoration.html": "si:elwha",
+    "EnVision.html": "assets/Venus_Magellan.jpg",
+    "Enceladus.html": "assets/Enceladus_Geyser_Basin.jpg",
+    "Europa_Clipper.html": "assets/Europa_Clipper_Jupiter.jpg",
+    "ExoMars_Rosalind_Franklin.html": "assets/ExoMars_Drill_Curiosity.jpg",
+    "FIRMS.html": "assets/Canada_Wildfires_ISS_2025.jpg",
+    "FLEX.html": "assets/Global_Plant_Fluorescence.jpg",
+    "FORUM.html": "assets/Clouds_Limb_ISS.jpg",
+    "Find_a_Cleanup.html": "assets/hero/help",
+    "FireSat.html": "assets/Rim_Fire_MODIS.jpg",
+    "Forest_Elephants.html": "assets/Congo_River_ISS.jpg",
+    "FreshWater_Watch.html": "assets/Mississippi_River_PIA23534.jpg",
+    "GCOM-C.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
+    "GEDI.html": "assets/GEDI_on_ISS.jpg",
+    "GLOBE_Program.html": "assets/Pacific_Clouds_Sunset_ISS.jpg",
+    "GOES-19.html": "assets/GOES19_GOESU_KSC.jpg",
+    "GOSAT-GW.html": "assets/EMIT_Methane_Fingerprint.jpg",
+    "GRACE-FO.html": "assets/GRACE_FO_Orbit.jpg",
+    "GSMaP.html": "assets/GPM_Core_Observatory_GMI.jpg",
+    "Galileo.html": "assets/Romania_City_Lights_ISS.jpg",
+    "GeoXO.html": "assets/Lightning_Storm_ISS.jpg",
+    "GloFAS.html": "assets/Pakistan_Flood_Kheshgi_2010.jpg",
+    "Global_Fishing_Watch.html": "assets/North_Pacific_ISS.jpg",
+    "Global_Forest_Watch.html": "assets/Rondonia_Deforestation_STS46.jpg",
+    "Globe_at_Night.html": "assets/Romania_City_Lights_ISS.jpg",
+    "Glossary.html": "assets/hero/learn",
+    "Great_Bubble_Barrier.html": "si:riversea",
+    "Great_Green_Wall.html": "assets/Sahel_ISS.jpg",
+    "Great_Lakes_Plastic_Cleanup.html": "assets/Great_Lakes_MODIS.jpg",
+    "Hayabusa2_Torifune.html": "assets/Ryugu_Hayabusa2.jpg",
+    "Heal_the_Bay.html": "assets/Lake_Shore_Cleanup_NPS.jpg",
+    "Healthy_Seas.html": "assets/Mediterranean_ISS.jpg",
+    "Hera.html": "assets/Hera.jpg",
+    "Hohmann_Transfer_Calculator.html": "assets/hero/learn",
+    "Homeschool.html": "assets/hero/learn",
+    "HydroGNSS.html": "assets/Danube_Delta_GSFC.jpg",
+    "ICESat-2.html": "assets/ICESat2_Launch.jpg",
+    "IMAP.html": "assets/IMAP_Spacecraft_KSC.jpg",
+    "INSAT-3DS.html": "assets/ISS_Over_Ganges_STS102.jpg",
+    "ISS_Water_Recovery.html": "assets/ISS_Water_Recovery.jpg",
+    "International_Charter.html": "assets/Missouri_Flood_Hamburg_EO1.jpg",
+    "International_Coastal_Cleanup.html": "assets/Bahamas_Ocean_ISS.jpg",
+    "JPSS.html": "assets/JPSS2_Atlas_V_Launch_Pad.jpg",
+    "Juice.html": "assets/Juice_RIME_Radar.jpg",
+    "Jupiter.html": "assets/Jupiter.jpg",
+    "Justdiggit.html": "assets/hub/ESA_S2_Southeast_Kenya.jpg",
+    "Keep_Tahoe_Blue.html": "assets/Lake_Tahoe_ISS.jpg",
+    "Kelp_Forests.html": "assets/Kerguelen_Kelp_ISS.jpg",
+    "Kids_Map.html": "assets/hero/kids",
+    "Kissimmee_River_Restoration.html": "assets/Florida_Keys_PIA03890.jpg",
+    "Klamath_River_Dam_Removal.html": "assets/Klamath_River.jpg",
+    "Lake_Erie_Algal_Bloom_Forecast.html": "assets/Great_Lakes_GSFC.jpg",
+    "Lake_Plastic_Recovery.html": "assets/Lake_Shore_Cleanup_NPS.jpg",
+    "Lakes.html": "assets/Great_Lakes_MODIS.jpg",
+    "Landsat_9.html": "assets/Landsat9_Launch.jpg",
+    "Learn.html": "assets/hero/learn",
+    "LeoLabs.html": "assets/LEO_View.jpg",
+    "Lesson_Builder.html": "assets/hero/lesson",
+    "Libera.html": "assets/EPIC_Earth.jpg",
+    "Life_Terra.html": "si:forest",
+    "Lift_Equation_Calculator.html": "assets/hero/learn",
+    "LignoSat.html": "assets/LignoSat_Wood_Panels.jpg",
+    "Living_Lakes.html": "assets/Lake_Tahoe_ISS.jpg",
+    "Living_Lands_and_Waters.html": "assets/Mississippi_River_PIA23534.jpg",
+    "London_Tideway_Tunnel.html": "assets/London_Thames_Night_ISS.jpg",
+    "Lucy.html": "assets/Lucy_KSC.jpg",
+    "MMX.html": "assets/Phobos.jpg",
+    "Mach_Number_Calculator.html": "assets/hero/learn",
+    "Mangroves.html": "assets/Mangrove_Delta_ISS.jpg",
+    "MetOp-SG-A1_Sentinel-5A.html": "assets/Clouds_Limb_ISS.jpg",
+    "Meteosat_Third_Generation.html": "assets/Lightning_Storm_ISS.jpg",
+    "Mission_Blue_Hope_Spots.html": "assets/Bahamas_Ocean_ISS.jpg",
+    "Moon_Steadies_Earth.html": "assets/Moon_Crossing_Earth.jpg",
+    "Mote_Marine_Laboratory.html": "assets/Florida_Keys_PIA03890.jpg",
+    "Mr_Trash_Wheel.html": "assets/Baltimore_DC_Skylab.jpg",
+    "Myth_vs_Fact.html": "assets/hero/learn",
+    "NEO_Surveyor.html": "assets/NEO_Surveyor.jpg",
+    "NISAR.html": "assets/NISAR_Orbit.jpg",
+    "Namami_Gange.html": "assets/Sundarbans_Ganges_Delta_ISS.jpg",
+    "Nancy_Grace_Roman.html": "assets/Roman_Launch_FH.jpg",
+    "OCO-2.html": "assets/Global_Plant_Fluorescence.jpg",
+    "OSIRIS-APEX.html": "assets/OSIRIS_APEX.jpg",
+    "Ocean_Cleanup.html": "si:oceancleanup",
+    "Ocean_Voyages_Institute.html": "assets/North_Pacific_ISS.jpg",
+    "Oceans.html": "assets/North_Pacific_ISS.jpg",
+    "One_Tree_Planted.html": "assets/Global_Plant_Fluorescence.jpg",
+    "OpenET.html": "assets/Garden_City_Kansas_Landsat.jpg",
+    "Orbit_Lab.html": "assets/hero/learn",
+    "Orbit_Math.html": "assets/hero/learn",
+    "Orbital_Data_Centers.html": "assets/DataOrbitalCenters.jpg",
+    "Orbital_Period_Calculator.html": "assets/hero/learn",
+    "Orbital_Velocity_Calculator.html": "assets/hero/learn",
+    "Orbits_Guide.html": "assets/hero/learn",
+    "PACE.html": "assets/PACE_Spacecraft_KSC.jpg",
+    "PREFIRE.html": "assets/LEO_View.jpg",
+    "PRELUDE.html": "assets/ATV1_Departure_ISS.jpg",
+    "PUNCH.html": "assets/PUNCH_Mission.jpg",
+    "Pan-STARRS.html": "assets/Comet_PANSTARRS_ISS_2026.jpg",
+    "Parker_Solar_Probe.html": "assets/SDO_Sun.jpg",
+    "Pendulum_Period_Calculator.html": "assets/hero/learn",
+    "Penobscot_River_Restoration.html": "assets/New_England_Coast_ISS.jpg",
+    "Physics_Guide.html": "assets/hero/learn",
+    "Physics_Lab.html": "assets/hero/learn",
+    "Physics_Math.html": "assets/hero/learn",
+    "Phytoplankton.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
+    "Planetary_Defense.html": "assets/Hera.jpg",
+    "Plant-for-the-Planet.html": "si:plant",
+    "Plastic_Bank.html": "si:ocean",
+    "Plastic_Odyssey.html": "assets/PlasticBank_Indonesia_STS66.jpg",
+    "Plato.html": "assets/Plato_Exoplanets.jpg",
+    "Play_and_Learn.html": "assets/hero/kids",
+    "Polar.html": "assets/Greenland_IceBridge_2015.jpg",
+    "Posidonia_Meadows.html": "assets/Mediterranean_ISS.jpg",
+    "Press.html": "assets/hero/about",
+    "Privacy.html": "assets/hero/about",
+    "Project_Seagrass.html": "assets/Seagrass_Restoration_KSC.jpg",
+    "Projectile_Motion_Drag_Calculator.html": "assets/hero/learn",
+    "Psyche.html": "assets/Psyche_Illustration.jpg",
+    "RCM.html": "assets/Labrador_Sea_Ice_ISS.jpg",
+    "Rainforest_Connection.html": "assets/Amazon_Clouds_ISS.jpg",
+    "Ramses.html": "assets/Ramses_Switch_On.jpg",
+    "Rawanes_Mission_Log.html": "assets/hero/mission",
+    "Restoring_the_Lake_Depths.html": "assets/Lake_Tahoe_ISS.jpg",
+    "Rewilding_Europe.html": "assets/Danube_Delta_GSFC.jpg",
+    "River_Cleanup.html": "assets/Mississippi_River_PIA23534.jpg",
+    "Rivers.html": "assets/Mississippi_River_PIA23534.jpg",
+    "Rotor_Hover_Power_Calculator.html": "assets/hero/learn",
+    "SARSAT.html": "assets/GOES19_GOESU_KSC.jpg",
+    "SMAP.html": "assets/Mississippi_River_PIA23534.jpg",
+    "SOHO.html": "assets/SDO_Sun.jpg",
+    "SOLAR_1.html": "assets/SDO_Sun.jpg",
+    "SPHEREx.html": "assets/SPHEREx_Spacecraft.jpg",
+    "SWOT.html": "assets/SWOT_Orbit_Illustration.jpg",
+    "Saharan_Dust_Amazon.html": "assets/Saharan_Dust_Amazon.jpg",
+    "Salt_Marshes.html": "assets/Salt_Marsh_KSC.jpg",
+    "Satellite_Explorer.html": "assets/hero/satx",
+    "SeaTrees.html": "assets/Mangrove_Delta_ISS.jpg",
+    "Sea_Turtle_Conservancy.html": "assets/Loggerhead_Release_MINWR.jpg",
+    "Seabin.html": "assets/Sydney_ASTER.jpg",
+    "Seagrass.html": "assets/Seagrass_Planting_KSC.jpg",
+    "Sentinel-1.html": "assets/Sentinel1_Ground_Motion.jpg",
+    "Sentinel-2C.html": "assets/Biomass_Forest_MatoGrosso.jpg",
+    "Sentinel-3.html": "assets/Bahamas_Ocean_ISS.jpg",
+    "Sentinel-4.html": "assets/Mediterranean_ISS.jpg",
+    "Sentinel-5P.html": "assets/Clouds_Limb_ISS.jpg",
+    "Sentinel-6B.html": "assets/Sentinel6B_Launch.jpg",
+    "Sitemap.html": "assets/hero/learn",
+    "Solar_Orbiter.html": "assets/Solar_Orbiter_Astrotech.jpg",
+    "Space.html": "assets/ISS_Flyaround_2021.jpg",
+    "SpaceLogistics.html": "assets/Satellite_Servicing_Arm_GSFC.jpg",
+    "Space_Disposal.html": "assets/Progress_Reentry.jpg",
+    "Space_Weather.html": "assets/SDO_Sun.jpg",
+    "Stall_Speed_Calculator.html": "assets/hero/learn",
+    "Starfish_Otter.html": "assets/Transporter18_Launch.jpg",
+    "Sungai_Watch.html": "si:riversea",
+    "Surfrider_Foundation.html": "assets/North_Pacific_ISS.jpg",
+    "TEMPO.html": "assets/Clouds_Limb_ISS.jpg",
+    "TRACERS.html": "assets/TRACERS_Launch.jpg",
+    "Tanager-1.html": "assets/Tanager1_Methane_Plume.jpg",
+    "Teachers.html": "assets/hero/teach",
+    "Terraformation.html": "si:plant",
+    "The_SeaCleaners.html": "assets/PlasticBank_Indonesia_STS66.jpg",
+    "Three_Shields.html": "assets/SDO_Sun.jpg",
+    "Three_Trees.html": "si:forest",
+    "Thrust_to_Weight_Calculator.html": "assets/hero/learn",
+    "Titan.html": "assets/Titan.jpg",
+    "Topics.html": "assets/hero/learn",
+    "Trees_for_the_Future.html": "assets/hub/ESA_S2_Tana_River_Kenya.jpg",
+    "Trout_Unlimited.html": "assets/Klamath_River.jpg",
+    "Tsunami_Early_Warning.html": "assets/tsunami-hero.jpg",
+    "UNEP_MARS.html": "assets/EMIT_Methane_Plumes_Uzbekistan.jpg",
+    "US_Deorbit_Vehicle.html": "assets/ISS_Flyaround_2021.jpg",
+    "Veggie_Space_Garden.html": "assets/Veggie_KSC.jpg",
+    "Vigil.html": "assets/SDO_Sun.jpg",
+    "Voyager.html": "assets/Voyager_Heliosphere_PIA22835.jpg",
+    "Waterkeeper_Alliance.html": "assets/NYC_Hudson_Harbor.jpg",
+    "Ways_to_Help.html": "assets/hero/help",
+    "WeForest.html": "assets/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg",
+    "Webb_2024_YR4.html": "assets/Webb_Infrared.jpg",
+    "Whales_Ocean_Gardeners.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
+    "Yellowstone_Wolves.html": "assets/Yellowstone_ISS.jpg",
+    "Zero_Debris_Charter.html": "assets/LEO_View.jpg",
+    "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
+    "Thwaites_Glacier_Collaboration.html": "assets/Thwaites_Glacier_Landsat8_2019.jpg",
+    "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg",
+    "African_Parks.html": "assets/Lake_Kariba_ISS_2024.jpg",
+    "Digital_Earth_Africa.html": "assets/Okavango_Delta_ISS_2025.jpg",
+    "Hope_Mars_Mission.html": "assets/Valles_Marineris_Viking_PIA00422.jpg",
+    "Abu_Dhabi_Mangroves.html": "assets/Abu_Dhabi_Coast_ISS_2024.jpg",
+    "Gaganyaan.html": "assets/South_India_Sri_Lanka_ISS_2024.jpg",
+    "NEWater.html": "assets/Singapore_Night_ISS_2025.jpg",
+    "Cheonggyecheon.html": "assets/Seoul_Night_ISS_2025.jpg",
+    "Palau_National_Marine_Sanctuary.html": "assets/Palau_Landsat8_2014.jpg",
+    "Papahanaumokuakea.html": "assets/Pearl_Hermes_Atoll_ISS_2002.jpg",
+    "Predator_Free_2050.html": "assets/NZ_Southern_Lakes_ISS_2024.jpg",
+    "Galapagos_Giant_Tortoises.html": "assets/Fernandina_Galapagos_ISS_2022.jpg",
+    "MAAP.html": "assets/Ucayali_River_ISS_2026.jpg",
+    "Mesoamerican_Reef_Insurance.html": "assets/Belize_Coast_ISS_2014.jpg",
+    "Costa_Rica_Forest_Payments.html": "assets/Costa_Rica_ISS_2020.jpg",
+    "Gulf_of_Alaska_Keeper.html": "assets/Gulf_of_Alaska_Bloom_2017.jpg",
+    "Alaska_Kelp_Farming.html": "assets/Alaska_Clear_View_Terra_2013.jpg",
+    "Bristol_Bay_Salmon.html": "assets/Bristol_Bay_Terra_2017.jpg",
+    "Alaska_SeaLife_Center.html": "assets/Gulf_of_Alaska_Aurora_ISS_2025.jpg",
+    "South_Georgia_Habitat_Restoration.html": "assets/South_Georgia_ISS071_E_581850.jpg",
+    "Arctic_Weather_Satellite.html": "assets/Arctic_Weather_Satellite_ESA.jpg",
+    "GCOM-W_SHIZUKU.html": "assets/Greenland_Sea_Ice_GSFC.jpg",
+    "SCISAT.html": "assets/Ozone_Hole_2024_SVS14711.jpg",
+    "Chilika_Lake.html": "assets/Chilika_Lake_Mouth.jpg",
+    "Tonle_Sap.html": "assets/Tonle_Sap_Floating_Village.jpg",
+    "Lake_Biwa_Soap_Movement.html": "assets/Lake_Biwa_Shiga_NASA.jpg",
+    "Lake_Constance.html": "assets/Lake_Constance_ISS030_E_161620.jpg",
+    "Room_for_the_River.html": "assets/Netherlands_Rivers_ISS063_E_002730.jpg",
+    "Tubbataha_Reefs.html": "assets/Tubbataha_Reefs_UNESCO.jpg",
+    "Sargassum_Watch.html": "assets/Sargassum_Bloom_Atlantic_Sentinel.jpg",
+    "Redonda_Restoration.html": "assets/Redonda_By_Sea_2023.jpg",
+    "Iberian_Lynx.html": "assets/Iberian_Lynx_Almuradiel_2021.jpg",
+    "Trees_for_Life.html": "assets/Glen_Affric_Scots_Pine.jpg",
+    "Nepal_Tigers.html": "assets/Bengal_Tiger_Bardia_Nepal.jpg",
+    "Altyn_Dala_Saiga.html": "assets/Saiga_West_Kazakhstan.jpg",
+    "Gorongosa.html": "assets/Mount_Gorongosa_Mozambique.jpg",
+    "NEOSSat.html": "assets/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
+    "Chandrayaan-5_LUPEX.html": "assets/Lunar_South_Pole_PIA13523.jpg",
+    "Ross_Sea_MPA.html": "assets/Ross_Sea_Adelie_Cape_Royds.jpg",
+    "PROMICE_GC-Net.html": "assets/Greenland_Glacier_Landsat_NASA_EO.jpg",
+    "Iceland_Land_Restoration.html": "assets/Iceland_Highland_Edge.jpg",
+    "Emirates_Mission_Asteroid_Belt.html": "assets/Asteroid_269_Justitia_Orbit_JPL.jpg",
+    "Arabian_Oryx.html": "assets/Arabian_Oryx_Oryx_Leucoryx.jpg",
+    "Azraq_Wetland.html": "assets/Azraq_Wetland_Reserve_48.jpg",
+    "Okavango_Delta.html": "assets/Okavango_Delta_Aerial_2018.jpg",
+    "Mountain_Gorillas.html": "assets/Mountain_Gorilla_Bwindi_2024.jpg",
+    "Seychelles_Marine_Spatial_Plan.html": "assets/Aldabra_Atoll_Seychelles.jpg",
+    "Kakapo_Recovery.html": "assets/Kakapo_Sirocco.jpg",
+    "Route_of_Parks_Patagonia.html": "assets/Chacabuco_Valley_Patagonia_Park.jpg",
+    "Danuri_ShadowCam.html": "assets/Shackleton_Crater_LROC_ShadowCam.jpg",
+    "Cool_Earth_Basic_Income.html": "assets/Puerto_Bermudez_Peru_Rainforest.jpg",
+    "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
+    "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
+    "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
+    "Courses.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "Physics_I.html": "assets/Landsat9_Launch.jpg",
+    "Calculus_I.html": "assets/EPIC_Earth.jpg",
+    "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg",
+    "Intro_to_Aerospace_Engineering.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "Engineering_Graphics_CAD.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
+    "Intro_to_Programming.html": "assets/ISS_Flyaround_2021.jpg",
+    "Calculus_III.html": "assets/EPIC_Earth.jpg",
+    "Differential_Equations.html": "assets/EPIC_Earth.jpg",
+    "Physics_II.html": "assets/SDO_Sun.jpg",
+    "Statics.html": "assets/ISS_Flyaround_2021.jpg",
+    "Dynamics.html": "assets/Landsat9_Launch.jpg",
+    "Mechanics_of_Materials.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "Linear_Algebra.html": "assets/Landsat9_Launch.jpg",
+    "Circuits.html": "assets/ISS_Flyaround_2021.jpg",
+    "Aerodynamics_I.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "Thermodynamics.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "Fluid_Mechanics.html": "assets/SWOT_Orbit_Illustration.jpg",
+    "Aircraft_Performance.html": "assets/ISS_Flyaround_2021.jpg",
+    "Aerospace_Structures.html": "assets/ISS_Over_Ganges_STS102.jpg",
+    "Orbital_Mechanics.html": "assets/Landsat9_Launch.jpg",
+    "Numerical_Methods.html": "assets/DataOrbitalCenters.jpg",
+    "Probability_Statistics.html": "assets/GOES19_GOESU_KSC.jpg",
+    "Propulsion.html": "r2:images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+    "Flight_Dynamics_Controls.html": "assets/ISS_Flyaround_2021.jpg",
+    "Spacecraft_Design.html": "assets/Landsat9_Launch.jpg",
+    "Heat_Transfer.html": "assets/EPIC_Earth.jpg",
+    "Avionics_Systems_Engineering.html": "assets/ISS_Flyaround_2021.jpg",
+    "Capstone_Design.html": "assets/ISS_Flyaround_2021.jpg",
+    "Sustainable_Aviation.html": "assets/EPIC_Earth.jpg",
+    "Polar_Bears_International.html": "assets/PBI_Arctic_Melt_Ponds_IceBridge.jpg",
+    "SmartICE.html": "assets/Hudson_Bay_Ice_Skylab.jpg",
+    "Permafrost_Pathways.html": "assets/Alaska_ABoVE_Flight.jpg",
+    "Tallurutiup_Imanga_NMCA.html": "assets/Nunavut_ASTER.jpg",
+    "PAME_Arctic_Council.html": "assets/Western_Alaska_Sea_Ice_MODIS.jpg",
+    "CAFF_Arctic_Biodiversity.html": "assets/SW_Greenland_Fjord_IceBridge.jpg",
+    "MOSAiC_Expedition.html": "assets/Healy_Ice_Station_ICESCAPE.jpg",
+    "WWF_Arctic_Programme.html": "assets/Wolstenholme_Fjord_IceBridge.jpg",
+    "Inuit_Circumpolar_Council.html": "assets/Cape_Farewell_Greenland_ISS.jpg",
+    "Arctic_Basecamp.html": "assets/Arctic_Sea_Ice_Minimum_2015.jpg",
+    "Gough_Island_Restoration.html": "assets/Tristan_da_Cunha_ASTER.jpg",
+    "Penguin_Watch.html": "assets/Ross_Sea_Icebergs_MISR.jpg",
+    "Oceanites_Penguin_Census.html": "assets/James_Ross_Island_AirSAR.jpg",
+    "SOCCOM.html": "assets/Southern_Ocean_Eddies_VIIRS.jpg",
+    "SOOS.html": "assets/Southern_Ocean_Cyclone_MISR.jpg",
+    "Beyond_EPICA_Oldest_Ice.html": "assets/Larsen_C_Iceberg_Landsat.jpg",
+    "ASOC_Antarctic_Coalition.html": "assets/Ross_Sea_Bloom_2011.jpg",
+    "CCAMLR.html": "assets/Amundsen_Sea_Iceberg_IceBridge.jpg",
+    "SCAR_Antarctic_Research.html": "assets/AirSAR_Scientists_Antarctica.jpg",
+    "IAATO.html": "assets/Larsen_Ice_Shelf_AirSAR.jpg"
   },
-  "per_page": 4,
-  "curated": {
-   "Polar.html": [
-    "images/Greenland_IceBridge_2015.jpg",
-    "images/Thwaites_Glacier_Landsat8_2019.jpg",
-    "images/Labrador_Sea_Ice_ISS.jpg",
-    "images/Ross_Sea_Adelie_Cape_Royds.jpg",
-    "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
-   ],
-   "General_Chemistry_I.html": [
-    "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg",
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-    "images/North_Atlantic_Bloom_MODIS.jpg"
-   ],
-   "Courses.html": [
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
-    "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
-   ],
-   "Physics_I.html": [
-    "images/GRACE_FO_Orbit.jpg",
-    "images/ISS_Flyaround_2021.jpg",
-    "images/Sentinel6B_Launch.jpg"
-   ],
-   "Calculus_I.html": [
-    "images/GRACE_FO_Orbit.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/ISS_Flyaround_2021.jpg"
-   ],
-   "Calculus_II.html": [
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
-    "images/Sentinel6B_Launch.jpg",
-    "images/GRACE_FO_PIA22445.jpg"
-   ],
-   "Intro_to_Aerospace_Engineering.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Engineering_Graphics_CAD.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Intro_to_Programming.html": [
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
-   ],
-   "Calculus_III.html": [
-    "images/SWOT_Orbit_Illustration.jpg",
-    "images/GRACE_FO_PIA22445.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Differential_Equations.html": [
-    "images/GRACE_FO_PIA22445.jpg",
-    "images/Sentinel6B_Launch.jpg",
-    "images/SWOT_Orbit_Illustration.jpg"
-   ],
-   "Physics_II.html": [
-    "images/Aurora_Borealis_ISS072-E-159172.jpg",
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Statics.html": [
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/ArtemisII_Launch_KSC_Hancock.jpg",
-    "images/ISS_Over_Ganges_STS102.jpg"
-   ],
-   "Dynamics.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/ArtemisII_Launch_KSC_Hancock.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg"
-   ],
-   "Mechanics_of_Materials.html": [
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/Sentinel6B_Launch.jpg",
-    "images/ISS_Over_Ganges_STS102.jpg"
-   ],
-   "Linear_Algebra.html": [
-    "images/GRACE_FO_Orbit.jpg",
-    "images/SWOT_Orbit_Illustration.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Circuits.html": [
-    "images/SDO_Sun.jpg",
-    "images/Aurora_Borealis_ISS072-E-159172.jpg",
-    "images/GOES19_GOESU_KSC.jpg"
-   ],
-   "Aerodynamics_I.html": [
-    "images/ISS_Over_Ganges_STS102.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Thermodynamics.html": [
-    "images/SDO_Sun.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Fluid_Mechanics.html": [
-    "images/ISS_Over_Ganges_STS102.jpg",
-    "images/GRACE_FO_Orbit.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Aircraft_Performance.html": [
-    "images/ISS_Over_Ganges_STS102.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Aerospace_Structures.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Orbital_Mechanics.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Numerical_Methods.html": [
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/ISS_Flyaround_2021.jpg",
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
-   ],
-   "Probability_Statistics.html": [
-    "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
-    "images/ISS_Flyaround_2021.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Propulsion.html": [
-    "images/ArtemisII_Launch_KSC_Hancock.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Flight_Dynamics_Controls.html": [
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/ArtemisII_Launch_KSC_Hancock.jpg",
-    "images/Landsat9_Launch_KLS04_0013.jpg"
-   ],
-   "Spacecraft_Design.html": [
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/ISS_Flyaround_2021.jpg"
-   ],
-   "Heat_Transfer.html": [
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
-    "images/GOES19_GOESU_KSC.jpg",
-    "images/ISS_Over_Ganges_STS102.jpg"
-   ],
-   "Avionics_Systems_Engineering.html": [
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/ArtemisII_Launch_KSC_Hancock.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg"
-   ],
-   "Capstone_Design.html": [
-    "images/Landsat9_Launch_KLS04_0013.jpg",
-    "images/JPSS2_Atlas_V_Launch_Pad.jpg",
-    "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
-   ],
-   "Sustainable_Aviation.html": [
-    "images/ISS_Flyaround_2021.jpg",
-    "images/Pacific_Clouds_Sunset_ISS.jpg",
-    "images/GOES19_GOESU_KSC.jpg"
-   ],
-   "Astroscale.html": [],
-   "ALOS-4.html": [],
-   "GEDI.html": [],
-   "Eden_People_Planet.html": [],
-   "Justdiggit.html": [],
-   "Trees_for_the_Future.html": [],
-   "WeForest.html": []
+  "slides": {
+    "pools": {
+      "earth": [
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+        "images/GRACE_FO_PIA22445.jpg",
+        "images/Clouds_Limb_ISS.jpg",
+        "images/Baltimore_DC_Skylab.jpg",
+        "images/EMIT_Methane_Fingerprint.jpg",
+        "images/Lightning_Storm_ISS.jpg",
+        "images/Garden_City_Kansas_Landsat.jpg",
+        "images/EMIT_Methane_Plumes_Uzbekistan.jpg",
+        "images/GPM_Core_Observatory_GMI.jpg",
+        "images/GRACE_FO_Orbit.jpg",
+        "images/NISAR_Orbit_PIA26285.jpg",
+        "images/South_India_Sri_Lanka_ISS_2024.jpg",
+        "images/Singapore_Night_ISS_2025.jpg",
+        "images/Seoul_Night_ISS_2025.jpg",
+        "images/Romania_City_Lights_ISS.jpg"
+      ],
+      "ocean": [
+        "images/Pacific_Clouds_Sunset_ISS.jpg",
+        "images/Florida_Keys_PIA03890.jpg",
+        "images/North_Pacific_ISS.jpg",
+        "images/Bahamas_Ocean_ISS.jpg",
+        "images/Mediterranean_ISS.jpg",
+        "images/North_Atlantic_Bloom_MODIS.jpg",
+        "images/PlasticBank_Indonesia_STS66.jpg",
+        "images/Loggerhead_Release_MINWR.jpg",
+        "images/Bahama_Bank_PIA11019.jpg",
+        "images/BoraBora_Reefs_STS93.jpg",
+        "images/New_England_Coast_ISS.jpg",
+        "images/Hawaii_Island_ISS_2024.jpg",
+        "images/Great_Barrier_Reef_ISS_2022.jpg",
+        "images/Kerguelen_Kelp_ISS.jpg",
+        "images/Sydney_ASTER.jpg",
+        "images/NOAA_Deep_SOLO_Deployment_2018.jpg",
+        "images/KSC_Beach_Cleanup_2017_0002.jpg",
+        "images/KSC_Beach_Cleanup_2017_0081.jpg",
+        "images/Bahamas_Atlantic_ISS071_449837.jpg",
+        "images/Bahamas_Shallows_ISS065_144117.jpg",
+        "images/Mangrove_Seedling_KSC-20230412-GEB01_0006.jpg",
+        "images/Abu_Dhabi_Coast_ISS_2024.jpg",
+        "images/Palau_Landsat8_2014.jpg",
+        "images/Pearl_Hermes_Atoll_ISS_2002.jpg",
+        "images/Fernandina_Galapagos_ISS_2022.jpg",
+        "images/Belize_Coast_ISS_2014.jpg",
+        "images/Gulf_of_Alaska_Bloom_2017.jpg",
+        "images/Tubbataha_Reefs_UNESCO.jpg",
+        "images/Redonda_By_Sea_2023.jpg",
+        "images/Aldabra_Atoll_Seychelles.jpg",
+        "images/Andfjorden_Andoy_2023.jpg",
+        "images/Tetiaroa_Atoll_ISS018.jpg",
+        "images/Seagrass_Restoration_KSC.jpg",
+        "images/Salt_Marsh_KSC.jpg"
+      ],
+      "sun": [
+        "images/Aurora_Borealis_ISS072-E-159172.jpg",
+        "images/SDO_Sun.jpg",
+        "images/Voyager_Heliosphere_PIA22835.jpg",
+        "images/Carruthers_SWFO_KSC.jpg",
+        "images/IMAP_Spacecraft_KSC.jpg",
+        "images/PUNCH_SPHEREx_Launch_AFRC2025-0036-22.jpg",
+        "images/Gulf_of_Alaska_Aurora_ISS_2025.jpg"
+      ],
+      "rivers": [
+        "images/Mississippi_River_PIA23534.jpg",
+        "images/Klamath_River.jpg",
+        "images/Danube_Delta_GSFC.jpg",
+        "images/NYC_Hudson_Harbor.jpg",
+        "images/Sundarbans_Ganges_Delta_ISS.jpg",
+        "images/Congo_River_ISS.jpg",
+        "images/London_Thames_Night_ISS.jpg",
+        "images/ISS_Over_Ganges_STS102.jpg",
+        "images/Pakistan_Flood_Kheshgi_2010.jpg",
+        "images/Missouri_Flood_Hamburg_EO1.jpg",
+        "images/Mississippi_River_ISS073_0880658.jpg",
+        "images/Bassac_River_ISS073_0818427.jpg",
+        "images/Ucayali_River_ISS_2026.jpg",
+        "images/Bristol_Bay_Terra_2017.jpg",
+        "images/Netherlands_Rivers_ISS063_E_002730.jpg"
+      ],
+      "forest": [
+        "images/Amazon_Clouds_ISS.jpg",
+        "images/Kilimanjaro_STS72.jpg",
+        "images/Global_Plant_Fluorescence.jpg",
+        "images/Rondonia_Deforestation_STS46.jpg",
+        "images/Canada_Wildfires_ISS_2025.jpg",
+        "images/Canada_Wildfires_ISS_2025b.jpg",
+        "images/Portugal_Wildfires_ISS_2018.jpg",
+        "images/Rim_Fire_MODIS.jpg",
+        "images/Sahel_ISS.jpg",
+        "images/Sumatra_Smoke_Singapore_MODIS.jpg",
+        "images/Saharan_Dust_Amazon.jpg",
+        "images/Ucayali_Amazon_ISS074.jpg",
+        "images/Gabon_Rainforest_AFRC2016-0054-105.jpg",
+        "images/Olympic_NP_Landsat8_GSFC_e000239.jpg",
+        "images/Costa_Rica_ISS_2020.jpg",
+        "images/Iberian_Lynx_Almuradiel_2021.jpg",
+        "images/Glen_Affric_Scots_Pine.jpg",
+        "images/Bengal_Tiger_Bardia_Nepal.jpg",
+        "images/Mount_Gorongosa_Mozambique.jpg",
+        "images/Mountain_Gorilla_Bwindi_2024.jpg",
+        "images/Kakapo_Sirocco.jpg",
+        "images/Chacabuco_Valley_Patagonia_Park.jpg",
+        "images/Puerto_Bermudez_Peru_Rainforest.jpg"
+      ],
+      "lakes": [
+        "images/Lake_Tahoe_ISS.jpg",
+        "images/Great_Lakes_GSFC.jpg",
+        "images/Yellowstone_ISS.jpg",
+        "images/Great_Lakes_ISS074_0642367.jpg",
+        "images/Okavango_Delta_ISS_2025.jpg",
+        "images/NZ_Southern_Lakes_ISS_2024.jpg",
+        "images/Chilika_Lake_Mouth.jpg",
+        "images/Tonle_Sap_Floating_Village.jpg",
+        "images/Lake_Biwa_Shiga_NASA.jpg",
+        "images/Lake_Constance_ISS030_E_161620.jpg",
+        "images/Azraq_Wetland_Reserve_48.jpg",
+        "images/Okavango_Delta_Aerial_2018.jpg"
+      ],
+      "orbit": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/LEO_View.jpg",
+        "images/ATV1_Departure_ISS.jpg",
+        "images/Progress_Reentry.jpg",
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/Veggie_KSC.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/ISS_Water_Recovery.jpg",
+        "images/PACE_Spacecraft_KSC.jpg",
+        "images/Sentinel6B_Launch.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/Spaceborne_Computer2_iss065e009492.jpg"
+      ],
+      "polar": [
+        "images/Greenland_IceBridge_2015.jpg",
+        "images/Thwaites_Glacier_Landsat8_2019.jpg",
+        "images/Labrador_Sea_Ice_ISS.jpg",
+        "images/Ross_Sea_Adelie_Cape_Royds.jpg",
+        "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
+        "images/South_Georgia_ISS071_E_581850.jpg",
+        "images/Greenland_Sea_Ice_GSFC.jpg",
+        "images/Ozone_Hole_2024_SVS14711.jpg",
+        "images/Greenland_Glacier_Landsat_NASA_EO.jpg"
+      ],
+      "planets": [
+        "images/Titan.jpg",
+        "images/Webb_Infrared.jpg",
+        "images/Enceladus_Geyser_Basin.jpg",
+        "images/SPHEREx_Spacecraft.jpg",
+        "images/Venus_Magellan.jpg",
+        "images/Europa_Clipper_Jupiter.jpg",
+        "images/ExoMars_Drill_Curiosity.jpg",
+        "images/Juice_RIME_Radar.jpg",
+        "images/Moon_Crossing_Earth.jpg",
+        "images/Phobos.jpg",
+        "images/Plato_Exoplanets.jpg",
+        "images/Roman_Launch_FH_NHQ202608300015-2.jpg",
+        "images/Valles_Marineris_Viking_PIA00422.jpg",
+        "images/Lunar_South_Pole_PIA13523.jpg"
+      ],
+      "defense": [
+        "images/Asteroid_2018LA_CSS.jpg",
+        "images/Goldstone_Radar_2011UL21.jpg",
+        "images/Psyche_Illustration.jpg",
+        "images/Lucy_KSC.jpg",
+        "images/Comet_PANSTARRS_ISS_2026.jpg",
+        "images/NEO_Surveyor.jpg",
+        "images/DART_Didymos_PIA25329.jpg",
+        "images/Comet_NEOWISE_ISS_NHQ202007180001.jpg",
+        "images/Asteroid_269_Justitia_Orbit_JPL.jpg"
+      ]
+    },
+    "pages": {
+      "404.html": "earth",
+      "4ocean.html": "ocean",
+      "ALOS-4.html": "forest",
+      "AP_IB_Physics.html": "earth",
+      "ATLAS.html": "ocean",
+      "About.html": "ocean",
+      "Aditya_L1.html": "sun",
+      "Aeolus.html": "orbit",
+      "Aero_Guide.html": "earth",
+      "Aero_Lab.html": "earth",
+      "Aero_Math.html": "earth",
+      "Alliance_for_the_Great_Lakes_Adopt_a_Beach.html": "lakes",
+      "Amazon_Rainy_Season.html": "forest",
+      "American_Forests.html": "forest",
+      "American_Rivers.html": "rivers",
+      "Arbor_Day_Foundation.html": "forest",
+      "Argo.html": "ocean",
+      "Argos.html": "ocean",
+      "Ariel.html": "planets",
+      "Astroscale.html": "orbit",
+      "Atmospheric_Drag.html": "orbit",
+      "Beavers_River_Engineers.html": "rivers",
+      "BepiColombo.html": "planets",
+      "Billion_Oyster_Project.html": "rivers",
+      "Biomass.html": "forest",
+      "CAMS.html": "forest",
+      "CHIME.html": "earth",
+      "CIMR.html": "ocean",
+      "CO2M.html": "earth",
+      "CRISTAL.html": "polar",
+      "Cadets.html": "earth",
+      "Calculators.html": "earth",
+      "Careers.html": "earth",
+      "Carruthers.html": "sun",
+      "Catalina_Sky_Survey.html": "defense",
+      "Chesapeake_Bay_Foundation.html": "earth",
+      "Clean_Lakes_Alliance.html": "lakes",
+      "Clean_Up_the_Lake.html": "lakes",
+      "ClearSpace.html": "orbit",
+      "Comet_Interceptor.html": "defense",
+      "Contact.html": "ocean",
+      "Copernicus_EMS.html": "forest",
+      "Copernicus_Marine.html": "ocean",
+      "Coral_Gardeners.html": "ocean",
+      "Coral_IVF.html": "ocean",
+      "Coral_Reef_Watch.html": "ocean",
+      "Coral_Restoration_Foundation.html": "ocean",
+      "Coral_Vita.html": "ocean",
+      "Corrections.html": "earth",
+      "CryoSat.html": "polar",
+      "DSCOVR_EPIC.html": "earth",
+      "Deforestation.html": "forest",
+      "Delta_V_Calculator.html": "earth",
+      "Dragonfly.html": "planets",
+      "EFFIS.html": "forest",
+      "EMIT.html": "earth",
+      "EOS-06.html": "ocean",
+      "ESA_NEOCC.html": "defense",
+      "ESCAPADE.html": "orbit",
+      "EarthCARE.html": "earth",
+      "Earth_Observation.html": "earth",
+      "Eden_People_Planet.html": "forest",
+      "Editorial_Policy.html": "earth",
+      "Elwha_River_Restoration.html": "forest",
+      "EnVision.html": "planets",
+      "Enceladus.html": "planets",
+      "Europa_Clipper.html": "planets",
+      "ExoMars_Rosalind_Franklin.html": "planets",
+      "FIRMS.html": "forest",
+      "FLEX.html": "forest",
+      "FORUM.html": "earth",
+      "Find_a_Cleanup.html": "ocean",
+      "FireSat.html": "forest",
+      "Forest_Elephants.html": "rivers",
+      "FreshWater_Watch.html": "rivers",
+      "GCOM-C.html": "ocean",
+      "GEDI.html": "orbit",
+      "GLOBE_Program.html": "ocean",
+      "GOES-19.html": "orbit",
+      "GOSAT-GW.html": "earth",
+      "GRACE-FO.html": "earth",
+      "GSMaP.html": "earth",
+      "Galileo.html": "planets",
+      "GeoXO.html": "earth",
+      "GloFAS.html": "rivers",
+      "Global_Fishing_Watch.html": "ocean",
+      "Global_Forest_Watch.html": "forest",
+      "Globe_at_Night.html": "planets",
+      "Glossary.html": "earth",
+      "Great_Bubble_Barrier.html": "rivers",
+      "Great_Green_Wall.html": "forest",
+      "Great_Lakes_Plastic_Cleanup.html": "lakes",
+      "Heal_the_Bay.html": "ocean",
+      "Healthy_Seas.html": "ocean",
+      "Hera.html": "defense",
+      "Hohmann_Transfer_Calculator.html": "earth",
+      "Homeschool.html": "earth",
+      "HydroGNSS.html": "rivers",
+      "ICESat-2.html": "orbit",
+      "IMAP.html": "sun",
+      "INSAT-3DS.html": "rivers",
+      "ISS_Water_Recovery.html": "orbit",
+      "International_Charter.html": "rivers",
+      "International_Coastal_Cleanup.html": "ocean",
+      "JPSS.html": "orbit",
+      "Juice.html": "planets",
+      "Jupiter.html": "planets",
+      "Justdiggit.html": "forest",
+      "Keep_Tahoe_Blue.html": "lakes",
+      "Kelp_Forests.html": "ocean",
+      "Kids_Map.html": "earth",
+      "Kissimmee_River_Restoration.html": "ocean",
+      "Klamath_River_Dam_Removal.html": "rivers",
+      "Lake_Erie_Algal_Bloom_Forecast.html": "lakes",
+      "Lake_Plastic_Recovery.html": "ocean",
+      "Lakes.html": "lakes",
+      "Landsat_9.html": "orbit",
+      "Learn.html": "earth",
+      "LeoLabs.html": "orbit",
+      "Libera.html": "earth",
+      "Life_Terra.html": "forest",
+      "Lift_Equation_Calculator.html": "earth",
+      "LignoSat.html": "orbit",
+      "Living_Lakes.html": "lakes",
+      "Living_Lands_and_Waters.html": "rivers",
+      "London_Tideway_Tunnel.html": "rivers",
+      "Lucy.html": "defense",
+      "MMX.html": "planets",
+      "Mach_Number_Calculator.html": "earth",
+      "Mangroves.html": "rivers",
+      "MetOp-SG-A1_Sentinel-5A.html": "earth",
+      "Meteosat_Third_Generation.html": "earth",
+      "Mission_Blue_Hope_Spots.html": "ocean",
+      "Moon_Steadies_Earth.html": "planets",
+      "Mote_Marine_Laboratory.html": "ocean",
+      "Mr_Trash_Wheel.html": "earth",
+      "Myth_vs_Fact.html": "earth",
+      "NEO_Surveyor.html": "defense",
+      "NISAR.html": "earth",
+      "Namami_Gange.html": "rivers",
+      "Nancy_Grace_Roman.html": "planets",
+      "OCO-2.html": "forest",
+      "Ocean_Cleanup.html": "ocean",
+      "Ocean_Voyages_Institute.html": "ocean",
+      "Oceans.html": "ocean",
+      "One_Tree_Planted.html": "forest",
+      "OpenET.html": "earth",
+      "Orbit_Lab.html": "earth",
+      "Orbit_Math.html": "earth",
+      "Orbital_Data_Centers.html": "orbit",
+      "Orbital_Period_Calculator.html": "earth",
+      "Orbital_Velocity_Calculator.html": "earth",
+      "Orbits_Guide.html": "earth",
+      "PACE.html": "orbit",
+      "PREFIRE.html": "orbit",
+      "PRELUDE.html": "orbit",
+      "PUNCH.html": "sun",
+      "Pan-STARRS.html": "defense",
+      "Parker_Solar_Probe.html": "sun",
+      "Pendulum_Period_Calculator.html": "earth",
+      "Penobscot_River_Restoration.html": "ocean",
+      "Physics_Guide.html": "earth",
+      "Physics_Lab.html": "earth",
+      "Physics_Math.html": "earth",
+      "Phytoplankton.html": "polar",
+      "Planetary_Defense.html": "defense",
+      "Plant-for-the-Planet.html": "ocean",
+      "Plastic_Bank.html": "ocean",
+      "Plastic_Odyssey.html": "ocean",
+      "Plato.html": "planets",
+      "Play_and_Learn.html": "earth",
+      "Polar.html": "polar",
+      "Posidonia_Meadows.html": "ocean",
+      "Press.html": "ocean",
+      "Privacy.html": "ocean",
+      "Project_Seagrass.html": "orbit",
+      "Projectile_Motion_Drag_Calculator.html": "earth",
+      "Psyche.html": "defense",
+      "RCM.html": "polar",
+      "Rainforest_Connection.html": "forest",
+      "Rawanes_Mission_Log.html": "sun",
+      "Restoring_the_Lake_Depths.html": "lakes",
+      "Rewilding_Europe.html": "rivers",
+      "River_Cleanup.html": "rivers",
+      "Rivers.html": "rivers",
+      "Rotor_Hover_Power_Calculator.html": "earth",
+      "SARSAT.html": "orbit",
+      "SMAP.html": "rivers",
+      "SOHO.html": "sun",
+      "SOLAR_1.html": "sun",
+      "SPHEREx.html": "planets",
+      "SWOT.html": "earth",
+      "Saharan_Dust_Amazon.html": "forest",
+      "Salt_Marshes.html": "orbit",
+      "Satellite_Explorer.html": "earth",
+      "SeaTrees.html": "rivers",
+      "Sea_Turtle_Conservancy.html": "ocean",
+      "Seabin.html": "ocean",
+      "Seagrass.html": "orbit",
+      "Sentinel-1.html": "earth",
+      "Sentinel-2C.html": "forest",
+      "Sentinel-3.html": "ocean",
+      "Sentinel-4.html": "ocean",
+      "Sentinel-5P.html": "earth",
+      "Sentinel-6B.html": "orbit",
+      "Sitemap.html": "earth",
+      "Solar_Orbiter.html": "sun",
+      "Space.html": "orbit",
+      "SpaceLogistics.html": "orbit",
+      "Space_Disposal.html": "orbit",
+      "Space_Weather.html": "sun",
+      "Stall_Speed_Calculator.html": "earth",
+      "Starfish_Otter.html": "orbit",
+      "Sungai_Watch.html": "rivers",
+      "Surfrider_Foundation.html": "ocean",
+      "TEMPO.html": "earth",
+      "TRACERS.html": "sun",
+      "Tanager-1.html": "earth",
+      "Terraformation.html": "ocean",
+      "The_SeaCleaners.html": "ocean",
+      "Three_Shields.html": "sun",
+      "Three_Trees.html": "forest",
+      "Thrust_to_Weight_Calculator.html": "earth",
+      "Titan.html": "planets",
+      "Topics.html": "earth",
+      "Trees_for_the_Future.html": "forest",
+      "Trout_Unlimited.html": "rivers",
+      "UNEP_MARS.html": "earth",
+      "US_Deorbit_Vehicle.html": "orbit",
+      "Veggie_Space_Garden.html": "orbit",
+      "Vigil.html": "sun",
+      "Voyager.html": "sun",
+      "Waterkeeper_Alliance.html": "rivers",
+      "Ways_to_Help.html": "ocean",
+      "WeForest.html": "forest",
+      "Webb_2024_YR4.html": "planets",
+      "Whales_Ocean_Gardeners.html": "polar",
+      "Yellowstone_Wolves.html": "lakes",
+      "Zero_Debris_Charter.html": "orbit",
+      "Svalbard_Global_Seed_Vault.html": "polar",
+      "Thwaites_Glacier_Collaboration.html": "polar",
+      "Carbfix.html": "polar",
+      "African_Parks.html": "lakes",
+      "Digital_Earth_Africa.html": "lakes",
+      "Hope_Mars_Mission.html": "planets",
+      "Abu_Dhabi_Mangroves.html": "ocean",
+      "Gaganyaan.html": "earth",
+      "NEWater.html": "earth",
+      "Cheonggyecheon.html": "earth",
+      "Palau_National_Marine_Sanctuary.html": "ocean",
+      "Papahanaumokuakea.html": "ocean",
+      "Predator_Free_2050.html": "lakes",
+      "Galapagos_Giant_Tortoises.html": "ocean",
+      "MAAP.html": "rivers",
+      "Mesoamerican_Reef_Insurance.html": "ocean",
+      "Costa_Rica_Forest_Payments.html": "forest",
+      "Gulf_of_Alaska_Keeper.html": "ocean",
+      "Alaska_Kelp_Farming.html": "polar",
+      "Bristol_Bay_Salmon.html": "rivers",
+      "Alaska_SeaLife_Center.html": "sun",
+      "South_Georgia_Habitat_Restoration.html": "polar",
+      "Arctic_Weather_Satellite.html": "polar",
+      "GCOM-W_SHIZUKU.html": "polar",
+      "SCISAT.html": "polar",
+      "Chilika_Lake.html": "lakes",
+      "Tonle_Sap.html": "lakes",
+      "Lake_Biwa_Soap_Movement.html": "lakes",
+      "Lake_Constance.html": "lakes",
+      "Room_for_the_River.html": "rivers",
+      "Tubbataha_Reefs.html": "ocean",
+      "Sargassum_Watch.html": "ocean",
+      "Redonda_Restoration.html": "ocean",
+      "Iberian_Lynx.html": "forest",
+      "Trees_for_Life.html": "forest",
+      "Nepal_Tigers.html": "forest",
+      "Altyn_Dala_Saiga.html": "earth",
+      "Gorongosa.html": "forest",
+      "NEOSSat.html": "defense",
+      "Chandrayaan-5_LUPEX.html": "planets",
+      "Ross_Sea_MPA.html": "polar",
+      "PROMICE_GC-Net.html": "polar",
+      "Iceland_Land_Restoration.html": "polar",
+      "Emirates_Mission_Asteroid_Belt.html": "defense",
+      "Arabian_Oryx.html": "earth",
+      "Azraq_Wetland.html": "lakes",
+      "Okavango_Delta.html": "lakes",
+      "Mountain_Gorillas.html": "forest",
+      "Seychelles_Marine_Spatial_Plan.html": "ocean",
+      "Kakapo_Recovery.html": "forest",
+      "Route_of_Parks_Patagonia.html": "forest",
+      "Danuri_ShadowCam.html": "planets",
+      "Cool_Earth_Basic_Income.html": "forest",
+      "Andfjorden_MPA.html": "ocean",
+      "Atoll_Rewilding.html": "ocean"
+    },
+    "per_page": 4,
+    "curated": {
+      "Polar.html": [
+        "images/Greenland_IceBridge_2015.jpg",
+        "images/Thwaites_Glacier_Landsat8_2019.jpg",
+        "images/Labrador_Sea_Ice_ISS.jpg",
+        "images/Ross_Sea_Adelie_Cape_Royds.jpg",
+        "images/Svalbard_Nordaustlandet_Landsat9_2022.jpg"
+      ],
+      "General_Chemistry_I.html": [
+        "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg",
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+        "images/North_Atlantic_Bloom_MODIS.jpg"
+      ],
+      "Courses.html": [
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+        "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"
+      ],
+      "Physics_I.html": [
+        "images/GRACE_FO_Orbit.jpg",
+        "images/ISS_Flyaround_2021.jpg",
+        "images/Sentinel6B_Launch.jpg"
+      ],
+      "Calculus_I.html": [
+        "images/GRACE_FO_Orbit.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/ISS_Flyaround_2021.jpg"
+      ],
+      "Calculus_II.html": [
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+        "images/Sentinel6B_Launch.jpg",
+        "images/GRACE_FO_PIA22445.jpg"
+      ],
+      "Intro_to_Aerospace_Engineering.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Engineering_Graphics_CAD.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Intro_to_Programming.html": [
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
+      ],
+      "Calculus_III.html": [
+        "images/SWOT_Orbit_Illustration.jpg",
+        "images/GRACE_FO_PIA22445.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Differential_Equations.html": [
+        "images/GRACE_FO_PIA22445.jpg",
+        "images/Sentinel6B_Launch.jpg",
+        "images/SWOT_Orbit_Illustration.jpg"
+      ],
+      "Physics_II.html": [
+        "images/Aurora_Borealis_ISS072-E-159172.jpg",
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Statics.html": [
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/ArtemisII_Launch_KSC_Hancock.jpg",
+        "images/ISS_Over_Ganges_STS102.jpg"
+      ],
+      "Dynamics.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/ArtemisII_Launch_KSC_Hancock.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg"
+      ],
+      "Mechanics_of_Materials.html": [
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/Sentinel6B_Launch.jpg",
+        "images/ISS_Over_Ganges_STS102.jpg"
+      ],
+      "Linear_Algebra.html": [
+        "images/GRACE_FO_Orbit.jpg",
+        "images/SWOT_Orbit_Illustration.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Circuits.html": [
+        "images/SDO_Sun.jpg",
+        "images/Aurora_Borealis_ISS072-E-159172.jpg",
+        "images/GOES19_GOESU_KSC.jpg"
+      ],
+      "Aerodynamics_I.html": [
+        "images/ISS_Over_Ganges_STS102.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Thermodynamics.html": [
+        "images/SDO_Sun.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Fluid_Mechanics.html": [
+        "images/ISS_Over_Ganges_STS102.jpg",
+        "images/GRACE_FO_Orbit.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Aircraft_Performance.html": [
+        "images/ISS_Over_Ganges_STS102.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Aerospace_Structures.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Orbital_Mechanics.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Numerical_Methods.html": [
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/ISS_Flyaround_2021.jpg",
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg"
+      ],
+      "Probability_Statistics.html": [
+        "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
+        "images/ISS_Flyaround_2021.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Propulsion.html": [
+        "images/ArtemisII_Launch_KSC_Hancock.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Flight_Dynamics_Controls.html": [
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/ArtemisII_Launch_KSC_Hancock.jpg",
+        "images/Landsat9_Launch_KLS04_0013.jpg"
+      ],
+      "Spacecraft_Design.html": [
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/ISS_Flyaround_2021.jpg"
+      ],
+      "Heat_Transfer.html": [
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
+        "images/GOES19_GOESU_KSC.jpg",
+        "images/ISS_Over_Ganges_STS102.jpg"
+      ],
+      "Avionics_Systems_Engineering.html": [
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/ArtemisII_Launch_KSC_Hancock.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg"
+      ],
+      "Capstone_Design.html": [
+        "images/Landsat9_Launch_KLS04_0013.jpg",
+        "images/JPSS2_Atlas_V_Launch_Pad.jpg",
+        "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg"
+      ],
+      "Sustainable_Aviation.html": [
+        "images/ISS_Flyaround_2021.jpg",
+        "images/Pacific_Clouds_Sunset_ISS.jpg",
+        "images/GOES19_GOESU_KSC.jpg"
+      ],
+      "Astroscale.html": [],
+      "ALOS-4.html": [],
+      "GEDI.html": [],
+      "Eden_People_Planet.html": [],
+      "Justdiggit.html": [],
+      "Trees_for_the_Future.html": [],
+      "WeForest.html": []
+    }
   }
- }
 }

@@ -202,20 +202,19 @@ def n_sheets(lang, n):
 KITS = [
     ('K-2', 'k3', 'Kids_Map.html', 'map', ['Life_Terra.html', 'Ocean_Cleanup.html', 'One_Tree_Planted.html', 'Mangroves.html', 'Plant-for-the-Planet.html']),
     ('3-5', None, 'Satellite_Explorer.html', 'activity', ['GLOBE_Program.html', 'Mangroves.html', 'Life_Terra.html', 'Global_Forest_Watch.html', 'Ocean_Cleanup.html']),
-    ('6-8', 'g68', 'Spot_the_Fire.html', 'lesson', ['GLOBE_Program.html', 'ICESat-2.html', 'FIRMS.html', 'Tsunami_Early_Warning.html', 'SmartICE.html']),
+    ('6-8', 'g68', 'Myth_vs_Fact.html', 'lesson', ['GLOBE_Program.html', 'ICESat-2.html', 'FIRMS.html', 'Tsunami_Early_Warning.html', 'SmartICE.html']),
     ('9-12', 'g912', 'Orbit_Lab.html', 'lab', ['Carbfix.html', 'ClearSpace.html', 'Astroscale.html', 'Ocean_Cleanup.html']),
 ]
 # Planet science first (ocean, earth, climate, biology), then chemistry, physics, and a map.
 FEATURED = [
     ('Ocean_Cleanup.html', 'sheet', '#teachers'),
     ('GLOBE_Program.html', 'sheet', '#teachers'),
-    ('Spot_the_Fire.html', 'lesson', ''),
     ('Mangroves.html', 'sheet', '#teachers'),
     ('General_Chemistry_I.html', 'course', '#instructors'),
     ('Physics_I.html', 'course', '#instructors'),
     ('Kids_Map.html', 'map', ''),
 ]
-SURFACE = ['GLOBE_Program.html', 'Myth_vs_Fact.html', 'Spot_the_Fire.html', 'Search.html']
+SURFACE = ['GLOBE_Program.html', 'Myth_vs_Fact.html', 'Search.html']
 # Nov 11, Bryan: JROTC (Cadets.html) and Careers are out of scope on Teachers.
 # AP & IB Physics stays: it is a physics door, not a careers or cadet path.
 SECONDARY_LABELS = {

@@ -149,9 +149,27 @@ def sitemap():
     for l in LANGS:
         sitemap_pages.ensure_url(f'{SITE}{d(l)}{PAGE}', today, 'monthly', '0.7')
 
+def retire():
+    """Classroom activity is retired. Keep the URL as a redirect to Lesson Builder and do not put the link back."""
+    import sitemap_pages
+    n = 0
+    for l in ['en', 'fr', 'es', 'ar', 'it', 'he']:
+        pre = '' if l == 'en' else '../'
+        dest = '/Lesson_Builder.html' if l == 'en' else f'/{l}/Lesson_Builder.html'
+        stub = ('<!DOCTYPE html><html lang="%s"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+                '<title>Lesson Plan Builder</title><link rel="canonical" href="https://www.savingplanets.com%s">'
+                '<meta http-equiv="refresh" content="0; url=%s"><script>location.replace("%s")</script></head>'
+                '<body><a href="%s">Lesson Plan Builder</a></body></html>\n') % (l, dest, dest, dest, dest)
+        n += wr(d(l) + PAGE, stub)
+        for page in ('Teachers.html', 'Kids_Map.html', 'FireSat.html', 'Lesson_Builder.html', 'Play_and_Learn.html'):
+            p = d(l) + page
+            if not os.path.exists(p):
+                continue
+            s = rd(p)
+            s2 = re.sub(r'<!-- SPOTFIRE-LINK:START -->.*?<!-- SPOTFIRE-LINK:END -->', '', s, flags=re.S)
+            n += wr(p, s2)
+    n += sitemap_pages.strip_page(PAGE)
+    print('build-spotfire retired; writes', n)
+
 if __name__ == '__main__':
-    ch = 0
-    for l in LANGS:
-        ch += wr(d(l) + PAGE, page_html(l)); ch += link_in(l)
-    sitemap()
-    print(f'build-spotfire: langs={",".join(LANGS)} writes={ch}')
+    retire()
