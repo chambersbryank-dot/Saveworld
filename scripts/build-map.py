@@ -211,16 +211,38 @@ def page_html(l, data, n_by):
     # Oct 17 (user: "remove noise and center map on page"): map-first layout. One short h1 + the map, centred in the viewport below the
     # fixed nav; legend/filters sit on the map as a small key; everything else (orbit/worldwide strips, full list, launch credit, CSV) is
     # in one collapsed "list" section under the map. Hero, lead, count line, data-tools bar and New-this-week strip were removed.
+    poster = f'{pre}assets/videos/hero-loop.jpg'
+    try:
+        hero_space = re.search(r'<div class="hero-space"[^>]*>', open('index.html', encoding='utf8').read()).group(0) + '</div>'
+    except Exception:
+        hero_space = '<div class="hero-space" aria-hidden="true"></div>'
+    hero_js = (
+        '<script>(function(){var h=document.querySelector(".wm-hero.has-video");if(!h)return;'
+        'var T=["space","earth"],n=Math.floor((Date.now()-Date.UTC(2026,9,12,10))/6048e5),name=T[(n%T.length+T.length)%T.length],'
+        'm=/[?&]hero=([a-z-]+)/.exec(location.search);if(m&&(m[1]==="space"||m[1]==="earth"))name=m[1];'
+        'h.setAttribute("data-hero",name);document.documentElement.style.setProperty("--wm-glow",name==="space"?"rgba(120,160,255,.52)":"rgba(70,175,220,.55)");'
+        'var v=h.querySelector("video.wm-hero-video");if(!v)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");'
+        'function kick(){if(v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){});}}'
+        'if((rm&&rm.matches)||name!=="earth"){v.removeAttribute("autoplay");v.autoplay=false;v.pause();'
+        '[].forEach.call(v.querySelectorAll("source"),function(s){s.removeAttribute("src");});v.load();return;}'
+        'if(v.dataset.poster)v.poster=v.dataset.poster;[].forEach.call(v.querySelectorAll("source[data-src]"),function(s){if(!s.getAttribute("src"))s.src=s.dataset.src;});'
+        'v.setAttribute("autoplay","");v.autoplay=true;v.preload="auto";v.load();'
+        'v.addEventListener("canplay",function(){kick();});document.addEventListener("visibilitychange",function(){if(!document.hidden)kick();});'
+        'document.addEventListener("DOMContentLoaded",function(){kick();});'
+        'v.addEventListener("playing",function(){var s=h.querySelector(".wm-hero-still");if(s)s.style.visibility="hidden";});kick();})();</script>'
+        f'<script src="{pre}assets/hero-themes.js?v=20261112hv" defer></script>'
+    )
     main = f'''<main id="main" class="wm-main">
 <div class="wm-wrap" data-lang="{l}" data-src="{pre}assets/data/map.{l}.json?v={ASSETV}">
 <div class="wm-screen">
 <section class="wm-hero has-video">
-<div class="wm-hero-media" aria-hidden="true"><img class="wm-hero-still" src="{pre}assets/earth/world-map-hero.jpg" alt="" width="1920" height="1080"><video class="wm-hero-video" autoplay muted loop playsinline poster="{pre}assets/earth/world-map-hero.jpg" width="1920" height="1080" preload="auto"><source src="{pre}assets/earth/world-map-hero-2560.mp4" type="video/mp4" media="(min-width: 1600px)"><source src="{pre}assets/earth/world-map-hero-1920.mp4" type="video/mp4"><source src="{pre}assets/earth/world-map-hero-2560.webm" type="video/webm" media="(min-width: 1600px)"><source src="{pre}assets/earth/world-map-hero-1920.webm" type="video/webm"></video><div class="wm-hero-shade"></div></div>
+<div class="wm-hero-media" aria-hidden="true"><img class="wm-hero-still" src="{poster}" alt="" width="1280" height="546"><video class="wm-hero-video" autoplay muted loop playsinline preload="auto" poster="{poster}" data-poster="{poster}" width="1280" height="546"><source data-src="https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4" type="video/mp4"></video></div>
+{hero_space}<div class="wm-hero-shade"></div>
 <div class="wm-hero-content"><h1 class="wm-title">{esc(u["h1"].format(n=n_sol))}</h1></div>
-<p class="hero-video-credit"><a href="https://sdo.gsfc.nasa.gov/">NASA/SDO</a> / <a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth</a> / <a href="https://svs.gsfc.nasa.gov/4720/">NASA LRO-SVS</a>; {esc(u["byline"])}</p>
+<p class="hero-video-credit">{esc(u["byline"])}</p>
 </section>
 <p class="wm-space-jump-wrap"><a class="wm-space-jump" href="Space.html#satmap" aria-label="{esc(u["spaceJump"])}">{esc(u["space"])}</a></p>
-<script>(function(){{var root=document.documentElement;var cols=[[70,170,255],[255,118,36],[190,208,232]];var keys=[[0,0],[0.35,0],[1.5,1],[2.55,1],[3.4,0],[3.65,0],[4.3,2],[4.65,2],[5,0]];function sm(a,b,t){{var u=(t-a)/(b-a);if(u<0)u=0;else if(u>1)u=1;return u*u*(3-2*u);}}function glow(t){{t=((t%5)+5)%5;var i=0;for(var k=0;k<keys.length-1;k++)if(t>=keys[k][0])i=k;var a=keys[i],b=keys[Math.min(i+1,keys.length-1)],u=sm(a[0],b[0],t),c1=cols[a[1]],c2=cols[b[1]];root.style.setProperty("--wm-glow","rgba("+Math.round(c1[0]+(c2[0]-c1[0])*u)+","+Math.round(c1[1]+(c2[1]-c1[1])*u)+","+Math.round(c1[2]+(c2[2]-c1[2])*u)+",.78)");}}glow(0);var v=document.querySelector(".wm-hero-video");if(!v)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)");function kick(){{if(v.paused){{var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}}}if(rm&&rm.matches){{v.removeAttribute("autoplay");v.autoplay=false;v.pause();[].forEach.call(v.querySelectorAll("source"),function(s){{s.removeAttribute("src");}});v.load();return;}}v.addEventListener("timeupdate",function(){{glow(v.currentTime);}});v.addEventListener("seeked",function(){{glow(v.currentTime);}});v.addEventListener("playing",function(){{var s=document.querySelector(".wm-hero-still");if(s)s.style.visibility="hidden";}});v.addEventListener("canplay",function(){{kick();}});document.addEventListener("visibilitychange",function(){{if(!document.hidden)kick();}});document.addEventListener("DOMContentLoaded",function(){{kick();}});kick();}})();</script>
+{hero_js}
 <div class="wm-key" role="group" aria-label="{esc(u["key"])}">
 <div class="wm-cats" role="group" aria-label="{esc(u["show"])}">{cat_btns}</div>
 <label class="wm-tog"><input type="checkbox" id="wm-a" checked> <span class="wm-dot wm-active" aria-hidden="true"></span>{esc(u["active"])}</label>
