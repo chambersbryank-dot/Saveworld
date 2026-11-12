@@ -17,6 +17,11 @@ def t(s):
 d = json.load(open('assets/data/map.en.json', encoding='utf8'))
 d['lang'] = 'he'
 d['ui'] = {k: t(v) for k, v in d['ui'].items()}
+d['ui'].update({
+    'allcat': 'הכל', 'rivers': 'נהרות', 'lakes': 'אגמים', 'oceans': 'אוקיינוסים', 'land': 'יבשה',
+    'byline': 'נוצר על ידי המייסד ו-SI.',
+    'earthAlt': 'מפה שטוחה ופוטוריאליסטית של כדור הארץ, NASA Blue Marble Next Generation',
+})
 for h in d['hubs']: h['n'] = t(h['n'])
 for s in d['sols']:
     for k in ('n', 'hn', 's'): s[k] = t(s.get(k))
