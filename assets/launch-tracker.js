@@ -41,6 +41,7 @@
       '.launch-widget .lw-stage{position:relative;width:100%;max-width:40rem;aspect-ratio:16/9;margin:.65rem 0;background:#041018;border-radius:12px;overflow:hidden}' +
       '.launch-widget .lw-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}' +
       '.launch-widget .lw-play{position:absolute;inset:0;width:100%;margin:0;border:0;cursor:pointer;color:#fff;font:800 1rem/1.3 Montserrat,sans-serif;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06))}' +
+      '.launch-widget a.lw-play{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;padding:0 1rem;box-sizing:border-box}' +
       '.launch-widget .lw-play:focus-visible{outline:3px solid #fff;outline-offset:-6px}' +
       '.launch-widget .lw-nsf{margin:.45rem 0 .2rem;font-size:.92rem;line-height:1.4;color:#f4fbff}' +
       '.launch-widget .lw-nsf a{color:#8fd3ff;font-weight:700}';
@@ -429,7 +430,8 @@
     if (emb.kind === 'youtube') {
       return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="youtube" data-id="' + esc(emb.id) + '" data-title="' + esc(title) + '">' + esc(buttonText) + '</button></div>';
     }
-    return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="x" data-url="' + esc(emb.url) + '" data-title="' + esc(title) + '">' + esc(buttonText) + '</button></div>';
+    /* X does not allow its live broadcasts to be embedded on other sites, so the official X stream opens on X in a new tab. */
+    return '<div class="lw-stage"><a class="lw-play" data-kind="x" href="' + esc(emb.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(title) + '">' + esc(buttonText) + ' \u2197</a></div>';
   }
   function playerHtml(l) {
     var off = officialEmbed(l);
@@ -460,7 +462,7 @@
   }
   function onPlay(e) {
     var b = e.target && e.target.closest && e.target.closest('.lw-play');
-    if (!b) return;
+    if (!b || b.tagName === 'A') return;
     var stage = b.parentNode;
     var title = b.getAttribute('data-title') || 'Official live stream';
     if (b.getAttribute('data-kind') === 'youtube') {
