@@ -1,14 +1,19 @@
 /* Unlinked GLOBE review draft. Dark surfaces match Learn and Match.
    Buttons use the shared .hero-ctas .hero-cta crystal-water rule. */
 .gr-banner{
+  position:absolute;
+  z-index:3;
+  top:var(--spn-h, 96px);
+  left:0;
+  right:0;
   margin:0;
-  padding:calc(var(--spn-h, 104px) + .35rem) 1.1rem .85rem;
+  padding:.45rem 1rem;
   text-align:center;
   color:#fff;
   background-color:#0a4f78;
   background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));
   font-weight:650;
-  line-height:1.45;
+  line-height:1.4;
 }
 .gr-banner p{max-width:46rem;margin:.2rem auto;color:#fff}
 .gr-langs{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem .7rem;margin:.85rem 0 0;padding:0;list-style:none}
@@ -41,22 +46,54 @@
 }
 .gr-form select option{background:#0b1220;color:#e8eef5}
 .gr-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
-.gr-plan h3{margin-top:.9rem}
-.gr-legal{margin:1.4rem 0 0;color:#d6e4f0}
-.gr-line{display:block;border-bottom:1px solid rgba(143,211,255,.55);min-height:1.8rem;margin:.25rem 0 .85rem}
-.gr-data label{font-weight:700}
-.gr-video{margin:.8rem 0 1rem}
-.gr-video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:#000}
-.gr-video figcaption{color:#d6e4f0;font-size:.85rem;margin-top:.35rem}
-.gr-founder{margin:.35rem 0 0;text-align:center;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.55)}
-.gr-hero{min-height:max(42vh,320px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;background:#021018 center/cover no-repeat;padding:calc(var(--nav-height,96px) + 1.4rem) 1.2rem 1.6rem;box-sizing:border-box}
-.gr-hero h1,.gr-hero p{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55)}
-.gr-hero .hero-credit{position:static;margin:.6rem 0 0;background:rgba(0,0,0,.28)}
+html body.globe-review .gr-actions.hero-ctas .hero-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.55rem 1.15rem;
+  color:#fff !important;
+  background-color:#0a4f78 !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;
+  border:1px solid rgba(160,225,255,.55) !important;
+  border-radius:999px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28) !important;
+  min-height:44px;
+  text-decoration:none;
+  font-weight:750;
+}
+.gr-sheet{margin-top:.4rem}
+.gr-sheet-head{
+  margin:0 0 1rem;
+  padding:.9rem 1.1rem;
+  border-radius:18px;
+  color:#fff;
+  background-color:#0a4f78;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));
+}
+.gr-sheet-head h2,.gr-sheet-head p{color:#fff;margin:0}
+.gr-sheet-head h2{font-size:clamp(1.45rem,2.4vw,1.9rem);line-height:1.2;margin:.15rem 0 .35rem}
+.gr-kicker{font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.gr-block{margin:0 0 .9rem}
+.gr-block h3{margin:0 0 .3rem;font-size:1.05rem}
+.gr-block ul,.gr-block ol{margin:.2rem 0 0;padding-inline-start:1.2rem}
+.gr-block li{margin:.25rem 0}
+.gr-url{margin:.35rem 0 0}
+.gr-url a{overflow-wrap:anywhere}
+.gr-sheet-foot{margin-top:1rem;padding-top:.7rem;border-top:1px solid rgba(255,255,255,.22);color:#d6e4f0;font-size:.92rem}
+@page{size:auto;margin:0.7in}
 @media print{
-  #topnav,footer,.sticky-help,.gr-banner,.page-hero,.gr-legal,.sp-lb,.related-solutions,.next-solutions,.help-actions,.teacher-box,.cite-box,.share-bar,.fv2-cols,.fv2-bar{display:none !important}
-  body:not(.gr-plan-print) .gr-builder{display:none !important}
-  body.gr-plan-print .gr-sheet{display:none !important}
-  body.gr-plan-print .gr-form{display:none !important}
-  .gr-card{border:1px solid #333;background:#fff;color:#10202c}
-  .gr-wrap p,.gr-wrap li,.gr-wrap h2,.gr-wrap h3,.gr-src{color:#10202c}
+  html,body{background:#fff !important;color:#14202b !important}
+  /* batchb.css hides every body child except the hero. Put the plan back. */
+  html body.globe-review.toc-sub > main#main:not(#solution){display:block !important;background:#fff !important;color:#14202b !important;margin:0 !important;padding:0 !important;max-width:none !important}
+  #topnav,.skip-link,body>footer,.gr-banner,.page-hero,.photo-credit,.breadcrumb,.page-reviewed,.eli10,#saves,
+  .gr-form,.gr-actions,#build-h,.gr-build-lead,.related-solutions,.next-solutions,.help-actions,.help-cta,
+  .donate-banner,.teacher-box,.cite-box,.share-bar,.sticky-help,.sp-lb,.fv2-cols,.fv2-bar,.fv2-old,.spow-b,.spow-p,nav{display:none !important}
+  #plan{display:block !important;max-width:none !important;margin:0 !important;padding:0 !important;background:transparent !important}
+  .lb-form,.lb-actions,.gr-actions,#build-h,.edu-lead{display:none !important}
+  .lb-plan{border:0 !important;padding:0 !important;background:#fff !important;color:#000 !important;box-shadow:none !important}
+  .lb-plan h2,.lb-plan h3,.lb-plan p,.lb-plan li{color:#000 !important;background:transparent !important}
+  .lb-plan h3{break-after:avoid;page-break-after:avoid}
+  .lb-plan h3,.lb-plan li,.lb-plan p{break-inside:avoid;page-break-inside:avoid}
+  .lb-plan a{color:#000 !important}
+  .lb-plan a[href^="http"]::after{content:" (" attr(href) ")";font-size:.8em;word-break:break-all}
 }

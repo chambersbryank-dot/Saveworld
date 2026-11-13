@@ -107,8 +107,8 @@
   ];
 
   var dataEl = document.getElementById('gr-i18n');
-  var form = document.getElementById('gr-form');
-  var out = document.getElementById('gr-plan');
+  var form = document.getElementById('lb');
+  var out = document.getElementById('lb-plan');
   if (!dataEl || !form || !out) return;
   var t = JSON.parse(dataEl.textContent);
   var band = form.querySelector('[name=band]');
@@ -136,40 +136,43 @@
     var q = new URLSearchParams();
     q.set('band', band.value); q.set('topic', topic.value); q.set('len', length.value);
     history.replaceState(null, '', location.pathname + '?' + q.toString());
+    var share = document.getElementById('gr-classroom');
+    if (share) share.href = 'https://classroom.google.com/share?url=' + encodeURIComponent(location.href);
   }
   function find(id) { for (var i = 0; i < TOPICS.length; i++) if (TOPICS[i].id === id) return TOPICS[i]; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function link(href, label) { return '<a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '</a>'; }
   function fill(s, name) { return s.replace(/\{name\}/g, name).replace(/\{band\}/g, t.bands[band.value]).replace(/\{length\}/g, t.lengths[length.value]); }
 
+  function filmHref(f) { return f.yt ? ('https://www.youtube.com/watch?v=' + f.yt) : f.file; }
+  function filmFor(list, n) { return list[n] || list[0] || null; }
+  function videoBlock(title, text, film) {
+    var href = film ? filmHref(film) : VIDEOS;
+    var label = film ? (film.title + ' — ' + film.by) : href;
+    return '<h3>' + esc(title) + '</h3><p>' + text + '</p><p class="lb-small"><a dir="ltr" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '</a></p>';
+  }
   function render() {
     writeUrl();
     var tp = find(topic.value);
     var name = t.topics[tp.id];
     var films = tp.films.filter(function (f) { return f.grades.indexOf(band.value) >= 0; });
-    var media = films.map(function (f) {
-      var cap = esc(f.title) + ' — ' + esc(f.by);
-      if (f.yt) {
-        return '<figure class="gr-video"><iframe src="https://www.youtube-nocookie.com/embed/' + f.yt + '" title="' + esc(f.title) + '" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><figcaption>' + cap + '</figcaption></figure>';
-      }
-      return '<p>' + link(f.file, f.title) + ' — ' + esc(f.by) + '. ' + t.wmvNote + '</p>';
-    }).join('');
     var docs = '<ul><li>' + link(tp.page, t.openProtocol) + '</li>';
     tp.docs.forEach(function (d) { docs += '<li>' + link(d[0], d[1]) + '</li>'; });
-    docs += '<li>' + link(tp.train, t.openTrain) + '</li><li>' + link(VIDEOS, t.openVideos) + '</li><li>' + link(CHANNEL, 'YouTube: globeprogram') + '</li>';
+    docs += '<li>' + link(tp.train, t.openTrain) + '</li>';
     if ((band.value === 'k2' || band.value === 'g35') && tp.elem) docs += '<li>' + link(tp.elem, t.openElem) + '</li>';
     docs += '<li>' + link(APP, 'GLOBE Observer') + '</li></ul>';
-    var ngss = tp.id === 'clouds' ? t.ngssClouds : t.ngssGeneric;
+    var ngss = (tp.id === 'clouds' ? t.ngssClouds : t.ngssGeneric) + ' ' + NGSS;
     out.innerHTML =
-      '<h2>' + esc(t.planH) + '</h2>' +
-      '<p class="gr-note">' + fill(t.planMeta, name) + '</p>' +
+      '<h2>' + esc(name) + '</h2>' +
+      '<p class="lb-meta">' + esc(t.bands[band.value] + ' · ' + t.lengths[length.value]) + '</p>' +
       '<h3>' + esc(t.objH) + '</h3><p>' + fill(t.obj, name) + '</p>' +
       '<h3>' + esc(t.matH) + '</h3>' + docs +
       '<h3>' + esc(t.stepsH) + '</h3><ol><li>' + fill(t.steps, name).split('|').join('</li><li>') + '</li></ol>' +
-      (media ? '<h3>' + esc(t.vidH) + '</h3>' + media : '<p>' + t.noFilm + ' ' + link(VIDEOS, t.openVideos) + '.</p>') +
-      '<h3>' + esc(t.dataH) + '</h3><p>' + fill(t.data, name) + '</p>' +
-      '<h3>' + esc(t.qH) + '</h3><ol><li>' + t.questions.map(function (q) { return fill(q, name); }).join('</li><li>') + '</li></ol>' +
-      '<h3>' + esc(t.ngssH) + '</h3><p>' + ngss + ' ' + link(NGSS, t.ngssName) + '.</p>';
+      videoBlock(t.vidH, fill(t.filmLead, name), filmFor(films, 0)) +
+      videoBlock(t.dataLab, fill(t.dataLead, name), filmFor(films, 1)) +
+      videoBlock(t.qLab, fill(t.talkLead, name), filmFor(films, 2)) +
+      '<h3>' + esc(t.ngssH) + '</h3><p>' + esc(ngss) + '</p>' +
+      '<p class="lb-small">' + esc(t.cite) + '</p><p class="lb-small">' + esc(t.credit) + '</p>';
   }
 
   var start = params();
@@ -183,13 +186,13 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done);
     else done();
   }
-  document.getElementById('gr-copy').addEventListener('click', function (e) { copyText(e.currentTarget, location.href); });
-  document.getElementById('gr-copy-plan').addEventListener('click', function (e) { copyText(e.currentTarget, out.innerText.trim()); });
-  document.getElementById('gr-print-plan').addEventListener('click', function () {
+  document.getElementById('gr-copy').addEventListener('click', function (e) {
+    writeUrl();
+    copyText(e.currentTarget, location.href);
+  });
+  document.getElementById('lb-print').addEventListener('click', function () {
     render();
-    document.body.classList.add('gr-plan-print');
     window.print();
-    document.body.classList.remove('gr-plan-print');
   });
   render();
   if (doPrint) setTimeout(function () { window.print(); }, 400);
