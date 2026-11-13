@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261112tt'
+V = '20261113w'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -59,7 +59,7 @@ UI = {
    list='Mission list', diagram='Earth with orbit rings', farDiagram='Lagrange points and missions beyond Earth',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='Sun–Earth L1', l2='Sun–Earth L2', l5='Sun–Earth L5', cruise='On the way',
    title='Earth-protecting satellites',
-   lead='Each icon sits on the kind of orbit its mission uses. Low Earth orbit is the inner ring, then medium, geostationary, and a long ellipse for highly elliptical orbits. Distances are not to scale, so every ring stays visible. Nothing here is a live position.',
+   lead='Each icon sits on the kind of orbit its mission uses. Low Earth orbit is the inner ring, then medium, geostationary, and a long ellipse for highly elliptical orbits. Every ring stays visible. Nothing here is a live position.',
    scale='The ring order follows NASA Earth Observatory’s Catalog of Earth Satellite Orbits and the Earth-centered style of NASA Eyes on the Earth. Imagery: NASA Visible Earth / Blue Marble Next Generation. Created by the Founder and SI.',
    helpsPage='The sentence above is the mission page on this site. We do not add a broader claim than that page.'),
  'fr': dict(all='Tout', weather='Météo et climat', land='Terres', ocean='Océans', ice='Glace et pôles', fire='Feux de forêt', defense='Défense planétaire', science='Science et découverte', lagrange='Points de Lagrange', beyond='Au-delà de la Terre',
@@ -71,7 +71,7 @@ UI = {
    list='Liste des missions', diagram='La Terre et les anneaux d’orbite', farDiagram='Points de Lagrange et missions au-delà de la Terre',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Soleil–Terre', l2='L2 Soleil–Terre', l5='L5 Soleil–Terre', cruise='En route',
    title='Satellites qui protègent la Terre',
-   lead='Chaque icône est placée sur le type d’orbite de sa mission. L’orbite basse est l’anneau intérieur, puis l’orbite moyenne, l’orbite géostationnaire, et une ellipse longue pour les orbites très elliptiques. Les distances ne sont pas à l’échelle. Rien ici n’est une position en direct.',
+   lead='Chaque icône est placée sur le type d’orbite de sa mission. L’orbite basse est l’anneau intérieur, puis l’orbite moyenne, l’orbite géostationnaire, et une ellipse longue pour les orbites très elliptiques. Chaque anneau reste visible. Rien ici n’est une position en direct.',
    scale='L’ordre des anneaux suit le catalogue des orbites terrestres du NASA Earth Observatory et le style centré sur la Terre de NASA Eyes on the Earth. Image : NASA Visible Earth / Blue Marble Next Generation. Créé par le fondateur et SI.',
    helpsPage='La phrase ci-dessus vient de la page de la mission sur ce site. Nous n’ajoutons pas d’autre affirmation.'),
  'es': dict(all='Todo', weather='Tiempo y clima', land='Tierra', ocean='Océanos', ice='Hielo y polos', fire='Incendios', defense='Defensa planetaria', science='Ciencia y descubrimiento', lagrange='Puntos de Lagrange', beyond='Más allá de la Tierra',
@@ -83,7 +83,7 @@ UI = {
    list='Lista de misiones', diagram='La Tierra con anillos orbitales', farDiagram='Puntos de Lagrange y misiones más allá de la Tierra',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Sol–Tierra', l2='L2 Sol–Tierra', l5='L5 Sol–Tierra', cruise='De camino',
    title='Satélites que protegen la Tierra',
-   lead='Cada icono está en el tipo de órbita de su misión. La órbita baja es el anillo interior, luego la media, la geoestacionaria y una elipse larga para las órbitas muy elípticas. Las distancias no están a escala. Nada aquí es una posición en vivo.',
+   lead='Cada icono está en el tipo de órbita de su misión. La órbita baja es el anillo interior, luego la media, la geoestacionaria y una elipse larga para las órbitas muy elípticas. Cada anillo sigue visible. Nada aquí es una posición en vivo.',
    scale='El orden de los anillos sigue el catálogo de órbitas terrestres del NASA Earth Observatory y el estilo centrado en la Tierra de NASA Eyes on the Earth. Imagen: NASA Visible Earth / Blue Marble Next Generation. Creado por el fundador y SI.',
    helpsPage='La frase de arriba es la página de la misión en este sitio. No añadimos una afirmación más amplia.'),
  'ar': dict(all='الكل', weather='الطقس والمناخ', land='اليابسة', ocean='المحيطات', ice='الجليد والقطبان', fire='حرائق الغابات', defense='الدفاع الكوكبي', science='العلم والاكتشاف', lagrange='نقاط لاغرانج', beyond='ما بعد الأرض',
@@ -95,7 +95,7 @@ UI = {
    list='قائمة المهام', diagram='الأرض مع حلقات المدارات', farDiagram='نقاط لاغرانج والمهام الأبعد من الأرض',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 الشمس–الأرض', l2='L2 الشمس–الأرض', l5='L5 الشمس–الأرض', cruise='في الطريق',
    title='أقمار تحمي الأرض',
-   lead='كل أيقونة على نوع المدار الذي تستخدمه مهمتها. المدار الأرضي المنخفض هو الحلقة الداخلية، ثم المتوسط، ثم الثابت جغرافيًا، ثم قطع طويل للمدارات شديدة الإهليلجية. المسافات ليست بمقياس حقيقي. لا شيء هنا موقع مباشر.',
+   lead='كل أيقونة على نوع المدار الذي تستخدمه مهمتها. المدار الأرضي المنخفض هو الحلقة الداخلية، ثم المتوسط، ثم الثابت جغرافيًا، ثم قطع طويل للمدارات شديدة الإهليلجية. تبقى كل حلقة ظاهرة. لا شيء هنا موقع مباشر.',
    scale='ترتيب الحلقات يتبع فهرس مدارات الأرض لدى NASA Earth Observatory وأسلوب ناسا Eyes on the Earth المتمركز على الأرض. الصورة: NASA Visible Earth / Blue Marble Next Generation. من إعداد المؤسس وSI.',
    helpsPage='الجملة أعلاه من صفحة المهمة على هذا الموقع. لا نضيف ادعاءً أوسع من الصفحة.'),
  'it': dict(all='Tutte', weather='Meteo e clima', land='Terra', ocean='Oceani', ice='Ghiaccio e poli', fire='Incendi', defense='Difesa planetaria', science='Scienza e scoperta', lagrange='Punti di Lagrange', beyond='Oltre la Terra',
@@ -107,7 +107,7 @@ UI = {
    list='Elenco delle missioni', diagram='La Terra con gli anelli orbitali', farDiagram='Punti di Lagrange e missioni oltre la Terra',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Sole–Terra', l2='L2 Sole–Terra', l5='L5 Sole–Terra', cruise='In viaggio',
    title='Satelliti che proteggono la Terra',
-   lead='Ogni icona sta sul tipo di orbita della missione. L’orbita bassa è l’anello interno, poi la media, la geostazionaria e un’ellisse lunga per le orbite molto ellittiche. Le distanze non sono in scala. Nulla qui è una posizione dal vivo.',
+   lead='Ogni icona sta sul tipo di orbita della missione. L’orbita bassa è l’anello interno, poi la media, la geostazionaria e un’ellisse lunga per le orbite molto ellittiche. Ogni anello resta visibile. Nulla qui è una posizione dal vivo.',
    scale='L’ordine degli anelli segue il catalogo delle orbite terrestri del NASA Earth Observatory e lo stile centrato sulla Terra di NASA Eyes on the Earth. Immagine: NASA Visible Earth / Blue Marble Next Generation. Creato dal fondatore e da SI.',
    helpsPage='La frase sopra viene dalla pagina della missione su questo sito. Non aggiungiamo un’affermazione più ampia.'),
  'he': dict(all='הכל', weather='מזג אוויר ואקלים', land='יבשה', ocean='אוקיינוסים', ice='קרח וקטבים', fire='שריפות יער', defense='הגנה פלנטרית', science='מדע וגילוי', lagrange='נקודות לגראנז׳', beyond='מעבר לכדור הארץ',
@@ -119,7 +119,7 @@ UI = {
    list='רשימת משימות', diagram='כדור הארץ עם טבעות מסלול', farDiagram='נקודות לגראנז׳ ומשימות מעבר לכדור הארץ',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 שמש–ארץ', l2='L2 שמש–ארץ', l5='L5 שמש–ארץ', cruise='בדרך',
    title='לוויינים שמגנים על כדור הארץ',
-   lead='כל סמל יושב על סוג המסלול של המשימה. מסלול נמוך הוא הטבעת הפנימית, אחר כך בינוני, גיאוסטציונרי, ואליפסה ארוכה למסלולים אליפטיים מאוד. המרחקים אינם בקנה מידה. שום דבר כאן אינו מיקום חי.',
+   lead='כל סמל יושב על סוג המסלול של המשימה. מסלול נמוך הוא הטבעת הפנימית, אחר כך בינוני, גיאוסטציונרי, ואליפסה ארוכה למסלולים אליפטיים מאוד. כל טבעת נשארת גלויה. שום דבר כאן אינו מיקום חי.',
    scale='סדר הטבעות עוקב אחרי קטלוג המסלולים של NASA Earth Observatory וסגנון NASA Eyes on the Earth שבמרכזו כדור הארץ. תמונה: NASA Visible Earth / Blue Marble Next Generation. נוצר על ידי המייסד ו-SI.',
    helpsPage='המשפט למעלה הוא מדף המשימה באתר הזה. איננו מוסיפים טענה רחבה יותר.'),
 }
@@ -206,79 +206,79 @@ EXPLAIN = {
    explainTitle='What is a Lagrange point?',
    explain1='A Lagrange point is a place where the gravity of the Sun and the Earth lines up with the motion of an orbit, so a spacecraft can keep pace with Earth. NASA says the pull of the two large masses equals the centripetal force a small object needs to move with them. There are five. L1, L2, and L3 sit on the Sun–Earth line and are unstable. L4 leads Earth and L5 follows, at the tips of equilateral triangles, and those two are stable.',
    explain2='L1 and L2 are each about 1.5 million kilometers from Earth. NASA’s Webb orbit page rounds that to 1 million miles, which is about 930,000 miles if you convert 1.5 million kilometers directly. L1 faces the Sun, so SOHO and DSCOVR get a steady view of it. L2 is on the night side, a cold and steady spot for telescopes such as Webb, Euclid, and Roman. A spacecraft does not sit on the point. It loops around the point in a halo or Lissajous orbit.',
-   explain3='Webb’s trip started with launch on an Ariane 5 on 25 December 2021. NASA says that launch put Webb on a transfer path of about 30 days. Three mid-course correction burns refined the path, and the last one, on 24 January 2022, pointed Webb into its halo orbit. Because L1, L2, and L3 are unstable, Webb fires small station-keeping burns, on average about every 42 days, or it would drift away. L4 and L5 do not need that kind of care. L3 stays hidden behind the Sun, about 1 AU from the Sun and about 2 AU from Earth. L4 and L5 are about 1 AU from Earth, 60 degrees ahead and behind. This drawing is not to scale. NASA’s Moon fact sheet lists a mean distance of 384,400 km (238,855 miles).',
+   explain3='Webb’s trip started with launch on an Ariane 5 on 25 December 2021. NASA says that launch put Webb on a transfer path of about 30 days. Three mid-course correction burns refined the path, and the last one, on 24 January 2022, pointed Webb into its halo orbit. Because L1, L2, and L3 are unstable, Webb fires small station-keeping burns, on average about every 42 days, or it would drift away. L4 and L5 do not need that kind of care. L3 stays hidden behind the Sun, about 1 AU from the Sun and about 2 AU from Earth. L4 and L5 are about 1 AU from Earth, 60 degrees ahead and behind. NASA’s Moon fact sheet lists a mean distance of 384,400 km (238,855 miles).',
    sources='Sources:',
    dL12='about 1.5 million km · about 1 million miles',
    dL3='about 2 AU from Earth · far side of the Sun',
    dL4='about 1 AU · 60° ahead',
    dL5='about 1 AU · 60° behind',
    l3='L3', l4='L4',
-   sunNote='Sun, not to scale', moonNote='Moon, not to scale', notScale='Not to scale',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='Click here to view the satellite in orbit protecting our planet'),
  'fr': dict(
    explainTitle='Qu’est-ce qu’un point de Lagrange ?',
    explain1='Un point de Lagrange est un endroit où la gravité du Soleil et de la Terre s’accorde avec le mouvement d’une orbite, pour qu’un engin spatial reste au rythme de la Terre. La NASA dit que l’attraction des deux grandes masses égale la force centripète dont un petit objet a besoin pour se déplacer avec elles. Il y en a cinq. L1, L2 et L3 sont sur la ligne Soleil–Terre et sont instables. L4 précède la Terre et L5 la suit, aux sommets de triangles équilatéraux, et ces deux-là sont stables.',
    explain2='L1 et L2 sont chacun à environ 1,5 million de kilomètres de la Terre. La page d’orbite de Webb de la NASA arrondit cela à 1 million de miles, soit environ 930 000 miles si l’on convertit directement 1,5 million de kilomètres. L1 fait face au Soleil : SOHO et DSCOVR y ont une vue stable. L2 est du côté nuit, un endroit froid et stable pour des télescopes comme Webb, Euclid et Roman. Un engin ne se pose pas sur le point. Il tourne autour, sur une orbite halo ou de Lissajous.',
-   explain3='Le voyage de Webb a commencé par un lancement Ariane 5 le 25 décembre 2021. La NASA dit que cette fusée l’a placé sur un trajet d’environ 30 jours. Trois corrections de trajectoire ont affiné le chemin, et la dernière, le 24 janvier 2022, a dirigé Webb vers son orbite halo. Comme L1, L2 et L3 sont instables, Webb allume de petites poussées de maintien, en moyenne environ tous les 42 jours, sinon il dériverait. L4 et L5 n’ont pas besoin de ce soin. L3 reste caché derrière le Soleil, à environ 1 UA du Soleil et environ 2 UA de la Terre. L4 et L5 sont à environ 1 UA de la Terre, 60 degrés devant et derrière. Ce dessin n’est pas à l’échelle. La fiche de la Lune de la NASA indique une distance moyenne de 384 400 km (238 855 miles).',
+   explain3='Le voyage de Webb a commencé par un lancement Ariane 5 le 25 décembre 2021. La NASA dit que cette fusée l’a placé sur un trajet d’environ 30 jours. Trois corrections de trajectoire ont affiné le chemin, et la dernière, le 24 janvier 2022, a dirigé Webb vers son orbite halo. Comme L1, L2 et L3 sont instables, Webb allume de petites poussées de maintien, en moyenne environ tous les 42 jours, sinon il dériverait. L4 et L5 n’ont pas besoin de ce soin. L3 reste caché derrière le Soleil, à environ 1 UA du Soleil et environ 2 UA de la Terre. L4 et L5 sont à environ 1 UA de la Terre, 60 degrés devant et derrière. La fiche de la Lune de la NASA indique une distance moyenne de 384 400 km (238 855 miles).',
    sources='Sources :',
    dL12='environ 1,5 million de km · environ 1 million de miles',
    dL3='environ 2 UA de la Terre · de l’autre côté du Soleil',
    dL4='environ 1 UA · 60° devant',
    dL5='environ 1 UA · 60° derrière',
    l3='L3', l4='L4',
-   sunNote='Soleil, pas à l’échelle', moonNote='Lune, pas à l’échelle', notScale='Pas à l’échelle',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='Cliquez ici pour voir le satellite en orbite qui protège notre planète'),
  'es': dict(
    explainTitle='¿Qué es un punto de Lagrange?',
    explain1='Un punto de Lagrange es un lugar donde la gravedad del Sol y de la Tierra encaja con el movimiento de una órbita, de modo que una nave puede seguir el ritmo de la Tierra. La NASA dice que la atracción de las dos masas grandes es igual a la fuerza centrípeta que un objeto pequeño necesita para moverse con ellas. Hay cinco. L1, L2 y L3 están en la línea Sol–Tierra y son inestables. L4 va por delante de la Tierra y L5 por detrás, en las puntas de triángulos equiláteros, y esos dos son estables.',
    explain2='L1 y L2 están cada uno a unos 1,5 millones de kilómetros de la Tierra. La página de la órbita de Webb de la NASA redondea eso a 1 millón de millas, unas 930.000 millas si conviertes 1,5 millones de kilómetros directamente. L1 mira al Sol, así que SOHO y DSCOVR tienen una vista estable. L2 está en el lado de noche, un lugar frío y estable para telescopios como Webb, Euclid y Roman. Una nave no se queda sobre el punto. Gira alrededor en una órbita de halo o de Lissajous.',
-   explain3='El viaje de Webb empezó con el lanzamiento en un Ariane 5 el 25 de diciembre de 2021. La NASA dice que ese cohete lo puso en un camino de transferencia de unos 30 días. Tres encendidos de corrección afinaron la ruta, y el último, el 24 de enero de 2022, dirigió a Webb a su órbita de halo. Como L1, L2 y L3 son inestables, Webb enciende pequeños empujes de mantenimiento, en promedio cada unos 42 días, o se alejaría. L4 y L5 no necesitan ese cuidado. L3 permanece oculto detrás del Sol, a cerca de 1 UA del Sol y unas 2 UA de la Tierra. L4 y L5 están a cerca de 1 UA de la Tierra, 60 grados por delante y por detrás. Este dibujo no está a escala. La ficha de la Luna de la NASA da una distancia media de 384.400 km (238.855 millas).',
+   explain3='El viaje de Webb empezó con el lanzamiento en un Ariane 5 el 25 de diciembre de 2021. La NASA dice que ese cohete lo puso en un camino de transferencia de unos 30 días. Tres encendidos de corrección afinaron la ruta, y el último, el 24 de enero de 2022, dirigió a Webb a su órbita de halo. Como L1, L2 y L3 son inestables, Webb enciende pequeños empujes de mantenimiento, en promedio cada unos 42 días, o se alejaría. L4 y L5 no necesitan ese cuidado. L3 permanece oculto detrás del Sol, a cerca de 1 UA del Sol y unas 2 UA de la Tierra. L4 y L5 están a cerca de 1 UA de la Tierra, 60 grados por delante y por detrás. La ficha de la Luna de la NASA da una distancia media de 384.400 km (238.855 millas).',
    sources='Fuentes:',
    dL12='unos 1,5 millones de km · cerca de 1 millón de millas',
    dL3='unas 2 UA de la Tierra · al otro lado del Sol',
    dL4='cerca de 1 UA · 60° por delante',
    dL5='cerca de 1 UA · 60° por detrás',
    l3='L3', l4='L4',
-   sunNote='Sol, no a escala', moonNote='Luna, no a escala', notScale='No a escala',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='Haga clic aquí para ver el satélite en órbita protegiendo nuestro planeta'),
  'ar': dict(
    explainTitle='ما هي نقطة لاغرانج؟',
    explain1='نقطة لاغرانج مكان تتوافق فيه جاذبية الشمس والأرض مع حركة المدار، فيستطيع مركبة أن تواكب الأرض. تقول ناسا إن جذب الكتلتين الكبيرتين يساوي القوة المركزية التي يحتاجها جسم صغير ليتحرك معهما. هناك خمس نقاط. تقع L1 وL2 وL3 على خط الشمس–الأرض وهي غير مستقرة. تتقدم L4 الأرض وتتبعها L5، عند رؤوس مثلثين متساويي الأضلاع، وهاتان النقطتان مستقرتان.',
    explain2='تبعد كل من L1 وL2 نحو 1.5 مليون كيلومتر عن الأرض. تقرب صفحة مدار ويب لدى ناسا ذلك إلى مليون ميل، أي نحو 930 ألف ميل إذا حوّلت 1.5 مليون كيلومتر مباشرة. تواجه L1 الشمس، فتحصل SOHO وDSCOVR على رؤية ثابتة لها. تقع L2 في جهة الليل، مكان بارد وثابت لتلسكوبات مثل ويب وإقليدس ورومان. لا تقف المركبة على النقطة. إنها تدور حولها في مدار هالة أو مدار ليساجو.',
-   explain3='بدأت رحلة ويب بإطلاق أريان 5 في 25 ديسمبر 2021. تقول ناسا إن الصاروخ وضعه على مسار انتقال لنحو 30 يومًا. عدّلت ثلاث حرقات تصحيح المسار الطريق، ووجّهته الأخيرة في 24 يناير 2022 إلى مدار الهالة. ولأن L1 وL2 وL3 غير مستقرة، يشعل ويب حرقات صغيرة للإبقاء على المدار، في المتوسط كل 42 يومًا تقريبًا، وإلا انجرف بعيدًا. لا تحتاج L4 وL5 إلى هذه العناية. تبقى L3 مخفية خلف الشمس، على بعد نحو 1 وحدة فلكية من الشمس ونحو 2 وحدة فلكية من الأرض. تقع L4 وL5 على بعد نحو 1 وحدة فلكية من الأرض، بزاوية 60 درجة أمامها وخلفها. هذا الرسم ليس بمقياس حقيقي. تذكر ورقة ناسا عن القمر مسافة متوسطة قدرها 384,400 كم (238,855 ميلًا).',
+   explain3='بدأت رحلة ويب بإطلاق أريان 5 في 25 ديسمبر 2021. تقول ناسا إن الصاروخ وضعه على مسار انتقال لنحو 30 يومًا. عدّلت ثلاث حرقات تصحيح المسار الطريق، ووجّهته الأخيرة في 24 يناير 2022 إلى مدار الهالة. ولأن L1 وL2 وL3 غير مستقرة، يشعل ويب حرقات صغيرة للإبقاء على المدار، في المتوسط كل 42 يومًا تقريبًا، وإلا انجرف بعيدًا. لا تحتاج L4 وL5 إلى هذه العناية. تبقى L3 مخفية خلف الشمس، على بعد نحو 1 وحدة فلكية من الشمس ونحو 2 وحدة فلكية من الأرض. تقع L4 وL5 على بعد نحو 1 وحدة فلكية من الأرض، بزاوية 60 درجة أمامها وخلفها. تذكر ورقة ناسا عن القمر مسافة متوسطة قدرها 384,400 كم (238,855 ميلًا).',
    sources='المصادر:',
    dL12='نحو 1.5 مليون كم · نحو مليون ميل',
    dL3='نحو 2 وحدة فلكية من الأرض · خلف الشمس',
    dL4='نحو 1 وحدة فلكية · 60° أمام الأرض',
    dL5='نحو 1 وحدة فلكية · 60° خلف الأرض',
    l3='L3', l4='L4',
-   sunNote='الشمس، ليست بمقياس', moonNote='القمر، ليس بمقياس', notScale='ليس بمقياس حقيقي',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='انقر هنا لرؤية القمر الصناعي في مداره وهو يحمي كوكبنا'),
  'it': dict(
    explainTitle='Che cos’è un punto di Lagrange?',
    explain1='Un punto di Lagrange è un luogo in cui la gravità del Sole e della Terra si accorda con il moto di un’orbita, così una sonda può tenere il passo della Terra. La NASA dice che l’attrazione delle due grandi masse è uguale alla forza centripeta di cui un oggetto piccolo ha bisogno per muoversi con loro. Ce ne sono cinque. L1, L2 e L3 stanno sulla linea Sole–Terra e sono instabili. L4 precede la Terra e L5 la segue, ai vertici di triangoli equilateri, e quei due sono stabili.',
    explain2='L1 e L2 distano ciascuno circa 1,5 milioni di chilometri dalla Terra. La pagina dell’orbita di Webb della NASA arrotonda a 1 milione di miglia, circa 930.000 miglia se converti direttamente 1,5 milioni di chilometri. L1 guarda il Sole, quindi SOHO e DSCOVR ne hanno una vista stabile. L2 è sul lato notte, un posto freddo e stabile per telescopi come Webb, Euclid e Roman. Una sonda non sta sul punto. Gira intorno al punto in un’orbita halo o di Lissajous.',
-   explain3='Il viaggio di Webb è iniziato con il lancio su un Ariane 5 il 25 dicembre 2021. La NASA dice che quel razzo lo ha messo su un trasferimento di circa 30 giorni. Tre accensioni di correzione hanno affinato la rotta, e l’ultima, il 24 gennaio 2022, ha indirizzato Webb nella sua orbita halo. Poiché L1, L2 e L3 sono instabili, Webb accende piccole spinte di mantenimento, in media circa ogni 42 giorni, altrimenti si allontanerebbe. L4 e L5 non hanno bisogno di quella cura. L3 resta nascosto dietro il Sole, a circa 1 UA dal Sole e circa 2 UA dalla Terra. L4 e L5 sono a circa 1 UA dalla Terra, 60 gradi davanti e dietro. Questo disegno non è in scala. La scheda della Luna della NASA indica una distanza media di 384.400 km (238.855 miglia).',
+   explain3='Il viaggio di Webb è iniziato con il lancio su un Ariane 5 il 25 dicembre 2021. La NASA dice che quel razzo lo ha messo su un trasferimento di circa 30 giorni. Tre accensioni di correzione hanno affinato la rotta, e l’ultima, il 24 gennaio 2022, ha indirizzato Webb nella sua orbita halo. Poiché L1, L2 e L3 sono instabili, Webb accende piccole spinte di mantenimento, in media circa ogni 42 giorni, altrimenti si allontanerebbe. L4 e L5 non hanno bisogno di quella cura. L3 resta nascosto dietro il Sole, a circa 1 UA dal Sole e circa 2 UA dalla Terra. L4 e L5 sono a circa 1 UA dalla Terra, 60 gradi davanti e dietro. La scheda della Luna della NASA indica una distanza media di 384.400 km (238.855 miglia).',
    sources='Fonti:',
    dL12='circa 1,5 milioni di km · circa 1 milione di miglia',
    dL3='circa 2 UA dalla Terra · oltre il Sole',
    dL4='circa 1 UA · 60° davanti',
    dL5='circa 1 UA · 60° dietro',
    l3='L3', l4='L4',
-   sunNote='Sole, non in scala', moonNote='Luna, non in scala', notScale='Non in scala',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='Fai clic qui per vedere il satellite in orbita che protegge il nostro pianeta'),
  'he': dict(
    explainTitle='מהי נקודת לגראנז׳?',
    explain1='נקודת לגראנז׳ היא מקום שבו כוח המשיכה של השמש ושל כדור הארץ מתיישר עם תנועת המסלול, כך שחללית יכולה להישאר בקצב של כדור הארץ. נאס״א אומרת שמשיכת שתי המסות הגדולות שווה לכוח המרכזי שגוף קטן צריך כדי לנוע איתן. יש חמש. L1‏, L2 ו-L3 יושבות על קו השמש–ארץ ואינן יציבות. L4 מובילה את כדור הארץ ו-L5 באה אחריו, בקודקודים של משולשים שווי צלעות, ושתיהן יציבות.',
    explain2='L1 ו-L2 נמצאות כל אחת במרחק של כ-1.5 מיליון קילומטרים מכדור הארץ. עמוד המסלול של וב בנאס״א מעגל זאת למיליון מייל, בערך 930 אלף מייל אם ממירים 1.5 מיליון קילומטרים ישירות. L1 פונה אל השמש, ולכן SOHO ו-DSCOVR רואות אותה באופן יציב. L2 בצד הלילה, מקום קר ויציב לטלסקופים כמו וב, אוקלידס ורומן. חללית לא יושבת על הנקודה. היא מקיפה את הנקודה במסלול הילה או ליסאז׳ו.',
-   explain3='המסע של וב התחיל בשיגור על אריאן 5 ב-25 בדצמבר 2021. נאס״א אומרת שהשיגור שם את וב על מסלול מעבר של כ-30 יום. שלוש הצתות תיקון באמצע הדרך דייקו את המסלול, והאחרונה, ב-24 בינואר 2022, כיוונה את וב למסלול ההילה. מכיוון ש-L1‏, L2 ו-L3 אינן יציבות, וב מצית הדלקות קטנות לשמירת מסלול, בממוצע בערך כל 42 יום, אחרת הוא יסחף. L4 ו-L5 לא זקוקות לטיפול כזה. L3 נשארת מוסתרת מאחורי השמש, בערך 1 יחידה אסטרונומית מהשמש וכ-2 יחידות אסטרונומיות מכדור הארץ. L4 ו-L5 במרחק של כ-1 יחידה אסטרונומית מכדור הארץ, 60 מעלות לפניו ואחריו. הציור הזה אינו בקנה מידה. דף העובדות של נאס״א על הירח מציין מרחק ממוצע של 384,400 ק״מ (238,855 מייל).',
+   explain3='המסע של וב התחיל בשיגור על אריאן 5 ב-25 בדצמבר 2021. נאס״א אומרת שהשיגור שם את וב על מסלול מעבר של כ-30 יום. שלוש הצתות תיקון באמצע הדרך דייקו את המסלול, והאחרונה, ב-24 בינואר 2022, כיוונה את וב למסלול ההילה. מכיוון ש-L1‏, L2 ו-L3 אינן יציבות, וב מצית הדלקות קטנות לשמירת מסלול, בממוצע בערך כל 42 יום, אחרת הוא יסחף. L4 ו-L5 לא זקוקות לטיפול כזה. L3 נשארת מוסתרת מאחורי השמש, בערך 1 יחידה אסטרונומית מהשמש וכ-2 יחידות אסטרונומיות מכדור הארץ. L4 ו-L5 במרחק של כ-1 יחידה אסטרונומית מכדור הארץ, 60 מעלות לפניו ואחריו. דף העובדות של נאס״א על הירח מציין מרחק ממוצע של 384,400 ק״מ (238,855 מייל).',
    sources='מקורות:',
    dL12='כ-1.5 מיליון ק״מ · כמיליון מייל',
    dL3='כ-2 יח״א מכדור הארץ · מעבר לשמש',
    dL4='כ-1 יח״א · 60° לפני כדור הארץ',
    dL5='כ-1 יח״א · 60° אחרי כדור הארץ',
    l3='L3', l4='L4',
-   sunNote='שמש, לא בקנה מידה', moonNote='ירח, לא בקנה מידה', notScale='לא בקנה מידה',
+   sunNote='', moonNote='', notScale='',
    viewOrbit='לחצו כאן כדי לראות את הלוויין במסלול המגן על כוכב הלכת שלנו'),
 }
 
@@ -302,7 +302,74 @@ def h1(lang, page):
         return ''
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))).strip()
 
-LEGEND = ['all', 'weather', 'land', 'ocean', 'ice', 'fire', 'defense', 'science', 'lagrange', 'beyond']
+LEGEND = ['all', 'weather', 'land', 'ocean', 'ice', 'fire', 'defense', 'science', 'beyond']
+
+CRUISE = {
+ 'en': dict(
+   h='Heading to Neighboring Planets',
+   lead='Europa Clipper’s destination is Europa, Jupiter’s icy moon. NASA’s main science goal is to determine whether there are places below Europa’s surface that could support life. The spacecraft will orbit Jupiter and conduct dozens of close flybys of Europa.',
+   earth='Earth', craft='Europa Clipper Spacecraft', dest='Jupiter and Europa',
+   dist='As of 13 November 2026, 00:00 UTC, NASA/JPL Horizons (spacecraft −159) places Europa Clipper 21.52 million km from Earth and 806.6 million km from Jupiter. NASA’s mission page says it reaches Jupiter in April 2030. Horizons lists arrival on 11 April 2030, after a Mars gravity assist on 1 March 2025 and an Earth gravity assist on 3 December 2026. The craft is drawn 2.6% of the way from Earth toward Jupiter using those two ranges, so it sits near Earth before that gravity assist.',
+   cred='Jupiter: NASA/JPL/University of Arizona, Cassini. Europa: NASA/JPL/DLR, Galileo, natural color (PIA00502). Earth: NASA Visible Earth / Blue Marble. Spacecraft: NASA (PIA25125), Europa Clipper during assembly.',
+   more='Click here for more information'),
+ 'fr': dict(
+   h='En route vers les planètes voisines',
+   lead='La destination d’Europa Clipper est Europe, la lune glacée de Jupiter. Le but scientifique principal de la NASA est de déterminer s’il existe, sous la surface d’Europe, des endroits qui pourraient abriter la vie. L’engin orbitera Jupiter et fera des dizaines de survols proches d’Europe.',
+   earth='Terre', craft='Europa Clipper, engin spatial', dest='Jupiter et Europe',
+   dist='Au 13 novembre 2026, 00:00 UTC, NASA/JPL Horizons (engin −159) place Europa Clipper à 21,52 millions de km de la Terre et à 806,6 millions de km de Jupiter. La page de mission de la NASA dit qu’il atteint Jupiter en avril 2030. Horizons indique l’arrivée le 11 avril 2030, après une assistance de Mars le 1er mars 2025 et une assistance de la Terre le 3 décembre 2026. L’engin est dessiné à 2,6 % du chemin de la Terre vers Jupiter d’après ces deux distances, donc près de la Terre avant cette assistance.',
+   cred='Jupiter : NASA/JPL/University of Arizona, Cassini. Europe : NASA/JPL/DLR, Galileo, couleur naturelle (PIA00502). Terre : NASA Visible Earth / Blue Marble. Engin : NASA (PIA25125), Europa Clipper pendant l’assemblage.',
+   more='Cliquez ici pour en savoir plus'),
+ 'es': dict(
+   h='Rumbo a los planetas vecinos',
+   lead='El destino de Europa Clipper es Europa, la luna helada de Júpiter. El objetivo científico principal de la NASA es determinar si hay lugares bajo la superficie de Europa que podrían albergar vida. La nave orbitará Júpiter y hará decenas de sobrevuelos cercanos de Europa.',
+   earth='Tierra', craft='Europa Clipper, nave espacial', dest='Júpiter y Europa',
+   dist='A 13 de noviembre de 2026, 00:00 UTC, NASA/JPL Horizons (nave −159) sitúa a Europa Clipper a 21,52 millones de km de la Tierra y a 806,6 millones de km de Júpiter. La página de la misión de la NASA dice que llega a Júpiter en abril de 2030. Horizons fija la llegada el 11 de abril de 2030, tras una asistencia de Marte el 1 de marzo de 2025 y una asistencia de la Tierra el 3 de diciembre de 2026. La nave se dibuja al 2,6 % del camino de la Tierra a Júpiter con esas dos distancias, cerca de la Tierra antes de esa asistencia.',
+   cred='Júpiter: NASA/JPL/University of Arizona, Cassini. Europa: NASA/JPL/DLR, Galileo, color natural (PIA00502). Tierra: NASA Visible Earth / Blue Marble. Nave: NASA (PIA25125), Europa Clipper durante el montaje.',
+   more='Haga clic aquí para más información'),
+ 'ar': dict(
+   h='في الطريق إلى الكواكب المجاورة',
+   lead='وجهة يوروبا كليبر هي يوروبا، قمر المشتري الجليدي. الهدف العلمي الرئيسي لناسا هو معرفة إن كانت هناك أماكن تحت سطح يوروبا يمكن أن تدعم الحياة. ستدور المركبة حول المشتري وتجري عشرات التحليقات القريبة من يوروبا.',
+   earth='الأرض', craft='يوروبا كليبر، مركبة فضائية', dest='المشتري ويوروبا',
+   dist='في 13 نوفمبر 2026، الساعة 00:00 بالتوقيت العالمي، يضع NASA/JPL Horizons (المركبة −159) يوروبا كليبر على بعد 21.52 مليون كم من الأرض و806.6 مليون كم من المشتري. تقول صفحة المهمة لدى ناسا إنها تصل إلى المشتري في أبريل 2030. يذكر Horizons الوصول في 11 أبريل 2030، بعد مساعدة جاذبية المريخ في 1 مارس 2025 ومساعدة جاذبية الأرض في 3 ديسمبر 2026. رُسمت المركبة عند 2.6% من المسافة بين الأرض والمشتري بهاتين المسافتين، أي قرب الأرض قبل مساعدة الجاذبية.',
+   cred='المشتري: NASA/JPL/University of Arizona, Cassini. يوروبا: NASA/JPL/DLR, Galileo، لون طبيعي (PIA00502). الأرض: NASA Visible Earth / Blue Marble. المركبة: NASA (PIA25125)، يوروبا كليبر أثناء التجميع.',
+   more='انقر هنا لمزيد من المعلومات'),
+ 'it': dict(
+   h='Verso i pianeti vicini',
+   lead='La destinazione di Europa Clipper è Europa, la luna ghiacciata di Giove. L’obiettivo scientifico principale della NASA è stabilire se sotto la superficie di Europa ci siano luoghi che potrebbero sostenere la vita. Il veicolo orbiterà Giove e farà decine di sorvoli ravvicinati di Europa.',
+   earth='Terra', craft='Europa Clipper, veicolo spaziale', dest='Giove ed Europa',
+   dist='Al 13 novembre 2026, 00:00 UTC, NASA/JPL Horizons (veicolo −159) colloca Europa Clipper a 21,52 milioni di km dalla Terra e a 806,6 milioni di km da Giove. La pagina della missione NASA dice che arriva a Giove nell’aprile 2030. Horizons indica l’arrivo l’11 aprile 2030, dopo un assist di Marte il 1° marzo 2025 e un assist della Terra il 3 dicembre 2026. Il veicolo è disegnato al 2,6% del tratto dalla Terra a Giove secondo quelle due distanze, quindi vicino alla Terra prima di quell’assist.',
+   cred='Giove: NASA/JPL/University of Arizona, Cassini. Europa: NASA/JPL/DLR, Galileo, colore naturale (PIA00502). Terra: NASA Visible Earth / Blue Marble. Veicolo: NASA (PIA25125), Europa Clipper durante l’assemblaggio.',
+   more='Fai clic qui per maggiori informazioni'),
+ 'he': dict(
+   h='בדרך לכוכבי הלכת השכנים',
+   lead='היעד של אירופה קליפר הוא אירופה, הירח הקפוא של צדק. המטרה המדעית העיקרית של נאס״א היא לקבוע אם יש מקומות מתחת לפני השטח של אירופה שיכולים לתמוך בחיים. החללית תקיף את צדק ותבצע עשרות מעברים קרובים ליד אירופה.',
+   earth='כדור הארץ', craft='אירופה קליפר, חללית', dest='צדק ואירופה',
+   dist='נכון ל-13 בנובמבר 2026, 00:00 UTC, ‏NASA/JPL Horizons (חללית −159) מציב את אירופה קליפר במרחק 21.52 מיליון ק״מ מכדור הארץ ו-806.6 מיליון ק״מ מצדק. עמוד המשימה של נאס״א אומר שהיא מגיעה לצדק באפריל 2030. Horizons מציין הגעה ב-11 באפריל 2030, אחרי סיוע כבידתי של מאדים ב-1 במרץ 2025 וסיוע כבידתי של כדור הארץ ב-3 בדצמבר 2026. החללית מצוירת ב-2.6% מהדרך מכדור הארץ אל צדק לפי שני הטווחים האלה, כלומר קרוב לכדור הארץ לפני הסיוע הכבידתי.',
+   cred='צדק: NASA/JPL/University of Arizona, Cassini. אירופה: NASA/JPL/DLR, Galileo, צבע טבעי (PIA00502). כדור הארץ: NASA Visible Earth / Blue Marble. חללית: NASA (PIA25125), אירופה קליפר בזמן ההרכבה.',
+   more='לחצו כאן למידע נוסף'),
+}
+
+def cruise_panel(lang, pre):
+    c = CRUISE[lang]
+    return (
+      f'<section class="sat-cruise" id="sat-cruise" hidden aria-labelledby="sat-cruise-h">'
+      f'<h3 id="sat-cruise-h">{html.escape(c["h"])}</h3>'
+      f'<p>{html.escape(c["lead"])}</p>'
+      '<div class="sat-cruise-row">'
+      f'<figure class="sat-cruise-earth"><img src="{pre}assets/earth/blue-marble-disc-lg.webp" alt="" width="320" height="320"><figcaption>{html.escape(c["earth"])}</figcaption></figure>'
+      '<div class="sat-cruise-track" aria-hidden="true"><span class="sat-cruise-line"></span>'
+      f'<figure class="sat-cruise-craft"><img src="{pre}assets/sat/europa-800.jpg" alt="" width="800" height="442"><figcaption>{html.escape(c["craft"])}</figcaption></figure>'
+      '</div>'
+      '<figure class="sat-cruise-far">'
+      f'<img class="sat-jup" src="{pre}assets/Jupiter_Cassini_Portrait.jpg" alt="" width="960" height="1200">'
+      f'<img class="sat-eur" src="{pre}assets/earth/europa-galileo.jpg" alt="" width="1000" height="1000">'
+      f'<figcaption>{html.escape(c["dest"])}</figcaption></figure>'
+      '</div>'
+      f'<p class="sat-cruise-dist">{html.escape(c["dist"])}</p>'
+      f'<p class="sat-photo-credit">{html.escape(c["cred"])}</p>'
+      f'<p class="sat-more-row"><a class="sat-more" href="https://europa.nasa.gov/" target="_blank" rel="noopener">{html.escape(c["more"])}</a></p>'
+      '</section>'
+    )
 
 def section(lang, ui):
     pre = '' if lang == 'en' else '../'
@@ -318,20 +385,83 @@ def section(lang, ui):
                '<a href="https://jwst-docs.stsci.edu/jwst-observatory-characteristics/jwst-orbit">STScI, JWST orbit</a> · '
                '<a href="https://ntrs.nasa.gov/citations/20220012121">NASA, 30-day transfer</a></p>')
     return (
-      f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/blue-marble-disc.webp" data-earth-lg="{pre}assets/earth/blue-marble-disc-lg.webp" data-moon="{pre}assets/earth/moon-disc.webp" aria-labelledby="satmap-title">'
+      f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/blue-marble-disc.webp" data-earth-lg="{pre}assets/earth/blue-marble-disc-lg.webp" data-moon="{pre}assets/earth/lro-moon.jpg" data-sun="{pre}assets/earth/sdo-aia304.jpg" aria-labelledby="satmap-title">'
+      '<span id="lagrange" class="sat-anchor"></span><span id="beyond" class="sat-anchor"></span>'
       f'<div class="wm-cats" role="group" aria-label="{html.escape(ui["all"])}">' + ''.join(btns) + '</div>'
       '<div class="sat-layout"><div class="sat-stage" id="sat-stage"></div>'
       '<div class="sat-card" id="sat-card" role="region" aria-labelledby="sat-card-title" hidden></div></div>'
-      f'<div class="sat-explain" id="lagrange-explainer"><h3>{html.escape(ui["explainTitle"])}</h3>'
+      + cruise_panel(lang, pre)
+      + f'<div class="sat-explain" id="lagrange-explainer"><h3>{html.escape(ui["explainTitle"])}</h3>'
       f'<p>{html.escape(ui["explain1"])}</p><p>{html.escape(ui["explain2"])}</p><p>{html.escape(ui["explain3"])}</p>'
       + sources + '</div>'
       f'<details class="sat-list"><summary>{html.escape(ui["list"])}</summary><ul id="sat-list-ul"></ul></details>'
       f'<p class="sat-scale">{html.escape(ui["scale"])}</p></section>\n'
     )
 
+SHOTS = {
+    'landsat9': 'assets/Landsat9_Launch.jpg',
+    'nisar': 'assets/NISAR_Orbit.jpg',
+    'alos4': 'assets/ALOS-4_Model_Tsukuba.jpg',
+    'pace': 'assets/PACE_Spacecraft_KSC.jpg',
+    'swot': 'assets/SWOT_Orbit_Illustration.jpg',
+    's6': 'assets/Sentinel6B_Launch.jpg',
+    'icesat2': 'assets/ICESat2_Launch.jpg',
+    'aws': 'assets/Arctic_Weather_Satellite_ESA.jpg',
+    'goes19': 'assets/GOES19_GOESU_KSC.jpg',
+}
+EXTRA = {
+    'en': dict(more='Click here for more', zoomIn='Zoom in', zoomOut='Zoom out', zoomFit='Fit the planet', kindSat='Satellite', kindCraft='Spacecraft', sunmoon=' Sun: NASA/SDO AIA 304. Moon: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'fr': dict(more='Cliquez ici pour en savoir plus', zoomIn='Zoom avant', zoomOut='Zoom arrière', zoomFit='Ajuster la planète', kindSat='Satellite', kindCraft='Engin spatial', sunmoon=' Soleil : NASA/SDO AIA 304. Lune : NASA/Goddard/Arizona State University, LROC WAC.'),
+    'es': dict(more='Haga clic aquí para más', zoomIn='Acercar', zoomOut='Alejar', zoomFit='Ajustar el planeta', kindSat='Satélite', kindCraft='Nave espacial', sunmoon=' Sol: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'ar': dict(more='انقر هنا للمزيد', zoomIn='تكبير', zoomOut='تصغير', zoomFit='ملاءمة الكوكب', kindSat='قمر صناعي', kindCraft='مركبة فضائية', sunmoon=' الشمس: NASA/SDO AIA 304. القمر: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'it': dict(more='Fai clic qui per saperne di più', zoomIn='Ingrandisci', zoomOut='Riduci', zoomFit='Adatta il pianeta', kindSat='Satellite', kindCraft='Veicolo spaziale', sunmoon=' Sole: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'he': dict(more='לחצו כאן לעוד', zoomIn='התקרבות', zoomOut='התרחקות', zoomFit='התאמה לכוכב הלכת', kindSat='לוויין', kindCraft='חללית', sunmoon=' שמש: NASA/SDO AIA 304. ירח: NASA/Goddard/Arizona State University, LROC WAC.'),
+}
+
+def page_credit(page):
+    path = page if os.path.exists(page) else ''
+    if not path:
+        return ''
+    raw = open(path, encoding='utf-8', errors='replace').read()
+    m = re.search(r'class="photo-credit"[^>]*>(.*?)</p>', raw, re.S)
+    if not m:
+        return ''
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))).strip()
+
+def sentences(lang, page, limit=4):
+    if not page:
+        return []
+    path = page if lang == 'en' else os.path.join(lang, page)
+    if not os.path.exists(path):
+        return []
+    raw = open(path, encoding='utf-8', errors='replace').read()
+    raw = re.sub(r'<script[\s\S]*?</script>', ' ', raw)
+    raw = re.sub(r'<style[\s\S]*?</style>', ' ', raw)
+    m = re.search(r'<main[\s\S]*?</main>', raw)
+    body = m.group(0) if m else raw
+    out = []
+    for para in re.finditer(r'<p([^>]*)>(.*?)</p>', body, re.S):
+        if 'fact-source' in para.group(1) or 'photo-credit' in para.group(1):
+            continue
+        text = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', para.group(2)))).strip()
+        if len(text) < 70:
+            continue
+        for bit in re.split(r'(?<=[.!?؟])\s+', text):
+            bit = bit.strip()
+            if len(bit) > 55 and bit not in out:
+                out.append(bit)
+            if len(out) >= limit:
+                return out
+    return out[:limit]
+
+def helps_brief(extra):
+    text = ((extra[1] or '') + ' ' + (extra[2] or '')).strip()
+    return [p.strip() for p in re.split(r'(?<=[.!?؟])\s+', text) if len(p.strip()) > 18][:4]
+
 def main():
     for lang in LANGS:
-        ui = dict(UI[lang]); ui.update(EXPLAIN[lang])
+        ui = dict(UI[lang]); ui.update(EXPLAIN[lang]); ui.update(EXTRA[lang])
+        ui['scale'] = ui['scale'] + ui.pop('sunmoon')
         helps = HELPS[lang]
         sats = []
         for m in M:
@@ -347,33 +477,37 @@ def main():
             if extra and m.get('page') and m['id'] not in ('hubble', 'chandra', 'tess', 'euclid'):
                 # Page blurb is "what it does"; the extra line is the careful tie.
                 does = meta(lang, m['page']) or extra[1]
+            brief = sentences(lang, m.get('page', ''))
+            if len(brief) < 3 and extra:
+                brief = helps_brief(extra) or brief
+            shot, credit = '', m.get('credit', '')
+            if not m.get('photo') and m['id'] in SHOTS:
+                shot = SHOTS[m['id']]
+                credit = page_credit(m.get('page', '')) or credit
             row = dict(id=m['id'], fn=m['fn'], regime=m['regime'], name=name, does=does, helps=help_line,
                        orbit=ui.get(m['regime'], m['regime']), agency=m.get('agency', ''), when=m.get('when', ''),
                        page=m.get('page', ''), official=m.get('official', ''), feed=m.get('feed', ''),
                        imageQ=m.get('imageQ', ''), imageMust=(m.get('imageMust') or ''),
                        dsn=bool(m.get('dsn')), nasaPlus=bool(m.get('nasaPlus')),
-                       photo=m.get('photo', ''), credit=m.get('credit', ''),
+                       photo=m.get('photo', ''), shot=shot, credit=credit, brief=brief[:4],
                        source=m.get('official', ''))
             sats.append(row)
         json.dump(dict(lang=lang, ui=ui, sats=sats), open(f'assets/data/sat-view.{lang}.json', 'w', encoding='utf-8'),
                   ensure_ascii=False, separators=(',', ':'))
         path = 'Space.html' if lang == 'en' else f'{lang}/Space.html'
         t = open(path, encoding='utf-8').read()
-        t = re.sub(r'<section class="sat-view" id="satmap".*?</section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
+        t = re.sub(r'<section class="sat-view" id="satmap".*?<p class="sat-scale">.*?</p></section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
         t = re.sub(r'<link rel="stylesheet" href="(?:\.\./)?assets/leaflet/leaflet\.css\?v=1\.9\.4">\n?', '', t)
         t = re.sub(r'<script src="(?:\.\./)?assets/leaflet/leaflet\.js\?v=1\.9\.4" defer></script>', '', t)
-        pre = '' if lang == 'en' else '../'
-        t = t.replace(f'{pre}map.css?v=20261112sv', f'{pre}map.css?v={V}').replace(f'{pre}map.css?v=20261112orb', f'{pre}map.css?v={V}')
-        t = t.replace(f'{pre}assets/sat-view.js?v=20261112sv', f'{pre}assets/sat-view.js?v={V}').replace(f'{pre}assets/sat-view.js?v=20261112orb', f'{pre}assets/sat-view.js?v={V}')
+        t = re.sub(r'((?:\.\./)?map\.css\?v=)[0-9a-z]+', rf'\g<1>{V}', t)
+        t = re.sub(r'((?:\.\./)?assets/sat-view\.js\?v=)[0-9a-z]+', rf'\g<1>{V}', t)
         if 'sat-view.js' not in t:
+            pre = '' if lang == 'en' else '../'
             t = t.replace('</body>', f'<link rel="stylesheet" href="{pre}map.css?v={V}">\n<script src="{pre}assets/sat-view.js?v={V}" defer></script>\n</body>', 1)
         open(path, 'w', encoding='utf-8').write(t)
-        print(lang, 'sats', len(sats), 'satmap', 'id="satmap"' in t)
-    # bump world map stylesheet so the shared CSS refreshes
-    for lang in LANGS:
-        path = 'World_Map.html' if lang == 'en' else f'{lang}/World_Map.html'
-        t = open(path, encoding='utf-8').read().replace('map.css?v=20261112sv', f'map.css?v={V}').replace('map.css?v=20261112orb', f'map.css?v={V}').replace('map.js?v=20261112sv', f'map.js?v={V}').replace('map.js?v=20261112orb', f'map.js?v={V}')
-        open(path, 'w', encoding='utf-8').write(t)
+        short = [s['id'] for s in sats if len(s['brief']) < 3]
+        missing = [s['id'] for s in sats if not s['photo'] and not s['shot']]
+        print(lang, 'sats', len(sats), 'short', short, 'no-image', missing)
 
 if __name__ == '__main__':
     main()
