@@ -1,9 +1,9 @@
 {
-  "note": "Each entry may set url (official provider stream: SpaceX X post or provider YouTube) and alternate (a labeled independent feed). For Starship Flight 15, url stays empty until SpaceX posts the official live. alternate is NASASpaceflight, shown as the player until url is set, then as Alternate view.",
+  "note": "Each entry may set url (official provider stream: SpaceX X broadcast or provider YouTube) and alternate (a labeled independent feed). Starship Flight 15 url is the official SpaceX X broadcast posted 13 Nov 2026. alternate stays NASASpaceflight, labeled Alternate view.",
   "streams": [
     {
       "match": "starship flight 15",
-      "url": "",
+      "url": "https://x.com/i/broadcasts/2brajgZlOKRMka",
       "alternate": {
         "url": "https://www.youtube.com/watch?v=9XM0lpVlvo0",
         "credit": "NASASpaceflight",

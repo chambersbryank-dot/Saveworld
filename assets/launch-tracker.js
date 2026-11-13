@@ -860,7 +860,7 @@
   nextEl.addEventListener('click', onPlay);
   listEl.addEventListener('click', onPlay);
   function boot(d) {
-    fetch(prefix + 'data/launch-streams.json', { credentials: 'omit' })
+    fetch(prefix + 'data/launch-streams.json?v=20261113f15', { credentials: 'omit', cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : { streams: [] }; })
       .catch(function () { return { streams: [] }; })
       .then(function (j) { STREAMS = (j && j.streams) || []; render(d); });
