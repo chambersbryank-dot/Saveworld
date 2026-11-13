@@ -169,7 +169,19 @@ a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
   .sat-cruise-earth img{width:84px}
 }
 .orb-btn.is-new::after{content:"";position:absolute;top:-2px;inset-inline-end:-2px;width:8px;height:8px;border-radius:50%;background:#ffd54a}
-.sat-card{background:rgba(8,24,40,.92);border:1px solid rgba(160,225,255,.45);border-radius:16px;padding:.8rem .9rem 1rem;color:#f4fbff}
+.sat-card{background:rgba(8,24,40,.94);border:1px solid rgba(160,225,255,.45);border-radius:14px;padding:.45rem .55rem .6rem;color:#f4fbff;font-size:.82rem;max-width:280px}
+.sat-kind{margin:0 0 .35rem;text-align:center;font-size:.75rem;opacity:.85}
+.sat-shot{max-height:110px;width:100%;object-fit:cover}
+.sat-band{position:absolute;z-index:8;top:58px;inset-inline-end:8px;width:min(15.5rem,calc(100% - 16px));padding:.4rem .5rem .5rem;border-radius:12px;background:rgba(8,24,40,.94);border:1px solid rgba(160,225,255,.55);color:#f4fbff;font-size:.75rem;line-height:1.35}
+.sat-band h3{margin:0 1.2rem .25rem 0;font-size:.82rem}
+[dir=rtl] .sat-band h3{margin:0 0 .25rem 1.2rem}
+.sat-band p{margin:.2rem 0}
+.band-btn{position:absolute;z-index:4;transform:translate(-50%,-50%);font:inherit;font-size:.72rem;font-weight:800;color:#fff;padding:.12rem .45rem;border-radius:999px;cursor:pointer;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.7)}
+[dir=rtl] .band-btn{transform:translate(50%,-50%)}
+.band-btn[aria-pressed="true"]{box-shadow:0 0 0 2px #ffd54a}
+.band-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.band-edge{fill:none;stroke:#ffd54a;stroke-width:2.2;stroke-dasharray:5 3}
+.band-edge-label{fill:#ffe3a3;font-size:12px;font-weight:700}
 .sat-card[hidden]{display:none}
 .sat-card h3{margin:.2rem 0 .4rem}
 .sat-card p{margin:.35rem 0;line-height:1.4}
