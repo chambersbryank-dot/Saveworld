@@ -55,12 +55,19 @@
   "he": "4 · שליטה מלאה",
   "it": "4 · Padronanza"
  },
+ "A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.": {
+  "ar": "مسار دراسي مجاني لأربع سنوات في هندسة الطيران والفضاء وSTEM (العلوم والتكنولوجيا والهندسة والرياضيات)، يُبنى دورةً بعد دورة.",
+  "es": "Un itinerario gratuito de cuatro años de ingeniería aeroespacial y STEM (ciencia, tecnología, ingeniería y matemáticas), construido curso a curso.",
+  "fr": "Un parcours gratuit de quatre ans en aérospatiale et STEM (sciences, technologie, ingénierie et mathématiques), construit un cours à la fois.",
+  "he": "מסלול לימודים חינמי של ארבע שנים בהנדסת אווירונאוטיקה וחלל ו-STEM (מדע, טכנולוגיה, הנדסה ומתמטיקה), שנבנה קורס אחר קורס.",
+  "it": "Un percorso gratuito di quattro anni in ingegneria aerospaziale e STEM (scienza, tecnologia, ingegneria e matematica), costruito un corso alla volta."
+ },
  "A free four-year aerospace and STEM study track, built one course at a time.": {
-  "ar": "مسار دراسي مجاني لأربع سنوات في هندسة الطيران والفضاء والعلوم والتكنولوجيا، يُبنى دورةً بعد دورة.",
-  "es": "Un itinerario gratuito de cuatro años de ingeniería aeroespacial y STEM, construido curso a curso.",
-  "fr": "Un parcours gratuit de quatre ans en aérospatiale et STEM, construit un cours à la fois.",
-  "he": "מסלול לימודים חינמי של ארבע שנים בהנדסת אווירונאוטיקה וחלל ומדעים, שנבנה קורס אחר קורס.",
-  "it": "Un percorso gratuito di quattro anni in ingegneria aerospaziale e STEM, costruito un corso alla volta."
+  "ar": "مسار دراسي مجاني لأربع سنوات في هندسة الطيران والفضاء وSTEM (العلوم والتكنولوجيا والهندسة والرياضيات)، يُبنى دورةً بعد دورة.",
+  "es": "Un itinerario gratuito de cuatro años de ingeniería aeroespacial y STEM (ciencia, tecnología, ingeniería y matemáticas), construido curso a curso.",
+  "fr": "Un parcours gratuit de quatre ans en aérospatiale et STEM (sciences, technologie, ingénierie et mathématiques), construit un cours à la fois.",
+  "he": "מסלול לימודים חינמי של ארבע שנים בהנדסת אווירונאוטיקה וחלל ו-STEM (מדע, טכנולוגיה, הנדסה ומתמטיקה), שנבנה קורס אחר קורס.",
+  "it": "Un percorso gratuito di quattro anni in ingegneria aerospaziale e STEM (scienza, tecnologia, ingegneria e matematica), costruito un corso alla volta."
  },
  "A full design project from requirements to review.": {
   "ar": "مشروع تصميم كامل من المتطلبات إلى المراجعة.",

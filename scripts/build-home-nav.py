@@ -19,12 +19,12 @@ os.chdir(ROOT)
 E = lambda s: html.escape(s, quote=False)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 LBL = {
- 'en': dict(main='Main menu', util='Site links', sol='Solutions', courses='Courses', map='Earth & Space Map', teach='Teachers', about='About', news='Newsletter', donate='Donate / Help'),
- 'fr': dict(main='Menu principal', util='Liens du site', sol='Solutions', courses='Cours', map='Carte de la Terre et de l’espace', teach='Enseignants', about='À propos', news='Infolettre', donate='Faire un don / Aider'),
- 'es': dict(main='Menú principal', util='Enlaces del sitio', sol='Soluciones', courses='Cursos', map='Mapa de la Tierra y el espacio', teach='Docentes', about='Acerca de', news='Boletín', donate='Donar / Ayudar'),
- 'ar': dict(main='القائمة الرئيسية', util='روابط الموقع', sol='الحلول', courses='المقررات', map='خريطة الأرض والفضاء', teach='المعلمون', about='من نحن', news='النشرة', donate='تبرّع / ساعد'),
- 'it': dict(main='Menu principale', util='Link del sito', sol='Soluzioni', courses='Corsi', map='Mappa della Terra e dello spazio', teach='Insegnanti', about='Chi siamo', news='Newsletter', donate='Dona / Aiuta'),
- 'he': dict(main='תפריט ראשי', util='קישורי האתר', sol='פתרונות', courses='קורסים', map='מפת כדור הארץ והחלל', teach='מורים', about='אודות', news='ניוזלטר', donate='תרומה / עזרה'),
+ 'en': dict(main='Main menu', util='Site links', sol='Solutions', courses='STEM Courses', map='Earth & Space Map', teach='Teachers', about='About', news='Newsletter', donate='Donate / Help'),
+ 'fr': dict(main='Menu principal', util='Liens du site', sol='Solutions', courses='Cours STEM', map='Carte de la Terre et de l’espace', teach='Enseignants', about='À propos', news='Infolettre', donate='Faire un don / Aider'),
+ 'es': dict(main='Menú principal', util='Enlaces del sitio', sol='Soluciones', courses='Cursos STEM', map='Mapa de la Tierra y el espacio', teach='Docentes', about='Acerca de', news='Boletín', donate='Donar / Ayudar'),
+ 'ar': dict(main='القائمة الرئيسية', util='روابط الموقع', sol='الحلول', courses='مقررات STEM', map='خريطة الأرض والفضاء', teach='المعلمون', about='من نحن', news='النشرة', donate='تبرّع / ساعد'),
+ 'it': dict(main='Menu principale', util='Link del sito', sol='Soluzioni', courses='Corsi STEM', map='Mappa della Terra e dello spazio', teach='Insegnanti', about='Chi siamo', news='Newsletter', donate='Dona / Aiuta'),
+ 'he': dict(main='תפריט ראשי', util='קישורי האתר', sol='פתרונות', courses='קורסי STEM', map='מפת כדור הארץ והחלל', teach='מורים', about='אודות', news='ניוזלטר', donate='תרומה / עזרה'),
 }
 # Each menu: the top label links to the first page, and that page is listed first.
 # Only pages that exist in the repo. Earth & Space Map includes the satellite map and Voyages.
