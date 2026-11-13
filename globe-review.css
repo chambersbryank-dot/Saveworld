@@ -2,7 +2,7 @@
    Buttons use the shared .hero-ctas .hero-cta crystal-water rule. */
 .gr-banner{
   margin:0;
-  padding:.85rem 1.1rem;
+  padding:calc(var(--spn-h, 104px) + .35rem) 1.1rem .85rem;
   text-align:center;
   color:#fff;
   background-color:#0a4f78;

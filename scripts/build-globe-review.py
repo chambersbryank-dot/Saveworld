@@ -402,7 +402,7 @@ def build(lang):
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="toc-sub globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     prefix = '' if lang == 'en' else '../'
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113c">\n</head>', 1)
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113d">\n</head>', 1)
     tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113c" defer></script>\n</body>', 1)
     # Print the teacher sheet without pulling in the builder.
     tail = tail.replace('</body>', '<script>document.getElementById("gr-print-sheet").addEventListener("click",function(){window.print()});</script>\n</body>', 1)
