@@ -105,7 +105,10 @@
     try {
       if (nextEl.querySelector('.lw-mission') && !nextEl.querySelector('.la-acts')) {
         var cd = nextEl.querySelector('.lw-countdown'), a = actions(r[0]);
-        cd && cd.parentNode === nextEl ? nextEl.insertBefore(a, cd.nextSibling) : nextEl.appendChild(a);
+        /* Offer the calendar right under the stream buttons, so viewers can add the launch where they watch it. */
+        var st = nextEl.querySelector('.lw-acts') || nextEl.querySelectorAll('.lw-stage')[nextEl.querySelectorAll('.lw-stage').length - 1];
+        if (st && st.parentNode) st.parentNode.insertBefore(a, st.nextSibling);
+        else cd && cd.parentNode === nextEl ? nextEl.insertBefore(a, cd.nextSibling) : nextEl.appendChild(a);
       }
       var lis = listEl.children, rest = r.slice(1, 20);
       if (lis.length && !listEl.querySelector('.la-acts')) {
