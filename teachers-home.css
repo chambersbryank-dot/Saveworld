@@ -1,61 +1,61 @@
 /* Teachers home. Logical properties only, so Arabic and Hebrew keep the correct start/end.
-   Cards are white. Buttons, chips, and type badges use the site crystal-water liquid glass
-   (same recipe as the homepage Vision chip and Match actions: white highlight over #0a4f78).
-   Photos carry the color. */
+   Surfaces use the same dark palette as Learn and Match. Buttons use the shared
+   crystal-water liquid glass (white highlight over #0a4f78). Photos carry the color. */
 .t-home{max-width:1120px;margin:0 auto;padding:.2rem 1.15rem 1.6rem}
-.t-home h2{font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.2;margin:0 0 .4rem;letter-spacing:-.02em;color:#16324a}
-.t-home h3{margin:0 0 .45rem;color:#16324a}
-.t-lead{margin:0 0 1rem;max-width:68ch;line-height:1.5;color:#3a4a5a}
+.t-home h2{font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.2;margin:0 0 .4rem;letter-spacing:-.02em;color:#e8eef5}
+.t-home h3{margin:0 0 .45rem;color:#e8eef5}
+.t-lead{margin:0 0 1rem;max-width:68ch;line-height:1.5;color:#d6e4f0}
 .t-kicker{display:inline-flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:0;color:#fff;background:#0a4f78;margin:0}
 .t-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:0 0 1.1rem}
-.t-path{display:flex;flex-direction:column;gap:.35rem;min-height:9.2rem;padding:1rem 1.05rem;border-radius:18px;text-decoration:none;color:#16324a;background:#fff}
-.t-path strong{font-size:1.15rem;line-height:1.25;color:#16324a}
-.t-path span{color:#3a4a5a;font-weight:500;line-height:1.4}
-.t-path:hover,.t-path:focus-visible{border-color:#0a4f78}
-.t-subh{font-size:1rem;margin:1rem 0 .45rem;color:#16324a}
+.t-path{display:flex;flex-direction:column;gap:.35rem;min-height:9.2rem;padding:1rem 1.05rem;border-radius:18px;text-decoration:none;color:#e8eef5;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22)}
+.t-path strong{font-size:1.15rem;line-height:1.25;color:#e8eef5}
+.t-path span{color:#d6e4f0;font-weight:500;line-height:1.4}
+.t-path:hover,.t-path:focus-visible{border-color:#8fd3ff}
+.t-subh{font-size:1rem;margin:1rem 0 .45rem;color:#e8eef5}
 .t-row{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
 .t-row a.t-chip{text-decoration:none;display:inline-flex;align-items:center}
 .t-feature,.t-cat,.t-kit-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;list-style:none;margin:0;padding:0}
-.t-card{display:flex;flex-direction:column;gap:0;min-width:0;padding:0;overflow:hidden;border-radius:16px;color:#1a2330;background:#fff;content-visibility:auto;contain-intrinsic-size:auto 320px}
+.t-card{display:flex;flex-direction:column;gap:0;min-width:0;padding:0;overflow:hidden;border-radius:16px;color:#e8eef5;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);content-visibility:auto;contain-intrinsic-size:auto 320px}
 .t-card-main{display:flex;flex-direction:column;align-items:stretch;gap:0;flex:1;min-width:0;color:inherit;text-decoration:none}
 .t-card-body{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;padding:.75rem .9rem .85rem}
 .t-shot{margin:0}
 .t-shot picture,.t-shot img{display:block;width:100%}
 .t-shot img{height:158px;object-fit:cover;background:#e8eef2}
-.t-credit{margin:0;padding:.4rem .9rem 0;color:#4d5d6c;font-size:.72rem;font-weight:650;line-height:1.35}
+.t-credit{margin:0;padding:.4rem .9rem 0;color:#d6e4f0;font-size:.72rem;font-weight:650;line-height:1.35}
 .t-card-main:hover .t-card-title,.t-card-main:focus-visible .t-card-title{text-decoration:underline}
-.t-card-title{font-weight:800;font-size:1.05rem;line-height:1.3;color:#1a2330}
-.t-hook,.t-time{margin:0;color:#3a4a5a;font-weight:500;line-height:1.4;font-size:.92rem}
+.t-card-title{font-weight:800;font-size:1.05rem;line-height:1.3;color:#e8eef5}
+.t-hook,.t-time{margin:0;color:#d6e4f0;font-weight:500;line-height:1.4;font-size:.92rem}
 .t-type{display:inline-block;padding:.12rem .55rem;border-radius:999px;font-size:.75rem;font-weight:800;color:#fff;background:#0a4f78}
 .t-pills{display:flex;flex-wrap:wrap;gap:.3rem}
-.t-pill,.t-code{display:inline-block;padding:.08rem .5rem;border-radius:999px;border:1px solid #0a4f78;background:#fff;color:#0a4f78;font-size:.78rem;font-weight:700}
+.t-pill,.t-code{display:inline-block;padding:.08rem .5rem;border-radius:999px;border:1px solid rgba(143,211,255,.7);background:transparent;color:#e8eef5;font-size:.78rem;font-weight:700}
 .t-card>.t-chip{align-self:flex-start;text-decoration:none;margin:.15rem .9rem .85rem}
 .t-kits{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.t-kit{padding:1rem 1rem .9rem;border-radius:18px;background:#fff;color:#1a2330}
-.t-kit h3{font-size:1.45rem;margin:0 0 .35rem;color:#16324a}
-.t-kit h4{margin:.85rem 0 .4rem;font-size:.95rem;color:#16324a}
-.t-kit-note{margin:.35rem 0 0;color:#3a4a5a;font-size:.9rem}
+.t-kit{padding:1rem 1rem .9rem;border-radius:18px;background:rgba(255,255,255,.06);color:#e8eef5;border:1px solid rgba(255,255,255,.22)}
+.t-kit h3{font-size:1.45rem;margin:0 0 .35rem;color:#e8eef5}
+.t-kit h4{margin:.85rem 0 .4rem;font-size:.95rem;color:#e8eef5}
+.t-kit-note{margin:.35rem 0 0;color:#d6e4f0;font-size:.9rem}
 .t-topic-grid{display:flex;flex-wrap:wrap;gap:.75rem;align-items:stretch}
-.t-topic{flex:1 1 220px;min-width:0;border-radius:18px;background:#fff;color:#1a2330}
-.t-topic[open]{flex:1 1 100%;background:#f7f8fa}
-.t-topic>summary,.t-courses>summary,.t-year>summary{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding:.85rem 1rem;cursor:pointer;list-style:none;font-weight:800;min-height:48px;color:#16324a}
+.t-topic{flex:1 1 220px;min-width:0;border-radius:18px;background:rgba(255,255,255,.06);color:#e8eef5;border:1px solid rgba(255,255,255,.22)}
+.t-topic[open]{flex:1 1 100%;background:rgba(255,255,255,.1)}
+.t-topic>summary,.t-courses>summary,.t-year>summary{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding:.85rem 1rem;cursor:pointer;list-style:none;font-weight:800;min-height:48px;color:#e8eef5}
 .t-topic>summary::-webkit-details-marker,.t-courses>summary::-webkit-details-marker,.t-year>summary::-webkit-details-marker{display:none}
-.t-topic>summary::after,.t-courses>summary::after,.t-year>summary::after{content:"▾";width:auto;height:auto;border:0;font-size:.85rem;line-height:1;flex:0 0 auto;color:#0a4f78}
+.t-topic>summary::after,.t-courses>summary::after,.t-year>summary::after{content:"▾";width:auto;height:auto;border:0;font-size:.85rem;line-height:1;flex:0 0 auto;color:#8fd3ff}
 .t-topic[open]>summary::after,.t-courses[open]>summary::after,.t-year[open]>summary::after{content:"▴";transform:none;margin:0}
 #pick-a-path,#grade-kits,#t-topics,#courses,.t-topic{scroll-margin-top:calc(var(--nav-height, 96px) + .75rem)}
-.t-topic-name{font-size:1.05rem;color:#16324a}
-.t-topic-meta{font-weight:650;color:#0a4f78;white-space:nowrap}
-.t-topic[open]>summary{border-block-end:1px solid #e1e6ec}
+.t-topic-name{font-size:1.05rem;color:#e8eef5}
+.t-topic-meta{font-weight:650;color:#8fd3ff;white-space:nowrap}
+.t-topic[open]>summary{border-block-end:1px solid rgba(255,255,255,.18)}
 .t-topic .t-cat{padding:.85rem}
 .t-browse-in{margin:0 0 1rem;padding-inline:0;max-width:none}
-.t-std-label{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.35rem 0 .2rem;font-weight:700;color:#16324a}
-.t-std{min-height:44px;border-radius:999px;padding:0 .9rem;font:inherit;color:#16324a;background:#fff;border:1px solid #0a4f78}
-.t-live{min-height:1.2em;margin:.2rem 0 .6rem;font-weight:700;color:#16324a}
+.t-std-label{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.35rem 0 .2rem;font-weight:700;color:#e8eef5}
+.t-std{min-height:44px;border-radius:999px;padding:0 .9rem;font:inherit;color:#e8eef5;background:#0b1220;border:1px solid rgba(143,211,255,.75)}
+.t-std option{background:#0b1220;color:#e8eef5}
+.t-live{min-height:1.2em;margin:.2rem 0 .6rem;font-weight:700;color:#e8eef5}
 .t-all{margin:1rem 0 0}
-.t-courses{margin-top:.4rem;border-radius:18px;background:#fff;color:#1a2330}
-.t-courses-body{padding:0 1rem 1rem;color:#1a2330}
+.t-courses{margin-top:.4rem;border-radius:18px;background:rgba(255,255,255,.06);color:#e8eef5;border:1px solid rgba(255,255,255,.22)}
+.t-courses-body{padding:0 1rem 1rem;color:#e8eef5}
 .t-years{display:grid;gap:.55rem}
-.t-year{border-radius:14px;background:#fff}
+.t-year{border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18)}
 .t-year .t-cat{padding:0 .8rem .8rem}
 .t-more-all{margin-top:.8rem}
 @media (max-width:980px){
@@ -182,36 +182,57 @@ body.teachers-page .t-kit,
 body.teachers-page .t-topic,
 body.teachers-page .t-courses,
 body.teachers-page .t-year{
-  background:#fff !important;
+  background:rgba(255,255,255,.06) !important;
   background-image:none !important;
-  color:#1a2330 !important;
-  border:1px solid #d5dde6 !important;
-  box-shadow:0 8px 22px rgba(16,36,58,.06) !important;
+  color:#e8eef5 !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  box-shadow:none !important;
   -webkit-backdrop-filter:none;
   backdrop-filter:none;
   text-shadow:none;
 }
-body.teachers-page .t-topic[open]{background:#f7f8fa !important}
+body.teachers-page .t-topic[open]{background:rgba(255,255,255,.1) !important}
 body.teachers-page .t-card:hover,
-body.teachers-page .t-path:hover{filter:none;border-color:#0a4f78 !important}
-html.dark body.teachers-page .t-home h2,
-html.dark body.teachers-page .t-home>.t-lead,
-html.dark body.teachers-page .t-subh,
-html.dark body.teachers-page .t-std-label,
-html.dark body.teachers-page .t-live{color:#e8eef5}
-html.dark body.teachers-page .t-card,
-html.dark body.teachers-page .t-card-title,
-html.dark body.teachers-page .t-hook,
-html.dark body.teachers-page .t-time,
-html.dark body.teachers-page .t-kit,
-html.dark body.teachers-page .t-kit h3,
-html.dark body.teachers-page .t-kit h4,
-html.dark body.teachers-page .t-kit-note,
-html.dark body.teachers-page .t-topic>summary,
-html.dark body.teachers-page .t-topic-name,
-html.dark body.teachers-page .t-courses,
-html.dark body.teachers-page .t-courses-body,
-html.dark body.teachers-page .t-year>summary{color:#1a2330}
+body.teachers-page .t-path:hover{filter:none;border-color:#8fd3ff !important}
+body.teachers-page .t-home h2,
+body.teachers-page .t-home h3,
+body.teachers-page .t-subh,
+body.teachers-page .t-path strong,
+body.teachers-page .t-card-title,
+body.teachers-page .t-kit h3,
+body.teachers-page .t-kit h4,
+body.teachers-page .t-topic>summary,
+body.teachers-page .t-topic-name,
+body.teachers-page .t-courses>summary,
+body.teachers-page .t-year>summary,
+body.teachers-page .t-std-label,
+body.teachers-page .t-live,
+body.teachers-page .t-courses-body{color:#e8eef5}
+body.teachers-page .t-lead,
+body.teachers-page .t-path span,
+body.teachers-page .t-hook,
+body.teachers-page .t-time,
+body.teachers-page .t-credit,
+body.teachers-page .t-kit-note{color:#d6e4f0}
+/* Top controls sit under the centered title. Center works in RTL and when the row wraps. */
+body.teachers-page .sp9-adopt{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  text-align:center;
+  margin:1rem auto .2rem;
+  padding-inline:1rem;
+}
+body.teachers-page .shr,
+body.teachers-page .shr.shr-below{
+  justify-content:center;
+  width:100%;
+  max-width:1120px;
+  margin-inline:auto;
+  padding-inline:1rem;
+  box-sizing:border-box;
+}
+body.teachers-page .t-browse fieldset{justify-content:center}
 /* Title video: homepage Earth / beach / forest loop. Poster stays if motion is reduced. */
 body.teachers-page .page-hero.hero-teach{
   position:relative;
@@ -245,4 +266,26 @@ body.teachers-page .page-hero.hero-teach .page-hero-content p{color:#fff;text-sh
 @media print{
   .t-browse-in,.t-all,.t-more-all{display:none !important}
   .t-topic,.t-courses,.t-year{break-inside:avoid}
+  body.teachers-page .t-home h2,
+  body.teachers-page .t-home h3,
+  body.teachers-page .t-lead,
+  body.teachers-page .t-path,
+  body.teachers-page .t-path strong,
+  body.teachers-page .t-path span,
+  body.teachers-page .t-card,
+  body.teachers-page .t-card-title,
+  body.teachers-page .t-hook,
+  body.teachers-page .t-time,
+  body.teachers-page .t-credit,
+  body.teachers-page .t-kit,
+  body.teachers-page .t-kit h3,
+  body.teachers-page .t-kit h4,
+  body.teachers-page .t-topic,
+  body.teachers-page .t-topic>summary,
+  body.teachers-page .t-courses,
+  body.teachers-page .t-year>summary{
+    color:#10202c !important;
+    background:#fff !important;
+    text-shadow:none !important;
+  }
 }
