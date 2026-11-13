@@ -1,0 +1,9 @@
+{
+  "note": "Official streams only. For Starship Flight 15, set url to SpaceX's own post (https://x.com/SpaceX/status/...) or an official YouTube watch URL. Leave url empty until that post exists. Do not put a third-party restream here.",
+  "streams": [
+    {
+      "match": "starship flight 15",
+      "url": ""
+    }
+  ]
+}

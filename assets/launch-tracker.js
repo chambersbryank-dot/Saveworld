@@ -37,7 +37,11 @@
       '.launch-widget .lw-watch-note{margin:.35rem 0;font-size:.85rem;color:rgba(255,255,255,.8)}' +
       '.launch-widget .lw-pay{margin-top:.65rem;padding:.7rem .8rem;border-radius:14px;background:transparent}' +
       '.launch-widget .lw-mini{display:flex;gap:.35rem;margin:.35rem 0}' +
-      '.launch-widget .lw-mini b{font-size:1rem}';
+      '.launch-widget .lw-mini b{font-size:1rem}' +
+      '.launch-widget .lw-stage{position:relative;width:100%;max-width:40rem;aspect-ratio:16/9;margin:.65rem 0;background:#041018;border-radius:12px;overflow:hidden}' +
+      '.launch-widget .lw-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}' +
+      '.launch-widget .lw-play{position:absolute;inset:0;width:100%;margin:0;border:0;cursor:pointer;color:#fff;font:800 1rem/1.3 Montserrat,sans-serif;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06))}' +
+      '.launch-widget .lw-play:focus-visible{outline:3px solid #fff;outline-offset:-6px}';
     document.head.appendChild(st);
   }
 
@@ -280,12 +284,12 @@
   };
   var pk = PICK[lang] || PICK.en;
   var ADD = {
-    en: { watchLive:'Watch live', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.' },
-    fr: { watchLive:'Regarder en direct', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.' },
-    es: { watchLive:'Ver en vivo', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.' },
-    ar: { watchLive:'شاهد البث المباشر', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.' },
-    it: { watchLive:'Guarda in diretta', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.' },
-    he: { watchLive:'צפו בשידור החי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.' }
+    en: { watchLive:'Watch live', play:'Play official stream', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.' },
+    fr: { watchLive:'Regarder en direct', play:'Lire le direct officiel', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.' },
+    es: { watchLive:'Ver en vivo', play:'Reproducir el directo oficial', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.' },
+    ar: { watchLive:'شاهد البث المباشر', play:'تشغيل البث الرسمي', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.' },
+    it: { watchLive:'Guarda in diretta', play:'Avvia la diretta ufficiale', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.' },
+    he: { watchLive:'צפו בשידור החי', play:'נגנו את השידור הרשמי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.' }
   };
   var ui = ADD[lang] || ADD.en;
   /* SpaceX page checked 13 Nov 2026: window opens 4:45 p.m. CT (22:45 UTC), 75 minutes, pending approval. */
@@ -364,6 +368,86 @@
     var s = ((l && l.name) || '') + ' ' + missionName(l);
     return /starship flight 15|starlink group 31-2/i.test(s);
   }
+  var STREAMS = [];
+  function parseEmbed(url, title) {
+    if (!url || blockedUrl(url)) return null;
+    var yt = String(url).match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/|youtube-nocookie\.com\/embed\/)([\w-]{6,})/);
+    if (yt) return { kind: 'youtube', id: yt[1], title: title || 'Official live stream' };
+    if (/(?:^|\.)(?:x|twitter)\.com$/i.test((function () { try { return new URL(url).hostname.replace(/^www\./i, ''); } catch (e) { return ''; } })()) &&
+        /\/status\/\d+|\/i\/broadcasts\/[A-Za-z0-9]+/.test(url)) {
+      return { kind: 'x', url: url, title: title || 'Official live stream' };
+    }
+    return null;
+  }
+  function publisherOk(v, l) {
+    var pub = String((v && v.publisher) || '').toLowerCase();
+    if (/spaceflight now|nasa ?spaceflight|everyday astronaut|teslarati/.test(pub)) return false;
+    if (/nasa|united launch|rocket lab|\besa\b|arianespace|spacex|jaxa|isro|blue origin|northrop/.test(pub)) return true;
+    var prov = String(provider(l) || '').toLowerCase();
+    return !!(pub && prov && (prov.indexOf(pub) >= 0 || pub.indexOf(prov) >= 0));
+  }
+  function embedFor(l) {
+    if (isRestricted(l)) return null;
+    var name = ((l && l.name) || '') + ' ' + missionName(l);
+    for (var s = 0; s < STREAMS.length; s++) {
+      var row = STREAMS[s];
+      if (row && row.match && row.url && name.toLowerCase().indexOf(String(row.match).toLowerCase()) >= 0) {
+        var set = parseEmbed(row.url, missionName(l));
+        if (set) return set;
+      }
+    }
+    var vids = [].concat((l && l.vid_urls) || [], (l && l.mission && l.mission.vid_urls) || []);
+    for (var i = 0; i < vids.length; i++) {
+      var v = vids[i];
+      var u = typeof v === 'string' ? v : (v && v.url);
+      var typ = v && v.type && v.type.name;
+      if (!u || blockedUrl(u) || !/official webcast/i.test(typ || '') || !publisherOk(v, l)) continue;
+      var emb = parseEmbed(u, (v && v.title) || missionName(l));
+      if (emb) return emb;
+    }
+    return null;
+  }
+  function playerHtml(l) {
+    var emb = embedFor(l);
+    if (!emb) return '';
+    var title = emb.title || missionName(l);
+    if (emb.kind === 'youtube') {
+      return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="youtube" data-id="' + esc(emb.id) + '" data-title="' + esc(title) + '">' + esc(ui.play) + '</button></div>';
+    }
+    return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="x" data-url="' + esc(emb.url) + '" data-title="' + esc(title) + '">' + esc(ui.play) + '</button></div>';
+  }
+  function loadXWidgets(stage) {
+    function draw() {
+      if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(stage);
+    }
+    if (window.twttr && window.twttr.widgets) { draw(); return; }
+    if (document.getElementById('lw-x-widgets')) {
+      document.getElementById('lw-x-widgets').addEventListener('load', draw);
+      return;
+    }
+    var s = document.createElement('script');
+    s.id = 'lw-x-widgets';
+    s.async = true;
+    s.src = 'https://platform.twitter.com/widgets.js';
+    s.onload = draw;
+    document.body.appendChild(s);
+  }
+  function onPlay(e) {
+    var b = e.target && e.target.closest && e.target.closest('.lw-play');
+    if (!b) return;
+    var stage = b.parentNode;
+    var title = b.getAttribute('data-title') || 'Official live stream';
+    if (b.getAttribute('data-kind') === 'youtube') {
+      var id = b.getAttribute('data-id') || '';
+      if (!/^[\w-]{6,}$/.test(id)) return;
+      stage.innerHTML = '<iframe title="' + esc(title) + '" src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      return;
+    }
+    var url = b.getAttribute('data-url') || '';
+    if (!parseEmbed(url, title)) return;
+    stage.innerHTML = '<blockquote class="twitter-tweet" data-dnt="true"><a href="' + esc(url) + '">' + esc(title) + '</a></blockquote>';
+    loadXWidgets(stage);
+  }
   function watchUrl(l) {
     if (isRestricted(l)) return null;
     var vids = [].concat((l && l.vid_urls) || [], (l && l.mission && l.mission.vid_urls) || []);
@@ -387,7 +471,7 @@
     if (isRestricted(l)) return '<p class="lw-watch-note">' + esc(pk.watchRestricted) + '</p>';
     var u = watchUrl(l);
     if (!u) return '<p class="lw-watch-note">' + esc(ui.watchTba) + '</p>';
-    return '<p class="lw-acts"><a class="lw-watch" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.watchLive) + '</a></p>';
+    return playerHtml(l) + '<p class="lw-acts"><a class="lw-watch" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.watchLive) + '</a></p>';
   }
   function goingHtml(l) {
     var c = classify(l);
@@ -684,8 +768,16 @@
     }).join('');
   }
 
+  nextEl.addEventListener('click', onPlay);
+  listEl.addEventListener('click', onPlay);
+  function boot(d) {
+    fetch(prefix + 'data/launch-streams.json', { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.json() : { streams: [] }; })
+      .catch(function () { return { streams: [] }; })
+      .then(function (j) { STREAMS = (j && j.streams) || []; render(d); });
+  }
   var cached = readCache();
-  if (cached) { render(cached); return; }
+  if (cached) { boot(cached); return; }
   var done = false;
   var guard = setTimeout(function () { if (!done) { done = true; showError(); } }, 10000);
   var ctl = window.AbortController ? new AbortController() : null;
@@ -695,7 +787,7 @@
       .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
       .then(function (d) {
         if (done) return; done = true; clearTimeout(guard); writeCache(d);
-        try { render(d); } catch (e) { showError(); }
+        try { boot(d); } catch (e) { showError(); }
       })
       .catch(function () { if (done) return; done = true; clearTimeout(guard); showError(); });
   } catch (e) { done = true; clearTimeout(guard); showError(); }
