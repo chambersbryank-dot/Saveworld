@@ -188,13 +188,29 @@ html.dark nav.scrolled .nav-toggle { border-color: rgba(255,255,255,0.55) !impor
 .sx-vid a{color:#c9e3ff}
 .sx-deep .sx-np{color:#fff!important}
 @media (max-width:600px){.sx3d-stage canvas{aspect-ratio:4/5}.sx3d-pin{font-size:.7rem;padding:.3rem .5rem}}
-/* Oct 15 (Top-10 #2): Lesson Builder 2.0 tools, slides, handout */
-.lb-tools{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
-.lb-deck{position:fixed;inset:0;z-index:3000;background:#0b1622;color:#fff;display:flex;flex-direction:column}
-.lb-deck-bar{display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.7rem;border-bottom:1px solid rgba(255,255,255,.2)}
-.lb-deck-bar button{font:inherit;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.5rem 1rem;min-height:44px;cursor:pointer}
-.lb-deck-stage{flex:1;overflow:auto;padding:4vh 6vw;font-size:clamp(1.1rem,2.4vw,1.8rem);line-height:1.45}
-.lb-deck-stage a{color:#9fdcff}.lb-deck .lb-deck-stage h2,.lb-deck .lb-deck-stage h3{font-size:1.6em !important;margin-top:0;color:#fff !important}
-body.lb-deck-on{overflow:hidden}
-@media print{body.lb-handout header,body.lb-handout nav,body.lb-handout footer,body.lb-handout .lb-form,body.lb-handout .lb-std,body.lb-handout .no-print,body.lb-handout .page-hero,body.lb-handout .sticky-help{display:none !important}
- body.lb-handout .lb-plan{font-size:11pt}.lb-deck{display:none}}
+/* Lesson Builder actions: one crystal-water color, the same liquid-glass recipe as Teachers and Donate. */
+.lb-tools{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;align-items:center}
+html body.lesson-builder-page .lb-actions.hero-ctas .hero-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:.55rem 1.15rem;min-height:44px;
+  color:#fff !important;text-decoration:none;font-weight:750;
+  background-color:#0a4f78 !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;
+  border:1px solid rgba(160,225,255,.55) !important;border-radius:999px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35) !important;
+  -webkit-backdrop-filter:blur(14px) saturate(180%);backdrop-filter:blur(14px) saturate(180%);
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+}
+html body.lesson-builder-page .lb-actions.hero-ctas .hero-cta:hover{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08)),linear-gradient(#0a4f78,#0a4f78) !important;
+}
+html body.lesson-builder-page .lb-actions.hero-ctas .hero-cta:focus-visible{outline:3px solid #fff !important;outline-offset:3px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  html body.lesson-builder-page .lb-actions.hero-ctas .hero-cta{background:#0a4f78 !important;background-image:none !important}
+}
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  html body.lesson-builder-page .lb-actions.hero-ctas .hero-cta{
+    background:#0a4f78 !important;background-image:none !important;box-shadow:none !important;text-shadow:none;
+    -webkit-backdrop-filter:none !important;backdrop-filter:none !important;
+  }
+}
