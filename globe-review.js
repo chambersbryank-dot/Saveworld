@@ -103,21 +103,7 @@
     {id:'greenup', sphere:'bio',
       page:'https://www.globe.gov/web/biosphere/protocols/green-up-green-down', train:'https://www.globe.gov/get-involved/training/globe-etraining/biosphere',
       docs:[],
-      films:[]},
-    {id:'observer', sphere:'obs',
-      page:APP, train:ETRAIN,
-      docs:[
-        ['https://observer.globe.gov/do-globe-observer/clouds/resource-library','Clouds'],
-        ['https://observer.globe.gov/do-globe-observer/land-cover/resource-library','Land Cover'],
-        ['https://observer.globe.gov/do-globe-observer/trees/resource-library','Trees'],
-        ['https://observer.globe.gov/do-globe-observer/mosquito-habitats','Mosquito Habitats']
-      ],
-      films:[
-        {yt:'AhSjFSMC8K0', title:'GLOBE Observer: Clouds - Getting Started - Narrated Version', by:'GLOBE Implementation Office', grades:['k2','g35','g68','g912']},
-        {yt:'V1n29KHC09s', title:'GLOBE Observer: Land Cover - Getting Started - Narrated Version', by:'GLOBE Implementation Office', grades:['k2','g35','g68','g912']},
-        {yt:'DdPXm8Gmsj0', title:'GLOBE Observer: Trees - Introduction - Narrated Version', by:'GLOBE Implementation Office', grades:['k2','g35','g68','g912']},
-        {yt:'2Q0BvgRxxoE', title:'GLOBE Observer: Mosquito Habitat Mapper - Getting Started (Basic) - Narrated Version', by:'GLOBE Implementation Office', grades:['g35','g68','g912']}
-      ]}
+      films:[]}
   ];
 
   var dataEl = document.getElementById('gr-i18n');
@@ -143,7 +129,9 @@
 
   function params() {
     var q = new URLSearchParams(location.search);
-    return {band: q.get('band') || 'k2', topic: q.get('topic') || 'clouds', length: q.get('len') || 'class'};
+    var topicId = q.get('topic') || 'clouds';
+    if (!find(topicId)) topicId = 'clouds';
+    return {band: q.get('band') || 'k2', topic: topicId, length: q.get('len') || 'class'};
   }
   function writeUrl() {
     var q = new URLSearchParams();
