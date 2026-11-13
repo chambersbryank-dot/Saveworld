@@ -116,18 +116,58 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 .wm-hero .hero-video-credit{position:absolute;z-index:2;bottom:.35rem;inset-inline-start:.55rem;margin:0;max-width:min(36rem,calc(100% - 1.2rem));font-size:.75rem;line-height:1.3;color:#f4fbff;text-shadow:0 1px 4px rgba(0,0,0,.8)}
 .wm-hero .hero-video-credit a{color:#fff}
 @media (prefers-reduced-motion:reduce){.wm-hero-media video.wm-hero-video{display:none !important}}
-.sat-view{margin:1.2rem auto 1.6rem;max-width:1180px;padding:0 1rem;color:#e8eef5}
+.sat-view,.sat-anchor{scroll-margin-top:calc(var(--nav-height, 92px) + .6rem)}
+.sat-anchor{display:block;height:0;overflow:hidden}
+.sat-view{margin:1.2rem auto 1.6rem;max-width:none;padding:0 .6rem;color:#e8eef5}
 .sat-view h2{margin:0 0 .4rem;font-size:clamp(1.3rem,2vw,1.8rem)}
 .sat-lead,.sat-scale{margin:0 0 .7rem;line-height:1.45}
 .sat-scale{font-size:.82rem;opacity:.9}
 .sat-layout{display:block}
 .sat-layout.has-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,320px);gap:.8rem;align-items:start}
-.sat-stage{position:relative;height:min(70vh,560px);min-height:340px;border-radius:16px;overflow:hidden;background:#041525}
+.sat-stage{position:relative;height:clamp(85vh, calc(100dvh - var(--nav-height, 92px) - 6.75rem), 100dvh);min-height:85vh;border-radius:16px;overflow:hidden;background:#041525}
+.sat-canvas{position:absolute;inset:0}
 .orb-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sun-glow{transform-box:fill-box;transform-origin:center;animation:sun-flicker 2.6s ease-in-out infinite}
+.sun-flare{transform-box:fill-box;transform-origin:center;opacity:.35;animation:sun-prom 3.4s ease-in-out infinite}
+@keyframes sun-flicker{0%,100%{opacity:.55}38%{opacity:.95}58%{opacity:.4}76%{opacity:.88}}
+@keyframes sun-prom{0%,100%{opacity:.18}46%{opacity:.62}70%{opacity:.28}}
 .orb-btn{position:absolute;width:28px;height:28px;margin:-14px 0 0 -14px;padding:0;border-radius:50%;border:1px solid rgba(160,225,255,.7);cursor:pointer;color:#fff;
   background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 55%);box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .orb-btn svg{width:16px;height:16px;display:block;margin:5px auto}
 .orb-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.orb-lab{position:absolute;z-index:3;transform:translate(18px,-50%);margin-top:0;max-width:min(16rem,46vw);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;pointer-events:none;color:#fff;font-size:.78rem;font-weight:700;line-height:1.2;padding:.12rem .5rem;border-radius:999px;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 4px rgba(0,0,0,.45);text-shadow:0 1px 2px rgba(0,0,0,.7)}
+[dir=rtl] .orb-lab{transform:translate(calc(-100% - 18px),-50%)}
+.lag-pt{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;padding:0;border-radius:50%;border:2px solid #fff;cursor:pointer;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,0) 55%);box-shadow:0 0 0 2px rgba(255,214,120,.45)}
+.lag-pt.is-on{animation:lag-pulse 1.35s ease-out infinite}
+@keyframes lag-pulse{0%{box-shadow:0 0 0 0 rgba(255,213,74,.9)}70%{box-shadow:0 0 0 16px rgba(255,213,74,0)}100%{box-shadow:0 0 0 0 rgba(255,213,74,0)}}
+.sat-title{text-align:center;margin:.15rem 1.8rem .45rem}
+.sat-shot{display:block;width:100%;height:auto;border-radius:10px}
+.sat-more-row{text-align:center;margin:.7rem 0 .2rem}
+a.sat-more{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.45rem 1rem;border-radius:999px;color:#fff;font-weight:800;text-decoration:none;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 6px 16px rgba(0,40,70,.28)}
+a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.sat-cruise{margin:.9rem 0 1rem;padding:.8rem .9rem 1rem;border-radius:16px;background:#041525;color:#f4fbff}
+.sat-cruise h3{text-align:center;margin:.2rem 0 .6rem}
+.sat-cruise-row{display:flex;align-items:center;gap:.6rem}
+.sat-cruise-earth{flex:none;margin:0;text-align:center}
+.sat-cruise-earth img{width:min(18vw,108px);height:auto;display:block;margin:0 auto}
+.sat-cruise-track{position:relative;flex:1;min-height:92px}
+.sat-cruise-line{position:absolute;inset-inline:0;top:50%;height:2px;background:linear-gradient(90deg,rgba(186,224,255,.2),rgba(186,224,255,.75));}
+[dir=rtl] .sat-cruise-line{background:linear-gradient(270deg,rgba(186,224,255,.2),rgba(186,224,255,.75))}
+.sat-cruise-craft{position:absolute;top:50%;inset-inline-start:2.6%;transform:translate(-50%,-50%);margin:0;width:min(22vw,120px);text-align:center}
+[dir=rtl] .sat-cruise-craft{transform:translate(50%,-50%)}
+.sat-cruise-craft img{width:100%;height:auto;display:block}
+.sat-cruise-far{flex:none;margin:0;text-align:center;position:relative}
+.sat-jup{width:min(34vw,280px);height:auto;display:block;margin:0 auto}
+.sat-eur{position:absolute;width:min(9vw,64px);height:auto;inset-inline-end:.2rem;bottom:.15rem;border-radius:50%}
+.sat-cruise figcaption{font-size:.82rem;font-weight:700;margin-top:.25rem}
+.sat-cruise-dist{font-size:.92rem;line-height:1.45}
+@media (max-width:700px){
+  .sat-cruise-row{flex-wrap:wrap;justify-content:center}
+  .sat-cruise-track{flex:1 1 100%;min-height:110px}
+  .sat-jup{width:min(78vw,320px)}
+  .sat-eur{width:54px}
+  .sat-cruise-earth img{width:84px}
+}
 .orb-btn.is-new::after{content:"";position:absolute;top:-2px;inset-inline-end:-2px;width:8px;height:8px;border-radius:50%;background:#ffd54a}
 .sat-card{background:rgba(8,24,40,.92);border:1px solid rgba(160,225,255,.45);border-radius:16px;padding:.8rem .9rem 1rem;color:#f4fbff}
 .sat-card[hidden]{display:none}
@@ -137,7 +177,8 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 a.wm-orbit-link{display:inline-flex;align-items:center;margin:.35rem 0;padding:.45rem .85rem;border-radius:999px;color:#fff;font-weight:700;text-decoration:none;line-height:1.3;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
 a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .orb-btn.is-focus{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 4px #0a4f78}
-.sat-photo-credit,.sat-explain{font-size:.82rem;line-height:1.45;opacity:.92}
+.sat-photo-credit{font-size:.68rem;line-height:1.3;text-align:center;opacity:.8;margin:.2rem 0 .55rem}
+.sat-explain{font-size:.82rem;line-height:1.45;opacity:.92}
 .sat-explain{margin:.2rem 0 .8rem}
 .sat-explain a{color:#9fd4ff}
 .sat-card a{color:#9fd4ff}
@@ -146,8 +187,17 @@ a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .sat-list{margin:.8rem 0}
 .sat-list summary{cursor:pointer;font-weight:700}
 .sat-list button{background:none;border:0;color:#9fd4ff;font:inherit;text-align:start;cursor:pointer;padding:.15rem 0}
-@media (max-width:800px){.sat-layout.has-card{grid-template-columns:1fr}.sat-stage{height:72vw;min-height:280px}}
-@media (prefers-reduced-motion:reduce){.orb-svg *{animation:none!important}}
+@media (max-width:800px){
+  .sat-layout.has-card{grid-template-columns:1fr}
+  .sat-stage{width:min(100%, calc(100dvh - var(--nav-height, 64px) - 8rem));height:auto;aspect-ratio:1/1;min-height:0;max-height:calc(100dvh - var(--nav-height, 64px) - 6.5rem);margin-inline:auto}
+  .orb-lab{font-size:.7rem;max-width:min(11rem,42vw)}
+}
+@media (prefers-reduced-motion:reduce){
+  .orb-svg *{animation:none!important}
+  .sun-glow{opacity:.75}
+  .sun-flare{opacity:.35}
+  .lag-pt.is-on{animation:none;box-shadow:0 0 0 4px #ffd54a,0 0 16px 4px rgba(255,213,74,.8)}
+}
 .wm-pop-host{position:fixed;inset:0;z-index:1102;pointer-events:none;overflow:visible}
 .wm-pop-host .leaflet-popup{position:fixed;margin:0;pointer-events:auto;transform:none !important}
 .wm-pop-host .leaflet-popup-content-wrapper{max-height:min(70vh,480px);overflow:auto}
