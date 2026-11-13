@@ -544,7 +544,7 @@ def build(lang):
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
     pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113s">\n</head>', 1)
-    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113t" defer></script>\n</body>', 1)
+    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113u" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
     if 'gr-banner' in out or u['invite'] in out:
         raise SystemExit(f'{path}: draft banner still present')
