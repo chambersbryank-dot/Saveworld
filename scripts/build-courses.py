@@ -401,7 +401,7 @@ def hub_page():
             else: o.append(f'<li class="crs-c"><span class="crs-badge soon">{esc("Coming soon")}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>')
         o.append('</ul>' + top() + '</section>')
     o.append('</div>')
-    return BL.shell(LANG, HUB, _('Courses: free aerospace and STEM study track'), _('Free self-study courses on Saving Planets: a four-year aerospace and STEM track with labs, quizzes and study guides. No credit, no cost.'),
+    return BL.shell(LANG, HUB, _('Courses: free aerospace and STEM study track'), _('A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'),
                     ''.join(o), extra_head=head(), ld_type='CollectionPage', tail='')
 
 def banners():

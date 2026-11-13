@@ -159,7 +159,7 @@ def lesson_builder(hubs):
             '<li><a href="Glossary.html">Glossary of key words</a></li>'
             '<li><a href="Amazing_Facts.html">Amazing Facts with sources</a></li></ul><p>Or start from a topic:</p><ul>' + ''.join(f'<li><a href="{h}">{esc(n)}</a></li>' for h, n in hub_opts) + '</ul></div></noscript>'
             '<p class="no-print"><a href="Teachers.html">Teacher Sheets</a> · <a href="Glossary.html">Glossary</a> · <a href="Kids_Map.html">Kids Planet Map</a> · <a href="Satellite_Explorer.html">Satellite Explorer</a></p></div>\n')
-    return shell('Lesson_Builder.html', 'Lesson Plan Builder', 'Free printable lesson plans for K-3 to university, built from real environmental and space solutions that help both people and nature.', 'lesson-builder-page', 'earth', main)
+    return shell('Lesson_Builder.html', 'Free NGSS Lesson Plans', 'Free NGSS lesson plans for K-3 to university, built from real environmental and space solutions, with the Next Generation Science Standards named on the page.', 'lesson-builder-page', 'earth', main)
 
 PARTS = [  # id, emoji, name, slot label, x, y, [L1, L2, L3], extra L3 html
  ('bus', '📦', 'Bus', 'Spot for the bus', 50, 50),

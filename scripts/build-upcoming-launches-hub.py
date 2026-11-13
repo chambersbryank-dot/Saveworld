@@ -18,12 +18,12 @@ IMG = 'RocketLaunch.jpg'  # existing asset; OG card only
 HERO_CREDIT = 'Illustration: Saving Planets (canvas animation; no third-party feed)'
 
 TITLE = {
-  'en': 'Upcoming Launches | Saving Planets',
-  'fr': 'Prochains lancements | Saving Planets',
-  'es': 'Próximos lanzamientos | Saving Planets',
-  'ar': 'عمليات الإطلاق القادمة | Saving Planets',
-  'it': 'Prossimi lanci | Saving Planets',
-  'he': 'שיגורים קרובים | Saving Planets',
+  'en': 'Upcoming Satellite & Rocket Launches — Watch Live | Saving Planets',
+  'fr': 'Prochains lancements de satellites et de fusées — Regarder en direct | Saving Planets',
+  'es': 'Próximos lanzamientos de satélites y cohetes — Ver en directo | Saving Planets',
+  'ar': 'عمليات إطلاق الأقمار الصناعية والصواريخ القادمة — شاهدوا البث المباشر | Saving Planets',
+  'it': 'Prossimi lanci di satelliti e razzi — Guarda in diretta | Saving Planets',
+  'he': 'שיגורי לוויינים ורקטות קרובים — צפייה בשידור חי | Saving Planets',
 }
 H1 = {
   'en': 'Upcoming Launches',

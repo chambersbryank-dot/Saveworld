@@ -35,15 +35,15 @@ T = {
 'Space Junk': ('Débris spatiaux', 'Basura espacial', 'الحطام الفضائي'),
 'Earth + Space': ('Terre + Espace', 'Tierra + Espacio', 'الأرض + الفضاء'),
 # ---- lesson builder page
-'Lesson Plan Builder | Saving Planets': ('Générateur de plans de cours | Saving Planets', 'Creador de planes de clase | Saving Planets', 'منشئ خطط الدروس | Saving Planets'),
+'Free NGSS Lesson Plans | Saving Planets': ('Plans de cours NGSS gratuits | Saving Planets', 'Planes de clase NGSS gratuitos | Saving Planets', 'خطط دروس NGSS مجانية | Saving Planets'),
 'Pick a grade band, a topic and a lesson length. We build a printable plan from Saving Planets pages: objectives, activities, Amazing Facts, solution pages, vocabulary and citations.':
  ('Choisissez un niveau, un thème et une durée. Nous créons un plan imprimable à partir des pages Saving Planets : objectifs, activités, faits incroyables, pages de solutions, vocabulaire et citations.',
   'Elige un nivel, un tema y una duración. Creamos un plan imprimible a partir de las páginas de Saving Planets: objetivos, actividades, datos asombrosos, páginas de soluciones, vocabulario y citas.',
   'اختر المرحلة الدراسية والموضوع ومدة الدرس. سننشئ خطة قابلة للطباعة من صفحات Saving Planets: أهداف وأنشطة وحقائق مدهشة وصفحات حلول ومفردات ومراجع.'),
-'Free printable lesson plans for K-3 to university, built from real environmental and space solutions that help both people and nature.':
- ('Plans de cours imprimables gratuits, de la maternelle à l’université, construits à partir de vraies solutions pour l’environnement et l’espace qui aident les gens et la nature.',
-  'Planes de clase imprimibles y gratuitos, de infantil a la universidad, creados con soluciones reales para el medio ambiente y el espacio que ayudan a las personas y a la naturaleza.',
-  'خطط دروس مجانية قابلة للطباعة من الصفوف الأولى حتى الجامعة، مبنية على حلول حقيقية للبيئة والفضاء تساعد الناس والطبيعة.'),
+'Free NGSS lesson plans for K-3 to university, built from real environmental and space solutions, with the Next Generation Science Standards named on the page.':
+ ('Plans de cours NGSS gratuits et imprimables, de la maternelle à l’université, tirés de vraies solutions pour l’environnement et l’espace. Les normes Next Generation Science Standards sont indiquées sur la page.',
+  'Planes de clase NGSS gratuitos e imprimibles, de infantil a la universidad, creados con soluciones reales para el medio ambiente y el espacio. Las normas Next Generation Science Standards aparecen en la página.',
+  'خطط دروس NGSS مجانية وقابلة للطباعة من الصفوف الأولى حتى الجامعة، مبنية على حلول حقيقية للبيئة والفضاء. معايير Next Generation Science Standards مذكورة في الصفحة.'),
 'Grade band': ('Niveau', 'Nivel', 'المرحلة الدراسية'),
 'Topic': ('Thème', 'Tema', 'الموضوع'),
 'Lesson length': ('Durée du cours', 'Duración de la clase', 'مدة الدرس'),
