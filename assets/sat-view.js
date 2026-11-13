@@ -14,7 +14,7 @@
   });
   function boot(D) {
     var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = '', cat = 'all', lastBtn = null;
-    var geom = null, zoomT = 0, selectedLg = '';
+    var geom = null, zoomT = 0, selectedLg = '', orbitFilter = '';
     sats.forEach(function (s) { byId[s.id] = s; });
     var pre = (root.getAttribute('data-src') || '').indexOf('../') === 0 ? '../' : '';
     var cut = pre + 'assets/earth/cut/';
@@ -42,51 +42,173 @@
       var r = stage.getBoundingClientRect();
       return Math.max(0.45, (r.width || 800) / Math.max(r.height || 520, 1));
     }
-    function earthView() {
-      var aspect = stageAspect(), span = geom.r * 2 / 0.725, vw, vh;
+    function contentBox() {
+      var minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9, n = 0;
+      function add(x, y) { minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y); n++; }
+      [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt'), function (el) { add(+el.getAttribute('data-x'), +el.getAttribute('data-y')); });
+      if (mode === 'near') {
+        add(400 - 246, 268 - 102); add(400 + 246, 268 + 102);
+        add(440 - 196, 268 - 118); add(440 + 196, 268 + 118);
+      }
+      if (!n) { minX = 0; minY = 0; maxX = geom.W; maxY = geom.H; }
+      return { minX: minX, minY: minY, maxX: maxX, maxY: maxY };
+    }
+    function mapRect(W, H) {
+      return { x: gut.l, y: gut.t, w: Math.max(48, W - gut.l - gut.r), h: Math.max(48, H - gut.t - gut.b) };
+    }
+    function viewFrom(cx, cy, bw, bh, map, W, H) {
+      var scale = Math.max(bw / map.w, bh / map.h);
+      var viewW = scale * W, viewH = scale * H;
+      var mx = map.x + map.w / 2, my = map.y + map.h / 2;
+      return { x: cx - mx * scale, y: cy - my * scale, w: viewW, h: viewH };
+    }
+    function fitView(W, H) {
+      var b = contentBox(), map = mapRect(W, H);
+      var bw = Math.max(40, (b.maxX - b.minX) * 1.08), bh = Math.max(40, (b.maxY - b.minY) * 1.08);
+      return viewFrom((b.minX + b.maxX) / 2, (b.minY + b.maxY) / 2, bw, bh, map, W, H);
+    }
+    function closeView(W, H) {
+      var map = mapRect(W, H), span = geom.r * 2 / 0.725, aspect = map.w / map.h, vw, vh;
       if (aspect >= 1) { vh = span; vw = vh * aspect; }
       else { vw = span; vh = vw / aspect; }
-      return { x: geom.cx - vw / 2, y: geom.cy - vh / 2, w: vw, h: vh };
-    }
-    function allView() {
-      var aspect = stageAspect(), pad = 18;
-      var bw = geom.W + pad * 2, bh = geom.H + pad * 2, box = bw / bh, vw, vh;
-      if (aspect > box) { vh = bh; vw = vh * aspect; }
-      else { vw = bw; vh = vw / aspect; }
-      return { x: geom.W / 2 - vw / 2, y: geom.H / 2 - vh / 2, w: vw, h: vh };
+      return viewFrom(geom.cx, geom.cy, vw, vh, map, W, H);
     }
     function currentView() {
-      var a = earthView(), b = allView(), t = Math.max(0, Math.min(1, zoomT));
+      var box = canvas.getBoundingClientRect();
+      var W = box.width || 800, H = box.height || 520;
+      var a = fitView(W, H), b = closeView(W, H), t = Math.max(0, Math.min(1, zoomT));
       return { x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t, w: a.w + (b.w - a.w) * t, h: a.h + (b.h - a.h) * t };
     }
+    var gut = { l: 8, r: 8, t: 8, b: 8 };
     function applyView() {
       if (!geom) return;
-      var view = currentView();
-      var svg = canvas.querySelector('svg');
-      if (svg) svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
-      [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt,.orb-lab,.band-btn'), function (el) {
-        var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
-        el.style.left = ((x - view.x) / view.w * 100) + '%';
-        el.style.top = ((y - view.y) / view.h * 100) + '%';
-      });
-      requestAnimationFrame(uncollide);
+      placeLabels();
     }
-    function uncollide() {
+    function regimeOf(s) { return !s ? '' : (s.regime === 'sso' ? 'leo' : s.regime); }
+    function placeLabels() {
+      var box = canvas.getBoundingClientRect();
+      var W = box.width, H = box.height;
+      if (W < 40 || H < 40) return;
       var labs = [].slice.call(canvas.querySelectorAll('.orb-lab'));
-      labs.forEach(function (el) { el.style.marginTop = '0px'; });
-      labs.sort(function (a, b) { return a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left; });
-      for (var i = 1; i < labs.length; i++) {
-        var guard = 0;
-        while (guard < 8) {
-          var prev = labs[i - 1].getBoundingClientRect();
-          var cur = labs[i].getBoundingClientRect();
-          var hOverlap = !(prev.right < cur.left + 2 || cur.right < prev.left + 2);
-          var overlap = prev.bottom + 2 - cur.top;
-          if (!(hOverlap && overlap > 0)) break;
-          labs[i].style.marginTop = ((parseFloat(labs[i].style.marginTop) || 0) + overlap) + 'px';
+      var maxW = Math.max(72, Math.min(W * 0.34, 168));
+      labs.forEach(function (el) {
+        el.hidden = false;
+        el.style.maxWidth = maxW + 'px';
+        el.style.position = 'absolute';
+        el.style.margin = '0';
+        el.style.transform = 'none';
+        el.style.left = '0px';
+        el.style.top = '0px';
+      });
+      var view0 = (function () {
+        var b = contentBox();
+        var bw = Math.max(40, b.maxX - b.minX), bh = Math.max(40, b.maxY - b.minY);
+        return { cx: (b.minX + b.maxX) / 2, cy: (b.minY + b.maxY) / 2, bw: bw, bh: bh };
+      })();
+      function anchor(el) {
+        var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
+        var nx = (x - view0.cx) / Math.max(view0.bw, 1);
+        return { el: el, x: x, y: y, side: nx < 0 ? 'l' : 'r', ny: y };
+      }
+      var items = labs.map(anchor);
+      function pack(list, avail) {
+        var gap = 3, guard = 0;
+        while (guard < 4) {
+          var h = 0;
+          list.forEach(function (it) { h += it.el.offsetHeight; });
+          h += Math.max(0, list.length - 1) * gap;
+          if (h <= avail || guard === 3) return { h: h, gap: gap };
+          gap = 1;
+          canvas.style.setProperty('--lab-size', (0.74 - guard * 0.04) + 'rem');
           guard++;
         }
+        return { h: avail, gap: 1 };
       }
+      var left = items.filter(function (it) { return it.side === 'l'; }).sort(function (a, b) { return a.ny - b.ny; });
+      var right = items.filter(function (it) { return it.side === 'r'; }).sort(function (a, b) { return a.ny - b.ny; });
+      var avail = H - 8;
+      pack(left, avail); pack(right, avail);
+      var lw = 0, rw = 0;
+      left.forEach(function (it) { lw = Math.max(lw, it.el.offsetWidth); });
+      right.forEach(function (it) { rw = Math.max(rw, it.el.offsetWidth); });
+      lw = Math.min(maxW, Math.max(lw, left.length ? 48 : 0));
+      rw = Math.min(maxW, Math.max(rw, right.length ? 48 : 0));
+      function colsFor(list) {
+        var h = 0;
+        list.forEach(function (it) { h += it.el.offsetHeight; });
+        h += Math.max(0, list.length - 1) * 2;
+        return h > H - 4 ? 2 : 1;
+      }
+      var nL = left.length ? colsFor(left) : 0, nR = right.length ? colsFor(right) : 0;
+      gut.l = nL ? nL * lw + Math.max(0, nL - 1) * 4 + 18 : 8;
+      gut.r = nR ? nR * rw + Math.max(0, nR - 1) * 4 + 18 : 8;
+      gut.t = 18; gut.b = 18;
+      if (gut.l + gut.r > W * 0.78) {
+        var share = W * 0.78, scale = share / (gut.l + gut.r);
+        gut.l *= scale; gut.r *= scale;
+        lw = nL ? Math.max(36, (gut.l - 18 - Math.max(0, nL - 1) * 4) / nL) : lw;
+        rw = nR ? Math.max(36, (gut.r - 18 - Math.max(0, nR - 1) * 4) / nR) : rw;
+        labs.forEach(function (el) { el.style.maxWidth = Math.min(lw, rw) + 'px'; });
+      }
+      var view = currentView();
+      var svg = canvas.querySelector('svg.orb-svg');
+      if (svg) svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
+      [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt'), function (el) {
+        var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
+        var px = (x - view.x) / view.w * W, py = (y - view.y) / view.h * H;
+        el.style.left = px + 'px';
+        el.style.top = py + 'px';
+        var inside = px >= gut.l - 20 && px <= W - gut.r + 20 && py >= -8 && py <= H + 8;
+        el.classList.toggle('is-off', !inside);
+      });
+      function placeCol(list, side, slot, slots, colW) {
+        var gap = 2, heights = list.map(function (it) { return it.el.offsetHeight; });
+        var total = heights.reduce(function (s, h) { return s + h; }, 0) + Math.max(0, list.length - 1) * gap;
+        var y = Math.max(3, (H - total) / 2);
+        if (y + total > H - 2) y = 3;
+        list.forEach(function (it, i) {
+          var w = it.el.offsetWidth;
+          var x = side === 'l' ? 3 + slot * (colW + 4) : W - 3 - (slot + 1) * colW - slot * 4 + (colW - w);
+          it.el.style.left = x + 'px';
+          it.el.style.top = y + 'px';
+          it.el.hidden = false;
+          it.box = { x: x, y: y, w: w, h: heights[i] };
+          y += heights[i] + gap;
+        });
+      }
+      function stack(list, side, colW) {
+        if (!list.length) return;
+        var gap = 2, heights = list.map(function (it) { return it.el.offsetHeight; });
+        var total = heights.reduce(function (s, h) { return s + h; }, 0) + Math.max(0, list.length - 1) * gap;
+        if (total <= H - 4) { placeCol(list, side, 0, 1, colW); return; }
+        var mid = Math.ceil(list.length / 2);
+        placeCol(list.slice(0, mid), side, 0, 2, colW);
+        placeCol(list.slice(mid), side, 1, 2, colW);
+      }
+      stack(left, 'l', lw); stack(right, 'r', rw);
+      var lead = canvas.querySelector('.sat-leaders');
+      if (!lead) {
+        lead = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        lead.setAttribute('class', 'sat-leaders');
+        lead.setAttribute('aria-hidden', 'true');
+        canvas.appendChild(lead);
+      }
+      lead.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      lead.innerHTML = '';
+      items.forEach(function (it) {
+        var px = (it.x - view.x) / view.w * W, py = (it.y - view.y) / view.h * H;
+        var b = it.box;
+        if (!b) return;
+        var tx = it.side === 'l' ? b.x + b.w : b.x;
+        var ty = b.y + b.h / 2;
+        var reg = it.el.getAttribute('data-reg') || '';
+        var ln = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        ln.setAttribute('x1', px); ln.setAttribute('y1', py); ln.setAttribute('x2', tx); ln.setAttribute('y2', ty);
+        ln.setAttribute('class', 'sat-leader');
+        ln.setAttribute('data-reg', reg);
+        lead.appendChild(ln);
+      });
+      applyDim();
     }
     var BAND = ({
       en: {
@@ -237,13 +359,64 @@
       b.addEventListener('click', function () { selectBand(id); });
       canvas.appendChild(b);
     }
-    function addLabel(x, y, text) {
+    function addLabel(x, y, text, reg) {
       var lab = document.createElement('span');
-      lab.className = 'orb-lab';
+      lab.className = 'orb-lab is-' + (reg || 'x');
       lab.textContent = text;
       lab.setAttribute('data-x', x);
       lab.setAttribute('data-y', y);
+      lab.setAttribute('data-reg', reg || '');
       canvas.appendChild(lab);
+    }
+    function applyDim() {
+      var on = orbitFilter;
+      [].forEach.call(canvas.querySelectorAll('.orb-btn,.orb-lab'), function (el) {
+        var reg = el.getAttribute('data-reg') || '';
+        el.classList.toggle('is-hot', !!(on && reg === on));
+        el.classList.toggle('is-dim', !!(on && reg && reg !== on));
+      });
+      var svg = canvas.querySelector('svg.orb-svg');
+      if (svg) svg.setAttribute('data-orbit', on || '');
+      [].forEach.call(canvas.querySelectorAll('.sat-leader'), function (ln) {
+        var dim = !!(on && ln.getAttribute('data-reg') !== on);
+        ln.classList.toggle('is-dim', dim);
+      });
+    }
+    function showBandInfo(id) {
+      var info = bandCopy(id);
+      if (!info) { bandBox.hidden = true; return; }
+      bandBox.hidden = false;
+      bandBox.innerHTML = '<button type="button" class="sat-close" aria-label="' + esc(ui.close || 'Close') + '">×</button>' +
+        '<h3 id="sat-band-h">' + esc(info.t) + '</h3><p>' + esc(info.alt) + '</p><p>' + esc(info.use) + '</p>' +
+        '<p class="sat-photo-credit"><a href="' + esc(info.url) + '" target="_blank" rel="noopener">' + esc(info.src) + '</a></p>';
+      bandBox.querySelector('button').addEventListener('click', function () {
+        if (id === 'leo' || id === 'meo' || id === 'geo') toggleOrbit(id);
+        else { selectedBand = ''; bandBox.hidden = true; paintBand(''); syncOrbit(); }
+      });
+    }
+    function syncOrbit() {
+      [].forEach.call(root.querySelectorAll('.sat-orbits button'), function (b) {
+        var id = b.getAttribute('data-band');
+        var pressed = (id === 'leo' || id === 'meo' || id === 'geo') ? orbitFilter === id : selectedBand === id;
+        b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+      });
+    }
+    function clearOrbit() {
+      orbitFilter = '';
+      selectedBand = '';
+      bandBox.hidden = true;
+      paintBand('');
+      syncOrbit();
+      applyDim();
+    }
+    function toggleOrbit(id) {
+      if (orbitFilter === id) { clearOrbit(); return; }
+      orbitFilter = id;
+      selectedBand = id;
+      showBandInfo(id);
+      paintBand(id);
+      syncOrbit();
+      applyDim();
     }
     function layout(which) {
       var groups = { leo: [], meo: [], geo: [], heo: [], l1: [], l2: [], l5: [], cruise: [] };
@@ -268,10 +441,10 @@
         onEllipse(groups.heo, cx + 40, cy, 196, 118);
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.diagram || '') + '">' +
           '<defs></defs>' +
-          '<ellipse cx="400" cy="268" rx="118" ry="50" fill="none" stroke="rgba(186,224,255,.75)" stroke-width="1.4"/>' +
-          '<ellipse cx="400" cy="268" rx="178" ry="74" fill="none" stroke="rgba(186,224,255,.55)" stroke-width="1.4"/>' +
-          '<ellipse cx="400" cy="268" rx="246" ry="102" fill="none" stroke="rgba(186,224,255,.45)" stroke-width="1.4"/>' +
-          '<ellipse cx="440" cy="268" rx="196" ry="118" fill="none" stroke="rgba(255,214,120,.7)" stroke-width="1.4" stroke-dasharray="5 4"/>' +
+          '<ellipse class="ring ring-leo" cx="400" cy="268" rx="118" ry="50" fill="none" stroke="#7ad7ff" stroke-width="2"/>' +
+          '<ellipse class="ring ring-meo" cx="400" cy="268" rx="178" ry="74" fill="none" stroke="#ffb703" stroke-width="2"/>' +
+          '<ellipse class="ring ring-geo" cx="400" cy="268" rx="246" ry="102" fill="none" stroke="#e2b6ff" stroke-width="2"/>' +
+          '<ellipse class="ring ring-heo" cx="440" cy="268" rx="196" ry="118" fill="none" stroke="#ffd166" stroke-width="1.6" stroke-dasharray="5 4"/>' +
           '<image href="' + esc(earth) + '" x="328" y="196" width="144" height="144"/>' +
           '</svg>';
         /* band names are the buttons added after the svg */
@@ -311,16 +484,18 @@
       pts.forEach(function (p) {
         var b = document.createElement('button');
         b.type = 'button';
-        b.className = 'orb-btn';
+        var reg = regimeOf(p.s);
+        b.className = 'orb-btn is-' + reg;
         b.innerHTML = SAT;
         b.setAttribute('data-id', p.s.id);
+        b.setAttribute('data-reg', reg);
         b.setAttribute('data-x', p.x);
         b.setAttribute('data-y', p.y);
         b.id = 'sat-' + p.s.id;
         b.setAttribute('aria-label', shortName(p.s) + '. ' + kindWord(p.s));
         b.addEventListener('click', function () { openCard(p.s, b); });
         canvas.appendChild(b);
-        addLabel(p.x, p.y, shortName(p.s));
+        addLabel(p.x, p.y, shortName(p.s), reg);
       });
       lgs.forEach(function (g) {
         var b = document.createElement('button');
@@ -341,15 +516,8 @@
           selectBand(g.id);
         });
         canvas.appendChild(b);
-        addLabel(g.x, g.y, g.name);
+        addLabel(g.x, g.y, g.name, g.id);
       });
-      if (which === 'near') {
-        addBand(528, 230, 'leo', 'LEO');
-        addBand(588, 200, 'meo', 'MEO');
-        addBand(656, 168, 'geo', 'GEO');
-        addBand(640, 400, 'heo', 'HEO');
-        addBand(470, 320, 'sso', 'SSO');
-      }
       applyView();
       if (selectedBand) paintBand(selectedBand);
     }
@@ -382,12 +550,13 @@
     }
     function draw() {
       var next = (cat === 'lagrange' || cat === 'beyond' || cat === 'science') ? 'far' : 'near';
-      if (next !== mode) zoomT = next === 'near' ? 0 : 1;
+      if (next !== mode) zoomT = 0;
       mode = next;
       layout(mode);
     }
     function setCat(next) {
       cat = next === 'lagrange' ? 'beyond' : next;
+      if (cat === 'all') clearOrbit();
       [].forEach.call(root.querySelectorAll('button.wm-cat'), function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-cat') === cat ? 'true' : 'false');
       });
@@ -409,10 +578,37 @@
     var zout = zbtn('−', ui.zoomOut || 'Zoom out');
     var zfit = zbtn('⌂', ui.zoomFit || 'Fit the planet');
     [zin, zout, zfit].forEach(function (b) { zbar.appendChild(b); });
-    stage.appendChild(zbar);
-    zin.addEventListener('click', function () { zoomT = Math.max(0, zoomT - 0.22); applyView(); });
-    zout.addEventListener('click', function () { zoomT = Math.min(1, zoomT + 0.22); applyView(); });
+    stage.parentNode.insertBefore(zbar, stage);
+    zin.addEventListener('click', function () { zoomT = Math.min(1, zoomT + 0.22); applyView(); });
+    zout.addEventListener('click', function () { zoomT = Math.max(0, zoomT - 0.22); applyView(); });
     zfit.addEventListener('click', function () { zoomT = 0; applyView(); });
+    var orbits = document.createElement('div');
+    orbits.className = 'sat-orbits';
+    orbits.setAttribute('role', 'group');
+    orbits.setAttribute('aria-label', 'LEO MEO GEO');
+    ['leo', 'meo', 'geo', 'heo', 'sso'].forEach(function (id, i, all) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'band-btn is-' + id;
+      b.textContent = id.toUpperCase();
+      b.setAttribute('data-band', id);
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', function () {
+        if (id === 'leo' || id === 'meo' || id === 'geo') toggleOrbit(id);
+        else {
+          if (selectedBand === id) { selectedBand = ''; bandBox.hidden = true; paintBand(''); syncOrbit(); }
+          else { selectedBand = id; showBandInfo(id); paintBand(id); syncOrbit(); }
+        }
+      });
+      b.addEventListener('keydown', function (e) {
+        var dir = e.key === 'ArrowRight' ? (rtl ? -1 : 1) : e.key === 'ArrowLeft' ? (rtl ? 1 : -1) : 0;
+        if (!dir) return;
+        e.preventDefault();
+        all[(i + dir + all.length) % all.length] && orbits.querySelectorAll('button')[(i + dir + all.length) % all.length].focus();
+      });
+      orbits.appendChild(b);
+    });
+    stage.parentNode.insertBefore(orbits, stage);
     [].forEach.call(root.querySelectorAll('button.wm-cat'), function (b, i, all) {
       b.addEventListener('click', function () { setCat(b.getAttribute('data-cat')); });
       b.addEventListener('keydown', function (e) {
