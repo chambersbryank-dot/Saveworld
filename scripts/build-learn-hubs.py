@@ -255,19 +255,156 @@ def rocket_page(l, NL):
     o.append(f'<p class="lnote"><small>{UR("credit")}</small></p>' + YT_JS)
     s_ = page_from_learn(l, R.PAGE, R.NAME[l], R.LINE[l], ''.join(o), NL)
     return s_.replace('</p></div>', '</p>' + ROCKET_SVG.replace('{lab}', UR('anim')) + '</div>', 1)
-def landing(l, NL):
-    f = d(l) + 'Learn.html'; s = rd(f)
-    s = re.sub(r'(<div class="page-hero-content"><h1>[^<]*</h1>)<p[^>]*>.*?</p>', lambda m: m.group(1) + f'<p class="lhv">{esc(X.VISION[l])}</p>', s, count=1, flags=re.S)
-    cnt = lambda k: 30 if k == 'aero' else sum(1 for r in X.ROAD if r[3] == k)  # the aero roadmap holds all 30 courses
-    cards = ''.join(f'<li{" class=\"lht-main\"" if t[0] == "aero" else ""}><a href="{t[1]}"><b>{t[2]} {esc(t[3][l])}</b><small>{esc(t[4][l])}</small><small>{esc(u("ncourses", l, n=cnt(t[0])) if cnt(t[0]) != 1 else u("ncourse1", l))}</small></a></li>' for t in X.TOPICS)
-    more = [(J.PAGE, esc(J.SHORT[l])), (R.PAGE, esc(R.SHORT[l])), ('Courses.html', NL.get('Courses.html')), ('Play_and_Learn.html', NL.get('Play_and_Learn.html')), ('Teachers.html', NL.get('Teachers.html')), ('Lesson_Builder.html', NL.get('Lesson_Builder.html')),
-            ('Cadets.html', NL.get('Cadets.html')), ('AP_IB_Physics.html', NL.get('AP_IB_Physics.html')), ('Careers.html', NL.get('Careers.html'))]
-    blk = (f'<!-- LEARNHUB:START -->{CSS}<h2 id="topics">{esc(u("topics", l))}</h2><ul class="lht">{cards}</ul>'
-           f'<h2>{esc(u("more", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{p}">{t}</a></li>' for p, t in more if t) + '</ul><!-- LEARNHUB:END -->')
-    if '<!-- LEARNHUB:START -->' in s: s = re.sub(r'<!-- LEARNHUB:START -->.*?<!-- LEARNHUB:END -->', lambda m: blk, s, flags=re.S)
+STUDY_CSS = ('<style>.lst-filters{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin:.7rem 0 1rem}'
+    '.lst-filters [role=radiogroup]{display:flex;flex-wrap:wrap;gap:.45rem}'
+    '.lst-filters button{min-height:44px;padding:.35rem .95rem;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;color:#fff;'
+    'background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);'
+    'border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08)}'
+    '.lst-filters button[aria-checked=true]{box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 0 0 3px #fff}'
+    '.lst-filters button:focus-visible,.lst-filters input:focus-visible{outline:3px solid #fff;outline-offset:3px}'
+    '.lst-filters input[type=search]{min-height:44px;min-width:min(100%,14rem);border-radius:999px;padding:.35rem .95rem;font:inherit;color:inherit;background:rgba(10,79,120,.28);border:1px solid rgba(160,225,255,.55)}'
+    '.lht .lstudy{display:flex;flex-direction:column;gap:.4rem;height:100%;box-sizing:border-box;padding:1rem 1.1rem;border-radius:18px;border:1px solid rgba(160,225,255,.35);background:rgba(10,79,120,.16)}'
+    '.lht .lstudy>a{display:flex;flex-direction:column;gap:.3rem;padding:0;border:0;background:transparent;height:auto;text-decoration:none;color:inherit}'
+    '.lht .lht-main.lstudy{border-color:rgba(160,225,255,.75);background:rgba(10,79,120,.3)}'
+    '.ltags{display:flex;flex-wrap:wrap;gap:.35rem}.ltag{align-self:flex-start;font-size:.75rem;font-weight:800;padding:.12rem .55rem;border-radius:999px;background:rgba(10,79,120,.55);border:1px solid rgba(160,225,255,.5)}'
+    '.lplanet{margin:0;font-size:.92rem}.lplanet a{font-weight:800}.lsg[hidden],.lstudy[hidden],#lst-empty[hidden]{display:none!important}'
+    '@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){.lst-filters button{background:#0a4f78;background-image:none;box-shadow:none}}'
+    '@media (forced-colors:active){.lst-filters button{border:1px solid ButtonText}}</style>')
+STUDY_JS = ("<script>(function(){var bar=document.querySelector('.lst-filters');if(!bar)return;"
+    "var chips=[].slice.call(bar.querySelectorAll('button[data-lv]'));var q=bar.querySelector('input');"
+    "var cards=[].slice.call(document.querySelectorAll('.lstudy'));var groups=[].slice.call(document.querySelectorAll('.lsg'));"
+    "var empty=document.getElementById('lst-empty');var level='all';"
+    "function apply(){var n=0,query=(q&&q.value||'').trim().toLowerCase();cards.forEach(function(c){"
+    "var lv=(c.getAttribute('data-lv')||'').split(' ');"
+    "var ok=(level==='all'||lv.indexOf(level)>=0)&&(!query||(c.getAttribute('data-name')||'').toLowerCase().indexOf(query)>=0);"
+    "c.hidden=!ok;if(ok)n++});groups.forEach(function(g){var any=false;g.querySelectorAll('.lstudy').forEach(function(c){if(!c.hidden)any=true});g.hidden=!any});"
+    "if(empty)empty.hidden=n>0}"
+    "function pick(b){level=b.getAttribute('data-lv');chips.forEach(function(x){var on=x===b;x.setAttribute('aria-checked',on?'true':'false');x.tabIndex=on?0:-1});apply()}"
+    "bar.addEventListener('click',function(e){var b=e.target.closest('button[data-lv]');if(!b)return;pick(b)});"
+    "bar.addEventListener('keydown',function(e){var i=chips.indexOf(document.activeElement);if(i<0)return;"
+    "var dir=document.documentElement.getAttribute('dir')==='rtl'?-1:1,k=e.key,n=null;"
+    "if(k==='ArrowRight')n=i+dir;else if(k==='ArrowLeft')n=i-dir;else if(k==='Home')n=0;else if(k==='End')n=chips.length-1;else return;"
+    "e.preventDefault();n=(n+chips.length)%chips.length;chips[n].focus();pick(chips[n])});"
+    "if(q)q.addEventListener('input',apply);apply()})();</script>")
+# Study key -> (page, levels). Levels are only those the study page actually supports.
+STUDY_ORDER = {
+ 'applied': [('rocket', R.PAGE, 'university'), ('jet', J.PAGE, 'university'), ('aero', 'Learn_Aero.html', 'k12 university teachers'), ('orbits', 'Learn_Orbits.html', 'k12 university teachers')],
+ 'foundation': [('physics', 'Learn_Physics.html', 'k12 university teachers'), ('math', 'Learn_Math.html', 'university'), ('eng', 'Learn_Engineering.html', 'university'), ('chem', 'Learn_Chemistry.html', 'university')],
+}
+# One existing sentence on that study, plus the solution page it already points at.
+HELP_SPEC = {
+ 'rocket': ('pintro', None),
+ 'jet': ('year', 4),
+ 'aero': ('year', 3),
+ 'orbits': ('course', 'Orbital_Mechanics.html', 0, 'Earth_Observation.html'),
+ 'physics': ('course', 'Physics_I.html', 1, 'Earth_Observation.html'),
+ 'math': ('course', 'Calculus_I.html', 1, 'Polar.html'),
+ 'eng': ('course', 'Thermodynamics.html', 3, 'Sustainable_Aviation.html'),
+ 'chem': ('course', 'General_Chemistry_I.html', 0, 'Earth_Observation.html'),
+}
+def catalog_pages():
+    s = rd('Courses.html')
+    return set(re.findall(r'<h3><a href="([\w_]+\.html)">', s))
+def study_count(l, page, catalog):
+    s = rd(d(l) + page)
+    main = re.search(r'<main id="main">(.*)</main>', s, re.S).group(1)
+    cut = main.find('id="planet"')
+    body = main[:cut] if cut >= 0 else main
+    found = []
+    for h in re.findall(r'href="(?:\.\./)?([A-Za-z0-9_]+\.html)', body):
+        if h in catalog and h not in found: found.append(h)
+    return len(found), found
+def course_sentences(l, page):
+    raw = rd(d(l) + page)
+    m = re.search(r'class="crs-planet">(.*?)</div>', raw, re.S)
+    if not m: raise SystemExit(f'no planet block {l} {page}')
+    out = []
+    for p in re.findall(r'<p>(.*?)</p>', m.group(1), re.S):
+        text = html.unescape(re.sub(r'<[^>]+>', '', p))
+        text = re.sub(r'\s+', ' ', text).strip()
+        out.extend([x for x in re.split(r'(?<=[.!?؟])\s+', text) if x])
+    return out
+def marker_label(text, page):
+    m = re.search(r'\{' + re.escape(page) + r'\|([^}]*)\}', text)
+    if not m: raise SystemExit(f'missing marker {page} in {text[:80]}')
+    return m.group(1)
+def help_html(l, key):
+    spec = HELP_SPEC[key]
+    see = esc(X.STUDY['see'][l])
+    if spec[0] == 'year':
+        return links(l, J.PNOTE[spec[1]][l])
+    if spec[0] == 'pintro':
+        sent = J.PINTRO[l].split('. ', 1)[1]
+        if not sent.endswith('.'): sent += '.'
+        sa = marker_label(J.PNOTE[1][l], 'Sustainable_Aviation.html')
+        eo = marker_label(J.PNOTE[3][l], 'Earth_Observation.html')
+        return (esc(sent) + f' {see} <a href="Sustainable_Aviation.html">{esc(sa)}</a> '
+                + esc(X.STUDY['and'][l]) + f' <a href="Earth_Observation.html">{esc(eo)}</a>.')
+    page, which, sol = spec[1], spec[2], spec[3]
+    sents = course_sentences(l, page)
+    if isinstance(which, int):
+        if which >= len(sents): raise SystemExit(f'{l} {page}: wanted sentence {which}, have {len(sents)}')
+        sent = sents[which]
     else:
-        a = s.index('<div class="lw">') + len('<div class="lw">'); b = s.index('<!-- STDMAP:START -->', a) if '<!-- STDMAP:START -->' in s[a:] else s.index('</div>', a)
-        s = s[:a] + blk + s[b:]
+        hit = [s for s in sents if s.startswith(which)]
+        if not hit: raise SystemExit(f'{l} {page}: no sentence starting {which!r}')
+        sent = hit[0]
+    label = marker_label(J.PNOTE[3][l] if sol == 'Earth_Observation.html' else J.PNOTE[4][l] if sol == 'Sustainable_Aviation.html' else J.PNOTE[3][l], sol if sol != 'Polar.html' else 'Polar.html')
+    if sol == 'Polar.html':
+        label = marker_label(J.PNOTE[3][l], 'Polar.html')
+    return esc(sent) + f' {see} <a href="{sol}">{esc(label)}</a>.'
+def study_card(l, key, page, levels, catalog):
+    n, _ = study_count(l, page, catalog)
+    expect = {'rocket': 1, 'jet': 30, 'aero': 30, 'orbits': 2, 'physics': 2, 'math': 7, 'eng': 9, 'chem': 1}[key]
+    if n != expect: raise SystemExit(f'{l} {page} course count {n}, expected {expect}')
+    name = X.STUDY[key][l] if key in ('rocket', 'jet') else TOP[key][3][l]
+    line = R.LINE[l] if key == 'rocket' else J.LINE[l] if key == 'jet' else TOP[key][4][l]
+    count = u('ncourse1', l) if n == 1 else u('ncourses', l, n=n)
+    tags = ''
+    if 'k12' in levels: tags += f'<span class="ltag">{esc(X.STUDY["k12"][l])}</span>'
+    if 'university' in levels: tags += f'<span class="ltag">{esc(X.STUDY["uni"][l])}</span>'
+    feat = ' lht-main' if key == 'rocket' else ''
+    return (f'<li class="lstudy{feat}" data-lv="{levels}" data-name="{esc(name)}">'
+            f'<a href="{page}"><b>{esc(name)}</b><small>{esc(line)}</small><small>{esc(count)}</small>'
+            f'<span class="ltags">{tags}</span></a>'
+            f'<p class="lplanet"><strong>{esc(X.STUDY["help"][l])}:</strong> {help_html(l, key)}</p></li>')
+def landing(l, NL=None):
+    f = d(l) + 'Learn.html'; s = rd(f)
+    catalog = catalog_pages()
+    groups = ''
+    for gid in ('applied', 'foundation'):
+        cards = ''.join(study_card(l, k, p, lv, catalog) for k, p, lv in STUDY_ORDER[gid])
+        groups += (f'<section class="lsg" aria-labelledby="lsg-{gid}"><h3 id="lsg-{gid}">{esc(X.STUDY[gid][l])}</h3>'
+                   f'<ul class="lht">{cards}</ul></section>')
+    chips = ''.join(
+        f'<button type="button" role="radio" data-lv="{k}" aria-checked="{"true" if k == "all" else "false"}" tabindex="{"0" if k == "all" else "-1"}">{esc(X.STUDY[k][l])}</button>'
+        for k in ('all', 'k12', 'uni', 'teachers'))
+    blk = (f'<!-- LEARNHUB:START -->{CSS}{STUDY_CSS}<h2 id="topics">{esc(u("topics", l))}</h2>'
+           f'<div class="lst-filters"><div role="radiogroup" aria-label="{esc(X.STUDY["level"][l])}">{chips}</div>'
+           f'<input type="search" aria-label="{esc(X.STUDY["byname"][l])}" placeholder="{esc(X.STUDY["byname"][l])}"></div>'
+           f'{groups}<p id="lst-empty" hidden>{esc(X.STUDY["none"][l])}</p>'
+           f'<h2>{esc(u("more", l))}</h2><ul class="lhm">'
+           f'<li><a href="Teachers.html">{esc(X.STUDY["sheets"][l])}</a></li>'
+           f'<li><a href="Lesson_Builder.html">{esc(X.STUDY["builder"][l])}</a></li></ul>'
+           f'{STUDY_JS}<!-- LEARNHUB:END -->')
+    if '<!-- LEARNHUB:START -->' not in s: raise SystemExit(f'no learn hub marker in {f}')
+    s = re.sub(r'<!-- LEARNHUB:START -->.*?<!-- LEARNHUB:END -->', lambda m: blk, s, flags=re.S)
+    title, desc = X.STUDY['title'][l], X.STUDY['desc'][l]
+    s = re.sub(r'<title>.*?</title>', f'<title>{esc(title)} | Saving Planets</title>', s, count=1, flags=re.S)
+    s = re.sub(r'(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*"', lambda m: m.group(1) + esc(title) + ' | Saving Planets"', s)
+    s = re.sub(r'(<meta (?:name="description"|property="og:description"|name="twitter:description") content=")[^"]*"', lambda m: m.group(1) + esc(desc) + '"', s)
+    s = re.sub(r'("description": ")(.*?)(")', lambda m: m.group(1) + desc.replace('\\', '\\\\').replace('"', '\\"') + m.group(3), s, count=1)
+    # The lead FAQ answer is the old "three tracks / six levels" line (Hebrew used the old hero). Replace that one answer.
+    old_faq = {
+        'en': 'Three tracks, six levels: from a child’s first question about orbits to research-grade derivations. The math is taught inside each track, step by step.',
+        'fr': 'Trois parcours, six niveaux : de la première question d’un enfant sur les orbites jusqu’aux démonstrations de niveau recherche. Les mathématiques sont enseignées dans chaque parcours, pas à pas.',
+        'es': 'Tres itinerarios, seis niveles: desde la primera pregunta de un niño sobre las órbitas hasta deducciones de nivel de investigación. Las matemáticas se enseñan dentro de cada itinerario, paso a paso.',
+        'ar': 'ثلاثة مسارات وستة مستويات: من أول سؤال لطفل عن المدارات إلى اشتقاقات بمستوى البحث العلمي. تُدرَّس الرياضيات داخل كل مسار خطوة بخطوة.',
+        'it': 'Tre percorsi, sei livelli: dalla prima domanda di un bambino sulle orbite alle dimostrazioni di livello di ricerca. La matematica è insegnata dentro ogni percorso, passo dopo passo.',
+        'he': 'Free, university-level STEM and aerospace learning in six languages. Start from first principles and work all the way to designing what flies, with every lesson tied to real work that helps people and the planet.',
+    }[l]
+    if old_faq not in s: raise SystemExit(f'old FAQ answer missing in {f}')
+    s = s.replace(old_faq, desc)
     return wr(f, s)
 def crumbs(l, C):
     ch = 0
@@ -314,4 +451,11 @@ def main():
         for t in X.TOPICS + [(None, J.PAGE), (None, R.PAGE)]:
             ch += sitemap_pages.ensure_url(f'{SITE}{d(l)}{t[1]}', today, 'monthly', '0.7')
     print(f'build-learn-hubs: writes={ch}')
-if __name__ == '__main__': main(); main()  # second pass: hubs copy Learn.html chrome, so one more pass converges (second prints writes=0)
+def landing_only():
+    ch = 0
+    for l in LANGS:
+        ch += landing(l)
+    print(f'learn studies: writes={ch}')
+if __name__ == '__main__':
+    if '--landing-only' in sys.argv: landing_only()
+    else: main(); main()  # second pass: hubs copy Learn.html chrome, so one more pass converges (second prints writes=0)
