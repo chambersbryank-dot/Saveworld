@@ -51,4 +51,35 @@
       else fallback();
     });
   });
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-copy]');
+    if (!btn) return;
+    var node = document.getElementById(btn.getAttribute('data-copy'));
+    if (!node) return;
+    var text = (node.getAttribute('data-copy-text') || node.textContent || '').replace(/^\s+|\s+$/g, '');
+    var status = btn.parentNode.querySelector('.share-ok');
+    var label = btn.getAttribute('data-label') || btn.textContent;
+    var copied = btn.getAttribute('data-copied') || 'Copied';
+    function done() {
+      if (status) status.textContent = copied;
+      btn.setAttribute('aria-label', copied);
+      setTimeout(function () {
+        if (status) status.textContent = '';
+        btn.setAttribute('aria-label', label);
+      }, 2500);
+    }
+    function fallback() {
+      var area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.left = '-9999px';
+      document.body.appendChild(area);
+      area.select();
+      try { document.execCommand('copy'); done(); } catch (err) {}
+      document.body.removeChild(area);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  });
 })();

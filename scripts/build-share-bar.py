@@ -5,27 +5,33 @@ Removes the older share rows (SHARE blocks and the Learn/Teachers Classroom row)
 Redirect stubs and the Google verification file are left alone. Idempotent."""
 import html, os, re, urllib.parse
 SITE = 'https://www.savingplanets.com/'
-V = '20261113c'
+V = '20261113d'
 LANGS = ('en', 'fr', 'es', 'ar', 'it', 'he')
 T = {
  'en': dict(h='Share this page', share='Share', shareA='Share this page',
             x='Share on X', fb='Share on Facebook', li='Share on LinkedIn',
-            mail='Email', mailA='Share by email', copy='Copy link', copied='Copied'),
+            mail='Email', mailA='Share by email', copy='Copy link', copied='Copied',
+            spread='Help spread the word'),
  'fr': dict(h='Partager cette page', share='Partager', shareA='Partager cette page',
             x='Partager sur X', fb='Partager sur Facebook', li='Partager sur LinkedIn',
-            mail='E-mail', mailA='Partager par e-mail', copy='Copier le lien', copied='Copié'),
+            mail='E-mail', mailA='Partager par e-mail', copy='Copier le lien', copied='Copié',
+            spread='Aidez à faire passer le mot'),
  'es': dict(h='Compartir esta página', share='Compartir', shareA='Compartir esta página',
             x='Compartir en X', fb='Compartir en Facebook', li='Compartir en LinkedIn',
-            mail='Correo', mailA='Compartir por correo', copy='Copiar enlace', copied='Copiado'),
+            mail='Correo', mailA='Compartir por correo', copy='Copiar enlace', copied='Copiado',
+            spread='Ayuda a correr la voz'),
  'ar': dict(h='شارك هذه الصفحة', share='مشاركة', shareA='شارك هذه الصفحة',
             x='المشاركة على X', fb='المشاركة على فيسبوك', li='المشاركة على لينكدإن',
-            mail='بريد', mailA='المشاركة بالبريد', copy='نسخ الرابط', copied='تم النسخ'),
+            mail='بريد', mailA='المشاركة بالبريد', copy='نسخ الرابط', copied='تم النسخ',
+            spread='ساعد في نشر الخبر'),
  'it': dict(h='Condividi questa pagina', share='Condividi', shareA='Condividi questa pagina',
             x='Condividi su X', fb='Condividi su Facebook', li='Condividi su LinkedIn',
-            mail='Email', mailA='Condividi via email', copy='Copia link', copied='Copiato'),
+            mail='Email', mailA='Condividi via email', copy='Copia link', copied='Copiato',
+            spread='Aiuta a far girare la voce'),
  'he': dict(h='שתפו את הדף', share='שיתוף', shareA='שתפו את הדף',
             x='שיתוף ב-X', fb='שיתוף בפייסבוק', li='שיתוף בלינקדאין',
-            mail='דוא״ל', mailA='שיתוף בדוא״ל', copy='העתקת הקישור', copied='הועתק'),
+            mail='דוא״ל', mailA='שיתוף בדוא״ל', copy='העתקת הקישור', copied='הועתק',
+            spread='עזרו להפיץ את הבשורה'),
 }
 SKIP_DIR = {'assets', 'scripts', 'node_modules', '.git', 'i18n', 'search'}
 def e(s): return html.escape(s, quote=True)
@@ -44,7 +50,8 @@ def render(lang, url, title, prefix):
         f'<a class="share-btn share-mail" href="{e(mail)}" aria-label="{e(t["mailA"])}">{e(t["mail"])}</a>'
         f'<button type="button" class="share-btn share-copy" data-label="{e(t["copy"])}" aria-label="{e(t["copy"])}">{e(t["copy"])}</button>'
         f'<span class="share-ok" role="status" aria-live="polite"></span>'
-        f'</div></section><!-- SHARE:END -->')
+        f'</div><p class="share-more"><a class="share-btn share-spread" href="{prefix}Spread_the_Word.html">{e(t["spread"])}</a></p>'
+        f'</section><!-- SHARE:END -->')
 def lang_of(rel, text):
     top = rel.split('/')[0] if '/' in rel else ''
     if top in T: return top

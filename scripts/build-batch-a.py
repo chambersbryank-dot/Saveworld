@@ -34,7 +34,7 @@ def put(s, name, inner, anchor_re, before=False):
 def assets(s):
     if 'batch-a.css' not in s: s = s.replace('</head>', f'<link rel="stylesheet" href="batch-a.css?v={CSSV}">\n</head>', 1)
     if 'assets/share-bar.js' not in s and '<!-- SHARE:START -->' in s:
-        s = s.replace('</body>', '<script src="assets/share-bar.js?v=20261113c" defer></script>\n</body>', 1)
+        s = s.replace('</body>', '<script src="assets/share-bar.js?v=20261113d" defer></script>\n</body>', 1)
     return s
 
 # ---------- 1) share bar ----------
