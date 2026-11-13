@@ -294,12 +294,12 @@
   var ui = ADD[lang] || ADD.en;
   /* SpaceX page checked 13 Nov 2026: window opens 4:45 p.m. CT (22:45 UTC), 75 minutes, pending approval. */
   var STAR = {
-    en: ['SpaceX says Flight 15 is preparing to launch as soon as Friday, 13 November 2026. A 75-minute window opens at 4:45 p.m. Central Time, pending regulatory approval.','The upper stage is planned to deploy 26 Starlink V3 satellites. SpaceX says each one is meant to add 1 terabit of capacity to the Starlink network.','This is a commercial communications payload. It is not an Earth-observation, climate, weather, or disaster-alert mission.','Three of the satellites carry cameras to photograph Starship’s heat shield for this flight test. That is a rocket-test job, not an instrument for the planet’s health.'],
-    fr: ['SpaceX dit que le vol 15 se prépare à partir dès le vendredi 13 novembre 2026. Une fenêtre de 75 minutes s’ouvre à 16 h 45, heure du Centre, sous réserve d’autorisation.','L’étage supérieur doit déployer 26 satellites Starlink V3. SpaceX dit que chacun doit ajouter 1 térabit de capacité au réseau Starlink.','C’est une charge utile de télécommunications commerciales. Ce n’est pas une mission d’observation de la Terre, de climat, de météo ou d’alerte aux catastrophes.','Trois satellites emportent des caméras pour photographier le bouclier thermique de Starship pendant cet essai. C’est un travail d’essai de fusée, pas un instrument pour la santé de la planète.'],
-    es: ['SpaceX dice que el vuelo 15 se prepara para lanzarse a partir del viernes 13 de noviembre de 2026. Una ventana de 75 minutos se abre a las 4:45 p. m., hora del Centro, pendiente de aprobación.','La etapa superior debe desplegar 26 satélites Starlink V3. SpaceX dice que cada uno aportará 1 terabit de capacidad a la red Starlink.','Es una carga de comunicaciones comerciales. No es una misión de observación de la Tierra, clima, meteorología o alertas de desastres.','Tres satélites llevan cámaras para fotografiar el escudo térmico de Starship en esta prueba. Es una tarea de ensayo del cohete, no un instrumento para la salud del planeta.'],
-    ar: ['تقول سبيس إكس إن الرحلة 15 تستعد للانطلاق ابتداءً من الجمعة 13 نوفمبر 2026. تفتح نافذة من 75 دقيقة عند 4:45 مساءً بتوقيت الوسط، بانتظار الموافقة التنظيمية.','يُخطط للمرحلة العليا أن تنشر 26 قمرًا من ستارلينك V3. تقول سبيس إكس إن كل قمر يهدف إلى إضافة 1 تيرابت من السعة إلى شبكة ستارلينك.','هذه حمولة اتصالات تجارية. ليست مهمة لرصد الأرض أو المناخ أو الطقس أو إنذار الكوارث.','ثلاثة أقمار تحمل كاميرات لتصوير الدرع الحراري لستارشيب في هذا الاختبار. هذا عمل اختبار للصاروخ، وليس أداة لصحة الكوكب.'],
-    it: ['SpaceX dice che il volo 15 si prepara a partire da venerdì 13 novembre 2026. Una finestra di 75 minuti si apre alle 16:45 ora del Centro, in attesa di autorizzazione.','Lo stadio superiore deve rilasciare 26 satelliti Starlink V3. SpaceX dice che ciascuno deve aggiungere 1 terabit di capacità alla rete Starlink.','È un carico di comunicazioni commerciali. Non è una missione di osservazione della Terra, clima, meteo o allerta disastri.','Tre satelliti portano telecamere per fotografare lo scudo termico di Starship in questo test. È un compito di prova del razzo, non uno strumento per la salute del pianeta.'],
-    he: ['ספייס אקס אומרת שטיסה 15 נערכת לשיגור החל מיום שישי, 13 בנובמבר 2026. חלון של 75 דקות נפתח ב-16:45 לפי שעון המרכז, בכפוף לאישור.','השלב העליון מתוכנן לשחרר 26 לווייני סטארלינק V3. ספייס אקס אומרת שכל אחד אמור להוסיף טרה-ביט אחד של קיבולת לרשת.','זה מטען תקשורת מסחרי. זו אינה משימת תצפית על כדור הארץ, אקלים, מזג אוויר או התרעת אסונות.','שלושה לוויינים נושאים מצלמות כדי לצלם את מגן החום של סטארשיפ במבחן הזה. זו עבודת מבחן של הטיל, לא מכשיר לבריאות כוכב הלכת.']
+    en: ['SpaceX says Flight 15 is preparing to launch as soon as Friday, 13 November 2026. A 75-minute window opens at 4:45 p.m. Central Time, pending regulatory approval.','The upper stage is planned to deploy 26 Starlink V3 satellites. SpaceX says each one is meant to add 1 terabit of capacity to the Starlink network.','SpaceX describes these V3 satellites as communications capacity, not Earth sensing.','Three of the satellites carry cameras to photograph Starship’s heat shield for this flight test. That is a rocket-test job, not an instrument for the planet’s health.'],
+    fr: ['SpaceX dit que le vol 15 se prépare à partir dès le vendredi 13 novembre 2026. Une fenêtre de 75 minutes s’ouvre à 16 h 45, heure du Centre, sous réserve d’autorisation.','L’étage supérieur doit déployer 26 satellites Starlink V3. SpaceX dit que chacun doit ajouter 1 térabit de capacité au réseau Starlink.','SpaceX décrit ces satellites V3 comme de la capacité de communication, pas comme des capteurs de la Terre.','Trois satellites emportent des caméras pour photographier le bouclier thermique de Starship pendant cet essai. C’est un travail d’essai de fusée, pas un instrument pour la santé de la planète.'],
+    es: ['SpaceX dice que el vuelo 15 se prepara para lanzarse a partir del viernes 13 de noviembre de 2026. Una ventana de 75 minutos se abre a las 4:45 p. m., hora del Centro, pendiente de aprobación.','La etapa superior debe desplegar 26 satélites Starlink V3. SpaceX dice que cada uno aportará 1 terabit de capacidad a la red Starlink.','SpaceX describe estos satélites V3 como capacidad de comunicaciones, no como sensores de la Tierra.','Tres satélites llevan cámaras para fotografiar el escudo térmico de Starship en esta prueba. Es una tarea de ensayo del cohete, no un instrumento para la salud del planeta.'],
+    ar: ['تقول سبيس إكس إن الرحلة 15 تستعد للانطلاق ابتداءً من الجمعة 13 نوفمبر 2026. تفتح نافذة من 75 دقيقة عند 4:45 مساءً بتوقيت الوسط، بانتظار الموافقة التنظيمية.','يُخطط للمرحلة العليا أن تنشر 26 قمرًا من ستارلينك V3. تقول سبيس إكس إن كل قمر يهدف إلى إضافة 1 تيرابت من السعة إلى شبكة ستارلينك.','تصف سبيس إكس أقمار V3 بأنها سعة اتصالات، وليست استشعارًا للأرض.','ثلاثة أقمار تحمل كاميرات لتصوير الدرع الحراري لستارشيب في هذا الاختبار. هذا عمل اختبار للصاروخ، وليس أداة لصحة الكوكب.'],
+    it: ['SpaceX dice che il volo 15 si prepara a partire da venerdì 13 novembre 2026. Una finestra di 75 minuti si apre alle 16:45 ora del Centro, in attesa di autorizzazione.','Lo stadio superiore deve rilasciare 26 satelliti Starlink V3. SpaceX dice che ciascuno deve aggiungere 1 terabit di capacità alla rete Starlink.','SpaceX descrive questi satelliti V3 come capacità di comunicazione, non come sensori della Terra.','Tre satelliti portano telecamere per fotografare lo scudo termico di Starship in questo test. È un compito di prova del razzo, non uno strumento per la salute del pianeta.'],
+    he: ['ספייס אקס אומרת שטיסה 15 נערכת לשיגור החל מיום שישי, 13 בנובמבר 2026. חלון של 75 דקות נפתח ב-16:45 לפי שעון המרכז, בכפוף לאישור.','השלב העליון מתוכנן לשחרר 26 לווייני סטארלינק V3. ספייס אקס אומרת שכל אחד אמור להוסיף טרה-ביט אחד של קיבולת לרשת.','ספייס אקס מתארת את לווייני V3 כקיבולת תקשורת, לא כחישה של כדור הארץ.','שלושה לוויינים נושאים מצלמות כדי לצלם את מגן החום של סטארשיפ במבחן הזה. זו עבודת מבחן של הטיל, לא מכשיר לבריאות כוכב הלכת.']
   };
 
   function esc(s) {
@@ -544,22 +544,81 @@
     }
     return null;
   }
+  var DTC = {
+    en: {
+      both: 'Supports a Saving Planets solution — disaster alerts & future science lift',
+      alerts: 'Supports a Saving Planets solution — disaster alerts',
+      lift: 'Supports a Saving Planets solution — future science lift',
+      bothBody: 'Direct-to-Cell emergency alerts (disaster communications) and low-cost heavy lift that can carry future Earth-science and planetary missions. SpaceX describes these V3 satellites as communications capacity, not Earth sensing.',
+      alertBody: 'Direct-to-Cell emergency alerts (disaster communications). SpaceX describes the satellites as communications capacity, not Earth sensing.',
+      liftBody: 'Low-cost heavy lift that can carry future Earth-science and planetary missions. This flight’s published payload is not described as Earth sensing unless the listing names a sensor.',
+      otherBody: 'This payload has a confirmed disaster-communications role: emergency alerts when ground networks are down.'
+    },
+    fr: {
+      both: 'Soutient une solution Saving Planets — alertes catastrophe et futur lancement scientifique',
+      alerts: 'Soutient une solution Saving Planets — alertes catastrophe',
+      lift: 'Soutient une solution Saving Planets — futur lancement scientifique',
+      bothBody: 'Alertes d’urgence Direct-to-Cell (communications en cas de catastrophe) et un lanceur lourd à moindre coût qui peut emporter de futures missions de science de la Terre et de science planétaire. SpaceX décrit ces satellites V3 comme de la capacité de communication, pas comme des capteurs de la Terre.',
+      alertBody: 'Alertes d’urgence Direct-to-Cell (communications en cas de catastrophe). SpaceX décrit ces satellites comme de la capacité de communication, pas comme des capteurs de la Terre.',
+      liftBody: 'Lanceur lourd à moindre coût qui peut emporter de futures missions de science de la Terre et de science planétaire. La charge publiée de ce vol n’est pas décrite comme un capteur de la Terre, sauf si la fiche nomme un instrument.',
+      otherBody: 'Cette charge a un rôle confirmé de communication en cas de catastrophe : des alertes d’urgence quand les réseaux au sol sont coupés.'
+    },
+    es: {
+      both: 'Apoya una solución de Saving Planets — alertas de desastre y futuro transporte científico',
+      alerts: 'Apoya una solución de Saving Planets — alertas de desastre',
+      lift: 'Apoya una solución de Saving Planets — futuro transporte científico',
+      bothBody: 'Alertas de emergencia Direct-to-Cell (comunicaciones de desastre) y un lanzador pesado de menor costo que puede llevar futuras misiones de ciencia de la Tierra y planetaria. SpaceX describe estos satélites V3 como capacidad de comunicaciones, no como sensores de la Tierra.',
+      alertBody: 'Alertas de emergencia Direct-to-Cell (comunicaciones de desastre). SpaceX describe estos satélites como capacidad de comunicaciones, no como sensores de la Tierra.',
+      liftBody: 'Lanzador pesado de menor costo que puede llevar futuras misiones de ciencia de la Tierra y planetaria. La carga publicada de este vuelo no se describe como un sensor de la Tierra, salvo que la ficha nombre un instrumento.',
+      otherBody: 'Esta carga tiene un papel confirmado de comunicaciones de desastre: alertas de emergencia cuando las redes terrestres están caídas.'
+    },
+    ar: {
+      both: 'يدعم حلًا من Saving Planets — تنبيهات الكوارث ورفع علمي مستقبلي',
+      alerts: 'يدعم حلًا من Saving Planets — تنبيهات الكوارث',
+      lift: 'يدعم حلًا من Saving Planets — رفع علمي مستقبلي',
+      bothBody: 'تنبيهات الطوارئ Direct-to-Cell (اتصالات الكوارث) ورفع ثقيل منخفض التكلفة يمكنه حمل بعثات مستقبلية لعلوم الأرض والكواكب. تصف سبيس إكس أقمار V3 بأنها سعة اتصالات، وليست استشعارًا للأرض.',
+      alertBody: 'تنبيهات الطوارئ Direct-to-Cell (اتصالات الكوارث). تصف سبيس إكس الأقمار بأنها سعة اتصالات، وليست استشعارًا للأرض.',
+      liftBody: 'رفع ثقيل منخفض التكلفة يمكنه حمل بعثات مستقبلية لعلوم الأرض والكواكب. الحمولة المنشورة لهذه الرحلة ليست موصوفة كاستشعار للأرض، إلا إذا سمّت البطاقة جهازًا.',
+      otherBody: 'لهذه الحمولة دور مؤكد في اتصالات الكوارث: تنبيهات طوارئ عندما تتعطل الشبكات الأرضية.'
+    },
+    it: {
+      both: 'Sostiene una soluzione Saving Planets — allerte disastri e futuri lanci scientifici',
+      alerts: 'Sostiene una soluzione Saving Planets — allerte disastri',
+      lift: 'Sostiene una soluzione Saving Planets — futuri lanci scientifici',
+      bothBody: 'Allerte di emergenza Direct-to-Cell (comunicazioni di disastro) e un lanciatore pesante a basso costo che può portare future missioni di scienza della Terra e planetaria. SpaceX descrive questi satelliti V3 come capacità di comunicazione, non come sensori della Terra.',
+      alertBody: 'Allerte di emergenza Direct-to-Cell (comunicazioni di disastro). SpaceX descrive i satelliti come capacità di comunicazione, non come sensori della Terra.',
+      liftBody: 'Lanciatore pesante a basso costo che può portare future missioni di scienza della Terra e planetaria. Il carico pubblicato di questo volo non è descritto come un sensore della Terra, salvo che la scheda nomini uno strumento.',
+      otherBody: 'Questo carico ha un ruolo confermato di comunicazione in caso di disastro: allerte di emergenza quando le reti a terra sono giù.'
+    },
+    he: {
+      both: 'תומך בפתרון של Saving Planets — התרעות אסון ושיגור עתידי למדע',
+      alerts: 'תומך בפתרון של Saving Planets — התרעות אסון',
+      lift: 'תומך בפתרון של Saving Planets — שיגור עתידי למדע',
+      bothBody: 'התרעות חירום Direct-to-Cell (תקשורת אסון) ושיגור כבד בעלות נמוכה שיכול לשאת משימות עתידיות של מדעי כדור הארץ ומדעים פלנטריים. ספייס אקס מתארת את לווייני V3 כקיבולת תקשורת, לא כחישה של כדור הארץ.',
+      alertBody: 'התרעות חירום Direct-to-Cell (תקשורת אסון). ספייס אקס מתארת את הלוויינים כקיבולת תקשורת, לא כחישה של כדור הארץ.',
+      liftBody: 'שיגור כבד בעלות נמוכה שיכול לשאת משימות עתידיות של מדעי כדור הארץ ומדעים פלנטריים. המטען שפורסם לטיסה הזו אינו מתואר כחישה של כדור הארץ, אלא אם הרשומה מציינת מכשיר.',
+      otherBody: 'למטען הזה יש תפקיד מאושר של תקשורת אסון: התרעות חירום כשרשתות הקרקע מושבתות.'
+    }
+  };
+  function dtcPack() { return DTC[lang] || DTC.en; }
+  function confirmedDisaster(l) {
+    var blob = missionName(l) + ' ' + ((l.mission && l.mission.description) || '');
+    return /starlink|direct[ -]?to[ -]?cell|wireless emergency alert|\bWEA\b/i.test(blob);
+  }
   function specialClassify(l) {
+    var d = dtcPack();
+    var src = 'Sources: <a href="https://www.spacex.com/updates/starlink-disaster-response/" target="_blank" rel="noopener noreferrer">SpaceX, Direct to Cell</a>; <a href="https://starlink.com/public-files/DIRECT_TO_CELL_SERVICE_FEB_25.pdf" target="_blank" rel="noopener noreferrer">Starlink, Direct to Cell service (Feb 2025)</a>; <a href="https://www.spacex.com/launches/starship-flight-15" target="_blank" rel="noopener noreferrer">SpaceX, Starship Flight 15</a> (V3 is communications capacity).';
+    if (isStarlink(l) && isStarship(l)) {
+      return { kind: 'yes', label: d.both, text: d.bothBody, page: null, out: 'https://www.spacex.com/updates/starlink-disaster-response/', srcHtml: src };
+    }
     if (isStarlink(l)) {
-      return {
-        kind: 'no', label: t.no,
-        text: 'This launch does not support a Saving Planets Earth-observation or planetary-science solution page. Confirmed disaster-communications role: Direct-to-Cell emergency alerts (SpaceX; MediaTek). Not claimed here: Starlink V3 as optical/SAR Earth sensing — SpaceX describes V3 as communications capacity; Earth-observation sensing is listed under Starshield, a separate government product (SpaceX).',
-        page: null, out: 'https://www.spacex.com/updates/starlink-disaster-response/',
-        srcHtml: 'Sources: <a href="https://www.spacex.com/updates/starlink-disaster-response/" target="_blank" rel="noopener noreferrer">SpaceX, Direct to Cell / disaster response</a>; <a href="https://www.mediatek.com/press-room/mediatek-demonstrates-emergency-satellite-services-for-mobile-devices-with-starlink-mobile" target="_blank" rel="noopener noreferrer">MediaTek, emergency satellite alerts (Mar 2026)</a>; <a href="https://www.spacex.com/starshield" target="_blank" rel="noopener noreferrer">SpaceX Starshield</a> (EO is separate).'
-      };
+      return { kind: 'yes', label: d.alerts, text: d.alertBody, page: null, out: 'https://www.spacex.com/updates/starlink-disaster-response/', srcHtml: src };
+    }
+    if (confirmedDisaster(l)) {
+      return { kind: 'yes', label: d.alerts, text: d.otherBody, page: null, out: agencyUrl(l), srcHtml: esc(t.srcLL2) };
     }
     if (isStarship(l)) {
-      return {
-        kind: 'no', label: t.no,
-        text: 'A Starship flight does not by itself support a Saving Planets solution page unless its published payload is an Earth-observation or planetary-science mission we cover. Confirmed (SpaceX): 100+ t-class capacity and large fairing for satellite delivery to LEO. Stated potential only (SpaceX capacity; science commentary e.g. Physics Today on larger observatories): that capacity could enable heavier climate and hazard sensors in LEO/MEO/GEO — not confirmed for this flight unless a specific sensor mission is listed.',
-        page: null, out: 'https://www.spacex.com/vehicles/starship',
-        srcHtml: 'Sources: <a href="https://www.spacex.com/vehicles/starship" target="_blank" rel="noopener noreferrer">SpaceX Starship</a>; <a href="https://www.spacex.com/updates/" target="_blank" rel="noopener noreferrer">SpaceX updates</a> (Starlink V3 via Starship).'
-      };
+      return { kind: 'yes', label: d.lift, text: d.liftBody, page: null, out: 'https://www.spacex.com/vehicles/starship', srcHtml: 'Sources: <a href="https://www.spacex.com/vehicles/starship" target="_blank" rel="noopener noreferrer">SpaceX Starship</a>.' };
     }
     return null;
   }
