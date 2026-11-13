@@ -11,7 +11,7 @@ _kwspec = importlib.util.spec_from_file_location('seokw', os.path.join(os.path.d
 _kwm = importlib.util.module_from_spec(_kwspec); _kwspec.loader.exec_module(_kwm)
 import langs as L10N  # Oct 17: HE_PUBLIC — keep /he/ noindex while unlinked
 SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it', 'he']
-NOINDEX = {'Project-R.html', '404.html'}
+NOINDEX = {'Project-R.html', '404.html', 'offline.html'}
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
 BRAND = ' | Saving Planets'
 TWITTER_SITE = '@SISavingPlanets'
@@ -178,7 +178,8 @@ def fix(p):
         t = soup.title.get_text() if soup.title else 'Saving Planets'
         dm = soup.find('meta', attrs={'name': 'description'}); d = dm.get('content', '') if dm else ''
         kw = _kwm.keywords_from(t, '', d or t, lang)
-        block = [f'<title>{esc(t)}</title>', '<meta name="robots" content="noindex">']
+        rob = 'noindex,nofollow' if base == 'offline.html' else 'noindex'
+        block = [f'<title>{esc(t)}</title>', f'<meta name="robots" content="{rob}">']
         c = soup.find('link', rel='canonical')
         if c: block.append(f'<link rel="canonical" href="{c["href"]}">')
         if d:
