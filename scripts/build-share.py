@@ -51,22 +51,7 @@ def main():
         b = os.path.basename(f); k = kind(b); t = T[l]; e = lambda x: html.escape(x, quote=True); pre = '' if l == 'en' else '../'
         s = open(f, encoding='utf8').read(); s2 = s
         for blk in ('CLSHARE', 'NLCALL', 'GROWNUPS'): s2 = strip(s2, blk)
-        if k:
-            m = re.search(r'<h1[^>]*>.*?</h1>', s2, re.S)
-            url = SITE + ('' if l == 'en' else l + '/') + b
-            title = re.sub(r'<[^>]+>', '', m.group(0)).strip() if m else 'Saving Planets'
-            cr = 'https://classroom.google.com/share?' + urllib.parse.urlencode({'url': url, 'title': title + ' | Saving Planets'})
-            bar = (f'<!-- CLSHARE:START -->{CSS}<div class="shr" data-pagefind-ignore="all" role="group" aria-label="{e(t["grp"])}" data-url="{url}" data-page="{k}">'
-                   f'<a class="shr-cr" href="{e(cr)}" target="_blank" rel="noopener noreferrer">{ICON_CR}<span>{e(t["cr"])}</span><span class="sr-only visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{e(t["newtab"])}</span></a>'
-                   f'<button type="button" class="shr-copy" data-ok="{e(t["ok"])}">{ICON_CP}<span>{e(t["cp"])}</span></button>'
-                   f'<span class="shr-st" role="status" aria-live="polite"></span></div><script src="{pre}assets/share.js?v={V}" defer></script><!-- CLSHARE:END -->')
-            # Oct 18 (owner: banner = Lesson_Builder size, title centred, pages clean): when the <h1> sits in the page-hero banner,
-            # the share bar goes right below the banner instead of inside it (it made those banners 57-146 px taller).
-            hs = s2.rfind('<section class="page-hero', 0, m.start()) if m else -1
-            he = s2.find('</section>', m.end()) if hs >= 0 else -1
-            if hs >= 0 and he >= 0 and '</section>' not in s2[hs:m.start()]:
-                he += len('</section>'); s2 = s2[:he] + bar.replace('<div class="shr"', '<div class="shr shr-below"', 1) + s2[he:]
-            elif m: s2 = s2[:m.end()] + bar + s2[m.end():]
+        # The page-level share row now lives in scripts/build-share-bar.py (one bar above the footer).
         if (k in ('learn', 'math', 'teachers', 'calc') or b in ('Careers.html', 'AP_IB_Physics.html')) and '</main>' in s2:
             call = f'<!-- NLCALL:START --><aside class="nl-call" data-pagefind-ignore="all" id="weekly-brief" aria-label="Weekly Brief"><p class="nl-aud"><span>{e(t["aud"])}</span></p><div data-sp-newsletter></div></aside><!-- NLCALL:END -->'
             s2 = s2.replace('</main>', call + '</main>', 1)

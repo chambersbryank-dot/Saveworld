@@ -33,21 +33,17 @@ def put(s, name, inner, anchor_re, before=False):
 
 def assets(s):
     if 'batch-a.css' not in s: s = s.replace('</head>', f'<link rel="stylesheet" href="batch-a.css?v={CSSV}">\n</head>', 1)
-    if 'share.js' not in s and '<!-- SHARE:START -->' in s: s = s.replace('</body>', f'<script src="share.js?v={JSV}" defer></script>\n</body>', 1)
+    if 'assets/share-bar.js' not in s and '<!-- SHARE:START -->' in s:
+        s = s.replace('</body>', '<script src="assets/share-bar.js?v=20261113c" defer></script>\n</body>', 1)
     return s
 
 # ---------- 1) share bar ----------
 def share_bar(page, s):
-    url = SITE + page
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('sharebar', 'scripts/build-share-bar.py')
+    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
     title = html.unescape(sol.m1(r'<title>([^<]*)</title>', s))
-    q = lambda x: __import__('urllib.parse').parse.quote(x, safe='')
-    return ('<section class="share-bar" aria-label="Share this page" data-pagefind-ignore><p class="share-title">Share this page</p><div class="share-btns">'
-        '<button type="button" class="share-btn share-native" hidden>Share</button>'
-        f'<a class="share-btn share-x" href="https://twitter.com/intent/tweet?url={q(url)}&amp;text={q(title)}" target="_blank" rel="noopener" aria-label="Share on X">X</a>'
-        f'<a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u={q(url)}" target="_blank" rel="noopener" aria-label="Share on Facebook">Facebook</a>'
-        f'<a class="share-btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url={q(url)}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">LinkedIn</a>'
-        f'<a class="share-btn share-mail" href="mailto:?subject={q(title)}&amp;body={q(url)}" aria-label="Share by email">Email</a>'
-        '<button type="button" class="share-btn share-copy">Copy link</button><span class="share-ok" role="status" hidden>Link copied</span></div></section>')
+    return mod.render('en', SITE + page, title, '')
 
 # ---------- 2) last reviewed + sources ----------
 def substance(s):
