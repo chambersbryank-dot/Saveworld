@@ -53,7 +53,7 @@ UI = {
  'buildH': 'Lesson builder',
  'buildL': 'Choose a grade band, a GLOBE topic, and a length. The plan links the official protocol page and the official films for that topic. It does not copy the measurement steps.',
  'band': 'Grade band', 'topic': 'Topic', 'length': 'Length',
- 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print this plan', 'copyLink': 'Copy link', 'copyPlan': 'Copy the plan',
+ 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom',
  'suggestH': 'Suggest an edit or another solution',
  'suggest': 'Write to the partnerships desk. There is no form on this page.',
  'cite': 'The source of this material is the GLOBE Program website at www.globe.gov. All Rights Reserved.',
@@ -105,7 +105,7 @@ UI['fr'] = tr(
  train='Depuis décembre 2025, un membre GLOBE termine une formation pour chaque protocole avant d’entrer des données pour ce protocole. La formation peut être une relecture du guide de terrain, un eTraining de collecte quand GLOBE en propose un, un Protocol eTraining complet, ou un atelier GLOBE.',
  buildH='Générateur de leçon', buildL='Choisis un niveau, un sujet GLOBE et une durée. Le plan renvoie à la page officielle du protocole et aux films officiels. Il ne copie pas les étapes de mesure.',
  band='Niveau', topic='Sujet', length='Durée',
- printSheet='Imprimer la fiche', printPlan='Imprimer ce plan', copyLink='Copier le lien', copyPlan='Copier le plan',
+ printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom',
  suggestH='Proposer une correction ou une autre solution', suggest='Écrivez au bureau des partenariats. Il n’y a pas de formulaire sur cette page.',
  src='Source',
  spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère','obs':'GLOBE Observer'},
@@ -148,7 +148,7 @@ UI['es'] = tr(
  train='Desde diciembre de 2025, un miembro de GLOBE completa una formación por cada protocolo antes de introducir datos de ese protocolo. La formación puede ser una lectura de la guía de campo, un eTraining de toma de datos cuando GLOBE lo ofrece, un Protocol eTraining completo o un taller de GLOBE.',
  buildH='Generador de lecciones', buildL='Elige un nivel, un tema de GLOBE y una duración. El plan enlaza la página oficial del protocolo y los vídeos oficiales. No copia los pasos de medición.',
  band='Nivel', topic='Tema', length='Duración',
- printSheet='Imprimir la ficha', printPlan='Imprimir este plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan',
+ printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom',
  suggestH='Sugerir un cambio u otra solución', suggest='Escribe al equipo de alianzas. En esta página no hay formulario.',
  src='Fuente',
  spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -191,7 +191,7 @@ UI['it'] = tr(
  train='Dal dicembre 2025, un membro GLOBE completa una formazione per ogni protocollo prima di inserire dati di quel protocollo. La formazione può essere una lettura della guida di campo, un eTraining di raccolta quando GLOBE lo offre, un Protocol eTraining completo o un laboratorio GLOBE.',
  buildH='Generatore di lezioni', buildL='Scegli una fascia, un tema GLOBE e una durata. Il piano collega la pagina ufficiale del protocollo e i video ufficiali. Non copia i passi di misura.',
  band='Fascia', topic='Tema', length='Durata',
- printSheet='Stampa la scheda', printPlan='Stampa questo piano', copyLink='Copia il link', copyPlan='Copia il piano',
+ printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom',
  suggestH='Suggerisci una modifica o un’altra soluzione', suggest='Scrivi all’ufficio partnership. In questa pagina non c’è un modulo.',
  src='Fonte',
  spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -234,7 +234,7 @@ UI['ar'] = tr(
  train='منذ ديسمبر 2025، يكمل عضو GLOBE تدريبًا واحدًا لكل بروتوكول قبل إدخال بيانات ذلك البروتوكول. قد يكون التدريب مراجعة لدليل الميدان، أو eTraining لجمع البيانات حين يوفّره GLOBE، أو Protocol eTraining كاملًا، أو ورشة GLOBE.',
  buildH='منشئ الدروس', buildL='اختر مرحلة وموضوعًا من GLOBE ومدة. تربط الخطة بصفحة البروتوكول الرسمية والأفلام الرسمية. وهي لا تنسخ خطوات القياس.',
  band='المرحلة', topic='الموضوع', length='المدة',
- printSheet='اطبع ورقة المعلم', printPlan='اطبع هذه الخطة', copyLink='انسخ الرابط', copyPlan='انسخ الخطة',
+ printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom',
  suggestH='اقترح تعديلًا أو حلًا آخر', suggest='اكتب إلى مكتب الشراكات. لا يوجد نموذج في هذه الصفحة.',
  src='المصدر',
  spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي','obs':'GLOBE Observer'},
@@ -277,7 +277,7 @@ UI['he'] = tr(
  train='מדצמבר 2025, חבר GLOBE משלים הכשרה אחת לכל פרוטוקול לפני הזנת נתונים של אותו פרוטוקול. ההכשרה יכולה להיות קריאה של מדריך השדה, eTraining לאיסוף נתונים כש-GLOBE מציעה אותו, Protocol eTraining מלא, או סדנה של GLOBE.',
  buildH='מחולל שיעורים', buildL='בחרו שכבת גיל, נושא של GLOBE ומשך. התוכנית מקשרת לעמוד הפרוטוקול הרשמי ולסרטים הרשמיים. היא לא מעתיקה את שלבי המדידה.',
  band='שכבה', topic='נושא', length='משך',
- printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית',
+ printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom',
  suggestH='הצעת תיקון או פתרון נוסף', suggest='כתבו אל שולחן השותפויות. אין טופס בעמוד הזה.',
  src='מקור',
  spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה','obs':'GLOBE Observer'},
@@ -370,43 +370,137 @@ def sheet(u, prefix):
 # Replace that button with a simpler one after generation if needed. I'll change the template now by editing the string above... 
 # The line uses u['buildH'] which is "Lesson builder". That's an OK button: it updates the plan on submit. Acceptable.
 
-def hero_cloud():
-    s = open('GLOBE_Program.html', encoding='utf-8').read()
-    m = re.search(r'<picture class="spb-media">.*?</picture>', s, re.S)
-    if not m or 'Pacific_Clouds' not in m.group(0):
-        raise SystemExit('cloud picture not found')
-    # The first picture in the file is the cloud slide.
-    pic = m.group(0)
-    if pic.count('<picture') != 1:
-        raise SystemExit('picture match too wide')
-    return pic
+EXTRA = {
+'en': {
+ 'sheetKicker': 'Teacher sheet',
+ 'filmLead': 'Watch this official film with the sheet. The measurement steps stay on the protocol page.',
+ 'dataLead': 'Record the observation on GLOBE’s own data sheet or in the GLOBE Observer app, and only after that protocol’s training.',
+ 'talkLead': 'Use the film to ask what the protocol wants students to notice, and what must happen before anyone enters data.',
+},
+'fr': {
+ 'sheetKicker': 'Fiche enseignant',
+ 'filmLead': 'Regardez ce film officiel avec la fiche. Les étapes de mesure restent sur la page du protocole.',
+ 'dataLead': 'Notez l’observation sur la feuille de GLOBE ou dans l’application GLOBE Observer, et seulement après la formation de ce protocole.',
+ 'talkLead': 'À partir du film, demandez ce que le protocole veut que les élèves remarquent, et ce qui doit se passer avant d’entrer des données.',
+},
+'es': {
+ 'sheetKicker': 'Ficha docente',
+ 'filmLead': 'Ved este vídeo oficial con la ficha. Los pasos de medición siguen en la página del protocolo.',
+ 'dataLead': 'Anotad la observación en la hoja de GLOBE o en la aplicación GLOBE Observer, y solo después de la formación de ese protocolo.',
+ 'talkLead': 'Con el vídeo, preguntad qué quiere el protocolo que el alumnado note y qué tiene que ocurrir antes de introducir datos.',
+},
+'it': {
+ 'sheetKicker': 'Scheda docente',
+ 'filmLead': 'Guardate questo filmato ufficiale con la scheda. I passi di misura restano sulla pagina del protocollo.',
+ 'dataLead': 'Annotate l’osservazione sul foglio di GLOBE o nell’app GLOBE Observer, e solo dopo la formazione di quel protocollo.',
+ 'talkLead': 'Dal filmato, chiedete che cosa il protocollo vuole che gli studenti notino, e che cosa deve succedere prima di inserire i dati.',
+},
+'ar': {
+ 'sheetKicker': 'ورقة المعلم',
+ 'filmLead': 'شاهدوا هذا الفيلم الرسمي مع الورقة. تبقى خطوات القياس في صفحة البروتوكول.',
+ 'dataLead': 'سجّلوا الرصد في ورقة GLOBE أو في تطبيق GLOBE Observer، وبعد تدريب ذلك البروتوكول فقط.',
+ 'talkLead': 'استخدموا الفيلم لتسألوا ماذا يريد البروتوكول أن يلاحظ الطلاب، وما الذي يجب أن يحدث قبل إدخال البيانات.',
+},
+'he': {
+ 'sheetKicker': 'דף מורה',
+ 'filmLead': 'צפו בסרט הרשמי הזה עם הדף. שלבי המדידה נשארים בעמוד הפרוטוקול.',
+ 'dataLead': 'רשמו את התצפית בדף של GLOBE או ביישומון GLOBE Observer, ורק אחרי ההכשרה של הפרוטוקול.',
+ 'talkLead': 'בעזרת הסרט שאלו מה הפרוטוקול רוצה שהתלמידים יבחינו בו, ומה חייב לקרות לפני הזנת נתונים.',
+},
+}
+for _lang, _extra in EXTRA.items():
+    UI[_lang].update(_extra)
 
-CLOUD = hero_cloud()
+def drop_sunset(hero):
+    """Drop the horizon sunset slide. Keep the other three and retarget the 3-slide animation."""
+    if 'Pacific_Clouds_Sunset_ISS' not in hero:
+        raise SystemExit('sunset slide not in hero')
+    hero = re.sub(r'<div class="spx-slide spx-0" aria-hidden="true"><picture class="spb-media">.*?Pacific_Clouds_Sunset_ISS.*?</picture></div>', '', hero, count=1, flags=re.S)
+    if 'Pacific_Clouds_Sunset_ISS' in hero.split('spx-cred')[0]:
+        raise SystemExit('sunset slide still present')
+    for old, new in (('spx-3', 'spx-T2'), ('spx-2', 'spx-T1'), ('spx-1', 'spx-T0')):
+        hero = hero.replace(old, new)
+    for old, new in (('spx-T2', 'spx-2'), ('spx-T1', 'spx-1'), ('spx-T0', 'spx-0')):
+        hero = hero.replace(old, new)
+    hero = re.sub(r'<span class="hero-credit spx-cred spx-c0">.*?</span>', '', hero, count=1)
+    for old, new in (('spx-c3', 'spx-CT2'), ('spx-c2', 'spx-CT1'), ('spx-c1', 'spx-CT0')):
+        hero = hero.replace(old, new)
+    for old, new in (('spx-CT2', 'spx-c2'), ('spx-CT1', 'spx-c1'), ('spx-CT0', 'spx-c0')):
+        hero = hero.replace(old, new)
+    hero = hero.replace('spx-n4', 'spx-n3', 1)
+    first = re.search(r'<span class="hero-credit spx-cred spx-c0">(.*?)</span>', hero)
+    if not first:
+        raise SystemExit('first credit missing')
+    credit = first.group(1)
+    def _credit(m):
+        body = m.group(2)
+        cut = body.find('NASA')
+        prefix = body[:cut] if cut >= 0 else ''
+        if prefix and not prefix.endswith((' ', '\u00a0', '\u200f')):
+            prefix += ' '
+        return m.group(1) + prefix + credit + '.' + m.group(3)
+    hero2, n = re.subn(r'(<p class="photo-credit">)(.*?)(</p>)', _credit, hero, count=1)
+    if n != 1 or 'ISS071-E-449837' not in hero2:
+        raise SystemExit('photo credit was not retargeted')
+    return hero2
+
+def builder(u):
+    keys = ('spheres','topics','bands','lengths','objH','matH','stepsH','vidH','dataLab','qLab','ngssH',
+            'obj','steps','filmLead','dataLead','talkLead','ngssClouds','ngssGeneric','sheetKicker','cite','credit',
+            'openProtocol','openTrain','openElem')
+    blob = json.dumps({k: u[k] for k in keys}, ensure_ascii=False).replace('<', '\\u003c')
+    return f'''<div class="edu-wrap" id="plan">
+<h2 id="build-h">{E(u['buildH'])}</h2>
+<p class="edu-lead gr-build-lead">{E(u['buildL'])}</p>
+<form id="lb" class="lb-form glass" data-tint="earth">
+<div><label for="lb-band">{E(u['band'])}</label><select id="lb-band" name="band"><option value="k2">{E(u['bands']['k2'])}</option><option value="g35">{E(u['bands']['g35'])}</option><option value="g68">{E(u['bands']['g68'])}</option><option value="g912">{E(u['bands']['g912'])}</option></select></div>
+<div><label for="lb-topic">{E(u['topic'])}</label><select id="lb-topic" name="topic"></select></div>
+<div><label for="lb-len">{E(u['length'])}</label><select id="lb-len" name="length"><option value="class">{E(u['lengths']['class'])}</option><option value="week">{E(u['lengths']['week'])}</option></select></div>
+</form>
+<div class="lb-actions hero-ctas gr-actions">
+<button type="button" class="btn hero-cta" id="lb-print">{E(u['printPlan'])}</button>
+<button type="button" class="btn hero-cta" id="gr-copy">{E(u['copyLink'])}</button>
+<a class="btn hero-cta" id="gr-classroom" target="_blank" rel="noopener noreferrer">{E(u['classroom'])}</a>
+</div>
+<article class="lb-plan" id="lb-plan" aria-live="polite"></article>
+<script type="application/json" id="gr-i18n">{blob}</script>
+</div>
+'''
 
 def build(lang):
     path = 'GLOBE_Program.html' if lang == 'en' else f'{lang}/GLOBE_Program.html'
     raw = open(path, encoding='utf-8').read()
     pre, rest = raw.split('<main id="main">', 1)
     rel = rest.find('<!-- RELATED:START -->')
-    if rel < 0:
-        raise SystemExit(f'{path}: no related block')
+    save = rest.find('<section class="impact saves-planets"')
+    if rel < 0 or save < 0:
+        raise SystemExit(f'{path}: missing saves or related')
+    save_end = rest.find('</section>', save)
+    if save_end < 0 or save_end > rel:
+        raise SystemExit(f'{path}: saves section does not end before related')
+    opening = rest[:save_end + len('</section>')]
+    hero_at = opening.find('<section class="page-hero')
+    eli = opening.find('<!-- ELI10:START -->')
+    if hero_at < 0 or eli < 0:
+        raise SystemExit(f'{path}: hero or eli missing')
+    opening = opening[:hero_at] + drop_sunset(opening[hero_at:eli]) + opening[eli:]
+    u = UI[lang]
+    banner = f'<p class="gr-banner" role="note">{E(u["invite"])}</p>'
+    opening = opening.replace('<section class="page-hero', banner + '<section class="page-hero', 1)
     tail = rest[rel:]
     tail = re.sub(r'<a class="sticky-help"[^>]*>.*?</a>\s*', '', tail, count=1)
-    u = UI[lang]
     pre = pre.replace('GLOBE_Program.html', 'GLOBE_Review.html')
     pre = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex,nofollow">', pre, count=1)
-    pre = re.sub(r'<title>.*?</title>', f'<title>{E(u["title"])}</title>', pre, count=1, flags=re.S)
-    pre = re.sub(r'(<meta name="description" content=")[^"]*"', lambda m: m.group(1) + E(u['desc']) + '"', pre, count=1)
-    pre = re.sub(r'(<a class="skip-link" href=")#[^"]*"', r'\1#sheet"', pre, count=1)
-    pre = re.sub(r'(<body\b[^>]*\bdata-glass-tint=")[^"]+"', r'\1water"', pre, count=1)
-    pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="toc-sub globe-review"', 1)
+    pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     prefix = '' if lang == 'en' else '../'
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113d">\n</head>', 1)
-    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113c" defer></script>\n</body>', 1)
-    # Print the teacher sheet without pulling in the builder.
-    tail = tail.replace('</body>', '<script>document.getElementById("gr-print-sheet").addEventListener("click",function(){window.print()});</script>\n</body>', 1)
-    out = pre + '<main id="main">\n' + sheet(u, prefix) + tail
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261015s2">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113g">\n</head>', 1)
+    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113g" defer></script>\n</body>', 1)
+    out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
+    if 'Pacific_Clouds_Sunset_ISS' in out[out.find('<section class="page-hero'):out.find('<!-- ELI10:START -->')]:
+        raise SystemExit(f'{path}: sunset still in review hero')
+    if '<a class="sticky-help"' in out:
+        raise SystemExit(f'{path}: donate button remains')
     dest = path.replace('GLOBE_Program.html', 'GLOBE_Review.html')
     open(dest, 'w', encoding='utf-8').write(out)
     print('wrote', dest, len(out))
