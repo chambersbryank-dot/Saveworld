@@ -1,0 +1,62 @@
+/* Unlinked GLOBE review draft. Dark surfaces match Learn and Match.
+   Buttons use the shared .hero-ctas .hero-cta crystal-water rule. */
+.gr-banner{
+  margin:0;
+  padding:.85rem 1.1rem;
+  text-align:center;
+  color:#fff;
+  background-color:#0a4f78;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06));
+  font-weight:650;
+  line-height:1.45;
+}
+.gr-banner p{max-width:46rem;margin:.2rem auto;color:#fff}
+.gr-langs{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem .7rem;margin:.85rem 0 0;padding:0;list-style:none}
+.gr-langs a{color:#fff;font-weight:800;min-height:44px;display:inline-flex;align-items:center}
+.gr-langs a[aria-current]{text-decoration:underline;text-underline-offset:.2rem}
+.gr-wrap{max-width:880px;margin:0 auto;padding:1.1rem 1.15rem 2.4rem}
+.gr-wrap h2{color:#e8eef5;margin:1.4rem 0 .45rem}
+.gr-wrap h3{color:#e8eef5;margin:1rem 0 .35rem}
+.gr-wrap p,.gr-wrap li{color:#e8eef5;line-height:1.55}
+.gr-note{color:#d6e4f0}
+.gr-card{
+  margin:.8rem 0 1rem;
+  padding:1rem 1.05rem;
+  border-radius:18px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.22);
+}
+.gr-card a{color:#8fd3ff}
+.gr-src{color:#d6e4f0;font-size:.92rem}
+.gr-form{display:grid;gap:.75rem;margin:.4rem 0 1rem}
+.gr-form label{display:flex;flex-direction:column;gap:.3rem;font-weight:700;color:#e8eef5}
+.gr-form select{
+  min-height:44px;
+  font:inherit;
+  color:#e8eef5;
+  background:#0b1220;
+  border:1px solid rgba(143,211,255,.75);
+  border-radius:999px;
+  padding:0 .9rem;
+}
+.gr-form select option{background:#0b1220;color:#e8eef5}
+.gr-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.gr-plan h3{margin-top:.9rem}
+.gr-legal{margin:1.4rem 0 0;color:#d6e4f0}
+.gr-line{display:block;border-bottom:1px solid rgba(143,211,255,.55);min-height:1.8rem;margin:.25rem 0 .85rem}
+.gr-data label{font-weight:700}
+.gr-video{margin:.8rem 0 1rem}
+.gr-video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:#000}
+.gr-video figcaption{color:#d6e4f0;font-size:.85rem;margin-top:.35rem}
+.gr-founder{margin:.35rem 0 0;text-align:center;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.55)}
+.gr-hero{min-height:max(42vh,320px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;background:#021018 center/cover no-repeat;padding:calc(var(--nav-height,96px) + 1.4rem) 1.2rem 1.6rem;box-sizing:border-box}
+.gr-hero h1,.gr-hero p{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+.gr-hero .hero-credit{position:static;margin:.6rem 0 0;background:rgba(0,0,0,.28)}
+@media print{
+  #topnav,footer,.sticky-help,.gr-banner,.page-hero,.gr-legal,.sp-lb,.related-solutions,.next-solutions,.help-actions,.teacher-box,.cite-box,.share-bar,.fv2-cols,.fv2-bar{display:none !important}
+  body:not(.gr-plan-print) .gr-builder{display:none !important}
+  body.gr-plan-print .gr-sheet{display:none !important}
+  body.gr-plan-print .gr-form{display:none !important}
+  .gr-card{border:1px solid #333;background:#fff;color:#10202c}
+  .gr-wrap p,.gr-wrap li,.gr-wrap h2,.gr-wrap h3,.gr-src{color:#10202c}
+}

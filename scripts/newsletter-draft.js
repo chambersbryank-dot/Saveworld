@@ -167,7 +167,7 @@ const prevIssue = state => Object.keys(state.issues || {}).filter(k => k < iso).
 const weekIdx = () => Math.floor((Date.parse(iso + 'T00:00:00Z') - Date.parse('2026-01-05T00:00:00Z')) / (7 * 864e5));
 const readJson = f => { try { return JSON.parse(rd(f)); } catch (e) { return null; } };
 // New non-solution pages (education features, trust pages, tools) first added since the previous issue, plus curated entries in scripts/newsletter-updates.json.
-const SKIP_PAGES = /^(404|Sitemap|index|ways[-_]to[-_]help|Community|offline)\.html$/; // 2026-11-02: offline.html is the PWA fallback, not a reader page
+const SKIP_PAGES = /^(404|Sitemap|index|ways[-_]to[-_]help|Community|offline|GLOBE_Review)\.html$/; // offline is the PWA fallback; GLOBE_Review is an unlinked draft
 function whatsNew(state) {
   const prev = prevIssue(state), since = prev || new Date(Date.now() - DAYS * 864e5).toISOString().slice(0, 10);
   const sol = new Set((readJson('assets/data/solutions.json') || { pages: [] }).pages.map(p => p.url)), out = [];
