@@ -8,12 +8,12 @@
   var MAIL = 'hello@savingplanets.com';
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
   var T = {
-    en: { ask: 'Ask about this launch', cal: 'Add to my calendar', gcal: 'Google Calendar', subj: 'Launch question', body: 'Hi Saving Planets team,\n\nI have a question about this launch:\n\n', may: 'Time may change', askL: 'Email a question about {m}', calL: 'Download a calendar file for {m}', gcalL: 'Add {m} to Google Calendar (opens in a new tab)', note: 'Launch times shift often. Re-add this event to update it. Schedule:', net: 'NET' },
-    fr: { ask: 'Poser une question sur ce lancement', cal: 'Ajouter à mon agenda', gcal: 'Google Agenda', subj: 'Question sur un lancement', body: 'Bonjour l\u2019équipe Saving Planets,\n\nJ\u2019ai une question sur ce lancement :\n\n', may: 'L\u2019heure peut changer', askL: 'Envoyer une question sur {m}', calL: 'Télécharger un fichier agenda pour {m}', gcalL: 'Ajouter {m} à Google Agenda (nouvel onglet)', note: 'Les horaires de lancement changent souvent. Ajoutez à nouveau cet événement pour le mettre à jour. Calendrier :', net: 'Pas avant' },
-    es: { ask: 'Preguntar por este lanzamiento', cal: 'Añadir a mi calendario', gcal: 'Google Calendar', subj: 'Pregunta sobre un lanzamiento', body: 'Hola, equipo de Saving Planets:\n\nTengo una pregunta sobre este lanzamiento:\n\n', may: 'La hora puede cambiar', askL: 'Enviar una pregunta sobre {m}', calL: 'Descargar un archivo de calendario para {m}', gcalL: 'Añadir {m} a Google Calendar (nueva pestaña)', note: 'Los horarios de lanzamiento cambian a menudo. Vuelve a añadir este evento para actualizarlo. Calendario:', net: 'No antes de' },
-    it: { ask: 'Chiedi di questo lancio', cal: 'Aggiungi al mio calendario', gcal: 'Google Calendar', subj: 'Domanda su un lancio', body: 'Ciao team di Saving Planets,\n\nho una domanda su questo lancio:\n\n', may: 'L\u2019orario può cambiare', askL: 'Invia una domanda su {m}', calL: 'Scarica un file calendario per {m}', gcalL: 'Aggiungi {m} a Google Calendar (nuova scheda)', note: 'Gli orari di lancio cambiano spesso. Aggiungi di nuovo questo evento per aggiornarlo. Calendario:', net: 'Non prima del' },
-    ar: { ask: 'اسأل عن هذا الإطلاق', cal: 'أضف إلى تقويمي', gcal: 'تقويم Google', subj: 'سؤال عن إطلاق', body: 'مرحبًا فريق Saving Planets،\n\nلدي سؤال عن هذا الإطلاق:\n\n', may: 'قد يتغير الموعد', askL: 'أرسل سؤالًا عن {m}', calL: 'نزّل ملف تقويم لـ {m}', gcalL: 'أضف {m} إلى تقويم Google (علامة تبويب جديدة)', note: 'تتغير مواعيد الإطلاق كثيرًا. أعد إضافة هذا الحدث لتحديثه. الجدول:', net: 'ليس قبل' },
-    he: { ask: 'שאלו על השיגור הזה', cal: 'הוסיפו ליומן שלי', gcal: 'יומן Google', subj: 'שאלה על שיגור', body: 'שלום צוות Saving Planets,\n\nיש לי שאלה על השיגור הזה:\n\n', may: 'השעה עשויה להשתנות', askL: 'שלחו שאלה על {m}', calL: 'הורידו קובץ יומן עבור {m}', gcalL: 'הוסיפו את {m} ליומן Google (כרטיסייה חדשה)', note: 'מועדי שיגור משתנים לעיתים קרובות. הוסיפו את האירוע שוב כדי לעדכן אותו. לוח השיגורים:', net: 'לא לפני' }
+    en: { ask: 'Ask about this launch', remind: 'Remind me', cal: 'Add to calendar', gcal: 'Google Calendar', subj: 'Launch question', body: 'Hi Saving Planets team,\n\nI have a question about this launch:\n\n', may: 'Time may change', askL: 'Email a question about {m}', calL: 'Download a calendar file for {m}', gcalL: 'Add {m} to Google Calendar (opens in a new tab)', note: 'Launch times shift often. Re-add this event to update it. Your calendar uses this time. Watch:', net: 'NET' },
+    fr: { ask: 'Poser une question sur ce lancement', remind: 'Me le rappeler', cal: 'Ajouter au calendrier', gcal: 'Google Agenda', subj: 'Question sur un lancement', body: 'Bonjour l\u2019équipe Saving Planets,\n\nJ\u2019ai une question sur ce lancement :\n\n', may: 'L\u2019heure peut changer', askL: 'Envoyer une question sur {m}', calL: 'Télécharger un fichier agenda pour {m}', gcalL: 'Ajouter {m} à Google Agenda (nouvel onglet)', note: 'Les horaires de lancement changent souvent. Ajoutez à nouveau cet événement pour le mettre à jour. Calendrier :', net: 'Pas avant' },
+    es: { ask: 'Preguntar por este lanzamiento', remind: 'Recuérdame', cal: 'Añadir al calendario', gcal: 'Google Calendar', subj: 'Pregunta sobre un lanzamiento', body: 'Hola, equipo de Saving Planets:\n\nTengo una pregunta sobre este lanzamiento:\n\n', may: 'La hora puede cambiar', askL: 'Enviar una pregunta sobre {m}', calL: 'Descargar un archivo de calendario para {m}', gcalL: 'Añadir {m} a Google Calendar (nueva pestaña)', note: 'Los horarios de lanzamiento cambian a menudo. Vuelve a añadir este evento para actualizarlo. Calendario:', net: 'No antes de' },
+    it: { ask: 'Chiedi di questo lancio', remind: 'Ricordamelo', cal: 'Aggiungi al calendario', gcal: 'Google Calendar', subj: 'Domanda su un lancio', body: 'Ciao team di Saving Planets,\n\nho una domanda su questo lancio:\n\n', may: 'L\u2019orario può cambiare', askL: 'Invia una domanda su {m}', calL: 'Scarica un file calendario per {m}', gcalL: 'Aggiungi {m} a Google Calendar (nuova scheda)', note: 'Gli orari di lancio cambiano spesso. Aggiungi di nuovo questo evento per aggiornarlo. Calendario:', net: 'Non prima del' },
+    ar: { ask: 'اسأل عن هذا الإطلاق', remind: 'ذكّرني', cal: 'أضف إلى التقويم', gcal: 'تقويم Google', subj: 'سؤال عن إطلاق', body: 'مرحبًا فريق Saving Planets،\n\nلدي سؤال عن هذا الإطلاق:\n\n', may: 'قد يتغير الموعد', askL: 'أرسل سؤالًا عن {m}', calL: 'نزّل ملف تقويم لـ {m}', gcalL: 'أضف {m} إلى تقويم Google (علامة تبويب جديدة)', note: 'تتغير مواعيد الإطلاق كثيرًا. أعد إضافة هذا الحدث لتحديثه. الجدول:', net: 'ليس قبل' },
+    he: { ask: 'שאלו על השיגור הזה', remind: 'הזכירו לי', cal: 'הוסיפו ליומן', gcal: 'יומן Google', subj: 'שאלה על שיגור', body: 'שלום צוות Saving Planets,\n\nיש לי שאלה על השיגור הזה:\n\n', may: 'השעה עשויה להשתנות', askL: 'שלחו שאלה על {m}', calL: 'הורידו קובץ יומן עבור {m}', gcalL: 'הוסיפו את {m} ליומן Google (כרטיסייה חדשה)', note: 'מועדי שיגור משתנים לעיתים קרובות. הוסיפו את האירוע שוב כדי לעדכן אותו. לוח השיגורים:', net: 'לא לפני' }
   };
   var t = T[lang] || T.en;
   var PAGE = location.origin + location.pathname + '#launches';
@@ -21,7 +21,8 @@
   if (!document.getElementById('la-style')) {
     var st = document.createElement('style'); st.id = 'la-style';
     st.textContent = '.la-acts{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px;align-items:center}' +
-      '.la-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:8px 14px;border-radius:10px;border:1px solid rgba(143,211,255,.55);background:rgba(143,211,255,.10);color:#cfeaff;font:600 .9rem/1.2 inherit;text-decoration:none;cursor:pointer;box-sizing:border-box}' +
+      '.la-remind{flex-basis:100%;margin:0;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#d7ecff}' +
+      '.la-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:8px 14px;border-radius:999px;color:#fff;font:700 .9rem/1.2 inherit;text-decoration:none;cursor:pointer;box-sizing:border-box;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);border:1px solid rgba(160,225,255,.55)}' +
       '.la-btn:hover{background:rgba(143,211,255,.22)}.la-btn:focus-visible{outline:3px solid #ffd166;outline-offset:2px}' +
       '.la-may{font-size:.8rem;color:#ffd166;font-weight:700}' +
       '#lw-list li.la-row{flex-wrap:wrap}#lw-list li .la-acts{flex-basis:100%}';
@@ -56,7 +57,16 @@
   function icsEsc(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
   function fold(line) { var o = '', b = 0; for (var i = 0; i < line.length; i++) { if (b >= 70) { o += '\r\n '; b = 0; } o += line[i]; b++; } return o; }
   function title(l) { return mission(l) + (rocket(l) ? ' \u2013 ' + rocket(l) : '') + (uncertain(l) ? ' (' + t.may + ')' : ''); }
-  function desc(l) { return (uncertain(l) ? t.may + '. ' : '') + t.note + ' ' + PAGE; }
+  function watchOf(l) {
+    var id = l && l.id;
+    if (!id) return '';
+    var node = document.querySelector('[data-lid="' + String(id).replace(/"/g, '') + '"]');
+    return (node && node.getAttribute('data-watch')) || '';
+  }
+  function desc(l) {
+    var w = watchOf(l);
+    return (uncertain(l) ? t.may + '. ' : '') + t.note + ' ' + (w || PAGE);
+  }
   function ics(l, tm) {
     var uid = 'll2-' + (l.id || mission(l).replace(/\W+/g, '-')) + '@savingplanets.com';
     var seq = Math.floor(new Date(l.last_updated || Date.now()).getTime() / 1000) % 2147483647;
@@ -72,6 +82,7 @@
   var urls = [];
   function actions(l) {
     var box = el('div', 'la-acts', '', { 'data-la': l.id || mission(l) });
+    box.appendChild(el('p', 'la-remind', t.remind || 'Remind me'));
     var subj = t.subj + ': ' + mission(l) + ' \u2013 ' + (rocket(l) || '?') + ' \u2013 ' + dateStr(l);
     var body = t.body + mission(l) + ' / ' + rocket(l) + ' / ' + dateStr(l) + '\n' + PAGE + '\n\n';
     box.appendChild(el('a', 'la-btn la-ask', t.ask, { href: 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body), 'aria-label': lab(t.askL, l) }));

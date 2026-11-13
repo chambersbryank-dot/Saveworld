@@ -31,7 +31,13 @@
       '.launch-widget .lw-no .lw-badge{background:rgba(255,209,102,.15);color:#ffd166;border:1px solid rgba(255,209,102,.45)}' +
       '.launch-widget .lw-unk .lw-badge,.launch-widget .lw-skip .lw-badge{background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.25)}' +
       '.launch-widget .lw-list li.lw-card{display:block;padding:.85rem 0}' +
-      '.launch-widget .lw-card-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem}';
+      '.launch-widget .lw-card-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem}' +
+      '.launch-widget .lw-local{margin:.2rem 0 0;font-size:.9rem}' +
+      '.launch-widget .lw-watch{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.45rem 1rem;border-radius:999px;color:#fff;font-weight:800;text-decoration:none;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);border:1px solid rgba(160,225,255,.7)}' +
+      '.launch-widget .lw-watch-note{margin:.35rem 0;font-size:.85rem;color:rgba(255,255,255,.8)}' +
+      '.launch-widget .lw-pay{margin-top:.65rem;padding:.7rem .8rem;border-radius:14px;background:transparent}' +
+      '.launch-widget .lw-mini{display:flex;gap:.35rem;margin:.35rem 0}' +
+      '.launch-widget .lw-mini b{font-size:1rem}';
     document.head.appendChild(st);
   }
 
@@ -273,6 +279,24 @@
     he: { choose:'בחרו שיגור קרוב', loading:'טוען שיגורים…', summary:'תקציר', mission:'מהי המשימה', watch:'חזרו לצפות', watchInvite:'חזרו לאירוע החי. הזמנים זזים, אז בדקו שוב סמוך להמראה.', watchMissing:'ברשומה הזו אין קישור שידור פומבי שאפשר לשתף.', watchRestricted:'איננו מציעים קישור צפייה לשיגור הזה.', history:'היסטוריה קצרה', historyMissing:'היסטוריה ארוכה יותר של הרכב הזה אינה בעמוד. העובדות למעלה לקוחות מרשומת השיגור.', net:'לא לפני', tbdNote:'התאריך עדיין לאישור (TBD / NET).', sources:'מקורות', live:'שידור או עמוד רשמי', restrictedHist:'את השיגור הזה מוביל גוף שאת אתריו איננו מקשרים. אנו מציינים רק איך סוג משימה כזה יכול לעזור לכדור הארץ או למערכת השמש, ומקשרים לעמוד הפתרון שלנו כשיש התאמה.' }
   };
   var pk = PICK[lang] || PICK.en;
+  var ADD = {
+    en: { watchLive:'Watch live', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.' },
+    fr: { watchLive:'Regarder en direct', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.' },
+    es: { watchLive:'Ver en vivo', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.' },
+    ar: { watchLive:'شاهد البث المباشر', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.' },
+    it: { watchLive:'Guarda in diretta', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.' },
+    he: { watchLive:'צפו בשידור החי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.' }
+  };
+  var ui = ADD[lang] || ADD.en;
+  /* SpaceX page checked 13 Nov 2026: window opens 4:45 p.m. CT (22:45 UTC), 75 minutes, pending approval. */
+  var STAR = {
+    en: ['SpaceX says Flight 15 is preparing to launch as soon as Friday, 13 November 2026. A 75-minute window opens at 4:45 p.m. Central Time, pending regulatory approval.','The upper stage is planned to deploy 26 Starlink V3 satellites. SpaceX says each one is meant to add 1 terabit of capacity to the Starlink network.','This is a commercial communications payload. It is not an Earth-observation, climate, weather, or disaster-alert mission.','Three of the satellites carry cameras to photograph Starship’s heat shield for this flight test. That is a rocket-test job, not an instrument for the planet’s health.'],
+    fr: ['SpaceX dit que le vol 15 se prépare à partir dès le vendredi 13 novembre 2026. Une fenêtre de 75 minutes s’ouvre à 16 h 45, heure du Centre, sous réserve d’autorisation.','L’étage supérieur doit déployer 26 satellites Starlink V3. SpaceX dit que chacun doit ajouter 1 térabit de capacité au réseau Starlink.','C’est une charge utile de télécommunications commerciales. Ce n’est pas une mission d’observation de la Terre, de climat, de météo ou d’alerte aux catastrophes.','Trois satellites emportent des caméras pour photographier le bouclier thermique de Starship pendant cet essai. C’est un travail d’essai de fusée, pas un instrument pour la santé de la planète.'],
+    es: ['SpaceX dice que el vuelo 15 se prepara para lanzarse a partir del viernes 13 de noviembre de 2026. Una ventana de 75 minutos se abre a las 4:45 p. m., hora del Centro, pendiente de aprobación.','La etapa superior debe desplegar 26 satélites Starlink V3. SpaceX dice que cada uno aportará 1 terabit de capacidad a la red Starlink.','Es una carga de comunicaciones comerciales. No es una misión de observación de la Tierra, clima, meteorología o alertas de desastres.','Tres satélites llevan cámaras para fotografiar el escudo térmico de Starship en esta prueba. Es una tarea de ensayo del cohete, no un instrumento para la salud del planeta.'],
+    ar: ['تقول سبيس إكس إن الرحلة 15 تستعد للانطلاق ابتداءً من الجمعة 13 نوفمبر 2026. تفتح نافذة من 75 دقيقة عند 4:45 مساءً بتوقيت الوسط، بانتظار الموافقة التنظيمية.','يُخطط للمرحلة العليا أن تنشر 26 قمرًا من ستارلينك V3. تقول سبيس إكس إن كل قمر يهدف إلى إضافة 1 تيرابت من السعة إلى شبكة ستارلينك.','هذه حمولة اتصالات تجارية. ليست مهمة لرصد الأرض أو المناخ أو الطقس أو إنذار الكوارث.','ثلاثة أقمار تحمل كاميرات لتصوير الدرع الحراري لستارشيب في هذا الاختبار. هذا عمل اختبار للصاروخ، وليس أداة لصحة الكوكب.'],
+    it: ['SpaceX dice che il volo 15 si prepara a partire da venerdì 13 novembre 2026. Una finestra di 75 minuti si apre alle 16:45 ora del Centro, in attesa di autorizzazione.','Lo stadio superiore deve rilasciare 26 satelliti Starlink V3. SpaceX dice che ciascuno deve aggiungere 1 terabit di capacità alla rete Starlink.','È un carico di comunicazioni commerciali. Non è una missione di osservazione della Terra, clima, meteo o allerta disastri.','Tre satelliti portano telecamere per fotografare lo scudo termico di Starship in questo test. È un compito di prova del razzo, non uno strumento per la salute del pianeta.'],
+    he: ['ספייס אקס אומרת שטיסה 15 נערכת לשיגור החל מיום שישי, 13 בנובמבר 2026. חלון של 75 דקות נפתח ב-16:45 לפי שעון המרכז, בכפוף לאישור.','השלב העליון מתוכנן לשחרר 26 לווייני סטארלינק V3. ספייס אקס אומרת שכל אחד אמור להוסיף טרה-ביט אחד של קיבולת לרשת.','זה מטען תקשורת מסחרי. זו אינה משימת תצפית על כדור הארץ, אקלים, מזג אוויר או התרעת אסונות.','שלושה לוויינים נושאים מצלמות כדי לצלם את מגן החום של סטארשיפ במבחן הזה. זו עבודת מבחן של הטיל, לא מכשיר לבריאות כוכב הלכת.']
+  };
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -336,6 +360,60 @@
     return false;
   }
 
+  function isStarship15(l) {
+    var s = ((l && l.name) || '') + ' ' + missionName(l);
+    return /starship flight 15|starlink group 31-2/i.test(s);
+  }
+  function watchUrl(l) {
+    if (isRestricted(l)) return null;
+    var vids = [].concat((l && l.vid_urls) || [], (l && l.mission && l.mission.vid_urls) || []);
+    for (var i = 0; i < vids.length; i++) {
+      var v = vids[i];
+      var u = typeof v === 'string' ? v : (v && v.url);
+      var typ = v && v.type && v.type.name;
+      if (u && !blockedUrl(u) && /official webcast/i.test(typ || '')) return u;
+    }
+    return agencyUrl(l);
+  }
+  function matchedPage(l) {
+    var name = missionName(l);
+    var desc = ((l.mission && l.mission.description) || '') + ' ' + name;
+    for (var i = 0; i < PAGE_MATCH.length; i++) {
+      if (PAGE_MATCH[i].re.test(name) || PAGE_MATCH[i].re.test(desc)) return PAGE_MATCH[i].page;
+    }
+    return null;
+  }
+  function watchBtn(l) {
+    if (isRestricted(l)) return '<p class="lw-watch-note">' + esc(pk.watchRestricted) + '</p>';
+    var u = watchUrl(l);
+    if (!u) return '<p class="lw-watch-note">' + esc(ui.watchTba) + '</p>';
+    return '<p class="lw-acts"><a class="lw-watch" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.watchLive) + '</a></p>';
+  }
+  function goingHtml(l) {
+    var c = classify(l);
+    var lines = [];
+    if (isStarship15(l)) {
+      (STAR[lang] || STAR.en).forEach(function (s) { lines.push('<p>' + esc(s) + '</p>'); });
+    } else {
+      var purpose = purposeText(l);
+      lines.push('<p><b>' + esc(missionName(l)) + '</b></p>');
+      lines.push('<p>' + esc(purpose || ui.tba) + '</p>');
+      lines.push('<p>' + esc((c && c.text) || t.detailsMissing) + '</p>');
+      var page = matchedPage(l);
+      if (page && c && c.kind === 'yes' && !isRestricted(l)) {
+        lines.push('<p class="lw-blurb-link"><a href="' + esc(prefix + page) + '">' + esc(t.seeSolution) + '</a> · <a href="' + esc(prefix + 'Space.html#satmap') + '">' + esc(ui.onMap) + '</a></p>');
+      }
+    }
+    var src = isStarship15(l) ? 'https://www.spacex.com/launches/starship-flight-15' : (isRestricted(l) ? null : watchUrl(l));
+    var srcHtml = src ? '<a href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">' + esc(pk.sources) + '</a>' : esc(t.srcLL2);
+    return '<div class="lw-pay"><p class="lw-blurb-k">' + esc(ui.going) + '</p>' + lines.join('') + '<p class="lw-blurb-src">' + srcHtml + '</p></div>';
+  }
+  function localLine(iso) {
+    if (!iso || isNaN(new Date(iso).getTime())) return esc(ui.tba);
+    return esc(ui.yourTime) + ' ' + esc(fmt(iso, {
+      weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+    }));
+  }
   function agencyUrl(l) {
     /* Policy: never return an outbound URL for RU/CN/KP/IR-led launches. */
     if (isRestricted(l)) return null;
@@ -535,6 +613,13 @@
     listEl.innerHTML = '';
   }
 
+  function tickCards() {
+    var nodes = listEl.querySelectorAll('.lw-mini');
+    for (var i = 0; i < nodes.length; i++) {
+      var ms = new Date(nodes[i].getAttribute('data-net')).getTime();
+      if (!isNaN(ms)) tick(ms, nodes[i]);
+    }
+  }
   function tick(netMs, el) {
     var diff = netMs - Date.now();
     if (diff <= 0) {
@@ -571,25 +656,31 @@
         weekday: 'short', month: 'short', day: 'numeric', year: 'numeric',
         hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
       })) + status + where + '</p>' +
+      '<p class="lw-local">' + localLine(n.net) + '</p>' +
       metaLine(n) +
-      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '"></div>' +
-      '<div class="lw-blurbs">' + blurbHtml(n) + '</div>';
+      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '" data-net="' + esc(n.net || '') + '" data-lid="' + esc(n.id || '') + '" data-watch="' + esc(watchUrl(n) || '') + '"></div>' +
+      watchBtn(n) +
+      '<div class="lw-blurbs">' + goingHtml(n) + blurbHtml(n) + '</div>';
 
     var cd = nextEl.querySelector('.lw-countdown');
     var netMs = new Date(n.net).getTime();
     if (timer) clearInterval(timer);
     if (isNaN(netMs)) { cd.innerHTML = ''; }
-    else { tick(netMs, cd); timer = setInterval(function () { tick(netMs, cd); }, 1000); }
+    else { tick(netMs, cd); timer = setInterval(function () { tick(netMs, cd); tickCards(); }, 1000); }
+    tickCards();
 
     listEl.innerHTML = r.slice(1, 20).map(function (l) {
       var st = l.status && l.status.abbrev ? ' · ' + esc(l.status.abbrev) : '';
-      return '<li class="lw-card">' +
+      return '<li class="lw-card" data-lid="' + esc(l.id || '') + '" data-watch="' + esc(watchUrl(l) || '') + '">' +
         '<div class="lw-card-top">' +
         '<span class="lw-l-name">' + esc(missionName(l)) +
         '<span class="lw-l-sub">' + esc(provider(l)) + ' · ' + esc(rocket(l)) + st + '</span></span>' +
         '<span class="lw-l-date">' + esc(fmt(l.net, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })) + '</span>' +
-        '</div>' + metaLine(l) +
-        '<div class="lw-blurbs">' + blurbHtml(l) + '</div></li>';
+        '</div>' +
+        '<p class="lw-local">' + localLine(l.net) + '</p>' +
+        '<div class="lw-mini" data-net="' + esc(l.net || '') + '" role="timer"></div>' +
+        metaLine(l) + watchBtn(l) +
+        '<div class="lw-blurbs">' + goingHtml(l) + blurbHtml(l) + '</div></li>';
     }).join('');
   }
 
