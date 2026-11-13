@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261113y'
+V = '20261113z'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -356,18 +356,19 @@ def cruise_panel(lang, pre):
       f'<h3 id="sat-cruise-h">{html.escape(c["h"])}</h3>'
       f'<p>{html.escape(c["lead"])}</p>'
       '<div class="sat-cruise-row">'
-      f'<figure class="sat-cruise-earth"><img src="{pre}assets/earth/blue-marble-disc-lg.webp" alt="" width="320" height="320"><figcaption>{html.escape(c["earth"])}</figcaption></figure>'
+      f'<figure class="sat-cruise-earth"><img src="{pre}assets/earth/cut/earth.webp" alt="" width="800" height="800"><figcaption>{html.escape(c["earth"])}</figcaption></figure>'
       '<div class="sat-cruise-track" aria-hidden="true"><span class="sat-cruise-line"></span>'
-      f'<figure class="sat-cruise-craft"><img src="{pre}assets/sat/europa-800.jpg" alt="" width="800" height="442"><figcaption>{html.escape(c["craft"])}</figcaption></figure>'
+      f'<figure class="sat-cruise-craft"><img src="{pre}assets/earth/cut/europa-craft.webp" alt="" width="336" height="194"><figcaption>{html.escape(c["craft"])}</figcaption></figure>'
       '</div>'
       '<figure class="sat-cruise-far">'
-      f'<img class="sat-jup" src="{pre}assets/Jupiter_Cassini_Portrait.jpg" alt="" width="960" height="1200">'
-      f'<img class="sat-eur" src="{pre}assets/earth/europa-galileo.jpg" alt="" width="1000" height="1000">'
+      f'<img class="sat-jup" src="{pre}assets/earth/cut/jupiter.webp" alt="" width="900" height="900">'
+      f'<img class="sat-eur" src="{pre}assets/earth/cut/europa.webp" alt="" width="900" height="900">'
       f'<figcaption>{html.escape(c["dest"])}</figcaption></figure>'
       '</div>'
       f'<p class="sat-cruise-dist">{html.escape(c["dist"])}</p>'
       f'<p class="sat-photo-credit">{html.escape(c["cred"])}</p>'
-      f'<p class="sat-more-row"><a class="sat-more" href="https://europa.nasa.gov/" target="_blank" rel="noopener">{html.escape(c["more"])}</a></p>'
+      f'<p class="sat-more-row"><a class="sat-more" href="{pre}Voyages.html#europa-clipper">{html.escape(c.get("follow") or "Click to Follow the live journey")}</a> '
+      f'<a class="sat-more" href="https://europa.nasa.gov/" target="_blank" rel="noopener">{html.escape(c["more"])}</a></p>'
       '</section>'
     )
 
@@ -385,7 +386,7 @@ def section(lang, ui):
                '<a href="https://jwst-docs.stsci.edu/jwst-observatory-characteristics/jwst-orbit">STScI, JWST orbit</a> · '
                '<a href="https://ntrs.nasa.gov/citations/20220012121">NASA, 30-day transfer</a></p>')
     return (
-      f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/blue-marble-disc.webp" data-earth-lg="{pre}assets/earth/blue-marble-disc-lg.webp" data-moon="{pre}assets/earth/lro-moon.jpg" data-sun="{pre}assets/earth/sdo-aia304.jpg" aria-labelledby="satmap-title">'
+      f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/cut/earth.webp" data-earth-lg="{pre}assets/earth/cut/earth.webp" data-moon="{pre}assets/earth/cut/moon.webp" data-sun="{pre}assets/earth/cut/sun.webp" aria-labelledby="satmap-title">'
       '<span id="lagrange" class="sat-anchor"></span><span id="beyond" class="sat-anchor"></span>'
       f'<div class="wm-cats" role="group" aria-label="{html.escape(ui["all"])}">' + ''.join(btns) + '</div>'
       '<div class="sat-layout"><div class="sat-stage" id="sat-stage"></div>'

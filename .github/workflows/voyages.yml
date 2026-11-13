@@ -1,0 +1,34 @@
+name: Voyage distances
+
+# Once a day, ask NASA/JPL Horizons for each voyage and commit data/voyages.json.
+# The page reads that file. The script does not invent a range when Horizons has no row.
+on:
+  schedule:
+    - cron: "20 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voyages-horizons
+  cancel-in-progress: false
+
+jobs:
+  horizons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with: { python-version: "3.12" }
+      - name: Query Horizons
+        run: python3 scripts/voyages-horizons.py
+      - name: Commit data/voyages.json
+        run: |
+          git config user.name "chambersbryank-dot"
+          git config user.email "chambersbryank-dot@users.noreply.github.com"
+          git add data/voyages.json
+          if git diff --cached --quiet; then echo "No range change"; exit 0; fi
+          git commit -m "Update voyage ranges from JPL Horizons"
+          git pull --rebase && git push

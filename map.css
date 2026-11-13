@@ -127,8 +127,8 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 .sat-stage{position:relative;height:clamp(85vh, calc(100dvh - var(--nav-height, 92px) - 6.75rem), 100dvh);min-height:85vh;border-radius:16px;overflow:hidden;background:#041525}
 .sat-canvas{position:absolute;inset:0}
 .orb-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.sun-glow{transform-box:fill-box;transform-origin:center;animation:sun-flicker 2.6s ease-in-out infinite}
-.sun-flare{transform-box:fill-box;transform-origin:center;opacity:.35;animation:sun-prom 3.4s ease-in-out infinite}
+.sun-glow,.sun-base{transform-box:fill-box;transform-origin:center;animation:sun-flicker 2.6s ease-in-out infinite}
+.sun-base{animation-duration:3.1s}
 @keyframes sun-flicker{0%,100%{opacity:.55}38%{opacity:.95}58%{opacity:.4}76%{opacity:.88}}
 @keyframes sun-prom{0%,100%{opacity:.18}46%{opacity:.62}70%{opacity:.28}}
 .orb-btn{position:absolute;width:28px;height:28px;margin:-14px 0 0 -14px;padding:0;border-radius:50%;border:1px solid rgba(160,225,255,.7);cursor:pointer;color:#fff;
@@ -157,8 +157,9 @@ a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
 [dir=rtl] .sat-cruise-craft{transform:translate(50%,-50%)}
 .sat-cruise-craft img{width:100%;height:auto;display:block}
 .sat-cruise-far{flex:none;margin:0;text-align:center;position:relative}
-.sat-jup{width:min(34vw,280px);height:auto;display:block;margin:0 auto}
-.sat-eur{position:absolute;width:min(9vw,64px);height:auto;inset-inline-end:.2rem;bottom:.15rem;border-radius:50%}
+.sat-jup,.sat-eur,.sat-cruise-earth img,.sat-cruise-craft img{background:transparent}
+.sat-jup{width:min(34vw,220px);height:auto;display:block;margin:0 auto}
+.sat-eur{position:absolute;width:min(9vw,64px);height:auto;inset-inline-end:.2rem;bottom:1.4rem}
 .sat-cruise figcaption{font-size:.82rem;font-weight:700;margin-top:.25rem}
 .sat-cruise-dist{font-size:.92rem;line-height:1.45}
 @media (max-width:700px){
@@ -206,8 +207,8 @@ a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 }
 @media (prefers-reduced-motion:reduce){
   .orb-svg *{animation:none!important}
-  .sun-glow{opacity:.75}
-  .sun-flare{opacity:.35}
+  .sun-glow{opacity:.55}
+  .sun-base{opacity:.92}
   .lag-pt.is-on{animation:none;box-shadow:0 0 0 4px #ffd54a,0 0 16px 4px rgba(255,213,74,.8)}
 }
 .wm-pop-host{position:fixed;inset:0;z-index:1102;pointer-events:none;overflow:visible}
