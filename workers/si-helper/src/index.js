@@ -115,6 +115,8 @@ const EV = {
   share: { kind: ['classroom', 'copy', 'embed'], page: ['learn', 'guide', 'math', 'lab', 'teachers', 'calc', 'path', 'launches'] },
   calc: { tool: ['dv', 'hohmann', 'period', 'vel', 'stall', 'lift', 'mach', 'tw', 'rotor', 'proj', 'pend'] },  // Oct 16: calculator pages (first input only)
   partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'] },
+  // Nov 13: Lesson Builder and GLOBE Review. label is gradeband-topic (select values only, no class question).
+  plan: { act: ['build', 'print', 'copy', 'classroom'], page: ['lesson', 'globe'], label: /^[a-z0-9]{2,8}-[a-z0-9_-]{1,40}$/ },
 };
 function evWrite(env, name, lang, a = '', b = '', c = '') {
   try { if (env.EVENTS) env.EVENTS.writeDataPoint({ indexes: [name], blobs: [name, lang, a, b, c], doubles: [1] }); } catch (e) { /* never break a request */ }
@@ -124,7 +126,7 @@ async function events(req, env, h) {
   const ip = req.headers.get('CF-Connecting-IP') || '0.0.0.0';
   if (!(await env.RL_EV.limit({ key: await sha(env.IP_SALT + '|ev|' + ip) })).success) return new Response(null, { status: 429, headers: h });
   let body; try { const t = await req.text(); if (t.length > 3000) throw 0; body = JSON.parse(t); } catch { return new Response(null, { status: 400, headers: h }); }
-  const lang = LANGS.includes(body.l) ? body.l : 'en', list = Array.isArray(body.e) ? body.e.slice(0, 20) : [];
+  const lang = (LANGS.includes(body.l) || body.l === 'he') ? body.l : 'en', list = Array.isArray(body.e) ? body.e.slice(0, 20) : [];
   let n = 0;
   for (const it of list) {
     if (!it || typeof it !== 'object' || !Object.prototype.hasOwnProperty.call(EV, it.n)) continue;

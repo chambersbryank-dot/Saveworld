@@ -80,7 +80,7 @@
       he: { copy: 'העתקת הקישור', copied: 'הקישור הועתק', gc: 'שיתוף ב-Google Classroom', std: 'תקנים' }
     }[lang] || {};
     var STD = null;
-    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && (q.get('hub') || matched)) build(); }).catch(function () {});
+    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && (q.get('hub') || matched)) build({ quiet: true }); }).catch(function () {});
     function stdHtml(hub) {
       if (!STD || !STD.hubs[hub]) return '';
       return '<h3>' + esc(X.std) + '</h3><ul class="lb-small">' + STD.hubs[hub].map(function (c) { var o = STD.codes[c]; return '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(c.replace('CCSS.ELA-LITERACY.', 'CCSS ')) + '</a> (' + esc(o.band) + '): <span lang="en">' + esc(o.text) + '</span></li>'; }).join('') + '</ul>';
@@ -93,12 +93,26 @@
         '<a class="btn hero-cta" data-act="classroom" href="' + esc(gc) + '" target="_blank" rel="noopener noreferrer">' + esc(X.gc) + '</a>' +
         '<span class="lb-small" role="status" aria-live="polite"></span>';
     }
+    function planLabel() {
+      var b = String(lb.elements.band.value || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 8);
+      var h = String(lb.elements.hub.value || '').toLowerCase().replace(/\.html$/, '').replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+      return (b && h) ? (b + '-' + h) : '';
+    }
+    function countPlan(act) {
+      var label = planLabel(); if (!label) return;
+      try { if (window.spTrack) window.spTrack('plan', { act: act, page: 'lesson', label: label }); } catch (err) {}
+    }
     document.addEventListener('click', function (e) {
       var b = e.target.closest && e.target.closest('#lb-tools [data-act=copy]'); if (!b) return;
+      countPlan('copy');
       var st = document.querySelector('#lb-tools [role=status]');
       var done = function () { st.textContent = X.copied; };
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(location.href).then(done, done);
       else done();
+    });
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('#lb-tools [data-act=classroom]'); if (!b) return;
+      countPlan('classroom');
     });
     function pick(arr, n, seed) { var a = arr.slice(), r = []; seed = seed || 1; while (a.length && r.length < n) { seed = (seed * 9301 + 49297) % 233280; r.push(a.splice(Math.floor(seed / 233280 * a.length), 1)[0]); } return r; }
     function globeOutside(sols, band) {
@@ -149,10 +163,11 @@
       out.innerHTML = html; out.hidden = false;
       document.getElementById('lb-print').hidden = false;
       var u = new URL(location.href); u.searchParams.set('band', band); u.searchParams.set('hub', hub); u.searchParams.set('min', min); u.searchParams.set('seed', seed); history.replaceState(null, '', u); tools(h, B, min);
-      if (e) { out.setAttribute('tabindex', '-1'); out.focus(); }
+      if (!(e && e.quiet)) countPlan('build');
+      if (e && e.preventDefault) { out.setAttribute('tabindex', '-1'); out.focus(); }
     }
     lb.addEventListener('submit', build);
-    document.getElementById('lb-print').addEventListener('click', function () { window.print(); });
+    document.getElementById('lb-print').addEventListener('click', function () { if (out.hidden) return; countPlan('print'); window.print(); });
     if (q.get('hub') || matched) build();
   });
   /* ---------------- Satellite explorer ---------------- */

@@ -178,6 +178,7 @@
       standards +
       '<p class="lb-small">' + esc(t.cite) + '</p><p class="lb-small">' + esc(t.credit) + '</p>';
     out.hidden = false;
+    count('build');
   }
 
   var start = params();
@@ -191,12 +192,25 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done);
     else done();
   }
+  function planLabel() {
+    var b = String(band.value || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 8);
+    var h = String(topic.value || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    return (b && h) ? (b + '-' + h) : '';
+  }
+  function count(act) {
+    var label = planLabel(); if (!label) return;
+    try { if (window.spTrack) window.spTrack('plan', { act: act, page: 'globe', label: label }); } catch (err) {}
+  }
   document.getElementById('gr-copy').addEventListener('click', function (e) {
     writeUrl();
+    count('copy');
     copyText(e.currentTarget, location.href);
   });
+  var classroom = document.getElementById('gr-classroom');
+  if (classroom) classroom.addEventListener('click', function () { count('classroom'); });
   document.getElementById('lb-print').addEventListener('click', function () {
     if (out.hidden) return;
+    count('print');
     window.print();
   });
 })();

@@ -20,6 +20,7 @@ SECTIONS = [
  ('Newsletter sign-ups (successful submits)', "SELECT blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='newsletter' AND {w} GROUP BY lang ORDER BY n DESC"),
  ('Share buttons (Learn and Teachers pages)', "SELECT blob3 AS kind, blob4 AS page, blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='share' AND {w} GROUP BY kind, page, lang ORDER BY n DESC"),
  ('Ways to Help: outbound partner clicks', "SELECT blob3 AS partner, blob4 AS kind, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='partner' AND {w} GROUP BY partner, kind ORDER BY n DESC LIMIT 50"),
+ ('Lesson plans (build, print, copy link, Google Classroom)', "SELECT blob3 AS act, blob4 AS page, blob5 AS label, blob2 AS lang, SUM(_sample_interval) AS n FROM sp_events WHERE blob1='plan' AND {w} GROUP BY act, page, label, lang ORDER BY n DESC"),
 ]
 lines = [f'# Saving Planets events: last {days} days (generated {datetime.datetime.now():%Y-%m-%d %H:%M} HST)', '',
          'Aggregate counts only (no visitors, no IPs, no text). SI outcomes: ok = answered, none = no answer found, unsafe/pii = refused, busy/bot/error = not answered.', '']
