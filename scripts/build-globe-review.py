@@ -53,7 +53,7 @@ UI = {
  'buildH': 'Lesson builder',
  'buildL': 'Choose a grade band, a GLOBE topic, and a length. The plan links the official protocol page and the official films for that topic. It does not copy the measurement steps.',
  'band': 'Grade band', 'topic': 'Topic', 'length': 'Length',
- 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom', 'buildBtn': 'Build plan',
+ 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom', 'buildBtn': 'Build plan', 'videoCredit': 'Title video credits:',
  'suggestH': 'Suggest an edit or another solution',
  'suggest': 'Write to the partnerships desk. There is no form on this page.',
  'cite': 'The source of this material is the GLOBE Program website at www.globe.gov. All Rights Reserved.',
@@ -105,7 +105,7 @@ UI['fr'] = tr(
  train='Depuis décembre 2025, un membre GLOBE termine une formation pour chaque protocole avant d’entrer des données pour ce protocole. La formation peut être une relecture du guide de terrain, un eTraining de collecte quand GLOBE en propose un, un Protocol eTraining complet, ou un atelier GLOBE.',
  buildH='Générateur de leçon', buildL='Choisis un niveau, un sujet GLOBE et une durée. Le plan renvoie à la page officielle du protocole et aux films officiels. Il ne copie pas les étapes de mesure.',
  band='Niveau', topic='Sujet', length='Durée',
- printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan', standardsH='Normes', sourceGLOBE='Source : GLOBE',
+ printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan', standardsH='Normes', sourceGLOBE='Source : GLOBE', videoCredit='Crédits de la vidéo de titre :',
  suggestH='Proposer une correction ou une autre solution', suggest='Écrivez au bureau des partenariats. Il n’y a pas de formulaire sur cette page.',
  src='Source',
  spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère','obs':'GLOBE Observer'},
@@ -148,7 +148,7 @@ UI['es'] = tr(
  train='Desde diciembre de 2025, un miembro de GLOBE completa una formación por cada protocolo antes de introducir datos de ese protocolo. La formación puede ser una lectura de la guía de campo, un eTraining de toma de datos cuando GLOBE lo ofrece, un Protocol eTraining completo o un taller de GLOBE.',
  buildH='Generador de lecciones', buildL='Elige un nivel, un tema de GLOBE y una duración. El plan enlaza la página oficial del protocolo y los vídeos oficiales. No copia los pasos de medición.',
  band='Nivel', topic='Tema', length='Duración',
- printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan', standardsH='Estándares', sourceGLOBE='Fuente: GLOBE',
+ printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan', standardsH='Estándares', sourceGLOBE='Fuente: GLOBE', videoCredit='Créditos del vídeo de título:',
  suggestH='Sugerir un cambio u otra solución', suggest='Escribe al equipo de alianzas. En esta página no hay formulario.',
  src='Fuente',
  spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -191,7 +191,7 @@ UI['it'] = tr(
  train='Dal dicembre 2025, un membro GLOBE completa una formazione per ogni protocollo prima di inserire dati di quel protocollo. La formazione può essere una lettura della guida di campo, un eTraining di raccolta quando GLOBE lo offre, un Protocol eTraining completo o un laboratorio GLOBE.',
  buildH='Generatore di lezioni', buildL='Scegli una fascia, un tema GLOBE e una durata. Il piano collega la pagina ufficiale del protocollo e i video ufficiali. Non copia i passi di misura.',
  band='Fascia', topic='Tema', length='Durata',
- printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano', standardsH='Standard', sourceGLOBE='Fonte: GLOBE',
+ printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano', standardsH='Standard', sourceGLOBE='Fonte: GLOBE', videoCredit='Crediti del video del titolo:',
  suggestH='Suggerisci una modifica o un’altra soluzione', suggest='Scrivi all’ufficio partnership. In questa pagina non c’è un modulo.',
  src='Fonte',
  spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -234,7 +234,7 @@ UI['ar'] = tr(
  train='منذ ديسمبر 2025، يكمل عضو GLOBE تدريبًا واحدًا لكل بروتوكول قبل إدخال بيانات ذلك البروتوكول. قد يكون التدريب مراجعة لدليل الميدان، أو eTraining لجمع البيانات حين يوفّره GLOBE، أو Protocol eTraining كاملًا، أو ورشة GLOBE.',
  buildH='منشئ الدروس', buildL='اختر مرحلة وموضوعًا من GLOBE ومدة. تربط الخطة بصفحة البروتوكول الرسمية والأفلام الرسمية. وهي لا تنسخ خطوات القياس.',
  band='المرحلة', topic='الموضوع', length='المدة',
- printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة', standardsH='المعايير', sourceGLOBE='المصدر: GLOBE',
+ printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة', standardsH='المعايير', sourceGLOBE='المصدر: GLOBE', videoCredit='اعتمادات فيديو العنوان:',
  suggestH='اقترح تعديلًا أو حلًا آخر', suggest='اكتب إلى مكتب الشراكات. لا يوجد نموذج في هذه الصفحة.',
  src='المصدر',
  spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي','obs':'GLOBE Observer'},
@@ -277,7 +277,7 @@ UI['he'] = tr(
  train='מדצמבר 2025, חבר GLOBE משלים הכשרה אחת לכל פרוטוקול לפני הזנת נתונים של אותו פרוטוקול. ההכשרה יכולה להיות קריאה של מדריך השדה, eTraining לאיסוף נתונים כש-GLOBE מציעה אותו, Protocol eTraining מלא, או סדנה של GLOBE.',
  buildH='מחולל שיעורים', buildL='בחרו שכבת גיל, נושא של GLOBE ומשך. התוכנית מקשרת לעמוד הפרוטוקול הרשמי ולסרטים הרשמיים. היא לא מעתיקה את שלבי המדידה.',
  band='שכבה', topic='נושא', length='משך',
- printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית', standardsH='תקנים', sourceGLOBE='מקור: GLOBE',
+ printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית', standardsH='תקנים', sourceGLOBE='מקור: GLOBE', videoCredit='קרדיטים לסרטון הכותרת:',
  suggestH='הצעת תיקון או פתרון נוסף', suggest='כתבו אל שולחן השותפויות. אין טופס בעמוד הזה.',
  src='מקור',
  spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה','obs':'GLOBE Observer'},
@@ -411,34 +411,23 @@ EXTRA = {
 for _lang, _extra in EXTRA.items():
     UI[_lang].update(_extra)
 
-def install_video(chunk, prefix):
+def install_video(chunk, prefix, credit_label):
     """Replace the still slideshow with one credited 1080p loop. Keep the program title and lead."""
     content = re.search(r'<div class="page-hero-content">.*?</div>', chunk, re.S)
-    if content:
-        content_html = content.group(0).replace('<p>', '<p class="gr-lead">', 1)
-    else:
-        content_html = ''
-    photo = re.search(r'<p class="photo-credit">.*?</p>', chunk, re.S)
-    if not content or not photo:
-        raise SystemExit('hero title or photo credit missing')
+    if not content:
+        raise SystemExit('hero title missing')
+    content_html = content.group(0).replace('<p>', '<p class="gr-lead">', 1)
     credit = ('NASA/GSFC, Earth from Orbit (2012); NASA (ISS071-E-449837, July 24, 2024); '
               'NASA/Shane Kimbrough (ISS065-E-144117, June 23, 2021); '
               'NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006). Public domain.')
     poster = f'{prefix}assets/videos/globe-review-poster.jpg'
     src = f'{prefix}assets/videos/globe-review-hero.mp4'
-    body = photo.group(0)
-    cut = body.find('NASA')
-    label = body[body.find('>')+1:cut] if cut >= 0 else ''
-    if label and not label.endswith((' ', '\u00a0', '\u200f')):
-        label += ' '
-    photo_html = f'<p class="photo-credit">{label}{credit}</p>'
     return f'''<section class="page-hero space-hero pg-anim has-video gr-hero">
 <div class="hero-media" aria-hidden="true"><img class="gr-hero-still" src="{poster}" alt="" width="1920" height="1080"><video class="hero-video gr-hero-video" muted loop playsinline preload="none" poster="{poster}" width="1920" height="1080"><source data-src="{src}" type="video/mp4"></video><div class="hero-overlay"></div></div>
 {content_html}
-<p class="hero-credit">{credit}</p>
+<p class="gr-vid-credit">{E(credit_label)} {credit}</p>
 </section>
-<script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src=s.getAttribute("data-src");v.load();}}var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
-{photo_html}
+<script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function rate(){{if(!mq.matches)v.playbackRate=1.25;}}function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src=s.getAttribute("data-src");v.load();}}rate();var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}v.addEventListener("loadedmetadata",rate);if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
 '''
 
 def drop_sunset(hero):
@@ -515,8 +504,8 @@ def build(lang):
     if hero_at < 0 or eli < 0:
         raise SystemExit(f'{path}: hero or eli missing')
     prefix = '' if lang == 'en' else '../'
-    opening = opening[:hero_at] + install_video(opening[hero_at:eli], prefix) + opening[eli:]
     u = UI[lang]
+    opening = opening[:hero_at] + install_video(opening[hero_at:eli], prefix, u['videoCredit']) + opening[eli:]
     tail = rest[rel:]
     tail = re.sub(r'<a class="sticky-help"[^>]*>.*?</a>\s*', '', tail, count=1)
     pre = pre.replace('GLOBE_Program.html', 'GLOBE_Review.html')
@@ -524,7 +513,7 @@ def build(lang):
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113j">\n</head>', 1)
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113r">\n</head>', 1)
     tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113m" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
     if 'gr-banner' in out or u['invite'] in out:
