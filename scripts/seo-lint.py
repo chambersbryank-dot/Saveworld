@@ -11,7 +11,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
 TWITTER_SITE = '@SISavingPlanets'
-NOINDEX = {'Project-R.html', '404.html', 'offline.html'}
+NOINDEX = {'Project-R.html', '404.html', 'offline.html', 'GLOBE_Review.html'}
 ERROR = {'title-missing', 'title-duplicate', 'desc-missing', 'desc-duplicate', 'hreflang-reciprocity', 'jsonld-invalid'}
 MAIN_TYPES = {'Article', 'NewsArticle', 'BlogPosting', 'WebPage', 'CollectionPage', 'AboutPage', 'ContactPage', 'FAQPage',
               'LearningResource', 'Course', 'DefinedTermSet', 'SearchResultsPage', 'ItemList', 'Dataset', 'WebApplication'}
