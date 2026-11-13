@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261113w'
+V = '20261113y'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -410,12 +410,12 @@ SHOTS = {
     'goes19': 'assets/GOES19_GOESU_KSC.jpg',
 }
 EXTRA = {
-    'en': dict(more='Click here for more', zoomIn='Zoom in', zoomOut='Zoom out', zoomFit='Fit the planet', kindSat='Satellite', kindCraft='Spacecraft', sunmoon=' Sun: NASA/SDO AIA 304. Moon: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'en': dict(more='Click here for more information', zoomIn='Zoom in', zoomOut='Zoom out', zoomFit='Fit the planet', kindSat='Satellite', kindCraft='Spacecraft', sunmoon=' Sun: NASA/SDO AIA 304. Moon: NASA/Goddard/Arizona State University, LROC WAC.'),
     'fr': dict(more='Cliquez ici pour en savoir plus', zoomIn='Zoom avant', zoomOut='Zoom arrière', zoomFit='Ajuster la planète', kindSat='Satellite', kindCraft='Engin spatial', sunmoon=' Soleil : NASA/SDO AIA 304. Lune : NASA/Goddard/Arizona State University, LROC WAC.'),
-    'es': dict(more='Haga clic aquí para más', zoomIn='Acercar', zoomOut='Alejar', zoomFit='Ajustar el planeta', kindSat='Satélite', kindCraft='Nave espacial', sunmoon=' Sol: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
-    'ar': dict(more='انقر هنا للمزيد', zoomIn='تكبير', zoomOut='تصغير', zoomFit='ملاءمة الكوكب', kindSat='قمر صناعي', kindCraft='مركبة فضائية', sunmoon=' الشمس: NASA/SDO AIA 304. القمر: NASA/Goddard/Arizona State University, LROC WAC.'),
-    'it': dict(more='Fai clic qui per saperne di più', zoomIn='Ingrandisci', zoomOut='Riduci', zoomFit='Adatta il pianeta', kindSat='Satellite', kindCraft='Veicolo spaziale', sunmoon=' Sole: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
-    'he': dict(more='לחצו כאן לעוד', zoomIn='התקרבות', zoomOut='התרחקות', zoomFit='התאמה לכוכב הלכת', kindSat='לוויין', kindCraft='חללית', sunmoon=' שמש: NASA/SDO AIA 304. ירח: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'es': dict(more='Haga clic aquí para más información', zoomIn='Acercar', zoomOut='Alejar', zoomFit='Ajustar el planeta', kindSat='Satélite', kindCraft='Nave espacial', sunmoon=' Sol: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'ar': dict(more='انقر هنا لمزيد من المعلومات', zoomIn='تكبير', zoomOut='تصغير', zoomFit='ملاءمة الكوكب', kindSat='قمر صناعي', kindCraft='مركبة فضائية', sunmoon=' الشمس: NASA/SDO AIA 304. القمر: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'it': dict(more='Fai clic qui per maggiori informazioni', zoomIn='Ingrandisci', zoomOut='Riduci', zoomFit='Adatta il pianeta', kindSat='Satellite', kindCraft='Veicolo spaziale', sunmoon=' Sole: NASA/SDO AIA 304. Luna: NASA/Goddard/Arizona State University, LROC WAC.'),
+    'he': dict(more='לחצו כאן למידע נוסף', zoomIn='התקרבות', zoomOut='התרחקות', zoomFit='התאמה לכוכב הלכת', kindSat='לוויין', kindCraft='חללית', sunmoon=' שמש: NASA/SDO AIA 304. ירח: NASA/Goddard/Arizona State University, LROC WAC.'),
 }
 
 def page_credit(page):
@@ -428,7 +428,7 @@ def page_credit(page):
         return ''
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))).strip()
 
-def sentences(lang, page, limit=4):
+def sentences(lang, page, limit=5):
     if not page:
         return []
     path = page if lang == 'en' else os.path.join(lang, page)
@@ -456,7 +456,7 @@ def sentences(lang, page, limit=4):
 
 def helps_brief(extra):
     text = ((extra[1] or '') + ' ' + (extra[2] or '')).strip()
-    return [p.strip() for p in re.split(r'(?<=[.!?؟])\s+', text) if len(p.strip()) > 18][:4]
+    return [p.strip() for p in re.split(r'(?<=[.!?؟])\s+', text) if len(p.strip()) > 18][:5]
 
 def main():
     for lang in LANGS:
@@ -489,7 +489,7 @@ def main():
                        page=m.get('page', ''), official=m.get('official', ''), feed=m.get('feed', ''),
                        imageQ=m.get('imageQ', ''), imageMust=(m.get('imageMust') or ''),
                        dsn=bool(m.get('dsn')), nasaPlus=bool(m.get('nasaPlus')),
-                       photo=m.get('photo', ''), shot=shot, credit=credit, brief=brief[:4],
+                       photo=m.get('photo', ''), shot=shot, credit=credit, brief=brief[:5],
                        source=m.get('official', ''))
             sats.append(row)
         json.dump(dict(lang=lang, ui=ui, sats=sats), open(f'assets/data/sat-view.{lang}.json', 'w', encoding='utf-8'),
