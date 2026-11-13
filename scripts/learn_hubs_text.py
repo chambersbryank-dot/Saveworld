@@ -12,7 +12,7 @@ VISION = T(
  'לימוד חינמי של מדעים, הנדסה ותעופה וחלל ברמה אוניברסיטאית, בשש שפות. מתחילים מעקרונות היסוד ומגיעים עד לתכנון של מה שטס, וכל שיעור קשור לעבודה אמיתית שעוזרת לאנשים ולכוכב הלכת.')
 UI = {
  'learn': T('Learn', 'Apprendre', 'Aprender', 'تعلّم', 'Impara', 'למידה'),
- 'topics': T('Choose a topic', 'Choisir un thème', 'Elige un tema', 'اختر موضوعًا', 'Scegli un argomento', 'בחרו נושא'),
+ 'topics': T('Choose a Study', 'Choisir une étude', 'Elige un estudio', 'اختر دراسة', 'Scegli uno studio', 'בחרו לימוד'),
  'ncourses': T('{n} courses', '{n} cours', '{n} cursos', '{n} دورات', '{n} corsi', '{n} קורסים'),
  'ncourse1': T('1 course', '1 cours', '1 curso', 'دورة واحدة', '1 corso', 'קורס אחד'),
  'more': T('More ways to learn', 'Autres façons d’apprendre', 'Más formas de aprender', 'طرق أخرى للتعلّم', 'Altri modi per imparare', 'עוד דרכים ללמוד'),
@@ -48,6 +48,32 @@ UI = {
  'kids': T('Kids', 'Enfants', 'Niños', 'الأطفال', 'Bambini', 'ילדים'),
  'teach': T('Teachers', 'Enseignants', 'Docentes', 'المعلّمون', 'Insegnanti', 'מורים'),
  'allc': T('All courses by year', 'Tous les cours par année', 'Todos los cursos por año', 'كل الدورات حسب السنة', 'Tutti i corsi per anno', 'כל הקורסים לפי שנה'),
+}
+# Nov 13 2026: Learn.html study grid. K-12 stays the label in every language (the guides match US K-12 standards).
+STUDY = {
+ 'applied': T('Applied studies', 'Études appliquées', 'Estudios aplicados', 'دراسات تطبيقية', 'Studi applicati', 'לימודים יישומיים'),
+ 'foundation': T('STEM foundation', 'Socle STEM', 'Base STEM', 'أساس STEM', 'Basi STEM', 'יסוד STEM'),
+ 'all': T('All', 'Tous', 'Todos', 'الكل', 'Tutti', 'הכול'),
+ 'k12': T('K-12', 'K-12', 'K-12', 'K-12', 'K-12', 'K-12'),
+ 'uni': T('University', 'Université', 'Universidad', 'الجامعة', 'Università', 'אוניברסיטה'),
+ 'teachers': T('Teachers', 'Enseignants', 'Docentes', 'المعلّمون', 'Insegnanti', 'מורים'),
+ 'level': T('Level', 'Niveau', 'Nivel', 'المستوى', 'Livello', 'רמה'),
+ 'byname': T('Filter by study name', 'Filtrer par nom d’étude', 'Filtrar por nombre del estudio', 'تصفية حسب اسم الدراسة', 'Filtra per nome dello studio', 'סינון לפי שם הלימוד'),
+ 'none': T('No studies match.', 'Aucune étude ne correspond.', 'Ningún estudio coincide.', 'لا توجد دراسة مطابقة.', 'Nessuno studio corrisponde.', 'אין לימודים תואמים.'),
+ 'help': T('How this helps the planet', 'Comment cela aide la planète', 'Cómo ayuda esto al planeta', 'كيف يساعد هذا الكوكب', 'Come questo aiuta il pianeta', 'איך זה עוזר לכוכב הלכת'),
+ 'see': T('See', 'Voir', 'Mira', 'انظر', 'Vedi', 'ראו'),
+ 'and': T('and', 'et', 'y', 'و', 'e', 'ו'),
+ 'rocket': T('Aerospace Engineering — Rocket Propulsion', 'Génie aérospatial — propulsion des fusées', 'Ingeniería aeroespacial — propulsión de cohetes', 'هندسة الطيران والفضاء — دفع الصواريخ', 'Ingegneria aerospaziale — propulsione a razzo', 'הנדסת תעופה וחלל — הנעה רקטית'),
+ 'jet': T('Aerospace Engineering — Jet Propulsion', 'Génie aérospatial — propulsion par réaction', 'Ingeniería aeroespacial — propulsión a reacción', 'هندسة الطيران والفضاء — الدفع النفاث', 'Ingegneria aerospaziale — propulsione a getto', 'הנדסת תעופה וחלל — הנעה סילונית'),
+ 'sheets': T('See codes on Teacher Sheets', 'Fiches enseignants', 'Fichas docentes', 'أوراق المعلمين', 'Schede per insegnanti', 'דפי מורים'),
+ 'builder': T('Lesson Plan Builder', 'Générateur de plans de cours', 'Creador de planes de clase', 'منشئ خطط الدروس', 'Creatore di piani di lezione', 'בונה מערכי שיעור'),
+ 'title': T('Learn: eight aerospace and STEM studies', 'Apprendre : huit études aérospatiales et STEM', 'Aprender: ocho estudios aeroespaciales y STEM', 'تعلّم: ثماني دراسات في الطيران والفضاء وSTEM', 'Impara: otto studi aerospaziali e STEM', 'למידה: שמונה לימודים בתעופה וחלל וב-STEM'),
+ 'desc': T('Eight free studies: rocket propulsion, jet propulsion, aeronautical engineering, orbits, physics, mathematics, engineering core and chemistry. K-12 guides for aeronautical engineering, orbits and physics; university courses in every study.',
+           'Huit études gratuites : propulsion des fusées, propulsion par réaction, génie aéronautique, orbites, physique, mathématiques, tronc commun d’ingénierie et chimie. Guides du primaire au lycée pour le génie aéronautique, les orbites et la physique ; cours de niveau universitaire dans chaque étude.',
+           'Ocho estudios gratuitos: propulsión de cohetes, propulsión a reacción, ingeniería aeronáutica, órbitas, física, matemáticas, núcleo de ingeniería y química. Guías de primaria a bachillerato para ingeniería aeronáutica, órbitas y física; cursos de nivel universitario en cada estudio.',
+           'ثماني دراسات مجانية: دفع الصواريخ، والدفع النفاث، وهندسة الطيران، والمدارات، والفيزياء، والرياضيات، وأساسيات الهندسة، والكيمياء. أدلة من المرحلة الابتدائية إلى الثانوية لهندسة الطيران والمدارات والفيزياء، ومقررات بمستوى جامعي في كل دراسة.',
+           'Otto studi gratuiti: propulsione a razzo, propulsione a getto, ingegneria aeronautica, orbite, fisica, matematica, base di ingegneria e chimica. Guide dalla primaria al liceo per ingegneria aeronautica, orbite e fisica; corsi di livello universitario in ogni studio.',
+           'שמונה לימודים חינמיים: הנעה רקטית, הנעה סילונית, הנדסת אווירונאוטיקה, מסלולים, פיזיקה, מתמטיקה, ליבת הנדסה וכימיה. מדריכים מגן הילדים עד תיכון להנדסת אווירונאוטיקה, למסלולים ולפיזיקה; קורסים ברמה אוניברסיטאית בכל לימוד.'),
 }
 TOPICS = [  # (key, page, emoji, name, one line, guides, calc subject)
  ('aero', 'Learn_Aero.html', '✈️', T('Aeronautical Engineering', 'Génie aéronautique', 'Ingeniería aeronáutica', 'هندسة الطيران', 'Ingegneria aeronautica', 'הנדסת אווירונאוטיקה'),
