@@ -414,6 +414,10 @@ for _lang, _extra in EXTRA.items():
 def install_video(chunk, prefix):
     """Replace the still slideshow with one credited 1080p loop. Keep the program title and lead."""
     content = re.search(r'<div class="page-hero-content">.*?</div>', chunk, re.S)
+    if content:
+        content_html = content.group(0).replace('<p>', '<p class="gr-lead">', 1)
+    else:
+        content_html = ''
     photo = re.search(r'<p class="photo-credit">.*?</p>', chunk, re.S)
     if not content or not photo:
         raise SystemExit('hero title or photo credit missing')
@@ -430,7 +434,7 @@ def install_video(chunk, prefix):
     photo_html = f'<p class="photo-credit">{label}{credit}</p>'
     return f'''<section class="page-hero space-hero pg-anim has-video gr-hero">
 <div class="hero-media" aria-hidden="true"><img class="gr-hero-still" src="{poster}" alt="" width="1920" height="1080"><video class="hero-video gr-hero-video" muted loop playsinline preload="none" poster="{poster}" width="1920" height="1080"><source data-src="{src}" type="video/mp4"></video><div class="hero-overlay"></div></div>
-{content.group(0)}
+{content_html}
 <p class="hero-credit">{credit}</p>
 </section>
 <script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src=s.getAttribute("data-src");v.load();}}var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
@@ -512,8 +516,6 @@ def build(lang):
     prefix = '' if lang == 'en' else '../'
     opening = opening[:hero_at] + install_video(opening[hero_at:eli], prefix) + opening[eli:]
     u = UI[lang]
-    banner = f'<p class="gr-banner" role="note">{E(u["invite"])}</p>'
-    opening = opening.replace('<section class="page-hero', banner + '<section class="page-hero', 1)
     tail = rest[rel:]
     tail = re.sub(r'<a class="sticky-help"[^>]*>.*?</a>\s*', '', tail, count=1)
     pre = pre.replace('GLOBE_Program.html', 'GLOBE_Review.html')
@@ -521,9 +523,11 @@ def build(lang):
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113i">\n</head>', 1)
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113j">\n</head>', 1)
     tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113g" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
+    if 'gr-banner' in out or u['invite'] in out:
+        raise SystemExit(f'{path}: draft banner still present')
     if 'Pacific_Clouds_Sunset_ISS' in out:
         raise SystemExit(f'{path}: sunset image still referenced')
     if 'globe-review-hero.mp4' not in out:
