@@ -30,6 +30,10 @@ jobs:
         with:
           path: '.'
 
+      # The artifact API can lag the upload step. Deploy then reports zero artifacts.
+      - name: Wait for the Pages artifact
+        run: sleep 20
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
