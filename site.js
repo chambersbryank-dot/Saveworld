@@ -402,6 +402,7 @@ dds.forEach(function(li){var b=li.querySelector('.spn-trig'),t;
   var o=!li.classList.contains('is-open');if(desk)closeAll(li);set(li,o)});
  li.addEventListener('mouseenter',function(){if(!mq.matches||!hv.matches)return;clearTimeout(t);if(!li.classList.contains('is-open')){closeAll(li);set(li,true);li.setAttribute('data-hov','1')}});
  li.addEventListener('mouseleave',function(){if(!mq.matches||!hv.matches)return;t=setTimeout(function(){set(li,false)},200)});
+ li.addEventListener('focusin',function(){if(!mq.matches)return;closeAll(li);set(li,true)});
  li.addEventListener('focusout',function(e){if(mq.matches&&e.relatedTarget&&!li.contains(e.relatedTarget))set(li,false)});
 });
 if(tg)tg.addEventListener('click',function(e){e.stopPropagation();panel(!n.classList.contains('spn-open'))});

@@ -16,11 +16,12 @@
     var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = '', cat = 'all', lastBtn = null;
     var geom = null, zoomT = 0, selectedLg = '';
     sats.forEach(function (s) { byId[s.id] = s; });
-    var earth = root.getAttribute('data-earth');
-    var earthLg = root.getAttribute('data-earth-lg') || earth;
-    var moon = root.getAttribute('data-moon') || '';
     var pre = (root.getAttribute('data-src') || '').indexOf('../') === 0 ? '../' : '';
-    var sun = root.getAttribute('data-sun') || (pre + 'assets/earth/sdo-aia304.jpg');
+    var cut = pre + 'assets/earth/cut/';
+    var earth = cut + 'earth.webp';
+    var earthLg = earth;
+    var moon = cut + 'moon.webp';
+    var sun = cut + 'sun.webp';
     var canvas = document.createElement('div');
     canvas.className = 'sat-canvas';
     stage.appendChild(canvas);
@@ -266,12 +267,12 @@
         onEllipse(groups.geo, cx, cy, 246, 102);
         onEllipse(groups.heo, cx + 40, cy, 196, 118);
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.diagram || '') + '">' +
-          '<defs><clipPath id="earth-disc"><circle cx="400" cy="268" r="72"/></clipPath></defs>' +
+          '<defs></defs>' +
           '<ellipse cx="400" cy="268" rx="118" ry="50" fill="none" stroke="rgba(186,224,255,.75)" stroke-width="1.4"/>' +
           '<ellipse cx="400" cy="268" rx="178" ry="74" fill="none" stroke="rgba(186,224,255,.55)" stroke-width="1.4"/>' +
           '<ellipse cx="400" cy="268" rx="246" ry="102" fill="none" stroke="rgba(186,224,255,.45)" stroke-width="1.4"/>' +
           '<ellipse cx="440" cy="268" rx="196" ry="118" fill="none" stroke="rgba(255,214,120,.7)" stroke-width="1.4" stroke-dasharray="5 4"/>' +
-          '<image href="' + esc(earth) + '" x="328" y="196" width="144" height="144" clip-path="url(#earth-disc)"/>' +
+          '<image href="' + esc(earth) + '" x="328" y="196" width="144" height="144"/>' +
           '</svg>';
         /* band names are the buttons added after the svg */
       } else {
@@ -294,18 +295,14 @@
         }
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.farDiagram || '') + '">' +
           '<defs>' +
-          '<radialGradient id="sun-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,170,60,.0)"/><stop offset="55%" stop-color="rgba(255,120,40,.45)"/><stop offset="100%" stop-color="rgba(255,60,20,0)"/></radialGradient>' +
-          '<clipPath id="sun-disc"><circle cx="' + SX + '" cy="' + SY + '" r="' + SR + '"/></clipPath>' +
-          '<clipPath id="sun-flare"><circle cx="' + SX + '" cy="' + SY + '" r="' + (SR + 10) + '"/></clipPath>' +
-          '<clipPath id="earth-far"><circle cx="' + EX + '" cy="' + EY + '" r="' + ER + '"/></clipPath>' +
-          '<clipPath id="moon-far"><circle cx="790" cy="214" r="32"/></clipPath>' +
+          '<radialGradient id="sun-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,170,60,0)"/><stop offset="42%" stop-color="rgba(255,120,40,.28)"/><stop offset="100%" stop-color="rgba(255,60,20,0)"/></radialGradient>' +
+          '<radialGradient id="earth-air" cx="50%" cy="50%" r="50%"><stop offset="72%" stop-color="rgba(150,205,255,0)"/><stop offset="88%" stop-color="rgba(150,205,255,.2)"/><stop offset="100%" stop-color="rgba(150,205,255,0)"/></radialGradient>' +
           '</defs>' +
-          '<circle class="sun-glow" cx="' + SX + '" cy="' + SY + '" r="' + (SR + 28) + '" fill="url(#sun-glow)"/>' +
-          '<image class="sun-base" href="' + esc(sun) + '" x="' + (SX - SR) + '" y="' + (SY - SR) + '" width="' + (SR * 2) + '" height="' + (SR * 2) + '" clip-path="url(#sun-disc)" preserveAspectRatio="xMidYMid slice"/>' +
-          '<image class="sun-flare" href="' + esc(sun) + '" x="' + (SX - SR - 8) + '" y="' + (SY - SR - 8) + '" width="' + ((SR + 8) * 2) + '" height="' + ((SR + 8) * 2) + '" clip-path="url(#sun-flare)" preserveAspectRatio="xMidYMid slice"/>' +
-          '<circle cx="' + EX + '" cy="' + EY + '" r="' + (ER + 28) + '" fill="rgba(150,205,255,.18)"/>' +
-          '<image href="' + esc(earthLg) + '" x="' + (EX - ER) + '" y="' + (EY - ER) + '" width="' + (ER * 2) + '" height="' + (ER * 2) + '" clip-path="url(#earth-far)"/>' +
-          (moon ? '<image href="' + esc(moon) + '" x="758" y="182" width="64" height="64" clip-path="url(#moon-far)" preserveAspectRatio="xMidYMid slice"/>' : '') +
+          '<circle class="sun-glow" cx="' + SX + '" cy="' + SY + '" r="' + (SR + 46) + '" fill="url(#sun-glow)"/>' +
+          '<image class="sun-base" href="' + esc(sun) + '" x="' + (SX - SR - 18) + '" y="' + (SY - SR - 18) + '" width="' + ((SR + 18) * 2) + '" height="' + ((SR + 18) * 2) + '"/>' +
+          '<circle class="earth-air" cx="' + EX + '" cy="' + EY + '" r="' + (ER + 22) + '" fill="url(#earth-air)"/>' +
+          '<image href="' + esc(earthLg) + '" x="' + (EX - ER) + '" y="' + (EY - ER) + '" width="' + (ER * 2) + '" height="' + (ER * 2) + '"/>' +
+          (moon ? '<image href="' + esc(moon) + '" x="758" y="182" width="64" height="64"/>' : '') +
           dist(250, 248, ui.dL12) + dist(860, 248, ui.dL12) + dist(108, 188, ui.dL3) + dist(500, 86, ui.dL4) + dist(500, 624, ui.dL5) +
           '</svg>';
       }

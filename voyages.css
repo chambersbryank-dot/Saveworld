@@ -1,0 +1,37 @@
+.voy-hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;background:#021018}
+.voy-hero .voy-still,.voy-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.voy-hero .voy-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,8,18,.25),rgba(0,8,18,.55))}
+.voy-hero .page-hero-content{position:relative;z-index:2;text-align:center;padding:calc(var(--nav-height, 92px) + 1.2rem) 1rem 1.6rem}
+.voy-hero h1{margin:0;font-size:clamp(1.8rem,4vw,3rem);text-shadow:0 2px 16px rgba(0,0,0,.75)}
+.voy-hero p{max-width:42rem;margin:.6rem auto 0;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.voy-wrap{max-width:1100px;margin:0 auto;padding:1rem .8rem 2rem}
+.voy-switch{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:0 0 1rem}
+.voy-tab{font:inherit;cursor:pointer}
+.voy-tab[aria-pressed="true"]{box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 0 0 2px #fff}
+#voy-scene{background:#041525;color:#e8eef5;border-radius:16px;padding:1rem .9rem 1.3rem}
+#voy-scene h2,#voy-scene .voy-status{text-align:center;margin:.2rem 0 .4rem}
+.voy-row{display:flex;align-items:center;gap:.7rem}
+.voy-earth,.voy-far,.voy-craft{margin:0;text-align:center}
+.voy-earth canvas,.voy-far canvas,.voy-cut{display:block;margin:0 auto;background:transparent}
+.voy-earth canvas{width:min(18vw,110px);height:auto}
+.voy-track{position:relative;flex:1;min-height:120px}
+.voy-line{position:absolute;inset-inline:0;top:42%;height:2px;background:linear-gradient(90deg,rgba(186,224,255,.15),rgba(186,224,255,.75),rgba(186,224,255,.15))}
+[dir=rtl] .voy-line{background:linear-gradient(270deg,rgba(186,224,255,.15),rgba(186,224,255,.75),rgba(186,224,255,.15))}
+.voy-craft{position:absolute;top:42%;inset-inline-start:8%;transform:translate(-50%,-60%);width:min(28vw,150px)}
+[dir=rtl] .voy-craft{transform:translate(50%,-60%)}
+.voy-craft img{width:100%;height:auto;display:block;background:transparent}
+.voy-far{position:relative;flex:none}
+.voy-far canvas,.voy-cut{width:min(42vw,380px);height:auto}
+.voy-moon{position:absolute;width:min(11vw,78px);height:auto;inset-inline-end:0;bottom:1.8rem;background:transparent}
+.voy-wrap figcaption{font-weight:700;font-size:.85rem;margin-top:.25rem}
+#voy-scene p{line-height:1.45}
+@media (max-width:700px){
+  .voy-row{flex-wrap:wrap;justify-content:center}
+  .voy-track{flex:1 1 100%;min-height:130px}
+  .voy-far canvas,.voy-cut{width:min(78vw,380px)}
+  .voy-earth canvas{width:84px}
+  .voy-moon{width:54px}
+}
+@media (prefers-reduced-motion:reduce){
+  .voy-hero video{display:none}
+}
