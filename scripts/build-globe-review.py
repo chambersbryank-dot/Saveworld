@@ -58,8 +58,8 @@ UI = {
  'suggest': 'Write to the partnerships desk. There is no form on this page.',
  'cite': 'The source of this material is the GLOBE Program website at www.globe.gov. All Rights Reserved.',
  'src': 'Source',
- 'spheres': {'atm':'Atmosphere','hyd':'Hydrosphere','ped':'Pedosphere (Soil)','bio':'Biosphere','obs':'GLOBE Observer'},
- 'topics': {'clouds':'Clouds','airtemp':'Air temperature','precip':'Precipitation','watertemp':'Water temperature','ph':'Water pH','mosquito':'Mosquito Habitat Mapper','soil':'Soil characterization','landcover':'Land cover','trees':'Trees (biometry and tree height)','greenup':'Green-Up / Green-Down','observer':'GLOBE Observer app'},
+ 'spheres': {'atm':'Atmosphere','hyd':'Hydrosphere','ped':'Pedosphere (Soil)','bio':'Biosphere',},
+ 'topics': {'clouds':'Clouds','airtemp':'Air temperature','precip':'Precipitation','watertemp':'Water temperature','ph':'Water pH','mosquito':'Mosquito Habitat Mapper','soil':'Soil characterization','landcover':'Land cover','trees':'Trees (biometry and tree height)','greenup':'Green-Up / Green-Down'},
  'bands': {'k2':'K-2','g35':'3-5','g68':'6-8','g912':'9-12'},
  'lengths': {'class':'One class period','week':'One week'},
  'planH':'Lesson plan','planMeta':'{name} · {band} · {length}',
@@ -108,8 +108,8 @@ UI['fr'] = tr(
  printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan', standardsH='Normes', sourceGLOBE='Source : GLOBE', videoCredit='Crédits de la vidéo de titre :', appLink='Oui, tout de suite, prends ton application GLOBE',
  suggestH='Proposer une correction ou une autre solution', suggest='Écrivez au bureau des partenariats. Il n’y a pas de formulaire sur cette page.',
  src='Source',
- spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère','obs':'GLOBE Observer'},
- topics={'clouds':'Nuages','airtemp':'Température de l’air','precip':'Précipitations','watertemp':'Température de l’eau','ph':'pH de l’eau','mosquito':'Mosquito Habitat Mapper','soil':'Caractérisation du sol','landcover':'Couverture du sol','trees':'Arbres (biométrie et hauteur)','greenup':'Green-Up / Green-Down','observer':'Application GLOBE Observer'},
+ spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère',},
+ topics={'clouds':'Nuages','airtemp':'Température de l’air','precip':'Précipitations','watertemp':'Température de l’eau','ph':'pH de l’eau','mosquito':'Mosquito Habitat Mapper','soil':'Caractérisation du sol','landcover':'Couverture du sol','trees':'Arbres (biométrie et hauteur)','greenup':'Green-Up / Green-Down'},
  bands={'k2':'Maternelle–2e','g35':'3e–5e','g68':'6e–8e','g912':'9e–12e'},
  lengths={'class':'Une période de cours','week':'Une semaine'},
  planH='Plan de leçon', planMeta='{name} · {band} · {length}',
@@ -151,8 +151,8 @@ UI['es'] = tr(
  printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan', standardsH='Estándares', sourceGLOBE='Fuente: GLOBE', videoCredit='Créditos del vídeo de título:', appLink='Sí, ahora mismo consigue tu aplicación GLOBE',
  suggestH='Sugerir un cambio u otra solución', suggest='Escribe al equipo de alianzas. En esta página no hay formulario.',
  src='Fuente',
- spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera','obs':'GLOBE Observer'},
- topics={'clouds':'Nubes','airtemp':'Temperatura del aire','precip':'Precipitación','watertemp':'Temperatura del agua','ph':'pH del agua','mosquito':'Mosquito Habitat Mapper','soil':'Caracterización del suelo','landcover':'Cobertura del suelo','trees':'Árboles (biometría y altura)','greenup':'Green-Up / Green-Down','observer':'Aplicación GLOBE Observer'},
+ spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera',},
+ topics={'clouds':'Nubes','airtemp':'Temperatura del aire','precip':'Precipitación','watertemp':'Temperatura del agua','ph':'pH del agua','mosquito':'Mosquito Habitat Mapper','soil':'Caracterización del suelo','landcover':'Cobertura del suelo','trees':'Árboles (biometría y altura)','greenup':'Green-Up / Green-Down'},
  bands={'k2':'K-2','g35':'3.º-5.º','g68':'6.º-8.º','g912':'9.º-12.º'},
  lengths={'class':'Una clase','week':'Una semana'},
  planH='Plan de lección', planMeta='{name} · {band} · {length}',
@@ -194,8 +194,8 @@ UI['it'] = tr(
  printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano', standardsH='Standard', sourceGLOBE='Fonte: GLOBE', videoCredit='Crediti del video del titolo:', appLink='Sì, prendi subito la tua app GLOBE',
  suggestH='Suggerisci una modifica o un’altra soluzione', suggest='Scrivi all’ufficio partnership. In questa pagina non c’è un modulo.',
  src='Fonte',
- spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera','obs':'GLOBE Observer'},
- topics={'clouds':'Nuvole','airtemp':'Temperatura dell’aria','precip':'Precipitazioni','watertemp':'Temperatura dell’acqua','ph':'pH dell’acqua','mosquito':'Mosquito Habitat Mapper','soil':'Caratterizzazione del suolo','landcover':'Copertura del suolo','trees':'Alberi (biometria e altezza)','greenup':'Green-Up / Green-Down','observer':'App GLOBE Observer'},
+ spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera',},
+ topics={'clouds':'Nuvole','airtemp':'Temperatura dell’aria','precip':'Precipitazioni','watertemp':'Temperatura dell’acqua','ph':'pH dell’acqua','mosquito':'Mosquito Habitat Mapper','soil':'Caratterizzazione del suolo','landcover':'Copertura del suolo','trees':'Alberi (biometria e altezza)','greenup':'Green-Up / Green-Down'},
  bands={'k2':'Infanzia–2ª','g35':'3ª–5ª','g68':'6ª–8ª','g912':'9ª–12ª'},
  lengths={'class':'Una lezione','week':'Una settimana'},
  planH='Piano di lezione', planMeta='{name} · {band} · {length}',
@@ -237,8 +237,8 @@ UI['ar'] = tr(
  printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة', standardsH='المعايير', sourceGLOBE='المصدر: GLOBE', videoCredit='اعتمادات فيديو العنوان:', appLink='نعم، احصل على تطبيق GLOBE الآن',
  suggestH='اقترح تعديلًا أو حلًا آخر', suggest='اكتب إلى مكتب الشراكات. لا يوجد نموذج في هذه الصفحة.',
  src='المصدر',
- spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي','obs':'GLOBE Observer'},
- topics={'clouds':'السحب','airtemp':'درجة حرارة الهواء','precip':'الهطول','watertemp':'درجة حرارة الماء','ph':'الأس الهيدروجيني للماء','mosquito':'Mosquito Habitat Mapper','soil':'وصف التربة','landcover':'الغطاء الأرضي','trees':'الأشجار (القياسات والارتفاع)','greenup':'الاخضرار وتساقط الأوراق','observer':'تطبيق GLOBE Observer'},
+ spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي',},
+ topics={'clouds':'السحب','airtemp':'درجة حرارة الهواء','precip':'الهطول','watertemp':'درجة حرارة الماء','ph':'الأس الهيدروجيني للماء','mosquito':'Mosquito Habitat Mapper','soil':'وصف التربة','landcover':'الغطاء الأرضي','trees':'الأشجار (القياسات والارتفاع)','greenup':'الاخضرار وتساقط الأوراق'},
  bands={'k2':'الروضة–2','g35':'3–5','g68':'6–8','g912':'9–12'},
  lengths={'class':'حصة واحدة','week':'أسبوع واحد'},
  planH='خطة الدرس', planMeta='{name} · {band} · {length}',
@@ -280,8 +280,8 @@ UI['he'] = tr(
  printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית', standardsH='תקנים', sourceGLOBE='מקור: GLOBE', videoCredit='קרדיטים לסרטון הכותרת:', appLink='כן, קבלו עכשיו את יישומון GLOBE',
  suggestH='הצעת תיקון או פתרון נוסף', suggest='כתבו אל שולחן השותפויות. אין טופס בעמוד הזה.',
  src='מקור',
- spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה','obs':'GLOBE Observer'},
- topics={'clouds':'עננים','airtemp':'טמפרטורת אוויר','precip':'משקעים','watertemp':'טמפרטורת מים','ph':'pH של מים','mosquito':'Mosquito Habitat Mapper','soil':'אפיון קרקע','landcover':'כיסוי קרקע','trees':'עצים (ביומטריה וגובה)','greenup':'לבלוב ונשירה','observer':'יישומון GLOBE Observer'},
+ spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה',},
+ topics={'clouds':'עננים','airtemp':'טמפרטורת אוויר','precip':'משקעים','watertemp':'טמפרטורת מים','ph':'pH של מים','mosquito':'Mosquito Habitat Mapper','soil':'אפיון קרקע','landcover':'כיסוי קרקע','trees':'עצים (ביומטריה וגובה)','greenup':'לבלוב ונשירה'},
  bands={'k2':'גן–ב׳','g35':'ג׳–ה׳','g68':'ו׳–ח׳','g912':'ט׳–י״ב'},
  lengths={'class':'שיעור אחד','week':'שבוע אחד'},
  planH='מערך שיעור', planMeta='{name} · {band} · {length}',
@@ -532,13 +532,19 @@ def build(lang):
     opening = add_app_link(opening, lang, u['appLink'])
     tail = rest[rel:]
     tail = re.sub(r'<a class="sticky-help"[^>]*>.*?</a>\s*', '', tail, count=1)
+    help_m = re.search(r'<section\b[^>]*\bclass="help-actions"[^>]*>.*?</section>', tail, re.S)
+    if not help_m:
+        raise SystemExit(f'{path}: Help This Work section missing')
+    help_sec = help_m.group(0)
+    tail = tail[:help_m.start()] + tail[help_m.end():]
+    tail = help_sec + '\n' + tail
     pre = pre.replace('GLOBE_Program.html', 'GLOBE_Review.html')
     pre = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex,nofollow">', pre, count=1)
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
     pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113s">\n</head>', 1)
-    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113m" defer></script>\n</body>', 1)
+    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113t" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
     if 'gr-banner' in out or u['invite'] in out:
         raise SystemExit(f'{path}: draft banner still present')
