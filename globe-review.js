@@ -114,7 +114,6 @@
   var band = form.querySelector('[name=band]');
   var topic = form.querySelector('[name=topic]');
   var length = form.querySelector('[name=length]');
-  var doPrint = /[?&]print=1\b/.test(location.search);
 
   var sphere = '', html = '';
   TOPICS.forEach(function (tp) {
@@ -162,24 +161,27 @@
     if ((band.value === 'k2' || band.value === 'g35') && tp.elem) docs += '<li>' + link(tp.elem, t.openElem) + '</li>';
     docs += '<li>' + link(APP, 'GLOBE Observer') + '</li></ul>';
     var ngss = (tp.id === 'clouds' ? t.ngssClouds : t.ngssGeneric) + ' ' + NGSS;
+    var steps = fill(t.steps, name).split('|').map(function (step) { return '<li>' + esc(step) + '</li>'; }).join('');
     out.innerHTML =
       '<h2>' + esc(name) + '</h2>' +
       '<p class="lb-meta">' + esc(t.bands[band.value] + ' · ' + t.lengths[length.value]) + '</p>' +
-      '<h3>' + esc(t.objH) + '</h3><p>' + fill(t.obj, name) + '</p>' +
+      '<p>' + fill(t.obj, name) + '</p>' +
+      '<h3>' + esc(t.objH) + '</h3><ul><li>' + fill(t.obj, name) + '</li></ul>' +
       '<h3>' + esc(t.matH) + '</h3>' + docs +
-      '<h3>' + esc(t.stepsH) + '</h3><ol><li>' + fill(t.steps, name).split('|').join('</li><li>') + '</li></ol>' +
+      '<h3>' + esc(t.stepsH) + '</h3><ol>' + steps + '</ol>' +
       videoBlock(t.vidH, fill(t.filmLead, name), filmFor(films, 0)) +
       videoBlock(t.dataLab, fill(t.dataLead, name), filmFor(films, 1)) +
       videoBlock(t.qLab, fill(t.talkLead, name), filmFor(films, 2)) +
       '<h3>' + esc(t.ngssH) + '</h3><p>' + esc(ngss) + '</p>' +
       '<p class="lb-small">' + esc(t.cite) + '</p><p class="lb-small">' + esc(t.credit) + '</p>';
+    out.hidden = false;
   }
 
   var start = params();
   if (band.querySelector('option[value="' + start.band + '"]')) band.value = start.band;
   if (topic.querySelector('option[value="' + start.topic + '"]')) topic.value = start.topic;
   if (length.querySelector('option[value="' + start.length + '"]')) length.value = start.length;
-  form.addEventListener('change', render);
+  writeUrl();
   form.addEventListener('submit', function (e) { e.preventDefault(); render(); });
   function copyText(btn, text) {
     var done = function () { btn.textContent = t.copied; };
@@ -191,9 +193,7 @@
     copyText(e.currentTarget, location.href);
   });
   document.getElementById('lb-print').addEventListener('click', function () {
-    render();
+    if (out.hidden) return;
     window.print();
   });
-  render();
-  if (doPrint) setTimeout(function () { window.print(); }, 400);
 })();

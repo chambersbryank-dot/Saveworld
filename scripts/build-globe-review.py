@@ -53,7 +53,7 @@ UI = {
  'buildH': 'Lesson builder',
  'buildL': 'Choose a grade band, a GLOBE topic, and a length. The plan links the official protocol page and the official films for that topic. It does not copy the measurement steps.',
  'band': 'Grade band', 'topic': 'Topic', 'length': 'Length',
- 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom',
+ 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom', 'buildBtn': 'Build plan',
  'suggestH': 'Suggest an edit or another solution',
  'suggest': 'Write to the partnerships desk. There is no form on this page.',
  'cite': 'The source of this material is the GLOBE Program website at www.globe.gov. All Rights Reserved.',
@@ -105,7 +105,7 @@ UI['fr'] = tr(
  train='Depuis décembre 2025, un membre GLOBE termine une formation pour chaque protocole avant d’entrer des données pour ce protocole. La formation peut être une relecture du guide de terrain, un eTraining de collecte quand GLOBE en propose un, un Protocol eTraining complet, ou un atelier GLOBE.',
  buildH='Générateur de leçon', buildL='Choisis un niveau, un sujet GLOBE et une durée. Le plan renvoie à la page officielle du protocole et aux films officiels. Il ne copie pas les étapes de mesure.',
  band='Niveau', topic='Sujet', length='Durée',
- printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom',
+ printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan',
  suggestH='Proposer une correction ou une autre solution', suggest='Écrivez au bureau des partenariats. Il n’y a pas de formulaire sur cette page.',
  src='Source',
  spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère','obs':'GLOBE Observer'},
@@ -148,7 +148,7 @@ UI['es'] = tr(
  train='Desde diciembre de 2025, un miembro de GLOBE completa una formación por cada protocolo antes de introducir datos de ese protocolo. La formación puede ser una lectura de la guía de campo, un eTraining de toma de datos cuando GLOBE lo ofrece, un Protocol eTraining completo o un taller de GLOBE.',
  buildH='Generador de lecciones', buildL='Elige un nivel, un tema de GLOBE y una duración. El plan enlaza la página oficial del protocolo y los vídeos oficiales. No copia los pasos de medición.',
  band='Nivel', topic='Tema', length='Duración',
- printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom',
+ printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan',
  suggestH='Sugerir un cambio u otra solución', suggest='Escribe al equipo de alianzas. En esta página no hay formulario.',
  src='Fuente',
  spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -191,7 +191,7 @@ UI['it'] = tr(
  train='Dal dicembre 2025, un membro GLOBE completa una formazione per ogni protocollo prima di inserire dati di quel protocollo. La formazione può essere una lettura della guida di campo, un eTraining di raccolta quando GLOBE lo offre, un Protocol eTraining completo o un laboratorio GLOBE.',
  buildH='Generatore di lezioni', buildL='Scegli una fascia, un tema GLOBE e una durata. Il piano collega la pagina ufficiale del protocollo e i video ufficiali. Non copia i passi di misura.',
  band='Fascia', topic='Tema', length='Durata',
- printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom',
+ printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano',
  suggestH='Suggerisci una modifica o un’altra soluzione', suggest='Scrivi all’ufficio partnership. In questa pagina non c’è un modulo.',
  src='Fonte',
  spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -234,7 +234,7 @@ UI['ar'] = tr(
  train='منذ ديسمبر 2025، يكمل عضو GLOBE تدريبًا واحدًا لكل بروتوكول قبل إدخال بيانات ذلك البروتوكول. قد يكون التدريب مراجعة لدليل الميدان، أو eTraining لجمع البيانات حين يوفّره GLOBE، أو Protocol eTraining كاملًا، أو ورشة GLOBE.',
  buildH='منشئ الدروس', buildL='اختر مرحلة وموضوعًا من GLOBE ومدة. تربط الخطة بصفحة البروتوكول الرسمية والأفلام الرسمية. وهي لا تنسخ خطوات القياس.',
  band='المرحلة', topic='الموضوع', length='المدة',
- printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom',
+ printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة',
  suggestH='اقترح تعديلًا أو حلًا آخر', suggest='اكتب إلى مكتب الشراكات. لا يوجد نموذج في هذه الصفحة.',
  src='المصدر',
  spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي','obs':'GLOBE Observer'},
@@ -277,7 +277,7 @@ UI['he'] = tr(
  train='מדצמבר 2025, חבר GLOBE משלים הכשרה אחת לכל פרוטוקול לפני הזנת נתונים של אותו פרוטוקול. ההכשרה יכולה להיות קריאה של מדריך השדה, eTraining לאיסוף נתונים כש-GLOBE מציעה אותו, Protocol eTraining מלא, או סדנה של GLOBE.',
  buildH='מחולל שיעורים', buildL='בחרו שכבת גיל, נושא של GLOBE ומשך. התוכנית מקשרת לעמוד הפרוטוקול הרשמי ולסרטים הרשמיים. היא לא מעתיקה את שלבי המדידה.',
  band='שכבה', topic='נושא', length='משך',
- printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom',
+ printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית',
  suggestH='הצעת תיקון או פתרון נוסף', suggest='כתבו אל שולחן השותפויות. אין טופס בעמוד הזה.',
  src='מקור',
  spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה','obs':'GLOBE Observer'},
@@ -486,13 +486,14 @@ def builder(u):
 <div><label for="lb-band">{E(u['band'])}</label><select id="lb-band" name="band"><option value="k2">{E(u['bands']['k2'])}</option><option value="g35">{E(u['bands']['g35'])}</option><option value="g68">{E(u['bands']['g68'])}</option><option value="g912">{E(u['bands']['g912'])}</option></select></div>
 <div><label for="lb-topic">{E(u['topic'])}</label><select id="lb-topic" name="topic"></select></div>
 <div><label for="lb-len">{E(u['length'])}</label><select id="lb-len" name="length"><option value="class">{E(u['lengths']['class'])}</option><option value="week">{E(u['lengths']['week'])}</option></select></div>
+<div class="hero-ctas gr-actions"><button type="submit" class="btn hero-cta" id="gr-build">{E(u['buildBtn'])}</button></div>
 </form>
 <div class="lb-actions hero-ctas gr-actions">
 <button type="button" class="btn hero-cta" id="lb-print">{E(u['printPlan'])}</button>
 <button type="button" class="btn hero-cta" id="gr-copy">{E(u['copyLink'])}</button>
 <a class="btn hero-cta" id="gr-classroom" target="_blank" rel="noopener noreferrer">{E(u['classroom'])}</a>
 </div>
-<article class="lb-plan" id="lb-plan" aria-live="polite"></article>
+<article class="lb-plan" id="lb-plan" aria-live="polite" hidden></article>
 <script type="application/json" id="gr-i18n">{blob}</script>
 </div>
 '''
@@ -524,7 +525,7 @@ def build(lang):
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
     pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113j">\n</head>', 1)
-    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113g" defer></script>\n</body>', 1)
+    tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113k" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
     if 'gr-banner' in out or u['invite'] in out:
         raise SystemExit(f'{path}: draft banner still present')
