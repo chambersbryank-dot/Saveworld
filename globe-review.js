@@ -4,6 +4,20 @@
   var VIDEOS = 'https://www.globe.gov/community-resources/learning-and-facilitation-resources/teaching-resources/globe-videos';
   var ETRAIN = 'https://www.globe.gov/get-involved/training/globe-etraining';
   var NGSS = 'https://www.globe.gov/documents/2629866/0/ConnectionsGLOBE_NGSS.pdf';
+  /* Codes are the Student Performance Expectations in whose resource row
+     GLOBE's guide names that protocol. A Guide to Connections between the
+     GLOBE Program and the Next Generation Science Standards, globe.gov. */
+  var STANDARDS = {
+    clouds: ['K-ESS2-1','3-ESS2-1','5-ESS2-1','MS-PS1-1','MS-PS1-4','MS-ESS2-5','HS-ESS2-3'],
+    airtemp: ['K-ESS2-1','3-ESS2-1','5-ESS2-1','MS-ESS2-5','HS-PS4-5','HS-ESS2-2'],
+    precip: ['K-ESS2-1','3-ESS2-1','5-ESS2-1','MS-ESS2-4','MS-ESS2-5','HS-ESS2-2'],
+    watertemp: ['5-ESS2-1','MS-LS1-5','HS-PS4-5','HS-ESS2-5'],
+    ph: ['MS-LS1-5','HS-LS2-1','HS-LS2-2','HS-ESS2-5'],
+    soil: ['5-ESS2-1','MS-PS1-2','MS-PS1-3','MS-PS1-5','HS-ESS1-2','HS-ESS2-2'],
+    landcover: ['3-LS4-4','5-ESS2-1','MS-ESS3-3','HS-LS4-3','HS-LS4-5','HS-ESS3-1'],
+    trees: ['HS-LS1-5','HS-LS2-1','HS-LS2-2'],
+    greenup: ['2-LS4-1','5-ESS2-1','MS-LS1-4','MS-LS1-5','MS-LS1-6','MS-LS2-1','MS-LS2-4','HS-LS1-5']
+  };
   var APP = 'https://observer.globe.gov/';
   var CHANNEL = 'https://www.youtube.com/user/globeprogram';
   var TOPICS = [
@@ -160,8 +174,9 @@
     docs += '<li>' + link(tp.train, t.openTrain) + '</li>';
     if ((band.value === 'k2' || band.value === 'g35') && tp.elem) docs += '<li>' + link(tp.elem, t.openElem) + '</li>';
     docs += '<li>' + link(APP, 'GLOBE Observer') + '</li></ul>';
-    var ngss = (tp.id === 'clouds' ? t.ngssClouds : t.ngssGeneric) + ' ' + NGSS;
     var steps = fill(t.steps, name).split('|').map(function (step) { return '<li>' + esc(step) + '</li>'; }).join('');
+    var codes = STANDARDS[tp.id];
+    var standards = codes ? '<h3>' + esc(t.standardsH) + '</h3><ul class="lb-small">' + codes.map(function (c) { return '<li><span lang="en">' + esc(c) + '</span></li>'; }).join('') + '</ul><p class="lb-small"><a href="' + esc(NGSS) + '" target="_blank" rel="noopener noreferrer">' + esc(t.sourceGLOBE) + '</a></p>' : '';
     out.innerHTML =
       '<h2>' + esc(name) + '</h2>' +
       '<p class="lb-meta">' + esc(t.bands[band.value] + ' · ' + t.lengths[length.value]) + '</p>' +
@@ -172,7 +187,7 @@
       videoBlock(t.vidH, fill(t.filmLead, name), filmFor(films, 0)) +
       videoBlock(t.dataLab, fill(t.dataLead, name), filmFor(films, 1)) +
       videoBlock(t.qLab, fill(t.talkLead, name), filmFor(films, 2)) +
-      '<h3>' + esc(t.ngssH) + '</h3><p>' + esc(ngss) + '</p>' +
+      standards +
       '<p class="lb-small">' + esc(t.cite) + '</p><p class="lb-small">' + esc(t.credit) + '</p>';
     out.hidden = false;
   }
