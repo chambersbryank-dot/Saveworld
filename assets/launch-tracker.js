@@ -41,7 +41,9 @@
       '.launch-widget .lw-stage{position:relative;width:100%;max-width:40rem;aspect-ratio:16/9;margin:.65rem 0;background:#041018;border-radius:12px;overflow:hidden}' +
       '.launch-widget .lw-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}' +
       '.launch-widget .lw-play{position:absolute;inset:0;width:100%;margin:0;border:0;cursor:pointer;color:#fff;font:800 1rem/1.3 Montserrat,sans-serif;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06))}' +
-      '.launch-widget .lw-play:focus-visible{outline:3px solid #fff;outline-offset:-6px}';
+      '.launch-widget .lw-play:focus-visible{outline:3px solid #fff;outline-offset:-6px}' +
+      '.launch-widget .lw-nsf{margin:.45rem 0 .2rem;font-size:.92rem;line-height:1.4;color:#f4fbff}' +
+      '.launch-widget .lw-nsf a{color:#8fd3ff;font-weight:700}';
     document.head.appendChild(st);
   }
 
@@ -284,12 +286,12 @@
   };
   var pk = PICK[lang] || PICK.en;
   var ADD = {
-    en: { watchLive:'Watch live', play:'Play official stream', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.' },
-    fr: { watchLive:'Regarder en direct', play:'Lire le direct officiel', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.' },
-    es: { watchLive:'Ver en vivo', play:'Reproducir el directo oficial', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.' },
-    ar: { watchLive:'شاهد البث المباشر', play:'تشغيل البث الرسمي', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.' },
-    it: { watchLive:'Guarda in diretta', play:'Avvia la diretta ufficiale', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.' },
-    he: { watchLive:'צפו בשידור החי', play:'נגנו את השידור הרשמי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.' }
+    en: { watchLive:'Watch live', play:'Play official stream', playNsf:'Play live coverage', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.', nsf:'Live coverage by NASASpaceflight (independent, not SpaceX’s official feed).', nsfChannel:'NASASpaceflight channel', officialSx:'Official SpaceX webcast & mission guide', altView:'Alternate view' },
+    fr: { watchLive:'Regarder en direct', play:'Lire le direct officiel', playNsf:'Lire la couverture en direct', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.', nsf:'Couverture en direct par NASASpaceflight (indépendante, ce n’est pas le flux officiel de SpaceX).', nsfChannel:'Chaîne NASASpaceflight', officialSx:'Webcast officiel de SpaceX et guide de mission', altView:'Vue alternative' },
+    es: { watchLive:'Ver en vivo', play:'Reproducir el directo oficial', playNsf:'Reproducir la cobertura en vivo', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.', nsf:'Cobertura en vivo de NASASpaceflight (independiente, no es la señal oficial de SpaceX).', nsfChannel:'Canal de NASASpaceflight', officialSx:'Webcast oficial de SpaceX y guía de la misión', altView:'Vista alternativa' },
+    ar: { watchLive:'شاهد البث المباشر', play:'تشغيل البث الرسمي', playNsf:'تشغيل التغطية المباشرة', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.', nsf:'تغطية مباشرة من NASASpaceflight (مستقلة، وليست البث الرسمي لسبيس إكس).', nsfChannel:'قناة NASASpaceflight', officialSx:'البث الرسمي لسبيس إكس ودليل المهمة', altView:'عرض بديل' },
+    it: { watchLive:'Guarda in diretta', play:'Avvia la diretta ufficiale', playNsf:'Avvia la copertura in diretta', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.', nsf:'Copertura in diretta di NASASpaceflight (indipendente, non è il feed ufficiale di SpaceX).', nsfChannel:'Canale NASASpaceflight', officialSx:'Webcast ufficiale di SpaceX e guida della missione', altView:'Vista alternativa' },
+    he: { watchLive:'צפו בשידור החי', play:'נגנו את השידור הרשמי', playNsf:'נגנו את הסיקור החי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.', nsf:'שידור חי של NASASpaceflight (עצמאי, לא הערוץ הרשמי של ספייס אקס).', nsfChannel:'הערוץ של NASASpaceflight', officialSx:'השידור הרשמי של ספייס אקס ומדריך המשימה', altView:'תצוגה חלופית' }
   };
   var ui = ADD[lang] || ADD.en;
   /* SpaceX page checked 13 Nov 2026: window opens 4:45 p.m. CT (22:45 UTC), 75 minutes, pending approval. */
@@ -386,15 +388,21 @@
     var prov = String(provider(l) || '').toLowerCase();
     return !!(pub && prov && (prov.indexOf(pub) >= 0 || pub.indexOf(prov) >= 0));
   }
-  function embedFor(l) {
+  function streamRow(l) {
     if (isRestricted(l)) return null;
-    var name = ((l && l.name) || '') + ' ' + missionName(l);
+    var name = (((l && l.name) || '') + ' ' + missionName(l)).toLowerCase();
     for (var s = 0; s < STREAMS.length; s++) {
       var row = STREAMS[s];
-      if (row && row.match && row.url && name.toLowerCase().indexOf(String(row.match).toLowerCase()) >= 0) {
-        var set = parseEmbed(row.url, missionName(l));
-        if (set) return set;
-      }
+      if (row && row.match && name.indexOf(String(row.match).toLowerCase()) >= 0) return row;
+    }
+    return null;
+  }
+  function officialEmbed(l) {
+    if (isRestricted(l)) return null;
+    var row = streamRow(l);
+    if (row && row.url) {
+      var set = parseEmbed(row.url, missionName(l));
+      if (set) return set;
     }
     var vids = [].concat((l && l.vid_urls) || [], (l && l.mission && l.mission.vid_urls) || []);
     for (var i = 0; i < vids.length; i++) {
@@ -407,14 +415,32 @@
     }
     return null;
   }
-  function playerHtml(l) {
-    var emb = embedFor(l);
-    if (!emb) return '';
-    var title = emb.title || missionName(l);
+  function altEmbed(l) {
+    var row = streamRow(l);
+    var a = row && row.alternate;
+    if (!a || !a.url || isRestricted(l)) return null;
+    var emb = parseEmbed(a.url, a.credit || 'NASASpaceflight');
+    if (!emb) return null;
+    emb.channel = a.channel || 'https://www.youtube.com/@NASASpaceflight';
+    return emb;
+  }
+  function stageHtml(emb, buttonText) {
+    var title = emb.title || buttonText;
     if (emb.kind === 'youtube') {
-      return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="youtube" data-id="' + esc(emb.id) + '" data-title="' + esc(title) + '">' + esc(ui.play) + '</button></div>';
+      return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="youtube" data-id="' + esc(emb.id) + '" data-title="' + esc(title) + '">' + esc(buttonText) + '</button></div>';
     }
-    return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="x" data-url="' + esc(emb.url) + '" data-title="' + esc(title) + '">' + esc(ui.play) + '</button></div>';
+    return '<div class="lw-stage"><button type="button" class="lw-play" data-kind="x" data-url="' + esc(emb.url) + '" data-title="' + esc(title) + '">' + esc(buttonText) + '</button></div>';
+  }
+  function playerHtml(l) {
+    var off = officialEmbed(l);
+    var alt = altEmbed(l);
+    var html = '';
+    if (off) html += stageHtml(off, ui.play);
+    if (alt) {
+      html += '<p class="lw-nsf">' + esc(off ? ui.altView : ui.nsf) + ' <a href="' + esc(alt.channel) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.nsfChannel) + '</a></p>';
+      html += stageHtml(alt, off ? ui.altView : ui.playNsf);
+    }
+    return html;
   }
   function loadXWidgets(stage) {
     function draw() {
@@ -470,8 +496,12 @@
   function watchBtn(l) {
     if (isRestricted(l)) return '<p class="lw-watch-note">' + esc(pk.watchRestricted) + '</p>';
     var u = watchUrl(l);
-    if (!u) return '<p class="lw-watch-note">' + esc(ui.watchTba) + '</p>';
-    return playerHtml(l) + '<p class="lw-acts"><a class="lw-watch" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.watchLive) + '</a></p>';
+    var players = playerHtml(l);
+    if (isStarship15(l)) {
+      return players + '<p class="lw-acts"><a class="lw-watch" href="https://www.spacex.com/launches/starship-flight-15" target="_blank" rel="noopener noreferrer">' + esc(ui.officialSx) + '</a></p>';
+    }
+    if (!u) return players || ('<p class="lw-watch-note">' + esc(ui.watchTba) + '</p>');
+    return players + '<p class="lw-acts"><a class="lw-watch" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.watchLive) + '</a></p>';
   }
   function goingHtml(l) {
     var c = classify(l);
