@@ -53,7 +53,7 @@ UI = {
  'buildH': 'Lesson builder',
  'buildL': 'Choose a grade band, a GLOBE topic, and a length. The plan links the official protocol page and the official films for that topic. It does not copy the measurement steps.',
  'band': 'Grade band', 'topic': 'Topic', 'length': 'Length',
- 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom', 'buildBtn': 'Build plan', 'videoCredit': 'Title video credits:',
+ 'printSheet': 'Print the teacher sheet', 'printPlan': 'Print Plan', 'copyLink': 'Copy Link', 'copyPlan': 'Copy the plan', 'classroom': 'Share to Google Classroom', 'buildBtn': 'Build plan', 'videoCredit': 'Title video credits:', 'appLink': 'Yes, right now get your GLOBE app',
  'suggestH': 'Suggest an edit or another solution',
  'suggest': 'Write to the partnerships desk. There is no form on this page.',
  'cite': 'The source of this material is the GLOBE Program website at www.globe.gov. All Rights Reserved.',
@@ -105,7 +105,7 @@ UI['fr'] = tr(
  train='Depuis décembre 2025, un membre GLOBE termine une formation pour chaque protocole avant d’entrer des données pour ce protocole. La formation peut être une relecture du guide de terrain, un eTraining de collecte quand GLOBE en propose un, un Protocol eTraining complet, ou un atelier GLOBE.',
  buildH='Générateur de leçon', buildL='Choisis un niveau, un sujet GLOBE et une durée. Le plan renvoie à la page officielle du protocole et aux films officiels. Il ne copie pas les étapes de mesure.',
  band='Niveau', topic='Sujet', length='Durée',
- printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan', standardsH='Normes', sourceGLOBE='Source : GLOBE', videoCredit='Crédits de la vidéo de titre :',
+ printSheet='Imprimer la fiche', printPlan='Imprimer le plan', copyLink='Copier le lien', copyPlan='Copier le plan', classroom='Partager sur Google Classroom', buildBtn='Créer le plan', standardsH='Normes', sourceGLOBE='Source : GLOBE', videoCredit='Crédits de la vidéo de titre :', appLink='Oui, tout de suite, prends ton application GLOBE',
  suggestH='Proposer une correction ou une autre solution', suggest='Écrivez au bureau des partenariats. Il n’y a pas de formulaire sur cette page.',
  src='Source',
  spheres={'atm':'Atmosphère','hyd':'Hydrosphère','ped':'Pédosphère (sol)','bio':'Biosphère','obs':'GLOBE Observer'},
@@ -148,7 +148,7 @@ UI['es'] = tr(
  train='Desde diciembre de 2025, un miembro de GLOBE completa una formación por cada protocolo antes de introducir datos de ese protocolo. La formación puede ser una lectura de la guía de campo, un eTraining de toma de datos cuando GLOBE lo ofrece, un Protocol eTraining completo o un taller de GLOBE.',
  buildH='Generador de lecciones', buildL='Elige un nivel, un tema de GLOBE y una duración. El plan enlaza la página oficial del protocolo y los vídeos oficiales. No copia los pasos de medición.',
  band='Nivel', topic='Tema', length='Duración',
- printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan', standardsH='Estándares', sourceGLOBE='Fuente: GLOBE', videoCredit='Créditos del vídeo de título:',
+ printSheet='Imprimir la ficha', printPlan='Imprimir el plan', copyLink='Copiar el enlace', copyPlan='Copiar el plan', classroom='Compartir en Google Classroom', buildBtn='Crear el plan', standardsH='Estándares', sourceGLOBE='Fuente: GLOBE', videoCredit='Créditos del vídeo de título:', appLink='Sí, ahora mismo consigue tu aplicación GLOBE',
  suggestH='Sugerir un cambio u otra solución', suggest='Escribe al equipo de alianzas. En esta página no hay formulario.',
  src='Fuente',
  spheres={'atm':'Atmósfera','hyd':'Hidrosfera','ped':'Pedosfera (suelo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -191,7 +191,7 @@ UI['it'] = tr(
  train='Dal dicembre 2025, un membro GLOBE completa una formazione per ogni protocollo prima di inserire dati di quel protocollo. La formazione può essere una lettura della guida di campo, un eTraining di raccolta quando GLOBE lo offre, un Protocol eTraining completo o un laboratorio GLOBE.',
  buildH='Generatore di lezioni', buildL='Scegli una fascia, un tema GLOBE e una durata. Il piano collega la pagina ufficiale del protocollo e i video ufficiali. Non copia i passi di misura.',
  band='Fascia', topic='Tema', length='Durata',
- printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano', standardsH='Standard', sourceGLOBE='Fonte: GLOBE', videoCredit='Crediti del video del titolo:',
+ printSheet='Stampa la scheda', printPlan='Stampa il piano', copyLink='Copia il link', copyPlan='Copia il piano', classroom='Condividi su Google Classroom', buildBtn='Crea il piano', standardsH='Standard', sourceGLOBE='Fonte: GLOBE', videoCredit='Crediti del video del titolo:', appLink='Sì, prendi subito la tua app GLOBE',
  suggestH='Suggerisci una modifica o un’altra soluzione', suggest='Scrivi all’ufficio partnership. In questa pagina non c’è un modulo.',
  src='Fonte',
  spheres={'atm':'Atmosfera','hyd':'Idrosfera','ped':'Pedosfera (suolo)','bio':'Biosfera','obs':'GLOBE Observer'},
@@ -234,7 +234,7 @@ UI['ar'] = tr(
  train='منذ ديسمبر 2025، يكمل عضو GLOBE تدريبًا واحدًا لكل بروتوكول قبل إدخال بيانات ذلك البروتوكول. قد يكون التدريب مراجعة لدليل الميدان، أو eTraining لجمع البيانات حين يوفّره GLOBE، أو Protocol eTraining كاملًا، أو ورشة GLOBE.',
  buildH='منشئ الدروس', buildL='اختر مرحلة وموضوعًا من GLOBE ومدة. تربط الخطة بصفحة البروتوكول الرسمية والأفلام الرسمية. وهي لا تنسخ خطوات القياس.',
  band='المرحلة', topic='الموضوع', length='المدة',
- printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة', standardsH='المعايير', sourceGLOBE='المصدر: GLOBE', videoCredit='اعتمادات فيديو العنوان:',
+ printSheet='اطبع ورقة المعلم', printPlan='طباعة الخطة', copyLink='نسخ الرابط', copyPlan='انسخ الخطة', classroom='المشاركة في Google Classroom', buildBtn='أنشئ الخطة', standardsH='المعايير', sourceGLOBE='المصدر: GLOBE', videoCredit='اعتمادات فيديو العنوان:', appLink='نعم، احصل على تطبيق GLOBE الآن',
  suggestH='اقترح تعديلًا أو حلًا آخر', suggest='اكتب إلى مكتب الشراكات. لا يوجد نموذج في هذه الصفحة.',
  src='المصدر',
  spheres={'atm':'الغلاف الجوي','hyd':'الغلاف المائي','ped':'غلاف التربة','bio':'المحيط الحيوي','obs':'GLOBE Observer'},
@@ -277,7 +277,7 @@ UI['he'] = tr(
  train='מדצמבר 2025, חבר GLOBE משלים הכשרה אחת לכל פרוטוקול לפני הזנת נתונים של אותו פרוטוקול. ההכשרה יכולה להיות קריאה של מדריך השדה, eTraining לאיסוף נתונים כש-GLOBE מציעה אותו, Protocol eTraining מלא, או סדנה של GLOBE.',
  buildH='מחולל שיעורים', buildL='בחרו שכבת גיל, נושא של GLOBE ומשך. התוכנית מקשרת לעמוד הפרוטוקול הרשמי ולסרטים הרשמיים. היא לא מעתיקה את שלבי המדידה.',
  band='שכבה', topic='נושא', length='משך',
- printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית', standardsH='תקנים', sourceGLOBE='מקור: GLOBE', videoCredit='קרדיטים לסרטון הכותרת:',
+ printSheet='הדפסת דף המורה', printPlan='הדפסת התוכנית', copyLink='העתקת הקישור', copyPlan='העתקת התוכנית', classroom='שיתוף ב-Google Classroom', buildBtn='בניית התוכנית', standardsH='תקנים', sourceGLOBE='מקור: GLOBE', videoCredit='קרדיטים לסרטון הכותרת:', appLink='כן, קבלו עכשיו את יישומון GLOBE',
  suggestH='הצעת תיקון או פתרון נוסף', suggest='כתבו אל שולחן השותפויות. אין טופס בעמוד הזה.',
  src='מקור',
  spheres={'atm':'אטמוספרה','hyd':'הידרוספרה','ped':'פדוספרה (קרקע)','bio':'ביוספרה','obs':'GLOBE Observer'},
@@ -487,6 +487,29 @@ def builder(u):
 </div>
 '''
 
+APP_PAGE = 'https://observer.globe.gov/about/get-the-app'
+APP_AFTER = {
+    'en': 'with an app.',
+    'fr': 'avec une application.',
+    'es': 'con una aplicación.',
+    'ar': 'بتطبيق.',
+    'it': "con un'app.",
+    'he': 'באפליקציה.',
+}
+
+def add_app_link(opening, lang, label):
+    a = opening.find('<!-- ELI10:START -->')
+    b = opening.find('<!-- ELI10:END -->')
+    if a < 0 or b < 0:
+        raise SystemExit('ELI10 block missing')
+    chunk = opening[a:b]
+    spot = APP_AFTER[lang]
+    if spot not in chunk:
+        raise SystemExit(f'{lang}: app sentence not found')
+    link = f' <a class="gr-app" href="{APP_PAGE}" target="_blank" rel="noopener">{E(label)}</a>'
+    chunk = chunk.replace(spot, spot + link, 1)
+    return opening[:a] + chunk + opening[b:]
+
 def build(lang):
     path = 'GLOBE_Program.html' if lang == 'en' else f'{lang}/GLOBE_Program.html'
     raw = open(path, encoding='utf-8').read()
@@ -506,6 +529,7 @@ def build(lang):
     prefix = '' if lang == 'en' else '../'
     u = UI[lang]
     opening = opening[:hero_at] + install_video(opening[hero_at:eli], prefix, u['videoCredit']) + opening[eli:]
+    opening = add_app_link(opening, lang, u['appLink'])
     tail = rest[rel:]
     tail = re.sub(r'<a class="sticky-help"[^>]*>.*?</a>\s*', '', tail, count=1)
     pre = pre.replace('GLOBE_Program.html', 'GLOBE_Review.html')
@@ -513,7 +537,7 @@ def build(lang):
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
     pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113r">\n</head>', 1)
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113s">\n</head>', 1)
     tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113m" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
     if 'gr-banner' in out or u['invite'] in out:
