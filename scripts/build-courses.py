@@ -388,7 +388,7 @@ def fix_switch(h):
     return re.sub(r'<li class="lang-switch".*?</li>', lambda b: re.sub(r'<a class="spn-ls"[^>]*?href="([^"]+)" hreflang="(\w+)"', one, b.group(0)), h, flags=re.S)
 
 def hub_page():
-    o = [hero('Courses', 'A free four-year aerospace and STEM study track, built one course at a time.'), f'<div class="crs"{dir_attr()}>',
+    o = [hero('STEM Courses', 'A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'), f'<div class="crs"{dir_attr()}>',
          f'<div class="crs-disc"><p>{esc("These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.")}</p>'
          f'<p>{esc("Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.")}</p></div>',
          f'<div class="crs-toc" role="navigation" aria-label="{esc("Years")}"><ul>' + ''.join(f'<li><a href="#y{i}">{html.escape(_(y).split(" · ")[0])}</a></li>' for i, (y, _c) in enumerate(RM.YEARS, 1)) + '</ul></div>']
