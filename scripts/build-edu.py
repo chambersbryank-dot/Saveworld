@@ -149,7 +149,7 @@ def lesson_builder(hubs):
             f'<div><label for="lb-hub">Topic</label><select id="lb-hub" name="hub">{opts(hub_opts, "Oceans.html")}</select></div>'
             f'<div><label for="lb-min">Lesson length</label><select id="lb-min" name="min">{opts([("30", "30 minutes"), ("45", "45 minutes"), ("60", "60 minutes"), ("90", "90 minutes")], "45")}</select></div>'
             '<div><button type="submit" class="edu-bubble glass" data-tint="sun"><span class="em" aria-hidden="true">📝</span>Build my lesson plan</button></div></form>'
-            '<div class="lb-actions"><button type="button" id="lb-print" class="edu-bubble glass" data-tint="earth" hidden><span class="em" aria-hidden="true">🖨️</span>Print plan</button></div>'
+            '<div class="lb-actions hero-ctas"><button type="button" id="lb-print" class="btn hero-cta" hidden><span class="em" aria-hidden="true">🖨️</span>Print Plan</button></div>'
             '<p class="lb-small no-print">Tip: the link in your address bar saves your choices, so you can share the plan with a colleague.</p>'
             '<template class="edu-error-tpl"><p class="edu-error" role="alert">Sorry, the lesson builder could not load. Please refresh the page.</p></template>'
             '<article class="lb-plan" id="lb-plan" aria-live="polite" hidden></article>'
