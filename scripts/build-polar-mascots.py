@@ -28,20 +28,11 @@ def main():
     for l in T:
         dd = '' if l == 'en' else l + '/'
         pre = '' if l == 'en' else '../'
-        for page, kids in (('World_Map.html', False), ('Kids_Map.html', True)):
-            p = dd + page
-            if not os.path.exists(p): continue
-            t = open(p, encoding='utf8').read()
-            t = re.sub(r'<!-- PMASCOT:START -->.*?<!-- PMASCOT:END -->\n?', '', t, flags=re.S)
-            t = re.sub(r'<!-- PMASCOTH:START -->.*?<!-- PMASCOTH:END -->', '', t, flags=re.S)
-            blk = f'<!-- PMASCOT:START -->{block(l, kids)}<!-- PMASCOT:END -->\n'
-            m = re.search(r'<div class="wm-stage">' if not kids else r'<div[^>]*class="km-stage"', t)
-            i = m.start() if m else -1
-            if i < 0: print('PMASCOT: anchor missing', p); continue
-            if not kids: i = m.end()  # world map: overlay inside the map stage (top + bottom centre)
-            t = t[:i] + blk + t[i:]
-            js = '' if kids else f'<script src="{pre}polar-mascots.js?v={V}" defer></script>'
-            t = t.replace('</head>', f'<!-- PMASCOTH:START --><link rel="stylesheet" href="{pre}polar-mascots.css?v={V}">{js}<!-- PMASCOTH:END --></head>', 1)
-            open(p, 'w', encoding='utf8').write(t); n += 1
+        p = dd + 'World_Map.html'
+        if not os.path.exists(p): continue
+        t = open(p, encoding='utf8').read()
+        t = re.sub(r'<!-- PMASCOT:START -->.*?<!-- PMASCOT:END -->\n?', '', t, flags=re.S)
+        t = re.sub(r'<!-- PMASCOTH:START -->.*?<!-- PMASCOTH:END -->', '', t, flags=re.S)
+        open(p, 'w', encoding='utf8').write(t); n += 1
     print(f'polar mascots: {n} pages')
 if __name__ == '__main__': main()
