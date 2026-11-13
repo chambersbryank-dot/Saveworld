@@ -1,5 +1,10 @@
 /* Unlinked GLOBE review draft. Dark surfaces match Learn and Match.
    Buttons use the shared .hero-ctas .hero-cta crystal-water rule. */
+.gr-hero .hero-media{position:absolute;inset:0;z-index:0;background:#02060c}
+.gr-hero .gr-hero-still,.gr-hero .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gr-hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,16,32,.58),rgba(0,16,32,.4) 46%,rgba(0,16,32,.74))}
+.gr-hero .page-hero-content,.gr-hero .hero-credit{position:relative;z-index:2}
+@media (prefers-reduced-motion:reduce){.gr-hero .hero-video{display:none !important}}
 .gr-banner{
   position:absolute;
   z-index:3;

@@ -411,6 +411,32 @@ EXTRA = {
 for _lang, _extra in EXTRA.items():
     UI[_lang].update(_extra)
 
+def install_video(chunk, prefix):
+    """Replace the still slideshow with one credited 1080p loop. Keep the program title and lead."""
+    content = re.search(r'<div class="page-hero-content">.*?</div>', chunk, re.S)
+    photo = re.search(r'<p class="photo-credit">.*?</p>', chunk, re.S)
+    if not content or not photo:
+        raise SystemExit('hero title or photo credit missing')
+    credit = ('NASA/GSFC, Earth from Orbit (2012); NASA (ISS071-E-449837, July 24, 2024); '
+              'NASA/Shane Kimbrough (ISS065-E-144117, June 23, 2021); '
+              'NASA/Glenn Benson (KSC-20230412-PH-GEB01_0006). Public domain.')
+    poster = f'{prefix}assets/videos/globe-review-poster.jpg'
+    src = f'{prefix}assets/videos/globe-review-hero.mp4'
+    body = photo.group(0)
+    cut = body.find('NASA')
+    label = body[body.find('>')+1:cut] if cut >= 0 else ''
+    if label and not label.endswith((' ', '\u00a0', '\u200f')):
+        label += ' '
+    photo_html = f'<p class="photo-credit">{label}{credit}</p>'
+    return f'''<section class="page-hero space-hero pg-anim has-video gr-hero">
+<div class="hero-media" aria-hidden="true"><img class="gr-hero-still" src="{poster}" alt="" width="1920" height="1080"><video class="hero-video gr-hero-video" muted loop playsinline preload="none" poster="{poster}" width="1920" height="1080"><source data-src="{src}" type="video/mp4"></video><div class="hero-overlay"></div></div>
+{content.group(0)}
+<p class="hero-credit">{credit}</p>
+</section>
+<script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src=s.getAttribute("data-src");v.load();}}var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
+{photo_html}
+'''
+
 def drop_sunset(hero):
     """Drop the horizon sunset slide. Keep the other three and retarget the 3-slide animation."""
     if 'Pacific_Clouds_Sunset_ISS' not in hero:
@@ -483,7 +509,8 @@ def build(lang):
     eli = opening.find('<!-- ELI10:START -->')
     if hero_at < 0 or eli < 0:
         raise SystemExit(f'{path}: hero or eli missing')
-    opening = opening[:hero_at] + drop_sunset(opening[hero_at:eli]) + opening[eli:]
+    prefix = '' if lang == 'en' else '../'
+    opening = opening[:hero_at] + install_video(opening[hero_at:eli], prefix) + opening[eli:]
     u = UI[lang]
     banner = f'<p class="gr-banner" role="note">{E(u["invite"])}</p>'
     opening = opening.replace('<section class="page-hero', banner + '<section class="page-hero', 1)
@@ -493,12 +520,14 @@ def build(lang):
     pre = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex,nofollow">', pre, count=1)
     pre = pre.replace('class="hp-globe-program toc-sub globe-page"', 'class="hp-globe-program toc-sub globe-page globe-review"', 1)
     pre = pre.replace('<body ', '<body data-pagefind-ignore="all" data-no-newsletter ', 1)
-    prefix = '' if lang == 'en' else '../'
-    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261015s2">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113g">\n</head>', 1)
+    pre = pre.replace('assets/Pacific_Clouds_Sunset_ISS.jpg', 'assets/videos/globe-review-poster.jpg')
+    pre = pre.replace('</head>', f'<link rel="stylesheet" href="{prefix}edu.css?v=20261113h">\n<link rel="stylesheet" href="{prefix}globe-review.css?v=20261113i">\n</head>', 1)
     tail = tail.replace('</body>', f'<script src="{prefix}globe-review.js?v=20261113g" defer></script>\n</body>', 1)
     out = pre + '<main id="main">\n' + opening + '\n' + builder(u) + tail
-    if 'Pacific_Clouds_Sunset_ISS' in out[out.find('<section class="page-hero'):out.find('<!-- ELI10:START -->')]:
-        raise SystemExit(f'{path}: sunset still in review hero')
+    if 'Pacific_Clouds_Sunset_ISS' in out:
+        raise SystemExit(f'{path}: sunset image still referenced')
+    if 'globe-review-hero.mp4' not in out:
+        raise SystemExit(f'{path}: title video missing')
     if '<a class="sticky-help"' in out:
         raise SystemExit(f'{path}: donate button remains')
     dest = path.replace('GLOBE_Program.html', 'GLOBE_Review.html')
