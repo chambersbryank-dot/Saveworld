@@ -135,8 +135,17 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
   background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 55%);box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .orb-btn svg{width:16px;height:16px;display:block;margin:5px auto}
 .orb-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
-.orb-lab{position:absolute;z-index:3;transform:translate(18px,-50%);margin-top:0;max-width:min(16rem,46vw);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;pointer-events:none;color:#fff;font-size:.78rem;font-weight:700;line-height:1.2;padding:.12rem .5rem;border-radius:999px;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 4px rgba(0,0,0,.45);text-shadow:0 1px 2px rgba(0,0,0,.7)}
-[dir=rtl] .orb-lab{transform:translate(calc(-100% - 18px),-50%)}
+.orb-lab{position:absolute;z-index:3;transform:none;margin:0;max-width:11rem;overflow:visible;white-space:normal;pointer-events:none;color:#fff;font-size:var(--lab-size,.78rem);font-weight:700;line-height:1.15;padding:.12rem .45rem;border-radius:12px;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 4px rgba(0,0,0,.45);text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.sat-leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.sat-leader{stroke:#b7dff8;stroke-width:1.25}
+.sat-leader[data-reg="leo"]{stroke:#7ad7ff}.sat-leader[data-reg="meo"]{stroke:#ffb703}.sat-leader[data-reg="geo"]{stroke:#e2b6ff}
+.sat-leader.is-dim{opacity:.22}
+.orb-lab.is-leo{border-color:#7ad7ff}.orb-lab.is-meo{border-color:#ffb703}.orb-lab.is-geo{border-color:#e2b6ff}
+.sat-view .is-dim{opacity:.28}
+.orb-svg[data-orbit="leo"] .ring:not(.ring-leo),
+.orb-svg[data-orbit="meo"] .ring:not(.ring-meo),
+.orb-svg[data-orbit="geo"] .ring:not(.ring-geo){opacity:.22}
+.orb-btn.is-off{visibility:hidden}
 .lag-pt{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;padding:0;border-radius:50%;border:2px solid #fff;cursor:pointer;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,0) 55%);box-shadow:0 0 0 2px rgba(255,214,120,.45)}
 .lag-pt.is-on{animation:lag-pulse 1.35s ease-out infinite}
 @keyframes lag-pulse{0%{box-shadow:0 0 0 0 rgba(255,213,74,.9)}70%{box-shadow:0 0 0 16px rgba(255,213,74,0)}100%{box-shadow:0 0 0 0 rgba(255,213,74,0)}}
@@ -177,10 +186,18 @@ a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .sat-band h3{margin:0 1.2rem .25rem 0;font-size:.82rem}
 [dir=rtl] .sat-band h3{margin:0 0 .25rem 1.2rem}
 .sat-band p{margin:.2rem 0}
-.band-btn{position:absolute;z-index:4;transform:translate(-50%,-50%);font:inherit;font-size:.72rem;font-weight:800;color:#fff;padding:.12rem .45rem;border-radius:999px;cursor:pointer;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.06));border:1px solid rgba(160,225,255,.7)}
-[dir=rtl] .band-btn{transform:translate(50%,-50%)}
-.band-btn[aria-pressed="true"]{box-shadow:0 0 0 2px #ffd54a}
-.band-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.sat-view > .wm-zoom{position:static;flex-direction:row;justify-content:center;margin:.15rem 0 .4rem;max-width:none}
+.sat-view .sat-orbits{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;margin:0 0 .45rem}
+.sat-view button,.sat-view a.sat-more{color:#fff;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);border:1px solid rgba(160,225,255,.55);border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 4px 14px rgba(0,40,70,.28)}
+.sat-view .wm-cat,.sat-view .wm-zoom button,.sat-view .sat-orbits .band-btn,.sat-view .sat-close,.sat-view a.sat-more{min-height:44px}
+.sat-view .sat-list button{display:flex;width:100%;min-height:44px;justify-content:flex-start;margin:.25rem 0;padding:.35rem .8rem;text-align:start}
+.sat-view .sat-orbits .band-btn{position:static;transform:none;font-size:.92rem;font-weight:800;padding:.35rem .95rem}
+.sat-view .band-btn.is-leo,.sat-view .orb-btn.is-leo{background-color:#0a5678;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.05)),linear-gradient(#0a5678,#0a5678);border-color:#7ad7ff}
+.sat-view .band-btn.is-meo,.sat-view .orb-btn.is-meo{background-color:#7a3e00;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.05)),linear-gradient(#7a3e00,#7a3e00);border-color:#ffb703}
+.sat-view .band-btn.is-geo,.sat-view .orb-btn.is-geo{background-color:#5a2878;background-image:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.05)),linear-gradient(#5a2878,#5a2878);border-color:#e2b6ff}
+.sat-view .band-btn[aria-pressed="true"]{box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 0 0 3px #fff}
+.sat-view button:focus-visible,.sat-view a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.sat-view .orb-btn.is-hot{box-shadow:0 0 0 3px #fff,0 0 12px rgba(255,255,255,.45)}
 .band-edge{fill:none;stroke:#ffd54a;stroke-width:2.2;stroke-dasharray:5 3}
 .band-edge-label{fill:#ffe3a3;font-size:12px;font-weight:700}
 .sat-card[hidden]{display:none}
@@ -203,7 +220,7 @@ a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media (max-width:800px){
   .sat-layout.has-card{grid-template-columns:1fr}
   .sat-stage{width:min(100%, calc(100dvh - var(--nav-height, 64px) - 8rem));height:auto;aspect-ratio:1/1;min-height:0;max-height:calc(100dvh - var(--nav-height, 64px) - 6.5rem);margin-inline:auto}
-  .orb-lab{font-size:.7rem;max-width:min(11rem,42vw)}
+  .orb-lab{font-size:var(--lab-size,.7rem);max-width:42vw}
 }
 @media (prefers-reduced-motion:reduce){
   .orb-svg *{animation:none!important}
