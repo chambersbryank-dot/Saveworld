@@ -1,9 +1,14 @@
 {
-  "note": "Official streams only. For Starship Flight 15, set url to SpaceX's own post (https://x.com/SpaceX/status/...) or an official YouTube watch URL. Leave url empty until that post exists. Do not put a third-party restream here.",
+  "note": "Each entry may set url (official provider stream: SpaceX X post or provider YouTube) and alternate (a labeled independent feed). For Starship Flight 15, url stays empty until SpaceX posts the official live. alternate is NASASpaceflight, shown as the player until url is set, then as Alternate view.",
   "streams": [
     {
       "match": "starship flight 15",
-      "url": ""
+      "url": "",
+      "alternate": {
+        "url": "https://www.youtube.com/watch?v=9XM0lpVlvo0",
+        "credit": "NASASpaceflight",
+        "channel": "https://www.youtube.com/@NASASpaceflight"
+      }
     }
   ]
 }
