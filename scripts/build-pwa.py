@@ -121,7 +121,7 @@ def offline():
     sec = ''.join(f'<section lang="{l}" dir="{"rtl" if l in ("ar","he") else "ltr"}"><h1>{a}</h1><p>{b}</p><p><button type="button" onclick="location.reload()">{c}</button> <a href="/{"" if l=="en" else l+"/"}">{d}</a></p></section>'
                   for l, (a, b, c, d) in OFF.items())
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>Offline · Saving Planets</title><meta name="robots" content="noindex"><meta name="theme-color" content="{THEME}">'
+            f'<title>Offline · Saving Planets</title><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="{THEME}">'
             '<link rel="icon" href="/favicon.svg"><style>body{margin:0;font:16px/1.5 system-ui,sans-serif;background:#07121c;color:#e8f1f7;padding:24px}'
             'main{max-width:640px;margin:auto}img{display:block;margin:0 auto 12px}section{border-top:1px solid #1f3a50;padding:8px 0}h1{font-size:1.25rem;margin:.4em 0}'
             'button{background:#2e8b57;color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}a{color:#8fd3ff}</style></head>'
