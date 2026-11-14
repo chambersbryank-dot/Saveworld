@@ -7,7 +7,7 @@
   var BASE = 'https://ll.thespacedevs.com/2.3.0/launches/';
   var UP = BASE + 'upcoming/?limit=20&mode=detailed';
   var PREV = BASE + 'previous/?limit=8&mode=detailed';
-  var STREAMS_URL = 'data/launch-streams.json?v=20261113k1';
+  var STREAMS_URL = 'data/launch-streams.json?v=20261113k3';
   var CACHE_KEY = 'sp-ll2-feed2';
   var CACHE_MS = 10 * 60 * 1000;
   var HOUR = 3600000, DAY = 24 * HOUR;
@@ -18,17 +18,23 @@
 
   var L = {
     en: { today: 'Launched today, {t}', on: 'Launched {d}', past: 'T-0 passed ({t})', pending: 'Status update pending', recent: 'Recent launch',
-      st: { 'in flight': 'In flight', deployed: 'Payload deployed', success: 'Success', failure: 'Launch failure', 'partial failure': 'Partial failure' } },
+      st: { 'in flight': 'In flight', deployed: 'Payload deployed', success: 'Success', failure: 'Launch failure', 'partial failure': 'Partial failure' },
+      f15: 'Launched Nov 13 · Ship returning — catch attempt Sat ~11:20 AM HST' },
     fr: { today: 'Lancé aujourd’hui, {t}', on: 'Lancé le {d}', past: 'T-0 passé ({t})', pending: 'Statut en attente de mise à jour', recent: 'Lancement récent',
-      st: { 'in flight': 'En vol', deployed: 'Charge utile déployée', success: 'Succès', failure: 'Échec du lancement', 'partial failure': 'Échec partiel' } },
+      st: { 'in flight': 'En vol', deployed: 'Charge utile déployée', success: 'Succès', failure: 'Échec du lancement', 'partial failure': 'Échec partiel' },
+      f15: 'Lancé le 13 nov. · Vaisseau en retour — tentative de capture sam. vers 11 h 20 HST' },
     es: { today: 'Lanzado hoy, {t}', on: 'Lanzado el {d}', past: 'T-0 superado ({t})', pending: 'Estado pendiente de actualización', recent: 'Lanzamiento reciente',
-      st: { 'in flight': 'En vuelo', deployed: 'Carga desplegada', success: 'Éxito', failure: 'Fallo del lanzamiento', 'partial failure': 'Fallo parcial' } },
+      st: { 'in flight': 'En vuelo', deployed: 'Carga desplegada', success: 'Éxito', failure: 'Fallo del lanzamiento', 'partial failure': 'Fallo parcial' },
+      f15: 'Lanzado el 13 nov. · Nave en retorno — intento de captura sáb. hacia las 11:20 a. m. HST' },
     it: { today: 'Lanciato oggi, {t}', on: 'Lanciato il {d}', past: 'T-0 superato ({t})', pending: 'Stato in attesa di aggiornamento', recent: 'Lancio recente',
-      st: { 'in flight': 'In volo', deployed: 'Carico rilasciato', success: 'Successo', failure: 'Lancio fallito', 'partial failure': 'Fallimento parziale' } },
+      st: { 'in flight': 'In volo', deployed: 'Carico rilasciato', success: 'Successo', failure: 'Lancio fallito', 'partial failure': 'Fallimento parziale' },
+      f15: 'Lanciato il 13 nov. · Veicolo in rientro — tentativo di cattura sab. verso le 11:20 HST' },
     ar: { today: 'أُطلق اليوم، {t}', on: 'أُطلق في {d}', past: 'تجاوز موعد T-0 ({t})', pending: 'بانتظار تحديث الحالة', recent: 'إطلاق حديث',
-      st: { 'in flight': 'في الرحلة', deployed: 'تم نشر الحمولة', success: 'نجاح', failure: 'فشل الإطلاق', 'partial failure': 'فشل جزئي' } },
+      st: { 'in flight': 'في الرحلة', deployed: 'تم نشر الحمولة', success: 'نجاح', failure: 'فشل الإطلاق', 'partial failure': 'فشل جزئي' },
+      f15: 'أُطلق في 13 نوفمبر · المركبة في طريق العودة — محاولة التقاط السبت نحو الساعة 11:20 صباحًا بتوقيت هاواي' },
     he: { today: 'שוגר היום, {t}', on: 'שוגר ב-{d}', past: 'מועד T-0 עבר ({t})', pending: 'ממתינים לעדכון סטטוס', recent: 'שיגור אחרון',
-      st: { 'in flight': 'בטיסה', deployed: 'המטען שוחרר', success: 'הצלחה', failure: 'כישלון בשיגור', 'partial failure': 'כישלון חלקי' } }
+      st: { 'in flight': 'בטיסה', deployed: 'המטען שוחרר', success: 'הצלחה', failure: 'כישלון בשיגור', 'partial failure': 'כישלון חלקי' },
+      f15: 'שוגר ב-13 בנובמבר · החללית בדרך חזרה — ניסיון תפיסה בשבת בסביבות 11:20 בבוקר לפי שעון הוואי' }
   };
   var tx = L[lang] || L.en;
 
@@ -36,6 +42,7 @@
   function abbrev(l) { return l && l.status && l.status.abbrev ? String(l.status.abbrev).toLowerCase() : ''; }
   function netMs(l) { return new Date(l && l.net).getTime(); }
   function nameBlob(l) { return (((l && l.name) || '') + ' ' + ((l && l.mission && l.mission.name) || '')).toLowerCase(); }
+  function isF15(l) { return /starship flight 15|starlink group 31-2/.test(nameBlob(l)); }
   function row(l) {
     var n = nameBlob(l);
     for (var i = 0; i < streams.length; i++) {
@@ -77,6 +84,11 @@
     return x.getFullYear() === y.getFullYear() && x.getMonth() === y.getMonth() && x.getDate() === y.getDate();
   }
   /* "Launched today, 12:47 PM HST · In flight" in the visitor's own time zone. */
+  function f15Status() { return tx.f15; }
+  function statusLine(l, now) {
+    if (isF15(l)) return tx.f15;
+    return statusText(l && l.net, abbrev(l), now);
+  }
   function statusText(net, ab, now) {
     var x = new Date(net).getTime();
     now = now == null ? Date.now() : now;
@@ -142,6 +154,7 @@
   window.SPLaunchFeed = {
     load: load, cached: cached, streams: function () { return streamsP; },
     keep: keep, filter: filter, isPast: isPast, keepUntil: keepUntil, statusText: statusText,
+    statusLine: statusLine, f15Status: f15Status, isF15: isF15,
     recentLabel: tx.recent, _merge: merge, _setStreams: function (s) { streams = s || []; }
   };
 })();

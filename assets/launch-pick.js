@@ -68,7 +68,10 @@
     if (!l.net || /tbd|tbc|to be|confirm/.test(st)) return u.tbd;
     var d = new Date(l.net);
     if (isNaN(d)) return u.tbd;
-    if (window.SPLaunchFeed && window.SPLaunchFeed.isPast(l)) return window.SPLaunchFeed.statusText(l.net, l.status && l.status.abbrev);
+    if (window.SPLaunchFeed && window.SPLaunchFeed.isPast(l)) {
+      if (window.SPLaunchFeed.statusLine) return window.SPLaunchFeed.statusLine(l);
+      return window.SPLaunchFeed.statusText(l.net, l.status && l.status.abbrev);
+    }
     return u.net + ' ' + d.toLocaleString(lang === 'en' ? undefined : lang, {
       weekday: 'short', month: 'short', day: 'numeric', year: 'numeric',
       hour: 'numeric', minute: '2-digit', timeZoneName: 'short'

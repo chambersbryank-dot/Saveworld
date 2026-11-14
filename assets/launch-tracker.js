@@ -288,17 +288,18 @@
   };
   var pk = PICK[lang] || PICK.en;
   var ADD = {
-    en: { watchLive:'Watch live', play:'View The Launch Here', playNsf:'Play live coverage', yourTime:'Your time:', going:"What's going up", tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.', nsf:'Live coverage by NASASpaceflight (independent, not SpaceX’s official feed).', nsfChannel:'NASASpaceflight channel', officialSx:'Official SpaceX webcast & mission guide', altView:'Alternate view' },
-    fr: { watchLive:'Regarder en direct', play:'Voir le lancement ici', playNsf:'Lire la couverture en direct', yourTime:'Votre heure :', going:'Ce qui décolle', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.', nsf:'Couverture en direct par NASASpaceflight (indépendante, ce n’est pas le flux officiel de SpaceX).', nsfChannel:'Chaîne NASASpaceflight', officialSx:'Webcast officiel de SpaceX et guide de mission', altView:'Vue alternative' },
-    es: { watchLive:'Ver en vivo', play:'Ver el lanzamiento aquí', playNsf:'Reproducir la cobertura en vivo', yourTime:'Tu hora:', going:'Qué sube', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.', nsf:'Cobertura en vivo de NASASpaceflight (independiente, no es la señal oficial de SpaceX).', nsfChannel:'Canal de NASASpaceflight', officialSx:'Webcast oficial de SpaceX y guía de la misión', altView:'Vista alternativa' },
-    ar: { watchLive:'شاهد البث المباشر', play:'شاهد الإطلاق هنا', playNsf:'تشغيل التغطية المباشرة', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.', nsf:'تغطية مباشرة من NASASpaceflight (مستقلة، وليست البث الرسمي لسبيس إكس).', nsfChannel:'قناة NASASpaceflight', officialSx:'البث الرسمي لسبيس إكس ودليل المهمة', altView:'عرض بديل' },
-    it: { watchLive:'Guarda in diretta', play:'Guarda il lancio qui', playNsf:'Avvia la copertura in diretta', yourTime:'Il tuo orario:', going:'Che cosa sale', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.', nsf:'Copertura in diretta di NASASpaceflight (indipendente, non è il feed ufficiale di SpaceX).', nsfChannel:'Canale NASASpaceflight', officialSx:'Webcast ufficiale di SpaceX e guida della missione', altView:'Vista alternativa' },
-    he: { watchLive:'צפו בשידור החי', play:'צפו בשיגור כאן', playNsf:'נגנו את הסיקור החי', yourTime:'השעה אצלכם:', going:'מה עולה', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.', nsf:'שידור חי של NASASpaceflight (עצמאי, לא הערוץ הרשמי של ספייס אקס).', nsfChannel:'הערוץ של NASASpaceflight', officialSx:'השידור הרשמי של ספייס אקס ומדריך המשימה', altView:'תצוגה חלופית' }
+    en: { watchLive:'Watch live', play:'View The Launch Here', playNsf:'Play live coverage', yourTime:'Your time:', going:"What's going up", coming:'Coming up', tba:'TBA', onMap:'See it on the satellite map', watchTba:'Watch link: TBA. No public stream was listed.', nsf:'Live coverage by NASASpaceflight (independent, not SpaceX’s official feed).', nsfChannel:'NASASpaceflight channel', officialSx:'Official SpaceX webcast & mission guide', altView:'Alternate view' },
+    fr: { watchLive:'Regarder en direct', play:'Voir le lancement ici', playNsf:'Lire la couverture en direct', yourTime:'Votre heure :', going:'Ce qui décolle', coming:'À venir', tba:'À confirmer', onMap:'Voir sur la carte des satellites', watchTba:'Lien du direct : à confirmer. Aucun flux public n’est indiqué.', nsf:'Couverture en direct par NASASpaceflight (indépendante, ce n’est pas le flux officiel de SpaceX).', nsfChannel:'Chaîne NASASpaceflight', officialSx:'Webcast officiel de SpaceX et guide de mission', altView:'Vue alternative' },
+    es: { watchLive:'Ver en vivo', play:'Ver el lanzamiento aquí', playNsf:'Reproducir la cobertura en vivo', yourTime:'Tu hora:', going:'Qué sube', coming:'Próximamente', tba:'Por confirmar', onMap:'Verlo en el mapa de satélites', watchTba:'Enlace del directo: por confirmar. No hay una transmisión pública indicada.', nsf:'Cobertura en vivo de NASASpaceflight (independiente, no es la señal oficial de SpaceX).', nsfChannel:'Canal de NASASpaceflight', officialSx:'Webcast oficial de SpaceX y guía de la misión', altView:'Vista alternativa' },
+    ar: { watchLive:'شاهد البث المباشر', play:'شاهد الإطلاق هنا', playNsf:'تشغيل التغطية المباشرة', yourTime:'وقتك المحلي:', going:'ما الذي ينطلق', coming:'القادم', tba:'غير مؤكد', onMap:'شاهده على خريطة الأقمار', watchTba:'رابط المشاهدة: غير مؤكد. لا يوجد بث عام مذكور.', nsf:'تغطية مباشرة من NASASpaceflight (مستقلة، وليست البث الرسمي لسبيس إكس).', nsfChannel:'قناة NASASpaceflight', officialSx:'البث الرسمي لسبيس إكس ودليل المهمة', altView:'عرض بديل' },
+    it: { watchLive:'Guarda in diretta', play:'Guarda il lancio qui', playNsf:'Avvia la copertura in diretta', yourTime:'Il tuo orario:', going:'Che cosa sale', coming:'In arrivo', tba:'Da confermare', onMap:'Vedilo sulla mappa dei satelliti', watchTba:'Link della diretta: da confermare. Nessun flusso pubblico è indicato.', nsf:'Copertura in diretta di NASASpaceflight (indipendente, non è il feed ufficiale di SpaceX).', nsfChannel:'Canale NASASpaceflight', officialSx:'Webcast ufficiale di SpaceX e guida della missione', altView:'Vista alternativa' },
+    he: { watchLive:'צפו בשידור החי', play:'צפו בשיגור כאן', playNsf:'נגנו את הסיקור החי', yourTime:'השעה אצלכם:', going:'מה עולה', coming:'בהמשך', tba:'טרם פורסם', onMap:'ראו במפת הלוויינים', watchTba:'קישור לצפייה: טרם פורסם. אין שידור פומבי ברשימה.', nsf:'שידור חי של NASASpaceflight (עצמאי, לא הערוץ הרשמי של ספייס אקס).', nsfChannel:'הערוץ של NASASpaceflight', officialSx:'השידור הרשמי של ספייס אקס ומדריך המשימה', altView:'תצוגה חלופית' }
   };
   var ui = ADD[lang] || ADD.en;
-  /* Post-launch facts, checked 13 Nov 2026 ~3:25 PM HST against @SpaceX posts and the SpaceX Flight 15 page
-     (catch time = liftoff 22:47:36 UTC + T+22:32:34 "landing burn shutdown and catch" in SpaceX's flight timeline).
-     Each line is cited by STAR_SRC (same order). Ship number not stated in these sources, so not used. */
+  /* Post-launch facts, checked 13 Nov 2026 ~6:10 PM HST against @SpaceX posts and the SpaceX Flight 15 page
+     (clock times = liftoff 22:47:36 UTC + SpaceX "All Times Approximate" flight timeline).
+     Each STAR line is cited by STAR_SRC (same order). STAR_NEXT is the Saturday return timeline.
+     Ship number not stated in these sources, so not used. No SpaceX source states a 11:27 a.m. HST mission-complete time. */
   var STAR = {
     en: ['Starship Flight 15 lifted off from Starbase, Texas, on Friday, 13 November 2026, at about 12:47 p.m. Hawaii time (HST).','The Super Heavy booster was diverted to an offshore splashdown in the Gulf instead of a tower catch.','Starship then entered an orbit of about 275 km. It is the second time Starship has reached Earth orbit.','SpaceX confirmed that all 26 Starlink V3 satellites were deployed into orbit. SpaceX says each one adds 1 terabit of capacity to the Starlink network.','SpaceX describes these V3 satellites as communications capacity, not Earth sensing. Three of them carry cameras to photograph Starship’s heat shield. That is a rocket-test job, not an instrument for the planet’s health.','Starship is coasting in orbit for about 21 hours. SpaceX plans to bring it back to Starbase for a tower catch attempt on Saturday, 14 November, around 11:20 a.m. HST, only if the systems needed for reentry and landing are healthy.'],
     fr: ['Le vol 15 de Starship a décollé de Starbase, au Texas, le vendredi 13 novembre 2026 vers 12 h 47, heure d’Hawaï (HST).','Le propulseur Super Heavy a été dérouté vers un amerrissage au large, dans le golfe, au lieu d’une capture par la tour.','Starship s’est ensuite placé sur une orbite d’environ 275 km. C’est la deuxième fois que Starship atteint l’orbite terrestre.','SpaceX a confirmé que les 26 satellites Starlink V3 ont tous été déployés en orbite. SpaceX dit que chacun ajoute 1 térabit de capacité au réseau Starlink.','SpaceX décrit ces satellites V3 comme de la capacité de communication, pas comme des capteurs de la Terre. Trois d’entre eux emportent des caméras pour photographier le bouclier thermique de Starship. C’est un travail d’essai de fusée, pas un instrument pour la santé de la planète.','Starship reste en orbite environ 21 heures. SpaceX prévoit de le ramener à Starbase pour une tentative de capture par la tour le samedi 14 novembre vers 11 h 20 HST, seulement si les systèmes nécessaires à la rentrée et à l’atterrissage sont en bon état.'],
@@ -317,6 +318,16 @@
     [SXP],
     [SXX + '2121394839954874797', SXP]
   ];
+  var SXU = 'https://www.spacex.com/updates/spacex-and-nasa';
+  var STAR_NEXT = {
+    en: 'SpaceX times are approximate, counted from liftoff at about 12:47 p.m. HST: Chile return check around 8:03 p.m. HST on Friday, 13 November; final Hawaii return check around 9:29 a.m. HST on Saturday, 14 November; deorbit burn around 10:23 a.m. HST; then a tower catch attempt at Starbase around 11:20 a.m. HST on Saturday (about 3:20 p.m. Central Time), only if the systems needed for reentry and landing are healthy. If SpaceX needs to end the mission early, it has pre-cleared Pacific splashdown options around Hawaii and several hundred kilometers off Chile. After reentry, a late option is a splashdown in the Gulf of America if a safe catch is not possible.',
+    fr: 'Les horaires de SpaceX sont approximatifs, comptés à partir du décollage vers 12 h 47 HST : contrôle de retour au large du Chili vers 20 h 03 HST le vendredi 13 novembre ; dernier contrôle de retour près d’Hawaï vers 9 h 29 HST le samedi 14 novembre ; mise à feu de désorbitation vers 10 h 23 HST ; puis tentative de capture par la tour à Starbase vers 11 h 20 HST le samedi (vers 15 h 20, heure du Centre), seulement si les systèmes nécessaires à la rentrée et à l’atterrissage sont en bon état. Si SpaceX doit interrompre la mission plus tôt, des zones d’amerrissage préapprouvées existent dans le Pacifique autour d’Hawaï et à plusieurs centaines de kilomètres au large du Chili. Après la rentrée, une option tardive est un amerrissage dans le golfe d’Amérique si une capture sûre n’est pas possible.',
+    es: 'Los horarios de SpaceX son aproximados, contados desde el despegue hacia las 12:47 p. m. HST: comprobación de retorno frente a Chile hacia las 8:03 p. m. HST del viernes 13 de noviembre; comprobación final de retorno cerca de Hawái hacia las 9:29 a. m. HST del sábado 14 de noviembre; encendido de desórbita hacia las 10:23 a. m. HST; después, intento de captura en la torre de Starbase hacia las 11:20 a. m. HST del sábado (hacia las 3:20 p. m., hora del Centro), solo si los sistemas necesarios para la reentrada y el aterrizaje están en buen estado. Si SpaceX necesita terminar la misión antes, hay zonas de amerizaje preaprobadas en el Pacífico alrededor de Hawái y a varios cientos de kilómetros de la costa de Chile. Tras la reentrada, una opción tardía es un amerizaje en el Golfo de América si no es posible una captura segura.',
+    ar: 'أوقات سبيس إكس تقريبية، محسوبة من الإقلاع نحو الساعة 12:47 ظهرًا بتوقيت هاواي: فحص العودة قبالة تشيلي نحو الساعة 8:03 مساءً بتوقيت هاواي يوم الجمعة 13 نوفمبر؛ الفحص النهائي للعودة قرب هاواي نحو الساعة 9:29 صباحًا بتوقيت هاواي يوم السبت 14 نوفمبر؛ إشعال الخروج من المدار نحو الساعة 10:23 صباحًا بتوقيت هاواي؛ ثم محاولة التقاط بالبرج في ستاربيس نحو الساعة 11:20 صباحًا بتوقيت هاواي يوم السبت (نحو الساعة 3:20 مساءً بالتوقيت المركزي)، فقط إذا كانت الأنظمة اللازمة لإعادة الدخول والهبوط سليمة. إذا احتاجت سبيس إكس إلى إنهاء المهمة مبكرًا، فلديها مناطق هبوط بحري معتمدة مسبقًا في المحيط الهادئ حول هاواي وعلى بعد عدة مئات من الكيلومترات قبالة تشيلي. وبعد إعادة الدخول، يتوفر خيار متأخر للهبوط في خليج أمريكا إذا تعذر التقاط آمن.',
+    it: 'Gli orari di SpaceX sono approssimativi, calcolati dal decollo verso le 12:47 HST: verifica di rientro al largo del Cile verso le 20:03 HST di venerdì 13 novembre; verifica finale di rientro vicino alle Hawaii verso le 9:29 HST di sabato 14 novembre; accensione di deorbitazione verso le 10:23 HST; poi tentativo di cattura con la torre a Starbase verso le 11:20 HST di sabato (verso le 15:20, ora del Centro), solo se i sistemi necessari per il rientro e l’atterraggio sono in buone condizioni. Se SpaceX deve interrompere prima la missione, sono previste zone di ammaraggio preautorizzate nel Pacifico intorno alle Hawaii e a parecchie centinaia di chilometri al largo del Cile. Dopo il rientro, un’opzione tardiva è un ammaraggio nel Golfo d’America se una cattura sicura non è possibile.',
+    he: 'הזמנים של ספייס אקס הם בקירוב, ומחושבים מהשיגור בסביבות 12:47 בצהריים לפי שעון הוואי: בדיקת חזרה מול חופי צ׳ילה בסביבות 20:03 בערב לפי שעון הוואי ביום שישי, 13 בנובמבר; בדיקת החזרה הסופית ליד הוואי בסביבות 9:29 בבוקר לפי שעון הוואי ביום שבת, 14 בנובמבר; שריפת יציאה ממסלול בסביבות 10:23 בבוקר לפי שעון הוואי; אחר כך ניסיון תפיסה במגדל בסטארבייס בסביבות 11:20 בבוקר לפי שעון הוואי ביום שבת (בסביבות 15:20 שעון המרכז), רק אם המערכות הדרושות לחדירה לאטמוספרה ולנחיתה תקינות. אם ספייס אקס תצטרך לסיים את המשימה מוקדם, יש אזורי נחיתה בים שאושרו מראש באוקיינוס השקט סביב הוואי ובמרחק כמה מאות קילומטרים מחופי צ׳ילה. לאחר החדירה לאטמוספרה, אפשרות מאוחרת היא נחיתה במפרץ אמריקה אם תפיסה בטוחה אינה אפשרית.'
+  };
+  var STAR_NEXT_SRC = [SXP, SXU];
   function citeHtml(urls) {
     return (urls || []).map(function (u) {
       var lab = /^https:\/\/x\.com\//.test(u) ? 'SpaceX (X)' : 'spacex.com';
@@ -529,6 +540,8 @@
     var lines = [];
     if (isStarship15(l)) {
       (STAR[lang] || STAR.en).forEach(function (s, i) { lines.push('<p>' + esc(s) + citeHtml(STAR_SRC[i]) + '</p>'); });
+      lines.push('<p class="lw-blurb-k">' + esc(ui.coming) + '</p>');
+      lines.push('<p>' + esc(STAR_NEXT[lang] || STAR_NEXT.en) + citeHtml(STAR_NEXT_SRC) + '</p>');
     } else {
       var purpose = purposeText(l);
       lines.push('<p><b>' + esc(missionName(l)) + '</b></p>');
@@ -808,7 +821,9 @@
   function tick(netMs, el) {
     var diff = netMs - Date.now();
     if (diff <= 0) {
-      var txt = FEED.statusText(el.getAttribute('data-net'), el.getAttribute('data-ab'));
+      var txt = (el.getAttribute('data-f15') === '1' && FEED.f15Status)
+        ? FEED.f15Status()
+        : FEED.statusText(el.getAttribute('data-net'), el.getAttribute('data-ab'));
       if (el.getAttribute('data-done') !== txt) {
         el.setAttribute('data-done', txt);
         el.innerHTML = '<p class="lw-done">' + esc(txt) + '</p>';
@@ -842,7 +857,7 @@
       })) + status + where + '</p>' +
       '<p class="lw-local">' + localLine(n.net) + '</p>' +
       metaLine(n) +
-      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '" data-net="' + esc(n.net || '') + '" data-ab="' + esc(abOf(n)) + '" data-lid="' + esc(n.id || '') + '" data-watch="' + esc(watchUrl(n) || '') + '"></div>' +
+      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '" data-net="' + esc(n.net || '') + '" data-ab="' + esc(abOf(n)) + '" data-lid="' + esc(n.id || '') + '" data-watch="' + esc(watchUrl(n) || '') + '" data-f15="' + (isStarship15(n) ? '1' : '0') + '"></div>' +
       watchBtn(n) +
       '<div class="lw-blurbs">' + goingHtml(n) + blurbHtml(n) + '</div>';
 
@@ -862,7 +877,7 @@
         '<span class="lw-l-date">' + esc(fmt(l.net, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })) + '</span>' +
         '</div>' +
         '<p class="lw-local">' + localLine(l.net) + '</p>' +
-        '<div class="lw-mini" data-net="' + esc(l.net || '') + '" data-ab="' + esc(abOf(l)) + '" role="timer"></div>' +
+        '<div class="lw-mini" data-net="' + esc(l.net || '') + '" data-ab="' + esc(abOf(l)) + '" data-f15="' + (isStarship15(l) ? '1' : '0') + '" role="timer"></div>' +
         metaLine(l) + watchBtn(l) +
         '<div class="lw-blurbs">' + goingHtml(l) + blurbHtml(l) + '</div></li>';
     }).join('');
