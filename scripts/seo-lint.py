@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
-TWITTER_SITE = '@SISavingPlanets'
+TWITTER_SITE = '@WeSavingPlanets'
 NOINDEX = {'Project-R.html', '404.html', 'offline.html', 'GLOBE_Review.html'}
 ERROR = {'title-missing', 'title-duplicate', 'desc-missing', 'desc-duplicate', 'hreflang-reciprocity', 'jsonld-invalid'}
 MAIN_TYPES = {'Article', 'NewsArticle', 'BlogPosting', 'WebPage', 'CollectionPage', 'AboutPage', 'ContactPage', 'FAQPage',
@@ -121,9 +121,9 @@ def main():
         if not kwm or not (kwm.get('content') or '').strip(): add('keywords-missing', p)
         else:
             descs[d].append(p)
-            if 160 < len(d) <= 175 and not d.endswith('…'): add('desc-slightly-long', p, f'{len(d)} (one whole sentence; search engines trim the display)')
-            elif not 120 <= len(d) <= 155: add('desc-length', p, f'{len(d)}')
-            if d.endswith('…'): add('desc-truncated', p, d[-40:])
+            if 160 < len(d) <= 175 and not (d.endswith('…') or d.endswith('...')): add('desc-slightly-long', p, f'{len(d)} (one whole sentence; search engines trim the display)')
+            elif not 120 <= len(d) <= 160: add('desc-length', p, f'{len(d)}')
+            if d.endswith('…') or d.endswith('...'): add('desc-truncated', p, d[-40:])
         if lang == 'en': en_meta[base] = (t, d)
         c = soup.find_all('link', rel='canonical')
         if len(c) != 1 or c[0].get('href') != U: add('canonical', p, (c[0].get('href') if c else 'missing'))

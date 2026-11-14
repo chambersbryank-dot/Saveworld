@@ -17,7 +17,7 @@ ORG = {'@type': 'Organization', 'name': 'Saving Planets', 'url': 'https://www.sa
 ORG_ID, SITE_ID = SITE + '#organization', SITE + '#website'
 ORG_REF = {'@id': ORG_ID}
 ORG_FULL = dict(ORG, **{'@id': ORG_ID})  # Article author/publisher: full node, since stricter validators don't resolve @id references
-SAME_AS = ['https://x.com/SISavingPlanets']
+SAME_AS = ['https://x.com/WeSavingPlanets', 'https://www.youtube.com/@SavingPlanets', 'https://www.pinterest.com/savingplanets']
 SITENAME = 'Saving Planets'
 NOINDEX = {'Project-R.html', '404.html'}
 # Section hub for pages that have no visible breadcrumb (BreadcrumbList = Home > hub > page)
@@ -60,7 +60,7 @@ def write(s, objs):
 
 def url(lang, page): return SITE + ('' if lang == 'en' else lang + '/') + page
 
-HOME_NAME = {'en': 'Home', 'fr': 'Accueil', 'es': 'Inicio', 'ar': 'الرئيسية', 'it': 'Home', 'he': 'דף הבית'}
+HOME_NAME = {'en': 'Home', 'fr': 'Accueil', 'es': 'Inicio', 'ar': 'الرئيسية', 'it': 'Pagina iniziale', 'he': 'דף הבית'}
 def page_name(lang, page):
     """Visible name of a page in that language: its <h1>, else its <title> without the brand."""
     f = page if lang == 'en' else f'{lang}/{page}'
@@ -98,6 +98,61 @@ def crumbs(s, lang, page):
         href = os.path.basename(href.split('#')[0]) or 'index.html'
         items.append({'@type': 'ListItem', 'position': len(items) + 1, 'name': n, 'item': url(lang, href).replace('/index.html', '/')})
     return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': items} if items else None
+
+
+def _short_course_desc(text, limit=90):
+    """Whole-sentence course description for the Course list, from existing page copy only. No ellipsis."""
+    text = re.sub(r'\s+', ' ', (text or '')).strip().rstrip('….').rstrip('.')
+    if not text:
+        return ''
+    if len(text) <= limit:
+        return text.rstrip(' ,;:') + ('.' if text[-1:] not in '.!?؟' else '')
+    cut = text[:limit]
+    for sep in ('; ', ', ', ' – ', ' — ', ': ', ' ('):
+        i = cut.rfind(sep)
+        if i >= 40:
+            return cut[:i].rstrip(' ,;:–—(') + '.'
+    return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '.'
+
+def course_list(by, lang, s):
+    """Align Courses.html ItemList with Google Course-list examples: each ListItem.item is a Course
+    (name, description, url, provider, isAccessibleForFree). Descriptions come from that language's
+    course page; nothing is invented. hasCourseInstance is not used (retired)."""
+    item = by.get('ItemList')
+    if not isinstance(item, dict):
+        return
+    provider = {'@type': 'Organization', 'name': SITENAME, 'url': SITE.rstrip('/')}
+    elems = []
+    for el in item.get('itemListElement') or []:
+        if not isinstance(el, dict):
+            continue
+        href = el.get('url') or (el.get('item') or {}).get('url') if isinstance(el.get('item'), dict) else el.get('url')
+        name = el.get('name') or (el.get('item') or {}).get('name') if isinstance(el.get('item'), dict) else el.get('name')
+        if not href:
+            continue
+        page = href.rstrip('/').rsplit('/', 1)[-1]
+        path = page if lang == 'en' else f'{lang}/{page}'
+        desc = name or ''
+        if os.path.exists(path):
+            raw = open(path, encoding='utf8').read()
+            for m in RX.finditer(raw.split('</head>')[0]):
+                try:
+                    j = json.loads(m.group(1))
+                except Exception:
+                    continue
+                if j.get('@type') == 'Course' and j.get('description'):
+                    desc = j['description']; break
+            else:
+                md = re.search(r'<meta name="description" content="([^"]*)"', raw)
+                if md:
+                    desc = html.unescape(md.group(1))
+        course = {'@type': 'Course', 'name': name or page, 'description': _short_course_desc(desc),
+                  'url': href, 'provider': provider, 'isAccessibleForFree': True}
+        elems.append({'@type': 'ListItem', 'position': len(elems) + 1, 'item': course})
+    if elems:
+        item['itemListElement'] = elems
+        item['numberOfItems'] = len(elems)
+        by['ItemList'] = item
 
 def enrich(p):
     lang = p.split('/')[0] if '/' in p else 'en'; page = os.path.basename(p)
@@ -169,7 +224,10 @@ def enrich(p):
                            'isAccessibleForFree': True, 'publisher': ORG_REF}
         for k in ('WebPage', 'CollectionPage', 'Multi'): by.pop(k, None)
         by['CollectionPage'] = t
+    if page == 'Courses.html':
+        course_list(by, lang, s)
     me = main.get('mainEntity') if isinstance(main, dict) else None
+
     if isinstance(me, dict) and me.get('@type') == 'LearningResource' and lang != 'en':  # nested copy in the page language (was English)
         me['name'] = main.get('name') or me.get('name'); me['description'] = main.get('description') or me.get('description'); me['inLanguage'] = lang
         me['url'] = U
