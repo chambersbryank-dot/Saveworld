@@ -3,12 +3,11 @@
    Do not scrape nextspaceflight.com. No invented facts: purpose from LL2 mission.description;
    connection from published mission type/name vs our solution hubs; else "not yet published". */
 (function () {
-  var API = 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=20&mode=detailed';
-  var CACHE_KEY = 'sp-ll2-upcoming';
-  var CACHE_MS = 10 * 60 * 1000;
+  /* Feed (upcoming + recent launches, kept for the rest of launch day in Hawaii / 24 h): assets/launch-feed.js */
+  var FEED = window.SPLaunchFeed;
   var nextEl = document.getElementById('lw-next');
   var listEl = document.getElementById('lw-list');
-  if (!nextEl || !listEl) return;
+  if (!nextEl || !listEl || !FEED) return;
   var timer = null;
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
   var prefix = (location.pathname.indexOf('/' + lang + '/') >= 0) ? '../' : '';
@@ -44,7 +43,8 @@
       '.launch-widget a.lw-play{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;padding:0 1rem;box-sizing:border-box}' +
       '.launch-widget .lw-play:focus-visible{outline:3px solid #fff;outline-offset:-6px}' +
       '.launch-widget .lw-nsf{margin:.45rem 0 .2rem;font-size:.92rem;line-height:1.4;color:#f4fbff}' +
-      '.launch-widget .lw-nsf a{color:#8fd3ff;font-weight:700}';
+      '.launch-widget .lw-nsf a{color:#8fd3ff;font-weight:700}' +
+      '.launch-widget .lw-done{display:inline-block;margin:.35rem 0;padding:.45rem .9rem;border-radius:999px;font-weight:800;font-size:.95rem;color:#7dffd0;background:rgba(0,184,148,.16);border:1px solid rgba(0,184,148,.5)}';
     document.head.appendChild(st);
   }
 
@@ -771,16 +771,6 @@
     return bits.length ? '<p class="lw-extra">' + bits.join(' · ') + '</p>' : '';
   }
 
-  function readCache() {
-    try {
-      var c = JSON.parse(sessionStorage.getItem(CACHE_KEY));
-      if (c && Date.now() - c.t < CACHE_MS && c.d && c.d.results) return c.d;
-    } catch (e) {}
-    return null;
-  }
-  function writeCache(d) {
-    try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
-  }
 
   function showError() {
     if (timer) clearInterval(timer);
@@ -795,10 +785,15 @@
       if (!isNaN(ms)) tick(ms, nodes[i]);
     }
   }
+  /* Past T-0: show launch status instead of a countdown (e.g. "Launched today, 12:47 PM HST · In flight"). */
   function tick(netMs, el) {
     var diff = netMs - Date.now();
     if (diff <= 0) {
-      el.innerHTML = '<div class="lw-unit"><b>T-0</b><small>' + esc(t.window) + '</small></div>';
+      var txt = FEED.statusText(el.getAttribute('data-net'), el.getAttribute('data-ab'));
+      if (el.getAttribute('data-done') !== txt) {
+        el.setAttribute('data-done', txt);
+        el.innerHTML = '<p class="lw-done">' + esc(txt) + '</p>';
+      }
       return;
     }
     var s = Math.floor(diff / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600),
@@ -810,21 +805,16 @@
       '<div class="lw-unit"><b>' + pad(sec) + '</b><small>' + esc(t.sec) + '</small></div>';
   }
 
+  function abOf(l) { return (l && l.status && l.status.abbrev) || ''; }
   function render(data) {
-    var now = Date.now();
-    var r = ((data && data.results) || []).filter(function (l) {
-      var ab = l.status && l.status.abbrev ? String(l.status.abbrev).toLowerCase() : '';
-      if (ab === 'success' || ab === 'failure' || ab === 'partial failure') return false;
-      var x = new Date(l.net).getTime();
-      return isNaN(x) || x > now;
-    });
+    var r = FEED.filter((data && data.results) || [], Date.now());
     if (!r.length) { showError(); return; }
 
     var n = r[0];
     var status = n.status && n.status.abbrev ? ' · ' + esc(t.status) + ': ' + esc(n.status.abbrev) : '';
     var where = n.pad && n.pad.location && n.pad.location.name ? '<br>' + esc(n.pad.location.name) : '';
     nextEl.innerHTML =
-      '<p class="lw-kicker">' + esc(t.next) + '</p>' +
+      '<p class="lw-kicker">' + esc(FEED.isPast(n) ? FEED.recentLabel : t.next) + '</p>' +
       '<h3 class="lw-mission">' + esc(missionName(n)) + '</h3>' +
       '<p class="lw-meta">' + esc(provider(n)) + ' · ' + esc(rocket(n)) + '</p>' +
       '<p class="lw-when">' + esc(fmt(n.net, {
@@ -833,7 +823,7 @@
       })) + status + where + '</p>' +
       '<p class="lw-local">' + localLine(n.net) + '</p>' +
       metaLine(n) +
-      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '" data-net="' + esc(n.net || '') + '" data-lid="' + esc(n.id || '') + '" data-watch="' + esc(watchUrl(n) || '') + '"></div>' +
+      '<div class="lw-countdown" role="timer" aria-label="' + esc(t.next) + '" data-net="' + esc(n.net || '') + '" data-ab="' + esc(abOf(n)) + '" data-lid="' + esc(n.id || '') + '" data-watch="' + esc(watchUrl(n) || '') + '"></div>' +
       watchBtn(n) +
       '<div class="lw-blurbs">' + goingHtml(n) + blurbHtml(n) + '</div>';
 
@@ -853,33 +843,17 @@
         '<span class="lw-l-date">' + esc(fmt(l.net, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })) + '</span>' +
         '</div>' +
         '<p class="lw-local">' + localLine(l.net) + '</p>' +
-        '<div class="lw-mini" data-net="' + esc(l.net || '') + '" role="timer"></div>' +
+        '<div class="lw-mini" data-net="' + esc(l.net || '') + '" data-ab="' + esc(abOf(l)) + '" role="timer"></div>' +
         metaLine(l) + watchBtn(l) +
         '<div class="lw-blurbs">' + goingHtml(l) + blurbHtml(l) + '</div></li>';
     }).join('');
+    tickCards();
   }
 
   nextEl.addEventListener('click', onPlay);
   listEl.addEventListener('click', onPlay);
-  function boot(d) {
-    fetch(prefix + 'data/launch-streams.json?v=20261113f15', { credentials: 'omit', cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : { streams: [] }; })
-      .catch(function () { return { streams: [] }; })
-      .then(function (j) { STREAMS = (j && j.streams) || []; render(d); });
-  }
-  var cached = readCache();
-  if (cached) { boot(cached); return; }
-  var done = false;
-  var guard = setTimeout(function () { if (!done) { done = true; showError(); } }, 10000);
-  var ctl = window.AbortController ? new AbortController() : null;
-  if (ctl) setTimeout(function () { ctl.abort(); }, 10000);
-  try {
-    fetch(API, { headers: { Accept: 'application/json' }, signal: ctl ? ctl.signal : undefined })
-      .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-      .then(function (d) {
-        if (done) return; done = true; clearTimeout(guard); writeCache(d);
-        try { boot(d); } catch (e) { showError(); }
-      })
-      .catch(function () { if (done) return; done = true; clearTimeout(guard); showError(); });
-  } catch (e) { done = true; clearTimeout(guard); showError(); }
+  FEED.load()
+    .then(function (d) { return FEED.streams().then(function (sr) { STREAMS = sr || []; return d; }); })
+    .then(function (d) { try { render(d); } catch (e) { showError(); } })
+    .catch(function () { showError(); });
 })();

@@ -1,6 +1,6 @@
 /* Launch tracker actions: "Ask about this launch" (mailto) + "Add to my calendar" (.ics / Google).
    Enhances the Launch Library 2 widget (#lw-next, #lw-list; assets/launch-tracker.js) without replacing blurbs:
-   reads the same sessionStorage cache (sp-ll2-upcoming) and re-attaches on every re-render. */
+   reads the shared feed (assets/launch-feed.js) and re-attaches on every re-render. */
 (function () {
   var nextEl = document.getElementById('lw-next');
   var listEl = document.getElementById('lw-list');
@@ -29,15 +29,11 @@
     document.head.appendChild(st);
   }
 
-  function data() { try { var c = JSON.parse(sessionStorage.getItem('sp-ll2-upcoming')); return c && c.d && c.d.results ? c.d.results : null; } catch (e) { return null; } }
+  /* Same list as launch-tracker.js (assets/launch-feed.js keeps launches up for the rest of launch day). */
+  var FEED = window.SPLaunchFeed;
   function launches() {
-    var now = Date.now(), r = data();
-    if (!r) return null;
-    return r.filter(function (l) {
-      var ab = l.status && l.status.abbrev ? String(l.status.abbrev).toLowerCase() : '';
-      if (ab === 'success' || ab === 'failure' || ab === 'partial failure') return false;
-      var x = new Date(l.net).getTime(); return isNaN(x) || x > now;
-    });
+    var r = FEED && FEED.cached();
+    return r ? FEED.filter(r, Date.now()) : null;
   }
   function mission(l) { if (l.mission && l.mission.name) return l.mission.name; var p = String(l.name || '').split('|'); return (p[1] || p[0] || 'Launch').trim(); }
   function rocket(l) { return (l.rocket && l.rocket.configuration && l.rocket.configuration.name) || ''; }
@@ -82,11 +78,13 @@
   var urls = [];
   function actions(l) {
     var box = el('div', 'la-acts', '', { 'data-la': l.id || mission(l) });
-    box.appendChild(el('p', 'la-remind', t.remind || 'Remind me'));
+    var past = FEED && FEED.isPast(l);
+    /* Past T-0: no reminder or calendar buttons; the stream links above stay. */
+    if (!past) box.appendChild(el('p', 'la-remind', t.remind || 'Remind me'));
     var subj = t.subj + ': ' + mission(l) + ' \u2013 ' + (rocket(l) || '?') + ' \u2013 ' + dateStr(l);
     var body = t.body + mission(l) + ' / ' + rocket(l) + ' / ' + dateStr(l) + '\n' + PAGE + '\n\n';
     box.appendChild(el('a', 'la-btn la-ask', t.ask, { href: 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body), 'aria-label': lab(t.askL, l) }));
-    var tm = times(l);
+    var tm = past ? null : times(l);
     if (tm) {
       var blob = new Blob([ics(l, tm)], { type: 'text/calendar;charset=utf-8' }), u = URL.createObjectURL(blob); urls.push(u);
       var fn = ('launch-' + mission(l)).replace(/[^\w-]+/g, '-').replace(/-+/g, '-').slice(0, 60) + '.ics';
@@ -95,7 +93,7 @@
         '&details=' + encodeURIComponent(desc(l)) + '&location=' + encodeURIComponent(where(l));
       box.appendChild(el('a', 'la-btn la-gcal', t.gcal, { href: g, target: '_blank', rel: 'noopener noreferrer', 'aria-label': lab(t.gcalL, l) }));
     }
-    if (uncertain(l)) box.appendChild(el('span', 'la-may', t.may));
+    if (!past && uncertain(l)) box.appendChild(el('span', 'la-may', t.may));
     return box;
   }
   var busy = false;

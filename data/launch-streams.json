@@ -1,5 +1,5 @@
 {
-  "note": "Each entry may set url (official provider stream: SpaceX X broadcast or provider YouTube) and alternate (a labeled independent feed). Starship Flight 15 url is the official SpaceX X broadcast posted 13 Nov 2026. alternate stays NASASpaceflight, labeled Alternate view.",
+  "note": "Each entry may set url (official provider stream: SpaceX X broadcast or provider YouTube) and alternate (a labeled independent feed). Starship Flight 15 url is the official SpaceX X broadcast posted 13 Nov 2026. alternate stays NASASpaceflight, labeled Alternate view. Optional keepUntil (ISO UTC) keeps a launch on the schedule past the default (end of launch day in Pacific/Honolulu or 24 h after liftoff, whichever is later). Flight 15 keepUntil = end of Sat 14 Nov 2026 HST, for the planned ship catch attempt.",
   "streams": [
     {
       "match": "starship flight 15",
@@ -8,7 +8,8 @@
         "url": "https://www.youtube.com/watch?v=9XM0lpVlvo0",
         "credit": "NASASpaceflight",
         "channel": "https://www.youtube.com/@NASASpaceflight"
-      }
+      },
+      "keepUntil": "2026-11-15T10:00:00Z"
     }
   ]
 }

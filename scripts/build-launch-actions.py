@@ -3,7 +3,7 @@
 with the Launch Library widget (#lw-next), in all languages. Idempotent; bump V to bust caches."""
 import pathlib, re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = "20261024a"
+V = "20261113k1"
 LANGS = ["", "fr", "es", "ar", "it", "he"]
 n = 0
 for lg in LANGS:

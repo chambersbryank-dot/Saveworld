@@ -2,9 +2,7 @@
    No invented dates: NET/TBD come from the listing. Vehicle history is only the sourced
    notes below. Russia, China, North Korea and Iran-led launches never get their sites. */
 (function () {
-  var API = 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=20&mode=detailed';
-  var CACHE_KEY = 'sp-ll2-upcoming';
-  var CACHE_MS = 10 * 60 * 1000;
+  /* Feed: assets/launch-feed.js (upcoming + launches from the last day, Pacific/Honolulu). */
   var sel = document.getElementById('lw-pick');
   var panel = document.getElementById('lw-pick-panel');
   if (!sel || !panel) return;
@@ -70,6 +68,7 @@
     if (!l.net || /tbd|tbc|to be|confirm/.test(st)) return u.tbd;
     var d = new Date(l.net);
     if (isNaN(d)) return u.tbd;
+    if (window.SPLaunchFeed && window.SPLaunchFeed.isPast(l)) return window.SPLaunchFeed.statusText(l.net, l.status && l.status.abbrev);
     return u.net + ' ' + d.toLocaleString(lang === 'en' ? undefined : lang, {
       weekday: 'short', month: 'short', day: 'numeric', year: 'numeric',
       hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
@@ -184,13 +183,7 @@
   }
   var byId = {};
   function fill(data) {
-    var now = Date.now();
-    var rows = ((data && data.results) || []).filter(function (l) {
-      var ab = l.status && l.status.abbrev ? String(l.status.abbrev).toLowerCase() : '';
-      if (ab === 'success' || ab === 'failure' || ab === 'partial failure') return false;
-      var x = new Date(l.net).getTime();
-      return isNaN(x) || x > now;
-    });
+    var rows = window.SPLaunchFeed.filter((data && data.results) || [], Date.now());
     byId = {};
     if (!rows.length) {
       sel.innerHTML = '<option value="">' + esc(u.empty) + '</option>';
@@ -210,22 +203,8 @@
     show(rows[star]);
   }
   sel.addEventListener('change', function () { show(byId[sel.value] || null); });
-  function readCache() {
-    try {
-      var c = JSON.parse(sessionStorage.getItem(CACHE_KEY));
-      if (c && Date.now() - c.t < CACHE_MS && c.d && c.d.results) return c.d;
-    } catch (e) {}
-    return null;
-  }
-  var cached = readCache();
-  if (cached) { fill(cached); return; }
-  fetch(API, { headers: { Accept: 'application/json' } })
-    .then(function (res) { if (!res.ok) throw new Error('HTTP'); return res.json(); })
-    .then(function (d) {
-      try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
-      fill(d);
-    })
-    .catch(function () {
-      sel.innerHTML = '<option value="">' + esc(u.empty) + '</option>';
-    });
+  if (!window.SPLaunchFeed) return;
+  window.SPLaunchFeed.load().then(fill).catch(function () {
+    sel.innerHTML = '<option value="">' + esc(u.empty) + '</option>';
+  });
 })();
