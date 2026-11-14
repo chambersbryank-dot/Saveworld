@@ -39,7 +39,7 @@ var bar=document.createElement('div');bar.className='fv2-bar';
 var L=[['en','EN'],['fr','FR'],['es','ES'],['it','IT'],['ar','عربي'],['he','עב']],p=location.pathname.replace(/^\/(fr|es|it|ar|he)\//,'/');
 var ln=document.createElement('div');ln.className='fv2-lang';ln.setAttribute('role','navigation');ln.setAttribute('aria-label',S[6]);
 L.forEach(function(x){var a=document.createElement('a');a.href=(x[0]==='en'?'':'/'+x[0])+p;a.textContent=x[1];a.hreflang=x[0];a.lang=x[0];if(x[0]===lang)a.setAttribute('aria-current','true');ln.appendChild(a)});
-var so=document.createElement('p');so.className='fv2-soc';so.innerHTML='<a href="https://x.com/SISavingPlanets" rel="noopener me" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.2 2H21l-6.5 7.4L22 22h-6l-4.7-6.1L5.8 22H3l7-8L2 2h6.1l4.2 5.6zm-1 18h1.6L7 3.9H5.3z"/></svg> @SISavingPlanets</a>';
+var so=document.createElement('p');so.className='fv2-soc';so.innerHTML='<a href="https://x.com/WeSavingPlanets" rel="noopener me" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.2 2H21l-6.5 7.4L22 22h-6l-4.7-6.1L5.8 22H3l7-8L2 2h6.1l4.2 5.6zm-1 18h1.6L7 3.9H5.3z"/></svg> @WeSavingPlanets</a>';
 var cr=document.createElement('p');cr.className='fv2-credit';cr.textContent='© '+new Date().getFullYear()+' Saving Planets · '+S[7];
 bar.appendChild(ln);bar.appendChild(so);bar.appendChild(cr);
 f.classList.add('fv2');f.appendChild(wrap);f.appendChild(bar);f.appendChild(old);

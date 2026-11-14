@@ -14,7 +14,7 @@ SITE = 'https://www.savingplanets.com/'; LANGS = ['fr', 'es', 'ar', 'it', 'he']
 NOINDEX = {'Project-R.html', '404.html', 'offline.html', 'GLOBE_Review.html'}
 LOCALE = {'en': 'en_US', 'fr': 'fr_FR', 'es': 'es_ES', 'ar': 'ar_AR', 'it': 'it_IT', 'he': 'he_IL'}
 BRAND = ' | Saving Planets'
-TWITTER_SITE = '@SISavingPlanets'
+TWITTER_SITE = '@WeSavingPlanets'
 OVR = json.load(open('i18n/seo-meta.json', encoding='utf8')) if os.path.exists('i18n/seo-meta.json') else {}
 # Oct 17: '{n}' in an override = live solution count (assets/data/solutions.json), so hand-written texts never go stale (fr Solutions said 142)
 # Oct 18: '{h}' = live hub count (Polar made it 11; fr Solutions still said '10 pôles')
@@ -53,6 +53,14 @@ class _Splitter:
             else: out.append(part)
         return out
 END = _Splitter()
+def _is_trunc(s):
+    s = (s or '').rstrip()
+    return s.endswith('…') or s.endswith('...')
+def _untrunc(s):
+    s = (s or '').rstrip()
+    if s.endswith('...'): return s[:-3].rstrip(' ,:;–-')
+    if s.endswith('…'): return s[:-1].rstrip(' ,:;–-')
+    return s
 SKIP_P = re.compile(r'review|source|credit|cite|eyebrow|kicker|tag|crumb|share|caption|meta|note|disclaimer|lchip|badge|transcript|video|embed')
 _git = {}
 def gitdates(f):
@@ -88,52 +96,55 @@ def _dup(x, text):
     return len(a & b) / len(a) >= 0.5
 
 def fit_desc(base, extra, lang, learn=False):
-    """Whole sentences, 120-155 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
+    """Whole sentences, 120-160 chars. base sentence(s) first, then sentences from extra (page copy) that still fit,
     then the language pad. A description we truncated earlier (ends with an ellipsis) is rebuilt from the page copy.
-    Ellipsis only when the first sentence alone is longer than 155. Bing and Google both truncate snippets to the device width."""
+    Never end with an ellipsis; cut at a clause or word boundary and finish with a full stop. Bing and Google both truncate snippets to the device width."""
     norm = lambda x: re.sub(r'\s+', ' ', UPDATED.sub('', x or '')).strip()
     pad = (PAD_LEARN if learn else PAD)[lang]
     base = norm(base.replace(PAD[lang], '') if learn else base)
     pool = [x for e in extra for x in END.split(norm(e)) if len(x) > 25 and not x.endswith('…')]
     # Oct 26: rebuild ellipsis-truncated descriptions from page copy when we have sentences to work with.
     # Only keep a prior '…' cut when the page no longer has usable copy to rebuild from.
-    if base.endswith('…') and len(base) <= 155 and not pool: return base
-    if base.endswith('…'):
-        base = base.rstrip('…').rsplit(' ', 1)[0].rstrip(' ,:;–-')  # drop the cut fragment; rebuild below
+    if _is_trunc(base) and len(base) <= 160 and not pool:
+        u = _untrunc(base)
+        return u if u.endswith(tuple('.!?؟')) else u + '.'
+    if _is_trunc(base):
+        base = _untrunc(base).rsplit(' ', 1)[0].rstrip(' ,:;–-')  # drop the cut fragment; rebuild below
     sents = [x for x in END.split(base) if x] if base else []
     sents = [x for i, x in enumerate(sents) if i == 0 or not (len(_words(x)) >= 3 and len(_words(x) & _words(' '.join(sents[:i]))) / len(_words(x)) >= 0.6)]  # Oct 16: drop a repeated sentence
     if not sents and pool: sents = [pool.pop(0)]
     text = ''
     for x in sents:
-        if len((text + ' ' + x).strip()) <= 155 or not text: text = (text + ' ' + x).strip()
+        if len((text + ' ' + x).strip()) <= 160 or not text: text = (text + ' ' + x).strip()
         else: break
-    if len(text) > 155:  # drop a trailing source attribution "(NASA)." before cutting
+    if len(text) > 160:  # drop a trailing source attribution "(NASA)." before cutting
         t2 = re.sub(r'\s*\([^()]{2,60}\)(?=[.!?؟]?$)', '', text)
-        if len(t2) <= 155: text = t2
-        elif False and len(t2) <= 155 and len(sents) == 1 and t2[-1:] in '.!?؟': return t2
-    if len(text) > 155:  # a semicolon joins whole clauses: keep the clauses that fit, end with a full stop, re-pad
+        if len(t2) <= 160: text = t2
+        elif False and len(t2) <= 160 and len(sents) == 1 and t2[-1:] in '.!?؟': return t2
+    if len(text) > 160:  # a semicolon joins whole clauses: keep the clauses that fit, end with a full stop, re-pad
         parts = re.split(r'\s*[;؛]\s+', text)
         if len(parts) > 1:
             keep = ''
             for x in parts:
                 cand = (keep + '; ' + x) if keep else x
-                if len(cand) + 1 <= 155: keep = cand
+                if len(cand) + 1 <= 160: keep = cand
                 else: break
             if len(keep) >= 80:
                 text = keep.rstrip(' ,.') + ('.' if lang != 'ar' else '.')
                 for x in pool + [pad]:
                     if len(text) >= 120: break
-                    if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 155: text = (text + ' ' + x).strip()
+                    if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
                 return text
-    if len(text) > 155:  # one long sentence: cut at a clause boundary, then a word boundary
-        cut = text[:154]
+    if len(text) > 160:  # one long sentence: cut at a clause boundary, then a word boundary; never end with an ellipsis
+        cut = text[:159]
         for sep in ('; ', ', ', ' – ', ' — ', ' ('):
             i = cut.rfind(sep)
-            if i >= 110: return cut[:i].rstrip(' ,;:–—(') + '…'
-        return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '…'
+            if i >= 110: return cut[:i].rstrip(' ,;:–—(') + '.'
+        w = cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-')
+        return w if w.endswith(tuple('.!?؟')) else w + '.'
     for x in pool + [pad]:
         if len(text) >= 120: break
-        if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 155: text = (text + ' ' + x).strip()
+        if x not in text and (x == pad or not _dup(x, text)) and len(text) + 1 + len(x) <= 160: text = (text + ' ' + x).strip()
     return text
 
 def ptext(el):
@@ -157,7 +168,8 @@ def esc(v): return v.replace('&', '&amp;').replace('"', '&quot;').replace('<', '
 HEAD_RX = [r'<meta name="robots"[^>]*>', r'<link rel="canonical"[^>]*>', r'<link rel="alternate" hreflang="[^"]*"[^>]*>',
            r'<title>.*?</title>', r'<meta name="description"[^>]*>', r'<meta name="keywords"[^>]*>', r'<meta property="og:[^"]*"[^>]*>', r'<meta name="twitter:[^"]*"[^>]*>',
            r'<link href="[^"]*" rel="canonical"/?>', r'<link href="[^"]*" hreflang="[^"]*" rel="alternate"/?>', r'<meta content="[^"]*" name="(?:robots|description|twitter:[^"]*)"/?>',
-           r'<meta content="[^"]*" property="og:[^"]*"/?>', r'<link rel="alternate"[^>]*hreflang[^>]*>']
+           r'<meta content="[^"]*" property="og:[^"]*"/?>', r'<link rel="alternate"[^>]*hreflang[^>]*>',
+           r"<meta content='[^']*' name=\"(?:robots|description|twitter:[^\"]*)\"/?>", r"<meta content='[^']*' property=\"og:[^\"]*\"/?>"]
 
 def fix(p):
     """Text-level edits (keeps the file's own formatting; only the SEO head block and JSON-LD/img attributes change)."""
@@ -233,9 +245,9 @@ def fix(p):
         extra = [e for e in extra if 'Biological SI' not in e and 'SI Partner' not in e]
         extra = [e for e in extra if e and not e.startswith(('Image', 'Source', 'Image :', 'Imagen', 'الصورة'))]
         if lang != 'en' and (not d or d.strip() == en_d.strip()): d = extra[0] if extra else PAD[lang]
-        if d.strip().endswith('…'):  # our earlier cut: restore the full sentence(s) from the page copy it came from
+        if _is_trunc(d):  # our earlier cut: restore the full sentence(s) from the page copy it came from
             key = lambda x: re.sub(r'[\s\u00a0\u202f]+', '', x.replace('’', "'").replace('«', '"').replace('»', '"'))
-            stem = key(d.strip()[:-1])
+            stem = key(_untrunc(d.strip()))
             for x in [tidy(ptext(y), lang) for y in soup.select('main p, header p, section p, .page-hero-content p')]:
                 if len(stem) > 25 and key(x).startswith(stem): d = x; break
             else:
@@ -243,6 +255,8 @@ def fix(p):
                 if len(ss) > 1: d = ' '.join(ss[:-1])  # keep the whole sentences, drop the cut one; fit_desc re-pads
         learn = bool(re.search(r'"@type": ?"(LearningResource|Course)"', raw)) or base.endswith('_Calculator.html')
         d = ov['description'].strip() if ov.get('description') else fit_desc(d or (extra[0] if extra else PAD[lang]), extra, lang, learn)
+        if _is_trunc(d) or len(d) > 160:
+            d = fit_desc(d, extra, lang, learn)
         img = (soup.find('meta', property='og:image') or {}).get('content') or SITE + 'assets/og-default.jpg'
         if not img.startswith('http'): img = SITE + img.lstrip('./')
         card = (soup.find('meta', attrs={'name': 'twitter:card'}) or {}).get('content') or 'summary_large_image'

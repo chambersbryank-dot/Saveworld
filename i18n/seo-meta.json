@@ -1798,27 +1798,27 @@
   "GLOBE_Program.html": {
     "en": {
       "title": "The GLOBE Program: Earth Science for All Ages",
-      "description": "The Global Learning and Observations to Benefit the Environment (GLOBE) Program is an international science program that provides the public worldwide with the opportunity to participate in data collection and the scientific process, and contribute meaningfully to our understanding of the Earth system and global environment."
+      "description": "GLOBE is an international science program that gives the public worldwide the opportunity to participate in data collection and the scientific process."
     },
     "fr": {
       "title": "Le programme GLOBE : science de la Terre pour tous les âges",
-      "description": "Le programme Global Learning and Observations to Benefit the Environment (GLOBE) est un programme scientifique international qui offre au public du monde entier la possibilité de participer à la collecte de données et à la démarche scientifique, et de contribuer de manière significative à notre compréhension du système Terre et de l'environnement mondial."
+      "description": "GLOBE est un programme scientifique international qui offre au public du monde entier de participer à la collecte de données et à la démarche scientifique."
     },
     "es": {
       "title": "El programa GLOBE: ciencia de la Tierra para todas las edades",
-      "description": "El programa Global Learning and Observations to Benefit the Environment (GLOBE) es un programa científico internacional que ofrece al público de todo el mundo la oportunidad de participar en la recogida de datos y en el proceso científico, y de contribuir de manera significativa a nuestra comprensión del sistema Tierra y del medio ambiente mundial."
+      "description": "El programa GLOBE es un programa científico internacional que ofrece al público participar en la recogida de datos y en el proceso científico."
     },
     "ar": {
       "title": "برنامج GLOBE: علوم الأرض لكل الأعمار",
-      "description": "برنامج Global Learning and Observations to Benefit the Environment (GLOBE) هو برنامج علمي دولي يتيح للجمهور في أنحاء العالم فرصة المشاركة في جمع البيانات وفي العملية العلمية، والإسهام بشكل ذي معنى في فهمنا لنظام الأرض والبيئة العالمية."
+      "description": "برنامج GLOBE هو برنامج علمي دولي يتيح للجمهور في أنحاء العالم فرصة المشاركة في جمع البيانات وفي العملية العلمية، والإسهام في فهم نظام الأرض."
     },
     "it": {
       "title": "Il programma GLOBE: scienze della Terra per tutte le età",
-      "description": "Il programma Global Learning and Observations to Benefit the Environment (GLOBE) è un programma scientifico internazionale che offre al pubblico di tutto il mondo l'opportunità di partecipare alla raccolta dei dati e al processo scientifico, e di contribuire in modo significativo alla nostra comprensione del sistema Terra e dell'ambiente globale."
+      "description": "Il programma GLOBE è un programma scientifico internazionale che offre al pubblico di partecipare alla raccolta dei dati e al processo scientifico."
     },
     "he": {
       "title": "תוכנית GLOBE: מדעי כדור הארץ לכל הגילאים",
-      "description": "תוכנית Global Learning and Observations to Benefit the Environment ‏(GLOBE) היא תוכנית מדע בינלאומית שמעניקה לציבור ברחבי העולם את ההזדמנות להשתתף באיסוף נתונים ובתהליך המדעי, ולתרום באופן משמעותי להבנתנו את מערכת כדור הארץ ואת הסביבה הגלובלית."
+      "description": "תוכנית GLOBE היא תוכנית מדע בינלאומית שמעניקה לציבור ברחבי העולם את ההזדמנות להשתתף באיסוף נתונים ובתהליך המדעי, ולתרום להבנת מערכת כדור הארץ."
     }
   },
   "Argo.html": {
@@ -2244,7 +2244,7 @@
       "description": "Centros de datos en órbita: chips de SI con energía solar que irradian su calor al espacio, sin refrigeración por agua. Por ahora, solo primeros vuelos."
     },
     "fr": {
-      "description": "Des centres de données en orbite : puces de SI à l'énergie solaire, chaleur rayonnée dans l'espace, sans eau de refroidissement. Ce ne sont que de premiers vols."
+      "description": "Centres de données en orbite : puces de SI à l’énergie solaire, chaleur rayonnée dans l’espace, sans eau de refroidissement. Ce ne sont que de premiers vols."
     },
     "it": {
       "description": "Data center in orbita: chip di SI a energia solare che irradiano il calore nello spazio, senza raffreddamento ad acqua. Per ora solo i primi voli."
