@@ -13,7 +13,7 @@ E = lambda s, quote=False: html.escape(s, quote=quote)
 
 HUB = 'Upcoming_Launches.html'
 HERO_V = '20261027a'
-TRACK_V = '20261113k1'  # keep in sync with build-launch-tracker.py
+TRACK_V = '20261113k2'  # keep in sync with build-launch-tracker.py
 IMG = 'RocketLaunch.jpg'  # existing asset; OG card only
 HERO_CREDIT = 'Illustration: Saving Planets (canvas animation; no third-party feed)'
 

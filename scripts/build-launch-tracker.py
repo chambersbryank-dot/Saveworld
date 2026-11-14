@@ -16,7 +16,7 @@ translated Upcoming_Launches pages go STALE every sync.
 import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = "20261113k1"  # bump with launch-tracker.js
+V = "20261113k2"  # bump with launch-tracker.js
 HUB = "Upcoming_Launches.html"
 LANGS = ["", "fr", "es", "ar", "it", "he"]
 
