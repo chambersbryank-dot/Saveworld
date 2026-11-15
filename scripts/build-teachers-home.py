@@ -609,7 +609,8 @@ def card(lang, u, href, title, kind, grades, codes, hook, time, print_label, ext
 def render(lang, data, D, PH, hooks):
     u = UI[lang]
     rows = [(hub, page, title) for hub in data['hubs'] for page, title in hub['items']]
-    total = len(rows)
+    # A solution sheet can appear in more than one hub; unique pages are the true catalog total.
+    total = len({page for _hub, page, _title in rows})
     def info(page):
         cs, grades, subjects = meta_for(D, PH, page)
         return cs, grades, subjects
@@ -655,7 +656,7 @@ def render(lang, data, D, PH, hooks):
                     chosen.append(page)
                 if len(chosen) == 3: break
         if len(chosen) < 3: raise SystemExit(f'{lang} kit {band} only found {chosen}')
-        n = sum(1 for _h, page, _t in rows if band in info(page)[1])
+        n = len({page for _h, page, _t in rows if band in info(page)[1]})
         label = band_label(lang, preset)
         if preset and not label:
             href, note = lb, ''
