@@ -3424,6 +3424,140 @@
     }
    ],
    "strip": "orbit"
+  },
+  "Rewilding_Argentina_Ibera_Jaguars.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -28.5,
+     "lng": -57.2,
+     "label": "Iberá Park, Corrientes, Argentina",
+     "basis": "page"
+    }
+   ]
+  },
+  "NSIDC.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 40.01,
+     "lng": -105.25,
+     "label": "NSIDC, University of Colorado Boulder (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Minor_Planet_Center.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 42.38,
+     "lng": -71.13,
+     "label": "Smithsonian Astrophysical Observatory, Cambridge, Massachusetts (HQ)",
+     "basis": "hq"
+    }
+   ]
+  },
+  "Snow_Leopard_Trust.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 43.15,
+     "lng": 100.65,
+     "label": "Tost Nature Reserve, Mongolia",
+     "basis": "page"
+    },
+    {
+     "lat": 42.62,
+     "lng": 75.18,
+     "label": "Shamshy Wildlife Sanctuary, Kyrgyzstan",
+     "basis": "page"
+    }
+   ]
+  },
+  "Save_the_Elephants.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 0.6,
+     "lng": 37.53,
+     "label": "Samburu National Reserve, Kenya",
+     "basis": "page"
+    },
+    {
+     "lat": -2.98,
+     "lng": 38.47,
+     "label": "Tsavo, Kenya",
+     "basis": "page"
+    }
+   ]
+  },
+  "Rare_Fish_Forever.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 10.3,
+     "lng": 123.4,
+     "label": "Philippines (Fish Forever country)",
+     "basis": "page"
+    },
+    {
+     "lat": -2.5,
+     "lng": 118.0,
+     "label": "Indonesia (Fish Forever country)",
+     "basis": "page"
+    },
+    {
+     "lat": -1.0,
+     "lng": -47.0,
+     "label": "Brazil (Fish Forever country)",
+     "basis": "page"
+    }
+   ]
+  },
+  "Phoenix_Islands_Protected_Area.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": -3.86,
+     "lng": -172.65,
+     "label": "Phoenix Islands, Kiribati",
+     "basis": "page"
+    }
+   ]
+  },
+  "Lake_Washington_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 47.62,
+     "lng": -122.26,
+     "label": "Lake Washington, Seattle, Washington",
+     "basis": "page"
+    }
+   ]
+  },
+  "Cuyahoga_River_Cleanup.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 41.49,
+     "lng": -81.7,
+     "label": "Cuyahoga River, Cleveland, Ohio",
+     "basis": "page"
+    }
+   ]
+  },
+  "SMOS.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 48.85,
+     "lng": 2.3,
+     "label": "ESA headquarters, Paris (HQ)",
+     "basis": "hq"
+    }
+   ]
   }
  }
 }

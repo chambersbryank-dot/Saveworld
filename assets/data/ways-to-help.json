@@ -1038,6 +1038,48 @@
    null,
    null,
    "https://cnes.fr/en/projects/microcarb"
+  ],
+  "rewildargentina": [
+   "Fundación Rewilding Argentina",
+   "https://rewildingargentina.org/en/donaciones",
+   null,
+   "https://rewildingargentina.org/en/animals/jaguar"
+  ],
+  "nsidc": [
+   "NSIDC",
+   null,
+   null,
+   "https://nsidc.org/about"
+  ],
+  "mpc": [
+   "IAU Minor Planet Center",
+   null,
+   null,
+   "https://www.minorplanetcenter.net/about"
+  ],
+  "slt": [
+   "Snow Leopard Trust",
+   "https://snowleopard.org/donate/",
+   null,
+   "https://snowleopard.org/our-work/our-progress/"
+  ],
+  "ste": [
+   "Save the Elephants",
+   "https://savetheelephants.org/help-save-elephants/donate/",
+   null,
+   "https://www.savetheelephants.org/about-ste/"
+  ],
+  "rare": [
+   "Rare",
+   "https://give.rare.org/donate",
+   null,
+   "https://rare.org/stemming-the-tide-of-coastal-overfishing/"
+  ],
+  "kingcounty": [
+   "King County",
+   null,
+   null,
+   "https://kingcounty.gov/en/dept/dnrp/nature-recreation/environment-ecology-conservation/watersheds/lakes/lake-washington/lake-washington-story"
   ]
  },
  "pages": {
@@ -1316,6 +1358,16 @@
   "Mekong_River_Commission": "mrc",
   "SOS_Mata_Atlantica": "sosma",
   "Proba-3": "esa",
-  "MicroCarb": "cnesfr"
+  "MicroCarb": "cnesfr",
+  "Rewilding_Argentina_Ibera_Jaguars": "rewildargentina",
+  "NSIDC": "nsidc",
+  "Minor_Planet_Center": "mpc",
+  "Snow_Leopard_Trust": "slt",
+  "Save_the_Elephants": "ste",
+  "Rare_Fish_Forever": "rare",
+  "Phoenix_Islands_Protected_Area": "unesco",
+  "Lake_Washington_Cleanup": "kingcounty",
+  "Cuyahoga_River_Cleanup": "epa",
+  "SMOS": "esa"
  }
 }

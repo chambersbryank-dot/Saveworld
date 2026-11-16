@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T15:58:58.666Z",
+ "generated": "2026-11-16T15:30:00.000Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -24,6 +24,10 @@
     {
      "href": "Hera.html",
      "name": "Hera"
+    },
+    {
+     "href": "Minor_Planet_Center.html",
+     "name": "IAU Minor Planet Center"
     },
     {
      "href": "Jupiter.html",
@@ -460,6 +464,10 @@
      "name": "SMAP Soil Moisture Active Passive (NASA)"
     },
     {
+     "href": "SMOS.html",
+     "name": "SMOS: Soil Moisture and Ocean Salinity (ESA)"
+    },
+    {
      "href": "SWOT.html",
      "name": "SWOT (NASA–CNES)"
     },
@@ -586,6 +594,10 @@
      "name": "Redonda Island Restoration"
     },
     {
+     "href": "Rewilding_Argentina_Ibera_Jaguars.html",
+     "name": "Rewilding Argentina: Jaguars Return to Iberá"
+    },
+    {
      "href": "Rewilding_Europe.html",
      "name": "Rewilding Europe"
     },
@@ -600,6 +612,14 @@
     {
      "href": "Altyn_Dala_Saiga.html",
      "name": "Saiga Recovery on the Kazakh Steppe (Altyn Dala)"
+    },
+    {
+     "href": "Save_the_Elephants.html",
+     "name": "Save the Elephants"
+    },
+    {
+     "href": "Snow_Leopard_Trust.html",
+     "name": "Snow Leopard Trust"
     },
     {
      "href": "SOS_Mata_Atlantica.html",
@@ -690,6 +710,10 @@
     {
      "href": "Lake_Plastic_Recovery.html",
      "name": "Lake Plastic Recovery"
+    },
+    {
+     "href": "Lake_Washington_Cleanup.html",
+     "name": "Lake Washington Cleanup (Seattle)"
     },
     {
      "href": "Living_Lakes.html",
@@ -838,6 +862,10 @@
      "name": "Papahānaumokuākea National Marine Sanctuary"
     },
     {
+     "href": "Phoenix_Islands_Protected_Area.html",
+     "name": "Phoenix Islands Protected Area (Kiribati)"
+    },
+    {
      "href": "Phytoplankton.html",
      "name": "Phytoplankton, the Ocean's Oxygen Engine"
     },
@@ -856,6 +884,10 @@
     {
      "href": "Project_Seagrass.html",
      "name": "Project Seagrass"
+    },
+    {
+     "href": "Rare_Fish_Forever.html",
+     "name": "Rare: Fish Forever"
     },
     {
      "href": "Salt_Marshes.html",
@@ -934,6 +966,10 @@
     {
      "href": "Hera.html",
      "name": "Hera"
+    },
+    {
+     "href": "Minor_Planet_Center.html",
+     "name": "IAU Minor Planet Center"
     },
     {
      "href": "Jupiter.html",
@@ -1058,6 +1094,10 @@
      "name": "MOSAiC Expedition: A Year Frozen in the Arctic Ice"
     },
     {
+     "href": "NSIDC.html",
+     "name": "National Snow and Ice Data Center (NSIDC)"
+    },
+    {
      "href": "Oceanites_Penguin_Census.html",
      "name": "Oceanites: Antarctic Penguin Census"
     },
@@ -1150,6 +1190,10 @@
     {
      "href": "Chesapeake_Bay_Foundation.html",
      "name": "Chesapeake Bay Foundation"
+    },
+    {
+     "href": "Cuyahoga_River_Cleanup.html",
+     "name": "Cuyahoga River Cleanup (Ohio)"
     },
     {
      "href": "Elwha_River_Restoration.html",
@@ -1422,14 +1466,14 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 276,
+  "solutions": 286,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 19,
-   "government": 30,
-   "agency": 127,
-   "nonprofit": 80,
+   "government": 33,
+   "agency": 130,
+   "nonprofit": 84,
    "natural": 20
   },
   "upcomingMissions": 26,
@@ -1452,18 +1496,18 @@
     ]
    }
   ],
-  "taggedSolutions": 276
+  "taggedSolutions": 286
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 47,
+   "solutions": 49,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
-    "government": 7,
-    "nonprofit": 22,
+    "government": 8,
+    "nonprofit": 23,
     "agency": 6,
     "natural": 7
    },
@@ -1483,12 +1527,12 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 16,
+   "solutions": 17,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 10,
-    "government": 3,
+    "government": 4,
     "agency": 2,
     "natural": 1
    },
@@ -1506,13 +1550,13 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 24,
+   "solutions": 25,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 11,
     "natural": 2,
-    "government": 5,
+    "government": 6,
     "agency": 4,
     "corporate": 2
    },
@@ -1522,11 +1566,11 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 39,
+   "solutions": 42,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "nonprofit": 23,
+    "nonprofit": 26,
     "natural": 5,
     "government": 7,
     "agency": 3,
@@ -1561,11 +1605,11 @@
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 14,
+   "solutions": 15,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 14
+    "agency": 15
    },
    "upcomingMissions": 3,
    "impactTotals": [],
@@ -1573,12 +1617,12 @@
   },
   "polar": {
    "name": "Polar",
-   "solutions": 36,
+   "solutions": 37,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 13,
-    "agency": 14,
+    "agency": 15,
     "government": 7,
     "corporate": 2
    },
@@ -1601,11 +1645,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 48,
+   "solutions": 49,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 46,
+    "agency": 47,
     "nonprofit": 1,
     "corporate": 1
    },
@@ -2493,6 +2537,18 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-17"
+  },
+  {
+   "url": "Cuyahoga_River_Cleanup.html",
+   "title": "Cuyahoga River Cleanup (Ohio)",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Danuri_ShadowCam.html",
@@ -3652,6 +3708,18 @@
    "missions": []
   },
   {
+   "url": "Lake_Washington_Cleanup.html",
+   "title": "Lake Washington Cleanup (Seattle)",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
    "url": "Lakes.html",
    "title": "Lakes",
    "category": "lakes",
@@ -3880,6 +3948,18 @@
    "added": "2026-11-09"
   },
   {
+   "url": "Minor_Planet_Center.html",
+   "title": "IAU Minor Planet Center",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
    "url": "Mission_Blue_Hope_Spots.html",
    "title": "Mission Blue Hope Spots",
    "category": "ocean",
@@ -4088,6 +4168,18 @@
    "stats": [],
    "missions": [],
    "added": "2026-11-09"
+  },
+  {
+   "url": "NSIDC.html",
+   "title": "National Snow and Ice Data Center (NSIDC)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Ocean_Cleanup.html",
@@ -4322,6 +4414,18 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-28"
+  },
+  {
+   "url": "Phoenix_Islands_Protected_Area.html",
+   "title": "Phoenix Islands Protected Area (Kiribati)",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Phytoplankton.html",
@@ -4601,6 +4705,18 @@
    ]
   },
   {
+   "url": "Rare_Fish_Forever.html",
+   "title": "Rare: Fish Forever",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
    "url": "RCM.html",
    "title": "RADARSAT Constellation Mission (Canada)",
    "category": "earth-observation",
@@ -4639,6 +4755,18 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Rewilding_Argentina_Ibera_Jaguars.html",
+   "title": "Rewilding Argentina: Jaguars Return to Iberá",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Rewilding_Europe.html",
@@ -4774,6 +4902,18 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "Save_the_Elephants.html",
+   "title": "Save the Elephants",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "SCAR_Antarctic_Research.html",
@@ -4968,6 +5108,30 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-28"
+  },
+  {
+   "url": "SMOS.html",
+   "title": "SMOS: Soil Moisture and Ocean Salinity (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
+   "url": "Snow_Leopard_Trust.html",
+   "title": "Snow Leopard Trust",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "SOCCOM.html",
