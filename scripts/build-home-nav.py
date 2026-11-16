@@ -148,7 +148,7 @@ def simplify(lang, s, page):
             f'<li><a href="{pre}index.html#newsletter">{E(t["news"])}</a></li></ul>')
     s = replace_ul(s, 'spn-util', util)
     s = re.sub(r'styles\.css\?v=[^"\']+', 'styles.css?v=20261113z', s)
-    s = re.sub(r'site\.js\?v=[^"\']+', 'site.js?v=20261113z', s)
+    s = re.sub(r'site\.js\?v=[^"\']+', 'site.js?v=20261116n', s)
     return s
 
 def donate_anchor(lang):
