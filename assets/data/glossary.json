@@ -1,5 +1,5 @@
 {
- "_about": "Glossary terms for Glossary.html and the tap/hover definitions on solution pages (scripts/build-batch-b.py). match = words to look for (first occurrence per page gets a definition). Keep definitions simple and consistent with the site's sourced pages.",
+ "_about": "Glossary terms for Glossary.html and the tap/hover definitions on solution pages (scripts/build-batch-b.py). match = words to look for (first occurrence per page gets a definition). Keep definitions simple and consistent with the site's sourced pages. source = where a definition was checked (added Nov 16 2026 for sea-ice, phosphorus, overfishing).",
  "terms": [
   {
    "id": "aerosol",
@@ -1634,6 +1634,127 @@
     ],
     "def": "Quanto è salata l'acqua. L'acqua più salata è più pesante, quindi le differenze di salinità aiutano a muovere le correnti oceaniche."
    }
+  },
+  {
+   "id": "sea-ice",
+   "en": {
+    "term": "Sea ice",
+    "match": [
+     "sea ice"
+    ],
+    "def": "Frozen seawater that floats on the ocean surface. It grows in the polar winter and shrinks in summer."
+   },
+   "fr": {
+    "term": "Banquise",
+    "match": [
+     "banquise",
+     "glace de mer"
+    ],
+    "def": "De l'eau de mer gelée qui flotte à la surface de l'océan. Elle s'étend pendant l'hiver polaire et se réduit en été."
+   },
+   "es": {
+    "term": "Hielo marino",
+    "match": [
+     "hielo marino"
+    ],
+    "def": "Agua de mar congelada que flota en la superficie del océano. Crece en el invierno polar y se reduce en verano."
+   },
+   "ar": {
+    "term": "الجليد البحري",
+    "match": [
+     "الجليد البحري",
+     "جليد بحري"
+    ],
+    "def": "مياه بحر متجمدة تطفو على سطح المحيط. يتسع في الشتاء القطبي ويتقلص في الصيف."
+   },
+   "it": {
+    "term": "Ghiaccio marino",
+    "match": [
+     "ghiaccio marino"
+    ],
+    "def": "Acqua di mare ghiacciata che galleggia sulla superficie dell'oceano. Si espande nell'inverno polare e si riduce in estate."
+   },
+   "source": "https://nsidc.org/learn/parts-cryosphere/sea-ice"
+  },
+  {
+   "id": "phosphorus",
+   "en": {
+    "term": "Phosphorus",
+    "match": [
+     "phosphorus"
+    ],
+    "def": "A nutrient that helps algae and plants grow. Too much of it in lakes and rivers makes algae grow faster than the ecosystem can handle."
+   },
+   "fr": {
+    "term": "Phosphore",
+    "match": [
+     "phosphore"
+    ],
+    "def": "Un nutriment qui aide les algues et les plantes à pousser. En trop grande quantité dans les lacs et les rivières, il fait proliférer les algues plus vite que l'écosystème ne peut le supporter."
+   },
+   "es": {
+    "term": "Fósforo",
+    "match": [
+     "fósforo"
+    ],
+    "def": "Un nutriente que ayuda a crecer a las algas y las plantas. Demasiado fósforo en lagos y ríos hace que las algas crezcan más rápido de lo que el ecosistema puede soportar."
+   },
+   "ar": {
+    "term": "الفوسفور",
+    "match": [
+     "الفوسفور"
+    ],
+    "def": "عنصر غذائي يساعد الطحالب والنباتات على النمو. وعندما يكثر في البحيرات والأنهار، تنمو الطحالب أسرع مما يحتمله النظام البيئي."
+   },
+   "it": {
+    "term": "Fosforo",
+    "match": [
+     "fosforo"
+    ],
+    "def": "Un nutriente che aiuta alghe e piante a crescere. Se ce n'è troppo in laghi e fiumi, le alghe crescono più in fretta di quanto l'ecosistema possa sopportare."
+   },
+   "source": "https://www.epa.gov/nutrientpollution/issue"
+  },
+  {
+   "id": "overfishing",
+   "en": {
+    "term": "Overfishing",
+    "match": [
+     "overfishing"
+    ],
+    "def": "Catching fish faster than they can reproduce."
+   },
+   "fr": {
+    "term": "Surpêche",
+    "match": [
+     "surpêche"
+    ],
+    "def": "Pêcher des poissons plus vite qu'ils ne peuvent se reproduire."
+   },
+   "es": {
+    "term": "Sobrepesca",
+    "match": [
+     "sobrepesca"
+    ],
+    "def": "Capturar peces más rápido de lo que pueden reproducirse."
+   },
+   "ar": {
+    "term": "الصيد الجائر",
+    "match": [
+     "الصيد الجائر",
+     "الصيد المفرط"
+    ],
+    "def": "صيد الأسماك بسرعة أكبر من قدرتها على التكاثر."
+   },
+   "it": {
+    "term": "Pesca eccessiva",
+    "match": [
+     "pesca eccessiva",
+     "sovrapesca"
+    ],
+    "def": "Catturare pesci più in fretta di quanto riescano a riprodursi."
+   },
+   "source": "https://www.fisheries.noaa.gov/insight/overfishing"
   }
  ]
 }
