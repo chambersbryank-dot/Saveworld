@@ -124,6 +124,16 @@ body.toc-sub .page-hero.match-hero p.hero-email{
   background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(0,70,110,.78);
   background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);
 }
+#match-form .sp9-actions button[type="reset"].btn{
+  background-color:#0072b1 !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)) !important;
+  border:1px solid rgba(160,225,255,.55) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 6px 20px rgba(0,40,70,.28),0 0 12px rgba(0,156,222,.35) !important;
+}
+#match-form .sp9-actions button[type="reset"].btn:hover{
+  background-color:#005a8c !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)) !important;
+}
 #match-form .btn:hover,.sp9-mail .btn:hover,.match-search .sp-search-btn:hover{
   background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),var(--lg-tint,rgba(12,28,56,.72));
 }
