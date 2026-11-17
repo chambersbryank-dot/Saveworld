@@ -1,4 +1,69 @@
 {
  "_note": "Hand-picked Related Solutions; build-batch-a.py uses these instead of the similarity picks (max 4).",
- "Tsunami_Early_Warning.html": ["SWOT.html", "Sentinel-6B.html", "DSCOVR_EPIC.html", "Earth_Observation.html"]
+ "Tsunami_Early_Warning.html": [
+  "SWOT.html",
+  "Sentinel-6B.html",
+  "DSCOVR_EPIC.html",
+  "Earth_Observation.html"
+ ],
+ "Cuyahoga_River_Cleanup.html": [
+  "Elwha_River_Restoration.html",
+  "Penobscot_River_Restoration.html",
+  "Lake_Erie_Algal_Bloom_Forecast.html",
+  "Lake_Washington_Cleanup.html"
+ ],
+ "Lake_Washington_Cleanup.html": [
+  "Lake_Constance.html",
+  "Lake_Biwa_Soap_Movement.html",
+  "Lake_Erie_Algal_Bloom_Forecast.html",
+  "London_Tideway_Tunnel.html"
+ ],
+ "Minor_Planet_Center.html": [
+  "Catalina_Sky_Survey.html",
+  "ATLAS.html",
+  "Pan-STARRS.html",
+  "NEO_Surveyor.html"
+ ],
+ "NSIDC.html": [
+  "CryoSat.html",
+  "ICESat-2.html",
+  "GCOM-W_SHIZUKU.html",
+  "Polar_Bears_International.html"
+ ],
+ "Phoenix_Islands_Protected_Area.html": [
+  "Papahanaumokuakea.html",
+  "Palau_National_Marine_Sanctuary.html",
+  "Atoll_Rewilding.html",
+  "Ross_Sea_MPA.html"
+ ],
+ "Rare_Fish_Forever.html": [
+  "Tubbataha_Reefs.html",
+  "Global_Fishing_Watch.html",
+  "Seychelles_Marine_Spatial_Plan.html",
+  "Phoenix_Islands_Protected_Area.html"
+ ],
+ "Rewilding_Argentina_Ibera_Jaguars.html": [
+  "Iberian_Lynx.html",
+  "Yellowstone_Wolves.html",
+  "Route_of_Parks_Patagonia.html",
+  "Rewilding_Europe.html"
+ ],
+ "SMOS.html": [
+  "SMAP.html",
+  "HydroGNSS.html",
+  "Argo.html",
+  "GRACE-FO.html"
+ ],
+ "Save_the_Elephants.html": [
+  "Forest_Elephants.html",
+  "African_Parks.html",
+  "Gorongosa.html",
+  "Snow_Leopard_Trust.html"
+ ],
+ "Snow_Leopard_Trust.html": [
+  "Nepal_Tigers.html",
+  "Altyn_Dala_Saiga.html",
+  "Mountain_Gorillas.html",
+  "Save_the_Elephants.html"
+ ]
 }
