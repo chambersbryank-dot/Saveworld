@@ -7,8 +7,9 @@ LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 def E(s):
     return html.escape(s, quote=True)
 
-def video(yt, title, cap):
+def video(yt, title, cap, watch):
     return (f'<figure class="og-vid"><button type="button" class="ytf" data-yt="{yt}" data-title="{E(title)}">{E(title)}</button>'
+            f'<a class="ytf-fallback" href="https://www.youtube.com/watch?v={yt}">{E(watch)}</a>'
             f'<figcaption>{cap}</figcaption></figure>')
 
 def qa(show, q, a):
@@ -142,12 +143,13 @@ def body(lang):
     t = T[lang]
     ui = {k: t[k] for k in ('play','pause','fall','circle','ellipse','leave','circ','esc','areaRead')}
     pre_note = t['slead']
-    vids_k = video('-luKN6mad5w', 'STEMonstrations: Newton’s First Law of Motion', t['vk'])
-    vids_m = video('NpHOlmNtFTQ', 'Real World: Keeping the International Space Station in Orbit', t['vm'])
-    vids_h = video('KTaIPz6oC9U', '7. Kepler’s Laws', t['vh1']) + video('gXS0nXgSXJc', 'Cheops observing in space', t['vh2'])
-    vids_u = (video('zT7typHkpVg', 'Space debris — a journey to Earth', t['vu1'])
-              + video('9XcJ1wFRCk8', 'Gaia: launch to orbit', t['vu2'])
-              + video('SJI-SAs1Rnk', 'A Funny Thing Happened on the Way to the Moon', t['vu3']))
+    watch = {'en': 'Watch on YouTube', 'fr': 'Regarder sur YouTube', 'es': 'Ver en YouTube', 'ar': 'شاهد على يوتيوب', 'it': 'Guarda su YouTube', 'he': 'צפייה ב-YouTube'}[lang]
+    vids_k = video('-luKN6mad5w', 'STEMonstrations: Newton’s First Law of Motion', t['vk'], watch)
+    vids_m = video('NpHOlmNtFTQ', 'Real World: Keeping the International Space Station in Orbit', t['vm'], watch)
+    vids_h = video('KTaIPz6oC9U', '7. Kepler’s Laws', t['vh1'], watch) + video('gXS0nXgSXJc', 'Cheops observing in space', t['vh2'], watch)
+    vids_u = (video('zT7typHkpVg', 'Space debris — a journey to Earth', t['vu1'], watch)
+              + video('9XcJ1wFRCk8', 'Gaia: launch to orbit', t['vu2'], watch)
+              + video('SJI-SAs1Rnk', 'A Funny Thing Happened on the Way to the Moon', t['vu3'], watch))
     def level(i, h, outcomes, prose, worked, mq, ma, q, a, earth, vids=''):
         return f'''<section class="og-panel" id="{i}"><h2>{h}</h2>
 <p class="lbox obj"><strong>{t["outcomes"]}</strong> {outcomes}</p>
@@ -291,7 +293,7 @@ def overlay_from_json(fr, es, ar, it, he):
             out[lg][key] = pack[lg]
     return out
 
-CSS = '''.og-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}.og-tabs button,.og-controls button{font:inherit;font-weight:700;padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(124,170,255,.5);background:rgba(124,170,255,.12);color:inherit;cursor:pointer}.og-tabs button[aria-selected="true"]{border-color:#7cfc98}.og-controls{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:.5rem 0}.og-controls label{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}.og-c{width:100%;height:auto;background:#071018;border-radius:12px}.ytf{display:flex;align-items:center;justify-content:center;width:100%;min-height:4.2rem;margin:.4rem 0;border:0;border-radius:12px;background:#102033;color:#fff;font:inherit;font-weight:700;cursor:pointer;text-align:center;padding:.6rem}.og-vid iframe{width:100%;max-width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px}.og-src{font-size:.95rem}html.og-ready .og-panel{display:none}html.og-ready .og-panel.is-on{display:block}@media print{html.og-ready .og-panel{display:block !important}.ytf{display:none}}@media (prefers-reduced-motion:reduce){#og-play{display:none}}'''
+CSS = '''.og-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}.og-tabs button,.og-controls button{font:inherit;font-weight:700;padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(124,170,255,.5);background:rgba(124,170,255,.12);color:inherit;cursor:pointer}.og-tabs button[aria-selected="true"]{border-color:#7cfc98}.og-controls{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:.5rem 0}.og-controls label{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}.og-c{width:100%;height:auto;background:#071018;border-radius:12px}.ytf{display:flex;align-items:center;justify-content:center;width:100%;min-height:4.2rem;margin:.4rem 0;border:0;border-radius:12px;background:#102033;color:#fff;font:inherit;font-weight:700;cursor:pointer;text-align:center;padding:.6rem}.ytf-fallback{display:inline-block;margin:.15rem 0 .7rem;font-weight:700}.og-vid iframe{width:100%;max-width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px}.og-src{font-size:.95rem}html.og-ready .og-panel{display:none}html.og-ready .og-panel.is-on{display:block}@media print{html.og-ready .og-panel{display:block !important}.ytf{display:none}}@media (prefers-reduced-motion:reduce){#og-play{display:none}}'''
 
 def splice(path, lang):
     s = path.read_text(encoding='utf-8')
@@ -313,7 +315,7 @@ def splice(path, lang):
         end = s.find('</style>', anchor)
         s = s[:end] + CSS + s[end:]
     pre = '' if lang == 'en' else '../'
-    tag = f'<script src="{pre}assets/orbits-guide.js?v=20261118d" defer></script>'
+    tag = f'<script src="{pre}assets/orbits-guide.js?v=20261118e" defer></script>'
     if 'orbits-guide.js' not in s:
         s = s.replace('</body>', tag + '</body>', 1)
     css = f'{pre}assets/classroom.css'

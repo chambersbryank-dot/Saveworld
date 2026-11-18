@@ -2,6 +2,43 @@
    Two-body motion uses μ = 398600.4418 km³/s² and R_E = 6378.137 km. */
 (function () {
   if (typeof document === 'undefined') return;
+  document.addEventListener('click', function (ev) {
+    var node = ev.target;
+    var btn = node && node.closest ? node.closest('button.ytf') : null;
+    if (!btn) return;
+    var key = btn.getAttribute('data-yt');
+    var src, title;
+    if (key === '-luKN6mad5w') {
+      src = 'https://www.youtube-nocookie.com/embed/-luKN6mad5w?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = "STEMonstrations: Newton's First Law of Motion";
+    } else if (key === 'NpHOlmNtFTQ') {
+      src = 'https://www.youtube-nocookie.com/embed/NpHOlmNtFTQ?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = 'Real World: Keeping the International Space Station in Orbit';
+    } else if (key === 'KTaIPz6oC9U') {
+      src = 'https://www.youtube-nocookie.com/embed/KTaIPz6oC9U?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = "7. Kepler's Laws";
+    } else if (key === 'gXS0nXgSXJc') {
+      src = 'https://www.youtube-nocookie.com/embed/gXS0nXgSXJc?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = 'Cheops observing in space';
+    } else if (key === 'zT7typHkpVg') {
+      src = 'https://www.youtube-nocookie.com/embed/zT7typHkpVg?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = 'Space debris — a journey to Earth';
+    } else if (key === '9XcJ1wFRCk8') {
+      src = 'https://www.youtube-nocookie.com/embed/9XcJ1wFRCk8?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = 'Gaia: launch to orbit';
+    } else if (key === 'SJI-SAs1Rnk') {
+      src = 'https://www.youtube-nocookie.com/embed/SJI-SAs1Rnk?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+      title = 'A Funny Thing Happened on the Way to the Moon';
+    } else return;
+    var frame = document.createElement('iframe');
+    frame.className = 'og-frame';
+    frame.src = src;
+    frame.title = title;
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allowFullscreen = true;
+    btn.replaceWith(frame);
+  });
   var app = document.getElementById('og-app');
   var c = document.getElementById('og-c');
   if (!app || !c) return;
@@ -274,38 +311,4 @@
   showMode('cannon');
   resize();
 
-  document.querySelectorAll('.ytf').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var key = btn.getAttribute('data-yt');
-      var frame = document.createElement('iframe');
-      if (key === '-luKN6mad5w') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/-luKN6mad5w?autoplay=1';
-        frame.title = "STEMonstrations: Newton's First Law of Motion";
-      } else if (key === 'NpHOlmNtFTQ') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/NpHOlmNtFTQ?autoplay=1';
-        frame.title = 'Real World: Keeping the International Space Station in Orbit';
-      } else if (key === 'KTaIPz6oC9U') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/KTaIPz6oC9U?autoplay=1';
-        frame.title = "7. Kepler's Laws";
-      } else if (key === 'gXS0nXgSXJc') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/gXS0nXgSXJc?autoplay=1';
-        frame.title = 'Cheops observing in space';
-      } else if (key === 'zT7typHkpVg') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/zT7typHkpVg?autoplay=1';
-        frame.title = 'Space debris — a journey to Earth';
-      } else if (key === '9XcJ1wFRCk8') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/9XcJ1wFRCk8?autoplay=1';
-        frame.title = 'Gaia: launch to orbit';
-      } else if (key === 'SJI-SAs1Rnk') {
-        frame.src = 'https://www.youtube-nocookie.com/embed/SJI-SAs1Rnk?autoplay=1';
-        frame.title = 'A Funny Thing Happened on the Way to the Moon';
-      } else return;
-      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      frame.allowFullscreen = true;
-      frame.width = 560;
-      frame.height = 315;
-      var box = btn.parentNode;
-      box.replaceChild(frame, btn);
-    });
-  });
-})();
+  })();
