@@ -7,8 +7,6 @@ image (after </picture> when wrapped). Idempotent; run late in weekly-sync.sh (a
 import re, glob, os
 SI_IMAGES = {'OceanBeach', 'StreamLog', 'streamlog2', 'RocketLaunch', 'Nebula', 'Uranus',  # Oct 16: owner confirmed these 4 Project Rawane images are SI-generated
              'theoceancleanup', 'SungaiRiver', 'spot-fire-pixels', 'spot-fire-steps',
-             # Nov 1: Hesna DELPOE picture drills. study/ pages are outside the lang scan, so the credit is also written next to each image.
-             'hesna-7426-recall', 'hesna-quickstop-recall', 'hesna-corner-recall',
              # Nov 1 (Site Assessor): these stills are SI-generated. The short "Photo: SI Partner" line was the wrong credit.
              'Threetrees3', 'Yishan_Tree', 'ThreeTrees2'}
 # Oct 23 (founder): Saturn.jpg removed from SI_IMAGES: it is NASA's real Cassini mosaic PIA06193
