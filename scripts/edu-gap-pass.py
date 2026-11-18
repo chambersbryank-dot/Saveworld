@@ -40,19 +40,37 @@ def pages():
         out.append(p)
     return out
 
+def style_loader(href):
+    """The tag that actually loads CSS in a browser with JavaScript. The noscript copy is only a fallback."""
+    return (f'<link rel="preload" as="style" href="{href}" onload="this.onload=null;this.rel=\'stylesheet\'">')
+
 def defer_css(head):
-    """Turn render-blocking stylesheet links that sit outside noscript into the preload pattern."""
+    """Turn render-blocking stylesheet links that sit outside noscript into the preload pattern.
+    Never leave a stylesheet only inside noscript: without the preload/onload tag, a browser that
+    runs JavaScript loads no CSS at all."""
     parts = re.split(r'(<noscript\b.*?</noscript>)', head, flags=re.S)
     for i, part in enumerate(parts):
         if part.startswith('<noscript'): continue
         def repl(m):
             tag, href = m.group(0), m.group(1)
             if 'media=' in tag or 'onload=' in tag: return tag
-            if f'rel="preload" as="style" href="{href}"' in head: return ''
-            return (f'<link rel="preload" as="style" href="{href}" onload="this.onload=null;this.rel=\'stylesheet\'">'
-                    f'<noscript class="crit-ns"><link rel="stylesheet" href="{href}"></noscript>')
+            loader = style_loader(href)
+            if loader in head: return ''
+            return loader + f'<noscript class="crit-ns"><link rel="stylesheet" href="{href}"></noscript>'
         parts[i] = re.sub(r'<link rel="stylesheet" href="([^"]+\.css[^"]*)">', repl, part)
     return ''.join(parts)
+
+NS_CSS = re.compile(r'<noscript class="crit-ns"><link rel="stylesheet" href="([^"]+)"></noscript>')
+
+def ensure_style_loader(html):
+    """Put the preload/onload loader in front of any noscript stylesheet that does not already have one."""
+    def repl(m):
+        href = m.group(1)
+        loader = style_loader(href)
+        prev = html[max(0, m.start() - 900):m.start()]
+        if loader in prev: return m.group(0)
+        return loader + m.group(0)
+    return NS_CSS.sub(repl, html)
 
 def shrink_picture(html):
     def repl(m):
@@ -103,6 +121,7 @@ def one(path):
         return BEACON_JS % (m.group(1),)
     n = BEACON.sub(beacon, n, count=1)
     n = add_classroom(n, path)
+    n = ensure_style_loader(n)
     if n != s:
         open(path, 'w', encoding='utf8').write(n)
         return 1
