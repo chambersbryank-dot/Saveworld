@@ -92,7 +92,7 @@ def main_html(lang, ui, title, subtitle):
 <div class="page-hero-content"><h1>{html.escape(title)}</h1><p>{html.escape(subtitle)}</p></div>
 <p class="hero-video-credit">{html.escape(ui["videoCredit"])}</p>
 </section>
-<script>(function(){{var v=document.querySelector(".voy-hero video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");if(mq.matches)return;var s=v.querySelector("source");if(s&&s.getAttribute("data-src"))s.src=s.getAttribute("data-src");v.load();v.play&&v.play().catch(function(){{}});}})();</script>
+<script>(function(){{var v=document.querySelector(".voy-hero video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");if(mq.matches)return;var s=v.querySelector("source");if(s)s.src="{video}";v.load();v.play&&v.play().catch(function(){{}});}})();</script>
 <div class="voy-wrap" id="voy-app" data-pre="{pre}" data-src="{pre}data/voyages.json">
 <div class="voy-switch" id="voy-switch" role="group" aria-label="{html.escape(title)}"></div>
 <div id="voy-scene" aria-live="polite"></div>

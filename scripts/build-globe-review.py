@@ -427,7 +427,7 @@ def install_video(chunk, prefix, credit_label):
 {content_html}
 <p class="gr-vid-credit">{E(credit_label)} {credit}</p>
 </section>
-<script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function rate(){{if(!mq.matches)v.playbackRate=1.25;}}function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src=s.getAttribute("data-src");v.load();}}rate();var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}v.addEventListener("loadedmetadata",rate);if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
+<script>(function(){{var v=document.querySelector(".gr-hero-video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");function rate(){{if(!mq.matches)v.playbackRate=1.25;}}function arm(){{if(mq.matches){{v.pause();v.removeAttribute("autoplay");return;}}var s=v.querySelector("source");if(s&&!s.getAttribute("src")){{s.src="{src}";v.load();}}rate();var p=v.play();if(p&&p.catch)p.catch(function(){{}});}}v.addEventListener("loadedmetadata",rate);if(document.readyState==="complete")arm();else window.addEventListener("load",arm);}})();</script>
 '''
 
 def drop_sunset(hero):

@@ -57,7 +57,7 @@
 <div class="page-hero-content"><h1>Voyages Beyond Earth</h1><p>Live journeys to neighboring planets, moons and asteroids</p></div>
 <p class="hero-video-credit">Title video: the site space loop. Created by the Founder and SI.</p>
 </section>
-<script>(function(){var v=document.querySelector(".voy-hero video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");if(mq.matches)return;var s=v.querySelector("source");if(s&&s.getAttribute("data-src"))s.src=s.getAttribute("data-src");v.load();v.play&&v.play().catch(function(){});})();</script>
+<script>(function(){var v=document.querySelector(".voy-hero video");if(!v)return;var mq=window.matchMedia("(prefers-reduced-motion: reduce)");if(mq.matches)return;var s=v.querySelector("source");if(s)s.src="https://media.savingplanets.com/videos/hero-loop.97191e628115.mp4";v.load();v.play&&v.play().catch(function(){});})();</script>
 <div class="voy-wrap" id="voy-app" data-pre="" data-src="data/voyages.json">
 <div class="voy-switch" id="voy-switch" role="group" aria-label="Voyages Beyond Earth"></div>
 <div id="voy-scene" aria-live="polite"></div>

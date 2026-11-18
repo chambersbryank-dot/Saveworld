@@ -250,7 +250,7 @@ def dress_hero(s, lang):
         '<script>(function(){var v=document.querySelector(".t-hero-video");if(!v)return;'
         'var mq=window.matchMedia("(prefers-reduced-motion: reduce)");'
         'function arm(){if(mq.matches){v.pause();v.removeAttribute("autoplay");v.preload="none";return;}'
-        'var s=v.querySelector("source");if(s&&!s.getAttribute("src")){s.src=s.getAttribute("data-src");v.load();}'
+        'var s=v.querySelector("source");if(s&&!s.getAttribute("src")){s.src="' + HERO_VIDEO + '";v.load();}'
         'var p=v.play&&v.play();if(p&&p.catch)p.catch(function(){});}'
         'arm();if(mq.addEventListener)mq.addEventListener("change",arm);})();</script>'
     )
