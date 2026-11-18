@@ -4,7 +4,7 @@
 Nothing is invented. A word is kept only when it already appears in the title, the h1/h2, or the meta
 description (or, when those are missing, the first visible sentence). Idempotent.
 Also fills a missing description, canonical, and Twitter/OG title on pages that already have a real title
-(404, the offline page, the private study pages, and the noindex redirects).
+(404, the offline page, and the noindex redirects).
 """
 import glob, html, os, re, sys
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
