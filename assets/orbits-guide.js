@@ -276,11 +276,30 @@
 
   document.querySelectorAll('.ytf').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var id = btn.getAttribute('data-yt');
-      if (!id) return;
+      var key = btn.getAttribute('data-yt');
       var frame = document.createElement('iframe');
-      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
-      frame.title = btn.getAttribute('data-title') || 'YouTube';
+      if (key === '-luKN6mad5w') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/-luKN6mad5w?autoplay=1';
+        frame.title = "STEMonstrations: Newton's First Law of Motion";
+      } else if (key === 'NpHOlmNtFTQ') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/NpHOlmNtFTQ?autoplay=1';
+        frame.title = 'Real World: Keeping the International Space Station in Orbit';
+      } else if (key === 'KTaIPz6oC9U') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/KTaIPz6oC9U?autoplay=1';
+        frame.title = "7. Kepler's Laws";
+      } else if (key === 'gXS0nXgSXJc') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/gXS0nXgSXJc?autoplay=1';
+        frame.title = 'Cheops observing in space';
+      } else if (key === 'zT7typHkpVg') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/zT7typHkpVg?autoplay=1';
+        frame.title = 'Space debris — a journey to Earth';
+      } else if (key === '9XcJ1wFRCk8') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/9XcJ1wFRCk8?autoplay=1';
+        frame.title = 'Gaia: launch to orbit';
+      } else if (key === 'SJI-SAs1Rnk') {
+        frame.src = 'https://www.youtube-nocookie.com/embed/SJI-SAs1Rnk?autoplay=1';
+        frame.title = 'A Funny Thing Happened on the Way to the Moon';
+      } else return;
       frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       frame.allowFullscreen = true;
       frame.width = 560;

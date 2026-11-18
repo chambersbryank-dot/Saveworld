@@ -313,7 +313,7 @@ def splice(path, lang):
         end = s.find('</style>', anchor)
         s = s[:end] + CSS + s[end:]
     pre = '' if lang == 'en' else '../'
-    tag = f'<script src="{pre}assets/orbits-guide.js?v=20261118c" defer></script>'
+    tag = f'<script src="{pre}assets/orbits-guide.js?v=20261118d" defer></script>'
     if 'orbits-guide.js' not in s:
         s = s.replace('</body>', tag + '</body>', 1)
     css = f'{pre}assets/classroom.css'
