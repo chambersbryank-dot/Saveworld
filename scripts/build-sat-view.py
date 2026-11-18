@@ -602,14 +602,16 @@ def main():
                     f'<noscript class="crit-ns"><link rel="stylesheet" href="{href}"></noscript>')
         t = t.replace("this.rel=\\'stylesheet\\'", "this.rel='stylesheet'")
         t = re.sub(r'<link rel="preload" as="style" href="(?:\.\./)?P261118c"[^>]*>\s*<noscript class="crit-ns"><link rel="stylesheet" href="(?:\.\./)?P261118c"></noscript>\s*', '', t)
-        t = re.sub(
-            r'<link rel="stylesheet" href="((?:\.\./)?map\.css\?v=)[0-9a-z]+">',
-            lambda m: css_preload(m.group(1) + V),
-            t, count=1)
-        t = re.sub(
-            r'<link rel="stylesheet" href="((?:\.\./)?assets/share-bar\.css\?v=[0-9a-z]+)">',
-            lambda m: css_preload(m.group(1)),
-            t, count=1)
+        def collapse(src, file_re, href):
+            pile = re.compile(
+                r'(?:<link rel="preload" as="style" href="' + file_re + r'" onload="this\.onload=null;this\.rel=\'stylesheet\'"><noscript class="crit-ns">)*'
+                r'<link rel="stylesheet" href="' + file_re + r'"></noscript>(?:</noscript>)*'
+            )
+            return pile.sub(lambda m: css_preload(href), src, count=1)
+        t = collapse(t, r'(?:\.\./)?map\.css\?v=[^"]+', f'{pre}map.css?v={V}')
+        share = re.search(r'((?:\.\./)?assets/share-bar\.css\?v=[0-9a-z]+)', t)
+        if share:
+            t = collapse(t, r'(?:\.\./)?assets/share-bar\.css\?v=[^"]+', share.group(1))
         t = re.sub(r'((?:\.\./)?map\.css\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
         t = re.sub(r'((?:\.\./)?assets/sat-view\.js\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
         if 'map.css?v=' not in t and 'sat-view.js' in t:
