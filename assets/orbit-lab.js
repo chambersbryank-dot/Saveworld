@@ -45,7 +45,7 @@
       out.textContent = s;
       tb.innerHTML = row(t.v1, nf(res.v1, 3) + ' km/s') + row(t.dv1, nf(res.dv1, 3) + ' km/s') + row(t.at, nf(res.at, 1) + ' km') + row(t.ecc, nf(res.e, 4)) +
         row(t.dv2, nf(res.dv2, 3) + ' km/s') + row(t.dv, nf(res.dv, 3) + ' km/s') + row(t.tof, nf(res.tof / 3600, 2) + ' h') + row(t.v2, nf(res.v2, 3) + ' km/s');
-      t0 = performance.now(); if (reduce) { draw(0.5); } else { play(true); }
+      t0 = performance.now(); draw(0.5); playing = false; if (playBtn) playBtn.textContent = t.play;
     }
     function draw(p) {  // p: 0..1 fraction of the transfer (half ellipse)
       var W = cv.width = cv.clientWidth * (window.devicePixelRatio || 1), H = cv.height = Math.round(W * 0.62); ctx.clearRect(0, 0, W, H);
@@ -53,7 +53,10 @@
       var rmax = Math.max(res.r1, res.r2), sc = Math.min(W, H) * 0.46 / rmax, cx = W / 2 + (res.r2 > res.r1 ? (res.r2 - res.r1) / 2 * sc : -(res.r1 - res.r2) / 2 * sc) * 0.0, cy = H / 2;
       var rtl = document.documentElement.dir === 'rtl', sgn = rtl ? -1 : 1;
       ctx.lineWidth = Math.max(1.5, W / 400);
-      ctx.fillStyle = '#2b7bd6'; ctx.beginPath(); ctx.arc(cx, cy, RE * sc, 0, 7); ctx.fill();
+      ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, RE * sc, 0, 7); ctx.clip();
+      if (window.SPGlobe) ctx.drawImage(window.SPGlobe, cx - RE * sc, cy - RE * sc, RE * 2 * sc, RE * 2 * sc);
+      else { ctx.fillStyle = '#071018'; ctx.fillRect(cx - RE * sc, cy - RE * sc, RE * 2 * sc, RE * 2 * sc); }
+      ctx.restore();
       ctx.setLineDash([6, 6]); ctx.strokeStyle = '#8fd3ff'; ctx.beginPath(); ctx.arc(cx, cy, res.r1 * sc, 0, 7); ctx.stroke();
       ctx.strokeStyle = '#7CFC98'; ctx.beginPath(); ctx.arc(cx, cy, res.r2 * sc, 0, 7); ctx.stroke(); ctx.setLineDash([]);
       // transfer ellipse: focus at Earth, periapsis on +x (raise) or apoapsis on +x (lower)
@@ -65,14 +68,14 @@
       var M = Math.PI * p, E = M; for (var i = 0; i < 30; i++) E -= (E - e * Math.sin(E) - M) / (1 - e * Math.cos(E));
       var nu2 = 2 * Math.atan2(Math.sqrt(1 + e) * Math.sin(E / 2), Math.sqrt(1 - e) * Math.cos(E / 2)), r = a * (1 - e * Math.cos(E)), an = raise ? nu2 : nu2 + Math.PI;
       var x = cx + sgn * r * Math.cos(an) * sc, y = cy - r * Math.sin(an) * sc;
-      ctx.fillStyle = '#ff6b6b'; ctx.beginPath(); ctx.arc(x, y, Math.max(5, W / 90), 0, 7); ctx.fill();
-      ctx.fillStyle = '#fff'; ctx.font = Math.round(W / 45) + 'px system-ui,sans-serif'; ctx.fillText('🚀', x + 8, y - 8);
+      ctx.fillStyle = '#ffd54a'; ctx.beginPath(); ctx.arc(x, y, Math.max(4, W / 140), 0, 7); ctx.fill();
     }
     function loop(now) { var p = Math.min(1, (now - t0) / 6000); draw(p); if (p < 1 && playing) raf = requestAnimationFrame(loop); else { playing = false; playBtn.textContent = t.play; } }
     function play(on) { playing = on; playBtn.textContent = on ? t.pause : t.play; if (on) { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); } }
     f.addEventListener('change', sync); f.addEventListener('submit', function (ev) { ev.preventDefault(); compute(); });
     playBtn.addEventListener('click', function () { if (playing) { play(false); } else { t0 = performance.now(); play(true); } });
     window.addEventListener('resize', function () { if (!playing) draw(reduce ? 0.5 : 1); });
+    window.addEventListener('sp-globe', function () { if (!playing) draw(reduce ? 0.5 : 1); });
     sync(); compute();
   });
 })(typeof window !== 'undefined' ? window : globalThis);
