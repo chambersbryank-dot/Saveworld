@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261118e'
+V = '20261118g'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -573,7 +573,7 @@ def main():
                     '.sat-view .wm-cat{width:100%;min-height:44px}'
                     '.sat-body{display:grid;gap:.75rem}'
                     '@media (min-width:1000px){.sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}}'
-                    '.sat-stage{height:clamp(22rem,62vh,36rem);min-height:22rem;border-radius:16px;background:#041525}'
+                    '.sat-stage{height:clamp(18rem,48vh,22rem);min-height:18rem;border-radius:16px;background:#041525}'
                     '.sat-count{margin:.15rem 0 .45rem;text-align:center}'
                     '.sat-ring-key{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.15rem;margin:.55rem 0 .15rem}</style>')
         if 'id="sat-crit"' in t:
