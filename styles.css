@@ -1643,8 +1643,8 @@ html body nav#topnav.spn-solid::before,html body nav#topnav.spn-open::before{opa
 #topnav .spn-toggle{display:none}
 /* Oct 16 (t886, larger nav font): desktop = brand + utility row on top, the main menu gets the full width on row 2
    (the panel is display:contents, so util/main become grid items). Same look, room for FR/IT/ES labels at 15px. */
-@media (min-width:1140px){#topnav .spn{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:1rem;row-gap:0}#topnav .spn-panel{display:contents}#topnav .spn-brand{grid-column:1;grid-row:1;min-height:32px}#topnav .spn-util{grid-column:2;grid-row:1;justify-self:end}#topnav .spn-main{grid-column:1/-1;grid-row:2;justify-self:end}}
-@media (min-width:1140px) and (pointer:coarse){#topnav .spn-brand{min-height:44px}}
+@media (min-width:768px){#topnav .spn{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:1rem;row-gap:0}#topnav .spn-panel{display:contents}#topnav .spn-brand{grid-column:1;grid-row:1;min-height:32px}#topnav .spn-util{grid-column:2;grid-row:1;justify-self:end}#topnav .spn-main{grid-column:1/-1;grid-row:2;justify-self:end}}
+@media (min-width:768px) and (pointer:coarse){#topnav .spn-brand{min-height:44px}}
 #topnav .spn-panel{display:flex;flex-direction:column;align-items:flex-end}
 #topnav .spn-util{display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:0 1.1rem;min-width:0;max-width:100%;font-size:14px;font-weight:600}
 #topnav .spn-util a{color:#e8eef5;display:inline-flex;align-items:center;gap:.35rem;min-height:32px;white-space:nowrap}
@@ -1688,8 +1688,8 @@ html body #topnav a.spn-ls:focus-visible{outline:3px solid #8fd3ff !important;ou
 html body #topnav .spn-cta a{display:inline-flex;align-items:center;min-height:44px;padding:0 1.1rem !important;font:700 15px/1 "Montserrat","Segoe UI",sans-serif !important;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
 #topnav a:focus-visible,#topnav button:focus-visible{outline:2px solid #8fd3ff !important;outline-offset:2px}
 @media (pointer:coarse){#topnav .spn-util a,#topnav .spn-util a.spn-ls{min-height:44px}}
-@media (min-width:1140px) and (max-width:1279px){#topnav .spn-trig{padding:0 .5rem;font-size:14px;letter-spacing:.02em}#topnav .spn-brand{font-size:1rem}html body #topnav .spn-cta a{padding:0 .8rem !important;font-size:14px !important}#topnav .spn-util{gap:0 .8rem;font-size:13px}}
-@media (max-width:1139px){
+@media (min-width:768px) and (max-width:1279px){#topnav .spn-trig{padding:0 .35rem;font-size:13px;letter-spacing:0}#topnav .spn-brand{font-size:1rem}html body #topnav .spn-cta a{padding:0 .8rem !important;font-size:14px !important}#topnav .spn-util{gap:0 .8rem;font-size:13px}}
+@media (max-width:767px){
  #topnav .spn{padding-top:6px;padding-bottom:6px}
  #topnav .spn-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:0;background:transparent;border:1px solid rgba(255,255,255,.6);border-radius:10px;cursor:pointer}
  #topnav .spn-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
@@ -1728,7 +1728,7 @@ html[lang="it"] body nav#topnav{background:#071018 !important}
 #topnav .spn-sub li.spn-child a{padding-inline-start:2.1rem;font-size:15px}
 #topnav .spn-sub li.spn-child a::before{content:"\2192";opacity:.55;margin-inline-end:.45rem;font-size:13px}
 html[dir=rtl] #topnav .spn-sub li.spn-child a::before{content:"\2190"}
-@media (min-width:1140px){#topnav #spn-sol{max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}}
+@media (min-width:768px){#topnav #spn-sol{max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}}
 /* SPNAV:END */
 /* Short section menus: same crystal-water color as the Donate button. */
 #topnav .spn-sub{background-color:#0a4f78 !important;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;border:1px solid rgba(160,225,255,.55) !important}
@@ -1789,9 +1789,9 @@ body.toc-home .home-find+#solutions.card-band,.home-find+#solutions.card-band{pa
 #topnav .spn-logo{display:block;flex:none;line-height:0}
 #topnav .spn-logo img{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 6px rgba(0,0,0,.55));transition:transform .25s ease}
 #topnav .spn-brand:hover .spn-logo img{transform:scale(1.06) rotate(-4deg)}
-@media (min-width:1140px){#topnav .spn-logo{width:64px;height:64px;margin:-16px 0}#topnav.spn-solid .spn-logo{width:52px;height:52px;margin:-10px 0}html[lang=fr] #topnav .spn-logo,html[lang=es] #topnav .spn-logo{width:44px;height:44px;margin:-6px 0}}
+@media (min-width:768px){#topnav .spn-logo{width:64px;height:64px;margin:-16px 0}#topnav.spn-solid .spn-logo{width:52px;height:52px;margin:-10px 0}html[lang=fr] #topnav .spn-logo,html[lang=es] #topnav .spn-logo{width:44px;height:44px;margin:-6px 0}}
 /* fr/es: the long main menu row reaches under the brand, so the icon stays in row 1 there */
-@media (max-width:1139px){#topnav .spn-logo,#topnav.spn-solid .spn-logo{width:54px;height:54px;margin:-5px 0}#topnav .spn-brand{gap:.4rem;min-width:0}}
+@media (max-width:767px){#topnav .spn-logo,#topnav.spn-solid .spn-logo{width:54px;height:54px;margin:-5px 0}#topnav .spn-brand{gap:.4rem;min-width:0}}
 @media (max-width:380px){#topnav .spn-logo,#topnav.spn-solid .spn-logo{width:46px;height:46px;margin:-1px 0}#topnav .spn-brand{font-size:1rem}}
 @media (prefers-reduced-motion:reduce){#topnav .spn-logo img{transition:none}#topnav .spn-brand:hover .spn-logo img{transform:none}}
 .logo-credit{font-size:.75rem;opacity:.8;font-style:italic;margin:.4rem 0 0}
