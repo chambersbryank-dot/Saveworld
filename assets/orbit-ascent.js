@@ -6,6 +6,30 @@
    Atmosphere, 1976, below its 86 km top. */
 (function (root) {
   'use strict';
+  if (typeof document !== 'undefined') {
+    document.addEventListener('click', function (ev) {
+      var node = ev.target;
+      var btn = node && node.closest ? node.closest('button.ytf') : null;
+      if (!btn) return;
+      var key = btn.getAttribute('data-yt');
+      var src, title;
+      if (key === 'aWCCNYJV3Zw') {
+        src = 'https://www.youtube-nocookie.com/embed/aWCCNYJV3Zw?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+        title = "Slow Motion Liftoff of NASA's Artemis I Moon Rocket";
+      } else if (key === 'FSyfFrMcuQI') {
+        src = 'https://www.youtube-nocookie.com/embed/FSyfFrMcuQI?autoplay=1&playsinline=1&rel=0&enablejsapi=1';
+        title = 'Artemis I Launching to the Moon: Official NASA Launch Trailer';
+      } else return;
+      var frame = document.createElement('iframe');
+      frame.className = 'oc-frame';
+      frame.src = src;
+      frame.title = title;
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.allowFullscreen = true;
+      btn.replaceWith(frame);
+    });
+  }
   var MU = 398600.4418, RE = 6378.137, HORB = 400;
   var RSTAR = 8314.32, M0 = 28.9644, G0 = 9.80665, R0 = 6356766;
   var T0 = 288.15, P0 = 101325;
@@ -292,18 +316,5 @@
     window.addEventListener('sp-globe', function () { go(Math.round((+scrub.value) / 1000 * (model.pts.length - 1))); });
     window.addEventListener('resize', function () { go(Math.round((+scrub.value) / 1000 * (model.pts.length - 1))); });
     go(0);
-    app.querySelectorAll('.ytf').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var id = b.getAttribute('data-yt');
-        if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return;
-        var f = document.createElement('iframe');
-        f.className = 'oc-frame';
-        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0';
-        f.title = b.getAttribute('data-title') || '';
-        f.allow = 'encrypted-media; picture-in-picture; fullscreen';
-        f.allowFullscreen = true;
-        b.replaceWith(f);
-      });
-    });
   });
 })(typeof window !== 'undefined' ? window : globalThis);

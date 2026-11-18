@@ -1,0 +1,345 @@
+{
+  "intro": {
+    "fr": "Orbites 101 reste ouvert. Ensuite, choisissez Enfants, Collège, Lycée ou Université. Les mêmes idées reviennent plus précises. Chaque vitesse ci-dessous est un cercle ou un transfert à deux corps, avec μ = 398 600,4418 km³/s² et le rayon WGS-84 de 6 378,137 km, sauf quand une page de la NASA, de GPS.gov, de l’USGS ou du STScI est citée.",
+    "es": "Órbitas 101 permanece abierto. Luego elige Infancia, Secundaria, Bachillerato o Universidad. Las mismas ideas vuelven con más precisión. Cada velocidad de abajo es un círculo o una transferencia de dos cuerpos, con μ = 398 600,4418 km³/s² y el radio WGS-84 de 6 378,137 km, salvo cuando se cita una página de la NASA, GPS.gov, el USGS o el STScI.",
+    "ar": "يبقى قسم مدارات 101 مفتوحًا. ثم اختر أطفال أو إعدادي أو ثانوي أو جامعة. الأفكار نفسها تعود أوضح. كل سرعة في الأسفل دائرة أو انتقال لجسمين، من μ = 398 600.4418 كم³/ث² ونصف قطر WGS-84 البالغ 6 378.137 كم، إلا إذا سُمّيت صفحة لناسا أو GPS.gov أو USGS أو STScI.",
+    "it": "Orbite 101 resta aperto. Poi scegli Bambini, Scuola media, Scuola superiore o Università. Le stesse idee tornano più precise. Ogni velocità qui sotto è un cerchio o un trasferimento a due corpi, con μ = 398 600,4418 km³/s² e il raggio WGS-84 di 6 378,137 km, salvo quando è citata una pagina NASA, GPS.gov, USGS o STScI.",
+    "he": "מסלולים 101 נשאר פתוח. אחר כך בוחרים ילדים, חטיבת ביניים, תיכון או אוניברסיטה. אותם רעיונות חוזרים חד יותר. כל מהירות למטה היא מעגל או מעבר של שני גופים, עם μ = 398 600.4418 ק״מ³/ש׳² ורדיוס WGS-84 של 6 378.137 ק״מ, אלא אם צוין עמוד של נאס״א, GPS.gov, USGS או STScI."
+  },
+  "links": {
+    "fr": "La même histoire au décollage est dans le <a href=\"Orbit_Lab.html\">laboratoire des orbites</a>, l’algèbre dans <a href=\"Orbit_Math.html\">les mathématiques des orbites</a>, le cours <a href=\"Orbital_Mechanics.html\">Mécanique orbitale</a>, et <a href=\"Earth_Observation.html\">l’observation de la Terre</a>.",
+    "es": "La misma historia en el despegue está en el <a href=\"Orbit_Lab.html\">laboratorio de órbitas</a>, el álgebra en <a href=\"Orbit_Math.html\">las matemáticas de las órbitas</a>, el curso <a href=\"Orbital_Mechanics.html\">Mecánica orbital</a> y <a href=\"Earth_Observation.html\">la observación de la Tierra</a>.",
+    "ar": "القصة نفسها عند الإقلاع في <a href=\"Orbit_Lab.html\">مختبر المدارات</a>، والجبر في <a href=\"Orbit_Math.html\">رياضيات المدارات</a>، والمقرر <a href=\"Orbital_Mechanics.html\">ميكانيكا المدارات</a>، و<a href=\"Earth_Observation.html\">رصد الأرض</a>.",
+    "it": "La stessa storia al decollo è nel <a href=\"Orbit_Lab.html\">laboratorio delle orbite</a>, l’algebra in <a href=\"Orbit_Math.html\">la matematica delle orbite</a>, il corso <a href=\"Orbital_Mechanics.html\">Meccanica orbitale</a> e <a href=\"Earth_Observation.html\">l’osservazione della Terra</a>.",
+    "he": "אותו סיפור בהמראה נמצא ב<a href=\"Orbit_Lab.html\">מעבדת המסלולים</a>, האלגברה ב<a href=\"Orbit_Math.html\">מתמטיקת המסלולים</a>, הקורס <a href=\"Orbital_Mechanics.html\">מכניקה מסלולית</a>, ו<a href=\"Earth_Observation.html\">תצפית ארץ</a>."
+  },
+  "p101": {
+    "fr": "Une orbite est une chute qui manque le sol sans cesse. La gravité reste allumée. À l’altitude de la Station spatiale internationale, environ 400 km, l’attraction vaut encore 8,68 m/s², soit 88,5 % des 9,80 m/s² obtenus par μ/R² à la surface. La vitesse circulaire y est 7,67 km/s, et un tour dure 92,6 minutes. Une journée de 1 440 minutes contient 15,6 de ces tours. La NASA décrit environ 16 levers de soleil par jour à bord de la station.",
+    "es": "Una órbita es una caída que no deja de fallar el suelo. La gravedad sigue encendida. A la altitud de la Estación Espacial Internacional, unos 400 km, la atracción sigue siendo 8,68 m/s², el 88,5 % de los 9,80 m/s² que da μ/R² en la superficie. La velocidad circular allí es 7,67 km/s, y una vuelta dura 92,6 minutos. Un día de 1 440 minutos contiene 15,6 de esas vueltas. La NASA describe unos 16 amaneceres al día en la estación.",
+    "ar": "المدار سقوط يخطئ الأرض باستمرار. الجاذبية تبقى تعمل. عند ارتفاع محطة الفضاء الدولية، نحو 400 كم، ما زال الشد 8.68 م/ث²، أي 88.5% من 9.80 م/ث² التي يعطيها μ/R² عند السطح. السرعة الدائرية هناك 7.67 كم/ث، واللفة الواحدة تستغرق 92.6 دقيقة. يوم من 1 440 دقيقة يسع 15.6 من هذه اللفات. تصف ناسا نحو 16 شروقًا في اليوم على المحطة.",
+    "it": "Un’orbita è una caduta che continua a mancare il suolo. La gravità resta accesa. Alla quota della Stazione Spaziale Internazionale, circa 400 km, l’attrazione è ancora 8,68 m/s², l’88,5% dei 9,80 m/s² che si ottengono da μ/R² in superficie. La velocità circolare lì è 7,67 km/s, e un giro dura 92,6 minuti. Un giorno di 1 440 minuti contiene 15,6 di quei giri. La NASA descrive circa 16 albe al giorno sulla stazione.",
+    "he": "מסלול הוא נפילה שמחטיאה את הקרקע כל הזמן. הכבידה נשארת דולקת. בגובה תחנת החלל הבין-לאומית, כ-400 ק״מ, המשיכה עדיין 8.68 מ׳/ש׳², שהם 88.5% מ-9.80 מ׳/ש׳² שמתקבלים מ-μ/R² על פני השטח. המהירות המעגלית שם היא 7.67 ק״מ/ש׳, וסיבוב אחד אורך 92.6 דקות. יממה של 1 440 דקות מכילה 15.6 סיבובים כאלה. נאס״א מתארת כ-16 זריחות ביום בתחנה."
+  },
+  "m101q": {
+    "fr": "« Il n’y a pas de gravité dans l’espace. »",
+    "es": "« En el espacio no hay gravedad. »",
+    "ar": "« لا جاذبية في الفضاء. »",
+    "it": "« Nello spazio non c’è gravità. »",
+    "he": "« אין כבידה בחלל. »"
+  },
+  "m101a": {
+    "fr": "Si la gravité était nulle, la station partirait en ligne droite. Elle reste parce que la gravité courbe cette droite en un circuit fermé. Des notes de classe de la NASA placent l’attraction à l’altitude de la station près de 90 % de la valeur au sol. Le nombre à deux corps de cette page est 88,5 %.",
+    "es": "Si la gravedad fuera cero, la estación seguiría en línea recta y se iría. Se queda porque la gravedad curva esa recta en una curva cerrada. Unas notas de aula de la NASA sitúan la atracción a la altitud de la estación cerca del 90 % del valor en la superficie. El número de dos cuerpos de esta página es 88,5 %.",
+    "ar": "لو كانت الجاذبية صفرًا لسارت المحطة في خط مستقيم وغادرت. تبقى لأن الجاذبية تحني ذلك الخط إلى منحنى مغلق. تضع ملاحظات صفية لناسا الشد عند ارتفاع المحطة قرب 90% من قيمته على السطح. رقم الجسمين في هذه الصفحة هو 88.5%.",
+    "it": "Se la gravità fosse zero, la stazione andrebbe dritta e se ne andrebbe. Resta perché la gravità piega quella retta in una curva chiusa. Note didattiche della NASA mettono l’attrazione alla quota della stazione vicino al 90% del valore al suolo. Il numero a due corpi di questa pagina è 88,5%.",
+    "he": "אם הכבידה הייתה אפס, התחנה הייתה טסה בקו ישר ועוזבת. היא נשארת כי הכבידה מכופפת את הקו הזה לעקומה סגורה. דפי כיתה של נאס״א שמים את המשיכה בגובה התחנה קרוב ל-90% מהערך על פני השטח. המספר של שני הגופים בעמוד הזה הוא 88.5%."
+  },
+  "q101": {
+    "fr": "La station est à 400 km et sa vitesse de côté devient soudain nulle. Que se passe-t-il ?",
+    "es": "La estación está a 400 km y de pronto su velocidad lateral pasa a cero. ¿Qué ocurre?",
+    "ar": "المحطة على ارتفاع 400 كم وفجأة تصبح سرعتها الجانبية صفرًا. ماذا يحدث؟",
+    "it": "La stazione è a 400 km e all’improvviso la sua velocità laterale diventa zero. Che cosa succede?",
+    "he": "התחנה בגובה 400 ק״מ ופתאום המהירות הצידה שלה נעשית אפס. מה קורה?"
+  },
+  "a101": {
+    "fr": "Elle tombe. Ce n’est pas l’altitude qui la retient. Sans la vitesse de côté, 400 km ne sont qu’une longue chute.",
+    "es": "Cae. No es la altura lo que la sostiene. Sin la velocidad lateral, 400 km son solo una caída larga.",
+    "ar": "تسقط. الارتفاع ليس ما يبقيها. من دون السرعة الجانبية، 400 كم مجرد سقوط طويل.",
+    "it": "Cade. Non è la quota a tenerla su. Senza la velocità laterale, 400 km sono solo una lunga caduta.",
+    "he": "היא נופלת. הגובה אינו מה שמחזיק אותה. בלי המהירות הצידה, 400 ק״מ הם רק נפילה ארוכה."
+  },
+  "e101": {
+    "fr": "Les satellites météo, de glace et de forêts restent en l’air pour la même raison, et peuvent donc revoir les mêmes endroits.",
+    "es": "Los satélites del tiempo, del hielo y de los bosques se mantienen por la misma razón, y así pueden mirar los mismos lugares una y otra vez.",
+    "ar": "أقمار الطقس والجليد والغابات تبقى للسبب نفسه، فتقدر أن تنظر إلى الأماكن نفسها مرة بعد مرة.",
+    "it": "I satelliti meteo, dei ghiacci e delle foreste restano su per lo stesso motivo, e così possono rivedere gli stessi luoghi.",
+    "he": "לווייני מזג אוויר, קרח ויערות נשארים למעלה מאותה סיבה, ולכן יכולים להביט באותם מקומות שוב ושוב."
+  },
+  "ok": {
+    "fr": "Dire ce qu’est une orbite. Nommer la vitesse de côté, et non l’altitude, comme ce qui garde un satellite en l’air. Nommer une façon dont un satellite aide les gens sur Terre.",
+    "es": "Decir qué es una órbita. Nombrar la velocidad lateral, no la altura, como lo que mantiene un satélite arriba. Nombrar una forma en que un satélite ayuda a la gente en la Tierra.",
+    "ar": "أن تقول ما هو المدار. أن تسمّي السرعة الجانبية، لا الارتفاع، بوصفها ما يُبقي القمر الصناعي عاليًا. أن تسمّي طريقة واحدة يساعد بها قمر الناس على الأرض.",
+    "it": "Dire che cos’è un’orbita. Nominare la velocità laterale, non la quota, come ciò che tiene su un satellite. Nominare un modo in cui un satellite aiuta le persone sulla Terra.",
+    "he": "לומר מהו מסלול. לנקוב במהירות הצידה, לא בגובה, בתור מה שמחזיק לוויין למעלה. לנקוב בדרך אחת שבה לוויין עוזר לאנשים על כדור הארץ."
+  },
+  "pk": {
+    "fr": "L’image de Newton, sans Terre dessinée en cartoon : une balle lancée d’une haute montagne. Lancée doucement, elle tombe tout près. Lancée plus fort, elle tombe plus loin. Lancée à la vitesse circulaire, le sol s’incurve aussi vite que la balle tombe, donc elle continue autour. Lancée plus vite que la vitesse de libération, elle part et ne revient pas.",
+    "es": "La imagen de Newton, sin una Tierra de dibujos: una pelota lanzada desde una montaña alta. Lanzada suave, cae cerca. Lanzada más fuerte, cae más lejos. Lanzada a la velocidad circular, el suelo se curva tan deprisa como cae la pelota, así que sigue dando vueltas. Lanzada más rápido que la velocidad de escape, se va y no vuelve.",
+    "ar": "صورة نيوتن، بلا أرض كرتونية: كرة تُرمى من جبل عالٍ. إن رُميت بلطف سقطت قريبًا. وإن رُميت أقوى سقطت أبعد. وإن رُميت بالسرعة الدائرية انحنى سطح الأرض بالسرعة نفسها التي تسقط بها الكرة، فتواصل الدوران. وإن رُميت أسرع من سرعة الإفلات غادرت ولم تعد.",
+    "it": "L’immagine di Newton, senza una Terra da cartone: una palla lanciata da una montagna alta. Lanciata piano, cade vicino. Lanciata più forte, cade più lontano. Lanciata alla velocità circolare, il suolo si curva tanto in fretta quanto cade la palla, così continua a girare. Lanciata più veloce della velocità di fuga, se ne va e non torna.",
+    "he": "התמונה של ניוטון, בלי כדור ארץ מצויר: כדור שנזרק מהר גבוה. בזריקה עדינה הוא נופל קרוב. בזריקה חזקה יותר הוא נופל רחוק יותר. במהירות מעגלית הקרקע מתעקלת באותו קצב שבו הכדור נופל, ולכן הוא ממשיך להקיף. מהר יותר ממהירות הבריחה הוא עוזב ולא חוזר."
+  },
+  "wk": {
+    "fr": "Depuis 300 km d’altitude, le rayon est 6 678 km. La vitesse circulaire est √(μ/r) = 7,73 km/s. Un lancer de côté à 5 km/s retombe, parce que le point bas de cette trajectoire est à l’intérieur de la Terre. Un lancer à 9 km/s fait un long ovale dont le point haut est à environ 7 718 km au-dessus du sol. La vitesse de libération depuis 300 km est 10,93 km/s. Depuis la surface, en ignorant l’air, elle est 11,18 km/s.",
+    "es": "Desde 300 km de altitud, el radio es 6 678 km. La velocidad circular es √(μ/r) = 7,73 km/s. Un lanzamiento lateral a 5 km/s cae de vuelta, porque el punto bajo de esa trayectoria está dentro de la Tierra. Un lanzamiento a 9 km/s hace un óvalo largo cuyo punto alto está a unos 7 718 km sobre el suelo. La velocidad de escape desde 300 km es 10,93 km/s. Desde la superficie, sin contar el aire, es 11,18 km/s.",
+    "ar": "من ارتفاع 300 كم، نصف القطر 6 678 كم. السرعة الدائرية √(μ/r) = 7.73 كم/ث. رمية جانبية بسرعة 5 كم/ث تسقط عائدة، لأن النقطة المنخفضة من ذلك المسار داخل الأرض. رمية بسرعة 9 كم/ث تصنع شكلًا بيضويًا طويلًا نقطته العالية نحو 7 718 كم فوق الأرض. سرعة الإفلات من 300 كم هي 10.93 كم/ث. من السطح، مع إهمال الهواء، هي 11.18 كم/ث.",
+    "it": "Da 300 km di quota il raggio è 6 678 km. La velocità circolare è √(μ/r) = 7,73 km/s. Un lancio laterale a 5 km/s ricade, perché il punto basso di quel percorso è dentro la Terra. Un lancio a 9 km/s fa un ovale lungo il cui punto alto è a circa 7 718 km dal suolo. La velocità di fuga da 300 km è 10,93 km/s. Dalla superficie, ignorando l’aria, è 11,18 km/s.",
+    "he": "מגובה 300 ק״מ הרדיוס הוא 6 678 ק״מ. המהירות המעגלית היא √(μ/r) = 7.73 ק״מ/ש׳. זריקה הצידה במהירות 5 ק״מ/ש׳ נופלת בחזרה, כי הנקודה הנמוכה של המסלול בתוך כדור הארץ. זריקה במהירות 9 ק״מ/ש׳ יוצרת אליפסה ארוכה שהנקודה הגבוהה שלה כ-7 718 ק״מ מעל הקרקע. מהירות הבריחה מ-300 ק״מ היא 10.93 ק״מ/ש׳. מפני השטח, בלי האוויר, היא 11.18 ק״מ/ש׳."
+  },
+  "mkq": {
+    "fr": "« Le moteur doit rester allumé, sinon le satellite tombe. »",
+    "es": "« El motor tiene que seguir encendido, o el satélite cae. »",
+    "ar": "« يجب أن يبقى المحرك يعمل، وإلا سقط القمر الصناعي. »",
+    "it": "« Il motore deve restare acceso, altrimenti il satellite cade. »",
+    "he": "« המנוע חייב להישאר דולק, אחרת הלוויין נופל. »"
+  },
+  "mka": {
+    "fr": "Le moteur sert à obtenir la vitesse de côté. Après le dernier arrêt, c’est la gravité qui courbe la route. Le moteur se rallume seulement pour changer d’orbite, ou pour une remontée quand l’air ténu a ralenti l’engin.",
+    "es": "El motor sirve para conseguir la velocidad lateral. Después del último apagado, la gravedad hace la curva. El motor vuelve a encenderse solo para cambiar de órbita, o para un reimpulso cuando el aire fino ha frenado la nave.",
+    "ar": "المحرك للحصول على السرعة الجانبية. بعد آخر إيقاف، الجاذبية هي التي تحني الطريق. يعود المحرك للعمل فقط لتغيير المدار، أو لرفع المدار حين يبطئ الهواء الرقيق المركبة.",
+    "it": "Il motore serve a ottenere la velocità laterale. Dopo l’ultimo spegnimento, è la gravità a curvare la traiettoria. Il motore si riaccende solo per cambiare orbita, o per un rialzo quando l’aria sottile ha rallentato il veicolo.",
+    "he": "המנוע נועד להשיג את המהירות הצידה. אחרי הכיבוי האחרון, הכבידה היא שמעקמת את הדרך. המנוע נדלק שוב רק לשינוי מסלול, או להעלאה כשאוויר דליל האט את כלי הטיס."
+  },
+  "qk": {
+    "fr": "Qu’est-ce qui est une orbite : faire du surplace avec le moteur qui pousse vers le haut, ou avancer moteur éteint quand on a déjà la vitesse de côté ?",
+    "es": "¿Qué es una órbita: quedarse quieto con el motor empujando hacia arriba, o seguir con el motor apagado cuando ya tienes la velocidad lateral?",
+    "ar": "أيّهما مدار: التحليق في المكان والمحرك يدفع إلى الأعلى، أم الانسياب والمحرك مطفأ بعد أن صارت لديك السرعة الجانبية؟",
+    "it": "Che cos’è un’orbita: restare fermi con il motore che spinge in su, oppure procedere a motore spento quando hai già la velocità laterale?",
+    "he": "מהו מסלול: ריחוף כשהמנוע דוחף למעלה, או גלישה עם מנוע כבוי אחרי שכבר יש את המהירות הצידה?"
+  },
+  "ak": {
+    "fr": "Avancer moteur éteint. Le surplace dépense du carburant pour lutter contre la gravité. Une orbite dépense le carburant une fois, pour la vitesse, puis tombe autour de la Terre.",
+    "es": "Seguir con el motor apagado. Quedarse quieto gasta combustible para pelear con la gravedad. Una órbita gasta el combustible una vez, para conseguir la velocidad, y luego cae alrededor de la Tierra.",
+    "ar": "الانسياب والمحرك مطفأ. التحليق في المكان يصرف الوقود لمقاومة الجاذبية. المدار يصرف الوقود مرة واحدة من أجل السرعة، ثم يسقط حول الأرض.",
+    "it": "Procedere a motore spento. Restare fermi consuma carburante per combattere la gravità. Un’orbita consuma il carburante una volta, per la velocità, e poi cade intorno alla Terra.",
+    "he": "גלישה עם מנוע כבוי. ריחוף שורף דלק כדי להילחם בכבידה. מסלול שורף את הדלק פעם אחת, כדי להשיג את המהירות, ואז נופל סביב כדור הארץ."
+  },
+  "ek": {
+    "fr": "Un satellite météo regarde les nuages pour que l’on puisse prévenir une ville avant l’orage.",
+    "es": "Un satélite meteorológico mira las nubes para que se pueda avisar a una ciudad antes de la tormenta.",
+    "ar": "قمر الطقس يراقب السحب حتى يمكن تحذير مدينة قبل وصول العاصفة.",
+    "it": "Un satellite meteorologico guarda le nuvole così si può avvisare una città prima del temporale.",
+    "he": "לוויין מזג אוויר צופה בעננים כדי שאפשר יהיה להזהיר עיר לפני הסערה."
+  },
+  "vk": {
+    "fr": "STEMonstrations de la NASA Johnson : la première loi de Newton. Une force change le mouvement. Rester en orbite n’exige pas une force le long de la trajectoire. Crédit : NASA Johnson.",
+    "es": "STEMonstrations del NASA Johnson: la primera ley de Newton. Una fuerza cambia el movimiento. Seguir en órbita no necesita una fuerza a lo largo de la trayectoria. Crédito: NASA Johnson.",
+    "ar": "STEMonstrations من ناسا جونسون: قانون نيوتن الأول. القوة تغيّر الحركة. البقاء في المدار لا يحتاج قوة على امتداد المسار. الإسناد: NASA Johnson.",
+    "it": "STEMonstrations del NASA Johnson: la prima legge di Newton. Una forza cambia il moto. Restare in orbita non richiede una forza lungo la traiettoria. Credito: NASA Johnson.",
+    "he": "STEMonstrations של נאס״א ג׳ונסון: החוק הראשון של ניוטון. כוח משנה תנועה. הישארות במסלול אינה דורשת כוח לאורך המסלול. קרדיט: NASA Johnson."
+  },
+  "om": {
+    "fr": "Utiliser la gravité comme la force qui fait tomber un satellite autour de la Terre. Comparer la station, un satellite GPS et l’orbite géostationnaire. Expliquer pourquoi un cercle plus haut est plus lent.",
+    "es": "Usar la gravedad como la fuerza que hace caer un satélite alrededor de la Tierra. Comparar la estación, un satélite GPS y la órbita geoestacionaria. Explicar por qué un círculo más alto es más lento.",
+    "ar": "استخدام الجاذبية بوصفها القوة التي تُبقي القمر يسقط حول الأرض. مقارنة المحطة وقمر GPS والمدار الثابت بالنسبة إلى الأرض. تفسير لماذا الدائرة الأعلى أبطأ.",
+    "it": "Usare la gravità come la forza che fa cadere un satellite intorno alla Terra. Confrontare la stazione, un satellite GPS e l’orbita geostazionaria. Spiegare perché un cerchio più alto è più lento.",
+    "he": "להשתמש בכבידה בתור הכוח שגורם ללוויין ליפול סביב כדור הארץ. להשוות את התחנה, לוויין GPS ומסלול גיאוסטציונרי. להסביר למה מעגל גבוה יותר איטי יותר."
+  },
+  "pm": {
+    "fr": "Cette partie suit l’idée gravité-et-mouvement de la norme NGSS MS-ESS1-2, avec les satellites terrestres comme exemple proche. L’accélération à la distance r du centre de la Terre est μ/r². À la surface, cela fait 9,80 m/s². À 400 km, 8,68 m/s². Plus loin, l’attraction est plus faible, donc la vitesse qui convient à un cercle est plus petite, et le chemin est plus long, donc la période est bien plus longue.",
+    "es": "Esta parte sigue la idea de gravedad y movimiento de NGSS MS-ESS1-2, con los satélites de la Tierra como ejemplo cercano. La aceleración a la distancia r del centro de la Tierra es μ/r². En la superficie eso da 9,80 m/s². A 400 km, 8,68 m/s². Más lejos, la atracción es más débil, así que la velocidad que encaja con un círculo es menor, y el camino es más largo, así que el periodo es mucho mayor.",
+    "ar": "يتبع هذا الجزء فكرة الجاذبية والحركة في معيار NGSS MS-ESS1-2، مع أقمار الأرض مثالًا قريبًا. التسارع على مسافة r من مركز الأرض هو μ/r². عند السطح هذا 9.80 م/ث². عند 400 كم، 8.68 م/ث². أبعد من ذلك يكون الشد أضعف، فالسرعة التي تناسب دائرة أصغر، والمسار أطول، ولذلك الدورة أطول بكثير.",
+    "it": "Questa parte segue l’idea gravità-e-moto dello standard NGSS MS-ESS1-2, con i satelliti terrestri come esempio vicino. L’accelerazione alla distanza r dal centro della Terra è μ/r². In superficie fa 9,80 m/s². A 400 km, 8,68 m/s². Più lontano l’attrazione è più debole, quindi la velocità che sta su un cerchio è minore, e il percorso è più lungo, quindi il periodo è molto più lungo.",
+    "he": "החלק הזה הולך עם רעיון הכבידה והתנועה בתקן NGSS MS-ESS1-2, עם לווייני כדור הארץ כדוגמה הקרובה. התאוצה במרחק r ממרכז כדור הארץ היא μ/r². על פני השטח זה 9.80 מ׳/ש׳². ב-400 ק״מ, 8.68 מ׳/ש׳². רחוק יותר המשיכה חלשה יותר, ולכן המהירות שמתאימה למעגל קטנה יותר, והדרך ארוכה יותר, ולכן זמן ההקפה ארוך בהרבה."
+  },
+  "wm": {
+    "fr": "La station à 400 km : 7,67 km/s, 92,6 min. Landsat 9 vole vers 705 km avec une inclinaison de 98,2° et une période d’environ 99 minutes (NASA et USGS). Un cercle à deux corps à 705 km donne 7,50 km/s et 98,9 min. Les satellites GPS volent vers 20 200 km, avec une période d’environ 12 heures et une inclinaison de 55° (GPS.gov). Le cercle à 20 200 km donne 3,87 km/s et 11,98 h. Le rayon géostationnaire est 42 164 km, l’altitude 35 786 km, la vitesse 3,07 km/s, la période un jour sidéral (86 164 s).",
+    "es": "La estación a 400 km: 7,67 km/s, 92,6 min. Landsat 9 vuela cerca de 705 km con una inclinación de 98,2° y un periodo de unos 99 minutos (NASA y USGS). Un círculo de dos cuerpos a 705 km da 7,50 km/s y 98,9 min. Los satélites GPS vuelan cerca de 20 200 km, con un periodo de unas 12 horas y una inclinación de 55° (GPS.gov). El círculo a 20 200 km da 3,87 km/s y 11,98 h. El radio geoestacionario es 42 164 km, la altitud 35 786 km, la velocidad 3,07 km/s, el periodo un día sidéreo (86 164 s).",
+    "ar": "المحطة عند 400 كم: 7.67 كم/ث، 92.6 دقيقة. يطير لاندسات 9 قرب 705 كم بميل 98.2° ودورة نحو 99 دقيقة (ناسا وUSGS). دائرة لجسمين عند 705 كم تعطي 7.50 كم/ث و98.9 دقيقة. أقمار GPS تطير قرب 20 200 كم، بدورة نحو 12 ساعة وميل 55° (GPS.gov). الدائرة عند 20 200 كم تعطي 3.87 كم/ث و11.98 ساعة. نصف قطر المدار الثابت 42 164 كم، والارتفاع 35 786 كم، والسرعة 3.07 كم/ث، والدورة يوم نجمي واحد (86 164 ث).",
+    "it": "La stazione a 400 km: 7,67 km/s, 92,6 min. Landsat 9 vola vicino a 705 km con un’inclinazione di 98,2° e un periodo di circa 99 minuti (NASA e USGS). Un cerchio a due corpi a 705 km dà 7,50 km/s e 98,9 min. I satelliti GPS volano vicino a 20 200 km, con un periodo di circa 12 ore e un’inclinazione di 55° (GPS.gov). Il cerchio a 20 200 km dà 3,87 km/s e 11,98 h. Il raggio geostazionario è 42 164 km, la quota 35 786 km, la velocità 3,07 km/s, il periodo un giorno siderale (86 164 s).",
+    "he": "התחנה ב-400 ק״מ: 7.67 ק״מ/ש׳, 92.6 דק׳. לנדסאט 9 טס סביב 705 ק״מ בנטייה של 98.2°, עם זמן הקפה של כ-99 דקות (נאס״א ו-USGS). מעגל של שני גופים ב-705 ק״מ נותן 7.50 ק״מ/ש׳ ו-98.9 דק׳. לווייני GPS טסים סביב 20 200 ק״מ, עם זמן הקפה של כ-12 שעות ונטייה של 55° (GPS.gov). המעגל ב-20 200 ק״מ נותן 3.87 ק״מ/ש׳ ו-11.98 ש׳. הרדיוס הגיאוסטציונרי הוא 42 164 ק״מ, הגובה 35 786 ק״מ, המהירות 3.07 ק״מ/ש׳, וזמן ההקפה הוא יממה כוכבית אחת (86 164 ש׳)."
+  },
+  "mmq": {
+    "fr": "« Plus haut veut dire plus vite. »",
+    "es": "« Más alto significa más rápido. »",
+    "ar": "« الأعلى يعني الأسرع. »",
+    "it": "« Più alto vuol dire più veloce. »",
+    "he": "« יותר גבוה פירושו יותר מהר. »"
+  },
+  "mma": {
+    "fr": "Le GPS est bien plus haut que la station et bien plus lent : environ 3,87 km/s contre 7,67 km/s. Le cercle plus haut est un chemin plus grand avec une attraction plus faible.",
+    "es": "El GPS está mucho más alto que la estación y es mucho más lento: unos 3,87 km/s frente a 7,67 km/s. El círculo más alto es un camino más grande con una atracción más débil.",
+    "ar": "GPS أعلى بكثير من المحطة وأبطأ بكثير: نحو 3.87 كم/ث مقابل 7.67 كم/ث. الدائرة الأعلى مسار أكبر وشد أضعف.",
+    "it": "Il GPS è molto più alto della stazione e molto più lento: circa 3,87 km/s contro 7,67 km/s. Il cerchio più alto è un percorso più grande con un’attrazione più debole.",
+    "he": "GPS גבוה בהרבה מהתחנה ואיטי בהרבה: כ-3.87 ק״מ/ש׳ מול 7.67 ק״מ/ש׳. המעגל הגבוה הוא דרך גדולה יותר עם משיכה חלשה יותר."
+  },
+  "qm": {
+    "fr": "Pourquoi un satellite sur un cercle plus haut va-t-il à la fois plus lentement et met-il plus de temps à faire le tour ?",
+    "es": "¿Por qué un satélite en un círculo más alto se mueve más despacio y tarda más en dar la vuelta?",
+    "ar": "لماذا يتحرك قمر على دائرة أعلى بسرعة أقل ويستغرق وقتًا أطول ليكمل الدورة؟",
+    "it": "Perché un satellite su un cerchio più alto si muove più piano e impiega più tempo a fare il giro?",
+    "he": "למה לוויין במעגל גבוה יותר גם נע לאט יותר וגם לוקח לו יותר זמן להשלים הקפה?"
+  },
+  "am": {
+    "fr": "La gravité est plus faible loin de la Terre, donc la vitesse circulaire qui convient est plus petite. Le chemin est aussi plus long. Les deux allongent la période.",
+    "es": "La gravedad es más débil lejos de la Tierra, así que la velocidad circular que encaja es menor. El camino también es más largo. Los dos efectos alargan el periodo.",
+    "ar": "الجاذبية أضعف بعيدًا عن الأرض، فالسرعة الدائرية المناسبة أصغر. المسار أطول أيضًا. الأثران يطيلان الدورة.",
+    "it": "La gravità è più debole lontano dalla Terra, quindi la velocità circolare adatta è minore. Il percorso è anche più lungo. Entrambi allungano il periodo.",
+    "he": "הכבידה חלשה יותר רחוק מכדור הארץ, ולכן המהירות המעגלית המתאימה קטנה יותר. הדרך גם ארוכה יותר. שני הדברים מאריכים את זמן ההקפה."
+  },
+  "em": {
+    "fr": "Landsat regarde les forêts, les cultures et l’eau. Son inclinaison presque polaire et héliosynchrone passe au-dessus du sol à une heure locale semblable, ce qui rend plus facile la comparaison de photos d’années différentes.",
+    "es": "Landsat mira bosques, cultivos y agua. Su inclinación casi polar y heliosíncrona pasa sobre el suelo a una hora local parecida, lo que hace más fácil comparar fotos de años distintos.",
+    "ar": "لاندسات يراقب الغابات والمزارع والماء. ميله شبه القطبي المتزامن مع الشمس يمر فوق الأرض في وقت محلي متشابه، فيسهل مقارنة صور سنوات مختلفة.",
+    "it": "Landsat guarda foreste, campi e acqua. La sua inclinazione quasi polare e eliosincrona passa sul suolo a un’ora locale simile, e così è più facile confrontare foto di anni diversi.",
+    "he": "לנדסאט צופה ביערות, בשדות ובמים. הנטייה הכמעט קוטבית והסינכרונית לשמש עוברת מעל הקרקע בשעה מקומית דומה, וכך קל יותר להשוות תמונות משנים שונות."
+  },
+  "vm": {
+    "fr": "NASA eClips, archivé : Real World — Keeping the International Space Station in Orbit. La gravité tire encore. L’air ténu freine la station, et les équipages la remontent. Crédit : archives NASA eClips.",
+    "es": "NASA eClips, archivado: Real World — Keeping the International Space Station in Orbit. La gravedad sigue tirando. El aire fino frena la estación, y las tripulaciones la vuelven a subir. Crédito: archivo de NASA eClips.",
+    "ar": "NASA eClips، مؤرشف: Real World — Keeping the International Space Station in Orbit. الجاذبية ما زالت تشد. الهواء الرقيق يبطئ المحطة، والطاقم يرفع مدارها. الإسناد: أرشيف NASA eClips.",
+    "it": "NASA eClips, archiviato: Real World — Keeping the International Space Station in Orbit. La gravità tira ancora. L’aria sottile frena la stazione, e gli equipaggi la rialzano. Credito: archivio NASA eClips.",
+    "he": "NASA eClips, בארכיון: Real World — Keeping the International Space Station in Orbit. הכבידה עדיין מושכת. אוויר דליל מאט את התחנה, והצוותים מעלים אותה. קרדיט: ארכיון NASA eClips."
+  },
+  "oh": {
+    "fr": "Énoncer les trois lois de Kepler. Calculer une vitesse circulaire et une période. Calculer un transfert de Hohmann. Relier l’attraction à g = μ/r².",
+    "es": "Enunciar las tres leyes de Kepler. Calcular una velocidad circular y un periodo. Calcular una transferencia de Hohmann. Relacionar la atracción con g = μ/r².",
+    "ar": "صياغة قوانين كبلر الثلاثة. حساب سرعة دائرية ودورة. حساب انتقال هومان واحد. ربط الشد بالعلاقة g = μ/r².",
+    "it": "Enunciare le tre leggi di Keplero. Calcolare una velocità circolare e un periodo. Calcolare un trasferimento di Hohmann. Collegare l’attrazione a g = μ/r².",
+    "he": "לנסח את שלושת חוקי קפלר. לחשב מהירות מעגלית וזמן הקפה. לחשב מעבר הומן אחד. לחבר את המשיכה אל g = μ/r²."
+  },
+  "ph": {
+    "fr": "Première loi de Kepler : des ellipses, avec le corps central à un foyer. Pour ces satellites, le foyer est le centre de la Terre. Deuxième loi : des aires égales en des temps égaux, donc l’engin va plus vite quand il est plus près. Troisième loi : T² est proportionnel à a³, ou T = 2π √(a³/μ). Les normes visées ici sont HS-ESS1-4 et HS-PS2-4, et la partie orbites d’AP Physics C Mechanics. La simulation PhET Gravity and Orbits est un modèle utile en plus ; cette page la cite par un lien et ne l’intègre pas.",
+    "es": "Primera ley de Kepler: elipses, con el cuerpo central en un foco. Para estos satélites el foco es el centro de la Tierra. Segunda ley: áreas iguales en tiempos iguales, así que la nave va más rápido cuando está más cerca. Tercera ley: T² es proporcional a a³, o T = 2π √(a³/μ). Los estándares de esta parte son HS-ESS1-4 y HS-PS2-4, y la parte de órbitas de AP Physics C Mechanics. La simulación PhET Gravity and Orbits es un modelo extra útil; esta página la enlaza y no la incrusta.",
+    "ar": "قانون كبلر الأول: قطوع ناقصة، والجسم المركزي في إحدى البؤرتين. لهذه الأقمار البؤرة هي مركز الأرض. القانون الثاني: مساحات متساوية في أزمنة متساوية، فالمركبة أسرع حين تكون أقرب. القانون الثالث: T² يتناسب مع a³، أو T = 2π √(a³/μ). المعايير هنا هي HS-ESS1-4 وHS-PS2-4، وجزء المدارات في AP Physics C Mechanics. محاكاة PhET Gravity and Orbits نموذج إضافي مفيد؛ هذه الصفحة تربطها ولا تضمّنها.",
+    "it": "Prima legge di Keplero: ellissi, con il corpo centrale in un fuoco. Per questi satelliti il fuoco è il centro della Terra. Seconda legge: aree uguali in tempi uguali, quindi il veicolo va più veloce quando è più vicino. Terza legge: T² è proporzionale ad a³, oppure T = 2π √(a³/μ). Gli standard di questa parte sono HS-ESS1-4 e HS-PS2-4, e la parte di orbite di AP Physics C Mechanics. La simulazione PhET Gravity and Orbits è un modello utile in più; questa pagina la collega e non la incorpora.",
+    "he": "החוק הראשון של קפלר: אליפסות, והגוף המרכזי באחד המוקדים. ללוויינים האלה המוקד הוא מרכז כדור הארץ. החוק השני: שטחים שווים בזמנים שווים, ולכן הכלי נע מהר יותר כשהוא קרוב יותר. החוק השלישי: T² פרופורציונלי ל-a³, או T = 2π √(a³/μ). התקנים של החלק הזה הם HS-ESS1-4 ו-HS-PS2-4, וחלק המסלולים ב-AP Physics C Mechanics. הסימולציה PhET Gravity and Orbits היא מודל נוסף ושימושי; העמוד הזה מקשר אליה ואינו מטמיע אותה."
+  },
+  "wh": {
+    "fr": "Transfert de Hohmann de 300 km vers l’orbite géostationnaire. r₁ = 6 678 km, r₂ = 42 164 km, demi-grand axe du transfert = 24 421 km. La vitesse circulaire sur l’orbite basse est 7,73 km/s. La poussée monte la vitesse à 10,15 km/s, donc Δv₁ = 2,43 km/s. En haut, la vitesse de transfert est 1,61 km/s et la vitesse circulaire est 3,07 km/s, donc Δv₂ = 1,47 km/s. Le total est 3,89 km/s. La côte dure 5,28 heures. Un changement de plan de 28,5° coûte 3,80 km/s à 300 km et 1,51 km/s à la vitesse géostationnaire, parce que Δv = 2 v sin(Δi/2). La plus petite inclinaison qu’un lancement peut atteindre, sans changement de plan plus tard, est la latitude du site de lancement. On fait le virage là où l’engin est lent.",
+    "es": "Transferencia de Hohmann de 300 km a la órbita geoestacionaria. r₁ = 6 678 km, r₂ = 42 164 km, semieje mayor de la transferencia = 24 421 km. La velocidad circular en la órbita baja es 7,73 km/s. El encendido sube la velocidad a 10,15 km/s, así que Δv₁ = 2,43 km/s. Arriba, la velocidad de la transferencia es 1,61 km/s y la velocidad circular es 3,07 km/s, así que Δv₂ = 1,47 km/s. El total es 3,89 km/s. La costa dura 5,28 horas. Un cambio de plano de 28,5° cuesta 3,80 km/s a 300 km y 1,51 km/s a la velocidad geoestacionaria, porque Δv = 2 v sin(Δi/2). La menor inclinación que un lanzamiento puede alcanzar, sin un cambio de plano posterior, es la latitud del lugar de lanzamiento. El giro se hace donde la nave va despacio.",
+    "ar": "انتقال هومان من 300 كم إلى المدار الثابت. r₁ = 6 678 كم، r₂ = 42 164 كم، نصف المحور الأكبر للانتقال = 24 421 كم. السرعة الدائرية في المدار المنخفض 7.73 كم/ث. الحرق يرفع السرعة إلى 10.15 كم/ث، إذن Δv₁ = 2.43 كم/ث. في الأعلى سرعة الانتقال 1.61 كم/ث والسرعة الدائرية 3.07 كم/ث، إذن Δv₂ = 1.47 كم/ث. المجموع 3.89 كم/ث. يستغرق الانجراف 5.28 ساعات. تغيير مستوى بمقدار 28.5° يكلف 3.80 كم/ث عند 300 كم و1.51 كم/ث عند سرعة المدار الثابت، لأن Δv = 2 v sin(Δi/2). أقل ميل يمكن لإطلاق بلوغه، من دون تغيير مستوى لاحق، هو خط عرض موقع الإطلاق. يُجرى الانعطاف حيث المركبة بطيئة.",
+    "it": "Trasferimento di Hohmann da 300 km all’orbita geostazionaria. r₁ = 6 678 km, r₂ = 42 164 km, semiasse maggiore del trasferimento = 24 421 km. La velocità circolare sull’orbita bassa è 7,73 km/s. L’accensione porta la velocità a 10,15 km/s, quindi Δv₁ = 2,43 km/s. In alto la velocità di trasferimento è 1,61 km/s e la velocità circolare è 3,07 km/s, quindi Δv₂ = 1,47 km/s. Il totale è 3,89 km/s. La costa dura 5,28 ore. Un cambio di piano di 28,5° costa 3,80 km/s a 300 km e 1,51 km/s alla velocità geostazionaria, perché Δv = 2 v sin(Δi/2). La minima inclinazione che un lancio può raggiungere, senza un cambio di piano successivo, è la latitudine del sito di lancio. La virata si fa dove il veicolo è lento.",
+    "he": "מעבר הומן מ-300 ק״מ למסלול גיאוסטציונרי. r₁ = 6 678 ק״מ, r₂ = 42 164 ק״מ, חצי הציר הגדול של המעבר = 24 421 ק״מ. המהירות המעגלית במסלול הנמוך היא 7.73 ק״מ/ש׳. ההצתה מעלה את המהירות ל-10.15 ק״מ/ש׳, ולכן Δv₁ = 2.43 ק״מ/ש׳. בקצה הגבוה מהירות המעבר היא 1.61 ק״מ/ש׳ והמהירות המעגלית 3.07 ק״מ/ש׳, ולכן Δv₂ = 1.47 ק״מ/ש׳. הסכום הוא 3.89 ק״מ/ש׳. הגלישה נמשכת 5.28 שעות. שינוי מישור של 28.5° עולה 3.80 ק״מ/ש׳ ב-300 ק״מ ו-1.51 ק״מ/ש׳ במהירות הגיאוסטציונרית, כי Δv = 2 v sin(Δi/2). הנטייה הנמוכה ביותר ששיגור יכול להגיע אליה, בלי שינוי מישור אחר כך, היא קו הרוחב של אתר השיגור. את הפנייה עושים היכן שהכלי איטי."
+  },
+  "hhq": {
+    "fr": "« L’apesanteur veut dire que la gravité a disparu, et les orbites sont des cercles. »",
+    "es": "« La ingravidez significa que la gravedad desapareció, y las órbitas son círculos. »",
+    "ar": "« انعدام الوزن يعني أن الجاذبية اختفت، والمدارات دوائر. »",
+    "it": "« L’assenza di peso significa che la gravità è sparita, e le orbite sono cerchi. »",
+    "he": "« חוסר משקל אומר שהכבידה נעלמה, והמסלולים הם מעגלים. »"
+  },
+  "hha": {
+    "fr": "La plupart des orbites sont des ellipses. On se sent sans poids parce que l’on tombe en même temps que le vaisseau. Une balance en chute libre indique zéro alors que μ/r² est toujours là.",
+    "es": "La mayoría de las órbitas son elipses. Te sientes sin peso porque caes junto con la nave. Una báscula en caída libre marca cero aunque μ/r² sigue ahí.",
+    "ar": "معظم المدارات قطوع ناقصة. تشعر بانعدام الوزن لأنك تسقط مع المركبة. ميزان في سقوط حر يقرأ صفرًا مع أن μ/r² ما زال موجودًا.",
+    "it": "La maggior parte delle orbite sono ellissi. Ti senti senza peso perché cadi insieme al veicolo. Una bilancia in caduta libera segna zero anche se μ/r² è ancora lì.",
+    "he": "רוב המסלולים הם אליפסות. מרגישים בלי משקל כי נופלים יחד עם החללית. משקל בנפילה חופשית מראה אפס אף ש-μ/r² עדיין שם."
+  },
+  "qh": {
+    "fr": "Un engin à 300 km a une vitesse de côté de 9 km/s. Cercle, ellipse ou libération ?",
+    "es": "Una nave a 300 km tiene una velocidad lateral de 9 km/s. ¿Círculo, elipse o escape?",
+    "ar": "مركبة عند 300 كم سرعتها الجانبية 9 كم/ث. دائرة، أم قطع ناقص، أم إفلات؟",
+    "it": "Un veicolo a 300 km ha una velocità laterale di 9 km/s. Cerchio, ellisse o fuga?",
+    "he": "כלי בגובה 300 ק״מ נע הצידה במהירות 9 ק״מ/ש׳. מעגל, אליפסה, או בריחה?"
+  },
+  "ah": {
+    "fr": "Une ellipse. La vitesse circulaire y est 7,73 km/s et la vitesse de libération 10,93 km/s. Le point haut de cette ellipse est à environ 7 718 km au-dessus du sol.",
+    "es": "Una elipse. La velocidad circular allí es 7,73 km/s y la de escape 10,93 km/s. El punto alto de esta elipse está a unos 7 718 km sobre el suelo.",
+    "ar": "قطع ناقص. السرعة الدائرية هناك 7.73 كم/ث وسرعة الإفلات 10.93 كم/ث. النقطة العالية لهذا القطع نحو 7 718 كم فوق الأرض.",
+    "it": "Un’ellisse. La velocità circolare lì è 7,73 km/s e quella di fuga 10,93 km/s. Il punto alto di questa ellisse è a circa 7 718 km dal suolo.",
+    "he": "אליפסה. המהירות המעגלית שם 7.73 ק״מ/ש׳ ומהירות הבריחה 10.93 ק״מ/ש׳. הנקודה הגבוהה של האליפסה הזו כ-7 718 ק״מ מעל הקרקע."
+  },
+  "eh": {
+    "fr": "Une orbite héliosynchrone garde les caméras d’observation de la Terre dans une lumière semblable d’un passage à l’autre. Cheops, de l’ESA, utilise une orbite polaire voisine, vers 700 km, pour que sa vue des étoiles reste stable.",
+    "es": "Una órbita heliosíncrona mantiene las cámaras de observación de la Tierra con una luz parecida de un paso a otro. Cheops, de la ESA, usa una órbita polar parecida, cerca de 700 km, para que su vista de las estrellas se mantenga estable.",
+    "ar": "المدار المتزامن مع الشمس يُبقي كاميرات رصد الأرض في ضوء متشابه من مرور إلى آخر. يستخدم كيوبس التابع لوكالة الفضاء الأوروبية مدارًا قطبيًا قريبًا، نحو 700 كم، حتى تبقى رؤيته للنجوم مستقرة.",
+    "it": "Un’orbita eliosincrona tiene le camere di osservazione della Terra in una luce simile da un passaggio all’altro. Cheops, dell’ESA, usa un’orbita polare affine, vicino a 700 km, così la sua vista delle stelle resta stabile.",
+    "he": "מסלול סינכרוני לשמש שומר את מצלמות תצפית הארץ באור דומה ממעבר למעבר. Cheops של סוכנות החלל האירופית משתמש במסלול קוטבי קרוב, סביב 700 ק״מ, כדי שמבט הכוכבים שלו יישאר יציב."
+  },
+  "vh1": {
+    "fr": "Open Yale PHYS 200, cours 7, les lois de Kepler. Le cours est sous licence CC BY-NC-SA. Crédit : YaleCourses.",
+    "es": "Open Yale PHYS 200, clase 7, las leyes de Kepler. La clase tiene licencia CC BY-NC-SA. Crédito: YaleCourses.",
+    "ar": "Open Yale PHYS 200، المحاضرة 7، قوانين كبلر. المحاضرة برخصة CC BY-NC-SA. الإسناد: YaleCourses.",
+    "it": "Open Yale PHYS 200, lezione 7, le leggi di Keplero. La lezione è CC BY-NC-SA. Credito: YaleCourses.",
+    "he": "Open Yale PHYS 200, הרצאה 7, חוקי קפלר. ההרצאה ברישיון CC BY-NC-SA. קרדיט: YaleCourses."
+  },
+  "vh2": {
+    "fr": "ESA : Cheops observant dans l’espace. Une orbite héliosynchrone vers 700 km. Crédit : Agence spatiale européenne.",
+    "es": "ESA: Cheops observando en el espacio. Una órbita heliosíncrona cerca de 700 km. Crédito: Agencia Espacial Europea.",
+    "ar": "ESA: كيوبس يرصد في الفضاء. مدار متزامن مع الشمس قرب 700 كم. الإسناد: وكالة الفضاء الأوروبية.",
+    "it": "ESA: Cheops che osserva nello spazio. Un’orbita eliosincrona vicino a 700 km. Credito: Agenzia Spaziale Europea.",
+    "he": "ESA: Cheops צופה בחלל. מסלול סינכרוני לשמש סביב 700 ק״מ. קרדיט: סוכנות החלל האירופית."
+  },
+  "ou": {
+    "fr": "Écrire l’équation des deux corps et la conique à partir de l’énergie spécifique. Nommer les éléments classiques. Utiliser la vis-viva. Comparer Hohmann et bi-elliptique. Estimer un changement de plan. Dire ce que font J₂ et la traînée. Placer les points de Lagrange et dire ce qu’est un plan en coniques raccordées.",
+    "es": "Escribir la ecuación de dos cuerpos y la cónica a partir de la energía específica. Nombrar los elementos clásicos. Usar la vis-viva. Comparar Hohmann y bielíptica. Estimar un cambio de plano. Decir qué hacen J₂ y el arrastre. Situar los puntos de Lagrange y decir qué es un plan de cónicas empalmadas.",
+    "ar": "كتابة معادلة الجسمين والقطع من الطاقة النوعية. تسمية العناصر الكلاسيكية. استخدام vis-viva. مقارنة هومان والانتقال ثنائي القطع. تقدير تغيير المستوى. قول ما يفعله J₂ والسحب. تحديد نقاط لاغرانج وشرح ما هي خطة القطوع المرقعة.",
+    "it": "Scrivere l’equazione dei due corpi e la conica a partire dall’energia specifica. Nominare gli elementi classici. Usare la vis-viva. Confrontare Hohmann e biellittico. Stimare un cambio di piano. Dire che cosa fanno J₂ e la resistenza. Collocare i punti di Lagrange e dire che cos’è un piano a coniche raccordate.",
+    "he": "לכתוב את משוואת שני הגופים ואת החתך החרוטי מתוך האנרגיה הסגולית. לנקוב באלמנטים הקלאסיים. להשתמש ב-vis-viva. להשוות הומן ובי-אליפטי. לאמוד שינוי מישור. לומר מה עושים J₂ והגרר. למקם את נקודות לגראנז׳ ולומר מהי תוכנית של חתכים חרוטיים מחוברים."
+  },
+  "pu": {
+    "fr": "L’équation des deux corps est r̈ = −μ r / r³. L’énergie spécifique ε = v²/2 − μ/r. Un cercle ou une ellipse a ε &lt; 0, une parabole ε = 0, une hyperbole ε &gt; 0. La vis-viva est v = √(μ (2/r − 1/a)). Les éléments classiques sont a, e, i, Ω, ω, et un angle de position (anomalie vraie ou anomalie moyenne). J₂ de la Terre vaut 1,0826×10⁻³. Il fait dériver le nœud et l’argument du périgée, et les concepteurs d’orbites héliosynchrones utilisent cette dérive. La traînée à l’altitude de la station retire de l’énergie, donc le point bas descend jusqu’à une remontée.",
+    "es": "La ecuación de dos cuerpos es r̈ = −μ r / r³. La energía específica ε = v²/2 − μ/r. Un círculo o una elipse tiene ε &lt; 0, una parábola ε = 0, una hipérbola ε &gt; 0. La vis-viva es v = √(μ (2/r − 1/a)). Los elementos clásicos son a, e, i, Ω, ω y un ángulo de posición (anomalía verdadera o anomalía media). J₂ de la Tierra es 1,0826×10⁻³. Hace derivar el nodo y el argumento del perigeo, y quienes diseñan órbitas heliosíncronas usan esa deriva. El arrastre a la altitud de la estación quita energía, así que el punto bajo baja hasta un reimpulso.",
+    "ar": "معادلة الجسمين هي r̈ = −μ r / r³. الطاقة النوعية ε = v²/2 − μ/r. الدائرة أو القطع الناقص لهما ε &lt; 0، والقطع المكافئ ε = 0، والقطع الزائد ε &gt; 0. معادلة vis-viva هي v = √(μ (2/r − 1/a)). العناصر الكلاسيكية هي a وe وi وΩ وω وزاوية موضع (الشذوذ الحقيقي أو المتوسط). J₂ للأرض يساوي 1.0826×10⁻³. وهو يزيح العقدة وحجة الحضيض، ومصممو المدارات المتزامنة مع الشمس يستخدمون هذا الانزياح. السحب عند ارتفاع المحطة يسحب طاقة، فتهبط النقطة المنخفضة حتى رفع المدار.",
+    "it": "L’equazione dei due corpi è r̈ = −μ r / r³. L’energia specifica ε = v²/2 − μ/r. Un cerchio o un’ellisse ha ε &lt; 0, una parabola ε = 0, un’iperbole ε &gt; 0. La vis-viva è v = √(μ (2/r − 1/a)). Gli elementi classici sono a, e, i, Ω, ω e un angolo di posizione (anomalia vera o anomalia media). J₂ della Terra vale 1,0826×10⁻³. Fa derivare il nodo e l’argomento del perigeo, e chi progetta orbite eliosincrone usa quella deriva. La resistenza alla quota della stazione toglie energia, così il punto basso scende fino a un rialzo.",
+    "he": "משוואת שני הגופים היא r̈ = −μ r / r³. האנרגיה הסגולית ε = v²/2 − μ/r. למעגל או לאליפסה ε &lt; 0, לפרבולה ε = 0, להיפרבולה ε &gt; 0. vis-viva היא v = √(μ (2/r − 1/a)). האלמנטים הקלאסיים הם a,‏ e,‏ i,‏ Ω,‏ ω, וזווית מקום (אנומליה אמיתית או ממוצעת). J₂ של כדור הארץ הוא 1.0826×10⁻³. הוא מסיט את הצומת ואת ארגומנט הפריגיאה, ומתכנני מסלולים סינכרוניים לשמש משתמשים בסטייה הזו. גרר בגובה התחנה מוציא אנרגיה, ולכן הנקודה הנמוכה שוקעת עד להעלאה."
+  },
+  "wu": {
+    "fr": "D’un rayon r à 20r, un Hohmann coûte 4,13 km/s et la côte dure environ 1,1 jour. Un transfert bi-elliptique qui monte jusqu’à 40r, puis redescend à 20r, coûte 4,06 km/s et les côtes additionnent environ 8,1 jours. On économise un peu de vitesse et l’on dépense beaucoup de temps. Il ne gagne que pour un grand rapport de rayons. Le problème circulaire restreint à trois corps a cinq points de Lagrange. Une estimation de Hill place le point L2 Soleil–Terre à environ 1,50 million de km de la Terre, avec GM☉ = 1,327 124 400 18×10¹¹ km³/s² et 1 UA = 149 597 870,7 km. STScI : JWST orbite autour du L2 Soleil–Terre, à environ 1,5 million de km de la Terre. Il ne reste pas sur le point. Sa distance à L2 va de 250 000 km à 832 000 km, la période est d’environ six mois, et les corrections de maintien sont prévues environ tous les 42 jours. Un croquis en coniques raccordées utilise le μ de la Terre près de la Terre et le μ du Soleil plus loin. La sphère d’influence est la couture. C’est un plan, pas une intégration à n corps.",
+    "es": "De un radio r a 20r, un Hohmann cuesta 4,13 km/s y la costa dura unos 1,1 días. Una transferencia bielíptica que sube hasta 40r y luego baja a 20r cuesta 4,06 km/s y las costas suman unos 8,1 días. Se ahorra un poco de velocidad y se gasta mucho tiempo. Solo gana cuando el salto de radios es grande. El problema circular restringido de tres cuerpos tiene cinco puntos de Lagrange. Una estimación de Hill sitúa el punto L2 Sol–Tierra a unos 1,50 millones de km de la Tierra, con GM☉ = 1,327 124 400 18×10¹¹ km³/s² y 1 UA = 149 597 870,7 km. STScI: JWST orbita alrededor del L2 Sol–Tierra, a unos 1,5 millones de km de la Tierra. No se queda en el punto. Su distancia a L2 va de 250 000 km a 832 000 km, el periodo es de unos seis meses, y las maniobras de mantenimiento se programan unos cada 42 días. Un esquema de cónicas empalmadas usa la μ de la Tierra cerca de la Tierra y la μ del Sol más lejos. La esfera de influencia es la costura. Es un plan, no una integración de n cuerpos.",
+    "ar": "من نصف قطر r إلى 20r، يكلف هومان 4.13 كم/ث ويستغرق الانجراف نحو 1.1 يوم. انتقال ثنائي القطع يصعد إلى 40r ثم يهبط إلى 20r يكلف 4.06 كم/ث وتجمع الانجرافات نحو 8.1 أيام. تُوفَّر سرعة قليلة ويُصرَف وقت كثير. يفوز فقط حين تكون نسبة نصفي القطر كبيرة. لمسألة الأجسام الثلاثة الدائرية المقيدة خمس نقاط لاغرانج. تقدير هيل يضع نقطة L2 للشمس والأرض على بعد نحو 1.50 مليون كم من الأرض، باستخدام GM☉ = 1.327 124 400 18×10¹¹ كم³/ث² و1 وحدة فلكية = 149 597 870.7 كم. STScI: يدور JWST حول L2 للشمس والأرض، على بعد نحو 1.5 مليون كم من الأرض. لا يجلس على النقطة. تتراوح مسافته من L2 بين 250 000 كم و832 000 كم، والدورة نحو ستة أشهر، وحروق الحفاظ على المدار تُجدول كل 42 يومًا تقريبًا. رسم القطوع المرقعة يستخدم μ الأرض قرب الأرض وμ الشمس أبعد. كرة التأثير هي الوصلة. هذه خطة، لا تكاملًا لعدد n من الأجسام.",
+    "it": "Da un raggio r a 20r, un Hohmann costa 4,13 km/s e la costa dura circa 1,1 giorni. Un trasferimento biellittico che sale fino a 40r e poi scende a 20r costa 4,06 km/s e le coste sommano circa 8,1 giorni. Si risparmia un po’ di velocità e si spende molto tempo. Vince solo per un grande rapporto tra i raggi. Il problema circolare ristretto dei tre corpi ha cinque punti di Lagrange. Una stima di Hill mette il punto L2 Sole–Terra a circa 1,50 milioni di km dalla Terra, con GM☉ = 1,327 124 400 18×10¹¹ km³/s² e 1 UA = 149 597 870,7 km. STScI: JWST orbita intorno all’L2 Sole–Terra, a circa 1,5 milioni di km dalla Terra. Non sta fermo sul punto. La sua distanza da L2 va da 250 000 km a 832 000 km, il periodo è di circa sei mesi, e le manovre di mantenimento sono previste circa ogni 42 giorni. Uno schizzo a coniche raccordate usa la μ della Terra vicino alla Terra e la μ del Sole più lontano. La sfera di influenza è la cucitura. È un piano, non un’integrazione a n corpi.",
+    "he": "מרדיוס r עד 20r, מעבר הומן עולה 4.13 ק״מ/ש׳ והגלישה נמשכת כ-1.1 ימים. מעבר בי-אליפטי שעולה עד 40r ואז יורד ל-20r עולה 4.06 ק״מ/ש׳ והגלישות מסתכמות בכ-8.1 ימים. חוסכים מעט מהירות ומבלים הרבה זמן. הוא משתלם רק כשיחס הרדיוסים גדול. לבעיה המעגלית המצומצמת של שלושה גופים יש חמש נקודות לגראנז׳. אומדן היל שם את נקודת L2 של השמש וכדור הארץ במרחק של כ-1.50 מיליון ק״מ מכדור הארץ, עם GM☉ = 1.327 124 400 18×10¹¹ ק״מ³/ש׳² ו-1 יחידה אסטרונומית = 149 597 870.7 ק״מ. STScI: JWST מקיף את L2 של השמש וכדור הארץ, במרחק של כ-1.5 מיליון ק״מ מכדור הארץ. הוא אינו יושב על הנקודה. המרחק שלו מ-L2 נע בין 250 000 ק״מ ל-832 000 ק״מ, זמן ההקפה כשישה חודשים, ותמרוני שמירת המסלול מתוזמנים בערך כל 42 יום. סקיצה של חתכים חרוטיים מחוברים משתמשת ב-μ של כדור הארץ קרוב לכדור הארץ וב-μ של השמש רחוק יותר. כדור ההשפעה הוא התפר. זו תוכנית, לא אינטגרציה של n גופים."
+  },
+  "muq": {
+    "fr": "« Un transfert bi-elliptique est toujours moins cher, et L2 est un endroit où l’on peut se garer moteurs éteints. »",
+    "es": "« Una transferencia bielíptica siempre es más barata, y L2 es un sitio donde se puede aparcar con los motores apagados. »",
+    "ar": "« الانتقال ثنائي القطع أرخص دائمًا، وL2 مكان يمكن الركن فيه والمحركات مطفأة. »",
+    "it": "« Un trasferimento biellittico è sempre più economico, e L2 è un posto dove si può parcheggiare a motori spenti. »",
+    "he": "« מעבר בי-אליפטי תמיד זול יותר, ו-L2 הוא מקום שאפשר לחנות בו עם מנועים כבויים. »"
+  },
+  "mua": {
+    "fr": "Le bi-elliptique n’économise de la vitesse que pour un grand saut de rayon, et il coûte des jours de côte. Le L2 Soleil–Terre est instable le long de la ligne Soleil–Terre, c’est pourquoi JWST continue ses corrections.",
+    "es": "La bielíptica ahorra velocidad solo en un gran salto de radio, y cuesta días de costa. El L2 Sol–Tierra es inestable a lo largo de la línea Sol–Tierra, por eso JWST sigue haciendo mantenimiento.",
+    "ar": "ثنائي القطع يوفّر سرعة فقط لقفزة كبيرة في نصف القطر، ويكلف أيام انجراف. نقطة L2 للشمس والأرض غير مستقرة على خط الشمس والأرض، ولذلك يواصل JWST حروق الحفاظ.",
+    "it": "Il biellittico risparmia velocità solo per un grande salto di raggio, e costa giorni di costa. L’L2 Sole–Terra è instabile lungo la linea Sole–Terra, per questo JWST continua le manovre di mantenimento.",
+    "he": "הבי-אליפטי חוסך מהירות רק בקפיצת רדיוס גדולה, והוא עולה ימי גלישה. L2 של השמש וכדור הארץ אינו יציב לאורך קו השמש–ארץ, ולכן JWST ממשיך בתמרוני שמירה."
+  },
+  "qu": {
+    "fr": "Calculez l’énergie spécifique du cercle de la station à 400 km.",
+    "es": "Calcula la energía específica del círculo de la estación a 400 km.",
+    "ar": "احسب الطاقة النوعية لدائرة المحطة عند 400 كم.",
+    "it": "Calcola l’energia specifica del cerchio della stazione a 400 km.",
+    "he": "חשבו את האנרגיה הסגולית של מעגל התחנה ב-400 ק״מ."
+  },
+  "au": {
+    "fr": "ε = −μ/(2r) = −29,40 km²/s². Une énergie négative veut dire que la trajectoire est liée.",
+    "es": "ε = −μ/(2r) = −29,40 km²/s². Una energía negativa significa que la trayectoria está ligada.",
+    "ar": "ε = −μ/(2r) = −29.40 كم²/ث². الطاقة السالبة تعني أن المسار مقيد.",
+    "it": "ε = −μ/(2r) = −29,40 km²/s². Un’energia negativa significa che la traiettoria è legata.",
+    "he": "ε = −μ/(2r) = ‎−29.40 ק״מ²/ש׳². אנרגיה שלילית פירושה שהמסלול קשור."
+  },
+  "eu": {
+    "fr": "La traînée fait redescendre les débris en orbite basse, donc les opérateurs prévoient une fin de vie. Les débris près de l’orbite géostationnaire restent très longtemps, d’où les orbites cimetières. L’observation de la Terre a besoin de l’orbite et d’un ciel qui n’est pas plein de fragments.",
+    "es": "El arrastre hace bajar los restos en órbita baja, así que los operadores planean un fin de vida. Los restos cerca de la órbita geoestacionaria se quedan muchísimo tiempo, y por eso existen las órbitas cementerio. La observación de la Tierra necesita la órbita y un cielo que no esté lleno de fragmentos.",
+    "ar": "السحب يُنزل الحطام في المدار المنخفض، ولذلك يخطط المشغّلون لنهاية العمر. الحطام قرب المدار الثابت يبقى زمنًا طويلًا جدًا، ولهذا توجد مدارات المقبرة. رصد الأرض يحتاج المدار وسماء ليست ممتلئة بالشظايا.",
+    "it": "La resistenza fa scendere i detriti in orbita bassa, così gli operatori pianificano una fine vita. I detriti vicino all’orbita geostazionaria restano per moltissimo tempo, ed è per questo che esistono le orbite cimitero. L’osservazione della Terra ha bisogno dell’orbita e di un cielo che non sia pieno di frammenti.",
+    "he": "הגרר מוריד פסולת במסלול נמוך, ולכן המפעילים מתכננים סוף חיים. פסולת ליד המסלול הגיאוסטציונרי נשארת זמן ארוך מאוד, ולכן קיימים מסלולי בית קברות. תצפית ארץ צריכה את המסלול ושמיים שאינם מלאים בשברים."
+  },
+  "vu1": {
+    "fr": "ESA : Space debris — a journey to Earth. Les régimes d’orbite et ce qui arrive aux débris. Crédit : Agence spatiale européenne.",
+    "es": "ESA: Space debris — a journey to Earth. Los regímenes orbitales y qué pasa con los restos. Crédito: Agencia Espacial Europea.",
+    "ar": "ESA: Space debris — a journey to Earth. أنظمة المدارات وما يحدث للحطام. الإسناد: وكالة الفضاء الأوروبية.",
+    "it": "ESA: Space debris — a journey to Earth. I regimi orbitali e che cosa succede ai detriti. Credito: Agenzia Spaziale Europea.",
+    "he": "ESA: Space debris — a journey to Earth. משטרי מסלול ומה קורה לפסולת. קרדיט: סוכנות החלל האירופית."
+  },
+  "vu2": {
+    "fr": "ESA : Gaia, du lancement à l’orbite. Le transfert vers une orbite de Lissajous au L2 Soleil–Terre. Crédit : Agence spatiale européenne.",
+    "es": "ESA: Gaia, del lanzamiento a la órbita. La transferencia hacia una órbita de Lissajous en el L2 Sol–Tierra. Crédito: Agencia Espacial Europea.",
+    "ar": "ESA: Gaia، من الإطلاق إلى المدار. الانتقال نحو مدار ليساجو عند L2 للشمس والأرض. الإسناد: وكالة الفضاء الأوروبية.",
+    "it": "ESA: Gaia, dal lancio all’orbita. Il trasferimento verso un’orbita di Lissajous all’L2 Sole–Terra. Credito: Agenzia Spaziale Europea.",
+    "he": "ESA: Gaia, משיגור למסלול. המעבר אל מסלול ליסז׳ו ב-L2 של השמש וכדור הארץ. קרדיט: סוכנות החלל האירופית."
+  },
+  "vu3": {
+    "fr": "MIT OpenCourseWare 16.346, automne 2008 : A Funny Thing Happened on the Way to the Moon. Ce cours est une histoire du guidage d’Apollo. Ce n’est pas une dérivation du transfert de Hohmann. Crédit : MIT OpenCourseWare.",
+    "es": "MIT OpenCourseWare 16.346, otoño de 2008: A Funny Thing Happened on the Way to the Moon. Esta clase es una historia del guiado del Apolo. No es una deducción de la transferencia de Hohmann. Crédito: MIT OpenCourseWare.",
+    "ar": "MIT OpenCourseWare 16.346، خريف 2008: A Funny Thing Happened on the Way to the Moon. هذه المحاضرة تاريخ توجيه أبولو. ليست اشتقاقًا لانتقال هومان. الإسناد: MIT OpenCourseWare.",
+    "it": "MIT OpenCourseWare 16.346, autunno 2008: A Funny Thing Happened on the Way to the Moon. Questa lezione è una storia della guida dell’Apollo. Non è una derivazione del trasferimento di Hohmann. Credito: MIT OpenCourseWare.",
+    "he": "MIT OpenCourseWare 16.346, סתיו 2008: A Funny Thing Happened on the Way to the Moon. ההרצאה הזו היא היסטוריה של הנחיית אפולו. היא אינה גזירה של מעבר הומן. קרדיט: MIT OpenCourseWare."
+  },
+  "slead": {
+    "fr": "Le globe est une photographie NASA Blue Marble, dessinée à l’échelle avec la trajectoire. Les boutons 5, 7,73, 9 et 11,2 km/s partent tous de 300 km d’altitude, en allant de côté. 11,2 km/s est au-dessus de la vitesse de libération à cette altitude, donc la trajectoire s’en va.",
+    "es": "El globo es una fotografía NASA Blue Marble, dibujada a escala con la trayectoria. Los botones 5, 7,73, 9 y 11,2 km/s salen todos de 300 km de altitud, moviéndose de lado. 11,2 km/s está por encima de la velocidad de escape a esa altitud, así que la trayectoria se va.",
+    "ar": "الكرة صورة Blue Marble من ناسا، مرسومة بمقياس المسار. أزرار 5 و7.73 و9 و11.2 كم/ث تبدأ كلها من ارتفاع 300 كم، وهي تتحرك جانبيًا. 11.2 كم/ث أعلى من سرعة الإفلات عند ذلك الارتفاع، فالمسار يغادر.",
+    "it": "Il globo è una fotografia NASA Blue Marble, disegnata in scala con la traiettoria. I pulsanti 5, 7,73, 9 e 11,2 km/s partono tutti da 300 km di quota, muovendosi di lato. 11,2 km/s è sopra la velocità di fuga a quella quota, quindi la traiettoria se ne va.",
+    "he": "הגלובוס הוא תצלום Blue Marble של נאס״א, מצויר בקנה מידה עם המסלול. הכפתורים 5,‏ 7.73,‏ 9 ו-11.2 ק״מ/ש׳ מתחילים כולם מגובה 300 ק״מ, בתנועה הצידה. 11.2 ק״מ/ש׳ מעל מהירות הבריחה בגובה הזה, ולכן המסלול עוזב."
+  },
+  "areaRead": {
+    "fr": "Les deux secteurs colorés sont des temps égaux, donc des aires égales. Près du point bas, l’engin balaie un angle plus large. Près du point haut, il balaie un angle étroit.",
+    "es": "Las dos cuñas sombreadas son tiempos iguales, y por tanto áreas iguales. Cerca del punto bajo la nave barre un ángulo más ancho. Cerca del punto alto barre uno estrecho.",
+    "ar": "القطاعان المظلّلان زمنان متساويان، وبالتالي مساحتان متساويتان. قرب النقطة المنخفضة تمسح المركبة زاوية أوسع. قرب النقطة العالية تمسح زاوية ضيقة.",
+    "it": "I due spicchi ombreggiati sono tempi uguali, e quindi aree uguali. Vicino al punto basso il veicolo spazza un angolo più largo. Vicino al punto alto ne spazza uno stretto.",
+    "he": "שני הגזרים המוצללים הם זמנים שווים, ולכן שטחים שווים. ליד הנקודה הנמוכה הכלי גורף זווית רחבה יותר. ליד הנקודה הגבוהה הוא גורף זווית צרה."
+  }
+}

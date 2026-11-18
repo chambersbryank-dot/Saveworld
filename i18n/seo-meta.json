@@ -1078,23 +1078,23 @@
   },
   "Orbits_Guide.html": {
     "ar": {
-      "description": "لماذا لا تسقط الأقمار الصناعية، وما سرعتها، وكيف تغيّر الصواريخ مداراتها، بلغة بسيطة تناسب الأطفال والمراهقين وطلاب الجامعة.",
+      "description": "المدارات من الصورة الأولى حتى تصميم المهمة: سرعات حقيقية للمحطة وGPS والمدار الثابت، وتجربة Blue Marble، ومفتاح إجابات للطباعة.",
       "title": "شرح المدارات: لماذا لا تسقط الأقمار الصناعية"
     },
     "en": {
-      "description": "Why satellites don’t fall down, how fast they go, and how rockets change orbits, in plain language for kids, teens and college students.",
+      "description": "Orbits from a first picture to university mission design: real speeds for the space station, GPS and GEO, a Blue Marble sandbox, and a printable answer key.",
       "title": "Orbits Explained: Why Satellites Don’t Fall"
     },
     "es": {
-      "description": "Por qué los satélites no se caen, a qué velocidad van y cómo los cohetes cambian de órbita, en lenguaje sencillo, de niños a universitarios.",
+      "description": "Órbitas desde la primera imagen hasta el diseño de una misión: velocidades reales de la estación, el GPS y la GEO, un banco de pruebas Blue Marble y una clave para imprimir.",
       "title": "Las órbitas explicadas: por qué no caen los satélites"
     },
     "fr": {
-      "description": "Pourquoi les satellites ne tombent pas, à quelle vitesse ils vont et comment les fusées changent d’orbite, en langage simple, des enfants aux étudiants.",
+      "description": "Les orbites, du premier dessin jusqu’au dessin de mission : vitesses réelles pour la station, le GPS et l’orbite géostationnaire, un bac à sable Blue Marble et un corrigé à imprimer.",
       "title": "Les orbites : pourquoi les satellites ne tombent pas"
     },
     "it": {
-      "description": "Perché i satelliti non cadono, quanto vanno veloci e come i razzi cambiano orbita, in parole semplici, dai bambini agli studenti universitari.",
+      "description": "Orbite dal primo disegno al progetto di missione: velocità reali per la stazione, il GPS e l’orbita geostazionaria, una sandbox Blue Marble e le soluzioni da stampare.",
       "title": "Le orbite spiegate: perché i satelliti non cadono"
     }
   },
