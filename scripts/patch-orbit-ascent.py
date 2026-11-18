@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Insert the to-scale ascent visual into Orbit_Lab.html (en, fr, es, ar, it)."""
-import html, json, os, re
+import html, json, os, re, sys
 LANGS = ['en', 'fr', 'es', 'ar', 'it']
+HE = json.loads((__import__('pathlib').Path(__file__).with_name('ascent_he.json')).read_text(encoding='utf-8'))
 def T(en, fr, es, ar, it):
-    return dict(en=en, fr=fr, es=es, ar=ar, it=it)
+    return dict(en=en, fr=fr, es=es, ar=ar, it=it, he=HE.get(en, en))
 S = {
  'h': T('Reaching orbit', 'Atteindre l’orbite', 'Llegar a la órbita', 'الوصول إلى المدار', 'Raggiungere l’orbita'),
  'lead': T('A satellite stays up because it moves sideways fast enough to fall around Earth. At 400 km that speed is 7.67 km/s, from μ = 398 600.4418 km³/s² and the WGS-84 radius. Height alone brings you back down.',
@@ -277,7 +278,7 @@ def block(l):
             f'<p class="lnote">{e(S["credit"][l])} <a href="https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry">NASA Visible Earth 73909</a>. '
             f'<a href="https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/">NASA Science</a>. '
             f'<a href="https://www.nasa.gov/image-article/earths-atmospheric-layers-3/">NASA layers</a>. '
-            f'<a href="https://www.grc.nasa.gov/www/k-12/airplane/rockth.html">NASA Glenn thrust</a>.</p>{ns}</section>'
+            f'<a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/nozzle-design/">NASA Glenn nozzle design</a>.</p>{ns}</section>'
             f'<h2>{e(S["stay"][l])}</h2>')
 
 def async_css(tag_href):
@@ -301,9 +302,10 @@ def patch(path, l):
            f'<script src="{pre}assets/orbit-ascent.js?v=20261118b" defer></script>'
            f'<script src="{pre}assets/orbit-lab.js?v=20261118b" defer></script>')
     if 'earth-globe.js' not in s:
-        if old not in s:
+        pat = rf'<script(?:\s+defer="")?\s+src="{re.escape(pre)}assets/orbit-lab\.js\?v=20261016P"(?:\s+defer="")?\s*></script>'
+        if not re.search(pat, s) and old not in s:
             raise SystemExit('script tag missing ' + path)
-        s = s.replace(old, new, 1)
+        s = re.sub(pat, new, s, count=1) if re.search(pat, s) else s.replace(old, new, 1)
     for href in (f'{pre}assets/share-bar.css?v=20261113d', f'{pre}footer-v2.css?v=20261103a'):
         raw = f'<link rel="stylesheet" href="{href}">'
         if raw in s:
@@ -312,5 +314,6 @@ def patch(path, l):
     print('patched', path)
 
 if __name__ == '__main__':
-    for l in LANGS:
+    langs = sys.argv[1:] or LANGS
+    for l in langs:
         patch('Orbit_Lab.html' if l == 'en' else f'{l}/Orbit_Lab.html', l)
