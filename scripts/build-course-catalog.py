@@ -76,14 +76,14 @@ UI = {
 }
 LANGNAME = {'en': 'English', 'fr': 'Français', 'es': 'Español', 'ar': 'العربية', 'it': 'Italiano', 'he': 'עברית'}
 JS = r"""<script>(function(){var root=document.querySelector('.crs');if(!root)return;var bar=root.querySelector('.crs-filters');if(!bar)return;
-var cards=[].slice.call(root.querySelectorAll('.crs-c')),state={level:'',subject:'',lang:''};
+var state={level:'',subject:'',lang:''};
 var out=bar.querySelector('[data-count]'),tpl=out?out.getAttribute('data-tpl'):'{n}';
-function apply(){var n=0;cards.forEach(function(c){var ok=(!state.level||c.dataset.level===state.level)&&(!state.subject||c.dataset.subject===state.subject)&&(!state.lang||(c.dataset.langs||'').split(' ').indexOf(state.lang)>=0);c.hidden=!ok;if(ok)n++});
+function apply(){var n=0;root.querySelectorAll('.crs-c').forEach(function(c){var ok=(!state.level||c.dataset.level===state.level)&&(!state.subject||c.dataset.subject===state.subject)&&(!state.lang||(c.dataset.langs||'').split(' ').indexOf(state.lang)>=0);c.hidden=!ok;if(ok)n++});
 root.querySelectorAll('section[id^="y"]').forEach(function(sec){var any=false;sec.querySelectorAll('.crs-c').forEach(function(c){if(!c.hidden)any=true});sec.hidden=!any});
 if(out)out.textContent=tpl.replace('{n}',n)}
 bar.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;var k=b.dataset.k,v=b.dataset.v||'';state[k]=v;
 bar.querySelectorAll('button[data-k="'+k+'"]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});apply()});
-apply()})();</script>"""
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();</script>"""
 
 def published(page):
     return [l for l in LANGS if os.path.exists(page if l == 'en' else f'{l}/{page}')]
