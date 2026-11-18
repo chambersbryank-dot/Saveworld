@@ -55,8 +55,8 @@ def calc_widget(l, subj, NL):
             f'<div id="lhp" role="tabpanel" tabindex="0"><iframe title="" loading="lazy"></iframe><p><a class="lhc-full" href="#">{esc(u("full", l))} ↗</a></p></div>'
             f'<ul hidden class="lhc-data">{data}</ul></section>')
 CSS = ('<style>.lhv{font-size:1.12rem;max-width:46rem}.lht{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:.9rem;list-style:none;padding:0;margin:1rem 0}'
-       '.lht a{display:flex;flex-direction:column;gap:.3rem;height:100%;box-sizing:border-box;padding:1rem 1.1rem;border-radius:18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);text-decoration:none;color:inherit}'
-       '.lht a:hover,.lht a:focus-visible{border-color:#ffd54a}.lht b{font-size:1.15rem}.lht small{opacity:.85}.lht .lht-main{grid-column:1/-1}.lht .lht-main a{border-color:#ffd54a;background:rgba(255,213,74,.09)}'
+       '.lht > li > a{display:flex;flex-direction:column;gap:.3rem;height:100%;box-sizing:border-box;padding:1rem 1.1rem;border-radius:18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);text-decoration:none;color:inherit}'
+       '.lht > li > a:hover,.lht > li > a:focus-visible{border-color:#ffd54a}.lht b{font-size:1.15rem}.lht small{opacity:.85}.lht .lht-main{grid-column:1/-1}.lht > li.lht-main > a{border-color:#ffd54a;background:rgba(255,213,74,.09)}'
        '.lhm{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}.lhm a{display:inline-flex;align-items:center;min-height:44px;padding:.3rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);text-decoration:none;color:inherit;font-weight:700}'
        '.lhc{margin:1.6rem 0;padding:1rem;border-radius:18px;border:1px solid rgba(255,213,74,.5);background:rgba(255,255,255,.04)}.lhc-lab{margin:.4rem 0 .2rem;font-weight:700;font-size:.9rem}'
        '.lhc-tabs{display:flex;flex-wrap:wrap;gap:.4rem}.lhc-tabs button{min-height:44px;padding:.3rem .9rem;border-radius:999px;font:inherit;cursor:pointer;border:1px solid rgba(255,255,255,.4);background:transparent;color:inherit}'
@@ -262,12 +262,14 @@ STUDY_CSS = ('<style>.lst-filters{display:flex;flex-wrap:wrap;gap:.55rem;align-i
     'border:1px solid rgba(160,225,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08)}'
     '.lst-filters button[aria-checked=true]{box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 0 0 3px #fff}'
     '.lst-filters button:focus-visible,.lst-filters input:focus-visible{outline:3px solid #fff;outline-offset:3px}'
-    '.lst-filters input[type=search]{min-height:44px;min-width:min(100%,14rem);border-radius:999px;padding:.35rem .95rem;font:inherit;color:inherit;background:rgba(10,79,120,.28);border:1px solid rgba(160,225,255,.55)}'
+    '.lst-filters input[type=search]{min-height:44px;min-width:min(100%,14rem);flex:1 1 14rem;border-radius:999px;padding:.35rem .95rem;font:inherit;color:inherit;background:rgba(10,79,120,.28);border:1px solid rgba(160,225,255,.55)}'
+    '@media (max-width:640px){.lst-filters{flex-direction:column;align-items:stretch}.lst-filters [role=radiogroup]{width:100%}.lst-filters input[type=search]{width:100%;min-width:0;flex:0 0 auto;box-sizing:border-box}}'
     '.lht .lstudy{display:flex;flex-direction:column;gap:.4rem;height:100%;box-sizing:border-box;padding:1rem 1.1rem;border-radius:18px;border:1px solid rgba(160,225,255,.35);background:rgba(10,79,120,.16)}'
-    '.lht .lstudy>a{display:flex;flex-direction:column;gap:.3rem;padding:0;border:0;background:transparent;height:auto;text-decoration:none;color:inherit}'
+    '.lht > li.lstudy > a{display:flex;flex-direction:column;gap:.3rem;padding:0;border:0;background:transparent;height:auto;text-decoration:none;color:inherit}'
     '.lht .lht-main.lstudy{border-color:rgba(160,225,255,.75);background:rgba(10,79,120,.3)}'
     '.ltags{display:flex;flex-wrap:wrap;gap:.35rem}.ltag{align-self:flex-start;font-size:.75rem;font-weight:800;padding:.12rem .55rem;border-radius:999px;background:rgba(10,79,120,.55);border:1px solid rgba(160,225,255,.5)}'
-    '.lplanet{margin:0;font-size:.92rem}.lplanet a{font-weight:800}.lsg[hidden],.lstudy[hidden],#lst-empty[hidden]{display:none!important}'
+    '.lplanet{margin:0;font-size:.92rem;line-height:1.45}.lplanet a{display:inline;height:auto;padding:0;margin:0;border:0;border-radius:0;background:none;box-shadow:none;font-weight:800;text-decoration:underline;color:inherit}'
+    '.lsg[hidden],.lstudy[hidden],#lst-empty[hidden]{display:none!important}'
     '@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){.lst-filters button{background:#0a4f78;background-image:none;box-shadow:none}}'
     '@media (forced-colors:active){.lst-filters button{border:1px solid ButtonText}}</style>')
 STUDY_JS = ("<script>(function(){var bar=document.querySelector('.lst-filters');if(!bar)return;"
@@ -379,7 +381,7 @@ def landing(l, NL=None):
     chips = ''.join(
         f'<button type="button" role="radio" data-lv="{k}" aria-checked="{"true" if k == "all" else "false"}" tabindex="{"0" if k == "all" else "-1"}">{esc(X.STUDY[k][l])}</button>'
         for k in ('all', 'k12', 'uni', 'teachers'))
-    blk = (f'<!-- LEARNHUB:START -->{CSS}{STUDY_CSS}<h2 id="topics">{esc(u("topics", l))}</h2>'
+    blk = (f'<!-- LEARNHUB:START -->{CSS}{STUDY_CSS}<h2 id="topics">{esc(u("studies", l))}</h2>'
            f'<div class="lst-filters"><div role="radiogroup" aria-label="{esc(X.STUDY["level"][l])}">{chips}</div>'
            f'<input type="search" aria-label="{esc(X.STUDY["byname"][l])}" placeholder="{esc(X.STUDY["byname"][l])}"></div>'
            f'{groups}<p id="lst-empty" hidden>{esc(X.STUDY["none"][l])}</p>'
