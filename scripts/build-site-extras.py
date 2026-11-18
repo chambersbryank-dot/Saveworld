@@ -110,17 +110,17 @@ _MAP_RX = re.compile(r'<!-- FOOTER-MAP:START -->[\s\S]*?<!-- FOOTER-MAP:END -->'
 _P_RX = re.compile(r'<p\b[^>]*>.*?</p>\s*', re.S)
 # Short copyright line (no Pexels / site-map links). The homepage line is this sentence plus the Pexels clause.
 _GENERIC_COPY = {
-    'en': ('<p>&copy; 2026 Saving Planets • Positive action for a thriving Earth • Page verified October 2026</p>',
+    'en': ('<p>&copy; 2026 Saving Planets • Positive action for a thriving Earth • Sources are listed on the page</p>',
            '<p>&copy; 2026 Saving Planets • Positive action for a thriving Earth</p>'),
-    'fr': ('<p>© 2026 Saving Planets • Agir positivement pour une Terre florissante • Page vérifiée en octobre 2026</p>',
+    'fr': ('<p>© 2026 Saving Planets • Agir positivement pour une Terre florissante • Les sources sont indiquées sur la page</p>',
            '<p>© 2026 Saving Planets • Agir positivement pour une Terre florissante</p>'),
-    'es': ('<p>© 2026 Saving Planets • Acción positiva por una Tierra próspera • Página verificada en octubre de 2026</p>',
+    'es': ('<p>© 2026 Saving Planets • Acción positiva por una Tierra próspera • Las fuentes están indicadas en la página</p>',
            '<p>© 2026 Saving Planets • Acción positiva por una Tierra próspera</p>'),
-    'ar': ('<p>© 2026 Saving Planets • عمل إيجابي من أجل أرض مزدهرة • تم التحقق من الصفحة في أكتوبر 2026</p>',
+    'ar': ('<p>© 2026 Saving Planets • عمل إيجابي من أجل أرض مزدهرة • المصادر مذكورة في الصفحة</p>',
            '<p>© 2026 Saving Planets • عمل إيجابي من أجل أرض مزدهرة</p>'),
-    'it': ('<p>© 2026 Saving Planets • Azione positiva per una Terra in salute • Pagina verificata a ottobre 2026</p>',
+    'it': ('<p>© 2026 Saving Planets • Azione positiva per una Terra in salute • Le fonti sono indicate nella pagina</p>',
            '<p>© 2026 Saving Planets • Azione positiva per una Terra in salute</p>'),
-    'he': ('<p>© 2026 Saving Planets • פעולה חיובית למען כדור ארץ משגשג • הדף אומת באוקטובר 2026</p>',
+    'he': ('<p>© 2026 Saving Planets • פעולה חיובית למען כדור ארץ משגשג • המקורות מצוינים בעמוד</p>',
            '<p>© 2026 Saving Planets • פעולה חיובית למען כדור ארץ משגשג</p>'),
 }
 

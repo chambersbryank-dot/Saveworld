@@ -1,0 +1,14 @@
+.gc-panel{margin:.8rem 0 1rem;padding:.75rem 1rem;border:1px solid rgba(255,255,255,.28);border-radius:14px;max-width:40rem}
+.gc-panel fieldset{border:0;padding:0;margin:.4rem 0;display:flex;flex-wrap:wrap;gap:.45rem .8rem}
+.gc-panel legend,.gc-h{font-weight:700}
+.gc-panel label{min-height:44px;display:inline-flex;align-items:center;gap:.35rem}
+.gc-show,.gc-print,.gc-panel a.gc-fallback,.gc-panel a.gc-student{min-height:44px;display:inline-flex;align-items:center;padding:0 .8rem;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;font:inherit;cursor:pointer;text-decoration:none}
+.gc-copy,.gc-later{font-size:.92rem;line-height:1.45}
+.gc-official{min-height:32px;margin:.4rem 0}
+.student-view .std-box,.student-view .teacher-actions,.student-view .gc-panel,.student-view .share-bar,.student-view .lb-tools,.student-view .lb-teacher-only{display:none !important}
+.gc-student-banner{margin:1rem}
+.myth-related a{display:inline-flex;align-items:center;min-height:44px;padding:.2rem 0}
+.leaflet-control-attribution,.leaflet-control-attribution a{color:#10243a !important;background:#fff}
+.page-hero.has-video{height:52vh;min-height:320px;max-height:560px}
+.page-hero.has-video .hero-media{position:absolute;inset:0}
+@media print{body.answer-key details{display:block}body.answer-key details>*{display:block !important}.gc-panel{display:none}}
