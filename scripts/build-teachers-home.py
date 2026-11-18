@@ -315,6 +315,18 @@ def clip(text, n=150):
 def short(code):
     return code.replace('CCSS.ELA-LITERACY.', 'CCSS ')
 
+def tighten(codes, D):
+    """One grade band and at most 5 codes. Do not add codes. If a sheet already
+    lists more than one band, keep the band that already has the most codes.
+    On a tie, keep the higher band. Reading-only sheets stay reading-only."""
+    if not codes: return list(codes)
+    by = {}
+    for c in codes:
+        by.setdefault(D['codes'][c]['band'], []).append(c)
+    if len(by) == 1:
+        return codes[:5]
+    best = max(BANDS, key=lambda b: (len(by.get(b, [])), BANDS.index(b)))
+    return by[best][:5]
 def update_standards():
     path = 'assets/data/standards.json'
     raw = read(path)
@@ -324,9 +336,24 @@ def update_standards():
     if set(PAGE_TAGS) - set(PARTIAL) != set(PAGE_TAGS) - set(PARTIAL):
         pass
     changed = False
+    note = 'November 18, 2026: each sheet keeps one grade band and at most 5 codes that were already on it. No code was added. If a sheet listed more than one band, the band that already had the most codes was kept. On a tie, the higher band was kept.'
+    if note not in D.get('_note', ''):
+        D['_note'] = (D.get('_note', '') + ' ' + note).strip()
+        changed = True
+    for hub, codes in list(D['hubs'].items()):
+        tight = tighten(codes, D)
+        if tight != codes:
+            D['hubs'][hub] = tight
+            changed = True
+    for page, codes in list(D.get('pages', {}).items()):
+        tight = tighten(codes, D)
+        if tight != codes:
+            D['pages'][page] = tight
+            changed = True
     for page, codes in PAGE_TAGS.items():
-        if D['pages'].get(page) != codes:
-            D['pages'][page] = codes
+        tight = tighten(codes, D)
+        if D['pages'].get(page) != tight:
+            D['pages'][page] = tight
             changed = True
     if changed:
         # Keep the file's existing layout if a full dump would rewrite every line.
@@ -655,7 +682,10 @@ def render(lang, data, D, PH, hooks):
                 if page not in chosen and band in info(page)[1]:
                     chosen.append(page)
                 if len(chosen) == 3: break
-        if len(chosen) < 3: raise SystemExit(f'{lang} kit {band} only found {chosen}')
+        if not chosen:
+            bits = [f'<article class="t-kit"><h3 dir="ltr">{E(band)}</h3><p class="t-kit-note">{E(data.get("none") or "No sheets match this filter.")}</p></article>']
+            kits.append(''.join(bits))
+            continue
         n = len({page for _h, page, _t in rows if band in info(page)[1]})
         label = band_label(lang, preset)
         if preset and not label:
@@ -776,6 +806,27 @@ def grab(s, name):
     m = re.search(r'<!-- %s:START -->.*?<!-- %s:END -->' % (name, name), s, re.S)
     return m.group(0) if m else ''
 
+# Solution pages that already have a teacher box but were not in the Solutions
+# directory, so the catalog had no card. Facts stay on the solution page.
+EXTRA_SHEETS = ['Blue_Ventures.html', 'Cuyahoga_River_Cleanup.html', 'Hawaiian_Monk_Seal_Recovery.html', 'Ice_Memory_Sanctuary.html', 'Lake_Washington_Cleanup.html', 'Mekong_River_Commission.html', 'MicroCarb.html', 'Minor_Planet_Center.html', 'Mono_Lake_Committee.html', 'NSIDC.html', 'North_Aral_Sea.html', 'Phoenix_Islands_Protected_Area.html', 'Proba-3.html', 'Rare_Fish_Forever.html', 'Rewilding_Argentina_Ibera_Jaguars.html', 'SMOS.html', 'SOS_Mata_Atlantica.html', 'Save_the_Elephants.html', 'Snow_Leopard_Trust.html', 'Vera_C_Rubin_Observatory.html']
+CAT_HUB = {'ocean': 'Oceans.html', 'rivers': 'Rivers.html', 'lakes': 'Lakes.html', 'forests': 'Deforestation.html', 'polar': 'Polar.html', 'earth-observation': 'Earth_Observation.html', 'planetary-defense': 'Planetary_Defense.html', 'space-weather': 'Space_Weather.html', 'space': 'Space.html', 'space-disposal': 'Space_Disposal.html', 'project-r': 'Project-Rawane.html'}
+def add_missing_sheets(lang, data):
+    have = {page for hub in data['hubs'] for page, _t in hub['items']}
+    by_href = {h['href']: h for h in data['hubs']}
+    added = 0
+    for page in EXTRA_SHEETS:
+        if page in have: continue
+        path = folder(lang) + page
+        if not os.path.exists(path): continue
+        s = read(path)
+        if 'id="teachers"' not in s: continue
+        cat = re.search(r'name="sp:category" content="([^"]+)"', s)
+        hub = CAT_HUB.get(cat.group(1) if cat else '')
+        if not hub or hub not in by_href: continue
+        by_href[hub]['items'].append((page, h1_of(lang, page)))
+        have.add(page)
+        added += 1
+    return added
 def apply_lang(lang, D, PH):
     path = folder(lang) + 'Teachers.html'
     s = read(path)
@@ -786,6 +837,7 @@ def apply_lang(lang, D, PH):
     footer = foot(s)
     cf = re.search(r'<!-- CF-WA:START -->.*?<!-- CF-WA:END -->', s, re.S)
     data = parse(s)
+    add_missing_sheets(lang, data)
     data['secondary'] = list(SECONDARY_LABELS[lang])
     data['print_label'] = PRINT_LABEL[lang]
     order = {h: i for i, h in enumerate(HUB_LEAD)}

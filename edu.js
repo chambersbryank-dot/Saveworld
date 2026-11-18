@@ -88,10 +88,14 @@
     function tools(h, B, min) {
       var bar = document.getElementById('lb-tools');
       if (!bar) { bar = document.createElement('div'); bar.id = 'lb-tools'; bar.className = 'lb-actions lb-tools no-print'; var pb = document.getElementById('lb-print'); pb.parentNode.insertBefore(bar, pb.nextSibling); }
-      var gc = 'https://classroom.google.com/share?url=' + encodeURIComponent(location.href);
+      var gc = (window.spClassroom && window.spClassroom.shareUrl) ? window.spClassroom.shareUrl(location.href) : ('https://classroom.google.com/share?url=' + encodeURIComponent(location.href));
       bar.innerHTML = '<button type="button" class="btn hero-cta" data-act="copy">' + esc(X.copy) + '</button>' +
-        '<a class="btn hero-cta" data-act="classroom" href="' + esc(gc) + '" target="_blank" rel="noopener noreferrer">' + esc(X.gc) + '</a>' +
-        '<span class="lb-small" role="status" aria-live="polite"></span>';
+        '<span class="lb-small" role="status" aria-live="polite"></span><div id="lb-classroom"></div>';
+      if (window.spClassroom) window.spClassroom.mount(document.getElementById('lb-classroom'), {
+        url: location.href, title: (document.querySelector('#lb-plan h2') || {}).textContent || document.title,
+        body: X.gc, itemtype: 'assignment', answerKey: true, hash: ''
+      });
+      else bar.insertAdjacentHTML('beforeend', '<a class="btn hero-cta" data-act="classroom" href="' + esc(gc) + '" target="_blank" rel="noopener noreferrer">' + esc(X.gc) + '</a>');
     }
     function planLabel() {
       var b = String(lb.elements.band.value || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 8);
@@ -158,7 +162,7 @@
         '<h3>' + esc(L.h.sources) + '</h3><ul class="lb-small">' +
           sols.map(function (s) { return '<li>Saving Planets. (n.d.). ' + esc(s.t) + '. ' + esc(s.abs) + '</li>'; }).join('') +
           facts.map(function (f) { return '<li>' + esc(f.sn) + '. ' + esc(f.src) + '</li>'; }).join('') + '</ul>' +
-        stdHtml(hub) +
+        '<div class="lb-teacher-only">' + stdHtml(hub) + '</div>' +
         '<p class="lb-small">' + esc(L.footer) + '</p>';
       out.innerHTML = html; out.hidden = false;
       document.getElementById('lb-print').hidden = false;

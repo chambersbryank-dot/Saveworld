@@ -356,6 +356,13 @@
   "he": "דינמיקה",
   "it": "Dinamica"
  },
+ "Each link is a free public source already used in this course. Listing a source is not an endorsement.": {
+  "fr": "Chaque lien est une source publique gratuite déjà utilisée dans ce cours. Citer une source n’est pas une approbation.",
+  "es": "Cada enlace es una fuente pública gratuita que este curso ya usa. Citar una fuente no es un aval.",
+  "ar": "كل رابط مصدر عام مجاني مستخدم أصلًا في هذا المقرر. ذكر المصدر ليس تزكية.",
+  "it": "Ogni link è una fonte pubblica gratuita già usata in questo corso. Citare una fonte non è un’approvazione.",
+  "he": "כל קישור הוא מקור פומבי חינמי שכבר בשימוש בקורס הזה. ציון מקור אינו הסכמה."
+ },
  "Each unit ends with a short, sourced section showing how its ideas help both people and nature.": {
   "ar": "تنتهي كل وحدة بقسم قصير موثّق بالمصادر يبيّن كيف تساعد أفكارها الناس والطبيعة معًا.",
   "es": "Cada unidad termina con una breve sección con fuentes que muestra cómo sus ideas ayudan a las personas y a la naturaleza.",
@@ -426,6 +433,13 @@
   "he": "דוגמה {n}",
   "it": "Esempio {n}"
  },
+ "Exams with solutions": {
+  "fr": "Examens avec solutions",
+  "es": "Exámenes con soluciones",
+  "ar": "امتحانات مع الحلول",
+  "it": "Esami con soluzioni",
+  "he": "בחינות עם פתרונות"
+ },
  "Final practice set": {
   "ar": "مجموعة التدريب النهائية",
   "es": "Serie de práctica final",
@@ -488,6 +502,27 @@
   "fr": "Fiche de formules",
   "he": "דף נוסחאות",
   "it": "Formulario"
+ },
+ "Free Saving Planets exam. No university credit. Listing a source is not an endorsement.": {
+  "fr": "Examen gratuit de Saving Planets. Aucun crédit universitaire. Citer une source n’est pas une approbation.",
+  "es": "Examen gratuito de Saving Planets. Sin crédito universitario. Citar una fuente no es un aval.",
+  "ar": "امتحان مجاني من Saving Planets. بلا ساعات جامعية. ذكر المصدر ليس تزكية.",
+  "it": "Esame gratuito di Saving Planets. Nessun credito universitario. Citare una fonte non è un’approvazione.",
+  "he": "בחינה חינמית של Saving Planets. בלי נקודות זכות אקדמיות. ציון מקור אינו הסכמה."
+ },
+ "Free Saving Planets lesson. No university credit. Listing a source is not an endorsement.": {
+  "fr": "Leçon gratuite de Saving Planets. Aucun crédit universitaire. Citer une source n’est pas une approbation.",
+  "es": "Lección gratuita de Saving Planets. Sin crédito universitario. Citar una fuente no es un aval.",
+  "ar": "درس مجاني من Saving Planets. بلا ساعات جامعية. ذكر المصدر ليس تزكية.",
+  "it": "Lezione gratuita di Saving Planets. Nessun credito universitario. Citare una fonte non è un’approvazione.",
+  "he": "שיעור חינמי של Saving Planets. בלי נקודות זכות אקדמיות. ציון מקור אינו הסכמה."
+ },
+ "Free Saving Planets problem set. No university credit. Listing a source is not an endorsement.": {
+  "fr": "Série gratuite de Saving Planets. Aucun crédit universitaire. Citer une source n’est pas une approbation.",
+  "es": "Serie gratuita de Saving Planets. Sin crédito universitario. Citar una fuente no es un aval.",
+  "ar": "مجموعة مسائل مجانية من Saving Planets. بلا ساعات جامعية. ذكر المصدر ليس تزكية.",
+  "it": "Esercizio gratuito di Saving Planets. Nessun credito universitario. Citare una fonte non è un’approvazione.",
+  "he": "דף תרגילים חינמי של Saving Planets. בלי נקודות זכות אקדמיות. ציון מקור אינו הסכמה."
  },
  "Free learning resources": {
   "ar": "مصادر تعلّم مجانية",
@@ -664,12 +699,33 @@
   "he": "מטרות הלמידה",
   "it": "Obiettivi di apprendimento"
  },
+ "Learning outcomes": {
+  "fr": "Objectifs d’apprentissage",
+  "es": "Resultados de aprendizaje",
+  "ar": "نواتج التعلّم",
+  "it": "Obiettivi di apprendimento",
+  "he": "תוצרי למידה"
+ },
+ "Lecture notes by session": {
+  "fr": "Notes de cours par séance",
+  "es": "Apuntes por sesión",
+  "ar": "ملاحظات المحاضرة حسب الحصة",
+  "it": "Appunti per sessione",
+  "he": "רשימות לפי מפגש"
+ },
  "Level": {
   "ar": "المستوى",
   "es": "Nivel",
   "fr": "Niveau",
   "he": "רמה",
   "it": "Livello"
+ },
+ "License:": {
+  "fr": "Licence :",
+  "es": "Licencia:",
+  "ar": "الترخيص:",
+  "it": "Licenza:",
+  "he": "רישיון:"
  },
  "Lift, drag and airflow over wings.": {
   "ar": "الرفع والسحب وتدفق الهواء فوق الأجنحة.",
@@ -698,6 +754,13 @@
   "fr": "Algèbre linéaire",
   "he": "אלגברה לינארית",
   "it": "Algebra lineare"
+ },
+ "Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.": {
+  "fr": "Lien fourni uniquement pour l’étude gratuite ; Saving Planets n’est ni affilié à cette université ni soutenu par elle.",
+  "es": "Enlace solo para estudio gratuito; Saving Planets no está afiliado a esta universidad ni cuenta con su respaldo.",
+  "ar": "الرابط للدراسة المجانية فقط؛ Saving Planets غير تابع لهذه الجامعة ولا يحظى بتأييدها.",
+  "it": "Link fornito solo per lo studio gratuito; Saving Planets non è affiliato a questa università né approvato da essa.",
+  "he": "הקישור מיועד ללימוד חינמי בלבד; Saving Planets אינו קשור לאוניברסיטה זו ואינו נתמך על ידה."
  },
  "Live": {
   "ar": "متاح",
@@ -846,6 +909,13 @@
   "he": "מסלולים, מעברים ותכנון משימות.",
   "it": "Orbite, trasferimenti e progettazione di missioni."
  },
+ "Outcome": {
+  "fr": "Objectif",
+  "es": "Resultado",
+  "ar": "الناتج",
+  "it": "Obiettivo",
+  "he": "תוצר"
+ },
  "Part": {
   "ar": "الجزء",
   "es": "Parte",
@@ -874,12 +944,26 @@
   "he": "הקשר לכדור הארץ:",
   "it": "Legame con il pianeta:"
  },
+ "Practice and quiz in this unit. The exam sets are at the end of the course.": {
+  "fr": "Pratique et quiz dans cette unité. Les sujets d’examen sont à la fin du cours.",
+  "es": "Práctica y cuestionario en esta unidad. Los exámenes están al final del curso.",
+  "ar": "تدريب واختبار قصير في هذه الوحدة. مجموعات الامتحان في نهاية المقرر.",
+  "it": "Pratica e quiz in questa unità. Le prove d’esame sono alla fine del corso.",
+  "he": "תרגול ובוחן ביחידה הזו. מערכי הבחינה בסוף הקורס."
+ },
  "Practice problems": {
   "ar": "تمارين",
   "es": "Problemas de práctica",
   "fr": "Exercices",
   "he": "תרגילים",
   "it": "Esercizi"
+ },
+ "Practiced in": {
+  "fr": "Pratiqué dans",
+  "es": "Se practica en",
+  "ar": "يُدرَّب في",
+  "it": "Esercitato in",
+  "he": "מתורגל ב"
  },
  "Prerequisites": {
   "ar": "المتطلبات السابقة",
@@ -908,6 +992,20 @@
   "fr": "Probabilités et statistiques",
   "he": "הסתברות וסטטיסטיקה",
   "it": "Probabilità e statistica"
+ },
+ "Problem set {n}": {
+  "fr": "Série {n}",
+  "es": "Serie {n}",
+  "ar": "مجموعة المسائل {n}",
+  "it": "Esercizio {n}",
+  "he": "דף תרגילים {n}"
+ },
+ "Problem sets with solutions": {
+  "fr": "Séries d’exercices avec solutions",
+  "es": "Series de problemas con soluciones",
+  "ar": "مجموعات مسائل مع الحلول",
+  "it": "Esercizi con soluzioni",
+  "he": "דפי תרגילים עם פתרונות"
  },
  "Procedure": {
   "ar": "الإجراء",
@@ -944,6 +1042,13 @@
   "he": "קריאה",
   "it": "Lettura"
  },
+ "Readings": {
+  "fr": "Lectures",
+  "es": "Lecturas",
+  "ar": "قراءات",
+  "it": "Letture",
+  "he": "קריאה"
+ },
  "Related courses": {
   "ar": "دورات ذات صلة",
   "es": "Cursos relacionados",
@@ -978,6 +1083,13 @@
   "fr": "Révision et série d’exercices finale",
   "he": "חזרה וסדרת תרגול מסכמת",
   "it": "Ripasso ed esercitazione finale"
+ },
+ "STEM Courses": {
+  "fr": "Cours STEM",
+  "es": "Cursos STEM",
+  "ar": "مقررات STEM",
+  "it": "Corsi STEM",
+  "he": "קורסי STEM"
  },
  "Safety": {
   "ar": "السلامة",
@@ -1034,6 +1146,13 @@
   "fr": "Quiz d’autocontrôle",
   "he": "בוחן לבדיקה עצמית",
   "it": "Quiz di autoverifica"
+ },
+ "Session notes on this page": {
+  "fr": "Notes de séance sur cette page",
+  "es": "Notas de la sesión en esta página",
+  "ar": "ملاحظات الحصة في هذه الصفحة",
+  "it": "Note della sessione in questa pagina",
+  "he": "רשימות המפגש בעמוד הזה"
  },
  "Show all": {
   "ar": "عرض الكل",
@@ -1147,12 +1266,26 @@
   "he": "תעופה בת־קיימא",
   "it": "Aviazione sostenibile"
  },
+ "Taught in": {
+  "fr": "Enseigné dans",
+  "es": "Se enseña en",
+  "ar": "يُدرَّس في",
+  "it": "Insegnato in",
+  "he": "נלמד ב"
+ },
  "Technical drawing and 3D computer-aided design.": {
   "ar": "الرسم الفني والتصميم ثلاثي الأبعاد 3D بمساعدة الحاسوب.",
   "es": "Dibujo técnico y diseño asistido por ordenador en 3D.",
   "fr": "Dessin technique et conception assistée par ordinateur en 3D.",
   "he": "שרטוט טכני ותכנון בעזרת מחשב ב־3D.",
   "it": "Disegno tecnico e progettazione assistita al computer in 3D."
+ },
+ "Terms of use": {
+  "fr": "Conditions d’utilisation",
+  "es": "Condiciones de uso",
+  "ar": "شروط الاستخدام",
+  "it": "Condizioni d’uso",
+  "he": "תנאי שימוש"
  },
  "The lab ({code})": {
   "ar": "المختبر ({code})",
@@ -1168,6 +1301,13 @@
   "he": "המעבדה היא החלק המעשי של הקורס, רכיב של נקודת זכות 1 בתוכנית לימודים טיפוסית במכללה. כאן היא חינמית ולתרגול בלבד.",
   "it": "Il laboratorio è la parte pratica del corso, che vale 1 credito in un tipico piano universitario. Qui è gratuito e solo per esercitarsi."
  },
+ "The notes for each unit are on this page. Where MIT OpenCourseWare published a matching note, it is linked. Those notes are CC BY-NC-SA 4.0. Saving Planets is not affiliated with or endorsed by MIT.": {
+  "fr": "Les notes de chaque unité sont sur cette page. Lorsqu’un MIT OpenCourseWare a publié une note correspondante, elle est liée. Ces notes sont sous CC BY-NC-SA 4.0. Saving Planets n’est ni affilié au MIT ni approuvé par lui.",
+  "es": "Las notas de cada unidad están en esta página. Si MIT OpenCourseWare publicó una nota equivalente, está enlazada. Esas notas son CC BY-NC-SA 4.0. Saving Planets no está afiliado al MIT ni cuenta con su aval.",
+  "ar": "ملاحظات كل وحدة في هذه الصفحة. وإذا نشر MIT OpenCourseWare ملاحظة مطابقة فهي مربوطة. تلك الملاحظات بترخيص CC BY-NC-SA 4.0. Saving Planets غير تابعة لمعهد MIT وغير مزكّاة منه.",
+  "it": "Le note di ogni unità sono in questa pagina. Se MIT OpenCourseWare ha pubblicato una nota corrispondente, è collegata. Quelle note sono CC BY-NC-SA 4.0. Saving Planets non è affiliata al MIT né approvata da esso.",
+  "he": "הרשימות של כל יחידה נמצאות בעמוד הזה. כש-MIT OpenCourseWare פרסם רשימה תואמת, יש קישור אליה. הרשימות האלה ברישיון CC BY-NC-SA 4.0. Saving Planets אינה מסונפת ל-MIT ואינה מאושרת על ידו."
+ },
  "Thermodynamics": {
   "ar": "الديناميكا الحرارية",
   "es": "Termodinámica",
@@ -1182,12 +1322,33 @@
   "he": "אלה קורסים חינמיים ללימוד עצמי שנכתבו על ידי Saving Planets. הם עוקבים אחרי ההיקף של קורסים במכללה משנה ראשונה עד רביעית בעזרת חומרים פתוחים, אבל הם אינם קורסים אוניברסיטאיים, אינם מעניקים נקודות זכות אקדמיות, ואף מוסד לימודים אינו מעורב בהם.",
   "it": "Sono corsi gratuiti di autoapprendimento scritti da Saving Planets. Seguono i programmi dei corsi universitari dal primo al quarto anno con materiali aperti, ma non sono corsi universitari, non danno crediti accademici e nessuna scuola è coinvolta."
  },
+ "These are the practice problems from each unit, with the solution. Every number is recomputed by the course check before the page is published. The step-by-step worked examples sit in the unit notes.": {
+  "fr": "Ce sont les exercices de chaque unité, avec la solution. Chaque nombre est recalculé par le contrôle du cours avant publication. Les exemples détaillés sont dans les notes de l’unité.",
+  "es": "Son los problemas de práctica de cada unidad, con la solución. Cada número lo vuelve a calcular la comprobación del curso antes de publicar. Los ejemplos paso a paso están en las notas de la unidad.",
+  "ar": "هذه مسائل التدريب من كل وحدة، مع الحل. يُعاد حساب كل رقم بفحص المقرر قبل النشر. والأمثلة المفصّلة في ملاحظات الوحدة.",
+  "it": "Sono i problemi di pratica di ogni unità, con la soluzione. Ogni numero è ricalcolato dal controllo del corso prima della pubblicazione. Gli esempi svolti passo per passo sono nelle note dell’unità.",
+  "he": "אלה תרגילי האימון של כל יחידה, עם הפתרון. כל מספר מחושב מחדש בבדיקת הקורס לפני הפרסום. הדוגמאות המפורטות נמצאות ברשימות היחידה."
+ },
  "This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.": {
   "ar": "هذا مخطط دورة مجانية للتعلّم الذاتي كتبته Saving Planets. وهو ليس مقررًا جامعيًا، ولا يمنح ساعات معتمدة، ولا تشارك فيه أي مؤسسة تعليمية.",
   "es": "Este es el esquema de un curso gratuito de autoestudio escrito por Saving Planets. No es un curso universitario, no otorga créditos académicos y ninguna institución participa.",
   "fr": "Ceci est le plan d’un cours gratuit en autonomie rédigé par Saving Planets. Ce n’est pas un cours universitaire : il ne donne aucun crédit académique et aucun établissement n’y participe.",
   "he": "זהו מתווה של קורס חינמי ללימוד עצמי שנכתב על ידי Saving Planets. הוא אינו קורס אוניברסיטאי, אינו מעניק נקודות זכות אקדמיות, ואף מוסד לימודים אינו מעורב בו.",
   "it": "Questo è lo schema di un corso gratuito di autoapprendimento scritto da Saving Planets. Non è un corso universitario, non dà crediti accademici e nessuna scuola è coinvolta."
+ },
+ "This table is the course calendar.": {
+  "fr": "Ce tableau est le calendrier du cours.",
+  "es": "Esta tabla es el calendario del curso.",
+  "ar": "هذا الجدول هو تقويم المقرر.",
+  "it": "Questa tabella è il calendario del corso.",
+  "he": "הטבלה הזו היא לוח הקורס."
+ },
+ "This table maps each outcome to the unit that teaches it and to the practice on this page.": {
+  "fr": "Ce tableau relie chaque objectif à l’unité qui l’enseigne et à la pratique sur cette page.",
+  "es": "Esta tabla une cada resultado con la unidad que lo enseña y con la práctica de esta página.",
+  "ar": "يربط هذا الجدول كل ناتج بالوحدة التي تعلّمه وبالتدريب في هذه الصفحة.",
+  "it": "Questa tabella collega ogni obiettivo all’unità che lo insegna e alla pratica in questa pagina.",
+  "he": "הטבלה הזו מקשרת כל תוצר ליחידה שמלמדת אותו ולתרגול בעמוד הזה."
  },
  "Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.": {
   "ar": "ضع علامة على الوحدات والمختبرات عند إنهائها، وخض الاختبارات. يُحفظ التقدم ونتائج الاختبارات في هذا المتصفح فقط، ولا تُرسل إلينا أبدًا.",
@@ -1273,6 +1434,13 @@
   "he": "וקטורים, מטריצות ומערכות משוואות.",
   "it": "Vettori, matrici e sistemi di equazioni."
  },
+ "Watch the lecture": {
+  "fr": "Regarder le cours magistral",
+  "es": "Ver la clase",
+  "ar": "شاهد المحاضرة",
+  "it": "Guarda la lezione",
+  "he": "צפו בהרצאה"
+ },
  "Week": {
   "ar": "الأسبوع",
   "es": "Semana",
@@ -1335,6 +1503,13 @@
   "fr": "Suivez-le dans l’ordre. Chaque unité comporte des objectifs, des notions clés, des équations, des exemples pas à pas, des exercices corrigés en détail, des erreurs fréquentes, des cartes mémoire et un quiz. Votre progression est enregistrée uniquement dans ce navigateur.",
   "he": "עברו עליו לפי הסדר. בכל יחידה יש מטרות, רעיונות מרכזיים, משוואות, דוגמאות צעד אחר צעד, תרגול עם תשובות מלאות, טעויות נפוצות, כרטיסיות ובוחן. ההתקדמות שלכם נשמרת רק בדפדפן הזה.",
   "it": "Seguilo in ordine. Ogni unità ha obiettivi, idee chiave, equazioni, esempi passo per passo, esercizi con soluzioni complete, errori comuni, flashcard e un quiz. I tuoi progressi sono salvati solo in questo browser."
+ },
+ "Worked examples for this set": {
+  "fr": "Exemples détaillés de cette série",
+  "es": "Ejemplos resueltos de esta serie",
+  "ar": "أمثلة محلولة لهذه المجموعة",
+  "it": "Esempi svolti di questa serie",
+  "he": "דוגמאות פתורות לדף הזה"
  },
  "Worked examples, step by step": {
   "ar": "أمثلة محلولة خطوة بخطوة",
@@ -1406,6 +1581,13 @@
   "he": "קטן בחצי",
   "it": "si dimezza"
  },
+ "in English": {
+  "fr": "en anglais",
+  "es": "en inglés",
+  "ar": "باللغة الإنجليزية",
+  "it": "in inglese",
+  "he": "באנגלית"
+ },
  "increases": {
   "ar": "يزداد",
   "es": "aumenta",
@@ -1454,40 +1636,5 @@
   "fr": "{d} sur {n} unités et TP terminés ({p} %).",
   "he": "הושלמו {d} מתוך {n} יחידות ומעבדות ({p}%).",
   "it": "{d} di {n} unità e laboratori completati ({p}%)."
- },
- "Watch the lecture": {
-  "fr": "Regarder le cours magistral",
-  "es": "Ver la clase",
-  "ar": "شاهد المحاضرة",
-  "it": "Guarda la lezione",
-  "he": "צפו בהרצאה"
- },
- "in English": {
-  "fr": "en anglais",
-  "es": "en inglés",
-  "ar": "باللغة الإنجليزية",
-  "it": "in inglese",
-  "he": "באנגלית"
- },
- "License:": {
-  "fr": "Licence :",
-  "es": "Licencia:",
-  "ar": "الترخيص:",
-  "it": "Licenza:",
-  "he": "רישיון:"
- },
- "Terms of use": {
-  "fr": "Conditions d’utilisation",
-  "es": "Condiciones de uso",
-  "ar": "شروط الاستخدام",
-  "it": "Condizioni d’uso",
-  "he": "תנאי שימוש"
- },
- "Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.": {
-  "fr": "Lien fourni uniquement pour l’étude gratuite ; Saving Planets n’est ni affilié à cette université ni soutenu par elle.",
-  "es": "Enlace solo para estudio gratuito; Saving Planets no está afiliado a esta universidad ni cuenta con su respaldo.",
-  "ar": "الرابط للدراسة المجانية فقط؛ Saving Planets غير تابع لهذه الجامعة ولا يحظى بتأييدها.",
-  "it": "Link fornito solo per lo studio gratuito; Saving Planets non è affiliato a questa università né approvato da essa.",
-  "he": "הקישור מיועד ללימוד חינמי בלבד; Saving Planets אינו קשור לאוניברסיטה זו ואינו נתמך על ידה."
  }
 }
