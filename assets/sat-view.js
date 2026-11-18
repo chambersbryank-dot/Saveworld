@@ -91,9 +91,27 @@
       return { x: cx - mx * scale, y: cy - my * scale, w: viewW, h: viewH };
     }
     function fitView(W, H) {
-      var b = contentBox(), map = mapRect(W, H);
-      var bw = Math.max(40, (b.maxX - b.minX) * 1.08), bh = Math.max(40, (b.maxY - b.minY) * 1.08);
-      return viewFrom((b.minX + b.maxX) / 2, (b.minY + b.maxY) / 2, bw, bh, map, W, H);
+      if (mode === 'near' && geom) {
+        var reach = 190, outer = cat === 'all' || orbitFilter === 'geo' || orbitFilter === 'heo' || selectedBand === 'geo' || selectedBand === 'heo';
+        if (!outer) {
+          var nodes = canvas.querySelectorAll('.orb-btn');
+          for (var i = 0; i < nodes.length; i++) {
+            var reg = nodes[i].getAttribute('data-reg');
+            if (reg === 'geo' || reg === 'heo') { outer = true; break; }
+          }
+        }
+        if (outer) reach = 268;
+        var cap = W * (W < 560 ? 0.2 : 0.24);
+        var side = Math.min(Math.max(gut.l, gut.r, 8), cap);
+        var lane = Math.max(W * (W < 560 ? 0.6 : 0.52), W - side * 2);
+        lane = Math.min(lane, W - 12);
+        var map = { x: (W - lane) / 2, y: Math.max(10, gut.t), w: lane, h: Math.max(48, H - Math.max(10, gut.t) - Math.max(10, gut.b)) };
+        var bw = reach * 2;
+        return viewFrom(geom.cx, geom.cy, bw, bw * (map.h / map.w), map, W, H);
+      }
+      var b = contentBox(), map2 = mapRect(W, H);
+      var bw2 = Math.max(40, (b.maxX - b.minX) * 1.08), bh2 = Math.max(40, (b.maxY - b.minY) * 1.08);
+      return viewFrom((b.minX + b.maxX) / 2, (b.minY + b.maxY) / 2, bw2, bh2, map2, W, H);
     }
     function closeView(W, H) {
       var map = mapRect(W, H), span = geom.r * 2 / 0.725, aspect = map.w / map.h, vw, vh;
@@ -116,7 +134,7 @@
     function placeLabels() {
       var box = canvas.getBoundingClientRect();
       var W = box.width, H = box.height;
-      if (W < 40 || H < 40) return;
+      if (W < 80 || H < 80) return;
       var labs = [].slice.call(canvas.querySelectorAll('.orb-lab'));
       var maxW = Math.max(72, Math.min(W * 0.34, 168));
       labs.forEach(function (el) {
@@ -135,8 +153,8 @@
       })();
       function anchor(el) {
         var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
-        var nx = (x - view0.cx) / Math.max(view0.bw, 1);
-        return { el: el, x: x, y: y, side: nx < 0 ? 'l' : 'r', ny: y };
+        var mid = geom ? geom.cx : view0.cx;
+        return { el: el, x: x, y: y, side: x < mid ? 'l' : 'r', ny: y };
       }
       var items = labs.map(anchor);
       function pack(list, avail) {
@@ -171,6 +189,9 @@
       gut.l = nL ? nL * lw + Math.max(0, nL - 1) * 4 + 18 : 8;
       gut.r = nR ? nR * rw + Math.max(0, nR - 1) * 4 + 18 : 8;
       gut.t = 18; gut.b = 18;
+      var capG = W * (W < 560 ? 0.3 : 0.28);
+      if (gut.l > capG) gut.l = capG;
+      if (gut.r > capG) gut.r = capG;
       if (gut.l + gut.r > W * 0.78) {
         var share = W * 0.78, scale = share / (gut.l + gut.r);
         gut.l *= scale; gut.r *= scale;
@@ -180,7 +201,10 @@
       }
       var view = currentView();
       var svg = canvas.querySelector('svg.orb-svg');
-      if (svg) svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
+      if (svg) {
+        svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
+        svg.setAttribute('preserveAspectRatio', 'none');
+      }
       [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt,.sso-mark'), function (el) {
         var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
         var px = (x - view.x) / view.w * W, py = (y - view.y) / view.h * H;
@@ -214,6 +238,21 @@
         placeCol(list.slice(mid), side, 1, 2, colW);
       }
       stack(left, 'l', lw); stack(right, 'r', rw);
+      if (mode === 'near' && geom) {
+        var ecx = (geom.cx - view.x) / view.w * W, ecy = (geom.cy - view.y) / view.h * H;
+        var earthR = 78 * (W / view.w);
+        items.forEach(function (it) {
+          var b = it.box;
+          if (!b) return;
+          var cx0 = Math.max(b.x, Math.min(ecx, b.x + b.w));
+          var cy0 = Math.max(b.y, Math.min(ecy, b.y + b.h));
+          var dx = cx0 - ecx, dy = cy0 - ecy;
+          if (dx * dx + dy * dy >= (earthR + 8) * (earthR + 8)) return;
+          var nx = it.side === 'l' ? Math.max(2, ecx - earthR - 10 - b.w) : Math.min(W - b.w - 2, ecx + earthR + 10);
+          it.el.style.left = nx + 'px';
+          b.x = nx;
+        });
+      }
       var lead = canvas.querySelector('.sat-leaders');
       if (!lead) {
         lead = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -677,6 +716,10 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !card.hidden) closeCard(); });
     var rz;
     window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(applyView, 80); });
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(function () { applyView(); });
+      ro.observe(stage);
+    }
     if (list) {
       sats.forEach(function (s) {
         var li = document.createElement('li');
