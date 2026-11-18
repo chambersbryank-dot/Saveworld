@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261113z'
+V = '20261118b'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -30,6 +30,9 @@ M = [
  dict(id='tempo', page='TEMPO.html', fn='weather', regime='geo', agency='NASA', official='https://tempo.si.edu/', imageQ='TEMPO NASA air quality', feed='https://www.nasa.gov/feed/'),
  dict(id='oco2', page='OCO-2.html', fn='weather', regime='leo', agency='NASA', official='https://ocov2.jpl.nasa.gov/', imageQ='OCO-2', feed='https://www.nasa.gov/feed/'),
  dict(id='firesat', page='FireSat.html', fn='fire', regime='leo', agency='Earth Fire Alliance', official='https://www.earthfirealliance.org/'),
+ dict(id='suomi-npp', page='JPSS.html', fn='fire', regime='sso', agency='NASA / NOAA', prefer_extra=True, official='https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system'),
+ dict(id='noaa-20', page='JPSS.html', fn='fire', regime='sso', agency='NOAA / NASA', prefer_extra=True, official='https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system'),
+ dict(id='noaa-21', page='JPSS.html', fn='fire', regime='sso', agency='NOAA / NASA', prefer_extra=True, official='https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system'),
  dict(id='neossat', page='NEOSSat.html', fn='defense', regime='leo', agency='Canadian Space Agency', official='https://www.asc-csa.gc.ca/eng/satellites/neossat/'),
  dict(id='galileo', page='Galileo.html', fn='nav', regime='meo', agency='EU / ESA', official='https://www.esa.int/Applications/Satellite_navigation/Galileo'),
  dict(id='hubble', fn='science', regime='leo', agency='NASA / ESA', when='1990', official='https://science.nasa.gov/mission/hubble/', imageQ='Hubble Space Telescope', imageMust='hubble', feed='https://www.nasa.gov/feed/', nasaPlus=True),
@@ -282,6 +285,42 @@ EXPLAIN = {
    viewOrbit='לחצו כאן כדי לראות את הלוויין במסלול המגן על כוכב הלכת שלנו'),
 }
 
+# Polar fire monitors already named on the JPSS page. VIIRS active-fire use is NASA FIRMS.
+# https://www.nesdis.noaa.gov/our-satellites/currently-flying/joint-polar-satellite-system
+# https://firms.modaps.eosdis.nasa.gov/
+FIRE = {
+ 'en': {
+  'suomi-npp': ('Suomi NPP', 'NOAA lists Suomi NPP in the Joint Polar Satellite System with NOAA-20 and NOAA-21, and says the fleet is flying now. These polar satellites circle Earth about 14 times a day.', 'NASA’s Fire Information for Resource Management System uses the VIIRS instrument on Suomi NPP, NOAA-20 and NOAA-21 to map active fires.'),
+  'noaa-20': ('NOAA-20', 'NOAA lists NOAA-20, also called JPSS-1, in the Joint Polar Satellite System with Suomi NPP and NOAA-21. The fleet is flying now, and these polar satellites circle Earth about 14 times a day.', 'NASA’s Fire Information for Resource Management System uses the VIIRS instrument on Suomi NPP, NOAA-20 and NOAA-21 to map active fires.'),
+  'noaa-21': ('NOAA-21', 'NOAA lists NOAA-21, also called JPSS-2, in the Joint Polar Satellite System with Suomi NPP and NOAA-20. The fleet is flying now, and these polar satellites circle Earth about 14 times a day.', 'NASA’s Fire Information for Resource Management System uses the VIIRS instrument on Suomi NPP, NOAA-20 and NOAA-21 to map active fires.'),
+ },
+ 'fr': {
+  'suomi-npp': ('Suomi NPP', 'La NOAA place Suomi NPP dans le Joint Polar Satellite System avec NOAA-20 et NOAA-21, et dit que la flotte vole maintenant. Ces satellites polaires font le tour de la Terre environ 14 fois par jour.', 'Le service FIRMS de la NASA utilise l’instrument VIIRS de Suomi NPP, NOAA-20 et NOAA-21 pour cartographier les feux actifs.'),
+  'noaa-20': ('NOAA-20', 'La NOAA place NOAA-20, aussi appelé JPSS-1, dans le Joint Polar Satellite System avec Suomi NPP et NOAA-21. La flotte vole maintenant, et ces satellites polaires font le tour de la Terre environ 14 fois par jour.', 'Le service FIRMS de la NASA utilise l’instrument VIIRS de Suomi NPP, NOAA-20 et NOAA-21 pour cartographier les feux actifs.'),
+  'noaa-21': ('NOAA-21', 'La NOAA place NOAA-21, aussi appelé JPSS-2, dans le Joint Polar Satellite System avec Suomi NPP et NOAA-20. La flotte vole maintenant, et ces satellites polaires font le tour de la Terre environ 14 fois par jour.', 'Le service FIRMS de la NASA utilise l’instrument VIIRS de Suomi NPP, NOAA-20 et NOAA-21 pour cartographier les feux actifs.'),
+ },
+ 'es': {
+  'suomi-npp': ('Suomi NPP', 'La NOAA incluye a Suomi NPP en el Joint Polar Satellite System junto con NOAA-20 y NOAA-21, y dice que la flota está en vuelo. Estos satélites polares dan unas 14 vueltas a la Tierra al día.', 'El servicio FIRMS de la NASA usa el instrumento VIIRS de Suomi NPP, NOAA-20 y NOAA-21 para cartografiar incendios activos.'),
+  'noaa-20': ('NOAA-20', 'La NOAA incluye a NOAA-20, también llamado JPSS-1, en el Joint Polar Satellite System junto con Suomi NPP y NOAA-21. La flota está en vuelo, y estos satélites polares dan unas 14 vueltas a la Tierra al día.', 'El servicio FIRMS de la NASA usa el instrumento VIIRS de Suomi NPP, NOAA-20 y NOAA-21 para cartografiar incendios activos.'),
+  'noaa-21': ('NOAA-21', 'La NOAA incluye a NOAA-21, también llamado JPSS-2, en el Joint Polar Satellite System junto con Suomi NPP y NOAA-20. La flota está en vuelo, y estos satélites polares dan unas 14 vueltas a la Tierra al día.', 'El servicio FIRMS de la NASA usa el instrumento VIIRS de Suomi NPP, NOAA-20 y NOAA-21 para cartografiar incendios activos.'),
+ },
+ 'ar': {
+  'suomi-npp': ('Suomi NPP', 'تدرج نوا Suomi NPP في نظام الأقمار القطبية المشترك مع NOAA-20 وNOAA-21، وتقول إن الأسطول يطير الآن. تدور هذه الأقمار القطبية حول الأرض نحو 14 مرة في اليوم.', 'تستخدم خدمة FIRMS التابعة لناسا جهاز VIIRS على Suomi NPP وNOAA-20 وNOAA-21 لرسم الحرائق النشطة.'),
+  'noaa-20': ('NOAA-20', 'تدرج نوا NOAA-20، ويُسمى أيضًا JPSS-1، في نظام الأقمار القطبية المشترك مع Suomi NPP وNOAA-21. الأسطول يطير الآن، وتدور هذه الأقمار القطبية حول الأرض نحو 14 مرة في اليوم.', 'تستخدم خدمة FIRMS التابعة لناسا جهاز VIIRS على Suomi NPP وNOAA-20 وNOAA-21 لرسم الحرائق النشطة.'),
+  'noaa-21': ('NOAA-21', 'تدرج نوا NOAA-21، ويُسمى أيضًا JPSS-2، في نظام الأقمار القطبية المشترك مع Suomi NPP وNOAA-20. الأسطول يطير الآن، وتدور هذه الأقمار القطبية حول الأرض نحو 14 مرة في اليوم.', 'تستخدم خدمة FIRMS التابعة لناسا جهاز VIIRS على Suomi NPP وNOAA-20 وNOAA-21 لرسم الحرائق النشطة.'),
+ },
+ 'it': {
+  'suomi-npp': ('Suomi NPP', 'La NOAA inserisce Suomi NPP nel Joint Polar Satellite System con NOAA-20 e NOAA-21, e dice che la flotta è in volo. Questi satelliti polari girano intorno alla Terra circa 14 volte al giorno.', 'Il servizio FIRMS della NASA usa lo strumento VIIRS su Suomi NPP, NOAA-20 e NOAA-21 per mappare gli incendi attivi.'),
+  'noaa-20': ('NOAA-20', 'La NOAA inserisce NOAA-20, chiamato anche JPSS-1, nel Joint Polar Satellite System con Suomi NPP e NOAA-21. La flotta è in volo, e questi satelliti polari girano intorno alla Terra circa 14 volte al giorno.', 'Il servizio FIRMS della NASA usa lo strumento VIIRS su Suomi NPP, NOAA-20 e NOAA-21 per mappare gli incendi attivi.'),
+  'noaa-21': ('NOAA-21', 'La NOAA inserisce NOAA-21, chiamato anche JPSS-2, nel Joint Polar Satellite System con Suomi NPP e NOAA-20. La flotta è in volo, e questi satelliti polari girano intorno alla Terra circa 14 volte al giorno.', 'Il servizio FIRMS della NASA usa lo strumento VIIRS su Suomi NPP, NOAA-20 e NOAA-21 per mappare gli incendi attivi.'),
+ },
+ 'he': {
+  'suomi-npp': ('Suomi NPP', 'NOAA מונה את Suomi NPP במערכת הלוויינים הקוטבית המשותפת יחד עם NOAA-20 ו-NOAA-21, ואומרת שהצי טס עכשיו. הלוויינים הקוטביים האלה מקיפים את כדור הארץ כ-14 פעמים ביום.', 'שירות FIRMS של נאס״א משתמש במכשיר VIIRS על Suomi NPP, NOAA-20 ו-NOAA-21 כדי למפות שריפות פעילות.'),
+  'noaa-20': ('NOAA-20', 'NOAA מונה את NOAA-20, שנקרא גם JPSS-1, במערכת הלוויינים הקוטבית המשותפת יחד עם Suomi NPP ו-NOAA-21. הצי טס עכשיו, והלוויינים הקוטביים האלה מקיפים את כדור הארץ כ-14 פעמים ביום.', 'שירות FIRMS של נאס״א משתמש במכשיר VIIRS על Suomi NPP, NOAA-20 ו-NOAA-21 כדי למפות שריפות פעילות.'),
+  'noaa-21': ('NOAA-21', 'NOAA מונה את NOAA-21, שנקרא גם JPSS-2, במערכת הלוויינים הקוטבית המשותפת יחד עם Suomi NPP ו-NOAA-20. הצי טס עכשיו, והלוויינים הקוטביים האלה מקיפים את כדור הארץ כ-14 פעמים ביום.', 'שירות FIRMS של נאס״א משתמש במכשיר VIIRS על Suomi NPP, NOAA-20 ו-NOAA-21 כדי למפות שריפות פעילות.'),
+ },
+}
+
 def meta(lang, page):
     path = page if lang == 'en' else os.path.join(lang, page)
     if not os.path.exists(path):
@@ -302,7 +341,11 @@ def h1(lang, page):
         return ''
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))).strip()
 
-LEGEND = ['all', 'weather', 'land', 'ocean', 'ice', 'fire', 'defense', 'science', 'beyond']
+LEGEND = ['weather', 'land', 'ocean', 'ice', 'fire', 'defense', 'science', 'beyond']
+CAT_LABEL = {
+ 'en': 'Satellite groups', 'fr': 'Groupes de satellites', 'es': 'Grupos de satélites',
+ 'ar': 'مجموعات الأقمار', 'it': 'Gruppi di satelliti', 'he': 'קבוצות לוויינים',
+}
 
 CRUISE = {
  'en': dict(
@@ -376,7 +419,7 @@ def section(lang, ui):
     pre = '' if lang == 'en' else '../'
     btns = []
     for key in LEGEND:
-        pressed = 'true' if key == 'all' else 'false'
+        pressed = 'true' if key == 'weather' else 'false'
         btns.append(f'<button type="button" class="wm-cat" data-cat="{key}" aria-pressed="{pressed}">{html.escape(ui[key])}</button>')
     sources = ('<p class="sat-explain"><span>' + html.escape(ui['sources']) + '</span> '
                '<a href="https://science.nasa.gov/resource/what-is-a-lagrange-point/">NASA, What is a Lagrange Point?</a> · '
@@ -388,9 +431,10 @@ def section(lang, ui):
     return (
       f'<section class="sat-view" id="satmap" data-src="{pre}assets/data/sat-view.{lang}.json?v={V}" data-earth="{pre}assets/earth/cut/earth.webp" data-earth-lg="{pre}assets/earth/cut/earth.webp" data-moon="{pre}assets/earth/cut/moon.webp" data-sun="{pre}assets/earth/cut/sun.webp" aria-labelledby="satmap-title">'
       '<span id="lagrange" class="sat-anchor"></span><span id="beyond" class="sat-anchor"></span>'
-      f'<div class="wm-cats" role="group" aria-label="{html.escape(ui["all"])}">' + ''.join(btns) + '</div>'
+      f'<div class="wm-cats" role="group" aria-label="{html.escape(CAT_LABEL[lang])}">' + ''.join(btns) + '</div>'
+      '<div class="sat-body"><aside class="sat-orbit-note" id="sat-orbit-note" hidden></aside>'
       '<div class="sat-layout"><div class="sat-stage" id="sat-stage"></div>'
-      '<div class="sat-card" id="sat-card" role="region" aria-labelledby="sat-card-title" hidden></div></div>'
+      '<div class="sat-card" id="sat-card" role="region" aria-labelledby="sat-card-title" hidden></div></div></div>'
       + cruise_panel(lang, pre)
       + f'<div class="sat-explain" id="lagrange-explainer"><h3>{html.escape(ui["explainTitle"])}</h3>'
       f'<p>{html.escape(ui["explain1"])}</p><p>{html.escape(ui["explain2"])}</p><p>{html.escape(ui["explain3"])}</p>'
@@ -463,7 +507,8 @@ def main():
     for lang in LANGS:
         ui = dict(UI[lang]); ui.update(EXPLAIN[lang]); ui.update(EXTRA[lang])
         ui['scale'] = ui['scale'] + ui.pop('sunmoon')
-        helps = HELPS[lang]
+        helps = dict(HELPS[lang])
+        helps.update(FIRE[lang])
         sats = []
         for m in M:
             extra = helps.get(m['id'])
@@ -472,7 +517,7 @@ def main():
             if extra and extra[1]:
                 does = extra[1] if not does else does
             # Prefer the page blurb when it exists; keep the verified status sentence for missions whose page is narrow.
-            if extra and m['id'] in ('hubble', 'chandra', 'tess', 'euclid'):
+            if extra and (m.get('prefer_extra') or m['id'] in ('hubble', 'chandra', 'tess', 'euclid')):
                 does = extra[1]
             help_line = extra[2] if extra else ui['helpsPage']
             if extra and m.get('page') and m['id'] not in ('hubble', 'chandra', 'tess', 'euclid'):

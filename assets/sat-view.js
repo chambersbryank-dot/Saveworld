@@ -13,7 +13,7 @@
     stage.innerHTML = '<p class="wm-err">The orbit view could not load. The mission list below still works when data is available.</p>';
   });
   function boot(D) {
-    var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = '', cat = 'all', lastBtn = null;
+    var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = '', cat = 'weather', lastBtn = null;
     var geom = null, zoomT = 0, selectedLg = '', orbitFilter = '';
     sats.forEach(function (s) { byId[s.id] = s; });
     var pre = (root.getAttribute('data-src') || '').indexOf('../') === 0 ? '../' : '';
@@ -47,8 +47,11 @@
       function add(x, y) { minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y); n++; }
       [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt'), function (el) { add(+el.getAttribute('data-x'), +el.getAttribute('data-y')); });
       if (mode === 'near') {
-        add(400 - 246, 268 - 102); add(400 + 246, 268 + 102);
-        add(440 - 196, 268 - 118); add(440 + 196, 268 + 118);
+        add(328, 196); add(472, 340);
+        if (cat === 'all') {
+          add(400 - 246, 268 - 102); add(400 + 246, 268 + 102);
+          add(440 - 196, 268 - 118); add(440 + 196, 268 + 118);
+        }
       }
       if (!n) { minX = 0; minY = 0; maxX = geom.W; maxY = geom.H; }
       return { minX: minX, minY: minY, maxX: maxX, maxY: maxY };
@@ -359,13 +362,16 @@
       b.addEventListener('click', function () { selectBand(id); });
       canvas.appendChild(b);
     }
-    function addLabel(x, y, text, reg) {
-      var lab = document.createElement('span');
+    function addLabel(x, y, text, reg, onClick) {
+      var lab = document.createElement('button');
+      lab.type = 'button';
       lab.className = 'orb-lab is-' + (reg || 'x');
       lab.textContent = text;
       lab.setAttribute('data-x', x);
       lab.setAttribute('data-y', y);
       lab.setAttribute('data-reg', reg || '');
+      lab.setAttribute('aria-label', text);
+      if (onClick) lab.addEventListener('click', function () { onClick(lab); });
       canvas.appendChild(lab);
     }
     function applyDim() {
@@ -463,9 +469,6 @@
           { id: 'l4', x: 500, y: 48, name: 'L4' },
           { id: 'l5', x: 500, y: 600, name: 'L5' }
         ];
-        function dist(x, y, text) {
-          return '<text x="' + x + '" y="' + y + '" fill="#d7ecff" font-size="11">' + esc(text || '') + '</text>';
-        }
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.farDiagram || '') + '">' +
           '<defs>' +
           '<radialGradient id="sun-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,170,60,0)"/><stop offset="42%" stop-color="rgba(255,120,40,.28)"/><stop offset="100%" stop-color="rgba(255,60,20,0)"/></radialGradient>' +
@@ -476,7 +479,6 @@
           '<circle class="earth-air" cx="' + EX + '" cy="' + EY + '" r="' + (ER + 22) + '" fill="url(#earth-air)"/>' +
           '<image href="' + esc(earthLg) + '" x="' + (EX - ER) + '" y="' + (EY - ER) + '" width="' + (ER * 2) + '" height="' + (ER * 2) + '"/>' +
           (moon ? '<image href="' + esc(moon) + '" x="758" y="182" width="64" height="64"/>' : '') +
-          dist(250, 248, ui.dL12) + dist(860, 248, ui.dL12) + dist(108, 188, ui.dL3) + dist(500, 86, ui.dL4) + dist(500, 624, ui.dL5) +
           '</svg>';
       }
       geom = { W: W, H: H, cx: cx, cy: cy, r: er };
@@ -495,7 +497,7 @@
         b.setAttribute('aria-label', shortName(p.s) + '. ' + kindWord(p.s));
         b.addEventListener('click', function () { openCard(p.s, b); });
         canvas.appendChild(b);
-        addLabel(p.x, p.y, shortName(p.s), reg);
+        if (which !== 'far') addLabel(p.x, p.y, shortName(p.s), reg, function () { openCard(p.s, b); });
       });
       lgs.forEach(function (g) {
         var b = document.createElement('button');
@@ -516,13 +518,24 @@
           selectBand(g.id);
         });
         canvas.appendChild(b);
-        addLabel(g.x, g.y, g.name, g.id);
+        if (which !== 'far') addLabel(g.x, g.y, g.name, g.id, function () { b.click(); });
       });
       applyView();
       if (selectedBand) paintBand(selectedBand);
     }
+    function markLagrange(s) {
+      var id = (s && (s.regime === 'l1' || s.regime === 'l2' || s.regime === 'l5')) ? s.regime : '';
+      selectedLg = id;
+      [].forEach.call(canvas.querySelectorAll('.lag-pt'), function (el) {
+        var on = !!(id && el.getAttribute('data-lg') === id);
+        el.classList.toggle('is-sat', on);
+        el.classList.toggle('is-on', on);
+        el.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
     function openCard(s, btn) {
       lastBtn = btn || lastBtn;
+      markLagrange(s);
       root.querySelector('.sat-layout').classList.add('has-card');
       card.hidden = false;
       var photo = '';
@@ -535,10 +548,13 @@
           '<p class="sat-photo-credit">' + esc(s.credit || '') + '</p>';
       }
       var brief = (s.brief || []).slice(0, 5).map(function (line) { return '<p>' + esc(line) + '</p>'; }).join('');
+      var whyInfo = bandCopy(s.regime);
+      var why = whyInfo ? '<p class="sat-why"><strong>' + esc(whyInfo.t) + '.</strong> ' + esc(whyInfo.alt) + ' ' + esc(whyInfo.use) +
+        ' <a href="' + esc(whyInfo.url) + '" target="_blank" rel="noopener">' + esc(whyInfo.src) + '</a></p>' : '';
       var more = s.official ? '<p class="sat-more-row"><a class="sat-more" href="' + esc(s.official) + '" target="_blank" rel="noopener">' + esc(ui.more || 'Click here for more information') + '</a></p>' : '';
       card.innerHTML = '<button type="button" class="sat-close" aria-label="' + esc(ui.close || 'Close') + '">×</button>' +
         '<h3 id="sat-card-title" class="sat-title">' + esc(shortName(s)) + '</h3>' +
-        '<p class="sat-kind">' + esc(kindWord(s)) + '</p>' + photo + brief + more;
+        '<p class="sat-kind">' + esc(kindWord(s)) + '</p>' + photo + brief + why + more;
       card.querySelector('.sat-close').addEventListener('click', closeCard);
       card.querySelector('.sat-close').focus();
     }
@@ -546,6 +562,7 @@
       card.hidden = true;
       card.innerHTML = '';
       root.querySelector('.sat-layout').classList.remove('has-card');
+      markLagrange(null);
       if (lastBtn && lastBtn.focus) lastBtn.focus();
     }
     function draw() {
@@ -554,8 +571,48 @@
       mode = next;
       layout(mode);
     }
+    function showOrbitNote() {
+      var note = document.getElementById('sat-orbit-note');
+      if (!note) return;
+      var order = ['leo', 'sso', 'meo', 'geo', 'heo', 'l1', 'l2'];
+      var near = !(cat === 'lagrange' || cat === 'beyond' || cat === 'science');
+      var drawn = near ? { leo: 1, sso: 1, meo: 1, geo: 1, heo: 1 } : { leo: 1, sso: 1, meo: 1, geo: 1, heo: 1, l1: 1, l2: 1, l5: 1 };
+      var seen = [];
+      sats.forEach(function (s) {
+        if (!show(s)) return;
+        var r = s.regime || '';
+        if (drawn[r] && order.indexOf(r) >= 0 && seen.indexOf(r) < 0) seen.push(r);
+      });
+      seen.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
+      note.innerHTML = seen.map(function (id) {
+        var info = bandCopy(id);
+        if (!info) return '';
+        return '<p><strong>' + esc(info.t) + '.</strong> ' + esc(info.alt) + ' ' + esc(info.use) +
+          ' <a href="' + esc(info.url) + '" target="_blank" rel="noopener">' + esc(info.src) + '</a></p>';
+      }).join('');
+      if (!near && (ui.dL12 || ui.dL3 || ui.dL4 || ui.dL5)) {
+        var missions = sats.filter(show);
+        note.innerHTML += '<ul class="sat-legend">' +
+          '<li>L1 / L2. ' + esc(ui.dL12 || '') + '</li>' +
+          '<li>L3. ' + esc(ui.dL3 || '') + '</li>' +
+          '<li>L4. ' + esc(ui.dL4 || '') + '</li>' +
+          '<li>L5. ' + esc(ui.dL5 || '') + '</li></ul>' +
+          '<div class="sat-mission-list">' + missions.map(function (s) {
+            return '<button type="button" class="sat-mission" data-id="' + esc(s.id) + '">' + esc(shortName(s)) + '</button>';
+          }).join('') + '</div>';
+        [].forEach.call(note.querySelectorAll('.sat-mission'), function (b) {
+          b.addEventListener('click', function () {
+            var s = byId[b.getAttribute('data-id')];
+            if (!s) return;
+            var icon = canvas.querySelector('.orb-btn[data-id="' + s.id + '"]');
+            openCard(s, icon || b);
+          });
+        });
+      }
+      note.hidden = !note.innerHTML;
+    }
     function setCat(next) {
-      cat = next === 'lagrange' ? 'beyond' : next;
+      cat = next === 'lagrange' ? 'beyond' : (next === 'all' ? 'weather' : next);
       if (cat === 'all') clearOrbit();
       [].forEach.call(root.querySelectorAll('button.wm-cat'), function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-cat') === cat ? 'true' : 'false');
@@ -563,6 +620,7 @@
       var cruise = document.getElementById('sat-cruise');
       if (cruise) cruise.hidden = cat !== 'beyond';
       draw();
+      showOrbitNote();
     }
     var zbar = document.createElement('div');
     zbar.className = 'wm-zoom';
@@ -642,7 +700,7 @@
       var id = satFromHash();
       var s = id && byId[id];
       if (!s) return;
-      var next = 'all';
+      var next = 'weather';
       if (s.regime === 'l1' || s.regime === 'l2' || s.regime === 'l5' || s.regime === 'cruise') next = 'beyond';
       else if (s.fn && s.fn !== 'nav') next = s.fn;
       setCat(next);
@@ -655,5 +713,6 @@
     window.addEventListener('hashchange', focusFromHash);
     draw();
     focusFromHash();
+    showOrbitNote();
   }
 })();
