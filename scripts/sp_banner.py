@@ -23,7 +23,10 @@ def _w(srcset, w):
 
 def picture(e, alt, sizes='100vw'):
     srcs = ''.join(f'<source type="image/{t}" srcset="{_e(e[k])}" sizes="{sizes}">' for t, k in (('avif', 'srcset_avif'), ('webp', 'srcset')) if e.get(k))
-    src = e['url'] if not e['url'].lower().endswith(('.png', '.tif', '.tiff')) else (_w(e.get('srcset'), 1920) or e['url'])  # never a PNG/TIFF master as the fallback
+    # Fallback is a sized WebP, not the multi-thousand-pixel master. The srcset still offers larger files.
+    src = _w(e.get('srcset'), 1280) or _w(e.get('srcset'), 1920) or e['url']
+    if e['url'].lower().endswith(('.png', '.tif', '.tiff')):
+        src = _w(e.get('srcset'), 1920) or src
     return (f'<picture class="spb-media">{srcs}<img src="{src}" alt="{_e(alt)}" width="{e["width"]}" height="{e["height"]}" '
             f'fetchpriority="high" decoding="async"></picture>')
 
