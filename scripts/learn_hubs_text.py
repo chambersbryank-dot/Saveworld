@@ -13,6 +13,7 @@ VISION = T(
 UI = {
  'learn': T('Learn', 'Apprendre', 'Aprender', 'تعلّم', 'Impara', 'למידה'),
  'topics': T('Choose a Study', 'Choisir une étude', 'Elige un estudio', 'اختر دراسة', 'Scegli uno studio', 'בחרו לימוד'),
+ 'studies': T('The eight studies', 'Les huit études', 'Los ocho estudios', 'الدراسات الثماني', 'Gli otto studi', 'שמונת הלימודים'),
  'ncourses': T('{n} courses', '{n} cours', '{n} cursos', '{n} دورات', '{n} corsi', '{n} קורסים'),
  'ncourse1': T('1 course', '1 cours', '1 curso', 'دورة واحدة', '1 corso', 'קורס אחד'),
  'more': T('More ways to learn', 'Autres façons d’apprendre', 'Más formas de aprender', 'طرق أخرى للتعلّم', 'Altri modi per imparare', 'עוד דרכים ללמוד'),
