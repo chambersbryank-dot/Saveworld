@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261118b'
+V = '20261118e'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -62,6 +62,7 @@ UI = {
    list='Mission list', diagram='Earth with orbit rings', farDiagram='Lagrange points and missions beyond Earth',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='Sun–Earth L1', l2='Sun–Earth L2', l5='Sun–Earth L5', cruise='On the way',
    title='Earth-protecting satellites',
+   ssoMark='Sun-synchronous', count='{n} missions in this group', eyes='NASA Eyes',
    lead='Each icon sits on the kind of orbit its mission uses. Low Earth orbit is the inner ring, then medium, geostationary, and a long ellipse for highly elliptical orbits. Every ring stays visible. Nothing here is a live position.',
    scale='The ring order follows NASA Earth Observatory’s Catalog of Earth Satellite Orbits and the Earth-centered style of NASA Eyes on the Earth. Imagery: NASA Visible Earth / Blue Marble Next Generation. Created by the Founder and SI.',
    helpsPage='The sentence above is the mission page on this site. We do not add a broader claim than that page.'),
@@ -74,6 +75,7 @@ UI = {
    list='Liste des missions', diagram='La Terre et les anneaux d’orbite', farDiagram='Points de Lagrange et missions au-delà de la Terre',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Soleil–Terre', l2='L2 Soleil–Terre', l5='L5 Soleil–Terre', cruise='En route',
    title='Satellites qui protègent la Terre',
+   ssoMark='Héliosynchrone', count='{n} missions dans ce groupe', eyes='NASA Eyes',
    lead='Chaque icône est placée sur le type d’orbite de sa mission. L’orbite basse est l’anneau intérieur, puis l’orbite moyenne, l’orbite géostationnaire, et une ellipse longue pour les orbites très elliptiques. Chaque anneau reste visible. Rien ici n’est une position en direct.',
    scale='L’ordre des anneaux suit le catalogue des orbites terrestres du NASA Earth Observatory et le style centré sur la Terre de NASA Eyes on the Earth. Image : NASA Visible Earth / Blue Marble Next Generation. Créé par le fondateur et SI.',
    helpsPage='La phrase ci-dessus vient de la page de la mission sur ce site. Nous n’ajoutons pas d’autre affirmation.'),
@@ -86,6 +88,7 @@ UI = {
    list='Lista de misiones', diagram='La Tierra con anillos orbitales', farDiagram='Puntos de Lagrange y misiones más allá de la Tierra',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Sol–Tierra', l2='L2 Sol–Tierra', l5='L5 Sol–Tierra', cruise='De camino',
    title='Satélites que protegen la Tierra',
+   ssoMark='Heliosíncrona', count='{n} misiones en este grupo', eyes='NASA Eyes',
    lead='Cada icono está en el tipo de órbita de su misión. La órbita baja es el anillo interior, luego la media, la geoestacionaria y una elipse larga para las órbitas muy elípticas. Cada anillo sigue visible. Nada aquí es una posición en vivo.',
    scale='El orden de los anillos sigue el catálogo de órbitas terrestres del NASA Earth Observatory y el estilo centrado en la Tierra de NASA Eyes on the Earth. Imagen: NASA Visible Earth / Blue Marble Next Generation. Creado por el fundador y SI.',
    helpsPage='La frase de arriba es la página de la misión en este sitio. No añadimos una afirmación más amplia.'),
@@ -98,6 +101,7 @@ UI = {
    list='قائمة المهام', diagram='الأرض مع حلقات المدارات', farDiagram='نقاط لاغرانج والمهام الأبعد من الأرض',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 الشمس–الأرض', l2='L2 الشمس–الأرض', l5='L5 الشمس–الأرض', cruise='في الطريق',
    title='أقمار تحمي الأرض',
+   ssoMark='متزامن مع الشمس', count='{n} مهمات في هذه المجموعة', eyes='NASA Eyes',
    lead='كل أيقونة على نوع المدار الذي تستخدمه مهمتها. المدار الأرضي المنخفض هو الحلقة الداخلية، ثم المتوسط، ثم الثابت جغرافيًا، ثم قطع طويل للمدارات شديدة الإهليلجية. تبقى كل حلقة ظاهرة. لا شيء هنا موقع مباشر.',
    scale='ترتيب الحلقات يتبع فهرس مدارات الأرض لدى NASA Earth Observatory وأسلوب ناسا Eyes on the Earth المتمركز على الأرض. الصورة: NASA Visible Earth / Blue Marble Next Generation. من إعداد المؤسس وSI.',
    helpsPage='الجملة أعلاه من صفحة المهمة على هذا الموقع. لا نضيف ادعاءً أوسع من الصفحة.'),
@@ -110,6 +114,7 @@ UI = {
    list='Elenco delle missioni', diagram='La Terra con gli anelli orbitali', farDiagram='Punti di Lagrange e missioni oltre la Terra',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 Sole–Terra', l2='L2 Sole–Terra', l5='L5 Sole–Terra', cruise='In viaggio',
    title='Satelliti che proteggono la Terra',
+   ssoMark='Eliosincrona', count='{n} missioni in questo gruppo', eyes='NASA Eyes',
    lead='Ogni icona sta sul tipo di orbita della missione. L’orbita bassa è l’anello interno, poi la media, la geostazionaria e un’ellisse lunga per le orbite molto ellittiche. Ogni anello resta visibile. Nulla qui è una posizione dal vivo.',
    scale='L’ordine degli anelli segue il catalogo delle orbite terrestri del NASA Earth Observatory e lo stile centrato sulla Terra di NASA Eyes on the Earth. Immagine: NASA Visible Earth / Blue Marble Next Generation. Creato dal fondatore e da SI.',
    helpsPage='La frase sopra viene dalla pagina della missione su questo sito. Non aggiungiamo un’affermazione più ampia.'),
@@ -122,6 +127,7 @@ UI = {
    list='רשימת משימות', diagram='כדור הארץ עם טבעות מסלול', farDiagram='נקודות לגראנז׳ ומשימות מעבר לכדור הארץ',
    leo='LEO', meo='MEO', geo='GEO', heo='HEO', l1='L1 שמש–ארץ', l2='L2 שמש–ארץ', l5='L5 שמש–ארץ', cruise='בדרך',
    title='לוויינים שמגנים על כדור הארץ',
+   ssoMark='מסונכרן-שמש', count='{n} משימות בקבוצה הזו', eyes='NASA Eyes',
    lead='כל סמל יושב על סוג המסלול של המשימה. מסלול נמוך הוא הטבעת הפנימית, אחר כך בינוני, גיאוסטציונרי, ואליפסה ארוכה למסלולים אליפטיים מאוד. כל טבעת נשארת גלויה. שום דבר כאן אינו מיקום חי.',
    scale='סדר הטבעות עוקב אחרי קטלוג המסלולים של NASA Earth Observatory וסגנון NASA Eyes on the Earth שבמרכזו כדור הארץ. תמונה: NASA Visible Earth / Blue Marble Next Generation. נוצר על ידי המייסד ו-SI.',
    helpsPage='המשפט למעלה הוא מדף המשימה באתר הזה. איננו מוסיפים טענה רחבה יותר.'),
@@ -399,13 +405,13 @@ def cruise_panel(lang, pre):
       f'<h3 id="sat-cruise-h">{html.escape(c["h"])}</h3>'
       f'<p>{html.escape(c["lead"])}</p>'
       '<div class="sat-cruise-row">'
-      f'<figure class="sat-cruise-earth"><img src="{pre}assets/earth/cut/earth.webp" alt="" width="800" height="800"><figcaption>{html.escape(c["earth"])}</figcaption></figure>'
+      f'<figure class="sat-cruise-earth"><img src="{pre}assets/earth/cut/earth.webp" alt="{html.escape(c["earth"])}" width="800" height="800" loading="lazy" decoding="async"><figcaption>{html.escape(c["earth"])}</figcaption></figure>'
       '<div class="sat-cruise-track" aria-hidden="true"><span class="sat-cruise-line"></span>'
-      f'<figure class="sat-cruise-craft"><img src="{pre}assets/earth/cut/europa-craft.webp" alt="" width="336" height="194"><figcaption>{html.escape(c["craft"])}</figcaption></figure>'
+      f'<figure class="sat-cruise-craft"><img src="{pre}assets/earth/cut/europa-craft.webp" alt="{html.escape(c["craft"])}" width="336" height="194" loading="lazy" decoding="async"><figcaption>{html.escape(c["craft"])}</figcaption></figure>'
       '</div>'
       '<figure class="sat-cruise-far">'
-      f'<img class="sat-jup" src="{pre}assets/earth/cut/jupiter.webp" alt="" width="900" height="900">'
-      f'<img class="sat-eur" src="{pre}assets/earth/cut/europa.webp" alt="" width="900" height="900">'
+      f'<img class="sat-jup" src="{pre}assets/earth/cut/jupiter.webp" alt="" width="900" height="900" loading="lazy" decoding="async">'
+      f'<img class="sat-eur" src="{pre}assets/earth/cut/europa.webp" alt="" width="900" height="900" loading="lazy" decoding="async">'
       f'<figcaption>{html.escape(c["dest"])}</figcaption></figure>'
       '</div>'
       f'<p class="sat-cruise-dist">{html.escape(c["dist"])}</p>'
@@ -433,7 +439,18 @@ def section(lang, ui):
       '<span id="lagrange" class="sat-anchor"></span><span id="beyond" class="sat-anchor"></span>'
       f'<div class="wm-cats" role="group" aria-label="{html.escape(CAT_LABEL[lang])}">' + ''.join(btns) + '</div>'
       '<div class="sat-body"><aside class="sat-orbit-note" id="sat-orbit-note" hidden></aside>'
-      '<div class="sat-layout"><div class="sat-stage" id="sat-stage"></div>'
+      f'<p id="sat-count" class="sat-count" aria-live="polite"></p>'
+      f'<p class="sat-ring-key"><span><i class="k-leo" aria-hidden="true"></i>{html.escape(ui["leo"])}</span>'
+      f'<span><i class="k-meo" aria-hidden="true"></i>{html.escape(ui["meo"])}</span>'
+      f'<span><i class="k-geo" aria-hidden="true"></i>{html.escape(ui["geo"])}</span>'
+      f'<span><i class="k-sso" aria-hidden="true"></i>{html.escape(ui["ssoMark"])}</span></p>'
+      '<div class="sat-layout"><div class="sat-stage" id="sat-stage">'
+      f'<div class="sat-poster" id="sat-poster"><img src="{pre}assets/earth/cut/earth.webp" alt="{html.escape(ui["diagram"])}" width="800" height="800" decoding="async">'
+      '<svg class="sat-poster-rings" viewBox="0 0 900 520" aria-hidden="true">'
+      '<ellipse cx="400" cy="268" rx="118" ry="50" fill="none" stroke="#7ad7ff" stroke-width="3"/>'
+      '<ellipse cx="400" cy="268" rx="178" ry="74" fill="none" stroke="#ffb703" stroke-width="3"/>'
+      '<ellipse cx="400" cy="268" rx="246" ry="102" fill="none" stroke="#e2b6ff" stroke-width="3"/>'
+      '</svg></div></div>'
       '<div class="sat-card" id="sat-card" role="region" aria-labelledby="sat-card-title" hidden></div></div></div>'
       + cruise_panel(lang, pre)
       + f'<div class="sat-explain" id="lagrange-explainer"><h3>{html.escape(ui["explainTitle"])}</h3>'
@@ -507,6 +524,13 @@ def main():
     for lang in LANGS:
         ui = dict(UI[lang]); ui.update(EXPLAIN[lang]); ui.update(EXTRA[lang])
         ui['scale'] = ui['scale'] + ui.pop('sunmoon')
+        old = {}
+        data_path = f'assets/data/sat-view.{lang}.json'
+        if os.path.exists(data_path):
+            try:
+                old = json.load(open(data_path, encoding='utf-8'))
+            except Exception:
+                old = {}
         helps = dict(HELPS[lang])
         helps.update(FIRE[lang])
         sats = []
@@ -538,15 +562,31 @@ def main():
                        photo=m.get('photo', ''), shot=shot, credit=credit, brief=brief[:5],
                        source=m.get('official', ''))
             sats.append(row)
-        json.dump(dict(lang=lang, ui=ui, sats=sats), open(f'assets/data/sat-view.{lang}.json', 'w', encoding='utf-8'),
+        json.dump(dict(lang=lang, ui=ui, sats=sats, bands=old.get('bands') or {}), open(data_path, 'w', encoding='utf-8'),
                   ensure_ascii=False, separators=(',', ':'))
         path = 'Space.html' if lang == 'en' else f'{lang}/Space.html'
         t = open(path, encoding='utf-8').read()
         t = re.sub(r'<section class="sat-view" id="satmap".*?<p class="sat-scale">.*?</p></section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
         t = re.sub(r'<link rel="stylesheet" href="(?:\.\./)?assets/leaflet/leaflet\.css\?v=1\.9\.4">\n?', '', t)
         t = re.sub(r'<script src="(?:\.\./)?assets/leaflet/leaflet\.js\?v=1\.9\.4" defer></script>', '', t)
-        t = re.sub(r'((?:\.\./)?map\.css\?v=)[0-9a-z]+', rf'\g<1>{V}', t)
-        t = re.sub(r'((?:\.\./)?assets/sat-view\.js\?v=)[0-9a-z]+', rf'\g<1>{V}', t)
+        pre = '' if lang == 'en' else '../'
+        def css_preload(href):
+            return (f'<link rel="preload" as="style" href="{href}" onload="this.onload=null;this.rel=\'stylesheet\'">'
+                    f'<noscript class="crit-ns"><link rel="stylesheet" href="{href}"></noscript>')
+        t = t.replace("this.rel=\\'stylesheet\\'", "this.rel='stylesheet'")
+        t = re.sub(r'<link rel="preload" as="style" href="(?:\.\./)?P261118c"[^>]*>\s*<noscript class="crit-ns"><link rel="stylesheet" href="(?:\.\./)?P261118c"></noscript>\s*', '', t)
+        t = re.sub(
+            r'<link rel="stylesheet" href="((?:\.\./)?map\.css\?v=)[0-9a-z]+">',
+            lambda m: css_preload(m.group(1) + V),
+            t, count=1)
+        t = re.sub(
+            r'<link rel="stylesheet" href="((?:\.\./)?assets/share-bar\.css\?v=[0-9a-z]+)">',
+            lambda m: css_preload(m.group(1)),
+            t, count=1)
+        t = re.sub(r'((?:\.\./)?map\.css\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
+        t = re.sub(r'((?:\.\./)?assets/sat-view\.js\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
+        if 'map.css?v=' not in t and 'sat-view.js' in t:
+            t = t.replace(f'<script src="{pre}assets/sat-view.js', css_preload(f'{pre}map.css?v={V}') + f'\n<script src="{pre}assets/sat-view.js', 1)
         if 'sat-view.js' not in t:
             pre = '' if lang == 'en' else '../'
             t = t.replace('</body>', f'<link rel="stylesheet" href="{pre}map.css?v={V}">\n<script src="{pre}assets/sat-view.js?v={V}" defer></script>\n</body>', 1)
