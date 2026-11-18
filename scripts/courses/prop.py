@@ -371,24 +371,6 @@ LABS.append(
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
  'sims': [(_SAF[0], _SAF[1])],
  'planet': 'DOE says the US could produce more than 1 billion tons of biomass a year.', 'planet_src': [_SAF]})
-UPDATED = '2026-11-18'
-VERSION = '2026.11.18'
-_OCW = 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/resources/'
-# Titles are the lecture topics published on the MIT 16.50 lecture-notes page (fetched November 18, 2026). Notes, not videos.
-SESSION_NOTES = [
- ('u1', 'MIT 16.50 Lecture 19: Turbojet engines (cont.); design parameters; effect of mass flow on thrust', _OCW + 'mit16_50s12_lec19/'),
- ('u3', 'MIT 16.50 Lecture 22: Inlets or diffusers', _OCW + 'mit16_50s12_lec22/'),
- ('u3', 'MIT 16.50 Lecture 23: Exhaust nozzles', _OCW + 'mit16_50s12_lec23/'),
- ('u4', 'MIT 16.50 Lecture 18: Aircraft engine modeling; turbojet engine', _OCW + 'mit16_50s12_lec18/'),
- ('u4', 'MIT 16.50 Lecture 34: Combustors; afterburners', _OCW + 'mit16_50s12_lec34/'),
- ('u5', 'MIT 16.50 Lecture 21: Turbofan engines', _OCW + 'mit16_50s12_lec21/'),
- ('u6', 'MIT 16.50 Lecture 35: Pollutant; motivations for control; formation; strategies for reduction', _OCW + 'mit16_50s12_lec35/'),
- ('u7', 'MIT 16.50 Lecture 1: Rocket equation; gravity loss; optimum acceleration', _OCW + 'mit16_50s12_lec1/'),
- ('u8', 'MIT 16.50 Lecture 6: Modeling of thermal rocket engines; nozzle flow; control of mass flow', _OCW + 'mit16_50s12_lec6/'),
- ('u8', 'MIT 16.50 Lecture 7: Modeling of rocket nozzles; effects of nozzle area ratio', _OCW + 'mit16_50s12_lec7/'),
- ('u8', 'MIT 16.50 Lecture 8: Types of nozzles; connection of flow to nozzle shape', _OCW + 'mit16_50s12_lec8/'),
- ('u9', 'MIT 16.50 Lecture 5: Non-chemical rockets; optimum exhaust velocity', _OCW + 'mit16_50s12_lec5/'),
-]
 SCHEDULE = [(1, 'u1', 'Thrust and propulsive efficiency; Lab A', 'NASA Glenn'), (2, 'u2', 'Brayton cycle; Lab B', 'NASA Glenn'),
             (3, 'u3', 'Stagnation properties and choking', 'MIT 16.50'), (4, 'u3', 'Nozzles and inlets; Lab C', 'MIT 16.50'),
             (5, 'u4', 'Turbojet stations and work balance', 'MIT 16.50'), (6, 'u4', 'Component efficiency and afterburners', 'NASA Glenn'),

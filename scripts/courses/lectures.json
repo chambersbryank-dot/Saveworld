@@ -1,20 +1,4 @@
 {
- "prop": {
-  "0": {
-   "title": "Lecture 8: Dynamics of a Multiple-Body System and Law of Conservation of Momentum",
-   "url": "https://oyc.yale.edu/physics/phys-200/lecture-8",
-   "provider": "Open Yale Courses",
-   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
-   "license": "CC BY-NC-SA 3.0 US"
-  },
-  "1": {
-   "title": "Lecture 23: The Second Law of Thermodynamics and Carnot's Engine",
-   "url": "https://oyc.yale.edu/physics/phys-200/lecture-23",
-   "provider": "Open Yale Courses",
-   "course": "Ramamurti Shankar, PHYS 200 Fundamentals of Physics I",
-   "license": "CC BY-NC-SA 3.0 US"
-  }
- },
  "aero1": {
   "1": {
    "title": "Fluid Dynamics and Statics and Bernoulli's Equation",

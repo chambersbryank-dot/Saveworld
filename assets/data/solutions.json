@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T04:37:37.671Z",
+ "generated": "2026-11-16T15:30:00.000Z",
  "projectRMenu": [
   {
    "hub": "Planetary Defense",
@@ -1592,7 +1592,7 @@
    "name": "Space",
    "solutions": 12,
    "horizon": 1,
-   "hubs": 3,
+   "hubs": 2,
    "byClassification": {
     "corporate": 3,
     "agency": 5,
@@ -2547,7 +2547,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Danuri_ShadowCam.html",
@@ -3715,7 +3716,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Lakes.html",
@@ -3954,7 +3956,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Mission_Blue_Hope_Spots.html",
@@ -4062,17 +4065,6 @@
    "missions": []
   },
   {
-   "url": "NSIDC.html",
-   "title": "National Snow and Ice Data Center (NSIDC)",
-   "category": "polar",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "stats": [],
-   "missions": [],
-   "added": "2026-11-16"
-  },
-  {
    "url": "Namami_Gange.html",
    "title": "Namami Gange (India)",
    "category": "rivers",
@@ -4176,6 +4168,18 @@
    "stats": [],
    "missions": [],
    "added": "2026-11-09"
+  },
+  {
+   "url": "NSIDC.html",
+   "title": "National Snow and Ice Data Center (NSIDC)",
+   "category": "polar",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Ocean_Cleanup.html",
@@ -4420,7 +4424,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Phytoplankton.html",
@@ -4708,7 +4713,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "RCM.html",
@@ -4759,7 +4765,8 @@
    "status": "active",
    "stats": [],
    "missions": [],
-   "added": "2026-11-16"
+   "added": "2026-11-16",
+   "new": true
   },
   {
    "url": "Rewilding_Europe.html",
@@ -4832,17 +4839,6 @@
    "added": "2026-10-21"
   },
   {
-   "url": "SMOS.html",
-   "title": "SMOS: Soil Moisture and Ocean Salinity (ESA)",
-   "category": "earth-observation",
-   "type": "solution",
-   "classification": "agency",
-   "status": "active",
-   "stats": [],
-   "missions": [],
-   "added": "2026-11-16"
-  },
-  {
    "url": "Saharan_Dust_Amazon.html",
    "title": "Saharan Dust Feeds the Amazon",
    "category": "forests",
@@ -4908,6 +4904,18 @@
    "missions": []
   },
   {
+   "url": "Save_the_Elephants.html",
+   "title": "Save the Elephants",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
    "url": "SCAR_Antarctic_Research.html",
    "title": "SCAR: Scientific Committee on Antarctic Research",
    "category": "polar",
@@ -4928,17 +4936,6 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-20"
-  },
-  {
-   "url": "Save_the_Elephants.html",
-   "title": "Save the Elephants",
-   "category": "forests",
-   "type": "solution",
-   "classification": "nonprofit",
-   "status": "active",
-   "stats": [],
-   "missions": [],
-   "added": "2026-11-16"
   },
   {
    "url": "Sea_Turtle_Conservancy.html",
@@ -5113,6 +5110,30 @@
    "added": "2026-10-28"
   },
   {
+   "url": "SMOS.html",
+   "title": "SMOS: Soil Moisture and Ocean Salinity (ESA)",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
+   "url": "Snow_Leopard_Trust.html",
+   "title": "Snow Leopard Trust",
+   "category": "forests",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-16",
+   "new": true
+  },
+  {
    "url": "SOCCOM.html",
    "title": "SOCCOM: Robot Floats in the Southern Ocean",
    "category": "polar",
@@ -5157,17 +5178,6 @@
      "next": null
     }
    ]
-  },
-  {
-   "url": "Snow_Leopard_Trust.html",
-   "title": "Snow Leopard Trust",
-   "category": "forests",
-   "type": "solution",
-   "classification": "nonprofit",
-   "status": "active",
-   "stats": [],
-   "missions": [],
-   "added": "2026-11-16"
   },
   {
    "url": "Solar_Orbiter.html",
@@ -5220,7 +5230,7 @@
   },
   {
    "url": "Space.html",
-   "title": "Earth-Protecting Satellites",
+   "title": "Space",
    "category": "space",
    "type": "hub",
    "status": "active",
@@ -5709,15 +5719,6 @@
     }
    ],
    "added": "2026-10-18"
-  },
-  {
-   "url": "Voyages.html",
-   "title": "Voyages Beyond Earth",
-   "category": "space",
-   "type": "hub",
-   "status": "active",
-   "stats": [],
-   "missions": []
   },
   {
    "url": "Waterkeeper_Alliance.html",

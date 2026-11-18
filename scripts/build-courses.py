@@ -135,8 +135,6 @@ def unit(C, K, i, u):
         o.append(f'<div class="crs-lec"><h3>{esc("Watch the lecture")}</h3><p><a href="{html.escape(lec["url"])}" rel="noopener" lang="en">{html.escape(lec["title"])}</a> ({esc("in English")})</p>'
                  f'<p class="crs-src"><span lang="en">{html.escape(lec["course"])}, {html.escape(lec["provider"])}</span>. {esc("License:")} <a href="{lic[0]}" rel="noopener license">{lec["license"]}</a> · <a href="{lic[1]}" rel="noopener">{esc("Terms of use")}</a>. '
                  f'{esc("Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.")}</p></div>')
-    o.append(gc_slot(abs_page(C.PAGE, f'#{uid}'), _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title']),
-                     _('Free Saving Planets lesson. No university credit. Listing a source is not an endorsement.'), 'assignment'))
     o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> {esc("I finished this unit")}</label></p>')
     o.append(top() + '</section>')
     return ''.join(o)
@@ -221,100 +219,18 @@ SCOPE_T = {
 }
 UPDATED = '2026-11-01'
 VERSION = '2026.11.01'
-DATE_LABEL = {
- '2026-11-01': {'en': 'November 1, 2026', 'fr': '1er novembre 2026', 'es': '1 de noviembre de 2026', 'ar': '1 نوفمبر 2026', 'it': '1 novembre 2026', 'he': '1 בנובמבר 2026'},
- '2026-11-18': {'en': 'November 18, 2026', 'fr': '18 novembre 2026', 'es': '18 de noviembre de 2026', 'ar': '18 نوفمبر 2026', 'it': '18 novembre 2026', 'he': '18 בנובמבר 2026'},
-}
-FACT_NOTE = {
- 'recheck': {
-  'en': 'Worked numbers on this page were rechecked November 18, 2026.',
-  'fr': 'Les nombres calculés de cette page ont été revérifiés le 18 novembre 2026.',
-  'es': 'Los números resueltos de esta página se volvieron a comprobar el 18 de noviembre de 2026.',
-  'ar': 'أُعيد التحقق من الأرقام المحلولة في هذه الصفحة في 18 نوفمبر 2026.',
-  'it': 'I numeri svolti in questa pagina sono stati ricontrollati il 18 novembre 2026.',
-  'he': 'המספרים הפתורים בעמוד זה נבדקו מחדש ב-18 בנובמבר 2026.',
- },
- 'map': {
-  'en': 'Outcomes map and readings list added November 18, 2026. Worked numbers on this page were last checked November 1, 2026.',
-  'fr': 'La carte des objectifs et la liste de lectures ont été ajoutées le 18 novembre 2026. Les nombres calculés de cette page ont été vérifiés pour la dernière fois le 1er novembre 2026.',
-  'es': 'El mapa de resultados y la lista de lecturas se añadieron el 18 de noviembre de 2026. Los números resueltos de esta página se comprobaron por última vez el 1 de noviembre de 2026.',
-  'ar': 'أُضيفت خريطة النواتج وقائمة القراءات في 18 نوفمبر 2026. آخر تحقق من الأرقام المحلولة في هذه الصفحة كان في 1 نوفمبر 2026.',
-  'it': 'La mappa degli obiettivi e l’elenco delle letture sono stati aggiunti il 18 novembre 2026. I numeri svolti in questa pagina sono stati controllati l’ultima volta il 1 novembre 2026.',
-  'he': 'מפת התוצרים ורשימת הקריאה נוספו ב-18 בנובמבר 2026. המספרים הפתורים בעמוד זה נבדקו לאחרונה ב-1 בנובמבר 2026.',
- },
-}
-def stamp_of(C):
-    updated = getattr(C, 'UPDATED', UPDATED)
-    version = getattr(C, 'VERSION', VERSION)
-    return updated, version, DATE_LABEL[updated][LANG]
-def abs_page(page, frag=''):
-    return 'https://www.savingplanets.com/' + ('' if LANG == 'en' else LANG + '/') + page + frag
-def gc_slot(url, title, body, kind='assignment'):
-    return (f'<div class="gc-slot" data-gc-type="{html.escape(kind)}" data-gc-url="{html.escape(url, quote=True)}" '
-            f'data-gc-title="{html.escape(title, quote=True)}" data-gc-body="{html.escape(body, quote=True)}"></div>')
 def gear_heading(C):
     return 'Lab equipment (for the wet labs)' if C.ID in WET_IDS else None
-def outcomes_block(C):
-    # Cells are translated once here. table() would translate them again.
-    practiced = _('Practice and quiz in this unit. The exam sets are at the end of the course.')
-    head = ''.join(f'<th scope="col">{esc(x)}</th>' for x in ['Outcome', 'Taught in', 'Practiced in'])
-    body = []
-    for i, u in enumerate(C.UNITS, 1):
-        where = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
-        for obj in u['objectives']:
-            body.append('<tr>' + ''.join(f'<td>{html.escape(c)}</td>' for c in (_(obj), where, practiced)) + '</tr>')
-    return (f'<section id="outcomes"><h2>{esc("Learning outcomes")}</h2>'
-            f'<p>{esc("This table maps each outcome to the unit that teaches it and to the practice on this page.")}</p>'
-            f'<div class="crs-tw"><table class="crs-tbl"><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
-            + top() + '</section>')
-def readings_block(C):
-    parts = [f'<section id="readings"><h2>{esc("Readings")}</h2><p>{esc("Each link is a free public source already used in this course. Listing a source is not an endorsement.")}</p>']
-    for i, u in enumerate(C.UNITS, 1):
-        title = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
-        parts.append(f'<h3>{html.escape(title)}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
-    if getattr(C, 'PTABLE', None):
-        parts.append(f'<h3>{esc(getattr(C, "REF_TITLE", "Periodic table"))}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in C.PTABLE) + '</ul>')
-    parts.append(top() + '</section>')
-    return ''.join(parts)
-def notes_block(C):
-    notes = getattr(C, 'SESSION_NOTES', None)
-    if not notes: return ''
-    items = []
-    for unit, topic, url in notes:
-        label = _('Unit {n}').replace('{n}', str(next(i for i, u in enumerate(C.UNITS, 1) if u['id'] == unit)))
-        items.append(f'<li><a href="#{html.escape(unit)}">{html.escape(label)}: {html.escape(_("Session notes on this page"))}</a>. '
-                     f'<a href="{html.escape(url)}" rel="noopener" lang="en">{html.escape(topic)}</a></li>')
-    return (f'<section id="notes"><h2>{esc("Lecture notes by session")}</h2>'
-            f'<p>{esc("The notes for each unit are on this page. Where MIT OpenCourseWare published a matching note, it is linked. Those notes are CC BY-NC-SA 4.0. Saving Planets is not affiliated with or endorsed by MIT.")}</p>'
-            f'<ul class="crs-res">{"".join(items)}</ul>' + top() + '</section>')
-def psets_block(C):
-    parts = [f'<section id="psets"><h2>{esc("Problem sets with solutions")}</h2>'
-             f'<p>{esc("These are the practice problems from each unit, with the solution. Every number is recomputed by the course check before the page is published. The step-by-step worked examples sit in the unit notes.")}</p>']
-    gc_body = _('Free Saving Planets problem set. No university credit. Listing a source is not an endorsement.')
-    for i, u in enumerate(C.UNITS, 1):
-        title = _('Problem set {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
-        parts.append(f'<h3 id="{u["id"]}-ps">{html.escape(title)}</h3><ol class="crs-prac">' + ''.join(
-            f'<li><p>{esc(q)}</p><details><summary>{esc("Show full solution")}</summary><p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(a)}</p></details></li>'
-            for q, a in u['practice']) + '</ol>')
-        parts.append(f'<p><a href="#{u["id"]}">{esc("Worked examples for this set")}</a></p>')
-        parts.append(gc_slot(abs_page(C.PAGE, f'#{u["id"]}-ps'), title, gc_body, 'assignment'))
-    parts.append(top() + '</section>')
-    return ''.join(parts)
 def course_page(C):
     texs = [t for u in C.UNITS for t, _c in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
     K = katex(texs)
-    toc = [('about', 'About this course'), ('start', 'Before you start'), ('schedule', '15-week schedule'), ('outcomes', 'Learning outcomes'), ('readings', 'Readings')]
-    if getattr(C, 'SESSION_NOTES', None): toc.append(('notes', 'Lecture notes by session'))
-    toc += [('progress', 'Your progress')] + \
+    toc = [('about', 'About this course'), ('start', 'Before you start'), ('schedule', '15-week schedule'), ('progress', 'Your progress')] + \
           [(u['id'], _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])) for i, u in enumerate(C.UNITS, 1)] + \
-          [('psets', 'Problem sets with solutions'), ('lab', 'Lab'), ('exam', 'Exams with solutions'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
+          [('lab', 'Lab'), ('exam', 'Exam prep'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
     names0 = {u['id'] for u in C.UNITS}
-    updated, version, when = stamp_of(C)
-    note_key = 'recheck' if updated == '2026-11-18' else 'map'
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
-         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
-         f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
+         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{UPDATED}">November 1, 2026</time> · {html.escape(VER_T[LANG])} {VERSION}</p>',
          f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
@@ -325,21 +241,15 @@ def course_page(C):
              + (f'<h3>{esc(gear_heading(C))}</h3>' if gear_heading(C) else f'<h3>{html.escape(GEAR_T[LANG])}</h3>')
              + ul(C.LAB_GEAR) + top() + '</section>')
     names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
-    o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2><p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p><p>{esc("This table is the course calendar.")}</p>'
+    o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2><p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p>'
              + table(['Week', 'Unit', 'Topics', 'Reading'], [[str(w), names[u], t, r] for w, u, t, r in C.SCHEDULE]) + top() + '</section>')
-    o.append(outcomes_block(C))
-    o.append(readings_block(C))
-    o.append(notes_block(C))
     o.append(f'<section id="progress"><h2>{esc("Your progress")}</h2><p>{esc("Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.")}</p>'
              f'<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">{esc("Turn on JavaScript to track progress.")}</p></div>'
              f'<p><button type="button" class="crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
-    o.append(psets_block(C))
     o.append(f'<section id="lab"><h2>{esc(C.LAB_TITLE) if getattr(C, "LAB_TITLE", None) else html.escape(_("The lab ({code})").replace("{code}", getattr(C, "LAB_NAME", C.CODE.split(" + ")[-1])))}</h2>' + ''.join(f'<p>{esc(x)}</p>' for x in C.LAB_INTRO)
              + f'<p class="crs-src">{esc("Safety reference:")} {ext(*C.SAFETY_SRC)}</p>' + ''.join(lab(C, K, L) for L in C.LABS) + top() + '</section>')
-    ex = [f'<section id="exam"><h2>{esc("Exams with solutions")}</h2><p>{esc("Time yourself: about 10 minutes per problem. Then compare with the full solutions.")}</p>',
-          gc_slot(abs_page(C.PAGE, '#exam'), _(C.TITLE) + ' — ' + _('Exams with solutions'),
-                  _('Free Saving Planets exam. No university credit. Listing a source is not an endorsement.'), 'assignment')]
+    ex = [f'<section id="exam"><h2>{esc("Exam prep practice sets")}</h2><p>{esc("Time yourself: about 10 minutes per problem. Then compare with the full solutions.")}</p>']
     for t, probs in C.EXAMS:
         ex.append(f'<h3>{esc(t)}</h3><ol class="crs-prac">' + ''.join(
             f'<li><p>{esc(q)}</p><details><summary>{esc("Show full solution")}</summary><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in st) + f'</ol><p class="crs-ans"><strong>{esc("Answer:")}</strong> {esc(a)}</p></details></li>'
@@ -477,58 +387,6 @@ def fix_switch(h):
         return m.group(0).replace(f'href="{href}"', f'href="{home}"')
     return re.sub(r'<li class="lang-switch".*?</li>', lambda b: re.sub(r'<a class="spn-ls"[^>]*?href="([^"]+)" hreflang="(\w+)"', one, b.group(0)), h, flags=re.S)
 
-COMPARE = {
- 'h': {'en': 'How this track compares', 'fr': 'Comment ce parcours se compare', 'es': 'Cómo se compara este itinerario', 'ar': 'كيف يُقارَن هذا المسار', 'it': 'Come si confronta questo percorso', 'he': 'איך המסלול הזה משתווה'},
- 'p1': {
-  'en': 'This note compares our free four-year track with the Bachelor of Science in Aerospace Engineering at Embry-Riddle Aeronautical University, Daytona Beach, using that university’s public department page and catalog. Saving Planets is not part of Embry-Riddle, is not affiliated with it, and is not endorsed by it. This track gives no Embry-Riddle credit and no credit at any school.',
-  'fr': 'Cette note compare notre parcours gratuit de quatre ans avec le Bachelor of Science in Aerospace Engineering d’Embry-Riddle Aeronautical University, à Daytona Beach, d’après la page du département et le catalogue publics de cette université. Saving Planets ne fait pas partie d’Embry-Riddle, n’y est pas affilié et n’est pas approuvé par elle. Ce parcours ne donne aucun crédit Embry-Riddle ni aucun crédit dans une école.',
-  'es': 'Esta nota compara nuestro itinerario gratuito de cuatro años con el Bachelor of Science in Aerospace Engineering de Embry-Riddle Aeronautical University, en Daytona Beach, según la página del departamento y el catálogo públicos de esa universidad. Saving Planets no forma parte de Embry-Riddle, no está afiliado a ella y no cuenta con su aval. Este itinerario no da crédito de Embry-Riddle ni crédito en ninguna escuela.',
-  'ar': 'تقارن هذه الملاحظة مسارنا المجاني لأربع سنوات ببكالوريوس هندسة الطيران والفضاء في جامعة إمبري-ريدل للطيران، حرم دايتونا بيتش، بالاعتماد على صفحة القسم والفهرس العامين للجامعة. Saving Planets ليست جزءًا من إمبري-ريدل، وغير تابعة لها، وغير مزكّاة منها. لا يمنح هذا المسار أي ساعات من إمبري-ريدل ولا أي ساعات في أي مدرسة.',
-  'it': 'Questa nota confronta il nostro percorso gratuito di quattro anni con il Bachelor of Science in Aerospace Engineering della Embry-Riddle Aeronautical University, a Daytona Beach, usando la pagina del dipartimento e il catalogo pubblici di quell’università. Saving Planets non fa parte di Embry-Riddle, non è affiliata e non è approvata da essa. Questo percorso non dà crediti Embry-Riddle né crediti in alcuna scuola.',
-  'he': 'ההערה הזו משווה את המסלול החינמי שלנו לארבע שנים לתואר הראשון בהנדסת אווירונאוטיקה וחלל באוניברסיטת אמברי-רידל לאווירונאוטיקה, דייטונה ביץ׳, לפי עמוד המחלקה והקטלוג הפומביים שלה. Saving Planets אינה חלק מאמברי-רידל, אינה מסונפת אליה ואינה מאושרת על ידה. המסלול הזה אינו נותן נקודות זכות של אמברי-רידל ואינו נותן נקודות זכות בשום מוסד.',
- },
- 'p2': {
-  'en': 'The Daytona Beach department says it is the largest of its kind in the country, with more than 2,400 students in its B.S., M.S. and Ph.D. programs, and that students use labs, design projects and a year-long capstone.',
-  'fr': 'Le département de Daytona Beach indique qu’il est le plus grand du pays dans son domaine, avec plus de 2 400 étudiants dans ses programmes de B.S., M.S. et Ph.D., et que les étudiants utilisent des laboratoires, des projets de conception et un projet de fin d’études sur un an.',
-  'es': 'El departamento de Daytona Beach dice que es el más grande de su tipo en el país, con más de 2,400 estudiantes en sus programas de B.S., M.S. y Ph.D., y que el alumnado usa laboratorios, proyectos de diseño y un proyecto final de un año.',
-  'ar': 'يقول قسم دايتونا بيتش إنه الأكبر من نوعه في البلاد، مع أكثر من 2,400 طالب في برامج البكالوريوس والماجستير والدكتوراه، وإن الطلاب يستخدمون المختبرات ومشاريع التصميم ومشروع تخرج يمتد عامًا.',
-  'it': 'Il dipartimento di Daytona Beach scrive di essere il più grande del paese nel suo campo, con più di 2.400 studenti nei programmi di B.S., M.S. e Ph.D., e che gli studenti usano laboratori, progetti di progettazione e un progetto finale di un anno.',
-  'he': 'המחלקה בדייטונה ביץ׳ כותבת שהיא הגדולה מסוגה במדינה, עם יותר מ-2,400 סטודנטים בתוארי B.S.‏, M.S. ו-Ph.D.‏, ושהסטודנטים עובדים במעבדות, בפרויקטי תכנון ובפרויקט גמר של שנה.',
- },
- 'p3': {
-  'en': 'The Daytona Beach catalog lists that degree as 129 credits: general education 42, core 47, and a concentration of 40. It says a student must earn a cumulative GPA of 2.5 or higher and complete required courses with a grade of C or better to remain on track.',
-  'fr': 'Le catalogue de Daytona Beach indique ce diplôme à 129 crédits : formation générale 42, tronc commun 47 et une concentration de 40. Il précise qu’un étudiant doit obtenir une moyenne cumulative d’au moins 2,5 et réussir les cours requis avec une note de C ou mieux pour rester dans le parcours.',
-  'es': 'El catálogo de Daytona Beach indica ese grado con 129 créditos: educación general 42, núcleo 47 y una concentración de 40. Dice que un estudiante debe obtener un promedio acumulado de 2.5 o más y aprobar los cursos requeridos con una nota de C o mejor para seguir en el plan.',
-  'ar': 'يذكر فهرس دايتونا بيتش أن الدرجة 129 ساعة: التعليم العام 42، والمتطلبات الأساسية 47، والتخصص 40. ويقول إن على الطالب تحقيق معدل تراكمي 2.5 أو أعلى وإكمال المقررات المطلوبة بدرجة C أو أفضل ليبقى على المسار.',
-  'it': 'Il catalogo di Daytona Beach indica quel titolo a 129 crediti: formazione generale 42, nucleo 47 e un indirizzo di 40. Dice che uno studente deve avere una media cumulativa di almeno 2,5 e completare i corsi richiesti con un voto di C o superiore per restare in regola.',
-  'he': 'הקטלוג של דייטונה ביץ׳ מציין את התואר כ-129 נקודות זכות: השכלה כללית 42, ליבה 47 והתמחות 40. הוא כותב שסטודנט צריך ממוצע מצטבר של 2.5 לפחות וציון C או יותר בקורסי החובה כדי להישאר במסלול.',
- },
- 'p4': {
-  'en': 'On the Aeronautics concentration, the catalog lists AERO 307 Incompressible Aerodynamics, AERO 308 Compressible Aerodynamics, AERO 314 Experimental Aerodynamics with AERO 314L, AERO 403 Jet Propulsion, AERO 413 Airplane Stability and Control, AERO 432 Flight Dynamics and Control, and the design pair AERO 420 Aircraft Preliminary Design and AERO 421 Aircraft Detail Design. On the Astronautics concentration it lists AERO 414 Space Propulsion, AERO 426 Spacecraft Attitude Dynamics, and the design pair AERO 427 and AERO 445. General education includes COMM 122 English Composition, COMM 221 Technical Communication and COMM 219 Speech.',
-  'fr': 'Dans la concentration Aéronautique, le catalogue indique AERO 307 Incompressible Aerodynamics, AERO 308 Compressible Aerodynamics, AERO 314 Experimental Aerodynamics avec AERO 314L, AERO 403 Jet Propulsion, AERO 413 Airplane Stability and Control, AERO 432 Flight Dynamics and Control, et la paire de conception AERO 420 Aircraft Preliminary Design et AERO 421 Aircraft Detail Design. Dans la concentration Astronautique, il indique AERO 414 Space Propulsion, AERO 426 Spacecraft Attitude Dynamics, et la paire AERO 427 et AERO 445. La formation générale comprend COMM 122 English Composition, COMM 221 Technical Communication et COMM 219 Speech.',
-  'es': 'En la concentración de Aeronáutica, el catálogo incluye AERO 307 Incompressible Aerodynamics, AERO 308 Compressible Aerodynamics, AERO 314 Experimental Aerodynamics con AERO 314L, AERO 403 Jet Propulsion, AERO 413 Airplane Stability and Control, AERO 432 Flight Dynamics and Control, y el par de diseño AERO 420 Aircraft Preliminary Design y AERO 421 Aircraft Detail Design. En Astronáutica incluye AERO 414 Space Propulsion, AERO 426 Spacecraft Attitude Dynamics y el par AERO 427 y AERO 445. La educación general incluye COMM 122 English Composition, COMM 221 Technical Communication y COMM 219 Speech.',
-  'ar': 'في تركيز الطيران، يذكر الفهرس AERO 307 وAERO 308 وAERO 314 مع مختبر AERO 314L وAERO 403 Jet Propulsion وAERO 413 وAERO 432 وزوج التصميم AERO 420 وAERO 421. وفي تركيز الملاحة الفضائية يذكر AERO 414 Space Propulsion وAERO 426 وزوج التصميم AERO 427 وAERO 445. ويشمل التعليم العام COMM 122 وCOMM 221 Technical Communication وCOMM 219 Speech.',
-  'it': 'Nell’indirizzo Aeronautics il catalogo elenca AERO 307 Incompressible Aerodynamics, AERO 308 Compressible Aerodynamics, AERO 314 Experimental Aerodynamics con AERO 314L, AERO 403 Jet Propulsion, AERO 413 Airplane Stability and Control, AERO 432 Flight Dynamics and Control, e la coppia di progetto AERO 420 Aircraft Preliminary Design e AERO 421 Aircraft Detail Design. Nell’indirizzo Astronautics elenca AERO 414 Space Propulsion, AERO 426 Spacecraft Attitude Dynamics e la coppia AERO 427 e AERO 445. La formazione generale include COMM 122 English Composition, COMM 221 Technical Communication e COMM 219 Speech.',
-  'he': 'במסלול האווירונאוטיקה הקטלוג מונה את AERO 307,‏ AERO 308,‏ AERO 314 עם המעבדה AERO 314L,‏ AERO 403 Jet Propulsion,‏ AERO 413,‏ AERO 432, ואת זוג התכן AERO 420 ו-AERO 421. במסלול האסטרונאוטיקה הוא מונה את AERO 414 Space Propulsion,‏ AERO 426, ואת זוג התכן AERO 427 ו-AERO 445. ההשכלה הכללית כוללת את COMM 122,‏ COMM 221 Technical Communication ו-COMM 219 Speech.',
- },
- 'p5': {
-  'en': 'Our Propulsion course (AERO 410) covers jet and rocket topics that the catalog splits into AERO 403 Jet Propulsion and AERO 414 Space Propulsion. Aerodynamics I follows the topics of AERO 307 and AERO 308. We do not have an experimental aerodynamics lab matching AERO 314 and AERO 314L. Flight Dynamics and Controls follows the topics of AERO 413 and AERO 432. Our capstone is one self-study course, not the catalog’s year-long pair AERO 420 and AERO 421. We have no course matching COMM 122, COMM 221 or COMM 219, so technical writing and speech are a gap. Use this track as free practice beside a degree, not as a replacement for one.',
-  'fr': 'Notre cours de propulsion (AERO 410) couvre des sujets de jets et de fusées que le catalogue sépare en AERO 403 Jet Propulsion et AERO 414 Space Propulsion. L’aérodynamique I suit les sujets d’AERO 307 et d’AERO 308. Nous n’avons pas de laboratoire d’aérodynamique expérimentale correspondant à AERO 314 et AERO 314L. Dynamique du vol et commandes suit les sujets d’AERO 413 et d’AERO 432. Notre projet de fin d’études est un seul cours en autonomie, pas la paire annuelle AERO 420 et AERO 421 du catalogue. Nous n’avons pas de cours correspondant à COMM 122, COMM 221 ou COMM 219 : la rédaction technique et l’expression orale sont donc un manque. Utilisez ce parcours comme une pratique gratuite à côté d’un diplôme, pas à la place d’un diplôme.',
-  'es': 'Nuestro curso de propulsión (AERO 410) trata temas de motores a reacción y cohetes que el catálogo separa en AERO 403 Jet Propulsion y AERO 414 Space Propulsion. Aerodinámica I sigue los temas de AERO 307 y AERO 308. No tenemos un laboratorio de aerodinámica experimental equivalente a AERO 314 y AERO 314L. Dinámica y control de vuelo sigue los temas de AERO 413 y AERO 432. Nuestro proyecto final es un solo curso de autoestudio, no el par de un año AERO 420 y AERO 421 del catálogo. No tenemos un curso equivalente a COMM 122, COMM 221 o COMM 219, así que la redacción técnica y la expresión oral son una laguna. Usa este itinerario como práctica gratuita junto a un grado, no como sustituto.',
-  'ar': 'يغطي مقرر الدفع لدينا (AERO 410) موضوعات المحركات النفاثة والصواريخ التي يفصلها الفهرس إلى AERO 403 وAERO 414. ويتبع مقرر الديناميكا الهوائية الأول موضوعات AERO 307 وAERO 308. وليس لدينا مختبر ديناميكا هوائية تجريبي يقابل AERO 314 وAERO 314L. ويتبع مقرر ديناميكا الطيران والتحكم موضوعات AERO 413 وAERO 432. ومشروع التخرج لدينا مقرر واحد للتعلم الذاتي، وليس زوج العام AERO 420 وAERO 421. وليس لدينا مقرر يقابل COMM 122 أو COMM 221 أو COMM 219، لذا تبقى الكتابة التقنية والخطابة فجوة. استخدم هذا المسار تدريبًا مجانيًا إلى جانب درجة، لا بدلًا منها.',
-  'it': 'Il nostro corso di propulsione (AERO 410) tratta argomenti di getti e razzi che il catalogo divide in AERO 403 Jet Propulsion e AERO 414 Space Propulsion. Aerodinamica I segue gli argomenti di AERO 307 e AERO 308. Non abbiamo un laboratorio di aerodinamica sperimentale corrispondente ad AERO 314 e AERO 314L. Dinamica e controllo del volo segue gli argomenti di AERO 413 e AERO 432. Il nostro progetto finale è un solo corso di autoapprendimento, non la coppia annuale AERO 420 e AERO 421 del catalogo. Non abbiamo un corso corrispondente a COMM 122, COMM 221 o COMM 219: scrittura tecnica e discorso restano quindi un vuoto. Usa questo percorso come pratica gratuita accanto a un titolo, non al posto di un titolo.',
-  'he': 'קורס ההנעה שלנו (AERO 410) מכסה נושאי סילון ורקטות שהקטלוג מפצל ל-AERO 403 Jet Propulsion ול-AERO 414 Space Propulsion. אווירודינמיקה א׳ עוקבת אחרי הנושאים של AERO 307 ו-AERO 308. אין לנו מעבדת אווירודינמיקה ניסויית שמקבילה ל-AERO 314 ול-AERO 314L. דינמיקת טיסה ובקרה עוקבת אחרי הנושאים של AERO 413 ו-AERO 432. פרויקט הגמר שלנו הוא קורס לימוד עצמי אחד, לא הזוג השנתי AERO 420 ו-AERO 421. אין לנו קורס שמקביל ל-COMM 122, ל-COMM 221 או ל-COMM 219, ולכן כתיבה טכנית ודיבור הם פער. השתמשו במסלול הזה כתרגול חינמי לצד תואר, לא במקום תואר.',
- },
-}
-def compare_block():
-    L = LANG
-    src1 = 'https://erau.edu/academics/colleges/daytona-beach-college-of-engineering/aerospace-engineering'
-    src2 = 'https://catalog.erau.edu/programs/undergraduate/bachelors/aerospace-engineering/'
-    return (f'<section id="compare"><h2>{html.escape(COMPARE["h"][L])}</h2>'
-            f'<div class="crs-disc"><p>{html.escape(COMPARE["p1"][L])}</p></div>'
-            f'<p>{html.escape(COMPARE["p2"][L])}</p><p>{html.escape(COMPARE["p3"][L])}</p><p>{html.escape(COMPARE["p4"][L])}</p><p>{html.escape(COMPARE["p5"][L])}</p>'
-            f'<p class="crs-src"><a href="{src1}" rel="noopener">Embry-Riddle Daytona Beach Department of Aerospace Engineering</a> · '
-            f'<a href="{src2}" rel="noopener">Daytona Beach aerospace engineering catalog</a></p>' + top() + '</section>')
 def hub_page():
     o = [hero('STEM Courses', 'A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'), f'<div class="crs"{dir_attr()}>',
          f'<div class="crs-disc"><p>{esc("These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.")}</p>'
@@ -542,7 +400,6 @@ def hub_page():
             elif m: o.append(f'<li class="crs-c live"><span class="crs-badge">{esc("Live")}</span><h3><a href="../{m.PAGE}" hreflang="en">{esc(t)}</a> <span lang="en">(English)</span></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
             else: o.append(f'<li class="crs-c"><span class="crs-badge soon">{esc("Coming soon")}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>')
         o.append('</ul>' + top() + '</section>')
-    o.append(compare_block())
     o.append('</div>')
     return BL.shell(LANG, HUB, _('Courses: free aerospace and STEM study track'), _('A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'),
                     ''.join(o), extra_head=head(), ld_type='CollectionPage', tail='')
@@ -559,10 +416,7 @@ def banners():
         first = next(a for a, v in cfg['images'].items() if v['r2'] == keys[0])
         cfg['pages'][page] = first
         cfg['slides'].setdefault('curated', {})[page] = keys[1:]
-    new = json.dumps(cfg, ensure_ascii=False, indent=1) + '\n'
-    old = open(p, encoding='utf8').read()
-    if json.loads(new) != json.loads(old):
-        open(p, 'w', encoding='utf8').write(new)
+    json.dump(cfg, open(p, 'w', encoding='utf8'), ensure_ascii=False, indent=1); open(p, 'a').write('\n')
 
 TL = {'en': ('Free self-study courses', 'A four-year aerospace and STEM study track with labs, quizzes and printable study guides. Start with', 'All courses'),
       'fr': ('Cours gratuits en autonomie', 'Un parcours de quatre ans en aérospatiale et STEM, avec travaux pratiques, quiz et guides imprimables. Commencez par', 'Tous les cours'),
