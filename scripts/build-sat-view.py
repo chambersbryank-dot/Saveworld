@@ -567,6 +567,13 @@ def main():
         path = 'Space.html' if lang == 'en' else f'{lang}/Space.html'
         t = open(path, encoding='utf-8').read()
         t = re.sub(r'<section class="sat-view" id="satmap".*?<p class="sat-scale">.*?</p></section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
+        sat_crit = ('<style id="sat-crit">.sat-hero-sub{margin:.4rem auto 0;max-width:46rem;font-size:clamp(.92rem,1.5vw,1.08rem);line-height:1.45;font-weight:550;color:#f4fbff;text-shadow:0 1px 8px rgba(0,0,0,.7)}'
+                    '.sat-stage{height:clamp(22rem,62vh,36rem);min-height:22rem;border-radius:16px;background:#041525}'
+                    '.sat-view{max-width:1200px;margin-inline:auto}</style>')
+        if 'id="sat-crit"' in t:
+            t = re.sub(r'<style id="sat-crit">.*?</style>', sat_crit, t, count=1)
+        else:
+            t = t.replace('</head>', sat_crit + '</head>', 1)
         t = re.sub(r'<link rel="stylesheet" href="(?:\.\./)?assets/leaflet/leaflet\.css\?v=1\.9\.4">\n?', '', t)
         t = re.sub(r'<script src="(?:\.\./)?assets/leaflet/leaflet\.js\?v=1\.9\.4" defer></script>', '', t)
         pre = '' if lang == 'en' else '../'
