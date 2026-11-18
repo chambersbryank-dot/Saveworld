@@ -271,7 +271,7 @@ a.wm-orbit-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media (max-width:800px){
   .sat-layout.has-card{grid-template-columns:1fr}
   .sat-layout.has-card > .sat-stage,.sat-layout.has-card > .sat-card{grid-column:1}
-  .sat-stage{width:min(100%, calc(100dvh - var(--nav-height, 64px) - 8rem));height:auto;aspect-ratio:5/3;min-height:0;max-height:calc(100dvh - var(--nav-height, 64px) - 6.5rem);margin-inline:auto}
+  .sat-stage{width:min(100%, calc(100dvh - var(--nav-height, 64px) - 8rem));height:auto;aspect-ratio:1/1;min-height:0;max-height:calc(100dvh - var(--nav-height, 64px) - 6.5rem);margin-inline:auto}
   .orb-lab{font-size:var(--lab-size,.7rem);max-width:42vw}
 }
 @media (prefers-reduced-motion:reduce){

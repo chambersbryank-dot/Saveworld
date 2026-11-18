@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261118g'
+V = '20261118h'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
