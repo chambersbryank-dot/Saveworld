@@ -122,7 +122,7 @@ HOME = {
  'ESS1': ('NGSS ESS1: Earth’s Place in the Universe', 'NGSS ESS1 : la place de la Terre dans l’Univers', 'NGSS ESS1: el lugar de la Tierra en el universo', 'NGSS ESS1: مكان الأرض في الكون', 'NGSS ESS1: il posto della Terra nell’universo', 'NGSS ESS1: מקומו של כדור הארץ ביקום'),
  'LS2': ('NGSS LS2: Ecosystems', 'NGSS LS2 : écosystèmes', 'NGSS LS2: ecosistemas', 'NGSS LS2: النظم البيئية', 'NGSS LS2: ecosistemi', 'NGSS LS2: מערכות אקולוגיות'),
  'CCSS': ('Common Core literacy in science (RI, RST)', 'Littératie Common Core en sciences (RI, RST)', 'Lectura Common Core en ciencias (RI, RST)', 'القراءة في العلوم وفق Common Core (RI وRST)', 'Lettura Common Core nelle scienze (RI, RST)', 'אוריינות Common Core במדעים (RI, RST)'),
- 'bands': ('Grade bands: K-2, 3-5, 6-8, 9-12', 'Niveaux : K-2, 3-5, 6-8, 9-12', 'Niveles: K-2, 3-5, 6-8, 9-12', 'المراحل: K-2، 3-5، 6-8، 9-12', 'Fasce: K-2, 3-5, 6-8, 9-12', 'שכבות גיל: K-2, 3-5, 6-8, 9-12'),
+ 'bands': ('Each teacher sheet uses one grade band (K-2, 3-5, 6-8, or 9-12).', 'Chaque fiche enseignant utilise un seul niveau (K-2, 3-5, 6-8 ou 9-12).', 'Cada ficha docente usa un solo nivel (K-2, 3-5, 6-8 o 9-12).', 'تستخدم كل ورقة معلم مرحلة واحدة (K-2 أو 3-5 أو 6-8 أو 9-12).', 'Ogni scheda per insegnanti usa una sola fascia (K-2, 3-5, 6-8 o 9-12).', 'כל דף מורה משתמש בשכבת גיל אחת (K-2, 3-5, 6-8 או 9-12).'),
  'link': ('See codes on Teacher Sheets', 'Voir les codes dans les fiches enseignants', 'Ver los códigos en las fichas docentes', 'اطّلع على الرموز في أوراق المعلمين', 'Vedi i codici nelle schede per insegnanti', 'ראו את הקודים בדפי המורים'),
 }
 
@@ -137,11 +137,11 @@ TAGLINE = (
 )
 # Oct 29 2026: "why these sources" line under the tagline (links Editorial_Policy.html).
 SOURCES = (
-    'Why trust it: every page is cross-checked against NASA, Yale, Harvard, MIT, and other leading universities and scholars.',
-    'Pourquoi nous faire confiance : chaque page est vérifiée en croisant NASA, Yale, Harvard, MIT et d’autres grandes universités et chercheurs.',
-    'Por qué confiar: cada página se contrasta con la NASA, Yale, Harvard, el MIT y otras grandes universidades y académicos.',
-    'لماذا تثق بنا: كل صفحة تُراجَع بالمقارنة مع ناسا وييل وهارفارد ومعهد MIT وغيرها من كبرى الجامعات والعلماء.',
-    'Perché fidarsi: ogni pagina è verificata incrociando NASA, Yale, Harvard, MIT e altre grandi università e studiosi.',
-    'למה לסמוך עלינו: כל עמוד נבדק מול נאס"א, ייל, הרווארד, MIT ואוניברסיטאות וחוקרים מובילים נוספים.',
+    'Sourced from public materials by NASA, Yale, Harvard, MIT, and other universities and scholars. Listing a source is not an endorsement.',
+    'Sources : documents publics de la NASA, de Yale, de Harvard, du MIT et d’autres universités et chercheurs. Citer une source n’est pas une approbation.',
+    'Fuentes: materiales públicos de la NASA, Yale, Harvard, el MIT y otras universidades y académicos. Citar una fuente no es un aval.',
+    'المصادر: مواد عامة من ناسا وييل وهارفارد ومعهد MIT وجامعات وباحثين آخرين. ذكر المصدر ليس تزكية.',
+    'Fonti: materiali pubblici di NASA, Yale, Harvard, MIT e altre università e studiosi. Citare una fonte non è un’approvazione.',
+    'מקורות: חומרים פומביים של נאס״א, ייל, הרווארד, MIT ואוניברסיטאות וחוקרים אחרים. ציון מקור אינו הסכמה.',
 )
 SOURCES_LINK = ('Our sources', 'Nos sources', 'Nuestras fuentes', 'مصادرنا', 'Le nostre fonti', 'המקורות שלנו')
