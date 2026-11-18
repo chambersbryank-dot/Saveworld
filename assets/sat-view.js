@@ -101,9 +101,8 @@
           }
         }
         if (outer) reach = 268;
-        var cap = W * (W < 560 ? 0.2 : 0.24);
-        var side = Math.min(Math.max(gut.l, gut.r, 8), cap);
-        var lane = Math.max(W * (W < 560 ? 0.6 : 0.52), W - side * 2);
+        var side = W < 560 ? 8 : Math.min(Math.max(gut.l, gut.r, 8), W * 0.24);
+        var lane = W < 560 ? Math.max(48, W - 16) : Math.max(W * 0.52, W - side * 2);
         lane = Math.min(lane, W - 12);
         var map = { x: (W - lane) / 2, y: Math.max(10, gut.t), w: lane, h: Math.max(48, H - Math.max(10, gut.t) - Math.max(10, gut.b)) };
         var bw = reach * 2;
@@ -189,6 +188,15 @@
       gut.l = nL ? nL * lw + Math.max(0, nL - 1) * 4 + 18 : 8;
       gut.r = nR ? nR * rw + Math.max(0, nR - 1) * 4 + 18 : 8;
       gut.t = 18; gut.b = 18;
+      if (W < 560 && labs.length) {
+        var phoneCol = Math.max(100, Math.floor((W - 16) / 2));
+        labs.forEach(function (el) { el.style.maxWidth = phoneCol + 'px'; });
+        var rowH = 44;
+        labs.forEach(function (el) { rowH = Math.max(rowH, el.offsetHeight); });
+        var nrows = Math.ceil(labs.length / 2);
+        gut.l = 8; gut.r = 8; gut.t = 8;
+        gut.b = nrows * rowH + Math.max(0, nrows - 1) * 4 + 10;
+      }
       var capG = W * (W < 560 ? 0.3 : 0.28);
       if (gut.l > capG) gut.l = capG;
       if (gut.r > capG) gut.r = capG;
@@ -210,7 +218,8 @@
         var px = (x - view.x) / view.w * W, py = (y - view.y) / view.h * H;
         el.style.left = px + 'px';
         el.style.top = py + 'px';
-        var inside = px >= gut.l - 20 && px <= W - gut.r + 20 && py >= -8 && py <= H + 8;
+        var bottomLimit = W < 560 ? H - gut.b + 6 : H + 8;
+        var inside = px >= (W < 560 ? -8 : gut.l - 20) && px <= (W < 560 ? W + 8 : W - gut.r + 20) && py >= -8 && py <= bottomLimit;
         if (!el.classList.contains('sso-mark')) el.classList.toggle('is-off', !inside);
       });
       function placeCol(list, side, slot, slots, colW) {
@@ -237,7 +246,26 @@
         placeCol(list.slice(0, mid), side, 0, 2, colW);
         placeCol(list.slice(mid), side, 1, 2, colW);
       }
-      stack(left, 'l', lw); stack(right, 'r', rw);
+      if (W < 560 && labs.length) {
+        var pCol = Math.max(100, Math.floor((W - 16) / 2));
+        var pH = 44, pGap = 4;
+        labs.forEach(function (el) { pH = Math.max(pH, el.offsetHeight); });
+        var pRows = Math.ceil(items.length / 2);
+        var pBlock = pRows * pH + Math.max(0, pRows - 1) * pGap + 10;
+        items.forEach(function (it, i) {
+          var col = i % 2, row = Math.floor(i / 2);
+          var w = Math.min(it.el.offsetWidth, pCol);
+          var x = 4 + col * (pCol + 4);
+          var y = H - pBlock + 4 + row * (pH + pGap);
+          it.el.style.left = x + 'px';
+          it.el.style.top = y + 'px';
+          it.el.hidden = false;
+          it.side = col === 0 ? 'l' : 'r';
+          it.box = { x: x, y: y, w: w, h: it.el.offsetHeight };
+        });
+      } else {
+        stack(left, 'l', lw); stack(right, 'r', rw);
+      }
       if (mode === 'near' && geom) {
         var ecx = (geom.cx - view.x) / view.w * W, ecy = (geom.cy - view.y) / view.h * H;
         var earthR = 78 * (W / view.w);
