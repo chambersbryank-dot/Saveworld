@@ -36,7 +36,7 @@
 <meta name="twitter:title" content="מקרקעית האוקיינוס עד למסלול: קורסי STEM חינמיים וכלי מורים | Saving Planets">
 <meta name="twitter:description" content="קורסי STEM חינמיים, כלי מורים ופתרונות לבריאות כדור הארץ, מקרקעית האוקיינוס עד למסלול — נבדק עבורכם, מוסבר לילדים, ובמרחק לחיצה אחת מעזרה.">
 <meta name="twitter:image" content="https://www.savingplanets.com/assets/og/en/index.jpg?v=97dc5720">
-<meta content="index.html 8851eafc3984" name="i18n-source"/>
+<meta content="index.html 52dbac44259b" name="i18n-source"/>
 
 
 
@@ -69,7 +69,7 @@ body{margin:0}.skip-link{position:absolute;left:-9999px;top:0}[dir=rtl] .skip-li
 #topnav .spn-util{grid-column:2;grid-row:1;justify-self:end;display:flex;flex-wrap:nowrap;align-items:center}
 #topnav .spn-main{grid-column:1/-1;grid-row:2;justify-self:end;display:flex;flex-wrap:nowrap;align-items:center;gap:.15rem}
 #topnav .spn-sub{position:absolute;visibility:hidden}
-#topnav .spn-trig{white-space:nowrap;font:700 15px/1 Montserrat,"Segoe UI",sans-serif;min-height:44px;padding:0 .6rem;display:inline-flex;align-items:center}
+#topnav .spn-trig{white-space:nowrap;font:700 15px/1 SPMont,"Segoe UI",sans-serif;min-height:44px;padding:0 .6rem;display:inline-flex;align-items:center}
 #topnav .spn-ls-n{display:none}
 #topnav .spn-cta a{white-space:nowrap;min-height:44px;padding:0 1.1rem}
 }
@@ -78,6 +78,27 @@ body{margin:0}.skip-link{position:absolute;left:-9999px;top:0}[dir=rtl] .skip-li
 body.toc-home .hero.space-hero{position:relative;box-sizing:border-box;height:100vh;min-height:640px;overflow:hidden}
 body.toc-home .hero-media{position:absolute;inset:0;background:#00141f url("../assets/videos/hero-loop.jpg") center/cover no-repeat}
 body.toc-home .hero-video{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}
+@font-face{font-family:SPMont;font-style:normal;font-weight:500 800;font-display:optional;src:url("../assets/fonts/montserrat-latin-ext.woff2") format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:SPMont;font-style:normal;font-weight:500 800;font-display:optional;src:url("../assets/fonts/montserrat-latin.woff2") format("woff2");unicode-range:U+0-FF,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+body.toc-home{font-family:SPMont,"Segoe UI",sans-serif}
+body.toc-home .hero.space-hero{display:flex;flex-direction:column;align-items:center;justify-content:center}
+body.toc-home .hero-welcome,body.toc-home .hero-kicker,body.toc-home .hero-example,body.toc-home .hero-ctas .btn,body.toc-home nav.edu-links .edu-bubble,#topnav{font-family:SPMont,"Segoe UI",sans-serif}
+body.toc-home .hero .hero-content{box-sizing:border-box;width:min(46rem,62vw);max-width:46rem;margin-left:auto;margin-right:auto;text-align:center;position:relative;padding:calc(56px - 4vh) 1.25rem calc(3.5rem + 4vh)}
+@media (max-width:1100px){body.toc-home .hero .hero-content{width:min(46rem,88vw)}}
+@media (min-width:1140px){body.toc-home .hero .hero-content{padding-top:calc(92px - 4vh);padding-bottom:calc(2rem + 4vh)}}
+body.toc-home .hero-kicker{margin:0 0 1.1rem;color:#fff;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:1.25rem;line-height:1.15}
+@media (min-width:901px){body.toc-home .hero-kicker{font-size:1.7rem}}
+body.toc-home .hero-welcome{font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.05;font-weight:700;margin:.67em 0 .6rem}
+body.toc-home .hero-example{font-size:1.15rem;line-height:1.25;margin:1.15rem auto}
+body.toc-home .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:.8rem 0 .4rem}
+body.toc-home .hero-ctas .btn,body.toc-home .wm-cta .btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:49px;margin-block:.35rem;padding:12px 22px;font-size:1.1rem;line-height:1.3;font-weight:700;border-radius:999px;text-decoration:none;white-space:nowrap;font-family:SPMont,"Segoe UI",sans-serif}
+body.toc-home .hero-video-credit{position:absolute;inset-inline-start:.8rem;bottom:.75rem;z-index:1;margin:0;max-width:calc(100% - 13rem);padding:.22rem .6rem;font-size:.75rem;line-height:1.3}
+@media (max-width:480px){body.toc-home .hero-video-credit{max-width:calc(100% - 12.5rem)}}
+@media (max-width:767px){#topnav .spn-toggle{width:44px;height:44px;flex:none;box-sizing:border-box}}
+body.toc-home nav.edu-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:.7rem;margin:1rem auto;max-width:1000px;padding:0 1rem;box-sizing:border-box}
+body.toc-home nav.edu-links .edu-bubble{display:inline-flex;align-items:center;box-sizing:border-box;min-height:56px;padding:.55rem .95rem;font:700 1rem/1.2 Montserrat,"Segoe UI",sans-serif}
+body.toc-home nav.edu-links .lb-small{display:block;font-weight:500;font-size:1rem;line-height:1.2;min-height:1.2em}
+
 </style></head>
 <body class="toc-home" data-glass-tint="site">
 <a class="skip-link" href="#solutions">דילוג לתוכן</a>
