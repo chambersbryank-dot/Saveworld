@@ -710,10 +710,14 @@
     zin.addEventListener('click', function () { zoomT = Math.min(1, zoomT + 0.22); applyView(); });
     zout.addEventListener('click', function () { zoomT = Math.max(0, zoomT - 0.22); applyView(); });
     zfit.addEventListener('click', function () { zoomT = 0; applyView(); });
-    var orbits = document.createElement('div');
-    orbits.className = 'sat-orbits';
-    orbits.setAttribute('role', 'group');
-    orbits.setAttribute('aria-label', 'LEO MEO GEO');
+    var orbits = document.getElementById('sat-orbits');
+    if (!orbits) {
+      orbits = document.createElement('div');
+      orbits.className = 'sat-orbits';
+      orbits.setAttribute('role', 'group');
+      orbits.setAttribute('aria-label', 'LEO MEO GEO');
+      stage.parentNode.insertBefore(orbits, stage);
+    }
     ['leo', 'meo', 'geo', 'heo', 'sso'].forEach(function (id, i, all) {
       var b = document.createElement('button');
       b.type = 'button';
