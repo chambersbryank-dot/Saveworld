@@ -218,7 +218,7 @@ a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
 [dir=rtl] .sat-band h3{margin:0 0 .25rem 1.2rem}
 .sat-band p{margin:.2rem 0}
 .sat-view > .wm-zoom{position:static;flex-direction:row;justify-content:center;margin:.15rem 0 .4rem;max-width:none}
-.sat-view .sat-orbits{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;margin:0 0 .45rem}
+.sat-view .sat-orbits{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;margin:0 0 .45rem;min-height:44px}
 .sat-view button,.sat-view a.sat-more{color:#fff;background-color:#0a4f78;background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78);border:1px solid rgba(160,225,255,.55);border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.08),0 4px 14px rgba(0,40,70,.28)}
 .sat-view .wm-cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12.5rem),1fr));gap:.7rem;margin:0 0 .85rem;position:relative;z-index:2}
 .sat-view .wm-cat{width:100%;min-height:44px;justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding:.45rem .8rem;margin:0;transition:filter .18s ease,box-shadow .18s ease}
@@ -226,7 +226,12 @@ a.sat-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .sat-view .wm-cat:active{filter:brightness(.96)}
 @media (prefers-reduced-motion:reduce){.sat-view .wm-cat{transition:none}}
 .sat-body{display:grid;gap:.75rem;align-items:start}
-@media (min-width:1000px){.sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}}
+@media (min-width:1000px){
+  .sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}
+  .sat-body>.sat-count,.sat-body>.sat-ring-key{grid-column:1 / -1}
+  .sat-body>.sat-layout{grid-column:2;grid-row:3}
+  .sat-body>.sat-orbit-note{grid-column:1;grid-row:3;align-self:start}
+}
 .sat-orbit-note{margin:0;padding:.75rem .9rem;border-radius:14px;background:rgba(8,24,40,.94);border:1px solid rgba(160,225,255,.45);color:#f4fbff;font-size:.92rem;line-height:1.45}
 .sat-orbit-note p{margin:.45rem 0}
 .sat-orbit-note a{color:#b7e4ff}

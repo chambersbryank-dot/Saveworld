@@ -3,7 +3,7 @@
 import html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
-V = '20261118h'
+V = '20261118i'
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 
 # regime: leo (sun-synchronous counts as LEO), meo, geo, heo, l1, l2, l5, cruise, note
@@ -444,7 +444,7 @@ def section(lang, ui):
       f'<span><i class="k-meo" aria-hidden="true"></i>{html.escape(ui["meo"])}</span>'
       f'<span><i class="k-geo" aria-hidden="true"></i>{html.escape(ui["geo"])}</span>'
       f'<span><i class="k-sso" aria-hidden="true"></i>{html.escape(ui["ssoMark"])}</span></p>'
-      '<div class="sat-layout"><div class="sat-stage" id="sat-stage">'
+      '<div class="sat-layout"><div class="sat-orbits" id="sat-orbits" role="group" aria-label="LEO MEO GEO"></div><div class="sat-stage" id="sat-stage">'
       f'<div class="sat-poster" id="sat-poster"><img src="{pre}assets/earth/cut/earth.webp" alt="{html.escape(ui["diagram"])}" width="800" height="800" decoding="async">'
       '<svg class="sat-poster-rings" viewBox="0 0 900 520" aria-hidden="true">'
       '<ellipse cx="400" cy="268" rx="118" ry="50" fill="none" stroke="#7ad7ff" stroke-width="3"/>'
@@ -567,15 +567,29 @@ def main():
         path = 'Space.html' if lang == 'en' else f'{lang}/Space.html'
         t = open(path, encoding='utf-8').read()
         t = re.sub(r'<section class="sat-view" id="satmap".*?<p class="sat-scale">.*?</p></section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
-        sat_crit = ('<style id="sat-crit">.sat-hero-sub{margin:.4rem auto 0;max-width:46rem;font-size:clamp(.92rem,1.5vw,1.08rem);line-height:1.45;font-weight:550;color:#f4fbff;text-shadow:0 1px 8px rgba(0,0,0,.7)}'
-                    '.sat-view{margin:1.2rem auto 1.6rem;max-width:1200px;padding:0 1.5rem}'
-                    '.sat-view .wm-cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12.5rem),1fr));gap:.7rem;margin:0 0 .85rem}'
-                    '.sat-view .wm-cat{width:100%;min-height:44px}'
-                    '.sat-body{display:grid;gap:.75rem}'
-                    '@media (min-width:1000px){.sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}}'
-                    '.sat-stage{height:clamp(18rem,48vh,22rem);min-height:18rem;border-radius:16px;background:#041525}'
-                    '.sat-count{margin:.15rem 0 .45rem;text-align:center}'
-                    '.sat-ring-key{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.15rem;margin:.55rem 0 .15rem}</style>')
+        sat_crit = (
+            '<style id="sat-crit">'
+            'html body.toc-sub .page-hero.sp-anim-banner{box-sizing:border-box;height:auto !important;min-height:max(34vh,260px) !important;padding:calc(var(--nav-height, 88px) + 1.5rem) 1.25rem 2rem !important;display:flex !important;align-items:center !important;justify-content:center !important}'
+            '@media (max-width:760px){html body.toc-sub .page-hero.sp-anim-banner{padding:calc(var(--nav-height, 64px) + 1.5rem) 1.25rem 3.4rem !important}}'
+            '@media (min-width:761px){html body.toc-sub .page-hero.sp-anim-banner{height:max(34vh,260px) !important;overflow:hidden}}'
+            'html body.toc-sub .page-hero.sp-anim-banner h1{font-size:clamp(2rem,5vw,3.2rem) !important;line-height:1.08 !important;margin:0 0 .5rem !important;max-width:none !important}'
+            'html body.toc-sub .page-hero.sp-anim-banner .page-hero-content{width:min(56rem,100%) !important;max-width:56rem !important;padding:0 1.25rem;box-sizing:border-box}'
+            '.sat-hero-sub{margin:.4rem auto 0;max-width:56rem;font-size:clamp(.92rem,1.5vw,1.08rem);line-height:1.45;font-weight:550;color:#f4fbff;text-shadow:0 1px 8px rgba(0,0,0,.7)}'
+            'body.toc-sub #impact{max-width:1200px;margin:0 auto;padding:.6rem 1.5rem 1rem}'
+            'body.toc-sub #impact .impact-box{padding:1.6rem 1.8rem}'
+            'body.toc-sub #impact .impact-box p{margin:0 0 .6rem;font-size:1rem;line-height:1.6}'
+            'body.toc-sub #impact .impact-box p:last-child{margin-bottom:0}'
+            '.sat-view{margin:1.2rem auto 1.6rem;max-width:1200px;padding:0 1.5rem}'
+            '.sat-view .wm-cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12.5rem),1fr));gap:.7rem;margin:0 0 .85rem}'
+            '.sat-view .wm-cat{width:100%;min-height:44px}'
+            '.sat-body{display:grid;gap:.75rem}'
+            '@media (min-width:1000px){.sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}.sat-body>.sat-count,.sat-body>.sat-ring-key{grid-column:1 / -1}.sat-body>.sat-layout{grid-column:2;grid-row:3}.sat-body>.sat-orbit-note{grid-column:1;grid-row:3;align-self:start}}'
+            '.sat-stage{width:100%;height:clamp(18rem,48vh,22rem);min-height:18rem;border-radius:16px;background:#041525}'
+            '.sat-count{margin:.15rem 0 .45rem;min-height:1.2rem;text-align:center}'
+            '.sat-orbits{min-height:44px;margin:0 0 .45rem}'
+            '.sat-ring-key{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.15rem;margin:.55rem 0 .15rem}'
+            '</style>'
+        )
         if 'id="sat-crit"' in t:
             t = re.sub(r'<style id="sat-crit">.*?</style>', sat_crit, t, count=1)
         else:
@@ -588,14 +602,16 @@ def main():
                     f'<noscript class="crit-ns"><link rel="stylesheet" href="{href}"></noscript>')
         t = t.replace("this.rel=\\'stylesheet\\'", "this.rel='stylesheet'")
         t = re.sub(r'<link rel="preload" as="style" href="(?:\.\./)?P261118c"[^>]*>\s*<noscript class="crit-ns"><link rel="stylesheet" href="(?:\.\./)?P261118c"></noscript>\s*', '', t)
-        t = re.sub(
-            r'<link rel="stylesheet" href="((?:\.\./)?map\.css\?v=)[0-9a-z]+">',
-            lambda m: css_preload(m.group(1) + V),
-            t, count=1)
-        t = re.sub(
-            r'<link rel="stylesheet" href="((?:\.\./)?assets/share-bar\.css\?v=[0-9a-z]+)">',
-            lambda m: css_preload(m.group(1)),
-            t, count=1)
+        def collapse(src, file_re, href):
+            pile = re.compile(
+                r'(?:<link rel="preload" as="style" href="' + file_re + r'" onload="this\.onload=null;this\.rel=\'stylesheet\'"><noscript class="crit-ns">)*'
+                r'<link rel="stylesheet" href="' + file_re + r'"></noscript>(?:</noscript>)*'
+            )
+            return pile.sub(lambda m: css_preload(href), src, count=1)
+        t = collapse(t, r'(?:\.\./)?map\.css\?v=[^"]+', f'{pre}map.css?v={V}')
+        share = re.search(r'((?:\.\./)?assets/share-bar\.css\?v=[0-9a-z]+)', t)
+        if share:
+            t = collapse(t, r'(?:\.\./)?assets/share-bar\.css\?v=[^"]+', share.group(1))
         t = re.sub(r'((?:\.\./)?map\.css\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
         t = re.sub(r'((?:\.\./)?assets/sat-view\.js\?v=)[0-9a-z]+', lambda m: m.group(1) + V, t)
         if 'map.css?v=' not in t and 'sat-view.js' in t:
