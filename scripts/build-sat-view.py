@@ -568,8 +568,14 @@ def main():
         t = open(path, encoding='utf-8').read()
         t = re.sub(r'<section class="sat-view" id="satmap".*?<p class="sat-scale">.*?</p></section>\n?', lambda _: section(lang, ui), t, count=1, flags=re.S)
         sat_crit = ('<style id="sat-crit">.sat-hero-sub{margin:.4rem auto 0;max-width:46rem;font-size:clamp(.92rem,1.5vw,1.08rem);line-height:1.45;font-weight:550;color:#f4fbff;text-shadow:0 1px 8px rgba(0,0,0,.7)}'
+                    '.sat-view{margin:1.2rem auto 1.6rem;max-width:1200px;padding:0 1.5rem}'
+                    '.sat-view .wm-cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12.5rem),1fr));gap:.7rem;margin:0 0 .85rem}'
+                    '.sat-view .wm-cat{width:100%;min-height:44px}'
+                    '.sat-body{display:grid;gap:.75rem}'
+                    '@media (min-width:1000px){.sat-body{grid-template-columns:minmax(16.5rem,22rem) minmax(0,1fr)}}'
                     '.sat-stage{height:clamp(22rem,62vh,36rem);min-height:22rem;border-radius:16px;background:#041525}'
-                    '.sat-view{max-width:1200px;margin-inline:auto}</style>')
+                    '.sat-count{margin:.15rem 0 .45rem;text-align:center}'
+                    '.sat-ring-key{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.15rem;margin:.55rem 0 .15rem}</style>')
         if 'id="sat-crit"' in t:
             t = re.sub(r'<style id="sat-crit">.*?</style>', sat_crit, t, count=1)
         else:
