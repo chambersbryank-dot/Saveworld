@@ -46,49 +46,103 @@
     var u = location.href.split('#')[0];
     return hash ? u + hash : u;
   }
+  var KINDS = { assignment: 1, material: 1, question: 1, announcement: 1 };
+  function kindOf(value) {
+    return KINDS[value] ? value : 'assignment';
+  }
+  function safePageHref(hash) {
+    var path = location.pathname || '/';
+    if (!/^\/[A-Za-z0-9._~/-]*$/.test(path)) path = '/';
+    var frag = '';
+    if (hash && /^#[A-Za-z0-9_-]*$/.test(hash)) frag = hash;
+    return path + '?view=student' + frag;
+  }
+  function teacherHref() {
+    var path = location.pathname || '/';
+    if (!/^\/[A-Za-z0-9._~/-]*$/.test(path)) path = '/';
+    var frag = /^#[A-Za-z0-9_-]*$/.test(location.hash) ? location.hash : '';
+    return path + frag;
+  }
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
   function renderButton(box, opts) {
     var holder = box.querySelector('.gc-official');
     if (!holder) return;
-    holder.innerHTML = '';
+    while (holder.firstChild) holder.removeChild(holder.firstChild);
     var target = document.createElement('div');
     holder.appendChild(target);
     loadGapi().then(function () {
       if (!(window.gapi && gapi.sharetoclassroom && gapi.sharetoclassroom.render)) return;
       gapi.sharetoclassroom.render(target, {
-        url: opts.url, title: opts.title, body: opts.body, itemtype: opts.itemtype,
+        url: opts.url, title: opts.title, body: opts.body, itemtype: kindOf(opts.itemtype),
         size: 32, theme: 'dark', locale: LOCALE
       });
     });
   }
   function panel(opts) {
-    var box = document.createElement('div');
-    box.className = 'gc-panel no-print';
-    var kinds = ['assignment', 'material', 'question', 'announcement'];
-    var radios = kinds.map(function (k) {
-      return '<label><input type="radio" name="' + opts.name + '" value="' + k + '"' + (k === opts.itemtype ? ' checked' : '') + '> ' + L[k] + '</label>';
-    }).join(' ');
-    var studentHref = opts.studentHref || (location.pathname + '?view=student' + (opts.hash || ''));
-    box.innerHTML = '<p class="gc-h">' + L.h + '</p><fieldset><legend>' + L.type + '</legend>' + radios + '</fieldset>'
-      + '<p><button type="button" class="gc-show">' + L.show + '</button> <a class="gc-fallback" href="' + shareUrl(opts.url) + '" rel="noopener">' + L.noscript + '</a></p>'
-      + '<div class="gc-official" hidden></div>'
-      + '<p class="gc-copy" hidden>' + L.copy + '</p>'
-      + '<p class="gc-actions"><a class="gc-student" href="' + studentHref + '">' + L.student + '</a>'
-      + (opts.answerKey ? ' <button type="button" class="gc-print">' + L.print + '</button>' : '') + '</p>'
-      + '<p class="gc-later">' + L.later + '</p>';
-    box.querySelector('.gc-show').addEventListener('click', function () {
-      var kind = (box.querySelector('input:checked') || {}).value || opts.itemtype;
-      opts.itemtype = kind;
-      box.querySelector('.gc-official').hidden = false;
-      box.querySelector('.gc-copy').hidden = kind !== 'assignment';
+    var box = el('div', 'gc-panel no-print');
+    box.appendChild(el('p', 'gc-h', L.h));
+    var field = document.createElement('fieldset');
+    field.appendChild(el('legend', '', L.type));
+    ['assignment', 'material', 'question', 'announcement'].forEach(function (k) {
+      var label = el('label');
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = opts.name;
+      input.value = k;
+      if (k === kindOf(opts.itemtype)) input.checked = true;
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(' ' + L[k]));
+      field.appendChild(label);
+    });
+    box.appendChild(field);
+    var actions = el('p');
+    var show = el('button', 'gc-show', L.show);
+    show.type = 'button';
+    var fallback = el('a', 'gc-fallback', L.noscript);
+    fallback.rel = 'noopener';
+    var shared = shareUrl(opts.url);
+    if (shared.indexOf('https://classroom.google.com/share?url=') === 0) fallback.href = shared;
+    actions.appendChild(show);
+    actions.appendChild(document.createTextNode(' '));
+    actions.appendChild(fallback);
+    box.appendChild(actions);
+    var official = el('div', 'gc-official');
+    official.hidden = true;
+    box.appendChild(official);
+    var copy = el('p', 'gc-copy', L.copy);
+    copy.hidden = true;
+    box.appendChild(copy);
+    var row = el('p', 'gc-actions');
+    var student = el('a', 'gc-student', L.student);
+    student.href = safePageHref(opts.hash);
+    row.appendChild(student);
+    var print = null;
+    if (opts.answerKey) {
+      row.appendChild(document.createTextNode(' '));
+      print = el('button', 'gc-print', L.print);
+      print.type = 'button';
+      row.appendChild(print);
+    }
+    box.appendChild(row);
+    box.appendChild(el('p', 'gc-later', L.later));
+    show.addEventListener('click', function () {
+      var picked = box.querySelector('input:checked');
+      opts.itemtype = kindOf(picked ? picked.value : opts.itemtype);
+      official.hidden = false;
+      copy.hidden = opts.itemtype !== 'assignment';
       renderButton(box, opts);
     });
     box.addEventListener('change', function (e) {
-      if (e.target.name !== opts.name) return;
-      opts.itemtype = e.target.value;
-      box.querySelector('.gc-copy').hidden = opts.itemtype !== 'assignment';
-      if (!box.querySelector('.gc-official').hidden) renderButton(box, opts);
+      if (!e.target || e.target.name !== opts.name) return;
+      opts.itemtype = kindOf(e.target.value);
+      copy.hidden = opts.itemtype !== 'assignment';
+      if (!official.hidden) renderButton(box, opts);
     });
-    var print = box.querySelector('.gc-print');
     if (print) print.addEventListener('click', function () {
       document.querySelectorAll('details').forEach(function (d) { d.open = true; });
       document.body.classList.add('answer-key');
@@ -109,9 +163,12 @@
       title: slot.getAttribute('data-gc-title') || document.title,
       body: slot.getAttribute('data-gc-body') || '',
       itemtype: slot.getAttribute('data-gc-type') || 'assignment',
-      hash: (slot.getAttribute('data-gc-url') || '').indexOf('#') >= 0 ? '#' + slot.getAttribute('data-gc-url').split('#')[1] : '',
-      answerKey: !!document.querySelector('.crs'),
-      studentHref: location.pathname + '?view=student' + ((slot.getAttribute('data-gc-url') || '').indexOf('#') >= 0 ? '#' + slot.getAttribute('data-gc-url').split('#')[1] : '')
+      hash: (function () {
+        var raw = slot.getAttribute('data-gc-url') || '';
+        var frag = raw.indexOf('#') >= 0 ? '#' + raw.split('#').pop() : '';
+        return /^#[A-Za-z0-9_-]*$/.test(frag) ? frag : '';
+      })(),
+      answerKey: !!document.querySelector('.crs')
     });
   });
   document.querySelectorAll('.teacher-box').forEach(function (box) {
@@ -132,8 +189,10 @@
     document.documentElement.classList.add('student-view');
     var back = document.createElement('p');
     back.className = 'gc-student-banner no-print';
-    var plain = location.pathname + location.hash;
-    back.innerHTML = '<a href="' + plain + '">' + L.teacher + '</a>';
+    var backLink = document.createElement('a');
+    backLink.href = teacherHref();
+    backLink.textContent = L.teacher;
+    back.appendChild(backLink);
     var main = document.getElementById('main') || document.body;
     main.insertBefore(back, main.firstChild);
   }
