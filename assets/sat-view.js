@@ -9,9 +9,32 @@
   var rtl = (document.documentElement.getAttribute('dir') || '') === 'rtl';
   var SAT = '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="6.2" y="6.2" width="3.6" height="3.6" rx=".4" fill="#fff"/><rect x="1" y="7" width="4.2" height="2" rx=".3" fill="#fff"/><rect x="10.8" y="7" width="4.2" height="2" rx=".3" fill="#fff"/></svg>';
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  fetch(root.getAttribute('data-src'), { credentials: 'omit' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(boot).catch(function () {
-    stage.innerHTML = '<p class="wm-err">The orbit view could not load. The mission list below still works when data is available.</p>';
+  var started = false;
+  function wantNow() {
+    var h = (location.hash || '').replace(/^#/, '');
+    return h === 'satmap' || h === 'beyond' || h === 'lagrange' || h.indexOf('sat-') === 0;
+  }
+  function start() {
+    if (started) return;
+    started = true;
+    fetch(root.getAttribute('data-src'), { credentials: 'omit' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(boot).catch(function () {
+      stage.innerHTML = '<p class="wm-err">The orbit view could not load. The mission list below still works when data is available.</p>';
+    });
+  }
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('button[data-cat]');
+    if (!b || !root.contains(b)) return;
+    root.setAttribute('data-pending-cat', b.getAttribute('data-cat') || '');
+    start();
   });
+  if (wantNow()) start();
+  else if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function (ents) {
+      if (ents.some(function (en) { return en.isIntersecting; })) { io.disconnect(); start(); }
+    }, { rootMargin: '240px 0px' });
+    io.observe(root);
+  } else start();
+  window.addEventListener('hashchange', function () { if (wantNow()) start(); });
   function boot(D) {
     var ui = D.ui || {}, sats = D.sats || [], byId = {}, mode = '', cat = 'weather', lastBtn = null;
     var geom = null, zoomT = 0, selectedLg = '', orbitFilter = '';
@@ -20,8 +43,7 @@
     var cut = pre + 'assets/earth/cut/';
     var earth = cut + 'earth.webp';
     var earthLg = earth;
-    var moon = cut + 'moon.webp';
-    var sun = cut + 'sun.webp';
+    var openId = '';
     var canvas = document.createElement('div');
     canvas.className = 'sat-canvas';
     stage.appendChild(canvas);
@@ -48,8 +70,11 @@
       [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt'), function (el) { add(+el.getAttribute('data-x'), +el.getAttribute('data-y')); });
       if (mode === 'near') {
         add(328, 196); add(472, 340);
-        if (cat === 'all') {
+        add(400 - 178, 268 - 74); add(400 + 178, 268 + 74);
+        if (cat === 'all' || orbitFilter === 'geo' || selectedBand === 'geo') {
           add(400 - 246, 268 - 102); add(400 + 246, 268 + 102);
+        }
+        if (cat === 'all' || orbitFilter === 'heo' || selectedBand === 'heo') {
           add(440 - 196, 268 - 118); add(440 + 196, 268 + 118);
         }
       }
@@ -156,13 +181,13 @@
       var view = currentView();
       var svg = canvas.querySelector('svg.orb-svg');
       if (svg) svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
-      [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt'), function (el) {
+      [].forEach.call(canvas.querySelectorAll('.orb-btn,.lag-pt,.sso-mark'), function (el) {
         var x = +el.getAttribute('data-x'), y = +el.getAttribute('data-y');
         var px = (x - view.x) / view.w * W, py = (y - view.y) / view.h * H;
         el.style.left = px + 'px';
         el.style.top = py + 'px';
         var inside = px >= gut.l - 20 && px <= W - gut.r + 20 && py >= -8 && py <= H + 8;
-        el.classList.toggle('is-off', !inside);
+        if (!el.classList.contains('sso-mark')) el.classList.toggle('is-off', !inside);
       });
       function placeCol(list, side, slot, slots, colW) {
         var gap = 2, heights = list.map(function (it) { return it.el.offsetHeight; });
@@ -213,94 +238,11 @@
       });
       applyDim();
     }
-    var BAND = ({
-      en: {
-        leo: {t:'LEO: Low Earth orbit', alt:'About 180 km to 2,000 km above Earth.', use:'ESA says this closeness is useful for satellite imaging, because it allows higher-resolution images.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        meo: {t:'MEO: Medium Earth orbit', alt:'Above about 2,000 km and below the geostationary height of 35,786 km.', use:'ESA says this range is very commonly used by navigation satellites, such as Galileo.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        geo: {t:'GEO: Geostationary orbit', alt:'35,786 km above the equator. The start and the end of this band are the same height.', use:'ESA says these satellites appear stationary over one fixed spot.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        heo: {t:'HEO: Highly eccentric orbit', alt:'No single height. The satellite moves closer to Earth and then farther away.', use:'ESA says the distance from Earth’s surface changes during one orbit.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        sso: {t:'SSO: Sun-synchronous orbit', alt:'Usually 600 km to 800 km, inside low Earth orbit.', use:'ESA says the satellite usually crosses at a steady local time, so the lighting stays consistent.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        l1: {t:'L1: Sun–Earth Lagrange point', alt:'About 1.5 million km from Earth. It does not orbit Earth directly.', use:'ESA says a spacecraft can stay near this point with little effort, anchored relative to Earth.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        l2: {t:'L2: Sun–Earth Lagrange point', alt:'About 1.5 million km from Earth, on the night side. It does not orbit Earth directly.', use:'ESA says a spacecraft can stay near this point with little effort, anchored relative to Earth.', src:'ESA, Types of orbits', url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-        l3: {t:'L3: Sun–Earth Lagrange point', alt:'About 2 AU from Earth, on the far side of the Sun.', use:'NASA says L3 sits on the Sun–Earth line and is unstable.', src:'NASA, What is a Lagrange Point?', url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-        l4: {t:'L4: Sun–Earth Lagrange point', alt:'About 1 AU from Earth, 60 degrees ahead.', use:'NASA says L4 is at the tip of an equilateral triangle and is stable.', src:'NASA, What is a Lagrange Point?', url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-        l5: {t:'L5: Sun–Earth Lagrange point', alt:'About 1 AU from Earth, 60 degrees behind.', use:'NASA says L5 is at the tip of an equilateral triangle and is stable.', src:'NASA, What is a Lagrange Point?', url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-      }
-    })[D.lang] || null;
-    var BAND_EN = null;
-    if (!BAND) BAND = {
-      leo:{t:'LEO: Low Earth orbit',alt:'About 180 km to 2,000 km above Earth.',use:'ESA says this closeness is useful for satellite imaging, because it allows higher-resolution images.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'}
-    };
-    var BANDS = {
-      en: null
-    };
     function bandCopy(id) {
-      var pack = ({
-        fr: {
-          leo:{t:'LEO : orbite terrestre basse',alt:'Environ 180 km à 2 000 km au-dessus de la Terre.',use:'L’ESA dit que cette proximité sert à l’imagerie, car elle permet une résolution plus fine.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          meo:{t:'MEO : orbite terrestre moyenne',alt:'Au-dessus d’environ 2 000 km et sous l’altitude géostationnaire de 35 786 km.',use:'L’ESA dit que cette plage sert très souvent aux satellites de navigation, comme Galileo.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          geo:{t:'GEO : orbite géostationnaire',alt:'35 786 km au-dessus de l’équateur. Le début et la fin de cette bande sont la même altitude.',use:'L’ESA dit que ces satellites paraissent fixes au-dessus d’un seul endroit.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          heo:{t:'HEO : orbite très excentrique',alt:'Pas une seule altitude. Le satellite se rapproche de la Terre, puis s’en éloigne.',use:'L’ESA dit que la distance à la surface change au cours d’une orbite.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          sso:{t:'SSO : orbite héliosynchrone',alt:'En général 600 km à 800 km, dans l’orbite basse.',use:'L’ESA dit que le satellite passe d’habitude à une heure locale stable, donc l’éclairage reste semblable.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l1:{t:'L1 : point de Lagrange Soleil–Terre',alt:'Environ 1,5 million de km de la Terre. Il n’orbite pas la Terre directement.',use:'L’ESA dit qu’un engin peut rester près de ce point avec peu d’effort, ancré par rapport à la Terre.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l2:{t:'L2 : point de Lagrange Soleil–Terre',alt:'Environ 1,5 million de km de la Terre, du côté nuit. Il n’orbite pas la Terre directement.',use:'L’ESA dit qu’un engin peut rester près de ce point avec peu d’effort, ancré par rapport à la Terre.',src:'ESA, Types d’orbites',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l3:{t:'L3 : point de Lagrange Soleil–Terre',alt:'Environ 2 UA de la Terre, de l’autre côté du Soleil.',use:'La NASA dit que L3 est sur la ligne Soleil–Terre et qu’il est instable.',src:'NASA, Qu’est-ce qu’un point de Lagrange ?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l4:{t:'L4 : point de Lagrange Soleil–Terre',alt:'Environ 1 UA de la Terre, 60 degrés devant.',use:'La NASA dit que L4 est au sommet d’un triangle équilatéral et qu’il est stable.',src:'NASA, Qu’est-ce qu’un point de Lagrange ?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l5:{t:'L5 : point de Lagrange Soleil–Terre',alt:'Environ 1 UA de la Terre, 60 degrés derrière.',use:'La NASA dit que L5 est au sommet d’un triangle équilatéral et qu’il est stable.',src:'NASA, Qu’est-ce qu’un point de Lagrange ?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-        },
-        es: {
-          leo:{t:'LEO: órbita terrestre baja',alt:'Unos 180 km a 2.000 km sobre la Tierra.',use:'La ESA dice que esta cercanía sirve para las imágenes, porque permite más resolución.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          meo:{t:'MEO: órbita terrestre media',alt:'Por encima de unos 2.000 km y por debajo de la altura geoestacionaria de 35.786 km.',use:'La ESA dice que esta franja se usa mucho para satélites de navegación, como Galileo.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          geo:{t:'GEO: órbita geoestacionaria',alt:'35.786 km sobre el ecuador. El inicio y el final de esta banda son la misma altura.',use:'La ESA dice que estos satélites parecen quietos sobre un solo lugar.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          heo:{t:'HEO: órbita muy excéntrica',alt:'No hay una sola altura. El satélite se acerca a la Tierra y luego se aleja.',use:'La ESA dice que la distancia a la superficie cambia durante una órbita.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          sso:{t:'SSO: órbita heliosíncrona',alt:'Por lo general de 600 km a 800 km, dentro de la órbita baja.',use:'La ESA dice que el satélite suele cruzar a una hora local fija, así que la luz se mantiene parecida.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l1:{t:'L1: punto de Lagrange Sol–Tierra',alt:'Unos 1,5 millones de km de la Tierra. No orbita la Tierra directamente.',use:'La ESA dice que una nave puede quedarse cerca de este punto con poco esfuerzo, anclada respecto a la Tierra.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l2:{t:'L2: punto de Lagrange Sol–Tierra',alt:'Unos 1,5 millones de km de la Tierra, en el lado de noche. No orbita la Tierra directamente.',use:'La ESA dice que una nave puede quedarse cerca de este punto con poco esfuerzo, anclada respecto a la Tierra.',src:'ESA, Tipos de órbitas',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l3:{t:'L3: punto de Lagrange Sol–Tierra',alt:'Unas 2 UA de la Tierra, al otro lado del Sol.',use:'La NASA dice que L3 está en la línea Sol–Tierra y que es inestable.',src:'NASA, ¿Qué es un punto de Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l4:{t:'L4: punto de Lagrange Sol–Tierra',alt:'Cerca de 1 UA de la Tierra, 60 grados por delante.',use:'La NASA dice que L4 está en la punta de un triángulo equilátero y que es estable.',src:'NASA, ¿Qué es un punto de Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l5:{t:'L5: punto de Lagrange Sol–Tierra',alt:'Cerca de 1 UA de la Tierra, 60 grados por detrás.',use:'La NASA dice que L5 está en la punta de un triángulo equilátero y que es estable.',src:'NASA, ¿Qué es un punto de Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-        },
-        ar: {
-          leo:{t:'LEO: مدار أرضي منخفض',alt:'نحو 180 كم إلى 2000 كم فوق الأرض.',use:'تقول وكالة الفضاء الأوروبية إن هذا القرب مفيد لتصوير الأرض، لأنه يتيح صورة أوضح.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          meo:{t:'MEO: مدار أرضي متوسط',alt:'فوق نحو 2000 كم وتحت الارتفاع الثابت جغرافيًا البالغ 35786 كم.',use:'تقول وكالة الفضاء الأوروبية إن هذا المدى يُستخدم كثيرًا لأقمار الملاحة، مثل غاليليو.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          geo:{t:'GEO: مدار ثابت جغرافيًا',alt:'35786 كم فوق خط الاستواء. بداية هذا النطاق ونهايته الارتفاع نفسه.',use:'تقول وكالة الفضاء الأوروبية إن هذه الأقمار تبدو ثابتة فوق مكان واحد.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          heo:{t:'HEO: مدار شديد الإهليلجية',alt:'ليس ارتفاعًا واحدًا. يقترب القمر من الأرض ثم يبتعد.',use:'تقول وكالة الفضاء الأوروبية إن البعد عن السطح يتغير خلال مدار واحد.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          sso:{t:'SSO: مدار متزامن مع الشمس',alt:'عادة من 600 كم إلى 800 كم، داخل المدار المنخفض.',use:'تقول وكالة الفضاء الأوروبية إن القمر يمر عادة في وقت محلي ثابت، فيبقى الضوء متشابهًا.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l1:{t:'L1: نقطة لاغرانج الشمس–الأرض',alt:'نحو 1.5 مليون كم من الأرض. لا يدور حول الأرض مباشرة.',use:'تقول وكالة الفضاء الأوروبية إن مركبة يمكن أن تبقى قرب هذه النقطة بجهد قليل، مثبتة بالنسبة إلى الأرض.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l2:{t:'L2: نقطة لاغرانج الشمس–الأرض',alt:'نحو 1.5 مليون كم من الأرض، في جهة الليل. لا يدور حول الأرض مباشرة.',use:'تقول وكالة الفضاء الأوروبية إن مركبة يمكن أن تبقى قرب هذه النقطة بجهد قليل، مثبتة بالنسبة إلى الأرض.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l3:{t:'L3: نقطة لاغرانج الشمس–الأرض',alt:'نحو 2 وحدة فلكية من الأرض، خلف الشمس.',use:'تقول ناسا إن L3 على خط الشمس–الأرض وإنها غير مستقرة.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l4:{t:'L4: نقطة لاغرانج الشمس–الأرض',alt:'نحو 1 وحدة فلكية من الأرض، بزاوية 60 درجة أمامها.',use:'تقول ناسا إن L4 عند رأس مثلث متساوي الأضلاع وإنها مستقرة.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l5:{t:'L5: نقطة لاغرانج الشمس–الأرض',alt:'نحو 1 وحدة فلكية من الأرض، بزاوية 60 درجة خلفها.',use:'تقول ناسا إن L5 عند رأس مثلث متساوي الأضلاع وإنها مستقرة.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-        },
-        it: {
-          leo:{t:'LEO: orbita terrestre bassa',alt:'Circa 180 km fino a 2.000 km sopra la Terra.',use:'L’ESA dice che questa vicinanza serve alle immagini, perché permette una risoluzione più fine.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          meo:{t:'MEO: orbita terrestre media',alt:'Sopra circa 2.000 km e sotto la quota geostazionaria di 35.786 km.',use:'L’ESA dice che questa fascia è usata molto spesso dai satelliti di navigazione, come Galileo.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          geo:{t:'GEO: orbita geostazionaria',alt:'35.786 km sopra l’equatore. L’inizio e la fine di questa fascia sono la stessa quota.',use:'L’ESA dice che questi satelliti sembrano fermi sopra un solo punto.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          heo:{t:'HEO: orbita molto eccentrica',alt:'Non una sola quota. Il satellite si avvicina alla Terra e poi si allontana.',use:'L’ESA dice che la distanza dalla superficie cambia durante un’orbita.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          sso:{t:'SSO: orbita eliosincrona',alt:'Di solito da 600 km a 800 km, dentro l’orbita bassa.',use:'L’ESA dice che il satellite di solito attraversa a un’ora locale stabile, così la luce resta simile.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l1:{t:'L1: punto di Lagrange Sole–Terra',alt:'Circa 1,5 milioni di km dalla Terra. Non orbita la Terra direttamente.',use:'L’ESA dice che un veicolo può restare vicino a questo punto con poco sforzo, ancorato rispetto alla Terra.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l2:{t:'L2: punto di Lagrange Sole–Terra',alt:'Circa 1,5 milioni di km dalla Terra, sul lato notte. Non orbita la Terra direttamente.',use:'L’ESA dice che un veicolo può restare vicino a questo punto con poco sforzo, ancorato rispetto alla Terra.',src:'ESA, Tipi di orbite',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l3:{t:'L3: punto di Lagrange Sole–Terra',alt:'Circa 2 UA dalla Terra, oltre il Sole.',use:'La NASA dice che L3 sta sulla linea Sole–Terra ed è instabile.',src:'NASA, Che cos’è un punto di Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l4:{t:'L4: punto di Lagrange Sole–Terra',alt:'Circa 1 UA dalla Terra, 60 gradi davanti.',use:'La NASA dice che L4 è al vertice di un triangolo equilatero ed è stabile.',src:'NASA, Che cos’è un punto di Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l5:{t:'L5: punto di Lagrange Sole–Terra',alt:'Circa 1 UA dalla Terra, 60 gradi dietro.',use:'La NASA dice che L5 è al vertice di un triangolo equilatero ed è stabile.',src:'NASA, Che cos’è un punto di Lagrange?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-        },
-        he: {
-          leo:{t:'LEO: מסלול ארצי נמוך',alt:'כ-180 ק״מ עד 2,000 ק״מ מעל כדור הארץ.',use:'סוכנות החלל האירופית אומרת שהקרבה הזו מועילה לצילום, כי היא מאפשרת תמונה חדה יותר.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          meo:{t:'MEO: מסלול ארצי בינוני',alt:'מעל כ-2,000 ק״מ ומתחת לגובה הגיאוסטציונרי של 35,786 ק״מ.',use:'סוכנות החלל האירופית אומרת שהטווח הזה משמש הרבה לווייני ניווט, כמו גלילאו.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          geo:{t:'GEO: מסלול גיאוסטציונרי',alt:'35,786 ק״מ מעל קו המשווה. ההתחלה והסוף של הרצועה הם אותו גובה.',use:'סוכנות החלל האירופית אומרת שהלוויינים האלה נראים קבועים מעל מקום אחד.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          heo:{t:'HEO: מסלול אליפטי מאוד',alt:'אין גובה אחד. הלוויין מתקרב לכדור הארץ ואז מתרחק.',use:'סוכנות החלל האירופית אומרת שהמרחק מהקרקע משתנה במהלך מסלול אחד.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          sso:{t:'SSO: מסלול מסונכרן-שמש',alt:'בדרך כלל 600 עד 800 ק״מ, בתוך המסלול הנמוך.',use:'סוכנות החלל האירופית אומרת שהלוויין חוצה בדרך כלל בשעה מקומית קבועה, ולכן התאורה נשארת דומה.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l1:{t:'L1: נקודת לגראנז׳ שמש–ארץ',alt:'כ-1.5 מיליון ק״מ מכדור הארץ. היא לא מקיפה את כדור הארץ ישירות.',use:'סוכנות החלל האירופית אומרת שחללית יכולה להישאר ליד הנקודה במעט מאמץ, מעוגנת ביחס לכדור הארץ.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l2:{t:'L2: נקודת לגראנז׳ שמש–ארץ',alt:'כ-1.5 מיליון ק״מ מכדור הארץ, בצד הלילה. היא לא מקיפה את כדור הארץ ישירות.',use:'סוכנות החלל האירופית אומרת שחללית יכולה להישאר ליד הנקודה במעט מאמץ, מעוגנת ביחס לכדור הארץ.',src:'ESA, Types of orbits',url:'https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits'},
-          l3:{t:'L3: נקודת לגראנז׳ שמש–ארץ',alt:'כ-2 יחידות אסטרונומיות מכדור הארץ, מעבר לשמש.',use:'נאס״א אומרת ש-L3 יושבת על קו השמש–ארץ ואינה יציבה.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l4:{t:'L4: נקודת לגראנז׳ שמש–ארץ',alt:'כ-1 יחידה אסטרונומית מכדור הארץ, 60 מעלות לפניו.',use:'נאס״א אומרת ש-L4 בקודקוד של משולש שווה צלעות והיא יציבה.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'},
-          l5:{t:'L5: נקודת לגראנז׳ שמש–ארץ',alt:'כ-1 יחידה אסטרונומית מכדור הארץ, 60 מעלות אחריו.',use:'נאס״א אומרת ש-L5 בקודקוד של משולש שווה צלעות והיא יציבה.',src:'NASA, What is a Lagrange Point?',url:'https://science.nasa.gov/resource/what-is-a-lagrange-point/'}
-        }
-      })[D.lang];
-      if (pack && pack[id]) return pack[id];
-      return (BAND && BAND[id]) ? BAND[id] : null;
+      var bands = D.bands || {};
+      return bands[id] || null;
     }
-    var selectedBand = '';
+        var selectedBand = '';
     var bandBox = document.createElement('div');
     bandBox.id = 'sat-band';
     bandBox.className = 'sat-band';
@@ -337,18 +279,14 @@
       if (selectedBand === id) { selectedBand = ''; bandBox.hidden = true; paintBand(''); }
       else {
         selectedBand = id;
-        var info = bandCopy(id);
-        if (!info) { bandBox.hidden = true; return; }
-        bandBox.hidden = false;
-        bandBox.innerHTML = '<button type="button" class="sat-close" aria-label="' + esc(ui.close || 'Close') + '">×</button>' +
-          '<h3 id="sat-band-h">' + esc(info.t) + '</h3><p>' + esc(info.alt) + '</p><p>' + esc(info.use) + '</p>' +
-          '<p class="sat-photo-credit"><a href="' + esc(info.url) + '" target="_blank" rel="noopener">' + esc(info.src) + '</a></p>';
-        bandBox.querySelector('button').addEventListener('click', function () { selectedBand = ''; bandBox.hidden = true; paintBand(''); });
+        if (!bandCopy(id)) { bandBox.hidden = true; return; }
+        bandBox.hidden = true;
         paintBand(id);
       }
       [].forEach.call(canvas.querySelectorAll('.band-btn'), function (b) {
         b.setAttribute('aria-pressed', b.getAttribute('data-band') === selectedBand ? 'true' : 'false');
       });
+      showOrbitNote();
     }
     function addBand(x, y, id, label) {
       var b = document.createElement('button');
@@ -389,16 +327,8 @@
       });
     }
     function showBandInfo(id) {
-      var info = bandCopy(id);
-      if (!info) { bandBox.hidden = true; return; }
-      bandBox.hidden = false;
-      bandBox.innerHTML = '<button type="button" class="sat-close" aria-label="' + esc(ui.close || 'Close') + '">×</button>' +
-        '<h3 id="sat-band-h">' + esc(info.t) + '</h3><p>' + esc(info.alt) + '</p><p>' + esc(info.use) + '</p>' +
-        '<p class="sat-photo-credit"><a href="' + esc(info.url) + '" target="_blank" rel="noopener">' + esc(info.src) + '</a></p>';
-      bandBox.querySelector('button').addEventListener('click', function () {
-        if (id === 'leo' || id === 'meo' || id === 'geo') toggleOrbit(id);
-        else { selectedBand = ''; bandBox.hidden = true; paintBand(''); syncOrbit(); }
-      });
+      bandBox.hidden = true;
+      if (!bandCopy(id)) return;
     }
     function syncOrbit() {
       [].forEach.call(root.querySelectorAll('.sat-orbits button'), function (b) {
@@ -406,6 +336,8 @@
         var pressed = (id === 'leo' || id === 'meo' || id === 'geo') ? orbitFilter === id : selectedBand === id;
         b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
       });
+      var badge = canvas.querySelector('.sso-mark');
+      if (badge) badge.setAttribute('aria-pressed', selectedBand === 'sso' ? 'true' : 'false');
     }
     function clearOrbit() {
       orbitFilter = '';
@@ -414,6 +346,7 @@
       paintBand('');
       syncOrbit();
       applyDim();
+      showOrbitNote();
     }
     function toggleOrbit(id) {
       if (orbitFilter === id) { clearOrbit(); return; }
@@ -423,8 +356,21 @@
       paintBand(id);
       syncOrbit();
       applyDim();
+      showOrbitNote();
+      if (id === 'meo' && byId.galileo) openCard(byId.galileo);
+    }
+    function pickBand(id) {
+      if (id === 'leo' || id === 'meo' || id === 'geo') { toggleOrbit(id); return; }
+      if (selectedBand === id) { selectedBand = ''; bandBox.hidden = true; paintBand(''); syncOrbit(); showOrbitNote(); return; }
+      selectedBand = id;
+      showBandInfo(id);
+      paintBand(id);
+      syncOrbit();
+      showOrbitNote();
     }
     function layout(which) {
+      var poster = document.getElementById('sat-poster');
+      if (poster) poster.remove();
       var groups = { leo: [], meo: [], geo: [], heo: [], l1: [], l2: [], l5: [], cruise: [] };
       sats.forEach(function (s) { if (show(s) && groups[s.regime === 'sso' ? 'leo' : s.regime]) groups[s.regime === 'sso' ? 'leo' : s.regime].push(s); });
       var W = 900, H = 520, pts = [], cx = 400, cy = 268, er = 72;
@@ -447,10 +393,14 @@
         onEllipse(groups.heo, cx + 40, cy, 196, 118);
         svg = '<svg class="orb-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(ui.diagram || '') + '">' +
           '<defs></defs>' +
-          '<ellipse class="ring ring-leo" cx="400" cy="268" rx="118" ry="50" fill="none" stroke="#7ad7ff" stroke-width="2"/>' +
-          '<ellipse class="ring ring-meo" cx="400" cy="268" rx="178" ry="74" fill="none" stroke="#ffb703" stroke-width="2"/>' +
-          '<ellipse class="ring ring-geo" cx="400" cy="268" rx="246" ry="102" fill="none" stroke="#e2b6ff" stroke-width="2"/>' +
-          '<ellipse class="ring ring-heo" cx="440" cy="268" rx="196" ry="118" fill="none" stroke="#ffd166" stroke-width="1.6" stroke-dasharray="5 4"/>' +
+          '<ellipse class="ring-hit" data-band="leo" cx="400" cy="268" rx="118" ry="50" fill="none" stroke="transparent" stroke-width="18"/>' +
+          '<ellipse class="ring-hit" data-band="meo" cx="400" cy="268" rx="178" ry="74" fill="none" stroke="transparent" stroke-width="18"/>' +
+          '<ellipse class="ring-hit" data-band="geo" cx="400" cy="268" rx="246" ry="102" fill="none" stroke="transparent" stroke-width="18"/>' +
+          '<ellipse class="ring-hit" data-band="heo" cx="440" cy="268" rx="196" ry="118" fill="none" stroke="transparent" stroke-width="18"/>' +
+          '<ellipse class="ring ring-leo" cx="400" cy="268" rx="118" ry="50" fill="none" stroke="#7ad7ff" stroke-width="3"/>' +
+          '<ellipse class="ring ring-meo" cx="400" cy="268" rx="178" ry="74" fill="none" stroke="#ffb703" stroke-width="3"/>' +
+          '<ellipse class="ring ring-geo" cx="400" cy="268" rx="246" ry="102" fill="none" stroke="#e2b6ff" stroke-width="3"/>' +
+          '<ellipse class="ring ring-heo" cx="440" cy="268" rx="196" ry="118" fill="none" stroke="#ffd166" stroke-width="2" stroke-dasharray="5 4"/>' +
           '<image href="' + esc(earth) + '" x="328" y="196" width="144" height="144"/>' +
           '</svg>';
         /* band names are the buttons added after the svg */
@@ -462,6 +412,8 @@
         stack(groups.l1, 250, 150, 36);
         stack(groups.l2, 900, 150, 36);
         stack(groups.cruise, 900, 470, 36);
+        var moon = cut + 'moon.webp';
+        var sun = cut + 'sun.webp';
         lgs = [
           { id: 'l1', x: 250, y: 78, name: 'L1' },
           { id: 'l2', x: 860, y: 78, name: 'L2' },
@@ -483,6 +435,33 @@
       }
       geom = { W: W, H: H, cx: cx, cy: cy, r: er };
       canvas.innerHTML = svg;
+      [].forEach.call(canvas.querySelectorAll('.ring-hit'), function (el) {
+        var id = el.getAttribute('data-band');
+        var info = bandCopy(id) || {};
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('role', 'button');
+        el.setAttribute('aria-label', info.t || id.toUpperCase());
+        function go(ev) {
+          if (ev.type === 'keydown' && ev.key !== 'Enter' && ev.key !== ' ') return;
+          ev.preventDefault();
+          pickBand(id);
+        }
+        el.addEventListener('click', go);
+        el.addEventListener('keydown', go);
+      });
+      if (which === 'near') {
+        var badge = document.createElement('button');
+        badge.type = 'button';
+        badge.className = 'sso-mark';
+        badge.textContent = 'SSO';
+        badge.setAttribute('data-x', '400');
+        badge.setAttribute('data-y', '210');
+        badge.setAttribute('aria-pressed', selectedBand === 'sso' ? 'true' : 'false');
+        var ssoInfo = bandCopy('sso') || {};
+        badge.setAttribute('aria-label', (ui.ssoMark || 'SSO') + (ssoInfo.t ? '. ' + ssoInfo.t : ''));
+        badge.addEventListener('click', function () { pickBand('sso'); });
+        canvas.appendChild(badge);
+      }
       pts.forEach(function (p) {
         var b = document.createElement('button');
         b.type = 'button';
@@ -494,7 +473,8 @@
         b.setAttribute('data-x', p.x);
         b.setAttribute('data-y', p.y);
         b.id = 'sat-' + p.s.id;
-        b.setAttribute('aria-label', shortName(p.s) + '. ' + kindWord(p.s));
+        b.setAttribute('aria-label', shortName(p.s) + '. ' + (p.s.regime === 'sso' ? (ui.ssoMark || 'SSO') + '. ' : '') + kindWord(p.s));
+        b.setAttribute('aria-pressed', openId === p.s.id ? 'true' : 'false');
         b.addEventListener('click', function () { openCard(p.s, b); });
         canvas.appendChild(b);
         if (which !== 'far') addLabel(p.x, p.y, shortName(p.s), reg, function () { openCard(p.s, b); });
@@ -533,9 +513,17 @@
         el.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
     }
+    function eyesUrl(s) {
+      var u = s && s.eyes;
+      return (typeof u === 'string' && u.indexOf('https://eyes.nasa.gov/') === 0) ? u : '';
+    }
     function openCard(s, btn) {
       lastBtn = btn || lastBtn;
+      openId = s.id;
       markLagrange(s);
+      [].forEach.call(canvas.querySelectorAll('.orb-btn'), function (el) {
+        el.setAttribute('aria-pressed', el.getAttribute('data-id') === s.id ? 'true' : 'false');
+      });
       root.querySelector('.sat-layout').classList.add('has-card');
       card.hidden = false;
       var photo = '';
@@ -552,17 +540,22 @@
       var why = whyInfo ? '<p class="sat-why"><strong>' + esc(whyInfo.t) + '.</strong> ' + esc(whyInfo.alt) + ' ' + esc(whyInfo.use) +
         ' <a href="' + esc(whyInfo.url) + '" target="_blank" rel="noopener">' + esc(whyInfo.src) + '</a></p>' : '';
       var more = s.official ? '<p class="sat-more-row"><a class="sat-more" href="' + esc(s.official) + '" target="_blank" rel="noopener">' + esc(ui.more || 'Click here for more information') + '</a></p>' : '';
+      var eyes = eyesUrl(s);
+      if (eyes) more += '<p class="sat-more-row"><a class="sat-more" href="' + esc(eyes) + '" target="_blank" rel="noopener">' + esc(ui.eyes || 'NASA Eyes') + '</a></p>';
+      var kind = s.regime === 'sso' ? (ui.ssoMark || 'SSO') : kindWord(s);
       card.innerHTML = '<button type="button" class="sat-close" aria-label="' + esc(ui.close || 'Close') + '">×</button>' +
         '<h3 id="sat-card-title" class="sat-title">' + esc(shortName(s)) + '</h3>' +
-        '<p class="sat-kind">' + esc(kindWord(s)) + '</p>' + photo + brief + why + more;
+        '<p class="sat-kind">' + esc(kind) + '</p>' + photo + brief + why + more;
       card.querySelector('.sat-close').addEventListener('click', closeCard);
       card.querySelector('.sat-close').focus();
     }
     function closeCard() {
       card.hidden = true;
       card.innerHTML = '';
+      openId = '';
       root.querySelector('.sat-layout').classList.remove('has-card');
       markLagrange(null);
+      [].forEach.call(canvas.querySelectorAll('.orb-btn'), function (el) { el.setAttribute('aria-pressed', 'false'); });
       if (lastBtn && lastBtn.focus) lastBtn.focus();
     }
     function draw() {
@@ -583,7 +576,9 @@
         var r = s.regime || '';
         if (drawn[r] && order.indexOf(r) >= 0 && seen.indexOf(r) < 0) seen.push(r);
       });
-      seen.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
+      var focusId = selectedBand || orbitFilter || '';
+      if (focusId && seen.indexOf(focusId) < 0 && bandCopy(focusId)) seen.unshift(focusId);
+      seen.sort(function (a, b) { return (a === focusId ? -1 : order.indexOf(a)) - (b === focusId ? -1 : order.indexOf(b)); });
       note.innerHTML = seen.map(function (id) {
         var info = bandCopy(id);
         if (!info) return '';
@@ -621,6 +616,14 @@
       if (cruise) cruise.hidden = cat !== 'beyond';
       draw();
       showOrbitNote();
+      announce();
+    }
+    function announce() {
+      var live = document.getElementById('sat-count');
+      if (!live) return;
+      var n = 0;
+      sats.forEach(function (s) { if (show(s)) n++; });
+      live.textContent = String(ui.count || '{n}').replace('{n}', String(n));
     }
     var zbar = document.createElement('div');
     zbar.className = 'wm-zoom';
@@ -649,15 +652,10 @@
       b.type = 'button';
       b.className = 'band-btn is-' + id;
       b.textContent = id.toUpperCase();
+      if (id === 'sso') b.setAttribute('aria-label', (ui.ssoMark || 'SSO') + '. SSO');
       b.setAttribute('data-band', id);
       b.setAttribute('aria-pressed', 'false');
-      b.addEventListener('click', function () {
-        if (id === 'leo' || id === 'meo' || id === 'geo') toggleOrbit(id);
-        else {
-          if (selectedBand === id) { selectedBand = ''; bandBox.hidden = true; paintBand(''); syncOrbit(); }
-          else { selectedBand = id; showBandInfo(id); paintBand(id); syncOrbit(); }
-        }
-      });
+      b.addEventListener('click', function () { pickBand(id); });
       b.addEventListener('keydown', function (e) {
         var dir = e.key === 'ArrowRight' ? (rtl ? -1 : 1) : e.key === 'ArrowLeft' ? (rtl ? 1 : -1) : 0;
         if (!dir) return;
@@ -704,15 +702,18 @@
       if (s.regime === 'l1' || s.regime === 'l2' || s.regime === 'l5' || s.regime === 'cruise') next = 'beyond';
       else if (s.fn && s.fn !== 'nav') next = s.fn;
       setCat(next);
+      if (s.regime === 'meo' && orbitFilter !== 'meo') toggleOrbit('meo');
       var btn = canvas.querySelector('.orb-btn[data-id="' + id + '"]');
-      if (btn) btn.classList.add('is-focus');
+      if (btn) { btn.classList.add('is-focus'); btn.focus(); }
       var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (root.scrollIntoView) root.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
       openCard(s, btn || null);
     }
     window.addEventListener('hashchange', focusFromHash);
-    draw();
+    var pend = root.getAttribute('data-pending-cat');
+    root.removeAttribute('data-pending-cat');
+    if (pend) setCat(pend);
+    else { draw(); showOrbitNote(); announce(); }
     focusFromHash();
-    showOrbitNote();
   }
 })();
