@@ -28,7 +28,11 @@ JS = r"""
       add({n:'practice',track:tr,result:res,topic:topic||'page'});if(res==='correct')add({n:'practice',track:tr,result:'attempt',topic:topic||'page'})},false)}
   if(pg==='Ways_to_Help')D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="http"]');if(!a)return;
     var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
-    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link'});flush()},true);
+    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link',page:'Ways_to_Help'});flush()},true);
+  D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#support a.help-btn[data-sp-donate]');if(!a)return;
+    var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
+    var slug=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'').replace(/[^A-Za-z0-9_-]/g,'').slice(0,80);
+    add({n:'partner',host:h.slice(0,64),kind:'donate',page:slug||'page'});flush()},true);
 })();
 /* SPEV:END */
 """

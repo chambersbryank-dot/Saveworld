@@ -580,7 +580,7 @@ fetch('/assets/data/solutions.json').then(function(r){return r.json()}).then(fun
   [].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var any=h.querySelector('article.sol-card:not([hidden])');if(s||t||gr)h.style.display=any?'':'none';else h.style.display=''});
   bar.querySelector('.sf-n').textContent=(s||t||gr)?n+' '+W[5]:''}
  ['sf-sub','sf-type','sf-grade'].forEach(function(i){bar.querySelector('#'+i).onchange=apply});
- bar.querySelector('#sf-lang').onchange=function(){var v=this.value;location.href=(v==='en'?'':'/'+v)+here};
+ bar.querySelector('#sf-lang').onchange=function(){var i=this.selectedIndex,dest;if(i===0)dest='';else if(i===1)dest='/fr';else if(i===2)dest='/es';else if(i===3)dest='/ar';else if(i===4)dest='/it';else if(i===5)dest='/he';else return;location.href=dest+here};
 });
 }catch(e){}})();
 /* SOLFACETS:END */
@@ -638,6 +638,10 @@ fetch('/assets/data/solution-added.json').then(function(r){return r.json()}).the
       add({n:'practice',track:tr,result:res,topic:topic||'page'});if(res==='correct')add({n:'practice',track:tr,result:'attempt',topic:topic||'page'})},false)}
   if(pg==='Ways_to_Help')D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="http"]');if(!a)return;
     var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
-    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link'});flush()},true);
+    add({n:'partner',host:h.slice(0,64),kind:/help-btn-join/.test(a.className)?'join':/help-btn/.test(a.className)?'donate':'link',page:'Ways_to_Help'});flush()},true);
+  D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#support a.help-btn[data-sp-donate]');if(!a)return;
+    var h=(a.hostname||'').toLowerCase().replace(/^www\./,'');if(!h||/savingplanets\.com$/.test(h))return;
+    var slug=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'').replace(/[^A-Za-z0-9_-]/g,'').slice(0,80);
+    add({n:'partner',host:h.slice(0,64),kind:'donate',page:slug||'page'});flush()},true);
 })();
 /* SPEV:END */

@@ -114,7 +114,7 @@ const EV = {
   newsletter: {},
   share: { kind: ['classroom', 'copy', 'embed'], page: ['learn', 'guide', 'math', 'lab', 'teachers', 'calc', 'path', 'launches'] },
   calc: { tool: ['dv', 'hohmann', 'period', 'vel', 'stall', 'lift', 'mach', 'tw', 'rotor', 'proj', 'pend'] },  // Oct 16: calculator pages (first input only)
-  partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'] },
+  partner: { host: /^(?=.{3,64}$)[a-z0-9-]+(\.[a-z0-9-]+)+$/, kind: ['donate', 'join', 'link'], page: /^$|^[A-Za-z0-9][A-Za-z0-9_-]{0,80}$/ },
   // Nov 13: Lesson Builder and GLOBE Review. label is gradeband-topic (select values only, no class question).
   plan: { act: ['build', 'print', 'copy', 'classroom'], page: ['lesson', 'globe'], label: /^[a-z0-9]{2,8}-[a-z0-9_-]{1,40}$/ },
 };
