@@ -580,7 +580,7 @@ fetch('/assets/data/solutions.json').then(function(r){return r.json()}).then(fun
   [].forEach.call(document.querySelectorAll('.sol-hub'),function(h){var any=h.querySelector('article.sol-card:not([hidden])');if(s||t||gr)h.style.display=any?'':'none';else h.style.display=''});
   bar.querySelector('.sf-n').textContent=(s||t||gr)?n+' '+W[5]:''}
  ['sf-sub','sf-type','sf-grade'].forEach(function(i){bar.querySelector('#'+i).onchange=apply});
- bar.querySelector('#sf-lang').onchange=function(){var v=this.value;location.href=(v==='en'?'':'/'+v)+here};
+ bar.querySelector('#sf-lang').onchange=function(){var i=this.selectedIndex,dest;if(i===0)dest='';else if(i===1)dest='/fr';else if(i===2)dest='/es';else if(i===3)dest='/ar';else if(i===4)dest='/it';else if(i===5)dest='/he';else return;location.href=dest+here};
 });
 }catch(e){}})();
 /* SOLFACETS:END */
