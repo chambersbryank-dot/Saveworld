@@ -66,6 +66,84 @@
       "subject": "literacy",
       "url": "https://www.thecorestandards.org/ELA-Literacy/RST/6-8/1/",
       "text": "Cite specific textual evidence to support analysis of science and technical texts."
+    },
+    "4-ESS2-1": {
+      "band": "3-5",
+      "subject": "earth",
+      "url": "https://www.nextgenscience.org/pe/4-ess2-1-earths-systems",
+      "text": "Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation."
+    },
+    "4-ESS3-1": {
+      "band": "3-5",
+      "subject": "earth",
+      "url": "https://www.nextgenscience.org/pe/4-ess3-1-earth-and-human-activity",
+      "text": "Obtain and combine information to describe that energy and fuels are derived from natural resources and their uses affect the environment."
+    },
+    "5-ESS2-1": {
+      "band": "3-5",
+      "subject": "earth",
+      "url": "https://www.nextgenscience.org/pe/5-ess2-1-earths-systems",
+      "text": "Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact."
+    },
+    "5-ESS2-2": {
+      "band": "3-5",
+      "subject": "earth",
+      "url": "https://www.nextgenscience.org/pe/5-ess2-2-earths-systems",
+      "text": "Describe and graph the amounts of salt water and fresh water in various reservoirs to provide evidence about the distribution of water on Earth."
+    },
+    "5-LS1-1": {
+      "band": "3-5",
+      "subject": "life",
+      "url": "https://www.nextgenscience.org/pe/5-ls1-1-molecules-organisms-structures-and-processes",
+      "text": "Support an argument that plants get the materials they need for growth chiefly from air and water."
+    },
+    "5-LS2-1": {
+      "band": "3-5",
+      "subject": "life",
+      "url": "https://www.nextgenscience.org/pe/5-ls2-1-ecosystems-interactions-energy-and-dynamics",
+      "text": "Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment."
+    },
+    "1-ESS1-1": {
+      "band": "K-2",
+      "subject": "space",
+      "url": "https://www.nextgenscience.org/pe/1-ess1-1-earths-place-universe",
+      "text": "Use observations of the sun, moon, and stars to describe patterns that can be predicted."
+    },
+    "HS-LS2-7": {
+      "band": "9-12",
+      "subject": "life",
+      "url": "https://www.nextgenscience.org/pe/hs-ls2-7-ecosystems-interactions-energy-and-dynamics",
+      "text": "Design, evaluate, and refine a solution for reducing the impacts of human activities on the environment and biodiversity."
+    },
+    "CCSS.ELA-LITERACY.RI.2.1": {
+      "band": "K-2",
+      "subject": "literacy",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/RI/2/1/",
+      "text": "Ask and answer such questions as who, what, where, when, why, and how to demonstrate understanding of key details in a text."
+    },
+    "CCSS.ELA-LITERACY.RI.4.9": {
+      "band": "3-5",
+      "subject": "literacy",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/RI/4/9/",
+      "text": "Integrate information from two texts on the same topic in order to write or speak about the subject knowledgeably."
+    },
+    "CCSS.ELA-LITERACY.W.4.8": {
+      "band": "3-5",
+      "subject": "literacy",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/W/4/8/",
+      "text": "Recall relevant information from experiences or gather relevant information from print and digital sources; take notes and categorize information, and provide a list of sources."
+    },
+    "CCSS.ELA-LITERACY.W.5.8": {
+      "band": "3-5",
+      "subject": "literacy",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/W/5/8/",
+      "text": "Recall relevant information from experiences or gather relevant information from print and digital sources; summarize or paraphrase information in notes and finished work, and provide a list of sources."
+    },
+    "CCSS.ELA-LITERACY.RST.9-10.1": {
+      "band": "9-12",
+      "subject": "literacy",
+      "url": "https://www.thecorestandards.org/ELA-Literacy/RST/9-10/1/",
+      "text": "Cite specific textual evidence to support analysis of science and technical texts, attending to the precise details of explanations or descriptions."
     }
   },
   "hubs": {
@@ -292,5 +370,279 @@
     "Arctic_Basecamp.html": [
       "CCSS.ELA-LITERACY.RST.6-8.1"
     ]
+  },
+  "lesson": {
+    "Lakes.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-ESS2-1",
+        "5-ESS2-2",
+        "5-ESS3-1",
+        "5-LS2-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "MS-LS2-5",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "HS-LS2-7",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Rivers.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "4-ESS2-1",
+        "5-ESS2-1",
+        "5-ESS2-2",
+        "5-ESS3-1",
+        "5-LS2-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "MS-LS2-5",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "HS-LS2-7",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Oceans.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-ESS2-1",
+        "5-ESS2-2",
+        "5-ESS3-1",
+        "5-LS2-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "MS-LS2-5",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "HS-LS2-7",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Polar.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-ESS2-1",
+        "5-ESS2-2",
+        "5-ESS3-1",
+        "5-LS2-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "MS-LS2-5",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "HS-LS2-7",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Deforestation.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-LS1-1",
+        "5-LS2-1",
+        "5-ESS2-1",
+        "5-ESS3-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "MS-LS2-5",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "HS-LS2-7",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Earth_Observation.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "4-ESS3-1",
+        "4-ESS3-2",
+        "5-ESS2-1",
+        "5-ESS3-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-2",
+        "MS-ESS3-3",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS3-4",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Planetary_Defense.html": {
+      "k3": [
+        "K-ESS3-3",
+        "1-ESS1-1",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "4-ESS3-2",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS1-3",
+        "MS-ESS3-2",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS1-4",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Space_Weather.html": {
+      "k3": [
+        "1-ESS1-1",
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-2",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Space.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-ESS3-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS1-3",
+        "MS-ESS3-3",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS1-4",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Space_Disposal.html": {
+      "k3": [
+        "K-ESS3-3",
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "5-ESS3-1",
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS3-3",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS1-4",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    },
+    "Project-Rawane.html": {
+      "k3": [
+        "CCSS.ELA-LITERACY.RI.2.1"
+      ],
+      "g45": [
+        "CCSS.ELA-LITERACY.RI.4.9",
+        "CCSS.ELA-LITERACY.RI.5.9",
+        "CCSS.ELA-LITERACY.W.4.8",
+        "CCSS.ELA-LITERACY.W.5.8"
+      ],
+      "g68": [
+        "MS-ESS1-3",
+        "CCSS.ELA-LITERACY.RST.6-8.1"
+      ],
+      "g912": [
+        "HS-ESS1-4",
+        "CCSS.ELA-LITERACY.RST.9-10.1"
+      ],
+      "uni": []
+    }
   }
 }
