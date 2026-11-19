@@ -72,18 +72,26 @@
 
     /* Permanent link (?band&hub&min&seed), Copy Link, and the official Google Classroom share URL. */
     var X = {
-      en: { copy: 'Copy Link', copied: 'Link copied', gc: 'Share to Google Classroom', std: 'Standards' },
-      fr: { copy: 'Copier le lien', copied: 'Lien copié', gc: 'Partager sur Google Classroom', std: 'Normes' },
-      es: { copy: 'Copiar enlace', copied: 'Enlace copiado', gc: 'Compartir en Google Classroom', std: 'Estándares' },
-      ar: { copy: 'نسخ الرابط', copied: 'تم نسخ الرابط', gc: 'شارك في Google Classroom', std: 'المعايير' },
-      it: { copy: 'Copia il link', copied: 'Link copiato', gc: 'Condividi su Google Classroom', std: 'Standard' },
-      he: { copy: 'העתקת הקישור', copied: 'הקישור הועתק', gc: 'שיתוף ב-Google Classroom', std: 'תקנים' }
+      en: { copy: 'Copy Link', copied: 'Link copied', gc: 'Share to Google Classroom', std: 'Standards', uni: 'University level: no NGSS code; aligns with introductory Earth system and environmental science courses.' },
+      fr: { copy: 'Copier le lien', copied: 'Lien copié', gc: 'Partager sur Google Classroom', std: 'Normes', uni: 'Niveau universitaire : pas de code NGSS ; correspond aux cours d’introduction aux sciences du système Terre et de l’environnement.' },
+      es: { copy: 'Copiar enlace', copied: 'Enlace copiado', gc: 'Compartir en Google Classroom', std: 'Estándares', uni: 'Nivel universitario: sin código NGSS; se alinea con cursos introductorios de ciencias del sistema Tierra y ambientales.' },
+      ar: { copy: 'نسخ الرابط', copied: 'تم نسخ الرابط', gc: 'شارك في Google Classroom', std: 'المعايير', uni: 'المستوى الجامعي: لا يوجد رمز NGSS، ويتوافق مع المقررات التمهيدية لعلوم نظام الأرض والبيئة.' },
+      it: { copy: 'Copia il link', copied: 'Link copiato', gc: 'Condividi su Google Classroom', std: 'Standard', uni: 'Livello universitario: nessun codice NGSS; in linea con i corsi introduttivi di scienze del sistema Terra e dell’ambiente.' },
+      he: { copy: 'העתקת הקישור', copied: 'הקישור הועתק', gc: 'שיתוף ב-Google Classroom', std: 'תקנים', uni: 'רמה אוניברסיטאית: אין קוד NGSS; מתאים לקורסי מבוא במדעי מערכת כדור הארץ ובמדעי הסביבה.' }
     }[lang] || {};
     var STD = null;
-    fetch(root + 'assets/data/standards.json?v=20261015').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && (q.get('hub') || matched)) build({ quiet: true }); }).catch(function () {});
-    function stdHtml(hub) {
-      if (!STD || !STD.hubs[hub]) return '';
-      return '<h3>' + esc(X.std) + '</h3><ul class="lb-small">' + STD.hubs[hub].map(function (c) { var o = STD.codes[c]; return '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(c.replace('CCSS.ELA-LITERACY.', 'CCSS ')) + '</a> (' + esc(o.band) + '): <span lang="en">' + esc(o.text) + '</span></li>'; }).join('') + '</ul>';
+    fetch(root + 'assets/data/standards.json?v=20261119a').then(function (r) { return r.json(); }).then(function (j) { STD = j; if (!out.hidden && (q.get('hub') || matched)) build({ quiet: true }); }).catch(function () {});
+    function stdHtml(band, hub) {
+      if (!STD || !STD.codes) return '';
+      if (band === 'uni') return '<h3>' + esc(X.std) + '</h3><p class="lb-small lb-plan-std">' + esc(X.uni || '') + '</p>';
+      var list = (STD.lesson && STD.lesson[hub] && STD.lesson[hub][band]) || [];
+      if (!list.length && STD.hubs && STD.hubs[hub]) {
+        var want = { k3: 'K-2', g45: '3-5', g68: '6-8', g912: '9-12' }[band];
+        list = STD.hubs[hub].filter(function (c) { return STD.codes[c] && STD.codes[c].band === want; });
+      }
+      list = list.filter(function (c) { return STD.codes[c]; });
+      if (!list.length) return '';
+      return '<h3>' + esc(X.std) + '</h3><ul class="lb-small lb-plan-std">' + list.map(function (c) { var o = STD.codes[c]; return '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(c.replace('CCSS.ELA-LITERACY.', 'CCSS ')) + '</a> (' + esc(o.band) + '): <span lang="en">' + esc(o.text) + '</span></li>'; }).join('') + '</ul>';
     }
     function tools(h, B, min) {
       var bar = document.getElementById('lb-tools');
@@ -170,7 +178,7 @@
         '<h3>' + esc(L.h.sources) + '</h3><ul class="lb-small">' +
           sols.map(function (s) { return '<li>Saving Planets. (n.d.). ' + esc(s.t) + '. ' + esc(s.abs) + '</li>'; }).join('') +
           facts.map(function (f) { return '<li>' + esc(f.sn) + '. ' + esc(f.src) + '</li>'; }).join('') + '</ul>' +
-        '<div class="lb-teacher-only">' + stdHtml(hub) + '</div>' +
+        '<div class="lb-teacher-only">' + stdHtml(band, hub) + '</div>' +
         '<p class="lb-small">' + esc(L.footer) + '</p>';
       out.innerHTML = html; out.hidden = false;
       document.getElementById('lb-print').hidden = false;

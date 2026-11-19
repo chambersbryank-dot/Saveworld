@@ -33,7 +33,7 @@
   var lb = document.getElementById('lb'), out = document.getElementById('lb-plan');
   if (lb && out) {
     var add = function () {
-      if (!out.firstChild || out.querySelector('.lb-std')) return;
+      if (!out.firstChild || out.querySelector('.lb-plan-std') || out.querySelector('.lb-std')) return;
       var band = lb.elements.band ? lb.elements.band.value : '', hub = lb.elements.hub ? lb.elements.hub.value : '', c = codes(band, hub);
       var box = document.createElement('section'); box.className = 'lb-std';
       box.innerHTML = '<h3>' + T.std + '</h3>' + (c.length ? '<p class="lb-small">' + T.note + '</p><ul>' + c.map(function (k) {
