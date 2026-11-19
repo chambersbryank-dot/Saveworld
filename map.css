@@ -101,7 +101,9 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 .wm-m.wm-space{width:26px;height:16px;border-radius:3px}
 .wm-m.wm-fire{width:18px;height:22px;border-radius:40% 40% 46% 46%}
 .wm-m.wm-ice{width:22px;height:22px;border-radius:2px;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
-.wm-hero{position:relative;flex:none;height:clamp(320px,48vh,620px);min-height:300px;display:flex;align-items:stretch;justify-content:center;overflow:hidden;color:#fff;border-radius:0}
+/* Nov 19: World Map title band only. Compact so the map and its controls clear the fold at 1366x768, 1920x1080 and 390x844. */
+.wm-hero{position:relative;flex:none;height:clamp(200px,32vh,420px);min-height:200px;display:flex;align-items:stretch;justify-content:center;overflow:hidden;color:#fff;border-radius:0}
+@media (max-width:700px){.wm-hero{height:clamp(176px,22vh,220px);min-height:176px}}
 .wm-hero-media,.wm-hero-shade,.wm-hero .hero-space{position:absolute;inset:0}
 .wm-hero .hero-space{display:none;z-index:0;overflow:hidden;background:#02060c center/cover no-repeat}
 .wm-hero[data-hero=space] .wm-hero-still,.wm-hero[data-hero=space] .wm-hero-video{display:none !important}
@@ -110,7 +112,7 @@ a.wm-space-jump:focus-visible{outline:3px solid #0a4f78;outline-offset:3px}
 .wm-hero .hs-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .wm-hero-media img,.wm-hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .wm-hero-shade{background:radial-gradient(ellipse at 50% 58%,rgba(0,8,18,.42),rgba(0,8,18,.18) 55%,rgba(0,8,18,.5)),linear-gradient(180deg,rgba(0,10,22,.35),rgba(0,10,22,.28) 40%,rgba(0,10,22,.55));z-index:1}
-.wm-hero-content{position:relative;z-index:2;padding:calc(var(--wm-navh) + .4rem) 1rem 1.8rem;text-align:center;height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.wm-hero-content{position:relative;z-index:2;padding:calc(var(--wm-navh) + .3rem) 1rem 1.15rem;text-align:center;height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
 .wm-hero .wm-title{flex:0 1 auto;min-width:0;width:min(18em,100%);max-width:100%;margin-inline:auto;text-align:center;text-wrap:balance;font-size:clamp(1.35rem,2.2vw,2.15rem);line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.75)}
 [dir=rtl] .wm-hero .wm-title,[dir=rtl] .wm-hero-content{text-align:center}
 .wm-hero .hero-video-credit{position:absolute;z-index:2;bottom:.35rem;inset-inline-start:.55rem;margin:0;max-width:min(36rem,calc(100% - 1.2rem));font-size:.75rem;line-height:1.3;color:#f4fbff;text-shadow:0 1px 4px rgba(0,0,0,.8)}
