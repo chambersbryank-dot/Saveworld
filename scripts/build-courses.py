@@ -34,6 +34,12 @@ def _(s):
         return s
     return t
 esc = lambda s: html.escape(_(s), quote=True)
+def credit_p(text):
+    # Isolate Latin names so a following colon stays with the Arabic or Hebrew clause.
+    t = html.escape(_(text), quote=False)
+    t = t.replace('Saving Planets', '<bdi>Saving Planets</bdi>')
+    t = re.sub(r'(?<![\w])SI(?![\w])', '<bdi>SI</bdi>', t)
+    return f'<p class="crs-note">{t}</p>'
 UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
 _CAPW = re.compile(r'[A-Z][a-z]{2,}(?![\w(′.])(?=.*[=≈∇∂Α-Ωα-ω])')
 _SHORTW = re.compile(r'(?<![\w^_′])(so|to|of|in|is|or|if|by|as|at|an|on|up|no)(?![\w(′])')
@@ -315,6 +321,7 @@ def course_page(C):
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
          f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
          f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
+         *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
          f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))

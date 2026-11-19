@@ -9,6 +9,8 @@ CODE = 'AERO 101'
 TITLE = 'Introduction to Aerospace Engineering'
 TAGLINE = 'How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight. Free, self-paced, with four hands-on labs.'
 DESC = 'Free intro to aerospace engineering: atmosphere, lift and drag, airfoils, performance, stability, propulsion, rockets, orbits, sustainable aviation.'
+# Shown under the title, before the contents list. The Founder is a role, never a person's name. Say SI, never AI.
+CREDIT = 'Course created by Saving Planets: the Founder sets direction and approves every page; SI researches, drafts, translates and checks sources.'
 ALT = 'NASA rocket launch'
 _G = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
 OS = _G
@@ -16,7 +18,8 @@ _ATM = ('NASA Glenn: Earth atmosphere model (metric)', _G + 'earth-atmosphere-eq
 _LIFT = ('NASA Glenn: the lift equation', _G + 'lift-equation/')
 _DRAG = ('NASA Glenn: the drag equation', _G + 'drag-equation/')
 _ROCK = ('NASA Glenn: ideal rocket equation', _G + 'ideal-rocket-equation/')
-_FOIL = ('NASA Glenn: FoilSim', _G + 'foilsim/')
+# The beginners-guide slug /foilsim/ is NASA Glenn's Conformal Mapping page. FoilSim itself is the NASA STEM page.
+_FOIL = ('NASA Glenn: FoilSim', 'https://www.nasa.gov/stem-content/foilsim/')
 _SUS = ('NASA: Sustainable aviation', 'https://www.nasa.gov/aeronautics/sustainable-aviation/')
 _EPA = ('EPA: greenhouse gas emissions from aircraft', 'https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft')
 _PHAK = ('FAA Pilot’s Handbook of Aeronautical Knowledge', 'https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak')
