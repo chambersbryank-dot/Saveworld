@@ -148,7 +148,7 @@
       return '<h3>' + esc(g.h) + '</h3><p class="lb-small">' + esc(g.note) + ' ' + esc(g.credit) + '</p>' + body;
     }
     function build(e) {
-      if (e) e.preventDefault();
+      if (e && e.preventDefault) e.preventDefault();
       var band = lb.elements.band.value, hub = lb.elements.hub.value, min = +lb.elements.min.value, B = L.bands[band], h = d.hubs[hub];
       var qs = new URLSearchParams(location.search), seed = +qs.get('seed') || ((new Date().getDate() * 31 + min) % 997 + 1); /* Oct 15: seed in URL = permanent plan link */
       var nS = B.sols + (min >= 90 ? 1 : 0), nF = B.facts + (min >= 60 ? 1 : 0);
