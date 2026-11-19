@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # lastmod is `git log -1 --format=%cs` per page. A depth-1 checkout has no history for unchanged files.
+          fetch-depth: 0
+
+      - name: Refresh sitemap lastmod
+        run: python3 scripts/i18n-sitemap.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
