@@ -12,6 +12,8 @@ TAGLINE = 'Range, endurance, climb and takeoff: the standard atmosphere and dens
 DESC = 'Free self-study Aircraft Performance: 10 units, worked examples, solved practice, quizzes, flashcards, 6 simulation, spreadsheet and home labs, practice exams, tied to fuel-saving wings and sustainable aviation fuel.'
 ALT = 'The International Space Station seen from a departing spacecraft above Earth'
 _G = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
+# The beginners-guide slug /foilsim/ is Conformal Mapping. FoilSim is the NASA STEM page.
+_FOIL = 'https://www.nasa.gov/stem-content/foilsim/'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _MIT = ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
 _MITA = ('MIT OpenCourseWare 16.100 Aerodynamics (Fall 2005)', 'https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/')
@@ -54,7 +56,7 @@ REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, handbooks and simulations alongside the course.'
 PTABLE = [(_MIT[0], _MIT[1], 'Free MIT lecture notes, including aircraft performance.'), (_MITS[0], _MITS[1], 'Free MIT course on aircraft systems.'), (_MITA[0], _MITA[1], 'Free MIT aerodynamics course.'),
           (_PHAK[0], _PHAK[1], 'Free FAA handbook; Chapter 11 covers performance.'), (_AFH[0], _AFH[1], 'Free FAA handbook on takeoff, landing and maneuvers.'),
-          ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Free NASA explanations of lift, drag and gliding.'), ('NASA Glenn: FoilSim', _G + 'foilsim/', 'Free wing simulation.')]
+          ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Free NASA explanations of lift, drag and gliding.'), ('NASA Glenn: FoilSim', _FOIL, 'Free wing simulation.')]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'The Standard Atmosphere, Airspeeds and Density Altitude', 'weeks': 'Week 1',
@@ -378,7 +380,7 @@ LABS.append(
  'note': 'Sample values generated from the course polar (C_D0 = 0.020, K = 0.045); your FoilSim numbers will differ.',
  'calc': ['C_D(0.6) = 0.020 + 0.045 × 0.36 = 0.0362.', '(L/D)max = 1/(2√(0.045 × 0.020)) = 16.67 at C_L = 0.667.'],
  'safety': ['Computer only.'], 'home': ['Any browser works.'],
- 'sims': [('NASA Glenn: FoilSim', _G + 'foilsim/'), ('NASA Glenn: Induced drag coefficient', _G + 'induced-drag-coefficient/')],
+ 'sims': [('NASA Glenn: FoilSim', _FOIL), ('NASA Glenn: Induced drag coefficient', _G + 'induced-drag-coefficient/')],
  'planet': 'NASA’s CATNLF wing aims to keep laminar flow on swept wings, lowering C_D0.', 'planet_src': [_CAT]})
 LABS.append(
 {'id': 'labD', 'title': 'Lab D: Breguet range trade study', 'week': 'Week 8',
