@@ -10,6 +10,8 @@ TITLE = 'Orbital Mechanics'
 LAB_NAME = 'Astrodynamics lab'
 TAGLINE = 'Orbits, transfers and mission design: Newton’s gravity and the two-body problem, ellipses and orbital elements, Kepler’s equation, Hohmann transfers, plane changes, the rocket equation, the Earth’s bulge and sun-synchronous orbits, ground tracks, trips to Mars, and keeping orbits clean of debris, with six labs. Free, self-paced, and tied to Landsat, GOES weather satellites, NASA’s DART asteroid test and orbital-debris rules.'
 DESC = 'Free self-study Orbital Mechanics: 10 units, worked examples, solved practice, quizzes, flashcards, 6 PhET, NASA Eyes and spreadsheet labs, practice exams, tied to Earth-observing satellites and space sustainability.'
+# Shown under the title, before the contents list. Same line as AERO 101. The Founder is a role, never a person's name. Say SI, never AI.
+CREDIT = 'Course created by Saving Planets: the Founder sets direction and approves every page; SI researches, drafts, translates and checks sources.'
 ALT = 'An Atlas V rocket lifts off carrying the Landsat 9 Earth-observing satellite'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _O = 'https://openstax.org/books/university-physics-volume-1/pages/'
@@ -17,10 +19,11 @@ _MIT = ('MIT OpenCourseWare 16.346 Astrodynamics (Fall 2008)', 'https://ocw.mit.
 _MITD = ('MIT OpenCourseWare 16.07 Dynamics (Fall 2009)', 'https://ocw.mit.edu/courses/16-07-dynamics-fall-2009/')
 _BSF = ('NASA: Basics of Space Flight', 'https://science.nasa.gov/learn/basics-of-space-flight/')
 _BSF5 = ('NASA Basics of Space Flight, Chapter 5: Planetary orbits', 'https://science.nasa.gov/learn/basics-of-space-flight/chapter5-1/')
+# rktpow.html's move notice points at the ideal rocket equation. The rocket-thrust page is the matching topic.
 _EYES = ('NASA’s Eyes on the Solar System', 'https://eyes.nasa.gov/apps/solar-system/')
 _ODPO = ('NASA Orbital Debris Program Office', 'https://orbitaldebris.jsc.nasa.gov/')
-_L9 = ('NASA Science: Landsat 9', 'https://landsat.gsfc.nasa.gov/satellites/landsat-9/landsat-9-overview/')
-_GOES = ('NOAA NESDIS: GOES-R Series mission', 'https://www.goes-r.gov/mission/mission.html')
+_L9 = ('NASA Science: Landsat 9', 'https://science.nasa.gov/mission/landsat-9/')
+_GOES = ('NOAA NESDIS: GOES-R Series mission', 'https://www.nesdis.noaa.gov/our-satellites/currently-flying/geostationary-satellites')
 _DEB = ('NASA Headquarters Library: Space Debris', 'https://www.nasa.gov/headquarters/library/find/bibliographies/space-debris/')
 _FCC = ('FCC: FCC Adopts New ‘5-Year Rule’ for Deorbiting Satellites (Report and Order FCC-22-74)', 'https://www.fcc.gov/document/fcc-adopts-new-5-year-rule-deorbiting-satellites-0')
 _DART = ('NASA Science: Double Asteroid Redirection Test (DART)', 'https://science.nasa.gov/mission/dart/')
@@ -209,7 +212,7 @@ UNITS.append(
                      'NASA notes the collision happened at roughly 22,530 km/h. Getting a spacecraft there at that speed and on the right path started with this unit’s Δv budget.'],
             'site': [('Thermodynamics', 'Thermodynamics.html'), ('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html')],
             'src': [_DART, _DARTR]},
- 'res': [_RR, ('NASA Glenn: Rocket thrust', 'https://www.grc.nasa.gov/www/k-12/rocket/rktpow.html', 'Free NASA page.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
+ 'res': [_RR, ('NASA Glenn: Rocket thrust', 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/', 'Free NASA page.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Perturbations: Earth’s Bulge, Drag and Sun-Synchronous Orbits', 'weeks': 'Weeks 9–10',
  'summary': 'Why real orbits drift, Earth’s oblateness and J₂, regression of the node and rotation of periapsis, sun-synchronous orbits, frozen and critically inclined orbits, atmospheric drag and orbit decay, and third-body and solar pressure effects.',
@@ -353,7 +356,7 @@ LABS.append(
  'note': 'Computed values; one stage of ratio 9 and two stages of ratio 3 give the same ideal Δv (6.46 km/s), but the staged rocket needs far less structure per stage.',
  'calc': ['Δv(8) = 300 × 9.80665 × ln 8 = 6.12 km/s.', 'Two stages of 3: 2 × 300 × 9.80665 × ln 3 = 6.46 km/s.'],
  'safety': ['Computer only. Do not build or fly propellant rockets for this lab.'], 'home': ['Any spreadsheet works.'],
- 'sims': [('NASA Glenn: Rocket thrust', 'https://www.grc.nasa.gov/www/k-12/rocket/rktpow.html')],
+ 'sims': [('NASA Glenn: Rocket thrust', 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/')],
  'planet': 'NASA’s DART launched on a Falcon 9 from Vandenberg in November 2021.', 'planet_src': [_DART]})
 LABS.append(
 {'id': 'labE', 'title': 'Lab E: Designing a sun-synchronous orbit', 'week': 'Week 10',
