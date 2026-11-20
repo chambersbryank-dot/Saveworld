@@ -125,6 +125,7 @@ python3 scripts/apply-anim-banners.py   # Oct 18: site-wide animated page banner
 python3 scripts/fix-photo-subjects.py   # Nov 2: one photo and one description each for Astroscale, GEDI, ALOS-4, Eden (Kilimanjaro stays on Eden)
 python3 scripts/hub-image-srcset.py     # Oct 26: responsive srcset on Earth_Observation hub content images (manifest WebP) (sp_banner, R2 originals, pause, reduced motion), all langs; after apply-heroes + build-lcp
 python3 scripts/build-tight-cards.py   # Oct 18: all cards flush with the text (no stretch, 14-16 px padding); last CSS block, before critical
+python3 scripts/build-published.py    # Nov 20: TES + OER Commons listings (home strip, About milestones, AERO 101 line), 6 langs
 python3 scripts/build-home-trim.py      # Oct 20: founder-approved clutter fix #1, homepage 18 -> 6 sections (parks, never deletes; --undo restores)
 python3 scripts/build-home-numbers.py   # Oct 25 (founder, upgrade 5): sourced numbers strip below the homepage hero (assets/data/home-numbers.json), all langs
 python3 scripts/build-home-vision.py    # Oct 30 (founder): Vision strip under the homepage hero, 6 langs (machine-draft note on fr/es/ar/it/he)

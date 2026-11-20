@@ -92,6 +92,7 @@ def grab(region):
     take('actions', sec(region, r'<section (?=[^>]*id="actions")[^>]*>'))
     take('mission', sec(region, r'<section [^>]*class="mission-block"'))
     take('homstd', marker(region, 'HOMESTD'))
+    take('published', marker(region, 'PUBLISHED'))  # scripts/build-published.py; stays with the education/trust blocks
     take('homenum', marker(region, 'HOMENUM'))
     return B, region
 
@@ -156,13 +157,13 @@ def do_home(L):
     region = strip_ours(s[he:me])
     B, rest = grab(region)
     if UNDO:
-        new = ''.join(B[k] for k in ORDER if k in B) + rest
+        new = ''.join(B[k] for k in ORDER if k in B) + B.get('published', '') + rest
     else:
         if txt(rest): print(f'  {f}: unknown content kept visible: {txt(rest)[:80]!r}')
         parked = '<template id="home-parked" data-why="Oct 20 clutter fix #1: parked, not deleted; see scripts/build-home-trim.py">' + \
                  ''.join(B[k] for k in ORDER if k in PARK and k in B) + '</template>'
         new = (B.get('vision', '') + parked + find_section(L, B) + B.get('solutions', '') + B.get('audience', '') + B.get('edulinks', '') +
-               new_section(B, L) + join_section(B) + B.get('homstd', '') + B.get('homenum', '') + rest)
+               new_section(B, L) + join_section(B) + B.get('homstd', '') + B.get('published', '') + B.get('homenum', '') + rest)
     s = s[:he] + new + s[me:]
     fm = marker(s, 'FOOTER-MAP')
     if fm and not UNDO: s = s[:fm[0]] + '<!-- FOOTER-MAP:START --><!-- FOOTER-MAP:END -->' + s[fm[1]:]
