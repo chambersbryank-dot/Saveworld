@@ -40,6 +40,13 @@ def credit_p(text):
     t = t.replace('Saving Planets', '<bdi>Saving Planets</bdi>')
     t = re.sub(r'(?<![\w])SI(?![\w])', '<bdi>SI</bdi>', t)
     return f'<p class="crs-note">{t}</p>'
+OER_AERO_URL = 'https://oercommons.org/courses/introduction-to-aerospace-engineering-aero-101'
+def oer_pub(C):
+    # AERO 101 only. Sentence is in i18n/courses/aero101.json. scripts/build-published.py writes the same line.
+    if getattr(C, 'ID', '') != 'aero101': return ''
+    t = html.escape(_('Also published on OER Commons'), quote=False)
+    t = t.replace('OER Commons', '<bdi>OER Commons</bdi>')
+    return f'<!-- OERPUB:START --><p class="crs-note"><a href="{OER_AERO_URL}" target="_blank" rel="noopener">{t}</a></p><!-- OERPUB:END -->'
 UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
 _CAPW = re.compile(r'[A-Z][a-z]{2,}(?![\w(′.])(?=.*[=≈∇∂Α-Ωα-ω])')
 _SHORTW = re.compile(r'(?<![\w^_′])(so|to|of|in|is|or|if|by|as|at|an|on|up|no)(?![\w(′])')
@@ -322,6 +329,7 @@ def course_page(C):
          f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
          f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
          *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
+         *([oer_pub(C)] if getattr(C, 'ID', '') == 'aero101' else []),
          f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
