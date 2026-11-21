@@ -58,7 +58,12 @@ CSS = ('<style>.wh{max-width:1100px;margin:0 auto;padding:0 1.25rem}.wh-intro{fo
  'details.sp9-gifts>summary::before{content:"";flex:none;width:.55rem;height:.55rem;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:translateY(-.15rem) rotate(45deg);transition:transform .15s ease}'
  'details.sp9-gifts[open]>summary::before{transform:translateY(.15rem) rotate(225deg)}'
  'details.sp9-gifts>summary:focus-visible{outline:3px solid #f5b400;outline-offset:3px}'
- '@media (prefers-reduced-motion:reduce){details.sp9-gifts>summary::before{transition:none}}</style>')
+ '@media (prefers-reduced-motion:reduce){details.sp9-gifts>summary::before{transition:none}}'
+ '#donations .wh-card{position:relative}#donations .wh-card a.wh-card-go{color:inherit;text-decoration:none;display:flex;flex-direction:column;gap:.35rem}'
+ '#donations .wh-card a.wh-card-go::after{content:"";position:absolute;inset:0;z-index:1;border-radius:10px}'
+ '#donations .wh-card>.btn,#donations .wh-card .vet-line a{position:relative;z-index:2}'
+ '#donations .wh-card:has(a.wh-card-go:focus-visible){outline:3px solid #f5b400;outline-offset:3px}'
+ '#donations .wh-card a.wh-card-go:focus-visible{outline:none}#donations .wh-card:hover{background:rgba(143,211,255,.14)}</style>')
 JS = ('<script>(function(){[].forEach.call(document.querySelectorAll(".wh-sec"),function(sec){var q=sec.querySelector(".wh-q"),chips=sec.querySelectorAll(".wh-chip"),hubs=[].slice.call(sec.querySelectorAll(".wh-hub")),none=sec.querySelector(".wh-none"),hub="all";'
  'function run(){var t=(q.value||"").trim().toLowerCase(),any=0;hubs.forEach(function(h){var ok=hub=="all"||h.getAttribute("data-hub")==hub,n=0;[].forEach.call(h.querySelectorAll(".wh-card"),function(c){var m=!t||c.textContent.toLowerCase().indexOf(t)>-1;c.hidden=!m;if(m)n++;});'
  'h.hidden=!ok||!n;if(ok&&n){any=1;if(t||hub!="all")h.open=true;}});none.hidden=!!any;}'
@@ -110,8 +115,15 @@ def build(lang):
                     else: url, lab, cls = r['vh'], t['b_con'], ' wh-c'
                 else: url, lab, cls = r['dh'], t['b_don'], ''
                 sen = sentence(lang, r['sh'])
-                cards.append(f'<li class="wh-card"><h3>{E(r["org"])}</h3>' + (f'<p>{E(sen)}</p>' if sen else '') +
-                    f'<a class="wh-s" href="{E(r["sh"])}">{E(r["sol"])}</a><a class="btn help-btn{cls}" href="{E(url)}"{EXT}>{E(lab)}<span class="sr-only"> – {E(r["org"])}</span></a>' + (f'<a class="wh-s" href="{E(r["dh"])}"{EXT}>{E(t["b_con"])}</a>' if v and r['dh'] and r['dh'] != url and not r['give'] else '') + (f'<a class="wh-s" href="{E(r["dh"])}"{EXT}>💚 {E(t["b_don"])}</a>' if v and r['give'] and r['dh'] else '') + '</li>')
+                head = f'<h3>{E(r["org"])}</h3>' + (f'<p>{E(sen)}</p>' if sen else '')
+                btn = f'<a class="btn help-btn{cls}" href="{E(url)}"{EXT}>{E(lab)}<span class="sr-only"> – {E(r["org"])}</span></a>'
+                extra = ((f'<a class="wh-s" href="{E(r["dh"])}"{EXT}>{E(t["b_con"])}</a>' if v and r['dh'] and r['dh'] != url and not r['give'] else '')
+                         + (f'<a class="wh-s" href="{E(r["dh"])}"{EXT}>💚 {E(t["b_don"])}</a>' if v and r['give'] and r['dh'] else ''))
+                # Donation cards open the on-site solution page. The Donate button stays a separate off-site link.
+                if not v and r['sh'] and not r['sh'].startswith('http'):
+                    cards.append(f'<li class="wh-card"><a class="wh-card-go" href="{E(r["sh"])}">{head}<span class="wh-s">{E(r["sol"])}</span></a>{btn}</li>')
+                else:
+                    cards.append(f'<li class="wh-card">{head}<a class="wh-s" href="{E(r["sh"])}">{E(r["sol"])}</a>{btn}{extra}</li>')
             gid = (('vol-' if v else 'don-') + hid) if v or True else hid
             groups.append(f'<details class="wh-hub" id="{gid}" data-hub="{hid}"><summary>{EMOJI.get(hid[4:],"")} {E(name)} <span class="wh-n">{len(rs)} {E(t["orgs"])}</span></summary><ul class="wh-grid">{"".join(cards)}</ul></details>')
         out.append('</div></div>'); out += groups
