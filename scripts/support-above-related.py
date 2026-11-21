@@ -19,16 +19,22 @@ LABEL = {
 E = lambda s: html.escape(s if s is not None else '', quote=True)
 SUPPORT_RE = re.compile(r'<section\b[^>]*\bid="support"[^>]*>.*?</section>', re.S)
 H1_RE = re.compile(r'<h1\b[^>]*>.*?</h1>', re.S)
+# Matching side tracks keep the title on the hero's center. The Donate button sits in the end
+# track, directly beside the title. The track is at least as wide as the button, and the start
+# track matches it, so the button cannot pull the title off center. Narrow screens move the
+# button to its own row at the inline end.
 STYLE = (
     '<style id="title-donate-css">'
-    'html body.toc-sub .page-hero .page-hero-content .hero-title-row{display:flex;flex-wrap:wrap;align-items:center;'
-    'justify-content:space-between;gap:.6rem 1.25rem;width:100%;max-width:56rem;margin:0 auto .35rem;text-align:start}'
-    'html body.toc-sub .page-hero .page-hero-content .hero-title-row h1{margin:0 !important;flex:1 1 auto;min-width:0;'
-    'text-align:start;line-height:1.15}'
-    'html body.toc-sub .page-hero a.title-donate.help-btn{display:inline-flex !important;align-items:center !important;'
-    'justify-content:center !important;align-self:center;flex:0 0 auto;box-sizing:border-box;min-height:48px;'
-    'min-width:7.25rem;margin:0 !important;padding:0 1.15rem !important;line-height:1 !important;'
-    'font-family:Montserrat,"Segoe UI",sans-serif;font-size:1rem !important;font-weight:800 !important;'
+    'html body.toc-sub .page-hero .page-hero-content:has(.hero-title-row){width:100%;max-width:100%;box-sizing:border-box}'
+    'html body.toc-sub .page-hero .page-hero-content .hero-title-row{display:grid;'
+    'grid-template-columns:minmax(11rem,1fr) minmax(0,auto) minmax(11rem,1fr);'
+    'align-items:center;column-gap:1rem;width:100%;margin:0 auto .35rem;text-align:center}'
+    'html body.toc-sub .page-hero .page-hero-content .hero-title-row h1{grid-column:2;grid-row:1;justify-self:center;'
+    'width:max-content;max-width:100%;margin:0 !important;min-width:0;text-align:center;line-height:1.15}'
+    'html body.toc-sub .page-hero a.title-donate.help-btn{grid-column:3;grid-row:1;justify-self:start;'
+    'display:inline-flex !important;align-items:center !important;justify-content:center !important;'
+    'box-sizing:border-box;min-height:48px;min-width:7.25rem;margin:0 !important;padding:0 1.15rem !important;'
+    'line-height:1 !important;font-family:Montserrat,"Segoe UI",sans-serif;font-size:1rem !important;font-weight:800 !important;'
     'letter-spacing:0;white-space:nowrap;text-align:center;text-decoration:none !important;color:#fff !important;'
     'background-color:#0a4f78 !important;'
     'background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),linear-gradient(#0a4f78,#0a4f78) !important;'
@@ -38,8 +44,9 @@ STYLE = (
     'text-shadow:none}'
     'html body.toc-sub .page-hero a.title-donate.help-btn:hover{background-image:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.1)),linear-gradient(#0a4f78,#0a4f78) !important}'
     'html body.toc-sub .page-hero a.title-donate.help-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}'
-    '@media (max-width:640px){html body.toc-sub .page-hero .page-hero-content .hero-title-row h1{flex:1 1 100%;text-align:center}'
-    'html body.toc-sub .page-hero a.title-donate.help-btn{margin-inline-start:auto !important}}'
+    '@media (max-width:640px){html body.toc-sub .page-hero .page-hero-content .hero-title-row{grid-template-columns:1fr;row-gap:.55rem}'
+    'html body.toc-sub .page-hero .page-hero-content .hero-title-row h1{grid-column:1;width:100%;text-align:center}'
+    'html body.toc-sub .page-hero a.title-donate.help-btn{grid-column:1;grid-row:2;justify-self:end;margin:0 !important}}'
     '</style>'
 )
 
