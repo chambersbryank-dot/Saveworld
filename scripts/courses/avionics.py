@@ -49,6 +49,9 @@ def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
 def _w(q, steps, a):
     return {'q': q, 'steps': steps, 'a': a}
+FURTHER = [
+ ('MIT OpenCourseWare 16.842 Fundamentals of Systems Engineering (Fall 2015)', 'https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'The Systems Engineering Life Cycle and Requirements', 'weeks': 'Week 1',

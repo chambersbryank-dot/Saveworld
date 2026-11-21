@@ -49,6 +49,10 @@ CONSTANTS = [('Standard gravity g₀', '9.80665 m/s²'), ('Sea-level air density
 REF_TITLE = 'Simulators and references'
 REF_INTRO = 'Free tools and references to use alongside the course.'
 PTABLE = [('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'NASA’s free reference for every equation in this course, with simulators.'), (_FOIL[0], _FOIL[1], 'Virtual wind tunnel for airfoils (Lab A).'), (_PHAK[0], _PHAK[1], 'Free FAA handbook on aerodynamics, performance and stability.'), (_SF[0], _SF[1], 'Free primer on orbits and missions.')]
+FURTHER = [
+ ('MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design', 'https://ocw.mit.edu/courses/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/'),
+ ('MIT OpenCourseWare 16.01–16.04: Unified Engineering', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/'),
+]
 UNITS = [
 {'id': 'u1', 'title': 'History of Flight & the Design Process', 'weeks': 'Week 1',
  'summary': 'From the Wright brothers to Artemis: how aerospace engineers turn a mission into requirements, trade-offs and a design that flies.',

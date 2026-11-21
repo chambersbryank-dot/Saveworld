@@ -54,6 +54,11 @@ REF_INTRO = 'Use these free lectures, handbooks and simulations alongside the co
 PTABLE = [
           (_PHAK[0], _PHAK[1], 'Free FAA handbook; Chapter 11 covers performance.'), (_AFH[0], _AFH[1], 'Free FAA handbook on takeoff, landing and maneuvers.'),
           ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Free NASA explanations of lift, drag and gliding.'), ('NASA Glenn: FoilSim', _FOIL, 'Free wing simulation.')]
+FURTHER = [
+ ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/'),
+ ('MIT OpenCourseWare 16.100 Aerodynamics (Fall 2005)', 'https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/'),
+ ('MIT OpenCourseWare 16.885J Aircraft Systems Engineering (Fall 2005)', 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'The Standard Atmosphere, Airspeeds and Density Altitude', 'weeks': 'Week 1',

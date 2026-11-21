@@ -53,6 +53,10 @@ REF_INTRO = 'Use these free lectures, NASA guides and simulations alongside the 
 PTABLE = [(_BSF[0], _BSF[1], 'Free NASA guide to orbits and missions.'),
           ('OpenStax University Physics Volume 1, 13.5 Kepler’s laws', _O + '13-5-keplers-laws-of-planetary-motion', 'Free textbook section.'), ('PhET: Gravity and Orbits', _PH + 'gravity-and-orbits', 'Orbits interactively.'),
           (_EYES[0], _EYES[1], 'Real spacecraft trajectories in 3D.')]
+FURTHER = [
+ ('MIT OpenCourseWare 16.346 Astrodynamics (Fall 2008)', 'https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/'),
+ ('MIT OpenCourseWare 16.07 Dynamics (Fall 2009)', 'https://ocw.mit.edu/courses/16-07-dynamics-fall-2009/'),
+]
 UNITS = []
 _RK = ('OpenStax UP1, 13.5 Kepler’s laws of planetary motion', _O + '13-5-keplers-laws-of-planetary-motion', 'Free textbook section.')
 _RE = ('OpenStax UP1, 13.4 Satellite orbits and energy', _O + '13-4-satellite-orbits-and-energy', 'Free textbook section.')

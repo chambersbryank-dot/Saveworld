@@ -49,6 +49,9 @@ def _w(q, steps, a):
 def _u(i, t, wk, summ, obj, con, eqs, worked, prac, misc, quiz, cards, ptext, site, src, res):
     return {'id': i, 'title': t, 'weeks': wk, 'summary': summ, 'objectives': obj, 'concepts': con, 'eqs': eqs, 'worked': worked, 'practice': prac, 'misc': misc,
             'quiz': quiz, 'cards': cards, 'planet': {'text': ptext, 'site': site, 'src': src}, 'res': res}
+FURTHER = [
+ ('MIT OpenCourseWare 16.885J Aircraft Systems Engineering (Fall 2004), Lecture 8: Environmental Factors', 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2004/pages/lecture-notes/'),
+]
 UNITS = [
  _u('u1', 'Aviation and Climate: Counting CO₂', 'Week 1', 'Where aviation emissions come from, emission factors, combustion versus lifecycle CO₂, and aviation’s share of the total.',
     ['Use an emission factor to compute CO₂.', 'Convert between gallons, liters and kilograms.', 'Explain combustion versus lifecycle CO₂.', 'State aviation’s share of global CO₂.'],

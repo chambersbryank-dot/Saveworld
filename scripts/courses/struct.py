@@ -49,6 +49,11 @@ REF_INTRO = 'Use these free lectures, handbooks and simulations alongside the co
 PTABLE = [
           (_CH3[0], _CH3[1], 'Free FAA chapter on aircraft structures.'), ('OpenStax University Physics Volume 1, 12.3 Stress, strain and elastic modulus', _O + '12-3-stress-strain-and-elastic-modulus', 'Free textbook section.'),
           ('PhET: Hooke’s Law', _PH + 'hookes-law', 'Stiffness interactively.')]
+FURTHER = [
+ ('MIT OpenCourseWare 16.20 Structural Mechanics (Fall 2002)', 'https://ocw.mit.edu/courses/16-20-structural-mechanics-fall-2002/'),
+ ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/'),
+ ('MIT OpenCourseWare 3.032 Mechanical Behavior of Materials (Fall 2007)', 'https://ocw.mit.edu/courses/3-032-mechanical-behavior-of-materials-fall-2007/'),
+]
 UNITS = []
 _R12 = ('OpenStax UP1, 12.3 Stress, strain and elastic modulus', _O + '12-3-stress-strain-and-elastic-modulus', 'Free textbook section.')
 _RS = ('OpenStax UP1, 12.2 Examples of static equilibrium', _O + '12-2-examples-of-static-equilibrium', 'Free textbook section.')

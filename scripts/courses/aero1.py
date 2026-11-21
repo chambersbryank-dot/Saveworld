@@ -55,6 +55,10 @@ REF_INTRO = 'Use these free lectures, NASA pages and simulations alongside the c
 PTABLE = [(_BG[0], _BG[1], 'Hundreds of free NASA pages on lift, drag and compressible flow.'),
           (_FS[0], _FS[1], 'Change airfoil shape, speed and altitude and see lift and drag.'), ('OpenStax University Physics Volume 1, 14.6 Bernoulli’s equation', _O + '14-6-bernoullis-equation', 'Free textbook section.'),
           ('PhET: Fluid Pressure and Flow', _PH + 'fluid-pressure-and-flow', 'Pressure, flow and Bernoulli.')]
+FURTHER = [
+ ('MIT OpenCourseWare 16.100 Aerodynamics (Fall 2005)', 'https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/'),
+ ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'Fluid Properties and the Standard Atmosphere', 'weeks': 'Week 1',

@@ -49,6 +49,9 @@ def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
 def _w(q, steps, a):
     return {'q': q, 'steps': steps, 'a': a}
+FURTHER = [
+ ('MIT OpenCourseWare 16.851 Satellite Engineering (Fall 2003)', 'https://ocw.mit.edu/courses/16-851-satellite-engineering-fall-2003/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'Mission Requirements and Systems Engineering', 'weeks': 'Week 1',
