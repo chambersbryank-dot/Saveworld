@@ -21,8 +21,9 @@ SUPPORT_RE = re.compile(r'<section\b[^>]*\bid="support"[^>]*>.*?</section>', re.
 H1_RE = re.compile(r'<h1\b[^>]*>.*?</h1>', re.S)
 STYLE = (
     '<style id="title-donate-css">'
+    'html body.toc-sub .page-hero.sp-anim-banner .page-hero-content{width:100%;align-self:stretch;box-sizing:border-box}'
     'html body.toc-sub .page-hero .page-hero-content .hero-title-row{display:flex;flex-wrap:wrap;align-items:center;'
-    'justify-content:space-between;gap:.6rem 1.25rem;width:100%;max-width:56rem;margin:0 auto .35rem;text-align:start}'
+    'justify-content:space-between;gap:.6rem 1.25rem;width:100%;margin:0 0 .35rem;text-align:start}'
     'html body.toc-sub .page-hero .page-hero-content .hero-title-row h1{margin:0 !important;flex:1 1 auto;min-width:0;'
     'text-align:start;line-height:1.15}'
     'html body.toc-sub .page-hero a.title-donate.help-btn{display:inline-flex !important;align-items:center !important;'
