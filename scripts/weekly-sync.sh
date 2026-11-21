@@ -5,6 +5,7 @@
 # Roman: build-roman.py refreshes assets/data/roman.json (JPL Horizons distance + newest NASA image) before the builds.
 # Batch 4: build-batch4.py renders Do One Thing Today from assets/data/daily-actions.json (edit there), Community + Find a Cleanup pages, nav/footer links.
 # Analytics: build-analytics.py (Oct 16) strips GA4/consent.js remnants and adds the cookie-free Cloudflare Web Analytics beacon + Privacy text.
+# Microsoft Advertising UET: build-uet.py (last) adds tag 343288039 and the donate_click listener on public pages only. Kids pages stay excluded.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 # Oct 17: install build deps first (build-learn/build-calcs need katex before build-search); was only checked right before build-search.
@@ -161,4 +162,5 @@ python3 scripts/seo-lint.py > /tmp/seo-lint.log || { tail -12 /tmp/seo-lint.log;
 # Abort before any commit if pages, categories, or the question bank fell sharply versus main
 # (sitemap index readers used to write 0 pages and ~259 question-bank rows).
 python3 scripts/build-competitive.py       # Nov 9 2026: nine approved recommendations (vet line, match, volunteer labels, positioning, adopt, gift claims, badge, one action, draft challenge)
+python3 scripts/build-uet.py            # Microsoft Advertising UET (ti 343288039) + donate_click; skipped on kids pages. After the last page rewrite.
 python3 scripts/sync-count-guard.py
