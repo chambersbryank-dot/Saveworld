@@ -45,7 +45,27 @@
     });
     return { list: ordered.slice(0, 10), matched: ordered.length };
   }
+  function matchResult(all, causes, helps, lang) {
+    var strict = rank(all, causes, helps, lang);
+    var money = helps.indexOf('money') !== -1;
+    var barren = money ? causes.filter(function (c) {
+      return !all.some(function (s) { return s.theme === c && s.give; });
+    }) : [];
+    if (money && barren.length && !strict.list.length) {
+      var helps2 = helps.filter(function (h) { return h !== 'money'; });
+      if (helps2.indexOf('learn') === -1) helps2.push('learn');
+      if (helps2.indexOf('time') === -1) helps2.push('time');
+      var fb = rank(all, causes, helps2, lang);
+      fb.fallback = true;
+      fb.barren = barren;
+      return fb;
+    }
+    strict.fallback = false;
+    strict.barren = barren;
+    return strict;
+  }
   root.SP9rank = rank;
+  root.SP9match = matchResult;
   if (!root.document) return;
 
   var form = document.getElementById('match-form');
@@ -59,7 +79,9 @@
     return [].filter.call(form.querySelectorAll('input[name="' + name + '"]'), function (el) { return el.checked; })
       .map(function (el) { return el.value; });
   }
-  function fill(s, n) { return String(s || '').replace(/\{n\}/g, String(n)); }
+  function fill(s, n, d) {
+    return String(s || '').replace(/\{n\}/g, String(n)).replace(/\{d\}/g, d == null ? '' : String(d)).replace(/\{names\}/g, String(n));
+  }
   function absUrl(url) {
     if (/^https?:/.test(url)) return url;
     var origin = 'https://www.savingplanets.com';
@@ -225,8 +247,17 @@
   function safePage(url) {
     return typeof url === 'string' && /^[A-Za-z0-9_./-]+\.html$/.test(url) ? url : '';
   }
+  function safeDonate(url) {
+    if (typeof url !== 'string' || !/^https:\/\//i.test(url)) return '';
+    var host = url.replace(/^https:\/\//i, '').split(/[/?#]/)[0].toLowerCase();
+    if (!host || /(^|\.)savingplanets\.com$/.test(host)) return '';
+    return url;
+  }
   function safeImage(url) {
-    return typeof url === 'string' && /^(\.\.\/)?assets\/[A-Za-z0-9_./-]+$/.test(url) ? url : '';
+    if (typeof url !== 'string') return '';
+    if (/^(\.\.\/)?assets\/[A-Za-z0-9_./-]+$/.test(url)) return url;
+    if (/^https:\/\/media\.savingplanets\.com\/[A-Za-z0-9_./-]+$/.test(url)) return url;
+    return '';
   }
   function decodeAttr(s) {
     return String(s).replace(/&(?:amp|quot|lt|gt|#x27|#39);/g, function (ent) {
@@ -301,10 +332,27 @@
       art.appendChild(credit);
     }
     var h = document.createElement('h3');
+    h.className = 'match-title';
     var a = document.createElement('a');
     a.href = page || '#';
     a.textContent = s.title;
     h.appendChild(a);
+    var don = safeDonate(s.donate);
+    if (s.give && don) {
+      var btn = document.createElement('a');
+      btn.className = 'btn help-btn match-donate';
+      btn.setAttribute('data-sp-donate', '1');
+      btn.href = don;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
+      var labels = { en: 'Donate', fr: 'Faire un don', es: 'Donar', ar: 'تبرّع', it: 'Dona', he: 'תרומה' };
+      btn.appendChild(document.createTextNode(T.don || labels[lang] || 'Donate'));
+      var sr = document.createElement('span');
+      sr.className = 'sr-only';
+      sr.textContent = ' \u2013 ' + s.title;
+      btn.appendChild(sr);
+      h.appendChild(btn);
+    }
     art.appendChild(h);
     if (s.blurb) {
       var desc = document.createElement('p');
@@ -322,6 +370,38 @@
   }
   var model = null;
   var queued = false;
+  function paramList(name) {
+    var q;
+    try { q = new URLSearchParams(location.search); } catch (err) { return []; }
+    var out = [];
+    q.getAll(name).forEach(function (v) {
+      String(v).split(',').forEach(function (p) {
+        p = p.trim().toLowerCase();
+        if (p) out.push(p);
+      });
+    });
+    return out;
+  }
+  function applyQuery() {
+    var helpAlias = { donate: 'money', give: 'money', sleeves: 'time', volunteer: 'time' };
+    var causeAlias = { earth: 'earth-observation' };
+    paramList('cause').forEach(function (v) {
+      v = causeAlias[v] || v;
+      var el = form.querySelector('input[name="cause"][value="' + v + '"]');
+      if (el) el.checked = true;
+    });
+    paramList('help').forEach(function (v) {
+      v = helpAlias[v] || v;
+      var el = form.querySelector('input[name="help"][value="' + v + '"]');
+      if (el) el.checked = true;
+    });
+    syncValidity();
+    syncMail();
+    var cOk = [].some.call(form.querySelectorAll('input[name="cause"]'), function (el) { return el.checked; });
+    var hOk = [].some.call(form.querySelectorAll('input[name="help"]'), function (el) { return el.checked && el.value !== 'email'; });
+    if (cOk && hOk) queued = true;
+  }
+  applyQuery();
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!model) { queued = true; return; }
@@ -333,8 +413,26 @@
     }, function () { boot(data, {}); });
   });
 
+  function causeLabel(id) {
+    var el = form.querySelector('input[name="cause"][value="' + id + '"]');
+    var span = el && el.parentNode ? el.parentNode.querySelector('span') : null;
+    return span ? span.textContent : id;
+  }
+  function joinNames(ids) {
+    var names = ids.map(causeLabel);
+    var and = T.join_and || ' and ';
+    if (names.length < 2) return names[0] || '';
+    if (names.length === 2) return names[0] + and + names[1];
+    return names.slice(0, -1).join(', ') + and + names[names.length - 1];
+  }
   function boot(data, cards) {
     model = { all: data.solutions || [], cards: cards || {} };
+    var line = document.getElementById('match-counts');
+    if (line && T.counts) {
+      var d = model.all.filter(function (s) { return s.give; }).length;
+      line.textContent = fill(T.counts, model.all.length, d);
+      line.hidden = false;
+    }
     syncMail();
     if (queued) show();
   }
@@ -342,7 +440,7 @@
     syncValidity();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     var causes = vals('cause'), helps = vals('help');
-    var ranked = rank(model.all, causes, helps, lang);
+    var ranked = matchResult(model.all, causes, helps, lang);
     last = ranked.list;
     var out = document.getElementById('match-out');
     var note = document.getElementById('match-note');
@@ -353,6 +451,10 @@
     if (!n) msg = T.none;
     else if (n < 10) msg = fill(T.short, n);
     else msg = fill(T.exact, n);
+    if (ranked.barren && ranked.barren.length && helps.indexOf('money') !== -1) {
+      var sentence = fill(ranked.fallback ? (T.nodonate || '') : (T.nodonate_short || ''), joinNames(ranked.barren));
+      if (sentence) msg = ranked.fallback ? sentence : ((msg ? msg + ' ' : '') + sentence);
+    }
     if (h2) h2.textContent = T.out || h2.textContent;
     if (note) note.textContent = msg || '';
     grid.textContent = '';

@@ -795,6 +795,8 @@ body.toc-sub .help-btns .btn { margin-top: 0.7rem; min-width: 150px; text-align:
 html.dark body.toc-sub .help-btn-join, body.toc-sub .help-btn-join { background: var(--solution-green); color: #002b1f; }
 html.dark body.toc-sub .help-btn-join:hover, body.toc-sub .help-btn-join:hover { background: #00d1a8; }
 .help-actions .help-more { margin-top: 1rem; font-size: 0.95rem; }
+.help-cta .cause-alt { margin: .65rem auto 0; max-width: 40rem; font-size: .92rem; line-height: 1.45; text-align: center; }
+.help-cta .cause-alt a { text-decoration: underline; text-underline-offset: 2px; }
 .help-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
 .help-table th, .help-table td { padding: 0.7rem 0.6rem; border: 0; text-decoration: none; text-align: start; vertical-align: top; }
 /* No borders/underlines on non-link text (user rule 2026-10-12); rows separated by zebra shading */
