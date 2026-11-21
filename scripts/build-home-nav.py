@@ -4,12 +4,13 @@
 Nov 2 2026 (Bryan-approved) started this on the homepage. Nov 13: every page
 uses that bar. Items, in order: Solutions, Courses, Earth & Space Map,
 Teachers, About, then the crystal-water Donate / Help button. The utility row
-is the language switch plus Newsletter. The map link still goes to
-World_Map.html. Satellite Launch Tracker stays in that menu: the Nov 12 utility
-link (build-nav.py UTIL) was dropped when this short bar replaced the utility
-row with only the language switch and Newsletter. Do not remove
-Upcoming_Launches.html from MENUS. Language links stay pointed at the current
-page. Idempotent.
+is the language switch, Search, then Newsletter. Search uses the same
+magnifying-glass icon and label as the bar it was removed from, and links to
+this language's Search.html. The map link still goes to World_Map.html.
+Satellite Launch Tracker stays in that menu: the Nov 12 utility link
+(build-nav.py UTIL) was dropped when this short bar replaced the utility row.
+Do not remove Upcoming_Launches.html from MENUS, and do not drop Search from
+the utility row. Language links stay pointed at the current page. Idempotent.
 Run after build-nav.py (wired there) so a full nav rebuild does not put the
 long dropdown menu back.
 """
@@ -26,6 +27,9 @@ LBL = {
  'it': dict(main='Menu principale', util='Link del sito', sol='Soluzioni', courses='Corsi STEM', map='Mappa della Terra e dello spazio', teach='Insegnanti', about='Chi siamo', news='Newsletter', donate='Dona / Aiuta'),
  'he': dict(main='תפריט ראשי', util='קישורי האתר', sol='פתרונות', courses='קורסי STEM', map='מפת כדור הארץ והחלל', teach='מורים', about='אודות', news='ניוזלטר', donate='תרומה / עזרה'),
 }
+# Same icon and labels the utility row used before the short bar dropped Search.
+SEARCH_SVG = '<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>'
+SEARCH = {'en': 'Search', 'fr': 'Recherche', 'es': 'Buscar', 'ar': 'بحث', 'it': 'Cerca', 'he': 'חיפוש'}
 # Each menu: the top label links to the first page, and that page is listed first.
 # Only pages that exist in the repo. Earth & Space Map includes the satellite map and Voyages.
 MENUS = [
@@ -144,7 +148,10 @@ def simplify(lang, s, page):
     s = replace_ul(s, 'spn-main', main)
     sw = language_switch(lang, page, s)
     if not sw: return None
+    search_href = 'Search.html' if lang == 'en' or os.path.exists(f'{lang}/Search.html') else pre + 'Search.html'
+    search_cur = ' aria-current="page"' if page == 'Search.html' else ''
     util = (f'<ul class="spn-util" aria-label="{E(t["util"])}">{sw}'
+            f'<li><a href="{search_href}"{search_cur}>{SEARCH_SVG}{E(SEARCH[lang])}</a></li>'
             f'<li><a href="{pre}index.html#newsletter">{E(t["news"])}</a></li></ul>')
     s = replace_ul(s, 'spn-util', util)
     s = re.sub(r'styles\.css\?v=[^"\']+', 'styles.css?v=20261113z', s)
@@ -179,8 +186,11 @@ def apply():
     for lang in LANGS:
         home = 'index.html' if lang == 'en' else f'{lang}/index.html'
         text = open(home, encoding='utf-8').read()
-        if 'Upcoming_Launches.html' not in text.split('</nav>', 1)[0]:
+        nav = text.split('</nav>', 1)[0]
+        if 'Upcoming_Launches.html' not in nav:
             raise SystemExit(f'Satellite Launch Tracker missing from {home} nav')
+        if '<li><a href="Search.html"' not in nav:
+            raise SystemExit(f'Search missing from {home} nav')
     print(f'home nav: {n} pages, skipped {skip}, donate anchor on Ways to Help')
 
 if __name__ == '__main__':
