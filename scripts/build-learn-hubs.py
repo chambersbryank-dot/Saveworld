@@ -184,9 +184,11 @@ def best_block(l, items):  # Oct 28 (founder): "Learn from the best". University
         if str(u_).startswith('http'):
             return f'<li><a href="{esc(u_)}" rel="noopener" lang="en">{label(n)}</a> ↗<small>'
         return f'<li><a href="{esc(u_)}">{label(n)}</a><small>'
-    for g in ('g_free', 'g_uni', 'g_nasa', 'g_job'):
+    for g in ('g_free', 'g_further', 'g_nasa', 'g_job'):
         xs = [b for b in items if b[0] == g]
-        if xs: out += f'<div><h3>{UR(g)}</h3><ul>' + ''.join(link(u_, n) + f'{esc(w[l])}</small></li>' for _, n, u_, w in xs) + '</ul></div>'
+        if not xs: continue
+        note = f'<p>{UR("further_p")}</p>' if g == 'g_further' else ''
+        out += f'<div><h3>{UR(g)}</h3>{note}<ul>' + ''.join(link(u_, n) + f'{esc(w[l])}</small></li>' for _, n, u_, w in xs) + '</ul></div>'
     return BEST_CSS + f'<section class="lhy" id="learn-from-the-best"><h2>🏆 {UR("best_h")}</h2><p>{UR("best_t")}</p><div class="lfb">{out}</div></section>'
 ROCKET_SVG = ('<svg class="rpa" viewBox="0 0 640 150" role="img" aria-label="{lab}" xmlns="http://www.w3.org/2000/svg">'
     '<defs><linearGradient id="rpg" x1="0" x2="1"><stop offset="0" stop-color="#fff6d0"/><stop offset=".25" stop-color="#ffb347"/><stop offset=".7" stop-color="#ff6a3d" stop-opacity=".6"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></linearGradient>'

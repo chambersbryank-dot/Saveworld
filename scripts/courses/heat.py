@@ -47,6 +47,9 @@ def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
 def _w(q, steps, a):
     return {'q': q, 'steps': steps, 'a': a}
+FURTHER = [
+ ('MIT OpenCourseWare 2.51 Intermediate Heat and Mass Transfer (Fall 2008)', 'https://ocw.mit.edu/courses/2-51-intermediate-heat-and-mass-transfer-fall-2008/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'Modes of Heat Transfer and Energy Balances', 'weeks': 'Week 1',

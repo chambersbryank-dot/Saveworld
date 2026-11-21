@@ -51,6 +51,11 @@ def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
 def _w(q, steps, a):
     return {'q': q, 'steps': steps, 'a': a}
+FURTHER = [
+ ('MIT OpenCourseWare 16.333 Aircraft Stability and Control (Fall 2004)', 'https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/'),
+ ('MIT OpenCourseWare 16.06 Principles of Automatic Control (Fall 2012)', 'https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/'),
+ ('MIT OpenCourseWare 16.30 Feedback Control Systems (Fall 2010)', 'https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/'),
+]
 UNITS = []
 UNITS.append(
 {'id': 'u1', 'title': 'Axes, Rotations and Moments', 'weeks': 'Week 1',

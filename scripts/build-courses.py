@@ -313,6 +313,21 @@ def psets_block(C):
         parts.append(gc_slot(abs_page(C.PAGE, f'#{u["id"]}-ps'), title, gc_body, 'assignment'))
     parts.append(top() + '</section>')
     return ''.join(parts)
+FURTHER_T = {
+ 'en': {'h': 'Go further: university resources', 'p': 'These cover topics beyond or newer than this course.'},
+ 'fr': {'h': 'Aller plus loin : ressources universitaires', 'p': 'Ces pages couvrent des sujets au-delà de ce cours, ou plus récents.'},
+ 'es': {'h': 'Ve más allá: recursos universitarios', 'p': 'Estas páginas cubren temas más allá de este curso, o más recientes.'},
+ 'ar': {'h': 'تعمّق: مصادر جامعية', 'p': 'تغطي هذه الصفحات موضوعات أبعد من هذا المقرر، أو أحدث منه.'},
+ 'it': {'h': 'Vai oltre: risorse universitarie', 'p': 'Queste pagine coprono argomenti oltre questo corso, o più recenti.'},
+ 'he': {'h': 'להעמיק: מקורות אוניברסיטאיים', 'p': 'העמודים האלה מכסים נושאים מעבר לקורס הזה, או חדשים יותר.'},
+}
+def further_block(C):
+    items = getattr(C, 'FURTHER', None)
+    if not items: return ''
+    t = FURTHER_T[LANG]
+    lis = ''.join(f'<li><a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(label)}</a></li>' for label, url in items)
+    return (f'<!-- FURTHER:START --><section id="further"><h2>{html.escape(t["h"])}</h2><p>{html.escape(t["p"])}</p>'
+            f'<ul class="crs-res">{lis}</ul>' + top() + '</section><!-- FURTHER:END -->')
 def course_page(C):
     texs = [t for u in C.UNITS for t, _c in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
     K = katex(texs)
@@ -321,6 +336,7 @@ def course_page(C):
     toc += [('progress', 'Your progress')] + \
           [(u['id'], _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])) for i, u in enumerate(C.UNITS, 1)] + \
           [('psets', 'Problem sets with solutions'), ('lab', 'Lab'), ('exam', 'Exams with solutions'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
+    if getattr(C, 'FURTHER', None): toc.append(('further', FURTHER_T[LANG]['h']))
     names0 = {u['id'] for u in C.UNITS}
     updated, version, when = stamp_of(C)
     note_key = 'recheck' if updated == '2026-11-18' else 'map'
@@ -330,7 +346,7 @@ def course_page(C):
          f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
          *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
          *([oer_pub(C)] if getattr(C, 'ID', '') == 'aero101' else []),
-         f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
+         f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
          f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
     o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{esc(x)}</p>' for x in C.ABOUT)
@@ -369,6 +385,7 @@ def course_page(C):
              + table(['Level', 'What it looks like'], C.RUBRIC) + f'<h3>{esc("Suggested weighting if you want a score")}</h3>' + table(['Part', 'Weight'], C.WEIGHTS)
              + f'<p>{esc("Aim for level 3 or better in every unit before moving to the next course.")}</p>' + top() + '</section>')
     o.append(related(C))
+    o.append(further_block(C))
     o.append('</div>')
     return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=head(), ld_type='Course', tail=tail())
 
