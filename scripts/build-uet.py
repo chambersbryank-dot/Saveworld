@@ -279,7 +279,8 @@ def check(excluded):
     if monk.count('class="btn help-btn"') != 2:
         errors.append('Hawaiian monk seal help buttons changed')
     snow = read('Snow_Leopard_Trust.html')
-    if snow.count('data-sp-donate="1"') != 1:
+    # Title Donate button plus the Support block Donate button.
+    if snow.count('data-sp-donate="1"') != 2:
         errors.append('Snow Leopard donate button count changed')
     if '>Donate</a>' not in snow:
         errors.append('Snow Leopard Donate label changed')
