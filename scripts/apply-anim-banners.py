@@ -22,7 +22,9 @@ TM = {l: json.load(open(f'i18n/{l}.json', encoding='utf8')) for l in ('fr', 'es'
 PAUSE_LABEL = 'Pause banner animation'
 MK = lambda x: f'<!-- ANIMBAN:START -->{x}<!-- ANIMBAN:END -->'
 ADD = ['sp-anim-banner', 'has-pause', 'pg-anim']
-STRIPC = ADD + ['pg-long', 'pg-xlong'] + [f'spx-n{i}' for i in range(2, SPX.NMAX + 1)]
+STRIPC = ADD + ['org-hero', 'pg-long', 'pg-xlong'] + [f'spx-n{i}' for i in range(2, SPX.NMAX + 1)]
+# Same wording as the Global Fishing Watch hero credit. Only the word Photo is translated.
+PHOTO = {'en': 'Photo: ', 'fr': 'Photo : ', 'es': 'Foto: ', 'ar': 'صورة: ', 'it': 'Foto: ', 'he': 'תמונה: '}
 
 CSS = (# one size everywhere (the Lesson_Builder standard), also over the compact Oct 17 hero-about / hero-help first-screen rule
        'html body.toc-sub[class] .page-hero[class].pg-anim{height:auto!important;min-height:max(34vh,260px)!important;padding:calc(var(--nav-height,88px) + 1.5rem) 1.25rem 3.4rem!important;box-sizing:border-box}'  # bottom room for pause + credit
@@ -50,6 +52,9 @@ CUR = {'page': None}
 #   "curated": EN file -> exact photo list (wins); otherwise the page's topic pool is rotated by a stable per-page offset so
 #   neighbouring pages in a hub do not all show the same photos. "per_page": photos per banner (incl. the page's own photo).
 def extra_slides(img):
+    # An organization hero is one photo with one credit. Do not rotate other pictures over it.
+    if img.get('org'):
+        return []
     pg = CUR['page'] or ''
     curated = SL.get('curated', {})
     # An explicit curated list (even empty) wins. Empty means this page shows only its own photo,
@@ -86,33 +91,57 @@ def media_for(sl, lang):
     pre = '' if lang == 'en' else '../'
     return {'url': pre + path, 'width': w, 'height': h}
 
+def org_picture(sl, lang):
+    """Same picture shape as Global Fishing Watch: a WebP srcset and a JPEG fallback."""
+    pre = '' if lang == 'en' else '../'
+    w = sl['width']
+    return (f'<picture class="spb-media"><source type="image/webp" srcset="{pre}{sl["webp800"]} 800w, {pre}{sl["webp"]} {w}w" sizes="100vw">'
+            f'<img style="object-position:{sl.get("pos", "50% 50%")}" src="{pre}{sl["local"]}" alt="{SPB._e(sl.get("alt") or "")}" '
+            f'width="{w}" height="{sl["height"]}" fetchpriority="high" decoding="async"></picture>')
+
+def org_credit(sl, lang):
+    photo = PHOTO.get(lang, PHOTO['en'])
+    org = f'<a href="{html.escape(sl["org_url"], quote=True)}" target="_blank" rel="noopener">{SPB._e(sl["org"])}</a>'
+    lic = f'<a href="{html.escape(sl["license_url"], quote=True)}" target="_blank" rel="noopener">{SPB._e(sl["license"])}</a>'
+    return photo + org + ', ' + lic
+
 def apply(s, lang, img):
     m = re.search(r'<section class="(page-hero(?: [\w-]+)*)"([^>]*)>', s)
     if not m: return s
     end = s.find('</section>', m.end())
     if end < 0: return s
+    org = bool(img.get('org'))
     slides = [img] + extra_slides(img)
     pics, creds = [], []
     for i, sl in enumerate(slides):
         # Oct 26: descriptive alt from credit (was empty; hurts Image Search + a11y). Credit tags stay in .hero-credit.
         alt = sl.get('alt') or sl.get('credit') or ''
-        media = media_for(sl, lang)
-        if not media:
-            continue
-        p = SPB.picture(media, alt).replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
-        if i: p = p.replace('fetchpriority="high"', 'fetchpriority="low" loading="lazy"')
-        pics.append(f'<div class="spx-slide spx-{i}" aria-hidden="true">{p}</div>' if len(slides) > 1 else p)
-        creds.append(f'<span class="hero-credit spx-cred spx-c{i}">{SPB._e(t(lang, sl["credit"]))}</span>' if len(slides) > 1 else
-                     f'<span class="hero-credit">{SPB._e(t(lang, sl["credit"]))}</span>')
+        if org:
+            p = org_picture(sl, lang)
+        else:
+            media = media_for(sl, lang)
+            if not media:
+                continue
+            p = SPB.picture(media, alt).replace('<img ', f'<img style="object-position:{sl.get("pos", "50% 50%")}" ', 1)
+            if i: p = p.replace('fetchpriority="high"', 'fetchpriority="low" loading="lazy"')
+        pics.append(f'<div class="spx-slide spx-{i}" aria-hidden="true">{p}</div>' if (len(slides) > 1 or org) else p)
+        if org:
+            creds.append(f'<p class="hero-credit org-credit">{org_credit(sl, lang)}</p>')
+        else:
+            creds.append(f'<span class="hero-credit spx-cred spx-c{i}">{SPB._e(t(lang, sl["credit"]))}</span>' if len(slides) > 1 else
+                         f'<span class="hero-credit">{SPB._e(t(lang, sl["credit"]))}</span>')
     pic = ''.join(pics)
     nslide = f' spx-n{len(slides)}' if len(slides) > 1 else ''
     body = re.sub(r'<span class="hero-credit">[\s\S]*?</span>', '', s[m.end():end])
+    body = re.sub(r'<p class="hero-credit[^"]*">[\s\S]*?</p>', '', body)
     # Oct 18: long titles step down so the h1 stays on one line and the band keeps the Lesson_Builder height (279/261/306)
     hm = re.search(r'<h1[^>]*>([\s\S]*?)</h1>', body); n = len(html.unescape(re.sub(r'<[^>]+>', '', hm.group(1))).strip()) if hm else 0
     size = ' pg-xlong' if n > 44 else ' pg-long' if n > 26 else ''
-    btn = SPB.PAUSE_BTN.replace(PAUSE_LABEL, t(lang, PAUSE_LABEL))
+    btn = '' if org else SPB.PAUSE_BTN.replace(PAUSE_LABEL, t(lang, PAUSE_LABEL))
     cred = ''.join(creds)
-    return (s[:m.start()] + f'<section class="{m.group(1)} {" ".join(ADD)}{size}{nslide}"{m.group(2)}>' + MK(pic + '<span class="spb-sweep" aria-hidden="true"></span>')
+    add = ['sp-anim-banner', 'pg-anim', 'org-hero'] if org else ADD
+    sweep = '' if org else '<span class="spb-sweep" aria-hidden="true"></span>'
+    return (s[:m.start()] + f'<section class="{m.group(1)} {" ".join(add)}{size}{nslide}"{m.group(2)}>' + MK(pic + sweep)
             + body + MK(cred + btn) + '</section>' + MK(SPB.PAUSE_JS) + s[end + len('</section>'):])
 
 # Optional page names (Astroscale.html …) limit the rewrite. Weekly sync passes no args.
@@ -129,6 +158,13 @@ for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
     if base not in SKIP and img and media_for(img, lang) and re.search(r'<section class="page-hero', s2):
         s2 = re.sub(r'<!-- LCPPRE:START -->[\s\S]*?<!-- LCPPRE:END -->', '', s2)  # the CSS background is no longer used
         CUR['page'] = base; s2 = apply(s2, lang, img)
+        if img.get('org') and img.get('webp'):
+            pre = '' if lang == 'en' else '../'
+            href = pre + img['webp']
+            srcset = f'{pre}{img["webp800"]} 800w, {href} {img["width"]}w'
+            tag = f'<link rel="preload" as="image" href="{href}" imagesrcset="{srcset}" imagesizes="100vw" fetchpriority="high">'
+            s2 = re.sub(r'<link rel="preload" as="image"[^>]*>', '', s2)
+            s2 = s2.replace('</head>', tag + '</head>', 1)
     if s2 != s: open(f, 'w', encoding='utf8').write(s2); n += 1
 
 if not ONLY:

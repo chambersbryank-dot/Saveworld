@@ -1056,6 +1056,20 @@
       "alt": "A tree seedling being planted on the Sioux Ranger District of Custer Gallatin National Forest",
       "pos": "50% 40%",
       "r2": "images/hub/USFS_Seedling_Planting_Custer_Gallatin.jpg"
+    },
+    "assets/Svalbard_Global_Seed_Vault_CropTrust.jpg": {
+      "credit": "Photo: Crop Trust, non-commercial use with credit",
+      "alt": "The Svalbard Global Seed Vault entrance in the snow",
+      "pos": "38% 50%",
+      "local": "assets/Svalbard_Global_Seed_Vault_CropTrust.jpg",
+      "webp": "assets/Svalbard_Global_Seed_Vault_CropTrust.webp",
+      "webp800": "assets/Svalbard_Global_Seed_Vault_CropTrust-800.webp",
+      "width": 1600,
+      "height": 813,
+      "org": "Crop Trust",
+      "org_url": "https://www.croptrust.org/what-we-do/programs/svalbard-global-seed-vault/",
+      "license": "non-commercial use with credit",
+      "license_url": "https://www.croptrust.org/terms-conditions/"
     }
   },
   "pages": {
@@ -1304,7 +1318,7 @@
     "Whales_Ocean_Gardeners.html": "assets/Phytoplankton_Bloom_Iceland.jpg",
     "Yellowstone_Wolves.html": "assets/Yellowstone_ISS.jpg",
     "Zero_Debris_Charter.html": "assets/LEO_View.jpg",
-    "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Nordaustlandet_Landsat9_2022.jpg",
+    "Svalbard_Global_Seed_Vault.html": "assets/Svalbard_Global_Seed_Vault_CropTrust.jpg",
     "Thwaites_Glacier_Collaboration.html": "assets/Thwaites_Glacier_Landsat8_2019.jpg",
     "Carbfix.html": "assets/Iceland_Volcanic_Landscape_jsc2026e406058.jpg",
     "African_Parks.html": "assets/Lake_Kariba_ISS_2024.jpg",
