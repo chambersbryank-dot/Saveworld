@@ -169,7 +169,7 @@ def jet_page(l, C, NL):
     o.append(f'<p class="lnote" role="note">🧪 <strong>{U("labs_h")}:</strong> {U("labs")}</p>')
     o.append(planet_block(l, J.PINTRO[l]))
     o.append(calc_widget(l, 'aero', NL))
-    o.append(best_block(l, [b for b in R.BEST if b[1] in R.JET_BEST_IDS]))
+    o.append(best_block(l, [b for b in R.BEST if b[2] in R.JET_BEST_URLS]))
     o.append(f'<p><a href="Learn_Aero.html#roadmap">✈️ {U("to_aero")}</a> · <a href="{R.PAGE}">🚀 {esc(R.UI["to_rocket"][l])}</a></p>')
     o.append(f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS) + '</ul>')
     o.append(f'<p class="lnote"><small>{U("credit")}</small></p>')
@@ -177,11 +177,16 @@ def jet_page(l, C, NL):
     return s.replace('</p></div>', '</p>' + JET_SVG.replace('{lab}', U('anim')) + '</div>', 1)
 BEST_CSS = ('<style>.lfb{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem}.lfb>div{padding:.6rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}'
     '.lfb h3{margin:.3rem 0 .4rem;font-size:1rem}.lfb ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}.lfb a{font-weight:800}.lfb small{display:block;opacity:.88}</style>')
-def best_block(l, items):  # Oct 28 (founder): "Learn from the best" (links checked with curl; one line each, no rankings)
+def best_block(l, items):  # Oct 28 (founder): "Learn from the best". University course homes are not listed; free study stays on Saving Planets.
     UR = lambda k: esc(R.UI[k][l]); out = ''
+    def label(n): return esc(n[l] if isinstance(n, dict) else n)
+    def link(u_, n):
+        if str(u_).startswith('http'):
+            return f'<li><a href="{esc(u_)}" rel="noopener" lang="en">{label(n)}</a> ↗<small>'
+        return f'<li><a href="{esc(u_)}">{label(n)}</a><small>'
     for g in ('g_free', 'g_uni', 'g_nasa', 'g_job'):
         xs = [b for b in items if b[0] == g]
-        if xs: out += f'<div><h3>{UR(g)}</h3><ul>' + ''.join(f'<li><a href="{esc(u_)}" rel="noopener" lang="en">{esc(n)}</a> ↗<small>{esc(w[l])}</small></li>' for _, n, u_, w in xs) + '</ul></div>'
+        if xs: out += f'<div><h3>{UR(g)}</h3><ul>' + ''.join(link(u_, n) + f'{esc(w[l])}</small></li>' for _, n, u_, w in xs) + '</ul></div>'
     return BEST_CSS + f'<section class="lhy" id="learn-from-the-best"><h2>🏆 {UR("best_h")}</h2><p>{UR("best_t")}</p><div class="lfb">{out}</div></section>'
 ROCKET_SVG = ('<svg class="rpa" viewBox="0 0 640 150" role="img" aria-label="{lab}" xmlns="http://www.w3.org/2000/svg">'
     '<defs><linearGradient id="rpg" x1="0" x2="1"><stop offset="0" stop-color="#fff6d0"/><stop offset=".25" stop-color="#ffb347"/><stop offset=".7" stop-color="#ff6a3d" stop-opacity=".6"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></linearGradient>'

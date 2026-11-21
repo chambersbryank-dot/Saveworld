@@ -12,7 +12,6 @@ TAGLINE = 'A full design project from requirements to review: pick an electric d
 DESC = 'Free self-study Capstone Design: 10 units, worked examples, solved practice, quizzes, flashcards, 6 spreadsheet design labs, practice exams, tied to NASA CubeSats, PREFIRE and sustainable flight.'
 ALT = 'The International Space Station seen from a departing spacecraft during a 2021 flyaround'
 _SEH = ('NASA Systems Engineering Handbook', 'https://www.nasa.gov/reference/systems-engineering-handbook/')
-_MIT = ('MIT OpenCourseWare 16.83X Space Systems Engineering (Spring 2002 – Spring 2003)', 'https://ocw.mit.edu/courses/16-83x-space-systems-engineering-spring-2002-spring-2003/')
 _CSLI = ('NASA: CubeSat Launch Initiative', 'https://www.nasa.gov/kennedy/launch-services-program/cubesat-launch-initiative/')
 _PRE = ('NASA Science: PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment)', 'https://science.nasa.gov/mission/prefire/')
 _SOA = ('NASA Small Spacecraft Technology State of the Art', 'https://www.nasa.gov/smallsat-institute/sst-soa/')
@@ -21,7 +20,7 @@ BANNER = ['images/ISS_Flyaround_2021.jpg', 'images/Landsat9_Launch_KLS04_0013.jp
 CREDITS = {'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)', 'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg': 'NASA/Michael DeMocker (MAF20210116_GR0006)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior aerospace capstone. It is modeled on the conceive-design-implement-operate approach of MIT 16.83X Space Systems Engineering (free on MIT OpenCourseWare) and on the NASA Systems Engineering Handbook, which we link where they help. Neither MIT nor NASA endorses this page.',
+         'Its scope follows a one-semester senior aerospace capstone. It is modeled on the conceive-design-implement-operate approach of MIT 16.83X Space Systems Engineering and on the NASA Systems Engineering Handbook, which we link where they help. Neither MIT nor NASA endorses this page.',
          'What we add: two parallel tracks (a small electric drone or a 3U CubeSat), every unit tied to real work with a cited public source, every number on the page re-computed by a checking script before it goes live, and every lab in a free spreadsheet.',
          'Work through it in order, alone or with a team. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Capstone teams build the satellites and aircraft that measure and protect the planet: student CubeSats fly through NASA’s CubeSat Launch Initiative, and small satellites like PREFIRE study how the Arctic sheds heat.',
@@ -41,7 +40,7 @@ CONSTANTS = [('Earth’s gravitational parameter (textbook value)', 'μ = 398,60
              ('Solar constant (textbook value)', '1361 W/m²'), ('Sea-level air density (textbook value)', '1.225 kg/m³'), ('Speed of light', 'c = 299,792,458 m/s (exact)')]
 REF_TITLE = 'Free texts and resources'
 REF_INTRO = 'Use these free handbooks, lectures and mission pages alongside the course.'
-PTABLE = [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.'), (_SOA[0], _SOA[1], 'Free NASA small-spacecraft report.'),
+PTABLE = [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_SOA[0], _SOA[1], 'Free NASA small-spacecraft report.'),
           (_CSLI[0], _CSLI[1], 'NASA launch opportunities.'), (_PRE[0], _PRE[1], 'NASA CubeSat mission.'), (_SFNP[0], _SFNP[1], 'NASA sustainable aviation.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -97,7 +96,7 @@ UNITS.append(
                      'Weighing options across areas like these is a concept-selection problem: the right weights depend on what the stakeholders value, including emissions.'],
             'site': [('Solutions', 'Solutions.html'), ('Aircraft Performance', 'Aircraft_Performance.html')],
             'src': [_SFNP]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT capstone materials.'), (_SEH[0], _SEH[1], 'Free NASA handbook.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Aircraft Track: Weight Sizing and Range', 'weeks': 'Weeks 3–4',
  'summary': 'Takeoff-weight estimation from weight fractions, the Breguet range equation, and how efficiency gains change range and fuel.',
@@ -122,7 +121,7 @@ UNITS.append(
                      'Its centerpiece is a full-scale X-plane demonstrator testing an ultra-efficient aerodynamic design, with first flight no earlier than late 2026; higher L/D is exactly the lever this unit’s Breguet equation rewards.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')],
             'src': [_SFNP]},
- 'res': [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.')]})
+ 'res': [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Aircraft Track: Wing Loading and Power', 'weeks': 'Week 5',
  'summary': 'Constraint sizing: wing loading from stall speed, wing area, and climb power for a small electric aircraft.',
@@ -147,7 +146,7 @@ UNITS.append(
                      'Small electric drones sized well in this unit are already used for crop, forest and coastline surveys. Values in this unit are sample values.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Aerodynamics I', 'Aerodynamics_I.html')],
             'src': [_SFNP]},
- 'res': [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.')]})
+ 'res': [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'CubeSat Track: Sizing and Orbit', 'weeks': 'Week 6',
  'summary': 'CubeSat form factors, mass allowance, orbit period, passes per day and eclipse fraction for a low Earth orbit.',
@@ -197,7 +196,7 @@ UNITS.append(
                      'NASA says small spacecraft have since become the primary means for commercial, government, private and academic institutions to access space, so careful power and link budgets now support a large share of Earth observation.'],
             'site': [('Spacecraft Design', 'Spacecraft_Design.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_SOA]},
- 'res': [(_SOA[0], _SOA[1], 'Free NASA report.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.')]})
+ 'res': [(_SOA[0], _SOA[1], 'Free NASA report.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Structural and Thermal Checks', 'weeks': 'Week 8',
  'summary': 'Load factors, margins of safety, launch and flight loads, and a first thermal equilibrium estimate for both tracks.',
@@ -222,7 +221,7 @@ UNITS.append(
                      'NASA reports the PREFIRE mission was extended so the twin satellites operate through at least September 2026, expanding focus from the poles to the whole planet, a payoff of a design that survived launch and orbit.'],
             'site': [('Aerospace Structures', 'Aerospace_Structures.html'), ('Heat Transfer', 'Heat_Transfer.html')],
             'src': [_PRE]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT capstone materials.'), (_SEH[0], _SEH[1], 'Free NASA handbook.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Cost, Schedule and Risk', 'weeks': 'Weeks 9–10',
  'summary': 'Work breakdown structures, critical-path schedules, earned value, risk matrices and mitigation plans.',
@@ -247,7 +246,7 @@ UNITS.append(
                      'Projects that stay on budget and schedule launch sooner, and Earth-observing data starts flowing sooner. Cost values in this unit are sample values.'],
             'site': [('Solutions', 'Solutions.html'), ('Avionics & Systems Engineering', 'Avionics_Systems_Engineering.html')],
             'src': [_SEH]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 6.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 6.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'Prototype, Test and Verification', 'weeks': 'Weeks 11–13',
  'summary': 'Verification matrices, test planning, measurement statistics, comparing results with predictions, and closing requirements.',
@@ -271,8 +270,8 @@ UNITS.append(
  'planet': {'text': ['MIT OpenCourseWare describes 16.83X as following a conceive-design-implement-operate model, with a final phase in which the system is tested and readied for its intended environment.',
                      'NASA’s CubeSat Launch Initiative flies student satellites that pass this kind of testing, turning capstones into working instruments in orbit.'],
             'site': [('Avionics & Systems Engineering', 'Avionics_Systems_Engineering.html'), ('Probability & Statistics', 'Probability_Statistics.html')],
-            'src': [_MIT, _CSLI]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT capstone materials.'), (_SEH[0], _SEH[1], 'Free NASA handbook, Section 5.')]})
+            'src': [ _CSLI]},
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 5.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Design Reviews and the Final Report', 'weeks': 'Weeks 14–15',
  'summary': 'Preliminary and critical design reviews, presenting trades and budgets, answering questions, and writing the final report.',
@@ -297,7 +296,7 @@ UNITS.append(
                      'NASA says PREFIRE’s extended mission now looks at the whole planet; strong reviews and reports are how student and professional designs reach that kind of impact.'],
             'site': [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_SFNP, _PRE]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_MIT[0], _MIT[1], 'Free MIT capstone materials.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 def _lab(i, t, wk, goal, eq, steps, table, calc, src, planet, psrc):
     return {'id': i, 'title': t, 'week': wk, 'goal': goal, 'eq': eq, 'steps': steps, 'table': table, 'note': 'Computed sample values.', 'calc': calc,
             'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'], 'sims': [src], 'planet': planet, 'planet_src': [psrc]}
@@ -308,12 +307,12 @@ LABS = [
       (_SEH[0], _SEH[1]), 'NASA’s CubeSat Launch Initiative has launched over 150 CubeSats.', _CSLI),
  _lab('labB', 'Lab B: Concept-selection matrix with sensitivity', 'Week 2', 'Score two concepts and test how weights change the winner.',
       ('S=\\sum w_is_i', 'Weighted score'), ['Enter Unit 2’s scores: A (6, 9, 5), B (8, 6, 8).', 'Score with three weight sets.', 'Plot the winner against the performance weight.', 'Write one paragraph defending your choice.'],
-      (['Weights (cost, perf., risk)', 'A', 'B'], [['0.3, 0.5, 0.2', '7.3', '7.0'], ['0.4, 0.3, 0.3', '6.6', '7.4'], ['0.2, 0.6, 0.2', '7.6', '6.8']]), ['A = 0.2 × 6 + 0.6 × 9 + 0.2 × 5 = 7.6.', 'B = 0.2 × 8 + 0.6 × 6 + 0.2 × 8 = 6.8.'],
-      (_MIT[0], _MIT[1]), 'NASA’s SFNP works across vehicles, operations and sustainable fuels.', _SFNP),
+      (['Weights (cost, perf., risk)', 'A', 'B'], [['0.3, 0.5, 0.2', '7.3', '7.0'], ['0.4, 0.3, 0.3', '6.6', '7.4'], ['0.2, 0.6, 0.2', '7.6', '6.8']]),       ['A = 0.2 × 6 + 0.6 × 9 + 0.2 × 5 = 7.6.', 'B = 0.2 × 8 + 0.6 × 6 + 0.2 × 8 = 6.8.'],
+      _SFNP, 'NASA’s SFNP works across vehicles, operations and sustainable fuels.', _SFNP),
  _lab('labC', 'Lab C: Drone sizing loop', 'Week 4', 'Size the drone track’s takeoff mass for several battery fractions.',
       ('W_0=W_{pay}/(1-f_e-f_b)', 'Takeoff mass'), ['Enter 1 kg payload and empty fraction 0.5.', 'Compute takeoff mass for battery fractions 0.25, 0.30 and 0.35.', 'Add wing area from W/S = 105.84 N/m².', 'Pick a design point and justify it.'],
-      (['Battery fraction', 'Takeoff mass (kg)'], [['0.25', '4.0'], ['0.30', '5.0'], ['0.35', '6.67']]), ['1/(1 − 0.5 − 0.25) = 4.0 kg.', '1/(1 − 0.5 − 0.35) = 6.67 kg.'],
-      (_MIT[0], _MIT[1]), 'NASA’s SFNP targets 25–30% energy-efficiency gains.', _SFNP),
+      (['Battery fraction', 'Takeoff mass (kg)'], [['0.25', '4.0'], ['0.30', '5.0'], ['0.35', '6.67']]),       ['1/(1 − 0.5 − 0.25) = 4.0 kg.', '1/(1 − 0.5 − 0.35) = 6.67 kg.'],
+      _SFNP, 'NASA’s SFNP targets 25–30% energy-efficiency gains.', _SFNP),
  _lab('labD', 'Lab D: CubeSat orbit and eclipse', 'Week 6', 'Compute period and worst-case eclipse for candidate altitudes.',
       ('T=2\\pi\\sqrt{a^3/\\mu}', 'Period'), ['Enter altitudes 400, 500 and 600 km.', 'Compute T and orbits per day.', 'Compute worst-case eclipse minutes.', 'Choose an altitude and note the drag-lifetime trade.'],
       (['Altitude (km)', 'T (min)', 'Eclipse (min)'], [['400', '92.6', '36.1'], ['500', '94.6', '35.8'], ['600', '96.7', '35.5']]), ['T(600) = 2π√(6978.1³/398,600.4) = 96.7 min.', 'Eclipse(400) = 0.390 × 92.6 = 36.1 min.'],

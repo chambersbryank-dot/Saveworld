@@ -13,7 +13,6 @@ DESC = 'Free self-study Avionics & Systems Engineering: 10 units, worked example
 ALT = 'The International Space Station seen from a departing spacecraft during a 2021 flyaround'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _SEH = ('NASA Systems Engineering Handbook', 'https://www.nasa.gov/reference/systems-engineering-handbook/')
-_MIT = ('MIT OpenCourseWare 16.842 Fundamentals of Systems Engineering (Fall 2015)', 'https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/')
 _L9 = ('NASA Science: Landsat 9', 'https://landsat.gsfc.nasa.gov/satellites/landsat-9/landsat-9-overview/')
 _HUB = ('NASA Science: NASA to change how it points Hubble Space Telescope', 'https://science.nasa.gov/missions/hubble/nasa-to-change-how-it-points-hubble-space-telescope/')
 _DF = ('NASA Science: Dragonfly completes first simulated flight (Oct. 23, 2026)', 'https://science.nasa.gov/blogs/dragonfly/2026/10/23/nasas-dragonfly-completes-first-simulated-flight/')
@@ -24,7 +23,7 @@ BANNER = ['images/ISS_Flyaround_2021.jpg', 'images/Landsat9_Launch_KLS04_0013.jp
 CREDITS = {'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)', 'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)',
            'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA', 'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior course in avionics and systems engineering. It is modeled on the topics and depth of MIT 16.842 Fundamentals of Systems Engineering (free on MIT OpenCourseWare) and the NASA Systems Engineering Handbook, which we link where they help. Neither MIT nor NASA endorses this page.',
+         'Its scope follows a one-semester senior course in avionics and systems engineering. It is modeled on the topics and depth of MIT 16.842 Fundamentals of Systems Engineering and the NASA Systems Engineering Handbook, which we link where they help. Neither MIT nor NASA endorses this page.',
          'What we add: every unit ties to real work with a cited public source (Landsat 9, Hubble, Dragonfly and the FAA’s air traffic system), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Earth-observing satellites, weather spacecraft and efficient air traffic all depend on avionics that work for years without a repair visit, and on systems engineering that makes thousands of parts behave as one.',
@@ -44,7 +43,7 @@ CONSTANTS = [('Speed of light', 'c = 299,792,458 m/s (exact)'), ('Standard gravi
              ('ARINC 429 high speed (textbook value)', '100 kbit/s'), ('MIL-STD-1553 (textbook value)', '1 Mbit/s'), ('Hours per year', '8760 h')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free texts, lectures and simulations alongside the course.'
-PTABLE = [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_MIT[0], _MIT[1], 'Free MIT lectures.'), (_ADSB[0], _ADSB[1], 'FAA overview.'),
+PTABLE = [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_ADSB[0], _ADSB[1], 'FAA overview.'),
           (_CCK[0], _CCK[1], 'Circuits and redundancy.'), (_DF[0], _DF[1], 'Avionics testing story.'), (_HUB[0], _HUB[1], 'Redundancy in practice.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -75,7 +74,7 @@ UNITS.append(
                      'With Landsat 8, it observes the same place every 8 days, enabling near-weekly tropical deforestation alerts, water-quality monitoring and crop reports, payoffs of requirements written and met with margin.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Spacecraft Design', 'Spacecraft_Design.html')],
             'src': [_L9]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Sections 3–4.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Sections 3–4.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Architecture, Interfaces and Integration', 'weeks': 'Week 2',
  'summary': 'Functional and physical architecture, interface control, N² diagrams, model-based systems engineering and why interfaces grow fast.',
@@ -100,7 +99,7 @@ UNITS.append(
                      'Clear interfaces let instrument and spacecraft teams build in parallel, which is how Earth-observing missions such as Landsat 9 reach orbit on schedule.'],
             'site': [('Spacecraft Design', 'Spacecraft_Design.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_SEH]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 4.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 4.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Reliability and Redundancy', 'weeks': 'Weeks 3–4',
  'summary': 'Failure rates, exponential reliability, MTBF, series and parallel systems, triple modular redundancy, k-of-n systems and availability.',
@@ -150,7 +149,7 @@ UNITS.append(
                      'The same safety tools protect the satellites that track wildfires, storms and sea ice. Probabilities in this unit are sample values.'],
             'site': [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_SEH]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 6.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 6.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Digital Avionics and Data Buses', 'weeks': 'Weeks 6–7',
  'summary': 'Binary data, analog-to-digital conversion, quantization, serial data buses (ARINC 429, MIL-STD-1553), message timing and data volume.',
@@ -175,7 +174,7 @@ UNITS.append(
                      'Fine radiometric steps let scientists see subtle changes in water quality and vegetation health, at the cost of more data for the avionics to store and send.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Circuits', 'Circuits.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_SEH[0], _SEH[1], 'Free NASA handbook.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 UNITS.append(
 {'id': 'u6', 'title': 'Navigation Sensors: IMUs, GNSS, Cameras and Lidar', 'weeks': 'Week 8',
  'summary': 'Gyros and accelerometers, inertial navigation drift, satellite navigation ranging, and vision and lidar sensors for autonomy.',
@@ -200,7 +199,7 @@ UNITS.append(
                      'Lidar measures terrain altitude and slope and identifies hazards, letting the rotorcraft choose a safe landing site on Titan, where it is due to arrive in 2034.'],
             'site': [('Flight Dynamics & Controls', 'Flight_Dynamics_Controls.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_DF]},
- 'res': [(_DF[0], _DF[1], 'NASA Dragonfly story.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_DF[0], _DF[1], 'NASA Dragonfly story.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Sensor Fusion and the Kalman Filter', 'weeks': 'Week 9',
  'summary': 'Combining noisy measurements, inverse-variance weighting, the scalar Kalman filter and its predict-update cycle.',
@@ -225,7 +224,7 @@ UNITS.append(
                      'A camera emulator rendered each simulated Titan scene in roughly the 20 to 70 millisecond exposure times the cameras will use, so fusion software saw realistic timing. Variances in this unit are sample values.'],
             'site': [('Flight Dynamics & Controls', 'Flight_Dynamics_Controls.html'), ('Spacecraft Design', 'Spacecraft_Design.html')],
             'src': [_DF]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_DF[0], _DF[1], 'NASA Dragonfly story.')]})
+ 'res': [(_DF[0], _DF[1], 'NASA Dragonfly story.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Communication and Surveillance: ADS-B', 'weeks': 'Week 10',
  'summary': 'Aircraft radios, line-of-sight range, free-space path loss, ADS-B Out and In, and how surveillance supports air traffic control.',
@@ -275,7 +274,7 @@ UNITS.append(
                      'NASA says Dragonfly engineers will deliberately introduce faults in tests so the rotorcraft can respond autonomously, because everything it does on Titan must happen without real-time help from Earth.'],
             'site': [('Intro to Programming', 'Intro_to_Programming.html'), ('Flight Dynamics & Controls', 'Flight_Dynamics_Controls.html')],
             'src': [_HUB, _DF]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_DF[0], _DF[1], 'NASA Dragonfly story.')]})
+ 'res': [(_DF[0], _DF[1], 'NASA Dragonfly story.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Integration, Verification and Operations', 'weeks': 'Weeks 13–15',
  'summary': 'Incremental integration, verification methods, hardware-in-the-loop testing, fault injection, commissioning and life extension.',
@@ -300,7 +299,7 @@ UNITS.append(
                      'NASA notes Landsat 9’s onboard calibration and redundancy keep its data accurate and reliable for the mission’s life, extending the longest record of Earth observation.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Spacecraft Design', 'Spacecraft_Design.html')],
             'src': [_DF, _L9]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 5.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook, Section 5.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Interface growth and an N² diagram', 'week': 'Week 2',
@@ -366,7 +365,7 @@ LABS.append(
  'note': 'Computed values.',
  'calc': ['2(√2 − 1) = 0.828.', '4(2^(1/4) − 1) = 0.757.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA: Dragonfly must fly autonomously, without real-time help from Earth.', 'planet_src': [_DF]})
 SCHEDULE = [(1, 'u1', 'Life cycle and requirements', 'NASA SE Handbook'), (2, 'u2', 'Architecture and interfaces; Lab A', 'MIT 16.842'),
             (3, 'u3', 'Reliability models', 'NASA SE Handbook'), (4, 'u3', 'Redundancy; Lab B', 'NASA Hubble'),

@@ -13,7 +13,6 @@ DESC = 'Free self-study Heat Transfer: 10 units, worked examples, solved practic
 ALT = 'Earth’s full disk in NASA’s Blue Marble image, showing land, ocean, ice and clouds'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _AHTT = ('J. H. Lienhard IV and J. H. Lienhard V, A Heat Transfer Textbook (free online edition)', 'https://ahtt.mit.edu/')
-_MIT = ('MIT OpenCourseWare 2.51 Intermediate Heat and Mass Transfer (Fall 2008)', 'https://ocw.mit.edu/courses/2-51-intermediate-heat-and-mass-transfer-fall-2008/')
 _EB = ('NASA Earth Observatory: Climate and Earth’s Energy Budget', 'https://earthobservatory.nasa.gov/features/EnergyBalance')
 _PSP = ('NASA Science: Parker Solar Probe', 'https://science.nasa.gov/mission/parker-solar-probe/')
 _ES = ('ENERGY STAR: Air-Source Heat Pumps', 'https://www.energystar.gov/products/air_source_heat_pumps')
@@ -22,7 +21,7 @@ BANNER = ['images/earth-blue-marble-land-ocean-ice-cloud.jpg', 'images/SLS_Green
 CREDITS = {'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA', 'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg': 'NASA/Michael DeMocker (MAF20210116_GR0006)',
            'images/GOES19_GOESU_KSC.jpg': 'NASA/KSC', 'images/ISS_Over_Ganges_STS102.jpg': 'NASA (STS102-357-031, March 18, 2001)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior heat transfer course for engineers. It is modeled on the topics and depth of the free online A Heat Transfer Textbook by Lienhard and Lienhard and MIT 2.51 Intermediate Heat and Mass Transfer (free on MIT OpenCourseWare), which we link where they help. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester senior heat transfer course for engineers. It is modeled on the topics and depth of the free online A Heat Transfer Textbook by Lienhard and Lienhard and MIT 2.51 Intermediate Heat and Mass Transfer, which we link where they help. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (NASA’s Earth energy budget, Parker Solar Probe and ENERGY STAR heat pumps), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Earth’s climate is a heat transfer problem: sunlight in, thermal infrared out, with convection and evaporation moving heat in between. The same physics decides how much energy our buildings, engines and electronics waste.',
@@ -42,7 +41,7 @@ CONSTANTS = [('Stefan–Boltzmann constant', 'σ = 5.670374419 × 10⁻⁸ W/(m�
              ('Air near 300 K (textbook values)', 'k = 0.026 W/(m·K), ν = 1.5 × 10⁻⁵ m²/s, Pr = 0.71'), ('Aluminum (textbook values)', 'k = 237 W/(m·K), ρ = 2700 kg/m³, c = 900 J/(kg·K)'), ('Earth’s surface area (textbook value)', '5.1 × 10¹⁴ m²')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free texts, lectures and simulations alongside the course.'
-PTABLE = [(_AHTT[0], _AHTT[1], 'Free complete heat transfer textbook.'), (_MIT[0], _MIT[1], 'Free MIT lectures and problems.'), (_EB[0], _EB[1], 'Free NASA explainer.'),
+PTABLE = [(_AHTT[0], _AHTT[1], 'Free complete heat transfer textbook.'), (_EB[0], _EB[1], 'Free NASA explainer.'),
           ('PhET: Energy Forms and Changes', _PH + 'energy-forms-and-changes', 'Heat flow interactively.'), ('PhET: Blackbody Spectrum', _PH + 'blackbody-spectrum', 'Thermal radiation.'), ('PhET: Greenhouse Effect', _PH + 'greenhouse-effect', 'Radiation balance.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -98,7 +97,7 @@ UNITS.append(
                      'This unit’s sample wall shows why sealing and insulating comes first: adding insulation cut the conduction loss by about 89%, so any heating system has far less heat to replace.'],
             'site': [('Solutions', 'Solutions.html'), ('Thermodynamics', 'Thermodynamics.html')],
             'src': [_ES]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 2.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 2.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Cylinders, Spheres and Fins', 'weeks': 'Weeks 3–4',
  'summary': 'Radial conduction, pipe insulation and the critical radius, extended surfaces, fin efficiency and electronics cooling.',
@@ -123,7 +122,7 @@ UNITS.append(
                      'Insulating hot-water and steam pipes is one of the simplest efficiency steps in buildings and industry. All values in this unit are sample textbook values.'],
             'site': [('Solutions', 'Solutions.html'), ('Circuits', 'Circuits.html')],
             'src': [_AHTT]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 4.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 4.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Transient Conduction', 'weeks': 'Week 5',
  'summary': 'The Biot number, the lumped-capacitance model, time constants, and when spatial temperature gradients matter.',
@@ -148,7 +147,7 @@ UNITS.append(
                      'In this unit’s language, a large heat capacity means a long time constant; the oceans’ heat capacity gives Earth’s climate a slow response (a textbook idea, not a NASA figure).'],
             'site': [('Oceans', 'Oceans.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_EB]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 5.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapter 5.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'External Forced Convection', 'weeks': 'Weeks 6–7',
  'summary': 'Boundary layers, Reynolds, Prandtl and Nusselt numbers, flat-plate correlations and flow over cylinders.',
@@ -173,7 +172,7 @@ UNITS.append(
                      'Wind speed sets h over oceans and land just as velocity sets h on this unit’s plate, which is why winds shape how fast the surface sheds heat.'],
             'site': [('Fluid Mechanics', 'Fluid_Mechanics.html'), ('Oceans', 'Oceans.html')],
             'src': [_EB]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 6–7.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 6–7.')]})
 UNITS.append(
 {'id': 'u6', 'title': 'Internal Flow and Heat Exchangers', 'weeks': 'Weeks 8–9',
  'summary': 'Pipe-flow convection, mean temperature, the Dittus–Boelter correlation, heat exchanger types, LMTD and effectiveness–NTU.',
@@ -198,7 +197,7 @@ UNITS.append(
                      'Better exchangers need a smaller temperature difference to move the same heat, which is one reason modern heat pumps deliver more heat per unit of electricity.'],
             'site': [('Solutions', 'Solutions.html'), ('Thermodynamics', 'Thermodynamics.html')],
             'src': [_ES]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 3 and 7.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 3 and 7.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Natural Convection and Boiling', 'weeks': 'Week 10',
  'summary': 'Buoyancy-driven flow, Grashof and Rayleigh numbers, vertical-plate correlations, and an introduction to boiling and condensation.',
@@ -223,7 +222,7 @@ UNITS.append(
                      'At 340 W/m² average sunlight, those shares are about 85 and 17 W/m², the same phase-change and buoyancy processes this unit treats.'],
             'site': [('Oceans', 'Oceans.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_EB]},
- 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 8–9.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_AHTT[0], _AHTT[1], 'Free textbook, Chapters 8–9.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Radiation Fundamentals', 'weeks': 'Week 11',
  'summary': 'Blackbodies, Planck’s law, Wien’s law, the Stefan–Boltzmann law, emissivity, absorptivity and Kirchhoff’s law.',
@@ -342,7 +341,7 @@ LABS.append(
  'note': 'Computed sample values.',
  'calc': ['Re(1) = 1 × 0.5/1.5 × 10⁻⁵ = 33,333.', 'h(10) = 0.664 × 577.4 × 0.892 × 0.052 = 17.78.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA: convection carries about 5% of incoming solar energy from the surface.', 'planet_src': [_EB]})
 LABS.append(
 {'id': 'labE', 'title': 'Lab E: Blackbody spectra', 'week': 'Week 11',

@@ -17,12 +17,11 @@ _SAF = ('U.S. DOE Alternative Fuels Data Center: Sustainable aviation fuel', 'ht
 _EIA = ('U.S. EIA: Carbon dioxide emissions coefficients', 'https://www.eia.gov/environment/emissions/co2_vol_mass.php')
 _CON = ('NASA: NASA-DLR study finds sustainable aviation fuel can reduce contrails (2021)', 'https://www.nasa.gov/news-release/nasa-dlr-study-finds-sustainable-aviation-fuel-can-reduce-contrails/')
 _EPA = ('U.S. EPA: Regulations for lead emissions from aircraft', 'https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-lead-emissions-aircraft')
-_MIT = ('MIT OpenCourseWare 16.885J Aircraft Systems Engineering (Fall 2004), Lecture 8: Environmental Factors', 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2004/pages/lecture-notes/')
 BANNER = ['images/earth-blue-marble-land-ocean-ice-cloud.jpg', 'images/ISS_Flyaround_2021.jpg', 'images/Pacific_Clouds_Sunset_ISS.jpg', 'images/GOES19_GOESU_KSC.jpg']
 CREDITS = {'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)',
            'images/Pacific_Clouds_Sunset_ISS.jpg': 'NASA', 'images/GOES19_GOESU_KSC.jpg': 'NASA/KSC'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a senior elective on aviation and the environment. It draws on the environmental-factors lecture in MIT 16.885J Aircraft Systems Engineering (free on MIT OpenCourseWare) and on public NASA, DOE, EIA and EPA material, which we link where it helps. None of them endorses this page.',
+         'Its scope follows a senior elective on aviation and the environment. It draws on the environmental-factors lecture in MIT 16.885J Aircraft Systems Engineering and on public NASA, DOE, EIA and EPA material, which we link where it helps. None of them endorses this page.',
          'What we add: every unit ties to real work with a cited public source, every number on the page is re-computed by a checking script before it goes live, and every lab runs in a free spreadsheet or simulation.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['This whole course is a planet section: DOE’s Alternative Fuels Data Center says aviation produces about 2% of all CO₂ worldwide and 12% of CO₂ from transportation, and contrails add warming beyond CO₂.',
@@ -41,7 +40,7 @@ CONSTANTS = [('Standard gravity', 'g = 9.80665 m/s²'), ('Jet fuel CO₂ (EIA)',
              ('Hydrogen heating value (textbook value)', '120 MJ/kg'), ('Liquid hydrogen density (textbook value)', '70.8 kg/m³'), ('Gallon', '3.785411784 L')]
 REF_TITLE = 'Free texts and sources'
 REF_INTRO = 'Use these free lectures, data pages and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT lecture notes.'), (_SFNP[0], _SFNP[1], 'NASA program.'), (_SAF[0], _SAF[1], 'DOE SAF data.'),
+PTABLE = [(_SFNP[0], _SFNP[1], 'NASA program.'), (_SAF[0], _SAF[1], 'DOE SAF data.'),
           (_EIA[0], _EIA[1], 'EIA emission factors.'), (_CON[0], _CON[1], 'NASA contrail study.'), ('PhET: Greenhouse Effect', _PH + 'greenhouse-effect', 'Radiation balance.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -69,7 +68,7 @@ UNITS = [
      _q('Aviation share of all CO₂…', ['2%', '12%', '25%', '0.2%'], 0, 'DOE.'), _q('Liters in 5000 gal…', ['18,927', '1321', '5000', '37,854'], 0, '× 3.785.')],
     [('Emission factor', 'CO₂ per unit fuel.'), ('Combustion CO₂', 'From burning.'), ('Lifecycle CO₂', 'Well-to-wake total.'), ('Non-CO₂ effects', 'Contrails, NOx, soot.'), ('Jet A', 'Standard jet fuel.'), ('t CO₂', 'Tonne of CO₂.')],
     ['The U.S. EIA lists 21.50 lb (9.75 kg) of CO₂ per gallon of jet fuel.', 'DOE’s Alternative Fuels Data Center says aviation accounts for 2% of all CO₂ worldwide and 12% of all CO₂ from transportation.'],
-    [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')], [_EIA, _SAF], [(_EIA[0], _EIA[1], 'EIA table.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')], [_EIA, _SAF], [(_EIA[0], _EIA[1], 'EIA table.')]),
  _u('u2', 'Efficiency Metrics', 'Week 2', 'Fuel and CO₂ per passenger-kilometer, energy intensity, and how to compare aircraft fairly.',
     ['Compute fuel per passenger-km.', 'Compute CO₂ per passenger-km.', 'Apply a percentage efficiency gain.', 'Compare fairly across aircraft.'],
     ['Total emissions mislead; normalize by passengers and distance.', 'Load factor matters: empty seats raise emissions per passenger.',
@@ -86,7 +85,7 @@ UNITS = [
      _q('After 25% gain…', ['36,563 kg', '12,188 kg', '48,750 kg', '60,938 kg'], 0, '× 0.75.'), _q('SFNP target…', ['25–30%', '2–3%', '50–70%', '100%'], 0, 'NASA.')],
     [('Passenger-km', 'One passenger carried one km.'), ('Load factor', 'Passengers over seats.'), ('Energy intensity', 'MJ per pkm.'), ('Rebound', 'Growth offsetting efficiency.'), ('Baseline', 'Reference case.'), ('Normalization', 'Per-unit comparison.')],
     ['NASA says the Sustainable Flight National Partnership aims to enable 25–30% energy-efficiency improvements in next-generation transports that can use 100% sustainable aviation fuel and fly optimal trajectories.', 'This unit’s per-passenger metrics are how such gains are measured.'],
-    [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
  _u('u3', 'Aerodynamic Efficiency', 'Weeks 3–4', 'L/D, induced drag and aspect ratio, high-aspect-ratio and truss-braced wings, and fuel burn from the Breguet equation.',
     ['Compute fuel fraction from Breguet.', 'Show how L/D cuts fuel.', 'Compute induced drag coefficient.', 'Explain why long, slender wings save fuel.'],
     ['From Breguet, the fuel fraction is 1 − exp(−Rc/(V·L/D)).', 'Higher L/D means less fuel for the same range.',
@@ -103,7 +102,7 @@ UNITS = [
      _q('C_Di AR 9…', ['0.0104', '0.104', '0.00104', '0.0078'], 0, 'C_L²/(πeAR).'), _q('Higher AR…', ['lowers induced drag', 'raises it', 'no effect', 'raises friction only'], 0, 'Formula.')],
     [('L/D', 'Lift-to-drag ratio.'), ('Induced drag', 'Drag due to lift.'), ('Aspect ratio', 'b²/S.'), ('Oswald factor', 'Span efficiency e.'), ('Truss-braced wing', 'Slender wing with struts.'), ('Fuel fraction', 'Fuel over takeoff weight.')],
     ['NASA says the centerpiece of its Sustainable Flight National Partnership will be a full-scale X-plane demonstrator built to test an ultra-efficient aerodynamic design, to inform the next generation of single-aisle aircraft.', 'NASA lists the demonstrator’s first flight as no earlier than late 2026.'],
-    [('Aerodynamics I', 'Aerodynamics_I.html'), ('Aircraft Performance', 'Aircraft_Performance.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Aerodynamics I', 'Aerodynamics_I.html'), ('Aircraft Performance', 'Aircraft_Performance.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
  _u('u4', 'Engine Efficiency', 'Week 5', 'Thermal, propulsive and overall efficiency, bypass ratio, and advanced engine cores.',
     ['Compute propulsive efficiency.', 'Combine thermal and propulsive efficiency.', 'Explain why high bypass saves fuel.', 'Relate efficiency to TSFC.'],
     ['Overall efficiency is thermal efficiency times propulsive efficiency.', 'Propulsive efficiency 2/(1 + V_e/V₀) rises as exhaust velocity approaches flight speed.',
@@ -120,7 +119,7 @@ UNITS = [
      _q('Overall…', ['0.434', '0.868', '0.5', '0.25'], 0, '0.5 × 0.868.'), _q('High bypass…', ['raises η_p', 'lowers η_p', 'raises V_e', 'no effect'], 0, 'Slower jet.')],
     [('Propulsive efficiency', 'Useful thrust power fraction.'), ('Thermal efficiency', 'Cycle efficiency.'), ('Overall efficiency', 'Product of both.'), ('Bypass ratio', 'Fan air over core air.'), ('TSFC', 'Fuel per thrust per time.'), ('Engine core', 'Compressor, burner, turbine.')],
     ['NASA says its Hybrid Thermally Efficient Core work is accelerating the development and demonstration of advanced turbine engine technologies in a high-power-density core for next-generation commercial transports.', 'Both efficiencies in this unit feed directly into the fuel burned per passenger.'],
-    [('Propulsion', 'Propulsion.html'), ('Thermodynamics', 'Thermodynamics.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Propulsion', 'Propulsion.html'), ('Thermodynamics', 'Thermodynamics.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
  _u('u5', 'Sustainable Aviation Fuels', 'Weeks 6–7', 'What SAF is, production pathways, blend limits, lifecycle reductions and national goals.',
     ['Define SAF.', 'Compute blended lifecycle savings.', 'Size goal-level savings.', 'Explain blend limits.'],
     ['DOE defines SAF as an alternative fuel made from non-petroleum feedstocks that reduces air pollution from air transportation.',
@@ -155,7 +154,7 @@ UNITS = [
      _q('Crystals per flight…', ['4.5 × 10¹⁸', '4.5 × 10¹⁴', '3 × 10¹⁴', '1.5 × 10¹⁹'], 0, '× 15,000.'), _q('Contrail ice forms on…', ['soot particles', 'CO₂', 'nitrogen', 'ozone'], 0, 'Nucleation.')],
     [('Contrail', 'Condensation trail.'), ('Contrail cirrus', 'Spread persistent contrails.'), ('Ice supersaturation', 'Air able to grow ice.'), ('Soot', 'Carbon particles.'), ('Emission index', 'Amount per kg of fuel.'), ('Non-CO₂ forcing', 'Warming besides CO₂.')],
     ['NASA reports that cleaner-burning jet fuels made from sustainable sources can produce 50%–70% fewer ice crystal contrails at cruising altitude, from joint NASA and DLR (German Aerospace Center) research.', 'NASA notes ice-crystal contrails can linger in the upper atmosphere for hours and affect the way Earth is heated and cooled.'],
-    [('Earth Observation', 'Earth_Observation.html'), ('Heat Transfer', 'Heat_Transfer.html')], [_CON], [(_CON[0], _CON[1], 'NASA study.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Earth Observation', 'Earth_Observation.html'), ('Heat Transfer', 'Heat_Transfer.html')], [_CON], [(_CON[0], _CON[1], 'NASA study.')]),
  _u('u7', 'Electric and Hybrid Propulsion', 'Weeks 9–10', 'Battery energy density, drivetrain efficiency, electric range, and where hybrid systems help.',
     ['Compare battery and fuel energy density.', 'Account for drivetrain efficiency.', 'Compute electric aircraft range.', 'Identify suitable missions.'],
     ['Jet fuel stores about 43 MJ/kg (11,944 Wh/kg); today’s batteries store a few hundred Wh/kg (textbook values).',
@@ -173,7 +172,7 @@ UNITS = [
      _q('Electric range…', ['≈ 330 km', '≈ 33 km', '≈ 3300 km', '≈ 660 km'], 0, 'Formula.'), _q('Doubled energy range…', ['≈ 661 km', '≈ 330 km', '≈ 1320 km', '≈ 165 km'], 0, 'Linear.')],
     [('Specific energy', 'Energy per mass.'), ('Drivetrain efficiency', 'Battery-to-shaft efficiency.'), ('Hybrid-electric', 'Fuel plus electric power.'), ('Battery fraction', 'Battery over aircraft mass.'), ('Wh/kg', 'Battery specific energy unit.'), ('Grid intensity', 'CO₂ per kWh.')],
     ['NASA says electrified aircraft propulsion offers new possibilities for reducing fuel and energy usage in aviation from small passenger aircraft to single-aisle transports, using new technologies, concepts, test aircraft and ground facilities.', 'This unit’s range equation shows why the first electric aircraft fly short routes. Energy densities here are textbook values.'],
-    [('Circuits', 'Circuits.html'), ('Solutions', 'Solutions.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Circuits', 'Circuits.html'), ('Solutions', 'Solutions.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
  _u('u8', 'Hydrogen Aircraft', 'Week 11', 'Hydrogen’s energy per mass and volume, tank sizing, water emissions, and design trade-offs.',
     ['Compare hydrogen and jet fuel by mass and volume.', 'Size a hydrogen tank volume.', 'Compute water produced.', 'Explain design trade-offs.'],
     ['Hydrogen holds about 120 MJ/kg, 2.8 times jet fuel, but liquid hydrogen is only about 70.8 kg/m³ (textbook values).',
@@ -191,7 +190,7 @@ UNITS = [
      _q('Tank ratio…', ['≈ 4', '≈ 0.25', '≈ 1', '≈ 40'], 0, '34.4/8.5.'), _q('Water per kg H₂…', ['≈ 8.9 kg', '≈ 1 kg', '≈ 18 kg', '0'], 0, '18.015/2.016.')],
     [('LH₂', 'Liquid hydrogen.'), ('Cryogenic', 'Very cold storage.'), ('Fuel cell', 'Electrochemical power source.'), ('Electrolysis', 'Splitting water with electricity.'), ('Volumetric energy', 'Energy per volume.'), ('Green hydrogen', 'Made with clean power.')],
     ['NASA’s Sustainable Flight National Partnership works across advanced vehicle technologies, efficient operations and sustainable aviation fuels; this unit adds hydrogen as a further option, where tank volume is the main design challenge.', 'Hydrogen values in this unit are textbook values, not NASA figures.'],
-    [('General Chemistry I', 'General_Chemistry_I.html'), ('Thermodynamics', 'Thermodynamics.html')], [_SFNP], [(_MIT[0], _MIT[1], 'Free MIT lecture.'), (_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
+    [('General Chemistry I', 'General_Chemistry_I.html'), ('Thermodynamics', 'Thermodynamics.html')], [_SFNP], [(_SFNP[0], _SFNP[1], 'NASA SFNP.')]),
  _u('u9', 'Operations, Noise and Air Quality', 'Weeks 12–13', 'Efficient taxi and trajectories, decibel arithmetic, airport noise, local air quality and leaded aviation gasoline.',
     ['Estimate taxi fuel savings.', 'Add sound levels in decibels.', 'Apply the inverse-square law.', 'Explain the leaded-fuel issue.'],
     ['Operations matter: single-engine taxi, continuous descents and optimal trajectories cut fuel with today’s aircraft.',
@@ -208,7 +207,7 @@ UNITS = [
      _q('CO₂ saved taxiing…', ['≈ 190 kg', '≈ 60 kg', '≈ 19 kg', '≈ 600 kg'], 0, '60 × 3.16.'), _q('Leaded fuel users…', ['piston aircraft', 'airliners', 'rockets', 'helicopters only'], 0, 'EPA.')],
     [('Decibel', 'Log measure of sound.'), ('Inverse-square law', 'Intensity falls with r².'), ('Single-engine taxi', 'Taxi on one engine.'), ('Continuous descent', 'Idle descent without level-offs.'), ('NOx', 'Nitrogen oxides.'), ('Avgas', 'Aviation gasoline.')],
     ['EPA says the majority of aircraft operating on leaded fuel are piston-engine aircraft, typically carrying 2–10 passengers, and that jets used for commercial transport do not use leaded fuel.', 'EPA has issued a final determination that lead emissions from certain aircraft engines endanger public health and welfare, triggering duties for EPA and the FAA to set standards.'],
-    [('Solutions', 'Solutions.html'), ('Aircraft Performance', 'Aircraft_Performance.html')], [_EPA], [(_EPA[0], _EPA[1], 'EPA page.'), (_MIT[0], _MIT[1], 'Free MIT lecture.')]),
+    [('Solutions', 'Solutions.html'), ('Aircraft Performance', 'Aircraft_Performance.html')], [_EPA], [(_EPA[0], _EPA[1], 'EPA page.')]),
  _u('u10', 'Pathways to Net Zero', 'Weeks 14–15', 'Traffic growth, efficiency, SAF, new aircraft and offsets combined into scenarios toward 2050.',
     ['Project traffic growth.', 'Combine reductions multiplicatively.', 'Build a simple wedge scenario.', 'Discuss policy tools.'],
     ['Emissions = traffic × energy per traffic unit × carbon per energy.', 'Growth compounds: 3% a year doubles traffic in about 24 years (sample rate).',
@@ -237,11 +236,11 @@ LABS = [
  _lab('labB', 'Lab B: L/D and fuel burn', 'Week 4', 'See how lift-to-drag ratio changes fuel for a 3000 km trip.',
       ('W_f/W_i=1-e^{-Rc/(V\\,L/D)}', 'Fuel fraction'), ['Enter R = 3000 km, V = 230 m/s, c = 0.6 /h.', 'Compute the fuel fraction for L/D = 15, 17 and 20.', 'Compute the saving relative to L/D = 17.', 'Add aspect-ratio effects on induced drag.'],
       (['L/D', 'Fuel fraction'], [['15', '0.135'], ['17', '0.120'], ['20', '0.103']]), ['1 − e^(−0.1449) = 0.135.', '1 − e^(−0.1087) = 0.103.'],
-      (_MIT[0], _MIT[1]), 'NASA’s X-plane demonstrator tests an ultra-efficient aerodynamic design.', _SFNP),
+      _SFNP, 'NASA’s X-plane demonstrator tests an ultra-efficient aerodynamic design.', _SFNP),
  _lab('labC', 'Lab C: Propulsive efficiency explorer', 'Week 5', 'Compute propulsive and overall efficiency across exhaust velocities.',
       ('\\eta_p=2/(1+V_e/V_0)', 'Propulsive efficiency'), ['Enter V₀ = 230 m/s and η_th = 0.5.', 'Compute η_p for V_e = 400, 350 and 300 m/s.', 'Compute overall efficiency.', 'Relate to bypass ratio.'],
       (['V_e (m/s)', 'η_p', 'η_o'], [['400', '0.730', '0.365'], ['350', '0.793', '0.397'], ['300', '0.868', '0.434']]), ['2/(1 + 350/230) = 0.793.', '0.5 × 0.793 = 0.397.'],
-      (_MIT[0], _MIT[1]), 'NASA: Hybrid Thermally Efficient Core develops high-power-density turbine cores.', _SFNP),
+      _SFNP, 'NASA: Hybrid Thermally Efficient Core develops high-power-density turbine cores.', _SFNP),
  _lab('labD', 'Lab D: SAF blend calculator', 'Week 7', 'Compute lifecycle savings for blends and SAF reductions.',
       ('s=b\\times r', 'Blend saving'), ['Enter blends of 10%, 30% and 50%.', 'Enter a SAF lifecycle reduction of 50%, then 80%.', 'Compute the saving and CO₂ saved per 1000 gallons.', 'Compare with the Grand Challenge goals.'],
       (['Blend', 'Saving at r = 50%', 'kg CO₂ saved per 1000 gal'], [['10%', '5%', '487.5'], ['30%', '15%', '1462.5'], ['50%', '25%', '2437.5']]), ['0.3 × 0.5 = 15%.', '9750 × 0.25 = 2437.5 kg.'],
@@ -249,7 +248,7 @@ LABS = [
  _lab('labE', 'Lab E: Electric aircraft range', 'Week 10', 'Compute battery-electric range for several battery energy densities.',
       ('R=(e\\eta/g)(L/D)(m_b/m)', 'Electric range'), ['Enter η = 0.8, L/D = 15, battery fraction 0.3.', 'Compute range for 250, 400 and 500 Wh/kg.', 'Compare with a 300 km regional route.', 'Change the battery fraction.'],
       (['e (Wh/kg)', 'Range (km)'], [['250', '330'], ['400', '529'], ['500', '661']]), ['400 × 3600 × 0.8/9.80665 × 15 × 0.3 = 529 km.', '500 Wh/kg doubles the 250 Wh/kg range.'],
-      (_MIT[0], _MIT[1]), 'NASA: electrified aircraft propulsion can cut fuel and energy use.', _SFNP),
+      _SFNP, 'NASA: electrified aircraft propulsion can cut fuel and energy use.', _SFNP),
  _lab('labF', 'Lab F: Net-zero wedge model', 'Week 14', 'Explore warming in PhET Greenhouse Effect, then build a 2026–2050 aviation scenario.',
       ('E=(1+g)^n(1-a)(1-b)', 'Scenario emissions'), ['In PhET Greenhouse Effect, add greenhouse gases and watch the temperature respond.', 'Enter 3% traffic growth for 24 years.', 'Apply a 25% efficiency gain and 50% SAF saving.', 'Find the growth rate at which the two measures hold emissions flat.'],
       (['Case', 'Emissions vs today'], [['Growth only', '2.03'], ['+ efficiency', '1.52'], ['+ SAF', '0.762']]), ['1.03²⁴ = 2.033.', '2.033 × 0.75 × 0.5 = 0.762.'],

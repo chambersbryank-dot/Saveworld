@@ -20,8 +20,6 @@ _O = 'https://openstax.org/books/university-physics-volume-1/pages/'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 # The k-12 FoilSim URL is a move notice. FoilSim itself is the NASA STEM page (same link as AERO 101 Lab A).
 _FS = ('NASA Glenn: FoilSim interactive airfoil simulator', 'https://www.nasa.gov/stem-content/foilsim/')
-_MIT = ('MIT OpenCourseWare 16.100 Aerodynamics (Fall 2005)', 'https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/')
-_MITU = ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
 _BG = ('NASA Glenn: Beginner’s Guide to Aeronautics', _G + 'short.html')
 _ATM = ('NASA Glenn: Earth atmosphere model (metric units)', _G + 'atmosmet.html')
 _ING = ('NASA Science: Ingenuity Mars Helicopter', 'https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/')
@@ -34,7 +32,7 @@ BANNER = ['images/ArtemisII_Launch_KSC_Hancock.jpg', 'images/ISS_Over_Ganges_STS
 CREDITS = {'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA', 'images/ISS_Over_Ganges_STS102.jpg': 'NASA (STS102-357-031, March 18, 2001)',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester junior aerodynamics course. It is modeled on the topics and depth of MIT 16.100 Aerodynamics and the fluids parts of MIT Unified Engineering (both free on MIT OpenCourseWare), and on junior aerodynamics courses such as Purdue AAE 333 and Georgia Tech AE 3030, using NASA Glenn’s free Beginner’s Guide to Aeronautics and FoilSim simulator, which we link where they help. None of those authors or schools endorses this page.',
+         'Its scope follows a one-semester junior aerodynamics course. It is modeled on the topics and depth of MIT 16.100 Aerodynamics and the fluids parts of MIT Unified Engineering, and on junior aerodynamics courses such as Purdue AAE 333 and Georgia Tech AE 3030, using NASA Glenn’s free Beginner’s Guide to Aeronautics and FoilSim simulator, which we link where they help. None of those authors or schools endorses this page.',
          'What we add: every unit ties to real work with a cited public source (NASA winglets, supercritical and truss-braced wings, wind turbines, aircraft emissions rules and flight on Mars), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a safe home version.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Aerodynamics decides how much fuel an airplane burns and how much electricity a wind turbine makes. Every bit of drag removed from a wing is fuel not burned and carbon not emitted, and every improvement in a blade’s lift-to-drag ratio is more clean power from the same wind.',
@@ -54,7 +52,7 @@ CONSTANTS = [('Sea-level standard air (textbook values)', 'p = 101,325 Pa, T = 2
              ('Gas constant for air', 'R = 287 J/(kg·K); γ = 1.4'), ('1 knot', '0.514444 m/s'), ('1 foot', '0.3048 m'), ('1 mile per hour', '0.44704 m/s'), ('Gravity on Mars (textbook value)', 'g = 3.71 m/s²')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA pages and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT lecture notes and problem sets.'), (_MITU[0], _MITU[1], 'Free MIT fluids and thermodynamics notes.'), (_BG[0], _BG[1], 'Hundreds of free NASA pages on lift, drag and compressible flow.'),
+PTABLE = [(_BG[0], _BG[1], 'Hundreds of free NASA pages on lift, drag and compressible flow.'),
           (_FS[0], _FS[1], 'Change airfoil shape, speed and altitude and see lift and drag.'), ('OpenStax University Physics Volume 1, 14.6 Bernoulli’s equation', _O + '14-6-bernoullis-equation', 'Free textbook section.'),
           ('PhET: Fluid Pressure and Flow', _PH + 'fluid-pressure-and-flow', 'Pressure, flow and Bernoulli.')]
 UNITS = []
@@ -85,7 +83,7 @@ UNITS.append(
                      'Airliners cruise near the top of the troposphere, where the density is only about 30% of sea level, so drag at a given speed is much lower; that is a big reason cruise altitude matters for fuel burn. The same model, with Mars values, explains why NASA’s Ingenuity helicopter had to spin its rotors so fast: NASA notes the Martian atmosphere is less than 1 percent as dense as Earth’s.'],
             'site': [('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_ATM, _ING]},
- 'res': [(_ATM[0], _ATM[1], 'Standard atmosphere curve fits.'), (_BG[0], _BG[1], 'Free NASA guide.'), (_MITU[0], _MITU[1], 'Fluid properties and thermodynamics notes.'),
+ 'res': [(_ATM[0], _ATM[1], 'Standard atmosphere curve fits.'), (_BG[0], _BG[1], 'Free NASA guide.'),
          ('PhET: Under Pressure', _PH + 'under-pressure', 'Hydrostatic pressure interactively.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Fluid Statics, Bernoulli’s Equation and Airspeed Measurement', 'weeks': 'Week 2',
@@ -142,9 +140,8 @@ UNITS.append(
  'planet': {'text': ['Momentum theory shows why Ingenuity was a feat. NASA lists its mass as 1.8 kg, its rotors as about 1.2 m tip to tip, and its average flight power as about 350 W, from a solar panel charging lithium-ion batteries for one 90-second flight per Martian day. With Mars gravity (3.71 m/s², a textbook value), the thrust needed is 6.68 N.',
                      'Taking a sample Mars density of 0.0115 kg/m³ (within NASA’s “less than 1 percent” of Earth’s) and one 1.2 m disk, momentum theory gives an ideal hover power of about 107 W; the 350 W NASA reports also covers real rotor losses (profile drag, tip losses, non-uniform inflow), climbing and onboard systems. The same equation sizes rotors for electric air taxis and drones on Earth, and it is behind this site’s rotor hover power calculator.'],
             'site': [('Rotor Hover Power Calculator', 'Rotor_Hover_Power_Calculator.html'), ('Dynamics', 'Dynamics.html')],
-            'src': [_ING, (_MITU[0], _MITU[1])]},
- 'res': [('NASA Glenn: Conservation of mass', _G + 'mass.html', 'Free NASA page.'), ('OpenStax UP1, 14.5 Fluid dynamics', _O + '14-5-fluid-dynamics', 'Flow rate and continuity.'),
-         (_MITU[0], _MITU[1], 'Control volumes and momentum theory.'), (_MIT[0], _MIT[1], 'Conservation laws in differential form.')]})
+            'src': [_ING]},
+ 'res': [('NASA Glenn: Conservation of mass', _G + 'mass.html', 'Free NASA page.'), ('OpenStax UP1, 14.5 Fluid dynamics', _O + '14-5-fluid-dynamics', 'Flow rate and continuity.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Potential Flow and the Kutta–Joukowski Theorem', 'weeks': 'Weeks 5–6',
  'summary': 'Vorticity and circulation, irrotational flow, the velocity potential and stream function, Laplace’s equation and superposition, uniform flow, sources, sinks, doublets and vortices, flow over a cylinder with and without circulation, d’Alembert’s paradox, and the Kutta–Joukowski lift theorem.',
@@ -172,7 +169,7 @@ UNITS.append(
                      'DOE notes that land-based turbines range from 100 kilowatts to several megawatts and that offshore turbines are typically larger, taller than the Statue of Liberty. Blade designers use the circulation and lift ideas from this unit, with blade-element momentum theory built on Unit 3, to shape each section of a blade so it extracts as much power from the wind as possible.'],
             'site': [('Solutions', 'Solutions.html'), ('Physics II', 'Physics_II.html')],
             'src': [_WIND]},
- 'res': [(_MIT[0], _MIT[1], 'Potential flow lectures.'), (_FS[0], _FS[1], 'See circulation and lift.'), ('NASA Glenn: Lift from flow turning', _N + 'foiltrn/', 'Why the flow turns.'),
+ 'res': [(_FS[0], _FS[1], 'See circulation and lift.'), ('NASA Glenn: Lift from flow turning', _N + 'foiltrn/', 'Why the flow turns.'),
          ('NASA Glenn: Incorrect lift theory (equal transit)', _N + 'foilw1/', 'Common misconceptions.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Airfoils, Lift, Drag and Moment Coefficients', 'weeks': 'Week 7',
@@ -201,7 +198,7 @@ UNITS.append(
                      'NASA reports that supercritical wings increased efficiency by as much as 15%, also work better at slower speeds, and allow a lighter wing. They became the industry standard, and NASA says they save billions of dollars in fuel each year. Shaping a section’s pressure distribution, as in this unit, is how fuel and emissions are cut.'],
             'site': [('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html'), ('Solutions', 'Solutions.html')],
             'src': [_SC]},
- 'res': [('NASA Glenn: The lift equation', _N + 'lift-equation/', 'Free NASA page.'), ('NASA Glenn: The drag equation', _N + 'drag-equation/', 'Free NASA page.'), (_FS[0], _FS[1], 'Explore lift curves.'), (_MIT[0], _MIT[1], 'Airfoil lectures.')]})
+ 'res': [('NASA Glenn: The lift equation', _N + 'lift-equation/', 'Free NASA page.'), ('NASA Glenn: The drag equation', _N + 'drag-equation/', 'Free NASA page.'), (_FS[0], _FS[1], 'Explore lift curves.')]})
 UNITS.append(
 {'id': 'u6', 'title': 'Thin Airfoil Theory', 'weeks': 'Week 8',
  'summary': 'Vortex sheets, modeling the camber line with a vortex sheet, the Kutta condition, the Fourier-series solution, the lift slope of 2π per radian, the zero-lift angle of cambered airfoils, the quarter-chord aerodynamic center, and panel methods.',
@@ -229,7 +226,7 @@ UNITS.append(
                      'Thin airfoil theory gives the first estimate of that section lift: c_l = 2π(α − α_L=0). Panel methods and wind-tunnel data refine it. DOE notes that land-based turbines run from 100 kilowatts to several megawatts, so a few percent better section lift-to-drag ratio means a lot of extra clean energy over a turbine’s life.'],
             'site': [('Solutions', 'Solutions.html'), ('Linear Algebra', 'Linear_Algebra.html')],
             'src': [_WIND]},
- 'res': [(_MIT[0], _MIT[1], 'Thin airfoil theory lectures.'), (_FS[0], _FS[1], 'Compare theory with the simulator.'), ('NASA Glenn: Lift from flow turning', _N + 'foiltrn/', 'Free NASA page.'), (_MITU[0], _MITU[1], 'Unified Engineering fluids.')]})
+ 'res': [(_FS[0], _FS[1], 'Compare theory with the simulator.'), ('NASA Glenn: Lift from flow turning', _N + 'foiltrn/', 'Free NASA page.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Finite Wings and Induced Drag', 'weeks': 'Weeks 9–10',
  'summary': 'Wingtip vortices and downwash, the induced angle of attack, Prandtl’s lifting-line theory, elliptic lift distribution, span efficiency, induced drag C_Di = C_L²/(πeAR), the finite-wing lift slope, aspect ratio, winglets and truss-braced wings.',
@@ -257,7 +254,7 @@ UNITS.append(
                      'The next step pushes aspect ratio further. NASA’s 2023 Sustainable Flight Demonstrator award (NASA $425 million over seven years, partners about $725 million) is for a transonic truss-braced wing: extra-long, thin wings braced by struts, which NASA says means less drag and, combined with other advances, up to 30% less fuel use and emissions. That is C_Di = C_L²/(πeAR) at work.'],
             'site': [('Solutions', 'Solutions.html'), ('Statics', 'Statics.html')],
             'src': [_WL, _TTBW]},
- 'res': [('NASA Glenn: Induced drag', _N + 'induced-drag-coefficient/', 'Free NASA page.'), ('NASA Glenn: Lift to drag ratio', _N + 'lift-to-drag-ratio/', 'Free NASA page.'), (_MIT[0], _MIT[1], 'Lifting-line lectures.'), (_FS[0], _FS[1], 'Simulator.')]})
+ 'res': [('NASA Glenn: Induced drag', _N + 'induced-drag-coefficient/', 'Free NASA page.'), ('NASA Glenn: Lift to drag ratio', _N + 'lift-to-drag-ratio/', 'Free NASA page.'), (_FS[0], _FS[1], 'Simulator.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Viscous Flow, Reynolds Number and Boundary Layers', 'weeks': 'Week 11',
  'summary': 'The no-slip condition, the Reynolds number and similarity, the Navier–Stokes equations in words, laminar and turbulent boundary layers, the Blasius flat-plate solution, skin friction, transition, separation and pressure drag, and the drag breakdown of an aircraft.',
@@ -285,7 +282,7 @@ UNITS.append(
                      'EPA reports that the aircraft covered by its greenhouse gas standards account for 10 percent of U.S. transportation greenhouse gas emissions and 3 percent of total U.S. emissions, and that its 2020 standards align with the International Civil Aviation Organization’s CO₂ standards. Boundary-layer engineering, from riblets to laminar-flow wings, is one route to meeting those rules.'],
             'site': [('Solutions', 'Solutions.html'), ('Differential Equations', 'Differential_Equations.html')],
             'src': [_EPA, ('NASA Glenn: Boundary layer', _N + 'boundary-layer/')]},
- 'res': [('NASA Glenn: Boundary layer', _N + 'boundary-layer/', 'Free NASA page.'), ('NASA Glenn: Reynolds number', _G + 'reynolds.html', 'Free NASA page.'), ('OpenStax UP1, 14.7 Viscosity and turbulence', _O + '14-7-viscosity-and-turbulence', 'Free textbook section.'), (_MIT[0], _MIT[1], 'Viscous flow lectures.')]})
+ 'res': [('NASA Glenn: Boundary layer', _N + 'boundary-layer/', 'Free NASA page.'), ('NASA Glenn: Reynolds number', _G + 'reynolds.html', 'Free NASA page.'), ('OpenStax UP1, 14.7 Viscosity and turbulence', _O + '14-7-viscosity-and-turbulence', 'Free textbook section.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'Compressible Flow: Isentropic Relations and Shock Waves', 'weeks': 'Weeks 12–13',
  'summary': 'When compressibility matters, stagnation properties, isentropic relations, area–velocity relation and nozzles, normal shocks, oblique shocks and expansion waves in brief, the critical Mach number, drag divergence, wave drag and supercritical airfoils.',
@@ -313,7 +310,7 @@ UNITS.append(
                      'That is the critical-Mach and drag-divergence story from this unit. NASA says the design became the industry standard and saves billions of dollars in fuel a year; less fuel burned at cruise means less CO₂ from the flights that make up a large share of aviation emissions.'],
             'site': [('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html'), ('Space Weather', 'Space_Weather.html')],
             'src': [_SC, ('NASA Glenn: Normal shock wave', _G + 'normal.html')]},
- 'res': [('NASA Glenn: Isentropic flow', _G + 'isentrop.html', 'Free NASA page.'), ('NASA Glenn: Normal shock wave', _G + 'normal.html', 'Free NASA page.'), ('NASA Glenn: Mach number', _G + 'mach.html', 'Free NASA page.'), (_MIT[0], _MIT[1], 'Compressible flow lectures.')]})
+ 'res': [('NASA Glenn: Isentropic flow', _G + 'isentrop.html', 'Free NASA page.'), ('NASA Glenn: Normal shock wave', _G + 'normal.html', 'Free NASA page.'), ('NASA Glenn: Mach number', _G + 'mach.html', 'Free NASA page.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Aircraft Performance: Drag Polar, Glide, Range and Endurance', 'weeks': 'Weeks 14–15',
  'summary': 'The drag polar C_D = C_D0 + KC_L², thrust and power required, minimum-drag speed, maximum lift-to-drag ratio, gliding flight, the Breguet range and endurance equations, and how aerodynamic efficiency translates into fuel and emissions.',
@@ -341,7 +338,7 @@ UNITS.append(
                      'The Breguet equation shows why: range and fuel efficiency scale with L/D. EPA notes that covered aircraft are 10 percent of U.S. transportation greenhouse gas emissions, so a few points of L/D, multiplied across thousands of flights a day, matter for the climate.'],
             'site': [('Solutions', 'Solutions.html'), ('Calculus I', 'Calculus_I.html')],
             'src': [_TTBW, _EPA]},
- 'res': [('NASA Glenn: Lift to drag ratio', _N + 'lift-to-drag-ratio/', 'Free NASA page.'), ('NASA Glenn: Induced drag', _N + 'induced-drag-coefficient/', 'Free NASA page.'), (_MITU[0], _MITU[1], 'Performance lectures.'), (_MIT[0], _MIT[1], 'MIT aerodynamics.')]})
+ 'res': [('NASA Glenn: Lift to drag ratio', _N + 'lift-to-drag-ratio/', 'Free NASA page.'), ('NASA Glenn: Induced drag', _N + 'induced-drag-coefficient/', 'Free NASA page.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: The standard atmosphere spreadsheet', 'week': 'Week 1',

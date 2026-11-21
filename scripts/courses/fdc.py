@@ -13,9 +13,6 @@ DESC = 'Free self-study Flight Dynamics & Controls: 10 units, worked examples, s
 ALT = 'The International Space Station seen from a departing spacecraft during a 2021 flyaround'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _GG = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
-_MIT = ('MIT OpenCourseWare 16.333 Aircraft Stability and Control (Fall 2004)', 'https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/')
-_MITC = ('MIT OpenCourseWare 16.06 Principles of Automatic Control (Fall 2012)', 'https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/')
-_MITF = ('MIT OpenCourseWare 16.30 Feedback Control Systems (Fall 2010)', 'https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/')
 _GROT = ('NASA Glenn Beginner’s Guide: Aircraft rotations', _GG + 'aircraft-rotations/')
 _GCG = ('NASA Glenn Beginner’s Guide: Center of gravity', _GG + 'center-of-gravity/')
 _GEL = ('NASA Glenn Beginner’s Guide: Aircraft elevator interactive', _GG + 'aircraft-elevator-interactive/')
@@ -28,7 +25,7 @@ BANNER = ['images/ISS_Flyaround_2021.jpg', 'images/GOES19_GOESU_KSC.jpg', 'image
 CREDITS = {'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)', 'images/GOES19_GOESU_KSC.jpg': 'NASA/KSC', 'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA',
            'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior flight dynamics and controls course for aerospace engineers. It is modeled on the topics and depth of MIT 16.333 Aircraft Stability and Control, MIT 16.06 Principles of Automatic Control and MIT 16.30 Feedback Control Systems (free on MIT OpenCourseWare), using NASA Glenn’s free Beginner’s Guide to Aeronautics, which we link where it helps. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester senior flight dynamics and controls course for aerospace engineers. It is modeled on the topics and depth of MIT 16.333 Aircraft Stability and Control, MIT 16.06 Principles of Automatic Control and MIT 16.30 Feedback Control Systems, using NASA Glenn’s free Beginner’s Guide to Aeronautics, which we link where it helps. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (NASA’s X-59 flight tests, Hubble’s pointing system and the Dragonfly rotorcraft), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Stable, well-controlled vehicles fly efficient paths, and the same control ideas point Earth-observing satellites and telescopes precisely enough to measure our planet and universe.',
@@ -48,7 +45,7 @@ CONSTANTS = [('Standard gravity', 'g₀ = 9.80665 m/s²'), ('1 radian', '57.2958
              ('Settling time rule (textbook)', 't_s ≈ 4/(ζω_n) for 2% settling'), ('First-order step', '63.2% of final value at t = τ'), ('Sea-level air density (standard atmosphere)', '1.225 kg/m³')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA guides and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT stability and control lectures.'), (_MITC[0], _MITC[1], 'Free MIT control lectures and problems.'), (_MITF[0], _MITF[1], 'Free MIT feedback control course.'),
+PTABLE = [
           (_GROT[0], _GROT[1], 'Free NASA explainer.'), (_GCG[0], _GCG[1], 'Free NASA explainer.'), ('PhET: Masses and Springs', _PH + 'masses-and-springs', 'Damped oscillation interactively.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -79,7 +76,7 @@ UNITS.append(
                      'Every modern efficient airliner and Earth-observing aircraft still uses those three moments, now often commanded through flight-control computers.'],
             'site': [('Aerodynamics I', 'Aerodynamics_I.html'), ('Dynamics', 'Dynamics.html')],
             'src': [_GROT, _GCG]},
- 'res': [(_GROT[0], _GROT[1], 'Free NASA explainer.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_GROT[0], _GROT[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Longitudinal Static Stability', 'weeks': 'Week 2',
  'summary': 'Pitching-moment coefficient, the stability derivative C_mα, the neutral point, static margin, and how cg position and tail size set stability.',
@@ -104,7 +101,7 @@ UNITS.append(
                      'The X-59 is shaped to turn a loud sonic boom into a quiet thump, and confirming its stability margin in flight is part of proving that quieter supersonic flight is practical.'],
             'site': [('Aerodynamics I', 'Aerodynamics_I.html'), ('Aircraft Performance', 'Aircraft_Performance.html')],
             'src': [_X59]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_GCG[0], _GCG[1], 'Free NASA explainer.')]})
+ 'res': [(_GCG[0], _GCG[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Trim and Elevator Control', 'weeks': 'Week 3',
  'summary': 'Trim as zero net pitching moment, elevator effectiveness, the elevator angle to trim, tail download and trim drag, and stick-fixed versus stick-free stability.',
@@ -129,7 +126,7 @@ UNITS.append(
                      'Every bit of extra lift adds drag and fuel burn, so careful trim and cg management are small but real ways to cut aviation emissions.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')],
             'src': [_GEL]},
- 'res': [(_GEL[0], _GEL[1], 'Free NASA interactive.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_GEL[0], _GEL[1], 'Free NASA interactive.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Lateral-Directional Stability and Turns', 'weeks': 'Week 4',
  'summary': 'Weathercock (directional) stability, dihedral effect, aileron roll control, roll damping and the roll mode, adverse yaw, and the coordinated turn.',
@@ -154,7 +151,7 @@ UNITS.append(
                      'This unit’s turn equation is that idea in numbers. Coordinated, efficient turns keep extra drag, and so extra fuel burn, small.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Aerodynamics I', 'Aerodynamics_I.html')],
             'src': [_GAIL, _GROT]},
- 'res': [(_GAIL[0], _GAIL[1], 'Free NASA explainer.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_GAIL[0], _GAIL[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Equations of Motion and Dynamic Modes', 'weeks': 'Weeks 5–6',
  'summary': 'Six-degree-of-freedom equations, small-disturbance linearization, state-space form, eigenvalues, and the short-period, phugoid, roll, spiral and Dutch-roll modes.',
@@ -179,7 +176,7 @@ UNITS.append(
                      'NASA reports the X-59 reached its target cruise of Mach 1.4 (924 mph) at 55,000 feet relatively early in testing. Models built from this unit’s linear equations are what a digital twin compares against.'],
             'site': [('Differential Equations', 'Differential_Equations.html'), ('Linear Algebra', 'Linear_Algebra.html')],
             'src': [_X59]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_MITF[0], _MITF[1], 'Free MIT course.')]})
+ 'res': []})
 UNITS.append(
 {'id': 'u6', 'title': 'Laplace Transforms and Transfer Functions', 'weeks': 'Week 7',
  'summary': 'Transfer functions, poles and zeros, block diagrams, first-order systems, time constants, DC gain and the final value theorem.',
@@ -204,7 +201,7 @@ UNITS.append(
                      'Sensors like these are the measurement blocks in this unit’s diagrams: a controller can only be as good as the rates and angles it measures.'],
             'site': [('Differential Equations', 'Differential_Equations.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_HUB]},
- 'res': [(_MITC[0], _MITC[1], 'Free MIT lectures.'), (_MITF[0], _MITF[1], 'Free MIT course.')]})
+ 'res': []})
 UNITS.append(
 {'id': 'u7', 'title': 'Second-Order Time Response', 'weeks': 'Week 8',
  'summary': 'Underdamped step response, overshoot, peak time, settling time, damping ratio and natural frequency, and handling-quality targets.',
@@ -229,7 +226,7 @@ UNITS.append(
                      'Tuning response speed and damping, the quantities in this unit, is how control software turns a radical quiet-supersonic shape into an aircraft pilots describe as “exciting but uneventful.”'],
             'site': [('Differential Equations', 'Differential_Equations.html'), ('Aircraft Performance', 'Aircraft_Performance.html')],
             'src': [_X59]},
- 'res': [(_MITC[0], _MITC[1], 'Free MIT lectures.'), ('PhET: Masses and Springs', _PH + 'masses-and-springs', 'Damped oscillation.')]})
+ 'res': [('PhET: Masses and Springs', _PH + 'masses-and-springs', 'Damped oscillation.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Feedback and PID Control', 'weeks': 'Weeks 9–10',
  'summary': 'Why feedback, proportional, integral and derivative action, steady-state error and system type, gain selection for damping, and a pitch-attitude autopilot example.',
@@ -254,7 +251,7 @@ UNITS.append(
                      'NASA’s mobility lead notes that everything Dragonfly does on Titan has to happen autonomously, without real-time help from Earth. Closed-loop feedback like this unit’s is what makes that possible.'],
             'site': [('Solutions', 'Solutions.html'), ('Orbital Mechanics', 'Orbital_Mechanics.html')],
             'src': [_DF]},
- 'res': [(_MITC[0], _MITC[1], 'Free MIT lectures.'), (_MITF[0], _MITF[1], 'Free MIT course.')]})
+ 'res': []})
 UNITS.append(
 {'id': 'u9', 'title': 'Stability Analysis: Routh, Root Locus and Margins', 'weeks': 'Week 11',
  'summary': 'The Routh–Hurwitz test, root-locus sketching, frequency response and Bode plots, gain and phase margin, and the link between phase margin and damping.',
@@ -279,7 +276,7 @@ UNITS.append(
                      'Margins are the engineering answer to “what if”: a loop with healthy gain and phase margins keeps working when parts age, sensors drift or the environment surprises it.'],
             'site': [('Linear Algebra', 'Linear_Algebra.html'), ('Solutions', 'Solutions.html')],
             'src': [_DF]},
- 'res': [(_MITC[0], _MITC[1], 'Free MIT lectures.'), (_MITF[0], _MITF[1], 'Free MIT course.')]})
+ 'res': []})
 UNITS.append(
 {'id': 'u10', 'title': 'Spacecraft Attitude Determination and Control', 'weeks': 'Weeks 12–13',
  'summary': 'Rigid-body rotation, attitude sensors (gyros, star trackers), reaction wheels and momentum, bang-bang slews, safe modes, and pointing for Earth and space science.',
@@ -304,7 +301,7 @@ UNITS.append(
                      'The same attitude-control ideas point Earth-observing satellites such as GOES-19 and Landsat at the planet they measure.'],
             'site': [('GOES-19', 'GOES-19.html'), ('Orbital Mechanics', 'Orbital_Mechanics.html')],
             'src': [_HUB]},
- 'res': [(_MITF[0], _MITF[1], 'Free MIT course.'), (_HUB[0], _HUB[1], 'NASA article.')]})
+ 'res': [(_HUB[0], _HUB[1], 'NASA article.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Balancing moments and finding the cg', 'week': 'Week 1',
@@ -348,7 +345,7 @@ LABS.append(
  'note': 'Computed values; small steps match closely.',
  'calc': ['2.5(1 − e⁻¹) = 1.580.', '1 + 0.309 = 1.309.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet or Python works.'],
- 'sims': [(_MITC[0], _MITC[1])],
+ 'sims': [],
  'planet': 'NASA’s X-59 team compares flight data with a real-time digital twin.', 'planet_src': [_X59]})
 LABS.append(
 {'id': 'labE', 'title': 'Lab E: Tuning a pitch-attitude autopilot', 'week': 'Week 10',
@@ -359,7 +356,7 @@ LABS.append(
  'note': 'Computed from second-order formulas.',
  'calc': ['ζ = 0.25 ⇒ 44.4%; t_s = 4/(0.25 × 4) = 4.0 s.', 'PD: t_s = 4/(0.7 × 4) = 1.43 s.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet or Python works.'],
- 'sims': [(_MITF[0], _MITF[1])],
+ 'sims': [],
  'planet': 'NASA: Dragonfly must fly autonomously at Titan without real-time help from Earth.', 'planet_src': [_DF]})
 LABS.append(
 {'id': 'labF', 'title': 'Lab F: Reaction-wheel slew planner', 'week': 'Week 13',

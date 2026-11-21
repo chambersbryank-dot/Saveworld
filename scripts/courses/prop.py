@@ -15,8 +15,6 @@ CREDIT = 'Course created by Saving Planets: the Founder sets direction and appro
 ALT = 'NASA’s SLS core stage fires its four RS-25 engines during the Green Run hot-fire test at Stennis Space Center'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _G = 'https://www.grc.nasa.gov/www/k-12/'
-_MIT = ('MIT OpenCourseWare 16.50 Introduction to Propulsion Systems (Spring 2012)', 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/')
-_MITR = ('MIT OpenCourseWare 16.512 Rocket Propulsion (Fall 2005)', 'https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/')
 _GTF = ('NASA Glenn Beginner’s Guide: Turbofan thrust', _G + 'airplane/turbfan.html')
 _GBR = ('NASA Glenn Beginner’s Guide: Brayton cycle', _G + 'airplane/brayton.html')
 _GSI = ('NASA Glenn Beginner’s Guide: Specific impulse', _G + 'airplane/specimp.html')
@@ -29,7 +27,7 @@ BANNER = ['images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg', 'images/Artemi
 CREDITS = {'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg': 'NASA/Michael DeMocker (MAF20210116_GR0006)', 'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior propulsion course for aerospace engineers. It is modeled on the topics and depth of MIT 16.50 Introduction to Propulsion Systems and MIT 16.512 Rocket Propulsion (free on MIT OpenCourseWare), using NASA Glenn’s free Beginner’s Guide to Propulsion, which we link where it helps. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester senior propulsion course for aerospace engineers. It is modeled on the topics and depth of MIT 16.50 Introduction to Propulsion Systems and MIT 16.512 Rocket Propulsion, using NASA Glenn’s free Beginner’s Guide to Propulsion, which we link where it helps. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (NASA’s RS-25 engines, NASA engine-core research and the U.S. Department of Energy’s sustainable aviation fuel work), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Propulsion is where aviation’s fuel burn and emissions are decided: every point of engine efficiency is fuel not burned, and new fuels can cut the carbon in what is burned.',
@@ -49,7 +47,7 @@ CONSTANTS = [('Air (textbook values)', 'γ = 1.4, c_p = 1005 J/(kg·K)'), ('Stan
              ('Jet fuel (textbook values)', 'heating value 43 MJ/kg; 3.16 kg CO₂ per kg burned'), ('Liquid hydrogen (textbook value)', 'heating value 120 MJ/kg'), ('Universal gas constant', '8314 J/(kmol·K)')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA guides and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT propulsion lectures and problem sets.'), (_MITR[0], _MITR[1], 'Free MIT rocket propulsion course.'), (_GTF[0], _GTF[1], 'Free NASA explainer.'),
+PTABLE = [(_GTF[0], _GTF[1], 'Free NASA explainer.'),
           (_GSI[0], _GSI[1], 'Free NASA explainer.'), (_GBR[0], _GBR[1], 'Free NASA explainer.'), ('PhET: Gas Properties', _PH + 'gas-properties', 'Gas laws interactively.')]
 UNITS = []
 def _q(q, opts, ok, why):
@@ -80,7 +78,7 @@ UNITS.append(
                      'That efficiency comes straight from this unit’s equation: moving more air at a speed closer to flight speed raises propulsive efficiency, which means less fuel burned and less CO₂ for the same trip.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')],
             'src': [_GTF]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_GSI[0], _GSI[1], 'Free NASA explainer.')]})
+ 'res': [(_GSI[0], _GSI[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'The Brayton Cycle and Thermal Efficiency', 'weeks': 'Week 2',
  'summary': 'The ideal Brayton cycle, isentropic compression and expansion, thermal efficiency versus pressure ratio, compressor and turbine work, component efficiencies, and overall efficiency.',
@@ -130,7 +128,7 @@ UNITS.append(
                      'Predictions that close come from the isentropic-flow relations in this unit, refined by test data: getting nozzle and chamber conditions right is what makes an engine perform as designed.'],
             'site': [('Fluid Mechanics', 'Fluid_Mechanics.html'), ('Artemis II', 'Artemis_II.html')],
             'src': [_RS25]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_GRT[0], _GRT[1], 'Free NASA explainer.')]})
+ 'res': [(_GRT[0], _GRT[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Turbojets: Components and Cycle Analysis', 'weeks': 'Weeks 5–6',
  'summary': 'Inlet, compressor, burner, turbine and nozzle; work balance between compressor and turbine; turbine inlet temperature limits; afterburners; and real component efficiencies.',
@@ -155,7 +153,7 @@ UNITS.append(
                      'The pure turbojet survives mainly as a teaching model: its simple work balance shows why later engines added a fan to cut fuel burn.'],
             'site': [('Aerodynamics I', 'Aerodynamics_I.html'), ('Thermodynamics', 'Thermodynamics.html')],
             'src': [_GTF]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_GBR[0], _GBR[1], 'Free NASA explainer.')]})
+ 'res': [(_GBR[0], _GBR[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Turbofans and Turboprops', 'weeks': 'Week 7',
  'summary': 'Bypass ratio, core and fan streams, the turbofan thrust equation, propulsive efficiency of the fan stream, turboprops and open rotors, and the size and weight trade.',
@@ -180,7 +178,7 @@ UNITS.append(
                      'This unit’s example shows the effect: the same 100 kg/s core makes 20 kN as a turbojet and 70 kN with a bypass-ratio-10 fan, for nearly the same core fuel flow.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')],
             'src': [_GTF]},
- 'res': [(_GTF[0], _GTF[1], 'Free NASA explainer.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_GTF[0], _GTF[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u6', 'title': 'Fuel Burn, TSFC and Emissions', 'weeks': 'Week 8',
  'summary': 'Fuel heating value, overall efficiency, thrust-specific fuel consumption, CO₂ from burning jet fuel, and how engine efficiency links to range and climate impact.',
@@ -205,7 +203,7 @@ UNITS.append(
                      'This unit’s numbers show why that matters: one large engine at cruise in our example emits about 13.7 tonnes of CO₂ per hour, so even small TSFC gains add up across a fleet.'],
             'site': [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_HY]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_HY[0], _HY[1], 'NASA project page.')]})
+ 'res': [(_HY[0], _HY[1], 'NASA project page.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Rocket Fundamentals and Specific Impulse', 'weeks': 'Weeks 9–10',
  'summary': 'Rocket thrust, effective exhaust velocity, specific impulse, total impulse, mass flow, and real numbers from NASA’s RS-25 engine.',
@@ -230,7 +228,7 @@ UNITS.append(
                      'The same page notes that during Artemis I in November 2022 the engines produced over 2 million pounds of vacuum thrust. Reusing proven engines is one way NASA builds Earth-observing and exploration capability.'],
             'site': [('Artemis II', 'Artemis_II.html'), ('Orbital Mechanics', 'Orbital_Mechanics.html')],
             'src': [_RS25, _GSI]},
- 'res': [(_GSI[0], _GSI[1], 'Free NASA explainer.'), (_MITR[0], _MITR[1], 'Free MIT rocket course.')]})
+ 'res': [(_GSI[0], _GSI[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Rocket Nozzles, Propellants and Throttling', 'weeks': 'Week 11',
  'summary': 'Chamber conditions, nozzle expansion, exit velocity from the isentropic relations, expansion ratio and altitude, propellant choices and throttling.',
@@ -255,7 +253,7 @@ UNITS.append(
                      'Each added percent of thrust follows from chamber and nozzle physics in this unit, and lets the same engine lift more mass to orbit.'],
             'site': [('Artemis II', 'Artemis_II.html'), ('GOES-19', 'GOES-19.html')],
             'src': [_RS25]},
- 'res': [(_MITR[0], _MITR[1], 'Free MIT rocket course.'), (_GRT[0], _GRT[1], 'Free NASA explainer.')]})
+ 'res': [(_GRT[0], _GRT[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'The Rocket Equation and Electric Propulsion', 'weeks': 'Week 12',
  'summary': 'The Tsiolkovsky equation, mass ratio, staging, electric thrusters, power-limited thrust, and the trade between Isp and thrust.',
@@ -280,7 +278,7 @@ UNITS.append(
                      'Getting there took the rocket-equation budgeting of this unit: launch Δv from a chemical rocket, then precise in-space propulsion to steer into a small target.'],
             'site': [('Orbital Mechanics', 'Orbital_Mechanics.html'), ('Solutions', 'Solutions.html')],
             'src': [_DART]},
- 'res': [(_MITR[0], _MITR[1], 'Free MIT rocket course.'), (_GSI[0], _GSI[1], 'Free NASA explainer.')]})
+ 'res': [(_GSI[0], _GSI[1], 'Free NASA explainer.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Sustainable Propulsion: SAF, Hydrogen and Electric Flight', 'weeks': 'Week 13',
  'summary': 'Sustainable aviation fuels, energy density per kilogram, hydrogen and batteries compared with jet fuel, and what the numbers mean for future aircraft.',
@@ -338,7 +336,7 @@ LABS.append(
  'note': 'Computed values for γ = 1.4.',
  'calc': ['p₀/p at M = 2: 1.8^3.5 = 7.824.', 'A/A* at M = 0.8: (1/0.8)(1.128/1.2)³ = 1.038.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA reports Artemis I RS-25 valves within 0.5% of predicted values.', 'planet_src': [_RS25]})
 LABS.append(
 {'id': 'labD', 'title': 'Lab D: The turbofan bypass trade', 'week': 'Week 7',
@@ -375,22 +373,6 @@ LABS.append(
  'planet': 'DOE says the US could produce more than 1 billion tons of biomass a year.', 'planet_src': [_SAF]})
 UPDATED = '2026-11-18'
 VERSION = '2026.11.18'
-_OCW = 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/resources/'
-# Titles are the lecture topics published on the MIT 16.50 lecture-notes page (fetched November 18, 2026). Notes, not videos.
-SESSION_NOTES = [
- ('u1', 'MIT 16.50 Lecture 19: Turbojet engines (cont.); design parameters; effect of mass flow on thrust', _OCW + 'mit16_50s12_lec19/'),
- ('u3', 'MIT 16.50 Lecture 22: Inlets or diffusers', _OCW + 'mit16_50s12_lec22/'),
- ('u3', 'MIT 16.50 Lecture 23: Exhaust nozzles', _OCW + 'mit16_50s12_lec23/'),
- ('u4', 'MIT 16.50 Lecture 18: Aircraft engine modeling; turbojet engine', _OCW + 'mit16_50s12_lec18/'),
- ('u4', 'MIT 16.50 Lecture 34: Combustors; afterburners', _OCW + 'mit16_50s12_lec34/'),
- ('u5', 'MIT 16.50 Lecture 21: Turbofan engines', _OCW + 'mit16_50s12_lec21/'),
- ('u6', 'MIT 16.50 Lecture 35: Pollutant; motivations for control; formation; strategies for reduction', _OCW + 'mit16_50s12_lec35/'),
- ('u7', 'MIT 16.50 Lecture 1: Rocket equation; gravity loss; optimum acceleration', _OCW + 'mit16_50s12_lec1/'),
- ('u8', 'MIT 16.50 Lecture 6: Modeling of thermal rocket engines; nozzle flow; control of mass flow', _OCW + 'mit16_50s12_lec6/'),
- ('u8', 'MIT 16.50 Lecture 7: Modeling of rocket nozzles; effects of nozzle area ratio', _OCW + 'mit16_50s12_lec7/'),
- ('u8', 'MIT 16.50 Lecture 8: Types of nozzles; connection of flow to nozzle shape', _OCW + 'mit16_50s12_lec8/'),
- ('u9', 'MIT 16.50 Lecture 5: Non-chemical rockets; optimum exhaust velocity', _OCW + 'mit16_50s12_lec5/'),
-]
 SCHEDULE = [(1, 'u1', 'Thrust and propulsive efficiency; Lab A', 'NASA Glenn'), (2, 'u2', 'Brayton cycle; Lab B', 'NASA Glenn'),
             (3, 'u3', 'Stagnation properties and choking', 'MIT 16.50'), (4, 'u3', 'Nozzles and inlets; Lab C', 'MIT 16.50'),
             (5, 'u4', 'Turbojet stations and work balance', 'MIT 16.50'), (6, 'u4', 'Component efficiency and afterburners', 'NASA Glenn'),

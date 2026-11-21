@@ -25,8 +25,6 @@ _EPA = ('EPA: greenhouse gas emissions from aircraft', 'https://www.epa.gov/regu
 _PHAK = ('FAA Pilot’s Handbook of Aeronautical Knowledge', 'https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak')
 _SF = ('NASA JPL: Basics of Space Flight', 'https://science.nasa.gov/learn/basics-of-space-flight/')
 _WF = ('Smithsonian: 1903 Wright Flyer', 'https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000')
-_MIT = ('MIT OpenCourseWare 16.00: Introduction to Aerospace Engineering and Design', 'https://ocw.mit.edu/courses/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/')
-_UE = ('MIT OpenCourseWare 16.01–16.04: Unified Engineering', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
 _DOE = ('U.S. DOE: Sustainable aviation fuels', 'https://www.energy.gov/eere/bioenergy/sustainable-aviation-fuels')
 BANNER = ['images/ArtemisII_Launch_KSC_Hancock.jpg', 'images/ISS_Flyaround_2021.jpg', 'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg', 'images/Landsat9_Launch_KLS04_0013.jpg']
 CREDITS = {'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)',
@@ -50,8 +48,7 @@ CONSTANTS = [('Standard gravity g₀', '9.80665 m/s²'), ('Sea-level air density
              ('Gas constant of air R', '287 J/(kg·K)'), ('Ratio of specific heats γ (air)', '1.4'), ('Earth’s GM', '3.986 × 10¹⁴ m³/s²'), ('Earth’s mean radius', '6,371 km')]
 REF_TITLE = 'Simulators and references'
 REF_INTRO = 'Free tools and references to use alongside the course.'
-PTABLE = [('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'NASA’s free reference for every equation in this course, with simulators.'), (_FOIL[0], _FOIL[1], 'Virtual wind tunnel for airfoils (Lab A).'),
-          (_MIT[0], _MIT[1], 'MIT’s first-year design course.'), (_PHAK[0], _PHAK[1], 'Free FAA handbook on aerodynamics, performance and stability.'), (_SF[0], _SF[1], 'Free primer on orbits and missions.')]
+PTABLE = [('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'NASA’s free reference for every equation in this course, with simulators.'), (_FOIL[0], _FOIL[1], 'Virtual wind tunnel for airfoils (Lab A).'), (_PHAK[0], _PHAK[1], 'Free FAA handbook on aerodynamics, performance and stability.'), (_SF[0], _SF[1], 'Free primer on orbits and missions.')]
 UNITS = [
 {'id': 'u1', 'title': 'History of Flight & the Design Process', 'weeks': 'Week 1',
  'summary': 'From the Wright brothers to Artemis: how aerospace engineers turn a mission into requirements, trade-offs and a design that flies.',
@@ -82,7 +79,7 @@ UNITS = [
                      'NASA lists three main ways to make aviation sustainable: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.'],
             'site': [('Artemis II', 'Artemis_II.html')],
             'src': [_WF, _SUS]},
- 'res': [(_WF[0], _WF[1], 'The Wright Flyer’s story and specifications.'), (_MIT[0], _MIT[1], 'MIT’s design-centered introductory course.'), ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Start here for every topic.')]},
+ 'res': [(_WF[0], _WF[1], 'The Wright Flyer’s story and specifications.'), ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Start here for every topic.')]},
 
 {'id': 'u2', 'title': 'The Atmosphere', 'weeks': 'Week 2',
  'summary': 'The air an aircraft flies through: how temperature, pressure, density and the speed of sound change with altitude.',
@@ -177,7 +174,7 @@ UNITS = [
                      'The albatross, which glides for hours over the ocean, uses the same physics: a long, thin wing with a high lift-to-drag ratio.'],
             'site': [('Calculus II', 'Calculus_II.html')],
             'src': [('NASA Glenn: induced drag coefficient', _G + 'induced-drag-coefficient/'), _SUS]},
- 'res': [(_FOIL[0], _FOIL[1], 'Explore camber, thickness and angle of attack.'), ('NASA Glenn: induced drag coefficient', _G + 'induced-drag-coefficient/', 'Aspect ratio and efficiency factor.'), (_UE[0], _UE[1], 'MIT’s fluids lectures.')]},
+ 'res': [(_FOIL[0], _FOIL[1], 'Explore camber, thickness and angle of attack.'), ('NASA Glenn: induced drag coefficient', _G + 'induced-drag-coefficient/', 'Aspect ratio and efficiency factor.')]},
 
 {'id': 'u5', 'title': 'Aircraft Performance', 'weeks': 'Weeks 6–7',
  'summary': 'How far, how long, how fast and how steep: gliding, climbing, range and endurance.',
@@ -266,7 +263,7 @@ UNITS = [
                      'Sustainable aviation fuel, made from wastes and biomass, is blended to match conventional jet fuel’s properties for safe operation. NASA notes that SAF does not release new CO₂ into the environment.'],
             'site': [('General Chemistry I', 'General_Chemistry_I.html')],
             'src': [_SUS, _DOE]},
- 'res': [('NASA Glenn: thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Engines and thrust.'), ('NASA Glenn: specific impulse', _G + 'specific-impulse/', 'Rocket and jet efficiency.'), (_UE[0], _UE[1], 'MIT propulsion lectures.')]},
+ 'res': [('NASA Glenn: thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Engines and thrust.'), ('NASA Glenn: specific impulse', _G + 'specific-impulse/', 'Rocket and jet efficiency.')]},
 
 {'id': 'u8', 'title': 'Rockets & the Rocket Equation', 'weeks': 'Weeks 10–11',
  'summary': 'Why reaching orbit is so hard: Tsiolkovsky’s rocket equation, mass ratios and staging.',
@@ -354,8 +351,7 @@ UNITS = [
                      'EPA reports that the aircraft covered by its rule produce 10% of U.S. transportation greenhouse gas emissions, and NASA notes the U.S. committed in 2021 to net-zero aviation greenhouse gas emissions by 2050.'],
             'site': [('CO2M: measuring CO₂ from space', 'CO2M.html'), ('Delta-v calculator', 'Delta_V_Calculator.html')],
             'src': [_SUS, _EPA]},
- 'res': [(_SUS[0], _SUS[1], 'NASA’s overview and goals.'), (_EPA[0], _EPA[1], 'U.S. emissions standards and data.'), (_DOE[0], _DOE[1], 'How SAF is made.')]},
-]
+ 'res': [(_SUS[0], _SUS[1], 'NASA’s overview and goals.'), (_EPA[0], _EPA[1], 'U.S. emissions standards and data.'), (_DOE[0], _DOE[1], 'How SAF is made.')]}]
 LABS = [
 {'id': 'labA', 'title': 'Lab A: Virtual wind tunnel with NASA FoilSim', 'week': 'Week 5',
  'goal': 'Measure an airfoil’s lift curve in FoilSim and compare it with thin-airfoil theory.',
@@ -396,8 +392,7 @@ LABS = [
  'calc': ['At 5,000 m: √(2 × 10,791/(0.738 × 16.2 × 1.6)) = 33.6 m/s.', 'V_s grows as 1/√ρ: at 10 km it is 1.72 times its sea-level value.'],
  'safety': ['None beyond normal computer use.'], 'home': ['A spreadsheet is enough.'],
  'sims': [_ATM],
- 'planet': 'Standard-atmosphere physics also underlies how satellites measure the air.', 'planet_src': []},
-]
+ 'planet': 'Standard-atmosphere physics also underlies how satellites measure the air.', 'planet_src': []}]
 SCHEDULE = [(1, 'u1', 'History of flight; the design process; four forces', 'MIT 16.00; Smithsonian'), (2, 'u2', 'Standard atmosphere; speed of sound', 'NASA Glenn: atmosphere'),
             (3, 'u3', 'Lift and drag equations; Bernoulli', 'NASA Glenn: lift and drag'), (4, 'u3', 'Reynolds number and stall speed; Lab D', 'FAA PHAK'),
             (5, 'u4', 'Airfoils, lift curve, finite wings; Lab A', 'NASA FoilSim'), (6, 'u5', 'Gliding, power required, climb', 'NASA Glenn: glide angle'),

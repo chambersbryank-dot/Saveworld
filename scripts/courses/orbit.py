@@ -15,8 +15,6 @@ CREDIT = 'Course created by Saving Planets: the Founder sets direction and appro
 ALT = 'An Atlas V rocket lifts off carrying the Landsat 9 Earth-observing satellite'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _O = 'https://openstax.org/books/university-physics-volume-1/pages/'
-_MIT = ('MIT OpenCourseWare 16.346 Astrodynamics (Fall 2008)', 'https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/')
-_MITD = ('MIT OpenCourseWare 16.07 Dynamics (Fall 2009)', 'https://ocw.mit.edu/courses/16-07-dynamics-fall-2009/')
 _BSF = ('NASA: Basics of Space Flight', 'https://science.nasa.gov/learn/basics-of-space-flight/')
 _BSF5 = ('NASA Basics of Space Flight, Chapter 5: Planetary orbits', 'https://science.nasa.gov/learn/basics-of-space-flight/chapter5-1/')
 # rktpow.html's move notice points at the ideal rocket equation. The rocket-thrust page is the matching topic.
@@ -32,7 +30,7 @@ BANNER = ['images/Landsat9_Launch_KLS04_0013.jpg', 'images/ISS_Flyaround_2021.jp
 CREDITS = {'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester junior orbital mechanics course. It is modeled on the topics and depth of MIT 16.346 Astrodynamics and the orbital parts of MIT 16.07 Dynamics (free on MIT OpenCourseWare), and on courses such as Purdue AAE 340 and Georgia Tech AE 3330, using NASA’s free Basics of Space Flight and OpenStax University Physics, which we link where they help. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester junior orbital mechanics course. It is modeled on the topics and depth of MIT 16.346 Astrodynamics and the orbital parts of MIT 16.07 Dynamics, and on courses such as Purdue AAE 340 and Georgia Tech AE 3330, using NASA’s free Basics of Space Flight and OpenStax University Physics, which we link where they help. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (Landsat, GOES weather satellites, NASA’s DART planetary-defense test and orbital-debris rules), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Orbits are how we watch our planet: Earth-observing satellites in low orbits map forests, crops and water, and geostationary weather satellites watch storms around the clock. Choosing those orbits is pure orbital mechanics.',
@@ -52,7 +50,7 @@ CONSTANTS = [('Earth (textbook values)', 'μ = 3.986 × 10¹⁴ m³/s², R = 637
              ('Mars orbit (textbook value)', 'a = 1.524 AU'), ('Standard gravity', 'g₀ = 9.80665 m/s²'), ('1 mile', '1.609344 km'), ('1 mph', '0.44704 m/s')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA guides and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT astrodynamics lectures and problem sets.'), (_MITD[0], _MITD[1], 'Free MIT dynamics notes on orbits.'), (_BSF[0], _BSF[1], 'Free NASA guide to orbits and missions.'),
+PTABLE = [(_BSF[0], _BSF[1], 'Free NASA guide to orbits and missions.'),
           ('OpenStax University Physics Volume 1, 13.5 Kepler’s laws', _O + '13-5-keplers-laws-of-planetary-motion', 'Free textbook section.'), ('PhET: Gravity and Orbits', _PH + 'gravity-and-orbits', 'Orbits interactively.'),
           (_EYES[0], _EYES[1], 'Real spacecraft trajectories in 3D.')]
 UNITS = []
@@ -112,7 +110,7 @@ UNITS.append(
                      'Those few numbers are orbital elements: a from the altitude, e near zero, i = 98.2°, and a node chosen to fix the local crossing time. The steady geometry is what lets Landsat compare images across more than five decades of its record.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Calculus III', 'Calculus_III.html')],
             'src': [_L9]},
- 'res': [_RE, (_MIT[0], _MIT[1], 'MIT notes on conics.'), (_BSF5[0], _BSF5[1], 'Free NASA chapter.'), ('PhET: Kepler’s Laws', _PH + 'keplers-laws', 'Ellipses interactively.')]})
+ 'res': [_RE, (_BSF5[0], _BSF5[1], 'Free NASA chapter.'), ('PhET: Kepler’s Laws', _PH + 'keplers-laws', 'Ellipses interactively.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Kepler’s Equation and Time of Flight', 'weeks': 'Week 4',
  'summary': 'Mean motion, mean, eccentric and true anomaly, Kepler’s equation M = E − e sin E, solving it with Newton’s method, time of flight between two points, and position at a given time.',
@@ -137,7 +135,7 @@ UNITS.append(
                      'Astronomers measured that change by timing the moonlet’s orbit from telescopes on Earth: Kepler’s laws turn a small timing shift into proof that the orbit had changed.'],
             'site': [('Calculus II', 'Calculus_II.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_DARTR]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on Kepler’s equation.'), _RK, (_BSF5[0], _BSF5[1], 'Free NASA chapter.'), (_MITD[0], _MITD[1], 'MIT dynamics notes.')]})
+ 'res': [_RK, (_BSF5[0], _BSF5[1], 'Free NASA chapter.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Orbit Transfers: Hohmann and Beyond', 'weeks': 'Weeks 5–6',
  'summary': 'Impulsive maneuvers and Δv, the Hohmann transfer between circular orbits, transfer time, bi-elliptic transfers, phasing and rendezvous, and raising and lowering orbits.',
@@ -162,7 +160,7 @@ UNITS.append(
                      'A deorbit burn is just a Hohmann-style half maneuver: lower the perigee into the upper atmosphere so drag finishes the job. From 700 km, lowering perigee to 200 km takes only about 139 m/s in this unit’s example.'],
             'site': [('Dynamics', 'Dynamics.html'), ('Solutions', 'Solutions.html')],
             'src': [_FCC]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on transfers.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), _RE, (_EYES[0], _EYES[1], 'Real trajectories.')]})
+ 'res': [(_BSF[0], _BSF[1], 'Free NASA guide.'), _RE, (_EYES[0], _EYES[1], 'Real trajectories.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Plane Changes and Combined Maneuvers', 'weeks': 'Week 7',
  'summary': 'Inclination and node changes, the simple plane-change Δv, why plane changes are expensive in low orbit, combining a plane change with a Hohmann burn, and launch site latitude.',
@@ -187,7 +185,7 @@ UNITS.append(
                      'Placing a satellite precisely in another’s orbit plane, and keeping it there, is plane-change and phasing work. Fuel saved by good maneuver planning becomes extra years of free Earth data.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Linear Algebra', 'Linear_Algebra.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on plane changes.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), (_MITD[0], _MITD[1], 'MIT dynamics.'), _RE]})
+ 'res': [(_BSF[0], _BSF[1], 'Free NASA guide.'), _RE]})
 UNITS.append(
 {'id': 'u6', 'title': 'Rockets, Δv Budgets and Staging', 'weeks': 'Week 8',
  'summary': 'The Tsiolkovsky rocket equation, specific impulse and exhaust speed, mass ratio and propellant fraction, thrust, staging, gravity and drag losses on ascent, and building a mission Δv budget.',
@@ -212,7 +210,7 @@ UNITS.append(
                      'NASA notes the collision happened at roughly 22,530 km/h. Getting a spacecraft there at that speed and on the right path started with this unit’s Δv budget.'],
             'site': [('Thermodynamics', 'Thermodynamics.html'), ('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html')],
             'src': [_DART, _DARTR]},
- 'res': [_RR, ('NASA Glenn: Rocket thrust', 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/', 'Free NASA page.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
+ 'res': [_RR, ('NASA Glenn: Rocket thrust', 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/', 'Free NASA page.'), (_BSF[0], _BSF[1], 'Free NASA guide.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Perturbations: Earth’s Bulge, Drag and Sun-Synchronous Orbits', 'weeks': 'Weeks 9–10',
  'summary': 'Why real orbits drift, Earth’s oblateness and J₂, regression of the node and rotation of periapsis, sun-synchronous orbits, frozen and critically inclined orbits, atmospheric drag and orbit decay, and third-body and solar pressure effects.',
@@ -237,7 +235,7 @@ UNITS.append(
                      'NASA notes that Landsat’s free, public data contributed an estimated $25.6 billion to the U.S. economy in 2023. The steady morning light that makes those images comparable comes straight from J₂ and this unit’s sun-synchronous condition.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Oceans', 'Oceans.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on perturbations.'), (_BSF5[0], _BSF5[1], 'Free NASA chapter.'), (_L9[0], _L9[1], 'Landsat 9 orbit facts.'), (_MITD[0], _MITD[1], 'MIT dynamics.')]})
+ 'res': [(_BSF5[0], _BSF5[1], 'Free NASA chapter.'), (_L9[0], _L9[1], 'Landsat 9 orbit facts.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Ground Tracks, Coverage and Constellations', 'weeks': 'Week 11',
  'summary': 'Ground tracks and the westward shift per orbit, repeat-ground-track orbits, swath width and revisit time, coverage from GEO, and designing constellations for revisit and coverage.',
@@ -262,7 +260,7 @@ UNITS.append(
                      'NOAA notes that GOES East and GOES West together cover more than half the globe from geostationary orbit. Low polar orbits give sharp, repeated maps; GEO gives constant watch. Good Earth monitoring uses both.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Oceans', 'Oceans.html')],
             'src': [_L9, _GOES]},
- 'res': [(_L9[0], _L9[1], 'Landsat 9 coverage facts.'), (_GOES[0], _GOES[1], 'NOAA GOES-R facts.'), (_BSF[0], _BSF[1], 'Free NASA guide.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
+ 'res': [(_L9[0], _L9[1], 'Landsat 9 coverage facts.'), (_GOES[0], _GOES[1], 'NOAA GOES-R facts.'), (_BSF[0], _BSF[1], 'Free NASA guide.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'Interplanetary Transfers and Patched Conics', 'weeks': 'Weeks 12–13',
  'summary': 'Heliocentric Hohmann transfers, transfer time to Mars, departure v∞ and C₃, the patched-conic method, spheres of influence, escape from a parking orbit, synodic periods and launch windows, and gravity assists.',
@@ -287,7 +285,7 @@ UNITS.append(
                      'NASA notes that neither Dimorphos nor Didymos posed any hazard to Earth before or after the test. Planetary defense depends on exactly the interplanetary trajectory tools in this unit.'],
             'site': [('Physics I', 'Physics_I.html'), ('Solutions', 'Solutions.html')],
             'src': [_DARTR]},
- 'res': [(_BSF[0], _BSF[1], 'Free NASA guide to interplanetary trajectories.'), (_EYES[0], _EYES[1], 'Real interplanetary paths.'), (_MIT[0], _MIT[1], 'MIT notes.'), ('PhET: My Solar System', _PH + 'my-solar-system', 'Multi-body orbits.')]})
+ 'res': [(_BSF[0], _BSF[1], 'Free NASA guide to interplanetary trajectories.'), (_EYES[0], _EYES[1], 'Real interplanetary paths.'), ('PhET: My Solar System', _PH + 'my-solar-system', 'Multi-body orbits.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Space Sustainability: Debris, Disposal and Planetary Defense', 'weeks': 'Weeks 14–15',
  'summary': 'The orbital debris environment, collision speeds and energies, the Kessler cascade, end-of-life disposal and deorbit Δv, graveyard orbits for GEO, conjunction screening and collision avoidance, and kinetic-impact planetary defense.',
@@ -312,7 +310,7 @@ UNITS.append(
                      'The FCC’s 2022 rule requires low-Earth-orbit operators to dispose of satellites within 5 years of completing their missions. Planning that disposal burn from day one is now part of responsible mission design.'],
             'site': [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_DEB, _FCC]},
- 'res': [(_ODPO[0], _ODPO[1], 'NASA Orbital Debris Program Office.'), (_DEB[0], _DEB[1], 'NASA debris reading list.'), (_DARTR[0], _DARTR[1], 'NASA DART result.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
+ 'res': [(_ODPO[0], _ODPO[1], 'NASA Orbital Debris Program Office.'), (_DEB[0], _DEB[1], 'NASA debris reading list.'), (_DARTR[0], _DARTR[1], 'NASA DART result.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Circular orbits in PhET', 'week': 'Week 1',
