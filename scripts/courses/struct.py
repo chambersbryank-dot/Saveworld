@@ -13,9 +13,6 @@ DESC = 'Free self-study Aerospace Structures: 10 units, worked examples, solved 
 ALT = 'The International Space Station over the Ganges valley, seen from the Space Shuttle'
 _PH = 'https://phet.colorado.edu/en/simulations/'
 _O = 'https://openstax.org/books/university-physics-volume-1/pages/'
-_MIT = ('MIT OpenCourseWare 16.20 Structural Mechanics (Fall 2002)', 'https://ocw.mit.edu/courses/16-20-structural-mechanics-fall-2002/')
-_MITU = ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
-_MITC = ('MIT OpenCourseWare 3.032 Mechanical Behavior of Materials (Fall 2007)', 'https://ocw.mit.edu/courses/3-032-mechanical-behavior-of-materials-fall-2007/')
 _CH3 = ('FAA PHAK Chapter 3: Aircraft Construction (PDF)', 'https://www.faa.gov/sites/faa.gov/files/05_phak_ch3.pdf')
 _PHAK = ('FAA Pilot’s Handbook of Aeronautical Knowledge (FAA-H-8083-25C)', 'https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak')
 _SWT = ('NASA: NASA Pushes New Wing Design to Find Structural Limits (Jul. 17, 2026)', 'https://www.nasa.gov/centers-and-facilities/armstrong/nasa-pushes-new-wing-design-to-find-structural-limits/')
@@ -28,7 +25,7 @@ BANNER = ['images/ISS_Over_Ganges_STS102.jpg', 'images/ISS_Flyaround_2021.jpg', 
 CREDITS = {'images/ISS_Over_Ganges_STS102.jpg': 'NASA (STS102-357-031, March 18, 2001)', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)',
            'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)', 'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester junior aerospace structures course. It is modeled on the topics and depth of MIT 16.20 Structural Mechanics and the structures parts of MIT 16.01–16.04 Unified Engineering (free on MIT OpenCourseWare), and on courses such as Purdue AAE 352 and Georgia Tech AE 3140, using the FAA Pilot’s Handbook chapter on aircraft construction and PhET simulations, which we link where they help. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester junior aerospace structures course. It is modeled on the topics and depth of MIT 16.20 Structural Mechanics and the structures parts of MIT 16.01–16.04 Unified Engineering, and on courses such as Purdue AAE 352 and Georgia Tech AE 3140, using the FAA Pilot’s Handbook chapter on aircraft construction and PhET simulations, which we link where they help. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (composite truss-braced wings, high-rate composite manufacturing and lightweight materials), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation, a spreadsheet or a safe home version.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['An aircraft carries its own structure on every flight, so every kilogram of structure costs fuel for the aircraft’s whole life. Lighter wings and fuselages, made possible by better analysis and better materials, are one of the main levers for cleaner flight.',
@@ -49,7 +46,7 @@ CONSTANTS = [('Aluminum 7075-T6 (textbook values)', 'E = 71.7 GPa, σ_y = 503 MP
              ('Sample airliner (sample values)', 'W = 588.6 kN, semispan 17 m, limit load factor 2.5, safety factor 1.5'), ('Gravity', 'g = 9.81 m/s²')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, handbooks and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT structures lectures and problem sets.'), (_MITU[0], _MITU[1], 'Free MIT notes on beams and materials.'), (_MITC[0], _MITC[1], 'Free MIT course on fatigue and fracture.'),
+PTABLE = [
           (_CH3[0], _CH3[1], 'Free FAA chapter on aircraft structures.'), ('OpenStax University Physics Volume 1, 12.3 Stress, strain and elastic modulus', _O + '12-3-stress-strain-and-elastic-modulus', 'Free textbook section.'),
           ('PhET: Hooke’s Law', _PH + 'hookes-law', 'Stiffness interactively.')]
 UNITS = []
@@ -84,7 +81,7 @@ UNITS.append(
                      'Aircraft gain even more than cars from weight savings, because they must also hold their weight up for the whole flight. Choosing materials by specific stiffness and strength is where that saving starts.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Solutions', 'Solutions.html')],
             'src': [_LW]},
- 'res': [(_CH3[0], _CH3[1], 'FAA chapter on airframe parts.'), _R12, (_MIT[0], _MIT[1], 'MIT structures notes.'), ('PhET: Hooke’s Law', _PH + 'hookes-law', 'Stiffness interactively.')]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on airframe parts.'), _R12, ('PhET: Hooke’s Law', _PH + 'hookes-law', 'Stiffness interactively.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Wing Shear and Bending Loads', 'weeks': 'Week 2',
  'summary': 'The wing as a cantilever beam, spanwise lift distributions, shear force and bending moment diagrams, root loads, relief from wing weight and fuel, and how load factor scales everything.',
@@ -109,7 +106,7 @@ UNITS.append(
                      'NASA engineers bent the test wing for several months in the Flight Loads Laboratory at Armstrong, using numerous strain and load sensors including fiber-optic strain sensors. The data confirmed the computer models’ predictions and showed the wing withstood the anticipated in-flight forces.'],
             'site': [('Statics', 'Statics.html'), ('Aircraft Performance', 'Aircraft_Performance.html')],
             'src': [_SWT]},
- 'res': [_RS, (_MITU[0], _MITU[1], 'MIT beam notes.'), (_MIT[0], _MIT[1], 'MIT structures.'), (_CH3[0], _CH3[1], 'FAA chapter on wings.')]})
+ 'res': [_RS, (_CH3[0], _CH3[1], 'FAA chapter on wings.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Bending of Thin-Walled Beams', 'weeks': 'Weeks 3–4',
  'summary': 'Bending stress σ = My/I, idealizing a wing box as flanges and skins, second moment of area, flange forces, unsymmetric bending, and sizing spar caps for ultimate load.',
@@ -135,7 +132,7 @@ UNITS.append(
                      'A thin wing has a shallow wing box, so by F = M/h its flanges would need to be heavy. The strut lowers M, which lets the wing stay thin without growing heavy.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Aerodynamics I', 'Aerodynamics_I.html')],
             'src': [_TBW]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on beam bending.'), (_MITU[0], _MITU[1], 'MIT notes.'), _R12, (_CH3[0], _CH3[1], 'FAA chapter on spars.')]})
+ 'res': [_R12, (_CH3[0], _CH3[1], 'FAA chapter on spars.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Torsion and Shear Flow in Closed Sections', 'weeks': 'Week 5',
  'summary': 'Shear flow q, Bredt–Batho torsion of thin-walled closed sections, skin shear stress, the rate of twist, multi-cell boxes, and why wings are built as closed boxes.',
@@ -160,7 +157,7 @@ UNITS.append(
                      'A composite wing box still has to satisfy Bredt–Batho: the joints between skins and spars carry the shear flow that keeps the box from twisting.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Dynamics', 'Dynamics.html')],
             'src': [_SWT]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on torsion.'), (_MITU[0], _MITU[1], 'MIT notes.'), (_CH3[0], _CH3[1], 'FAA chapter on wing structure.'), _R12]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on wing structure.'), _R12]})
 UNITS.append(
 {'id': 'u5', 'title': 'Shear in Open Sections and the Shear Center', 'weeks': 'Week 6',
  'summary': 'Shear stress in beams τ = VQ/(It), shear flow in open thin-walled sections, the shear center, why channel sections twist under load, and shear lag.',
@@ -185,7 +182,7 @@ UNITS.append(
                      'NASA notes this was the first time a representative composite truss-braced wing configuration had undergone this type of structural evaluation. Tests like this check exactly the shear and torsion predictions in Units 4 and 5.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Statics', 'Statics.html')],
             'src': [_SWT]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on shear flow.'), (_MITU[0], _MITU[1], 'MIT notes.'), _RS, _R12]})
+ 'res': [_RS, _R12]})
 UNITS.append(
 {'id': 'u6', 'title': 'Buckling of Columns, Stringers and Plates', 'weeks': 'Weeks 7–8',
  'summary': 'Euler column buckling and end conditions, slenderness, stringers as columns, plate buckling of skin panels, post-buckling strength of stiffened panels, and why light structures are usually sized by stability.',
@@ -210,7 +207,7 @@ UNITS.append(
                      'Integrated stiffened panels, where stringers and skin are made as one piece, resist buckling without the weight of fasteners and splices. That is one route to the lighter composite airframes HiCAM aims for.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Linear Algebra', 'Linear_Algebra.html')],
             'src': [_HIC]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on buckling.'), (_MITU[0], _MITU[1], 'MIT notes.'), (_CH3[0], _CH3[1], 'FAA chapter on stringers and skins.'), _R12]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on stringers and skins.'), _R12]})
 UNITS.append(
 {'id': 'u7', 'title': 'Pressurized Fuselages and Thin Shells', 'weeks': 'Week 9',
  'summary': 'Cabin pressurization, hoop and axial stresses in thin cylinders, spherical bulkheads, combined pressure and bending, cutouts and stress concentrations around windows and doors, and fatigue from pressure cycles.',
@@ -235,7 +232,7 @@ UNITS.append(
                      'A composite fuselage barrel carries the same hoop and axial stresses as a metal one; the gain is that composites carry them with less mass and do not corrode in the same way.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Thermodynamics', 'Thermodynamics.html')],
             'src': [_HICR]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on shells.'), (_CH3[0], _CH3[1], 'FAA chapter on fuselages.'), _R12, (_MITU[0], _MITU[1], 'MIT notes.')]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on fuselages.'), _R12]})
 UNITS.append(
 {'id': 'u8', 'title': 'Composite Materials and Laminates', 'weeks': 'Weeks 10–11',
  'summary': 'Fibers and matrices, fiber volume fraction, the rule of mixtures for stiffness and density, transverse stiffness, ply orientation and laminates, quasi-isotropic layups, and composite manufacturing.',
@@ -260,7 +257,7 @@ UNITS.append(
                      'NASA’s 2026 HiCAM spring review, held May 5–7 at Langley, brought together about 150 people from the consortium, a 22-member public-private partnership, and selected the technologies with the greatest impact on manufacturing rate for the next airplane program.'],
             'site': [('General Chemistry I', 'General_Chemistry_I.html'), ('Solutions', 'Solutions.html')],
             'src': [_HIC, _HICR]},
- 'res': [(_MITC[0], _MITC[1], 'MIT materials course.'), (_MIT[0], _MIT[1], 'MIT notes on composites.'), (_CH3[0], _CH3[1], 'FAA chapter on composite construction.'), _R12]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on composite construction.'), _R12]})
 UNITS.append(
 {'id': 'u9', 'title': 'Fatigue, Fracture and Damage Tolerance', 'weeks': 'Weeks 12–13',
  'summary': 'S-N curves and endurance, Miner’s rule for cumulative damage, stress concentrations, the stress intensity factor, fracture toughness and critical crack length, crack growth and the Paris law, and damage-tolerant design and inspection.',
@@ -285,7 +282,7 @@ UNITS.append(
                      'Finding flaws early and predicting how they grow is the heart of damage tolerance. It lets designers use thinner, lighter structure with confidence.'],
             'site': [('Mechanics of Materials', 'Mechanics_of_Materials.html'), ('Statics', 'Statics.html')],
             'src': [_HIC]},
- 'res': [(_MITC[0], _MITC[1], 'MIT course on fatigue and fracture.'), (_MIT[0], _MIT[1], 'MIT notes.'), (_CH3[0], _CH3[1], 'FAA chapter on construction.'), _R12]})
+ 'res': [(_CH3[0], _CH3[1], 'FAA chapter on construction.'), _R12]})
 UNITS.append(
 {'id': 'u10', 'title': 'Lightweight Design and Sustainable Structures', 'weeks': 'Weeks 14–15',
  'summary': 'Weight breakdowns, the snowball effect of weight growth, structural weight and fuel via the Breguet equation, material indices for lightweight design, multi-material and integrated structures, recycling and life-cycle thinking.',
@@ -310,7 +307,7 @@ UNITS.append(
                      'NASA notes that needing less energy to fly means less fuel or, for electric aircraft, less power generated elsewhere, lowering lifecycle emissions for the whole time an aircraft is in use. Lightweight structure is how designers make that happen.'],
             'site': [('Aircraft Performance', 'Aircraft_Performance.html'), ('Solutions', 'Solutions.html')],
             'src': [_LW, _SUS]},
- 'res': [(_MITC[0], _MITC[1], 'MIT materials course.'), (_MIT[0], _MIT[1], 'MIT structures.'), (_MITU[0], _MITU[1], 'MIT notes.'), (_LW[0], _LW[1], 'DOE lightweight materials.')]})
+ 'res': [(_LW[0], _LW[1], 'DOE lightweight materials.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Material selection by specific properties', 'week': 'Week 1',
@@ -321,7 +318,7 @@ LABS.append(
  'note': 'Computed from textbook and sample values.',
  'calc': ['Al: 71.7 × 10⁹/2810 = 25.5 MJ/kg.', 'Laminate: 600 × 10⁶/1600 = 375 kN·m/kg.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [('PhET: Hooke’s Law', _PH + 'hookes-law'), (_MITC[0], _MITC[1])],
+ 'sims': [('PhET: Hooke’s Law', _PH + 'hookes-law')],
  'planet': 'DOE lists 50–70% mass reductions for carbon fiber composites replacing steel parts.', 'planet_src': [_LW]})
 LABS.append(
 {'id': 'labB', 'title': 'Lab B: Ruler cantilever deflection', 'week': 'Week 3',
@@ -343,7 +340,7 @@ LABS.append(
  'note': 'Predicted for 1.8 mm strands with E = 3 GPa (sample values); real pasta varies.',
  'calc': ['I = π × 0.0018⁴/64 = 5.15 × 10⁻¹³ m⁴.', 'P_cr(0.20) = π² × 3 × 10⁹ × 5.15 × 10⁻¹³/0.04 = 0.381 N.'],
  'safety': ['Wear safety glasses; snapped pasta flies.', 'Press gently with a book, not your palm.'], 'home': ['This is a home lab.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA HiCAM evaluates resin infusion for large integrated structures with fewer fasteners.', 'planet_src': [_HIC]})
 LABS.append(
 {'id': 'labD', 'title': 'Lab D: Fuselage pressure stress spreadsheet', 'week': 'Week 9',
@@ -365,7 +362,7 @@ LABS.append(
  'note': 'Computed from textbook fiber and matrix values.',
  'calc': ['E₁(0.5) = 230 × 0.5 + 3.5 × 0.5 = 116.8 GPa.', 'E₂(0.4) = 1/(0.4/230 + 0.6/3.5) = 5.77 GPa.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MITC[0], _MITC[1])],
+ 'sims': [],
  'planet': 'NASA says HiCAM aims to replace older, heavier transports with lightweight composite aircraft.', 'planet_src': [_HIC]})
 LABS.append(
 {'id': 'labF', 'title': 'Lab F: Paper clip fatigue and Miner’s rule', 'week': 'Week 13',
@@ -376,7 +373,7 @@ LABS.append(
  'note': 'Sample values; your clips will differ, and load order changes the result.',
  'calc': ['6/12 = 0.5 of the life used at ±90°.', 'Remaining 0.5 × 30 = 15 cycles at ±45°.'],
  'safety': ['Wear safety glasses; broken ends are sharp and the wire gets hot.', 'Dispose of pieces safely.'], 'home': ['This is a home lab.'],
- 'sims': [(_MITC[0], _MITC[1])],
+ 'sims': [],
  'planet': 'NASA HiCAM develops automated inspection to catch defects during the build.', 'planet_src': [_HIC]})
 SCHEDULE = [(1, 'u1', 'Load paths, load factors, safety factors, materials; Lab A', 'FAA PHAK Ch. 3'), (2, 'u2', 'Wing shear and bending diagrams', 'MIT 16.01'),
             (3, 'u3', 'Bending stress and idealized sections; Lab B', 'MIT 16.20'), (4, 'u3', 'Spar cap sizing, unsymmetric bending', 'MIT 16.20'),

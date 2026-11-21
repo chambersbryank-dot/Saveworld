@@ -12,7 +12,6 @@ TAGLINE = 'Subsystems, power, thermal and mission requirements: systems engineer
 DESC = 'Free self-study Spacecraft Design: 10 units, worked examples, solved practice, quizzes, flashcards, 6 PhET and spreadsheet labs, practice exams, tied to Landsat 9 Earth observation, Europa Clipper and NASA small-spacecraft power technology.'
 ALT = 'The Landsat 9 satellite launches on an Atlas V rocket from Vandenberg Space Force Base on Sept. 27, 2021'
 _PH = 'https://phet.colorado.edu/en/simulations/'
-_MIT = ('MIT OpenCourseWare 16.851 Satellite Engineering (Fall 2003)', 'https://ocw.mit.edu/courses/16-851-satellite-engineering-fall-2003/')
 _SEH = ('NASA Systems Engineering Handbook', 'https://www.nasa.gov/reference/systems-engineering-handbook/')
 _SOA = ('NASA Small Spacecraft Technology State of the Art', 'https://www.nasa.gov/smallsat-institute/sst-soa/')
 _PWR = ('NASA Small Spacecraft Technology State of the Art: 3.0 Power (May 2026)', 'https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/')
@@ -24,7 +23,7 @@ BANNER = ['images/Landsat9_Launch_KLS04_0013.jpg', 'images/GOES19_GOESU_KSC.jpg'
 CREDITS = {'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)', 'images/GOES19_GOESU_KSC.jpg': 'NASA/KSC',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester senior spacecraft design course for aerospace engineers. It is modeled on the topics and depth of MIT 16.851 Satellite Engineering (free on MIT OpenCourseWare), using NASA’s free Systems Engineering Handbook and Small Spacecraft Technology State of the Art report, which we link where they help. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester senior spacecraft design course for aerospace engineers. It is modeled on the topics and depth of MIT 16.851 Satellite Engineering, using NASA’s free Systems Engineering Handbook and Small Spacecraft Technology State of the Art report, which we link where they help. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (NASA’s Landsat 9, Europa Clipper and PACE missions and NASA’s small-spacecraft technology survey), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation or a spreadsheet.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Earth-observing satellites are spacecraft design made useful: power, thermal, pointing and communications all have to work for years so scientists can track forests, water, crops and climate.',
@@ -44,7 +43,7 @@ CONSTANTS = [('Earth μ', '398,600.4418 km³/s²'), ('Earth radius (equatorial)'
              ('Stefan–Boltzmann constant', 'σ = 5.670374419 × 10⁻⁸ W/(m²·K⁴)'), ('Speed of light', '299,792,458 m/s (3 × 10⁸ used in examples)'), ('Standard gravity', 'g₀ = 9.80665 m/s²')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA references and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT satellite engineering lectures.'), (_SEH[0], _SEH[1], 'Free NASA handbook.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.'),
+PTABLE = [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.'),
           (_PWR[0], _PWR[1], 'Free NASA power chapter.'), ('PhET: Blackbody Spectrum', _PH + 'blackbody-spectrum', 'Thermal radiation interactively.'), ('PhET: Circuit Construction Kit: DC', _PH + 'circuit-construction-kit-dc', 'Circuits interactively.')]
 def _q(q, opts, ok, why):
     return {'q': q, 'opts': opts, 'ok': ok, 'why': why}
@@ -75,7 +74,7 @@ UNITS.append(
                      'Exceeding requirements like these extends a land record that, NASA notes, spans more than five decades and supports deforestation alerts, water-quality monitoring and crop reports.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Solutions', 'Solutions.html')],
             'src': [_L9]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Orbits and the Space Environment', 'weeks': 'Week 2',
  'summary': 'Choosing an orbit, period and speed, sun-synchronous and geostationary orbits, ground tracks and swaths, eclipse, vacuum, radiation and atomic oxygen.',
@@ -100,7 +99,7 @@ UNITS.append(
                      'With Landsat 8, it observes the same place every 8 days. Same-time-of-day lighting is what lets scientists compare images across decades.'],
             'site': [('Orbital Mechanics', 'Orbital_Mechanics.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_L9[0], _L9[1], 'NASA mission page.')]})
+ 'res': [(_L9[0], _L9[1], 'NASA mission page.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Power Generation: Solar Arrays', 'weeks': 'Week 3',
  'summary': 'Solar flux and distance, cell efficiency, sun angle, beginning- and end-of-life power, array sizing and specific power.',
@@ -150,7 +149,7 @@ UNITS.append(
                      'PACE, launched in February 2024, measures phytoplankton, aerosols and clouds to help monitor ocean health, air quality and climate. Its batteries keep it working through every eclipse.'],
             'site': [('Oceans', 'Oceans.html'), ('Circuits', 'Circuits.html')],
             'src': [_PWR, _PACE]},
- 'res': [(_PWR[0], _PWR[1], 'Free NASA power chapter.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_PWR[0], _PWR[1], 'Free NASA power chapter.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Thermal Control', 'weeks': 'Week 5',
  'summary': 'Radiation balance, absorptivity and emissivity, equilibrium temperature, radiator sizing, coatings, heaters and multilayer insulation.',
@@ -200,7 +199,7 @@ UNITS.append(
                      'Reusing a proven bus is a design choice that reduces risk and helps keep the Landsat record continuous, which NASA notes is the longest continuous satellite record of Earth’s land surface.'],
             'site': [('Aerospace Structures', 'Aerospace_Structures.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
+ 'res': [(_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Propulsion and the Delta-v Budget', 'weeks': 'Week 7',
  'summary': 'Δv budgets for orbit insertion, station-keeping, attitude and disposal; the rocket equation for propellant mass; gravity assists; and propulsion choices.',
@@ -225,7 +224,7 @@ UNITS.append(
                      'Gravity assists stretch a fixed propellant load, the same goal this unit’s Δv budget serves for Earth orbiters like Landsat 9, which NASA says carries fuel for at least 10 years.'],
             'site': [('Orbital Mechanics', 'Orbital_Mechanics.html'), ('Propulsion', 'Propulsion.html')],
             'src': [_EC, _L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
+ 'res': [(_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
 UNITS.append(
 {'id': 'u8', 'title': 'Attitude Determination and Control Subsystem', 'weeks': 'Weeks 8–9',
  'summary': 'Pointing requirements from payloads, sensors and actuators, disturbance torques, momentum budgets, and pointing error on the ground.',
@@ -250,7 +249,7 @@ UNITS.append(
                      'Holding a 30 m pixel steady from that height takes arcsecond-level control, the reason Landsat images line up across years for change detection.'],
             'site': [('Flight Dynamics & Controls', 'Flight_Dynamics_Controls.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
+ 'res': [(_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'Communications and Data Handling', 'weeks': 'Weeks 10–11',
  'summary': 'Data volume, downlink rates, the link budget in decibels, free-space path loss, antenna gain, and onboard computing and storage.',
@@ -275,7 +274,7 @@ UNITS.append(
                      'Closer to home, NASA reports Landsat 9 records 14-bit data and collects more than 700 scenes a day. Moving that much data to the ground every day is a communications design problem first.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Circuits', 'Circuits.html')],
             'src': [_EC, _L9]},
- 'res': [(_MIT[0], _MIT[1], 'Free MIT lectures.'), (_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
+ 'res': [(_SOA[0], _SOA[1], 'Free NASA technology survey.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Reliability, Testing and End of Life', 'weeks': 'Weeks 12–13',
  'summary': 'Failure rates and reliability, redundancy, environmental testing, calibration and verification, operations and responsible disposal.',
@@ -300,7 +299,7 @@ UNITS.append(
                      'NASA notes that onboard calibration and redundancy help Landsat 9 collect accurate, reliable data for its mission life: reliability engineering in service of a planetary record.'],
             'site': [('Earth Observation', 'Earth_Observation.html'), ('Solutions', 'Solutions.html')],
             'src': [_L9]},
- 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.'), (_MIT[0], _MIT[1], 'Free MIT lectures.')]})
+ 'res': [(_SEH[0], _SEH[1], 'Free NASA handbook.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Mass and power budgets with margin', 'week': 'Week 1',
@@ -366,7 +365,7 @@ LABS.append(
  'note': 'Computed values.',
  'calc': ['λ = 0.03659 m.', '20 log₁₀(4π × 10⁶/0.03659) = 170.7 dB.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA: Europa Clipper carries a 3-meter high-gain antenna.', 'planet_src': [_EC]})
 SCHEDULE = [(1, 'u1', 'Requirements and budgets; Lab A', 'NASA SE Handbook'), (2, 'u2', 'Orbits and environment; Lab B', 'MIT 16.851'),
             (3, 'u3', 'Solar arrays; Lab C', 'NASA SST SOA'), (4, 'u4', 'Batteries and power budget; Lab D', 'NASA SST SOA'),

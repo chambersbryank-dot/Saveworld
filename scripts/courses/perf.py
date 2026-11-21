@@ -15,9 +15,6 @@ _G = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
 # The beginners-guide slug /foilsim/ is Conformal Mapping. FoilSim is the NASA STEM page.
 _FOIL = 'https://www.nasa.gov/stem-content/foilsim/'
 _PH = 'https://phet.colorado.edu/en/simulations/'
-_MIT = ('MIT OpenCourseWare 16.01–16.04 Unified Engineering (2005–2006)', 'https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/')
-_MITA = ('MIT OpenCourseWare 16.100 Aerodynamics (Fall 2005)', 'https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/')
-_MITS = ('MIT OpenCourseWare 16.885J Aircraft Systems Engineering (Fall 2005)', 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/')
 _PHAK = ('FAA Pilot’s Handbook of Aeronautical Knowledge (FAA-H-8083-25C)', 'https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak')
 _CH11 = ('FAA PHAK Chapter 11: Aircraft Performance (PDF)', 'https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf')
 _CH10 = ('FAA PHAK Chapter 10: Weight and Balance (PDF)', 'https://www.faa.gov/sites/faa.gov/files/12_phak_ch10.pdf')
@@ -34,7 +31,7 @@ BANNER = ['images/ISS_Flyaround_2021.jpg', 'images/ISS_Over_Ganges_STS102.jpg', 
 CREDITS = {'images/ISS_Flyaround_2021.jpg': 'NASA (ISS066-E-080762, Nov. 8, 2021)', 'images/ISS_Over_Ganges_STS102.jpg': 'NASA (STS102-357-031, March 18, 2001)',
            'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)', 'images/earth-blue-marble-land-ocean-ice-cloud.jpg': 'NASA'}
 ABOUT = ['This is a free self-study course outline written by Saving Planets. It is not a university course, it carries no academic credit, and no school is involved.',
-         'Its scope follows a one-semester junior aircraft performance course. It is modeled on the topics and depth of the performance parts of MIT 16.01–16.04 Unified Engineering and MIT 16.885J Aircraft Systems Engineering (free on MIT OpenCourseWare), on courses such as Purdue AAE 251 and Georgia Tech AE 3310, and on the FAA Pilot’s Handbook of Aeronautical Knowledge, Chapter 11, which we link where they help. None of those authors, schools or agencies endorses this page.',
+         'Its scope follows a one-semester junior aircraft performance course. It is modeled on the topics and depth of the performance parts of MIT 16.01–16.04 Unified Engineering and MIT 16.885J Aircraft Systems Engineering, on courses such as Purdue AAE 251 and Georgia Tech AE 3310, and on the FAA Pilot’s Handbook of Aeronautical Knowledge, Chapter 11, which we link where they help. None of those authors, schools or agencies endorses this page.',
          'What we add: every unit ties to real work with a cited public source (laminar-flow wings, truss-braced wings, hybrid engines, sustainable aviation fuel and transportation energy), every number on the page is re-computed by a checking script before it goes live, and every lab has a free simulation, a spreadsheet or a safe home version.',
          'Work through it in order. Each unit has goals, key ideas, equations, step-by-step examples, practice with full answers, common mistakes, flashcards and a quiz. Your progress is saved only in this browser.']
 COURSE_PLANET = ['Performance is where aircraft design meets fuel burn. Every percent of drag removed, every kilogram saved and every better climb or cruise profile shows up directly in the Breguet range equation, and so in fuel use and emissions.',
@@ -54,7 +51,7 @@ CONSTANTS = [('International Standard Atmosphere, sea level (textbook values)', 
              ('Sample airliner used throughout (sample values)', 'm = 60,000 kg, W = 588.6 kN, S = 120 m², C_D0 = 0.020, K = 0.045'), ('Jet fuel (textbook values)', 'about 43 MJ/kg; about 3.16 kg CO₂ per kg burned'), ('1 m/s', '196.85 ft/min')]
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, handbooks and simulations alongside the course.'
-PTABLE = [(_MIT[0], _MIT[1], 'Free MIT lecture notes, including aircraft performance.'), (_MITS[0], _MITS[1], 'Free MIT course on aircraft systems.'), (_MITA[0], _MITA[1], 'Free MIT aerodynamics course.'),
+PTABLE = [
           (_PHAK[0], _PHAK[1], 'Free FAA handbook; Chapter 11 covers performance.'), (_AFH[0], _AFH[1], 'Free FAA handbook on takeoff, landing and maneuvers.'),
           ('NASA Glenn: Beginner’s Guide to Aeronautics', _G, 'Free NASA explanations of lift, drag and gliding.'), ('NASA Glenn: FoilSim', _FOIL, 'Free wing simulation.')]
 UNITS = []
@@ -86,7 +83,7 @@ UNITS.append(
             'site': [('Aerodynamics I', 'Aerodynamics_I.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_EIA]},
  'res': [(_CH11[0], _CH11[1], 'Free FAA chapter on density altitude and performance.'), ('NASA Glenn: Dynamic pressure', _G + 'dynamic-pressure/', 'Free NASA page.'),
-         (_MIT[0], _MIT[1], 'MIT notes on the atmosphere.'), (_PHAK[0], _PHAK[1], 'Full FAA handbook.')]})
+         (_PHAK[0], _PHAK[1], 'Full FAA handbook.')]})
 UNITS.append(
 {'id': 'u2', 'title': 'Forces in Flight and the Drag Polar', 'weeks': 'Week 2',
  'summary': 'The four forces, steady level flight, lift and drag coefficients, parasite and induced drag, the parabolic drag polar C_D = C_D0 + KC_L², Oswald efficiency and aspect ratio, maximum lift-to-drag ratio, and drag in cruise.',
@@ -115,7 +112,7 @@ UNITS.append(
             'site': [('Aerodynamics I', 'Aerodynamics_I.html'), ('Mechanics of Materials', 'Mechanics_of_Materials.html')],
             'src': [_TBW]},
  'res': [('NASA Glenn: The drag equation', _G + 'drag-equation/', 'Free NASA page.'), ('NASA Glenn: Induced drag coefficient', _G + 'induced-drag-coefficient/', 'Free NASA page.'),
-         ('NASA Glenn: Lift-to-drag ratio', _G + 'lift-to-drag-ratio/', 'Free NASA page.'), (_MITA[0], _MITA[1], 'MIT aerodynamics.')]})
+         ('NASA Glenn: Lift-to-drag ratio', _G + 'lift-to-drag-ratio/', 'Free NASA page.')]})
 UNITS.append(
 {'id': 'u3', 'title': 'Thrust and Power Required', 'weeks': 'Week 3',
  'summary': 'Thrust required versus speed, the minimum-drag speed, power required and the minimum-power speed, thrust and power available from jets and propellers, maximum and minimum level speeds, and the effect of altitude and weight.',
@@ -144,7 +141,7 @@ UNITS.append(
             'site': [('Fluid Mechanics', 'Fluid_Mechanics.html'), ('Aerodynamics I', 'Aerodynamics_I.html')],
             'src': [_CAT]},
  'res': [('NASA Glenn: What is drag?', _G + 'what-is-drag/', 'Free NASA page.'), ('NASA Glenn: Thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Free NASA page.'),
-         (_MIT[0], _MIT[1], 'MIT performance notes.'), (_CH11[0], _CH11[1], 'FAA chapter on thrust and power curves.')]})
+         (_CH11[0], _CH11[1], 'FAA chapter on thrust and power curves.')]})
 UNITS.append(
 {'id': 'u4', 'title': 'Climb Performance', 'weeks': 'Weeks 4–5',
  'summary': 'Forces in a steady climb, climb angle and rate of climb, excess thrust and excess power, best-angle and best-rate speeds, specific excess power, time to climb, and absolute and service ceilings.',
@@ -173,7 +170,7 @@ UNITS.append(
             'site': [('Dynamics', 'Dynamics.html'), ('Solutions', 'Solutions.html')],
             'src': [_SUS]},
  'res': [(_CH11[0], _CH11[1], 'FAA chapter on climb performance.'), (_AFH[0], _AFH[1], 'FAA handbook on climbs.'),
-         (_MIT[0], _MIT[1], 'MIT climb notes.'), ('NASA Glenn: Thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Free NASA page.')]})
+         ('NASA Glenn: Thrust-to-weight ratio', _G + 'thrust-to-weight-ratio/', 'Free NASA page.')]})
 UNITS.append(
 {'id': 'u5', 'title': 'Gliding Flight', 'weeks': 'Week 6',
  'summary': 'Forces in an unpowered glide, glide angle and glide ratio, distance from a given height, sink rate and minimum sink, the effect of weight and wind, and engine-out planning.',
@@ -202,7 +199,7 @@ UNITS.append(
             'site': [('Intro to Aerospace Engineering', 'Intro_to_Aerospace_Engineering.html'), ('Aerodynamics I', 'Aerodynamics_I.html')],
             'src': [_GLD]},
  'res': [(_GLD[0], _GLD[1], 'Free NASA page.'), ('NASA Glenn: Lift-to-drag ratio', _G + 'lift-to-drag-ratio/', 'Free NASA page.'),
-         (_AFH[0], _AFH[1], 'FAA handbook on emergency glides.'), (_MIT[0], _MIT[1], 'MIT notes.')]})
+         (_AFH[0], _AFH[1], 'FAA handbook on emergency glides.')]})
 UNITS.append(
 {'id': 'u6', 'title': 'Range and Endurance: the Breguet Equations', 'weeks': 'Weeks 7–8',
  'summary': 'Specific fuel consumption for jets and propellers, fuel weight fractions, the Breguet range and endurance equations, best-range and best-endurance speeds, cruise-climb, payload–range trade-offs and reserves.',
@@ -230,7 +227,7 @@ UNITS.append(
                      'In Breguet terms, a 10% lower fuel burn means a smaller c: the same flight on less fuel, or a longer flight on the same fuel. The engine term, the aerodynamics term and the structures term each give engineers a lever.'],
             'site': [('Thermodynamics', 'Thermodynamics.html'), ('Solutions', 'Solutions.html')],
             'src': [_HYB]},
- 'res': [(_MIT[0], _MIT[1], 'MIT notes on the Breguet equation.'), (_MITS[0], _MITS[1], 'MIT aircraft systems.'),
+ 'res': [
          (_CH11[0], _CH11[1], 'FAA chapter on range and endurance.'), ('NASA Glenn: Lift-to-drag ratio', _G + 'lift-to-drag-ratio/', 'Free NASA page.')]})
 UNITS.append(
 {'id': 'u7', 'title': 'Takeoff Performance', 'weeks': 'Weeks 9–10',
@@ -289,7 +286,7 @@ UNITS.append(
             'site': [('Dynamics', 'Dynamics.html'), ('Solutions', 'Solutions.html')],
             'src': [_SUS]},
  'res': [(_AFH[0], _AFH[1], 'FAA handbook on approaches and landings.'), (_CH11[0], _CH11[1], 'FAA chapter on landing performance charts.'),
-         (_MIT[0], _MIT[1], 'MIT notes.'), ('PhET: Projectile Motion', _PH + 'projectile-motion', 'Kinematics interactively.')]})
+         ('PhET: Projectile Motion', _PH + 'projectile-motion', 'Kinematics interactively.')]})
 UNITS.append(
 {'id': 'u9', 'title': 'Turning Flight and the V-n Diagram', 'weeks': 'Weeks 12–13',
  'summary': 'Level coordinated turns, bank angle and load factor, turn radius and rate, stall speed in a turn, maneuvering speed, the V-n diagram with limit load factors and gust loads, and pull-ups.',
@@ -317,8 +314,7 @@ UNITS.append(
                      'NASA says the first flight focused on envelope expansion, with turns, steady holds and gentle pitch changes between about 20,000 and nearly 34,000 feet, and that it was the first of up to 15 planned flights. Expanding an envelope step by step is the V-n diagram of this unit put into practice.'],
             'site': [('Dynamics', 'Dynamics.html'), ('Mechanics of Materials', 'Mechanics_of_Materials.html')],
             'src': [_CATF]},
- 'res': [(_AFH[0], _AFH[1], 'FAA handbook on turns and maneuvers.'), (_CH11[0], _CH11[1], 'FAA chapter on load factors.'),
-         (_MIT[0], _MIT[1], 'MIT notes.'), (_MITS[0], _MITS[1], 'MIT aircraft systems.')]})
+ 'res': [(_AFH[0], _AFH[1], 'FAA handbook on turns and maneuvers.'), (_CH11[0], _CH11[1], 'FAA chapter on load factors.')]})
 UNITS.append(
 {'id': 'u10', 'title': 'Performance of Electric, Hybrid and Sustainable-Fuel Aircraft', 'weeks': 'Weeks 14–15',
  'summary': 'Range of battery-electric aircraft, why weight does not fall as batteries discharge, specific energy of batteries versus jet fuel, hybrid-electric engines, sustainable aviation fuel, CO₂ from fuel burn, and putting all the performance levers together.',
@@ -347,7 +343,7 @@ UNITS.append(
             'site': [('Solutions', 'Solutions.html'), ('Thermodynamics', 'Thermodynamics.html')],
             'src': [_SAF, _SUS]},
  'res': [(_SAF[0], _SAF[1], 'DOE overview of SAF.'), (_SUS[0], _SUS[1], 'NASA overview of sustainable aviation.'),
-         (_HYB[0], _HYB[1], 'NASA hybrid engine test.'), (_MITS[0], _MITS[1], 'MIT aircraft systems.')]})
+         (_HYB[0], _HYB[1], 'NASA hybrid engine test.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Build a standard-atmosphere calculator', 'week': 'Week 1',
@@ -358,7 +354,7 @@ LABS.append(
  'note': 'Computed ISA values.',
  'calc': ['ρ(3000) = 1.225 × (268.65/288.15)^4.26 = 0.909 kg/m³.', 'a(5000) = √(1.4 × 287 × 255.65) = 320.5 m/s.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [('NASA Glenn: Dynamic pressure', _G + 'dynamic-pressure/'), (_MIT[0], _MIT[1])],
+ 'sims': [('NASA Glenn: Dynamic pressure', _G + 'dynamic-pressure/')],
  'planet': 'EIA reports jet fuel was 13% of U.S. transportation energy use in 2025.', 'planet_src': [_EIA]})
 LABS.append(
 {'id': 'labB', 'title': 'Lab B: Paper glider glide ratio', 'week': 'Week 6',
@@ -391,7 +387,7 @@ LABS.append(
  'note': 'Computed values for a sample jet.',
  'calc': ['R(14) = (230/1.667 × 10⁻⁴) × 14 × 0.2877 = 5558 km.', 'Cutting c by 10% multiplies range by 1/0.9 = 1.111.'],
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
- 'sims': [(_MIT[0], _MIT[1])],
+ 'sims': [],
  'planet': 'NASA’s HyTEC project targets a hybrid engine burning up to 10% less fuel than today’s best engines.', 'planet_src': [_HYB]})
 LABS.append(
 {'id': 'labE', 'title': 'Lab E: Takeoff distance and density altitude', 'week': 'Week 10',
