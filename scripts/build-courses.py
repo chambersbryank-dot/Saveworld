@@ -237,6 +237,7 @@ VERSION = '2026.11.01'
 DATE_LABEL = {
  '2026-11-01': {'en': 'November 1, 2026', 'fr': '1er novembre 2026', 'es': '1 de noviembre de 2026', 'ar': '1 نوفمبر 2026', 'it': '1 novembre 2026', 'he': '1 בנובמבר 2026'},
  '2026-11-18': {'en': 'November 18, 2026', 'fr': '18 novembre 2026', 'es': '18 de noviembre de 2026', 'ar': '18 نوفمبر 2026', 'it': '18 novembre 2026', 'he': '18 בנובמבר 2026'},
+ '2026-11-21': {'en': 'November 21, 2026', 'fr': '21 novembre 2026', 'es': '21 de noviembre de 2026', 'ar': '21 نوفمبر 2026', 'it': '21 novembre 2026', 'he': '21 בנובמבר 2026'},
 }
 FACT_NOTE = {
  'recheck': {
@@ -246,6 +247,14 @@ FACT_NOTE = {
   'ar': 'أُعيد التحقق من الأرقام المحلولة في هذه الصفحة في 18 نوفمبر 2026.',
   'it': 'I numeri svolti in questa pagina sono stati ricontrollati il 18 novembre 2026.',
   'he': 'המספרים הפתורים בעמוד זה נבדקו מחדש ב-18 בנובמבר 2026.',
+ },
+ 'recheck21': {
+  'en': 'Worked numbers on this page were rechecked November 21, 2026.',
+  'fr': 'Les nombres calculés de cette page ont été revérifiés le 21 novembre 2026.',
+  'es': 'Los números resueltos de esta página se volvieron a comprobar el 21 de noviembre de 2026.',
+  'ar': 'أُعيد التحقق من الأرقام المحلولة في هذه الصفحة في 21 نوفمبر 2026.',
+  'it': 'I numeri svolti in questa pagina sono stati ricontrollati il 21 novembre 2026.',
+  'he': 'המספרים הפתורים בעמוד זה נבדקו מחדש ב-21 בנובמבר 2026.',
  },
  'map': {
   'en': 'Outcomes map and readings list added November 18, 2026. Worked numbers on this page were last checked November 1, 2026.',
@@ -339,7 +348,7 @@ def course_page(C):
     if getattr(C, 'FURTHER', None): toc.append(('further', FURTHER_T[LANG]['h']))
     names0 = {u['id'] for u in C.UNITS}
     updated, version, when = stamp_of(C)
-    note_key = 'recheck' if updated == '2026-11-18' else 'map'
+    note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
          f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',

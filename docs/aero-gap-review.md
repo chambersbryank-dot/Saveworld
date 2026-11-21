@@ -1,6 +1,6 @@
 # Aerospace gap review
 
-Checked 21 November 2026. This list is topics named on a public university syllabus or curriculum page that Saving Planets does not yet teach as a unit or course. Nothing here has been added to a course page. A school home page that does not publish a topic list is not used to invent a gap.
+Checked 21 November 2026. This list is topics named on a public university syllabus or curriculum page that Saving Planets does not yet teach as a unit or course. AERO 410 is the exception: those propulsion gaps were closed on 21 November 2026 in units 11–13. The other courses below are still open. A school home page that does not publish a topic list is not used to invent a gap.
 
 Our courses in this review: AERO 101, 310, 320, 330, 340, 410, 420, 430, 440, 450, 470, 490, plus the rocket and jet tracks.
 
@@ -72,19 +72,23 @@ Source: https://ocw.mit.edu/courses/16-346-astrodynamics-fall-2008/pages/syllabu
 
 ## AERO 410 — Propulsion
 
-MIT 16.50’s calendar names these sessions. A search of our propulsion course does not turn them up as units:
+Closed 21 November 2026. Units 11–13 of Propulsion.html now teach the topics the 16.50 calendar named, plus the chemical-rocket depth and electric-rocket introduction named on the 16.512 syllabus. The 16.512 HTML syllabus still does not list further chemical-rocket subtopics, so the new chemical-rocket lesson stays inside the topics 16.50 and the NASA reports actually state.
 
-- Solid-propellant gas generators, stability, and grain design
-- Nozzle flow of reacting gases, and temperature-dependent specific heats
-- Rocket casing structural design
-- Ablative cooling
-- Thrust vectoring
-- Compressor performance maps, compressor blading, and multi-staging
-- Turbine solidity, blade temperature, and turbine cooling
-- Aircraft engine noise
-- Rotordynamics of the jet engine
+| Gap | Where it is now | Source used for the lesson |
+| --- | --- | --- |
+| Solid-propellant gas generators, stability, and grain design | Unit 12 | NASA TM X-52393, https://ntrs.nasa.gov/citations/19680010362. Steady state is when gas produced equals gas leaving. Lecture 9 on the 16.50 calendar names gas generators, stability, and grain designs. |
+| Reacting nozzle flow and temperature-dependent specific heats | Unit 12 | NASA Glenn ideal exit-speed formula, plus the 16.50 calendar titles for the reacting-flow lectures. The lesson shows how that formula changes when gamma changes. It is not an equilibrium-chemistry solution. |
+| Rocket casing design | Unit 12 | NASA TM X-52393 for hoop stress and the 400 to 1000 psi range. OpenStax 12.3 for stress = force/area. The hoop formula is the diameter-cut free body. |
+| Ablative cooling | Unit 12 | NASA TM X-52393 |
+| Thrust vectoring | Unit 12 | NASA TM X-52393. The side component is the sine of the turn angle. |
+| Compressor maps, blading, multi-staging | Unit 11 | NASA Glenn corrected airflow; NASA Glenn AIAA 2018-5010 map paper; NASA Glenn centrifugal-compressor page |
+| Turbine solidity, blade temperature, and turbine cooling | Unit 11 | MIT 16.50 syllabus calendar, lectures 28–30 (solidity and blade temperature, then internal, film, and impingement cooling). CC BY-NC-SA. |
+| Engine noise | Unit 13 | NASA jet-noise review, https://ntrs.nasa.gov/citations/20210021068 |
+| Rotordynamics | Unit 13 | OpenStax 15.1 for the natural frequency. MIT 16.50 lecture 33 is critical speeds and vibration. Lecture 38 is rotordynamics of the jet engine. The critical speed in the lesson is that frequency for a single mass. |
+| Deeper chemical rockets (16.512) | Unit 12 | 16.512 syllabus says the course adds chemical-rocket depth beyond 16.50. The added depth is the grain, reacting-nozzle, case, ablative, and thrust-vector material above. |
+| Electric propulsion (16.522) | Unit 13, beyond unit 9 | 16.512 syllabus names 16.522 for electric rockets. The thrust comparison uses the power-limited equation already in unit 9. |
 
-MIT 16.512 says it adds depth on chemical rockets beyond 16.50, and that a companion course, 16.522, covers electric rockets and small chemical rockets for satellites. Our unit 9 introduces electric propulsion. It is not a 16.522-depth treatment. The 16.512 HTML syllabus does not name further subtopics.
+English is complete. French, Spanish, Arabic, Italian, and Hebrew keep the translated section headings. The new unit titles, lesson prose, practice problems, quiz items, glossary lines, formula captions, and schedule rows for units 11–13 are still English on those five pages. That is the translation gap.
 
 Sources: https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/pages/syllabus/ and https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/pages/syllabus/
 
