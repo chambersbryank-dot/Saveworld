@@ -1,6 +1,6 @@
 """Propulsion (AERO 410): thrust and efficiency, the Brayton cycle, inlets and nozzles, turbojets and turbofans, fuel use, rocket fundamentals, rocket nozzles and propellants, electric propulsion, and sustainable propulsion.
 Oct 25 2026, founder-approved four-year track, senior course 1. Same module fields as probstat.py / orbit.py. Every number is re-computed in CHECKS() (build-courses.py --check)."""
-from math import sqrt, log
+from math import log, pi, radians, sin, sqrt
 ID = 'prop'
 STATUS = 'live'
 YEAR = 4
@@ -9,7 +9,7 @@ CODE = 'AERO 410'
 TITLE = 'Propulsion'
 LAB_NAME = 'Propulsion lab'
 TAGLINE = 'Jet engines and rockets: the thrust equation, propulsive and thermal efficiency, the Brayton cycle, inlets and nozzles, turbojets and turbofans, fuel burn and emissions, rocket engines and propellants, electric thrusters, and cleaner fuels, with six labs. Free, self-paced, and tied to NASA’s RS-25 engines, NASA engine-core research and sustainable aviation fuel.'
-DESC = 'Free self-study Propulsion: 10 units, worked examples, solved practice, quizzes, flashcards, 6 PhET and spreadsheet labs, practice exams, tied to rocket engines, efficient jet engines and sustainable aviation fuel.'
+DESC = 'Free self-study Propulsion: 13 units, worked examples, solved practice, quizzes, flashcards, 6 PhET and spreadsheet labs, practice exams, tied to rocket engines, efficient jet engines and sustainable aviation fuel.'
 # Shown under the title, before the contents list. Same line as AERO 101. The Founder is a role, never a person's name. Say SI, never AI.
 CREDIT = 'Course created by Saving Planets: the Founder sets direction and approves every page; SI researches, drafts, translates and checks sources.'
 ALT = 'NASA’s SLS core stage fires its four RS-25 engines during the Green Run hot-fire test at Stennis Space Center'
@@ -23,6 +23,16 @@ _RS25 = ('NASA: SLS (Space Launch System) RS-25 Core Stage Engine', 'https://www
 _SAF = ('U.S. Department of Energy: Sustainable Aviation Fuels', 'https://www.energy.gov/cmei/fuels/sustainable-aviation-fuels')
 _HY = ('NASA Aeronautics: Hybrid Thermally Efficient Core (HyTEC) project', 'https://www.nasa.gov/directorates/armd/aavp/hytec/')
 _DART = ('NASA Science: Double Asteroid Redirection Test (DART)', 'https://science.nasa.gov/mission/dart/')
+_MCB = ('NASA TM X-52393: Solid-propellant rocket systems (Lewis Research Center)', 'https://ntrs.nasa.gov/citations/19680010362')
+_WEB = ('NASA: Design and performance analysis of solid-propellant rocket motors (1974)', 'https://ntrs.nasa.gov/citations/19740012324')
+_WCOR = ('NASA Glenn Beginner’s Guide: Corrected airflow per area', 'https://www.grc.nasa.gov/WWW/BGH/wcora.html')
+_CENT = ('NASA Glenn Beginner’s Guide: Centrifugal compressors', 'https://www.grc.nasa.gov/WWW/K-12/BGP/centrf.html')
+_MAP = ('NASA Glenn: compressor-map control (AIAA 2018-5010)', 'https://www1.grc.nasa.gov/wp-content/uploads/2018PE-STARC-ABL-Turbine-control-Connolly-6.2018-5010.pdf')
+_NOISE = ('NASA: Jet noise review (2021)', 'https://ntrs.nasa.gov/citations/20210021068')
+_SHM = ('OpenStax University Physics Volume 1, 15.1 Simple Harmonic Motion', 'https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion')
+_STRESS = ('OpenStax University Physics Volume 1, 12.3 Stress, Strain, and Elastic Modulus', 'https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus')
+_S50 = ('MIT OpenCourseWare 16.50 syllabus (Spring 2012), CC BY-NC-SA', 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/pages/syllabus/')
+_S512 = ('MIT OpenCourseWare 16.512 syllabus (Fall 2005), CC BY-NC-SA', 'https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/pages/syllabus/')
 BANNER = ['images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg', 'images/ArtemisII_Launch_KSC_Hancock.jpg', 'images/JPSS2_Atlas_V_Launch_Pad.jpg', 'images/Landsat9_Launch_KLS04_0013.jpg']
 CREDITS = {'images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg': 'NASA/Michael DeMocker (MAF20210116_GR0006)', 'images/ArtemisII_Launch_KSC_Hancock.jpg': 'NASA',
            'images/JPSS2_Atlas_V_Launch_Pad.jpg': 'NASA/Liz Wilk (KSC-20221109-PH-LNW01_0001)', 'images/Landsat9_Launch_KLS04_0013.jpg': 'NASA/Kim Shiflett (KSC-20210927-PH-KLS04_0013, Sept. 27, 2021)'}
@@ -48,7 +58,9 @@ CONSTANTS = [('Air (textbook values)', 'γ = 1.4, c_p = 1005 J/(kg·K)'), ('Stan
 REF_TITLE = 'Free texts and simulations'
 REF_INTRO = 'Use these free lectures, NASA guides and simulations alongside the course.'
 PTABLE = [(_GTF[0], _GTF[1], 'Free NASA explainer.'),
-          (_GSI[0], _GSI[1], 'Free NASA explainer.'), (_GBR[0], _GBR[1], 'Free NASA explainer.'), ('PhET: Gas Properties', _PH + 'gas-properties', 'Gas laws interactively.')]
+          (_GSI[0], _GSI[1], 'Free NASA explainer.'), (_GBR[0], _GBR[1], 'Free NASA explainer.'), ('PhET: Gas Properties', _PH + 'gas-properties', 'Gas laws interactively.'),
+          (_WCOR[0], _WCOR[1], 'Corrected airflow.'), (_MCB[0], _MCB[1], 'NASA report on solid motors.'), (_NOISE[0], _NOISE[1], 'NASA jet-noise review.'),
+          (_SHM[0], _SHM[1], 'OpenStax, CC BY.'), (_S50[0], _S50[1], 'Lecture titles, CC BY-NC-SA.')]
 FURTHER = [
  ('MIT OpenCourseWare 16.50 Introduction to Propulsion Systems (Spring 2012)', 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/'),
  ('MIT OpenCourseWare 16.512 Rocket Propulsion (Fall 2005)', 'https://ocw.mit.edu/courses/16-512-rocket-propulsion-fall-2005/'),
@@ -134,7 +146,7 @@ UNITS.append(
             'src': [_RS25]},
  'res': [(_GRT[0], _GRT[1], 'Free NASA explainer.')]})
 UNITS.append(
-{'id': 'u4', 'title': 'Turbojets: Components and Cycle Analysis', 'weeks': 'Weeks 5–6',
+{'id': 'u4', 'title': 'Turbojets: Components and Cycle Analysis', 'weeks': 'Week 5',
  'summary': 'Inlet, compressor, burner, turbine and nozzle; work balance between compressor and turbine; turbine inlet temperature limits; afterburners; and real component efficiencies.',
  'objectives': ['Trace stations through a turbojet.', 'Balance compressor and turbine work.', 'Explain turbine temperature limits.', 'Describe how afterburning trades fuel for thrust.'],
  'concepts': ['Stations: free stream, inlet, compressor exit, burner exit (turbine inlet), turbine exit and nozzle exit.',
@@ -209,7 +221,7 @@ UNITS.append(
             'src': [_HY]},
  'res': [(_HY[0], _HY[1], 'NASA project page.')]})
 UNITS.append(
-{'id': 'u7', 'title': 'Rocket Fundamentals and Specific Impulse', 'weeks': 'Weeks 9–10',
+{'id': 'u7', 'title': 'Rocket Fundamentals and Specific Impulse', 'weeks': 'Week 9',
  'summary': 'Rocket thrust, effective exhaust velocity, specific impulse, total impulse, mass flow, and real numbers from NASA’s RS-25 engine.',
  'objectives': ['Use F = ṁV_eq.', 'Convert between Isp and exhaust velocity.', 'Compute total impulse.', 'Work with RS-25 thrust data.'],
  'concepts': ['A rocket carries all its propellant, so thrust is F = ṁV_e + (p_e − p₀)A_e = ṁV_eq.',
@@ -308,6 +320,85 @@ UNITS.append(
             'site': [('Solutions', 'Solutions.html'), ('Earth Observation', 'Earth_Observation.html')],
             'src': [_SAF]},
  'res': [(_SAF[0], _SAF[1], 'DOE explainer.'), (_HY[0], _HY[1], 'NASA project page.')]})
+UNITS.append(
+{'id': 'u11', 'title': 'Compressor Maps, Blading and Turbine Cooling', 'weeks': 'Week 6',
+ 'summary': 'Corrected flow, what a compressor map shows, why blades are tested rather than drawn from one formula, and the cooling methods named in the MIT 16.50 calendar.',
+ 'objectives': ['Compute a corrected weight flow from NASA’s definition.', 'Name the surge line, speed lines and operating line.', 'Multiply sample stage pressure ratios.', 'Name the turbine-cooling methods on the 16.50 calendar.'],
+ 'concepts': ['NASA Glenn defines the corrected weight flow as weight flow times the square root of theta, divided by delta. Theta is total temperature over the sea-level reference temperature (518 R on that page) and delta is total pressure over the reference pressure. The corrected flow per unit area is then a function of Mach number.',
+              'A 2018 NASA Glenn compressor-map paper (AIAA 2018-5010) describes a map with an operating line, a surge line, and speed lines. Efficiency, corrected mass flow and pressure ratio are read from corrected shaft speed and an R-line. The operating line moves toward surge when power is taken from the machine.',
+              'NASA Glenn’s centrifugal-compressor page says each blade produces a pressure variation like an airfoil, and that designers use test and computation because the flow is three-dimensional, unsteady and viscous. Performance is described by pressure ratio, shaft speed and efficiency.',
+              'If each stage multiplies pressure by the same ratio, the overall ratio is the product. Three sample stages at 1.5 give 1.5³ = 3.375. Those stage ratios are sample values, not a published engine.',
+              'The MIT 16.50 syllabus calendar (CC BY-NC-SA) titles lecture 28 “Turbine solidity; mass flow limits; blade temperature,” lecture 29 “Turbine cooling; general trends and systems; internal cooling,” and lecture 30 “Film cooling; thermal stresses; impingement cooling.” Solidity, blade temperature, and those three cooling methods are the turbine topics this unit names. The notes themselves stay on MIT OpenCourseWare.'],
+ 'eqs': [('W_c=\\dot w\\sqrt{\\theta}/\\delta', 'Corrected weight flow (NASA Glenn)'), ('\\theta=T_t/T_{ref}', 'Temperature ratio'), ('\\pi=\\pi_1\\pi_2\\pi_3', 'Overall pressure ratio'), ('\\pi=1.5^3', 'Three sample stages')],
+ 'worked': [
+  _w('A sample weight flow is 100 lb/s at a total temperature of 576 R, with delta = 1. NASA’s reference temperature on the corrected-airflow page is 518 R. Find the corrected weight flow.', ['θ = 576/518.', 'W_c = 100 × √θ.'], 'W_c = 105.4 lb/s.'),
+  _w('Three compressor stages each have a sample pressure ratio of 1.5. Find the overall ratio.', ['1.5 × 1.5 × 1.5.'], '3.375.'),
+  _w('Which turbine-cooling methods does the MIT 16.50 calendar name?', ['Lecture 29 names internal cooling.', 'Lecture 30 names film cooling and impingement cooling, and thermal stresses.'], 'Internal, film and impingement cooling.')],
+ 'practice': [('Corrected weight flow if the same 100 lb/s is at 518 R and delta = 1?', '100 lb/s, because θ = 1.'), ('What does the surge line mark on that NASA Glenn map?', 'The boundary the operating line must not cross; flow there is unstable.'),
+              ('Why does NASA Glenn say centrifugal-compressor blades are not sized from one formula?', 'The flow is three-dimensional, unsteady and viscous, so designers use test and computation.'), ('Name one film-cooling lecture on the 16.50 calendar.', 'Lecture 30.'),
+              ('Which 16.50 lecture title names turbine solidity and blade temperature?', 'Lecture 28.')],
+ 'misc': [('Corrected flow is the raw mass flow.', 'NASA multiplies by √θ and divides by δ so the Mach-number function stays the same.'), ('Surge is the best efficiency point.', 'Surge is the unstable boundary on the map.'), ('Turbine cooling is only regenerative rocket cooling.', 'The 16.50 calendar names internal, film and impingement cooling of turbine blades.')],
+ 'quiz': [_q('Corrected weight flow is…', ['ẇ √θ / δ', 'ẇ × δ', 'θ / δ', 'Mach number'], 0, 'NASA Glenn.'), _q('The surge line is…', ['an unstable boundary', 'the design pressure ratio', 'the fan bypass', 'ambient pressure'], 0, 'NASA Glenn map.'),
+          _q('Three stages at 1.5 give…', ['3.375', '4.5', '1.5', '2.25'], 0, 'Product.'), _q('Lecture 30 names…', ['film cooling', 'grain design', 'jet noise', 'the rocket equation'], 0, '16.50 calendar.')],
+ 'cards': [('Corrected flow', 'ẇ √θ / δ.'), ('Theta', 'T_t / T_ref.'), ('Surge line', 'Unstable boundary on a map.'), ('Speed line', 'A corrected-speed curve.'), ('Film cooling', 'Coolant laid on the blade surface.'), ('Stage stack', 'Overall ratio is the product.')],
+ 'planet': {'text': ['NASA Glenn says a centrifugal compressor’s performance is described by pressure ratio, shaft speed and efficiency, and that the flow inside is three-dimensional, unsteady and viscous.',
+                     'That is why a map, not a single formula, is how an engine stays clear of surge. A more efficient core burns less fuel for the same thrust, which is the fuel-burn problem the earlier units set up.'],
+            'site': [('Solutions', 'Solutions.html')],
+            'src': [_CENT, _MAP]},
+ 'res': [(_WCOR[0], _WCOR[1], 'Corrected-flow definition.'), (_MAP[0], _MAP[1], 'Map: surge line, speed lines, operating line.'), (_CENT[0], _CENT[1], 'Blading and why tests are used.'), (_S50[0], _S50[1], 'Cooling lecture titles, CC BY-NC-SA.')]})
+UNITS.append(
+{'id': 'u12', 'title': 'Solid Grains, Reacting Nozzles, Cases and Thrust Vectoring', 'weeks': 'Week 10',
+ 'summary': 'Grain shape and the burn-rate law, why one gamma is only a first nozzle estimate, case hoop stress, ablative liners, and how a rocket steers. Reading a NASA report, not a plan to mix or fire a motor.',
+ 'objectives': ['Use the solid-propellant burn-rate law with sample coefficients.', 'Estimate burn time from a web thickness.', 'Recompute ideal exit speed at two values of gamma.', 'Find hoop stress from a free-body diagram.', 'Name ablative and thrust-vector methods from the NASA report.'],
+ 'concepts': ['NASA TM X-52393 (Lewis Research Center) says a solid grain is a mixture of fuel and oxidizer that burns without a separate injected oxidizer. Grains are classed as end-burning or internal-burning, by which surface is allowed to burn. The same report gives the burn-rate law r = a P^n, with the exponent n typically from 0.4 to almost 1.0. The coefficient a and the exponent belong to that propellant; the numbers below are samples, not a published formula for a named motor. The same report says a steady state is reached when the gas produced equals the gas leaving the chamber, and that the designer sets that pressure with the propellant, the nozzle size, and the burning-surface area. MIT 16.50 lecture 9 is titled “Solid propellant gas generators; stability; grain designs.”',
+              'A 1974 NASA motor-analysis report defines web thickness as the thickness of propellant consumed normal to the burning surface. At a constant rate, time is web divided by r.',
+              'NASA Glenn’s ideal exit-speed formula uses one ratio of specific heats. The MIT 16.50 calendar (CC BY-NC-SA) has lectures on nozzle flow of reacting gases and on temperature-dependent specific heats, because a real exhaust does not keep one gamma. Changing gamma in the NASA formula changes the speed. That comparison is a sensitivity check, not a reacting-flow solution.',
+              'That report says a solid-motor case is usually a cylinder, that the principal wall stress is the hoop stress, and that typical chamber pressures are 400 to 1000 psi. OpenStax defines stress as force over area. A diameter cut of a cylinder equates the pressure force P × 2 R_c × L to the two wall forces 2 × S × t_w × L, so S = P R_c / t_w. Thinner walls need a stronger material, which is the design point that report states.',
+              'The same report says an ablative liner (plastic or rubber with refractory fibers) gives off decomposition gases and erodes, and is used where throat growth is acceptable. A refractory liner is used where the contour must not change. Insulation between grain and case keeps hot gas off the wall. Thrust vector control means changing the direction of thrust: liquids often gimbal the engine; solids move the nozzle, or use jet tabs, or inject fluid through the nozzle wall. A thrust F turned by a small angle δ has a side component F sin δ.'],
+ 'eqs': [('r=aP^n', 'Burn rate (NASA TM X-52393)'), ('t=w/r', 'Web time at constant rate'), ('S=PR_c/t_w', 'Hoop stress from a diameter cut'), ('F_{side}=F\\sin\\delta', 'Side component of a turned thrust')],
+ 'worked': [
+  _w('Sample coefficients, not a named propellant: a = 0.05 and n = 0.4, with P = 1000 psi (the top of that report’s typical 400 to 1000 psi range). Find the burn rate.', ['r = 0.05 × 1000^0.4.'], 'r = 0.792 in/s.'),
+  _w('The web in that sample is 1 in, and the rate stays constant. Find the burn time.', ['t = 1 / 0.792.'], 't = 1.26 s.'),
+  _w('Reuse the unit 8 sample gas (γ = 1.2, molar mass 13 g/mol, T₀ = 3500 K, p_e/p₀ = 0.001) and recompute ideal exit speed at γ = 1.4 with the same NASA formula.', ['The γ = 1.2 result is the unit 8 value, 4286 m/s.', 'At γ = 1.4 the same formula gives a lower speed.'], '3673 m/s at γ = 1.4.'),
+  _w('Sample case: P = 1000 psi, R_c = 60 in, t_w = 0.5 in. Find the hoop stress.', ['S = 1000 × 60 / 0.5.'], 'S = 120,000 psi.'),
+  _w('A sample thrust of 1,000,000 lbf is turned by 5°. Find the side component.', ['F sin 5°.'], 'About 87,200 lbf.')],
+ 'practice': [('Burn rate if n = 0 and a = 0.05, at any pressure?', '0.05 in/s. The pressure term drops out.'), ('What does an end-burning grain burn on?', 'The end face, not an internal port. The report’s classification.'),
+              ('Why is one gamma not enough for a reacting nozzle?', 'Composition and temperature change the specific heats, so gamma is not one number. The MIT calendar lists that as its own lectures.'), ('When does that NASA report say an ablative nozzle liner is acceptable?', 'When performance is not seriously hurt by a change in nozzle contour or throat area.'),
+              ('Name two thrust-vector methods from that report.', 'A movable nozzle, jet tabs, or secondary fluid injection.'),
+              ('When has chamber pressure reached the steady state in that report?', 'When the gas produced equals the gas leaving the chamber.')],
+ 'misc': [('The burn-rate exponent is universal.', 'That report says it is a property of the propellant, typically 0.4 to almost 1.'), ('A thinner case wall lowers hoop stress.', 'Stress is pressure times radius over thickness, so a thinner wall raises stress.'), ('Ablation means the liner does not change.', 'That report says the ablative material decomposes and erodes.')],
+ 'quiz': [_q('The burn-rate law is…', ['r = a P^n', 'r = P / a', 'r = constant', 'r = V_e'], 0, 'NASA TM X-52393.'), _q('A thinner wall…', ['raises hoop stress', 'lowers hoop stress', 'does not change stress', 'stops burning'], 0, 'S = P R / t.'),
+          _q('An ablative liner…', ['decomposes and erodes', 'never changes shape', 'is a liquid coolant', 'is the igniter'], 0, 'NASA TM X-52393.'), _q('Thrust vector control…', ['changes the thrust direction', 'only changes chamber pressure', 'is the burn-rate law', 'is specific impulse'], 0, 'The report’s definition.')],
+ 'cards': [('Grain', 'The solid fuel-oxidizer charge.'), ('End-burning', 'Burns on the end face.'), ('Web', 'Thickness consumed normal to the surface.'), ('Hoop stress', 'S = P R_c / t_w.'), ('Ablative', 'Liner that decomposes and erodes.'), ('TVC', 'Steering by turning the thrust.')],
+ 'planet': {'text': ['The 1967 Lewis report NASA TM X-52393 gives typical solid-motor chamber pressures of 400 to 1000 psi, and names steel, titanium and filament-wound cases on motors of that era, including Minuteman and Polaris stages and the 120-inch Titan boosters.',
+                     'The same report is the source for the grain classes, the burn-rate law, ablative nozzles and thrust-vector methods in this unit. It is a design discussion, not a procedure for building a motor.'],
+            'site': [('Solutions', 'Solutions.html')],
+            'src': [_MCB, _RS25]},
+ 'res': [(_MCB[0], _MCB[1], 'Grains, burn rate, cases, ablatives, TVC.'), (_WEB[0], _WEB[1], 'Web thickness.'), (_GRT[0], _GRT[1], 'Ideal exit speed, one gamma.'), (_STRESS[0], _STRESS[1], 'Stress is force over area.'), (_S50[0], _S50[1], 'Reacting-flow lecture titles, CC BY-NC-SA.'), (_S512[0], _S512[1], '16.512 adds chemical-rocket depth, CC BY-NC-SA.')]})
+UNITS.append(
+{'id': 'u13', 'title': 'Engine Noise, Rotordynamics and Electric Rockets', 'weeks': 'Week 14',
+ 'summary': 'Why jet noise climbs so fast with speed, a shaft’s natural frequency, and why a higher exhaust speed cuts thrust when electric power is fixed. This is the 16.522 introduction; unit 9 already has the first electric-thruster example.',
+ 'objectives': ['Apply the eighth-power jet-noise scaling.', 'Compute a sample natural frequency.', 'Compare two sample electric thrusters at the same power.', 'State what MIT 16.522 covers, from the 16.512 syllabus.'],
+ 'concepts': ['A 2021 NASA jet-noise review says measured jet sound followed an eighth-power scaling: acoustic power proportional to ρ₀ A V⁸ / a₀⁵, where ρ₀ and a₀ are the ambient density and sound speed, A is the jet area and V is the jet speed. Doubling V multiplies that power by 2⁸ = 256, which is 24.1 dB. The law is the low-speed scaling those authors report, not a full engine-noise prediction.',
+              'OpenStax University Physics gives the angular frequency of a mass on a spring as ω = √(k/m), so the frequency in hertz is that value divided by 2π. The MIT 16.50 calendar titles lecture 33 “Critical speeds and vibration” and lecture 38 “Rotordynamics of the jet engine.” The critical speed in this single-mass model is the spin rate that matches that natural frequency. A real engine shaft has more than one frequency; this is the first estimate.',
+              'Unit 9 already uses the power-limited thrust F = 2 η P / V_e. The MIT 16.512 syllabus (CC BY-NC-SA) says a companion course, 16.522, covers electric rockets and small chemical rockets for satellite propulsion. At fixed power and efficiency, a higher exhaust speed means less thrust. That is why the electric rockets 16.522 treats are for long, low-thrust burns, not for launch.',
+              'The sample specific impulses below (1800 s and 3000 s) are sample values for that comparison. They are not the rating of a named thruster.'],
+ 'eqs': [('P_{ac}\\propto V^8', 'Eighth-power scaling (NASA review)'), ('f=\\frac{1}{2\\pi}\\sqrt{k/m}', 'Natural frequency (OpenStax)'), ('F=2\\eta P/V_e', 'Power-limited thrust'), ('V_e=I_{sp}g_0', 'Exhaust speed from specific impulse')],
+ 'worked': [
+  _w('A sample jet’s speed doubles, and the NASA eighth-power scaling applies. By what factor does acoustic power rise, and by how many decibels?', ['2⁸ = 256.', '10 log₁₀(256).'], '256 times, or 24.1 dB.'),
+  _w('A sample disk has k = 1,000,000 N/m and m = 10 kg. Find the natural frequency.', ['f = (1 / 2π) √(k/m).'], 'f = 50.3 Hz.'),
+  _w('The same sample power as a small thruster: 2.3 kW and η = 0.6. Compare thrust at sample specific impulses of 1800 s and 3000 s.', ['V_e = I_sp × 9.80665.', 'F = 2 × 0.6 × 2300 / V_e.'], '0.156 N at 1800 s, and 0.0938 N at 3000 s.')],
+ 'practice': [('Acoustic-power factor if speed rises by 10% under the eighth-power law?', '1.1⁸ = 2.14.'), ('Does a heavier disk raise or lower the natural frequency?', 'It lowers it. Frequency goes as 1/√m.'),
+              ('At fixed power, which sample gives more thrust, 1800 s or 3000 s?', '1800 s. Thrust falls as exhaust speed rises.'), ('What does the 16.512 syllabus say 16.522 covers?', 'Electric rockets, and small chemical rockets for satellite propulsion.')],
+ 'misc': [('Jet noise grows only with the square of speed.', 'The NASA review reports the eighth power for that scaling.'), ('Critical speed is the redline temperature.', 'In this model it is the spin rate that matches the natural frequency.'), ('More specific impulse always means more thrust.', 'Not at fixed power. Thrust is 2 η P / V_e.')],
+ 'quiz': [_q('Doubling jet speed multiplies acoustic power by…', ['256', '2', '4', '8'], 0, '2⁸.'), _q('A larger mass…', ['lowers the natural frequency', 'raises it', 'does not change it', 'sets the thrust'], 0, 'OpenStax.'),
+          _q('At fixed power, higher V_e…', ['lowers thrust', 'raises thrust', 'does not change thrust', 'raises gamma'], 0, 'F = 2ηP/V_e.'), _q('MIT 16.522, per the 16.512 syllabus, covers…', ['electric rockets', 'only turbofans', 'only wing design', 'only SAF'], 0, '16.512 syllabus.')],
+ 'cards': [('Eighth-power law', 'Acoustic power scales as V⁸.'), ('Decibel step', '10 log₁₀ of a power ratio.'), ('Natural frequency', '(1/2π) √(k/m).'), ('Critical speed', 'Spin rate matching that frequency.'), ('Power-limited', 'F = 2ηP/V_e.'), ('16.522', 'MIT electric-rocket course.')],
+ 'planet': {'text': ['NASA Glenn’s turbofan page is the reason a high-bypass engine accelerates a large mass of air a little. The same NASA eighth-power scaling then says that slower jet is much quieter: half the speed is 1/256 of the acoustic power.',
+                     'For satellites, the 16.512 syllabus points to 16.522 for electric rockets. The power-limited equation is why those thrusters trade thrust for exhaust speed on a long cruise, after a chemical rocket has done the launch.'],
+            'site': [('Solutions', 'Solutions.html'), ('Orbital Mechanics', 'Orbital_Mechanics.html')],
+            'src': [_NOISE, _GTF, _S512]},
+ 'res': [(_NOISE[0], _NOISE[1], 'Eighth-power scaling.'), (_SHM[0], _SHM[1], 'Natural frequency, CC BY.'), (_S50[0], _S50[1], 'Lecture 38 title, CC BY-NC-SA.'), (_S512[0], _S512[1], '16.522 sentence, CC BY-NC-SA.'), (_GSI[0], _GSI[1], 'Specific impulse.')]})
 LABS = []
 LABS.append(
 {'id': 'labA', 'title': 'Lab A: Thrust and propulsive efficiency sweep', 'week': 'Week 1',
@@ -375,8 +466,8 @@ LABS.append(
  'safety': ['Computer only.'], 'home': ['Any spreadsheet works.'],
  'sims': [(_SAF[0], _SAF[1])],
  'planet': 'DOE says the US could produce more than 1 billion tons of biomass a year.', 'planet_src': [_SAF]})
-UPDATED = '2026-11-18'
-VERSION = '2026.11.18'
+UPDATED = '2026-11-21'
+VERSION = '2026.11.21'
 _OCW = 'https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/resources/'
 # Titles are the lecture topics published on the MIT 16.50 lecture-notes page (fetched November 18, 2026). Notes, not videos.
 SESSION_NOTES = [
@@ -392,36 +483,50 @@ SESSION_NOTES = [
  ('u8', 'MIT 16.50 Lecture 7: Modeling of rocket nozzles; effects of nozzle area ratio', _OCW + 'mit16_50s12_lec7/'),
  ('u8', 'MIT 16.50 Lecture 8: Types of nozzles; connection of flow to nozzle shape', _OCW + 'mit16_50s12_lec8/'),
  ('u9', 'MIT 16.50 Lecture 5: Non-chemical rockets; optimum exhaust velocity', _OCW + 'mit16_50s12_lec5/'),
+ ('u11', 'MIT 16.50 syllabus calendar: compressor maps and blading (lectures 24–26) and turbine cooling (lectures 28–30)', _S50[1]),
+ ('u12', 'MIT 16.50 syllabus calendar: solid grains, reacting nozzle flow, casing design, ablative cooling, and thrust vectoring (lectures 9–16)', _S50[1]),
+ ('u12', 'MIT 16.512 syllabus: chemical rockets beyond 16.50', _S512[1]),
+ ('u13', 'MIT 16.50 syllabus calendar: critical speeds (lecture 33), engine noise (lectures 36–37), and rotordynamics (lecture 38)', _S50[1]),
+ ('u13', 'MIT 16.512 syllabus: companion course 16.522 covers electric rockets', _S512[1]),
 ]
 SCHEDULE = [(1, 'u1', 'Thrust and propulsive efficiency; Lab A', 'NASA Glenn'), (2, 'u2', 'Brayton cycle; Lab B', 'NASA Glenn'),
             (3, 'u3', 'Stagnation properties and choking', 'MIT 16.50'), (4, 'u3', 'Nozzles and inlets; Lab C', 'MIT 16.50'),
-            (5, 'u4', 'Turbojet stations and work balance', 'MIT 16.50'), (6, 'u4', 'Component efficiency and afterburners', 'NASA Glenn'),
+            (5, 'u4', 'Turbojet stations and work balance', 'MIT 16.50'), (6, 'u11', 'Compressor maps, blading and turbine cooling', 'NASA Glenn'),
             (7, 'u5', 'Turbofans; Lab D; midterm practice', 'NASA Glenn'), (8, 'u6', 'Fuel burn, TSFC and CO₂', 'NASA HyTEC'),
-            (9, 'u7', 'Rocket thrust and Isp', 'NASA Glenn'), (10, 'u7', 'RS-25 case study', 'NASA RS-25'),
+            (9, 'u7', 'Rocket thrust and Isp', 'NASA Glenn'), (10, 'u12', 'Solid grains, cases, ablatives and thrust vectoring', 'NASA TM X-52393'),
             (11, 'u8', 'Rocket nozzles and throttling; Lab E', 'MIT 16.512'), (12, 'u9', 'Rocket equation and electric propulsion', 'MIT 16.512'),
-            (13, 'u10', 'SAF, hydrogen and batteries; Lab F', 'DOE SAF'), (14, 'u10', 'Electric aircraft and review', 'DOE SAF'), (15, 'u10', 'Review; final practice', 'MIT 16.50')]
+            (13, 'u10', 'SAF, hydrogen and batteries; Lab F', 'DOE SAF'), (14, 'u13', 'Engine noise, rotordynamics and electric rockets', 'NASA, OpenStax'),
+            (15, 'u13', 'Review; final practice', 'MIT 16.50')]
 EXAMS = [('Midterm practice set (Units 1–5)', [
   ('An engine moves 80 kg/s from 200 to 500 m/s. Find thrust and η_p.', ['F = 80 × 300.', 'η_p = 2/(1 + 2.5).'], '24 kN; 0.571.'),
   ('Find ideal Brayton efficiency at π = 25.', ['1 − 25^(−0.2857).'], '60.1%.'),
   ('Find T₀/T at Mach 2.', ['1 + 0.2 × 4.'], '1.8.'),
   ('Find the compressor exit temperature for π = 20 from 288 K.', ['288 × 20^0.2857.'], '678 K.'),
   ('A turbofan has ṁ_c = 50 kg/s, bpr = 8, V_e = 400, V_f = 280, V₀ = 240 m/s. Find thrust.', ['50 × 400 + 400 × 280 − 450 × 240.'], '24 kN.')]),
- ('Final practice set (Units 1–10)', [
+ ('Final practice set (Units 1–13)', [
   ('An engine makes 50 kN at 240 m/s burning 0.9 kg/s of 43 MJ/kg fuel. Find η₀ and TSFC.', ['50,000 × 240/(0.9 × 43 × 10⁶).', '0.9/50,000.'], '0.310; 18 mg/(N·s).'),
   ('Find CO₂ per hour for 0.9 kg/s of fuel (3.16 kg/kg, textbook).', ['0.9 × 3600 × 3.16.'], '10,238 kg.'),
   ('Find V_eq for Isp 350 s.', ['350 × 9.80665.'], '3432 m/s.'),
   ('Find Δv for V_e = 3432 m/s and mass ratio 5.', ['3432 ln 5.'], '5524 m/s.'),
   ('A 2 kW ion thruster (η = 0.6) has V_e = 30 km/s. Find thrust.', ['2 × 0.6 × 2000/30,000.'], '0.08 N.'),
-  ('How much liquid hydrogen (120 MJ/kg) matches 500 kg of jet fuel (43 MJ/kg)?', ['500 × 43/120.'], '179 kg.')])]
+  ('How much liquid hydrogen (120 MJ/kg) matches 500 kg of jet fuel (43 MJ/kg)?', ['500 × 43/120.'], '179 kg.'),
+  ('Sample solid propellant: a = 0.05, n = 0.4, P = 1000 psi. Find the burn rate.', ['0.05 × 1000^0.4.'], '0.792 in/s.'),
+  ('Sample case: P = 1000 psi, radius 60 in, wall 0.5 in. Find the hoop stress.', ['1000 × 60 / 0.5.'], '120,000 psi.'),
+  ('Jet speed doubles under the eighth-power law. Find the decibel rise.', ['10 log₁₀(256).'], '24.1 dB.')])]
 FORMULAS = ['F=\\dot m(V_e-V_0)+(p_e-p_0)A_e,\\ \\eta_p=2/(1+V_e/V_0)', '\\eta_{th}=1-\\pi^{-(\\gamma-1)/\\gamma},\\ T_2/T_1=\\pi^{(\\gamma-1)/\\gamma}',
             'T_0/T=1+\\frac{\\gamma-1}2M^2,\\ p_0/p=(T_0/T)^{\\gamma/(\\gamma-1)}', 'w_c=c_p(T_3-T_2)=c_p(T_4-T_5)', 'F=\\dot m_cV_e+bpr\\,\\dot m_cV_f-\\dot m_0V_0',
             '\\eta_0=FV_0/(\\dot m_fLHV),\\ TSFC=\\dot m_f/F', 'I_{sp}=F/(\\dot mg_0),\\ I=F\\Delta t', 'V_e=\\sqrt{\\frac{2\\gamma}{\\gamma-1}\\frac{R_uT_0}{\\mathcal M}[1-(p_e/p_0)^{(\\gamma-1)/\\gamma}]}',
-            '\\Delta v=V_e\\ln(m_0/m_f),\\ F=2\\eta P/V_e', 'm=E/e']
+            '\\Delta v=V_e\\ln(m_0/m_f),\\ F=2\\eta P/V_e', 'm=E/e',
+            'W_c=\\dot w\\sqrt{\\theta}/\\delta,\\ r=aP^n,\\ S=PR_c/t_w', 'P_{ac}\\propto V^8,\\ f=\\frac{1}{2\\pi}\\sqrt{k/m}']
 GLOSSARY = sorted([('Afterburner', 'Burner after the turbine for extra thrust.'), ('Area ratio', 'A/A*, nozzle area over throat area.'), ('Bypass ratio', 'Fan flow over core flow.'), ('Brayton cycle', 'Gas-turbine thermodynamic cycle.'),
     ('Choked flow', 'Sonic flow at a throat that caps mass flow.'), ('Compressor', 'Raises air pressure.'), ('Hall thruster', 'Electric thruster using crossed fields.'), ('Isentropic', 'Reversible and adiabatic.'),
     ('Mach number', 'Speed over sound speed.'), ('Overall efficiency', 'Thrust power over fuel power.'), ('Pressure ratio', 'Compressor exit over inlet pressure.'), ('Propulsive efficiency', 'Thrust power over jet power.'),
     ('Rocket equation', 'Δv = V_e ln(m₀/m_f).'), ('SAF', 'Sustainable aviation fuel.'), ('Specific impulse', 'Thrust per weight flow of propellant.'), ('Specific thrust', 'Thrust per unit air flow.'),
-    ('Stagnation temperature', 'Temperature if flow is brought to rest adiabatically.'), ('TSFC', 'Fuel flow per thrust.'), ('Turbine', 'Extracts work to drive the compressor.'), ('Turbofan', 'Gas turbine with a bypass fan.')])
+    ('Stagnation temperature', 'Temperature if flow is brought to rest adiabatically.'), ('TSFC', 'Fuel flow per thrust.'), ('Turbine', 'Extracts work to drive the compressor.'), ('Turbofan', 'Gas turbine with a bypass fan.'),
+    ('Ablative', 'Liner that decomposes and erodes, carrying heat away.'), ('Burn rate', 'Solid-propellant regression, r = a P^n.'), ('Corrected flow', 'Weight flow times √θ, divided by δ.'),
+    ('Critical speed', 'Shaft spin rate that matches a natural bending frequency.'), ('Eighth-power law', 'Subsonic jet acoustic power scales as speed to the eighth.'),
+    ('Film cooling', 'Coolant laid along a turbine-blade surface.'), ('Hoop stress', 'Circumferential case stress, S = P R / t.'), ('Surge line', 'Unstable boundary on a compressor map.'),
+    ('Thrust vector control', 'Steering by changing the direction of thrust.'), ('Web', 'Propellant thickness consumed normal to the burning surface.')])
 RUBRIC = [('4 · Mastery', 'Sets up control volumes and stations, picks the right relations, checks units and explains efficiency and emissions trades in plain words.'), ('3 · Proficient', 'Solves the practice problems with occasional slips in units or stations.'),
           ('2 · Developing', 'Follows worked examples but mixes stagnation and static values or Isp and exhaust velocity.'), ('1 · Beginning', 'Plugs numbers into formulas without a station diagram; needs to revisit the unit.')]
 WEIGHTS = [('Practice problems', '20%'), ('Labs', '25%'), ('Midterm practice set', '25%'), ('Final practice set', '30%')]
@@ -466,6 +571,16 @@ def CHECKS():
      ('mid F', 80 * 300, 24000), ('mid ep', ep(500, 200), .571), ('mid bt', bt(25), .601), ('mid t0', t0(2), 1.8), ('mid T2', 288 * 20 ** k, 678), ('mid tf', 50 * 400 + 400 * 280 - 450 * 240, 24000),
      ('fin eo', 50000 * 240 / (.9 * 43e6), .310), ('fin ts', .9 / 50000 * 1e6, 18), ('fin co', .9 * 3600 * 3.16, 10238), ('fin ve', 350 * g0, 3432), ('fin dv', 350 * g0 * log(5), 5524),
      ('fin ion', 2 * .6 * 2000 / 30000, .08), ('fin h2', 500 * 43 / 120, 179),
+     ('fin r', 0.05 * (1000 ** 0.4), .792), ('fin S', 1000 * 60 / 0.5, 120000), ('fin db', 10 * log(256) / log(10), 24.1),
+     ('u11 th', 576 / 518, 1.112), ('u11 wc', 100 * sqrt(576 / 518), 105.4), ('u11 pi', 1.5 ** 3, 3.375), ('u11 w1', 100 * sqrt(518 / 518), 100),
+     ('u12 r', 0.05 * (1000 ** 0.4), .792), ('u12 t', 1 / (0.05 * (1000 ** 0.4)), 1.26), ('u12 n', .4, .4),
+     ('u12 g14', sqrt(2 * 1.4 / 0.4 * 8.314 / 0.013 * 3500 * (1 - .001 ** (0.4 / 1.4))), 3673),
+     ('u12 S', 1000 * 60 / .5, 120000), ('u12 side', 1000000 * sin(radians(5)), 87200),
+     ('u12 p', 1000, 1000), ('u12 lo', 400, 400),
+     ('u13 pwr', 2 ** 8, 256), ('u13 db', 10 * log(256) / log(10), 24.1),
+     ('u13 f', (1 / (2 * pi)) * sqrt(1e6 / 10), 50.3),
+     ('u13 Fa', 2 * .6 * 2300 / (1800 * g0), .156), ('u13 Fb', 2 * .6 * 2300 / (3000 * g0), .0938),
+     ('u13 r', 1.1 ** 8, 2.14), ('u13 half', 2 ** 8, 256),
      ('c g0', g0, 9.80665), ('c lbf', 4.44822, 4.448), ('c k', k, .2857), ('c cp', cp, 1005), ('c R', 8.314, 8.314), ('c co2', 44 / 12 * .862, 3.16),
      ('x rs starts', 135, 135), ('x sls t', 59525 * .4536, 27000), ('x 1b', 38, 38), ('x b2', 43, 43), ('x sl', 69, 69), ('x bt', 1e9, 1e9), ('x gal', 60e9, 60e9),
      ('x dart', 160, 160), ('x art', 2e6, 2e6), ('x pr', 491000 / 469856, 1.045), ('x 104', 1.045 * 469856, 491000), ('x 111b', 1.11 * 469856, 522000),
