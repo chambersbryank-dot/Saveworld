@@ -2,9 +2,9 @@
 Every indexable page in en, fr, es, ar, it, he gets a <url> with xhtml:link hreflang alternates for exactly the
 language versions that exist (+ x-default = English) and <lastmod> = committer date of that file's last commit
 (`git log -1 --format=%cs`), or today if the file is uncommitted. Skipped: redirect stubs (meta refresh), robots
-noindex pages, 404, Search Console verification files, and the removed HPD study guide under study/ (noindex
-redirects to the homepage). index.html is listed at its directory URL. Idempotent; other generators may still
-append entries, this one runs last. The Pages deploy workflow runs it before upload (full git history required)."""
+noindex pages, 404, and Search Console verification files. index.html is listed at its directory URL. Idempotent;
+other generators may still append entries, this one runs last. The Pages deploy workflow runs it before upload
+(full git history required)."""
 import glob, os, re, subprocess, datetime
 from concurrent.futures import ThreadPoolExecutor
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -15,9 +15,6 @@ URL_LIMIT, BYTE_LIMIT = 50000, 50 * 1024 * 1024
 def url(l, b): return SITE + ('' if l == 'en' else l + '/') + ('' if b == 'index.html' else b)
 def path(l, b): return b if l == 'en' else f'{l}/{b}'
 def indexable(f):
-    rel = f.replace('\\', '/')
-    # study/ is the removed HPD study guide: noindex redirects, never a live page.
-    if rel == 'study' or rel.startswith('study/') or '/study/' in rel: return False
     if SKIP.match(os.path.basename(f)): return False
     head = open(f, encoding='utf8').read().split('</head>')[0]
     if 'http-equiv="refresh"' in head: return False
