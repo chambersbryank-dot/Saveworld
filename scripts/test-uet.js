@@ -1,6 +1,6 @@
-/* Click-listener checks for the Microsoft UET block injected by scripts/build-uet.py.
+/* Click-listener and solution_view checks for the Microsoft UET block injected by scripts/build-uet.py.
    Uses the real snippet from index.html and a small DOM, then a headless Chrome pass
-   on built pages (stylesheet load, kids exclusion, donate_click, no navigation delay). */
+   on built pages (stylesheet load, kids exclusion, donate_click, solution_view, no navigation delay). */
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
@@ -50,13 +50,18 @@ function match(n, sel) {
   return false;
 }
 
-function boot(pathname, hostname) {
+function boot(pathname, hostname, opts) {
+  opts = opts || {};
+  const anchors = opts.anchors || [];
+  const classes = opts.classes || [];
   const listeners = [];
   const created = [];
   const document = {
     addEventListener(type, fn) { listeners.push(fn); },
     createElement(tag) { const n = { tag, src: '', async: false, parentNode: null }; created.push(n); return n; },
     getElementsByTagName() { return [{ parentNode: { insertBefore() {} } }]; },
+    body: { classList: { contains(c) { return classes.indexOf(c) !== -1; } } },
+    querySelectorAll(sel) { return sel === 'a[data-sp-donate]' ? anchors.slice() : []; },
   };
   const window = { document, uetq: undefined };
   const location = { hostname, pathname };
@@ -96,6 +101,24 @@ function donateLabels(q) {
   }
   return labels;
 }
+function customEvents(q) {
+  const out = [];
+  let cmd, name;
+  for (let o = 0; o < (q || []).length; o++) {
+    const item = q[o];
+    if (item && typeof item === 'object') {
+      if (cmd === 'event' && name) out.push({ name, category: item.event_category, label: item.event_label });
+      cmd = name = undefined;
+    } else if (typeof item === 'string') {
+      if (cmd !== undefined && name !== undefined) { cmd = name = undefined; continue; }
+      if (cmd === undefined && (item === 'event' || item === 'set' || item === 'consent' || item === 'config')) cmd = item;
+      else if (cmd !== undefined && name === undefined) name = item;
+      else cmd = name = undefined;
+    } else cmd = name = undefined;
+  }
+  return out;
+}
+function views(q) { return customEvents(q).filter(e => e.name === 'solution_view'); }
 
 const page = boot('/Snow_Leopard_Trust.html', 'www.savingplanets.com');
 eq('production loads bat.js', page.created.map(n => n.src), ['https://bat.bing.com/bat.js']);
@@ -142,10 +165,41 @@ eq('arabic donate label counts', donateLabels(ar.click(arA).q), ['WeForest']);
 const vol = a({ href: 'https://example.org/volunteer', class: 'btn help-btn help-btn-join' }, [makeText('Volunteer')]);
 eq('volunteer is not a donation', donateLabels(page.click(vol).q), ['Snow_Leopard_Trust', 'Snow Leopard Trust']);
 
-for (const rel of ['Kids_Map.html', 'fr/Play_and_Learn.html', 'he/Myth_or_Fact_Arcade.html', 'es/Spot_the_Fire.html', 'ar/Kids_World.html']) {
+const org = a({ href: 'https://friendsofmidway.org/get-involved/donations/', class: 'btn help-btn', 'data-sp-donate': '1', target: '_blank' }, [makeText('Donate')]);
+const hub = boot('/Papahanaumokuakea.html', 'www.savingplanets.com', { anchors: [org] });
+eq('solution_view once on a hub page', views(hub.window.uetq), [{ name: 'solution_view', category: 'funnel', label: 'Papahanaumokuakea' }]);
+eq('hub page still loads bat.js', hub.created.map(n => n.src), ['https://bat.bing.com/bat.js']);
+const hubAgain = boot('/Papahanaumokuakea.html', 'savingplanets.com', { anchors: [org, org] });
+eq('two donate buttons still push one solution_view', views(hubAgain.window.uetq).length, 1);
+const frHub = boot('/fr/Papahanaumokuakea.html', 'www.savingplanets.com', { anchors: [org] });
+eq('localized hub uses the page slug', views(frHub.window.uetq), [{ name: 'solution_view', category: 'funnel', label: 'Papahanaumokuakea' }]);
+eq('localhost hub does not push solution_view', views(boot('/Papahanaumokuakea.html', '127.0.0.1', { anchors: [org] }).window.uetq), []);
+eq('homepage does not push solution_view', views(boot('/index.html', 'www.savingplanets.com', { anchors: [org] }).window.uetq), []);
+eq('language homepage does not push solution_view', views(boot('/es/index.html', 'www.savingplanets.com', { anchors: [org], classes: ['toc-home'] }).window.uetq), []);
+eq('ways to help does not push solution_view', views(boot('/Ways_to_Help.html', 'www.savingplanets.com', { anchors: [org] }).window.uetq), []);
+eq('localized ways to help does not push solution_view', views(boot('/he/ways-to-help.html', 'www.savingplanets.com', { anchors: [org] }).window.uetq), []);
+eq('course page does not push solution_view', views(boot('/Physics_I.html', 'www.savingplanets.com', { anchors: [org], classes: ['learn-page'] }).window.uetq), []);
+const listed = a({ href: 'https://snowleopard.org/donate/', 'data-sp-donate': '1' }, [makeText('Donate')]);
+const listedCard = makeEl('li', { class: 'wh-card' }, [listed]);
+makeEl('section', { id: 'donations' }, [listedCard]);
+eq('donate card list is not a hub page', views(boot('/Oceans.html', 'www.savingplanets.com', { anchors: [listed] }).window.uetq), []);
+const onsite = a({ href: 'https://www.savingplanets.com/Ways_to_Help.html', 'data-sp-donate': '1' }, [makeText('Donate')]);
+eq('on-site donate marker is not a hub page', views(boot('/About.html', 'www.savingplanets.com', { anchors: [onsite] }).window.uetq), []);
+eq('monk seal without a donate button does not push', views(boot('/Hawaiian_Monk_Seal_Recovery.html', 'www.savingplanets.com').window.uetq), []);
+const hubClick = hub.click(org);
+eq('hub donate_click is unchanged', customEvents(hubClick.q).filter(e => e.name === 'donate_click'), [{ name: 'donate_click', category: 'donation', label: 'Papahanaumokuakea' }]);
+eq('a donate click does not push solution_view again', views(hubClick.q).length, 1);
+eq('hub click is not cancelled', hubClick.ev.defaultPrevented, false);
+
+for (const rel of ['Kids_Map.html', 'fr/Play_and_Learn.html', 'he/Myth_or_Fact_Arcade.html', 'es/Spot_the_Fire.html', 'ar/Kids_World.html', 'Kids.html', 'Space_Passport.html', 'Boarding_Pass.html', 'Amazing_Facts.html']) {
   const t = fs.readFileSync(path.join(ROOT, rel), 'utf8');
-  const bad = /bat\.bing\.com|uetq|343288039/.test(t);
+  const bad = /bat\.bing\.com|uetq|343288039|solution_view/.test(t);
   eq(rel + ' has no UET', bad, false);
+}
+const push = 'w[u].push("event","solution_view",{event_category:"funnel",event_label:slug()})';
+for (const rel of ['Hawaiian_Monk_Seal_Recovery.html', 'Papahanaumokuakea.html', 'fr/Papahanaumokuakea.html', 'Ways_to_Help.html', 'index.html', 'es/index.html']) {
+  const t = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+  eq(rel + ' contains solution_view logic', t.includes(push) && t.includes('uetq.push("event","donate_click"'), true);
 }
 
 if (failed) { console.error(failed + ' failed'); process.exit(1); }
@@ -207,6 +261,40 @@ async function chromePass(port) {
   eq('monk seal page has the UET script', monk.tag, true);
   eq('monk seal page has no Donate marker', monk.donate, false);
   eq('monk seal page is styled', monk.margin === '0px' && monk.sheets > 3, true);
+  eq('monk seal page contains solution_view and does not fire it here', await page.evaluate(() => {
+    const html = document.documentElement.innerHTML;
+    const q = window.uetq || [];
+    const fired = Array.isArray(q) && q.indexOf('solution_view') !== -1;
+    return html.includes('solution_view') && !fired && document.querySelectorAll('link[rel="stylesheet"], link[rel="preload"][as="style"]').length > 0;
+  }), true);
+
+  await page.goto(base + '/Papahanaumokuakea.html', { waitUntil: 'networkidle0', timeout: 60000 });
+  const papa = await page.evaluate(() => ({
+    logic: document.documentElement.innerHTML.includes('solution_view'),
+    donate: !!document.querySelector('a[data-sp-donate]'),
+    margin: getComputedStyle(document.body).margin,
+    sheets: document.styleSheets.length,
+    fired: Array.isArray(window.uetq) && window.uetq.indexOf('solution_view') !== -1,
+  }));
+  eq('papahanaumokuakea contains solution_view and a donate button', papa.logic && papa.donate, true);
+  eq('papahanaumokuakea is styled', papa.margin === '0px' && papa.sheets > 3, true);
+  eq('localhost does not fire solution_view', papa.fired, false);
+
+  await page.goto(base + '/fr/Papahanaumokuakea.html', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  const frPapa = await page.evaluate(() => ({
+    logic: document.documentElement.innerHTML.includes('event_label:slug()'),
+    margin: getComputedStyle(document.body).margin,
+    sheets: document.styleSheets.length,
+  }));
+  eq('french papahanaumokuakea contains solution_view and is styled', frPapa.logic && frPapa.margin === '0px' && frPapa.sheets > 3, true);
+
+  await page.goto(base + '/Ways_to_Help.html', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  const wthPage = await page.evaluate(() => ({
+    logic: document.documentElement.innerHTML.includes('solution_view'),
+    fired: Array.isArray(window.uetq) && window.uetq.indexOf('solution_view') !== -1,
+    margin: getComputedStyle(document.body).margin,
+  }));
+  eq('ways to help contains the helper and does not fire it', wthPage.logic && !wthPage.fired && wthPage.margin === '0px', true);
   await page.evaluate(() => {
     const a = document.querySelector('a.donate-btn');
     a && a.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));

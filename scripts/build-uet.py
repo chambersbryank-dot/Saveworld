@@ -15,6 +15,13 @@ Donate clicks are external organization donation links only:
   a[data-sp-donate], a Donate button inside #donations, or a link whose own label is a Donate word
   (Donate, Donar, Faire un don, Dona, تبرّع, לתרומה). "For further information" uses class donate-btn
   and is not a donation link. Nav and sticky "Donate / Help" point at Ways to Help on this site.
+
+Solution hub visits push one reporting event when the page loads:
+  window.uetq.push('event', 'solution_view', {event_category:'funnel', event_label:<page slug>})
+  once, only on savingplanets.com hosts, and only when the page has its own organization Donate
+  button (an external a[data-sp-donate] that is not inside the Ways to Help card list).
+  Ways to Help, the homepage, courses, and other pages do not push it. Kids pages still have no tag.
+  donate_click is unchanged.
 """
 import html
 import pathlib
@@ -120,7 +127,7 @@ LINK = {
 
 # Labels on Donate buttons. Arabic includes the form with and without the kashida.
 # The listener also accepts data-sp-donate and any Donate button inside #donations.
-UET_JS = r"""<!-- UET:START --><script>(function(w,d,t,r,u){w[u]=w[u]||[];if(/(^|\.)savingplanets\.com$/.test(location.hostname)){var f=function(){var o={ti:"343288039",enableAutoSpaTracking:true};o.q=w[u];w[u]=new UET(o);w[u].push("pageLoad")};var n=d.createElement(t);n.src=r;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;if(s&&s!=="loaded"&&s!=="complete")return;f();n.onload=n.onreadystatechange=null};var i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i)}function text(a){var s=a.cloneNode(true),nodes=s.querySelectorAll(".sr-only"),i;for(i=0;i<nodes.length;i++)nodes[i].parentNode.removeChild(nodes[i]);return (s.textContent||"").replace(/\s+/g," ").trim().replace(/^[^\w\u0590-\u05FF\u0600-\u06FF]+/,"")}function external(a){var href=a.getAttribute("href")||"";if(/^(mailto:|tel:|javascript:|#)/i.test(href))return false;var host="";try{host=(a.hostname||"").toLowerCase()}catch(e){return false}if(!host||/(^|\.)savingplanets\.com$/.test(host))return false;return /^https?:$/i.test(a.protocol||"")}function isDon(a){if(a.hasAttribute("data-sp-donate"))return true;if(a.closest&&a.closest("#donations")&&a.classList.contains("help-btn"))return true;return /^(?:donate|donar|faire un don|dona|\u062A\u0628\u0631\u0639|\u062A\u0628\u0631\u0651\u0639|\u05DC\u05EA\u05E8\u05D5\u05DE\u05D4)$/i.test(text(a))}function lab(a){var sr=a.querySelector(".sr-only");if(sr){var o=(sr.textContent||"").replace(/^[\s\u2013\u2014:\-]+/,"").trim();if(o)return o.slice(0,80)}var card=a.closest&&a.closest(".wh-card");if(card){var h=card.querySelector("h3");if(h){var x=(h.textContent||"").trim();if(x)return x.slice(0,80)}}var slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/i,"");return (slug||"index").slice(0,80)}d.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(!a||!isDon(a)||!external(a))return;w.uetq=w.uetq||[];w.uetq.push("event","donate_click",{event_category:"donation",event_label:lab(a)})},true)})(window,document,"script","https://bat.bing.com/bat.js","uetq");</script><noscript><img alt="" height="0" src="https://bat.bing.com/action/0?ti=343288039&amp;Ver=2" style="display:none" width="0"></noscript><!-- UET:END -->"""
+UET_JS = r"""<!-- UET:START --><script>(function(w,d,t,r,u){w[u]=w[u]||[];if(/(^|\.)savingplanets\.com$/.test(location.hostname)){var f=function(){var o={ti:"343288039",enableAutoSpaTracking:true};o.q=w[u];w[u]=new UET(o);w[u].push("pageLoad")};var n=d.createElement(t);n.src=r;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;if(s&&s!=="loaded"&&s!=="complete")return;f();n.onload=n.onreadystatechange=null};var i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i);if(hub())w[u].push("event","solution_view",{event_category:"funnel",event_label:slug()})}function text(a){var s=a.cloneNode(true),nodes=s.querySelectorAll(".sr-only"),i;for(i=0;i<nodes.length;i++)nodes[i].parentNode.removeChild(nodes[i]);return (s.textContent||"").replace(/\s+/g," ").trim().replace(/^[^\w\u0590-\u05FF\u0600-\u06FF]+/,"")}function external(a){var href=a.getAttribute("href")||"";if(/^(mailto:|tel:|javascript:|#)/i.test(href))return false;var host="";try{host=(a.hostname||"").toLowerCase()}catch(e){return false}if(!host||/(^|\.)savingplanets\.com$/.test(host))return false;return /^https?:$/i.test(a.protocol||"")}function slug(){var s=(location.pathname.split("/").pop()||"index").replace(/\.html$/i,"");return (s||"index").slice(0,80)}function hub(){try{var path=(location.pathname||"/").replace(/\/+$/,"")||"/";var base=path.split("/").pop().toLowerCase();if(!base||base==="index"||base==="index.html"||base==="ways_to_help"||base==="ways_to_help.html"||base==="ways-to-help"||base==="ways-to-help.html")return false;var cls=d.body&&d.body.classList;if(cls&&(cls.contains("toc-home")||cls.contains("learn-page")))return false;if(!d.querySelectorAll)return false;var nodes=d.querySelectorAll("a[data-sp-donate]"),i,a;for(i=0;i<nodes.length;i++){a=nodes[i];if(a.closest&&(a.closest("#donations")||a.closest(".wh-card")))continue;if(external(a))return true}return false}catch(e){return false}}function isDon(a){if(a.hasAttribute("data-sp-donate"))return true;if(a.closest&&a.closest("#donations")&&a.classList.contains("help-btn"))return true;return /^(?:donate|donar|faire un don|dona|\u062A\u0628\u0631\u0639|\u062A\u0628\u0631\u0651\u0639|\u05DC\u05EA\u05E8\u05D5\u05DE\u05D4)$/i.test(text(a))}function lab(a){var sr=a.querySelector(".sr-only");if(sr){var o=(sr.textContent||"").replace(/^[\s\u2013\u2014:\-]+/,"").trim();if(o)return o.slice(0,80)}var card=a.closest&&a.closest(".wh-card");if(card){var h=card.querySelector("h3");if(h){var x=(h.textContent||"").trim();if(x)return x.slice(0,80)}}var slug=(location.pathname.split("/").pop()||"index").replace(/\.html$/i,"");return (slug||"index").slice(0,80)}d.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(!a||!isDon(a)||!external(a))return;w.uetq=w.uetq||[];w.uetq.push("event","donate_click",{event_category:"donation",event_label:lab(a)})},true)})(window,document,"script","https://bat.bing.com/bat.js","uetq");</script><noscript><img alt="" height="0" src="https://bat.bing.com/action/0?ti=343288039&amp;Ver=2" style="display:none" width="0"></noscript><!-- UET:END -->"""
 
 UET_RE = re.compile(r'<!-- UET:START -->.*?<!-- UET:END -->', re.S)
 S2_RE = re.compile(r'(<section class="five-ws" id="s2">.*?)(</section>)', re.S)
@@ -239,6 +246,40 @@ def main():
     return 0 if check(excluded) else 1
 
 
+def external_donate_attr(text):
+    """True when the page has its own organization Donate button, matching hub() in the tag."""
+    body = UET_RE.sub('', text)
+    if re.search(r'<body[^>]*\b(?:learn-page|toc-home)\b', body):
+        return False
+    for m in re.finditer(r'<a\b([^>]*)>', body):
+        attrs = m.group(1)
+        if not re.search(r'\bdata-sp-donate\b', attrs):
+            continue
+        href_m = re.search(r'\bhref="([^"]*)"', attrs)
+        if not href_m:
+            continue
+        href = html.unescape(href_m.group(1))
+        low = href.lower()
+        if re.match(r'^(?:mailto:|tel:|javascript:|#)', href, re.I):
+            continue
+        if 'savingplanets.com' in low or not low.startswith('http'):
+            continue
+        return True
+    return False
+
+
+def qualifying_pages():
+    skip = {'index.html', 'ways_to_help.html', 'ways-to-help.html'}
+    found = []
+    for path in pages():
+        if kids_page(path) or path.name.lower() in skip or lang_of(path) is None:
+            continue
+        text = path.read_text(encoding='utf-8')
+        if external_donate_attr(text):
+            found.append(str(path.relative_to(ROOT)))
+    return found
+
+
 def check(excluded):
     errors = []
     def read(rel):
@@ -249,11 +290,27 @@ def check(excluded):
             errors.append(rel + ' missing UET tag')
         if "uetq.push(\"event\",\"donate_click\"" not in text:
             errors.append(rel + ' missing donate_click listener')
+        if 'solution_view' not in text:
+            errors.append(rel + ' missing solution_view helper')
         if text.count('<!-- UET:START -->') != 1:
             errors.append(rel + ' UET block count ' + str(text.count('<!-- UET:START -->')))
+    for rel in ('Papahanaumokuakea.html', 'fr/Papahanaumokuakea.html', 'Ways_to_Help.html', 'es/Ways_to_Help.html', 'Hawaiian_Monk_Seal_Recovery.html'):
+        text = read(rel)
+        if 'w[u].push("event","solution_view",{event_category:"funnel",event_label:slug()})' not in text:
+            errors.append(rel + ' missing solution_view push')
+    qualified = qualifying_pages()
+    print('build-uet: %d solution hub pages qualify for solution_view' % len(qualified))
+    if 'Papahanaumokuakea.html' not in qualified or 'fr/Papahanaumokuakea.html' not in qualified:
+        errors.append('Papahanaumokuakea did not qualify')
+    if 'Hawaiian_Monk_Seal_Recovery.html' in qualified:
+        errors.append('Hawaiian monk seal qualified without an organization Donate button')
+    if any(name.endswith('Ways_to_Help.html') or name.endswith('index.html') for name in qualified):
+        errors.append('Ways to Help or a homepage qualified')
+    if any('/Courses.html' in ('/' + name) or name.endswith('Physics_I.html') for name in qualified):
+        errors.append('a course page qualified')
     for rel in excluded:
         text = read(rel)
-        if 'bat.bing.com' in text or 'uetq' in text or '343288039' in text:
+        if 'bat.bing.com' in text or 'uetq' in text or '343288039' in text or 'solution_view' in text:
             errors.append(rel + ' still has the UET tag')
     for lang, rel in (('en', 'Privacy.html'), ('fr', 'fr/Privacy.html'), ('es', 'es/Privacy.html'),
                       ('ar', 'ar/Privacy.html'), ('it', 'it/Privacy.html'), ('he', 'he/Privacy.html')):
