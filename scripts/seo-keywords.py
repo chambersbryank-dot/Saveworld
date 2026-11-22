@@ -20,7 +20,6 @@ STOP = {
 }
 
 def lang_of(p):
-    if p.startswith('study/'): return 'en'
     return p.split('/')[0] if '/' in p else 'en'
 
 def page_url(p):
@@ -150,7 +149,6 @@ def pages():
     out = []
     for l in LANGS:
         out += sorted(glob.glob('*.html' if l == 'en' else f'{l}/*.html'))
-    out += sorted(glob.glob('study/*.html'))
     return [p for p in out if not re.match(r'(?:.*/)?google[0-9a-f]+\.html$', p)]
 
 def main():

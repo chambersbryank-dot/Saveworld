@@ -3,7 +3,7 @@
 /courses.html, /courses, /solutions.html, /COURSES, /ways-to-help ... -> the real page (match ignores case, '-', '_' and .html),
 inside the visitor's language folder when that page exists there, else the English page. Aliases cover addresses with no page
 of their own (launch schedule -> Upcoming_Launches.html, the Live Launch Tracker). Only a single unambiguous match redirects;
-anything else keeps the normal Page Not Found. A /study/ address (the removed exam pages) goes straight to the homepage. No server, DNS or Cloudflare change. Writes the block between
+anything else keeps the normal Page Not Found. No server, DNS or Cloudflare change. Writes the block between
 <!-- CASE404:START/END --> in 404.html of every language (after i18n-build). Idempotent. Run from repo root."""
 import os, re, json
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -20,8 +20,7 @@ ALIAS = {'launchschedule': 'Upcoming_Launches.html', 'launches': 'Upcoming_Launc
          'sihelper': 'Teachers.html',
          'spotthefire': 'Lesson_Builder.html'}  # classroom activity retired; Spot_the_Fire.html is a refresh stub
 DATA = json.dumps({'p': pages, 'a': ALIAS, 'm': missing, 'l': LANGS}, separators=(',', ':'), sort_keys=True)
-JS = ('(function(){if(/\\/study(\\/|$)/i.test(location.pathname)){location.replace("https://www.savingplanets.com/");return;}'
-      'var D=' + DATA + ';var s=location.pathname.split("/").filter(Boolean),l="";'
+JS = ('(function(){var D=' + DATA + ';var s=location.pathname.split("/").filter(Boolean),l="";'
       'if(s.length>1&&D.l.indexOf(s[0])>=0)l=s.shift();if(s.length!==1)return;var k;'
       'try{k=decodeURIComponent(s[0])}catch(e){return}k=k.toLowerCase().replace(/\\.html?$/,"").replace(/[-_ ]/g,"");'
       'var t=D.a[k]||D.p[k];if(!t)return;var f=t.split("#")[0];if(l&&D.m[l].indexOf(f)>=0)l="";'
