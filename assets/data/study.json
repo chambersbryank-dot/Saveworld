@@ -1,0 +1,250 @@
+{
+  "_note": "Study this block. One record per hub (default disciplines, course, links, career) plus page overrides. scripts/build-study.py writes the block. Pilot pages only, until a hub has a sourced why-fact and a verified career. Figures checked 22 Nov 2026: NOAA Fisheries Hawaiian monk seal page (about 1,600 seals, about a third of historic size, growing since 2013); NOAA Papahānaumokuākea sanctuary page (designated 2025, 18th U.S. national marine sanctuary, 582,570 square miles, largest in the sanctuary system); BLS Occupational Outlook Handbook, May 2025 (zoologists and wildlife biologists $76,780; environmental scientists and specialists $82,220). A course with status soon has no page and is never linked.",
+  "pilot": [
+    "Hawaiian_Monk_Seal_Recovery.html",
+    "Papahanaumokuakea.html"
+  ],
+  "ui": {
+    "title": {"en": "Study this", "fr": "À étudier", "es": "Estudia esto", "ar": "ادرس هذا", "it": "Studia questo", "he": "למדו את זה"},
+    "learn": {"en": "What to learn", "fr": "Quoi apprendre", "es": "Qué aprender", "ar": "ماذا تتعلم", "it": "Che cosa imparare", "he": "מה ללמוד"},
+    "why": {"en": "Why it matters", "fr": "Pourquoi c’est important", "es": "Por qué importa", "ar": "لماذا يهمّ", "it": "Perché conta", "he": "למה זה חשוב"},
+    "now": {"en": "Our course now", "fr": "Notre cours, maintenant", "es": "Nuestro curso ahora", "ar": "دورتنا الآن", "it": "Il nostro corso, adesso", "he": "הקורס שלנו עכשיו"},
+    "next": {"en": "Our course next", "fr": "Notre cours, ensuite", "es": "Nuestro curso después", "ar": "دورتنا التالية", "it": "Il nostro corso, dopo", "he": "הקורס שלנו בהמשך"},
+    "soon": {"en": "Coming soon", "fr": "Bientôt disponible", "es": "Próximamente", "ar": "قريبًا", "it": "Prossimamente", "he": "בקרוב"},
+    "further": {"en": "Go further: university resources", "fr": "Aller plus loin : ressources universitaires", "es": "Ve más allá: recursos universitarios", "ar": "تعمّق: موارد جامعية", "it": "Vai oltre: risorse universitarie", "he": "להעמיק: משאבים אוניברסיטאיים"},
+    "career": {"en": "Career", "fr": "Métier", "es": "Profesión", "ar": "المهنة", "it": "Professione", "he": "מקצוע"},
+    "median": {"en": "Median pay", "fr": "Salaire médian", "es": "Salario mediano", "ar": "الأجر الوسيط", "it": "Retribuzione mediana", "he": "שכר חציוני"},
+    "per_year": {"en": "per year", "fr": "par an", "es": "al año", "ar": "في السنة", "it": "all’anno", "he": "לשנה"},
+    "source": {"en": "Source:", "fr": "Source :", "es": "Fuente:", "ar": "المصدر:", "it": "Fonte:", "he": "מקור:"},
+    "handbook": {"en": "BLS Occupational Outlook Handbook", "fr": "Occupational Outlook Handbook du BLS", "es": "Occupational Outlook Handbook de la BLS", "ar": "دليل التوقعات المهنية لمكتب إحصاءات العمل (BLS)", "it": "Occupational Outlook Handbook del BLS", "he": "מדריך התחזית התעסוקתית של BLS"}
+  },
+  "courses": {
+    "probstat": {
+      "page": "Probability_Statistics.html",
+      "code": "MATH 350",
+      "status": "live",
+      "title": {"en": "Probability & Statistics", "fr": "Probabilités et statistiques", "es": "Probabilidad y estadística", "ar": "الاحتمالات والإحصاء", "it": "Probabilità e statistica", "he": "הסתברות וסטטיסטיקה"}
+    },
+    "aero101": {
+      "page": "Intro_to_Aerospace_Engineering.html",
+      "code": "AERO 101",
+      "status": "live",
+      "title": {"en": "Introduction to Aerospace Engineering", "fr": "Introduction à l’ingénierie aérospatiale", "es": "Introducción a la ingeniería aeroespacial", "ar": "مقدمة في هندسة الطيران والفضاء", "it": "Introduzione all’ingegneria aerospaziale", "he": "מבוא להנדסת אווירונאוטיקה וחלל"}
+    },
+    "orbit": {
+      "page": "Orbital_Mechanics.html",
+      "code": "AERO 340",
+      "status": "live",
+      "title": {"en": "Orbital Mechanics", "fr": "Mécanique orbitale", "es": "Mecánica orbital", "ar": "ميكانيكا المدارات", "it": "Meccanica orbitale", "he": "מכניקה מסלולית"}
+    },
+    "marine101": {
+      "page": null,
+      "code": null,
+      "status": "soon",
+      "title": {"en": "Marine Biology and Conservation 101", "fr": "Biologie marine et conservation 101", "es": "Biología marina y conservación 101", "ar": "علم الأحياء البحرية والحفظ 101", "it": "Biologia marina e conservazione 101", "he": "ביולוגיה ימית ושימור 101"}
+    }
+  },
+  "resources": {
+    "openstax-bio": {
+      "url": "https://openstax.org/details/books/biology-2e",
+      "title": {"en": "OpenStax Biology 2e", "fr": "OpenStax Biologie 2e", "es": "OpenStax Biología 2e", "ar": "OpenStax: علم الأحياء، الإصدار الثاني", "it": "OpenStax Biologia 2e", "he": "OpenStax ביולוגיה 2e"}
+    },
+    "noaa-ose": {
+      "url": "https://oceanservice.noaa.gov/education/",
+      "title": {"en": "NOAA Ocean Service Education", "fr": "NOAA Ocean Service : éducation", "es": "Educación del NOAA Ocean Service", "ar": "التعليم في خدمة المحيطات لدى NOAA", "it": "NOAA Ocean Service, sezione didattica", "he": "חינוך של NOAA Ocean Service"}
+    },
+    "noaa-corals": {
+      "url": "https://oceanservice.noaa.gov/education/tutorial_corals/welcome.html",
+      "title": {"en": "NOAA Ocean Service: corals", "fr": "NOAA Ocean Service : les coraux", "es": "NOAA Ocean Service: corales", "ar": "NOAA Ocean Service: الشعاب المرجانية", "it": "NOAA Ocean Service: i coralli", "he": "NOAA Ocean Service: אלמוגים"}
+    },
+    "himb": {
+      "url": "https://www.himb.hawaii.edu/",
+      "title": {"en": "Hawaiʻi Institute of Marine Biology (HIMB)", "fr": "Hawaiʻi Institute of Marine Biology (HIMB)", "es": "Instituto de Biología Marina de Hawaiʻi (HIMB)", "ar": "معهد هاواي لعلم الأحياء البحرية (HIMB)", "it": "Hawaiʻi Institute of Marine Biology (HIMB)", "he": "המכון לביולוגיה ימית של הוואי (HIMB)"}
+    },
+    "uh-hilo": {
+      "url": "https://hilo.hawaii.edu/depts/marinescience/",
+      "title": {"en": "UH Hilo Marine Science", "fr": "Sciences marines de l’UH Hilo", "es": "Ciencias marinas de UH Hilo", "ar": "العلوم البحرية في جامعة هاواي في هيلو", "it": "Scienze marine della UH Hilo", "he": "מדעי הים באוניברסיטת הוואי בהילו"}
+    },
+    "noaa-pmnm": {
+      "url": "https://sanctuaries.noaa.gov/papahanaumokuakea/",
+      "title": {"en": "NOAA Papahānaumokuākea National Marine Sanctuary", "fr": "Sanctuaire marin national de Papahānaumokuākea (NOAA)", "es": "Santuario Marino Nacional Papahānaumokuākea (NOAA)", "ar": "محمية باباهانوموكواكيا البحرية الوطنية (NOAA)", "it": "Santuario marino nazionale di Papahānaumokuākea (NOAA)", "he": "השמורה הימית הלאומית פאפאהאנאומוקואקאה (NOAA)"}
+    }
+  },
+  "careers": {
+    "zoologist": {
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/zoologists-and-wildlife-biologists.htm",
+      "pay": 76780,
+      "year": 2025,
+      "as_of": {"en": "May", "fr": "mai", "es": "mayo", "ar": "مايو", "it": "maggio", "he": "מאי"},
+      "title": {"en": "Zoologists and wildlife biologists", "fr": "Zoologistes et biologistes de la faune", "es": "Zoólogos y biólogos de la vida silvestre", "ar": "علماء الحيوان وعلماء أحياء الحياة البرية", "it": "Zoologi e biologi della fauna selvatica", "he": "זואולוגים וביולוגים של חיות בר"}
+    },
+    "envsci": {
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/environmental-scientists-and-specialists.htm",
+      "pay": 82220,
+      "year": 2025,
+      "as_of": {"en": "May", "fr": "mai", "es": "mayo", "ar": "مايو", "it": "maggio", "he": "מאי"},
+      "title": {"en": "Environmental scientists and specialists", "fr": "Scientifiques et spécialistes de l’environnement", "es": "Científicos y especialistas ambientales", "ar": "علماء البيئة والمتخصصون فيها", "it": "Scienziati e specialisti ambientali", "he": "מדעני סביבה ומומחי סביבה"}
+    }
+  },
+  "disciplines": {
+    "marine-mammal": {"en": "Marine mammal biology", "fr": "Biologie des mammifères marins", "es": "Biología de mamíferos marinos", "ar": "علم أحياء الثدييات البحرية", "it": "Biologia dei mammiferi marini", "he": "ביולוגיה של יונקים ימיים"},
+    "pop-count": {"en": "Population ecology and counting", "fr": "Écologie des populations et comptage", "es": "Ecología de poblaciones y conteo", "ar": "علم بيئة الجماعات وعدّها", "it": "Ecologia delle popolazioni e conteggi", "he": "אקולוגיה של אוכלוסיות וספירה"},
+    "disease": {"en": "Wildlife disease and vaccination", "fr": "Maladies de la faune et vaccination", "es": "Enfermedades de la fauna y vacunación", "ar": "أمراض الحياة البرية والتطعيم", "it": "Malattie della fauna e vaccinazione", "he": "מחלות חיות בר וחיסון"},
+    "esa-law": {"en": "Endangered species law", "fr": "Droit des espèces menacées", "es": "Derecho de las especies en peligro", "ar": "قانون الأنواع المهددة بالانقراض", "it": "Diritto delle specie in pericolo", "he": "דיני מינים בסכנת הכחדה"},
+    "marine-ecology": {"en": "Marine ecology", "fr": "Écologie marine", "es": "Ecología marina", "ar": "علم البيئة البحرية", "it": "Ecologia marina", "he": "אקולוגיה ימית"},
+    "coral": {"en": "Coral reef science", "fr": "Science des récifs coralliens", "es": "Ciencia de los arrecifes de coral", "ar": "علم الشعاب المرجانية", "it": "Scienza delle barriere coralline", "he": "מדע שוניות האלמוגים"},
+    "stewardship": {"en": "Native Hawaiian ocean stewardship", "fr": "Gestion océanique autochtone hawaïenne", "es": "Custodia del océano de los nativos de Hawái", "ar": "رعاية المحيط لدى سكان هاواي الأصليين", "it": "Custodia dell’oceano dei nativi hawaiani", "he": "שמירה על הים אצל ילידי הוואי"},
+    "mpa": {"en": "Marine protected area management", "fr": "Gestion des aires marines protégées", "es": "Gestión de áreas marinas protegidas", "ar": "إدارة المناطق البحرية المحمية", "it": "Gestione delle aree marine protette", "he": "ניהול אזורים ימיים מוגנים"},
+    "freshwater": {"en": "Freshwater ecology", "fr": "Écologie des eaux douces", "es": "Ecología de agua dulce", "ar": "علم بيئة المياه العذبة", "it": "Ecologia delle acque dolci", "he": "אקולוגיה של מים מתוקים"},
+    "watershed": {"en": "Watershed science", "fr": "Science des bassins versants", "es": "Ciencia de cuencas hidrográficas", "ar": "علم أحواض الأنهار", "it": "Scienza dei bacini idrografici", "he": "מדע אגני היקוות"},
+    "polar-wildlife": {"en": "Wildlife of the Arctic and Antarctica", "fr": "Faune de l’Arctique et de l’Antarctique", "es": "Fauna del Ártico y de la Antártida", "ar": "الحياة البرية في المنطقة القطبية الشمالية وفي أنتاركتيكا", "it": "Fauna dell’Artico e dell’Antartide", "he": "חיות הבר בארקטי ובאנטארקטיקה"},
+    "polar-ice": {"en": "Sea ice and climate observation", "fr": "Glace de mer et observation du climat", "es": "Hielo marino y observación del clima", "ar": "جليد البحر ورصد المناخ", "it": "Ghiaccio marino e osservazione del clima", "he": "קרח ים ותצפית אקלים"},
+    "forests": {"en": "Forest ecology and restoration", "fr": "Écologie et restauration des forêts", "es": "Ecología y restauración de bosques", "ar": "علم بيئة الغابات واستعادتها", "it": "Ecologia e restauro delle foreste", "he": "אקולוגיה ושיקום של יערות"},
+    "aero-eng": {"en": "Aerospace engineering", "fr": "Ingénierie aérospatiale", "es": "Ingeniería aeroespacial", "ar": "هندسة الطيران والفضاء", "it": "Ingegneria aerospaziale", "he": "הנדסת אווירונאוטיקה וחלל"},
+    "orbits": {"en": "Orbits and mission design", "fr": "Orbites et conception de mission", "es": "Órbitas y diseño de misiones", "ar": "المدارات وتصميم المهمات", "it": "Orbite e progetto di missione", "he": "מסלולים ותכנון משימות"},
+    "earth-from-space": {"en": "Earth observation from space", "fr": "Observation de la Terre depuis l’espace", "es": "Observación de la Tierra desde el espacio", "ar": "رصد الأرض من الفضاء", "it": "Osservazione della Terra dallo spazio", "he": "תצפית על כדור הארץ מהחלל"},
+    "planetary-defense": {"en": "Planetary defense", "fr": "Défense planétaire", "es": "Defensa planetaria", "ar": "الدفاع الكوكبي", "it": "Difesa planetaria", "he": "הגנה פלנטרית"}
+  },
+  "facts": {
+    "monk-pop": {
+      "url": "https://www.fisheries.noaa.gov/species/hawaiian-monk-seal",
+      "source": {
+        "en": "NOAA Fisheries, Hawaiian monk seal",
+        "fr": "NOAA Fisheries, phoque moine d’Hawaï",
+        "es": "NOAA Fisheries, foca monje de Hawái",
+        "ar": "NOAA Fisheries، فقمة هاواي الراهبة",
+        "it": "NOAA Fisheries, foca monaca delle Hawaii",
+        "he": "NOAA Fisheries, כלב ים נזירי הוואי"
+      },
+      "text": {
+        "en": "NOAA Fisheries estimates about 1,600 Hawaiian monk seals, nearly 1,200 in Papahānaumokuākea and about 400 in the main Hawaiian Islands. The population is still only about a third of its historic size, and it has been growing since 2013.",
+        "fr": "NOAA Fisheries estime à environ 1 600 le nombre de phoques moines d’Hawaï : près de 1 200 à Papahānaumokuākea et environ 400 dans les îles principales d’Hawaï. La population ne représente encore qu’environ un tiers de son effectif historique, et elle augmente depuis 2013.",
+        "es": "NOAA Fisheries estima unas 1.600 focas monje de Hawái: cerca de 1.200 en Papahānaumokuākea y unas 400 en las islas principales de Hawái. La población sigue siendo solo alrededor de un tercio de su tamaño histórico, y crece desde 2013.",
+        "ar": "تقدّر إدارة المصايد في NOAA عدد فقمات هاواي الراهبة بنحو 1,600، منها قرابة 1,200 في باباهانوموكواكيا ونحو 400 في جزر هاواي الرئيسية. لا يزال العدد نحو ثلث ما كان عليه تاريخيًا، وهو ينمو منذ عام 2013.",
+        "it": "La NOAA Fisheries stima circa 1.600 foche monache delle Hawaii: quasi 1.200 a Papahānaumokuākea e circa 400 nelle isole principali delle Hawaii. La popolazione è ancora solo circa un terzo della dimensione storica, e cresce dal 2013.",
+        "he": "NOAA Fisheries מעריכה כ-1,600 כלבי ים נזירים הוואיים, כמעט 1,200 בפאפאהאנאומוקואקאה וכ-400 באיי הוואי העיקריים. גודל האוכלוסייה הוא עדיין רק כשליש מגודלה ההיסטורי, והיא גדלה מאז 2013."
+      }
+    },
+    "pmnm-area": {
+      "url": "https://sanctuaries.noaa.gov/papahanaumokuakea/",
+      "source": {
+        "en": "NOAA, Papahānaumokuākea National Marine Sanctuary",
+        "fr": "NOAA, sanctuaire marin national de Papahānaumokuākea",
+        "es": "NOAA, Santuario Marino Nacional Papahānaumokuākea",
+        "ar": "NOAA، محمية باباهانوموكواكيا البحرية الوطنية",
+        "it": "NOAA, santuario marino nazionale di Papahānaumokuākea",
+        "he": "NOAA, השמורה הימית הלאומית פאפאהאנאומוקואקאה"
+      },
+      "text": {
+        "en": "Designated in 2025 as the 18th U.S. national marine sanctuary, Papahānaumokuākea covers 582,570 square miles and is the largest marine protected area in the National Marine Sanctuary System.",
+        "fr": "Désigné en 2025 comme le 18e sanctuaire marin national des États-Unis, Papahānaumokuākea couvre 582 570 milles carrés. C’est la plus grande aire marine protégée du système des sanctuaires marins nationaux.",
+        "es": "Designado en 2025 como el 18.º santuario marino nacional de EE. UU., Papahānaumokuākea abarca 582.570 millas cuadradas y es el área marina protegida más grande del Sistema Nacional de Santuarios Marinos.",
+        "ar": "صُنّفت باباهانوموكواكيا عام 2025 المحمية البحرية الوطنية الثامنة عشرة في الولايات المتحدة، وتغطي 582,570 ميلًا مربعًا. وهي أكبر منطقة بحرية محمية في نظام المحميات البحرية الوطنية.",
+        "it": "Designato nel 2025 come 18º santuario marino nazionale degli Stati Uniti, Papahānaumokuākea copre 582.570 miglia quadrate ed è la più grande area marina protetta del sistema dei santuari marini nazionali.",
+        "he": "פאפאהאנאומוקואקאה, שהוכרזה ב-2025 כשמורה הימית הלאומית ה-18 של ארצות הברית, משתרעת על 582,570 מיילים רבועים. זה האזור הימי המוגן הגדול ביותר במערכת השמורות הימיות הלאומיות."
+      }
+    }
+  },
+  "hubs": {
+    "Oceans.html": {
+      "disciplines": ["marine-ecology", "pop-count", "mpa"],
+      "why": null,
+      "course_now": "probstat",
+      "course_next": "marine101",
+      "further": ["openstax-bio", "noaa-ose", "himb", "uh-hilo"],
+      "career": "zoologist"
+    },
+    "Lakes.html": {
+      "disciplines": ["freshwater", "watershed"],
+      "why": null,
+      "course_now": "probstat",
+      "course_next": null,
+      "further": [],
+      "career": null
+    },
+    "Rivers.html": {
+      "disciplines": ["freshwater", "watershed"],
+      "why": null,
+      "course_now": "probstat",
+      "course_next": null,
+      "further": [],
+      "career": null
+    },
+    "Polar.html": {
+      "disciplines": ["polar-wildlife", "polar-ice"],
+      "why": null,
+      "course_now": "probstat",
+      "course_next": null,
+      "further": [],
+      "career": null
+    },
+    "Deforestation.html": {
+      "disciplines": ["forests"],
+      "why": null,
+      "course_now": null,
+      "course_next": null,
+      "further": [],
+      "career": null
+    },
+    "Earth_Observation.html": {
+      "disciplines": ["earth-from-space", "orbits"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    },
+    "Planetary_Defense.html": {
+      "disciplines": ["planetary-defense", "orbits"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    },
+    "Space_Weather.html": {
+      "disciplines": ["earth-from-space", "orbits"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    },
+    "Space.html": {
+      "disciplines": ["aero-eng", "orbits"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    },
+    "Space_Disposal.html": {
+      "disciplines": ["aero-eng", "orbits"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    },
+    "Project-Rawane.html": {
+      "disciplines": ["aero-eng", "orbits", "earth-from-space"],
+      "why": null,
+      "course_now": "aero101",
+      "course_next": "orbit",
+      "further": [],
+      "career": null
+    }
+  },
+  "pages": {
+    "Hawaiian_Monk_Seal_Recovery.html": {
+      "disciplines": ["marine-mammal", "pop-count", "disease", "esa-law"],
+      "why": "monk-pop"
+    },
+    "Papahanaumokuakea.html": {
+      "disciplines": ["marine-ecology", "coral", "stewardship", "mpa"],
+      "why": "pmnm-area",
+      "further": ["noaa-pmnm", "noaa-corals", "himb", "uh-hilo"],
+      "career": "envsci"
+    }
+  }
+}

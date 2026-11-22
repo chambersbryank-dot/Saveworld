@@ -1857,3 +1857,23 @@ html body a.sticky-help:focus-visible{outline:3px solid #fff !important;outline-
 .sol-card.sd-off,.sol-hub.sd-empty{display:none !important}
 body.sd-on .sp-collapsed .grid>.sol-card:not(.sd-off){display:block !important}body.sd-on .sp-more{display:none}
 /* SD:END */
+/* STUDY:START */
+/* Same shell as .teacher-box, same inner card as .std-box, same crystal button as a.help-btn. */
+body.toc-sub .study-box{max-width:1100px;margin:2rem auto;padding:1.2rem 1.4rem;border-radius:14px;border:1px solid rgba(127,127,127,.35);background:rgba(21,32,51,.55)}
+body.toc-sub .study-box h2{margin-top:0}
+.study-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.study-field{margin:0;padding:.9rem 1rem;border-radius:14px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.05)}
+body.toc-sub .study-field h3{margin:.1rem 0 .35rem;font-size:1.05rem}
+.study-span{grid-column:1 / -1}
+.study-box .std-list{margin:0;padding-inline-start:1.1rem}
+.study-box .std-list li{margin:.35rem 0}
+.study-box .std-note{font-size:.85rem;opacity:.85;margin:.35rem 0 0}
+.study-box .std-list a,.study-box .std-note a,.study-box .study-career a{text-decoration:underline;text-underline-offset:.12em}
+.study-box .help-btns{justify-content:flex-start;margin:0}
+.study-box .help-btns .btn{margin-top:0}
+.study-soon{display:inline-block;margin-inline-start:.45rem;padding:.12rem .6rem;border-radius:999px;background:rgba(143,211,255,.18);font-size:.8rem;font-weight:800;letter-spacing:.02em}
+@media (max-width:720px){.study-grid{grid-template-columns:1fr}}
+@media (max-width:1150px){body.toc-sub .study-box{margin-left:1rem;margin-right:1rem}}
+@media print{.study-box{display:none !important}}
+[dir=rtl] .study-box .help-btns{justify-content:flex-start}
+/* STUDY:END */
