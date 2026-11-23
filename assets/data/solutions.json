@@ -404,6 +404,10 @@
      "name": "ICESat-2 (NASA)"
     },
     {
+     "href": "Inouye_Solar_Telescope.html",
+     "name": "Inouye Solar Telescope"
+    },
+    {
      "href": "INSAT-3DS.html",
      "name": "INSAT-3DS Weather Satellite (ISRO)"
     },
@@ -422,6 +426,10 @@
     {
      "href": "Libera.html",
      "name": "Libera Earth Energy Instrument (NASA)"
+    },
+    {
+     "href": "Mauna_Loa_Observatory.html",
+     "name": "NOAA Mauna Loa Observatory"
     },
     {
      "href": "Meteosat_Third_Generation.html",
@@ -552,6 +560,10 @@
     {
      "href": "Justdiggit.html",
      "name": "Justdiggit"
+    },
+    {
+     "href": "Kaena_Point_Fence.html",
+     "name": "Kaʻena Point Predator-Proof Fence"
     },
     {
      "href": "Kakapo_Recovery.html",
@@ -798,6 +810,10 @@
      "name": "Bristol Bay Salmon Habitat Protection (EPA)"
     },
     {
+     "href": "Cabo_Pulmo.html",
+     "name": "Cabo Pulmo National Park"
+    },
+    {
      "href": "Copernicus_Marine.html",
      "name": "Copernicus Marine Service"
     },
@@ -852,6 +868,10 @@
     {
      "href": "Kelp_Forests.html",
      "name": "Kelp Forests"
+    },
+    {
+     "href": "Malama_Maunalua.html",
+     "name": "Mālama Maunalua"
     },
     {
      "href": "Mesoamerican_Reef_Insurance.html",
@@ -1494,7 +1514,7 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 292,
+  "solutions": 297,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
@@ -1524,12 +1544,12 @@
     ]
    }
   ],
-  "taggedSolutions": 292
+  "taggedSolutions": 297
  },
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 50,
+   "solutions": 52,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1594,7 +1614,7 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 42,
+   "solutions": 43,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1660,7 +1680,7 @@
   },
   "space-weather": {
    "name": "Space Weather & Shields",
-   "solutions": 13,
+   "solutions": 14,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1673,7 +1693,7 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 49,
+   "solutions": 50,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -5905,6 +5925,61 @@
    "category": "rivers",
    "type": "solution",
    "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Inouye_Solar_Telescope.html",
+   "title": "Inouye Solar Telescope",
+   "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Malama_Maunalua.html",
+   "title": "Mālama Maunalua",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Mauna_Loa_Observatory.html",
+   "title": "NOAA Mauna Loa Observatory",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Kaena_Point_Fence.html",
+   "title": "Kaʻena Point Predator-Proof Fence",
+   "category": "forests",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Cabo_Pulmo.html",
+   "title": "Cabo Pulmo National Park",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "agency",
    "status": "active",
    "stats": [],
    "missions": [],
