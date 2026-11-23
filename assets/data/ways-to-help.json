@@ -607,6 +607,12 @@
    "https://www.nature.org/en-us/get-involved/how-to-help/volunteer/",
    null
   ],
+  "hwf": [
+   "Hawaiʻi Wildlife Fund",
+   "https://www.wildhawaii.org/donate",
+   "https://www.wildhawaii.org/get-involved/volunteer/",
+   null
+  ],
   "surf": [
    "Surfrider Foundation",
    "https://www.surfrider.org/donate",
@@ -1222,6 +1228,7 @@
   "Seagrass": "noaa",
   "SeaTrees": "seatrees",
   "Seychelles_Marine_Spatial_Plan": "tnc",
+  "Hawaii_Wildlife_Fund": "hwf",
   "Surfrider_Foundation": "surf",
   "Ocean_Cleanup": "toc",
   "The_SeaCleaners": "tsc",

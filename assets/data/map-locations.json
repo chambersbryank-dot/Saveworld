@@ -3289,6 +3289,23 @@
     }
    ]
   },
+  "Hawaii_Wildlife_Fund.html": {
+   "status": "active",
+   "pins": [
+    {
+     "lat": 19.5,
+     "lng": -155.5,
+     "label": "Hawaiʻi Island",
+     "basis": "page"
+    },
+    {
+     "lat": 20.8,
+     "lng": -156.4,
+     "label": "Maui",
+     "basis": "page"
+    }
+   ]
+  },
   "Hawaiian_Monk_Seal_Recovery.html": {
    "status": "active",
    "pins": [
