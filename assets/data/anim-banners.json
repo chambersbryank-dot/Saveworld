@@ -1112,6 +1112,20 @@
       "org_url": "https://www.croptrust.org/what-we-do/programs/svalbard-global-seed-vault/",
       "license": "non-commercial use with credit",
       "license_url": "https://www.croptrust.org/terms-conditions/"
+    },
+    "assets/Hawksbill_Chris_Spain.jpg": {
+      "credit": "Photo: Chris Spain, CC0",
+      "alt": "A hawksbill sea turtle swimming over a coral reef",
+      "pos": "50% 48%",
+      "local": "assets/Hawksbill_Chris_Spain.jpg",
+      "webp": "assets/Hawksbill_Chris_Spain.webp",
+      "webp800": "assets/Hawksbill_Chris_Spain-800.webp",
+      "width": 1400,
+      "height": 788,
+      "org": "Chris Spain",
+      "org_url": "https://commons.wikimedia.org/wiki/File:Eretmochelys_imbricata_-_Chris_Spain_-_607098699.jpeg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
   },
   "pages": {
@@ -1465,7 +1479,8 @@
     "ASOC_Antarctic_Coalition.html": "assets/Ross_Sea_Bloom_2011.jpg",
     "CCAMLR.html": "assets/Amundsen_Sea_Iceberg_IceBridge.jpg",
     "SCAR_Antarctic_Research.html": "assets/AirSAR_Scientists_Antarctica.jpg",
-    "IAATO.html": "assets/Larsen_Ice_Shelf_AirSAR.jpg"
+    "IAATO.html": "assets/Larsen_Ice_Shelf_AirSAR.jpg",
+    "Hawaii_Wildlife_Fund.html": "assets/Hawksbill_Chris_Spain.jpg"
   },
   "slides": {
     "pools": {
@@ -2106,7 +2121,8 @@
       "Eden_People_Planet.html": [],
       "Justdiggit.html": [],
       "Trees_for_the_Future.html": [],
-      "WeForest.html": []
+      "WeForest.html": [],
+      "Hawaii_Wildlife_Fund.html": []
     }
   }
 }

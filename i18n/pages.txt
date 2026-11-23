@@ -163,6 +163,7 @@ PREFIRE.html
 HydroGNSS.html
 Sentinel-3.html
 Libera.html
+Hawaii_Wildlife_Fund.html
 Surfrider_Foundation.html
 Heal_the_Bay.html
 Plastic_Odyssey.html

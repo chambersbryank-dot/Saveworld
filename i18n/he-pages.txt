@@ -181,6 +181,7 @@ Solar_Orbiter.html
 SpaceLogistics.html
 Starfish_Otter.html
 Sungai_Watch.html
+Hawaii_Wildlife_Fund.html
 Surfrider_Foundation.html
 TEMPO.html
 TRACERS.html

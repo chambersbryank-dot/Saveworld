@@ -9,7 +9,24 @@
       "image": "assets/videos/great-bubble-barrier.jpg",
       "imageAlt": "Amsterdam canal at sunrise, a frame from the Saving Planets video",
       "video": true,
-      "action": {"kind": "donate", "href": "https://thegreatbubblebarrier.com/donate/", "note": "Opens the organization's donation page. Saving Planets does not receive the money."}
+      "action": {
+        "kind": "donate",
+        "href": "https://thegreatbubblebarrier.com/donate/",
+        "note": "Opens the organization's donation page. Saving Planets does not receive the money."
+      }
+    },
+    {
+      "page": "Hawaii_Wildlife_Fund.html",
+      "title": "Hawaiʻi Wildlife Fund",
+      "blurb": "Hawaiʻi Wildlife Fund has removed more than 450 tons of marine debris from shorelines and reefs.",
+      "image": "assets/Hawksbill_Chris_Spain.jpg",
+      "imageAlt": "A hawksbill sea turtle swimming over a coral reef",
+      "credit": "Photo: Chris Spain, CC0.",
+      "action": {
+        "kind": "donate",
+        "href": "https://www.wildhawaii.org/donate",
+        "note": "Opens the organization's donation page. Saving Planets does not receive the money."
+      }
     },
     {
       "page": "Life_Terra.html",
@@ -18,7 +35,11 @@
       "image": "assets/videos/life-terra-trees.jpg",
       "imageAlt": "Sunlit forest with deer, a frame from the Saving Planets video",
       "video": true,
-      "action": {"kind": "donate", "href": "https://www.lifeterra.eu/en/support-us", "note": "Opens the organization's donation page. Saving Planets does not receive the money."}
+      "action": {
+        "kind": "donate",
+        "href": "https://www.lifeterra.eu/en/support-us",
+        "note": "Opens the organization's donation page. Saving Planets does not receive the money."
+      }
     },
     {
       "page": "GRACE-FO.html",
@@ -27,7 +48,11 @@
       "image": "assets/videos/grace-fo-satellites.jpg",
       "imageAlt": "Satellite flying above Earth, a frame from the Saving Planets video",
       "video": true,
-      "action": {"kind": "volunteer", "href": "https://science.nasa.gov/citizen-science/", "note": "Opens NASA citizen science. This is not a donation."}
+      "action": {
+        "kind": "volunteer",
+        "href": "https://science.nasa.gov/citizen-science/",
+        "note": "Opens NASA citizen science. This is not a donation."
+      }
     },
     {
       "page": "Artemis_II.html",
@@ -36,7 +61,11 @@
       "image": "assets/videos/artemis-ii-farthest.jpg",
       "imageAlt": "Rocket lifting off at night, a frame from the Saving Planets video",
       "video": true,
-      "action": {"kind": "volunteer", "href": "https://science.nasa.gov/citizen-science/", "note": "Opens NASA citizen science. This is not a donation."}
+      "action": {
+        "kind": "volunteer",
+        "href": "https://science.nasa.gov/citizen-science/",
+        "note": "Opens NASA citizen science. This is not a donation."
+      }
     }
   ]
 }

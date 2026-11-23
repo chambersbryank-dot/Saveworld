@@ -818,6 +818,10 @@
      "name": "Gulf of Alaska Keeper: Marine Debris Cleanup"
     },
     {
+     "href": "Hawaii_Wildlife_Fund.html",
+     "name": "Hawaiʻi Wildlife Fund"
+    },
+    {
      "href": "Hawaiian_Monk_Seal_Recovery.html",
      "name": "Hawaiian Monk Seal Recovery"
     },
@@ -1501,13 +1505,13 @@
  "categories": {
   "ocean": {
    "name": "Ocean",
-   "solutions": 49,
+   "solutions": 50,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "corporate": 5,
     "government": 8,
-    "nonprofit": 23,
+    "nonprofit": 24,
     "agency": 6,
     "natural": 7
    },
@@ -3266,6 +3270,17 @@
    "stats": [],
    "missions": [],
    "added": "2026-10-20"
+  },
+  {
+   "url": "Hawaii_Wildlife_Fund.html",
+   "title": "Hawaiʻi Wildlife Fund",
+   "category": "ocean",
+   "type": "solution",
+   "classification": "nonprofit",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
   },
   {
    "url": "Hawaiian_Monk_Seal_Recovery.html",
