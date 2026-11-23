@@ -214,7 +214,8 @@
    "it": {
     "term": "Anidride carbonica (CO₂)",
     "match": [
-     "anidride carbonica (co₂)"
+     "anidride carbonica (co₂)",
+     "anidride carbonica"
     ],
     "def": "Un gas che la gente e gli animali emettono e che brucia il carburante rilascia. Le piante lo prendono, e troppo di esso nell'aria riscalda il pianeta."
    },
@@ -2006,7 +2007,8 @@
     "match": [
      "مهددة",
      "مهدد",
-     "endangered"
+     "endangered",
+     "المهددة"
     ],
     "def": "نوع نادر جدًا يُحمى لأنه قد يختفي."
    },
@@ -2181,6 +2183,53 @@
     ],
     "def": "צב ים עם פה צר דמוי מקור. NOAA Fisheries מציינת אותו כמין בסכנת הכחדה."
    }
+  },
+  {
+   "id": "no-take",
+   "en": {
+    "term": "No-take area",
+    "match": [
+     "no-take area",
+     "no-take park"
+    ],
+    "def": "A protected place where fishing and taking marine life are not allowed."
+   },
+   "fr": {
+    "term": "Zone sans prélèvement",
+    "match": [
+     "zone sans prélèvement"
+    ],
+    "def": "Un lieu protégé où la pêche et le prélèvement d’êtres marins sont interdits."
+   },
+   "es": {
+    "term": "Zona de no extracción",
+    "match": [
+     "zona de no extracción"
+    ],
+    "def": "Un lugar protegido donde no se permite pescar ni extraer vida marina."
+   },
+   "ar": {
+    "term": "منطقة ممنوع فيها الأخذ",
+    "match": [
+     "منطقة ممنوع فيها الأخذ"
+    ],
+    "def": "مكان محمي لا يُسمح فيه بالصيد ولا بأخذ الكائنات البحرية."
+   },
+   "it": {
+    "term": "Area no-take",
+    "match": [
+     "area no-take"
+    ],
+    "def": "Un luogo protetto dove non è permesso pescare né prelevare vita marina."
+   },
+   "he": {
+    "term": "אזור ללא דיג",
+    "match": [
+     "אזור ללא דיג"
+    ],
+    "def": "מקום מוגן שבו אסור לדוג או לקחת יצורים מהים."
+   },
+   "source": "https://doi.org/10.1371/journal.pone.0023601"
   }
  ]
 }

@@ -371,3 +371,8 @@ Mekong_River_Commission.html
 SOS_Mata_Atlantica.html
 Proba-3.html
 MicroCarb.html
+Inouye_Solar_Telescope.html
+Malama_Maunalua.html
+Mauna_Loa_Observatory.html
+Kaena_Point_Fence.html
+Cabo_Pulmo.html
