@@ -96,6 +96,10 @@
      "name": "ClearSpace"
     },
     {
+     "href": "ESA_Space_Debris_Office.html",
+     "name": "ESA Space Debris Office"
+    },
+    {
      "href": "Europa_Clipper.html",
      "name": "Europa Clipper"
     },
@@ -184,6 +188,10 @@
     {
      "href": "SOHO.html",
      "name": "SOHO Solar and Heliospheric Observatory (ESA / NASA)"
+    },
+    {
+     "href": "Solar_Dynamics_Observatory.html",
+     "name": "Solar Dynamics Observatory"
     },
     {
      "href": "Solar_Orbiter.html",
@@ -712,6 +720,10 @@
      "name": "Keep Tahoe Blue (League to Save Lake Tahoe)"
     },
     {
+     "href": "Lake_Apopka_Restoration.html",
+     "name": "Lake Apopka Restoration"
+    },
+    {
      "href": "Lake_Biwa_Soap_Movement.html",
      "name": "Lake Biwa and the Soap Movement"
     },
@@ -1232,6 +1244,10 @@
      "name": "Chesapeake Bay Foundation"
     },
     {
+     "href": "Commonwealth_Environmental_Water_Holder.html",
+     "name": "Commonwealth Environmental Water Holder"
+    },
+    {
      "href": "Cuyahoga_River_Cleanup.html",
      "name": "Cuyahoga River Cleanup (Ohio)"
     },
@@ -1322,6 +1338,10 @@
     {
      "href": "Waterkeeper_Alliance.html",
      "name": "Waterkeeper Alliance"
+    },
+    {
+     "href": "Working_for_Water.html",
+     "name": "Working for Water"
     }
    ]
   },
@@ -1514,7 +1534,7 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 297,
+  "solutions": 302,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
@@ -1544,7 +1564,7 @@
     ]
    }
   ],
-  "taggedSolutions": 297
+  "taggedSolutions": 302
  },
  "categories": {
   "ocean": {
@@ -1575,7 +1595,7 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 19,
+   "solutions": 20,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1598,7 +1618,7 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 27,
+   "solutions": 29,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1680,7 +1700,7 @@
   },
   "space-weather": {
    "name": "Space Weather & Shields",
-   "solutions": 14,
+   "solutions": 15,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -5978,6 +5998,61 @@
    "url": "Cabo_Pulmo.html",
    "title": "Cabo Pulmo National Park",
    "category": "ocean",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Lake_Apopka_Restoration.html",
+   "title": "Lake Apopka Restoration",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Commonwealth_Environmental_Water_Holder.html",
+   "title": "Commonwealth Environmental Water Holder",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Working_for_Water.html",
+   "title": "Working for Water",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "ESA_Space_Debris_Office.html",
+   "title": "ESA Space Debris Office",
+   "category": "space-disposal",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Solar_Dynamics_Observatory.html",
+   "title": "Solar Dynamics Observatory",
+   "category": "space-weather",
    "type": "solution",
    "classification": "agency",
    "status": "active",
