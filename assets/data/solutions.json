@@ -18,6 +18,10 @@
      "name": "Comet Interceptor (ESA / JAXA)"
     },
     {
+     "href": "DART.html",
+     "name": "DART (NASA)"
+    },
+    {
      "href": "Hayabusa2_Torifune.html",
      "name": "Hayabusa2 Torifune Flyby (JAXA)"
     },
@@ -708,6 +712,10 @@
      "name": "Lake Erie Harmful Algal Bloom Forecast (NOAA)"
     },
     {
+     "href": "Lake_Geneva_CIPEL.html",
+     "name": "Lake Geneva Phosphorus Cleanup"
+    },
+    {
      "href": "Lake_Plastic_Recovery.html",
      "name": "Lake Plastic Recovery"
     },
@@ -726,6 +734,10 @@
     {
      "href": "North_Aral_Sea.html",
      "name": "North Aral Sea and the Kok-Aral Dam"
+    },
+    {
+     "href": "Onondaga_Lake_Cleanup.html",
+     "name": "Onondaga Lake Cleanup"
     },
     {
      "href": "Restoring_the_Lake_Depths.html",
@@ -962,6 +974,10 @@
     {
      "href": "Comet_Interceptor.html",
      "name": "Comet Interceptor (ESA / JAXA)"
+    },
+    {
+     "href": "DART.html",
+     "name": "DART (NASA)"
     },
     {
      "href": "Hayabusa2_Torifune.html",
@@ -1204,12 +1220,20 @@
      "name": "Elwha River Restoration"
     },
     {
+     "href": "Emscher_River_Restoration.html",
+     "name": "Emscher River Restoration"
+    },
+    {
      "href": "FreshWater_Watch.html",
      "name": "FreshWater Watch (Earthwatch Europe)"
     },
     {
      "href": "GloFAS.html",
      "name": "Global Flood Awareness System (GloFAS)"
+    },
+    {
+     "href": "Hudson_River_PCB_Cleanup.html",
+     "name": "Hudson River PCB Cleanup"
     },
     {
      "href": "Kissimmee_River_Restoration.html",
@@ -1470,7 +1494,7 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 286,
+  "solutions": 292,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
@@ -1500,7 +1524,7 @@
     ]
    }
   ],
-  "taggedSolutions": 286
+  "taggedSolutions": 292
  },
  "categories": {
   "ocean": {
@@ -1531,7 +1555,7 @@
   },
   "lakes": {
    "name": "Lakes",
-   "solutions": 17,
+   "solutions": 19,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1554,7 +1578,7 @@
   },
   "rivers": {
    "name": "Rivers",
-   "solutions": 25,
+   "solutions": 27,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -1609,7 +1633,7 @@
   },
   "planetary-defense": {
    "name": "Planetary Defense",
-   "solutions": 15,
+   "solutions": 16,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
@@ -5830,6 +5854,61 @@
     }
    ],
    "missions": []
+  },
+  {
+   "url": "DART.html",
+   "title": "DART (NASA)",
+   "category": "planetary-defense",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Onondaga_Lake_Cleanup.html",
+   "title": "Onondaga Lake Cleanup",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Emscher_River_Restoration.html",
+   "title": "Emscher River Restoration",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Lake_Geneva_CIPEL.html",
+   "title": "Lake Geneva Phosphorus Cleanup",
+   "category": "lakes",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Hudson_River_PCB_Cleanup.html",
+   "title": "Hudson River PCB Cleanup",
+   "category": "rivers",
+   "type": "solution",
+   "classification": "government",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
   }
  ]
 }

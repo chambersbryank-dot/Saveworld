@@ -85,6 +85,14 @@
      "asteroide"
     ],
     "def": "Un oggetto roccioso che orbita attorno al Sole, molto più piccolo di un pianeta. La maggior parte sono in una cintura tra Marte e Giove."
+   },
+   "he": {
+    "term": "אסטרואיד",
+    "match": [
+     "אסטרואידים",
+     "אסטרואיד"
+    ],
+    "def": "סלע שמקיף את השמש, קטן בהרבה מכוכב לכת. רובם נמצאים בחגורה בין מאדים לצדק."
    }
   },
   {
@@ -113,7 +121,9 @@
    "ar": {
     "term": "التنوع البيولوجي",
     "match": [
-     "التنوع البيولوجي"
+     "التنوع البيولوجي",
+     "التنوع الحيوي",
+     "حيويًا"
     ],
     "def": "تنوّع جميع الكائنات الحية في مكان ما: النباتات والحيوانات والفطريات والميكروبات الدقيقة."
    },
@@ -123,6 +133,13 @@
      "biodiversità"
     ],
     "def": "La varietà di tutte le cose viventi in un posto: piante, animali, funghi e piccoli microbi."
+   },
+   "he": {
+    "term": "מגוון ביולוגי",
+    "match": [
+     "מגוון ביולוגי"
+    ],
+    "def": "מגוון כל היצורים החיים במקום: צמחים, בעלי חיים, פטריות וחיידקים זעירים."
    }
   },
   {
@@ -200,6 +217,13 @@
      "anidride carbonica (co₂)"
     ],
     "def": "Un gas che la gente e gli animali emettono e che brucia il carburante rilascia. Le piante lo prendono, e troppo di esso nell'aria riscalda il pianeta."
+   },
+   "he": {
+    "term": "פחמן דו-חמצני",
+    "match": [
+     "פחמן דו-חמצני"
+    ],
+    "def": "גז באוויר. צמחים משתמשים בו, והוא גם לוכד חום סביב כדור הארץ."
    }
   },
   {
@@ -322,10 +346,19 @@
    "it": {
     "term": "Ecosistema",
     "match": [
+     "ecosistemi",
      "ecosistema",
      "ecosisteme"
     ],
     "def": "Una comunità di cose viventi e il luogo in cui vivono, come una barriera corallina o una foresta, il tutto dipende l'uno dall'altro."
+   },
+   "he": {
+    "term": "מערכת אקולוגית",
+    "match": [
+     "מערכות אקולוגיות",
+     "מערכת אקולוגית"
+    ],
+    "def": "קהילה של יצורים חיים והמקום שבו הם חיים, ותלויים זה בזה."
    }
   },
   {
@@ -367,6 +400,14 @@
      "gas serre"
     ],
     "def": "Un gas, come l'anidride carbonica o il metano, che intrappola calore nell'aria intorno alla Terra, il modo in cui una serra mantiene le piante calde."
+   },
+   "he": {
+    "term": "גז חממה",
+    "match": [
+     "גזי חממה",
+     "גז חממה"
+    ],
+    "def": "גז שעוזר ללכוד חום סביב כדור הארץ."
    }
   },
   {
@@ -693,9 +734,21 @@
    "it": {
     "term": "Orbit",
     "match": [
+     "orbite",
+     "orbita",
      "orbit"
     ],
     "def": "Il percorso curvo che un oggetto prende mentre viaggia intorno a un pianeta, una luna o una stella, come un satellite che circonda la Terra."
+   },
+   "he": {
+    "term": "מסלול",
+    "match": [
+     "המסלול",
+     "במסלול",
+     "מסלולים",
+     "מסלול"
+    ],
+    "def": "הדרך שמשהו נע בה סביב כדור הארץ או השמש."
    }
   },
   {
@@ -1098,6 +1151,14 @@
      "telescopio"
     ],
     "def": "Uno strumento che raccoglie la luce (o altra energia) per vedere le cose lontane più chiaramente."
+   },
+   "he": {
+    "term": "טלסקופ",
+    "match": [
+     "טלסקופים",
+     "טלסקופ"
+    ],
+    "def": "כלי שאוסף אור רחוק כדי שנוכל לראות עצמים חיוורים בשמיים."
    }
   },
   {
@@ -1594,6 +1655,14 @@
      "asteroidi near-Earth"
     ],
     "def": "Un asteroide o una cometa la cui orbita passa vicino al percorso della Terra intorno al Sole. Gli scienziati li seguono per assicurarsi che nessuno sia in rotta di collisione."
+   },
+   "he": {
+    "term": "גוף קרוב לארץ",
+    "match": [
+     "גופים קרובים לארץ",
+     "גוף קרוב לארץ"
+    ],
+    "def": "אסטרואיד או שביט שהמסלול שלו מגיע קרוב לכדור הארץ."
    }
   },
   {
@@ -1633,6 +1702,14 @@
      "salinità"
     ],
     "def": "Quanto è salata l'acqua. L'acqua più salata è più pesante, quindi le differenze di salinità aiutano a muovere le correnti oceaniche."
+   },
+   "he": {
+    "term": "מליחות",
+    "match": [
+     "המליחות",
+     "מליחות"
+    ],
+    "def": "כמות המלח המומסת במים."
    }
   },
   {
@@ -1755,6 +1832,355 @@
     "def": "Catturare pesci più in fretta di quanto riescano a riprodursi."
    },
    "source": "https://www.fisheries.noaa.gov/insight/overfishing"
+  },
+  {
+   "id": "kinetic-impactor",
+   "en": {
+    "term": "Kinetic impactor",
+    "match": [
+     "kinetic impactor"
+    ],
+    "def": "A spacecraft that hits an asteroid on purpose to change the asteroid's path."
+   },
+   "fr": {
+    "term": "Impacteur cinétique",
+    "match": [
+     "impacteur cinétique"
+    ],
+    "def": "Une sonde qui frappe un astéroïde volontairement pour changer sa trajectoire."
+   },
+   "es": {
+    "term": "Impactador cinético",
+    "match": [
+     "impactador cinético"
+    ],
+    "def": "Una nave que choca a propósito con un asteroide para cambiar su trayectoria."
+   },
+   "ar": {
+    "term": "مصادم حركي",
+    "match": [
+     "مصادم حركي"
+    ],
+    "def": "مركبة فضائية تصطدم بكويكب عن قصد لتغيير مساره."
+   },
+   "it": {
+    "term": "Impattatore cinetico",
+    "match": [
+     "impattatore cinetico"
+    ],
+    "def": "Una sonda che colpisce di proposito un asteroide per cambiarne la traiettoria."
+   },
+   "he": {
+    "term": "פגיעה קינטית",
+    "match": [
+     "פגיעה קינטית"
+    ],
+    "def": "חללית שפוגעת באסטרואיד בכוונה כדי לשנות את מסלולו."
+   },
+   "source": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/"
+  },
+  {
+   "id": "superfund",
+   "en": {
+    "term": "Superfund",
+    "match": [
+     "Superfund"
+    ],
+    "def": "The U.S. program that cleans the country's most contaminated sites and holds polluters to the cleanup."
+   },
+   "fr": {
+    "term": "Superfund",
+    "match": [
+     "Superfund"
+    ],
+    "def": "Le programme américain qui nettoie les sites les plus contaminés du pays et demande des comptes aux pollueurs."
+   },
+   "es": {
+    "term": "Superfund",
+    "match": [
+     "Superfund"
+    ],
+    "def": "El programa de Estados Unidos que limpia los sitios más contaminados del país y exige cuentas a quien contaminó."
+   },
+   "ar": {
+    "term": "سوبرفَند",
+    "match": [
+     "سوبرفَند",
+     "Superfund"
+    ],
+    "def": "البرنامج الأمريكي الذي ينظّف أكثر المواقع تلوثًا في البلاد ويُلزم الملوّثين بالتنظيف."
+   },
+   "it": {
+    "term": "Superfund",
+    "match": [
+     "Superfund"
+    ],
+    "def": "Il programma degli Stati Uniti che ripulisce i siti più contaminati del paese e chiama i responsabili a risponderne."
+   },
+   "he": {
+    "term": "סופרפאנד",
+    "match": [
+     "סופרפאנד",
+     "Superfund"
+    ],
+    "def": "התוכנית של ארצות הברית שמנקה את האתרים המזוהמים ביותר במדינה ומחייבת את המזהמים לנקות."
+   },
+   "source": "https://www.epa.gov/superfund"
+  },
+  {
+   "id": "pcb",
+   "en": {
+    "term": "PCBs",
+    "match": [
+     "PCBs",
+     "PCB"
+    ],
+    "def": "A group of industrial chemicals that stay in water, mud, and animals for a long time."
+   },
+   "fr": {
+    "term": "PCB",
+    "match": [
+     "PCB"
+    ],
+    "def": "Une famille de produits chimiques industriels qui restent longtemps dans l’eau, la vase et les animaux."
+   },
+   "es": {
+    "term": "PCB",
+    "match": [
+     "PCB"
+    ],
+    "def": "Un grupo de sustancias industriales que permanecen mucho tiempo en el agua, el lodo y los animales."
+   },
+   "ar": {
+    "term": "مركبات PCB",
+    "match": [
+     "مركبات PCB",
+     "PCB"
+    ],
+    "def": "مجموعة من المواد الكيميائية الصناعية تبقى طويلًا في الماء والطين والحيوانات."
+   },
+   "it": {
+    "term": "PCB",
+    "match": [
+     "PCB"
+    ],
+    "def": "Un gruppo di sostanze industriali che restano a lungo nell’acqua, nel fango e negli animali."
+   },
+   "he": {
+    "term": "PCB",
+    "match": [
+     "PCB"
+    ],
+    "def": "קבוצה של חומרים תעשייתיים שנשארים זמן רב במים, בבוץ ובבעלי חיים."
+   },
+   "source": "https://www.epa.gov/hudsonriverpcbs/hudson-river-cleanup"
+  },
+  {
+   "id": "endangered",
+   "source": "https://www.fisheries.noaa.gov/species/hawaiian-monk-seal",
+   "en": {
+    "term": "Endangered",
+    "match": [
+     "endangered"
+    ],
+    "def": "A species so rare that it is protected because it could disappear."
+   },
+   "fr": {
+    "term": "En danger",
+    "match": [
+     "en danger",
+     "endangered"
+    ],
+    "def": "Une espèce si rare qu’elle est protégée, parce qu’elle pourrait disparaître."
+   },
+   "es": {
+    "term": "En peligro",
+    "match": [
+     "en peligro",
+     "endangered"
+    ],
+    "def": "Una especie tan escasa que está protegida porque podría desaparecer."
+   },
+   "ar": {
+    "term": "مهدد بالانقراض",
+    "match": [
+     "مهددة",
+     "مهدد",
+     "endangered"
+    ],
+    "def": "نوع نادر جدًا يُحمى لأنه قد يختفي."
+   },
+   "it": {
+    "term": "In pericolo",
+    "match": [
+     "in pericolo",
+     "endangered"
+    ],
+    "def": "Una specie così rara da essere protetta, perché potrebbe scomparire."
+   },
+   "he": {
+    "term": "בסכנת הכחדה",
+    "match": [
+     "בסכנת הכחדה",
+     "endangered"
+    ],
+    "def": "מין נדיר כל כך שהוא מוגן, כי הוא עלול להיעלם."
+   }
+  },
+  {
+   "id": "glacier",
+   "source": "https://nsidc.org/learn/parts-cryosphere/glaciers",
+   "en": {
+    "term": "Glacier",
+    "match": [
+     "glaciers",
+     "glacier"
+    ],
+    "def": "A large body of ice that moves slowly over land."
+   },
+   "fr": {
+    "term": "Glacier",
+    "match": [
+     "glaciers",
+     "glacier"
+    ],
+    "def": "Une grande masse de glace qui avance lentement sur la terre."
+   },
+   "es": {
+    "term": "Glaciar",
+    "match": [
+     "glaciares",
+     "glaciar"
+    ],
+    "def": "Una gran masa de hielo que se mueve despacio sobre la tierra."
+   },
+   "ar": {
+    "term": "نهر جليدي",
+    "match": [
+     "الأنهار الجليدية",
+     "نهر جليدي"
+    ],
+    "def": "كتلة كبيرة من الجليد تتحرك ببطء فوق اليابسة."
+   },
+   "it": {
+    "term": "Ghiacciaio",
+    "match": [
+     "ghiacciai",
+     "ghiacciaio",
+     "ghiaccia"
+    ],
+    "def": "Una grande massa di ghiaccio che si muove lentamente sulla terra."
+   },
+   "he": {
+    "term": "קרחון",
+    "match": [
+     "קרחונים",
+     "קרחון"
+    ],
+    "def": "גוף גדול של קרח שנע לאט מעל היבשה."
+   }
+  },
+  {
+   "id": "octopus",
+   "source": "https://www.fisheries.noaa.gov/species/common-octopus",
+   "en": {
+    "term": "Octopus",
+    "match": [
+     "octopus"
+    ],
+    "def": "A soft-bodied sea animal with eight arms."
+   },
+   "fr": {
+    "term": "Pieuvre",
+    "match": [
+     "pieuvres",
+     "pieuvre"
+    ],
+    "def": "Un animal marin au corps mou, avec huit bras."
+   },
+   "es": {
+    "term": "Pulpo",
+    "match": [
+     "pulpos",
+     "pulpo"
+    ],
+    "def": "Un animal marino de cuerpo blando, con ocho brazos."
+   },
+   "ar": {
+    "term": "أخطبوط",
+    "match": [
+     "الأخطبوط",
+     "أخطبوط"
+    ],
+    "def": "حيوان بحري ذو جسم رخو وثمانية أذرع."
+   },
+   "it": {
+    "term": "Polpo",
+    "match": [
+     "polpi",
+     "polpo"
+    ],
+    "def": "Un animale marino dal corpo morbido, con otto braccia."
+   },
+   "he": {
+    "term": "תמנון",
+    "match": [
+     "תמנונים",
+     "תמנון"
+    ],
+    "def": "חיה ימית רכה עם שמונה זרועות."
+   }
+  },
+  {
+   "id": "hawksbill",
+   "source": "https://www.fisheries.noaa.gov/species/hawksbill-turtle",
+   "en": {
+    "term": "Hawksbill",
+    "match": [
+     "hawksbill"
+    ],
+    "def": "A sea turtle with a narrow, beak-like mouth. NOAA Fisheries lists it as endangered."
+   },
+   "fr": {
+    "term": "Tortue imbriquée",
+    "match": [
+     "tortue imbriquée",
+     "tortues imbriquées"
+    ],
+    "def": "Une tortue marine au bec étroit. NOAA Fisheries la classe en danger."
+   },
+   "es": {
+    "term": "Tortuga carey",
+    "match": [
+     "tortuga carey",
+     "tortugas carey"
+    ],
+    "def": "Una tortuga marina de boca estrecha, como un pico. NOAA Fisheries la lista como en peligro."
+   },
+   "ar": {
+    "term": "سلحفاة منقار الصقر",
+    "match": [
+     "سلاحف منقار الصقر",
+     "سلحفاة منقار الصقر"
+    ],
+    "def": "سلحفاة بحرية بفم ضيق يشبه المنقار. تصنفها NOAA Fisheries مهددة بالانقراض."
+   },
+   "it": {
+    "term": "Tartaruga embricata",
+    "match": [
+     "tartaruga embricata",
+     "tartarughe embricate"
+    ],
+    "def": "Una tartaruga marina con la bocca stretta, a becco. NOAA Fisheries la elenca come in pericolo."
+   },
+   "he": {
+    "term": "צב ים קרני",
+    "match": [
+     "צב ים קרני",
+     "צבי ים קרניים"
+    ],
+    "def": "צב ים עם פה צר דמוי מקור. NOAA Fisheries מציינת אותו כמין בסכנת הכחדה."
+   }
   }
  ]
 }
