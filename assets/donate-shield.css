@@ -1,22 +1,87 @@
-/* Donate verification shield. Our own icon. Not a Charity Navigator, Candid, or BBB seal. */
-.sp-shield-wrap{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.35rem .65rem;margin:.35rem .15rem .35rem .45rem;vertical-align:middle;max-width:100%}
-.sp-shield,.sp-shield-how{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;box-sizing:border-box;text-decoration:none;border-radius:999px}
-.sp-shield{padding:.2rem .7rem .2rem .28rem;background:#f4fbff;color:#06344c;border:1px solid #7eb8d4;font-weight:700;font-size:.86rem;line-height:1.25;letter-spacing:.01em}
-.sp-shield-label{color:#06344c}
+/* Donate verification shield. Our own icon. Not a Charity Navigator, Candid, or BBB seal.
+   Icon only. The check name is a tooltip and must not cover the Donate button. */
+.donate-pair{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  max-width:100%;
+  vertical-align:middle;
+}
+.wh-card .donate-pair{margin-top:auto;align-self:flex-start}
+.wh-card .donate-pair .btn{margin-top:0}
+.sp-shield-wrap{
+  display:inline-flex;
+  align-items:center;
+  vertical-align:middle;
+  margin-block:4px;
+  margin-inline-start:16px;
+  margin-inline-end:4px;
+  max-width:100%;
+}
+.sp-shield{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+  width:44px;
+  height:44px;
+  min-width:44px;
+  min-height:44px;
+  padding:0;
+  margin:0;
+  flex:none;
+  background:transparent;
+  border:0;
+  border-radius:10px;
+  color:inherit;
+  text-decoration:none;
+  vertical-align:middle;
+}
 .sp-shield-icon{width:28px;height:32px;flex:none;display:block;filter:drop-shadow(0 1px 1px rgba(4,40,64,.28))}
-a.sp-shield-how{padding:.2rem .6rem;color:#e7f6ff;background:#06344e;font-size:.82rem;font-weight:700;text-decoration:underline;text-decoration-color:#e7f6ff;text-decoration-thickness:2px;text-underline-offset:3px}
-a.sp-shield-how:hover,a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
-html:not(.dark) a.sp-shield-how{color:#06344c;background:#f4fbff;text-decoration-color:#06344c;border:1px solid #7eb8d4}
-html:not(.dark) a.sp-shield-how:hover,html:not(.dark) a.sp-shield-how:focus-visible{color:#04283c;text-decoration-color:#04283c}
-.sp-shield:hover,.sp-shield:focus-visible{box-shadow:0 0 0 3px rgba(0,156,222,.35),0 8px 18px rgba(8,110,150,.28)}
-.sp-shield:focus-visible,a.sp-shield-how:focus-visible{outline:3px solid #8fd3ff;outline-offset:3px}
-html.dark .sp-shield{background:#071e2e;color:#e7f6ff;border-color:#3d8eb0}
-html.dark .sp-shield-label{color:#e7f6ff}
-html.dark a.sp-shield-how,html.dark a.sp-shield-how:visited{color:#e7f6ff;background:#06344e;text-decoration-color:#e7f6ff}
-html.dark a.sp-shield-how:hover,html.dark a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
-html.dark .sp-shield:focus-visible,html.dark .sp-shield-how:focus-visible{outline-color:#8fd3ff}
-.sp-shield-sample{display:inline-flex;align-items:center;gap:.45rem;margin:.4rem 0;padding:.25rem .75rem .25rem .3rem;border-radius:999px;background:#f4fbff;border:1px solid #7eb8d4;color:#06344c;font-weight:700}
-html.dark .sp-shield-sample{background:#071e2e;border-color:#3d8eb0;color:#e7f6ff}
+.sp-shield-label{
+  position:absolute;
+  z-index:80;
+  inset-inline-start:0;
+  inset-inline-end:auto;
+  bottom:calc(100% + 10px);
+  top:auto;
+  width:max-content;
+  max-width:min(15rem, calc(100vw - 24px));
+  padding:.4rem .7rem;
+  border-radius:8px;
+  background:#06344e;
+  color:#e7f6ff;
+  border:1px solid #8fd3ff;
+  box-shadow:0 8px 20px rgba(4,24,40,.35);
+  font-size:.82rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:.01em;
+  text-align:center;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  pointer-events:none;
+  visibility:hidden;
+}
+html:not(.dark) .sp-shield-label{background:#f4fbff;color:#06344c;border-color:#0b4a6e}
+.sp-shield.is-shown .sp-shield-label,
+.sp-shield:focus-visible .sp-shield-label,
+.sp-shield-label.is-floating{visibility:visible;pointer-events:auto}
+.sp-shield.is-dismissed .sp-shield-label,
+.sp-shield.is-dismissed:focus-visible .sp-shield-label{visibility:hidden;pointer-events:none}
+.sp-shield:hover,.sp-shield:focus-visible{box-shadow:0 0 0 3px rgba(0,156,222,.35)}
+.sp-shield:focus-visible{outline:3px solid #8fd3ff;outline-offset:3px}
+html.dark .sp-shield:focus-visible{outline-color:#8fd3ff}
+.sp-shield-sample{
+  display:flex;
+  align-items:center;
+  margin:.4rem 0;
+  padding:0;
+  background:transparent;
+  border:0;
+}
+.sp-shield-sample .sp-shield{width:48px;height:48px}
 .sp-shield-sample .sp-shield-icon{width:36px;height:42px}
 .shield-checks{padding-inline-start:1.2rem}
 .shield-checks li{margin:.35rem 0}
@@ -24,14 +89,9 @@ html.dark .sp-shield-sample{background:#071e2e;border-color:#3d8eb0;color:#e7f6f
 .shield-table th,.shield-table td{border-bottom:1px solid rgba(127,127,127,.35);text-align:start;padding:.45rem .4rem;vertical-align:top}
 .shield-table a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:640px){
-  .sp-shield-wrap{margin-inline-start:0}
+  .sp-shield-wrap{margin-inline-start:16px}
   .shield-table{display:block;overflow-x:auto}
 }
-@media (prefers-reduced-motion:no-preference){
-  .sp-shield{transition:box-shadow .2s ease,transform .2s ease}
-  .sp-shield:hover{transform:translateY(-1px)}
-}
 @media (prefers-reduced-motion:reduce){
-  .sp-shield,.sp-shield-icon{transition:none;animation:none}
-  .sp-shield:hover{transform:none}
+  .sp-shield,.sp-shield-icon,.sp-shield-label{transition:none;animation:none}
 }
