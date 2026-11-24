@@ -1,0 +1,37 @@
+/* Donate verification shield. Our own icon. Not a Charity Navigator, Candid, or BBB seal. */
+.sp-shield-wrap{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.35rem .65rem;margin:.35rem .15rem .35rem .45rem;vertical-align:middle;max-width:100%}
+.sp-shield,.sp-shield-how{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;box-sizing:border-box;text-decoration:none;border-radius:999px}
+.sp-shield{padding:.2rem .7rem .2rem .28rem;background:#f4fbff;color:#06344c;border:1px solid #7eb8d4;font-weight:700;font-size:.86rem;line-height:1.25;letter-spacing:.01em}
+.sp-shield-label{color:#06344c}
+.sp-shield-icon{width:28px;height:32px;flex:none;display:block;filter:drop-shadow(0 1px 1px rgba(4,40,64,.28))}
+a.sp-shield-how{padding:.2rem .6rem;color:#e7f6ff;background:#06344e;font-size:.82rem;font-weight:700;text-decoration:underline;text-decoration-color:#e7f6ff;text-decoration-thickness:2px;text-underline-offset:3px}
+a.sp-shield-how:hover,a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
+html:not(.dark) a.sp-shield-how{color:#06344c;background:#f4fbff;text-decoration-color:#06344c;border:1px solid #7eb8d4}
+html:not(.dark) a.sp-shield-how:hover,html:not(.dark) a.sp-shield-how:focus-visible{color:#04283c;text-decoration-color:#04283c}
+.sp-shield:hover,.sp-shield:focus-visible{box-shadow:0 0 0 3px rgba(0,156,222,.35),0 8px 18px rgba(8,110,150,.28)}
+.sp-shield:focus-visible,a.sp-shield-how:focus-visible{outline:3px solid #8fd3ff;outline-offset:3px}
+html.dark .sp-shield{background:#071e2e;color:#e7f6ff;border-color:#3d8eb0}
+html.dark .sp-shield-label{color:#e7f6ff}
+html.dark a.sp-shield-how,html.dark a.sp-shield-how:visited{color:#e7f6ff;background:#06344e;text-decoration-color:#e7f6ff}
+html.dark a.sp-shield-how:hover,html.dark a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
+html.dark .sp-shield:focus-visible,html.dark .sp-shield-how:focus-visible{outline-color:#8fd3ff}
+.sp-shield-sample{display:inline-flex;align-items:center;gap:.45rem;margin:.4rem 0;padding:.25rem .75rem .25rem .3rem;border-radius:999px;background:#f4fbff;border:1px solid #7eb8d4;color:#06344c;font-weight:700}
+html.dark .sp-shield-sample{background:#071e2e;border-color:#3d8eb0;color:#e7f6ff}
+.sp-shield-sample .sp-shield-icon{width:36px;height:42px}
+.shield-checks{padding-inline-start:1.2rem}
+.shield-checks li{margin:.35rem 0}
+.shield-table{width:100%;border-collapse:collapse;font-size:.92rem}
+.shield-table th,.shield-table td{border-bottom:1px solid rgba(127,127,127,.35);text-align:start;padding:.45rem .4rem;vertical-align:top}
+.shield-table a{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:640px){
+  .sp-shield-wrap{margin-inline-start:0}
+  .shield-table{display:block;overflow-x:auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .sp-shield{transition:box-shadow .2s ease,transform .2s ease}
+  .sp-shield:hover{transform:translateY(-1px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .sp-shield,.sp-shield-icon{transition:none;animation:none}
+  .sp-shield:hover{transform:none}
+}
