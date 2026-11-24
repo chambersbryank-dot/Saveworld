@@ -450,7 +450,17 @@ def course_page(C):
     o.append(related(C))
     o.append(further_block(C))
     o.append('</div>')
-    return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=head(), ld_type='Course', tail=tail())
+    extra = head()
+    if getattr(C, 'ID', '') == 'aero101':
+        # Same column rules as courses.css, in the head, so the deferred stylesheet does not shift the page.
+        extra += ('<style id="aero101-lock">.crs{max-width:980px;margin:0 auto;padding:1rem 1.25rem 2.5rem;line-height:1.65}'
+                  '.crs h2{margin-top:2.4rem}.crs h3{margin:1.4rem 0 .45rem;font-size:1.12rem}'
+                  '.crs-note{font-size:.9rem;font-style:italic}.crs-crumb{font-size:.9rem}'
+                  '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
+                  '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
+                  '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
+                  '</style>\n')
+    return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
 
 def related(C):  # Oct 25 2026 (founder, upgrade 4): 'Related' block, 3-4 links from the roadmap (no new data):
     # the live courses just before and after this one in roadmap order, then other live courses from the same year, then the hub.
