@@ -226,7 +226,7 @@ def result_types():
     hubs = json.load(open('search/hubs.json', encoding='utf8'))['hubOf']
     for pg, hub in hubs.items(): t[pg] = 'mission' if hub in MISSION_HUBS else 'solution'
     for pg in FACT_PAGES: t[pg] = 'fact'
-    t['Courses.html'] = 'course'
+    t['Undergraduate_Studies.html'] = 'course'
     for f in sorted(os.listdir('scripts/courses')):
         if not f.endswith('.py'): continue
         src = open('scripts/courses/' + f, encoding='utf8').read()

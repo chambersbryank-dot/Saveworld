@@ -282,7 +282,7 @@ UNITS = [
           {'q': 'A good first debugging step is…', 'opts': ['rewrite everything', 'reproduce with a small input', 'add random prints everywhere', 'ignore it'], 'ok': 1, 'why': 'Shrink the problem.'}],
  'cards': [('Traceback', 'Error report; read from the bottom.'), ('Edge case', 'Unusual input at the boundary.'), ('assert', 'Stop if a condition is false.'), ('Unit test', 'Checks one function against known answers.'), ('pytest', 'Test runner.'), ('raise', 'Signal an error deliberately.')],
  'planet': {'text': ['Scientific code that informs policy must be checked. This course practices what it preaches: every code example on this page is run by our build script, and its output must match exactly before the page goes live.'],
-            'site': [('Courses', 'Courses.html')], 'src': [_PT, _TUT]},
+            'site': [('Courses', 'Undergraduate_Studies.html')], 'src': [_PT, _TUT]},
  'res': [(_PT[0], _PT[1], 'Writing tests.'), (_TUT[0], _TUT[1], 'Section 8: errors and exceptions.')]},
 
 {'id': 'u8', 'title': 'Algorithms & Complexity', 'weeks': 'Weeks 10–11',

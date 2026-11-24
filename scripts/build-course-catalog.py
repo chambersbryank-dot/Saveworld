@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Filterable course catalog on Courses.html, plus the numbering rule and flagged outliers.
+"""Filterable course catalog on Undergraduate_Studies.html, plus the numbering rule and flagged outliers.
 
 Nov 2 2026 (Bryan-approved). Filters: year (level), subject, language the course is published in.
 Numbering rule: the first digit is the year (1 freshman … 4 senior), the letters are the subject,
@@ -98,9 +98,14 @@ def enrich(card, lang):
     level = num.group(1) if num else ''
     href = re.search(r'href="(?:\.\./)?([^"]+\.html)"', card)
     langs = ' '.join(published(href.group(1))) if href else ''
+    tm = re.search(r'data-tracks="([^"]*)"', card)
+    tracks = tm.group(1) if tm else 'core'
+    extra = ' is-track' if re.search(r'class="crs-c live[^"]*\bis-track\b', card) else ''
     card = re.sub(r'\sdata-(?:level|subject|langs)="[^"]*"', '', card)
     card = re.sub(r'<p class="crs-flag">.*?</p>', '', card)
-    card = re.sub(r'class="crs-c live"[^>]*>', f'class="crs-c live" data-level="{level}" data-subject="{sub}" data-langs="{langs}">', card, count=1)
+    card = re.sub(r'class="crs-c live(?: is-track)?"[^>]*>',
+                  f'class="crs-c live{extra}" data-tracks="{html.escape(tracks, quote=True)}" data-level="{level}" data-subject="{sub}" data-langs="{langs}">',
+                  card, count=1)
     flag = t['flags'].get(base)
     if flag: card = card.replace('</li>', f'<p class="crs-flag">{E(flag)}</p></li>', 1)
     return card
@@ -128,16 +133,18 @@ def apply_one(lang, f):
     s = re.sub(r'<!-- CATALOG:START -->.*?<!-- CATALOG:END -->', '', s, flags=re.S)
     def repl(m):
         return enrich(m.group(0), lang)
-    s2, n = re.subn(r'<li class="crs-c live"[^>]*>.*?</li>', repl, s, flags=re.S)
+    s2, n = re.subn(r'<li class="crs-c live(?: is-track)?"[^>]*>.*?</li>', repl, s, flags=re.S)
     if n != 30: raise SystemExit(f'{f}: expected 30 live cards, found {n}')
     if '<section id="y1">' not in s2: raise SystemExit(f'no y1 in {f}')
-    s2 = s2.replace('<section id="y1">', block(lang) + '<section id="y1">', 1)
-    s2 = s2.replace('courses.css?v=20261024h', 'courses.css?v=20261102b').replace('courses.css?v=20261102a', 'courses.css?v=20261102b')
+    # Nov 24 2026: the track filter replaced this bar. Numbering flags stay on the cards.
+    # Do not put the level/subject/language block back, and do not downgrade a newer courses.css query.
+    for old in ('20261024h', '20261102a', '20261102b'):
+        s2 = s2.replace(f'courses.css?v={old}', 'courses.css?v=20261124a')
     if s2 != s: open(f, 'w', encoding='utf-8').write(s2)
 
 def apply():
     for lang in LANGS:
-        apply_one(lang, 'Courses.html' if lang == 'en' else f'{lang}/Courses.html')
+        apply_one(lang, 'Undergraduate_Studies.html' if lang == 'en' else f'{lang}/Undergraduate_Studies.html')
     print('course catalog: 6 hubs')
 
 if __name__ == '__main__':

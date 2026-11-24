@@ -115,7 +115,7 @@ def _short_course_desc(text, limit=90):
     return cut.rsplit(' ', 1)[0].rstrip(' ,;:–—-') + '.'
 
 def course_list(by, lang, s):
-    """Align Courses.html ItemList with Google Course-list examples: each ListItem.item is a Course
+    """Align Undergraduate_Studies.html ItemList with Google Course-list examples: each ListItem.item is a Course
     (name, description, url, provider, isAccessibleForFree). Descriptions come from that language's
     course page; nothing is invented. hasCourseInstance is not used (retired)."""
     item = by.get('ItemList')
@@ -224,7 +224,7 @@ def enrich(p):
                            'isAccessibleForFree': True, 'publisher': ORG_REF}
         for k in ('WebPage', 'CollectionPage', 'Multi'): by.pop(k, None)
         by['CollectionPage'] = t
-    if page == 'Courses.html':
+    if page == 'Undergraduate_Studies.html':
         course_list(by, lang, s)
     me = main.get('mainEntity') if isinstance(main, dict) else None
 

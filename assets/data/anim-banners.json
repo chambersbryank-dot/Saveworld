@@ -1430,7 +1430,7 @@
     "Andfjorden_MPA.html": "assets/Andfjorden_Andoy_2023.jpg",
     "Atoll_Rewilding.html": "assets/Tetiaroa_Atoll_ISS018.jpg",
     "General_Chemistry_I.html": "r2:images/Chem_Lab_KSC-20210707-PH-FMX01_0146.jpg",
-    "Courses.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
+    "Undergraduate_Studies.html": "r2:images/ArtemisII_Launch_KSC_Hancock.jpg",
     "Physics_I.html": "assets/Landsat9_Launch.jpg",
     "Calculus_I.html": "assets/EPIC_Earth.jpg",
     "Calculus_II.html": "assets/SWOT_Orbit_Illustration.jpg",
@@ -1965,7 +1965,7 @@
         "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
         "images/North_Atlantic_Bloom_MODIS.jpg"
       ],
-      "Courses.html": [
+      "Undergraduate_Studies.html": [
         "images/SLS_Green_Run_Hot_Fire_MAF20210116_GR0006.jpg",
         "images/earth-blue-marble-land-ocean-ice-cloud.jpg",
         "images/Chem_GCMS_KSC-20210707-PH-FMX01_0262.jpg"

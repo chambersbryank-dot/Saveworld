@@ -254,7 +254,7 @@ SCOPE = {
 }
 
 def course_patch(s, lang, page):
-    if 'data-course=' not in s and page != 'Courses.html':
+    if 'data-course=' not in s and page != 'Undergraduate_Studies.html':
         return s
     if '<p class="crs-crumb"' in s and 'crs-updated' not in s:
         s = re.sub(r'(<p class="crs-crumb">.*?</p>)',
@@ -262,7 +262,7 @@ def course_patch(s, lang, page):
                    s, count=1, flags=re.S)
     if page not in WET_PAGES and WET_H[lang] in s:
         s = s.replace(WET_H[lang], GEAR[lang], 1)
-    if page != 'Courses.html' and 'crs-scope' not in s and 'id="about"' in s:
+    if page != 'Undergraduate_Studies.html' and 'crs-scope' not in s and 'id="about"' in s:
         n = len(re.findall(r'<section class="crs-unit"', s))
         m = len(re.findall(r'class="crs-lab"', s)) or len(re.findall(r'id="lab[A-Z]"', s))
         if not m:
@@ -271,7 +271,7 @@ def course_patch(s, lang, page):
                 + '</p><p class="crs-check">' + html.escape(CHK[lang]) + '</p>')
         s = s.replace('id="about"><h2>', 'id="about"><h2>', 1)
         s = re.sub(r'(<section id="about"><h2>.*?</h2>)', r'\1' + note, s, count=1, flags=re.S)
-    if page == 'Courses.html' and 'crs-check' not in s:
+    if page == 'Undergraduate_Studies.html' and 'crs-check' not in s:
         s = s.replace('</h2>', '</h2><p class="crs-check">' + html.escape(CHK[lang]) + '</p>', 1)
     return s
 
@@ -324,7 +324,7 @@ for f in sorted(glob.glob('*.html') + glob.glob('[a-z][a-z]/*.html')):
         # domain card for Astroscale follows the hero photo (ADRAS-J, not the servicing-arm lab)
         s = s.replace('Satellite_Servicing_Arm_GSFC.jpg', 'Astroscale_ADRAS-J_H-IIA_Stage.jpg')
         s = homepage_webp(s, lang)
-    if 'data-course=' in s or page == 'Courses.html':
+    if 'data-course=' in s or page == 'Undergraduate_Studies.html':
         s = course_patch(s, lang, page)
         s = eq_patch(s)
     # i18n brand key is not on the page; nothing to do here

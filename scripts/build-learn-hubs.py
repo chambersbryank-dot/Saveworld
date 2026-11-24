@@ -9,7 +9,7 @@
 - Learn nav dropdown (every page): Learn, the six hubs, Courses, Cadets, AP/IB, Careers. Homeschool and Calculators removed
   (their pages stay reachable by URL; Homeschool.html is no longer linked from anywhere).
 - Course pages: breadcrumb Learn › topic hub › code, plus roadmap position and calculator link.
-Text: scripts/learn_hubs_text.py. Course names/codes come from each language's Courses.html. Idempotent."""
+Text: scripts/learn_hubs_text.py. Course names/codes come from each language's Undergraduate_Studies.html. Idempotent."""
 import re, os, sys, html, datetime
 sys.path.insert(0, 'scripts')
 import learn_hubs_text as X
@@ -27,7 +27,7 @@ def wr(f, s):
 esc = lambda s: html.escape(s, quote=True)
 IDS = [c[0] for _, cs in RM.YEARS for c in cs]
 def courses(l):
-    s = rd(d(l) + 'Courses.html')
+    s = rd(d(l) + 'Undergraduate_Studies.html')
     cs = re.findall(r'<h3><a href="(?:\.\./)?([\w_]+\.html)">(.*?)</a></h3><p>(.*?)</p><p class="crs-kicker">(.*?)</p>', s)
     assert len(cs) == len(IDS) == 30, (l, len(cs))
     years = re.findall(r'<section id="y\d"><h2>(.*?)</h2>', s)
@@ -69,7 +69,7 @@ CSS = ('<style>.lhv{font-size:1.12rem;max-width:46rem}.lht{display:grid;grid-tem
        '.lhn{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1rem}.lhn>div{padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}.lhn ul{margin:.3rem 0;padding-inline-start:1.1rem}'
        '.lhr button{min-height:44px;border-radius:999px;padding:.3rem 1rem;font:inherit;cursor:pointer}.lhyt{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}.lhyt a{display:inline-flex;min-height:44px;align-items:center;padding:.2rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-weight:700;text-decoration:none;color:inherit}</style>')
 def nav_block(l, NL, cur=None):
-    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[:1]] + [(J.PAGE, '🔥 ' + J.SHORT[l]), (R.PAGE, '🚀 ' + R.SHORT[l])] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[1:]] + [(p, NL[p]) for p in ('Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
+    items = [('Learn.html', '🎓 ' + u('learn', l))] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[:1]] + [(J.PAGE, '🔥 ' + J.SHORT[l]), (R.PAGE, '🚀 ' + R.SHORT[l])] + [(t[1], f'{t[2]} {t[3][l]}') for t in X.TOPICS[1:]] + [(p, NL[p]) for p in ('Undergraduate_Studies.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html') if p in NL]
     return ''.join(f'<li><a href="{p}"' + (' aria-current="page"' if p == cur else '') + f'>{t if "&" in t else esc(t)}</a></li>' for p, t in items)
 def set_nav(s, l, NL, cur):
     return re.sub(r'(<ul class="spn-sub" id="spn-le">).*?(</ul>)', lambda m: m.group(1) + nav_block(l, NL, cur) + m.group(2), s, count=1, flags=re.S)
@@ -312,7 +312,7 @@ HELP_SPEC = {
  'chem': ('course', 'General_Chemistry_I.html', 0, 'Earth_Observation.html'),
 }
 def catalog_pages():
-    s = rd('Courses.html')
+    s = rd('Undergraduate_Studies.html')
     return set(re.findall(r'<h3><a href="([\w_]+\.html)">', s))
 def study_count(l, page, catalog):
     s = rd(d(l) + page)
@@ -447,7 +447,7 @@ def main():
             if not f.endswith('.html'): continue
             p = d(l) + f; s = rd(p)
             if 'id="spn-le"' not in s: continue
-            cur = f if f in [t[1] for t in X.TOPICS] + [J.PAGE, R.PAGE, 'Learn.html', 'Courses.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
+            cur = f if f in [t[1] for t in X.TOPICS] + [J.PAGE, R.PAGE, 'Learn.html', 'Undergraduate_Studies.html', 'Cadets.html', 'AP_IB_Physics.html', 'Careers.html'] else None
             s2 = set_nav(s, l, NL, cur)
             s2 = re.sub(r'<li><a href="(?:\.\./)?Homeschool\.html"[^>]*>.*?</a></li>', '', s2) if f != 'Homeschool.html' else s2
             ch += wr(p, s2)

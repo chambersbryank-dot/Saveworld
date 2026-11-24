@@ -1084,12 +1084,12 @@
   "he": "חזרה וסדרת תרגול מסכמת",
   "it": "Ripasso ed esercitazione finale"
  },
- "STEM Courses": {
-  "fr": "Cours STEM",
-  "es": "Cursos STEM",
-  "ar": "مقررات STEM",
-  "it": "Corsi STEM",
-  "he": "קורסי STEM"
+ "Undergraduate Studies": {
+  "fr": "Études de premier cycle",
+  "es": "Estudios de pregrado",
+  "ar": "الدراسات الجامعية الأولى",
+  "it": "Studi di primo livello",
+  "he": "לימודי תואר ראשון"
  },
  "Safety": {
   "ar": "السلامة",

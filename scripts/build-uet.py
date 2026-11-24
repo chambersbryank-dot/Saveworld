@@ -306,7 +306,7 @@ def check(excluded):
         errors.append('Hawaiian monk seal qualified without an organization Donate button')
     if any(name.endswith('Ways_to_Help.html') or name.endswith('index.html') for name in qualified):
         errors.append('Ways to Help or a homepage qualified')
-    if any('/Courses.html' in ('/' + name) or name.endswith('Physics_I.html') for name in qualified):
+    if any('/Undergraduate_Studies.html' in ('/' + name) or name.endswith('Physics_I.html') for name in qualified):
         errors.append('a course page qualified')
     for rel in excluded:
         text = read(rel)
