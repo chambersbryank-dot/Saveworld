@@ -4,14 +4,16 @@
 .sp-shield{padding:.2rem .7rem .2rem .28rem;background:#f4fbff;color:#06344c;border:1px solid #7eb8d4;font-weight:700;font-size:.86rem;line-height:1.25;letter-spacing:.01em}
 .sp-shield-label{color:#06344c}
 .sp-shield-icon{width:28px;height:32px;flex:none;display:block;filter:drop-shadow(0 1px 1px rgba(4,40,64,.28))}
-.sp-shield-how{padding:.2rem .15rem;color:#075a78;font-size:.82rem;font-weight:650;text-decoration:underline;text-underline-offset:2px}
-.sp-shield-how:hover{color:#04344d}
+a.sp-shield-how{padding:.2rem .6rem;color:#e7f6ff;background:#06344e;font-size:.82rem;font-weight:700;text-decoration:underline;text-decoration-color:#e7f6ff;text-decoration-thickness:2px;text-underline-offset:3px}
+a.sp-shield-how:hover,a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
+html:not(.dark) a.sp-shield-how{color:#06344c;background:#f4fbff;text-decoration-color:#06344c;border:1px solid #7eb8d4}
+html:not(.dark) a.sp-shield-how:hover,html:not(.dark) a.sp-shield-how:focus-visible{color:#04283c;text-decoration-color:#04283c}
 .sp-shield:hover,.sp-shield:focus-visible{box-shadow:0 0 0 3px rgba(0,156,222,.35),0 8px 18px rgba(8,110,150,.28)}
-.sp-shield:focus-visible,.sp-shield-how:focus-visible{outline:3px solid #0077b6;outline-offset:3px}
+.sp-shield:focus-visible,a.sp-shield-how:focus-visible{outline:3px solid #8fd3ff;outline-offset:3px}
 html.dark .sp-shield{background:#071e2e;color:#e7f6ff;border-color:#3d8eb0}
 html.dark .sp-shield-label{color:#e7f6ff}
-html.dark .sp-shield-how{color:#9adfff}
-html.dark .sp-shield-how:hover{color:#e7f6ff}
+html.dark a.sp-shield-how,html.dark a.sp-shield-how:visited{color:#e7f6ff;background:#06344e;text-decoration-color:#e7f6ff}
+html.dark a.sp-shield-how:hover,html.dark a.sp-shield-how:focus-visible{color:#ffffff;text-decoration-color:#ffffff}
 html.dark .sp-shield:focus-visible,html.dark .sp-shield-how:focus-visible{outline-color:#8fd3ff}
 .sp-shield-sample{display:inline-flex;align-items:center;gap:.45rem;margin:.4rem 0;padding:.25rem .75rem .25rem .3rem;border-radius:999px;background:#f4fbff;border:1px solid #7eb8d4;color:#06344c;font-weight:700}
 html.dark .sp-shield-sample{background:#071e2e;border-color:#3d8eb0;color:#e7f6ff}
