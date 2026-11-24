@@ -124,6 +124,12 @@ def language_switch(lang, page, s):
         return tag
     return re.sub(r'<a\b[^>]*>', mark, block)
 
+def nav_href(lang, href):
+    # Courses.html lived in each language folder. Its replacement does too.
+    if href.split('#')[0] == 'Undergraduate_Studies.html':
+        return href
+    return ('' if lang == 'en' else '../') + href
+
 def sub_label(lang, key):
     if key in LBL[lang]: return LBL[lang][key]
     return SUB[lang][key]
@@ -144,10 +150,10 @@ def simplify(lang, s, page):
         lis = []
         for href, lab in links:
             cur = ' aria-current="page"' if href.split('#')[0] == page else ''
-            lis.append(f'<li><a href="{pre}{href}"{cur}>{E(sub_label(lang, lab))}</a></li>')
+            lis.append(f'<li><a href="{nav_href(lang, href)}"{cur}>{E(sub_label(lang, lab))}</a></li>')
         items.append(
             f'<li class="spn-dd{" is-current" if cur_top else ""}">'
-            f'<a class="spn-trig spn-trig-link" href="{pre}{head}" aria-expanded="false" aria-controls="spn-{key}">{E(t[top])}<span class="spn-chev" aria-hidden="true"></span></a>'
+            f'<a class="spn-trig spn-trig-link" href="{nav_href(lang, head)}" aria-expanded="false" aria-controls="spn-{key}">{E(t[top])}<span class="spn-chev" aria-hidden="true"></span></a>'
             f'<ul class="spn-sub" id="spn-{key}">{"".join(lis)}</ul></li>')
     donate_cur = ' aria-current="page"' if page == 'Ways_to_Help.html' else ''
     main = (f'<ul class="spn-main" aria-label="{E(t["main"])}">{"".join(items)}'
