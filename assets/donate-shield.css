@@ -95,3 +95,5 @@ html.dark .sp-shield:focus-visible{outline-color:#8fd3ff}
 @media (prefers-reduced-motion:reduce){
   .sp-shield,.sp-shield-icon,.sp-shield-label{transition:none;animation:none}
 }
+
+#donations .wh-card .donate-pair,#donations .wh-card .sp-shield{position:relative;z-index:2}
