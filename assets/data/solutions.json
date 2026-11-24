@@ -312,6 +312,10 @@
      "name": "Copernicus CO2M Carbon Dioxide Monitoring (ESA / EU)"
     },
     {
+     "href": "DLR_ZKI.html",
+     "name": "DLR ZKI"
+    },
+    {
      "href": "Copernicus_EMS.html",
      "name": "Copernicus Emergency Management Service: On-Demand Mapping"
     },
@@ -418,6 +422,10 @@
     {
      "href": "INSAT-3DS.html",
      "name": "INSAT-3DS Weather Satellite (ISRO)"
+    },
+    {
+     "href": "Sentinel_Asia.html",
+     "name": "Sentinel Asia"
     },
     {
      "href": "International_Charter.html",
@@ -548,6 +556,10 @@
     {
      "href": "Galapagos_Giant_Tortoises.html",
      "name": "Galápagos Giant Tortoise Rewilding"
+    },
+    {
+     "href": "JJ-FAST.html",
+     "name": "JJ-FAST"
     },
     {
      "href": "GEDI.html",
@@ -1542,13 +1554,13 @@
  ],
  "site": {
   "categories": 10,
-  "solutions": 302,
+  "solutions": 305,
   "horizon": 0,
   "hubs": 11,
   "byClassification": {
    "corporate": 19,
    "government": 33,
-   "agency": 130,
+   "agency": 133,
    "nonprofit": 84,
    "natural": 20
   },
@@ -1572,7 +1584,7 @@
     ]
    }
   ],
-  "taggedSolutions": 302
+  "taggedSolutions": 305
  },
  "categories": {
   "ocean": {
@@ -1642,14 +1654,14 @@
   },
   "forests": {
    "name": "Forests",
-   "solutions": 43,
+   "solutions": 44,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
     "nonprofit": 26,
     "natural": 5,
     "government": 7,
-    "agency": 3,
+    "agency": 4,
     "corporate": 1
    },
    "upcomingMissions": 0,
@@ -1721,11 +1733,11 @@
   },
   "earth-observation": {
    "name": "Earth Observation",
-   "solutions": 50,
+   "solutions": 52,
    "horizon": 0,
    "hubs": 1,
    "byClassification": {
-    "agency": 47,
+    "agency": 49,
     "nonprofit": 1,
     "corporate": 1
    },
@@ -6061,6 +6073,39 @@
    "url": "Solar_Dynamics_Observatory.html",
    "title": "Solar Dynamics Observatory",
    "category": "space-weather",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "Sentinel_Asia.html",
+   "title": "Sentinel Asia",
+   "category": "earth-observation",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "JJ-FAST.html",
+   "title": "JJ-FAST",
+   "category": "forests",
+   "type": "solution",
+   "classification": "agency",
+   "status": "active",
+   "stats": [],
+   "missions": [],
+   "added": "2026-11-23"
+  },
+  {
+   "url": "DLR_ZKI.html",
+   "title": "DLR ZKI",
+   "category": "earth-observation",
    "type": "solution",
    "classification": "agency",
    "status": "active",

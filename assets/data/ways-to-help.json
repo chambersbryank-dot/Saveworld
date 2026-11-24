@@ -25,6 +25,18 @@
    "https://global.jaxa.jp/about/employ/",
    "https://global.jaxa.jp/activity/pr/inquiries/"
   ],
+  "jica": [
+   "JICA",
+   null,
+   "https://www.jica.go.jp/english/",
+   "https://www.jica.go.jp/english/information/topics/2023/p20240201_01.html"
+  ],
+  "dlr-zki": [
+   "German Aerospace Center (DLR)",
+   null,
+   "https://www.dlr.de/en/zki/",
+   "https://www.dlr.de/en/zki/"
+  ],
   "isro": [
    "ISRO",
    null,
@@ -1375,6 +1387,9 @@
   "Phoenix_Islands_Protected_Area": "unesco",
   "Lake_Washington_Cleanup": "kingcounty",
   "Cuyahoga_River_Cleanup": "epa",
-  "SMOS": "esa"
+  "SMOS": "esa",
+  "Sentinel_Asia": "jaxa",
+  "JJ-FAST": "jica",
+  "DLR_ZKI": "dlr-zki"
  }
 }
