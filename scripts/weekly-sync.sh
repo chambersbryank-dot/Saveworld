@@ -76,6 +76,7 @@ python3 scripts/build-map-he.py        # Oct 17: assets/data/map.he.json + he/Wo
 python3 scripts/build-polar-mascots.py   # Oct 28 (founder): polar bear + penguin mascots on World_Map + Kids_Map (all langs, after map builds)
 python3 scripts/build-data-tools.py     # Oct 15: Use this data (CSV + Cite + Embed) on Amazing Facts, Myth vs Fact, World Map, homepage Scoreboard; per-item Cite (all langs)
 python3 scripts/build-standards.py      # Oct 15: NGSS/Common Core alignment (standards.json): teacher boxes, Teachers grade/subject browse, Lesson Builder table (all langs)
+python3 scripts/build-study.py         # Study this block beside For Teachers (pilot pages only; hub defaults in assets/data/study.json)
 python3 scripts/he-edu-parity.py       # Oct 27: HE Teachers STARTHERE/SIHELPER/LEARNLINK parity for Big Questions
 python3 scripts/build-sol-directory.py  # Oct 15: Solutions filters: status, region (map pins), grade (standards), name; URL state (all langs)
 python3 scripts/build-ux.py            # Oct 15: grouped nav, homepage domains/news, Solutions filters, auto counts, About video 720p-first
