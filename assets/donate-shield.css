@@ -4,6 +4,7 @@
   display:inline-flex;
   align-items:center;
   flex-wrap:wrap;
+  gap:8px;
   max-width:100%;
   vertical-align:middle;
 }
@@ -13,16 +14,14 @@
   display:inline-flex;
   align-items:center;
   vertical-align:middle;
-  margin-block:4px;
-  margin-inline-start:16px;
-  margin-inline-end:4px;
+  margin:0;
   max-width:100%;
 }
 .sp-shield{
   position:relative;
   display:inline-flex;
   align-items:center;
-  justify-content:center;
+  justify-content:start;
   box-sizing:border-box;
   width:44px;
   height:44px;
@@ -81,7 +80,7 @@ html.dark .sp-shield:focus-visible{outline-color:#8fd3ff}
   background:transparent;
   border:0;
 }
-.sp-shield-sample .sp-shield{width:48px;height:48px}
+.sp-shield-sample .sp-shield{width:48px;height:48px;justify-content:center}
 .sp-shield-sample .sp-shield-icon{width:36px;height:42px}
 .shield-checks{padding-inline-start:1.2rem}
 .shield-checks li{margin:.35rem 0}
@@ -89,7 +88,6 @@ html.dark .sp-shield:focus-visible{outline-color:#8fd3ff}
 .shield-table th,.shield-table td{border-bottom:1px solid rgba(127,127,127,.35);text-align:start;padding:.45rem .4rem;vertical-align:top}
 .shield-table a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:640px){
-  .sp-shield-wrap{margin-inline-start:16px}
   .shield-table{display:block;overflow-x:auto}
 }
 @media (prefers-reduced-motion:reduce){
