@@ -42,7 +42,7 @@ HUBS = {
     'Myth_vs_Fact.html': 'myth',
     'Solutions.html': 'solutions',
     'Big_Questions.html': 'big-questions',
-    'Courses.html': 'learning',
+    'Undergraduate_Studies.html': 'learning',
 }
 
 # Native templates for solution questions (not literal word-for-word of EN)

@@ -283,7 +283,7 @@ def localize_courses(lang, data):
     title, lead, guide = COURSE_COPY[lang]
     c['title'], c['lead'], c['guide'] = title, lead, guide
     c['guide_href'] = 'Teacher_Guide.html'
-    heads = re.findall(r'<section id="y\d"[^>]*>\s*<h2>(.*?)</h2>', read(folder(lang) + 'Courses.html'), re.S)
+    heads = re.findall(r'<section id="y\d"[^>]*>\s*<h2>(.*?)</h2>', read(folder(lang) + 'Undergraduate_Studies.html'), re.S)
     years = []
     for i, (head, rows) in enumerate(c['years']):
         use = plain(heads[i]) if i < len(heads) else head
@@ -648,7 +648,7 @@ def render(lang, data, D, PH, hooks):
 <div class="t-paths">
 <a class="t-path" href="#grade-kits"><span class="t-kicker">1</span><strong>{E(u["quick"])}</strong><span>{E(u["quick_d"])}</span></a>
 <a class="t-path" href="{lb}"><span class="t-kicker">2</span><strong>{E(u["lesson"])}</strong><span>{E(u["lesson_d"])}</span></a>
-<a class="t-path" href="Courses.html"><span class="t-kicker">3</span><strong>{E(u["course"])}</strong><span>{E(u["course_d"])}</span></a>
+<a class="t-path" href="Undergraduate_Studies.html"><span class="t-kicker">3</span><strong>{E(u["course"])}</strong><span>{E(u["course_d"])}</span></a>
 </div>
 <h3 class="t-subh">{E(u["also"])}</h3><ul class="t-row">'''
     for page in SURFACE:

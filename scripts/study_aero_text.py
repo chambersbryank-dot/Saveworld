@@ -1,0 +1,278 @@
+# -*- coding: utf-8 -*-
+"""Study: Aerospace Engineering hub strings for Undergraduate_Studies.html, six languages.
+fr/es/ar/it/he are an SI draft. No native speaker has reviewed them yet.
+Structure and course codes follow the Embry-Riddle Daytona Beach degree page and catalog.
+Saving Planets cards do not state credit hours."""
+
+IDS = ('aeronautics', 'astronautics', 'jet', 'rocket')
+
+def P(en, fr, es, ar, it, he):
+    return {'en': en, 'fr': fr, 'es': es, 'ar': ar, 'it': it, 'he': he}
+
+# Flat English-keyed sentences are not used. Each language is a full dict so the hub
+# never falls back to English for a missing line.
+T = {
+'en': {
+ 'title': 'Undergraduate Studies',
+ 'program': 'B.S. Aerospace Engineering (Self-Study)',
+ 'note': 'This is a free self-study path modeled on university programs, not an accredited degree.',
+ 'desc': 'Free self-study programs. The first is a B.S. in Aerospace Engineering, with a shared core and four tracks.',
+ 'hero': 'One bachelor’s degree, a shared core, and four tracks. The courses below change with the track you choose.',
+ 'source': 'This path follows the Embry-Riddle Aeronautical University Daytona Beach catalog: one bachelor’s degree, a shared core, and four tracks.',
+ 'prompt': 'Choose a track to add its year 3 and year 4 courses. Years 1 and 2 are the shared core for every track.',
+ 'prompt_on': 'Showing the shared core and the {name} track.',
+ 'noscript': 'Scripting is off, so every track is listed. Each card is tagged Core or the track name.',
+ 'core': 'Core', 'planned': 'Planned', 'group': 'Track', 'years': 'Years', 'model': 'Catalog model:',
+ 'tname': {'aeronautics': 'Aeronautics', 'astronautics': 'Astronautics', 'jet': 'Jet Propulsion', 'rocket': 'Rocket Propulsion'},
+ 'tdesc': {
+  'aeronautics': 'Focuses on aerodynamics, aircraft design, and the stability and control of aircraft.',
+  'astronautics': 'Focuses on orbits, spacecraft control, rocket propulsion, and structures.',
+  'jet': 'Focuses on air-breathing engines, including turbojets, turbofans, and ramjets.',
+  'rocket': 'Focuses on propulsion for launch vehicles and space exploration.',
+ },
+ 'cmp_h': 'How this path compares',
+ 'cmp': [
+  'This note compares our free path with the Bachelor of Science in Aerospace Engineering at Embry-Riddle Aeronautical University, Daytona Beach, using that university’s public degree page and catalog. Saving Planets is not part of Embry-Riddle, is not affiliated with it, and is not endorsed by it. This path gives no Embry-Riddle credit and no credit at any school.',
+  'The Daytona Beach catalog lists that degree as 129 credits: general education 42, core 47, and a concentration of 40. It says a student must earn a cumulative GPA of 2.5 or higher and complete required courses with a grade of C or better. The degree page says this campus offers four tracks in that one degree, and that the department is the largest of its kind in the country.',
+  'General education in that catalog includes COMM 122 English Composition, COMM 221 Technical Communication, and COMM 219 Speech. We have no matching course, so technical writing and speech are a gap. Our Propulsion course (AERO 410) is shared by every track. It covers jet and rocket topics that the catalog splits by track.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'Aeronautics in the catalog includes AERO 307 and AERO 308 (our Aerodynamics I), AERO 403 Jet Propulsion (covered inside our core Propulsion course), AERO 413 and AERO 432 (our core Flight Dynamics and Controls), AERO 314 with AERO 314L (planned lab), and the design pair AERO 420 and AERO 421 (planned; our capstone is one course). Aircraft Performance, Numerical Methods, and Sustainable Aviation sit on this track. AERO 313 Space Mechanics is on every Daytona Beach track, so Orbital Mechanics stays in the core.',
+  'astronautics': 'Astronautics in the catalog includes AERO 414 Space Propulsion (covered inside our core Propulsion course; a deeper page is planned), AERO 319 instead of AERO 307 and AERO 308 (planned card; Aerodynamics I is not on this track), AERO 323 or ENGP 312 (our Spacecraft Design), AERO 426 (planned), and the design pair AERO 427 and AERO 445 (our capstone is one course, not that pair). AERO 314 and AERO 314L are the planned lab. The catalog’s linear algebra for this track is MATH 392; our Linear Algebra course is in the shared core.',
+  'jet': 'Jet Propulsion in the catalog includes AERO 307 and AERO 308 (our Aerodynamics I), AERO 403 (covered inside our core Propulsion course; a deeper page is planned), AERO 413 and AERO 432 (our core Flight Dynamics and Controls), AERO 314 with AERO 314L (planned lab), and the design pair AERO 435 and AERO 440 (planned). Aircraft Performance, Numerical Methods, and Sustainable Aviation sit on this track. MATH 441 is the catalog’s mathematical methods course for this track and for Aeronautics; our Numerical Methods course follows that role.',
+  'rocket': 'Rocket Propulsion in the catalog includes AERO 307 and AERO 308 (our Aerodynamics I), AERO 414 Space Propulsion (covered inside our core Propulsion course; a deeper page is planned), AERO 323 (our Spacecraft Design), AERO 426 (planned), AERO 314 with AERO 314L (planned lab), and the design pair AERO 441 and AERO 451 (planned). The catalog’s linear algebra for this track is MATH 392; our Linear Algebra course is in the shared core.',
+ },
+ 'card': {
+  'expaero': ('Experimental aerodynamics lab', 'A planned lab on measuring lift and drag. The Daytona Beach catalog includes this lab on every track. There is no page yet, so this card is not a link.'),
+  'aeroeng': ('Aerodynamics for engineers', 'A planned aerodynamics course for the astronautics track. The catalog uses this subject instead of the two aerodynamics courses the other tracks take.'),
+  'jetfocus': ('Jet propulsion focus', 'A planned deeper course on air-breathing engines. The catalog places jet propulsion on the Aeronautics and Jet Propulsion tracks. Our Propulsion course, in the core, already covers jet and rocket topics.'),
+  'spacefocus': ('Space propulsion focus', 'A planned deeper course on rocket and in-space propulsion. The catalog places space propulsion on the Astronautics and Rocket Propulsion tracks. Our Propulsion course, in the core, already covers jet and rocket topics.'),
+  'airdesign': ('Aircraft design sequence', 'A planned aircraft design sequence. The catalog splits it into preliminary design and detail design. Our capstone is one self-study course for every track.'),
+  'jetdesign': ('Jet engine design sequence', 'A planned jet-engine design sequence. The catalog lists preliminary design and detail design on the Jet Propulsion track.'),
+  'rockdesign': ('Rocket engine design sequence', 'A planned rocket-engine design sequence. The catalog lists preliminary design and detail design on the Rocket Propulsion track.'),
+  'attitude': ('Spacecraft attitude dynamics', 'A planned course on how a spacecraft points and holds its aim. The catalog lists this subject on the Astronautics and Rocket Propulsion tracks. Flight Dynamics and Controls, in the core, already introduces stability and control.'),
+ },
+},
+'fr': {
+ 'title': 'Études de premier cycle',
+ 'program': 'Génie aérospatial, B. Sc. (autoformation)',
+ 'note': 'Ceci est un parcours gratuit d’autoformation inspiré de programmes universitaires, et non un diplôme accrédité.',
+ 'desc': 'Programmes gratuits en autoformation. Le premier est un B. Sc. en génie aérospatial, avec un tronc commun et quatre filières.',
+ 'hero': 'Un diplôme de baccalauréat, un tronc commun et quatre filières. Les cours ci-dessous changent selon la filière choisie.',
+ 'source': 'Ce parcours suit le catalogue d’Embry-Riddle Aeronautical University à Daytona Beach : un seul diplôme, un tronc commun et quatre filières.',
+ 'prompt': 'Choisissez une filière pour ajouter ses cours de 3e et 4e année. Les années 1 et 2 sont le tronc commun de chaque filière.',
+ 'prompt_on': 'Tronc commun et filière {name}.',
+ 'noscript': 'Le script est désactivé : toutes les filières sont affichées. Chaque carte indique Tronc commun ou le nom de la filière.',
+ 'core': 'Tronc commun', 'planned': 'Prévu', 'group': 'Filière', 'years': 'Années', 'model': 'Modèle du catalogue :',
+ 'tname': {'aeronautics': 'Aéronautique', 'astronautics': 'Astronautique', 'jet': 'Propulsion par réaction', 'rocket': 'Propulsion des fusées'},
+ 'tdesc': {
+  'aeronautics': 'Porte sur l’aérodynamique, la conception des avions, et la stabilité et le contrôle des aéronefs.',
+  'astronautics': 'Porte sur les orbites, le contrôle des engins spatiaux, la propulsion des fusées et les structures.',
+  'jet': 'Porte sur les moteurs qui aspirent l’air, dont les turboréacteurs, les turboréacteurs à double flux et les statoréacteurs.',
+  'rocket': 'Porte sur la propulsion des lanceurs et de l’exploration spatiale.',
+ },
+ 'cmp_h': 'Comment ce parcours se compare',
+ 'cmp': [
+  'Cette note compare notre parcours gratuit au Bachelor of Science in Aerospace Engineering d’Embry-Riddle Aeronautical University, à Daytona Beach, d’après la page du diplôme et le catalogue publics. Saving Planets ne fait pas partie d’Embry-Riddle, n’y est pas affilié et n’est pas approuvé par elle. Ce parcours ne donne aucun crédit Embry-Riddle ni aucun crédit dans une école.',
+  'Le catalogue de Daytona Beach indique ce diplôme à 129 crédits : formation générale 42, tronc commun 47 et une concentration de 40. Il précise qu’un étudiant doit obtenir une moyenne cumulative d’au moins 2,5 et réussir les cours requis avec une note de C ou mieux. La page du diplôme dit que ce campus offre quatre filières dans ce seul diplôme, et que le département est le plus grand du pays dans son domaine.',
+  'La formation générale de ce catalogue comprend COMM 122 English Composition, COMM 221 Technical Communication et COMM 219 Speech. Nous n’avons pas de cours correspondant : la rédaction technique et l’expression orale sont donc un manque. Notre cours de propulsion (AERO 410) est commun à chaque filière. Il couvre des sujets de jets et de fusées que le catalogue sépare selon la filière.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'L’aéronautique du catalogue comprend AERO 307 et AERO 308 (notre aérodynamique I), AERO 403 Jet Propulsion (couvert dans notre cours de propulsion du tronc commun), AERO 413 et AERO 432 (notre dynamique du vol et commandes, tronc commun), AERO 314 avec AERO 314L (laboratoire prévu) et la paire AERO 420 et AERO 421 (prévue ; notre projet final est un seul cours). Performances des aéronefs, méthodes numériques et aviation durable sont sur cette filière. AERO 313 est dans chaque filière de Daytona Beach, donc la mécanique orbitale reste dans le tronc commun.',
+  'astronautics': 'L’astronautique du catalogue comprend AERO 414 Space Propulsion (couvert dans notre cours de propulsion du tronc commun ; une page plus approfondie est prévue), AERO 319 à la place d’AERO 307 et AERO 308 (carte prévue ; l’aérodynamique I n’est pas sur cette filière), AERO 323 ou ENGP 312 (notre conception d’engin spatial), AERO 426 (prévu) et la paire AERO 427 et AERO 445 (notre projet final est un seul cours, pas cette paire). AERO 314 et AERO 314L sont le laboratoire prévu. L’algèbre linéaire du catalogue pour cette filière est MATH 392 ; notre cours d’algèbre linéaire est dans le tronc commun.',
+  'jet': 'La propulsion par réaction du catalogue comprend AERO 307 et AERO 308 (notre aérodynamique I), AERO 403 (couvert dans notre cours de propulsion du tronc commun ; une page plus approfondie est prévue), AERO 413 et AERO 432 (tronc commun), AERO 314 avec AERO 314L (laboratoire prévu) et la paire AERO 435 et AERO 440 (prévue). Performances des aéronefs, méthodes numériques et aviation durable sont sur cette filière. MATH 441 est le cours de méthodes mathématiques du catalogue pour cette filière et pour l’aéronautique ; nos méthodes numériques tiennent ce rôle.',
+  'rocket': 'La propulsion des fusées du catalogue comprend AERO 307 et AERO 308 (notre aérodynamique I), AERO 414 Space Propulsion (couvert dans notre cours de propulsion du tronc commun ; une page plus approfondie est prévue), AERO 323 (notre conception d’engin spatial), AERO 426 (prévu), AERO 314 avec AERO 314L (laboratoire prévu) et la paire AERO 441 et AERO 451 (prévue). L’algèbre linéaire du catalogue pour cette filière est MATH 392 ; notre cours d’algèbre linéaire est dans le tronc commun.',
+ },
+ 'card': {
+  'expaero': ('Laboratoire d’aérodynamique expérimentale', 'Un laboratoire prévu pour mesurer la portance et la traînée. Le catalogue de Daytona Beach l’inclut dans chaque filière. Il n’y a pas encore de page, donc cette carte n’est pas un lien.'),
+  'aeroeng': ('Aérodynamique pour ingénieurs', 'Un cours d’aérodynamique prévu pour la filière astronautique. Le catalogue utilise ce sujet à la place des deux cours d’aérodynamique des autres filières.'),
+  'jetfocus': ('Approfondissement : propulsion par réaction', 'Un cours prévu, plus approfondi, sur les moteurs qui aspirent l’air. Le catalogue place la propulsion par réaction dans les filières aéronautique et propulsion par réaction. Notre cours de propulsion, dans le tronc commun, couvre déjà les jets et les fusées.'),
+  'spacefocus': ('Approfondissement : propulsion spatiale', 'Un cours prévu, plus approfondi, sur la propulsion des fusées et dans l’espace. Le catalogue place la propulsion spatiale dans les filières astronautique et propulsion des fusées. Notre cours de propulsion, dans le tronc commun, couvre déjà les jets et les fusées.'),
+  'airdesign': ('Séquence de conception d’avion', 'Une séquence prévue de conception d’avion. Le catalogue la sépare en conception préliminaire et conception détaillée. Notre projet final est un seul cours en autonomie pour chaque filière.'),
+  'jetdesign': ('Séquence de conception de moteur à réaction', 'Une séquence prévue de conception de moteur à réaction. Le catalogue indique une conception préliminaire et une conception détaillée dans la filière propulsion par réaction.'),
+  'rockdesign': ('Séquence de conception de moteur-fusée', 'Une séquence prévue de conception de moteur-fusée. Le catalogue indique une conception préliminaire et une conception détaillée dans la filière propulsion des fusées.'),
+  'attitude': ('Dynamique d’attitude des engins spatiaux', 'Un cours prévu sur la façon dont un engin spatial s’oriente et tient son pointage. Le catalogue place ce sujet dans les filières astronautique et propulsion des fusées. Dynamique du vol et commandes, dans le tronc commun, introduit déjà la stabilité et le contrôle.'),
+ },
+},
+'es': {
+ 'title': 'Estudios de pregrado',
+ 'program': 'Ingeniería aeroespacial, B.S. (autoestudio)',
+ 'note': 'Esta es una ruta gratuita de autoestudio inspirada en programas universitarios, no un título acreditado.',
+ 'desc': 'Programas gratuitos de autoestudio. El primero es un B.S. en ingeniería aeroespacial, con un núcleo común y cuatro itinerarios.',
+ 'hero': 'Un grado, un núcleo común y cuatro itinerarios. Los cursos de abajo cambian según el itinerario elegido.',
+ 'source': 'Este itinerario sigue el catálogo de Embry-Riddle Aeronautical University en Daytona Beach: un solo grado, un núcleo común y cuatro itinerarios.',
+ 'prompt': 'Elige un itinerario para añadir sus cursos de 3.º y 4.º. Los años 1 y 2 son el núcleo común de todos los itinerarios.',
+ 'prompt_on': 'Núcleo común e itinerario de {name}.',
+ 'noscript': 'El script está desactivado, así que se listan todos los itinerarios. Cada ficha indica Núcleo o el nombre del itinerario.',
+ 'core': 'Núcleo', 'planned': 'Planificado', 'group': 'Itinerario', 'years': 'Años', 'model': 'Modelo del catálogo:',
+ 'tname': {'aeronautics': 'Aeronáutica', 'astronautics': 'Astronáutica', 'jet': 'Propulsión a reacción', 'rocket': 'Propulsión de cohetes'},
+ 'tdesc': {
+  'aeronautics': 'Se centra en la aerodinámica, el diseño de aviones y la estabilidad y el control de las aeronaves.',
+  'astronautics': 'Se centra en las órbitas, el control de naves, la propulsión de cohetes y las estructuras.',
+  'jet': 'Se centra en los motores que toman aire, incluidos los turborreactores, los turbofán y los estatorreactores.',
+  'rocket': 'Se centra en la propulsión de lanzadores y de la exploración espacial.',
+ },
+ 'cmp_h': 'Cómo se compara este itinerario',
+ 'cmp': [
+  'Esta nota compara nuestro itinerario gratuito con el Bachelor of Science in Aerospace Engineering de Embry-Riddle Aeronautical University, en Daytona Beach, según la página del grado y el catálogo públicos. Saving Planets no forma parte de Embry-Riddle, no está afiliado a ella y no cuenta con su aval. Este itinerario no da crédito de Embry-Riddle ni crédito en ninguna escuela.',
+  'El catálogo de Daytona Beach indica ese grado con 129 créditos: educación general 42, núcleo 47 y una concentración de 40. Dice que un estudiante debe obtener un promedio acumulado de 2.5 o más y aprobar los cursos requeridos con una nota de C o mejor. La página del grado dice que este campus ofrece cuatro itinerarios en ese único grado, y que el departamento es el más grande de su tipo en el país.',
+  'La educación general de ese catálogo incluye COMM 122 English Composition, COMM 221 Technical Communication y COMM 219 Speech. No tenemos un curso equivalente, así que la redacción técnica y la expresión oral son una laguna. Nuestro curso de propulsión (AERO 410) es común a todos los itinerarios. Trata temas de motores a reacción y cohetes que el catálogo separa según el itinerario.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'Aeronáutica en el catálogo incluye AERO 307 y AERO 308 (nuestra Aerodinámica I), AERO 403 Jet Propulsion (cubierto dentro de nuestro curso de propulsión del núcleo), AERO 413 y AERO 432 (nuestra Dinámica y control de vuelo, del núcleo), AERO 314 con AERO 314L (laboratorio planificado) y el par AERO 420 y AERO 421 (planificado; nuestro proyecto final es un solo curso). Actuaciones del avión, métodos numéricos y aviación sostenible están en este itinerario. AERO 313 está en todos los itinerarios de Daytona Beach, así que la mecánica orbital sigue en el núcleo.',
+  'astronautics': 'Astronáutica en el catálogo incluye AERO 414 Space Propulsion (cubierto dentro de nuestro curso de propulsión del núcleo; hay una página más profunda planificada), AERO 319 en lugar de AERO 307 y AERO 308 (ficha planificada; Aerodinámica I no está en este itinerario), AERO 323 o ENGP 312 (nuestro Diseño de naves), AERO 426 (planificado) y el par AERO 427 y AERO 445 (nuestro proyecto final es un solo curso, no ese par). AERO 314 y AERO 314L son el laboratorio planificado. El álgebra lineal del catálogo para este itinerario es MATH 392; nuestro curso de álgebra lineal está en el núcleo.',
+  'jet': 'Propulsión a reacción en el catálogo incluye AERO 307 y AERO 308 (nuestra Aerodinámica I), AERO 403 (cubierto dentro de nuestro curso de propulsión del núcleo; hay una página más profunda planificada), AERO 413 y AERO 432 (núcleo), AERO 314 con AERO 314L (laboratorio planificado) y el par AERO 435 y AERO 440 (planificado). Actuaciones del avión, métodos numéricos y aviación sostenible están en este itinerario. MATH 441 es el curso de métodos matemáticos del catálogo para este itinerario y para Aeronáutica; nuestros Métodos numéricos siguen ese papel.',
+  'rocket': 'Propulsión de cohetes en el catálogo incluye AERO 307 y AERO 308 (nuestra Aerodinámica I), AERO 414 Space Propulsion (cubierto dentro de nuestro curso de propulsión del núcleo; hay una página más profunda planificada), AERO 323 (nuestro Diseño de naves), AERO 426 (planificado), AERO 314 con AERO 314L (laboratorio planificado) y el par AERO 441 y AERO 451 (planificado). El álgebra lineal del catálogo para este itinerario es MATH 392; nuestro curso de álgebra lineal está en el núcleo.',
+ },
+ 'card': {
+  'expaero': ('Laboratorio de aerodinámica experimental', 'Un laboratorio planificado para medir sustentación y resistencia. El catálogo de Daytona Beach lo incluye en todos los itinerarios. Aún no hay página, así que esta ficha no es un enlace.'),
+  'aeroeng': ('Aerodinámica para ingenieros', 'Un curso de aerodinámica planificado para el itinerario de astronáutica. El catálogo usa esta materia en lugar de los dos cursos de aerodinámica de los otros itinerarios.'),
+  'jetfocus': ('Profundización: propulsión a reacción', 'Un curso planificado, más profundo, sobre motores que toman aire. El catálogo sitúa la propulsión a reacción en Aeronáutica y Propulsión a reacción. Nuestro curso de propulsión, en el núcleo, ya trata reactores y cohetes.'),
+  'spacefocus': ('Profundización: propulsión espacial', 'Un curso planificado, más profundo, sobre propulsión de cohetes y en el espacio. El catálogo sitúa la propulsión espacial en Astronáutica y Propulsión de cohetes. Nuestro curso de propulsión, en el núcleo, ya trata reactores y cohetes.'),
+  'airdesign': ('Secuencia de diseño de aviones', 'Una secuencia planificada de diseño de aviones. El catálogo la divide en diseño preliminar y diseño de detalle. Nuestro proyecto final es un solo curso de autoestudio para todos los itinerarios.'),
+  'jetdesign': ('Secuencia de diseño de motor a reacción', 'Una secuencia planificada de diseño de motor a reacción. El catálogo lista diseño preliminar y diseño de detalle en el itinerario de propulsión a reacción.'),
+  'rockdesign': ('Secuencia de diseño de motor cohete', 'Una secuencia planificada de diseño de motor cohete. El catálogo lista diseño preliminar y diseño de detalle en el itinerario de propulsión de cohetes.'),
+  'attitude': ('Dinámica de actitud de naves', 'Un curso planificado sobre cómo una nave apunta y mantiene su orientación. El catálogo sitúa esta materia en Astronáutica y Propulsión de cohetes. Dinámica y control de vuelo, en el núcleo, ya introduce la estabilidad y el control.'),
+ },
+},
+'ar': {
+ 'title': 'الدراسات الجامعية الأولى',
+ 'program': 'بكالوريوس هندسة الطيران والفضاء (تعلّم ذاتي)',
+ 'note': 'هذا مسار مجاني للتعلّم الذاتي مبني على برامج جامعية، وليس درجة معتمدة.',
+ 'desc': 'برامج مجانية للتعلّم الذاتي. الأول بكالوريوس في هندسة الطيران والفضاء، مع متطلبات مشتركة وأربعة مسارات.',
+ 'hero': 'درجة بكالوريوس واحدة، ومتطلبات مشتركة، وأربعة مسارات. المقررات أدناه تتغير حسب المسار الذي تختاره.',
+ 'source': 'يتبع هذا المسار فهرس جامعة إمبري-ريدل للطيران في دايتونا بيتش: درجة واحدة، ومتطلبات مشتركة، وأربعة مسارات.',
+ 'prompt': 'اختر مسارًا لإضافة مقررات السنة 3 والسنة 4. السنتان 1 و2 هما المتطلبات المشتركة لكل مسار.',
+ 'prompt_on': 'المتطلبات المشتركة ومسار {name}.',
+ 'noscript': 'البرمجة النصية متوقفة، لذا تظهر كل المسارات. كل بطاقة موسومة بالمتطلبات المشتركة أو باسم المسار.',
+ 'core': 'متطلبات مشتركة', 'planned': 'مخطط', 'group': 'المسار', 'years': 'السنوات', 'model': 'نموذج الفهرس:',
+ 'tname': {'aeronautics': 'الطيران', 'astronautics': 'الملاحة الفضائية', 'jet': 'الدفع النفاث', 'rocket': 'دفع الصواريخ'},
+ 'tdesc': {
+  'aeronautics': 'يركز على الديناميكا الهوائية وتصميم الطائرات واستقرار الطائرة والتحكم بها.',
+  'astronautics': 'يركز على المدارات والتحكم في المركبات الفضائية ودفع الصواريخ والإنشاءات.',
+  'jet': 'يركز على المحركات التي تسحب الهواء، ومنها التوربيني النفاث والتوربيني المروحي والنفّاث التصادمي.',
+  'rocket': 'يركز على دفع مركبات الإطلاق واستكشاف الفضاء.',
+ },
+ 'cmp_h': 'كيف يُقارَن هذا المسار',
+ 'cmp': [
+  'تقارن هذه الملاحظة مسارنا المجاني ببكالوريوس هندسة الطيران والفضاء في جامعة إمبري-ريدل للطيران، حرم دايتونا بيتش، بالاعتماد على صفحة الدرجة والفهرس العامين. Saving Planets ليست جزءًا من إمبري-ريدل، وغير تابعة لها، وغير مزكّاة منها. لا يمنح هذا المسار أي ساعات من إمبري-ريدل ولا أي ساعات في أي مدرسة.',
+  'يذكر فهرس دايتونا بيتش أن الدرجة 129 ساعة: التعليم العام 42، والمتطلبات الأساسية 47، والتخصص 40. ويقول إن على الطالب تحقيق معدل تراكمي 2.5 أو أعلى وإكمال المقررات المطلوبة بدرجة C أو أفضل. وتقول صفحة الدرجة إن هذا الحرم يقدّم أربعة مسارات في هذه الدرجة الواحدة، وإن القسم هو الأكبر من نوعه في البلاد.',
+  'يشمل التعليم العام في ذلك الفهرس COMM 122 وCOMM 221 Technical Communication وCOMM 219 Speech. وليس لدينا مقرر يقابلها، لذا تبقى الكتابة التقنية والخطابة فجوة. ومقرر الدفع لدينا (AERO 410) مشترك بين كل المسارات. وهو يغطي موضوعات المحركات النفاثة والصواريخ التي يفصلها الفهرس حسب المسار.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'يشمل مسار الطيران في الفهرس AERO 307 وAERO 308 (مقرر الديناميكا الهوائية الأول لدينا) وAERO 403 (داخل مقرر الدفع المشترك) وAERO 413 وAERO 432 (ديناميكا الطيران والتحكم، ضمن المشترك) وAERO 314 مع AERO 314L (مختبر مخطط) وزوج التصميم AERO 420 وAERO 421 (مخطط؛ مشروع التخرج لدينا مقرر واحد). أداء الطائرة والطرق العددية والطيران المستدام على هذا المسار. AERO 313 موجود في كل مسارات دايتونا بيتش، لذا تبقى ميكانيكا المدارات في المشترك.',
+  'astronautics': 'يشمل مسار الملاحة الفضائية في الفهرس AERO 414 (داخل مقرر الدفع المشترك، وصفحة أعمق مخططة) وAERO 319 بدل AERO 307 وAERO 308 (بطاقة مخططة؛ الديناميكا الهوائية الأولى ليست على هذا المسار) وAERO 323 أو ENGP 312 (تصميم المركبات لدينا) وAERO 426 (مخطط) وزوج AERO 427 وAERO 445 (مشروع التخرج لدينا مقرر واحد لا هذا الزوج). AERO 314 وAERO 314L هما المختبر المخطط. الجبر الخطي في الفهرس لهذا المسار هو MATH 392، ومقرر الجبر الخطي لدينا في المشترك.',
+  'jet': 'يشمل مسار الدفع النفاث في الفهرس AERO 307 وAERO 308 (الديناميكا الهوائية الأولى لدينا) وAERO 403 (داخل مقرر الدفع المشترك، وصفحة أعمق مخططة) وAERO 413 وAERO 432 (مشترك) وAERO 314 مع AERO 314L (مختبر مخطط) وزوج AERO 435 وAERO 440 (مخطط). أداء الطائرة والطرق العددية والطيران المستدام على هذا المسار. MATH 441 هو مقرر الطرق الرياضية في الفهرس لهذا المسار ولمسار الطيران، ومقرر الطرق العددية لدينا يؤدي هذا الدور.',
+  'rocket': 'يشمل مسار دفع الصواريخ في الفهرس AERO 307 وAERO 308 (الديناميكا الهوائية الأولى لدينا) وAERO 414 (داخل مقرر الدفع المشترك، وصفحة أعمق مخططة) وAERO 323 (تصميم المركبات لدينا) وAERO 426 (مخطط) وAERO 314 مع AERO 314L (مختبر مخطط) وزوج AERO 441 وAERO 451 (مخطط). الجبر الخطي في الفهرس لهذا المسار هو MATH 392، ومقرر الجبر الخطي لدينا في المشترك.',
+ },
+ 'card': {
+  'expaero': ('مختبر الديناميكا الهوائية التجريبية', 'مختبر مخطط لقياس الرفع والسحب. يدرجه فهرس دايتونا بيتش في كل مسار. لا توجد صفحة بعد، فهذه البطاقة ليست رابطًا.'),
+  'aeroeng': ('ديناميكا هوائية للمهندسين', 'مقرر ديناميكا هوائية مخطط لمسار الملاحة الفضائية. يستخدم الفهرس هذا الموضوع بدل مقرري الديناميكا الهوائية في المسارات الأخرى.'),
+  'jetfocus': ('تعمّق: الدفع النفاث', 'مقرر مخطط أعمق عن المحركات التي تسحب الهواء. يضع الفهرس الدفع النفاث في مساري الطيران والدفع النفاث. مقرر الدفع لدينا، ضمن المشترك، يغطي بالفعل النفاث والصواريخ.'),
+  'spacefocus': ('تعمّق: الدفع الفضائي', 'مقرر مخطط أعمق عن دفع الصواريخ والدفع في الفضاء. يضع الفهرس الدفع الفضائي في مساري الملاحة الفضائية ودفع الصواريخ. مقرر الدفع لدينا، ضمن المشترك، يغطي بالفعل النفاث والصواريخ.'),
+  'airdesign': ('تسلسل تصميم الطائرات', 'تسلسل مخطط لتصميم الطائرات. يفصله الفهرس إلى تصميم أولي وتصميم تفصيلي. مشروع التخرج لدينا مقرر واحد للتعلم الذاتي في كل مسار.'),
+  'jetdesign': ('تسلسل تصميم المحرك النفاث', 'تسلسل مخطط لتصميم محرك نفاث. يذكر الفهرس تصميمًا أوليًا وتصميمًا تفصيليًا في مسار الدفع النفاث.'),
+  'rockdesign': ('تسلسل تصميم محرك الصاروخ', 'تسلسل مخطط لتصميم محرك صاروخ. يذكر الفهرس تصميمًا أوليًا وتصميمًا تفصيليًا في مسار دفع الصواريخ.'),
+  'attitude': ('ديناميكا اتجاه المركبة الفضائية', 'مقرر مخطط عن كيفية توجيه المركبة الفضائية وثبات اتجاهها. يضع الفهرس هذا الموضوع في مساري الملاحة الفضائية ودفع الصواريخ. ديناميكا الطيران والتحكم، ضمن المشترك، تقدّم بالفعل الاستقرار والتحكم.'),
+ },
+},
+'it': {
+ 'title': 'Studi di primo livello',
+ 'program': 'Ingegneria aerospaziale, B.S. (autoapprendimento)',
+ 'note': 'Questo è un percorso gratuito di autoapprendimento modellato su programmi universitari, non un titolo accreditato.',
+ 'desc': 'Programmi gratuiti di autoapprendimento. Il primo è un B.S. in ingegneria aerospaziale, con un nucleo comune e quattro indirizzi.',
+ 'hero': 'Un titolo di laurea, un nucleo comune e quattro indirizzi. I corsi sotto cambiano con l’indirizzo scelto.',
+ 'source': 'Questo percorso segue il catalogo della Embry-Riddle Aeronautical University a Daytona Beach: un solo titolo, un nucleo comune e quattro indirizzi.',
+ 'prompt': 'Scegli un indirizzo per aggiungere i corsi del 3º e del 4º anno. Gli anni 1 e 2 sono il nucleo comune di ogni indirizzo.',
+ 'prompt_on': 'Nucleo comune e indirizzo {name}.',
+ 'noscript': 'Lo script è disattivato, quindi compaiono tutti gli indirizzi. Ogni scheda indica Nucleo o il nome dell’indirizzo.',
+ 'core': 'Nucleo', 'planned': 'Previsto', 'group': 'Indirizzo', 'years': 'Anni', 'model': 'Modello del catalogo:',
+ 'tname': {'aeronautics': 'Aeronautica', 'astronautics': 'Astronautica', 'jet': 'Propulsione a getto', 'rocket': 'Propulsione a razzo'},
+ 'tdesc': {
+  'aeronautics': 'Riguarda l’aerodinamica, il progetto degli aerei e la stabilità e il controllo del velivolo.',
+  'astronautics': 'Riguarda le orbite, il controllo dei veicoli spaziali, la propulsione a razzo e le strutture.',
+  'jet': 'Riguarda i motori che aspirano aria, tra cui turbogetto, turboventola e statoreattore.',
+  'rocket': 'Riguarda la propulsione dei lanciatori e dell’esplorazione spaziale.',
+ },
+ 'cmp_h': 'Come si confronta questo percorso',
+ 'cmp': [
+  'Questa nota confronta il nostro percorso gratuito con il Bachelor of Science in Aerospace Engineering della Embry-Riddle Aeronautical University, a Daytona Beach, usando la pagina del titolo e il catalogo pubblici. Saving Planets non fa parte di Embry-Riddle, non è affiliata e non è approvata da essa. Questo percorso non dà crediti Embry-Riddle né crediti in alcuna scuola.',
+  'Il catalogo di Daytona Beach indica quel titolo a 129 crediti: formazione generale 42, nucleo 47 e un indirizzo di 40. Dice che uno studente deve avere una media cumulativa di almeno 2,5 e completare i corsi richiesti con un voto di C o superiore. La pagina del titolo dice che questo campus offre quattro indirizzi in quell’unico titolo, e che il dipartimento è il più grande del paese nel suo campo.',
+  'La formazione generale di quel catalogo include COMM 122 English Composition, COMM 221 Technical Communication e COMM 219 Speech. Non abbiamo un corso corrispondente: scrittura tecnica e discorso restano un vuoto. Il nostro corso di propulsione (AERO 410) è condiviso da ogni indirizzo. Tratta argomenti di getti e razzi che il catalogo divide per indirizzo.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'L’aeronautica nel catalogo include AERO 307 e AERO 308 (la nostra Aerodinamica I), AERO 403 Jet Propulsion (coperto nel nostro corso di propulsione del nucleo), AERO 413 e AERO 432 (Dinamica e controllo del volo, nel nucleo), AERO 314 con AERO 314L (laboratorio previsto) e la coppia AERO 420 e AERO 421 (prevista; il nostro progetto finale è un solo corso). Prestazioni del velivolo, metodi numerici e aviazione sostenibile stanno su questo indirizzo. AERO 313 è in ogni indirizzo di Daytona Beach, quindi la meccanica orbitale resta nel nucleo.',
+  'astronautics': 'L’astronautica nel catalogo include AERO 414 Space Propulsion (coperto nel nostro corso di propulsione del nucleo; è prevista una pagina più approfondita), AERO 319 al posto di AERO 307 e AERO 308 (scheda prevista; Aerodinamica I non è su questo indirizzo), AERO 323 o ENGP 312 (il nostro Progetto di veicolo spaziale), AERO 426 (previsto) e la coppia AERO 427 e AERO 445 (il nostro progetto finale è un solo corso, non quella coppia). AERO 314 e AERO 314L sono il laboratorio previsto. L’algebra lineare del catalogo per questo indirizzo è MATH 392; il nostro corso di algebra lineare è nel nucleo.',
+  'jet': 'La propulsione a getto nel catalogo include AERO 307 e AERO 308 (la nostra Aerodinamica I), AERO 403 (coperto nel nostro corso di propulsione del nucleo; è prevista una pagina più approfondita), AERO 413 e AERO 432 (nucleo), AERO 314 con AERO 314L (laboratorio previsto) e la coppia AERO 435 e AERO 440 (prevista). Prestazioni del velivolo, metodi numerici e aviazione sostenibile stanno su questo indirizzo. MATH 441 è il corso di metodi matematici del catalogo per questo indirizzo e per Aeronautica; i nostri Metodi numerici seguono quel ruolo.',
+  'rocket': 'La propulsione a razzo nel catalogo include AERO 307 e AERO 308 (la nostra Aerodinamica I), AERO 414 Space Propulsion (coperto nel nostro corso di propulsione del nucleo; è prevista una pagina più approfondita), AERO 323 (il nostro Progetto di veicolo spaziale), AERO 426 (previsto), AERO 314 con AERO 314L (laboratorio previsto) e la coppia AERO 441 e AERO 451 (prevista). L’algebra lineare del catalogo per questo indirizzo è MATH 392; il nostro corso di algebra lineare è nel nucleo.',
+ },
+ 'card': {
+  'expaero': ('Laboratorio di aerodinamica sperimentale', 'Un laboratorio previsto per misurare portanza e resistenza. Il catalogo di Daytona Beach lo include in ogni indirizzo. Non c’è ancora una pagina, quindi questa scheda non è un link.'),
+  'aeroeng': ('Aerodinamica per ingegneri', 'Un corso di aerodinamica previsto per l’indirizzo astronautico. Il catalogo usa questa materia al posto dei due corsi di aerodinamica degli altri indirizzi.'),
+  'jetfocus': ('Approfondimento: propulsione a getto', 'Un corso previsto, più approfondito, sui motori che aspirano aria. Il catalogo colloca la propulsione a getto negli indirizzi aeronautico e propulsione a getto. Il nostro corso di propulsione, nel nucleo, copre già getti e razzi.'),
+  'spacefocus': ('Approfondimento: propulsione spaziale', 'Un corso previsto, più approfondito, sulla propulsione a razzo e nello spazio. Il catalogo colloca la propulsione spaziale negli indirizzi astronautico e propulsione a razzo. Il nostro corso di propulsione, nel nucleo, copre già getti e razzi.'),
+  'airdesign': ('Sequenza di progetto dell’aereo', 'Una sequenza prevista di progetto dell’aereo. Il catalogo la divide in progetto preliminare e progetto di dettaglio. Il nostro progetto finale è un solo corso di autoapprendimento per ogni indirizzo.'),
+  'jetdesign': ('Sequenza di progetto del motore a getto', 'Una sequenza prevista di progetto del motore a getto. Il catalogo elenca progetto preliminare e progetto di dettaglio nell’indirizzo propulsione a getto.'),
+  'rockdesign': ('Sequenza di progetto del motore a razzo', 'Una sequenza prevista di progetto del motore a razzo. Il catalogo elenca progetto preliminare e progetto di dettaglio nell’indirizzo propulsione a razzo.'),
+  'attitude': ('Dinamica di assetto del veicolo spaziale', 'Un corso previsto su come un veicolo spaziale punta e mantiene l’assetto. Il catalogo colloca questa materia negli indirizzi astronautico e propulsione a razzo. Dinamica e controllo del volo, nel nucleo, introduce già stabilità e controllo.'),
+ },
+},
+'he': {
+ 'title': 'לימודי תואר ראשון',
+ 'program': 'תואר ראשון בהנדסת אווירונאוטיקה וחלל (לימוד עצמי)',
+ 'note': 'זהו מסלול לימוד עצמי חינמי שעוצב לפי תוכניות אוניברסיטאיות, ולא תואר מוכר.',
+ 'desc': 'תוכניות לימוד עצמי חינמיות. הראשונה היא תואר בהנדסת אווירונאוטיקה וחלל, עם ליבה משותפת וארבעה מסלולים.',
+ 'hero': 'תואר אחד, ליבה משותפת וארבעה מסלולים. הקורסים למטה משתנים לפי המסלול שנבחר.',
+ 'source': 'המסלול הזה עוקב אחרי הקטלוג של אוניברסיטת אמברי-רידל לאווירונאוטיקה בדייטונה ביץ׳: תואר אחד, ליבה משותפת וארבעה מסלולים.',
+ 'prompt': 'בחרו מסלול כדי להוסיף את קורסי השנה השלישית והרביעית. שנים 1 ו-2 הן הליבה המשותפת לכל מסלול.',
+ 'prompt_on': 'הליבה המשותפת ומסלול {name}.',
+ 'noscript': 'הסקריפט כבוי, ולכן כל המסלולים מוצגים. כל כרטיס מסומן ליבה או בשם המסלול.',
+ 'core': 'ליבה', 'planned': 'מתוכנן', 'group': 'מסלול', 'years': 'שנים', 'model': 'דגם הקטלוג:',
+ 'tname': {'aeronautics': 'אווירונאוטיקה', 'astronautics': 'אסטרונאוטיקה', 'jet': 'הנעה סילונית', 'rocket': 'הנעה רקטית'},
+ 'tdesc': {
+  'aeronautics': 'מתמקד באווירודינמיקה, בתכן מטוסים, וביציבות ובקרה של כלי טיס.',
+  'astronautics': 'מתמקד במסלולים, בבקרת חלליות, בהנעה רקטית ובמבנים.',
+  'jet': 'מתמקד במנועים שנושמים אוויר, ובכלל זה טורבו-סילון, טורבו-מניפה ומגח-סילון.',
+  'rocket': 'מתמקד בהנעה של משגרים ושל חקר החלל.',
+ },
+ 'cmp_h': 'איך המסלול הזה משתווה',
+ 'cmp': [
+  'ההערה הזו משווה את המסלול החינמי שלנו לתואר הראשון בהנדסת אווירונאוטיקה וחלל באוניברסיטת אמברי-רידל לאווירונאוטיקה, דייטונה ביץ׳, לפי עמוד התואר והקטלוג הפומביים. Saving Planets אינה חלק מאמברי-רידל, אינה מסונפת אליה ואינה מאושרת על ידה. המסלול הזה אינו נותן נקודות זכות של אמברי-רידל ואינו נותן נקודות זכות בשום מוסד.',
+  'הקטלוג של דייטונה ביץ׳ מציין את התואר כ-129 נקודות זכות: השכלה כללית 42, ליבה 47 והתמחות 40. הוא כותב שסטודנט צריך ממוצע מצטבר של 2.5 לפחות וציון C או יותר בקורסי החובה. עמוד התואר כותב שהקמפוס הזה מציע ארבעה מסלולים בתוך התואר האחד, ושהמחלקה היא הגדולה מסוגה במדינה.',
+  'ההשכלה הכללית בקטלוג הזה כוללת את COMM 122, את COMM 221 Technical Communication ואת COMM 219 Speech. אין לנו קורס שמקביל להם, ולכן כתיבה טכנית ודיבור הם פער. קורס ההנעה שלנו (AERO 410) משותף לכל מסלול. הוא מכסה נושאי סילון ורקטות שהקטלוג מפצל לפי מסלול.',
+ ],
+ 'track_cmp': {
+  'aeronautics': 'אווירונאוטיקה בקטלוג כוללת את AERO 307 ואת AERO 308 (אווירודינמיקה א׳ שלנו), את AERO 403 (בתוך קורס ההנעה בליבה), את AERO 413 ואת AERO 432 (דינמיקת טיסה ובקרה, בליבה), את AERO 314 עם AERO 314L (מעבדה מתוכננת), ואת זוג התכן AERO 420 ו-AERO 421 (מתוכנן; פרויקט הגמר שלנו הוא קורס אחד). ביצועי כלי טיס, שיטות נומריות ותעופה בת-קיימא נמצאים במסלול הזה. AERO 313 נמצא בכל מסלול בדייטונה ביץ׳, ולכן מכניקה מסלולית נשארת בליבה.',
+  'astronautics': 'אסטרונאוטיקה בקטלוג כוללת את AERO 414 (בתוך קורס ההנעה בליבה; עמוד מעמיק יותר מתוכנן), את AERO 319 במקום AERO 307 ו-AERO 308 (כרטיס מתוכנן; אווירודינמיקה א׳ אינה במסלול הזה), את AERO 323 או ENGP 312 (תכן חלליות שלנו), את AERO 426 (מתוכנן), ואת הזוג AERO 427 ו-AERO 445 (פרויקט הגמר שלנו הוא קורס אחד, לא הזוג הזה). AERO 314 ו-AERO 314L הן המעבדה המתוכננת. האלגברה הלינארית של הקטלוג למסלול הזה היא MATH 392; קורס האלגברה הלינארית שלנו נמצא בליבה.',
+  'jet': 'הנעה סילונית בקטלוג כוללת את AERO 307 ואת AERO 308 (אווירודינמיקה א׳ שלנו), את AERO 403 (בתוך קורס ההנעה בליבה; עמוד מעמיק יותר מתוכנן), את AERO 413 ואת AERO 432 (ליבה), את AERO 314 עם AERO 314L (מעבדה מתוכננת), ואת הזוג AERO 435 ו-AERO 440 (מתוכנן). ביצועי כלי טיס, שיטות נומריות ותעופה בת-קיימא נמצאים במסלול הזה. MATH 441 הוא קורס השיטות המתמטיות של הקטלוג למסלול הזה ולאווירונאוטיקה; שיטות נומריות שלנו ממלאות את התפקיד הזה.',
+  'rocket': 'הנעה רקטית בקטלוג כוללת את AERO 307 ואת AERO 308 (אווירודינמיקה א׳ שלנו), את AERO 414 (בתוך קורס ההנעה בליבה; עמוד מעמיק יותר מתוכנן), את AERO 323 (תכן חלליות שלנו), את AERO 426 (מתוכנן), את AERO 314 עם AERO 314L (מעבדה מתוכננת), ואת הזוג AERO 441 ו-AERO 451 (מתוכנן). האלגברה הלינארית של הקטלוג למסלול הזה היא MATH 392; קורס האלגברה הלינארית שלנו נמצא בליבה.',
+ },
+ 'card': {
+  'expaero': ('מעבדת אווירודינמיקה ניסויית', 'מעבדה מתוכננת למדידת עילוי וגרר. הקטלוג של דייטונה ביץ׳ כולל אותה בכל מסלול. אין עדיין עמוד, ולכן הכרטיס הזה אינו קישור.'),
+  'aeroeng': ('אווירודינמיקה למהנדסים', 'קורס אווירודינמיקה מתוכנן למסלול האסטרונאוטיקה. הקטלוג משתמש במקצוע הזה במקום שני קורסי האווירודינמיקה של המסלולים האחרים.'),
+  'jetfocus': ('העמקה: הנעה סילונית', 'קורס מתוכנן ומעמיק יותר על מנועים שנושמים אוויר. הקטלוג ממקם הנעה סילונית במסלולי האווירונאוטיקה וההנעה הסילונית. קורס ההנעה שלנו, בליבה, כבר מכסה סילון ורקטות.'),
+  'spacefocus': ('העמקה: הנעה בחלל', 'קורס מתוכנן ומעמיק יותר על הנעת רקטות והנעה בחלל. הקטלוג ממקם הנעה בחלל במסלולי האסטרונאוטיקה וההנעה הרקטית. קורס ההנעה שלנו, בליבה, כבר מכסה סילון ורקטות.'),
+  'airdesign': ('רצף תכן מטוס', 'רצף תכן מטוס מתוכנן. הקטלוג מפצל אותו לתכן ראשוני ולתכן מפורט. פרויקט הגמר שלנו הוא קורס לימוד עצמי אחד לכל מסלול.'),
+  'jetdesign': ('רצף תכן מנוע סילון', 'רצף תכן מנוע סילון מתוכנן. הקטלוג מונה תכן ראשוני ותכן מפורט במסלול ההנעה הסילונית.'),
+  'rockdesign': ('רצף תכן מנוע רקטי', 'רצף תכן מנוע רקטי מתוכנן. הקטלוג מונה תכן ראשוני ותכן מפורט במסלול ההנעה הרקטית.'),
+  'attitude': ('דינמיקת כוונון חללית', 'קורס מתוכנן על האופן שבו חללית מכוונת ושומרת על הכיוון. הקטלוג ממקם את המקצוע הזה במסלולי האסטרונאוטיקה וההנעה הרקטית. דינמיקת טיסה ובקרה, בליבה, כבר מציגה יציבות ובקרה.'),
+ },
+},
+}
+
+ORBIT_LINK = P('Orbits course', 'Cours sur les orbites', 'Curso de órbitas', 'مقرر المدارات', 'Corso sulle orbite', 'קורס מסלולים')
+
+# Keys every language must have, so a hole fails before a page is written.
+_NEED = ('title', 'program', 'note', 'desc', 'hero', 'source', 'prompt', 'prompt_on', 'noscript', 'core', 'planned', 'group', 'years', 'model', 'tname', 'tdesc', 'cmp_h', 'cmp', 'track_cmp', 'card')
+for _lang, _d in T.items():
+    missing = [k for k in _NEED if k not in _d]
+    if missing:
+        raise SystemExit(f'study text {_lang} missing {missing}')
+    if set(_d['tname']) != set(IDS) or set(_d['tdesc']) != set(IDS) or set(_d['track_cmp']) != set(IDS):
+        raise SystemExit(f'study text {_lang} track keys')
+    if len(_d['cmp']) != 3:
+        raise SystemExit(f'study text {_lang} cmp')
+    if len(_d['title']) > 42:
+        raise SystemExit(f'title long {_lang} {len(_d["title"])} {_d["title"]}')
+    if len(_d['desc']) > 165:
+        raise SystemExit(f'desc long {_lang} {len(_d["desc"])}')

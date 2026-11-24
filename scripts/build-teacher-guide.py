@@ -98,12 +98,12 @@ INS = {
  },
 }
 HUB = {
- 'en': ('Courses', 'Free courses you can teach. Each one has a For instructors section. Copy the teacher guide template for your class.', 'Teacher guide template'),
- 'fr': ('Cours', 'Cours gratuits à enseigner. Chacun a une section Pour les enseignants. Copiez le modèle de guide pour votre classe.', 'Modèle de guide enseignant'),
- 'es': ('Cursos', 'Cursos gratuitos para enseñar. Cada uno tiene una sección Para docentes. Copia la plantilla de guía para tu clase.', 'Plantilla de guía docente'),
- 'ar': ('المقررات', 'مقررات مجانية يمكن تدريسها. لكل مقرر قسم للمعلمين. انسخ نموذج الدليل لصفك.', 'نموذج دليل المعلم'),
- 'it': ('Corsi', 'Corsi gratuiti da insegnare. Ognuno ha una sezione Per gli insegnanti. Copia il modello di guida per la tua classe.', 'Modello di guida per insegnanti'),
- 'he': ('קורסים', 'קורסים חינמיים שאפשר ללמד. לכל קורס יש מקטע למורים. העתיקו את תבנית המדריך לכיתה שלכם.', 'תבנית מדריך למורה'),
+ 'en': ('Undergraduate Studies', 'Free courses you can teach. Each one has a For instructors section. Copy the teacher guide template for your class.', 'Teacher guide template'),
+ 'fr': ('Études de premier cycle', 'Cours gratuits à enseigner. Chacun a une section Pour les enseignants. Copiez le modèle de guide pour votre classe.', 'Modèle de guide enseignant'),
+ 'es': ('Estudios de pregrado', 'Cursos gratuitos para enseñar. Cada uno tiene una sección Para docentes. Copia la plantilla de guía para tu clase.', 'Plantilla de guía docente'),
+ 'ar': ('الدراسات الجامعية الأولى', 'مقررات مجانية يمكن تدريسها. لكل مقرر قسم للمعلمين. انسخ نموذج الدليل لصفك.', 'نموذج دليل المعلم'),
+ 'it': ('Studi di primo livello', 'Corsi gratuiti da insegnare. Ognuno ha una sezione Per gli insegnanti. Copia il modello di guida per la tua classe.', 'Modello di guida per insegnanti'),
+ 'he': ('לימודי תואר ראשון', 'קורסים חינמיים שאפשר ללמד. לכל קורס יש מקטע למורים. העתיקו את תבנית המדריך לכיתה שלכם.', 'תבנית מדריך למורה'),
 }
 NOTE = {
  'fr': 'Traduction rédigée par machine, à relire.',
@@ -244,9 +244,9 @@ def h1_of(lang, page):
     return m.group(1) if m else E(page)
 
 def year_heads(lang):
-    s = open(path(lang, 'Courses.html'), encoding='utf-8').read()
+    s = open(path(lang, 'Undergraduate_Studies.html'), encoding='utf-8').read()
     hs = re.findall(r'<section id="y\d"[^>]*>\s*<h2>(.*?)</h2>', s)
-    if len(hs) != 4: raise SystemExit(f'year headings missing on {lang} Courses.html ({len(hs)})')
+    if len(hs) != 4: raise SystemExit(f'year headings missing on {lang} Undergraduate_Studies.html ({len(hs)})')
     return hs
 
 def instruct_html(lang, mod):
@@ -268,6 +268,8 @@ def instruct_html(lang, mod):
     return '<!-- INSTRUCT:START -->' + ''.join(bits) + '<!-- INSTRUCT:END -->'
 
 def splice_course(lang, mod):
+    if mod.PAGE == 'Propulsion.html':
+        return False  # AERO 410 frozen during OER Commons review
     p = path(lang, mod.PAGE)
     if not os.path.exists(p): return False
     s = open(p, encoding='utf-8').read()
@@ -318,7 +320,7 @@ def template_main(lang):
     hero = (f'<section class="page-hero hero-learn"><div class="page-hero-content"><h1>{E(t["title"])}</h1>'
             f'<p>{E(t["kicker"])}</p></div></section>\n')
     return (hero + f'<div class="lw">{note}<section class="five-ws" id="template"><ol class="tg-steps">{rows}</ol>'
-            f'<p><a href="Courses.html">{E(HUB[lang][0])}</a> · <a href="Teachers.html">{h1_of(lang, "Teachers.html")}</a></p>'
+            f'<p><a href="Undergraduate_Studies.html">{E(HUB[lang][0])}</a> · <a href="Teachers.html">{h1_of(lang, "Teachers.html")}</a></p>'
             f'</section></div>\n')
 
 STYLE = ('<style>.tg-steps{padding-inline-start:1.2rem}.tg-steps h3{margin:.2rem 0}.tg-blank{display:block;min-height:2.4rem;'

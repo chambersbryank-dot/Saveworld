@@ -342,7 +342,7 @@ def retitle_links():
         if s2 == s and f'>{name}</a>' not in s:
             raise SystemExit('guide link missing ' + str(learn))
         learn.write_text(s2, encoding='utf-8')
-        courses = pre / 'Courses.html'
+        courses = pre / 'Undergraduate_Studies.html'
         c = courses.read_text(encoding='utf-8')
         old = {
             'en': '<p>Orbits, transfers and mission design.</p>',

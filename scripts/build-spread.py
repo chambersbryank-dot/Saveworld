@@ -36,7 +36,7 @@ BLURB100 = {
 }
 
 def caps(lang):
-    h, w, c, tch = home(lang), page(lang, 'Ways_to_Help.html'), page(lang, 'Courses.html'), page(lang, 'Teachers.html')
+    h, w, c, tch = home(lang), page(lang, 'Ways_to_Help.html'), page(lang, 'Undergraduate_Studies.html'), page(lang, 'Teachers.html')
     # Facts are the Press boilerplate, the Ways to Help title, the Courses lead, and the Teacher Sheets description.
     text = {
      'en': {
@@ -223,7 +223,7 @@ def block(lang, cid, text, ui):
 def main_html(lang, pre):
     ui = UI[lang]
     c = caps(lang)
-    h, w, courses, teachers = home(lang), page(lang, 'Ways_to_Help.html'), page(lang, 'Courses.html'), page(lang, 'Teachers.html')
+    h, w, courses, teachers = home(lang), page(lang, 'Ways_to_Help.html'), page(lang, 'Undergraduate_Studies.html'), page(lang, 'Teachers.html')
     groups = [('home', ui['home']), ('p1', ui['p1']), ('p2', ui['p2'])]
     posts = ''
     for gid, label in groups:
@@ -242,7 +242,7 @@ def main_html(lang, pre):
     return f'''<nav aria-label="Breadcrumb" class="breadcrumb" hidden><ol><li><a href="{pre}index.html">{e(ui["home"] if lang != "en" else "Home")}</a></li><li><span aria-current="page">{e(ui["title"])}</span></li></ol></nav>
 <div class="stw">
 <p class="stw-note">{e(ui["note"])}</p>
-<p class="stw-note">{e(ui["src"])}: <a href="{pre}Press.html">{e(ui["press"])}</a>, <a href="{pre}Ways_to_Help.html">{e(ui["help"])}</a>, <a href="{pre}Courses.html">{e(ui["courses"])}</a>, <a href="{pre}Teachers.html">{e(ui["teachers"])}</a>.</p>
+<p class="stw-note">{e(ui["src"])}: <a href="{pre}Press.html">{e(ui["press"])}</a>, <a href="{pre}Ways_to_Help.html">{e(ui["help"])}</a>, <a href="{pre}Undergraduate_Studies.html">{e(ui["courses"])}</a>, <a href="{pre}Teachers.html">{e(ui["teachers"])}</a>.</p>
 {posts}
 <h2>{e(ui["pics"])}</h2>
 <p class="stw-note">{e(ui["picsNote"])}</p>

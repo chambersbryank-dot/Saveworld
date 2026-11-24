@@ -69,6 +69,8 @@ def pset(lang, items):
             f'<p>{E(t["pintro"])}</p><ol>{lis}</ol></section><!-- OCW-PSET:END -->')
 
 def apply_one(lang, f):
+    if f.endswith('Propulsion.html'):
+        return False  # AERO 410 frozen during OER Commons review
     s = open(f, encoding='utf-8').read()
     if '<section id="about">' not in s or '<section class="crs-unit"' not in s: return False
     orig = s

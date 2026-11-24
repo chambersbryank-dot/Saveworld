@@ -130,6 +130,8 @@ def h1_of(lang, page):
     return html.unescape(re.sub('<[^>]+>', '', m.group(1))) if m else page
 
 def splice(lang, mod, imscc, classroom):
+    if mod.PAGE == 'Propulsion.html':
+        return  # AERO 410 frozen during OER Commons review
     p = mod.PAGE if lang == 'en' else f'{lang}/{mod.PAGE}'
     if not os.path.exists(p): return
     s = open(p, encoding='utf-8').read()

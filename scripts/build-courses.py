@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Oct 24 2026 (founder): free self-study Courses section. Data-driven: every scripts/courses/<id>.py with PAGE + STATUS='live'
-becomes one course page; scripts/courses/roadmap.py is the 4-year track on Courses.html. Phase 1 = English only.
+becomes one course page; scripts/courses/roadmap.py is the 4-year track on Undergraduate_Studies.html. Phase 1 = English only.
 Also: anim-banners.json entries (multi-photo banner from each module's BANNER/CREDITS), assets/courses.css + assets/courses.js.
   python3 scripts/build-courses.py           build
   python3 scripts/build-courses.py --check   arithmetic checks (module CHECKS) + every external link must load
@@ -61,7 +61,7 @@ def loc(p):  # site page link from a course page: stay in the language folder wh
     if LANG == 'en' or re.match(r'(https?:|mailto:|#)', p): return p
     return p if os.path.exists(LANG + '/' + p.split('#')[0]) or p.split('#')[0] in (HUB,) + tuple(m.PAGE for m in MODS if LANG in DONE.get(m.ID, ())) else '../' + p
 def out(p): return p if LANG == 'en' else LANG + '/' + p
-HUB = 'Courses.html'
+HUB = 'Undergraduate_Studies.html'
 MODS = []
 for f in sorted(glob.glob('scripts/courses/*.py')):
     n = os.path.basename(f)[:-3]
@@ -350,7 +350,7 @@ def course_page(C):
     updated, version, when = stamp_of(C)
     note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
-         f'<p class="crs-crumb"><a href="{HUB}">{esc("Courses")}</a> › {esc(C.CODE)}</p>',
+         f'<p class="crs-crumb"><a href="{HUB}">{esc("Undergraduate Studies")}</a> › {esc(C.CODE)}</p>',
          f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
          f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
          *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
@@ -570,23 +570,32 @@ def compare_block():
             f'<p>{html.escape(COMPARE["p2"][L])}</p><p>{html.escape(COMPARE["p3"][L])}</p><p>{html.escape(COMPARE["p4"][L])}</p><p>{html.escape(COMPARE["p5"][L])}</p>'
             f'<p class="crs-src"><a href="{src1}" rel="noopener">Embry-Riddle Daytona Beach Department of Aerospace Engineering</a> · '
             f'<a href="{src2}" rel="noopener">Daytona Beach aerospace engineering catalog</a></p>' + top() + '</section>')
+def hub_body():
+    # Nov 24 2026: one B.S. path, four tracks. New chrome strings live in study_aero_text (not _()).
+    from study_hub import fragment, live_card
+    missing = [cid for _y, cs in RM.YEARS for cid, _t, _d in cs if cid not in RM.ROLE]
+    if missing: raise SystemExit('roadmap ROLE missing ' + ', '.join(missing))
+    def live_for(cid, title, desc):
+        m = LIVE.get(cid)
+        if not m:
+            return (f'<li class="crs-c"><span class="crs-badge soon">{esc("Coming soon")}</span>'
+                    f'<h3>{esc(title)}</h3><p>{esc(desc)}</p></li>')
+        if os.path.exists(out(m.PAGE)):
+            return live_card(LANG, cid, title, desc, esc, m, m.PAGE, False)
+        return live_card(LANG, cid, title, desc, esc, m, '../' + m.PAGE, True)
+    return fragment(LANG, esc, live_for)
+
 def hub_page():
-    o = [hero('STEM Courses', 'A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'), f'<div class="crs"{dir_attr()}>',
-         f'<div class="crs-disc"><p>{esc("These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.")}</p>'
-         f'<p>{esc("Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.")}</p></div>',
-         f'<div class="crs-toc" role="navigation" aria-label="{esc("Years")}"><ul>' + ''.join(f'<li><a href="#y{i}">{html.escape(_(y).split(" · ")[0])}</a></li>' for i, (y, _c) in enumerate(RM.YEARS, 1)) + '</ul></div>']
-    for i, (y, cs) in enumerate(RM.YEARS, 1):
-        o.append(f'<section id="y{i}"><h2>{esc(y)}</h2><ul class="crs-grid">')
-        for cid, t, d in cs:
-            m = LIVE.get(cid)
-            if m and (LANG == 'en' or LANG in DONE.get(cid, ())): o.append(f'<li class="crs-c live"><span class="crs-badge">{esc("Live")}</span><h3><a href="{m.PAGE}">{esc(t)}</a></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
-            elif m: o.append(f'<li class="crs-c live"><span class="crs-badge">{esc("Live")}</span><h3><a href="../{m.PAGE}" hreflang="en">{esc(t)}</a> <span lang="en">(English)</span></h3><p>{esc(d)}</p><p class="crs-kicker">{esc(m.CODE)}</p></li>')
-            else: o.append(f'<li class="crs-c"><span class="crs-badge soon">{esc("Coming soon")}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>')
-        o.append('</ul>' + top() + '</section>')
-    o.append(compare_block())
-    o.append('</div>')
-    return BL.shell(LANG, HUB, _('Courses: free aerospace and STEM study track'), _('A free four-year aerospace and STEM (Science, Technology, Engineering and Mathematics) study track, built one course at a time.'),
-                    ''.join(o), extra_head=head(), ld_type='CollectionPage', tail='')
+    # The translation scan walks this. The published hub is spliced by install_hub so the existing head stays.
+    return hub_body()
+
+def install_hub():
+    from study_hub import install, prepare_shell, retarget_page
+    from study_aero_text import T as STUDY
+    S = STUDY[LANG]
+    prepare_shell(LANG)
+    install(out(HUB), LANG, hub_body(), _('Back to top'), S['title'], S['desc'])
+    retarget_page(out(HUB))
 
 def banners():
     p = 'assets/data/anim-banners.json'; cfg = json.load(open(p, encoding='utf8')); MF = json.load(open('assets/data/media-manifest.json'))
@@ -699,6 +708,20 @@ if __name__ == '__main__':
         sys.exit(0)
     if '--missing' in sys.argv: export_missing(sys.argv[sys.argv.index('--missing') + 1]); sys.exit(0)
     if '--import' in sys.argv: a = sys.argv.index('--import'); import_tsv(sys.argv[a + 1], sys.argv[a + 2]); sys.exit(0)
+    if '--hub-only' in sys.argv:
+        # Splice the study hub into the six Undergraduate_Studies.html files. Does not rebuild course pages and does not touch Propulsion.html.
+        from study_hub import ensure_courses_css
+        ensure_courses_css()
+        langs = [l for l in LANGS if l in BUILD_LANGS and (l == 'en' or os.path.exists(l + '/Kids_Map.html'))]
+        for LANG in langs:
+            install_hub()
+        _cat = importlib.util.spec_from_file_location('course_catalog', 'scripts/build-course-catalog.py')
+        _catm = importlib.util.module_from_spec(_cat); _cat.loader.exec_module(_catm)
+        _catm.apply()
+        from study_hub import write_redirects
+        write_redirects()
+        print('hub only:', langs)
+        sys.exit(0)
     banners()
     langs = [l for l in LANGS if l in BUILD_LANGS and (l == 'en' or os.path.exists(l + '/Kids_Map.html'))]
     gaps = {}
@@ -712,14 +735,15 @@ if __name__ == '__main__':
     for _pass in (1, 2):  # second pass: hreflang alternates see every language's file
         for LANG in langs:
             for m in MODS:
+                if m.PAGE == 'Propulsion.html':
+                    continue  # AERO 410 stays frozen while OER Commons review is open
                 f = out(m.PAGE)
                 if LANG == 'en' or LANG in DONE.get(m.ID, ()):
                     title = _(m.TITLE) + ' (' + m.CODE + ')'
                     open(f, 'w', encoding='utf8').write(keep_head(en_only(course_page(m)), f, title, m.PAGE))
                 elif os.path.exists(f): os.remove(f)  # never leave a stale half-translated page
             if LANG == 'en' or not gaps.get('_hub', {}).get(LANG):
-                hf = out(HUB)
-                open(hf, 'w', encoding='utf8').write(keep_head(en_only(hub_page()), hf, _('Courses'), HUB))
+                install_hub()
     LANG = 'en'
     for cid, g in gaps.items():
         print(f'build-courses: {cid} not translated yet in', {l: len(v) for l, v in g.items()}, f'(English only there; run --missing {cid})')
@@ -736,7 +760,12 @@ if __name__ == '__main__':
     _cat = _iu.spec_from_file_location('course_catalog', 'scripts/build-course-catalog.py')
     _catm = _iu.module_from_spec(_cat); _cat.loader.exec_module(_catm)
     _catm.apply()
+    from study_hub import write_redirects
+    write_redirects()
     _ex = _iu.spec_from_file_location('course_exports', 'scripts/build-course-exports.py')
     _exm = _iu.module_from_spec(_ex); _ex.loader.exec_module(_exm)
     _exm.apply()
+    _fd = _iu.spec_from_file_location('course_folds', 'scripts/build-course-folds.py')
+    _fdm = _iu.module_from_spec(_fd); _fd.loader.exec_module(_fdm)
+    _fdm.apply()
     print('build-courses:', HUB, '+', [m.PAGE for m in MODS])

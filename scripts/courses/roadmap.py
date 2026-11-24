@@ -1,4 +1,4 @@
-"""Oct 24 2026 (founder-approved): four-year aerospace/STEM self-study track on Courses.html, built one course at a time.
+"""Oct 24 2026 (founder-approved): four-year aerospace/STEM self-study track on Undergraduate_Studies.html, built one course at a time.
 A course goes live when scripts/courses/<id>.py exists with the same ID and STATUS = 'live' (build-courses.py reads it);
 until then its card shows 'Coming soon'. Keep entries short: title, code-style label, one line on what it covers."""
 YEARS = [
@@ -37,3 +37,31 @@ YEARS = [
   ('capstone', 'Capstone (aircraft or CubeSat)', 'A full design project from requirements to review.'),
   ('sustain', 'Sustainable Aviation', 'Cleaner fuels, efficient aircraft and lower emissions.')]),
 ]
+# Nov 24 2026: one B.S. Aerospace Engineering path. Years 1–2 are shared core.
+# Year 3–4 courses are 'core' (every track) or a tuple of track ids.
+# Guide: Embry-Riddle Daytona Beach catalog (129 = 42 general education + 47 core + 40 concentration).
+# Our "core" means shared by every track on this page, which is wider than the catalog's Core Requirements list.
+ROLE = {
+ 'chem110': 'core', 'phys110': 'core', 'calc1': 'core', 'calc2': 'core', 'aero101': 'core', 'cad101': 'core', 'prog101': 'core',
+ 'calc3': 'core', 'diffeq': 'core', 'phys2': 'core', 'statics': 'core', 'dynamics': 'core', 'mom': 'core', 'linalg': 'core', 'circuits': 'core',
+ 'thermo': 'core', 'fluids': 'core', 'struct': 'core', 'orbit': 'core', 'probstat': 'core',
+ 'prop': 'core', 'fdc': 'core', 'heat': 'core', 'avionics': 'core', 'capstone': 'core',
+ 'aero1': ('aeronautics', 'jet', 'rocket'),
+ 'perf': ('aeronautics', 'jet'),
+ 'numerics': ('aeronautics', 'jet'),
+ 'scdesign': ('astronautics', 'rocket'),
+ 'sustain': ('aeronautics', 'jet'),
+}
+# Planned cards have no page. tracks 'core' shows before a track is chosen.
+# model is the Daytona Beach catalog code, not a Saving Planets course code.
+PLANNED = [
+ ('expaero', 3, 'core', 'AERO 314 and AERO 314L'),
+ ('aeroeng', 3, ('astronautics',), 'AERO 319'),
+ ('jetfocus', 4, ('aeronautics', 'jet'), 'AERO 403'),
+ ('spacefocus', 4, ('astronautics', 'rocket'), 'AERO 414'),
+ ('airdesign', 4, ('aeronautics',), 'AERO 420 and AERO 421'),
+ ('jetdesign', 4, ('jet',), 'AERO 435 and AERO 440'),
+ ('rockdesign', 4, ('rocket',), 'AERO 441 and AERO 451'),
+ ('attitude', 4, ('astronautics', 'rocket'), 'AERO 426'),
+]
+TRACK_IDS = ('aeronautics', 'astronautics', 'jet', 'rocket')
