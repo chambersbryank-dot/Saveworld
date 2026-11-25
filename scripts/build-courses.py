@@ -10,6 +10,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROO
 import importlib.util
 spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); BL = importlib.util.module_from_spec(spec); spec.loader.exec_module(BL)
 from courses import roadmap as RM
+from courses import aero101_watch as AW
 V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
@@ -65,7 +66,7 @@ HUB = 'Undergraduate_Studies.html'
 MODS = []
 for f in sorted(glob.glob('scripts/courses/*.py')):
     n = os.path.basename(f)[:-3]
-    if n in ('__init__', 'roadmap'): continue
+    if n in ('__init__', 'roadmap', 'aero101_watch'): continue
     m = importlib.import_module('courses.' + n)
     if getattr(m, 'STATUS', '') == 'live': MODS.append(m)
 LIVE = {m.ID: m for m in MODS}
@@ -141,7 +142,12 @@ def unit(C, K, i, u):
              + f'<p class="crs-src">{esc("On Saving Planets:")} ' + ' · '.join(f'<a href="{esc(loc(h))}">{esc(t)}</a>' for t, h in p['site'])
              + f'</p><p class="crs-src">{esc("Sources:")} ' + ' · '.join(ext(t, h) for t, h in p['src']) + '</p></div>')
     o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
-    lec = LECTURES.get(C.ID, {}).get(str(i - 1))  # Oct 26 (founder): plain link to the official free lecture, strong keyword matches only; no embeds/mirrors until Bryan decides
+    if C.ID == 'aero101':
+        # Nov 25 2026 (Bryan): one closed Watch and learn box per unit. Click-to-load embed, this course only.
+        o.append(AW.box(LANG, i))
+        lec = None
+    else:
+        lec = LECTURES.get(C.ID, {}).get(str(i - 1))  # plain link; embeds stay off until Bryan approves that course
     if lec:
         lic = {'CC BY-NC-SA 4.0': ('https://creativecommons.org/licenses/by-nc-sa/4.0/', 'https://ocw.mit.edu/pages/privacy-and-terms-of-use/'),
                'CC BY-NC-SA 3.0 US': ('https://creativecommons.org/licenses/by-nc-sa/3.0/us/', 'https://oyc.yale.edu/terms')}[lec['license']]
@@ -260,6 +266,7 @@ DATE_LABEL = {
  '2026-11-01': {'en': 'November 1, 2026', 'fr': '1er novembre 2026', 'es': '1 de noviembre de 2026', 'ar': '1 نوفمبر 2026', 'it': '1 novembre 2026', 'he': '1 בנובמבר 2026'},
  '2026-11-18': {'en': 'November 18, 2026', 'fr': '18 novembre 2026', 'es': '18 de noviembre de 2026', 'ar': '18 نوفمبر 2026', 'it': '18 novembre 2026', 'he': '18 בנובמבר 2026'},
  '2026-11-21': {'en': 'November 21, 2026', 'fr': '21 novembre 2026', 'es': '21 de noviembre de 2026', 'ar': '21 نوفمبر 2026', 'it': '21 novembre 2026', 'he': '21 בנובמבר 2026'},
+ '2026-11-25': {'en': 'November 25, 2026', 'fr': '25 novembre 2026', 'es': '25 de noviembre de 2026', 'ar': '25 نوفمبر 2026', 'it': '25 novembre 2026', 'he': '25 בנובמבר 2026'},
 }
 FACT_NOTE = {
  'recheck': {
@@ -397,7 +404,8 @@ def course_page(C):
     note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
     o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
          f'<p class="crs-crumb"><a href="{HUB}">{esc("Undergraduate Studies")}</a> › {esc(C.CODE)}</p>',
-         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
+         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}'
+         + (f' · {html.escape(AW.added_note(LANG))}' if getattr(C, 'ID', '') == 'aero101' else '') + '</p>',
          f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
          *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
          *([oer_pub(C)] if getattr(C, 'ID', '') == 'aero101' else []),
@@ -459,7 +467,7 @@ def course_page(C):
                   '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
-                  '</style>\n')
+                  + AW.CSS + '</style>\n' + AW.JS + '\n')
     return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
 
 def related(C):  # Oct 25 2026 (founder, upgrade 4): 'Related' block, 3-4 links from the roadmap (no new data):
