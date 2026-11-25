@@ -1,8 +1,10 @@
 """AERO 101 Watch and learn lectures. Bryan approved this pilot on November 25, 2026.
 
 Box and tier labels, and the one-line reasons, are SI translations. No native speaker has reviewed them.
-Every video id below was checked with YouTube oEmbed (public, embeddable, owner matches) and the
-length was read from the media itself. Do not add an id that has not been checked the same way.
+Every video id was checked with YouTube oEmbed (HTTP 200, embeddable) and the watch page had no
+Unlisted badge. Lengths already on the page were measured from the media. Lengths added in the
+open-license pass: MIT 16.885 from the Archive.org file length; TU Delft and the added NASA videos
+from YouTube's duration label on that video's own search result. Do not add an id that has not been checked.
 """
 import html
 import json
@@ -16,6 +18,8 @@ OCW_TERMS = 'https://ocw.mit.edu/pages/privacy-and-terms-of-use/'
 NASA_MEDIA = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
 OCW_16_687 = 'MIT 16.687 Private Pilot Ground School (IAP 2019), MIT OpenCourseWare'
 OCW_16_346 = 'MIT 16.346 Astrodynamics (Fall 2008), MIT OpenCourseWare'
+OCW_16_885 = 'MIT 16.885J Aircraft Systems Engineering (Fall 2005), MIT OpenCourseWare'
+DELFT = 'TU Delft, Introduction to Aeronautical Engineering'
 
 # SI drafts. Keys: box, start, deep, seasoned, play, added, nasa_note, nasa_lic, gov, univ_lic.
 LABELS = {
@@ -63,7 +67,7 @@ LABELS = {
     },
 }
 
-# why[lang] is one sentence. kind is mit, nasa, or univ.
+# why[lang] is one sentence. kind is mit, nasa, or delft.
 VIDEOS = {
     1: [{
         'tier': 'start', 'id': 'L_mJxmO7_8A', 'length': '6:01', 'kind': 'nasa',
@@ -77,6 +81,32 @@ VIDEOS = {
             'ar': 'شاهد كيف استخدم الأخوان رايت منهج الهندسة لتصميم أول طائرة وتحليقها.',
             'it': 'Guarda come i fratelli Wright hanno usato il metodo ingegneristico per progettare e far volare il primo aeroplano.',
             'he': 'ראו איך האחים רייט השתמשו בשיטת ההנדסה כדי לתכנן ולהטיס את המטוס הראשון.',
+        },
+    }, {
+        'tier': 'deep', 'id': 'j0SaIXktsQg', 'length': '15:00', 'kind': 'delft',
+        'title': 'History of Flight',
+        'page': 'https://www.youtube.com/watch?v=j0SaIXktsQg',
+        'source': DELFT,
+        'why': {
+            'en': 'TU Delft’s lecture on the history of flight, from the earliest ideas to the modern airplane.',
+            'fr': 'Le cours de TU Delft sur l’histoire du vol, des premières idées à l’avion moderne.',
+            'es': 'La clase de TU Delft sobre la historia del vuelo, desde las primeras ideas hasta el avión moderno.',
+            'ar': 'محاضرة جامعة دلفت للتكنولوجيا عن تاريخ الطيران، من الأفكار الأولى إلى الطائرة الحديثة.',
+            'it': 'La lezione della TU Delft sulla storia del volo, dalle prime idee all’aeroplano moderno.',
+            'he': 'שיעור של אוניברסיטת דלפט על תולדות הטיסה, מהרעיונות הראשונים עד המטוס המודרני.',
+        },
+    }, {
+        'tier': 'seasoned', 'id': 'IHVf3ukiIiA', 'length': '1:49:43', 'kind': 'mit',
+        'title': 'Lecture 19: Design Process as it Relates to the Shuttle',
+        'page': 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-19/',
+        'source': OCW_16_885,
+        'why': {
+            'en': 'A graduate lecture on how the design process shaped the Space Shuttle.',
+            'fr': 'Un cours de cycle supérieur sur la façon dont le processus de conception a façonné la navette spatiale.',
+            'es': 'Una clase de posgrado sobre cómo el proceso de diseño dio forma al transbordador espacial.',
+            'ar': 'محاضرة دراسات عليا عن كيف شكّلت عملية التصميم مكوك الفضاء.',
+            'it': 'Una lezione avanzata su come il processo di progettazione ha dato forma allo Space Shuttle.',
+            'he': 'שיעור מתקדם על איך תהליך התכן עיצב את מעבורת החלל.',
         },
     }],
     2: [{
@@ -92,8 +122,34 @@ VIDEOS = {
             'it': 'Uno scienziato della NASA percorre gli strati dell’atmosfera e di che cosa è fatta l’aria.',
             'he': 'מדען של נאס״א עובר על שכבות האטמוספירה וממה האוויר עשוי.',
         },
+    }, {
+        'tier': 'deep', 'id': 'Hdix6qj9qs8', 'length': '17:00', 'kind': 'delft',
+        'title': 'The ISA, Part I',
+        'page': 'https://www.youtube.com/watch?v=Hdix6qj9qs8',
+        'source': DELFT,
+        'why': {
+            'en': 'The first part of TU Delft’s lecture on the International Standard Atmosphere.',
+            'fr': 'La première partie du cours de TU Delft sur l’atmosphère type internationale.',
+            'es': 'La primera parte de la clase de TU Delft sobre la atmósfera estándar internacional.',
+            'ar': 'الجزء الأول من محاضرة جامعة دلفت للتكنولوجيا عن الغلاف الجوي القياسي الدولي.',
+            'it': 'La prima parte della lezione della TU Delft sull’atmosfera standard internazionale.',
+            'he': 'החלק הראשון של שיעור אוניברסיטת דלפט על האטמוספירה התקנית הבין-לאומית.',
+        },
     }],
     3: [{
+        'tier': 'start', 'id': 'JPD0Be4eSos', 'length': '12:25', 'kind': 'delft',
+        'title': 'Lift',
+        'page': 'https://www.youtube.com/watch?v=JPD0Be4eSos',
+        'source': DELFT,
+        'why': {
+            'en': 'How a wing makes lift, from TU Delft’s introduction to aeronautical engineering.',
+            'fr': 'Comment une aile produit la portance, dans l’introduction à l’ingénierie aéronautique de TU Delft.',
+            'es': 'Cómo un ala produce sustentación, en la introducción a la ingeniería aeronáutica de TU Delft.',
+            'ar': 'كيف يولّد الجناح الرفع، في مقدمة هندسة الطيران من جامعة دلفت للتكنولوجيا.',
+            'it': 'Come un’ala genera portanza, nell’introduzione all’ingegneria aeronautica della TU Delft.',
+            'he': 'איך כנף יוצרת עילוי, במבוא להנדסה אווירונאוטית של אוניברסיטת דלפט.',
+        },
+    }, {
         'tier': 'deep', 'id': 'edLnZgF9mUg', 'length': '1:12:07', 'kind': 'mit',
         'title': 'Lecture 2: Airplane Aerodynamics',
         'page': 'https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/lecture-2-airplane-aerodynamics/',
@@ -106,23 +162,48 @@ VIDEOS = {
             'it': 'La lezione di scuola a terra su portanza, resistenza e controllo di un’ala.',
             'he': 'שיעור בית הספר הקרקעי על עילוי, גרר ואיך שולטים בכנף.',
         },
+    }, {
+        'tier': 'seasoned', 'id': '2QRfkG7jOfY', 'length': '1:50:38', 'kind': 'mit',
+        'title': 'Lecture 7: Aerodynamics (From Subsonic to Hypersonic and Back)',
+        'page': 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-7/',
+        'source': OCW_16_885,
+        'why': {
+            'en': 'A graduate lecture on aerodynamics from subsonic flight through hypersonic and back.',
+            'fr': 'Un cours de cycle supérieur sur l’aérodynamique, du subsonique à l’hypersonique et retour.',
+            'es': 'Una clase de posgrado sobre aerodinámica, del vuelo subsónico al hipersónico y de vuelta.',
+            'ar': 'محاضرة دراسات عليا في الديناميكا الهوائية من الطيران دون الصوتي إلى فوق الصوتي ثم العودة.',
+            'it': 'Una lezione avanzata di aerodinamica, dal volo subsonico all’ipersonico e ritorno.',
+            'he': 'שיעור מתקדם באווירודינמיקה, מטיסה תת-קולית עד על-קולית גבוהה ובחזרה.',
+        },
     }],
     4: [{
-        'tier': 'deep', 'id': 'aa2kBZAoXg0', 'length': '31:27', 'kind': 'univ',
-        'title': 'Krzysztof Fidkowski | How Planes Fly',
-        'page': 'https://www.youtube.com/watch?v=aa2kBZAoXg0',
-        'source': 'Krzysztof Fidkowski, Michigan Engineering, University of Michigan',
-        'channel': 'Michigan Engineering',
+        'tier': 'start', 'id': 'rCbPkb85Q4o', 'length': '9:23', 'kind': 'delft',
+        'title': 'Aerofoil Profiles',
+        'page': 'https://www.youtube.com/watch?v=rCbPkb85Q4o',
+        'source': DELFT,
         'why': {
-            'en': 'A University of Michigan professor takes apart the usual explanations of how a wing makes lift.',
-            'fr': 'Un professeur de l’Université du Michigan reprend les explications courantes de la portance d’une aile.',
-            'es': 'Un profesor de la Universidad de Míchigan desmonta las explicaciones habituales de cómo un ala produce sustentación.',
-            'ar': 'أستاذ في جامعة ميشيغان يفكك التفسيرات الشائعة لكيفية توليد الجناح للرفع.',
-            'it': 'Un professore dell’Università del Michigan smonta le spiegazioni abituali di come un’ala genera portanza.',
-            'he': 'פרופסור מאוניברסיטת מישיגן מפרק את ההסברים הרגילים לאיך כנף יוצרת עילוי.',
+            'en': 'How an aerofoil profile is defined, in TU Delft’s lecture on wing sections.',
+            'fr': 'Comment se définit un profil d’aile, dans le cours de TU Delft sur les profils.',
+            'es': 'Cómo se define un perfil aerodinámico, en la clase de TU Delft sobre perfiles de ala.',
+            'ar': 'كيف يُعرَّف مقطع الجناح، في محاضرة جامعة دلفت للتكنولوجيا عن مقاطع الأجنحة.',
+            'it': 'Come si definisce un profilo alare, nella lezione della TU Delft sulle sezioni d’ala.',
+            'he': 'איך מגדירים פרופיל אווירודינמי, בשיעור של אוניברסיטת דלפט על חתכי כנף.',
         },
     }],
     5: [{
+        'tier': 'start', 'id': 'A-8Xfh1Ibmw', 'length': '9:52', 'kind': 'delft',
+        'title': 'Horizontal Flight: Introduction',
+        'page': 'https://www.youtube.com/watch?v=A-8Xfh1Ibmw',
+        'source': DELFT,
+        'why': {
+            'en': 'Level flight as the start of performance: lift balances weight, and thrust balances drag.',
+            'fr': 'Le vol en palier comme point de départ des performances : la portance équilibre le poids, et la poussée équilibre la traînée.',
+            'es': 'El vuelo nivelado como punto de partida del rendimiento: la sustentación equilibra el peso y el empuje equilibra la resistencia.',
+            'ar': 'الطيران الأفقي كنقطة بداية للأداء: الرفع يوازن الوزن، والدفع يوازن السحب.',
+            'it': 'Il volo livellato come punto di partenza delle prestazioni: la portanza equilibra il peso e la spinta equilibra la resistenza.',
+            'he': 'טיסה ישרה ואופקית כנקודת הפתיחה של הביצועים: העילוי מאזן את המשקל, והדחף מאזן את הגרר.',
+        },
+    }, {
         'tier': 'deep', 'id': '3sB64Au76h0', 'length': '1:05:32', 'kind': 'mit',
         'title': 'Lecture 12: Aircraft Performance',
         'page': 'https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/lecture-12-aircraft-performance/',
@@ -137,6 +218,32 @@ VIDEOS = {
         },
     }],
     6: [{
+        'tier': 'start', 'id': 'hoR770EIbkQ', 'length': '4:05', 'kind': 'delft',
+        'title': 'Stability Introduction',
+        'page': 'https://www.youtube.com/watch?v=hoR770EIbkQ',
+        'source': DELFT,
+        'why': {
+            'en': 'TU Delft’s short introduction to what stability means for an airplane.',
+            'fr': 'La courte introduction de TU Delft à ce que la stabilité signifie pour un avion.',
+            'es': 'La breve introducción de TU Delft a lo que significa la estabilidad para un avión.',
+            'ar': 'المقدمة القصيرة من جامعة دلفت للتكنولوجيا لمعنى الاستقرار للطائرة.',
+            'it': 'La breve introduzione della TU Delft a che cosa significa la stabilità per un aeroplano.',
+            'he': 'המבוא הקצר של אוניברסיטת דלפט למשמעות היציבות של מטוס.',
+        },
+    }, {
+        'tier': 'deep', 'id': 'jh58Em8WmJI', 'length': '32:00', 'kind': 'delft',
+        'title': 'Longitudinal Stability',
+        'page': 'https://www.youtube.com/watch?v=jh58Em8WmJI',
+        'source': DELFT,
+        'why': {
+            'en': 'How the tail and the center of gravity set an airplane’s longitudinal stability.',
+            'fr': 'Comment l’empennage et le centre de gravité fixent la stabilité longitudinale d’un avion.',
+            'es': 'Cómo la cola y el centro de gravedad fijan la estabilidad longitudinal de un avión.',
+            'ar': 'كيف يحدّد الذيل ومركز الثقل الاستقرار الطولي للطائرة.',
+            'it': 'Come i piani di coda e il baricentro determinano la stabilità longitudinale di un aeroplano.',
+            'he': 'איך הזנב ומרכז הכובד קובעים את היציבות האורכית של מטוס.',
+        },
+    }, {
         'tier': 'seasoned', 'id': 'n068fel-W9I', 'length': '1:06:48', 'kind': 'mit',
         'title': 'Special Lecture: F-22 Flight Controls',
         'page': 'https://ocw.mit.edu/courses/16-687-private-pilot-ground-school-january-iap-2019/resources/special-lecture-f-22-flight-controls/',
@@ -163,35 +270,59 @@ VIDEOS = {
             'it': 'Un ingegnere di prova della NASA Glenn mostra come un motore a getto comprime l’aria, brucia il carburante e produce spinta.',
             'he': 'מהנדס ניסוי בנאס״א גלן מראה איך מנוע סילון דוחס אוויר, שורף דלק ויוצר דחף.',
         },
+    }, {
+        'tier': 'deep', 'id': 'cgnL8v8YRcs', 'length': '14:32', 'kind': 'delft',
+        'title': 'Propulsion',
+        'page': 'https://www.youtube.com/watch?v=cgnL8v8YRcs',
+        'source': DELFT,
+        'why': {
+            'en': 'TU Delft’s introduction to how an aircraft propulsion system produces thrust.',
+            'fr': 'L’introduction de TU Delft à la façon dont un système de propulsion produit la poussée.',
+            'es': 'La introducción de TU Delft a cómo un sistema de propulsión produce empuje.',
+            'ar': 'مقدمة جامعة دلفت للتكنولوجيا لكيفية إنتاج منظومة الدفع للقوة الدافعة.',
+            'it': 'L’introduzione della TU Delft a come un sistema di propulsione produce spinta.',
+            'he': 'המבוא של אוניברסיטת דלפט לאיך מערכת הנעה יוצרת דחף.',
+        },
     }],
     8: [{
-        'tier': 'start', 'id': 'VnM9b2QtHYg', 'length': '5:04', 'kind': 'univ',
-        'title': 'Why Planes Can’t Reach Space | Rocket Science for Everyone, Yale',
-        'page': 'https://www.youtube.com/watch?v=VnM9b2QtHYg',
-        'source': 'Marla Geha, Yale University (YaleCourses)',
-        'channel': 'YaleCourses',
+        'tier': 'seasoned', 'id': 'uow6v1EuybE', 'length': '2:00:07', 'kind': 'mit',
+        'title': 'Lecture 6: Propulsion - Space Shuttle Main Engines',
+        'page': 'https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-6/',
+        'source': OCW_16_885,
         'why': {
-            'en': 'Why a jet cannot reach orbit, and why a rocket must carry its own oxidizer and so much propellant.',
-            'fr': 'Pourquoi un réacteur ne peut pas atteindre l’orbite, et pourquoi une fusée doit emporter son comburant et tant de propergol.',
-            'es': 'Por qué un reactor no puede llegar a órbita, y por qué un cohete debe llevar su propio oxidante y tanto propelente.',
-            'ar': 'لماذا لا يبلغ المحرك النفاث المدار، ولماذا يجب أن يحمل الصاروخ مؤكسده وكمية كبيرة من الوقود الدافع.',
-            'it': 'Perché un motore a getto non può raggiungere l’orbita, e perché un razzo deve portare il proprio ossidante e tanto propellente.',
-            'he': 'למה מנוע סילון לא מגיע למסלול, ולמה טיל חייב לשאת את המחמצן שלו וכל כך הרבה דלק.',
+            'en': 'A graduate lecture on the Space Shuttle’s main engines.',
+            'fr': 'Un cours de cycle supérieur sur les moteurs principaux de la navette spatiale.',
+            'es': 'Una clase de posgrado sobre los motores principales del transbordador espacial.',
+            'ar': 'محاضرة دراسات عليا عن المحركات الرئيسية لمكوك الفضاء.',
+            'it': 'Una lezione avanzata sui motori principali dello Space Shuttle.',
+            'he': 'שיעור מתקדם על המנועים הראשיים של מעבורת החלל.',
         },
     }],
     9: [{
-        'tier': 'start', 'id': 'hBE00PL04FM', 'length': '5:51', 'kind': 'univ',
-        'title': 'What Is an Orbit | Rocket Science for Everyone, Yale',
-        'page': 'https://www.youtube.com/watch?v=hBE00PL04FM',
-        'source': 'Marla Geha, Yale University (YaleCourses)',
-        'channel': 'YaleCourses',
+        'tier': 'start', 'id': 'wjOOrr2uPuU', 'length': '6:55', 'kind': 'nasa',
+        'title': 'Solar System Dynamics: Orbits and Kepler’s Laws',
+        'page': 'https://www.youtube.com/watch?v=wjOOrr2uPuU',
+        'source': 'NASA Solar System',
         'why': {
-            'en': 'What an orbit is: falling sideways fast enough to keep missing Earth.',
-            'fr': 'Ce qu’est une orbite : tomber de côté assez vite pour continuer à manquer la Terre.',
-            'es': 'Qué es una órbita: caer de lado lo bastante rápido como para seguir sin tocar la Tierra.',
-            'ar': 'ما المدار: سقوط جانبي بسرعة تكفي لمواصلة إخطاء الأرض.',
-            'it': 'Che cos’è un’orbita: cadere di lato abbastanza in fretta da continuare a mancare la Terra.',
-            'he': 'מהו מסלול: נפילה הצידה במהירות שמספיקה כדי להמשיך להחטיא את כדור הארץ.',
+            'en': 'Kepler’s laws: the rules that describe how one body orbits another.',
+            'fr': 'Les lois de Kepler : les règles qui décrivent comment un corps orbite autour d’un autre.',
+            'es': 'Las leyes de Kepler: las reglas que describen cómo un cuerpo orbita alrededor de otro.',
+            'ar': 'قوانين كبلر: القواعد التي تصف كيف يدور جسم حول جسم آخر.',
+            'it': 'Le leggi di Keplero: le regole che descrivono come un corpo orbita intorno a un altro.',
+            'he': 'חוקי קפלר: הכללים שמתארים איך גוף חג סביב גוף אחר.',
+        },
+    }, {
+        'tier': 'deep', 'id': 'Am7EwmxBAW8', 'length': '36:00', 'kind': 'nasa',
+        'title': 'Space Flight: The Application of Orbital Mechanics',
+        'page': 'https://www.youtube.com/watch?v=Am7EwmxBAW8',
+        'source': 'NASA STI Program',
+        'why': {
+            'en': 'A NASA primer on orbital mechanics, made for college physics students.',
+            'fr': 'Une introduction de la NASA à la mécanique orbitale, faite pour des étudiants de physique à l’université.',
+            'es': 'Una introducción de la NASA a la mecánica orbital, hecha para estudiantes universitarios de física.',
+            'ar': 'مدخل من ناسا إلى ميكانيكا المدارات، أُعدّ لطلاب الفيزياء في الجامعة.',
+            'it': 'Un’introduzione della NASA alla meccanica orbitale, pensata per studenti universitari di fisica.',
+            'he': 'מבוא של נאס״א למכניקת מסלולים, שנכתב לסטודנטים לפיזיקה באוניברסיטה.',
         },
     }, {
         'tier': 'seasoned', 'id': 'SJI-SAs1Rnk', 'length': '1:19:26', 'kind': 'mit',
@@ -283,9 +414,11 @@ def _credit(lang, vid):
     if vid['kind'] == 'nasa':
         return (f'{length} · {source}. {_esc(_shared(lang, "License:"))} '
                 f'<a href="{NASA_MEDIA}" rel="noopener license">{_esc(L["nasa_lic"])}</a> ({_esc(L["gov"])}). {_esc(L["nasa_note"])}')
-    return (f'{length} · {source}. {_esc(_shared(lang, "License:"))} '
-            f'<a href="{_esc(vid["page"])}" rel="noopener">{_esc(vid["channel"])}</a> ({_esc(L["univ_lic"])}). '
-            + _esc(_shared(lang, 'Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.')))
+    if vid['kind'] == 'delft':
+        note = _esc(_shared(lang, 'Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.'))
+        return (f'{length} · {source}. {_esc(_shared(lang, "License:"))} '
+                f'<a href="{CC}" rel="noopener license">CC BY-NC-SA 4.0</a>. {note}')
+    raise ValueError('unknown video kind ' + vid['kind'])
 
 
 def _player(lang, vid):
