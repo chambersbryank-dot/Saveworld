@@ -24,7 +24,8 @@ body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!imp
 .cite-foot{overflow-wrap:anywhere}
 #track-sentinel{height:1px}
 #track-prompt{margin:.15rem 0 .4rem}
-@media (max-width:700px){#track-prompt{padding-inline-end:11rem}}
+.crs-week{margin:.15rem 0 .35rem}
+@media (max-width:700px){#track-prompt,.crs-week{padding-inline-end:11rem}}
 .crs:has(#bs-aero){max-width:1180px;padding:.65rem 1rem 1.15rem}
 .crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:flex-start;justify-content:space-between;margin:.15rem 0 .45rem;padding:.4rem .5rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .crs-tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:.4rem;flex:1 1 280px;margin:0}
@@ -166,6 +167,7 @@ def fragment(lang, esc, live_for):
     parts.append(f'<div class="crs"{rtl}>')
     parts.append('<section class="crs-degree" id="bs-aero" aria-labelledby="bs-aero-title">')
     parts.append(f'<noscript><p>{E(S["noscript"])}</p></noscript>')
+    parts.append(week_html(lang))
     parts.append(f'<p id="track-prompt" data-off="{E(S["prompt"])}" data-on="{E(S["prompt_on"])}">{E(S["prompt"])}</p>')
     names = E(json.dumps(S['tname'], ensure_ascii=False))
     buttons = ''.join(
@@ -194,6 +196,12 @@ def fragment(lang, esc, live_for):
     parts.append('</section><!-- PROGRAMS: add the next program as another section.crs-degree sibling. -->')
     parts.append('</div>')
     return ''.join(parts)
+
+def week_html(lang):
+    S = T[lang]
+    before, after = S['week'].split('{course}')
+    link = f'<a href="Intro_to_Aerospace_Engineering.html#u1">{E(S["week_course"])}</a>'
+    return f'<p class="crs-week">{E(before)}{link}{E(after)}</p>'
 
 def _track_tag(S, label):
     return (f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(label)}">{E(label)}</span>')

@@ -20,7 +20,9 @@ T = {
  'desc': 'Free self-study programs. The first is a B.S. in Aerospace Engineering, with a shared core and four tracks.',
  'hero': 'One bachelor’s degree, a shared core, and four tracks. The courses below change with the track you choose.',
  'source': 'This path follows the Embry-Riddle Aeronautical University Daytona Beach catalog: one bachelor’s degree, a shared core, and four tracks.',
- 'prompt': 'Choose a track to add its year 3 and year 4 courses. Years 1 and 2 are the shared core for every track.',
+ 'prompt': 'Choose your preferred track based on your interest to add its Year 3 and Year 4 courses. Years 1 and 2 are shared by every track.',
+ 'week': 'Week one starts easy: watch a short intro lecture from NASA, TU Delft or MIT OpenCourseWare for {course}, then work through the unit at your own pace.',
+ 'week_course': 'Introduction to Aerospace Engineering, Unit 1',
  'prompt_on': 'Showing the shared core and the {name} track.',
  'noscript': 'Scripting is off, so every track is listed together. A course for one track shows that track’s name. A course with no track name is part of the shared core.',
  'core': 'Core', 'planned': 'Planned', 'soon': 'Coming soon', 'group': 'Track', 'years': 'Years', 'model': 'Catalog model:',
@@ -64,7 +66,9 @@ T = {
  'desc': 'Programmes gratuits en autoformation. Le premier est un B. Sc. en génie aérospatial, avec un tronc commun et quatre filières.',
  'hero': 'Un diplôme de baccalauréat, un tronc commun et quatre filières. Les cours ci-dessous changent selon la filière choisie.',
  'source': 'Ce parcours suit le catalogue d’Embry-Riddle Aeronautical University à Daytona Beach : un seul diplôme, un tronc commun et quatre filières.',
- 'prompt': 'Choisissez une filière pour ajouter ses cours de 3e et 4e année. Les années 1 et 2 sont le tronc commun de chaque filière.',
+ 'prompt': 'Choisissez la filière qui correspond à votre intérêt pour ajouter ses cours de 3e et de 4e année. Les années 1 et 2 sont communes à toutes les filières.',
+ 'week': 'La première semaine commence en douceur : regardez une courte leçon d’introduction de la NASA, de TU Delft ou du MIT OpenCourseWare pour {course}, puis avancez dans l’unité à votre rythme.',
+ 'week_course': 'Introduction à l’ingénierie aérospatiale, unité 1',
  'prompt_on': 'Tronc commun et filière {name}.',
  'noscript': 'Le script est désactivé, donc toutes les filières sont affichées ensemble. Un cours d’une seule filière indique le nom de cette filière. Un cours sans nom de filière fait partie du tronc commun.',
  'core': 'Tronc commun', 'planned': 'Prévu', 'soon': 'Bientôt', 'group': 'Filière', 'years': 'Années', 'model': 'Modèle du catalogue :',
@@ -108,7 +112,9 @@ T = {
  'desc': 'Programas gratuitos de autoestudio. El primero es un B.S. en ingeniería aeroespacial, con un núcleo común y cuatro itinerarios.',
  'hero': 'Un grado, un núcleo común y cuatro itinerarios. Los cursos de abajo cambian según el itinerario elegido.',
  'source': 'Este itinerario sigue el catálogo de Embry-Riddle Aeronautical University en Daytona Beach: un solo grado, un núcleo común y cuatro itinerarios.',
- 'prompt': 'Elige un itinerario para añadir sus cursos de 3.º y 4.º. Los años 1 y 2 son el núcleo común de todos los itinerarios.',
+ 'prompt': 'Elige el itinerario que más te interese para añadir sus cursos de 3.º y 4.º año. Los años 1 y 2 son comunes a todos los itinerarios.',
+ 'week': 'La primera semana empieza fácil: mira una breve clase de introducción de la NASA, de TU Delft o del MIT OpenCourseWare para {course}, y luego trabaja la unidad a tu ritmo.',
+ 'week_course': 'Introducción a la ingeniería aeroespacial, unidad 1',
  'prompt_on': 'Núcleo común e itinerario de {name}.',
  'noscript': 'El script está desactivado, así que todos los itinerarios aparecen juntos. Un curso de un solo itinerario muestra el nombre de ese itinerario. Un curso sin nombre de itinerario forma parte del núcleo común.',
  'core': 'Núcleo', 'planned': 'Planificado', 'soon': 'Próximamente', 'group': 'Itinerario', 'years': 'Años', 'model': 'Modelo del catálogo:',
@@ -152,7 +158,9 @@ T = {
  'desc': 'برامج مجانية للتعلّم الذاتي. الأول بكالوريوس في هندسة الطيران والفضاء، مع متطلبات مشتركة وأربعة مسارات.',
  'hero': 'درجة بكالوريوس واحدة، ومتطلبات مشتركة، وأربعة مسارات. المقررات أدناه تتغير حسب المسار الذي تختاره.',
  'source': 'يتبع هذا المسار فهرس جامعة إمبري-ريدل للطيران في دايتونا بيتش: درجة واحدة، ومتطلبات مشتركة، وأربعة مسارات.',
- 'prompt': 'اختر مسارًا لإضافة مقررات السنة 3 والسنة 4. السنتان 1 و2 هما المتطلبات المشتركة لكل مسار.',
+ 'prompt': 'اختر المسار الذي يناسب اهتمامك لإضافة مقررات السنة 3 والسنة 4. السنتان 1 و2 مشتركتان بين كل المسارات.',
+ 'week': 'الأسبوع الأول يبدأ بسهولة: شاهد محاضرة تمهيدية قصيرة من ناسا أو TU Delft أو MIT OpenCourseWare في {course}، ثم ادرس الوحدة بوتيرتك.',
+ 'week_course': 'مقدمة في هندسة الطيران والفضاء، الوحدة 1',
  'prompt_on': 'المتطلبات المشتركة ومسار {name}.',
  'noscript': 'البرمجة النصية متوقفة، لذا تظهر كل المسارات معًا. مقرر المسار الواحد يُظهر اسم ذلك المسار. المقرر بلا اسم مسار هو من المتطلبات المشتركة.',
  'core': 'متطلبات مشتركة', 'planned': 'مخطط', 'soon': 'قريبًا', 'group': 'المسار', 'years': 'السنوات', 'model': 'نموذج الفهرس:',
@@ -196,7 +204,9 @@ T = {
  'desc': 'Programmi gratuiti di autoapprendimento. Il primo è un B.S. in ingegneria aerospaziale, con un nucleo comune e quattro indirizzi.',
  'hero': 'Un titolo di laurea, un nucleo comune e quattro indirizzi. I corsi sotto cambiano con l’indirizzo scelto.',
  'source': 'Questo percorso segue il catalogo della Embry-Riddle Aeronautical University a Daytona Beach: un solo titolo, un nucleo comune e quattro indirizzi.',
- 'prompt': 'Scegli un indirizzo per aggiungere i corsi del 3º e del 4º anno. Gli anni 1 e 2 sono il nucleo comune di ogni indirizzo.',
+ 'prompt': 'Scegli l’indirizzo che ti interessa per aggiungere i corsi del 3º e del 4º anno. Gli anni 1 e 2 sono condivisi da ogni indirizzo.',
+ 'week': 'La prima settimana inizia piano: guarda una breve lezione introduttiva della NASA, della TU Delft o del MIT OpenCourseWare per {course}, poi svolgi l’unità al tuo ritmo.',
+ 'week_course': 'Introduzione all’ingegneria aerospaziale, unità 1',
  'prompt_on': 'Nucleo comune e indirizzo {name}.',
  'noscript': 'Lo script è disattivato, quindi tutti gli indirizzi compaiono insieme. Un corso di un solo indirizzo mostra il nome di quell’indirizzo. Un corso senza nome di indirizzo fa parte del nucleo comune.',
  'core': 'Nucleo', 'planned': 'Previsto', 'soon': 'Prossimamente', 'group': 'Indirizzo', 'years': 'Anni', 'model': 'Modello del catalogo:',
@@ -240,7 +250,9 @@ T = {
  'desc': 'תוכניות לימוד עצמי חינמיות. הראשונה היא תואר בהנדסת אווירונאוטיקה וחלל, עם ליבה משותפת וארבעה מסלולים.',
  'hero': 'תואר אחד, ליבה משותפת וארבעה מסלולים. הקורסים למטה משתנים לפי המסלול שנבחר.',
  'source': 'המסלול הזה עוקב אחרי הקטלוג של אוניברסיטת אמברי-רידל לאווירונאוטיקה בדייטונה ביץ׳: תואר אחד, ליבה משותפת וארבעה מסלולים.',
- 'prompt': 'בחרו מסלול כדי להוסיף את קורסי השנה השלישית והרביעית. שנים 1 ו-2 הן הליבה המשותפת לכל מסלול.',
+ 'prompt': 'בחרו את המסלול לפי מה שמעניין אתכם כדי להוסיף את קורסי שנה 3 ושנה 4. שנים 1 ו-2 משותפות לכל מסלול.',
+ 'week': 'השבוע הראשון מתחיל בקלות: צפו בהרצאת מבוא קצרה של נאס״א, של TU Delft או של MIT OpenCourseWare עבור {course}, ואז עברו על היחידה בקצב שלכם.',
+ 'week_course': 'מבוא להנדסת אווירונאוטיקה וחלל, יחידה 1',
  'prompt_on': 'הליבה המשותפת ומסלול {name}.',
  'noscript': 'הסקריפט כבוי, ולכן כל המסלולים מוצגים יחד. קורס של מסלול אחד מציג את שם המסלול. קורס בלי שם מסלול הוא חלק מהליבה המשותפת.',
  'core': 'ליבה', 'planned': 'מתוכנן', 'soon': 'בקרוב', 'group': 'מסלול', 'years': 'שנים', 'model': 'דגם הקטלוג:',
@@ -281,7 +293,7 @@ T = {
 ORBIT_LINK = P('Orbits course', 'Cours sur les orbites', 'Curso de órbitas', 'مقرر المدارات', 'Corso sulle orbite', 'קורס מסלולים')
 
 # Keys every language must have, so a hole fails before a page is written.
-_NEED = ('title', 'program', 'note', 'desc', 'hero', 'source', 'prompt', 'prompt_on', 'noscript', 'core', 'planned', 'soon', 'group', 'years', 'model', 'tip', 'tip_body', 'tname', 'tdesc', 'cmp_h', 'cmp', 'track_cmp', 'card')
+_NEED = ('title', 'program', 'note', 'intro', 'desc', 'hero', 'source', 'prompt', 'prompt_on', 'week', 'week_course', 'noscript', 'core', 'planned', 'soon', 'group', 'years', 'model', 'tip', 'tip_body', 'tname', 'tdesc', 'cmp_h', 'cmp', 'track_cmp', 'card')
 for _lang, _d in T.items():
     missing = [k for k in _NEED if k not in _d]
     if missing:
