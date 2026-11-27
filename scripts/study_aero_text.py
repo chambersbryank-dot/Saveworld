@@ -24,6 +24,8 @@ T = {
  'prompt_on': 'Showing the shared core and the {name} track.',
  'noscript': 'Scripting is off, so every track is listed. Each card is tagged Core or the track name.',
  'core': 'Core', 'planned': 'Planned', 'group': 'Track', 'years': 'Years', 'model': 'Catalog model:',
+ 'tip': 'Note',
+ 'tip_body': 'This number is from the Embry-Riddle Aeronautical University Daytona Beach catalog. It is not a Saving Planets course code.',
  'tname': {'aeronautics': 'Aeronautics', 'astronautics': 'Astronautics', 'jet': 'Jet Propulsion', 'rocket': 'Rocket Propulsion'},
  'tdesc': {
   'aeronautics': 'Focuses on aerodynamics, aircraft design, and the stability and control of aircraft.',
@@ -66,6 +68,8 @@ T = {
  'prompt_on': 'Tronc commun et filière {name}.',
  'noscript': 'Le script est désactivé : toutes les filières sont affichées. Chaque carte indique Tronc commun ou le nom de la filière.',
  'core': 'Tronc commun', 'planned': 'Prévu', 'group': 'Filière', 'years': 'Années', 'model': 'Modèle du catalogue :',
+ 'tip': 'Note',
+ 'tip_body': 'Ce numéro vient du catalogue d’Embry-Riddle Aeronautical University à Daytona Beach. Ce n’est pas un code de cours de Saving Planets.',
  'tname': {'aeronautics': 'Aéronautique', 'astronautics': 'Astronautique', 'jet': 'Propulsion par réaction', 'rocket': 'Propulsion des fusées'},
  'tdesc': {
   'aeronautics': 'Porte sur l’aérodynamique, la conception des avions, et la stabilité et le contrôle des aéronefs.',
@@ -108,6 +112,8 @@ T = {
  'prompt_on': 'Núcleo común e itinerario de {name}.',
  'noscript': 'El script está desactivado, así que se listan todos los itinerarios. Cada ficha indica Núcleo o el nombre del itinerario.',
  'core': 'Núcleo', 'planned': 'Planificado', 'group': 'Itinerario', 'years': 'Años', 'model': 'Modelo del catálogo:',
+ 'tip': 'Nota',
+ 'tip_body': 'Este número es del catálogo de Embry-Riddle Aeronautical University en Daytona Beach. No es un código de curso de Saving Planets.',
  'tname': {'aeronautics': 'Aeronáutica', 'astronautics': 'Astronáutica', 'jet': 'Propulsión a reacción', 'rocket': 'Propulsión de cohetes'},
  'tdesc': {
   'aeronautics': 'Se centra en la aerodinámica, el diseño de aviones y la estabilidad y el control de las aeronaves.',
@@ -150,6 +156,8 @@ T = {
  'prompt_on': 'المتطلبات المشتركة ومسار {name}.',
  'noscript': 'البرمجة النصية متوقفة، لذا تظهر كل المسارات. كل بطاقة موسومة بالمتطلبات المشتركة أو باسم المسار.',
  'core': 'متطلبات مشتركة', 'planned': 'مخطط', 'group': 'المسار', 'years': 'السنوات', 'model': 'نموذج الفهرس:',
+ 'tip': 'ملاحظة',
+ 'tip_body': 'هذا الرقم من فهرس جامعة إمبري-ريدل للطيران في دايتونا بيتش. وهو ليس رمز مقرر من Saving Planets.',
  'tname': {'aeronautics': 'الطيران', 'astronautics': 'الملاحة الفضائية', 'jet': 'الدفع النفاث', 'rocket': 'دفع الصواريخ'},
  'tdesc': {
   'aeronautics': 'يركز على الديناميكا الهوائية وتصميم الطائرات واستقرار الطائرة والتحكم بها.',
@@ -192,6 +200,8 @@ T = {
  'prompt_on': 'Nucleo comune e indirizzo {name}.',
  'noscript': 'Lo script è disattivato, quindi compaiono tutti gli indirizzi. Ogni scheda indica Nucleo o il nome dell’indirizzo.',
  'core': 'Nucleo', 'planned': 'Previsto', 'group': 'Indirizzo', 'years': 'Anni', 'model': 'Modello del catalogo:',
+ 'tip': 'Nota',
+ 'tip_body': 'Questo numero viene dal catalogo della Embry-Riddle Aeronautical University a Daytona Beach. Non è un codice di corso di Saving Planets.',
  'tname': {'aeronautics': 'Aeronautica', 'astronautics': 'Astronautica', 'jet': 'Propulsione a getto', 'rocket': 'Propulsione a razzo'},
  'tdesc': {
   'aeronautics': 'Riguarda l’aerodinamica, il progetto degli aerei e la stabilità e il controllo del velivolo.',
@@ -234,6 +244,8 @@ T = {
  'prompt_on': 'הליבה המשותפת ומסלול {name}.',
  'noscript': 'הסקריפט כבוי, ולכן כל המסלולים מוצגים. כל כרטיס מסומן ליבה או בשם המסלול.',
  'core': 'ליבה', 'planned': 'מתוכנן', 'group': 'מסלול', 'years': 'שנים', 'model': 'דגם הקטלוג:',
+ 'tip': 'הערה',
+ 'tip_body': 'המספר הזה הוא מהקטלוג של אוניברסיטת אמברי-רידל לאווירונאוטיקה בדייטונה ביץ׳. הוא אינו קוד קורס של Saving Planets.',
  'tname': {'aeronautics': 'אווירונאוטיקה', 'astronautics': 'אסטרונאוטיקה', 'jet': 'הנעה סילונית', 'rocket': 'הנעה רקטית'},
  'tdesc': {
   'aeronautics': 'מתמקד באווירודינמיקה, בתכן מטוסים, וביציבות ובקרה של כלי טיס.',

@@ -2,7 +2,7 @@
 """Study: Aerospace Engineering hub body for Courses.html.
 Splices into the existing page so the header, footer, and preload styles stay."""
 import html, json, os, re
-from study_aero_text import T, IDS, ORBIT_LINK
+from study_aero_text import T, IDS
 from courses import roadmap as RM
 
 SRC = {
@@ -30,7 +30,11 @@ CSS = r"""/* STUDY-TRACKS */
 .crs-track-n{display:block;font-weight:800}
 .crs-track-d{display:block;font-size:.82rem;font-weight:500;line-height:1.35}
 .crs-track[aria-pressed="true"]{border:2px solid #ffd54a;font-weight:700}
-.crs-track:focus-visible,.crs-jumps a:focus-visible,.crs-totop:focus-visible,.crs-foldbar button:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
+.crs-track:focus-visible,.crs-jumps a:focus-visible,.crs-totop:focus-visible,.crs-foldbar button:focus-visible,.crs-tip>summary:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}
+.crs-tip{margin:.15rem 0 0}
+.crs-tip>summary{cursor:pointer;display:inline-flex;align-items:center;min-height:44px;padding:0 .15rem;list-style:none;font-size:.85rem;font-weight:800;text-decoration:underline;text-underline-offset:.15em}
+.crs-tip>summary::-webkit-details-marker{display:none}
+.crs-tip>p{margin:.15rem 0 .35rem;max-width:36rem;font-size:.9rem;line-height:1.45}
 .crs-sticky.is-stuck{padding:.35rem .5rem}
 .crs-sticky.is-stuck .crs-track-d{display:none}
 .crs-jumps{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
@@ -192,7 +196,8 @@ def planned_card(lang, pid, tracks, model):
             f'<span class="crs-badge soon">{E(S["planned"])}</span>'
             f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(tag)}">{E(tag)}</span>'
             f'<h3>{E(title)}</h3><p>{E(desc)}</p>'
-            f'<p class="crs-kicker">{E(S["model"])} <bdi dir="ltr">{E(model)}</bdi></p></li>')
+            f'<p class="crs-kicker">{E(S["model"])} <bdi dir="ltr">{E(model)}</bdi></p>'
+            f'<details class="crs-tip"><summary>{E(S["tip"])}</summary><p>{E(S["tip_body"])}</p></details></li>')
 
 def compare_html(lang, top):
     S = T[lang]
@@ -213,8 +218,6 @@ def live_card(lang, cid, title, desc, esc, mod, href, english):
         tag = ' · '.join(S['tname'][t] for t in role)
     note = ' <span lang="en">(English)</span>' if english else ''
     blurb = esc(desc)
-    if cid == 'orbit':
-        blurb += f' <a href="Orbits_Guide.html">{E(ORBIT_LINK[lang])}</a>'
     return (f'<li class="crs-c live{extra}" data-tracks="{tracks}">'
             f'<span class="crs-badge">{esc("Live")}</span>'
             f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(tag)}">{E(tag)}</span>'

@@ -34,8 +34,8 @@ YEARS = [
   ('scdesign', 'Spacecraft Design', 'Subsystems, power, thermal and mission requirements.'),
   ('heat', 'Heat Transfer', 'Conduction, convection and radiation.'),
   ('avionics', 'Avionics & Systems Engineering', 'Flight electronics and managing complex systems.'),
-  ('capstone', 'Capstone (aircraft or CubeSat)', 'A full design project from requirements to review.'),
-  ('sustain', 'Sustainable Aviation', 'Cleaner fuels, efficient aircraft and lower emissions.')]),
+  ('sustain', 'Sustainable Aviation', 'Cleaner fuels, efficient aircraft and lower emissions.'),
+  ('capstone', 'Capstone (aircraft or CubeSat)', 'A full design project from requirements to review.')]),
 ]
 # Nov 24 2026: one B.S. Aerospace Engineering path. Years 1–2 are shared core.
 # Year 3–4 courses are 'core' (every track) or a tuple of track ids.
