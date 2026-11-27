@@ -437,7 +437,8 @@ CSS = r"""
 .crs-film-tools label{display:flex;flex-direction:column;gap:.15rem;font-size:.85rem;font-weight:750}
 .crs-film-tools select,.crs-film-tools a,.crs-film-tools button,.crs-film-tools summary{min-height:44px;font:inherit}
 .crs-film-tools select{padding:0 .4rem;border-radius:10px;color:#10283f;background:#f7fbff}
-.crs-film-tools details{flex:1 1 16rem}
+.crs-film-tools details{flex:1 1 16rem;min-width:0;max-width:100%}
+@media (max-width:640px){.crs-film-tools label{flex:1 1 100%;min-width:0;max-width:100%}.crs-film-tools select{width:100%;max-width:100%}.crs-film-line{overflow-wrap:anywhere}.crs-film-bar{max-width:100%}}
 .crs-film-tools summary,.crs-film-script>summary{cursor:pointer;display:flex;align-items:center;font-weight:800}
 .crs-film-note{margin:.35rem 0;font-size:.88rem;line-height:1.4}
 .crs-film-cite-k{margin:.45rem 0 .1rem;font-weight:800}

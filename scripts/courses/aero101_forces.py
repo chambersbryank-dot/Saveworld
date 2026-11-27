@@ -168,7 +168,7 @@ def plane_svg(lang, which):
     rtl_text = lang in ('ar', 'he')
     arrows = ''.join([
         _arrow('lift', 200, 96, 200, 28, 200, 18, 'middle', names['lift'], rtl_text),
-        _arrow('weight', 176, 116, 176, 184, 176, 198, 'middle', names['weight'], rtl_text),
+        _arrow('weight', 176, 116, 176, 184, 176, 190, 'middle', names['weight'], rtl_text),
         _arrow('thrust', 220, 138, 300, 138, 248, 158, 'middle', names['thrust'], rtl_text),
         _arrow('drag', 130, 108, 22, 108, 70, 92, 'middle', names['drag'], rtl_text),
     ])
@@ -272,9 +272,9 @@ CSS = (
     '.crs-plane.is-lift .is-lift,.crs-plane.is-weight .is-weight,.crs-plane.is-thrust .is-thrust,.crs-plane.is-drag .is-drag{opacity:1}'
     '@keyframes crs-force{0%{opacity:0}15%{opacity:1}55%{opacity:1}100%{opacity:.25}}'
     '@media (prefers-reduced-motion:reduce){.crs-plane.is-all .crs-arrow{animation:none;opacity:1}.crs-plane.is-one .crs-arrow{animation:none}}'
-    '@media (max-width:640px){.crs-units thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}'
+    '@media (max-width:640px){.crs-units thead,.crs-units thead tr,.crs-units thead th{display:block;position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}'
     '.crs-units tr{display:block;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.14)}'
-    '.crs-units td{display:block;border:0;padding:.15rem .4rem}'
+    '.crs-units td,.crs-units td:first-child{display:block;border:0;padding:.15rem .4rem;white-space:normal;width:auto;overflow-wrap:anywhere}'
     '.crs-units td::before{content:attr(data-label);display:block;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;opacity:.72}}'
     '.crs-deeper{margin:.85rem 0 .15rem;border:1px solid rgba(255,255,255,.24);border-radius:14px;background:rgba(255,255,255,.05)}'
     '.crs-deeper>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:.5rem;padding:.15rem .85rem;list-style:none}'
@@ -284,6 +284,14 @@ CSS = (
     '.crs-deeper>summary h3{margin:0;flex:1;font-size:.92rem;font-weight:750;line-height:1.25}'
     '.crs-deeper-i{width:1.15rem;height:1.15rem;flex:none;color:#d7ecff}'
     '.crs-deeper .crs-res{margin:.05rem .95rem .8rem;font-size:.92rem}'
+    '.crs-units{position:relative;overflow:clip;max-width:100%}'
+    '.crs-units>summary h2,.crs-deeper>summary h3{min-width:0;overflow-wrap:anywhere}'
+    '.crs-tools{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}'
+    '.crs-btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;box-sizing:border-box;text-align:center;line-height:1.25;white-space:normal}'
+    '.crs-tw{max-width:100%;overflow-x:auto}'
+    '.crs-src,.crs-res{overflow-wrap:anywhere}'
+    '.katex-display,.crs-eq{max-width:100%;overflow-x:auto}'
+    '@media (max-width:640px){.crs{padding-bottom:5.5rem}}'
 )
 
 DESC = {

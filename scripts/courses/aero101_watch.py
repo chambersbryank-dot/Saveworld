@@ -69,20 +69,8 @@ LABELS = {
 
 # why[lang] is one sentence. kind is mit, nasa, or delft.
 VIDEOS = {
+    # The Wright Brothers film is Unit 1's featured player, so it is not repeated here.
     1: [{
-        'tier': 'start', 'id': 'L_mJxmO7_8A', 'length': '6:01', 'kind': 'nasa',
-        'title': 'The Wright Brothers',
-        'page': 'https://www.youtube.com/watch?v=L_mJxmO7_8A',
-        'source': 'NASA Connect, NASA',
-        'why': {
-            'en': 'See how the Wright brothers used the engineering method to design and fly the first airplane.',
-            'fr': 'Voyez comment les frères Wright ont utilisé la méthode d’ingénierie pour concevoir et faire voler le premier avion.',
-            'es': 'Vea cómo los hermanos Wright usaron el método de ingeniería para diseñar y volar el primer avión.',
-            'ar': 'شاهد كيف استخدم الأخوان رايت منهج الهندسة لتصميم أول طائرة وتحليقها.',
-            'it': 'Guarda come i fratelli Wright hanno usato il metodo ingegneristico per progettare e far volare il primo aeroplano.',
-            'he': 'ראו איך האחים רייט השתמשו בשיטת ההנדסה כדי לתכנן ולהטיס את המטוס הראשון.',
-        },
-    }, {
         'tier': 'deep', 'id': 'j0SaIXktsQg', 'length': '15:00', 'kind': 'delft',
         'title': 'History of Flight',
         'page': 'https://www.youtube.com/watch?v=j0SaIXktsQg',
@@ -361,7 +349,8 @@ CSS = (
     '.crs-watch>summary::before{content:"▸";margin-inline-end:.55rem}'
     '.crs-watch[open]>summary::before{content:"▾"}'
     'html[dir="rtl"] .crs-watch>summary::before{content:"◂"}'
-    '.crs-watch>summary h3{margin:0}'
+    '.crs-watch>summary{flex-wrap:wrap}'
+    '.crs-watch>summary h3{margin:0;min-width:0;overflow-wrap:anywhere}'
     '.crs-watch-tier{padding:0 1rem 1rem}'
     '.crs-watch h4{margin:1rem 0 .35rem;font-size:1.02rem}'
     '.crs-watch-frame{position:relative;aspect-ratio:16/9;margin:.55rem 0;border-radius:12px;overflow:hidden;background:#071422}'

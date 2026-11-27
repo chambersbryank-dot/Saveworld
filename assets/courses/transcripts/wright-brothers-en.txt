@@ -1,0 +1,51 @@
+The Wright Brothers
+NASA Connect. August 18, 2007. 6:01.
+https://www.youtube.com/watch?v=L_mJxmO7_8A
+
+These lines follow YouTube’s transcript of this NASA Connect film, through 5:53. Names the automatic transcript misspelled are restored.
+
+0:02  Hi, I'm Jennifer Pulley, and welcome to NASA Connect, the show that connects you to math, science, technology, and NASA. I'm
+0:11  here at the Wright Brothers National Memorial on the Outer Banks of North Carolina. This is where Orville and Wilbur
+0:18  Wright flew the first airplane 100 years ago. I've read that there were many inventors besides the Wright brothers trying
+0:25  to invent the airplane. Oh yeah, it's true. Many famous inventors, including Alexander Graham Bell, Thomas Edison, machine-gun
+0:34  inventor Hiram Maxim, and Samuel Langley, the secretary of the Smithsonian Institution, had all attempted to build
+0:41  flying machines. My teacher said that the Wright brothers didn't have high school diplomas and didn't have a lot of money to work with. Is that true? They were both
+0:50  good students in school, and Wilbur completed all the courses he needed in order to graduate high school. He just never picked up his degree. Both Wilbur
+0:59  and Orville loved to read outside the classroom. And you're right, they really didn't have a lot of money to work with. But the Wright brothers figured out how to
+1:07  conduct their experiments without spending a lot of money. They were able to support all their experiments through their day jobs, their small bicycle shop.
+1:15  So how come it was the Wright brothers who invented the airplane? You know, that's a good question. Why was it that these two little-known bicycle mechanics from
+1:23  Dayton, Ohio, succeeded where so many other famous and successful inventors had failed? Well, to help find the answer to that question, we spoke with Dr.
+1:32  Tom Crouch, senior curator of the Division of Aeronautics at the National Air and Space
+1:40  Museum. Dr. Crouch, what was the Wright brothers' secret to success? Jennifer, they were brilliant, intuitive engineers.
+1:49  In order to invent the airplane, they had to come up with a process of invention, a way to solve really difficult technical problems. Today we call it the
+1:58  engineering method. The first thing that the Wright brothers did correctly was to define the problem. The Wright brothers studied the experiments of other
+2:06  inventors and quickly realized that many of them were missing the true problem. The Wright brothers saw that the true
+2:13  problem would be maintaining balance and control in their machine. Many other experimenters were convinced that an airplane could only be successful if it
+2:22  relied on some method of automatic stability. They thought it would be impossible for a pilot to react quickly enough to all of the changes that might
+2:29  happen to an airplane in flight. They thought that it would be like balancing on the head of a pin, which is impossible to do. The Wright brothers saw things
+2:37  differently. They were bicycle builders and bicycle riders, and they drew on that experience when they thought about controlling an airplane. Imagine that
+2:46  you're trying to describe how you ride a bicycle to a Martian, or to someone who's never seen one. You might talk about riding downhill on a tiny seat perched
+2:55  atop two very narrow spinning tires. In addition, you have these pedals you're going to have to work, and a handlebar to steer with, and you're going
+3:03  to have to coordinate all of that at the same time. You know, I can see how the person you were talking to would think they'd have to be the world's greatest acrobat to ride something like that.
+3:12  That's right. But the Wright brothers knew that you internalize the business of riding a bicycle, and they also knew that the same thing would happen with an
+3:19  airplane. You would learn to fly an airplane and do it automatically. So the Wright brothers then correctly defined
+3:26  the problem. Yes. They knew that control was the problem. So the Wright brothers observed the movements of the soaring birds to see if they could figure out
+3:34  how they control themselves in the air. They thought they detected subtle ways that soaring birds altered their wings to maintain balance. But the Wrights were
+3:42  stumped as to how they could duplicate the organic movements of a bird's wing in a very mechanical flying machine,
+3:49  which brings us to the next step in the engineering method: propose solutions. Tom, what solutions did the Wright brothers
+3:57  propose? They really struggled with how they could control the geometry of their wing to control the motion of the flying
+4:04  machine, until one day Wilbur was in the bicycle shop and a customer came in and asked for a bicycle tube for his tire.
+4:12  And Wilbur took it out in a box just like this one, and he was fiddling with the box, standing there talking, and it
+4:20  suddenly occurred to him that the answer to their problem was right in his hands. Wilbur noticed that if he put the thumb and forefinger of one hand on these two
+4:28  diagonal corners, and the thumb and forefinger of the other hand on the opposite diagonal corners, that he could squeeze the box back and forth. He
+4:37  noticed that the box twisted. In his mind, Wilbur pictured the top and bottom of the box as the wings of a biplane. With a
+4:44  simple system of cables, he could draw the corners together, turning one set of wing tips up in the wind and the other set of wing tips down. He realized in
+4:53  this way he could control the shape of his wings and would be able to roll his aircraft in the sky. Okay, so now the Wright brothers have a proposed solution:
+5:02  warp their biplane wings. Using the engineering method, the next step would be to evaluate their solution using
+5:09  tests and prototypes. In other words, the Wright brothers needed to put their wing-warping theory to the test. That's right,
+5:16  Jennifer. They didn't begin by building a powered flying machine. They had to start by building and testing prototypes, and they started with this
+5:25  small biplane kite. Watch how this prototype flies. Notice when you pull on the opposite strings, the kite rolls to
+5:32  the left and right. The wing-twisting concept Wilbur proposed from the inner-tube box actually worked in his
+5:39  prototype kite. So, from the success of their kite, the Wright brothers built the first powered airplane. No. First they
+5:46  built a series of three gliders over three years, and what they learned helped them to build the world's first powered
+5:53  airplane. Hey, that leads us to the final step in the engineering method: select and refine the best solution.

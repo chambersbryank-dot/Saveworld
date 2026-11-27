@@ -13,6 +13,8 @@ from courses import roadmap as RM
 from courses import aero101_watch as AW
 from courses import aero101_forces as AF
 from courses import aero101_review as AR
+from courses import aero101_film as A1F
+from courses import nasa_film as NF
 V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
@@ -134,8 +136,10 @@ def _code(src, out=None):
     return r
 
 def unit(C, K, i, u):
-    uid = u['id']; o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
-         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))}' + ('' if C.ID == 'aero101' else ' · ' + esc(u["weeks"])) + f'</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
+    uid = u['id']
+    film = A1F.figure(LANG) if C.ID == 'aero101' and uid == 'u1' else ''
+    o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
+         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))}' + ('' if C.ID == 'aero101' else ' · ' + esc(u["weeks"])) + f'</p><h2 id="{uid}-h">{esc(u["title"])}</h2>' + film + f'<p class="crs-lead">{esc(u["summary"])}</p>']
     o.append(f'<h3>{esc("Learning objectives")}</h3><p>{esc("By the end of this unit you can:")}</p>' + ul(u['objectives'], 'crs-obj'))
     o.append(f'<h3>{esc("Key concepts")}</h3>' + ul(u['concepts'], 'crs-key'))
     if C.ID == 'aero101' and uid == 'u1':
@@ -531,7 +535,8 @@ def course_page(C):
                   '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
-                  + AW.CSS + AF.CSS + AR.CSS + '</style>\n' + AW.JS + '\n')
+                  + AW.CSS + AF.CSS + AR.CSS + NF.CSS + '</style>\n' + AW.JS + '\n'
+                  + f'<script src="{pre()}{NF.JS}" defer></script>\n')
     page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
     return aero_foot(page, C) if quiet else page
 

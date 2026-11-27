@@ -1,0 +1,51 @@
+The Wright Brothers
+NASA Connect. August 18, 2007. 6:01.
+https://www.youtube.com/watch?v=L_mJxmO7_8A
+
+Traduction SI de cette transcription anglaise. Ce n’est pas une traduction de la NASA.
+
+0:02  Bonjour, je suis Jennifer Pulley, et bienvenue dans NASA Connect, l’émission qui vous relie aux mathématiques, aux sciences, à la technologie et à la NASA. Je suis
+0:11  ici, au Wright Brothers National Memorial, sur les Outer Banks de Caroline du Nord. C’est ici qu’Orville et Wilbur
+0:18  Wright ont fait voler le premier avion, il y a 100 ans. J’ai lu que beaucoup d’inventeurs, outre les frères Wright, essayaient
+0:25  d’inventer l’avion. Oh oui, c’est vrai. Beaucoup d’inventeurs célèbres, dont Alexander Graham Bell, Thomas Edison, l’inventeur de la mitrailleuse
+0:34  Hiram Maxim, et Samuel Langley, le secrétaire de la Smithsonian Institution, avaient tous essayé de construire
+0:41  des machines volantes. Mon professeur disait que les frères Wright n’avaient pas de diplôme de fin d’études et n’avaient pas beaucoup d’argent. Est-ce vrai ? Ils étaient tous les deux
+0:50  de bons élèves, et Wilbur a suivi tous les cours nécessaires pour terminer le lycée. Il n’est simplement jamais allé chercher son diplôme. Wilbur et
+0:59  Orville aimaient lire en dehors de la classe. Et vous avez raison, ils n’avaient vraiment pas beaucoup d’argent. Mais les frères Wright ont trouvé comment
+1:07  mener leurs expériences sans dépenser beaucoup d’argent. Ils ont pu financer toutes leurs expériences grâce à leur travail, leur petite boutique de vélos.
+1:15  Alors, pourquoi est-ce les frères Wright qui ont inventé l’avion ? Vous savez, c’est une bonne question. Pourquoi ces deux mécaniciens de vélos peu connus, de
+1:23  Dayton, dans l’Ohio, ont réussi là où tant d’inventeurs célèbres avaient échoué ? Eh bien, pour trouver la réponse, nous avons parlé avec le Dr
+1:32  Tom Crouch, conservateur principal de la division d’aéronautique du National Air and Space
+1:40  Museum. Docteur Crouch, quel était le secret de la réussite des frères Wright ? Jennifer, c’étaient de brillants ingénieurs intuitifs.
+1:49  Pour inventer l’avion, ils ont dû inventer un processus, une façon de résoudre des problèmes techniques vraiment difficiles. Aujourd’hui, nous l’appelons la
+1:58  méthode d’ingénierie. La première chose que les frères Wright ont faite correctement, c’est définir le problème. Les frères Wright ont étudié les expériences d’autres
+2:06  inventeurs et ont vite compris que beaucoup d’entre eux manquaient le vrai problème. Les frères Wright ont vu que le vrai
+2:13  problème serait de garder l’équilibre et le contrôle de leur machine. Beaucoup d’autres expérimentateurs étaient convaincus qu’un avion ne pouvait réussir que s’il
+2:22  reposait sur une stabilité automatique. Ils pensaient qu’il serait impossible à un pilote de réagir assez vite à tous les changements qui pourraient
+2:29  survenir à un avion en vol. Ils pensaient que ce serait comme tenir en équilibre sur une tête d’épingle, ce qui est impossible. Les frères Wright voyaient les choses
+2:37  autrement. Ils construisaient des bicyclettes et en faisaient, et ils se sont appuyés sur cette expérience pour penser le contrôle d’un avion. Imaginez que
+2:46  vous essayez d’expliquer à un Martien, ou à quelqu’un qui n’en a jamais vu, comment on fait du vélo. Vous pourriez parler de descendre une pente sur une toute petite selle posée
+2:55  sur deux pneus très étroits qui tournent. En plus, il y a ces pédales qu’il faut actionner, et un guidon pour diriger, et vous allez
+3:03  devoir coordonner tout cela en même temps. Vous savez, je comprends que la personne en face pense qu’il faudrait être le plus grand acrobate du monde pour conduire une chose pareille.
+3:12  C’est exact. Mais les frères Wright savaient qu’on intériorise le fait de faire du vélo, et ils savaient aussi que la même chose se produirait avec un
+3:19  avion. On apprendrait à piloter un avion et on le ferait automatiquement. Les frères Wright ont donc correctement défini
+3:26  le problème. Oui. Ils savaient que le contrôle était le problème. Les frères Wright ont donc observé les mouvements des oiseaux planeurs pour voir s’ils pouvaient comprendre
+3:34  comment ils se contrôlent dans l’air. Ils croyaient déceler des façons subtiles dont les oiseaux planeurs modifiaient leurs ailes pour garder l’équilibre. Mais les Wright étaient
+3:42  bloqués : comment reproduire les mouvements organiques de l’aile d’un oiseau dans une machine volante très mécanique,
+3:49  ce qui nous amène à l’étape suivante de la méthode d’ingénierie : proposer des solutions. Tom, quelles solutions les frères Wright ont-ils
+3:57  proposées ? Ils ont vraiment peiné à trouver comment contrôler la géométrie de leur aile pour contrôler le mouvement de la machine
+4:04  volante, jusqu’au jour où Wilbur était dans la boutique de vélos et un client est entré demander une chambre à air pour son pneu.
+4:12  Et Wilbur l’a sortie d’une boîte comme celle-ci, et il tripotait la boîte, debout, en parlant, et
+4:20  il lui est soudain venu à l’esprit que la réponse à leur problème était là, dans ses mains. Wilbur a remarqué que s’il posait le pouce et l’index d’une main sur ces deux
+4:28  coins en diagonale, et le pouce et l’index de l’autre main sur les coins diagonaux opposés, il pouvait presser la boîte d’un côté et de l’autre. Il
+4:37  a remarqué que la boîte se tordait. Dans sa tête, Wilbur a vu le dessus et le dessous de la boîte comme les ailes d’un biplan. Avec un
+4:44  simple système de câbles, il pouvait rapprocher les coins, relevant un jeu de bouts d’aile dans le vent et abaissant l’autre. Il a compris qu’ainsi
+4:53  il pouvait contrôler la forme de ses ailes et faire rouler son avion dans le ciel. Bon, les frères Wright ont donc une solution proposée :
+5:02  gauchir les ailes de leur biplan. Selon la méthode d’ingénierie, l’étape suivante est d’évaluer leur solution au moyen de
+5:09  essais et de prototypes. Autrement dit, les frères Wright devaient mettre à l’épreuve leur théorie du gauchissement des ailes. C’est exact,
+5:16  Jennifer. Ils n’ont pas commencé par construire une machine volante à moteur. Ils ont dû commencer par construire et essayer des prototypes, et ils ont commencé par ce
+5:25  petit cerf-volant biplan. Regardez comment ce prototype vole. Remarquez : quand on tire les ficelles opposées, le cerf-volant s’incline vers
+5:32  la gauche et la droite. L’idée de torsion des ailes que Wilbur a tirée de la boîte de chambre à air a vraiment fonctionné dans son
+5:39  cerf-volant prototype. Alors, forts de ce cerf-volant, les frères Wright ont construit le premier avion à moteur. Non. D’abord, ils ont
+5:46  construit une série de trois planeurs en trois ans, et ce qu’ils ont appris les a aidés à construire le premier avion à moteur du monde.
+5:53  Hé, cela nous mène à la dernière étape de la méthode d’ingénierie : choisir et affiner la meilleure solution.

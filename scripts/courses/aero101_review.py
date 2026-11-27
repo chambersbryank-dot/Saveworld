@@ -237,8 +237,8 @@ CHECK = ('<svg class="crs-check-i" viewBox="0 0 24 24" aria-hidden="true" focusa
 CSS = (
     '.crs-review{margin:.35rem auto 0;padding:0;border:0;background:none;box-shadow:none;text-align:center}'
     '.crs-checks{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.15rem .85rem;list-style:none;margin:0;padding:0;width:100%;font-size:.8rem;font-weight:650;line-height:1.35}'
-    '.crs-checks li{display:inline-flex;align-items:center;gap:.38rem;min-height:44px;margin:0;max-width:100%}'
-    '.crs-checks li span{min-width:0;text-align:start}'
+    '.crs-checks li{display:inline-flex;align-items:flex-start;gap:.38rem;min-height:44px;margin:0;max-width:100%}'
+    '.crs-checks li span{min-width:0;text-align:start;overflow-wrap:anywhere}'
     '.crs-check-i{width:1.35rem;height:1.35rem;flex:none;filter:drop-shadow(0 0 3px rgba(232,255,236,.95)) drop-shadow(0 0 8px rgba(46,210,120,.9))}'
     '.page-hero .crs-checks,.page-hero .crs-checks a{color:#f7fbff;text-shadow:0 1px 2px rgba(0,0,0,.75),0 0 12px rgba(0,0,0,.45)}'
     '.page-hero .crs-checks a{text-decoration:underline;text-underline-offset:.14em}'
