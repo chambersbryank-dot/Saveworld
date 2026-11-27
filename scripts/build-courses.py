@@ -43,11 +43,25 @@ def credit_p(text):
     return f'<p class="crs-note">{t}</p>'
 OER_AERO_URL = 'https://oercommons.org/courses/introduction-to-aerospace-engineering-aero-101'
 def oer_pub(C):
-    # AERO 101 only. Sentence is in i18n/courses/aero101.json. scripts/build-published.py writes the same line.
+    # AERO 101 only. A small footer link; scripts/build-published.py writes the same markup.
     if getattr(C, 'ID', '') != 'aero101': return ''
-    t = html.escape(_('Also published on OER Commons'), quote=False)
-    t = t.replace('OER Commons', '<bdi>OER Commons</bdi>')
-    return f'<!-- OERPUB:START --><p class="crs-note"><a href="{OER_AERO_URL}" target="_blank" rel="noopener">{t}</a></p><!-- OERPUB:END -->'
+    return (f'<!-- OERPUB:START --><a class="crs-oer" href="{OER_AERO_URL}" target="_blank" rel="noopener">'
+            f'<bdi>OER Commons</bdi></a><!-- OERPUB:END -->')
+def aero_foot(page, C):
+    # The SI disclosure stays, in the license line, once. The OER link sits beside it.
+    inner = credit_p(C.CREDIT)[len('<p class="crs-note">'):-len('</p>')]
+    policy = html.escape(AERO_POLICY[LANG])
+    page = page.replace(f'<p class="crs-note">{inner}</p>', '', 1)
+    page = re.sub(r'<!-- OERPUB:START -->.*?<!-- OERPUB:END -->', '', page, count=1, flags=re.S)
+    mark = '</p><!-- LICENSE:END -->'
+    if mark not in page: return page
+    if inner not in page:
+        page = page.replace('<p class="lic-foot">', f'<p class="lic-foot">{inner} {policy} ', 1)
+    elif policy not in page:
+        page = page.replace(inner, inner + ' ' + policy, 1)
+    if 'OERPUB:START' not in page:
+        page = page.replace(mark, ' ' + oer_pub(C) + mark, 1)
+    return page
 UNITS_RX = r'\b(?:atm|mol|g|L|K|mL|nm|kPa|mmHg|kJ|J|u|M|s|m|cm|mg|kg|Hz|µM|mol⁻¹|M⁻¹|cm⁻¹)\b'
 _CAPW = re.compile(r'[A-Z][a-z]{2,}(?![\w(′.])(?=.*[=≈∇∂Α-Ωα-ω])')
 _SHORTW = re.compile(r'(?<![\w^_′])(so|to|of|in|is|or|if|by|as|at|an|on|up|no)(?![\w(′])')
@@ -156,7 +170,8 @@ def unit(C, K, i, u):
                  f'{esc("Linked for free study only; Saving Planets is not affiliated with or endorsed by this university.")}</p></div>')
     o.append(gc_slot(abs_page(C.PAGE, f'#{uid}'), _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title']),
                      _('Free Saving Planets lesson. No university credit. Listing a source is not an endorsement.'), 'assignment'))
-    o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> {esc("I finished this unit")}</label></p>')
+    if C.ID != 'aero101':
+        o.append(f'<p class="crs-done"><label><input type="checkbox" data-done="{uid}"> {esc("I finished this unit")}</label></p>')
     o.append(top() + '</section>')
     return ''.join(o)
 
@@ -169,7 +184,7 @@ def lab(C, K, L):
          f'<div class="crs-safe"><h4>{esc("Safety")}</h4>' + ul(L['safety']) + '</div>',
          f'<h4>{esc("Home or virtual alternative")}</h4>' + ul(L['home']) + '<p>' + ' · '.join(ext(t, h) for t, h in L['sims']) + '</p>',
          f'<p class="crs-planet-s"><strong>{esc("Planet link:")}</strong> {esc(L["planet"])}' + (' ' + ' · '.join(ext(t, h) for t, h in L['planet_src']) if L['planet_src'] else '') + '</p>',
-         f'<p class="crs-done"><label><input type="checkbox" data-done="{L["id"]}"> {esc("I completed this lab (wet or virtual)")}</label></p></div>']
+         +(f'<p class="crs-done"><label><input type="checkbox" data-done="{L["id"]}"> {esc("I completed this lab (wet or virtual)")}</label></p>' if C.ID != 'aero101' else '') + '</div>']
     return ''.join(o)
 
 def pdf_key(C, l): return 'courses/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l == 'en' else '_' + l) + '.pdf'
@@ -240,14 +255,29 @@ SCOPE_T = {
 }
 # AERO 101 pilot labels. SI drafts: no native speaker has reviewed these six-language strings.
 AERO_UI = {
- 'en': {'h': 'At a glance', 'level': 'Level', 'length': 'Length', 'able': 'What you will be able to do', 'year': 'Year 1', 'line': 'In one line'},
- 'fr': {'h': 'En un coup d’œil', 'level': 'Niveau', 'length': 'Durée', 'able': 'Ce que vous saurez faire', 'year': '1re année', 'line': 'En une ligne'},
- 'es': {'h': 'De un vistazo', 'level': 'Nivel', 'length': 'Duración', 'able': 'Lo que sabrás hacer', 'year': 'Año 1', 'line': 'En una línea'},
- 'ar': {'h': 'نظرة سريعة', 'level': 'المستوى', 'length': 'المدة', 'able': 'ما ستستطيع فعله', 'year': 'السنة الأولى', 'line': 'في سطر واحد'},
- 'it': {'h': 'In sintesi', 'level': 'Livello', 'length': 'Durata', 'able': 'Che cosa saprai fare', 'year': 'Anno 1', 'line': 'In una riga'},
- 'he': {'h': 'במבט אחד', 'level': 'רמה', 'length': 'אורך', 'able': 'מה תוכלו לעשות', 'year': 'שנה א׳', 'line': 'בשורה אחת'},
+ 'en': {'line': 'In one line'},
+ 'fr': {'line': 'En une ligne'},
+ 'es': {'line': 'En una línea'},
+ 'ar': {'line': 'في سطر واحد'},
+ 'it': {'line': 'In una riga'},
+ 'he': {'line': 'בשורה אחת'},
 }
-AERO_ABLE = ('u1', 'u3', 'u5', 'u8', 'u10')
+AERO_NEED = {
+ 'en': 'Prerequisites: Algebra, trigonometry, Physics I mechanics; Calculus I is recommended.',
+ 'fr': 'Prérequis : algèbre, trigonométrie, mécanique de Physique I ; Analyse I est recommandée.',
+ 'es': 'Requisitos previos: álgebra, trigonometría, mecánica de Física I; se recomienda Cálculo I.',
+ 'ar': 'المتطلبات السابقة: الجبر، وحساب المثلثات، وميكانيكا الفيزياء I؛ يُستحسَن حساب التفاضل والتكامل I.',
+ 'it': 'Prerequisiti: algebra, trigonometria, meccanica di Fisica I; si consiglia Analisi I.',
+ 'he': 'ידע מוקדם: אלגברה, טריגונומטריה, מכניקה של פיזיקה I; מומלץ חדו״א I.',
+}
+AERO_POLICY = {
+ 'en': 'This is not a university course, it carries no academic credit, no school is involved, and no organization named here endorses this page.',
+ 'fr': 'Ce n’est pas un cours universitaire : il ne donne aucun crédit académique, aucun établissement n’y participe, et aucune organisation citée ici ne cautionne cette page.',
+ 'es': 'No es un curso universitario, no otorga créditos académicos, ninguna institución participa, y ninguna organización nombrada aquí respalda esta página.',
+ 'ar': 'هذا ليس مقررًا جامعيًا، ولا يمنح ساعات معتمدة، ولا تشارك فيه أي مؤسسة تعليمية، ولا تتبنى أي منظمة مذكورة هنا هذه الصفحة.',
+ 'it': 'Non è un corso universitario, non dà crediti accademici, nessuna scuola è coinvolta, e nessuna organizzazione citata qui approva questa pagina.',
+ 'he': 'זה אינו קורס אוניברסיטאי, אינו מעניק נקודות זכות אקדמיות, אף מוסד לימודים אינו מעורב בו, ואף ארגון המוזכר כאן אינו ממליץ על דף זה.',
+}
 AERO_SAVED = {
  'en': ' Your progress is saved only in this browser.',
  'fr': ' Votre progression est enregistrée uniquement dans ce navigateur.',
@@ -256,10 +286,8 @@ AERO_SAVED = {
  'it': ' I tuoi progressi sono salvati solo in questo browser.',
  'he': ' ההתקדמות שלכם נשמרת רק בדפדפן הזה.',
 }
-GLANCE_CSS = ('<style id="aero101-glance">.crs-glance dl{display:grid;grid-template-columns:minmax(7rem,9.5rem) 1fr;gap:.55rem 1rem;margin:.35rem 0 0}'
-              '.crs-glance dt{font-weight:800}.crs-glance dd{margin:0}.crs-glance ul{margin:.1rem 0 0;padding-inline-start:1.15rem}'
-              '@media (max-width:640px){.crs-glance dl{grid-template-columns:1fr;gap:.15rem}.crs-glance dt{margin-top:.45rem}}'
-              '.crs-unitscan{margin:0 0 1.1rem}</style>')
+GLANCE_CSS = ('<style id="aero101-glance">.crs-need{margin:.15rem 0 .5rem;font-size:.95rem;line-height:1.35}'
+              '.crs-need b{font-weight:800}.crs-unitscan{margin:0 0 1.1rem}</style>')
 UPDATED = '2026-11-01'
 VERSION = '2026.11.01'
 DATE_LABEL = {
@@ -373,16 +401,8 @@ def further_block(C):
     return (f'<!-- FURTHER:START --><section id="further"><h2>{html.escape(t["h"])}</h2><p>{html.escape(t["p"])}</p>'
             f'<ul class="crs-res">{lis}</ul>' + top() + '</section><!-- FURTHER:END -->')
 def glance_block(C):
-    t = AERO_UI[LANG]
-    scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
-    hours = _('About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.')
-    pres = ''.join(f'<li>{html.escape(_(x))}</li>' for x in C.PREREQS)
-    able = ''.join(f'<li><a href="#{u["id"]}">{html.escape(_(u["objectives"][0]))}</a></li>' for u in C.UNITS if u['id'] in AERO_ABLE)
-    return (GLANCE_CSS + f'<div class="crs-glance crs-card" id="glance"><h2 id="glance-h">{html.escape(t["h"])}</h2><dl>'
-            f'<dt>{html.escape(t["level"])}</dt><dd>{html.escape(t["year"])} · {html.escape(C.CODE)}</dd>'
-            f'<dt>{html.escape(t["length"])}</dt><dd>{html.escape(scope)} {html.escape(hours)}</dd>'
-            f'<dt>{esc("Prerequisites")}</dt><dd><ul>{pres}</ul></dd>'
-            f'<dt>{html.escape(t["able"])}</dt><dd><ul>{able}</ul></dd></dl></div>')
+    label, rest = AERO_NEED[LANG].split(':', 1)
+    return (GLANCE_CSS + f'<p class="crs-need" id="glance"><b>{html.escape(label)}:</b>{html.escape(rest)}</p>')
 def unit_index(C):
     t = AERO_UI[LANG]
     head = f'<th scope="col">{esc("Week")}</th><th scope="col">{esc("Unit")}</th><th scope="col">{html.escape(t["line"])}</th>'
@@ -400,40 +420,53 @@ def course_page(C):
           [('psets', 'Problem sets with solutions'), ('lab', 'Lab'), ('exam', 'Exams with solutions'), ('formulas', 'Formula sheet'), ('ptable', getattr(C, 'REF_TITLE', 'Periodic table')), ('glossary', 'Glossary'), ('rubric', 'Self-assessment')]
     if getattr(C, 'FURTHER', None): toc.append(('further', FURTHER_T[LANG]['h']))
     names0 = {u['id'] for u in C.UNITS}
-    updated, version, when = stamp_of(C)
-    note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
-    o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>',
-         f'<p class="crs-crumb"><a href="{HUB}">{esc("Undergraduate Studies")}</a> › {esc(C.CODE)}</p>',
-         f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}'
-         + (f' · {html.escape(AW.added_note(LANG))}' if getattr(C, 'ID', '') == 'aero101' else '') + '</p>',
-         f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>',
-         *([credit_p(C.CREDIT)] if getattr(C, 'CREDIT', None) else []),
-         *([oer_pub(C)] if getattr(C, 'ID', '') == 'aero101' else []),
-         *([glance_block(C)] if getattr(C, 'ID', '') == 'aero101' else []),
-         f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>',
-         f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>']
+    quiet = getattr(C, 'ID', '') == 'aero101'
+    o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>']
+    if not quiet:
+        updated, version, when = stamp_of(C)
+        note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
+        o += [f'<p class="crs-crumb"><a href="{HUB}">{esc("Undergraduate Studies")}</a> › {esc(C.CODE)}</p>',
+              f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
+              f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>']
+        if getattr(C, 'CREDIT', None): o.append(credit_p(C.CREDIT))
+    else:
+        o.append(glance_block(C))
+    if not quiet:
+        o.append(f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>')
+    o.append(f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>')
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
     about = [_(x) for x in C.ABOUT]
     if getattr(C, 'ID', '') == 'aero101' and about:
         about[-1] = about[-1].replace(AERO_SAVED[LANG], '')
-    scope_p = '' if getattr(C, 'ID', '') == 'aero101' else f'<p class="crs-scope">{html.escape(scope)}</p>'
-    o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{html.escape(x)}</p>' for x in about)
-             + scope_p + f'<p class="crs-check">{html.escape(CHK_T[LANG])}</p></div>'
-             f'<div class="crs-planet"><h3>{esc("How this course helps save the planet")}</h3>' + ''.join(f'<p>{esc(x)}</p>' for x in C.COURSE_PLANET) + '</div>' + top() + '</section>')
-    pre = '' if getattr(C, 'ID', '') == 'aero101' else f'<h3>{esc("Prerequisites")}</h3>' + ul(C.PREREQS)
-    o.append(f'<section id="start"><h2>{esc("Before you start")}</h2>' + pre + f'<h3>{esc("How to study")}</h3>' + ul(C.STUDY)
-             + (f'<h3>{esc(gear_heading(C))}</h3>' if gear_heading(C) else f'<h3>{html.escape(GEAR_T[LANG])}</h3>')
-             + ul(C.LAB_GEAR) + top() + '</section>')
-    names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
-    sched_lead = '' if getattr(C, 'ID', '') == 'aero101' else f'<p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p><p>{esc("This table is the course calendar.")}</p>'
-    o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2>' + sched_lead
-             + table(['Week', 'Unit', 'Topics', 'Reading'], [[str(w), names[u], t, r] for w, u, t, r in C.SCHEDULE]) + top() + '</section>')
+    scope_p = '' if quiet else f'<p class="crs-scope">{html.escape(scope)}</p>'
+    if quiet:
+        o.append('<span id="about"></span>')
+    else:
+        o.append(f'<section id="about"><h2>{esc("About this course")}</h2><div class="crs-disc">' + ''.join(f'<p>{html.escape(x)}</p>' for x in about)
+                 + scope_p + f'<p class="crs-check">{html.escape(CHK_T[LANG])}</p></div>'
+                 f'<div class="crs-planet"><h3>{esc("How this course helps save the planet")}</h3>' + ''.join(f'<p>{esc(x)}</p>' for x in C.COURSE_PLANET) + '</div>' + top() + '</section>')
+    if quiet:
+        o.append('<span id="start"></span><span id="schedule"></span>')
+    else:
+        pre = f'<h3>{esc("Prerequisites")}</h3>' + ul(C.PREREQS)
+        o.append(f'<section id="start"><h2>{esc("Before you start")}</h2>' + pre + f'<h3>{esc("How to study")}</h3>' + ul(C.STUDY)
+                 + (f'<h3>{esc(gear_heading(C))}</h3>' if gear_heading(C) else f'<h3>{html.escape(GEAR_T[LANG])}</h3>')
+                 + ul(C.LAB_GEAR) + top() + '</section>')
+        names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
+        sched_lead = f'<p>{esc("About 6 to 9 hours a week: reading, practice problems and, in lab weeks, the lab.")}</p><p>{esc("This table is the course calendar.")}</p>'
+        o.append(f'<section id="schedule"><h2>{esc("Suggested 15-week schedule")}</h2>' + sched_lead
+                 + table(['Week', 'Unit', 'Topics', 'Reading'], [[str(w), names[u], t, r] for w, u, t, r in C.SCHEDULE]) + top() + '</section>')
+    if quiet:
+        names = {u['id']: u['title'] for u in C.UNITS}; names['exam'] = 'Review'
     o.append(outcomes_block(C))
     o.append(readings_block(C))
     o.append(notes_block(C))
-    o.append(f'<section id="progress"><h2>{esc("Your progress")}</h2><p>{esc("Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.")}</p>'
-             f'<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">{esc("Turn on JavaScript to track progress.")}</p></div>'
-             f'<p><button type="button" class="crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
+    if quiet:
+        o.append('<span id="progress"></span>')
+    else:
+        o.append(f'<section id="progress"><h2>{esc("Your progress")}</h2><p>{esc("Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.")}</p>'
+                 f'<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">{esc("Turn on JavaScript to track progress.")}</p></div>'
+                 f'<p><button type="button" class="crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
     if getattr(C, 'ID', '') == 'aero101': o.append(unit_index(C))
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
     o.append(psets_block(C))
@@ -468,7 +501,8 @@ def course_page(C):
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
                   + AW.CSS + '</style>\n' + AW.JS + '\n')
-    return BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
+    page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
+    return aero_foot(page, C) if quiet else page
 
 def related(C):  # Oct 25 2026 (founder, upgrade 4): 'Related' block, 3-4 links from the roadmap (no new data):
     # the live courses just before and after this one in roadmap order, then other live courses from the same year, then the hub.

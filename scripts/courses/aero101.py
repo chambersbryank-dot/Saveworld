@@ -9,7 +9,7 @@ UPDATED = '2026-11-25'  # Watch and learn lectures added
 VERSION = '2026.11.25'
 CODE = 'AERO 101'
 TITLE = 'Introduction to Aerospace Engineering'
-TAGLINE = 'How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight. Free, self-paced, with four hands-on labs.'
+TAGLINE = 'How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight.'
 DESC = 'Free intro to aerospace engineering: atmosphere, lift and drag, airfoils, performance, stability, propulsion, rockets, orbits, sustainable aviation.'
 # Shown under the title, before the contents list. The Founder is a role, never a person's name. Say SI, never AI.
 CREDIT = 'Course created by Saving Planets: the Founder sets direction and approves every page; SI researches, drafts, translates and checks sources.'

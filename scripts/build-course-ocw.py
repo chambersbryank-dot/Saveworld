@@ -71,6 +71,8 @@ def pset(lang, items):
 def apply_one(lang, f):
     if f.endswith('Propulsion.html'):
         return False  # AERO 410 frozen during OER Commons review
+    if f.endswith('Intro_to_Aerospace_Engineering.html'):
+        return False  # About, the schedule, and Your progress were removed; the short menu stays as edited.
     s = open(f, encoding='utf-8').read()
     if '<section id="about">' not in s or '<section class="crs-unit"' not in s: return False
     orig = s

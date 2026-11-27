@@ -8,7 +8,7 @@ Two verified listings only (do not add platforms here):
 Writes, in all six languages:
   index.html                         <!-- PUBLISHED --> crystal-water strip (existing .hv-chip)
   About.html                         <!-- MILESTONES --> dated list, one li per entry
-  Intro_to_Aerospace_Engineering.html <!-- OERPUB --> line beside the course credit note
+  Intro_to_Aerospace_Engineering.html <!-- OERPUB --> small link in the license line
 
 Idempotent. Run from the repo root. i18n-build ignores PUBLISHED and MILESTONES, so this
 script fills those blocks in each language after translation. The AERO 101 sentence also
@@ -107,9 +107,9 @@ def ms_block(lang):
             + f'<ol class="ws-grid ms-tl">{items}</ol></section><!-- MILESTONES:END -->')
 
 def oer_block(lang):
-    phrase = OER_LINE[lang].replace('OER Commons', bdi('OER Commons'))
-    return ('<!-- OERPUB:START --><p class="crs-note"><a href="' + OER
-            + '" target="_blank" rel="noopener">' + phrase + '</a></p><!-- OERPUB:END -->')
+    # A small link in the license line. The platform name stays in Latin.
+    return ('<!-- OERPUB:START --><a class="crs-oer" href="' + OER
+            + '" target="_blank" rel="noopener">' + bdi('OER Commons') + '</a><!-- OERPUB:END -->')
 
 def put(path, rx, block, anchor):
     s = open(path, encoding='utf-8').read()
@@ -145,7 +145,7 @@ def main():
         pre = '' if lang == 'en' else lang + '/'
         n += put(pre + 'index.html', hr, home_block(lang), '<!-- HOMENUM:START -->')
         n += put(pre + 'About.html', mr, ms_block(lang), '<!-- SOURCES:START -->')
-        n += put(pre + 'Intro_to_Aerospace_Engineering.html', cr, oer_block(lang), '<div class="crs-toc"')
+        n += put(pre + 'Intro_to_Aerospace_Engineering.html', cr, oer_block(lang), '</p><!-- LICENSE:END -->')
     print(f'build-published: {n} file(s) updated')
 
 if __name__ == '__main__':
