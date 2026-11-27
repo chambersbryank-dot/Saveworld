@@ -42,7 +42,7 @@ body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!imp
 .crs-film figcaption{display:flex;flex-direction:column;gap:.12rem;margin-top:.35rem;font-size:.9rem;line-height:1.35}
 .crs-film-title{font-weight:800}
 @media (min-width:800px){.crs-hook{grid-template-columns:minmax(0,1fr) minmax(260px,420px)}}
-@media (max-width:700px){#track-prompt,.crs-week,.crs-review{padding-inline-end:11rem}}
+@media (max-width:700px){#track-prompt,.crs-week{padding-inline-end:11rem}}
 .crs:has(#bs-aero){max-width:1180px;padding:.65rem 1rem 1.15rem}
 .crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:flex-start;justify-content:space-between;margin:.15rem 0 .45rem;padding:.4rem .5rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .crs-tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:.4rem;flex:1 1 280px;margin:0}
@@ -196,10 +196,9 @@ def fragment(lang, esc, live_for):
     S = T[lang]
     parts = [f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content">'
              f'<p class="crs-program">{E(S["title"])}</p><h1 id="bs-aero-title">{E(S["program"])}</h1>'
-             f'<p>{E(S["note"])}</p></div></section>\n']
+             f'<p>{E(S["note"])}</p>{AR.box(lang, disclosure=True)}</div></section>\n']
     rtl = ' dir="rtl"' if lang in ('ar', 'he') else ''
     parts.append(f'<div class="crs"{rtl}>')
-    parts.append(AR.box(lang, disclosure=True))
     parts.append('<section class="crs-degree" id="bs-aero" aria-labelledby="bs-aero-title">')
     parts.append(f'<noscript><p>{E(S["noscript"])}</p></noscript>')
     parts.append(week_html(lang))

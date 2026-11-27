@@ -61,6 +61,10 @@ def aero_foot(page, C):
         page = page.replace('<p class="lic-foot">', f'<p class="lic-foot">{inner} {policy} ', 1)
     elif policy not in page:
         page = page.replace(inner, inner + ' ' + policy, 1)
+    if 'id="founders"' not in page:
+        anchor = f'<p class="lic-foot">{inner}'
+        if anchor not in page: return page
+        page = page.replace(anchor, AR.founders(LANG) + anchor, 1)
     if 'OERPUB:START' not in page:
         page = page.replace(mark, ' ' + oer_pub(C) + mark, 1)
     return page
@@ -96,7 +100,7 @@ def katex(texs):
 def ext(label, url): return f'<a href="{esc(url)}" rel="noopener">{esc(label)}</a>'
 def top(): return f'<p class="crs-top"><a href="#top"><span aria-hidden="true">&#8593;</span> {esc("Back to top")}</a></p>'
 def ul(items, cls=''): return f'<ul{" class=" + chr(34) + cls + chr(34) if cls else ""}>' + ''.join(f'<li>{esc(x)}</li>' for x in items) + '</ul>'
-def hero(t, k): return f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content"><h1>{esc(t)}</h1><p>{esc(k)}</p></div></section>\n'
+def hero(t, k, extra=''): return f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content"><h1>{esc(t)}</h1><p>{esc(k)}</p>{extra}</div></section>\n'
 def head(): return BL.katex_head(LANG) + f'<link rel="stylesheet" href="{pre()}assets/courses.css?v={V}">\n'
 def tail(): return f'<script src="{pre()}assets/courses.js?v={V}" defer></script>\n'
 def table(headr, rows, cap=''):
@@ -442,7 +446,7 @@ def course_page(C):
     if getattr(C, 'FURTHER', None): toc.append(('further', FURTHER_T[LANG]['h']))
     names0 = {u['id'] for u in C.UNITS}
     quiet = getattr(C, 'ID', '') == 'aero101'
-    o = [hero(C.TITLE, C.TAGLINE), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>']
+    o = [hero(C.TITLE, C.TAGLINE, AR.box(LANG, quality=True) if quiet else ''), f'<div class="crs" data-course="{C.ID}"{ui_attr()}{dir_attr()}>']
     if not quiet:
         updated, version, when = stamp_of(C)
         note_key = 'recheck21' if updated == '2026-11-21' else 'recheck' if updated == '2026-11-18' else 'map'
@@ -453,7 +457,6 @@ def course_page(C):
         o.append(AR.box(LANG, when_iso=updated, when_label=when))
     else:
         o.append(glance_block(C))
-        o.append(AR.box(LANG, quality=True))
     if not quiet:
         o.append(f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>')
     o.append(f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>')

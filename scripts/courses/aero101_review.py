@@ -27,6 +27,13 @@ T = {
  'en': {
   'h': 'Authorship and review',
   'who': 'The Founder sets direction and approves every page. The Co-founder brings 20+ years of teaching experience and is our native Arabic and French translator.',
+  'facts': 'Facts checked against NASA Glenn, MIT OpenCourseWare, Leishman, and the FAA handbook',
+  'hub_facts': 'Facts checked against NASA and Embry-Riddle’s public catalog',
+  'facts_named': 'Facts checked against the named sources on this page',
+  'pair': 'Founder & Co-founder',
+  'reviewed_w': 'reviewed',
+  'foot_f': 'Founder: sets direction and approves every page.',
+  'foot_c': 'Co-founder: 20+ years of teaching experience.',
   'check_h': 'Quality check.',
   'sources': 'Facts, worked examples and links on this page are checked against named sources, including NASA Glenn’s Beginner’s Guide to Aeronautics, MIT OpenCourseWare, and J. Gordon Leishman’s Introduction to Aerospace Flight Vehicles.',
   'reviewed': 'Last reviewed',
@@ -54,6 +61,13 @@ T = {
  'fr': {
   'h': 'Auteur et relecture',
   'who': 'Le Fondateur fixe la direction et approuve chaque page. La Cofondatrice apporte plus de 20 ans d’expérience dans l’enseignement et est notre traductrice de langue maternelle arabe et française.',
+  'facts': 'Faits vérifiés auprès de la NASA Glenn, du MIT OpenCourseWare, de Leishman et du manuel de la FAA',
+  'hub_facts': 'Faits vérifiés auprès de la NASA et du catalogue public d’Embry-Riddle',
+  'facts_named': 'Faits vérifiés auprès des sources nommées sur cette page',
+  'pair': 'Le Fondateur et la Cofondatrice',
+  'reviewed_w': 'ont relu',
+  'foot_f': 'Fondateur : fixe la direction et approuve chaque page.',
+  'foot_c': 'Cofondatrice : plus de 20 ans d’expérience dans l’enseignement.',
   'check_h': 'Contrôle de qualité.',
   'sources': 'Les faits, les exemples résolus et les liens de cette page sont vérifiés auprès de sources nommées, dont le Beginner’s Guide to Aeronautics de la NASA Glenn, le MIT OpenCourseWare, et Introduction to Aerospace Flight Vehicles de J. Gordon Leishman.',
   'reviewed': 'Dernière relecture',
@@ -81,6 +95,13 @@ T = {
  'es': {
   'h': 'Autoría y revisión',
   'who': 'El Fundador marca la dirección y aprueba cada página. La Cofundadora aporta más de 20 años de experiencia docente y es nuestra traductora nativa de árabe y francés.',
+  'facts': 'Datos comprobados con NASA Glenn, MIT OpenCourseWare, Leishman y el manual de la FAA',
+  'hub_facts': 'Datos comprobados con la NASA y el catálogo público de Embry-Riddle',
+  'facts_named': 'Datos comprobados con las fuentes nombradas en esta página',
+  'pair': 'El Fundador y la Cofundadora',
+  'reviewed_w': 'revisaron',
+  'foot_f': 'Fundador: marca la dirección y aprueba cada página.',
+  'foot_c': 'Cofundadora: más de 20 años de experiencia docente.',
   'check_h': 'Control de calidad.',
   'sources': 'Los datos, los ejemplos resueltos y los enlaces de esta página se comprueban con fuentes nombradas, entre ellas la Beginner’s Guide to Aeronautics de NASA Glenn, MIT OpenCourseWare y Introduction to Aerospace Flight Vehicles de J. Gordon Leishman.',
   'reviewed': 'Última revisión',
@@ -108,6 +129,13 @@ T = {
  'ar': {
   'h': 'التأليف والمراجعة',
   'who': 'يحدد المؤسس الاتجاه ويعتمد كل صفحة. تجلب المؤسِّسة المشاركة أكثر من 20 عاماً من الخبرة في التدريس، وهي مترجمتنا الناطقة بالعربية والفرنسية كلغة أم.',
+  'facts': 'حقائق فُحصت مقابل ناسا غلين، وMIT OpenCourseWare، وLeishman، ودليل FAA',
+  'hub_facts': 'حقائق فُحصت مقابل ناسا وكتالوج إمبري-ريدل العام',
+  'facts_named': 'حقائق فُحصت مقابل المصادر المسمّاة في هذه الصفحة',
+  'pair': 'المؤسس والمؤسِّسة المشاركة',
+  'reviewed_w': 'راجعا',
+  'foot_f': 'المؤسس: يحدد الاتجاه ويعتمد كل صفحة.',
+  'foot_c': 'المؤسِّسة المشاركة: أكثر من 20 عاماً من الخبرة في التدريس.',
   'check_h': 'فحص الجودة.',
   'sources': 'تُفحص الحقائق والأمثلة المحلولة والروابط في هذه الصفحة مقابل مصادر مسمّاة، منها دليل ناسا غلين للمبتدئين في علم الطيران، وMIT OpenCourseWare، وكتاب Introduction to Aerospace Flight Vehicles لـ J. Gordon Leishman.',
   'reviewed': 'آخر مراجعة',
@@ -135,6 +163,13 @@ T = {
  'it': {
   'h': 'Autori e revisione',
   'who': 'Il Fondatore indica la direzione e approva ogni pagina. La Cofondatrice porta più di 20 anni di esperienza nell’insegnamento ed è la nostra traduttrice madrelingua araba e francese.',
+  'facts': 'Fatti controllati su NASA Glenn, MIT OpenCourseWare, Leishman e il manuale della FAA',
+  'hub_facts': 'Fatti controllati su NASA e il catalogo pubblico di Embry-Riddle',
+  'facts_named': 'Fatti controllati sulle fonti indicate in questa pagina',
+  'pair': 'Il Fondatore e la Cofondatrice',
+  'reviewed_w': 'hanno rivisto',
+  'foot_f': 'Fondatore: indica la direzione e approva ogni pagina.',
+  'foot_c': 'Cofondatrice: più di 20 anni di esperienza nell’insegnamento.',
   'check_h': 'Controllo di qualità.',
   'sources': 'I fatti, gli esempi svolti e i link di questa pagina sono controllati su fonti nominate, tra cui la Beginner’s Guide to Aeronautics della NASA Glenn, il MIT OpenCourseWare e Introduction to Aerospace Flight Vehicles di J. Gordon Leishman.',
   'reviewed': 'Ultima revisione',
@@ -162,6 +197,13 @@ T = {
  'he': {
   'h': 'מחברים וסקירה',
   'who': 'המייסד קובע את הכיוון ומאשר כל דף. המייסדת השותפה מביאה יותר מ־20 שנות ניסיון בהוראה, והיא המתרגמת שלנו שערבית וצרפתית הן שפות האם שלה.',
+  'facts': 'עובדות שנבדקו מול נאס״א גלן, MIT OpenCourseWare, Leishman ומדריך ה-FAA',
+  'hub_facts': 'עובדות שנבדקו מול נאס״א והקטלוג הפומבי של אמברי-רידל',
+  'facts_named': 'עובדות שנבדקו מול המקורות הנקובים בעמוד זה',
+  'pair': 'המייסד והמייסדת השותפה',
+  'reviewed_w': 'בדקו',
+  'foot_f': 'המייסד: קובע את הכיוון ומאשר כל דף.',
+  'foot_c': 'המייסדת השותפה: יותר מ־20 שנות ניסיון בהוראה.',
   'check_h': 'בקרת איכות.',
   'sources': 'עובדות, דוגמאות פתורות וקישורים בעמוד זה נבדקים מול מקורות נקובים, ובהם המדריך למתחילים באווירונאוטיקה של נאס״א גלן, MIT OpenCourseWare, ו־Introduction to Aerospace Flight Vehicles מאת J. Gordon Leishman.',
   'reviewed': 'נבדק לאחרונה',
@@ -188,16 +230,20 @@ T = {
  },
 }
 
+CHECK = ('<svg class="crs-check-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+         '<circle cx="12" cy="12" r="9" fill="#1ea85c" stroke="#e7ffe9" stroke-width="1.6"/>'
+         '<path d="M7.2 12.3l3.1 3.2 6.5-7" fill="none" stroke="#f6fff8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'
+         '</svg>')
 CSS = (
-    '.crs-review{margin:0 0 .85rem;padding:.8rem .95rem;border-radius:18px;border:1px solid rgba(255,255,255,.3);'
-    'background:linear-gradient(165deg,rgba(255,255,255,.16),rgba(255,255,255,.04) 48%,rgba(8,20,36,.24));'
-    'box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 10px 24px rgba(0,0,0,.18)}'
-    '.crs-review h2{margin:.05rem 0 .35rem;font-size:1.05rem}'
-    '.crs-review p{margin:.35rem 0}'
-    '.crs-review-links{display:flex;flex-wrap:wrap;gap:.4rem;margin:.55rem 0 0}'
-    '.crs-review-links a{min-height:44px;display:inline-flex;align-items:center;padding:0 .85rem;border-radius:999px;'
-    'border:1px solid rgba(255,255,255,.32);text-decoration:none;color:inherit;'
-    'background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.04))}'
+    '.crs-review{margin:.35rem auto 0;padding:0;border:0;background:none;box-shadow:none;text-align:center}'
+    '.crs-checks{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.15rem .85rem;list-style:none;margin:0;padding:0;width:100%;font-size:.8rem;font-weight:650;line-height:1.35}'
+    '.crs-checks li{display:inline-flex;align-items:center;gap:.38rem;min-height:44px;margin:0;max-width:100%}'
+    '.crs-checks li span{min-width:0;text-align:start}'
+    '.crs-check-i{width:1.35rem;height:1.35rem;flex:none;filter:drop-shadow(0 0 3px rgba(232,255,236,.95)) drop-shadow(0 0 8px rgba(46,210,120,.9))}'
+    '.page-hero .crs-checks,.page-hero .crs-checks a{color:#f7fbff;text-shadow:0 1px 2px rgba(0,0,0,.75),0 0 12px rgba(0,0,0,.45)}'
+    '.page-hero .crs-checks a{text-decoration:underline;text-underline-offset:.14em}'
+    '.crs-founders{scroll-margin-top:5.5rem}'
+    '@media (max-width:640px){.crs-checks{gap:.05rem .65rem}.crs-checks li{min-height:40px}}'
     '.crs-use{margin:0 0 .7rem;padding:.75rem .95rem;border-radius:16px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05)}'
     '.crs-use h2{margin:.15rem 0 .25rem;font-size:1.02rem}'
     '.crs-use h2:first-child{margin-top:0}'
@@ -211,7 +257,8 @@ def e(s):
 
 _NAMES = ('NASA Glenn’s Beginner’s Guide to Aeronautics', 'Beginner’s Guide to Aeronautics',
           'MIT OpenCourseWare', 'Introduction to Aerospace Flight Vehicles', 'J. Gordon Leishman',
-          'NASA Glenn', 'Engineering Accreditation Commission', 'ABET', 'AERO 101', 'SI')
+          'NASA Glenn', 'Embry-Riddle', 'Leishman', 'Engineering Accreditation Commission',
+          'ABET', 'AERO 101', 'FAA', 'NASA', 'SI')
 
 def _wrap(s, repl):
     parts = re.split(r'(<bdi dir="ltr">.*?</bdi>)', s)
@@ -224,20 +271,25 @@ def _latins(s):
         s = _wrap(s, lambda part, name=html.escape(name), token=token: part.replace(name, token))
     return _wrap(s, lambda part: re.sub(r'(?<![\w>])(\d+(?:\+|(?:[–-]\d+))?)', r'<bdi dir="ltr">\1</bdi>', part))
 
+def _li(inner):
+    return '<li>' + CHECK + '<span>' + inner + '</span></li>'
+
 def box(lang, quality=False, disclosure=False, when_iso=None, when_label=None):
+    """One horizontal row. quality=True uses the AERO 101 source list."""
     t = T[lang]
     iso = when_iso or REVIEWED
     label = when_label or t['when']
-    parts = [f'<section class="crs-review" id="authorship" aria-labelledby="authorship-h"><h2 id="authorship-h">{e(t["h"])}</h2>',
-             f'<p>{_latins(e(t["who"]))}</p>']
-    if quality:
-        parts.append(f'<p><b>{e(t["check_h"])}</b> {_latins(e(t["sources"]))} {e(CHK[lang])}</p>')
-    if disclosure:
-        parts.append(f'<p class="crs-disclose">{_latins(e(t["hub_disclose"]))}</p>')
-    parts.append(f'<p><b>{e(t["reviewed"])}:</b> <time datetime="{e(iso)}">{_latins(e(label))}</time></p>')
-    parts.append(f'<p class="crs-review-links"><a href="About.html">{e(t["about"])}</a>'
-                 f'<a href="Editorial_Policy.html">{e(t["policy"])}</a></p></section>')
-    return ''.join(parts)
+    facts = t['facts'] if quality else (t['hub_facts'] if disclosure else t['facts_named'])
+    who = f'<a href="#founders">{e(t["pair"])}</a> {e(t["reviewed_w"])}'
+    when = f'{e(t["reviewed"])}: <time datetime="{e(iso)}">{_latins(e(label))}</time>'
+    return (f'<section class="crs-review" id="authorship" aria-label="{e(t["h"])}">'
+            f'<ul class="crs-checks">{_li(_latins(e(facts)))}{_li(who)}{_li(when)}</ul></section>')
+
+def founders(lang, disclosure=False):
+    t = T[lang]
+    extra = f' {_latins(e(t["hub_disclose"]))}' if disclosure else ''
+    return (f'<p class="lic-foot crs-founders" id="founders">{e(t["foot_f"])} {e(t["foot_c"])}{extra} '
+            f'<a href="About.html">{e(t["about"])}</a> · <a href="Editorial_Policy.html">{e(t["policy"])}</a></p>')
 
 def disclose(lang):
     return _latins(e(T[lang]['disclose']))
