@@ -29,7 +29,7 @@ body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!imp
 #track-sentinel{height:1px}
 #track-prompt{margin:.15rem 0 .4rem}
 .crs-week{margin:.15rem 0 .35rem}
-.crs-hook{display:grid;gap:.45rem 1rem;align-items:center;margin:0 0 .45rem}
+.crs-hook{display:grid;gap:.75rem 1.1rem;align-items:center;margin:0 0 .55rem;padding:.9rem 1rem;border-radius:18px;border:1px solid rgba(255,255,255,.32);background:linear-gradient(165deg,rgba(255,255,255,.16),rgba(255,255,255,.04) 42%,rgba(8,20,36,.28));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 12px 28px rgba(0,0,0,.22)}
 .crs-hook .crs-week{margin:0}
 .crs-film{margin:0}
 .crs-watch-frame{position:relative;aspect-ratio:16/9;margin:0;border-radius:12px;overflow:hidden;background:#071422}
@@ -73,7 +73,7 @@ html.crs-js .crs-cmp.is-on{display:block}
 .crs-cmp h3{margin-bottom:.3rem}
 #bs-aero h2{margin:.65rem 0 .2rem}
 #bs-aero .crs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));list-style:none;padding:0;align-items:start;margin:.15rem 0 0;gap:.55rem}
-#bs-aero .crs-c{padding:.55rem .7rem;border:1px solid rgba(255,255,255,.2);border-radius:16px;box-sizing:border-box}
+#bs-aero .crs-c{padding:.7rem .8rem;border:1px solid rgba(255,255,255,.28);border-radius:16px;box-sizing:border-box;background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.03));box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
 #bs-aero .crs-c h3{margin:.15rem 0 .05rem;font-size:1.25rem;line-height:1.65}
 #bs-aero .crs-kicker{font-size:.85rem;line-height:1.65;letter-spacing:.04em;text-transform:uppercase}
 #bs-aero .crs-c>p{margin:.15rem 0}
@@ -166,7 +166,8 @@ function openChain(el){
 function fromHash(){
  var id="";try{id=decodeURIComponent((location.hash||"").replace(/^#/,""))}catch(e){return}
  if(!id)return;var el=document.getElementById(id);if(!el)return;openChain(el);
- var target=(el.closest&&el.closest("details.crs-fold"))||el;
+ var watch=el.closest&&el.closest("details.crs-watch");
+ var target=watch||(el.closest&&el.closest("details.crs-fold"))||el;
  if(target.scrollIntoView)target.scrollIntoView({block:"start",inline:"nearest",behavior:"instant"})
 }
 document.addEventListener("click",function(e){
@@ -217,12 +218,14 @@ def fragment(lang, esc, live_for):
     planned = {}
     for pid, year, tracks, model in RM.PLANNED:
         planned.setdefault(year, []).append((pid, tracks, model))
+    noted = False
     for i, (y, cs) in enumerate(RM.YEARS, 1):
         parts.append(f'<section id="y{i}"><h2>{esc(y)}</h2><ul class="crs-grid">')
         for cid, title, desc in cs:
             parts.append(live_for(cid, title, desc))
         for pid, tracks, model in planned.get(i, []):
-            parts.append(planned_card(lang, pid, tracks, model))
+            parts.append(planned_card(lang, pid, tracks, model, note=not noted))
+            noted = True
         parts.append('</ul>' + top + '</section>')
     parts.append(compare_html(lang, top))
     parts.append('</section><!-- PROGRAMS: add the next program as another section.crs-degree sibling. -->')
@@ -236,7 +239,7 @@ NASA_MEDIA = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
 def week_html(lang):
     S = T[lang]
     before, after = S['week'].split('{course}')
-    link = f'<a href="Intro_to_Aerospace_Engineering.html#u1">{E(S["week_course"])}</a>'
+    link = f'<a href="Intro_to_Aerospace_Engineering.html#u1-watch">{E(S["week_course"])}</a>'
     sentence = f'<p class="crs-week">{E(before)}{link}{E(after)}</p>'
     title = E(FILM_TITLE)
     cred_before, cred_after = S['film_credit'].split('{name}')
@@ -247,8 +250,7 @@ def week_html(lang):
         f'aria-label="{E(S["play"])}: {title}">'
         f'<span class="crs-watch-poster" aria-hidden="true"><span class="crs-watch-tri"></span></span>'
         f'<span class="crs-watch-cap"><span lang="en">{title}</span></span></button></div>'
-        f'<figcaption><span class="crs-film-title" lang="en" dir="ltr">{title}</span>'
-        f'<span class="crs-film-meta"><bdi lang="en" dir="ltr">NASA Glenn Research Center</bdi> · '
+        f'<figcaption><span class="crs-film-meta"><bdi lang="en" dir="ltr">NASA Glenn Research Center</bdi> · '
         f'<bdi dir="ltr">5:56</bdi> · {E(S["film_caps"])}</span>'
         f'<span class="crs-film-credit">{E(cred_before)}'
         f'<a href="{NASA_MEDIA}" rel="noopener license">{E(S["film_name"])}</a>{E(cred_after)}</span>'
@@ -258,7 +260,7 @@ def week_html(lang):
 def _track_tag(S, label):
     return (f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(label)}">{E(label)}</span>')
 
-def planned_card(lang, pid, tracks, model):
+def planned_card(lang, pid, tracks, model, note=True):
     S = T[lang]
     title, desc = S['card'][pid]
     if tracks == 'core':
@@ -271,7 +273,8 @@ def planned_card(lang, pid, tracks, model):
             f'<span class="crs-soon">{E(S["soon"])}</span>{tag}'
             f'<h3>{E(title)}</h3><p>{E(desc)}</p>'
             f'<p class="crs-kicker">{E(S["model"])} <bdi dir="ltr">{E(model)}</bdi></p>'
-            f'<details class="crs-tip"><summary>{E(S["tip"])}</summary><p>{E(S["tip_body"])}</p></details></li>')
+            + (f'<details class="crs-tip"><summary>{E(S["tip"])}</summary><p>{E(S["tip_body"])}</p></details>' if note else '')
+            + '</li>')
 
 def compare_html(lang, top):
     S = T[lang]

@@ -17,13 +17,14 @@ root.querySelectorAll('.crs-quiz').forEach(function(f){var id=f.dataset.quiz,fs=
   fb.textContent=(ok?t('Correct. '):t('Not quite. The answer is: {x}. ',{x:x.querySelectorAll('label')[+x.dataset.ok].textContent.trim()}))+why;score()})});
  var r=document.createElement('button');r.type='button';r.className='crs-btn';r.textContent=t('Try this quiz again');
  r.addEventListener('click',function(){fs.forEach(function(x){delete x.dataset.ans;x.querySelectorAll('input').forEach(function(i){i.checked=false});var fb=x.querySelector('.crs-fb');fb.textContent='';fb.className='crs-fb'});sc.textContent=''});f.appendChild(r)});
-root.querySelectorAll('.crs-fc').forEach(function(w){var items=[].map.call(w.querySelectorAll('li'),function(li){return[li.querySelector('.crs-fc-f').textContent,li.querySelector('.crs-fc-b').textContent]});
+root.querySelectorAll('.crs-fc').forEach(function(w){function pack(el){var rich=!!(el&&el.querySelector&&el.querySelector('svg'));var text=(el.textContent||'').replace(/\s+/g,' ').trim();return {rich:rich,body:rich?el.innerHTML:text,text:text}}
+ var items=[].map.call(w.querySelectorAll('li'),function(li){return[pack(li.querySelector('.crs-fc-f')),pack(li.querySelector('.crs-fc-b'))]});
  var i=0,back=false,list=w.querySelector('.crs-fc-list');list.hidden=true;
  var card=document.createElement('button');card.type='button';card.className='crs-fc-one';card.setAttribute('aria-live','polite');
  var bar=document.createElement('div');bar.className='crs-fc-bar';
  function b(t,fn){var x=document.createElement('button');x.type='button';x.className='crs-btn';x.textContent=t;x.addEventListener('click',fn);bar.appendChild(x);return x}
  var pos=document.createElement('span');
- function show(){card.textContent=items[i][back?1:0];card.classList.toggle('back',back);card.setAttribute('aria-label',(back?t('Answer: '):t('Card {i} of {n}: ',{i:i+1,n:items.length}))+items[i][back?1:0]+t('. Activate to flip.'));pos.textContent=(i+1)+' / '+items.length}
+ function show(){var face=items[i][back?1:0];if(face.rich)card.innerHTML=face.body;else card.textContent=face.body;card.classList.toggle('back',back);card.setAttribute('aria-label',(back?t('Answer: '):t('Card {i} of {n}: ',{i:i+1,n:items.length}))+face.text+t('. Activate to flip.'));pos.textContent=(i+1)+' / '+items.length}
  card.addEventListener('click',function(){back=!back;show()});
  b(t('Previous'),function(){i=(i-1+items.length)%items.length;back=false;show()});b(t('Flip'),function(){back=!back;show()});b(t('Next'),function(){i=(i+1)%items.length;back=false;show()});
  b(t('Shuffle'),function(){for(var k=items.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1)),t=items[k];items[k]=items[j];items[j]=t}i=0;back=false;show()});

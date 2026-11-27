@@ -11,6 +11,7 @@ import importlib.util
 spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); BL = importlib.util.module_from_spec(spec); spec.loader.exec_module(BL)
 from courses import roadmap as RM
 from courses import aero101_watch as AW
+from courses import aero101_forces as AF
 V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
@@ -129,9 +130,11 @@ def _code(src, out=None):
 
 def unit(C, K, i, u):
     uid = u['id']; o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
-         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))} · {esc(u["weeks"])}</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
+         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))}' + ('' if C.ID == 'aero101' else ' · ' + esc(u["weeks"])) + f'</p><h2 id="{uid}-h">{esc(u["title"])}</h2><p class="crs-lead">{esc(u["summary"])}</p>']
     o.append(f'<h3>{esc("Learning objectives")}</h3><p>{esc("By the end of this unit you can:")}</p>' + ul(u['objectives'], 'crs-obj'))
     o.append(f'<h3>{esc("Key concepts")}</h3>' + ul(u['concepts'], 'crs-key'))
+    if C.ID == 'aero101' and uid == 'u1':
+        o.append(AF.figure(LANG))
     o.append(f'<h3>{esc("Key equations")}</h3>' + ''.join(eqblock(K, t, c) for t, c in u['eqs']))
     o.append(f'<h3>{esc("Worked examples, step by step")}</h3>')
     for j, w in enumerate(u['worked'], 1):
@@ -141,8 +144,10 @@ def unit(C, K, i, u):
         f'<li><p>{esc(q)}</p><details><summary>{esc("Show answer")}</summary><p>{esc(a)}</p></details></li>' for q, a in u['practice']) + '</ol>')
     o.append(f'<h3>{esc("Common misconceptions")}</h3><ul class="crs-mis">' + ''.join(
         f'<li><p><span class="crs-x">{esc("Myth:")}</span> {esc(m)}</p><p><span class="crs-ok">{esc("Actually:")}</span> {esc(f)}</p></li>' for m, f in u['misc']) + '</ul>')
-    o.append(f'<h3>{esc("Flashcards")}</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">' + ''.join(
-        f'<li><p class="crs-fc-f">{esc(a)}</p><p class="crs-fc-b">{esc(b)}</p></li>' for a, b in u['cards']) + '</ul></div>')
+    cards = ''.join(f'<li><p class="crs-fc-f">{esc(a)}</p><p class="crs-fc-b">{esc(b)}</p></li>' for a, b in u['cards'])
+    if C.ID == 'aero101' and uid == 'u3':
+        cards = AF.force_cards(LANG) + cards
+    o.append(f'<h3>{esc("Flashcards")}</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">{cards}</ul></div>')
     o.append(f'<h3>{esc("Self-check quiz")}</h3><form class="crs-quiz" data-quiz="{uid}" onsubmit="return false"><p class="crs-qs" aria-live="polite"></p>')
     for j, q in enumerate(u['quiz']):
         nm = f'{uid}q{j}'
@@ -255,12 +260,12 @@ SCOPE_T = {
 }
 # AERO 101 pilot labels. SI drafts: no native speaker has reviewed these six-language strings.
 AERO_UI = {
- 'en': {'line': 'In one line'},
- 'fr': {'line': 'En une ligne'},
- 'es': {'line': 'En una línea'},
- 'ar': {'line': 'في سطر واحد'},
- 'it': {'line': 'In una riga'},
- 'he': {'line': 'בשורה אחת'},
+ 'en': {'line': 'Description'},
+ 'fr': {'line': 'Description'},
+ 'es': {'line': 'Descripción'},
+ 'ar': {'line': 'الوصف'},
+ 'it': {'line': 'Descrizione'},
+ 'he': {'line': 'תיאור'},
 }
 AERO_NEED = {
  'en': 'Prerequisites: Algebra, trigonometry, Physics I mechanics; Calculus I is recommended.',
@@ -286,7 +291,7 @@ AERO_SAVED = {
  'it': ' I tuoi progressi sono salvati solo in questo browser.',
  'he': ' ההתקדמות שלכם נשמרת רק בדפדפן הזה.',
 }
-GLANCE_CSS = ('<style id="aero101-glance">.crs-need{margin:.15rem 0 .5rem;font-size:.95rem;line-height:1.35}'
+GLANCE_CSS = ('<style id="aero101-glance">.crs-need{margin:.2rem 0 .75rem;padding:.45rem .8rem;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05);font-size:.95rem;line-height:1.35}'
               '.crs-need b{font-weight:800}.crs-unitscan{margin:0 0 1.1rem}</style>')
 UPDATED = '2026-11-01'
 VERSION = '2026.11.01'
@@ -342,7 +347,7 @@ def outcomes_block(C):
     head = ''.join(f'<th scope="col">{esc(x)}</th>' for x in cols)
     body = []
     for i, u in enumerate(C.UNITS, 1):
-        where = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
+        where = _('Unit {n}').replace('{n}', str(i)) if aero else _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
         for obj in u['objectives']:
             cells = (_(obj), where) if aero else (_(obj), where, practiced)
             body.append('<tr>' + ''.join(f'<td>{html.escape(c)}</td>' for c in cells) + '</tr>')
@@ -352,7 +357,8 @@ def outcomes_block(C):
             f'<div class="crs-tw"><table class="crs-tbl"><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
             + top() + '</section>')
 def readings_block(C):
-    parts = [f'<section id="readings"><h2>{esc("Readings")}</h2><p>{esc("Each link is a free public source already used in this course. Listing a source is not an endorsement.")}</p>']
+    lead = AF.readings_inner(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
+    parts = [f'<section id="readings"><h2>{esc("Readings")}</h2>{lead}<p>{esc("Each link is a free public source already used in this course. Listing a source is not an endorsement.")}</p>']
     for i, u in enumerate(C.UNITS, 1):
         title = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
         parts.append(f'<h3>{html.escape(title)}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
@@ -403,13 +409,24 @@ def further_block(C):
 def glance_block(C):
     label, rest = AERO_NEED[LANG].split(':', 1)
     return (GLANCE_CSS + f'<p class="crs-need" id="glance"><b>{html.escape(label)}:</b>{html.escape(rest)}</p>')
+def _week_num(label):
+    m = re.search(r'\d+(?:–\d+)?', label)
+    num = m.group(0) if m else label
+    if '–' in num:
+        return f'<bdi dir="ltr">{html.escape(num)}</bdi>'
+    return html.escape(num)
 def unit_index(C):
     t = AERO_UI[LANG]
-    head = f'<th scope="col">{esc("Week")}</th><th scope="col">{esc("Unit")}</th><th scope="col">{html.escape(t["line"])}</th>'
-    rows = ''.join(
-        f'<tr><td>{esc(u["weeks"])}</td><td><a href="#{u["id"]}">{esc(u["title"])}</a></td><td>{esc(u["summary"])}</td></tr>'
-        for u in C.UNITS)
-    return f'<div class="crs-unitscan crs-tw" id="unit-index"><table class="crs-tbl"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+    week, unit, desc = esc('Week'), esc('Unit'), html.escape(t['line'])
+    head = f'<th scope="col">{week}</th><th scope="col">{unit}</th><th scope="col">{desc}</th>'
+    rows = []
+    for u in C.UNITS:
+        rows.append(
+            f'<tr><td data-label="{week}">{_week_num(_(u["weeks"]))}</td>'
+            f'<td data-label="{unit}"><a href="#{u["id"]}">{esc(u["title"])}</a></td>'
+            f'<td data-label="{desc}">{esc(u["summary"])}</td></tr>')
+    return (f'<details class="crs-units" id="unit-index"><summary><h2 class="crs-ocw-h">{esc("Units")}</h2></summary>'
+            f'<div class="crs-tw"><table class="crs-tbl"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div></details>')
 def course_page(C):
     texs = [t for u in C.UNITS for t, _c in u['eqs']] + [L['eq'][0] for L in C.LABS] + C.FORMULAS
     K = katex(texs)
@@ -500,7 +517,7 @@ def course_page(C):
                   '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
-                  + AW.CSS + '</style>\n' + AW.JS + '\n')
+                  + AW.CSS + AF.CSS + '</style>\n' + AW.JS + '\n')
     page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
     return aero_foot(page, C) if quiet else page
 

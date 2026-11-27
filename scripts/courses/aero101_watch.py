@@ -433,7 +433,8 @@ def _player(lang, vid):
 def box(lang, unit):
     """One closed details box for unit 1..10. Tiers with no video are omitted."""
     L = LABELS[lang]
-    parts = [f'<details class="crs-watch"><summary><h3>{_esc(L["box"])}</h3></summary>']
+    ident = ' id="u1-watch"' if unit == 1 else ''
+    parts = [f'<details class="crs-watch"{ident}><summary><h3>{_esc(L["box"])}</h3></summary>']
     for vid in VIDEOS[unit]:
         parts.append(
             f'<div class="crs-watch-tier"><h4>{_esc(L[vid["tier"]])}</h4>'
