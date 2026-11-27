@@ -165,10 +165,13 @@ def unit(C, K, i, u):
     o.append(f'<div class="crs-planet"><h3>{esc("How this helps save the planet")}</h3>' + ''.join(f'<p>{esc(t)}</p>' for t in p['text'])
              + f'<p class="crs-src">{esc("On Saving Planets:")} ' + ' · '.join(f'<a href="{esc(loc(h))}">{esc(t)}</a>' for t, h in p['site'])
              + f'</p><p class="crs-src">{esc("Sources:")} ' + ' · '.join(ext(t, h) for t, h in p['src']) + '</p></div>')
-    o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
+    res = ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res'])
+    if C.ID != 'aero101':
+        o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">{res}</ul>')
     if C.ID == 'aero101':
         # Nov 25 2026 (Bryan): one closed Watch and learn box per unit. Click-to-load embed, this course only.
         o.append(AW.box(LANG, i))
+        o.append(AF.deeper(LANG, res))
         lec = None
     else:
         lec = LECTURES.get(C.ID, {}).get(str(i - 1))  # plain link; embeds stay off until Bryan approves that course
@@ -367,9 +370,11 @@ def outcomes_block(C):
 def readings_block(C):
     lead = AF.readings_inner(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
     parts = [f'<section id="readings"><h2>{esc("Readings")}</h2>{lead}<p>{esc("Each link is a free public source already used in this course. Listing a source is not an endorsement.")}</p>']
-    for i, u in enumerate(C.UNITS, 1):
-        title = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
-        parts.append(f'<h3>{html.escape(title)}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
+    # AERO 101 keeps only the textbook here. Each unit's own list lives in that unit, under Go Deeper.
+    if getattr(C, 'ID', '') != 'aero101':
+        for i, u in enumerate(C.UNITS, 1):
+            title = _('Unit {n}').replace('{n}', str(i)) + ': ' + _(u['title'])
+            parts.append(f'<h3>{html.escape(title)}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in u['res']) + '</ul>')
     # AERO 101 already lists these four links under #ptable. Other courses keep the copy in Readings.
     if getattr(C, 'PTABLE', None) and getattr(C, 'ID', '') != 'aero101':
         parts.append(f'<h3>{esc(getattr(C, "REF_TITLE", "Periodic table"))}</h3><ul class="crs-res">' + ''.join(f'<li>{ext(t, h)}: {esc(d)}</li>' for t, h, d in C.PTABLE) + '</ul>')

@@ -1,0 +1,56 @@
+Materials Science—A Building Block for the Future of Aerospace Technologies
+NASA Glenn Research Center. September 21, 2023. 5:56.
+https://www.youtube.com/watch?v=c0EXAuWkMqA
+
+These lines are the captions YouTube shows for this NASA Glenn Research Center film, through 5:55.
+
+0:00  [ music ]
+0:20  The main question I always get when I tell people what I do for a living is, "What is material science and engineering?"
+0:28  When I was figuring out what I wanted to study in college, I learned this research area wasn't as well known as mechanical or aerospace engineering.
+0:37  But material science and engineering permeates these disciplines, which is what made it special to me.
+0:43  Anything you can think of: metals, ceramics, plastics, even our own skin, is a material,
+0:51  and my job is to synthesize, develop, and find new ways to improve current materials for future applications.
+0:59  As Dr. Shyne mentioned earlier, NASA's Glenn Research Center has a rich history of materials advancement.
+1:06  Having a core competency of developing new materials, protection systems and structures for extreme environments.
+1:14  That means extreme temperatures, pressures, or very corrosive environments.
+1:19  As you can imagine, with our current goals of returning humans to the moon, and eventually on to Mars, advanced materials will be
+1:27  equally important in protecting the lives of our astronauts, Earth-based flight vehicles, and human life here on Earth.
+1:35  Unlike most who are inspired by what we do at NASA, it wasn't dreams of space or being an astronaut that steered me here.
+1:42  It was NASA's first "A," aeronautics, that got me excited about pursuing this career.
+1:49  I started college as a studio art major with no desire to go into any engineering field. But I knew I loved flying.
+1:57  I loved traveling.
+1:59  And I loved how flight made my world bigger and the rest of the world smaller.
+2:04  So when I changed my major to physics at Auburn University, I was left bewildered, not knowing exactly what future career I'd want.
+2:13  Then I came to NASA Glenn as an undergraduate intern, and I was able to work on aerogels, which are very unique,
+2:20  lightweight, highly insulative materials for thermal protection systems for vehicles like the Space Shuttle and other high-speed
+2:29  flight vehicles on Earth and in space.
+2:32  And at that time, it was like I had found the missing piece of the puzzle of figuring out what I wanted to achieve with my life.
+2:40  I wanted to work on advanced materials to protect human flight systems and Cleveland was where I needed to be to accomplish that goal.
+2:50  Once I started graduate school in Pennsylvania, I was awarded a graduate fellowship through NASA Glenn and I became an employee
+2:57  as a Pathways intern right before I defended my thesis.
+3:02  That aerogel research that set this once-inexperienced intern on the path to NASA was just one example
+3:09  of the vast amount of influential work accomplished at Glenn Research Center, and today, my team and I
+3:16  are continuing that tradition of innovative materials research in a number of ways.
+3:22  Some of our current research involves environmental barrier coatings which are used to protect gas turbine engine components from their corrosive environment.
+3:32  It's important to protect these components as our nation's next generation airplane engines will run at higher temperatures to improve fuel efficiency
+3:40  and reduce harmful emission products.
+3:43  Decades ago, the first generation of these coatings were developed right here at NASA Glenn in Cleveland.
+3:50  And now, my team and I are pushing state-of-the-art technology in current engines today.
+3:56  I'm excited to help develop coatings and lighter weight materials to help replace heavier metallic engine components.
+4:04  During engine operation, we investigate how these coatings and components fail, whether it's by corrosion caused by combustion products
+4:12  like water vapor, or by particle deposits caused by ingestion of desert sand or volcanic ash.
+4:19  We collaborate with commercial engine companies to qualify their materials for flight readiness in our testing rigs
+4:27  that can reach temperatures above 3,000 degrees Fahrenheit.
+4:31  But we also never forget the fundamentals of basic materials characterization and new materials discovery.
+4:40  On the space side, the "S" in NASA, we're investigating lunar dust mitigation strategies for structures on the moon and eventually on to Mars.
+4:50  The Apollo Missions taught us that one of the greatest challenges is how to remove very fine, highly charged dust particles
+4:57  from surface materials like solar panels, space suits, and helmet visors.
+5:03  Dust compromises the functional integrity of these materials, and so we must develop better removal technologies
+5:10  such as anti-adhesion coatings, brushes, or electric discharge techniques if we are to effectively live and work
+5:19  on other planetary bodies in our future I've highlighted just a few of the many technical achievements and challenges
+5:27  we face in our pursuit of pushing the limits of what we can accomplish, and NASA Glenn will continue to solve tomorrow's problems today.
+5:35  I am thrilled to be part of the Artemis generation, contributing to that rich tradition of innovation.
+5:42  Working here has been a singular experience for me, and I personally take pride in saying NASA is with you when you fly.
+5:50  Thank you.
+5:51  [ applause ]
+5:55  [ music ]

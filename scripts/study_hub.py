@@ -5,6 +5,7 @@ import html, json, os, re
 from study_aero_text import T, IDS
 from courses import roadmap as RM
 from courses import aero101_review as AR
+from courses import nasa_film as NF
 
 SRC = {
  'en': ('Embry-Riddle aerospace engineering degree', 'Daytona Beach catalog (PDF)'),
@@ -41,7 +42,6 @@ body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!imp
 .crs-watch-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .crs-film figcaption{display:flex;flex-direction:column;gap:.12rem;margin-top:.35rem;font-size:.9rem;line-height:1.35}
 .crs-film-title{font-weight:800}
-@media (min-width:800px){.crs-hook{grid-template-columns:minmax(0,1fr) minmax(260px,420px)}}
 @media (max-width:700px){#track-prompt,.crs-week{padding-inline-end:11rem}}
 .crs:has(#bs-aero){max-width:1180px;padding:.65rem 1rem 1.15rem}
 .crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:flex-start;justify-content:space-between;margin:.15rem 0 .45rem;padding:.4rem .5rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
@@ -95,7 +95,7 @@ html[dir="rtl"] .crs-fold[open]>summary::before{content:"▾"}
 @media print{.crs-sticky,.crs-totop,.crs-foldbar{display:none!important}html.crs-js .crs-c.is-track,html.crs-js .crs-cmp{display:block!important}html.crs-js .crs-tag{display:inline-block!important}.crs-fold,.crs-fold>*{display:block!important}}
 #y1,#y2,#y3,#y4,.crs-fold{scroll-margin-top:11rem}
 .crs section[id],.crs h2[id]{scroll-margin-top:13rem}
-""" + AR.CSS
+""" + NF.CSS + AR.CSS
 
 JS = r"""<script id="study-tracks-js">(function(){
 var root=document.querySelector(".crs");if(!root)return;
@@ -234,30 +234,12 @@ def fragment(lang, esc, live_for):
     parts.append('</div>')
     return ''.join(parts)
 
-FILM_ID = 'c0EXAuWkMqA'
-FILM_TITLE = 'Materials Science—A Building Block for the Future of Aerospace Technologies'
-NASA_MEDIA = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
-
 def week_html(lang):
     S = T[lang]
     before, after = S['week'].split('{course}')
     link = f'<a href="Intro_to_Aerospace_Engineering.html#u1-watch">{E(S["week_course"])}</a>'
     sentence = f'<p class="crs-week">{E(before)}{link}{E(after)}</p>'
-    title = E(FILM_TITLE)
-    cred_before, cred_after = S['film_credit'].split('{name}')
-    return (
-        f'<div class="crs-hook">{sentence}'
-        f'<figure class="crs-film"><div class="crs-watch-frame">'
-        f'<button type="button" class="crs-watch-play" data-id="{FILM_ID}" data-title="{title}" '
-        f'aria-label="{E(S["play"])}: {title}">'
-        f'<span class="crs-watch-poster" aria-hidden="true"><span class="crs-watch-tri"></span></span>'
-        f'<span class="crs-watch-cap"><span lang="en">{title}</span></span></button></div>'
-        f'<figcaption><span class="crs-film-meta"><bdi lang="en" dir="ltr">NASA Glenn Research Center</bdi> · '
-        f'<bdi dir="ltr">5:56</bdi> · {E(S["film_caps"])}</span>'
-        f'<span class="crs-film-credit">{E(cred_before)}'
-        f'<a href="{NASA_MEDIA}" rel="noopener license">{E(S["film_name"])}</a>{E(cred_after)}</span>'
-        f'</figcaption></figure></div>'
-    )
+    return f'<div class="crs-hook">{sentence}{NF.figure(lang)}</div>'
 
 def _track_tag(S, label):
     return (f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(label)}">{E(label)}</span>')
@@ -327,6 +309,9 @@ def install(path, lang, main_inner, back, title, desc):
     s = _upsert(s, '<!-- STUDYCSS:START -->', '<!-- STUDYCSS:END -->', style, '</head>')
     s = _upsert(s, '<!-- STUDYBOOT:START -->', '<!-- STUDYBOOT:END -->', boot, '</head>')
     s = _upsert(s, '<script id="study-tracks-js">', '</script>', JS, '</body>')
+    film = f'<script src="{NF.script_src(lang)}" defer></script>'
+    if 'nasa-film.js' not in s:
+        s = s.replace('</body>', film + '\n</body>', 1)
     # The upsert end token </script> is too broad if the block was missing and we inserted before </body>.
     # When the script is new, _upsert inserts the whole <script>…</script> before </body>. Good.
     # When it exists, the regex from <script id= to the first </script> replaces it. Good.

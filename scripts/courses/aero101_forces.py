@@ -217,6 +217,26 @@ def readings_inner(lang):
         '</div>'
     )
 
+DEEPER = {
+    'en': 'Go Deeper',
+    'fr': 'Pour approfondir',
+    'es': 'Para profundizar',
+    'ar': 'للتعمّق',
+    'it': 'Per approfondire',
+    'he': 'להעמקה',
+}
+BOOK_ICON = ('<svg class="crs-deeper-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+             '<path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" '
+             'd="M12 6.2C10.6 4.8 8.4 4 6 4H4.5v14H6c2.2 0 4.2.7 6 2 1.8-1.3 3.8-2 6-2h1.5V4H18c-2.4 0-4.6.8-6 2.2z"/>'
+             '<path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 6.2v13.8"/>'
+             '</svg>')
+
+def deeper(lang, items):
+    """Collapsed extra reading for one unit. items is the inner HTML of the list."""
+    label = html.escape(DEEPER[lang])
+    return (f'<details class="crs-deeper"><summary>{BOOK_ICON}<h3>{label}</h3></summary>'
+            f'<ul class="crs-res">{items}</ul></details>')
+
 CSS = (
     '.crs-ocw{display:flex;flex-wrap:wrap;gap:.45rem;margin:.15rem 0 .85rem}'
     '.crs-ocw a{min-height:44px;display:inline-flex;align-items:center;padding:0 .95rem;border-radius:999px;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,.38);background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.04));box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}'
@@ -256,6 +276,14 @@ CSS = (
     '.crs-units tr{display:block;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.14)}'
     '.crs-units td{display:block;border:0;padding:.15rem .4rem}'
     '.crs-units td::before{content:attr(data-label);display:block;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;opacity:.72}}'
+    '.crs-deeper{margin:.85rem 0 .15rem;border:1px solid rgba(255,255,255,.24);border-radius:14px;background:rgba(255,255,255,.05)}'
+    '.crs-deeper>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:.5rem;padding:.15rem .85rem;list-style:none}'
+    '.crs-deeper>summary::-webkit-details-marker{display:none}'
+    '.crs-deeper>summary::after{content:"";width:.45rem;height:.45rem;margin-inline-start:auto;flex:none;border-inline-end:2px solid currentColor;border-block-end:2px solid currentColor;transform:translateY(-.08rem) rotate(45deg)}'
+    '.crs-deeper[open]>summary::after{transform:translateY(.08rem) rotate(225deg)}'
+    '.crs-deeper>summary h3{margin:0;flex:1;font-size:.92rem;font-weight:750;line-height:1.25}'
+    '.crs-deeper-i{width:1.15rem;height:1.15rem;flex:none;color:#d7ecff}'
+    '.crs-deeper .crs-res{margin:.05rem .95rem .8rem;font-size:.92rem}'
 )
 
 DESC = {
