@@ -29,6 +29,18 @@ body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!imp
 #track-sentinel{height:1px}
 #track-prompt{margin:.15rem 0 .4rem}
 .crs-week{margin:.15rem 0 .35rem}
+.crs-hook{display:grid;gap:.45rem 1rem;align-items:center;margin:0 0 .45rem}
+.crs-hook .crs-week{margin:0}
+.crs-film{margin:0}
+.crs-watch-frame{position:relative;aspect-ratio:16/9;margin:0;border-radius:12px;overflow:hidden;background:#071422}
+.crs-watch-play{appearance:none;border:0;padding:0;margin:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;cursor:pointer;color:#fff;background:linear-gradient(160deg,#12304d,#071422 70%);font:inherit}
+.crs-watch-play:focus-visible{outline:3px solid #ffd54a;outline-offset:-6px}
+.crs-watch-tri{display:block;width:0;height:0;border-style:solid;border-width:16px 0 16px 28px;border-color:transparent transparent transparent #fff}
+.crs-watch-cap{max-width:34rem;text-align:center;font-weight:700;padding:0 .8rem;line-height:1.35}
+.crs-watch-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.crs-film figcaption{display:flex;flex-direction:column;gap:.12rem;margin-top:.35rem;font-size:.9rem;line-height:1.35}
+.crs-film-title{font-weight:800}
+@media (min-width:800px){.crs-hook{grid-template-columns:minmax(0,1fr) minmax(260px,420px)}}
 @media (max-width:700px){#track-prompt,.crs-week{padding-inline-end:11rem}}
 .crs:has(#bs-aero){max-width:1180px;padding:.65rem 1rem 1.15rem}
 .crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:flex-start;justify-content:space-between;margin:.15rem 0 .45rem;padding:.4rem .5rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
@@ -128,6 +140,19 @@ if(bar){
 var top=document.querySelector("a.crs-totop");
 if(top){function onScroll(){if(window.scrollY>480)top.removeAttribute("hidden");else top.setAttribute("hidden","")}
  window.addEventListener("scroll",onScroll,{passive:true});onScroll()}
+document.addEventListener("click",function(e){
+ var b=e.target.closest&&e.target.closest(".crs-watch-play");
+ if(!b)return;
+ var id=b.getAttribute("data-id")||"";
+ if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;
+ var f=document.createElement("iframe");
+ f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1";
+ f.title=b.getAttribute("data-title")||"";
+ f.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+ f.allowFullscreen=true;
+ f.referrerPolicy="strict-origin-when-cross-origin";
+ b.replaceWith(f);
+});
 })();</script>"""
 
 FOLD_JS = r"""<script id="course-folds-js">(function(){
@@ -169,7 +194,7 @@ def fragment(lang, esc, live_for):
     S = T[lang]
     parts = [f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content">'
              f'<p class="crs-program">{E(S["title"])}</p><h1 id="bs-aero-title">{E(S["program"])}</h1>'
-             f'<p>{E(S["note"])}</p><p>{E(S["intro"])}</p></div></section>\n']
+             f'<p>{E(S["note"])}</p></div></section>\n']
     rtl = ' dir="rtl"' if lang in ('ar', 'he') else ''
     parts.append(f'<div class="crs"{rtl}>')
     parts.append('<section class="crs-degree" id="bs-aero" aria-labelledby="bs-aero-title">')
@@ -204,11 +229,31 @@ def fragment(lang, esc, live_for):
     parts.append('</div>')
     return ''.join(parts)
 
+FILM_ID = 'c0EXAuWkMqA'
+FILM_TITLE = 'Materials Science—A Building Block for the Future of Aerospace Technologies'
+NASA_MEDIA = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
+
 def week_html(lang):
     S = T[lang]
     before, after = S['week'].split('{course}')
     link = f'<a href="Intro_to_Aerospace_Engineering.html#u1">{E(S["week_course"])}</a>'
-    return f'<p class="crs-week">{E(before)}{link}{E(after)}</p>'
+    sentence = f'<p class="crs-week">{E(before)}{link}{E(after)}</p>'
+    title = E(FILM_TITLE)
+    cred_before, cred_after = S['film_credit'].split('{name}')
+    return (
+        f'<div class="crs-hook">{sentence}'
+        f'<figure class="crs-film"><div class="crs-watch-frame">'
+        f'<button type="button" class="crs-watch-play" data-id="{FILM_ID}" data-title="{title}" '
+        f'aria-label="{E(S["play"])}: {title}">'
+        f'<span class="crs-watch-poster" aria-hidden="true"><span class="crs-watch-tri"></span></span>'
+        f'<span class="crs-watch-cap"><span lang="en">{title}</span></span></button></div>'
+        f'<figcaption><span class="crs-film-title" lang="en" dir="ltr">{title}</span>'
+        f'<span class="crs-film-meta"><bdi lang="en" dir="ltr">NASA Glenn Research Center</bdi> · '
+        f'<bdi dir="ltr">5:56</bdi> · {E(S["film_caps"])}</span>'
+        f'<span class="crs-film-credit">{E(cred_before)}'
+        f'<a href="{NASA_MEDIA}" rel="noopener license">{E(S["film_name"])}</a>{E(cred_after)}</span>'
+        f'</figcaption></figure></div>'
+    )
 
 def _track_tag(S, label):
     return (f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(label)}">{E(label)}</span>')
