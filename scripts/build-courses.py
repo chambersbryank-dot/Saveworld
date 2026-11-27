@@ -12,6 +12,7 @@ spec = importlib.util.spec_from_file_location('bl', 'scripts/build-learn.py'); B
 from courses import roadmap as RM
 from courses import aero101_watch as AW
 from courses import aero101_forces as AF
+from courses import aero101_review as AR
 V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
@@ -196,9 +197,11 @@ def pdf_key(C, l): return 'courses/' + C.PAGE[:-5] + '_Study_Guide' + ('' if l =
 def pdf_link(C):
     # PDF study guide on R2 (made with --pdf: every answer open, print styles). Key = courses/<PAGE stem>_Study_Guide[_<lang>].pdf; English PDF as fallback
     MF = json.load(open('assets/data/media-manifest.json')); k = pdf_key(C, LANG)
-    if k in MF: return f' <a class="crs-btn" href="{MF[k]["url"]}" download>{esc("Download the PDF study guide")}</a>'
+    docx = AR.guide_link(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
+    if k in MF: return f' <a class="crs-btn" href="{MF[k]["url"]}" download>{esc("Download the PDF study guide")}</a>' + docx
     k = pdf_key(C, 'en')
-    return f' <a class="crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' if k in MF else ''
+    docx = AR.guide_link(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
+    return (f' <a class="crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' + docx) if k in MF else docx
 
 def make_pdf(C, l='en'):
     """Print the course page to a tagged PDF. Equation text (.crs-eqtext) stays selectable.
@@ -355,6 +358,7 @@ def outcomes_block(C):
     return (f'<section id="outcomes"><h2>{esc("Learning outcomes")}</h2>'
             f'<p>{intro}</p>'
             f'<div class="crs-tw"><table class="crs-tbl"><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
+            + (AR.alignment(LANG) if aero else '')
             + top() + '</section>')
 def readings_block(C):
     lead = AF.readings_inner(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
@@ -446,8 +450,10 @@ def course_page(C):
               f'<p class="crs-updated">{html.escape(UPD_T[LANG])}: <time datetime="{updated}">{html.escape(when)}</time> · {html.escape(VER_T[LANG])} {html.escape(version)}</p>',
               f'<p class="crs-check">{html.escape(FACT_NOTE[note_key][LANG])}</p>']
         if getattr(C, 'CREDIT', None): o.append(credit_p(C.CREDIT))
+        o.append(AR.box(LANG, when_iso=updated, when_label=when))
     else:
         o.append(glance_block(C))
+        o.append(AR.box(LANG, quality=True))
     if not quiet:
         o.append(f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>')
     o.append(f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>')
@@ -517,7 +523,7 @@ def course_page(C):
                   '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
-                  + AW.CSS + AF.CSS + '</style>\n' + AW.JS + '\n')
+                  + AW.CSS + AF.CSS + AR.CSS + '</style>\n' + AW.JS + '\n')
     page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
     return aero_foot(page, C) if quiet else page
 

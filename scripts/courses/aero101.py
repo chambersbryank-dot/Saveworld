@@ -12,7 +12,7 @@ TITLE = 'Introduction to Aerospace Engineering'
 TAGLINE = 'How aircraft and spacecraft are designed, built and flown: the atmosphere, lift and drag, performance, stability, propulsion, rockets and orbits, and the path to cleaner flight.'
 DESC = 'Free intro to aerospace engineering: atmosphere, lift and drag, airfoils, performance, stability, propulsion, rockets, orbits, sustainable aviation.'
 # Shown under the title, before the contents list. The Founder is a role, never a person's name. Say SI, never AI.
-CREDIT = 'Course created by Saving Planets: the Founder sets direction and approves every page; SI researches, drafts, translates and checks sources.'
+CREDIT = 'The Founder and Co-founder set direction, choose topics and scope, review the teaching approach and approve every page. SI researched, drafted, translated and checked sources. Every fact, worked example and link was checked against named sources and reviewed by the founders before publication.'
 ALT = 'NASA rocket launch'
 _G = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/'
 OS = _G
