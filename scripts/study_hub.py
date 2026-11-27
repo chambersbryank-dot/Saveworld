@@ -145,14 +145,10 @@ def fragment(lang, esc, live_for):
     S = T[lang]
     parts = [f'<section class="page-hero hero-learn" id="top"><div class="page-hero-content">'
              f'<p class="crs-program">{E(S["title"])}</p><h1 id="bs-aero-title">{E(S["program"])}</h1>'
-             f'<p>{E(S["note"])}</p></div></section>\n']
+             f'<p>{E(S["note"])}</p><p>{E(S["intro"])}</p></div></section>\n']
     rtl = ' dir="rtl"' if lang in ('ar', 'he') else ''
     parts.append(f'<div class="crs"{rtl}>')
     parts.append('<section class="crs-degree" id="bs-aero" aria-labelledby="bs-aero-title">')
-    parts.append('<div class="crs-disc">'
-                 f'<p>{esc("These are free self-study courses written by Saving Planets. They follow the scope of first- to fourth-year college courses using open materials, but they are not university courses, carry no academic credit, and no school is involved.")}</p>'
-                 f'<p>{esc("Every course ties its subject to real work that helps people and nature, and links to free, reputable resources.")}</p>'
-                 f'<p>{E(S["source"])}</p></div>')
     parts.append(f'<noscript><p>{E(S["noscript"])}</p></noscript>')
     parts.append(f'<p id="track-prompt" data-off="{E(S["prompt"])}" data-on="{E(S["prompt_on"])}">{E(S["prompt"])}</p>')
     names = E(json.dumps(S['tname'], ensure_ascii=False))
