@@ -20,12 +20,15 @@ SRC_URL = (
 
 CSS = r"""/* STUDY-TRACKS */
 .page-hero .crs-program{margin:0 0 .35rem;font-weight:800;font-size:.95rem}
+body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!important;padding:calc(var(--nav-height,88px) + .5rem) 1.1rem .75rem!important}
 .cite-foot{overflow-wrap:anywhere}
 #track-sentinel{height:1px}
-#track-prompt{margin:.4rem 0 .8rem}
+#track-prompt{margin:.15rem 0 .4rem}
 @media (max-width:700px){#track-prompt{padding-inline-end:11rem}}
-.crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.55rem .75rem;align-items:flex-start;justify-content:space-between;margin:.4rem 0 1.1rem;padding:.55rem .65rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-.crs-tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:.45rem;flex:1 1 280px;margin:0}
+.crs:has(#bs-aero){max-width:1180px;padding:.65rem 1rem 1.15rem}
+.crs-sticky{position:sticky;top:var(--nav-height,88px);z-index:30;display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:flex-start;justify-content:space-between;margin:.15rem 0 .45rem;padding:.4rem .5rem;background:rgba(7,16,24,.94);border:1px solid rgba(143,211,255,.4);border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.crs-tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:.4rem;flex:1 1 280px;margin:0}
+@media (min-width:900px){.crs-sticky{flex-direction:column;align-items:stretch}.crs-tracks{grid-template-columns:repeat(4,minmax(0,1fr));flex:none}}
 .crs-track{min-height:44px;text-align:start;border-radius:14px;padding:.4rem .7rem;cursor:pointer;color:#fff;font:inherit;border:1px solid rgba(255,255,255,.4);background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(12,28,56,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 16px rgba(0,0,0,.25)}
 .crs-track-n{display:block;font-weight:800}
 .crs-track-d{display:block;font-size:.82rem;font-weight:500;line-height:1.35}
@@ -39,14 +42,23 @@ CSS = r"""/* STUDY-TRACKS */
 .crs-sticky.is-stuck .crs-track-d{display:none}
 .crs-jumps{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
 .crs-jumps a{min-height:44px;display:inline-flex;align-items:center;padding:0 .8rem;border-radius:999px;text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
-.crs-tag{display:inline-block;margin-inline-start:.4rem;font-size:.75rem;font-weight:800;padding:.12rem .55rem;border-radius:999px;border:1px solid rgba(143,211,255,.65);background:rgba(143,211,255,.16);vertical-align:middle}
+.crs-tag{display:inline-block;margin:0 .35rem .15rem 0;font-size:.75rem;font-weight:700;padding:.08rem .45rem;border-radius:999px;border:1px solid rgba(143,211,255,.45);background:rgba(143,211,255,.1);vertical-align:middle}
+html[dir="rtl"] .crs-tag{margin:0 0 .15rem .35rem}
+html.crs-js .crs-tag{display:none}
+.crs-soon{display:inline-block;margin:0 0 .15rem;font-size:.75rem;font-weight:650;letter-spacing:.01em;opacity:.72}
 .crs-source{font-size:.98rem}
 html.crs-js .crs-c.is-track{display:none}
 html.crs-js .crs-c.is-track.is-on{display:block}
 html.crs-js .crs-cmp{display:none}
 html.crs-js .crs-cmp.is-on{display:block}
-.crs-cmp{margin:.8rem 0;padding:.2rem 0 .2rem 0}
+.crs-cmp{margin:.55rem 0;padding:.1rem 0}
 .crs-cmp h3{margin-bottom:.3rem}
+#bs-aero h2{margin:.65rem 0 .2rem}
+#bs-aero .crs-grid{margin:.15rem 0 0;gap:.55rem}
+#bs-aero .crs-c{padding:.55rem .7rem}
+#bs-aero .crs-c h3{margin:.15rem 0 .05rem}
+#bs-aero .crs-c>p{margin:.15rem 0}
+#bs-aero .crs-top{margin:.25rem 0 0}
 .crs-totop{position:fixed;z-index:1100;inset-inline-start:16px;bottom:16px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 1rem;border-radius:999px;text-decoration:none;font-weight:800;color:#fff;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06)),rgba(11,58,91,.9);border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 6px 18px rgba(0,0,0,.3)}
 .crs-totop[hidden]{display:none!important}
 .crs-fold{margin:.35rem 0 1rem;border-bottom:1px solid rgba(255,255,255,.16)}
@@ -59,7 +71,7 @@ html[dir="rtl"] .crs-fold[open]>summary::before{content:"▾"}
 .crs-fold>summary h2{margin:0;flex:1;font-size:1.15rem}
 .crs-foldbar{display:flex;flex-wrap:wrap;gap:.45rem;margin:.4rem 0 1rem}
 @media (prefers-reduced-motion:reduce){.crs-sticky,.crs-track,.crs-totop,.crs-fold{transition:none!important}}
-@media print{.crs-sticky,.crs-totop,.crs-foldbar{display:none!important}html.crs-js .crs-c.is-track,html.crs-js .crs-cmp{display:block!important}.crs-fold,.crs-fold>*{display:block!important}}
+@media print{.crs-sticky,.crs-totop,.crs-foldbar{display:none!important}html.crs-js .crs-c.is-track,html.crs-js .crs-cmp{display:block!important}html.crs-js .crs-tag{display:inline-block!important}.crs-fold,.crs-fold>*{display:block!important}}
 #y1,#y2,#y3,#y4,.crs-fold{scroll-margin-top:11rem}
 .crs section[id],.crs h2[id]{scroll-margin-top:13rem}
 """
@@ -183,18 +195,20 @@ def fragment(lang, esc, live_for):
     parts.append('</div>')
     return ''.join(parts)
 
+def _track_tag(S, label):
+    return (f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(label)}">{E(label)}</span>')
+
 def planned_card(lang, pid, tracks, model):
     S = T[lang]
     title, desc = S['card'][pid]
     if tracks == 'core':
-        attr, extra, tag = 'core', '', S['core']
+        attr, extra, tag = 'core', '', ''
     else:
         attr = ' '.join(tracks)
         extra = ' is-track'
-        tag = ' · '.join(S['tname'][t] for t in tracks)
+        tag = _track_tag(S, ' · '.join(S['tname'][t] for t in tracks))
     return (f'<li class="crs-c{extra}" data-tracks="{attr}">'
-            f'<span class="crs-badge soon">{E(S["planned"])}</span>'
-            f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(tag)}">{E(tag)}</span>'
+            f'<span class="crs-soon">{E(S["soon"])}</span>{tag}'
             f'<h3>{E(title)}</h3><p>{E(desc)}</p>'
             f'<p class="crs-kicker">{E(S["model"])} <bdi dir="ltr">{E(model)}</bdi></p>'
             f'<details class="crs-tip"><summary>{E(S["tip"])}</summary><p>{E(S["tip_body"])}</p></details></li>')
@@ -212,15 +226,13 @@ def live_card(lang, cid, title, desc, esc, mod, href, english):
     S = T[lang]
     role = RM.ROLE[cid]
     if role == 'core':
-        tracks, extra, tag = 'core', '', S['core']
+        tracks, extra, tag = 'core', '', ''
     else:
         tracks, extra = ' '.join(role), ' is-track'
-        tag = ' · '.join(S['tname'][t] for t in role)
+        tag = _track_tag(S, ' · '.join(S['tname'][t] for t in role))
     note = ' <span lang="en">(English)</span>' if english else ''
     blurb = esc(desc)
-    return (f'<li class="crs-c live{extra}" data-tracks="{tracks}">'
-            f'<span class="crs-badge">{esc("Live")}</span>'
-            f'<span class="crs-tag" data-core="{E(S["core"])}" data-all="{E(tag)}">{E(tag)}</span>'
+    return (f'<li class="crs-c live{extra}" data-tracks="{tracks}">{tag}'
             f'<h3><a href="{href}">{esc(title)}</a>{note}</h3><p>{blurb}</p>'
             f'<p class="crs-kicker">{esc(mod.CODE)}</p></li>')
 
