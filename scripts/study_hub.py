@@ -19,6 +19,10 @@ SRC_URL = (
 )
 
 CSS = r"""/* STUDY-TRACKS */
+@font-face{font-family:"SP Hub Fallback";src:local("Arial");size-adjust:113.7%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+html:not([dir="rtl"]) body.toc-sub.learn-page:has(#bs-aero){font-family:Montserrat,"SP Hub Fallback","Segoe UI",sans-serif}
+.page-hero.hero-learn:has(.crs-program) h1{line-height:1.23}
+.page-hero.hero-learn:has(.crs-program) .page-hero-content p{line-height:1.2}
 .page-hero .crs-program{margin:0 0 .35rem;font-weight:800;font-size:.95rem}
 body.toc-sub.learn-page .page-hero.hero-learn:has(.crs-program){min-height:0!important;padding:calc(var(--nav-height,88px) + .5rem) 1.1rem .75rem!important}
 .cite-foot{overflow-wrap:anywhere}
@@ -55,8 +59,8 @@ html.crs-js .crs-cmp.is-on{display:block}
 .crs-cmp{margin:.55rem 0;padding:.1rem 0}
 .crs-cmp h3{margin-bottom:.3rem}
 #bs-aero h2{margin:.65rem 0 .2rem}
-#bs-aero .crs-grid{margin:.15rem 0 0;gap:.55rem}
-#bs-aero .crs-c{padding:.55rem .7rem}
+#bs-aero .crs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));list-style:none;padding:0;align-items:start;margin:.15rem 0 0;gap:.55rem}
+#bs-aero .crs-c{padding:.55rem .7rem;border:1px solid rgba(255,255,255,.2);border-radius:16px;box-sizing:border-box}
 #bs-aero .crs-c h3{margin:.15rem 0 .05rem}
 #bs-aero .crs-c>p{margin:.15rem 0}
 #bs-aero .crs-top{margin:.25rem 0 0}
