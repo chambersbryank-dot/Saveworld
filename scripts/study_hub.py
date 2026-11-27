@@ -19,7 +19,7 @@ SRC_URL = (
 )
 
 CSS = r"""/* STUDY-TRACKS */
-@font-face{font-family:"SP Hub Fallback";src:local("Arial");size-adjust:113.7%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:"SP Hub Fallback";src:local("Liberation Sans"),local("Arial");size-adjust:113.7%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
 html:not([dir="rtl"]) body.toc-sub.learn-page:has(#bs-aero){font-family:Montserrat,"SP Hub Fallback","Segoe UI",sans-serif}
 .page-hero.hero-learn:has(.crs-program) h1{line-height:1.23}
 .page-hero.hero-learn:has(.crs-program) .page-hero-content p{line-height:1.2}
