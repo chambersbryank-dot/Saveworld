@@ -451,6 +451,9 @@ def _week_num(label):
         return f'<bdi dir="ltr">{html.escape(num)}</bdi>'
     return html.escape(num)
 def unit_index(C):
+    # Live AERO 101 no longer uses this table. Each unit row carries the week
+    # and this summary, and the sentence is not repeated under the film.
+    # See NOTES.md, "AERO 101 section line and unit rows".
     t = AERO_UI[LANG]
     week, unit, desc = esc('Week'), esc('Unit'), html.escape(t['line'])
     head = f'<th scope="col">{week}</th><th scope="col">{unit}</th><th scope="col">{desc}</th>'

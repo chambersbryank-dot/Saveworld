@@ -27,3 +27,9 @@ The quiz is one question at a time: a start screen with the count and the time, 
 Flashcards use the same shape. Start, then one card: flip, then Know it or Still learning. The mark buttons stay hidden until the card is flipped. The end screen shows known against still learning, the percent, and every Still learning card with its answer. Review missed only, and Restart shuffled, follow.
 
 Keyboard, a live region and visible focus are required. Reduced motion skips the fade and the auto-advance; Next is the only way forward. Arabic and Hebrew run right to left. Address is French vous, Spanish tú, Italian tu, Arabic singular and Hebrew plural.
+
+## AERO 101 section line and unit rows
+
+Under Prerequisites, AERO 101 uses one centered line of small text links: Expand Sections, Collapse Sections, Download, and For Instructors. Download opens a compact popover with the four existing targets, unchanged: the PDF study guide, the editable study guide (.docx), the Canvas cartridge, and the Google Classroom zip. Address follows the site rule: French vous, Spanish tú, Italian tu, Arabic singular, Hebrew plural.
+
+Units is a centered heading. Each unit is one slim row: a clear water-crystal button that hugs the unit title (the same glass as the Explore solutions chip, not the space purple), then the week (`Wk 1`, `Wk 3–4`, and the translated short form) and the unit’s own one-sentence summary. That sentence is moved from the old units table and from the lead under the film, not written again and not invented. The row is the summary of the unit. Clicking it, or pressing Enter or Space, opens or closes that unit in place. `aria-expanded` follows the open state. Expand Sections and Collapse Sections open or close every section, including the units. When a unit opens, its featured film is still the first study block, with muted autoplay only on that featured film. Other films stay posters until chosen. Nothing else in the unit is removed.
