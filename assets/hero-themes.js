@@ -530,8 +530,14 @@
       if (scrub) advance = dt;
       else if (revealT > 0.45) { var u = Math.min(1, (revealT - 0.45) / 0.7); u = u * u * (3 - 2 * u); advance = dt * u; } }
     tGlide += advance; var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += advance; frame(false); if (running()) raf = requestAnimationFrame(loop); }
+  /* Homepage rotation is paused while .hero[data-home-themes] is not "on". Set HOME_THEMES true in the homepage chooser to resume moon, Earth, and Saturn. */
+  function homeThemesPaused() {
+    if (!document.body || !document.body.classList.contains('toc-home')) return false;
+    var heroEl = box && box.closest ? box.closest('.hero') : null;
+    return !heroEl || heroEl.getAttribute('data-home-themes') !== 'on';
+  }
   function running() {
-    if (document.body && document.body.classList.contains('toc-home')) return false;
+    if (homeThemesPaused()) return false;
     return !reduced && onScreen && !document.hidden;
   }
   function kick() { if (running() && !raf) { last = performance.now(); warm = 0; slowT = 0; ema = 0; raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
@@ -541,11 +547,11 @@
   document.addEventListener('visibilitychange', kick);
   if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(hero);
   if (mq.addEventListener) mq.addEventListener('change', function () {
-    if (document.body && document.body.classList.contains('toc-home')) return;
+    if (homeThemesPaused()) return;
     reduced = mq.matches; if (reduced) { tScene = tGlide = 9; frame(true); } kick(); });
   var rt = 0, lastW = 0;
   window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () {
-    if (document.body && document.body.classList.contains('toc-home')) return;
+    if (homeThemesPaused()) return;
     var b = hero.getBoundingClientRect(); if (Math.abs(b.width - lastW) < 2 && Math.abs(b.height - H) < 80) return; // ignore iOS URL-bar jitter
     lastW = b.width; setup(); frame(true); kick(); }, 180); }, { passive: true });
   lastW = hero.getBoundingClientRect().width;
@@ -566,8 +572,8 @@
       var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
       var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
   function start() { if (started) return; started = true;
-    /* Homepage pilot: the moon and Earthrise stay the still poster. Beach and forest play in the video theme. */
-    if (document.body && document.body.classList.contains('toc-home')) {
+    /* Paused homepage rotation: moon, Earth, and Saturn stay still. Ocean and forest play in the video. */
+    if (homeThemesPaused()) {
       box.classList.add('hs-static');
       if (raf) { cancelAnimationFrame(raf); raf = 0; }
       return;
@@ -579,7 +585,7 @@
   function idle() { (window.requestIdleCallback || function (f) { return setTimeout(f, 50); })(start, { timeout: 2500 }); }
   if (document.readyState === 'complete') setTimeout(idle, 200); else window.addEventListener('load', function () { setTimeout(idle, 200); });
   measureScene(); // lock the title between nav and horizon before the fade-in is visible
-  if (!(document.body && document.body.classList.contains('toc-home'))) loadSat(); // start the Cassini download now, not after load+idle
+  if (!homeThemesPaused()) loadSat(); // start the Cassini download now, not after load+idle
   document.addEventListener('DOMContentLoaded', measureScene);
   requestAnimationFrame(measureScene);
   window.addEventListener('sp-lb', function () { setTimeout(placeCaption, 50); }); // language banner shown/closed

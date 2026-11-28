@@ -10,8 +10,8 @@ body.toc-home .home-find .hf-row,
 body.toc-home .home-find form,
 body.toc-home .home-find .wm-cta{min-width:0;max-width:100%}
 html.dark body.toc-home :is(h1,h2,h3,p,li,td,th,label,summary){color:#171717}
-html.dark body.toc-home .card-band .card,
 html.dark body.toc-home .aud-card{background:#f7f7f7 !important;color:#171717 !important}
+html.dark body.toc-home .card-band .card{color:#171717 !important}
 html.dark body.toc-home .card-band h2,
 html.dark body.toc-home .card-band h3,
 html.dark body.toc-home .mission-block h2{color:#171717 !important}
@@ -22,21 +22,30 @@ html.dark body.toc-home .card-band h3 a{color:#0a4f78 !important}
 /* Nav: light translucent bar. Beats the shared dark #topnav rules, including the Italian solid fill. */
 html body.toc-home nav#topnav,
 html[lang="it"] body.toc-home nav#topnav{
-  background:rgba(238,238,238,.78) !important;
+  background:transparent !important;
   border:0 !important;
-  border-bottom:1.5px solid rgba(255,255,255,.9) !important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 10px 28px rgba(16,24,40,.06) !important;
-  -webkit-backdrop-filter:blur(18px) saturate(160%) !important;
-  backdrop-filter:blur(18px) saturate(160%) !important;
+  border-bottom:0 !important;
+  box-shadow:none !important;
+  -webkit-backdrop-filter:none !important;
+  backdrop-filter:none !important;
   color:#171717 !important
 }
-html body.toc-home nav#topnav::before{opacity:0 !important;background:transparent !important}
+html body.toc-home nav#topnav::before{
+  content:"" !important;opacity:1 !important;pointer-events:none;
+  position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,rgba(235,235,235,.55) 0%,rgba(235,235,235,.24) 62%,rgba(235,235,235,0) 100%) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(170%);
+  backdrop-filter:blur(18px) saturate(170%);
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 26px),transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 26px),transparent 100%)
+}
+body.toc-home #topnav .spn{position:relative;z-index:1}
 html body.toc-home nav#topnav.spn-solid,
 html body.toc-home nav#topnav.spn-open,
 html[lang="it"] body.toc-home nav#topnav.spn-solid,
 html[lang="it"] body.toc-home nav#topnav.spn-open{
-  background:rgba(238,238,238,.92) !important;
-  box-shadow:inset 0 1px 0 #fff,0 12px 32px rgba(16,24,40,.08) !important
+  background:transparent !important;
+  box-shadow:none !important
 }
 body.toc-home #topnav .spn{font-family:Inter,"Segoe UI",sans-serif}
 html[lang=ar] body.toc-home #topnav .spn{font-family:"Noto Sans Arabic",Inter,"Segoe UI",sans-serif;letter-spacing:0}
@@ -104,37 +113,50 @@ body.toc-home #topnav .spn-sub a[aria-current]{color:#0a4f78 !important;font-wei
   }
 }
 
-/* Donate and the sticky help action stay water blue. Other homepage buttons are light glass pills. */
+/* One liquid-glass button. Padding is the same on every side, and the gap matches it. */
+body.toc-home .hero-ctas,
+body.toc-home .hv-chips,
+body.toc-home .wm-cta{gap:.7em}
 body.toc-home .hero-ctas .hero-cta,
 body.toc-home .wm-cta .btn,
 body.toc-home .edu-bubble,
 body.toc-home .dt-btn,
-body.toc-home a.hv-chip{
-  width:auto !important;max-width:100%;min-height:0 !important;padding:.45em .9em !important;white-space:normal !important;text-align:center;
-  border-radius:999px !important;color:#171717 !important;text-shadow:none !important;
-  background:rgba(238,238,238,.8) !important;border:1.5px solid rgba(255,255,255,.95) !important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 20px rgba(16,24,40,.06) !important;
-  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+body.toc-home a.hv-chip,
+body.toc-home .nav-help a,
+body.toc-home .sticky-help{
+  width:auto !important;max-width:100%;box-sizing:border-box;min-height:0 !important;
+  padding:.7em !important;white-space:normal !important;text-align:center;line-height:1.2 !important;
+  border-radius:999px !important;color:#171717 !important;text-shadow:none !important;text-decoration:none !important;
+  background:rgba(255,255,255,.28) !important;background-image:none !important;
+  border:1.5px solid rgba(255,255,255,.95) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 14px rgba(255,255,255,.4),0 8px 20px rgba(16,24,40,.08) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
   font-weight:500 !important
 }
 body.toc-home .hero-ctas .hero-cta:hover,
+body.toc-home .wm-cta .btn:hover,
 body.toc-home .edu-bubble:hover,
 body.toc-home .dt-btn:hover,
-body.toc-home a.hv-chip:hover{background:#f4f4f4 !important;color:#171717 !important}
-body.toc-home .nav-help a,
-body.toc-home .sticky-help,
-body.toc-home a.hv-chip{
-  color:#fff !important;background:#0a4f78 !important;border-color:#083f60 !important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 18px rgba(10,79,120,.22) !important;
-  text-shadow:none !important
-}
+body.toc-home a.hv-chip:hover,
 body.toc-home .nav-help a:hover,
-body.toc-home .sticky-help:hover,
-body.toc-home a.hv-chip:hover{background:#083f60 !important;color:#fff !important}
+body.toc-home .sticky-help:hover{background:rgba(255,255,255,.42) !important;color:#171717 !important}
 body.toc-home .hero-ctas .hero-cta:focus-visible,
 body.toc-home .edu-bubble:focus-visible,
 body.toc-home a.hv-chip:focus-visible,
-body.toc-home .sticky-help:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
+body.toc-home .nav-help a:focus-visible,
+body.toc-home .sticky-help:focus-visible,
+body.toc-home .dt-btn:focus-visible,
+body.toc-home .wm-cta .btn:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
+/* Donate keeps the same glass. The words pulse between two greens that each clear 4.5:1 on white. */
+@keyframes sp-donate-green{0%,100%{color:#0a5c28}50%{color:#0e6b32}}
+body.toc-home .nav-help a,
+body.toc-home .sticky-help{color:#0a5c28 !important;animation:sp-donate-green 2.8s ease-in-out infinite}
+body.toc-home .nav-help a:hover,
+body.toc-home .sticky-help:hover{color:#0a5c28 !important;background:rgba(255,255,255,.42) !important}
+@media (prefers-reduced-motion:reduce){
+  body.toc-home .nav-help a,
+  body.toc-home .sticky-help{animation:none !important;color:#0a5c28 !important}
+}
 body.toc-home .aud-title{color:#0a4f78 !important}
 body.toc-home .edu-bubble .lb-small,
 body.toc-home .edu-bubble.glass .lb-small{color:#171717 !important}
@@ -143,17 +165,29 @@ body.toc-home .aud-card{
   border:1.5px solid rgba(255,255,255,.95);border-radius:22px;
   box-shadow:inset 0 1px 0 #fff,0 10px 24px rgba(16,24,40,.06)
 }
-body.toc-home .card-band .card{background:#f7f7f7;box-shadow:0 10px 28px rgba(16,24,40,.06)}
+body.toc-home .card-band .card{
+  background:rgba(255,255,255,.3) !important;color:#171717 !important;
+  border:1.5px solid rgba(255,255,255,.95);border-radius:22px;overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 16px rgba(255,255,255,.35),0 10px 28px rgba(16,24,40,.08);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%)
+}
+body.toc-home .card-band .card h3,
+body.toc-home .card-band .solution-list,
+body.toc-home .card-band .photo-credit{color:#171717 !important}
+body.toc-home .card-band .card h3 a,
+body.toc-home .card-band .solution-list a{color:#0a4f78 !important}
 
-/* Hero picture feathers into the light field. Title sits on a soft scrim so the type stays dark. */
+/* Ocean and forest fill the title and continue up through the nav. The bottom feathers into the page. */
 body.toc-home .hero.space-hero{background:#ebebeb !important}
+body.toc-home .hero-video{opacity:0}
+body.toc-home .hero-video.is-coast{opacity:1;transition:opacity .4s ease}
 body.toc-home .hero-media,
 body.toc-home .hero[data-hero=space] .hero-space{
-  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
-  mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%)
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%)
 }
 body.toc-home .hero-overlay{
-  background:linear-gradient(180deg,rgba(235,235,235,.35) 0%,rgba(235,235,235,0) 30%,rgba(235,235,235,0) 64%,rgba(235,235,235,.88) 100%) !important
+  background:linear-gradient(180deg,rgba(235,235,235,0) 0%,rgba(235,235,235,0) 70%,rgba(235,235,235,.9) 100%) !important
 }
 body.toc-home .hero[data-hero=space] .hero-space::after{
   background:linear-gradient(180deg,rgba(235,235,235,.25),transparent 26%,transparent 68%,rgba(235,235,235,.82)) !important
@@ -200,25 +234,59 @@ body.toc-home .si-credit{background:none !important;border:0 !important;box-shad
 
 /* Moon and Earth stills do not drift. The space-card Ken Burns is the Earth/space photo. */
 body.toc-home .card-band #space-card .image-container img{animation:none !important;transform:none !important}
-body.toc-home footer{background:#e6e6e6 !important;color:#171717 !important}
-body.toc-home footer a{color:#0a4f78 !important}
+body.toc-home footer,
+body.toc-home footer.fv2{
+  box-sizing:border-box;width:auto;margin:1rem !important;
+  background:rgba(238,238,238,.74) !important;color:#171717 !important;
+  border:1.5px solid rgba(255,255,255,.9);border-radius:28px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 10px 28px rgba(16,24,40,.06) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%)
+}
+body.toc-home footer,
+body.toc-home footer .fv2-credit,
+body.toc-home footer summary,
+body.toc-home footer .footer-tagline{color:#171717 !important}
+body.toc-home footer .fv2-cols a,
+body.toc-home footer .fv2-lang a,
+body.toc-home footer .fv2-soc a,
+body.toc-home footer .footer-links a{
+  color:#171717 !important;background:#f4f4f4 !important;
+  border:1px solid rgba(255,255,255,.95) !important;border-radius:16px !important;
+  box-shadow:inset 0 1px 0 #fff,0 6px 14px rgba(16,24,40,.05) !important;
+  padding:.35rem .7rem !important;min-height:36px;text-decoration:none !important;opacity:1 !important
+}
+body.toc-home footer .fv2-cols a:hover,
+body.toc-home footer .fv2-lang a:hover,
+body.toc-home footer .fv2-soc a:hover,
+body.toc-home footer .footer-links a:hover{background:#fff !important;color:#171717 !important}
+body.toc-home footer .fv2-lang a[aria-current]{color:#0a4f78 !important;font-weight:500}
+body.toc-home footer .fv2-old a,
+body.toc-home footer .lic-foot a,
+body.toc-home footer .footer-tagline a,
+body.toc-home footer .dept-foot a{
+  background:none !important;border:0 !important;box-shadow:none !important;
+  color:#0a4f78 !important;padding:0 !important;min-height:0 !important;border-radius:0 !important;
+  text-decoration:underline !important
+}
 
 /* Homepage share row. Share and Help spread the word are light-glass pills.
    X, Facebook, LinkedIn and Email show the mark; the name stays in aria-label. */
+html body.toc-home .share-bar .share-btns,
+html body.toc-home .share-bar .share-more{gap:.7em}
 html body.toc-home .share-bar .share-btn{
   color:#171717 !important;text-shadow:none !important;font-weight:500 !important;
-  background:#eee !important;background-image:none !important;
+  background:rgba(255,255,255,.28) !important;background-image:none !important;
   border:1.5px solid rgba(255,255,255,.95) !important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 18px rgba(16,24,40,.06) !important;
-  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
-  padding:.4em .85em !important;min-height:44px;gap:.4rem
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 14px rgba(255,255,255,.4),0 8px 18px rgba(16,24,40,.08) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
+  padding:.7em !important;min-height:44px;min-width:44px;gap:.7em
 }
-html body.toc-home .share-bar .share-btn:hover{background:#f4f4f4 !important;color:#171717 !important}
+html body.toc-home .share-bar .share-btn:hover{background:rgba(255,255,255,.42) !important;color:#171717 !important}
 html body.toc-home .share-bar .share-btn:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
 html body.toc-home .share-bar .share-x,
 html body.toc-home .share-bar .share-fb,
 html body.toc-home .share-bar .share-li,
-html body.toc-home .share-bar .share-mail{width:44px;padding:0 !important}
+html body.toc-home .share-bar .share-mail{width:auto;padding:.7em !important}
 html body.toc-home .share-bar .share-btn svg{width:18px;height:18px;display:block;flex:none}
 html body.toc-home .share-bar .share-sr{
   position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
@@ -229,10 +297,14 @@ html body.toc-home .share-bar .share-sr{
   html body.toc-home nav#topnav,
   html body.toc-home #topnav .spn-sub,
   body.toc-home .hero-ctas .hero-cta,
-  body.toc-home .edu-bubble{background:#eee !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+  body.toc-home .edu-bubble,
   body.toc-home .nav-help a,
   body.toc-home .sticky-help,
-  body.toc-home a.hv-chip{background:#0a4f78 !important}
+  body.toc-home a.hv-chip,
+  body.toc-home .card-band .card,
+  body.toc-home footer{background:#eee !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+  body.toc-home .nav-help a,
+  body.toc-home .sticky-help{color:#0a5c28 !important}
 }
 @media (forced-colors:active){
   body.toc-home .hero-ctas .hero-cta,

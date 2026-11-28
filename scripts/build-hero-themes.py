@@ -149,13 +149,14 @@ TITLE_CSS = ('.hero[data-hero=space] .hero-content{animation:hsTitleIn .9s ease-
 def chooser():
     rot = ','.join(f"'{t}'" for t in ROTATION)
     return ('<script>(function(){var h=document.currentScript&&document.currentScript.closest(".hero");if(!h)return;'
-            f'var T=[{rot}],K={{earth:"video",space:"canvas"}},n=Math.floor((Date.now()-{ANCHOR_UTC})/6048e5),'
-            'name=T[(n%T.length+T.length)%T.length],m=/[?&]hero=([a-z-]+)/.exec(location.search);'
-            'if(m&&K[m[1]])name=m[1];h.setAttribute("data-hero",name);'
+            f'var HOME_THEMES=false,T=[{rot}],K={{earth:"video",space:"canvas"}},n=Math.floor((Date.now()-{ANCHOR_UTC})/6048e5),'
+            'name=HOME_THEMES?T[(n%T.length+T.length)%T.length]:"earth",m=/[?&]hero=([a-z-]+)/.exec(location.search);'
+            'if(m&&K[m[1]])name=m[1];h.setAttribute("data-hero",name);h.setAttribute("data-home-themes",HOME_THEMES?"on":"off");'
             # the video ships inert (see lazy_video): only the video theme gives it its poster + source and starts it
-            'var v=h.querySelector("video.hero-video");if(v){if(K[name]==="video"){if(v.dataset.poster)v.poster=v.dataset.poster;'
-            '[].forEach.call(v.querySelectorAll("source[data-src]"),function(s){s.src=s.dataset.src});v.autoplay=true;v.load();'
-            'var pp=v.play&&v.play();if(pp&&pp.catch)pp.catch(function(){})}else v.className="hero-video-off"}'
+            # HOME_THEMES false pauses the weekly moon/Earth/Saturn rotation. The Earth poster stays off so the page opens on the ocean still.
+            'var v=h.querySelector("video.hero-video");if(v){if(K[name]==="video"){if(HOME_THEMES&&v.dataset.poster)v.poster=v.dataset.poster;'
+            '[].forEach.call(v.querySelectorAll("source[data-src]"),function(s){s.src=s.dataset.src});v.autoplay=false;v.loop=false;v.setAttribute("data-home-cut","beach");v.load()}'
+            'else v.className="hero-video-off"}'
             '})();</script>')
 
 def caps(l):
