@@ -167,8 +167,8 @@ function openChain(el){
 function fromHash(){
  var id="";try{id=decodeURIComponent((location.hash||"").replace(/^#/,""))}catch(e){return}
  if(!id)return;var el=document.getElementById(id);if(!el)return;openChain(el);
- var watch=el.closest&&el.closest("details.crs-watch");
- var target=watch||(el.closest&&el.closest("details.crs-fold"))||el;
+ var watch=el.closest&&(el.closest(".crs-film-feature")||el.closest("section.crs-watch"));
+ var target=watch||el;
  if(target.scrollIntoView)target.scrollIntoView({block:"start",inline:"nearest",behavior:"instant"})
 }
 document.addEventListener("click",function(e){

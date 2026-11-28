@@ -182,7 +182,7 @@ def figure(lang):
     i18n = NF.E(json.dumps(U['plyr'], ensure_ascii=False, separators=(',', ':')))
     note = N['note_en'] if lang == 'en' else N['note_tr']
     return (
-        f'<figure class="crs-film" data-autoplay="1" data-id="{FILM_ID}" data-lang="{lang}" '
+        f'<figure class="crs-film" id="u1-watch" data-autoplay="1" data-id="{FILM_ID}" data-lang="{lang}" '
         f'data-cues="{pre}{CUES_URL}" data-meta="{pre}{META_URL}" '
         f'data-plyr="{pre}{NF.PLYR_JS}" data-plyr-css="{pre}{NF.PLYR_CSS}" '
         f'data-i18n="{i18n}">'

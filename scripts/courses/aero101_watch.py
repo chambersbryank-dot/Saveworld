@@ -44,42 +44,42 @@ DELFT = 'TU Delft, Introduction to Aeronautical Engineering'
 # SI drafts. Keys: box, start, deep, seasoned, play, added, nasa_note, nasa_lic, gov, univ_lic.
 LABELS = {
     'en': {
-        'box': 'Watch and learn', 'start': 'Start here', 'deep': 'Go deeper', 'seasoned': 'Seasoned',
+        'box': 'Watch and Learn', 'count': '{n} videos', 'start': 'Start here', 'deep': 'Go deeper', 'seasoned': 'Seasoned',
         'play': 'Play', 'added': 'Watch and learn lectures added',
         'nasa_note': 'Linked for free study only; Saving Planets is not affiliated with or endorsed by NASA.',
         'nasa_lic': 'NASA images and media guidelines', 'gov': 'U.S. government work',
         'univ_lic': 'official channel; free to watch; embedding enabled',
     },
     'fr': {
-        'box': 'Regarder pour apprendre', 'start': 'Commencez ici', 'deep': 'Pour aller plus loin', 'seasoned': 'Niveau avancé',
+        'box': 'Regardez et apprenez', 'count': '{n} vidéos', 'start': 'Commencez ici', 'deep': 'Pour aller plus loin', 'seasoned': 'Niveau avancé',
         'play': 'Lire', 'added': 'leçons « Regarder pour apprendre » ajoutées',
         'nasa_note': 'Lien fourni uniquement pour l’étude gratuite ; Saving Planets n’est ni affilié à la NASA ni soutenu par elle.',
         'nasa_lic': 'directives de la NASA sur les images et les médias', 'gov': 'œuvre du gouvernement des États-Unis',
         'univ_lic': 'chaîne officielle ; visionnage gratuit ; intégration autorisée',
     },
     'es': {
-        'box': 'Ver y aprender', 'start': 'Empiece aquí', 'deep': 'Para profundizar', 'seasoned': 'Nivel avanzado',
+        'box': 'Mira y aprende', 'count': '{n} vídeos', 'start': 'Empieza aquí', 'deep': 'Para profundizar', 'seasoned': 'Nivel avanzado',
         'play': 'Reproducir', 'added': 'lecciones «Ver y aprender» añadidas',
         'nasa_note': 'Enlace solo para estudio gratuito; Saving Planets no está afiliado a la NASA ni cuenta con su respaldo.',
         'nasa_lic': 'directrices de la NASA sobre imágenes y medios', 'gov': 'obra del gobierno de EE. UU.',
         'univ_lic': 'canal oficial; visionado gratuito; inserción permitida',
     },
     'ar': {
-        'box': 'شاهد لتتعلّم', 'start': 'ابدأ من هنا', 'deep': 'للتعمّق', 'seasoned': 'مستوى متقدم',
+        'box': 'شاهد وتعلّم', 'count': '{n} مقاطع', 'start': 'ابدأ من هنا', 'deep': 'للتعمّق', 'seasoned': 'مستوى متقدم',
         'play': 'تشغيل', 'added': 'أُضيفت دروس «شاهد لتتعلّم»',
         'nasa_note': 'الرابط للدراسة المجانية فقط؛ Saving Planets غير تابع لناسا ولا يحظى بتأييدها.',
         'nasa_lic': 'إرشادات ناسا للصور والوسائط', 'gov': 'عمل لحكومة الولايات المتحدة',
         'univ_lic': 'قناة رسمية؛ المشاهدة مجانية؛ التضمين مسموح',
     },
     'it': {
-        'box': 'Guarda e impara', 'start': 'Inizia qui', 'deep': 'Per approfondire', 'seasoned': 'Livello avanzato',
+        'box': 'Guarda e impara', 'count': '{n} video', 'start': 'Inizia qui', 'deep': 'Per approfondire', 'seasoned': 'Livello avanzato',
         'play': 'Riproduci', 'added': 'aggiunte le lezioni «Guarda e impara»',
         'nasa_note': 'Link fornito solo per lo studio gratuito; Saving Planets non è affiliato alla NASA né approvato da essa.',
         'nasa_lic': 'linee guida NASA su immagini e media', 'gov': 'opera del governo degli Stati Uniti',
         'univ_lic': 'canale ufficiale; visione gratuita; incorporamento consentito',
     },
     'he': {
-        'box': 'צפו ולמדו', 'start': 'התחילו כאן', 'deep': 'להעמקה', 'seasoned': 'רמה מתקדמת',
+        'box': 'צפו ולמדו', 'count': '{n} סרטונים', 'start': 'התחילו כאן', 'deep': 'להעמקה', 'seasoned': 'רמה מתקדמת',
         'play': 'הפעלה', 'added': 'נוספו שיעורי «צפו ולמדו»',
         'nasa_note': 'הקישור מיועד ללימוד חינמי בלבד; Saving Planets אינו קשור לנאס״א ואינו נתמך על ידה.',
         'nasa_lic': 'הנחיות נאס״א לתמונות ולמדיה', 'gov': 'יצירה של ממשלת ארצות הברית',
@@ -363,16 +363,12 @@ VIDEOS = {
 }
 
 CSS = (
-    '.crs-watch{margin:1rem 0;border:1px solid rgba(255,255,255,.22);border-radius:16px;background:rgba(255,255,255,.05)}'
-    '.crs-watch>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:.35rem 1rem;list-style:none}'
-    '.crs-watch>summary::-webkit-details-marker{display:none}'
-    '.crs-watch>summary::before{content:"▸";margin-inline-end:.55rem}'
-    '.crs-watch[open]>summary::before{content:"▾"}'
-    'html[dir="rtl"] .crs-watch>summary::before{content:"◂"}'
-    '.crs-watch>summary{flex-wrap:wrap}'
-    '.crs-watch>summary h3{margin:0;min-width:0;overflow-wrap:anywhere}'
-    '.crs-watch-tier{padding:0 1rem 1rem}'
-    '.crs-watch h4{margin:1rem 0 .35rem;font-size:1.02rem}'
+    '.crs-film-feature{margin:.35rem 0 .85rem;max-width:100%}'
+    '.crs-watch{margin:.6rem 0 1rem;max-width:100%;border:1px solid rgba(255,255,255,.22);border-radius:16px;background:rgba(255,255,255,.05);padding:.2rem .85rem .85rem}'
+    '.crs-watch>h3{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;margin:.55rem 0 .35rem;font-size:1.12rem}'
+    '.crs-watch-n{display:inline-flex;align-items:center;justify-content:center;min-width:1.75rem;min-height:1.75rem;padding:0 .5rem;border-radius:999px;font-size:.85rem;font-weight:800;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4)}'
+    '.crs-watch-tier{padding:.35rem 0 .15rem}'
+    '.crs-watch h4{margin:.7rem 0 .3rem;font-size:1.02rem}'
     '.crs-watch-frame{position:relative;aspect-ratio:16/9;margin:.55rem 0;border-radius:12px;overflow:hidden;background:#071422}'
     '.crs-watch-play{appearance:none;border:0;padding:0;margin:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;cursor:pointer;color:#fff;background:linear-gradient(160deg,#12304d,#071422 70%);font:inherit}'
     '.crs-watch-play:focus-visible{outline:3px solid #ffd54a;outline-offset:-6px}'
@@ -502,21 +498,55 @@ def _player(lang, vid):
     )
 
 
-def box(lang, unit):
-    """One closed details box for unit 1..10. Tiers with no video are omitted."""
+def _tier(lang, vid):
+    """Poster first, then the title, the reason, and the license. The player loads on click."""
     L = LABELS[lang]
-    ident = ' id="u1-watch"' if unit == 1 else ''
-    parts = [f'<details class="crs-watch"{ident}><summary><h3>{_esc(L["box"])}</h3></summary>']
-    for vid in VIDEOS[unit]:
-        parts.append(
-            f'<div class="crs-watch-tier"><h4>{_esc(L[vid["tier"]])}</h4>'
-            f'<p><a href="{_esc(vid["page"])}" rel="noopener" lang="en">{_esc(vid["title"])}</a> ({_esc(_shared(lang, "in English"))})</p>'
-            f'<p>{_esc(vid["why"][lang])}</p>'
-            f'{_player(lang, vid)}'
-            f'<p class="crs-src">{_credit(lang, vid)}</p></div>'
-        )
-    parts.append('</details>')
+    return (
+        f'<div class="crs-watch-tier">{_player(lang, vid)}'
+        f'<h4>{_esc(L[vid["tier"]])}</h4>'
+        f'<p><a href="{_esc(vid["page"])}" rel="noopener" lang="en">{_esc(vid["title"])}</a> '
+        f'({_esc(_shared(lang, "in English"))})</p>'
+        f'<p>{_esc(vid["why"][lang])}</p>'
+        f'<p class="crs-src">{_credit(lang, vid)}</p></div>'
+    )
+
+
+def feature(lang, unit):
+    """The one film at the top of a unit. Unit 1's featured film is the Wright player, not this."""
+    if unit == 1:
+        return ''
+    vid = VIDEOS[unit][0]
+    L = LABELS[lang]
+    return (
+        f'<div class="crs-film-feature" id="u{unit}-watch">{_player(lang, vid)}'
+        f'<p><a href="{_esc(vid["page"])}" rel="noopener" lang="en">{_esc(vid["title"])}</a> '
+        f'({_esc(_shared(lang, "in English"))})</p>'
+        f'<p>{_esc(vid["why"][lang])}</p>'
+        f'<p class="crs-src">{_credit(lang, vid)}</p></div>'
+    )
+
+
+def more(lang, unit):
+    """Further films, open, directly under the featured film. Empty when the unit has only one."""
+    vids = VIDEOS[unit][1:] if unit != 1 else VIDEOS[unit]
+    if not vids:
+        return ''
+    L = LABELS[lang]
+    n = len(vids)
+    label = _esc(L['box'])
+    count = _esc(L['count'].format(n=n))
+    parts = [
+        f'<section class="crs-watch" aria-label="{label}, {count}">'
+        f'<h3>{label} <span class="crs-watch-n"><bdi dir="ltr">{n}</bdi></span></h3>'
+    ]
+    parts.extend(_tier(lang, vid) for vid in vids)
+    parts.append('</section>')
     return ''.join(parts)
+
+
+def box(lang, unit):
+    """Featured film, then any further films. Kept for callers that want both pieces together."""
+    return feature(lang, unit) + more(lang, unit)
 
 
 def added_note(lang):

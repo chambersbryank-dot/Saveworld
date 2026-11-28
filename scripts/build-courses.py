@@ -137,9 +137,14 @@ def _code(src, out=None):
 
 def unit(C, K, i, u):
     uid = u['id']
-    film = A1F.figure(LANG) if C.ID == 'aero101' and uid == 'u1' else ''
+    film = ''
+    more = ''
+    if C.ID == 'aero101' and uid.startswith('u') and uid[1:].isdigit() and 1 <= int(uid[1:]) <= 10:
+        n = int(uid[1:])
+        film = A1F.figure(LANG) if n == 1 else AW.feature(LANG, n)
+        more = AW.more(LANG, n)
     o = [f'<section class="crs-unit" id="{uid}" data-unit="{uid}" aria-labelledby="{uid}-h">',
-         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))}' + ('' if C.ID == 'aero101' else ' · ' + esc(u["weeks"])) + f'</p><h2 id="{uid}-h">{esc(u["title"])}</h2>' + film + f'<p class="crs-lead">{esc(u["summary"])}</p>']
+         f'<p class="crs-kicker">{esc("Unit {n}").replace("{n}", str(i))}' + ('' if C.ID == 'aero101' else ' · ' + esc(u["weeks"])) + f'</p><h2 id="{uid}-h">{esc(u["title"])}</h2>' + film + more + f'<p class="crs-lead">{esc(u["summary"])}</p>']
     o.append(f'<h3>{esc("Learning objectives")}</h3><p>{esc("By the end of this unit you can:")}</p>' + ul(u['objectives'], 'crs-obj'))
     o.append(f'<h3>{esc("Key concepts")}</h3>' + ul(u['concepts'], 'crs-key'))
     if C.ID == 'aero101' and uid == 'u1':
@@ -173,8 +178,7 @@ def unit(C, K, i, u):
     if C.ID != 'aero101':
         o.append(f'<h3>{esc("Free learning resources")}</h3><ul class="crs-res">{res}</ul>')
     if C.ID == 'aero101':
-        # Nov 25 2026 (Bryan): one closed Watch and learn box per unit. Click-to-load embed, this course only.
-        o.append(AW.box(LANG, i))
+        # The featured film and any Watch and Learn films are already at the top of the unit.
         o.append(AF.deeper(LANG, res))
         lec = None
     else:
