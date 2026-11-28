@@ -9,7 +9,7 @@ import glob, os, re, subprocess, datetime
 from concurrent.futures import ThreadPoolExecutor
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 SITE = 'https://www.savingplanets.com/'; LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
-SKIP = re.compile(r'^(google[0-9a-f]+|404|offline|GLOBE_Review)\.html$')
+SKIP = re.compile(r'^(google[0-9a-f]+|404|offline|GLOBE_Review|Style_Options)\.html$')
 DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 URL_LIMIT, BYTE_LIMIT = 50000, 50 * 1024 * 1024
 def url(l, b): return SITE + ('' if l == 'en' else l + '/') + ('' if b == 'index.html' else b)
