@@ -3,3 +3,8 @@ Latin subsets used only by Style_Options.html. SIL Open Font License 1.1 (https:
 Inter, Copyright 2020 The Inter Project Authors. https://rsms.me/inter/
 Source Sans 3 and Source Serif 4, Copyright 2010-2023 Adobe. https://github.com/adobe-fonts/source-sans and https://github.com/adobe-fonts/source-serif
 Atkinson Hyperlegible, Copyright 2020 Braille Institute of America. https://www.brailleinstitute.org/freefont/
+Outfit, SIL Open Font License, Copyright 2021 The Outfit Project Authors. https://github.com/Outfitio/Outfit-Fonts
+Fraunces, SIL Open Font License, Copyright 2020 The Fraunces Project Authors. https://github.com/undercasetype/Fraunces
+Instrument Serif, SIL Open Font License, Copyright 2022 The Instrument Serif Project Authors. https://github.com/Instrument/instrument-serif
+Syne, SIL Open Font License, Copyright 2017 The Syne Project Authors. https://gitlab.com/bonjour-monde/fonderie/syne
+Newsreader, SIL Open Font License, Copyright 2020 The Newsreader Project Authors. https://github.com/productiontype/Newsreader

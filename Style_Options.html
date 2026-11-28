@@ -16,6 +16,15 @@
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/style/source-serif-600.woff2") format("woff2")}
 @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/style/atkinson-400.woff2") format("woff2")}
 @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/style/atkinson-700.woff2") format("woff2")}
+@font-face{font-family:Outfit;font-style:normal;font-weight:500;font-display:swap;src:url("assets/fonts/style/outfit-500.woff2") format("woff2")}
+@font-face{font-family:Outfit;font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/style/outfit-700.woff2") format("woff2")}
+@font-face{font-family:Fraunces;font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/style/fraunces-400.woff2") format("woff2")}
+@font-face{font-family:Fraunces;font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/style/fraunces-600.woff2") format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/style/instrument-serif-400.woff2") format("woff2")}
+@font-face{font-family:Syne;font-style:normal;font-weight:500;font-display:swap;src:url("assets/fonts/style/syne-500.woff2") format("woff2")}
+@font-face{font-family:Syne;font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/style/syne-700.woff2") format("woff2")}
+@font-face{font-family:Newsreader;font-style:normal;font-weight:500;font-display:swap;src:url("assets/fonts/style/newsreader-500.woff2") format("woff2")}
+@font-face{font-family:Newsreader;font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/style/newsreader-600.woff2") format("woff2")}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#071018;color:#e8eef5;font-family:Inter,Montserrat,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.5}
@@ -77,6 +86,99 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
 .opt-5 .card{background:rgba(5,16,28,.9);border:1px solid rgba(255,255,255,.55);border-radius:14px;box-shadow:0 8px 18px rgba(0,0,0,.4)}
 .opt-5 .card p{font-size:1.125rem;line-height:1.55}
 .opt-5 .src{font-size:.95rem;color:#f7fbff}
+.rlabel{margin:2rem 0 .4rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9eb4c6}
+#round2{margin-top:.4rem}
+.lg{position:relative;z-index:4}
+.lg-bar{display:flex;align-items:center;gap:.35rem .5rem;width:100%;min-height:3.15rem;padding:.35rem .4rem .35rem .85rem;border-radius:18px;color:#1a1d21;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.92);box-shadow:inset 0 1px 0 #fff,0 1px 1px rgba(16,24,40,.04),0 10px 24px rgba(16,24,40,.07);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%)}
+.lg-brand{margin-right:auto;color:inherit;font-weight:600;font-size:.98rem;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.lg-links{display:flex;gap:.1rem}
+.lg-links a{color:inherit;text-decoration:none;font-size:.92rem;font-weight:500;padding:.35rem .55rem;border-radius:999px}
+.lg-links a:hover{background:rgba(255,255,255,.72)}
+.lg-pop{position:relative;margin-left:.2rem;flex:none}
+.lg-open{display:inline-flex;align-items:center;justify-content:center;width:2.55rem;height:2.55rem;padding:0;border-radius:999px;border:1px solid rgba(255,255,255,.95);background:radial-gradient(circle at 35% 30%,#fff,#d7dee6);color:#0a4f78;box-shadow:inset 0 1px 0 #fff,0 4px 12px rgba(16,24,40,.12);cursor:pointer}
+.lg-menu{position:absolute;right:0;top:calc(100% + .45rem);z-index:5;width:min(16.2rem,calc(100vw - 2.4rem));margin:0;padding:.4rem 0 .3rem;border-radius:22px;color:#1a1d21;background:rgba(244,245,247,.86);border:1px solid rgba(255,255,255,.95);box-shadow:inset 0 1px 0 rgba(255,255,255,.98),inset 0 0 0 1px rgba(255,255,255,.4),0 1px 1px rgba(16,24,40,.04),0 12px 28px rgba(16,24,40,.1),0 28px 48px rgba(16,24,40,.06);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%)}
+.lg-menu[hidden]{display:none}
+.lg-menu a{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin:.12rem .4rem;padding:.55rem .75rem;border-radius:999px;color:#1a1d21;background:transparent;font-size:.95rem;font-weight:500;line-height:1.3;text-decoration:none;transition:background .15s ease,box-shadow .15s ease}
+.lg-menu a:hover,.lg-menu a:focus-visible{background:#fff;box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(16,24,40,.08),0 6px 14px rgba(16,24,40,.05)}
+.lg-rule{height:1px;margin:.35rem .9rem;background:rgba(20,24,32,.14);border:0}
+.lg-menu a.lg-accent{color:#0a4f78;font-weight:600}
+.lg-accent svg{width:16px;height:16px;flex:none}
+.lg :focus-visible,.pill:focus-visible{outline:3px solid #0a4f78;outline-offset:2px;box-shadow:0 0 0 5px #fff}
+.light-app{position:relative;min-height:28rem;padding:.85rem;border-radius:28px;background:#e4e7ec;color:#1a1d21;border:1px solid rgba(255,255,255,.8);box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.light-app .lg-menu{background:rgba(248,249,250,.9)}
+.stage.has-menu{overflow:visible;justify-content:flex-start}
+.stage.has-menu .media{position:absolute;inset:0;overflow:hidden;border-radius:22px;z-index:0}
+.stage.has-menu .lg{margin-bottom:auto}
+.stage.has-menu .copy,.stage.has-menu .card,.stage.has-menu .vcred,.stage.has-menu .lg{position:relative;z-index:2}
+.pill{display:inline-flex;width:auto;max-width:100%;align-items:center;justify-content:center;margin:0;padding:.45em .9em;border-radius:999px;border:0;font:inherit;font-size:.98rem;font-weight:600;line-height:1.3;text-decoration:none;cursor:pointer}
+.opt-6{font-family:Outfit,Inter,sans-serif}
+.opt-6 h3.ttl{font-family:Outfit,Inter,sans-serif;font-weight:700;font-size:3rem;letter-spacing:-.035em;line-height:1.02;color:#172033}
+.opt-6 .sub,.opt-6 .kicker,.opt-6 .card,.opt-6 .src,.opt-6 .vcred{color:#1a1d21}
+.opt-6 .kicker{color:#3d4c5c}
+.opt-6 .src,.opt-6 .vcred{color:#3d4c5c}
+.opt-6 .veil{background:rgba(236,239,242,.86)}
+.opt-6 .card{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.96);border-radius:22px;box-shadow:inset 0 1px 0 #fff,0 10px 24px rgba(16,24,40,.08),0 26px 44px rgba(16,24,40,.06)}
+.opt-6 .pill{background:#0a4f78;color:#fff}
+.opt-6 .card a:not(.pill),.opt-6 .vcred a{color:#0a4f78}
+.opt-7{font-family:Fraunces,Georgia,serif}
+.opt-7 h3.ttl{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:3.15rem;letter-spacing:-.03em;line-height:1.02;color:#f4fbfd}
+.opt-7 .sub{color:#e7f4f8;font-weight:400}
+.opt-7 .veil{background:linear-gradient(165deg,rgba(4,36,50,.5),rgba(2,16,26,.8))}
+.opt-7 .lg-bar,.opt-7 .lg-menu{color:#f4fbfd;background:rgba(6,32,44,.78);border:1px solid rgba(190,240,255,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 12px 28px rgba(0,0,0,.28);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%)}
+.opt-7 .lg-open{background:radial-gradient(circle at 35% 30%,#e7f6f8,#8fd0dc);color:#08303a;border-color:rgba(255,255,255,.7)}
+.opt-7 .lg-links a:hover{background:rgba(255,255,255,.12)}
+.opt-7 .lg-menu a{color:#f4fbfd}
+.opt-7 .lg-menu a:hover,.opt-7 .lg-menu a:focus-visible{background:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.opt-7 .lg-rule{background:rgba(190,240,255,.28)}
+.opt-7 .lg-menu a.lg-accent{color:#d7f4fb}
+.opt-7 .card{padding:0;overflow:hidden;background:transparent;border:1px solid rgba(190,240,255,.55);border-radius:26px;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 0 0 6px rgba(80,190,210,.12),0 18px 40px rgba(0,0,0,.3)}
+.opt-7 .bend{position:absolute;inset:-8%;background:url("assets/style/landsat9-poster.jpg") center/cover;transform:scale(1.05);pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,transparent 60%,#000 82%);mask-image:radial-gradient(closest-side,transparent 60%,#000 82%)}
+.opt-7 .pad{position:relative;z-index:1;margin:.65rem;padding:.95rem 1rem .85rem;border-radius:18px;background:rgba(4,28,40,.9);color:#f4fbfd}
+.opt-7 .pad h4,.opt-7 .pad p{color:#f4fbfd}
+.opt-7 .pad .src{color:#d5eaf2}
+.opt-7 .pill{background:#e7f6f8;color:#062830}
+.opt-7 .pad a:not(.pill){color:#d7f4fb}
+.opt-8{font-family:"Instrument Serif",Georgia,serif}
+.opt-8 h3.ttl{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:3.6rem;letter-spacing:-.03em;line-height:.95;color:#f7fbff}
+.opt-8 .sub{font-family:"Instrument Serif",Georgia,serif;font-size:1.35rem;color:#f7fbff}
+.opt-8 .linebox{border:1px solid rgba(255,255,255,.82);border-radius:22px;padding:1rem 1rem 1.15rem;background:linear-gradient(180deg,rgba(2,10,18,.12),rgba(2,10,18,.74));box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 16px 36px rgba(0,0,0,.22)}
+.opt-8 .card{background:#f6f3ec;color:#1c1915;border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.opt-8 .card h4,.opt-8 .card p{color:#1c1915;font-family:"Instrument Serif",Georgia,serif}
+.opt-8 .card h4{font-size:1.55rem;font-weight:400}
+.opt-8 .src{color:#3f3a34}
+.opt-8 .pill{background:#1c1915;color:#f6f3ec;font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:1.05rem}
+.opt-8 .card a:not(.pill){color:#1c1915}
+.opt-9{font-family:Syne,Inter,sans-serif}
+.opt-9 h3.ttl{font-family:Syne,Inter,sans-serif;font-weight:700;font-size:3.2rem;letter-spacing:-.04em;line-height:.95;text-transform:uppercase}
+.opt-9 .stage{justify-content:flex-end}
+.opt-9 .copy{margin-bottom:auto}
+.opt-9 .lg{margin:0}
+.opt-9 .lg-bar{border-radius:999px;background:rgba(255,255,255,.62)}
+.opt-9 .lg-menu{top:auto;bottom:calc(100% + .4rem)}
+.opt-9 .card{background:rgba(255,255,255,.88);color:#14202b;border:1px solid rgba(255,255,255,.95);border-radius:22px;box-shadow:inset 0 1px 0 #fff,0 12px 28px rgba(0,0,0,.2)}
+.opt-9 .card h4,.opt-9 .card p{color:#14202b}
+.opt-9 .src{color:#3d4c5c}
+.opt-9 .pill{background:#0a4f78;color:#fff;font-family:Syne,Inter,sans-serif}
+.opt-9 .card a:not(.pill){color:#0a4f78}
+.opt-10{font-family:Newsreader,Georgia,serif}
+.opt-10 h3.ttl{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:3.35rem;letter-spacing:-.03em;line-height:.98;color:#f7fbff}
+.opt-10 .sub{font-family:Newsreader,Georgia,serif;font-size:1.25rem}
+.opt-10 .card{background:rgba(244,245,247,.9);color:#1a1d21;border:1px solid rgba(255,255,255,.96);border-radius:22px;box-shadow:inset 0 1px 0 #fff,0 1px 1px rgba(16,24,40,.04),0 16px 36px rgba(0,0,0,.22)}
+.opt-10 .card h4{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:1.45rem;color:#1a1d21}
+.opt-10 .card p{color:#1a1d21}
+.opt-10 .src{color:#3d4c5c}
+.opt-10 .pill{background:#0f6b4c;color:#fff;font-family:Newsreader,Georgia,serif}
+.opt-10 .card a:not(.pill){color:#0f6b4c}
+@media (max-width:640px){
+  .lg-links{display:none}
+}
+@media (max-width:420px){
+  .opt-6 h3.ttl{font-size:2.35rem}
+  .opt-7 h3.ttl{font-size:2.45rem}
+  .opt-8 h3.ttl{font-size:2.8rem}
+  .opt-9 h3.ttl{font-size:2.3rem}
+  .opt-10 h3.ttl{font-size:2.5rem}
+}
 @media (max-width:420px){
   h3.ttl{font-size:1.7rem}
   .opt-3 h3.ttl,.opt-4 h3.ttl{font-size:1.85rem}
@@ -85,10 +187,14 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .bg{display:none}
+  .lg-menu a{transition:none}
 }
 @media (prefers-reduced-transparency:reduce){
   .opt-current .card,.opt-1 .card,.opt-2 .card,.opt-3 .card,.opt-4 .card,.opt-5 .card,.opt-1 .frame{background:#0c2233;-webkit-backdrop-filter:none;backdrop-filter:none}
   .btn{background:#0a4f78;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .lg-bar,.lg-menu,.opt-6 .card,.opt-9 .card,.opt-10 .card{background:#f4f5f7;color:#1a1d21;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .opt-7 .lg-bar,.opt-7 .lg-menu,.opt-7 .pad{background:#0c3140;color:#f4fbfd;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .opt-7 .bend{display:none}
 }
 @media (forced-colors:active){
   .btn{background:ButtonFace;color:ButtonText;border:1px solid ButtonText}
@@ -97,13 +203,21 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
 </style>
 </head>
 <body>
-<a class="skip" href="#options">Skip to the options</a>
+<a class="skip" href="#round2">Skip to the options</a>
 <div class="wrap">
 <header class="top">
 <p><a href="index.html">Saving Planets</a></p>
 <h1>Liquid glass style options</h1>
-<p>An English study page for choosing a look. It is not in the site menu, and it asks search engines not to index it. Every sample uses the same Landsat 9 launch video, the same unit fact, and the same water-crystal buttons. Only the glass and the type change.</p>
+<p>An English study page for choosing a look. It is not in the site menu, and it asks search engines not to index it. Round 2 starts with a mock liquid-glass navigation bar. Options 6 to 10 are built from that bar. Round 1, below, keeps the earlier samples.</p>
 <ul class="jumps" id="options">
+<li><a href="#round2">Round 2</a></li>
+<li><a href="#dropdown">Menu</a></li>
+<li><a href="#opt6">Option 6</a></li>
+<li><a href="#opt7">Option 7</a></li>
+<li><a href="#opt8">Option 8</a></li>
+<li><a href="#opt9">Option 9</a></li>
+<li><a href="#opt10">Option 10</a></li>
+<li><a href="#round1">Round 1</a></li>
 <li><a href="#current">Current</a></li>
 <li><a href="#opt1">Option 1</a></li>
 <li><a href="#opt2">Option 2</a></li>
@@ -114,6 +228,254 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
 </ul>
 </header>
 
+
+<p class="rlabel" id="round2">Round 2</p>
+<section class="opt" id="dropdown" aria-labelledby="h-drop">
+<h2 id="h-drop">Liquid glass menu</h2>
+<p class="note" style="margin-top:0">A mock top bar, not the live site menu. The same light panel sits on a light gray field and on the launch video. Open it with the round button. Escape closes it, and the arrow keys move through the rows.</p>
+<div class="light-app" id="drop-light">
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="true" aria-controls="menu-light" aria-label="Close menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-light" role="menu">
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stage has-menu" id="drop-video" style="margin-top:1rem">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-video" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-video" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copy">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">The same bar, over the launch film.</p>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">This follows Pranjay’s Liquid Glass SaaS dropdown: a light gray panel on a light gray ground, held together by a faint inner highlight, a 1px light rim, and a soft layered shadow. The row under the pointer, or the keyboard, rises as a lighter pill. A hairline splits the list from Donate and About. Donate uses our water blue, #0a4f78, in the slot that was red in the original. The type on this bar is Inter at about 15px, weight 500, left aligned in the rows, because the panel is a tool, not a headline.</p>
+</section>
+
+<section class="opt opt-6" id="opt6" aria-labelledby="h6">
+<h2 id="h6">Option 6. Daylight frost</h2>
+<div class="stage has-menu">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-6" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-6" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copy">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">A pale interface. The film is a wash under the type.</p>
+</div>
+<div class="card">
+<h4>A standard atmosphere</h4>
+<p>In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer. At 11 km the air is about 30% as dense as at sea level.</p>
+<p class="src">Source: <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn, Beginner’s Guide to Aeronautics</a></p>
+<p class="actions"><a class="pill" href="Intro_to_Aerospace_Engineering.html#u2">Open the unit</a><a class="pill" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn</a></p>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">Outfit at 700 for a 3rem title, tracking −0.035em, and the same face at 500 in the bar and the rows. Dark ink on a white frost, left aligned, with the paragraph on a panel that uses the menu’s rim and shadow. The buttons are solid #0a4f78, the menu’s accent, and they hug the words. Outfit has no Arabic or Hebrew. Pair it with Noto Sans Arabic and Noto Sans Hebrew, and keep Arabic letter-spacing at 0.</p>
+</section>
+
+<section class="opt opt-7" id="opt7" aria-labelledby="h7">
+<h2 id="h7">Option 7. Ocean lens</h2>
+<div class="stage has-menu">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-7" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-7" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copy">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">One deep tint, from the bar to the card.</p>
+</div>
+<div class="card">
+<div class="bend" aria-hidden="true"></div>
+<div class="pad">
+<h4>A standard atmosphere</h4>
+<p>In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer. At 11 km the air is about 30% as dense as at sea level.</p>
+<p class="src">Source: <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn, Beginner’s Guide to Aeronautics</a></p>
+<p class="actions"><a class="pill" href="Intro_to_Aerospace_Engineering.html#u2">Open the unit</a><a class="pill" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn</a></p>
+</div>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">Fraunces at 600, about 3.15rem, with a softer serif than the site’s sans. The bar, the menu, and the card share one ocean glass: a bright top edge, a 1px cool rim, and a thick shadow. The card’s outer ring is the launch still, scaled up and masked to the edge, so the rim looks bent. Buttons are one foam color, #e7f6f8, with dark text. Fraunces does not cover Arabic or Hebrew. Use Noto Naskh Arabic or Noto Serif Hebrew for long reading, and Noto Sans for the menu.</p>
+</section>
+
+<section class="opt opt-8" id="opt8" aria-labelledby="h8">
+<h2 id="h8">Option 8. Outline editorial</h2>
+<div class="stage has-menu">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-8" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-8" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copy linebox">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">The headline is the glass. The reading sits on paper.</p>
+</div>
+<div class="card">
+<h4>A standard atmosphere</h4>
+<p>In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer. At 11 km the air is about 30% as dense as at sea level.</p>
+<p class="src">Source: <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn, Beginner’s Guide to Aeronautics</a></p>
+<p class="actions"><a class="pill" href="Intro_to_Aerospace_Engineering.html#u2">Open the unit</a><a class="pill" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn</a></p>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">Instrument Serif at 400, set near 3.6rem with tight leading, and the same face in the bar, the rows, and the buttons. The headline sits in a frame that is a light rim, an inner highlight, and a shadow. Body text is on solid paper, #f6f3ec, and the buttons are solid ink, #1c1915. Instrument Serif is Latin only. Pair it with Noto Serif Hebrew or Noto Naskh Arabic, and use Noto Sans for a small menu label if the serif is too thin there.</p>
+</section>
+
+<section class="opt opt-9" id="opt9" aria-labelledby="h9">
+<h2 id="h9">Option 9. Floating dock</h2>
+<div class="stage has-menu">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="copy">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">The menu leaves the top and floats.</p>
+</div>
+<div class="card">
+<h4>A standard atmosphere</h4>
+<p>In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer. At 11 km the air is about 30% as dense as at sea level.</p>
+<p class="src">Source: <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn, Beginner’s Guide to Aeronautics</a></p>
+<p class="actions"><a class="pill" href="Intro_to_Aerospace_Engineering.html#u2">Open the unit</a><a class="pill" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn</a></p>
+</div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-9" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-9" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">Syne at 700, uppercase, tracking −0.04em, for a title that sits on the film. The bar becomes a capsule dock at the foot of the frame, with the same light rim, inner highlight, and shadow as the menu above. The dropdown opens upward. The card is that same light panel, so the sentence is dark on pale glass. Buttons stay one color, solid #0a4f78. Syne is Latin only. Use Noto Sans Arabic and Noto Sans Hebrew for the dock, with no letter-spacing on Arabic.</p>
+</section>
+
+<section class="opt opt-10" id="opt10" aria-labelledby="h10">
+<h2 id="h10">Option 10. Panel on the picture</h2>
+<div class="stage has-menu">
+<div class="media"><img class="still" src="assets/style/landsat9-poster.jpg" alt="" width="960" height="540"><div class="veil" aria-hidden="true"></div></div>
+<div class="lg">
+<div class="lg-bar">
+<a class="lg-brand" href="index.html">Saving Planets</a>
+<div class="lg-links"><a href="Solutions.html">Solutions</a><a href="Learn.html">Learn</a></div>
+<div class="lg-pop">
+<button type="button" class="lg-open" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-10" aria-label="Open menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<div class="lg-menu" id="menu-10" role="menu" hidden>
+<a role="menuitem" href="Solutions.html"><span>Solutions</span></a>
+<a role="menuitem" href="Learn.html"><span>Learn</span></a>
+<a role="menuitem" href="Undergraduate_Studies.html"><span>Undergraduate Studies</span></a>
+<a role="menuitem" href="Ways_to_Help.html"><span>Ways to Help</span></a>
+<div class="lg-rule" role="separator"></div>
+<a role="menuitem" class="lg-accent" href="Ways_to_Help.html"><span>Donate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a role="menuitem" href="About.html"><span>About</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copy">
+<p class="kicker">AERO 101 · Unit 2</p>
+<h3 class="ttl">Earth’s thin air</h3>
+<p class="sub">The dropdown’s material, used as the page.</p>
+</div>
+<div class="card">
+<h4>A standard atmosphere</h4>
+<p>In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer. At 11 km the air is about 30% as dense as at sea level.</p>
+<p class="src">Source: <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn, Beginner’s Guide to Aeronautics</a></p>
+<p class="actions"><a class="pill" href="Intro_to_Aerospace_Engineering.html#u2">Open the unit</a><a class="pill" href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/">NASA Glenn</a></p>
+</div>
+<p class="vcred">Video: NASA, Landsat 9 launch on an Atlas V. <a href="https://images.nasa.gov/details/KSC-20210927-VP-MMS01-0001-Landsat-9_Live_Launch_Coverage_H.264_Record-3284377">NASA image library</a></p>
+</div>
+<p class="note">Newsreader at 600, about 3.35rem, for a headline that reads like a column name rather than a button. The bar, the rows, and the card use that same face. The card copies the menu panel: pale fill, 1px light rim, inner highlight, layered shadow, dark text. Buttons are a single forest green, #0f6b4c, and they hug the words. Newsreader is Latin. Pair it with Noto Serif Hebrew or Noto Naskh Arabic, and keep Arabic letter-spacing at 0.</p>
+</section>
+<p class="rlabel" id="round1">Round 1</p>
 <section class="opt opt-current" id="current" aria-labelledby="h-current">
 <h2 id="h-current">Current</h2>
 <div class="stage">
@@ -245,12 +607,15 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
 <section class="notes" id="research">
 <h2>Research notes</h2>
 <p>Liquid Glass, as Apple describes it, is a material for controls and navigation that float above content. It is not a fill for every card. The regular variant blurs and lifts the background so text stays readable. The clear variant is for pieces that sit on photos or video, and it needs a dimming layer when the picture is bright. Typography in the same system is larger, bolder, and left aligned. Thin weights are avoided. On iPhone, body text defaults to 17px and should not go below 11px.</p>
-<p><a href="https://liquidglassdesign.com">Liquid Glass Design</a> separates that reactive glass from older glassmorphism, which is a still recipe of blur, a hairline, and a shadow. This page stays in CSS, so the highlight is a top inset edge rather than a lens that bends the video. The water-crystal buttons are the site’s own Explore solutions chip and do not change color between options.</p>
+<p><a href="https://liquidglassdesign.com">Liquid Glass Design</a> separates that reactive glass from older glassmorphism, which is a still recipe of blur, a hairline, and a shadow. This page stays in CSS, so the highlight is a top inset edge rather than a lens that bends the video. In round 1 the buttons stay the site’s Explore solutions chip. In round 2 each option has one button color of its own, and the menu’s accent is water blue instead of the red used in the reference.</p>
+<p>The round 2 menu follows <a href="https://liquidglassdesign.com/gallery/liquid-glass-saas-dropdown-component">Liquid Glass SAAS Dropdown Component</a> by Pranjay, a Dribbble shot from September 2026, as described in <a href="https://liquidglassdesign.com/blog/liquid-glass-website-examples">Liquid Glass website examples</a>. On a flat light ground the panel has nothing colorful to blur, so the edge, the inner highlight, and the shadow do the work. The hovered row is a lighter pill, and the last action sits under a divider. There are no accounts on this site, so the rows are Solutions, Learn, Undergraduate Studies, and Ways to Help, with Donate and About under the line.</p>
 <ul>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/materials">Apple Human Interface Guidelines, Materials</a></li>
 <li><a href="https://developer.apple.com/design/human-interface-guidelines/typography">Apple Human Interface Guidelines, Typography</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2025/356/">WWDC25, Get to know the new design system</a></li>
 <li><a href="https://liquidglassdesign.com">Liquid Glass Design gallery</a></li>
+<li><a href="https://liquidglassdesign.com/gallery/liquid-glass-saas-dropdown-component">Pranjay, Liquid Glass SAAS Dropdown Component</a> and <a href="https://dribbble.com/shots/27618592-Liquid-Glass-SAAS-Dropdown-Component">the Dribbble shot</a></li>
+<li>Outfit, Fraunces, Instrument Serif, Syne, and Newsreader, SIL Open Font License. Latin subsets on this page only.</li>
 <li>Inter, SIL Open Font License. Latin, Cyrillic, and Greek. Not Arabic or Hebrew. <a href="https://rsms.me/inter/">rsms.me/inter</a></li>
 <li>Source Sans 3 and Source Serif 4, SIL Open Font License, Adobe. Latin. <a href="https://github.com/adobe-fonts/source-sans">Source Sans</a>, <a href="https://github.com/adobe-fonts/source-serif">Source Serif</a></li>
 <li>Atkinson Hyperlegible, SIL Open Font License, Braille Institute. Latin. <a href="https://www.brailleinstitute.org/freefont/">Braille Institute</a></li>
@@ -280,13 +645,14 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
   function start(stage){
     if (home === stage) return;
     var still = stage.querySelector(".still");
-    stage.insertBefore(video, still.nextSibling);
+    if (!still) return;
+    still.parentNode.insertBefore(video, still.nextSibling);
     home = stage;
     if (!video.getAttribute("src")) video.src = file;
     var p = video.play();
     if (p && p.catch) p.catch(function(){});
   }
-  var stages = document.querySelectorAll(".stage");
+  var stages = document.querySelectorAll(".stage, .clip");
   function watch(){
   if (!("IntersectionObserver" in window)) { start(stages[0]); return; }
   var seen = new IntersectionObserver(function(entries){
@@ -298,7 +664,56 @@ h3.ttl{margin:0;font-size:2rem;line-height:1.12;font-weight:700;letter-spacing:-
   }, {threshold:[0.45, 0.7]});
   stages.forEach(function(s){ seen.observe(s); });
   }
-  window.setTimeout(watch, 800);
+  window.setTimeout(watch, 1600);
+})();
+
+(function(){
+  var pops = document.querySelectorAll(".lg");
+  function items(m){ return Array.prototype.slice.call(m.querySelectorAll('[role="menuitem"]')); }
+  function setOpen(pop, on, back){
+    var b = pop.querySelector(".lg-open");
+    var m = pop.querySelector(".lg-menu");
+    if (!b || !m) return;
+    b.setAttribute("aria-expanded", on ? "true" : "false");
+    b.setAttribute("aria-label", on ? "Close menu" : "Open menu");
+    m.hidden = !on;
+    if (!on && back) b.focus();
+  }
+  function closeAll(except){
+    pops.forEach(function(pop){ if (pop !== except) setOpen(pop, false, false); });
+  }
+  pops.forEach(function(pop){
+    var b = pop.querySelector(".lg-open");
+    var m = pop.querySelector(".lg-menu");
+    if (!b || !m) return;
+    b.addEventListener("click", function(e){
+      e.stopPropagation();
+      var on = b.getAttribute("aria-expanded") === "true";
+      closeAll(on ? null : pop);
+      setOpen(pop, !on, false);
+      if (!on){ var n = items(m)[0]; if (n) n.focus(); }
+    });
+    m.addEventListener("keydown", function(e){
+      var list = items(m);
+      var i = list.indexOf(document.activeElement);
+      if (e.key === "Escape"){ e.preventDefault(); setOpen(pop, false, true); }
+      else if (e.key === "ArrowDown"){ e.preventDefault(); list[(i + 1) % list.length].focus(); }
+      else if (e.key === "ArrowUp"){ e.preventDefault(); list[(i - 1 + list.length) % list.length].focus(); }
+      else if (e.key === "Home"){ e.preventDefault(); list[0].focus(); }
+      else if (e.key === "End"){ e.preventDefault(); list[list.length - 1].focus(); }
+      else if (e.key === "Tab"){ setOpen(pop, false, false); }
+    });
+  });
+  document.addEventListener("click", function(e){
+    if (!e.target.closest(".lg")) closeAll(null);
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key !== "Escape") return;
+    pops.forEach(function(pop){
+      var b = pop.querySelector(".lg-open");
+      if (b && b.getAttribute("aria-expanded") === "true") setOpen(pop, false, pop.contains(document.activeElement));
+    });
+  });
 })();
 </script>
 </body>
