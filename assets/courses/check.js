@@ -99,7 +99,7 @@
     return n;
   }
   function btn(label, fn) {
-    var b = el('button', 'crs-btn', label);
+    var b = el('button', 'btn crs-btn', label);
     b.type = 'button';
     b.addEventListener('click', fn);
     return b;
@@ -217,6 +217,7 @@
         var name = 'q' + i + '-' + Math.random().toString(36).slice(2, 7);
         q.opts.forEach(function (o) {
           var lab = document.createElement('label');
+          lab.className = 'btn';
           var input = document.createElement('input');
           input.type = 'radio';
           input.name = name;

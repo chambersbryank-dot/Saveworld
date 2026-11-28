@@ -440,11 +440,11 @@ def mount(lang, uid, n_quiz, n_cards):
     deck = (
         f'<div class="crs-deck" data-unit="{uid}" data-src="{src}" data-kind="cards">'
         f'<p class="crs-start-lead">{lead(lang, "cards", n_cards, 8)}</p>'
-        f'<button type="button" class="crs-btn crs-go">{start}</button></div>'
+        f'<button type="button" class="btn crs-btn crs-go">{start}</button></div>'
     )
     quiz = (
         f'<div class="crs-quizapp" data-unit="{uid}" data-src="{src}">'
         f'<p class="crs-start-lead">{lead(lang, "quiz", n_quiz, 15)}</p>'
-        f'<button type="button" class="crs-btn crs-go">{start}</button></div>'
+        f'<button type="button" class="btn crs-btn crs-go">{start}</button></div>'
     )
     return deck, quiz

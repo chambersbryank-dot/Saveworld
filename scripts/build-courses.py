@@ -227,10 +227,10 @@ def pdf_link(C):
     # PDF study guide on R2 (made with --pdf: every answer open, print styles). Key = courses/<PAGE stem>_Study_Guide[_<lang>].pdf; English PDF as fallback
     MF = json.load(open('assets/data/media-manifest.json')); k = pdf_key(C, LANG)
     docx = AR.guide_link(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
-    if k in MF: return f' <a class="crs-btn" href="{MF[k]["url"]}" download>{esc("Download the PDF study guide")}</a>' + docx
+    if k in MF: return f' <a class="btn crs-btn" href="{MF[k]["url"]}" download>{esc("Download the PDF study guide")}</a>' + docx
     k = pdf_key(C, 'en')
     docx = AR.guide_link(LANG) if getattr(C, 'ID', '') == 'aero101' else ''
-    return (f' <a class="crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' + docx) if k in MF else docx
+    return (f' <a class="btn crs-btn" href="{MF[k]["url"]}" hreflang="en" download>{esc("Download the PDF study guide")}{"" if LANG == "en" else " (" + esc("English") + ")"}</a>' + docx) if k in MF else docx
 
 def make_pdf(C, l='en'):
     """Print the course page to a tagged PDF. Equation text (.crs-eqtext) stays selectable.
@@ -486,7 +486,7 @@ def course_page(C):
         o.append(glance_block(C))
     if not quiet:
         o.append(f'<div class="crs-toc" role="navigation" aria-label="{esc("On this page")}"><ul>' + ''.join(f'<li><a href="#{a}">{html.escape(b if a in names0 or a == "further" else _(b))}</a></li>' for a, b in toc) + '</ul></div>')
-    o.append(f'<p class="crs-tools"><button type="button" class="crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>')
+    o.append(f'<p class="crs-tools"><button type="button" class="btn crs-btn" data-print>{esc("Print this page")}</button>' + pdf_link(C) + '</p>')
     scope = SCOPE_T[LANG].replace('{n}', str(len(C.UNITS))).replace('{m}', str(len(C.LABS)))
     about = [_(x) for x in C.ABOUT]
     if getattr(C, 'ID', '') == 'aero101' and about:
@@ -519,7 +519,7 @@ def course_page(C):
     else:
         o.append(f'<section id="progress"><h2>{esc("Your progress")}</h2><p>{esc("Tick units and labs as you finish them, and take the quizzes. Progress and quiz scores are saved only in this browser, never sent to us.")}</p>'
                  f'<div class="crs-prog" aria-live="polite"><progress max="100" value="0"></progress><p class="crs-prog-t">{esc("Turn on JavaScript to track progress.")}</p></div>'
-                 f'<p><button type="button" class="crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
+                 f'<p><button type="button" class="btn crs-btn crs-reset" data-reset>{esc("Reset my progress")}</button></p>' + top() + '</section>')
     if getattr(C, 'ID', '') == 'aero101': o.append(unit_index(C))
     o += [unit(C, K, i, u) for i, u in enumerate(C.UNITS, 1)]
     o.append(psets_block(C))
@@ -555,7 +555,7 @@ def course_page(C):
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
                   + AW.CSS + AF.CSS + AR.CSS + NF.CSS + AB.CHECK_CSS + '</style>\n' + AW.JS + '\n'
                   + f'<script src="{pre()}{NF.JS}" defer></script>\n'
-                  + f'<script src="{pre()}assets/courses/check.js?v=20261128c" defer></script>\n')
+                  + f'<script src="{pre()}assets/courses/check.js?v=20261128d" defer></script>\n')
     page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
     return aero_foot(page, C) if quiet else page
 

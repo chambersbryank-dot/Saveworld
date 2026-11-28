@@ -318,4 +318,4 @@ def guide_href(lang):
     return pre + 'assets/courses/' + name
 
 def guide_link(lang):
-    return f' <a class="crs-btn" href="{guide_href(lang)}" download>{e(T[lang]["guide"])}</a>'
+    return f' <a class="btn crs-btn" href="{guide_href(lang)}" download>{e(T[lang]["guide"])}</a>'

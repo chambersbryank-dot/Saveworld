@@ -458,7 +458,7 @@ def _player(lang, vid):
     apa = f'{author}. (n.d.). {vid["title"]} [Video]. YouTube. {url}'
     mla = f'"{vid["title"]}." YouTube, uploaded by {author}, n.d., {url}.'
     play = (
-        f'<span class="crs-film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">'
+        f'<span class="btn crs-film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">'
         f'<path fill="#fff" d="M8 5v14l11-7z"/></svg></span>'
     )
     return (
@@ -476,7 +476,7 @@ def _player(lang, vid):
         f'{play}'
         f'<span class="crs-film-poster-label">{_esc(L["play"])}: <bdi lang="en" dir="ltr">{title}</bdi></span>'
         f'</a></div>'
-        f'<button type="button" class="crs-film-unmute" hidden>{_esc(U["unmute"])}</button></div>'
+        f'<button type="button" class="btn crs-film-unmute" hidden>{_esc(U["unmute"])}</button></div>'
         f'<p class="crs-film-cc" aria-live="polite"></p>'
         f'<figcaption>'
         f'<span class="crs-film-title"><bdi lang="en" dir="ltr">{title}</bdi></span>'
@@ -488,10 +488,10 @@ def _player(lang, vid):
         f'<p class="crs-film-note">{_esc(CITE_ND[lang])}</p>'
         f'<p class="crs-film-cite-k">APA</p>'
         f'<p class="crs-film-cite-t" id="{apa_id}" lang="en" dir="ltr">{_esc(apa)}</p>'
-        f'<button type="button" data-copy="{apa_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
+        f'<button type="button" class="btn" data-copy="{apa_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
         f'<p class="crs-film-cite-k">MLA</p>'
         f'<p class="crs-film-cite-t" id="{mla_id}" lang="en" dir="ltr">{_esc(mla)}</p>'
-        f'<button type="button" data-copy="{mla_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
+        f'<button type="button" class="btn" data-copy="{mla_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
         f'</details></div>'
         f'<p class="crs-film-note">{_esc(MISSING[lang])}</p>'
         f'</figure>'
