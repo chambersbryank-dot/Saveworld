@@ -16,6 +16,7 @@ import learn_hubs_text as X
 import rocket_path_text as R  # Oct 28 2026 (founder): Rocket Propulsion track page (+ 'Learn from the best' on both tracks)
 import jet_path_text as J  # Oct 27/28 (founder): separate Aerospace (Jet Propulsion) track page + planet tie-in on both paths
 from courses import roadmap as RM
+from courses import aero101_forces as AF
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 SITE = 'https://www.savingplanets.com/'
 JSV = '20261026a'
@@ -150,6 +151,22 @@ JET_CSS = ('<style>.jpa{display:block;width:min(100%,560px);height:auto;margin:.
     '@keyframes jpf{from{transform:scaleX(.85)}to{transform:scaleX(1.08)}}@keyframes jps{to{transform:rotate(360deg)}}'
     '@keyframes jpp{0%{transform:translateX(0) scale(.6);opacity:.9}100%{transform:translateX(330px) scale(2.6);opacity:0}}'
     '[dir=rtl] .jpa{transform:scaleX(-1)}.lhs li.jp-m{border-inline-start-color:#ffd54a}</style>')
+JET_ALT = {
+    'en': 'NASA’s F-15B research jet in flight over Edwards, California',
+    'fr': 'F-15B de recherche de la NASA en vol au-dessus d’Edwards, en Californie',
+    'es': 'F-15B de investigación de la NASA en vuelo sobre Edwards, California',
+    'ar': 'طائرة F-15B البحثية التابعة لناسا في الطيران فوق إدواردز في كاليفورنيا',
+    'it': 'F-15B di ricerca della NASA in volo sopra Edwards, in California',
+    'he': 'מטוס המחקר F-15B של נאס״א בטיסה מעל אדוארדס בקליפורניה',
+}
+def jet_figure(l):
+    pre = '' if l == 'en' else '../'
+    return (
+        '<figure class="crs-realjet"><img src="' + pre + AF.PHOTO + '" alt="' + esc(JET_ALT[l]) + '" '
+        'width="1280" height="853" loading="lazy" decoding="async">'
+        + AF.photo_credit(l) + '</figure>'
+        '<style>.crs-realjet{margin:.8rem auto 0;max-width:40rem}.crs-realjet img{display:block;width:100%;height:auto;border-radius:12px}</style>'
+    )
 def jet_page(l, C, NL):
     U = lambda k: esc(J.UI[k][l])
     def item(x):
@@ -174,7 +191,7 @@ def jet_page(l, C, NL):
     o.append(f'<h2>{esc(u("topics", l))}</h2><ul class="lhm">' + ''.join(f'<li><a href="{t[1]}">{t[2]} {esc(t[3][l])}</a></li>' for t in X.TOPICS) + '</ul>')
     o.append(f'<p class="lnote"><small>{U("credit")}</small></p>')
     s = page_from_learn(l, J.PAGE, J.NAME[l], J.LINE[l], ''.join(o), NL)
-    return s.replace('</p></div>', '</p>' + JET_SVG.replace('{lab}', U('anim')) + '</div>', 1)
+    return s.replace('</p></div>', '</p>' + jet_figure(l) + '</div>', 1)
 BEST_CSS = ('<style>.lfb{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem}.lfb>div{padding:.6rem 1rem;border-radius:14px;background:rgba(255,255,255,.05)}'
     '.lfb h3{margin:.3rem 0 .4rem;font-size:1rem}.lfb ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}.lfb a{font-weight:800}.lfb small{display:block;opacity:.88}</style>')
 def best_block(l, items):  # Oct 28 (founder): "Learn from the best". University course homes are not listed; free study stays on Saving Planets.

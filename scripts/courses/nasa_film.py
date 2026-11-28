@@ -26,7 +26,7 @@ CUES_URL = 'assets/courses/nasa-materials-cues.json'
 META_URL = 'assets/courses/nasa-film-meta.json'
 PLYR_JS = 'assets/vendor/plyr/plyr.min.js'
 PLYR_CSS = 'assets/vendor/plyr/plyr.css'
-JS = 'assets/courses/nasa-film.js?v=20261127a'
+JS = 'assets/courses/nasa-film.js?v=20261128a'
 LOGO = 'assets/brand/sp-logo-72.webp?v=20261020'
 NASA_MEDIA = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
 APA = ('NASA Glenn Research Center. (2023, September 21). '
@@ -345,7 +345,7 @@ def figure(lang):
     i18n = E(json.dumps(U['plyr'], ensure_ascii=False, separators=(',', ':')))
     note = U['note_en'] if lang == 'en' else U['note_tr']
     return (
-        f'<figure class="crs-film" data-id="{FILM_ID}" data-lang="{lang}" '
+        f'<figure class="crs-film" data-autoplay="1" data-id="{FILM_ID}" data-lang="{lang}" '
         f'data-cues="{pre}{CUES_URL}" data-meta="{pre}{META_URL}" '
         f'data-plyr="{pre}{PLYR_JS}" data-plyr-css="{pre}{PLYR_CSS}" '
         f'data-i18n="{i18n}">'

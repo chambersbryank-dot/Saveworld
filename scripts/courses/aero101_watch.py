@@ -10,8 +10,28 @@ import html
 import json
 import os
 
+from courses import nasa_film as NF
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 _TR = json.load(open(os.path.join(HERE, '..', '..', 'i18n', 'courses', '_shared.json'), encoding='utf8'))
+
+# Timed captions could not be retrieved. Say so, and do not invent a transcript or chapters.
+MISSING = {
+    'en': 'A timed caption transcript could not be retrieved for this film, so the transcript, caption menu, and chapter marks are omitted.',
+    'fr': 'Une transcription minutée n’a pas pu être récupérée pour ce film. La transcription, le menu des sous-titres et les chapitres sont donc omis.',
+    'es': 'No se pudo recuperar una transcripción con tiempos de esta película, así que se omiten la transcripción, el menú de subtítulos y los capítulos.',
+    'ar': 'تعذّر جلب تفريغ موقوت لهذا الفيلم، لذا حُذف التفريغ وقائمة الترجمة والفصول.',
+    'it': 'Non è stato possibile recuperare una trascrizione con i tempi di questo film, quindi trascrizione, menu dei sottotitoli e capitoli sono omessi.',
+    'he': 'לא ניתן היה לאחזר תמליל מתוזמן לסרט הזה, ולכן התמליל, תפריט הכתוביות והפרקים הושמטו.',
+}
+CITE_ND = {
+    'en': 'The publication date was not in the source record, so the citation uses n.d.',
+    'fr': 'La date de publication n’était pas dans la notice, donc la citation indique n.d.',
+    'es': 'La fecha de publicación no estaba en la ficha, así que la cita usa n.d.',
+    'ar': 'تاريخ النشر غير موجود في بيانات المصدر، لذا تستخدم الإحالة n.d.',
+    'it': 'La data di pubblicazione non era nella scheda, quindi la citazione usa n.d.',
+    'he': 'תאריך הפרסום לא הופיע ברשומת המקור, ולכן האזכור משתמש ב-n.d.',
+}
 
 CC = 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
 OCW_TERMS = 'https://ocw.mit.edu/pages/privacy-and-terms-of-use/'
@@ -410,13 +430,76 @@ def _credit(lang, vid):
     raise ValueError('unknown video kind ' + vid['kind'])
 
 
-def _player(lang, vid):
+def _license_short(lang, vid):
     L = LABELS[lang]
+    word = _esc(_shared(lang, 'License:'))
+    if vid['kind'] == 'nasa':
+        return (f'{word} <a href="{NASA_MEDIA}" rel="noopener license">{_esc(L["nasa_lic"])}</a> '
+                f'({_esc(L["gov"])}).')
+    if vid['kind'] == 'mit':
+        return (f'{word} <a href="{CC}" rel="noopener license">CC BY-NC-SA 4.0</a> · '
+                f'<a href="{OCW_TERMS}" rel="noopener">{_esc(_shared(lang, "Terms of use"))}</a>.')
+    if vid['kind'] == 'delft':
+        return f'{word} <a href="{CC}" rel="noopener license">CC BY-NC-SA 4.0</a>.'
+    raise ValueError('unknown video kind ' + vid['kind'])
+
+
+def _player(lang, vid):
+    """Click-to-play Plyr. No autoplay: a unit can hold several films."""
+    L = LABELS[lang]
+    U = NF.UI[lang]
+    pre = NF.prefix(lang)
     title = _esc(vid['title'])
-    return (f'<div class="crs-watch-frame"><button type="button" class="crs-watch-play" data-id="{vid["id"]}" '
-            f'data-title="{title}" aria-label="{_esc(L["play"])}: {title}">'
-            f'<span class="crs-watch-poster" aria-hidden="true"><span class="crs-watch-tri"></span></span>'
-            f'<span class="crs-watch-cap"><span lang="en">{title}</span></span></button></div>')
+    vid_id = vid['id']
+    speeds = ''.join(
+        f'<option value="{v}"' + (' selected' if v == '1' else '') + f'>{v}×</option>'
+        for v in NF.SPEEDS
+    )
+    apa_id = f'cite-apa-{vid_id}'
+    mla_id = f'cite-mla-{vid_id}'
+    url = vid['page']
+    author = vid['source']
+    apa = f'{author}. (n.d.). {vid["title"]} [Video]. YouTube. {url}'
+    mla = f'"{vid["title"]}." YouTube, uploaded by {author}, n.d., {url}.'
+    play = (
+        f'<span class="crs-film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28">'
+        f'<path fill="#fff" d="M8 5v14l11-7z"/></svg></span>'
+    )
+    return (
+        f'<figure class="crs-film crs-film-deep" data-id="{vid_id}" data-lang="{lang}" '
+        f'data-meta="{pre}assets/courses/watch-meta/{vid_id}.json" '
+        f'data-plyr="{pre}{NF.PLYR_JS}" data-plyr-css="{pre}{NF.PLYR_CSS}">'
+        f'<div class="crs-film-bar">'
+        f'<span class="crs-film-badge">{_esc(L[vid["tier"]])}</span>'
+        f'<span class="crs-film-time"><bdi dir="ltr">{_esc(vid["length"])}</bdi></span>'
+        f'</div>'
+        f'<div class="crs-film-stage"><div class="crs-film-frame">'
+        f'<a class="crs-film-poster" href="{url}">'
+        f'<img src="{pre}assets/courses/posters/{vid_id}.webp" alt="" width="480" height="360" '
+        f'loading="lazy" decoding="async">'
+        f'{play}'
+        f'<span class="crs-film-poster-label">{_esc(L["play"])}: <bdi lang="en" dir="ltr">{title}</bdi></span>'
+        f'</a></div>'
+        f'<button type="button" class="crs-film-unmute" hidden>{_esc(U["unmute"])}</button></div>'
+        f'<p class="crs-film-cc" aria-live="polite"></p>'
+        f'<figcaption>'
+        f'<span class="crs-film-title"><bdi lang="en" dir="ltr">{title}</bdi></span>'
+        f'<span class="crs-film-credit">{_license_short(lang, vid)}</span>'
+        f'</figcaption>'
+        f'<div class="crs-film-tools">'
+        f'<label>{_esc(U["speed"])} <select class="crs-film-speed" dir="ltr">{speeds}</select></label>'
+        f'<details class="crs-film-cite"><summary>{_esc(U["cite"])}</summary>'
+        f'<p class="crs-film-note">{_esc(CITE_ND[lang])}</p>'
+        f'<p class="crs-film-cite-k">APA</p>'
+        f'<p class="crs-film-cite-t" id="{apa_id}" lang="en" dir="ltr">{_esc(apa)}</p>'
+        f'<button type="button" data-copy="{apa_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
+        f'<p class="crs-film-cite-k">MLA</p>'
+        f'<p class="crs-film-cite-t" id="{mla_id}" lang="en" dir="ltr">{_esc(mla)}</p>'
+        f'<button type="button" data-copy="{mla_id}" data-copied="{_esc(U["copied"])}">{_esc(U["copy"])}</button>'
+        f'</details></div>'
+        f'<p class="crs-film-note">{_esc(MISSING[lang])}</p>'
+        f'</figure>'
+    )
 
 
 def box(lang, unit):

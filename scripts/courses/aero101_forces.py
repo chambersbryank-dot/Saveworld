@@ -13,6 +13,11 @@ import html
 BOOK = 'https://eaglepubs.erau.edu/introductiontoaerospaceflightvehicles/'
 BOOK_LICENSE = 'https://creativecommons.org/licenses/by-nc-nd/4.0/'
 NASA = 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/'
+# NASA image AFRC2024-0110-13. Directly photographed, not a plate or a render.
+# Nose points left. Thrust follows the nose; drag follows the tail. Do not mirror it.
+PHOTO = 'assets/courses/four-forces-f15.webp'
+PHOTO_PAGE = 'https://images.nasa.gov/details/AFRC2024-0110-13'
+PHOTO_LICENSE = 'https://www.nasa.gov/nasa-brand-center/images-and-media/'
 
 # label, short card back
 FORCES = {
@@ -114,17 +119,15 @@ FORCES = {
     },
 }
 
-_PLANE = (
-    '<g fill="#e7eef5" stroke="#93a6b8" stroke-width="1.4" stroke-linejoin="round">'
-    '<path d="M48 108c0-18 30-32 82-36h148c38-2 66 12 78 36-14 24-42 34-78 34H130c-52-4-82-18-82-34z"/>'
-    '<path fill="#163e63" stroke="#163e63" d="M62 98l10-48c12-4 34 2 42 20l-10 34z"/>'
-    '<path fill="#d3dee8" d="M36 108h46l12-10 12 10-12 10-12-10z"/>'
-    '<path fill="#d5dee8" d="M158 98c20-10 58-12 92 8l-20 18c-28 8-58 4-74-8z"/>'
-    '<path fill="#7d93a8" stroke="#6a8094" d="M186 128c0-9 16-16 44-13 12 7 14 18 4 24l-38 4c-8-2-10-8-10-15z"/>'
-    '<ellipse cx="228" cy="126" rx="5" ry="8" fill="#24384a" stroke="none"/>'
-    '<path fill="#163e63" stroke="none" d="M300 92h30a3 3 0 0 1 0 7h-30a3 3 0 0 1 0-7z"/>'
-    '</g>'
-)
+# (label, sentence, license name). Arabic and Hebrew sentences carry their own bdi tags.
+PHOTO_LINE = {
+    'en': ('Photo', 'NASA’s F-15B research jet over Edwards, California, 6 August 2024.', 'U.S. government work'),
+    'fr': ('Photo', 'F-15B de recherche de la NASA au-dessus d’Edwards, en Californie, le 6 août 2024.', 'œuvre du gouvernement des États-Unis'),
+    'es': ('Foto', 'F-15B de investigación de la NASA sobre Edwards, California, el 6 de agosto de 2024.', 'obra del gobierno de EE. UU.'),
+    'ar': ('صورة', 'طائرة <bdi dir="ltr">F-15B</bdi> البحثية التابعة لناسا فوق إدواردز في كاليفورنيا، في <bdi dir="ltr">6</bdi> أغسطس <bdi dir="ltr">2024</bdi>', 'عمل لحكومة الولايات المتحدة'),
+    'it': ('Foto', 'F-15B di ricerca della NASA sopra Edwards, in California, il 6 agosto 2024.', 'opera del governo degli Stati Uniti'),
+    'he': ('תצלום', 'מטוס המחקר <bdi dir="ltr">F-15B</bdi> של נאס״א מעל אדוארדס בקליפורניה, ב-<bdi dir="ltr">6</bdi> באוגוסט <bdi dir="ltr">2024</bdi>', 'יצירה של ממשלת ארצות הברית'),
+}
 
 def _e(s):
     return html.escape(s, quote=True)
@@ -153,37 +156,59 @@ def _head(x1, y1, x2, y2):
     bx, by = tipx - ux * 11, tipy - uy * 11
     return f'{tipx:.1f},{tipy:.1f} {bx + px * 5:.1f},{by + py * 5:.1f} {bx - px * 5:.1f},{by - py * 5:.1f}'
 
-def plane_svg(lang, which):
-    """which is 'all' or one of lift, weight, thrust, drag. Nose points right; dir stays ltr."""
+def _aria(lang, which):
     T = FORCES[lang]
-    rtl = ' direction="rtl"' if lang in ('ar', 'he') else ''
-    # Patch text direction via the helper by passing rtl flag through labels only.
-    names = {k: T[k][0] for k in ('lift', 'weight', 'thrust', 'drag')}
     if which == 'all':
-        aria = T['cap']
-        klass = 'crs-plane is-all'
-    else:
-        aria = names[which] + '. ' + T[which][1]
-        klass = f'crs-plane is-one is-{which}'
+        return T['cap']
+    return T[which][0] + '. ' + T[which][1]
+
+def plane_svg(lang, which):
+    """Arrows over the photo. The nose of AFRC2024-0110-13 points left, so thrust points left."""
+    T = FORCES[lang]
+    names = {k: T[k][0] for k in ('lift', 'weight', 'thrust', 'drag')}
+    klass = 'crs-plane is-all' if which == 'all' else f'crs-plane is-one is-{which}'
     rtl_text = lang in ('ar', 'he')
+    # viewBox 360×240 matches the 1280×853 photo. Coordinates sit on the jet, labels stay inside.
     arrows = ''.join([
-        _arrow('lift', 200, 96, 200, 28, 200, 18, 'middle', names['lift'], rtl_text),
-        _arrow('weight', 176, 116, 176, 184, 176, 190, 'middle', names['weight'], rtl_text),
-        _arrow('thrust', 220, 138, 300, 138, 248, 158, 'middle', names['thrust'], rtl_text),
-        _arrow('drag', 130, 108, 22, 108, 70, 92, 'middle', names['drag'], rtl_text),
+        _arrow('lift', 155, 118, 155, 40, 155, 30, 'middle', names['lift'], rtl_text),
+        _arrow('weight', 168, 142, 168, 208, 168, 226, 'middle', names['weight'], rtl_text),
+        _arrow('thrust', 128, 128, 22, 112, 78, 96, 'middle', names['thrust'], rtl_text),
+        _arrow('drag', 205, 150, 340, 164, 262, 186, 'middle', names['drag'], rtl_text),
     ])
     return (
-        f'<svg class="{klass}" viewBox="0 0 360 200" role="img" aria-label="{_e(aria)}">'
-        f'{_PLANE}{arrows}'
-        f'<circle class="crs-cg" cx="176" cy="108" r="2.4"/>'
+        f'<svg class="{klass}" viewBox="0 0 360 240" aria-hidden="true" focusable="false">'
+        f'{arrows}'
+        f'<circle class="crs-cg" cx="160" cy="132" r="2.6"/>'
         f'</svg>'
+    )
+
+def photo_src(lang):
+    return ('' if lang == 'en' else '../') + PHOTO
+
+def photo_credit(lang):
+    label, sentence, lic = PHOTO_LINE[lang]
+    sent = sentence if lang in ('ar', 'he') else _e(sentence)
+    return (
+        f'<p class="crs-photo">{_e(label)}: '
+        f'<a href="{PHOTO_PAGE}" rel="noopener"><bdi dir="ltr">NASA/Steve Freeman</bdi></a>. '
+        f'{sent} '
+        f'<a href="{PHOTO_LICENSE}" rel="noopener license">{_e(lic)}</a>.</p>'
+    )
+
+def stage(lang, which):
+    return (
+        '<div class="crs-forces-stage" dir="ltr">'
+        f'<img class="crs-jet" src="{photo_src(lang)}" alt="{_e(_aria(lang, which))}" '
+        'width="1280" height="853" loading="lazy" decoding="async">'
+        + plane_svg(lang, which)
+        + '</div>'
+        + photo_credit(lang)
     )
 
 def figure(lang):
     T = FORCES[lang]
     return (
-        '<figure class="crs-forces"><div class="crs-forces-stage" dir="ltr">'
-        + plane_svg(lang, 'all') + '</div><figcaption>'
+        '<figure class="crs-forces">' + stage(lang, 'all') + '<figcaption>'
         f'<p>{_e(T["cap"])}</p>'
         f'<p>{_e(T["credit"]).replace("SI", "<bdi>SI</bdi>")}</p>'
         f'<p>{_e(T["src"])} <a href="{NASA}" rel="noopener">{_e(T["nasa"])}</a></p>'
@@ -196,7 +221,7 @@ def _card(lang, which):
     src = f'{_e(T["src"])} {_e(T["nasa"])}.'
     return (
         '<li><div class="crs-fc-f"><p class="crs-fc-name">' + _e(name) + '</p>'
-        '<div class="crs-forces-stage" dir="ltr">' + plane_svg(lang, which) + '</div></div>'
+        + stage(lang, which) + '</div>'
         f'<p class="crs-fc-b">{_e(back)} {src}</p></li>'
     )
 
@@ -253,14 +278,17 @@ CSS = (
     '.crs-units td:first-child{font-weight:800;white-space:nowrap;width:4.2rem}'
     '.crs-book{margin:0 0 .9rem;padding:.8rem 1rem;border:1px solid rgba(255,255,255,.28);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}'
     '.crs-book h3{margin:0 0 .35rem;font-size:1.05rem}'
-    '.crs-forces{margin:.8rem 0 1rem}.crs-forces-stage{border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#10283f,#071422);border:1px solid rgba(255,255,255,.2)}'
+    '.crs-forces{margin:.8rem 0 1rem}.crs-forces-stage{position:relative;aspect-ratio:1280/853;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#10283f,#071422);border:1px solid rgba(255,255,255,.2)}'
     '.crs-forces svg,.crs-fc-f svg{display:block;width:100%;height:auto}'
+    '.crs-forces-stage .crs-jet{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}'
+    '.crs-forces-stage .crs-plane{position:absolute;inset:0;width:100%;height:100%;background:transparent}'
+    '.crs-photo{margin:.35rem 0 .15rem;font-size:.82rem;font-weight:650;line-height:1.4;overflow-wrap:anywhere}'
     '.crs-forces figcaption{margin-top:.4rem;font-size:.9rem}'
     '.crs-fc-name{margin:0 0 .3rem;font-weight:800}'
     '.crs-arrow{opacity:0;animation:crs-force 6s ease-in-out infinite}'
     '.crs-arrow line{stroke:#d7e6f2;stroke-width:2.2}'
     '.crs-arrow polygon{fill:#d7e6f2}'
-    '.crs-arrow text{fill:#f4f8fb;font-size:13px;font-weight:700;font-family:Montserrat,"Noto Sans Arabic","Noto Sans Hebrew",sans-serif}'
+    '.crs-arrow text{fill:#f4f8fb;font-size:13px;font-weight:700;font-family:Montserrat,"Noto Sans Arabic","Noto Sans Hebrew",sans-serif;paint-order:stroke fill;stroke:#071422;stroke-width:4px;stroke-linejoin:round}'
     '.is-lift line,.is-lift polygon{stroke:#8ee0b0;fill:#8ee0b0}'
     '.is-weight line,.is-weight polygon{stroke:#f3d56a;fill:#f3d56a}'
     '.is-thrust line,.is-thrust polygon{stroke:#8ecfff;fill:#8ecfff}'

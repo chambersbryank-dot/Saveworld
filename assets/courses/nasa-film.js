@@ -62,10 +62,17 @@
         holder.setAttribute('data-plyr-embed-id', id);
         poster.replaceWith(holder);
         var i18n = {};
-        try { i18n = JSON.parse(fig.getAttribute('data-i18n') || '{}'); } catch (e) {}
+        var raw = fig.getAttribute('data-i18n');
+        if (!raw) {
+          var donor = document.querySelector('figure.crs-film[data-i18n]');
+          raw = donor ? donor.getAttribute('data-i18n') : '';
+        }
+        try { i18n = JSON.parse(raw || '{}'); } catch (e) {}
         var markers = [];
         fig.querySelectorAll('.crs-film-chapters button').forEach(function (b) {
-          markers.push({ time: Number(b.getAttribute('data-t')), label: b.querySelector('span').textContent });
+          var span = b.querySelector('span');
+          if (!span) return;
+          markers.push({ time: Number(b.getAttribute('data-t')), label: span.textContent });
         });
         var titleEl = fig.querySelector('.crs-film-title');
         var player = new window.Plyr(holder, {
@@ -153,6 +160,7 @@
 
   function paint(fig, rows, lang) {
     var ol = fig.querySelector('.crs-film-lines');
+    if (!ol) return;
     var html = rows.map(function (row) {
       return '<li><button type="button" data-t="' + row.t + '"><bdi class="crs-film-timeb" dir="ltr">' +
         clock(row.t) + '</bdi> <span class="crs-film-line">' + esc(row[lang]) + '</span></button></li>';
@@ -166,11 +174,13 @@
 
   figs.forEach(function (fig) {
     var pageLang = fig.getAttribute('data-lang') || 'en';
-    var original = fig.querySelector('.crs-film-lines').innerHTML;
+    var linesEl = fig.querySelector('.crs-film-lines');
+    var original = linesEl ? linesEl.innerHTML : '';
     var poster = fig.querySelector('.crs-film-poster');
     if (poster) {
       poster.addEventListener('click', function (e) {
         e.preventDefault();
+        if (fig.getAttribute('data-autoplay') !== '1') fig._sound = true;
         boot(fig);
       });
     }
@@ -233,6 +243,7 @@
         var lang = select.value;
         if (lang === pageLang) {
           var ol = fig.querySelector('.crs-film-lines');
+          if (!ol) return;
           ol.innerHTML = original;
           ol.lang = pageLang;
           ol.dir = (pageLang === 'ar' || pageLang === 'he') ? 'rtl' : 'ltr';
@@ -256,9 +267,10 @@
         if (current) reveal(current);
       });
     }
-    if (!reduce) {
+    if (!reduce && fig.getAttribute('data-autoplay') === '1') {
       // The YouTube frame shifts inside itself as its player draws. Starting it
       // a few seconds after load keeps that shift out of the first paint.
+      // Only the featured film autoplays. Every other film waits for a click.
       var kick = function () { window.setTimeout(function () { boot(fig); }, 5000); };
       if (document.readyState === 'complete') kick();
       else window.addEventListener('load', kick);
