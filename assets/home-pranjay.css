@@ -135,6 +135,9 @@ body.toc-home .hero-ctas .hero-cta:focus-visible,
 body.toc-home .edu-bubble:focus-visible,
 body.toc-home a.hv-chip:focus-visible,
 body.toc-home .sticky-help:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
+body.toc-home .aud-title{color:#0a4f78 !important}
+body.toc-home .edu-bubble .lb-small,
+body.toc-home .edu-bubble.glass .lb-small{color:#171717 !important}
 body.toc-home .aud-card{
   background:rgba(247,247,247,.9) !important;color:#171717 !important;
   border:1.5px solid rgba(255,255,255,.95);border-radius:22px;

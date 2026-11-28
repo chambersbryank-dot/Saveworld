@@ -206,7 +206,7 @@
     if (!set.length) return;
     var pick = set[set.length - 1]; for (var k = 0; k < set.length; k++) if (set[k].w >= need) { pick = set[k]; break; }
     var im = new Image(); im.crossOrigin = 'anonymous'; im.decoding = 'async';
-    im.onload = function () { SATIMG = im; if (W) drawSaturn(); }; im.onerror = function () { SATIMG = null; }; im.src = pick.u;
+    im.onload = function () { SATIMG = im; if (W && SAT.R) drawSaturn(); }; im.onerror = function () { SATIMG = null; }; im.src = pick.u;
   }
   function drawSaturn() {
     var x = sizeCanvas(cSkyA, W, H), R = SAT.R, cx = SAT.x, cy = SAT.y, roll = -0.1, flat = 0.902;
@@ -540,9 +540,12 @@
     ['mouseleave', 'blur'].forEach(function (e) { c.addEventListener(e, function () { hold = false; }); }); });
   document.addEventListener('visibilitychange', kick);
   if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(hero);
-  if (mq.addEventListener) mq.addEventListener('change', function () { reduced = mq.matches; if (reduced) { tScene = tGlide = 9; frame(true); } kick(); });
+  if (mq.addEventListener) mq.addEventListener('change', function () {
+    if (document.body && document.body.classList.contains('toc-home')) return;
+    reduced = mq.matches; if (reduced) { tScene = tGlide = 9; frame(true); } kick(); });
   var rt = 0, lastW = 0;
   window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () {
+    if (document.body && document.body.classList.contains('toc-home')) return;
     var b = hero.getBoundingClientRect(); if (Math.abs(b.width - lastW) < 2 && Math.abs(b.height - H) < 80) return; // ignore iOS URL-bar jitter
     lastW = b.width; setup(); frame(true); kick(); }, 180); }, { passive: true });
   lastW = hero.getBoundingClientRect().width;
@@ -576,7 +579,7 @@
   function idle() { (window.requestIdleCallback || function (f) { return setTimeout(f, 50); })(start, { timeout: 2500 }); }
   if (document.readyState === 'complete') setTimeout(idle, 200); else window.addEventListener('load', function () { setTimeout(idle, 200); });
   measureScene(); // lock the title between nav and horizon before the fade-in is visible
-  loadSat(); // start the Cassini download now, not after load+idle
+  if (!(document.body && document.body.classList.contains('toc-home'))) loadSat(); // start the Cassini download now, not after load+idle
   document.addEventListener('DOMContentLoaded', measureScene);
   requestAnimationFrame(measureScene);
   window.addEventListener('sp-lb', function () { setTimeout(placeCaption, 50); }); // language banner shown/closed
