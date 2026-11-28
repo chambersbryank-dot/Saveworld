@@ -181,14 +181,18 @@ body.toc-home .hero-kicker{letter-spacing:.08em}
 html[lang=ar] body.toc-home .hero-kicker,
 html[lang=he] body.toc-home .hero-kicker{letter-spacing:0}
 
-/* Credits, captions and source lines stay plain small text. */
+/* Credits and captions stay plain small text. A light plate keeps them readable over the moon poster and the beach. */
 body.toc-home .hero .hero-video-credit,
 body.toc-home .hs-cap,
 body.toc-home .hs-cap.on{
-  background:transparent !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;
-  color:#171717 !important;min-height:0 !important;padding:0 !important;font-weight:500 !important;font-size:.78rem !important;
-  text-shadow:0 1px 0 rgba(255,255,255,.85) !important
+  background:rgba(235,235,235,.92) !important;border:0 !important;border-radius:6px !important;box-shadow:none !important;
+  color:#171717 !important;min-height:0 !important;padding:.15rem .4rem !important;font-weight:500 !important;font-size:.78rem !important;
+  text-shadow:none !important
 }
+body.toc-home .hero .hero-video-credit a,
+body.toc-home .hs-cap,
+body.toc-home .hs-cap span{color:#171717 !important;text-shadow:none !important}
+body.toc-home .hs-cap span{background:transparent !important;padding:0 !important}
 body.toc-home .hs-cap .hs-arr{color:#0a4f78 !important}
 body.toc-home .fact-source,
 body.toc-home .photo-credit,
