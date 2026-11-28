@@ -1,0 +1,234 @@
+/* Homepage-only Pranjay light glass. Scoped to body.toc-home so every other page stays as it is.
+   Field #ebebeb. Panels rgba(238,238,238,.74), 1.5px white rim, inner highlight, soft shadow.
+   Inter is for Latin nav labels. Arabic and Hebrew keep Noto. */
+@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/style/inter-500.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+body.toc-home{background:#ebebeb !important;color:#171717 !important}
+html.dark body.toc-home{background:#ebebeb !important;color:#171717 !important}
+body.toc-home .home-find{width:100%;min-width:0;box-sizing:border-box}
+body.toc-home .home-find .hf-row,
+body.toc-home .home-find form,
+body.toc-home .home-find .wm-cta{min-width:0;max-width:100%}
+html.dark body.toc-home :is(h1,h2,h3,p,li,td,th,label,summary){color:#171717}
+html.dark body.toc-home .card-band .card,
+html.dark body.toc-home .aud-card{background:#f7f7f7 !important;color:#171717 !important}
+html.dark body.toc-home .card-band h2,
+html.dark body.toc-home .card-band h3,
+html.dark body.toc-home .mission-block h2{color:#171717 !important}
+html.dark body.toc-home .brand-blue,
+html.dark body.toc-home .solution-list a,
+html.dark body.toc-home .card-band h3 a{color:#0a4f78 !important}
+
+/* Nav: light translucent bar. Beats the shared dark #topnav rules, including the Italian solid fill. */
+html body.toc-home nav#topnav,
+html[lang="it"] body.toc-home nav#topnav{
+  background:rgba(238,238,238,.78) !important;
+  border:0 !important;
+  border-bottom:1.5px solid rgba(255,255,255,.9) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 10px 28px rgba(16,24,40,.06) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(160%) !important;
+  backdrop-filter:blur(18px) saturate(160%) !important;
+  color:#171717 !important
+}
+html body.toc-home nav#topnav::before{opacity:0 !important;background:transparent !important}
+html body.toc-home nav#topnav.spn-solid,
+html body.toc-home nav#topnav.spn-open,
+html[lang="it"] body.toc-home nav#topnav.spn-solid,
+html[lang="it"] body.toc-home nav#topnav.spn-open{
+  background:rgba(238,238,238,.92) !important;
+  box-shadow:inset 0 1px 0 #fff,0 12px 32px rgba(16,24,40,.08) !important
+}
+body.toc-home #topnav .spn{font-family:Inter,"Segoe UI",sans-serif}
+html[lang=ar] body.toc-home #topnav .spn{font-family:"Noto Sans Arabic",Inter,"Segoe UI",sans-serif;letter-spacing:0}
+html[lang=he] body.toc-home #topnav .spn{font-family:"Noto Sans Hebrew",Inter,"Segoe UI",sans-serif;letter-spacing:0}
+body.toc-home #topnav .spn-brand,
+body.toc-home #topnav .spn-util a,
+body.toc-home #topnav .spn-trig,
+body.toc-home #topnav .spn-ls{color:#171717 !important}
+body.toc-home #topnav .spn-brand:hover,
+body.toc-home #topnav .spn-util a:hover,
+body.toc-home #topnav .spn-trig:hover,
+body.toc-home #topnav .spn-ls:hover{color:#0a4f78 !important}
+body.toc-home #topnav .spn-dd.is-open>.spn-trig{
+  background:#f4f4f4 !important;color:#171717 !important;border-radius:16px;box-shadow:inset 0 1px 0 #fff
+}
+body.toc-home #topnav .spn-dd.is-current>.spn-trig{box-shadow:inset 0 -2px 0 #0a4f78}
+body.toc-home #topnav a:focus-visible,
+body.toc-home #topnav button:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:2px}
+body.toc-home #topnav .spn-toggle{border-color:rgba(23,23,23,.35) !important;background:rgba(255,255,255,.55) !important}
+body.toc-home #topnav .spn-toggle span{background:#171717 !important}
+
+/* Dropdown: edge-defined light panel, near-black labels, right-aligned line icon, hover pill, hairline. */
+html body.toc-home #topnav .spn-sub{
+  background:#eee !important;
+  background-image:none !important;
+  border:1.5px solid rgba(255,255,255,.9) !important;
+  border-radius:22px !important;
+  padding:.4rem !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 18px rgba(255,255,255,.45),0 8px 24px rgba(16,24,40,.05),0 22px 48px rgba(16,24,40,.07) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  backdrop-filter:blur(18px) saturate(160%);
+  color:#171717 !important
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  html body.toc-home #topnav .spn-sub{background:rgba(238,238,238,.78) !important}
+}
+body.toc-home #topnav .spn-sub li+li{border-top:1px solid rgba(23,23,23,.1) !important}
+body.toc-home #topnav .spn-sub a{
+  justify-content:space-between;gap:.75rem;margin:.12rem .1rem;padding:.35rem .85rem !important;
+  border:1px solid transparent;border-radius:16px;color:#171717 !important;
+  font-family:inherit;font-weight:500 !important;font-size:1rem !important;letter-spacing:-.01em;min-height:44px
+}
+body.toc-home #topnav .spn-sub a::after{
+  content:"";width:18px;height:18px;flex:none;margin-inline-start:auto;background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat
+}
+html[dir=rtl] body.toc-home #topnav .spn-sub a::after{transform:scaleX(-1)}
+body.toc-home #topnav .spn-sub a:hover,
+body.toc-home #topnav .spn-sub a:focus-visible{
+  background:#f4f4f4 !important;color:#171717 !important;border-color:rgba(255,255,255,.95) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 20px rgba(16,24,40,.06)
+}
+body.toc-home #topnav .spn-sub a[aria-current]{color:#0a4f78 !important;font-weight:500 !important}
+@media (max-width:767px){
+  body.toc-home #topnav .spn-panel{
+    background:rgba(238,238,238,.96) !important;color:#171717 !important;
+    box-shadow:0 16px 36px rgba(16,24,40,.1) !important
+  }
+  body.toc-home #topnav .spn-util{border-bottom-color:rgba(23,23,23,.12) !important}
+  body.toc-home #topnav .spn-main>li+li{border-top-color:rgba(23,23,23,.1) !important}
+  body.toc-home #topnav .spn-sub,
+  body.toc-home #topnav .spn-dd:nth-last-child(-n+3) .spn-sub{
+    background:rgba(255,255,255,.45) !important;box-shadow:none !important;border-radius:16px !important
+  }
+}
+
+/* Donate and the sticky help action stay water blue. Other homepage buttons are light glass pills. */
+body.toc-home .hero-ctas .hero-cta,
+body.toc-home .wm-cta .btn,
+body.toc-home .edu-bubble,
+body.toc-home .dt-btn,
+body.toc-home a.hv-chip{
+  width:auto !important;max-width:100%;min-height:0 !important;padding:.45em .9em !important;white-space:normal !important;text-align:center;
+  border-radius:999px !important;color:#171717 !important;text-shadow:none !important;
+  background:rgba(238,238,238,.8) !important;border:1.5px solid rgba(255,255,255,.95) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 20px rgba(16,24,40,.06) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  font-weight:500 !important
+}
+body.toc-home .hero-ctas .hero-cta:hover,
+body.toc-home .edu-bubble:hover,
+body.toc-home .dt-btn:hover,
+body.toc-home a.hv-chip:hover{background:#f4f4f4 !important;color:#171717 !important}
+body.toc-home .nav-help a,
+body.toc-home .sticky-help,
+body.toc-home a.hv-chip{
+  color:#fff !important;background:#0a4f78 !important;border-color:#083f60 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 18px rgba(10,79,120,.22) !important;
+  text-shadow:none !important
+}
+body.toc-home .nav-help a:hover,
+body.toc-home .sticky-help:hover,
+body.toc-home a.hv-chip:hover{background:#083f60 !important;color:#fff !important}
+body.toc-home .hero-ctas .hero-cta:focus-visible,
+body.toc-home .edu-bubble:focus-visible,
+body.toc-home a.hv-chip:focus-visible,
+body.toc-home .sticky-help:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
+body.toc-home .aud-card{
+  background:rgba(247,247,247,.9) !important;color:#171717 !important;
+  border:1.5px solid rgba(255,255,255,.95);border-radius:22px;
+  box-shadow:inset 0 1px 0 #fff,0 10px 24px rgba(16,24,40,.06)
+}
+body.toc-home .card-band .card{background:#f7f7f7;box-shadow:0 10px 28px rgba(16,24,40,.06)}
+
+/* Hero picture feathers into the light field. Title sits on a soft scrim so the type stays dark. */
+body.toc-home .hero.space-hero{background:#ebebeb !important}
+body.toc-home .hero-media,
+body.toc-home .hero[data-hero=space] .hero-space{
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%)
+}
+body.toc-home .hero-overlay{
+  background:linear-gradient(180deg,rgba(235,235,235,.35) 0%,rgba(235,235,235,0) 30%,rgba(235,235,235,0) 64%,rgba(235,235,235,.88) 100%) !important
+}
+body.toc-home .hero[data-hero=space] .hero-space::after{
+  background:linear-gradient(180deg,rgba(235,235,235,.25),transparent 26%,transparent 68%,rgba(235,235,235,.82)) !important
+}
+body.toc-home .hero[data-hero=space] .hero-space::before{opacity:1 !important;transition:none !important}
+body.toc-home .hero[data-hero=space] .hero-space.hs-ready::before{opacity:1 !important}
+body.toc-home .hero .hero-content,
+body.toc-home .hero[data-hero=space] .hero-content{
+  background:radial-gradient(closest-side,rgba(235,235,235,.9),rgba(235,235,235,.66) 68%,rgba(235,235,235,0)) !important;
+  border-radius:28px
+}
+body.toc-home .hero-kicker,
+body.toc-home .hero-welcome,
+body.toc-home .welcome-minus,
+body.toc-home .hero-example,
+body.toc-home .hero[data-hero=space] .hero-kicker,
+body.toc-home .hero[data-hero=space] .hero-welcome,
+body.toc-home .hero[data-hero=space] .hero-example{
+  color:#171717 !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.8) !important
+}
+body.toc-home .welcome-brand,
+body.toc-home .hero[data-hero=space] .welcome-brand{color:#0a4f78 !important;text-shadow:none !important}
+body.toc-home .hero-kicker{letter-spacing:.08em}
+html[lang=ar] body.toc-home .hero-kicker,
+html[lang=he] body.toc-home .hero-kicker{letter-spacing:0}
+
+/* Credits, captions and source lines stay plain small text. */
+body.toc-home .hero .hero-video-credit,
+body.toc-home .hs-cap,
+body.toc-home .hs-cap.on{
+  background:transparent !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;
+  color:#171717 !important;min-height:0 !important;padding:0 !important;font-weight:500 !important;font-size:.78rem !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.85) !important
+}
+body.toc-home .hs-cap .hs-arr{color:#0a4f78 !important}
+body.toc-home .fact-source,
+body.toc-home .photo-credit,
+body.toc-home .si-credit{background:none !important;border:0 !important;box-shadow:none !important}
+
+/* Moon and Earth stills do not drift. The space-card Ken Burns is the Earth/space photo. */
+body.toc-home .card-band #space-card .image-container img{animation:none !important;transform:none !important}
+body.toc-home footer{background:#e6e6e6 !important;color:#171717 !important}
+body.toc-home footer a{color:#0a4f78 !important}
+
+/* Homepage share row. Share and Help spread the word are light-glass pills.
+   X, Facebook, LinkedIn and Email show the mark; the name stays in aria-label. */
+html body.toc-home .share-bar .share-btn{
+  color:#171717 !important;text-shadow:none !important;font-weight:500 !important;
+  background:#eee !important;background-image:none !important;
+  border:1.5px solid rgba(255,255,255,.95) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 18px rgba(16,24,40,.06) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  padding:.4em .85em !important;min-height:44px;gap:.4rem
+}
+html body.toc-home .share-bar .share-btn:hover{background:#f4f4f4 !important;color:#171717 !important}
+html body.toc-home .share-bar .share-btn:focus-visible{outline:3px solid #0a4f78 !important;outline-offset:3px}
+html body.toc-home .share-bar .share-x,
+html body.toc-home .share-bar .share-fb,
+html body.toc-home .share-bar .share-li,
+html body.toc-home .share-bar .share-mail{width:44px;padding:0 !important}
+html body.toc-home .share-bar .share-btn svg{width:18px;height:18px;display:block;flex:none}
+html body.toc-home .share-bar .share-sr{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0
+}
+
+@media (prefers-reduced-transparency:reduce){
+  html body.toc-home nav#topnav,
+  html body.toc-home #topnav .spn-sub,
+  body.toc-home .hero-ctas .hero-cta,
+  body.toc-home .edu-bubble{background:#eee !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+  body.toc-home .nav-help a,
+  body.toc-home .sticky-help,
+  body.toc-home a.hv-chip{background:#0a4f78 !important}
+}
+@media (forced-colors:active){
+  body.toc-home .hero-ctas .hero-cta,
+  body.toc-home .nav-help a,
+  body.toc-home #topnav .spn-sub{border:1px solid ButtonText !important;forced-color-adjust:auto}
+}

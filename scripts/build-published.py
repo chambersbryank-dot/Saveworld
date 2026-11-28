@@ -2,7 +2,9 @@
 """Nov 20 2026: where the free materials are officially published.
 
 Two verified listings only (do not add platforms here):
-  TES member page, 32 free resources, Nov 16 2026
+  TES member page. Homepage count is the live author listing
+  (https://www.tes.com/resources/search/?authorId=33962329), 183 resources
+  on Nov 28 2026. The Nov 16 milestone below stays 32, the count recorded that day.
   OER Commons, Introduction to Aerospace Engineering (AERO 101), Nov 19 2026
 
 Writes, in all six languages:
@@ -19,31 +21,33 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 RTL = {'ar', 'he'}
 TES = 'https://www.tes.com/member/savingplanets'
+TES_LIST = 'https://www.tes.com/resources/search/?authorId=33962329'
 OER = 'https://oercommons.org/courses/introduction-to-aerospace-engineering-aero-101'
 
 def bdi(name):
     return f'<bdi>{name}</bdi>'
 
 # Platform names and the course code stay untranslated. Teacher Sheets uses each
-# language's existing name for that page. The figure 32 is the verified count.
+# language's existing name for that page. 183 is numFound on the TES author
+# search, Nov 28 2026. Do not replace it with a guess.
 HOME = {
  'en': {'h': 'Our free materials are published on',
-        'tes': f'{bdi("TES")} — 32 free Teacher Sheets and handouts',
+        'tes': f'{bdi("TES")} — 183 free Teacher Sheets and handouts',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: Introduction to Aerospace Engineering'},
  'fr': {'h': 'Nos ressources gratuites sont publiées sur',
-        'tes': f'{bdi("TES")} — 32 fiches enseignants et documents à distribuer gratuits',
+        'tes': f'{bdi("TES")} — 183 fiches enseignants et documents à distribuer gratuits',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: Introduction à l’ingénierie aérospatiale'},
  'es': {'h': 'Nuestros materiales gratuitos están publicados en',
-        'tes': f'{bdi("TES")} — 32 fichas docentes y materiales de apoyo gratuitos',
+        'tes': f'{bdi("TES")} — 183 fichas docentes y materiales de apoyo gratuitos',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: Introducción a la ingeniería aeroespacial'},
  'it': {'h': 'I nostri materiali gratuiti sono pubblicati su',
-        'tes': f'{bdi("TES")} — 32 schede per insegnanti e dispense gratuite',
+        'tes': f'{bdi("TES")} — 183 schede per insegnanti e dispense gratuite',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: Introduzione all’ingegneria aerospaziale'},
  'ar': {'h': 'موادنا المجانية منشورة على',
-        'tes': f'{bdi("TES")} — {bdi("32")} من أوراق المعلمين والنشرات المجانية',
+        'tes': f'{bdi("TES")} — {bdi("183")} من أوراق المعلمين والنشرات المجانية',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: مقدمة في هندسة الطيران والفضاء'},
  'he': {'h': 'החומרים החינמיים שלנו מתפרסמים באתרים אלה',
-        'tes': f'{bdi("TES")} — {bdi("32")} דפי מורים ודפי חלוקה חינמיים',
+        'tes': f'{bdi("TES")} — {bdi("183")} דפי מורים ודפי חלוקה חינמיים',
         'oer': f'{bdi("OER Commons")} — {bdi("AERO 101")}: מבוא להנדסת אווירונאוטיקה וחלל'},
 }
 # Whole clause is the link so the accessible name says what was published and where.
@@ -88,7 +92,7 @@ def home_block(lang):
            '#published .hv-chip span{display:block;min-width:0;max-width:100%;white-space:normal;text-align:center;line-height:1.35}</style>')
     return ('<!-- PUBLISHED:START -->' + css
             + '<section class="home-vision" id="published" aria-labelledby="pub-h">'
-            + f'<h2 id="pub-h">{t["h"]}</h2><p class="hv-chips">{chip(TES, t["tes"])}{chip(OER, t["oer"])}</p>'
+            + f'<h2 id="pub-h">{t["h"]}</h2><p class="hv-chips">{chip(TES_LIST, t["tes"])}{chip(OER, t["oer"])}</p>'
             + '</section><!-- PUBLISHED:END -->')
 
 def ms_block(lang):

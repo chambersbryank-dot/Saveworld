@@ -530,7 +530,10 @@
       if (scrub) advance = dt;
       else if (revealT > 0.45) { var u = Math.min(1, (revealT - 0.45) / 0.7); u = u * u * (3 - 2 * u); advance = dt * u; } }
     tGlide += advance; var m = sceneMix(tScene); if (!hold || (m > 0 && m < 1)) tScene += advance; frame(false); if (running()) raf = requestAnimationFrame(loop); }
-  function running() { return !reduced && onScreen && !document.hidden; }
+  function running() {
+    if (document.body && document.body.classList.contains('toc-home')) return false;
+    return !reduced && onScreen && !document.hidden;
+  }
   function kick() { if (running() && !raf) { last = performance.now(); warm = 0; slowT = 0; ema = 0; raf = requestAnimationFrame(loop); } if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; } }
   // Keep the current scene (and its caption) while a caption is hovered or focused, so it never vanishes under the pointer or focus.
   caps.forEach(function (c) { ['mouseenter', 'focus'].forEach(function (e) { c.addEventListener(e, function () { hold = true; }); });
@@ -560,6 +563,12 @@
       var sw = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(rn); // CPU rasterizers
       var x = g.getExtension('WEBGL_lose_context'); if (x) x.loseContext(); return !sw; } catch (e) { return false; } }
   function start() { if (started) return; started = true;
+    /* Homepage pilot: the moon and Earthrise stay the still poster. Beach and forest play in the video theme. */
+    if (document.body && document.body.classList.contains('toc-home')) {
+      box.classList.add('hs-static');
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+      return;
+    }
     if ((navigator.connection && navigator.connection.saveData) || !hwGL()) { box.classList.add('hs-static'); return; }
     setup(); frame(true); kick();
     setTimeout(loadBM, 2500); // Earth texture after first paint (it is first seen ~20 s into the loop)
