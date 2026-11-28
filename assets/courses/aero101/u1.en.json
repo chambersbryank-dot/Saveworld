@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Forces",
+   "q": "In steady level flight, lift equals…",
+   "why": "Vertical forces balance.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "thrust",
+    "drag",
+    "weight",
+    "zero"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "History",
+   "q": "The Wright Flyer first flew in…",
+   "why": "December 17, 1903, at Kitty Hawk.",
+   "src": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+   "srcName": "Smithsonian",
+   "opts": [
+    "1899",
+    "1903",
+    "1911",
+    "1927"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Design",
+   "q": "A trade study…",
+   "why": "It ranks options systematically.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "picks the cheapest part",
+    "compares options against weighted criteria",
+    "tests a prototype to failure",
+    "is done after flight test"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Design",
+   "q": "The first step of the design process is…",
+   "why": "Requirements drive everything after.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "detailed drawings",
+    "the mission and requirements",
+    "flight test",
+    "choosing an engine"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Engineers design the aircraft first and then find a mission for it.",
+   "why": "The mission and its requirements come first.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "In level flight thrust must balance weight.",
+   "why": "Thrust balances drag; lift balances weight.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Shaving a little weight saves only that weight.",
+   "why": "Weight savings compound through wing size, drag and fuel.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "A 1,100 kg light airplane cruises level. How much lift must its wing produce? Give your answer in N.",
+   "why": "10,791 N ≈ 10.8 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 10791,
+   "tol": 50,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "The Wright Flyer’s first flight covered 36 m in 12 s. What was its average ground speed? Give your answer in m/s.",
+   "why": "3 m/s over the ground. It flew into a strong headwind, so its airspeed was much higher.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 3,
+   "tol": 0.05,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "An airliner of mass 70,000 kg cruises level. Find its lift. Give your answer in N.",
+   "why": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 686700,
+   "tol": 500,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "In level cruise an aircraft’s engines give 30 kN of thrust. What is its drag?",
+   "why": "30 kN, since thrust balances drag in steady flight.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 30,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Published lift data were unreliable, so they measured many wing shapes themselves: testing before building is the heart of the design process.",
+   "why": "This is stated in the unit. Why did the Wright brothers build a wind tunnel?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "A tie at 7.2: the team should test both or revisit the weights it trusts least.",
+   "why": "This is stated in the unit. Two wing concepts are scored out of 10 on cost (weight 0.3), efficiency (0.5) and ease of building (0.2). Concept A scores 8, 6, 9; B scores 5, 9, 6. Which wins?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Design priorities change with the times. Requirements for new aircraft now include fuel burn and emissions, so the same trade-study tools weigh climate alongside cost and performance.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "NASA lists three main ways to make aviation sustainable: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "On December 17, 1903, the Wright Flyer made a 12-second flight covering 36 m (120 ft); the best flight that day covered 260 m (852 ft) in 59 seconds. The Wrights succeeded by testing: they built gliders and their own wind tunnel before adding an engine.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Every design starts with a mission: payload, range or orbit, cost, safety. Requirements turn the mission into numbers the design must meet.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Design is iterative: concept sketch, sizing, analysis, test, redesign. A trade study compares options against weighted criteria.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Four forces act on an aircraft: lift, weight, thrust and drag. In steady level flight, lift = weight and thrust = drag.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Weight compounds: extra structure needs more lift, a bigger wing, more drag, more fuel, and more weight again.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Requirements",
+   "b": "Measurable targets a design must meet."
+  },
+  {
+   "f": "Trade study",
+   "b": "Weighted comparison of design options."
+  },
+  {
+   "f": "Design cycle",
+   "b": "Concept → preliminary → detailed design → test → iterate."
+  },
+  {
+   "f": "Wright Flyer",
+   "b": "First powered, controlled airplane flights, Dec. 17, 1903."
+  },
+  {
+   "f": "Weight spiral",
+   "b": "Extra weight grows the whole design."
+  },
+  {
+   "f": "Engineers design the aircraft first and then find a mission for it.",
+   "b": "The mission and its requirements come first."
+  },
+  {
+   "f": "In level flight thrust must balance weight.",
+   "b": "Thrust balances drag; lift balances weight."
+  },
+  {
+   "f": "Shaving a little weight saves only that weight.",
+   "b": "Weight savings compound through wing size, drag and fuel."
+  },
+  {
+   "f": "A 1,100 kg light airplane cruises level. How much lift must its wing produce?",
+   "b": "10,791 N ≈ 10.8 kN."
+  },
+  {
+   "f": "Two wing concepts are scored out of 10 on cost (weight 0.3), efficiency (0.5) and ease of building (0.2). Concept A scores 8, 6, 9; B scores 5, 9, 6. Which wins?",
+   "b": "A tie at 7.2: the team should test both or revisit the weights it trusts least."
+  },
+  {
+   "f": "The Wright Flyer’s first flight covered 36 m in 12 s. What was its average ground speed?",
+   "b": "3 m/s over the ground. It flew into a strong headwind, so its airspeed was much higher."
+  },
+  {
+   "f": "An airliner of mass 70,000 kg cruises level. Find its lift.",
+   "b": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN."
+  },
+  {
+   "f": "In level cruise an aircraft’s engines give 30 kN of thrust. What is its drag?",
+   "b": "30 kN, since thrust balances drag in steady flight."
+  },
+  {
+   "f": "Why did the Wright brothers build a wind tunnel?",
+   "b": "Published lift data were unreliable, so they measured many wing shapes themselves: testing before building is the heart of the design process."
+  },
+  {
+   "f": "On December 17, 1903, the Wright Flyer made a 12-second flight covering 36 m (120 ft); the best flight that day covered 260 m (852 ft) in 59 seconds. The Wrights succeeded by testing",
+   "b": "they built gliders and their own wind tunnel before adding an engine."
+  },
+  {
+   "f": "Every design starts with a mission",
+   "b": "payload, range or orbit, cost, safety. Requirements turn the mission into numbers the design must meet."
+  },
+  {
+   "f": "Design is iterative",
+   "b": "concept sketch, sizing, analysis, test, redesign. A trade study compares options against weighted criteria."
+  },
+  {
+   "f": "Four forces act on an aircraft",
+   "b": "lift, weight, thrust and drag. In steady level flight, lift = weight and thrust = drag."
+  },
+  {
+   "f": "Weight compounds",
+   "b": "extra structure needs more lift, a bigger wing, more drag, more fuel, and more weight again."
+  },
+  {
+   "f": "NASA lists three main ways to make aviation sustainable",
+   "b": "efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure."
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Razzi",
+   "q": "Δv dipende dal rapporto di massa tramite…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "un quadrato",
+    "un logaritmo",
+    "una radice quadrata",
+    "una retta"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Razzi",
+   "q": "Gli stadi aiutano perché…",
+   "why": "I serbatoi vuoti non devono più essere accelerati.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "aumentano l’I_sp",
+    "sganciano massa morta",
+    "aggiungono aria",
+    "riducono la gravità"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Razzi",
+   "q": "Per decollare, il rapporto spinta/peso deve essere…",
+   "why": "La spinta deve superare il peso.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "esattamente 1"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Razzi",
+   "q": "La velocità di scarico efficace per I_sp = 300 s è circa…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "I razzi spingono contro l’aria.",
+   "why": "Funzionano meglio nel vuoto; spingono sui propri gas di scarico.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Doppio propellente, doppio Δv.",
+   "why": "Δv cresce con il logaritmo del rapporto di massa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "L’orbita richiede solo 7.7 km/s di Δv.",
+   "why": "Le perdite per gravità e resistenza portano il totale a circa 9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Razzi",
+   "q": "Un motore con I_sp = 450 s funziona finché m₀/m_f = 5. Trova Δv. Dai la risposta in m/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Razzi",
+   "q": "Un razzo a due stadi: ogni stadio ha I_sp = 300 s e rapporto di massa 4. Trova il Δv totale. Dai la risposta in m/s.",
+   "why": "≈ 8157 m/s, il doppio di quanto dà un solo stadio con rapporto di massa 4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Razzi",
+   "q": "Trova Δv per I_sp = 311 s e m₀/m_f = 3. Dai la risposta in m/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Razzi",
+   "q": "Un razzo da 500000 kg ha 7.5 MN di spinta. Trova T/W al decollo.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Razzi",
+   "q": "Quale I_sp dà Δv = 3000 m/s con rapporto di massa 2?",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "≈ 24.4 contro ≈ 8.4: circa il 96% contro l’88% del razzo dev’essere propellente.",
+   "why": "È scritto nell’unità. Quale rapporto di massa serve a un singolo stadio per 9.4 km/s con I_sp = 300 s? E con 450 s?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Ogni satellite di osservazione della Terra, da Landsat alle missioni che seguono il livello del mare e i gas serra, viaggia su un razzo dimensionato con questa equazione. Per questo ogni chilogrammo di strumento è prezioso e i satelliti sono costruiti per essere leggeri.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Il nostro calcolatore di Delta-v ti permette di fare gli stessi calcoli per missioni reali.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Un razzo trasporta tutto il suo propellente, combustibile e ossidante. La sua spinta è F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "L’equazione ideale del razzo: Δv = v_e ln(m₀/m_f), con v_e = I_sp g₀. La velocità cresce solo con il logaritmo del rapporto di massa.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Raggiungere l’orbita terrestre bassa richiede circa 9.4 km/s di Δv includendo le perdite per gravità e resistenza, quindi la maggior parte della massa di un lanciatore è propellente.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Gli stadi sganciano serbatoi e motori vuoti, così gli stadi successivi non trasportano peso morto.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Razzi",
+   "q": "Il rapporto spinta/peso deve superare 1 per decollare.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Equazione del razzo",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "Rapporto di massa",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "Stadi",
+   "b": "Sganciare gli stadi esauriti."
+  },
+  {
+   "f": "Spinta/peso",
+   "b": "Deve superare 1 al decollo."
+  },
+  {
+   "f": "Δv verso LEO",
+   "b": "≈ 9.4 km/s comprese le perdite."
+  },
+  {
+   "f": "I_sp",
+   "b": "Secondi di spinta per peso di propellente."
+  },
+  {
+   "f": "I razzi spingono contro l’aria.",
+   "b": "Funzionano meglio nel vuoto; spingono sui propri gas di scarico."
+  },
+  {
+   "f": "Doppio propellente, doppio Δv.",
+   "b": "Δv cresce con il logaritmo del rapporto di massa."
+  },
+  {
+   "f": "L’orbita richiede solo 7.7 km/s di Δv.",
+   "b": "Le perdite per gravità e resistenza portano il totale a circa 9.4 km/s."
+  },
+  {
+   "f": "Un motore con I_sp = 450 s funziona finché m₀/m_f = 5. Trova Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "Quale rapporto di massa serve a un singolo stadio per 9.4 km/s con I_sp = 300 s? E con 450 s?",
+   "b": "≈ 24.4 contro ≈ 8.4: circa il 96% contro l’88% del razzo dev’essere propellente."
+  },
+  {
+   "f": "Un razzo a due stadi: ogni stadio ha I_sp = 300 s e rapporto di massa 4. Trova il Δv totale.",
+   "b": "≈ 8157 m/s, il doppio di quanto dà un solo stadio con rapporto di massa 4."
+  },
+  {
+   "f": "Trova Δv per I_sp = 311 s e m₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "Un razzo da 500000 kg ha 7.5 MN di spinta. Trova T/W al decollo.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "Quale I_sp dà Δv = 3000 m/s con rapporto di massa 2?",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "Un razzo trasporta tutto il suo propellente, combustibile e ossidante. La sua spinta è F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "L’equazione ideale del razzo",
+   "b": "Δv = v_e ln(m₀/m_f), con v_e = I_sp g₀. La velocità cresce solo con il logaritmo del rapporto di massa."
+  },
+  {
+   "f": "Raggiungere l’orbita terrestre bassa richiede circa ____km/s di Δv includendo le perdite per gravità e resistenza, quindi la maggior parte della massa di un lanciatore è propellente.",
+   "b": "Raggiungere l’orbita terrestre bassa richiede circa 9.4 km/s di Δv includendo le perdite per gravità e resistenza, quindi la maggior parte della massa di un lanciatore è propellente."
+  },
+  {
+   "f": "Gli stadi sganciano serbatoi e motori vuoti, così gli stadi successivi non trasportano peso morto.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Il rapporto spinta/peso deve superare 1 per decollare.",
+   "b": "È scritto nell’unità."
+  }
+ ]
+}

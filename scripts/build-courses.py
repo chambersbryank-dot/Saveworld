@@ -15,6 +15,7 @@ from courses import aero101_forces as AF
 from courses import aero101_review as AR
 from courses import aero101_film as A1F
 from courses import nasa_film as NF
+from courses import aero101_bank as AB
 V = '20261102a'  # OCW section tabs (assets/courses.css + courses.js)
 LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']
 BUILD_LANGS = ['en', 'fr', 'es', 'ar', 'it', 'he']  # languages built and published so far (step 2: all six for hub + chem110). Add one at a time once i18n/courses/*.json has it.
@@ -158,18 +159,31 @@ def unit(C, K, i, u):
         f'<li><p>{esc(q)}</p><details><summary>{esc("Show answer")}</summary><p>{esc(a)}</p></details></li>' for q, a in u['practice']) + '</ol>')
     o.append(f'<h3>{esc("Common misconceptions")}</h3><ul class="crs-mis">' + ''.join(
         f'<li><p><span class="crs-x">{esc("Myth:")}</span> {esc(m)}</p><p><span class="crs-ok">{esc("Actually:")}</span> {esc(f)}</p></li>' for m, f in u['misc']) + '</ul>')
-    cards = ''.join(f'<li><p class="crs-fc-f">{esc(a)}</p><p class="crs-fc-b">{esc(b)}</p></li>' for a, b in u['cards'])
-    if C.ID == 'aero101' and uid == 'u3':
-        cards = AF.force_cards(LANG) + cards
-    o.append(f'<h3>{esc("Flashcards")}</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">{cards}</ul></div>')
-    o.append(f'<h3>{esc("Self-check quiz")}</h3><form class="crs-quiz" data-quiz="{uid}" onsubmit="return false"><p class="crs-qs" aria-live="polite"></p>')
-    for j, q in enumerate(u['quiz']):
-        nm = f'{uid}q{j}'
-        o.append(f'<fieldset data-ok="{q["ok"]}"><legend>{j + 1}. {esc(q["q"])}</legend>' + ''.join(
-            f'<label><input type="radio" name="{nm}" value="{k}"> {esc(x)}</label>' for k, x in enumerate(q['opts']))
-            + f'<p class="crs-fb" aria-live="polite"></p><details class="crs-nojs"><summary>{esc("Show answer")}</summary><p>{esc(q["opts"][q["ok"]])}. {esc(q["why"])}</p></details>'
-            + f'<p class="crs-why" hidden>{esc(q["why"])}</p></fieldset>')
-    o.append('</form>')
+    if C.ID == 'aero101' and uid.startswith('u') and uid[1:].isdigit() and 1 <= int(uid[1:]) <= 10:
+        keep = ''
+        if uid == 'u3':
+            keep = f'<ul class="crs-force-keep">{AF.force_cards(LANG)}</ul>'
+        elif uid == 'u1':
+            keep = f'<ul class="crs-force-keep"><li>{AF.stage(LANG, "all")}</li></ul>'
+        bank = os.path.join(ROOT, 'assets', 'courses', 'aero101', f'{uid}.{LANG}.json')
+        n_q, n_c = 20, 24
+        if os.path.exists(bank):
+            data = json.load(open(bank, encoding='utf-8'))
+            n_q, n_c = len(data['quiz']), len(data['cards'])
+        deck, quiz = AB.mount(LANG, uid, n_q, n_c)
+        o.append(f'{keep}<h3>{esc("Flashcards")}</h3>{deck}')
+        o.append(f'<h3>{esc("Self-check quiz")}</h3>{quiz}')
+    else:
+        cards = ''.join(f'<li><p class="crs-fc-f">{esc(a)}</p><p class="crs-fc-b">{esc(b)}</p></li>' for a, b in u['cards'])
+        o.append(f'<h3>{esc("Flashcards")}</h3><div class="crs-fc" data-fc="{uid}"><ul class="crs-fc-list">{cards}</ul></div>')
+        o.append(f'<h3>{esc("Self-check quiz")}</h3><form class="crs-quiz" data-quiz="{uid}" onsubmit="return false"><p class="crs-qs" aria-live="polite"></p>')
+        for j, q in enumerate(u['quiz']):
+            nm = f'{uid}q{j}'
+            o.append(f'<fieldset data-ok="{q["ok"]}"><legend>{j + 1}. {esc(q["q"])}</legend>' + ''.join(
+                f'<label><input type="radio" name="{nm}" value="{k}"> {esc(x)}</label>' for k, x in enumerate(q['opts']))
+                + f'<p class="crs-fb" aria-live="polite"></p><details class="crs-nojs"><summary>{esc("Show answer")}</summary><p>{esc(q["opts"][q["ok"]])}. {esc(q["why"])}</p></details>'
+                + f'<p class="crs-why" hidden>{esc(q["why"])}</p></fieldset>')
+        o.append('</form>')
     p = u['planet']
     o.append(f'<div class="crs-planet"><h3>{esc("How this helps save the planet")}</h3>' + ''.join(f'<p>{esc(t)}</p>' for t in p['text'])
              + f'<p class="crs-src">{esc("On Saving Planets:")} ' + ' · '.join(f'<a href="{esc(loc(h))}">{esc(t)}</a>' for t, h in p['site'])
@@ -539,8 +553,9 @@ def course_page(C):
                   '.crs-card{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,.05)}'
                   '.crs-toc ul{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1rem 0}'
                   '.crs-toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05)}'
-                  + AW.CSS + AF.CSS + AR.CSS + NF.CSS + '</style>\n' + AW.JS + '\n'
-                  + f'<script src="{pre()}{NF.JS}" defer></script>\n')
+                  + AW.CSS + AF.CSS + AR.CSS + NF.CSS + AB.CHECK_CSS + '</style>\n' + AW.JS + '\n'
+                  + f'<script src="{pre()}{NF.JS}" defer></script>\n'
+                  + f'<script src="{pre()}assets/courses/check.js?v=20261128c" defer></script>\n')
     page = BL.shell(LANG, C.PAGE, _(C.TITLE) + ' (' + C.CODE + ')', _(C.DESC), ''.join(o), extra_head=extra, ld_type='Course', tail=tail())
     return aero_foot(page, C) if quiet else page
 

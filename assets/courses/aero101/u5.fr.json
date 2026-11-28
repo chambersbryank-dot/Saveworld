@@ -1,0 +1,312 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Performances",
+   "q": "La finesse de plané est égale…",
+   "why": "Distance sur hauteur = L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "W/D",
+    "L/D",
+    "T/W",
+    "V/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performances",
+   "q": "La puissance nécessaire en vol en palier est…",
+   "why": "La traînée multipliée par la vitesse.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "L × V",
+    "D × V",
+    "W/V",
+    "T/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performances",
+   "q": "La distance de Breguet augmente avec…",
+   "why": "R ∝ L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "c",
+    "L/D",
+    "la masse de la structure",
+    "à la traînée"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performances",
+   "q": "La montée vient…",
+   "why": "RC = excédent de puissance/W.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "de l’excédent de puissance",
+    "d’un surplus de portance uniquement",
+    "d’une masse plus faible uniquement",
+    "d’une vitesse plus faible"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "Un planeur plus lourd plane plus loin.",
+   "why": "La finesse dépend de L/D, pas de la masse ; la masse change la vitesse optimale.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "La distance franchissable ne dépend que de la quantité de carburant.",
+   "why": "Elle dépend du rendement des moteurs, de L/D et de la fraction de masse (Breguet).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "Voler plus vite donne toujours plus de distance.",
+   "why": "La meilleure distance s’obtient à une vitesse modérée liée à la meilleure finesse.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Un planeur de finesse L/D = 20 est à 1000 m d’altitude. Jusqu’où peut-il planer en air calme, et sous quel angle ? Donnez la réponse en km.",
+   "why": "20 km, avec un angle de plané d’environ 2.9°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.5,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Un avion à réaction vole en croisière à 230 m/s avec L/D = 17 et une consommation spécifique c = 0.6 par heure. La combustion du carburant fait passer sa masse de W_i à W_i/1.25. Trouvez sa distance franchissable. Donnez la réponse en km.",
+   "why": "≈ 5,235 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 5235,
+   "tol": 60,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "L’avion de l’exemple 3.1, avec la polaire de l’exemple 4.3, a environ 957 N de traînée à 55 m/s. Quelle puissance le vol en palier exige-t-il ? Donnez la réponse en kW.",
+   "why": "≈ 52.6 kW (environ 71 ch).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 52.6,
+   "tol": 1,
+   "unit": "kW"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Un planeur en papier a L/D = 5. Lancé à l’horizontale depuis 2 m, jusqu’où plane-t-il environ ?",
+   "why": "10 m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 10,
+   "tol": 0.2,
+   "unit": "m"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Un avion pesant 10800 N dispose de 30 kW d’excédent de puissance. Trouvez son taux de montée. Donnez la réponse en m/s.",
+   "why": "30,000/10,800 ≈ 2.8 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 2.8,
+   "tol": 0.2,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Dans l’exemple 5.2, comment la distance franchissable change-t-elle si L/D passe de 17 à 20 ? Donnez la réponse en km.",
+   "why": "Distance ∝ L/D : 5235 × 20/17 ≈ 6159 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 6159,
+   "tol": 50,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performances",
+   "q": "Jusqu’où l’avion de l’exemple 4.3 peut-il planer depuis 1500 m à sa meilleure finesse de 13.7 ? Donnez la réponse en km.",
+   "why": "1,500 × 13.7 ≈ 20.6 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20.6,
+   "tol": 0.4,
+   "unit": "km"
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "L’équation de Breguet est l’équation climatique de l’aviation : pour un trajet donné, le carburant brûlé diminue quand les moteurs deviennent plus efficaces, que les ailes ont une meilleure finesse L/D ou que les structures s’allègent. Les autres termes étant fixés, la distance franchissable est proportionnelle à L/D.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "La NASA estime qu’avec la flotte et les modes d’exploitation actuels, le trafic aérien mondial en 2050 nécessiterait plus de 620 millions de tonnes de carburant et émettrait près de 2000 millions de tonnes de CO₂ : c’est pourquoi chaque terme de l’équation compte.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "Un planeur de finesse L/D parcourt L/D mètres vers l’avant pour chaque mètre de hauteur perdu : tan γ = D/L.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "La poussée nécessaire en palier égale la traînée ; la puissance nécessaire vaut traînée × vitesse. L’excédent de puissance devient de la montée : taux de montée = (P_avail − P_req)/W.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "Pour un avion à réaction, la distance franchissable suit l’équation de Breguet : R = (V/c)(L/D) ln(W_i/W_f). Trois leviers : le rendement des moteurs (V/c), l’aérodynamique (L/D) et les structures (fraction de masse).",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performances",
+   "q": "L’endurance (temps de vol) est maximale à une autre vitesse que la distance franchissable.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Finesse de plané",
+   "b": "Distance horizontale par unité de hauteur = L/D."
+  },
+  {
+   "f": "Puissance nécessaire",
+   "b": "P_R = DV."
+  },
+  {
+   "f": "Taux de montée",
+   "b": "(P_A − P_R)/W."
+  },
+  {
+   "f": "Distance de Breguet",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f)."
+  },
+  {
+   "f": "TSFC",
+   "b": "Débit de carburant par unité de poussée."
+  },
+  {
+   "f": "Endurance",
+   "b": "Temps de vol."
+  },
+  {
+   "f": "Un planeur plus lourd plane plus loin.",
+   "b": "La finesse dépend de L/D, pas de la masse ; la masse change la vitesse optimale."
+  },
+  {
+   "f": "La distance franchissable ne dépend que de la quantité de carburant.",
+   "b": "Elle dépend du rendement des moteurs, de L/D et de la fraction de masse (Breguet)."
+  },
+  {
+   "f": "Voler plus vite donne toujours plus de distance.",
+   "b": "La meilleure distance s’obtient à une vitesse modérée liée à la meilleure finesse."
+  },
+  {
+   "f": "Un planeur de finesse L/D = 20 est à 1000 m d’altitude. Jusqu’où peut-il planer en air calme, et sous quel angle ?",
+   "b": "20 km, avec un angle de plané d’environ 2.9°."
+  },
+  {
+   "f": "Un avion à réaction vole en croisière à 230 m/s avec L/D = 17 et une consommation spécifique c = 0.6 par heure. La combustion du carburant fait passer sa masse de W_i à W_i/1.25. Trouvez sa distance franchissable.",
+   "b": "≈ 5,235 km."
+  },
+  {
+   "f": "L’avion de l’exemple 3.1, avec la polaire de l’exemple 4.3, a environ 957 N de traînée à 55 m/s. Quelle puissance le vol en palier exige-t-il ?",
+   "b": "≈ 52.6 kW (environ 71 ch)."
+  },
+  {
+   "f": "Un planeur en papier a L/D = 5. Lancé à l’horizontale depuis 2 m, jusqu’où plane-t-il environ ?",
+   "b": "10 m."
+  },
+  {
+   "f": "Un avion pesant 10800 N dispose de 30 kW d’excédent de puissance. Trouvez son taux de montée.",
+   "b": "30,000/10,800 ≈ 2.8 m/s."
+  },
+  {
+   "f": "Dans l’exemple 5.2, comment la distance franchissable change-t-elle si L/D passe de 17 à 20 ?",
+   "b": "Distance ∝ L/D : 5235 × 20/17 ≈ 6159 km."
+  },
+  {
+   "f": "Jusqu’où l’avion de l’exemple 4.3 peut-il planer depuis 1500 m à sa meilleure finesse de 13.7 ?",
+   "b": "1,500 × 13.7 ≈ 20.6 km."
+  },
+  {
+   "f": "Un planeur de finesse L/D parcourt L/D mètres vers l’avant pour chaque mètre de hauteur perdu",
+   "b": "tan γ = D/L."
+  },
+  {
+   "f": "La poussée nécessaire en palier égale la traînée ; la puissance nécessaire vaut traînée × vitesse. L’excédent de puissance devient de la montée",
+   "b": "taux de montée = (P_avail − P_req)/W."
+  },
+  {
+   "f": "Pour un avion à réaction, la distance franchissable suit l’équation de Breguet",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f). Trois leviers : le rendement des moteurs (V/c), l’aérodynamique (L/D) et les structures (fraction de masse)."
+  },
+  {
+   "f": "L’endurance (temps de vol) est maximale à une autre vitesse que la distance franchissable.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "L’équation de Breguet est l’équation climatique de l’aviation",
+   "b": "pour un trajet donné, le carburant brûlé diminue quand les moteurs deviennent plus efficaces, que les ailes ont une meilleure finesse L/D ou que les structures s’allègent. Les autres termes étant fixés, la distance franchissable est proportionnelle à L/D."
+  },
+  {
+   "f": "La NASA estime qu’avec la flotte et les modes d’exploitation actuels, le trafic aérien mondial en 2050 nécessiterait plus de 620 millions de tonnes de carburant et émettrait près de 2000 millions de tonnes de CO₂",
+   "b": "c’est pourquoi chaque terme de l’équation compte."
+  }
+ ]
+}

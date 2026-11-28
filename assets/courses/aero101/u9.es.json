@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Órbitas",
+   "q": "La velocidad en órbita circular es…",
+   "why": "La gravedad aporta la fuerza centrípeta.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "√(μr)",
+    "√(μ/r)",
+    "μ/r²",
+    "2πr"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Órbitas",
+   "q": "A 400 km, una nave da la vuelta a la Tierra aproximadamente cada…",
+   "why": "≈ 92.4 minutos.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "24 h",
+    "92 min",
+    "10 min",
+    "1 semana"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Órbitas",
+   "q": "Una transferencia de Hohmann usa…",
+   "why": "Uno en cada extremo de la elipse de transferencia.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "un encendido",
+    "dos encendidos",
+    "solo empuje continuo",
+    "solo aerofrenado"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Órbitas",
+   "q": "Radio geoestacionario ≈",
+   "why": "Tercera ley de Kepler con un día sideral.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "6,771 km",
+    "42,164 km",
+    "384,400 km",
+    "20,000 km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Los astronautas flotan porque en órbita no hay gravedad.",
+   "why": "A 400 km la gravedad es cerca del 89% de su valor en la superficie; están en caída libre.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Para alcanzar una nave que va delante, basta con acelerar.",
+   "why": "Acelerar eleva tu órbita y reduce tu velocidad angular.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Las órbitas más altas necesitan más velocidad.",
+   "why": "La velocidad circular disminuye con la altura, aunque llegar a órbitas más altas exige más Δv total.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Órbitas",
+   "q": "Halla la velocidad y el periodo de una órbita circular a 400 km de altura. Da la respuesta en km/s.",
+   "why": "7.67 km/s y ≈ 92.4 minutos.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7.67,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Órbitas",
+   "q": "Hallar el radio geoestacionario. Da la respuesta en km.",
+   "why": "≈ 42164 km del centro de la Tierra (unos 35786 km sobre el ecuador).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 42164,
+   "tol": 80,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Órbitas",
+   "q": "Halla el Δv de Hohmann desde una órbita circular de 300 km hasta el radio geoestacionario. Da la respuesta en km/s.",
+   "why": "Total ≈ 3.90 km/s; transferencia ≈ 5.27 horas (sin cambio de plano).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 3.9,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Órbitas",
+   "q": "Halla v para una órbita circular con r = 7000 km. Da la respuesta en m/s.",
+   "why": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7546,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "T ∝ r^(3/2): 8 veces más largo.",
+   "why": "Esto está escrito en la unidad. Si el radio de la órbita se cuadruplica, ¿cómo cambia el periodo?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Permanecen sobre un mismo punto y pueden obtener imágenes del mismo hemisferio de forma continua.",
+   "why": "Esto está escrito en la unidad. ¿Por qué muchos satélites meteorológicos son geoestacionarios?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "El seguimiento del clima depende de la elección de la órbita. Las órbitas heliosíncronas permiten a Landsat fotografiar el mismo lugar con una iluminación parecida, para que destaquen los cambios en bosques, cultivos y hielo, mientras los satélites meteorológicos geoestacionarios observan de forma continua cómo se forman las tormentas.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Las órbitas también requieren cuidado: los desechos amenazan estas misiones, así que cada vez más naves se diseñan para ser retiradas al final de su vida útil.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "En una órbita circular la gravedad aporta la fuerza centrípeta: v = √(μ/r), con μ = GM.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Tercera ley de Kepler: T = 2π√(a³/μ). Las órbitas más altas son más lentas y tardan más.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Una órbita geoestacionaria tiene un periodo de un día sideral (86164 s) y se sitúa sobre el ecuador a un radio de unos 42164 km.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "Una transferencia de Hohmann usa dos encendidos a lo largo de una elipse que toca ambas órbitas circulares; es la transferencia de dos encendidos más eficiente entre órbitas circulares coplanares.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Órbitas",
+   "q": "La órbita terrestre baja (unos 400 km para la ISS), las órbitas polares heliosíncronas para obtener imágenes y la órbita geoestacionaria para la meteorología sirven a misiones distintas.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Velocidad circular",
+   "b": "√(μ/r)."
+  },
+  {
+   "f": "Tercera ley de Kepler",
+   "b": "T = 2π√(a³/μ)."
+  },
+  {
+   "f": "Vis-viva",
+   "b": "v² = μ(2/r − 1/a)."
+  },
+  {
+   "f": "Transferencia de Hohmann",
+   "b": "Transferencia elíptica de dos encendidos."
+  },
+  {
+   "f": "GEO",
+   "b": "Periodo = 1 día sideral; r ≈ 42164 km."
+  },
+  {
+   "f": "Órbita heliosíncrona",
+   "b": "Órbita casi polar que pasa sobre cada lugar a aproximadamente la misma hora local."
+  },
+  {
+   "f": "Los astronautas flotan porque en órbita no hay gravedad.",
+   "b": "A 400 km la gravedad es cerca del 89% de su valor en la superficie; están en caída libre."
+  },
+  {
+   "f": "Para alcanzar una nave que va delante, basta con acelerar.",
+   "b": "Acelerar eleva tu órbita y reduce tu velocidad angular."
+  },
+  {
+   "f": "Las órbitas más altas necesitan más velocidad.",
+   "b": "La velocidad circular disminuye con la altura, aunque llegar a órbitas más altas exige más Δv total."
+  },
+  {
+   "f": "Halla la velocidad y el periodo de una órbita circular a 400 km de altura.",
+   "b": "7.67 km/s y ≈ 92.4 minutos."
+  },
+  {
+   "f": "Hallar el radio geoestacionario.",
+   "b": "≈ 42164 km del centro de la Tierra (unos 35786 km sobre el ecuador)."
+  },
+  {
+   "f": "Halla el Δv de Hohmann desde una órbita circular de 300 km hasta el radio geoestacionario.",
+   "b": "Total ≈ 3.90 km/s; transferencia ≈ 5.27 horas (sin cambio de plano)."
+  },
+  {
+   "f": "Halla v para una órbita circular con r = 7000 km.",
+   "b": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s."
+  },
+  {
+   "f": "Si el radio de la órbita se cuadruplica, ¿cómo cambia el periodo?",
+   "b": "T ∝ r^(3/2): 8 veces más largo."
+  },
+  {
+   "f": "¿Por qué muchos satélites meteorológicos son geoestacionarios?",
+   "b": "Permanecen sobre un mismo punto y pueden obtener imágenes del mismo hemisferio de forma continua."
+  },
+  {
+   "f": "En una órbita circular la gravedad aporta la fuerza centrípeta",
+   "b": "v = √(μ/r), con μ = GM."
+  },
+  {
+   "f": "Una órbita geoestacionaria tiene un periodo de un día sideral (____s) y se sitúa sobre el ecuador a un radio de unos 42164 km.",
+   "b": "Una órbita geoestacionaria tiene un periodo de un día sideral (86164 s) y se sitúa sobre el ecuador a un radio de unos 42164 km."
+  },
+  {
+   "f": "Una transferencia de Hohmann usa dos encendidos a lo largo de una elipse que toca ambas órbitas circulares; es la transferencia de dos encendidos más eficiente entre órbitas circulares coplanares.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La órbita terrestre baja (unos ____km para la ISS), las órbitas polares heliosíncronas para obtener imágenes y la órbita geoestacionaria para la meteorología sirven a misiones distintas.",
+   "b": "La órbita terrestre baja (unos 400 km para la ISS), las órbitas polares heliosíncronas para obtener imágenes y la órbita geoestacionaria para la meteorología sirven a misiones distintas."
+  },
+  {
+   "f": "Las órbitas también requieren cuidado",
+   "b": "los desechos amenazan estas misiones, así que cada vez más naves se diseñan para ser retiradas al final de su vida útil."
+  }
+ ]
+}

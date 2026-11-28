@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Fuerzas",
+   "q": "En vuelo nivelado estable, la sustentación es igual a…",
+   "why": "Las fuerzas verticales se equilibran.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "el empuje",
+    "la resistencia",
+    "el peso",
+    "cero"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Historia",
+   "q": "El Wright Flyer voló por primera vez el…",
+   "why": "17 de diciembre de 1903, en Kitty Hawk.",
+   "src": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+   "srcName": "Smithsonian",
+   "opts": [
+    "1899",
+    "1903",
+    "1911",
+    "1927"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Diseño",
+   "q": "Un estudio de compromiso…",
+   "why": "Clasifica las opciones de forma sistemática.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "elige la pieza más barata",
+    "compara opciones con criterios ponderados",
+    "prueba un prototipo hasta que falla",
+    "se hace después de las pruebas de vuelo"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Diseño",
+   "q": "El primer paso del proceso de diseño es…",
+   "why": "Los requisitos determinan todo lo que sigue.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "los planos detallados",
+    "la misión y los requisitos",
+    "la prueba de vuelo",
+    "elegir un motor"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Los ingenieros diseñan primero el avión y luego le buscan una misión.",
+   "why": "La misión y sus requisitos van primero.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "En vuelo nivelado el empuje debe equilibrar el peso.",
+   "why": "El empuje equilibra la resistencia; la sustentación equilibra el peso.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Ahorrar un poco de peso solo ahorra ese peso.",
+   "why": "El ahorro de peso se multiplica a través del tamaño del ala, la resistencia y el combustible.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Fuerzas",
+   "q": "Una avioneta de 1100 kg vuela en crucero nivelado. ¿Cuánta sustentación debe producir su ala? Da la respuesta en N.",
+   "why": "10,791 N ≈ 10.8 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 10791,
+   "tol": 50,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Fuerzas",
+   "q": "El primer vuelo del Wright Flyer recorrió 36 m en 12 s. ¿Cuál fue su velocidad media respecto al suelo? Da la respuesta en m/s.",
+   "why": "3 m/s respecto al suelo. Volaba contra un fuerte viento de frente, así que su velocidad aerodinámica era mucho mayor.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 3,
+   "tol": 0.05,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Fuerzas",
+   "q": "Un avión de pasajeros de 70000 kg de masa vuela en crucero nivelado. Halla su sustentación. Da la respuesta en N.",
+   "why": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 686700,
+   "tol": 500,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Fuerzas",
+   "q": "En crucero nivelado, los motores de un avión dan 30 kN de empuje. ¿Cuál es su resistencia?",
+   "why": "30 kN, ya que el empuje equilibra la resistencia en vuelo estable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 30,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Los datos publicados de sustentación no eran fiables, así que midieron ellos mismos muchas formas de ala: probar antes de construir es el corazón del proceso de diseño.",
+   "why": "Esto está escrito en la unidad. ¿Por qué los hermanos Wright construyeron un túnel de viento?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Empate en 7.2: el equipo debería probar ambos o revisar las ponderaciones en las que menos confía.",
+   "why": "Esto está escrito en la unidad. Dos conceptos de ala se califican sobre 10 en costo (peso 0.3), eficiencia (0.5) y facilidad de construcción (0.2). El concepto A obtiene 8, 6, 9; B obtiene 5, 9, 6. ¿Cuál gana?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Las prioridades de diseño cambian con los tiempos. Los requisitos de los aviones nuevos ahora incluyen el consumo de combustible y las emisiones, así que las mismas herramientas de estudio de compromiso ponderan el clima junto con el costo y el rendimiento.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "La NASA enumera tres vías principales para que la aviación sea sostenible: tecnología aeronáutica eficiente, combustible de aviación sostenible y mejores operaciones e infraestructura.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "El 17 de diciembre de 1903, el Wright Flyer hizo un vuelo de 12 segundos que recorrió 36 m (120 ft); el mejor vuelo de ese día recorrió 260 m (852 ft) en 59 segundos. Los Wright lo lograron probando: construyeron planeadores y su propio túnel de viento antes de añadir un motor.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Todo diseño empieza con una misión: carga útil, alcance u órbita, costo, seguridad. Los requisitos convierten la misión en números que el diseño debe cumplir.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "El diseño es iterativo: boceto del concepto, dimensionamiento, análisis, prueba, rediseño. Un estudio de compromiso compara opciones con criterios ponderados.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "Sobre un avión actúan cuatro fuerzas: sustentación, peso, empuje y resistencia. En vuelo recto y nivelado estable, sustentación = peso y empuje = resistencia.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fuerzas",
+   "q": "El peso se acumula: más estructura exige más sustentación, un ala más grande, más resistencia, más combustible y otra vez más peso.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Requisitos",
+   "b": "Objetivos medibles que un diseño debe cumplir."
+  },
+  {
+   "f": "Estudio de compromiso",
+   "b": "Comparación ponderada de opciones de diseño."
+  },
+  {
+   "f": "Ciclo de diseño",
+   "b": "Concepto → preliminar → diseño detallado → prueba → iteración."
+  },
+  {
+   "f": "Wright Flyer",
+   "b": "Primeros vuelos propulsados y controlados de un avión, 17 dic. 1903."
+  },
+  {
+   "f": "Espiral del peso",
+   "b": "El peso extra hace crecer todo el diseño."
+  },
+  {
+   "f": "Los ingenieros diseñan primero el avión y luego le buscan una misión.",
+   "b": "La misión y sus requisitos van primero."
+  },
+  {
+   "f": "En vuelo nivelado el empuje debe equilibrar el peso.",
+   "b": "El empuje equilibra la resistencia; la sustentación equilibra el peso."
+  },
+  {
+   "f": "Ahorrar un poco de peso solo ahorra ese peso.",
+   "b": "El ahorro de peso se multiplica a través del tamaño del ala, la resistencia y el combustible."
+  },
+  {
+   "f": "Una avioneta de 1100 kg vuela en crucero nivelado. ¿Cuánta sustentación debe producir su ala?",
+   "b": "10,791 N ≈ 10.8 kN."
+  },
+  {
+   "f": "Dos conceptos de ala se califican sobre 10 en costo (peso 0.3), eficiencia (0.5) y facilidad de construcción (0.2). El concepto A obtiene 8, 6, 9; B obtiene 5, 9, 6. ¿Cuál gana?",
+   "b": "Empate en 7.2: el equipo debería probar ambos o revisar las ponderaciones en las que menos confía."
+  },
+  {
+   "f": "El primer vuelo del Wright Flyer recorrió 36 m en 12 s. ¿Cuál fue su velocidad media respecto al suelo?",
+   "b": "3 m/s respecto al suelo. Volaba contra un fuerte viento de frente, así que su velocidad aerodinámica era mucho mayor."
+  },
+  {
+   "f": "Un avión de pasajeros de 70000 kg de masa vuela en crucero nivelado. Halla su sustentación.",
+   "b": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN."
+  },
+  {
+   "f": "En crucero nivelado, los motores de un avión dan 30 kN de empuje. ¿Cuál es su resistencia?",
+   "b": "30 kN, ya que el empuje equilibra la resistencia en vuelo estable."
+  },
+  {
+   "f": "¿Por qué los hermanos Wright construyeron un túnel de viento?",
+   "b": "Los datos publicados de sustentación no eran fiables, así que midieron ellos mismos muchas formas de ala: probar antes de construir es el corazón del proceso de diseño."
+  },
+  {
+   "f": "El 17 de diciembre de 1903, el Wright Flyer hizo un vuelo de 12 segundos que recorrió 36 m (120 ft); el mejor vuelo de ese día recorrió 260 m (852 ft) en 59 segundos. Los Wright lo lograron probando",
+   "b": "construyeron planeadores y su propio túnel de viento antes de añadir un motor."
+  },
+  {
+   "f": "Todo diseño empieza con una misión",
+   "b": "carga útil, alcance u órbita, costo, seguridad. Los requisitos convierten la misión en números que el diseño debe cumplir."
+  },
+  {
+   "f": "El diseño es iterativo",
+   "b": "boceto del concepto, dimensionamiento, análisis, prueba, rediseño. Un estudio de compromiso compara opciones con criterios ponderados."
+  },
+  {
+   "f": "Sobre un avión actúan cuatro fuerzas",
+   "b": "sustentación, peso, empuje y resistencia. En vuelo recto y nivelado estable, sustentación = peso y empuje = resistencia."
+  },
+  {
+   "f": "El peso se acumula",
+   "b": "más estructura exige más sustentación, un ala más grande, más resistencia, más combustible y otra vez más peso."
+  },
+  {
+   "f": "La NASA enumera tres vías principales para que la aviación sea sostenible",
+   "b": "tecnología aeronáutica eficiente, combustible de aviación sostenible y mejores operaciones e infraestructura."
+  }
+ ]
+}

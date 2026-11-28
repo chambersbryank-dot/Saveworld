@@ -1,0 +1,306 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Portanza e resistenza",
+   "q": "La portanza è proporzionale a…",
+   "why": "Attraverso la pressione dinamica ½ρV².",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V",
+    "V²",
+    "√V",
+    "1/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portanza e resistenza",
+   "q": "Raddoppiare la superficie alare a parità di velocità e C_L…",
+   "why": "L ∝ S.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "dimezza la portanza",
+    "raddoppia la portanza",
+    "quadruplica la portanza",
+    "non ha effetto"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portanza e resistenza",
+   "q": "Il numero di Reynolds confronta…",
+   "why": "ρVc/μ.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "portanza e resistenza",
+    "effetti inerziali e viscosi",
+    "velocità e velocità del suono",
+    "spinta e peso"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portanza e resistenza",
+   "q": "La resistenza indotta è causata da…",
+   "why": "I vortici d’estremità inclinano la portanza all’indietro.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la rugosità della vernice",
+    "la generazione di portanza con un’ala finita",
+    "lo scarico dei motori",
+    "solo le onde d’urto"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "L’aria che passa sopra deve ricongiungersi con quella che passa sotto al bordo d’uscita (tempo di transito uguale).",
+   "why": "Non è così; il flusso superiore in realtà arriva prima. NASA Glenn elenca il transito uguale tra le teorie errate della portanza.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La portanza è solo Bernoulli, o solo Newton.",
+   "why": "Entrambe descrivono lo stesso flusso; differenze di pressione e deviazione del flusso vanno insieme.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La resistenza è solo attrito con l’aria.",
+   "why": "La resistenza di pressione e quella indotta sono spesso maggiori.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Un aereo da 1100 kg con un’ala di 16.2 m² vola livellato a 55 m/s al livello del mare (ρ = 1.227 kg/m³). Trova C_L.",
+   "why": "C_L ≈ 0.36.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 0.36,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Con C_L,max = 1.6, trova la velocità di stallo di questo aereo al livello del mare. Dai la risposta in m/s.",
+   "why": "V_s ≈ 26.1 m/s (circa 51 nodi).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 26.1,
+   "tol": 0.4,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Trova il numero di Reynolds di una corda di 1.5 m a 55 m/s al livello del mare (μ = 1.789 × 10⁻⁵ kg/(m·s)). Dai la risposta in milione.",
+   "why": "Re ≈ 5.7 milioni.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 5.7,
+   "tol": 0.2,
+   "unit": "milione"
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Trova la pressione dinamica a 230 m/s a 11 km (ρ = 0.366 kg/m³). Dai la risposta in Pa.",
+   "why": "q = ½ × 0.366 × 230² ≈ 9,680 Pa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 9680,
+   "tol": 80,
+   "unit": "Pa"
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Trova la resistenza dell’aereo dell’esempio 3.1 se C_D = 0.032. Dai la risposta in N.",
+   "why": "D = 1,855 × 16.2 × 0.032 ≈ 962 N.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 962,
+   "tol": 20,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Portanza e resistenza",
+   "q": "Di quanto è maggiore la velocità di stallo a 1500 m (ρ = 1.060 kg/m³) rispetto al livello del mare? Dai la risposta in %.",
+   "why": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, quindi circa il 7.6% in più (≈ 28.0 m/s di velocità vera).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7.6,
+   "tol": 0.4,
+   "unit": "%"
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "Portanza ∝ V², quindi quadruplica.",
+   "why": "È scritto nell’unità. Se la velocità raddoppia con lo stesso C_L, come cambia la portanza?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La resistenza è carburante. In crociera la spinta dei motori è pari alla resistenza, quindi ogni newton di resistenza eliminato è carburante non bruciato e CO₂ non emessa. Aver bisogno di meno energia per volare è la prima delle tre vie della NASA verso un’aviazione sostenibile.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La stessa fisica della portanza muove le pale delle turbine eoliche, che trasformano la forza aerodinamica del vento in elettricità pulita.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "Un’ala devia il flusso d’aria verso il basso; per la terza legge di Newton l’aria spinge l’ala verso l’alto. In modo equivalente, un flusso più veloce sul dorso significa pressione più bassa lì (Bernoulli). Entrambe descrivono un unico flusso.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La pressione dinamica q = ½ρV² fissa la scala di ogni forza aerodinamica. I coefficienti di portanza e resistenza C_L e C_D tengono conto di forma e angolo d’attacco.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La portanza cresce con V², quindi dimezzare la velocità richiede un coefficiente di portanza o una superficie alare quattro volte maggiore.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portanza e resistenza",
+   "q": "La resistenza deriva dall’attrito superficiale, dalla resistenza di pressione (di forma) e dalla resistenza indotta, il prezzo per generare portanza con un’ala finita.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Pressione dinamica",
+   "b": "q = ½ρV²."
+  },
+  {
+   "f": "Equazione della portanza",
+   "b": "L = qSC_L."
+  },
+  {
+   "f": "Equazione della resistenza",
+   "b": "D = qSC_D."
+  },
+  {
+   "f": "Velocità di stallo",
+   "b": "V_s = √(2W/(ρSC_L,max))."
+  },
+  {
+   "f": "Numero di Reynolds",
+   "b": "ρVc/μ."
+  },
+  {
+   "f": "Resistenza indotta",
+   "b": "Resistenza dovuta alla portanza su un’ala finita."
+  },
+  {
+   "f": "L’aria che passa sopra deve ricongiungersi con quella che passa sotto al bordo d’uscita (tempo di transito uguale).",
+   "b": "Non è così; il flusso superiore in realtà arriva prima. NASA Glenn elenca il transito uguale tra le teorie errate della portanza."
+  },
+  {
+   "f": "La portanza è solo Bernoulli, o solo Newton.",
+   "b": "Entrambe descrivono lo stesso flusso; differenze di pressione e deviazione del flusso vanno insieme."
+  },
+  {
+   "f": "La resistenza è solo attrito con l’aria.",
+   "b": "La resistenza di pressione e quella indotta sono spesso maggiori."
+  },
+  {
+   "f": "Un aereo da 1100 kg con un’ala di 16.2 m² vola livellato a 55 m/s al livello del mare (ρ = 1.227 kg/m³). Trova C_L.",
+   "b": "C_L ≈ 0.36."
+  },
+  {
+   "f": "Con C_L,max = 1.6, trova la velocità di stallo di questo aereo al livello del mare.",
+   "b": "V_s ≈ 26.1 m/s (circa 51 nodi)."
+  },
+  {
+   "f": "Trova il numero di Reynolds di una corda di 1.5 m a 55 m/s al livello del mare (μ = 1.789 × 10⁻⁵ kg/(m·s)).",
+   "b": "Re ≈ 5.7 milioni."
+  },
+  {
+   "f": "Se la velocità raddoppia con lo stesso C_L, come cambia la portanza?",
+   "b": "Portanza ∝ V², quindi quadruplica."
+  },
+  {
+   "f": "Trova la pressione dinamica a 230 m/s a 11 km (ρ = 0.366 kg/m³).",
+   "b": "q = ½ × 0.366 × 230² ≈ 9,680 Pa."
+  },
+  {
+   "f": "Trova la resistenza dell’aereo dell’esempio 3.1 se C_D = 0.032.",
+   "b": "D = 1,855 × 16.2 × 0.032 ≈ 962 N."
+  },
+  {
+   "f": "Di quanto è maggiore la velocità di stallo a 1500 m (ρ = 1.060 kg/m³) rispetto al livello del mare?",
+   "b": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, quindi circa il 7.6% in più (≈ 28.0 m/s di velocità vera)."
+  },
+  {
+   "f": "Un’ala devia il flusso d’aria verso il basso; per la terza legge di Newton l’aria spinge l’ala verso l’alto. In modo equivalente, un flusso più veloce sul dorso significa pressione più bassa lì (Bernoulli). Entrambe descrivono un unico flusso.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "La pressione dinamica q = ½ρV² fissa la scala di ogni forza aerodinamica. I coefficienti di portanza e resistenza C_L e C_D tengono conto di forma e angolo d’attacco.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "La portanza cresce con V², quindi dimezzare la velocità richiede un coefficiente di portanza o una superficie alare quattro volte maggiore.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "La resistenza deriva dall’attrito superficiale, dalla resistenza di pressione (di forma) e dalla resistenza indotta, il prezzo per generare portanza con un’ala finita.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Il numero di Reynolds Re = ρVc/μ confronta effetti inerziali e viscosi; i modelli in galleria del vento devono tenerne conto per prevedere il comportamento in scala reale.",
+   "b": "È scritto nell’unità."
+  }
+ ]
+}

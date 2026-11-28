@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Forze",
+   "q": "In volo livellato stazionario, la portanza è uguale…",
+   "why": "Le forze verticali si bilanciano.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "alla spinta",
+    "alla resistenza",
+    "al peso",
+    "zero"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Storia",
+   "q": "Il Wright Flyer volò per la prima volta il…",
+   "why": "17 dicembre 1903, a Kitty Hawk.",
+   "src": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+   "srcName": "Smithsonian",
+   "opts": [
+    "1899",
+    "1903",
+    "1911",
+    "1927"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Progetto",
+   "q": "Uno studio di compromesso…",
+   "why": "Classifica le opzioni in modo sistematico.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "sceglie il componente più economico",
+    "confronta le opzioni secondo criteri pesati",
+    "prova un prototipo fino alla rottura",
+    "si fa dopo le prove di volo"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Progetto",
+   "q": "Il primo passo del processo di progettazione è…",
+   "why": "I requisiti guidano tutto ciò che segue.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "i disegni di dettaglio",
+    "la missione e i requisiti",
+    "la prova di volo",
+    "la scelta di un motore"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Gli ingegneri progettano prima l’aereo e poi gli trovano una missione.",
+   "why": "La missione e i suoi requisiti vengono prima.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "In volo livellato la spinta deve bilanciare il peso.",
+   "why": "La spinta bilancia la resistenza; la portanza bilancia il peso.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Risparmiare un po’ di peso fa risparmiare solo quel peso.",
+   "why": "I risparmi di peso si moltiplicano attraverso dimensioni dell’ala, resistenza e carburante.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Forze",
+   "q": "Un aereo leggero da 1100 kg vola in crociera livellata. Quanta portanza deve produrre la sua ala? Dai la risposta in N.",
+   "why": "10,791 N ≈ 10.8 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 10791,
+   "tol": 50,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forze",
+   "q": "Il primo volo del Wright Flyer coprì 36 m in 12 s. Qual era la sua velocità media rispetto al suolo? Dai la risposta in m/s.",
+   "why": "3 m/s rispetto al suolo. Volava contro un forte vento frontale, quindi la sua velocità all’aria era molto più alta.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 3,
+   "tol": 0.05,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Forze",
+   "q": "Un aereo di linea di massa 70000 kg vola in crociera livellata. Trova la sua portanza. Dai la risposta in N.",
+   "why": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 686700,
+   "tol": 500,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forze",
+   "q": "In crociera livellata i motori di un aereo forniscono 30 kN di spinta. Qual è la sua resistenza?",
+   "why": "30 kN, perché in volo stazionario la spinta bilancia la resistenza.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 30,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "I dati di portanza pubblicati erano inaffidabili, così misurarono da soli molte forme d’ala: provare prima di costruire è il cuore del processo di progettazione.",
+   "why": "È scritto nell’unità. Perché i fratelli Wright costruirono una galleria del vento?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Pareggio a 7.2: il team dovrebbe provarli entrambi o rivedere i pesi di cui si fida meno.",
+   "why": "È scritto nell’unità. Due concetti di ala ricevono un voto su 10 per costo (peso 0.3), efficienza (0.5) e facilità di costruzione (0.2). Il concetto A ottiene 8, 6, 9; B ottiene 5, 9, 6. Quale vince?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Le priorità di progettazione cambiano con i tempi. I requisiti dei nuovi aerei ora includono consumo di carburante ed emissioni, quindi gli stessi strumenti di studio di compromesso pesano il clima insieme a costo e prestazioni.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "La NASA indica tre vie principali per rendere sostenibile l’aviazione: tecnologia aeronautica efficiente, carburante sostenibile per l’aviazione, e operazioni e infrastrutture migliori.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Il 17 dicembre 1903 il Wright Flyer compì un volo di 12 secondi percorrendo 36 m (120 ft); il volo migliore di quel giorno coprì 260 m (852 ft) in 59 secondi. I Wright ebbero successo grazie alle prove: costruirono alianti e una propria galleria del vento prima di aggiungere un motore.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Ogni progetto inizia da una missione: carico utile, autonomia od orbita, costo, sicurezza. I requisiti traducono la missione in numeri che il progetto deve rispettare.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "La progettazione è iterativa: schizzo del concetto, dimensionamento, analisi, prova, riprogettazione. Uno studio di compromesso confronta le opzioni secondo criteri pesati.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Su un aereo agiscono quattro forze: portanza, peso, spinta e resistenza. In volo livellato stazionario, portanza = peso e spinta = resistenza.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forze",
+   "q": "Il peso si accumula: più struttura richiede più portanza, un’ala più grande, più resistenza, più carburante e di nuovo più peso.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Requisiti",
+   "b": "Obiettivi misurabili che un progetto deve soddisfare."
+  },
+  {
+   "f": "Studio di compromesso",
+   "b": "Confronto pesato tra opzioni di progetto."
+  },
+  {
+   "f": "Ciclo di progettazione",
+   "b": "Concetto → preliminare → progetto di dettaglio → prova → iterazione."
+  },
+  {
+   "f": "Wright Flyer",
+   "b": "Primi voli a motore e controllati di un aereo, 17 dic. 1903."
+  },
+  {
+   "f": "Spirale del peso",
+   "b": "Il peso in più fa crescere l’intero progetto."
+  },
+  {
+   "f": "Gli ingegneri progettano prima l’aereo e poi gli trovano una missione.",
+   "b": "La missione e i suoi requisiti vengono prima."
+  },
+  {
+   "f": "In volo livellato la spinta deve bilanciare il peso.",
+   "b": "La spinta bilancia la resistenza; la portanza bilancia il peso."
+  },
+  {
+   "f": "Risparmiare un po’ di peso fa risparmiare solo quel peso.",
+   "b": "I risparmi di peso si moltiplicano attraverso dimensioni dell’ala, resistenza e carburante."
+  },
+  {
+   "f": "Un aereo leggero da 1100 kg vola in crociera livellata. Quanta portanza deve produrre la sua ala?",
+   "b": "10,791 N ≈ 10.8 kN."
+  },
+  {
+   "f": "Due concetti di ala ricevono un voto su 10 per costo (peso 0.3), efficienza (0.5) e facilità di costruzione (0.2). Il concetto A ottiene 8, 6, 9; B ottiene 5, 9, 6. Quale vince?",
+   "b": "Pareggio a 7.2: il team dovrebbe provarli entrambi o rivedere i pesi di cui si fida meno."
+  },
+  {
+   "f": "Il primo volo del Wright Flyer coprì 36 m in 12 s. Qual era la sua velocità media rispetto al suolo?",
+   "b": "3 m/s rispetto al suolo. Volava contro un forte vento frontale, quindi la sua velocità all’aria era molto più alta."
+  },
+  {
+   "f": "Un aereo di linea di massa 70000 kg vola in crociera livellata. Trova la sua portanza.",
+   "b": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN."
+  },
+  {
+   "f": "In crociera livellata i motori di un aereo forniscono 30 kN di spinta. Qual è la sua resistenza?",
+   "b": "30 kN, perché in volo stazionario la spinta bilancia la resistenza."
+  },
+  {
+   "f": "Perché i fratelli Wright costruirono una galleria del vento?",
+   "b": "I dati di portanza pubblicati erano inaffidabili, così misurarono da soli molte forme d’ala: provare prima di costruire è il cuore del processo di progettazione."
+  },
+  {
+   "f": "Il 17 dicembre 1903 il Wright Flyer compì un volo di 12 secondi percorrendo 36 m (120 ft); il volo migliore di quel giorno coprì 260 m (852 ft) in 59 secondi. I Wright ebbero successo grazie alle prove",
+   "b": "costruirono alianti e una propria galleria del vento prima di aggiungere un motore."
+  },
+  {
+   "f": "Ogni progetto inizia da una missione",
+   "b": "carico utile, autonomia od orbita, costo, sicurezza. I requisiti traducono la missione in numeri che il progetto deve rispettare."
+  },
+  {
+   "f": "La progettazione è iterativa",
+   "b": "schizzo del concetto, dimensionamento, analisi, prova, riprogettazione. Uno studio di compromesso confronta le opzioni secondo criteri pesati."
+  },
+  {
+   "f": "Su un aereo agiscono quattro forze",
+   "b": "portanza, peso, spinta e resistenza. In volo livellato stazionario, portanza = peso e spinta = resistenza."
+  },
+  {
+   "f": "Il peso si accumula",
+   "b": "più struttura richiede più portanza, un’ala più grande, più resistenza, più carburante e di nuovo più peso."
+  },
+  {
+   "f": "La NASA indica tre vie principali per rendere sostenibile l’aviazione",
+   "b": "tecnologia aeronautica efficiente, carburante sostenibile per l’aviazione, e operazioni e infrastrutture migliori."
+  }
+ ]
+}

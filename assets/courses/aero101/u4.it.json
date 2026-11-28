@@ -1,0 +1,308 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Ali",
+   "q": "La pendenza di portanza del profilo sottile è…",
+   "why": "c_l = 2πα.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "π per rad",
+    "2π per rad",
+    "2π per grado",
+    "1 per rad"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Ali",
+   "q": "L’allungamento è…",
+   "why": "L’apertura al quadrato divisa per la superficie.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "b/S",
+    "b²/S",
+    "S/b",
+    "c/b"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Ali",
+   "q": "Al massimo L/D…",
+   "why": "Minimizzare C_D/C_L dà KC_L² = C_D0.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "resistenza indotta = resistenza parassita",
+    "la resistenza è nulla",
+    "C_L = 0",
+    "l’ala è in stallo"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "mc",
+   "topic": "Ali",
+   "q": "Un allungamento maggiore riduce soprattutto…",
+   "why": "K = 1/(πeAR).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "l’attrito superficiale",
+    "la resistenza indotta",
+    "al peso",
+    "la resistenza d’onda"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "Più angolo d’attacco significa sempre più portanza.",
+   "why": "Oltre l’angolo di stallo il flusso si separa e la portanza cala.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "I profili simmetrici non possono generare portanza.",
+   "why": "La generano con un angolo d’attacco positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "I dispositivi d’estremità alare annullano la resistenza indotta.",
+   "why": "La riducono; solo un’ala infinitamente lunga non ne avrebbe.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Ali",
+   "q": "Teoria dei profili sottili: trova c_l con α = 5°.",
+   "why": "c_l ≈ 0.548.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.548,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ali",
+   "q": "Trova l’allungamento di un’ala con apertura 11 m e superficie 16.2 m².",
+   "why": "AR = 121/16.2 ≈ 7.5.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 7.5,
+   "tol": 0.15,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ali",
+   "q": "Con c_l = 2πα, quale angolo dà c_l = 0.5? Dai la risposta in °.",
+   "why": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 4.6,
+   "tol": 0.2,
+   "unit": "°"
+  },
+  {
+   "type": "num",
+   "topic": "Ali",
+   "q": "Per l’aereo dell’esempio 4.3, trova C_D con C_L = 0.36.",
+   "why": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.0319,
+   "tol": 0.001,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ali",
+   "q": "Se AR passa da 7.5 a 15 (stessi e e C_D0), come cambia (L/D)max?",
+   "why": "K si dimezza, quindi (L/D)max cresce di √2 fino a ≈ 19.4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 19.4,
+   "tol": 0.4,
+   "unit": ""
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "4.92 per rad ≈ 0.086 per grado, il 22% sotto il valore 2D.",
+   "why": "È scritto nell’unità. Trova la pendenza di portanza di un’ala con AR = 8 ed e = 0.9.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "(L/D)max ≈ 13.7 con C_L ≈ 0.69.",
+   "why": "È scritto nell’unità. Con C_D0 = 0.025, e = 0.8 e AR = 7.5, trova (L/D)max e il C_L a cui si verifica.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "Le ali lunghe e sottili sono uno dei modi più diretti per ridurre il consumo di carburante, perché la resistenza indotta cala all’aumentare dell’allungamento. È proprio la via della «tecnologia aeronautica efficiente» nel lavoro della NASA sull’aviazione sostenibile.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "L’albatro, che plana per ore sull’oceano, usa la stessa fisica: un’ala lunga e sottile con alta efficienza aerodinamica.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "Un profilo alare è la sezione di un’ala. La curvatura le permette di generare portanza con angolo d’attacco nullo; lo spessore dà robustezza e spazio per il carburante.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "La teoria dei profili sottili prevede una pendenza di portanza di 2π per radiante (circa 0.11 per grado) finché il flusso non si separa e l’ala va in stallo.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "Un’ala finita perde pendenza di portanza a causa dei vortici d’estremità: a = a₀/(1 + a₀/(πeAR)), con allungamento AR = b²/S.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ali",
+   "q": "Resistenza totale C_D = C_D0 + KC_L² con K = 1/(πeAR). Il massimo L/D si ha quando la resistenza indotta è uguale a quella parassita.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Corda",
+   "b": "Dal bordo d’attacco al bordo d’uscita."
+  },
+  {
+   "f": "Curvatura",
+   "b": "Curvatura della linea media."
+  },
+  {
+   "f": "Angolo d’attacco",
+   "b": "Angolo tra la corda e il flusso incidente."
+  },
+  {
+   "f": "Stallo",
+   "b": "Separazione del flusso; la portanza cala."
+  },
+  {
+   "f": "Allungamento",
+   "b": "b²/S."
+  },
+  {
+   "f": "Polare di resistenza",
+   "b": "C_D = C_D0 + KC_L²."
+  },
+  {
+   "f": "Più angolo d’attacco significa sempre più portanza.",
+   "b": "Oltre l’angolo di stallo il flusso si separa e la portanza cala."
+  },
+  {
+   "f": "I profili simmetrici non possono generare portanza.",
+   "b": "La generano con un angolo d’attacco positivo."
+  },
+  {
+   "f": "I dispositivi d’estremità alare annullano la resistenza indotta.",
+   "b": "La riducono; solo un’ala infinitamente lunga non ne avrebbe."
+  },
+  {
+   "f": "Teoria dei profili sottili: trova c_l con α = 5°.",
+   "b": "c_l ≈ 0.548."
+  },
+  {
+   "f": "Trova la pendenza di portanza di un’ala con AR = 8 ed e = 0.9.",
+   "b": "4.92 per rad ≈ 0.086 per grado, il 22% sotto il valore 2D."
+  },
+  {
+   "f": "Con C_D0 = 0.025, e = 0.8 e AR = 7.5, trova (L/D)max e il C_L a cui si verifica.",
+   "b": "(L/D)max ≈ 13.7 con C_L ≈ 0.69."
+  },
+  {
+   "f": "Trova l’allungamento di un’ala con apertura 11 m e superficie 16.2 m².",
+   "b": "AR = 121/16.2 ≈ 7.5."
+  },
+  {
+   "f": "Con c_l = 2πα, quale angolo dà c_l = 0.5?",
+   "b": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+  },
+  {
+   "f": "Per l’aereo dell’esempio 4.3, trova C_D con C_L = 0.36.",
+   "b": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319."
+  },
+  {
+   "f": "Se AR passa da 7.5 a 15 (stessi e e C_D0), come cambia (L/D)max?",
+   "b": "K si dimezza, quindi (L/D)max cresce di √2 fino a ≈ 19.4."
+  },
+  {
+   "f": "Un profilo alare è la sezione di un’ala. La curvatura le permette di generare portanza con angolo d’attacco nullo; lo spessore dà robustezza e spazio per il carburante.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "La teoria dei profili sottili prevede una pendenza di portanza di 2π per radiante (circa 0.11 per grado) finché il flusso non si separa e l’ala va in stallo.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Un’ala finita perde pendenza di portanza a causa dei vortici d’estremità",
+   "b": "a = a₀/(1 + a₀/(πeAR)), con allungamento AR = b²/S."
+  },
+  {
+   "f": "Resistenza totale C_D = C_D0 + KC_L² con K = 1/(πeAR). Il massimo L/D si ha quando la resistenza indotta è uguale a quella parassita.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Un grande allungamento (alianti, albatri, ali dei moderni aerei di linea) significa meno resistenza indotta e un L/D più alto.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "L’albatro, che plana per ore sull’oceano, usa la stessa fisica",
+   "b": "un’ala lunga e sottile con alta efficienza aerodinamica."
+  }
+ ]
+}

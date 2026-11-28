@@ -1,0 +1,312 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Prestazioni",
+   "q": "Il rapporto di planata è uguale a…",
+   "why": "Distanza su quota = L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "W/D",
+    "L/D",
+    "T/W",
+    "V/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Prestazioni",
+   "q": "La potenza necessaria in volo livellato è…",
+   "why": "La resistenza per la velocità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "L × V",
+    "D × V",
+    "W/V",
+    "T/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Prestazioni",
+   "q": "L’autonomia di Breguet cresce con…",
+   "why": "R ∝ L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "c",
+    "L/D",
+    "il peso della struttura",
+    "alla resistenza"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Prestazioni",
+   "q": "La salita deriva da…",
+   "why": "RC = potenza in eccesso/W.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la potenza in eccesso",
+    "solo più portanza",
+    "solo meno peso",
+    "una velocità più bassa"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "Un aliante più pesante plana più lontano.",
+   "why": "Il rapporto di planata dipende da L/D, non dal peso; il peso cambia la velocità ottimale.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "L’autonomia dipende solo dal carico di carburante.",
+   "why": "Dipende da efficienza del motore, L/D e frazione di peso (Breguet).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "Volare più veloci dà sempre più autonomia.",
+   "why": "La migliore autonomia si ha a una velocità moderata legata al miglior L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Un aliante con L/D = 20 si trova a 1000 m di quota. Quanto lontano può planare in aria calma, e con quale angolo? Dai la risposta in km.",
+   "why": "20 km, con un angolo di planata di circa 2.9°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.5,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Un jet vola in crociera a 230 m/s con L/D = 17 e consumo specifico c = 0.6 all’ora. Bruciando carburante il suo peso scende da W_i a W_i/1.25. Trova la sua autonomia. Dai la risposta in km.",
+   "why": "≈ 5,235 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 5235,
+   "tol": 60,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "L’aereo dell’esempio 3.1, con la polare dell’esempio 4.3, ha circa 957 N di resistenza a 55 m/s. Quale potenza richiede il volo livellato? Dai la risposta in kW.",
+   "why": "≈ 52.6 kW (circa 71 CV).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 52.6,
+   "tol": 1,
+   "unit": "kW"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Un aliante di carta ha L/D = 5. Lanciato in orizzontale da 2 m, quanto lontano plana all’incirca?",
+   "why": "10 m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 10,
+   "tol": 0.2,
+   "unit": "m"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Un aereo che pesa 10800 N ha 30 kW di potenza in eccesso. Trova il suo rateo di salita. Dai la risposta in m/s.",
+   "why": "30,000/10,800 ≈ 2.8 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 2.8,
+   "tol": 0.2,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Nell’esempio 5.2, come cambia l’autonomia se L/D sale da 17 a 20? Dai la risposta in km.",
+   "why": "Autonomia ∝ L/D: 5235 × 20/17 ≈ 6159 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 6159,
+   "tol": 50,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Prestazioni",
+   "q": "Quanto lontano può planare l’aereo dell’esempio 4.3 da 1500 m con la sua efficienza massima di 13.7? Dai la risposta in km.",
+   "why": "1,500 × 13.7 ≈ 20.6 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20.6,
+   "tol": 0.4,
+   "unit": "km"
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "L’equazione di Breguet è l’equazione climatica dell’aviazione: per un dato viaggio il carburante bruciato diminuisce quando i motori diventano più efficienti, le ali hanno un L/D più alto o le strutture si alleggeriscono. A parità degli altri termini, l’autonomia è proporzionale a L/D.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "La NASA stima che, con la flotta e le operazioni attuali, il traffico aereo mondiale nel 2050 richiederebbe oltre 620 milioni di tonnellate di carburante ed emetterebbe quasi 2000 milioni di tonnellate di CO₂: per questo ogni termine dell’equazione conta.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "Un aliante con efficienza L/D percorre L/D metri in avanti per ogni metro di quota perso: tan γ = D/L.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "In volo livellato la spinta necessaria è pari alla resistenza; la potenza necessaria è resistenza × velocità. La potenza in eccesso diventa salita: rateo di salita = (P_avail − P_req)/W.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "Per un jet l’autonomia segue l’equazione di Breguet: R = (V/c)(L/D) ln(W_i/W_f). Tre leve: efficienza del motore (V/c), aerodinamica (L/D) e strutture (frazione di peso).",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Prestazioni",
+   "q": "L’autonomia oraria (tempo in volo) è massima a una velocità diversa da quella per l’autonomia di distanza.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Rapporto di planata",
+   "b": "Distanza orizzontale per unità di quota = L/D."
+  },
+  {
+   "f": "Potenza necessaria",
+   "b": "P_R = DV."
+  },
+  {
+   "f": "Rateo di salita",
+   "b": "(P_A − P_R)/W."
+  },
+  {
+   "f": "Autonomia di Breguet",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f)."
+  },
+  {
+   "f": "TSFC",
+   "b": "Flusso di carburante per unità di spinta."
+  },
+  {
+   "f": "Autonomia oraria",
+   "b": "Tempo in volo."
+  },
+  {
+   "f": "Un aliante più pesante plana più lontano.",
+   "b": "Il rapporto di planata dipende da L/D, non dal peso; il peso cambia la velocità ottimale."
+  },
+  {
+   "f": "L’autonomia dipende solo dal carico di carburante.",
+   "b": "Dipende da efficienza del motore, L/D e frazione di peso (Breguet)."
+  },
+  {
+   "f": "Volare più veloci dà sempre più autonomia.",
+   "b": "La migliore autonomia si ha a una velocità moderata legata al miglior L/D."
+  },
+  {
+   "f": "Un aliante con L/D = 20 si trova a 1000 m di quota. Quanto lontano può planare in aria calma, e con quale angolo?",
+   "b": "20 km, con un angolo di planata di circa 2.9°."
+  },
+  {
+   "f": "Un jet vola in crociera a 230 m/s con L/D = 17 e consumo specifico c = 0.6 all’ora. Bruciando carburante il suo peso scende da W_i a W_i/1.25. Trova la sua autonomia.",
+   "b": "≈ 5,235 km."
+  },
+  {
+   "f": "L’aereo dell’esempio 3.1, con la polare dell’esempio 4.3, ha circa 957 N di resistenza a 55 m/s. Quale potenza richiede il volo livellato?",
+   "b": "≈ 52.6 kW (circa 71 CV)."
+  },
+  {
+   "f": "Un aliante di carta ha L/D = 5. Lanciato in orizzontale da 2 m, quanto lontano plana all’incirca?",
+   "b": "10 m."
+  },
+  {
+   "f": "Un aereo che pesa 10800 N ha 30 kW di potenza in eccesso. Trova il suo rateo di salita.",
+   "b": "30,000/10,800 ≈ 2.8 m/s."
+  },
+  {
+   "f": "Nell’esempio 5.2, come cambia l’autonomia se L/D sale da 17 a 20?",
+   "b": "Autonomia ∝ L/D: 5235 × 20/17 ≈ 6159 km."
+  },
+  {
+   "f": "Quanto lontano può planare l’aereo dell’esempio 4.3 da 1500 m con la sua efficienza massima di 13.7?",
+   "b": "1,500 × 13.7 ≈ 20.6 km."
+  },
+  {
+   "f": "Un aliante con efficienza L/D percorre L/D metri in avanti per ogni metro di quota perso",
+   "b": "tan γ = D/L."
+  },
+  {
+   "f": "In volo livellato la spinta necessaria è pari alla resistenza; la potenza necessaria è resistenza × velocità. La potenza in eccesso diventa salita",
+   "b": "rateo di salita = (P_avail − P_req)/W."
+  },
+  {
+   "f": "Per un jet l’autonomia segue l’equazione di Breguet",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f). Tre leve: efficienza del motore (V/c), aerodinamica (L/D) e strutture (frazione di peso)."
+  },
+  {
+   "f": "L’autonomia oraria (tempo in volo) è massima a una velocità diversa da quella per l’autonomia di distanza.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "L’equazione di Breguet è l’equazione climatica dell’aviazione",
+   "b": "per un dato viaggio il carburante bruciato diminuisce quando i motori diventano più efficienti, le ali hanno un L/D più alto o le strutture si alleggeriscono. A parità degli altri termini, l’autonomia è proporzionale a L/D."
+  },
+  {
+   "f": "La NASA stima che, con la flotta e le operazioni attuali, il traffico aereo mondiale nel 2050 richiederebbe oltre 620 milioni di tonnellate di carburante ed emetterebbe quasi 2000 milioni di tonnellate di CO₂",
+   "b": "per questo ogni termine dell’equazione conta."
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Atmosfera",
+   "q": "Nella troposfera la temperatura scende di circa…",
+   "why": "Il gradiente della NASA è 0.00649 °C/m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "1 °C/km",
+    "6.5 °C/km",
+    "15 °C/km",
+    "0 °C/km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Velocità del suono",
+   "q": "La velocità del suono al livello del mare è circa…",
+   "why": "√(1.4 × 287 × 288).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "100 m/s",
+    "340 m/s",
+    "1,000 m/s",
+    "3,000 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Atmosfera",
+   "q": "A 11 km la densità è circa quale frazione di quella al livello del mare?",
+   "why": "0.366/1.227.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "90%",
+    "60%",
+    "30%",
+    "5%"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Velocità del suono",
+   "q": "Il numero di Mach è…",
+   "why": "La velocità divisa per la velocità locale del suono.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V × a",
+    "V/a",
+    "a/V",
+    "V²/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "La velocità del suono dipende dalla pressione.",
+   "why": "Per un gas perfetto dipende solo dalla temperatura.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "Fa sempre più freddo salendo.",
+   "why": "La temperatura si stabilizza sopra gli 11 km e risale più in alto nella stratosfera.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "L’aria più rarefatta aiuta sempre.",
+   "why": "Riduce la resistenza ma anche la portanza e la spinta dei motori, quindi le ali devono volare più veloci o con coefficienti di portanza più alti.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Atmosfera",
+   "q": "Un aereo di linea vola a 230 m/s di velocità vera a 11 km. Qual è il suo numero di Mach?",
+   "why": "M ≈ 0.78.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.78,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Atmosfera",
+   "q": "Trova la densità dell’aria a 11000 m con il modello della NASA (T = −56.46 °C, p = 22.72 kPa). Dai la risposta in kg/m³.",
+   "why": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, circa il 30% del livello del mare.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.366,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosfera",
+   "q": "Trova la temperatura a 1500 m nel modello della NASA. Dai la risposta in °C.",
+   "why": "T = 15.04 − 9.74 = 5.3 °C.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 5.3,
+   "tol": 0.2,
+   "unit": "°C"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosfera",
+   "q": "Quanto vale Mach 2 al livello del mare in m/s?",
+   "why": "2 × 340 = 680 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 680,
+   "tol": 5,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosfera",
+   "q": "Trova la densità al livello del mare da p = 101.40 kPa e T = 15.04 °C. Dai la risposta in kg/m³.",
+   "why": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 1.227,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% del livello del mare).",
+   "why": "È scritto nell’unità. Trova T, p e ρ a 5000 m con il modello della NASA.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "340 m/s e 295 m/s.",
+   "why": "È scritto nell’unità. Trova la velocità del suono al livello del mare (15 °C) e a 11 km (−56.5 °C).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "Gli aerei volano dove si formano tempo e clima. La NASA studia le emissioni degli aerei con modelli al computer, prove di combustione in laboratorio e prove di volo, perché ciò che i motori rilasciano in quota conta per l’atmosfera.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "La stessa fisica dell’atmosfera permette ai satelliti di trasformare la radiazione che misurano in profili di temperatura dell’aria.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "Un’atmosfera standard è un modello medio adattato alle misure. Nel modello della NASA la troposfera va dal suolo a 11000 m, e la temperatura scende di circa 6.5 °C per chilometro.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "Da 11 a 25 km (bassa stratosfera) la temperatura del modello è costante a −56.46 °C, mentre la pressione continua a scendere esponenzialmente.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "La densità deriva dalla legge dei gas perfetti, ρ = p/(RT). A 11 km l’aria ha circa il 30% della densità al livello del mare.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosfera",
+   "q": "La velocità del suono è a = √(γRT), quindi dipende solo dalla temperatura. Numero di Mach M = V/a.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Atmosfera standard",
+   "b": "Modello medio di T, p, ρ in funzione della quota."
+  },
+  {
+   "f": "Troposfera",
+   "b": "Dal suolo a ~11 km; la temperatura scende con la quota."
+  },
+  {
+   "f": "Gradiente termico verticale",
+   "b": "≈ 6.5 °C per km nella troposfera."
+  },
+  {
+   "f": "Legge dei gas ideali",
+   "b": "p = ρRT."
+  },
+  {
+   "f": "Velocità del suono",
+   "b": "a = √(γRT)."
+  },
+  {
+   "f": "Numero di Mach",
+   "b": "M = V/a."
+  },
+  {
+   "f": "La velocità del suono dipende dalla pressione.",
+   "b": "Per un gas perfetto dipende solo dalla temperatura."
+  },
+  {
+   "f": "Fa sempre più freddo salendo.",
+   "b": "La temperatura si stabilizza sopra gli 11 km e risale più in alto nella stratosfera."
+  },
+  {
+   "f": "L’aria più rarefatta aiuta sempre.",
+   "b": "Riduce la resistenza ma anche la portanza e la spinta dei motori, quindi le ali devono volare più veloci o con coefficienti di portanza più alti."
+  },
+  {
+   "f": "Trova T, p e ρ a 5000 m con il modello della NASA.",
+   "b": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% del livello del mare)."
+  },
+  {
+   "f": "Trova la velocità del suono al livello del mare (15 °C) e a 11 km (−56.5 °C).",
+   "b": "340 m/s e 295 m/s."
+  },
+  {
+   "f": "Un aereo di linea vola a 230 m/s di velocità vera a 11 km. Qual è il suo numero di Mach?",
+   "b": "M ≈ 0.78."
+  },
+  {
+   "f": "Trova la densità dell’aria a 11000 m con il modello della NASA (T = −56.46 °C, p = 22.72 kPa).",
+   "b": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, circa il 30% del livello del mare."
+  },
+  {
+   "f": "Trova la temperatura a 1500 m nel modello della NASA.",
+   "b": "T = 15.04 − 9.74 = 5.3 °C."
+  },
+  {
+   "f": "Quanto vale Mach 2 al livello del mare in m/s?",
+   "b": "2 × 340 = 680 m/s."
+  },
+  {
+   "f": "Trova la densità al livello del mare da p = 101.40 kPa e T = 15.04 °C.",
+   "b": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³."
+  },
+  {
+   "f": "Un’atmosfera standard è un modello medio adattato alle misure. Nel modello della NASA la troposfera va dal suolo a ____m, e la temperatura scende di circa 6.5 °C per chilometro.",
+   "b": "Un’atmosfera standard è un modello medio adattato alle misure. Nel modello della NASA la troposfera va dal suolo a 11000 m, e la temperatura scende di circa 6.5 °C per chilometro."
+  },
+  {
+   "f": "Da ____a 25 km (bassa stratosfera) la temperatura del modello è costante a −56.46 °C, mentre la pressione continua a scendere esponenzialmente.",
+   "b": "Da 11 a 25 km (bassa stratosfera) la temperatura del modello è costante a −56.46 °C, mentre la pressione continua a scendere esponenzialmente."
+  },
+  {
+   "f": "La densità deriva dalla legge dei gas perfetti, ρ = p/(RT). A ____km l’aria ha circa il 30% della densità al livello del mare.",
+   "b": "La densità deriva dalla legge dei gas perfetti, ρ = p/(RT). A 11 km l’aria ha circa il 30% della densità al livello del mare."
+  },
+  {
+   "f": "La velocità del suono è a = √(γRT), quindi dipende solo dalla temperatura. Numero di Mach M = V/a.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Aria rarefatta significa meno resistenza a una data velocità, ed è per questo che i jet volano in alto, ma ali e motori hanno comunque bisogno di aria sufficiente per funzionare.",
+   "b": "È scritto nell’unità."
+  }
+ ]
+}

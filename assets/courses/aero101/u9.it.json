@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Orbite",
+   "q": "La velocità in orbita circolare è…",
+   "why": "La gravità fornisce la forza centripeta.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "√(μr)",
+    "√(μ/r)",
+    "μ/r²",
+    "2πr"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbite",
+   "q": "A 400 km un veicolo spaziale compie un giro della Terra circa ogni…",
+   "why": "≈ 92.4 minuti.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "24 h",
+    "92 min",
+    "10 min",
+    "1 settimana"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbite",
+   "q": "Un trasferimento di Hohmann usa…",
+   "why": "Una a ciascuna estremità dell’ellisse di trasferimento.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "un’accensione",
+    "due accensioni",
+    "solo spinta continua",
+    "solo aerofrenata"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbite",
+   "q": "Raggio geostazionario ≈",
+   "why": "Terza legge di Keplero con un giorno siderale.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "6,771 km",
+    "42,164 km",
+    "384,400 km",
+    "20,000 km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Gli astronauti fluttuano perché in orbita non c’è gravità.",
+   "why": "A 400 km la gravità è circa l’89% del valore in superficie; sono in caduta libera.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Per raggiungere un veicolo spaziale davanti a te, basta accelerare.",
+   "why": "Accelerare alza la tua orbita e riduce la tua velocità angolare.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Le orbite più alte richiedono più velocità.",
+   "why": "La velocità circolare diminuisce con la quota, anche se raggiungere orbite più alte richiede più Δv totale.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Orbite",
+   "q": "Trova velocità e periodo di un’orbita circolare a 400 km di quota. Dai la risposta in km/s.",
+   "why": "7.67 km/s e ≈ 92.4 minuti.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7.67,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbite",
+   "q": "Trovare il raggio geostazionario. Dai la risposta in km.",
+   "why": "≈ 42164 km dal centro della Terra (circa 35786 km sopra l’equatore).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 42164,
+   "tol": 80,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Orbite",
+   "q": "Trova il Δv di Hohmann da un’orbita circolare a 300 km al raggio geostazionario. Dai la risposta in km/s.",
+   "why": "Totale ≈ 3.90 km/s; trasferimento ≈ 5.27 ore (senza cambio di piano).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 3.9,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbite",
+   "q": "Trova v per un’orbita circolare con r = 7000 km. Dai la risposta in m/s.",
+   "why": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7546,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "T ∝ r^(3/2): 8 volte più lungo.",
+   "why": "È scritto nell’unità. Se il raggio dell’orbita quadruplica, come cambia il periodo?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Restano sopra lo stesso punto e possono riprendere lo stesso emisfero in modo continuo.",
+   "why": "È scritto nell’unità. Perché molti satelliti meteorologici sono geostazionari?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Il monitoraggio del clima dipende dalla scelta dell’orbita. Le orbite eliosincrone permettono a Landsat di riprendere lo stesso luogo con un’illuminazione simile, così i cambiamenti di foreste, colture e ghiacci risaltano, mentre i satelliti meteorologici geostazionari osservano in continuo lo sviluppo delle tempeste.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Anche le orbite richiedono attenzione: i detriti minacciano queste missioni, quindi i veicoli spaziali sono sempre più progettati per essere smaltiti a fine vita.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "In un’orbita circolare la gravità fornisce la forza centripeta: v = √(μ/r), con μ = GM.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Terza legge di Keplero: T = 2π√(a³/μ). Le orbite più alte sono più lente e durano di più.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Un’orbita geostazionaria ha un periodo di un giorno siderale (86164 s) e si trova sopra l’equatore a un raggio di circa 42164 km.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "Un trasferimento di Hohmann usa due accensioni lungo un’ellisse tangente a entrambe le orbite circolari; è il trasferimento a due accensioni più efficiente tra orbite circolari complanari.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbite",
+   "q": "L’orbita terrestre bassa (circa 400 km per la ISS), le orbite polari eliosincrone per le immagini e l’orbita geostazionaria per la meteorologia servono missioni diverse.",
+   "why": "È scritto nell’unità.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Velocità circolare",
+   "b": "√(μ/r)."
+  },
+  {
+   "f": "Terza legge di Keplero",
+   "b": "T = 2π√(a³/μ)."
+  },
+  {
+   "f": "Vis-viva",
+   "b": "v² = μ(2/r − 1/a)."
+  },
+  {
+   "f": "Trasferimento di Hohmann",
+   "b": "Trasferimento ellittico a due accensioni."
+  },
+  {
+   "f": "GEO",
+   "b": "Periodo = 1 giorno siderale; r ≈ 42164 km."
+  },
+  {
+   "f": "Orbita eliosincrona",
+   "b": "Orbita quasi polare che passa sopra ogni luogo all’incirca alla stessa ora locale."
+  },
+  {
+   "f": "Gli astronauti fluttuano perché in orbita non c’è gravità.",
+   "b": "A 400 km la gravità è circa l’89% del valore in superficie; sono in caduta libera."
+  },
+  {
+   "f": "Per raggiungere un veicolo spaziale davanti a te, basta accelerare.",
+   "b": "Accelerare alza la tua orbita e riduce la tua velocità angolare."
+  },
+  {
+   "f": "Le orbite più alte richiedono più velocità.",
+   "b": "La velocità circolare diminuisce con la quota, anche se raggiungere orbite più alte richiede più Δv totale."
+  },
+  {
+   "f": "Trova velocità e periodo di un’orbita circolare a 400 km di quota.",
+   "b": "7.67 km/s e ≈ 92.4 minuti."
+  },
+  {
+   "f": "Trovare il raggio geostazionario.",
+   "b": "≈ 42164 km dal centro della Terra (circa 35786 km sopra l’equatore)."
+  },
+  {
+   "f": "Trova il Δv di Hohmann da un’orbita circolare a 300 km al raggio geostazionario.",
+   "b": "Totale ≈ 3.90 km/s; trasferimento ≈ 5.27 ore (senza cambio di piano)."
+  },
+  {
+   "f": "Trova v per un’orbita circolare con r = 7000 km.",
+   "b": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s."
+  },
+  {
+   "f": "Se il raggio dell’orbita quadruplica, come cambia il periodo?",
+   "b": "T ∝ r^(3/2): 8 volte più lungo."
+  },
+  {
+   "f": "Perché molti satelliti meteorologici sono geostazionari?",
+   "b": "Restano sopra lo stesso punto e possono riprendere lo stesso emisfero in modo continuo."
+  },
+  {
+   "f": "In un’orbita circolare la gravità fornisce la forza centripeta",
+   "b": "v = √(μ/r), con μ = GM."
+  },
+  {
+   "f": "Un’orbita geostazionaria ha un periodo di un giorno siderale (____s) e si trova sopra l’equatore a un raggio di circa 42164 km.",
+   "b": "Un’orbita geostazionaria ha un periodo di un giorno siderale (86164 s) e si trova sopra l’equatore a un raggio di circa 42164 km."
+  },
+  {
+   "f": "Un trasferimento di Hohmann usa due accensioni lungo un’ellisse tangente a entrambe le orbite circolari; è il trasferimento a due accensioni più efficiente tra orbite circolari complanari.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "L’orbita terrestre bassa (circa ____km per la ISS), le orbite polari eliosincrone per le immagini e l’orbita geostazionaria per la meteorologia servono missioni diverse.",
+   "b": "L’orbita terrestre bassa (circa 400 km per la ISS), le orbite polari eliosincrone per le immagini e l’orbita geostazionaria per la meteorologia servono missioni diverse."
+  },
+  {
+   "f": "Anche le orbite richiedono attenzione",
+   "b": "i detriti minacciano queste missioni, quindi i veicoli spaziali sono sempre più progettati per essere smaltiti a fine vita."
+  }
+ ]
+}

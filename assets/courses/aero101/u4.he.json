@@ -1,0 +1,308 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "כנפיים",
+   "q": "שיפוע העילוי של פרופיל דק הוא…",
+   "why": "c_l = 2πα.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "π לרדיאן",
+    "2π לרדיאן",
+    "2π למעלה",
+    "1 לרדיאן"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "כנפיים",
+   "q": "יחס ממדים הוא…",
+   "why": "ריבוע המוטה חלקי השטח.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "b/S",
+    "b²/S",
+    "S/b",
+    "c/b"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "כנפיים",
+   "q": "ב-L/D מרבי…",
+   "why": "מזעור C_D/C_L נותן KC_L² = C_D0.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "גרר מושרה = גרר טפילי",
+    "הגרר אפס",
+    "C_L = 0",
+    "הכנף בהזדקרות"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "mc",
+   "topic": "כנפיים",
+   "q": "יחס ממדים גבוה יותר מקטין בעיקר…",
+   "why": "K = 1/(πeAR).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "חיכוך פני שטח",
+    "גרר מושרה",
+    "משקל",
+    "גרר גלים"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "יותר זווית התקפה תמיד פירושה יותר עילוי.",
+   "why": "מעבר לזווית ההזדקרות הזרימה מתנתקת והעילוי צונח.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "פרופילים סימטריים לא יכולים לייצר עילוי.",
+   "why": "הם מייצרים עילוי בזווית התקפה חיובית.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "התקני קצה כנף מאפסים את הגרר המושרה.",
+   "why": "הם מקטינים אותו; רק לכנף ארוכה לאין סוף לא היה גרר מושרה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "כנפיים",
+   "q": "תאוריית הפרופיל הדק: מצאו את c_l ב-α = 5°.",
+   "why": "c_l ≈ 0.548.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": 0.548,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "כנפיים",
+   "q": "מצאו את יחס הממדים של כנף עם מוטה של 11 m ושטח של 16.2 m².",
+   "why": "AR = 121/16.2 ≈ 7.5.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": 7.5,
+   "tol": 0.15,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "כנפיים",
+   "q": "בעזרת c_l = 2πα, איזו זווית נותנת c_l = 0.5? כתבו את התשובה ב-°.",
+   "why": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": 4.6,
+   "tol": 0.2,
+   "unit": "°"
+  },
+  {
+   "type": "num",
+   "topic": "כנפיים",
+   "q": "עבור המטוס מדוגמה 4.3, מצאו את C_D ב-C_L = 0.36.",
+   "why": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": 0.0319,
+   "tol": 0.001,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "כנפיים",
+   "q": "אם AR עולה מ-7.5 ל-15 (אותם e ו-C_D0), איך משתנה (L/D)max?",
+   "why": "K נחצה, ולכן (L/D)max גדל פי √2 עד ≈ 19.4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": 19.4,
+   "tol": 0.4,
+   "unit": ""
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "4.92 לרדיאן ≈ 0.086 למעלה, 22% מתחת לערך הדו-ממדי (2D).",
+   "why": "זה כתוב ביחידה. מצאו את שיפוע העילוי של כנף עם AR = 8 ו-e = 0.9.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "(L/D)max ≈ 13.7 ב-C_L ≈ 0.69.",
+   "why": "זה כתוב ביחידה. עם C_D0 = 0.025, e = 0.8 ו-AR = 7.5, מצאו את (L/D)max ואת ה-C_L שבו הוא מתקבל.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "כנפיים ארוכות ודקות הן אחת הדרכים הישירות ביותר לחסוך בדלק, כי הגרר המושרה יורד ככל שיחס הממדים עולה. זה בדיוק נתיב \"טכנולוגיית המטוסים היעילה\" בעבודה של NASA על תעופה בת-קיימא.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "האלבטרוס, שדואה שעות מעל האוקיינוס, משתמש באותה פיזיקה: כנף ארוכה ודקה עם יחס עילוי לגרר גבוה.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "פרופיל כנף הוא חתך הרוחב של כנף. הקמירות מאפשרת לו לייצר עילוי בזווית התקפה אפס; העובי מוסיף חוזק ומקום לדלק.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "תאוריית הפרופיל הדק חוזה שיפוע עילוי של 2π לרדיאן (כ-0.11 למעלה) עד שהזרימה מתנתקת והכנף מזדקרת.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "כנף סופית מאבדת שיפוע עילוי בגלל מערבולות הקצה שלה: a = a₀/(1 + a₀/(πeAR)), עם יחס ממדים AR = b²/S.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "כנפיים",
+   "q": "גרר כולל C_D = C_D0 + KC_L² עם K = 1/(πeAR). ה-L/D המרבי מתקבל כשהגרר המושרה שווה לגרר הטפילי.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "מיתר",
+   "b": "משפת ההתקפה ועד שפת הזרימה."
+  },
+  {
+   "f": "קמירות",
+   "b": "העקמומיות של קו האמצע."
+  },
+  {
+   "f": "זווית התקפה",
+   "b": "הזווית בין המיתר לזרימה הנכנסת."
+  },
+  {
+   "f": "הזדקרות",
+   "b": "ניתוק זרימה; העילוי צונח."
+  },
+  {
+   "f": "יחס ממדים",
+   "b": "b²/S."
+  },
+  {
+   "f": "פולרת גרר",
+   "b": "C_D = C_D0 + KC_L²."
+  },
+  {
+   "f": "יותר זווית התקפה תמיד פירושה יותר עילוי.",
+   "b": "מעבר לזווית ההזדקרות הזרימה מתנתקת והעילוי צונח."
+  },
+  {
+   "f": "פרופילים סימטריים לא יכולים לייצר עילוי.",
+   "b": "הם מייצרים עילוי בזווית התקפה חיובית."
+  },
+  {
+   "f": "התקני קצה כנף מאפסים את הגרר המושרה.",
+   "b": "הם מקטינים אותו; רק לכנף ארוכה לאין סוף לא היה גרר מושרה."
+  },
+  {
+   "f": "תאוריית הפרופיל הדק: מצאו את c_l ב-α = 5°.",
+   "b": "c_l ≈ 0.548."
+  },
+  {
+   "f": "מצאו את שיפוע העילוי של כנף עם AR = 8 ו-e = 0.9.",
+   "b": "4.92 לרדיאן ≈ 0.086 למעלה, 22% מתחת לערך הדו-ממדי (2D)."
+  },
+  {
+   "f": "עם C_D0 = 0.025, e = 0.8 ו-AR = 7.5, מצאו את (L/D)max ואת ה-C_L שבו הוא מתקבל.",
+   "b": "(L/D)max ≈ 13.7 ב-C_L ≈ 0.69."
+  },
+  {
+   "f": "מצאו את יחס הממדים של כנף עם מוטה של 11 m ושטח של 16.2 m².",
+   "b": "AR = 121/16.2 ≈ 7.5."
+  },
+  {
+   "f": "בעזרת c_l = 2πα, איזו זווית נותנת c_l = 0.5?",
+   "b": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+  },
+  {
+   "f": "עבור המטוס מדוגמה 4.3, מצאו את C_D ב-C_L = 0.36.",
+   "b": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319."
+  },
+  {
+   "f": "אם AR עולה מ-7.5 ל-15 (אותם e ו-C_D0), איך משתנה (L/D)max?",
+   "b": "K נחצה, ולכן (L/D)max גדל פי √2 עד ≈ 19.4."
+  },
+  {
+   "f": "פרופיל כנף הוא חתך הרוחב של כנף. הקמירות מאפשרת לו לייצר עילוי בזווית התקפה אפס; העובי מוסיף חוזק ומקום לדלק.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "תאוריית הפרופיל הדק חוזה שיפוע עילוי של 2π לרדיאן (כ-0.11 למעלה) עד שהזרימה מתנתקת והכנף מזדקרת.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "כנף סופית מאבדת שיפוע עילוי בגלל מערבולות הקצה שלה",
+   "b": "a = a₀/(1 + a₀/(πeAR)), עם יחס ממדים AR = b²/S."
+  },
+  {
+   "f": "גרר כולל C_D = C_D0 + KC_L² עם K = 1/(πeAR). ה-L/D המרבי מתקבל כשהגרר המושרה שווה לגרר הטפילי.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "יחס ממדים גבוה (דאונים, אלבטרוסים, כנפי מטוסי נוסעים מודרניים) פירושו פחות גרר מושרה ו-L/D גבוה יותר.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "האלבטרוס, שדואה שעות מעל האוקיינוס, משתמש באותה פיזיקה",
+   "b": "כנף ארוכה ודקה עם יחס עילוי לגרר גבוה."
+  }
+ ]
+}

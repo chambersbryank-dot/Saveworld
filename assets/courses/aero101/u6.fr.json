@@ -1,0 +1,302 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Stabilité",
+   "q": "Les ailerons contrôlent…",
+   "why": "Ils braquent en sens opposés sur chaque aile.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "le tangage",
+    "le roulis",
+    "le lacet",
+    "à la poussée"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilité",
+   "q": "Pour la stabilité en tangage, le CG doit être…",
+   "why": "Marge statique positive.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "derrière le point neutre",
+    "en avant du point neutre",
+    "à l’empennage",
+    "en bout d’aile"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilité",
+   "q": "Une marge statique de 0.15 signifie…",
+   "why": "Marge positive.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "instable",
+    "stable",
+    "neutre",
+    "décroché"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilité",
+   "q": "La stabilité dynamique concerne…",
+   "why": "Le fait que les oscillations s’amortissent ou non.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la tendance initiale",
+    "le mouvement au fil du temps",
+    "la poussée des moteurs",
+    "la masse uniquement"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Statiquement stable signifie que l’oscillation s’amortit.",
+   "why": "C’est la stabilité dynamique ; la stabilité statique est la tendance initiale.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Plus de stabilité, c’est toujours mieux.",
+   "why": "Trop de stabilité alourdit les commandes et gaspille de la traînée d’équilibrage.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Le CG peut être n’importe où tant que l’aile porte.",
+   "why": "Un CG trop arrière rend l’avion instable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Stabilité",
+   "q": "Le point neutre est à 40% de la corde moyenne et le CG à 25%. Trouvez la marge statique.",
+   "why": "0.15, soit 15% : stable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.15,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stabilité",
+   "q": "Un planeur a une aile de 50 g à x = 10 cm, un empennage de 10 g à x = 40 cm et 20 g de lest dans le nez à x = 0. Trouvez le CG.",
+   "why": "x_cg = 11.25 cm depuis le nez.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 11.25,
+   "tol": 0.05,
+   "unit": "cm"
+  },
+  {
+   "type": "num",
+   "topic": "Stabilité",
+   "q": "Pour le planeur de l’exemple 6.2 (corde moyenne 8 cm), le point neutre est à 13 cm. Est-il stable ?",
+   "why": "SM ≈ 0.22 : stable. Retirez le lest du nez et le CG recule vers l’instabilité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.22,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stabilité",
+   "q": "Dans l’exemple 6.2, quelle masse de lest m dans le nez place le CG à 12 cm ? Donnez la réponse en g.",
+   "why": "900/(60 + m) = 12 donne m = 15 g.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 15,
+   "tol": 0.2,
+   "unit": "g"
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "La gouverne de profondeur, sur l’empennage horizontal.",
+   "why": "C’est écrit dans l’unité. Quelle gouverne contrôle le tangage ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "SM = −0.02 < 0 : statiquement instable.",
+   "why": "C’est écrit dans l’unité. CG à 30% de la corde, point neutre à 28%. Stable ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Son CG est trop en arrière, près du point neutre ou derrière lui.",
+   "why": "C’est écrit dans l’unité. Pourquoi un avion en papier sans lest dans le nez se cabre-t-il et décroche-t-il ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Les marges de stabilité coûtent du carburant : un empennage classique pousse généralement vers le bas pour équilibrer l’avion, et l’aile doit produire une portance supplémentaire, avec une traînée supplémentaire, pour le compenser. Réduire cette pénalité fait partie de la voie de l’avion efficace décrite par la NASA.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Les mêmes notions d’équilibre et de contrôle maintiennent les satellites d’observation de la Terre pointés de manière stable pour que leurs instruments puissent cartographier la planète.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Un avion tourne autour de son centre de gravité : tangage (gouverne de profondeur), roulis (ailerons), lacet (gouverne de direction).",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Stabilité statique : après une perturbation, l’avion tend d’abord à revenir. Stabilité dynamique : le mouvement s’amortit réellement au fil du temps.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "La stabilité en tangage exige que le centre de gravité soit en avant du point neutre. La marge statique = (x_np − x_cg)/c̄ doit être positive.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilité",
+   "q": "Un empennage loin derrière le CG agit comme l’empennage d’une flèche : une perturbation à cabrer augmente la portance de l’empennage et ramène le nez vers le bas.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Tangage / roulis / lacet",
+   "b": "Profondeur / ailerons / direction."
+  },
+  {
+   "f": "Stabilité statique",
+   "b": "Tendance initiale à revenir."
+  },
+  {
+   "f": "Stabilité dynamique",
+   "b": "La perturbation s’amortit au fil du temps."
+  },
+  {
+   "f": "Point neutre",
+   "b": "Position du CG donnant une stabilité en tangage neutre."
+  },
+  {
+   "f": "Marge statique",
+   "b": "(x_np − x_cg)/c̄."
+  },
+  {
+   "f": "Équilibrage (trim)",
+   "b": "Équilibré, moment résultant nul."
+  },
+  {
+   "f": "Statiquement stable signifie que l’oscillation s’amortit.",
+   "b": "C’est la stabilité dynamique ; la stabilité statique est la tendance initiale."
+  },
+  {
+   "f": "Plus de stabilité, c’est toujours mieux.",
+   "b": "Trop de stabilité alourdit les commandes et gaspille de la traînée d’équilibrage."
+  },
+  {
+   "f": "Le CG peut être n’importe où tant que l’aile porte.",
+   "b": "Un CG trop arrière rend l’avion instable."
+  },
+  {
+   "f": "Le point neutre est à 40% de la corde moyenne et le CG à 25%. Trouvez la marge statique.",
+   "b": "0.15, soit 15% : stable."
+  },
+  {
+   "f": "Un planeur a une aile de 50 g à x = 10 cm, un empennage de 10 g à x = 40 cm et 20 g de lest dans le nez à x = 0. Trouvez le CG.",
+   "b": "x_cg = 11.25 cm depuis le nez."
+  },
+  {
+   "f": "Pour le planeur de l’exemple 6.2 (corde moyenne 8 cm), le point neutre est à 13 cm. Est-il stable ?",
+   "b": "SM ≈ 0.22 : stable. Retirez le lest du nez et le CG recule vers l’instabilité."
+  },
+  {
+   "f": "Quelle gouverne contrôle le tangage ?",
+   "b": "La gouverne de profondeur, sur l’empennage horizontal."
+  },
+  {
+   "f": "CG à 30% de la corde, point neutre à 28%. Stable ?",
+   "b": "SM = −0.02 < 0 : statiquement instable."
+  },
+  {
+   "f": "Dans l’exemple 6.2, quelle masse de lest m dans le nez place le CG à 12 cm ?",
+   "b": "900/(60 + m) = 12 donne m = 15 g."
+  },
+  {
+   "f": "Pourquoi un avion en papier sans lest dans le nez se cabre-t-il et décroche-t-il ?",
+   "b": "Son CG est trop en arrière, près du point neutre ou derrière lui."
+  },
+  {
+   "f": "Un avion tourne autour de son centre de gravité",
+   "b": "tangage (gouverne de profondeur), roulis (ailerons), lacet (gouverne de direction)."
+  },
+  {
+   "f": "La stabilité en tangage exige que le centre de gravité soit en avant du point neutre. La marge statique = (x_np − x_cg)/c̄ doit être positive.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Un empennage loin derrière le CG agit comme l’empennage d’une flèche",
+   "b": "une perturbation à cabrer augmente la portance de l’empennage et ramène le nez vers le bas."
+  },
+  {
+   "f": "Trop de stabilité rend un avion peu maniable et coûte de la traînée d’équilibrage ; certains chasseurs modernes sont conçus instables et pilotés par ordinateur.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Les marges de stabilité coûtent du carburant",
+   "b": "un empennage classique pousse généralement vers le bas pour équilibrer l’avion, et l’aile doit produire une portance supplémentaire, avec une traînée supplémentaire, pour le compenser. Réduire cette pénalité fait partie de la voie de l’avion efficace décrite par la NASA."
+  }
+ ]
+}

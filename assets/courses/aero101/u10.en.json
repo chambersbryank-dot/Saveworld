@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Climate",
+   "q": "Burning 1 kg of jet fuel makes about…",
+   "why": "The fuel’s carbon combines with oxygen from the air.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1 kg CO₂",
+    "3.16 kg CO₂",
+    "0.3 kg CO₂",
+    "10 kg CO₂"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climate",
+   "q": "NASA’s three paths to sustainable aviation are…",
+   "why": "As listed by NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "bigger fuel tanks",
+    "efficient aircraft, SAF, operations and infrastructure",
+    "flying lower only",
+    "slower climbs only"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climate",
+   "q": "If L/D rises 10%, fuel for the same trip falls roughly…",
+   "why": "Fuel ∝ 1/(L/D).",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1%",
+    "9–10%",
+    "50%",
+    "0%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climate",
+   "q": "U.S. aircraft covered by EPA’s rule emit what share of total U.S. greenhouse gases?",
+   "why": "EPA: 3% of the national total.",
+   "src": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft",
+   "srcName": "EPA",
+   "opts": [
+    "0.3%",
+    "3%",
+    "30%",
+    "50%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Sustainable aviation fuel emits no CO₂ when burned.",
+   "why": "It emits CO₂ like jet fuel; the benefit is that its carbon came recently from the air, so lifecycle emissions are lower.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Electric airplanes will soon replace all jets.",
+   "why": "Battery energy density limits them to short, small flights for now.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Space is too big to pollute.",
+   "why": "Debris in popular orbits is a real hazard.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Climate",
+   "q": "Where does 3.16 come from? Model jet fuel as C₁₂H₂₃ and find kg of CO₂ per kg of fuel.",
+   "why": "≈ 3.16 kg of CO₂ per kg of fuel.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 3.16,
+   "tol": 0.03,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Climate",
+   "q": "NASA estimates 620 million tonnes of fuel in 2050 at today’s efficiency. How much CO₂ is that?",
+   "why": "≈ 1,959 million tonnes, matching NASA’s “close to 2,000 megatons.”",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 1959,
+   "tol": 30,
+   "unit": "million t"
+  },
+  {
+   "type": "num",
+   "topic": "Climate",
+   "q": "A flight burns 5,000 kg of fuel. How much CO₂?",
+   "why": "≈ 15,800 kg.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 15800,
+   "tol": 150,
+   "unit": "kg"
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "About 15%, since CO₂ is proportional to fuel burned.",
+   "why": "This is stated in the unit. If engines become 15% more fuel-efficient, by about how much do CO₂ emissions per trip fall?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Their energy per kilogram is far below jet fuel, and the Breguet trade makes extra weight very costly.",
+   "why": "This is stated in the unit. Why can’t today’s batteries power long-haul airliners?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "≈ 2.1 t of fuel and ≈ 6.7 t of CO₂ per flight (a simplified estimate).",
+   "why": "This is stated in the unit. A flight burns 20 t of fuel. A new wing raises L/D from 17 to 19. Estimate the fuel and CO₂ saved.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "This unit is the course’s planet tie-in in full: each equation from Units 3–7 is a lever on fuel burn, and fuel burn is CO₂. Engineers who can run these numbers design the cleaner aircraft that NASA and industry are working toward.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "EPA reports that the aircraft covered by its rule produce 10% of U.S. transportation greenhouse gas emissions, and NASA notes the U.S. committed in 2021 to net-zero aviation greenhouse gas emissions by 2050.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Burning one kilogram of kerosene-type jet fuel produces about 3.16 kg of CO₂, fixed by chemistry. The only ways to cut it are to burn less fuel or to use fuel whose carbon came recently from the air.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "EPA reports that the aircraft covered by its greenhouse gas rule account for 10% of U.S. transportation greenhouse gas emissions and 3% of the U.S. total.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "NASA’s three paths: efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Today’s batteries store far less energy per kilogram than jet fuel, so electric aircraft suit short, small flights; hydrogen stores a lot of energy per kilogram but needs large tanks.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climate",
+   "q": "Space sustainability means planning disposal so useful orbits stay open for the satellites that monitor Earth.",
+   "why": "This is stated in the unit.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "CO₂ per kg fuel",
+   "b": "≈ 3.16 kg."
+  },
+  {
+   "f": "SAF",
+   "b": "Sustainable aviation fuel from wastes and biomass."
+  },
+  {
+   "f": "Three paths",
+   "b": "Efficient aircraft, SAF, operations."
+  },
+  {
+   "f": "Energy density",
+   "b": "Energy per kg; batteries ≪ jet fuel."
+  },
+  {
+   "f": "Space debris",
+   "b": "Defunct objects that threaten useful orbits."
+  },
+  {
+   "f": "Lifecycle emissions",
+   "b": "All emissions from fuel production to use."
+  },
+  {
+   "f": "Sustainable aviation fuel emits no CO₂ when burned.",
+   "b": "It emits CO₂ like jet fuel; the benefit is that its carbon came recently from the air, so lifecycle emissions are lower."
+  },
+  {
+   "f": "Electric airplanes will soon replace all jets.",
+   "b": "Battery energy density limits them to short, small flights for now."
+  },
+  {
+   "f": "Space is too big to pollute.",
+   "b": "Debris in popular orbits is a real hazard."
+  },
+  {
+   "f": "Where does 3.16 come from? Model jet fuel as C₁₂H₂₃ and find kg of CO₂ per kg of fuel.",
+   "b": "≈ 3.16 kg of CO₂ per kg of fuel."
+  },
+  {
+   "f": "NASA estimates 620 million tonnes of fuel in 2050 at today’s efficiency. How much CO₂ is that?",
+   "b": "≈ 1,959 million tonnes, matching NASA’s “close to 2,000 megatons.”"
+  },
+  {
+   "f": "A flight burns 20 t of fuel. A new wing raises L/D from 17 to 19. Estimate the fuel and CO₂ saved.",
+   "b": "≈ 2.1 t of fuel and ≈ 6.7 t of CO₂ per flight (a simplified estimate)."
+  },
+  {
+   "f": "A flight burns 5,000 kg of fuel. How much CO₂?",
+   "b": "≈ 15,800 kg."
+  },
+  {
+   "f": "If engines become 15% more fuel-efficient, by about how much do CO₂ emissions per trip fall?",
+   "b": "About 15%, since CO₂ is proportional to fuel burned."
+  },
+  {
+   "f": "Why can’t today’s batteries power long-haul airliners?",
+   "b": "Their energy per kilogram is far below jet fuel, and the Breguet trade makes extra weight very costly."
+  },
+  {
+   "f": "Burning one kilogram of kerosene-type jet fuel produces about ____kg of CO₂, fixed by chemistry. The only ways to cut it are to burn less fuel or to use fuel whose carbon came recently from the air.",
+   "b": "Burning one kilogram of kerosene-type jet fuel produces about 3.16 kg of CO₂, fixed by chemistry. The only ways to cut it are to burn less fuel or to use fuel whose carbon came recently from the air."
+  },
+  {
+   "f": "EPA reports that the aircraft covered by its greenhouse gas rule account for ____% of U.S. transportation greenhouse gas emissions and 3% of the U.S. total.",
+   "b": "EPA reports that the aircraft covered by its greenhouse gas rule account for 10% of U.S. transportation greenhouse gas emissions and 3% of the U.S. total."
+  },
+  {
+   "f": "NASA’s three paths",
+   "b": "efficient aircraft technology, sustainable aviation fuel, and better operations and infrastructure."
+  },
+  {
+   "f": "Today’s batteries store far less energy per kilogram than jet fuel, so electric aircraft suit short, small flights; hydrogen stores a lot of energy per kilogram but needs large tanks.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Space sustainability means planning disposal so useful orbits stay open for the satellites that monitor Earth.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "This unit is the course’s planet tie-in in full",
+   "b": "each equation from Units 3–7 is a lever on fuel burn, and fuel burn is CO₂. Engineers who can run these numbers design the cleaner aircraft that NASA and industry are working toward."
+  },
+  {
+   "f": "EPA reports that the aircraft covered by its rule produce ____% of U.S. transportation greenhouse gas emissions, and NASA notes the U.S. committed in 2021 to net-zero aviation greenhouse gas emissions by 2050.",
+   "b": "EPA reports that the aircraft covered by its rule produce 10% of U.S. transportation greenhouse gas emissions, and NASA notes the U.S. committed in 2021 to net-zero aviation greenhouse gas emissions by 2050."
+  }
+ ]
+}

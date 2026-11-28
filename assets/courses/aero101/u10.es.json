@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Quemar 1 kg de combustible de aviación produce aproximadamente…",
+   "why": "El carbono del combustible se combina con oxígeno del aire.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1 kg CO₂",
+    "3.16 kg CO₂",
+    "0.3 kg CO₂",
+    "10 kg CO₂"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Las tres vías de la NASA hacia una aviación sostenible son…",
+   "why": "Según la lista de la NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "tanques de combustible más grandes",
+    "aviones eficientes, SAF, operaciones e infraestructura",
+    "solo volar más bajo",
+    "solo ascensos más lentos"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Si L/D sube un 10%, el combustible para el mismo viaje baja aproximadamente…",
+   "why": "Combustible ∝ 1/(L/D).",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1%",
+    "9–10%",
+    "50%",
+    "0%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "¿Qué proporción del total de gases de efecto invernadero de EE. UU. emiten los aviones cubiertos por la norma de la EPA?",
+   "why": "EPA: el 3% del total nacional.",
+   "src": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft",
+   "srcName": "EPA",
+   "opts": [
+    "0.3%",
+    "3%",
+    "30%",
+    "50%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "El combustible de aviación sostenible no emite CO₂ al quemarse.",
+   "why": "Emite CO₂ como el combustible convencional; la ventaja es que su carbono salió recientemente del aire, así que las emisiones de ciclo de vida son menores.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Los aviones eléctricos pronto reemplazarán a todos los reactores.",
+   "why": "La densidad energética de las baterías los limita, por ahora, a vuelos cortos y pequeños.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "El espacio es demasiado grande para contaminarse.",
+   "why": "Los desechos en las órbitas más usadas son un peligro real.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "¿De dónde sale 3.16? Modela el combustible de aviación como C₁₂H₂₃ y halla los kg de CO₂ por kg de combustible.",
+   "why": "≈ 3.16 kg de CO₂ por kg de combustible.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 3.16,
+   "tol": 0.03,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "La NASA estima 620 millones de toneladas de combustible en 2050 con la eficiencia actual. ¿Cuánto CO₂ es eso? Da la respuesta en millón t.",
+   "why": "≈ 1959 millones de toneladas, en línea con las «cerca de 2000 megatoneladas» de la NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 1959,
+   "tol": 30,
+   "unit": "millón t"
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "Un vuelo quema 5000 kg de combustible. ¿Cuánto CO₂ produce?",
+   "why": "≈ 15,800 kg.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 15800,
+   "tol": 150,
+   "unit": "kg"
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Cerca de un 15%, ya que el CO₂ es proporcional al combustible quemado.",
+   "why": "Esto está escrito en la unidad. Si los motores se vuelven un 15% más eficientes en combustible, ¿en cuánto bajan aproximadamente las emisiones de CO₂ por viaje?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Su energía por kilogramo está muy por debajo de la del combustible de aviación, y el compromiso de Breguet hace muy costoso el peso extra.",
+   "why": "Esto está escrito en la unidad. ¿Por qué las baterías actuales no pueden impulsar aviones de largo recorrido?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "≈ 2.1 t de combustible y ≈ 6.7 t de CO₂ por vuelo (estimación simplificada).",
+   "why": "Esto está escrito en la unidad. Un vuelo quema 20 t de combustible. Una nueva ala eleva L/D de 17 a 19. Estima el combustible y el CO₂ ahorrados.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Esta unidad es el vínculo completo del curso con el planeta: cada ecuación de las unidades 3–7 es una palanca sobre el consumo de combustible, y el consumo de combustible es CO₂. Los ingenieros que saben hacer estos cálculos diseñan los aviones más limpios hacia los que trabajan la NASA y la industria.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "La EPA informa que los aviones cubiertos por su norma producen el 10% de las emisiones de gases de efecto invernadero del transporte en EE. UU., y la NASA señala que EE. UU. se comprometió en 2021 a lograr emisiones netas cero de gases de efecto invernadero en la aviación para 2050.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Quemar un kilogramo de combustible de aviación tipo queroseno produce unos 3.16 kg de CO₂, una cifra fijada por la química. Las únicas formas de reducirlo son quemar menos combustible o usar combustible cuyo carbono haya salido recientemente del aire.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "La EPA informa que los aviones cubiertos por su norma de gases de efecto invernadero representan el 10% de las emisiones de gases de efecto invernadero del transporte en EE. UU. y el 3% del total del país.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Las tres vías de la NASA: tecnología aeronáutica eficiente, combustible de aviación sostenible y mejores operaciones e infraestructura.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Las baterías actuales almacenan mucha menos energía por kilogramo que el combustible de aviación, así que los aviones eléctricos sirven para vuelos cortos y pequeños; el hidrógeno almacena mucha energía por kilogramo pero necesita tanques grandes.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "La sostenibilidad espacial consiste en planificar el retiro para que las órbitas útiles sigan disponibles para los satélites que vigilan la Tierra.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "CO₂ por kg de combustible",
+   "b": "≈ 3.16 kg."
+  },
+  {
+   "f": "SAF",
+   "b": "Combustible de aviación sostenible hecho con residuos y biomasa."
+  },
+  {
+   "f": "Tres vías",
+   "b": "Aviones eficientes, SAF, operaciones."
+  },
+  {
+   "f": "Densidad energética",
+   "b": "Energía por kg; baterías ≪ combustible de aviación."
+  },
+  {
+   "f": "Desechos espaciales",
+   "b": "Objetos inservibles que amenazan las órbitas útiles."
+  },
+  {
+   "f": "Emisiones de ciclo de vida",
+   "b": "Todas las emisiones, desde la producción del combustible hasta su uso."
+  },
+  {
+   "f": "El combustible de aviación sostenible no emite CO₂ al quemarse.",
+   "b": "Emite CO₂ como el combustible convencional; la ventaja es que su carbono salió recientemente del aire, así que las emisiones de ciclo de vida son menores."
+  },
+  {
+   "f": "Los aviones eléctricos pronto reemplazarán a todos los reactores.",
+   "b": "La densidad energética de las baterías los limita, por ahora, a vuelos cortos y pequeños."
+  },
+  {
+   "f": "El espacio es demasiado grande para contaminarse.",
+   "b": "Los desechos en las órbitas más usadas son un peligro real."
+  },
+  {
+   "f": "¿De dónde sale 3.16? Modela el combustible de aviación como C₁₂H₂₃ y halla los kg de CO₂ por kg de combustible.",
+   "b": "≈ 3.16 kg de CO₂ por kg de combustible."
+  },
+  {
+   "f": "La NASA estima 620 millones de toneladas de combustible en 2050 con la eficiencia actual. ¿Cuánto CO₂ es eso?",
+   "b": "≈ 1959 millones de toneladas, en línea con las «cerca de 2000 megatoneladas» de la NASA."
+  },
+  {
+   "f": "Un vuelo quema 20 t de combustible. Una nueva ala eleva L/D de 17 a 19. Estima el combustible y el CO₂ ahorrados.",
+   "b": "≈ 2.1 t de combustible y ≈ 6.7 t de CO₂ por vuelo (estimación simplificada)."
+  },
+  {
+   "f": "Un vuelo quema 5000 kg de combustible. ¿Cuánto CO₂ produce?",
+   "b": "≈ 15,800 kg."
+  },
+  {
+   "f": "Si los motores se vuelven un 15% más eficientes en combustible, ¿en cuánto bajan aproximadamente las emisiones de CO₂ por viaje?",
+   "b": "Cerca de un 15%, ya que el CO₂ es proporcional al combustible quemado."
+  },
+  {
+   "f": "¿Por qué las baterías actuales no pueden impulsar aviones de largo recorrido?",
+   "b": "Su energía por kilogramo está muy por debajo de la del combustible de aviación, y el compromiso de Breguet hace muy costoso el peso extra."
+  },
+  {
+   "f": "Quemar un kilogramo de combustible de aviación tipo queroseno produce unos ____kg de CO₂, una cifra fijada por la química. Las únicas formas de reducirlo son quemar menos combustible o usar combustible cuyo carbono haya salido recientemente del aire.",
+   "b": "Quemar un kilogramo de combustible de aviación tipo queroseno produce unos 3.16 kg de CO₂, una cifra fijada por la química. Las únicas formas de reducirlo son quemar menos combustible o usar combustible cuyo carbono haya salido recientemente del aire."
+  },
+  {
+   "f": "La EPA informa que los aviones cubiertos por su norma de gases de efecto invernadero representan el ____% de las emisiones de gases de efecto invernadero del transporte en EE. UU. y el 3% del total del país.",
+   "b": "La EPA informa que los aviones cubiertos por su norma de gases de efecto invernadero representan el 10% de las emisiones de gases de efecto invernadero del transporte en EE. UU. y el 3% del total del país."
+  },
+  {
+   "f": "Las tres vías de la NASA",
+   "b": "tecnología aeronáutica eficiente, combustible de aviación sostenible y mejores operaciones e infraestructura."
+  },
+  {
+   "f": "Las baterías actuales almacenan mucha menos energía por kilogramo que el combustible de aviación, así que los aviones eléctricos sirven para vuelos cortos y pequeños; el hidrógeno almacena mucha energía por kilogramo pero necesita tanques grandes.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La sostenibilidad espacial consiste en planificar el retiro para que las órbitas útiles sigan disponibles para los satélites que vigilan la Tierra.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Esta unidad es el vínculo completo del curso con el planeta",
+   "b": "cada ecuación de las unidades 3–7 es una palanca sobre el consumo de combustible, y el consumo de combustible es CO₂. Los ingenieros que saben hacer estos cálculos diseñan los aviones más limpios hacia los que trabajan la NASA y la industria."
+  },
+  {
+   "f": "La EPA informa que los aviones cubiertos por su norma producen el ____% de las emisiones de gases de efecto invernadero del transporte en EE. UU., y la NASA señala que EE. UU. se comprometió en 2021 a lograr emisiones netas cero de gases de efecto invernadero en la aviación para 2050.",
+   "b": "La EPA informa que los aviones cubiertos por su norma producen el 10% de las emisiones de gases de efecto invernadero del transporte en EE. UU., y la NASA señala que EE. UU. se comprometió en 2021 a lograr emisiones netas cero de gases de efecto invernadero en la aviación para 2050."
+  }
+ ]
+}

@@ -1,0 +1,306 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Portance et traînée",
+   "q": "La portance est proportionnelle à…",
+   "why": "Via la pression dynamique ½ρV².",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V",
+    "V²",
+    "√V",
+    "1/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portance et traînée",
+   "q": "Doubler la surface alaire à même vitesse et même C_L…",
+   "why": "L ∝ S.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "divise la portance par deux",
+    "double la portance",
+    "quadruple la portance",
+    "n’a aucun effet"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portance et traînée",
+   "q": "Le nombre de Reynolds compare…",
+   "why": "ρVc/μ.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la portance et la traînée",
+    "les effets d’inertie et de viscosité",
+    "la vitesse et la vitesse du son",
+    "la poussée et le poids"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Portance et traînée",
+   "q": "La traînée induite est causée par…",
+   "why": "Les tourbillons marginaux inclinent la portance vers l’arrière.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la rugosité de la peinture",
+    "la production de portance avec une aile finie",
+    "l’échappement des moteurs",
+    "uniquement les ondes de choc"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "L’air passant sur l’extrados doit rejoindre l’air passant sous l’intrados au bord de fuite (temps de transit égal).",
+   "why": "C’est faux ; l’écoulement supérieur arrive en fait le premier. NASA Glenn classe le transit égal parmi les théories incorrectes de la portance.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La portance, c’est seulement Bernoulli, ou seulement Newton.",
+   "why": "Les deux décrivent le même écoulement ; différences de pression et déviation de l’écoulement vont ensemble.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La traînée n’est que du frottement de l’air.",
+   "why": "La traînée de pression et la traînée induite sont souvent plus grandes.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "Un avion de 1100 kg avec une aile de 16.2 m² vole en palier à 55 m/s au niveau de la mer (ρ = 1.227 kg/m³). Trouvez C_L.",
+   "why": "C_L ≈ 0.36.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 0.36,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "Avec C_L,max = 1.6, trouvez la vitesse de décrochage de cet avion au niveau de la mer. Donnez la réponse en m/s.",
+   "why": "V_s ≈ 26.1 m/s (environ 51 nœuds).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 26.1,
+   "tol": 0.4,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "Trouvez le nombre de Reynolds d’une corde de 1.5 m à 55 m/s au niveau de la mer (μ = 1.789 × 10⁻⁵ kg/(m·s)). Donnez la réponse en million.",
+   "why": "Re ≈ 5.7 millions.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 5.7,
+   "tol": 0.2,
+   "unit": "million"
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "Trouvez la pression dynamique à 230 m/s à 11 km (ρ = 0.366 kg/m³). Donnez la réponse en Pa.",
+   "why": "q = ½ × 0.366 × 230² ≈ 9,680 Pa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 9680,
+   "tol": 80,
+   "unit": "Pa"
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "Trouvez la traînée de l’avion de l’exemple 3.1 si C_D = 0.032. Donnez la réponse en N.",
+   "why": "D = 1,855 × 16.2 × 0.032 ≈ 962 N.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 962,
+   "tol": 20,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Portance et traînée",
+   "q": "De combien la vitesse de décrochage est-elle plus élevée à 1500 m (ρ = 1.060 kg/m³) qu’au niveau de la mer ? Donnez la réponse en %.",
+   "why": "V_s ∝ 1/√ρ : √(1.227/1.060) = 1.076, donc environ 7.6% plus élevée (≈ 28.0 m/s de vitesse vraie).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7.6,
+   "tol": 0.4,
+   "unit": "%"
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "Portance ∝ V², donc elle quadruple.",
+   "why": "C’est écrit dans l’unité. Si la vitesse double au même C_L, comment la portance change-t-elle ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La traînée, c’est du carburant. En croisière, la poussée des moteurs égale la traînée, donc chaque newton de traînée supprimé est du carburant non brûlé et du CO₂ non émis. Avoir besoin de moins d’énergie pour voler est la première des trois voies de la NASA vers une aviation durable.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La même physique de la portance anime les pales d’éoliennes, qui transforment la force aérodynamique du vent en électricité propre.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "Une aile dévie l’écoulement vers le bas ; d’après la troisième loi de Newton, l’air pousse l’aile vers le haut. De manière équivalente, un écoulement plus rapide sur l’extrados signifie une pression plus basse à cet endroit (Bernoulli). Les deux décrivent un même écoulement.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La pression dynamique q = ½ρV² fixe l’échelle de toute force aérodynamique. Les coefficients de portance et de traînée C_L et C_D traduisent la forme et l’angle d’attaque.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La portance croît avec V², donc diviser la vitesse par deux exige quatre fois plus de coefficient de portance ou de surface alaire.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Portance et traînée",
+   "q": "La traînée provient du frottement, de la traînée de pression (de forme) et de la traînée induite, le prix à payer pour produire de la portance avec une aile finie.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Pression dynamique",
+   "b": "q = ½ρV²."
+  },
+  {
+   "f": "Équation de portance",
+   "b": "L = qSC_L."
+  },
+  {
+   "f": "Équation de traînée",
+   "b": "D = qSC_D."
+  },
+  {
+   "f": "Vitesse de décrochage",
+   "b": "V_s = √(2W/(ρSC_L,max))."
+  },
+  {
+   "f": "Nombre de Reynolds",
+   "b": "ρVc/μ."
+  },
+  {
+   "f": "Traînée induite",
+   "b": "Traînée due à la portance sur une aile finie."
+  },
+  {
+   "f": "L’air passant sur l’extrados doit rejoindre l’air passant sous l’intrados au bord de fuite (temps de transit égal).",
+   "b": "C’est faux ; l’écoulement supérieur arrive en fait le premier. NASA Glenn classe le transit égal parmi les théories incorrectes de la portance."
+  },
+  {
+   "f": "La portance, c’est seulement Bernoulli, ou seulement Newton.",
+   "b": "Les deux décrivent le même écoulement ; différences de pression et déviation de l’écoulement vont ensemble."
+  },
+  {
+   "f": "La traînée n’est que du frottement de l’air.",
+   "b": "La traînée de pression et la traînée induite sont souvent plus grandes."
+  },
+  {
+   "f": "Un avion de 1100 kg avec une aile de 16.2 m² vole en palier à 55 m/s au niveau de la mer (ρ = 1.227 kg/m³). Trouvez C_L.",
+   "b": "C_L ≈ 0.36."
+  },
+  {
+   "f": "Avec C_L,max = 1.6, trouvez la vitesse de décrochage de cet avion au niveau de la mer.",
+   "b": "V_s ≈ 26.1 m/s (environ 51 nœuds)."
+  },
+  {
+   "f": "Trouvez le nombre de Reynolds d’une corde de 1.5 m à 55 m/s au niveau de la mer (μ = 1.789 × 10⁻⁵ kg/(m·s)).",
+   "b": "Re ≈ 5.7 millions."
+  },
+  {
+   "f": "Si la vitesse double au même C_L, comment la portance change-t-elle ?",
+   "b": "Portance ∝ V², donc elle quadruple."
+  },
+  {
+   "f": "Trouvez la pression dynamique à 230 m/s à 11 km (ρ = 0.366 kg/m³).",
+   "b": "q = ½ × 0.366 × 230² ≈ 9,680 Pa."
+  },
+  {
+   "f": "Trouvez la traînée de l’avion de l’exemple 3.1 si C_D = 0.032.",
+   "b": "D = 1,855 × 16.2 × 0.032 ≈ 962 N."
+  },
+  {
+   "f": "De combien la vitesse de décrochage est-elle plus élevée à 1500 m (ρ = 1.060 kg/m³) qu’au niveau de la mer ?",
+   "b": "V_s ∝ 1/√ρ : √(1.227/1.060) = 1.076, donc environ 7.6% plus élevée (≈ 28.0 m/s de vitesse vraie)."
+  },
+  {
+   "f": "Une aile dévie l’écoulement vers le bas ; d’après la troisième loi de Newton, l’air pousse l’aile vers le haut. De manière équivalente, un écoulement plus rapide sur l’extrados signifie une pression plus basse à cet endroit (Bernoulli). Les deux décrivent un même écoulement.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "La pression dynamique q = ½ρV² fixe l’échelle de toute force aérodynamique. Les coefficients de portance et de traînée C_L et C_D traduisent la forme et l’angle d’attaque.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "La portance croît avec V², donc diviser la vitesse par deux exige quatre fois plus de coefficient de portance ou de surface alaire.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "La traînée provient du frottement, de la traînée de pression (de forme) et de la traînée induite, le prix à payer pour produire de la portance avec une aile finie.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Le nombre de Reynolds Re = ρVc/μ compare les effets d’inertie et de viscosité ; les maquettes en soufflerie doivent en tenir compte pour prédire le comportement en vraie grandeur.",
+   "b": "C’est écrit dans l’unité."
+  }
+ ]
+}

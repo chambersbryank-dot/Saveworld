@@ -1,0 +1,312 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Performance",
+   "q": "Glide ratio equals…",
+   "why": "Distance over height = L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "W/D",
+    "L/D",
+    "T/W",
+    "V/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performance",
+   "q": "Power required in level flight is…",
+   "why": "Drag times speed.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "L × V",
+    "D × V",
+    "W/V",
+    "T/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performance",
+   "q": "Breguet range grows with…",
+   "why": "R ∝ L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "c",
+    "L/D",
+    "structure weight",
+    "drag"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Performance",
+   "q": "Climb comes from…",
+   "why": "RC = excess power/W.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "excess power",
+    "extra lift only",
+    "lower weight only",
+    "lower speed"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "A heavier glider glides farther.",
+   "why": "Glide ratio depends on L/D, not weight; weight changes the best speed.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "Range depends only on the fuel load.",
+   "why": "It depends on engine efficiency, L/D and the weight fraction (Breguet).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "Flying faster always gives more range.",
+   "why": "Best range comes at a moderate speed tied to the best L/D.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "A sailplane with L/D = 20 is 1,000 m up. How far can it glide in still air, and at what angle? Give your answer in km.",
+   "why": "20 km, at a glide angle of about 2.9°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.5,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "A jet cruises at 230 m/s with L/D = 17 and thrust-specific fuel consumption c = 0.6 per hour. Burning fuel lowers its weight from W_i to W_i/1.25. Find its range. Give your answer in km.",
+   "why": "≈ 5,235 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 5235,
+   "tol": 60,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "The Example 3.1 airplane, with the Example 4.3 drag polar, has about 957 N of drag at 55 m/s. What power does level flight require? Give your answer in kW.",
+   "why": "≈ 52.6 kW (about 71 hp).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 52.6,
+   "tol": 1,
+   "unit": "kW"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "A paper glider has L/D = 5. Launched level from 2 m, about how far does it glide?",
+   "why": "10 m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 10,
+   "tol": 0.2,
+   "unit": "m"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "An aircraft weighing 10,800 N has 30 kW of excess power. Find its rate of climb. Give your answer in m/s.",
+   "why": "30,000/10,800 ≈ 2.8 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 2.8,
+   "tol": 0.2,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "In Example 5.2, how does range change if L/D rises from 17 to 20? Give your answer in km.",
+   "why": "Range ∝ L/D: 5,235 × 20/17 ≈ 6,159 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 6159,
+   "tol": 50,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Performance",
+   "q": "How far can the Example 4.3 airplane glide from 1,500 m at its best L/D of 13.7? Give your answer in km.",
+   "why": "1,500 × 13.7 ≈ 20.6 km.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": 20.6,
+   "tol": 0.4,
+   "unit": "km"
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "The Breguet equation is aviation’s climate equation: for a given trip, fuel burned falls when engines get more efficient, wings get higher L/D, or structures get lighter. With the other terms fixed, range is proportional to L/D.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "NASA estimates that with today’s fleet and operations, worldwide air traffic in 2050 would need more than 620 million tonnes of fuel and emit close to 2,000 million tonnes of CO₂, which is why every term in the equation matters.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "A glider with lift-to-drag ratio L/D travels L/D meters forward for every meter of height lost: tan γ = D/L.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "Thrust required in level flight equals drag; power required is drag × speed. Excess power becomes climb: rate of climb = (P_avail − P_req)/W.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "For a jet, range follows the Breguet equation: R = (V/c)(L/D) ln(W_i/W_f). Three levers: engine efficiency (V/c), aerodynamics (L/D) and structures (weight fraction).",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Performance",
+   "q": "Endurance (time aloft) is maximized at a different speed than range.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/glide-angle/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Glide ratio",
+   "b": "Horizontal distance per unit height = L/D."
+  },
+  {
+   "f": "Power required",
+   "b": "P_R = DV."
+  },
+  {
+   "f": "Rate of climb",
+   "b": "(P_A − P_R)/W."
+  },
+  {
+   "f": "Breguet range",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f)."
+  },
+  {
+   "f": "TSFC",
+   "b": "Fuel flow per unit thrust."
+  },
+  {
+   "f": "Endurance",
+   "b": "Time aloft."
+  },
+  {
+   "f": "A heavier glider glides farther.",
+   "b": "Glide ratio depends on L/D, not weight; weight changes the best speed."
+  },
+  {
+   "f": "Range depends only on the fuel load.",
+   "b": "It depends on engine efficiency, L/D and the weight fraction (Breguet)."
+  },
+  {
+   "f": "Flying faster always gives more range.",
+   "b": "Best range comes at a moderate speed tied to the best L/D."
+  },
+  {
+   "f": "A sailplane with L/D = 20 is 1,000 m up. How far can it glide in still air, and at what angle?",
+   "b": "20 km, at a glide angle of about 2.9°."
+  },
+  {
+   "f": "A jet cruises at 230 m/s with L/D = 17 and thrust-specific fuel consumption c = 0.6 per hour. Burning fuel lowers its weight from W_i to W_i/1.25. Find its range.",
+   "b": "≈ 5,235 km."
+  },
+  {
+   "f": "The Example 3.1 airplane, with the Example 4.3 drag polar, has about 957 N of drag at 55 m/s. What power does level flight require?",
+   "b": "≈ 52.6 kW (about 71 hp)."
+  },
+  {
+   "f": "A paper glider has L/D = 5. Launched level from 2 m, about how far does it glide?",
+   "b": "10 m."
+  },
+  {
+   "f": "An aircraft weighing 10,800 N has 30 kW of excess power. Find its rate of climb.",
+   "b": "30,000/10,800 ≈ 2.8 m/s."
+  },
+  {
+   "f": "In Example 5.2, how does range change if L/D rises from 17 to 20?",
+   "b": "Range ∝ L/D: 5,235 × 20/17 ≈ 6,159 km."
+  },
+  {
+   "f": "How far can the Example 4.3 airplane glide from 1,500 m at its best L/D of 13.7?",
+   "b": "1,500 × 13.7 ≈ 20.6 km."
+  },
+  {
+   "f": "A glider with lift-to-drag ratio L/D travels L/D meters forward for every meter of height lost",
+   "b": "tan γ = D/L."
+  },
+  {
+   "f": "Thrust required in level flight equals drag; power required is drag × speed. Excess power becomes climb",
+   "b": "rate of climb = (P_avail − P_req)/W."
+  },
+  {
+   "f": "For a jet, range follows the Breguet equation",
+   "b": "R = (V/c)(L/D) ln(W_i/W_f). Three levers: engine efficiency (V/c), aerodynamics (L/D) and structures (weight fraction)."
+  },
+  {
+   "f": "Endurance (time aloft) is maximized at a different speed than range.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "The Breguet equation is aviation’s climate equation",
+   "b": "for a given trip, fuel burned falls when engines get more efficient, wings get higher L/D, or structures get lighter. With the other terms fixed, range is proportional to L/D."
+  },
+  {
+   "f": "NASA estimates that with today’s fleet and operations, worldwide air traffic in ____would need more than 620 million tonnes of fuel and emit close to 2,000 million tonnes of CO₂, which is why every term in the equation matters.",
+   "b": "NASA estimates that with today’s fleet and operations, worldwide air traffic in 2050 would need more than 620 million tonnes of fuel and emit close to 2,000 million tonnes of CO₂, which is why every term in the equation matters."
+  }
+ ]
+}

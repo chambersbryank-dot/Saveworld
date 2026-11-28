@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Orbits",
+   "q": "Circular orbital speed is…",
+   "why": "Gravity supplies the centripetal force.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "√(μr)",
+    "√(μ/r)",
+    "μ/r²",
+    "2πr"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbits",
+   "q": "At 400 km a spacecraft orbits Earth about every…",
+   "why": "≈ 92.4 minutes.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "24 h",
+    "92 min",
+    "10 min",
+    "1 week"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbits",
+   "q": "A Hohmann transfer uses…",
+   "why": "One at each end of the transfer ellipse.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "one burn",
+    "two burns",
+    "continuous thrust only",
+    "aerobraking only"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbits",
+   "q": "Geostationary radius ≈",
+   "why": "Kepler’s third law with one sidereal day.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "6,771 km",
+    "42,164 km",
+    "384,400 km",
+    "20,000 km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Astronauts float because there is no gravity in orbit.",
+   "why": "At 400 km gravity is about 89% of its surface value; they are in free fall.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "To catch a spacecraft ahead of you, just speed up.",
+   "why": "Speeding up raises your orbit and lowers your angular rate.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Higher orbits need more speed.",
+   "why": "Circular speed falls with height, though reaching higher orbits takes more total Δv.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Orbits",
+   "q": "Find the speed and period of a circular orbit 400 km up. Give your answer in km/s.",
+   "why": "7.67 km/s and ≈ 92.4 minutes.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7.67,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbits",
+   "q": "Find the geostationary radius. Give your answer in km.",
+   "why": "≈ 42,164 km from Earth’s center (about 35,786 km above the equator).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 42164,
+   "tol": 80,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Orbits",
+   "q": "Find the Hohmann Δv from a 300 km circular orbit to geostationary radius. Give your answer in km/s.",
+   "why": "Total ≈ 3.90 km/s; transfer ≈ 5.27 hours (ignoring any plane change).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 3.9,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbits",
+   "q": "Find v for a circular orbit at r = 7,000 km. Give your answer in m/s.",
+   "why": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7546,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "T ∝ r^(3/2): 8 times longer.",
+   "why": "This is stated in the unit. If the orbit radius quadruples, how does the period change?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "They stay over one spot and can image the same hemisphere continuously.",
+   "why": "This is stated in the unit. Why are many weather satellites geostationary?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Climate monitoring depends on orbit choice. Sun-synchronous orbits let Landsat image the same place under similar lighting, so changes in forests, crops and ice stand out, while geostationary weather satellites watch storms develop continuously.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Orbits also need care: debris threatens these missions, so spacecraft are increasingly designed to be disposed of at the end of their lives.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "In a circular orbit gravity supplies the centripetal force: v = √(μ/r), with μ = GM.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Kepler’s third law: T = 2π√(a³/μ). Higher orbits are slower and take longer.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "A geostationary orbit has a period of one sidereal day (86,164 s) and sits over the equator at a radius of about 42,164 km.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "A Hohmann transfer uses two burns along an ellipse that touches both circular orbits; it is the most efficient two-burn transfer between coplanar circular orbits.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbits",
+   "q": "Low Earth orbit (about 400 km for the ISS), sun-synchronous polar orbits for imaging, and geostationary orbit for weather each serve different missions.",
+   "why": "This is stated in the unit.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Circular speed",
+   "b": "√(μ/r)."
+  },
+  {
+   "f": "Kepler’s third law",
+   "b": "T = 2π√(a³/μ)."
+  },
+  {
+   "f": "Vis-viva",
+   "b": "v² = μ(2/r − 1/a)."
+  },
+  {
+   "f": "Hohmann transfer",
+   "b": "Two-burn elliptical transfer."
+  },
+  {
+   "f": "GEO",
+   "b": "Period = 1 sidereal day; r ≈ 42,164 km."
+  },
+  {
+   "f": "Sun-synchronous orbit",
+   "b": "Near-polar orbit that passes over each place at about the same local time."
+  },
+  {
+   "f": "Astronauts float because there is no gravity in orbit.",
+   "b": "At 400 km gravity is about 89% of its surface value; they are in free fall."
+  },
+  {
+   "f": "To catch a spacecraft ahead of you, just speed up.",
+   "b": "Speeding up raises your orbit and lowers your angular rate."
+  },
+  {
+   "f": "Higher orbits need more speed.",
+   "b": "Circular speed falls with height, though reaching higher orbits takes more total Δv."
+  },
+  {
+   "f": "Find the speed and period of a circular orbit 400 km up.",
+   "b": "7.67 km/s and ≈ 92.4 minutes."
+  },
+  {
+   "f": "Find the geostationary radius.",
+   "b": "≈ 42,164 km from Earth’s center (about 35,786 km above the equator)."
+  },
+  {
+   "f": "Find the Hohmann Δv from a 300 km circular orbit to geostationary radius.",
+   "b": "Total ≈ 3.90 km/s; transfer ≈ 5.27 hours (ignoring any plane change)."
+  },
+  {
+   "f": "Find v for a circular orbit at r = 7,000 km.",
+   "b": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s."
+  },
+  {
+   "f": "If the orbit radius quadruples, how does the period change?",
+   "b": "T ∝ r^(3/2): 8 times longer."
+  },
+  {
+   "f": "Why are many weather satellites geostationary?",
+   "b": "They stay over one spot and can image the same hemisphere continuously."
+  },
+  {
+   "f": "In a circular orbit gravity supplies the centripetal force",
+   "b": "v = √(μ/r), with μ = GM."
+  },
+  {
+   "f": "A geostationary orbit has a period of one sidereal day (____s) and sits over the equator at a radius of about 42,164 km.",
+   "b": "A geostationary orbit has a period of one sidereal day (86,164 s) and sits over the equator at a radius of about 42,164 km."
+  },
+  {
+   "f": "A Hohmann transfer uses two burns along an ellipse that touches both circular orbits; it is the most efficient two-burn transfer between coplanar circular orbits.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Low Earth orbit (about ____km for the ISS), sun-synchronous polar orbits for imaging, and geostationary orbit for weather each serve different missions.",
+   "b": "Low Earth orbit (about 400 km for the ISS), sun-synchronous polar orbits for imaging, and geostationary orbit for weather each serve different missions."
+  },
+  {
+   "f": "Orbits also need care",
+   "b": "debris threatens these missions, so spacecraft are increasingly designed to be disposed of at the end of their lives."
+  }
+ ]
+}

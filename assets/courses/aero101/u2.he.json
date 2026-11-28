@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "אטמוספרה",
+   "q": "בטרופוספרה הטמפרטורה יורדת בערך…",
+   "why": "קצב הירידה של NASA הוא 0.00649 °C/m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "1 °C/km",
+    "6.5 °C/km",
+    "15 °C/km",
+    "0 °C/km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "מהירות הקול",
+   "q": "מהירות הקול בגובה פני הים היא בערך…",
+   "why": "√(1.4 × 287 × 288).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "100 m/s",
+    "340 m/s",
+    "1,000 m/s",
+    "3,000 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "אטמוספרה",
+   "q": "הצפיפות בגובה 11 km היא בערך איזה חלק מזו שבגובה פני הים?",
+   "why": "0.366/1.227.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "90%",
+    "60%",
+    "30%",
+    "5%"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "מהירות הקול",
+   "q": "מספר מאך הוא…",
+   "why": "המהירות חלקי מהירות הקול המקומית.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "V × a",
+    "V/a",
+    "a/V",
+    "V²/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "מהירות הקול תלויה בלחץ.",
+   "why": "בגז אידיאלי היא תלויה רק בטמפרטורה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "נעשה קר יותר כל הדרך למעלה.",
+   "why": "הטמפרטורה מתייצבת מעל 11 km ועולה שוב גבוה יותר בסטרטוספרה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "אוויר דליל יותר תמיד עוזר.",
+   "why": "הוא מקטין את הגרר אבל גם את העילוי ואת דחף המנוע, ולכן הכנפיים חייבות לטוס מהר יותר או במקדמי עילוי גבוהים יותר.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "אטמוספרה",
+   "q": "מטוס נוסעים טס במהירות אוויר אמיתית של 230 m/s בגובה 11 km. מה מספר המאך שלו?",
+   "why": "M ≈ 0.78.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": 0.78,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "אטמוספרה",
+   "q": "מצאו את צפיפות האוויר בגובה 11000 m לפי מודל NASA (T = −56.46 °C, p = 22.72 kPa). כתבו את התשובה ב-kg/m³.",
+   "why": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, כ-30% מגובה פני הים.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": 0.366,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "num",
+   "topic": "אטמוספרה",
+   "q": "מצאו את הטמפרטורה בגובה 1500 m במודל של NASA. כתבו את התשובה ב-°C.",
+   "why": "T = 15.04 − 9.74 = 5.3 °C.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": 5.3,
+   "tol": 0.2,
+   "unit": "°C"
+  },
+  {
+   "type": "num",
+   "topic": "אטמוספרה",
+   "q": "כמה זה מאך 2 בגובה פני הים ב-m/s?",
+   "why": "2 × 340 = 680 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": 680,
+   "tol": 5,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "אטמוספרה",
+   "q": "מצאו את הצפיפות בגובה פני הים מתוך p = 101.40 kPa ו-T = 15.04 °C. כתבו את התשובה ב-kg/m³.",
+   "why": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": 1.227,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% מגובה פני הים).",
+   "why": "זה כתוב ביחידה. מצאו את T, p ו-ρ בגובה 5000 m לפי המודל של NASA.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "340 m/s ו-295 m/s.",
+   "why": "זה כתוב ביחידה. מצאו את מהירות הקול בגובה פני הים (15 °C) ובגובה 11 km (−56.5 °C).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "מטוסים טסים במקום שבו מתרחשים מזג האוויר והאקלים. NASA חוקרת פליטות של מטוסים באמצעות מידול ממוחשב, ניסויי בעירה במעבדה וניסויי טיסה, כי מה שמנועים פולטים בגובה חשוב לאטמוספרה.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "אותה פיזיקה של האטמוספרה מאפשרת ללוויינים להפוך את הקרינה שהם מודדים לפרופילים של טמפרטורת האוויר.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "אטמוספרה תקנית היא מודל ממוצע שהותאם למדידות. במודל של NASA הטרופוספרה משתרעת מהקרקע עד 11000 m, והטמפרטורה יורדת בכ-6.5 °C לכל קילומטר.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "מ-11 עד 25 km (הסטרטוספרה התחתונה) טמפרטורת המודל קבועה ב-−56.46 °C, בעוד הלחץ ממשיך לרדת באופן מעריכי.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "הצפיפות נובעת מחוק הגז האידיאלי, ρ = p/(RT). בגובה 11 km צפיפות האוויר היא כ-30% מזו שבגובה פני הים.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "אטמוספרה",
+   "q": "מהירות הקול היא a = √(γRT), ולכן היא תלויה רק בטמפרטורה. מספר מאך M = V/a.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "אטמוספרה תקנית",
+   "b": "מודל ממוצע של T, p, ρ כפונקציה של הגובה."
+  },
+  {
+   "f": "טרופוספרה",
+   "b": "מהקרקע עד ~11 km; הטמפרטורה יורדת עם הגובה."
+  },
+  {
+   "f": "קצב הירידה בטמפרטורה",
+   "b": "≈ 6.5 °C לכל km בטרופוספרה."
+  },
+  {
+   "f": "חוק הגז האידיאלי",
+   "b": "p = ρRT."
+  },
+  {
+   "f": "מהירות הקול",
+   "b": "a = √(γRT)."
+  },
+  {
+   "f": "מספר מאך",
+   "b": "M = V/a."
+  },
+  {
+   "f": "מהירות הקול תלויה בלחץ.",
+   "b": "בגז אידיאלי היא תלויה רק בטמפרטורה."
+  },
+  {
+   "f": "נעשה קר יותר כל הדרך למעלה.",
+   "b": "הטמפרטורה מתייצבת מעל 11 km ועולה שוב גבוה יותר בסטרטוספרה."
+  },
+  {
+   "f": "אוויר דליל יותר תמיד עוזר.",
+   "b": "הוא מקטין את הגרר אבל גם את העילוי ואת דחף המנוע, ולכן הכנפיים חייבות לטוס מהר יותר או במקדמי עילוי גבוהים יותר."
+  },
+  {
+   "f": "מצאו את T, p ו-ρ בגובה 5000 m לפי המודל של NASA.",
+   "b": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% מגובה פני הים)."
+  },
+  {
+   "f": "מצאו את מהירות הקול בגובה פני הים (15 °C) ובגובה 11 km (−56.5 °C).",
+   "b": "340 m/s ו-295 m/s."
+  },
+  {
+   "f": "מטוס נוסעים טס במהירות אוויר אמיתית של 230 m/s בגובה 11 km. מה מספר המאך שלו?",
+   "b": "M ≈ 0.78."
+  },
+  {
+   "f": "מצאו את צפיפות האוויר בגובה 11000 m לפי מודל NASA (T = −56.46 °C, p = 22.72 kPa).",
+   "b": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, כ-30% מגובה פני הים."
+  },
+  {
+   "f": "מצאו את הטמפרטורה בגובה 1500 m במודל של NASA.",
+   "b": "T = 15.04 − 9.74 = 5.3 °C."
+  },
+  {
+   "f": "כמה זה מאך 2 בגובה פני הים ב-m/s?",
+   "b": "2 × 340 = 680 m/s."
+  },
+  {
+   "f": "מצאו את הצפיפות בגובה פני הים מתוך p = 101.40 kPa ו-T = 15.04 °C.",
+   "b": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³."
+  },
+  {
+   "f": "אטמוספרה תקנית היא מודל ממוצע שהותאם למדידות. במודל של NASA הטרופוספרה משתרעת מהקרקע עד ____m, והטמפרטורה יורדת בכ-6.5 °C לכל קילומטר.",
+   "b": "אטמוספרה תקנית היא מודל ממוצע שהותאם למדידות. במודל של NASA הטרופוספרה משתרעת מהקרקע עד 11000 m, והטמפרטורה יורדת בכ-6.5 °C לכל קילומטר."
+  },
+  {
+   "f": "מ____עד 25 km (הסטרטוספרה התחתונה) טמפרטורת המודל קבועה ב-−56.46 °C, בעוד הלחץ ממשיך לרדת באופן מעריכי.",
+   "b": "מ-11 עד 25 km (הסטרטוספרה התחתונה) טמפרטורת המודל קבועה ב-−56.46 °C, בעוד הלחץ ממשיך לרדת באופן מעריכי."
+  },
+  {
+   "f": "הצפיפות נובעת מחוק הגז האידיאלי, ρ = p/(RT). בגובה ____km צפיפות האוויר היא כ-30% מזו שבגובה פני הים.",
+   "b": "הצפיפות נובעת מחוק הגז האידיאלי, ρ = p/(RT). בגובה 11 km צפיפות האוויר היא כ-30% מזו שבגובה פני הים."
+  },
+  {
+   "f": "מהירות הקול היא a = √(γRT), ולכן היא תלויה רק בטמפרטורה. מספר מאך M = V/a.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "אוויר דליל פירושו פחות גרר במהירות נתונה, ולכן מטוסי סילון טסים גבוה, אבל כנפיים ומנועים עדיין צריכים מספיק אוויר כדי לפעול.",
+   "b": "זה כתוב ביחידה."
+  }
+ ]
+}

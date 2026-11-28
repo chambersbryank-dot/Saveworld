@@ -1,0 +1,302 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Stability",
+   "q": "Ailerons control…",
+   "why": "They deflect in opposite directions on each wing.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "pitch",
+    "roll",
+    "yaw",
+    "thrust"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stability",
+   "q": "For pitch stability the CG must be…",
+   "why": "Positive static margin.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "behind the neutral point",
+    "ahead of the neutral point",
+    "at the tail",
+    "at the wingtip"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stability",
+   "q": "A static margin of 0.15 means…",
+   "why": "Positive margin.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "unstable",
+    "stable",
+    "neutral",
+    "stalled"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stability",
+   "q": "Dynamic stability concerns…",
+   "why": "Whether oscillations die out.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "the initial tendency",
+    "the motion over time",
+    "engine thrust",
+    "weight only"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "Statically stable means the oscillation dies out.",
+   "why": "That is dynamic stability; static stability is the initial tendency.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "More stability is always better.",
+   "why": "Too much makes control heavy and wastes trim drag.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "The CG can be anywhere as long as the wing lifts.",
+   "why": "An aft CG makes the aircraft unstable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Stability",
+   "q": "The neutral point is at 40% of the mean chord and the CG at 25%. Find the static margin.",
+   "why": "0.15, or 15%: stable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.15,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stability",
+   "q": "A glider has a 50 g wing at x = 10 cm, a 10 g tail at x = 40 cm and 20 g of nose weight at x = 0. Find the CG.",
+   "why": "x_cg = 11.25 cm from the nose.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 11.25,
+   "tol": 0.05,
+   "unit": "cm"
+  },
+  {
+   "type": "num",
+   "topic": "Stability",
+   "q": "For the Example 6.2 glider (mean chord 8 cm), the neutral point is at 13 cm. Is it stable?",
+   "why": "SM ≈ 0.22: stable. Remove nose weight and the CG moves aft toward instability.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.22,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stability",
+   "q": "In Example 6.2, how much nose weight m puts the CG at 12 cm?",
+   "why": "900/(60 + m) = 12 gives m = 15 g.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 15,
+   "tol": 0.2,
+   "unit": "g"
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "The elevator, on the horizontal tail.",
+   "why": "This is stated in the unit. Which surface controls pitch?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "SM = −0.02 < 0: statically unstable.",
+   "why": "This is stated in the unit. CG at 30% chord, neutral point at 28%. Stable?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "Its CG is too far aft, near or behind the neutral point.",
+   "why": "This is stated in the unit. Why does a paper airplane with no nose weight pitch up and stall?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "Stability margins cost fuel: a conventional tail usually pushes down to balance the aircraft, and the wing must make extra lift, with extra drag, to carry it. Trimming that penalty is part of the efficient-aircraft path NASA describes.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "The same balance and control ideas keep Earth-observing satellites pointed steadily so their instruments can map the planet.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "An aircraft rotates about its center of gravity: pitch (elevator), roll (ailerons), yaw (rudder).",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "Static stability: after a disturbance, the aircraft initially tends to return. Dynamic stability: the motion actually dies out over time.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "Pitch stability needs the center of gravity ahead of the neutral point. Static margin = (x_np − x_cg)/c̄ must be positive.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stability",
+   "q": "A tail far behind the CG works like the feathers on an arrow: a nose-up disturbance raises the tail’s lift and pushes the nose back down.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Pitch / roll / yaw",
+   "b": "Elevator / ailerons / rudder."
+  },
+  {
+   "f": "Static stability",
+   "b": "Initial tendency to return."
+  },
+  {
+   "f": "Dynamic stability",
+   "b": "Disturbance dies out over time."
+  },
+  {
+   "f": "Neutral point",
+   "b": "CG location for neutral pitch stability."
+  },
+  {
+   "f": "Static margin",
+   "b": "(x_np − x_cg)/c̄."
+  },
+  {
+   "f": "Trim",
+   "b": "Balanced, zero net moment."
+  },
+  {
+   "f": "Statically stable means the oscillation dies out.",
+   "b": "That is dynamic stability; static stability is the initial tendency."
+  },
+  {
+   "f": "More stability is always better.",
+   "b": "Too much makes control heavy and wastes trim drag."
+  },
+  {
+   "f": "The CG can be anywhere as long as the wing lifts.",
+   "b": "An aft CG makes the aircraft unstable."
+  },
+  {
+   "f": "The neutral point is at 40% of the mean chord and the CG at 25%. Find the static margin.",
+   "b": "0.15, or 15%: stable."
+  },
+  {
+   "f": "A glider has a 50 g wing at x = 10 cm, a 10 g tail at x = 40 cm and 20 g of nose weight at x = 0. Find the CG.",
+   "b": "x_cg = 11.25 cm from the nose."
+  },
+  {
+   "f": "For the Example 6.2 glider (mean chord 8 cm), the neutral point is at 13 cm. Is it stable?",
+   "b": "SM ≈ 0.22: stable. Remove nose weight and the CG moves aft toward instability."
+  },
+  {
+   "f": "Which surface controls pitch?",
+   "b": "The elevator, on the horizontal tail."
+  },
+  {
+   "f": "CG at 30% chord, neutral point at 28%. Stable?",
+   "b": "SM = −0.02 < 0: statically unstable."
+  },
+  {
+   "f": "In Example 6.2, how much nose weight m puts the CG at 12 cm?",
+   "b": "900/(60 + m) = 12 gives m = 15 g."
+  },
+  {
+   "f": "Why does a paper airplane with no nose weight pitch up and stall?",
+   "b": "Its CG is too far aft, near or behind the neutral point."
+  },
+  {
+   "f": "An aircraft rotates about its center of gravity",
+   "b": "pitch (elevator), roll (ailerons), yaw (rudder)."
+  },
+  {
+   "f": "Pitch stability needs the center of gravity ahead of the neutral point. Static margin = (x_np − x_cg)/c̄ must be positive.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "A tail far behind the CG works like the feathers on an arrow",
+   "b": "a nose-up disturbance raises the tail’s lift and pushes the nose back down."
+  },
+  {
+   "f": "Too much stability makes an aircraft sluggish and costs trim drag; some modern fighters are designed unstable and flown by computer.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Stability margins cost fuel",
+   "b": "a conventional tail usually pushes down to balance the aircraft, and the wing must make extra lift, with extra drag, to carry it. Trimming that penalty is part of the efficient-aircraft path NASA describes."
+  }
+ ]
+}

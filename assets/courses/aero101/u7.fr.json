@@ -1,0 +1,296 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Poussée d’un moteur aérobie ≈",
+   "why": "Variation de quantité de mouvement par seconde.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "ṁv₀",
+    "ṁ(v_e − v₀)",
+    "ṁv_e²",
+    "ρV²"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Le rendement propulsif est maximal quand v_e/v₀ est…",
+   "why": "η_p = 2/(1 + v_e/v₀).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "grand",
+    "proche de 1",
+    "zéro",
+    "négatif"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Dans une turbosoufflante à grand taux de dilution, la majeure partie de l’air…",
+   "why": "Le flux de la soufflante.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "traverse la chambre de combustion",
+    "contourne le cœur",
+    "est stockée",
+    "est chauffée à 2000 K"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "I_sp se mesure en…",
+   "why": "Poussée par débit de poids d’ergol.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "m/s",
+    "secondes",
+    "newtons",
+    "kg"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Les réacteurs poussent sur l’air derrière eux.",
+   "why": "Ils accélèrent l’air à travers le moteur ; la réaction à cette accélération est la poussée.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Une éjection plus rapide signifie toujours un meilleur moteur.",
+   "why": "Pour le rendement, la vitesse d’éjection doit être proche de la vitesse de vol.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "L’impulsion spécifique est une vitesse.",
+   "why": "Elle se mesure en secondes ; I_sp × g₀ est une vitesse d’éjection effective.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "Une turbosoufflante accélère 500 kg/s d’air de 250 m/s à 320 m/s. Trouvez la poussée et le rendement propulsif. Donnez la réponse en kN.",
+   "why": "F = 35 kN, η_p ≈ 0.88.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 35,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "Un moteur produit 100 kN en brûlant 2.5 kg/s de carburant. Trouvez son I_sp.",
+   "why": "≈ 4079 s. Les moteurs aérobies battent les fusées sur ce critère car ils n’emportent pas leur comburant.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 4079,
+   "tol": 40,
+   "unit": "s"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "Trouvez la poussée pour ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s. Donnez la réponse en kN.",
+   "why": "20 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.3,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "1.0, mais la poussée est nulle : rendement et poussée s’opposent.",
+   "why": "C’est écrit dans l’unité. Trouvez η_p quand v_e = v₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Elles déplacent lentement une grande masse d’air, ce qui augmente le rendement propulsif et réduit la consommation et le bruit.",
+   "why": "C’est écrit dans l’unité. Pourquoi les avions de ligne utilisent-ils des turbosoufflantes à grand taux de dilution ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "v_e = 600 m/s, η_p ≈ 0.59 : bien moins efficace.",
+   "why": "C’est écrit dans l’unité. Un turboréacteur produit les mêmes 35 kN avec 100 kg/s d’air à v₀ = 250 m/s. Quelle vitesse d’éjection lui faut-il, et que vaut η_p ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Un meilleur rendement propulsif, c’est directement du carburant et du CO₂ économisés. Chaque kilogramme de kérosène brûlé produit environ 3.16 kg de CO₂ (le carbone du carburant combiné à l’oxygène de l’air ; voir l’unité 10), donc les gains de rendement s’additionnent sur les décennies de service d’un moteur.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Le carburant d’aviation durable, fabriqué à partir de déchets et de biomasse, est mélangé de façon à reproduire les propriétés du kérosène conventionnel pour une exploitation sûre. La NASA note que le SAF ne libère pas de nouveau CO₂ dans l’environnement.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Tout moteur produit de la poussée en accélérant un débit massique : F = ṁ(v_e − v₀) pour un moteur aérobie (en négligeant la masse du carburant et les termes de pression).",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Rendement propulsif η_p = 2/(1 + v_e/v₀) : déplacer beaucoup d’air un peu est plus efficace que déplacer peu d’air beaucoup. C’est pourquoi les turbosoufflantes ont d’énormes soufflantes.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Turboréacteur : tout l’air passe par le cœur. Turbosoufflante : la majeure partie de l’air contourne le cœur via la soufflante. Turbopropulseur : une hélice entraînée par une turbine à gaz.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "L’impulsion spécifique I_sp = F/(ṁ_fuel g₀) mesure la poussée par débit de poids de carburant, en secondes.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Cette unité vous demande de : Utiliser l’équation de poussée par la quantité de mouvement.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Poussée par quantité de mouvement",
+   "b": "F = ṁ(v_e − v₀)."
+  },
+  {
+   "f": "Rendement propulsif",
+   "b": "2/(1 + v_e/v₀)."
+  },
+  {
+   "f": "Turbosoufflante",
+   "b": "Soufflante plus cœur ; la majeure partie de l’air contourne le cœur."
+  },
+  {
+   "f": "Taux de dilution",
+   "b": "Air secondaire ÷ air du cœur."
+  },
+  {
+   "f": "Impulsion spécifique",
+   "b": "F/(ṁ g₀), en secondes."
+  },
+  {
+   "f": "TSFC",
+   "b": "Débit de carburant par unité de poussée."
+  },
+  {
+   "f": "Les réacteurs poussent sur l’air derrière eux.",
+   "b": "Ils accélèrent l’air à travers le moteur ; la réaction à cette accélération est la poussée."
+  },
+  {
+   "f": "Une éjection plus rapide signifie toujours un meilleur moteur.",
+   "b": "Pour le rendement, la vitesse d’éjection doit être proche de la vitesse de vol."
+  },
+  {
+   "f": "L’impulsion spécifique est une vitesse.",
+   "b": "Elle se mesure en secondes ; I_sp × g₀ est une vitesse d’éjection effective."
+  },
+  {
+   "f": "Une turbosoufflante accélère 500 kg/s d’air de 250 m/s à 320 m/s. Trouvez la poussée et le rendement propulsif.",
+   "b": "F = 35 kN, η_p ≈ 0.88."
+  },
+  {
+   "f": "Un turboréacteur produit les mêmes 35 kN avec 100 kg/s d’air à v₀ = 250 m/s. Quelle vitesse d’éjection lui faut-il, et que vaut η_p ?",
+   "b": "v_e = 600 m/s, η_p ≈ 0.59 : bien moins efficace."
+  },
+  {
+   "f": "Un moteur produit 100 kN en brûlant 2.5 kg/s de carburant. Trouvez son I_sp.",
+   "b": "≈ 4079 s. Les moteurs aérobies battent les fusées sur ce critère car ils n’emportent pas leur comburant."
+  },
+  {
+   "f": "Trouvez la poussée pour ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+   "b": "20 kN."
+  },
+  {
+   "f": "Trouvez η_p quand v_e = v₀.",
+   "b": "1.0, mais la poussée est nulle : rendement et poussée s’opposent."
+  },
+  {
+   "f": "Pourquoi les avions de ligne utilisent-ils des turbosoufflantes à grand taux de dilution ?",
+   "b": "Elles déplacent lentement une grande masse d’air, ce qui augmente le rendement propulsif et réduit la consommation et le bruit."
+  },
+  {
+   "f": "Tout moteur produit de la poussée en accélérant un débit massique",
+   "b": "F = ṁ(v_e − v₀) pour un moteur aérobie (en négligeant la masse du carburant et les termes de pression)."
+  },
+  {
+   "f": "Rendement propulsif η_p = 2/(1 + v_e/v₀)",
+   "b": "déplacer beaucoup d’air un peu est plus efficace que déplacer peu d’air beaucoup. C’est pourquoi les turbosoufflantes ont d’énormes soufflantes."
+  },
+  {
+   "f": "Turboréacteur",
+   "b": "tout l’air passe par le cœur. Turbosoufflante : la majeure partie de l’air contourne le cœur via la soufflante. Turbopropulseur : une hélice entraînée par une turbine à gaz."
+  },
+  {
+   "f": "L’impulsion spécifique I_sp = F/(ṁ_fuel g₀) mesure la poussée par débit de poids de carburant, en secondes.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Un meilleur rendement propulsif, c’est directement du carburant et du CO₂ économisés. Chaque kilogramme de kérosène brûlé produit environ ____kg de CO₂ (le carbone du carburant combiné à l’oxygène de l’air ; voir l’unité 10), donc les gains de rendement s’additionnent sur les décennies de service d’un moteur.",
+   "b": "Un meilleur rendement propulsif, c’est directement du carburant et du CO₂ économisés. Chaque kilogramme de kérosène brûlé produit environ 3.16 kg de CO₂ (le carbone du carburant combiné à l’oxygène de l’air ; voir l’unité 10), donc les gains de rendement s’additionnent sur les décennies de service d’un moteur."
+  }
+ ]
+}

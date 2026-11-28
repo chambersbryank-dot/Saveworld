@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Forces",
+   "q": "En vol stabilisé en palier, la portance est égale…",
+   "why": "Les forces verticales s’équilibrent.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "à la poussée",
+    "à la traînée",
+    "au poids",
+    "zéro"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Histoire",
+   "q": "Le Wright Flyer a volé pour la première fois le…",
+   "why": "17 décembre 1903, à Kitty Hawk.",
+   "src": "https://airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000",
+   "srcName": "Smithsonian",
+   "opts": [
+    "1899",
+    "1903",
+    "1911",
+    "1927"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Conception",
+   "q": "Une étude de compromis…",
+   "why": "Elle classe les options de façon systématique.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "choisit la pièce la moins chère",
+    "compare des options selon des critères pondérés",
+    "teste un prototype jusqu’à la rupture",
+    "se fait après les essais en vol"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Conception",
+   "q": "La première étape du processus de conception est…",
+   "why": "Les exigences déterminent tout ce qui suit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "les plans détaillés",
+    "la mission et les exigences",
+    "l’essai en vol",
+    "le choix d’un moteur"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Les ingénieurs conçoivent d’abord l’avion, puis lui trouvent une mission.",
+   "why": "La mission et ses exigences viennent en premier.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "En vol en palier, la poussée doit équilibrer le poids.",
+   "why": "La poussée équilibre la traînée ; la portance équilibre le poids.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Gagner un peu de masse n’économise que cette masse.",
+   "why": "Les gains de masse se cumulent via la taille de l’aile, la traînée et le carburant.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "Un avion léger de 1100 kg vole en croisière en palier. Quelle portance son aile doit-elle produire ? Donnez la réponse en N.",
+   "why": "10,791 N ≈ 10.8 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 10791,
+   "tol": 50,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "Le premier vol du Wright Flyer a couvert 36 m en 12 s. Quelle était sa vitesse sol moyenne ? Donnez la réponse en m/s.",
+   "why": "3 m/s par rapport au sol. Il volait face à un fort vent de face, donc sa vitesse air était bien plus élevée.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 3,
+   "tol": 0.05,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "Un avion de ligne de masse 70000 kg vole en croisière en palier. Trouvez sa portance. Donnez la réponse en N.",
+   "why": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 686700,
+   "tol": 500,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Forces",
+   "q": "En croisière en palier, les moteurs d’un avion fournissent 30 kN de poussée. Quelle est sa traînée ?",
+   "why": "30 kN, car la poussée équilibre la traînée en vol stabilisé.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": 30,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Les données de portance publiées n’étaient pas fiables, alors ils ont mesuré eux-mêmes de nombreuses formes d’aile : tester avant de construire est le cœur du processus de conception.",
+   "why": "C’est écrit dans l’unité. Pourquoi les frères Wright ont-ils construit une soufflerie ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Égalité à 7.2 : l’équipe devrait tester les deux ou revoir les pondérations dont elle est le moins sûre.",
+   "why": "C’est écrit dans l’unité. Deux concepts d’aile sont notés sur 10 pour le coût (poids 0.3), l’efficacité (0.5) et la facilité de construction (0.2). Le concept A obtient 8, 6, 9 ; B obtient 5, 9, 6. Lequel l’emporte ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Les priorités de conception évoluent avec l’époque. Les exigences pour les nouveaux avions incluent désormais la consommation de carburant et les émissions, de sorte que les mêmes outils d’étude de compromis pèsent le climat au même titre que le coût et les performances.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "La NASA cite trois grandes voies pour rendre l’aviation durable : une technologie aéronautique efficace, les carburants d’aviation durables, et de meilleures opérations et infrastructures.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Le 17 décembre 1903, le Wright Flyer a effectué un vol de 12 secondes sur 36 m (120 ft) ; le meilleur vol de la journée a couvert 260 m (852 ft) en 59 secondes. Les Wright ont réussi en testant : ils ont construit des planeurs et leur propre soufflerie avant d’ajouter un moteur.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Toute conception commence par une mission : charge utile, distance ou orbite, coût, sécurité. Les exigences traduisent la mission en nombres que la conception doit respecter.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "La conception est itérative : croquis du concept, dimensionnement, analyse, essai, nouvelle conception. Une étude de compromis compare les options selon des critères pondérés.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "Quatre forces agissent sur un avion : la portance, le poids, la poussée et la traînée. En vol stabilisé en palier, portance = poids et poussée = traînée.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Forces",
+   "q": "La masse s’accumule : une structure supplémentaire exige plus de portance, une aile plus grande, plus de traînée, plus de carburant, et encore plus de masse.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Exigences",
+   "b": "Objectifs mesurables qu’une conception doit atteindre."
+  },
+  {
+   "f": "Étude de compromis",
+   "b": "Comparaison pondérée des options de conception."
+  },
+  {
+   "f": "Cycle de conception",
+   "b": "Concept → préliminaire → conception détaillée → essai → itération."
+  },
+  {
+   "f": "Wright Flyer",
+   "b": "Premiers vols motorisés et contrôlés d’un avion, 17 déc. 1903."
+  },
+  {
+   "f": "Spirale de la masse",
+   "b": "Une masse supplémentaire fait grossir toute la conception."
+  },
+  {
+   "f": "Les ingénieurs conçoivent d’abord l’avion, puis lui trouvent une mission.",
+   "b": "La mission et ses exigences viennent en premier."
+  },
+  {
+   "f": "En vol en palier, la poussée doit équilibrer le poids.",
+   "b": "La poussée équilibre la traînée ; la portance équilibre le poids."
+  },
+  {
+   "f": "Gagner un peu de masse n’économise que cette masse.",
+   "b": "Les gains de masse se cumulent via la taille de l’aile, la traînée et le carburant."
+  },
+  {
+   "f": "Un avion léger de 1100 kg vole en croisière en palier. Quelle portance son aile doit-elle produire ?",
+   "b": "10,791 N ≈ 10.8 kN."
+  },
+  {
+   "f": "Deux concepts d’aile sont notés sur 10 pour le coût (poids 0.3), l’efficacité (0.5) et la facilité de construction (0.2). Le concept A obtient 8, 6, 9 ; B obtient 5, 9, 6. Lequel l’emporte ?",
+   "b": "Égalité à 7.2 : l’équipe devrait tester les deux ou revoir les pondérations dont elle est le moins sûre."
+  },
+  {
+   "f": "Le premier vol du Wright Flyer a couvert 36 m en 12 s. Quelle était sa vitesse sol moyenne ?",
+   "b": "3 m/s par rapport au sol. Il volait face à un fort vent de face, donc sa vitesse air était bien plus élevée."
+  },
+  {
+   "f": "Un avion de ligne de masse 70000 kg vole en croisière en palier. Trouvez sa portance.",
+   "b": "L = 70,000 × 9.81 = 686,700 N ≈ 687 kN."
+  },
+  {
+   "f": "En croisière en palier, les moteurs d’un avion fournissent 30 kN de poussée. Quelle est sa traînée ?",
+   "b": "30 kN, car la poussée équilibre la traînée en vol stabilisé."
+  },
+  {
+   "f": "Pourquoi les frères Wright ont-ils construit une soufflerie ?",
+   "b": "Les données de portance publiées n’étaient pas fiables, alors ils ont mesuré eux-mêmes de nombreuses formes d’aile : tester avant de construire est le cœur du processus de conception."
+  },
+  {
+   "f": "Le 17 décembre 1903, le Wright Flyer a effectué un vol de 12 secondes sur 36 m (120 ft) ; le meilleur vol de la journée a couvert 260 m (852 ft) en 59 secondes. Les Wright ont réussi en testant",
+   "b": "ils ont construit des planeurs et leur propre soufflerie avant d’ajouter un moteur."
+  },
+  {
+   "f": "Toute conception commence par une mission",
+   "b": "charge utile, distance ou orbite, coût, sécurité. Les exigences traduisent la mission en nombres que la conception doit respecter."
+  },
+  {
+   "f": "La conception est itérative",
+   "b": "croquis du concept, dimensionnement, analyse, essai, nouvelle conception. Une étude de compromis compare les options selon des critères pondérés."
+  },
+  {
+   "f": "Quatre forces agissent sur un avion",
+   "b": "la portance, le poids, la poussée et la traînée. En vol stabilisé en palier, portance = poids et poussée = traînée."
+  },
+  {
+   "f": "La masse s’accumule",
+   "b": "une structure supplémentaire exige plus de portance, une aile plus grande, plus de traînée, plus de carburant, et encore plus de masse."
+  },
+  {
+   "f": "La NASA cite trois grandes voies pour rendre l’aviation durable",
+   "b": "une technologie aéronautique efficace, les carburants d’aviation durables, et de meilleures opérations et infrastructures."
+  }
+ ]
+}

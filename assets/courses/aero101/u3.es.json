@@ -1,0 +1,306 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Sustentación y resistencia",
+   "q": "La sustentación es proporcional a…",
+   "why": "A través de la presión dinámica ½ρV².",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V",
+    "V²",
+    "√V",
+    "1/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Sustentación y resistencia",
+   "q": "Duplicar la superficie alar a la misma velocidad y C_L…",
+   "why": "L ∝ S.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "reduce la sustentación a la mitad",
+    "duplica la sustentación",
+    "cuadruplica la sustentación",
+    "no tiene efecto"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Sustentación y resistencia",
+   "q": "El número de Reynolds compara…",
+   "why": "ρVc/μ.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "sustentación y resistencia",
+    "efectos inerciales y viscosos",
+    "la velocidad y la velocidad del sonido",
+    "empuje y peso"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Sustentación y resistencia",
+   "q": "La resistencia inducida se debe a…",
+   "why": "Los vórtices de punta de ala inclinan la sustentación hacia atrás.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la rugosidad de la pintura",
+    "generar sustentación con un ala finita",
+    "el escape de los motores",
+    "solo las ondas de choque"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "El aire que pasa por arriba debe encontrarse con el de abajo en el borde de salida (tiempo de tránsito igual).",
+   "why": "No es así; el flujo superior en realidad llega primero. NASA Glenn incluye el tránsito igual entre las teorías incorrectas de la sustentación.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La sustentación es solo Bernoulli, o solo Newton.",
+   "why": "Ambas describen el mismo flujo; las diferencias de presión y la desviación del flujo van juntas.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La resistencia es solo fricción con el aire.",
+   "why": "La resistencia de presión y la inducida suelen ser mayores.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "Un avión de 1100 kg con un ala de 16.2 m² vuela nivelado a 55 m/s a nivel del mar (ρ = 1.227 kg/m³). Halla C_L.",
+   "why": "C_L ≈ 0.36.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 0.36,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "Con C_L,max = 1.6, halla la velocidad de pérdida de este avión a nivel del mar. Da la respuesta en m/s.",
+   "why": "V_s ≈ 26.1 m/s (unos 51 nudos).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 26.1,
+   "tol": 0.4,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "Halla el número de Reynolds de una cuerda de 1.5 m a 55 m/s a nivel del mar (μ = 1.789 × 10⁻⁵ kg/(m·s)). Da la respuesta en millón.",
+   "why": "Re ≈ 5.7 millones.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 5.7,
+   "tol": 0.2,
+   "unit": "millón"
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "Halla la presión dinámica a 230 m/s a 11 km (ρ = 0.366 kg/m³). Da la respuesta en Pa.",
+   "why": "q = ½ × 0.366 × 230² ≈ 9,680 Pa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 9680,
+   "tol": 80,
+   "unit": "Pa"
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "Halla la resistencia del avión del ejemplo 3.1 si C_D = 0.032. Da la respuesta en N.",
+   "why": "D = 1,855 × 16.2 × 0.032 ≈ 962 N.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 962,
+   "tol": 20,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Sustentación y resistencia",
+   "q": "¿Cuánto mayor es la velocidad de pérdida a 1500 m (ρ = 1.060 kg/m³) que a nivel del mar? Da la respuesta en %.",
+   "why": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, así que cerca de un 7.6% mayor (≈ 28.0 m/s de velocidad verdadera).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7.6,
+   "tol": 0.4,
+   "unit": "%"
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "Sustentación ∝ V², así que se cuadruplica.",
+   "why": "Esto está escrito en la unidad. Si la velocidad se duplica con el mismo C_L, ¿cómo cambia la sustentación?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La resistencia es combustible. En crucero, el empuje de los motores es igual a la resistencia, así que cada newton de resistencia eliminado es combustible que no se quema y CO₂ que no se emite. Necesitar menos energía para volar es la primera de las tres vías de la NASA hacia una aviación sostenible.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La misma física de la sustentación mueve las palas de los aerogeneradores, que convierten la fuerza aerodinámica del viento en electricidad limpia.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "Un ala desvía el flujo de aire hacia abajo; por la tercera ley de Newton, el aire empuja el ala hacia arriba. De forma equivalente, un flujo más rápido por encima implica menor presión allí (Bernoulli). Ambas describen un mismo flujo.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La presión dinámica q = ½ρV² fija la escala de toda fuerza aerodinámica. Los coeficientes de sustentación y resistencia C_L y C_D recogen la forma y el ángulo de ataque.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La sustentación crece con V², así que reducir la velocidad a la mitad exige cuatro veces más coeficiente de sustentación o superficie alar.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Sustentación y resistencia",
+   "q": "La resistencia proviene de la fricción superficial, la resistencia de presión (de forma) y la resistencia inducida, el costo de generar sustentación con un ala finita.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Presión dinámica",
+   "b": "q = ½ρV²."
+  },
+  {
+   "f": "Ecuación de sustentación",
+   "b": "L = qSC_L."
+  },
+  {
+   "f": "Ecuación de resistencia",
+   "b": "D = qSC_D."
+  },
+  {
+   "f": "Velocidad de pérdida",
+   "b": "V_s = √(2W/(ρSC_L,max))."
+  },
+  {
+   "f": "Número de Reynolds",
+   "b": "ρVc/μ."
+  },
+  {
+   "f": "Resistencia inducida",
+   "b": "Resistencia debida a la sustentación en un ala finita."
+  },
+  {
+   "f": "El aire que pasa por arriba debe encontrarse con el de abajo en el borde de salida (tiempo de tránsito igual).",
+   "b": "No es así; el flujo superior en realidad llega primero. NASA Glenn incluye el tránsito igual entre las teorías incorrectas de la sustentación."
+  },
+  {
+   "f": "La sustentación es solo Bernoulli, o solo Newton.",
+   "b": "Ambas describen el mismo flujo; las diferencias de presión y la desviación del flujo van juntas."
+  },
+  {
+   "f": "La resistencia es solo fricción con el aire.",
+   "b": "La resistencia de presión y la inducida suelen ser mayores."
+  },
+  {
+   "f": "Un avión de 1100 kg con un ala de 16.2 m² vuela nivelado a 55 m/s a nivel del mar (ρ = 1.227 kg/m³). Halla C_L.",
+   "b": "C_L ≈ 0.36."
+  },
+  {
+   "f": "Con C_L,max = 1.6, halla la velocidad de pérdida de este avión a nivel del mar.",
+   "b": "V_s ≈ 26.1 m/s (unos 51 nudos)."
+  },
+  {
+   "f": "Halla el número de Reynolds de una cuerda de 1.5 m a 55 m/s a nivel del mar (μ = 1.789 × 10⁻⁵ kg/(m·s)).",
+   "b": "Re ≈ 5.7 millones."
+  },
+  {
+   "f": "Si la velocidad se duplica con el mismo C_L, ¿cómo cambia la sustentación?",
+   "b": "Sustentación ∝ V², así que se cuadruplica."
+  },
+  {
+   "f": "Halla la presión dinámica a 230 m/s a 11 km (ρ = 0.366 kg/m³).",
+   "b": "q = ½ × 0.366 × 230² ≈ 9,680 Pa."
+  },
+  {
+   "f": "Halla la resistencia del avión del ejemplo 3.1 si C_D = 0.032.",
+   "b": "D = 1,855 × 16.2 × 0.032 ≈ 962 N."
+  },
+  {
+   "f": "¿Cuánto mayor es la velocidad de pérdida a 1500 m (ρ = 1.060 kg/m³) que a nivel del mar?",
+   "b": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, así que cerca de un 7.6% mayor (≈ 28.0 m/s de velocidad verdadera)."
+  },
+  {
+   "f": "Un ala desvía el flujo de aire hacia abajo; por la tercera ley de Newton, el aire empuja el ala hacia arriba. De forma equivalente, un flujo más rápido por encima implica menor presión allí (Bernoulli). Ambas describen un mismo flujo.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La presión dinámica q = ½ρV² fija la escala de toda fuerza aerodinámica. Los coeficientes de sustentación y resistencia C_L y C_D recogen la forma y el ángulo de ataque.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La sustentación crece con V², así que reducir la velocidad a la mitad exige cuatro veces más coeficiente de sustentación o superficie alar.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La resistencia proviene de la fricción superficial, la resistencia de presión (de forma) y la resistencia inducida, el costo de generar sustentación con un ala finita.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "El número de Reynolds Re = ρVc/μ compara los efectos inerciales y viscosos; los modelos de túnel de viento deben tenerlo en cuenta para predecir el comportamiento a escala real.",
+   "b": "Esto está escrito en la unidad."
+  }
+ ]
+}

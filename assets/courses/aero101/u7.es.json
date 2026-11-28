@@ -1,0 +1,296 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Propulsión",
+   "q": "Empuje de un motor aerobio ≈",
+   "why": "Cambio de cantidad de movimiento por segundo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "ṁv₀",
+    "ṁ(v_e − v₀)",
+    "ṁv_e²",
+    "ρV²"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsión",
+   "q": "El rendimiento propulsivo es máximo cuando v_e/v₀ es…",
+   "why": "η_p = 2/(1 + v_e/v₀).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "grande",
+    "cercano a 1",
+    "cero",
+    "negativo"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsión",
+   "q": "En un turbofán de alto índice de derivación, la mayor parte del aire…",
+   "why": "El flujo del ventilador.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "pasa por la cámara de combustión",
+    "rodea el núcleo",
+    "se almacena",
+    "se calienta a 2000 K"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsión",
+   "q": "El I_sp se mide en…",
+   "why": "Empuje por flujo de peso de propulsante.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "m/s",
+    "segundos",
+    "newtons",
+    "kg"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Los reactores empujan contra el aire que tienen detrás.",
+   "why": "Aceleran el aire a través del motor; la reacción a eso es el empuje.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Una salida más rápida siempre significa un motor mejor.",
+   "why": "Para la eficiencia, la velocidad de salida debe estar cerca de la velocidad de vuelo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "El impulso específico es una velocidad.",
+   "why": "Se mide en segundos; I_sp × g₀ es una velocidad de salida efectiva.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Propulsión",
+   "q": "Un turbofán mueve 500 kg/s de aire de 250 m/s a 320 m/s. Halla el empuje y el rendimiento propulsivo. Da la respuesta en kN.",
+   "why": "F = 35 kN, η_p ≈ 0.88.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 35,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsión",
+   "q": "Un motor genera 100 kN quemando 2.5 kg/s de combustible. Halla su I_sp.",
+   "why": "≈ 4079 s. Los motores aerobios superan a los cohetes en esta medida porque no llevan su oxidante.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 4079,
+   "tol": 40,
+   "unit": "s"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsión",
+   "q": "Halla el empuje para ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s. Da la respuesta en kN.",
+   "why": "20 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.3,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "1.0, pero el empuje es cero: rendimiento y empuje se compensan.",
+   "why": "Esto está escrito en la unidad. Halla η_p cuando v_e = v₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Mueven lentamente una gran masa de aire, lo que eleva el rendimiento propulsivo y reduce el consumo y el ruido.",
+   "why": "Esto está escrito en la unidad. ¿Por qué los aviones de pasajeros usan turbofanes de alto índice de derivación?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "v_e = 600 m/s, η_p ≈ 0.59: mucho menos eficiente.",
+   "why": "Esto está escrito en la unidad. Un turborreactor genera los mismos 35 kN con 100 kg/s de aire a v₀ = 250 m/s. ¿Qué velocidad de salida necesita y cuánto vale η_p?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Un mayor rendimiento propulsivo es un ahorro directo de combustible y de CO₂. Cada kilogramo de combustible de aviación quemado produce unos 3.16 kg de CO₂ (el carbono del combustible combinado con oxígeno del aire; ver la unidad 10), así que las mejoras de eficiencia se acumulan durante las décadas de servicio de un motor.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "El combustible de aviación sostenible, fabricado con residuos y biomasa, se mezcla para igualar las propiedades del combustible de aviación convencional y garantizar una operación segura. La NASA señala que el SAF no libera CO₂ nuevo al ambiente.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Todo motor genera empuje acelerando un flujo de masa: F = ṁ(v_e − v₀) para un motor aerobio (despreciando la masa de combustible y los términos de presión).",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Rendimiento propulsivo η_p = 2/(1 + v_e/v₀): mover mucho aire un poco es más eficiente que mover poco aire mucho. Por eso los turbofanes tienen ventiladores enormes.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Turborreactor: todo el aire pasa por el núcleo. Turbofán: la mayor parte del aire rodea el núcleo a través del ventilador. Turbohélice: una hélice movida por una turbina de gas.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "El impulso específico I_sp = F/(ṁ_fuel g₀) mide el empuje por flujo de peso de combustible, en segundos.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsión",
+   "q": "Esta unidad te pide: Usar la ecuación de empuje por cantidad de movimiento.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Empuje por cantidad de movimiento",
+   "b": "F = ṁ(v_e − v₀)."
+  },
+  {
+   "f": "Rendimiento propulsivo",
+   "b": "2/(1 + v_e/v₀)."
+  },
+  {
+   "f": "Turbofán",
+   "b": "Ventilador más núcleo; la mayor parte del aire lo rodea."
+  },
+  {
+   "f": "Índice de derivación",
+   "b": "Aire derivado ÷ aire del núcleo."
+  },
+  {
+   "f": "Impulso específico",
+   "b": "F/(ṁ g₀), en segundos."
+  },
+  {
+   "f": "TSFC",
+   "b": "Flujo de combustible por unidad de empuje."
+  },
+  {
+   "f": "Los reactores empujan contra el aire que tienen detrás.",
+   "b": "Aceleran el aire a través del motor; la reacción a eso es el empuje."
+  },
+  {
+   "f": "Una salida más rápida siempre significa un motor mejor.",
+   "b": "Para la eficiencia, la velocidad de salida debe estar cerca de la velocidad de vuelo."
+  },
+  {
+   "f": "El impulso específico es una velocidad.",
+   "b": "Se mide en segundos; I_sp × g₀ es una velocidad de salida efectiva."
+  },
+  {
+   "f": "Un turbofán mueve 500 kg/s de aire de 250 m/s a 320 m/s. Halla el empuje y el rendimiento propulsivo.",
+   "b": "F = 35 kN, η_p ≈ 0.88."
+  },
+  {
+   "f": "Un turborreactor genera los mismos 35 kN con 100 kg/s de aire a v₀ = 250 m/s. ¿Qué velocidad de salida necesita y cuánto vale η_p?",
+   "b": "v_e = 600 m/s, η_p ≈ 0.59: mucho menos eficiente."
+  },
+  {
+   "f": "Un motor genera 100 kN quemando 2.5 kg/s de combustible. Halla su I_sp.",
+   "b": "≈ 4079 s. Los motores aerobios superan a los cohetes en esta medida porque no llevan su oxidante."
+  },
+  {
+   "f": "Halla el empuje para ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+   "b": "20 kN."
+  },
+  {
+   "f": "Halla η_p cuando v_e = v₀.",
+   "b": "1.0, pero el empuje es cero: rendimiento y empuje se compensan."
+  },
+  {
+   "f": "¿Por qué los aviones de pasajeros usan turbofanes de alto índice de derivación?",
+   "b": "Mueven lentamente una gran masa de aire, lo que eleva el rendimiento propulsivo y reduce el consumo y el ruido."
+  },
+  {
+   "f": "Todo motor genera empuje acelerando un flujo de masa",
+   "b": "F = ṁ(v_e − v₀) para un motor aerobio (despreciando la masa de combustible y los términos de presión)."
+  },
+  {
+   "f": "Rendimiento propulsivo η_p = 2/(1 + v_e/v₀)",
+   "b": "mover mucho aire un poco es más eficiente que mover poco aire mucho. Por eso los turbofanes tienen ventiladores enormes."
+  },
+  {
+   "f": "Turborreactor",
+   "b": "todo el aire pasa por el núcleo. Turbofán: la mayor parte del aire rodea el núcleo a través del ventilador. Turbohélice: una hélice movida por una turbina de gas."
+  },
+  {
+   "f": "El impulso específico I_sp = F/(ṁ_fuel g₀) mide el empuje por flujo de peso de combustible, en segundos.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Un mayor rendimiento propulsivo es un ahorro directo de combustible y de CO₂. Cada kilogramo de combustible de aviación quemado produce unos ____kg de CO₂ (el carbono del combustible combinado con oxígeno del aire; ver la unidad 10), así que las mejoras de eficiencia se acumulan durante las décadas de servicio de un motor.",
+   "b": "Un mayor rendimiento propulsivo es un ahorro directo de combustible y de CO₂. Cada kilogramo de combustible de aviación quemado produce unos 3.16 kg de CO₂ (el carbono del combustible combinado con oxígeno del aire; ver la unidad 10), así que las mejoras de eficiencia se acumulan durante las décadas de servicio de un motor."
+  }
+ ]
+}

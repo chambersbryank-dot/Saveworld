@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Atmosphère",
+   "q": "Dans la troposphère, la température baisse d’environ…",
+   "why": "Le gradient de la NASA est de 0.00649 °C/m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "1 °C/km",
+    "6.5 °C/km",
+    "15 °C/km",
+    "0 °C/km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Vitesse du son",
+   "q": "La vitesse du son au niveau de la mer est d’environ…",
+   "why": "√(1.4 × 287 × 288).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "100 m/s",
+    "340 m/s",
+    "1,000 m/s",
+    "3,000 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Atmosphère",
+   "q": "La masse volumique à 11 km représente environ quelle fraction de celle au niveau de la mer ?",
+   "why": "0.366/1.227.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "90%",
+    "60%",
+    "30%",
+    "5%"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Vitesse du son",
+   "q": "Le nombre de Mach est…",
+   "why": "La vitesse divisée par la vitesse locale du son.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V × a",
+    "V/a",
+    "a/V",
+    "V²/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "La vitesse du son dépend de la pression.",
+   "why": "Pour un gaz parfait, elle ne dépend que de la température.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "Il fait de plus en plus froid tout le long de la montée.",
+   "why": "La température se stabilise au-dessus de 11 km et remonte plus haut dans la stratosphère.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "Un air plus raréfié aide toujours.",
+   "why": "Il réduit la traînée mais aussi la portance et la poussée des moteurs, donc les ailes doivent voler plus vite ou à des coefficients de portance plus élevés.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphère",
+   "q": "Un avion de ligne vole à 230 m/s de vitesse vraie à 11 km. Quel est son nombre de Mach ?",
+   "why": "M ≈ 0.78.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.78,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphère",
+   "q": "Trouvez la masse volumique de l’air à 11000 m avec le modèle de la NASA (T = −56.46 °C, p = 22.72 kPa). Donnez la réponse en kg/m³.",
+   "why": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, environ 30% du niveau de la mer.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.366,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphère",
+   "q": "Trouvez la température à 1500 m dans le modèle de la NASA. Donnez la réponse en °C.",
+   "why": "T = 15.04 − 9.74 = 5.3 °C.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 5.3,
+   "tol": 0.2,
+   "unit": "°C"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphère",
+   "q": "Combien vaut Mach 2 au niveau de la mer en m/s ?",
+   "why": "2 × 340 = 680 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 680,
+   "tol": 5,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphère",
+   "q": "Trouvez la masse volumique au niveau de la mer à partir de p = 101.40 kPa et T = 15.04 °C. Donnez la réponse en kg/m³.",
+   "why": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 1.227,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% du niveau de la mer).",
+   "why": "C’est écrit dans l’unité. Trouvez T, p et ρ à 5000 m avec le modèle de la NASA.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "340 m/s et 295 m/s.",
+   "why": "C’est écrit dans l’unité. Trouvez la vitesse du son au niveau de la mer (15 °C) et à 11 km (−56.5 °C).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "Les avions volent là où se produisent la météo et le climat. La NASA étudie les émissions des avions par la modélisation informatique, des essais de combustion en laboratoire et des essais en vol, car ce que les moteurs rejettent en altitude compte pour l’atmosphère.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "La même physique de l’atmosphère permet aux satellites de transformer le rayonnement qu’ils mesurent en profils de température de l’air.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "Une atmosphère standard est un modèle moyen ajusté à des mesures. Dans le modèle de la NASA, la troposphère va du sol à 11000 m, et la température baisse d’environ 6.5 °C par kilomètre.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "De 11 à 25 km (basse stratosphère), la température du modèle est constante à −56.46 °C, tandis que la pression continue de baisser exponentiellement.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "La masse volumique découle de la loi des gaz parfaits, ρ = p/(RT). À 11 km, l’air a environ 30% de la masse volumique au niveau de la mer.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphère",
+   "q": "La vitesse du son vaut a = √(γRT), elle ne dépend donc que de la température. Nombre de Mach M = V/a.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Atmosphère standard",
+   "b": "Modèle moyen de T, p, ρ en fonction de l’altitude."
+  },
+  {
+   "f": "Troposphère",
+   "b": "Du sol à ~11 km ; la température baisse avec l’altitude."
+  },
+  {
+   "f": "Gradient thermique",
+   "b": "≈ 6.5 °C par km dans la troposphère."
+  },
+  {
+   "f": "Loi des gaz parfaits",
+   "b": "p = ρRT."
+  },
+  {
+   "f": "Vitesse du son",
+   "b": "a = √(γRT)."
+  },
+  {
+   "f": "Nombre de Mach",
+   "b": "M = V/a."
+  },
+  {
+   "f": "La vitesse du son dépend de la pression.",
+   "b": "Pour un gaz parfait, elle ne dépend que de la température."
+  },
+  {
+   "f": "Il fait de plus en plus froid tout le long de la montée.",
+   "b": "La température se stabilise au-dessus de 11 km et remonte plus haut dans la stratosphère."
+  },
+  {
+   "f": "Un air plus raréfié aide toujours.",
+   "b": "Il réduit la traînée mais aussi la portance et la poussée des moteurs, donc les ailes doivent voler plus vite ou à des coefficients de portance plus élevés."
+  },
+  {
+   "f": "Trouvez T, p et ρ à 5000 m avec le modèle de la NASA.",
+   "b": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% du niveau de la mer)."
+  },
+  {
+   "f": "Trouvez la vitesse du son au niveau de la mer (15 °C) et à 11 km (−56.5 °C).",
+   "b": "340 m/s et 295 m/s."
+  },
+  {
+   "f": "Un avion de ligne vole à 230 m/s de vitesse vraie à 11 km. Quel est son nombre de Mach ?",
+   "b": "M ≈ 0.78."
+  },
+  {
+   "f": "Trouvez la masse volumique de l’air à 11000 m avec le modèle de la NASA (T = −56.46 °C, p = 22.72 kPa).",
+   "b": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, environ 30% du niveau de la mer."
+  },
+  {
+   "f": "Trouvez la température à 1500 m dans le modèle de la NASA.",
+   "b": "T = 15.04 − 9.74 = 5.3 °C."
+  },
+  {
+   "f": "Combien vaut Mach 2 au niveau de la mer en m/s ?",
+   "b": "2 × 340 = 680 m/s."
+  },
+  {
+   "f": "Trouvez la masse volumique au niveau de la mer à partir de p = 101.40 kPa et T = 15.04 °C.",
+   "b": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³."
+  },
+  {
+   "f": "Une atmosphère standard est un modèle moyen ajusté à des mesures. Dans le modèle de la NASA, la troposphère va du sol à ____m, et la température baisse d’environ 6.5 °C par kilomètre.",
+   "b": "Une atmosphère standard est un modèle moyen ajusté à des mesures. Dans le modèle de la NASA, la troposphère va du sol à 11000 m, et la température baisse d’environ 6.5 °C par kilomètre."
+  },
+  {
+   "f": "De ____à 25 km (basse stratosphère), la température du modèle est constante à −56.46 °C, tandis que la pression continue de baisser exponentiellement.",
+   "b": "De 11 à 25 km (basse stratosphère), la température du modèle est constante à −56.46 °C, tandis que la pression continue de baisser exponentiellement."
+  },
+  {
+   "f": "La masse volumique découle de la loi des gaz parfaits, ρ = p/(RT). À ____km, l’air a environ 30% de la masse volumique au niveau de la mer.",
+   "b": "La masse volumique découle de la loi des gaz parfaits, ρ = p/(RT). À 11 km, l’air a environ 30% de la masse volumique au niveau de la mer."
+  },
+  {
+   "f": "La vitesse du son vaut a = √(γRT), elle ne dépend donc que de la température. Nombre de Mach M = V/a.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Un air raréfié signifie moins de traînée à vitesse donnée, c’est pourquoi les avions à réaction volent haut, mais les ailes et les moteurs ont toujours besoin d’assez d’air pour fonctionner.",
+   "b": "C’est écrit dans l’unité."
+  }
+ ]
+}

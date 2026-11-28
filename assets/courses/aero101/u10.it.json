@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Bruciare 1 kg di carburante per jet produce circa…",
+   "why": "Il carbonio del carburante si combina con l’ossigeno dell’aria.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1 kg CO₂",
+    "3.16 kg CO₂",
+    "0.3 kg CO₂",
+    "10 kg CO₂"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Le tre vie della NASA verso un’aviazione sostenibile sono…",
+   "why": "Secondo l’elenco della NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "serbatoi più grandi",
+    "aerei efficienti, SAF, operazioni e infrastrutture",
+    "solo volare più bassi",
+    "solo salite più lente"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Se L/D aumenta del 10%, il carburante per lo stesso viaggio cala all’incirca…",
+   "why": "Carburante ∝ 1/(L/D).",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1%",
+    "9–10%",
+    "50%",
+    "0%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Clima",
+   "q": "Quale quota del totale dei gas serra statunitensi emettono gli aerei coperti dalla norma EPA?",
+   "why": "EPA: il 3% del totale nazionale.",
+   "src": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft",
+   "srcName": "EPA",
+   "opts": [
+    "0.3%",
+    "3%",
+    "30%",
+    "50%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Il carburante sostenibile per l’aviazione non emette CO₂ quando brucia.",
+   "why": "Emette CO₂ come il carburante per jet; il vantaggio è che il suo carbonio proviene di recente dall’aria, quindi le emissioni sul ciclo di vita sono minori.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Gli aerei elettrici sostituiranno presto tutti i jet.",
+   "why": "La densità energetica delle batterie li limita per ora a voli brevi e piccoli.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Lo spazio è troppo grande per essere inquinato.",
+   "why": "I detriti nelle orbite più usate sono un pericolo reale.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "Da dove viene 3.16? Modella il carburante per jet come C₁₂H₂₃ e trova i kg di CO₂ per kg di carburante.",
+   "why": "≈ 3.16 kg di CO₂ per kg di carburante.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 3.16,
+   "tol": 0.03,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "La NASA stima 620 milioni di tonnellate di carburante nel 2050 con l’efficienza attuale. Quanta CO₂ è? Dai la risposta in milione t.",
+   "why": "≈ 1959 milioni di tonnellate, in linea con le «quasi 2000 megatonnellate» della NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 1959,
+   "tol": 30,
+   "unit": "milione t"
+  },
+  {
+   "type": "num",
+   "topic": "Clima",
+   "q": "Un volo brucia 5000 kg di carburante. Quanta CO₂ produce?",
+   "why": "≈ 15,800 kg.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 15800,
+   "tol": 150,
+   "unit": "kg"
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Di circa il 15%, perché la CO₂ è proporzionale al carburante bruciato.",
+   "why": "È scritto nell’unità. Se i motori diventano più efficienti del 15% nei consumi, di quanto calano all’incirca le emissioni di CO₂ per viaggio?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "La loro energia per chilogrammo è molto inferiore a quella del carburante per jet, e il compromesso di Breguet rende il peso extra molto costoso.",
+   "why": "È scritto nell’unità. Perché le batterie odierne non possono alimentare aerei di linea a lungo raggio?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "≈ 2.1 t di carburante e ≈ 6.7 t di CO₂ per volo (stima semplificata).",
+   "why": "È scritto nell’unità. Un volo brucia 20 t di carburante. Una nuova ala porta L/D da 17 a 19. Stima il carburante e la CO₂ risparmiati.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Questa unità è il legame completo del corso con il pianeta: ogni equazione delle unità 3–7 è una leva sul consumo di carburante, e il consumo di carburante è CO₂. Gli ingegneri capaci di fare questi calcoli progettano gli aerei più puliti verso cui lavorano la NASA e l’industria.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "L’EPA riferisce che gli aerei coperti dalla sua norma producono il 10% delle emissioni di gas serra dei trasporti negli Stati Uniti, e la NASA osserva che nel 2021 gli Stati Uniti si sono impegnati a raggiungere emissioni nette zero di gas serra nell’aviazione entro il 2050.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Bruciare un chilogrammo di carburante per jet di tipo cherosene produce circa 3.16 kg di CO₂, un valore fissato dalla chimica. Gli unici modi per ridurla sono bruciare meno carburante o usare carburante il cui carbonio provenga di recente dall’aria.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "L’EPA riferisce che gli aerei coperti dalla sua norma sui gas serra rappresentano il 10% delle emissioni di gas serra dei trasporti negli Stati Uniti e il 3% del totale statunitense.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Le tre vie della NASA: tecnologia aeronautica efficiente, carburante sostenibile per l’aviazione, e operazioni e infrastrutture migliori.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Le batterie odierne immagazzinano molta meno energia per chilogrammo del carburante per jet, quindi gli aerei elettrici sono adatti a voli brevi e piccoli; l’idrogeno immagazzina molta energia per chilogrammo ma richiede grandi serbatoi.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Clima",
+   "q": "Sostenibilità spaziale significa pianificare lo smaltimento affinché le orbite utili restino disponibili per i satelliti che monitorano la Terra.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "CO₂ per kg di carburante",
+   "b": "≈ 3.16 kg."
+  },
+  {
+   "f": "SAF",
+   "b": "Carburante sostenibile per l’aviazione da rifiuti e biomasse."
+  },
+  {
+   "f": "Tre vie",
+   "b": "Aerei efficienti, SAF, operazioni."
+  },
+  {
+   "f": "Densità energetica",
+   "b": "Energia per kg; batterie ≪ carburante per jet."
+  },
+  {
+   "f": "Detriti spaziali",
+   "b": "Oggetti dismessi che minacciano le orbite utili."
+  },
+  {
+   "f": "Emissioni sul ciclo di vita",
+   "b": "Tutte le emissioni, dalla produzione del carburante al suo uso."
+  },
+  {
+   "f": "Il carburante sostenibile per l’aviazione non emette CO₂ quando brucia.",
+   "b": "Emette CO₂ come il carburante per jet; il vantaggio è che il suo carbonio proviene di recente dall’aria, quindi le emissioni sul ciclo di vita sono minori."
+  },
+  {
+   "f": "Gli aerei elettrici sostituiranno presto tutti i jet.",
+   "b": "La densità energetica delle batterie li limita per ora a voli brevi e piccoli."
+  },
+  {
+   "f": "Lo spazio è troppo grande per essere inquinato.",
+   "b": "I detriti nelle orbite più usate sono un pericolo reale."
+  },
+  {
+   "f": "Da dove viene 3.16? Modella il carburante per jet come C₁₂H₂₃ e trova i kg di CO₂ per kg di carburante.",
+   "b": "≈ 3.16 kg di CO₂ per kg di carburante."
+  },
+  {
+   "f": "La NASA stima 620 milioni di tonnellate di carburante nel 2050 con l’efficienza attuale. Quanta CO₂ è?",
+   "b": "≈ 1959 milioni di tonnellate, in linea con le «quasi 2000 megatonnellate» della NASA."
+  },
+  {
+   "f": "Un volo brucia 20 t di carburante. Una nuova ala porta L/D da 17 a 19. Stima il carburante e la CO₂ risparmiati.",
+   "b": "≈ 2.1 t di carburante e ≈ 6.7 t di CO₂ per volo (stima semplificata)."
+  },
+  {
+   "f": "Un volo brucia 5000 kg di carburante. Quanta CO₂ produce?",
+   "b": "≈ 15,800 kg."
+  },
+  {
+   "f": "Se i motori diventano più efficienti del 15% nei consumi, di quanto calano all’incirca le emissioni di CO₂ per viaggio?",
+   "b": "Di circa il 15%, perché la CO₂ è proporzionale al carburante bruciato."
+  },
+  {
+   "f": "Perché le batterie odierne non possono alimentare aerei di linea a lungo raggio?",
+   "b": "La loro energia per chilogrammo è molto inferiore a quella del carburante per jet, e il compromesso di Breguet rende il peso extra molto costoso."
+  },
+  {
+   "f": "Bruciare un chilogrammo di carburante per jet di tipo cherosene produce circa ____kg di CO₂, un valore fissato dalla chimica. Gli unici modi per ridurla sono bruciare meno carburante o usare carburante il cui carbonio provenga di recente dall’aria.",
+   "b": "Bruciare un chilogrammo di carburante per jet di tipo cherosene produce circa 3.16 kg di CO₂, un valore fissato dalla chimica. Gli unici modi per ridurla sono bruciare meno carburante o usare carburante il cui carbonio provenga di recente dall’aria."
+  },
+  {
+   "f": "L’EPA riferisce che gli aerei coperti dalla sua norma sui gas serra rappresentano il ____% delle emissioni di gas serra dei trasporti negli Stati Uniti e il 3% del totale statunitense.",
+   "b": "L’EPA riferisce che gli aerei coperti dalla sua norma sui gas serra rappresentano il 10% delle emissioni di gas serra dei trasporti negli Stati Uniti e il 3% del totale statunitense."
+  },
+  {
+   "f": "Le tre vie della NASA",
+   "b": "tecnologia aeronautica efficiente, carburante sostenibile per l’aviazione, e operazioni e infrastrutture migliori."
+  },
+  {
+   "f": "Le batterie odierne immagazzinano molta meno energia per chilogrammo del carburante per jet, quindi gli aerei elettrici sono adatti a voli brevi e piccoli; l’idrogeno immagazzina molta energia per chilogrammo ma richiede grandi serbatoi.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Sostenibilità spaziale significa pianificare lo smaltimento affinché le orbite utili restino disponibili per i satelliti che monitorano la Terra.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Questa unità è il legame completo del corso con il pianeta",
+   "b": "ogni equazione delle unità 3–7 è una leva sul consumo di carburante, e il consumo di carburante è CO₂. Gli ingegneri capaci di fare questi calcoli progettano gli aerei più puliti verso cui lavorano la NASA e l’industria."
+  },
+  {
+   "f": "L’EPA riferisce che gli aerei coperti dalla sua norma producono il ____% delle emissioni di gas serra dei trasporti negli Stati Uniti, e la NASA osserva che nel 2021 gli Stati Uniti si sono impegnati a raggiungere emissioni nette zero di gas serra nell’aviazione entro il 2050.",
+   "b": "L’EPA riferisce che gli aerei coperti dalla sua norma producono il 10% delle emissioni di gas serra dei trasporti negli Stati Uniti, e la NASA osserva che nel 2021 gli Stati Uniti si sono impegnati a raggiungere emissioni nette zero di gas serra nell’aviazione entro il 2050."
+  }
+ ]
+}

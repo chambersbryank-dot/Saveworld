@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "الصواريخ",
+   "q": "تعتمد Δv على نسبة الكتلة عبر…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "opts": [
+    "مربع",
+    "لوغاريتم",
+    "جذر تربيعي",
+    "خط مستقيم"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "الصواريخ",
+   "q": "يفيد التقسيم إلى مراحل لأنه…",
+   "why": "الخزانات الفارغة لم تعد بحاجة إلى تسريع.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "opts": [
+    "يرفع I_sp",
+    "يتخلص من الكتلة الميتة",
+    "يضيف هواءً",
+    "يخفض الجاذبية"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "الصواريخ",
+   "q": "للإقلاع، يجب أن تكون نسبة الدفع إلى الوزن…",
+   "why": "يجب أن يتجاوز الدفع الوزن.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "ناسا غلين",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "1 تمامًا"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "الصواريخ",
+   "q": "سرعة العادم الفعلية عند I_sp = 300 s تقارب…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "ناسا غلين",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "الصواريخ تدفع الهواء.",
+   "why": "تعمل على أفضل وجه في الفراغ؛ إنها تدفع عادمها نفسه.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "ضعف الوقود الدافع يعني ضعف Δv.",
+   "why": "تزداد Δv مع لوغاريتم نسبة الكتلة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "المدار يحتاج إلى 7.7 km/s فقط من Δv.",
+   "why": "خسائر الجاذبية والسحب ترفع المجموع إلى نحو 9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "الصواريخ",
+   "q": "محرك فيه I_sp = 450 s يعمل حتى تصبح m₀/m_f = 5. أوجد Δv. أعطِ الإجابة بـm/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "الصواريخ",
+   "q": "صاروخ من مرحلتين: لكل مرحلة I_sp = 300 s ونسبة كتلة 4. أوجد Δv الكلية. أعطِ الإجابة بـm/s.",
+   "why": "≈ 8157 m/s، أي ضعف ما تعطيه مرحلة واحدة بنسبة كتلة 4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "الصواريخ",
+   "q": "أوجد Δv عندما I_sp = 311 s وm₀/m_f = 3. أعطِ الإجابة بـm/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "الصواريخ",
+   "q": "صاروخ كتلته 500000 kg ودفعه 7.5 MN. أوجد T/W عند الإقلاع.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "الصواريخ",
+   "q": "ما I_sp الذي يعطي Δv = 3000 m/s بنسبة كتلة 2؟",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "≈ 24.4 مقابل ≈ 8.4: يجب أن يكون نحو 96% مقابل 88% من الصاروخ وقودًا دافعًا.",
+   "why": "هذا مذكور في الوحدة. ما نسبة الكتلة التي تحتاجها مرحلة واحدة لبلوغ 9.4 km/s مع I_sp = 300 s؟ ومع 450 s؟",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "كل قمر صناعي لرصد الأرض، من Landsat إلى البعثات التي تتابع مستوى سطح البحر وغازات الدفيئة، ينطلق على صاروخ صُمم بهذه المعادلة. ولهذا فإن كل كيلوغرام من الأجهزة ثمين، ولهذا تُبنى الأقمار الصناعية خفيفة.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "تتيح لك حاسبة Delta-v لدينا إجراء الحسابات نفسها لبعثات حقيقية.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "يحمل الصاروخ كل وقوده الدافع، الوقود والمؤكسد. ودفعه F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "معادلة الصاروخ المثالية: Δv = v_e ln(m₀/m_f)، حيث v_e = I_sp g₀. تزداد السرعة فقط مع لوغاريتم نسبة الكتلة.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "يتطلب الوصول إلى المدار الأرضي المنخفض نحو 9.4 km/s من Δv عند احتساب خسائر الجاذبية والسحب، لذا فإن معظم كتلة مركبة الإطلاق وقود دافع.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "التقسيم إلى مراحل يتخلص من الخزانات والمحركات الفارغة حتى لا تحمل المراحل اللاحقة وزنًا ميتًا.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "الصواريخ",
+   "q": "يجب أن تتجاوز نسبة الدفع إلى الوزن 1 للإقلاع.",
+   "why": "هذا مذكور في الوحدة.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "ناسا غلين",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "معادلة الصاروخ",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "نسبة الكتلة",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "التقسيم إلى مراحل",
+   "b": "التخلص من المراحل المستنفدة."
+  },
+  {
+   "f": "الدفع إلى الوزن",
+   "b": "يجب أن يتجاوز 1 عند الإقلاع."
+  },
+  {
+   "f": "Δv إلى المدار المنخفض (LEO)",
+   "b": "≈ 9.4 km/s شاملة الخسائر."
+  },
+  {
+   "f": "I_sp",
+   "b": "ثوانٍ من الدفع لكل وزن من الوقود الدافع."
+  },
+  {
+   "f": "الصواريخ تدفع الهواء.",
+   "b": "تعمل على أفضل وجه في الفراغ؛ إنها تدفع عادمها نفسه."
+  },
+  {
+   "f": "ضعف الوقود الدافع يعني ضعف Δv.",
+   "b": "تزداد Δv مع لوغاريتم نسبة الكتلة."
+  },
+  {
+   "f": "المدار يحتاج إلى 7.7 km/s فقط من Δv.",
+   "b": "خسائر الجاذبية والسحب ترفع المجموع إلى نحو 9.4 km/s."
+  },
+  {
+   "f": "محرك فيه I_sp = 450 s يعمل حتى تصبح m₀/m_f = 5. أوجد Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "ما نسبة الكتلة التي تحتاجها مرحلة واحدة لبلوغ 9.4 km/s مع I_sp = 300 s؟ ومع 450 s؟",
+   "b": "≈ 24.4 مقابل ≈ 8.4: يجب أن يكون نحو 96% مقابل 88% من الصاروخ وقودًا دافعًا."
+  },
+  {
+   "f": "صاروخ من مرحلتين: لكل مرحلة I_sp = 300 s ونسبة كتلة 4. أوجد Δv الكلية.",
+   "b": "≈ 8157 m/s، أي ضعف ما تعطيه مرحلة واحدة بنسبة كتلة 4."
+  },
+  {
+   "f": "أوجد Δv عندما I_sp = 311 s وm₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "صاروخ كتلته 500000 kg ودفعه 7.5 MN. أوجد T/W عند الإقلاع.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "ما I_sp الذي يعطي Δv = 3000 m/s بنسبة كتلة 2؟",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "يحمل الصاروخ كل وقوده الدافع، الوقود والمؤكسد. ودفعه F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "هذا مذكور في الوحدة."
+  },
+  {
+   "f": "معادلة الصاروخ المثالية",
+   "b": "Δv = v_e ln(m₀/m_f)، حيث v_e = I_sp g₀. تزداد السرعة فقط مع لوغاريتم نسبة الكتلة."
+  },
+  {
+   "f": "يتطلب الوصول إلى المدار الأرضي المنخفض نحو ____km/s من Δv عند احتساب خسائر الجاذبية والسحب، لذا فإن معظم كتلة مركبة الإطلاق وقود دافع.",
+   "b": "يتطلب الوصول إلى المدار الأرضي المنخفض نحو 9.4 km/s من Δv عند احتساب خسائر الجاذبية والسحب، لذا فإن معظم كتلة مركبة الإطلاق وقود دافع."
+  },
+  {
+   "f": "التقسيم إلى مراحل يتخلص من الخزانات والمحركات الفارغة حتى لا تحمل المراحل اللاحقة وزنًا ميتًا.",
+   "b": "هذا مذكور في الوحدة."
+  },
+  {
+   "f": "يجب أن تتجاوز نسبة الدفع إلى الوزن 1 للإقلاع.",
+   "b": "هذا مذكور في الوحدة."
+  }
+ ]
+}

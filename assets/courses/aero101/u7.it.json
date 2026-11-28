@@ -1,0 +1,296 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Propulsione",
+   "q": "Spinta di un motore aerobico ≈",
+   "why": "Variazione della quantità di moto al secondo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "ṁv₀",
+    "ṁ(v_e − v₀)",
+    "ṁv_e²",
+    "ρV²"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsione",
+   "q": "Il rendimento propulsivo è massimo quando v_e/v₀ è…",
+   "why": "η_p = 2/(1 + v_e/v₀).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "grande",
+    "vicino a 1",
+    "zero",
+    "negativo"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsione",
+   "q": "In un turbofan ad alto by-pass, gran parte dell’aria…",
+   "why": "Il flusso del fan.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "passa nella camera di combustione",
+    "aggira il nucleo",
+    "viene immagazzinata",
+    "viene scaldata a 2000 K"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsione",
+   "q": "L’I_sp si misura in…",
+   "why": "Spinta per portata in peso di propellente.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "m/s",
+    "secondi",
+    "newton",
+    "kg"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "I jet spingono contro l’aria dietro di loro.",
+   "why": "Accelerano l’aria attraverso il motore; la reazione a questo è la spinta.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Uno scarico più veloce significa sempre un motore migliore.",
+   "why": "Per l’efficienza, la velocità di scarico dovrebbe essere vicina alla velocità di volo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "L’impulso specifico è una velocità.",
+   "why": "Si misura in secondi; I_sp × g₀ è una velocità di scarico efficace.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Propulsione",
+   "q": "Un turbofan accelera 500 kg/s d’aria da 250 m/s a 320 m/s. Trova spinta e rendimento propulsivo. Dai la risposta in kN.",
+   "why": "F = 35 kN, η_p ≈ 0.88.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 35,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsione",
+   "q": "Un motore produce 100 kN bruciando 2.5 kg/s di carburante. Trova il suo I_sp.",
+   "why": "≈ 4079 s. I motori aerobici battono i razzi su questa misura perché non trasportano il proprio ossidante.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 4079,
+   "tol": 40,
+   "unit": "s"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsione",
+   "q": "Trova la spinta per ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s. Dai la risposta in kN.",
+   "why": "20 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.3,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "1.0, ma la spinta è nulla: rendimento e spinta sono in compromesso.",
+   "why": "È scritto nell’unità. Trova η_p quando v_e = v₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Spostano lentamente una grande massa d’aria, il che aumenta il rendimento propulsivo e riduce consumo e rumore.",
+   "why": "È scritto nell’unità. Perché gli aerei di linea usano turbofan ad alto rapporto di by-pass?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "v_e = 600 m/s, η_p ≈ 0.59: molto meno efficiente.",
+   "why": "È scritto nell’unità. Un turbogetto produce gli stessi 35 kN con 100 kg/s d’aria a v₀ = 250 m/s. Quale velocità di scarico gli serve, e quanto vale η_p?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Un rendimento propulsivo più alto è un risparmio diretto di carburante e di CO₂. Ogni chilogrammo di carburante per jet bruciato produce circa 3.16 kg di CO₂ (il carbonio del carburante combinato con l’ossigeno dell’aria; vedi l’unità 10), quindi i guadagni di efficienza si sommano nei decenni di servizio di un motore.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Il carburante sostenibile per l’aviazione, prodotto da rifiuti e biomasse, viene miscelato per eguagliare le proprietà del carburante per jet convenzionale e garantire un esercizio sicuro. La NASA osserva che il SAF non rilascia nuova CO₂ nell’ambiente.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Ogni motore produce spinta accelerando una portata di massa: F = ṁ(v_e − v₀) per un motore aerobico (trascurando la massa del carburante e i termini di pressione).",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Rendimento propulsivo η_p = 2/(1 + v_e/v₀): spostare tanta aria di poco è più efficiente che spostare poca aria di molto. Per questo i turbofan hanno fan enormi.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Turbogetto: tutta l’aria passa nel nucleo. Turbofan: gran parte dell’aria aggira il nucleo passando per il fan. Turboelica: un’elica mossa da una turbina a gas.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "L’impulso specifico I_sp = F/(ṁ_fuel g₀) misura la spinta per portata in peso di carburante, in secondi.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsione",
+   "q": "Questa unità ti chiede di: Usare l’equazione della spinta dalla quantità di moto.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Spinta dalla quantità di moto",
+   "b": "F = ṁ(v_e − v₀)."
+  },
+  {
+   "f": "Rendimento propulsivo",
+   "b": "2/(1 + v_e/v₀)."
+  },
+  {
+   "f": "Turbofan",
+   "b": "Fan più nucleo; gran parte dell’aria lo aggira."
+  },
+  {
+   "f": "Rapporto di by-pass",
+   "b": "Aria di by-pass ÷ aria del nucleo."
+  },
+  {
+   "f": "Impulso specifico",
+   "b": "F/(ṁ g₀), in secondi."
+  },
+  {
+   "f": "TSFC",
+   "b": "Flusso di carburante per unità di spinta."
+  },
+  {
+   "f": "I jet spingono contro l’aria dietro di loro.",
+   "b": "Accelerano l’aria attraverso il motore; la reazione a questo è la spinta."
+  },
+  {
+   "f": "Uno scarico più veloce significa sempre un motore migliore.",
+   "b": "Per l’efficienza, la velocità di scarico dovrebbe essere vicina alla velocità di volo."
+  },
+  {
+   "f": "L’impulso specifico è una velocità.",
+   "b": "Si misura in secondi; I_sp × g₀ è una velocità di scarico efficace."
+  },
+  {
+   "f": "Un turbofan accelera 500 kg/s d’aria da 250 m/s a 320 m/s. Trova spinta e rendimento propulsivo.",
+   "b": "F = 35 kN, η_p ≈ 0.88."
+  },
+  {
+   "f": "Un turbogetto produce gli stessi 35 kN con 100 kg/s d’aria a v₀ = 250 m/s. Quale velocità di scarico gli serve, e quanto vale η_p?",
+   "b": "v_e = 600 m/s, η_p ≈ 0.59: molto meno efficiente."
+  },
+  {
+   "f": "Un motore produce 100 kN bruciando 2.5 kg/s di carburante. Trova il suo I_sp.",
+   "b": "≈ 4079 s. I motori aerobici battono i razzi su questa misura perché non trasportano il proprio ossidante."
+  },
+  {
+   "f": "Trova la spinta per ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+   "b": "20 kN."
+  },
+  {
+   "f": "Trova η_p quando v_e = v₀.",
+   "b": "1.0, ma la spinta è nulla: rendimento e spinta sono in compromesso."
+  },
+  {
+   "f": "Perché gli aerei di linea usano turbofan ad alto rapporto di by-pass?",
+   "b": "Spostano lentamente una grande massa d’aria, il che aumenta il rendimento propulsivo e riduce consumo e rumore."
+  },
+  {
+   "f": "Ogni motore produce spinta accelerando una portata di massa",
+   "b": "F = ṁ(v_e − v₀) per un motore aerobico (trascurando la massa del carburante e i termini di pressione)."
+  },
+  {
+   "f": "Rendimento propulsivo η_p = 2/(1 + v_e/v₀)",
+   "b": "spostare tanta aria di poco è più efficiente che spostare poca aria di molto. Per questo i turbofan hanno fan enormi."
+  },
+  {
+   "f": "Turbogetto",
+   "b": "tutta l’aria passa nel nucleo. Turbofan: gran parte dell’aria aggira il nucleo passando per il fan. Turboelica: un’elica mossa da una turbina a gas."
+  },
+  {
+   "f": "L’impulso specifico I_sp = F/(ṁ_fuel g₀) misura la spinta per portata in peso di carburante, in secondi.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Un rendimento propulsivo più alto è un risparmio diretto di carburante e di CO₂. Ogni chilogrammo di carburante per jet bruciato produce circa ____kg di CO₂ (il carbonio del carburante combinato con l’ossigeno dell’aria; vedi l’unità 10), quindi i guadagni di efficienza si sommano nei decenni di servizio di un motore.",
+   "b": "Un rendimento propulsivo più alto è un risparmio diretto di carburante e di CO₂. Ogni chilogrammo di carburante per jet bruciato produce circa 3.16 kg di CO₂ (il carbonio del carburante combinato con l’ossigeno dell’aria; vedi l’unità 10), quindi i guadagni di efficienza si sommano nei decenni di servizio di un motore."
+  }
+ ]
+}

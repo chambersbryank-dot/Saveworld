@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "טילים",
+   "q": "Δv תלוי ביחס המסה דרך…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "ריבוע",
+    "לוגריתם",
+    "שורש ריבועי",
+    "קו ישר"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "טילים",
+   "q": "חלוקה לשלבים עוזרת כי…",
+   "why": "מכלים ריקים כבר לא צריכים האצה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "היא מעלה את ה-I_sp",
+    "היא משליכה מסה מתה",
+    "היא מוסיפה אוויר",
+    "היא מקטינה את הכבידה"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "טילים",
+   "q": "כדי להמריא, יחס הדחף למשקל חייב להיות…",
+   "why": "הדחף חייב לעלות על המשקל.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "בדיוק 1"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "טילים",
+   "q": "מהירות הפליטה האפקטיבית עבור I_sp = 300 s היא בערך…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "נאס״א גלן",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "רקטות דוחפות את האוויר.",
+   "why": "הן פועלות הכי טוב בריק; הן דוחפות את הפליטה של עצמן.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "פי שניים חומר הנעה, פי שניים Δv.",
+   "why": "Δv גדל עם הלוגריתם של יחס המסה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "מסלול דורש רק 7.7 km/s של Δv.",
+   "why": "הפסדי כבידה וגרר מעלים את הסך לכ-9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "טילים",
+   "q": "מנוע עם I_sp = 450 s פועל עד ש-m₀/m_f = 5. מצאו את Δv. כתבו את התשובה ב-m/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "טילים",
+   "q": "רקטה דו-שלבית: לכל שלב I_sp = 300 s ויחס מסה 4. מצאו את ה-Δv הכולל. כתבו את התשובה ב-m/s.",
+   "why": "≈ 8157 m/s, פי שניים ממה שנותן שלב יחיד עם יחס מסה 4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "טילים",
+   "q": "מצאו את Δv עבור I_sp = 311 s ו-m₀/m_f = 3. כתבו את התשובה ב-m/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "טילים",
+   "q": "לרקטה במסה 500000 kg יש דחף של 7.5 MN. מצאו את T/W בהמראה.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "טילים",
+   "q": "איזה I_sp נותן Δv = 3000 m/s עם יחס מסה 2?",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "≈ 24.4 לעומת ≈ 8.4: כ-96% לעומת 88% מהרקטה חייבים להיות חומר הנעה.",
+   "why": "זה כתוב ביחידה. איזה יחס מסה צריך שלב יחיד כדי להגיע ל-9.4 km/s עם I_sp = 300 s? ועם 450 s?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "כל לוויין לתצפית על כדור הארץ, מ-Landsat ועד המשימות שעוקבות אחר מפלס הים וגזי החממה, משוגר על רקטה שתוכננה בעזרת המשוואה הזו. לכן כל קילוגרם של מכשור יקר מפז, ולכן לוויינים נבנים קלים.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "מחשבון ה-Delta-v שלנו מאפשר לכם להריץ את אותם חישובים למשימות אמיתיות.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "רקטה נושאת את כל חומר ההנעה שלה, דלק ומחמצן. הדחף שלה הוא F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "משוואת הרקטה האידיאלית: Δv = v_e ln(m₀/m_f), עם v_e = I_sp g₀. המהירות גדלה רק עם הלוגריתם של יחס המסה.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "הגעה למסלול נמוך סביב כדור הארץ דורשת בערך 9.4 km/s של Δv כשכוללים הפסדי כבידה וגרר, ולכן רוב המסה של משגר היא חומר הנעה.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "חלוקה לשלבים משליכה מכלים ומנועים ריקים כדי שהשלבים הבאים לא ישאו משקל מת.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "טילים",
+   "q": "יחס הדחף למשקל חייב לעלות על 1 כדי להמריא.",
+   "why": "זה כתוב ביחידה.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "נאס״א גלן",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "משוואת הטיל",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "יחס מסה",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "חלוקה לשלבים",
+   "b": "השלכת שלבים שהתרוקנו."
+  },
+  {
+   "f": "דחף למשקל",
+   "b": "חייב לעלות על 1 בהמראה."
+  },
+  {
+   "f": "Δv למסלול נמוך (LEO)",
+   "b": "≈ 9.4 km/s כולל הפסדים."
+  },
+  {
+   "f": "I_sp",
+   "b": "שניות של דחף לכל משקל של חומר הנעה."
+  },
+  {
+   "f": "רקטות דוחפות את האוויר.",
+   "b": "הן פועלות הכי טוב בריק; הן דוחפות את הפליטה של עצמן."
+  },
+  {
+   "f": "פי שניים חומר הנעה, פי שניים Δv.",
+   "b": "Δv גדל עם הלוגריתם של יחס המסה."
+  },
+  {
+   "f": "מסלול דורש רק 7.7 km/s של Δv.",
+   "b": "הפסדי כבידה וגרר מעלים את הסך לכ-9.4 km/s."
+  },
+  {
+   "f": "מנוע עם I_sp = 450 s פועל עד ש-m₀/m_f = 5. מצאו את Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "איזה יחס מסה צריך שלב יחיד כדי להגיע ל-9.4 km/s עם I_sp = 300 s? ועם 450 s?",
+   "b": "≈ 24.4 לעומת ≈ 8.4: כ-96% לעומת 88% מהרקטה חייבים להיות חומר הנעה."
+  },
+  {
+   "f": "רקטה דו-שלבית: לכל שלב I_sp = 300 s ויחס מסה 4. מצאו את ה-Δv הכולל.",
+   "b": "≈ 8157 m/s, פי שניים ממה שנותן שלב יחיד עם יחס מסה 4."
+  },
+  {
+   "f": "מצאו את Δv עבור I_sp = 311 s ו-m₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "לרקטה במסה 500000 kg יש דחף של 7.5 MN. מצאו את T/W בהמראה.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "איזה I_sp נותן Δv = 3000 m/s עם יחס מסה 2?",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "רקטה נושאת את כל חומר ההנעה שלה, דלק ומחמצן. הדחף שלה הוא F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "משוואת הרקטה האידיאלית",
+   "b": "Δv = v_e ln(m₀/m_f), עם v_e = I_sp g₀. המהירות גדלה רק עם הלוגריתם של יחס המסה."
+  },
+  {
+   "f": "הגעה למסלול נמוך סביב כדור הארץ דורשת בערך ____km/s של Δv כשכוללים הפסדי כבידה וגרר, ולכן רוב המסה של משגר היא חומר הנעה.",
+   "b": "הגעה למסלול נמוך סביב כדור הארץ דורשת בערך 9.4 km/s של Δv כשכוללים הפסדי כבידה וגרר, ולכן רוב המסה של משגר היא חומר הנעה."
+  },
+  {
+   "f": "חלוקה לשלבים משליכה מכלים ומנועים ריקים כדי שהשלבים הבאים לא ישאו משקל מת.",
+   "b": "זה כתוב ביחידה."
+  },
+  {
+   "f": "יחס הדחף למשקל חייב לעלות על 1 כדי להמריא.",
+   "b": "זה כתוב ביחידה."
+  }
+ ]
+}

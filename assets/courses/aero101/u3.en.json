@@ -1,0 +1,306 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Lift and drag",
+   "q": "Lift is proportional to…",
+   "why": "Through dynamic pressure ½ρV².",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V",
+    "V²",
+    "√V",
+    "1/V"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Lift and drag",
+   "q": "Doubling wing area at the same speed and C_L…",
+   "why": "L ∝ S.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "halves lift",
+    "doubles lift",
+    "quadruples lift",
+    "has no effect"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Lift and drag",
+   "q": "Reynolds number compares…",
+   "why": "ρVc/μ.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "lift and drag",
+    "inertial and viscous effects",
+    "speed and sound speed",
+    "thrust and weight"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Lift and drag",
+   "q": "Induced drag is caused by…",
+   "why": "Wingtip vortices tilt the lift backward.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "paint roughness",
+    "making lift with a finite wing",
+    "engine exhaust",
+    "shock waves only"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Air over the top must meet air under the bottom at the trailing edge (equal transit time).",
+   "why": "It does not; the upper flow actually arrives first. NASA Glenn lists equal transit as an incorrect theory of lift.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Lift is only Bernoulli, or only Newton.",
+   "why": "Both describe the same flow; pressure differences and flow turning go together.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Drag is just air friction.",
+   "why": "Pressure drag and induced drag are often larger.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "A 1,100 kg airplane with a 16.2 m² wing flies level at 55 m/s at sea level (ρ = 1.227 kg/m³). Find C_L.",
+   "why": "C_L ≈ 0.36.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 0.36,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "With C_L,max = 1.6, find this airplane’s stall speed at sea level. Give your answer in m/s.",
+   "why": "V_s ≈ 26.1 m/s (about 51 knots).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 26.1,
+   "tol": 0.4,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "Find the Reynolds number of a 1.5 m chord at 55 m/s at sea level (μ = 1.789 × 10⁻⁵ kg/(m·s)). Give your answer in million.",
+   "why": "Re ≈ 5.7 million.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 5.7,
+   "tol": 0.2,
+   "unit": "million"
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "Find the dynamic pressure at 230 m/s at 11 km (ρ = 0.366 kg/m³). Give your answer in Pa.",
+   "why": "q = ½ × 0.366 × 230² ≈ 9,680 Pa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 9680,
+   "tol": 80,
+   "unit": "Pa"
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "Find the drag of the Example 3.1 airplane if C_D = 0.032. Give your answer in N.",
+   "why": "D = 1,855 × 16.2 × 0.032 ≈ 962 N.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 962,
+   "tol": 20,
+   "unit": "N"
+  },
+  {
+   "type": "num",
+   "topic": "Lift and drag",
+   "q": "How much faster is the stall speed at 1,500 m (ρ = 1.060 kg/m³) than at sea level? Give your answer in %.",
+   "why": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, so about 7.6% faster (≈ 28.0 m/s true airspeed).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7.6,
+   "tol": 0.4,
+   "unit": "%"
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Lift ∝ V², so it quadruples.",
+   "why": "This is stated in the unit. If speed doubles at the same C_L, how does lift change?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Drag is fuel. In cruise, engine thrust equals drag, so every newton of drag removed is fuel not burned and CO₂ not emitted. Needing less energy to fly is the first of NASA’s three paths to sustainable aviation.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "The same lift physics drives wind-turbine blades, which turn the wind’s aerodynamic force into clean electricity.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "A wing turns the airflow downward; by Newton’s third law the air pushes the wing up. Equivalently, faster flow over the top means lower pressure there (Bernoulli). Both describe one flow.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Dynamic pressure q = ½ρV² sets the scale of every aerodynamic force. Lift and drag coefficients C_L and C_D capture shape and angle of attack.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Lift grows with V², so halving speed needs four times the lift coefficient or wing area.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Lift and drag",
+   "q": "Drag comes from skin friction, pressure (form) drag and induced drag, the cost of making lift with a finite wing.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/lift-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Dynamic pressure",
+   "b": "q = ½ρV²."
+  },
+  {
+   "f": "Lift equation",
+   "b": "L = qSC_L."
+  },
+  {
+   "f": "Drag equation",
+   "b": "D = qSC_D."
+  },
+  {
+   "f": "Stall speed",
+   "b": "V_s = √(2W/(ρSC_L,max))."
+  },
+  {
+   "f": "Reynolds number",
+   "b": "ρVc/μ."
+  },
+  {
+   "f": "Induced drag",
+   "b": "Drag due to lift on a finite wing."
+  },
+  {
+   "f": "Air over the top must meet air under the bottom at the trailing edge (equal transit time).",
+   "b": "It does not; the upper flow actually arrives first. NASA Glenn lists equal transit as an incorrect theory of lift."
+  },
+  {
+   "f": "Lift is only Bernoulli, or only Newton.",
+   "b": "Both describe the same flow; pressure differences and flow turning go together."
+  },
+  {
+   "f": "Drag is just air friction.",
+   "b": "Pressure drag and induced drag are often larger."
+  },
+  {
+   "f": "A 1,100 kg airplane with a 16.2 m² wing flies level at 55 m/s at sea level (ρ = 1.227 kg/m³). Find C_L.",
+   "b": "C_L ≈ 0.36."
+  },
+  {
+   "f": "With C_L,max = 1.6, find this airplane’s stall speed at sea level.",
+   "b": "V_s ≈ 26.1 m/s (about 51 knots)."
+  },
+  {
+   "f": "Find the Reynolds number of a 1.5 m chord at 55 m/s at sea level (μ = 1.789 × 10⁻⁵ kg/(m·s)).",
+   "b": "Re ≈ 5.7 million."
+  },
+  {
+   "f": "If speed doubles at the same C_L, how does lift change?",
+   "b": "Lift ∝ V², so it quadruples."
+  },
+  {
+   "f": "Find the dynamic pressure at 230 m/s at 11 km (ρ = 0.366 kg/m³).",
+   "b": "q = ½ × 0.366 × 230² ≈ 9,680 Pa."
+  },
+  {
+   "f": "Find the drag of the Example 3.1 airplane if C_D = 0.032.",
+   "b": "D = 1,855 × 16.2 × 0.032 ≈ 962 N."
+  },
+  {
+   "f": "How much faster is the stall speed at 1,500 m (ρ = 1.060 kg/m³) than at sea level?",
+   "b": "V_s ∝ 1/√ρ: √(1.227/1.060) = 1.076, so about 7.6% faster (≈ 28.0 m/s true airspeed)."
+  },
+  {
+   "f": "A wing turns the airflow downward; by Newton’s third law the air pushes the wing up. Equivalently, faster flow over the top means lower pressure there (Bernoulli). Both describe one flow.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Dynamic pressure q = ½ρV² sets the scale of every aerodynamic force. Lift and drag coefficients C_L and C_D capture shape and angle of attack.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Lift grows with V², so halving speed needs four times the lift coefficient or wing area.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Drag comes from skin friction, pressure (form) drag and induced drag, the cost of making lift with a finite wing.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Reynolds number Re = ρVc/μ compares inertial and viscous effects; wind-tunnel models must account for it to predict full-size behavior.",
+   "b": "This is stated in the unit."
+  }
+ ]
+}

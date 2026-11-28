@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Rockets",
+   "q": "Δv depends on the mass ratio through…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "a square",
+    "a logarithm",
+    "a square root",
+    "a straight line"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Rockets",
+   "q": "Staging helps because…",
+   "why": "Empty tanks no longer need accelerating.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "it raises I_sp",
+    "it drops dead mass",
+    "it adds air",
+    "it lowers gravity"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Rockets",
+   "q": "To lift off, thrust-to-weight must be…",
+   "why": "Thrust must exceed weight.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "exactly 1"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Rockets",
+   "q": "The effective exhaust speed for I_sp = 300 s is about…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Rockets push against the air.",
+   "why": "They work best in vacuum; they push on their own exhaust.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Double the propellant, double the Δv.",
+   "why": "Δv grows with the logarithm of the mass ratio.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Orbit needs only 7.7 km/s of Δv.",
+   "why": "Gravity and drag losses push the total to roughly 9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Rockets",
+   "q": "An engine with I_sp = 450 s fires until m₀/m_f = 5. Find Δv. Give your answer in m/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Rockets",
+   "q": "A two-stage rocket: each stage has I_sp = 300 s and mass ratio 4. Find the total Δv. Give your answer in m/s.",
+   "why": "≈ 8,157 m/s, twice what one stage with mass ratio 4 gives.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Rockets",
+   "q": "Find Δv for I_sp = 311 s and m₀/m_f = 3. Give your answer in m/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Rockets",
+   "q": "A 500,000 kg rocket has 7.5 MN of thrust. Find T/W at liftoff.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Rockets",
+   "q": "What I_sp gives Δv = 3,000 m/s with mass ratio 2?",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "≈ 24.4 versus ≈ 8.4: about 96% versus 88% of the rocket must be propellant.",
+   "why": "This is stated in the unit. What mass ratio does a single stage need for 9.4 km/s with I_sp = 300 s? With 450 s?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Every Earth-observing satellite, from Landsat to the missions that track sea level and greenhouse gases, rides a rocket sized with this equation. It is why each kilogram of instrument is precious and why satellites are built to be light.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Our Delta-v calculator lets you run the same numbers for real missions.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "A rocket carries all its propellant, fuel and oxidizer. Its thrust is F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "The ideal rocket equation: Δv = v_e ln(m₀/m_f), with v_e = I_sp g₀. Speed grows only with the logarithm of the mass ratio.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Reaching low Earth orbit takes roughly 9.4 km/s of Δv once gravity and drag losses are included, so most of a launch vehicle’s mass is propellant.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Staging drops empty tanks and engines so later stages do not carry dead weight.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Rockets",
+   "q": "Thrust-to-weight ratio must exceed 1 to lift off.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Rocket equation",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "Mass ratio",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "Staging",
+   "b": "Dropping spent stages."
+  },
+  {
+   "f": "Thrust-to-weight",
+   "b": "Must exceed 1 at liftoff."
+  },
+  {
+   "f": "Δv to LEO",
+   "b": "≈ 9.4 km/s including losses."
+  },
+  {
+   "f": "I_sp",
+   "b": "Seconds of thrust per weight of propellant."
+  },
+  {
+   "f": "Rockets push against the air.",
+   "b": "They work best in vacuum; they push on their own exhaust."
+  },
+  {
+   "f": "Double the propellant, double the Δv.",
+   "b": "Δv grows with the logarithm of the mass ratio."
+  },
+  {
+   "f": "Orbit needs only 7.7 km/s of Δv.",
+   "b": "Gravity and drag losses push the total to roughly 9.4 km/s."
+  },
+  {
+   "f": "An engine with I_sp = 450 s fires until m₀/m_f = 5. Find Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "What mass ratio does a single stage need for 9.4 km/s with I_sp = 300 s? With 450 s?",
+   "b": "≈ 24.4 versus ≈ 8.4: about 96% versus 88% of the rocket must be propellant."
+  },
+  {
+   "f": "A two-stage rocket: each stage has I_sp = 300 s and mass ratio 4. Find the total Δv.",
+   "b": "≈ 8,157 m/s, twice what one stage with mass ratio 4 gives."
+  },
+  {
+   "f": "Find Δv for I_sp = 311 s and m₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "A 500,000 kg rocket has 7.5 MN of thrust. Find T/W at liftoff.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "What I_sp gives Δv = 3,000 m/s with mass ratio 2?",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "A rocket carries all its propellant, fuel and oxidizer. Its thrust is F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "The ideal rocket equation",
+   "b": "Δv = v_e ln(m₀/m_f), with v_e = I_sp g₀. Speed grows only with the logarithm of the mass ratio."
+  },
+  {
+   "f": "Reaching low Earth orbit takes roughly ____km/s of Δv once gravity and drag losses are included, so most of a launch vehicle’s mass is propellant.",
+   "b": "Reaching low Earth orbit takes roughly 9.4 km/s of Δv once gravity and drag losses are included, so most of a launch vehicle’s mass is propellant."
+  },
+  {
+   "f": "Staging drops empty tanks and engines so later stages do not carry dead weight.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Thrust-to-weight ratio must exceed 1 to lift off.",
+   "b": "This is stated in the unit."
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Atmosphere",
+   "q": "In the troposphere temperature falls about…",
+   "why": "NASA’s lapse rate is 0.00649 °C/m.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "1 °C/km",
+    "6.5 °C/km",
+    "15 °C/km",
+    "0 °C/km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Speed of sound",
+   "q": "The speed of sound at sea level is about…",
+   "why": "√(1.4 × 287 × 288).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "100 m/s",
+    "340 m/s",
+    "1,000 m/s",
+    "3,000 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Atmosphere",
+   "q": "Density at 11 km is about what fraction of sea level?",
+   "why": "0.366/1.227.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "90%",
+    "60%",
+    "30%",
+    "5%"
+   ],
+   "ok": 2
+  },
+  {
+   "type": "mc",
+   "topic": "Speed of sound",
+   "q": "Mach number is…",
+   "why": "Speed divided by the local speed of sound.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "V × a",
+    "V/a",
+    "a/V",
+    "V²/a"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "The speed of sound depends on pressure.",
+   "why": "For an ideal gas it depends only on temperature.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "It gets colder all the way up.",
+   "why": "Temperature levels off above 11 km and rises again higher in the stratosphere.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "Thinner air always helps.",
+   "why": "It cuts drag but also lift and engine thrust, so wings must fly faster or at higher lift coefficients.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphere",
+   "q": "An airliner flies at 230 m/s true airspeed at 11 km. What is its Mach number?",
+   "why": "M ≈ 0.78.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.78,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphere",
+   "q": "Find the air density at 11,000 m with the NASA model (T = −56.46 °C, p = 22.72 kPa). Give your answer in kg/m³.",
+   "why": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, about 30% of sea level.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 0.366,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphere",
+   "q": "Find the temperature at 1,500 m in the NASA model. Give your answer in °C.",
+   "why": "T = 15.04 − 9.74 = 5.3 °C.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 5.3,
+   "tol": 0.2,
+   "unit": "°C"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphere",
+   "q": "What is Mach 2 at sea level in m/s?",
+   "why": "2 × 340 = 680 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 680,
+   "tol": 5,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Atmosphere",
+   "q": "Find the sea-level density from p = 101.40 kPa and T = 15.04 °C. Give your answer in kg/m³.",
+   "why": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": 1.227,
+   "tol": 0.015,
+   "unit": "kg/m³"
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% of sea level).",
+   "why": "This is stated in the unit. Find T, p and ρ at 5,000 m with NASA’s model.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "340 m/s and 295 m/s.",
+   "why": "This is stated in the unit. Find the speed of sound at sea level (15 °C) and at 11 km (−56.5 °C).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "Aircraft fly where weather and climate happen. NASA studies aircraft emissions through computer modeling, combustion laboratory testing and flight testing, because what engines release at altitude matters for the atmosphere.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "The same atmosphere physics underlies how satellites turn the radiation they measure into profiles of the air’s temperature.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "A standard atmosphere is an average model fitted to measurements. In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "From 11 to 25 km (lower stratosphere) the model’s temperature is constant at −56.46 °C, while pressure keeps falling exponentially.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "Density follows from the ideal-gas law, ρ = p/(RT). At 11 km air is about 30% as dense as at sea level.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Atmosphere",
+   "q": "The speed of sound is a = √(γRT), so it depends only on temperature. Mach number M = V/a.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/earth-atmosphere-equation-metric/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Standard atmosphere",
+   "b": "Average model of T, p, ρ versus altitude."
+  },
+  {
+   "f": "Troposphere",
+   "b": "Ground to ~11 km; temperature falls with height."
+  },
+  {
+   "f": "Lapse rate",
+   "b": "≈ 6.5 °C per km in the troposphere."
+  },
+  {
+   "f": "Ideal gas law",
+   "b": "p = ρRT."
+  },
+  {
+   "f": "Speed of sound",
+   "b": "a = √(γRT)."
+  },
+  {
+   "f": "Mach number",
+   "b": "M = V/a."
+  },
+  {
+   "f": "The speed of sound depends on pressure.",
+   "b": "For an ideal gas it depends only on temperature."
+  },
+  {
+   "f": "It gets colder all the way up.",
+   "b": "Temperature levels off above 11 km and rises again higher in the stratosphere."
+  },
+  {
+   "f": "Thinner air always helps.",
+   "b": "It cuts drag but also lift and engine thrust, so wings must fly faster or at higher lift coefficients."
+  },
+  {
+   "f": "Find T, p and ρ at 5,000 m with NASA’s model.",
+   "b": "T ≈ −17.4 °C, p ≈ 54.1 kPa, ρ ≈ 0.738 kg/m³ (60% of sea level)."
+  },
+  {
+   "f": "Find the speed of sound at sea level (15 °C) and at 11 km (−56.5 °C).",
+   "b": "340 m/s and 295 m/s."
+  },
+  {
+   "f": "An airliner flies at 230 m/s true airspeed at 11 km. What is its Mach number?",
+   "b": "M ≈ 0.78."
+  },
+  {
+   "f": "Find the air density at 11,000 m with the NASA model (T = −56.46 °C, p = 22.72 kPa).",
+   "b": "ρ = 22.72/(0.2869 × 216.64) ≈ 0.366 kg/m³, about 30% of sea level."
+  },
+  {
+   "f": "Find the temperature at 1,500 m in the NASA model.",
+   "b": "T = 15.04 − 9.74 = 5.3 °C."
+  },
+  {
+   "f": "What is Mach 2 at sea level in m/s?",
+   "b": "2 × 340 = 680 m/s."
+  },
+  {
+   "f": "Find the sea-level density from p = 101.40 kPa and T = 15.04 °C.",
+   "b": "ρ = 101.40/(0.2869 × 288.14) ≈ 1.227 kg/m³."
+  },
+  {
+   "f": "A standard atmosphere is an average model fitted to measurements. In NASA’s model the troposphere runs from the ground to ____m, and temperature falls about 6.5 °C per kilometer.",
+   "b": "A standard atmosphere is an average model fitted to measurements. In NASA’s model the troposphere runs from the ground to 11,000 m, and temperature falls about 6.5 °C per kilometer."
+  },
+  {
+   "f": "From ____to 25 km (lower stratosphere) the model’s temperature is constant at −56.46 °C, while pressure keeps falling exponentially.",
+   "b": "From 11 to 25 km (lower stratosphere) the model’s temperature is constant at −56.46 °C, while pressure keeps falling exponentially."
+  },
+  {
+   "f": "Density follows from the ideal-gas law, ρ = p/(RT). At ____km air is about 30% as dense as at sea level.",
+   "b": "Density follows from the ideal-gas law, ρ = p/(RT). At 11 km air is about 30% as dense as at sea level."
+  },
+  {
+   "f": "The speed of sound is a = √(γRT), so it depends only on temperature. Mach number M = V/a.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Thin air means less drag at a given speed, which is why jets cruise high, but wings and engines still need enough air to work.",
+   "b": "This is stated in the unit."
+  }
+ ]
+}

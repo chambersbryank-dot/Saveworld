@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Fusées",
+   "q": "Δv dépend du rapport de masse via…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "un carré",
+    "un logarithme",
+    "une racine carrée",
+    "une droite"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Fusées",
+   "q": "L’étagement aide parce que…",
+   "why": "Les réservoirs vides n’ont plus besoin d’être accélérés.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "il augmente l’I_sp",
+    "il largue la masse morte",
+    "il ajoute de l’air",
+    "il diminue la gravité"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Fusées",
+   "q": "Pour décoller, le rapport poussée/poids doit être…",
+   "why": "La poussée doit dépasser le poids.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "exactement 1"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Fusées",
+   "q": "La vitesse d’éjection effective pour I_sp = 300 s est d’environ…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Les fusées poussent contre l’air.",
+   "why": "Elles fonctionnent mieux dans le vide ; elles poussent sur leurs propres gaz d’échappement.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Deux fois plus d’ergols, deux fois plus de Δv.",
+   "why": "Δv croît avec le logarithme du rapport de masse.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "L’orbite ne demande que 7.7 km/s de Δv.",
+   "why": "Les pertes par gravité et par traînée portent le total à environ 9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Fusées",
+   "q": "Un moteur d’I_sp = 450 s fonctionne jusqu’à m₀/m_f = 5. Trouvez Δv. Donnez la réponse en m/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Fusées",
+   "q": "Une fusée à deux étages : chaque étage a I_sp = 300 s et un rapport de masse de 4. Trouvez le Δv total. Donnez la réponse en m/s.",
+   "why": "≈ 8157 m/s, deux fois ce que donne un seul étage de rapport de masse 4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Fusées",
+   "q": "Trouvez Δv pour I_sp = 311 s et m₀/m_f = 3. Donnez la réponse en m/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Fusées",
+   "q": "Une fusée de 500000 kg a 7.5 MN de poussée. Trouvez T/W au décollage.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Fusées",
+   "q": "Quel I_sp donne Δv = 3000 m/s avec un rapport de masse de 2 ?",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "≈ 24.4 contre ≈ 8.4 : environ 96% contre 88% de la fusée doit être constituée d’ergols.",
+   "why": "C’est écrit dans l’unité. Quel rapport de masse un seul étage doit-il avoir pour 9.4 km/s avec I_sp = 300 s ? Et avec 450 s ?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Chaque satellite d’observation de la Terre, de Landsat aux missions qui suivent le niveau de la mer et les gaz à effet de serre, voyage sur une fusée dimensionnée avec cette équation. C’est pourquoi chaque kilogramme d’instrument est précieux et pourquoi les satellites sont conçus pour être légers.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Notre calculateur de Delta-v vous permet de refaire les mêmes calculs pour de vraies missions.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Une fusée emporte tous ses ergols, carburant et comburant. Sa poussée vaut F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "L’équation idéale de la fusée : Δv = v_e ln(m₀/m_f), avec v_e = I_sp g₀. La vitesse ne croît qu’avec le logarithme du rapport de masse.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Atteindre l’orbite terrestre basse demande environ 9.4 km/s de Δv une fois incluses les pertes par gravité et par traînée, donc l’essentiel de la masse d’un lanceur est constitué d’ergols.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "L’étagement largue les réservoirs vides et les moteurs pour que les étages suivants ne transportent pas de poids mort.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Fusées",
+   "q": "Le rapport poussée/poids doit dépasser 1 pour décoller.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Équation de la fusée",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "Rapport de masse",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "Étagement",
+   "b": "Larguer les étages épuisés."
+  },
+  {
+   "f": "Poussée/poids",
+   "b": "Doit dépasser 1 au décollage."
+  },
+  {
+   "f": "Δv vers l’orbite basse (LEO)",
+   "b": "≈ 9.4 km/s pertes comprises."
+  },
+  {
+   "f": "I_sp",
+   "b": "Secondes de poussée par poids d’ergol."
+  },
+  {
+   "f": "Les fusées poussent contre l’air.",
+   "b": "Elles fonctionnent mieux dans le vide ; elles poussent sur leurs propres gaz d’échappement."
+  },
+  {
+   "f": "Deux fois plus d’ergols, deux fois plus de Δv.",
+   "b": "Δv croît avec le logarithme du rapport de masse."
+  },
+  {
+   "f": "L’orbite ne demande que 7.7 km/s de Δv.",
+   "b": "Les pertes par gravité et par traînée portent le total à environ 9.4 km/s."
+  },
+  {
+   "f": "Un moteur d’I_sp = 450 s fonctionne jusqu’à m₀/m_f = 5. Trouvez Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "Quel rapport de masse un seul étage doit-il avoir pour 9.4 km/s avec I_sp = 300 s ? Et avec 450 s ?",
+   "b": "≈ 24.4 contre ≈ 8.4 : environ 96% contre 88% de la fusée doit être constituée d’ergols."
+  },
+  {
+   "f": "Une fusée à deux étages : chaque étage a I_sp = 300 s et un rapport de masse de 4. Trouvez le Δv total.",
+   "b": "≈ 8157 m/s, deux fois ce que donne un seul étage de rapport de masse 4."
+  },
+  {
+   "f": "Trouvez Δv pour I_sp = 311 s et m₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "Une fusée de 500000 kg a 7.5 MN de poussée. Trouvez T/W au décollage.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "Quel I_sp donne Δv = 3000 m/s avec un rapport de masse de 2 ?",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "Une fusée emporte tous ses ergols, carburant et comburant. Sa poussée vaut F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "L’équation idéale de la fusée",
+   "b": "Δv = v_e ln(m₀/m_f), avec v_e = I_sp g₀. La vitesse ne croît qu’avec le logarithme du rapport de masse."
+  },
+  {
+   "f": "Atteindre l’orbite terrestre basse demande environ ____km/s de Δv une fois incluses les pertes par gravité et par traînée, donc l’essentiel de la masse d’un lanceur est constitué d’ergols.",
+   "b": "Atteindre l’orbite terrestre basse demande environ 9.4 km/s de Δv une fois incluses les pertes par gravité et par traînée, donc l’essentiel de la masse d’un lanceur est constitué d’ergols."
+  },
+  {
+   "f": "L’étagement largue les réservoirs vides et les moteurs pour que les étages suivants ne transportent pas de poids mort.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Le rapport poussée/poids doit dépasser 1 pour décoller.",
+   "b": "C’est écrit dans l’unité."
+  }
+ ]
+}

@@ -1,0 +1,302 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Stabilità",
+   "q": "Gli alettoni controllano…",
+   "why": "Si deflettono in direzioni opposte su ciascuna ala.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "il beccheggio",
+    "il rollio",
+    "l’imbardata",
+    "alla spinta"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilità",
+   "q": "Per la stabilità in beccheggio il CG deve essere…",
+   "why": "Margine statico positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "dietro il punto neutro",
+    "davanti al punto neutro",
+    "in coda",
+    "all’estremità alare"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilità",
+   "q": "Un margine statico di 0.15 significa…",
+   "why": "Margine positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "instabile",
+    "stabile",
+    "neutro",
+    "in stallo"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Stabilità",
+   "q": "La stabilità dinamica riguarda…",
+   "why": "Se le oscillazioni si smorzano.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la tendenza iniziale",
+    "il moto nel tempo",
+    "la spinta del motore",
+    "solo il peso"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Staticamente stabile significa che l’oscillazione si smorza.",
+   "why": "Quella è stabilità dinamica; la stabilità statica è la tendenza iniziale.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Più stabilità è sempre meglio.",
+   "why": "Troppa rende pesanti i comandi e spreca resistenza di trim.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Il CG può stare ovunque purché l’ala sostenga.",
+   "why": "Un CG arretrato rende l’aereo instabile.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Stabilità",
+   "q": "Il punto neutro è al 40% della corda media e il CG al 25%. Trova il margine statico.",
+   "why": "0.15, cioè 15%: stabile.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.15,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stabilità",
+   "q": "Un aliante ha un’ala da 50 g a x = 10 cm, una coda da 10 g a x = 40 cm e 20 g di zavorra nel muso a x = 0. Trova il CG.",
+   "why": "x_cg = 11.25 cm dal muso.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 11.25,
+   "tol": 0.05,
+   "unit": "cm"
+  },
+  {
+   "type": "num",
+   "topic": "Stabilità",
+   "q": "Per l’aliante dell’esempio 6.2 (corda media 8 cm) il punto neutro è a 13 cm. È stabile?",
+   "why": "SM ≈ 0.22: stabile. Togli la zavorra dal muso e il CG arretra verso l’instabilità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.22,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Stabilità",
+   "q": "Nell’esempio 6.2, quale zavorra m nel muso porta il CG a 12 cm? Dai la risposta in g.",
+   "why": "900/(60 + m) = 12 dà m = 15 g.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 15,
+   "tol": 0.2,
+   "unit": "g"
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "L’equilibratore, sul piano di coda orizzontale.",
+   "why": "È scritto nell’unità. Quale superficie controlla il beccheggio?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "SM = −0.02 < 0: staticamente instabile.",
+   "why": "È scritto nell’unità. CG al 30% della corda, punto neutro al 28%. È stabile?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Il suo CG è troppo arretrato, vicino o dietro al punto neutro.",
+   "why": "È scritto nell’unità. Perché un aeroplanino di carta senza zavorra nel muso cabra e va in stallo?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "I margini di stabilità costano carburante: una coda convenzionale di solito spinge verso il basso per equilibrare l’aereo, e l’ala deve generare portanza in più, con resistenza in più, per sostenerla. Ridurre questa penalità fa parte della via dell’aereo efficiente descritta dalla NASA.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Le stesse idee di equilibrio e controllo mantengono puntati in modo stabile i satelliti di osservazione della Terra, così che i loro strumenti possano mappare il pianeta.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Un aereo ruota attorno al proprio baricentro: beccheggio (equilibratore), rollio (alettoni), imbardata (timone).",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Stabilità statica: dopo una perturbazione l’aereo tende inizialmente a tornare indietro. Stabilità dinamica: il moto si smorza davvero nel tempo.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "La stabilità in beccheggio richiede che il baricentro sia davanti al punto neutro. Il margine statico = (x_np − x_cg)/c̄ deve essere positivo.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Stabilità",
+   "q": "Una coda molto dietro il CG funziona come le penne di una freccia: una perturbazione a cabrare aumenta la portanza della coda e riporta giù il muso.",
+   "why": "È scritto nell’unità.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Beccheggio / rollio / imbardata",
+   "b": "Equilibratore / alettoni / timone."
+  },
+  {
+   "f": "Stabilità statica",
+   "b": "Tendenza iniziale a tornare."
+  },
+  {
+   "f": "Stabilità dinamica",
+   "b": "La perturbazione si smorza nel tempo."
+  },
+  {
+   "f": "Punto neutro",
+   "b": "Posizione del CG per una stabilità neutra in beccheggio."
+  },
+  {
+   "f": "Margine statico",
+   "b": "(x_np − x_cg)/c̄."
+  },
+  {
+   "f": "Trim",
+   "b": "Equilibrato, momento risultante nullo."
+  },
+  {
+   "f": "Staticamente stabile significa che l’oscillazione si smorza.",
+   "b": "Quella è stabilità dinamica; la stabilità statica è la tendenza iniziale."
+  },
+  {
+   "f": "Più stabilità è sempre meglio.",
+   "b": "Troppa rende pesanti i comandi e spreca resistenza di trim."
+  },
+  {
+   "f": "Il CG può stare ovunque purché l’ala sostenga.",
+   "b": "Un CG arretrato rende l’aereo instabile."
+  },
+  {
+   "f": "Il punto neutro è al 40% della corda media e il CG al 25%. Trova il margine statico.",
+   "b": "0.15, cioè 15%: stabile."
+  },
+  {
+   "f": "Un aliante ha un’ala da 50 g a x = 10 cm, una coda da 10 g a x = 40 cm e 20 g di zavorra nel muso a x = 0. Trova il CG.",
+   "b": "x_cg = 11.25 cm dal muso."
+  },
+  {
+   "f": "Per l’aliante dell’esempio 6.2 (corda media 8 cm) il punto neutro è a 13 cm. È stabile?",
+   "b": "SM ≈ 0.22: stabile. Togli la zavorra dal muso e il CG arretra verso l’instabilità."
+  },
+  {
+   "f": "Quale superficie controlla il beccheggio?",
+   "b": "L’equilibratore, sul piano di coda orizzontale."
+  },
+  {
+   "f": "CG al 30% della corda, punto neutro al 28%. È stabile?",
+   "b": "SM = −0.02 < 0: staticamente instabile."
+  },
+  {
+   "f": "Nell’esempio 6.2, quale zavorra m nel muso porta il CG a 12 cm?",
+   "b": "900/(60 + m) = 12 dà m = 15 g."
+  },
+  {
+   "f": "Perché un aeroplanino di carta senza zavorra nel muso cabra e va in stallo?",
+   "b": "Il suo CG è troppo arretrato, vicino o dietro al punto neutro."
+  },
+  {
+   "f": "Un aereo ruota attorno al proprio baricentro",
+   "b": "beccheggio (equilibratore), rollio (alettoni), imbardata (timone)."
+  },
+  {
+   "f": "La stabilità in beccheggio richiede che il baricentro sia davanti al punto neutro. Il margine statico = (x_np − x_cg)/c̄ deve essere positivo.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "Una coda molto dietro il CG funziona come le penne di una freccia",
+   "b": "una perturbazione a cabrare aumenta la portanza della coda e riporta giù il muso."
+  },
+  {
+   "f": "Troppa stabilità rende l’aereo poco reattivo e costa resistenza di trim; alcuni caccia moderni sono progettati instabili e pilotati dal computer.",
+   "b": "È scritto nell’unità."
+  },
+  {
+   "f": "I margini di stabilità costano carburante",
+   "b": "una coda convenzionale di solito spinge verso il basso per equilibrare l’aereo, e l’ala deve generare portanza in più, con resistenza in più, per sostenerla. Ridurre questa penalità fa parte della via dell’aereo efficiente descritta dalla NASA."
+  }
+ ]
+}

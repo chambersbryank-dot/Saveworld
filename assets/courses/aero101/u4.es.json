@@ -1,0 +1,308 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Alas",
+   "q": "La pendiente de sustentación del perfil delgado es…",
+   "why": "c_l = 2πα.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "π por rad",
+    "2π por rad",
+    "2π por grado",
+    "1 por rad"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Alas",
+   "q": "El alargamiento es…",
+   "why": "La envergadura al cuadrado dividida entre la superficie.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "b/S",
+    "b²/S",
+    "S/b",
+    "c/b"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Alas",
+   "q": "En el L/D máximo…",
+   "why": "Minimizar C_D/C_L da KC_L² = C_D0.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "resistencia inducida = resistencia parásita",
+    "la resistencia es cero",
+    "C_L = 0",
+    "el ala está en pérdida"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "mc",
+   "topic": "Alas",
+   "q": "Un mayor alargamiento reduce sobre todo…",
+   "why": "K = 1/(πeAR).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la fricción superficial",
+    "la resistencia inducida",
+    "el peso",
+    "la resistencia de onda"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Más ángulo de ataque siempre significa más sustentación.",
+   "why": "Pasado el ángulo de pérdida, el flujo se desprende y la sustentación cae.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Los perfiles simétricos no pueden generar sustentación.",
+   "why": "La generan con un ángulo de ataque positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Los dispositivos de punta de ala eliminan la resistencia inducida.",
+   "why": "La reducen; solo un ala infinitamente larga no tendría ninguna.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Alas",
+   "q": "Teoría del perfil delgado: halla c_l con α = 5°.",
+   "why": "c_l ≈ 0.548.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.548,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Alas",
+   "q": "Halla el alargamiento de un ala de 11 m de envergadura y 16.2 m² de superficie.",
+   "why": "AR = 121/16.2 ≈ 7.5.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 7.5,
+   "tol": 0.15,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Alas",
+   "q": "Con c_l = 2πα, ¿qué ángulo da c_l = 0.5? Da la respuesta en °.",
+   "why": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 4.6,
+   "tol": 0.2,
+   "unit": "°"
+  },
+  {
+   "type": "num",
+   "topic": "Alas",
+   "q": "Para el avión del ejemplo 4.3, halla C_D con C_L = 0.36.",
+   "why": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.0319,
+   "tol": 0.001,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Alas",
+   "q": "Si AR sube de 7.5 a 15 (mismos e y C_D0), ¿cómo cambia (L/D)max?",
+   "why": "K se reduce a la mitad, así que (L/D)max crece en √2 hasta ≈ 19.4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 19.4,
+   "tol": 0.4,
+   "unit": ""
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "4.92 por rad ≈ 0.086 por grado, un 22% por debajo del valor 2D.",
+   "why": "Esto está escrito en la unidad. Halla la pendiente de sustentación de un ala con AR = 8 y e = 0.9.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "(L/D)max ≈ 13.7 con C_L ≈ 0.69.",
+   "why": "Esto está escrito en la unidad. Con C_D0 = 0.025, e = 0.8 y AR = 7.5, halla (L/D)max y el C_L en que ocurre.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Las alas largas y esbeltas son una de las formas más directas de reducir el consumo de combustible, porque la resistencia inducida baja al aumentar el alargamiento. Esa es justamente la vía de la «tecnología aeronáutica eficiente» en el trabajo de la NASA sobre aviación sostenible.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "El albatros, que planea durante horas sobre el océano, usa la misma física: un ala larga y delgada con una alta relación sustentación-resistencia.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Un perfil aerodinámico es la sección transversal de un ala. La curvatura le permite generar sustentación con ángulo de ataque cero; el espesor aporta resistencia estructural y espacio para combustible.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "La teoría del perfil delgado predice una pendiente de sustentación de 2π por radián (unos 0.11 por grado) hasta que el flujo se desprende y el ala entra en pérdida.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Un ala finita pierde pendiente de sustentación por sus vórtices de punta: a = a₀/(1 + a₀/(πeAR)), con alargamiento AR = b²/S.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Alas",
+   "q": "Resistencia total C_D = C_D0 + KC_L² con K = 1/(πeAR). El L/D máximo se da cuando la resistencia inducida iguala a la parásita.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Cuerda",
+   "b": "Del borde de ataque al borde de salida."
+  },
+  {
+   "f": "Curvatura",
+   "b": "Curvatura de la línea media."
+  },
+  {
+   "f": "Ángulo de ataque",
+   "b": "Ángulo entre la cuerda y el flujo incidente."
+  },
+  {
+   "f": "Pérdida",
+   "b": "Desprendimiento del flujo; la sustentación cae."
+  },
+  {
+   "f": "Alargamiento",
+   "b": "b²/S."
+  },
+  {
+   "f": "Polar de resistencia",
+   "b": "C_D = C_D0 + KC_L²."
+  },
+  {
+   "f": "Más ángulo de ataque siempre significa más sustentación.",
+   "b": "Pasado el ángulo de pérdida, el flujo se desprende y la sustentación cae."
+  },
+  {
+   "f": "Los perfiles simétricos no pueden generar sustentación.",
+   "b": "La generan con un ángulo de ataque positivo."
+  },
+  {
+   "f": "Los dispositivos de punta de ala eliminan la resistencia inducida.",
+   "b": "La reducen; solo un ala infinitamente larga no tendría ninguna."
+  },
+  {
+   "f": "Teoría del perfil delgado: halla c_l con α = 5°.",
+   "b": "c_l ≈ 0.548."
+  },
+  {
+   "f": "Halla la pendiente de sustentación de un ala con AR = 8 y e = 0.9.",
+   "b": "4.92 por rad ≈ 0.086 por grado, un 22% por debajo del valor 2D."
+  },
+  {
+   "f": "Con C_D0 = 0.025, e = 0.8 y AR = 7.5, halla (L/D)max y el C_L en que ocurre.",
+   "b": "(L/D)max ≈ 13.7 con C_L ≈ 0.69."
+  },
+  {
+   "f": "Halla el alargamiento de un ala de 11 m de envergadura y 16.2 m² de superficie.",
+   "b": "AR = 121/16.2 ≈ 7.5."
+  },
+  {
+   "f": "Con c_l = 2πα, ¿qué ángulo da c_l = 0.5?",
+   "b": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+  },
+  {
+   "f": "Para el avión del ejemplo 4.3, halla C_D con C_L = 0.36.",
+   "b": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319."
+  },
+  {
+   "f": "Si AR sube de 7.5 a 15 (mismos e y C_D0), ¿cómo cambia (L/D)max?",
+   "b": "K se reduce a la mitad, así que (L/D)max crece en √2 hasta ≈ 19.4."
+  },
+  {
+   "f": "Un perfil aerodinámico es la sección transversal de un ala. La curvatura le permite generar sustentación con ángulo de ataque cero; el espesor aporta resistencia estructural y espacio para combustible.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La teoría del perfil delgado predice una pendiente de sustentación de 2π por radián (unos 0.11 por grado) hasta que el flujo se desprende y el ala entra en pérdida.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Un ala finita pierde pendiente de sustentación por sus vórtices de punta",
+   "b": "a = a₀/(1 + a₀/(πeAR)), con alargamiento AR = b²/S."
+  },
+  {
+   "f": "Resistencia total C_D = C_D0 + KC_L² con K = 1/(πeAR). El L/D máximo se da cuando la resistencia inducida iguala a la parásita.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Un alargamiento alto (planeadores, albatros, alas de aviones de pasajeros modernos) implica menos resistencia inducida y mayor L/D.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "El albatros, que planea durante horas sobre el océano, usa la misma física",
+   "b": "un ala larga y delgada con una alta relación sustentación-resistencia."
+  }
+ ]
+}

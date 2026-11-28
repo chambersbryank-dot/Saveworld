@@ -1,0 +1,308 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Ailes",
+   "q": "La pente de portance d’un profil mince vaut…",
+   "why": "c_l = 2πα.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "π par rad",
+    "2π par rad",
+    "2π par degré",
+    "1 par rad"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Ailes",
+   "q": "L’allongement est…",
+   "why": "L’envergure au carré divisée par la surface.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "b/S",
+    "b²/S",
+    "S/b",
+    "c/b"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Ailes",
+   "q": "À la finesse maximale L/D…",
+   "why": "Minimiser C_D/C_L donne KC_L² = C_D0.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "traînée induite = traînée parasite",
+    "la traînée est nulle",
+    "C_L = 0",
+    "l’aile est décrochée"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "mc",
+   "topic": "Ailes",
+   "q": "Un plus grand allongement réduit surtout…",
+   "why": "K = 1/(πeAR).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "le frottement",
+    "la traînée induite",
+    "au poids",
+    "la traînée d’onde"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Plus d’incidence signifie toujours plus de portance.",
+   "why": "Au-delà de l’angle de décrochage, l’écoulement décolle et la portance chute.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Les profils symétriques ne peuvent pas porter.",
+   "why": "Ils portent à incidence positive.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Les dispositifs de bout d’aile annulent la traînée induite.",
+   "why": "Ils la réduisent ; seule une aile infiniment longue n’en aurait pas.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Ailes",
+   "q": "Théorie des profils minces : trouvez c_l à α = 5°.",
+   "why": "c_l ≈ 0.548.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.548,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ailes",
+   "q": "Trouvez l’allongement d’une aile d’envergure 11 m et de surface 16.2 m².",
+   "why": "AR = 121/16.2 ≈ 7.5.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 7.5,
+   "tol": 0.15,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ailes",
+   "q": "Avec c_l = 2πα, quel angle donne c_l = 0.5 ? Donnez la réponse en °.",
+   "why": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 4.6,
+   "tol": 0.2,
+   "unit": "°"
+  },
+  {
+   "type": "num",
+   "topic": "Ailes",
+   "q": "Pour l’avion de l’exemple 4.3, trouvez C_D à C_L = 0.36.",
+   "why": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.0319,
+   "tol": 0.001,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Ailes",
+   "q": "Si AR passe de 7.5 à 15 (mêmes e et C_D0), comment (L/D)max évolue-t-elle ?",
+   "why": "K est divisé par deux, donc (L/D)max est multipliée par √2, soit ≈ 19.4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 19.4,
+   "tol": 0.4,
+   "unit": ""
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "4.92 par rad ≈ 0.086 par degré, 22% sous la valeur 2D.",
+   "why": "C’est écrit dans l’unité. Trouvez la pente de portance d’une aile avec AR = 8 et e = 0.9.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "(L/D)max ≈ 13.7 à C_L ≈ 0.69.",
+   "why": "C’est écrit dans l’unité. Avec C_D0 = 0.025, e = 0.8 et AR = 7.5, trouvez (L/D)max et le C_L correspondant.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Les ailes longues et fines sont l’un des moyens les plus directs de réduire la consommation, car la traînée induite baisse quand l’allongement augmente. C’est précisément la voie de la « technologie aéronautique efficace » dans les travaux de la NASA sur l’aviation durable.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "L’albatros, qui plane des heures au-dessus de l’océan, utilise la même physique : une aile longue et fine à grande finesse.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Un profil est la section d’une aile. La cambrure lui permet de porter à incidence nulle ; l’épaisseur apporte de la résistance et de la place pour le carburant.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "La théorie des profils minces prédit une pente de portance de 2π par radian (environ 0.11 par degré) jusqu’à ce que l’écoulement décolle et que l’aile décroche.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Une aile finie perd de la pente de portance à cause de ses tourbillons marginaux : a = a₀/(1 + a₀/(πeAR)), avec l’allongement AR = b²/S.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Ailes",
+   "q": "Traînée totale C_D = C_D0 + KC_L² avec K = 1/(πeAR). La finesse maximale L/D est atteinte quand la traînée induite égale la traînée parasite.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Corde",
+   "b": "Du bord d’attaque au bord de fuite."
+  },
+  {
+   "f": "Cambrure",
+   "b": "Courbure de la ligne moyenne."
+  },
+  {
+   "f": "Angle d’attaque",
+   "b": "Angle entre la corde et l’écoulement incident."
+  },
+  {
+   "f": "Décrochage",
+   "b": "Décollement de l’écoulement ; la portance chute."
+  },
+  {
+   "f": "Allongement",
+   "b": "b²/S."
+  },
+  {
+   "f": "Polaire de traînée",
+   "b": "C_D = C_D0 + KC_L²."
+  },
+  {
+   "f": "Plus d’incidence signifie toujours plus de portance.",
+   "b": "Au-delà de l’angle de décrochage, l’écoulement décolle et la portance chute."
+  },
+  {
+   "f": "Les profils symétriques ne peuvent pas porter.",
+   "b": "Ils portent à incidence positive."
+  },
+  {
+   "f": "Les dispositifs de bout d’aile annulent la traînée induite.",
+   "b": "Ils la réduisent ; seule une aile infiniment longue n’en aurait pas."
+  },
+  {
+   "f": "Théorie des profils minces : trouvez c_l à α = 5°.",
+   "b": "c_l ≈ 0.548."
+  },
+  {
+   "f": "Trouvez la pente de portance d’une aile avec AR = 8 et e = 0.9.",
+   "b": "4.92 par rad ≈ 0.086 par degré, 22% sous la valeur 2D."
+  },
+  {
+   "f": "Avec C_D0 = 0.025, e = 0.8 et AR = 7.5, trouvez (L/D)max et le C_L correspondant.",
+   "b": "(L/D)max ≈ 13.7 à C_L ≈ 0.69."
+  },
+  {
+   "f": "Trouvez l’allongement d’une aile d’envergure 11 m et de surface 16.2 m².",
+   "b": "AR = 121/16.2 ≈ 7.5."
+  },
+  {
+   "f": "Avec c_l = 2πα, quel angle donne c_l = 0.5 ?",
+   "b": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+  },
+  {
+   "f": "Pour l’avion de l’exemple 4.3, trouvez C_D à C_L = 0.36.",
+   "b": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319."
+  },
+  {
+   "f": "Si AR passe de 7.5 à 15 (mêmes e et C_D0), comment (L/D)max évolue-t-elle ?",
+   "b": "K est divisé par deux, donc (L/D)max est multipliée par √2, soit ≈ 19.4."
+  },
+  {
+   "f": "Un profil est la section d’une aile. La cambrure lui permet de porter à incidence nulle ; l’épaisseur apporte de la résistance et de la place pour le carburant.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "La théorie des profils minces prédit une pente de portance de 2π par radian (environ 0.11 par degré) jusqu’à ce que l’écoulement décolle et que l’aile décroche.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Une aile finie perd de la pente de portance à cause de ses tourbillons marginaux",
+   "b": "a = a₀/(1 + a₀/(πeAR)), avec l’allongement AR = b²/S."
+  },
+  {
+   "f": "Traînée totale C_D = C_D0 + KC_L² avec K = 1/(πeAR). La finesse maximale L/D est atteinte quand la traînée induite égale la traînée parasite.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Un grand allongement (planeurs, albatros, ailes des avions de ligne modernes) signifie moins de traînée induite et une finesse L/D plus élevée.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "L’albatros, qui plane des heures au-dessus de l’océan, utilise la même physique",
+   "b": "une aile longue et fine à grande finesse."
+  }
+ ]
+}

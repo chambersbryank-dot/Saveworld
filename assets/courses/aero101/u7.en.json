@@ -1,0 +1,296 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Thrust of an air-breathing engine ≈",
+   "why": "Momentum change per second.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "ṁv₀",
+    "ṁ(v_e − v₀)",
+    "ṁv_e²",
+    "ρV²"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Propulsive efficiency is highest when v_e/v₀ is…",
+   "why": "η_p = 2/(1 + v_e/v₀).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "large",
+    "close to 1",
+    "zero",
+    "negative"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "Most air in a high-bypass turbofan…",
+   "why": "The fan stream.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "goes through the combustor",
+    "bypasses the core",
+    "is stored",
+    "is heated to 2,000 K"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Propulsion",
+   "q": "I_sp is measured in…",
+   "why": "Thrust per weight flow of propellant.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "m/s",
+    "seconds",
+    "newtons",
+    "kg"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Jets push against the air behind them.",
+   "why": "They accelerate air through the engine; the reaction to that is thrust.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Faster exhaust always means a better engine.",
+   "why": "For efficiency, exhaust speed should be close to flight speed.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Specific impulse is a speed.",
+   "why": "It is measured in seconds; I_sp × g₀ is an effective exhaust speed.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "A turbofan moves 500 kg/s of air from 250 m/s to 320 m/s. Find thrust and propulsive efficiency. Give your answer in kN.",
+   "why": "F = 35 kN, η_p ≈ 0.88.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 35,
+   "tol": 0.5,
+   "unit": "kN"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "An engine makes 100 kN while burning 2.5 kg/s of fuel. Find its I_sp.",
+   "why": "≈ 4,079 s. Air-breathers beat rockets on this measure because they do not carry their oxidizer.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 4079,
+   "tol": 40,
+   "unit": "s"
+  },
+  {
+   "type": "num",
+   "topic": "Propulsion",
+   "q": "Find the thrust for ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s. Give your answer in kN.",
+   "why": "20 kN.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": 20,
+   "tol": 0.3,
+   "unit": "kN"
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "1.0, but the thrust is zero: efficiency and thrust trade off.",
+   "why": "This is stated in the unit. Find η_p when v_e = v₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "They move a large mass of air slowly, which raises propulsive efficiency and cuts fuel burn and noise.",
+   "why": "This is stated in the unit. Why do airliners use high-bypass turbofans?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "v_e = 600 m/s, η_p ≈ 0.59: much less efficient.",
+   "why": "This is stated in the unit. A turbojet makes the same 35 kN with 100 kg/s of air at v₀ = 250 m/s. What exhaust speed does it need, and what is η_p?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Higher propulsive efficiency is a direct fuel and CO₂ saving. Every kilogram of jet fuel burned produces about 3.16 kg of CO₂ (the fuel’s carbon combined with oxygen from the air; see Unit 10), so efficiency gains add up over an engine’s decades of service.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Sustainable aviation fuel, made from wastes and biomass, is blended to match conventional jet fuel’s properties for safe operation. NASA notes that SAF does not release new CO₂ into the environment.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Every engine makes thrust by accelerating a mass flow: F = ṁ(v_e − v₀) for an air-breathing engine (ignoring fuel mass and pressure terms).",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Propulsive efficiency η_p = 2/(1 + v_e/v₀): moving a lot of air a little is more efficient than moving a little air a lot. That is why turbofans have huge fans.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Turbojet: all air passes through the core. Turbofan: most air bypasses the core through the fan. Turboprop: a propeller driven by a gas turbine.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "Specific impulse I_sp = F/(ṁ_fuel g₀) measures thrust per fuel weight flow, in seconds.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Propulsion",
+   "q": "This unit asks you to: Use the momentum thrust equation.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Momentum thrust",
+   "b": "F = ṁ(v_e − v₀)."
+  },
+  {
+   "f": "Propulsive efficiency",
+   "b": "2/(1 + v_e/v₀)."
+  },
+  {
+   "f": "Turbofan",
+   "b": "Fan plus core; most air bypasses."
+  },
+  {
+   "f": "Bypass ratio",
+   "b": "Bypass air ÷ core air."
+  },
+  {
+   "f": "Specific impulse",
+   "b": "F/(ṁ g₀), in seconds."
+  },
+  {
+   "f": "TSFC",
+   "b": "Fuel flow per unit thrust."
+  },
+  {
+   "f": "Jets push against the air behind them.",
+   "b": "They accelerate air through the engine; the reaction to that is thrust."
+  },
+  {
+   "f": "Faster exhaust always means a better engine.",
+   "b": "For efficiency, exhaust speed should be close to flight speed."
+  },
+  {
+   "f": "Specific impulse is a speed.",
+   "b": "It is measured in seconds; I_sp × g₀ is an effective exhaust speed."
+  },
+  {
+   "f": "A turbofan moves 500 kg/s of air from 250 m/s to 320 m/s. Find thrust and propulsive efficiency.",
+   "b": "F = 35 kN, η_p ≈ 0.88."
+  },
+  {
+   "f": "A turbojet makes the same 35 kN with 100 kg/s of air at v₀ = 250 m/s. What exhaust speed does it need, and what is η_p?",
+   "b": "v_e = 600 m/s, η_p ≈ 0.59: much less efficient."
+  },
+  {
+   "f": "An engine makes 100 kN while burning 2.5 kg/s of fuel. Find its I_sp.",
+   "b": "≈ 4,079 s. Air-breathers beat rockets on this measure because they do not carry their oxidizer."
+  },
+  {
+   "f": "Find the thrust for ṁ = 200 kg/s, v₀ = 200 m/s, v_e = 300 m/s.",
+   "b": "20 kN."
+  },
+  {
+   "f": "Find η_p when v_e = v₀.",
+   "b": "1.0, but the thrust is zero: efficiency and thrust trade off."
+  },
+  {
+   "f": "Why do airliners use high-bypass turbofans?",
+   "b": "They move a large mass of air slowly, which raises propulsive efficiency and cuts fuel burn and noise."
+  },
+  {
+   "f": "Every engine makes thrust by accelerating a mass flow",
+   "b": "F = ṁ(v_e − v₀) for an air-breathing engine (ignoring fuel mass and pressure terms)."
+  },
+  {
+   "f": "Propulsive efficiency η_p = 2/(1 + v_e/v₀)",
+   "b": "moving a lot of air a little is more efficient than moving a little air a lot. That is why turbofans have huge fans."
+  },
+  {
+   "f": "Turbojet: all air passes through the core. Turbofan: most air bypasses the core through the fan. Turboprop: a propeller driven by a gas turbine.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Specific impulse I_sp = F/(ṁ_fuel g₀) measures thrust per fuel weight flow, in seconds.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Higher propulsive efficiency is a direct fuel and CO₂ saving. Every kilogram of jet fuel burned produces about ____kg of CO₂ (the fuel’s carbon combined with oxygen from the air; see Unit 10), so efficiency gains add up over an engine’s decades of service.",
+   "b": "Higher propulsive efficiency is a direct fuel and CO₂ saving. Every kilogram of jet fuel burned produces about 3.16 kg of CO₂ (the fuel’s carbon combined with oxygen from the air; see Unit 10), so efficiency gains add up over an engine’s decades of service."
+  }
+ ]
+}

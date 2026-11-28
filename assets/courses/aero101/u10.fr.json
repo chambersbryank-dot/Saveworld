@@ -1,0 +1,304 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Climat",
+   "q": "Brûler 1 kg de kérosène produit environ…",
+   "why": "Le carbone du carburant se combine avec l’oxygène de l’air.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1 kg CO₂",
+    "3.16 kg CO₂",
+    "0.3 kg CO₂",
+    "10 kg CO₂"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climat",
+   "q": "Les trois voies de la NASA vers une aviation durable sont…",
+   "why": "Selon la liste de la NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "des réservoirs plus grands",
+    "avions efficaces, SAF, opérations et infrastructures",
+    "uniquement voler plus bas",
+    "uniquement des montées plus lentes"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climat",
+   "q": "Si L/D augmente de 10%, le carburant pour le même trajet baisse d’environ…",
+   "why": "Carburant ∝ 1/(L/D).",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "opts": [
+    "1%",
+    "9–10%",
+    "50%",
+    "0%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Climat",
+   "q": "Quelle part du total des gaz à effet de serre américains émettent les avions couverts par la règle de l’EPA ?",
+   "why": "EPA : 3% du total national.",
+   "src": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/regulations-greenhouse-gas-emissions-aircraft",
+   "srcName": "EPA",
+   "opts": [
+    "0.3%",
+    "3%",
+    "30%",
+    "50%"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Le carburant d’aviation durable n’émet pas de CO₂ quand on le brûle.",
+   "why": "Il émet du CO₂ comme le kérosène ; l’avantage est que son carbone provient récemment de l’air, donc les émissions sur le cycle de vie sont plus faibles.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Les avions électriques remplaceront bientôt tous les avions à réaction.",
+   "why": "La densité énergétique des batteries les limite pour l’instant aux vols courts et petits.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "L’espace est trop grand pour être pollué.",
+   "why": "Les débris sur les orbites très utilisées sont un vrai danger.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Climat",
+   "q": "D’où vient 3.16 ? Modélisez le carburéacteur comme C₁₂H₂₃ et trouvez les kg de CO₂ par kg de carburant.",
+   "why": "≈ 3.16 kg de CO₂ par kg de carburant.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 3.16,
+   "tol": 0.03,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Climat",
+   "q": "La NASA estime à 620 millions de tonnes la consommation de carburant en 2050 au niveau d’efficacité actuel. Combien de CO₂ cela représente-t-il ? Donnez la réponse en million t.",
+   "why": "≈ 1959 millions de tonnes, en accord avec les « près de 2000 mégatonnes » de la NASA.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 1959,
+   "tol": 30,
+   "unit": "million t"
+  },
+  {
+   "type": "num",
+   "topic": "Climat",
+   "q": "Un vol brûle 5000 kg de carburant. Combien de CO₂ ?",
+   "why": "≈ 15,800 kg.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": 15800,
+   "tol": 150,
+   "unit": "kg"
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "D’environ 15%, puisque le CO₂ est proportionnel au carburant brûlé.",
+   "why": "C’est écrit dans l’unité. Si les moteurs deviennent 15% plus économes, de combien les émissions de CO₂ par trajet baissent-elles environ ?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Leur énergie par kilogramme est bien inférieure à celle du kérosène, et le compromis de Breguet rend la masse supplémentaire très coûteuse.",
+   "why": "C’est écrit dans l’unité. Pourquoi les batteries actuelles ne peuvent-elles pas propulser les long-courriers ?",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "≈ 2.1 t de carburant et ≈ 6.7 t de CO₂ par vol (estimation simplifiée).",
+   "why": "C’est écrit dans l’unité. Un vol brûle 20 t de carburant. Une nouvelle aile fait passer L/D de 17 à 19. Estimez le carburant et le CO₂ économisés.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Cette unité est le lien complet du cours avec la planète : chaque équation des unités 3–7 est un levier sur la consommation de carburant, et la consommation de carburant, c’est du CO₂. Les ingénieurs capables de faire ces calculs conçoivent les avions plus propres vers lesquels travaillent la NASA et l’industrie.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "L’EPA indique que les avions couverts par sa règle produisent 10% des émissions de gaz à effet de serre des transports aux États-Unis, et la NASA note que les États-Unis se sont engagés en 2021 à atteindre la neutralité des émissions de gaz à effet de serre de l’aviation d’ici 2050.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Brûler un kilogramme de carburéacteur de type kérosène produit environ 3.16 kg de CO₂, une valeur fixée par la chimie. Les seuls moyens de la réduire sont de brûler moins de carburant ou d’utiliser un carburant dont le carbone provient récemment de l’air.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "L’EPA indique que les avions couverts par sa réglementation sur les gaz à effet de serre représentent 10% des émissions de gaz à effet de serre des transports aux États-Unis et 3% du total américain.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Les trois voies de la NASA : technologie aéronautique efficace, carburant d’aviation durable, et meilleures opérations et infrastructures.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "Les batteries actuelles stockent bien moins d’énergie par kilogramme que le kérosène, donc les avions électriques conviennent aux vols courts et petits ; l’hydrogène stocke beaucoup d’énergie par kilogramme mais exige de grands réservoirs.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Climat",
+   "q": "La durabilité spatiale consiste à planifier l’élimination des engins pour que les orbites utiles restent ouvertes aux satellites qui surveillent la Terre.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://www.nasa.gov/aeronautics/sustainable-aviation/",
+   "srcName": "NASA",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "CO₂ par kg de carburant",
+   "b": "≈ 3.16 kg."
+  },
+  {
+   "f": "SAF",
+   "b": "Carburant d’aviation durable issu de déchets et de biomasse."
+  },
+  {
+   "f": "Trois voies",
+   "b": "Avions efficaces, SAF, opérations."
+  },
+  {
+   "f": "Densité énergétique",
+   "b": "Énergie par kg ; batteries ≪ kérosène."
+  },
+  {
+   "f": "Débris spatiaux",
+   "b": "Objets hors service qui menacent les orbites utiles."
+  },
+  {
+   "f": "Émissions sur le cycle de vie",
+   "b": "Toutes les émissions, de la production du carburant à son utilisation."
+  },
+  {
+   "f": "Le carburant d’aviation durable n’émet pas de CO₂ quand on le brûle.",
+   "b": "Il émet du CO₂ comme le kérosène ; l’avantage est que son carbone provient récemment de l’air, donc les émissions sur le cycle de vie sont plus faibles."
+  },
+  {
+   "f": "Les avions électriques remplaceront bientôt tous les avions à réaction.",
+   "b": "La densité énergétique des batteries les limite pour l’instant aux vols courts et petits."
+  },
+  {
+   "f": "L’espace est trop grand pour être pollué.",
+   "b": "Les débris sur les orbites très utilisées sont un vrai danger."
+  },
+  {
+   "f": "D’où vient 3.16 ? Modélisez le carburéacteur comme C₁₂H₂₃ et trouvez les kg de CO₂ par kg de carburant.",
+   "b": "≈ 3.16 kg de CO₂ par kg de carburant."
+  },
+  {
+   "f": "La NASA estime à 620 millions de tonnes la consommation de carburant en 2050 au niveau d’efficacité actuel. Combien de CO₂ cela représente-t-il ?",
+   "b": "≈ 1959 millions de tonnes, en accord avec les « près de 2000 mégatonnes » de la NASA."
+  },
+  {
+   "f": "Un vol brûle 20 t de carburant. Une nouvelle aile fait passer L/D de 17 à 19. Estimez le carburant et le CO₂ économisés.",
+   "b": "≈ 2.1 t de carburant et ≈ 6.7 t de CO₂ par vol (estimation simplifiée)."
+  },
+  {
+   "f": "Un vol brûle 5000 kg de carburant. Combien de CO₂ ?",
+   "b": "≈ 15,800 kg."
+  },
+  {
+   "f": "Si les moteurs deviennent 15% plus économes, de combien les émissions de CO₂ par trajet baissent-elles environ ?",
+   "b": "D’environ 15%, puisque le CO₂ est proportionnel au carburant brûlé."
+  },
+  {
+   "f": "Pourquoi les batteries actuelles ne peuvent-elles pas propulser les long-courriers ?",
+   "b": "Leur énergie par kilogramme est bien inférieure à celle du kérosène, et le compromis de Breguet rend la masse supplémentaire très coûteuse."
+  },
+  {
+   "f": "Brûler un kilogramme de carburéacteur de type kérosène produit environ ____kg de CO₂, une valeur fixée par la chimie. Les seuls moyens de la réduire sont de brûler moins de carburant ou d’utiliser un carburant dont le carbone provient récemment de l’air.",
+   "b": "Brûler un kilogramme de carburéacteur de type kérosène produit environ 3.16 kg de CO₂, une valeur fixée par la chimie. Les seuls moyens de la réduire sont de brûler moins de carburant ou d’utiliser un carburant dont le carbone provient récemment de l’air."
+  },
+  {
+   "f": "L’EPA indique que les avions couverts par sa réglementation sur les gaz à effet de serre représentent ____% des émissions de gaz à effet de serre des transports aux États-Unis et 3% du total américain.",
+   "b": "L’EPA indique que les avions couverts par sa réglementation sur les gaz à effet de serre représentent 10% des émissions de gaz à effet de serre des transports aux États-Unis et 3% du total américain."
+  },
+  {
+   "f": "Les trois voies de la NASA",
+   "b": "technologie aéronautique efficace, carburant d’aviation durable, et meilleures opérations et infrastructures."
+  },
+  {
+   "f": "Les batteries actuelles stockent bien moins d’énergie par kilogramme que le kérosène, donc les avions électriques conviennent aux vols courts et petits ; l’hydrogène stocke beaucoup d’énergie par kilogramme mais exige de grands réservoirs.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "La durabilité spatiale consiste à planifier l’élimination des engins pour que les orbites utiles restent ouvertes aux satellites qui surveillent la Terre.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "Cette unité est le lien complet du cours avec la planète",
+   "b": "chaque équation des unités 3–7 est un levier sur la consommation de carburant, et la consommation de carburant, c’est du CO₂. Les ingénieurs capables de faire ces calculs conçoivent les avions plus propres vers lesquels travaillent la NASA et l’industrie."
+  },
+  {
+   "f": "L’EPA indique que les avions couverts par sa règle produisent ____% des émissions de gaz à effet de serre des transports aux États-Unis, et la NASA note que les États-Unis se sont engagés en 2021 à atteindre la neutralité des émissions de gaz à effet de serre de l’aviation d’ici 2050.",
+   "b": "L’EPA indique que les avions couverts par sa règle produisent 10% des émissions de gaz à effet de serre des transports aux États-Unis, et la NASA note que les États-Unis se sont engagés en 2021 à atteindre la neutralité des émissions de gaz à effet de serre de l’aviation d’ici 2050."
+  }
+ ]
+}

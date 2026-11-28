@@ -1,0 +1,308 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Wings",
+   "q": "Thin-airfoil lift slope is…",
+   "why": "c_l = 2πα.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "π per rad",
+    "2π per rad",
+    "2π per degree",
+    "1 per rad"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Wings",
+   "q": "Aspect ratio is…",
+   "why": "Span squared over area.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "b/S",
+    "b²/S",
+    "S/b",
+    "c/b"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Wings",
+   "q": "At maximum L/D…",
+   "why": "Minimizing C_D/C_L gives KC_L² = C_D0.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "induced drag = parasite drag",
+    "drag is zero",
+    "C_L = 0",
+    "the wing is stalled"
+   ],
+   "ok": 0
+  },
+  {
+   "type": "mc",
+   "topic": "Wings",
+   "q": "A higher aspect ratio mainly reduces…",
+   "why": "K = 1/(πeAR).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "skin friction",
+    "induced drag",
+    "weight",
+    "wave drag"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "More angle of attack always means more lift.",
+   "why": "Past the stall angle the flow separates and lift drops.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "Symmetric airfoils cannot lift.",
+   "why": "They lift at a positive angle of attack.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "Wingtip devices make induced drag zero.",
+   "why": "They reduce it; only an infinitely long wing would have none.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Wings",
+   "q": "Thin-airfoil theory: find c_l at α = 5°.",
+   "why": "c_l ≈ 0.548.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.548,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Wings",
+   "q": "Find the aspect ratio of a wing with span 11 m and area 16.2 m².",
+   "why": "AR = 121/16.2 ≈ 7.5.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 7.5,
+   "tol": 0.15,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Wings",
+   "q": "Using c_l = 2πα, what angle gives c_l = 0.5? Give your answer in °.",
+   "why": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 4.6,
+   "tol": 0.2,
+   "unit": "°"
+  },
+  {
+   "type": "num",
+   "topic": "Wings",
+   "q": "For the Example 4.3 airplane, find C_D at C_L = 0.36.",
+   "why": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 0.0319,
+   "tol": 0.001,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Wings",
+   "q": "If AR rises from 7.5 to 15 (same e and C_D0), how does (L/D)max change?",
+   "why": "K halves, so (L/D)max grows by √2 to ≈ 19.4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": 19.4,
+   "tol": 0.4,
+   "unit": ""
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "4.92 per rad ≈ 0.086 per degree, 22% below the 2D value.",
+   "why": "This is stated in the unit. Find the lift slope of a wing with AR = 8 and e = 0.9.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "(L/D)max ≈ 13.7 at C_L ≈ 0.69.",
+   "why": "This is stated in the unit. With C_D0 = 0.025, e = 0.8 and AR = 7.5, find (L/D)max and the C_L where it occurs.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "Long, slender wings are one of the most direct ways to cut fuel burn, because induced drag falls as aspect ratio rises. That is exactly the “efficient aircraft technology” path in NASA’s sustainable-aviation work.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "The albatross, which glides for hours over the ocean, uses the same physics: a long, thin wing with a high lift-to-drag ratio.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "An airfoil is a wing’s cross-section. Camber lets it lift at zero angle of attack; thickness adds strength and room for fuel.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "Thin-airfoil theory predicts a lift slope of 2π per radian (about 0.11 per degree) until the flow separates and the wing stalls.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "A finite wing loses lift slope to its tip vortices: a = a₀/(1 + a₀/(πeAR)), with aspect ratio AR = b²/S.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Wings",
+   "q": "Total drag C_D = C_D0 + KC_L² with K = 1/(πeAR). Maximum L/D occurs where induced drag equals parasite drag.",
+   "why": "This is stated in the unit.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/induced-drag-coefficient/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Chord",
+   "b": "Leading edge to trailing edge."
+  },
+  {
+   "f": "Camber",
+   "b": "Curvature of the mean line."
+  },
+  {
+   "f": "Angle of attack",
+   "b": "Angle between chord and oncoming flow."
+  },
+  {
+   "f": "Stall",
+   "b": "Flow separation; lift drops."
+  },
+  {
+   "f": "Aspect ratio",
+   "b": "b²/S."
+  },
+  {
+   "f": "Drag polar",
+   "b": "C_D = C_D0 + KC_L²."
+  },
+  {
+   "f": "More angle of attack always means more lift.",
+   "b": "Past the stall angle the flow separates and lift drops."
+  },
+  {
+   "f": "Symmetric airfoils cannot lift.",
+   "b": "They lift at a positive angle of attack."
+  },
+  {
+   "f": "Wingtip devices make induced drag zero.",
+   "b": "They reduce it; only an infinitely long wing would have none."
+  },
+  {
+   "f": "Thin-airfoil theory: find c_l at α = 5°.",
+   "b": "c_l ≈ 0.548."
+  },
+  {
+   "f": "Find the lift slope of a wing with AR = 8 and e = 0.9.",
+   "b": "4.92 per rad ≈ 0.086 per degree, 22% below the 2D value."
+  },
+  {
+   "f": "With C_D0 = 0.025, e = 0.8 and AR = 7.5, find (L/D)max and the C_L where it occurs.",
+   "b": "(L/D)max ≈ 13.7 at C_L ≈ 0.69."
+  },
+  {
+   "f": "Find the aspect ratio of a wing with span 11 m and area 16.2 m².",
+   "b": "AR = 121/16.2 ≈ 7.5."
+  },
+  {
+   "f": "Using c_l = 2πα, what angle gives c_l = 0.5?",
+   "b": "α = 0.5/(2π) = 0.0796 rad ≈ 4.6°."
+  },
+  {
+   "f": "For the Example 4.3 airplane, find C_D at C_L = 0.36.",
+   "b": "C_D = 0.025 + 0.0531 × 0.1296 ≈ 0.0319."
+  },
+  {
+   "f": "If AR rises from 7.5 to 15 (same e and C_D0), how does (L/D)max change?",
+   "b": "K halves, so (L/D)max grows by √2 to ≈ 19.4."
+  },
+  {
+   "f": "An airfoil is a wing’s cross-section. Camber lets it lift at zero angle of attack; thickness adds strength and room for fuel.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "Thin-airfoil theory predicts a lift slope of 2π per radian (about 0.11 per degree) until the flow separates and the wing stalls.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "A finite wing loses lift slope to its tip vortices",
+   "b": "a = a₀/(1 + a₀/(πeAR)), with aspect ratio AR = b²/S."
+  },
+  {
+   "f": "Total drag C_D = C_D0 + KC_L² with K = 1/(πeAR). Maximum L/D occurs where induced drag equals parasite drag.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "High aspect ratio (sailplanes, albatrosses, modern airliner wings) means less induced drag and higher L/D.",
+   "b": "This is stated in the unit."
+  },
+  {
+   "f": "The albatross, which glides for hours over the ocean, uses the same physics",
+   "b": "a long, thin wing with a high lift-to-drag ratio."
+  }
+ ]
+}

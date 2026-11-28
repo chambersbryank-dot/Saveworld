@@ -1,0 +1,302 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Estabilidad",
+   "q": "Los alerones controlan…",
+   "why": "Se deflectan en sentidos opuestos en cada ala.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "el cabeceo",
+    "el alabeo",
+    "la guiñada",
+    "el empuje"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Estabilidad",
+   "q": "Para la estabilidad en cabeceo, el CG debe estar…",
+   "why": "Margen estático positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "detrás del punto neutro",
+    "delante del punto neutro",
+    "en la cola",
+    "en la punta del ala"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Estabilidad",
+   "q": "Un margen estático de 0.15 significa…",
+   "why": "Margen positivo.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "inestable",
+    "estable",
+    "neutro",
+    "en pérdida"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Estabilidad",
+   "q": "La estabilidad dinámica se refiere a…",
+   "why": "Si las oscilaciones se amortiguan.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "la tendencia inicial",
+    "el movimiento a lo largo del tiempo",
+    "el empuje del motor",
+    "solo el peso"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Estáticamente estable significa que la oscilación se amortigua.",
+   "why": "Eso es estabilidad dinámica; la estabilidad estática es la tendencia inicial.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Más estabilidad siempre es mejor.",
+   "why": "Demasiada hace pesados los mandos y desperdicia resistencia de compensación.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "El CG puede estar en cualquier lugar mientras el ala sustente.",
+   "why": "Un CG retrasado hace inestable al avión.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Estabilidad",
+   "q": "El punto neutro está al 40% de la cuerda media y el CG al 25%. Halla el margen estático.",
+   "why": "0.15, o sea 15%: estable.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.15,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Estabilidad",
+   "q": "Un planeador tiene un ala de 50 g en x = 10 cm, una cola de 10 g en x = 40 cm y 20 g de lastre en la nariz en x = 0. Halla el CG.",
+   "why": "x_cg = 11.25 cm desde la nariz.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 11.25,
+   "tol": 0.05,
+   "unit": "cm"
+  },
+  {
+   "type": "num",
+   "topic": "Estabilidad",
+   "q": "Para el planeador del ejemplo 6.2 (cuerda media 8 cm), el punto neutro está a 13 cm. ¿Es estable?",
+   "why": "SM ≈ 0.22: estable. Si quitas el lastre de la nariz, el CG se desplaza hacia atrás, hacia la inestabilidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 0.22,
+   "tol": 0.02,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Estabilidad",
+   "q": "En el ejemplo 6.2, ¿qué lastre m en la nariz coloca el CG a 12 cm? Da la respuesta en g.",
+   "why": "900/(60 + m) = 12 da m = 15 g.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": 15,
+   "tol": 0.2,
+   "unit": "g"
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "El timón de profundidad, en la cola horizontal.",
+   "why": "Esto está escrito en la unidad. ¿Qué superficie controla el cabeceo?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "SM = −0.02 < 0: estáticamente inestable.",
+   "why": "Esto está escrito en la unidad. CG al 30% de la cuerda, punto neutro al 28%. ¿Es estable?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Su CG está demasiado atrás, cerca o detrás del punto neutro.",
+   "why": "Esto está escrito en la unidad. ¿Por qué un avión de papel sin lastre en la nariz encabrita y entra en pérdida?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Los márgenes de estabilidad cuestan combustible: una cola convencional suele empujar hacia abajo para equilibrar el avión, y el ala debe generar sustentación extra, con resistencia extra, para compensarlo. Reducir esa penalización forma parte de la vía del avión eficiente que describe la NASA.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Las mismas ideas de equilibrio y control mantienen a los satélites de observación de la Tierra apuntando de forma estable para que sus instrumentos puedan cartografiar el planeta.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Un avión gira alrededor de su centro de gravedad: cabeceo (timón de profundidad), alabeo (alerones), guiñada (timón de dirección).",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Estabilidad estática: tras una perturbación, el avión tiende inicialmente a volver. Estabilidad dinámica: el movimiento realmente se amortigua con el tiempo.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "La estabilidad en cabeceo exige que el centro de gravedad esté delante del punto neutro. El margen estático = (x_np − x_cg)/c̄ debe ser positivo.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Estabilidad",
+   "q": "Una cola muy detrás del CG funciona como las plumas de una flecha: una perturbación de nariz arriba aumenta la sustentación de la cola y vuelve a bajar la nariz.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Cabeceo / alabeo / guiñada",
+   "b": "Profundidad / alerones / dirección."
+  },
+  {
+   "f": "Estabilidad estática",
+   "b": "Tendencia inicial a volver."
+  },
+  {
+   "f": "Estabilidad dinámica",
+   "b": "La perturbación se amortigua con el tiempo."
+  },
+  {
+   "f": "Punto neutro",
+   "b": "Posición del CG para una estabilidad neutra en cabeceo."
+  },
+  {
+   "f": "Margen estático",
+   "b": "(x_np − x_cg)/c̄."
+  },
+  {
+   "f": "Compensación (trim)",
+   "b": "Equilibrado, momento neto nulo."
+  },
+  {
+   "f": "Estáticamente estable significa que la oscilación se amortigua.",
+   "b": "Eso es estabilidad dinámica; la estabilidad estática es la tendencia inicial."
+  },
+  {
+   "f": "Más estabilidad siempre es mejor.",
+   "b": "Demasiada hace pesados los mandos y desperdicia resistencia de compensación."
+  },
+  {
+   "f": "El CG puede estar en cualquier lugar mientras el ala sustente.",
+   "b": "Un CG retrasado hace inestable al avión."
+  },
+  {
+   "f": "El punto neutro está al 40% de la cuerda media y el CG al 25%. Halla el margen estático.",
+   "b": "0.15, o sea 15%: estable."
+  },
+  {
+   "f": "Un planeador tiene un ala de 50 g en x = 10 cm, una cola de 10 g en x = 40 cm y 20 g de lastre en la nariz en x = 0. Halla el CG.",
+   "b": "x_cg = 11.25 cm desde la nariz."
+  },
+  {
+   "f": "Para el planeador del ejemplo 6.2 (cuerda media 8 cm), el punto neutro está a 13 cm. ¿Es estable?",
+   "b": "SM ≈ 0.22: estable. Si quitas el lastre de la nariz, el CG se desplaza hacia atrás, hacia la inestabilidad."
+  },
+  {
+   "f": "¿Qué superficie controla el cabeceo?",
+   "b": "El timón de profundidad, en la cola horizontal."
+  },
+  {
+   "f": "CG al 30% de la cuerda, punto neutro al 28%. ¿Es estable?",
+   "b": "SM = −0.02 < 0: estáticamente inestable."
+  },
+  {
+   "f": "En el ejemplo 6.2, ¿qué lastre m en la nariz coloca el CG a 12 cm?",
+   "b": "900/(60 + m) = 12 da m = 15 g."
+  },
+  {
+   "f": "¿Por qué un avión de papel sin lastre en la nariz encabrita y entra en pérdida?",
+   "b": "Su CG está demasiado atrás, cerca o detrás del punto neutro."
+  },
+  {
+   "f": "Un avión gira alrededor de su centro de gravedad",
+   "b": "cabeceo (timón de profundidad), alabeo (alerones), guiñada (timón de dirección)."
+  },
+  {
+   "f": "La estabilidad en cabeceo exige que el centro de gravedad esté delante del punto neutro. El margen estático = (x_np − x_cg)/c̄ debe ser positivo.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Una cola muy detrás del CG funciona como las plumas de una flecha",
+   "b": "una perturbación de nariz arriba aumenta la sustentación de la cola y vuelve a bajar la nariz."
+  },
+  {
+   "f": "Demasiada estabilidad vuelve al avión lento de respuesta y cuesta resistencia de compensación; algunos cazas modernos se diseñan inestables y los vuela una computadora.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "Los márgenes de estabilidad cuestan combustible",
+   "b": "una cola convencional suele empujar hacia abajo para equilibrar el avión, y el ala debe generar sustentación extra, con resistencia extra, para compensarlo. Reducir esa penalización forma parte de la vía del avión eficiente que describe la NASA."
+  }
+ ]
+}

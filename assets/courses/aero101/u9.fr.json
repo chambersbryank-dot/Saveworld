@@ -1,0 +1,298 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Orbites",
+   "q": "La vitesse sur orbite circulaire est…",
+   "why": "La gravité fournit la force centripète.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "√(μr)",
+    "√(μ/r)",
+    "μ/r²",
+    "2πr"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbites",
+   "q": "À 400 km, un engin spatial fait le tour de la Terre environ toutes les…",
+   "why": "≈ 92.4 minutes.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "24 h",
+    "92 min",
+    "10 min",
+    "1 semaine"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbites",
+   "q": "Un transfert de Hohmann utilise…",
+   "why": "Une à chaque extrémité de l’ellipse de transfert.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "une poussée",
+    "deux poussées",
+    "uniquement une poussée continue",
+    "uniquement le freinage atmosphérique"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Orbites",
+   "q": "Rayon géostationnaire ≈",
+   "why": "La troisième loi de Kepler avec un jour sidéral.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "opts": [
+    "6,771 km",
+    "42,164 km",
+    "384,400 km",
+    "20,000 km"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Les astronautes flottent parce qu’il n’y a pas de gravité en orbite.",
+   "why": "À 400 km, la gravité vaut environ 89% de sa valeur en surface ; ils sont en chute libre.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Pour rattraper un engin spatial devant vous, il suffit d’accélérer.",
+   "why": "Accélérer élève votre orbite et diminue votre vitesse angulaire.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Les orbites plus hautes demandent plus de vitesse.",
+   "why": "La vitesse circulaire diminue avec l’altitude, même si atteindre une orbite plus haute demande plus de Δv au total.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Orbites",
+   "q": "Trouvez la vitesse et la période d’une orbite circulaire à 400 km d’altitude. Donnez la réponse en km/s.",
+   "why": "7.67 km/s et ≈ 92.4 minutes.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7.67,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbites",
+   "q": "Trouver le rayon géostationnaire. Donnez la réponse en km.",
+   "why": "≈ 42164 km du centre de la Terre (environ 35786 km au-dessus de l’équateur).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 42164,
+   "tol": 80,
+   "unit": "km"
+  },
+  {
+   "type": "num",
+   "topic": "Orbites",
+   "q": "Trouvez le Δv de Hohmann d’une orbite circulaire de 300 km au rayon géostationnaire. Donnez la réponse en km/s.",
+   "why": "Total ≈ 3.90 km/s ; transfert ≈ 5.27 heures (sans changement de plan).",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 3.9,
+   "tol": 0.05,
+   "unit": "km/s"
+  },
+  {
+   "type": "num",
+   "topic": "Orbites",
+   "q": "Trouvez v pour une orbite circulaire à r = 7000 km. Donnez la réponse en m/s.",
+   "why": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": 7546,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "T ∝ r^(3/2) : 8 fois plus longue.",
+   "why": "C’est écrit dans l’unité. Si le rayon de l’orbite quadruple, comment la période change-t-elle ?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Ils restent au-dessus d’un même point et peuvent imager en continu le même hémisphère.",
+   "why": "C’est écrit dans l’unité. Pourquoi de nombreux satellites météo sont-ils géostationnaires ?",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "La surveillance du climat dépend du choix de l’orbite. Les orbites héliosynchrones permettent à Landsat d’imager le même lieu sous un éclairage similaire, de sorte que les changements des forêts, des cultures et des glaces ressortent, tandis que les satellites météo géostationnaires observent en continu le développement des tempêtes.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Les orbites demandent aussi du soin : les débris menacent ces missions, si bien que les engins spatiaux sont de plus en plus conçus pour être éliminés en fin de vie.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Sur une orbite circulaire, la gravité fournit la force centripète : v = √(μ/r), avec μ = GM.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Troisième loi de Kepler : T = 2π√(a³/μ). Les orbites plus hautes sont plus lentes et durent plus longtemps.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Une orbite géostationnaire a une période d’un jour sidéral (86164 s) et se situe au-dessus de l’équateur à un rayon d’environ 42164 km.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "Un transfert de Hohmann utilise deux poussées le long d’une ellipse tangente aux deux orbites circulaires ; c’est le transfert à deux impulsions le plus efficace entre orbites circulaires coplanaires.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Orbites",
+   "q": "L’orbite terrestre basse (environ 400 km pour l’ISS), les orbites polaires héliosynchrones pour l’imagerie et l’orbite géostationnaire pour la météo servent chacune des missions différentes.",
+   "why": "C’est écrit dans l’unité.",
+   "src": "https://science.nasa.gov/learn/basics-of-space-flight/",
+   "srcName": "NASA JPL",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Vitesse circulaire",
+   "b": "√(μ/r)."
+  },
+  {
+   "f": "Troisième loi de Kepler",
+   "b": "T = 2π√(a³/μ)."
+  },
+  {
+   "f": "Vis viva",
+   "b": "v² = μ(2/r − 1/a)."
+  },
+  {
+   "f": "Transfert de Hohmann",
+   "b": "Transfert elliptique à deux poussées."
+  },
+  {
+   "f": "GEO",
+   "b": "Période = 1 jour sidéral ; r ≈ 42164 km."
+  },
+  {
+   "f": "Orbite héliosynchrone",
+   "b": "Orbite quasi polaire qui survole chaque lieu à peu près à la même heure locale."
+  },
+  {
+   "f": "Les astronautes flottent parce qu’il n’y a pas de gravité en orbite.",
+   "b": "À 400 km, la gravité vaut environ 89% de sa valeur en surface ; ils sont en chute libre."
+  },
+  {
+   "f": "Pour rattraper un engin spatial devant vous, il suffit d’accélérer.",
+   "b": "Accélérer élève votre orbite et diminue votre vitesse angulaire."
+  },
+  {
+   "f": "Les orbites plus hautes demandent plus de vitesse.",
+   "b": "La vitesse circulaire diminue avec l’altitude, même si atteindre une orbite plus haute demande plus de Δv au total."
+  },
+  {
+   "f": "Trouvez la vitesse et la période d’une orbite circulaire à 400 km d’altitude.",
+   "b": "7.67 km/s et ≈ 92.4 minutes."
+  },
+  {
+   "f": "Trouver le rayon géostationnaire.",
+   "b": "≈ 42164 km du centre de la Terre (environ 35786 km au-dessus de l’équateur)."
+  },
+  {
+   "f": "Trouvez le Δv de Hohmann d’une orbite circulaire de 300 km au rayon géostationnaire.",
+   "b": "Total ≈ 3.90 km/s ; transfert ≈ 5.27 heures (sans changement de plan)."
+  },
+  {
+   "f": "Trouvez v pour une orbite circulaire à r = 7000 km.",
+   "b": "√(3.986 × 10¹⁴/7 × 10⁶) ≈ 7,546 m/s."
+  },
+  {
+   "f": "Si le rayon de l’orbite quadruple, comment la période change-t-elle ?",
+   "b": "T ∝ r^(3/2) : 8 fois plus longue."
+  },
+  {
+   "f": "Pourquoi de nombreux satellites météo sont-ils géostationnaires ?",
+   "b": "Ils restent au-dessus d’un même point et peuvent imager en continu le même hémisphère."
+  },
+  {
+   "f": "Sur une orbite circulaire, la gravité fournit la force centripète",
+   "b": "v = √(μ/r), avec μ = GM."
+  },
+  {
+   "f": "Une orbite géostationnaire a une période d’un jour sidéral (____s) et se situe au-dessus de l’équateur à un rayon d’environ 42164 km.",
+   "b": "Une orbite géostationnaire a une période d’un jour sidéral (86164 s) et se situe au-dessus de l’équateur à un rayon d’environ 42164 km."
+  },
+  {
+   "f": "Un transfert de Hohmann utilise deux poussées le long d’une ellipse tangente aux deux orbites circulaires ; c’est le transfert à deux impulsions le plus efficace entre orbites circulaires coplanaires.",
+   "b": "C’est écrit dans l’unité."
+  },
+  {
+   "f": "L’orbite terrestre basse (environ ____km pour l’ISS), les orbites polaires héliosynchrones pour l’imagerie et l’orbite géostationnaire pour la météo servent chacune des missions différentes.",
+   "b": "L’orbite terrestre basse (environ 400 km pour l’ISS), les orbites polaires héliosynchrones pour l’imagerie et l’orbite géostationnaire pour la météo servent chacune des missions différentes."
+  },
+  {
+   "f": "Les orbites demandent aussi du soin",
+   "b": "les débris menacent ces missions, si bien que les engins spatiaux sont de plus en plus conçus pour être éliminés en fin de vie."
+  }
+ ]
+}

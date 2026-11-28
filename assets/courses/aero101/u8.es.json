@@ -1,0 +1,300 @@
+{
+ "quiz": [
+  {
+   "type": "mc",
+   "topic": "Cohetes",
+   "q": "Δv depende de la relación de masa a través de…",
+   "why": "ln(m₀/m_f).",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "un cuadrado",
+    "un logaritmo",
+    "una raíz cuadrada",
+    "una recta"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Cohetes",
+   "q": "Las etapas ayudan porque…",
+   "why": "Los tanques vacíos ya no necesitan ser acelerados.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "aumentan el I_sp",
+    "sueltan masa muerta",
+    "añaden aire",
+    "reducen la gravedad"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Cohetes",
+   "q": "Para despegar, la relación empuje-peso debe ser…",
+   "why": "El empuje debe superar al peso.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/thrust-to-weight-ratio/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "< 1",
+    "> 1",
+    "= 0",
+    "exactamente 1"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "mc",
+   "topic": "Cohetes",
+   "q": "La velocidad de salida efectiva para I_sp = 300 s es de unos…",
+   "why": "I_sp × g₀.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+   "srcName": "NASA Glenn",
+   "opts": [
+    "300 m/s",
+    "2,940 m/s",
+    "30 km/s",
+    "9.8 m/s"
+   ],
+   "ok": 1
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Los cohetes empujan contra el aire.",
+   "why": "Funcionan mejor en el vacío; empujan sobre sus propios gases de escape.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "El doble de propulsante, el doble de Δv.",
+   "why": "Δv crece con el logaritmo de la relación de masa.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "La órbita solo necesita 7.7 km/s de Δv.",
+   "why": "Las pérdidas por gravedad y resistencia elevan el total a unos 9.4 km/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": false
+  },
+  {
+   "type": "num",
+   "topic": "Cohetes",
+   "q": "Un motor con I_sp = 450 s funciona hasta que m₀/m_f = 5. Halla Δv. Da la respuesta en m/s.",
+   "why": "≈ 7,102 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 7102,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Cohetes",
+   "q": "Un cohete de dos etapas: cada etapa tiene I_sp = 300 s y relación de masa 4. Halla el Δv total. Da la respuesta en m/s.",
+   "why": "≈ 8157 m/s, el doble de lo que da una sola etapa con relación de masa 4.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 8157,
+   "tol": 50,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Cohetes",
+   "q": "Halla Δv para I_sp = 311 s y m₀/m_f = 3. Da la respuesta en m/s.",
+   "why": "311 × 9.80665 × ln 3 ≈ 3,351 m/s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 3351,
+   "tol": 30,
+   "unit": "m/s"
+  },
+  {
+   "type": "num",
+   "topic": "Cohetes",
+   "q": "Un cohete de 500000 kg tiene 7.5 MN de empuje. Halla T/W al despegar.",
+   "why": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 1.53,
+   "tol": 0.04,
+   "unit": ""
+  },
+  {
+   "type": "num",
+   "topic": "Cohetes",
+   "q": "¿Qué I_sp da Δv = 3000 m/s con relación de masa 2?",
+   "why": "3,000/(9.80665 × ln 2) ≈ 441 s.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": 441,
+   "tol": 5,
+   "unit": "s"
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "≈ 24.4 frente a ≈ 8.4: cerca del 96% frente al 88% del cohete debe ser propulsante.",
+   "why": "Esto está escrito en la unidad. ¿Qué relación de masa necesita una sola etapa para 9.4 km/s con I_sp = 300 s? ¿Y con 450 s?",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Cada satélite de observación de la Tierra, desde Landsat hasta las misiones que siguen el nivel del mar y los gases de efecto invernadero, viaja en un cohete dimensionado con esta ecuación. Por eso cada kilogramo de instrumento es valioso y los satélites se construyen para ser ligeros.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Nuestra calculadora de Delta-v te permite hacer los mismos cálculos para misiones reales.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Un cohete lleva todo su propulsante, combustible y oxidante. Su empuje es F = ṁv_e + (p_e − p_a)A_e.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "La ecuación ideal del cohete: Δv = v_e ln(m₀/m_f), con v_e = I_sp g₀. La velocidad solo crece con el logaritmo de la relación de masa.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Llegar a la órbita terrestre baja requiere unos 9.4 km/s de Δv al incluir las pérdidas por gravedad y resistencia, así que la mayor parte de la masa de un vehículo de lanzamiento es propulsante.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "Las etapas sueltan tanques y motores vacíos para que las etapas siguientes no carguen peso muerto.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  },
+  {
+   "type": "tf",
+   "topic": "Cohetes",
+   "q": "La relación empuje-peso debe superar 1 para despegar.",
+   "why": "Esto está escrito en la unidad.",
+   "src": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+   "srcName": "NASA Glenn",
+   "ok": true
+  }
+ ],
+ "cards": [
+  {
+   "f": "Ecuación del cohete",
+   "b": "Δv = I_sp g₀ ln(m₀/m_f)."
+  },
+  {
+   "f": "Relación de masa",
+   "b": "m₀/m_f."
+  },
+  {
+   "f": "Etapas",
+   "b": "Soltar las etapas agotadas."
+  },
+  {
+   "f": "Empuje-peso",
+   "b": "Debe superar 1 al despegar."
+  },
+  {
+   "f": "Δv hasta LEO",
+   "b": "≈ 9.4 km/s incluidas las pérdidas."
+  },
+  {
+   "f": "I_sp",
+   "b": "Segundos de empuje por peso de propulsante."
+  },
+  {
+   "f": "Los cohetes empujan contra el aire.",
+   "b": "Funcionan mejor en el vacío; empujan sobre sus propios gases de escape."
+  },
+  {
+   "f": "El doble de propulsante, el doble de Δv.",
+   "b": "Δv crece con el logaritmo de la relación de masa."
+  },
+  {
+   "f": "La órbita solo necesita 7.7 km/s de Δv.",
+   "b": "Las pérdidas por gravedad y resistencia elevan el total a unos 9.4 km/s."
+  },
+  {
+   "f": "Un motor con I_sp = 450 s funciona hasta que m₀/m_f = 5. Halla Δv.",
+   "b": "≈ 7,102 m/s."
+  },
+  {
+   "f": "¿Qué relación de masa necesita una sola etapa para 9.4 km/s con I_sp = 300 s? ¿Y con 450 s?",
+   "b": "≈ 24.4 frente a ≈ 8.4: cerca del 96% frente al 88% del cohete debe ser propulsante."
+  },
+  {
+   "f": "Un cohete de dos etapas: cada etapa tiene I_sp = 300 s y relación de masa 4. Halla el Δv total.",
+   "b": "≈ 8157 m/s, el doble de lo que da una sola etapa con relación de masa 4."
+  },
+  {
+   "f": "Halla Δv para I_sp = 311 s y m₀/m_f = 3.",
+   "b": "311 × 9.80665 × ln 3 ≈ 3,351 m/s."
+  },
+  {
+   "f": "Un cohete de 500000 kg tiene 7.5 MN de empuje. Halla T/W al despegar.",
+   "b": "7.5 × 10⁶/(500,000 × 9.81) ≈ 1.53."
+  },
+  {
+   "f": "¿Qué I_sp da Δv = 3000 m/s con relación de masa 2?",
+   "b": "3,000/(9.80665 × ln 2) ≈ 441 s."
+  },
+  {
+   "f": "Un cohete lleva todo su propulsante, combustible y oxidante. Su empuje es F = ṁv_e + (p_e − p_a)A_e.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La ecuación ideal del cohete",
+   "b": "Δv = v_e ln(m₀/m_f), con v_e = I_sp g₀. La velocidad solo crece con el logaritmo de la relación de masa."
+  },
+  {
+   "f": "Llegar a la órbita terrestre baja requiere unos ____km/s de Δv al incluir las pérdidas por gravedad y resistencia, así que la mayor parte de la masa de un vehículo de lanzamiento es propulsante.",
+   "b": "Llegar a la órbita terrestre baja requiere unos 9.4 km/s de Δv al incluir las pérdidas por gravedad y resistencia, así que la mayor parte de la masa de un vehículo de lanzamiento es propulsante."
+  },
+  {
+   "f": "Las etapas sueltan tanques y motores vacíos para que las etapas siguientes no carguen peso muerto.",
+   "b": "Esto está escrito en la unidad."
+  },
+  {
+   "f": "La relación empuje-peso debe superar 1 para despegar.",
+   "b": "Esto está escrito en la unidad."
+  }
+ ]
+}
